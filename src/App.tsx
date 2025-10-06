@@ -1,15 +1,16 @@
-import React from 'react'
-import './App.css'
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import HomePage from '../app/page-minimal';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Zion Tech Group</h1>
-        <p>Revolutionary AI Solutions for Enterprise</p>
-      </header>
-    </div>
-  )
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="*" element={<div>Page not found</div>} />
+      </Routes>
+    </Router>
+  );
 }
 
-export default App
+export default App;

@@ -51,18 +51,17 @@ const ContactPage: React.FC = () => {
             <div className="space-y-4">
               <div>
                 <h4 className="font-medium text-gray-900">Email</h4>
-                <p className="text-gray-600">kleber@ziontechgroup.com</p>
+                <p className="text-gray-600">info@ziontechgroup.com</p>
               </div>
               <div>
                 <h4 className="font-medium text-gray-900">Phone</h4>
-                <p className="text-gray-600">+1 302 464 0950</p>
+                <p className="text-gray-600">+1 (302) 464-0950</p>
               </div>
               <div>
                 <h4 className="font-medium text-gray-900">Address</h4>
                 <p className="text-gray-600">
-                  Zion Tech Group<br />
-                  Enterprise AI Solutions<br />
-                  United States
+                  123 Tech Street<br />
+                  Innovation City, IC 12345
                 </p>
               </div>
             </div>

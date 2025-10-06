@@ -48,7 +48,7 @@ const UltimateBusinessIntelligence2025Banner = () => {
         roi: '30,000%',
         success: '99.8%',
         timeline: '18 months',
-        clients: '500+'
+        adoption: '100%'
       },
       readingTime: '45 min read',
       featured: true
@@ -56,134 +56,135 @@ const UltimateBusinessIntelligence2025Banner = () => {
   ];
 
   useEffect(() => {
-    const timer = setInterval(() => {
+    const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % content.length);
     }, 5000);
 
-    return () => clearInterval(timer);
+    return () => clearInterval(interval);
   }, [content.length]);
 
+  if (!isVisible) return null;
+
+  const currentContent = content[currentSlide];
+
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
-      {/* Animated Background Effects */}
+    <div className="relative overflow-hidden bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
+      {/* Animated Background */}
       <div className="absolute inset-0">
-        <div className="absolute top-10 left-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
-        <div className="absolute top-10 right-10 w-72 h-72 bg-cyan-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute -bottom-8 left-20 w-72 h-72 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-cyan-500/10 to-blue-500/10 animate-pulse"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-purple-500/10 to-pink-500/10 animate-pulse" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-orange-500/10 to-red-500/10 animate-pulse" style={{ animationDelay: '1s' }}></div>
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <div className="flex items-center justify-center gap-2 mb-6">
-            <span className="text-4xl">🚀</span>
+            <span className="text-2xl">🚀</span>
             <span className="text-cyan-400 font-bold text-xl">
               ULTIMATE BREAKTHROUGH: AI 2025 BUSINESS INTELLIGENCE REVOLUTION
             </span>
-            <span className="text-4xl">⚡</span>
+            <span className="text-2xl">⚡</span>
           </div>
 
-          <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-6">
-            Transform Your Enterprise with Revolutionary AI-Powered Business Intelligence
-          </h2>
+          <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6">
+            <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
+              AI 2025: The Ultimate Business Intelligence Revolution
+            </span>
+          </h1>
           
-          <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
-            Discover how Fortune 500 companies are achieving unprecedented 30,000% ROI through next-generation AI-powered business intelligence that delivers real-time insights and competitive advantage.
+          <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">
+            Transform your enterprise with next-generation AI-powered business intelligence that delivers unprecedented insights, 
+            competitive advantage, and revolutionary ROI through cutting-edge analytics and autonomous decision-making.
           </p>
+
+          <div className="flex items-center justify-center gap-8 text-gray-300">
+            <div className="text-center">
+              <div className="text-3xl font-bold text-cyan-400">30,000%</div>
+              <div className="text-sm">Average ROI</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-purple-400">$750B+</div>
+              <div className="text-sm">Cost Savings</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-green-400">99.99%</div>
+              <div className="text-sm">Accuracy</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-yellow-400">5,000%</div>
+              <div className="text-sm">Faster</div>
+            </div>
+          </div>
         </div>
 
         {/* Featured Content Carousel */}
-        <div className="relative mb-16">
-          <div className="overflow-hidden rounded-2xl">
-            <div 
-              className="flex transition-transform duration-500 ease-in-out"
-              style={{ transform: `translateX(-${currentSlide * 100}%)` }}
-            >
-              {content.map((item, index) => (
-                <div key={item.id} className="w-full flex-shrink-0">
-                  <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-12 border border-white/20">
-                    <div className="grid lg:grid-cols-2 gap-12 items-center">
-                      {/* Content */}
-                      <div>
-                        <div className="flex items-center gap-3 mb-6">
-                          <span className="px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-sm font-bold rounded-full">
-                            {item.type}
-                          </span>
-                          <span className="px-4 py-2 bg-gradient-to-r from-green-500 to-emerald-500 text-white text-sm font-bold rounded-full">
-                            FEATURED
-                          </span>
+        <div className="relative bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 mb-16">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-bold text-white mb-4">
+              Featured Content
+            </h2>
+            <p className="text-gray-300">
+              Explore our comprehensive AI 2025 Business Intelligence resources
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {content.map((item, index) => (
+              <Link key={item.id} href={item.url} className="group">
+                <div className={`relative bg-white/5 backdrop-blur-lg rounded-xl p-6 border transition-all duration-500 transform hover:-translate-y-2 ${
+                  index === currentSlide ? 'border-cyan-400/50 bg-cyan-500/10' : 'border-white/20 hover:border-white/40'
+                }`}>
+                  {/* Card glow effect */}
+                  <div className={`absolute inset-0 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 opacity-0 group-hover:opacity-100 transition-all duration-500 rounded-xl`}></div>
+                  
+                  <div className="relative z-10">
+                    {/* Type Badge */}
+                    <div className="mb-4">
+                      <span className="px-3 py-1 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 text-cyan-400 text-sm font-semibold rounded-full border border-cyan-500/30">
+                        {item.type}
+                      </span>
+                    </div>
+
+                    {/* Title */}
+                    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors leading-tight">
+                      {item.title}
+                    </h3>
+
+                    {/* Description */}
+                    <p className="text-gray-300 text-sm mb-4 leading-relaxed">
+                      {item.description}
+                    </p>
+
+                    {/* Metrics */}
+                    <div className="grid grid-cols-2 gap-2 mb-4">
+                      {Object.entries(item.metrics).map(([key, value]) => (
+                        <div key={key} className="text-center">
+                          <div className="text-lg font-bold text-cyan-400">{value}</div>
+                          <div className="text-xs text-gray-400 capitalize">{key}</div>
                         </div>
+                      ))}
+                    </div>
 
-                        <h3 className="text-3xl md:text-4xl font-bold text-white mb-6 leading-tight">
-                          {item.title}
-                        </h3>
-
-                        <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                          {item.description}
-                        </p>
-
-                        {/* Metrics */}
-                        <div className="grid grid-cols-2 gap-6 mb-8">
-                          {Object.entries(item.metrics).map(([key, value]) => (
-                            <div key={key} className="text-center">
-                              <div className="text-2xl font-bold text-cyan-400 mb-1">{value}</div>
-                              <div className="text-sm text-gray-400 capitalize">{key.replace(/([A-Z])/g, ' $1').trim()}</div>
-                            </div>
-                          ))}
-                        </div>
-
-                        <div className="flex items-center gap-4">
-                          <Link
-                            href={item.url}
-                            className="group flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl"
-                          >
-                            <span>Read {item.type}</span>
-                            <span className="group-hover:translate-x-1 transition-transform">→</span>
-                          </Link>
-                          <span className="text-gray-400 text-sm">{item.readingTime}</span>
-                        </div>
-                      </div>
-
-                      {/* Visual */}
-                      <div className="relative">
-                        <div className="bg-gradient-to-br from-cyan-500/20 to-blue-600/20 rounded-2xl p-8 border border-cyan-400/30">
-                          <div className="text-center">
-                            <div className="text-6xl mb-4">📊</div>
-                            <h4 className="text-2xl font-bold text-white mb-4">Business Intelligence Dashboard</h4>
-                            <div className="space-y-3">
-                              <div className="flex justify-between items-center p-3 bg-white/10 rounded-lg">
-                                <span className="text-gray-300">Real-time Analytics</span>
-                                <span className="text-cyan-400 font-bold">99.99%</span>
-                              </div>
-                              <div className="flex justify-between items-center p-3 bg-white/10 rounded-lg">
-                                <span className="text-gray-300">ROI Improvement</span>
-                                <span className="text-green-400 font-bold">30,000%</span>
-                              </div>
-                              <div className="flex justify-between items-center p-3 bg-white/10 rounded-lg">
-                                <span className="text-gray-300">Cost Savings</span>
-                                <span className="text-purple-400 font-bold">$750B+</span>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+                    {/* Reading Time */}
+                    <div className="flex items-center justify-between text-gray-400 text-xs">
+                      <span>⏱️ {item.readingTime}</span>
+                      <span className="group-hover:text-cyan-400 transition-colors">Read More →</span>
                     </div>
                   </div>
                 </div>
-              ))}
-            </div>
+              </Link>
+            ))}
           </div>
 
-          {/* Navigation Dots */}
+          {/* Carousel Indicators */}
           <div className="flex justify-center gap-2 mt-8">
             {content.map((_, index) => (
               <button
                 key={index}
                 onClick={() => setCurrentSlide(index)}
                 className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                  index === currentSlide 
-                    ? 'bg-cyan-400 scale-125' 
-                    : 'bg-white/30 hover:bg-white/50'
+                  index === currentSlide ? 'bg-cyan-400' : 'bg-white/30 hover:bg-white/50'
                 }`}
               />
             ))}
@@ -193,33 +194,32 @@ const UltimateBusinessIntelligence2025Banner = () => {
         {/* Call-to-Action Section */}
         <div className="text-center bg-white/5 backdrop-blur-lg rounded-2xl p-12 border border-white/20">
           <h3 className="text-3xl font-bold text-white mb-6">
-            Ready to Achieve 30,000% ROI with AI-Powered Business Intelligence?
+            Ready to Transform Your Business Intelligence?
           </h3>
-          
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Join Fortune 500 companies transforming their operations with revolutionary AI-powered business intelligence. Get expert guidance from Zion Tech Group's AI transformation specialists.
+          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            Join Fortune 500 companies achieving unprecedented ROI through AI-powered business intelligence. 
+            Get expert guidance from Zion Tech Group's AI transformation specialists.
           </p>
-          
-          <div className="flex flex-wrap justify-center gap-6">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
               href="/contact"
-              className="group flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl"
+              className="group flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1"
             >
-              <span className="text-2xl">🚀</span>
-              <span>Start Your AI Transformation</span>
+              <span className="text-xl">🚀</span>
+              <span>Start Your AI Journey</span>
             </Link>
             
             <Link
-              href="/resources"
+              href="/blog"
               className="group flex items-center gap-3 bg-white/10 hover:bg-white/20 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 border border-white/30"
             >
-              <span>Explore Resources</span>
+              <span>Explore All Content</span>
               <span className="group-hover:translate-x-1 transition-transform">→</span>
             </Link>
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

@@ -43,15 +43,15 @@ const NewContentPromotionalBanner2026: React.FC = () => {
   ];
 
   return (
-    <div className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
+    <div className="relative overflow-hidden bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
       {/* Animated background effects */}
       <div className="absolute inset-0">
-        <div className="absolute top-10 left-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
-        <div className="absolute top-10 right-10 w-72 h-72 bg-cyan-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute -bottom-8 left-20 w-72 h-72 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-cyan-500/10 to-blue-500/10 animate-pulse"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-purple-500/10 to-pink-500/10 animate-pulse" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-orange-500/10 to-red-500/10 animate-pulse" style={{ animationDelay: '2s' }}></div>
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Header Section */}
         <div className="text-center mb-16">
           <div className="flex items-center justify-center gap-2 mb-6">
@@ -63,11 +63,11 @@ const NewContentPromotionalBanner2026: React.FC = () => {
           </div>
 
           <h2 className="text-5xl md:text-6xl font-extrabold text-white mb-6">
-            <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
               Latest AI Innovations
             </span>
             <br />
-            <span className="text-white">
+            <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
               That Transform Business
             </span>
           </h2>
@@ -77,18 +77,18 @@ const NewContentPromotionalBanner2026: React.FC = () => {
             that are delivering <span className="text-cyan-400 font-bold">300%+ ROI</span> for enterprises worldwide
           </p>
 
-          <div className="flex flex-wrap justify-center gap-8 mb-12">
-            <div className="flex items-center gap-2 text-gray-300">
+          <div className="flex items-center justify-center gap-8 text-gray-300">
+            <div className="flex items-center gap-2">
               <TrendingUp className="w-5 h-5 text-green-400" />
-              <span className="font-semibold">10,000+ Readers</span>
+              <span>10,000+ Readers</span>
             </div>
-            <div className="flex items-center gap-2 text-gray-300">
+            <div className="flex items-center gap-2">
               <Zap className="w-5 h-5 text-yellow-400" />
-              <span className="font-semibold">3 New Articles</span>
+              <span>3 New Articles</span>
             </div>
-            <div className="flex items-center gap-2 text-gray-300">
-              <Target className="w-5 h-5 text-red-400" />
-              <span className="font-semibold">Proven Results</span>
+            <div className="flex items-center gap-2">
+              <Target className="w-5 h-5 text-purple-400" />
+              <span>Proven Results</span>
             </div>
           </div>
         </div>
@@ -98,7 +98,7 @@ const NewContentPromotionalBanner2026: React.FC = () => {
           {featuredContent.map((content, index) => (
             <div 
               key={content.id}
-              className="group relative bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-white/40 transition-all duration-500 hover:scale-105"
+              className="group relative bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-white/40 transition-all duration-500 transform hover:-translate-y-2"
               style={{ animationDelay: `${index * 150}ms` }}
             >
               {/* Card glow effect */}
@@ -156,13 +156,13 @@ const NewContentPromotionalBanner2026: React.FC = () => {
             <Shield className="w-8 h-8 text-purple-400" />
           </div>
           
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
             Join 500+ enterprises achieving <span className="text-cyan-400 font-bold">300% ROI</span>, 
             <span className="text-purple-400 font-bold"> 85% automation</span>, and 
             <span className="text-pink-400 font-bold"> complete digital transformation</span> with Zion Tech Group's AI solutions
           </p>
 
-          <div className="flex flex-wrap justify-center gap-6 mb-12">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
             <Link
               href="/contact"
               className="group flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl"

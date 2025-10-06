@@ -1,26 +1,26 @@
 import React from 'react';
-import dynamic from 'next/dynamic';
 import { UnifiedBanner, bannerConfigurations } from './components/UnifiedBannerSystem';
 import { LazyWrapper } from './components/LazyLoader';
 import { SEOOptimizer } from './components/SEOOptimizer';
 import { AccessibilityEnhancer } from './components/AccessibilityEnhancer';
 import { PerformanceMonitor } from './components/PerformanceMonitor';
+import dynamic from 'next/dynamic';
 
 // Lazy load heavy components
 const UnifiedContentPromotion = dynamic(() => import('../components/UnifiedContentPromotion'), {
-  loading: () => <div className="animate-pulse bg-gray-200 h-32 rounded-lg"></div>
+  loading: () => <div className="text-center text-gray-300">Loading content...</div>
 });
 
 const InteractiveAIROICalculator = dynamic(() => import('../components/InteractiveAIROICalculator'), {
-  loading: () => <div className="animate-pulse bg-gray-200 h-64 rounded-lg"></div>
+  loading: () => <div className="text-center text-gray-300">Loading calculator...</div>
 });
 
 const ContentShowcase = dynamic(() => import('../components/ContentShowcase'), {
-  loading: () => <div className="animate-pulse bg-gray-200 h-48 rounded-lg"></div>
+  loading: () => <div className="text-center text-gray-300">Loading showcase...</div>
 });
 
 const InteractiveContentShowcase2026 = dynamic(() => import('../components/InteractiveContentShowcase2026'), {
-  loading: () => <div className="animate-pulse bg-gray-200 h-48 rounded-lg"></div>
+  loading: () => <div className="text-center text-gray-300">Loading showcase...</div>
 });
 
 export const metadata = {
@@ -32,20 +32,21 @@ export const metadata = {
     description: 'Transform your enterprise with AI-powered solutions. Achieve 300% ROI, 70% cost reduction, and 90% efficiency gains.',
     type: 'website',
     url: 'https://ziontechgroup.com',
+    siteName: 'Zion Tech Group',
     images: [
       {
-        url: '/og-image.jpg',
+        url: 'https://ziontechgroup.com/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Zion Tech Group AI Enterprise Transformation',
-      },
-    ],
+        alt: 'Zion Tech Group - AI Enterprise Transformation'
+      }
+    ]
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Zion Tech Group — AI Enterprise Transformation & IT Services',
     description: 'Transform your enterprise with AI-powered solutions. Achieve 300% ROI, 70% cost reduction, and 90% efficiency gains.',
-    images: ['/og-image.jpg'],
+    images: ['https://ziontechgroup.com/og-image.jpg']
   },
   robots: {
     index: true,
@@ -65,12 +66,12 @@ export const metadata = {
     google: 'your-google-verification-code',
     yandex: 'your-yandex-verification-code',
     yahoo: 'your-yahoo-verification-code',
-  },
+  }
 };
 
 export default function OptimizedHomePage() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
       <SEOOptimizer />
       <AccessibilityEnhancer />
       <PerformanceMonitor />
@@ -79,60 +80,87 @@ export default function OptimizedHomePage() {
       <UnifiedBanner configurations={bannerConfigurations} />
       
       {/* Main Content */}
-      <main className="relative">
+      <main className="relative z-10">
         {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white overflow-hidden">
-          <div className="absolute inset-0 bg-black opacity-20"></div>
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+        <section className="relative overflow-hidden">
+          <div className="absolute inset-0">
+            <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-cyan-500/10 to-blue-500/10 animate-pulse"></div>
+            <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-purple-500/10 to-pink-500/10 animate-pulse" style={{ animationDelay: '2s' }}></div>
+          </div>
+          
+          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
             <div className="text-center">
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-                AI Enterprise Transformation
-                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
-                  That Delivers Results
+              <h1 className="text-5xl md:text-6xl font-extrabold text-white mb-6">
+                <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
+                  AI Enterprise Transformation
                 </span>
               </h1>
-              <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-4xl mx-auto">
+              
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
                 Transform your enterprise with AI-powered solutions that deliver 300% ROI, 
-                70% cost reduction, and 90% efficiency gains. Expert AI consulting, 
-                autonomous systems, and digital transformation services.
+                70% cost reduction, and 90% efficiency gains.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <a
                   href="/contact"
-                  className="inline-flex items-center px-8 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold text-lg"
+                  className="group flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1"
                 >
-                  Get Your Free AI Assessment
+                  <span className="text-xl">🚀</span>
+                  <span>Start Your AI Journey</span>
                 </a>
+                
                 <a
                   href="/case-studies"
-                  className="inline-flex items-center px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-900 transition-colors font-semibold text-lg"
+                  className="group flex items-center gap-3 bg-white/10 hover:bg-white/20 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 border border-white/30"
                 >
-                  View Success Stories
+                  <span>View Success Stories</span>
+                  <span className="group-hover:translate-x-1 transition-transform">→</span>
                 </a>
               </div>
             </div>
           </div>
         </section>
 
-        {/* ROI Calculator Section */}
+        {/* Lazy Loaded Components */}
         <LazyWrapper>
+          <UnifiedContentPromotion />
           <InteractiveAIROICalculator />
-        </LazyWrapper>
-
-        {/* Content Showcase */}
-        <LazyWrapper>
           <ContentShowcase />
-        </LazyWrapper>
-
-        {/* Interactive Content Showcase 2026 */}
-        <LazyWrapper>
           <InteractiveContentShowcase2026 />
         </LazyWrapper>
 
-        {/* Unified Content Promotion */}
-        <LazyWrapper>
-          <UnifiedContentPromotion />
-        </LazyWrapper>
+        {/* CTA Section */}
+        <section className="py-16">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 backdrop-blur-lg rounded-2xl p-12 border border-cyan-500/30">
+              <h2 className="text-3xl font-bold text-white mb-6">
+                Ready to Transform Your Enterprise?
+              </h2>
+              <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                Join 500+ enterprises achieving unprecedented results with our AI solutions. 
+                Get expert guidance from our AI transformation specialists.
+              </p>
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a
+                  href="/contact"
+                  className="group flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1"
+                >
+                  <span className="text-xl">📞</span>
+                  <span>Contact Us Today</span>
+                </a>
+                
+                <a
+                  href="/blog"
+                  className="group flex items-center gap-3 bg-white/10 hover:bg-white/20 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 border border-white/30"
+                >
+                  <span>Explore Our Blog</span>
+                  <span className="group-hover:translate-x-1 transition-transform">→</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
     </div>
   );
