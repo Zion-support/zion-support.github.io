@@ -368,34 +368,25 @@ class PerformanceOptimizer {
     });
   }
 
-<<<<<<< HEAD
-  public reportWebVitals(metrics: WebVitalsMetrics): void {
-    reportWebVitals(metrics);
-  }
-
-  public measurePageLoad(): WebVitalsMetrics | null {
-    return measurePageLoad();
-  }
-
-  public prefetchResources(resources: string[]): void {
-    prefetchResources(resources);
-  }
-
   // Get performance metrics
   getMetrics(): Record<string, number> {
     return Object.fromEntries(this.metrics);
   }
 
-  // Monitor long tasks
-  monitorLongTasks(callback: (entries: PerformanceEntry[]) => void): void {
-    if (typeof window === 'undefined' || !window.PerformanceObserver) return;
-    
-    const observer = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
-      callback(entries);
+  // Report Web Vitals
+  public reportWebVitals(metrics: any): void {
+    // Implementation for reporting web vitals
+    console.log('Web Vitals:', metrics);
+  }
+
+  // Prefetch resources
+  public prefetchResources(resources: string[]): void {
+    resources.forEach(resource => {
+      const link = document.createElement('link');
+      link.rel = 'prefetch';
+      link.href = resource;
+      document.head.appendChild(link);
     });
-    
-    observer.observe({ entryTypes: ['longtask'] });
   }
 
   // Get performance summary
