@@ -378,6 +378,7 @@ export class PerformanceOptimizer {
     violations.push(`Bundle size ${totalSize}KB exceeds budget ${budget.maxBundleSize}KB`);
   }
   
+<<<<<<< HEAD
   // Check load time
   const timing = window.performance.timing;
   const loadTime = timing.loadEventEnd - timing.navigationStart;
@@ -385,6 +386,8 @@ export class PerformanceOptimizer {
     violations.push(`Load time ${loadTime}ms exceeds budget ${budget.maxFirstLoad}ms`);
   }
   
+=======
+>>>>>>> origin/cursor/install-dependencies-and-run-type-check-b1ae
   return {
     passed: violations.length === 0,
     violations
@@ -392,7 +395,11 @@ export class PerformanceOptimizer {
 };
 
 /**
+<<<<<<< HEAD
  * Performance monitoring class
+=======
+ * Performance Optimizer Class
+>>>>>>> origin/cursor/install-dependencies-and-run-type-check-b1ae
  */
 class PerformanceOptimizer {
 >>>>>>> 71655f282840ed9a4a2a6696e410390223898ad3
@@ -564,6 +571,7 @@ class PerformanceOptimizer {
 >>>>>>> 71655f282840ed9a4a2a6696e410390223898ad3
   }
 
+<<<<<<< HEAD
   // Measure page load performance
   measurePageLoad(): Record<string, number> | null {
     if (typeof window === 'undefined' || !window.performance) {
@@ -571,6 +579,28 @@ class PerformanceOptimizer {
     }
     
     const timing = window.performance.timing;
+=======
+  public prefetchResources(urls: string[]): void {
+    urls.forEach(url => {
+      const link = document.createElement('link');
+      link.rel = 'prefetch';
+      link.href = url;
+      document.head.appendChild(link);
+    });
+  }
+
+  public preconnectDomains(domains: string[]): void {
+    domains.forEach(domain => {
+      const link = document.createElement('link');
+      link.rel = 'preconnect';
+      link.href = domain;
+      document.head.appendChild(link);
+    });
+  }
+
+  // Get performance summary
+  getPerformanceSummary() {
+>>>>>>> origin/cursor/install-dependencies-and-run-type-check-b1ae
     return {
       loadTime: timing.loadEventEnd - timing.navigationStart,
       interactiveTime: timing.domInteractive - timing.navigationStart,
@@ -602,6 +632,7 @@ class PerformanceOptimizer {
 }
 
 // Export singleton instance
+<<<<<<< HEAD
 export const performanceOptimizer = PerformanceOptimizer.getInstance();
 
 export default {
@@ -628,3 +659,6 @@ export default {
   checkPerformanceBudget
 >>>>>>> 71655f282840ed9a4a2a6696e410390223898ad3
 };
+=======
+export const performanceOptimizer = PerformanceOptimizer.getInstance();
+>>>>>>> origin/cursor/install-dependencies-and-run-type-check-b1ae
