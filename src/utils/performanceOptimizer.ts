@@ -90,6 +90,49 @@ export class PerformanceOptimizer {
     return Object.fromEntries(this.metrics);
   }
 
+  // Add critical resource hints for better performance
+  addCriticalResourceHints(): void {
+    if (typeof document === 'undefined') return;
+    
+    const hints = [
+      { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' },
+      { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com' },
+      { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+      { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossOrigin: 'anonymous' }
+    ];
+    
+    hints.forEach(hint => {
+      const link = document.createElement('link');
+      link.rel = hint.rel;
+      link.href = hint.href;
+      if (hint.crossOrigin) {
+        link.crossOrigin = hint.crossOrigin;
+      }
+      document.head.appendChild(link);
+    });
+  }
+
+  // Report Web Vitals
+  reportWebVitals(metric: any): void {
+    if (process.env.NODE_ENV === 'development') {
+      console.log('Web Vital:', metric);
+    }
+  }
+
+  // Measure page load time
+  measurePageLoad(): any {
+    if (typeof window === 'undefined' || !window.performance) {
+      return null;
+    }
+    
+    const timing = window.performance.timing;
+    return {
+      loadTime: timing.loadEventEnd - timing.navigationStart,
+      domContentLoaded: timing.domContentLoadedEventEnd - timing.navigationStart,
+      firstPaint: performance.getEntriesByType('paint')[0]?.startTime || 0
+    };
+  }
+
   // Initialize all optimizations
   initialize(): void {
     this.measurePerformance('lazyLoadImages', () => this.lazyLoadImages());
@@ -98,80 +141,5 @@ export class PerformanceOptimizer {
   }
 }
 
-<<<<<<< HEAD
-/**
- * Critical resource hints for better performance
- */
-export const addCriticalResourceHints = (): void => {
-  if (typeof document === 'undefined') return;
-  
-  const hints = [
-    { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' },
-    { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com' },
-    { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
-    { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossOrigin: 'anonymous' }
-  ];
-  
-  hints.forEach(hint => {
-    const link = document.createElement('link');
-    link.rel = hint.rel;
-    link.href = hint.href;
-    if (hint.crossOrigin) {
-      link.crossOrigin = hint.crossOrigin;
-    }
-    document.head.appendChild(link);
-  });
-};
-
-export const checkPerformanceBudget = (budget: PerformanceBudget): {
-  passed: boolean;
-  violations: string[];
-} => {
-  const violations: string[] = [];
-  
-  if (typeof window === 'undefined' || !window.performance) {
-    return { passed: true, violations };
-  }
-  
-  const timing = window.performance.timing;
-  const loadTime = timing.loadEventEnd - timing.navigationStart;
-  const interactiveTime = timing.domInteractive - timing.navigationStart;
-  
-  if (loadTime > budget.maxFirstLoad) {
-    violations.push(`First load time (${loadTime}ms) exceeds budget (${budget.maxFirstLoad}ms)`);
-  }
-  
-  if (interactiveTime > budget.maxInteractive) {
-    violations.push(`Time to interactive (${interactiveTime}ms) exceeds budget (${budget.maxInteractive}ms)`);
-  }
-  
-  return {
-    passed: violations.length === 0,
-    violations
-  };
-};
-
-export default {
-  prefetchResources,
-  preconnectDomains,
-  lazyLoadImages,
-  debounce,
-  throttle,
-  measurePageLoad,
-  reportWebVitals,
-  shouldUseWebP,
-  getConnectionQuality,
-  shouldLoadHeavyAssets,
-  requestIdleCallback,
-  cancelIdleCallback,
-  preloadRoute,
-  monitorLongTasks,
-  cacheStaticAssets,
-  clearOldCaches,
-  checkPerformanceBudget,
-  addCriticalResourceHints
-};
-=======
 // Export singleton instance
 export const performanceOptimizer = PerformanceOptimizer.getInstance();
->>>>>>> origin/merge-all-fixes
