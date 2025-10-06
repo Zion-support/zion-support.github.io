@@ -1,4 +1,4 @@
-import React, { useEffect, lazy } from 'react';
+import React, { useEffect, lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 
@@ -19,7 +19,7 @@ const ContactPage = lazy(() => import('./contact/page'));
 const EnterprisePage = lazy(() => import('./enterprise/page'));
 
 // Utils
-import { performanceOptimizer } from '../src/utils/performanceOptimizer';
+import performanceOptimizer from '../src/utils/performanceOptimizer';
 
 // Styles
 import '../src/index.css';
@@ -38,8 +38,8 @@ function App() {
       <ErrorBoundary>
         <Router>
           <div className="App">
-            <SEOOptimizer />
-            <AccessibilityEnhancer />
+            <SEOOptimizer>
+              <AccessibilityEnhancer>
             <PerformanceDashboard />
             
             <Navigation />
@@ -55,6 +55,8 @@ function App() {
             </Suspense>
             
             <Footer />
+              </AccessibilityEnhancer>
+            </SEOOptimizer>
           </div>
         </Router>
       </ErrorBoundary>
