@@ -3,9 +3,107 @@ export class PerformanceOptimizer {
   private static instance: PerformanceOptimizer;
   private metrics: Map<string, number> = new Map();
 
-  static getInstance(): PerformanceOptimizer {
-    if (!PerformanceOptimizer.instance) {
-      PerformanceOptimizer.instance = new PerformanceOptimizer();
+/**
+ * Web Vitals metrics tracking
+ */
+export interface WebVitalsMetrics {
+  FCP?: number; // First Contentful Paint
+  LCP?: number; // Largest Contentful Paint
+  FID?: number; // First Input Delay
+  CLS?: number; // Cumulative Layout Shift
+  TTFB?: number; // Time to First Byte
+  INP?: number; // Interaction to Next Paint
+}
+
+/**
+ * Resource hints for performance
+ */
+export const prefetchResources = (urls: string[]): void => {
+  if (typeof document === 'undefined') return;
+  
+  urls.forEach(url => {
+    const link = document.createElement('link');
+    link.rel = 'prefetch';
+    link.href = url;
+    document.head.appendChild(link);
+  });
+};
+
+/**
+ * Preconnect to external domains
+ */
+export const preconnectDomains = (domains: string[]): void => {
+  if (typeof document === 'undefined') return;
+  
+  domains.forEach(domain => {
+    const link = document.createElement('link');
+    link.rel = 'preconnect';
+    link.href = domain;
+    link.crossOrigin = 'anonymous';
+    document.head.appendChild(link);
+  });
+};
+
+/**
+ * Lazy load images with Intersection Observer
+ */
+export const lazyLoadImages = (): void => {
+  if (typeof window === 'undefined') return;
+  if (!('IntersectionObserver' in window)) return;
+
+  const imageObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const img = entry.target as HTMLImageElement;
+        const src = img.dataset.src;
+        if (src) {
+          img.src = src;
+          img.removeAttribute('data-src');
+          imageObserver.unobserve(img);
+        }
+      }
+    });
+  }, {
+    rootMargin: '50px 0px',
+    threshold: 0.01
+  });
+
+  document.querySelectorAll('img[data-src]').forEach(img => {
+    imageObserver.observe(img);
+  });
+};
+
+/**
+ * Debounce function for performance optimization
+ */
+export function debounce<T extends (...args: any[]) => any>(
+  func: T,
+  wait: number
+): (...args: Parameters<T>) => void {
+  let timeout: NodeJS.Timeout | null = null;
+  return function executedFunction(...args: Parameters<T>) {
+    const later = () => {
+      timeout = null;
+      func(...args);
+    };
+    if (timeout) clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+  };
+}
+
+/**
+ * Throttle function for performance optimization
+ */
+export function throttle<T extends (...args: any[]) => any>(
+  func: T,
+  limit: number
+): (...args: Parameters<T>) => void {
+  let inThrottle: boolean;
+  return function executedFunction(...args: Parameters<T>) {
+    if (!inThrottle) {
+      func(...args);
+      inThrottle = true;
+      setTimeout(() => (inThrottle = false), limit);
     }
     return PerformanceOptimizer.instance;
   }
@@ -98,11 +196,112 @@ export class PerformanceOptimizer {
   }
 }
 
-<<<<<<< HEAD
+/**
+ * Measure page load performance
+ */
+export const measurePageLoad = (): WebVitalsMetrics | null => {
+  if (typeof window === 'undefined' || !window.performance) return null;
+  
+  const perfData = window.performance.timing;
+  const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+  
+  return {
+    FCP: navigation?.responseStart - navigation?.fetchStart,
+    TTFB: perfData.responseStart - perfData.navigationStart
+  };
+};
+
+/**
+ * Report Web Vitals to analytics
+ */
+export const reportWebVitals = (metrics: WebVitalsMetrics): void => {
+  console.log('Web Vitals: ', metrics);
+
+  // Send to analytics service
+  if (typeof window !== 'undefined' && (window as any).gtag) {
+    Object.entries(metrics).forEach(([key, value]) => {
+      if (value !== undefined) {
+        (window as any).gtag('event', key, {
+          value: Math.round(value),
+          event_category: 'Web Vitals',
+          non_interaction: true
+        });
+      }
+    });
+  }
+};
 /**
  * Critical resource hints for better performance
  */
-export const addCriticalResourceHints = (): void => {
+export const shouldUseWebP = (): boolean => {
+  if (typeof window === 'undefined') return false;
+  
+  const canvas = document.createElement('canvas');
+  canvas.width = canvas.height = 1;
+  return canvas.toDataURL('image/webp').indexOf('data:image/webp') === 0;
+};
+
+/**
+ * Get connection quality
+ */
+export const getConnectionQuality = (): 'slow' | 'medium' | 'fast' => {
+  if (typeof navigator === 'undefined') return 'medium';
+  
+  const connection = (navigator as any).connection || (navigator as any).mozConnection || (navigator as any).webkitConnection;
+  if (!connection) return 'medium';
+  
+  const effectiveType = connection.effectiveType;
+  if (effectiveType === 'slow-2g' || effectiveType === '2g') return 'slow';
+  if (effectiveType === '3g') return 'medium';
+  return 'fast';
+};
+
+/**
+ * Adaptive loading based on network conditions
+ */
+export const shouldLoadHeavyAssets = (): boolean => {
+  const quality = getConnectionQuality();
+  const saveData = typeof navigator !== 'undefined' && (navigator as any).connection?.saveData;
+  return quality === 'fast' && !saveData;
+};
+
+/**
+ * Request Idle Callback wrapper with fallback
+ */
+export const requestIdleCallback = (callback: IdleRequestCallback): number => {
+  if (typeof window === 'undefined') return 0;
+  
+  if ('requestIdleCallback' in window) {
+    return window.requestIdleCallback(callback);
+  }
+  
+  // Fallback for browsers that don't support requestIdleCallback
+  return (window as any).setTimeout(() => {
+    const start = Date.now();
+    callback({
+      didTimeout: false,
+      timeRemaining: () => Math.max(0, 50 - (Date.now() - start))
+    });
+  }, 1) as unknown as number;
+};
+
+/**
+ * Cancel Idle Callback wrapper with fallback
+ */
+export const cancelIdleCallback = (id: number): void => {
+  if (typeof window === 'undefined') return;
+  
+  if ('cancelIdleCallback' in window) {
+    window.cancelIdleCallback(id);
+  } else {
+    (window as any).clearTimeout(id);
+  }
+};
+
+/**
+ * Optimize bundle loading with route-based code splitting
+ */
+export const preloadRoute = (route: string): void => {
   if (typeof document === 'undefined') return;
   
   const hints = [
@@ -171,7 +370,4 @@ export default {
   checkPerformanceBudget,
   addCriticalResourceHints
 };
-=======
-// Export singleton instance
-export const performanceOptimizer = PerformanceOptimizer.getInstance();
->>>>>>> origin/merge-all-fixes
+
