@@ -12,7 +12,7 @@ export const metadata = {
 
 export default function February2026TranscendentAutomationRevolutionPage() {
   return (
-    <div>/* content */}
+    <div>{{/* content */}</div></div>
     <div>
       <div> </div><div> </div>
       <div className="text-left">{/* Hero Section */}</div></div>

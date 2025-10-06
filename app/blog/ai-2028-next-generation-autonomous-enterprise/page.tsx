@@ -25,7 +25,7 @@ export const metadata = {
 
 export default function AI2028NextGenerationAutonomousEnterprise() {
   return (
-    <div>/* content */}
+    <div>{{/* content */}</div></div>
     <div>
       <div> </div><div> </div>
       <div className="text-left"> </div><h1 className="text-left">

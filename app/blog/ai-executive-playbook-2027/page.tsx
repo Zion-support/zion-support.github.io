@@ -7,8 +7,7 @@ export const metadata = {
       'Plan, fund, and govern reliable AI with measurable outcomes across the enterprise.',
   type: 'article',
 
-};;
-};
+}};
 
 export default function AIExecutivePlaybook2027Page() {
   return (

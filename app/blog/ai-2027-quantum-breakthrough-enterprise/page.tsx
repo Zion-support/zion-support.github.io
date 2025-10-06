@@ -7,12 +7,11 @@ export const metadata = {
   description:  'The quantum computing revolution is here. Learn how AI 2027 quantum systems are delivering 1000x performance improvements.',
   type: 'article',
 
-};;
-};
+}};
 
 export default function AI2027QuantumBreakthroughEnterprise() {
   return (
-    <div>/* content */}
+    <div>{{/* content */}</div></div>
     <div>
       <div> </div><div> </div>
       <div className="text-left"> </div><Link href="/blog" className="text-left">

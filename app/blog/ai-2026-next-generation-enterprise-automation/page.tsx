@@ -4,7 +4,7 @@ import { ArrowRight, Brain, Zap, Shield, TrendingUp, Users, Target, CheckCircle 
 
 export default function AINextGenEnterpriseAutomation2026() {
   return (
-    <div>/* content */}
+    <div>{{/* content */}</div></div>
     <div>
       <div> </div><div> </div>
       <div className="text-left">{/* Hero Section */}</div></div>

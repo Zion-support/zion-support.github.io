@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export default function AI2026DecemberMegaBreakthroughRevolution() {
   return (
-    <div>/* content */}
+    <div>{{/* content */}</div></div>
     <div>
       <div> </div><div> </div>
       <div className="text-left"> </div><Link href="/blog" className="text-left">

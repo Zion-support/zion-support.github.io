@@ -7,8 +7,7 @@ export const metadata = {
   description:  'Discover the groundbreaking AI trends and breakthroughs that will revolutionize enterprise operations in 2025-2026.',
   type: 'article',
 
-};;
-};
+}};
 
 export default function AIMegaTrends20252026() {
   return (

@@ -6,8 +6,7 @@ export const metadata = {
   description:  'Scoped IDs, on‑device metrics, and DP noise without PII.',
   type: 'article',
 
-};;
-};
+}};
 
 export default function EdgePrivateAnalytics2026Page() {
   return (

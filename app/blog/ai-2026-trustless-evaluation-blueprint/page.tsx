@@ -7,8 +7,7 @@ export const metadata = {
       'How to build signed, reproducible, and policy‑aligned evals for reliable AI at scale.',
   type: 'article',
 
-};;
-};
+}};
 
 export default function TrustlessEvaluationBlueprint2026Page() {
   return (

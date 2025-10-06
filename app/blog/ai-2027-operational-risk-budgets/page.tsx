@@ -8,8 +8,7 @@ export const metadata = {
       'KPI-linked canaries, budgeted actions, and instant rollback to keep autonomy safe.',
   type: 'article',
 
-};;
-};
+}};
 
 export default function AI2027OperationalRiskBudgetsPage() {
   return (

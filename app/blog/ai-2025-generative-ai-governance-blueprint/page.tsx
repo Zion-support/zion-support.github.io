@@ -7,8 +7,7 @@ export const metadata = {
       'Guardrails, red-teaming, and continuous evaluations to manage risk and ROI.',
   type: 'article',
 
-};;
-};
+}};
 
 export default function GenAIGovernanceBlueprint2025Page() {
   return (

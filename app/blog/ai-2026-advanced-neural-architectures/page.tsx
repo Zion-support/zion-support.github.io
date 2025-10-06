@@ -11,7 +11,7 @@ export const metadata = {
 
 export default function AI2026AdvancedNeuralArchitectures() {
   return (
-    <div>/* content */}
+    <div>{{/* content */}</div></div>
     <div>
       <div> </div><div> </div></div>
     <main className="text-left"> </main><div className="text-left">{/* Hero Section */}</div>

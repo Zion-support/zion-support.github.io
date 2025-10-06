@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export default function AINeuralSuperintelligencePlatform() {
   return (
-    <div>/* content */}
+    <div>{{/* content */}</div></div>
     <div>
       <div> </div><div> </div>
       <div className="text-left">{/* Hero Section */}</div>

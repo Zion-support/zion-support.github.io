@@ -7,8 +7,7 @@ export const metadata = {
       'Budgets, live traces, and one‑click rollback for safe autonomy at scale.',
   type: 'article',
 
-};;
-};
+}};
 
 export default function AIAutonomousOpsBlueprint2026Page() {
   return (

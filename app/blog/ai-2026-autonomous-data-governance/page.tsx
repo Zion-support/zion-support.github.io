@@ -7,8 +7,7 @@ export const metadata = {
       'Policies-as-code, evaluation gates, and end-to-end lineage to automate compliance at scale.',
   type: 'article',
 
-};;
-};
+}};
 
 export default function AutonomousDataGovernance2026Page() {
   return (

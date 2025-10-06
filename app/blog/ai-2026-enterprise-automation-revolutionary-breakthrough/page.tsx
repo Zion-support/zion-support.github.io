@@ -14,7 +14,7 @@ export const metadata = {
 
 export default function AI2026EnterpriseAutomationRevolutionaryBreakthrough() {
   return (
-    <div>/* content */}
+    <div>{{/* content */}</div></div>
     <div>
       <div> </div><div> </div>
       <div className="text-left">{/* Hero Section */}</div>

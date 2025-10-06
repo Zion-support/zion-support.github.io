@@ -8,8 +8,7 @@ export const metadata = {
       'Scoped IDs, edge aggregation, and DP noise for compliant, actionable analytics.',
   type: 'article',
 
-};;
-};
+}};
 
 export default function Edge2027ConsentlessAnalyticsV4Page() {
   return (

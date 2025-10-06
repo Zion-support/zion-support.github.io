@@ -14,7 +14,7 @@ export const metadata = {
 
 export default function AITrends2026FutureEnterpriseTransformation() {
   return (
-    <div>/* content */}
+    <div>{{/* content */}</div></div>
     <div>
       <div> </div><div> </div>
       <div className="text-left">{/* Header */}</div>

@@ -21,7 +21,7 @@ export const metadata = {
 
 export default function SustainableAIGreenComputing() {
   return (
-    <div>/* content */}
+    <div>{{/* content */}</div></div>
     <div>
       <div> </div><div> </div>
       <div className="text-left"> </div><Link href="/blog" className="text-left">

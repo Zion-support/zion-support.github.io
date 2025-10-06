@@ -21,7 +21,7 @@ export const metadata = {
 
 export default function AIAutonomousBusinessSystems2026() {
   return (
-    <div>/* content */}
+    <div>{{/* content */}</div></div>
     <div>
       <div> </div><div> </div>
       <div className="text-left"> </div><Link href="/blog" className="text-left">

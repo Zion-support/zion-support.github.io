@@ -8,8 +8,7 @@ export const metadata = {
       'Measure reliability, cost, safety, and value with live AI scorecards.',
   type: 'article',
 
-};;
-};
+}};
 
 export default function Page() {
   return (

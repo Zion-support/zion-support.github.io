@@ -7,8 +7,7 @@ export const metadata = {
       'Scale reliable AI hyper‑automation with policy gates, evals, and value stream analytics.',
   type: 'article',
 
-};;
-};
+}};
 
 export default function HyperAutomationBlueprint2027Page() {
   return (
