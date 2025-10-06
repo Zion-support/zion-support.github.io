@@ -118,7 +118,14 @@
     "SidebarNavigation.tsx",
     "api-documentation.tsx",
     "app/components/NewContentPromotionalBanner2026.tsx",
-    "app/components/NewestContent2025Banner.tsx"
+    "app/components/NewestContent2025Banner.tsx",
+    "utils/bannerLazyLoader.ts",
+    "utils/bannerPrioritization.ts",
+    "utils/bannerRegistry.ts",
+    "utils/bannerRotationSystem.ts",
+    "utils/comprehensiveOptimizer.ts",
+    "utils/performanceUtils.ts",
+    "utils/seoUtils.ts"
   ],
   "references": [
     {
