@@ -12,11 +12,14 @@ if (typeof window !== 'undefined') {
   performanceOptimizer.lazyLoadImages();
   
   // Monitor long tasks
-  performanceOptimizer.monitorLongTasks((entries: PerformanceEntry[]) => {
-    entries.forEach((entry: PerformanceEntry) => {
-      analytics.track('long_task', 'performance', 'detected', undefined, entry.duration);
+  const monitorLongTasks = (performanceOptimizer as { monitorLongTasks?: (callback: (entries: PerformanceEntry[]) => void) => PerformanceObserver | null }).monitorLongTasks;
+  if (monitorLongTasks) {
+    monitorLongTasks((entries: PerformanceEntry[]) => {
+      entries.forEach((entry: PerformanceEntry) => {
+        analytics.track('long_task', 'performance', 'detected', undefined, entry.duration);
+      });
     });
-  });
+  }
   
   // Track Web Vitals
   const metrics = performanceOptimizer.measurePageLoad();
