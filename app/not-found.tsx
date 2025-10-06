@@ -71,12 +71,12 @@ export default function NotFound() {
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-          <ArrowRight
+          <Link
             href="/"
             className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl"
           >
             ← Back to Home
-          </ArrowRight>
+          </Link>
           <a
             href="tel:+13024640950"
             className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-600 hover:text-white transition-colors"
