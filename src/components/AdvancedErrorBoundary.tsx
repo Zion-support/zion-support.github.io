@@ -1,4 +1,5 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';
+import { Component } from 'react';
+import type { ErrorInfo, ReactNode } from 'react';
 
 interface Props {
   children: ReactNode;
@@ -22,21 +23,21 @@ class AdvancedErrorBoundary extends Component<Props, State> {
     return { hasError: true, error };
   }
 
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+  override componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
       error,
       errorInfo,
     });
 
     // Log error to monitoring service
-    console.error('Error caught by boundary:', error, errorInfo);
+    // Error caught by boundary
 
     if (this.props.onError) {
       this.props.onError(error, errorInfo);
     }
   }
 
-  render() {
+  override render() {
     if (this.state.hasError) {
       if (this.props.fallback) {
         return this.props.fallback;
@@ -73,7 +74,7 @@ class AdvancedErrorBoundary extends Component<Props, State> {
                 refreshing the page.
               </p>
             </div>
-            {process.env.NODE_ENV === 'development' && this.state.error && (
+            {process.env['NODE_ENV'] === 'development' && this.state.error && (
               <details className='mt-4'>
                 <summary className='cursor-pointer text-sm font-medium text-gray-700'>
                   Error Details (Development)
