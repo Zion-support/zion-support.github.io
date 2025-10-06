@@ -25,13 +25,13 @@ export default function June2026Ultimate Breakthrough Page() {/* return (
             <span className="text-left">$100B ROI
             </span></span>
           </div>
-          <h1 className="text-left">{data.title}
+          <h1 className="text-left">{data['title']}
           </h1></h1>
-          <p className="text-left">{data.description}
+          <p className="text-left">{data['description']}
           </p></p>
-          <span>By    {data.author}</span>
+          <span>By    {data['author']}</span>
             <span>•</span>
-            <span>{new Date(data.date).to Locale Date    String   ()}</span>
+            <span>{new Date(data['date']).to Locale Date    String   ()}</span>
           </div>
         </header>
         <div className="text-left"> </div><div dangerously Set InnerHTML={{ __html: content.replace(/\n/g, '<br />') }} /></div>

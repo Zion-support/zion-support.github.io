@@ -9,7 +9,7 @@ interface DashboardData {
   timestamp: Date;
 }
 
-const PerformanceDashboard: React.FC = () => {
+const PerformanceDashboard: React.FC = (): JSX.Element | null => {
   const [data, setData] = useState<DashboardData | null>(null);
   const [isVisible, setIsVisible] = useState(false);
   const [autoRefresh, setAutoRefresh] = useState(true);

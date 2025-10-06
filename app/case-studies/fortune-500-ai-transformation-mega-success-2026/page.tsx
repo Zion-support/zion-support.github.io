@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Metadata } from 'next';
+import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Fortune 500 AI Transformation: $2.3B Revenue Increase in 12 Months',

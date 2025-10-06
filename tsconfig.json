@@ -44,6 +44,7 @@
     "noImplicitAny": true,
     "noImplicitReturns": true,
     "noImplicitThis": true,
+    "strictNullChecks": true,
     "exactOptionalPropertyTypes": true,
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
@@ -53,24 +54,8 @@
     "verbatimModuleSyntax": true
   },
   "include": [
-<<<<<<< HEAD
-    "app/**/*"
-  ],
-  "exclude": [
-    "src/**/*",
-    "app/page-optimized.tsx",
-    "app/services/**/*",
-    "app/case-studies/**/*",
-    "app/guides/**/*",
-    "app/blog/**/*",
-    "app/components/**/*"
-=======
-    "src/**/*",
-    "app/enterprise/**/*",
-    "app/not-found.tsx",
-    "app/page.tsx",
-    "app/layout.tsx",
-    "app/App.tsx"
+    "app/**/*",
+    "src/**/*"
   ],
   "exclude": [
     "node_modules",
@@ -126,6 +111,5 @@
     {
       "path": "./tsconfig.node.json"
     }
->>>>>>> bbed11ac5bc5a9ce3f8009e73761d2eabe4b3313
   ]
 }

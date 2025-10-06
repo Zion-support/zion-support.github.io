@@ -5,6 +5,7 @@ import {
   CheckCircle,
   TrendingUp,
   Users,
+  Star,
 } from 'lucide-react';
 
 export default function Fortune500TransformationShowcaseBanner() {
