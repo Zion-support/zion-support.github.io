@@ -32,7 +32,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
         document.head.removeChild(script);
       };
     }
-    // Return undefined if no structured data
     return undefined;
   }, [structuredData]);
 

@@ -1,7 +1,7 @@
 import React, { type ReactNode, useEffect, useState } from 'react';
 
 interface AccessibilityEnhancerProps {
-  children: ReactNode;
+  children: React.ReactNode;
 }
 
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
@@ -30,17 +30,25 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     enhanceFocusManagement();
   }, []);
 
-  const applyAccessibilityStyles = (highContrast: boolean, fontSize: string, reducedMotion: boolean) => {
+  const applyAccessibilityStyles = (
+    highContrast: boolean,
+    fontSize: 'small' | 'normal' | 'large',
+    reducedMotion: boolean
+  ) => {
     const root = document.documentElement;
     
+    // High contrast mode
     if (highContrast) {
       root.classList.add('high-contrast');
     } else {
       root.classList.remove('high-contrast');
     }
 
-    root.setAttribute('data-font-size', fontSize);
-    
+    // Font size
+    root.classList.remove('font-small', 'font-normal', 'font-large');
+    root.classList.add(`font-${fontSize}`);
+
+    // Reduced motion
     if (reducedMotion) {
       root.classList.add('reduced-motion');
     } else {
@@ -57,6 +65,19 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       skipLink.textContent = 'Skip to main content';
       document.body.insertBefore(skipLink, document.body.firstChild);
     }
+  };
+
+  const changeFontSize = (newSize: 'small' | 'normal' | 'large') => {
+    setFontSize(newSize);
+    localStorage.setItem('fontSize', newSize);
+    applyAccessibilityStyles(isHighContrast, newSize, reducedMotion);
+  };
+
+  const toggleHighContrast = () => {
+    const newHighContrast = !isHighContrast;
+    setIsHighContrast(newHighContrast);
+    localStorage.setItem('highContrast', newHighContrast.toString());
+    applyAccessibilityStyles(newHighContrast, fontSize, reducedMotion);
   };
 
   const addAriaLandmarks = () => {
@@ -81,6 +102,41 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
   return (
     <>
       {children}
+      <div className="accessibility-controls fixed bottom-4 left-4 z-50">
+        <div className="bg-white shadow-lg rounded-lg p-4 space-y-2">
+          <h3 className="text-sm font-semibold text-gray-700 mb-2">Accessibility</h3>
+          
+          <button
+            onClick={toggleHighContrast}
+            className={`w-full px-3 py-2 text-xs rounded ${
+              isHighContrast 
+                ? 'bg-blue-600 text-white' 
+                : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+            }`}
+          >
+            {isHighContrast ? 'High Contrast On' : 'High Contrast Off'}
+          </button>
+          
+          <div className="space-y-1">
+            <label className="text-xs text-gray-600">Font Size:</label>
+            <div className="flex space-x-1">
+              {(['small', 'normal', 'large'] as const).map((size) => (
+                <button
+                  key={size}
+                  onClick={() => changeFontSize(size)}
+                  className={`px-2 py-1 text-xs rounded ${
+                    fontSize === size 
+                      ? 'bg-blue-600 text-white' 
+                      : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+                  }`}
+                >
+                  {size}
+                </button>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
     </>
   );
 };

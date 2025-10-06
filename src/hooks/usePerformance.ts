@@ -6,8 +6,8 @@ const analytics = {
   trackPerformance: (name: string, value: number, unit: string = 'ms') => {
     console.log(`Performance: ${name} = ${value}${unit}`);
   },
-  track: (event: { action: string; category: string; label?: string; value?: number }) => {
-    console.log(`Analytics: ${event.action} - ${event.category} - ${event.label}`, { value: event.value });
+  track: (event: string, category: string, action: string, label?: string, value?: number) => {
+    console.log(`Analytics: ${event} - ${category} - ${action}`, { label, value });
   }
 };
 
@@ -32,12 +32,13 @@ export const usePageLoadPerformance = () => {
           });
           
           // Track overall page load performance
-          analytics.track({
-            action: 'page_load_complete',
-            category: 'performance',
-            label: 'complete',
-            value: metrics.totalLoadTime
-          });
+          analytics.track(
+            'page_load_complete',
+            'performance',
+            'complete',
+            undefined,
+            metrics.totalLoadTime
+          );
         }
       }
     };
@@ -89,12 +90,7 @@ export const useResourcePerformance = () => {
 
     const observer = new PerformanceObserver(list => {
       list.getEntries().forEach(entry => {
-        analytics.track({
-          action: 'long_task',
-          category: 'performance',
-          label: 'detected',
-          value: entry.duration
-        });
+        analytics.track('long_task', 'performance', 'detected', undefined, entry.duration);
       });
     });
 
@@ -143,21 +139,18 @@ export const useLongTaskMonitoring = () => {
       return;
     }
 
-    const observer = new PerformanceObserver((list) => {
-      list.getEntries().forEach((entry) => {
-        analytics.track({
-          action: 'long_task',
-          category: 'performance',
-          label: 'detected',
-          value: entry.duration
-        });
+    const observer = new PerformanceObserver((entries) => {
+      entries.getEntries().forEach((entry) => {
+        analytics.track('long_task', 'performance', 'detected', undefined, entry.duration);
       });
     });
 
     observer.observe({ entryTypes: ['longtask'] });
 
     return () => {
-      observer.disconnect();
+      if (observer && typeof observer.disconnect === 'function') {
+        observer.disconnect();
+      }
     };
   }, []);
 };
@@ -181,12 +174,13 @@ export const useRenderPerformance = (componentName: string) => {
       );
       
       if (renderTime > 16) { // More than one frame at 60fps
-        analytics.track({
-          action: 'slow_render',
-          category: 'performance',
-          label: 'detected',
-          value: renderTime
-        });
+        analytics.track(
+          'slow_render',
+          'performance',
+          'detected',
+          componentName,
+          renderTime
+        );
       }
     };
   });
@@ -225,12 +219,7 @@ export const useMemoryMonitoring = () => {
       analytics.trackPerformance('memory_percentage', memoryUsage.percentage, '%');
 
       if (memoryUsage.percentage > 80) {
-        analytics.track({
-          action: 'high_memory_usage',
-          category: 'performance',
-          label: 'warning',
-          value: memoryUsage.percentage
-        });
+        analytics.track('high_memory_usage', 'performance', 'warning', undefined, memoryUsage.percentage);
       }
     };
 
