@@ -1,14 +1,14 @@
 // Performance optimization utilities
 export default {
   initialize() {
-    // Initialize performance monitoring
+    //Initialize performance monitoring
     if (typeof window !== 'undefined' && 'performance' in window) {
       console.log('Performance optimizer initialized');
     }
   },
   
   lazyLoadImages() {
-    // Lazy load images for better performance
+    //Lazy load images for better performance
     if (typeof window !== 'undefined') {
       const images = document.querySelectorAll('img[data-src]');
       const imageObserver = new IntersectionObserver((entries) => {

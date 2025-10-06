@@ -52,7 +52,7 @@
     "noUncheckedIndexedAccess": false,
     "allowUnusedLabels": false,
     "allowUnreachableCode": false,
-    "verbatimModuleSyntax": false
+    "verbatimModuleSyntax": true
   },
   "include": [
     "app/**/*",

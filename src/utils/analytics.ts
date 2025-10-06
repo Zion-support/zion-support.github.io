@@ -1,7 +1,6 @@
 /**
  * Analytics utility for tracking events and performance
  */
-<<<<<<< HEAD
 export interface AnalyticsEvent {
   name: string;
   category: string;
@@ -58,7 +57,7 @@ class Analytics {
    */
   public track(
     name: string,
-    category: string,
+  category: string,
     action?: string,
     label?: string,
     value?: number,
@@ -67,59 +66,29 @@ class Analytics {
     const event: AnalyticsEvent = {
       name,
       category,
-<<<<<<< HEAD
       action: action || undefined,
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      action: action || '',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
       label: label || undefined,
-<<<<<<< HEAD
-<<<<<<< HEAD
       value: value || 0,
       properties: properties || {},
-=======
-<<<<<<< HEAD
-      value,
-      properties,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-02dd
-=======
       value: value || undefined,
       properties: properties || undefined,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-8da8
-=======
->>>>>>> main
       action: action || undefined,
       label: label || undefined,
       value: value || undefined,
       properties: properties || undefined,
-<<<<<<< HEAD
-=======
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
       timestamp: Date.now(),
     };
     this.events.push(event);
-    // Send to analytics service
+    //Send to analytics service
     this.sendToAnalytics(event);
-    // Log in development
-<<<<<<< HEAD
+    //Log in development
     if (process.env.NODE_ENV === 'development') {
-      // Analytics event logged
-=======
-    if (process.env['NODE_ENV'] === 'development') {
-      // Analytics event tracked
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-e98c
+      //Analytics event logged
     }
   }
   /**
    * Track page view
-   */
-  public trackPageView(page: string, title?: string): void {
+   */public trackPageView(page: string, title?: string): void {
     this.track('page_view', 'navigation', 'view', page, undefined, {
       page_title: title || document.title,
       page_url: typeof window !== 'undefined' ? window.location.href : page,
@@ -127,24 +96,22 @@ class Analytics {
   }
   /**
    * Track user interaction
-   */
-  public trackInteraction(
+   */public trackInteraction(
     element: string,
-    action: string,
+  action: string,
     category: string = 'user_interaction'
   ): void {
     this.track('interaction', category, action, element);
   }
   /**
    * Track performance metrics
-   */
-  public trackPerformance(metric: string, value: number, unit: string = 'ms'): void {
+   */public trackPerformance(metric: string,
+  value: number, unit: string = 'ms'): void {
     this.track('performance', 'metrics', metric, unit, value);
   }
   /**
    * Track business events
-   */
-  public trackBusinessEvent(
+   */public trackBusinessEvent(
     event: string,
     value?: number,
     properties?: Record<string, unknown>
@@ -153,65 +120,55 @@ class Analytics {
   }
   /**
    * Send event to analytics service
-   */
-  private async sendToAnalytics(event: AnalyticsEvent): Promise<void> {
+   */private async sendToAnalytics(event: AnalyticsEvent): Promise<void> {
     try {
-      // In a real application, you would send to services like Google Analytics, Mixpanel, etc.
-      // For now, we'll just log to console
-<<<<<<< HEAD
-      // Analytics event sent
-=======
-      // Analytics event sent successfully
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-e98c
+      //In a real application, you would send to services like Google Analytics, Mixpanel, etc.
+      //For now, we'll just log to console
+      //Analytics event sent
     } catch (err) {
-      // Failed to send analytics event
+      //Failed to send analytics event
     }
   }
   /**
    * Get all events
-   */
-  public getEvents(): AnalyticsEvent[] {
+   */public getEvents(): AnalyticsEvent[] {
     return [...this.events];
   }
   /**
    * Get events by category
-   */
-  public getEventsByCategory(category: string): AnalyticsEvent[] {
+   */public getEventsByCategory(category: string): AnalyticsEvent[] {
     return this.events.filter(event => event.category === category);
   }
   /**
    * Clear all events
-   */
-  public clearEvents(): void {
+   */public clearEvents(): void {
     this.events = [];
   }
   /**
    * Get user properties
-   */
-  public getUserProperties(): UserProperties {
+   */public getUserProperties(): UserProperties {
     return { ...this.userProperties };
   }
   /**
    * Update user properties
-   */
-  public updateUserProperties(properties: Partial<UserProperties>): void {
+   */public updateUserProperties(properties: Partial<UserProperties>): void {
     this.userProperties = { ...this.userProperties, ...properties };
   }
 }
-// Create singleton instance
+//Create singleton instance
 export const analytics = new Analytics();
 export default analytics;
-=======
 
 export const analytics = {
-  track: (event: string, category: string, action: string, label?: string, value?: number) => {
+  track: (event: string,
+  category: string, action: string, label?: string, value?: number) => {
     console.log('Analytics:', { event, category, action, label, value });
-    // In a real implementation, this would send data to analytics service
+    //In a real implementation, this would send data to analytics service
   },
   
-  trackPerformance: (name: string, value: number, unit: string = 'ms') => {
+  trackPerformance: (name: string,
+  value: number, unit: string = 'ms') => {
     console.log(`Performance: ${name} = ${value}${unit}`);
     // In a real implementation, this would send performance data to analytics
   }
 };
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854

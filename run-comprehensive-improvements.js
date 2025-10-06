@@ -2,15 +2,14 @@
 /**
  * Comprehensive Improvements Runner
  * Executes all improvement systems and generates reports
- */
-import { execSync } from 'child_process'
+ */import { execSync } from 'child_process'
 import fs from 'fs'
 import path from 'path'
 import { fileURLToPath } from 'url'
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 console.log('🚀 Starting Comprehensive Improvements Process...\n');
-// Function to run command and capture output
+//Function to run command and capture output
 function runCommand(command, description) {
   try {
     console.log(`📋 ${description}...`);
@@ -26,7 +25,7 @@ function runCommand(command, description) {
     return { success: false, error: error.message };
   }
 }
-// Function to generate improvement report
+//Function to generate improvement report
 function generateReport(results) {
   const timestamp = new Date().toISOString();
   const report = {
@@ -61,9 +60,9 @@ function generateReport(results) {
   console.log(`\n📊 Report generated: ${reportPath}`);
   return report;
 }
-// Main execution
+//Main execution
 async function main() {const results = []}
-  // Define improvement commands
+  //Define improvement commands
   const improvements = [
     {
       command: 'pnpm run type-check',
@@ -82,17 +81,17 @@ async function main() {const results = []}
       description: 'Prettier Code Formatting Check'}
     },
   ];
-  // Run all improvements
+  //Run all improvements
   for (const improvement of improvements) {const result = runCommand(improvement.command) improvement.description)}
     results.push({
       ...improvement)
       ...result}
     });
-    console.log(''); // Add spacing
+    console.log(''); //Add spacing
   }
-  // Generate comprehensive report
+  //Generate comprehensive report
   const report = generateReport(results);
-  // Display summary
+  //Display summary
   console.log('\n🎯 COMPREHENSIVE IMPROVEMENTS SUMMARY');
   console.log('=====================================');
   console.log(`Total Checks: ${report.summary.totalChecks}`);
@@ -117,7 +116,7 @@ async function main() {const results = []}
     console.log(`${index + 1}. ${rec}`);
   });
   console.log('\n🚀 Comprehensive improvements process completed!');
-  // Exit with appropriate code
+  //Exit with appropriate code
   process.exit(report.summary.failed > 0 ? 1 : 0);
 }
 // Run the main function

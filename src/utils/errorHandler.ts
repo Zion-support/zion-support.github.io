@@ -1,7 +1,6 @@
 /**
  * Error handling utilities
  */
-<<<<<<< HEAD
 export interface ErrorContext {
   component?: string | undefined;
   action?: string | undefined;
@@ -39,63 +38,50 @@ class ErrorHandler {
       severity,
     };
     this.errorQueue.push(errorReport);
-    // Keep queue size manageable
+    //Keep queue size manageable
     if (this.errorQueue.length > this.maxQueueSize) {
       this.errorQueue.shift();
     }
-    // Log to console in development
-<<<<<<< HEAD
+    //Log to console in development
     if (process.env.NODE_ENV === 'development') {
-=======
-    if (process.env['NODE_ENV'] === 'development') {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-e98c
-      // Error logged
+      //Error logged
     }
-    // Send to external service in production
+    //Send to external service in production
     if (process.env['NODE_ENV'] === 'production') {
       this.sendToErrorService(errorReport);
     }
   }
   /**
    * Send error to external error reporting service
-   */
-  private async sendToErrorService(errorReport: ErrorReport): Promise<void> {
+   */private async sendToErrorService(errorReport: ErrorReport): Promise<void> {
     try {
-      // In a real application, you would send to services like Sentry, LogRocket, etc.
-      // For now, we'll just log to console
-<<<<<<< HEAD
-      // Error report
-=======
-      // Error report generated
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-e98c
+      //In a real application, you would send to services like Sentry, LogRocket, etc.
+      //For now, we'll just log to console
+      //Error report
     } catch (err) {
-      // Failed to send error report
+      //Failed to send error report
     }
   }
   /**
    * Get all errors from the queue
-   */
-  public getErrors(): ErrorReport[] {
+   */public getErrors(): ErrorReport[] {
     return [...this.errorQueue];
   }
   /**
    * Clear error queue
-   */
-  public clearErrors(): void {
+   */public clearErrors(): void {
     this.errorQueue = [];
   }
   /**
    * Get errors by severity
-   */
-  public getErrorsBySeverity(severity: ErrorReport['severity']): ErrorReport[] {
+   */public getErrorsBySeverity(severity: ErrorReport['severity']): ErrorReport[] {
     return this.errorQueue.filter(error => error.severity === severity);
   }
   /**
    * Setup global error handlers
-   */
-  public setupGlobalHandlers(): void {
+   */public setupGlobalHandlers(): void {
     if (typeof window === 'undefined') return;
-    // Handle unhandled promise rejections
+    //Handle unhandled promise rejections
     window.addEventListener('unhandledrejection', event => {
       this.logError(
         new Error(event.reason),
@@ -103,7 +89,7 @@ class ErrorHandler {
         'high'
       );
     });
-    // Handle JavaScript errors
+    //Handle JavaScript errors
     window.addEventListener('error', event => {
       this.logError(
         event.error || new Error(event.message),
@@ -117,19 +103,18 @@ class ErrorHandler {
     });
   }
 }
-// Create singleton instance
+//Create singleton instance
 export const errorHandler = new ErrorHandler();
-// Setup global handlers
+//Setup global handlers
 if (typeof window !== 'undefined') {
   errorHandler.setupGlobalHandlers();
 }
 export default errorHandler;
-=======
 
 export const errorHandler = {
   log: (error: Error, context?: string) => {
     console.error('Error:', error.message, context ? `Context: ${context}` : '');
-    // In a real implementation, this would send error data to monitoring service
+    //In a real implementation, this would send error data to monitoring service
   },
   
   report: (error: Error, context?: string) => {
@@ -137,4 +122,3 @@ export const errorHandler = {
     // In a real implementation, this would send error data to error reporting service
   }
 };
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854

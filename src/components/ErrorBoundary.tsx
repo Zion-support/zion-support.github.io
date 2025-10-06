@@ -9,8 +9,8 @@ interface Props {
 
 interface State {
   hasError: boolean;
-  error?: Error;
-  errorId?: string;
+  error?: Error | undefined;
+  errorId?: string | undefined;
 }
 
 class ErrorBoundary extends Component<Props, State> {
@@ -47,7 +47,7 @@ class ErrorBoundary extends Component<Props, State> {
   }
 
   handleRetry = () => {
-    this.setState({ hasError: false });
+    this.setState({ hasError: false, error: undefined, errorId: undefined });
   };
 
   handleGoHome = () => {
