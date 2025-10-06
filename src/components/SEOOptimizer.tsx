@@ -134,6 +134,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     return undefined;
   }, [structuredData]);
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -178,6 +179,8 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ children }) => {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-96bc
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-debd
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-dda3
 
   return (
     <>
@@ -216,6 +219,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ children }) => {
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e62
         <title>Zion Tech Group — Revolutionary AI Solutions for Enterprise</title>
         <meta name="description" content="Transform your business with cutting-edge AI micro SaaS services, cloud automation, and enterprise IT solutions." />
@@ -240,6 +244,8 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ children }) => {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-96bc
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-debd
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-dda3
       </Helmet>
       {children}
     </>

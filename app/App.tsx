@@ -24,7 +24,10 @@ const EnterprisePage = lazy(() => import('./enterprise/page'));
 
 // Utils
 import performanceOptimizer from '../src/utils/performanceOptimizer';
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-debd
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-dda3
 
 // Styles
 import '../src/index.css';
@@ -42,8 +45,8 @@ function App() {
 <<<<<<< HEAD
         <Router>
           <div className="App">
-            <SEOOptimizer />
-            <AccessibilityEnhancer />
+            <SEOOptimizer>
+              <AccessibilityEnhancer>
             <PerformanceDashboard />
             
             <Navigation />
@@ -59,6 +62,8 @@ function App() {
             </Suspense>
             
             <Footer />
+              </AccessibilityEnhancer>
+            </SEOOptimizer>
           </div>
         </Router>
 =======

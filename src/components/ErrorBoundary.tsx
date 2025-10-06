@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Component, type ErrorInfo, type ReactNode } from 'react';
 import React, { Component, type ErrorInfo, type ReactNode } from 'react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e62
@@ -11,6 +12,9 @@ import React, { Component, type ErrorInfo, type ReactNode } from 'react';
 =======
 import React, { Component, type ErrorInfo, type ReactNode } from 'react';
 >>>>>>> cursor/fix-errors-and-merge-to-main-debd
+=======
+import React, { Component, type ErrorInfo, type ReactNode } from 'react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-dda3
 import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
 
 interface Props {
@@ -141,9 +145,12 @@ class ErrorBoundary extends Component<Props, State> {
 export default ErrorBoundary;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default ErrorBoundary;
 >>>>>>> cursor/fix-errors-and-merge-to-main-cfe1
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-96bc
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-debd
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-dda3

@@ -106,10 +106,13 @@ const Contact = () => (
   </div>
 ));
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-cea4
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-dda3
 // Error Boundary Component
 interface ErrorBoundaryState {
   hasError: boolean;
@@ -126,10 +129,6 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
   static getDerivedStateFromError(error: Error): ErrorBoundaryState {
     return { hasError: true, error };
   }
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-cea4
   override componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
     console.error('App Error Boundary caught an error:', error, errorInfo);
   }
@@ -171,6 +170,7 @@ const Team = () => (
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-96bc
   </div>
 ));
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 const Privacy = () => (
@@ -262,6 +262,8 @@ class ErrorBoundary extends React.Component<
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-cea4
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-dda3
 export default function App() {
   const structuredData = useMemo(
     () => ({
