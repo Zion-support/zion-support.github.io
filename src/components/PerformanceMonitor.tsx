@@ -7,7 +7,15 @@ interface PerformanceMonitorProps {
 }
 
 interface WebVitalsMetrics {
+<<<<<<< HEAD
   [key: string]: number;
+=======
+  FCP?: number;
+  LCP?: number;
+  FID?: number;
+  CLS?: number;
+  TTFB?: number;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-96bc
 }
 
 const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ 
@@ -31,6 +39,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       });
       
       observer.observe({ entryTypes: ['navigation'] });
+<<<<<<< HEAD
       
       return () => observer.disconnect();
     }
@@ -95,6 +104,79 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ children }) => 
     return undefined;
 >>>>>>> cursor/fix-errors-and-merge-to-main-cfe1
   }, []);
+=======
+
+      // Monitor long tasks
+      if (enableLongTaskMonitoring) {
+        const longTaskObserver = new PerformanceObserver((list) => {
+          const longTasks = list.getEntries().filter(entry => entry.duration > 50);
+          setLongTasks(prev => [...prev, ...longTasks]);
+          
+          if (enableReporting) {
+            console.warn('Long task detected:', longTasks);
+          }
+        });
+        
+        longTaskObserver.observe({ entryTypes: ['longtask'] });
+      }
+
+      // Monitor Core Web Vitals
+      if (enableReporting) {
+        // First Contentful Paint
+        const fcpObserver = new PerformanceObserver((list) => {
+          for (const entry of list.getEntries()) {
+            if (entry.name === 'first-contentful-paint') {
+              setMetrics(prev => ({ ...prev, FCP: entry.startTime }));
+            }
+          }
+        });
+        fcpObserver.observe({ entryTypes: ['paint'] });
+
+        // Largest Contentful Paint
+        const lcpObserver = new PerformanceObserver((list) => {
+          const entries = list.getEntries();
+          const lastEntry = entries[entries.length - 1];
+          setMetrics(prev => ({ ...prev, LCP: lastEntry.startTime }));
+        });
+        lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+
+        // First Input Delay
+        const fidObserver = new PerformanceObserver((list) => {
+          for (const entry of list.getEntries()) {
+            setMetrics(prev => ({ ...prev, FID: entry.processingStart - entry.startTime }));
+          }
+        });
+        fidObserver.observe({ entryTypes: ['first-input'] });
+
+        // Cumulative Layout Shift
+        let clsValue = 0;
+        const clsObserver = new PerformanceObserver((list) => {
+          for (const entry of list.getEntries()) {
+            if (!(entry as any).hadRecentInput) {
+              clsValue += (entry as any).value;
+              setMetrics(prev => ({ ...prev, CLS: clsValue }));
+            }
+          }
+        });
+        clsObserver.observe({ entryTypes: ['layout-shift'] });
+      }
+    }
+
+    return () => {
+      // Cleanup observers
+      if (typeof window !== 'undefined' && 'performance' in window) {
+        // Performance observers are automatically cleaned up when the component unmounts
+      }
+    };
+  }, [enableReporting, enableLongTaskMonitoring]);
+
+  // Log metrics when they change
+  useEffect(() => {
+    if (Object.keys(metrics).length > 0 && enableReporting) {
+      console.log('Performance Metrics:', metrics);
+    }
+  }, [metrics, enableReporting]);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-96bc
 
   // Log metrics in development
   useEffect(() => {

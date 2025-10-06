@@ -1,8 +1,12 @@
+<<<<<<< HEAD
 import { Component, type ErrorInfo, type ReactNode } from 'react';
 import React, { Component, type ErrorInfo, type ReactNode } from 'react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e62
 import React, { Component, type ErrorInfo, type ReactNode } from 'react';
 >>>>>>> cursor/fix-errors-and-merge-to-main-cfe1
+=======
+import React, { Component, type ErrorInfo, type ReactNode } from 'react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-96bc
 import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
 
 interface Props {
@@ -31,7 +35,7 @@ class ErrorBoundary extends Component<Props, State> {
     };
   }
 
-  override componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     console.error('ErrorBoundary caught an error:', error, errorInfo);
     
     // Report error to analytics/monitoring service
@@ -65,43 +69,62 @@ class ErrorBoundary extends Component<Props, State> {
     window.location.href = '/';
   };
 
-  override render() {
+  render() {
     if (this.state.hasError) {
       return this.props.fallback || (
-        <div className="min-h-screen flex items-center justify-center bg-gray-900">
-          <div className="text-center p-8 max-w-md">
-            <AlertTriangle className="w-16 h-16 text-red-500 mx-auto mb-4" />
-            <h1 className="text-2xl font-bold text-white mb-4">Something went wrong</h1>
-            <p className="text-gray-300 mb-6">
-              We're sorry, but something unexpected happened. Our team has been notified.
+        <div className="min-h-screen flex items-center justify-center bg-gray-50">
+          <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-6 text-center">
+            <div className="flex justify-center mb-4">
+              <AlertTriangle className="h-12 w-12 text-red-500" />
+            </div>
+            <h1 className="text-2xl font-bold text-gray-900 mb-2">
+              Oops! Something went wrong
+            </h1>
+            <p className="text-gray-600 mb-6">
+              We're sorry, but something unexpected happened. Please try again.
             </p>
-            {this.state.errorId && (
-              <p className="text-gray-400 mb-4 text-sm">
-                Error ID: {this.state.errorId}
-              </p>
+            {process.env.NODE_ENV === 'development' && this.state.error && (
+              <details className="mb-4 text-left">
+                <summary className="cursor-pointer text-sm text-gray-500 hover:text-gray-700">
+                  Error Details (Development)
+                </summary>
+                <pre className="mt-2 text-xs text-red-600 bg-red-50 p-2 rounded overflow-auto">
+                  {this.state.error.message}
+                  {'\n\n'}
+                  {this.state.error.stack}
+                </pre>
+              </details>
             )}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex gap-3 justify-center">
               <button
                 onClick={this.handleRetry}
-                className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors flex items-center justify-center gap-2"
+                className="flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
               >
-                <RefreshCw className="w-4 h-4" />
+                <RefreshCw className="h-4 w-4" />
                 Try Again
               </button>
               <button
                 onClick={this.handleGoHome}
-                className="bg-gray-600 hover:bg-gray-700 text-white px-6 py-3 rounded-lg transition-colors flex items-center justify-center gap-2"
+                className="flex items-center gap-2 bg-gray-600 text-white px-4 py-2 rounded-lg hover:bg-gray-700 transition-colors"
               >
-                <Home className="w-4 h-4" />
+                <Home className="h-4 w-4" />
                 Go Home
               </button>
             </div>
+<<<<<<< HEAD
             <button
               onClick={() => window.location.reload()}
               className="mt-4 text-gray-400 hover:text-white text-sm underline"
             >
               Or refresh the page
             </button>
+=======
+            {this.state.errorId && (
+              <p className="text-xs text-gray-400 mt-4">
+                Error ID: {this.state.errorId}
+              </p>
+            )}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-96bc
           </div>
         </div>
       );
@@ -112,5 +135,8 @@ class ErrorBoundary extends Component<Props, State> {
 }
 
 export default ErrorBoundary;
+<<<<<<< HEAD
 export default ErrorBoundary;
 >>>>>>> cursor/fix-errors-and-merge-to-main-cfe1
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-96bc

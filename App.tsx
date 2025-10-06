@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { memo, useMemo, useCallback, Suspense } from 'react';
 import { HelmetProvider, Helmet } from 'react-helmet-async';
 
@@ -9,10 +10,42 @@ const UnifiedContentPromotion = memo(() => (
       <p className='text-xl'>
         Discover cutting-edge AI solutions for your business
       </p>
+=======
+import React, { Suspense, useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
+import './src/index.css';
+
+// Import page components
+import HomePage from './app/page';
+import AboutPage from './app/about/page';
+import ContactPage from './app/contact/page';
+import ServicesPage from './app/services/page';
+import TeamPage from './app/team/page';
+import PrivacyPage from './app/privacy/page';
+import TermsPage from './app/terms/page';
+
+// Simple placeholder components
+const Home = () => (
+  <div className="min-h-screen flex items-center justify-center bg-gray-50">
+    <div className="text-center">
+      <h1 className="text-4xl font-bold text-gray-900 mb-4">Welcome to Zion Tech Group</h1>
+      <p className="text-xl text-gray-600">Advanced AI and IT Solutions</p>
+    </div>
+  </div>
+);
+
+const About = () => (
+  <div className="min-h-screen flex items-center justify-center bg-gray-50">
+    <div className="text-center">
+      <h1 className="text-4xl font-bold text-gray-900 mb-4">About Us</h1>
+      <p className="text-xl text-gray-600">Leading AI and IT Solutions Provider</p>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-96bc
     </div>
   </div>
 ));
 
+<<<<<<< HEAD
 const InteractiveAIROICalculator = memo(() => (
   <div className='bg-gray-50 py-16'>
     <div className='container mx-auto px-4 text-center'>
@@ -20,10 +53,18 @@ const InteractiveAIROICalculator = memo(() => (
       <p className='text-xl text-gray-600'>
         Calculate your potential AI investment returns
       </p>
+=======
+const Services = () => (
+  <div className="min-h-screen flex items-center justify-center bg-gray-50">
+    <div className="text-center">
+      <h1 className="text-4xl font-bold text-gray-900 mb-4">Our Services</h1>
+      <p className="text-xl text-gray-600">Comprehensive AI and IT Solutions</p>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-96bc
     </div>
   </div>
 ));
 
+<<<<<<< HEAD
 const ContentShowcase = memo(() => (
   <div className='py-16'>
     <div className='container mx-auto px-4 text-center'>
@@ -31,10 +72,18 @@ const ContentShowcase = memo(() => (
       <p className='text-xl text-gray-600'>
         Explore our latest insights and case studies
       </p>
+=======
+const Blog = () => (
+  <div className="min-h-screen flex items-center justify-center bg-gray-50">
+    <div className="text-center">
+      <h1 className="text-4xl font-bold text-gray-900 mb-4">Blog</h1>
+      <p className="text-xl text-gray-600">Latest AI and Technology Insights</p>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-96bc
     </div>
   </div>
 ));
 
+<<<<<<< HEAD
 const InteractiveContentShowcase2026 = memo(() => (
   <div className='bg-blue-50 py-16'>
     <div className='container mx-auto px-4 text-center'>
@@ -42,11 +91,19 @@ const InteractiveContentShowcase2026 = memo(() => (
       <p className='text-xl text-gray-600'>
         Latest trends and innovations for 2026
       </p>
+=======
+const Contact = () => (
+  <div className="min-h-screen flex items-center justify-center bg-gray-50">
+    <div className="text-center">
+      <h1 className="text-4xl font-bold text-gray-900 mb-4">Contact Us</h1>
+      <p className="text-xl text-gray-600">Get in touch with our experts</p>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-96bc
     </div>
   </div>
 ));
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-cea4
 // Error Boundary Component
@@ -100,36 +157,68 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
 const LoadingSpinner = memo(() => (
   <div className="animate-pulse bg-gray-200 h-32 rounded flex items-center justify-center">
     <div className="text-gray-500">Loading...</div>
+=======
+const Team = () => (
+  <div className="min-h-screen flex items-center justify-center bg-gray-50">
+    <div className="text-center">
+      <h1 className="text-4xl font-bold text-gray-900 mb-4">Our Team</h1>
+      <p className="text-xl text-gray-600">Meet our expert professionals</p>
+    </div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-96bc
   </div>
 ));
 <<<<<<< HEAD
 
-// Error Boundary Component
-interface ErrorBoundaryState {
-  hasError: boolean;
-  error: Error | null;
-}
+const Privacy = () => (
+  <div className="min-h-screen flex items-center justify-center bg-gray-50">
+    <div className="text-center">
+      <h1 className="text-4xl font-bold text-gray-900 mb-4">Privacy Policy</h1>
+      <p className="text-xl text-gray-600">Your privacy is important to us</p>
+    </div>
+  </div>
+);
 
-interface ErrorBoundaryProps {
-  children: React.ReactNode;
-}
+const Terms = () => (
+  <div className="min-h-screen flex items-center justify-center bg-gray-50">
+    <div className="text-center">
+      <h1 className="text-4xl font-bold text-gray-900 mb-4">Terms of Service</h1>
+      <p className="text-xl text-gray-600">Terms and conditions</p>
+    </div>
+  </div>
+);
 
-class AppErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundaryState> {
-  constructor(props: ErrorBoundaryProps) {
+// Simple Error Boundary
+class ErrorBoundary extends React.Component<
+  { children: React.ReactNode; fallback?: React.ReactNode },
+  { hasError: boolean }
+> {
+  constructor(props: { children: React.ReactNode; fallback?: React.ReactNode }) {
     super(props);
-    this.state = { hasError: false, error: null };
+    this.state = { hasError: false };
   }
 
-  static getDerivedStateFromError(error: Error): ErrorBoundaryState {
-    return { hasError: true, error };
+  static getDerivedStateFromError(_error: Error) {
+    return { hasError: true };
   }
 
+<<<<<<< HEAD
   override componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
     console.error('App Error Boundary caught an error:', error, errorInfo);
+=======
+  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+    
+    // Log to external service in production
+    if (process.env.NODE_ENV === 'production') {
+      // Add error reporting service here
+      console.log('Error reported to monitoring service');
+    }
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-96bc
   }
 
   override render() {
     if (this.state.hasError) {
+<<<<<<< HEAD
       return (
         <div className="min-h-screen flex items-center justify-center bg-gray-50">
           <div className="text-center">
@@ -144,6 +233,17 @@ class AppErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundary
               className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
             >
               Reload Page
+=======
+      return this.props.fallback || (
+        <div className="min-h-screen flex items-center justify-center bg-gray-50">
+          <div className="text-center">
+            <h1 className="text-2xl font-bold text-gray-900 mb-4">Something went wrong</h1>
+            <button
+              onClick={() => this.setState({ hasError: false })}
+              className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+            >
+              Try again
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-96bc
             </button>
           </div>
         </div>
@@ -154,6 +254,7 @@ class AppErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundary
   }
 }
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-cea4
 export default function App() {
@@ -254,6 +355,56 @@ export default function App() {
   const handleScrollToTop = useCallback(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }, []);
+=======
+// Simple Loading Spinner
+const LoadingSpinner = () => (
+  <div className="min-h-screen flex items-center justify-center bg-gray-50">
+    <div className="text-center">
+      <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-600 mx-auto"></div>
+      <p className="mt-4 text-gray-600">Loading...</p>
+    </div>
+  </div>
+);
+
+function App() {
+  useEffect(() => {
+    // Initialize basic optimizations
+    const initializeOptimizations = () => {
+      try {
+        console.log('App initialized successfully');
+      } catch (error) {
+        console.error('Failed to initialize app:', error);
+      }
+    };
+
+    // Initialize optimizations after component mount
+    initializeOptimizations();
+  }, []);
+
+  return (
+    <HelmetProvider>
+      <ErrorBoundary>
+        <Router>
+          <div className="App">
+            <Suspense fallback={<LoadingSpinner />}>
+              <Routes>
+                <Route path="/" element={<HomePage />} />
+                <Route path="/about" element={<AboutPage />} />
+                <Route path="/contact" element={<ContactPage />} />
+                <Route path="/services" element={<ServicesPage />} />
+                <Route path="/team" element={<TeamPage />} />
+                <Route path="/privacy" element={<PrivacyPage />} />
+                <Route path="/terms" element={<TermsPage />} />
+                <Route path="/blog" element={<Blog />} />
+              </Routes>
+            </Suspense>
+          </div>
+        </Router>
+      </ErrorBoundary>
+    </HelmetProvider>
+  );
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-96bc
 
   return (
     <ErrorBoundary>
