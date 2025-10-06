@@ -1,5 +1,5 @@
 import { useEffect, useCallback, useRef } from 'react';
-import { performanceOptimizer } from '../utils/performanceOptimizer';
+import performanceOptimizer from '../utils/performanceOptimizer';
 
 // Mock analytics object for tracking
 const analytics = {
@@ -53,12 +53,15 @@ export const usePageLoadPerformance = () => {
       return () => window.removeEventListener('load', trackPageLoad);
     }
   }, []);
+};
 
 /**
  * Hook for monitoring resource loading performance
  */
 export const useResourcePerformance = () => {
-  useEffect(() => {
+  const observerRef = useRef<PerformanceObserver | null>(null);
+
+  const trackPerformance = useCallback(() => {
     if (typeof window === 'undefined' || !window.PerformanceObserver) {
       return;
     }
@@ -76,9 +79,22 @@ export const useResourcePerformance = () => {
       });
     });
 
-    if (observer) {
-      observerRef.current = observer;
+    observerRef.current = observer;
+    observer.observe({ entryTypes: ['resource'] });
+  }, []);
+
+  const trackLongTasks = useCallback(() => {
+    if (typeof window === 'undefined' || !window.PerformanceObserver) {
+      return;
     }
+
+    const observer = new PerformanceObserver(list => {
+      list.getEntries().forEach(entry => {
+        analytics.track('long_task', 'performance', 'detected', undefined, entry.duration);
+      });
+    });
+
+    observer.observe({ entryTypes: ['longtask'] });
   }, []);
 
   const preloadResources = useCallback(() => {
@@ -119,11 +135,17 @@ export const useResourcePerformance = () => {
  */
 export const useLongTaskMonitoring = () => {
   useEffect(() => {
-    const observer = performanceOptimizer.monitorLongTasks((entries: PerformanceEntry[]) => {
-      entries.forEach((entry: PerformanceEntry) => {
+    if (typeof window === 'undefined' || !window.PerformanceObserver) {
+      return;
+    }
+
+    const observer = new PerformanceObserver((entries) => {
+      entries.getEntries().forEach((entry) => {
         analytics.track('long_task', 'performance', 'detected', undefined, entry.duration);
       });
     });
+
+    observer.observe({ entryTypes: ['longtask'] });
 
     return () => {
       if (observer && typeof observer.disconnect === 'function') {
@@ -208,4 +230,3 @@ export const useMemoryMonitoring = () => {
     return () => clearInterval(interval);
   }, []);
 };
-}

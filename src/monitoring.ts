@@ -1,5 +1,4 @@
 // Performance monitoring setup
-<<<<<<< HEAD
 
 // Mock analytics object
 const analytics = {
@@ -19,13 +18,21 @@ const performanceOptimizer = {
       renderTime: 0,
       memoryUsage: 0
     });
+  },
+  lazyLoadImages: () => {
+    console.log('Lazy loading images...');
+  },
+  reportWebVitals: (metrics: any) => {
+    console.log('Web Vitals:', metrics);
   }
 };
-=======
-import { analytics } from './utils/analytics';
-import { errorHandler } from './utils/errorHandler';
-import { performanceOptimizer } from './utils/performanceOptimizer';
->>>>>>> cursor/fix-errors-and-merge-to-main-5c0d
+
+// Mock error handler
+const errorHandler = {
+  captureException: (error: Error) => {
+    console.error('Error captured:', error);
+  }
+};
 
 // Initialize performance monitoring
 if (typeof window !== 'undefined') {
@@ -33,19 +40,16 @@ if (typeof window !== 'undefined') {
   analytics.trackPageView(window.location.pathname);
   
   // Initialize performance optimizer
-<<<<<<< HEAD
+  performanceOptimizer.lazyLoadImages();
+  
+  // Measure page load performance
   performanceOptimizer.measurePageLoad().then((metrics: any) => {
     analytics.trackPerformance('page_load', metrics.loadTime);
     analytics.trackPerformance('render_time', metrics.renderTime);
     analytics.trackPerformance('memory_usage', metrics.memoryUsage, 'MB');
   });
 
-  // Track Web Vitals
-=======
-  performanceOptimizer.lazyLoadImages();
-  
-  // Monitor long tasks (if available)
->>>>>>> cursor/fix-errors-and-merge-to-main-5c0d
+  // Monitor long tasks and navigation (if available)
   if ('PerformanceObserver' in window) {
     const observer = new PerformanceObserver((list) => {
       for (const entry of list.getEntries()) {
@@ -55,17 +59,12 @@ if (typeof window !== 'undefined') {
         }
       }
     });
-<<<<<<< HEAD
 
     try {
-      observer.observe({ entryTypes: ['navigation'] });
+      observer.observe({ entryTypes: ['navigation', 'longtask'] });
     } catch (error) {
       console.warn('Performance monitoring not supported:', error);
     }
-  }
-}
-=======
-    observer.observe({ entryTypes: ['longtask'] });
   }
   
   // Track Web Vitals
@@ -76,4 +75,3 @@ if (typeof window !== 'undefined') {
 }
 
 export { analytics, errorHandler };
->>>>>>> cursor/fix-errors-and-merge-to-main-5c0d

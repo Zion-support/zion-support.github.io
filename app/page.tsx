@@ -1,12 +1,8 @@
 import { Suspense } from 'react';
-<<<<<<< HEAD
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import UnifiedContentPromotion from './components/UnifiedContentPromotion';
 import ContentShowcase from './components/ContentShowcase';
 import InteractiveContentShowcase2026 from './components/InteractiveContentShowcase2026';
-=======
-import { Link } from 'react-router-dom';
->>>>>>> cursor/fix-errors-and-merge-to-main-5c0d
 
 // Lazy load heavy components - temporarily disabled
 // const UnifiedContentPromotion = lazy(
@@ -125,7 +121,7 @@ export default function HomePage() {
                 solutions.
               </p>
               <Link
-                href='/contact'
+                to='/contact'
                 className='bg-white text-blue-600 hover:bg-gray-100 font-bold py-4 px-8 rounded-lg text-lg transition-colors duration-300 inline-block'
               >
                 Start Your Transformation

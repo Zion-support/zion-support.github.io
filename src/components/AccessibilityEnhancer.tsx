@@ -10,11 +10,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
   const [reducedMotion, setReducedMotion] = useState(false);
 
   useEffect(() => {
-<<<<<<< HEAD
-    // Check for user's motion preferences
-=======
     // Check for user preferences
->>>>>>> cursor/fix-errors-and-merge-to-main-5c0d
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     setReducedMotion(prefersReducedMotion);
 
@@ -27,7 +23,11 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
 
     // Apply initial styles
     applyAccessibilityStyles(savedHighContrast, savedFontSize, prefersReducedMotion);
-<<<<<<< HEAD
+
+    // Add accessibility enhancements
+    addSkipLinks();
+    addAriaLandmarks();
+    enhanceFocusManagement();
   }, []);
 
   const applyAccessibilityStyles = (
@@ -38,34 +38,17 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     const root = document.documentElement;
     
     // High contrast mode
-=======
-
-    // Add accessibility enhancements
-    addSkipLinks();
-    addAriaLandmarks();
-    enhanceFocusManagement();
-  }, []);
-
-  const applyAccessibilityStyles = (highContrast: boolean, fontSize: string, reducedMotion: boolean) => {
-    const root = document.documentElement;
-    
->>>>>>> cursor/fix-errors-and-merge-to-main-5c0d
     if (highContrast) {
       root.classList.add('high-contrast');
     } else {
       root.classList.remove('high-contrast');
     }
 
-<<<<<<< HEAD
     // Font size
     root.classList.remove('font-small', 'font-normal', 'font-large');
     root.classList.add(`font-${fontSize}`);
 
     // Reduced motion
-=======
-    root.setAttribute('data-font-size', fontSize);
-    
->>>>>>> cursor/fix-errors-and-merge-to-main-5c0d
     if (reducedMotion) {
       root.classList.add('reduced-motion');
     } else {
@@ -84,12 +67,19 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     }
   };
 
-<<<<<<< HEAD
   const changeFontSize = (newSize: 'small' | 'normal' | 'large') => {
     setFontSize(newSize);
     localStorage.setItem('fontSize', newSize);
     applyAccessibilityStyles(isHighContrast, newSize, reducedMotion);
-=======
+  };
+
+  const toggleHighContrast = () => {
+    const newHighContrast = !isHighContrast;
+    setIsHighContrast(newHighContrast);
+    localStorage.setItem('highContrast', newHighContrast.toString());
+    applyAccessibilityStyles(newHighContrast, fontSize, reducedMotion);
+  };
+
   const addAriaLandmarks = () => {
     const main = document.querySelector('main');
     if (main && !main.getAttribute('role')) {
@@ -107,13 +97,11 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       }
     `;
     document.head.appendChild(style);
->>>>>>> cursor/fix-errors-and-merge-to-main-5c0d
   };
 
   return (
     <>
       {children}
-<<<<<<< HEAD
       <div className="accessibility-controls fixed bottom-4 left-4 z-50">
         <div className="bg-white shadow-lg rounded-lg p-4 space-y-2">
           <h3 className="text-sm font-semibold text-gray-700 mb-2">Accessibility</h3>
@@ -149,8 +137,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
           </div>
         </div>
       </div>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-5c0d
     </>
   );
 };
