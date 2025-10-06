@@ -1,14 +1,11 @@
-export const metadata = {
-  title: 'AI Governance in Real Time 2026: Live Canaries + PR Policy Tests',
+export const metadata = {title: 'AI Governance in Real Time 2026: Live Canaries + PR PolicyTests',
   description:
-    'Wire KPI‑linked canaries and CI policy tests so teams ship weekly without regressions.',
+    'Wire KPI‑linked canaries and CI policy tests so teams ship weekly withoutregressions.',
 };
 
-export default function Page() {
-  return (
-    <article className='prose prose-invert max-w-3xl mx-auto py-10'>
+export default function Page() {return (<article className='prose prose-invert max-w-3xl mx-autopy-10'>
       <h1>AI Governance in Real Time 2026: Live Canaries + PR Policy Tests</h1>
-      <p className='text-sm opacity-70'>
+      <p className='text-smopacity-70'>
         Published: 2025-09-30 • Category: AI Governance • 7 min read
       </p>
 
@@ -38,5 +35,4 @@ export default function Page() {
         risk control.
       </p>
     </article>
-  );
-}
+  ); }

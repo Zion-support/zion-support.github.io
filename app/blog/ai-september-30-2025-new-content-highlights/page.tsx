@@ -1,7 +1,5 @@
-export default function Page() {
-  return (
-    <div className='min-h-screen bg-white'>
-      <article className='max-w-3xl mx-auto px-6 py-12 prose prose-lg'>
+export default function Page() {return (<div className='min-h-screenbg-white'>
+      <article className='max-w-3xl mx-auto px-6 py-12 proseprose-lg'>
         <h1>AI Insights: New Content Highlights — September 30, 2025</h1>
         <p>
           Explore today’s newest additions across autonomous operations, data
@@ -30,10 +28,9 @@ export default function Page() {
         </p>
 
         <hr />
-        <p className='text-sm text-gray-500'>
+        <p className='text-smtext-gray-500'>
           Published: September 30, 2025 • 8 min read
         </p>
       </article>
     </div>
-  );
-}
+  ); }

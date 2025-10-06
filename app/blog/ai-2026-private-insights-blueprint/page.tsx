@@ -1,20 +1,17 @@
-export const metadata = {
-  title: 'Edge Private Insights 2026: Consentless Metrics Blueprint',
+export const metadata = {title: 'Edge Private Insights 2026: Consentless MetricsBlueprint',
   description:
-    'Scoped IDson‑device aggregationand DP noise for actionable insights without PII.',
+    'Scoped IDson‑device aggregationand DP noise for actionable insights withoutPII.',
 };
 
-export default function Page() {
-  return (
-    <main className='max-w-3xl mx-auto px-4 py-12'>
-      <h1 className='text-3xl md:text-4xl font-bold mb-4'>
+export default function Page() {return (<main className='max-w-3xl mx-auto px-4py-12'>
+      <h1 className='text-3xl md:text-4xl font-boldmb-4'>
         Edge Private Insights 2026
       </h1>
-      <p className='text-gray-600 mb-8'>
+      <p className='text-gray-600mb-8'>
         Consentless metrics using scoped IDson‑device aggregationand
         differential privacy.
       </p>
-      <div className='prose prose-invert max-w-none'>
+      <div className='prose prose-invertmax-w-none'>
         <p>
           Learn how to measure user journeys with zero PII while preserving rich
           signals. This blueprint covers identifier scoping, local aggregation,
@@ -28,5 +25,4 @@ export default function Page() {
         </ol>
       </div>
     </main>
-  );
-}
+  ); }
