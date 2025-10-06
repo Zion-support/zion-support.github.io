@@ -8,7 +8,7 @@ import type { Metric } from 'web-vitals';
 // Extend Window interface for gtag
 declare global {
   interface Window {
-    gtag?: (...args: any[]) => void;
+    gtag?: (...args: unknown[]) => void;
   }
 }
 
@@ -19,6 +19,28 @@ interface PerformanceMetric {
   rating: 'good' | 'needs-improvement' | 'poor';
   delta: number;
   id: string;
+}
+
+// Extended Performance interface for memory API
+interface PerformanceMemory {
+  usedJSHeapSize: number;
+  totalJSHeapSize: number;
+  jsHeapSizeLimit: number;
+}
+
+interface PerformanceWithMemory extends Performance {
+  memory?: PerformanceMemory;
+}
+
+// Network connection interface
+interface NetworkConnection {
+  effectiveType?: string;
+  type?: string;
+  saveData?: boolean;
+}
+
+interface NavigatorWithConnection extends Navigator {
+  connection?: NetworkConnection;
 }
 
 interface PerformanceReport {
@@ -222,12 +244,12 @@ export function getSlowResources(threshold: number = 1000): PerformanceResourceT
 export function getMemoryUsage(): Record<string, number> | null {
   if (
     typeof performance === 'undefined' ||
-    !(performance as any).memory
+    !(performance as PerformanceWithMemory).memory
   ) {
     return null;
   }
 
-  const memory = (performance as any).memory;
+  const memory = (performance as PerformanceWithMemory).memory!;
   return {
     usedJSHeapSize: memory.usedJSHeapSize,
     totalJSHeapSize: memory.totalJSHeapSize,
@@ -330,15 +352,16 @@ export function monitorLayoutShifts(
 export function isSlowConnection(): boolean {
   if (
     typeof navigator === 'undefined' ||
-    !(navigator as any).connection
+    !(navigator as NavigatorWithConnection).connection
   ) {
     return false;
   }
 
-  const connection = (navigator as any).connection;
+  const connection = (navigator as NavigatorWithConnection).connection!;
   const slowTypes = ['slow-2g', '2g'];
   return (
-    slowTypes.includes(connection.effectiveType) || connection.saveData === true
+    (connection.effectiveType && slowTypes.includes(connection.effectiveType)) || 
+    connection.saveData === true
   );
 }
 
@@ -348,12 +371,12 @@ export function isSlowConnection(): boolean {
 export function getConnectionType(): string {
   if (
     typeof navigator === 'undefined' ||
-    !(navigator as any).connection
+    !(navigator as NavigatorWithConnection).connection
   ) {
     return 'unknown';
   }
 
-  const connection = (navigator as any).connection;
+  const connection = (navigator as NavigatorWithConnection).connection!;
   return connection.effectiveType || connection.type || 'unknown';
 }
 
