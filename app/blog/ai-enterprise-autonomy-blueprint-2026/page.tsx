@@ -1,8 +1,10 @@
 export const metadata = {
+  
   title: 'AI Enterprise Autonomy Blueprint 2026 | Zion Tech Group',
   description:
     'A practical blueprint to reach 70–95% autonomous operations with safety budgets, guardrails, and measurable ROI.',
-};
+
+};;
 
 export default function AIEnterpriseAutonomyBlueprint2026Page() {
   return (

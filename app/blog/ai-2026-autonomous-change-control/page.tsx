@@ -1,9 +1,11 @@
 export const metadata = {
+  
   title:
     'Autonomous Change Control — Gates, Budgets, Rollback (2026) | Zion Tech Group',
   description:
     'Ship weekly without regressions using CI policy tests, KPI-linked canaries, and instant rollback playbooks.',
-};
+
+};;
 
 export default function Page() {
   return (

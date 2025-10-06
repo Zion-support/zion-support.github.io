@@ -2,28 +2,25 @@ import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
 
-export const metadata: Metadata = {/* content */}
-  title: 'January 2026 Autonomous Business Intelligence Revolution | Zion Tech Group',
-  description: 'Revolutionary autonomous BI systems that provide real-time insights, predictive analytics, and automated decision support for enterprise operations.',
-  keywords: ['autonomous BI', 'business intelligence', 'predictive analytics', 'enterprise AI', 'real-time insights'],
-  openGraph: {
-    title: 'January 2026 Autonomous Business Intelligence Revolution',
+export const metadata = {
+  
+  title: 'January 2026 Autonomous Business Intelligence Revolution',
     description: 'Revolutionary autonomous BI systems that provide real-time insights, predictive analytics, and automated decision support for enterprise operations.',
     type: 'article',
     publishedTime: '2026-01-25T00:00:00Z',
     authors: ['Zion Tech Group'],
-  },
+  
+};,
 };
 
 export default function January2026AutonomousBusinessIntelligenceRevolution() {
   return (
     <div>/* content */}
-  return (
     <div>
-      <div> </div><div> </div></div>
-    <div className="text-left"> </div><div className="text-left"> </div><div className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
-        {/* Header */}</div></div>
-        <div className="text-left"> </div><span className="text-left">>
+      <div> </div><div> </div>
+      <div className="text-left"> </div><div className="text-left"> </div><div className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
+        {/* Header */}</div>
+      <div className="text-left"> </div><span className="text-left">>
             Featured Article
           </div>
           <h1 className="text-left">January 2026 Autonomous Business Intelligence Revolution
@@ -118,14 +115,11 @@ export default function January2026AutonomousBusinessIntelligenceRevolution() {
               </p></p>
               <div className="text-left"> </div><div className="text-left">85%</div>
                   <div className="text-left">Reduction in Time-to-Insight</div>
-                </div>
-                <div className="text-left">70%</div>
+      <div className="text-left">70%</div>
                   <div className="text-left">Increase in Data-Driven Decisions</div>
-                </div>
-                <div className="text-left">60%</div>
+      <div className="text-left">60%</div>
                   <div className="text-left">Improvement in Forecast Accuracy</div>
-                </div>
-                <div className="text-left">90%</div>
+      <div className="text-left">90%</div>
                   <div className="text-left">Decrease in Manual Reporting Time</div>
                 </div>
             </section>
@@ -192,11 +186,9 @@ export default function January2026AutonomousBusinessIntelligenceRevolution() {
                   <div> </div><h3 className="text-left">Implementation Strategy</h3>
                     <div className="text-left"> </div><div className="text-left">Phase 1: Foundation</div>
                         <div className="text-left">Deploy autonomous data collection and basic AI analytics</div>
-                      </div>
-                      <div className="text-left">Phase 2: Intelligence</div>
+      <div className="text-left">Phase 2: Intelligence</div>
                         <div className="text-left">Advanced analytics, predictions, and automated insights</div>
-                      </div>
-                      <div className="text-left">Phase 3: Autonomy</div>
+      <div className="text-left">Phase 3: Autonomy</div>
                         <div className="text-left">Full autonomous operation with continuous learning</div>
                       </div>
                   </div>

@@ -1,10 +1,12 @@
 import ArrowRight from 'next/link';
 
 export const metadata = {
+  
   title: 'Autonomous Governance Blueprint (2025) — Zion Tech Group',
   description:
     'A pragmatic blueprint for autonomous governance: policy-driven agents, verifiable controls, and operational trust at enterprise scale.',
-};
+
+};;
 
 export default function AutonomousGovernanceBlueprint2025() {
   return (

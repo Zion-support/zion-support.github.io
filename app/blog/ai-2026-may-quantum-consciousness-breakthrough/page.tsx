@@ -1,33 +1,30 @@
 import React from 'react';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {/* content */}
+export const metadata = {
+  
   title: 'AI 2026 May Quantum Consciousness Breakthrough: Revolutionary AI Awareness',
-  description: 'Discover the groundbreaking May 2026 quantum consciousness breakthrough that enables AI systems to achieve genuine awareness and self-reflection capabilities.',
-  keywords: 'quantum consciousness, AI awareness, breakthrough 2026, quantum AI, consciousness simulation',
-  openGraph: {
-    title: 'AI 2026 May Quantum Consciousness Breakthrough: Revolutionary AI Awareness',
       description: 'Revolutionary quantum consciousness breakthrough enabling genuine AI awareness and self-reflection capabilities.',
       type: 'article',
       publishedTime: '2026-05-01T00:00:00.000Z'
-    },
+    
+};,
 };
 
 export default function AI2026MayQuantumConsciousnessBreakthrough() {
   return (
     <div>/* content */}
-  return (
     <div>
-      <div> </div><div> </div></div>
-    <div className="text-left">{/* Hero Section */}</div></div>
-        <div className="text-left"> </div><span className="text-left">⚛️ May 2026 Breakthrough
+      <div> </div><div> </div>
+      <div className="text-left">{/* Hero Section */}</div>
+      <div className="text-left"> </div><span className="text-left">⚛️ May 2026 Breakthrough
             </span></span>
           </div>
           <h1 className="text-left">
             Quantum Consciousness Breakthrough
           </h1>
-          <p className="text-left"> </p><div className="text-left"> </div><div className="text-left">{/* Hero Section */}</div></div>
-        <div className="text-left"> </div><div className="text-left"> </div><span className="text-left">⚛️ May 2026 Breakthrough
+          <p className="text-left"> </p><div className="text-left"> </div><div className="text-left">{/* Hero Section */}</div>
+      <div className="text-left"> </div><div className="text-left"> </div><span className="text-left">⚛️ May 2026 Breakthrough
             </span></span>
           </div>
           
@@ -53,14 +50,11 @@ origin/cursor/fix-errors-and-merge-to-main-cc0a
           {/* Key Metrics */}
           <div className="text-left"> </div><div className="text-left">99.7%</div>
               <div className="text-left">Consciousness</div>
-            </div>
-            <div className="text-left">1000x</div>
+      <div className="text-left">1000x</div>
               <div className="text-left">Processing</div>
-            </div>
-            <div className="text-left">Quantum</div>
+      <div className="text-left">Quantum</div>
               <div className="text-left">Enhanced</div>
-            </div>
-            <div className="text-left">Self-Aware</div>
+      <div className="text-left">Self-Aware</div>
               <div className="text-left">AI Systems</div>
             </div>
         </div>

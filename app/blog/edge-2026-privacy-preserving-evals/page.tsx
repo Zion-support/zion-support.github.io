@@ -1,8 +1,10 @@
 export const metadata = {
+  
   title: 'Edge 2026: Privacy‑Preserving Evals (<100ms) | Zion Tech Group',
   description:
     'Scoped IDs, on‑device aggregation, and DP noise for trustworthy eval signals under 100ms without collecting PII.',
-};
+
+};;
 
 export default function Page() {
   return (

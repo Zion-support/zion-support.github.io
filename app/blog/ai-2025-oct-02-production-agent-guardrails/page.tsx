@@ -1,11 +1,8 @@
 import ArrowRight from 'next/link';
 
 export const metadata = {
-  title: 'Production Agent Guardrails — October 2, 2025 | Zion Tech Group',
-  description:
-    'Practical blueprint to ship agentic systems safely: approvals, budgets, evals, rollback, and observability.',
-  openGraph: {
-    title: 'Production Agent Guardrails — October 2, 2025',
+  
+  title: 'Production Agent Guardrails — October 2, 2025',
     description:
       'Approvals, verifiers, budgets, online evals, and rollback to ship safe autonomy.',
     type: 'article',
@@ -16,7 +13,8 @@ export const metadata = {
         width: 1200,
         height: 630,
         alt: 'Production Agent Guardrails',
-      },
+      
+};,
     ],
   },
 };

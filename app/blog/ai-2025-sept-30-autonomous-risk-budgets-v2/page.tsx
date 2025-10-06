@@ -1,8 +1,10 @@
 export const metadata = {
+  
   title: 'Autonomous Risk Budgets V2 | Zion Tech Group',
   description:
     'Dynamic guardrails with live scorecards to cut incidents by 80% while increasing release velocity.',
-};
+
+};;
 
 export default function AutonomousRiskBudgetsV2Page() {
   return (

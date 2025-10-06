@@ -2,18 +2,19 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
+  
   title: 'AI 2026 Breakthrough Innovations: Revolutionary Technologies Reshaping Enterprise',
   description: 'Discover the revolutionary AI breakthrough innovations of 2026 that are transforming enterprise operations with unprecedented performance improvements and $10B+ ROI.',
   keywords: 'AI 2026, breakthrough innovations, enterprise AI, revolutionary technology, quantum computing, neural networks, autonomous systems',
-};
+
+};;
 
 export default function AI2026BreakthroughInnovationsPage() {
   return (
     <div>/* content */}
-  return (
     <div>
-      <div> </div><div> </div></div>
-    <div className="text-left"> </div><span className="text-left">BREAKTHROUGH<
+      <div> </div><div> </div>
+      <div className="text-left"> </div><span className="text-left">BREAKTHROUGH<
           <span className="text-left">JANUARY 2026<
           <span className="text-left">$10B+ ROI>
         </div>

@@ -2,19 +2,15 @@
 import ArrowRight from 'next/link';
 
 export const metadata = {
-  title: 'AI September 30, 2025 — Autonomous Risk Mitigation | Zion Tech Group',
-  description:
-    'Blueprint for deploying autonomous agents with measurable risk budgets, safeguards, and automatic rollback for safe enterprise adoption.',
-  keywords:
-    'autonomous risk mitigation, AI risk budgets, agent safeguards, rollback policies, enterprise AI safety',
-  openGraph: {
-    title: 'Autonomous Risk Mitigation — Enterprise Blueprint (Sept 30, 2025)',
+  
+  title: 'Autonomous Risk Mitigation — Enterprise Blueprint (Sept 30, 2025)',
     description:
       'Deploy autonomous agents with budgets, guardrails, and automated rollback to protect KPIs.',
     type: 'article',
     publishedTime: '2025-09-30T00:00:00.000Z',
     authors: ['Zion Tech Group'],
-  },
+  
+};,
 };
 
 export default function AutonomousRiskMitigationSept302025() {

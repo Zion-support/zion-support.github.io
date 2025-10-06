@@ -1,28 +1,24 @@
 import React from 'react';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {/* content */}
-  title: 'AI Enterprise Automation 2026: Complete Mega Guide | Zion Tech Group',
-  description: 'Comprehensive guide to AI enterprise automation in 2026: Autonomous operations, intelligent workflows, and breakthrough automation technologies delivering 98% automation rates.',
-  keywords: 'AI automation, Enterprise automation, Autonomous operations, AI workflows, Enterprise AI, Automation guide',
-  openGraph: {
-    title: 'AI Enterprise Automation 2026: Complete Mega Guide',
-    description: 'Master enterprise AI automation with our comprehensive guide covering autonomous operations and intelligent workflows.',
-    type: 'article',
-  },
+export const metadata = {
+  
+  title:  'AI Enterprise Automation 2026: Complete Mega Guide',,
+  description:  'Master enterprise AI automation with our comprehensive guide covering autonomous operations and intelligent workflows.',,
+  type: 'article',
+
+};;,
 };
 
 export default function AIEnterpriseAutomation2026MegaGuide() {
   return (
     <div>/* content */}
-  return (
     <div>
-      <div> </div><div> </div></div>
-    <div className="text-left">{/* Hero Section */}</div></div>
+      <div> </div><div> </div>
+      <div className="text-left">{/* Hero Section */}</div></div>
       <header className="text-left">
-        <div className="text-left"> </div><div className="text-left" style={{ animationDelay: '2s' }}> </div></div>
-        
-        <div className="text-left"> </div><span className="text-left">🤖 Complete Enterprise Automation Guide
+        <div className="text-left"> </div><div className="text-left" style={{ animationDelay: '2s' }}> </div>
+      <div className="text-left"> </div><span className="text-left">🤖 Complete Enterprise Automation Guide
               </span></span>
             </div>
             <h1 className="text-left">
@@ -35,9 +31,8 @@ export default function AIEnterpriseAutomation2026MegaGuide() {
             </p></p>
             <div className="text-left"> </div><header className="text-left"> </header><div className="text-left"> </div><div className="text-left">"
           </div><div className="text-left" style={{ animationDelay: '2s' }}>"
-        </div></div>
-        
-        <div className="text-left"> </div><div className="text-left"> </div><div className="text-left"> </div><span className="text-left">🤖 Complete Enterprise Automation Guide
+        </div>
+      <div className="text-left"> </div><div className="text-left"> </div><div className="text-left"> </div><span className="text-left">🤖 Complete Enterprise Automation Guide
               </span></span>
             </div>
             
@@ -61,9 +56,8 @@ export default function AIEnterpriseAutomation2026MegaGuide() {
                 <div key={index} className="text-left"> </div><div className="text-left">{stat.icon}</div>
                   <div className={`text-4xl font-extrabold bg-gradient-to-r ${stat.color} bg-clip-text text-transparent mb-2`}> </div><div className="text-left">{stat.icon}</div>"
                   <div className={`text-4xl font-extrabold bg-gradient-to-r ${stat.color} bg-clip-text text-transparent mb-2`}>origin/cursor/fix-errors-and-merge-to-main-cc0a
-                    {stat.value}</div></div>
-                  </div>
-                  <div className="text-left">{stat.label}</div></div>
+                    {stat.value}</div>
+      <div className="text-left">{stat.label}</div></div>
                   </div>
               ))}
             </div>
@@ -344,11 +338,9 @@ export default function AIEnterpriseAutomation2026MegaGuide() {
                 <h3 className="text-left">ROI Calculation</h3>
                   <div className="text-left"> </div><div className="text-left">Total Investment</div>
                       <div className="text-left">$500K - $2M</div>
-                    </div>
-                    <div className="text-left">Annual Savings</div>
+      <div className="text-left">Annual Savings</div>
                       <div className="text-left">$2M - $10M</div>
-                    </div>
-                    <div className="text-left">ROI Timeline</div>
+      <div className="text-left">ROI Timeline</div>
                       <div className="text-left">6-18 months</div>
                     </div>
                 </div>

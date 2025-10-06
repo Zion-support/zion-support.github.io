@@ -1,26 +1,23 @@
 import React from 'react';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {/* content */}
+export const metadata = {
+  
   title: 'Enterprise AI Automation 2026: Complete Mega Guide - 98% Automation Rate',
-  description: 'The definitive guide to enterprise AI automation in 2026. Learn how to achieve 98% automation rates with meta-cognitive AI and autonomous operations that transform business processes.',
-  keywords: 'enterprise AI automation, meta-cognitive AI, autonomous operations, business process automation, AI 2026',
-  openGraph: {
-    title: 'Enterprise AI Automation 2026: Complete Mega Guide - 98% Automation Rate',
     description: 'The definitive guide to enterprise AI automation in 2026. Learn how to achieve 98% automation rates with meta-cognitive AI.',
     type: 'article',
     publishedTime: '2026-01-20T00:00:00.000Z',
     authors: ['Zion Tech Group'],
-  },
+  
+};,
 };
 
 export default function EnterpriseAIAutomationGuide() {
   return (
     <div>/* content */}
-  return (
     <div>
-      <div> </div><div> </div></div>
-    <div className="text-left"> </div><article className="text-left">{/* Hero Section */}
+      <div> </div><div> </div>
+      <div className="text-left"> </div><article className="text-left">{/* Hero Section */}
           </a><header className="text-left">
             <span className="text-left">📚 Complete Mega Guide
               </span></span>

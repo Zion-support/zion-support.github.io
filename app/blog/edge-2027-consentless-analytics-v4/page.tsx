@@ -2,16 +2,13 @@
 import ArrowRight from 'next/link';
 
 export const metadata = {
-  title:
-    'Edge 2027: Consentless Analytics v4 — Zero‑PII, <100ms | Zion Tech Group',
-  description:
-    'Design zero‑PII analytics at the edge with scoped IDs, on‑device aggregation, and DP noise — actionable insights under 100ms.',
-  openGraph: {
-    title: 'Edge 2027: Consentless Analytics v4',
-    description:
+  
+  title:  'Edge 2027: Consentless Analytics v4',
+  description: 
       'Scoped IDs, edge aggregation, and DP noise for compliant, actionable analytics.',
-    type: 'article',
-  },
+  type: 'article',
+
+};;
 };
 
 export default function Edge2027ConsentlessAnalyticsV4Page() {

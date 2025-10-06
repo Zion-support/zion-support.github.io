@@ -1,26 +1,23 @@
 import React from 'react';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {/* content */}
-  title: 'AI 2026 Mega Breakthrough: Revolutionary January Innovations | Zion Tech Group',
-  description: 'Discover the groundbreaking AI innovations of January 2026: Meta-Cognitive AI, Quantum-Neural Networks, and Autonomous Operations delivering 1000x performance improvements and 98% automation rates.',
-  keywords: 'AI breakthrough 2026, meta-cognitive AI, quantum neural networks, autonomous operations, enterprise AI, Zion Tech Group',
-  openGraph: {
-    title: 'AI 2026 Mega Breakthrough: Revolutionary January Innovations',
+export const metadata = {
+  
+  title: 'AI 2026 Mega Breakthrough: Revolutionary January Innovations',
     description: 'Explore the most significant AI breakthroughs of January 2026 with Meta-Cognitive AI, Quantum-Neural Networks, and Autonomous Operations.',
     type: 'article',
     publishedTime: '2026-01-15T00:00:00Z',
     authors: ['Zion Tech Group'],
-  },
+  
+};,
 };
 
 export default function AI2026MegaBreakthroughPage() {
   return (
     <div>/* content */}
-  return (
     <div>
-      <div> </div><div> </div></div>
-    <div className="text-left">{/* Hero Section */}</div></div>
+      <div> </div><div> </div>
+      <div className="text-left">{/* Hero Section */}</div></div>
       <section className="text-left"> </section><div className="text-left"> </div><span className="text-left">🚀 January 2026 Breakthrough
               </span></span>
             </div>

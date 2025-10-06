@@ -3,18 +3,19 @@ import Link from 'next/link';
 import { ArrowRight, Zap, Brain, Cpu, Target, TrendingUp } from 'lucide-react';
 
 export const metadata = {
+  
   title: 'AI 2026: Quantum Neural Superintelligence - The Next Evolution of Artificial Intelligence',
   description: 'Discover the revolutionary breakthrough in quantum neural superintelligence that\'s redefining the boundaries of AI capabilities. Explore how Zion Tech Group is pioneering the future of intelligent systems.',
   keywords: 'quantum neural superintelligence, quantum AI, neural networks, superintelligence, AI breakthrough 2026, quantum computing AI',
-};
+
+};;
 
 export default function QuantumNeuralSuperintelligence2026() {
   return (
     <div>/* content */}
-  return (
     <div>
-      <div> </div><div> </div></div>
-    <div className="text-left">{/* Hero Section */}</div></div>
+      <div> </div><div> </div>
+      <div className="text-left">{/* Hero Section */}</div>
       <div className="text-left"> </div><div className="text-left"> </div><div className="text-left"> </div><Zap className="text-left" />Quantum Breakthrough
             </Zap></div>
             <h1 className="text-left">AI 2026: Quantum Neural
@@ -74,27 +75,20 @@ export default function QuantumNeuralSuperintelligence2026() {
           <div className="text-left"> </div><div className="text-left"> </div><div className="text-left"> </div><div className="text-left"> </div><h2 className="text-left"> </h2><span className="text-left">Quantum Performance</span>
           </h2>
           <div className="text-left"> </div><div className="text-left"> </div><div className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
-                10^15</div></div>
-              </div>
-              <div className="text-left">Speed Improvement</div>
+                10^15</div>
+      <div className="text-left">Speed Improvement</div>
               <div className="text-left">Over classical AI systems</div>
-            </div>
-            <div className="text-left"> </div><div className="text-left"> </div><div className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
-                99.9%</div></div>
-              </div>
-              <div className="text-left">Problem Solving Accuracy</div>
+      <div className="text-left"> </div><div className="text-left"> </div><div className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
+                99.9%</div>
+      <div className="text-left">Problem Solving Accuracy</div>
               <div className="text-left">Across all complexity levels</div>
-            </div>
-            <div className="text-left"> </div><div className="text-left"> </div><div className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
-                ∞</div></div>
-              </div>
-              <div className="text-left">Parallel Processing</div>
+      <div className="text-left"> </div><div className="text-left"> </div><div className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
+                ∞</div>
+      <div className="text-left">Parallel Processing</div>
               <div className="text-left">Quantum superposition states</div>
-            </div>
-            <div className="text-left"> </div><div className="text-left"> </div><div className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
-                $25B</div></div>
-              </div>
-              <div className="text-left">ROI Generated</div>
+      <div className="text-left"> </div><div className="text-left"> </div><div className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
+                $25B</div>
+      <div className="text-left">ROI Generated</div>
               <div className="text-left">For enterprise clients</div>
             </div>
           </div>

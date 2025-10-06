@@ -2,15 +2,13 @@
 import ArrowRight from 'next/link';
 
 export const metadata = {
-  title: 'AI Roadmaps 2026: What to Build Next and Why',
-  description:
-    'A pragmatic roadmap for 2026 across CX, operations, and platforms with high-ROI bets and measurable outcomes.',
-  openGraph: {
-    title: 'AI Roadmaps 2026',
+  
+  title: 'AI Roadmaps 2026',
     description:
       'Sequenced initiatives across customer experience, operations, and platforms with reliability, cost, and value metrics.',
     url: 'https://ziontechgroup.com/blog/ai-roadmaps-2026',
-    images: [{ url: '/og/ai-roadmaps-2026.jpg', width: 1200, height: 630 }],
+    images: [{ url: '/og/ai-roadmaps-2026.jpg', width: 1200, height: 630 
+};],
   },
 };
 

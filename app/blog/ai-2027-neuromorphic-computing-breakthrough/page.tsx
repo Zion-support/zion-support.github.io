@@ -1,20 +1,15 @@
 import ArrowRight from 'next/link';
 
 export const metadata = {
-  title:
-    'AI 2027: Neuromorphic Computing Breakthrough - The Brain-Inspired Revolution',
-  description:
-    'Discover how neuromorphic computing is revolutionizing AI in 2027, delivering unprecedented efficiency and cognitive capabilities for enterprise applications.',
-  keywords:
-    'neuromorphic computing, AI 2027, brain-inspired AI, cognitive computing, neuromorphic chips',
-  openGraph: {
-    title: 'AI 2027: Neuromorphic Computing Breakthrough',
+  
+  title: 'AI 2027: Neuromorphic Computing Breakthrough',
     description:
       'The complete guide to neuromorphic computing revolution in 2027',
     type: 'article',
     publishedTime: '2027-01-20T00:00:00.000Z',
     authors: ['Zion Tech Group'],
-  },
+  
+};,
 };
 
 export default function AI2027NeuromorphicComputingBreakthrough() {

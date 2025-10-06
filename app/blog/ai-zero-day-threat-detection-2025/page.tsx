@@ -2,21 +2,19 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
+  
   title: 'AI-Powered Zero-Day Threat Detection: The Future of Cybersecurity in 2025',
-  description: 'Discover how AI-powered zero-day threat detection systems are revolutionizing cybersecurity. Detect and neutralize threats 99.7% faster with autonomous security systems that protect enterprise infrastructure 24/7.',
-  keywords: 'AI cybersecurity, zero-day threats, threat detection, AI security, enterprise security, autonomous security, cyber defense 2025, AI threat intelligence',
-  openGraph: {
-    title: 'AI-Powered Zero-Day Threat Detection: The Future of Cybersecurity in 2025',
     description: 'Discover how AI-powered zero-day threat detection systems are revolutionizing cybersecurity with 99.7% faster threat neutralization.',
     type: 'article',
     url: 'https://ziontechgroup.com/blog/ai-zero-day-threat-detection-2025',
     images: [
-      {/* content */}
+      
         url: '/og-ai-cybersecurity-2025.jpg',
         width: 1200,
         height: 630,
         alt: 'AI-Powered Zero-Day Threat Detection',
-      },
+      
+};,
     ],
   },
 };
@@ -24,10 +22,9 @@ export const metadata = {
 export default function AIZeroDayThreatDetection() {
   return (
     <div>/* content */}
-  return (
     <div>
-      <div> </div><div> </div></div>
-    <div className="text-left"> </div><Link href="/blog" className="text-left">
+      <div> </div><div> </div>
+      <div className="text-left"> </div><Link href="/blog" className="text-left">
           ← Back to Blog
         </Link>
         <span className="text-left"> </span><div className="text-left"> </div><div className="text-left"> </div><Link href="/blog" className="text-left">← Back to Blog
@@ -66,11 +63,9 @@ export default function AIZeroDayThreatDetection() {
         <h3 className="text-left">The Cost of Zero-Day Attacks</h3>
           <div className="text-left"> </div><div className="text-left">$4.5M</div>
               <div className="text-left">Average Cost Per Incident</div>
-            </div>
-            <div className="text-left">287</div>
+      <div className="text-left">287</div>
               <div className="text-left">Days to Detect (Average)</div>
-            </div>
-            <div className="text-left">80%</div>
+      <div className="text-left">80%</div>
               <div className="text-left">Data Breach Rate</div>
             </div>
           </div>
@@ -220,18 +215,15 @@ export default function AIZeroDayThreatDetection() {
               <div> </div><h4 className="text-left">Security Assessment</h4>
                 <p className="text-left">Comprehensive analysis of current security posture and vulnerability landscape</p>
               </div>
-            </div>
-            <div className="text-left">2</div>
+      <div className="text-left">2</div>
               <div> </div><h4 className="text-left">AI Training & Deployment</h4>
                 <p className="text-left">Custom AI models trained on your specific infrastructure and threat profile</p>
               </div>
-            </div>
-            <div className="text-left">3</div>
+      <div className="text-left">3</div>
               <div> </div><h4 className="text-left">Integration & Testing</h4>
                 <p className="text-left">Seamless integration with existing security infrastructure and rigorous testing</p>
               </div>
-            </div>
-            <div className="text-left">4</div>
+      <div className="text-left">4</div>
               <div> </div><h4 className="text-left">Continuous Optimization</h4>
                 <p className="text-left">Ongoing AI evolution and performance tuning for maximum protection</p>
               </div>

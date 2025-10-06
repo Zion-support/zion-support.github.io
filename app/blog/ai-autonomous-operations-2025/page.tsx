@@ -1,27 +1,23 @@
 import React from 'react';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {/* content */}
-  title: 'AI 2025: The Enterprise Autonomous Operations Revolution | Zion Tech Group',
-  description: 'Discover how Fortune 500 companies are achieving 95% automation rates and $2M+ annual savings through next-generation autonomous AI operations.',
-  keywords: 'autonomous AI operations, enterprise automation, AI transformation, Fortune 500, cost savings',
-  openGraph: {
-    title: 'AI 2025: The Enterprise Autonomous Operations Revolution',
-    description: 'Discover how Fortune 500 companies are achieving 95% automation rates and $2M+ annual savings through next-generation autonomous AI operations.',
-    type: 'article',
-  },
+export const metadata = {
+  
+  title:  'AI 2025: The Enterprise Autonomous Operations Revolution',,
+  description:  'Discover how Fortune 500 companies are achieving 95% automation rates and $2M+ annual savings through next-generation autonomous AI operations.',,
+  type: 'article',
+
+};;,
 };
 
 export default function AIAutonomousOperations2025() {
   return (
     <div>/* content */}
-  return (
     <div>
-      <div> </div><div> </div></div>
-    <div className="text-left">{/* Hero Section */}</div></div>
-      <section className="text-left"> </section><div className="text-left"> </div><div className="text-left" style={{ animationDelay: '2s' }}> </div></div>
-        
-        <div className="text-left"> </div><span className="text-left">🤖 AI Innovation • January 27, 2025
+      <div> </div><div> </div>
+      <div className="text-left">{/* Hero Section */}</div></div>
+      <section className="text-left"> </section><div className="text-left"> </div><div className="text-left" style={{ animationDelay: '2s' }}> </div>
+      <div className="text-left"> </div><span className="text-left">🤖 AI Innovation • January 27, 2025
               </span></span>
             </div>
             <h1 className="text-left">
@@ -30,9 +26,8 @@ export default function AIAutonomousOperations2025() {
             <p className="text-left">Discover how Fortune 500 companies are achieving </p><span className="text-left">95% automation rates< and <span className="text-left">$2M+ annual savings< through next-generation autonomous AI operations.>
       <section className="text-left"> </section><div className="text-left"> </div><div className="text-left">"
           </div><div className="text-left" style={{ animationDelay: '2s' }}>"
-        </div></div>
-        
-        <div className="text-left"> </div><div className="text-left"> </div><div className="text-left"> </div><span className="text-left">🤖 AI Innovation • January 27, 2025
+        </div>
+      <div className="text-left"> </div><div className="text-left"> </div><div className="text-left"> </div><span className="text-left">🤖 AI Innovation • January 27, 2025
               </span></span>
             </div>
             
@@ -60,11 +55,9 @@ origin/cursor/fix-errors-and-merge-to-main-cc0a
             </p></p>
             <div className="text-left"> </div><div className="text-left">95%</div>
                 <div className="text-left">Automation Rate</div>
-              </div>
-              <div className="text-left">$2M+</div>
+      <div className="text-left">$2M+</div>
                 <div className="text-left">Annual Savings</div>
-              </div>
-              <div className="text-left">300%</div>
+      <div className="text-left">300%</div>
                 <div className="text-left">ROI</div>
               </div>
           </div>

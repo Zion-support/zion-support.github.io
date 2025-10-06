@@ -1,17 +1,14 @@
 import ArrowRight from 'next/link';
 
 export const metadata = {
-  title: 'Agent Release Runbooks 2026: Approvals, Budgets, Instant Rollback',
+  
+  title: 'Agent Release Runbooks 2026',
   description:
-    'Operational playbooks for safe autonomous agent releases: approvals, budget guards, canary evals, and instant rollback.',
-  openGraph: {
-    title: 'Agent Release Runbooks 2026',
-    description:
-      'Approvals + budgets + KPI-linked canary evals with instant rollback for safe agent releases.',
-    type: 'article',
-    publishedTime: '2026-01-30T00:00:00Z',
-  },
-};
+    'Approvals + budgets + KPI-linked canary evals with instant rollback for safe agent releases.',
+  type: 'article',
+  publishedTime: '2026-01-30T00:00:00Z',
+
+};;
 
 export default function AgentReleaseRunbooks2026() {
   return (

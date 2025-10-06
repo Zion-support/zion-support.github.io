@@ -4,11 +4,13 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 
-export const metadata: Metadata = {/* content */}
+export const metadata = {
+  
   title: 'AI 2026 May Revolutionary Breakthrough: The Ultimate Meta-Cognitive Superintelligence Revolution',
   description: 'Discover the groundbreaking May 2026 AI breakthrough that achieved meta-cognitive superintelligence with 10,000,000x processing power and $50B ROI across global enterprises.',
   keywords: 'AI, Meta-Cognitive, Superintelligence, Revolutionary, 2026, Ultimate Success, 50B ROI',
-};
+
+};;
 
 export default function May2026RevolutionaryBreakthroughPage() {
   return (
@@ -17,10 +19,9 @@ export default function May2026RevolutionaryBreakthroughPage() {
   const fileContents = fs.readFileSync(filePath, 'utf8');
   const { data, content } = matter(fileContents);
 
-  return (
     <div>
-      <div> </div><div> </div></div>
-    <div className="text-left"> </div><article className="text-left"> </a><header className="text-left">
+      <div> </div><div> </div>
+      <div className="text-left"> </div><article className="text-left"> </a><header className="text-left">
           <span className="text-left"> </span><article className="text-left"> </article><header className="text-left"> </header><div className="text-left"> </div><span className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
               MAY 2026
             </span></span>

@@ -2,18 +2,19 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
+  
   title: 'AI 2026: Hyper-Automation Revolution - Complete Enterprise Transformation - Zion Tech Group',
   description: 'Revolutionary hyper-automation platform delivering 99.5% autonomous operations with $3.2B average ROI and complete enterprise transformation capabilities.',
   keywords: 'hyper-automation, enterprise AI, autonomous operations, AI transformation, enterprise automation',
-};
+
+};;
 
 export default function AI2026HyperAutomationRevolution() {
   return (
     <div>/* content */}
-  return (
     <div>
-      <div> </div><div> </div></div>
-    <div className="text-left"> </div><span className="text-left"> </span><div className="text-left"> </div><div className="text-left"> </div><div className="text-left"> </div><span className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
+      <div> </div><div> </div>
+      <div className="text-left"> </div><span className="text-left"> </span><div className="text-left"> </div><div className="text-left"> </div><div className="text-left"> </div><span className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
             HYPER-AUTOMATION
           </span></span>
           <span className="text-left">$3.2B ROI

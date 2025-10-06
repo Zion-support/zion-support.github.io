@@ -1,10 +1,12 @@
 export const metadata = {
+  
   title: 'Hyper-Personalization Engines — October 2025',
   description:
     'Blueprint for real-time, privacy-safe hyper-personalization using retrieval, signals, and online learning.',
   keywords:
     'personalization, real-time, bandits, contextual bandits, features, signals, RAG, privacy',
-};
+
+};;
 
 export default function HyperPersonalizationEnginesPage() {
   return (

@@ -1,29 +1,26 @@
 import React from 'react';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {/* content */}
+export const metadata = {
+  
   title: 'AI Governance 2026: Enterprise Safety and Compliance Framework',
-  description: 'Comprehensive guide to AI governance, safety protocols, and compliance frameworks for enterprise organizations in 2026. Learn how to implement robust AI safety measures and ensure regulatory compliance.',
-  keywords: ['AI governance', 'AI safety', 'enterprise compliance', 'AI regulations', 'AI risk management', 'AI ethics', '2026'],
-  openGraph: {
-    title: 'AI Governance 2026: Enterprise Safety and Compliance Framework',
     description: 'Comprehensive guide to AI governance, safety protocols, and compliance frameworks for enterprise organizations.',
     type: 'article',
     publishedTime: '2026-01-20T00:00:00.000Z',
     authors: ['Zion Tech Group'],
-  },
+  
+};,
 };
 
 export default function AIGovernance2026EnterpriseSafety() {
   return (
     <div>/* content */}
-  return (
     <div>
-      <div> </div><div> </div></div>
-    <div className="text-left">{/* Hero Section */}</div></div>
+      <div> </div><div> </div>
+      <div className="text-left">{/* Hero Section */}</div></div>
         <h3 className="text-left">
-    <div className="text-left"> </div><div className="text-left">{/* Hero Section */}</div></div>
-        <div className="text-left"> </div><h1 className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
+    <div className="text-left"> </div><div className="text-left">{/* Hero Section */}</div>
+      <div className="text-left"> </div><h1 className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
             AI Governance 2026
           </h1></h1>
           <p className="text-left">Enterprise Safety and Compliance Framework for the AI-Driven Future
@@ -212,8 +209,7 @@ export default function AIGovernance2026EnterpriseSafety() {
                     <li>• AI safety certification standards</li>
                   </ul>
                 </div>
-            </div>
-            <div className="text-left"> </div><h3 className="text-left">3.1 Compliance Implementation Strategy</h3>
+      <div className="text-left"> </div><h3 className="text-left">3.1 Compliance Implementation Strategy</h3>
                 <div className="text-left"> </div><div> </div><h4 className="text-left">Assessment Phase</h4>
                     <ul className="text-left">
                     <h4 className="text-left">Assessment Phase</h4>"

@@ -2,12 +2,14 @@
 import ArrowRight from 'next/link';
 
 export const metadata = {
+  
   title: 'Private AI Sandbox (2025): Safe Enterprise Experimentation',
   description:
     'Stand up a governed, cost-capped AI sandbox to safely test models, prompts, and workflows without risking production.',
   keywords:
     'private ai sandbox, 2025, enterprise ai, r&d, governance, cost caps, evals, guardrails',
-};
+
+};;
 
 export default function PrivateAISandbox2025Page() {
   return (

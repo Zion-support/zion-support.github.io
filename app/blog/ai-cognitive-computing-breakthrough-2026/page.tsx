@@ -3,18 +3,19 @@ import Link from 'next/link';
 import { ArrowLeft, Clock, User, Calendar, Share2, Bookmark } from 'lucide-react';
 
 export const metadata = {
+  
   title: 'AI Cognitive Computing Breakthrough 2026: Human-Level Reasoning Revolution | Zion Tech Group',
   description: 'Discover the breakthrough in AI cognitive computing that achieves human-level reasoning, decision-making, and problem-solving capabilities. Achieve 98% accuracy and $25M+ value.',
   keywords: 'cognitive computing, human-level reasoning, AI breakthrough, decision making, problem solving, artificial intelligence',
-};
+
+};;
 
 export default function AICognitiveComputingBreakthrough2026() {
   return (
     <div>/* content */}
-  return (
     <div>
-      <div> </div><div> </div></div>
-    <div className="text-left">{/* Header */}</div></div>
+      <div> </div><div> </div>
+      <div className="text-left">{/* Header */}</div>
       <div className="text-left"> </div><div className="text-left"> </div><Link href="/blog" className="text-left"> </Link><ArrowLeft className="text-left" />Back to Blog
             </ArrowLeft></Link>
           </div>
@@ -45,11 +46,9 @@ export default function AICognitiveComputingBreakthrough2026() {
         {/* Key Statistics */}
         <div className="text-left"> </div><div className="text-left">98%</div>
             <div className="text-left">Decision Accuracy</div>
-          </div>
-          <div className="text-left">$25M+</div>
+      <div className="text-left">$25M+</div>
             <div className="text-left">Value Creation</div>
-          </div>
-          <div className="text-left">10x</div>
+      <div className="text-left">10x</div>
             <div className="text-left">Faster Problem Solving</div>
           </div>
         </div>

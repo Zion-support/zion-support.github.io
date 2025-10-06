@@ -1,12 +1,8 @@
 import ArrowRight from 'next/link';
 
 export const metadata = {
-  title:
-    'AI Operational Excellence 2026: Autonomous Agents Driving 10x Efficiency',
-  description:
-    'How production-grade agents orchestrate enterprise operations safely with guardrails, observability, and policy tests to deliver 10x efficiency.',
-  openGraph: {
-    title: 'AI Operational Excellence 2026',
+  
+  title: 'AI Operational Excellence 2026',
     description:
       'Blueprint for operational excellence with autonomous agents, safety guardrails, and reliability engineering.',
     url: 'https://ziontechgroup.com/blog/ai-operational-excellence-agents-2026',
@@ -15,7 +11,8 @@ export const metadata = {
         url: '/og/ai-operational-excellence-agents-2026.jpg',
         width: 1200,
         height: 630,
-      },
+      
+};,
     ],
   },
 };

@@ -1,11 +1,8 @@
 import ArrowRight from 'next/link';
 
 export const metadata = {
-  title: 'Agent Ops Observability 2026 | Zion Tech Group',
-  description:
-    'Metrics, traces, evals, and guardrails for reliable autonomy at scale.',
-  openGraph: {
-    title: 'Agent Ops Observability 2026',
+  
+  title: 'Agent Ops Observability 2026',
     description:
       'Instrument agents with traces, evaluations, KPIs, and guardrails to ensure reliability.',
     type: 'article',
@@ -16,7 +13,8 @@ export const metadata = {
         width: 1200,
         height: 630,
         alt: 'Agent Ops Observability 2026',
-      },
+      
+};,
     ],
   },
 };

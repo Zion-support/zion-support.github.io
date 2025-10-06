@@ -1,15 +1,13 @@
 import ArrowRight from 'next/link';
 
 export const metadata = {
-  title: 'Trustless Evaluation Blueprint (2026) | Zion Tech Group',
-  description:
-    'Implement verifiable, tamper‑evident AI evaluations with signed datasets, attestations, and reproducible scoring.',
-  openGraph: {
-    title: 'Trustless Evaluation Blueprint (2026)',
-    description:
+  
+  title:  'Trustless Evaluation Blueprint (2026)',
+  description: 
       'How to build signed, reproducible, and policy‑aligned evals for reliable AI at scale.',
-    type: 'article',
-  },
+  type: 'article',
+
+};;
 };
 
 export default function TrustlessEvaluationBlueprint2026Page() {

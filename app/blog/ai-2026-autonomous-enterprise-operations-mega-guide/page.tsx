@@ -1,22 +1,22 @@
 import React from 'react';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {/* content */}
+export const metadata = {
+  
   title: 'AI 2026: Autonomous Enterprise Operations - Complete Mega Guide | Zion Tech Group',
   description: 'The definitive guide to achieving 98% automation with autonomous AI systems. Complete blueprint for enterprise transformation with proven results.',
   keywords: 'ai, automation, enterprise, autonomous-operations, guide, 2026',
-};
+
+};;
 
 export default function AutonomousEnterpriseOperationsGuide() {
   return (
     <div>/* content */}
-  return (
     <div>
-      <div> </div><div> </div></div>
-    <div className="text-left">{/* Hero Section */}</div></div>
-      <section className="text-left"> </section><div className="text-left"> </div><div className="text-left" style={{ animationDelay: '2s' }}> </div></div>
-        
-        <div className="text-left"> </div><span className="text-left">🤖 Complete Enterprise Guide
+      <div> </div><div> </div>
+      <div className="text-left">{/* Hero Section */}</div></div>
+      <section className="text-left"> </section><div className="text-left"> </div><div className="text-left" style={{ animationDelay: '2s' }}> </div>
+      <div className="text-left"> </div><span className="text-left">🤖 Complete Enterprise Guide
               </span></span>
             </div>
             <h1 className="text-left">
@@ -26,9 +26,8 @@ export default function AutonomousEnterpriseOperationsGuide() {
             </p></p>
             <p className="text-left"> </p><section className="text-left"> </section><div className="text-left"> </div><div className="text-left">"
           </div><div className="text-left" style={{ animationDelay: '2s' }}>"
-        </div></div>
-        
-        <div className="text-left"> </div><div className="text-left"> </div><div className="text-left"> </div><span className="text-left">🤖 Complete Enterprise Guide
+        </div>
+      <div className="text-left"> </div><div className="text-left"> </div><div className="text-left"> </div><span className="text-left">🤖 Complete Enterprise Guide
               </span></span>
             </div>
             
@@ -44,18 +43,13 @@ export default function AutonomousEnterpriseOperationsGuide() {
             </p></p>
             <div className="text-left"> </div><div className="text-left">98%</div>
                 <div className="text-left">Automation Rate</div>
-              </div>
-              <div className="text-left">$50M+</div>
+      <div className="text-left">$50M+</div>
                 <div className="text-left">Annual Savings</div>
-              </div>
-              <div className="text-left">300%</div>
+      <div className="text-left">300%</div>
                 <div className="text-left">ROI</div>
-              </div>
-              <div className="text-left">18mo</div>
+      <div className="text-left">18mo</div>
                 <div className="text-left">Payback</div>
-              </div>
-
-            <div className="text-left"> </div><a 
+      <div className="text-left"> </div><a 
                 href="/"
                 className="text-left">Get Free Consultation
               </a></a>

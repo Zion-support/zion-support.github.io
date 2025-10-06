@@ -1,22 +1,21 @@
 import ArrowRight from 'next/link';
 
 export const metadata = {
-  title:
-    'Reliable Agent Evals 2025: Measure and Guardrail Autonomy | Zion Tech Group',
-  description:
-    'Blueprint for production agent evaluations: golden tasks, scorecards, policy tests, budgets, and continuous improvement.',
-  openGraph: {
-    title: 'Reliable Agent Evals 2025 — Measure and Guardrail Autonomy',
-    description:
+  
+  title:  'Reliable Agent Evals 2025 — Measure and Guardrail Autonomy',
+  description: 
       'Blueprint for production agent evaluations: golden tasks, scorecards, policy tests, budgets, and continuous improvement.',
-    type: 'article',
-  },
+  type: 'article',
+
+};;
   twitter: {
-    card: 'summary_large_image',
-    title: 'Reliable Agent Evals 2025 — Measure and Guardrail Autonomy',
-    description:
-      'Blueprint for production agent evaluations: golden tasks, scorecards, policy tests, budgets, and continuous improvement.',
+    card:   'summary_large_image',,
+    title:   'Reliable Agent Evals 2025 — Measure and Guardrail Autonomy',,
+    description:  
+      'Blueprint for production agent evaluations: golden tasks, scorecards, policy tests, budgets, and continuous improvement.',,
   },
+};
+};
 };
 
 export default function ReliableAgentEvals2025Page() {

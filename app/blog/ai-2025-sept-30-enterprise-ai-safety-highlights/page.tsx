@@ -1,11 +1,8 @@
 // Using React 17+ automatic runtime; no import needed
 
 export const metadata = {
-  title: 'Enterprise AI Safety Highlights (Sep 30, 2025) | Zion Tech Group',
-  description:
-    'Key safety advancements for enterprise AI in 2025: live guardrails, runtime scorecards, and verified data flows. Actionable, audited, and deployment-ready.',
-  openGraph: {
-    title: 'Enterprise AI Safety Highlights (Sep 30, 2025)',
+  
+  title: 'Enterprise AI Safety Highlights (Sep 30, 2025)',
     description:
       'Live guardrails, runtime scorecards, and verified data flows. Actionable and audited.',
     type: 'article',
@@ -16,16 +13,19 @@ export const metadata = {
         width: 1200,
         height: 630,
         alt: 'Enterprise AI Safety Highlights 2025',
-      },
+      
+};,
     ],
   },
   twitter: {
-    card: 'summary_large_image',
-    title: 'Enterprise AI Safety Highlights (Sep 30, 2025)',
-    description:
+    card:   'summary_large_image',,
+    title:   'Enterprise AI Safety Highlights (Sep 30, 2025)',,
+    description:  
       'Live guardrails, runtime scorecards, and verified data flows. Actionable and audited.',
-    images: ['/og-enterprise-ai-safety-highlights-2025.jpg'],
+    images: ['/og-enterprise-ai-safety-highlights-2025.jpg'],,
   },
+};
+};
 };
 
 export default function EnterpriseAISafetyHighlights2025() {

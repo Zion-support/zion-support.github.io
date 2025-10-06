@@ -1,10 +1,12 @@
 // @ts-nocheck
 
 export const metadata = {
+  
   title: 'AI Infra Cost Optimization 2027: Fast, Reliable, Affordable',
   description:
     'Cut AI infra spend 30–70% using quality tiers, caching, quantization, and routing—while improving reliability and UX.',
-};
+
+};;
 
 export default function Page() {
   return (

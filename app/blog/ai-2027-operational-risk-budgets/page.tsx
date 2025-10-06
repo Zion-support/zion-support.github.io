@@ -2,16 +2,13 @@
 import ArrowRight from 'next/link';
 
 export const metadata = {
-  title:
-    'AI 2027: Operational Risk Budgets — Budgets, Canaries, Rollback | Zion Tech Group',
-  description:
-    'Design operational risk budgets for AI systems: KPI-linked canaries, budgeted actions, and instant rollback to contain incidents safely.',
-  openGraph: {
-    title: 'AI 2027: Operational Risk Budgets',
-    description:
+  
+  title:  'AI 2027: Operational Risk Budgets',
+  description: 
       'KPI-linked canaries, budgeted actions, and instant rollback to keep autonomy safe.',
-    type: 'article',
-  },
+  type: 'article',
+
+};;
 };
 
 export default function AI2027OperationalRiskBudgetsPage() {

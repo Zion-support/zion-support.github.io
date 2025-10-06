@@ -1,8 +1,10 @@
 export const metadata = {
+  
   title: 'Executive AI Roadmap — October 2025 | Zion Tech Group',
   description:
     'A pragmatic 90‑day enterprise roadmap to ship reliable AI with guardrails, live scorecards, budgets, and measurable ROI.',
-};
+
+};;
 
 export default function ExecutiveAIRoadmapPage() {
   return (

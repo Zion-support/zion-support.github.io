@@ -2,10 +2,12 @@
 import ArrowRight from 'next/link';
 
 export const metadata = {
+  
   title: 'AI Operational Trust Scorecards 2026 | Zion Tech Group',
   description:
     'SLIs wired to KPIs with budgets, canaries, and instant rollback for dependable AI operations in 2026.',
-};
+
+};;
 
 export default function AIOperationalTrustScorecards2026Page() {
   return (

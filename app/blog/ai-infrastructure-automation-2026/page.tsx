@@ -1,10 +1,12 @@
 import ArrowRight from 'next/link';
 
 export const metadata = {
+  
   title: 'AI Infrastructure Automation 2026 | Zion Tech Group',
   description:
     'Build self-healing, policy-tested infrastructure with 99.99% uptime and 70% cost reduction.',
-};
+
+};;
 
 export default function AIInfrastructureAutomation2026Page() {
   return (

@@ -5,12 +5,11 @@ import { ArrowRight, Brain, Zap, Shield, TrendingUp, Users, Target, CheckCircle 
 export default function AINextGenEnterpriseAutomation2026() {
   return (
     <div>/* content */}
-  return (
     <div>
-      <div> </div><div> </div></div>
-    <div className="text-left">{/* Hero Section */}</div></div>
-      <section className="text-left"> </section><div className="text-left"> </div><div className="text-left" style={{ animationDelay: '2s' }}> </div></div>
-        <div className="text-left"> </div><span className="text-left">🚀 January 2026 • Enterprise AI Revolution
+      <div> </div><div> </div>
+      <div className="text-left">{/* Hero Section */}</div></div>
+      <section className="text-left"> </section><div className="text-left"> </div><div className="text-left" style={{ animationDelay: '2s' }}> </div>
+      <div className="text-left"> </div><span className="text-left">🚀 January 2026 • Enterprise AI Revolution
               </span></span>
             </div>
             <h1 className="text-left">
@@ -19,9 +18,8 @@ export default function AINextGenEnterpriseAutomation2026() {
             <p className="text-left">Discover how Zion Tech Group's breakthrough AI automation technologies are transforming enterprise operations with 98% automation rates, quantum-speed processing, and meta-cognitive decision making.
             </p></p>
             <span className="text-left"> </span><Users className="text-left" />
-      <section className="text-left"> </section><div className="text-left"> </div><div className="text-left"> </div><div className="text-left" style={{ animationDelay: '2s' }}> </div></div>
-        
-        <div className="text-left"> </div><div className="text-left"> </div><div className="text-left"> </div><span className="text-left">🚀 January 2026 • Enterprise AI Revolution
+      <section className="text-left"> </section><div className="text-left"> </div><div className="text-left"> </div><div className="text-left" style={{ animationDelay: '2s' }}> </div>
+      <div className="text-left"> </div><div className="text-left"> </div><div className="text-left"> </div><span className="text-left">🚀 January 2026 • Enterprise AI Revolution
               </span></span>
             </div>
             
@@ -53,9 +51,8 @@ export default function AINextGenEnterpriseAutomation2026() {
               { value='99.9%', label: 'Accuracy Rate', icon: '🎯', color: 'from-yellow-400 to-orange-400' }
             ].map((stat, index) => (</div></div>
               <div key={index} className="text-left"> </div><div className="text-left">{stat.icon}</div>
-                <div className={`text-4xl font-extrabold bg-gradient-to-r ${stat.color} bg-clip-text text-transparent mb-2`}>{stat.value}</div></div>
-                </div>
-                <div className="text-left">{stat.label}</div></div>
+                <div className={`text-4xl font-extrabold bg-gradient-to-r ${stat.color} bg-clip-text text-transparent mb-2`}>{stat.value}</div>
+      <div className="text-left">{stat.label}</div></div>
                 </div>
               </div>
             ))}

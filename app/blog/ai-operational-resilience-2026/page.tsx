@@ -1,11 +1,8 @@
 import ArrowRight from 'next/link';
 
 export const metadata = {
-  title: 'AI Operational Resilience 2026: Designing for Failure and Recovery',
-  description:
-    'Blueprint for 99.99% uptime with policy tests, isolation, chaos testing, and automated recovery for AI systems.',
-  openGraph: {
-    title: 'AI Operational Resilience 2026',
+  
+  title: 'AI Operational Resilience 2026',
     description:
       'Policy tests, isolation boundaries, and automated recovery to achieve 99.99% uptime.',
     url: 'https://ziontechgroup.com/blog/ai-operational-resilience-2026',
@@ -14,7 +11,8 @@ export const metadata = {
         url: '/og/ai-operational-resilience-2026.jpg',
         width: 1200,
         height: 630,
-      },
+      
+};,
     ],
   },
 };

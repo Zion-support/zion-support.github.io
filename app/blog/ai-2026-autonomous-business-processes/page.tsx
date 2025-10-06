@@ -1,11 +1,6 @@
 export const metadata = {
-  title: 'AI 2026: Autonomous Business Process Orchestration - 95% Automation',
-  description:
-    'Discover how Fortune 500 companies are achieving 95% business process automation with next-generation AI orchestration platforms. Real-world case studies and implementation strategies.',
-  keywords:
-    'autonomous business processes, AI orchestration, process automation, enterprise AI, business transformation, workflow automation',
-  openGraph: {
-    title: 'AI 2026: Autonomous Business Process Orchestration',
+  
+  title: 'AI 2026: Autonomous Business Process Orchestration',
     description:
       'Achieve 95% business process automation with next-generation AI orchestration platforms.',
     type: 'article',
@@ -16,7 +11,8 @@ export const metadata = {
         width: 1200,
         height: 630,
         alt: 'AI 2026 Autonomous Business Process Orchestration',
-      },
+      
+};,
     ],
   },
 };

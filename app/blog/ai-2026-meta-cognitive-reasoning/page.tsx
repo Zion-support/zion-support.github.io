@@ -1,25 +1,22 @@
 import React from 'react';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {/* content */}
-  title: 'Meta-Cognitive Reasoning: AI That Thinks About Thinking - Zion Tech Group',
-  description: 'Discover the breakthrough in AI reasoning capabilities. Meta-cognitive AI systems that can think about their own thinking processes, leading to unprecedented decision-making accuracy.',
-  keywords: 'meta-cognitive AI, AI reasoning, cognitive AI, self-aware AI, AI decision making, cognitive reasoning',
-  openGraph: {
-    title: 'Meta-Cognitive Reasoning: AI That Thinks About Thinking',
+export const metadata = {
+  
+  title: 'Meta-Cognitive Reasoning: AI That Thinks About Thinking',
       description: 'Discover the breakthrough in AI reasoning capabilities with meta-cognitive systems.',
       type: 'article',
       publishedTime: '2026-01-25T00:00:00.000Z'
-    },
+    
+};,
 };
 
 export default function MetaCognitiveReasoning() {
   return (
     <div>/* content */}
-  return (
     <div>
-      <div> </div><div> </div></div>
-    <div className="text-left"> </div><article className="text-left">{/* Hero Section */}
+      <div> </div><div> </div>
+      <div className="text-left"> </div><article className="text-left">{/* Hero Section */}
           </a><header className="text-left">
             <span className="text-left"> </span><div className="text-left"> </div><div className="text-left"> </div><article className="text-left">{/* Hero Section */}
           </article><header className="text-left"> </header><div className="text-left"> </div><span className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
@@ -51,8 +48,7 @@ export default function MetaCognitiveReasoning() {
                 <div className="text-left">Core Principle:</div>
                   <div className="text-left">An AI that can understand its own thinking process can optimize its own thinking process."</div>"
                 </div>
-              </div>
-              <div className="text-left">🧠💭</div>
+      <div className="text-left">🧠💭</div>
                 <div className="text-left">Meta-Cognition</div>
                 <div className="text-left">Thinking About Thinking</div>
               </div>
@@ -175,16 +171,13 @@ export default function MetaCognitiveReasoning() {
                 <div className="text-left"> </div><div className="text-left">95%</div>
                     <div className="text-left">Decision Accuracy</div>
                     <div className="text-left">vs 78% Traditional AI</div>
-                  </div>
-                  <div className="text-left">87%</div>
+      <div className="text-left">87%</div>
                     <div className="text-left">Error Reduction</div>
                     <div className="text-left">vs Previous Systems</div>
-                  </div>
-                  <div className="text-left">3.2x</div>
+      <div className="text-left">3.2x</div>
                     <div className="text-left">Learning Speed</div>
                     <div className="text-left">vs Standard AI</div>
-                  </div>
-                  <div className="text-left">99.1%</div>
+      <div className="text-left">99.1%</div>
                     <div className="text-left">Confidence Accuracy</div>
                     <div className="text-left">Self-Assessment</div>
                   </div>

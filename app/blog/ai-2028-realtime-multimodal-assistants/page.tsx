@@ -1,10 +1,12 @@
 import ArrowRight from 'next/link';
 
 export const metadata = {
+  
   title: 'Real‑Time Multimodal Assistants (2028): Voice + Vision + Touch',
   description:
     'Production patterns for assistants that see, hear, and act with <150ms latency.',
-};
+
+};;
 
 export default function Page() {
   return (

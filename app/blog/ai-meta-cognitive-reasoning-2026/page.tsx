@@ -2,18 +2,19 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
+  
   title: 'AI Meta-Cognitive Reasoning: The Next Evolution in Enterprise Intelligence | Zion Tech Group',
   description: 'Explore how AI meta-cognitive reasoning is revolutionizing enterprise decision-making with self-aware AI systems that think about thinking.',
   keywords: 'AI meta-cognitive reasoning, self-aware AI, enterprise intelligence, cognitive computing, AI reasoning systems',
-};
+
+};;
 
 export default function AIMetaCognitiveReasoning2026() {
   return (
     <div>/* content */}
-  return (
     <div>
-      <div> </div><div> </div></div>
-    <div className="text-left"> </div><Link href="/blog" className="text-left">
+      <div> </div><div> </div>
+      <div className="text-left"> </div><Link href="/blog" className="text-left">
           ← Back to Blog
         </Link>
       </div>
@@ -84,11 +85,9 @@ export default function AIMetaCognitiveReasoning2026() {
           <h3 className="text-left">📊 Real-World Impact</h3>
             <div className="text-left"> </div><div className="text-left">300%</div>
                 <div className="text-left">Better Decision Accuracy</div>
-              </div>
-              <div className="text-left">500%</div>
+      <div className="text-left">500%</div>
                 <div className="text-left">Faster Problem Solving</div>
-              </div>
-              <div className="text-left">95%</div>
+      <div className="text-left">95%</div>
                 <div className="text-left">Confidence in Predictions</div>
               </div>
           </div>

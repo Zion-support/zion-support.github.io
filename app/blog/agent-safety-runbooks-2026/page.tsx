@@ -1,15 +1,12 @@
 import ArrowRight from 'next/link';
 
 export const metadata = {
-  title: 'Agent Safety Runbooks 2026 | Zion Tech Group',
-  description:
-    'Approvals, budgeted actions, and KPI‑linked canaries for safe agent releases.',
-  openGraph: {
-    title: 'Agent Safety Runbooks 2026',
-    description: 'Approvals, budgets, and KPI‑linked canary evals.',
-    type: 'article',
-  },
-};
+  
+  title: 'Agent Safety Runbooks 2026',
+  description: 'Approvals, budgets, and KPI‑linked canary evals.',
+  type: 'article',
+
+};;
 
 export default function AgentSafetyRunbooks2026Page() {
   return (

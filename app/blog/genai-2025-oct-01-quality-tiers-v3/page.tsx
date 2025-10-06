@@ -1,8 +1,10 @@
 export const metadata = {
+  
   title: 'GenAI Quality Tiers v3 — Stable UX with 50% Savings',
   description:
     'Route by intent to economy vs quality tiers, backed by semantic caches and KPI-linked scorecards for safe savings.',
-};
+
+};;
 
 export default function Page() {
   return (

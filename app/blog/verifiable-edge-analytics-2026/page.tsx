@@ -1,20 +1,20 @@
 import ArrowRight from 'next/link';
 
 export const metadata = {
-  title: 'Verifiable Edge Analytics 2026 — Zero‑PII, Signed Attestations',
-  description:
-    'Scoped IDs, on‑device aggregation, DP noise, and signed attestations for trustworthy insights under 100ms.',
-  openGraph: {
-    title: 'Verifiable Edge Analytics 2026 — Zero‑PII, Signed Attestations',
-    description:
+  
+  title:  'Verifiable Edge Analytics 2026 — Zero‑PII, Signed Attestations',
+  description: 
       'Scoped IDs, on‑device aggregation, DP noise, and signed attestations for trustworthy insights under 100ms.',
-    type: 'article',
-  },
+  type: 'article',
+
+};;
   twitter: {
-    card: 'summary_large_image',
-    title: 'Verifiable Edge Analytics 2026',
-    description: 'Zero‑PII insights with signed attestations and <100ms SLAs.',
+    card:   'summary_large_image',,
+    title:   'Verifiable Edge Analytics 2026',,
+    description:   'Zero‑PII insights with signed attestations and <100ms SLAs.',,
   },
+};
+};
 };
 
 export default function VerifiableEdgeAnalytics2026() {

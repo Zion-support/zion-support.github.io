@@ -1,10 +1,12 @@
 // @ts-nocheck
 
 export const metadata = {
+  
   title: 'Enterprise AI Sustainability 2027',
   description:
     'Cut AI spend and carbon 70% with quality tiers, green routing, and workload shifting.',
-};
+
+};;
 
 export default function Page() {
   return (

@@ -2,10 +2,12 @@
 import ArrowRight from 'next/link';
 
 export const metadata = {
+  
   title: 'AI 2027: Operational Scorecards — SLIs, Budgets, Rollback',
   description:
     'Design operational scorecards that wire SLIs to KPIs with budgeted actions, approvals, and instant rollback for reliable autonomy.',
-};
+
+};;
 
 export default function Page() {
   return (

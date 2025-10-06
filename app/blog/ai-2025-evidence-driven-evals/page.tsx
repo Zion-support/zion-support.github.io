@@ -1,10 +1,12 @@
 import ArrowRight from 'next/link';
 
 export const metadata = {
+  
   title: 'Evidence‑Driven Evals 2025: Traceable Quality Linked to KPIs',
   description:
     'Design evals that tie model behavior to product KPIs with traces, scorecards, and budgeted guardrails.',
-};
+
+};;
 
 export default function Page() {
   return (

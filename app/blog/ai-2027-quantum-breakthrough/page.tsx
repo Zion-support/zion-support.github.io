@@ -2,25 +2,22 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
+  
   title: 'AI 2027: Quantum Computing Breakthrough Revolutionizing Enterprise Operations',
-  description: 'Discover how quantum computing breakthroughs in 2027 are revolutionizing enterprise AI operations, delivering unprecedented computational power and optimization capabilities.',
-  keywords: 'quantum computing, AI 2027, enterprise AI, quantum algorithms, breakthrough technology, computational optimization',
-  openGraph: {
-    title: 'AI 2027: Quantum Computing Breakthrough Revolutionizing Enterprise Operations',
     description: 'Discover how quantum computing breakthroughs in 2027 are revolutionizing enterprise AI operations, delivering unprecedented computational power and optimization capabilities.',
     type: 'article',
     publishedTime: '2027-01-15T00:00:00.000Z',
     authors: ['Zion Tech Group'],
-  },
+  
+};,
 };
 
 export default function AI2027QuantumBreakthrough() {
   return (
     <div>/* content */}
-  return (
     <div>
-      <div> </div><div> </div></div>
-    <div className="text-left"> </div><Link href="/blog" className="text-left">
+      <div> </div><div> </div>
+      <div className="text-left"> </div><Link href="/blog" className="text-left">
           ← Back to Blog
         </Link>
       </div>
@@ -117,11 +114,9 @@ export default function AI2027QuantumBreakthrough() {
               </p></p>
               <div className="text-left"> </div><div className="text-left">$2.3B</div>
                   <div className="text-left">Annual Cost Savings</div>
-                </div>
-                <div className="text-left">45%</div>
+      <div className="text-left">45%</div>
                   <div className="text-left">Faster Delivery</div>
-                </div>
-                <div className="text-left">98%</div>
+      <div className="text-left">98%</div>
                   <div className="text-left">Customer Satisfaction</div>
                 </div>
             </div>

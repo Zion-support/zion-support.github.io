@@ -2,25 +2,22 @@ import React from 'react';
 import Link from 'next/link';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {/* content */}
-  title: 'Quantum-Neural Fusion: The Next Evolution in AI Computing - Zion Tech Group',
-  description: 'Explore how quantum computing and neural networks are merging to create unprecedented AI capabilities. Discover the future of computational intelligence.',
-  keywords: 'quantum neural networks, quantum computing, AI fusion, neural network evolution, quantum AI',
-  openGraph: {
-    title: 'Quantum-Neural Fusion: The Next Evolution in AI Computing',
+export const metadata = {
+  
+  title: 'Quantum-Neural Fusion: The Next Evolution in AI Computing',
       description: 'Explore how quantum computing and neural networks are merging to create unprecedented AI capabilities.',
       type: 'article',
       publishedTime: '2026-01-20T00:00:00.000Z'
-    },
+    
+};,
 };
 
 export default function QuantumNeuralFusion() {
   return (
     <div>/* content */}
-  return (
     <div>
-      <div> </div><div> </div></div>
-    <div className="text-left"> </div><article className="text-left">{/* Hero Section */}
+      <div> </div><div> </div>
+      <div className="text-left"> </div><article className="text-left">{/* Hero Section */}
           </a><header className="text-left">
             <span className="text-left"> </span><div className="text-left"> </div><div className="text-left"> </div><article className="text-left">{/* Hero Section */}
           </article><header className="text-left"> </header><div className="text-left"> </div><span className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
@@ -103,12 +100,10 @@ export default function QuantumNeuralFusion() {
                 <div className="text-left"> </div><div className="text-left">1000x</div>
                     <div className="text-left">Processing Speed</div>
                     <div className="text-left">vs Classical Neural Networks</div>
-                  </div>
-                  <div className="text-left">2^50</div>
+      <div className="text-left">2^50</div>
                     <div className="text-left">Parallel States</div>
                     <div className="text-left">Simultaneous Processing</div>
-                  </div>
-                  <div className="text-left">99.9%</div>
+      <div className="text-left">99.9%</div>
                     <div className="text-left">Accuracy Rate</div>
                     <div className="text-left">Complex Problem Solving</div>
                   </div>

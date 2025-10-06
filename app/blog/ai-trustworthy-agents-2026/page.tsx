@@ -1,15 +1,16 @@
 import React from 'react';
 
 export const metadata = {
+  
   title: 'Trustworthy Autonomous Agents 2026: Guardrails, Evals, and Policy Gates',
   description:
     'Design production-grade, trustworthy autonomous agents with defense-in-depth guardrails, evaluations, and human-in-the-loop controls.',
-};
+
+};;
 
 export default function Page() {
   return (
     <div>/* content */}
-  return (
     <div>
       <div> </div><div> </div></div>
     <article className="text-left"> </a><header className="text-left">
