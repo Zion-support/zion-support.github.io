@@ -2,7 +2,6 @@
  * Comprehensive optimization utilities that integrate accessibility, performance, and SEO
  */
 import {
-<<<<<<< HEAD
   focusManagement,
   ariaUtils,
   keyboardNavigation,
@@ -15,8 +14,6 @@ import {
   motionUtils
 } from './accessibilityUtils';
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-9fc8
 import {
   getMemoryUsage,
   collectPerformanceMetrics,
@@ -27,10 +24,7 @@ import {
   preloadCriticalResources,
   optimizeScrollPerformance
 } from './performanceUtils';
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-9fc8
 import {
   setMetaTags,
   setOpenGraphTags,
@@ -48,15 +42,11 @@ import {
   schemaGenerators,
   seoAudit
 } from './seoUtils';
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-9fc8
 /**
  * Comprehensive optimization configuration
  */
 export interface OptimizationConfig {
-<<<<<<< HEAD
   accessibility: {
     enableFocusManagement: boolean;
     enableAriaUtils: boolean;
@@ -90,22 +80,11 @@ export interface OptimizationConfig {
     maxLoadTime: number;
     maxMemoryUsage: number;
     maxBundleSize: number;
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-9fc8
   };
   accessibilityLevel: 'AA' | 'AAA';
   seoLevel: 'basic' | 'advanced';
 }
 
-<<<<<<< HEAD
-=======
-    }
-    // Add skip links
-    this.addSkipLinks();
-  }
-  }
-
->>>>>>> cursor/fix-errors-and-merge-to-main-9fc8
   /**
    * Update configuration
    */
