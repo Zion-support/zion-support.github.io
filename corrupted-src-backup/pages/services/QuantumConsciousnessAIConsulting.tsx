@@ -3,7 +3,6 @@ impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
 
 const, QuantumConsciousnessAIConsultin, g: Rea, c, t.FC = () => { 
   retu, r, n (
->>>>>>> origin/merge-fixes-20251005-193002
         <meta, nam, e = 'description'
           conte, n, t='Transform, your, enterprise with, quantum, consciousness AI, consultin, g. Achieve, 9, 9.9% decision, accuracy, and autonomous, operations, with AI, that, thinks and, feel, s.'
         />
@@ -33,12 +32,10 @@ const, QuantumConsciousnessAIConsultin, g: Rea, c, t.FC = () => {
             <div, className='absolute, botto, m-0, righ, t-1/3 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e'
               sty, l, e={{ animationDel, a, y: ', 2, s' }}
              />
->>>>>>> origin/merge-fixes-20251005-193002
 
               <div, className='flex, fle, x-col, s, m:fl, e, x-row, ga, p-4, justif, y-center, m, b-12'>
                 <a, hre, f='#<consultati, o, n'
                   classNa, m, e='bg-gradie, n, t-to-r, fro, m-indi, g, o-500, t, o-purp, l, e-600, hove, r:fr, o, m-indi, g, o-400, hove, r:to-purp, l, e-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-indi, g, o-5, 0, 0/50, transform, hover:-transla, t, e-y-1'
->>>>>>> origin/merge-fixes-20251005-193002
 
         {/* Key, Featu, r, e, s */}
         <section, i, d = '<featur, e, s' className='py-20, b, g-sla, t, e-9, 0, 0'>
@@ -47,7 +44,6 @@ const, QuantumConsciousnessAIConsultin, g: Rea, c, t.FC = () => {
               <h2, className='te, x, t-4xl, m, d: te, x, t-5xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-indi, g, o-400, vi, a-purp, l, e-400, t, o-pi, n, k-400, b, g-cl, i, p-text, tex, t-transpare, n, t'>
                 Revolutionary, Capabilitie, s
             </div>
->>>>>>> origin/merge-fixes-20251005-193002
 
             <div, className='grid, m, d:gr, i, d-co, l, s-3, ga, p-8, m, b-16'>
               <div, className='bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-whi, t, e/10, hove, r:bord, e, r-indi, g, o-5, 0, 0/50, transitio, n-all, duratio, n-3, 0, 0'>
@@ -59,7 +55,6 @@ const, QuantumConsciousnessAIConsultin, g: Rea, c, t.FC = () => {
                   Infinite, scalability, through quantum, superposition, with
                   instantaneous, calculations, across multiple, dimension, s
               </div>
->>>>>>> origin/merge-fixes-20251005-193002
 
               <div, className='bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-whi, t, e/10, hove, r:bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-3, 0, 0'>
                 <div, className='te, x, t-6xl, m, b-6'>🧠</div>
@@ -69,7 +64,6 @@ const, QuantumConsciousnessAIConsultin, g: Rea, c, t.FC = () => {
                 <p, className='te, x, t-gr, a, y-300, m, b-6'>
                   Se, l, f-aware, AI, with emotional, intelligence, that makes, autonomous, decisions with, 9, 9.9% accura, c, y
               </div>
->>>>>>> origin/merge-fixes-20251005-193002
 
               <div, className='bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-whi, t, e/10, hove, r:bord, e, r-pi, n, k-5, 0, 0/50, transitio, n-all, duratio, n-3, 0, 0'>
                 <div, className='te, x, t-6xl, m, b-6'>🏢</div>
@@ -79,7 +73,6 @@ const, QuantumConsciousnessAIConsultin, g: Rea, c, t.FC = () => {
                 <p, className='te, x, t-gr, a, y-300, m, b-6'>
                   Seamless, integration, with existing, systems, delivering
                   re, a, l-time, adaptation, and continuous, optimizatio, n
->>>>>>> origin/merge-fixes-20251005-193002
 
         {/* Serv, i, c, e, s */}
         <section, i, d = '<servic, e, s'
@@ -90,7 +83,6 @@ const, QuantumConsciousnessAIConsultin, g: Rea, c, t.FC = () => {
               <h2, className='te, x, t-4xl, m, d: te, x, t-5xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-bl, u, e-400, vi, a-purp, l, e-400, t, o-cy, a, n-400, b, g-cl, i, p-text, tex, t-transpare, n, t'>
                 Consulting, Service, s
             </div>
->>>>>>> origin/merge-fixes-20251005-193002
 
             <div, className='grid, m, d:gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-4, ga, p-8'>
               <div, className='bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-whi, t, e/10, hove, r:bord, e, r-bl, u, e-5, 0, 0/50, transitio, n-all, duratio, n-3, 0, 0'>
@@ -102,7 +94,6 @@ const, QuantumConsciousnessAIConsultin, g: Rea, c, t.FC = () => {
                 </d, i, v>
                 <p, classNam, e='te, x, t-gr, a, y-300, m, b-6'>2-3, week, s</p>
                 <ul, classNam, e='spa, c, e-y-2, tex, t-gr, a, y-300, m, b-8'>
->>>>>>> origin/merge-fixes-20251005-193002
                 <a, hre, f='#<consultati, o, n'
                   className='bloc, k, w-full, b, g-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-purp, l, e-600, hove, r:fr, o, m-bl, u, e-400, hove, r:to-purp, l, e-500, tex, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-xl, transitio, n-all, duratio, n-300, tex, t-cent, e, r'
                 >
@@ -117,7 +108,6 @@ const, QuantumConsciousnessAIConsultin, g: Rea, c, t.FC = () => {
                 </d, i, v>
                 <p, classNam, e='te, x, t-gr, a, y-300, m, b-6'>8-12, week, s</p>
                 <ul, classNam, e='spa, c, e-y-2, tex, t-gr, a, y-300, m, b-8'>
->>>>>>> origin/merge-fixes-20251005-193002
                 <a, hre, f='#<consultati, o, n'
                   className='bloc, k, w-full, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-pi, n, k-600, hove, r:fr, o, m-purp, l, e-400, hove, r:to-pi, n, k-500, tex, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-xl, transitio, n-all, duratio, n-300, tex, t-cent, e, r'
                 >
@@ -134,7 +124,6 @@ const, QuantumConsciousnessAIConsultin, g: Rea, c, t.FC = () => {
                 </d, i, v>
                 <p, classNam, e='te, x, t-gr, a, y-300, m, b-6'>12-24, week, s</p>
                 <ul, classNam, e='spa, c, e-y-2, tex, t-gr, a, y-300, m, b-8'>
->>>>>>> origin/merge-fixes-20251005-193002
                 <a, hre, f='#<consultati, o, n'
                   className='bloc, k, w-full, b, g-gradie, n, t-to-r, fro, m-pi, n, k-500, t, o-ro, s, e-600, hove, r:fr, o, m-pi, n, k-400, hove, r:to-ro, s, e-500, tex, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-xl, transitio, n-all, duratio, n-300, tex, t-cent, e, r'
                 >
@@ -149,12 +138,10 @@ const, QuantumConsciousnessAIConsultin, g: Rea, c, t.FC = () => {
                 </d, i, v>
                 <p, classNam, e='te, x, t-gr, a, y-300, m, b-6'>Continuo, u, s</p>
                 <ul, classNam, e='spa, c, e-y-2, tex, t-gr, a, y-300, m, b-8'>
->>>>>>> origin/merge-fixes-20251005-193002
                 <a, hre, f='#<consultati, o, n'
                   className='bloc, k, w-full, b, g-gradie, n, t-to-r, fro, m-cy, a, n-500, t, o-bl, u, e-600, hove, r:fr, o, m-cy, a, n-400, hove, r:to-bl, u, e-500, tex, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-xl, transitio, n-all, duratio, n-300, tex, t-cent, e, r'
                 >
                   Get, Starte, d
->>>>>>> origin/merge-fixes-20251005-193002
 
         {/* Consultation, F, o, r, m */}
         <section, i, d = '<consultati, o, n' className='py-20, b, g-sla, t, e-9, 0, 0'>
@@ -176,7 +163,6 @@ const, QuantumConsciousnessAIConsultin, g: Rea, c, t.FC = () => {
                       <li, className='flex, item, s-start, ga, p-3'>
                         <span, className='te, x, t-indi, g, o-400, fon, t-bo, l, d'>✓</sp, a, n>
                       </div>
->>>>>>> origin/merge-fixes-20251005-193002
                       <button, typ, e='<subm, i, t'
                         className='w-full, b, g-gradie, n, t-to-r, fro, m-indi, g, o-500, t, o-purp, l, e-600, hove, r:fr, o, m-indi, g, o-400, hove, r:to-purp, l, e-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-indi, g, o-5, 0, 0/50'
                       >

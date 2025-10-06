@@ -6,9 +6,11 @@ export interface BlogPost {
   author: string;
   date: string;
   category: string;
-  publishedAt: string;
+  publishedAt?: string;
   featured?: boolean;
   readTime?: string;
+  tags?: string[];
+  image?: string;
 }
 
 export const posts: BlogPost[] = [
@@ -31,6 +33,7 @@ Revolutionary operational trust framework for AI systems delivering unprecedente
     author: 'Zion Tech Group',
     date: '2027-01-01',
     category: 'AI Operations',
+    publishedAt: '2027-01-01',
     tags: ['AI', 'Trust', 'Operations', '2027'],
     featured: true,
     readTime: '8 min read',
@@ -54,6 +57,7 @@ Quantum AI optimization delivering exponential performance gains and unprecedent
     author: 'Zion Tech Group',
     date: '2027-01-02',
     category: 'Quantum AI',
+    publishedAt: '2027-01-02',
     tags: ['Quantum AI', 'Optimization', 'Performance', '2027'],
     featured: true,
     readTime: '18 min read',

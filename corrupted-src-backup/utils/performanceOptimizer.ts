@@ -13,8 +13,8 @@ export class PerformanceOptimizer {
   // Lazy load images with intersection observer
   lazyLoadImages(): void {
     if ('IntersectionObserver' in window) {
-      const imageObserver = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
+      const imageObserver = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
           if (entry.isIntersecting) {
             const img = entry.target as HTMLImageElement;
             if (img.dataset.src) {
@@ -26,7 +26,7 @@ export class PerformanceOptimizer {
         });
       });
 
-      document.querySelectorAll('img[data-src]').forEach((img) => {
+      document.querySelectorAll('img[data-src]').forEach(img => {
         imageObserver.observe(img);
       });
     }
@@ -37,10 +37,10 @@ export class PerformanceOptimizer {
     const criticalResources = [
       '/fonts/inter.woff2',
       '/images/hero-bg.jpg',
-      '/images/logo.svg'
+      '/images/logo.svg',
     ];
 
-    criticalResources.forEach((resource) => {
+    criticalResources.forEach(resource => {
       const link = document.createElement('link');
       link.rel = 'preload';
       link.href = resource;
@@ -55,7 +55,7 @@ export class PerformanceOptimizer {
   // Optimize scroll performance
   optimizeScroll(): void {
     let ticking = false;
-    
+
     const updateScrollPosition = () => {
       // Throttled scroll handling
       ticking = false;
@@ -77,10 +77,10 @@ export class PerformanceOptimizer {
     fn();
     const end = performance.now();
     const duration = end - start;
-    
+
     this.metrics.set(name, duration);
-    
-    if (process.env.NODE_ENV === 'development') {
+
+    if (process.env['NODE_ENV'] === 'development') {
       console.log(`Performance: ${name} took ${duration.toFixed(2)}ms`);
     }
   }
@@ -93,14 +93,18 @@ export class PerformanceOptimizer {
   // Add critical resource hints method
   addCriticalResourceHints(): void {
     if (typeof document === 'undefined') return;
-    
+
     const hints = [
       { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' },
       { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com' },
       { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
-      { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossOrigin: 'anonymous' }
+      {
+        rel: 'preconnect',
+        href: 'https://fonts.gstatic.com',
+        crossOrigin: 'anonymous',
+      },
     ];
-    
+
     hints.forEach(hint => {
       const link = document.createElement('link');
       link.rel = hint.rel;
@@ -114,7 +118,7 @@ export class PerformanceOptimizer {
 
   // Add Web Vitals reporting method
   reportWebVitals(metrics: any): void {
-    if (process.env.NODE_ENV === 'development') {
+    if (process.env['NODE_ENV'] === 'development') {
       console.log('Web Vitals:', metrics);
     }
   }
@@ -124,18 +128,20 @@ export class PerformanceOptimizer {
     if (typeof window === 'undefined' || !window.performance) {
       return null;
     }
-    
+
     const timing = window.performance.timing;
     return {
       loadTime: timing.loadEventEnd - timing.navigationStart,
-      interactiveTime: timing.domInteractive - timing.navigationStart
+      interactiveTime: timing.domInteractive - timing.navigationStart,
     };
   }
 
   // Initialize all optimizations
   initialize(): void {
     this.measurePerformance('lazyLoadImages', () => this.lazyLoadImages());
-    this.measurePerformance('preloadCriticalResources', () => this.preloadCriticalResources());
+    this.measurePerformance('preloadCriticalResources', () =>
+      this.preloadCriticalResources()
+    );
     this.measurePerformance('optimizeScroll', () => this.optimizeScroll());
   }
 }

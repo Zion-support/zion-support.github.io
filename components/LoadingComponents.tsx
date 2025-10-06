@@ -1,7 +1,15 @@
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg';
   color?: 'blue' | 'gray' | 'white';
-  text?: string;
+<<<<<<< HEAD
+  text: string;
+=======
+<<<<<<< HEAD
+  text?: string | undefined;
+=======
+  text: string;
+>>>>>>> main
+>>>>>>> main
 }
 
 export function LoadingSpinner({
@@ -63,7 +71,7 @@ export function PageLoader() {
 export function InlineLoader({ text }: { text?: string }) {
   return (
     <div className='flex items-center justify-center py-8'>
-      <LoadingSpinner size='md' color='gray' text={text} />
+      <LoadingSpinner size='md' color='gray' text={text || 'Loading...'} />
     </div>
   );
 }

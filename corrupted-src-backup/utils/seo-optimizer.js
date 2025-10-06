@@ -51,7 +51,7 @@ class SEOOptimizer {
     this.addMetaTag('description', this.seoConfig.siteDescription);
     this.addMetaTag(
       'keywords',
-      'AI, artificial intelligence, machine learning, IT solutions, technology consulting, software development',
+      'AI, artificial intelligence, machine learning, IT solutions, technology consulting, software development'
     );
     this.addMetaTag('author', 'Zion Tech Group');
     this.addMetaTag('viewport', 'width=device-width, initial-scale=1.0');

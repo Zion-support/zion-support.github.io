@@ -7,13 +7,22 @@ export interface BreakthroughArticle {
   readTime: string;
   tags: string[];
   featured: boolean;
-  readTime: string;
+<<<<<<< HEAD:src/content/sept-30-breakthrough-articles-2025.ts
   impact: string;
+  content?: string;
+  author?: string;
+=======
+  impact?: string;
+>>>>>>> main:corrupted-src-backup/content/sept-30-breakthrough-articles-2025.ts
   metrics: {
     improvement: string;
     roi: string;
     timeframe: string;
   };
+  content?: string;
+  author?: string;
+  valueProposition?: string;
+  highlights?: string[];
 }
 
 export const sept30BreakthroughArticles2025: BreakthroughArticle[] = [
@@ -27,25 +36,8 @@ export const sept30BreakthroughArticles2025: BreakthroughArticle[] = [
     readTime: '20 min read',
     tags: ['AI Trading', 'Revolution', 'Prediction', '2025'],
     featured: true,
-    content: `
-# AI Trading Revolution 2025: 95% Prediction Accuracy
-
-Revolutionary AI trading system delivering unprecedented prediction accuracy and ROI improvement.
-
-## Key Features
-- 95% prediction accuracy
-- 350% ROI improvement
-- 5 weeks to trading
-- Real-time market analysis
-    `,
-    author: 'Zion Tech Group',
-    valueProposition: '95% prediction accuracy, 350% ROI',
-    highlights: [
-      '95% prediction accuracy',
-      '350% ROI improvement',
-      '5 weeks to trading',
-      'Real-time analysis',
-    ],
+    impact:
+      'Revolutionary AI trading system delivering unprecedented prediction accuracy and ROI improvement.',
     metrics: {
       improvement: '95% prediction accuracy',
       roi: '350% returns improvement',
@@ -62,25 +54,8 @@ Revolutionary AI trading system delivering unprecedented prediction accuracy and
     readTime: '18 min read',
     tags: ['Quantum AI', 'Optimization', 'Performance', '2025'],
     featured: true,
-    content: `
-# Quantum AI Optimization 2025: Exponential Performance
-
-Quantum AI optimization delivering exponential performance gains and unprecedented computational efficiency.
-
-## Revolutionary Features
-- Exponential performance gains
-- Unprecedented computational efficiency
-- Quantum-enhanced machine learning
-- Production-ready quantum AI systems
-    `,
-    author: 'Zion Tech Group',
-    valueProposition: 'Exponential computational capabilities',
-    highlights: [
-      'Exponential performance gains',
-      'Unprecedented efficiency',
-      'Quantum-enhanced ML',
-      'Production-ready systems',
-    ],
+    impact:
+      'Quantum AI optimization delivering exponential performance gains and unprecedented computational efficiency.',
     metrics: {
       improvement: 'Exponential performance',
       roi: '1000% efficiency gain',
