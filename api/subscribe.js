@@ -13,7 +13,6 @@ async function handler(req, res) {
 
   try {
     const { email } = req.body || {};
-    
     if (!isValidEmail(email)) {
       res.statusCode = 400;
       res.json({ error: 'Invalid email' });
@@ -38,7 +37,6 @@ async function handler(req, res) {
       email,
       subscribedAt: new Date().toISOString()
     });
-    
     fs.writeFileSync(file, JSON.stringify(existing, null, 2));
     res.statusCode = 200;
     res.json({ success: true });

@@ -1,4 +1,5 @@
 import { NextApiRequest, NextApiResponse } from 'next';
+import type { NextApiRequest, NextApiResponse } from 'next';
 
 export interface ApiError extends Error {
   statusCode?: number;
@@ -23,7 +24,6 @@ export const errorHandler = (
   res: NextApiResponse
 ) => {
   const { statusCode = 500, message } = err;
-  
   // Log error for monitoring
   console.error(`API Error [${statusCode}]: ${message}`, {
     url: req.url,
@@ -42,6 +42,7 @@ export const errorHandler = (
       statusCode,
       timestamp: new Date().toISOString()
     },
+    }
   });
 };
 

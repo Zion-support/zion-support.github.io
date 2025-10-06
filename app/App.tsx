@@ -7,6 +7,8 @@ import ErrorBoundary from '../src/components/ErrorBoundary';
 import SEOOptimizer from '../src/components/SEOOptimizer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import PerformanceDashboard from './components/PerformanceDashboard';
+import Navigation from './components/Navigation';
+import Footer from './components/Footer';
 
 // Pages
 import HomePage from './page';
@@ -56,10 +58,14 @@ const App: React.FC = () => {
                   Skip to main content
                 </a>
 
+                <Navigation />
+                
                 <Routes>
                   <Route path='/' element={<HomePage />} />
                   {/* Add more routes as needed */}
                 </Routes>
+
+                <Footer />
 
                 {/* Performance Dashboard */}
                 <PerformanceDashboard />

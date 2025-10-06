@@ -58,12 +58,7 @@
     "app/**/*",
     "src/**/*",
     "App.tsx",
-    "components/**/*",
-    "api/**/*",
-    "lib/**/*",
-    "hooks/**/*",
-    "utils/**/*",
-    "types/**/*"
+    "components/**/*"
   ],
   "exclude": [
     "node_modules",
@@ -118,7 +113,19 @@
     "SidebarNavigation.tsx",
     "api-documentation.tsx",
     "app/components/NewContentPromotionalBanner2026.tsx",
-    "app/components/NewestContent2025Banner.tsx"
+    "app/components/NewestContent2025Banner.tsx",
+<<<<<<< HEAD
+    "api/**",
+    "lib/**"
+=======
+    "utils/bannerLazyLoader.ts",
+    "utils/bannerPrioritization.ts",
+    "utils/bannerRegistry.ts",
+    "utils/bannerRotationSystem.ts",
+    "utils/comprehensiveOptimizer.ts",
+    "utils/performanceUtils.ts",
+    "utils/seoUtils.ts"
+>>>>>>> main
   ],
   "references": [
     {
