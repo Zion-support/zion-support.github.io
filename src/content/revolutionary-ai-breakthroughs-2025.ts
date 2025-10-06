@@ -163,4 +163,19 @@ export const revolutionaryBreakthroughs2025 = [
       architectu, r, e: 'Revolution, a, r, y',
     },
   },
-]; export const breakthroughServices2025 = [
+];
+
+export const breakthroughServices2025 = [
+  {
+    id: 'ai-autonomous-infrastructure',
+    title: 'AI Autonomous Infrastructure',
+    description: 'Self-healing, self-optimizing, self-scaling infrastructure powered by AI.',
+    category: 'Infrastructure',
+    impact: '99.9% uptime',
+    metrics: {
+      improvement: '95% efficiency',
+      roi: '340% returns',
+      timeframe: '6 months',
+    },
+  },
+];
