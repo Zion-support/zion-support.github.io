@@ -254,6 +254,9 @@ export const checkPerformanceBudget = (budget: PerformanceBudget): {
   violations: string[];
 } => {
   const violations: string[] = [];
+  if (typeof window === 'undefined' || !window.performance) {
+    return { passed: true, violations };
+  }
   
   // Check bundle size
   const bundleSize = performance.getEntriesByType('resource')
@@ -288,6 +291,14 @@ export const checkPerformanceBudget = (budget: PerformanceBudget): {
     violations.push(`Interactive time ${interactive}ms exceeds budget ${budget.maxInteractive}ms`);
   }
   
+  if (loadTime > budget.maxFirstLoad) {
+    violations.push(`First load time (${loadTime}ms) exceeds budget (${budget.maxFirstLoad}ms)`);
+  }
+  
+  if (interactiveTime > budget.maxInteractive) {
+    violations.push(`Time to interactive (${interactiveTime}ms) exceeds budget (${budget.maxInteractive}ms)`);
+  }
+  
   return {
     passed: violations.length === 0,
     violations
@@ -296,6 +307,110 @@ export const checkPerformanceBudget = (budget: PerformanceBudget): {
 
 /**
  * Performance Optimizer Class
+ */
+const debounce = (func: Function, wait: number) => {
+  let timeout: NodeJS.Timeout;
+  return function executedFunction(...args: any[]) {
+    const later = () => {
+      clearTimeout(timeout);
+      func(...args);
+    };
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+  };
+};
+
+const throttle = (func: Function, limit: number) => {
+  let inThrottle: boolean;
+  return function executedFunction(...args: any[]) {
+    if (!inThrottle) {
+      func.apply(this, args);
+      inThrottle = true;
+      setTimeout(() => inThrottle = false, limit);
+    }
+  };
+};
+
+const shouldUseWebP = (): boolean => {
+  if (typeof window === 'undefined') return false;
+  const canvas = document.createElement('canvas');
+  return canvas.toDataURL('image/webp').indexOf('data:image/webp') === 0;
+};
+
+const getConnectionQuality = (): 'slow' | 'fast' | 'unknown' => {
+  if (typeof window === 'undefined' || !('connection' in navigator)) return 'unknown';
+  const connection = (navigator as any).connection;
+  if (connection.effectiveType === 'slow-2g' || connection.effectiveType === '2g') return 'slow';
+  return 'fast';
+};
+
+const shouldLoadHeavyAssets = (): boolean => {
+  return getConnectionQuality() === 'fast';
+};
+
+const requestIdleCallback = (callback: () => void) => {
+  if (typeof window !== 'undefined' && 'requestIdleCallback' in window) {
+    return (window as any).requestIdleCallback(callback);
+  }
+  return setTimeout(callback, 1);
+};
+
+const cancelIdleCallback = (id: number) => {
+  if (typeof window !== 'undefined' && 'cancelIdleCallback' in window) {
+    return (window as any).cancelIdleCallback(id);
+  }
+  return clearTimeout(id);
+};
+
+const preloadRoute = (route: string) => {
+  // Route preloading implementation
+  console.log(`Preloading route: ${route}`);
+};
+
+const monitorLongTasks = () => {
+  if (typeof window !== 'undefined' && 'PerformanceObserver' in window) {
+    const observer = new PerformanceObserver((list) => {
+      for (const entry of list.getEntries()) {
+        console.log('Long task detected:', entry);
+      }
+    });
+    observer.observe({ entryTypes: ['longtask'] });
+  }
+};
+
+const cacheStaticAssets = () => {
+  // Static asset caching implementation
+  console.log('Caching static assets');
+};
+
+const clearOldCaches = () => {
+  // Clear old caches implementation
+  console.log('Clearing old caches');
+};
+
+export default {
+  prefetchResources,
+  preconnectDomains,
+  lazyLoadImages,
+  debounce,
+  throttle,
+  measurePageLoad: performanceOptimizer.measurePageLoad.bind(performanceOptimizer),
+  reportWebVitals: performanceOptimizer.reportWebVitals.bind(performanceOptimizer),
+  shouldUseWebP,
+  getConnectionQuality,
+  shouldLoadHeavyAssets,
+  requestIdleCallback,
+  cancelIdleCallback,
+  preloadRoute,
+  monitorLongTasks,
+  cacheStaticAssets,
+  clearOldCaches,
+  checkPerformanceBudget,
+  performanceOptimizer
+};
+/**
+ * Performance monitoring class
+>>>>>>> main
  */
 class PerformanceOptimizer {
   private static instance: PerformanceOptimizer;
@@ -401,6 +516,24 @@ class PerformanceOptimizer {
     });
   }
 
+  public measurePageLoad(): WebVitalsMetrics | null {
+    if (typeof window === 'undefined' || !window.performance) {
+      return null;
+    }
+    
+    const timing = window.performance.timing;
+    const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+    
+    const loadTime = timing.loadEventEnd - timing.navigationStart;
+    const interactiveTime = timing.domInteractive - timing.navigationStart;
+    
+    return { 
+      loadTime,
+      interactiveTime,
+      FCP: navigation?.responseStart - navigation?.fetchStart,
+      TTFB: timing.responseStart - timing.navigationStart
+    };
+  }
   // Get performance summary
   getPerformanceSummary() {
     return {

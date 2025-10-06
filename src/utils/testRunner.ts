@@ -127,8 +127,8 @@ export const testUtils = {
         }
         throw new Error('Expected function to throw');
       } catch (error) {
-        if (expectedError && !error.message.includes(expectedError)) {
-          throw new Error(`Expected error to contain "${expectedError}", got "${error.message}"`);
+        if (expectedError && !(error as Error).message.includes(expectedError)) {
+          throw new Error(`Expected error to contain "${expectedError}", got "${(error as Error).message}"`);
         }
       }
     },

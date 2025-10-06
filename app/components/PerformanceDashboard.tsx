@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+// import { performanceOptimizer } from '../../utils/performanceOptimizer';
 import { getErrorMetrics, isErrorRateTooHigh } from '../../utils/errorHandling';
 
 interface DashboardData {
