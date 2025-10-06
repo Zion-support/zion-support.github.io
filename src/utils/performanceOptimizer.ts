@@ -368,7 +368,6 @@ class PerformanceOptimizer {
     });
   }
 
-<<<<<<< HEAD
   public reportWebVitals(metrics: WebVitalsMetrics): void {
     reportWebVitals(metrics);
   }
@@ -381,14 +380,18 @@ class PerformanceOptimizer {
     prefetchResources(resources);
   }
 
+  public addCriticalResourceHints(): void {
+    this.preloadCriticalResources();
+  }
+
   // Get performance metrics
   getMetrics(): Record<string, number> {
     return Object.fromEntries(this.metrics);
   }
 
   // Monitor long tasks
-  monitorLongTasks(callback: (entries: PerformanceEntry[]) => void): void {
-    if (typeof window === 'undefined' || !window.PerformanceObserver) return;
+  monitorLongTasks(callback: (entries: PerformanceEntry[]) => void): PerformanceObserver | null {
+    if (typeof window === 'undefined' || !window.PerformanceObserver) return null;
     
     const observer = new PerformanceObserver((list) => {
       const entries = list.getEntries();
@@ -396,6 +399,7 @@ class PerformanceOptimizer {
     });
     
     observer.observe({ entryTypes: ['longtask'] });
+    return observer;
   }
 
   // Get performance summary
@@ -416,21 +420,6 @@ class PerformanceOptimizer {
   // Clear metrics
   clearMetrics() {
     this.metrics.clear();
-  }
-
-  // Measure page load performance
-  measurePageLoad(): Record<string, number> | null {
-    if (typeof window === 'undefined' || !window.performance) {
-      return null;
-    }
-    
-    const timing = window.performance.timing;
-    return {
-      loadTime: timing.loadEventEnd - timing.navigationStart,
-      interactiveTime: timing.domInteractive - timing.navigationStart,
-      domContentLoaded: timing.domContentLoadedEventEnd - timing.navigationStart,
-      firstPaint: performance.getEntriesByType('paint')[0]?.startTime || 0
-    };
   }
 
   // Initialize all optimizations
