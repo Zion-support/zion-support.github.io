@@ -123,14 +123,3 @@ export const octoberNewBreakthroughContent = [
 export const getFeaturedOctoberNewContent = () => {
   return octoberNewBreakthroughContent.filter(content => content.featured);
 };
-
-## Revolutionary Features
-- Exponential performance gains
-- Unprecedented computational efficiency
-- Quantum-enhanced machine learning
-- Production-ready quantum AI systems
-    `,
-    author: 'Zion Tech Group',
-    valueProposition: 'Exponential performance gains',
-  },
-];
