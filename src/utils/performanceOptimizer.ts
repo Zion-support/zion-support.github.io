@@ -35,10 +35,10 @@ export const debounce = <T extends (...args: any[]) => any>(
   func: T,
   wait: number
 ): ((...args: Parameters<T>) => void) => {
-  let timeout: NodeJS.Timeout;
+  let timeout: number;
   return (...args: Parameters<T>) => {
     clearTimeout(timeout);
-    timeout = setTimeout(() => func(...args), wait);
+    timeout = setTimeout(() => func(...args), wait) as unknown as number;
   };
 };
 
@@ -91,7 +91,6 @@ export const preconnectDomains = (domains: string[]): void => {
     const link = document.createElement('link');
     link.rel = 'preconnect';
     link.href = domain;
-    link.crossOrigin = 'anonymous';
     document.head.appendChild(link);
   });
 };
@@ -113,31 +112,62 @@ export const prefetchResources = (urls: string[]): void => {
 /**
  * Measure page load performance
  */
-export const measurePageLoad = (): WebVitalsMetrics | null => {
-  if (typeof window === 'undefined' || !window.performance) return null;
-  
-  const perfData = window.performance.timing;
-  const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-  
-  if (!perfData || !navigation) return null;
+export const measurePageLoad = (): Promise<WebVitalsMetrics> => {
+  return new Promise((resolve) => {
+    if (typeof window === 'undefined') {
+      resolve({});
+      return;
+    }
 
-  return {
-    FCP: navigation.responseStart - navigation.fetchStart,
-    LCP: navigation.loadEventEnd - navigation.loadEventStart,
-    FID: 0, // First Input Delay - requires user interaction
-    CLS: 0, // Cumulative Layout Shift - requires layout shift observer
-    TTFB: navigation.responseStart - navigation.requestStart,
-    INP: 0 // Interaction to Next Paint - requires user interaction
-  };
+    const metrics: WebVitalsMetrics = {};
+
+    // Measure FCP
+    if ('PerformanceObserver' in window) {
+      const observer = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        const fcpEntry = entries.find(entry => entry.name === 'first-contentful-paint');
+        if (fcpEntry) {
+          metrics.FCP = fcpEntry.startTime;
+        }
+      });
+      observer.observe({ entryTypes: ['paint'] });
+    }
+
+    // Measure LCP
+    if ('PerformanceObserver' in window) {
+      const observer = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        const lastEntry = entries[entries.length - 1];
+        if (lastEntry) {
+          metrics.LCP = lastEntry.startTime;
+        }
+      });
+      observer.observe({ entryTypes: ['largest-contentful-paint'] });
+    }
+
+    // Measure TTFB
+    if (window.performance && window.performance.timing) {
+      const timing = window.performance.timing;
+      metrics.TTFB = timing.responseStart - timing.requestStart;
+    }
+
+    // Resolve after a delay to allow metrics to be collected
+    setTimeout(() => resolve(metrics), 1000);
+  });
 };
 
 /**
+<<<<<<< HEAD
  * Report Web Vitals metrics
+=======
+ * Report web vitals
+>>>>>>> cursor/fix-errors-and-merge-to-main-775a
  */
 export const reportWebVitals = (metrics: WebVitalsMetrics): void => {
   if (process.env.NODE_ENV === 'development') {
     console.log('Web Vitals:', metrics);
   }
+<<<<<<< HEAD
   
   // Send to analytics service
   if (typeof window !== 'undefined' && (window as any).gtag) {
@@ -147,6 +177,8 @@ export const reportWebVitals = (metrics: WebVitalsMetrics): void => {
       value: Math.round(metrics.LCP || 0)
     });
   }
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-775a
 };
 
 /**
@@ -164,6 +196,7 @@ export const shouldUseWebP = (): boolean => {
 /**
  * Get connection quality
  */
+<<<<<<< HEAD
 export const getConnectionQuality = (): 'slow' | 'medium' | 'fast' => {
   if (typeof navigator === 'undefined' || !('connection' in navigator)) {
     return 'medium';
@@ -174,6 +207,17 @@ export const getConnectionQuality = (): 'slow' | 'medium' | 'fast' => {
   
   if (effectiveType === '4g') return 'fast';
   if (effectiveType === '3g') return 'medium';
+=======
+export const getConnectionQuality = (): 'slow' | 'fast' | 'unknown' => {
+  if (typeof navigator === 'undefined' || !('connection' in navigator)) {
+    return 'unknown';
+  }
+  
+  const connection = (navigator as any).connection;
+  if (connection.effectiveType === '4g' || connection.effectiveType === '3g') {
+    return 'fast';
+  }
+>>>>>>> cursor/fix-errors-and-merge-to-main-775a
   return 'slow';
 };
 
@@ -182,6 +226,7 @@ export const getConnectionQuality = (): 'slow' | 'medium' | 'fast' => {
  */
 export const shouldLoadHeavyAssets = (): boolean => {
   const connectionQuality = getConnectionQuality();
+<<<<<<< HEAD
   const isSlowConnection = connectionQuality === 'slow';
   const isLowEndDevice = navigator.hardwareConcurrency && navigator.hardwareConcurrency < 4;
   
@@ -206,6 +251,27 @@ export const requestIdleCallback = (callback: IdleRequestCallback): number => {
 export const cancelIdleCallback = (id: number): void => {
   if (typeof window !== 'undefined' && 'cancelIdleCallback' in window) {
     window.cancelIdleCallback(id);
+=======
+  return connectionQuality === 'fast';
+};
+
+/**
+ * Request idle callback polyfill
+ */
+export const requestIdleCallback = (callback: () => void): number => {
+  if (typeof window !== 'undefined' && 'requestIdleCallback' in window) {
+    return (window as any).requestIdleCallback(callback);
+  }
+  return setTimeout(callback, 1) as unknown as number;
+};
+
+/**
+ * Cancel idle callback polyfill
+ */
+export const cancelIdleCallback = (id: number): void => {
+  if (typeof window !== 'undefined' && 'cancelIdleCallback' in window) {
+    (window as any).cancelIdleCallback(id);
+>>>>>>> cursor/fix-errors-and-merge-to-main-775a
   } else {
     clearTimeout(id);
   }
@@ -228,6 +294,7 @@ export const preloadRoute = (route: string): void => {
  */
 export const monitorLongTasks = (callback: (entries: PerformanceEntry[]) => void): PerformanceObserver | null => {
   if (typeof window === 'undefined' || !('PerformanceObserver' in window)) {
+<<<<<<< HEAD
     return null;
   }
   
@@ -241,23 +308,51 @@ export const monitorLongTasks = (callback: (entries: PerformanceEntry[]) => void
     return observer;
   } catch (error) {
     console.warn('Long task monitoring not supported:', error);
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-775a
     return null;
   }
+
+  const observer = new PerformanceObserver((list) => {
+    const entries = list.getEntries();
+    const longTasks = entries.filter(entry => entry.duration > 50);
+    if (longTasks.length > 0) {
+      callback(longTasks);
+    }
+  });
+
+  observer.observe({ entryTypes: ['longtask'] });
+  return observer;
 };
 
 /**
  * Cache static assets
  */
+<<<<<<< HEAD
 export const cacheStaticAssets = async (urls: string[]): Promise<void> => {
+=======
+export const cacheStaticAssets = (): void => {
+>>>>>>> cursor/fix-errors-and-merge-to-main-775a
   if (typeof window === 'undefined' || !('caches' in window)) return;
   
-  const cache = await caches.open('static-assets-v1');
-  await cache.addAll(urls);
+  const assets = [
+    '/favicon.ico',
+    '/manifest.json',
+  ];
+  
+  caches.open('static-assets').then(cache => {
+    assets.forEach(asset => {
+      cache.add(asset).catch(() => {
+        // Ignore errors
+      });
+    });
+  });
 };
 
 /**
  * Clear old caches
  */
+<<<<<<< HEAD
 export const clearOldCaches = async (currentVersion: string): Promise<void> => {
   if (typeof window === 'undefined' || !('caches' in window)) return;
   
@@ -265,11 +360,24 @@ export const clearOldCaches = async (currentVersion: string): Promise<void> => {
   const oldCaches = cacheNames.filter(name => !name.includes(currentVersion));
   
   await Promise.all(oldCaches.map(name => caches.delete(name)));
+=======
+export const clearOldCaches = (): void => {
+  if (typeof window === 'undefined' || !('caches' in window)) return;
+  
+  caches.keys().then(names => {
+    names.forEach(name => {
+      if (name !== 'static-assets') {
+        caches.delete(name);
+      }
+    });
+  });
+>>>>>>> cursor/fix-errors-and-merge-to-main-775a
 };
 
 /**
  * Check performance budget
  */
+<<<<<<< HEAD
 export const checkPerformanceBudget = (_budget: PerformanceBudget): {
   passed: boolean;
   violations: string[];
@@ -279,6 +387,14 @@ export const checkPerformanceBudget = (_budget: PerformanceBudget): {
   // Check bundle size (would need to be passed in)
   // Check image sizes (would need to be measured)
   // Check load times (would need to be measured)
+=======
+export const checkPerformanceBudget = (_budget: PerformanceBudget): { passed: boolean; violations: string[] } => {
+  const violations: string[] = [];
+  
+  // Check bundle size (would need to be implemented with actual bundle analysis)
+  // Check image sizes (would need to be implemented with actual image analysis)
+  // Check load times (would need to be implemented with actual performance measurement)
+>>>>>>> cursor/fix-errors-and-merge-to-main-775a
   
   return {
     passed: violations.length === 0,
@@ -287,6 +403,7 @@ export const checkPerformanceBudget = (_budget: PerformanceBudget): {
 };
 
 /**
+<<<<<<< HEAD
  * Add critical resource hints
  */
 export const addCriticalResourceHints = (): void => {
@@ -314,6 +431,16 @@ export const addCriticalResourceHints = (): void => {
 const metrics = new Map<string, number>();
 
 <<<<<<< HEAD
+=======
+ * Performance Optimizer Class
+ */
+class PerformanceOptimizer {
+  private static instance: PerformanceOptimizer;
+  private metrics: Map<string, number> = new Map();
+
+  private constructor() {}
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-775a
   static getInstance(): PerformanceOptimizer {
     if (!PerformanceOptimizer.instance) {
       PerformanceOptimizer.instance = new PerformanceOptimizer();
@@ -321,6 +448,7 @@ const metrics = new Map<string, number>();
     return PerformanceOptimizer.instance;
   }
 
+<<<<<<< HEAD
   // Lazy load images with intersection observer
   lazyLoadImages(): void {
     if ('IntersectionObserver' in window) {
@@ -384,16 +512,25 @@ const metrics = new Map<string, number>();
 
   // Measure performance metrics
   measurePerformance(name: string, fn: () => void): void {
+=======
+  // Measure performance of a function
+  measurePerformance(name: string, fn: () => void): number {
+>>>>>>> cursor/fix-errors-and-merge-to-main-775a
     const start = performance.now();
     fn();
     const end = performance.now();
     const duration = end - start;
+<<<<<<< HEAD
     
     this.metrics.set(name, duration);
     
     if (process.env.NODE_ENV === 'development') {
       console.log(`Performance: ${name} took ${duration.toFixed(2)}ms`);
     }
+=======
+    this.metrics.set(name, duration);
+    return duration;
+>>>>>>> cursor/fix-errors-and-merge-to-main-775a
   }
 
   // Get performance metrics
@@ -401,6 +538,7 @@ const metrics = new Map<string, number>();
     return Object.fromEntries(this.metrics);
   }
 
+<<<<<<< HEAD
   // Monitor long tasks
   monitorLongTasks(callback: (entries: PerformanceEntry[]) => void): PerformanceObserver | null {
     if (typeof window === 'undefined' || !window.PerformanceObserver) return null;
@@ -449,6 +587,9 @@ const metrics = new Map<string, number>();
   }
 
   // Add critical resource hints method
+=======
+  // Add critical resource hints for better performance
+>>>>>>> cursor/fix-errors-and-merge-to-main-775a
   addCriticalResourceHints(): void {
     if (typeof document === 'undefined') return;
     
@@ -464,12 +605,17 @@ const metrics = new Map<string, number>();
       link.rel = hint.rel;
       link.href = hint.href;
       if (hint.crossOrigin) {
+<<<<<<< HEAD
         link.crossOrigin = hint.crossOrigin;
+=======
+        (link as any).crossOrigin = hint.crossOrigin;
+>>>>>>> cursor/fix-errors-and-merge-to-main-775a
       }
       document.head.appendChild(link);
     });
   }
 
+<<<<<<< HEAD
   // Add Web Vitals reporting method
   reportWebVitals(metrics: WebVitalsMetrics): void {
     if (process.env.NODE_ENV === 'development') {
@@ -508,15 +654,59 @@ const metrics = new Map<string, number>();
       FCP: navigation?.responseStart - navigation?.fetchStart,
       TTFB: timing.responseStart - timing.navigationStart
     };
+=======
+  // Optimize scroll performance
+  optimizeScroll(): void {
+    if (typeof window === 'undefined') return;
+    
+    let ticking = false;
+    
+    const updateScrollPosition = () => {
+      // Scroll optimization logic here
+      ticking = false;
+    };
+    
+    const requestTick = () => {
+      if (!ticking) {
+        requestAnimationFrame(updateScrollPosition);
+        ticking = true;
+      }
+    };
+    
+    window.addEventListener('scroll', requestTick, { passive: true });
+  }
+
+  // Preload critical resources
+  preloadCriticalResources(): void {
+    if (typeof document === 'undefined') return;
+    
+    const criticalResources = [
+      '/css/critical.css',
+      '/js/critical.js'
+    ];
+    
+    criticalResources.forEach(resource => {
+      const link = document.createElement('link');
+      link.rel = 'preload';
+      link.href = resource;
+      link.as = resource.endsWith('.css') ? 'style' : 'script';
+      document.head.appendChild(link);
+    });
+>>>>>>> cursor/fix-errors-and-merge-to-main-775a
   }
 
   // Initialize all optimizations
   initialize(): void {
+<<<<<<< HEAD
     this.measurePerformance('lazyLoadImages', () => this.lazyLoadImages());
+=======
+    this.measurePerformance('lazyLoadImages', () => lazyLoadImages());
+>>>>>>> cursor/fix-errors-and-merge-to-main-775a
     this.measurePerformance('preloadCriticalResources', () => this.preloadCriticalResources());
     this.measurePerformance('optimizeScroll', () => this.optimizeScroll());
   }
 }
+<<<<<<< HEAD
 
 
 
@@ -566,10 +756,13 @@ export const preloadCriticalResources = (): void => {
   });
 };
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-775a
 
 // Export singleton instance
 export const performanceOptimizer = PerformanceOptimizer.getInstance();
 
+<<<<<<< HEAD
 =======
 // Get performance metrics
 const getMetrics = (): Record<string, number> => {
@@ -583,6 +776,8 @@ const initialize = (): void => {
 };
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-a3c4
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-775a
 export default {
   prefetchResources,
   preconnectDomains,
@@ -600,6 +795,7 @@ export default {
   monitorLongTasks,
   cacheStaticAssets,
   clearOldCaches,
+<<<<<<< HEAD
   checkPerformanceBudget,
 <<<<<<< HEAD
   preloadCriticalResources: () => performanceOptimizer.preloadCriticalResources(),
@@ -610,3 +806,7 @@ export default {
   initialize
 };
 >>>>>>> cursor/fix-errors-and-merge-to-main-a3c4
+=======
+  checkPerformanceBudget
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-775a

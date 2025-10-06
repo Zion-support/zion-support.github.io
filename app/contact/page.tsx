@@ -51,7 +51,11 @@ const ContactPage: React.FC = () => {
             <div className="space-y-4">
               <div>
                 <h4 className="font-medium text-gray-900">Email</h4>
+<<<<<<< HEAD
                 <p className="text-gray-600">info@ziontechgroup.com</p>
+=======
+                <p className="text-gray-600">kleber@ziontechgroup.com</p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-775a
               </div>
               <div>
                 <h4 className="font-medium text-gray-900">Phone</h4>
@@ -60,15 +64,17 @@ const ContactPage: React.FC = () => {
               <div>
                 <h4 className="font-medium text-gray-900">Address</h4>
                 <p className="text-gray-600">
-<<<<<<< HEAD
-                  Zion Tech Group<br />
-                  Wilmington, DE 19801<br />
+                  364 E Main St STE 1008<br />
+                  Middletown, DE 19709<br />
                   United States
+<<<<<<< HEAD
 =======
                   123 Business Street<br />
                   Suite 100<br />
                   Wilmington, DE 19801
 >>>>>>> cursor/fix-errors-and-merge-to-main-a3c4
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-775a
                 </p>
               </div>
             </div>
