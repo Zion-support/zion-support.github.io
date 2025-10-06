@@ -5,11 +5,6 @@ declare global {
   function gtag(...args: any[]): void;
 }
 
-// Declare gtag for analytics
-declare global {
-  function gtag(...args: any[]): void;
-}
-
 // Memoized components for better performance
 const UnifiedContentPromotion = memo(() => (
   <div className='bg-gradient-to-r from-blue-600 to-purple-700 text-white py-16'>
