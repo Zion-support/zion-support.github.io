@@ -1,537 +1,273 @@
 /**
- * Advanced SEO Optimizer
- * Automatically optimizes content for search engines with real-time analysis
+ * Advanced SEO optimizer for comprehensive search engine optimization
  */
 
 interface SEOMetrics {
   titleScore: number;
   descriptionScore: number;
   headingScore: number;
-  keywordDensity: number;
-  readabilityScore: number;
-  imageOptimization: number;
+  keywordScore: number;
+  imageAltScore: number;
   linkScore: number;
   overallScore: number;
 }
 
 interface SEORecommendation {
-  category: 'critical' | 'important' | 'minor';
+  type: 'title' | 'description' | 'heading' | 'keyword' | 'image' | 'link';
+  priority: 'high' | 'medium' | 'low';
   message: string;
-  action: string;
-  impact: 'high' | 'medium' | 'low';
-}
-
-interface SEOAnalysis {
-  metrics: SEOMetrics;
-  recommendations: SEORecommendation[];
-  keywords: { word: string; count: number; density: number }[];
-  issues: string[];
-  strengths: string[];
+  suggestion: string;
 }
 
 class AdvancedSEOOptimizer {
-  private targetKeywordDensity = { min: 0.01, max: 0.03 }; // 1-3%
-  private targetTitleLength = { min: 50, max: 60 };
-  private targetDescriptionLength = { min: 150, max: 160 };
+  private metrics: SEOMetrics = {
+    titleScore: 0,
+    descriptionScore: 0,
+    headingScore: 0,
+    keywordScore: 0,
+    imageAltScore: 0,
+    linkScore: 0,
+    overallScore: 0,
+  };
 
-  /**
-   * Analyze page for SEO optimization
-   */
-  analyzePage(options: {
-    title?: string;
-    description?: string;
-    content?: string;
-    headings?: string[];
-    images?: { src: string; alt: string }[];
-    links?: { href: string; text: string; isInternal: boolean }[];
-    keywords?: string[];
-  }): SEOAnalysis {
-    const {
-      title = '',
-      description = '',
-      content = '',
-      headings = [],
-      images = [],
-      links = [],
-      keywords = [],
-    } = options;
+  private recommendations: SEORecommendation[] = [];
 
-    // Calculate metrics
-    const metrics: SEOMetrics = {
-      titleScore: this.scoreTitleTag(title, keywords),
-      descriptionScore: this.scoreMetaDescription(description, keywords),
-      headingScore: this.scoreHeadings(headings, keywords),
-      keywordDensity: this.calculateKeywordDensity(content, keywords),
-      readabilityScore: this.calculateReadability(content),
-      imageOptimization: this.scoreImageOptimization(images),
-      linkScore: this.scoreLinkStructure(links),
-      overallScore: 0, // Will be calculated
+  public analyzePage(): SEOMetrics {
+    this.metrics = {
+      titleScore: this.analyzeTitle(),
+      descriptionScore: this.analyzeDescription(),
+      headingScore: this.analyzeHeadings(),
+      keywordScore: this.analyzeKeywords(),
+      imageAltScore: this.analyzeImages(),
+      linkScore: this.analyzeLinks(),
+      overallScore: 0,
     };
 
-    // Calculate overall score
-    metrics.overallScore = this.calculateOverallScore(metrics);
+    this.metrics.overallScore = this.calculateOverallScore();
+    this.generateRecommendations();
 
-    // Generate recommendations
-    const recommendations = this.generateRecommendations(metrics, options);
-
-    // Extract keywords
-    const extractedKeywords = this.extractKeywords(content);
-
-    // Identify issues and strengths
-    const issues = this.identifyIssues(metrics, options);
-    const strengths = this.identifyStrengths(metrics, options);
-
-    return {
-      metrics,
-      recommendations,
-      keywords: extractedKeywords,
-      issues,
-      strengths,
-    };
+    return this.metrics;
   }
 
-  /**
-   * Score title tag
-   */
-  private scoreTitleTag(title: string, keywords: string[]): number {
+  private analyzeTitle(): number {
+    const title = document.querySelector('title')?.textContent || '';
     let score = 0;
 
-    // Check length
-    const length = title.length;
-    if (length >= this.targetTitleLength.min && length <= this.targetTitleLength.max) {
-      score += 40;
-    } else if (length > 0 && length < this.targetTitleLength.min) {
-      score += 20;
-    } else if (length > this.targetTitleLength.max && length < 70) {
-      score += 30;
-    }
-
-    // Check for keywords
-    const lowerTitle = title.toLowerCase();
-    const keywordCount = keywords.filter((kw) => lowerTitle.includes(kw.toLowerCase())).length;
-    score += Math.min(keywordCount * 15, 45);
-
-    // Check for power words
-    const powerWords = ['ultimate', 'guide', 'best', 'top', 'complete', 'essential', 'proven'];
-    const hasPowerWord = powerWords.some((word) => lowerTitle.includes(word));
-    if (hasPowerWord) score += 15;
+    if (title.length > 0) score += 20;
+    if (title.length >= 30 && title.length <= 60) score += 30;
+    if (title.includes(' ')) score += 20;
+    if (title.length > 0 && title.length < 30) score += 10;
 
     return Math.min(score, 100);
   }
 
-  /**
-   * Score meta description
-   */
-  private scoreMetaDescription(description: string, keywords: string[]): number {
+  private analyzeDescription(): number {
+    const description =
+      document
+        .querySelector('meta[name="description"]')
+        ?.getAttribute('content') || '';
     let score = 0;
 
-    // Check length
-    const length = description.length;
-    if (length >= this.targetDescriptionLength.min && length <= this.targetDescriptionLength.max) {
-      score += 40;
-    } else if (length > 0 && length < this.targetDescriptionLength.min) {
-      score += 20;
-    } else if (length > this.targetDescriptionLength.max && length < 180) {
-      score += 30;
-    }
-
-    // Check for keywords
-    const lowerDesc = description.toLowerCase();
-    const keywordCount = keywords.filter((kw) => lowerDesc.includes(kw.toLowerCase())).length;
-    score += Math.min(keywordCount * 20, 40);
-
-    // Check for call-to-action
-    const ctaWords = ['discover', 'learn', 'find', 'get', 'try', 'download', 'buy'];
-    const hasCTA = ctaWords.some((word) => lowerDesc.includes(word));
-    if (hasCTA) score += 20;
+    if (description.length > 0) score += 20;
+    if (description.length >= 120 && description.length <= 160) score += 30;
+    if (description.includes(' ')) score += 20;
+    if (description.length > 0 && description.length < 120) score += 10;
 
     return Math.min(score, 100);
   }
 
-  /**
-   * Score headings structure
-   */
-  private scoreHeadings(headings: string[], keywords: string[]): number {
+  private analyzeHeadings(): number {
+    const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
     let score = 0;
 
-    // Check if headings exist
-    if (headings.length > 0) score += 30;
-    if (headings.length >= 3) score += 20;
+    if (headings.length > 0) score += 20;
+    if (headings.length >= 3 && headings.length <= 6) score += 30;
+    if (headings.length > 6) score += 10;
 
-    // Check for keywords in headings
-    const headingsWithKeywords = headings.filter((h) => {
-      const lower = h.toLowerCase();
-      return keywords.some((kw) => lower.includes(kw.toLowerCase()));
+    // Check for proper heading hierarchy
+    let previousLevel = 0;
+    let hierarchyScore = 0;
+    headings.forEach(heading => {
+      const level = parseInt(heading.tagName.charAt(1));
+      if (level <= previousLevel + 1) {
+        hierarchyScore += 10;
+      }
+      previousLevel = level;
     });
 
-    score += Math.min(headingsWithKeywords.length * 15, 50);
+    score += Math.min(hierarchyScore, 50);
+    return Math.min(score, 100);
+  }
+
+  private analyzeKeywords(): number {
+    const content = document.body.textContent || '';
+    const words = content.toLowerCase().split(/\s+/);
+    const wordCount = words.length;
+
+    if (wordCount === 0) return 0;
+
+    // Simple keyword density analysis
+    const keywordDensity = this.calculateKeywordDensity(words);
+    let score = 0;
+
+    if (keywordDensity > 0.01 && keywordDensity < 0.03) score += 40;
+    if (keywordDensity >= 0.03 && keywordDensity <= 0.05) score += 30;
+    if (keywordDensity > 0.05) score += 10;
 
     return Math.min(score, 100);
   }
 
-  /**
-   * Calculate keyword density
-   */
-  private calculateKeywordDensity(content: string, keywords: string[]): number {
-    if (keywords.length === 0) return 0;
-
-    const words = content.toLowerCase().split(/\s+/).filter((w) => w.length > 0);
-    const totalWords = words.length;
-    if (totalWords === 0) return 0;
-
-    const keywordCount = keywords.reduce((count, keyword) => {
-      const kw = keyword.toLowerCase();
-      return count + words.filter((w) => w.includes(kw)).length;
-    }, 0);
-
-    const density = keywordCount / totalWords;
-
-    // Score based on target density
-    if (density >= this.targetKeywordDensity.min && density <= this.targetKeywordDensity.max) {
-      return 100;
-    } else if (density < this.targetKeywordDensity.min) {
-      return (density / this.targetKeywordDensity.min) * 100;
-    } else {
-      const overflow = density - this.targetKeywordDensity.max;
-      return Math.max(0, 100 - overflow * 1000);
-    }
-  }
-
-  /**
-   * Calculate readability score (Flesch Reading Ease)
-   */
-  private calculateReadability(content: string): number {
-    const sentences = content.split(/[.!?]+/).filter((s) => s.trim().length > 0);
-    const words = content.split(/\s+/).filter((w) => w.length > 0);
-    const syllables = words.reduce((count, word) => count + this.countSyllables(word), 0);
-
-    if (sentences.length === 0 || words.length === 0) return 0;
-
-    const avgWordsPerSentence = words.length / sentences.length;
-    const avgSyllablesPerWord = syllables / words.length;
-
-    // Flesch Reading Ease formula
-    const score = 206.835 - 1.015 * avgWordsPerSentence - 84.6 * avgSyllablesPerWord;
-
-    // Normalize to 0-100 where 100 is best
-    return Math.max(0, Math.min(100, score));
-  }
-
-  /**
-   * Count syllables in a word
-   */
-  private countSyllables(word: string): number {
-    word = word.toLowerCase();
-    if (word.length <= 3) return 1;
-
-    word = word.replace(/(?:[^laeiouy]es|ed|[^laeiouy]e)$/, '');
-    word = word.replace(/^y/, '');
-
-    const matches = word.match(/[aeiouy]{1,2}/g);
-    return matches ? matches.length : 1;
-  }
-
-  /**
-   * Score image optimization
-   */
-  private scoreImageOptimization(images: { src: string; alt: string }[]): number {
-    if (images.length === 0) return 100; // No images, no problem
-
+  private analyzeImages(): number {
+    const images = document.querySelectorAll('img');
     let score = 0;
 
-    // Check for alt text
-    const imagesWithAlt = images.filter((img) => img.alt && img.alt.length > 0);
-    const altTextScore = (imagesWithAlt.length / images.length) * 60;
-    score += altTextScore;
+    if (images.length === 0) return 100;
 
-    // Check for descriptive alt text (more than 3 words)
-    const descriptiveAlt = imagesWithAlt.filter((img) => img.alt.split(/\s+/).length >= 3);
-    const descriptiveScore = (descriptiveAlt.length / images.length) * 40;
-    score += descriptiveScore;
-
-    return Math.min(score, 100);
-  }
-
-  /**
-   * Score link structure
-   */
-  private scoreLinkStructure(links: { href: string; text: string; isInternal: boolean }[]): number {
-    if (links.length === 0) return 50; // Neutral score for no links
-
-    let score = 0;
-
-    // Check for internal links
-    const internalLinks = links.filter((link) => link.isInternal);
-    if (internalLinks.length > 0) score += 30;
-    if (internalLinks.length >= 3) score += 20;
-
-    // Check for descriptive anchor text
-    const descriptiveLinks = links.filter((link) => {
-      const text = link.text.toLowerCase();
-      return text.length > 3 && !text.includes('click here') && !text.includes('read more');
+    let altTextCount = 0;
+    images.forEach(img => {
+      if (img.getAttribute('alt') && img.getAttribute('alt')!.trim() !== '') {
+        altTextCount++;
+      }
     });
-    score += (descriptiveLinks.length / links.length) * 50;
 
-    return Math.min(score, 100);
+    score = (altTextCount / images.length) * 100;
+    return Math.round(score);
   }
 
-  /**
-   * Calculate overall SEO score
-   */
-  private calculateOverallScore(metrics: SEOMetrics): number {
-    const weights = {
-      title: 0.20,
-      description: 0.15,
-      headings: 0.15,
-      keywordDensity: 0.15,
-      readability: 0.15,
-      images: 0.10,
-      links: 0.10,
-    };
+  private analyzeLinks(): number {
+    const links = document.querySelectorAll('a');
+    let score = 0;
+
+    if (links.length === 0) return 0;
+
+    let validLinks = 0;
+    links.forEach(link => {
+      const href = link.getAttribute('href');
+      if (href && href !== '#' && href !== 'javascript:void(0)') {
+        validLinks++;
+      }
+    });
+
+    score = (validLinks / links.length) * 100;
+    return Math.round(score);
+  }
+
+  private calculateKeywordDensity(words: string[]): number {
+    const wordCount = words.length;
+    const wordFreq: { [key: string]: number } = {};
+
+    words.forEach(word => {
+      if (word.length > 3) {
+        wordFreq[word] = (wordFreq[word] || 0) + 1;
+      }
+    });
+
+    const maxFreq = Math.max(...Object.values(wordFreq));
+    return maxFreq / wordCount;
+  }
+
+  private calculateOverallScore(): number {
+    const scores = [
+      this.metrics.titleScore,
+      this.metrics.descriptionScore,
+      this.metrics.headingScore,
+      this.metrics.keywordScore,
+      this.metrics.imageAltScore,
+      this.metrics.linkScore,
+    ];
 
     return Math.round(
-      metrics.titleScore * weights.title +
-        metrics.descriptionScore * weights.description +
-        metrics.headingScore * weights.headings +
-        metrics.keywordDensity * weights.keywordDensity +
-        metrics.readabilityScore * weights.readability +
-        metrics.imageOptimization * weights.images +
-        metrics.linkScore * weights.links
+      scores.reduce((sum, score) => sum + score, 0) / scores.length,
     );
   }
 
-  /**
-   * Generate recommendations
-   */
-  private generateRecommendations(
-    metrics: SEOMetrics,
-    options: any
-  ): SEORecommendation[] {
-    const recommendations: SEORecommendation[] = [];
+  private generateRecommendations(): void {
+    this.recommendations = [];
 
-    // Title recommendations
-    if (metrics.titleScore < 70) {
-      recommendations.push({
-        category: 'critical',
-        message: 'Title tag needs optimization',
-        action: `Optimize title length (50-60 chars) and include primary keywords`,
-        impact: 'high',
+    if (this.metrics.titleScore < 70) {
+      this.recommendations.push({
+        type: 'title',
+        priority: 'high',
+        message: 'Title needs improvement',
+        suggestion: 'Ensure title is 30-60 characters and descriptive',
       });
     }
 
-    // Description recommendations
-    if (metrics.descriptionScore < 70) {
-      recommendations.push({
-        category: 'critical',
+    if (this.metrics.descriptionScore < 70) {
+      this.recommendations.push({
+        type: 'description',
+        priority: 'high',
         message: 'Meta description needs improvement',
-        action: 'Write compelling description (150-160 chars) with keywords and CTA',
-        impact: 'high',
+        suggestion: 'Ensure description is 120-160 characters and compelling',
       });
     }
 
-    // Heading recommendations
-    if (metrics.headingScore < 60) {
-      recommendations.push({
-        category: 'important',
-        message: 'Heading structure could be improved',
-        action: 'Add more headings with target keywords',
-        impact: 'medium',
+    if (this.metrics.headingScore < 70) {
+      this.recommendations.push({
+        type: 'heading',
+        priority: 'medium',
+        message: 'Heading structure needs improvement',
+        suggestion: 'Use proper heading hierarchy (h1, h2, h3, etc.)',
       });
     }
 
-    // Keyword density recommendations
-    if (metrics.keywordDensity < 50) {
-      recommendations.push({
-        category: 'important',
-        message: 'Keyword density is too low',
-        action: 'Naturally incorporate keywords throughout content (target 1-3%)',
-        impact: 'high',
-      });
-    } else if (metrics.keywordDensity < 80) {
-      recommendations.push({
-        category: 'minor',
-        message: 'Keyword density could be optimized',
-        action: 'Fine-tune keyword usage for optimal density',
-        impact: 'low',
+    if (this.metrics.imageAltScore < 70) {
+      this.recommendations.push({
+        type: 'image',
+        priority: 'medium',
+        message: 'Images need alt text',
+        suggestion: 'Add descriptive alt text to all images',
       });
     }
 
-    // Readability recommendations
-    if (metrics.readabilityScore < 60) {
-      recommendations.push({
-        category: 'important',
-        message: 'Content readability needs improvement',
-        action: 'Use shorter sentences and simpler words',
-        impact: 'medium',
+    if (this.metrics.linkScore < 70) {
+      this.recommendations.push({
+        type: 'link',
+        priority: 'low',
+        message: 'Links need improvement',
+        suggestion: 'Ensure all links have valid href attributes',
       });
     }
-
-    // Image recommendations
-    if (metrics.imageOptimization < 80) {
-      recommendations.push({
-        category: 'important',
-        message: 'Image optimization needed',
-        action: 'Add descriptive alt text to all images',
-        impact: 'medium',
-      });
-    }
-
-    // Link recommendations
-    if (metrics.linkScore < 60) {
-      recommendations.push({
-        category: 'minor',
-        message: 'Link structure could be improved',
-        action: 'Add more internal links with descriptive anchor text',
-        impact: 'low',
-      });
-    }
-
-    return recommendations.sort((a, b) => {
-      const categoryOrder = { critical: 0, important: 1, minor: 2 };
-      return categoryOrder[a.category] - categoryOrder[b.category];
-    });
   }
 
-  /**
-   * Extract keywords from content
-   */
-  private extractKeywords(content: string, limit: number = 10): { word: string; count: number; density: number }[] {
-    const words = content
-      .toLowerCase()
-      .replace(/[^\w\s]/g, ' ')
-      .split(/\s+/)
-      .filter((w) => w.length > 3);
-
-    const wordCounts = new Map<string, number>();
-    words.forEach((word) => {
-      wordCounts.set(word, (wordCounts.get(word) || 0) + 1);
-    });
-
-    const totalWords = words.length;
-    const keywords = Array.from(wordCounts.entries())
-      .map(([word, count]) => ({
-        word,
-        count,
-        density: count / totalWords,
-      }))
-      .sort((a, b) => b.count - a.count)
-      .slice(0, limit);
-
-    return keywords;
+  public getRecommendations(): SEORecommendation[] {
+    return this.recommendations;
   }
 
-  /**
-   * Identify SEO issues
-   */
-  private identifyIssues(metrics: SEOMetrics, options: any): string[] {
-    const issues: string[] = [];
-
-    if (metrics.titleScore < 50) issues.push('Title tag is poorly optimized');
-    if (metrics.descriptionScore < 50) issues.push('Meta description is poorly optimized');
-    if (metrics.headingScore < 40) issues.push('Missing or poorly structured headings');
-    if (metrics.keywordDensity < 30) issues.push('Keyword density is too low');
-    if (metrics.readabilityScore < 50) issues.push('Content is difficult to read');
-    if (metrics.imageOptimization < 60) issues.push('Images lack proper alt text');
-    if (metrics.linkScore < 40) issues.push('Weak internal linking structure');
-
-    return issues;
+  public getHighPriorityRecommendations(): SEORecommendation[] {
+    return this.recommendations.filter(rec => rec.priority === 'high');
   }
 
-  /**
-   * Identify SEO strengths
-   */
-  private identifyStrengths(metrics: SEOMetrics, options: any): string[] {
-    const strengths: string[] = [];
-
-    if (metrics.titleScore >= 80) strengths.push('Excellent title tag optimization');
-    if (metrics.descriptionScore >= 80) strengths.push('Well-optimized meta description');
-    if (metrics.headingScore >= 80) strengths.push('Strong heading structure');
-    if (metrics.keywordDensity >= 80) strengths.push('Optimal keyword density');
-    if (metrics.readabilityScore >= 70) strengths.push('Highly readable content');
-    if (metrics.imageOptimization >= 80) strengths.push('Well-optimized images');
-    if (metrics.linkScore >= 70) strengths.push('Good internal linking');
-
-    return strengths;
+  public getMetrics(): SEOMetrics {
+    return this.metrics;
   }
 
-  /**
-   * Generate structured data (JSON-LD)
-   */
-  generateStructuredData(type: 'Article' | 'Product' | 'Service', data: any): string {
-    const baseSchema = {
-      '@context': 'https://schema.org',
-      '@type': type,
-    };
+  public generateReport(): string {
+    const report = `
+SEO Analysis Report
+==================
 
-    const schema = { ...baseSchema, ...data };
-    return JSON.stringify(schema, null, 2);
-  }
+Overall Score: ${this.metrics.overallScore}/100
 
-  /**
-   * Optimize meta tags
-   */
-  optimizeMetaTags(page: {
-    title: string;
-    description: string;
-    keywords: string[];
-    author?: string;
-    image?: string;
-    url?: string;
-  }): { [key: string]: string } {
-    return {
-      title: this.optimizeTitle(page.title, page.keywords),
-      description: this.optimizeDescription(page.description, page.keywords),
-      keywords: page.keywords.join(', '),
-      'og:title': page.title,
-      'og:description': page.description,
-      'og:image': page.image || '',
-      'og:url': page.url || '',
-      'twitter:card': 'summary_large_image',
-      'twitter:title': page.title,
-      'twitter:description': page.description,
-      'twitter:image': page.image || '',
-      author: page.author || '',
-    };
-  }
+Detailed Scores:
+- Title: ${this.metrics.titleScore}/100
+- Description: ${this.metrics.descriptionScore}/100
+- Headings: ${this.metrics.headingScore}/100
+- Keywords: ${this.metrics.keywordScore}/100
+- Images: ${this.metrics.imageAltScore}/100
+- Links: ${this.metrics.linkScore}/100
 
-  /**
-   * Optimize title
-   */
-  private optimizeTitle(title: string, keywords: string[]): string {
-    if (!title) return '';
-    
-    // Truncate if too long
-    if (title.length > 60) {
-      title = title.substring(0, 57) + '...';
-    }
+Recommendations:
+${this.recommendations
+  .map(
+    rec =>
+      `- ${rec.priority.toUpperCase()}: ${rec.message} - ${rec.suggestion}`,
+  )
+  .join('\n')}
+    `;
 
-    return title;
-  }
-
-  /**
-   * Optimize description
-   */
-  private optimizeDescription(description: string, keywords: string[]): string {
-    if (!description) return '';
-
-    // Truncate if too long
-    if (description.length > 160) {
-      description = description.substring(0, 157) + '...';
-    }
-
-    return description;
+    return report.trim();
   }
 }
 
-// Singleton instance
-let seoOptimizerInstance: AdvancedSEOOptimizer | null = null;
-
-export const getSEOOptimizer = (): AdvancedSEOOptimizer => {
-  if (!seoOptimizerInstance) {
-    seoOptimizerInstance = new AdvancedSEOOptimizer();
-  }
-  return seoOptimizerInstance;
-};
-
 export default AdvancedSEOOptimizer;
-export type { SEOMetrics, SEORecommendation, SEOAnalysis };

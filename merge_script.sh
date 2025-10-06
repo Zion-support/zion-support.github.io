@@ -1,38 +1,53 @@
 #!/bin/bash
 
-# Script to resolve merge conflicts and merge branches
+# Script to merge branches and resolve conflicts
 set -e
 
-echo "Starting merge conflict resolution process..."
+echo "Starting merge process..."
 
 # Check current status
-echo "Current git status:"
+echo "Current branch: $(git branch --show-current)"
+echo "Current status:"
 git status
 
 # Fetch latest changes
 echo "Fetching latest changes..."
 git fetch origin
 
-# Check what branches we have
-echo "Available branches:"
-git branch -r | grep -E "(cursor|fix|merge)" | head -10
-
-# Try to merge origin/main
-echo "Attempting to merge origin/main..."
+# Try to merge main into current branch
+echo "Attempting to merge origin/main into current branch..."
 if git merge origin/main --no-edit; then
     echo "Merge successful!"
 else
-    echo "Merge failed, checking for conflicts..."
-    git status
-    echo "Resolving conflicts automatically..."
-    # Auto-resolve conflicts by accepting incoming changes
-    git checkout --theirs . || true
-    git add .
-    git commit -m "Resolve merge conflicts by accepting remote changes" || true
+    echo "Merge conflicts detected. Resolving..."
+    
+    # Check for conflicted files
+    conflicted_files=$(git diff --name-only --diff-filter=U)
+    echo "Conflicted files: $conflicted_files"
+    
+    # For each conflicted file, try to resolve automatically
+    for file in $conflicted_files; do
+        echo "Resolving conflicts in $file..."
+        
+        # Check if it's a component file
+        if [[ $file == src/components/* ]]; then
+            echo "This is a component file, keeping our version..."
+            git checkout --ours "$file"
+        else
+            echo "This is not a component file, keeping main version..."
+            git checkout --theirs "$file"
+        fi
+        
+        git add "$file"
+    done
+    
+    # Complete the merge
+    git commit -m "Resolve merge conflicts automatically"
+    echo "Merge conflicts resolved!"
 fi
 
-# Push changes
-echo "Pushing changes..."
-git push origin main || echo "Push failed, but merge completed locally"
+# Push the merged changes
+echo "Pushing merged changes..."
+git push origin HEAD
 
-echo "Merge process completed!"
+echo "Merge process completed successfully!"

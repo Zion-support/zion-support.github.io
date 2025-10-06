@@ -33,56 +33,70 @@ const analysisBranches = [
   'cursor/analyze-improve-and-deploy-application-360d',
   'cursor/analyze-improve-and-deploy-application-3647',
   'cursor/analyze-improve-and-deploy-application-3cc7',
-  'cursor/analyze-improve-and-deploy-application-3db4'
+  'cursor/analyze-improve-and-deploy-application-3db4',
 ];
 
-console.log(`📊 Found ${analysisBranches.length} analysis branches to process\n`);
+console.log(
+  `📊 Found ${analysisBranches.length} analysis branches to process\n`,
+);
 
 // Step 3: Enhanced merge function with conflict resolution
 function mergeAnalysisBranch(branchName) {
   console.log(`\n🔄 Processing ${branchName}...`);
-  
+
   try {
     // Fetch the branch
     execSync(`git fetch origin ${branchName}`, { stdio: 'inherit' });
-    
+
     // Try direct merge first
-    execSync(`git merge origin/${branchName} --no-ff -m "Merge ${branchName} - Analysis and improvement"`, { stdio: 'inherit' });
-    
+    execSync(
+      `git merge origin/${branchName} --no-ff -m "Merge ${branchName} - Analysis and improvement"`,
+      { stdio: 'inherit' },
+    );
+
     console.log(`✅ Successfully merged ${branchName}`);
     return { success: true, method: 'direct' };
-    
   } catch (error) {
-    console.log(`⚠️  Direct merge failed for ${branchName}, attempting conflict resolution...`);
-    
+    console.log(
+      `⚠️  Direct merge failed for ${branchName}, attempting conflict resolution...`,
+    );
+
     try {
       // Strategy 1: Auto-resolve with theirs (prefer incoming changes for improvements)
       execSync('git reset --hard HEAD', { stdio: 'inherit' });
-      execSync(`git merge origin/${branchName} -X theirs --no-ff -m "Auto-merge ${branchName} (theirs strategy)"`, { stdio: 'inherit' });
-      
-      console.log(`✅ Auto-resolved conflicts for ${branchName} using 'theirs' strategy`);
+      execSync(
+        `git merge origin/${branchName} -X theirs --no-ff -m "Auto-merge ${branchName} (theirs strategy)"`,
+        { stdio: 'inherit' },
+      );
+
+      console.log(
+        `✅ Auto-resolved conflicts for ${branchName} using 'theirs' strategy`,
+      );
       return { success: true, method: 'theirs' };
-      
     } catch (theirsError) {
       console.log(`⚠️  'Theirs' strategy failed, trying 'ours' strategy...`);
-      
+
       try {
         execSync('git reset --hard HEAD', { stdio: 'inherit' });
-        execSync(`git merge origin/${branchName} -X ours --no-ff -m "Auto-merge ${branchName} (ours strategy)"`, { stdio: 'inherit' });
-        
-        console.log(`✅ Auto-resolved conflicts for ${branchName} using 'ours' strategy`);
+        execSync(
+          `git merge origin/${branchName} -X ours --no-ff -m "Auto-merge ${branchName} (ours strategy)"`,
+          { stdio: 'inherit' },
+        );
+
+        console.log(
+          `✅ Auto-resolved conflicts for ${branchName} using 'ours' strategy`,
+        );
         return { success: true, method: 'ours' };
-        
       } catch (oursError) {
         console.log(`❌ All merge strategies failed for ${branchName}`);
-        
+
         // Abort and skip
         try {
           execSync('git reset --hard HEAD', { stdio: 'inherit' });
         } catch (resetError) {
           // Continue anyway
         }
-        
+
         return { success: false, method: 'failed' };
       }
     }
@@ -97,18 +111,18 @@ const results = {
     total: 0,
     successful: 0,
     failed: 0,
-    methods: { direct: 0, theirs: 0, ours: 0, failed: 0 }
+    methods: { direct: 0, theirs: 0, ours: 0, failed: 0 },
   },
   branches: [],
   failed: [],
-  timestamp: new Date().toISOString()
+  timestamp: new Date().toISOString(),
 };
 
 for (const branch of analysisBranches) {
   const result = mergeAnalysisBranch(branch);
   results.branches.push({ branch, ...result });
   results.summary.total++;
-  
+
   if (result.success) {
     results.summary.successful++;
     results.summary.methods[result.method]++;
@@ -120,7 +134,10 @@ for (const branch of analysisBranches) {
 }
 
 // Step 5: Generate report
-fs.writeFileSync('analysis-merge-report.json', JSON.stringify(results, null, 2));
+fs.writeFileSync(
+  'analysis-merge-report.json',
+  JSON.stringify(results, null, 2),
+);
 
 // Step 6: Display summary
 console.log('\n🎉 ANALYSIS MERGE COMPLETED!\n');

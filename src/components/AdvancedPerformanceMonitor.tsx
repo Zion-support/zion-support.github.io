@@ -1,303 +1,153 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 
 interface PerformanceMetrics {
-  lcp?: number;
-  fid?: number;
-  cls?: number;
-  fcp?: number;
-  ttfb?: number;
-  inp?: number;
+  fps: number;
+  memoryUsage: number;
+  renderTime: number;
+  networkLatency: number;
 }
 
-export const AdvancedPerformanceMonitor: React.FC = () => {
-<<<<<<< HEAD
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({});
-  const [isVisible, setIsVisible] = useState(false);
-=======
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
-  const [alerts, setAlerts] = useState<PerformanceAlert[]>([]);
-  const [thresholds, setThresholds] =
-    useState<PerformanceThresholds>(defaultThresholds);
-  const [isMonitoring, setIsMonitoring] = useState(false);
-  const [history, setHistory] = useState<PerformanceMetrics[]>([]);
+interface AdvancedPerformanceMonitorProps {
+  isMonitoring: boolean;
+  onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
+  threshold?: {
+    fps: number;
+    memoryUsage: number;
+    renderTime: number;
+    networkLatency: number;
+  };
+}
 
-  // Check performance against thresholds and generate alerts
-<<<<<<< HEAD
-  const checkPerformanceAlerts = useCallback(
-    (currentMetrics: PerformanceMetrics) => {
-      const newAlerts: PerformanceAlert[] = [];
+const AdvancedPerformanceMonitor: React.FC<AdvancedPerformanceMonitorProps> = ({
+  isMonitoring,
+  onMetricsUpdate,
+  threshold = {
+    fps: 30,
+    memoryUsage: 100,
+    renderTime: 16,
+    networkLatency: 100,
+  },
+}) => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    fps: 0,
+    memoryUsage: 0,
+    renderTime: 0,
+    networkLatency: 0,
+  });
 
-      // Check load time
-      if (currentMetrics.loadTime > thresholds.loadTime) {
-        newAlerts.push({
-          id: `load-time-${Date.now()}`,
-          type: "warning",
-          message: `Load time (${currentMetrics.loadTime.toFixed(0)}ms) exceeds threshold (${thresholds.loadTime}ms)`,
-          timestamp: Date.now(),
-          resolved: false,
-        });
+  const measurePerformance = useCallback(() => {
+    if (!isMonitoring) return;
+
+    // Measure FPS
+    let frameCount = 0;
+    let lastTime = performance.now();
+
+    const measureFPS = () => {
+      frameCount++;
+      const currentTime = performance.now();
+
+      if (currentTime - lastTime >= 1000) {
+        const fps = Math.round((frameCount * 1000) / (currentTime - lastTime));
+        setMetrics(prev => ({ ...prev, fps }));
+        frameCount = 0;
+        lastTime = currentTime;
       }
 
-      // Check First Contentful Paint
-      if (
-        currentMetrics.firstContentfulPaint > thresholds.firstContentfulPaint
-      ) {
-        newAlerts.push({
-          id: `fcp-${Date.now()}`,
-          type: "warning",
-          message: `First Contentful Paint (${currentMetrics.firstContentfulPaint.toFixed(0)}ms) exceeds threshold (${thresholds.firstContentfulPaint}ms)`,
-          timestamp: Date.now(),
-          resolved: false,
-        });
+      if (isMonitoring) {
+        requestAnimationFrame(measureFPS);
       }
+    };
 
-      // Check Largest Contentful Paint
-      if (
-        currentMetrics.largestContentfulPaint >
-        thresholds.largestContentfulPaint
-      ) {
-        newAlerts.push({
-          id: `lcp-${Date.now()}`,
-          type: "warning",
-          message: `Largest Contentful Paint (${currentMetrics.largestContentfulPaint.toFixed(0)}ms) exceeds threshold (${thresholds.largestContentfulPaint}ms)`,
-          timestamp: Date.now(),
-          resolved: false,
-        });
-      }
+    measureFPS();
 
-      // Check Cumulative Layout Shift
-      if (
-        currentMetrics.cumulativeLayoutShift > thresholds.cumulativeLayoutShift
-      ) {
-        newAlerts.push({
-          id: `cls-${Date.now()}`,
-          type: "error",
-          message: `Cumulative Layout Shift (${currentMetrics.cumulativeLayoutShift.toFixed(3)}) exceeds threshold (${thresholds.cumulativeLayoutShift})`,
-          timestamp: Date.now(),
-          resolved: false,
-        });
-      }
-
-      // Check memory usage
-      if (currentMetrics.memoryUsage > thresholds.memoryUsage) {
-        newAlerts.push({
-          id: `memory-${Date.now()}`,
-          type: "warning",
-          message: `Memory usage (${(currentMetrics.memoryUsage / 1024 / 1024).toFixed(2)}MB) exceeds threshold (${(thresholds.memoryUsage / 1024 / 1024).toFixed(2)}MB)`,
-          timestamp: Date.now(),
-          resolved: false,
-        });
-      }
-
-      if (newAlerts.length > 0) {
-        setAlerts((prev) => [...prev, ...newAlerts]);
-      }
-    },
-    [thresholds],
-  );
-
-  // Performance measurement utilities
-  const measurePerformance = useCallback(async () => {
-    if (!("performance" in window)) {
-      console.warn("Performance API not supported");
-      return;
+    // Measure memory usage
+    if ('memory' in performance) {
+      const memory = (performance as any).memory;
+      const memoryUsage = Math.round(memory.usedJSHeapSize / 1024 / 1024);
+      setMetrics(prev => ({ ...prev, memoryUsage }));
     }
 
-    try {
-      // Get navigation timing
-      const navigation = performance.getEntriesByType(
-        "navigation",
-      )[0] as PerformanceNavigationTiming;
-
-      // Get paint timing
-      const paintEntries = performance.getEntriesByType("paint");
-      const fcp =
-        paintEntries.find((entry) => entry.name === "first-contentful-paint")
-          ?.startTime || 0;
-      const lcp =
-        paintEntries.find((entry) => entry.name === "largest-contentful-paint")
-          ?.startTime || 0;
-
-      // Get layout shift
-      const clsEntries = performance.getEntriesByType(
-        "layout-shift",
-      ) as PerformanceEntry[];
-      const cls = clsEntries.reduce((sum, entry) => {
-        const layoutShiftEntry = entry as PerformanceEntry & { value?: number };
-        return sum + (layoutShiftEntry.value || 0);
-      }, 0);
-
-      // Get memory usage (if available)
-      const memory = (
-        performance as Performance & { memory?: { usedJSHeapSize: number } }
-      ).memory;
-      const memoryUsage = memory ? memory.usedJSHeapSize : 0;
-
-      // Get resource timing
-      const resources = performance.getEntriesByType("resource");
-      const networkRequests = resources.length;
-
-      // Calculate render time
-      const renderStart = performance.now();
-      await new Promise((resolve) => requestAnimationFrame(resolve));
+    // Measure render time
+    const renderStart = performance.now();
+    requestAnimationFrame(() => {
       const renderTime = performance.now() - renderStart;
-
-      const newMetrics: PerformanceMetrics = {
-        loadTime: navigation.loadEventEnd - navigation.loadEventStart,
-        firstContentfulPaint: fcp,
-        largestContentfulPaint: lcp,
-        cumulativeLayoutShift: cls,
-        firstInputDelay: 0, // Would need to measure this separately
-        timeToInteractive:
-          navigation.domInteractive - navigation.fetchStart || 0,
-        bundleSize: 0, // Would need to calculate from actual bundle
-        memoryUsage,
-        renderTime,
-        networkRequests,
-      };
-
-      setMetrics(newMetrics);
-      setHistory((prev) => [...prev.slice(-9), newMetrics]);
-
-      // Check for alerts
-      checkPerformanceAlerts(newMetrics);
-    } catch (error) {
-      console.error("Error measuring performance:", error);
-    }
-  }, [checkPerformanceAlerts]);
-
-  // Start monitoring
-  const startMonitoring = useCallback(() => {
-    setIsMonitoring(true);
-    measurePerformance();
-
-    // Set up periodic monitoring
-    const interval = setInterval(measurePerformance, 5000);
-    return () => clearInterval(interval);
-  }, [measurePerformance]);
-
-  // Clear alerts
-  const clearAlerts = useCallback(() => {
-    setAlerts([]);
-  }, []);
-=======
->>>>>>> 4ba245a45fc5 (Checkpoint before follow-up message)
-
-  // Resolve alert
-  const resolveAlert = useCallback((alertId: string) => {
-    setAlerts((prev) =>
-      prev.map((alert) =>
-        alert.id === alertId ? { ...alert, resolved: true } : alert,
-      ),
-    );
-  }, []);
-
-  // Update thresholds
-  const updateThresholds = useCallback(
-    (newThresholds: Partial<PerformanceThresholds>) => {
-      setThresholds((prev) => ({ ...prev, ...newThresholds }));
-    },
-    [],
-  );
-
-  // Calculate performance score
-  const performanceScore = useMemo(() => {
-    if (!metrics) return 0;
-
-    let score = 100;
-
-    // Deduct points for exceeding thresholds
-    if (metrics.loadTime > thresholds.loadTime) score -= 20;
-    if (metrics.firstContentfulPaint > thresholds.firstContentfulPaint)
-      score -= 15;
-    if (metrics.largestContentfulPaint > thresholds.largestContentfulPaint)
-      score -= 15;
-    if (metrics.cumulativeLayoutShift > thresholds.cumulativeLayoutShift)
-      score -= 25;
-    if (metrics.firstInputDelay > thresholds.firstInputDelay) score -= 10;
-    if (metrics.memoryUsage > thresholds.memoryUsage) score -= 15;
-
-    return Math.max(0, score);
-  }, [metrics, thresholds]);
-
-  // Get performance grade
-  const getPerformanceGrade = useCallback((score: number) => {
-    if (score >= 90) return { grade: "A", color: "text-green-500" };
-    if (score >= 80) return { grade: "B", color: "text-yellow-500" };
-    if (score >= 70) return { grade: "C", color: "text-orange-500" };
-    if (score >= 60) return { grade: "D", color: "text-red-500" };
-    return { grade: "F", color: "text-red-700" };
-  }, []);
-
-  // Format time
-  const formatTime = useCallback((ms: number) => {
-    if (ms < 1000) return `${ms.toFixed(0)}ms`;
-    return `${(ms / 1000).toFixed(2)}s`;
-  }, []);
-
-  // Format bytes
-  const formatBytes = useCallback((bytes: number) => {
-    if (bytes < 1024) return `${bytes} B`;
-    if (bytes < 1024 * 1024) return `${(bytes / 1024).toFixed(1)} KB`;
-    return `${(bytes / 1024 / 1024).toFixed(1)} MB`;
-  }, []);
->>>>>>> origin/backup-main-20250928-214405
-
-  useEffect(() => {
-    // Only run in development
-    if (process.env.NODE_ENV !== 'development') return;
-
-    const observer = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
-      entries.forEach((entry) => {
-        if (entry.entryType === 'largest-contentful-paint') {
-          setMetrics(prev => ({ ...prev, lcp: entry.startTime }));
-        } else if (entry.entryType === 'first-input') {
-          setMetrics(prev => ({ ...prev, fid: (entry as any).processingStart - entry.startTime }));
-        } else if (entry.entryType === 'layout-shift' && !(entry as any).hadRecentInput) {
-          setMetrics(prev => ({ ...prev, cls: (prev.cls || 0) + (entry as any).value }));
-        }
-      });
+      setMetrics(prev => ({ ...prev, renderTime }));
     });
 
-    observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
+    // Measure network latency
+    const networkStart = performance.now();
+    fetch('/api/ping', { method: 'HEAD' })
+      .then(() => {
+        const networkLatency = performance.now() - networkStart;
+        setMetrics(prev => ({ ...prev, networkLatency }));
+      })
+      .catch(() => {
+        setMetrics(prev => ({ ...prev, networkLatency: 0 }));
+      });
+  }, [isMonitoring]);
 
-    // Toggle visibility with Ctrl+Shift+P
-    const handleKeyPress = (e: KeyboardEvent) => {
-      if (e.ctrlKey && e.shiftKey && e.key === 'P') {
-        setIsVisible(prev => !prev);
-      }
-    };
+  useEffect(() => {
+    if (isMonitoring) {
+      measurePerformance();
+    }
+  }, [isMonitoring, measurePerformance]);
 
-    window.addEventListener('keydown', handleKeyPress);
+  useEffect(() => {
+    if (onMetricsUpdate) {
+      onMetricsUpdate(metrics);
+    }
+  }, [metrics, onMetricsUpdate]);
 
-    return () => {
-      observer.disconnect();
-      window.removeEventListener('keydown', handleKeyPress);
-    };
-  }, []);
+  const getStatusColor = (value: number, threshold: number) => {
+    if (value <= threshold) return 'text-green-600';
+    if (value <= threshold * 1.5) return 'text-yellow-600';
+    return 'text-red-600';
+  };
 
-  if (!isVisible) return null;
+  if (!isMonitoring) {
+    return null;
+  }
 
   return (
-    <div style={{
-      position: 'fixed',
-      top: '10px',
-      right: '10px',
-      background: 'rgba(0, 0, 0, 0.8)',
-      color: 'white',
-      padding: '10px',
-      borderRadius: '5px',
-      fontSize: '12px',
-      zIndex: 9999,
-      fontFamily: 'monospace',
-    }}>
-      <h4>Performance Metrics</h4>
-      <div>LCP: {metrics.lcp ? metrics.lcp.toFixed(2) + 'ms' : 'N/A'}</div>
-      <div>FID: {metrics.fid ? metrics.fid.toFixed(2) + 'ms' : 'N/A'}</div>
-      <div>CLS: {metrics.cls ? metrics.cls.toFixed(3) : 'N/A'}</div>
-      <div style={{ marginTop: '10px', fontSize: '10px' }}>
-        Press Ctrl+Shift+P to toggle
+    <div className='performance-monitor bg-gray-100 p-4 rounded-lg'>
+      <h3 className='text-lg font-semibold mb-4'>Performance Monitor</h3>
+
+      <div className='grid grid-cols-2 gap-4'>
+        <div className='metric'>
+          <div className='text-sm text-gray-600'>FPS</div>
+          <div
+            className={`text-2xl font-bold ${getStatusColor(metrics.fps, threshold.fps)}`}
+          >
+            {metrics.fps}
+          </div>
+        </div>
+
+        <div className='metric'>
+          <div className='text-sm text-gray-600'>Memory Usage (MB)</div>
+          <div
+            className={`text-2xl font-bold ${getStatusColor(metrics.memoryUsage, threshold.memoryUsage)}`}
+          >
+            {metrics.memoryUsage}
+          </div>
+        </div>
+
+        <div className='metric'>
+          <div className='text-sm text-gray-600'>Render Time (ms)</div>
+          <div
+            className={`text-2xl font-bold ${getStatusColor(metrics.renderTime, threshold.renderTime)}`}
+          >
+            {metrics.renderTime.toFixed(2)}
+          </div>
+        </div>
+
+        <div className='metric'>
+          <div className='text-sm text-gray-600'>Network Latency (ms)</div>
+          <div
+            className={`text-2xl font-bold ${getStatusColor(metrics.networkLatency, threshold.networkLatency)}`}
+          >
+            {metrics.networkLatency.toFixed(2)}
+          </div>
+        </div>
       </div>
     </div>
   );

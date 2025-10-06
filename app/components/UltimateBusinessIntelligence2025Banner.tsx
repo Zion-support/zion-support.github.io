@@ -48,61 +48,41 @@ const UltimateBusinessIntelligence2025Banner = () => {
         roi: '30,000%',
         success: '99.8%',
         timeline: '18 months',
-        guide: '60 min read'
-      },
-      readingTime: '60 min read',
       featured: true
     }
   ];
 
   useEffect(() => {
-    const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % content.length);
     }, 5000);
 
-    return () => clearInterval(timer);
+    return () => clearInterval(interval);
   }, [content.length]);
-
-  useEffect(() => {
-    const dismissed = localStorage.getItem('ultimate-business-intelligence-2025-banner-dismissed');
-    if (dismissed === 'true') {
-      setIsVisible(false);
-    }
-  }, []);
-
-  const handleDismiss = () => {
-    setIsVisible(false);
-    localStorage.setItem('ultimate-business-intelligence-2025-banner-dismissed', 'true');
-  };
 
   if (!isVisible) return null;
 
   const currentContent = content[currentSlide];
 
   return (
-    <div className="relative bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white overflow-hidden">
+<<<<<<< HEAD
+    <div className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 border-b border-white/10">
       {/* Animated Background */}
       <div className="absolute inset-0">
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-purple-600/20 via-blue-600/20 to-indigo-600/20"></div>
-        <div className="absolute top-10 left-10 w-32 h-32 bg-purple-500/10 rounded-full animate-pulse"></div>
-        <div className="absolute top-20 right-20 w-24 h-24 bg-blue-500/10 rounded-full animate-pulse delay-1000"></div>
-        <div className="absolute bottom-10 left-1/4 w-40 h-40 bg-indigo-500/10 rounded-full animate-pulse delay-2000"></div>
-        <div className="absolute bottom-20 right-1/3 w-28 h-28 bg-purple-500/10 rounded-full animate-pulse delay-3000"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 animate-pulse"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-yellow-500/5 via-orange-500/5 to-red-500/5 animate-pulse" style={{ animationDelay: '1s' }}></div>
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="flex items-center justify-between mb-6">
-          <div className="flex items-center space-x-3">
-            <div className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-4 py-2 rounded-full font-bold text-sm">
-              🚀 NEW BREAKTHROUGH
-            </div>
-            <div className="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium">
-              Ultimate Business Intelligence 2025
+      <div className="relative z-10 container mx-auto px-4 py-4">
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-4">
+            <div className="flex items-center gap-2">
+              <span className="text-yellow-400 font-bold text-sm">🚀 NEW BREAKTHROUGH</span>
+              <span className="text-white font-semibold">Ultimate Business Intelligence 2025</span>
             </div>
           </div>
           <button
             onClick={handleDismiss}
-            className="text-white/70 hover:text-white transition-colors p-2"
+            className="text-white/70 hover:text-white transition-colors p-1"
             aria-label="Dismiss banner"
           >
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -111,34 +91,32 @@ const UltimateBusinessIntelligence2025Banner = () => {
           </button>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-          <div className="space-y-6">
-            <div className="space-y-4">
-              <h2 className="text-3xl lg:text-4xl font-bold leading-tight">
-                {currentContent.title}
-              </h2>
-              <p className="text-lg text-white/90 leading-relaxed">
-                {currentContent.description}
-              </p>
-            </div>
+        <div className="mt-4 grid lg:grid-cols-3 gap-8">
+          <div className="lg:col-span-2">
+            <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
+              {currentContent.title}
+            </h2>
+            <p className="text-gray-300 mb-6 leading-relaxed">
+              {currentContent.description}
+            </p>
 
             {/* Success Metrics */}
-            <div className="grid grid-cols-2 gap-4">
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
-                <div className="text-2xl font-bold text-yellow-400">{currentContent.metrics.roi}</div>
-                <div className="text-sm text-white/80">ROI</div>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+              <div className="text-center">
+                <div className="text-2xl font-bold text-cyan-400">{currentContent.metrics.roi}</div>
+                <div className="text-sm text-gray-400">ROI</div>
               </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
+              <div className="text-center">
                 <div className="text-2xl font-bold text-green-400">{currentContent.metrics.savings}</div>
-                <div className="text-sm text-white/80">Annual Savings</div>
+                <div className="text-sm text-gray-400">Annual Savings</div>
               </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
-                <div className="text-2xl font-bold text-blue-400">{currentContent.metrics.accuracy}</div>
-                <div className="text-sm text-white/80">Accuracy</div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-purple-400">{currentContent.metrics.accuracy}</div>
+                <div className="text-sm text-gray-400">Accuracy</div>
               </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
-                <div className="text-2xl font-bold text-purple-400">{currentContent.metrics.speed || currentContent.metrics.timeline}</div>
-                <div className="text-sm text-white/80">{currentContent.metrics.speed ? 'Faster' : 'Timeline'}</div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-yellow-400">{currentContent.metrics.speed || currentContent.metrics.timeline}</div>
+                <div className="text-sm text-gray-400">{currentContent.metrics.speed ? 'Faster' : 'Timeline'}</div>
               </div>
             </div>
 
@@ -146,27 +124,26 @@ const UltimateBusinessIntelligence2025Banner = () => {
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
                 href={currentContent.url}
-                className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-8 py-3 rounded-lg font-bold hover:from-yellow-500 hover:to-orange-600 transition-all duration-300 transform hover:scale-105 text-center"
+                className="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold rounded-lg transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl"
               >
                 Read {currentContent.type}
               </Link>
               <Link
-                href="/<contact" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-900 transition-all duration-300 text-center"
+                href="/contact"
+                className="inline-flex items-center justify-center px-6 py-3 border-2 border-white/20 hover:border-white/40 text-white font-bold rounded-lg transition-all duration-300 transform hover:-translate-y-1"
               >
                 Get Consultation
               </Link>
             </div>
 
             {/* Content Type Badge */}
-            <div className="flex items-center space-x-2">
-              <span className="bg-white/20 px-3 py-1 rounded-full text-sm font-medium">
+            <div className="flex items-center gap-4 mt-4 text-sm">
+              <span className="px-3 py-1 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full font-semibold">
                 {currentContent.type}
               </span>
-              <span className="text-white/70 text-sm">
-                {currentContent.readingTime}
-              </span>
+              <span className="text-gray-400">{currentContent.readingTime}</span>
               {currentContent.featured && (
-                <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-3 py-1 rounded-full text-sm font-bold">
+                <span className="px-3 py-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-white rounded-full font-semibold">
                   FEATURED
                 </span>
               )}
@@ -174,47 +151,42 @@ const UltimateBusinessIntelligence2025Banner = () => {
           </div>
 
           {/* Content Preview Cards */}
-          <div className="space-y-4">
-            <h3 className="text-xl font-bold mb-4">Featured Content</h3>
+          <div className="lg:col-span-1">
+            <h3 className="text-lg font-semibold text-white mb-4">Featured Content</h3>
             {content.map((item, index) => (
               <div
                 key={item.id}
-                className={`p-4 rounded-lg cursor-pointer transition-all duration-300 ${
-                  currentSlide === index 
-                    ? 'bg-white/10 hover:bg-white/15 border border-white/20' 
-                    : 'bg-white/5 hover:bg-white/10 border border-transparent'
+                className={`bg-white/10 backdrop-blur-sm rounded-lg p-4 cursor-pointer transition-all duration-300 mb-3 ${
+                  index === currentSlide ? 'ring-2 ring-yellow-400 bg-white/20' : 'hover:bg-white/15'
                 }`}
                 onClick={() => setCurrentSlide(index)}
               >
-                <div className="flex items-start justify-between">
-                  <div className="flex-1">
-                    <h4 className="font-semibold text-sm mb-2 line-clamp-2">{item.title}</h4>
-                    <div className="flex items-center space-x-2 text-xs text-white/70">
-                      <span>{item.type}</span>
-                      <span>•</span>
-                      <span>{item.readingTime}</span>
-                    </div>
-                  </div>
-                  <div className="ml-4">
-                    <div className="text-lg font-bold text-yellow-400">{item.metrics.roi}</div>
-                    <div className="text-xs text-white/70">ROI</div>
+                <div className="flex items-start justify-between mb-2">
+                  <h4 className="text-white font-semibold text-sm leading-tight">{item.title}</h4>
+                  <div className="flex items-center gap-2 text-xs text-gray-400">
+                    <span>{item.type}</span>
+                    <span>•</span>
+                    <span>{item.readingTime}</span>
                   </div>
                 </div>
+                <div className="text-center">
+                  <div className="text-lg font-bold text-cyan-400">{item.metrics.roi}</div>
+                  <div className="text-xs text-gray-400">ROI</div>
+                </div>
               </div>
+=======
+>>>>>>> origin/merge-all-fixes
             ))}
           </div>
-        </div>
 
         {/* Progress Indicators */}
-        <div className="flex justify-center space-x-2 mt-8">
+        <div className="flex justify-center gap-2 mt-6">
           {content.map((_, index) => (
             <button
               key={index}
               onClick={() => setCurrentSlide(index)}
               className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                currentSlide === index 
-                  ? 'bg-white' 
-                  : 'bg-white/30 hover:bg-white/50'
+                index === currentSlide ? 'bg-yellow-400' : 'bg-white/30'
               }`}
               aria-label={`Go to slide ${index + 1}`}
             />

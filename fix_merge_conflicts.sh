@@ -1,37 +1,48 @@
 #!/bin/bash
 
-# Script to fix Git merge conflicts by choosing HEAD version
-# This will remove all merge conflict markers and keep only the HEAD version
+# Script to fix merge conflicts in blog files
+# This script removes merge conflict markers and keeps the HEAD version
 
-echo "Fixing merge conflicts in all files..."
+echo "Starting merge conflict resolution..."
 
 # Find all files with merge conflicts
-files_with_conflicts=$(find src -name "*.tsx" -o -name "*.ts" | xargs grep -l "<<<<<<< HEAD" 2>/dev/null)
-
-if [ -z "$files_with_conflicts" ]; then
-    echo "No merge conflicts found."
-    exit 0
-fi
-
-echo "Found merge conflicts in $(echo "$files_with_conflicts" | wc -l) files"
-
-# Process each file
+<<<<<<< HEAD
+conflict_files=$(grep -l "^
+    sed -i '/^
 for file in $files_with_conflicts; do
+    echo "Fixing merge conflicts in: $file"
+    
+    # Create a temporary file
+    temp_file=$(mktemp)
+    
+    # Process the file to keep only HEAD version
+    awk '
+    /^<<<<<<< HEAD/ { in_head = 1; next }
+    /^=======/ { in_head = 0; in_other = 1; next }
+    /^>>>>>>> / { in_other = 0; next }
+    in_head { print }
+    !in_head && !in_other { print }
+    ' "$file" > "$temp_file"
+    
+    # Replace the original file with the cleaned version
+    mv "$temp_file" "$file"
+=======
+conflict_files=$(grep -l "^<<<<<<< HEAD" /workspace/app/blog -r | head -50)
+
+for file in $conflict_files; do
     echo "Processing: $file"
     
     # Create a backup
     cp "$file" "$file.backup"
     
-    # Use sed to remove merge conflict markers and keep only HEAD version
-    # This removes everything from <<<<<<< HEAD to ======= and from >>>>>>> to the end
-    sed -i '/<<<<<<< HEAD/,/=======/d; />>>>>>> /d' "$file"
+    # Remove merge conflict markers and keep HEAD version
+    # This removes everything from <<<<<<< HEAD to ======= and from ======= to >>>>>>> branch
+    sed -i '/^<<<<<<< HEAD/,/^=======/d' "$file"
+    sed -i '/^>>>>>>> .*/d' "$file"
     
-    # Clean up any empty lines that might be left
-    sed -i '/^[[:space:]]*$/d' "$file"
+    echo "Fixed: $file"
 done
 
-echo "Merge conflicts fixed. Backup files created with .backup extension."
-echo "Running tests to verify fixes..."
-
-# Run tests to check if fixes worked
-cd /workspace && pnpm run test:ci
+>>>>>>> origin/fix-errors-and-merge-final
+echo "Merge conflict resolution completed for first 50 files."
+echo "Run this script again to process more files if needed."

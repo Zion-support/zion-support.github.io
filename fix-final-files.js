@@ -102,7 +102,6 @@ function fixFile(filePath) {
     if (
       content.includes('<< HEAD') ||
       content.includes('=======') ||
-      content.includes('>>>>>>> ') ||
       content.includes('import, Reac, t') ||
       content.includes('con, s, t') ||
       content.includes('useSta, t, e') ||
