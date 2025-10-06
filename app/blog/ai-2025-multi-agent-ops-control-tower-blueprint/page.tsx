@@ -1,10 +1,6 @@
 import React from 'react';
-import {Link }from 'react-router-dom';
-import {Arrow Left, Calendar Clock User }from'lucide-react';
-
-import Calendar from'lucide-react/dist/esm/icons/calendar';
-import User from'lucide-react/dist/esm/icons/user';
-import Clock from'lucide-react/dist/esm/icons/clock';
+import Link from 'next/link';
+import { ArrowLeft, Calendar, Clock, User } from 'lucide-react';
 import Arrow Left from'lucide-react/dist/esm/icons/arrow-left';
 
 export default function MultiAgentOpsControlTower Blueprint Page() {return (<div class Name Name='min-h-screen bg-white'>
