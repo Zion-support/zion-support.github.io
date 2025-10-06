@@ -12,7 +12,7 @@ if (typeof window !== 'undefined') {
   performanceOptimizer.lazyLoadImages();
   
   // Monitor long tasks
-  performanceOptimizer.monitorLongTasks((entries: PerformanceEntryList) => {
+  performanceOptimizer.monitorLongTasks((entries: PerformanceEntry[]) => {
     entries.forEach((entry: PerformanceEntry) => {
       analytics.track('long_task', 'performance', 'detected', undefined, entry.duration);
     });
