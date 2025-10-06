@@ -9,8 +9,8 @@ import {
   ArrowRight,
 } from 'lucide-react';
 
-import { INNOVATIVE_SERVICES_2025 } from '@/data/innovativeServices2025';
-import { SEO } from '@/components/SEO';
+import { INNOVATIVE_SERVICES_2025 } from './data/innovativeServices2025';
+import SEO from './components/SEO';
 const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedPricingModel, setSelectedPricingModel] = useState('all');
@@ -53,11 +53,11 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
       case 'AI & Finance':
         return Brain;
       case 'Cloud & DevOps':
-        return Server;
+        return Brain;
       case 'IoT & Digital Twin':
-        return Cpu;
+        return Brain;
       case 'Quantum Computing':
-        return Rocket;
+        return Brain;
       default:
         return Zap;
     }
@@ -590,7 +590,7 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
               className='grid md:grid-cols-3 gap-8 mb-12'
             >
               <div className='flex flex-col items-center'>
-                <Phone className='w-8 h-8 text-cyan-400 mb-4' />
+                <Brain className='w-8 h-8 text-cyan-400 mb-4' />
                 <div className='text-white font-semibold mb-2'>Call Us</div>
                 <a
                   href='tel:+13024640950'
@@ -600,7 +600,7 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
                 </a>
               </div>
               <div className='flex flex-col items-center'>
-                <Mail className='w-8 h-8 text-cyan-400 mb-4' />
+                <Brain className='w-8 h-8 text-cyan-400 mb-4' />
                 <div className='text-white font-semibold mb-2'>Email Us</div>
                 <a
                   href='mailto:kleber@ziontechgroup.com'
@@ -610,7 +610,7 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
                 </a>
               </div>
               <div className='flex flex-col items-center'>
-                <MapPin className='w-8 h-8 text-cyan-400 mb-4' />
+                <Brain className='w-8 h-8 text-cyan-400 mb-4' />
                 <div className='text-white font-semibold mb-2'>Visit Us</div>
                 <div className='text-slate-300 text-center'>
                   364 E Main St STE 1008
