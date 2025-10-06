@@ -8,7 +8,6 @@ const Footer: React.FC = () => {
     <footer className="bg-gray-900 text-white py-8">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
->>>>>>> origin/merge-fixes
           <div>
             <h3 className='text-lg font-semibold mb-4'>Zion Tech Group</h3>
             <p className='text-gray-300'>
@@ -38,4 +37,3 @@ const Footer: React.FC = () => {
           <p className="text-gray-300">
             © {new Date().getFullYear()} Zion Tech Group. All rights reserved.
           </p>
->>>>>>> 0c4a2002f1455a31be6ebb4d4edd54c74c65ff9d

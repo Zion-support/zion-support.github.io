@@ -43,7 +43,7 @@ function fixImportsInFile(filePath) {
       if (content.includes(oldImport)) {
         content = content.replace(
           new RegExp(`import ${correct} from '${oldImport}';`, 'g'),
-          `import { ${correct} } from '${newImport}';`,
+          `import { ${correct} } from '${newImport}';`
         );
         modified = true;
       }

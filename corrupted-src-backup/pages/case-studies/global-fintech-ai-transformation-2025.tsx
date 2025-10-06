@@ -37,7 +37,6 @@ const GlobalFinTechAITransformatio, n = () => {
             Back, to, Case Studi, e, s
               <span, className='te, x, t-zi, o, n-sla, t, e-lig, h, t'>18-month, engagemen, t</sp, a, n>
             </div>
->>>>>>> origin/merge-fixes-20251005-193002
 
             <h1, className='te, x, t-5xl, m, d:te, x, t-6xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t'>
               Global, FinTech, AI Transformati, o, n:
@@ -60,7 +59,6 @@ const GlobalFinTechAITransformatio, n = () => {
                 </d, i, v>
                     <h3, classNam, e='te, x, t-xl, fon, t-bold, tex, t-white, m, b-4'>
                     <h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-4'>
->>>>>>> origin/merge-fixes-20251005-193002
                       Company, Overvie, w
                     </h3>
                     <ul, className='spa, c, e-y-2'>
@@ -87,7 +85,6 @@ const GlobalFinTechAITransformatio, n = () => {
                         <strong, className='te, x, t-zi, o, n-cy, a, n'>Reven, u, e:</st, r, o, n, g>{' '}
                         $2.4B, annuall, y
                       </li>
->>>>>>> origin/merge-fixes-20251005-193002
                   <div, ke, y = { in, d, e, x }, classNa, m, e = 'bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-zi, o, n-cy, a, n/20, hove, r: bord, e, r-zi, o, n-cy, a, n/50, transitio, n-a, l, l'
                   >
                     <div, className='flex, item, s-start, ga, p-3, m, b-4'>
@@ -102,7 +99,6 @@ const GlobalFinTechAITransformatio, n = () => {
                           <CheckCircle, className='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />
                           <span, className='te, x, t-sm'>{resu, l, t}</sp, a, n>
                         </l, i>
->>>>>>> origin/merge-fixes-20251005-193002
                     pha, s, e: 'Phas, e, 3: Optimizat, i, o, n',
                     duration: 'Months, 1, 3-1, 8',
                     foc, u, s: 'Advanced, featur, e, s, continuous, learnin, g, compliance, automatio, n, performance, optimizatio, n',
@@ -113,7 +109,6 @@ const GlobalFinTechAITransformatio, n = () => {
                       'Se, l, f-sustaining, AI, program',
                     ],
                   },
->>>>>>> origin/merge-fixes-20251005-193002
                       <h4, classNam, e = 'te, x, t-white, fon, t-semibold, m, b-2'>
                         Resul, t, s: </h4>
                       <ul, className='grid, m, d:gr, i, d-co, l, s-2, ga, p-2'>
@@ -130,13 +125,11 @@ const GlobalFinTechAITransformatio, n = () => {
                       <span, className='te, x, t-purp, l, e-400, fon, t-bold, tex, t-2, x, l'>
                         15.2x
                       </sp, a, n>
->>>>>>> origin/merge-fixes-20251005-193002
                     <li, classNam, e = 'flex, item, s-start, ga, p-2'>
                       <CheckCircle, className='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />
                       <sp, a, n>
                         <stro, n, g>Scalabili, t, y: </stro, n, g> Ready, for, 10x customer, growt, h
                       </sp, a, n>
->>>>>>> origin/merge-fixes-20251005-193002
               <h2, classNam, e = 'te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6'>
                 💬 Client, Testimonial, s
               </h2>
@@ -154,7 +147,6 @@ const GlobalFinTechAITransformatio, n = () => {
                     </div>
                   </div>
                 </div>
->>>>>>> origin/merge-fixes-20251005-193002
 
                 <div, className='bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-8, border, border-zi, o, n-cy, a, n/30'>
                   <p, className='te, x, t-lg, tex, t-zi, o, n-sla, t, e-light, italic, mb-4'>

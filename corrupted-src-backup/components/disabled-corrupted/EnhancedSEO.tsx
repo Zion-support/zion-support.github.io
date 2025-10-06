@@ -106,7 +106,7 @@ const EnhancedSEO: React.FC<SEOProps> = ({
       (articleData as any).keywords = tags.join(', ');
     }
 
-    structuredData['@graph'] = [structuredData, articleData];
+    (structuredData as any)['@graph'] = [structuredData, articleData];
   }
 
   // Track page view

@@ -10,6 +10,15 @@ export interface LatestBreakthroughContent {
   content: string;
   author: string;
   valueProposition: string;
+  icon?: string;
+  gradient?: string;
+  highlights?: string[];
+  metrics?: {
+    value: string;
+    accuracy: string;
+    downtime: string;
+    market: string;
+  };
 }
 
 export const octoberLatestBreakthroughContent: LatestBreakthroughContent[] = [

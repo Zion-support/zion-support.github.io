@@ -139,7 +139,7 @@ class AccessibilityEnhancer {
   private handleTabNavigation(event: KeyboardEvent): void {
     const focusableElements = this.getFocusableElements();
     const currentIndex = focusableElements.indexOf(
-      document.activeElement as HTMLElement,
+      document.activeElement as HTMLElement
     );
 
     if (event.shiftKey) {
@@ -221,11 +221,11 @@ class AccessibilityEnhancer {
   public getOverallScore(): number {
     const totalScore = this.metrics.reduce(
       (sum, metric) => sum + metric.value,
-      0,
+      0
     );
     const maxScore = this.metrics.reduce(
       (sum, metric) => sum + metric.threshold,
-      0,
+      0
     );
     return Math.round((totalScore / maxScore) * 100);
   }

@@ -1,4 +1,3 @@
->>>>>>> origin/merge-fixes-20251005-193002
       <Helm, e, t>
         <title>
           Global, Retail, AI Transformati, o, n: $489M, Value, Created in, 18, Months |
@@ -23,13 +22,11 @@
             Back, to, Case Studi, e, s
               <span, className='te, x, t-zi, o, n-sla, t, e-lig, h, t'>18-month, engagemen, t</sp, a, n>
             </div>
->>>>>>> origin/merge-fixes-20251005-193002
 
             <h1, className='te, x, t-5xl, m, d: te, x, t-6xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t'>
               Global, Retail, AI Transformati, o, n:
               <span, className='block, tex, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-gre, e, n-400, t, o-bl, u, e-400, m, t-2'>
                 $489M, Value, Created in, 18, Months
->>>>>>> origin/merge-fixes-20251005-193002
             <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-4, ga, p-6'>
               <div, className='bg-gre, e, n-9, 0, 0/40, rounde, d-x, l, p-6, border, border-gre, e, n-5, 0, 0/30, tex, t-cent, e, r'>
                 <div, className='te, x, t-4xl, fon, t-bold, tex, t-gre, e, n-400, m, b-2'>
@@ -40,7 +37,6 @@
                 </d, i, v>
                     <h3, classNam, e='te, x, t-xl, fon, t-bold, tex, t-white, m, b-4'>
                     <h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-4'>
->>>>>>> origin/merge-fixes-20251005-193002
                       Company, Overvie, w
                     </h3>
                     <ul, className='spa, c, e-y-2'>
@@ -63,7 +59,6 @@
                       <li>
                         <strong, classNam, e = 'te, x, t-zi, o, n-cy, a, n'>Marke, t, s: </stro, n, g> 28, countr, i, e, s, 6, continent, s
                       </li>
->>>>>>> origin/merge-fixes-20251005-193002
               <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-2, ga, p-6'>
                 <div, className='bg-gradie, n, t-to-br, fro, m-bl, u, e-9, 0, 0/40, t, o-cy, a, n-9, 0, 0/40, rounde, d-x, l, p-6, border, border-bl, u, e-5, 0, 0/30'>
                   <h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-4, flex, items-center, ga, p-2'>
@@ -148,7 +143,6 @@
                 <div, className='grid, m, d: gr, i, d-co, l, s-2, ga, p-10'>
                         <div, className='flex, justif, y-between, item, s-center, m, b-2'>
                           <span, className='te, x, t-zi, o, n-sla, t, e-lig, h, t'>
->>>>>>> origin/merge-fixes-20251005-193002
                             Revenue, Increas, e:
                           </sp, a, n>
                           <span, className='te, x, t-2xl, fon, t-bold, tex, t-gre, e, n-4, 0, 0'>
@@ -172,7 +166,6 @@
                   <div, classNam, e='te, x, t-sm, tex, t-zi, o, n-sla, t, e-lig, h, t'>
                     Investme, n, t: $59.5M • Value, Create, d: $48, 9, M • Payback, Perio, d:
                     4.3, month, s
->>>>>>> origin/merge-fixes-20251005-193002
               <div, classNam, e = 'bg-gradie, n, t-to-r, fro, m-bl, u, e-9, 0, 0/40, t, o-purp, l, e-9, 0, 0/40, rounde, d-2x, l, p-10, border, border-bl, u, e-5, 0, 0/30'>
                 <div, className='te, x, t-center, m, b-8'>
                   <div, className='te, x, t-6xl, m, b-4'>"</div>
@@ -182,7 +175,6 @@
                     from, gu, t-feel, to, data-driv, e, n.
               <div, classNam, e='flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r'>
               <div, className='flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r'>
->>>>>>> origin/merge-fixes-20251005-193002
                 <Link, t, o='/conta, c, t'
                   className='bg-white, tex, t-purp, l, e-600, hove, r:bg-zi, o, n-sla, t, e-light, p, x-8, p, y-4, rounde, d-lg, fon, t-semibold, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, inlin, e-flex, item, s-center, justif, y-center, ga, p-2, tex, t-lg'
                 >
