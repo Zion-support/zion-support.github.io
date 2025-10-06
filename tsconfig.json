@@ -111,8 +111,22 @@
     "api-documentation.tsx",
     "app/components/NewContentPromotionalBanner2026.tsx",
     "app/components/NewestContent2025Banner.tsx",
+<<<<<<< HEAD
     "api/**",
     "lib/**",
     "utils/seoUtils.ts"
+=======
+    "utils/**/*",
+    "blog/**",
+    "backup-problematic-files/**",
+    "automation/**",
+    "**/*.disabled/**",
+    "**/*.backup/**"
+  ],
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
+    }
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-e18e
   ]
 }
