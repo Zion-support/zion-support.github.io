@@ -1,44 +1,41 @@
 // @ts-nocheck
 
 export const metadata = {
-  
-  title: 'AI Ex e c u t, i, v, e Sco r e c a, r, d, s 2, 0, 2, 7: Prov, i, n, g ROI with L, i, v, e K, PIs'
+  title: 'AI Executive Scorecards 2027: Proving ROI with Live KPIs',
   description:
-    'Des, i, g, n ex e c u t, i, v, e-re, a, d, y AI sco r e c a, r, d, s t, h, a, t tie mo, d, e, l sp, e, n, d to b u s i n, e, s, s K, P, I, s. S, h, i, p guardrails m o n i, t, o, r SLIs, a, n, d demo n s t r, a, t, e ROI conti n u o u, sly.'
+    'Design executive-ready AI scorecards that tie model spend to business KPIs. Ship guardrailsmonitor SLIsand demonstrate ROI continuously.',
 };
 
-export default function P, a, g, e() {
+export default function Page() {
   return (
-    <div cl a s s N, a, m, e='min-h-screen bg-sl, a, t, e-950 t, e, x, t-wh, ite'>
-      <m, a, i, n cl a s s N, a, m, e='max-w-3xl mx-a, uto px-6 py-16'>
-        <h1 cl a s s N, a, m, e='t, e, x, t-4, xl f, o, n, t-ex t r a b, old mb-4'>
-          AI Ex e c u t, i, v, e Sco r e c a, r, d, s 2, 0, 2, 7
+    <div className='min-h-screen bg-slate-950 text-white'>
+      <main className='max-w-3xl mx-auto px-6 py-16'>
+        <h1 className='text-4xl font-extrabold mb-4'>
+          AI Executive Scorecards 2027
         </h1>
-        <p cl a s s N, a, m, e='t, e, x, t-sl, ate-300 mb-6'>
-          Pu b l i s, h, e, d: Janu, a, r, y 5, 2, 0, 2, 7 • 11 min r, e, a, d • S t r a t, e, g, y
+        <p className='text-slate-300 mb-6'>
+          Published: January 5, 2027 • 11 min read • Strategy
         </p>
-        <p cl a s s N, a, m, e='t, e, x, t-sl, ate-200 mb-4'>
-          Al, i, g, n AI inve s t m e, n, t, s with o u t c o, m, e, s. Bu, i, l, d l, i, v, e, ex e c u t, i, v, e-fac, i, n, g
-          sco r e c a, r, d, s wh, e, r, e ev, e, r, y agen, t, i, c w o r k f, l, o, w has cl, e, a, r budget s s a f, e, t, y
-          g a t e s, a, n, d mea s u r a, b, l, e K, P, I, s. Tie S, L, I, s and pol, i, c, y t, e, s, t resu, l, t, s to
-          b u s i n, e, s, s va, l, u, e and conti n u o u, s, l, y v a l i d, a, t, e imp, a, c, t.
+        <p className='text-slate-200 mb-4'>
+          Align AI investments with outcomes. Build live, executive-facing
+          scorecards where every agentic workflow has clear budgetssafety
+          gatesand measurable KPIs. Tie SLIs and policy test results to business
+          value and continuously validate impact.
         </p>
-        <h2 cl a s s N, a, m, e='t, e, x, t-2, xl f, o, n, t-b, old mt-8 mb-3'>W, h, a, t to Meas, u, r, e</h2>
-        <ul cl a s s N, a, m, e='l, i, s, t-d, i, s, c l, i, s, t-ins, i, d, e t, e, x, t-sl, a, t, e-200 sp, ace-y-2'>
-          <li>Reli a b i l, i, t, y S, L, I, s: succ, e, s, s r, a, t, e, t i m e o, u, t, s, bud, g, e, t ad h e r e, n, c, e</li>
-          <li>Qual, i, t, y: e, v, a, l p, a, s, s ra, t, e, s, hu, m, a, n rev, i, e, w del, t, a, s, er, r, o, r budg, e, t, s</li>
-          <li>Eff i c i e, n, c, y: c, o, s, t per t, a, s, k, ca, c, h, e hit ra, t, e, s, rout, i, n, g t, i, e, r mix</li>
-          <li>
-            B u s i n, e, s, s K, P, I, s: l, e, a, d con v e r s, i, o, n, cy, c, l, e timeCSAT r e v e, n, u, e l, i, f, t
-          </li>
+        <h2 className='text-2xl font-bold mt-8 mb-3'>What to Measure</h2>
+        <ul className='list-disc list-inside text-slate-200 space-y-2'>
+          <li>Reliability SLIs: success rate, timeouts, budget adherence</li>
+          <li>Quality: eval pass rates, human review deltas, error budgets</li>
+          <li>Efficiency: cost per task, cache hit rates, routing tier mix</li>
+          <li>Business KPIs: lead conversion, cycle timeCSATrevenue lift</li>
         </ul>
-        <h2 cl a s s N, a, m, e='t, e, x, t-2, xl f, o, n, t-b, old mt-8 mb-3'>Op e r a t, i, n, g Mo, d, e, l</h2>
-        <p cl a s s N, a, m, e='t, e, x, t-sl, ate-200 mb-4'>
-          S, h, i, p wee, k, l, y pol, i, c, y te, s, t, s, bud, g, e, t ri, s, k, y acti, o, n, s, and requ, i, r, e ap p r o v, a, l, s
-          on h, i, g, h-imp, a, c, t chan, g, e, s. R o l l b, a, c, k in s t a n, t, l, y on KPI regr e s s i, o, n, s. P, a, i, r
-          engi n e e r, i, n, g with fina, n, c, e and ope r a t i, o, n, s to gov, e, r, n cha, n, g, e.
+        <h2 className='text-2xl font-bold mt-8 mb-3'>Operating Model</h2>
+        <p className='text-slate-200 mb-4'>
+          Ship weekly policy tests, budget risky actions, and require approvals
+          on high-impact changes. Rollback instantly on KPI regressions. Pair
+          engineering with finance and operations to govern change.
         </p>
-      </m, a, i, n>
+      </main>
     </div>
   );
 }

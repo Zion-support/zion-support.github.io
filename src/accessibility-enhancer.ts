@@ -13,7 +13,7 @@ class AccessibilityEnhancer {
 
   public initialize(): void {
     if (this.isInitialized) return;
-    
+
     this.setupAccessibilityFeatures();
     this.isInitialized = true;
   }

@@ -1,4 +1,4 @@
-export interface BlogPost { 
+export interface BlogPost {
   slug: string;
   title: string;
   description: string;
@@ -6,17 +6,17 @@ export interface BlogPost {
   author: string;
   date: string;
   category: string;
-  tags: string[];
-  featured: boolean;
-  readTime: string;
-  image?: string;
+  publishedAt: string;
+  featured?: boolean;
+  readTime?: string;
 }
 
 export const posts: BlogPost[] = [
   {
     slug: 'ai-2027-operational-trust-blueprint',
     title: 'AI 2027: Operational Trust Blueprint',
-    description: 'Revolutionary operational trust framework for AI systems delivering 99.9% reliability and 95% cost reduction.',
+    description:
+      'Revolutionary operational trust framework for AI systems delivering 99.9% reliability and 95% cost reduction.',
     content: `
 # AI 2027: Operational Trust Blueprint
 
@@ -33,13 +33,13 @@ Revolutionary operational trust framework for AI systems delivering unprecedente
     category: 'AI Operations',
     tags: ['AI', 'Trust', 'Operations', '2027'],
     featured: true,
-    readTime: '15 min read',
-    image: '/images/ai-2027-operational-trust-blueprint.jpg',
+    readTime: '8 min read',
   },
   {
     slug: 'quantum-ai-optimization-2027',
     title: 'Quantum AI Optimization 2027: Exponential Performance',
-    description: 'Quantum AI optimization delivering exponential performance gains and unprecedented computational efficiency.',
+    description:
+      'Quantum AI optimization delivering exponential performance gains and unprecedented computational efficiency.',
     content: `
 # Quantum AI Optimization 2027: Exponential Performance
 
@@ -58,5 +58,5 @@ Quantum AI optimization delivering exponential performance gains and unprecedent
     featured: true,
     readTime: '18 min read',
     image: '/images/quantum-ai-optimization-2027.jpg',
-  }
+  },
 ];

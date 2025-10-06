@@ -1,4 +1,4 @@
-export interface January2026Content { 
+export interface January2026Content {
   id: string;
   title: string;
   description: string;
@@ -21,7 +21,8 @@ export const newJanuary2026Content: January2026Content[] = [
   {
     id: 'ai-2026-hyperconscious-computing',
     title: 'AI 2026: Hyperconscious Computing Revolution',
-    description: 'Revolutionary breakthrough in hyperconscious AI systems achieving genuine self-awareness and creative autonomy.',
+    description:
+      'Revolutionary breakthrough in hyperconscious AI systems achieving genuine self-awareness and creative autonomy.',
     content: `
 # AI 2026: Hyperconscious Computing Revolution
 
@@ -36,7 +37,12 @@ The next evolution of AI is here - systems that not only think but feel, create,
     author: 'Zion Tech Group',
     publishedAt: '2026-01-01',
     category: 'AI Consciousness',
-    tags: ['AI Consciousness', 'Hyperconscious Computing', '2026', 'Breakthrough'],
+    tags: [
+      'AI Consciousness',
+      'Hyperconscious Computing',
+      '2026',
+      'Breakthrough',
+    ],
     featured: true,
     readTime: '25 min read',
     image: '/images/ai-2026-hyperconscious-computing.jpg',
@@ -49,7 +55,8 @@ The next evolution of AI is here - systems that not only think but feel, create,
   {
     id: 'quantum-ai-synthesis-2026',
     title: 'Quantum AI Synthesis 2026: The Convergence Revolution',
-    description: 'Groundbreaking fusion of quantum computing and AI creating unprecedented computational capabilities.',
+    description:
+      'Groundbreaking fusion of quantum computing and AI creating unprecedented computational capabilities.',
     content: `
 # Quantum AI Synthesis 2026
 
@@ -73,5 +80,5 @@ The convergence of quantum computing and artificial intelligence opens new front
       starting: 'Contact for pricing',
       enterprise: 'Custom solutions available',
     },
-  }
+  },
 ];

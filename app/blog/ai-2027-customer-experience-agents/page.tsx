@@ -1,43 +1,42 @@
 // @ts-nocheck
 
 export const metadata = {
-  
-  title: 'AI 2, 0, 2, 7: C u s t o, m, e, r Exp e r i e, n, c, e Age, n, t, s — 24/7 Aut o n o m, ous CX'
+  title: 'AI 2027: Customer Experience Agents — 24/7 Autonomous CX',
   description:
-    'Dep, l, o, y trus, t, e, d CX age, n, t, s with budg, e, t, s, l, i, v, e KPIse v a l s, a, n, d inst, a, n, t r o l l b, a, c, k t, h, a, t reso, l, v, e 80% of tick, e, t, s auton o m o u, sly.'
+    'Deploy trusted CX agents with budgets, live KPIsevalsand instant rollback that resolve 80% of tickets autonomously.',
 };
 
-export default function P, a, g, e() {
+export default function Page() {
   return (
-    <m, a, i, n cl a s s N, a, m, e='min-h-screen bg-sl, a, t, e-950 t, e, x, t-wh, ite'>
-      <sect, i, o, n cl a s s N, a, m, e='py-20'>
-        <div cl a s s N, ame='max-w-3xl mx-a, u, t, o px-6'>
-          <h1 cl a s s N, ame='t, e, x, t-4, xl f, o, n, t-ex t r a b, o, l, d mb-4'>
-            AI 2, 0, 2, 7: C u s t o, m, e, r Exp e r i e, n, c, e Age, n, t, s — 24/7 Aut o n o m, o, u, s CX
+    <main className='min-h-screen bg-slate-950 text-white'>
+      <section className='py-20'>
+        <div className='max-w-3xl mx-auto px-6'>
+          <h1 className='text-4xl font-extrabold mb-4'>
+            AI 2027: Customer Experience Agents — 24/7 Autonomous CX
           </h1>
-          <p cl a s s N, ame='t, e, x, t-sl, a, t, e-300 mb-6'>
-            Budg, e, t, s, KPI‑lin, k, e, d scorecardse v a l s, a, n, d inst, a, n, t r o l l b, a, c, k to s, h, i, p
-            safe CX a u t o n, o, m, y.
+          <p className='text-slate-300 mb-6'>
+            Budgets, KPI‑linked scorecardsevalsand instant rollback to ship safe
+            CX autonomy.
           </p>
-          <div cl a s s N, ame='pr, o, s, e pr, o, s, e-inv, e, r, t'>
+          <div className='prose prose-invert'>
             <p>
-              T, h, i, s gu, i, d, e sh, o, w, s how to st, a, n, d up aut o n o m, o, u, s CX age, n, t, s with
-              gua r d r a, i, l, s: budgeted acti, o, n, s, KPI‑lin, k, e, d c a n a r, i, e, s, and one‑cl, i, c, k
-              r e c o v, e, r, y. Organi z a t i, o, n, s are re s o l v, i, n, g up to 80% of tick, e, t, s
-              auton o m o u, s, l, y with hig, h, e, r C, S, A, T and pred i c t a, b, l, e c, o, s, t.
+              This guide shows how to stand up autonomous CX agents with
+              guardrails: budgeted actions, KPI‑linked canaries, and one‑click
+              recovery. Organizations are resolving up to 80% of tickets
+              autonomously with higher CSAT and predictable cost.
             </p>
-            <h2>Key Capab i l i t, i, e, s</h2>
+            <h2>Key Capabilities</h2>
             <ul>
-              <li>Bud, g, e, t‑aw, a, r, e rout, i, n, g and ap p r o v, a, l, s for se n s i t, i, v, e acti, o, n, s</li>
+              <li>Budget‑aware routing and approvals for sensitive actions</li>
               <li>
-                L, i, v, e sco r e c a, r, d, s t, i, e, d to K, P, I, s (C, S, A, T, AHT, FCR) with r o l l b, a, c, k
-                t r i g g, e, r, s
+                Live scorecards tied to KPIs (CSAT, AHT, FCR) with rollback
+                triggers
               </li>
-              <li>Observ a b i l, i, t, y: tra, c, e, s, ev, a, l, s, pol, i, c, y te, s, t, s</li>
+              <li>Observability: traces, evals, policy tests</li>
             </ul>
           </div>
         </div>
-      </sect, i, o, n>
-    </m, a, i, n>
+      </section>
+    </main>
   );
 }

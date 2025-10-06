@@ -1,4 +1,4 @@
-export interface BlogPost { 
+export interface BlogPost {
   id: string;
   title: string;
   excerpt: string;
@@ -16,7 +16,8 @@ export const january2026NewBlogPosts: BlogPost[] = [
   {
     id: 'ai-safety-budgets-2026',
     title: 'AI Safety Budgets 2026: Enterprise Risk Management',
-    excerpt: 'Comprehensive framework for managing AI safety risks with budgeted approaches and measurable outcomes.',
+    excerpt:
+      'Comprehensive framework for managing AI safety risks with budgeted approaches and measurable outcomes.',
     content: 'Full content about AI safety budgets...',
     author: 'Zion Tech Group',
     publishedAt: '2026-01-15',
@@ -29,7 +30,8 @@ export const january2026NewBlogPosts: BlogPost[] = [
   {
     id: 'quantum-ai-integration-2026',
     title: 'Quantum AI Integration 2026: Next-Gen Computing',
-    excerpt: 'Revolutionary quantum AI integration delivering unprecedented computational capabilities.',
+    excerpt:
+      'Revolutionary quantum AI integration delivering unprecedented computational capabilities.',
     content: 'Full content about quantum AI integration...',
     author: 'Zion Tech Group',
     publishedAt: '2026-01-10',
@@ -38,5 +40,5 @@ export const january2026NewBlogPosts: BlogPost[] = [
     tags: ['Quantum AI', 'Computing', 'Integration', '2026'],
     featured: true,
     slug: 'quantum-ai-integration-2026',
-  }
+  },
 ];

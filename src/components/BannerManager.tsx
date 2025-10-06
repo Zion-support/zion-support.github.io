@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import React, { useState, useEffect } from 'react';
+import { AnimatePresence, motion } from 'framer-motion';
 
 interface BannerData {
   id: string;
@@ -70,12 +70,12 @@ const BannerManager: React.FC = () => {
     const interval = setInterval(() => {
       setCurrentBannerIndex((prev) => (prev + 1) % banners.length);
     }, 8000); // Change banner every 8 seconds
-    
+
     return () => clearInterval(interval);
   }, [banners.length]);
 
   const getBannerStyles = (type: Banner['type']) => {
-    switch(type) {
+    switch (type) {
       case 'promotion':
         return 'bg-gradient-to-r from-blue-500 to-purple-600 text-white';
       case 'success':
@@ -83,7 +83,7 @@ const BannerManager: React.FC = () => {
       case 'warning':
         return 'bg-gradient-to-r from-yellow-500 to-orange-600 text-white';
       case 'info':
-      default: 
+      default:
         return 'bg-gradient-to-r from-blue-600 to-indigo-600 text-white';
     }
   };

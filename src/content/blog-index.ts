@@ -3,7 +3,7 @@
  * Centralized index of all blog posts for easy discovery and navigation
  */
 
-export interface BlogPost { 
+export interface BlogPost {
   slug: string;
   title: string;
   description: string;
@@ -22,7 +22,8 @@ export const october2025Breakthroughs: BlogPost[] = [
   {
     slug: 'ai-2025-oct-01-neural-architecture-evolution-breakthrough',
     title: 'Neural Architecture Evolution 2025',
-    description: 'Self-designing AI models achieving 10,000x faster development, 97% accuracy improvement, and $25M annual savings through autonomous model evolution.',
+    description:
+      'Self-designing AI models achieving 10,000x faster development, 97% accuracy improvement, and $25M annual savings through autonomous model evolution.',
     category: 'AI Innovation',
     date: '2025-10-01',
     readTime: '25 min',
@@ -40,7 +41,8 @@ export const october2025Breakthroughs: BlogPost[] = [
   {
     slug: 'ai-2025-oct-01-quantum-inspired-optimization-enterprise',
     title: 'Quantum-Inspired Optimization 2025',
-    description: 'Revolutionary quantum-inspired algorithms solving enterprise problems 1000x faster with 99.8% optimality, delivering $42M annual value.',
+    description:
+      'Revolutionary quantum-inspired algorithms solving enterprise problems 1000x faster with 99.8% optimality, delivering $42M annual value.',
     category: 'Quantum Computing',
     date: '2025-10-01',
     readTime: '22 min',
@@ -58,7 +60,8 @@ export const october2025Breakthroughs: BlogPost[] = [
   {
     slug: 'ai-2025-oct-01-intelligent-automation-orchestration-platform',
     title: 'Intelligent Automation Orchestration 2025',
-    description: 'AI-powered automation platform achieving 98% process automation, 85% cost reduction, and $67M annual savings through intelligent orchestration.',
+    description:
+      'AI-powered automation platform achieving 98% process automation, 85% cost reduction, and $67M annual savings through intelligent orchestration.',
     category: 'Enterprise Automation',
     date: '2025-10-01',
     readTime: '28 min',
@@ -76,7 +79,8 @@ export const october2025Breakthroughs: BlogPost[] = [
   {
     slug: 'ai-2025-oct-03-continuous-intelligence-platforms',
     title: 'Continuous Intelligence 2025',
-    description: '100M+ events/sec with sub-50ms decisions, KPI scorecards, and safe rollback.',
+    description:
+      '100M+ events/sec with sub-50ms decisions, KPI scorecards, and safe rollback.',
     category: 'Real-Time AI',
     date: '2025-10-03',
     readTime: '10 min',
@@ -87,7 +91,8 @@ export const october2025Breakthroughs: BlogPost[] = [
   {
     slug: 'ai-2025-oct-03-autonomous-cloud-security',
     title: 'Autonomous Cloud Security 2025',
-    description: '99.98% threat neutralization under 5 seconds with policy-backed automations.',
+    description:
+      '99.98% threat neutralization under 5 seconds with policy-backed automations.',
     category: 'Security',
     date: '2025-10-03',
     readTime: '9 min',
@@ -98,7 +103,8 @@ export const october2025Breakthroughs: BlogPost[] = [
   {
     slug: 'ai-2025-oct-03-quantum-supply-chain-optimization',
     title: 'Quantum Supply Chain 2025',
-    description: '10,000x faster plans with hybrid quantum-inspired optimization and ML heuristics.',
+    description:
+      '10,000x faster plans with hybrid quantum-inspired optimization and ML heuristics.',
     category: 'Quantum Computing',
     date: '2025-10-03',
     readTime: '11 min',
@@ -109,7 +115,8 @@ export const october2025Breakthroughs: BlogPost[] = [
   {
     slug: 'ai-2025-oct-02-rollback-guardrails-blueprint',
     title: 'Runtime Rollback Guardrails Blueprint',
-    description: 'Implement instant rollbacks, canary scorecards, and objective quality budgets.',
+    description:
+      'Implement instant rollbacks, canary scorecards, and objective quality budgets.',
     category: 'Reliability',
     date: '2025-10-02',
     readTime: '9 min',
@@ -122,9 +129,7 @@ export const october2025Breakthroughs: BlogPost[] = [
 /**
  * All blog posts combined
  */
-export const allBlogPosts: BlogPost[] = [
-  ...october2025Breakthroughs,
-];
+export const allBlogPosts: BlogPost[] = [...october2025Breakthroughs];
 
 /**
  * Helper functions
