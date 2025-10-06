@@ -21,166 +21,19 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   structuredData
 }) => {
   useEffect(() => {
-    // Set document title
-    document.title = title;
-    
-    // Set meta description
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute('content', description);
-    } else {
-      const meta = document.createElement('meta');
-      meta.name = 'description';
-      meta.content = description;
-      document.head.appendChild(meta);
-    }
-
-    // Set meta keywords
-    const metaKeywords = document.querySelector('meta[name="keywords"]');
-    if (metaKeywords) {
-      metaKeywords.setAttribute('content', keywords.join(', '));
-    } else {
-      const meta = document.createElement('meta');
-      meta.name = 'keywords';
-      meta.content = keywords.join(', ');
-      document.head.appendChild(meta);
-    }
-
-    // Set canonical URL
-    if (canonicalUrl) {
-      const canonical = document.querySelector('link[rel="canonical"]');
-      if (canonical) {
-        canonical.setAttribute('href', canonicalUrl);
-      } else {
-        const link = document.createElement('link');
-        link.rel = 'canonical';
-        link.href = canonicalUrl;
-        document.head.appendChild(link);
-      }
-    }
-
-    // Set Open Graph tags
-    const ogTitle = document.querySelector('meta[property="og:title"]');
-    if (ogTitle) {
-      ogTitle.setAttribute('content', title);
-    } else {
-      const meta = document.createElement('meta');
-      meta.setAttribute('property', 'og:title');
-      meta.content = title;
-      document.head.appendChild(meta);
-    }
-
-    const ogDescription = document.querySelector('meta[property="og:description"]');
-    if (ogDescription) {
-      ogDescription.setAttribute('content', description);
-    } else {
-      const meta = document.createElement('meta');
-      meta.setAttribute('property', 'og:description');
-      meta.content = description;
-      document.head.appendChild(meta);
-    }
-
-    const ogImage = document.querySelector('meta[property="og:image"]');
-    if (ogImage) {
-      ogImage.setAttribute('content', ogImage);
-    } else {
-      const meta = document.createElement('meta');
-      meta.setAttribute('property', 'og:image');
-      meta.content = ogImage;
-      document.head.appendChild(meta);
-    }
-
-    // Set Twitter Card tags
-    const twitterCard = document.querySelector('meta[name="twitter:card"]');
-    if (!twitterCard) {
-      const meta = document.createElement('meta');
-      meta.name = 'twitter:card';
-      meta.content = 'summary_large_image';
-      document.head.appendChild(meta);
-    }
-
-    const twitterTitle = document.querySelector('meta[name="twitter:title"]');
-    if (!twitterTitle) {
-      const meta = document.createElement('meta');
-      meta.name = 'twitter:title';
-      meta.content = title;
-      document.head.appendChild(meta);
-    }
-
-    const twitterDescription = document.querySelector('meta[name="twitter:description"]');
-    if (!twitterDescription) {
-      const meta = document.createElement('meta');
-      meta.name = 'twitter:description';
-      meta.content = description;
-      document.head.appendChild(meta);
-    }
-
-    const twitterImage = document.querySelector('meta[name="twitter:image"]');
-    if (!twitterImage) {
-      const meta = document.createElement('meta');
-      meta.name = 'twitter:image';
-      meta.content = ogImage;
-      document.head.appendChild(meta);
-    }
-
-    // Add structured data
+    // Add structured data to the page
     if (structuredData) {
       const script = document.createElement('script');
       script.type = 'application/ld+json';
-      script.textContent = JSON.stringify(structuredData);
+      script.text = JSON.stringify(structuredData);
       document.head.appendChild(script);
+      
+      return () => {
+        document.head.removeChild(script);
+      };
     }
-<<<<<<< HEAD
     return undefined;
   }, [structuredData]);
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
-
-interface SEOOptimizerProps {
-  children: React.ReactNode;
-}
-
-const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ children }) => {
-  useEffect(() => {
-    // Add structured data for better SEO
-    const structuredData = {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Zion Tech Group",
-      "description": "Revolutionary AI solutions for enterprise",
-      "url": "https://ziontechgroup.com",
-      "logo": "https://ziontechgroup.com/logo.png",
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+1-302-464-0950",
-        "contactType": "customer service",
-        "email": "kleber@ziontechgroup.com"
-      }
-    };
-
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.text = JSON.stringify(structuredData);
-    document.head.appendChild(script);
-
-    return () => {
-      // Cleanup
-      const existingScript = document.querySelector('script[type="application/ld+json"]');
-      if (existingScript) {
-        document.head.removeChild(existingScript);
-      }
-    };
-  }, []);
->>>>>>> cursor/fix-errors-and-merge-to-main-cfe1
-=======
-  }, [title, description, keywords, canonicalUrl, ogImage, structuredData]);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-96bc
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-debd
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-dda3
 
   return (
     <>
@@ -189,25 +42,18 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ children }) => {
         <meta name="description" content={description} />
         <meta name="keywords" content={keywords.join(', ')} />
         {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
-<<<<<<< HEAD
         
         {/* Open Graph tags */}
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-96bc
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:image" content={ogImage} />
         <meta property="og:type" content="website" />
-<<<<<<< HEAD
         
         {/* Twitter Card tags */}
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-96bc
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
         <meta name="twitter:image" content={ogImage} />
-<<<<<<< HEAD
         
         {/* Additional SEO meta tags */}
         <meta name="robots" content="index, follow" />
@@ -218,34 +64,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ children }) => {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e62
-        <title>Zion Tech Group — Revolutionary AI Solutions for Enterprise</title>
-        <meta name="description" content="Transform your business with cutting-edge AI micro SaaS services, cloud automation, and enterprise IT solutions." />
-        <meta name="keywords" content="AI services, micro SaaS, IT services, cloud migration, DevOps, SRE, enterprise software, AI solutions, business transformation" />
-        <meta property="og:title" content="Zion Tech Group — Revolutionary AI Solutions for Enterprise" />
-        <meta property="og:description" content="Transform your business with cutting-edge AI micro SaaS services, cloud automation, and enterprise IT solutions." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com" />
-        <meta property="og:image" content="https://ziontechgroup.com/og-image.jpg" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Zion Tech Group — Revolutionary AI Solutions for Enterprise" />
-        <meta name="twitter:description" content="Transform your business with cutting-edge AI micro SaaS services, cloud automation, and enterprise IT solutions." />
-        <meta name="twitter:image" content="https://ziontechgroup.com/og-image.jpg" />
-        <link rel="canonical" href="https://ziontechgroup.com" />
->>>>>>> cursor/fix-errors-and-merge-to-main-cfe1
-=======
-        {structuredData && (
-          <script type="application/ld+json">
-            {JSON.stringify(structuredData)}
-          </script>
-        )}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-96bc
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-debd
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-dda3
       </Helmet>
       {children}
     </>
