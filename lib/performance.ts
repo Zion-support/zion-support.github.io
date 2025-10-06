@@ -8,7 +8,7 @@ import type { Metric } from 'web-vitals';
 // Extend Window interface for gtag
 declare global {
   interface Window {
-    gtag?: (...args: any[]) => void;
+    gtag?: (...args: unknown[]) => void;
   }
 }
 
@@ -222,12 +222,12 @@ export function getSlowResources(threshold: number = 1000): PerformanceResourceT
 export function getMemoryUsage(): Record<string, number> | null {
   if (
     typeof performance === 'undefined' ||
-    !(performance as any).memory
+    !(performance as unknown as { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory
   ) {
     return null;
   }
 
-  const memory = (performance as any).memory;
+  const memory = (performance as unknown as { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
   return {
     usedJSHeapSize: memory.usedJSHeapSize,
     totalJSHeapSize: memory.totalJSHeapSize,
@@ -330,15 +330,15 @@ export function monitorLayoutShifts(
 export function isSlowConnection(): boolean {
   if (
     typeof navigator === 'undefined' ||
-    !(navigator as any).connection
+    !(navigator as unknown as { connection?: { effectiveType?: string; saveData?: boolean } }).connection
   ) {
     return false;
   }
 
-  const connection = (navigator as any).connection;
+  const connection = (navigator as unknown as { connection: { effectiveType?: string; saveData?: boolean } }).connection;
   const slowTypes = ['slow-2g', '2g'];
   return (
-    slowTypes.includes(connection.effectiveType) || connection.saveData === true
+    (connection.effectiveType && slowTypes.includes(connection.effectiveType)) || connection.saveData === true
   );
 }
 
@@ -348,12 +348,12 @@ export function isSlowConnection(): boolean {
 export function getConnectionType(): string {
   if (
     typeof navigator === 'undefined' ||
-    !(navigator as any).connection
+    !(navigator as unknown as { connection?: { effectiveType?: string; type?: string } }).connection
   ) {
     return 'unknown';
   }
 
-  const connection = (navigator as any).connection;
+  const connection = (navigator as unknown as { connection: { effectiveType?: string; type?: string } }).connection;
   return connection.effectiveType || connection.type || 'unknown';
 }
 
