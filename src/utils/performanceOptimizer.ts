@@ -231,7 +231,7 @@ export const lazyLoadImages = (): void => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         const img = entry.target as HTMLImageElement;
-        img.src = img.dataset.src || '';
+        img.src = img.dataset['src'] || '';
         img.removeAttribute('data-src');
         imageObserver.unobserve(img);
       }
@@ -370,6 +370,51 @@ class PerformanceOptimizer {
       domContentLoaded: timing.domContentLoadedEventEnd - timing.navigationStart,
       firstPaint: performance.getEntriesByType('paint')[0]?.startTime || 0
     };
+  }
+
+  // Monitor long tasks
+  monitorLongTasks(callback: (entries: PerformanceEntry[]) => void): void {
+    if (typeof window === 'undefined' || !('PerformanceObserver' in window)) {
+      return;
+    }
+    
+    const observer = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      callback(entries);
+    });
+    
+    try {
+      observer.observe({ entryTypes: ['longtask'] });
+    } catch (e) {
+      // Long task API not supported
+      console.warn('Long task API not supported');
+    }
+  }
+
+  // Get performance summary
+  getPerformanceSummary(): {
+    averageRenderTime: number;
+    totalComponents: number;
+    memoryUsage: number;
+    slowComponents: number;
+  } {
+    const metrics = this.getMetrics();
+    return {
+      averageRenderTime: metrics['renderTime'] || 0,
+      totalComponents: metrics['components'] || 0,
+      memoryUsage: (performance as any).memory?.usedJSHeapSize || 0,
+      slowComponents: metrics['slowComponents'] || 0,
+    };
+  }
+
+  // Export metrics
+  exportMetrics(): Record<string, number> {
+    return this.getMetrics();
+  }
+
+  // Clear metrics
+  clearMetrics(): void {
+    this.metrics.clear();
   }
 
   // Initialize all optimizations
