@@ -1,9 +1,12 @@
 import { useEffect, useCallback, useRef } from 'react';
+<<<<<<< HEAD
 import performanceOptimizer from '../utils/performanceOptimizer';
 <<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-cfe1
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-e9bd
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-96bc
 
 // Mock analytics object for tracking
 const analytics = {
@@ -32,21 +35,13 @@ export const usePageLoadPerformance = () => {
           
           // Track each metric
           Object.entries(metrics).forEach(([key, value]) => {
-            analytics.trackPerformance(`page_load_${key}`, value);
+            analytics.trackPerformance(key, value);
           });
-          
-          // Track overall page load performance
-          analytics.track(
-            'page_load_complete',
-            'performance',
-            'complete',
-            undefined,
-            metrics.totalLoadTime
-          );
         }
       }
     };
 
+<<<<<<< HEAD
     // Track immediately if page is already loaded
     if (typeof window !== 'undefined' && document.readyState === 'complete') {
       trackPageLoad();
@@ -211,11 +206,17 @@ export const useLongTaskMonitoring = () => {
     return () => {
       observer.disconnect();
     };
+=======
+    // Track page load after component mounts
+    const timeoutId = setTimeout(trackPageLoad, 100);
+    
+    return () => clearTimeout(timeoutId);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-96bc
   }, []);
 };
 
 /**
- * Hook for measuring component render performance
+ * Hook for monitoring component render performance
  */
 export const useRenderPerformance = (componentName: string) => {
   const renderStart = useRef<number>(0);
@@ -224,69 +225,119 @@ export const useRenderPerformance = (componentName: string) => {
   useEffect(() => {
     renderStart.current = performance.now();
     renderCount.current += 1;
-
-    return () => {
-      const renderTime = performance.now() - renderStart.current;
-      analytics.trackPerformance(
-        `component_render_${componentName}`,
-        renderTime
-      );
-      
-      if (renderTime > 16) { // More than one frame at 60fps
-        analytics.track(
-          'slow_render',
-          'performance',
-          'detected',
-          componentName,
-          renderTime
-        );
-      }
-    };
   });
 
-  return {
-    renderCount: renderCount.current,
-    measureRender: useCallback((fn: () => void) => {
-      const start = performance.now();
-      fn();
-      const duration = performance.now() - start;
-      analytics.trackPerformance(`manual_${componentName}`, duration);
-      return duration;
-    }, [componentName])
-  };
+  useEffect(() => {
+    if (renderStart.current > 0) {
+      const renderTime = performance.now() - renderStart.current;
+      analytics.trackPerformance(`${componentName}_render`, renderTime);
+      
+      if (renderTime > 16) { // More than one frame
+        console.warn(`Slow render detected in ${componentName}: ${renderTime.toFixed(2)}ms`);
+      }
+    }
+  });
+};
+
+/**
+ * Hook for monitoring user interactions
+ */
+export const useInteractionPerformance = () => {
+  const trackInteraction = useCallback((eventName: string, startTime: number) => {
+    const endTime = performance.now();
+    const duration = endTime - startTime;
+    
+    analytics.trackPerformance(`interaction_${eventName}`, duration);
+    
+    if (duration > 100) { // More than 100ms
+      console.warn(`Slow interaction detected: ${eventName} took ${duration.toFixed(2)}ms`);
+    }
+  }, []);
+
+  return { trackInteraction };
 };
 
 /**
  * Hook for monitoring memory usage
  */
-export const useMemoryMonitoring = () => {
+export const useMemoryPerformance = () => {
   useEffect(() => {
-    if (typeof window === 'undefined' || !(performance as any).memory) {
-      return;
-    }
-
-    const checkMemory = () => {
-      const memory = (performance as any).memory;
-      const memoryUsage = {
-        used: memory.usedJSHeapSize,
-        total: memory.totalJSHeapSize,
-        limit: memory.jsHeapSizeLimit,
-        percentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100
+    if (typeof window !== 'undefined' && 'memory' in performance) {
+      const checkMemory = () => {
+        const memory = (performance as any).memory;
+        if (memory) {
+          const metrics = {
+            usedJSHeapSize: memory.usedJSHeapSize,
+            totalJSHeapSize: memory.totalJSHeapSize,
+            jsHeapSizeLimit: memory.jsHeapSizeLimit,
+          };
+          
+          Object.entries(metrics).forEach(([key, value]) => {
+            analytics.trackPerformance(`memory_${key}`, value, 'bytes');
+          });
+        }
       };
 
-      analytics.trackPerformance('memory_used', memoryUsage.used, 'bytes');
-      analytics.trackPerformance('memory_percentage', memoryUsage.percentage, '%');
+      // Check memory every 30 seconds
+      const intervalId = setInterval(checkMemory, 30000);
+      
+      return () => clearInterval(intervalId);
+    }
+  }, []);
+};
 
-      if (memoryUsage.percentage > 80) {
-        analytics.track('high_memory_usage', 'performance', 'warning', undefined, memoryUsage.percentage);
-      }
-    };
+/**
+ * Hook for monitoring Core Web Vitals
+ */
+export const useWebVitals = () => {
+  useEffect(() => {
+    if (typeof window !== 'undefined' && 'PerformanceObserver' in window) {
+      // First Contentful Paint
+      const fcpObserver = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (entry.name === 'first-contentful-paint') {
+            analytics.trackPerformance('FCP', entry.startTime);
+          }
+        }
+      });
+      fcpObserver.observe({ entryTypes: ['paint'] });
 
-    // Check memory every 30 seconds
-    const interval = setInterval(checkMemory, 30000);
-    checkMemory(); // Initial check
+      // Largest Contentful Paint
+      const lcpObserver = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        const lastEntry = entries[entries.length - 1];
+        analytics.trackPerformance('LCP', lastEntry.startTime);
+      });
+      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
 
-    return () => clearInterval(interval);
+      // First Input Delay
+      const fidObserver = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          const fid = entry.processingStart - entry.startTime;
+          analytics.trackPerformance('FID', fid);
+        }
+      });
+      fidObserver.observe({ entryTypes: ['first-input'] });
+
+      // Cumulative Layout Shift
+      let clsValue = 0;
+      const clsObserver = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (!(entry as any).hadRecentInput) {
+            clsValue += (entry as any).value;
+            analytics.trackPerformance('CLS', clsValue);
+          }
+        }
+      });
+      clsObserver.observe({ entryTypes: ['layout-shift'] });
+
+      return () => {
+        fcpObserver.disconnect();
+        lcpObserver.disconnect();
+        fidObserver.disconnect();
+        clsObserver.disconnect();
+      };
+    }
   }, []);
 <<<<<<< HEAD
 };
