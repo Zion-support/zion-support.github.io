@@ -48,149 +48,192 @@ const UltimateBusinessIntelligence2025Banner = () => {
         roi: '30,000%',
         success: '99.8%',
         timeline: '18 months',
+        efficiency: '500%'
+      },
+      readingTime: '45 min read',
       featured: true
     }
   ];
 
   useEffect(() => {
+    const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % content.length);
     }, 5000);
 
-    return () => clearInterval(interval);
+    return () => clearInterval(timer);
   }, [content.length]);
 
   if (!isVisible) return null;
 
-  const currentContent = content[currentSlide];
-
   return (
-<<<<<<< HEAD
-    <div className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 border-b border-white/10">
-      {/* Animated Background */}
+    <div className="relative overflow-hidden bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 py-20">
+      {/* Animated background effects */}
       <div className="absolute inset-0">
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 animate-pulse"></div>
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-yellow-500/5 via-orange-500/5 to-red-500/5 animate-pulse" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute top-10 left-10 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute top-40 right-20 w-96 h-96 bg-indigo-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute bottom-20 left-1/3 w-80 h-80 bg-cyan-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
       </div>
 
-      <div className="relative z-10 container mx-auto px-4 py-4">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center gap-4">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header Section */}
+        <div className="text-center mb-16">
+          <div className="flex items-center justify-center gap-2 mb-6">
+            <span className="text-2xl">🚀</span>
+            <span className="text-yellow-400 font-bold text-xl">
+              BREAKING: ULTIMATE BUSINESS INTELLIGENCE REVOLUTION 2025
+            </span>
+            <span className="text-2xl">⚡</span>
+          </div>
+
+          <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-6">
+            <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
+              AI 2025: The Ultimate Business Intelligence Revolution
+            </span>
+          </h2>
+          
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+            Transform your enterprise with next-generation AI-powered business intelligence that delivers unprecedented insights and competitive advantage.
+          </p>
+
+          <div className="flex items-center justify-center gap-8 text-gray-300">
             <div className="flex items-center gap-2">
-              <span className="text-yellow-400 font-bold text-sm">🚀 NEW BREAKTHROUGH</span>
-              <span className="text-white font-semibold">Ultimate Business Intelligence 2025</span>
+              <span className="text-2xl">📊</span>
+              <span>30,000% ROI</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="text-2xl">💰</span>
+              <span>$750B+ Savings</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="text-2xl">🎯</span>
+              <span>99.99% Accuracy</span>
             </div>
           </div>
-          <button
-            onClick={handleDismiss}
-            className="text-white/70 hover:text-white transition-colors p-1"
-            aria-label="Dismiss banner"
-          >
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          </button>
         </div>
 
-        <div className="mt-4 grid lg:grid-cols-3 gap-8">
-          <div className="lg:col-span-2">
-            <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
-              {currentContent.title}
-            </h2>
-            <p className="text-gray-300 mb-6 leading-relaxed">
-              {currentContent.description}
-            </p>
+        {/* Featured Content Carousel */}
+        <div className="relative mb-16">
+          <div className="overflow-hidden rounded-2xl">
+            <div 
+              className="flex transition-transform duration-500 ease-in-out"
+              style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+            >
+              {content.map((item, index) => (
+                <div key={item.id} className="w-full flex-shrink-0">
+                  <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-12 border border-white/20">
+                    <div className="grid md:grid-cols-2 gap-12 items-center">
+                      {/* Content */}
+                      <div>
+                        <div className="flex items-center gap-2 mb-4">
+                          <span className="px-3 py-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-sm font-bold rounded-full">
+                            {item.type}
+                          </span>
+                          <span className="px-3 py-1 bg-green-500 text-white text-sm font-bold rounded-full">
+                            FEATURED
+                          </span>
+                        </div>
 
-            {/* Success Metrics */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
-              <div className="text-center">
-                <div className="text-2xl font-bold text-cyan-400">{currentContent.metrics.roi}</div>
-                <div className="text-sm text-gray-400">ROI</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-green-400">{currentContent.metrics.savings}</div>
-                <div className="text-sm text-gray-400">Annual Savings</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-purple-400">{currentContent.metrics.accuracy}</div>
-                <div className="text-sm text-gray-400">Accuracy</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-yellow-400">{currentContent.metrics.speed || currentContent.metrics.timeline}</div>
-                <div className="text-sm text-gray-400">{currentContent.metrics.speed ? 'Faster' : 'Timeline'}</div>
-              </div>
-            </div>
+                        <h3 className="text-3xl font-bold text-white mb-6">
+                          {item.title}
+                        </h3>
 
-            {/* Action Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link
-                href={currentContent.url}
-                className="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold rounded-lg transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl"
-              >
-                Read {currentContent.type}
-              </Link>
-              <Link
-                href="/contact"
-                className="inline-flex items-center justify-center px-6 py-3 border-2 border-white/20 hover:border-white/40 text-white font-bold rounded-lg transition-all duration-300 transform hover:-translate-y-1"
-              >
-                Get Consultation
-              </Link>
-            </div>
+                        <p className="text-gray-300 text-lg mb-8 leading-relaxed">
+                          {item.description}
+                        </p>
 
-            {/* Content Type Badge */}
-            <div className="flex items-center gap-4 mt-4 text-sm">
-              <span className="px-3 py-1 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full font-semibold">
-                {currentContent.type}
-              </span>
-              <span className="text-gray-400">{currentContent.readingTime}</span>
-              {currentContent.featured && (
-                <span className="px-3 py-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-white rounded-full font-semibold">
-                  FEATURED
-                </span>
-              )}
-            </div>
-          </div>
+                        {/* Metrics */}
+                        <div className="grid grid-cols-2 gap-4 mb-8">
+                          {Object.entries(item.metrics).map(([key, value]) => (
+                            <div key={key} className="text-center">
+                              <div className="text-2xl font-bold text-cyan-400">{value}</div>
+                              <div className="text-gray-400 text-sm capitalize">{key}</div>
+                            </div>
+                          ))}
+                        </div>
 
-          {/* Content Preview Cards */}
-          <div className="lg:col-span-1">
-            <h3 className="text-lg font-semibold text-white mb-4">Featured Content</h3>
-            {content.map((item, index) => (
-              <div
-                key={item.id}
-                className={`bg-white/10 backdrop-blur-sm rounded-lg p-4 cursor-pointer transition-all duration-300 mb-3 ${
-                  index === currentSlide ? 'ring-2 ring-yellow-400 bg-white/20' : 'hover:bg-white/15'
-                }`}
-                onClick={() => setCurrentSlide(index)}
-              >
-                <div className="flex items-start justify-between mb-2">
-                  <h4 className="text-white font-semibold text-sm leading-tight">{item.title}</h4>
-                  <div className="flex items-center gap-2 text-xs text-gray-400">
-                    <span>{item.type}</span>
-                    <span>•</span>
-                    <span>{item.readingTime}</span>
+                        <div className="flex items-center gap-4">
+                          <Link
+                            href={item.url}
+                            className="group flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl"
+                          >
+                            <span>Read {item.type}</span>
+                            <span className="group-hover:translate-x-1 transition-transform">→</span>
+                          </Link>
+                          <span className="text-gray-400">{item.readingTime}</span>
+                        </div>
+                      </div>
+
+                      {/* Visual */}
+                      <div className="relative">
+                        <div className="bg-gradient-to-br from-cyan-500/20 to-blue-600/20 rounded-2xl p-8 border border-white/20">
+                          <div className="text-center">
+                            <div className="text-6xl mb-4">📊</div>
+                            <h4 className="text-2xl font-bold text-white mb-4">Business Intelligence Dashboard</h4>
+                            <div className="space-y-3">
+                              <div className="bg-white/10 rounded-lg p-3">
+                                <div className="text-cyan-400 font-bold">Real-time Analytics</div>
+                                <div className="text-gray-300 text-sm">Live data processing</div>
+                              </div>
+                              <div className="bg-white/10 rounded-lg p-3">
+                                <div className="text-blue-400 font-bold">Predictive Insights</div>
+                                <div className="text-gray-300 text-sm">AI-powered forecasting</div>
+                              </div>
+                              <div className="bg-white/10 rounded-lg p-3">
+                                <div className="text-purple-400 font-bold">Automated Reports</div>
+                                <div className="text-gray-300 text-sm">Zero-touch intelligence</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <div className="text-center">
-                  <div className="text-lg font-bold text-cyan-400">{item.metrics.roi}</div>
-                  <div className="text-xs text-gray-400">ROI</div>
-                </div>
-              </div>
-=======
->>>>>>> origin/merge-all-fixes
-            ))}
+              ))}
+            </div>
           </div>
 
-        {/* Progress Indicators */}
-        <div className="flex justify-center gap-2 mt-6">
-          {content.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentSlide(index)}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                index === currentSlide ? 'bg-yellow-400' : 'bg-white/30'
-              }`}
-              aria-label={`Go to slide ${index + 1}`}
-            />
-          ))}
+          {/* Navigation Dots */}
+          <div className="flex justify-center mt-8 space-x-2">
+            {content.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentSlide(index)}
+                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                  index === currentSlide ? 'bg-cyan-400' : 'bg-white/30'
+                }`}
+              />
+            ))}
+          </div>
+        </div>
+
+        {/* Call-to-Action Section */}
+        <div className="text-center bg-white/5 backdrop-blur-sm rounded-2xl p-12 border border-white/20">
+          <h3 className="text-3xl font-bold text-white mb-6">
+            Ready to Revolutionize Your Business Intelligence?
+          </h3>
+          
+          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            Join 500+ enterprises achieving 30,000% ROI with AI-powered business intelligence. 
+            Get expert guidance from Zion Tech Group's transformation specialists.
+          </p>
+
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <Link
+              href="/contact"
+              className="group flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl"
+            >
+              <span>Start Your Transformation</span>
+            </Link>
+            
+            <Link
+              href="/blog"
+              className="group flex items-center gap-3 border-2 border-white/30 hover:border-white/60 text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 hover:bg-white/10"
+            >
+              <span>Explore All Content</span>
+              <span className="group-hover:translate-x-1 transition-transform">→</span>
+            </Link>
+          </div>
         </div>
       </div>
     </div>
