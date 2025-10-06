@@ -90,15 +90,75 @@ export class PerformanceOptimizer {
     return Object.fromEntries(this.metrics);
   }
 
+  // Add critical resource hints
+  addCriticalResourceHints(): void {
+    if (typeof document === 'undefined') return;
+    
+    const hints = [
+      { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' },
+      { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com' },
+      { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+      { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossOrigin: 'anonymous' }
+    ];
+    
+    hints.forEach(hint => {
+      const link = document.createElement('link');
+      link.rel = hint.rel;
+      link.href = hint.href;
+      if (hint.crossOrigin) {
+        link.crossOrigin = hint.crossOrigin;
+      }
+      document.head.appendChild(link);
+    });
+  }
+
+  // Report web vitals
+  reportWebVitals(): void {
+    if (typeof window === 'undefined' || !window.performance) return;
+    
+    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+    if (navigation) {
+      const fcp = performance.getEntriesByName('first-contentful-paint')[0]?.startTime || 0;
+      const lcp = performance.getEntriesByName('largest-contentful-paint')[0]?.startTime || 0;
+      
+      console.log('Web Vitals:', {
+        fcp: fcp.toFixed(2) + 'ms',
+        lcp: lcp.toFixed(2) + 'ms',
+        loadTime: (navigation.loadEventEnd - navigation.fetchStart).toFixed(2) + 'ms'
+      });
+    }
+  }
+
+  // Measure page load performance
+  measurePageLoad(): void {
+    if (typeof window === 'undefined' || !window.performance) return;
+    
+    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+    if (navigation) {
+      const loadTime = navigation.loadEventEnd - navigation.fetchStart;
+      const domContentLoaded = navigation.domContentLoadedEventEnd - navigation.fetchStart;
+      
+      this.metrics.set('pageLoad', loadTime);
+      this.metrics.set('domContentLoaded', domContentLoaded);
+      
+      if (process.env.NODE_ENV === 'development') {
+        console.log(`Page Load: ${loadTime.toFixed(2)}ms`);
+        console.log(`DOM Content Loaded: ${domContentLoaded.toFixed(2)}ms`);
+      }
+    }
+  }
+
   // Initialize all optimizations
   initialize(): void {
     this.measurePerformance('lazyLoadImages', () => this.lazyLoadImages());
     this.measurePerformance('preloadCriticalResources', () => this.preloadCriticalResources());
     this.measurePerformance('optimizeScroll', () => this.optimizeScroll());
+    this.measurePerformance('addCriticalResourceHints', () => this.addCriticalResourceHints());
+    this.measurePerformance('reportWebVitals', () => this.reportWebVitals());
+    this.measurePerformance('measurePageLoad', () => this.measurePageLoad());
   }
 }
 
-<<<<<<< HEAD
 /**
  * Critical resource hints for better performance
  */
@@ -123,55 +183,40 @@ export const addCriticalResourceHints = (): void => {
   });
 };
 
-export const checkPerformanceBudget = (budget: PerformanceBudget): {
-  passed: boolean;
-  violations: string[];
-} => {
-  const violations: string[] = [];
-  
-  if (typeof window === 'undefined' || !window.performance) {
-    return { passed: true, violations };
+/**
+ * Clear old caches to prevent storage bloat
+ */
+export const clearOldCaches = (): void => {
+  if ('caches' in window) {
+    caches.keys().then(cacheNames => {
+      cacheNames.forEach(cacheName => {
+        if (cacheName.includes('old-') || cacheName.includes('v1-')) {
+          caches.delete(cacheName);
+        }
+      });
+    });
   }
-  
-  const timing = window.performance.timing;
-  const loadTime = timing.loadEventEnd - timing.navigationStart;
-  const interactiveTime = timing.domInteractive - timing.navigationStart;
-  
-  if (loadTime > budget.maxFirstLoad) {
-    violations.push(`First load time (${loadTime}ms) exceeds budget (${budget.maxFirstLoad}ms)`);
-  }
-  
-  if (interactiveTime > budget.maxInteractive) {
-    violations.push(`Time to interactive (${interactiveTime}ms) exceeds budget (${budget.maxInteractive}ms)`);
-  }
-  
-  return {
-    passed: violations.length === 0,
-    violations
-  };
 };
 
-export default {
-  prefetchResources,
-  preconnectDomains,
-  lazyLoadImages,
-  debounce,
-  throttle,
-  measurePageLoad,
-  reportWebVitals,
-  shouldUseWebP,
-  getConnectionQuality,
-  shouldLoadHeavyAssets,
-  requestIdleCallback,
-  cancelIdleCallback,
-  preloadRoute,
-  monitorLongTasks,
-  cacheStaticAssets,
-  clearOldCaches,
-  checkPerformanceBudget,
-  addCriticalResourceHints
+/**
+ * Check if performance budget is exceeded
+ */
+export const checkPerformanceBudget = (): boolean => {
+  const budget = {
+    fcp: 1800, // First Contentful Paint
+    lcp: 2500, // Largest Contentful Paint
+    fid: 100,  // First Input Delay
+    cls: 0.1   // Cumulative Layout Shift
+  };
+  
+  const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+  if (!navigation) return true;
+  
+  const fcp = performance.getEntriesByName('first-contentful-paint')[0]?.startTime || 0;
+  const lcp = performance.getEntriesByName('largest-contentful-paint')[0]?.startTime || 0;
+  
+  return fcp <= budget.fcp && lcp <= budget.lcp;
 };
-=======
+
 // Export singleton instance
 export const performanceOptimizer = PerformanceOptimizer.getInstance();
->>>>>>> origin/merge-all-fixes
