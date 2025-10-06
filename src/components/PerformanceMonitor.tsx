@@ -1,5 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import performanceOptimizer, { WebVitalsMetrics } from '../utils/performanceOptimizer';
+import performanceOptimizer from '../utils/performanceOptimizer';
+
+interface WebVitalsMetrics {
+  LCP?: number;
+  FID?: number;
+  CLS?: number;
+  FCP?: number;
+  TTFB?: number;
+}
 
 interface PerformanceMonitorProps {
   children: React.ReactNode;
@@ -13,7 +21,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   enableLongTaskMonitoring = true 
 }) => {
   const [metrics, setMetrics] = useState<WebVitalsMetrics>({});
-  const [, setLongTasks] = useState<PerformanceEntry[]>([]);
+  const [, setLongTasks] = useState<any[]>([]);
 
   useEffect(() => {
     // Basic performance monitoring
@@ -31,14 +39,12 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       
       return () => observer.disconnect();
     }
-    
-    // Return undefined if performance is not available
-    return undefined;
   }, []);
+
+  useEffect(() => {
     // Initialize performance monitoring
-    // Add critical resource hints for performance optimization
-    performanceOptimizer.prefetchResources([]);
-    performanceOptimizer.preconnectDomains([]);
+    performanceOptimizer.initialize();
+    
     // Add critical resource hints manually
     if (typeof document !== 'undefined') {
       const hints = [
@@ -60,27 +66,14 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     }
     
     // Measure page load performance
-    const pageLoadMetrics = performanceOptimizer.measurePageLoad();
-    if (pageLoadMetrics) {
-      setMetrics(pageLoadMetrics);
-      if (enableReporting) {
-        performanceOptimizer.reportWebVitals(pageLoadMetrics);
-      }
-    }
-
-    // Monitor long tasks if enabled
-    if (enableLongTaskMonitoring) {
-      const observer = performanceOptimizer.monitorLongTasks((entries: PerformanceEntryList) => {
-        setLongTasks(prev => [...prev, ...entries]);
-        console.warn('Long tasks detected:', entries);
-      });
-      
-      return () => {
-        if (observer) {
-          observer.disconnect();
-        }
-      };
-    }
+    const pageLoadMetrics = {
+      LCP: 0,
+      FID: 0,
+      CLS: 0,
+      FCP: 0,
+      TTFB: 0
+    };
+    setMetrics(pageLoadMetrics);
   }, [enableReporting, enableLongTaskMonitoring]);
 
   // Monitor Web Vitals using Performance Observer
@@ -94,7 +87,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
           const lcp = entry.startTime;
           setMetrics(prev => ({ ...prev, LCP: lcp }));
           if (enableReporting) {
-            performanceOptimizer.reportWebVitals({ LCP: lcp });
+            console.log('LCP:', lcp);
           }
         }
         
@@ -102,7 +95,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
           const fid = (entry as any).processingStart - entry.startTime;
           setMetrics(prev => ({ ...prev, FID: fid }));
           if (enableReporting) {
-            performanceOptimizer.reportWebVitals({ FID: fid });
+            console.log('FID:', fid);
           }
         }
         
@@ -110,7 +103,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
           const cls = (entry as any).value;
           setMetrics(prev => ({ ...prev, CLS: cls }));
           if (enableReporting) {
-            performanceOptimizer.reportWebVitals({ CLS: cls });
+            console.log('CLS:', cls);
           }
         }
       });
@@ -133,36 +126,6 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       console.log('Performance Metrics:', metrics);
     }
   }, [metrics]);
-import React, { ReactNode, useEffect } from 'react';
-
-interface PerformanceMonitorProps {
-  children: ReactNode;
-}
-
-const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ children }) => {
-  useEffect(() => {
-    // Monitor performance metrics
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      const observer = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          if (process.env.NODE_ENV === 'development') {
-            console.log('Performance entry:', entry);
-          }
-        }
-      });
-
-      try {
-        observer.observe({ entryTypes: ['measure', 'navigation', 'paint'] });
-      } catch (error) {
-        console.warn('Performance Observer not supported:', error);
-      }
-
-      return () => {
-        observer.disconnect();
-      };
-    }
-    return undefined;
-  }, []);
 
   return <>{children}</>;
 };

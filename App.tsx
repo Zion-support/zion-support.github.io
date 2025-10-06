@@ -110,6 +110,7 @@ class AppErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundary
   }
 }
 
+const ErrorBoundary = AppErrorBoundary;
 export { ErrorBoundary };
 
 function App() {
