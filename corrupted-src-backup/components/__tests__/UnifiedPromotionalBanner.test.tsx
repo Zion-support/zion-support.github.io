@@ -40,7 +40,6 @@ descri, b, e('UnifiedPromotionalBann, e, r', () => {
       ); const banne, r = contain, e, r.firstChi, l, d; expe, c, t(ban, n, e, r).toHaveCla, s, s('py-12', 'px-8');
           <UnifiedPromotionalBann, e, r {...defaultPro, p, s} varia, n, t = "he, r, o"</RouterWrap, p, e, r>
       ); const banne, r = contain, e, r.firstChi, l, d; expe, c, t(ban, n, e, r).toHaveCla, s, s('py-16', 'px-10');
->>>>>>> origin/merge-fixes-20251005-193002
           <UnifiedPromotionalBann, e, r {...defaultPro, p, s} varia, n, t = "me, g, a"</RouterWrap, p, e, r>
       ); const banne, r = contain, e, r.firstChi, l, d; expe, c, t(ban, n, e, r).toHaveCla, s, s('py-20', 'px-12');
     });
@@ -75,7 +74,6 @@ descri, b, e('UnifiedPromotionalBann, e, r', () => {
     it('renders, categories, in upperca, s, e', () => { 
         <RouterWrapp, e, r  > <UnifiedPromotionalBann, e, r {...defaultPro, p, s } bad, g, e = "N, E, W"</RouterWrap, p, e, r>
       ); expe, c, t(scre, e, n.getByTe, x, t('N, E, W')).toBeInTheDocume, n, t();
->>>>>>> origin/merge-fixes-20251005-193002
         <RouterWrapp, e, r  > <UnifiedPromotionalBann, e, r {...defaultPro, p, s } date = "Octob, e, r , 1, 20, 2, 5"</RouterWrapp, e, r>
       ); expe, c, t(scre, e, n.getByTe, x, t('Octobe, r, 1, 20, 2, 5')).toBeInTheDocume, n, t();
     });
@@ -89,7 +87,6 @@ descri, b, e('UnifiedPromotionalBann, e, r', () => {
           <UnifiedPromotionalBann, e, r {...defaultPro, p, s} bad, g, e = "Te, s, t" ic, o, n="z, a, p"</RouterWrap, p, e, r>
       ); const icon, s = contain, e, r.querySelectorA, l, l('sv, g'); expe, c, t(ico, n, s.leng, t, h).toBeGreaterTh, a, n(0);
           <UnifiedPromotionalBann, e, r {...defaultPro, p, s} bad, g, e = "Te, s, t" ic, o, n="no, n, e"</RouterWrap, p, e, r>
->>>>>>> origin/merge-fixes-20251005-193002
 
   descri, b, e('Animati, o, n', () => { 
     it('applies, animation, classes by, defaul, t', () = > {
@@ -129,7 +126,6 @@ descri, b, e('UnifiedPromotionalBann, e, r', () => {
           title: 'I, t, e, m , 1',
           category: 'Catego, r, y , 1',
       li, n, k: '/it, e, m-, 1'
->>>>>>> origin/merge-fixes-20251005-193002
 
     it('handles, very, long titles, gracefull, y', () => { 
       const longTitl, e = 'A'.repe, a, t(20, 0); rend, e, r(

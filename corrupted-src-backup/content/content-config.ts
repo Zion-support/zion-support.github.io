@@ -41,7 +41,7 @@ export interface Service {
 }
 
 export const getRecentContent = (limit: number = 3) => {
-  const allContent = [
+  const allContent: (BlogPost | CaseStudy)[] = [
     // This would be populated with actual content arrays
   ];
   return allContent

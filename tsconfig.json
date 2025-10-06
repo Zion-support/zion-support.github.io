@@ -9,19 +9,23 @@
     ],
     "module": "ESNext",
     "skipLibCheck": true,
-    "moduleResolution": "node",
     "allowImportingTsExtensions": false,
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "strict": false,
+<<<<<<< HEAD
+=======
+    "jsxImportSource": "react",
+>>>>>>> main
+    "strict": true,
     "strictNullChecks": true,
     "noUnusedLocals": false,
     "noUnusedParameters": false,
     "noFallthroughCasesInSwitch": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
+    "moduleResolution": "bundler",
     "baseUrl": ".",
     "paths": {
       "@/*": [
@@ -45,18 +49,20 @@
     "noImplicitAny": true,
     "noImplicitReturns": true,
     "noImplicitThis": true,
-    "strictNullChecks": false,
-    "exactOptionalPropertyTypes": false,
-    "noImplicitOverride": false,
-    "noPropertyAccessFromIndexSignature": false,
-    "noUncheckedIndexedAccess": false,
-    "allowUnusedLabels": true,
-    "allowUnreachableCode": true,
-    "verbatimModuleSyntax": false
+    "strictNullChecks": true,
+    "exactOptionalPropertyTypes": true,
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noUncheckedIndexedAccess": true,
+    "allowUnusedLabels": false,
+    "allowUnreachableCode": false,
+    "verbatimModuleSyntax": true
   },
   "include": [
     "app/**/*",
-    "src/**/*"
+    "src/**/*",
+    "App.tsx",
+    "components/**/*"
   ],
   "exclude": [
     "node_modules",
@@ -111,7 +117,19 @@
     "SidebarNavigation.tsx",
     "api-documentation.tsx",
     "app/components/NewContentPromotionalBanner2026.tsx",
-    "app/components/NewestContent2025Banner.tsx"
+    "app/components/NewestContent2025Banner.tsx",
+<<<<<<< HEAD
+    "api/**",
+    "lib/**"
+=======
+    "utils/bannerLazyLoader.ts",
+    "utils/bannerPrioritization.ts",
+    "utils/bannerRegistry.ts",
+    "utils/bannerRotationSystem.ts",
+    "utils/comprehensiveOptimizer.ts",
+    "utils/performanceUtils.ts",
+    "utils/seoUtils.ts"
+>>>>>>> main
   ],
   "references": [
     {

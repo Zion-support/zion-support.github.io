@@ -26,7 +26,7 @@ const SystemMonitor: React.FC = () => {
       <div>
         Memory:{' '}
         {Math.round(
-          (performance as any).memory?.usedJSHeapSize / 1024 / 1024 || 0,
+          (performance as any).memory?.usedJSHeapSize / 1024 / 1024 || 0
         )}
         MB
       </div>
