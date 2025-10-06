@@ -69,11 +69,7 @@ class EnhancedErrorHandler {
     const fullContext: ErrorContext = {
       component: context.component || 'unknown',
       action: context.action || 'unknown',
-<<<<<<< HEAD
       userId: context.userId || 'anonymous',
-=======
-      userId: context.userId || '',
->>>>>>> origin/by9dba-codex/implement-light/dark-theme-with-persistence
       timestamp: now,
       userAgent: navigator.userAgent,
       url: window.location.href,
