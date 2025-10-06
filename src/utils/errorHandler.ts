@@ -36,8 +36,8 @@ class ErrorHandler {
       stack: typeof error === 'string' ? '' : error.stack || '',
       context: {
         timestamp: Date.now(),
-        userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : '',
-        url: typeof window !== 'undefined' ? window.location.href : '',
+        ...(typeof window !== 'undefined' && { userAgent: window.navigator.userAgent }),
+        ...(typeof window !== 'undefined' && { url: window.location.href }),
         ...context,
       } as ErrorContext,
       severity,

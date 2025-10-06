@@ -4,7 +4,7 @@
  */
 
 import { useEffect, useCallback, useRef } from 'react';
-import performanceOptimizer from '../utils/performanceOptimizer';
+import { performanceOptimizer } from '../utils/performanceOptimizer';
 import analytics from '../utils/analytics';
 
 export interface PerformanceMetrics {
@@ -102,8 +102,8 @@ export const usePageLoadPerformance = () => {
             domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
             loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
             firstByte: navigation.responseStart - navigation.requestStart,
-            domInteractive: navigation.domInteractive - navigation.navigationStart,
-            totalLoadTime: navigation.loadEventEnd - navigation.navigationStart,
+            domInteractive: navigation.domInteractive - navigation.fetchStart,
+            totalLoadTime: navigation.loadEventEnd - navigation.fetchStart,
           };
 
           // Track each metric
@@ -120,6 +120,7 @@ export const usePageLoadPerformance = () => {
     // Track immediately if page is already loaded
     if (document.readyState === 'complete') {
       trackPageLoad();
+      return undefined;
     } else {
       // Wait for load event
       window.addEventListener('load', trackPageLoad);
@@ -157,16 +158,18 @@ export const useResourcePerformance = () => {
  */
 export const useLongTaskMonitoring = () => {
   useEffect(() => {
-    const observer = performanceOptimizer.monitorLongTasks((entries) => {
-      entries.forEach((entry) => {
+    if (typeof window === 'undefined' || !window.PerformanceObserver) return;
+
+    const observer = new PerformanceObserver((list) => {
+      list.getEntries().forEach((entry) => {
         analytics.track('long_task', 'performance', 'detected', undefined, entry.duration);
       });
     });
 
+    observer.observe({ entryTypes: ['longtask'] });
+
     return () => {
-      if (observer) {
-        observer.disconnect();
-      }
+      observer.disconnect();
     };
   }, []);
 };

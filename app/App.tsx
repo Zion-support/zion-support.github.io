@@ -21,6 +21,9 @@ const HomePage = lazy(() => import('./page'));
 
 // Utils
 import { performanceOptimizer } from '../src/utils/performanceOptimizer';
+import { performanceEnhancer } from '../src/utils/performanceEnhancer';
+import { enhancedErrorHandler } from '../src/utils/enhancedErrorHandler';
+import { accessibilityEnhancer } from '../src/utils/accessibilityEnhancer';
 
 // Styles
 import '../index.css';
@@ -32,7 +35,19 @@ const App: React.FC = () => {
 
     // Initialize performance monitoring
     performanceOptimizer.lazyLoadImages();
-    performanceOptimizer.addCriticalResourceHints();
+    performanceOptimizer.preloadCriticalResources();
+    
+    // Initialize enhanced performance monitoring
+    performanceEnhancer.initialize();
+    
+    // Initialize enhanced error handling
+    enhancedErrorHandler.handleError(new Error('App initialized'), {
+      component: 'App',
+      action: 'initialization'
+    });
+    
+    // Initialize accessibility enhancements
+    accessibilityEnhancer.initialize();
     
     // Initialize Web Vitals monitoring
     if (typeof window !== 'undefined' && 'performance' in window) {
@@ -46,12 +61,18 @@ const App: React.FC = () => {
     console.log(
       '🚀 Zion Tech Group App initialized with comprehensive monitoring',
     );
+
+    // Cleanup on unmount
+    return () => {
+      performanceEnhancer.cleanup();
+      accessibilityEnhancer.cleanup();
+    };
   }, []);
 
   return (
     <HelmetProvider>
       <ErrorBoundary>
-        <PerformanceMonitor>
+        <div>
           <SEOOptimizer>
             <AccessibilityEnhancer>
               <Router>
@@ -87,7 +108,7 @@ const App: React.FC = () => {
               </Router>
             </AccessibilityEnhancer>
           </SEOOptimizer>
-        </PerformanceMonitor>
+        </div>
       </ErrorBoundary>
     </HelmetProvider>
   );
