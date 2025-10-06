@@ -12,7 +12,7 @@ import PerformanceDashboard from './components/PerformanceDashboard';
 import HomePage from './page';
 
 // Utils
-// import performanceOptimizer from '../src/utils/performanceOptimizer';
+import performanceOptimizer from '../src/utils/performanceOptimizer';
 
 // Styles
 import '../index.css';
@@ -23,8 +23,7 @@ const App: React.FC = () => {
     console.log('App initialized');
 
     // Initialize performance monitoring
-    console.log('Performance monitoring initialized');
-
+    performanceOptimizer.lazyLoadImages();
     console.log('Performance monitoring initialized');
     console.log(
       '🚀 Zion Tech Group App initialized with comprehensive monitoring',
@@ -34,7 +33,8 @@ const App: React.FC = () => {
   return (
     <HelmetProvider>
       <ErrorBoundary>
-        <SEOOptimizer>
+        <div>
+          <SEOOptimizer />
           <AccessibilityEnhancer>
             <Router>
               <div className='App'>
@@ -66,7 +66,7 @@ const App: React.FC = () => {
               </div>
             </Router>
           </AccessibilityEnhancer>
-        </SEOOptimizer>
+        </div>
       </ErrorBoundary>
     </HelmetProvider>
   );
