@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import { IntegrationsState } from './types';
+import type { IntegrationsState } from './types';
 
 const DATA_DIR = path.resolve(process.cwd(), 'data', 'integrations');
 const STATE_FILE = path.join(DATA_DIR, 'state.json');
@@ -9,7 +10,6 @@ function ensureDataDir(): void {
   if (!fs.existsSync(DATA_DIR)) {
     fs.mkdirSync(DATA_DIR, { recursive: true });
   }
-  
   if (!fs.existsSync(STATE_FILE)) {
     const initial: IntegrationsState = {
       connections: [],
@@ -23,7 +23,6 @@ function ensureDataDir(): void {
 
 export function readState(): IntegrationsState {
   ensureDataDir();
-  
   try {
     const raw = fs.readFileSync(STATE_FILE, 'utf8');
     return JSON.parse(raw) as IntegrationsState;
