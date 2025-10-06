@@ -5,27 +5,18 @@ import performanceOptimizer from './utils/performanceOptimizer';
 // Initialize performance monitoring
 export function initializePerformanceMonitoring(): void {
   // Initialize performance optimizer
+  performanceOptimizer.initialize();
   performanceOptimizer.lazyLoadImages();
   
-  // Track Web Vitals
-  const metrics = performanceOptimizer.measurePageLoad();
-  if (metrics) {
-    performanceOptimizer.reportWebVitals(metrics);
-  }
-  
   // Monitor long tasks
-  const observer = new PerformanceObserver((list) => {
-    const entries = list.getEntries();
-    entries.forEach((entry: PerformanceEntry) => {
-      analytics.track('long_task', 'performance', 'detected', undefined, entry.duration, { duration: entry.duration });
+  if ('PerformanceObserver' in window) {
+    const observer = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      entries.forEach((entry: PerformanceEntry) => {
+        analytics.track('long_task', 'performance', 'detected', undefined, entry.duration);
+      });
     });
-  });
-  observer.observe({ entryTypes: ['longtask'] });
-  
-  // Track additional performance metrics
-  const timingMetrics = performanceOptimizer.measurePageLoad();
-  if (timingMetrics) {
-    performanceOptimizer.reportWebVitals(timingMetrics);
+    observer.observe({ entryTypes: ['longtask'] });
   }
 }
 

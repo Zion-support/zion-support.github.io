@@ -149,14 +149,14 @@ export const testUtils = {
       return fn(...args);
     };
 
-    (spyFn as Function & { callCount: () => number; lastArgs: () => unknown[]; reset: () => void }).callCount = () => callCount;
-    (spyFn as Function & { callCount: () => number; lastArgs: () => unknown[]; reset: () => void }).lastArgs = () => lastArgs;
-    (spyFn as Function & { callCount: () => number; lastArgs: () => unknown[]; reset: () => void }).reset = () => {
+    (spyFn as unknown as Function & { callCount: () => number; lastArgs: () => unknown[]; reset: () => void }).callCount = () => callCount;
+    (spyFn as unknown as Function & { callCount: () => number; lastArgs: () => unknown[]; reset: () => void }).lastArgs = () => lastArgs;
+    (spyFn as unknown as Function & { callCount: () => number; lastArgs: () => unknown[]; reset: () => void }).reset = () => {
       callCount = 0;
       lastArgs = [];
     };
 
-    return spyFn as Function & { callCount: () => number; lastArgs: () => unknown[]; reset: () => void };
+    return spyFn as unknown as Function & { callCount: () => number; lastArgs: () => unknown[]; reset: () => void };
   },
 
   async: (fn: Function) => {

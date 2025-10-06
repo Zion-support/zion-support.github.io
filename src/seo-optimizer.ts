@@ -31,7 +31,7 @@ export const seoOptimizer = {
   trackPageView: () => {
     // Basic analytics tracking
     if (typeof window !== 'undefined' && (window as GtagWindow).gtag) {
-      (window as GtagWindow).gtag('config', 'GA_MEASUREMENT_ID', {
+      (window as GtagWindow).gtag!('config', 'GA_MEASUREMENT_ID', {
         page_title: document.title,
         page_location: window.location.href,
       });
