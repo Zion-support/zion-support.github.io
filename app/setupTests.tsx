@@ -29,10 +29,9 @@ class MockIntersectionObserver implements IntersectionObserver {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   unobserve(_target: Element) {}
   takeRecords(): IntersectionObserverEntry[] { return []; }
-} as unknown as typeof IntersectionObserver;
+}
 
-global.IntersectionObserver =
-  MockIntersectionObserver as typeof IntersectionObserver;
+global.IntersectionObserver = MockIntersectionObserver as typeof IntersectionObserver;
 
 // Mock ResizeObserver
 global.ResizeObserver = class ResizeObserver {
