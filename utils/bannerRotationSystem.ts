@@ -134,10 +134,15 @@ export const selectBannersForRotation = (allBanners: BannerConfig[], maxBanners:
  * Get banner analytics
  */
 export const getBannerAnalytics = (bannerId?: string) => {
+<<<<<<< HEAD
   if (!bannerId) return null;
   
   const impressions = getStoredImpressions();
   const bannerImpressions = impressions.filter(imp => imp.bannerId === bannerId);
+=======
+  const impressions = getBannerImpressions();
+  const bannerImpressions = bannerId ? impressions.filter(imp => imp.bannerId === bannerId) : impressions;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0a61
   
   // Calculate engagement rate
   const clicks = bannerImpressions.filter(imp => imp.clicked).length;
@@ -150,13 +155,21 @@ export const getBannerAnalytics = (bannerId?: string) => {
   // Calculate fatigue score (too many impressions = lower score)
   const fatigueScore = Math.max(0, 1 - (bannerImpressions.length / 50));
   
+<<<<<<< HEAD
+=======
+  // Return analytics data
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0a61
   return {
     totalImpressions: bannerImpressions.length,
     clicks,
     engagementRate,
     recencyScore,
     fatigueScore,
+<<<<<<< HEAD
     score: (engagementRate * 0.3) + (recencyScore * 0.2) + (fatigueScore * 0.1)
+=======
+    overallScore: (engagementRate * 0.3) + (recencyScore * 0.2) + (fatigueScore * 0.1)
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0a61
   };
 };
 
@@ -360,3 +373,4 @@ export default {
   trackBannerClickWithPage,
   trackBannerVisibility
 };
+

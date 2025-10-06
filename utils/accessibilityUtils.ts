@@ -129,9 +129,15 @@ export const colorContrast = {
     return 0.2126 * (rs || 0) + 0.7152 * (gs || 0) + 0.0722 * (bs || 0);
   },
   // Calculate contrast ratio
+<<<<<<< HEAD
   getContrastRatio: (_color1: [number, number, number], _color2: [number, number, number]): number => {
     const lum1 = colorContrast.getLuminance(..._color1);
     const lum2 = colorContrast.getLuminance(..._color2);
+=======
+  getContrastRatio: (color1: [number, number, number], color2: [number, number, number]): number => {
+    const lum1 = colorContrast.getLuminance(...color1);
+    const lum2 = colorContrast.getLuminance(...color2);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0a61
     const brightest = Math.max(lum1, lum2);
     const darkest = Math.min(lum1, lum2);
     return (brightest + 0.05) / (darkest + 0.05);
@@ -281,6 +287,10 @@ export const accessibilityTesting = {
       score,
     };
   },
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0a61
   // Check if element is focusable
   isFocusable: (element: HTMLElement): boolean => {
     const focusableSelectors = [
