@@ -14,10 +14,7 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-<<<<<<< HEAD
     "jsxImportSource": "react",
-=======
->>>>>>> main
     "strict": true,
     "strictNullChecks": true,
     "noUnusedLocals": false,
@@ -59,13 +56,9 @@
   },
   "include": [
     "app/**/*",
-<<<<<<< HEAD
     "src/**/*",
     "App.tsx",
     "components/**/*"
-=======
-    "src/**/*"
->>>>>>> main
   ],
   "exclude": [
     "node_modules",
@@ -113,10 +106,7 @@
     "app/case-studies/**/*",
     "app/guides/**/*",
     "app/components/**/*",
-<<<<<<< HEAD
     "src/components/disabled-corrupted/**",
-=======
->>>>>>> main
     "EnhancedFooter.tsx",
     "EnhancedHeader.tsx",
     "EnhancedNavigation.tsx",
@@ -125,60 +115,19 @@
     "api-documentation.tsx",
     "app/components/NewContentPromotionalBanner2026.tsx",
     "app/components/NewestContent2025Banner.tsx",
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572
     "api/**",
     "lib/**",
-    "utils/seoUtils.ts"
-<<<<<<< HEAD
->>>>>>> main
-=======
-<<<<<<< HEAD
-    "utils/**/*",
+    "utils/**",
+    "src/utils/**",
     "blog/**",
     "backup-problematic-files/**",
     "automation/**",
     "**/*.disabled/**",
     "**/*.backup/**"
-=======
-    "utils/accessibilityUtils.ts",
-    "utils/bannerLazyLoader.ts",
-    "utils/bannerRegistry.ts",
-    "utils/bannerRotationSystem.ts",
-    "utils/bannerPrioritization.ts",
-    "utils/comprehensiveOptimizer.ts",
-    "utils/performanceUtils.ts",
-    "utils/seoUtils.ts"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d
-=======
-    "utils/bannerLazyLoader.ts",
-    "utils/bannerPrioritization.ts",
-    "utils/bannerRegistry.ts",
-    "utils/bannerRotationSystem.ts",
-    "utils/comprehensiveOptimizer.ts",
-    "utils/performanceUtils.ts",
-    "utils/**",
-    "src/utils/**"
-=======
-    "utils/seoUtils.ts",
-    "src/utils/performanceOptimizer.ts"
->>>>>>> b0d6dda8406c2e54af3529a18b3e8c5f6ab37739
-=======
-    "utils/**/*"
->>>>>>> 40f0d19ecc0819e0cd100e68e36dd415011c7be9
->>>>>>> main
   ],
   "references": [
     {
       "path": "./tsconfig.node.json"
     }
-<<<<<<< HEAD
-=======
-=======
->>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572
->>>>>>> main
   ]
 }
