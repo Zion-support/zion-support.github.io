@@ -1,7 +1,7 @@
 import React from 'react';
-// Using regular anchor tags instead of react-router-dom for simplicity
+<<<<<<< HEAD:app/layout.tsx
+import Link from 'next/link';
 import './globals.css';
-
 // Metadata for SEO - handled by React Helmet in Vite projects
 const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
@@ -37,32 +37,35 @@ const metadata = {
     },
   },
 };
-
 function Header() {
   return (
     <header className='border-b border-gray-200 sticky top-0 z-50 bg-white shadow-sm'>
       <nav className='flex items-center justify-between px-4 py-3 max-w-6xl mx-auto'>
-        <a
+<<<<<<< HEAD:app/layout.tsx
+        <Link
           href='/'
           className='font-bold text-lg text-gray-900 hover:text-blue-600 transition-colors'
         >
           Zion Tech Group
-        </a>
+<<<<<<< HEAD:app/layout.tsx
+        </Link>
         <div className='hidden md:flex gap-6'>
-          <a
+          <Link
             href='/about'
             className='text-gray-700 hover:text-blue-600 transition-colors'
           >
             About
-          </a>
-          <a
+<<<<<<< HEAD:app/layout.tsx
+          </Link>
+          <Link
             href='/services'
             className='text-gray-700 hover:text-blue-600 transition-colors'
           >
             Services
-          </a>
+<<<<<<< HEAD:app/layout.tsx
+          </Link>
           <div className='relative group'>
-            <a
+            <Link
               href='/services/ai-autonomous-operations-2026'
               className='text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1'
             >
@@ -70,10 +73,12 @@ function Header() {
               <span className='bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-2 py-1 rounded-full text-xs font-semibold'>
                 REVOLUTIONARY
               </span>
-            </a>
+<<<<<<< HEAD:app/layout.tsx
+            </Link>
           </div>
           <div className='relative group'>
-            <a
+            <Link
+<<<<<<< HEAD:app/layout.tsx
               href='/content-hub'
               className='text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1'
             >
@@ -81,10 +86,12 @@ function Header() {
               <span className='bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-2 py-1 rounded-full text-xs font-semibold'>
                 NEW 2027
               </span>
-            </a>
+<<<<<<< HEAD:app/layout.tsx
+            </Link>
           </div>
           <div className='relative group'>
-            <a
+            <Link
+<<<<<<< HEAD:app/layout.tsx
               href='/blog/ai-2026-autonomous-business-intelligence-breakthrough'
               className='text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1'
             >
@@ -92,10 +99,12 @@ function Header() {
               <span className='bg-gradient-to-r from-green-500 to-emerald-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse'>
                 BREAKTHROUGH
               </span>
-            </a>
+<<<<<<< HEAD:app/layout.tsx
+            </Link>
           </div>
           <div className='relative group'>
-            <a
+            <Link
+<<<<<<< HEAD:app/layout.tsx
               href='/blog/ai-2026-quantum-enhanced-analytics'
               className='text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1'
             >
@@ -103,10 +112,12 @@ function Header() {
               <span className='bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse'>
                 1000x SPEED
               </span>
-            </a>
+<<<<<<< HEAD:app/layout.tsx
+            </Link>
           </div>
           <div className='relative group'>
-            <a
+            <Link
+<<<<<<< HEAD:app/layout.tsx
               href='/blog/ai-2028-next-generation-autonomous-enterprise'
               className='text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1'
             >
@@ -114,10 +125,12 @@ function Header() {
               <span className='bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse'>
                 REVOLUTIONARY
               </span>
-            </a>
+<<<<<<< HEAD:app/layout.tsx
+            </Link>
           </div>
           <div className='relative group'>
-            <a
+            <Link
+<<<<<<< HEAD:app/layout.tsx
               href='/blog/ai-2028-neuromorphic-superintelligence'
               className='text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1'
             >
@@ -125,10 +138,12 @@ function Header() {
               <span className='bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse'>
                 SUPERINTELLIGENCE
               </span>
-            </a>
+<<<<<<< HEAD:app/layout.tsx
+            </Link>
           </div>
           <div className='relative group'>
-            <a
+            <Link
+<<<<<<< HEAD:app/layout.tsx
               href='/blog/ai-2027-quantum-breakthrough-enterprise'
               className='text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1'
             >
@@ -136,10 +151,12 @@ function Header() {
               <span className='bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-2 py-1 rounded-full text-xs font-semibold'>
                 QUANTUM
               </span>
-            </a>
+<<<<<<< HEAD:app/layout.tsx
+            </Link>
           </div>
           <div className='relative group'>
-            <a
+            <Link
+<<<<<<< HEAD:app/layout.tsx
               href='/blog'
               className='text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1'
             >
@@ -150,10 +167,12 @@ function Header() {
               <span className='bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-2 py-1 rounded-full text-xs font-semibold ml-1'>
                 50+ ARTICLES
               </span>
-            </a>
+<<<<<<< HEAD:app/layout.tsx
+            </Link>
           </div>
           <div className='relative group'>
-            <a
+            <Link
+<<<<<<< HEAD:app/layout.tsx
               href='/case-studies'
               className='text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1'
             >
@@ -164,14 +183,16 @@ function Header() {
               <span className='bg-gradient-to-r from-green-500 to-teal-500 text-white px-2 py-1 rounded-full text-xs font-semibold ml-1'>
                 25+ STUDIES
               </span>
-            </a>
+<<<<<<< HEAD:app/layout.tsx
+            </Link>
           </div>
-          <a
+          <Link
             href='/contact'
             className='text-gray-700 hover:text-blue-600 transition-colors'
           >
             Contact
-          </a>
+<<<<<<< HEAD:app/layout.tsx
+          </Link>
         </div>
         <button className='md:hidden p-2' aria-label='Toggle menu'>
           <svg
@@ -192,7 +213,6 @@ function Header() {
     </header>
   );
 }
-
 function Footer() {
   return (
     <footer className='border-t border-gray-200 mt-10 py-6 bg-gray-50'>
@@ -201,36 +221,42 @@ function Footer() {
           <div>
             <h3 className='font-semibold text-gray-900 mb-3'>Services</h3>
             <div className='space-y-2'>
-              <a
+<<<<<<< HEAD:app/layout.tsx
+              <Link
                 href='/services'
                 className='block text-gray-600 hover:text-blue-600 transition-colors'
               >
                 All Services
-              </a>
-              <a
+<<<<<<< HEAD:app/layout.tsx
+              </Link>
+              <Link
                 href='/services/ai-autonomous-cloud-ops'
                 className='block text-gray-600 hover:text-blue-600 transition-colors'
               >
                 AI Autonomous Cloud Ops
-              </a>
-              <a
+<<<<<<< HEAD:app/layout.tsx
+              </Link>
+              <Link
                 href='/services/ai-fintech-transformation'
                 className='block text-gray-600 hover:text-blue-600 transition-colors'
               >
                 AI FinTech Transformation
-              </a>
-              <a
+<<<<<<< HEAD:app/layout.tsx
+              </Link>
+              <Link
                 href='/services/ai-retail-automation'
                 className='block text-gray-600 hover:text-blue-600 transition-colors'
               >
                 AI Retail Automation
-              </a>
-              <a
+<<<<<<< HEAD:app/layout.tsx
+              </Link>
+              <Link
                 href='/services/micro-saas'
                 className='block text-gray-600 hover:text-blue-600 transition-colors'
               >
                 Micro SaaS
-              </a>
+<<<<<<< HEAD:app/layout.tsx
+              </Link>
             </div>
           </div>
           <div>
@@ -238,7 +264,8 @@ function Footer() {
               Latest AI 2028 Revolutionary Content
             </h3>
             <div className='space-y-2'>
-              <a
+<<<<<<< HEAD:app/layout.tsx
+              <Link
                 href='/blog/ai-2028-next-generation-autonomous-enterprise'
                 className='block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2'
               >
@@ -246,8 +273,9 @@ function Footer() {
                 <span className='bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse'>
                   REVOLUTIONARY
                 </span>
-              </a>
-              <a
+<<<<<<< HEAD:app/layout.tsx
+              </Link>
+              <Link
                 href='/blog/ai-2028-neuromorphic-superintelligence'
                 className='block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2'
               >
@@ -255,8 +283,9 @@ function Footer() {
                 <span className='bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse'>
                   SUPERINTELLIGENCE
                 </span>
-              </a>
-              <a
+<<<<<<< HEAD:app/layout.tsx
+              </Link>
+              <Link
                 href='/case-studies/ai-2028-autonomous-enterprise-mega-success'
                 className='block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2'
               >
@@ -264,8 +293,9 @@ function Footer() {
                 <span className='bg-gradient-to-r from-green-500 to-emerald-500 text-white px-2 py-1 rounded-full text-xs font-semibold'>
                   MEGA
                 </span>
-              </a>
-              <a
+<<<<<<< HEAD:app/layout.tsx
+              </Link>
+              <Link
                 href='/case-studies/ai-2028-neuromorphic-superintelligence-success'
                 className='block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2'
               >
@@ -273,8 +303,9 @@ function Footer() {
                 <span className='bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-2 py-1 rounded-full text-xs font-semibold'>
                   BREAKTHROUGH
                 </span>
-              </a>
-              <a
+<<<<<<< HEAD:app/layout.tsx
+              </Link>
+              <Link
                 href='/blog/ai-2026-future-trends-breakthrough'
                 className='block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2'
               >
@@ -282,26 +313,30 @@ function Footer() {
                 <span className='bg-gradient-to-r from-red-500 to-orange-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse'>
                   BREAKTHROUGH
                 </span>
-              </a>
-              <a
+<<<<<<< HEAD:app/layout.tsx
+              </Link>
+              <Link
                 href='/blog/ai-future-workforce-2026'
                 className='block text-gray-600 hover:text-blue-600 transition-colors'
               >
                 👥 AI Future Workforce 2026
-              </a>
-              <a
+<<<<<<< HEAD:app/layout.tsx
+              </Link>
+              <Link
                 href='/blog/ai-cybersecurity-2026'
                 className='block text-gray-600 hover:text-blue-600 transition-colors'
               >
                 🛡️ AI Cybersecurity 2026
-              </a>
-              <a
+<<<<<<< HEAD:app/layout.tsx
+              </Link>
+              <Link
                 href='/case-studies/ai-finance-automation-success-2026'
                 className='block text-gray-600 hover:text-blue-600 transition-colors'
               >
                 💰 $15M Finance ROI
-              </a>
-              <a
+<<<<<<< HEAD:app/layout.tsx
+              </Link>
+              <Link
                 href='/case-studies'
                 className='block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2'
               >
@@ -309,30 +344,35 @@ function Footer() {
                 <span className='bg-yellow-500 text-white px-2 py-1 rounded-full text-xs font-semibold'>
                   FEATURED
                 </span>
-              </a>
+<<<<<<< HEAD:app/layout.tsx
+              </Link>
             </div>
           </div>
           <div>
             <h3 className='font-semibold text-gray-900 mb-3'>Content</h3>
             <div className='space-y-2'>
-              <a
+<<<<<<< HEAD:app/layout.tsx
+              <Link
                 href='/'
                 className='block text-gray-600 hover:text-blue-600 transition-colors'
               >
                 Home
-              </a>
-              <a
+<<<<<<< HEAD:app/layout.tsx
+              </Link>
+              <Link
                 href='/about'
                 className='block text-gray-600 hover:text-blue-600 transition-colors'
               >
                 About
-              </a>
-              <a
+<<<<<<< HEAD:app/layout.tsx
+              </Link>
+              <Link
                 href='/contact'
                 className='block text-gray-600 hover:text-blue-600 transition-colors'
               >
                 Contact
-              </a>
+<<<<<<< HEAD:app/layout.tsx
+              </Link>
               <a
                 href='https://ziontechgroup.com'
                 className='block text-gray-600 hover:text-blue-600 transition-colors'
@@ -369,7 +409,6 @@ function Footer() {
     </footer>
   );
 }
-
 export default function RootLayout({
   children,
 }: {

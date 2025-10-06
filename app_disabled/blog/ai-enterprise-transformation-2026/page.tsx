@@ -1,15 +1,17 @@
 import React from 'react';
 import {Metadata} from 'next';
-
-export const metadata = {
-  
-  title: "AI Enterprise Transformation: Complete Digital Overhaul Guide 2026",
-      description: "Master the art of AI-driven enterprise transformation with our comprehensive guide.",
-      type: "article",
-      published Time: '2025-01-30T00:00:00.000Z'
-    
+<<<<<<< HEAD:app/blog/ai-enterprise-transformation-2026/page.tsx
+export const metadata: Metadata = 
+  title: 'AI Enterprise Transformation: Complete Digital Overhaul Guide 2026 | Zion Tech Group',
+  description: 'Comprehensive guide to AI-driven enterprise transformation, covering strategy, implementation, and ROI optimization for modern businesses.',
+  keywords: 'AI transformation, enterprise AI, digital transformation, business intelligence, AI strategy',
+  openGraph: {
+    title: 'AI Enterprise Transformation: Complete Digital Overhaul Guide 2026',
+      description: 'Master the art of AI-driven enterprise transformation with our comprehensive guide.',
+      type: 'article',
+      publishedTime: '2025-01-30T00:00:00.000Z'
+    },
 };
-
 export default function AI Enterprise Transformation2026() {/* return (
     <div> content */}
     <div>
@@ -47,7 +49,6 @@ export default function AI Enterprise Transformation2026() {/* return (
                 <p className="text-left">Maximize    ROI and performance</p>
               </div>
           </div>
-
           <h3 className="text-left">The AI Transformation    Imperative</h2>
             <p className="text-left"> </p><div className="text-left"> </div><h2 className="text-left">The AI Transformation    Imperative</h2>"
             <p className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a

@@ -1,8 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-
 export const metadata = {
-  
   title: "AI 2026 Mega Trends: The Next Frontier of Enterprise Transformation",
   description: "Explore the revolutionary AI trends shaping 2026: Autonomous Operations, Quantum-Neural Networks, and Enterprise AI Governance.",
   keywords: "AI trends 2026, autonomous operations, quantum computing, enterprise AI, AI governance",
@@ -18,10 +16,12 @@ export const metadata = {
       published Time: '2026-01-25T00:00:00.000Z'
     },
   twitter: 
-    card: "summary_large_image",
-    title: "AI 2026 Mega Trends: The Next Frontier of Enterprise Transformation",
-    description: "Explore the revolutionary AI trends shaping 2026: Autonomous Operations, Quantum-Neural Networks, and Enterprise AI Governance."};
-
+<<<<<<< HEAD:app/blog/ai-2026-mega-trends-predictions/page.tsx
+    card: 'summary_large_image',
+    title: 'AI 2026 Mega Trends: The Next Frontier of Enterprise Transformation',
+    description: 'Explore the revolutionary AI trends shaping 2026: Autonomous Operations, Quantum-Neural Networks, and Enterprise AI Governance.',
+  },
+};
 export default function AITrends2026Page() {/* return (
     <div> content */}
     <div>
@@ -40,7 +40,6 @@ export default function AITrends2026Page() {/* return (
               <span>👥    Enterprise    AI</span>
             </div>
         </div>
-
       {/* Navigation    Breadcrumb   */}
       <div className="text-left"> </div><nav className="text-left">
             <Link href="/" className="text-left">Home</Link>
@@ -52,7 +51,6 @@ origin/cursor/fix-errors-and-merge-to-main-cc0a
             <span className="text-left">AI 2026 Mega    Trends   >
           </nav>
         </div>
-
       {/* Main    Content   */}
       <div className="text-left"> </div><article className="text-left">{/* Executive    Summary   */}
           </article><h3 className="text-left">🚀 Executive    Summary</h2>
@@ -63,7 +61,6 @@ origin/cursor/fix-errors-and-merge-to-main-cc0a
               that will fundamentally reshape how organizations operate, compete, and innovate.
             </p></p>
           </div>
-
           {/* Key Trends    Section   */}
           <div className="text-left"> </div><div className="text-left">🤖</div>
               <h3 className="text-left">Autonomous Enterprise    Operations</h3>
@@ -102,7 +99,6 @@ origin/cursor/fix-errors-and-merge-to-main-cc0a
               </p></p>
               <div className="text-left">Read    More    →</div>
             </div>
-
           {/* Call to    Action   */}
           <h3 className="text-left">Ready to Transform Your    Organization   ?</h3>
             <p className="text-left"> </p><div className="text-left"> </div><h3 className="text-left">Ready to Transform Your    Organization   ?</h3>"

@@ -11,7 +11,14 @@ export default function InteractiveAI2026Calculator() {
     aiInvestment: 500000,
   });
 
-  const [results, setResults] = useState(null);
+  const [results, setResults] = useState<{
+    efficiencyGain: number;
+    costSavings: number;
+    revenueIncrease: number;
+    totalBenefits: number;
+    roi: number;
+    paybackPeriod: number;
+  } | null>(null);
 
   const calculateROI = () => {
     const {
@@ -39,15 +46,15 @@ export default function InteractiveAI2026Calculator() {
       enterprise: 2.0,
     };
 
-    const industry =
-      industryMultipliers[industry] || industryMultipliers.manufacturing;
-    const sizeMultiplier = sizeMultipliers[companySize] || 1.0;
+    const industryData =
+      industryMultipliers[industry as keyof typeof industryMultipliers] || industryMultipliers.manufacturing;
+    const sizeMultiplier = sizeMultipliers[companySize as keyof typeof sizeMultipliers] || 1.0;
 
     // Calculate improvements
     const efficiencyGain =
-      currentEfficiency * industry.efficiency * sizeMultiplier;
-    const costSavings = currentCosts * industry.costReduction * sizeMultiplier;
-    const revenueIncrease = currentCosts * industry.revenue * sizeMultiplier;
+      currentEfficiency * industryData.efficiency * sizeMultiplier;
+    const costSavings = currentCosts * industryData.costReduction * sizeMultiplier;
+    const revenueIncrease = currentCosts * industryData.revenue * sizeMultiplier;
 
     // Total benefits
     const totalBenefits = costSavings + revenueIncrease;

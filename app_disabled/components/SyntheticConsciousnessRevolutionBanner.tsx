@@ -1,6 +1,6 @@
 import React from 'react';
-import { ArrowRight, Bot, Brain, TrendingUp, Zap } from 'lucide-react';
-
+<<<<<<< HEAD:app/components/SyntheticConsciousnessRevolutionBanner.tsx
+import { ArrowRight, Brain, TrendingUp, Zap, Link } from 'lucide-react';
 const SyntheticConsciousnessRevolutionBanner: React.FC = () => {
   return (
     <div className='relative overflow-hidden bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900'>
@@ -13,7 +13,6 @@ const SyntheticConsciousnessRevolutionBanner: React.FC = () => {
           style={{ animationDelay: '1s' }}
         ></div>
       </div>
-
       <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 items-center'>
           {/* Left Column - Content */}
@@ -25,7 +24,6 @@ const SyntheticConsciousnessRevolutionBanner: React.FC = () => {
                   Synthetic Consciousness AI
                 </span>
               </div>
-
               <h2 className='text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight'>
                 The{' '}
                 <span className='text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-400'>
@@ -33,7 +31,6 @@ const SyntheticConsciousnessRevolutionBanner: React.FC = () => {
                 </span>{' '}
                 Revolution
               </h2>
-
               <p className='text-xl text-gray-300 leading-relaxed'>
                 Experience the future of AI with synthetic consciousness systems
                 that think, learn, and create like never before. Transform your
@@ -41,7 +38,6 @@ const SyntheticConsciousnessRevolutionBanner: React.FC = () => {
                 context, makes ethical decisions, and evolves continuously.
               </p>
             </div>
-
             {/* Key Features */}
             <div className='grid grid-cols-1 sm:grid-cols-2 gap-4'>
               <div className='flex items-center space-x-3'>
@@ -73,7 +69,6 @@ const SyntheticConsciousnessRevolutionBanner: React.FC = () => {
                 <span className='text-gray-300'>Creative Problem Solving</span>
               </div>
             </div>
-
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
               <ArrowRight 
@@ -92,7 +87,6 @@ const SyntheticConsciousnessRevolutionBanner: React.FC = () => {
               </Link>
             </div>
           </div>
-
           {/* Right Column - Visual Elements */}
           <div className='relative'>
             <div className='relative z-10'>
@@ -127,7 +121,6 @@ const SyntheticConsciousnessRevolutionBanner: React.FC = () => {
                     ></div>
                   </div>
                 </div>
-
                 {/* Floating data points */}
                 <div className='absolute top-8 left-8 w-3 h-3 bg-purple-400 rounded-full animate-ping'></div>
                 <div
@@ -144,13 +137,11 @@ const SyntheticConsciousnessRevolutionBanner: React.FC = () => {
                 ></div>
               </div>
             </div>
-
             {/* Background glow effects */}
             <div className='absolute -top-10 -right-10 w-40 h-40 bg-purple-500/20 rounded-full blur-3xl'></div>
             <div className='absolute -bottom-10 -left-10 w-32 h-32 bg-blue-500/20 rounded-full blur-3xl'></div>
           </div>
         </div>
-
         {/* Bottom stats section */}
         <div className='mt-16 grid grid-cols-1 md:grid-cols-3 gap-8'>
           <div className='text-center'>
@@ -170,5 +161,4 @@ const SyntheticConsciousnessRevolutionBanner: React.FC = () => {
     </div>
   );
 };
-
 export default SyntheticConsciousnessRevolutionBanner;

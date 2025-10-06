@@ -2,7 +2,6 @@
  * Analytics and Tracking Utility
  * Provides comprehensive analytics tracking for the application
  */
-
 export interface AnalyticsEvent {
   name: string;
   category: string;
@@ -12,7 +11,6 @@ export interface AnalyticsEvent {
   properties?: Record<string, any> | undefined;
   timestamp: number;
 }
-
 export interface UserProperties {
   userId?: string | undefined;
   sessionId: string;
@@ -21,24 +19,20 @@ export interface UserProperties {
   timezone: string;
   referrer?: string | undefined;
 }
-
 class Analytics {
   private events: AnalyticsEvent[] = [];
   private userProperties: UserProperties;
   private sessionId: string;
-
   constructor() {
     this.sessionId = this.generateSessionId();
     this.userProperties = this.initializeUserProperties();
   }
-
   /**
    * Generate unique session ID
    */
   private generateSessionId(): string {
     return `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
   }
-
   /**
    * Initialize user properties
    */
@@ -51,16 +45,15 @@ class Analytics {
         timezone: 'UTC',
       };
     }
-
     return {
       sessionId: this.sessionId,
       userAgent: window.navigator.userAgent,
       language: window.navigator.language,
       timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
-      referrer: document.referrer || undefined,
+      referrer: document.referrer || '',
+      referrer: document.referrer || '',
     };
   }
-
   /**
    * Track an event
    */
@@ -75,24 +68,24 @@ class Analytics {
     const event: AnalyticsEvent = {
       name,
       category,
-      action: action || undefined,
+      action: action || '',
       label: label || undefined,
-      value: value || undefined,
-      properties: properties || undefined,
+      value,
+      properties,
+      action: action || '',
+      label: label || '',
+      value: value || 0,
+      properties: properties || {},
       timestamp: Date.now(),
     };
-
     this.events.push(event);
-
     // Send to analytics service
     this.sendToAnalytics(event);
-
     // Log in development
-    if (process.env['NODE_ENV'] === 'development') {
-      console.log('Analytics event:', event);
+    if (process.env.NODE_ENV === 'development') {
+      // Analytics event logged
     }
   }
-
   /**
    * Track page view
    */
@@ -102,7 +95,6 @@ class Analytics {
       page_url: typeof window !== 'undefined' ? window.location.href : page,
     });
   }
-
   /**
    * Track user interaction
    */
@@ -113,14 +105,12 @@ class Analytics {
   ): void {
     this.track('interaction', category, action, element);
   }
-
   /**
    * Track performance metrics
    */
   public trackPerformance(metric: string, value: number, unit: string = 'ms'): void {
     this.track('performance', 'metrics', metric, unit, value);
   }
-
   /**
    * Track business events
    */
@@ -131,7 +121,6 @@ class Analytics {
   ): void {
     this.track(event, 'business', 'event', undefined, value, properties);
   }
-
   /**
    * Send event to analytics service
    */
@@ -139,40 +128,35 @@ class Analytics {
     try {
       // In a real application, you would send to services like Google Analytics, Mixpanel, etc.
       // For now, we'll just log to console
-      console.log('Analytics event sent:', event);
+      // Analytics event sent
     } catch (err) {
-      console.error('Failed to send analytics event:', err);
+      // Failed to send analytics event
     }
   }
-
   /**
    * Get all events
    */
   public getEvents(): AnalyticsEvent[] {
     return [...this.events];
   }
-
   /**
    * Get events by category
    */
   public getEventsByCategory(category: string): AnalyticsEvent[] {
     return this.events.filter(event => event.category === category);
   }
-
   /**
    * Clear all events
    */
   public clearEvents(): void {
     this.events = [];
   }
-
   /**
    * Get user properties
    */
   public getUserProperties(): UserProperties {
     return { ...this.userProperties };
   }
-
   /**
    * Update user properties
    */
@@ -180,8 +164,6 @@ class Analytics {
     this.userProperties = { ...this.userProperties, ...properties };
   }
 }
-
 // Create singleton instance
 export const analytics = new Analytics();
-
 export default analytics;

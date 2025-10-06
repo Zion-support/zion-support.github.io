@@ -1,4 +1,4 @@
-import { Metadata } from 'next';
+import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Hyperintelligence Mega Success 2026 - Fortune 500 Case Study',

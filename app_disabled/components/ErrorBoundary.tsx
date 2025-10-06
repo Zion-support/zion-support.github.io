@@ -1,30 +1,26 @@
-import { Component, type ErrorInfo, type ReactNode } from 'react';
-// import { AlertTriangle } from 'lucide-react';
-
+<<<<<<< HEAD:app/components/ErrorBoundary.tsx
+import { Component } from 'react';
+import type { ErrorInfo, ReactNode } from 'react';
+import { AlertTriangle } from 'lucide-react';
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
 }
-
 interface State {
   hasError: boolean;
   error?: Error;
 }
-
 class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = { hasError: false };
   }
-
   static getDerivedStateFromError(error: Error): State {
     return { hasError: true, error };
   }
-
   override componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     console.error('ErrorBoundary caught an error:', error, errorInfo);
   }
-
   override render() {
     if (this.state.hasError) {
       return (
@@ -62,9 +58,7 @@ class ErrorBoundary extends Component<Props, State> {
         )
       );
     }
-
     return this.props.children;
   }
 }
-
 export default ErrorBoundary;

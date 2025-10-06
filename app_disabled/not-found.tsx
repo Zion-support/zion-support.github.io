@@ -1,9 +1,8 @@
 'use client';
-
 // import React from 'react';
 import Link from 'next/link';
-// import { ArrowRight } from 'lucide-react'; // Unused for now
-
+<<<<<<< HEAD:app/not-found.tsx
+import { ArrowRight } from 'lucide-react';
 export default function NotFound() {
   const popularPages = [
     {
@@ -31,7 +30,6 @@ export default function NotFound() {
       icon: '📞',
     },
   ];
-
   return (
     <div className='min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 flex items-center justify-center'>
       <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
@@ -48,7 +46,6 @@ export default function NotFound() {
             get you back on track with our AI-powered solutions.
           </p>
         </div>
-
         {/* Popular Pages */}
         <div className='mb-12'>
           <h3 className='text-2xl font-bold text-white mb-8'>Popular Pages</h3>
@@ -68,7 +65,6 @@ export default function NotFound() {
             ))}
           </div>
         </div>
-
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
           <Link
@@ -84,7 +80,6 @@ export default function NotFound() {
             Call Support: +1 302 464 0950
           </a>
         </div>
-
         {/* Help Section */}
         <div>
           <h3>
@@ -102,7 +97,6 @@ export default function NotFound() {
               <span className='text-xl'>🏠</span>
               <span>Go Home</span>
             </Link>
-
             <Link
               href='/contact'
               className='group flex items-center gap-3 bg-white/10 hover:bg-white/20 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 border border-white/30'

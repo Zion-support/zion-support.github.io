@@ -14,7 +14,6 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "jsxImportSource": "react",
     "strict": true,
     "strictNullChecks": true,
     "noUnusedLocals": false,
@@ -56,14 +55,7 @@
   },
   "include": [
     "app/**/*",
-    "src/**/*",
-    "App.tsx",
-    "components/**/*",
-    "api/**/*",
-    "lib/**/*",
-    "hooks/**/*",
-    "utils/**/*",
-    "types/**/*"
+    "src/**/*"
   ],
   "exclude": [
     "node_modules",
@@ -119,11 +111,8 @@
     "api-documentation.tsx",
     "app/components/NewContentPromotionalBanner2026.tsx",
     "app/components/NewestContent2025Banner.tsx",
-    "utils/**/*"
-  ],
-  "references": [
-    {
-      "path": "./tsconfig.node.json"
-    }
+    "api/**",
+    "lib/**",
+    "utils/seoUtils.ts"
   ]
 }

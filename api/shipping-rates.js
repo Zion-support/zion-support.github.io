@@ -5,7 +5,6 @@ export default async function handler(req, res) {
     res.end('Method Not Allowed');
     return;
   }
-
   try {
     const { fromAddress, toAddress, parcel } = req.body || {};
     const apiKey = process.env.EASYPOST_API_KEY;
@@ -23,14 +22,12 @@ export default async function handler(req, res) {
         }
       }),
     });
-
     const data = await response.json();
     if (!response.ok) {
       res.statusCode = 500;
       res.json({ error: data.error || 'Failed to fetch rates' });
       return;
     }
-
     res.statusCode = 200;
     res.json({ rates: data.rates });
   } catch (err) {

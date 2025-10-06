@@ -1,23 +1,24 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 
 // Components
-import ErrorBoundary from '../src/components/ErrorBoundary';
-import SEOOptimizer from '../src/components/SEOOptimizer';
+import ErrorBoundary from './components/ErrorBoundary';
+import SEOOptimizer from './components/SEOOptimizer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import PerformanceDashboard from './components/PerformanceDashboard';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
-
-// Pages
-import HomePage from './page';
+import { LoadingSpinner } from '../components/LoadingComponents';
 
 // Utils
-// import performanceOptimizer from '../src/utils/performanceOptimizer';
+import { performanceOptimizer } from '../src/utils/performanceOptimizer';
 
 // Styles
 import '../src/index.css';
+
+// Lazy load pages for better performance
+const HomePage = lazy(() => import('./page'));
 
 const App: React.FC = () => {
   useEffect(() => {
@@ -53,16 +54,14 @@ const App: React.FC = () => {
                 >
                   Skip to main content
                 </a>
-
                 <Navigation />
-                
-                <Routes>
-                  <Route path='/' element={<HomePage />} />
-                  {/* Add more routes as needed */}
-                </Routes>
-
+                <Suspense fallback={<LoadingSpinner />}>
+                  <Routes>
+                    <Route path='/' element={<HomePage />} />
+                    {/* Add more routes as needed */}
+                  </Routes>
+                </Suspense>
                 <Footer />
-
                 {/* Performance Dashboard */}
                 <PerformanceDashboard />
               </div>

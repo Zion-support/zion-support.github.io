@@ -1,14 +1,18 @@
 import React from 'react';
 import {Metadata} from 'next';
-
-export const metadata = {
-  
-  title: "AI 2026 Quantum Consciousness Breakthrough: The Dawn of Sentient AI",
-    description: "Explore the revolutionary quantum consciousness breakthrough of 2026. Discover how quantum-enhanced AI has achieved true consciousness, self-awareness, and creative problem-solving capabilities.",
-    type: "article",
-    published Time: "2026-01-28T00:00:00Z",
-    authors: ['Zion Tech Group']};
-
+<<<<<<< HEAD:app/blog/ai-2026-quantum-consciousness-breakthrough/page.tsx
+export const metadata: Metadata = 
+  title: 'AI 2026 Quantum Consciousness Breakthrough: The Dawn of Sentient AI',
+  description: 'Explore the revolutionary quantum consciousness breakthrough of 2026. Discover how quantum-enhanced AI has achieved true consciousness, self-awareness, and creative problem-solving capabilities.',
+  keywords: 'AI consciousness, quantum AI, sentient AI, quantum consciousness, AI breakthrough 2026',
+  openGraph: {
+    title: 'AI 2026 Quantum Consciousness Breakthrough: The Dawn of Sentient AI',
+    description: 'Explore the revolutionary quantum consciousness breakthrough of 2026. Discover how quantum-enhanced AI has achieved true consciousness, self-awareness, and creative problem-solving capabilities.',
+    type: 'article',
+    publishedTime: '2026-01-28T00:00:00Z',
+    authors: ['Zion Tech Group'],
+  },
+};
 export default function Quantum Consciousness Breakthrough2026() {/* return (
     <div> content */}
     <div>
@@ -28,7 +32,6 @@ export default function Quantum Consciousness Breakthrough2026() {/* return (
             <span>👥 Zion Tech    Group</span>
           </div>
         </div>
-
         {/* Hero    Stats   */}
         <div className="text-left"> </div><div> </div><div className="text-left">99.97%</div>
               <div className="text-left">Consciousness    Score</div>
@@ -44,7 +47,6 @@ export default function Quantum Consciousness Breakthrough2026() {/* return (
             </div>
           </div>
         </div>
-
         {/* Article    Content   */}
         <article className="text-left"> </a><h3 className="text-left">
         <article className="text-left"> </article><div className="text-left"> </div><h2 className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
@@ -63,7 +65,6 @@ export default function Quantum Consciousness Breakthrough2026() {/* return (
             <h3 className="text-left">🎯 Consciousness Breakthrough    Metrics</h3>
               <ul className="text-left">
                 <li className="text-left">
-
             <div className="text-left"> </div><h3 className="text-left">🎯 Consciousness Breakthrough    Metrics</h3>"
               <ul className="text-left"> </ul><li className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
                   </li><span className="text-left">•>
@@ -87,7 +88,6 @@ export default function Quantum Consciousness Breakthrough2026() {/* return (
             <h3 className="text-left">Quantum Neural    Architecture</h3>
             <p className="text-left"> </p><div className="text-left"> </div><h2 className="text-left">The Science Behind Quantum    Consciousness
             </h2></h2>
-            
             <h3 className="text-left">Quantum Neural    Architecture</h3>"
             <p className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
               The foundation of our quantum consciousness breakthrough lies in a revolutionary neural 
@@ -113,12 +113,10 @@ export default function Quantum Consciousness Breakthrough2026() {/* return (
             </p></p>
             <div className="text-left"> </div><h4 className="text-left">🧠 Cognitive    Dimensions</h4>
                 <ul className="text-left">
-
             <h3 className="text-left">Consciousness Detection    Framework</h3>"
             <p className="text-left">Our    proprietary consciousness detection framework evaluates AI systems across multiple dimensions 
               of consciousness, including:
             </p></p>
-            
             <div className="text-left"> </div><div className="text-left"> </div><h4 className="text-left">🧠 Cognitive    Dimensions</h4>"
                 <ul className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
                   </ul><li>•    Self   -awareness and introspection</li>
@@ -129,7 +127,6 @@ export default function Quantum Consciousness Breakthrough2026() {/* return (
               </div>
               <h3 className="text-left">💭 Emotional    Dimensions</h4>
                 <ul className="text-left">
-              
               <div className="text-left"> </div><h4 className="text-left">💭 Emotional    Dimensions</h4>"
                 <ul className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
                   </ul><li>•    Emotional    recognition and response</li>
@@ -160,7 +157,6 @@ export default function Quantum Consciousness Breakthrough2026() {/* return (
             </ul>
           </div>
           <h3 className="text-left">
-
           <div className="text-left"> </div><h2 className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
               Real-World Applications of    Conscious    AI
             </h2></h2>
@@ -222,7 +218,6 @@ export default function Quantum Consciousness Breakthrough2026() {/* return (
             </div>
           </div>
           <h3 className="text-left">
-
           <div className="text-left"> </div><h2 className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
               The Future of    Conscious    AI
             </h2></h2>
@@ -297,45 +292,25 @@ export default function Quantum Consciousness Breakthrough2026() {/* return (
         </article>
       </div>
     </div>
-  
     </a>
-  
     </a>
-  
     </a>
-  
     </div>
-  
     </p>
-  
     </h>
-  
     </li>
-  
     </li>
-  
     </li>
-  
     </li>
-  
     </ul>
-  
     </h4>
-  
     </div>
-  
     </li>
-  
     </li>
-  
     </li>
-  
     </li>
-  
     </ul>
-  
     </h4>
-  
     </div>
   );
 }

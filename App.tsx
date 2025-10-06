@@ -1,6 +1,5 @@
 import React, { memo, useMemo, useCallback, Suspense } from 'react';
 import { HelmetProvider, Helmet } from 'react-helmet-async';
-
 // Memoized components for better performance
 const UnifiedContentPromotion = memo(() => (
   <div className='bg-gradient-to-r from-blue-600 to-purple-700 text-white py-16'>
@@ -12,7 +11,6 @@ const UnifiedContentPromotion = memo(() => (
     </div>
   </div>
 ));
-
 const InteractiveAIROICalculator = memo(() => (
   <div className='bg-gray-50 py-16'>
     <div className='container mx-auto px-4 text-center'>
@@ -23,7 +21,6 @@ const InteractiveAIROICalculator = memo(() => (
     </div>
   </div>
 ));
-
 const ContentShowcase = memo(() => (
   <div className='py-16'>
     <div className='container mx-auto px-4 text-center'>
@@ -34,7 +31,6 @@ const ContentShowcase = memo(() => (
     </div>
   </div>
 ));
-
 const InteractiveContentShowcase2026 = memo(() => (
   <div className='bg-blue-50 py-16'>
     <div className='container mx-auto px-4 text-center'>
@@ -45,31 +41,25 @@ const InteractiveContentShowcase2026 = memo(() => (
     </div>
   </div>
 ));
-
 // Error Boundary Component
 interface ErrorBoundaryState {
   hasError: boolean;
   error: Error | null;
 }
-
 interface ErrorBoundaryProps {
   children: React.ReactNode;
 }
-
 class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundaryState> {
   constructor(props: ErrorBoundaryProps) {
     super(props);
     this.state = { hasError: false, error: null };
   }
-
   static getDerivedStateFromError(error: Error): ErrorBoundaryState {
     return { hasError: true, error };
   }
-
   override componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
     console.error('App Error Boundary caught an error:', error, errorInfo);
   }
-
   override render() {
     if (this.state.hasError) {
       return (
@@ -91,18 +81,15 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
         </div>
       );
     }
-
     return this.props.children;
   }
 }
-
 // Loading component
 const LoadingSpinner = memo(() => (
   <div className="animate-pulse bg-gray-200 h-32 rounded flex items-center justify-center">
     <div className="text-gray-500">Loading...</div>
   </div>
 ));
-
 export default function App() {
   const structuredData = useMemo(
     () => ({
@@ -143,7 +130,6 @@ export default function App() {
     }),
     []
   );
-
   // Performance optimization: Preload critical resources
   React.useEffect(() => {
     if (typeof document !== 'undefined') {
@@ -154,18 +140,15 @@ export default function App() {
         'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap';
       fontLink.as = 'style';
       document.head.appendChild(fontLink);
-
       // Preload critical images
       const preloadImages = [
         'https://ziontechgroup.com/og-image.jpg',
         'https://ziontechgroup.com/logo.png'
       ];
-      
       preloadImages.forEach(src => {
         const img = new Image();
         img.src = src;
       });
-
       // Add performance monitoring
       if ('performance' in window) {
         window.addEventListener('load', () => {
@@ -181,7 +164,6 @@ export default function App() {
       }
     }
   }, []);
-
   // Memoized event handlers for better performance
   const handleNewsletterSubmit = useCallback((e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -193,17 +175,15 @@ export default function App() {
       alert('Thank you for subscribing!');
     }
   }, []);
-
   const handlePhoneClick = useCallback(() => {
     // Track phone clicks for analytics
-    if (typeof window !== 'undefined' && (window as unknown as { gtag?: Function }).gtag) {
-      ((window as unknown as { gtag: Function }).gtag)('event', 'phone_click', {
+    if (typeof window !== 'undefined' && 'gtag' in window) {
+      (window as any).gtag('event', 'phone_click', {
         event_category: 'engagement',
         event_label: 'main_phone_number'
       });
     }
   }, []);
-
   return (
     <ErrorBoundary>
       <HelmetProvider>
@@ -213,7 +193,6 @@ export default function App() {
           type='application/ld+json'
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
-
         {/* SEO Meta Tags */}
         <Helmet>
           <title>
@@ -257,10 +236,8 @@ export default function App() {
           />
           <link rel='canonical' href='https://ziontechgroup.com' />
         </Helmet>
-
         {/* Unified Content Promotion - Replaces multiple redundant banners */}
         <UnifiedContentPromotion />
-
         {/* Hero Section */}
         <section
           className='bg-gradient-to-r from-blue-600 to-purple-700 text-white py-20'
@@ -311,16 +288,12 @@ export default function App() {
             </div>
           </div>
         </section>
-
         {/* Interactive AI ROI Calculator */}
         <InteractiveAIROICalculator />
-
         {/* Dynamic Content Showcase */}
         <ContentShowcase />
-
         {/* Interactive Content Showcase 2026 */}
         <InteractiveContentShowcase2026 />
-
         {/* Enhanced Newsletter Signup */}
         <section className='bg-gray-50 py-16'>
           <div className='container mx-auto px-4'>
@@ -353,7 +326,6 @@ export default function App() {
                   Join 10,000+ professionals. Unsubscribe anytime.
                 </p>
               </div>
-
               {/* Content Highlights */}
               <div className='space-y-4'>
                 <h3 className='text-2xl font-bold mb-6'>
@@ -415,7 +387,6 @@ export default function App() {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className='bg-blue-600 text-white py-16'>
           <div className='container mx-auto px-4 text-center'>

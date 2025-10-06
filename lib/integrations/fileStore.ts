@@ -19,7 +19,6 @@ function ensureDataDir(): void {
     fs.writeFileSync(STATE_FILE, JSON.stringify(initial, null, 2), 'utf8');
   }
 }
-
 export function readState(): IntegrationsState {
   ensureDataDir();
   try {
@@ -34,7 +33,6 @@ export function readState(): IntegrationsState {
     };
   }
 }
-
 export function writeState(
   mutator: (state: IntegrationsState) => void
 ): IntegrationsState {

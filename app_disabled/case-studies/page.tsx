@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Metadata } from 'next';
+import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'AI Success Stories & Case Studies | Zion Tech Group',
@@ -255,13 +255,13 @@ export default function CaseStudiesPage() {
               <span className='text-gray-600 text-sm'>18 months</span>
             </div>
             <h2 className='text-4xl font-bold text-gray-900 mb-4'>
-              {caseStudies[0].title}
+              {caseStudies[0]?.title}
             </h2>
             <p className='text-xl text-gray-600 mb-6 max-w-3xl'>
-              {caseStudies[0].excerpt}
+              {caseStudies[0]?.excerpt}
             </p>
             <div className='flex flex-wrap gap-4 mb-6'>
-              {Object.entries(caseStudies[0].results).map(([key, value]) => (
+              {caseStudies[0]?.results && Object.entries(caseStudies[0].results).map(([key, value]) => (
                 <span
                   key={key}
                   className='bg-white text-green-600 px-4 py-2 rounded-full text-sm font-medium'
@@ -271,7 +271,7 @@ export default function CaseStudiesPage() {
               ))}
             </div>
             <Link
-              href={`/case-studies/${caseStudies[0].slug}`}
+              href={`/case-studies/${caseStudies[0]?.slug}`}
               className='inline-flex items-center bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors'
             >
               Read Full Case Study

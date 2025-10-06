@@ -30,7 +30,7 @@ class AdvancedErrorBoundary extends Component<Props, State> {
     });
 
     // Log error to monitoring service
-    console.error('Error caught by boundary:', error, errorInfo);
+    // Error caught by boundary
 
     if (this.props.onError) {
       this.props.onError(error, errorInfo);

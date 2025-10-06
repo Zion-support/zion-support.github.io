@@ -7,9 +7,7 @@ export type IntegrationProviderId =
   | 'lever' 
   | 'workable' 
   | 'bamboohr';
-
 export type SyncStatus = 'connected' | 'warning' | 'disconnected';
-
 export interface IntegrationProviderMeta {
   id: IntegrationProviderId;
   name: string;
@@ -27,7 +25,6 @@ export interface ProviderConnection {
   createdAt: number;
   updatedAt: number;
 }
-
 export interface SyncLogEntry {
   id: string;
   timestamp: number;
@@ -36,13 +33,11 @@ export interface SyncLogEntry {
   action: string;
   details?: Record<string, any>;
 }
-
 export interface ManualOverride {
   jobId: string;
   disableCrmSync?: boolean;
   disableAtsSync?: boolean;
 }
-
 export interface ZapierEvent {
   id: string;
   type: 'zion.job.posted' | 'zion.talent.matched';

@@ -1,4 +1,4 @@
-import { Metadata } from 'next';
+import type { Metadata } from 'next';
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
@@ -38,13 +38,13 @@ export default function June2026UltimateBreakthroughCaseStudyPage() {
             </span>
           </div>
           <h1 className='text-4xl md:text-5xl font-extrabold text-gray-900 mb-6 leading-tight'>
-            {data.title}
+            {data['title']}
           </h1>
-          <p className='text-xl text-gray-600 mb-8'>{data.description}</p>
+          <p className='text-xl text-gray-600 mb-8'>{data['description']}</p>
           <div className='flex items-center gap-4 text-sm text-gray-500'>
-            <span>By {data.author}</span>
+            <span>By {data['author']}</span>
             <span>•</span>
-            <span>{new Date(data.date).toLocaleDateString()}</span>
+            <span>{new Date(data['date']).toLocaleDateString()}</span>
           </div>
         </header>
 

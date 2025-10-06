@@ -4,7 +4,7 @@ import { ArrowLeft, ArrowRight, Award, BarChart3, CheckCircle, Clock, Target, Tr
 
 
 
-import { Metadata } from 'next';
+import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title:

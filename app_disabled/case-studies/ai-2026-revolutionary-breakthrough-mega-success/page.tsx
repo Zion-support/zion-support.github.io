@@ -1,4 +1,4 @@
-import { Metadata } from 'next';
+import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'AI 2026 Revolutionary Breakthrough Mega Success | Zion Tech Group',

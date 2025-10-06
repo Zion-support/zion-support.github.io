@@ -2,124 +2,18 @@
  * Performance Monitoring Hook
  * Provides React hooks for performance monitoring and optimization
  */
-
 import { useEffect, useCallback, useRef } from 'react';
-import analytics from '../utils/analytics';
-
-export interface PerformanceMetrics {
-  renderTime: number;
-  componentMountTime: number;
-  memoryUsage?: number;
-  isSlowRender: boolean;
-}
-
-export interface UsePerformanceOptions {
-  componentName: string;
-  trackRenderTime?: boolean;
-  trackMemoryUsage?: boolean;
-  slowRenderThreshold?: number; // in milliseconds
-}
-
-/**
- * Hook for monitoring component performance
- */
-export const usePerformance = (options: UsePerformanceOptions) => {
-  const {
-    componentName,
-    trackRenderTime = true,
-    trackMemoryUsage = false,
-    slowRenderThreshold = 16, // 60fps threshold
-  } = options;
-
-  const mountTimeRef = useRef<number>(0);
-  const renderStartTimeRef = useRef<number>(0);
-
-  // Track component mount time
-  useEffect(() => {
-    mountTimeRef.current = performance.now();
-
-    return () => {
-      const mountDuration = performance.now() - mountTimeRef.current;
-      analytics.trackPerformance(`${componentName}_mount_time`, mountDuration);
-    };
-  }, [componentName]);
-
-  // Track render performance
-  const trackRender = useCallback(() => {
-    if (!trackRenderTime) return;
-
-    renderStartTimeRef.current = performance.now();
-
-    // Use requestAnimationFrame to measure actual render time
-    requestAnimationFrame(() => {
-      const renderTime = performance.now() - renderStartTimeRef.current;
-      const isSlowRender = renderTime > slowRenderThreshold;
-
-      const metrics: PerformanceMetrics = {
-        renderTime,
-        componentMountTime: performance.now() - mountTimeRef.current,
-        isSlowRender,
-      };
-
-      // Track memory usage if available
-      if (trackMemoryUsage && 'memory' in performance) {
-        const memory = (performance as any).memory;
-        metrics.memoryUsage = memory.usedJSHeapSize;
-      }
-
-      // Send to analytics
-      analytics.trackPerformance(`${componentName}_render_time`, renderTime);
-
-      if (isSlowRender) {
-        analytics.track(
-          'slow_render',
-          'performance',
-          'warning',
-          componentName,
-          renderTime
-        );
-      }
-    });
-  }, [componentName, trackRenderTime, slowRenderThreshold, trackMemoryUsage]);
-
-  return {
-    trackRender,
-    getMetrics: (): PerformanceMetrics => ({
-      renderTime: performance.now() - renderStartTimeRef.current,
-      componentMountTime: performance.now() - mountTimeRef.current,
-      isSlowRender: false,
-    }),
-  };
-};
-
-/**
- * Hook for monitoring page load performance
- */
-export const usePageLoadPerformance = () => {
-  useEffect(() => {
-    const trackPageLoad = () => {
-      // Wait for page to be fully loaded
-      if (document.readyState === 'complete') {
-        const navigation = performance.getEntriesByType(
-          'navigation'
-        )[0] as PerformanceNavigationTiming;
-
-        if (navigation) {
-          const metrics = {
-            domContentLoaded:
-              navigation.domContentLoadedEventEnd -
-              navigation.domContentLoadedEventStart,
-            loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
-            firstByte: navigation.responseStart - navigation.requestStart,
+import { performanceOptimizer } from '../utils/performanceOptimizer';
+import { performanceOptimizer } from '../utils/performanceOptimizer';
             domInteractive: navigation.domInteractive - (navigation as any).navigationStart,
             totalLoadTime: navigation.loadEventEnd - (navigation as any).navigationStart,
+            domInteractive: navigation.domInteractive - navigation.fetchStart,
+            totalLoadTime: navigation.loadEventEnd - navigation.fetchStart,
           };
-
           // Track each metric
           Object.entries(metrics).forEach(([key, value]) => {
             analytics.trackPerformance(`page_load_${key}`, value);
           });
-
           // Track overall page load performance
           analytics.track(
             'page_load_complete',
@@ -131,11 +25,11 @@ export const usePageLoadPerformance = () => {
         }
       }
     };
-
     // Track immediately if page is already loaded
     if (document.readyState === 'complete') {
       trackPageLoad();
       return undefined;
+      return;
     } else {
       // Wait for load event
       window.addEventListener('load', trackPageLoad);
@@ -143,7 +37,6 @@ export const usePageLoadPerformance = () => {
     }
   }, []);
 };
-
 /**
  * Hook for monitoring resource loading performance
  */
@@ -161,21 +54,34 @@ export const useResourcePerformance = () => {
         }
       });
     });
-
     observer.observe({ entryTypes: ['resource'] });
-
     return () => observer.disconnect();
   }, []);
 };
-
 /**
  * Hook for monitoring long tasks
  */
 export const useLongTaskMonitoring = () => {
   useEffect(() => {
-    // Long task monitoring is disabled due to missing performanceOptimizer
-    console.log('Long task monitoring is not available');
-  }, []);
-};
-
-export default usePerformance;
+    const observer = performanceOptimizer.monitorLongTasks((entries: PerformanceEntry[]) => {
+      entries.forEach((entry: PerformanceEntry) => {
+        analytics.track('long_task', 'performance', 'detected', undefined, entry.duration);
+    const observer = performanceOptimizer.monitorLongTasks((entries: PerformanceEntry[]) => {
+      entries.forEach((entry: PerformanceEntry) => {
+        analytics.track('long_task', 'performance', 'detected', undefined, entry.duration);
+    const observer = performanceOptimizer.monitorLongTasks((entries: PerformanceEntry[]) => {
+      entries.forEach((entry: PerformanceEntry) => {
+        analytics.track('long_task', 'performance', 'detected', undefined, entry.duration);
+    const observer = performanceOptimizer.monitorLongTasks((entries: PerformanceEntry[]) => {
+      entries.forEach((entry: PerformanceEntry) => {
+        analytics.track('long_task', 'performance', 'detected', undefined, entry.duration);
+    const observer = monitorLongTasks((entries: PerformanceEntry[]) => {
+      entries.forEach((entry: PerformanceEntry) => {
+        analytics.track('long_task', 'performance', 'detected', undefined, entry.duration);
+      });
+    });
+    return () => {
+      if (observer && typeof observer.disconnect === 'function') {
+        observer.disconnect();
+      }
+    };
