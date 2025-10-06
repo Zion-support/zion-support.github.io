@@ -6,6 +6,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { ProviderConnection, SyncLogEntry } from './types';
 <<<<<<< HEAD
 // import { v4 as uuidv4 } from 'uuid';
@@ -61,6 +62,10 @@ import { v4 as uuidv4 } from 'uuid';
 import type { ProviderConnection, SyncLogEntry } from './types';
 import { v4 as uuidv4 } from 'uuid';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d
+=======
+import { ProviderConnection, SyncLogEntry } from './types';
+import { v4 as uuidv4 } from 'uuid';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-d12c
 
 export async function simulateAction<T = any>(
   connection: ProviderConnection,
@@ -68,6 +73,7 @@ export async function simulateAction<T = any>(
   details: Record<string, any> = {}
 ): Promise<{ log: SyncLogEntry; result: T }> {
   const log: SyncLogEntry = {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -98,12 +104,16 @@ export async function simulateAction<T = any>(
 =======
     id: uuidv4(),
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d
+=======
+    id: uuidv4(),
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-d12c
     timestamp: Date.now(),
     providerId: connection.providerId,
     level: 'info',
     action,
     details
   };
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -136,12 +146,16 @@ export async function simulateAction<T = any>(
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-d12c
   // In a real implementation, call provider SDK/API here using connection.accessToken
   return {
     log,
     result: { ok: true } as unknown as T
   };
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -248,12 +262,15 @@ export const ats = {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-d12c
 
 // CRM actions
 export const crm = {
   async syncContact(connection: ProviderConnection, contact: Record<string, any>) {
     return simulateAction(connection, 'crm.syncContact', { contact });
   },
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -283,6 +300,11 @@ export const crm = {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d
+=======
+  async addProjectNote(connection: ProviderConnection, note: Record<string, any>) {
+    return simulateAction(connection, 'crm.addProjectNote', { note });
+  },
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-d12c
   async addEmailTouchpoint(connection: ProviderConnection, touch: Record<string, any>) {
     return simulateAction(connection, 'crm.addEmailTouchpoint', { touch });
   }
@@ -293,6 +315,7 @@ export const ats = {
   async pushApplicant(connection: ProviderConnection, applicant: Record<string, any>) {
     return simulateAction(connection, 'ats.pushApplicant', { applicant });
   },
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -322,6 +345,9 @@ export const ats = {
 
   async updateStatus(connection: ProviderConnection, change: Record<string, any>) {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d
+=======
+  async updateStatus(connection: ProviderConnection, change: Record<string, any>) {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-d12c
     return simulateAction(connection, 'ats.updateStatus', { change });
   }
 };

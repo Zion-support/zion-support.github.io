@@ -22,8 +22,11 @@ export interface BannerPriority {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-d12c
 export class BannerPrioritizationEngine {
   private banners: Map<string, BannerMetadata> = new Map();
   private visibilityThreshold = 5; // Max banners to show above the fold
