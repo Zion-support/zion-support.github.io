@@ -1,47 +1,44 @@
+import React from 'react';
 import Link from 'next/link';
 
 import Calendar from'lucide-react/dist/esm/icons/calendar';
 import {Calendar, Clock }from'lucide-react';
 import Clock from'lucide-react/dist/esm/icons/clock';
-import ListChecks from'lucide-react/dist/esm/icons/list-checks';
-import FileWarning from'lucide-react/dist/esm/icons/file-warning';
-import RefreshCw from'lucide-react/dist/esm/icons/refresh-cw';
+import List Checks from'lucide-react/dist/esm/icons/list-checks';
+import File Warning from'lucide-react/dist/esm/icons/file-warning';
+import Refresh Cw from'lucide-react/dist/esm/icons/refresh-cw';
 
 export const metadata = {
-  title: 'Agent Release Runbooks v2 (2026)',
-  description: 
-    'Budgets, canaries, approvals, and instant rollback for safe autonomy.',
-  type: 'article',
-  url: 'https://ziontechgroup.com/blog/agent-release-runbooks-v2-2026',
+  title: "Agent Release Runbooks v2 (2026)",
+  description: "Budgets, canaries, approvals, and instant rollback for safe autonomy.",
+  type: "article",
+  url: "https://ziontechgroup.com/blog/agent-release-runbooks-v2-2026",
   twitter: {
-    card: 'summary_large_image',
-    title: 'Agent Release Runbooks v2 (2026)',
-    description: 
-      'Budgets, canaries, approvals, and instant rollback for safe autonomy.',
-  },
-};
+    card: "summary_large_image",
+    title: "Agent Release Runbooks v2 (2026)",
+    description: "Budgets, canaries, approvals, and instant rollback for safe autonomy."};
 
-export default function Page() {return (<mainclassName='min-h-screen bg-gradient-to-br from-fuchsia-50 via-white to-purple-50'>
-      <headerclassName='bg-gradient-to-br from-fuchsia-900 via-purple-900 to-slate-900 text-white py-20'>
-        <divclassName='max-w-5xl mx-auto px-6'>
-          <divclassName='inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 mb-6'>
-            <ListChecks />
+export default function Page() {return (<main className="min-h-screen bg-gradient-to-br from-fuchsia-50 via-white to-purple-50">
+      <header className="bg-gradient-to-br from-fuchsia-900 via-purple-900 to-slate-900 text-white py-20">
+        <div className="max-w-5xl mx-auto px-6">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 mb-6">
+            <List Checks />
 
-            <spanclassName='text-sm font-semibold'>Agent Ops • 2026</span>
+            <span className="text-sm font-semibold">Agent    Ops    • 2026</span>
           </div>
-          <h1className='text-5xl md:text-6xl font-extrabold leading-tight mb-4'>
-            Agent Release Runbooks v2 (2026)
+          <h1 className="text-5xl md:text-6xl font-extrabold leading-tight mb-4">
+            Agent Release    Runbooks    v2 (2026)
           </h1>
-          <pclassName='text-lg md:text-xl text-white/80 max-w-3xl'>
-            Ship autonomous agents with budgeted actions, KPI
+          <p className="text-lg md:text-xl text-white/80 max-w-3xl">
+            Ship    autonomous agents with budgeted actions, KPI
             canariesapprovalsand one‑click rollback.
           </p>
-          <divclassName='flex items-center gap-6 text-white/70 mt-8'>
-            <divclassName='flex items-center gap-2'>
+          <div className="flex items-center gap-6 text-white/70 mt-8">
+            <div className="flex items-center gap-2">
               <Calendar />
-              <span>Jan 30, 2026</span>
+              <span>Jan    30, 2026</span>
             </div>
-            <divclassName='flex items-center gap-2'>
+            <div className="flex items-center gap-2">
               <Clock />
               <span>18 min read</span>
             </div>
@@ -49,65 +46,65 @@ export default function Page() {return (<mainclassName='min-h-screen bg-gradient
         </div>
       </header>
 
-      <sectionclassName='py-16'>
-        <divclassName='max-w-4xl mx-auto px-6 prose prose-lg'>
-          <h2>Release Safety Model</h2>
+      <section className="py-16">
+        <div className="max-w-4xl mx-auto px-6 prose prose-lg">
+          <h2>Release Safety    Model</h2>
           <p>
-            Operational safety hinges on three primitives: hard
+            Operational    safety hinges on three primitives: hard
             budgetslightweight approvalsand KPI-linked canaries that trigger
             automatic rollback when thresholds are breached.
           </p>
-          <h3>Runbook Outline</h3>
+          <h3>Runbook    Outline</h3>
           <ol>
-            <li>Define budgeted actions and guardrails</li>
-            <li>Attach canaries to product KPIs</li>
-            <li>Stage rollout with blast-radius limits</li>
-            <li>Automate rollback and postmortems</li>
+            <li>Define    budgeted actions and guardrails</li>
+            <li>Attach canaries to product KP    Is</li>
+            <li>Stage    rollout with blast-radius limits</li>
+            <li>Automate    rollback and postmortems</li>
           </ol>
         </div>
       </section>
 
-      <sectionclassName='py-12 bg-white'>
-        <divclassName='max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-6'>
-          <divclassName='rounded-xl border p-6'>
-            <divclassName='text-3xl font-extrabold text-fuchsia-600 mb-2'>
+      <section className="py-12 bg-white">
+        <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-6">
+          <div className="rounded-xl border p-6">
+            <div className="text-3xl font-extrabold text-fuchsia-600 mb-2">
               Budgets
             </div>
-            <divclassName='text-slate-600'>Max costtimescope per release</div>
+            <div className="text-slate-600">Max    costtimescope per release</div>
           </div>
-          <divclassName='rounded-xl border p-6'>
-            <divclassName='text-3xl font-extrabold text-purple-600 mb-2'>
+          <div className="rounded-xl border p-6">
+            <div className="text-3xl font-extrabold text-purple-600 mb-2">
               Canaries
             </div>
-            <divclassName='text-slate-600'>
+            <div className="text-slate-600">
               KPI-linked checks in CI and live
             </div>
           </div>
-          <divclassName='rounded-xl border p-6'>
-            <divclassName='text-3xl font-extrabold text-indigo-600 mb-2'>
+          <div className="rounded-xl border p-6">
+            <div className="text-3xl font-extrabold text-indigo-600 mb-2">
               Rollback
             </div>
-            <divclassName='text-slate-600'>One click, under 60s MTR</div>
+            <div className="text-slate-600">One    click, under 60s MTR</div>
           </div>
         </div>
       </section>
 
-      <sectionclassName='py-16'>
-        <divclassName='max-w-4xl mx-auto px-6'>
-          <divclassName='bg-gradient-to-r from-fuchsia-600 to-indigo-600 text-white rounded-2xl p-8 flex items-center justify-between gap-4'>
+      <section className="py-16">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="bg-gradient-to-r from-fuchsia-600 to-indigo-600 text-white rounded-2xl p-8 flex items-center justify-between gap-4">
             <div>
-              <h3className='text-2xl font-bold flex items-center gap-2'>
-                <FileWarning /> Prevent Regressions
+              <h3 className="text-2xl font-bold flex items-center gap-2">
+                <File Warning /> Prevent    Regressions
               </h3>
-              <pclassName='text-white/90'>
-                We implement v2 runbooks in 4–6 weeks with audits and training.
+              <p className="text-white/90">
+                We    implement v2 runbooks in 4–6 weeks with audits and training.
               </p>
             </div>
             <Link
-             href='/contact'
-             className='bg-white text-fuchsia-700 px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2'
+             href="/contact"
+             className="bg-white text-fuchsia-700 px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2"
             >
-              Engage <RefreshCw />
+              Engage <Refresh Cw />
             </Link>
           </div>
         </div>

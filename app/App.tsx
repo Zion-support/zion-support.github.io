@@ -13,9 +13,8 @@ import PerformanceMonitor from '../src/components/PerformanceMonitor';
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./page'));
 
-// Loading component is imported from components/LoadingComponents
 // Utils
-import performanceOptimizer from '../src/utils/performanceOptimizer';
+import { performanceOptimizer } from '../src/utils/performanceOptimizer';
 
 // Styles
 import '../index.css';
@@ -27,13 +26,13 @@ const App: React.FC = () => {
 
     // Initialize performance monitoring
     performanceOptimizer.lazyLoadImages();
-    performanceOptimizer.preconnectDomains(['https://fonts.googleapis.com', 'https://fonts.gstatic.com']);
+    performanceOptimizer.addCriticalResourceHints();
     
     // Initialize Web Vitals monitoring
     if (typeof window !== 'undefined' && 'performance' in window) {
-      const metrics = performanceOptimizer.measurePageLoad();
-      if (metrics) {
-        performanceOptimizer.reportWebVitals(metrics);
+      const pageLoadMetrics = performanceOptimizer.measurePageLoad();
+      if (pageLoadMetrics) {
+        performanceOptimizer.reportWebVitals(pageLoadMetrics);
       }
     }
     
