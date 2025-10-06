@@ -38,6 +38,7 @@ export const lazyLoadBanner = (
               console.error(
                 `Retry failed for banner: ${componentName}`,
 <<<<<<< HEAD
+<<<<<<< HEAD
                 retryError
               );
 =======
@@ -59,6 +60,10 @@ export const lazyLoadBanner = (
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-3b0a
               });
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-bcb8
+=======
+                retryError
+              );
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a4f
             });
         }, 1000);
       });

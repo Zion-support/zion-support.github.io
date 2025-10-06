@@ -62,14 +62,24 @@ const getBannerImpressions = (): BannerImpression[] => {
  */
 const storeImpressions = (impressions: BannerImpression[]): void => {
   try {
+<<<<<<< HEAD
     // Limit to last 1000 impressions to prevent storage bloat
     const trimmedImpressions = impressions.slice(-1000);
     localStorage.setItem(STORAGE_KEY, JSON.stringify(trimmedImpressions));
+=======
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(impressions));
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a4f
   } catch (error) {
     console.error('Failed to store banner impressions:', error);
   }
 };
 
+<<<<<<< HEAD
+=======
+/**
+ * Record a banner impression
+ */
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a4f
 export const recordBannerImpression = (impression: Omit<BannerImpression, 'timestamp' | 'sessionId'>) => {
   if (typeof window === 'undefined') return;
   
@@ -89,7 +99,10 @@ export const recordBannerImpression = (impression: Omit<BannerImpression, 'times
     // Keep only last 1000 impressions to prevent storage bloat
     const trimmedImpressions = impressions.slice(-1000);
     localStorage.setItem(STORAGE_KEY, JSON.stringify(trimmedImpressions));
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-11d4
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a4f
   } catch (error) {
     console.error('Failed to record banner impression:', error);
   }
@@ -229,7 +242,7 @@ export const getBannersForRotation = (banners: BannerConfig[]): BannerConfig[] =
  * Record banner click
  */
 export const recordBannerClick = (bannerId: string): void => {
-  const impressions = getStoredImpressions();
+  const impressions = getBannerImpressions();
   const lastImpression = impressions
     .filter(imp => imp.bannerId === bannerId)
     .pop();
@@ -384,7 +397,11 @@ export class BannerRotationEngine {
 // Export singleton instance
 export const bannerRotationEngine = new BannerRotationEngine();
 
+<<<<<<< HEAD
 export const trackBannerClickWithPage = (bannerId: string, pageUrl: string): void => {
+=======
+export const trackBannerClick = (bannerId: string, pageUrl: string): void => {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a4f
   recordBannerImpression({
     bannerId,
     pageUrl,
@@ -415,6 +432,9 @@ export default {
   trackBannerVisibility
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-11d4
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a4f

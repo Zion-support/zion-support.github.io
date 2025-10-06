@@ -14,9 +14,12 @@ export const debounce = <T extends (...args: any[]) => any>(
 ): ((...args: Parameters<T>) => void) => {
   let timeout: NodeJS.Timeout | null = null;
 <<<<<<< HEAD
+<<<<<<< HEAD
   
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-3b0a
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a4f
   return function executedFunction(...args: Parameters<T>) {
     const later = () => {
       timeout = null;
@@ -50,11 +53,19 @@ export const throttle = <T extends (...args: any[]) => any>(
   limit: number
 ): ((...args: Parameters<T>) => void) => {
   let inThrottle: boolean;
+<<<<<<< HEAD
   return function executedFunction(...args: Parameters<T>) {
     if (!inThrottle) {
       func.apply(this, args);
       inThrottle = true;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-3b0a
+=======
+  return function executedFunction(this: any, ...args: Parameters<T>) {
+    if (!inThrottle) {
+      func.apply(this, args);
+      inThrottle = true;
+      setTimeout(() => (inThrottle = false), limit);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a4f
     }
     setTimeout(() => (inThrottle = false), limit);
   };
@@ -63,16 +74,198 @@ export const throttle = <T extends (...args: any[]) => any>(
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-fb16
 =======
+=======
+
+// Memory usage monitoring
+export const getMemoryUsage = (): {
+  used: number;
+  total: number;
+  percentage: number;
+} => {
+  if (typeof performance === 'undefined' || !(performance as any).memory) {
+    return { used: 0, total: 0, percentage: 0 };
+  }
+
+  const memory = (performance as any).memory;
+  const used = memory.usedJSHeapSize;
+  const total = memory.totalJSHeapSize;
+  const percentage = (used / total) * 100;
+
+  return { used, total, percentage };
+};
+
+// Performance metrics collection
+export const collectPerformanceMetrics = async (): Promise<{
+  loadTime: number;
+  domContentLoaded: number;
+  firstPaint: number;
+  firstContentfulPaint: number;
+  largestContentfulPaint: number;
+  firstInputDelay: number;
+  cumulativeLayoutShift: number;
+}> => {
+  const metrics: any = {};
+
+  // Basic timing metrics
+  if (typeof window !== 'undefined' && window.performance) {
+    const timing = window.performance.timing;
+    metrics.loadTime = timing.loadEventEnd - timing.navigationStart;
+    metrics.domContentLoaded = timing.domContentLoadedEventEnd - timing.navigationStart;
+  }
+
+  // Web Vitals
+  if (typeof window !== 'undefined' && 'PerformanceObserver' in window) {
+    try {
+      // First Paint
+      const paintObserver = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (entry.name === 'first-paint') {
+            metrics.firstPaint = entry.startTime;
+          }
+        }
+      });
+      paintObserver.observe({ entryTypes: ['paint'] });
+
+      // First Contentful Paint
+      const fcpObserver = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (entry.name === 'first-contentful-paint') {
+            metrics.firstContentfulPaint = entry.startTime;
+          }
+        }
+      });
+      fcpObserver.observe({ entryTypes: ['paint'] });
+
+      // Largest Contentful Paint
+      const lcpObserver = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        const lastEntry = entries[entries.length - 1];
+        if (lastEntry) {
+          metrics.largestContentfulPaint = lastEntry.startTime;
+        }
+      });
+      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+
+      // First Input Delay
+      const fidObserver = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          metrics.firstInputDelay = (entry as any).processingStart - entry.startTime;
+        }
+      });
+      fidObserver.observe({ entryTypes: ['first-input'] });
+
+      // Cumulative Layout Shift
+      let clsValue = 0;
+      const clsObserver = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (!(entry as any).hadRecentInput) {
+            clsValue += (entry as any).value;
+          }
+        }
+        metrics.cumulativeLayoutShift = clsValue;
+      });
+      clsObserver.observe({ entryTypes: ['layout-shift'] });
+
+    } catch (error) {
+      console.warn('Performance Observer not fully supported:', error);
+    }
+  }
+
+  return metrics;
+};
+
+// Performance monitor class
+export class PerformanceMonitor {
+  private metrics: Map<string, number> = new Map();
+  private observers: PerformanceObserver[] = [];
+  private isRunning = false;
+
+  start(): void {
+    if (this.isRunning) return;
+    this.isRunning = true;
+
+    // Monitor long tasks
+    if ('PerformanceObserver' in window) {
+      try {
+        const longTaskObserver = new PerformanceObserver((list) => {
+          for (const entry of list.getEntries()) {
+            console.warn(`Long task detected: ${entry.duration}ms`);
+          }
+        });
+        longTaskObserver.observe({ entryTypes: ['longtask'] });
+        this.observers.push(longTaskObserver);
+      } catch (error) {
+        console.warn('Long task monitoring not supported:', error);
+      }
+    }
+  }
+
+  stop(): void {
+    this.isRunning = false;
+    this.observers.forEach(observer => observer.disconnect());
+    this.observers = [];
+  }
+
+  measure(name: string, fn: () => void): void {
+    const start = performance.now();
+    fn();
+    const end = performance.now();
+    this.metrics.set(name, end - start);
+  }
+
+  getMetrics(): Record<string, number> {
+    return Object.fromEntries(this.metrics);
+  }
+
+  clearMetrics(): void {
+    this.metrics.clear();
+  }
+}
+
+// Export singleton instance
+export const performanceMonitor = new PerformanceMonitor();
+
+// Lazy loading utilities
+export const lazyLoadImages = (): void => {
+  if (typeof window === 'undefined' || !('IntersectionObserver' in window)) return;
+
+  const imageObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const img = entry.target as HTMLImageElement;
+          const src = img.dataset['src'];
+          if (src) {
+            img.src = src;
+            img.removeAttribute('data-src');
+            imageObserver.unobserve(img);
+          }
+        }
+      });
+    },
+    {
+      rootMargin: '50px 0px',
+      threshold: 0.01,
+    }
+  );
+
+  document.querySelectorAll('img[data-src]').forEach((img) => {
+    imageObserver.observe(img);
+  });
+};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a4f
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0a61
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-11d4
 // Preload critical resources
 export const preloadCriticalResources = (): void => {
+<<<<<<< HEAD
   if (typeof window === 'undefined') return;
   
   const criticalResources = [
@@ -112,6 +305,25 @@ export const preloadCriticalResources = (): void => {
     link.as = resource.endsWith('.css') ? 'style' : 'font';
 <<<<<<< HEAD
     if (resource.endsWith('.woff2')) {
+=======
+  if (typeof document === 'undefined') return;
+
+  const criticalResources = [
+    { href: '/fonts/inter.woff2', as: 'font', type: 'font/woff2' },
+    { href: '/images/hero-bg.jpg', as: 'image' },
+    { href: '/images/logo.svg', as: 'image' },
+  ];
+
+  criticalResources.forEach((resource) => {
+    const link = document.createElement('link');
+    link.rel = 'preload';
+    link.href = resource.href;
+    link.as = resource.as;
+    if (resource.type) {
+      link.type = resource.type;
+    }
+    if (resource.as === 'font') {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a4f
       link.crossOrigin = 'anonymous';
     }
 =======
@@ -121,12 +333,31 @@ export const preloadCriticalResources = (): void => {
   });
 };
 
+<<<<<<< HEAD
+=======
+// Scroll performance optimization
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a4f
 export const optimizeScrollPerformance = (): void => {
   if (typeof window === 'undefined') return;
 
   let ticking = false;
 
   const updateScrollPosition = () => {
+<<<<<<< HEAD
+=======
+    // Update scroll position indicators
+    const scrollY = window.scrollY;
+    const windowHeight = window.innerHeight;
+    const documentHeight = document.documentElement.scrollHeight;
+    const scrollPercent = (scrollY / (documentHeight - windowHeight)) * 100;
+
+    // Update progress bar if exists
+    const progressBar = document.querySelector('.scroll-progress');
+    if (progressBar) {
+      (progressBar as HTMLElement).style.width = `${scrollPercent}%`;
+    }
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a4f
     ticking = false;
   };
 
@@ -139,8 +370,11 @@ export const optimizeScrollPerformance = (): void => {
 <<<<<<< HEAD
 
   window.addEventListener('scroll', requestTick, { passive: true });
+<<<<<<< HEAD
 =======
   window.addEventListener('scroll', requestTick, { passive: true });
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a4f
 };
 // Memory usage monitoring
 export const getMemoryUsage = (): {
@@ -209,6 +443,7 @@ export const optimizeBundleSize = {
     return result;
   },
 };
+<<<<<<< HEAD
 // Performance monitoring
 export const performanceMonitor = {
   start: (name: string) => {
@@ -231,4 +466,16 @@ export const performanceMonitor = {
     performance.clearMeasures()}
   },
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-3b0a
+=======
+
+export default {
+  debounce,
+  throttle,
+  lazyLoadImages,
+  preloadCriticalResources,
+  optimizeScrollPerformance,
+  performanceMonitor,
+  collectPerformanceMetrics,
+  getMemoryUsage
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a4f
 };

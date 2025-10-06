@@ -24,7 +24,11 @@ export const getErrorMetrics = () => {
 };
 
 export const isErrorRateTooHigh = (threshold = 5) => {
+<<<<<<< HEAD
   // For now, always return false as we don't have actual error tracking
+=======
+  // For now, always return false as this is a placeholder implementation
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a4f
   console.log(`Checking error rate against threshold: ${threshold}`);
   return false;
 };

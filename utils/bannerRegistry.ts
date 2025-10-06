@@ -100,7 +100,11 @@ export const BANNER_REGISTRY: BannerConfig[] = [
     datePublished: '2025-08-15',
     tags: ['service', 'feature', 'card'],
     enabled: true,
+<<<<<<< HEAD
   },
+=======
+  }
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a4f
 ];
 
 /**
@@ -113,15 +117,75 @@ export const getBannersByCategory = (category: BannerConfig['category']): Banner
 /**
  * Get banners by priority range
  */
+<<<<<<< HEAD
+=======
+export const getBannersByPriority = (minPriority: number, maxPriority: number): BannerConfig[] => {
+  return BANNER_REGISTRY.filter(
+    banner => banner.priority >= minPriority && 
+             banner.priority <= maxPriority && 
+             banner.enabled
+  );
+};
+
+/**
+ * Get top priority banners
+ */
+export function getTopPriorityBanners(count: number = 5): BannerConfig[] {
+  return BANNER_REGISTRY.filter(banner => banner.enabled)
+    .sort((a, b) => a.priority - b.priority)
+    .slice(0, count);
+}
+/**
+ * Get banners by tags
+ */
+export function getBannersByTags(tags: string[]): BannerConfig[] {
+  return BANNER_REGISTRY.filter(
+    banner => tags.some(tag => banner.tags.includes(tag)) && banner.enabled
+  );
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a4f
 
 /**
  * Get enabled banners sorted by priority
  */
+<<<<<<< HEAD
+=======
+export const getEnabledBanners = (): BannerConfig[] => {
+  return BANNER_REGISTRY
+    .filter(banner => banner.enabled)
+    .sort((a, b) => a.priority - b.priority);
+};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a4f
 
 /**
  * Get banner by ID
  */
+<<<<<<< HEAD
+=======
+export const getBannerById = (id: string): BannerConfig | undefined => {
+  return BANNER_REGISTRY.find(banner => banner.id === id);
+};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a4f
 
 /**
- * Get banners by tags
+ * Get banners by tags (duplicate function - removing)
  */
+<<<<<<< HEAD
+=======
+
+/**
+ * Get recent banners (published within last N days)
+ */
+export const getRecentBanners = (days: number = 30): BannerConfig[] => {
+  const cutoffDate = new Date();
+  cutoffDate.setDate(cutoffDate.getDate() - days);
+  
+  return BANNER_REGISTRY.filter(banner => {
+    if (!banner.enabled) return false;
+    const publishDate = new Date(banner.datePublished);
+    return publishDate >= cutoffDate;
+  });
+};
+
+export default BANNER_REGISTRY;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a4f

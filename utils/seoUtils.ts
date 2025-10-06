@@ -30,6 +30,11 @@ export const setOpenGraphTags = (ogData: {
     'og:description': ogData.description,
     'og:image': ogData.image,
     'og:url': ogData.url,
+<<<<<<< HEAD
+=======
+    'og:type': ogData.type || 'website',
+    'og:site_name': ogData.siteName,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a4f
   };
 
 =======
@@ -63,9 +68,21 @@ export const setTwitterCardTags = (twitterData: {
   image?: string;
   site?: string;
   creator?: string;
+<<<<<<< HEAD
 }) => {
+=======
+}): void => {
   const twitterTags = {
-    'twitter:card': twitterData.card,
+    'twitter:card': twitterData.card || 'summary_large_image',
+    'twitter:title': twitterData.title,
+    'twitter:description': twitterData.description,
+    'twitter:image': twitterData.image,
+    'twitter:site': twitterData.site,
+    'twitter:creator': twitterData.creator
+}): void => {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a4f
+  const twitterTags = {
+    'twitter:card': twitterData.card || 'summary_large_image',
     'twitter:title': twitterData.title,
     'twitter:description': twitterData.description,
     'twitter:image': twitterData.image,
@@ -122,8 +139,13 @@ export const setStructuredData = (data: any): void => {
   script.textContent = JSON.stringify(data);
   document.head.appendChild(script);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 };
+=======
+};
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a4f
 // Canonical URL
 export const setCanonicalUrl = (url: string): void => {
   let canonical = document.querySelector(
@@ -277,6 +299,7 @@ export const schemaGenerators = {
     })),
   }),
 };
+<<<<<<< HEAD
 // SEO audit helpers
 export const seoAudit = {
   checkTitle: (): {
@@ -366,4 +389,87 @@ export const seoAudit = {
     };
   },
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-3b0a
+=======
+
+// SEO audit
+export const seoAudit = async (): Promise<{
+  title: boolean;
+  description: boolean;
+  h1: boolean;
+  images: boolean;
+  links: boolean;
+  score: number;
+}> => {
+  const results = {
+    title: !!document.title,
+    description: !!document.querySelector('meta[name="description"]'),
+    h1: !!document.querySelector('h1'),
+    images: document.querySelectorAll('img[alt]').length > 0,
+    links: document.querySelectorAll('a[href]').length > 0,
+    score: 0,
+  };
+
+  const score = Object.values(results).filter(Boolean).length;
+  results.score = (score / (Object.keys(results).length - 1)) * 100;
+
+  return results;
+=======
+// Generate sitemap
+export const generateSitemap = (urls: string[]): string => {
+  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${urls.map(url => `  <url>
+    <loc>${url}</loc>
+    <lastmod>${new Date().toISOString()}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>`).join('\n')}
+</urlset>`;
+  
+  return sitemap;
+};
+
+// Optimize images
+export const optimizeImages = (): void => {
+  if (typeof window === 'undefined') return;
+
+  const images = document.querySelectorAll('img');
+  images.forEach(img => {
+    // Add loading="lazy" if not present
+    if (!img.hasAttribute('loading')) {
+      img.setAttribute('loading', 'lazy');
+    }
+
+    // Add alt text if missing
+    if (!img.hasAttribute('alt')) {
+      img.setAttribute('alt', '');
+    }
+
+    // Add width and height if missing
+    if (!img.hasAttribute('width') && !img.hasAttribute('height')) {
+      img.addEventListener('load', () => {
+        img.setAttribute('width', img.naturalWidth.toString());
+        img.setAttribute('height', img.naturalHeight.toString());
+      });
+    }
+  });
+};
+
+// Generate robots.txt
+export const generateRobotsTxt = (): string => {
+  return `User-agent: *
+Allow: /
+
+Sitemap: ${window.location.origin}/sitemap.xml`;
+};
+
+export default {
+  setMetaTags,
+  setOpenGraphTags,
+  setTwitterCardTags,
+  setStructuredData,
+  generateSitemap,
+  optimizeImages,
+  generateRobotsTxt
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a4f
 };
