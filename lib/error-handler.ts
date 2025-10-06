@@ -41,11 +41,7 @@ export const errorHandler = (
           : message,
       statusCode,
       timestamp: new Date().toISOString()
-<<<<<<< HEAD
     }
-=======
-    },
->>>>>>> cursor/fix-errors-and-merge-to-main-13eb
   });
 };
 

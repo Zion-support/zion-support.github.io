@@ -2,12 +2,7 @@
  * Performance Monitoring Utility
  * Tracks and reports web vitals and performance metrics
  */
-<<<<<<< HEAD
-import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
-import type { Metric } from 'web-vitals';
-=======
 import { onCLS, onFCP, onLCP, onTTFB, type Metric } from 'web-vitals';
->>>>>>> cursor/fix-errors-and-merge-to-main-13eb
 
 // Types
 interface PerformanceMetric {
@@ -31,11 +26,7 @@ const THRESHOLDS = {
   FID: { good: 100, poor: 300 },
   FCP: { good: 1800, poor: 3000 },
   LCP: { good: 2500, poor: 4000 },
-<<<<<<< HEAD
-  TTFB: { good: 800, poor: 1800 }
-=======
   TTFB: { good: 800, poor: 1800 },
->>>>>>> cursor/fix-errors-and-merge-to-main-13eb
 };
 
 /**
@@ -58,11 +49,7 @@ function sendToAnalytics(metric: Metric): void {
     value: metric.value,
     rating: getRating(metric.name, metric.value),
     delta: metric.delta,
-<<<<<<< HEAD
-    id: metric.id
-=======
     id: metric.id,
->>>>>>> cursor/fix-errors-and-merge-to-main-13eb
   };
 
   // Log in development
@@ -74,13 +61,6 @@ function sendToAnalytics(metric: Metric): void {
   if (typeof window !== 'undefined' && (window as any).gtag) {
     (window as any).gtag('event', metric.name, {
       event_category: 'Web Vitals',
-<<<<<<< HEAD
-      event_label: performanceMetric.rating,
-      value: Math.round(metric.value),
-      non_interaction: true
-    });
-  }
-=======
       value: Math.round(
         metric.name === 'CLS' ? metric.value * 1000 : metric.value
       ),
@@ -103,45 +83,21 @@ function sendToAnalytics(metric: Metric): void {
       keepalive: true,
     }).catch(error => console.error('Performance reporting error:', error));
   }
->>>>>>> cursor/fix-errors-and-merge-to-main-13eb
 }
 
 /**
  * Initialize performance monitoring
  */
 export function initPerformanceMonitoring(): void {
-<<<<<<< HEAD
-  try {
-    onCLS(sendToAnalytics);
-    onINP(sendToAnalytics);
-=======
   if (typeof window === 'undefined') return;
 
   try {
     // Core Web Vitals
     onCLS(sendToAnalytics);
->>>>>>> cursor/fix-errors-and-merge-to-main-13eb
     onFCP(sendToAnalytics);
     onLCP(sendToAnalytics);
     onTTFB(sendToAnalytics);
   } catch (error) {
-<<<<<<< HEAD
-    console.error('Failed to initialize performance monitoring:', error);
-  }
-}
-
-/**
- * Generate performance report
- */
-export function generatePerformanceReport(): PerformanceReport {
-  const metrics: PerformanceMetric[] = [];
-  
-  return {
-    metrics,
-    timestamp: new Date().toISOString(),
-    url: typeof window !== 'undefined' ? window.location.href : '',
-    userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : ''
-=======
     console.error('Error initializing performance monitoring:', error);
   }
 }
@@ -292,18 +248,12 @@ export function generatePerformanceReport(): PerformanceReport | null {
     timestamp: new Date().toISOString(),
     url: window.location.href,
     userAgent: navigator.userAgent,
->>>>>>> cursor/fix-errors-and-merge-to-main-13eb
   };
 }
 
 /**
- * Check if performance is good
+ * Monitor long tasks
  */
-<<<<<<< HEAD
-export function isPerformanceGood(): boolean {
-  // This would be implemented based on collected metrics
-  return true;
-=======
 export function monitorLongTasks(
   callback: (entries: PerformanceEntry[]) => void,
 ): PerformanceObserver | null {
@@ -320,18 +270,11 @@ export function monitorLongTasks(
     console.error('Error monitoring long tasks:', error);
     return null;
   }
->>>>>>> cursor/fix-errors-and-merge-to-main-13eb
 }
 
 /**
- * Get performance score
+ * Monitor layout shifts
  */
-<<<<<<< HEAD
-export function getPerformanceScore(): number {
-  // This would calculate a score based on collected metrics
-  return 100;
-}
-=======
 export function monitorLayoutShifts(
   callback: (entries: PerformanceEntry[]) => void,
 ): PerformanceObserver | null {
@@ -395,4 +338,3 @@ export default {
   isSlowConnection,
   getConnectionType,
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-13eb
