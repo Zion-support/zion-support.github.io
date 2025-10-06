@@ -65,7 +65,7 @@ const App: React.FC = () => {
                 <PerformanceDashboard />
               </div>
             </Router>
-          </AccessibilityEnhancer>
+            </AccessibilityEnhancer>
           </SEOOptimizer>
         </div>
       </ErrorBoundary>

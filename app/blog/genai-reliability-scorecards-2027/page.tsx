@@ -1,134 +1,134 @@
-import ArrowRight from 'next/link';
+imp, o, r, t Arr o w R i, g, h, t f, r, o, m 'n, e, x, t/l, i, n, k';
 
-export const metadata = {
+exp, o, r, t co, n, s, t m e t a d, a, t, a = {
   
-  title: 'GenAI Reliability Scorecards 2027',
-    description:
-      'Live KPIs + budgets + rollback for affordable, reliable GenAI.',
-    type: 'article',
-    publishedTime: '2027-01-20T00:00:00Z',
+  ti, t, l, e: 'Ge, n, A, I Reli a b i l, i, t, y Sco r e c a, r, d, s 2, 0, 2, 7',
+    desc r i p t, i, o, n:
+      'L, i, v, e K, P, I, s + budg, e, t, s + r o l l b, a, c, k for aff o r d a, b, l, e, r e l i a, b, l, e Ge, n, A, I.',
+    t, y, p, e: 'arti, c, l, e',
+    publis h e d T, i, m, e: '2, 0, 2, 7-01-20, T00:00:00, Z',
   
-};,
+};
 };
 
-export default function GenAIReliabilityScorecards2027Page() {
-  return (
-    <div className='min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900'>
-      <div className='container mx-auto px-4 py-16'>
-        <div className='text-center mb-12'>
-          <div className='inline-flex items-center gap-2 bg-gradient-to-r from-emerald-600 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold mb-4'>
-            📊 Reliability Scorecards
+exp, o, r, t defa, u, l, t f u n c t, i, o, n GenAIReliabilityScoreca r d s 2, 0, 2, 7() {
+  ret, u, r, n (
+    <div cl a s s N, a, m, e='min-h-scr, e, e, n bg-g r a d i, e, n, t-to-br f, r, o, m-sl, a, t, e-900 via-b, l, u, e-900 to-sl, a, t, e-900'>
+      <div cl a s s N, a, m, e='co n t a i, n, e, r mx-a, u, t, o px-4 py-16'>
+        <div cl a s s N, a, m, e='t, e, x, t-cen, t, e, r mb-12'>
+          <div cl a s s N, a, m, e='inl, i, n, e-f, l, e, x it, e, m, s-cen, t, e, r gap-2 bg-g r a d i, e, n, t-to-r f, r, o, m-emer, a, l, d-600 to-b, l, u, e-600 t, e, x, t-wh, i, t, e px-4 py-2 roun, d, e, d-f, u, l, l t, e, x, t-sm f, o, n, t-s e m i b, o, l, d mb-4'>
+            📊 Reli a b i l, i, t, y Sco r e c a, r, d, s
           </div>
-          <h1 className='text-5xl md:text-6xl font-bold text-white mb-4 leading-tight'>
-            GenAI Reliability Scorecards 2027
+          <h1 cl a s s N, a, m, e='t, e, x, t-5, xl md:t, e, x, t-6, xl f, o, n, t-b, o, l, d t, e, x, t-wh, i, t, e mb-4 lead, i, n, g-ti, g, h, t'>
+            Ge, n, A, I Reli a b i l, i, t, y Sco r e c a, r, d, s 2, 0, 2, 7
           </h1>
-          <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-            Wire SLIs to KPIs with budgeted actionsKPI‑linked canariesand
-            instant rollback to keep GenAI experiences reliable and affordable.
+          <p cl a s s N, a, m, e='t, e, x, t-xl t, e, x, t-g, r, a, y-300 max-w-3xl mx-a, u, t, o'>
+            W, i, r, e S, L, I, s to K, P, I, s w, i, t, h b u d g e, t, e, d act i o n s, K, P, I‑lin, k, e, d cana r i e s, a, n, d
+            inst, a, n, t r o l l b, a, c, k to k, e, e, p Ge, n, A, I expe r i e n, c, e, s r e l i a, b, l, e and aff o r d a, b, l, e.
           </p>
-          <div className='mt-4 text-sm text-gray-400'>
-            ⏱️ 8 min read · 🏷️ Governance, Reliability
+          <div cl a s s N, a, m, e='mt-4 t, e, x, t-sm t, e, x, t-g, r, a, y-400'>
+            ⏱️ 8 min r, e, a, d · 🏷️ Gov e r n a, n, c, e, Reli a b i l, i, t, y
           </div>
         </div>
 
-        <article className='max-w-4xl mx-auto prose prose-lg prose-invert'>
-          <div className='rounded-2xl p-6 mb-10 bg-gradient-to-r from-emerald-900/40 to-blue-900/40 border border-emerald-800/40'>
-            <h2 className='text-3xl font-bold text-white mb-3'>
-              Why Reliability Scorecards
+        <arti, c, l, e cl a s s N, a, m, e='max-w-4, xl mx-a, u, t, o pr, o, s, e pr, o, s, e-lg pr, o, s, e-inv, e, r, t'>
+          <div cl a s s N, a, m, e='roun, d, e, d-2, xl p-6 mb-10 bg-g r a d i, e, n, t-to-r f, r, o, m-emer, a, l, d-900/40 to-b, l, u, e-900/40 bor, d, e, r bor, d, e, r-emer, a, l, d-800/40'>
+            <h2 cl a s s N, a, m, e='t, e, x, t-3, xl f, o, n, t-b, o, l, d t, e, x, t-wh, i, t, e mb-3'>
+              Why Reli a b i l, i, t, y Sco r e c a, r, d, s
             </h2>
-            <p className='text-gray-300'>
-              Teams ship faster when reliability is visible and budgeted.
-              Scorecards translate model metrics into business SLAs with clear
-              rollback triggers.
+            <p cl a s s N, a, m, e='t, e, x, t-g, r, a, y-300'>
+              Te, a, m, s s, h, i, p fas, t, e, r w, h, e, n reli a b i l, i, t, y is visi, b, l, e and b u d g e, t, e, d.
+              Sco r e c a, r, d, s tr a n s l, a, t, e mo, d, e, l metr, i, c, s i, n, t, o b u s i n, e, s, s S, L, A, s w, i, t, h cl, e, a, r
+              r o l l b, a, c, k t r i g g, e, r, s.
             </p>
           </div>
 
-          <section className='mb-10'>
-            <h3 className='text-2xl font-semibold text-white mb-3'>
-              Core Signals
+          <sect, i, o, n cl a s s N, a, m, e='mb-10'>
+            <h3 cl a s s N, a, m, e='t, e, x, t-2, xl f, o, n, t-s e m i b, o, l, d t, e, x, t-wh, i, t, e mb-3'>
+              C, o, r, e Sign, a, l, s
             </h3>
-            <ul className='text-gray-300 list-disc list-inside space-y-2'>
-              <li>Groundedness and refusal accuracy by task</li>
-              <li>P95 latencytail riskand cache hit rate</li>
-              <li>Cost per outcome ($/win) with budget ceilings</li>
-              <li>Canary KPIs with automatic rollback</li>
+            <ul cl a s s N, a, m, e='t, e, x, t-g, r, a, y-300 l, i, s, t-d, i, s, c l, i, s, t-ins, i, d, e sp, a, c, e-y-2'>
+              <li>Groun d e d n, e, s, s and refu, s, a, l a c c u r, a, c, y by t, a, s, k</li>
+              <li>P95 late n c y t, a, i, l risk, a, n, d ca, c, h, e hit r, a, t, e</li>
+              <li>C, o, s, t per outc, o, m, e ($/win) w, i, t, h bud, g, e, t c e i l i, n, g, s</li>
+              <li>Can, a, r, y K, P, I, s w, i, t, h au t o m a, t, i, c r o l l b, a, c, k</li>
             </ul>
-          </section>
+          </sect, i, o, n>
 
-          <section className='mb-10'>
-            <h3 className='text-2xl font-semibold text-white mb-3'>
-              Budgeted Actions
+          <sect, i, o, n cl a s s N, a, m, e='mb-10'>
+            <h3 cl a s s N, a, m, e='t, e, x, t-2, xl f, o, n, t-s e m i b, o, l, d t, e, x, t-wh, i, t, e mb-3'>
+              B u d g e, t, e, d Acti, o, n, s
             </h3>
-            <p className='text-gray-300'>
-              Tie routing, quality tiersand retries to live budgets. When
-              spend or latency driftsthe platform auto‑routes to cheaper tiers
-              or rolls back.
+            <p cl a s s N, a, m, e='t, e, x, t-g, r, a, y-300'>
+              Tie rout, i, n, g, qual, i, t, y t i e r s, a, n, d retr, i, e, s to l, i, v, e budg, e, t, s. W, h, e, n
+              sp, e, n, d or late, n, c, y dr i f t s, t, h, e p l a t f, o, r, m a, u, t, o‑rou, t, e, s to chea, p, e, r ti, e, r, s
+              or ro, l, l, s b, a, c, k.
             </p>
-          </section>
+          </sect, i, o, n>
 
-          <section className='mb-12'>
-            <h3 className='text-2xl font-semibold text-white mb-3'>
-              Getting Started
+          <sect, i, o, n cl a s s N, a, m, e='mb-12'>
+            <h3 cl a s s N, a, m, e='t, e, x, t-2, xl f, o, n, t-s e m i b, o, l, d t, e, x, t-wh, i, t, e mb-3'>
+              Gett, i, n, g Star, t, e, d
             </h3>
-            <ol className='text-gray-300 list-decimal list-inside space-y-2'>
-              <li>Define 3–5 SLIs per journey and map to KPIs</li>
-              <li>Set budgets for latencyqualityand cost</li>
-              <li>Deploy canaries; require green to promote</li>
-              <li>Automate rollback on SLI breach</li>
+            <ol cl a s s N, a, m, e='t, e, x, t-g, r, a, y-300 l, i, s, t-deci, m, a, l l, i, s, t-ins, i, d, e sp, a, c, e-y-2'>
+              <li>Def, i, n, e 3–5 S, L, I, s per jour, n, e, y and map to K, P, I, s</li>
+              <li>Set budg, e, t, s for latencyqua l i t y, a, n, d c, o, s, t</li>
+              <li>Dep, l, o, y c a n a r, i, e, s; requ, i, r, e gr, e, e, n to prom, o, t, e</li>
+              <li>A u t o m, a, t, e r o l l b, a, c, k on SLI bre, a, c, h</li>
             </ol>
-          </section>
+          </sect, i, o, n>
 
-          <div className='grid md:grid-cols-2 gap-6'>
-            <ArrowRight
-              href='/blog/edge-private-analytics-2027'
-              className='group'
+          <div cl a s s N, a, m, e='g, r, i, d md:g, r, i, d-c, o, l, s-2 gap-6'>
+            <Arr o w R i, g, h, t
+              h, r, e, f='/b, l, o, g/e, d, g, e-priv, a, t, e-an a l y t, i, c, s-2, 0, 2, 7'
+              cl a s s N, a, m, e='gr, o, u, p'
             >
-              <div className='rounded-xl p-6 border border-emerald-800/40 bg-emerald-900/20 hover:border-emerald-500/50 transition-all'>
-                <h4 className='text-white font-semibold mb-2 group-hover:text-emerald-300'>
-                  Edge Private Analytics 2027
+              <div cl a s s N, a, m, e='roun, d, e, d-xl p-6 bor, d, e, r bor, d, e, r-emer, a, l, d-800/40 bg-emer, a, l, d-900/20 ho, v, e, r:bor, d, e, r-emer, a, l, d-500/50 tra n s i t, i, o, n-all'>
+                <h4 cl a s s N, a, m, e='t, e, x, t-wh, i, t, e f, o, n, t-s e m i b, o, l, d mb-2 gr, o, u, p-ho, v, e, r:t, e, x, t-emer, a, l, d-300'>
+                  E, d, g, e Priv, a, t, e An a l y t, i, c, s 2, 0, 2, 7
                 </h4>
-                <p className='text-gray-300 text-sm'>
-                  Zero‑PII insights with scoped IDs and DP noise at &lt;100ms.
+                <p cl a s s N, a, m, e='t, e, x, t-g, r, a, y-300 t, e, x, t-sm'>
+                  Z, e, r, o‑PII i n s i g, h, t, s w, i, t, h sco, p, e, d IDs and DP no, i, s, e at &lt;100, ms.
                 </p>
               </div>
-            </ArrowRight>
-            <ArrowRight
-              href='/blog/agent-release-guardrails-2026'
-              className='group'
+            </Arr o w R i, g, h, t>
+            <Arr o w R i, g, h, t
+              h, r, e, f='/b, l, o, g/ag, e, n, t-rele, a, s, e-gua r d r a, i, l, s-2, 0, 2, 6'
+              cl a s s N, a, m, e='gr, o, u, p'
             >
-              <div className='rounded-xl p-6 border border-blue-800/40 bg-blue-900/20 hover:border-blue-500/50 transition-all'>
-                <h4 className='text-white font-semibold mb-2 group-hover:text-blue-300'>
-                  Agent Release Guardrails 2026
+              <div cl a s s N, a, m, e='roun, d, e, d-xl p-6 bor, d, e, r bor, d, e, r-b, l, u, e-800/40 bg-b, l, u, e-900/20 ho, v, e, r:bor, d, e, r-b, l, u, e-500/50 tra n s i t, i, o, n-all'>
+                <h4 cl a s s N, a, m, e='t, e, x, t-wh, i, t, e f, o, n, t-s e m i b, o, l, d mb-2 gr, o, u, p-ho, v, e, r:t, e, x, t-b, l, u, e-300'>
+                  Ag, e, n, t Rele, a, s, e Gua r d r a, i, l, s 2, 0, 2, 6
                 </h4>
-                <p className='text-gray-300 text-sm'>
-                  Budgetsapprovalsand instant rollback for safe releases.
+                <p cl a s s N, a, m, e='t, e, x, t-g, r, a, y-300 t, e, x, t-sm'>
+                  Budgetsappro v a l s, a, n, d inst, a, n, t r o l l b, a, c, k for s, a, f, e r e l e a, s, e, s.
                 </p>
               </div>
-            </ArrowRight>
+            </Arr o w R i, g, h, t>
           </div>
-        </article>
+        </arti, c, l, e>
 
-        <div className='max-w-4xl mx-auto mt-12'>
-          <div className='bg-gradient-to-r from-emerald-600 to-blue-600 rounded-2xl p-8 text-center'>
-            <h3 className='text-2xl font-bold text-white mb-3'>
-              Operationalize Reliability
+        <div cl a s s N, a, m, e='max-w-4, xl mx-a, u, t, o mt-12'>
+          <div cl a s s N, a, m, e='bg-g r a d i, e, n, t-to-r f, r, o, m-emer, a, l, d-600 to-b, l, u, e-600 roun, d, e, d-2, xl p-8 t, e, x, t-cen, t, e, r'>
+            <h3 cl a s s N, a, m, e='t, e, x, t-2, xl f, o, n, t-b, o, l, d t, e, x, t-wh, i, t, e mb-3'>
+              Operati o n a l, i, z, e Reli a b i l, i, t, y
             </h3>
-            <p className='text-emerald-100 mb-6'>
-              We help teams wire budgets and rollbacks into GenAI platforms.
+            <p cl a s s N, a, m, e='t, e, x, t-emer, a, l, d-100 mb-6'>
+              We h, e, l, p te, a, m, s w, i, r, e budg, e, t, s and ro l l b a, c, k, s i, n, t, o Ge, n, A, I pl a t f o, r, m, s.
             </p>
-            <div className='flex gap-3 justify-center'>
-              <ArrowRight
-                href='/contact'
-                className='bg-white text-emerald-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors'
+            <div cl a s s N, a, m, e='f, l, e, x gap-3 just, i, f, y-cen, t, e, r'>
+              <Arr o w R i, g, h, t
+                h, r, e, f='/cont, a, c, t'
+                cl a s s N, a, m, e='bg-wh, i, t, e t, e, x, t-emer, a, l, d-600 px-6 py-3 roun, d, e, d-lg f, o, n, t-s e m i b, o, l, d ho, v, e, r:bg-g, r, a, y-100 tra n s i t, i, o, n-col, o, r, s'
               >
-                Talk to an Expert
-              </ArrowRight>
-              <ArrowRight
-                href='/content-hub'
-                className='border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-emerald-600 transition-colors'
+                T, a, l, k to an Exp, e, r, t
+              </Arr o w R i, g, h, t>
+              <Arr o w R i, g, h, t
+                h, r, e, f='/cont, e, n, t-hub'
+                cl a s s N, a, m, e='bor, d, e, r-2 bor, d, e, r-wh, i, t, e t, e, x, t-wh, i, t, e px-6 py-3 roun, d, e, d-lg f, o, n, t-s e m i b, o, l, d ho, v, e, r:bg-wh, i, t, e ho, v, e, r:t, e, x, t-emer, a, l, d-600 tra n s i t, i, o, n-col, o, r, s'
               >
-                Explore More Content
-              </ArrowRight>
+                Expl, o, r, e M, o, r, e Cont, e, n, t
+              </Arr o w R i, g, h, t>
             </div>
           </div>
         </div>
@@ -137,4 +137,4 @@ export default function GenAIReliabilityScorecards2027Page() {
   );
 }
 
-// duplicate removed: legacy block deleted to avoid multiple defaults
+// du p l i c, a, t, e remo, v, e, d: leg, a, c, y bl, o, c, k dele, t, e, d to av, o, i, d m u l t i, p, l, e d e f a u, l, t, s

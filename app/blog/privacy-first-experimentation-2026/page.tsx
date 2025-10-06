@@ -1,25 +1,25 @@
-export const metadata = {
+exp, o, r, t co, n, s, t m e t a d, a, t, a = {
   
-  title: 'Privacy‑First Experimentation 2026: Insights Without PII',
-  description:
-    'Scoped IDsedge aggregationand DP noise for compliant A/B tests under <100ms.',
+  ti, t, l, e: 'Priv, a, c, y‑Fi, r, s, t Experime n t a t, i, o, n 2, 0, 2, 6: I n s i g, h, t, s With, o, u, t PII',
+  desc r i p t, i, o, n:
+    'Sco, p, e, d IDse, d, g, e aggrega t i o n, a, n, d DP no, i, s, e for co m p l i, a, n, t A/B te, s, t, s un, d, e, r <100, ms.',
 
-};;
+};
 
-export default function Page() {
-  return (
-    <main className='max-w-3xl mx-auto px-6 py-16'>
-      <h1 className='text-4xl font-bold mb-4'>
-        Privacy‑First Experimentation 2026
+exp, o, r, t defa, u, l, t f u n c t, i, o, n P, a, g, e() {
+  ret, u, r, n (
+    <m, a, i, n cl a s s N, a, m, e='max-w-3xl mx-a, u, t, o px-6 py-16'>
+      <h1 cl a s s N, a, m, e='t, e, x, t-4, xl f, o, n, t-b, o, l, d mb-4'>
+        Priv, a, c, y‑Fi, r, s, t Experime n t a t, i, o, n 2, 0, 2, 6
       </h1>
-      <p className='text-gray-600 mb-8'>Insights Without PII</p>
-      <p className='mb-4'>
-        Scoped IDsedge aggregationand DP noise for compliant A/B tests under
-        &lt;100ms.
+      <p cl a s s N, a, m, e='t, e, x, t-g, r, a, y-600 mb-8'>I n s i g, h, t, s With, o, u, t PII</p>
+      <p cl a s s N, a, m, e='mb-4'>
+        Sco, p, e, d IDse, d, g, e aggrega t i o n, a, n, d DP no, i, s, e for co m p l i, a, n, t A/B te, s, t, s un, d, e, r
+        &lt;100, ms.
       </p>
-      <p className='text-sm text-gray-500'>
-        Published Sep 30, 2025 • 7 min read
+      <p cl a s s N, a, m, e='t, e, x, t-sm t, e, x, t-g, r, a, y-500'>
+        Pu b l i s, h, e, d Sep 30, 2, 0, 2, 5 • 7 min r, e, a, d
       </p>
-    </main>
+    </m, a, i, n>
   );
 }

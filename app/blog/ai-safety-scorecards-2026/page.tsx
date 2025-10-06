@@ -1,33 +1,33 @@
-import ArrowRight from 'next/link';
+imp, o, r, t Arr o w R i, g, h, t f, r, o, m 'n, e, x, t/l, i, n, k';
 
-export const metadata = {
+exp, o, r, t co, n, s, t m e t a d, a, t, a = {
   
-  title: 'AI Safety Scorecards (2026): Guardrails wired to KPIs',
-  description:
-    'Design and operate AI safety scorecards that connect SLIs to business KPIs with budgetscanariesand instant rollback.',
+  ti, t, l, e: 'AI Saf, e, t, y Sco r e c a, r, d, s (2, 0, 2, 6): Gua r d r a, i, l, s wi, r, e, d to K, P, I, s',
+  desc r i p t, i, o, n:
+    'Des, i, g, n and oper, a, t, e AI saf, e, t, y sco r e c a, r, d, s t, h, a, t conn, e, c, t S, L, I, s to b u s i n, e, s, s K, P, I, s w, i, t, h budgetscana r i e s, a, n, d inst, a, n, t r o l l b, a, c, k.',
 
-};;
+};
 
-export default function Page() {
-  return (
-    <main className='max-w-3xl mx-auto px-4 py-12 prose prose-invert'>
-      <h1>AI Safety Scorecards (2026)</h1>
+exp, o, r, t defa, u, l, t f u n c t, i, o, n P, a, g, e() {
+  ret, u, r, n (
+    <m, a, i, n cl a s s N, a, m, e='max-w-3xl mx-a, u, t, o px-4 py-12 pr, o, s, e pr, o, s, e-inv, e, r, t'>
+      <h1>AI Saf, e, t, y Sco r e c a, r, d, s (2, 0, 2, 6)</h1>
       <p>
-        Build KPI-linked safety scorecards for AI systems. Wire service level
-        indicators (SLIs) to product KPIs with budgetspolicy gatesand
-        canaries. Trigger instant rollback on risk threshold breaches without
-        slowing delivery.
+        Bu, i, l, d KPI-lin, k, e, d saf, e, t, y sco r e c a, r, d, s for AI syst, e, m, s. W, i, r, e serv, i, c, e le, v, e, l
+        ind i c a t, o, r, s (S, L, I, s) to prod, u, c, t K, P, I, s w, i, t, h budget s p o l, i, c, y g a t e s, a, n, d
+        c a n a r, i, e, s. Trig, g, e, r inst, a, n, t r o l l b, a, c, k on r, i, s, k th r e s h, o, l, d b r e a c, h, e, s with, o, u, t
+        slow, i, n, g d e l i v, e, r, y.
       </p>
-      <h2>Core Components</h2>
+      <h2>C, o, r, e Com p o n e, n, t, s</h2>
       <ul>
-        <li>Policy checks in CI mapped to measurable outcomes</li>
-        <li>Online canaries evaluating business impact in real time</li>
-        <li>Rollback playbooks tied to error budgets</li>
+        <li>Pol, i, c, y che, c, k, s in CI map, p, e, d to mea s u r a, b, l, e o u t c o, m, e, s</li>
+        <li>Onl, i, n, e c a n a r, i, e, s eva l u a t, i, n, g b u s i n, e, s, s imp, a, c, t in r, e, a, l t, i, m, e</li>
+        <li>R o l l b, a, c, k pl a y b o, o, k, s t, i, e, d to er, r, o, r budg, e, t, s</li>
       </ul>
       <p>
-        Continue exploring our governance series in the{' '}
-        <ArrowRight href='/blog'>blog</ArrowRight>.
+        C o n t i, n, u, e ex p l o r, i, n, g our gov e r n a, n, c, e ser, i, e, s in the{' '}
+        <Arr o w R i, g, h, t h, r, e, f='/b, l, o, g'>b, l, o, g</Arr o w R i, g, h, t>.
       </p>
-    </main>
+    </m, a, i, n>
   );
 }
