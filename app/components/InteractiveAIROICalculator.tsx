@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 const InteractiveAIROICalculator: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   const [currentSpend, setCurrentSpend] = useState(100000);
   const [expectedSavings, setExpectedSavings] = useState(30);
   const [timeframe, setTimeframe] = useState(12);
@@ -120,12 +121,23 @@ const InteractiveAIROICalculator: React.FC = () => {
     const monthlySavings = (investment * efficiency) / 100 / 12;
     const totalSavings = monthlySavings * timeframe;
     const roi = ((totalSavings - investment) / investment) * 100;
+=======
+  const [currentCost, setCurrentCost] = useState(100000);
+  const [efficiencyGain, setEfficiencyGain] = useState(70);
+  const [timeframe, setTimeframe] = useState(12);
+
+  const calculateROI = () => {
+    const annualSavings = (currentCost * efficiencyGain) / 100;
+    const totalSavings = annualSavings * (timeframe / 12);
+    const roi = ((totalSavings - currentCost) / currentCost) * 100;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6a72
     return Math.max(0, roi);
   };
 
   const roi = calculateROI();
 
   return (
+<<<<<<< HEAD
     <div className="bg-gradient-to-r from-blue-50 to-indigo-100 rounded-lg shadow-lg p-8">
       <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">
         AI ROI Calculator
@@ -191,10 +203,75 @@ const InteractiveAIROICalculator: React.FC = () => {
               <span className="text-gray-600">ROI Percentage:</span>
               <span className="font-bold text-blue-600">{roi}%</span>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0883
+=======
+    <section className='bg-white py-16 rounded-2xl shadow-lg'>
+      <div className='container mx-auto px-4'>
+        <h2 className='text-4xl font-bold text-center text-gray-900 mb-8'>
+          AI ROI Calculator
+        </h2>
+        <div className='max-w-4xl mx-auto'>
+          <div className='grid md:grid-cols-2 gap-8'>
+            <div className='space-y-6'>
+              <div>
+                <label className='block text-sm font-medium text-gray-700 mb-2'>
+                  Current Annual Cost ($)
+                </label>
+                <input
+                  type='number'
+                  value={currentCost}
+                  onChange={e => setCurrentCost(Number(e.target.value))}
+                  className='w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent'
+                />
+              </div>
+              <div>
+                <label className='block text-sm font-medium text-gray-700 mb-2'>
+                  Expected Efficiency Gain (%)
+                </label>
+                <input
+                  type='range'
+                  min='10'
+                  max='90'
+                  value={efficiencyGain}
+                  onChange={e => setEfficiencyGain(Number(e.target.value))}
+                  className='w-full'
+                />
+                <div className='text-center text-sm text-gray-600'>
+                  {efficiencyGain}%
+                </div>
+              </div>
+              <div>
+                <label className='block text-sm font-medium text-gray-700 mb-2'>
+                  Implementation Timeframe (months)
+                </label>
+                <input
+                  type='range'
+                  min='3'
+                  max='24'
+                  value={timeframe}
+                  onChange={e => setTimeframe(Number(e.target.value))}
+                  className='w-full'
+                />
+                <div className='text-center text-sm text-gray-600'>
+                  {timeframe} months
+                </div>
+              </div>
+            </div>
+            <div className='flex items-center justify-center'>
+              <div className='text-center'>
+                <div className='text-6xl font-bold text-green-600 mb-4'>
+                  {roi.toFixed(0)}%
+                </div>
+                <div className='text-xl text-gray-600 mb-2'>Expected ROI</div>
+                <div className='text-sm text-gray-500'>
+                  Based on your inputs
+                </div>
+              </div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6a72
             </div>
           </div>
         </div>
       </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
     </section>
 =======
@@ -228,6 +305,9 @@ const InteractiveAIROICalculator: React.FC = () => {
       </div>
     </div>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-02dd
+=======
+    </section>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6a72
   );
 };
 
