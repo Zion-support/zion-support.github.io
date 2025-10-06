@@ -1,10 +1,8 @@
 export const metadata = {
-  
   title: 'AI Governance in Real Time 2026: Live Canaries + PR Policy Tests',
   description:
     'Wire KPI‑linked canaries and CI policy tests so teams ship weekly without regressions.',
-
-};;
+};
 
 export default function Page() {
   return (

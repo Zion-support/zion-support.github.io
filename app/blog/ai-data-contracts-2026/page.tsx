@@ -1,15 +1,13 @@
 import ArrowRight from 'next/link';
 
 export const metadata = {
-  
   title:
     'AI Data Contracts 2026: Shipping Reliable AI with Measurable Data Quality',
   description:
     'Design and enforce data contracts to cut incident ratesreduce driftand ship reliable AI at scale.',
   keywords:
     'data contracts, AI reliability, data quality, schema evolution, observabilitySLAsSLOs',
-
-};;
+};
 
 export default function AIDataContracts2026Page() {
   return (
@@ -26,7 +24,8 @@ export default function AIDataContracts2026Page() {
             Quality
           </h1>
           <p className='text-xl mb-8 opacity-90'>
-            Prevent silent failures with enforceable schemasfield-level SLAsand drift monitors across pipelines and products.
+            Prevent silent failures with enforceable schemasfield-level SLAsand
+            drift monitors across pipelines and products.
           </p>
           <div className='flex items-center gap-6 text-sm opacity-75'>
             <span>📅 Sep 29, 2025</span>
@@ -87,8 +86,7 @@ export default function AIDataContracts2026Page() {
               Need measurable, reliable data for AI?
             </h3>
             <p className='opacity-90 mb-4'>
-              We implement data contractsobservabilityand scorecards
-              end‑to‑end.
+              We implement data contractsobservabilityand scorecards end‑to‑end.
             </p>
             <div className='flex gap-3 flex-col sm:flex-row'>
               <a
@@ -138,7 +136,8 @@ export default function AIDataContracts2026Page() {
 
 function RelatedArticleCard({
   title,
-  descriptionhref}: {
+  descriptionhref,
+}: {
   title: string;
   description: string;
   href: string;

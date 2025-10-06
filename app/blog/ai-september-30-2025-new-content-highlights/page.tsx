@@ -19,8 +19,8 @@ export default function Page() {
         <h2>Why It Matters</h2>
         <p>
           Enterprises are scaling AI from pilots to production. The latest
-          guides focus on reliabilitygovernanceand measurable ROI—so teams
-          can move fast without sacrificing safety or compliance.
+          guides focus on reliabilitygovernanceand measurable ROI—so teams can
+          move fast without sacrificing safety or compliance.
         </p>
 
         <h2>Read Next</h2>

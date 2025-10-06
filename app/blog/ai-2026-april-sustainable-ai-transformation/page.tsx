@@ -188,8 +188,8 @@ export default function Page() {
           </h3>
           <p className='leading-7 mb-4'>
             All AI processing is powered by 100% renewable energy sources,
-            including solarwindand hydroelectric power. Advanced energy
-            storage systems ensure continuous operation regardless of weather
+            including solarwindand hydroelectric power. Advanced energy storage
+            systems ensure continuous operation regardless of weather
             conditions.
           </p>
 

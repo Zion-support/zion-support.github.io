@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 
 export default function Post(): React.JSX.Element {
   const { slug } = useParams();
-  
+
   return (
     <div>
       <h1>Post: {slug}</h1>

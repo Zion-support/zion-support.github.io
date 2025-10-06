@@ -1,12 +1,10 @@
 import ArrowRight from 'next/link';
 
 export const metadata = {
-  
   title: 'AI 2028: Self‑Healing Platforms — 99.995% Uptime at Lower Cost',
   description:
     'Autonomous platform patterns: predictive scalingbudget guardsand one‑click rollback for extreme reliability.',
-
-};;
+};
 
 export default function Page() {
   return (
@@ -31,8 +29,8 @@ export default function Page() {
         <section className='prose max-w-none'>
           <h2>Blueprint Overview</h2>
           <p>
-            Combine demand forecastingbudget‑aware routingand automated
-            rollback to keep reliability high while controlling spend.
+            Combine demand forecastingbudget‑aware routingand automated rollback
+            to keep reliability high while controlling spend.
           </p>
           <h3>Control Loops</h3>
           <ul>

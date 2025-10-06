@@ -2,14 +2,12 @@
 import ArrowRight from 'next/link';
 
 export const metadata = {
-  
   title: 'Governed Autonomy Blueprint (2025): SafeReliableCost-Aware AI',
   description:
     'A practical blueprint to ship governed autonomy: budgets, scorecardsguardrailsand live traces that connect SLIs to business KPIs.',
   keywords:
     'governed autonomy, ai guardrails, policy tests, operational scorecardsai budgetsenterprise ai 2025',
-
-};;
+};
 
 export default function GovernedAutonomyBlueprint2025() {
   return (
@@ -46,7 +44,8 @@ export default function GovernedAutonomyBlueprint2025() {
             <p className='text-blue-800'>
               Governed autonomy connects technical SLIs to business KPIs via
               operational scorecards, budgeted actions, and instant rollback.
-              This blueprint standardizes the playbook across experimentationstagingand production.
+              This blueprint standardizes the playbook across
+              experimentationstagingand production.
             </p>
           </div>
 
@@ -177,7 +176,8 @@ function RelatedCard({ title, href }: { title: string; href: string }) {
 
 function NextUpCard({
   title,
-  descriptionhref}: {
+  descriptionhref,
+}: {
   title: string;
   description: string;
   href: string;

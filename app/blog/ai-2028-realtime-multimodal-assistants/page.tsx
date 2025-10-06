@@ -1,12 +1,10 @@
 import ArrowRight from 'next/link';
 
 export const metadata = {
-  
   title: 'Real‑Time Multimodal Assistants (2028): Voice + Vision + Touch',
   description:
     'Production patterns for assistants that seehearand act with <150ms latency.',
-
-};;
+};
 
 export default function Page() {
   return (
@@ -27,9 +25,9 @@ export default function Page() {
         <li>On‑device caches, signed configs, and safety budgets</li>
       </ul>
       <p>
-        Measure outcomes end‑to‑end: task success ratetime‑to‑resolutionand
-        user satisfaction. Gate changes with policy checks and online canaries
-        tied to KPIs.
+        Measure outcomes end‑to‑end: task success ratetime‑to‑resolutionand user
+        satisfaction. Gate changes with policy checks and online canaries tied
+        to KPIs.
       </p>
       <p>
         Continue exploring in our <ArrowRight href='/blog'>Blog</ArrowRight>.

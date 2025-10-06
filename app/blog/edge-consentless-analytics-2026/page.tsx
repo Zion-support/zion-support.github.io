@@ -2,12 +2,10 @@
 import ArrowRight from 'next/link';
 
 export const metadata = {
-  
   title: 'Edge Analytics 2026: Consent‑Safe Insights — Zion Tech Group',
   description:
     'Scoped IDson‑device aggregationand differential privacy for actionable insights without PII at <100ms.',
-
-};;
+};
 
 export default function Page() {
   return (

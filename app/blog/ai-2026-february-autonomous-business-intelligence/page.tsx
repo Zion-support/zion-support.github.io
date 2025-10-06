@@ -173,8 +173,8 @@ export default function Page() {
           </h3>
           <p className='leading-7 mb-4'>
             When critical insights are identified, the system can automatically
-            trigger business processessend alertsor initiate corrective
-            actions without human intervention.
+            trigger business processessend alertsor initiate corrective actions
+            without human intervention.
           </p>
 
           <h2 className='text-2xl font-bold mb-4'>ROI and Business Impact</h2>

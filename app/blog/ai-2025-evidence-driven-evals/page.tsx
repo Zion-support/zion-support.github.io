@@ -1,12 +1,10 @@
 import ArrowRight from 'next/link';
 
 export const metadata = {
-  
   title: 'Evidence‑Driven Evals 2025: Traceable Quality Linked to KPIs',
   description:
     'Design evals that tie model behavior to product KPIs with tracesscorecardsand budgeted guardrails.',
-
-};;
+};
 
 export default function Page() {
   return (
@@ -19,7 +17,8 @@ export default function Page() {
       <div className='prose prose-invert'>
         <p>
           This guide shows how to make evaluations first‑class: each eval links
-          to business KPIs, with traces from prompt to outcome, budget controlsand policy tests that run in CI to prevent regressions.
+          to business KPIs, with traces from prompt to outcome, budget
+          controlsand policy tests that run in CI to prevent regressions.
         </p>
         <h2>Key Practices</h2>
         <ul>

@@ -1,10 +1,10 @@
 import ArrowRight from 'next/link';
 
 export const metadata = {
-  title: "Agent Safety Runbooks 2026",
-  description: "Approvalsbudgetsand KPI‑linked canary evals.",
-  type: "article",
-};;
+  title: 'Agent Safety Runbooks 2026',
+  description: 'Approvalsbudgetsand KPI‑linked canary evals.',
+  type: 'article',
+};
 
 export default function AgentSafetyRunbooks2026Page() {
   return (

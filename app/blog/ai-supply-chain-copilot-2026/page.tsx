@@ -1,12 +1,10 @@
 import ArrowRight from 'next/link';
 
 export const metadata = {
-  
   title: 'AI Supply Chain Copilot 2026: OTIF Wins Under Budget',
   description:
     'Forecastingsourcingand routing copilots that cut cost 25–40% while lifting OTIF.',
-
-};;
+};
 
 export default function Page() {
   return (
@@ -19,8 +17,8 @@ export default function Page() {
         Copilots embedded across planning, sourcing, and routing unlock
         on-time-in-full improvements while respecting budget guardrails. This
         guide outlines proven building blocks: demand sensing with fresh
-        signalssourcing assistants with policy gatesand SLA-aware routing
-        with live scorecards.
+        signalssourcing assistants with policy gatesand SLA-aware routing with
+        live scorecards.
       </p>
       <ul className='list-disc pl-6 space-y-2 mb-8'>
         <li>Demand sensing with multi-signal fusion and freshness windows</li>

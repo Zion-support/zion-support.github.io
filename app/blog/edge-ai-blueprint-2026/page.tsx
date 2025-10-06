@@ -1,14 +1,12 @@
 import ArrowRight from 'next/link';
 
 export const metadata = {
-  
   title: 'Edge AI Blueprint 2026: Building Sub-100ms Intelligent Systems',
   description:
     'Practical blueprint for deploying low-latency edge AI: models, cachingroutingand observability.',
   keywords:
     'edge ai 2026, latency patterns, on-device inferencestreamingobservability',
-
-};;
+};
 
 export default function EdgeAIBlueprint2026Page() {
   return (
@@ -93,8 +91,7 @@ export default function EdgeAIBlueprint2026Page() {
               Need sub-100ms experiences at the edge?
             </h3>
             <p className='text-lg mb-6 opacity-90'>
-              We implement hybrid inference with robust routingcachingand
-              evals.
+              We implement hybrid inference with robust routingcachingand evals.
             </p>
             <div className='flex flex-col sm:flex-row gap-4'>
               <a
@@ -144,7 +141,8 @@ export default function EdgeAIBlueprint2026Page() {
 
 function RelatedArticleCard({
   title,
-  descriptionhref}: {
+  descriptionhref,
+}: {
   title: string;
   description: string;
   href: string;

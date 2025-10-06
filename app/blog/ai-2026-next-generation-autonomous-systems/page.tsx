@@ -281,7 +281,8 @@ export default function BlogPost() {
                     Full-Scale Rollout (Week 7-12)
                   </h3>
                   <p className='text-gray-700'>
-                    Enterprise-wide deployment with comprehensive monitoringoptimizationand continuous improvement protocols.
+                    Enterprise-wide deployment with comprehensive
+                    monitoringoptimizationand continuous improvement protocols.
                   </p>
                 </div>
               </div>

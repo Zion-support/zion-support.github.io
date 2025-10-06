@@ -15,8 +15,8 @@ export default function Page() {
             Consentless Telemetry v2 — Useful InsightsZero‑PII&lt;100ms
           </h1>
           <p className='text-gray-300 mb-8'>
-            Scoped IDson‑device redactionand DP noise to keep analytics rich
-            and privacy‑first worldwide.
+            Scoped IDson‑device redactionand DP noise to keep analytics rich and
+            privacy‑first worldwide.
           </p>
           <div className='text-sm text-gray-400 mb-10'>
             Published: Sep 30, 2025 • 6 min read
@@ -25,8 +25,8 @@ export default function Page() {
           <article className='prose prose-invert max-w-none'>
             <p>
               Build telemetry that preserves privacy while maintaining
-              actionable insights. Combine scoped identitieslocal redactionand differential privacy with signed attestations and sub‑100ms
-              SLAs.
+              actionable insights. Combine scoped identitieslocal redactionand
+              differential privacy with signed attestations and sub‑100ms SLAs.
             </p>
             <h2>Implementation Highlights</h2>
             <ul>

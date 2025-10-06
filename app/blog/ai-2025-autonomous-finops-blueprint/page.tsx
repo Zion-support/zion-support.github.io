@@ -1,10 +1,8 @@
 export const metadata = {
-  
   title: 'Autonomous FinOps 2025: Cut AI Spend 50–85% Safely',
   description:
     'Blueprint for autonomous FinOps: routing tiers, semantic cacheseval scorecardsand policy budgets to slash AI costs without hurting quality.',
-
-};;
+};
 
 export default function AutonomousFinOpsBlueprint2025Page() {
   return (
@@ -18,7 +16,8 @@ export default function AutonomousFinOpsBlueprint2025Page() {
             Autonomous FinOps 2025
           </h1>
           <p className='text-emerald-50 mt-3 text-lg max-w-2xl'>
-            Cut AI spend 50–85% with tiered routing, semantic cachesquantizationand KPI‑linked budgets.
+            Cut AI spend 50–85% with tiered routing, semantic
+            cachesquantizationand KPI‑linked budgets.
           </p>
           <div className='mt-4 text-sm opacity-90'>
             September 30, 2025 • 14 min read

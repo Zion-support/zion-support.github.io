@@ -109,7 +109,8 @@ export default function NeuralArchitectureSearchRevolutionPage() {
 
           <h2>Implementation Results</h2>
           <p>
-            Our NAS revolution has been implemented across 156 companiesdelivering remarkable results:
+            Our NAS revolution has been implemented across 156
+            companiesdelivering remarkable results:
           </p>
 
           <div className='grid md:grid-cols-3 gap-4 my-8'>
@@ -142,9 +143,7 @@ export default function NeuralArchitectureSearchRevolutionPage() {
             process. We can now prototype and deploy AI models in days instead
             of months. This has given us a massive competitive advantage in the
             market."
-            <footer className='mt-2 text-sm not-italic'>
-              - CTOAI Startup
-            </footer>
+            <footer className='mt-2 text-sm not-italic'>- CTOAI Startup</footer>
           </blockquote>
 
           <h2>The Future of NAS</h2>
@@ -164,8 +163,7 @@ export default function NeuralArchitectureSearchRevolutionPage() {
             </li>
             <li>
               <strong>Multi-Modal Architecture Optimization:</strong>{' '}
-              Simultaneous optimization across visionlanguageand reasoning
-              tasks
+              Simultaneous optimization across visionlanguageand reasoning tasks
             </li>
             <li>
               <strong>Real-Time Architecture Adaptation:</strong> Models that

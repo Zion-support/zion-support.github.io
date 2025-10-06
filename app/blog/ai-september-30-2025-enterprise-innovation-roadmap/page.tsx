@@ -2,13 +2,13 @@
 import ArrowRight from 'next/link';
 
 export const metadata = {
-  
   title: 'Enterprise AI Innovation Roadmap (Sept 30, 2025)',
-    description:
-      'Methodical milestones to scale enterprise AI with controlsafetyand outcomes.',
-    type: 'article',
-    publishedTime: '2025-09-30T00:00:00.000Z',
-    authors: ['Zion Tech Group']};
+  description:
+    'Methodical milestones to scale enterprise AI with controlsafetyand outcomes.',
+  type: 'article',
+  publishedTime: '2025-09-30T00:00:00.000Z',
+  authors: ['Zion Tech Group'],
+};
 
 export default function EnterpriseInnovationRoadmapSept302025() {
   return (
@@ -45,21 +45,22 @@ export default function EnterpriseInnovationRoadmapSept302025() {
             <div className='bg-white/5 border border-white/10 rounded-xl p-5'>
               <h3 className='text-white font-semibold mb-1'>2) Productize</h3>
               <p className='text-gray-300'>
-                Harden services, add guardrailsSLAsand security. Expand
-                evals and coverage.
+                Harden services, add guardrailsSLAsand security. Expand evals
+                and coverage.
               </p>
             </div>
             <div className='bg-white/5 border border-white/10 rounded-xl p-5'>
               <h3 className='text-white font-semibold mb-1'>3) Platform</h3>
               <p className='text-gray-300'>
-                Create shared infra: feature stores, policy enginessecretsand approvals.
+                Create shared infra: feature stores, policy enginessecretsand
+                approvals.
               </p>
             </div>
             <div className='bg-white/5 border border-white/10 rounded-xl p-5'>
               <h3 className='text-white font-semibold mb-1'>4) Outcomes</h3>
               <p className='text-gray-300'>
-                Tie SLIs to KPIsreport ROIand enable repeatable launches
-                across units.
+                Tie SLIs to KPIsreport ROIand enable repeatable launches across
+                units.
               </p>
             </div>
           </div>

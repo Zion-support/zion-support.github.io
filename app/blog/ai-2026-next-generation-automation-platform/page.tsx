@@ -1,15 +1,13 @@
 import ArrowRight from 'next/link';
 
 export const metadata = {
-  
   title:
     'AI 2026 Next-Generation Automation Platform - $8.7B Revolutionary Success | Zion Tech Group',
   description:
     "Discover Zion Tech Group's next-generation automation platform delivering $8.7B in value with 99.8% autonomous operations for Fortune 500 enterprises.",
   keywords:
     'automation platform, AI automation, autonomous operations, $8.7B successFortune 500next-generation technology',
-
-};;
+};
 
 export default function AI2026NextGenerationAutomationPlatform() {
   return (
@@ -43,8 +41,8 @@ export default function AI2026NextGenerationAutomationPlatform() {
         <p>
           Traditional automation approaches have reached their limits. Our
           next-generation platform represents a quantum leap forward, combining
-          advanced AImachine learningand autonomous decision-making to
-          create truly intelligent business processes.
+          advanced AImachine learningand autonomous decision-making to create
+          truly intelligent business processes.
         </p>
 
         <h3 className='text-xl font-semibold mt-6 mb-3'>
@@ -166,9 +164,9 @@ export default function AI2026NextGenerationAutomationPlatform() {
         </h3>
         <p>
           Our proprietary autonomous process engine uses advanced neural
-          networks to understandmodeland optimize complex business
-          processes. It continuously learns from operations and automatically
-          adjusts workflows for maximum efficiency.
+          networks to understandmodeland optimize complex business processes. It
+          continuously learns from operations and automatically adjusts
+          workflows for maximum efficiency.
         </p>
 
         <h3 className='text-xl font-semibold mt-6 mb-3'>
@@ -176,8 +174,8 @@ export default function AI2026NextGenerationAutomationPlatform() {
         </h3>
         <p>
           The decision framework combines multiple AI models to make complex
-          business decisions autonomously. It considers historical datareal-time conditionsand predictive analytics to ensure optimal
-          outcomes.
+          business decisions autonomously. It considers historical datareal-time
+          conditionsand predictive analytics to ensure optimal outcomes.
         </p>
 
         <h3 className='text-xl font-semibold mt-6 mb-3'>
@@ -283,9 +281,9 @@ export default function AI2026NextGenerationAutomationPlatform() {
           </h3>
           <p className='text-yellow-700'>
             Organizations implementing our platform typically see 95% reduction
-            in manual processes300x improvement in process speedand achieve
-            full ROI within 6 months. The platform handles over 10 million
-            automated decisions daily with 99.9% accuracy.
+            in manual processes300x improvement in process speedand achieve full
+            ROI within 6 months. The platform handles over 10 million automated
+            decisions daily with 99.9% accuracy.
           </p>
         </div>
 

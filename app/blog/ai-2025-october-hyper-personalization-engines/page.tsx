@@ -1,12 +1,10 @@
 export const metadata = {
-  
   title: 'Hyper-Personalization Engines — October 2025',
   description:
     'Blueprint for real-time, privacy-safe hyper-personalization using retrievalsignalsand online learning.',
   keywords:
     'personalization, real-time, bandits, contextual bandits, features, signalsRAGprivacy',
-
-};;
+};
 
 export default function HyperPersonalizationEnginesPage() {
   return (
@@ -21,8 +19,9 @@ export default function HyperPersonalizationEnginesPage() {
       </header>
 
       <p className='text-lg text-gray-700 mb-6'>
-        Deliver 1:1 experiences at scale with guardrails. Combine embeddingsfirst-party signalsand bandit feedback loops to optimize CTR and
-        conversion while preserving user privacy.
+        Deliver 1:1 experiences at scale with guardrails. Combine
+        embeddingsfirst-party signalsand bandit feedback loops to optimize CTR
+        and conversion while preserving user privacy.
       </p>
 
       <h2 className='text-2xl font-bold text-gray-900 mt-8 mb-4'>

@@ -1,12 +1,10 @@
 import ArrowRight from 'next/link';
 
 export const metadata = {
-  
   title: 'Enterprise Cost Guardrails (2026): Predictable AI spend',
   description:
     'Budgetstiersand KPI‑linked routing that keep GenAI costs predictable without hurting UX.',
-
-};;
+};
 
 export default function Page() {
   return (

@@ -1,10 +1,8 @@
 export const metadata = {
-  
   title: 'Edge Privacy Insights 2026 — Actionable Metrics Without PII',
   description:
     'Scoped IDson-device aggregationand DP noise for trustworthy insights with zero PII collection.',
-
-};;
+};
 
 export default function EdgePrivacyInsights2026() {
   return (
@@ -20,8 +18,8 @@ export default function EdgePrivacyInsights2026() {
         <section className='space-y-6'>
           <p className='text-slate-300'>
             Design analytics that teams trust and regulators approve. Use scoped
-            identifiersedge aggregationand differential privacy noise to
-            extract insights without handling raw PII.
+            identifiersedge aggregationand differential privacy noise to extract
+            insights without handling raw PII.
           </p>
           <ul className='list-disc list-inside space-y-2 text-slate-300'>
             <li>Scoped IDs with rotation and limited linkage</li>

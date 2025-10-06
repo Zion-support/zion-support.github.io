@@ -1,13 +1,13 @@
 import ArrowRight from 'next/link';
 
 export const metadata = {
-  
   title: 'AI 2027: Neuromorphic Computing Breakthrough',
-    description:
-      'The complete guide to neuromorphic computing revolution in 2027',
-    type: 'article',
-    publishedTime: '2027-01-20T00:00:00.000Z',
-    authors: ['Zion Tech Group']};
+  description:
+    'The complete guide to neuromorphic computing revolution in 2027',
+  type: 'article',
+  publishedTime: '2027-01-20T00:00:00.000Z',
+  authors: ['Zion Tech Group'],
+};
 
 export default function AI2027NeuromorphicComputingBreakthrough() {
   return (
@@ -49,10 +49,11 @@ export default function AI2027NeuromorphicComputingBreakthrough() {
             🧠 Executive Summary
           </h2>
           <p className='text-lg text-gray-700'>
-            Neuromorphic computing has achieved a breakthrough in 2027delivering brain-inspired AI systems that operate with 1000x less
-            power consumption while providing cognitive capabilities that rival
-            human intelligence. Organizations adopting this technology are
-            seeing 500% performance improvements.
+            Neuromorphic computing has achieved a breakthrough in 2027delivering
+            brain-inspired AI systems that operate with 1000x less power
+            consumption while providing cognitive capabilities that rival human
+            intelligence. Organizations adopting this technology are seeing 500%
+            performance improvements.
           </p>
         </div>
 
@@ -168,8 +169,8 @@ export default function AI2027NeuromorphicComputingBreakthrough() {
             </p>
             <div className='bg-gray-50 p-4 rounded-lg'>
               <p className='text-sm text-gray-600'>
-                <strong>Result:</strong> 95% reduction in defects60% decrease
-                in downtime$15M annual savings.
+                <strong>Result:</strong> 95% reduction in defects60% decrease in
+                downtime$15M annual savings.
               </p>
             </div>
           </div>

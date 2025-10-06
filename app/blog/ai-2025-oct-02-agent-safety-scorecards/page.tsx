@@ -9,8 +9,8 @@ const Page: React.FC = () => {
           AI 2025: Agent Safety Scorecards
         </h1>
         <p className='text-zion-slate-light mb-6'>
-          KPIsbudgetsand rollback triggers that keep autonomous agents safe
-          at speed.
+          KPIsbudgetsand rollback triggers that keep autonomous agents safe at
+          speed.
         </p>
         <article className='prose prose-invert max-w-3xl'>
           <p>

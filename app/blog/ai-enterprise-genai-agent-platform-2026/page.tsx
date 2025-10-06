@@ -1,12 +1,10 @@
 import ArrowRight from 'next/link';
 
 export const metadata = {
-  
   title: 'AI Enterprise GenAI Agent Platform 2026 | Zion Tech Group',
   description:
     'Blueprint to ship a reliable, governed, and cost‑efficient enterprise GenAI agent platform in 2026—routing, memory, toolsobservabilityand guardrails.',
-
-};;
+};
 
 export default function AIEnterpriseGenAIAgentPlatform2026Page() {
   return (
@@ -36,7 +34,8 @@ export default function AIEnterpriseGenAIAgentPlatform2026Page() {
             </h1>
             <p className='text-xl text-white/80'>
               A pragmatic reference architecture to standardize routing, memory,
-              tools, safety, and observability— so teams can ship governedreliableand cost‑efficient GenAI experiences at scale.
+              tools, safety, and observability— so teams can ship
+              governedreliableand cost‑efficient GenAI experiences at scale.
             </p>
           </header>
 
@@ -90,7 +89,8 @@ export default function AIEnterpriseGenAIAgentPlatform2026Page() {
                 <div className='bg-white/5 border border-white/10 rounded-xl p-6'>
                   <h3 className='font-semibold mb-2'>Security</h3>
                   <p className='text-white/70'>
-                    Data residency, key isolation, per‑tool scopesattestationsand privacy redaction.
+                    Data residency, key isolation, per‑tool
+                    scopesattestationsand privacy redaction.
                   </p>
                 </div>
               </div>

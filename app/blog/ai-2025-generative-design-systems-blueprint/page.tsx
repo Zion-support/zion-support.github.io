@@ -60,8 +60,8 @@ export default function GenerativeDesignSystemsBlueprintPage() {
             Rollout Strategy
           </h2>
           <p className='text-gray-700 mb-6'>
-            Start with low-risk workflowsmeasure ROIthen scale to core
-            product surfaces.
+            Start with low-risk workflowsmeasure ROIthen scale to core product
+            surfaces.
           </p>
         </div>
 

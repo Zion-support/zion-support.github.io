@@ -1,4 +1,4 @@
-export interface NewService { 
+export interface NewService {
   id: string;
   name: string;
   description: string;
@@ -17,7 +17,8 @@ export const newServices2026: NewService[] = [
   {
     id: 'ai-predictive-maintenance',
     name: 'AI Predictive Maintenance Platform',
-    description: 'Revolutionary AI platform for predictive maintenance delivering 99.2% accuracy and 87% cost reduction.',
+    description:
+      'Revolutionary AI platform for predictive maintenance delivering 99.2% accuracy and 87% cost reduction.',
     category: 'AI Platform',
     pricing: {
       starting: 'Contact for pricing',
@@ -36,7 +37,8 @@ export const newServices2026: NewService[] = [
   {
     id: 'quantum-ai-security',
     name: 'Quantum AI Security Framework',
-    description: 'Next-generation quantum AI security providing 99.99% threat prevention and zero vulnerabilities.',
+    description:
+      'Next-generation quantum AI security providing 99.99% threat prevention and zero vulnerabilities.',
     category: 'AI Security',
     pricing: {
       starting: 'Contact for pricing',
@@ -51,5 +53,5 @@ export const newServices2026: NewService[] = [
     valueProposition: '99.99% threat prevention, zero vulnerabilities',
     tags: ['Quantum AI', 'Security', 'Framework', '2026'],
     featured: true,
-  }
+  },
 ];

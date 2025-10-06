@@ -1,4 +1,4 @@
-export interface RevOpsContent { 
+export interface RevOpsContent {
   id: string;
   title: string;
   description: string;
@@ -20,7 +20,8 @@ export const octoberNewestRevOpsContent: RevOpsContent[] = [
   {
     id: 'ai-revops-automation-2025',
     title: 'AI RevOps Automation 2025: 3.2x Pipeline Velocity',
-    description: 'Revolutionary AI-powered RevOps automation delivering 3.2x pipeline velocity and 127% ROI.',
+    description:
+      'Revolutionary AI-powered RevOps automation delivering 3.2x pipeline velocity and 127% ROI.',
     category: 'RevOps',
     date: '2025-10-01',
     readTime: '20 min read',
@@ -55,7 +56,8 @@ Revolutionary AI-powered RevOps automation delivering unprecedented pipeline vel
   {
     id: 'autonomous-revenue-operations-2025',
     title: 'Autonomous Revenue Operations 2025: Self-Healing Systems',
-    description: 'Self-healing RevOps systems with 99.9% uptime and 85% cost reduction.',
+    description:
+      'Self-healing RevOps systems with 99.9% uptime and 85% cost reduction.',
     category: 'RevOps',
     date: '2025-10-02',
     readTime: '18 min read',
@@ -86,15 +88,17 @@ Self-healing RevOps systems delivering unprecedented reliability and cost effici
       efficiency: '98%',
       reliability: '99.99%',
     },
-  }
+  },
 ];
 
-export const getFeaturedRevOpsContent = () => { 
+export const getFeaturedRevOpsContent = () => {
   return octoberNewestRevOpsContent.filter(content => content.featured);
 };
 
-export const getBreakingRevOpsContent = () => { 
-  return octoberNewestRevOpsContent.filter(content => content.tags.includes('Breaking'));
+export const getBreakingRevOpsContent = () => {
+  return octoberNewestRevOpsContent.filter(content =>
+    content.tags.includes('Breaking'),
+  );
 };
 
 export const getAllRevOpsContent = () => {

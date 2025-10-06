@@ -12,8 +12,9 @@ export default function Page() {
           Published: 2025‑09‑30 • 7 min read • Edge Computing
         </p>
         <p className='text-lg text-gray-700 leading-relaxed mb-6'>
-          Deliver private, sub‑100ms personalization using scoped identifierson‑device modelsand differential privacy. This field guide shows how
-          to keep signals rich and compliant—without collecting PII.
+          Deliver private, sub‑100ms personalization using scoped
+          identifierson‑device modelsand differential privacy. This field guide
+          shows how to keep signals rich and compliant—without collecting PII.
         </p>
         <ul className='list-disc pl-6 text-gray-700 space-y-2 mb-8'>
           <li>Scoped IDs and geo/account budgets for safe segmentation</li>

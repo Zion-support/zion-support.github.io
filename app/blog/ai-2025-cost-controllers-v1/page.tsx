@@ -1,10 +1,8 @@
 export const metadata = {
-  
   title: 'AI Cost Controllers v1 (2025): BudgetsTiersand Guardrails',
   description:
     'Practical cost governance: route by quality tierenforce budgetsand prevent overruns with policy tests.',
-
-};;
+};
 
 export default function Page() {
   return (

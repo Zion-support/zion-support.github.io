@@ -1,12 +1,10 @@
 import ArrowRight from 'next/link';
 
 export const metadata = {
-  
   title: 'E2E AI Tracing 2026: From Prompts to Outcomes | Zion Tech Group',
   description:
     'Blueprint for end-to-end AI tracing: prompts, tools, callsSLAsand KPI‑linked scorecards for reliable AI at scale.',
-
-};;
+};
 
 export default function Page() {
   return (

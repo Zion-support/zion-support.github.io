@@ -65,8 +65,8 @@ export default function AI2026BreakthroughAnnouncement() {
                 </h3>
                 <p className='text-gray-300 mb-4'>
                   Our AI systems now possess the ability to analyze their own
-                  decision-making processesidentify biasesand self-correct
-                  in real-time.
+                  decision-making processesidentify biasesand self-correct in
+                  real-time.
                 </p>
                 <ul className='space-y-2 text-sm text-gray-400'>
                   <li>• Self-referential neural pathways</li>
@@ -171,7 +171,8 @@ export default function AI2026BreakthroughAnnouncement() {
               <p className='text-gray-300 mb-4'>
                 Our Quantum-Neural Integration (QNI) technology leverages
                 quantum computing principles to enhance classical neural
-                networksachieving: </p>
+                networksachieving:{' '}
+              </p>
               <div className='grid md:grid-cols-3 gap-6'>
                 <div className='text-center'>
                   <div className='text-3xl font-bold text-blue-400 mb-2'>
@@ -257,8 +258,9 @@ export default function AI2026BreakthroughAnnouncement() {
                   💼 Financial Services
                 </h3>
                 <p className='text-gray-300 mb-4'>
-                  Meta-Cognitive AI is transforming financial risk assessmentfraud detectionand algorithmic trading with unprecedented
-                  accuracy and transparency.
+                  Meta-Cognitive AI is transforming financial risk
+                  assessmentfraud detectionand algorithmic trading with
+                  unprecedented accuracy and transparency.
                 </p>
                 <div className='flex flex-wrap gap-2'>
                   <span className='px-3 py-1 bg-purple-500/20 text-purple-400 rounded-full text-sm'>

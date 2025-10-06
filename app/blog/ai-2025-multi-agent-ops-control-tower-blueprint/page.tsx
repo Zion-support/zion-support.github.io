@@ -21,7 +21,8 @@ export default function MultiAgentOpsControlTowerBlueprintPage() {
               AI 2025: Multi‑Agent Ops Control Tower Blueprint
             </h1>
             <p className='text-xl md:text-2xl opacity-90 mb-8 max-w-3xl mx-auto leading-relaxed'>
-              Operationalize AI agents with observability, approvalsrunbooksand fail‑safes.
+              Operationalize AI agents with observability, approvalsrunbooksand
+              fail‑safes.
             </p>
             <div className='flex flex-wrap justify-center items-center space-x-6 text-sm text-gray-200 mb-8'>
               <div className='flex items-center'>
@@ -47,9 +48,7 @@ export default function MultiAgentOpsControlTowerBlueprintPage() {
             <li>Unified agent registry, routing, and permissions</li>
             <li>Approval workflows for sensitive operations</li>
             <li>Runtime observability: traces, metrics, event timelines</li>
-            <li>
-              Safeguards: budget limitsblast‑radius controlsauto‑rollback
-            </li>
+            <li>Safeguards: budget limitsblast‑radius controlsauto‑rollback</li>
           </ul>
 
           <h2 className='text-3xl font-bold text-gray-900 mb-6'>

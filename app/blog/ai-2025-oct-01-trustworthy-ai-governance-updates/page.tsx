@@ -1,13 +1,11 @@
 import ArrowRight from 'next/link';
 
 export const metadata = {
-  
   title: 'Trustworthy AI Governance Updates — October 2025',
   description:
     'Latest governance patterns for agentic systems: policy packsevaluation pipelinesand risk budgets that scale.',
   keywords: 'AI governance, risk budgetsevaluation pipelinescompliance',
-
-};;
+};
 
 export default function Page() {
   return (

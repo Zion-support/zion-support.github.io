@@ -2,14 +2,12 @@
 import ArrowRight from 'next/link';
 
 export const metadata = {
-  
   title: 'Private AI Sandbox (2025): Safe Enterprise Experimentation',
   description:
     'Stand up a governed, cost-capped AI sandbox to safely test modelspromptsand workflows without risking production.',
   keywords:
     'private ai sandbox, 2025, enterprise ai, r&d, governance, cost capsevalsguardrails',
-
-};;
+};
 
 export default function PrivateAISandbox2025Page() {
   return (
@@ -27,8 +25,8 @@ export default function PrivateAISandbox2025Page() {
           <p className='text-xl mb-8 opacity-90'>
             Launch a governed AI experimentation environment with budget
             controls, model switching, and built‑in safety checks. Learn how to
-            standardize promptstrack costsand ship results to production
-            with confidence.
+            standardize promptstrack costsand ship results to production with
+            confidence.
           </p>
           <div className='flex items-center gap-6 text-sm opacity-80'>
             <span>📅 September 30, 2025</span>
@@ -46,8 +44,8 @@ export default function PrivateAISandbox2025Page() {
             </p>
             <p className='text-indigo-800'>
               A Private AI Sandbox accelerates discovery while enforcing
-              governance. Use evalsred‑teamingand deterministic rollouts to
-              move from experiment to production without surprises.
+              governance. Use evalsred‑teamingand deterministic rollouts to move
+              from experiment to production without surprises.
             </p>
           </div>
 
@@ -136,7 +134,8 @@ export default function PrivateAISandbox2025Page() {
 
 function RelatedArticleCard({
   title,
-  descriptionhref}: {
+  descriptionhref,
+}: {
   title: string;
   description: string;
   href: string;

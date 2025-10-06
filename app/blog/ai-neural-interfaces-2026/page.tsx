@@ -44,8 +44,8 @@ export default function Page() {
           </ul>
           <p>
             Production deployments require strong guardrailscomprehensive
-            observabilityand progressive autonomy. This guide outlines a
-            roadmap for pilot-to-scale.
+            observabilityand progressive autonomy. This guide outlines a roadmap
+            for pilot-to-scale.
           </p>
         </article>
         <div className='mt-12'>

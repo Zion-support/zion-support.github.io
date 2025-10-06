@@ -14,8 +14,8 @@ export default function Page() {
           <p className='leading-7 mb-4'>
             A pragmatic blueprint for making enterprise GenAI safe and reliable:
             encode policies as executable tests, wire KPIs to scorecardsbudget
-            risky actionsand support one-click rollback when production
-            signals degrade.
+            risky actionsand support one-click rollback when production signals
+            degrade.
           </p>
           <ul className='list-disc pl-6 space-y-2 mb-6'>
             <li>Executable policy tests in CI and PR checks</li>

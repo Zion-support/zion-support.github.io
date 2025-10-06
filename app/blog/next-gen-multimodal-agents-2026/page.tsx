@@ -5,8 +5,8 @@ export default function NextGenMultimodalAgents2026() {
     <>
       <Head>
         <title>
-          Next-Gen Multimodal Agents 2026: VisionLanguageand Action | Zion
-          Tech Group
+          Next-Gen Multimodal Agents 2026: VisionLanguageand Action | Zion Tech
+          Group
         </title>
         <meta
           name='description'
@@ -63,9 +63,8 @@ export default function NextGenMultimodalAgents2026() {
                 </h2>
                 <p className='text-white/80 mb-4'>
                   Real-world environments are inherently multimodal. Combining
-                  visionaudioand structured data with language reasoning
-                  unlocks robust autonomy—from factory inspection to field
-                  operations.
+                  visionaudioand structured data with language reasoning unlocks
+                  robust autonomy—from factory inspection to field operations.
                 </p>
               </section>
 
@@ -100,7 +99,8 @@ export default function NextGenMultimodalAgents2026() {
                     robotics).
                   </li>
                   <li>
-                    <strong>Safety and Guardrails.</strong> Enforce rolepolicyand environment constraints; capture audit trails.
+                    <strong>Safety and Guardrails.</strong> Enforce
+                    rolepolicyand environment constraints; capture audit trails.
                   </li>
                   <li>
                     <strong>Closed-Loop Evaluation.</strong> Measure outcomes
@@ -129,8 +129,8 @@ export default function NextGenMultimodalAgents2026() {
                     Pilot Multimodal Agents with Zion Tech Group
                   </h3>
                   <p className='text-white/80 mb-6'>
-                    We designdeployand govern multimodal agents tailored to
-                    your highest-value workflows.
+                    We designdeployand govern multimodal agents tailored to your
+                    highest-value workflows.
                   </p>
                   <div className='flex gap-4'>
                     <a

@@ -1,13 +1,10 @@
 import ArrowRight from 'next/link';
 
 export const metadata = {
-  
-  title:
-    'Edge Private Feature Flags (2026): Zero‑PIISub‑100msSigned Configs',
+  title: 'Edge Private Feature Flags (2026): Zero‑PIISub‑100msSigned Configs',
   description:
     'Blueprint for privacy‑safe feature flags and experiments at the edge with scoped IDs and DP noise.',
-
-};;
+};
 
 export default function Page() {
   return (
@@ -27,9 +24,7 @@ export default function Page() {
           Reliability: signed/expiring configs, shadow canaries, budgeted
           rollbacks
         </li>
-        <li>
-          Observability: edge tracescohort metricsKPI‑linked approvals
-        </li>
+        <li>Observability: edge tracescohort metricsKPI‑linked approvals</li>
       </ul>
       <p>
         Related reads:{' '}

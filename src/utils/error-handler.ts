@@ -76,23 +76,23 @@ class ErrorHandler {
     if (typeof window === 'undefined') return;
 
     // Global JavaScript error handler
-    window.addEventListener('error', (event) => {
+    window.addEventListener('error', event => {
       this.handleError({
         type: 'javascript',
         message: event.message,
         filename: event.filename,
         lineno: event.lineno,
         colno: event.colno,
-        error: event.error
+        error: event.error,
       });
     });
 
     // Unhandled promise rejection handler
-    window.addEventListener('unhandledrejection', (event) => {
+    window.addEventListener('unhandledrejection', event => {
       this.handleError({
         type: 'promise',
         message: event.reason?.message || 'Unhandled promise rejection',
-        error: event.reason
+        error: event.reason,
       });
     });
   }
@@ -100,11 +100,11 @@ class ErrorHandler {
   private setupUnhandledRejectionHandler(): void {
     if (typeof window === 'undefined') return;
 
-    window.addEventListener('unhandledrejection', (event) => {
+    window.addEventListener('unhandledrejection', event => {
       this.handleError({
         type: 'promise',
         message: event.reason?.message || 'Unhandled promise rejection',
-        error: event.reason
+        error: event.reason,
       });
     });
   }
@@ -122,7 +122,7 @@ class ErrorHandler {
             type: 'network',
             message: `HTTP ${response.status}: ${response.statusText}`,
             url: args[0] as string,
-            status: response.status
+            status: response.status,
           });
         }
         return response;
@@ -131,7 +131,7 @@ class ErrorHandler {
           type: 'network',
           message: error.message,
           url: args[0] as string,
-          error
+          error,
         });
         throw error;
       }
@@ -158,7 +158,7 @@ class ErrorHandler {
   }): void {
     const errorId = this.generateErrorId(errorData);
     const now = new Date().toISOString();
-    
+
     const context: ErrorContext = {
       timestamp: now,
       url: errorData.url || window.location.href,
@@ -167,11 +167,11 @@ class ErrorHandler {
       stackTrace: errorData.error?.stack,
       componentStack: errorData.componentStack,
       props: errorData.props,
-      state: errorData.state
+      state: errorData.state,
     };
 
     const severity = this.determineSeverity(errorData);
-    
+
     if (this.errors.has(errorId)) {
       // Update existing error
       const existingError = this.errors.get(errorId)!;
@@ -189,14 +189,14 @@ class ErrorHandler {
         frequency: 1,
         firstOccurrence: now,
         lastOccurrence: now,
-        resolved: false
+        resolved: false,
       };
-      
+
       this.errors.set(errorId, errorReport);
     }
 
     this.errorCount++;
-    
+
     // Log error for development
     if (process.env.NODE_ENV === 'development') {
       console.error('Error captured:', errorData);
@@ -215,7 +215,9 @@ class ErrorHandler {
 
   private generateErrorId(errorData: any): string {
     const key = `${errorData.type}_${errorData.message}_${errorData.filename || ''}_${errorData.lineno || ''}`;
-    return btoa(key).replace(/[^a-zA-Z0-9]/g, '').substr(0, 16);
+    return btoa(key)
+      .replace(/[^a-zA-Z0-9]/g, '')
+      .substr(0, 16);
   }
 
   private determineSeverity(errorData: any): ErrorReport['severity'] {
@@ -223,17 +225,20 @@ class ErrorHandler {
     if (errorData.type === 'network' || errorData.type === 'promise') {
       return 'critical';
     }
-    
+
     // High: JavaScript errors in production
-    if (errorData.type === 'javascript' && process.env.NODE_ENV === 'production') {
+    if (
+      errorData.type === 'javascript' &&
+      process.env.NODE_ENV === 'production'
+    ) {
       return 'high';
     }
-    
+
     // Medium: React errors, resource loading errors
     if (errorData.type === 'react' || errorData.type === 'resource') {
       return 'medium';
     }
-    
+
     // Low: Everything else
     return 'low';
   }
@@ -242,7 +247,7 @@ class ErrorHandler {
     // In a real application, this would send to an error reporting service
     // like Sentry, LogRocket, or a custom API endpoint
     console.log('Sending error report:', errorReport.id);
-    
+
     // Example: Send to external service
     // fetch('/api/errors', {
     //   method: 'POST',
@@ -253,12 +258,16 @@ class ErrorHandler {
 
   private cleanupOldErrors(): void {
     const errorsArray = Array.from(this.errors.values());
-    errorsArray.sort((a, b) => new Date(b.lastOccurrence).getTime() - new Date(a.lastOccurrence).getTime());
-    
+    errorsArray.sort(
+      (a, b) =>
+        new Date(b.lastOccurrence).getTime() -
+        new Date(a.lastOccurrence).getTime(),
+    );
+
     // Keep only the most recent 500 errors
     const errorsToKeep = errorsArray.slice(0, 500);
     this.errors.clear();
-    
+
     errorsToKeep.forEach(error => {
       this.errors.set(error.id, error);
     });
@@ -275,25 +284,32 @@ class ErrorHandler {
   getErrorMetrics(): ErrorMetrics {
     const errors = this.getErrors();
     const totalErrors = errors.length;
-    
-    const errorsByType = errors.reduce((acc, error) => {
-      acc[error.type] = (acc[error.type] || 0) + 1;
-      return acc;
-    }, {} as Record<string, number>);
-    
-    const errorsBySeverity = errors.reduce((acc, error) => {
-      acc[error.severity] = (acc[error.severity] || 0) + 1;
-      return acc;
-    }, {} as Record<string, number>);
-    
-    const errorRate = this.errorCount / (Date.now() - new Date().getTime()) * 1000; // errors per second
-    
+
+    const errorsByType = errors.reduce(
+      (acc, error) => {
+        acc[error.type] = (acc[error.type] || 0) + 1;
+        return acc;
+      },
+      {} as Record<string, number>,
+    );
+
+    const errorsBySeverity = errors.reduce(
+      (acc, error) => {
+        acc[error.severity] = (acc[error.severity] || 0) + 1;
+        return acc;
+      },
+      {} as Record<string, number>,
+    );
+
+    const errorRate =
+      (this.errorCount / (Date.now() - new Date().getTime())) * 1000; // errors per second
+
     return {
       totalErrors,
       errorsByType,
       errorsBySeverity,
       errorRate,
-      averageResolutionTime: 0 // This would be calculated based on resolution tracking
+      averageResolutionTime: 0, // This would be calculated based on resolution tracking
     };
   }
 
@@ -310,25 +326,33 @@ class ErrorHandler {
     const errors = this.getErrors();
     const criticalErrors = errors.filter(e => e.severity === 'critical');
     const unresolvedErrors = errors.filter(e => !e.resolved);
-    
+
     return `
 Error Handling Report:
 Total Errors: ${metrics.totalErrors}
 Error Rate: ${metrics.errorRate.toFixed(4)} errors/second
 
 Errors by Type:
-${Object.entries(metrics.errorsByType).map(([type, count]) => `- ${type}: ${count}`).join('\n')}
+${Object.entries(metrics.errorsByType)
+  .map(([type, count]) => `- ${type}: ${count}`)
+  .join('\n')}
 
 Errors by Severity:
-${Object.entries(metrics.errorsBySeverity).map(([severity, count]) => `- ${severity}: ${count}`).join('\n')}
+${Object.entries(metrics.errorsBySeverity)
+  .map(([severity, count]) => `- ${severity}: ${count}`)
+  .join('\n')}
 
 Critical Errors: ${criticalErrors.length}
 Unresolved Errors: ${unresolvedErrors.length}
 
 Recent Errors:
-${errors.slice(-5).map(error => 
-  `- [${error.severity.toUpperCase()}] ${error.type}: ${error.message} (${error.frequency}x)`
-).join('\n')}
+${errors
+  .slice(-5)
+  .map(
+    error =>
+      `- [${error.severity.toUpperCase()}] ${error.type}: ${error.message} (${error.frequency}x)`,
+  )
+  .join('\n')}
 
 Session ID: ${this.sessionId}
 Last Updated: ${new Date().toISOString()}

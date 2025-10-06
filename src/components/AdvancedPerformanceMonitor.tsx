@@ -25,14 +25,14 @@ const AdvancedPerformanceMonitor: React.FC<AdvancedPerformanceMonitorProps> = ({
     fps: 30,
     memoryUsage: 100,
     renderTime: 16,
-    networkLatency: 100
-  }
+    networkLatency: 100,
+  },
 }) => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     fps: 0,
     memoryUsage: 0,
     renderTime: 0,
-    networkLatency: 0
+    networkLatency: 0,
   });
 
   const measurePerformance = useCallback(() => {
@@ -41,18 +41,18 @@ const AdvancedPerformanceMonitor: React.FC<AdvancedPerformanceMonitorProps> = ({
     // Measure FPS
     let frameCount = 0;
     let lastTime = performance.now();
-    
+
     const measureFPS = () => {
       frameCount++;
       const currentTime = performance.now();
-      
+
       if (currentTime - lastTime >= 1000) {
         const fps = Math.round((frameCount * 1000) / (currentTime - lastTime));
         setMetrics(prev => ({ ...prev, fps }));
         frameCount = 0;
         lastTime = currentTime;
       }
-      
+
       if (isMonitoring) {
         requestAnimationFrame(measureFPS);
       }
@@ -109,34 +109,42 @@ const AdvancedPerformanceMonitor: React.FC<AdvancedPerformanceMonitorProps> = ({
   }
 
   return (
-    <div className="performance-monitor bg-gray-100 p-4 rounded-lg">
-      <h3 className="text-lg font-semibold mb-4">Performance Monitor</h3>
-      
-      <div className="grid grid-cols-2 gap-4">
-        <div className="metric">
-          <div className="text-sm text-gray-600">FPS</div>
-          <div className={`text-2xl font-bold ${getStatusColor(metrics.fps, threshold.fps)}`}>
+    <div className='performance-monitor bg-gray-100 p-4 rounded-lg'>
+      <h3 className='text-lg font-semibold mb-4'>Performance Monitor</h3>
+
+      <div className='grid grid-cols-2 gap-4'>
+        <div className='metric'>
+          <div className='text-sm text-gray-600'>FPS</div>
+          <div
+            className={`text-2xl font-bold ${getStatusColor(metrics.fps, threshold.fps)}`}
+          >
             {metrics.fps}
           </div>
         </div>
-        
-        <div className="metric">
-          <div className="text-sm text-gray-600">Memory Usage (MB)</div>
-          <div className={`text-2xl font-bold ${getStatusColor(metrics.memoryUsage, threshold.memoryUsage)}`}>
+
+        <div className='metric'>
+          <div className='text-sm text-gray-600'>Memory Usage (MB)</div>
+          <div
+            className={`text-2xl font-bold ${getStatusColor(metrics.memoryUsage, threshold.memoryUsage)}`}
+          >
             {metrics.memoryUsage}
           </div>
         </div>
-        
-        <div className="metric">
-          <div className="text-sm text-gray-600">Render Time (ms)</div>
-          <div className={`text-2xl font-bold ${getStatusColor(metrics.renderTime, threshold.renderTime)}`}>
+
+        <div className='metric'>
+          <div className='text-sm text-gray-600'>Render Time (ms)</div>
+          <div
+            className={`text-2xl font-bold ${getStatusColor(metrics.renderTime, threshold.renderTime)}`}
+          >
             {metrics.renderTime.toFixed(2)}
           </div>
         </div>
-        
-        <div className="metric">
-          <div className="text-sm text-gray-600">Network Latency (ms)</div>
-          <div className={`text-2xl font-bold ${getStatusColor(metrics.networkLatency, threshold.networkLatency)}`}>
+
+        <div className='metric'>
+          <div className='text-sm text-gray-600'>Network Latency (ms)</div>
+          <div
+            className={`text-2xl font-bold ${getStatusColor(metrics.networkLatency, threshold.networkLatency)}`}
+          >
             {metrics.networkLatency.toFixed(2)}
           </div>
         </div>

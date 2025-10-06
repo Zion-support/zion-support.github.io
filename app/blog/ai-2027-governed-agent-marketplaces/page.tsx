@@ -1,12 +1,10 @@
 import ArrowRight from 'next/link';
 
 export const metadata = {
-  
   title: 'Governed Agent Marketplaces (2027): BudgetsAttestationsRollback',
   description:
     'Design safe third‑party agent ecosystems with budget guardspolicy attestationsand instant rollback tied to KPIs.',
-
-};;
+};
 
 export default function Page() {
   return (

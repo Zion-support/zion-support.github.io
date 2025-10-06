@@ -1,10 +1,8 @@
 export const metadata = {
-  
   title: 'AI Operational Trust 2026 Q4: SLIsBudgetsRollback',
   description:
     'Outcome‑linked SLIsbudgeted actionsand one‑click rollback for safe autonomy in enterprise AI operations.',
-
-};;
+};
 
 export default function Page() {
   return (
@@ -37,9 +35,9 @@ export default function Page() {
 
       <h2>One‑click rollback</h2>
       <p>
-        Ship safe automation by making rollback an explicittested pathway.
-        Pair PR policy checks with canary evaluations and live scorecards so
-        teams can iterate weekly without regressions.
+        Ship safe automation by making rollback an explicittested pathway. Pair
+        PR policy checks with canary evaluations and live scorecards so teams
+        can iterate weekly without regressions.
       </p>
 
       <p className='mt-8'>

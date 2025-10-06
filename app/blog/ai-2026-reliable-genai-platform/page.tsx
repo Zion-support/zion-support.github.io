@@ -1,12 +1,10 @@
 import ArrowRight from 'next/link';
 
 export const metadata = {
-  
   title: 'Reliable GenAI Platform 2026: ArchitectureGuardrailsand ROI',
   description:
     'Design a reliable, cost‑efficient GenAI platform with routing, memoryevalsand policy guardrails. A pragmatic 2026 blueprint for enterprises.',
-
-};;
+};
 
 export default function ReliableGenAIPlatform2026Page() {
   return (
@@ -33,7 +31,8 @@ export default function ReliableGenAIPlatform2026Page() {
           </h1>
           <p className='text-white/70 mt-3'>
             A pragmatic blueprint to ship a reliable, governed, and
-            cost‑efficient GenAI platform with policy guardrailsevaluationsand cost‑aware routing.
+            cost‑efficient GenAI platform with policy guardrailsevaluationsand
+            cost‑aware routing.
           </p>
         </header>
 

@@ -1,12 +1,10 @@
 import ArrowRight from 'next/link';
 
 export const metadata = {
-  
   title: 'Edge Experiments 2025 — Zero‑PII Global A/B at <100ms',
   description:
     'Private, fast experimentation with scoped IDsDP noiseand on-device aggregation.',
-
-};;
+};
 
 export default function EdgeExperiments2025() {
   return (

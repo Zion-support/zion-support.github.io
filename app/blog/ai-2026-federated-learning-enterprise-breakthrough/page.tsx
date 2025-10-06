@@ -90,8 +90,8 @@ export default function FederatedLearningEnterpriseBreakthrough() {
             </h2>
             <p className='text-lg text-gray-300 mb-6'>
               Our breakthrough federated learning system combines differential
-              privacysecure aggregationand advanced optimization techniques
-              to deliver unprecedented performance while maintaining ironclad
+              privacysecure aggregationand advanced optimization techniques to
+              deliver unprecedented performance while maintaining ironclad
               privacy guarantees.
             </p>
 

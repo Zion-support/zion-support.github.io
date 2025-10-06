@@ -1,12 +1,10 @@
 // @ts-nocheck
 
 export const metadata = {
-  
   title: 'AI Infra Cost Optimization 2027: FastReliableAffordable',
   description:
     'Cut AI infra spend 30–70% using quality tiers, cachingquantizationand routing—while improving reliability and UX.',
-
-};;
+};
 
 export default function Page() {
   return (
@@ -20,9 +18,9 @@ export default function Page() {
         </p>
         <p className='text-slate-200 mb-4'>
           Manage cost without sacrificing quality. Adopt quality tiers,
-          response-time SLOsrequest bucketingand smart caches to reduce
-          spend. Use eval-informed routing and quantization to achieve
-          predictable latency and cost.
+          response-time SLOsrequest bucketingand smart caches to reduce spend.
+          Use eval-informed routing and quantization to achieve predictable
+          latency and cost.
         </p>
         <h2 className='text-2xl font-bold mt-8 mb-3'>Core Techniques</h2>
         <ul className='list-disc list-inside text-slate-200 space-y-2'>

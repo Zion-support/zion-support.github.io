@@ -1,12 +1,10 @@
 import ArrowRight from 'next/link';
 
 export const metadata = {
-  
   title: 'GenAI Routing Quality Tiers Q4 2025: Predictable Cost, Stable UX',
   description:
     'Tiered modelscachingand budget‑aware routes mapped to SLOs to keep quality high and costs predictable.',
-
-};;
+};
 
 export default function GenAIRoutingQualityTiersQ42025Page() {
   return (
@@ -32,8 +30,8 @@ export default function GenAIRoutingQualityTiersQ42025Page() {
             GenAI Routing Quality Tiers Q4 2025: Predictable Cost, Stable UX
           </h1>
           <p className='text-white/70 mt-3'>
-            Route by SLO with model tierscachesand budget‑aware policies.
-            Keep UX steady while controlling spend.
+            Route by SLO with model tierscachesand budget‑aware policies. Keep
+            UX steady while controlling spend.
           </p>
         </header>
         <article className='prose prose-invert prose-slate max-w-none'>

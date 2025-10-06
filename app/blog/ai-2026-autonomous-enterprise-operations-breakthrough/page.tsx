@@ -102,8 +102,9 @@ export default function AI2026AutonomousEnterpriseOperationsBreakthrough() {
                 Self-Managing Systems
               </h3>
               <p className='text-gray-300 mb-6'>
-                Autonomous AI systems that manage all enterprise operationsfrom resource allocation to strategic decision-makingwith
-                minimal human oversight.
+                Autonomous AI systems that manage all enterprise operationsfrom
+                resource allocation to strategic decision-makingwith minimal
+                human oversight.
               </p>
               <ul className='space-y-2 mb-6 text-gray-300'>
                 <li>• 99.9% autonomous operation</li>
@@ -137,8 +138,9 @@ export default function AI2026AutonomousEnterpriseOperationsBreakthrough() {
                 Strategic Autonomy
               </h3>
               <p className='text-gray-300 mb-6'>
-                AI systems capable of making high-level strategic decisionsentering new marketsand adapting business models autonomously
-                based on data analysis.
+                AI systems capable of making high-level strategic
+                decisionsentering new marketsand adapting business models
+                autonomously based on data analysis.
               </p>
               <ul className='space-y-2 mb-6 text-gray-300'>
                 <li>• Strategic decision-making</li>
@@ -187,9 +189,8 @@ export default function AI2026AutonomousEnterpriseOperationsBreakthrough() {
                       Self-Healing Infrastructure
                     </h4>
                     <p className='text-gray-300'>
-                      Automated systems that detect, diagnoseand resolve
-                      issues without human interventionensuring continuous
-                      operation.
+                      Automated systems that detect, diagnoseand resolve issues
+                      without human interventionensuring continuous operation.
                     </p>
                   </div>
                   <div className='bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10'>
@@ -264,8 +265,8 @@ export default function AI2026AutonomousEnterpriseOperationsBreakthrough() {
                 </div>
                 <p className='text-gray-300 mb-4'>
                   Deploy autonomous infrastructure management systems that
-                  handle server provisioningscalingand maintenance without
-                  human intervention.
+                  handle server provisioningscalingand maintenance without human
+                  intervention.
                 </p>
                 <div className='text-sm text-gray-400'>
                   Duration: 3 weeks | Complexity: High

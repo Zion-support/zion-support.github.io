@@ -1,14 +1,12 @@
 import ArrowRight from 'next/link';
 
 export const metadata = {
-  
   title: 'Platform Engineering Scorecards 2026: Measure What Matters',
   description:
     'A practical, executive-ready scorecard framework for Platform Engineering in 2026: reliability, velocitycostand developer experience.',
   keywords:
     'platform engineering, scorecards 2026, DORA, reliabilitydeveloper experienceplatform KPIs',
-
-};;
+};
 
 export default function PlatformEngineeringScorecards2026Page() {
   return (
@@ -26,8 +24,8 @@ export default function PlatformEngineeringScorecards2026Page() {
           </h1>
           <p className='text-xl mb-8 opacity-90'>
             A pragmatic, executive-friendly framework to track platform outcomes
-            across reliability, velocitycost efficiencyand developer
-            experience. Drive the right conversations and investments.
+            across reliability, velocitycost efficiencyand developer experience.
+            Drive the right conversations and investments.
           </p>
           <div className='flex items-center gap-6 text-sm opacity-80'>
             <span>📅 September 29, 2025</span>
@@ -204,7 +202,8 @@ export default function PlatformEngineeringScorecards2026Page() {
 
 function RelatedArticleCard({
   title,
-  descriptionhref}: {
+  descriptionhref,
+}: {
   title: string;
   description: string;
   href: string;

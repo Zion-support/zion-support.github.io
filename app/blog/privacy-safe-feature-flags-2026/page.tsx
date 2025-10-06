@@ -1,12 +1,10 @@
 // @ts-nocheck
 
 export const metadata = {
-  
   title: 'Privacy‑Safe Feature Flags 2026 | Zion Tech Group',
   description:
     'Consent‑awareidentity‑scopedand DP‑hardened flags for compliant experimentation and rollout.',
-
-};;
+};
 
 export default function PrivacySafeFeatureFlags2026() {
   return (

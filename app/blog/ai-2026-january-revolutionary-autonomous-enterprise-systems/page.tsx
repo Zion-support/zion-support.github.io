@@ -19,9 +19,7 @@ export default function AI2026RevolutionaryAutonomousEnterpriseSystems() {
               <span>•</span>
               <span>⏱️ 12 min read</span>
               <span>•</span>
-              <span>
-                🏷️ Autonomous SystemsEnterprise AIBusiness Automation
-              </span>
+              <span>🏷️ Autonomous SystemsEnterprise AIBusiness Automation</span>
             </div>
           </header>
 
@@ -68,7 +66,8 @@ export default function AI2026RevolutionaryAutonomousEnterpriseSystems() {
                 </h3>
                 <p className='text-gray-300 mb-4'>
                   Enterprise systems that automatically handle complex business
-                  processesfrom supply chain management to customer servicewith 99.7% accuracy.
+                  processesfrom supply chain management to customer servicewith
+                  99.7% accuracy.
                 </p>
                 <ul className='space-y-2 text-sm text-gray-400'>
                   <li>• Autonomous decision-making across all departments</li>
@@ -114,7 +113,8 @@ export default function AI2026RevolutionaryAutonomousEnterpriseSystems() {
                   🛡️ Autonomous Security & Compliance
                 </h3>
                 <p className='text-gray-300 mb-4'>
-                  Self-managing security systems that continuously monitordetectand respond to threats while ensuring regulatory
+                  Self-managing security systems that continuously
+                  monitordetectand respond to threats while ensuring regulatory
                   compliance.
                 </p>
                 <ul className='space-y-2 text-sm text-gray-400'>
@@ -282,8 +282,9 @@ export default function AI2026RevolutionaryAutonomousEnterpriseSystems() {
                   🏥 Healthcare: Autonomous Patient Care
                 </h3>
                 <p className='text-gray-300 mb-4'>
-                  Self-managing healthcare systems that coordinate patient caremanage resourcesand optimize treatment protocols with 98.5%
-                  accuracy.
+                  Self-managing healthcare systems that coordinate patient
+                  caremanage resourcesand optimize treatment protocols with
+                  98.5% accuracy.
                 </p>
                 <div className='flex flex-wrap gap-2'>
                   <span className='px-3 py-1 bg-green-500/20 text-green-400 rounded-full text-sm'>

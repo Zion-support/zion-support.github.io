@@ -6,7 +6,8 @@ export default function Page() {
       <section className='py-16'>
         <div className='max-w-3xl mx-auto px-4'>
           <h1 className='text-4xl font-bold mb-4'>
-            Autonomous Code Generation Revolution 2025: AI That WritesTestsand Deploys
+            Autonomous Code Generation Revolution 2025: AI That WritesTestsand
+            Deploys
           </h1>
           <p className='text-gray-600 mb-6'>
             Published: 2025-12-15 • 12 min read • AI Development
@@ -28,9 +29,9 @@ export default function Page() {
           <p className='leading-7 mb-6'>
             The autonomous code generation revolution is here. Advanced AI
             systems now understand business requirements, generate optimized
-            codewrite comprehensive testsand deploy to production with
-            minimal human intervention. This isn't just automation—it's
-            intelligent software creation at scale.
+            codewrite comprehensive testsand deploy to production with minimal
+            human intervention. This isn't just automation—it's intelligent
+            software creation at scale.
           </p>
 
           <h2 className='text-2xl font-bold mb-4 mt-8'>

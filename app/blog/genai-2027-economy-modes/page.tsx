@@ -1,12 +1,10 @@
 import ArrowRight from 'next/link';
 
 export const metadata = {
-  
   title: 'GenAI 2027: Economy Modes — 50% Savings with Stable UX',
   description:
     'Quality tierssemantic cachesand token budgets that reduce spend while preserving UX and outcomes.',
-
-};;
+};
 
 export default function Page() {
   return (

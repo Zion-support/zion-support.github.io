@@ -13,8 +13,8 @@ export default function RuntimeGuardrailsBlueprint2025() {
             Runtime Guardrails Blueprint — BudgetsGatesInstant Rollback
           </h1>
           <p className='mt-4 text-gray-300 text-lg'>
-            Executable policy testsKPI‑linked canariesand budgeted actions
-            for safe autonomy in production.
+            Executable policy testsKPI‑linked canariesand budgeted actions for
+            safe autonomy in production.
           </p>
         </header>
 

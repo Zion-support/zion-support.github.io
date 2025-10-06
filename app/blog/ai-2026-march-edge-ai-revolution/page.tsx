@@ -22,17 +22,20 @@ export default function Page() {
               <strong>99.99% uptime</strong>
               across distributed networks. This breakthrough enables real-time
               AI processing for <strong>10000+ devices</strong>
-              simultaneouslycreating{' '}
-              <strong>$1.8B in operational value</strong> for enterprise
-              deployments.
+              simultaneouslycreating <strong>
+                $1.8B in operational value
+              </strong>{' '}
+              for enterprise deployments.
             </p>
           </div>
 
           <p className='leading-7 mb-6'>
             The Edge AI Revolution represents a fundamental shift from
             cloud-centric to distributed intelligence. By bringing AI processing
-            to the edge of networks, organizations achieve unprecedented speedreliabilityand efficiency. This isn't just faster computing—it's
-            intelligent infrastructure that thinks and acts instantly.
+            to the edge of networks, organizations achieve unprecedented
+            speedreliabilityand efficiency. This isn't just faster
+            computing—it's intelligent infrastructure that thinks and acts
+            instantly.
           </p>
 
           <h2 className='text-2xl font-bold mb-4 mt-8'>

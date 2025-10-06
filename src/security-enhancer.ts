@@ -4,8 +4,15 @@ class SecurityEnhancer {
 
   private constructor() {}
   private setupHTTPSRedirect(): void {
-    if (typeof location !== 'undefined' && location.protocol !== 'https:' && location.hostname !== 'localhost') {
-      location.replace('https:' + window.location.href.substring(window.location.protocol.length));
+    if (
+      typeof location !== 'undefined' &&
+      location.protocol !== 'https:' &&
+      location.hostname !== 'localhost'
+    ) {
+      location.replace(
+        'https:' +
+          window.location.href.substring(window.location.protocol.length),
+      );
     }
   }
 
@@ -28,7 +35,7 @@ class SecurityEnhancer {
 
   public initialize(): void {
     if (this.isInitialized) return;
-    
+
     this.setupHTTPSRedirect();
     this.setupXSSProtection();
     this.setupSecurityHeaders();

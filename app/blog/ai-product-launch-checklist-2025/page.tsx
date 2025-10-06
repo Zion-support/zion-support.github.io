@@ -24,9 +24,7 @@ export default function Page() {
           <h2>What this includes</h2>
           <ul>
             <li>Readiness gates: data, evals, and policy tests</li>
-            <li>
-              Operational guardrails: budgetsrollbacksand live scorecards
-            </li>
+            <li>Operational guardrails: budgetsrollbacksand live scorecards</li>
             <li>Security and compliance: attestations and runtime verifiers</li>
           </ul>
           <p>

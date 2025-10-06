@@ -2,12 +2,10 @@
 import ArrowRight from 'next/link';
 
 export const metadata = {
-  
   title: 'AI 2027: Operational Scorecards — SLIsBudgetsRollback',
   description:
     'Design operational scorecards that wire SLIs to KPIs with budgeted actionsapprovalsand instant rollback for reliable autonomy.',
-
-};;
+};
 
 export default function Page() {
   return (
@@ -25,7 +23,8 @@ export default function Page() {
         <p className='text-lg text-gray-700 leading-relaxed mb-6'>
           Reliable autonomy requires measurable guardrails. In this guide, we
           show how to design operational scorecards that connect service-level
-          indicators (SLIs) to product KPIs, enabling budgeted actionsapprovalsand instant rollback.
+          indicators (SLIs) to product KPIs, enabling budgeted
+          actionsapprovalsand instant rollback.
         </p>
 
         <h2 className='text-2xl font-bold mt-10 mb-3'>What to Measure</h2>
@@ -39,8 +38,8 @@ export default function Page() {
         <h2 className='text-2xl font-bold mt-10 mb-3'>Guardrails That Ship</h2>
         <p className='text-gray-700 mb-4'>
           Tie scorecard thresholds to automated actions: slow down risky
-          changesrequire approvals for budget overrunsand trigger rollbacks
-          when KPI canaries regress.
+          changesrequire approvals for budget overrunsand trigger rollbacks when
+          KPI canaries regress.
         </p>
 
         <div className='mt-10 p-6 border rounded-xl bg-gray-50'>

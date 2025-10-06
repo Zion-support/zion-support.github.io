@@ -12,11 +12,12 @@ import {
 export const useBannerRotation = (
   banners: BannerConfig[],
   strategy: RotationStrategy = 'sequential',
-  interval: number = 5000
+  interval: number = 5000,
 ): BannerRotationHook => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(true);
-  const [rotationState, setRotationState] = useState<BannerRotationState>('idle');
+  const [rotationState, setRotationState] =
+    useState<BannerRotationState>('idle');
 
   const filteredBanners = useMemo(() => {
     const now = new Date();
@@ -29,13 +30,16 @@ export const useBannerRotation = (
 
   const getNextIndex = useCallback(() => {
     if (filteredBanners.length === 0) return 0;
-    
+
     switch (strategy) {
       case 'random':
         return Math.floor(Math.random() * filteredBanners.length);
       case 'weighted':
         // Simple weighted selection based on priority
-        const totalWeight = filteredBanners.reduce((sum, banner) => sum + banner.priority, 0);
+        const totalWeight = filteredBanners.reduce(
+          (sum, banner) => sum + banner.priority,
+          0,
+        );
         let random = Math.random() * totalWeight;
         for (let i = 0; i < filteredBanners.length; i++) {
           random -= filteredBanners[i].priority;
@@ -50,11 +54,11 @@ export const useBannerRotation = (
 
   const nextBanner = useCallback(() => {
     if (filteredBanners.length === 0) return;
-    
+
     setRotationState('rotating');
     const nextIndex = getNextIndex();
     setCurrentIndex(nextIndex);
-    
+
     setTimeout(() => {
       setRotationState('idle');
     }, 300);
@@ -62,11 +66,12 @@ export const useBannerRotation = (
 
   const previousBanner = useCallback(() => {
     if (filteredBanners.length === 0) return;
-    
+
     setRotationState('rotating');
-    const prevIndex = currentIndex === 0 ? filteredBanners.length - 1 : currentIndex - 1;
+    const prevIndex =
+      currentIndex === 0 ? filteredBanners.length - 1 : currentIndex - 1;
     setCurrentIndex(prevIndex);
-    
+
     setTimeout(() => {
       setRotationState('idle');
     }, 300);
@@ -80,15 +85,18 @@ export const useBannerRotation = (
     setIsPlaying(true);
   }, []);
 
-  const goToBanner = useCallback((index: number) => {
-    if (index >= 0 && index < filteredBanners.length) {
-      setRotationState('rotating');
-      setCurrentIndex(index);
-      setTimeout(() => {
-        setRotationState('idle');
-      }, 300);
-    }
-  }, [filteredBanners.length]);
+  const goToBanner = useCallback(
+    (index: number) => {
+      if (index >= 0 && index < filteredBanners.length) {
+        setRotationState('rotating');
+        setCurrentIndex(index);
+        setTimeout(() => {
+          setRotationState('idle');
+        }, 300);
+      }
+    },
+    [filteredBanners.length],
+  );
 
   useEffect(() => {
     if (!isPlaying || filteredBanners.length <= 1) return;

@@ -1,12 +1,10 @@
 import ArrowRight from 'next/link';
 
 export const metadata = {
-  
   title: 'GenAI Cache Playbook (2026): Cut cost 50%+ with semantic caches',
   description:
     'A practical guide to tieredsemanticand program‑aware caches for stable UX under strict budgets.',
-
-};;
+};
 
 export default function Page() {
   return (

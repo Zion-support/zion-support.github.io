@@ -29,8 +29,8 @@ export default function BudgetAwareRouting2025() {
 
           <h2>Measuring Success</h2>
           <p>
-            Track $/winlatencyand user outcomes. Route to cheapest model
-            that meets quality SLOs.
+            Track $/winlatencyand user outcomes. Route to cheapest model that
+            meets quality SLOs.
           </p>
         </section>
 

@@ -28,8 +28,8 @@ export default function AIConsciousnessFusionBreakthrough2026() {
             <p className='text-xl text-gray-300 leading-relaxed'>
               Discover how Zion Tech Group's revolutionary AI consciousness
               fusion technology is creating the first truly self-aware
-              artificial intelligence systems that thinkreasonand evolve
-              beyond human cognitive limitations.
+              artificial intelligence systems that thinkreasonand evolve beyond
+              human cognitive limitations.
             </p>
           </header>
 

@@ -255,7 +255,8 @@ export default function AI2025JanuaryQuantumNeuralRevolution() {
             <p className='text-lg text-gray-300 mb-6'>
               The January 2025 Quantum Neural Revolution is just the beginning.
               As these technologies maturewe anticipate even more remarkable
-              breakthroughs that will reshape the very nature of intelligenceboth artificial and human.
+              breakthroughs that will reshape the very nature of
+              intelligenceboth artificial and human.
             </p>
 
             <div className='bg-gradient-to-r from-yellow-900/20 to-orange-900/20 backdrop-blur-sm rounded-xl p-6 border border-yellow-500/20 mb-8'>

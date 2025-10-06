@@ -1,13 +1,11 @@
 // @ts-nocheck
 
 export const metadata = {
-  
   title:
     'Edge Inference Warm Pools 2026: Sub-100ms Global with Predictable Cost',
   description:
     'Warm pools, intent prefetchingand tiered caches to achieve fastaffordable inference worldwide.',
-
-};;
+};
 
 export default function Page() {
   return (

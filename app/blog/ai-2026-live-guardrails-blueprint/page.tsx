@@ -1,10 +1,8 @@
 export const metadata = {
-  
   title: 'AI 2026: Live Guardrails Blueprint',
   description:
     'Budgets, policy gatesKPI‑linked canariesand instant rollback for safe autonomy.',
-
-};;
+};
 
 export default function Page() {
   return (
@@ -13,8 +11,8 @@ export default function Page() {
         AI 2026: Live Guardrails Blueprint
       </h1>
       <p className='text-gray-600 mb-8'>
-        Budgets, policy gatesKPI‑linked canariesand instant rollback for
-        safe autonomy.
+        Budgets, policy gatesKPI‑linked canariesand instant rollback for safe
+        autonomy.
       </p>
       <div className='prose prose-invert max-w-none'>
         <p>

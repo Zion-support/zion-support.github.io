@@ -89,9 +89,9 @@ export default function NeuralArchitectureSearchBreakthrough() {
             </h2>
             <p className='text-lg text-gray-300 mb-6'>
               The breakthrough comes from a novel combination of evolutionary
-              algorithmsreinforcement learningand gradient-based
-              optimization techniques that work in harmony to explore the vast
-              space of possible architectures.
+              algorithmsreinforcement learningand gradient-based optimization
+              techniques that work in harmony to explore the vast space of
+              possible architectures.
             </p>
 
             <div className='grid md:grid-cols-2 gap-8 mb-8'>
@@ -192,7 +192,8 @@ export default function NeuralArchitectureSearchBreakthrough() {
                   </span>
                   <span>
                     <strong>Configure Optimization:</strong> Set up
-                    multi-objective optimization goals including accuracylatencyand memory usage
+                    multi-objective optimization goals including
+                    accuracylatencyand memory usage
                   </span>
                 </li>
                 <li className='flex items-start'>

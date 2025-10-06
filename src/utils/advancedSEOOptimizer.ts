@@ -27,7 +27,7 @@ class AdvancedSEOOptimizer {
     keywordScore: 0,
     imageAltScore: 0,
     linkScore: 0,
-    overallScore: 0
+    overallScore: 0,
   };
 
   private recommendations: SEORecommendation[] = [];
@@ -40,7 +40,7 @@ class AdvancedSEOOptimizer {
       keywordScore: this.analyzeKeywords(),
       imageAltScore: this.analyzeImages(),
       linkScore: this.analyzeLinks(),
-      overallScore: 0
+      overallScore: 0,
     };
 
     this.metrics.overallScore = this.calculateOverallScore();
@@ -62,7 +62,10 @@ class AdvancedSEOOptimizer {
   }
 
   private analyzeDescription(): number {
-    const description = document.querySelector('meta[name="description"]')?.getAttribute('content') || '';
+    const description =
+      document
+        .querySelector('meta[name="description"]')
+        ?.getAttribute('content') || '';
     let score = 0;
 
     if (description.length > 0) score += 20;
@@ -100,7 +103,7 @@ class AdvancedSEOOptimizer {
     const content = document.body.textContent || '';
     const words = content.toLowerCase().split(/\s+/);
     const wordCount = words.length;
-    
+
     if (wordCount === 0) return 0;
 
     // Simple keyword density analysis
@@ -170,10 +173,12 @@ class AdvancedSEOOptimizer {
       this.metrics.headingScore,
       this.metrics.keywordScore,
       this.metrics.imageAltScore,
-      this.metrics.linkScore
+      this.metrics.linkScore,
     ];
 
-    return Math.round(scores.reduce((sum, score) => sum + score, 0) / scores.length);
+    return Math.round(
+      scores.reduce((sum, score) => sum + score, 0) / scores.length,
+    );
   }
 
   private generateRecommendations(): void {
@@ -184,7 +189,7 @@ class AdvancedSEOOptimizer {
         type: 'title',
         priority: 'high',
         message: 'Title needs improvement',
-        suggestion: 'Ensure title is 30-60 characters and descriptive'
+        suggestion: 'Ensure title is 30-60 characters and descriptive',
       });
     }
 
@@ -193,7 +198,7 @@ class AdvancedSEOOptimizer {
         type: 'description',
         priority: 'high',
         message: 'Meta description needs improvement',
-        suggestion: 'Ensure description is 120-160 characters and compelling'
+        suggestion: 'Ensure description is 120-160 characters and compelling',
       });
     }
 
@@ -202,7 +207,7 @@ class AdvancedSEOOptimizer {
         type: 'heading',
         priority: 'medium',
         message: 'Heading structure needs improvement',
-        suggestion: 'Use proper heading hierarchy (h1, h2, h3, etc.)'
+        suggestion: 'Use proper heading hierarchy (h1, h2, h3, etc.)',
       });
     }
 
@@ -211,7 +216,7 @@ class AdvancedSEOOptimizer {
         type: 'image',
         priority: 'medium',
         message: 'Images need alt text',
-        suggestion: 'Add descriptive alt text to all images'
+        suggestion: 'Add descriptive alt text to all images',
       });
     }
 
@@ -220,7 +225,7 @@ class AdvancedSEOOptimizer {
         type: 'link',
         priority: 'low',
         message: 'Links need improvement',
-        suggestion: 'Ensure all links have valid href attributes'
+        suggestion: 'Ensure all links have valid href attributes',
       });
     }
   }
@@ -253,9 +258,12 @@ Detailed Scores:
 - Links: ${this.metrics.linkScore}/100
 
 Recommendations:
-${this.recommendations.map(rec => 
-  `- ${rec.priority.toUpperCase()}: ${rec.message} - ${rec.suggestion}`
-).join('\n')}
+${this.recommendations
+  .map(
+    rec =>
+      `- ${rec.priority.toUpperCase()}: ${rec.message} - ${rec.suggestion}`,
+  )
+  .join('\n')}
     `;
 
     return report.trim();

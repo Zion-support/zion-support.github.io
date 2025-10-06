@@ -2,12 +2,10 @@
 import ArrowRight from 'next/link';
 
 export const metadata = {
-  
   title: 'AI 2027: Edge‑Native Agents — Real‑TimeReliableLow‑Latency',
   description:
     'Blueprint for deploying edge‑native AI agents with millisecond latencyreliability guardrailsand cost control.',
-
-};;
+};
 
 export default function Page() {
   return (
@@ -26,8 +24,7 @@ export default function Page() {
         </h1>
         <p className='text-slate-300 mb-6'>
           How to run agentic workloads at the edge for sub‑50ms interactions,
-          with policy guardrailsobservabilityand aggressive cost
-          optimization.
+          with policy guardrailsobservabilityand aggressive cost optimization.
         </p>
         <div className='flex items-center gap-3 text-sm text-slate-400 mb-10'>
           <span>⚡ Technical Guide</span>
@@ -41,8 +38,9 @@ export default function Page() {
           <h2 className='text-2xl font-bold'>Why Edge‑Native Agents</h2>
           <p>
             Enterprises need millisecond‑latency agent actions for CX, fraud,
-            and supply‑chain decisions. Centralized inference adds jittercostand privacy risk. Edge‑native agents push policy‑aware logic closer
-            to the user and data.
+            and supply‑chain decisions. Centralized inference adds jittercostand
+            privacy risk. Edge‑native agents push policy‑aware logic closer to
+            the user and data.
           </p>
 
           <h3 className='text-xl font-semibold'>Key Capabilities</h3>

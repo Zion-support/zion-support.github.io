@@ -1,12 +1,10 @@
 import ArrowRight from 'next/link';
 
 export const metadata = {
-  
   title: 'AI Neural Networks Enterprise Transformation 2025 | Zion Tech Group',
   description:
     'Deploy advanced neural network architectures with enterprise guardrails, achieving 98.5% accuracy10x ROIand 85% efficiency gains.',
-
-};;
+};
 
 export default function AINeuralNetworksEnterpriseTransformation2025Page() {
   return (
@@ -56,7 +54,8 @@ export default function AINeuralNetworksEnterpriseTransformation2025Page() {
                   eval gates, and replay analysis.
                 </li>
                 <li>
-                  <strong>Cost Router:</strong> dynamic provider selectioncachingand batching.
+                  <strong>Cost Router:</strong> dynamic provider
+                  selectioncachingand batching.
                 </li>
               </ul>
             </section>

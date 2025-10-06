@@ -65,7 +65,8 @@ export default function AI2025JanuaryAutonomousEnterpriseTransformation() {
                 The January 2025 Autonomous Enterprise Transformation represents
                 the most significant shift in business operations since the
                 industrial revolution. Organizations implementing autonomous AI
-                systems are achieving unprecedented levels of automationefficiencyand cost reduction that were previously
+                systems are achieving unprecedented levels of
+                automationefficiencyand cost reduction that were previously
                 unimaginable.
               </p>
               <p className='text-lg text-gray-300'>
@@ -83,8 +84,9 @@ export default function AI2025JanuaryAutonomousEnterpriseTransformation() {
               Autonomous Enterprise Transformation is the complete integration
               of self-governing AI systems that can operate independently, make
               complex decisions, and execute business processes without human
-              intervention. These systems combine advanced machine learningnatural language processingand cognitive computing to create
-              truly intelligent business operations.
+              intervention. These systems combine advanced machine
+              learningnatural language processingand cognitive computing to
+              create truly intelligent business operations.
             </p>
 
             <div className='grid md:grid-cols-2 gap-6 mb-8'>
@@ -158,8 +160,8 @@ export default function AI2025JanuaryAutonomousEnterpriseTransformation() {
                 </div>
                 <p className='text-gray-300 mb-3'>
                   Implementation of autonomous AI systems with advanced machine
-                  learning capabilitiesnatural language processingand
-                  cognitive computing frameworks.
+                  learning capabilitiesnatural language processingand cognitive
+                  computing frameworks.
                 </p>
                 <div className='text-cyan-300 text-sm font-semibold'>
                   Duration: 2-3 weeks | Result: 85% automation achieved
@@ -220,8 +222,9 @@ export default function AI2025JanuaryAutonomousEnterpriseTransformation() {
                   Manufacturing
                 </h3>
                 <p className='text-gray-300 mb-4'>
-                  Autonomous production systems with predictive maintenancequality controland supply chain optimization achieving 99.9%
-                  uptime and 40% cost reduction.
+                  Autonomous production systems with predictive
+                  maintenancequality controland supply chain optimization
+                  achieving 99.9% uptime and 40% cost reduction.
                 </p>
                 <div className='text-green-300 text-sm font-semibold'>
                   Result: $500M annual savings
@@ -233,9 +236,9 @@ export default function AI2025JanuaryAutonomousEnterpriseTransformation() {
                   Financial Services
                 </h3>
                 <p className='text-gray-300 mb-4'>
-                  Autonomous trading systemsrisk managementand fraud
-                  detection achieving 99.99% accuracy and processing 1M+
-                  transactions per second.
+                  Autonomous trading systemsrisk managementand fraud detection
+                  achieving 99.99% accuracy and processing 1M+ transactions per
+                  second.
                 </p>
                 <div className='text-blue-300 text-sm font-semibold'>
                   Result: $300M revenue increase
@@ -247,9 +250,9 @@ export default function AI2025JanuaryAutonomousEnterpriseTransformation() {
                   Healthcare
                 </h3>
                 <p className='text-gray-300 mb-4'>
-                  Autonomous diagnostic systemspatient monitoringand
-                  treatment optimization achieving 95% accuracy in diagnosis and
-                  60% faster treatment delivery.
+                  Autonomous diagnostic systemspatient monitoringand treatment
+                  optimization achieving 95% accuracy in diagnosis and 60%
+                  faster treatment delivery.
                 </p>
                 <div className='text-purple-300 text-sm font-semibold'>
                   Result: 50% cost reduction

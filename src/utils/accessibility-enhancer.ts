@@ -39,7 +39,7 @@ class AccessibilityEnhancer {
       enableColorContrastCheck: true,
       enableFocusManagement: true,
       enableARIALabels: true,
-      ...config
+      ...config,
     };
   }
 
@@ -66,13 +66,15 @@ class AccessibilityEnhancer {
     if (!this.config.enableKeyboardNavigation) return;
 
     // Add keyboard event listeners
-    document.addEventListener('keydown', (e) => {
+    document.addEventListener('keydown', e => {
       this.handleKeyboardNavigation(e);
     });
 
     // Make all interactive elements focusable
-    const interactiveElements = document.querySelectorAll('button, a, input, select, textarea, [tabindex]');
-    interactiveElements.forEach((element) => {
+    const interactiveElements = document.querySelectorAll(
+      'button, a, input, select, textarea, [tabindex]',
+    );
+    interactiveElements.forEach(element => {
       if (!element.hasAttribute('tabindex')) {
         element.setAttribute('tabindex', '0');
       }
@@ -89,7 +91,8 @@ class AccessibilityEnhancer {
     // Skip to main content
     if (key === 'Tab' && e.shiftKey && element.id === 'skip-to-main') {
       e.preventDefault();
-      const main = document.querySelector('main') || document.querySelector('#main');
+      const main =
+        document.querySelector('main') || document.querySelector('#main');
       if (main) {
         (main as HTMLElement).focus();
       }
@@ -116,7 +119,7 @@ class AccessibilityEnhancer {
     const { key, target } = e;
     const element = target as HTMLElement;
     const menu = element.closest('[role="menu"], [role="menubar"]');
-    
+
     if (!menu) return;
 
     e.preventDefault();
@@ -145,12 +148,12 @@ class AccessibilityEnhancer {
     if (!this.config.enableFocusManagement) return;
 
     // Track focus changes
-    document.addEventListener('focusin', (e) => {
+    document.addEventListener('focusin', e => {
       this.manageFocus(e.target as HTMLElement);
     });
 
     // Trap focus in modals
-    document.addEventListener('keydown', (e) => {
+    document.addEventListener('keydown', e => {
       if (e.key === 'Tab') {
         this.trapFocusInModal(e);
       }
@@ -163,7 +166,7 @@ class AccessibilityEnhancer {
   private manageFocus(element: HTMLElement): void {
     // Add focus indicators
     element.classList.add('focus-visible');
-    
+
     // Remove focus indicator after blur
     element.addEventListener('blur', () => {
       element.classList.remove('focus-visible');
@@ -171,7 +174,9 @@ class AccessibilityEnhancer {
 
     // Announce focus changes to screen readers
     if (this.config.enableScreenReaderSupport) {
-      this.announceToScreenReader(`Focused on ${this.getElementDescription(element)}`);
+      this.announceToScreenReader(
+        `Focused on ${this.getElementDescription(element)}`,
+      );
     }
   }
 
@@ -183,10 +188,12 @@ class AccessibilityEnhancer {
     if (!modal) return;
 
     const focusableElements = modal.querySelectorAll(
-      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])',
     );
     const firstElement = focusableElements[0] as HTMLElement;
-    const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
+    const lastElement = focusableElements[
+      focusableElements.length - 1
+    ] as HTMLElement;
 
     if (e.shiftKey && document.activeElement === firstElement) {
       e.preventDefault();
@@ -205,7 +212,7 @@ class AccessibilityEnhancer {
 
     // Add ARIA labels to buttons without text
     const buttons = document.querySelectorAll('button:not([aria-label])');
-    buttons.forEach((button) => {
+    buttons.forEach(button => {
       const icon = button.querySelector('svg, i');
       if (icon && !button.textContent?.trim()) {
         const label = this.generateARIALabel(button);
@@ -214,11 +221,16 @@ class AccessibilityEnhancer {
     });
 
     // Add ARIA labels to form inputs
-    const inputs = document.querySelectorAll('input:not([aria-label]):not([aria-labelledby])');
-    inputs.forEach((input) => {
+    const inputs = document.querySelectorAll(
+      'input:not([aria-label]):not([aria-labelledby])',
+    );
+    inputs.forEach(input => {
       const label = this.findAssociatedLabel(input as HTMLInputElement);
       if (label) {
-        input.setAttribute('aria-labelledby', label.id || this.generateId(label));
+        input.setAttribute(
+          'aria-labelledby',
+          label.id || this.generateId(label),
+        );
       }
     });
 
@@ -233,11 +245,11 @@ class AccessibilityEnhancer {
     if (!this.config.enableColorContrastCheck) return;
 
     const elements = document.querySelectorAll('*');
-    elements.forEach((element) => {
+    elements.forEach(element => {
       const styles = window.getComputedStyle(element);
       const color = styles.color;
       const backgroundColor = styles.backgroundColor;
-      
+
       if (color && backgroundColor && backgroundColor !== 'rgba(0, 0, 0, 0)') {
         const contrast = this.calculateContrast(color, backgroundColor);
         if (contrast < 4.5) {
@@ -246,7 +258,7 @@ class AccessibilityEnhancer {
             element: element as HTMLElement,
             message: `Low color contrast: ${contrast.toFixed(2)}:1`,
             fix: 'Increase color contrast to at least 4.5:1',
-            severity: 'high'
+            severity: 'high',
           });
         }
       }
@@ -258,8 +270,8 @@ class AccessibilityEnhancer {
    */
   private optimizeImages(): void {
     const images = document.querySelectorAll('img');
-    
-    images.forEach((img) => {
+
+    images.forEach(img => {
       // Add alt text if missing
       if (!img.alt) {
         img.alt = this.generateAltText(img);
@@ -268,7 +280,7 @@ class AccessibilityEnhancer {
           element: img,
           message: 'Image missing alt text',
           fix: 'Add descriptive alt text',
-          severity: 'high'
+          severity: 'high',
         });
       }
 
@@ -290,18 +302,26 @@ class AccessibilityEnhancer {
    */
   private enhanceForms(): void {
     const forms = document.querySelectorAll('form');
-    
-    forms.forEach((form) => {
+
+    forms.forEach(form => {
       // Add form labels
       const inputs = form.querySelectorAll('input, select, textarea');
-      inputs.forEach((input) => {
-        if (!input.hasAttribute('aria-label') && !input.hasAttribute('aria-labelledby')) {
+      inputs.forEach(input => {
+        if (
+          !input.hasAttribute('aria-label') &&
+          !input.hasAttribute('aria-labelledby')
+        ) {
           const label = this.findAssociatedLabel(input as HTMLInputElement);
           if (!label) {
-            const generatedLabel = this.generateFormLabel(input as HTMLInputElement);
+            const generatedLabel = this.generateFormLabel(
+              input as HTMLInputElement,
+            );
             const labelElement = document.createElement('label');
             labelElement.textContent = generatedLabel;
-            labelElement.setAttribute('for', input.id || this.generateId(input));
+            labelElement.setAttribute(
+              'for',
+              input.id || this.generateId(input),
+            );
             input.id = input.id || this.generateId(input);
             input.parentNode?.insertBefore(labelElement, input);
           }
@@ -309,7 +329,7 @@ class AccessibilityEnhancer {
       });
 
       // Add form validation
-      form.addEventListener('submit', (e) => {
+      form.addEventListener('submit', e => {
         this.validateForm(form as HTMLFormElement, e);
       });
     });
@@ -325,7 +345,7 @@ class AccessibilityEnhancer {
       <a href="#main" id="skip-to-main" class="skip-link">Skip to main content</a>
       <a href="#navigation" class="skip-link">Skip to navigation</a>
     `;
-    
+
     document.body.insertBefore(skipLinks, document.body.firstChild);
   }
 
@@ -372,7 +392,7 @@ class AccessibilityEnhancer {
       score,
       issues: this.issues,
       recommendations,
-      timestamp: new Date().toISOString()
+      timestamp: new Date().toISOString(),
     };
   }
 
@@ -381,7 +401,7 @@ class AccessibilityEnhancer {
    */
   private calculateScore(): number {
     let score = 100;
-    
+
     this.issues.forEach(issue => {
       switch (issue.severity) {
         case 'high':
@@ -404,7 +424,7 @@ class AccessibilityEnhancer {
    */
   private generateRecommendations(): string[] {
     const recommendations: string[] = [];
-    
+
     const errorCount = this.issues.filter(i => i.type === 'error').length;
     const warningCount = this.issues.filter(i => i.type === 'warning').length;
 
@@ -434,7 +454,9 @@ class AccessibilityEnhancer {
     return 'Button';
   }
 
-  private findAssociatedLabel(input: HTMLInputElement): HTMLLabelElement | null {
+  private findAssociatedLabel(
+    input: HTMLInputElement,
+  ): HTMLLabelElement | null {
     const id = input.id;
     if (id) {
       return document.querySelector(`label[for="${id}"]`);
@@ -449,21 +471,28 @@ class AccessibilityEnhancer {
   private generateAltText(img: HTMLImageElement): string {
     const src = img.src;
     const filename = src.split('/').pop()?.split('.')[0] || 'image';
-    return filename.replace(/[-_]/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+    return filename
+      .replace(/[-_]/g, ' ')
+      .replace(/\b\w/g, l => l.toUpperCase());
   }
 
   private generateFormLabel(input: HTMLInputElement): string {
     const type = input.type;
     const placeholder = input.placeholder;
-    
+
     if (placeholder) return placeholder;
-    
+
     switch (type) {
-      case 'email': return 'Email address';
-      case 'password': return 'Password';
-      case 'tel': return 'Phone number';
-      case 'url': return 'Website URL';
-      default: return 'Input field';
+      case 'email':
+        return 'Email address';
+      case 'password':
+        return 'Password';
+      case 'tel':
+        return 'Phone number';
+      case 'url':
+        return 'Website URL';
+      default:
+        return 'Input field';
     }
   }
 
@@ -480,7 +509,7 @@ class AccessibilityEnhancer {
   private addARIADescriptions(): void {
     // Add ARIA descriptions for complex elements
     const complexElements = document.querySelectorAll('[data-description]');
-    complexElements.forEach((element) => {
+    complexElements.forEach(element => {
       const description = element.getAttribute('data-description');
       if (description) {
         const descId = `desc-${Math.random().toString(36).substr(2, 9)}`;
@@ -503,7 +532,9 @@ class AccessibilityEnhancer {
 
   private closeModal(modal: HTMLElement): void {
     modal.setAttribute('aria-hidden', 'true');
-    const focusableElement = modal.querySelector('[data-focus-trap-start]') as HTMLElement;
+    const focusableElement = modal.querySelector(
+      '[data-focus-trap-start]',
+    ) as HTMLElement;
     if (focusableElement) {
       focusableElement.focus();
     }
@@ -512,13 +543,13 @@ class AccessibilityEnhancer {
   private getElementDescription(element: HTMLElement): string {
     const ariaLabel = element.getAttribute('aria-label');
     if (ariaLabel) return ariaLabel;
-    
+
     const text = element.textContent?.trim();
     if (text) return text;
-    
+
     const alt = element.getAttribute('alt');
     if (alt) return alt;
-    
+
     return element.tagName.toLowerCase();
   }
 }

@@ -17,10 +17,10 @@ class AdvancedCachingSystem {
   init() {
     // Start cleanup interval
     setInterval(() => this.cleanup(), this.cleanupInterval);
-    
+
     // Setup memory pressure handling
     this.setupMemoryPressureHandling();
-    
+
     // Setup cache analytics
     this.setupCacheAnalytics();
   }
@@ -123,7 +123,7 @@ class AdvancedCachingSystem {
       const item = {
         value,
         expiry,
-        timestamp: Date.now()
+        timestamp: Date.now(),
       };
       localStorage.setItem(`cache_${key}`, JSON.stringify(item));
     } catch (error) {
@@ -181,7 +181,7 @@ class AdvancedCachingSystem {
       setInterval(() => {
         const memInfo = performance.memory;
         const usedRatio = memInfo.usedJSHeapSize / memInfo.totalJSHeapSize;
-        
+
         if (usedRatio > 0.8) {
           this.aggressiveCleanup();
         }
@@ -208,7 +208,7 @@ class AdvancedCachingSystem {
       misses: 0,
       sets: 0,
       deletes: 0,
-      evictions: 0
+      evictions: 0,
     };
   }
 
@@ -216,24 +216,26 @@ class AdvancedCachingSystem {
     return {
       ...this.stats,
       size: this.cache.size,
-      hitRate: this.stats.hits / (this.stats.hits + this.stats.misses) || 0
+      hitRate: this.stats.hits / (this.stats.hits + this.stats.misses) || 0,
     };
   }
 
   // Cache warming strategies
   warmCache(keys, fetcher) {
-    return Promise.all(keys.map(async key => {
-      if (!this.has(key)) {
-        try {
-          const value = await fetcher(key);
-          this.set(key, value);
-          return { key, success: true };
-        } catch (error) {
-          return { key, success: false, error };
+    return Promise.all(
+      keys.map(async key => {
+        if (!this.has(key)) {
+          try {
+            const value = await fetcher(key);
+            this.set(key, value);
+            return { key, success: true };
+          } catch (error) {
+            return { key, success: false, error };
+          }
         }
-      }
-      return { key, success: true, cached: true };
-    }));
+        return { key, success: true, cached: true };
+      }),
+    );
   }
 
   // Prefetch related data
@@ -248,13 +250,13 @@ class AdvancedCachingSystem {
   invalidatePattern(pattern) {
     const regex = new RegExp(pattern);
     const keysToDelete = [];
-    
+
     for (const key of this.cache.keys()) {
       if (regex.test(key)) {
         keysToDelete.push(key);
       }
     }
-    
+
     keysToDelete.forEach(key => this.delete(key));
     return keysToDelete.length;
   }

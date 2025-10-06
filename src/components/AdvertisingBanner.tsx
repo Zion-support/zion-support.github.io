@@ -17,11 +17,11 @@ const AdvertisingBanner: React.FC<AdvertisingBannerProps> = ({
   ctaUrl,
   imageUrl,
   backgroundColor = '#3b82f6',
-  textColor = '#ffffff'
+  textColor = '#ffffff',
 }) => {
   return (
-    <div 
-      className="advertising-banner"
+    <div
+      className='advertising-banner'
       style={{
         backgroundColor,
         color: textColor,
@@ -30,27 +30,25 @@ const AdvertisingBanner: React.FC<AdvertisingBannerProps> = ({
         margin: '1rem 0',
         display: 'flex',
         alignItems: 'center',
-        gap: '2rem'
+        gap: '2rem',
       }}
     >
       {imageUrl && (
-        <div className="banner-image">
-          <img 
-            src={imageUrl} 
+        <div className='banner-image'>
+          <img
+            src={imageUrl}
             alt={title}
             style={{
               width: '200px',
               height: 'auto',
-              borderRadius: '0.25rem'
+              borderRadius: '0.25rem',
             }}
           />
         </div>
       )}
-      
-      <div className="banner-content" style={{ flex: 1 }}>
-        <h2 style={{ margin: '0 0 1rem 0', fontSize: '1.5rem' }}>
-          {title}
-        </h2>
+
+      <div className='banner-content' style={{ flex: 1 }}>
+        <h2 style={{ margin: '0 0 1rem 0', fontSize: '1.5rem' }}>{title}</h2>
         <p style={{ margin: '0 0 1.5rem 0', fontSize: '1rem', opacity: 0.9 }}>
           {description}
         </p>
@@ -64,12 +62,12 @@ const AdvertisingBanner: React.FC<AdvertisingBannerProps> = ({
             textDecoration: 'none',
             borderRadius: '0.25rem',
             fontWeight: 'bold',
-            transition: 'background-color 0.2s'
+            transition: 'background-color 0.2s',
           }}
-          onMouseOver={(e) => {
+          onMouseOver={e => {
             e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.3)';
           }}
-          onMouseOut={(e) => {
+          onMouseOut={e => {
             e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.2)';
           }}
         >

@@ -1,12 +1,10 @@
 // @ts-nocheck
 
 export const metadata = {
-  
   title: 'Real-Time Decision Engines 2026: 10M decisions/sec under 1ms',
   description:
     'Blueprint for ultra-low-latency decisioning with warm poolsintent prefetchingand budget-aware routes.',
-
-};;
+};
 
 export default function RealTimeDecisionEngines2026() {
   return (

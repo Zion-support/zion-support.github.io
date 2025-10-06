@@ -340,8 +340,9 @@ export default function BlogPost() {
                     Quantum Readiness Assessment (Month 1-2)
                   </h3>
                   <p className='text-gray-700'>
-                    Comprehensive evaluation of current infrastructureidentification of quantum-compatible use casesand
-                    development of quantum transformation strategy.
+                    Comprehensive evaluation of current
+                    infrastructureidentification of quantum-compatible use
+                    casesand development of quantum transformation strategy.
                   </p>
                 </div>
               </div>

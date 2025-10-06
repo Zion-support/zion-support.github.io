@@ -13,8 +13,9 @@ export default function Page() {
         </p>
         <p className='text-lg text-gray-700 leading-relaxed mb-6'>
           Secure retrieval‑augmented generation (RAG) requires end‑to‑end
-          controls: auth‑aware retrieval, freshness windows, prompt firewallsand signed outputs. This guide lays out a practical blueprint you can
-          ship in weeksnot months.
+          controls: auth‑aware retrieval, freshness windows, prompt firewallsand
+          signed outputs. This guide lays out a practical blueprint you can ship
+          in weeksnot months.
         </p>
         <ul className='list-disc pl-6 text-gray-700 space-y-2 mb-8'>
           <li>Auth‑aware retrieval with attribute‑based access control</li>
@@ -28,8 +29,8 @@ export default function Page() {
           <div className='text-indigo-700 font-semibold mb-2'>Quickstart</div>
           <p className='text-indigo-800 text-sm'>
             Start by scoping identity to documents at ingestionenforce ABAC in
-            retrievaland apply inline moderation + output signing in
-            generation. Wire KPIs to error budgets and rollbacks.
+            retrievaland apply inline moderation + output signing in generation.
+            Wire KPIs to error budgets and rollbacks.
           </p>
         </div>
         <div className='flex gap-3'>

@@ -1,12 +1,10 @@
 import ArrowRight from 'next/link';
 
 export const metadata = {
-  
   title: 'AI Voice Interfaces Enterprise 2026 | Zion Tech Group',
   description:
     'Enterprise voice interfaces with 98% accuracy, multilingual support, and governance. Patterns for STT, TTSlatency budgetsand privacy.',
-
-};;
+};
 
 export default function AIVoiceInterfacesEnterprise2026Page() {
   return (
@@ -36,8 +34,8 @@ export default function AIVoiceInterfacesEnterprise2026Page() {
             </h1>
             <p className='text-xl text-white/80'>
               Architect reliable, privacy‑preserving voice experiences with low
-              latency STT, expressive TTSlocale adaptationand policy
-              guardrails across 50+ languages.
+              latency STT, expressive TTSlocale adaptationand policy guardrails
+              across 50+ languages.
             </p>
           </header>
 

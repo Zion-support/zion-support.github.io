@@ -1,14 +1,11 @@
 import ArrowRight from 'next/link';
 
 export const metadata = {
-  
   title: 'Agentic Analytics Platform — October 2025',
   description:
     'Blueprint for deploying an agentic analytics platform delivering real-time insightsautonomous data workflowsand measurable ROI.',
-  keywords:
-    'agentic analytics, autonomous datareal-time insightsAI platform',
-
-};;
+  keywords: 'agentic analytics, autonomous datareal-time insightsAI platform',
+};
 
 export default function Page() {
   return (
@@ -41,7 +38,8 @@ export default function Page() {
           <li>Built-in lineage, cost controls, and SLOs</li>
         </ul>
         <p>
-          Enterprises report 85% faster decision cycles$6M+ annual savingsand a 40% reduction in manual data operations after adoption.
+          Enterprises report 85% faster decision cycles$6M+ annual savingsand a
+          40% reduction in manual data operations after adoption.
         </p>
       </section>
 

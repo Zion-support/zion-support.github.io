@@ -1,10 +1,8 @@
 export const metadata = {
-  
   title: 'GenAI Budget‑Aware Routing 2026',
   description:
     'Stable UX under cost SLAs using quality tierscachesand eval signals.',
-
-};;
+};
 
 export default function Page() {
   return (

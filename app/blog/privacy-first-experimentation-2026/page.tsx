@@ -1,10 +1,8 @@
 export const metadata = {
-  
   title: 'Privacy‑First Experimentation 2026: Insights Without PII',
   description:
     'Scoped IDsedge aggregationand DP noise for compliant A/B tests under <100ms.',
-
-};;
+};
 
 export default function Page() {
   return (

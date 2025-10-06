@@ -33,7 +33,7 @@ const EnhancedSEO: React.FC<SEOProps> = ({
   tags = [],
   noindex = false,
   nofollow = false,
-  canonical
+  canonical,
 }) => {
   const location = useLocation();
   const currentUrl = url || `${window.location.origin}${location.pathname}`;
@@ -51,14 +51,14 @@ const EnhancedSEO: React.FC<SEOProps> = ({
     sameAs: [
       'https://linkedin.com/company/zion-tech-group',
       'https://twitter.com/ziontechgroup',
-      'https://github.com/zion-tech-group'
+      'https://github.com/zion-tech-group',
     ],
     contactPoint: {
       '@type': 'ContactPoint',
       telephone: '+1-555-0123',
       contactType: 'customer service',
       areaServed: 'US',
-      availableLanguage: 'English'
+      availableLanguage: 'English',
     },
     address: {
       '@type': 'PostalAddress',
@@ -66,8 +66,8 @@ const EnhancedSEO: React.FC<SEOProps> = ({
       addressLocality: 'San Francisco',
       addressRegion: 'CA',
       postalCode: '94105',
-      addressCountry: 'US'
-    }
+      addressCountry: 'US',
+    },
   };
 
   // Add article structured data if type is article
@@ -80,22 +80,22 @@ const EnhancedSEO: React.FC<SEOProps> = ({
       image: image,
       author: {
         '@type': 'Organization',
-        name: author
+        name: author,
       },
       publisher: {
         '@type': 'Organization',
         name: 'Zion Tech Group',
         logo: {
           '@type': 'ImageObject',
-          url: `${window.location.origin}/images/logo.png`
-        }
+          url: `${window.location.origin}/images/logo.png`,
+        },
       },
       datePublished: publishedTime || currentTime,
       dateModified: modifiedTime || currentTime,
       mainEntityOfPage: {
         '@type': 'WebPage',
-        '@id': currentUrl
-      }
+        '@id': currentUrl,
+      },
     };
 
     if (section) {
@@ -115,7 +115,7 @@ const EnhancedSEO: React.FC<SEOProps> = ({
     if (typeof window !== 'undefined' && (window as any).gtag) {
       (window as any).gtag('config', 'GA_MEASUREMENT_ID', {
         page_title: title,
-        page_location: currentUrl
+        page_location: currentUrl,
       });
     }
 
@@ -124,7 +124,7 @@ const EnhancedSEO: React.FC<SEOProps> = ({
       (window as any).analytics.track('Page Viewed', {
         title,
         url: currentUrl,
-        type
+        type,
       });
     }
   }, [title, currentUrl, type]);
@@ -133,69 +133,100 @@ const EnhancedSEO: React.FC<SEOProps> = ({
     <Helmet>
       {/* Basic Meta Tags */}
       <title>{title}</title>
-      <meta name="description" content={description} />
-      <meta name="keywords" content={keywords} />
-      <meta name="author" content={author} />
-      
+      <meta name='description' content={description} />
+      <meta name='keywords' content={keywords} />
+      <meta name='author' content={author} />
+
       {/* Robots */}
-      <meta name="robots" content={`${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`} />
-      
+      <meta
+        name='robots'
+        content={`${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`}
+      />
+
       {/* Canonical URL */}
-      <link rel="canonical" href={canonicalUrl} />
-      
+      <link rel='canonical' href={canonicalUrl} />
+
       {/* Open Graph / Facebook */}
-      <meta property="og:type" content={type} />
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:image" content={image.startsWith('http') ? image : `${window.location.origin}${image}`} />
-      <meta property="og:url" content={currentUrl} />
-      <meta property="og:site_name" content="Zion Tech Group" />
-      <meta property="og:locale" content="en_US" />
-      
+      <meta property='og:type' content={type} />
+      <meta property='og:title' content={title} />
+      <meta property='og:description' content={description} />
+      <meta
+        property='og:image'
+        content={
+          image.startsWith('http') ? image : `${window.location.origin}${image}`
+        }
+      />
+      <meta property='og:url' content={currentUrl} />
+      <meta property='og:site_name' content='Zion Tech Group' />
+      <meta property='og:locale' content='en_US' />
+
       {/* Twitter */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={image.startsWith('http') ? image : `${window.location.origin}${image}`} />
-      <meta name="twitter:site" content="@ziontechgroup" />
-      <meta name="twitter:creator" content="@ziontechgroup" />
-      
+      <meta name='twitter:card' content='summary_large_image' />
+      <meta name='twitter:title' content={title} />
+      <meta name='twitter:description' content={description} />
+      <meta
+        name='twitter:image'
+        content={
+          image.startsWith('http') ? image : `${window.location.origin}${image}`
+        }
+      />
+      <meta name='twitter:site' content='@ziontechgroup' />
+      <meta name='twitter:creator' content='@ziontechgroup' />
+
       {/* Additional Meta Tags */}
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
-      <meta name="language" content="English" />
-      <meta name="revisit-after" content="7 days" />
-      <meta name="distribution" content="global" />
-      <meta name="rating" content="general" />
-      
+      <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+      <meta httpEquiv='Content-Type' content='text/html; charset=utf-8' />
+      <meta name='language' content='English' />
+      <meta name='revisit-after' content='7 days' />
+      <meta name='distribution' content='global' />
+      <meta name='rating' content='general' />
+
       {/* Theme Color */}
-      <meta name="theme-color" content="#1f2937" />
-      <meta name="msapplication-TileColor" content="#1f2937" />
-      
+      <meta name='theme-color' content='#1f2937' />
+      <meta name='msapplication-TileColor' content='#1f2937' />
+
       {/* Favicon */}
-      <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-      <link rel="manifest" href="/site.webmanifest" />
-      
+      <link rel='icon' type='image/x-icon' href='/favicon.ico' />
+      <link
+        rel='apple-touch-icon'
+        sizes='180x180'
+        href='/apple-touch-icon.png'
+      />
+      <link
+        rel='icon'
+        type='image/png'
+        sizes='32x32'
+        href='/favicon-32x32.png'
+      />
+      <link
+        rel='icon'
+        type='image/png'
+        sizes='16x16'
+        href='/favicon-16x16.png'
+      />
+      <link rel='manifest' href='/site.webmanifest' />
+
       {/* Preconnect to external domains */}
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      <link rel="preconnect" href="https://www.google-analytics.com" />
-      
+      <link rel='preconnect' href='https://fonts.googleapis.com' />
+      <link
+        rel='preconnect'
+        href='https://fonts.gstatic.com'
+        crossOrigin='anonymous'
+      />
+      <link rel='preconnect' href='https://www.google-analytics.com' />
+
       {/* DNS Prefetch */}
-      <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-      <link rel="dns-prefetch" href="//www.google-analytics.com" />
-      
+      <link rel='dns-prefetch' href='//fonts.googleapis.com' />
+      <link rel='dns-prefetch' href='//www.google-analytics.com' />
+
       {/* Structured Data */}
-      <script type="application/ld+json">
+      <script type='application/ld+json'>
         {JSON.stringify(structuredData)}
       </script>
-      
+
       {/* Additional structured data for breadcrumbs */}
       {location.pathname !== '/' && (
-        <script type="application/ld+json">
+        <script type='application/ld+json'>
           {JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'BreadcrumbList',
@@ -204,15 +235,15 @@ const EnhancedSEO: React.FC<SEOProps> = ({
                 '@type': 'ListItem',
                 position: 1,
                 name: 'Home',
-                item: window.location.origin
+                item: window.location.origin,
               },
               {
                 '@type': 'ListItem',
                 position: 2,
                 name: title,
-                item: currentUrl
-              }
-            ]
+                item: currentUrl,
+              },
+            ],
           })}
         </script>
       )}

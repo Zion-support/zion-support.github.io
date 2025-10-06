@@ -1,12 +1,10 @@
 import ArrowRight from 'next/link';
 
 export const metadata = {
-  
   title: 'AI Quantum Security Protocols 2026 | Zion Tech Group',
   description:
     'Protect AI systems with quantum‑resistant cryptography and verifiable guardrails. Achieve 99.99% security with sub‑millisecond overhead.',
-
-};;
+};
 
 export default function AIQuantumSecurityProtocols2026Page() {
   return (
@@ -48,7 +46,8 @@ export default function AIQuantumSecurityProtocols2026Page() {
               </h2>
               <ul className='space-y-3 text-white/85'>
                 <li>
-                  <strong>Model Exfiltration:</strong> encrypted weightsattestationand key isolation.
+                  <strong>Model Exfiltration:</strong> encrypted
+                  weightsattestationand key isolation.
                 </li>
                 <li>
                   <strong>Prompt Injection:</strong> policy engine with
@@ -76,8 +75,8 @@ export default function AIQuantumSecurityProtocols2026Page() {
                 <div className='bg-white/5 border border-white/10 rounded-xl p-6'>
                   <h3 className='font-semibold mb-2'>Crypto</h3>
                   <p className='text-white/75'>
-                    PQ‑safe KEMs, rotating keyssealed storageand mutual TLS
-                    with attestation.
+                    PQ‑safe KEMs, rotating keyssealed storageand mutual TLS with
+                    attestation.
                   </p>
                 </div>
               </div>

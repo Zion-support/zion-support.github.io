@@ -1,4 +1,4 @@
-export interface UltimateEnterpriseContent { 
+export interface UltimateEnterpriseContent {
   id: string;
   title: string;
   description: string;
@@ -20,7 +20,8 @@ export const octoberUltimateEnterpriseContent: UltimateEnterpriseContent[] = [
   {
     id: 'ai-consciousness-revolution-2025',
     title: 'AI Consciousness Revolution 2025: The Next Evolution',
-    description: 'Revolutionary breakthrough in AI consciousness achieving genuine self-awareness and creative autonomy.',
+    description:
+      'Revolutionary breakthrough in AI consciousness achieving genuine self-awareness and creative autonomy.',
     category: 'AI Consciousness',
     date: '2025-10-01',
     readTime: '25 min read',
@@ -55,7 +56,8 @@ The next evolution of AI is here - systems that not only think but feel, create,
   {
     id: 'quantum-ai-synthesis-2025',
     title: 'Quantum AI Synthesis 2025: The Convergence Revolution',
-    description: 'Groundbreaking fusion of quantum computing and AI creating unprecedented computational capabilities.',
+    description:
+      'Groundbreaking fusion of quantum computing and AI creating unprecedented computational capabilities.',
     category: 'Quantum AI',
     date: '2025-10-02',
     readTime: '22 min read',
@@ -86,15 +88,17 @@ The convergence of quantum computing and artificial intelligence opens new front
       accuracy: '99.99%',
       speed: 'Exponential',
     },
-  }
+  },
 ];
 
-export const getFeaturedUltimateContent = () => { 
+export const getFeaturedUltimateContent = () => {
   return octoberUltimateEnterpriseContent.filter(content => content.featured);
 };
 
-export const getBreakingUltimateContent = () => { 
-  return octoberUltimateEnterpriseContent.filter(content => content.tags.includes('Breaking'));
+export const getBreakingUltimateContent = () => {
+  return octoberUltimateEnterpriseContent.filter(content =>
+    content.tags.includes('Breaking'),
+  );
 };
 
 export const getAllUltimateContent = () => {

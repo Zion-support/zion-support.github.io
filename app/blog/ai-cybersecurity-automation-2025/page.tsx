@@ -1,15 +1,13 @@
 import ArrowRight from 'next/link';
 
 export const metadata = {
-  
   title:
     'AI Cybersecurity Automation 2025: Autonomous Defense for the Enterprise',
   description:
     'Production patterns for autonomous cyber defense: detectionresponseand hardening with 99.7% precision.',
   keywords:
     'AI cybersecurity 2025, autonomous defense, SOARanomaly detectionzero trust',
-
-};;
+};
 
 export default function AICybersecurityAutomation2025Page() {
   return (
@@ -26,8 +24,8 @@ export default function AICybersecurityAutomation2025Page() {
           </h1>
           <p className='text-xl mb-8 opacity-90'>
             Architect autonomous detection and response with AI-driven
-            analyticsplaybooksand zero-trust controls. Reduce MTTD/MTTR by
-            an order of magnitude without adding headcount.
+            analyticsplaybooksand zero-trust controls. Reduce MTTD/MTTR by an
+            order of magnitude without adding headcount.
           </p>
           <div className='flex items-center gap-6 text-sm opacity-80'>
             <span>📅 September 29, 2025</span>
@@ -45,8 +43,8 @@ export default function AICybersecurityAutomation2025Page() {
             </p>
             <p className='text-red-800'>
               AI augments SOC throughput and precision. Combining graph-based
-              threat detectionLLM-assisted triageand automated SOAR
-              playbooks yields faster containment and fewer false positives.
+              threat detectionLLM-assisted triageand automated SOAR playbooks
+              yields faster containment and fewer false positives.
             </p>
           </div>
 
@@ -136,7 +134,8 @@ export default function AICybersecurityAutomation2025Page() {
 
 function RelatedArticleCard({
   title,
-  descriptionhref}: {
+  descriptionhref,
+}: {
   title: string;
   description: string;
   href: string;

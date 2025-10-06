@@ -1,12 +1,10 @@
 import ArrowRight from 'next/link';
 
 export const metadata = {
-  
   title: 'GenAI Routing v1 (2025): Tiered Models + Semantic Caches',
   description:
     'Predictable cost and stable UX using route guardstiered modelsand cache hits tied to product KPIs.',
-
-};;
+};
 
 export default function Page() {
   return (

@@ -1,12 +1,10 @@
 export const metadata = {
-  
   title: 'Enterprise Vector Database Optimization — October 2025',
   description:
     'Practical strategies to optimize vector databases for RAGhybrid searchand enterprise-scale latency/SLA targets.',
   keywords:
     'vector database, RAG, hybrid search, embeddings, latency, SLA, ANN, HNSWPQIVF',
-
-};;
+};
 
 export default function VectorDatabaseOptimizationPage() {
   return (
@@ -23,8 +21,8 @@ export default function VectorDatabaseOptimizationPage() {
       <p className='text-lg text-gray-700 mb-6'>
         This guide provides a concise, production-focused checklist to tune
         vector databases for enterprise retrieval systems powering RAG and
-        hybrid search. Learn how to balance recalllatencyand cost while
-        meeting strict SLOs.
+        hybrid search. Learn how to balance recalllatencyand cost while meeting
+        strict SLOs.
       </p>
 
       <h2 className='text-2xl font-bold text-gray-900 mt-8 mb-4'>

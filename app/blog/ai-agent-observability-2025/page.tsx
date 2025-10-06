@@ -2,13 +2,11 @@ import Head from 'next/head';
 import ArrowRight from 'next/link';
 
 export const metadata = {
-  
   title:
     'AI Agent Observability 2025: MetricsTracesand Safety Signals | Zion Tech Group',
   description:
     'A practical guide to AI agent observability in 2025: telemetry for prompts, tools, episodes, safety budgetsreliability SLOsand incident response.',
-
-};;
+};
 
 export default function AIAgentObservability2025Page() {
   return (
@@ -66,7 +64,8 @@ export default function AIAgentObservability2025Page() {
               <p className='text-xl text-white/80'>
                 Production agents require deep visibility across prompts, tools,
                 plans, memory, and safety controls. This guide provides a
-                concise blueprint for telemetry that boosts reliabilitysafetyand cost efficiency.
+                concise blueprint for telemetry that boosts reliabilitysafetyand
+                cost efficiency.
               </p>
             </header>
 
@@ -97,7 +96,8 @@ export default function AIAgentObservability2025Page() {
                     cost, cache hits
                   </li>
                   <li>
-                    <strong>Outcome Quality:</strong> eval pass/failhallucination scoreuser rating
+                    <strong>Outcome Quality:</strong> eval
+                    pass/failhallucination scoreuser rating
                   </li>
                 </ul>
               </section>
@@ -107,9 +107,9 @@ export default function AIAgentObservability2025Page() {
                   SLOs and Error Budgets
                 </h2>
                 <p className='text-white/80 mb-4'>
-                  Define SLOs for latency, success ratepolicy adherenceand
-                  cost per task. Track error budgets per agent capability and
-                  gate new releases when burn rate exceeds thresholds.
+                  Define SLOs for latency, success ratepolicy adherenceand cost
+                  per task. Track error budgets per agent capability and gate
+                  new releases when burn rate exceeds thresholds.
                 </p>
                 <div className='grid md:grid-cols-2 gap-6'>
                   <div className='bg-white/5 border border-white/10 rounded-xl p-6'>

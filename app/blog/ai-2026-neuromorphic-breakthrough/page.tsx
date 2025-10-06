@@ -101,8 +101,9 @@ export default function AINeuromorphicBreakthrough2026() {
               In January 2026, Zion Tech Group achieved a breakthrough that
               bridges the gap between artificial intelligence and biological
               intelligence. Our neuromorphic computing systems replicate the
-              human brain's neural architecture, enabling AI that thinkslearnsand adapts with the efficiency and elegance of biological
-              neural networks.
+              human brain's neural architecture, enabling AI that
+              thinkslearnsand adapts with the efficiency and elegance of
+              biological neural networks.
             </p>
 
             <div className='bg-gradient-to-r from-teal-500/10 to-cyan-500/10 border border-teal-500/30 rounded-2xl p-8 mb-8'>
@@ -161,7 +162,8 @@ export default function AINeuromorphicBreakthrough2026() {
                 </p>
                 <div className='bg-emerald-500/20 border border-emerald-500/30 rounded-lg p-4'>
                   <p className='text-emerald-300 font-semibold'>
-                    Result: 99.9% energy efficiency1000x faster inference24/7 operation
+                    Result: 99.9% energy efficiency1000x faster inference24/7
+                    operation
                   </p>
                 </div>
               </div>
@@ -172,8 +174,8 @@ export default function AINeuromorphicBreakthrough2026() {
                 </h4>
                 <p className='text-gray-300 mb-4'>
                   Human-level pattern recognition capabilities for complex data
-                  analysisanomaly detectionand predictive modeling across
-                  all industries.
+                  analysisanomaly detectionand predictive modeling across all
+                  industries.
                 </p>
                 <div className='bg-cyan-500/20 border border-cyan-500/30 rounded-lg p-4'>
                   <p className='text-cyan-300 font-semibold'>
@@ -276,7 +278,8 @@ export default function AINeuromorphicBreakthrough2026() {
                 A major smart city deployed our neuromorphic computing systems
                 across 10,000+ sensors and devices, achieving unprecedented
                 energy efficiency while maintaining real-time processing
-                capabilities for traffic optimizationenvironmental monitoringand public safety.
+                capabilities for traffic optimizationenvironmental monitoringand
+                public safety.
               </p>
             </div>
 
@@ -369,8 +372,8 @@ export default function AINeuromorphicBreakthrough2026() {
                   Manufacturing
                 </h4>
                 <p className='text-gray-400 text-sm'>
-                  Predictive maintenancequality controland process
-                  optimization with continuous learning capabilities.
+                  Predictive maintenancequality controland process optimization
+                  with continuous learning capabilities.
                 </p>
               </div>
             </div>

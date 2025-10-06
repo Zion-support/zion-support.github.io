@@ -1,12 +1,10 @@
 export const metadata = {
-  
   title: 'Sovereign Vector Knowledge Graph — October 2025',
   description:
     'Design a zero-trust, sovereign vector KG with verifiable provenancePII minimizationand tiered access.',
   keywords:
     'knowledge graph, sovereign ai, vector, privacy, securityzero trustprovenance',
-
-};;
+};
 
 export default function SovereignVectorKnowledgeGraphPage() {
   return (

@@ -2,12 +2,10 @@
 import ArrowRight from 'next/link';
 
 export const metadata = {
-  
   title: 'AI Operational Trust Scorecards 2026 | Zion Tech Group',
   description:
     'SLIs wired to KPIs with budgetscanariesand instant rollback for dependable AI operations in 2026.',
-
-};;
+};
 
 export default function AIOperationalTrustScorecards2026Page() {
   return (
@@ -18,8 +16,8 @@ export default function AIOperationalTrustScorecards2026Page() {
         </h1>
         <p className='text-white/80 mb-8'>
           Ship reliable AI by wiring SLIs to product KPIs with explicit error
-          budgetscanary rolloutsand automated rollback policies. Use
-          measurable guardrails to keep systems safe and cost-efficient.
+          budgetscanary rolloutsand automated rollback policies. Use measurable
+          guardrails to keep systems safe and cost-efficient.
         </p>
 
         <section className='space-y-6 mb-10'>

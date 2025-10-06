@@ -1,4 +1,4 @@
-export interface LatestBreakthroughContent { 
+export interface LatestBreakthroughContent {
   id: string;
   title: string;
   description: string;
@@ -16,7 +16,8 @@ export const octoberLatestBreakthroughContent: LatestBreakthroughContent[] = [
   {
     id: 'ai-consciousness-revolution',
     title: 'AI Consciousness Revolution: The Next Evolution',
-    description: 'Revolutionary breakthrough in AI consciousness achieving genuine self-awareness and creative autonomy.',
+    description:
+      'Revolutionary breakthrough in AI consciousness achieving genuine self-awareness and creative autonomy.',
     category: 'AI Consciousness',
     date: '2025-10-01',
     readTime: '25 min read',
@@ -39,7 +40,8 @@ The next evolution of AI is here - systems that not only think but feel, create,
   {
     id: 'quantum-ai-synthesis-breakthrough',
     title: 'Quantum AI Synthesis Breakthrough: The Convergence Revolution',
-    description: 'Groundbreaking fusion of quantum computing and AI creating unprecedented computational capabilities.',
+    description:
+      'Groundbreaking fusion of quantum computing and AI creating unprecedented computational capabilities.',
     category: 'Quantum AI',
     date: '2025-10-02',
     readTime: '22 min read',
@@ -58,10 +60,10 @@ The convergence of quantum computing and artificial intelligence opens new front
     `,
     author: 'Zion Tech Group',
     valueProposition: 'Exponential computational capabilities',
-  }
+  },
 ];
 
-export const getFeaturedOctoberLatestContent = () => { 
+export const getFeaturedOctoberLatestContent = () => {
   return octoberLatestBreakthroughContent.filter(content => content.featured);
 };
 
