@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import performanceOptimizer, { WebVitalsMetrics } from '../utils/performanceOptimizer';
 
 interface PerformanceMonitorProps {
   children: React.ReactNode;
   enableReporting?: boolean;
   enableLongTaskMonitoring?: boolean;
+}
+
+interface WebVitalsMetrics {
+  [key: string]: number;
 }
 
 const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ 
@@ -23,7 +26,6 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
           if (entry.entryType === 'navigation') {
             const navEntry = entry as PerformanceNavigationTiming;
             console.log('Page load time:', navEntry.loadEventEnd - navEntry.loadEventStart);
->>>>>>> main
           }
         }
       });
@@ -33,146 +35,39 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       return () => observer.disconnect();
     }
     
-    // Return undefined if performance is not available
->>>>>>> main
-    return undefined;
+    return () => {};
   }, []);
-=======
-=======
-    // Initialize performance monitoring
-    // Add critical resource hints for performance optimization
-    performanceOptimizer.prefetchResources([]);
-    performanceOptimizer.preconnectDomains([]);
-    // Add critical resource hints manually
-    if (typeof document !== 'undefined') {
-      const hints = [
-        { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' },
-        { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com' },
-        { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
-        { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossOrigin: 'anonymous' }
-      ];
-      
-      hints.forEach(hint => {
-        const link = document.createElement('link');
-        link.rel = hint.rel;
-        link.href = hint.href;
-        if (hint.crossOrigin) {
-          link.crossOrigin = hint.crossOrigin;
-        }
-        document.head.appendChild(link);
-      });
-    }
-    
-    // Measure page load performance
-    const pageLoadMetrics = performanceOptimizer.measurePageLoad();
-    if (pageLoadMetrics) {
-      setMetrics(pageLoadMetrics);
-      if (enableReporting) {
-        performanceOptimizer.reportWebVitals(pageLoadMetrics);
-      }
-    }
 
-    // Monitor long tasks if enabled
-    if (enableLongTaskMonitoring) {
-      const observer = performanceOptimizer.monitorLongTasks((entries: PerformanceEntryList) => {
-        setLongTasks(prev => [...prev, ...entries]);
-        console.warn('Long tasks detected:', entries);
+  useEffect(() => {
+    // Long task monitoring
+    if (enableLongTaskMonitoring && typeof window !== 'undefined' && 'PerformanceObserver' in window) {
+      const longTaskObserver = new PerformanceObserver((list) => {
+        const longTasks = list.getEntries().filter(entry => entry.duration > 50);
+        setLongTasks(prev => [...prev, ...longTasks]);
       });
       
-      return () => {
-        if (observer) {
-          observer.disconnect();
-        }
-      };
-    }
-  }, [enableReporting, enableLongTaskMonitoring]);
-
-  // Monitor Web Vitals using Performance Observer
-  useEffect(() => {
-    if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return;
-
-    const observer = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
-      entries.forEach((entry) => {
-        if (entry.entryType === 'largest-contentful-paint') {
-          const lcp = entry.startTime;
-          setMetrics(prev => ({ ...prev, LCP: lcp }));
-          if (enableReporting) {
-            performanceOptimizer.reportWebVitals({ LCP: lcp });
-          }
-        }
-        
-        if (entry.entryType === 'first-input') {
-          const fid = (entry as any).processingStart - entry.startTime;
-          setMetrics(prev => ({ ...prev, FID: fid }));
-          if (enableReporting) {
-            performanceOptimizer.reportWebVitals({ FID: fid });
-          }
-        }
-        
-        if (entry.entryType === 'layout-shift') {
-          const cls = (entry as any).value;
-          setMetrics(prev => ({ ...prev, CLS: cls }));
-          if (enableReporting) {
-            performanceOptimizer.reportWebVitals({ CLS: cls });
->>>>>>> main
-          }
-        }
-      });
-    });
->>>>>>> main
-
-    try {
-      observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
-    } catch (e) {
-      console.warn('Performance Observer not supported:', e);
-    }
-
-    return () => {
-      observer.disconnect();
-    };
-  }, [enableReporting]);
-
-  // Development mode: Log performance metrics
-  useEffect(() => {
-    if (process.env.NODE_ENV === 'development' && Object.keys(metrics).length > 0) {
-      console.log('Performance Metrics:', metrics);
-    }
-  }, [metrics]);
-=======
-import React, { ReactNode, useEffect } from 'react';
-
-interface PerformanceMonitorProps {
-  children: ReactNode;
-}
-
-const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ children }) => {
-  useEffect(() => {
-    // Monitor performance metrics
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      const observer = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          if (process.env.NODE_ENV === 'development') {
-            console.log('Performance entry:', entry);
-          }
-        }
-      });
-
       try {
-        observer.observe({ entryTypes: ['measure', 'navigation', 'paint'] });
+        longTaskObserver.observe({ entryTypes: ['longtask'] });
+        return () => longTaskObserver.disconnect();
       } catch (error) {
-        console.warn('Performance Observer not supported:', error);
+        console.warn('Long task monitoring not supported:', error);
+        return () => {};
       }
-
-      return () => {
-        observer.disconnect();
-      };
     }
-    return undefined;
-  }, []);
->>>>>>> main
+    return () => {};
+  }, [enableLongTaskMonitoring]);
 
-  return <>{children}</>;
+  return (
+    <>
+      {children}
+      {enableReporting && (
+        <div className="performance-monitor fixed top-4 right-4 bg-black bg-opacity-75 text-white p-2 rounded text-xs font-mono z-50">
+          <div>Performance Monitor</div>
+          <div>Metrics: {Object.keys(metrics).length}</div>
+        </div>
+      )}
+    </>
+  );
 };
 
 export default PerformanceMonitor;

@@ -1,5 +1,8 @@
-import { Suspense, lazy } from 'react';
+import { Suspense } from 'react';
 import Link from 'next/link';
+import UnifiedContentPromotion from './components/UnifiedContentPromotion';
+import ContentShowcase from './components/ContentShowcase';
+import InteractiveContentShowcase2026 from './components/InteractiveContentShowcase2026';
 
 // Lazy load heavy components - temporarily disabled
 // const UnifiedContentPromotion = lazy(

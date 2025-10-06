@@ -97,8 +97,6 @@ const LoadingSpinner = memo(() => (
 ));
 
 // Error Boundary Component
-<<<<<<< HEAD
-=======
 interface ErrorBoundaryState {
   hasError: boolean;
   error: Error | null;
@@ -147,7 +145,6 @@ class AppErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundary
     return this.props.children;
   }
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-7ea5
 
 export default function App() {
   const structuredData = useMemo(
@@ -236,20 +233,16 @@ export default function App() {
   }, []);
   const handlePhoneClick = useCallback(() => {
     // Track phone clicks for analytics
-    if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as unknown as { gtag: Function }).gtag('event', 'phone_click', {
-      (window as any).gtag('event', 'phone_click', {
     if (typeof window !== 'undefined' && (window as unknown as { gtag?: Function }).gtag) {
       ((window as unknown as { gtag: Function }).gtag)('event', 'phone_click', {
->>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572
         event_category: 'engagement',
         event_label: 'main_phone_number'
       });
     }
+  }, []);
 
   const handleScrollToTop = useCallback(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
->>>>>>> 6c45f99dc7ca17bbf478e03055adf8e9c75097bc
   }, []);
 
   return (
