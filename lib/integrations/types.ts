@@ -7,6 +7,7 @@ export type IntegrationProviderId =
   | 'lever' 
   | 'workable' 
   | 'bamboohr';
+<<<<<<< HEAD
 export type SyncStatus = 'connected' | 'warning' | 'disconnected';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -29,6 +30,11 @@ export type SyncStatus = 'connected' | 'warning' | 'disconnected';
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-b781
+=======
+
+export type SyncStatus = 'connected' | 'warning' | 'disconnected';
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0a8c
 export interface IntegrationProviderMeta {
   id: IntegrationProviderId;
   name: string;
@@ -38,17 +44,23 @@ export interface IntegrationProviderMeta {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
+=======
+}
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0a8c
 export interface ProviderConnection {
   id: string;
   providerId: IntegrationProviderId;
   accessToken: string;
   refreshToken?: string;
   expiresAt?: number;
+<<<<<<< HEAD
 <<<<<<< HEAD
   status: SyncStatus;
   lastSync?: number;
@@ -113,23 +125,40 @@ export interface ProviderConnection {
 }
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-4606
+=======
+  status: SyncStatus;
+  lastSync?: number;
+}
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0a8c
 export interface SyncLogEntry {
   id: string;
   timestamp: number;
   providerId: IntegrationProviderId;
   level: 'info' | 'warn' | 'error';
   action: string;
+<<<<<<< HEAD
   details?: Record<string, unknown>;
 }
+=======
+  details?: Record<string, any>;
+}
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0a8c
 export interface ManualOverride {
   jobId: string;
   disableCrmSync?: boolean;
   disableAtsSync?: boolean;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0a8c
 export interface ZapierEvent {
   id: string;
   type: 'zion.job.posted' | 'zion.talent.matched';
   timestamp: number;
+<<<<<<< HEAD
 <<<<<<< HEAD
   payload: Record<string, unknown>;
 }
@@ -166,6 +195,11 @@ export interface IntegrationProviderMeta {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-b781
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6231
+=======
+  payload: Record<string, any>;
+}
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0a8c
 export interface IntegrationsState {
   connections: ProviderConnection[];
   logs: SyncLogEntry[];

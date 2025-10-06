@@ -4,22 +4,33 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 const { withErrorLogging } = require('./withErrorLogging.cjs');
+<<<<<<< HEAD
 =======
 const { withErrorLogging } = require('./withErrorLogging.cjs');
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-4606
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0a8c
 async function handler(req, res) {
   if (req.method !== 'GET') {
     res.statusCode = 405;
     res.setHeader('Allow', 'GET');
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0a8c
     res.end('Method Not Allowed');
     return;
   }
+
   try {
+<<<<<<< HEAD
     // Wallet functionality implementation
     res.statusCode = 200;
     res.json({ message: 'Wallet endpoint' });
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0a8c
     // Wallet functionality would go here
     res.statusCode = 200;
     res.json({ message: 'Wallet endpoint' });
@@ -30,6 +41,7 @@ async function handler(req, res) {
   }
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 module.exports = withErrorLogging(handler);
 =======
@@ -141,3 +153,6 @@ module.exports = withErrorLogging(handler);
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-b781
+=======
+module.exports = withErrorLogging(handler);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0a8c

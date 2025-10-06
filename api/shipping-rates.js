@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default async function handler(req, res) {
 =======
 const { withSentry } = require('./withSentry.cjs');
@@ -29,12 +30,16 @@ const { withSentry } = require('./withSentry.cjs');
 
 async function handler(req, res) {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-b781
+=======
+export default async function handler(req, res) {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0a8c
   if (req.method !== 'POST') {
     res.statusCode = 405;
     res.setHeader('Allow', 'POST');
     res.end('Method Not Allowed');
     return;
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -62,11 +67,22 @@ async function handler(req, res) {
 =======
     
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
+=======
+
+  try {
+    const { fromAddress, toAddress, parcel } = req.body || {};
+    const apiKey = process.env.EASYPOST_API_KEY;
+    
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0a8c
     const response = await fetch('https://api.easypost.com/v2/shipments', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
+<<<<<<< HEAD
         'Authorization': `Bearer ${apiKey}`,
+=======
+        Authorization: `Bearer ${apiKey}`,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0a8c
       },
       body: JSON.stringify({
         shipment: {
@@ -76,16 +92,22 @@ async function handler(req, res) {
         }
       }),
     });
+
     const data = await response.json();
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0a8c
     if (!response.ok) {
       res.statusCode = 500;
       res.json({ error: data.error || 'Failed to fetch rates' });
       return;
     }
+
     res.statusCode = 200;
     res.json({ rates: data.rates });
   } catch (err) {
@@ -93,6 +115,7 @@ async function handler(req, res) {
     res.statusCode = 500;
     res.json({ error: err.message });
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 <<<<<<< HEAD
@@ -120,3 +143,6 @@ module.exports = withSentry(handler);
 
 module.exports = withSentry(handler);
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-b781
+=======
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0a8c
