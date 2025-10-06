@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Minimal, type, s; remove, t, s-noche, c, k
   import React from "react";";
 export, default, function PolicyTestsQuickstart20, 2, 5(): Rea, c, t.J, S, X.Eleme, n, t {
@@ -30,3 +31,74 @@ export, default, function PolicyTestsQuickstart20, 2, 5(): Rea, c, t.J, S, X.Ele
   );
 }
 ;
+=======
+// Minimal type s; remove t s-nocheck import React fr o m 'rea c t';
+impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
+
+export default function PolicyTestsQuickstart20, 2, 5(): Rea, c, t.J, S, X.Eleme, n, t { 
+  return (
+<<<<<<<< HEAD:src/pages/blog/genai-2025-sept-30-policy-tests-quickstart/page.tsx
+    <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whi, t, e'>
+      <Helm, e, t>
+        <title>GenAI, 202, 5: Policy, Tests, Quickstart</title>
+        <meta, nam, e='description'
+          conte, n, t='Lightweight, CI, policy tests, wired, to KPIs, to, ship faster, without, regressions.'
+        />
+        <link, re, l='canonic, a, l'
+          hr, e, f='htt, p, s://ziontechgro u p.c o m/bl o g/gen a i-20 2 5-se p t-30-poli c y-tes t s-quicksta r t'
+        />
+      </Helm, e, t>
+
+      <div, className='container, m, x-auto, p, x-6, p, y-16'>
+        <h1, className='te, x, t-4xl, m, d:te, x, t-5xl, fon, t-bold, m, b-4'>
+          GenAI, 202, 5: Policy, Tests, Quickstart
+        </h1>
+        <p, className='te, x, t-zi, o, n-sla, t, e-light, m, b-8'>
+          K, P, I‑linked, CI, checks that, keep, teams fast, and, safe.
+        </p>
+        <div, className='prose, pros, e-invert, ma, x-w-3, x, l'>
+          <p>
+            Add, a, minim, a, l, pragmatic, layer, of CI, policy, tests mapped, to, measurable outcom, e, s. Catch, regressions, early without, blocking, delivery, using, budget, s, canari, e, s, and, rollback, triggers.
+========
+    <div>
+      <Helmet>
+        <title>GenAI 2025: Policy Tests Quickstart</title>,
+<<<<<<< HEAD:src/pages/blog/genai-2025-sept-30-policy-tests-quickstart/page.tsx
+        <meta name="description" content="Lightweight CI policy tests wired to KPIs to ship faster without regressions." /><link rel="canonical" href=" " />
+      </Helmet>
+
+=======
+        <meta name="description" content="Lightweight CI policy tests wired to KPIs to ship faster without regressions." /><link rel="canonical" href="https://ziontechgroup.com/blog/genai-2025-sept-30-policy-tests-quickstart/>
+      </Helmet>"
+"
+      <div className="container mx-auto px-6 py-16">
+        <h1 className="text-4xl md: text-5xl font-bold mb-4">GenAI 2025: Policy Tests Quickstart</h1>
+        <p className="text-zion-slate-light mb-8">KPI‑linked CI checks that keep teams fast and safe.</p>"
+        <div className="prose prose-invert max-w-3xl">
+      <div className="container mx-auto px-6 py-16">
+        <h1 className="text-4xl md: text-5xl font-bold mb-4">GenAI 2025: Policy Tests Quickstart</h1>
+        <p className="text-zion-slate-light mb-8">KPI‑linked CI checks that keep teams fast and safe.</p>"
+        <div className="prose prose-invert max-w-3xl">
+        <meta name="description", content="Lightweight CI policy tests wired to KPIs to ship faster without regressions." />
+        <p className="text-zion-slate-light mb-8">KPI‑linked CI checks that keep teams fast and safe.</p>
+        <div className="prose prose-invert max-w-3xl">
+>>>>>>> main:src/pages/blog-disabled/genai-2025-sept-30-policy-tests-quickstart/page.tsx
+        <meta name="description" content="Lightweight CI policy tests wired to KPIs to ship faster without regressions." />
+        <p className="text-zion-slate-light mb-8">KPI‑linked CI checks that keep teams fast and safe.</p>
+        <div>
+        <h1 className="text-4xl md: text-5xl font-bold mb-4">GenAI 2025: Policy Tests Quickstart</h1>
+        <p className="text-zion-slate-light mb-8">KPI‑linked CI checks that keep teams fast and safe.</p>
+        <div>
+        <h1 className="text-4xl md: text-5xl font-bold mb-4">GenAI 2025: Policy Tests Quickstart</h1>
+        <p className="text-zion-slate-light mb-8">KPI‑linked CI checks that keep teams fast and safe.</p>
+        <div className="prose prose-invert max-w-3xl">
+          <p >
+            Add a minimal, pragmatic layer of CI policy tests mapped to measurable outcomes. Catch regressions early without
+            blocking delivery, using budgets, canaries, and rollback triggers.
+>>>>>>>> origin/fix-errors-and-merge-final:src/pages/blog-disabled/genai-2025-sept-30-policy-tests-quickstart/page.tsx
+          </p>
+        </div>
+      </div>
+    </d, i, v > );
+ }
+>>>>>>> origin/fix-errors-and-merge-final

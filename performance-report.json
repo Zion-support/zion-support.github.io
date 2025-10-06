@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "timestamp": "2025-10-05T10:42:43.799Z",
+=======
+  "timestamp": "2025-10-03T22:06:33.896Z",
+>>>>>>> origin/fix-errors-and-merge-final
   "optimizations": {
     "images": "Completed",
     "css": "Completed",

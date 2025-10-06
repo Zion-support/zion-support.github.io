@@ -2,6 +2,7 @@ import ArrowRight from 'next/link';
 import dynamic from 'next/dynamic';
 
 // Lazy load heavy components
+<<<<<<< HEAD
 const UnifiedContentPromotion = dynamic(
   () => import('../components/UnifiedContentPromotion'),
   {
@@ -26,6 +27,23 @@ const InteractiveContentShowcase2026 = dynamic(
     loading: () => <div className='h-96 bg-gray-100 animate-pulse'></div>,
   },
 );
+=======
+const UnifiedContentPromotion = dynamic(() => import('../components/UnifiedContentPromotion'), {
+  loading: () => <div className="text-left">"
+});
+
+const InteractiveAIROICalculator = dynamic(() => import('../components/InteractiveAIROICalculator'), {
+  loading: () => <div className="text-left">"
+});
+
+const ContentShowcase = dynamic(() => import('../components/ContentShowcase'), {
+  loading: () => <div className="text-left">"
+});
+
+const InteractiveContentShowcase2026 = dynamic(() => import('../components/InteractiveContentShowcase2026'), {
+  loading: () => <div className="text-left">"
+});
+>>>>>>> origin/fix-errors-and-merge-final
 
 export const metadata = {
   title:
@@ -118,9 +136,15 @@ export default function HomePage() {
         <UnifiedContentPromotion />
 
         {/* Hero Section */}
+<<<<<<< HEAD
         <section className='text-center py-20 bg-gradient-to-br from-blue-50 via-white to-teal-50'>
           <div className='max-w-4xl mx-auto px-4'>
             <h1 className='text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight'>
+=======
+        <section className="text-left">
+          <div className="text-left">
+            <h1 className="text-left">
+>>>>>>> origin/fix-errors-and-merge-final
               Transform Your Business with
               <span className='text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-teal-600'>
                 {' '}
@@ -132,11 +156,18 @@ export default function HomePage() {
               cloud automation, and enterprise IT solutions that drive growth,
               efficiency, and innovation.
             </p>
+<<<<<<< HEAD
             <div className='flex flex-col sm:flex-row gap-4 justify-center mb-12'>
               <ArrowRight
                 href='/services'
                 className='bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl'
               >
+=======
+            <div className="text-left">
+              <Link
+                href="/services"
+                className="text-left">
+>>>>>>> origin/fix-errors-and-merge-final
                 Explore Our Services
               </ArrowRight>
               <a
@@ -146,6 +177,7 @@ export default function HomePage() {
                 Call +1 302 464 0950
               </a>
             </div>
+<<<<<<< HEAD
             <div className='grid grid-cols-2 md:grid-cols-4 gap-8 text-center'>
               <div>
                 <div className='text-3xl font-bold text-blue-600'>500+</div>
@@ -162,6 +194,24 @@ export default function HomePage() {
               <div>
                 <div className='text-3xl font-bold text-blue-600'>$2M+</div>
                 <div className='text-gray-600'>Cost Savings</div>
+=======
+            <div className="text-left">
+              <div>
+                <div className="text-left">500+</div>"
+                <div className="text-left">Projects Delivered</div>"
+              </div>
+              <div>
+                <div className="text-left">99.9%</div>"
+                <div className="text-left">Uptime Guarantee</div>"
+              </div>
+              <div>
+                <div className="text-left">24/7</div>"
+                <div className="text-left">Expert Support</div>"
+              </div>
+              <div>
+                <div className="text-left">$2M+</div>"
+                <div className="text-left">Cost Savings</div>"
+>>>>>>> origin/fix-errors-and-merge-final
               </div>
             </div>
           </div>
@@ -177,19 +227,32 @@ export default function HomePage() {
         <InteractiveContentShowcase2026 />
 
         {/* Enhanced Newsletter Signup */}
+<<<<<<< HEAD
         <section className='py-20 bg-gradient-to-r from-blue-600 to-teal-600 text-white'>
           <div className='max-w-6xl mx-auto px-4'>
             <div className='grid md:grid-cols-2 gap-12 items-center'>
               {/* Newsletter Signup */}
               <div className='text-center md:text-left'>
                 <h2 className='text-4xl font-bold mb-6'>
+=======
+        <section className="text-left">
+          <div className="text-left">
+            <div className="text-left">
+              {/* Newsletter Signup */}</div>
+              <div className="text-left">
+                <h2 className="text-left">
+>>>>>>> origin/fix-errors-and-merge-final
                   Stay Ahead with AI & Tech Insights
                 </h2>
                 <p className='text-xl mb-8 opacity-90'>
                   Get weekly updates on AI trends, tech innovations, and
                   exclusive service offers
                 </p>
+<<<<<<< HEAD
                 <div className='flex flex-col sm:flex-row gap-4 justify-center md:justify-start max-w-md mx-auto md:mx-0'>
+=======
+                <div className="text-left">
+>>>>>>> origin/fix-errors-and-merge-final
                   <input
                     type='email'
                     placeholder='Enter your email'
@@ -205,6 +268,7 @@ export default function HomePage() {
               </div>
 
               {/* Content Highlights */}
+<<<<<<< HEAD
               <div className='bg-white/10 backdrop-blur-sm rounded-xl p-6'>
                 <h3 className='text-2xl font-bold mb-6'>
                   Latest Content Highlights
@@ -258,6 +322,37 @@ export default function HomePage() {
                     href='/blog'
                     className='inline-block bg-white/20 hover:bg-white/30 text-white px-4 py-2 rounded-lg font-semibold transition-colors'
                   >
+=======
+              <div className="text-left">
+                <h3 className="text-left">Latest Content Highlights</h3>"
+                <div className="text-left">
+                  <a href="/blog/ai-2026-enterprise-rag-guardrails" className="text-left">
+                    <div className="text-left">🛡️</div>"
+                    <div>
+                      <h4 className="text-left">Enterprise RAG Guardrails 2026</h4>"
+                      <p className="text-left">Safe, reliable RAG with verifiable citations</p>"
+                    </div>
+                  </a>
+                  <a href="/blog/ai-2026-autonomous-enterprise-operations" className="text-left">
+                    <div className="text-left">🏭</div>"
+                    <div>
+                      <h4 className="text-left">Autonomous Enterprise Operations 2026</h4>"
+                      <p className="text-left">90% efficiency, 300% ROI with guardrailed agents</p>"
+                    </div>
+                  </a>
+                  <a href="/blog/ai-cloud-cost-optimization-2025" className="text-left">
+                    <div className="text-left">💸</div>"
+                    <div>
+                      <h4 className="text-left">AI Cloud Cost Optimization</h4>"
+                      <p className="text-left">Cut spend by 70–85% with smart routing</p>"
+                    </div>
+                  </a>
+                </div>
+                <div className="text-left">
+                  <Link
+                    href="/blog"
+                    className="text-left">
+>>>>>>> origin/fix-errors-and-merge-final
                     View All Content →
                   </ArrowRight>
                 </div>
@@ -267,15 +362,25 @@ export default function HomePage() {
         </section>
 
         {/* CTA Section */}
+<<<<<<< HEAD
         <section className='py-20 bg-white'>
           <div className='max-w-4xl mx-auto px-4 text-center'>
             <h2 className='text-4xl font-bold text-gray-900 mb-6'>
+=======
+        <section className="text-left">
+          <div className="text-left">
+            <h2 className="text-left">
+>>>>>>> origin/fix-errors-and-merge-final
               Ready to Transform Your Business?
             </h2>
             <p className='text-xl text-gray-600 mb-8'>
               Let's discuss how our AI and IT solutions can drive your success
             </p>
+<<<<<<< HEAD
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+=======
+            <div className="text-left">
+>>>>>>> origin/fix-errors-and-merge-final
               <a
                 href='tel:+13024640950'
                 className='bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors shadow-lg'
@@ -289,7 +394,11 @@ export default function HomePage() {
                 Get Free Consultation
               </a>
             </div>
+<<<<<<< HEAD
             <div className='mt-8 text-sm text-gray-500'>
+=======
+            <div className="text-left">
+>>>>>>> origin/fix-errors-and-merge-final
               <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
               <p>📧 kleber@ziontechgroup.com | 📞 +1 302 464 0950</p>
             </div>
