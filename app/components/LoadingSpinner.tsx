@@ -22,11 +22,7 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
         role='status'
         aria-label='Loading'
       >
-<<<<<<< HEAD
         <span className="sr-only">Loading...</span>
-=======
-        <span className='sr-only'>Loading...</span>
->>>>>>> 71655f282840ed9a4a2a6696e410390223898ad3
       </div>
     </div>
   );
