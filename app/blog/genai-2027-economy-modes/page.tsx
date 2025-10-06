@@ -1,5 +1,5 @@
 import React from 'react';
-import ArrowRight from 'next/link';
+import Link from 'next/link';
 
 export const metadata = {
   title: 'GenAI 2027: Economy Modes — 50% Savings with Stable UX',

@@ -1,4 +1,4 @@
-import ArrowRight from 'next/link';
+import Link from 'next/link';
 import { ArrowLeft, ArrowRight, Bookmark, Brain, Calendar, CheckCircle, Clock, Shield, TrendingUp, User, Zap } from 'lucide-react';
 
 

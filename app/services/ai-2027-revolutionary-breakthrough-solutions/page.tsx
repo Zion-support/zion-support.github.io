@@ -1,4 +1,4 @@
-import ArrowRight from 'next/link';
+import Link from 'next/link';
 
 export const metadata = {
   title: 'AI 2027 Revolutionary Breakthrough Solutions | Zion Tech Group',

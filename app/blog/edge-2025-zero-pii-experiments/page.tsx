@@ -1,5 +1,5 @@
 import React from 'react';
-import ArrowRight from 'next/link';
+import Link from 'next/link';
 
 export const metadata = {
   title: 'Edge Experiments 2025 — Zero‑PII Global A/B at <100ms',

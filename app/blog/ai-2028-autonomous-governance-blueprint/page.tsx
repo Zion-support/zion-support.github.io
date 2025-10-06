@@ -1,4 +1,4 @@
-import ArrowRight from 'next/link';
+import Link from 'next/link';
 
 import { ArrowRight, Shield } from 'lucide-react';
 import React from 'react';

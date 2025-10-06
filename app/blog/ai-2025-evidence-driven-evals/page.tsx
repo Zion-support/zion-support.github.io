@@ -1,5 +1,5 @@
 import React from 'react';
-import ArrowRight from 'next/link';
+import Link from 'next/link';
 
 export const metadata = {
   title: 'Evidence‑Driven Evals 2025: Traceable Quality Linked to KP Is',

@@ -1,4 +1,4 @@
-import ArrowRight from 'next/link';
+import Link from 'next/link';
 import { ArrowRight, Award, BookOpen, CheckCircle, Globe, TrendingUp, Zap } from 'lucide-react';
 
 

@@ -2,7 +2,7 @@ import React from 'react';
 import { ArrowRight, Bookmark, Rocket, TrendingUp, Zap } from 'lucide-react';
 
 <<<<<<< HEAD
-import ArrowRight from 'next/link';
+import Link from 'next/link';
 
 import Link from 'next/link';
 import {

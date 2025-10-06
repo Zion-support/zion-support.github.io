@@ -1,4 +1,4 @@
-import ArrowRight from 'next/link';
+import Link from 'next/link';
 import { ArrowRight, BarChart3, Calculator, Cog, Shield, TrendingUp, User, Users, Zap } from 'lucide-react';
 
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import ArrowRight from 'next/link';
+import Link from 'next/link';
 
 export const metadata = {
   title: 'GenAI Routing v1 (2025): Tiered Models + Semantic Caches',
