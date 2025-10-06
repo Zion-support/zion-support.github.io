@@ -12,7 +12,6 @@ import PerformanceDashboard from './components/PerformanceDashboard';
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./page'));
 
-// Loading component is imported from components/LoadingComponents
 // Utils
 import { performanceOptimizer } from '../src/utils/performanceOptimizer';
 
@@ -30,7 +29,10 @@ const App: React.FC = () => {
     
     // Initialize Web Vitals monitoring
     if (typeof window !== 'undefined' && 'performance' in window) {
-      performanceOptimizer.reportWebVitals(performanceOptimizer.measurePageLoad() || {});
+      const pageLoadMetrics = performanceOptimizer.measurePageLoad();
+      if (pageLoadMetrics) {
+        performanceOptimizer.reportWebVitals(pageLoadMetrics);
+      }
     }
     
     console.log('Performance monitoring initialized');

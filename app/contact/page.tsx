@@ -60,7 +60,7 @@ const ContactPage: React.FC = () => {
               <div>
                 <h4 className="font-medium text-gray-900">Address</h4>
                 <p className="text-gray-600">
-                  123 Business Street<br />
+                  123 Business Ave<br />
                   Suite 100<br />
                   Wilmington, DE 19801
                 </p>
