@@ -1,6 +1,16 @@
+<<<<<<< HEAD
 import { Suspense, useEffect } from 'react';
+=======
+import React, { Suspense, useEffect } from 'react';
+>>>>>>> main
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './index.css';
+
+// Import page components
+import AboutPage from '../app/about/page';
+import PrivacyPage from '../app/privacy/page';
+import TeamPage from '../app/team/page';
+import TermsPage from '../app/terms/page';
 
 // Simple placeholder components
 const Home = () => (
@@ -14,16 +24,7 @@ const Home = () => (
   </div>
 );
 
-const About = () => (
-  <div className='min-h-screen flex items-center justify-center bg-gray-50'>
-    <div className='text-center'>
-      <h1 className='text-4xl font-bold text-gray-900 mb-4'>About Us</h1>
-      <p className='text-xl text-gray-600'>
-        Leading AI and IT Solutions Provider
-      </p>
-    </div>
-  </div>
-);
+// About component is now imported from app/about/page
 
 const Services = () => (
   <div className='min-h-screen flex items-center justify-center bg-gray-50'>
@@ -52,43 +53,22 @@ const Contact = () => (
   </div>
 );
 
-const Team = () => (
-  <div className='min-h-screen flex items-center justify-center bg-gray-50'>
-    <div className='text-center'>
-      <h1 className='text-4xl font-bold text-gray-900 mb-4'>Our Team</h1>
-      <p className='text-xl text-gray-600'>Meet our expert professionals</p>
-    </div>
-  </div>
-);
+// Team, Privacy, and Terms components are now imported from app directory
 
-const Privacy = () => (
-  <div className='min-h-screen flex items-center justify-center bg-gray-50'>
-    <div className='text-center'>
-      <h1 className='text-4xl font-bold text-gray-900 mb-4'>Privacy Policy</h1>
-      <p className='text-xl text-gray-600'>Your privacy is important to us</p>
-    </div>
-  </div>
-);
-
-const Terms = () => (
-  <div className='min-h-screen flex items-center justify-center bg-gray-50'>
-    <div className='text-center'>
-      <h1 className='text-4xl font-bold text-gray-900 mb-4'>
-        Terms of Service
-      </h1>
-      <p className='text-xl text-gray-600'>Terms and conditions</p>
-    </div>
-  </div>
-);
-
-function App() {
+function App(): React.JSX.Element {
   useEffect(() => {
     // Initialize basic optimizations
     const initializeOptimizations = () => {
       try {
+<<<<<<< HEAD
         console.log('App initialized successfully');
       } catch (error) {
         console.error('Failed to initialize app:', error);
+=======
+        console.log('All optimization systems initialized successfully');
+      } catch (error) {
+        console.error('Failed to initialize optimization systems:', error);
+>>>>>>> main
       }
     };
 
@@ -99,6 +79,12 @@ function App() {
   return (
     <div>
       <Router>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        <Suspense fallback={<div className="min-h-screen flex items-center justify-center">Loading...</div>}>
+=======
+>>>>>>> main
         <Suspense
           fallback={
             <div className='min-h-screen flex items-center justify-center bg-gray-50'>
@@ -109,15 +95,19 @@ function App() {
             </div>
           }
         >
+<<<<<<< HEAD
+=======
+>>>>>>> main
+>>>>>>> main
           <Routes>
             <Route path='/' element={<Home />} />
-            <Route path='/about' element={<About />} />
+            <Route path='/about' element={<AboutPage />} />
             <Route path='/services' element={<Services />} />
             <Route path='/blog' element={<Blog />} />
             <Route path='/contact' element={<Contact />} />
-            <Route path='/team' element={<Team />} />
-            <Route path='/privacy' element={<Privacy />} />
-            <Route path='/terms' element={<Terms />} />
+            <Route path='/team' element={<TeamPage />} />
+            <Route path='/privacy' element={<PrivacyPage />} />
+            <Route path='/terms' element={<TermsPage />} />
           </Routes>
         </Suspense>
       </Router>
@@ -125,4 +115,73 @@ function App() {
   );
 }
 
+<<<<<<< HEAD
+=======
+// Simple Error Boundary
+class ErrorBoundary extends React.Component<
+  { children: React.ReactNode; fallback?: React.ReactNode },
+  { hasError: boolean }
+> {
+  constructor(props: { children: React.ReactNode; fallback?: React.ReactNode }) {
+    super(props);
+    this.state = { hasError: false };
+  }
+
+<<<<<<< HEAD
+  static getDerivedStateFromError(_error: Error) { // eslint-disable-line @typescript-eslint/no-unused-vars
+=======
+<<<<<<< HEAD
+  static getDerivedStateFromError() {
+=======
+<<<<<<< HEAD
+  static getDerivedStateFromError() {
+=======
+<<<<<<< HEAD
+  static getDerivedStateFromError(_error: Error) {
+    // Error parameter is intentionally unused as we only need to return error state
+=======
+<<<<<<< HEAD
+  static getDerivedStateFromError() {
+=======
+<<<<<<< HEAD
+  static getDerivedStateFromError() {
+=======
+  static getDerivedStateFromError(_error: Error) { // eslint-disable-line @typescript-eslint/no-unused-vars
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+    return { hasError: true };
+  }
+
+  override componentDidCatch(_error: Error, errorInfo: React.ErrorInfo) {
+    console.error('Error caught by boundary:', errorInfo);
+  }
+
+  override render() {
+    if (this.state.hasError) {
+      return this.props.fallback || (
+        <div className="min-h-screen flex items-center justify-center bg-gray-50">
+          <div className="text-center">
+            <h1 className="text-2xl font-bold text-gray-900 mb-4">Something went wrong</h1>
+            <button
+              onClick={() => this.setState({ hasError: false })}
+              className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+            >
+              Try again
+            </button>
+          </div>
+        </div>
+      );
+    }
+
+    return this.props.children;
+  }
+}
+
+export { ErrorBoundary };
+
+>>>>>>> main
 export default App;
