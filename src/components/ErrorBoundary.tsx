@@ -1,5 +1,5 @@
 import { Component, type ErrorInfo, type ReactNode } from 'react';
-import { AlertTriangle } from 'lucide-react';
+// Using a simple error icon instead of lucide-react
 
 interface Props {
   children: ReactNode;
@@ -31,7 +31,7 @@ class ErrorBoundary extends Component<Props, State> {
         this.props.fallback || (
           <div className='min-h-screen flex items-center justify-center bg-gray-900'>
             <div className='text-center p-8'>
-              <AlertTriangle className='w-16 h-16 text-red-500 mx-auto mb-4' />
+              <div className='w-16 h-16 text-red-500 mx-auto mb-4 text-6xl'>⚠️</div>
               <h1 className='text-2xl font-bold text-white mb-4'>
                 Something went wrong
               </h1>

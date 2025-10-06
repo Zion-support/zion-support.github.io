@@ -438,14 +438,22 @@ class PerformanceOptimizer {
     const timing = window.performance.timing;
     const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
     
+    // Calculate load metrics for internal use
     const loadTime = timing.loadEventEnd - timing.navigationStart;
     const interactiveTime = timing.domInteractive - timing.navigationStart;
     
+    // Log performance metrics for debugging
+    if (process.env.NODE_ENV === 'development') {
+      console.log('Page Load Metrics:', { loadTime, interactiveTime });
+    }
+    
     return { 
-      loadTime, 
-      interactiveTime,
       FCP: navigation?.responseStart - navigation?.fetchStart,
-      TTFB: timing.responseStart - timing.navigationStart
+      TTFB: timing.responseStart - timing.navigationStart,
+      LCP: 0, // Will be measured by Performance Observer
+      FID: 0, // Will be measured by Performance Observer
+      CLS: 0, // Will be measured by Performance Observer
+      INP: 0  // Will be measured by Performance Observer
     };
   }
 
