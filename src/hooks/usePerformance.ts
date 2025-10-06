@@ -4,7 +4,7 @@
  */
 
 import { useEffect, useCallback, useRef } from 'react';
-import performanceOptimizer from '../utils/performanceOptimizer';
+import { performanceOptimizer } from '../utils/performanceOptimizer';
 import analytics from '../utils/analytics';
 
 export interface PerformanceMetrics {
@@ -174,8 +174,8 @@ export const useResourcePerformance = () => {
  */
 export const useLongTaskMonitoring = () => {
   useEffect(() => {
-    const observer = performanceOptimizer.monitorLongTasks((entries: PerformanceEntry[]) => {
-      entries.forEach((entry: PerformanceEntry) => {
+    const observer = performanceOptimizer.monitorLongTasks((entries: any[]) => {
+      entries.forEach((entry: any) => {
         analytics.track(
           'long_task',
           'performance',
