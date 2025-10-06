@@ -3,6 +3,7 @@ import React from 'react';
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg';
   className?: string;
+  text?: string | undefined;
 }
 
 export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 

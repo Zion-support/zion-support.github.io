@@ -74,6 +74,19 @@ const NewestContent2025Banner = () => {
             <div className="relative bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:border-white/40 transition-all duration-500 hover:scale-105 h-full">
               {/* Card glow effect */}
               <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 to-blue-600/20 opacity-0 group-hover:opacity-100 transition-all duration-500 rounded-2xl"></div>
+              <div className="relative z-10">
+                {/* Icon & Badges */}
+                <div className="flex items-center justify-between mb-6">
+                  <div className="text-4xl">⚡</div>
+                  <div className="flex gap-2">
+                    <span className="px-3 py-1 bg-red-500 text-white text-xs font-bold rounded-full">🔥 HOT</span>
+                    <span className="px-3 py-1 bg-green-500 text-white text-xs font-bold rounded-full">NEW TODAY</span>
+                  </div>
+                </div>
+
+                {/* Category Tag */}
+                <div className="mb-4">
+                  <span className="px-4 py-2 bg-blue-500/20 text-blue-300 text-sm font-semibold rounded-full border border-blue-400/30">
               
               <div className="relative z-10">
                 {/* Icon & Badges */}
@@ -92,6 +105,9 @@ const NewestContent2025Banner = () => {
                 </div>
                 {/* Title */}
                 <h3 className='text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors'>
+                  AI Edge Computing Real-Time Intelligence 2025
+                </h3>
+                {/* Excerpt */}
                   AI Edge Computing Real-Time Intelligence 2025
                 </h3>
                 {/* Excerpt */}

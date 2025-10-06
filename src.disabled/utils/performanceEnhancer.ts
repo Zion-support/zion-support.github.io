@@ -70,8 +70,10 @@ class PerformanceEnhancer {
     if ('memory' in performance) {
       setInterval(() => {
         const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number } }).memory;
-        this.recordMetric('memory-used', memory.usedJSHeapSize);
-        this.recordMetric('memory-total', memory.totalJSHeapSize);
+        if (memory) {
+          this.recordMetric('memory-used', memory.usedJSHeapSize);
+          this.recordMetric('memory-total', memory.totalJSHeapSize);
+        }
       }, 5000);
     }
   }
