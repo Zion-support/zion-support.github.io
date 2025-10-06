@@ -11,7 +11,7 @@ function fixJSXSyntax(content) {
   // Fix function declarations with malformed comments
   fixed = fixed.replace(
     /const\s+(\w+):\s+React\.FC\s*=\s*\(\)\s*=>\s*\{\/\*\s*content\s*\/\}/g,
-    'const $1: React.FC = () => {',
+    'const $1: React.FC = () => {'
   );
 
   // Fix malformed JSX elements that are self-closing but shouldn't be
@@ -21,7 +21,7 @@ function fixJSXSyntax(content) {
   // Fix malformed JSX elements with attributes
   fixed = fixed.replace(
     /<(\w+)([^>]*?)><\/\1>\s*<(\w+)([^>]*?)><\/\3>/g,
-    '<$1$2><$3$4></$3></$1>',
+    '<$1$2><$3$4></$3></$1>'
   );
 
   // Fix array syntax issues
@@ -33,7 +33,7 @@ function fixJSXSyntax(content) {
   // Fix missing closing braces for objects
   fixed = fixed.replace(
     /(\w+):\s*'([^']*)',?\s*(\w+):\s*'([^']*)',?\s*(\w+):\s*'([^']*)',?\s*(\w+):\s*'([^']*)',?\s*\}/g,
-    "$1: '$2',\n      $3: '$4',\n      $5: '$6',\n      $7: '$8'\n    }",
+    "$1: '$2',\n      $3: '$4',\n      $5: '$6',\n      $7: '$8'\n    }"
   );
 
   return fixed;
