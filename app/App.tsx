@@ -1,4 +1,4 @@
-import React, { useEffect, lazy, Suspense } from 'react';
+import React, { lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 
@@ -15,20 +15,10 @@ const ServicesPage = lazy(() => import('./services/page'));
 const ContactPage = lazy(() => import('./contact/page'));
 const EnterprisePage = lazy(() => import('./enterprise/page'));
 
-// Utils
-import performanceOptimizer from '../src/utils/performanceOptimizer';
-
 // Styles
 import '../src/index.css';
 
 function App() {
-  useEffect(() => {
-    // Initialize performance monitoring
-    if (typeof window !== 'undefined') {
-      performanceOptimizer.preloadCriticalResources();
-      performanceOptimizer.lazyLoadImages();
-    }
-  }, []);
 
   return (
     <HelmetProvider>

@@ -2,13 +2,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 const ServicesPage: React.FC = () => {
-<<<<<<< HEAD
-  return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold text-gray-900 mb-4">Our Services</h1>
-        <p className="text-xl text-gray-600">Comprehensive AI and IT Solutions</p>
-=======
   const services = [
     {
       title: 'AI Solutions',
@@ -97,7 +90,6 @@ const ServicesPage: React.FC = () => {
             </button>
           </div>
         </div>
->>>>>>> 95e1fc27c0bf1ea445ba772900f0204a3209e206
       </div>
     </>
   );

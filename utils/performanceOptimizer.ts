@@ -2,6 +2,8 @@
  * Performance Optimizer Utilities
  */
 
+import React from 'react';
+
 interface PerformanceMetrics {
   componentName: string;
   renderTime: number;
@@ -291,7 +293,7 @@ export const withPerformanceTracking = <P extends object>(
   const optimizer = createPerformanceOptimizer();
   const name = componentName || Component.displayName || Component.name || 'Unknown';
   
-  return React.forwardRef<any, P>((props, ref) => {
+  const WrappedComponent = React.forwardRef<any, P>((props, ref) => {
     React.useEffect(() => {
       optimizer.startRender(name);
       return () => optimizer.endRender(name);
@@ -299,6 +301,8 @@ export const withPerformanceTracking = <P extends object>(
     
     return React.createElement(Component, { ...props, ref });
   });
+  
+  return WrappedComponent as React.ComponentType<P>;
 };
 
 export default PerformanceOptimizer;
