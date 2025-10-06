@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+:corrupted-src-backup/components/AnalyticsDashboard.tsx
 
 interface AnalyticsData {
   pageViews: number;
@@ -63,6 +64,7 @@ const AnalyticsDashboard: React.FC = () => {
         setData(mockData);
       } catch (err) {
         setError('Failed to load analytics data');
+:corrupted-src-backup/components/AnalyticsDashboard.tsx
         console.error('Analytics error:', err);
       } finally {
         setIsLoading(false);

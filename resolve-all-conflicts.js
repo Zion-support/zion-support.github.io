@@ -6,7 +6,7 @@ const { execSync } = require('child_process');
 
 console.log('🔧 Starting comprehensive merge conflict resolution...');
 
-// Function to find all files with merge conflicts
+//Function to find all files with merge conflicts
 function findConflictFiles(dir) {
   const conflictFiles = [];
   
@@ -23,7 +23,7 @@ function findConflictFiles(dir) {
         try {
           const content = fs.readFileSync(filePath, 'utf8');
           if (content.includes('            conflictFiles.push(filePath);
-    if (content.includes('      // Split into sections
+    if (content.includes('      //Split into sections
       const sections = content.split(/      
-    if (content.includes('      // Split into sections
-      const sections = content.split(/      
+    if (content.includes('      //Split into sections
+      const sections = content.split(/

@@ -111,12 +111,13 @@ export class BannerPrioritizationEngine {
   getBanner(id: string): BannerMetadata | undefined {
     return this.banners.get(id);
   }
-
+  /**
+   * Get banners by load strategy
+   */
   getBannersByLoadStrategy(strategy: 'immediate' | 'lazy' | 'on-demand'): BannerMetadata[] {
     return Array.from(this.banners.values())
       .filter(banner => banner.loadStrategy === strategy && banner.isVisible);
   }
-
   /**
    * Update banner visibility based on performance metrics
    */
@@ -156,6 +157,9 @@ export class BannerPrioritizationEngine {
     return this.banners.size;
   }
 
+  /**
+   * Get banner statistics
+   */
   getBannerStats(): {
     total: number;
     visible: number;
@@ -186,4 +190,4 @@ export class BannerPrioritizationEngine {
 
 // Export singleton instance
 export const bannerPrioritizationEngine = new BannerPrioritizationEngine();
-export default BannerPrioritizationEngine;
+export const bannerPrioritizationEngine = new BannerPrioritizationEngine();

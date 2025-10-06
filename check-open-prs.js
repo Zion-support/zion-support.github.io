@@ -3,7 +3,7 @@
 import https from 'https';
 import fs from 'fs';
 
-// GitHub API configuration
+//GitHub API configuration
 const options = {
   hostname: 'api.github.com',
   path: '/repos/Zion-Holdings/zion.app/pulls?state=open',
