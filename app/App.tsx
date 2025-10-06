@@ -50,7 +50,7 @@ const App: React.FC = () => {
   return (
     <HelmetProvider>
       <ErrorBoundary>
-        <PerformanceMonitor>
+        <div>
           <SEOOptimizer>
             <AccessibilityEnhancer>
               <Router>
@@ -73,7 +73,7 @@ const App: React.FC = () => {
                     Skip to main content
                   </a>
 
-                <Suspense fallback={<LoadingSpinner text="Loading..." />}>
+                <Suspense fallback={<LoadingSpinner />}>
                   <Routes>
                     <Route path='/' element={<HomePage />} />
                     {/* Add more routes as needed */}
@@ -86,7 +86,7 @@ const App: React.FC = () => {
               </Router>
             </AccessibilityEnhancer>
           </SEOOptimizer>
-        </PerformanceMonitor>
+        </div>
       </ErrorBoundary>
     </HelmetProvider>
   );
