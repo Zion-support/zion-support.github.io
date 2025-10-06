@@ -31,10 +31,11 @@ export const lazyLoadBanner = (
                 `Retry failed for banner: ${componentName}`,
                 retryError
               );
-            }, 1000);
-          });
-        })
-      );
+            });
+        }, 1000);
+      });
+    });
+  });
 };
 
 /**
