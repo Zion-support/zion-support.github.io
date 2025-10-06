@@ -7,6 +7,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { onCLS, onFCP, onLCP, onTTFB } from 'web-vitals';
 import type { Metric } from 'web-vitals';
 
@@ -37,6 +38,9 @@ import { onCLS, onFCP, onLCP, onTTFB, type Metric } from 'web-vitals';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-895b
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2068
+=======
+import { onCLS, onFCP, onLCP, onTTFB, type Metric } from 'web-vitals';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b781
 
 =======
 import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
@@ -90,6 +94,7 @@ const THRESHOLDS = {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   TTFB: { good: 800, poor: 1800 },
 =======
   TTFB: { good: 800, poor: 1800 }
@@ -103,6 +108,9 @@ const THRESHOLDS = {
 =======
   TTFB: { good: 800, poor: 1800 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-895b
+=======
+  TTFB: { good: 800, poor: 1800 },
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b781
 };
 /**
  * Get rating based on metric value
@@ -126,6 +134,7 @@ function sendToAnalytics(metric: Metric): void {
     value: metric.value,
     rating: getRating(metric.name, metric.value),
     delta: metric.delta,
+<<<<<<< HEAD
     id: metric.id
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -139,6 +148,9 @@ function sendToAnalytics(metric: Metric): void {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6ac6
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-895b
+=======
+    id: metric.id,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b781
   };
   // Log in development
   if (process.env.NODE_ENV === 'development') {
@@ -149,6 +161,9 @@ function sendToAnalytics(metric: Metric): void {
     window.gtag('event', metric.name, {
       event_category: 'Web Vitals',
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b781
       value: Math.round(
         metric.name === 'CLS' ? metric.value * 1000 : metric.value
       ),
@@ -185,6 +200,7 @@ function sendToAnalytics(metric: Metric): void {
       keepalive: true,
     }).catch(error => console.error('Performance reporting error:', error));
   }
+<<<<<<< HEAD
 =======
       event_label: metric.id,
       value: Math.round(metric.value),
@@ -192,12 +208,17 @@ function sendToAnalytics(metric: Metric): void {
     });
   }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b781
 }
 /**
  * Initialize performance monitoring
  */
 export function initPerformanceMonitoring(): void {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b781
   if (typeof window === 'undefined') return;
   try {
     // Core Web Vitals
@@ -211,6 +232,7 @@ export function initPerformanceMonitoring(): void {
   } catch (error) {
     console.error('Error initializing performance monitoring:', error);
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 }
@@ -233,6 +255,8 @@ export function generatePerformanceReport(): PerformanceReport {
     userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : ''
   };
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-895b
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b781
 }
 
 =======
@@ -536,6 +560,7 @@ export function generatePerformanceReport(): PerformanceReport | null {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-bcb8
 =======
     userAgent: navigator.userAgent
@@ -555,6 +580,8 @@ export function generatePerformanceReport(): PerformanceReport | null {
 =======
     userAgent: navigator.userAgent
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2068
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b781
   };
 }
 /**
@@ -576,6 +603,7 @@ export function getPerformanceScore(metrics: PerformanceMetric[]): number {
 /**
  * Monitor long tasks
  */
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -616,6 +644,8 @@ export function getPerformanceScore(): number {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-895b
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2068
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b781
 export function monitorLongTasks(
   callback: (entries: PerformanceEntry[]) => void
 ): PerformanceObserver | null {
@@ -836,6 +866,7 @@ export default {
 };
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 };
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-be22
@@ -882,3 +913,5 @@ export function isPerformanceAcceptable(): boolean {
   return true;
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b781

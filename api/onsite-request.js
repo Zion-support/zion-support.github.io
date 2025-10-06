@@ -28,6 +28,7 @@ async function handler(req, res) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-3d1d
@@ -43,6 +44,9 @@ async function handler(req, res) {
 =======
   
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
+=======
+  
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b781
   try {
     existing = JSON.parse(fs.readFileSync(file, 'utf8'));
     if (!Array.isArray(existing)) existing = [];

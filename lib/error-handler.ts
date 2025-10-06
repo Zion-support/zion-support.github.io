@@ -45,6 +45,7 @@ export const errorHandler = (
       statusCode,
       timestamp: new Date().toISOString()
     }
+<<<<<<< HEAD
   });
 };
 export const asyncHandler =
@@ -58,6 +59,8 @@ import {NextApiRequest} NextApiResponse } from 'next' export interface ApiError 
 =======
       statusCode
     }
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b781
   });
 };
 

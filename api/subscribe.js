@@ -22,12 +22,15 @@ async function handler(req, res) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   try {
     const { email } = req.body || {};
 =======
 =======
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-895b
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b781
 
   const { email, name, source = 'website' } = req.body || {};
 
@@ -127,6 +130,7 @@ async function handler(req, res) {
     res.json({ success: true, message: 'Successfully subscribed to newsletter' });
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-3d1d
 =======
 
@@ -143,6 +147,9 @@ async function handler(req, res) {
 =======
   } catch (error) {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-895b
+=======
+  } catch (error) {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b781
     res.statusCode = 500;
     res.json({ error: err.message || 'Subscription failed' });
   }

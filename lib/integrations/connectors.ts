@@ -38,6 +38,7 @@ export const crm = {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   async addProjectNote(connection: ProviderConnection, note: Record<string, unknown>) {
     return simulateAction(connection, 'crm.addProjectNote', { note });
   },
@@ -71,6 +72,13 @@ export const crm = {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-895b
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
+=======
+
+  async addProjectNote(connection: ProviderConnection, note: Record<string, any>) {
+    return simulateAction(connection, 'crm.addProjectNote', { note });
+  },
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b781
   async addEmailTouchpoint(connection: ProviderConnection, touch: Record<string, any>) {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-bcb8
     return simulateAction(connection, 'crm.addEmailTouchpoint', { touch });
@@ -85,6 +93,7 @@ export const ats = {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   async updateStatus(connection: ProviderConnection, change: Record<string, unknown>) {
 =======
 =======
@@ -95,6 +104,9 @@ export const ats = {
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-895b
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b781
   async updateStatus(connection: ProviderConnection, change: Record<string, any>) {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-3d1d
     return simulateAction(connection, 'ats.updateStatus', { change });
