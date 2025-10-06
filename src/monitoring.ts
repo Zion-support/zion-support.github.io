@@ -4,6 +4,7 @@ import performanceOptimizer from './utils/performanceOptimizer';
 
 // Initialize performance monitoring
 <<<<<<< HEAD
+<<<<<<< HEAD
 export function initializePerformanceMonitoring(): void {
 =======
 export const initializePerformanceMonitoring = () => {
@@ -41,6 +42,17 @@ export default initializePerformanceMonitoring;
   // Monitor long tasks
   const observer = new PerformanceObserver((list) => {
     const entries = list.getEntries();
+=======
+export function initializeMonitoring() {
+  // Initialize performance optimizer
+  lazyLoadImages();
+  
+  // Track Web Vitals
+  const metrics = performanceOptimizer.measurePageLoad();
+  
+  // Monitor long tasks
+  const observer = new PerformanceObserver((entries: PerformanceEntry[]) => {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-74a6
     entries.forEach((entry: PerformanceEntry) => {
       analytics.track('long_task', 'performance', 'detected', undefined, entry.duration);
     });
@@ -51,5 +63,26 @@ export default initializePerformanceMonitoring;
   if (metrics) {
     performanceOptimizer.reportWebVitals(metrics);
   }
+<<<<<<< HEAD
 };
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7834
+=======
+}
+
+// Lazy load images function
+function lazyLoadImages() {
+  const images = document.querySelectorAll('img[data-src]');
+  const imageObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const img = entry.target as HTMLImageElement;
+        img.src = img.dataset.src || '';
+        img.removeAttribute('data-src');
+        imageObserver.unobserve(img);
+      }
+    });
+  });
+  
+  images.forEach((img) => imageObserver.observe(img));
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-74a6
