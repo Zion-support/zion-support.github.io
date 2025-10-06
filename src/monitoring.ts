@@ -21,11 +21,7 @@ if (typeof window !== 'undefined') {
   }
   
   // Track Web Vitals
-<<<<<<< HEAD
   const metrics = performanceOptimizer.measurePageLoadTiming();
-=======
-  const metrics = performanceOptimizer.measurePageLoad();
->>>>>>> cursor/fix-errors-and-merge-to-main-a3c4
   if (metrics) {
     performanceOptimizer.reportWebVitals(metrics);
   }
