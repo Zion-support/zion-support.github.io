@@ -7,10 +7,10 @@ import { performanceOptimizer } from './utils/performanceOptimizer';
 if (typeof window !== 'undefined') {
   // Track page load
   analytics.trackPageView(window.location.pathname);
-  
+
   // Initialize performance optimizer
   performanceOptimizer.lazyLoadImages();
-  
+
   // Track Web Vitals
   const metrics = performanceOptimizer.measurePageLoad();
   if (metrics) {

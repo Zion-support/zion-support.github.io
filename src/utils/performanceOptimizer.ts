@@ -17,6 +17,7 @@ export interface WebVitalsMetrics {
 
 /**
  * Performance budget checker
+<<<<<<< HEAD
  */
 export interface PerformanceBudget {
   maxBundleSize: number; // in KB
@@ -27,15 +28,76 @@ export interface PerformanceBudget {
 
 /**
  * Resource hints for performance
+=======
+>>>>>>> 71655f282840ed9a4a2a6696e410390223898ad3
  */
-export const prefetchResources = (urls: string[]): void => {
-  if (typeof document === 'undefined') return;
-  
-  urls.forEach(url => {
-    const link = document.createElement('link');
-    link.rel = 'prefetch';
-    link.href = url;
-    document.head.appendChild(link);
+export interface PerformanceBudget {
+  maxBundleSize: number; // in KB
+  maxImageSize: number; // in KB
+  maxFirstLoad: number; // in ms
+  maxInteractive: number; // in ms
+}
+
+/**
+ * Debounce function
+ */
+export const debounce = <T extends (...args: any[]) => any>(
+  func: T,
+  wait: number
+): ((...args: Parameters<T>) => void) => {
+  let timeout: NodeJS.Timeout;
+  return (...args: Parameters<T>) => {
+    clearTimeout(timeout);
+    timeout = setTimeout(() => func(...args), wait);
+  };
+};
+
+/**
+ * Throttle function
+ */
+export const throttle = <T extends (...args: any[]) => any>(
+  func: T,
+  limit: number
+): ((...args: Parameters<T>) => void) => {
+  let inThrottle: boolean;
+  return (...args: Parameters<T>) => {
+    if (!inThrottle) {
+      func(...args);
+      inThrottle = true;
+      setTimeout(() => (inThrottle = false), limit);
+    }
+  };
+};
+
+/**
+ * Lazy load images
+ */
+export const lazyLoadImages = (): void => {
+  if (typeof window === 'undefined') return;
+  if (!('IntersectionObserver' in window)) return;
+
+  const imageObserver = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const img = entry.target as HTMLImageElement;
+          const src = img.dataset['src'];
+          if (src) {
+            img.src = src;
+            img.removeAttribute('data-src');
+            imageObserver.unobserve(img);
+          }
+        }
+      });
+    },
+    {
+      rootMargin: '50px 0px',
+      threshold: 0.01,
+    }
+  );
+
+  document.querySelectorAll('img[data-src]').forEach(img => {
+    imageObserver.observe(img);
   });
 };
 
@@ -44,7 +106,7 @@ export const prefetchResources = (urls: string[]): void => {
  */
 export const preconnectDomains = (domains: string[]): void => {
   if (typeof document === 'undefined') return;
-  
+
   domains.forEach(domain => {
     const link = document.createElement('link');
     link.rel = 'preconnect';
@@ -55,12 +117,12 @@ export const preconnectDomains = (domains: string[]): void => {
 };
 
 /**
- * Lazy load images with Intersection Observer
+ * Prefetch resources
  */
-export const lazyLoadImages = (): void => {
-  if (typeof window === 'undefined') return;
-  if (!('IntersectionObserver' in window)) return;
+export const prefetchResources = (urls: string[]): void => {
+  if (typeof document === 'undefined') return;
 
+<<<<<<< HEAD
   const imageObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -80,43 +142,15 @@ export const lazyLoadImages = (): void => {
 
   document.querySelectorAll('img[data-src]').forEach(img => {
     imageObserver.observe(img);
+=======
+  urls.forEach(url => {
+    const link = document.createElement('link');
+    link.rel = 'prefetch';
+    link.href = url;
+    document.head.appendChild(link);
+>>>>>>> 71655f282840ed9a4a2a6696e410390223898ad3
   });
 };
-
-/**
- * Debounce function for performance optimization
- */
-export function debounce<T extends (...args: any[]) => any>(
-  func: T,
-  wait: number
-): (...args: Parameters<T>) => void {
-  let timeout: NodeJS.Timeout | null = null;
-  return function executedFunction(...args: Parameters<T>) {
-    const later = () => {
-      timeout = null;
-      func(...args);
-    };
-    if (timeout) clearTimeout(timeout);
-    timeout = setTimeout(later, wait);
-  };
-}
-
-/**
- * Throttle function for performance optimization
- */
-export function throttle<T extends (...args: any[]) => any>(
-  func: T,
-  limit: number
-): (...args: Parameters<T>) => void {
-  let inThrottle: boolean;
-  return function executedFunction(...args: Parameters<T>) {
-    if (!inThrottle) {
-      func(...args);
-      inThrottle = true;
-      setTimeout(() => (inThrottle = false), limit);
-    }
-  };
-}
 
 /**
  * Measure page load performance
@@ -127,9 +161,15 @@ export const measurePageLoad = (): WebVitalsMetrics | null => {
   const perfData = window.performance.timing;
   const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
   
+  if (!perfData || !navigation) return null;
+
   return {
-    FCP: navigation?.responseStart - navigation?.fetchStart,
-    TTFB: perfData.responseStart - perfData.navigationStart
+    FCP: navigation.responseStart - navigation.fetchStart,
+    LCP: navigation.loadEventEnd - navigation.loadEventStart,
+    FID: 0, // First Input Delay - requires user interaction
+    CLS: 0, // Cumulative Layout Shift - requires layout shift observer
+    TTFB: navigation.responseStart - navigation.requestStart,
+    INP: 0 // Interaction to Next Paint - requires user interaction
   };
 };
 
@@ -137,28 +177,17 @@ export const measurePageLoad = (): WebVitalsMetrics | null => {
  * Report Web Vitals to analytics
  */
 export const reportWebVitals = (metrics: WebVitalsMetrics): void => {
-  console.log('Web Vitals: ', metrics);
-
+  if (typeof window === 'undefined') return;
+  
   // Send to analytics service
-  if (typeof window !== 'undefined' && (window as any).gtag) {
-    Object.entries(metrics).forEach(([key, value]) => {
-      if (value !== undefined) {
-        (window as any).gtag('event', key, {
-          value: Math.round(value),
-          event_category: 'Web Vitals',
-          non_interaction: true
-        });
-      }
-    });
-  }
+  console.log('Web Vitals:', metrics);
 };
 
 /**
- * Optimize images by detecting slow connections
+ * Check if WebP is supported
  */
 export const shouldUseWebP = (): boolean => {
   if (typeof window === 'undefined') return false;
-  
   const canvas = document.createElement('canvas');
   canvas.width = canvas.height = 1;
   return canvas.toDataURL('image/webp').indexOf('data:image/webp') === 0;
@@ -180,7 +209,7 @@ export const getConnectionQuality = (): 'slow' | 'medium' | 'fast' => {
 };
 
 /**
- * Adaptive loading based on network conditions
+ * Check if heavy assets should be loaded
  */
 export const shouldLoadHeavyAssets = (): boolean => {
   const quality = getConnectionQuality();
@@ -222,7 +251,7 @@ export const cancelIdleCallback = (id: number): void => {
 };
 
 /**
- * Optimize bundle loading with route-based code splitting
+ * Preload route
  */
 export const preloadRoute = (route: string): void => {
   if (typeof document === 'undefined') return;
@@ -235,25 +264,25 @@ export const preloadRoute = (route: string): void => {
 };
 
 /**
- * Monitor long tasks (> 50ms) for performance debugging
+ * Monitor long tasks
  */
-export const monitorLongTasks = (callback: (entries: PerformanceEntryList) => void): PerformanceObserver | null => {
+export const monitorLongTasks = (callback: (entries: PerformanceEntry[]) => void): PerformanceObserver | null => {
   if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return null;
   
   try {
-    const observer = new PerformanceObserver((list) => {
+    const observer = new PerformanceObserver(list => {
       callback(list.getEntries());
     });
     observer.observe({ entryTypes: ['longtask'] });
     return observer;
   } catch (e) {
-    console.warn('Long task monitoring not supported: ', e);
+    console.warn('PerformanceObserver not supported:', e);
     return null;
   }
 };
 
 /**
- * Cache-first strategy for static assets
+ * Cache static assets
  */
 export const cacheStaticAssets = async (urls: string[]): Promise<void> => {
   if (typeof caches === 'undefined') return;
@@ -289,6 +318,7 @@ export const checkPerformanceBudget = (budget: PerformanceBudget): {
     return { passed: true, violations };
   }
   
+<<<<<<< HEAD
   const timing = window.performance.timing;
   const loadTime = timing.loadEventEnd - timing.navigationStart;
   const interactiveTime = timing.domInteractive - timing.navigationStart;
@@ -326,13 +356,46 @@ export const addCriticalResourceHints = (): void => {
     link.href = hint.href;
     if (hint.crossOrigin) {
       link.crossOrigin = hint.crossOrigin;
+=======
+  // Check bundle size (simplified)
+  const scripts = document.querySelectorAll('script[src]');
+  let totalSize = 0;
+  scripts.forEach(script => {
+    const src = (script as HTMLScriptElement).src;
+    if (src && !src.startsWith('data:')) {
+      totalSize += 100; // Simplified size estimation
+>>>>>>> 71655f282840ed9a4a2a6696e410390223898ad3
     }
-    document.head.appendChild(link);
   });
+<<<<<<< HEAD
 };
 
 // Performance optimization utilities class
 export class PerformanceOptimizer {
+=======
+  
+  if (totalSize > budget.maxBundleSize) {
+    violations.push(`Bundle size ${totalSize}KB exceeds budget ${budget.maxBundleSize}KB`);
+  }
+  
+  // Check load time
+  const timing = window.performance.timing;
+  const loadTime = timing.loadEventEnd - timing.navigationStart;
+  if (loadTime > budget.maxFirstLoad) {
+    violations.push(`Load time ${loadTime}ms exceeds budget ${budget.maxFirstLoad}ms`);
+  }
+  
+  return {
+    passed: violations.length === 0,
+    violations
+  };
+};
+
+/**
+ * Performance monitoring class
+ */
+class PerformanceOptimizer {
+>>>>>>> 71655f282840ed9a4a2a6696e410390223898ad3
   private static instance: PerformanceOptimizer;
   private metrics: Map<string, number> = new Map();
 
@@ -343,6 +406,7 @@ export class PerformanceOptimizer {
     return PerformanceOptimizer.instance;
   }
 
+<<<<<<< HEAD
   // Lazy load images with intersection observer
   lazyLoadImages(): void {
     if ('IntersectionObserver' in window) {
@@ -379,16 +443,49 @@ export class PerformanceOptimizer {
       link.href = resource;
       link.as = resource.endsWith('.woff2') ? 'font' : 'image';
       if (resource.endsWith('.woff2')) {
+=======
+  public measurePerformance(name: string, fn: () => void): void {
+    const start = performance.now();
+    fn();
+    const end = performance.now();
+    this.metrics.set(name, end - start);
+  }
+
+  public lazyLoadImages(): void {
+    lazyLoadImages();
+  }
+
+  public preloadCriticalResources(): void {
+    const criticalResources = [
+      '/fonts/inter.woff2',
+      '/images/hero-bg.jpg',
+      '/images/logo.svg',
+    ];
+
+    criticalResources.forEach(resource => {
+      const link = document.createElement('link');
+      link.rel = 'preload';
+      link.href = resource;
+      if (resource.endsWith('.woff2')) {
+        link.as = 'font';
+        link.type = 'font/woff2';
+>>>>>>> 71655f282840ed9a4a2a6696e410390223898ad3
         link.crossOrigin = 'anonymous';
       }
       document.head.appendChild(link);
     });
   }
 
+<<<<<<< HEAD
   // Optimize scroll performance
   optimizeScroll(): void {
     let ticking = false;
     
+=======
+  public optimizeScroll(): void {
+    let ticking = false;
+
+>>>>>>> 71655f282840ed9a4a2a6696e410390223898ad3
     const updateScrollPosition = () => {
       // Throttled scroll handling
       ticking = false;
@@ -404,6 +501,7 @@ export class PerformanceOptimizer {
     window.addEventListener('scroll', requestTick, { passive: true });
   }
 
+<<<<<<< HEAD
   // Measure performance metrics
   measurePerformance(name: string, fn: () => void): void {
     const start = performance.now();
@@ -443,6 +541,27 @@ export class PerformanceOptimizer {
       }
       document.head.appendChild(link);
     });
+=======
+  public prefetchResources(urls: string[]): void {
+    prefetchResources(urls);
+  }
+
+  public reportWebVitals(metrics: WebVitalsMetrics): void {
+    reportWebVitals(metrics);
+  }
+
+  public measurePageLoad(): WebVitalsMetrics | null {
+    return measurePageLoad();
+  }
+
+  public monitorLongTasks(callback: (entries: PerformanceEntry[]) => void): PerformanceObserver | null {
+    return monitorLongTasks(callback);
+  }
+
+  // Get performance metrics
+  getMetrics(): Record<string, number> {
+    return Object.fromEntries(this.metrics);
+>>>>>>> 71655f282840ed9a4a2a6696e410390223898ad3
   }
 
   // Measure page load performance
@@ -466,6 +585,14 @@ export class PerformanceOptimizer {
     }
   }
 
+<<<<<<< HEAD
+=======
+  // Clear metrics
+  clearMetrics() {
+    this.metrics.clear();
+  }
+
+>>>>>>> 71655f282840ed9a4a2a6696e410390223898ad3
   // Initialize all optimizations
   initialize(): void {
     this.measurePerformance('lazyLoadImages', () => this.lazyLoadImages());
@@ -494,6 +621,10 @@ export default {
   monitorLongTasks,
   cacheStaticAssets,
   clearOldCaches,
+<<<<<<< HEAD
   checkPerformanceBudget,
   addCriticalResourceHints
+=======
+  checkPerformanceBudget
+>>>>>>> 71655f282840ed9a4a2a6696e410390223898ad3
 };

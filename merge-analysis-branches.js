@@ -37,7 +37,7 @@ const analysisBranches = [
 ];
 
 console.log(
-  `📊 Found ${analysisBranches.length} analysis branches to process\n`,
+  `📊 Found ${analysisBranches.length} analysis branches to process\n`
 );
 
 // Step 3: Enhanced merge function with conflict resolution
@@ -51,14 +51,14 @@ function mergeAnalysisBranch(branchName) {
     // Try direct merge first
     execSync(
       `git merge origin/${branchName} --no-ff -m "Merge ${branchName} - Analysis and improvement"`,
-      { stdio: 'inherit' },
+      { stdio: 'inherit' }
     );
 
     console.log(`✅ Successfully merged ${branchName}`);
     return { success: true, method: 'direct' };
   } catch (error) {
     console.log(
-      `⚠️  Direct merge failed for ${branchName}, attempting conflict resolution...`,
+      `⚠️  Direct merge failed for ${branchName}, attempting conflict resolution...`
     );
 
     try {
@@ -66,11 +66,11 @@ function mergeAnalysisBranch(branchName) {
       execSync('git reset --hard HEAD', { stdio: 'inherit' });
       execSync(
         `git merge origin/${branchName} -X theirs --no-ff -m "Auto-merge ${branchName} (theirs strategy)"`,
-        { stdio: 'inherit' },
+        { stdio: 'inherit' }
       );
 
       console.log(
-        `✅ Auto-resolved conflicts for ${branchName} using 'theirs' strategy`,
+        `✅ Auto-resolved conflicts for ${branchName} using 'theirs' strategy`
       );
       return { success: true, method: 'theirs' };
     } catch (theirsError) {
@@ -80,11 +80,11 @@ function mergeAnalysisBranch(branchName) {
         execSync('git reset --hard HEAD', { stdio: 'inherit' });
         execSync(
           `git merge origin/${branchName} -X ours --no-ff -m "Auto-merge ${branchName} (ours strategy)"`,
-          { stdio: 'inherit' },
+          { stdio: 'inherit' }
         );
 
         console.log(
-          `✅ Auto-resolved conflicts for ${branchName} using 'ours' strategy`,
+          `✅ Auto-resolved conflicts for ${branchName} using 'ours' strategy`
         );
         return { success: true, method: 'ours' };
       } catch (oursError) {
@@ -136,7 +136,7 @@ for (const branch of analysisBranches) {
 // Step 5: Generate report
 fs.writeFileSync(
   'analysis-merge-report.json',
-  JSON.stringify(results, null, 2),
+  JSON.stringify(results, null, 2)
 );
 
 // Step 6: Display summary

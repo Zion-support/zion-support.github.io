@@ -11,7 +11,7 @@ const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({
   enablePerformanceTracking = true,
   enableErrorTracking = true,
 }) => {
-  const [analytics, setAnalytics] = useState({
+  const [analytics] = useState({
     pageViews: 0,
     uniqueVisitors: 0,
     bounceRate: 0,
