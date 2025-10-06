@@ -22,17 +22,8 @@ Object.defineProperty(window, 'matchMedia', {
 });
 // Mock IntersectionObserver
 global.IntersectionObserver = class IntersectionObserver {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 global.IntersectionObserver = class MockIntersectionObserver {
 >>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572
->>>>>>> main
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main

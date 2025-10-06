@@ -3,6 +3,24 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 
 // Components
+>>>>>>> main
+import ErrorBoundary from '../src/components/ErrorBoundary';
+import SEOOptimizer from '../src/components/SEOOptimizer';
+import AccessibilityEnhancer from './components/AccessibilityEnhancer';
+import PerformanceDashboard from './components/PerformanceDashboard';
+import Navigation from './components/Navigation';
+import Footer from './components/Footer';
+import LoadingSpinner from './components/LoadingSpinner';
+
+// Utils
+// import { performanceOptimizer } from '../src/utils/performanceOptimizer';
+
+// Styles
+import '../src/index.css';
+=======
+import ErrorBoundary from '../src/components/ErrorBoundary';
+import SEOOptimizer from '../src/components/SEOOptimizer';
+import AccessibilityEnhancer from '../src/components/AccessibilityEnhancer';
 import ErrorBoundary from './components/ErrorBoundary';
 import SEOOptimizer from './components/SEOOptimizer';
 import LoadingSpinner from './components/LoadingSpinner';
@@ -16,6 +34,7 @@ import LoadingSpinner from './components/LoadingSpinner';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import PerformanceDashboard from './components/PerformanceDashboard';
 import PerformanceMonitor from './components/PerformanceMonitor';
+>>>>>>> main
 >>>>>>> main
 
 // Lazy load pages for better performance

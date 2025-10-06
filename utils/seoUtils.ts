@@ -52,7 +52,6 @@ export const setTwitterCardTags = (twitterData: {
   title?: string;
   description?: string;
   image?: string;
-<<<<<<< HEAD
   site?: string;
   creator?: string;
 }): void => {
@@ -63,7 +62,6 @@ export const setTwitterCardTags = (twitterData: {
     'twitter:image': twitterData.image,
     'twitter:site': twitterData.site,
     'twitter:creator': twitterData.creator,
-=======
 }): void => {
   const twitterTags = {
     'twitter:card': twitterData.card,
@@ -94,7 +92,6 @@ export const setStructuredData = (data: Record<string, unknown>): void => {
   document.head.appendChild(script);
 };
 
-<<<<<<< HEAD
 // Canonical URL
 export const setCanonicalUrl = (url: string): void => {
   let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
@@ -206,7 +203,6 @@ export const seoAudit = async (): Promise<{
   results.score = (score / (Object.keys(results).length - 1)) * 100;
 
   return results;
-=======
 // Generate sitemap
 export const generateSitemap = (urls: string[]): string => {
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>

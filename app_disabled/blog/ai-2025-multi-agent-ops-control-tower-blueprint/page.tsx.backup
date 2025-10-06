@@ -1,8 +1,6 @@
 import Link from 'next/link';
 import { ArrowLeft, ArrowRight, Calendar, Clock, User } from 'lucide-react';
-<<<<<<< HEAD
 
-=======
 >>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572
 export default function MultiAgentOpsControlTowerBlueprintPage() {
   return (

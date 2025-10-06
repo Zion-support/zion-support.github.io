@@ -1,9 +1,7 @@
 /**
  * Jest setup file for testing environment
  */
-<<<<<<< HEAD
 
->>>>>>> main
 >>>>>>> main
 =======
 >>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572
@@ -23,11 +21,12 @@ Object.defineProperty(window, 'matchMedia', {
   })),
 });
 // Mock IntersectionObserver
-<<<<<<< HEAD
 global.IntersectionObserver = class IntersectionObserver {
-=======
 global.IntersectionObserver = class MockIntersectionObserver {
 >>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
   root: Element | null = null;
   rootMargin: string = '0px';
   thresholds: ReadonlyArray<number> = [0];
@@ -35,7 +34,7 @@ global.IntersectionObserver = class MockIntersectionObserver {
   disconnect() {}
   observe() {}
   unobserve() {}
-<<<<<<< HEAD
+  takeRecords() { return []; }
 };
 
 // Mock ResizeObserver
@@ -56,7 +55,6 @@ global.ResizeObserver = class ResizeObserver {
   unobserve(): void {}
   takeRecords(): IntersectionObserverEntry[] { return []; }
 } as unknown as typeof IntersectionObserver;
->>>>>>> main
 
 =======
   takeRecords() { return []; }
@@ -69,9 +67,7 @@ global.ResizeObserver = class ResizeObserver {
   observe() {}
   unobserve() {}
 };
-<<<<<<< HEAD
 
-=======
 // Mock ResizeObserver
 global.ResizeObserver = class ResizeObserver {
   constructor() {}
@@ -113,7 +109,6 @@ afterAll(() => {
   console.error = originalError;
   console.warn = originalWarn;
 });
-<<<<<<< HEAD
 // Mock performance API
 Object.defineProperty(window, 'performance', {
   writable: true,
@@ -137,7 +132,6 @@ global.cancelAnimationFrame = (id: number) => {
   observe(): void {}
   unobserve(): void {}
 } as unknown as typeof ResizeObserver;
->>>>>>> main
 >>>>>>> main
 =======
 >>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572

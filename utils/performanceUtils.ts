@@ -28,24 +28,19 @@ export const throttle = <T extends (...args: any[]) => any>(
   limit: number
 ): ((...args: Parameters<T>) => void) => {
   let inThrottle: boolean;
-<<<<<<< HEAD
-=======
   
 >>>>>>> cursor/fix-errors-and-merge-to-main-13eb
   return function executedFunction(this: any, ...args: Parameters<T>) {
     if (!inThrottle) {
       func.apply(this, args);
       inThrottle = true;
-<<<<<<< HEAD
       setTimeout(() => (inThrottle = false), limit);
-=======
       setTimeout(() => inThrottle = false, limit);
 >>>>>>> cursor/fix-errors-and-merge-to-main-13eb
     }
   };
 };
 
-<<<<<<< HEAD
 // Memory usage monitoring
 export const getMemoryUsage = (): {
   used: number;
@@ -222,7 +217,6 @@ export const lazyLoadImages = (): void => {
   document.querySelectorAll('img[data-src]').forEach((img) => {
     imageObserver.observe(img);
   });
-=======
 // Lazy load images
 export const lazyLoadImages = (): void => {
   if (typeof window === 'undefined') return;
@@ -245,7 +239,6 @@ export const lazyLoadImages = (): void => {
 
 // Preload critical resources
 export const preloadCriticalResources = (): void => {
-<<<<<<< HEAD
   if (typeof document === 'undefined') return;
 
   const criticalResources = [
@@ -263,7 +256,6 @@ export const preloadCriticalResources = (): void => {
       link.type = resource.type;
     }
     if (resource.as === 'font') {
-=======
   if (typeof window === 'undefined') return;
 
   const criticalResources = [
@@ -284,9 +276,7 @@ export const preloadCriticalResources = (): void => {
   });
 };
 
-<<<<<<< HEAD
 // Scroll performance optimization
-=======
 // Optimize scroll performance
 >>>>>>> cursor/fix-errors-and-merge-to-main-13eb
 export const optimizeScrollPerformance = (): void => {
@@ -295,9 +285,7 @@ export const optimizeScrollPerformance = (): void => {
   let ticking = false;
 
   const updateScrollPosition = () => {
-<<<<<<< HEAD
     // Throttled scroll handling
-=======
     // Update scroll position indicators
     const scrollY = window.scrollY;
     const windowHeight = window.innerHeight;
@@ -322,8 +310,6 @@ export const optimizeScrollPerformance = (): void => {
   };
 
   window.addEventListener('scroll', requestTick, { passive: true });
-<<<<<<< HEAD
-=======
 };
 
 // Performance monitor
