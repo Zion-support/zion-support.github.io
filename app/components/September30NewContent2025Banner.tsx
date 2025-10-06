@@ -73,6 +73,7 @@ const September30NewContent2025Banner: React.FC = () => {
   ];
 
   return (
+<<<<<<< HEAD
     <div className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
       {/* Animated background effects */}
       <div className="absolute inset-0">
@@ -97,6 +98,32 @@ const September30NewContent2025Banner: React.FC = () => {
           </h2>
           
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+=======
+    <div className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      {/* Animated background effects */}
+      <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 animate-pulse"></div>
+      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-transparent via-white/5 to-transparent"></div>
+      <div className="absolute bottom-0 right-0 w-full h-full bg-gradient-to-tl from-transparent via-blue-500/5 to-transparent"></div>
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+      <div className="absolute top-1/4 right-1/4 w-64 h-64 bg-gradient-to-r from-pink-500/20 to-orange-500/20 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '4s' }}></div>
+
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        {/* Header Section */}
+        <div className="text-center mb-16">
+          <div className="flex items-center justify-center gap-2 mb-6">
+            <Rocket className="w-6 h-6 text-orange-400 animate-bounce" />
+            <span className="text-orange-400 font-bold text-xl">
+              🔥 5 BREAKTHROUGH ARTICLES RELEASED • SEPTEMBER 30, 2025
+            </span>
+            <Sparkles className="w-6 h-6 text-orange-400 animate-bounce" />
+          </div>
+
+          <h2 className="text-5xl md:text-6xl font-extrabold text-white mb-6 leading-tight">
+            Latest AI Breakthroughs & Innovations
+          </h2>
+          
+          <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
+>>>>>>> cursor/fix-errors-and-merge-to-main-0181
             Cutting-edge research, enterprise implementations, and breakthrough technologies that are 
             revolutionizing AI operations, quantum computing, and cloud economics.
           </p>
@@ -107,7 +134,11 @@ const September30NewContent2025Banner: React.FC = () => {
           {newArticles.slice(0, 3).map((article, index) => (
             <div 
               key={article.id}
+<<<<<<< HEAD
               className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-500 hover:scale-105"
+=======
+              className="group relative bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover:bg-white/20 transition-all duration-500 transform hover:-translate-y-2"
+>>>>>>> cursor/fix-errors-and-merge-to-main-0181
               style={{ animationDelay: `${index * 150}ms` }}
             >
               {/* Card glow effect */}
@@ -115,11 +146,21 @@ const September30NewContent2025Banner: React.FC = () => {
               
               <div className="relative z-10">
                 {/* Icon & Badge */}
+<<<<<<< HEAD
                 <div className="flex items-center justify-between mb-4">
                   <div className="text-4xl">{article.icon}</div>
                   <div className="flex items-center gap-2 px-3 py-1 bg-gradient-to-r from-green-500 to-emerald-500 text-white text-xs font-bold rounded-full">
                     <TrendingUp className="w-3 h-3" />
                     <span>NEW</span>
+=======
+                <div className="flex items-center justify-between mb-6">
+                  <div className="text-4xl">{article.icon}</div>
+                  <div className="flex items-center gap-2">
+                    <TrendingUp className="w-4 h-4 text-green-400" />
+                    <span className="px-3 py-1 bg-gradient-to-r from-green-500 to-emerald-500 text-white text-xs font-bold rounded-full">
+                      NEW
+                    </span>
+>>>>>>> cursor/fix-errors-and-merge-to-main-0181
                   </div>
                 </div>
 
@@ -131,7 +172,11 @@ const September30NewContent2025Banner: React.FC = () => {
                 </div>
 
                 {/* Title */}
+<<<<<<< HEAD
                 <h3 className="text-2xl font-bold text-white mb-4 group-hover:bg-gradient-to-r group-hover:from-cyan-400 group-hover:to-blue-400 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
+=======
+                <h3 className="text-2xl font-bold text-white mb-4 group-hover:bg-gradient-to-r group-hover:from-cyan-400 group-hover:to-blue-400 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300 leading-tight">
+>>>>>>> cursor/fix-errors-and-merge-to-main-0181
                   {article.title}
                 </h3>
 
@@ -141,7 +186,11 @@ const September30NewContent2025Banner: React.FC = () => {
                 </p>
 
                 {/* Meta Info */}
+<<<<<<< HEAD
                 <div className="flex items-center gap-4 text-sm text-gray-400 mb-6">
+=======
+                <div className="flex items-center justify-between text-sm text-gray-400 mb-6">
+>>>>>>> cursor/fix-errors-and-merge-to-main-0181
                   <span className="flex items-center gap-1">
                     <Zap className="w-4 h-4" />
                     {article.readTime}
@@ -158,6 +207,9 @@ const September30NewContent2025Banner: React.FC = () => {
                   <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-1 transition-transform" />
                 </Link>
               </div>
+
+              {/* Corner accent */}
+              <div className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${article.gradient} opacity-10 rounded-bl-full`}></div>
             </div>
           ))}
         </div>
@@ -167,18 +219,32 @@ const September30NewContent2025Banner: React.FC = () => {
           {newArticles.slice(3).map((article, index) => (
             <div 
               key={article.id}
+<<<<<<< HEAD
               className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-500 hover:scale-105"
+=======
+              className="group relative bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover:bg-white/20 transition-all duration-500 transform hover:-translate-y-2"
+>>>>>>> cursor/fix-errors-and-merge-to-main-0181
             >
               {/* Card glow effect */}
               <div className={`absolute inset-0 bg-gradient-to-br ${article.gradient} opacity-0 group-hover:opacity-10 transition-all duration-500 rounded-2xl`}></div>
               
               <div className="relative z-10">
                 {/* Icon & Badge */}
+<<<<<<< HEAD
                 <div className="flex items-center justify-between mb-4">
                   <div className="text-4xl">{article.icon}</div>
                   <div className="flex items-center gap-2 px-3 py-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs font-bold rounded-full">
                     <Star className="w-3 h-3" />
                     <span>FEATURED</span>
+=======
+                <div className="flex items-center justify-between mb-6">
+                  <div className="text-4xl">{article.icon}</div>
+                  <div className="flex items-center gap-2">
+                    <Star className="w-4 h-4 text-yellow-400" />
+                    <span className="px-3 py-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs font-bold rounded-full">
+                      FEATURED
+                    </span>
+>>>>>>> cursor/fix-errors-and-merge-to-main-0181
                   </div>
                 </div>
 
@@ -190,7 +256,11 @@ const September30NewContent2025Banner: React.FC = () => {
                 </div>
 
                 {/* Title */}
+<<<<<<< HEAD
                 <h3 className="text-2xl font-bold text-white mb-4 group-hover:bg-gradient-to-r group-hover:from-purple-400 group-hover:to-fuchsia-400 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
+=======
+                <h3 className="text-2xl font-bold text-white mb-4 group-hover:bg-gradient-to-r group-hover:from-purple-400 group-hover:to-fuchsia-400 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300 leading-tight">
+>>>>>>> cursor/fix-errors-and-merge-to-main-0181
                   {article.title}
                 </h3>
 
@@ -200,7 +270,11 @@ const September30NewContent2025Banner: React.FC = () => {
                 </p>
 
                 {/* Meta Info */}
+<<<<<<< HEAD
                 <div className="flex items-center gap-4 text-sm text-gray-400 mb-6">
+=======
+                <div className="flex items-center justify-between text-sm text-gray-400 mb-6">
+>>>>>>> cursor/fix-errors-and-merge-to-main-0181
                   <span className="flex items-center gap-1">
                     <Zap className="w-4 h-4" />
                     {article.readTime}
@@ -217,16 +291,27 @@ const September30NewContent2025Banner: React.FC = () => {
                   <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-1 transition-transform" />
                 </Link>
               </div>
+
+              {/* Corner accent */}
+              <div className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${article.gradient} opacity-10 rounded-bl-full`}></div>
             </div>
           ))}
         </div>
 
         {/* Call-to-Action Section */}
+<<<<<<< HEAD
         <div className="text-center bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-12 mb-16">
           <h3 className="text-3xl font-bold text-white mb-6">
             Transform Your Enterprise with AI
           </h3>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+=======
+        <div className="text-center bg-white/5 backdrop-blur-sm border border-white/20 rounded-2xl p-12 mb-16">
+          <h3 className="text-3xl font-bold text-white mb-6">
+            Transform Your Enterprise with AI
+          </h3>
+          <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
+>>>>>>> cursor/fix-errors-and-merge-to-main-0181
             Join 500+ Fortune 500 enterprises achieving breakthrough results with AI-powered operations, 
             quantum computing, and autonomous systems. Get expert guidance from our team.
           </p>
@@ -240,7 +325,11 @@ const September30NewContent2025Banner: React.FC = () => {
             </Link>
             <Link
               href="/contact"
+<<<<<<< HEAD
               className="group flex items-center gap-3 border-2 border-white/20 hover:border-white/40 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1"
+=======
+              className="group flex items-center gap-3 border-2 border-white/30 hover:border-white/60 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1"
+>>>>>>> cursor/fix-errors-and-merge-to-main-0181
             >
               <span>Schedule Expert Consultation</span>
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
