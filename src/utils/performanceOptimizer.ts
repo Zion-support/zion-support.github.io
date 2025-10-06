@@ -368,7 +368,6 @@ class PerformanceOptimizer {
     });
   }
 
-<<<<<<< HEAD
   public reportWebVitals(metrics: WebVitalsMetrics): void {
     reportWebVitals(metrics);
   }
@@ -418,20 +417,6 @@ class PerformanceOptimizer {
     this.metrics.clear();
   }
 
-  // Measure page load performance
-  measurePageLoad(): Record<string, number> | null {
-    if (typeof window === 'undefined' || !window.performance) {
-      return null;
-    }
-    
-    const timing = window.performance.timing;
-    return {
-      loadTime: timing.loadEventEnd - timing.navigationStart,
-      interactiveTime: timing.domInteractive - timing.navigationStart,
-      domContentLoaded: timing.domContentLoadedEventEnd - timing.navigationStart,
-      firstPaint: performance.getEntriesByType('paint')[0]?.startTime || 0
-    };
-  }
 
   // Initialize all optimizations
   initialize(): void {
