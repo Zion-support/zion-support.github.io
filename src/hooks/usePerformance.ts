@@ -106,15 +106,14 @@ export const usePageLoadPerformance = () => {
         )[0] as PerformanceNavigationTiming;
 
         if (navigation) {
-          const navTiming = navigation as PerformanceNavigationTiming;
           const metrics = {
             domContentLoaded:
-              navTiming.domContentLoadedEventEnd -
-              navTiming.domContentLoadedEventStart,
-            loadComplete: navTiming.loadEventEnd - navTiming.loadEventStart,
-            firstByte: navTiming.responseStart - navTiming.requestStart,
-            domInteractive: navTiming.domInteractive - navTiming.fetchStart,
-            totalLoadTime: navTiming.loadEventEnd - navTiming.fetchStart,
+              navigation.domContentLoadedEventEnd -
+              navigation.domContentLoadedEventStart,
+            loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
+            firstByte: navigation.responseStart - navigation.requestStart,
+            domInteractive: navigation.domInteractive - (navigation as any).navigationStart,
+            totalLoadTime: navigation.loadEventEnd - (navigation as any).navigationStart,
           };
 
           // Track each metric
@@ -177,13 +176,7 @@ export const useLongTaskMonitoring = () => {
   useEffect(() => {
     const observer = performanceOptimizer.monitorLongTasks((entries: PerformanceEntry[]) => {
       entries.forEach((entry: PerformanceEntry) => {
-        analytics.track(
-          'long_task',
-          'performance',
-          'detected',
-          undefined,
-          entry.duration
-        );
+        analytics.track('long_task', 'performance', 'detected', undefined, entry.duration);
       });
     });
 
