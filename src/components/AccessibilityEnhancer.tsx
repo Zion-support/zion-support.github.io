@@ -65,7 +65,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       {children}
       
       {/* Accessibility Controls - Only show in development */}
-      {process.env['NODE_ENV'] === 'development' && (
+      {process.env.NODE_ENV === 'development' && (
         <div className="fixed top-4 right-4 z-50 bg-white border border-gray-200 rounded-lg shadow-lg p-4">
           <h3 className="text-sm font-semibold text-gray-900 mb-3">Accessibility Controls</h3>
           
