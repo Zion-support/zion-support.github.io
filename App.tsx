@@ -5,11 +5,6 @@ declare global {
   function gtag(...args: any[]): void;
 }
 
-// Declare gtag for analytics
-declare global {
-  function gtag(...args: any[]): void;
-}
-
 // Memoized components for better performance
 const UnifiedContentPromotion = memo(() => (
   <div className='bg-gradient-to-r from-blue-600 to-purple-700 text-white py-16'>
@@ -56,22 +51,16 @@ const InteractiveContentShowcase2026 = memo(() => (
 ));
 
 // Error Boundary Component
-interface ErrorBoundaryState {
-  hasError: boolean;
-  error: Error | null;
-}
-
-interface ErrorBoundaryProps {
-  children: React.ReactNode;
-}
-
-class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundaryState> {
-  constructor(props: ErrorBoundaryProps) {
+class ErrorBoundary extends React.Component<
+  { children: React.ReactNode },
+  { hasError: boolean; error: Error | null }
+> {
+  constructor(props: { children: React.ReactNode }) {
     super(props);
     this.state = { hasError: false, error: null };
   }
 
-  static getDerivedStateFromError(error: Error): ErrorBoundaryState {
+  static getDerivedStateFromError(error: Error) {
     return { hasError: true, error };
   }
 
@@ -180,10 +169,11 @@ export default function App() {
         window.addEventListener('load', () => {
           const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
           if (perfData) {
+            const navTiming = perfData as PerformanceNavigationTiming;
             console.log('Page Load Performance:', {
-              domContentLoaded: perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart,
-              loadComplete: perfData.loadEventEnd - perfData.loadEventStart,
-              totalTime: perfData.loadEventEnd - perfData.fetchStart
+              domContentLoaded: navTiming.domContentLoadedEventEnd - navTiming.domContentLoadedEventStart,
+              loadComplete: navTiming.loadEventEnd - navTiming.loadEventStart,
+              totalTime: navTiming.loadEventEnd - navTiming.fetchStart
             });
           }
         });
@@ -194,8 +184,7 @@ export default function App() {
   // Memoized event handlers for better performance
   const handleNewsletterSubmit = useCallback((e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const target = e.target as HTMLFormElement;
-    const email = (target.elements.namedItem('email') as HTMLInputElement)?.value;
+    const email = (e.target as HTMLFormElement)['email'].value;
     if (email) {
       console.log('Newsletter signup:', email);
       // Add actual newsletter signup logic here
