@@ -30,7 +30,7 @@ const App: React.FC = () => {
     
     // Initialize Web Vitals monitoring
     if (typeof window !== 'undefined' && 'performance' in window) {
-      performanceOptimizer.addCriticalResourceHints();
+      performanceOptimizer.preloadCriticalResources();
       const metrics = performanceOptimizer.measurePageLoad();
       if (metrics) {
         performanceOptimizer.reportWebVitals(metrics);
