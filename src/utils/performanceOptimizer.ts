@@ -17,19 +17,6 @@ export interface WebVitalsMetrics {
 
 /**
  * Performance budget checker
-<<<<<<< HEAD
- */
-export interface PerformanceBudget {
-  maxBundleSize: number; // in KB
-  maxImageSize: number; // in KB
-  maxFirstLoad: number; // in ms
-  maxInteractive: number; // in ms
-}
-
-/**
- * Resource hints for performance
-=======
->>>>>>> 71655f282840ed9a4a2a6696e410390223898ad3
  */
 export interface PerformanceBudget {
   maxBundleSize: number; // in KB
@@ -122,34 +109,11 @@ export const preconnectDomains = (domains: string[]): void => {
 export const prefetchResources = (urls: string[]): void => {
   if (typeof document === 'undefined') return;
 
-  // Prefetch URLs
   urls.forEach(url => {
     const link = document.createElement('link');
     link.rel = 'prefetch';
     link.href = url;
     document.head.appendChild(link);
-  });
-
-  // Set up image lazy loading
-  const imageObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const img = entry.target as HTMLImageElement;
-        const src = img.dataset['src'];
-        if (src) {
-          img.src = src;
-          img.removeAttribute('data-src');
-          imageObserver.unobserve(img);
-        }
-      }
-    });
-  }, {
-    rootMargin: '50px 0px',
-    threshold: 0.01
-  });
-
-  document.querySelectorAll('img[data-src]').forEach(img => {
-    imageObserver.observe(img);
   });
 };
 
@@ -319,17 +283,25 @@ export const checkPerformanceBudget = (budget: PerformanceBudget): {
     return { passed: true, violations };
   }
   
-<<<<<<< HEAD
-  const timing = window.performance.timing;
-  const loadTime = timing.loadEventEnd - timing.navigationStart;
-  const interactiveTime = timing.domInteractive - timing.navigationStart;
+  // Check bundle size (simplified)
+  const scripts = document.querySelectorAll('script[src]');
+  let totalSize = 0;
+  scripts.forEach(script => {
+    const src = (script as HTMLScriptElement).src;
+    if (src && !src.startsWith('data:')) {
+      totalSize += 100; // Simplified size estimation
+    }
+  });
   
-  if (loadTime > budget.maxFirstLoad) {
-    violations.push(`First load time (${loadTime}ms) exceeds budget (${budget.maxFirstLoad}ms)`);
+  if (totalSize > budget.maxBundleSize) {
+    violations.push(`Bundle size ${totalSize}KB exceeds budget ${budget.maxBundleSize}KB`);
   }
   
-  if (interactiveTime > budget.maxInteractive) {
-    violations.push(`Time to interactive (${interactiveTime}ms) exceeds budget (${budget.maxInteractive}ms)`);
+  // Check load time
+  const timing = window.performance.timing;
+  const loadTime = timing.loadEventEnd - timing.navigationStart;
+  if (loadTime > budget.maxFirstLoad) {
+    violations.push(`Load time ${loadTime}ms exceeds budget ${budget.maxFirstLoad}ms`);
   }
   
   return {
@@ -357,53 +329,15 @@ export const addCriticalResourceHints = (): void => {
     link.href = hint.href;
     if (hint.crossOrigin) {
       link.crossOrigin = hint.crossOrigin;
-=======
-  // Check bundle size (simplified)
-  const scripts = document.querySelectorAll('script[src]');
-  let totalSize = 0;
-  scripts.forEach(script => {
-    const src = (script as HTMLScriptElement).src;
-    if (src && !src.startsWith('data:')) {
-      totalSize += 100; // Simplified size estimation
->>>>>>> 71655f282840ed9a4a2a6696e410390223898ad3
     }
+    document.head.appendChild(link);
   });
-<<<<<<< HEAD
-};
-
-// Performance optimization utilities class
-export class PerformanceOptimizer {
-=======
-  
-  if (totalSize > budget.maxBundleSize) {
-    violations.push(`Bundle size ${totalSize}KB exceeds budget ${budget.maxBundleSize}KB`);
-  }
-  
-<<<<<<< HEAD
-  // Check load time
-  const timing = window.performance.timing;
-  const loadTime = timing.loadEventEnd - timing.navigationStart;
-  if (loadTime > budget.maxFirstLoad) {
-    violations.push(`Load time ${loadTime}ms exceeds budget ${budget.maxFirstLoad}ms`);
-  }
-  
-=======
->>>>>>> origin/cursor/install-dependencies-and-run-type-check-b1ae
-  return {
-    passed: violations.length === 0,
-    violations
-  };
 };
 
 /**
-<<<<<<< HEAD
- * Performance monitoring class
-=======
  * Performance Optimizer Class
->>>>>>> origin/cursor/install-dependencies-and-run-type-check-b1ae
  */
 class PerformanceOptimizer {
->>>>>>> 71655f282840ed9a4a2a6696e410390223898ad3
   private static instance: PerformanceOptimizer;
   private metrics: Map<string, number> = new Map();
 
@@ -414,44 +348,6 @@ class PerformanceOptimizer {
     return PerformanceOptimizer.instance;
   }
 
-<<<<<<< HEAD
-  // Lazy load images with intersection observer
-  lazyLoadImages(): void {
-    if ('IntersectionObserver' in window) {
-      const imageObserver = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const img = entry.target as HTMLImageElement;
-            if (img.dataset['src']) {
-              img.src = img.dataset['src'];
-              img.classList.remove('lazy');
-              imageObserver.unobserve(img);
-            }
-          }
-        });
-      });
-
-      document.querySelectorAll('img[data-src]').forEach((img) => {
-        imageObserver.observe(img);
-      });
-    }
-  }
-
-  // Preload critical resources
-  preloadCriticalResources(): void {
-    const criticalResources = [
-      '/fonts/inter.woff2',
-      '/images/hero-bg.jpg',
-      '/images/logo.svg'
-    ];
-
-    criticalResources.forEach((resource) => {
-      const link = document.createElement('link');
-      link.rel = 'preload';
-      link.href = resource;
-      link.as = resource.endsWith('.woff2') ? 'font' : 'image';
-      if (resource.endsWith('.woff2')) {
-=======
   public measurePerformance(name: string, fn: () => void): void {
     const start = performance.now();
     fn();
@@ -477,23 +373,15 @@ class PerformanceOptimizer {
       if (resource.endsWith('.woff2')) {
         link.as = 'font';
         link.type = 'font/woff2';
->>>>>>> 71655f282840ed9a4a2a6696e410390223898ad3
         link.crossOrigin = 'anonymous';
       }
       document.head.appendChild(link);
     });
   }
 
-<<<<<<< HEAD
-  // Optimize scroll performance
-  optimizeScroll(): void {
-    let ticking = false;
-    
-=======
   public optimizeScroll(): void {
     let ticking = false;
 
->>>>>>> 71655f282840ed9a4a2a6696e410390223898ad3
     const updateScrollPosition = () => {
       // Throttled scroll handling
       ticking = false;
@@ -509,47 +397,6 @@ class PerformanceOptimizer {
     window.addEventListener('scroll', requestTick, { passive: true });
   }
 
-<<<<<<< HEAD
-  // Measure performance metrics
-  measurePerformance(name: string, fn: () => void): void {
-    const start = performance.now();
-    fn();
-    const end = performance.now();
-    const duration = end - start;
-    
-    this.metrics.set(name, duration);
-    
-    if (process.env.NODE_ENV === 'development') {
-      console.log(`Performance: ${name} took ${duration.toFixed(2)}ms`);
-    }
-  }
-
-  // Get performance metrics
-  getMetrics(): Record<string, number> {
-    return Object.fromEntries(this.metrics);
-  }
-
-  // Add critical resource hints for better performance
-  addCriticalResourceHints(): void {
-    if (typeof document === 'undefined') return;
-    
-    const hints = [
-      { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' },
-      { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com' },
-      { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
-      { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossOrigin: 'anonymous' }
-    ];
-    
-    hints.forEach(hint => {
-      const link = document.createElement('link');
-      link.rel = hint.rel;
-      link.href = hint.href;
-      if (hint.crossOrigin) {
-        link.crossOrigin = hint.crossOrigin;
-      }
-      document.head.appendChild(link);
-    });
-=======
   public prefetchResources(urls: string[]): void {
     prefetchResources(urls);
   }
@@ -569,61 +416,13 @@ class PerformanceOptimizer {
   // Get performance metrics
   getMetrics(): Record<string, number> {
     return Object.fromEntries(this.metrics);
->>>>>>> 71655f282840ed9a4a2a6696e410390223898ad3
   }
 
-<<<<<<< HEAD
-  // Measure page load performance
-  measurePageLoad(): Record<string, number> | null {
-    if (typeof window === 'undefined' || !window.performance) {
-      return null;
-    }
-    
-    const timing = window.performance.timing;
-=======
-  public prefetchResources(urls: string[]): void {
-    urls.forEach(url => {
-      const link = document.createElement('link');
-      link.rel = 'prefetch';
-      link.href = url;
-      document.head.appendChild(link);
-    });
-  }
-
-  public preconnectDomains(domains: string[]): void {
-    domains.forEach(domain => {
-      const link = document.createElement('link');
-      link.rel = 'preconnect';
-      link.href = domain;
-      document.head.appendChild(link);
-    });
-  }
-
-  // Get performance summary
-  getPerformanceSummary() {
->>>>>>> origin/cursor/install-dependencies-and-run-type-check-b1ae
-    return {
-      loadTime: timing.loadEventEnd - timing.navigationStart,
-      interactiveTime: timing.domInteractive - timing.navigationStart,
-      domContentLoaded: timing.domContentLoadedEventEnd - timing.navigationStart
-    };
-  }
-
-  // Report web vitals
-  reportWebVitals(metrics: Record<string, number>): void {
-    if (process.env.NODE_ENV === 'development') {
-      console.log('Web Vitals:', metrics);
-    }
-  }
-
-<<<<<<< HEAD
-=======
   // Clear metrics
   clearMetrics() {
     this.metrics.clear();
   }
 
->>>>>>> 71655f282840ed9a4a2a6696e410390223898ad3
   // Initialize all optimizations
   initialize(): void {
     this.measurePerformance('lazyLoadImages', () => this.lazyLoadImages());
@@ -633,7 +432,6 @@ class PerformanceOptimizer {
 }
 
 // Export singleton instance
-<<<<<<< HEAD
 export const performanceOptimizer = PerformanceOptimizer.getInstance();
 
 export default {
@@ -653,13 +451,6 @@ export default {
   monitorLongTasks,
   cacheStaticAssets,
   clearOldCaches,
-<<<<<<< HEAD
   checkPerformanceBudget,
   addCriticalResourceHints
-=======
-  checkPerformanceBudget
->>>>>>> 71655f282840ed9a4a2a6696e410390223898ad3
 };
-=======
-export const performanceOptimizer = PerformanceOptimizer.getInstance();
->>>>>>> origin/cursor/install-dependencies-and-run-type-check-b1ae
