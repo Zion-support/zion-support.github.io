@@ -190,11 +190,11 @@ export default function App() {
       <HelmetProvider>
         <Suspense fallback={<LoadingSpinner />}>
           <div>
-        <script
-          type='application/ld+json'
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-        />
-        {/* SEO Meta Tags */}
+          <script
+            type='application/ld+json'
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+          />
+          {/* SEO Meta Tags */}
         <Helmet>
           <title>
             Zion Tech Group - AI-Powered Enterprise Solutions | 300% ROI
