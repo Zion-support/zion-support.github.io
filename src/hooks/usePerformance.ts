@@ -4,7 +4,7 @@
  */
 
 import { useEffect, useCallback, useRef } from 'react';
-import { performanceOptimizer } from '../utils/performanceOptimizer';
+import { monitorLongTasks } from '../utils/performanceOptimizer';
 import analytics from '../utils/analytics';
 
 export interface PerformanceMetrics {
@@ -142,8 +142,6 @@ export const usePageLoadPerformance = () => {
       window.addEventListener('load', trackPageLoad);
       return () => window.removeEventListener('load', trackPageLoad);
     }
-    
-    return undefined;
   }, []);
 };
 
@@ -176,9 +174,53 @@ export const useResourcePerformance = () => {
  */
 export const useLongTaskMonitoring = () => {
   useEffect(() => {
+<<<<<<< HEAD
     const observer = performanceOptimizer.monitorLongTasks((entries: PerformanceEntry[]) => {
       entries.forEach((entry: PerformanceEntry) => {
         analytics.track('long_task', 'performance', 'detected', undefined, entry.duration);
+=======
+<<<<<<< HEAD
+    const observer = performanceOptimizer.monitorLongTasks((entries: PerformanceEntry[]) => {
+      entries.forEach((entry: PerformanceEntry) => {
+        analytics.track('long_task', 'performance', 'detected', undefined, entry.duration);
+=======
+<<<<<<< HEAD
+    const observer = performanceOptimizer.monitorLongTasks((entries: PerformanceEntry[]) => {
+      entries.forEach((entry: PerformanceEntry) => {
+        analytics.track('long_task', 'performance', 'detected', undefined, entry.duration);
+=======
+<<<<<<< HEAD
+    const observer = monitorLongTasks((entries: PerformanceEntry[]) => {
+=======
+    const observer = performanceOptimizer.monitorLongTasks((entries: PerformanceEntry[]) => {
+>>>>>>> main
+      entries.forEach((entry: PerformanceEntry) => {
+<<<<<<< HEAD
+        analytics.track('long_task', 'performance', 'detected', undefined, entry.duration);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+        analytics.track(
+          'long_task',
+          'performance',
+          'detected',
+          undefined,
+          entry.duration
+        );
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
       });
     });
 

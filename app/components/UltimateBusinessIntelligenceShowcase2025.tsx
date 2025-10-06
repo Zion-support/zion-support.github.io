@@ -23,8 +23,7 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
 <<<<<<< HEAD
         speed: '5,000% faster',
 =======
-        speed: '5,000% faster'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e4e
+>>>>>>> main
       },
       readingTime: '35 min read',
       featured: true,
@@ -52,8 +51,7 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
 <<<<<<< HEAD
         timeline: '18 months',
 =======
-        timeline: '18 months'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e4e
+>>>>>>> main
       },
       readingTime: '25 min read',
       featured: true,
@@ -189,14 +187,13 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e4e
           </p>
 
-<<<<<<< HEAD
         {/* Filter Tabs */}
         <div className='flex justify-center mb-12'>
           <div className='bg-white/10 backdrop-blur-lg rounded-2xl p-2 border border-white/20'>
 =======
-          {/* Filter Buttons */}
-          <div className="flex flex-wrap justify-center gap-4 mb-8">
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e4e
+          </p>
+
+>>>>>>> main
             {[
               { id: 'all', label: 'All Content' },
               { id: 'blog', label: 'Blog Posts' },
@@ -212,16 +209,7 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
                     ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white'
                     : 'text-gray-300 hover:text-white hover:bg-white/10'
 =======
-              { id: 'resource', label: 'Resources' }
-            ].map((filter) => (
-              <button
-                key={filter.id}
-                onClick={() => setActiveFilter(filter.id)}
-                className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
-                  activeFilter === filter.id
-                    ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg'
-                    : 'bg-white/10 text-gray-300 hover:bg-white/20'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e4e
+>>>>>>> main
                 }`}
               >
                 {filter.label}
@@ -317,6 +305,8 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
                     {item.featured && (
                       <span className="px-2 py-1 bg-red-500 text-white text-xs font-bold rounded-full">🔥 FEATURED</span>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e4e
+=======
+>>>>>>> main
                     )}
                   </div>
 
@@ -324,8 +314,7 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
 <<<<<<< HEAD
                   <h3 className='text-xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors leading-tight'>
 =======
-                  <h3 className="text-xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors leading-tight">
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e4e
+>>>>>>> main
                     {item.title}
                   </h3>
 
@@ -333,8 +322,7 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
 <<<<<<< HEAD
                   <p className='text-gray-300 mb-6 leading-relaxed'>
 =======
-                  <p className="text-gray-300 mb-6 leading-relaxed line-clamp-3">
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e4e
+>>>>>>> main
                     {item.description}
                   </p>
 
@@ -350,12 +338,7 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
                           {key.replace(/([A-Z])/g, ' $1').trim()}
                         </div>
 =======
-                  <div className="grid grid-cols-2 gap-4 mb-6">
-                    {Object.entries(item.metrics).slice(0, 4).map(([key, value]) => (
-                      <div key={key} className="text-center">
-                        <div className="text-lg font-bold text-cyan-400">{value}</div>
-                        <div className="text-xs text-gray-300 capitalize">{key.replace(/([A-Z])/g, ' $1').trim()}</div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e4e
+>>>>>>> main
                       </div>
                     ))}
                   </div>
@@ -369,10 +352,7 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
                         className='px-2 py-1 bg-white/10 text-gray-300 text-xs rounded-full'
                       >
 =======
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {item.tags.slice(0, 3).map((tag) => (
-                      <span key={tag} className="px-2 py-1 bg-white/10 text-white text-xs rounded-full">
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e4e
+>>>>>>> main
                         {tag}
                       </span>
                     ))}
@@ -393,19 +373,8 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
                     <span className='text-gray-400 text-sm'>
                       {item.readingTime}
                     </span>
-                  ))}
+                  </div>
                 </div>
-
-                {/* Action Buttons */}
-                <div className="space-y-3">
-                  <Link
-                    href={item.url}
-                    className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 text-center block"
-                  >
-                    Read {item.type}
-                  </Link>
-                  <div className="flex items-center justify-between text-sm text-gray-500">
-                    <span>{item.readingTime}</span>
                     <span>•</span>
                     <span>Ultimate Breakthrough</span>
                   </div>
@@ -428,6 +397,8 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
                 </div>
               </div>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e4e
+=======
+>>>>>>> main
             </Link>
           ))}
         </div>
@@ -458,38 +429,35 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
               <span>Get Expert Consultation</span>
             </a>
           </div>
-        </div>
-      </div>
-    </section>
-=======
-        <div className="text-center bg-white/5 backdrop-blur-lg rounded-2xl p-12 border border-white/20">
-          <h3 className="text-3xl font-bold text-white mb-6">
+        {/* Call-to-Action Section */}
+        <div className='text-center bg-white/5 backdrop-blur-lg rounded-3xl p-12 border border-white/20'>
+          <h3 className='text-4xl font-bold text-white mb-6'>
             Ready to Transform Your Business Intelligence?
           </h3>
-          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Join Fortune 500 enterprises achieving unprecedented business intelligence transformation. 
-            Get expert guidance from Zion Tech Group's AI specialists.
+          <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>
+            Join Fortune 500 enterprises achieving unprecedented business intelligence transformation with our revolutionary AI solutions.
           </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+          <div className='flex flex-col sm:flex-row items-center justify-center gap-6'>
             <Link
-              href="/contact"
-              className="flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl"
+              href='/contact'
+              className='group flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl'
             >
-              <span className="text-xl">📞</span>
+              <span className='text-xl'>📞</span>
               <span>Get Expert Consultation</span>
             </Link>
             <Link
-              href="/blog"
-              className="flex items-center gap-3 border-2 border-white/30 hover:border-white/60 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 hover:bg-white/10"
+              href='/blog'
+              className='group flex items-center gap-3 border-2 border-white/30 hover:border-white/60 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 hover:bg-white/10'
             >
               <span>Explore All Content</span>
-              <span>→</span>
+              <span className='group-hover:translate-x-1 transition-transform'>→</span>
             </Link>
           </div>
         </div>
       </div>
-    </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e4e
+    </section>
+=======
+>>>>>>> main
   );
 };
 
