@@ -12,12 +12,7 @@ import { LoadingSpinner } from '../components/LoadingComponents';
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./page'));
 
-// Loading component
-const LoadingSpinner = () => (
-  <div className="flex justify-center items-center min-h-screen">
-    <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-600"></div>
-  </div>
-);
+// Loading component is imported from LoadingComponents
 // Utils
 import performanceOptimizer from '../src/utils/performanceOptimizer';
 
