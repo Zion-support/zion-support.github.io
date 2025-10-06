@@ -63,14 +63,6 @@ const ContactPage: React.FC = () => {
                   Zion Tech Group<br />
                   Wilmington, DE 19801<br />
                   United States
-<<<<<<< HEAD
-=======
-                  123 Business Street<br />
-                  Suite 100<br />
-                  Wilmington, DE 19801
->>>>>>> cursor/fix-errors-and-merge-to-main-a3c4
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-e973
                 </p>
               </div>
             </div>
