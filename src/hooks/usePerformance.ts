@@ -4,7 +4,7 @@
  */
 
 import { useEffect, useCallback, useRef } from 'react';
-import { performanceOptimizer } from '../utils/performanceOptimizer';
+import { monitorLongTasks } from '../utils/performanceOptimizer';
 import analytics from '../utils/analytics';
 
 export interface PerformanceMetrics {
@@ -112,15 +112,8 @@ export const usePageLoadPerformance = () => {
               navigation.domContentLoadedEventStart,
             loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
             firstByte: navigation.responseStart - navigation.requestStart,
-<<<<<<< HEAD
-            domInteractive:
-              navigation.domInteractive - (navigation as any).navigationStart,
-            totalLoadTime:
-              navigation.loadEventEnd - (navigation as any).navigationStart,
-=======
             domInteractive: navigation.domInteractive - (navigation as any).navigationStart,
             totalLoadTime: navigation.loadEventEnd - (navigation as any).navigationStart,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a4c9
           };
 
           // Track each metric
@@ -149,8 +142,6 @@ export const usePageLoadPerformance = () => {
       window.addEventListener('load', trackPageLoad);
       return () => window.removeEventListener('load', trackPageLoad);
     }
-    
-    return undefined;
   }, []);
 };
 
@@ -184,15 +175,22 @@ export const useResourcePerformance = () => {
 export const useLongTaskMonitoring = () => {
   useEffect(() => {
 <<<<<<< HEAD
+    const observer = monitorLongTasks((entries: PerformanceEntry[]) => {
+=======
+    const observer = performanceOptimizer.monitorLongTasks((entries: PerformanceEntry[]) => {
+>>>>>>> main
+      entries.forEach((entry: PerformanceEntry) => {
+<<<<<<< HEAD
+        analytics.track('long_task', 'performance', 'detected', undefined, entry.duration);
 <<<<<<< HEAD
 =======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a4c9
-    const observer = performanceOptimizer.monitorLongTasks((entries: PerformanceEntry[]) => {
-      entries.forEach((entry: PerformanceEntry) => {
-        analytics.track('long_task', 'performance', 'detected', undefined, entry.duration);
+<<<<<<< HEAD
 =======
-    performanceOptimizer.monitorLongTasks((entries: any[]) => {
-      entries.forEach((entry: any) => {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
         analytics.track(
           'long_task',
           'performance',
@@ -200,18 +198,18 @@ export const useLongTaskMonitoring = () => {
           undefined,
           entry.duration
         );
->>>>>>> 71655f282840ed9a4a2a6696e410390223898ad3
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
       });
     });
 
     return () => {
-<<<<<<< HEAD
-      // Cleanup if needed
-=======
       if (observer && typeof observer.disconnect === 'function') {
         observer.disconnect();
       }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a4c9
     };
   }, []);
 };

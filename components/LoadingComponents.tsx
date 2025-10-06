@@ -1,7 +1,7 @@
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg';
   color?: 'blue' | 'gray' | 'white';
-  text?: string | undefined;
+  text: string;
 }
 
 export function LoadingSpinner({
