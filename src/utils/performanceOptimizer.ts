@@ -142,40 +142,7 @@ class PerformanceOptimizer {
     });
   }
 
-<<<<<<< HEAD
-  // Measure page load performance
-  measurePageLoad(): WebVitalsMetrics | null {
-=======
   // Add Web Vitals reporting method
-  reportWebVitals(metrics: any): void {
-    if (process.env.NODE_ENV === 'development') {
-      console.log('Web Vitals:', metrics);
-    }
-  }
-
-  // Add page load measurement method
-  measurePageLoad(): any {
->>>>>>> a280bf9160af89ad376d37805f2dcc0182dc3f86
-    if (typeof window === 'undefined' || !window.performance) {
-      return null;
-    }
-    
-    const timing = window.performance.timing;
-<<<<<<< HEAD
-    const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-    
-    const loadTime = timing.loadEventEnd - timing.navigationStart;
-    const interactiveTime = timing.domInteractive - timing.navigationStart;
-    
-    return { 
-      loadTime, 
-      interactiveTime,
-      FCP: navigation?.responseStart - navigation?.fetchStart,
-      TTFB: timing.responseStart - timing.navigationStart
-    };
-  }
-
-  // Report web vitals
   reportWebVitals(metrics: WebVitalsMetrics): void {
     if (process.env.NODE_ENV === 'development') {
       console.log('Web Vitals:', metrics);
@@ -193,12 +160,26 @@ class PerformanceOptimizer {
         }
       });
     }
-=======
-    return {
-      loadTime: timing.loadEventEnd - timing.navigationStart,
-      interactiveTime: timing.domInteractive - timing.navigationStart
+  }
+
+  // Measure page load performance
+  measurePageLoad(): WebVitalsMetrics | null {
+    if (typeof window === 'undefined' || !window.performance) {
+      return null;
+    }
+    
+    const timing = window.performance.timing;
+    const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+    
+    const loadTime = timing.loadEventEnd - timing.navigationStart;
+    const interactiveTime = timing.domInteractive - timing.navigationStart;
+    
+    return { 
+      loadTime, 
+      interactiveTime,
+      FCP: navigation?.responseStart - navigation?.fetchStart,
+      TTFB: timing.responseStart - timing.navigationStart
     };
->>>>>>> a280bf9160af89ad376d37805f2dcc0182dc3f86
   }
 
   // Initialize all optimizations
@@ -208,8 +189,6 @@ class PerformanceOptimizer {
     this.measurePerformance('optimizeScroll', () => this.optimizeScroll());
   }
 }
-
-<<<<<<< HEAD
 /**
  * Resource hints for performance
  */
@@ -492,9 +471,6 @@ export const checkPerformanceBudget = (budget: PerformanceBudget): {
   };
 };
 
-// Export singleton instance
-export const performanceOptimizer = PerformanceOptimizer.getInstance();
-
 // Export individual functions for backward compatibility
 export {
   lazyLoadImagesStandalone as lazyLoadImages,
@@ -521,7 +497,6 @@ export default {
   clearOldCaches,
   checkPerformanceBudget
 };
-=======
+
 // Export singleton instance
 export const performanceOptimizer = PerformanceOptimizer.getInstance();
->>>>>>> a280bf9160af89ad376d37805f2dcc0182dc3f86
