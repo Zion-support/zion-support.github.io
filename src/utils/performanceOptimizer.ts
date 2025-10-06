@@ -168,6 +168,31 @@ export class PerformanceOptimizer {
     });
   }
 
+  // Prefetch resources
+  prefetchResources(urls: string[]): void {
+    if (typeof document === 'undefined') return;
+    
+    urls.forEach(url => {
+      const link = document.createElement('link');
+      link.rel = 'prefetch';
+      link.href = url;
+      document.head.appendChild(link);
+    });
+  }
+
+  // Preconnect to external domains
+  preconnectDomains(domains: string[]): void {
+    if (typeof document === 'undefined') return;
+    
+    domains.forEach(domain => {
+      const link = document.createElement('link');
+      link.rel = 'preconnect';
+      link.href = domain;
+      link.crossOrigin = 'anonymous';
+      document.head.appendChild(link);
+    });
+  }
+
   // Initialize all optimizations
   initialize(): void {
     this.measurePerformance('lazyLoadImages', () => this.lazyLoadImages());
@@ -465,6 +490,9 @@ export const checkPerformanceBudget = (budget: PerformanceBudget): {
   };
 };
 
+// Export singleton instance
+export const performanceOptimizer = PerformanceOptimizer.getInstance();
+
 export default {
   prefetchResources,
   preconnectDomains,
@@ -485,5 +513,3 @@ export default {
   checkPerformanceBudget,
   performanceOptimizer
 };
-// Export singleton instance
-export const performanceOptimizer = PerformanceOptimizer.getInstance();
