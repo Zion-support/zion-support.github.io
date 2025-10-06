@@ -8,7 +8,7 @@ export default defineConfig({
     visualizer({
       filename: 'dist/stats.html',
       open: false,
-      gzipSize: true,
+  gzipSize: true,
       brotliSize: true,
     }),
   ],
@@ -28,18 +28,18 @@ export default defineConfig({
     terserOptions: {
       compress: {
         drop_console: true,
-        drop_debugger: true,
+  drop_debugger: true,
       },
     },
   },
   server: {
     port: 3000,
-    host: true,
+  host: true,
     open: true,
   },
   preview: {
     port: 4173,
-    host: true,
+  host: true,
   },
   optimizeDeps: {
     include: ['react', 'react-dom', 'react-router-dom'],

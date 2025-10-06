@@ -52,7 +52,7 @@ export class AccessibilityEnhancer {
     if (typeof document === 'undefined') return;
 
     document.addEventListener('keydown', (event) => {
-      // Skip to main content
+      //Skip to main content
       if (event.key === 'Tab' && event.ctrlKey) {
         const mainContent = document.querySelector('main, [role="main"]');
         if (mainContent) {
@@ -61,7 +61,7 @@ export class AccessibilityEnhancer {
         }
       }
 
-      // Escape key handling
+      //Escape key handling
       if (event.key === 'Escape') {
         const modal = document.querySelector('[role="dialog"]:not([aria-hidden="true"])');
         if (modal) {
@@ -77,13 +77,13 @@ export class AccessibilityEnhancer {
   private setupFocusManagement(): void {
     if (typeof document === 'undefined') return;
 
-    // Track focus changes
+    //Track focus changes
     document.addEventListener('focusin', (event) => {
       const element = event.target as HTMLElement;
       this.ensureFocusVisible(element);
     });
 
-    // Trap focus in modals
+    //Trap focus in modals
     document.addEventListener('keydown', (event) => {
       if (event.key === 'Tab') {
         const modal = document.querySelector('[role="dialog"]:not([aria-hidden="true"])');
@@ -95,10 +95,10 @@ export class AccessibilityEnhancer {
   }
 
   private ensureFocusVisible(element: HTMLElement): void {
-    // Add focus-visible class for better focus indication
+    //Add focus-visible class for better focus indication
     element.classList.add('focus-visible');
     
-    // Remove focus-visible class when focus is lost
+    //Remove focus-visible class when focus is lost
     element.addEventListener('focusout', () => {
       element.classList.remove('focus-visible');
     }, { once: true });
@@ -128,7 +128,7 @@ export class AccessibilityEnhancer {
   private setupScreenReaderSupport(): void {
     if (typeof document === 'undefined') return;
 
-    // Create live region for announcements
+    //Create live region for announcements
     let liveRegion = document.getElementById('a11y-live-region');
     if (!liveRegion) {
       liveRegion = document.createElement('div');
@@ -143,7 +143,7 @@ export class AccessibilityEnhancer {
       document.body.appendChild(liveRegion);
     }
 
-    // Announce page changes
+    //Announce page changes
     const observer = new MutationObserver((mutations) => {
       mutations.forEach((mutation) => {
         if (mutation.type === 'childList' && mutation.addedNodes.length > 0) {
@@ -199,7 +199,7 @@ export class AccessibilityEnhancer {
       });
     };
 
-    // Check contrast on page load and when styles change
+    //Check contrast on page load and when styles change
     checkContrast();
     const observer = new MutationObserver(checkContrast);
     observer.observe(document.body, {
@@ -212,16 +212,16 @@ export class AccessibilityEnhancer {
   }
 
   private calculateContrast(_color1: string, _color2: string): number {
-    // Simplified contrast calculation
-    // In a real implementation, you'd use a proper color contrast library
-    return 4.5; // Placeholder
+    //Simplified contrast calculation
+    //In a real implementation, you'd use a proper color contrast library
+    return 4.5; //Placeholder
   }
 
   private setupARIAValidation(): void {
     if (typeof document === 'undefined') return;
 
     const validateARIA = () => {
-      // Check for missing aria-labels on interactive elements
+      //Check for missing aria-labels on interactive elements
       const interactiveElements = document.querySelectorAll('button, input, select, textarea, a[href]');
       interactiveElements.forEach((element) => {
         const htmlElement = element as HTMLElement;
@@ -240,7 +240,7 @@ export class AccessibilityEnhancer {
         }
       });
 
-      // Check for invalid ARIA attributes
+      //Check for invalid ARIA attributes
       const elementsWithARIA = document.querySelectorAll('[aria-*]');
       elementsWithARIA.forEach((element) => {
         const htmlElement = element as HTMLElement;
@@ -266,7 +266,7 @@ export class AccessibilityEnhancer {
     const observer = new MutationObserver(validateARIA);
     observer.observe(document.body, {
       attributes: true,
-      childList: true,
+  childList: true,
       subtree: true
     });
 
@@ -274,9 +274,9 @@ export class AccessibilityEnhancer {
   }
 
   private isValidARIAAttribute(_name: string, _value: string): boolean {
-    // Simplified ARIA validation
-    // In a real implementation, you'd use a proper ARIA validation library
-    return true; // Placeholder
+    //Simplified ARIA validation
+    //In a real implementation, you'd use a proper ARIA validation library
+    return true; //Placeholder
   }
 
   private setupImageAltTextValidation(): void {
@@ -354,7 +354,7 @@ export class AccessibilityEnhancer {
   private addIssue(issue: AccessibilityIssue): void {
     this.issues.push(issue);
     
-    // Limit issues to prevent memory leaks
+    //Limit issues to prevent memory leaks
     if (this.issues.length > 1000) {
       this.issues = this.issues.slice(-500);
     }

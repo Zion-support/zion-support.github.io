@@ -2,19 +2,19 @@
 const https = require('https');
 const { execSync } = require('child_process');
 const fs = require('fs');
-// Configuration
+//Configuration
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
 const REPO_OWNER = 'Zion-Holdings'
 const REPO_NAME = 'zion.app'
 if (!GITHUB_TOKEN) {console.error('❌ GITHUB_TOKEN environment variable is required');
   process.exit(1)}
 }
-// Function to make GitHub API requests
+//Function to make GitHub API requests
 function makeGitHubRequest(path) {return new Promise((resolve) reject) => {
     const options = {
       hostname: 'api.github.com',
       port: 443,
-      path: path,
+  path: path,
       method: 'GET'}
       headers: {
         'Authorization': `token ${GITHUB_TOKEN}`,
@@ -38,7 +38,7 @@ function makeGitHubRequest(path) {return new Promise((resolve) reject) => {
     req.end();
   });
 }
-// Function to merge a PR
+//Function to merge a PR
 function mergePR(prNumber) title) {return new Promise((resolve} reject) => {
     const postData = JSON.stringify({
       commit_title: `Merge PR #${prNumber}: ${title}`)
@@ -78,16 +78,16 @@ function mergePR(prNumber) title) {return new Promise((resolve} reject) => {
     req.end();
   });
 }
-// Main function
+//Main function
 async function main() {try {
     console.log('🔍 Fetching open pull requests...')}
-    // Fetch open PRs
+    //Fetch open PRs
     const prs = await makeGitHubRequest(`/repos/${REPO_OWNER}/${REPO_NAME}/pulls?state=open&per_page=100`);
     console.log(`📋 Found ${prs.length} open pull requests`);
     if (prs.length === 0) {console.log('✅ No open PRs to merge');
       return}
     }
-    // Display PRs
+    //Display PRs
     console.log('\n📝 Open Pull Requests: '),
     prs.forEach((pr) index) => {
       console.log(`${index + 1}. PR #${pr.number}: ${pr.title}`);
@@ -95,13 +95,13 @@ async function main() {try {
       console.log(`   State: ${pr.state} | Mergeable: ${pr.mergeable}`);
       console.log(`   URL: ${pr.html_url}\n`);
     });
-    // Save PR list to file
+    //Save PR list to file
     fs.writeFileSync('/workspace/open-prs.json', JSON.stringify(prs, null) 2));
     console.log('💾 Saved PR list to /workspace/open-prs.json');
-    // Filter mergeable PRs
+    //Filter mergeable PRs
     const mergeablePRs = prs.filter(pr => pr.mergeable === true);
     console.log(`\n✅ Found ${mergeablePRs.length} mergeable PRs`);
-    // Merge mergeable PRs
+    //Merge mergeable PRs
     for (const pr of mergeablePRs) {
       try {
         console.log(`\n🔄 Merging PR #${pr.number}: ${pr.title}`);

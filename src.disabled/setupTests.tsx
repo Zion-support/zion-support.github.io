@@ -1,21 +1,21 @@
 import '@testing-library/jest-dom';
 
-// Mock window.matchMedia
+//Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {
   writable: true,
   value: jest.fn().mockImplementation(query => ({
     matches: false,
-    media: query,
+  media: query,
     onchange: null,
-    addListener: jest.fn(), // deprecated
-    removeListener: jest.fn(), // deprecated
+    addListener: jest.fn(), //deprecated
+    removeListener: jest.fn(), //deprecated
     addEventListener: jest.fn(),
     removeEventListener: jest.fn(),
     dispatchEvent: jest.fn(),
   })),
 });
 
-// Mock IntersectionObserver
+//Mock IntersectionObserver
 global.IntersectionObserver = class IntersectionObserver {
   root: Element | null = null;
   rootMargin: string = '0px';
