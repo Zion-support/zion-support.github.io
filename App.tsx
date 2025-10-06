@@ -1,6 +1,6 @@
 import React, { Suspense, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import './src/index.css';
+import './assets/style.css';
 
 // Simple placeholder components
 const Home = () => (
@@ -110,7 +110,7 @@ class AppErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundary
   }
 }
 
-export { ErrorBoundary };
+export { AppErrorBoundary as ErrorBoundary };
 
 function App() {
   useEffect(() => {
