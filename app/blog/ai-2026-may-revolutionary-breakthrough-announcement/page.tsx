@@ -4,7 +4,7 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 
-export const metadata: Metadata = {/* content */}
+export const metadata: Metadata = 
   title: 'AI 2026 May Revolutionary Breakthrough: The Ultimate Meta-Cognitive Superintelligence Revolution',
   description: 'Discover the groundbreaking May 2026 AI breakthrough that achieved meta-cognitive superintelligence with 10,000,000x processing power and $50B ROI across global enterprises.',
   keywords: 'AI, Meta-Cognitive, Superintelligence, Revolutionary, 2026, Ultimate Success, 50B ROI',
@@ -27,13 +27,19 @@ export default function May2026RevolutionaryBreakthroughPage() {
             <span className="text-left">$50B ROI
             </span></span>
           </div>
-          <h1 className="text-left">{data.title}
+          <h1 className="text-left">{data['title']}
           </h1></h1>
-          <p className="text-left">{data.description}
+          <p className="text-left">{data['description']}
           </p></p>
+<<<<<<< HEAD
+          <span>By    {data['author']}</span>
+            <span>•</span>
+            <span>{new Date(data['date']).to Locale Date    String   ()}</span>
+=======
           <span>By {data.author}</span>
             <span>•</span>
             <span>{new Date(data.date).toLocaleDateString()}</span>
+>>>>>>> main
           </div>
         </header>
         <div className="text-left"> </div><div dangerouslySetInnerHTML={{ __html: content.replace(/\n/g, '<br />') }} /></div>

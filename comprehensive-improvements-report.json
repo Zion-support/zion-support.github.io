@@ -27,19 +27,11 @@
     },
     "accessibility": {
       "status": "completed",
-      "improvements": [
-        "ARIA labels",
-        "Keyboard navigation",
-        "Alt text"
-      ]
+      "improvements": ["ARIA labels", "Keyboard navigation", "Alt text"]
     },
     "codeQuality": {
       "status": "completed",
-      "improvements": [
-        "Error handling",
-        "Logging",
-        "Documentation"
-      ]
+      "improvements": ["Error handling", "Logging", "Documentation"]
     }
   },
   "summary": {

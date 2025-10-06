@@ -1,7 +1,7 @@
 import React from 'react';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {/* content */}
+export const metadata: Metadata = 
   title: 'Quantum Consciousness Fusion: The Next Evolution of AI',
   description: 'Explore the revolutionary quantum consciousness fusion technology that merges human and AI consciousness for unprecedented enterprise capabilities and 50,000x performance improvements.',
   keywords: ['Quantum', 'Consciousness', 'Fusion', 'AI', 'Enterprise', 'Breakthrough'],

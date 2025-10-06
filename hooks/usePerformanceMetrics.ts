@@ -24,7 +24,7 @@ export function usePerformanceMetrics() {
     new PerformanceObserver(list => {
       const entries = list.getEntries();
       const fcpEntry = entries.find(
-        entry => entry.name === 'first-contentful-paint',
+        entry => entry.name === 'first-contentful-paint'
       );
       if (fcpEntry) {
         setMetrics(prev => ({ ...prev, fcp: fcpEntry.startTime }));
@@ -70,7 +70,7 @@ export function usePerformanceMetrics() {
     new PerformanceObserver(list => {
       const entries = list.getEntries();
       const ttfbEntry = entries.find(entry =>
-        entry.name.includes('document'),
+        entry.name.includes('document')
       ) as PerformanceNavigationTiming;
       if (ttfbEntry) {
         setMetrics(prev => ({

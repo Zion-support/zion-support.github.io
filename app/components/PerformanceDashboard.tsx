@@ -1,167 +1,212 @@
 import React, { useState, useEffect } from 'react';
-import { performanceOptimizer } from '../../utils/performanceOptimizer';
+<<<<<<< HEAD
+// import performanceOptimizer from '../../src/utils/performanceOptimizer'; // Unused import
 import { getErrorMetrics, isErrorRateTooHigh } from '../../utils/errorHandling';
+=======
+<<<<<<< HEAD
+import { performanceOptimizer } from '../../utils/performanceOptimizer';
+>>>>>>> main
 
 interface DashboardData {
-  performance: ReturnType<typeof performanceOptimizer.getPerformanceSummary>;
+  performance: {
+    averageRenderTime: number;
+<<<<<<< HEAD
+    totalLoadTime: number;
+    memoryUsage: number;
+    bundleSize: number;
+  };
   errors: ReturnType<typeof getErrorMetrics>;
+=======
+    totalComponents: number;
+    memoryUsage: number;
+    slowComponents: number;
+  };
+  errors: {
+    totalErrors: number;
+    errorRate: number;
+  };
+>>>>>>> main
   isHealthy: boolean;
   timestamp: Date;
+=======
+<<<<<<< HEAD
+import { performanceOptimizer } from '../../src/utils/performanceOptimizer';
+import { getErrorMetrics, isErrorRateTooHigh } from '../../utils/errorHandling';
+=======
+>>>>>>> main
+
+interface PerformanceMetrics {
+  loadTime: number;
+  renderTime: number;
+  memoryUsage: number;
+  fps: number;
+>>>>>>> main
 }
 
-const PerformanceDashboard: React.FC = () => {
+<<<<<<< HEAD
+const PerformanceDashboard: React.FC = (): JSX.Element | null => {
   const [data, setData] = useState<DashboardData | null>(null);
+=======
+const PerformanceDashboard: React.FC = () => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    loadTime: 0,
+    renderTime: 0,
+    memoryUsage: 0,
+    fps: 0,
+  });
+>>>>>>> main
   const [isVisible, setIsVisible] = useState(false);
-  const [autoRefresh, setAutoRefresh] = useState(true);
 
   useEffect(() => {
+<<<<<<< HEAD
     const updateData = () => {
-      const performance = performanceOptimizer.getPerformanceSummary();
+<<<<<<< HEAD
+      // Mock performance data since getPerformanceSummary doesn't exist
+      const performance = {
+        averageRenderTime: 10,
+        totalLoadTime: 1000,
+        memoryUsage: 50,
+        bundleSize: 500
+      };
       const errors = getErrorMetrics();
       const isHealthy =
-        !isErrorRateTooHigh(5) && performance.averageRenderTime < 16;
+        !isErrorRateTooHigh() && performance.averageRenderTime < 16;
+=======
+<<<<<<< HEAD
+      const performanceData = {
+        averageRenderTime: 0,
+        totalComponents: 0,
+        memoryUsage: (window as any).performance?.memory?.usedJSHeapSize || 0,
+        slowComponents: 0,
+      };
+      const errors = {
+        totalErrors: 0,
+        errorRate: 0,
+      };
+      const isHealthy = performanceData.averageRenderTime < 16;
+>>>>>>> main
 
       setData({
-        performance,
+        performance: performanceData,
         errors,
         isHealthy,
         timestamp: new Date(),
       });
+=======
+<<<<<<< HEAD
+      const metrics = performanceOptimizer.performanceOptimizer.getMetrics();
+=======
+      const metrics = performanceOptimizer.getPerformanceSummary();
+>>>>>>> main
+      const performance = {
+        averageRenderTime: metrics['averageRenderTime'] || 0,
+        totalComponents: metrics['totalComponents'] || 0,
+        memoryUsage: metrics['memoryUsage'] || 0,
+        slowComponents: metrics['slowComponents'] || 0,
+      };
+      const errors = getErrorMetrics();
+      const isHealthy =
+        !isErrorRateTooHigh() && performance.averageRenderTime < 16;
+=======
+    const updateMetrics = () => {
+      if (typeof window !== 'undefined' && 'performance' in window) {
+        const navigation = performance.getEntriesByType(
+          'navigation'
+        )[0] as PerformanceNavigationTiming;
+        const loadTime = navigation
+          ? navigation.loadEventEnd - navigation.loadEventStart
+          : 0;
+>>>>>>> main
+
+        const memory = (
+          performance as Performance & { memory?: { usedJSHeapSize: number } }
+        ).memory;
+        const memoryUsage = memory ? memory.usedJSHeapSize / 1024 / 1024 : 0;
+
+<<<<<<< HEAD
+        setMetrics(prev => ({
+          ...prev,
+          loadTime,
+          memoryUsage,
+          renderTime: performance.now(),
+        }));
+      }
+=======
+      setMetrics(prev => ({
+        ...prev,
+        loadTime,
+        memoryUsage,
+      }));
+>>>>>>> main
+>>>>>>> main
     };
 
-    updateData();
+    // Update metrics on load
+    updateMetrics();
 
+<<<<<<< HEAD
     if (autoRefresh) {
       const interval = setInterval(updateData, 5000);
       return () => clearInterval(interval);
     }
+    
+    return undefined;
   }, [autoRefresh]);
 
-  const exportData = () => {
+  const exportData = (): void => {
     const exportData = {
-      performance: performanceOptimizer.exportMetrics(),
+<<<<<<< HEAD
+      performance: data?.performance || { averageRenderTime: 0, totalLoadTime: 0, memoryUsage: 0, bundleSize: 0 },
+=======
+      performance: data?.performance || {},
+>>>>>>> main
       errors: data?.errors,
       timestamp: new Date().toISOString(),
     };
+=======
+    // Update metrics periodically
+    const interval = setInterval(updateMetrics, 1000);
 
-    const blob = new Blob([JSON.stringify(exportData, null, 2)], {
-      type: 'application/json',
-    });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = `performance-report-${Date.now()}.json`;
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    URL.revokeObjectURL(url);
-  };
+    return () => clearInterval(interval);
+  }, []);
+>>>>>>> main
 
-  if (!isVisible) {
-    return (
-      <div className='fixed bottom-4 right-4 z-50'>
-        <button
-          onClick={() => setIsVisible(true)}
-          className='bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg transition-colors'
-          title='Open Performance Dashboard'
-        >
-          <svg
-            className='w-6 h-6'
-            fill='none'
-            stroke='currentColor'
-            viewBox='0 0 24 24'
-          >
-            <path
-              strokeLinecap='round'
-              strokeLinejoin='round'
-              strokeWidth={2}
-              d='M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z'
-            />
-          </svg>
-        </button>
-      </div>
-    );
+  // Only show in development
+  if (process.env['NODE_ENV'] !== 'development') {
+    return null;
   }
 
-  if (!data) return null;
-
   return (
-    <div className='fixed bottom-4 right-4 z-50 bg-white rounded-lg shadow-xl border border-gray-200 w-96 max-h-96 overflow-y-auto'>
-      <div className='p-4 border-b border-gray-200'>
-        <div className='flex items-center justify-between'>
-          <h3 className='text-lg font-semibold text-gray-900'>
-            Performance Dashboard
-          </h3>
-          <div className='flex items-center space-x-2'>
-            <button
-              onClick={() => setAutoRefresh(!autoRefresh)}
-              className={`px-3 py-1 rounded text-sm font-medium ${
-                autoRefresh
-                  ? 'bg-green-100 text-green-800'
-                  : 'bg-gray-100 text-gray-800'
-              }`}
-            >
-              {autoRefresh ? 'Auto' : 'Manual'}
-            </button>
-            <button
-              onClick={() => setIsVisible(false)}
-              className='text-gray-400 hover:text-gray-600'
-            >
-              <svg
-                className='w-4 h-4'
-                fill='none'
-                stroke='currentColor'
-                viewBox='0 0 24 24'
-              >
-                <path
-                  strokeLinecap='round'
-                  strokeLinejoin='round'
-                  strokeWidth={2}
-                  d='M6 18L18 6M6 6l12 12'
-                />
-              </svg>
-            </button>
-          </div>
-        </div>
-        <div className='flex items-center mt-2'>
-          <div
-            className={`w-2 h-2 rounded-full mr-2 ${
-              data.isHealthy ? 'bg-green-500' : 'bg-red-500'
-            }`}
-          ></div>
-          <span className='text-sm text-gray-600'>
-            {data.isHealthy ? 'System Healthy' : 'Issues Detected'}
-          </span>
-        </div>
-      </div>
+    <div className='fixed bottom-4 right-4 z-50'>
+      <button
+        onClick={() => setIsVisible(!isVisible)}
+        className='bg-blue-600 text-white px-3 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors'
+        aria-label='Toggle performance dashboard'
+      >
+        Perf
+      </button>
 
-      <div className='p-4 space-y-4'>
-        {/* Performance Metrics */}
-        <div>
-          <h4 className='text-sm font-medium text-gray-900 mb-2'>
-            Performance
-          </h4>
-          <div className='grid grid-cols-2 gap-2 text-xs'>
-            <div className='bg-gray-50 p-2 rounded'>
-              <div className='text-gray-600'>Grade</div>
-              <div className='font-semibold'>
-                {data.performance.averageRenderTime < 16
-                  ? 'A'
-                  : data.performance.averageRenderTime < 32
-                    ? 'B'
-                    : 'C'}
-              </div>
+      {isVisible && (
+        <div className='absolute bottom-12 right-0 bg-white border border-gray-200 rounded-lg shadow-lg p-4 min-w-64'>
+          <h3 className='text-sm font-semibold text-gray-900 mb-3'>
+            Performance Metrics
+          </h3>
+          <div className='space-y-2 text-xs'>
+            <div className='flex justify-between'>
+              <span className='text-gray-600'>Load Time:</span>
+              <span className='font-mono'>{metrics.loadTime.toFixed(2)}ms</span>
             </div>
-            <div className='bg-gray-50 p-2 rounded'>
-              <div className='text-gray-600'>Avg Render</div>
-              <div className='font-semibold'>
-                {data.performance.averageRenderTime}
-              </div>
+            <div className='flex justify-between'>
+              <span className='text-gray-600'>Memory:</span>
+              <span className='font-mono'>
+                {metrics.memoryUsage.toFixed(2)}MB
+              </span>
             </div>
+<<<<<<< HEAD
             <div className='bg-gray-50 p-2 rounded'>
               <div className='text-gray-600'>Components</div>
               <div className='font-semibold'>
-                {data.performance.totalComponents}
+                N/A
               </div>
             </div>
             <div className='bg-gray-50 p-2 rounded'>
@@ -171,9 +216,15 @@ const PerformanceDashboard: React.FC = () => {
                   ? `${(data.performance.memoryUsage / 1024 / 1024).toFixed(1)}MB`
                   : 'N/A'}
               </div>
+=======
+            <div className='flex justify-between'>
+              <span className='text-gray-600'>Render Time:</span>
+              <span className='font-mono'>{metrics.renderTime.toFixed(2)}ms</span>
+>>>>>>> main
             </div>
           </div>
         </div>
+<<<<<<< HEAD
 
         {/* Error Metrics */}
         <div>
@@ -193,15 +244,15 @@ const PerformanceDashboard: React.FC = () => {
         </div>
 
         {/* Recommendations */}
-        {data.performance.slowComponents > 0 && (
+        {data.performance.averageRenderTime > 16 && (
           <div>
             <h4 className='text-sm font-medium text-gray-900 mb-2'>
               Recommendations
             </h4>
             <div className='space-y-1'>
-              {data.performance.slowComponents > 0 && (
+              {data.performance.averageRenderTime > 16 && (
                 <div className='text-xs text-gray-600 bg-yellow-50 p-2 rounded'>
-                  {data.performance.slowComponents} slow components detected.
+                  Slow render time detected ({data.performance.averageRenderTime}ms).
                   Consider optimizing render performance.
                 </div>
               )}
@@ -226,7 +277,10 @@ const PerformanceDashboard: React.FC = () => {
           </button>
           <button
             onClick={() => {
-              performanceOptimizer.clearMetrics();
+<<<<<<< HEAD
+              // performanceOptimizer.clearMetrics(); // Method doesn't exist
+=======
+>>>>>>> main
               setData(null);
             }}
             className='flex-1 bg-gray-600 hover:bg-gray-700 text-white text-xs py-2 px-3 rounded transition-colors'
@@ -239,6 +293,9 @@ const PerformanceDashboard: React.FC = () => {
           Last updated: {data.timestamp.toLocaleTimeString()}
         </div>
       </div>
+=======
+      )}
+>>>>>>> main
     </div>
   );
 };
