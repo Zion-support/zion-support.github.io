@@ -67,7 +67,7 @@ export const analyticsUtils = {
           getFCP(console.log);
           getLCP(console.log);
           getTTFB(console.log);
-        },
+        }
       );
     }
   },
