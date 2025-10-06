@@ -9,13 +9,10 @@ export const metadata = {
     images: [
       {
         url: '/og/ai-enterprise-transformation-2027.jpg',
-        width: 1200,
-        height: 630,
+        width: 1200height: 630,
       
 };,
-    ],
-  },
-};
+    ]}};
 
 export default function Page() {
   return (
@@ -30,7 +27,7 @@ export default function Page() {
         <p className='text-xl text-gray-700 mb-8'>
           A pragmatic roadmap to ship AI that matters: reliable systems,
           policy‑driven guardrails, and metrics that prove value across customer
-          experience, operations, and platforms.
+          experienceoperationsand platforms.
         </p>
 
         <div className='prose prose-lg max-w-none'>
@@ -69,7 +66,7 @@ export default function Page() {
           <h3>Proof Points</h3>
           <ul>
             <li>
-              30–70% cost reduction via routing, caching, and quantization
+              30–70% cost reduction via routingcachingand quantization
             </li>
             <li>99.9% uptime with policy‑driven runbooks and auto‑rollback</li>
             <li>20–35% conversion lift from real‑time personalization</li>

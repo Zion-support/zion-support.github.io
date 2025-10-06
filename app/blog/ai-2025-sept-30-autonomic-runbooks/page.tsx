@@ -15,7 +15,7 @@ export default function Page() {
             Autonomic Runbooks — Contain Incidents in Under 60 Seconds
           </h1>
           <p className='text-gray-300 mb-8'>
-            Policy‑tested actions, guardrails, and live traces that auto‑contain
+            Policy‑tested actionsguardrailsand live traces that auto‑contain
             incidents without sacrificing velocity.
           </p>
           <div className='text-sm text-gray-400 mb-10'>
@@ -25,8 +25,8 @@ export default function Page() {
           <article className='prose prose-invert max-w-none'>
             <p>
               Encode incident playbooks as code with approvals, budgets, and
-              telemetry. Trigger deterministic, reversible actions based on
-              scorecard regressions, and validate results with attested traces.
+              telemetry. Trigger deterministicreversible actions based on
+              scorecard regressionsand validate results with attested traces.
             </p>
             <h2>Key patterns</h2>
             <ul>

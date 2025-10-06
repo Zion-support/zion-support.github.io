@@ -4,9 +4,9 @@ import ArrowRight from 'next/link';
 export const metadata = {
   
   title:
-    'Agent Release Guardrails 2026: Budgets, Approvals, and Instant Rollback',
+    'Agent Release Guardrails 2026: BudgetsApprovalsand Instant Rollback',
   description:
-    'Battle-tested checklists for safe agent updates with budgeted actions, approvals, and one-click rollback.',
+    'Battle-tested checklists for safe agent updates with budgeted actionsapprovalsand one-click rollback.',
 
 };;
 
@@ -18,12 +18,12 @@ export default function Page() {
           <h1 className='text-3xl md:text-4xl font-bold text-gray-900'>
             Agent Release Guardrails 2026:{' '}
             <span className='text-fuchsia-700'>
-              Budgets, Approvals, and Instant Rollback
+              BudgetsApprovalsand Instant Rollback
             </span>
           </h1>
           <p className='text-gray-600 mt-4'>
             Ship reliable agent updates using <strong>budgeted actions</strong>,{' '}
-            <strong>human approvals</strong>, CI policy tests, and{' '}
+            <strong>human approvals</strong>CI policy testsand{' '}
             <strong>one‑click rollback</strong> wired to outcome KPIs.
           </p>
           <div className='mt-6 text-sm text-gray-500'>
@@ -44,7 +44,7 @@ export default function Page() {
 
           <h3>Operational Metrics</h3>
           <p>
-            Track on‑policy action rate, incident rate, and{' '}
+            Track on‑policy action rateincident rateand{' '}
             <em>$ per successful outcome</em>. Automate approvals for low‑risk
             updates.
           </p>

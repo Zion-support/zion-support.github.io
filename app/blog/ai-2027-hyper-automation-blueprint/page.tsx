@@ -1,14 +1,10 @@
 import ArrowRight from 'next/link';
 
 export const metadata = {
-  
-  title:  'AI 2027 Hyper‑Automation Blueprint',
-  description: 
-      'Scale reliable AI hyper‑automation with policy gates, evals, and value stream analytics.',
-  type: 'article',
-
+  title: "AI 2027 Hyper‑Automation Blueprint",
+  description: "Scale reliable AI hyper‑automation with policy gatesevalsand value stream analytics.",
+  type: "article",
 };;
-};
 
 export default function HyperAutomationBlueprint2027Page() {
   return (
@@ -22,8 +18,7 @@ export default function HyperAutomationBlueprint2027Page() {
             AI 2027 Hyper‑Automation Blueprint
           </h1>
           <p className='text-slate-300'>
-            Scale reliable automation with agentic workflows, policy guardrails,
-            and end‑to‑end value tracking.
+            Scale reliable automation with agentic workflowspolicy guardrailsand end‑to‑end value tracking.
           </p>
           <div className='mt-3 text-slate-400 text-sm'>
             14 min read • Category: Implementation Guide
@@ -86,7 +81,7 @@ export default function HyperAutomationBlueprint2027Page() {
               human‑in‑the‑loop controls.
             </li>
             <li>
-              Harden with policy tests, adversarial prompts, and replayed
+              Harden with policy tests, adversarial promptsand replayed
               incidents.
             </li>
             <li>
@@ -104,7 +99,7 @@ export default function HyperAutomationBlueprint2027Page() {
           </ul>
 
           <p>
-            For a deeper dive into workflow orchestration patterns, see our
+            For a deeper dive into workflow orchestration patternssee our
             guide on{' '}
             <ArrowRight
               href='/blog/agentic-workflow-orchestration-2026'

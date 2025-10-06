@@ -1,9 +1,9 @@
 export const metadata = {
   
   title:
-    'Autonomous Change Control — Gates, Budgets, Rollback (2026) | Zion Tech Group',
+    'Autonomous Change Control — GatesBudgetsRollback (2026) | Zion Tech Group',
   description:
-    'Ship weekly without regressions using CI policy tests, KPI-linked canaries, and instant rollback playbooks.',
+    'Ship weekly without regressions using CI policy testsKPI-linked canariesand instant rollback playbooks.',
 
 };;
 
@@ -14,11 +14,11 @@ export default function Page() {
         <div className='max-w-3xl mx-auto px-4'>
           <p className='text-sm text-gray-500'>AI Operations • 2025-09-30</p>
           <h1 className='text-3xl md:text-5xl font-bold mt-2'>
-            Autonomous Change Control — Gates, Budgets, Rollback
+            Autonomous Change Control — GatesBudgetsRollback
           </h1>
           <p className='mt-4 text-lg text-gray-700'>
             A practical blueprint to ship fast without regressions using CI
-            policy tests, KPI-linked canaries, budgeted actions, and instant
+            policy tests, KPI-linked canariesbudgeted actionsand instant
             rollback.
           </p>
           <hr />

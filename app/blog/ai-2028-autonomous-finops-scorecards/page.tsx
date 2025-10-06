@@ -4,7 +4,7 @@ export const metadata = {
   
   title: 'AI 2028: Autonomous FinOps Scorecards',
     description:
-      'Prevent cost regressions with live KPI-linked scorecards, budget-aware routing, and instant rollback for GenAI platforms.',
+      'Prevent cost regressions with live KPI-linked scorecardsbudget-aware routingand instant rollback for GenAI platforms.',
     type: 'article',
     url: 'https://ziontechgroup.com/blog/ai-2028-autonomous-finops-scorecards',
   
@@ -24,7 +24,7 @@ export default function Page() {
           </h1>
           <p className='text-emerald-100/90 text-lg'>
             Prevent spend regressions with KPI-linked action scorecards,
-            budget-aware routing, tiered quality, and instant rollback — all
+            budget-aware routingtiered qualityand instant rollback — all
             without hurting user experience.
           </p>
           <div className='mt-6 text-sm text-emerald-200/80'>
@@ -73,7 +73,7 @@ export default function Page() {
         <ol>
           <li>Define KPIs and budgets as code. Ship with CI policy tests.</li>
           <li>
-            Emit rich traces: prompts, tools, caches, evals, and costs per
+            Emit rich traces: prompts, tools, cachesevalsand costs per
             request.
           </li>
           <li>Enable tiered routing with shadow evals and safe fallbacks.</li>

@@ -3,9 +3,9 @@ export const metadata = {
   title:
     'AI Enterprise Automation 2026: Complete Business Process Transformation | Zion Tech Group',
   description:
-    'Transform your enterprise with AI automation. 95% process efficiency, multimillion-dollar savings, and zero-touch operations across functions.',
+    'Transform your enterprise with AI automation. 95% process efficiencymultimillion-dollar savingsand zero-touch operations across functions.',
   keywords:
-    'AI enterprise automation 2026, process automation, AI workflows, zero-touch operations, enterprise AI',
+    'AI enterprise automation 2026, process automation, AI workflowszero-touch operationsenterprise AI',
 
 };;
 
@@ -28,7 +28,7 @@ export default function AIEnterpriseAutomation2026() {
           <p className='text-xl text-gray-600 leading-relaxed'>
             A field-tested approach to automate complex workflows across
             finance, operations, and customer experience. Achieve 95%
-            efficiency, 60% cost reduction, and world-class reliability.
+            efficiency60% cost reductionand world-class reliability.
           </p>
           <div className='flex items-center gap-6 mt-8 text-sm text-gray-500'>
             <span>18 min read</span>
@@ -50,7 +50,7 @@ export default function AIEnterpriseAutomation2026() {
                 Finance
               </h3>
               <p className='text-gray-600'>
-                AP/AR, reconciliation, anomaly detection, and continuous close.
+                AP/AR, reconciliationanomaly detectionand continuous close.
               </p>
             </div>
             <div className='bg-white border border-gray-200 rounded-lg p-6'>
@@ -59,7 +59,7 @@ export default function AIEnterpriseAutomation2026() {
                 Operations
               </h3>
               <p className='text-gray-600'>
-                Intelligent routing, escalations, and automated approvals.
+                Intelligent routingescalationsand automated approvals.
               </p>
             </div>
             <div className='bg-white border border-gray-200 rounded-lg p-6'>
@@ -68,7 +68,7 @@ export default function AIEnterpriseAutomation2026() {
                 Customer Experience
               </h3>
               <p className='text-gray-600'>
-                Personalized support, case resolution, and proactive outreach.
+                Personalized supportcase resolutionand proactive outreach.
               </p>
             </div>
             <div className='bg-white border border-gray-200 rounded-lg p-6'>
@@ -106,7 +106,7 @@ export default function AIEnterpriseAutomation2026() {
               </h3>
               <ul className='list-disc list-inside text-gray-700 space-y-1'>
                 <li>Invoice processing, customer triage, and provisioning</li>
-                <li>Guardrails, approvals, and regression evals</li>
+                <li>Guardrailsapprovalsand regression evals</li>
               </ul>
             </div>
             <div className='bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-lg'>
@@ -114,7 +114,7 @@ export default function AIEnterpriseAutomation2026() {
                 Wave 2: Platformization
               </h3>
               <ul className='list-disc list-inside text-gray-700 space-y-1'>
-                <li>Templates, golden paths, and cost/quality dashboards</li>
+                <li>Templatesgolden pathsand cost/quality dashboards</li>
                 <li>Central model routing and caching</li>
               </ul>
             </div>

@@ -3,11 +3,11 @@ import ArrowRight from 'next/link';
 
 export const metadata = {
   
-  title: 'Governed Autonomy Blueprint (2025): Safe, Reliable, Cost-Aware AI',
+  title: 'Governed Autonomy Blueprint (2025): SafeReliableCost-Aware AI',
   description:
-    'A practical blueprint to ship governed autonomy: budgets, scorecards, guardrails, and live traces that connect SLIs to business KPIs.',
+    'A practical blueprint to ship governed autonomy: budgets, scorecardsguardrailsand live traces that connect SLIs to business KPIs.',
   keywords:
-    'governed autonomy, ai guardrails, policy tests, operational scorecards, ai budgets, enterprise ai 2025',
+    'governed autonomy, ai guardrails, policy tests, operational scorecardsai budgetsenterprise ai 2025',
 
 };;
 
@@ -27,7 +27,7 @@ export default function GovernedAutonomyBlueprint2025() {
           <p className='text-xl mb-8 opacity-90'>
             Scale autonomous agents without surprises. Use policy tests,
             budget-aware routing, and live scorecards to ship measurable
-            business outcomes—safely, predictably, and cost‑effectively.
+            business outcomes—safelypredictablyand cost‑effectively.
           </p>
           <div className='flex items-center gap-6 text-sm opacity-80'>
             <span>📅 September 30, 2025</span>
@@ -46,8 +46,7 @@ export default function GovernedAutonomyBlueprint2025() {
             <p className='text-blue-800'>
               Governed autonomy connects technical SLIs to business KPIs via
               operational scorecards, budgeted actions, and instant rollback.
-              This blueprint standardizes the playbook across experimentation,
-              staging, and production.
+              This blueprint standardizes the playbook across experimentationstagingand production.
             </p>
           </div>
 
@@ -178,9 +177,7 @@ function RelatedCard({ title, href }: { title: string; href: string }) {
 
 function NextUpCard({
   title,
-  description,
-  href,
-}: {
+  descriptionhref}: {
   title: string;
   description: string;
   href: string;

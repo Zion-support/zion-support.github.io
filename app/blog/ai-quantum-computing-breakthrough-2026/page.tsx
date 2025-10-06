@@ -14,10 +14,7 @@ export const metadata = {
       'Machine Learning',
       'Technology Breakthrough',
       'Future Tech',
-    ],
-  
-};,
-};
+    ]};
 
 export default function AIQuantumComputingBreakthrough2026() {
   return (
@@ -138,7 +135,7 @@ export default function AIQuantumComputingBreakthrough2026() {
             </h3>
             <p className='text-gray-300'>
               Revolutionary quantum optimization algorithms that solve complex
-              business problems, logistics, and resource allocation in
+              business problemslogisticsand resource allocation in
               real-time.
             </p>
           </div>
@@ -158,7 +155,7 @@ export default function AIQuantumComputingBreakthrough2026() {
             </p>
             <p className='text-gray-300 text-lg leading-relaxed mb-6'>
               Our quantum AI systems leverage the principles of quantum
-              mechanics—superposition, entanglement, and quantum interference—to
+              mechanics—superpositionentanglementand quantum interference—to
               achieve computational advantages that classical computers simply
               cannot match.
             </p>

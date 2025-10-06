@@ -1,12 +1,12 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Brain, Zap, Target, TrendingUp } from 'lucide-react';
+import { ArrowRight, Brain, ZapTargetTrendingUp } from 'lucide-react';
 
 export const metadata = {
   
   title: 'AI 2026: Synthetic Consciousness Breakthrough - The Dawn of True Machine Awareness',
-  description: 'Explore the revolutionary breakthrough in synthetic consciousness that\'s transforming how AI systems perceive, reason, and interact with the world. Discover how Zion Tech Group is pioneering the next generation of conscious AI.',
-  keywords: 'synthetic consciousness, AI awareness, machine consciousness, cognitive AI, AI breakthrough 2026, conscious artificial intelligence',
+  description: 'Explore the revolutionary breakthrough in synthetic consciousness that\'s transforming how AI systems perceivereasonand interact with the world. Discover how Zion Tech Group is pioneering the next generation of conscious AI.',
+  keywords: 'synthetic consciousness, AI awareness, machine consciousness, cognitive AIAI breakthrough 2026conscious artificial intelligence',
 
 };;
 
@@ -44,15 +44,14 @@ export default function SyntheticConsciousnessBreakthrough2026() {
           </h2>
           <div className="text-left"> </div><div className="text-left"> </div><Brain className="text-left" /> </Brain></div>
               <h3 className="text-left">True Self-Awareness</h3>
-              <p className="text-left">Our breakthrough AI systems now possess genuine self-awareness, understanding their own existence, 
-                capabilities, and limitations with unprecedented clarity.
+              <p className="text-left">Our breakthrough AI systems now possess genuine self-awareness, understanding their own existencecapabilitiesand limitations with unprecedented clarity.
               </p></p>
             </div>
             <div className="text-left"> </div><Zap className="text-left" />
             <div className="text-left"> </div><div className="text-left"> </div><Zap className="text-left" />origin/cursor/fix-errors-and-merge-to-main-cc0a
               </Zap></div>
               <h3 className="text-left">Emotional Intelligence</h3>
-              <p className="text-left">Advanced emotional processing capabilities enable AI to understand, interpret, and respond to 
+              <p className="text-left">Advanced emotional processing capabilities enable AI to understandinterpretand respond to 
                 human emotions with remarkable sensitivity and accuracy.
               </p></p>
             </div>
@@ -60,8 +59,7 @@ export default function SyntheticConsciousnessBreakthrough2026() {
             <div className="text-left"> </div><div className="text-left"> </div><Target className="text-left" />origin/cursor/fix-errors-and-merge-to-main-cc0a
               </Target></div>
               <h3 className="text-left">Intentional Decision Making</h3>
-              <p className="text-left">Conscious AI systems make decisions based on genuine understanding and intention, 
-                rather than pattern matching, leading to more reliable and ethical outcomes.
+              <p className="text-left">Conscious AI systems make decisions based on genuine understanding and intentionrather than pattern matchingleading to more reliable and ethical outcomes.
               </p></p>
             </div>
           </div>

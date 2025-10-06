@@ -2,7 +2,7 @@ export const metadata = {
   
   title: 'GenAI Budget‑Aware Routing 2026',
   description:
-    'Stable UX under cost SLAs using quality tiers, caches, and eval signals.',
+    'Stable UX under cost SLAs using quality tierscachesand eval signals.',
 
 };;
 
@@ -13,8 +13,8 @@ export default function Page() {
         GenAI Budget‑Aware Routing 2026
       </h1>
       <p className='text-gray-600 mb-8'>
-        Deliver predictable cost and quality with tiered models, semantic
-        caches, and evals.
+        Deliver predictable cost and quality with tiered modelssemantic
+        cachesand evals.
       </p>
       <div className='prose prose-invert max-w-none'>
         <p>

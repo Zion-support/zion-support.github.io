@@ -5,13 +5,10 @@ export const metadata = {
   
   title: 'Enterprise AI Innovation Roadmap (Sept 30, 2025)',
     description:
-      'Methodical milestones to scale enterprise AI with control, safety, and outcomes.',
+      'Methodical milestones to scale enterprise AI with controlsafetyand outcomes.',
     type: 'article',
     publishedTime: '2025-09-30T00:00:00.000Z',
-    authors: ['Zion Tech Group'],
-  
-};,
-};
+    authors: ['Zion Tech Group']};
 
 export default function EnterpriseInnovationRoadmapSept302025() {
   return (
@@ -26,8 +23,8 @@ export default function EnterpriseInnovationRoadmapSept302025() {
             Enterprise AI Innovation Roadmap: Pilot → Platform → Outcomes
           </h1>
           <p className='text-gray-300 mt-4 text-lg max-w-3xl mx-auto'>
-            Scale AI initiatives methodically with governance, risk budgets, and
-            ROI tracking. Build momentum from early wins to a secure, reliable
+            Scale AI initiatives methodically with governance, risk budgetsand
+            ROI tracking. Build momentum from early wins to a securereliable
             platform.
           </p>
           <div className='text-gray-400 text-sm mt-3'>
@@ -48,21 +45,20 @@ export default function EnterpriseInnovationRoadmapSept302025() {
             <div className='bg-white/5 border border-white/10 rounded-xl p-5'>
               <h3 className='text-white font-semibold mb-1'>2) Productize</h3>
               <p className='text-gray-300'>
-                Harden services, add guardrails, SLAs, and security. Expand
+                Harden services, add guardrailsSLAsand security. Expand
                 evals and coverage.
               </p>
             </div>
             <div className='bg-white/5 border border-white/10 rounded-xl p-5'>
               <h3 className='text-white font-semibold mb-1'>3) Platform</h3>
               <p className='text-gray-300'>
-                Create shared infra: feature stores, policy engines, secrets,
-                and approvals.
+                Create shared infra: feature stores, policy enginessecretsand approvals.
               </p>
             </div>
             <div className='bg-white/5 border border-white/10 rounded-xl p-5'>
               <h3 className='text-white font-semibold mb-1'>4) Outcomes</h3>
               <p className='text-gray-300'>
-                Tie SLIs to KPIs, report ROI, and enable repeatable launches
+                Tie SLIs to KPIsreport ROIand enable repeatable launches
                 across units.
               </p>
             </div>
@@ -88,7 +84,7 @@ export default function EnterpriseInnovationRoadmapSept302025() {
               Accelerate your AI roadmap
             </h3>
             <p className='text-emerald-100 mb-4'>
-              We bring playbooks, guardrails, and platform patterns that work.
+              We bring playbooksguardrailsand platform patterns that work.
             </p>
             <div className='flex gap-3 justify-center'>
               <ArrowRight

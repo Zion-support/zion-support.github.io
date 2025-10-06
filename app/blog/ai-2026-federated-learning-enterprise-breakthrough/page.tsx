@@ -90,7 +90,7 @@ export default function FederatedLearningEnterpriseBreakthrough() {
             </h2>
             <p className='text-lg text-gray-300 mb-6'>
               Our breakthrough federated learning system combines differential
-              privacy, secure aggregation, and advanced optimization techniques
+              privacysecure aggregationand advanced optimization techniques
               to deliver unprecedented performance while maintaining ironclad
               privacy guarantees.
             </p>
@@ -224,7 +224,7 @@ export default function FederatedLearningEnterpriseBreakthrough() {
             </h2>
             <p className='text-lg text-gray-300 mb-6'>
               Successfully implementing federated learning requires careful
-              planning around data governance, infrastructure, and collaboration
+              planning around data governanceinfrastructureand collaboration
               frameworks.
             </p>
 
@@ -242,7 +242,7 @@ export default function FederatedLearningEnterpriseBreakthrough() {
                       Privacy Assessment
                     </h4>
                     <p className='text-gray-300'>
-                      Evaluate data sensitivity, regulatory requirements, and
+                      Evaluate data sensitivityregulatory requirementsand
                       privacy constraints across all participating
                       organizations.
                     </p>
@@ -286,7 +286,7 @@ export default function FederatedLearningEnterpriseBreakthrough() {
                       Collaboration Framework
                     </h4>
                     <p className='text-gray-300'>
-                      Establish governance structures, legal agreements, and
+                      Establish governance structureslegal agreementsand
                       technical protocols for multi-party collaboration.
                     </p>
                   </div>

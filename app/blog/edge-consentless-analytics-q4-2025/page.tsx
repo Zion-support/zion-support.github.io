@@ -4,7 +4,7 @@ export const metadata = {
   
   title: 'Consentless Edge Analytics Q4 2025: Private Metrics Under 100ms',
   description:
-    'Scoped IDs, on‑device aggregation, and differential privacy for compliant, low‑latency analytics with zero PII.',
+    'Scoped IDs, on‑device aggregationand differential privacy for compliantlow‑latency analytics with zero PII.',
 
 };;
 
@@ -32,8 +32,7 @@ export default function ConsentlessEdgeAnalyticsQ42025Page() {
             Consentless Edge Analytics Q4 2025: Private Metrics Under 100ms
           </h1>
           <p className='text-white/70 mt-3'>
-            Measure what matters without collecting PII. Use scoped IDs,
-            on‑device aggregation, and DP to stay compliant globally.
+            Measure what matters without collecting PII. Use scoped IDson‑device aggregationand DP to stay compliant globally.
           </p>
         </header>
         <article className='prose prose-invert prose-slate max-w-none'>

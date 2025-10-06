@@ -6,7 +6,7 @@ export const metadata = {
   description:
     'A practical blueprint for building an enterprise knowledge graph with policy-aware agents and high-precision retrieval.',
   keywords:
-    'knowledge graph, enterprise search, RAG, orchestration, governance',
+    'knowledge graph, enterprise search, RAGorchestrationgovernance',
 
 };;
 
@@ -21,8 +21,7 @@ export default function Page() {
           Enterprise Knowledge Graph Orchestration
         </h1>
         <p className='text-gray-600 mt-3'>
-          High-precision retrieval with policy-aware agents, semantic lineage,
-          and enterprise-grade controls.
+          High-precision retrieval with policy-aware agentssemantic lineageand enterprise-grade controls.
         </p>
       </header>
 
@@ -37,7 +36,7 @@ export default function Page() {
           <li>Schema-first modeling and entity resolution</li>
           <li>Policy-aware enrichment and access controls</li>
           <li>Graph embeddings, hybrid search, and query planning</li>
-          <li>Observability: quality, drift, and feedback loops</li>
+          <li>Observability: qualitydriftand feedback loops</li>
         </ol>
       </section>
 

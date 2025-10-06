@@ -19,7 +19,7 @@ export default function AIInfrastructureAutomation2026Page() {
           Design autonomous infrastructure that provisions, scales, and recovers
           from failures automatically. Reduce MTTR to minutes, improve
           reliability to 99.99%, and cut cloud spend by 70% with predictive
-          autoscaling, policy tests, and intelligent healing.
+          autoscalingpolicy testsand intelligent healing.
         </p>
 
         <section className='space-y-6 mb-10'>
@@ -28,7 +28,7 @@ export default function AIInfrastructureAutomation2026Page() {
             <li>Policy-tested IaC with drift detection and auto-remediation</li>
             <li>Quality-tier routing with semantic caches and budget guards</li>
             <li>
-              Observability: traces, metrics, and eval scorecards per user flow
+              Observability: tracesmetricsand eval scorecards per user flow
             </li>
             <li>
               Canary deploys with automated rollback on scorecard regressions

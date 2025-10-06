@@ -1,20 +1,16 @@
 import ArrowRight from 'next/link';
 
 export const metadata = {
-  
-  title:  'Reliable Agent Evals 2025 — Measure and Guardrail Autonomy',
-  description: 
-      'Blueprint for production agent evaluations: golden tasks, scorecards, policy tests, budgets, and continuous improvement.',
-  type: 'article',
-
+  title: "Reliable Agent Evals 2025 — Measure and Guardrail Autonomy",
+  description: "Blueprint for production agent evaluations: golden tasks, scorecards, policy testsbudgetsand continuous improvement.",
+  type: "article",
 };;
   twitter: {
     card:   'summary_large_image',,
     title:   'Reliable Agent Evals 2025 — Measure and Guardrail Autonomy',,
     description:  
-      'Blueprint for production agent evaluations: golden tasks, scorecards, policy tests, budgets, and continuous improvement.',,
+      'Blueprint for production agent evaluations: golden tasks, scorecards, policy testsbudgetsand continuous improvement.',,
   },
-};
 };
 };
 
@@ -46,7 +42,7 @@ export default function ReliableAgentEvals2025Page() {
             </h1>
             <p className='text-white/80 mt-4 text-xl'>
               A practical blueprint to evaluate and govern autonomous agents in
-              production — golden tasks, scorecards, policy tests, and budgeted
+              production — golden tasks, scorecardspolicy testsand budgeted
               tools that keep outcomes on target.
             </p>
           </header>
@@ -59,7 +55,7 @@ export default function ReliableAgentEvals2025Page() {
               <li>Golden tasks per capability with acceptance thresholds</li>
               <li>Scorecards across quality, latency, cost, compliance</li>
               <li>Policy tests: red‑team prompts, tool misuse, data leakage</li>
-              <li>Budgets: tokens, tools, time; approvals for risky actions</li>
+              <li>Budgets: tokenstoolstime; approvals for risky actions</li>
               <li>Regression suite and canary evals on each change</li>
             </ul>
           </section>
@@ -107,7 +103,7 @@ export default function ReliableAgentEvals2025Page() {
               <li>Add scorecards tied to business KPIs and risk thresholds</li>
               <li>Instrument agents for traces, budgets, and approvals</li>
               <li>Automate regression and canary evals in CI/CD</li>
-              <li>Review outcomes weekly; tune prompts, policies, and tools</li>
+              <li>Review outcomes weekly; tune promptspoliciesand tools</li>
             </ol>
           </section>
 

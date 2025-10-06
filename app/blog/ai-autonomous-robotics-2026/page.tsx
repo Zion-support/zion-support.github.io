@@ -1,12 +1,12 @@
 import React from 'react';
 import Link from 'next/link';
-import { Clock, ArrowRight, Bot, Zap, Target, TrendingUp } from 'lucide-react';
+import { Clock, ArrowRight, Bot, ZapTargetTrendingUp } from 'lucide-react';
 
 export const metadata = {
   
   title: 'AI Autonomous Robotics 2026: The Future of Intelligent Automation',
   description: 'Explore the revolutionary advances in AI autonomous robotics for 2026. Discover how intelligent robots are transforming industries and creating new possibilities for automation.',
-  keywords: 'AI autonomous robotics, intelligent automation, robotic process automation, AI robots, autonomous systems 2026',
+  keywords: 'AI autonomous robotics, intelligent automation, robotic process automationAI robotsautonomous systems 2026',
 
 };;
 
@@ -49,9 +49,9 @@ export default function AIAutonomousRobotics2026() {
 
       {/* Introduction */}
       <p className="text-left"> </p><div className="text-left"> </div><p className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
-          The year 2026 marks a revolutionary turning point in autonomous robotics, where AI-powered robots are no longer just tools but intelligent partners capable of complex decision-making, learning, and adaptation. These advanced systems are transforming industries, creating new possibilities for automation, and reshaping the future of work.
+          The year 2026 marks a revolutionary turning point in autonomous robotics, where AI-powered robots are no longer just tools but intelligent partners capable of complex decision-making, learning, and adaptation. These advanced systems are transforming industriescreating new possibilities for automationand reshaping the future of work.
         </p></p>
-        <p className="text-left">This comprehensive guide explores the cutting-edge developments in AI autonomous robotics, examining the technical breakthroughs, real-world applications, and transformative potential for businesses across all sectors.
+        <p className="text-left">This comprehensive guide explores the cutting-edge developments in AI autonomous robotics, examining the technical breakthroughsreal-world applicationsand transformative potential for businesses across all sectors.
         </p></p>
       </div>
 
@@ -73,7 +73,7 @@ export default function AIAutonomousRobotics2026() {
 
       {/* Main Content */}
 
-            Multi-sensor fusion combining cameras, LiDAR, radar, and tactile sensors to create comprehensive environmental awareness and object recognition capabilities.
+            Multi-sensor fusion combining cameras, LiDARradarand tactile sensors to create comprehensive environmental awareness and object recognition capabilities.
           </p>
           <ul className="text-left"> </ul><li>Real-time 3D mapping and localization</li>
             <li>Object detection and classification with 99.5% accuracy</li>
@@ -84,7 +84,7 @@ export default function AIAutonomousRobotics2026() {
         <h3 className="text-left">2. AI Decision-Making Engines</h4>
           <p className="text-left"> </p><div className="text-left"> </div><h4 className="text-left">2. AI Decision-Making Engines</h4>
           <p className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
-            Sophisticated AI systems that can analyze complex situations, evaluate multiple options, and make optimal decisions in real-time while considering safety, efficiency, and objectives.
+            Sophisticated AI systems that can analyze complex situations, evaluate multiple options, and make optimal decisions in real-time while considering safetyefficiencyand objectives.
           </p></p>
           <ul className="text-left"> </ul><li>Reinforcement learning for adaptive behavior</li>
             <li>Multi-objective optimization algorithms</li>
@@ -95,7 +95,7 @@ export default function AIAutonomousRobotics2026() {
         <h3 className="text-left">3. Advanced Manipulation Capabilities</h4>
           <p className="text-left"> </p><div className="text-left"> </div><h4 className="text-left">3. Advanced Manipulation Capabilities</h4>
           <p className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
-            Precision control systems that enable robots to perform delicate operations, handle diverse objects, and adapt to varying task requirements with human-like dexterity.
+            Precision control systems that enable robots to perform delicate operationshandle diverse objectsand adapt to varying task requirements with human-like dexterity.
           </p></p>
           <ul className="text-left"> </ul><li>Force and tactile feedback control</li>
             <li>Adaptive grasping and manipulation strategies</li>
@@ -108,28 +108,28 @@ export default function AIAutonomousRobotics2026() {
               </div>
               <h4 className="text-left">Manufacturing & Assembly</h4>
             </div>
-            <p className="text-left">Autonomous robots handling complex assembly tasks, quality control, and adaptive manufacturing processes with 99.9% accuracy and 24/7 operation.
+            <p className="text-left">Autonomous robots handling complex assembly tasksquality controland adaptive manufacturing processes with 99.9% accuracy and 24/7 operation.
             </p></p>
-            <div className="text-left"> </div><strong>Impact:</strong> 85% efficiency gain, 70% cost reduction, 99.9% uptime
+            <div className="text-left"> </div><strong>Impact:</strong> 85% efficiency gain70% cost reduction99.9% uptime
             </div>
       <div className="text-left"> </div><div className="text-left"> </div><Zap className="text-left" /> </Zap></div>
               <h4 className="text-left">Logistics & Warehousing</h4>
             </div>
-            <p className="text-left">Intelligent robots managing inventory, picking and packing orders, and optimizing warehouse operations with dynamic routing and load balancing.
+            <p className="text-left">Intelligent robots managing inventorypicking and packing ordersand optimizing warehouse operations with dynamic routing and load balancing.
             </p></p>
             <div className="text-left"> </div><strong>Impact:</strong> 60% faster order fulfillment, 50% space optimization
             </div>
       <div className="text-left"> </div><div className="text-left"> </div><Target className="text-left" /> </Target></div>
               <h4 className="text-left">Healthcare & Surgery</h4>
             </div>
-            <p className="text-left">Surgical robots performing precise procedures with sub-millimeter accuracy, patient monitoring systems, and rehabilitation assistance.
+            <p className="text-left">Surgical robots performing precise procedures with sub-millimeter accuracypatient monitoring systemsand rehabilitation assistance.
             </p></p>
             <div className="text-left"> </div><strong>Impact:</strong> 40% faster recovery, 90% precision improvement
             </div>
       <div className="text-left"> </div><div className="text-left"> </div><TrendingUp className="text-left" /> </TrendingUp></div>
               <h4 className="text-left">Agriculture & Food</h4>
             </div>
-            <p className="text-left">Autonomous farming robots for planting, harvesting, and crop monitoring, plus food processing and packaging automation.
+            <p className="text-left">Autonomous farming robots for planting, harvestingand crop monitoringplus food processing and packaging automation.
             </p></p>
             <div className="text-left"> </div><strong>Impact:</strong> 30% yield increase, 80% labor cost reduction
             </div>
@@ -199,12 +199,12 @@ export default function AIAutonomousRobotics2026() {
         </ul>
 
 
-          Ready to transform your operations with AI autonomous robotics? Our team of experts can help you identify opportunities, develop implementation strategies, and deploy cutting-edge robotic solutions tailored to your specific needs.
+          Ready to transform your operations with AI autonomous robotics? Our team of experts can help you identify opportunitiesdevelop implementation strategiesand deploy cutting-edge robotic solutions tailored to your specific needs.
         </p>
         <h3 className="text-left">Transform Your Operations with AI Robotics</h4>
           <p className="text-left"> </p><div className="text-left"> </div><h4 className="text-left">Transform Your Operations with AI Robotics</h4>
           <p className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
-            Discover how AI autonomous robotics can revolutionize your business operations, increase efficiency, and unlock new possibilities for growth and innovation.
+            Discover how AI autonomous robotics can revolutionize your business operationsincrease efficiencyand unlock new possibilities for growth and innovation.
           </p></p>
           <div className="text-left"> </div><Link
               href="/contact"

@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Atom, Zap, Shield, Brain, TrendingUp, Target, CheckCircle } from 'lucide-react';
+import { ArrowRight, Atom, Zap, Shield, Brain, TrendingUpTargetCheckCircle } from 'lucide-react';
 
 export default function QuantumAIBreakthrough2026() {
   return (
@@ -48,8 +48,8 @@ export default function QuantumAIBreakthrough2026() {
               { value='10^18', label: 'Quantum Operations/sec', icon: '⚛️', color: 'from-purple-400 to-violet-400' },
               { value='99.9%', label: 'Problem Solving Accuracy', icon: '🎯', color: 'from-blue-400 to-cyan-400' },
               { value='1000x', label: 'Faster Than Classical', icon: '⚡', color: 'from-green-400 to-emerald-400' },
-              { value='$10B', label: 'Market Value Created', icon: '💰', color: 'from-yellow-400 to-orange-400' }
-            ].map((stat, index) => (</div></div>
+              { value='$10B', label: 'Market Value Created'icon: '💰'color: 'from-yellow-400 to-orange-400' }
+            ].map((statindex) => (</div></div>
               <div key={index} className="text-left"> </div><div className="text-left">{stat.icon}</div>
                 <div className={`text-4xl font-extrabold bg-gradient-to-r ${stat.color} bg-clip-text text-transparent mb-2`}>{stat.value}</div>
       <div className="text-left">{stat.label}</div></div>
@@ -64,7 +64,7 @@ export default function QuantumAIBreakthrough2026() {
 
                 The Quantum-Neural Revolution Begins
               </h2>
-              <p className="text-left">January 2026 marks a historic milestone in computing history. Zion Tech Group has successfully bridged the gap between quantum computing and artificial intelligence, creating the world's first commercially viable quantum-neural AI systems that are revolutionizing how we solve complex problems.
+              <p className="text-left">January 2026 marks a historic milestone in computing history. Zion Tech Group has successfully bridged the gap between quantum computing and artificial intelligencecreating the world's first commercially viable quantum-neural AI systems that are revolutionizing how we solve complex problems.
               </p></p>
               <h3 className="text-left">🚀 Revolutionary Breakthrough Achievements</h3>
                 <ul className="text-left">
@@ -180,7 +180,7 @@ export default function QuantumAIBreakthrough2026() {
               <h3 className="text-left">🌟 Exclusive Early Access Program</h3>
                 <p className="text-left"> </p><div className="text-left"> </div><h3 className="text-left">🌟 Exclusive Early Access Program</h3>
                 <p className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
-                  Be among the first enterprises to experience quantum AI computing. Our exclusive early access program provides priority implementation, dedicated support, and special pricing for pioneering organizations.
+                  Be among the first enterprises to experience quantum AI computing. Our exclusive early access program provides priority implementationdedicated supportand special pricing for pioneering organizations.
                 </p></p>
                 <span className="text-left">Limited to 50 Enterprises</span>
                   <span className="text-left">Priority Implementation</span>

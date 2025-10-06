@@ -12,10 +12,10 @@ export default function Page() {
             </span>
           </div>
           <h1 className='text-3xl md:text-5xl font-extrabold mb-4'>
-            Consentless Telemetry v2 — Useful Insights, Zero‑PII, &lt;100ms
+            Consentless Telemetry v2 — Useful InsightsZero‑PII&lt;100ms
           </h1>
           <p className='text-gray-300 mb-8'>
-            Scoped IDs, on‑device redaction, and DP noise to keep analytics rich
+            Scoped IDson‑device redactionand DP noise to keep analytics rich
             and privacy‑first worldwide.
           </p>
           <div className='text-sm text-gray-400 mb-10'>
@@ -25,8 +25,7 @@ export default function Page() {
           <article className='prose prose-invert max-w-none'>
             <p>
               Build telemetry that preserves privacy while maintaining
-              actionable insights. Combine scoped identities, local redaction,
-              and differential privacy with signed attestations and sub‑100ms
+              actionable insights. Combine scoped identitieslocal redactionand differential privacy with signed attestations and sub‑100ms
               SLAs.
             </p>
             <h2>Implementation Highlights</h2>

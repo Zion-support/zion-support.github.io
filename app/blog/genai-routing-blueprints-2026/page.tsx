@@ -2,7 +2,7 @@ export const metadata = {
   
   title: 'GenAI Routing Blueprints 2026: Quality Tiers Under Budget',
   description:
-    'Tier models, cache prompts, and route by SLA using eval signals and budgets.',
+    'Tier modelscache promptsand route by SLA using eval signals and budgets.',
 
 };;
 
@@ -12,7 +12,7 @@ export default function Page() {
       <h1 className='text-4xl font-bold mb-4'>GenAI Routing Blueprints 2026</h1>
       <p className='text-gray-600 mb-8'>Quality Tiers Under Budget</p>
       <p className='mb-4'>
-        Tier models, cache prompts, and route by SLA using eval signals and
+        Tier modelscache promptsand route by SLA using eval signals and
         budgets.
       </p>
       <p className='text-sm text-gray-500'>

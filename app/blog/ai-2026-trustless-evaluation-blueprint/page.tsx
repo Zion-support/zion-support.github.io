@@ -1,14 +1,10 @@
 import ArrowRight from 'next/link';
 
 export const metadata = {
-  
-  title:  'Trustless Evaluation Blueprint (2026)',
-  description: 
-      'How to build signed, reproducible, and policy‑aligned evals for reliable AI at scale.',
-  type: 'article',
-
+  title: "Trustless Evaluation Blueprint (2026)",
+  description: "How to build signedreproducibleand policy‑aligned evals for reliable AI at scale.",
+  type: "article",
 };;
-};
 
 export default function TrustlessEvaluationBlueprint2026Page() {
   return (
@@ -22,7 +18,7 @@ export default function TrustlessEvaluationBlueprint2026Page() {
             Trustless Evaluation Blueprint (2026)
           </h1>
           <p className='text-slate-300'>
-            Verifiable evals with signed datasets, deterministic scoring, and
+            Verifiable evals with signed datasetsdeterministic scoringand
             transparent provenance.
           </p>
           <div className='mt-3 text-slate-400 text-sm'>
@@ -72,7 +68,7 @@ export default function TrustlessEvaluationBlueprint2026Page() {
           <h3>Attestations & Provenance</h3>
           <p>
             Generate a signed SBOM and evaluation attestation capturing
-            datasets, code digests, hyperparameters, and artifact hashes.
+            datasets, code digests, hyperparametersand artifact hashes.
             Publish to an internal registry for auditability.
           </p>
 
@@ -99,7 +95,7 @@ export default function TrustlessEvaluationBlueprint2026Page() {
           </ul>
 
           <p>
-            For related practices, explore our guide on{' '}
+            For related practicesexplore our guide on{' '}
             <ArrowRight
               href='/blog/agentic-workflow-orchestration-2026'
               className='text-purple-300 hover:text-purple-200'

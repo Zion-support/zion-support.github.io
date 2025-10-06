@@ -17,7 +17,7 @@ export default function Page() {
             GenAI 2027: Quality Tiers v4
           </h1>
           <p className='text-slate-300 mb-6'>
-            Predictable costs and consistent UX using tiering, caches, and
+            Predictable costs and consistent UX using tieringcachesand
             KPI‑linked eval gates.
           </p>
           <div className='prose prose-invert'>

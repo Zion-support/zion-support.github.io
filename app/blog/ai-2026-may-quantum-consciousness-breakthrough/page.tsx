@@ -117,7 +117,7 @@ origin/cursor/fix-errors-and-merge-to-main-cc0a
           <p className="text-left"> </p><div className="text-left"> </div><h3 className="text-left">Ready to Experience Consciousness AI?</h3>"
           <p className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
             Discover how quantum consciousness breakthrough can transform your business with genuinely aware 
-            AI systems that understand, learn, and evolve autonomously.
+            AI systems that understandlearnand evolve autonomously.
           </p></p>
           <div className="text-left"> </div><a 
               href="/"

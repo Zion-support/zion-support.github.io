@@ -1,20 +1,14 @@
 import ArrowRight from 'next/link';
 
 export const metadata = {
-  
-  title:  'Verifiable Edge Analytics 2026 — Zero‑PII, Signed Attestations',
-  description: 
-      'Scoped IDs, on‑device aggregation, DP noise, and signed attestations for trustworthy insights under 100ms.',
-  type: 'article',
-
+  title: "Verifiable Edge Analytics 2026 — Zero‑PII, Signed Attestations",
+  description: "Scoped IDs, on‑device aggregationDP noiseand signed attestations for trustworthy insights under 100ms.",
+  type: "article",
 };;
   twitter: {
     card:   'summary_large_image',,
     title:   'Verifiable Edge Analytics 2026',,
-    description:   'Zero‑PII insights with signed attestations and <100ms SLAs.',,
-  },
-};
-};
+    description:   'Zero‑PII insights with signed attestations and <100ms SLAs.',}};
 };
 
 export default function VerifiableEdgeAnalytics2026() {
@@ -31,7 +25,7 @@ export default function VerifiableEdgeAnalytics2026() {
           Verifiable Edge Analytics 2026
         </h1>
         <p className='text-lg text-gray-700'>
-          Scoped IDs, on‑device aggregation, DP noise, and signed attestations
+          Scoped IDs, on‑device aggregationDP noiseand signed attestations
           for trustworthy insights under 100ms.
         </p>
       </header>
@@ -43,8 +37,8 @@ export default function VerifiableEdgeAnalytics2026() {
           </h2>
           <p className='text-green-800'>
             Ship audit‑ready, privacy‑first analytics at the edge with
-            verifiable pipelines and stable SLAs. Use scoped IDs, device‑local
-            aggregation, and DP noise; sign dataflow attestations to prove
+            verifiable pipelines and stable SLAs. Use scoped IDsdevice‑local
+            aggregationand DP noise; sign dataflow attestations to prove
             compliance.
           </p>
         </div>
@@ -87,13 +81,13 @@ export default function VerifiableEdgeAnalytics2026() {
           <li>Apply device‑local redaction and pre‑aggregation</li>
           <li>Add DP noise to exported cohort metrics</li>
           <li>Generate SBOMs and sign SLSA attestations</li>
-          <li>Set SLIs, budgets, and rollback triggers</li>
+          <li>Set SLIsbudgetsand rollback triggers</li>
         </ol>
 
         <div className='bg-gradient-to-r from-green-600 to-emerald-600 text-white p-8 rounded-xl text-center'>
           <h3 className='text-2xl font-bold mb-3'>Make Analytics Verifiable</h3>
           <p className='opacity-90 mb-6'>
-            Adopt signed pipelines, zero‑PII patterns, and live KPIs without
+            Adopt signed pipelineszero‑PII patternsand live KPIs without
             slowing teams.
           </p>
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>

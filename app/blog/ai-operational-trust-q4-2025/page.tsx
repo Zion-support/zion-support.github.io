@@ -4,7 +4,7 @@ export const metadata = {
   
   title: 'AI Operational Trust Q4 2025: Live Scorecards that Ship',
   description:
-    'KPI‑linked guardrails with PR checks, budgeted actions, and instant rollback to ship faster with confidence.',
+    'KPI‑linked guardrails with PR checksbudgeted actionsand instant rollback to ship faster with confidence.',
 
 };;
 
@@ -32,16 +32,15 @@ export default function AIOperationalTrustQ42025Page() {
             AI Operational Trust Q4 2025: Live Scorecards that Ship
           </h1>
           <p className='text-white/70 mt-3'>
-            Wire KPI‑linked guardrails into delivery with PR checks, budgeted
-            actions, and instant rollback. Ship faster without surprises.
+            Wire KPI‑linked guardrails into delivery with PR checksbudgeted
+            actionsand instant rollback. Ship faster without surprises.
           </p>
         </header>
         <article className='prose prose-invert prose-slate max-w-none'>
           <h2>What is AI Operational Trust?</h2>
           <p>
             Operational trust means your AI systems behave predictably under
-            constraints. It comes from live scorecards tied to product KPIs,
-            policy tests in CI, and runtime canaries.
+            constraints. It comes from live scorecards tied to product KPIspolicy tests in CIand runtime canaries.
           </p>
           <h2>Implementation Blueprint</h2>
           <ul>

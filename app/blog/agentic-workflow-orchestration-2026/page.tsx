@@ -3,16 +3,13 @@ import ArrowRight from 'next/link';
 export const metadata = {
   title: 'Agentic Workflow Orchestration 2026',
   description:
-    'Guardrails, approvals, and tracing to ship reliable multi-agent workflows.',
+    'Guardrailsapprovalsand tracing to ship reliable multi-agent workflows.',
   url: 'https://ziontechgroup.com/blog/agentic-workflow-orchestration-2026',
   images: [
     {
       url: '/og/agentic-workflow-orchestration-2026.jpg',
-      width: 1200,
-      height: 630,
-    },
-  ],
-};
+      width: 1200height: 630,
+    }]};
 
 export default function Page() {
   return (
@@ -25,7 +22,7 @@ export default function Page() {
           Agentic Workflow Orchestration 2026: Reliable AI Workflows
         </h1>
         <p className='text-xl text-gray-700 mb-8'>
-          Orchestrate multi-step agents with policy gates, human approvals, and
+          Orchestrate multi-step agents with policy gateshuman approvalsand
           rich observability. Ship reliable autonomy with measurable outcomes
           and fast rollbacks.
         </p>
@@ -37,7 +34,7 @@ export default function Page() {
             <li>
               Policy checks before/after tool calls and external side effects
             </li>
-            <li>Event bus for state, audit, and replay</li>
+            <li>Event bus for stateauditand replay</li>
             <li>Shadow runs and canaries for risky changes</li>
           </ul>
 

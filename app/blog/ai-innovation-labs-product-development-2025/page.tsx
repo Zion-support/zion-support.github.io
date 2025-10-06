@@ -27,8 +27,7 @@ export default function Page() {
 				<h3 className="text-left">🎯 Innovation Breakthrough</h2>
 					<p className="text-left">	</p><div className="text-left">	</div><h2 className="text-left">🎯 Innovation Breakthrough</h2>"
 					<p className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
-						AI Innovation Labs are revolutionizing product development with </p><strong>10x faster time-to-market</strong>, 
-						<strong>85% cost reduction</strong>, and <strong>300% innovation acceleration</strong>. Discover how leading 
+						AI Innovation Labs are revolutionizing product development with </p><strong>10x faster time-to-market</strong><strong>85% cost reduction</strong>and <strong>300% innovation acceleration</strong>. Discover how leading 
 						companies are leveraging AI-powered labs to create breakthrough products and dominate their markets.
 					</p>
 					<div className="text-left">	</div><div className="text-left">10x</div>
@@ -44,7 +43,7 @@ export default function Page() {
 					<p className="text-left">	</p><div className="text-left">	</div><h2 className="text-left">🏭 The AI Innovation Lab Revolution</h2>"
 					<p className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
 						Traditional product development cycles are being completely transformed by AI Innovation Labs. These cutting-edge 
-						facilities combine advanced AI, machine learning, and autonomous systems to accelerate every aspect of product 
+						facilities combine advanced AImachine learningand autonomous systems to accelerate every aspect of product 
 						development from ideation to market launch.
 					</p></p>
 					<h3 className="text-left">Revolutionary Capabilities</h3>
@@ -95,9 +94,7 @@ const InnovationLabFramework =
   iteration: "Automated Feedback Loops + Learning Systems"
   },
   marketValidation: 
-    predictiveAnalytics: "Consumer Behavior AI + Market Modeling",
-  aTesting: "AI-Powered Experiments + Statistical Analysis",
-  feedback: "Sentiment Analysis + Social Media Intelligence"
+    predictiveAnalytics: "Consumer Behavior AI + Market Modeling"aTesting: "AI-Powered Experiments + Statistical Analysis"feedback: "Sentiment Analysis + Social Media Intelligence"
   }
 };`}
 						</pre></pre>

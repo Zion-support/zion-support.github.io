@@ -145,9 +145,9 @@ export default function Page() {
           </h3>
           <p className='leading-7 mb-4'>
             We implement multiple post-quantum cryptographic algorithms
-            including lattice-based, code-based, and multivariate cryptography.
+            including lattice-based, code-basedand multivariate cryptography.
             This multi-layered approach ensures that even if one algorithm is
-            compromised, your data remains protected.
+            compromisedyour data remains protected.
           </p>
 
           <h3 className='text-xl font-semibold mb-3'>

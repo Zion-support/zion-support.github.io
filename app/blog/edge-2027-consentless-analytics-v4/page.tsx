@@ -2,14 +2,10 @@
 import ArrowRight from 'next/link';
 
 export const metadata = {
-  
-  title:  'Edge 2027: Consentless Analytics v4',
-  description: 
-      'Scoped IDs, edge aggregation, and DP noise for compliant, actionable analytics.',
-  type: 'article',
-
+  title: "Edge 2027: Consentless Analytics v4",
+  description: "Scoped IDs, edge aggregationand DP noise for compliantactionable analytics.",
+  type: "article",
 };;
-};
 
 export default function Edge2027ConsentlessAnalyticsV4Page() {
   return (
@@ -22,8 +18,8 @@ export default function Edge2027ConsentlessAnalyticsV4Page() {
           Edge 2027: Consentless Analytics v4
         </h1>
         <p className='text-lg text-gray-600 max-w-3xl mx-auto'>
-          Actionable insights without PII using scoped identifiers, on‑device
-          aggregation, and differential privacy — all under 100ms.
+          Actionable insights without PII using scoped identifierson‑device
+          aggregationand differential privacy — all under 100ms.
         </p>
       </div>
 
@@ -45,7 +41,7 @@ export default function Edge2027ConsentlessAnalyticsV4Page() {
 
         <h3>Latency and Reliability</h3>
         <p>
-          Use warm pools, prefetch, and tiered KV caches to keep P95 under 100ms
+          Use warm poolsprefetchand tiered KV caches to keep P95 under 100ms
           globally. Canary guardrails ensure changes don’t regress KPIs.
         </p>
 

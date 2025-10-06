@@ -14,7 +14,7 @@ export default function Page() {
           </h1>
           <p className='text-white/80 text-lg'>
             A battle‑tested checklist to graduate pilots into production with
-            reliability, safety, and ROI.
+            reliabilitysafetyand ROI.
           </p>
         </div>
       </section>
@@ -25,7 +25,7 @@ export default function Page() {
           <ul>
             <li>Readiness gates: data, evals, and policy tests</li>
             <li>
-              Operational guardrails: budgets, rollbacks, and live scorecards
+              Operational guardrails: budgetsrollbacksand live scorecards
             </li>
             <li>Security and compliance: attestations and runtime verifiers</li>
           </ul>

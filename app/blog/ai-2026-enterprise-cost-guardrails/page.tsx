@@ -4,7 +4,7 @@ export const metadata = {
   
   title: 'Enterprise Cost Guardrails (2026): Predictable AI spend',
   description:
-    'Budgets, tiers, and KPI‑linked routing that keep GenAI costs predictable without hurting UX.',
+    'Budgetstiersand KPI‑linked routing that keep GenAI costs predictable without hurting UX.',
 
 };;
 
@@ -14,7 +14,7 @@ export default function Page() {
       <h1>Enterprise Cost Guardrails (2026)</h1>
       <p>
         Design cost guardrails that preserve user experience. Use routing
-        policies, quality tiers, and eval‑backed fallbacks to keep spend within
+        policiesquality tiersand eval‑backed fallbacks to keep spend within
         budget and outcomes stable.
       </p>
       <h2>Guardrail Toolkit</h2>

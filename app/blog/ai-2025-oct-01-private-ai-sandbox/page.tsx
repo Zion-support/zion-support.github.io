@@ -5,9 +5,9 @@ export const metadata = {
   
   title: 'Private AI Sandbox (2025): Safe Enterprise Experimentation',
   description:
-    'Stand up a governed, cost-capped AI sandbox to safely test models, prompts, and workflows without risking production.',
+    'Stand up a governed, cost-capped AI sandbox to safely test modelspromptsand workflows without risking production.',
   keywords:
-    'private ai sandbox, 2025, enterprise ai, r&d, governance, cost caps, evals, guardrails',
+    'private ai sandbox, 2025, enterprise ai, r&d, governance, cost capsevalsguardrails',
 
 };;
 
@@ -27,7 +27,7 @@ export default function PrivateAISandbox2025Page() {
           <p className='text-xl mb-8 opacity-90'>
             Launch a governed AI experimentation environment with budget
             controls, model switching, and built‑in safety checks. Learn how to
-            standardize prompts, track costs, and ship results to production
+            standardize promptstrack costsand ship results to production
             with confidence.
           </p>
           <div className='flex items-center gap-6 text-sm opacity-80'>
@@ -46,7 +46,7 @@ export default function PrivateAISandbox2025Page() {
             </p>
             <p className='text-indigo-800'>
               A Private AI Sandbox accelerates discovery while enforcing
-              governance. Use evals, red‑teaming, and deterministic rollouts to
+              governance. Use evalsred‑teamingand deterministic rollouts to
               move from experiment to production without surprises.
             </p>
           </div>
@@ -67,7 +67,7 @@ export default function PrivateAISandbox2025Page() {
               <h3 className='text-xl font-bold mb-2'>Governance</h3>
               <ul className='text-gray-700 space-y-1'>
                 <li>• PII guards and safety filters</li>
-                <li>• Signed artifacts, SBOMs, and attestations</li>
+                <li>• Signed artifactsSBOMsand attestations</li>
                 <li>• Budgeted rollouts with instant rollback</li>
               </ul>
             </div>
@@ -136,9 +136,7 @@ export default function PrivateAISandbox2025Page() {
 
 function RelatedArticleCard({
   title,
-  description,
-  href,
-}: {
+  descriptionhref}: {
   title: string;
   description: string;
   href: string;

@@ -2,14 +2,10 @@
 import ArrowRight from 'next/link';
 
 export const metadata = {
-  
-  title:  'AI 2027: Operational Risk Budgets',
-  description: 
-      'KPI-linked canaries, budgeted actions, and instant rollback to keep autonomy safe.',
-  type: 'article',
-
+  title: "AI 2027: Operational Risk Budgets",
+  description: "KPI-linked canariesbudgeted actionsand instant rollback to keep autonomy safe.",
+  type: "article",
 };;
-};
 
 export default function AI2027OperationalRiskBudgetsPage() {
   return (
@@ -22,7 +18,7 @@ export default function AI2027OperationalRiskBudgetsPage() {
           AI 2027: Operational Risk Budgets
         </h1>
         <p className='text-lg text-gray-600 max-w-3xl mx-auto'>
-          Wire SLIs to KPIs with budgeted actions, KPI-linked canaries, and
+          Wire SLIs to KPIs with budgeted actionsKPI-linked canariesand
           instant rollback to keep autonomous systems safe without slowing
           delivery.
         </p>
@@ -33,7 +29,7 @@ export default function AI2027OperationalRiskBudgetsPage() {
         <p>
           Operational risk budgets turn abstract policy into concrete,
           measurable controls. They specify what actions are allowed under which
-          conditions, the blast-radius limits, and the automatic rollback
+          conditionsthe blast-radius limitsand the automatic rollback
           triggers tied to regressions.
         </p>
 

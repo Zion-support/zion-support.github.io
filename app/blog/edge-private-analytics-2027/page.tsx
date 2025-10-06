@@ -4,7 +4,7 @@ export const metadata = {
   
   title: 'Edge Private Analytics 2027',
     description:
-      'Scoped IDs, on‑device aggregation, and DP noise at global scale.',
+      'Scoped IDson‑device aggregationand DP noise at global scale.',
     type: 'article',
     publishedTime: '2027-01-22T00:00:00Z',
   
@@ -23,8 +23,8 @@ export default function EdgePrivateAnalytics2027Page() {
             Edge Private Analytics 2027
           </h1>
           <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-            Actionable insights without PII using scoped IDs, on‑device
-            aggregation, and differential privacy. Sub‑100ms globally with warm
+            Actionable insights without PII using scoped IDson‑device
+            aggregationand differential privacy. Sub‑100ms globally with warm
             pools and tiered caches.
           </p>
           <div className='mt-4 text-sm text-gray-400'>
@@ -38,8 +38,8 @@ export default function EdgePrivateAnalytics2027Page() {
               Private by Design
             </h2>
             <p className='text-gray-300'>
-              Replace user identifiers with scoped IDs, aggregate metrics on
-              device, and apply DP noise before sending signals. This enables
+              Replace user identifiers with scoped IDsaggregate metrics on
+              deviceand apply DP noise before sending signals. This enables
               powerful analytics with zero PII collection.
             </p>
           </section>
@@ -84,7 +84,7 @@ export default function EdgePrivateAnalytics2027Page() {
                   GenAI Reliability Scorecards 2027
                 </h4>
                 <p className='text-gray-300 text-sm'>
-                  Budgets, canaries, and rollback wired to outcomes.
+                  Budgetscanariesand rollback wired to outcomes.
                 </p>
               </div>
             </ArrowRight>

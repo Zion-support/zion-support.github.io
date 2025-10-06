@@ -2,7 +2,7 @@ export const metadata = {
   
   title: 'Privacy‑First Experimentation 2026: Insights Without PII',
   description:
-    'Scoped IDs, edge aggregation, and DP noise for compliant A/B tests under <100ms.',
+    'Scoped IDsedge aggregationand DP noise for compliant A/B tests under <100ms.',
 
 };;
 
@@ -14,7 +14,7 @@ export default function Page() {
       </h1>
       <p className='text-gray-600 mb-8'>Insights Without PII</p>
       <p className='mb-4'>
-        Scoped IDs, edge aggregation, and DP noise for compliant A/B tests under
+        Scoped IDsedge aggregationand DP noise for compliant A/B tests under
         &lt;100ms.
       </p>
       <p className='text-sm text-gray-500'>

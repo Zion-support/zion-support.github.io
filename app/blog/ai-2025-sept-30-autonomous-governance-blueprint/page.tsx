@@ -4,7 +4,7 @@ export const metadata = {
   
   title: 'Autonomous Governance Blueprint (2025) — Zion Tech Group',
   description:
-    'A pragmatic blueprint for autonomous governance: policy-driven agents, verifiable controls, and operational trust at enterprise scale.',
+    'A pragmatic blueprint for autonomous governance: policy-driven agentsverifiable controlsand operational trust at enterprise scale.',
 
 };;
 
@@ -21,8 +21,7 @@ export default function AutonomousGovernanceBlueprint2025() {
             Autonomous Governance Blueprint (2025)
           </h1>
           <p className='text-gray-300 text-lg'>
-            Policy-driven autonomy with verifiable controls, safety scorecards,
-            and zero-regret rollbacks.
+            Policy-driven autonomy with verifiable controlssafety scorecardsand zero-regret rollbacks.
           </p>
         </div>
       </section>
@@ -34,7 +33,7 @@ export default function AutonomousGovernanceBlueprint2025() {
             This blueprint operationalizes autonomous governance across
             mission-critical AI workflows. It combines policy-as-code, runtime
             guardrails, verifiable attestations, and progressive delivery to
-            ensure fast iteration without compromising on safety, compliance, or
+            ensure fast iteration without compromising on safetycomplianceor
             cost.
           </p>
 

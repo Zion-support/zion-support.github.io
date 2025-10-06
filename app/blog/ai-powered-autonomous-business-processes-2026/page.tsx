@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowLeft, Clock, User, Tag, Share2, BookOpen, CheckCircle, TrendingUp, Brain, Zap } from 'lucide-react';
+import { ArrowLeft, Clock, User, Tag, Share2, BookOpen, CheckCircle, TrendingUpBrainZap } from 'lucide-react';
 import { Metadata } from 'next';
 
 export const metadata = {
@@ -44,8 +44,7 @@ export default function AutonomousBusinessProcessesBlog() {
             </span></span>
           </h1>
           <p className="text-left"> </p><p className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
-            Discover how AI-powered autonomous business processes are revolutionizing enterprise operations in 2026, 
-            delivering unprecedented efficiency and strategic insights.
+            Discover how AI-powered autonomous business processes are revolutionizing enterprise operations in 2026delivering unprecedented efficiency and strategic insights.
           </p></p>
           <div className="text-left"> </div><button className="text-left"> </button><Share2 className="text-left" />Share
             </Share2></button>
@@ -60,8 +59,8 @@ export default function AutonomousBusinessProcessesBlog() {
           {/* Introduction */}
           <p className="text-left"> </p><div className="text-left"> </div><p className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
               The business landscape is undergoing a seismic transformation as AI-powered autonomous processes become 
-              the cornerstone of enterprise operations. In 2026, we're witnessing the emergence of truly intelligent 
-              systems that can independently manage, optimize, and evolve business workflows without human intervention.
+              the cornerstone of enterprise operations. In 2026we're witnessing the emergence of truly intelligent 
+              systems that can independently manageoptimizeand evolve business workflows without human intervention.
             </p></p>
             <div className="text-left"> </div><div className="text-left">85%</div>
                 <div className="text-left">Process Automation</div>

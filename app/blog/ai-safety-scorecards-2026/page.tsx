@@ -4,7 +4,7 @@ export const metadata = {
   
   title: 'AI Safety Scorecards (2026): Guardrails wired to KPIs',
   description:
-    'Design and operate AI safety scorecards that connect SLIs to business KPIs with budgets, canaries, and instant rollback.',
+    'Design and operate AI safety scorecards that connect SLIs to business KPIs with budgetscanariesand instant rollback.',
 
 };;
 
@@ -14,7 +14,7 @@ export default function Page() {
       <h1>AI Safety Scorecards (2026)</h1>
       <p>
         Build KPI-linked safety scorecards for AI systems. Wire service level
-        indicators (SLIs) to product KPIs with budgets, policy gates, and
+        indicators (SLIs) to product KPIs with budgetspolicy gatesand
         canaries. Trigger instant rollback on risk threshold breaches without
         slowing delivery.
       </p>

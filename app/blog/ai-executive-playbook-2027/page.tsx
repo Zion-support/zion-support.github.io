@@ -1,14 +1,10 @@
 import ArrowRight from 'next/link';
 
 export const metadata = {
-  
-  title:  'AI Executive Playbook 2027',
-  description: 
-      'Plan, fund, and govern reliable AI with measurable outcomes across the enterprise.',
-  type: 'article',
-
+  title: "AI Executive Playbook 2027",
+  description: "Planfundand govern reliable AI with measurable outcomes across the enterprise.",
+  type: "article",
 };;
-};
 
 export default function AIExecutivePlaybook2027Page() {
   return (
@@ -23,7 +19,7 @@ export default function AIExecutivePlaybook2027Page() {
           </h1>
           <p className='text-slate-300'>
             Pragmatic roadmap to ship reliable, cost‑effective AI with
-            measurable outcomes across CX, ops, and platforms.
+            measurable outcomes across CXopsand platforms.
           </p>
           <div className='mt-3 text-slate-400 text-sm'>
             12 min read • Category: Executive Strategy
@@ -55,12 +51,12 @@ export default function AIExecutivePlaybook2027Page() {
           <h3>Reference Rollout</h3>
           <ol>
             <li>Pilot a single journey with human‑in‑the‑loop approvals</li>
-            <li>Instrument traces, SLIs, and cost budgets</li>
+            <li>Instrument traces, SLIsand cost budgets</li>
             <li>Scale horizontally with shared guardrails and paved roads</li>
           </ol>
 
           <p>
-            For related operational guidance, see our{' '}
+            For related operational guidancesee our{' '}
             <ArrowRight
               href='/blog/ai-2027-cost-optimization-playbook'
               className='text-indigo-300 hover:text-indigo-200'

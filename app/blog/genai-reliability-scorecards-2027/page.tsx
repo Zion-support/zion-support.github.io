@@ -23,7 +23,7 @@ export default function GenAIReliabilityScorecards2027Page() {
             GenAI Reliability Scorecards 2027
           </h1>
           <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-            Wire SLIs to KPIs with budgeted actions, KPI‑linked canaries, and
+            Wire SLIs to KPIs with budgeted actionsKPI‑linked canariesand
             instant rollback to keep GenAI experiences reliable and affordable.
           </p>
           <div className='mt-4 text-sm text-gray-400'>
@@ -49,7 +49,7 @@ export default function GenAIReliabilityScorecards2027Page() {
             </h3>
             <ul className='text-gray-300 list-disc list-inside space-y-2'>
               <li>Groundedness and refusal accuracy by task</li>
-              <li>P95 latency, tail risk, and cache hit rate</li>
+              <li>P95 latencytail riskand cache hit rate</li>
               <li>Cost per outcome ($/win) with budget ceilings</li>
               <li>Canary KPIs with automatic rollback</li>
             </ul>
@@ -60,8 +60,8 @@ export default function GenAIReliabilityScorecards2027Page() {
               Budgeted Actions
             </h3>
             <p className='text-gray-300'>
-              Tie routing, quality tiers, and retries to live budgets. When
-              spend or latency drifts, the platform auto‑routes to cheaper tiers
+              Tie routing, quality tiersand retries to live budgets. When
+              spend or latency driftsthe platform auto‑routes to cheaper tiers
               or rolls back.
             </p>
           </section>
@@ -72,7 +72,7 @@ export default function GenAIReliabilityScorecards2027Page() {
             </h3>
             <ol className='text-gray-300 list-decimal list-inside space-y-2'>
               <li>Define 3–5 SLIs per journey and map to KPIs</li>
-              <li>Set budgets for latency, quality, and cost</li>
+              <li>Set budgets for latencyqualityand cost</li>
               <li>Deploy canaries; require green to promote</li>
               <li>Automate rollback on SLI breach</li>
             </ol>
@@ -101,7 +101,7 @@ export default function GenAIReliabilityScorecards2027Page() {
                   Agent Release Guardrails 2026
                 </h4>
                 <p className='text-gray-300 text-sm'>
-                  Budgets, approvals, and instant rollback for safe releases.
+                  Budgetsapprovalsand instant rollback for safe releases.
                 </p>
               </div>
             </ArrowRight>

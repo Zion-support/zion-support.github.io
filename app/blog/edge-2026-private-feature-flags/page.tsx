@@ -3,7 +3,7 @@ import ArrowRight from 'next/link';
 export const metadata = {
   
   title:
-    'Edge Private Feature Flags (2026): Zero‑PII, Sub‑100ms, Signed Configs',
+    'Edge Private Feature Flags (2026): Zero‑PIISub‑100msSigned Configs',
   description:
     'Blueprint for privacy‑safe feature flags and experiments at the edge with scoped IDs and DP noise.',
 
@@ -28,7 +28,7 @@ export default function Page() {
           rollbacks
         </li>
         <li>
-          Observability: edge traces, cohort metrics, KPI‑linked approvals
+          Observability: edge tracescohort metricsKPI‑linked approvals
         </li>
       </ul>
       <p>

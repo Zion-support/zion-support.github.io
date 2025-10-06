@@ -4,7 +4,7 @@ export const metadata = {
   
   title: 'E2E AI Tracing 2026: From Prompts to Outcomes | Zion Tech Group',
   description:
-    'Blueprint for end-to-end AI tracing: prompts, tools, calls, SLAs, and KPI‑linked scorecards for reliable AI at scale.',
+    'Blueprint for end-to-end AI tracing: prompts, tools, callsSLAsand KPI‑linked scorecards for reliable AI at scale.',
 
 };;
 
@@ -21,7 +21,7 @@ export default function Page() {
         <p className='text-lg text-slate-300 mb-8'>
           Instrument every step of AI workflows with end‑to‑end traces: prompts,
           tools, external calls, budgets, and outcomes. Wire traces to
-          KPI‑linked scorecards, approvals, and rollback for reliable autonomy.
+          KPI‑linked scorecardsapprovalsand rollback for reliable autonomy.
         </p>
 
         <div className='prose prose-invert prose-indigo max-w-none'>
@@ -50,8 +50,8 @@ export default function Page() {
 
           <h2>Results</h2>
           <p>
-            Organizations report 40–70% MTTR reduction, 25–50% cost savings via
-            budget controls, and measurable lift in accuracy and CSAT with
+            Organizations report 40–70% MTTR reduction25–50% cost savings via
+            budget controlsand measurable lift in accuracy and CSAT with
             trace‑informed iterations.
           </p>
         </div>

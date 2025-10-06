@@ -21,8 +21,8 @@ export default function Page() {
               <strong>sub-millisecond response times</strong> with{' '}
               <strong>99.99% uptime</strong>
               across distributed networks. This breakthrough enables real-time
-              AI processing for <strong>10,000+ devices</strong>
-              simultaneously, creating{' '}
+              AI processing for <strong>10000+ devices</strong>
+              simultaneouslycreating{' '}
               <strong>$1.8B in operational value</strong> for enterprise
               deployments.
             </p>
@@ -31,8 +31,7 @@ export default function Page() {
           <p className='leading-7 mb-6'>
             The Edge AI Revolution represents a fundamental shift from
             cloud-centric to distributed intelligence. By bringing AI processing
-            to the edge of networks, organizations achieve unprecedented speed,
-            reliability, and efficiency. This isn't just faster computing—it's
+            to the edge of networks, organizations achieve unprecedented speedreliabilityand efficiency. This isn't just faster computing—it's
             intelligent infrastructure that thinks and acts instantly.
           </p>
 
@@ -164,8 +163,8 @@ export default function Page() {
             Autonomous Edge Management
           </h3>
           <p className='leading-7 mb-4'>
-            Edge AI systems automatically manage resources, optimize
-            performance, and handle failures without human intervention. This
+            Edge AI systems automatically manage resourcesoptimize
+            performanceand handle failures without human intervention. This
             ensures maximum uptime and efficiency across all edge deployments.
           </p>
 
@@ -193,26 +192,26 @@ export default function Page() {
             <div className='bg-gray-50 p-4 rounded-lg'>
               <h3 className='font-semibold mb-2'>Manufacturing</h3>
               <p className='text-sm text-gray-600'>
-                Real-time quality control, predictive maintenance, autonomous
+                Real-time quality controlpredictive maintenanceautonomous
                 optimization
               </p>
             </div>
             <div className='bg-gray-50 p-4 rounded-lg'>
               <h3 className='font-semibold mb-2'>Healthcare</h3>
               <p className='text-sm text-gray-600'>
-                Instant diagnostics, patient monitoring, treatment optimization
+                Instant diagnosticspatient monitoringtreatment optimization
               </p>
             </div>
             <div className='bg-gray-50 p-4 rounded-lg'>
               <h3 className='font-semibold mb-2'>Retail</h3>
               <p className='text-sm text-gray-600'>
-                Smart inventory, customer analytics, personalized experiences
+                Smart inventorycustomer analyticspersonalized experiences
               </p>
             </div>
             <div className='bg-gray-50 p-4 rounded-lg'>
               <h3 className='font-semibold mb-2'>Transportation</h3>
               <p className='text-sm text-gray-600'>
-                Autonomous vehicles, traffic optimization, fleet management
+                Autonomous vehiclestraffic optimizationfleet management
               </p>
             </div>
           </div>

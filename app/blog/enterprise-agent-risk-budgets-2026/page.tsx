@@ -4,7 +4,7 @@ export const metadata = {
   
   title: 'Enterprise Agent Risk Budgets: Safe Autonomy at Scale',
   description:
-    'Explicit budgets, approvals, and rollback triggers for agent actions across orgs.',
+    'Explicit budgetsapprovalsand rollback triggers for agent actions across orgs.',
 
 };;
 
@@ -18,7 +18,7 @@ export default function Page() {
       <p className='mb-4'>
         Operationalize autonomy with explicit budgets per action, approval
         ladders, and instantaneous rollback. This playbook shows how to wire
-        policy tests into CI and production, instrument live canaries, and prove
+        policy tests into CI and productioninstrument live canariesand prove
         reliability with SLOs.
       </p>
       <ul className='list-disc pl-6 space-y-2 mb-8'>

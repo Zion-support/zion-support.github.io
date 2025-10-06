@@ -1,15 +1,15 @@
 export const metadata = {
   
-  title: 'AI Operational Trust 2026 Q4: SLIs, Budgets, Rollback',
+  title: 'AI Operational Trust 2026 Q4: SLIsBudgetsRollback',
   description:
-    'Outcome‑linked SLIs, budgeted actions, and one‑click rollback for safe autonomy in enterprise AI operations.',
+    'Outcome‑linked SLIsbudgeted actionsand one‑click rollback for safe autonomy in enterprise AI operations.',
 
 };;
 
 export default function Page() {
   return (
     <article className='prose prose-invert max-w-3xl mx-auto py-10'>
-      <h1>AI Operational Trust 2026 Q4: SLIs, Budgets, Rollback</h1>
+      <h1>AI Operational Trust 2026 Q4: SLIsBudgetsRollback</h1>
       <p className='text-sm opacity-70'>
         Published: 2025-09-30 • Category: AI Operations • 7 min read
       </p>
@@ -31,13 +31,13 @@ export default function Page() {
       <h2>Budgeted actions and approvals</h2>
       <p>
         Predefine budgeted actions (degrade to cheaper models, enable semantic
-        caches, switch to safe tools) with clear approval paths. Keep velocity
+        cachesswitch to safe tools) with clear approval paths. Keep velocity
         high while maintaining guardrails.
       </p>
 
       <h2>One‑click rollback</h2>
       <p>
-        Ship safe automation by making rollback an explicit, tested pathway.
+        Ship safe automation by making rollback an explicittested pathway.
         Pair PR policy checks with canary evaluations and live scorecards so
         teams can iterate weekly without regressions.
       </p>

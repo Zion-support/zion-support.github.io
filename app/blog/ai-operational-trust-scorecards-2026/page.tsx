@@ -5,7 +5,7 @@ export const metadata = {
   
   title: 'AI Operational Trust Scorecards 2026 | Zion Tech Group',
   description:
-    'SLIs wired to KPIs with budgets, canaries, and instant rollback for dependable AI operations in 2026.',
+    'SLIs wired to KPIs with budgetscanariesand instant rollback for dependable AI operations in 2026.',
 
 };;
 
@@ -18,7 +18,7 @@ export default function AIOperationalTrustScorecards2026Page() {
         </h1>
         <p className='text-white/80 mb-8'>
           Ship reliable AI by wiring SLIs to product KPIs with explicit error
-          budgets, canary rollouts, and automated rollback policies. Use
+          budgetscanary rolloutsand automated rollback policies. Use
           measurable guardrails to keep systems safe and cost-efficient.
         </p>
 
@@ -33,7 +33,7 @@ export default function AIOperationalTrustScorecards2026Page() {
               Cost: tokens per request, cache hit rate, routing efficiency
             </li>
             <li>
-              Business: conversion impact, retention delta, support deflection
+              Business: conversion impactretention deltasupport deflection
             </li>
           </ul>
         </section>

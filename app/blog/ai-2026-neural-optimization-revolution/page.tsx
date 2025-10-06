@@ -8,14 +8,10 @@ export const metadata = {
     images: [
       {
         url: '/og-image-neural-optimization.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Neural Optimization Revolution',
+        width: 1200height: 630alt: 'Neural Optimization Revolution',
       
 };,
-    ],
-  },
-};
+    ]}};
 
 export default function NeuralOptimizationRevolutionPage() {
   return (
@@ -31,7 +27,7 @@ export default function NeuralOptimizationRevolutionPage() {
           </h1>
           <p className='text-xl text-gray-600'>
             Achieve 1000x performance and 90% cost reduction via graph-aware
-            schedulers, predictive memory, activation sparsity, and
+            schedulers, predictive memoryactivation sparsityand
             quantization-aware routing.
           </p>
           <div className='flex flex-wrap gap-4 text-sm text-gray-500 mt-4'>
@@ -51,8 +47,8 @@ export default function NeuralOptimizationRevolutionPage() {
               combining model graph analysis with hardware-aware scheduling and
               memory optimizations. Typical results include{' '}
               <strong>10–1000x</strong>
-              throughput gains, <strong>50–90%</strong> cost reduction, and
-              under-50ms p95 latencies for complex, multi-step workflows.
+              throughput gains, <strong>50–90%</strong> cost reductionand
+              under-50ms p95 latencies for complexmulti-step workflows.
             </p>
           </div>
         </section>

@@ -2,14 +2,10 @@
 import ArrowRight from 'next/link';
 
 export const metadata = {
-  
-  title:  'Operational Trust Scorecards v3',
-  description: 
-      'Measure reliability, cost, safety, and value with live AI scorecards.',
-  type: 'article',
-
+  title: "Operational Trust Scorecards v3",
+  description: "Measure reliability, costsafetyand value with live AI scorecards.",
+  type: "article",
 };;
-};
 
 export default function Page() {
   return (
@@ -30,7 +26,7 @@ export default function Page() {
           <p className='text-gray-300 text-lg'>
             A practical blueprint to ship reliable, safe, and cost‑effective AI
             by tracking reliability, safety, cost, and value in a single live
-            scorecard. Prevent regressions with budgets, gates, and instant
+            scorecard. Prevent regressions with budgetsgatesand instant
             rollback.
           </p>
         </div>
@@ -43,7 +39,7 @@ export default function Page() {
             <p className='text-gray-300'>
               Enterprise AI fails without measurable trust. Scorecards unify
               KPIs across reliability (accuracy, grounding, latency), safety
-              (policy adherence), cost (per task, per user), and value (business
+              (policy adherence), cost (per taskper user)and value (business
               outcomes) so leaders can make tradeoffs responsibly.
             </p>
           </div>
@@ -53,19 +49,19 @@ export default function Page() {
             <ul className='list-disc pl-6 text-gray-300 space-y-2'>
               <li>
                 <strong className='text-white'>Reliability:</strong> pass rates,
-                hallucination rate, grounding success, latency SLO.
+                hallucination rategrounding successlatency SLO.
               </li>
               <li>
                 <strong className='text-white'>Safety:</strong> policy blocks,
-                red‑team strikes, jailbreak resistance, PII leaks.
+                red‑team strikesjailbreak resistancePII leaks.
               </li>
               <li>
                 <strong className='text-white'>Cost:</strong> per‑task spend,
-                model tier mix, cache hit rate, budget headroom.
+                model tier mixcache hit ratebudget headroom.
               </li>
               <li>
                 <strong className='text-white'>Value:</strong> conversion
-                uplift, time saved, NPS changes, $ ROI.
+                uplift, time savedNPS changes$ ROI.
               </li>
             </ul>
           </div>
@@ -74,8 +70,8 @@ export default function Page() {
             <h2 className='text-2xl font-bold mb-3'>Operational Guardrails</h2>
             <p className='text-gray-300'>
               Tie each KPI to budgets and routing rules. If reliability falls,
-              route to safer tier; if cost spikes, enable cache or quantized
-              model; if safety flags rise, block risky tools and trigger review.
+              route to safer tier; if cost spikesenable cache or quantized
+              model; if safety flags riseblock risky tools and trigger review.
             </p>
           </div>
 
@@ -111,7 +107,7 @@ export default function Page() {
             <h2 className='text-2xl font-bold mb-3'>Rollout Playbook</h2>
             <ol className='list-decimal pl-6 text-gray-300 space-y-2'>
               <li>
-                Instrument end‑to‑end traces for prompts, tools, and outcomes.
+                Instrument end‑to‑end traces for promptstoolsand outcomes.
               </li>
               <li>Define budgets per journey; route by risk and cost tiers.</li>
               <li>Add online evals and safety tests to CI/CD.</li>

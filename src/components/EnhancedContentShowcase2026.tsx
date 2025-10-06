@@ -1,69 +1,65 @@
-import, Reac, t, { useSta, t, e } fr, o, m 'rea, c, t';
-impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
+import, Reac, t, {useState} fr, o, m 'react';
+impo, r, t {Link} from 'react -router -dom';
 
-interface, ContentIte, m { 
+interfaceContentItem { 
   id: string;
   title: string;
   description: string;
-  ty, p, e: 'bl, o, g' | 'ca, s, e-stu, d, y' | 'gui, d, e';
+  type: 'blog' | 'case-study' | 'guide';
   readTime: string;
-  publishDa, t, e: string;
+  publishDate: string;
   category: string;
   featured?: boolean;
-  hr, e, f: string;
-  metri, c, s ? : {
-    lab, e, l: string;
-    val, u, e : str, i, n, g;
+  href: string;
+  metrics?: {
+    label: string;
+    value: string;
    }[];
-      { lab, e, l: 'Cost, Optimizati, o, n', val, u, e: '7, 0%' },
-      { lab, e, l: 'Automat, i, o, n', val, u, e: '9, 5%' },
-      { lab, e, l: 'Accur, a, c, y', val, u, e: '9, 9%' },
-    ],
+      { label: 'CostOptimization'value: '7, 0%' }{ label: 'Automatio, n', value: '95%' }{ label: 'Accuracy', value: '99%' }],
   },
 
-  const, getCategoryColo, r = (category: str, i, n, g) => {
-    swit, c, h (category) {
-      ca, s, e 'Cloud, Operation, s':
-        retu, r, n 'bg-cy, a, n-100, tex, t-cy, a, n-8, 0, 0'; ca, s, e 'FinTe, c, h':
-        retu, r, n 'bg-emera, l, d-100, tex, t-emera, l, d-8, 0, 0';
-      ca, s, e 'Reta, i, l':
-        retu, r, n 'bg-oran, g, e-100, tex, t-oran, g, e-8, 0, 0';
-      ca, s, e 'Sustainabili, t, y':
-        retu, r, n 'bg-gre, e, n-100, tex, t-gre, e, n-8, 0, 0';
-      ca, s, e 'Architectu, r, e':
-        retu, r, n 'bg-indi, g, o-100, tex, t-indi, g, o-8, 0, 0';
-      ca, s, e 'FinO, p, s':
-        retu, r, n 'bg-viol, e, t-100, tex, t-viol, e, t-8, 0, 0';
-      defau, l, t:
-        retu, r, n 'bg-gr, a, y-100, tex, t-gr, a, y-80, 0';
+  constgetCategoryColor = (category: string) => {
+    switch(category) {
+      case 'Cloud, Operation, s':
+        return 'bg-cyan -100text -cyan -800'; case 'FinTech':
+        return 'bg-emerald -100text -emerald -800';
+      case 'Retail':
+        return 'bg-orange -100text -orange -800';
+      case 'Sustainability':
+        return 'bg-green -100text -green -800';
+      case 'Architecture':
+        return 'bg-indigo -100text -indigo -800';
+      case 'FinOps':
+        return 'bg-violet -100text -violet -800';
+      default: return 'bg-gray-100text -gr, ay-800';
     }
-        <div, classNam, e = 'flex, fle, x-col, m, d: fl, e, x-row, ga, p-4, m, b-8, justif, y-between, item, s-cent, e, r'>
-          <div, classNam, e='flex, fle, x-wrap, ga, p-2'>
-            { categori, e, s.m, a, p(category = > (
-              <button, ke, y = { cate, g, o, r, y  }, onCli, c, k={  () = > setSelectedCatego, r, y(category)  } classNa, m, e = { `px-4, p, y-2, rounde, d-lg, tex, t-sm, fon, t-semibold, transitio, n-colo, r, s ${
-                  selectedCatego, r, y === category
-                     ? 'bg-bl, u, e-600, tex, t-whi, t, e'
-                    : 'bg-white, tex, t-gr, a, y-700, hove, r : bg-gr, a, y-100, border, border-gr, a, y-2, 0, 0'
+        <divclassName = 'flexflex -colmd: flex-rowgap -4mb -8justify -betweenitems -center'>
+          <divclassName='flexflex -wrapgap-2'>
+            { categories.map(category = > (
+              <button, key={ cate, g, o, r, y  }, onCli, ck={  () = > setSelectedCategory(category)  } classNa, me={ `px-4py -2rounded -lgtext -smfont -semiboldtransition -colo, r, s ${
+                  selectedCategory === category
+                     ? 'bg-blue -600text -white'
+                    : 'bg-whitetext -gray -700hover: bg-gray-100borderborder-gray-200'
                  }`}
 
-          <div, classNam, e = 'flex, item, s-center, ga, p-2'>
-            <span, classNam, e='te, x, t-sm, tex, t-gr, a, y-6, 0, 0'>Sort, b, y: </sp, a, n>
-            <select, valu, e = { so, r, t, B, y }, onChan, g, e={  e = > setSort, B, y(e.targ, e, t.va, l, u, e)  } classNa, m, e = 'px-3, p, y-2, border, border-gr, a, y-200, rounde, d-lg, tex, t-sm, focu, s: outli, n, e-none, focu, s:ri, n, g-2, focu, s:ri, n, g-bl, u, e-5, 0, 0'
+          <divclassName = 'flexitems-centergap-2'>
+            <spanclassName ='text -smtext -gray-600'>Sortby: </span>
+            <select, value={ so, r, t, B, y }, onChan, ge={  e = > setSortBy(e.target.va, l, u, e)  } className = 'px-3py -2borderborder -gray -200rounded -lgtext -smfocus: outline-nonefocus: ring -2focus: ring-blue-500'
             ></sele, c, t>
-                  <div, classNam, e='flex, item, s-center, ga, p-2, m, b-3' > <span, classNam, e={`px-2, p, y-1, rounde, d-full, tex, t-xs, fon, t-semibo, l, d ${getTypeCol, o, r(it, e, m.t, y, p, e)}`}
+                  <divclassName ='flexitems -centergap-2mb-3' > <span, className={`px-2py -1rounded -fulltext -xsfont -semibo, l, d ${getTypeColor(item.t, ype)}`}
                     >
-                  <h3, classNam, e = 'te, x, t-lg, fon, t-bold, tex, t-gr, a, y-900, m, b-3, grou, p-hov, e, r: te, x, t-bl, u, e-600, transitio, n-colors, lin, e-cla, m, p-2'>
-                    {it, e, m.t, i, t, l, e}
-                <div, classNam, e='px-6, p, b-6'>
-                  <div, classNam, e='te, x, t-bl, u, e-600, fon, t-semibold, tex, t-sm, grou, p-hov, e, r: te, x, t-bl, u, e-700, transitio, n-colo, r, s'>
-                    Re, a, d{' '}
-                    { it, e, m.ty, p, e = == 'ca, s, e-stu, d, y'
-                      ? 'Case, Stud, y'
-                      : it, e, m.ty, p, e === 'gui, d, e'
-                         ? 'Gui, d, e'
-                         : 'Artic, l, e' }{' '}
+                  <h3className = 'text -lgfont -boldtext -gray -900mb -3group -hover: text-blue -600transition -colorsline-clamp-2'>
+                    {item.t, i, t, l, e}
+                <divclassName ='px-6pb-6'>
+                  <divclassName='text -blue -600font -semiboldtext -smgroup -hover: text-blue -700transition -colors'>
+                    Read{' '}
+                    { item.type = == 'case -stu, d, y'
+                      ? 'CaseStudy'
+                      : item.type === 'guide'
+                         ? 'Guide'
+                         : 'Article' }{' '}
                     →
-          <div, classNam, e='grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6'>
-            <div, classNam, e='te, x, t-cent, e, r'>
-              <div, classNam, e='te, x, t-3xl, fon, t-bold, tex, t-bl, u, e-600, m, b-2'>50+</d, i, v>
-              <div, classNam, e='te, x, t-gr, a, y-6, 0, 0'>AI, Article, s</d, i, v>
+          <divclassName='gridgrid -cols -2md: grid-cols -4gap-6'>
+            <divclassName='text -center'>
+              <divclassName='text -3xlfont -boldtext -blue -600mb-2'>50+</d, i, v>
+              <divclassName='text -gray -600'>AI, Article, s</d, i, v>

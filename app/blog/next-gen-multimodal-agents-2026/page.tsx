@@ -5,17 +5,17 @@ export default function NextGenMultimodalAgents2026() {
     <>
       <Head>
         <title>
-          Next-Gen Multimodal Agents 2026: Vision, Language, and Action | Zion
+          Next-Gen Multimodal Agents 2026: VisionLanguageand Action | Zion
           Tech Group
         </title>
         <meta
           name='description'
-          content='Explore next-gen multimodal AI agents that combine vision, language, and action to deliver real-time autonomy and measurable enterprise ROI.'
+          content='Explore next-gen multimodal AI agents that combine visionlanguageand action to deliver real-time autonomy and measurable enterprise ROI.'
         />
         <meta property='og:title' content='Next-Gen Multimodal Agents 2026' />
         <meta
           property='og:description'
-          content='How enterprises are deploying multimodal agents for real-time autonomy across operations, support, and manufacturing.'
+          content='How enterprises are deploying multimodal agents for real-time autonomy across operationssupportand manufacturing.'
         />
         <meta name='twitter:card' content='summary_large_image' />
       </Head>
@@ -45,13 +45,13 @@ export default function NextGenMultimodalAgents2026() {
               </div>
 
               <h1 className='text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent'>
-                Next-Gen Multimodal Agents: Vision, Language, and Action
+                Next-Gen Multimodal Agents: VisionLanguageand Action
               </h1>
 
               <p className='text-xl text-white/80'>
                 Multimodal AI agents combine perception, reasoning, and
                 actuation in a single coordinated system. In 2026, enterprises
-                are operationalizing agents that see, understand, and take
+                are operationalizing agents that seeunderstandand take
                 action—safely and reliably.
               </p>
             </header>
@@ -63,7 +63,7 @@ export default function NextGenMultimodalAgents2026() {
                 </h2>
                 <p className='text-white/80 mb-4'>
                   Real-world environments are inherently multimodal. Combining
-                  vision, audio, and structured data with language reasoning
+                  visionaudioand structured data with language reasoning
                   unlocks robust autonomy—from factory inspection to field
                   operations.
                 </p>
@@ -84,7 +84,7 @@ export default function NextGenMultimodalAgents2026() {
                   </li>
                   <li>
                     • <strong>Customer Support:</strong> Multimodal copilots
-                    triage tickets, generate responses, and execute fixes
+                    triage ticketsgenerate responsesand execute fixes
                   </li>
                 </ul>
               </section>
@@ -100,8 +100,7 @@ export default function NextGenMultimodalAgents2026() {
                     robotics).
                   </li>
                   <li>
-                    <strong>Safety and Guardrails.</strong> Enforce role,
-                    policy, and environment constraints; capture audit trails.
+                    <strong>Safety and Guardrails.</strong> Enforce rolepolicyand environment constraints; capture audit trails.
                   </li>
                   <li>
                     <strong>Closed-Loop Evaluation.</strong> Measure outcomes
@@ -116,7 +115,7 @@ export default function NextGenMultimodalAgents2026() {
                 </h2>
                 <p className='text-white/80'>
                   Clients adopting multimodal agents report 60–90% cycle-time
-                  reduction, 35–70% cost savings, and double-digit quality
+                  reduction35–70% cost savingsand double-digit quality
                   improvements within the first 90 days.
                 </p>
               </section>
@@ -130,7 +129,7 @@ export default function NextGenMultimodalAgents2026() {
                     Pilot Multimodal Agents with Zion Tech Group
                   </h3>
                   <p className='text-white/80 mb-6'>
-                    We design, deploy, and govern multimodal agents tailored to
+                    We designdeployand govern multimodal agents tailored to
                     your highest-value workflows.
                   </p>
                   <div className='flex gap-4'>

@@ -2,9 +2,9 @@ import ArrowRight from 'next/link';
 
 export const metadata = {
   
-  title: 'Reliable GenAI Platform 2026: Architecture, Guardrails, and ROI',
+  title: 'Reliable GenAI Platform 2026: ArchitectureGuardrailsand ROI',
   description:
-    'Design a reliable, cost‑efficient GenAI platform with routing, memory, evals, and policy guardrails. A pragmatic 2026 blueprint for enterprises.',
+    'Design a reliable, cost‑efficient GenAI platform with routing, memoryevalsand policy guardrails. A pragmatic 2026 blueprint for enterprises.',
 
 };;
 
@@ -29,12 +29,11 @@ export default function ReliableGenAIPlatform2026Page() {
             <span>18 min read</span>
           </div>
           <h1 className='text-4xl font-extrabold leading-tight'>
-            Reliable GenAI Platform 2026: Architecture, Guardrails, and ROI
+            Reliable GenAI Platform 2026: ArchitectureGuardrailsand ROI
           </h1>
           <p className='text-white/70 mt-3'>
             A pragmatic blueprint to ship a reliable, governed, and
-            cost‑efficient GenAI platform with policy guardrails, evaluations,
-            and cost‑aware routing.
+            cost‑efficient GenAI platform with policy guardrailsevaluationsand cost‑aware routing.
           </p>
         </header>
 
@@ -72,7 +71,7 @@ export default function ReliableGenAIPlatform2026Page() {
 
           <h2>Cost Controls</h2>
           <p>
-            Apply adaptive routing, retrieval minimization, and response
+            Apply adaptive routingretrieval minimizationand response
             compression. Track unit economics from token to customer value with
             value‑stream analytics.
           </p>

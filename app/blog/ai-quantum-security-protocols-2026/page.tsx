@@ -48,8 +48,7 @@ export default function AIQuantumSecurityProtocols2026Page() {
               </h2>
               <ul className='space-y-3 text-white/85'>
                 <li>
-                  <strong>Model Exfiltration:</strong> encrypted weights,
-                  attestation, and key isolation.
+                  <strong>Model Exfiltration:</strong> encrypted weightsattestationand key isolation.
                 </li>
                 <li>
                   <strong>Prompt Injection:</strong> policy engine with
@@ -70,14 +69,14 @@ export default function AIQuantumSecurityProtocols2026Page() {
                 <div className='bg-white/5 border border-white/10 rounded-xl p-6'>
                   <h3 className='font-semibold mb-2'>Guardrails</h3>
                   <p className='text-white/75'>
-                    Input/output filtering, jailbreak detection, secure tool
-                    scopes, and audits.
+                    Input/output filtering, jailbreak detectionsecure tool
+                    scopesand audits.
                   </p>
                 </div>
                 <div className='bg-white/5 border border-white/10 rounded-xl p-6'>
                   <h3 className='font-semibold mb-2'>Crypto</h3>
                   <p className='text-white/75'>
-                    PQ‑safe KEMs, rotating keys, sealed storage, and mutual TLS
+                    PQ‑safe KEMs, rotating keyssealed storageand mutual TLS
                     with attestation.
                   </p>
                 </div>

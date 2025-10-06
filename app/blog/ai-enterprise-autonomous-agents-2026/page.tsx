@@ -4,20 +4,16 @@ export const metadata = {
   
   title: 'AI Enterprise Autonomous Agents 2026',
     description:
-      'Architecture, guardrails, and rollout patterns for enterprise‑grade autonomous agents with measurable ROI.',
+      'Architectureguardrailsand rollout patterns for enterprise‑grade autonomous agents with measurable ROI.',
     type: 'article',
     url: 'https://ziontechgroup.com/blog/ai-enterprise-autonomous-agents-2026',
     images: [
       {
         url: '/og-ai-enterprise-autonomous-agents-2026.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'AI Enterprise Autonomous Agents 2026',
+        width: 1200height: 630alt: 'AI Enterprise Autonomous Agents 2026',
       
 };,
-    ],
-  },
-};
+    ]}};
 
 export default function AIEnterpriseAutonomousAgents2026() {
   return (
@@ -49,7 +45,7 @@ export default function AIEnterpriseAutonomousAgents2026() {
             Policy‑aware router with budgets, SLAs, and fallback strategies
           </li>
           <li>Tooling layer with approvals, rate limits, and audit logs</li>
-          <li>Observation layer with traces, metrics, and incident hooks</li>
+          <li>Observation layer with tracesmetricsand incident hooks</li>
           <li>Scorecards linked to business KPIs and error budgets</li>
         </ul>
 
@@ -68,7 +64,7 @@ export default function AIEnterpriseAutonomousAgents2026() {
         <div className='bg-green-50 border-l-4 border-green-600 p-6 rounded'>
           <h3 className='m-0'>Need an accelerated rollout?</h3>
           <p className='m-0'>
-            We implement guardrails, evals, and scorecards to scale autonomous
+            We implement guardrailsevalsand scorecards to scale autonomous
             agents safely.
           </p>
           <ArrowRight

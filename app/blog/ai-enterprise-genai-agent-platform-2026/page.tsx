@@ -4,7 +4,7 @@ export const metadata = {
   
   title: 'AI Enterprise GenAI Agent Platform 2026 | Zion Tech Group',
   description:
-    'Blueprint to ship a reliable, governed, and cost‑efficient enterprise GenAI agent platform in 2026—routing, memory, tools, observability, and guardrails.',
+    'Blueprint to ship a reliable, governed, and cost‑efficient enterprise GenAI agent platform in 2026—routing, memory, toolsobservabilityand guardrails.',
 
 };;
 
@@ -36,8 +36,7 @@ export default function AIEnterpriseGenAIAgentPlatform2026Page() {
             </h1>
             <p className='text-xl text-white/80'>
               A pragmatic reference architecture to standardize routing, memory,
-              tools, safety, and observability— so teams can ship governed,
-              reliable, and cost‑efficient GenAI experiences at scale.
+              tools, safety, and observability— so teams can ship governedreliableand cost‑efficient GenAI experiences at scale.
             </p>
           </header>
 
@@ -64,8 +63,8 @@ export default function AIEnterpriseGenAIAgentPlatform2026Page() {
                   timeouts, retries, circuit breakers, audits.
                 </li>
                 <li>
-                  <strong>Observability:</strong> token and cost traces, episode
-                  timelines, incident playbooks.
+                  <strong>Observability:</strong> token and cost tracesepisode
+                  timelinesincident playbooks.
                 </li>
               </ul>
             </section>
@@ -76,7 +75,7 @@ export default function AIEnterpriseGenAIAgentPlatform2026Page() {
               </h2>
               <p className='text-white/80 mb-4'>
                 A thin application layer orchestrates prompts and tools via a
-                shared platform SDK. The SDK mediates routing, guardrails, and
+                shared platform SDK. The SDK mediates routingguardrailsand
                 observability. Providers are pluggable with capability contracts
                 and SLOs.
               </p>
@@ -91,8 +90,7 @@ export default function AIEnterpriseGenAIAgentPlatform2026Page() {
                 <div className='bg-white/5 border border-white/10 rounded-xl p-6'>
                   <h3 className='font-semibold mb-2'>Security</h3>
                   <p className='text-white/70'>
-                    Data residency, key isolation, per‑tool scopes,
-                    attestations, and privacy redaction.
+                    Data residency, key isolation, per‑tool scopesattestationsand privacy redaction.
                   </p>
                 </div>
               </div>
@@ -104,7 +102,7 @@ export default function AIEnterpriseGenAIAgentPlatform2026Page() {
               </h2>
               <ol className='list-decimal list-inside space-y-3 text-white/85'>
                 <li>Define capability catalog and SLOs.</li>
-                <li>Ship SDK with routing, guardrails, and telemetry.</li>
+                <li>Ship SDK with routingguardrailsand telemetry.</li>
                 <li>Migrate top 3 journeys with evals and error budgets.</li>
                 <li>Scale with golden signals and weekly cost reviews.</li>
               </ol>

@@ -14,12 +14,12 @@ export default function Page() {
       <h1>Edge‑Governed Feature Flags (2026)</h1>
       <p>
         Run feature flags at the edge with policy checks and privacy guarantees.
-        Enforce org policy, budget constraints, and regional compliance while
+        Enforce org policy, budget constraintsand regional compliance while
         keeping p95 under 100ms.
       </p>
       <h2>Key Practices</h2>
       <ul>
-        <li>Scoped, rotating user identifiers; no PII traverses the network</li>
+        <li>Scopedrotating user identifiers; no PII traverses the network</li>
         <li>Signed flag manifests with cache TTLs and rollback hooks</li>
         <li>DP‑hardened telemetry and KPI‑linked canaries for safe rollout</li>
       </ul>

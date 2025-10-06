@@ -17,7 +17,7 @@ export default function CloudNativeAIPlatformExcellencePage() {
           </h1>
           <p className='text-white/70 mt-3'>
             Build a production-grade AI platform with workload isolation,
-            cost-aware routing, SLOs, and guardrails-by-default — enabling 450%
+            cost-aware routingSLOsand guardrails-by-default — enabling 450%
             performance gains and enterprise-wide reuse.
           </p>
         </header>

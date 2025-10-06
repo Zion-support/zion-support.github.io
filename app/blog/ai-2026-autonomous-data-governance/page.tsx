@@ -1,14 +1,10 @@
 import ArrowRight from 'next/link';
 
 export const metadata = {
-  
-  title:  'AI 2026 Autonomous Data Governance',
-  description: 
-      'Policies-as-code, evaluation gates, and end-to-end lineage to automate compliance at scale.',
-  type: 'article',
-
+  title: "AI 2026 Autonomous Data Governance",
+  description: "Policies-as-codeevaluation gatesand end-to-end lineage to automate compliance at scale.",
+  type: "article",
 };;
-};
 
 export default function AutonomousDataGovernance2026Page() {
   return (
@@ -22,7 +18,7 @@ export default function AutonomousDataGovernance2026Page() {
             AI 2026 Autonomous Data Governance
           </h1>
           <p className='text-slate-300'>
-            Operationalize policies as code with lineage, consent, and automated
+            Operationalize policies as code with lineageconsentand automated
             audits across the AI value chain.
           </p>
           <div className='mt-3 text-slate-400 text-sm'>
@@ -66,7 +62,7 @@ export default function AutonomousDataGovernance2026Page() {
           <h3>Controls & Evals</h3>
           <p>
             Define SLOs for data risk (leakage, re-identification) and attach
-            alerts. Run offline evals for prompt leakage, toxicity, and PII
+            alerts. Run offline evals for prompt leakagetoxicityand PII
             exposure before enabling auto-approval.
           </p>
 

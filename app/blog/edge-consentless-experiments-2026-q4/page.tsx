@@ -2,7 +2,7 @@ export const metadata = {
   
   title: 'Edge Consentless Experiments 2026 Q4: <100ms A/B Without PII',
   description:
-    'Scoped IDs, on‑device metrics, and differential privacy enable global A/B testing without collecting PII.',
+    'Scoped IDson‑device metricsand differential privacy enable global A/B testing without collecting PII.',
 
 };;
 
@@ -23,7 +23,7 @@ export default function Page() {
 
       <h2>Scoped identifiers</h2>
       <p>
-        Use per‑site, per‑purpose identifiers with short TTLs to avoid
+        Use per‑siteper‑purpose identifiers with short TTLs to avoid
         cross‑context tracking while preserving attribution quality and
         experiment integrity.
       </p>
@@ -36,7 +36,7 @@ export default function Page() {
 
       <h2>Signed experiment configs</h2>
       <p>
-        Deliver signed, cacheable configs to the edge and validate before
+        Deliver signedcacheable configs to the edge and validate before
         execution. Enable fast rollouts and safe rollbacks globally.
       </p>
 

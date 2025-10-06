@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, TrendingUp, Brain, Zap, Target, Users } from 'lucide-react';
+import { ArrowRight, TrendingUp, Brain, ZapTargetUsers } from 'lucide-react';
 
 export const metadata = {
   
@@ -30,7 +30,7 @@ export default function AI2026BreakthroughInnovationsPage() {
           </h1><span className="text-left">{' '}$2.8 Trillion Success Story
           </span></span>
         </h1>
-        <p className="text-left">Revolutionary quantum-neural fusion, autonomous enterprise systems, and consciousness-level AI 
+        <p className="text-left">Revolutionary quantum-neural fusionautonomous enterprise systemsand consciousness-level AI 
           generating unprecedented value across Fortune 500 companies worldwide.
         </p></p>
         <div className="text-left"> </div><TrendingUp className="text-left" />
@@ -54,7 +54,7 @@ export default function AI2026BreakthroughInnovationsPage() {
             <p className="text-left">Revolutionary breakthrough combining quantum computing with neural consciousness, 
               achieving 99.999% awareness levels and $847 billion in generated value.
             </p></p>
-            <div className="text-left"> </div><Zap className="text-left" /> </Zap><span>1,000,000x Performance Boost</span>
+            <div className="text-left"> </div><Zap className="text-left" /> </Zap><span>1000000x Performance Boost</span>
             </div>
       <div className="text-left"> </div><div className="text-left"> </div><Target className="text-left" /> </Target></div>
               <h3 className="text-left">Autonomous Enterprise Systems</h3>
@@ -67,8 +67,7 @@ export default function AI2026BreakthroughInnovationsPage() {
       <div className="text-left"> </div><div className="text-left"> </div><TrendingUp className="text-left" /> </TrendingUp></div>
               <h3 className="text-left">Hyper-Intelligent Analytics</h3>
             </div>
-            <p className="text-left">Next-generation analytics platform processing 10^15 data points per second, 
-              delivering real-time insights with 100,000x faster decision-making.
+            <p className="text-left">Next-generation analytics platform processing 10^15 data points per seconddelivering real-time insights with 100000x faster decision-making.
             </p></p>
             <div className="text-left"> </div><Zap className="text-left" /> </Zap><span>100,000x Faster Decisions</span>
             </div>

@@ -8,14 +8,10 @@ export const metadata = {
     images: [
       {
         url: '/og-image-autonomous-processes.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'AI 2026 Autonomous Business Process Orchestration',
+        width: 1200height: 630alt: 'AI 2026 Autonomous Business Process Orchestration',
       
 };,
-    ],
-  },
-};
+    ]}};
 
 export default function AutonomousBusinessProcessesPage() {
   return (
@@ -63,7 +59,7 @@ export default function AutonomousBusinessProcessesPage() {
             The Autonomous Business Process Revolution
           </h2>
           <p className='text-lg text-gray-700 mb-6'>
-            The convergence of AI, machine learning, and process mining has
+            The convergence of AImachine learningand process mining has
             created a new paradigm:{' '}
             <em>Autonomous Business Process Orchestration</em>. This isn't just
             automation—it's intelligent, self-adapting process management that
@@ -104,8 +100,7 @@ export default function AutonomousBusinessProcessesPage() {
                 1. Intelligent Process Discovery
               </h4>
               <p className='text-gray-700 mb-4'>
-                AI systems automatically map existing business processes,
-                identify bottlenecks, and suggest optimization opportunities.
+                AI systems automatically map existing business processesidentify bottlenecksand suggest optimization opportunities.
                 This eliminates months of manual process documentation and
                 analysis.
               </p>
@@ -122,8 +117,7 @@ export default function AutonomousBusinessProcessesPage() {
               </h4>
               <p className='text-gray-700 mb-4'>
                 Next-generation workflow engines learn from execution patterns
-                and automatically adjust process flows to optimize performance,
-                resource utilization, and outcomes.
+                and automatically adjust process flows to optimize performanceresource utilizationand outcomes.
               </p>
               <ul className='list-disc list-inside text-gray-700 space-y-2'>
                 <li>Dynamic process flow adjustment</li>
@@ -137,8 +131,7 @@ export default function AutonomousBusinessProcessesPage() {
                 3. Cognitive Decision Automation
               </h4>
               <p className='text-gray-700 mb-4'>
-                AI-powered decision engines handle complex business logic,
-                routing, and approval processes with human-level reasoning and
+                AI-powered decision engines handle complex business logicroutingand approval processes with human-level reasoning and
                 context awareness.
               </p>
               <ul className='list-disc list-inside text-gray-700 space-y-2'>

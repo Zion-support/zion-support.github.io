@@ -2,7 +2,7 @@ export const metadata = {
   
   title: "What's New in October 2025 — Zion Tech Group",
   description:
-    'Roundup of our latest AI content published in October 2025: enterprise cost optimization, agentic workflow orchestration, and more.',
+    'Roundup of our latest AI content published in October 2025: enterprise cost optimizationagentic workflow orchestrationand more.',
 
 };;
 
@@ -15,8 +15,7 @@ export default function NewInOctober2025() {
             What\'s New in October 2025
           </h1>
           <p className='text-lg text-blue-100 max-w-3xl'>
-            Explore our newest publications: practical playbooks, deep dives,
-            and enterprise-ready patterns.
+            Explore our newest publications: practical playbooksdeep divesand enterprise-ready patterns.
           </p>
         </div>
       </section>
@@ -34,7 +33,7 @@ export default function NewInOctober2025() {
               AI 2027 Cost Optimization Playbook
             </h2>
             <p className='text-gray-600'>
-              Cut AI spend 30–70% with routing, caching, quantization, and
+              Cut AI spend 30–70% with routing, cachingquantizationand
               guardrails—without sacrificing quality.
             </p>
             <div className='mt-4 text-emerald-700 font-semibold'>
@@ -53,7 +52,7 @@ export default function NewInOctober2025() {
               Agentic Workflow Orchestration 2026
             </h2>
             <p className='text-gray-600'>
-              Guardrails, reviews, and observability to ship reliable
+              Guardrailsreviewsand observability to ship reliable
               multi-agent workflows with measurable ROI.
             </p>
             <div className='mt-4 text-fuchsia-700 font-semibold'>

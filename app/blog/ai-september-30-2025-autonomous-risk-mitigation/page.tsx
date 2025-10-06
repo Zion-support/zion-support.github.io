@@ -5,13 +5,10 @@ export const metadata = {
   
   title: 'Autonomous Risk Mitigation — Enterprise Blueprint (Sept 30, 2025)',
     description:
-      'Deploy autonomous agents with budgets, guardrails, and automated rollback to protect KPIs.',
+      'Deploy autonomous agents with budgetsguardrailsand automated rollback to protect KPIs.',
     type: 'article',
     publishedTime: '2025-09-30T00:00:00.000Z',
-    authors: ['Zion Tech Group'],
-  
-};,
-};
+    authors: ['Zion Tech Group']};
 
 export default function AutonomousRiskMitigationSept302025() {
   return (
@@ -23,11 +20,11 @@ export default function AutonomousRiskMitigationSept302025() {
             <span className='opacity-80'>Sept 30, 2025</span>
           </div>
           <h1 className='text-4xl md:text-5xl font-extrabold text-white leading-tight'>
-            Autonomous Risk Mitigation: Budgets, Guardrails, and Auto‑Rollback
+            Autonomous Risk Mitigation: BudgetsGuardrailsand Auto‑Rollback
           </h1>
           <p className='text-gray-300 mt-4 text-lg max-w-3xl mx-auto'>
             Practical blueprint to ship autonomous systems safely: define
-            budgets tied to KPIs, instrument guardrails, and implement automated
+            budgets tied to KPIsinstrument guardrailsand implement automated
             rollback for measurable reliability.
           </p>
           <div className='text-gray-400 text-sm mt-3'>
@@ -42,8 +39,8 @@ export default function AutonomousRiskMitigationSept302025() {
             </h2>
             <p className='text-gray-300'>
               Adopt a safety-first autonomy stack: risk budgets protect KPIs,
-              policy gates enforce constraints, and continuous evaluation
-              detects drift. When budgets are exceeded, the system gracefully
+              policy gates enforce constraintsand continuous evaluation
+              detects drift. When budgets are exceededthe system gracefully
               rolls back to a safe policy or human-in-the-loop mode.
             </p>
           </div>
@@ -55,7 +52,7 @@ export default function AutonomousRiskMitigationSept302025() {
             <li>Risk budgets per KPI with hard/soft thresholds</li>
             <li>Policy gates, constraints, and allowed action schemas</li>
             <li>Evals coverage across tasks, edge cases, and regressions</li>
-            <li>Online telemetry, audits, and roll-forward plans</li>
+            <li>Online telemetryauditsand roll-forward plans</li>
           </ul>
 
           <div className='grid md:grid-cols-3 gap-6 mb-10'>
@@ -89,7 +86,7 @@ export default function AutonomousRiskMitigationSept302025() {
               Ready to operationalize safe autonomy?
             </h3>
             <p className='text-indigo-100 mb-4'>
-              Our team can help you define budgets, build guardrails, and deploy
+              Our team can help you define budgetsbuild guardrailsand deploy
               with confidence.
             </p>
             <div className='flex gap-3 justify-center'>

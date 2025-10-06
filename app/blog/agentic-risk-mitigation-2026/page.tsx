@@ -2,9 +2,9 @@ import ArrowRight from 'next/link';
 
 export const metadata = {
   
-  title: 'Agentic Risk Mitigation 2026 — Guardrails, Evals, and Safe Autonomy',
+  title: 'Agentic Risk Mitigation 2026 — GuardrailsEvalsand Safe Autonomy',
   description:
-    'Practical framework for mitigating risks in agentic systems: governance, evaluations, kill-switches, and safe autonomy patterns for 2026 enterprise deployment.',
+    'Practical framework for mitigating risks in agentic systems: governance, evaluationskill-switchesand safe autonomy patterns for 2026 enterprise deployment.',
 
 };;
 
@@ -17,7 +17,7 @@ export default function AgenticRiskMitigation2026Page() {
             Agentic Risk Mitigation 2026
           </h1>
           <p className='mt-4 text-lg md:text-xl text-purple-50'>
-            A practical playbook for safe, reliable, and governed autonomous
+            A practical playbook for safereliableand governed autonomous
             agents in the enterprise.
           </p>
           <div className='mt-6 flex flex-wrap gap-3 text-sm'>
@@ -74,7 +74,7 @@ export default function AgenticRiskMitigation2026Page() {
           <h3>Deployment quickstart</h3>
           <ol>
             <li>Define risk taxonomy and map to agent capabilities</li>
-            <li>Instrument policies, budgets, and escalation paths</li>
+            <li>Instrument policiesbudgetsand escalation paths</li>
             <li>Stand up eval pipelines with golden tasks</li>
             <li>
               Pilot under tight budgets; expand with observed safety margins

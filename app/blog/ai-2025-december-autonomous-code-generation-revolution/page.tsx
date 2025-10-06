@@ -6,8 +6,7 @@ export default function Page() {
       <section className='py-16'>
         <div className='max-w-3xl mx-auto px-4'>
           <h1 className='text-4xl font-bold mb-4'>
-            Autonomous Code Generation Revolution 2025: AI That Writes, Tests,
-            and Deploys
+            Autonomous Code Generation Revolution 2025: AI That WritesTestsand Deploys
           </h1>
           <p className='text-gray-600 mb-6'>
             Published: 2025-12-15 • 12 min read • AI Development
@@ -20,7 +19,7 @@ export default function Page() {
             <p className='text-gray-700'>
               Fortune 500 companies are achieving{' '}
               <strong>94% code generation accuracy</strong> with autonomous AI
-              systems that write, test, and deploy production-ready code. This
+              systems that writetestand deploy production-ready code. This
               represents a <strong>$2.7B annual savings</strong> in development
               costs and <strong>10x faster</strong> feature delivery.
             </p>
@@ -29,7 +28,7 @@ export default function Page() {
           <p className='leading-7 mb-6'>
             The autonomous code generation revolution is here. Advanced AI
             systems now understand business requirements, generate optimized
-            code, write comprehensive tests, and deploy to production with
+            codewrite comprehensive testsand deploy to production with
             minimal human intervention. This isn't just automation—it's
             intelligent software creation at scale.
           </p>

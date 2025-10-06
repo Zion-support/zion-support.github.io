@@ -43,7 +43,7 @@ export default function BlogPost() {
           </h2>
           <p className='text-lg text-gray-700 mb-4'>
             We're witnessing the dawn of truly autonomous AI systems that can
-            operate independently, make complex decisions, and adapt to changing
+            operate independentlymake complex decisionsand adapt to changing
             environments without human intervention.
           </p>
           <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
@@ -81,7 +81,7 @@ export default function BlogPost() {
             </h2>
             <p className='text-lg text-gray-700 mb-6'>
               The next generation of autonomous AI systems represents a paradigm
-              shift in how enterprises approach operations, decision-making, and
+              shift in how enterprises approach operationsdecision-makingand
               strategic planning. These systems don't just follow predefined
               rules—they learn, adapt, and evolve.
             </p>
@@ -250,8 +250,8 @@ export default function BlogPost() {
                     Assessment & Planning (Week 1-2)
                   </h3>
                   <p className='text-gray-700'>
-                    Comprehensive analysis of current systems, identification of
-                    optimization opportunities, and creation of customized
+                    Comprehensive analysis of current systemsidentification of
+                    optimization opportunitiesand creation of customized
                     implementation strategy.
                   </p>
                 </div>
@@ -281,8 +281,7 @@ export default function BlogPost() {
                     Full-Scale Rollout (Week 7-12)
                   </h3>
                   <p className='text-gray-700'>
-                    Enterprise-wide deployment with comprehensive monitoring,
-                    optimization, and continuous improvement protocols.
+                    Enterprise-wide deployment with comprehensive monitoringoptimizationand continuous improvement protocols.
                   </p>
                 </div>
               </div>
@@ -295,7 +294,7 @@ export default function BlogPost() {
             </h2>
             <p className='text-lg text-gray-700 mb-6'>
               Join the autonomous AI revolution and unlock unprecedented
-              efficiency, cost savings, and operational excellence. Our
+              efficiencycost savingsand operational excellence. Our
               next-generation systems are ready to transform your enterprise.
             </p>
 

@@ -2,7 +2,7 @@ export const metadata = {
   
   title: 'Autonomous FinOps 2025: Cut AI Spend 50–85% Safely',
   description:
-    'Blueprint for autonomous FinOps: routing tiers, semantic caches, eval scorecards, and policy budgets to slash AI costs without hurting quality.',
+    'Blueprint for autonomous FinOps: routing tiers, semantic cacheseval scorecardsand policy budgets to slash AI costs without hurting quality.',
 
 };;
 
@@ -18,8 +18,7 @@ export default function AutonomousFinOpsBlueprint2025Page() {
             Autonomous FinOps 2025
           </h1>
           <p className='text-emerald-50 mt-3 text-lg max-w-2xl'>
-            Cut AI spend 50–85% with tiered routing, semantic caches,
-            quantization, and KPI‑linked budgets.
+            Cut AI spend 50–85% with tiered routing, semantic cachesquantizationand KPI‑linked budgets.
           </p>
           <div className='mt-4 text-sm opacity-90'>
             September 30, 2025 • 14 min read
@@ -96,7 +95,7 @@ export default function AutonomousFinOpsBlueprint2025Page() {
           <h2>Conclusion</h2>
           <p>
             Autonomous FinOps is a capability, not a one‑off project. With
-            guardrails and observability, teams ship faster, cheaper, and
+            guardrails and observability, teams ship fastercheaperand
             safer—creating flywheel effects across the portfolio.
           </p>
         </section>

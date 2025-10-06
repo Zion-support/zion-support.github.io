@@ -30,7 +30,7 @@ export default function Page() {
           <p className='leading-7 mb-6'>
             The era of static dashboards and manual analysis is over. Autonomous
             Business Intelligence represents a paradigm shift where AI systems
-            continuously analyze data, identify patterns, predict trends, and
+            continuously analyze data, identify patternspredict trendsand
             automatically generate actionable insights without human
             intervention. This isn't just analytics—it's intelligent business
             evolution.
@@ -173,7 +173,7 @@ export default function Page() {
           </h3>
           <p className='leading-7 mb-4'>
             When critical insights are identified, the system can automatically
-            trigger business processes, send alerts, or initiate corrective
+            trigger business processessend alertsor initiate corrective
             actions without human intervention.
           </p>
 

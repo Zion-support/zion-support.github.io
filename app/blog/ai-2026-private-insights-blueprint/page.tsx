@@ -2,7 +2,7 @@ export const metadata = {
   
   title: 'Edge Private Insights 2026: Consentless Metrics Blueprint',
   description:
-    'Scoped IDs, on‑device aggregation, and DP noise for actionable insights without PII.',
+    'Scoped IDson‑device aggregationand DP noise for actionable insights without PII.',
 
 };;
 
@@ -13,7 +13,7 @@ export default function Page() {
         Edge Private Insights 2026
       </h1>
       <p className='text-gray-600 mb-8'>
-        Consentless metrics using scoped IDs, on‑device aggregation, and
+        Consentless metrics using scoped IDson‑device aggregationand
         differential privacy.
       </p>
       <div className='prose prose-invert max-w-none'>

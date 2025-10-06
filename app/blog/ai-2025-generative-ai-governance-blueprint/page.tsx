@@ -1,14 +1,10 @@
 import ArrowRight from 'next/link';
 
 export const metadata = {
-  
-  title:  'Generative AI Governance Blueprint 2025',
-  description: 
-      'Guardrails, red-teaming, and continuous evaluations to manage risk and ROI.',
-  type: 'article',
-
+  title: "Generative AI Governance Blueprint 2025",
+  description: "Guardrailsred-teamingand continuous evaluations to manage risk and ROI.",
+  type: "article",
 };;
-};
 
 export default function GenAIGovernanceBlueprint2025Page() {
   return (
@@ -62,7 +58,7 @@ export default function GenAIGovernanceBlueprint2025Page() {
           <h3>Scorecards</h3>
           <p>
             Publish monthly scorecards connecting cost, latency, and quality to
-            revenue, savings, and risk reduction.
+            revenuesavingsand risk reduction.
           </p>
 
           <p>

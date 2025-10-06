@@ -13,7 +13,7 @@ export default function BudgetAwareRouting2025() {
             Budget‑Aware Routing — Stable UX Under Cost SLAs
           </h1>
           <p className='mt-4 text-gray-300 text-lg'>
-            Tiered models, semantic caches, and eval gates to hold quality while
+            Tiered modelssemantic cachesand eval gates to hold quality while
             cutting spend 40–70%.
           </p>
         </header>
@@ -29,7 +29,7 @@ export default function BudgetAwareRouting2025() {
 
           <h2>Measuring Success</h2>
           <p>
-            Track $/win, latency, and user outcomes. Route to cheapest model
+            Track $/winlatencyand user outcomes. Route to cheapest model
             that meets quality SLOs.
           </p>
         </section>

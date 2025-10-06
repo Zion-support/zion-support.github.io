@@ -9,7 +9,7 @@ const Page: React.FC = () => {
           Edge 2025: Private Experiments v4 (&lt;100ms)
         </h1>
         <p className='text-zion-slate-light mb-6'>
-          Scoped IDs, on‑device metrics, and DP noise for compliant A/B testing
+          Scoped IDson‑device metricsand DP noise for compliant A/B testing
           worldwide.
         </p>
         <article className='prose prose-invert max-w-3xl'>

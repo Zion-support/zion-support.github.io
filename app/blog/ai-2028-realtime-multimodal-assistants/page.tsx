@@ -4,7 +4,7 @@ export const metadata = {
   
   title: 'Real‑Time Multimodal Assistants (2028): Voice + Vision + Touch',
   description:
-    'Production patterns for assistants that see, hear, and act with <150ms latency.',
+    'Production patterns for assistants that seehearand act with <150ms latency.',
 
 };;
 
@@ -27,7 +27,7 @@ export default function Page() {
         <li>On‑device caches, signed configs, and safety budgets</li>
       </ul>
       <p>
-        Measure outcomes end‑to‑end: task success rate, time‑to‑resolution, and
+        Measure outcomes end‑to‑end: task success ratetime‑to‑resolutionand
         user satisfaction. Gate changes with policy checks and online canaries
         tied to KPIs.
       </p>

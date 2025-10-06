@@ -4,9 +4,9 @@ export const metadata = {
   
   title: 'Platform Engineering Scorecards 2026: Measure What Matters',
   description:
-    'A practical, executive-ready scorecard framework for Platform Engineering in 2026: reliability, velocity, cost, and developer experience.',
+    'A practical, executive-ready scorecard framework for Platform Engineering in 2026: reliability, velocitycostand developer experience.',
   keywords:
-    'platform engineering, scorecards 2026, DORA, reliability, developer experience, platform KPIs',
+    'platform engineering, scorecards 2026, DORA, reliabilitydeveloper experienceplatform KPIs',
 
 };;
 
@@ -26,7 +26,7 @@ export default function PlatformEngineeringScorecards2026Page() {
           </h1>
           <p className='text-xl mb-8 opacity-90'>
             A pragmatic, executive-friendly framework to track platform outcomes
-            across reliability, velocity, cost efficiency, and developer
+            across reliability, velocitycost efficiencyand developer
             experience. Drive the right conversations and investments.
           </p>
           <div className='flex items-center gap-6 text-sm opacity-80'>
@@ -48,7 +48,7 @@ export default function PlatformEngineeringScorecards2026Page() {
               Platform scorecards translate engineering work into business
               outcomes. This guide provides a compact, measurable set of
               indicators that leaders can review weekly to align platform work
-              with product velocity, cost, and reliability goals.
+              with product velocitycostand reliability goals.
             </p>
           </div>
 
@@ -204,9 +204,7 @@ export default function PlatformEngineeringScorecards2026Page() {
 
 function RelatedArticleCard({
   title,
-  description,
-  href,
-}: {
+  descriptionhref}: {
   title: string;
   description: string;
   href: string;

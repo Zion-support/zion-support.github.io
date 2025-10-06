@@ -4,7 +4,7 @@ export const metadata = {
   
   title: 'Edge 2027: Real‑Time Feature Flags — <100ms, Zero‑PII Rollouts',
   description:
-    'Signed configs, scoped IDs, and on‑device telemetry for safe, private rollouts at global edge latency.',
+    'Signed configs, scoped IDsand on‑device telemetry for safeprivate rollouts at global edge latency.',
 
 };;
 
@@ -17,8 +17,8 @@ export default function Page() {
             Edge 2027: Real‑Time Feature Flags
           </h1>
           <p className='text-slate-300 mb-6'>
-            Private, sub‑100ms rollouts using signed configs, scoped
-            identifiers, and on‑device metrics.
+            Private, sub‑100ms rollouts using signed configsscoped
+            identifiersand on‑device metrics.
           </p>
           <div className='prose prose-invert'>
             <p>

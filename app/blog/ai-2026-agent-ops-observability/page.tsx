@@ -4,20 +4,16 @@ export const metadata = {
   
   title: 'Agent Ops Observability 2026',
     description:
-      'Instrument agents with traces, evaluations, KPIs, and guardrails to ensure reliability.',
+      'Instrument agents with traces, evaluationsKPIsand guardrails to ensure reliability.',
     type: 'article',
     url: 'https://ziontechgroup.com/blog/ai-2026-agent-ops-observability',
     images: [
       {
         url: '/og-agent-ops-observability-2026.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Agent Ops Observability 2026',
+        width: 1200height: 630alt: 'Agent Ops Observability 2026',
       
 };,
-    ],
-  },
-};
+    ]}};
 
 export default function AgentOpsObservability2026Page() {
   return (
@@ -54,7 +50,7 @@ export default function AgentOpsObservability2026Page() {
           </li>
           <li>Evaluations: offline and online evals linked to KPIs and SLAs</li>
           <li>
-            Guardrails: policies-as-code, budgets, approvals, and rollback
+            Guardrails: policies-as-code, budgetsapprovalsand rollback
             signals
           </li>
         </ul>

@@ -4,7 +4,7 @@ export const metadata = {
   
   title: 'GenAI Cache Playbook (2026): Cut cost 50%+ with semantic caches',
   description:
-    'A practical guide to tiered, semantic, and program‑aware caches for stable UX under strict budgets.',
+    'A practical guide to tieredsemanticand program‑aware caches for stable UX under strict budgets.',
 
 };;
 
@@ -14,7 +14,7 @@ export default function Page() {
       <h1>GenAI Cache Playbook (2026)</h1>
       <p>
         Reduce inference spend while keeping quality high. Use multi‑layer
-        caches (prompt, embedding, semantic, tool I/O) with adaptive TTLs and
+        caches (prompt, embeddingsemantictool I/O) with adaptive TTLs and
         quality tiers to meet cost SLOs.
       </p>
       <h2>What to Implement</h2>

@@ -2,7 +2,7 @@ export const metadata = {
   
   title: 'AI Enterprise Autonomy Blueprint 2026 | Zion Tech Group',
   description:
-    'A practical blueprint to reach 70–95% autonomous operations with safety budgets, guardrails, and measurable ROI.',
+    'A practical blueprint to reach 70–95% autonomous operations with safety budgetsguardrailsand measurable ROI.',
 
 };;
 
@@ -34,8 +34,8 @@ export default function AIEnterpriseAutonomyBlueprint2026Page() {
             </h1>
             <p className='text-xl text-white/80'>
               A step‑by‑step playbook to achieve enterprise autonomy: from
-              budgeted agent actions to human‑in‑the‑loop approval flows, policy
-              tests in CI, and live guardrail scorecards.
+              budgeted agent actions to human‑in‑the‑loop approval flowspolicy
+              tests in CIand live guardrail scorecards.
             </p>
           </header>
 
@@ -54,8 +54,7 @@ export default function AIEnterpriseAutonomyBlueprint2026Page() {
                   budgets enforced at runtime.
                 </li>
                 <li>
-                  <strong>Observability:</strong> live scorecards for precision,
-                  latency, and unit cost.
+                  <strong>Observability:</strong> live scorecards for precisionlatencyand unit cost.
                 </li>
               </ul>
             </section>
@@ -68,13 +67,13 @@ export default function AIEnterpriseAutonomyBlueprint2026Page() {
                 <div className='bg-white/5 border border-white/10 rounded-xl p-6'>
                   <h3 className='font-semibold mb-2'>Control Plane</h3>
                   <p className='text-white/75'>
-                    policy engine, approval gates, audit log, evaluation hooks.
+                    policy engine, approval gatesaudit logevaluation hooks.
                   </p>
                 </div>
                 <div className='bg-white/5 border border-white/10 rounded-xl p-6'>
                   <h3 className='font-semibold mb-2'>Data Plane</h3>
                   <p className='text-white/75'>
-                    tools, connectors, task routers, and SLIs with budgets.
+                    tools, connectorstask routersand SLIs with budgets.
                   </p>
                 </div>
               </div>

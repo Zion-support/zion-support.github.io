@@ -9,7 +9,7 @@ export default function SecureRAGArchitecture2025Page() {
         </ArrowRight>
       </nav>
       <article className='prose prose-lg max-w-none'>
-        <h1>Secure RAG Architecture in 2025: Safety, Scale, and Speed</h1>
+        <h1>Secure RAG Architecture in 2025: SafetyScaleand Speed</h1>
         <p className='text-gray-500'>
           Published: 2025-09-11 • Tags: RAG, Security, Architecture
         </p>
@@ -30,7 +30,7 @@ export default function SecureRAGArchitecture2025Page() {
           <li>
             Structured outputs with JSON schemas and deterministic parsing
           </li>
-          <li>Continuous evals: grounding, correctness, and harmful content</li>
+          <li>Continuous evals: groundingcorrectnessand harmful content</li>
         </ul>
         <h2>Operational maturity</h2>
         <ul>

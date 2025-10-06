@@ -4,7 +4,7 @@ export const metadata = {
   
   title: 'GenAI Routing Quality Tiers Q4 2025: Predictable Cost, Stable UX',
   description:
-    'Tiered models, caching, and budget‑aware routes mapped to SLOs to keep quality high and costs predictable.',
+    'Tiered modelscachingand budget‑aware routes mapped to SLOs to keep quality high and costs predictable.',
 
 };;
 
@@ -32,7 +32,7 @@ export default function GenAIRoutingQualityTiersQ42025Page() {
             GenAI Routing Quality Tiers Q4 2025: Predictable Cost, Stable UX
           </h1>
           <p className='text-white/70 mt-3'>
-            Route by SLO with model tiers, caches, and budget‑aware policies.
+            Route by SLO with model tierscachesand budget‑aware policies.
             Keep UX steady while controlling spend.
           </p>
         </header>
@@ -40,7 +40,7 @@ export default function GenAIRoutingQualityTiersQ42025Page() {
           <h2>Tiered Models & Policies</h2>
           <p>
             Define quality tiers per product flow. Use policies to select models
-            by SLA, cost ceilings, and guardrail requirements.
+            by SLAcost ceilingsand guardrail requirements.
           </p>
           <h2>Routing Blueprint</h2>
           <ul>

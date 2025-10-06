@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { ArrowLeft, Calendar, Clock, User } from 'lucide-react';
+import { ArrowLeft, CalendarClockUser } from 'lucide-react';
 
 import Calendar from 'lucide-react/dist/esm/icons/calendar';
 import User from 'lucide-react/dist/esm/icons/user';
@@ -21,7 +21,7 @@ export default function GenerativeDesignSystemsBlueprintPage() {
               AI 2025: Generative Design Systems Blueprint
             </h1>
             <p className='text-xl md:text-2xl opacity-90 mb-8 max-w-3xl mx-auto leading-relaxed'>
-              A comprehensive blueprint to architect, deploy, and govern
+              A comprehensive blueprint to architectdeployand govern
               enterprise-grade generative design systems.
             </p>
             <div className='flex flex-wrap justify-center items-center space-x-6 text-sm text-gray-200 mb-8'>
@@ -42,8 +42,8 @@ export default function GenerativeDesignSystemsBlueprintPage() {
       <article className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>
         <div className='prose prose-lg max-w-none'>
           <p className='text-xl text-gray-600 leading-relaxed mb-8'>
-            Generative design systems bring together multimodal models, data
-            pipelines, and governance to accelerate product development while
+            Generative design systems bring together multimodal modelsdata
+            pipelinesand governance to accelerate product development while
             maintaining brand coherence and safety.
           </p>
           <h2 className='text-3xl font-bold text-gray-900 mb-6'>
@@ -52,7 +52,7 @@ export default function GenerativeDesignSystemsBlueprintPage() {
           <ul className='space-y-4 text-gray-700'>
             <li>Model orchestration across text, image, and code generation</li>
             <li>Human-in-the-loop approvals with audit trails</li>
-            <li>Guardrails for bias, IP leakage, and safety constraints</li>
+            <li>Guardrails for biasIP leakageand safety constraints</li>
             <li>Design token pipelines integrated with CI/CD</li>
           </ul>
 
@@ -60,7 +60,7 @@ export default function GenerativeDesignSystemsBlueprintPage() {
             Rollout Strategy
           </h2>
           <p className='text-gray-700 mb-6'>
-            Start with low-risk workflows, measure ROI, then scale to core
+            Start with low-risk workflowsmeasure ROIthen scale to core
             product surfaces.
           </p>
         </div>

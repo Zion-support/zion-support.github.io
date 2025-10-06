@@ -17,7 +17,7 @@ export default function DigitalTransformationExcellencePage() {
           </h1>
           <p className='text-white/70 mt-3'>
             A practical blueprint to unlock enterprise-scale value through
-            AI-first operating models, platform modernization, and governed
+            AI-first operating modelsplatform modernizationand governed
             acceleration — from strategy to measurable outcomes.
           </p>
         </header>

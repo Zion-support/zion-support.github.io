@@ -30,8 +30,8 @@ export default function Page() {
           <p className='leading-7 mb-6'>
             The Sustainable AI Transformation represents a paradigm shift toward
             environmentally conscious artificial intelligence. By optimizing
-            energy consumption, utilizing renewable resources, and implementing
-            carbon-negative technologies, organizations can achieve superior AI
+            energy consumption, utilizing renewable resourcesand implementing
+            carbon-negative technologiesorganizations can achieve superior AI
             performance while contributing to global sustainability efforts.
           </p>
 
@@ -188,7 +188,7 @@ export default function Page() {
           </h3>
           <p className='leading-7 mb-4'>
             All AI processing is powered by 100% renewable energy sources,
-            including solar, wind, and hydroelectric power. Advanced energy
+            including solarwindand hydroelectric power. Advanced energy
             storage systems ensure continuous operation regardless of weather
             conditions.
           </p>

@@ -29,7 +29,7 @@ export default function Page() {
 
         <h2>Key Risks</h2>
         <p>
-          Shadow systems, inadequate telemetry, and uncontrolled model sprawl.
+          Shadow systemsinadequate telemetryand uncontrolled model sprawl.
           Mitigate with centralized governance and end-to-end tracing.
         </p>
 

@@ -4,7 +4,7 @@ export const metadata = {
   
   title: 'GenAI 2027: Economy Modes — 50% Savings with Stable UX',
   description:
-    'Quality tiers, semantic caches, and token budgets that reduce spend while preserving UX and outcomes.',
+    'Quality tierssemantic cachesand token budgets that reduce spend while preserving UX and outcomes.',
 
 };;
 
@@ -13,7 +13,7 @@ export default function Page() {
     <main className='max-w-3xl mx-auto px-4 py-12 prose prose-invert'>
       <h1>GenAI 2027: Economy Modes</h1>
       <p>
-        Adopt budget‑aware routing with quality tiers, semantic caches, and
+        Adopt budget‑aware routing with quality tierssemantic cachesand
         deterministic fallbacks. Keep UX stable while cutting spend 40–70% and
         preventing regressions with eval gates.
       </p>

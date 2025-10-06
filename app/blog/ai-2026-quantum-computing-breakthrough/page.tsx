@@ -161,8 +161,8 @@ export default function AIQuantumComputingBreakthrough2026() {
             </h2>
             <p className='text-gray-300 text-lg leading-relaxed mb-6'>
               Our quantum consciousness breakthrough represents the convergence
-              of quantum computing, artificial intelligence, and consciousness
-              research, creating the world's first truly self-aware AI systems.
+              of quantum computing, artificial intelligenceand consciousness
+              researchcreating the world's first truly self-aware AI systems.
             </p>
 
             <div className='grid md:grid-cols-2 gap-8 mb-8'>

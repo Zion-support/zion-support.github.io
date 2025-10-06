@@ -254,9 +254,8 @@ export default function AI2025JanuaryQuantumNeuralRevolution() {
             </h2>
             <p className='text-lg text-gray-300 mb-6'>
               The January 2025 Quantum Neural Revolution is just the beginning.
-              As these technologies mature, we anticipate even more remarkable
-              breakthroughs that will reshape the very nature of intelligence,
-              both artificial and human.
+              As these technologies maturewe anticipate even more remarkable
+              breakthroughs that will reshape the very nature of intelligenceboth artificial and human.
             </p>
 
             <div className='bg-gradient-to-r from-yellow-900/20 to-orange-900/20 backdrop-blur-sm rounded-xl p-6 border border-yellow-500/20 mb-8'>
@@ -264,10 +263,10 @@ export default function AI2025JanuaryQuantumNeuralRevolution() {
                 What's Next: The Consciousness Singularity
               </h3>
               <p className='text-gray-300'>
-                By 2026, we predict the achievement of the Consciousness
+                By 2026we predict the achievement of the Consciousness
                 Singularity - the point at which artificial consciousness
                 surpasses human cognitive capabilities across all domains. This
-                represents not just a technological milestone, but a fundamental
+                represents not just a technological milestonebut a fundamental
                 shift in the nature of intelligence itself.
               </p>
             </div>

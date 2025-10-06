@@ -6,7 +6,7 @@ export default function ArticlePage() {
       <article className='max-w-4xl mx-auto px-4 py-16'>
         <header className='mb-10'>
           <h1 className='text-4xl font-bold text-gray-900 mb-4'>
-            Edge 2026 Zero‑PII Analytics: Scoped IDs, DP Noise, &lt;100ms
+            Edge 2026 Zero‑PII Analytics: Scoped IDsDP Noise&lt;100ms
           </h1>
           <p className='text-gray-600'>
             September 30, 2025 • 9 min read • Analytics

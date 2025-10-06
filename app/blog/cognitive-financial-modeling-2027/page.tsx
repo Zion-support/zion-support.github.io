@@ -4,7 +4,7 @@ export const metadata = {
   
   title: 'AI Financial Modeling 2027: 95% Prediction Accuracy with Guardrails',
   description:
-    'Blueprint to build reliable, budget-aware AI financial models with KPIs, evals, and rollback.',
+    'Blueprint to build reliable, budget-aware AI financial models with KPIsevalsand rollback.',
 
 };;
 
@@ -17,7 +17,7 @@ export default function CognitiveFinancialModeling2027() {
         </h1>
         <p className='text-slate-300 mb-6'>
           Ship trustworthy, cost-aware AI forecasting with KPI-linked
-          scorecards, evals, and budget controls.
+          scorecardsevalsand budget controls.
         </p>
         <div className='prose prose-invert'>
           <h2>Overview</h2>

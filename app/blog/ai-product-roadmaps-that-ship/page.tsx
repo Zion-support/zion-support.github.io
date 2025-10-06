@@ -33,7 +33,7 @@ export default function AIProductRoadmapsThatShipPage() {
             releases
           </li>
           <li>
-            Operationalize: on-call, budget guardrails, golden tasks, regression
+            Operationalize: on-call, budget guardrails, golden tasksregression
             tests
           </li>
         </ul>
@@ -43,7 +43,7 @@ export default function AIProductRoadmapsThatShipPage() {
           <li>M1: Assisted mode with human-in-the-loop and quality gates</li>
           <li>M2: Partial automation with fallbacks and cost controls</li>
           <li>
-            M3: Full automation for narrow paths, continuous evals for drift
+            M3: Full automation for narrow pathscontinuous evals for drift
           </li>
         </ul>
         <p>

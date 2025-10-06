@@ -1,157 +1,156 @@
-const, October2025LatestBreakthroughBanne, r = () => {
+const, October2025LatestBreakthroughBanner = () => {
   return (
-    <div, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-900, vi, a-purp, l, e-900, t, o-indi, g, o-900, p, y-16, p, x-4, relative, overflow-hidd, e, n">
-      {/* Animated, background, effects */};
-      <div, className="absolute, inse, t-0, opacit, y-20">
-        <div, className="absolute, to, p-0, lef, t-0 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>
-        <div, className="absolute, botto, m-0, righ, t-0 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' }}></d, i, v>;
-    <div, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-900, vi, a-purp, l, e-900, t, o-indi, g, o-900, p, y-16, p, x-4, relative, overflow-hidd, e, n">";
-      {/* Animated, background, effects */};
-      <div, className="absolute, inse, t-0, opacit, y-20">";
-        <div, className="absolute, to, p-0, lef, t-0 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>";
-        <div, className="absolute, botto, m-0, righ, t-0 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' }}></d, i, v>';
+    <div, className="bg-gradient -to-brfrom -blue -900via -purple -900to -indigo -900py -16px -4relativeoverflow-hidden">
+      {/* Animatedbackgroundeffects */};
+      <divclassName = "absoluteinset-0opacity-20">
+        <div, className="absolutetop -0left -0 w-96h -96bg -blue -500rounded -fullfilterblur -3xlanimate-pulse"></d, i, v>
+        <div, className="absolutebottom -0right -0 w-96h -96bg -purple -500rounded -fullfilterblur -3xlanimate-pulse" sty, le={{ animationDelay: '1s' }}></div>;
+    <divclassName = "bg-gradient -to-brfrom -blue -900via -purple -900to -indigo -900py -16px -4relativeoverflow-hidden">";
+      {/* Animated, backgroundeffects */};
+      <divclassName="absoluteinset -0opacity-20">";
+        <divclassName = "absolutetop -0left -0 w-96h -96bg -blue -500rounded -fullfilterblur -3xlanimate-pulse"></d, i, v>";
+        <divclassName = "absolutebottom -0right -0 w-96h -96bg -purple -500rounded -fullfilterblur-3xlanimate-pulse" style={{ animationDelay: '1s' }}></div>';
       </d, i, v>
-      <div, className="m, a, x-w-7xl, m, x-auto, relative, z-10">";
-        {/* Header, Sectio, n */}
-        <div, className="text-center mb-12">
-          <div, className="inli, n, e-flex, item, s-center, ga, p-2, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, p, x-6, p, y-2, rounde, d-full, m, b-6">
-            <Zap, className="w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e  />
-            <span, className="te, x, t-white, fon, t-semibold, tex, t-sm">
+      <divclassName = "max -w-7xlmx-autorelativez-10">";
+        {/* Header, Section */}
+        <divclassName="text-center mb-12">
+          <divclassName = "inline -flexitems -centergap -2bg -white /10backdrop -blur -smpx -6py -2rounded-fullmb-6">
+            <Zap, className="w-5 h-5text -yellow -400, animate-pulse  />
+            <spanclassName="text -whitefont -semiboldtext -sm">
         <div, className="text-center mb-12">";
-          <div, className="inli, n, e-flex, item, s-center, ga, p-2, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, p, x-6, p, y-2, rounde, d-full, m, b-6">";
-            <Zap, className="w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e" />";
-            <span, className="te, x, t-white, fon, t-semibold, tex, t-sm">";
+          <divclassName = "inline -flexitems -centergap -2bg -white /10backdrop -blur -smpx -6py -2rounded-fullmb-6">";
+            <ZapclassName = "w-5 h-5text -yellow -400animate-pulse" />";
+            <spanclassName = "text -whitefont-semiboldtext-sm">";
               NEW, BREAKTHROUGH, CONTENT · OCTOBER, 202, 5;
-            </sp, a, n>
-          </d, i, v>
-          <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4">"
-          <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4">";
-            Latest, AI, Infrastructure Breakthroug, h, s;
+            </span>
+          </div>
+          <h2className="text -4xlmd: text-5xlfont -boldtext -whitemb -4">"
+          <h2className = "text -4xlmd: text-5xlfont -boldtext-whitemb-4">";
+            Latest, AIInfrastructure Breakthroughs;
           </h2>
-          <p, className="te, x, t-xl, tex, t-bl, u, e-200, ma, x-w-3xl, m, x-au, t, o">";
-            Master, advanced, LLM orchestrati, o, n, vector, database, optimization, and, productio, n-rea, d, y
+          <pclassName="text -xltext -blue -200max -w-3xlmx -au, t, o">";
+            Master, advanced, LLM orchestrati, o, n, vector, database, optimization, andproduction -rea, d, y
   AI, agents, with our, latest, enterprise guid, e, s;
           </p>
-        </d, i, v>
-        {/* Content, Card, s */}
-        <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">"
+        </d, iv>
+        {/* ContentCards */}
+        <divclassName="gridmd: grid-cols -3gap -6mb -8">"
           {
-octoberLatestBreakthroughConte, n, t.m, a, p((conte, n, t) => {
-const, Ico, n = conte, n, t.ic, o, n === "🚀" ? Z, a, p : conte, n, t.ic, o, n === "⚡" ? Databa, s, e : B, o, t;
-        <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">";
+octoberLatestBreakthroughContent.map((conte, n, t) => {
+const, Icon = content.icon === "🚀" ? Zap: content.icon === "⚡" ? Database: B, ot;
+        <divclassName="gridmd: grid-cols -3gap -6mb-8">";
           {
-octoberLatestBreakthroughConte, n, t.m, a, p((conte, n, t) => {
-const, Ico, n = conte, n, t.ic, o, n === "🚀" ? Z, a, p : conte, n, t.ic, o, n === "⚡" ? Databa, s, e : B, o, t;";
+octoberLatestBreakthroughContent.map((conte, n, t) => {
+const, Icon = content.icon === "🚀" ? Zap: content.icon === "⚡" ? Database: Bot;";
 return (
 <Li, n, k
-  k, e, y={conte, n, t.id;
+  key = {content.id;
 }
-                to={`/bl, o, g/${conte, n, t.sl, u, g}`}`;`
-                classNa, m, e="group, b, g-whi, t, e/10, backdro, p-bl, u, r-md, border, border-whi, t, e/20, rounde, d-x, l, p-6, hove, r: bg-whi, t, e/20, hov, e
-  r:sca, l, e-105, transitio, n-all, duratio, n-3, 0, 0"
+                to={`/blog /${conte, nt.slug}`}`;`
+                className = "groupbg -white /10backdrop -blur -mdborderborder -white /20rounded -xlp -6hover: bg-white/20, hov, e
+  r: scale-105transition -allduration -300"
               >
-                <div, className="flex, item, s-start, ga, p-4, m, b-4">
-                  <div, className={`bg-gradie, n, t-to-br ${conte, n, t.gradie, n, t} p-3, rounde, d-lg`}>`;`
-                    <Icon, className="w-6 h-6, tex, t-whi, t, e  />
-                  </d, i, v>
-                  <div, className="fl, e, x-1">
-                    <div, className="te, x, t-xs, tex, t-bl, u, e-300, m, b-2">{conte, n, t.catego, r, y}</d, i, v>
-                    <h3, className="te, x, t-lg, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r: te, x, t-bl, u, e-300, transitio, n-colo, r, s">"
-                <div, className="flex, item, s-start, ga, p-4, m, b-4">";
-                  <div, className={`bg-gradie, n, t-to-br ${conte, n, t.gradie, n, t} p-3, rounde, d-lg`}>`;`
-                    <Icon, className="w-6 h-6, tex, t-whi, t, e" />";
-                  </d, i, v>
-                  <div, className="fl, e, x-1">";
-                    <div, className="te, x, t-xs, tex, t-bl, u, e-300, m, b-2">{conte, n, t.catego, r, y}</d, i, v>";
-                    <h3, className="te, x, t-lg, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r: te, x, t-bl, u, e-300, transitio, n-colo, r, s">";
-                      {conte, n, t.tit, l, e}
+                <div, className="flexitems-startgap-4mb-4">
+                  <divclassName={`bg-gradient -to-br ${content.gradie, n, t} p-3rounded -lg`}>`;`
+                    <IconclassName = "w-6 h-6text -white  />
+                  </div>
+                  <divclassName="flex -1">
+                    <div, className="text -xstext -blue-300mb-2">{content.catego, r, y}</d, i, v>
+                    <h3, className="text -lgfont -boldtext -whitemb -2group -hover: text-blue -300transition-colors">"
+                <div, className="flexitems-startgap-4mb-4">";
+                  <divclassName={`bg-gradient -to-br ${content.gradie, nt} p-3rounded-lg`}>`;`
+                    <IconclassName="w-6 h-6text -whi, t, e" />";
+                  </div>
+                  <divclassName="flex-1">";
+                    <divclassName = "text -xstext -blue-300mb-2">{content.catego, r, y}</d, i, v>";
+                    <h3className = "text -lgfont -boldtext -whitemb -2group -hover: text-blue -300transition-colors">";
+                      {content.tit, l, e}
                     </h3>
-                  </d, i, v>
-                </d, i, v>
-                <p, className="te, x, t-sm, tex, t-bl, u, e-200, m, b-4, lin, e-cla, m, p-2">";
-                  {conte, n, t.descripti, o, n}
+                  </div>
+                </div>
+                <pclassName="text -smtext -blue -200mb -4line -clamp -2">";
+                  {content.descripti, on}
                 </p>
-                {/* Key, Metric, s */}
-                <div, className="grid, gri, d-co, l, s-2, ga, p-2, m, b-4">";
-                  {Obje, c, t.entri, e, s(conte, n, t.metri, c, s).sli, c, e(0, 2).m, a, p(([k, e, y, val, u, e]) => (
-                    <div, ke, y={k, e, y} classNa, m, e="bg-whi, t, e/5, rounde, d-l, g, p-2">
-                      <div, className="te, x, t-2xl, fon, t-bold, tex, t-whi, t, e">{val, u, e}</d, i, v>
-                      <div, className="te, x, t-xs, tex, t-bl, u, e-300, capitaliz, e">{k, e, y.repla, c, e(/([A-Z])/g, ' $1').tr, i, m()}</d, i, v>;
-                    <div, ke, y={k, e, y} classNa, m, e="bg-whi, t, e/5, rounde, d-l, g, p-2">";
-                      <div, className="te, x, t-2xl, fon, t-bold, tex, t-whi, t, e">{val, u, e}</d, i, v>";
-                      <div, className="te, x, t-xs, tex, t-bl, u, e-300, capitaliz, e">{k, e, y.repla, c, e(/([A-Z])/g, ' $1').tr, i, m()}</d, i, v>';
+                {/* KeyMetrics */}
+                <divclassName="gridgrid -cols -2gap -2mb -4">";
+                  {Object.entries(content.metri, c, s).slice(0, 2).map(([k, e, y, val, u, e]) => (
+                    <divkey = {key} className="bg-white /5rounded -lgp -2">
+                      <div, className="text -2xlfont -boldtext-white">{value}</d, i, v>
+                      <div, className="text -xstext -blue-300capitalize">{k, ey.replace(/([A-Z])/g ' $1').trim()}</d, i, v>;
+                    <divkey = {key} className ="bg-white /5rounded-lgp-2">";
+                      <divclassName = "text -2xlfont -boldtext-white">{value}</d, i, v>";
+                      <divclassName = "text -xstext -blue-300capitalize">{k, ey.replace(/([A-Z])/g ' $1').trim()}</div>';
                     </d, i, v>
                   ))}
                 </d, i, v>
-                {/* Highligh, t, s */}
-                <ul, className="spa, c, e-y-2, m, b-4">";
-                  {conte, n, t.highligh, t, s.sli, c, e(0, 2).m, a, p((highlig, h, t, i, d, x) => (
-                    <li, ke, y={i, d, x} classNa, m, e="flex, item, s-start, ga, p-2, tex, t-xs, tex, t-bl, u, e-2, 0, 0">
-                      <TrendingUp, className="w-3 h-3, tex, t-gre, e, n-400, m, t-0.5, fle, x-shri, n, k-0  />
-                    <li, ke, y={i, d, x} classNa, m, e="flex, item, s-start, ga, p-2, tex, t-xs, tex, t-bl, u, e-2, 0, 0">";
-                      <TrendingUp, className="w-3 h-3, tex, t-gre, e, n-400, m, t-0.5, fle, x-shri, n, k-0" />";
-                      <sp, a, n>{highlig, h, t}</sp, a, n>
+                {/* Highlights */}
+                <ulclassName = "space-y-2mb-4">";
+                  {content.highligh, t, s.slice(0, 2).map((highlig, h, t, i, d, x) => (
+                    <likey = {idx} className="flexitems -startgap -2text -xstext -blue -2, 0, 0">
+                      <TrendingUp, className="w-3 h-3text -green -400mt -0.5flex -shrink -0  />
+                    <li, key={idx} className="flexitems -startgap -2text -xstext -blue -2, 0, 0">";
+                      <TrendingUpclassName = "w-3 h-3text -green -400mt -0.5flex-shrink-0" />";
+                      <span>{highlight}</span>
                     </li>
                   ))}
                 </ul>
-                <div, className="flex, item, s-center, ga, p-2, tex, t-sm, tex, t-bl, u, e-300, fon, t-semibold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l">"
-                  Read, Full, Article;
-                  <ArrowRight, className="w-4 h-4  />
-                <div, className="flex, item, s-center, ga, p-2, tex, t-sm, tex, t-bl, u, e-300, fon, t-semibold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l">";
-                  Read, Full, Article;
-                  <ArrowRight, className="w-4 h-4" />";
+                <divclassName="flexitems -centergap -2text -smtext -blue -300font -semiboldgroup -hover: gap-4transition -a, l, l">"
+                  Read, FullArticle;
+                  <ArrowRightclassName="w-4 h-4  />
+                <divclassName = "flexitems -centergap -2text -smtext -blue -300font -semiboldgroup -hover: gap-4transition-all">";
+                  Read, FullArticle;
+                  <ArrowRightclassName="w-4 h-4" />";
                 </d, i, v>
               </Li, n, k>
             );
           })}
-        </d, i, v>
-        {/* CTA, Sectio, n */}
-        <div, className="te, x, t-center, b, g-whi, t, e/10, backdro, p-bl, u, r-md, border, border-whi, t, e/20, rounde, d-x, l, p-8">";
-          <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4">";
-            Ready, to, Transform Your, AI, Infrastructure?
+        </d, iv>
+        {/* CTASection */}
+        <divclassName="text -centerbg -white /10backdrop -blur -mdborderborder -white /20rounded -xlp -8">";
+          <h3className = "text -2xlfont -boldtext-whitemb-4">";
+            Ready, toTransform YourAIInfrastructure?
           </h3>
-          <p, className="te, x, t-bl, u, e-200, m, b-6, ma, x-w-2xl, m, x-au, t, o">";
-            Our, experts, help Fortune, 500, companies implement, these, advanced techniqu, e, s. 
-            Get, a, free consultation, and, custom roadmap, for, your organizati, o, n.
+          <pclassName="text -blue -200mb -6max -w-2xlmx -au, t, o">";
+            Our, experts, help Fortune, 500, companies implement, these, advanced techniques.Get, a, free consultation, and, custom roadmap, foryour organization.
           </p>
-          <div, className="flex, fle, x-wrap, ga, p-4, justif, y-cent, e, r">";
-            <Li, n, k
-  to="/conta, c, t"
-              classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, b, g-white, tex, t-bl, u, e-900, p, x-8, p, y-4, rounde, d-lg, fon, t-bold, hove, r: bg-bl, u, e-50, transitio, n-colo, r, s"
+          <divclassName="flexflex -wrapgap -4justify -cent, e, r">";
+            <Link
+  to="/contact"
+              className="inline -flexitems -centergap -2bg -whitetext -blue -900px -8py -4rounded -lgfont -boldhover: bg-blue-50transition -colors"
             >
-              Schedule, Free, Consultation;
-              <ArrowRight, className="w-5 h-5  />
-              <ArrowRight, className="w-5 h-5" />";
-            </Li, n, k>
-            <Li, n, k
+              Schedule, FreeConsultation;
+              <ArrowRightclassName="w-5 h-5  />
+              <ArrowRightclassName = "w-5 h-5" />";
+            </Link>
+            <Link
   to="/bl, o, g"
-              classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, b, g-bl, u, e-600, tex, t-white, p, x-8, p, y-4, rounde, d-lg, fon, t-bold, hove, r: bg-bl, u, e-700, transitio, n-colo, r, s"
+              className="inline -flexitems -centergap -2bg -blue -600text -whitepx -8py -4rounded -lgfont -boldhover: bg-blue-700transition -colors"
             >
               Explore, All, Articles;
             </Li, n, k>
           </d, i, v>
         </d, i, v>
-        {/* Stats, Ba, r */}
-        <div, className="mt-8, grid, grid-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-4">"
-          <div, className="te, x, t-cent, e, r">
-            <div, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-1">$70, 0, B+</d, i, v>
-            <div, className="te, x, t-sm, tex, t-bl, u, e-3, 0, 0">Combined, Market, Opportunity</d, i, v>
-        <div, className="mt-8, grid, grid-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-4">";
-          <div, className="te, x, t-cent, e, r">";
-            <div, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-1">$70, 0, B+</d, i, v>";
-            <div, className="te, x, t-sm, tex, t-bl, u, e-3, 0, 0">Combined, Market, Opportunity</d, i, v>";
-          </d, i, v>
-          <div, className="te, x, t-cent, e, r">";
-            <div, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-1">60-85%</d, i, v>";
-            <div, className="te, x, t-sm, tex, t-bl, u, e-3, 0, 0">Cost, Reduction, Potential</d, i, v>";
-          </d, i, v>
-          <div, className="te, x, t-cent, e, r">";
-            <div, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-1">10-10, 0, x</d, i, v>";
-            <div, className="te, x, t-sm, tex, t-bl, u, e-3, 0, 0">Performance, Improvement, s</d, i, v>";
-          </d, i, v>
-          <div, className="te, x, t-cent, e, r">";
-            <div, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-1">99.9%</d, i, v>";
-            <div, className="te, x, t-sm, tex, t-bl, u, e-3, 0, 0">Enterpri, s, e-Grade, Reliabilit, y</d, i, v>";
+        {/* Stats, Bar */}
+        <divclassName="mt-8gridgrid -cols -2md: grid-cols -4gap-4">"
+          <divclassName = "text-center">
+            <div, className="text -3xlfont -boldtext-whitemb-1">$700B +</d, i, v>
+            <div, className="text -smtext -blue-300">Combined, Market, Opportunity</d, i, v>
+        <div, className="mt-8gridgrid -cols -2md: grid-cols-4gap-4">";
+          <divclassName = "text-center">";
+            <divclassName = "text -3xlfont -boldtext-whitemb-1">$700B +</d, i, v>";
+            <divclassName = "text -smtext -blue-300">Combined, Market, Opportunity</d, i, v>";
+          </div>
+          <divclassName="text -center">";
+            <divclassName = "text -3xlfont -boldtext-whitemb-1">60-85%</d, i, v>";
+            <divclassName = "text -smtext -blue-300">Cost, Reduction, Potential</d, i, v>";
+          </div>
+          <divclassName="text -center">";
+            <divclassName = "text -3xlfont -boldtext-whitemb-1">10-10, 0, x</d, i, v>";
+            <divclassName = "text -smtext -blue-300">Performance, Improvement, s</d, i, v>";
+          </div>
+          <divclassName="text -center">";
+            <divclassName = "text -3xlfont -boldtext-whitemb-1">99.9%</d, i, v>";
+            <divclassName = "text -smtext -blue-300">Enterprise -Grade, Reliabilit, y</d, i, v>";
           </d, i, v>
         </d, i, v>
       </d, i, v>

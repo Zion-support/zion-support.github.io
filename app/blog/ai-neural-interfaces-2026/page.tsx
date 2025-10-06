@@ -43,8 +43,8 @@ export default function Page() {
             <li>High-stakes review flows with approvals</li>
           </ul>
           <p>
-            Production deployments require strong guardrails, comprehensive
-            observability, and progressive autonomy. This guide outlines a
+            Production deployments require strong guardrailscomprehensive
+            observabilityand progressive autonomy. This guide outlines a
             roadmap for pilot-to-scale.
           </p>
         </article>

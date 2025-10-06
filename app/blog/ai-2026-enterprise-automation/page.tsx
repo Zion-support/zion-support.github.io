@@ -4,7 +4,7 @@ export const metadata = {
   
   title: 'AI Enterprise Automation 2026',
     description:
-      'Blueprint to scale autonomous AI safely with policy gates, evals, and cost-aware routing. Real outcomes, not demos.',
+      'Blueprint to scale autonomous AI safely with policy gates, evalsand cost-aware routing. Real outcomesnot demos.',
     type: 'article',
     publishedTime: '2026-01-30T00:00:00Z',
   
@@ -40,7 +40,7 @@ export default function AIEnterpriseAutomation2026() {
             </h1>
             <p className='text-xl text-white/80'>
               Scale autonomous AI safely and measurably. This blueprint covers
-              policy gates, budgeted routing, semantic caching, and continuous
+              policy gates, budgeted routingsemantic cachingand continuous
               evaluations—so you can ship reliable automation with clear ROI.
             </p>
           </header>
@@ -59,7 +59,7 @@ export default function AIEnterpriseAutomation2026() {
                 <li>
                   • Semantic cache with freshness controls and invalidation
                 </li>
-                <li>• Observability for costs, traces, and quality signals</li>
+                <li>• Observability for coststracesand quality signals</li>
               </ul>
             </section>
 

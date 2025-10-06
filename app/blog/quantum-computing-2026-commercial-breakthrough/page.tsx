@@ -1,7 +1,7 @@
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { Calendar, Clock, User, ArrowRight, Zap, Cpu, Shield, TrendingUp, Target, Brain } from 'lucide-react';
+import { Calendar, Clock, User, ArrowRight, Zap, Cpu, Shield, TrendingUpTargetBrain } from 'lucide-react';
 
 export const metadata = {
   
@@ -12,7 +12,6 @@ export const metadata = {
     authors: ['Zion Tech Group'],
     tags: ['Quantum Computing', 'Quantum Advantage', 'Enterprise Implementation', 'Quantum Breakthrough', 'Quantum AI']
   
-};
 };
 
 export default function QuantumComputing2026CommercialBreakthrough() {
@@ -58,8 +57,7 @@ export default function QuantumComputing2026CommercialBreakthrough() {
                 Executive Summary
               </Target></h2>
               <p className="text-left">2026 marks the year quantum computing achieved true commercial viability, with quantum advantage demonstrated 
-                across multiple industries. Enterprise implementations are delivering 1000x speedups in optimization problems, 
-                revolutionary drug discovery breakthroughs, and unprecedented cybersecurity capabilities.
+                across multiple industries. Enterprise implementations are delivering 1000x speedups in optimization problemsrevolutionary drug discovery breakthroughsand unprecedented cybersecurity capabilities.
               </p></p>
             </div>
 
@@ -92,7 +90,7 @@ export default function QuantumComputing2026CommercialBreakthrough() {
               <h3 className="text-left">Financial Services: Quantum Trading Revolution</h3>
                 <p className="text-left"> </p><div className="text-left"> </div><h3 className="text-left">Financial Services: Quantum Trading Revolution</h3>
                 <p className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
-                  Quantum algorithms are revolutionizing financial modeling, risk assessment, and high-frequency trading. 
+                  Quantum algorithms are revolutionizing financial modelingrisk assessmentand high-frequency trading. 
                   Major banks are achieving 1000x improvements in portfolio optimization and fraud detection.
                 </p></p>
                 <div className="text-left"> </div><h4 className="text-left">Real Results</h4>

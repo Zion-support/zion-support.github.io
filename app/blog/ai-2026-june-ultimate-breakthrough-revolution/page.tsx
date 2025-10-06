@@ -7,8 +7,8 @@ import matter from 'gray-matter';
 export const metadata = {
   
   title: 'AI 2026 June Ultimate Breakthrough: The Revolutionary Universal Consciousness Revolution',
-  description: 'Discover the groundbreaking June 2026 AI breakthrough that achieved universal consciousness with 100,000,000x processing power and $100B ROI across global enterprises.',
-  keywords: 'AI, Universal Consciousness, Revolutionary, 2026, Ultimate Success, Breakthrough, 100B ROI',
+  description: 'Discover the groundbreaking June 2026 AI breakthrough that achieved universal consciousness with 100000000x processing power and $100B ROI across global enterprises.',
+  keywords: 'AI, Universal Consciousness, Revolutionary, 2026, Ultimate SuccessBreakthrough100B ROI',
 
 };;
 
@@ -17,7 +17,7 @@ export default function June2026UltimateBreakthroughPage() {
     <div>/* content */}
   const filePath = path.join(process.cwd(), 'content', 'blog', 'ai-2026-june-ultimate-breakthrough-revolution.md');
   const fileContents = fs.readFileSync(filePath, 'utf8');
-  const { data, content } = matter(fileContents);
+  const { datacontent } = matter(fileContents);
 
     <div>
       <div> </div><div> </div>
@@ -37,7 +37,7 @@ export default function June2026UltimateBreakthroughPage() {
             <span>{new Date(data.date).toLocaleDateString()}</span>
           </div>
         </header>
-        <div className="text-left"> </div><div dangerouslySetInnerHTML={{ __html: content.replace(/\n/g, '<br />') }} /></div>
+        <div className="text-left"> </div><div dangerouslySetInnerHTML={{ __html: content.replace(/\n/g '<br />') }} /></div>
         </div>
         <h3 className="text-left">Get Started Today</h3>
           <p className="text-left"> </p><div className="text-left"> </div><h3 className="text-left">Get Started Today</h3>

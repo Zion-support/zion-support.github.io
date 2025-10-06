@@ -73,8 +73,7 @@ origin/cursor/fix-errors-and-merge-to-main-cc0a
               <p className="text-left"> </p><div className="text-left"> </div><div className="text-left"> </div><div className="text-left">🤖</div>"
               <h3 className="text-left">Autonomous Operations</h3>"
               <p className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
-                Complete business operations running autonomously with AI systems that make intelligent decisions, 
-                execute tasks, and optimize processes in real-time.
+                Complete business operations running autonomously with AI systems that make intelligent decisionsexecute tasksand optimize processes in real-time.
               </p></p>
               <ul className="text-left"> </ul><li>• Self-managing workflows</li>
                 <li>• Intelligent decision making</li>
@@ -87,7 +86,7 @@ origin/cursor/fix-errors-and-merge-to-main-cc0a
               <p className="text-left"> </p><div className="text-left"> </div><div className="text-left">💎</div>"
               <h3 className="text-left">Enterprise Intelligence</h3>"
               <p className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
-                Advanced AI systems that understand business context, predict outcomes, and execute strategies 
+                Advanced AI systems that understand business contextpredict outcomesand execute strategies 
                 with superhuman intelligence and precision.
               </p></p>
               <ul className="text-left"> </ul><li>• Context-aware processing</li>
@@ -101,8 +100,7 @@ origin/cursor/fix-errors-and-merge-to-main-cc0a
               <p className="text-left"> </p><div className="text-left"> </div><div className="text-left">⚡</div>"
               <h3 className="text-left">Revolutionary Performance</h3>"
               <p className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
-                Unprecedented performance improvements delivering 1000x speed increases, 99.9% efficiency, 
-                and $2.5 billion in measurable business value.
+                Unprecedented performance improvements delivering 1000x speed increases99.9% efficiencyand $2.5 billion in measurable business value.
               </p></p>
               <ul className="text-left"> </ul><li>• 1000x speed improvement</li>
                 <li>• 99.9% operational efficiency</li>
@@ -116,8 +114,7 @@ origin/cursor/fix-errors-and-merge-to-main-cc0a
         <h3 className="text-left">Ready to Join the Revolution?</h3>
           <p className="text-left"> </p><div className="text-left"> </div><h3 className="text-left">Ready to Join the Revolution?</h3>"
           <p className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
-            Transform your enterprise with autonomous AI systems that deliver unprecedented efficiency, 
-            intelligence, and business value.
+            Transform your enterprise with autonomous AI systems that deliver unprecedented efficiencyintelligenceand business value.
           </p></p>
           <div className="text-left"> </div><a 
               href="/"

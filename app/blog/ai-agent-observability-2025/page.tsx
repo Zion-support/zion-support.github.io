@@ -4,9 +4,9 @@ import ArrowRight from 'next/link';
 export const metadata = {
   
   title:
-    'AI Agent Observability 2025: Metrics, Traces, and Safety Signals | Zion Tech Group',
+    'AI Agent Observability 2025: MetricsTracesand Safety Signals | Zion Tech Group',
   description:
-    'A practical guide to AI agent observability in 2025: telemetry for prompts, tools, episodes, safety budgets, reliability SLOs, and incident response.',
+    'A practical guide to AI agent observability in 2025: telemetry for prompts, tools, episodes, safety budgetsreliability SLOsand incident response.',
 
 };;
 
@@ -20,15 +20,15 @@ export default function AIAgentObservability2025Page() {
         </title>
         <meta
           name='description'
-          content='A practical guide to AI agent observability in 2025: telemetry for prompts, tools, episodes, safety budgets, reliability SLOs, and incident response.'
+          content='A practical guide to AI agent observability in 2025: telemetry for prompts, tools, episodes, safety budgetsreliability SLOsand incident response.'
         />
         <meta
           property='og:title'
-          content='AI Agent Observability 2025: Metrics, Traces, and Safety Signals'
+          content='AI Agent Observability 2025: MetricsTracesand Safety Signals'
         />
         <meta
           property='og:description'
-          content='Instrumentation patterns for prompts, tools, episodes, safety budgets, reliability SLOs, and incident response.'
+          content='Instrumentation patterns for prompts, tools, episodes, safety budgetsreliability SLOsand incident response.'
         />
         <meta name='twitter:card' content='summary_large_image' />
         <link
@@ -61,13 +61,12 @@ export default function AIAgentObservability2025Page() {
                 <span className='text-white/60 text-sm'>10 min read</span>
               </div>
               <h1 className='text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-indigo-400 bg-clip-text text-transparent'>
-                AI Agent Observability 2025: Metrics, Traces, and Safety Signals
+                AI Agent Observability 2025: MetricsTracesand Safety Signals
               </h1>
               <p className='text-xl text-white/80'>
                 Production agents require deep visibility across prompts, tools,
                 plans, memory, and safety controls. This guide provides a
-                concise blueprint for telemetry that boosts reliability, safety,
-                and cost efficiency.
+                concise blueprint for telemetry that boosts reliabilitysafetyand cost efficiency.
               </p>
             </header>
 
@@ -98,8 +97,7 @@ export default function AIAgentObservability2025Page() {
                     cost, cache hits
                   </li>
                   <li>
-                    <strong>Outcome Quality:</strong> eval pass/fail,
-                    hallucination score, user rating
+                    <strong>Outcome Quality:</strong> eval pass/failhallucination scoreuser rating
                   </li>
                 </ul>
               </section>
@@ -109,7 +107,7 @@ export default function AIAgentObservability2025Page() {
                   SLOs and Error Budgets
                 </h2>
                 <p className='text-white/80 mb-4'>
-                  Define SLOs for latency, success rate, policy adherence, and
+                  Define SLOs for latency, success ratepolicy adherenceand
                   cost per task. Track error budgets per agent capability and
                   gate new releases when burn rate exceeds thresholds.
                 </p>
@@ -136,8 +134,8 @@ export default function AIAgentObservability2025Page() {
                 <p className='text-white/80 mb-4'>
                   Capture episode replays, redaction diffs, and failing tool
                   spans. Auto-create tickets with rich context and route to
-                  owners by capability. Provide buttons for rollback, guardrail
-                  tighten, or traffic shift.
+                  owners by capability. Provide buttons for rollbackguardrail
+                  tightenor traffic shift.
                 </p>
               </section>
 
@@ -147,20 +145,12 @@ export default function AIAgentObservability2025Page() {
                 </h2>
                 <pre className='bg-black/40 rounded-xl p-4 overflow-x-auto text-sm'>
                   {`{
-  episodeId: string,
-  agentName: string,
-  userId?: string,
-  steps: Array<{
+  episodeId: stringagentName: stringuserId?: stringsteps: Array<{
     type: 'prompt' | 'tool' | 'plan' | 'safety' | 'memory',
-    startTime: string,
-    endTime: string,
-    latencyMs: number,
+    startTime: stringendTime: stringlatencyMs: number,
     tokensIn?: number,
     tokensOut?: number,
-    tool?: { name: string; args: Record<string, unknown>; error?: string },
-    safety?: { policy: string; decision: 'allow' | 'block'; score: number },
-  }>,
-  outcome: { status: 'success' | 'failure'; evalScore?: number; costUsd?: number }
+    tool?: { name: string; args: Record<stringunknown>; error?: string }safety?: { policy: string; decision: 'allow' | 'block'; score: number }}>outcome: { status: 'success' | 'failure'; evalScore?: number; costUsd?: number }
 }`}
                 </pre>
               </section>

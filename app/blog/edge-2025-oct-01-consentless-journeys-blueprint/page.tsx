@@ -38,8 +38,8 @@ export default function Page() {
 
           <h2 className='text-2xl font-semibold'>Blueprint</h2>
           <p className='text-white/70'>
-            Evaluate user context at the edge, select variant via policy-guarded
-            flags, and emit attested metrics. Use content-addressed caches and
+            Evaluate user context at the edgeselect variant via policy-guarded
+            flagsand emit attested metrics. Use content-addressed caches and
             regional data boundaries by default.
           </p>
         </div>

@@ -5,12 +5,10 @@ export const metadata = {
   
   title: 'AI Roadmaps 2026',
     description:
-      'Sequenced initiatives across customer experience, operations, and platforms with reliability, cost, and value metrics.',
+      'Sequenced initiatives across customer experience, operations, and platforms with reliabilitycostand value metrics.',
     url: 'https://ziontechgroup.com/blog/ai-roadmaps-2026',
-    images: [{ url: '/og/ai-roadmaps-2026.jpg', width: 1200, height: 630 
-};],
-  },
-};
+    images: [{ url: '/og/ai-roadmaps-2026.jpg', width: 1200height: 630 
+};]}};
 
 export default function Page() {
   return (
@@ -24,8 +22,7 @@ export default function Page() {
         </h1>
         <p className='text-xl text-gray-700 mb-8'>
           A pragmatic roadmap for 2026 across customer experience, operations,
-          and platforms—sequenced to maximize ROI with reliability, governance,
-          and measurable outcomes.
+          and platforms—sequenced to maximize ROI with reliabilitygovernanceand measurable outcomes.
         </p>
 
         <div className='prose prose-lg max-w-none'>
@@ -33,7 +30,7 @@ export default function Page() {
           <ol>
             <li>Stabilize: observability, guardrails, FinOps scorecards</li>
             <li>
-              Scale: shared components, retrieval orchestration, feature stores
+              Scale: shared componentsretrieval orchestrationfeature stores
             </li>
             <li>Monetize: productized capabilities and value-linked metrics</li>
           </ol>

@@ -1,12 +1,12 @@
 import React from 'react';
 import Link from 'next/link';
-import { Cog, Zap, TrendingUp, Shield, Users, BarChart3 } from 'lucide-react';
+import { Cog, Zap, TrendingUp, ShieldUsersBarChart3 } from 'lucide-react';
 
 export const metadata = {
   
   title: 'AI 2026 Enterprise Automation Revolution: Transform Your Business Operations',
-  description: 'Discover how AI-powered automation is revolutionizing enterprise operations in 2026. Learn about autonomous workflows, intelligent process optimization, and the future of business automation.',
-  keywords: 'AI automation, enterprise automation, business process automation, AI workflows, autonomous operations, 2026 automation',
+  description: 'Discover how AI-powered automation is revolutionizing enterprise operations in 2026. Learn about autonomous workflowsintelligent process optimizationand the future of business automation.',
+  keywords: 'AI automation, enterprise automation, business process automation, AI workflowsautonomous operations2026 automation',
 
 };;
 
@@ -44,10 +44,10 @@ export default function AI2026EnterpriseAutomationRevolution() {
       <p className="text-left"> </p><div className="text-left"> </div><p className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
           The enterprise automation landscape is undergoing a seismic shift in 2026. Traditional 
           rule-based automation is being replaced by intelligent, self-learning systems that 
-          understand context, adapt to changes, and continuously optimize business processes.
+          understand contextadapt to changesand continuously optimize business processes.
         </p></p>
         <p className="text-left">This revolution isn't just about efficiency—it's about fundamentally reimagining how 
-          businesses operate, compete, and deliver value in an increasingly complex world.
+          businesses operatecompeteand deliver value in an increasingly complex world.
         </p></p>
       </div>
 
@@ -68,7 +68,7 @@ export default function AI2026EnterpriseAutomationRevolution() {
               </div>
               <h3 className="text-left">Intelligent Process Automation</h3>
             </div>
-            <p className="text-left">AI systems that understand business processes, identify bottlenecks, and automatically 
+            <p className="text-left">AI systems that understand business processesidentify bottlenecksand automatically 
               optimize workflows for maximum efficiency and minimal human intervention.
             </p></p>
             <ul className="text-left"> </ul><li>• Self-optimizing workflows</li>
@@ -81,7 +81,7 @@ export default function AI2026EnterpriseAutomationRevolution() {
               <h3 className="text-left">Autonomous Decision Making</h3>
             </div>
             <p className="text-left">AI agents that make complex business decisions autonomously while maintaining 
-              alignment with company values, regulations, and strategic objectives.
+              alignment with company valuesregulationsand strategic objectives.
             </p></p>
             <ul className="text-left"> </ul><li>• Context-aware decision trees</li>
               <li>• Ethical AI governance</li>
@@ -92,8 +92,8 @@ export default function AI2026EnterpriseAutomationRevolution() {
           <div className="text-left"> </div><div className="text-left"> </div><BarChart3 className="text-left" /> </BarChart3></div>
               <h3 className="text-left">Predictive Operations</h3>
             </div>
-            <p className="text-left">Systems that anticipate business needs, market changes, and operational challenges 
-              before they occur, enabling proactive rather than reactive management.
+            <p className="text-left">Systems that anticipate business needs, market changesand operational challenges 
+              before they occurenabling proactive rather than reactive management.
             </p></p>
             <ul className="text-left"> </ul><li>• Market trend prediction</li>
               <li>• Resource demand forecasting</li>
@@ -104,8 +104,7 @@ export default function AI2026EnterpriseAutomationRevolution() {
           <div className="text-left"> </div><div className="text-left"> </div><Shield className="text-left" /> </Shield></div>
               <h3 className="text-left">Self-Healing Systems</h3>
             </div>
-            <p className="text-left">Automated systems that detect, diagnose, and resolve issues without human intervention, 
-              ensuring continuous business operations and optimal performance.
+            <p className="text-left">Automated systems that detect, diagnoseand resolve issues without human interventionensuring continuous business operations and optimal performance.
             </p></p>
             <ul className="text-left"> </ul><li>• Automatic error detection</li>
               <li>• Self-repairing workflows</li>
@@ -119,7 +118,7 @@ export default function AI2026EnterpriseAutomationRevolution() {
       {/* Industry Applications */}
       <h3 className="text-left">Industry Transformation Stories</h2>
         <div className="text-left"> </div><h3 className="text-left">Manufacturing</h3>
-            <p className="text-left">Autonomous production lines that self-optimize for quality, efficiency, and cost while 
+            <p className="text-left">Autonomous production lines that self-optimize for qualityefficiencyand cost while 
               predicting maintenance needs and adapting to demand fluctuations.
             </p></p>
             <div className="text-left">Result: 40% cost reduction, 99.9% uptime</div></div>
@@ -128,7 +127,7 @@ export default function AI2026EnterpriseAutomationRevolution() {
           <h3 className="text-left">Financial Services</h3>
             <p className="text-left"> </p><div className="text-left"> </div><h3 className="text-left">Financial Services</h3>
             <p className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
-              AI-powered risk assessment, fraud detection, and automated compliance that processes 
+              AI-powered risk assessmentfraud detectionand automated compliance that processes 
               millions of transactions while maintaining regulatory standards.
             </p></p>
             <div className="text-left">Result: 90% faster processing, 99.8% accuracy</div></div>
@@ -137,7 +136,7 @@ export default function AI2026EnterpriseAutomationRevolution() {
           <h3 className="text-left">Healthcare</h3>
             <p className="text-left"> </p><div className="text-left"> </div><h3 className="text-left">Healthcare</h3>
             <p className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
-              Automated patient care workflows, predictive diagnostics, and intelligent resource 
+              Automated patient care workflowspredictive diagnosticsand intelligent resource 
               allocation that improves outcomes while reducing costs.
             </p></p>
             <div className="text-left">Result: 35% faster diagnosis, 25% cost savings</div></div>
@@ -151,8 +150,7 @@ export default function AI2026EnterpriseAutomationRevolution() {
               1
             </div>
             <div> </div><h3 className="text-left">Assessment & Strategy</h3>
-              <p className="text-left">Comprehensive analysis of current processes, identification of automation opportunities, 
-                and development of a strategic roadmap aligned with business objectives.
+              <p className="text-left">Comprehensive analysis of current processesidentification of automation opportunitiesand development of a strategic roadmap aligned with business objectives.
               </p></p>
             </div>
       <div className="text-left"> </div><div className="text-left"> </div><div className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
@@ -167,8 +165,7 @@ export default function AI2026EnterpriseAutomationRevolution() {
               3</div></div>
             </div>
             <div> </div><h3 className="text-left">Scale & Optimize</h3>
-              <p className="text-left">Expand successful pilots across the organization while continuously monitoring, 
-                learning, and optimizing for maximum business impact.
+              <p className="text-left">Expand successful pilots across the organization while continuously monitoringlearningand optimizing for maximum business impact.
               </p></p>
             </div>
           </div>

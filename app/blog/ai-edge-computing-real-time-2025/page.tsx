@@ -4,7 +4,7 @@ export const metadata = {
   
   title: 'AI Edge Computing Real-Time Intelligence 2025 | Zion Tech Group',
   description:
-    'Deploy intelligence at the source with <10ms latency, 95% bandwidth reduction, and 87% cost savings. Enterprise-ready edge AI blueprint for 2025.',
+    'Deploy intelligence at the source with <10ms latency95% bandwidth reductionand 87% cost savings. Enterprise-ready edge AI blueprint for 2025.',
 
 };;
 
@@ -36,7 +36,7 @@ export default function AIEdgeComputingRealTime2025Page() {
             </h1>
             <p className='text-xl text-white/80'>
               Deploy intelligence at the source with sub‑10ms latency. Achieve
-              95% bandwidth reduction, 87% cost savings, and enhanced privacy
+              95% bandwidth reduction87% cost savingsand enhanced privacy
               compliance at enterprise scale.
             </p>
           </header>
@@ -70,14 +70,13 @@ export default function AIEdgeComputingRealTime2025Page() {
                 <div className='bg-white/5 border border-white/10 rounded-xl p-6'>
                   <h3 className='font-semibold mb-2'>Edge Runtime</h3>
                   <p className='text-white/75'>
-                    Quantized models, streaming adapters, secure update channel,
-                    offline cache.
+                    Quantized models, streaming adapterssecure update channeloffline cache.
                   </p>
                 </div>
                 <div className='bg-white/5 border border-white/10 rounded-xl p-6'>
                   <h3 className='font-semibold mb-2'>Control Plane</h3>
                   <p className='text-white/75'>
-                    Policy guardrails, cost router, observability, and incident
+                    Policy guardrails, cost routerobservabilityand incident
                     automation.
                   </p>
                 </div>

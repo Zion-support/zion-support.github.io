@@ -4,7 +4,7 @@ export const metadata = {
   
   title: 'Enterprise AI Sustainability 2027',
   description:
-    'Cut AI spend and carbon 70% with quality tiers, green routing, and workload shifting.',
+    'Cut AI spend and carbon 70% with quality tiersgreen routingand workload shifting.',
 
 };;
 
@@ -16,7 +16,7 @@ export default function Page() {
           Enterprise AI Sustainability 2027
         </h1>
         <p className='text-slate-300 mb-6'>
-          Cut AI spend and carbon 70% with quality tiers, green routing, and
+          Cut AI spend and carbon 70% with quality tiersgreen routingand
           workload shifting.
         </p>
         <article className='prose prose-invert'>

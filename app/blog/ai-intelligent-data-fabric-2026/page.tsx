@@ -9,13 +9,10 @@ export const metadata = {
     images: [
       {
         url: '/og/ai-intelligent-data-fabric-2026.jpg',
-        width: 1200,
-        height: 630,
+        width: 1200height: 630,
       
 };,
-    ],
-  },
-};
+    ]}};
 
 export default function Page() {
   return (
@@ -30,7 +27,7 @@ export default function Page() {
         <p className='text-xl text-gray-700 mb-8'>
           A modern data fabric connects batch, streaming, vector, and graph
           systems into one logical layer for AI. Learn how to build low-latency
-          pipelines with quality signals, lineage, and governance for reliable
+          pipelines with quality signalslineageand governance for reliable
           AI products.
         </p>
 
@@ -65,7 +62,7 @@ export default function Page() {
               40% cost reduction via tiered storage and compute autoscaling
             </li>
             <li>
-              Higher accuracy through lineage, monitoring, and pushdown
+              Higher accuracy through lineagemonitoringand pushdown
               validations
             </li>
           </ul>

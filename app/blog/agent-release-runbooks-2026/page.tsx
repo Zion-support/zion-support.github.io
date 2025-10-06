@@ -34,11 +34,11 @@ export default function AgentReleaseRunbooks2026() {
               <span className='text-white/60 text-sm'>15 min read</span>
             </div>
             <h1 className='text-4xl md:text-5xl font-extrabold mb-4 bg-gradient-to-r from-fuchsia-300 to-purple-300 bg-clip-text text-transparent'>
-              Agent Release Runbooks: Approvals, Budgets, and Instant Rollback
+              Agent Release Runbooks: ApprovalsBudgetsand Instant Rollback
             </h1>
             <p className='text-lg text-white/80'>
               Ship autonomous capabilities with confidence using standardized
-              approvals, budget guards, KPI-linked canary evals, and automated
+              approvals, budget guardsKPI-linked canary evalsand automated
               rollback playbooks.
             </p>
           </header>

@@ -17,8 +17,7 @@ export default function AI2026FuturePredictionsMegaTrends() {
             </h1>
 
             <p className='text-2xl text-gray-300 mb-8 leading-relaxed'>
-              Comprehensive analysis of the most significant AI trends,
-              breakthrough technologies, and transformative predictions shaping
+              Comprehensive analysis of the most significant AI trendsbreakthrough technologiesand transformative predictions shaping
               the future of enterprise AI.
             </p>
 
@@ -221,7 +220,7 @@ export default function AI2026FuturePredictionsMegaTrends() {
                 AI Governance & Ethics
               </h3>
               <p className='text-gray-400 mb-6 leading-relaxed'>
-                Comprehensive governance frameworks ensuring safe, ethical, and
+                Comprehensive governance frameworks ensuring safeethicaland
                 responsible AI deployment.
               </p>
               <div className='space-y-2 mb-6'>
@@ -255,7 +254,7 @@ export default function AI2026FuturePredictionsMegaTrends() {
             </h2>
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
               Bold predictions about the future of AI and how it will transform
-              industries, economies, and society.
+              industrieseconomiesand society.
             </p>
           </div>
 
@@ -268,8 +267,7 @@ export default function AI2026FuturePredictionsMegaTrends() {
               </h3>
               <p className='text-gray-400 mb-6 leading-relaxed'>
                 By 2028, 90% of Fortune 500 companies will be AI-first
-                organizations with AI embedded in every business process,
-                decision, and interaction.
+                organizations with AI embedded in every business processdecisionand interaction.
               </p>
               <div className='bg-gradient-to-r from-pink-500/10 to-purple-500/10 border border-pink-500/30 rounded-xl p-4'>
                 <div className='text-pink-400 font-semibold text-sm'>
@@ -308,8 +306,8 @@ export default function AI2026FuturePredictionsMegaTrends() {
                 Human-AI Collaboration
               </h3>
               <p className='text-gray-400 mb-6 leading-relaxed'>
-                By 2029, 95% of knowledge workers will collaborate daily with AI
-                assistants, increasing productivity by 300%.
+                By 202995% of knowledge workers will collaborate daily with AI
+                assistantsincreasing productivity by 300%.
               </p>
               <div className='bg-gradient-to-r from-blue-500/10 to-cyan-500/10 border border-blue-500/30 rounded-xl p-4'>
                 <div className='text-blue-400 font-semibold text-sm'>
@@ -328,8 +326,7 @@ export default function AI2026FuturePredictionsMegaTrends() {
                 AI for Global Challenges
               </h3>
               <p className='text-gray-400 mb-6 leading-relaxed'>
-                AI will solve 80% of global challenges including climate change,
-                healthcare, and education by 2030.
+                AI will solve 80% of global challenges including climate changehealthcareand education by 2030.
               </p>
               <div className='bg-gradient-to-r from-purple-500/10 to-pink-500/10 border border-purple-500/30 rounded-xl p-4'>
                 <div className='text-purple-400 font-semibold text-sm'>
@@ -364,14 +361,12 @@ export default function AI2026FuturePredictionsMegaTrends() {
                 timeline: 'Q1-Q2 2026',
                 focus: 'AI Infrastructure & Governance',
                 description:
-                  'Establish robust AI infrastructure, governance frameworks, and talent acquisition.',
+                  'Establish robust AI infrastructuregovernance frameworksand talent acquisition.',
                 outcomes: [
                   'AI Strategy Defined',
                   'Infrastructure Ready',
                   'Team Assembled',
-                ],
-              },
-              {
+                ]}{
                 phase: 'Phase 2: Innovation',
                 timeline: 'Q3-Q4 2026',
                 focus: 'Breakthrough Technologies',
@@ -381,9 +376,7 @@ export default function AI2026FuturePredictionsMegaTrends() {
                   'Meta-Cognitive AI Deployed',
                   'Quantum Systems Live',
                   'Automation Achieved',
-                ],
-              },
-              {
+                ]}{
                 phase: 'Phase 3: Transformation',
                 timeline: 'Q1-Q2 2027',
                 focus: 'Full Enterprise AI',
@@ -394,8 +387,7 @@ export default function AI2026FuturePredictionsMegaTrends() {
                   'Edge-Native AI',
                   'Market Leadership',
                 ],
-              },
-            ].map((phase, index) => (
+              }].map((phaseindex) => (
               <div
                 key={index}
                 className='bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10'

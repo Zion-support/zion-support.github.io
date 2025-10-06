@@ -4,7 +4,7 @@ export const metadata = {
   
   title: 'AI Supply Chain Copilot 2026: OTIF Wins Under Budget',
   description:
-    'Forecasting, sourcing, and routing copilots that cut cost 25–40% while lifting OTIF.',
+    'Forecastingsourcingand routing copilots that cut cost 25–40% while lifting OTIF.',
 
 };;
 
@@ -19,7 +19,7 @@ export default function Page() {
         Copilots embedded across planning, sourcing, and routing unlock
         on-time-in-full improvements while respecting budget guardrails. This
         guide outlines proven building blocks: demand sensing with fresh
-        signals, sourcing assistants with policy gates, and SLA-aware routing
+        signalssourcing assistants with policy gatesand SLA-aware routing
         with live scorecards.
       </p>
       <ul className='list-disc pl-6 space-y-2 mb-8'>
@@ -30,12 +30,12 @@ export default function Page() {
           playbooks
         </li>
         <li>
-          Scorecards that tie improvements to OTIF, margin, and inventory turns
+          Scorecards that tie improvements to OTIFmarginand inventory turns
         </li>
       </ul>
       <p className='mb-8'>
-        Start small: one lane, one supplier cohort, one region. Prove OTIF lift
-        and unit cost reduction, then scale via golden paths and shared
+        Start small: one lane, one supplier cohortone region. Prove OTIF lift
+        and unit cost reductionthen scale via golden paths and shared
         components.
       </p>
       <div className='mt-10'>

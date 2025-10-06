@@ -10,10 +10,10 @@ export default function RuntimeGuardrailsBlueprint2025() {
             September 30, 2025 • 11 min read
           </p>
           <h1 className='text-4xl md:text-5xl font-extrabold leading-tight bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent'>
-            Runtime Guardrails Blueprint — Budgets, Gates, Instant Rollback
+            Runtime Guardrails Blueprint — BudgetsGatesInstant Rollback
           </h1>
           <p className='mt-4 text-gray-300 text-lg'>
-            Executable policy tests, KPI‑linked canaries, and budgeted actions
+            Executable policy testsKPI‑linked canariesand budgeted actions
             for safe autonomy in production.
           </p>
         </header>
@@ -37,7 +37,7 @@ export default function RuntimeGuardrailsBlueprint2025() {
             <li>
               Live canaries wired to KPIs with automatic rollback on regression.
             </li>
-            <li>End‑to‑end traces across prompts, tools, and external APIs.</li>
+            <li>End‑to‑end traces across promptstoolsand external APIs.</li>
           </ul>
 
           <h2>Starter Checklist</h2>

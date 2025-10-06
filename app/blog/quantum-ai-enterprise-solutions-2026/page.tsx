@@ -18,7 +18,7 @@ export default function QuantumAIEnterpriseSolutions2026() {
               <span>•</span>
               <span>⏱️ 12 min read</span>
               <span>•</span>
-              <span>🏷️ Quantum Computing, AI, Enterprise Solutions</span>
+              <span>🏷️ Quantum ComputingAIEnterprise Solutions</span>
             </div>
           </header>
 

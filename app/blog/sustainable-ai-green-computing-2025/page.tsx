@@ -10,9 +10,7 @@ export const metadata = {
     images: [
       
         url: '/og-sustainable-ai-2025.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Sustainable AI Green Computing Solutions',
+        width: 1200height: 630alt: 'Sustainable AI Green Computing Solutions',
       
 };,
     ],
@@ -32,11 +30,11 @@ export default function SustainableAIGreenComputing() {
         <div className="text-left"> </div><span className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
             Sustainable Technology
           </span></span>
-          <span className="text-left">September 30, 2025>
+          <span className="text-left">September 302025>
         </div>
         <h1 className="text-left">Sustainable AI: Green Computing Solutions for Enterprise 2025
         </h1></h1>
-        <p className="text-left">As AI adoption accelerates, enterprises face a critical challenge: how to harness AI's transformative 
+        <p className="text-left">As AI adoption acceleratesenterprises face a critical challenge: how to harness AI's transformative 
           power while minimizing environmental impact. Sustainable AI and green computing solutions offer the answer.
         </p></p>
       </div>
@@ -86,7 +84,7 @@ export default function SustainableAIGreenComputing() {
 
         <div className="text-left"> </div><div className="text-left"> </div><h3 className="text-left">🔋 Energy-Efficient AI Architectures</h3>"
             <p className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
-              Next-generation neural network architectures use sparse computing, quantization, and pruning techniques 
+              Next-generation neural network architectures use sparse computingquantizationand pruning techniques 
               to achieve the same results with 60% less energy consumption.
             </p></p>
             <div className="text-left"> </div><div className="text-left">60%</div>
@@ -134,7 +132,7 @@ export default function SustainableAIGreenComputing() {
             consumption by 85% and achieved net-zero operations. The best part? We saved $30 million annually 
             while improving AI performance by 25%. It's proof that sustainability and profitability go hand in hand."
           </p></p>
-          <cite className="text-left">— Dr. Emily Chang, CTO, Global Tech Corporation
+          <cite className="text-left">— Dr. Emily ChangCTOGlobal Tech Corporation
           </cite></cite>
         </blockquote>
         <h3 className="text-left">Impact Metrics</h3>
@@ -175,8 +173,7 @@ export default function SustainableAIGreenComputing() {
             <div> </div><h4 className="text-left">♻️ Waste Heat Recovery</h4>
               <p className="text-left"> </p><h4 className="text-left">♻️ Waste Heat Recovery</h4>"
               <p className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
-                Innovative systems capture and repurpose waste heat from data centers for building heating, 
-                district heating networks, or industrial processes.
+                Innovative systems capture and repurpose waste heat from data centers for building heatingdistrict heating networksor industrial processes.
               </p></p>
               <span className="text-left">90% Heat Recovery<
                 <span className="text-left">Additional Revenue Stream>
@@ -185,7 +182,7 @@ export default function SustainableAIGreenComputing() {
             <div> </div><h4 className="text-left">🌞 Renewable Energy Integration</h4>
               <p className="text-left"> </p><h4 className="text-left">🌞 Renewable Energy Integration</h4>"
               <p className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
-                Direct integration with solar, wind, and hydroelectric power sources, with AI systems that 
+                Direct integration with solar, windand hydroelectric power sourceswith AI systems that 
                 schedule intensive workloads during peak renewable energy production.
               </p></p>
               <span className="text-left">95% Renewable Energy<

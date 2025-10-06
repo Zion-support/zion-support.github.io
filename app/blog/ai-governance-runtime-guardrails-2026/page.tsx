@@ -3,7 +3,7 @@ export const metadata = {
   title:
     'AI Governance Runtime Guardrails 2026 — Inline Policies Without Friction',
   description:
-    'Run-time policy checks, KPI-linked canaries, and instant rollback that keep teams fast and compliant.',
+    'Run-time policy checksKPI-linked canariesand instant rollback that keep teams fast and compliant.',
 
 };;
 
@@ -21,7 +21,7 @@ export default function AIGovernanceRuntimeGuardrails2026() {
         <section className='space-y-6'>
           <p className='text-slate-300'>
             Ship fast with governance that runs in-line with production traffic.
-            Wire policy checks, KPI-linked canaries, and rollback triggers so
+            Wire policy checksKPI-linked canariesand rollback triggers so
             releases stay safe and velocity remains high.
           </p>
           <ul className='list-disc list-inside space-y-2 text-slate-300'>

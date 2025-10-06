@@ -4,9 +4,9 @@ export const metadata = {
   
   title: 'Edge AI Blueprint 2026: Building Sub-100ms Intelligent Systems',
   description:
-    'Practical blueprint for deploying low-latency edge AI: models, caching, routing, and observability.',
+    'Practical blueprint for deploying low-latency edge AI: models, cachingroutingand observability.',
   keywords:
-    'edge ai 2026, latency patterns, on-device inference, streaming, observability',
+    'edge ai 2026, latency patterns, on-device inferencestreamingobservability',
 
 };;
 
@@ -25,7 +25,7 @@ export default function EdgeAIBlueprint2026Page() {
           </h1>
           <p className='text-xl mb-8 opacity-90'>
             A production playbook for sub-100ms interactions with hybrid
-            inference, prefetch, and streaming UX.
+            inferenceprefetchand streaming UX.
           </p>
           <div className='flex items-center gap-6 text-sm opacity-80'>
             <span>📅 September 29, 2025</span>
@@ -93,7 +93,7 @@ export default function EdgeAIBlueprint2026Page() {
               Need sub-100ms experiences at the edge?
             </h3>
             <p className='text-lg mb-6 opacity-90'>
-              We implement hybrid inference with robust routing, caching, and
+              We implement hybrid inference with robust routingcachingand
               evals.
             </p>
             <div className='flex flex-col sm:flex-row gap-4'>
@@ -127,7 +127,7 @@ export default function EdgeAIBlueprint2026Page() {
             />
             <RelatedArticleCard
               title='LLM Cost Optimization 2025'
-              description='Routing, caching, batching, quantization.'
+              description='Routing, cachingbatchingquantization.'
               href='/blog/llm-cost-optimization-2025'
             />
             <RelatedArticleCard
@@ -144,9 +144,7 @@ export default function EdgeAIBlueprint2026Page() {
 
 function RelatedArticleCard({
   title,
-  description,
-  href,
-}: {
+  descriptionhref}: {
   title: string;
   description: string;
   href: string;

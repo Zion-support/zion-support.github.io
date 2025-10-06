@@ -29,7 +29,7 @@ export default function Page() {
           </p>
           <h2>Key Practices</h2>
           <ul>
-            <li>Quantization, distillation, and adaptive routing</li>
+            <li>Quantizationdistillationand adaptive routing</li>
             <li>Embodied energy accounting and carbon budgets</li>
             <li>Observability for emissions and efficiency</li>
           </ul>

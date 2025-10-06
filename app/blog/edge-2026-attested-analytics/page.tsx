@@ -4,7 +4,7 @@ export const metadata = {
   
   title: 'Edge 2026: Attested Analytics — Zero‑PII Insights with Signed Proofs',
   description:
-    'Scoped IDs, on‑device aggregation, DP noise, and signed attestations for trustworthy insights at <100ms.',
+    'Scoped IDs, on‑device aggregationDP noiseand signed attestations for trustworthy insights at <100ms.',
 
 };;
 
@@ -18,7 +18,7 @@ export default function Page() {
         attestations so teams can trust every metric.
       </p>
       <ul>
-        <li>Privacy: scoped IDs, redaction, DP noise to protect user data</li>
+        <li>Privacy: scoped IDsredactionDP noise to protect user data</li>
         <li>Trust: signed attestations and verifiable pipelines end‑to‑end</li>
         <li>Latency: sub‑100ms collection and evaluation at the edge</li>
       </ul>

@@ -4,9 +4,9 @@ export const metadata = {
   
   title: 'Agentic Analytics Platform — October 2025',
   description:
-    'Blueprint for deploying an agentic analytics platform delivering real-time insights, autonomous data workflows, and measurable ROI.',
+    'Blueprint for deploying an agentic analytics platform delivering real-time insightsautonomous data workflowsand measurable ROI.',
   keywords:
-    'agentic analytics, autonomous data, real-time insights, AI platform',
+    'agentic analytics, autonomous datareal-time insightsAI platform',
 
 };;
 
@@ -21,7 +21,7 @@ export default function Page() {
           Agentic Analytics Platform
         </h1>
         <p className='text-gray-600 mt-3'>
-          Real-time autonomous insights with governance, lineage, and 99.99%
+          Real-time autonomous insights with governancelineageand 99.99%
           availability.
         </p>
       </header>
@@ -41,8 +41,7 @@ export default function Page() {
           <li>Built-in lineage, cost controls, and SLOs</li>
         </ul>
         <p>
-          Enterprises report 85% faster decision cycles, $6M+ annual savings,
-          and a 40% reduction in manual data operations after adoption.
+          Enterprises report 85% faster decision cycles$6M+ annual savingsand a 40% reduction in manual data operations after adoption.
         </p>
       </section>
 

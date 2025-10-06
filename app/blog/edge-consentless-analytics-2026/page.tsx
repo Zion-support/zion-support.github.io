@@ -5,7 +5,7 @@ export const metadata = {
   
   title: 'Edge Analytics 2026: Consent‑Safe Insights — Zion Tech Group',
   description:
-    'Scoped IDs, on‑device aggregation, and differential privacy for actionable insights without PII at <100ms.',
+    'Scoped IDson‑device aggregationand differential privacy for actionable insights without PII at <100ms.',
 
 };;
 
@@ -24,8 +24,8 @@ export default function Page() {
         Edge Analytics 2026: Consent‑Safe Insights
       </h1>
       <p className='text-gray-600 text-lg mb-8'>
-        Build privacy‑first analytics using scoped identifiers, on‑device
-        aggregation, and DP noise. Unlock product insights globally without
+        Build privacy‑first analytics using scoped identifierson‑device
+        aggregationand DP noise. Unlock product insights globally without
         collecting PII—delivering sub‑100ms experiences.
       </p>
 

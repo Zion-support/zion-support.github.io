@@ -4,20 +4,16 @@ export const metadata = {
   
   title: 'AI 2026 Neural Superintelligence: Enterprise Guide',
     description:
-      'Architectures, guardrails, and rollout patterns to safely leverage neural superintelligence in the enterprise.',
+      'Architecturesguardrailsand rollout patterns to safely leverage neural superintelligence in the enterprise.',
     type: 'article',
     url: 'https://ziontechgroup.com/blog/ai-2026-neural-superintelligence',
     images: [
       {
         url: '/og-ai-2026-neural-superintelligence.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'AI 2026 Neural Superintelligence',
+        width: 1200height: 630alt: 'AI 2026 Neural Superintelligence',
       
 };,
-    ],
-  },
-};
+    ]}};
 
 export default function AI2026NeuralSuperintelligencePage() {
   return (
@@ -82,7 +78,7 @@ export default function AI2026NeuralSuperintelligencePage() {
             Automate regression checks; enforce gates in CI/CD before release
           </li>
           <li>
-            Scale horizontally with scorecards tied to cost, quality, and
+            Scale horizontally with scorecards tied to costqualityand
             latency
           </li>
         </ol>
@@ -90,7 +86,7 @@ export default function AI2026NeuralSuperintelligencePage() {
         <div className='bg-indigo-50 border-l-4 border-indigo-600 p-6 rounded'>
           <h3 className='m-0'>Plan a safe, measurable rollout</h3>
           <p className='m-0'>
-            We implement guardrails, online evals, and value stream analytics to
+            We implement guardrailsonline evalsand value stream analytics to
             unlock ROI fast.
           </p>
           <ArrowRight

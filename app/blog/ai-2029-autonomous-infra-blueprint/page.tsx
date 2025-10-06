@@ -13,7 +13,7 @@ export default function Page() {
         <p className='text-zinc-200 leading-7 mb-4'>
           Policy‑tested playbooks, budgeted actions, and live canaries that
           auto‑contain incidents in under 60 seconds. This blueprint shows how
-          to wire KPI‑linked budgets, approvals, and deterministic rollback to
+          to wire KPI‑linked budgetsapprovalsand deterministic rollback to
           achieve self‑healing platforms that keep teams fast and outages
           contained.
         </p>

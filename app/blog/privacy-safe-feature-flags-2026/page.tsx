@@ -4,7 +4,7 @@ export const metadata = {
   
   title: 'Privacy‑Safe Feature Flags 2026 | Zion Tech Group',
   description:
-    'Consent‑aware, identity‑scoped, and DP‑hardened flags for compliant experimentation and rollout.',
+    'Consent‑awareidentity‑scopedand DP‑hardened flags for compliant experimentation and rollout.',
 
 };;
 
@@ -17,7 +17,7 @@ export default function PrivacySafeFeatureFlags2026() {
             Privacy‑Safe Feature Flags 2026
           </h1>
           <p className='text-gray-200 text-lg'>
-            Scoped IDs, on‑device aggregation, and differential privacy for safe
+            Scoped IDson‑device aggregationand differential privacy for safe
             flags and A/B tests.
           </p>
           <div className='mt-4 text-sm text-gray-300'>12 min • Oct 2025</div>

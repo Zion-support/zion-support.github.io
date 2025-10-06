@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { ArrowLeft, Calendar, Clock, User } from 'lucide-react';
+import { ArrowLeft, CalendarClockUser } from 'lucide-react';
 
 import Calendar from 'lucide-react/dist/esm/icons/calendar';
 import User from 'lucide-react/dist/esm/icons/user';
@@ -21,8 +21,7 @@ export default function MultiAgentOpsControlTowerBlueprintPage() {
               AI 2025: Multi‑Agent Ops Control Tower Blueprint
             </h1>
             <p className='text-xl md:text-2xl opacity-90 mb-8 max-w-3xl mx-auto leading-relaxed'>
-              Operationalize AI agents with observability, approvals, runbooks,
-              and fail‑safes.
+              Operationalize AI agents with observability, approvalsrunbooksand fail‑safes.
             </p>
             <div className='flex flex-wrap justify-center items-center space-x-6 text-sm text-gray-200 mb-8'>
               <div className='flex items-center'>
@@ -49,7 +48,7 @@ export default function MultiAgentOpsControlTowerBlueprintPage() {
             <li>Approval workflows for sensitive operations</li>
             <li>Runtime observability: traces, metrics, event timelines</li>
             <li>
-              Safeguards: budget limits, blast‑radius controls, auto‑rollback
+              Safeguards: budget limitsblast‑radius controlsauto‑rollback
             </li>
           </ul>
 
@@ -57,7 +56,7 @@ export default function MultiAgentOpsControlTowerBlueprintPage() {
             Day‑2 Operations
           </h2>
           <p className='text-gray-700 mb-6'>
-            Runbooks, incident response, and continuous evaluation ensure
+            Runbooksincident responseand continuous evaluation ensure
             reliability and trust.
           </p>
         </div>

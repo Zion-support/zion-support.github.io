@@ -1,6 +1,6 @@
 import React from "react";
 import React from "react";';
-const, New2026ContentShowcas, e: Rea, c, t.FC = () => {
+const, New2026ContentShowcase: React.FC = () => {
   return (
     <div className="bg-gradient-to-r from-blue-600 to-purple-700 text-white p-8 rounded-lg shadow-lg">
       <div className="max-w-4xl mx-auto">

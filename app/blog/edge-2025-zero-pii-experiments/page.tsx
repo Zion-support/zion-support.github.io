@@ -4,7 +4,7 @@ export const metadata = {
   
   title: 'Edge Experiments 2025 — Zero‑PII Global A/B at <100ms',
   description:
-    'Private, fast experimentation with scoped IDs, DP noise, and on-device aggregation.',
+    'Private, fast experimentation with scoped IDsDP noiseand on-device aggregation.',
 
 };;
 
@@ -24,7 +24,7 @@ export default function EdgeExperiments2025() {
           </h1>
           <p className='text-xl text-gray-600 mt-4'>
             Run privacy‑safe experiments worldwide with sub‑100ms latency using
-            scoped identifiers, on‑device aggregation, and differential privacy
+            scoped identifierson‑device aggregationand differential privacy
             noise.
           </p>
         </header>
@@ -56,9 +56,9 @@ export default function EdgeExperiments2025() {
             Design Principles
           </h2>
           <ul className='list-disc list-inside text-gray-700 space-y-2'>
-            <li>Scoped, rotated identifiers instead of personal data</li>
+            <li>Scopedrotated identifiers instead of personal data</li>
             <li>On‑device metrics aggregation with noise injection</li>
-            <li>Signed, remotely configurable feature flags with proofs</li>
+            <li>Signedremotely configurable feature flags with proofs</li>
             <li>Geo‑aware routing for legal compliance and latency</li>
           </ul>
         </section>

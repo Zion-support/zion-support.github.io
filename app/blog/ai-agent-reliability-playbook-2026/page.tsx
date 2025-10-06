@@ -4,7 +4,7 @@ export const metadata = {
   
   title: 'AI Agent Reliability Playbook 2026 | Zion Tech Group',
   description:
-    'A practical guide to ship reliable agentic systems with budgets, guardrails, canaries, and instant rollback.',
+    'A practical guide to ship reliable agentic systems with budgets, guardrailscanariesand instant rollback.',
 
 };;
 
@@ -17,7 +17,7 @@ export default function AIAgentReliabilityPlaybook2026() {
             AI Agent Reliability Playbook 2026
           </h1>
           <p className='text-gray-200 text-lg'>
-            Budgets, policy gates, eval canaries, and rollback patterns for
+            Budgets, policy gateseval canariesand rollback patterns for
             dependable autonomous systems.
           </p>
           <div className='mt-4 text-sm text-gray-300'>18 min • Oct 2025</div>

@@ -4,7 +4,7 @@ export const metadata = {
   
   title: 'AI Neural Networks Enterprise Transformation 2025 | Zion Tech Group',
   description:
-    'Deploy advanced neural network architectures with enterprise guardrails, achieving 98.5% accuracy, 10x ROI, and 85% efficiency gains.',
+    'Deploy advanced neural network architectures with enterprise guardrails, achieving 98.5% accuracy10x ROIand 85% efficiency gains.',
 
 };;
 
@@ -37,7 +37,7 @@ export default function AINeuralNetworksEnterpriseTransformation2025Page() {
             <p className='text-xl text-white/80'>
               Deploy next‑gen neural architectures with policy guardrails,
               evals, and cost routing. Fortune 500 implementations achieving
-              98.5% accuracy, 10x ROI, and 85% efficiency gains.
+              98.5% accuracy10x ROIand 85% efficiency gains.
             </p>
           </header>
 
@@ -56,8 +56,7 @@ export default function AINeuralNetworksEnterpriseTransformation2025Page() {
                   eval gates, and replay analysis.
                 </li>
                 <li>
-                  <strong>Cost Router:</strong> dynamic provider selection,
-                  caching, and batching.
+                  <strong>Cost Router:</strong> dynamic provider selectioncachingand batching.
                 </li>
               </ul>
             </section>
@@ -68,7 +67,7 @@ export default function AINeuralNetworksEnterpriseTransformation2025Page() {
               </h2>
               <ol className='list-decimal list-inside space-y-2 text-white/85'>
                 <li>Establish model capability matrix and SLOs.</li>
-                <li>Ship shared SDK with safety, routing, and telemetry.</li>
+                <li>Ship shared SDK with safetyroutingand telemetry.</li>
                 <li>Migrate top journeys with regression evals and budgets.</li>
               </ol>
             </section>

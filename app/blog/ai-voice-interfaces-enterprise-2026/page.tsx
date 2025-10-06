@@ -4,7 +4,7 @@ export const metadata = {
   
   title: 'AI Voice Interfaces Enterprise 2026 | Zion Tech Group',
   description:
-    'Enterprise voice interfaces with 98% accuracy, multilingual support, and governance. Patterns for STT, TTS, latency budgets, and privacy.',
+    'Enterprise voice interfaces with 98% accuracy, multilingual support, and governance. Patterns for STT, TTSlatency budgetsand privacy.',
 
 };;
 
@@ -36,7 +36,7 @@ export default function AIVoiceInterfacesEnterprise2026Page() {
             </h1>
             <p className='text-xl text-white/80'>
               Architect reliable, privacy‑preserving voice experiences with low
-              latency STT, expressive TTS, locale adaptation, and policy
+              latency STT, expressive TTSlocale adaptationand policy
               guardrails across 50+ languages.
             </p>
           </header>
@@ -52,7 +52,7 @@ export default function AIVoiceInterfacesEnterprise2026Page() {
                   Intent router with few‑shot prompting and entity extraction.
                 </li>
                 <li>Guardrails with PII redaction and policy checks.</li>
-                <li>TTS with neural voices, barge‑in, and prosody control.</li>
+                <li>TTS with neural voicesbarge‑inand prosody control.</li>
                 <li>
                   Telephony/WebRTC adapters and contact‑center integrations.
                 </li>
@@ -85,7 +85,7 @@ export default function AIVoiceInterfacesEnterprise2026Page() {
               </h2>
               <ol className='list-decimal list-inside space-y-3 text-white/85'>
                 <li>
-                  Choose providers for ASR, LLM, and TTS with fallback routes.
+                  Choose providers for ASRLLMand TTS with fallback routes.
                 </li>
                 <li>
                   Implement session recorder with consent and retention policy.

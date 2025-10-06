@@ -32,7 +32,7 @@ export default function Page() {
           <ol>
             <li>Problem encoding and constraints</li>
             <li>Hybrid solver orchestration with fallbacks</li>
-            <li>Verification, costs, and SLAs</li>
+            <li>Verificationcostsand SLAs</li>
           </ol>
           <h2>Results in Practice</h2>
           <p>

@@ -13,7 +13,7 @@ export default function AttestedEdgeAnalyticsV2() {
             Attested Edge Analytics v2 — Zero‑PII Insights with Proofs
           </h1>
           <p className='mt-4 text-gray-300 text-lg'>
-            Scoped IDs, on‑device aggregation, DP noise, and signed attestations
+            Scoped IDs, on‑device aggregationDP noiseand signed attestations
             delivering &lt;100ms private analytics.
           </p>
         </header>

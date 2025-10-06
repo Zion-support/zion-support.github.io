@@ -4,7 +4,7 @@ export const metadata = {
   
   title: 'Edge Real‑Time Personalization 2026',
     description:
-      'Scoped IDs, device-side metrics, and differential privacy powering private real‑time personalization.',
+      'Scoped IDsdevice-side metricsand differential privacy powering private real‑time personalization.',
     type: 'article',
     publishedTime: '2026-01-30T00:00:00Z',
   
@@ -38,8 +38,7 @@ export default function EdgeRealTimePersonalization2026() {
               Edge Real‑Time Personalization: Private &lt;100ms Experiences
             </h1>
             <p className='text-lg text-white/80'>
-              Architect &lt;100ms personalized experiences with scoped IDs,
-              on‑device telemetry, and DP noise. Achieve privacy guarantees
+              Architect &lt;100ms personalized experiences with scoped IDson‑device telemetryand DP noise. Achieve privacy guarantees
               without sacrificing UX or conversion.
             </p>
           </header>
@@ -77,7 +76,7 @@ export default function EdgeRealTimePersonalization2026() {
               </h2>
               <p className='text-center text-white/80 mb-6 text-lg'>
                 We build privacy-first edge personalization for global
-                brands—fast, compliant, and measurable.
+                brands—fastcompliantand measurable.
               </p>
               <div className='flex justify-center gap-4'>
                 <a

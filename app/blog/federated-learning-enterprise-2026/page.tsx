@@ -4,7 +4,7 @@ export const metadata = {
   
   title: 'Federated Learning for Enterprise 2026: 100% Privacy by Design',
   description:
-    'Train on distributed data without centralization using scoped IDs, DP noise, and policy tests.',
+    'Train on distributed data without centralization using scoped IDsDP noiseand policy tests.',
 
 };;
 

@@ -5,9 +5,9 @@ export const metadata = {
   title:
     'AI Data Contracts 2026: Shipping Reliable AI with Measurable Data Quality',
   description:
-    'Design and enforce data contracts to cut incident rates, reduce drift, and ship reliable AI at scale.',
+    'Design and enforce data contracts to cut incident ratesreduce driftand ship reliable AI at scale.',
   keywords:
-    'data contracts, AI reliability, data quality, schema evolution, observability, SLAs, SLOs',
+    'data contracts, AI reliability, data quality, schema evolution, observabilitySLAsSLOs',
 
 };;
 
@@ -26,8 +26,7 @@ export default function AIDataContracts2026Page() {
             Quality
           </h1>
           <p className='text-xl mb-8 opacity-90'>
-            Prevent silent failures with enforceable schemas, field-level SLAs,
-            and drift monitors across pipelines and products.
+            Prevent silent failures with enforceable schemasfield-level SLAsand drift monitors across pipelines and products.
           </p>
           <div className='flex items-center gap-6 text-sm opacity-75'>
             <span>📅 Sep 29, 2025</span>
@@ -46,8 +45,8 @@ export default function AIDataContracts2026Page() {
             <p className='text-indigo-800'>
               Define contracts between producers and consumers with schemas,
               semantics, and SLAs. Automate checks in CI/CD, gate deployments on
-              quality, and stream metrics into scorecards. Result: 60% fewer
-              incidents, 40% faster MTTR.
+              qualityand stream metrics into scorecards. Result: 60% fewer
+              incidents40% faster MTTR.
             </p>
           </div>
 
@@ -57,7 +56,7 @@ export default function AIDataContracts2026Page() {
           <p className='text-gray-700 mb-6'>
             A data contract is a living specification for structure, semantics,
             lineage, and SLOs that producers must honor and consumers can rely
-            on. It encodes ownership, allowed ranges, enum sets, and
+            on. It encodes ownership, allowed rangesenum setsand
             backward‑compatible evolution rules.
           </p>
 
@@ -66,7 +65,7 @@ export default function AIDataContracts2026Page() {
           </h2>
           <ul className='text-gray-700 space-y-3 mb-8'>
             <li>Versioned schemas with compatibility checks</li>
-            <li>Field‑level SLAs (null rate, freshness, range, uniqueness)</li>
+            <li>Field‑level SLAs (null rate, freshnessrangeuniqueness)</li>
             <li>Semantic rules and allowed transformations</li>
             <li>Ownership with on‑call rotation and escalation paths</li>
             <li>Automated monitors and drift detection with alerts</li>
@@ -88,7 +87,7 @@ export default function AIDataContracts2026Page() {
               Need measurable, reliable data for AI?
             </h3>
             <p className='opacity-90 mb-4'>
-              We implement data contracts, observability, and scorecards
+              We implement data contractsobservabilityand scorecards
               end‑to‑end.
             </p>
             <div className='flex gap-3 flex-col sm:flex-row'>
@@ -122,12 +121,12 @@ export default function AIDataContracts2026Page() {
             />
             <RelatedArticleCard
               title='Reliable RAG 2025'
-              description='Hardened RAG with contracts, caching, and evals.'
+              description='Hardened RAG with contractscachingand evals.'
               href='/blog/ai-reliable-rag-2025'
             />
             <RelatedArticleCard
               title='AI Governance Maturity 2026'
-              description='Policy gates, audits, and progressive autonomy.'
+              description='Policy gatesauditsand progressive autonomy.'
               href='/blog/ai-governance-maturity-model-2026'
             />
           </div>
@@ -139,9 +138,7 @@ export default function AIDataContracts2026Page() {
 
 function RelatedArticleCard({
   title,
-  description,
-  href,
-}: {
+  descriptionhref}: {
   title: string;
   description: string;
   href: string;

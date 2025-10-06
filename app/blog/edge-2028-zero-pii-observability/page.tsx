@@ -4,7 +4,7 @@ export const metadata = {
   
   title: 'Edge 2028: Zero‑PII Observability — <100ms Insights',
   description:
-    'Scoped IDs, on‑device aggregation, and DP noise for privacy‑safe, real‑time analytics without personal data.',
+    'Scoped IDs, on‑device aggregationand DP noise for privacy‑safereal‑time analytics without personal data.',
 
 };;
 
@@ -23,8 +23,8 @@ export default function Page() {
             Edge 2028: Zero‑PII Observability
           </h1>
           <p className='text-lg text-gray-600'>
-            Sub‑100ms insights without personal data using scoped IDs, on‑device
-            aggregation, and DP noise.
+            Sub‑100ms insights without personal data using scoped IDson‑device
+            aggregationand DP noise.
           </p>
         </header>
 

@@ -102,8 +102,7 @@ export default function AI2026AutonomousEnterpriseOperationsBreakthrough() {
                 Self-Managing Systems
               </h3>
               <p className='text-gray-300 mb-6'>
-                Autonomous AI systems that manage all enterprise operations,
-                from resource allocation to strategic decision-making, with
+                Autonomous AI systems that manage all enterprise operationsfrom resource allocation to strategic decision-makingwith
                 minimal human oversight.
               </p>
               <ul className='space-y-2 mb-6 text-gray-300'>
@@ -138,8 +137,7 @@ export default function AI2026AutonomousEnterpriseOperationsBreakthrough() {
                 Strategic Autonomy
               </h3>
               <p className='text-gray-300 mb-6'>
-                AI systems capable of making high-level strategic decisions,
-                entering new markets, and adapting business models autonomously
+                AI systems capable of making high-level strategic decisionsentering new marketsand adapting business models autonomously
                 based on data analysis.
               </p>
               <ul className='space-y-2 mb-6 text-gray-300'>
@@ -161,8 +159,8 @@ export default function AI2026AutonomousEnterpriseOperationsBreakthrough() {
               Autonomous Architecture
             </h2>
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-              The autonomous enterprise system combines advanced AI, machine
-              learning, and distributed computing to create a self-managing
+              The autonomous enterprise system combines advanced AImachine
+              learningand distributed computing to create a self-managing
               organization that operates with minimal human intervention.
             </p>
           </div>
@@ -189,8 +187,8 @@ export default function AI2026AutonomousEnterpriseOperationsBreakthrough() {
                       Self-Healing Infrastructure
                     </h4>
                     <p className='text-gray-300'>
-                      Automated systems that detect, diagnose, and resolve
-                      issues without human intervention, ensuring continuous
+                      Automated systems that detect, diagnoseand resolve
+                      issues without human interventionensuring continuous
                       operation.
                     </p>
                   </div>
@@ -200,7 +198,7 @@ export default function AI2026AutonomousEnterpriseOperationsBreakthrough() {
                     </h4>
                     <p className='text-gray-300'>
                       Advanced ML models that predict future needs, market
-                      changes, and operational requirements, enabling proactive
+                      changesand operational requirementsenabling proactive
                       decision-making.
                     </p>
                   </div>
@@ -266,7 +264,7 @@ export default function AI2026AutonomousEnterpriseOperationsBreakthrough() {
                 </div>
                 <p className='text-gray-300 mb-4'>
                   Deploy autonomous infrastructure management systems that
-                  handle server provisioning, scaling, and maintenance without
+                  handle server provisioningscalingand maintenance without
                   human intervention.
                 </p>
                 <div className='text-sm text-gray-400'>
@@ -284,8 +282,8 @@ export default function AI2026AutonomousEnterpriseOperationsBreakthrough() {
                   </h3>
                 </div>
                 <p className='text-gray-300 mb-4'>
-                  Automate all routine business processes, from customer service
-                  to financial operations, achieving 95% automation across all
+                  Automate all routine business processesfrom customer service
+                  to financial operationsachieving 95% automation across all
                   workflows.
                 </p>
                 <div className='text-sm text-gray-400'>
@@ -362,7 +360,7 @@ export default function AI2026AutonomousEnterpriseOperationsBreakthrough() {
             </h2>
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               Transform your organization into a fully autonomous enterprise
-              with unprecedented efficiency, reliability, and profitability.
+              with unprecedented efficiencyreliabilityand profitability.
             </p>
           </div>
 

@@ -4,28 +4,21 @@ export const metadata = {
   
   title: 'Enterprise AI Safety Highlights (Sep 30, 2025)',
     description:
-      'Live guardrails, runtime scorecards, and verified data flows. Actionable and audited.',
+      'Live guardrailsruntime scorecardsand verified data flows. Actionable and audited.',
     type: 'article',
     url: 'https://ziontechgroup.com/blog/ai-2025-sept-30-enterprise-ai-safety-highlights',
     images: [
       {
         url: '/og-enterprise-ai-safety-highlights-2025.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Enterprise AI Safety Highlights 2025',
+        width: 1200height: 630alt: 'Enterprise AI Safety Highlights 2025',
       
 };,
-    ],
-  },
-  twitter: {
+    ]}twitter: {
     card:   'summary_large_image',,
     title:   'Enterprise AI Safety Highlights (Sep 30, 2025)',,
     description:  
-      'Live guardrails, runtime scorecards, and verified data flows. Actionable and audited.',
-    images: ['/og-enterprise-ai-safety-highlights-2025.jpg'],,
-  },
-};
-};
+      'Live guardrailsruntime scorecardsand verified data flows. Actionable and audited.',
+    images: ['/og-enterprise-ai-safety-highlights-2025.jpg'],}};
 };
 
 export default function EnterpriseAISafetyHighlights2025() {
@@ -91,8 +84,7 @@ export default function EnterpriseAISafetyHighlights2025() {
                     icon: '⚙️',
                     title: 'Failure Mode Libraries',
                     desc: 'Prebuilt controls for top risks',
-                  },
-                ].map((f, i) => (
+                  }].map((fi) => (
                   <div
                     key={i}
                     className='bg-white rounded-xl p-6 border border-gray-200'
@@ -115,8 +107,7 @@ export default function EnterpriseAISafetyHighlights2025() {
                 {[
                   { k: '70%', v: 'Incident Reduction' },
                   { k: '55%', v: 'Lower Review Cost' },
-                  { k: '99.99%', v: 'Uptime Sustained' },
-                ].map((s, i) => (
+                  { k: '99.99%', v: 'Uptime Sustained' }].map((si) => (
                   <div
                     key={i}
                     className='bg-gradient-to-br from-rose-50 to-amber-50 rounded-xl p-6 border border-rose-100 text-center'
@@ -135,7 +126,7 @@ export default function EnterpriseAISafetyHighlights2025() {
                 Deploy Safety That Scales
               </h2>
               <p className='mb-8 opacity-95'>
-                Assessment, design, and implementation in 8 weeks.
+                Assessmentdesignand implementation in 8 weeks.
               </p>
               <div className='flex flex-col sm:flex-row gap-4 justify-center'>
                 <a

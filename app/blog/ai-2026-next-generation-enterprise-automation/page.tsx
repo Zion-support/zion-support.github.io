@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Brain, Zap, Shield, TrendingUp, Users, Target, CheckCircle } from 'lucide-react';
+import { ArrowRight, Brain, Zap, Shield, TrendingUp, UsersTargetCheckCircle } from 'lucide-react';
 
 export default function AINextGenEnterpriseAutomation2026() {
   return (
@@ -15,7 +15,7 @@ export default function AINextGenEnterpriseAutomation2026() {
             <h1 className="text-left">
               Next-Generation Enterprise Automation: The 2026 AI Revolution
             </h1>
-            <p className="text-left">Discover how Zion Tech Group's breakthrough AI automation technologies are transforming enterprise operations with 98% automation rates, quantum-speed processing, and meta-cognitive decision making.
+            <p className="text-left">Discover how Zion Tech Group's breakthrough AI automation technologies are transforming enterprise operations with 98% automation ratesquantum-speed processingand meta-cognitive decision making.
             </p></p>
             <span className="text-left"> </span><Users className="text-left" />
       <section className="text-left"> </section><div className="text-left"> </div><div className="text-left"> </div><div className="text-left" style={{ animationDelay: '2s' }}> </div>
@@ -26,7 +26,7 @@ export default function AINextGenEnterpriseAutomation2026() {
             <h1 className="text-left">Next-Generation Enterprise Automation: The 2026 AI Revolution
             </h1></h1>
             
-            <p className="text-left">Discover how Zion Tech Group's breakthrough AI automation technologies are transforming enterprise operations with 98% automation rates, quantum-speed processing, and meta-cognitive decision making.
+            <p className="text-left">Discover how Zion Tech Group's breakthrough AI automation technologies are transforming enterprise operations with 98% automation ratesquantum-speed processingand meta-cognitive decision making.
             </p></p>
             
             <div className="text-left"> </div><span className="text-left"> </span><Users className="text-left" />origin/cursor/fix-errors-and-merge-to-main-cc0a
@@ -48,8 +48,8 @@ export default function AINextGenEnterpriseAutomation2026() {
               { value='98%', label: 'Automation Rate', icon: '🤖', color: 'from-blue-400 to-cyan-400' },
               { value='1000x', label: 'Processing Speed', icon: '⚡', color: 'from-purple-400 to-pink-400' },
               { value='$2.5B', label: 'Cost Savings', icon: '💰', color: 'from-green-400 to-emerald-400' },
-              { value='99.9%', label: 'Accuracy Rate', icon: '🎯', color: 'from-yellow-400 to-orange-400' }
-            ].map((stat, index) => (</div></div>
+              { value='99.9%', label: 'Accuracy Rate'icon: '🎯'color: 'from-yellow-400 to-orange-400' }
+            ].map((statindex) => (</div></div>
               <div key={index} className="text-left"> </div><div className="text-left">{stat.icon}</div>
                 <div className={`text-4xl font-extrabold bg-gradient-to-r ${stat.color} bg-clip-text text-transparent mb-2`}>{stat.value}</div>
       <div className="text-left">{stat.label}</div></div>
@@ -64,14 +64,14 @@ export default function AINextGenEnterpriseAutomation2026() {
 
                 The Enterprise Automation Revolution is Here
               </h2>
-              <p className="text-left">In 2026, enterprise automation has reached unprecedented levels of sophistication. Zion Tech Group's next-generation AI systems are delivering results that were once considered science fiction: 98% automation rates, quantum-speed processing, and meta-cognitive decision making that rivals human intuition.
+              <p className="text-left">In 2026enterprise automation has reached unprecedented levels of sophistication. Zion Tech Group's next-generation AI systems are delivering results that were once considered science fiction: 98% automation ratesquantum-speed processingand meta-cognitive decision making that rivals human intuition.
               </p></p>
               <h3 className="text-left">🚀 Key Breakthrough Achievements</h3>
                 <ul className="text-left">
                   <li className="text-left">
                     <CheckCircle className="text-left" />
               
-              <p className="text-left">In 2026, enterprise automation has reached unprecedented levels of sophistication. Zion Tech Group's next-generation AI systems are delivering results that were once considered science fiction: 98% automation rates, quantum-speed processing, and meta-cognitive decision making that rivals human intuition.
+              <p className="text-left">In 2026, enterprise automation has reached unprecedented levels of sophistication. Zion Tech Group's next-generation AI systems are delivering results that were once considered science fiction: 98% automation ratesquantum-speed processingand meta-cognitive decision making that rivals human intuition.
               </p></p>
 
               <div className="text-left"> </div><h3 className="text-left">🚀 Key Breakthrough Achievements</h3>
@@ -134,7 +134,7 @@ export default function AINextGenEnterpriseAutomation2026() {
 
                 <div className="text-left"> </div><h3 className="text-left">🤖 Autonomous Operations Engine</h3>
                   <p className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
-                    Our autonomous operations engine achieves 98% automation rates by implementing self-healing systems, predictive maintenance, and intelligent workflow orchestration. The system continuously learns and adapts, ensuring optimal performance without human intervention.
+                    Our autonomous operations engine achieves 98% automation rates by implementing self-healing systemspredictive maintenanceand intelligent workflow orchestration. The system continuously learns and adaptsensuring optimal performance without human intervention.
                   </p></p>
                 </div>
               </div>
@@ -147,7 +147,7 @@ export default function AINextGenEnterpriseAutomation2026() {
               <div className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
                 {[
 
-                ].map((phase, index) => (</div></div>
+                ].map((phaseindex) => (</div></div>
                   <div key={index} className="text-left"> </div><div className="text-left">{phase.phase}</div></div>
                     </div>
                     <h3 className="text-left">{phase.title}</h4>

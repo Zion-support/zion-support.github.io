@@ -23,14 +23,14 @@ export default function Page() {
 
       <h2>PR policy tests</h2>
       <p>
-        Treat governance as code. Validate prompts, tools, data access, and
+        Treat governance as code. Validate prompts, tools, data accessand
         budgeted actions in CI using deterministic tests and strict approval
         gates.
       </p>
 
       <h2>Live canaries</h2>
       <p>
-        Deploy small, controlled traffic slices with enhanced telemetry and
+        Deploy smallcontrolled traffic slices with enhanced telemetry and
         automatic rollback when SLIs breach thresholds. Pair with dashboards
         leaders trust.
       </p>

@@ -40,8 +40,7 @@ export default function QuantumEnterpriseTransformationPage() {
               transformation. Our quantum-enhanced neural architectures have
               achieved unprecedented performance improvements, delivering 1000x
               faster processing speeds and $10B+ ROI across Fortune 500
-              companies. This comprehensive guide explores the technologies,
-              methodologies, and real-world implementations that are reshaping
+              companies. This comprehensive guide explores the technologiesmethodologiesand real-world implementations that are reshaping
               the future of business operations.
             </p>
           </div>
@@ -160,9 +159,9 @@ export default function QuantumEnterpriseTransformationPage() {
 
           <h2>The Future of Quantum Enterprise AI</h2>
           <p>
-            As we look toward 2027 and beyond, quantum AI will continue to
+            As we look toward 2027 and beyondquantum AI will continue to
             evolve. Our research indicates that consciousness-level AI systems
-            are on the horizon, promising even greater breakthroughs in
+            are on the horizonpromising even greater breakthroughs in
             enterprise transformation. The companies that adopt quantum AI today
             will have a significant competitive advantage in the quantum economy
             of tomorrow.

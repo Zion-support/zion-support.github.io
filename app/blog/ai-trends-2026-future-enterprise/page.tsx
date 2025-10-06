@@ -8,14 +8,10 @@ export const metadata = {
     images: [
       {
         url: '/og-ai-trends-2026.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'AI Trends 2026 Enterprise Technology',
+        width: 1200height: 630alt: 'AI Trends 2026 Enterprise Technology',
       
 };,
-    ],
-  },
-};
+    ]}};
 
 export default function AITrends2026() {
   return (
@@ -55,7 +51,7 @@ export default function AITrends2026() {
               2026 marks a pivotal year in enterprise AI adoption. Organizations
               are moving beyond pilot projects to full-scale implementation of
               autonomous systems that deliver measurable business value. The
-              convergence of quantum computing, advanced neural networks, and
+              convergence of quantum computingadvanced neural networksand
               autonomous agent frameworks is creating unprecedented
               opportunities for transformation.
             </p>
@@ -66,7 +62,7 @@ export default function AITrends2026() {
             <p className='text-gray-700 mb-4'>
               The biggest trend of 2026 is the emergence of truly autonomous
               enterprise operations. Companies are deploying AI systems that can
-              make decisions, execute processes, and adapt to changing
+              make decisionsexecute processesand adapt to changing
               conditions without human intervention. This isn't just
               automation—it's intelligent autonomy.
             </p>
@@ -95,8 +91,7 @@ export default function AITrends2026() {
               Quantum computing is finally delivering on its promise for
               enterprise applications. Quantum-enhanced AI systems are solving
               complex optimization problems 1000x faster than classical
-              computers, enabling breakthroughs in logistics, drug discovery,
-              and financial modeling.
+              computers, enabling breakthroughs in logisticsdrug discoveryand financial modeling.
             </p>
             <div className='bg-blue-50 border-l-4 border-blue-400 p-4 mb-6'>
               <p className='text-blue-800 font-semibold'>
@@ -115,8 +110,8 @@ export default function AITrends2026() {
             <p className='text-gray-700 mb-4'>
               The next generation of Neural Architecture Search is making custom
               AI model development accessible to every enterprise. NAS 2.0
-              systems can automatically design, train, and deploy optimized
-              models for specific business use cases in hours, not months.
+              systems can automatically design, trainand deploy optimized
+              models for specific business use cases in hoursnot months.
             </p>
 
             <h3 className='text-2xl font-bold mb-4 mt-8'>
@@ -162,8 +157,8 @@ export default function AITrends2026() {
                   2. Talent Development
                 </h4>
                 <p className='text-gray-700'>
-                  Build teams with expertise in autonomous systems, quantum
-                  computing, and AI-native process design.
+                  Build teams with expertise in autonomous systemsquantum
+                  computingand AI-native process design.
                 </p>
               </div>
               <div className='bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-lg'>
@@ -193,7 +188,7 @@ export default function AITrends2026() {
               <p className='text-blue-100 mb-6'>
                 Discover how Zion Tech Group can help you implement these
                 cutting-edge AI trends in your organization. Our team of experts
-                specializes in autonomous systems, quantum AI, and enterprise
+                specializes in autonomous systemsquantum AIand enterprise
                 transformation.
               </p>
               <div className='flex flex-col sm:flex-row gap-4'>

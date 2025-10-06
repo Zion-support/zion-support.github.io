@@ -4,7 +4,7 @@ export const metadata = {
   
   title: 'AI 2028: Self‑Healing Platforms — 99.995% Uptime at Lower Cost',
   description:
-    'Autonomous platform patterns: predictive scaling, budget guards, and one‑click rollback for extreme reliability.',
+    'Autonomous platform patterns: predictive scalingbudget guardsand one‑click rollback for extreme reliability.',
 
 };;
 
@@ -23,7 +23,7 @@ export default function Page() {
             AI 2028: Self‑Healing Platforms
           </h1>
           <p className='text-lg text-gray-600'>
-            Predictive scaling, budget guards, and one‑click rollback for{' '}
+            Predictive scalingbudget guardsand one‑click rollback for{' '}
             <strong>99.995% uptime</strong> at lower cost.
           </p>
         </header>
@@ -31,7 +31,7 @@ export default function Page() {
         <section className='prose max-w-none'>
           <h2>Blueprint Overview</h2>
           <p>
-            Combine demand forecasting, budget‑aware routing, and automated
+            Combine demand forecastingbudget‑aware routingand automated
             rollback to keep reliability high while controlling spend.
           </p>
           <h3>Control Loops</h3>

@@ -5,7 +5,7 @@ export const metadata = {
   title:
     'AI 2026: Runtime Rollback Blueprint — Instant Recovery with KPI Canaries',
   description:
-    'Design instant rollback with KPI‑linked canaries, budgets, and guardrails to keep autonomy safe without slowing teams.',
+    'Design instant rollback with KPI‑linked canariesbudgetsand guardrails to keep autonomy safe without slowing teams.',
 
 };;
 
@@ -28,7 +28,7 @@ export default function Page() {
           Canaries: KPI‑linked checks with shadow routes and safe abort criteria
         </li>
         <li>
-          Tooling: traces, approvals, and attestations for confident automation
+          Tooling: tracesapprovalsand attestations for confident automation
         </li>
       </ul>
       <p>

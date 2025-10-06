@@ -4,20 +4,16 @@ export const metadata = {
   
   title: 'AI 2027 Cost Optimization Playbook',
     description:
-      'Tier models, cache prompts, and enforce budgets with KPI-linked routes to sustain UX under cost constraints.',
+      'Tier modelscache promptsand enforce budgets with KPI-linked routes to sustain UX under cost constraints.',
     type: 'article',
     url: 'https://ziontechgroup.com/blog/ai-2027-cost-optimization-playbook',
     images: [
       {
         url: '/og-ai-cost-optimization-2027.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'AI Cost Optimization 2027',
+        width: 1200height: 630alt: 'AI Cost Optimization 2027',
       
 };,
-    ],
-  },
-};
+    ]}};
 
 export default function AICostOptimizationPlaybook2027() {
   return (
@@ -52,7 +48,7 @@ export default function AICostOptimizationPlaybook2027() {
             Semantic and output caching with freshness windows and invalidation
           </li>
           <li>
-            Quantization, KV cache reuse, and streaming for latency and cost
+            QuantizationKV cache reuseand streaming for latency and cost
           </li>
           <li>KPI-linked routes with online canaries and rollback triggers</li>
         </ul>

@@ -2,7 +2,7 @@ export const metadata = {
   
   title: 'Edge 2026: Privacy‑Preserving Evals (<100ms) | Zion Tech Group',
   description:
-    'Scoped IDs, on‑device aggregation, and DP noise for trustworthy eval signals under 100ms without collecting PII.',
+    'Scoped IDson‑device aggregationand DP noise for trustworthy eval signals under 100ms without collecting PII.',
 
 };;
 
@@ -17,7 +17,7 @@ export default function Page() {
           </h1>
           <p className='mt-4 text-lg text-gray-700'>
             Design evaluators that run where users are—on device—with scoped
-            identifiers, DP noise, and attestations for verifiable, zero‑PII
+            identifiers, DP noiseand attestations for verifiablezero‑PII
             signals.
           </p>
           <hr />

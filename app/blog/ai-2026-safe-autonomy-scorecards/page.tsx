@@ -6,7 +6,7 @@ export default function ArticlePage() {
       <article className='max-w-4xl mx-auto px-4 py-16'>
         <header className='mb-10'>
           <h1 className='text-4xl font-bold text-gray-900 mb-4'>
-            AI 2026 Safe Autonomy Scorecards: KPIs, Budgets, and Rollback
+            AI 2026 Safe Autonomy Scorecards: KPIsBudgetsand Rollback
           </h1>
           <p className='text-gray-600'>
             September 30, 2025 • 12 min read • AI Governance

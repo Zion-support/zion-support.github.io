@@ -13,8 +13,8 @@ export default function Page() {
           </p>
           <p className='leading-7 mb-4'>
             Run sub‑100ms experiments at the edge without collecting PII: use
-            scoped identifiers, on‑device aggregation, and differential privacy
-            noise to get statistically valid, compliant insights globally.
+            scoped identifiers, on‑device aggregationand differential privacy
+            noise to get statistically validcompliant insights globally.
           </p>
           <ul className='list-disc pl-6 space-y-2 mb-6'>
             <li>Scoped IDs and ephemeral cohorts</li>

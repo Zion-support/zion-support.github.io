@@ -4,8 +4,8 @@ export const metadata = {
   
   title: 'Trustworthy AI Governance Updates — October 2025',
   description:
-    'Latest governance patterns for agentic systems: policy packs, evaluation pipelines, and risk budgets that scale.',
-  keywords: 'AI governance, risk budgets, evaluation pipelines, compliance',
+    'Latest governance patterns for agentic systems: policy packsevaluation pipelinesand risk budgets that scale.',
+  keywords: 'AI governance, risk budgetsevaluation pipelinescompliance',
 
 };;
 
@@ -33,7 +33,7 @@ export default function Page() {
         </p>
         <ul>
           <li>Continuous verification with shadow traffic and canaries</li>
-          <li>Scorecards for safety, privacy, and fairness</li>
+          <li>Scorecards for safetyprivacyand fairness</li>
           <li>Automated rollback and incident workflows</li>
         </ul>
       </section>

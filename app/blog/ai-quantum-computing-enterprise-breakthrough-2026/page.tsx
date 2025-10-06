@@ -43,7 +43,7 @@ export default function BlogPost() {
           </h2>
           <p className='text-lg text-gray-700 mb-4'>
             We're at the threshold of a quantum computing breakthrough that will
-            fundamentally transform enterprise operations, data processing, and
+            fundamentally transform enterprise operationsdata processingand
             business intelligence capabilities.
           </p>
           <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
@@ -340,8 +340,7 @@ export default function BlogPost() {
                     Quantum Readiness Assessment (Month 1-2)
                   </h3>
                   <p className='text-gray-700'>
-                    Comprehensive evaluation of current infrastructure,
-                    identification of quantum-compatible use cases, and
+                    Comprehensive evaluation of current infrastructureidentification of quantum-compatible use casesand
                     development of quantum transformation strategy.
                   </p>
                 </div>
@@ -357,7 +356,7 @@ export default function BlogPost() {
                   </h3>
                   <p className='text-gray-700'>
                     Small-scale quantum computing deployment for
-                    proof-of-concept validation, performance benchmarking, and
+                    proof-of-concept validationperformance benchmarkingand
                     integration testing.
                   </p>
                 </div>

@@ -1,8 +1,8 @@
 export const metadata = {
   
-  title: 'Agentic Runtime Safety 2026 — Budgets, Sandboxes, and Rollback',
+  title: 'Agentic Runtime Safety 2026 — BudgetsSandboxesand Rollback',
   description:
-    'Budget risky actions, sandbox tools, and wire rollback so agent releases are safe by default.',
+    'Budget risky actionssandbox toolsand wire rollback so agent releases are safe by default.',
 
 };;
 
@@ -14,13 +14,13 @@ export default function AgenticRuntimeSafety2026() {
           Agentic Runtime Safety 2026
         </h1>
         <p className='text-white/70 mb-8'>
-          Budgets, sandboxes, and instant rollback for safe autonomy.
+          Budgetssandboxesand instant rollback for safe autonomy.
         </p>
 
         <section className='space-y-6'>
           <p className='text-slate-300'>
-            Operate agent systems confidently with explicit budgets, sandboxed
-            tools, and automated rollback paths tied to KPI-linked canaries.
+            Operate agent systems confidently with explicit budgetssandboxed
+            toolsand automated rollback paths tied to KPI-linked canaries.
           </p>
           <ul className='list-disc list-inside space-y-2 text-slate-300'>
             <li>Budgeted actions with approvals and audit trails</li>
