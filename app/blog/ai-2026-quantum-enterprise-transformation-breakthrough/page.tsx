@@ -1,41 +1,39 @@
-import ArrowRight from 'next/link';
+import Arrow Right from 'next/link';
 
-export default function QuantumEnterpriseTransformationPage() {
-  return (
-    <main className='min-h-screen bg-slate-950 text-white'>
-      <div className='max-w-4xl mx-auto px-4 py-16'>
-        <div className='mb-8'>
-          <ArrowRight
-            href='/blog'
-            className='text-blue-400 hover:text-blue-300 mb-4 inline-block'
+export default function Quantum Enterprise Transformation Page() {return (<main class Name Name='min-h-screen bg-slate-950 text-white'>
+      <div class Name Name='max-w-4xl mx-auto px-4 py-16'>
+        <div class Name Name='mb-8'>
+          <Arrow Right
+           href='/blog'
+           class Name='text-blue-400 hover:text-blue-300 mb-4 inline-block'
           >
             ← Back to Blog
-          </ArrowRight>
-          <div className='flex items-center gap-2 mb-4'>
-            <span className='bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-3 py-1 rounded-full text-xs font-bold'>
+          </Arrow Right>
+          <div class Name Name='flex items-center gap-2 mb-4'>
+            <span class Name Name='bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-3 py-1 rounded-full text-xs font-bold'>
               QUANTUM BREAKTHROUGH
             </span>
-            <span className='bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold'>
+            <span class Name Name='bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold'>
               1000x PERFORMANCE
             </span>
           </div>
-          <h1 className='text-4xl md:text-5xl font-bold mb-6'>
+          <h1 class Name Name='text-4xl md:text-5xl font-bold mb-6'>
             AI 2026: Quantum Enterprise Transformation Breakthrough
           </h1>
-          <p className='text-xl text-gray-300 mb-8'>
+          <p class Name Name='text-xl text-gray-300 mb-8'>
             Revolutionary quantum-enhanced AI systems delivering 1000x
             performance improvements and $10B+ ROI across Fortune 500
             enterprises.
           </p>
-          <div className='text-sm text-gray-400'>
+          <div class Name Name='text-sm text-gray-400'>
             Published: January 15, 2026 | 45 min read
           </div>
         </div>
 
-        <article className='prose prose-lg prose-invert max-w-none'>
-          <div className='bg-gradient-to-r from-purple-900/20 to-indigo-900/20 rounded-xl p-8 mb-12 border border-purple-500/20'>
-            <h2 className='text-2xl font-bold mb-4'>Executive Summary</h2>
-            <p className='text-lg leading-relaxed'>
+        <articleclass Name='prose prose-lg prose-invert max-w-none'>
+          <div class Name Name='bg-gradient-to-r from-purple-900/20 to-indigo-900/20 rounded-xl p-8 mb-12 border border-purple-500/20'>
+            <h2class Name='text-2xl font-bold mb-4'>Executive Summary</h2>
+            <p class Name Name='text-lg leading-relaxed'>
               The year 2026 marks a revolutionary breakthrough in enterprise AI
               transformation. Our quantum-enhanced neural architectures have
               achieved unprecedented performance improvements, delivering 1000x
@@ -83,23 +81,23 @@ export default function QuantumEnterpriseTransformationPage() {
             500 companies, delivering remarkable results:
           </p>
 
-          <div className='grid md:grid-cols-2 gap-6 my-8'>
-            <div className='bg-green-900/20 rounded-lg p-6 border border-green-500/20'>
-              <h4 className='text-green-300 font-bold text-lg mb-2'>
+          <div class Name Name='grid md:grid-cols-2 gap-6 my-8'>
+            <div class Name Name='bg-green-900/20 rounded-lg p-6 border border-green-500/20'>
+              <h4class Name='text-green-300 font-bold text-lg mb-2'>
                 Performance Metrics
               </h4>
-              <ul className='text-sm space-y-1'>
+              <ulclass Name='text-sm space-y-1'>
                 <li>• 1000x faster data processing</li>
                 <li>• 99.9% system uptime</li>
                 <li>• 95% reduction in operational costs</li>
                 <li>• 500x faster decision making</li>
               </ul>
             </div>
-            <div className='bg-blue-900/20 rounded-lg p-6 border border-blue-500/20'>
-              <h4 className='text-blue-300 font-bold text-lg mb-2'>
+            <div class Name Name='bg-blue-900/20 rounded-lg p-6 border border-blue-500/20'>
+              <h4class Name='text-blue-300 font-bold text-lg mb-2'>
                 Business Impact
               </h4>
-              <ul className='text-sm space-y-1'>
+              <ulclass Name='text-sm space-y-1'>
                 <li>• $10.2B average ROI</li>
                 <li>• 87% customer satisfaction improvement</li>
                 <li>• 73% reduction in manual processes</li>
@@ -148,12 +146,12 @@ export default function QuantumEnterpriseTransformationPage() {
             extraordinary:
           </p>
 
-          <blockquote className='border-l-4 border-purple-500 pl-6 italic text-lg'>
+          <blockquoteclass Name='border-l-4 border-purple-500 pl-6 italic text-lg'>
             "The quantum AI transformation has revolutionized our operations.
-            We've achieved 1000x faster processing speeds and $10.2B in
+           We've achieved 1000x faster processing speeds and $10.2B in
             additional revenue within 18 months. This is the most significant
-            technological advancement in our company's history."
-            <footer className='mt-2 text-sm not-italic'>
+            technological advancement in our company'shistory."
+            <footerclass Name='mt-2 text-sm not-italic'>
               - CEO, Fortune 100 Manufacturing Company
             </footer>
           </blockquote>
@@ -168,32 +166,31 @@ export default function QuantumEnterpriseTransformationPage() {
             tomorrow.
           </p>
 
-          <div className='bg-gradient-to-r from-indigo-900/20 to-purple-900/20 rounded-xl p-8 mt-12 border border-indigo-500/20'>
-            <h3 className='text-xl font-bold mb-4'>
+          <div class Name Name='bg-gradient-to-r from-indigo-900/20 to-purple-900/20 rounded-xl p-8 mt-12 border border-indigo-500/20'>
+            <h3class Name='text-xl font-bold mb-4'>
               Ready to Transform Your Enterprise?
             </h3>
-            <p className='mb-6'>
+            <p class Name Name='mb-6'>
               Discover how quantum AI can revolutionize your business
               operations. Our team of quantum AI experts is ready to help you
               achieve breakthrough performance improvements.
             </p>
-            <div className='flex flex-wrap gap-4'>
-              <ArrowRight
-                href='/services/ai-2026-quantum-enterprise-solutions'
-                className='bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-indigo-700 transition-all'
+            <div class Name Name='flex flex-wrap gap-4'>
+              <Arrow Right
+               href='/services/ai-2026-quantum-enterprise-solutions'
+               class Name='bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-indigo-700 transition-all'
               >
                 Explore Quantum AI Services
-              </ArrowRight>
-              <ArrowRight
-                href='/case-studies'
-                className='border border-white/20 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all'
+              </Arrow Right>
+              <Arrow Right
+               href='/case-studies'
+               class Name='border border-white/20 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all'
               >
                 View Success Stories
-              </ArrowRight>
+              </Arrow Right>
             </div>
           </div>
         </article>
       </div>
     </main>
-  );
-}
+  ); }

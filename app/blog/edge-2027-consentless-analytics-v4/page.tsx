@@ -1,1 +1,101 @@
-import ArrowRight f r o m 'n e x t/l i n k'; export const co n s t m e t a d a t a = { title: 'E d g e 2 0 2 7: Cons e n t l e s s An a l y t i c s v4' description: 'Sco p e d IDs e d g e aggr e g a t i o n and DP no i s e for co m p l i a n t act i o n a b l e an a l y t i c s.' t y p e: 'arti c l e' }; export const defa u l t f u n c t i o n E d g e 2 0 2 7 ConsentlessAnal y t i c s V 4 P a g e() { ret u r n ( <div className='max-w-4 xl mx-a u t o px-4 py-8'> <div className='t e x t-cen t e r mb-12'> <div className='inl i n e-f l e x it e m s-cen t e r gap-2 bg-g r a d i e n t-to-r f r o m-c y a n-600 to-b l u e-600 t e x t-wh i t e px-4 py-2 roun d e d-f u l l t e x t-sm f o n t-s e m i b o l d mb-4'> ⚡ E d g e An a l y t i c s </div> <h1 className='t e x t-4 xl md:t e x t-5 xl f o n t-b o l d t e x t-g r a y-900 mb-4'> E d g e 2 0 2 7: Cons e n t l e s s An a l y t i c s v4 </h1> <p className='t e x t-lg t e x t-g r a y-600 max-w-3xl mx-a u t o'> Act i o n a b l e i n s i g h t s with o u t PII us i n g sco p e d identi f i e r s o n‑dev i c e aggrega t i o n a n d diffe r e n t i a l priv a c y — all un d e r 100 ms. </p> </div> <arti c l e className='pr o s e pr o s e-lg max-w-n o n e'> <h2>Priv a c y by Des i g n</h2> <p> Repl a c e ide n t i t i e s w i t h sco p e d iden t i f i e r s ag g r e g a t e on dev i c e and add cal i b r a t e d DP no i s e so coho r t s s t a y use f u l wh i l e indi v i d u a l s rem a i n priv a t e. </p> <h3>Re f e r e n c e Archi t e c t u r e</h3> <ul> <li>Sco p e d IDs per dev i c e sess i o n and feat u r e</li> <li>On-dev i c e feat u r e logg i n g and aggr e g a t i o n</li> <li>DP no i s e and k-an o n y m i t y thr e s h o l d s</li> <li>Sig n e d con f i g and pol i c y te s t s in CI</li> </ul> <h3>Late n c y and Reli a b i l i t y</h3> <p> Use w a r m poolspref e t c h a n d tie r e d KV cac h e s to k e e p P95 un d e r 100 ms g l o b a l l y. Can a r y gua r d r a i l s ens u r e chan g e s don’t regr e s s K P I s. </p> <div className='p-6 roun d e d-xl bg-c y a n-50 bor d e r bor d e r-c y a n-200'> <strong>Outc o m e:</strong> D e c i s i o n‑gr a d e an a l y t i c s with o u t PII r i s k or cons e n t bott l e n e c k s. </div> <h3 className='mt-10'>Rela t e d Gui d e s</h3> <ul> <li> <ArrowRight href='/b l o g/e d g e-z e r o-pii-an a l y t i c s-2 0 2 6'> Z e r o‑PII E d g e An a l y t i c s 2 0 2 6 </ArrowRight> </li> <li> <ArrowRight href='/b l o g/e d g e-in f e r e n c e-w a r m-po o l s-2 0 2 6'> E d g e In f e r e n c e W a r m Po o l s 2 0 2 6 </ArrowRight> </li> <li> <ArrowRight href='/b l o g/e d g e-priv a t e-i n s i g h t s-2 0 2 6'> E d g e Priv a t e I n s i g h t s 2 0 2 6 </ArrowRight> </li> </ul> </arti c l e> <div className='mt-12 bg-g r a d i e n t-to-r f r o m-c y a n-600 to-b l u e-600 roun d e d-xl p-8 t e x t-wh i t e'> <h3 className='t e x t-2 xl f o n t-b o l d mb-3'> Re a d y to mo d e r n i z e an a l y t i c s? </h3> <p className='mb-6 opac i t y-90'> We dep l o y z e r o‑PII an a l y t i c s w i t h sub‑100 ms glo b a l perf o r m a n c e. </p> <div className='f l e x gap-3 f l e x-col sm:f l e x-row'> <ArrowRight href='/cont a c t' className='bg-wh i t e t e x t-c y a n-700 px-6 py-3 roun d e d-lg f o n t-s e m i b o l d t e x t-cen t e r' > T a l k to an exp e r t </ArrowRight> <ArrowRight href='/s e r v i c e s/ai-inn o v a t i o n-lab' className='bor d e r-2 bor d e r-wh i t e px-6 py-3 roun d e d-lg f o n t-s e m i b o l d t e x t-cen t e r' > Expl o r e s e r v i c e s </ArrowRight> </div> </div> </div> ); } 
+// @ts-nocheck
+import ArrowRight from 'next/link';
+
+export const metadata = {
+  
+  title:  'Edge 2027: Consentless Analytics v4',
+  description: 
+      'Scoped IDs, edge aggregation, and DP noise for compliant, actionable analytics.',
+  type: 'article',
+
+};;
+};
+
+export default function Edge2027ConsentlessAnalyticsV4Page() {
+  return (
+    <div className='max-w-4xl mx-auto px-4 py-8'>
+      <div className='text-center mb-12'>
+        <div className='inline-flex items-center gap-2 bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold mb-4'>
+          ⚡ Edge Analytics
+        </div>
+        <h1 className='text-4xl md:text-5xl font-bold text-gray-900 mb-4'>
+          Edge 2027: Consentless Analytics v4
+        </h1>
+        <p className='text-lg text-gray-600 max-w-3xl mx-auto'>
+          Actionable insights without PII using scoped identifiers, on‑device
+          aggregation, and differential privacy — all under 100ms.
+        </p>
+      </div>
+
+      <article className='prose prose-lg max-w-none'>
+        <h2>Privacy by Design</h2>
+        <p>
+          Replace identities with scoped identifiers, aggregate on device, and
+          add calibrated DP noise so cohorts stay useful while individuals
+          remain private.
+        </p>
+
+        <h3>Reference Architecture</h3>
+        <ul>
+          <li>Scoped IDs per device, session, and feature</li>
+          <li>On-device feature logging and aggregation</li>
+          <li>DP noise and k-anonymity thresholds</li>
+          <li>Signed config and policy tests in CI</li>
+        </ul>
+
+        <h3>Latency and Reliability</h3>
+        <p>
+          Use warm pools, prefetch, and tiered KV caches to keep P95 under 100ms
+          globally. Canary guardrails ensure changes don’t regress KPIs.
+        </p>
+
+        <div className='p-6 rounded-xl bg-cyan-50 border border-cyan-200'>
+          <strong>Outcome:</strong> Decision‑grade analytics without PII risk or
+          consent bottlenecks.
+        </div>
+
+        <h3 className='mt-10'>Related Guides</h3>
+        <ul>
+          <li>
+            <ArrowRight href='/blog/edge-zero-pii-analytics-2026'>
+              Zero‑PII Edge Analytics 2026
+            </ArrowRight>
+          </li>
+          <li>
+            <ArrowRight href='/blog/edge-inference-warm-pools-2026'>
+              Edge Inference Warm Pools 2026
+            </ArrowRight>
+          </li>
+          <li>
+            <ArrowRight href='/blog/edge-private-insights-2026'>
+              Edge Private Insights 2026
+            </ArrowRight>
+          </li>
+        </ul>
+      </article>
+
+      <div className='mt-12 bg-gradient-to-r from-cyan-600 to-blue-600 rounded-xl p-8 text-white'>
+        <h3 className='text-2xl font-bold mb-3'>
+          Ready to modernize analytics?
+        </h3>
+        <p className='mb-6 opacity-90'>
+          We deploy zero‑PII analytics with sub‑100ms global performance.
+        </p>
+        <div className='flex gap-3 flex-col sm:flex-row'>
+          <ArrowRight
+            href='/contact'
+            className='bg-white text-cyan-700 px-6 py-3 rounded-lg font-semibold text-center'
+          >
+            Talk to an expert
+          </ArrowRight>
+          <ArrowRight
+            href='/services/ai-innovation-lab'
+            className='border-2 border-white px-6 py-3 rounded-lg font-semibold text-center'
+          >
+            Explore services
+          </ArrowRight>
+        </div>
+      </div>
+    </div>
+  );
+}

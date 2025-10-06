@@ -11,9 +11,7 @@ export const breakthroughContent2027 = [
     conte,
     n,
     t: `
->>>>>>> origin/merge-fixes-20251005-193002
-
-*Ready, to, transform your, organization, with conscious, A, I ? Contact, our, AI Consciousness, Specialists, today.*
+*Ready to transform your organization with conscious AI? Contact our AI Consciousness Specialists today.*
     `,
     author: 'Dr. Sarah, Ch, e, n, Chief, AI, Consciousness Offic, e, r',
     date: '20, 2, 7-01-1, 5',
@@ -40,9 +38,7 @@ export const breakthroughContent2027 = [
     conte,
     n,
     t: `
->>>>>>> origin/merge-fixes-20251005-193002
-
-*Ready, to, transcend limitations, with, quantum consciousne, s, s ? Contact, our, Singularity Specialists, toda, y.*
+*Ready to transcend limitations with quantum consciousness? Contact our Singularity Specialists today.*
     `,
     author: 'Dr. Marcus, Quant, u, m, Chief, Singularity, Officer',
     date: '20, 2, 7-01-2, 0',
@@ -69,9 +65,7 @@ export const breakthroughContent2027 = [
     conte,
     n,
     t: `
->>>>>>> origin/merge-fixes-20251005-193002
-
-*Ready, to, revolutionize your, organization, with conscious, A, I ? Contact, our, Consciousness Specialists, toda, y.*
+*Ready to revolutionize your organization with conscious AI? Contact our Consciousness Specialists today.*
     `,
     author:
       'Dr. Elena, Consciousne, s, s, Chief, Synthetic, Intelligence Offic, e, r',
@@ -100,9 +94,7 @@ export const caseStudies2027 = [
     conte,
     n,
     t: `
->>>>>>> origin/merge-fixes-20251005-193002
-
-*Ready, to, achieve your, own, consciousness transformati, o, n ? Contact, our, Consciousness Specialists, toda, y.*
+*Ready to achieve your own consciousness transformation? Contact our Consciousness Specialists today.*
     `,
     author: 'Dr. Sarah, Ch, e, n, Chief, AI, Consciousness Offic, e, r',
     date: '20, 2, 7-01-1, 5',
@@ -129,9 +121,7 @@ export const caseStudies2027 = [
     conte,
     n,
     t: `
->>>>>>> origin/merge-fixes-20251005-193002
-
-*Ready, to, achieve consciousness, singularit, y ? Contact, our, Singularity Specialists, toda, y.*
+*Ready to achieve consciousness singularity? Contact our Singularity Specialists today.*
     `,
     author: 'Dr. Marcus, Quant, u, m, Chief, Singularity, Officer',
     date: '20, 2, 7-01-2, 0',

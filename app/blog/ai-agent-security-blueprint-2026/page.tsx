@@ -1,1 +1,63 @@
-import Re a c t f r o m 're a c t'; export const co n s t m e t a d a t a = { title: 'AI Ag e n t S e c u r i t y Bl u e p r i n t 2 0 2 6: Z e r o‑Tr u s t for Aut o n o m o u s Syst e m s' description: 'Z e r o‑tr u s t archi t e c t u r e for age n t s: sec r e t hygi e n e t o o l isolati o n l e a s t privi l e g e a n d au d i t tra i l s.' }; export const defa u l t f u n c t i o n P a g e() { ret u r n ( <div>{{/* cont e n t */}</div> <div> <div> </div><div> </div> <arti c l e cl a s s N a m e ="t e x t-l e f t"> </a><hea d e r cl a s s N a m e="t e x t-l e f t"> <div cl a s s N a m e="t e x t-l e f t">Janu a r y 2 0 2 6 • 14 min r e a d</div> <h1 cl a s s N a m e="t e x t-l e f t"> <arti c l e cl a s s N a m e="t e x t-l e f t"> </arti c l e><hea d e r cl a s s N a m e="t e x t-l e f t"> </hea d e r><div cl a s s N a m e="t e x t-l e f t">Janu a r y 2 0 2 6 • 14 min r e a d</div>" <h1 cl a s s N a m e="t e x t-l e f t">ori g i n/cur s o r/fix-err o r s-and-me r g e-to-m a i n-cc0 a AI Ag e n t S e c u r i t y Bl u e p r i n t 2 0 2 6 </h1></h1> <p cl a s s N a m e="t e x t-l e f t">A pr a c t i c a l z e r o‑tr u s t a p p r o a c h for aut o n o m o u s age n t s: sco p e d secr e t s sa n d b o x e d to o l s g r a n u l a r policiescon t i n u o u s monito r i n g a n d tam p e r‑evid e n t audit a b i l i t y. </p></p> </hea d e r> <div cl a s s N a m e="t e x t-l e f t"> </div><sect i o n cl a s s N a m e="t e x t-l e f t"> </sect i o n><h2 cl a s s N a m e="t e x t-l e f t">Thr e a t Mo d e l</h2> <p cl a s s N a m e="t e x t-l e f t"> </p><sect i o n cl a s s N a m e="t e x t-l e f t"> </sect i o n><h2 cl a s s N a m e="t e x t-l e f t">Thr e a t Mo d e l</h2>" <p cl a s s N a m e="t e x t-l e f t">ori g i n/cur s o r/fix-err o r s-and-me r g e-to-m a i n-cc0 a C o n s i d e r pro m p t in j e c t i o n t o o l mis u s e d a t a exfiltrationpr i v i l e g e escala t i o n a n d sup p l y‑ch a i n ri s k s. Des i g n c o n t r o l s a s s u m i n g com p r o m i s e and fo c u s on bl a s t‑rad i u s re d u c t i o n. </p></p> </sect i o n> <sect i o n cl a s s N a m e="t e x t-l e f t"> </sect i o n><h2 cl a s s N a m e="t e x t-l e f t">C o r e C o n t r o l s</h2> <ul cl a s s N a m e="t e x t-l e f t"> <sect i o n cl a s s N a m e="t e x t-l e f t"> </sect i o n><h2 cl a s s N a m e="t e x t-l e f t">C o r e C o n t r o l s</h2>" <ul cl a s s N a m e="t e x t-l e f t">ori g i n/cur s o r/fix-err o r s-and-me r g e-to-m a i n-cc0 a </ul><li>I d e n t i t y and pol i c y per ag e n t and per t o o l</li> <li>Netw o r k egr e s s al l o w‑li s t s and cont e n t s c a n n i n g</li> <li>Secr e t s va u l t w i t h t i m e‑bou n d s c o p e‑bo u n d tok e n s</li> <li>Fil e s y s t e m and proc e s s is o l a t i o n for t o o l ex e c u t i o n</li> <li>Act i o n l o g s w i t h signedim m u t a b l e stor a g e</li> </ul> </sect i o n> <sect i o n cl a s s N a m e="t e x t-l e f t"> </sect i o n><h2 cl a s s N a m e="t e x t-l e f t">Observ a b i l i t y</h2> <p cl a s s N a m e="t e x t-l e f t"> </p><sect i o n cl a s s N a m e="t e x t-l e f t"> </sect i o n><h2 cl a s s N a m e="t e x t-l e f t">Observ a b i l i t y</h2>" <p cl a s s N a m e="t e x t-l e f t">ori g i n/cur s o r/fix-err o r s-and-me r g e-to-m a i n-cc0 a Capt u r e tra c e s acr o s s prom p t s to o l s and o u t c o m e s. Att a c h pol i c y eventsappro v a l s a n d bud g e t us a g e. Al e r t on anom a l y p a t t e r n s and pol i c y vio l a t i o n s w i t h au t o m a t e d cont a i n m e n t. </p></p> </sect i o n> <sect i o n cl a s s N a m e="t e x t-l e f t"> </sect i o n><sect i o n cl a s s N a m e="t e x t-l e f t">ori g i n/cur s o r/fix-err o r s-and-me r g e-to-m a i n-cc0 a </sect i o n><a h r e f="/cont a c t" cl a s s N a m e="t e x t-l e f t">T a l k to S e c u r i t y Expe r t s </a></a> </sect i o n> </arti c l e> ); } </div>)
+import React from 'react';
+
+export const metadata = {
+  
+  title: 'AI Agent Security Blueprint 2026: Zero‑Trust for Autonomous Systems',
+  description:
+    'Zero‑trust architecture for agents: secret hygiene, tool isolation, least privilege, and audit trails.',
+
+};;
+
+export default function Page() {
+  return (
+    <div>/* content */}
+    <div>
+      <div> </div><div> </div></div>
+    <article className="text-left"> </a><header className="text-left">
+        <div className="text-left">January 2026 • 14 min read</div>
+        <h1 className="text-left">
+    <article className="text-left"> </article><header className="text-left"> </header><div className="text-left">January 2026 • 14 min read</div>"
+        <h1 className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
+          AI Agent Security Blueprint 2026
+        </h1></h1>
+        <p className="text-left">A practical zero‑trust approach for autonomous agents: scoped secrets, sandboxed tools, granular policies,
+          continuous monitoring, and tamper‑evident auditability.
+        </p></p>
+      </header>
+      <div className="text-left"> </div><section className="text-left"> </section><h2 className="text-left">Threat Model</h2>
+          <p className="text-left"> </p><section className="text-left"> </section><h2 className="text-left">Threat Model</h2>"
+          <p className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
+            Consider prompt injection, tool misuse, data exfiltration, privilege escalation, and supply‑chain risks.
+            Design controls assuming compromise and focus on blast‑radius reduction.
+          </p></p>
+        </section>
+        <section className="text-left"> </section><h2 className="text-left">Core Controls</h2>
+          <ul className="text-left">
+
+        <section className="text-left"> </section><h2 className="text-left">Core Controls</h2>"
+          <ul className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
+            </ul><li>Identity and policy per agent and per tool</li>
+            <li>Network egress allow‑lists and content scanning</li>
+            <li>Secrets vault with time‑bound, scope‑bound tokens</li>
+            <li>Filesystem and process isolation for tool execution</li>
+            <li>Action logs with signed, immutable storage</li>
+          </ul>
+        </section>
+        <section className="text-left"> </section><h2 className="text-left">Observability</h2>
+          <p className="text-left"> </p><section className="text-left"> </section><h2 className="text-left">Observability</h2>"
+          <p className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
+            Capture traces across prompts, tools, and outcomes. Attach policy events, approvals, and budget usage.
+            Alert on anomaly patterns and policy violations with automated containment.
+          </p></p>
+        </section>
+        <section className="text-left"> </section><section className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
+          </section><a
+            href="/contact"
+            className="text-left">Talk to Security Experts
+          </a></a>
+        </section>
+    </article>
+  );
+}
+
+</div>)

@@ -1,1 +1,77 @@
-import ArrowRight f r o m 'n e x t/l i n k'; export const co n s t m e t a d a t a = { title: 'Agen t i c W o r k f l o w Orches t r a t i o n 2 0 2 6' description: 'Guardrailsappro v a l s a n d trac i n g to s h i p r e l i a b l e mu l t i-ag e n t wo r k f l o w s.' url: 'ht t p s://zionte c h g r o u p.com/b l o g/agen t i c-w o r k f l o w-orches t r a t i o n-2 0 2 6' ima g e s: [ { url: '/og/agen t i c-w o r k f l o w-orches t r a t i o n-2 0 2 6.jpg' wi d t h: 1 2 0 0 hei g h t: 630 }]}; export const defa u l t f u n c t i o n P a g e() { ret u r n ( <div className='min-h-scr e e n bg-g r a d i e n t-to-br f r o m-g r a y-50 to-b l u e-50'> <div className='max-w-3xl mx-a u t o px-4 py-12'> <div className='mb-8 t e x t-sm t e x t-b l u e-700'> Se p t e m b e r 30 2 0 2 5 • 16 min r e a d </div> <h1 className='t e x t-4 xl md:t e x t-5 xl f o n t-b o l d t e x t-g r a y-900 mb-4'> Agen t i c W o r k f l o w Orches t r a t i o n 2 0 2 6: R e l i a b l e AI Wo r k f l o w s </h1> <p className='t e x t-xl t e x t-g r a y-700 mb-8'> Orch e s t r a t e mu l t i-s t e p age n t s w i t h pol i c y gat e s h u m a n appro v a l s a n d r i c h observ a b i l i t y. S h i p r e l i a b l e a u t o n o m y w i t h mea s u r a b l e o u t c o m e s and f a s t ro l l b a c k s. </p> <div className='pr o s e pr o s e-lg max-w-n o n e'> <h2>Archi t e c t u r e</h2> <ul> <li>Decl a r a t i v e w o r k f l o w gr a p h w i t h ty p e d co n t r a c t s</li> <li> Pol i c y che c k s bef o r e/af t e r t o o l ca l l s and e x t e r n a l s i d e effe c t s </li> <li>Ev e n t bus for statea u d i t a n d rep l a y</li> <li>Sha d o w r u n s and c a n a r i e s for ri s k y chan g e s</li> </ul> <h3>Observ a b i l i t y</h3> <ul> <li>Tra c e s w i t h sp a n s per s t e p and per-mo d e l c o s t/late n c y</li> <li>Outc o m e sco r e c a r d s and gu a r d r a i l vio l a t i o n s</li> <li>D i f f-ba s e d revi e w s bef o r e com m i t t i n g e x t e r n a l acti o n s</li> </ul> <h3>Roll o u t</h3> <ol> <li>St a r t w i t h r e a d-o n l y sha d o w m o d e</li> <li>Add ap p r o v a l s and prog r e s s i v e a u t o n o m y by s c e n a r i o</li> <li>A u t o m a t e ro l l b a c k s ba s e d on S L O s and gua r d r a i l s</li> </ol> </div> <div className='mt-10 p-6 bg-wh i t e roun d e d-xl bor d e r bor d e r-g r a y-200'> <h3 className='t e x t-xl f o n t-s e m i b o l d mb-2'>N e x t up</h3> <ul className='l i s t-d i s c pl-6 t e x t-b l u e-700'> <li> <ArrowRight href='/cont e n t-hub'> Expl o r e the Cont e n t Hub </ArrowRight> </li> <li> <ArrowRight href='/b l o g/ai-oper a t i o n a l-res i l i e n c e-2 0 2 6'> AI Oper a t i o n a l Res i l i e n c e 2 0 2 6 </ArrowRight> </li> </ul> </div> </div> </div> ); } 
+import ArrowRight from 'next/link';
+
+export const metadata = {
+  title: 'Agentic Workflow Orchestration 2026',
+  description:
+    'Guardrails, approvals, and tracing to ship reliable multi-agent workflows.',
+  url: 'https://ziontechgroup.com/blog/agentic-workflow-orchestration-2026',
+  images: [
+    {
+      url: '/og/agentic-workflow-orchestration-2026.jpg',
+      width: 1200,
+      height: 630,
+    },
+  ],
+};
+
+export default function Page() {
+  return (
+    <div className='min-h-screen bg-gradient-to-br from-gray-50 to-blue-50'>
+      <div className='max-w-3xl mx-auto px-4 py-12'>
+        <div className='mb-8 text-sm text-blue-700'>
+          September 30, 2025 • 16 min read
+        </div>
+        <h1 className='text-4xl md:text-5xl font-bold text-gray-900 mb-4'>
+          Agentic Workflow Orchestration 2026: Reliable AI Workflows
+        </h1>
+        <p className='text-xl text-gray-700 mb-8'>
+          Orchestrate multi-step agents with policy gates, human approvals, and
+          rich observability. Ship reliable autonomy with measurable outcomes
+          and fast rollbacks.
+        </p>
+
+        <div className='prose prose-lg max-w-none'>
+          <h2>Architecture</h2>
+          <ul>
+            <li>Declarative workflow graph with typed contracts</li>
+            <li>
+              Policy checks before/after tool calls and external side effects
+            </li>
+            <li>Event bus for state, audit, and replay</li>
+            <li>Shadow runs and canaries for risky changes</li>
+          </ul>
+
+          <h3>Observability</h3>
+          <ul>
+            <li>Traces with spans per step and per-model cost/latency</li>
+            <li>Outcome scorecards and guardrail violations</li>
+            <li>Diff-based reviews before committing external actions</li>
+          </ul>
+
+          <h3>Rollout</h3>
+          <ol>
+            <li>Start with read-only shadow mode</li>
+            <li>Add approvals and progressive autonomy by scenario</li>
+            <li>Automate rollbacks based on SLOs and guardrails</li>
+          </ol>
+        </div>
+
+        <div className='mt-10 p-6 bg-white rounded-xl border border-gray-200'>
+          <h3 className='text-xl font-semibold mb-2'>Next up</h3>
+          <ul className='list-disc pl-6 text-blue-700'>
+            <li>
+              <ArrowRight href='/content-hub'>
+                Explore the Content Hub
+              </ArrowRight>
+            </li>
+            <li>
+              <ArrowRight href='/blog/ai-operational-resilience-2026'>
+                AI Operational Resilience 2026
+              </ArrowRight>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  );
+}

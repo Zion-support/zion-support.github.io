@@ -1,1 +1,55 @@
-export const co n s t m e t a d a t a = {title: 'Ge n A I Qual i t y Ti e r s v3 Sta b l e UX w i t h 50% Savi n g s'};}; description: 'Ro u t e by int e n t to econ o m y vs qual i t y ti e r s bac k e d by s e m a n t i c cac h e s and KPI-lin k e d sco r e c a r d s for s a f e savi n g s.'};export const defa u l t f u n c t i o n P a g e() { ret u r n ( <div cl a s s N a m e ='min-h-scr e e n bg-g r a d i e n t-to-b f r o m-sl a t e-950 via-sl a t e-900 to-sl a t e-950 t e x t-wh i t e'> <div cl a s s N a m e='max-w-3xl mx-a u t o px-6 py-12'> <div cl a s s N a m e='mb-4 t e x t-sm t e x t-wh i t e/60'> Ge n A I 8 min r e a d 2 0 2 5-10-01 </div> <h1 cl a s s N a m e='t e x t-4 xl f o n t-b o l d mb-3'>Ge n A I Qual i t y Ti e r s v3</h1> <p cl a s s N a m e='t e x t-wh i t e/70 mb-8'> Int e n t-aw a r e t i e r rout i n g w i t h s e m a n t i c cac h e s and gua r d r a i l s d e l i v e r s 3 0 5 0% c o s t re d u c t i o n with o u t harm i n g pe r c e i v e d qual i t y. </p> <div cl a s s N a m e='sp a c e-y-6'> <h2 cl a s s N a m e='t e x t-2 xl f o n t-s e m i b o l d'>Key Id e a s</h2> <ul cl a s s N a m e='l i s t-d i s c pl-6 t e x t-wh i t e/70'> <li> Ro u t e low-r i s k inte n t s to econ o m y t i e r h i g h-r i s k to qual i t y t i e r. </li> <li> B a c k re s p o n s e s w i t h s e m a n t i c ca c h e + KV st o r e; TTL by int e n t. </li> <li> W i r e e v a l sco r e c a r d s to K P I s; f a i l clo s e d w i t h a t t e s t e d r o l l b a c k. </li> <li> W a r m po o l s and p r e f e t c h for bur s t y traf f i c wh i l e meet i n g S L O s. </li> </ul> <h2 cl a s s N a m e='t e x t-2 xl f o n t-s e m i b o l d'>Bl u e p r i n t</h2> <p cl a s s N a m e='t e x t-wh i t e/70'> Att a c h a d e c i s i o n f u n c t i o n per requ e s t t y p e: ''ca c h e econ o m y qual i t y. Rec o r d c o s t and qual i t y metr i c s in tra c e s. Bl o c k r o l l o u t s if sco r e c a r d s dip be l o w thr e s h o l d s. </p> </div>' <div cl a s s N a m e='mt-8'>' <a h r e f='/<b l o g' cl a s s N a m e='t e x t-c y a n-300 h o v e r: 'un d e r l i n e'> B a c k to B l o g </a> </div> </div> </div> );''}
+export const metadata = {
+  
+  title: 'GenAI Quality Tiers v3 — Stable UX with 50% Savings',
+  description:
+    'Route by intent to economy vs quality tiers, backed by semantic caches and KPI-linked scorecards for safe savings.',
+
+};;
+
+export default function Page() {
+  return (
+    <div className='min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white'>
+      <div className='max-w-3xl mx-auto px-6 py-12'>
+        <div className='mb-4 text-sm text-white/60'>
+          GenAI • 8 min read • 2025-10-01
+        </div>
+        <h1 className='text-4xl font-bold mb-3'>GenAI Quality Tiers v3</h1>
+        <p className='text-white/70 mb-8'>
+          Intent-aware tier routing with semantic caches and guardrails delivers
+          30–50% cost reduction without harming perceived quality.
+        </p>
+
+        <div className='space-y-6'>
+          <h2 className='text-2xl font-semibold'>Key Ideas</h2>
+          <ul className='list-disc pl-6 text-white/70'>
+            <li>
+              Route low-risk intents to economy tier, high-risk to quality tier.
+            </li>
+            <li>
+              Back responses with semantic cache + KV store; TTL by intent.
+            </li>
+            <li>
+              Wire eval scorecards to KPIs; fail closed with attested rollback.
+            </li>
+            <li>
+              Warm pools and prefetch for bursty traffic while meeting SLOs.
+            </li>
+          </ul>
+
+          <h2 className='text-2xl font-semibold'>Blueprint</h2>
+          <p className='text-white/70'>
+            Attach a decision function per request type: cache → economy →
+            quality. Record cost and quality metrics in traces. Block rollouts
+            if scorecards dip below thresholds.
+          </p>
+        </div>
+
+        <div className='mt-8'>
+          <a href='/<blog' className='text-cyan-300 hover:underline'>
+            ← Back to Blog
+          </a>
+        </div>
+      </div>
+    </div>
+  );
+}

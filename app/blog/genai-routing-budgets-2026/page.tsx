@@ -1,20 +1,20 @@
 export const metadata = {
+  
   title: 'GenAI Budget‑Aware Routing 2026',
   description:
-    'Stable UX under cost SLAs using quality tierscachesand eval signals.',
-};
+    'Stable UX under cost SLAs using quality tiers, caches, and eval signals.',
 
-export default function Page() {
-  return (
-    <main className='max-w-3xl mx-auto px-4 py-12'>
-      <h1 className='text-3xl md:text-4xl font-bold mb-4'>
+};;
+
+export default function Page() {return (<main className='max-w-3xl mx-auto px-4py-12'>
+      <h1 className='text-3xl md:text-4xl font-boldmb-4'>
         GenAI Budget‑Aware Routing 2026
       </h1>
-      <p className='text-gray-600 mb-8'>
+      <p className='text-gray-600mb-8'>
         Deliver predictable cost and quality with tiered modelssemantic
         cachesand evals.
       </p>
-      <div className='prose prose-invert max-w-none'>
+      <div className='prose prose-invertmax-w-none'>
         <p>
           Implement budget‑aware routing to keep experiences stable during
           traffic spikes and model variance.
@@ -27,5 +27,4 @@ export default function Page() {
         </ul>
       </div>
     </main>
-  );
-}
+  ); }
