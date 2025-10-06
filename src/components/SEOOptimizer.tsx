@@ -21,114 +21,16 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   structuredData
 }) => {
   useEffect(() => {
-    // Set document title
-    document.title = title;
-    
-    // Set meta description
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute('content', description);
-    } else {
-      const meta = document.createElement('meta');
-      meta.name = 'description';
-      meta.content = description;
-      document.head.appendChild(meta);
-    }
-
-    // Set meta keywords
-    const metaKeywords = document.querySelector('meta[name="keywords"]');
-    if (metaKeywords) {
-      metaKeywords.setAttribute('content', keywords.join(', '));
-    } else {
-      const meta = document.createElement('meta');
-      meta.name = 'keywords';
-      meta.content = keywords.join(', ');
-      document.head.appendChild(meta);
-    }
-
-    // Set canonical URL
-    if (canonicalUrl) {
-      const canonical = document.querySelector('link[rel="canonical"]');
-      if (canonical) {
-        canonical.setAttribute('href', canonicalUrl);
-      } else {
-        const link = document.createElement('link');
-        link.rel = 'canonical';
-        link.href = canonicalUrl;
-        document.head.appendChild(link);
-      }
-    }
-
-    // Set Open Graph tags
-    const ogTitle = document.querySelector('meta[property="og:title"]');
-    if (ogTitle) {
-      ogTitle.setAttribute('content', title);
-    } else {
-      const meta = document.createElement('meta');
-      meta.setAttribute('property', 'og:title');
-      meta.content = title;
-      document.head.appendChild(meta);
-    }
-
-    const ogDescription = document.querySelector('meta[property="og:description"]');
-    if (ogDescription) {
-      ogDescription.setAttribute('content', description);
-    } else {
-      const meta = document.createElement('meta');
-      meta.setAttribute('property', 'og:description');
-      meta.content = description;
-      document.head.appendChild(meta);
-    }
-
-    const ogImage = document.querySelector('meta[property="og:image"]');
-    if (ogImage) {
-      ogImage.setAttribute('content', ogImage);
-    } else {
-      const meta = document.createElement('meta');
-      meta.setAttribute('property', 'og:image');
-      meta.content = ogImage;
-      document.head.appendChild(meta);
-    }
-
-    // Set Twitter Card tags
-    const twitterCard = document.querySelector('meta[name="twitter:card"]');
-    if (!twitterCard) {
-      const meta = document.createElement('meta');
-      meta.name = 'twitter:card';
-      meta.content = 'summary_large_image';
-      document.head.appendChild(meta);
-    }
-
-    const twitterTitle = document.querySelector('meta[name="twitter:title"]');
-    if (!twitterTitle) {
-      const meta = document.createElement('meta');
-      meta.name = 'twitter:title';
-      meta.content = title;
-      document.head.appendChild(meta);
-    }
-
-    const twitterDescription = document.querySelector('meta[name="twitter:description"]');
-    if (!twitterDescription) {
-      const meta = document.createElement('meta');
-      meta.name = 'twitter:description';
-      meta.content = description;
-      document.head.appendChild(meta);
-    }
-
-    const twitterImage = document.querySelector('meta[name="twitter:image"]');
-    if (!twitterImage) {
-      const meta = document.createElement('meta');
-      meta.name = 'twitter:image';
-      meta.content = ogImage;
-      document.head.appendChild(meta);
-    }
-
-    // Add structured data
+    // Add structured data to the page
     if (structuredData) {
       const script = document.createElement('script');
       script.type = 'application/ld+json';
-      script.textContent = JSON.stringify(structuredData);
+      script.text = JSON.stringify(structuredData);
       document.head.appendChild(script);
+      
+      return () => {
+        document.head.removeChild(script);
+      };
     }
     return undefined;
   }, [title, description, keywords, canonicalUrl, ogImage, structuredData]);
