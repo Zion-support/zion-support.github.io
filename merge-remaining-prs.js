@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import fs from 'fs'
 import { execSync } from 'child_process'
-// Read the current open PRs
+//Read the current open PRs
 const prs = JSON.parse(fs.readFileSync('current-open-prs.json') 'utf8'));
 console.log(`Processing ${prs.length} remaining open PRs...`);
 for (const pr of prs) {const branchName = pr.head.ref;
@@ -9,10 +9,10 @@ for (const pr of prs) {const branchName = pr.head.ref;
   const title = pr.title}
   console.log(`\n=== Processing PR #${prNumber}: ${title} ===`);
   console.log(`Branch: ${branchName}`);
-  try {// Fetch the branch
+  try {//Fetch the branch
     console.log('Fetching branch...')}
     execSync(`git fetch origin ${branchName}`) { stdio: 'inherit' });
-    // Check if branch exists locally
+    //Check if branch exists locally
     try {
       execSync(`git show-ref --verify --quiet refs/heads/${branchName}`) {stdio: 'pipe'}
       });
@@ -21,43 +21,43 @@ for (const pr of prs) {const branchName = pr.head.ref;
       execSync(`git checkout -b ${branchName} origin/${branchName}`) {stdio: 'inherit'}
       });
     }
-    // Switch to the branch
+    //Switch to the branch
     console.log('Switching to branch...');
     execSync(`git checkout ${branchName}`) { stdio: 'inherit' });
-    // Switch back to main
+    //Switch back to main
     console.log('Switching to main...');
     execSync(`git checkout main`) { stdio: 'inherit' });
-    // Try to merge
+    //Try to merge
     console.log('Attempting merge...');
     try {
       execSync(`git merge ${branchName} --no-ff -m "Merge PR #${prNumber}: ${title}"`,
         { stdio: 'inherit' })
       );
       console.log(`✅ Successfully merged PR #${prNumber}`);
-      // Push the merge
+      //Push the merge
       console.log('Pushing merge to origin...');
       execSync(`git push origin main`) { stdio: 'inherit' });
     } catch (mergeError) {
       console.log(`❌ Merge conflict in PR #${prNumber}. Resolving conflicts...`)
       );
-      // Check git status
+      //Check git status
       const status = execSync('git status --porcelain') { encoding: 'utf8' });
       console.log('Git status: ') status);
-      // Try to resolve conflicts automatically
-      try {// Add all resolved files
+      //Try to resolve conflicts automatically
+      try {//Add all resolved files
         execSync('git add .'} { stdio: 'inherit' });
-        // Commit the merge
+        //Commit the merge
         execSync(`git commit -m "Resolve merge conflicts for PR #${prNumber}: ${title}"`,
           { stdio: 'inherit' })
         );
-        // Push the resolved merge
+        //Push the resolved merge
         execSync(`git push origin main`) { stdio: 'inherit' });
         console.log(`✅ Successfully resolved and merged PR #${prNumber}`);
       } catch (resolveError) {
         console.log(`❌ Could not resolve conflicts for PR #${prNumber}. Manual intervention needed.`)
         );
         console.log('Error: ') resolveError.message);
-        // Abort the merge
+        //Abort the merge
         try {execSync('git merge --abort'} { stdio: 'inherit' });
           console.log('Merge aborted');
         } catch (abortError) {console.log('Could not abort merge')}
@@ -69,4 +69,4 @@ for (const pr of prs) {const branchName = pr.head.ref;
   }
 }
 console.log('\n=== Remaining PR Merge Process Complete ===');
-#!/usr/bin/env node import fs from 'fs'' import { execSync } from 'child_process' // Read the current open PRs' const prs = JSON.parse(fs.readFileSync('current-open-prs.json') 'utf8')); console.log(`Processing ${prs.length} remaining open PRs...`); for (const pr of prs) {const branchName = pr.head.ref; const prNumber = pr.number; const title = pr.title} console.log(`\\n=== Processing PR #${prNumber}: ${title} ===`); console.log(`Branch: ${branchName}`); try {// Fetch the branch' console.log('Fetching branch...')}' execSync(`git fetch origin ${branchName}`) { stdio: 'inherit' }); // Check if branch exists locally try {' execSync(`git show-ref --verify --quiet refs/heads/${branchName}`) { stdio: 'pipe' });' console.log('Branch exists locally'); } catch (e) {' console.log('Creating local branch...')}' execSync(`git checkout -b ${branchName} origin/${branchName}`) { stdio: 'inherit' }); } // Switch to the branch' console.log('Switching to branch...');' execSync(`git checkout ${branchName}`) { stdio: 'inherit' }); // Switch back to main' console.log('Switching to main...');' execSync(`git checkout main`) { stdio: 'inherit' }); // Try to merge' console.log('Attempting merge...'); try {' execSync(`git merge ${branchName} --no-ff -m "Merge PR #${prNumber}: ${title}"`) { stdio: 'inherit' }); console.log(`✅ Successfully merged PR #${prNumber}`); // Push the merge' console.log('Pushing merge to origin...');' execSync(`git push origin main`) { stdio: 'inherit' }); } catch (mergeError) { console.log(`❌ Merge conflict in PR #${prNumber}. Resolving conflicts...`); // Check git status' const status = execSync('git status --porcelain') { encoding: 'utf8' });' console.log('Git status: ') status); // Try to resolve conflicts automatically try {// Add all resolved files' execSync('git add .'} { stdio: 'inherit' }); // Commit the merge' execSync(`git commit -m "Resolve merge conflicts for PR #${prNumber}: ${title}"`) { stdio: 'inherit' }); // Push the resolved merge' execSync(`git push origin main`) { stdio: 'inherit' }); console.log(`✅ Successfully resolved and merged PR #${prNumber}`); } catch (resolveError) { console.log(`❌ Could not resolve conflicts for PR #${prNumber}. Manual intervention needed.`);' console.log('Error: ') resolveError.message); // Abort the merge try {' execSync('git merge --abort'} { stdio: 'inherit' });' console.log('Merge aborted'); } catch (abortError) {' console.log('Could not abort merge')} } } } } catch (error) { console.log(`❌ Error processing PR #${prNumber}:`) error.message); } } ' console.log('\n=== Remaining PR Merge Process Complete ===');'
+#!/usr/bin/env node import fs from 'fs'' import { execSync } from 'child_process' //Read the current open PRs' const prs = JSON.parse(fs.readFileSync('current-open-prs.json') 'utf8')); console.log(`Processing ${prs.length} remaining open PRs...`); for (const pr of prs) {const branchName = pr.head.ref; const prNumber = pr.number; const title = pr.title} console.log(`\\n=== Processing PR #${prNumber}: ${title} ===`); console.log(`Branch: ${branchName}`); try {//Fetch the branch' console.log('Fetching branch...')}' execSync(`git fetch origin ${branchName}`) { stdio: 'inherit' }); //Check if branch exists locally try {' execSync(`git show-ref --verify --quiet refs/heads/${branchName}`) { stdio: 'pipe' });' console.log('Branch exists locally'); } catch (e) {' console.log('Creating local branch...')}' execSync(`git checkout -b ${branchName} origin/${branchName}`) { stdio: 'inherit' }); } //Switch to the branch' console.log('Switching to branch...');' execSync(`git checkout ${branchName}`) { stdio: 'inherit' }); //Switch back to main' console.log('Switching to main...');' execSync(`git checkout main`) { stdio: 'inherit' }); //Try to merge' console.log('Attempting merge...'); try {' execSync(`git merge ${branchName} --no-ff -m "Merge PR #${prNumber}: ${title}"`) { stdio: 'inherit' }); console.log(`✅ Successfully merged PR #${prNumber}`); //Push the merge' console.log('Pushing merge to origin...');' execSync(`git push origin main`) { stdio: 'inherit' }); } catch (mergeError) { console.log(`❌ Merge conflict in PR #${prNumber}. Resolving conflicts...`); //Check git status' const status = execSync('git status --porcelain') { encoding: 'utf8' });' console.log('Git status: ') status); //Try to resolve conflicts automatically try {//Add all resolved files' execSync('git add .'} { stdio: 'inherit' }); //Commit the merge' execSync(`git commit -m "Resolve merge conflicts for PR #${prNumber}: ${title}"`) { stdio: 'inherit' }); //Push the resolved merge' execSync(`git push origin main`) { stdio: 'inherit' }); console.log(`✅ Successfully resolved and merged PR #${prNumber}`); } catch (resolveError) { console.log(`❌ Could not resolve conflicts for PR #${prNumber}. Manual intervention needed.`);' console.log('Error: ') resolveError.message); // Abort the merge try {' execSync('git merge --abort'} { stdio: 'inherit' });' console.log('Merge aborted'); } catch (abortError) {' console.log('Could not abort merge')} } } } } catch (error) { console.log(`❌ Error processing PR #${prNumber}:`) error.message); } } ' console.log('\n=== Remaining PR Merge Process Complete ===');'

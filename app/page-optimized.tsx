@@ -1,12 +1,12 @@
 import React from 'react';
 import dynamic from 'next/dynamic';
-// import { UnifiedBanner, bannerConfigurations } from './components/UnifiedBannerSystem';
-// import { LazyWrapper } from './components/LazyLoader';
+//import { UnifiedBanner, bannerConfigurations } from './components/UnifiedBannerSystem';
+//import { LazyWrapper } from './components/LazyLoader';
 import SEOOptimizer from './components/SEOOptimizer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import { PerformanceMonitor } from './components/PerformanceMonitor';
 
-// Lazy load heavy components
+//Lazy load heavy components
 const UnifiedContentPromotion = dynamic(() => import('../components/UnifiedContentPromotion'), {
   loading: () => <div className="animate-pulse bg-gray-200 h-32 rounded-lg"></div>
 });
@@ -36,7 +36,7 @@ export const metadata = {
       {
         url: '/og-image.jpg',
         width: 1200,
-        height: 630,
+  height: 630,
         alt: 'Zion Tech Group AI Enterprise Transformation',
       },
     ],
@@ -49,10 +49,10 @@ export const metadata = {
   },
   robots: {
     index: true,
-    follow: true,
+  follow: true,
     googleBot: {
       index: true,
-      follow: true,
+  follow: true,
       'max-video-preview': -1,
       'max-image-preview': 'large',
       'max-snippet': -1,
