@@ -16,19 +16,30 @@ export interface IntegrationProviderMeta {
   category: 'crm' | 'ats';
   description: string;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd65
 export interface ProviderConnection {
   id: string;
   providerId: IntegrationProviderId;
   accessToken: string;
   refreshToken?: string;
+<<<<<<< HEAD
   status: SyncStatus;
   lastSync?: number;
   createdAt: number;
   updatedAt: number;
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd65
   expiresAt?: number;
   status: SyncStatus;
   lastSync?: number;
   createdAt: number;
+<<<<<<< HEAD
+=======
+  updatedAt: number;
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd65
 }
 
 export interface SyncLogEntry {
@@ -53,12 +64,15 @@ export interface ZapierEvent {
   payload: Record<string, any>;
 }
 
+<<<<<<< HEAD
 export interface IntegrationProviderMeta {
   id: IntegrationProviderId;
   name: string;
   category: 'crm' | 'ats';
   description: string;
 }
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd65
 export interface IntegrationsState {
   connections: ProviderConnection[];
   logs: SyncLogEntry[];
