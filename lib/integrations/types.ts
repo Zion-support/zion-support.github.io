@@ -31,7 +31,7 @@ export interface SyncLogEntry {
   providerId: IntegrationProviderId;
   level: 'info' | 'warn' | 'error';
   action: string;
-  details?: Record<string, any>;
+  details?: Record<string, unknown>;
 }
 export interface ManualOverride {
   jobId: string;
@@ -42,7 +42,7 @@ export interface ZapierEvent {
   id: string;
   type: 'zion.job.posted' | 'zion.talent.matched';
   timestamp: number;
-  payload: Record<string, any>;
+  payload: Record<string, unknown>;
 }
 export interface IntegrationsState {
   connections: ProviderConnection[];
