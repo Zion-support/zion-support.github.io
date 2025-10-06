@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import * as fs from 'fs';
 import * as path from 'path';
 import type { IntegrationsState } from './types';
@@ -9,6 +10,8 @@ const STATE_FILE = path.join(DATA_DIR, 'state.json');
 =======
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-4606
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e3b
 import fs from "fs";
 import path from "path";
 import type { IntegrationsState } from "./types";
@@ -56,9 +59,12 @@ export function writeState(
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
+<<<<<<< HEAD
 =======
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-3d1d
 =======
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-4606
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e3b

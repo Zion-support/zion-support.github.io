@@ -20,9 +20,20 @@ async function handler(req, res) {
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   try {
     const { email } = req.body || {};
 =======
+=======
+
+  const { email, name, source = 'website' } = req.body || {};
+
+  if (!email) {
+    res.statusCode = 400;
+    res.json({ error: 'Email is required' });
+    return;
+  }
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e3b
 
   try {
     const { email } = req.body || {};
@@ -104,6 +115,7 @@ async function handler(req, res) {
     fs.writeFileSync(file, JSON.stringify(subscribers, null, 2));
     res.statusCode = 200;
     res.json({ success: true, message: 'Successfully subscribed to newsletter' });
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-3d1d
 =======
 
@@ -113,6 +125,10 @@ async function handler(req, res) {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-4606
   } catch (err) {
     console.error('Subscribe API error:', err);
+=======
+  } catch (error) {
+    console.error('Subscribe API error:', error);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e3b
     res.statusCode = 500;
     res.json({ error: err.message || 'Subscription failed' });
   }

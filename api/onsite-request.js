@@ -25,12 +25,16 @@ async function handler(req, res) {
   let existing = [];
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-3d1d
 =======
   
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-4606
+=======
+  
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e3b
   try {
     existing = JSON.parse(fs.readFileSync(file, 'utf8'));
     if (!Array.isArray(existing)) existing = [];

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 const { withErrorLogging } = require('./withErrorLogging.cjs');
 =======
 const { withErrorLogging } = require('./withErrorLogging.cjs');
@@ -29,19 +30,23 @@ async function handler(req, res) {
 
 module.exports = withErrorLogging(handler);
 =======
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e3b
 const { withSentry } = require('./withSentry.cjs');
 
 async function handler(req, res) {
   if (req.method !== 'POST') {
     res.statusCode = 405;
     res.setHeader('Allow', 'POST');
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-4606
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e3b
     res.end('Method Not Allowed');
     return;
   }
 
-<<<<<<< HEAD
   const { action, amount, currency = 'USD' } = req.body || {};
 
   if (!action) {
@@ -89,12 +94,14 @@ async function handler(req, res) {
         res.json({ error: 'Invalid action' });
     }
   } catch (error) {
+    console.error('Wallet error:', error);
     res.statusCode = 500;
     res.json({ error: 'Wallet operation failed' });
   }
 }
 
 module.exports = withSentry(handler);
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-3d1d
 =======
   try {
@@ -110,3 +117,5 @@ module.exports = withSentry(handler);
 
 module.exports = withErrorLogging(handler);
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-4606
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e3b

@@ -4,6 +4,7 @@
  */
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { onCLS, onFCP, onLCP, onTTFB } from 'web-vitals';
 import type { Metric } from 'web-vitals';
 
@@ -19,6 +20,9 @@ import { onCLS, onFCP, onLCP, onTTFB, type Metric } from 'web-vitals';
 =======
 import { onCLS, onFCP, onLCP, onTTFB, type Metric } from 'web-vitals';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-4606
+=======
+import { onCLS, onFCP, onLCP, onTTFB, type Metric } from 'web-vitals';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e3b
 
 // Types
 interface PerformanceMetric {
@@ -65,6 +69,7 @@ const THRESHOLDS = {
   LCP: { good: 2500, poor: 4000 },
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   TTFB: { good: 800, poor: 1800 },
 =======
   TTFB: { good: 800, poor: 1800 }
@@ -72,6 +77,9 @@ const THRESHOLDS = {
 =======
   TTFB: { good: 800, poor: 1800 },
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-4606
+=======
+  TTFB: { good: 800, poor: 1800 }
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e3b
 };
 /**
  * Get rating based on metric value
@@ -95,11 +103,13 @@ function sendToAnalytics(metric: Metric): void {
     value: metric.value,
     rating: getRating(metric.name, metric.value),
     delta: metric.delta,
-<<<<<<< HEAD
     id: metric.id
+<<<<<<< HEAD
 =======
     id: metric.id,
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-4606
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e3b
   };
   // Log in development
   if (process.env.NODE_ENV === 'development') {
@@ -324,6 +334,7 @@ export function generatePerformanceReport(): PerformanceReport | null {
     userAgent: navigator.userAgent,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-bcb8
 =======
     userAgent: navigator.userAgent
@@ -332,6 +343,8 @@ export function generatePerformanceReport(): PerformanceReport | null {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-3d1d
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-4606
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e3b
   };
 }
 /**
@@ -459,6 +472,7 @@ export default {
 <<<<<<< HEAD
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 };
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-be22
@@ -467,3 +481,5 @@ export default {
 =======
 };
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-4606
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e3b
