@@ -74,7 +74,7 @@ class AdvancedErrorBoundary extends Component<Props, State> {
                 refreshing the page.
               </p>
             </div>
-            {process.env.NODE_ENV === 'development' && this.state.error && (
+            {process.env['NODE_ENV'] === 'development' && this.state.error && (
               <details className='mt-4'>
                 <summary className='cursor-pointer text-sm font-medium text-gray-700'>
                   Error Details (Development)

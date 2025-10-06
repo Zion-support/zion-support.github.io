@@ -5,17 +5,17 @@
 
 export const productionLogger = {
   log: (message: string, ...args: any[]): void => {
-    if (process.env.NODE_ENV === 'production') {
+    if (process.env['NODE_ENV'] === 'production') {
       console.log(message, ...args);
     }
   },
   error: (message: string, ...args: any[]): void => {
-    if (process.env.NODE_ENV === 'production') {
+    if (process.env['NODE_ENV'] === 'production') {
       console.error(message, ...args);
     }
   },
   warn: (message: string, ...args: any[]): void => {
-    if (process.env.NODE_ENV === 'production') {
+    if (process.env['NODE_ENV'] === 'production') {
       console.warn(message, ...args);
     }
   },
