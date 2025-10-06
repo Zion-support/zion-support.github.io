@@ -16,31 +16,33 @@ Object.defineProperty(window, 'matchMedia', {
 });
 
 // Mock IntersectionObserver
-global.IntersectionObserver = class IntersectionObserver {
+class MockIntersectionObserver implements IntersectionObserver {
   root: Element | null = null;
   rootMargin: string = '0px';
   thresholds: ReadonlyArray<number> = [0];
   
-  constructor(
-    public callback: IntersectionObserverCallback,
-    options?: IntersectionObserverInit
-  ) {}
-  
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  constructor(_callback: IntersectionObserverCallback, _options?: IntersectionObserverInit) {}
   disconnect() {}
-  observe() {}
-  unobserve() {}
-  takeRecords(): IntersectionObserverEntry[] {
-    return [];
-  }
-} as any;
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  observe(_target: Element) {}
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  unobserve(_target: Element) {}
+  takeRecords(): IntersectionObserverEntry[] { return []; }
+}
+
+global.IntersectionObserver = MockIntersectionObserver as typeof IntersectionObserver;
 
 // Mock ResizeObserver
 global.ResizeObserver = class ResizeObserver {
-  constructor(public callback: ResizeObserverCallback) {}
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  constructor(_callback: ResizeObserverCallback) {}
   disconnect() {}
-  observe() {}
-  unobserve() {}
-} as any;
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  observe(_target: Element, _options?: ResizeObserverOptions) {}
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  unobserve(_target: Element) {}
+} as unknown as typeof ResizeObserver;
 
 // Mock scrollTo
 Object.defineProperty(window, 'scrollTo', {
@@ -53,7 +55,7 @@ const originalError = console.error;
 const originalWarn = console.warn;
 
 beforeAll(() => {
-  console.error = (...args: any[]) => {
+  console.error = (...args: unknown[]) => {
     if (
       typeof args[0] === 'string' &&
       args[0].includes('Warning: ReactDOM.render is no longer supported')
@@ -63,7 +65,7 @@ beforeAll(() => {
     originalError.call(console, ...args);
   };
 
-  console.warn = (...args: any[]) => {
+  console.warn = (...args: unknown[]) => {
     if (
       typeof args[0] === 'string' &&
       (args[0].includes('componentWillReceiveProps') ||

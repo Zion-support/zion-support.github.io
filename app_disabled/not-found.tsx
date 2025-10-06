@@ -2,7 +2,7 @@
 
 // import React from 'react';
 import Link from 'next/link';
-import { ArrowRight } from 'lucide-react';
+// import { ArrowRight } from 'lucide-react'; // Unused for now
 
 export default function NotFound() {
   const popularPages = [
