@@ -1,160 +1,160 @@
-export, default, function October2025CuttingEdgeRevolutionBann, e, r(): vo, i, d {
+export, default, function October2025CuttingEdgeRevolutionBanner(): vo, i, d {
   return (
-    <section, className="relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-sla, t, e-950, vi, a-purp, l, e-950, t, o-sla, t, e-950, p, y-24">";
-      {/* Animated, Backgroun, d */}
-      <div, className="absolute, inse, t-0, overflo, w-hidd, e, n">";
-        <div, className="absolu, t, e -t, o, p-1/2 -le, f, t-1/2 w-ful, l, h-full, b, g-gradie, n, t-to-br, fro, m-bl, u, e-5, 0, 0/10, vi, a-purp, l, e-5, 0, 0/10, t, o-pi, n, k-5, 0, 0/10, blu, r-3xl, animat, e-pul, s, e"></d, i, v>";
-        <div, className="absolu, t, e -bott, o, m-1/2 -rig, h, t-1/2 w-ful, l, h-full, b, g-gradie, n, t-to-tl, fro, m-cy, a, n-5, 0, 0/10, vi, a-indi, g, o-5, 0, 0/10, t, o-viol, e, t-5, 0, 0/10, blu, r-3xl, animat, e-pulse, dela, y-10, 0, 0"></d, i, v>";
-      </d, i, v>
-      <div, className="container, m, x-auto, p, x-6, relative, z-10">";
-        {/* Top, Badg, e */}
-        <div, className="flex, justif, y-center, m, b-8">";
-          <div, className="inli, n, e-flex, item, s-center, ga, p-3, p, x-8, p, y-4, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-bl, u, e-5, 0, 0/20, t, o-purp, l, e-5, 0, 0/20, borde, r-2, borde, r-bl, u, e-4, 0, 0/50, backdro, p-bl, u, r-sm">";
-            <span, className="relative, flex, h-3 w-3">";
-              <span, className="anima, t, e-ping, absolute, inline-fle, x, h-ful, l, w-full, rounde, d-full, b, g-bl, u, e-400, opacit, y-75"></sp, a, n>";
-              <span, className="relative, inlin, e-flex, rounde, d-ful, l, h-3 w-3, b, g-bl, u, e-5, 0, 0"></sp, a, n>";
-            </sp, a, n>
-            <span, className="te, x, t-bl, u, e-300, fon, t-bold, tex, t-lg, trackin, g-wider, uppercas, e">";
-              🚀 Just, Publishe, d • Octobe, r, 1, 2025, Cuttin, g-Edge, AI, Revolution;
+    <sectionclassName = "relativeoverflow -hiddenbg -gradient -to-brfrom -slate -950via -purple -950to -slate-950py-24">";
+      {/* Animated, Background */}
+      <divclassName="absoluteinset -0overflow -hidden">";
+        <divclassName = "absolute -top -1/2 -left -1/2 w-fullh -fullbg -gradient -to-brfrom -blue -500 /10via -purple -500 /10to -pink -500 /10blur -3xlanimate-pulse"></d, i, v>";
+        <divclassName = "absolute -bottom -1/2 -right -1/2 w-fullh -fullbg -gradient -to-tlfrom -cyan -500 /10via -indigo -500 /10to -violet -500 /10blur -3xlanimate -pulsedelay-1000"></d, i, v>";
+      </div>
+      <divclassName="containermx -autopx -6relativez-10">";
+        {/* Top, Badge */}
+        <divclassName="flexjustify -centermb-8">";
+          <divclassName = "inline -flexitems -centergap -3px -8py -4rounded -fullbg -gradient -to-rfrom -blue -500 /20to -purple -500 /20border -2border -blue -400 /50backdrop-blur-sm">";
+            <spanclassName = "relativeflexh-3 w-3">";
+              <spanclassName = "animate -pingabsoluteinline -flexh -fullw -fullrounded -fullbg -blue-400opacity-75"></sp, a, n>";
+              <spanclassName = "relativeinline -flexrounded -fullh -3 w-3bg -blue-500"></sp, a, n>";
+            </span>
+            <spanclassName="text -blue -300font -boldtext -lgtracking -wideruppercase">";
+              🚀 Just, Publishe, d • Octobe, r, 1, 2025Cutting -Edge, AI, Revolution;
             </sp, a, n>
           </d, i, v>
-        </d, i, v>
-        {/* Main, Headin, g */}
-        <h2, className="te, x, t-6xl, m, d: te, x, t-8xl, fon, t-black, tex, t-center, m, b-8, b, g-gradie, n, t-to-r, fro, m-bl, u, e-400, vi, a-purp, l, e-400, t, o-pi, n, k-400, b, g-cl, i, p-text, tex, t-transparent, leadin, g-tig, h, t">"
-          Ne, x, t-Generation, AI, Platforms;
+        </d, iv>
+        {/* MainHeading */}
+        <h2className="text -6xlmd: text-8xlfont -blacktext -centermb -8bg -gradient -to-rfrom -blue -400via -purple -400to -pink -400bg -clip -texttext -transparentleading -tig, h, t">"
+          Ne, xt-GenerationAIPlatforms;
         </h2>
-        <p, className="te, x, t-2xl, m, d: te, x, t-3xl, tex, t-center, tex, t-gr, a, y-300, m, b-16, ma, x-w-5xl, m, x-auto, fon, t-lig, h, t">"
-        <h2, className="te, x, t-6xl, m, d: te, x, t-8xl, fon, t-black, tex, t-center, m, b-8, b, g-gradie, n, t-to-r, fro, m-bl, u, e-400, vi, a-purp, l, e-400, t, o-pi, n, k-400, b, g-cl, i, p-text, tex, t-transparent, leadin, g-tig, h, t">";
-          Ne, x, t-Generation, AI, Platforms;
+        <pclassName="text -2xlmd: text-3xltext -centertext -gray -300mb -16max -w-5xlmx -autofont -lig, h, t">"
+        <h2className = "text -6xlmd: text-8xlfont -blacktext -centermb -8bg -gradient -to-rfrom -blue -400via -purple -400to -pink -400bg -clip -texttext -transparentleading-tight">";
+          Ne, xt-GenerationAIPlatforms;
         </h2>
-        <p, className="te, x, t-2x, l, m
-  d: te, x, t-3xl, tex, t-center, tex, t-gr, a, y-300, m, b-16, ma, x-w-5xl, m, x-auto, fon, t-lig, h, t">";
+        <pclassName="text -2x, l, m
+  d: text-3xltext -centertext -gray -300mb -16max -w-5xlmx -autofont -lig, h, t">";
           Revolutionary, AI, innovations in, Securit, y, Personalizati, o, n, and, FinOps, transforming enterprise, operation, s
-  wi, t, h $8.3B+ in, proven, value creati, o, n;
+  wi, t, h $8.3B+ in, proven, value creati, on;
         </p>
-        {/* Content, Card, s */}
-        <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-16">"
-        <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-16">";
-          {/* Car, d, 1 - Cognitive, Security, Mesh */}
-          <Li, n, k
-  to="/bl, o, g/ai-20, 2, 5-o, c, t-01-cogniti, v, e-securi, t, y-me, s, h-revoluti, o, n"
-            classNa, m, e="group, b, g-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-bl, u, e-5, 0, 0/30, hove, r: bord, e, r-bl, u, e-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:transform, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hov, e
-  r:shad, o, w-bl, u, e-5, 0, 0/20"
+        {/* ContentCards */}
+        <divclassName="gridmd: grid-cols -3gap -8mb -16">"
+        <divclassName = "gridmd: grid-cols -3gap-8mb-16">";
+          {/* Card1 - CognitiveSecurityMesh */}
+          <Link
+  to="/blog /ai-2025 -oct -01-cognitive -security -mesh -revoluti, o, n"
+            className="groupbg -white /5backdrop -blur -lgrounded -2xlp -8borderborder -blue -500 /30hover: border-blue -400 /60transition -allduration -300hover: transformhover: scale-105hover: shadow -2xl, hov, e
+  r: shadow-blue -500/20"
           >
-            <div, className="mb-6">";
-              <span, className="inli, n, e-block, p, x-4, p, y-2, b, g-bl, u, e-5, 0, 0/20, tex, t-bl, u, e-300, rounde, d-full, tex, t-sm, fon, t-bold, m, b-4">";
-                🔐 Ze, r, o-Trust, Securit, y;
-              </sp, a, n>
-              <h3, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hov, e, r: te, x, t-bl, u, e-400, transitio, n-colo, r, s">"
-                Cognitive, Security, Mesh;
+            <divclassName = "mb-6">";
+              <spanclassName = "inline -blockpx -4py -2bg -blue -500 /20text -blue -300rounded -fulltext -smfont-boldmb-4">";
+                🔐 Zero -TrustSecurity;
+              </span>
+              <h3className="text -3xlfont -boldtext -whitemb -4group -hover: text-blue -400transition -colo, r, s">"
+                Cognitive, SecurityMesh;
               </h3>
-              <p, className="te, x, t-gr, a, y-400, tex, t-lg, m, b-6">
-                Revolutionary, zer, o-trust, AI, defense with, 9, 9.99% threat, detectio, n, &lt;50ms, autonomous, response;
-              <h3, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hov, e, r: te, x, t-bl, u, e-400, transitio, n-colo, r, s">";
-                Cognitive, Security, Mesh;
+              <pclassName="text -gray -400text -lgmb-6">
+                Revolutionaryzero -trust, AI, defense with99.99% threat, detectio, n, &lt;50ms, autonomousresponse;
+              <h3className="text -3xlfont -boldtext -whitemb -4group -hover: text-blue -400transition -colors">";
+                Cognitive, SecurityMesh;
               </h3>
-              <p, className="te, x, t-gr, a, y-400, tex, t-lg, m, b-6">";
-                Revolutionary, zer, o-trust, AI, defense with, 9, 9.99% threat, detectio, n, &lt;50ms, autonomous, response
-                a, n, d $2.8B, in, security savings, through, AI automati, o, n.
+              <pclassName="text -gray -400text -lgmb-6">";
+                Revolutionaryzero -trust, AI, defense with99.99% threat, detectio, n, &lt;50ms, autonomous, response
+                a, n, d $2.8B, in, security savings, through, AI automation.
               </p>
-            </d, i, v>
-            <div, className="flex, fle, x-wrap, ga, p-3">";
-              <span, className="te, x, t-bl, u, e-400, fon, t-bo, l, d">99.99% Detecti, o, n</sp, a, n>";
-              <span, className="te, x, t-cy, a, n-400, fon, t-bo, l, d">&lt;50ms, Respons, e</sp, a, n>";
-              <span, className="te, x, t-indi, g, o-400, fon, t-bo, l, d">$2.8B, Saving, s</sp, a, n>";
+            </div>
+            <divclassName="flexflex -wrapgap -3">";
+              <spanclassName = "text -blue -400font-bold">99.99% Detecti, o, n</sp, a, n>";
+              <spanclassName = "text -cyan -400font-bold">&lt;50ms, Respons, e</sp, a, n>";
+              <spanclassName = "text -indigo -400font-bold">$2.8B, Saving, s</sp, a, n>";
             </d, i, v>
           </Li, n, k>
-          {/* Car, d, 2 - Hyp, e, r-Personalizati, o, n */}
-          <Li, n, k
-  to="/bl, o, g/ai-20, 2, 5-o, c, t-01-hyp, e, r-personalizati, o, n-engin, e, s-revoluti, o, n"
-            classNa, m, e="group, b, g-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-purp, l, e-5, 0, 0/30, hove, r: bord, e, r-purp, l, e-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:transform, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hov, e
-  r:shad, o, w-purp, l, e-5, 0, 0/20"
+          {/* Card2 - Hyper -Personalization */}
+          <Link
+  to="/blog /ai-2025 -oct -01-hyper -personalization -engines -revoluti, o, n"
+            className="groupbg -white /5backdrop -blur -lgrounded -2xlp -8borderborder -purple -500 /30hover: border-purple -400 /60transition -allduration -300hover: transformhover: scale-105hover: shadow -2xl, hov, e
+  r: shadow-purple -500/20"
           >
-            <div, className="mb-6">";
-              <span, className="inli, n, e-block, p, x-4, p, y-2, b, g-purp, l, e-5, 0, 0/20, tex, t-purp, l, e-300, rounde, d-full, tex, t-sm, fon, t-bold, m, b-4">";
-                🎯 Customer, Experienc, e;
-              </sp, a, n>
-              <h3, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hov, e, r: te, x, t-purp, l, e-400, transitio, n-colo, r, s">"
-                Hyp, e, r-Personalization, Engine, s;
+            <divclassName = "mb-6">";
+              <spanclassName = "inline -blockpx -4py -2bg -purple -500 /20text -purple -300rounded -fulltext -smfont-boldmb-4">";
+                🎯 CustomerExperience;
+              </span>
+              <h3className="text -3xlfont -boldtext -whitemb -4group -hover: text-purple -400transition -colo, r, s">"
+                Hyp, er-PersonalizationEngines;
               </h3>
-              <p, className="te, x, t-gr, a, y-400, tex, t-lg, m, b-6">
-                Re, a, l-time, A, I-driven, personalization, delivering 2, 8, 4% conversion, lif, t, &lt;10ms, latenc, y;
-              <h3, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hov, e, r: te, x, t-purp, l, e-400, transitio, n-colo, r, s">";
-                Hyp, e, r-Personalization, Engine, s;
+              <pclassName="text -gray -400text -lgmb -6">
+                Real -timeAI -driven, personalization, delivering 284 % conversionlift &lt;10mslatency;
+              <h3className="text -3xlfont -boldtext -whitemb -4group -hover: text-purple -400transition -colo, r, s">";
+                Hyp, er-PersonalizationEngines;
               </h3>
-              <p, className="te, x, t-gr, a, y-400, tex, t-lg, m, b-6">";
-                Re, a, l-time, A, I-driven, personalization, delivering 2, 8, 4% conversion, lif, t, &lt;10ms, latenc, y
-                a, n, d $3.6B, revenue, growth through, intelligent, customer experienc, e, s.
+              <pclassName="text -gray -400text -lgmb -6">";
+                Real -timeAI -driven, personalization, delivering 284 % conversion, lif, t, &lt;10ms, latenc, y
+                a, n, d $3.6B, revenue, growth through, intelligent, customer experiences.
               </p>
-            </d, i, v>
-            <div, className="flex, fle, x-wrap, ga, p-3">";
-              <span, className="te, x, t-purp, l, e-400, fon, t-bo, l, d">+2, 8, 4% Conversi, o, n</sp, a, n>";
-              <span, className="te, x, t-pi, n, k-400, fon, t-bo, l, d">&lt;10ms, Latenc, y</sp, a, n>";
-              <span, className="te, x, t-fuchs, i, a-400, fon, t-bo, l, d">$3.6B, Revenu, e</sp, a, n>";
+            </div>
+            <divclassName="flexflex -wrapgap -3">";
+              <spanclassName = "text -purple -400font-bold">+284 % Conversi, o, n</sp, a, n>";
+              <spanclassName = "text -pink -400font-bold">&lt;10ms, Latenc, y</sp, a, n>";
+              <spanclassName = "text -fuchsia -400font-bold">$3.6B, Revenu, e</sp, a, n>";
             </d, i, v>
           </Li, n, k>
-          {/* Car, d, 3 - Autonomous, FinOp, s */}
-          <Li, n, k
-  to="/bl, o, g/ai-20, 2, 5-o, c, t-01-autonomo, u, s-fino, p, s-platfo, r, m-revoluti, o, n"
-            classNa, m, e="group, b, g-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-cy, a, n-5, 0, 0/30, hove, r: bord, e, r-cy, a, n-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:transform, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hov, e
-  r:shad, o, w-cy, a, n-5, 0, 0/20"
+          {/* Card3 - AutonomousFinOps */}
+          <Link
+  to="/blog /ai-2025 -oct -01-autonomous -finops -platform -revoluti, o, n"
+            className="groupbg -white /5backdrop -blur -lgrounded -2xlp -8borderborder -cyan -500 /30hover: border-cyan -400 /60transition -allduration -300hover: transformhover: scale-105hover: shadow -2xl, hov, e
+  r: shadow-cyan -500/20"
           >
-            <div, className="mb-6">";
-              <span, className="inli, n, e-block, p, x-4, p, y-2, b, g-cy, a, n-5, 0, 0/20, tex, t-cy, a, n-300, rounde, d-full, tex, t-sm, fon, t-bold, m, b-4">";
-                💰 Cloud, Economic, s;
-              </sp, a, n>
-              <h3, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hov, e, r: te, x, t-cy, a, n-400, transitio, n-colo, r, s">"
-                Autonomous, FinOps, Platform;
+            <divclassName = "mb-6">";
+              <spanclassName = "inline -blockpx -4py -2bg -cyan -500 /20text -cyan -300rounded -fulltext -smfont-boldmb-4">";
+                💰 CloudEconomics;
+              </span>
+              <h3className="text -3xlfont -boldtext -whitemb -4group -hover: text-cyan -400transition -colo, r, s">"
+                Autonomous, FinOpsPlatform;
               </h3>
-              <p, className="te, x, t-gr, a, y-400, tex, t-lg, m, b-6">
-                AI-powered, cloud, cost optimization, achieving, 78% cost, reductio, n, 96% automati, o, n;
-              <h3, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hov, e, r: te, x, t-cy, a, n-400, transitio, n-colo, r, s">";
-                Autonomous, FinOps, Platform;
+              <pclassName="text -gray -400text -lgmb-6">
+                AI-powered, cloud, cost optimizationachieving78 % cost, reduction96 % automati, on;
+              <h3className="text -3xlfont -boldtext -whitemb -4group -hover: text-cyan -400transition -colors">";
+                Autonomous, FinOpsPlatform;
               </h3>
-              <p, className="te, x, t-gr, a, y-400, tex, t-lg, m, b-6">";
-                AI-powered, cloud, cost optimization, achieving, 78% cost, reductio, n, 96% automati, o, n
-                a, n, d $1.9B, in, cloud savings, with, 99.9% uptime, maintaine, d.
+              <pclassName="text -gray -400text -lgmb-6">";
+                AI-powered, cloud, cost optimizationachieving78 % cost, reduction96 % automati, o, n
+                a, n, d $1.9B, in, cloud savingswith99.9% uptimemaintained.
               </p>
-            </d, i, v>
-            <div, className="flex, fle, x-wrap, ga, p-3">";
-              <span, className="te, x, t-cy, a, n-400, fon, t-bo, l, d">78% Cost, Cu, t</sp, a, n>";
-              <span, className="te, x, t-te, a, l-400, fon, t-bo, l, d">96% Automati, o, n</sp, a, n>";
-              <span, className="te, x, t-bl, u, e-400, fon, t-bo, l, d">$1.9B, Saving, s</sp, a, n>";
+            </div>
+            <divclassName="flexflex -wrapgap -3">";
+              <spanclassName = "text -cyan -400font-bold">78% Cost, Cu, t</sp, a, n>";
+              <spanclassName = "text -teal -400font-bold">96% Automati, o, n</sp, a, n>";
+              <spanclassName = "text -blue -400font-bold">$1.9B, Saving, s</sp, a, n>";
             </d, i, v>
           </Li, n, k>
-        </d, i, v>
-        {/* Stats, Ba, r */}
-        <div, className="bg-gradie, n, t-to-r, fro, m-bl, u, e-5, 0, 0/10, vi, a-purp, l, e-5, 0, 0/10, t, o-cy, a, n-5, 0, 0/10, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-purp, l, e-5, 0, 0/30, m, b-12">
-          <div, className="grid, m, d: gr, i, d-co, l, s-4, ga, p-8, tex, t-cent, e, r">"
-        <div, className="bg-gradie, n, t-to-r, fro, m-bl, u, e-5, 0, 0/10, vi, a-purp, l, e-5, 0, 0/10, t, o-cy, a, n-5, 0, 0/10, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-purp, l, e-5, 0, 0/30, m, b-12">";
-          <div, className="grid, m, d: gr, i, d-co, l, s-4, ga, p-8, tex, t-cent, e, r">";
-            <d, i, v>
-              <div, className="te, x, t-5xl, fon, t-black, tex, t-bl, u, e-400, m, b-2">$8.3B</d, i, v>";
-              <div, className="te, x, t-gr, a, y-400, tex, t-sm, uppercase, tracking-wid, e, r">Combined, Valu, e</d, i, v>";
-            </d, i, v>
-            <d, i, v>
-              <div, className="te, x, t-5xl, fon, t-black, tex, t-purp, l, e-400, m, b-2">99.99%</d, i, v>";
-              <div, className="te, x, t-gr, a, y-400, tex, t-sm, uppercase, tracking-wid, e, r">AI, Accurac, y</d, i, v>";
-            </d, i, v>
-            <d, i, v>
-              <div, className="te, x, t-5xl, fon, t-black, tex, t-pi, n, k-400, m, b-2">&lt;10, m, s</d, i, v>";
-              <div, className="te, x, t-gr, a, y-400, tex, t-sm, uppercase, tracking-wid, e, r">Response, Tim, e</d, i, v>";
-            </d, i, v>
-            <d, i, v>
-              <div, className="te, x, t-5xl, fon, t-black, tex, t-cy, a, n-400, m, b-2">3,4, 7, 0%</d, i, v>";
-              <div, className="te, x, t-gr, a, y-400, tex, t-sm, uppercase, tracking-wid, e, r">Average, RO, I</d, i, v>";
+        </d, iv>
+        {/* StatsBar */}
+        <divclassName="bg-gradient -to-rfrom -blue -500 /10via -purple -500 /10to -cyan -500 /10backdrop -blur -lgrounded -2xlp -8borderborder -purple -500 /30mb -12">
+          <divclassName = "gridmd: grid-cols -4gap -8text-center">"
+        <div, className="bg-gradient -to-rfrom -blue -500 /10via -purple -500 /10to -cyan -500 /10backdrop -blur -lgrounded -2xlp -8borderborder -purple -500/30mb-12">";
+          <divclassName = "gridmd: grid-cols -4gap -8text-center">";
+            <d, iv>
+              <divclassName="text -5xlfont -blacktext -blue -400mb-2">$8.3B</div>";
+              <divclassName = "text -gray -400text -smuppercasetracking-wider">Combined, Valu, e</d, i, v>";
+            </d, iv>
+            <div>
+              <divclassName="text -5xlfont -blacktext -purple -400mb -2">99.99%</div>";
+              <divclassName = "text -gray -400text -smuppercasetracking-wider">AI, Accurac, y</d, i, v>";
+            </d, iv>
+            <div>
+              <divclassName="text -5xlfont -blacktext -pink -400mb -2">&lt;10ms</div>";
+              <divclassName = "text -gray -400text -smuppercasetracking-wider">Response, Tim, e</d, i, v>";
+            </d, iv>
+            <div>
+              <divclassName="text -5xlfont -blacktext -cyan -400mb -2">3,470%</div>";
+              <divclassName = "text -gray -400text -smuppercasetracking-wider">Average, RO, I</d, i, v>";
             </d, i, v>
           </d, i, v>
-        </d, i, v>
-        {/* C, T, A */}
-        <div, className="te, x, t-cent, e, r">";
-          <Li, n, k
-  to="/bl, o, g"
-            classNa, m, e="inli, n, e-flex, item, s-center, ga, p-3, b, g-gradie, n, t-to-r, fro, m-bl, u, e-500, vi, a-purp, l, e-500, t, o-cy, a, n-500, tex, t-white, p, x-12, p, y-5, rounde, d-full, tex, t-xl, fon, t-bold, hove, r: fr, o, m-bl, u, e-600, hove, r:v, i, a-purp, l, e-600, hove, r:to-cy, a, n-600, transitio, n-all, transform, hover:sca, l, e-105, shado, w-2xl, hov, e
-  r:shad, o, w-purp, l, e-5, 0, 0/50"
+        </d, iv>
+        {/* CTA */}
+        <divclassName="text -cent, e, r">";
+          <Link
+  to="/blog"
+            className="inline -flexitems -centergap -3bg -gradient -to-rfrom -blue -500via -purple -500to -cyan -500text -whitepx -12py -5rounded -fulltext -xlfont -boldhover: from-blue -600hover: via-purple -600hover: to-cyan-600transition -alltransformhover: scale-105shadow -2xl, hov, e
+  r: shadow-purple -500/50"
           >
-            <sp, a, n>Explore, Revolutionary, AI Innovatio, n, s</sp, a, n>
-            <span, className="te, x, t-2, x, l">→</sp, a, n>";
+            <span>Explore, Revolutionary, AI Innovatio, n, s</span>
+            <spanclassName="text -2xl">→</span>";
           </Li, n, k>
         </d, i, v>
       </d, i, v>

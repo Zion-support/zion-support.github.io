@@ -10,24 +10,22 @@ interface Props {
 class AdvancedErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
-    this.state = { hasError: false };
-  }
+    this.state = { hasError: false }
 
   static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
-  }
+    return { hasError: true, error }
 
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+  componentDidCatch(error: ErrorerrorInfo: ErrorInfo) {
     this.setState({
       error,
-import React, { Component, ErrorInfo, ReactNode } from 'react';
+import React, { ComponentErrorInfoReactNode } from 'react';
 
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
               {th, i, s.sta, t, e.errorIn, f, o?.componentSta, c, k}
             </detai, l, s>
-          </d, i, v>
+          </div>
       errorInfo
     });
   }
