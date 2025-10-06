@@ -27,7 +27,7 @@ class ErrorBoundary extends Component<Props, State> {
     };
   }
 
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+  override componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     console.error('ErrorBoundary caught an error:', error, errorInfo);
     
     // Call the onError callback if provided
@@ -47,7 +47,7 @@ class ErrorBoundary extends Component<Props, State> {
   }
 
   handleRetry = () => {
-    this.setState({ hasError: false, error: undefined, errorId: undefined });
+    this.setState({ hasError: false } as State);
   };
 
   handleGoHome = () => {
@@ -56,7 +56,7 @@ class ErrorBoundary extends Component<Props, State> {
     }
   };
 
-  render() {
+  override render() {
     if (this.state.hasError) {
       if (this.props.fallback) {
         return this.props.fallback;

@@ -3,9 +3,9 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 
 // Components
-import ErrorBoundary from './components/ErrorBoundary';
-import SEOOptimizer from './components/SEOOptimizer';
-import AccessibilityEnhancer from './components/AccessibilityEnhancer';
+import ErrorBoundary from '../src/components/ErrorBoundary';
+import SEOOptimizer from '../src/components/SEOOptimizer';
+import AccessibilityEnhancer from '../src/components/AccessibilityEnhancer';
 import PerformanceDashboard from './components/PerformanceDashboard';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
