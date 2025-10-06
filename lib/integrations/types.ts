@@ -26,9 +26,6 @@ export interface ProviderConnection {
   createdAt: number;
   updatedAt: number;
   expiresAt?: number;
-  status: SyncStatus;
-  lastSync?: number;
-  createdAt: number;
 }
 
 export interface SyncLogEntry {
@@ -51,13 +48,6 @@ export interface ZapierEvent {
   type: 'zion.job.posted' | 'zion.talent.matched';
   timestamp: number;
   payload: Record<string, any>;
-}
-
-export interface IntegrationProviderMeta {
-  id: IntegrationProviderId;
-  name: string;
-  category: 'crm' | 'ats';
-  description: string;
 }
 export interface IntegrationsState {
   connections: ProviderConnection[];

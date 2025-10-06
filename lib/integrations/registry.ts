@@ -8,7 +8,7 @@ export const PROVIDERS: IntegrationProviderMeta[] = [
   { id: 'greenhouse', name: 'Greenhouse', category: 'ats', description: 'ATS & recruiting' },
   { id: 'lever', name: 'Lever', category: 'ats', description: 'ATS & CRM' },
   { id: 'workable', name: 'Workable', category: 'ats', description: 'Recruiting software' },
-  { id: 'bamboohr', name: 'BambooHR', category: 'ats', description: 'HRIS & ATS' }
+  { id: 'bamboohr', name: 'BambooHR', category: 'ats', description: 'HRIS & ATS' },
   {
     id: 'salesforce',
     name: 'Salesforce',
