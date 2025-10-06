@@ -1,29 +1,7 @@
-/**
- * Performance Optimizer Utility
- * Comprehensive performance monitoring and optimization tools
- */
-
-/**
- * Web Vitals metrics tracking
- */
-export interface WebVitalsMetrics {
-  FCP?: number; // First Contentful Paint
-  LCP?: number; // Largest Contentful Paint
-  FID?: number; // First Input Delay
-  CLS?: number; // Cumulative Layout Shift
-  TTFB?: number; // Time to First Byte
-  INP?: number; // Interaction to Next Paint
-}
-
-/**
- * Performance Optimizer Class
- * Singleton class for comprehensive performance monitoring and optimization
- */
-class PerformanceOptimizer {
+// Performance optimization utilities
+export class PerformanceOptimizer {
   private static instance: PerformanceOptimizer;
-  private metrics = new Map<string, number>();
-
-  private constructor() {}
+  private metrics: Map<string, number> = new Map();
 
   static getInstance(): PerformanceOptimizer {
     if (!PerformanceOptimizer.instance) {
@@ -112,7 +90,7 @@ class PerformanceOptimizer {
     return Object.fromEntries(this.metrics);
   }
 
-  // Add critical resource hints for better performance
+  // Add critical resource hints method
   addCriticalResourceHints(): void {
     if (typeof document === 'undefined') return;
     
@@ -134,24 +112,24 @@ class PerformanceOptimizer {
     });
   }
 
-  // Measure page load performance
-  measurePageLoad(): { loadTime: number; interactiveTime: number } | null {
+  // Add Web Vitals reporting method
+  reportWebVitals(metrics: any): void {
+    if (process.env.NODE_ENV === 'development') {
+      console.log('Web Vitals:', metrics);
+    }
+  }
+
+  // Add page load measurement method
+  measurePageLoad(): any {
     if (typeof window === 'undefined' || !window.performance) {
       return null;
     }
     
     const timing = window.performance.timing;
-    const loadTime = timing.loadEventEnd - timing.navigationStart;
-    const interactiveTime = timing.domInteractive - timing.navigationStart;
-    
-    return { loadTime, interactiveTime };
-  }
-
-  // Report web vitals
-  reportWebVitals(metrics: { loadTime: number; interactiveTime: number }): void {
-    if (process.env.NODE_ENV === 'development') {
-      console.log('Web Vitals:', metrics);
-    }
+    return {
+      loadTime: timing.loadEventEnd - timing.navigationStart,
+      interactiveTime: timing.domInteractive - timing.navigationStart
+    };
   }
 
   // Initialize all optimizations
