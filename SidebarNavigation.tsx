@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 
 const SidebarNavigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
->>>>>>> origin/merge-fixes-20251005-193002
       <div
         className={`${isOpen ? 'w-64' : 'w-16'} transition-all duration-300 bg-white shadow-lg`}
       >

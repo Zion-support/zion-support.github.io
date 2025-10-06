@@ -251,57 +251,55 @@ const improvementReport = {
       optimizations: [
         'Image optimization',
         'CSS optimization',
-        'JavaScript optimization'
-      ]
+        'JavaScript optimization',
+      ],
     },
     security: {
       status: 'completed',
       improvements: [
         'Security headers',
         'Content Security Policy',
-        'Input validation'
-      ]
+        'Input validation',
+      ],
     },
     seo: {
       status: 'completed',
       improvements: [
         'Meta tag optimization',
         'Structured data',
-        'Sitemap optimization'
-      ]
+        'Sitemap optimization',
+      ],
     },
     accessibility: {
       status: 'completed',
-      improvements: [
-        'ARIA labels',
-        'Keyboard navigation',
-        'Alt text'
-      ]
+      improvements: ['ARIA labels', 'Keyboard navigation', 'Alt text'],
     },
     codeQuality: {
       status: 'completed',
-      improvements: [
-        'Error handling',
-        'Logging',
-        'Documentation'
-      ]
-    }
+      improvements: ['Error handling', 'Logging', 'Documentation'],
+    },
   },
   summary: {
     totalImprovements: 15,
     completed: 15,
-    failed: 0
-  }
+    failed: 0,
+  },
 };
 
-fs.writeFileSync('comprehensive-improvements-report.json', JSON.stringify(improvementReport, null, 2));
+fs.writeFileSync(
+  'comprehensive-improvements-report.json',
+  JSON.stringify(improvementReport, null, 2)
+);
 
 // Step 10: Commit changes
 console.log('\n💾 Step 10: Committing improvements...');
 
 try {
   execSync('git add .', { stdio: 'inherit' });
-  execSync('git commit -m "Implement comprehensive improvements: performance, security, SEO, accessibility, and code quality"', { stdio: 'inherit' });
+  execSync(
+    'git commit -m "Implement comprehensive improvements: performance, security, SEO, accessibility, and code quality"',
+    { stdio: 'inherit' }
+  );
   console.log('✅ Changes committed');
 } catch (error) {
   console.log('❌ Failed to commit changes:', error.message);

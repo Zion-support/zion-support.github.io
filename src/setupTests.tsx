@@ -15,22 +15,18 @@ Object.defineProperty(window, 'matchMedia', {
   })),
 });
 
-// Mock performance API
-Object.defineProperty(window, 'performance', {
-  writable: true,
-  value: {
-    now: jest.fn(() => Date.now()),
-    mark: jest.fn(),
-    measure: jest.fn(),
-    getEntriesByType: jest.fn(() => []),
-    getEntriesByName: jest.fn(() => []),
-  },
-});
-global.console = {
-  ...console,
-  log: jest.fn(),
-  debug: jest.fn(),
-  info: jest.fn(),
-  warn: jest.fn(),
-  error: jest.fn(),
+// Mock IntersectionObserver
+global.IntersectionObserver = class IntersectionObserver {
+  constructor() {}
+  disconnect() {}
+  observe() {}
+  unobserve() {}
+};
+
+// Mock ResizeObserver
+global.ResizeObserver = class ResizeObserver {
+  constructor() {}
+  disconnect() {}
+  observe() {}
+  unobserve() {}
 };

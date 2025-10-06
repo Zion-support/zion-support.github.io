@@ -5,14 +5,25 @@ import { HelmetProvider } from 'react-helmet-async';
 // Components
 import ErrorBoundary from '../src/components/ErrorBoundary';
 import SEOOptimizer from '../src/components/SEOOptimizer';
-import AccessibilityEnhancer from '../src/components/AccessibilityEnhancer';
+<<<<<<< HEAD
+import AccessibilityEnhancer from '../components/disabled/AccessibilityEnhancer';
 import PerformanceDashboard from './components/PerformanceDashboard';
+=======
+import AccessibilityEnhancer from './components/AccessibilityEnhancer';
+import PerformanceDashboard from './components/PerformanceDashboard';
+import Navigation from './components/Navigation';
+import Footer from './components/Footer';
+>>>>>>> main
 
 // Pages
 import HomePage from './page';
 
 // Utils
+<<<<<<< HEAD
+import { performanceOptimizer } from '../src/utils/performanceOptimizer';
+=======
 // import performanceOptimizer from '../src/utils/performanceOptimizer';
+>>>>>>> main
 
 // Styles
 import '../index.css';
@@ -23,7 +34,34 @@ const App: React.FC = () => {
     console.log('App initialized');
 
     // Initialize performance monitoring
+<<<<<<< HEAD
+    performanceOptimizer.lazyLoadImages();
+<<<<<<< HEAD
+    // Initialize Web Vitals monitoring
+    if (typeof window !== 'undefined' && 'performance' in window) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+      performanceOptimizer.measurePageLoad().then(metrics => {
+=======
+<<<<<<< HEAD
+    performanceOptimizer.addCriticalResourceHints();
+=======
+>>>>>>> main
+    // Initialize Web Vitals monitoring
+    if (typeof window !== 'undefined' && 'performance' in window) {
+>>>>>>> main
+>>>>>>> main
+      const metrics = performanceOptimizer.measurePageLoad();
+      if (metrics) {
+>>>>>>> main
+        performanceOptimizer.reportWebVitals(metrics);
+      });
+    }
+=======
     console.log('Performance monitoring initialized');
+>>>>>>> main
 
     console.log('Performance monitoring initialized');
     console.log(
@@ -56,10 +94,14 @@ const App: React.FC = () => {
                   Skip to main content
                 </a>
 
+                <Navigation />
+                
                 <Routes>
                   <Route path='/' element={<HomePage />} />
                   {/* Add more routes as needed */}
                 </Routes>
+
+                <Footer />
 
                 {/* Performance Dashboard */}
                 <PerformanceDashboard />
