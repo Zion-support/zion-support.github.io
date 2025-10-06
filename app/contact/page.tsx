@@ -2,35 +2,35 @@ import React from 'react';
 
 const ContactPage: React.FC = () => {
   return (
-    <div className='min-h-screen bg-slate-50 py-16'>
-      <div className='container mx-auto px-4'>
-        <h1 className='text-4xl font-bold text-gray-900 mb-8 text-center'>
+    <div className="min-h-screen bg-slate-50 py-16">
+      <div className="container mx-auto px-4">
+        <h1 className="text-4xl font-bold text-gray-900 mb-8 text-center">
           Contact Us
         </h1>
-        <div className='max-w-4xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8'>
-          <div className='bg-white p-6 rounded-lg shadow-md'>
-            <h3 className='text-xl font-semibold mb-4'>Get in Touch</h3>
-            <form className='space-y-4'>
+        <div className="max-w-4xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <h3 className="text-xl font-semibold mb-4">Get in Touch</h3>
+            <form className="space-y-4">
               <div>
-                <label className='block text-sm font-medium text-gray-700 mb-2'>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
                   Name
                 </label>
                 <input
-                  type='text'
-                  className='w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500'
+                  type="text"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
               </div>
               <div>
-                <label className='block text-sm font-medium text-gray-700 mb-2'>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
                   Email
                 </label>
                 <input
-                  type='email'
-                  className='w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500'
+                  type="email"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
               </div>
               <div>
-                <label className='block text-sm font-medium text-gray-700 mb-2'>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
                   Message
                 </label>
                 <textarea
@@ -46,25 +46,27 @@ const ContactPage: React.FC = () => {
               </button>
             </form>
           </div>
-          <div className='bg-white p-6 rounded-lg shadow-md'>
-            <h3 className='text-xl font-semibold mb-4'>Contact Information</h3>
-            <div className='space-y-4'>
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <h3 className="text-xl font-semibold mb-4">Contact Information</h3>
+            <div className="space-y-4">
               <div>
                 <h4 className="font-medium text-gray-900">Email</h4>
+<<<<<<< HEAD
                 <p className="text-gray-600">kleber@ziontechgroup.com</p>
+=======
+                <p className="text-gray-600">info@ziontechgroup.com</p>
+>>>>>>> origin/merge-all-fixes
               </div>
               <div>
-                <h4 className='font-medium text-gray-900'>Phone</h4>
-                <p className='text-gray-600'>+1 302 464 0950</p>
+                <h4 className="font-medium text-gray-900">Phone</h4>
+                <p className="text-gray-600">+1 (302) 464-0950</p>
               </div>
               <div>
-                <h4 className='font-medium text-gray-900'>Address</h4>
-                <p className='text-gray-600'>
-                  Zion Tech Group
-                  <br />
+                <h4 className="font-medium text-gray-900">Address</h4>
+                <p className="text-gray-600">
+                  123 Business Street<br />
+                  Suite 100<br />
                   Wilmington, DE 19801
-                  <br />
-                  United States
                 </p>
               </div>
             </div>
