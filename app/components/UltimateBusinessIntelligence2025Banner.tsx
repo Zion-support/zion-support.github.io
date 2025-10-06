@@ -16,11 +16,7 @@ const UltimateBusinessIntelligence2025Banner = () => {
         roi: '30,000%',
         savings: '$750B+',
         accuracy: '99.99%',
-<<<<<<< HEAD
         speed: '5,000% faster'
-=======
-        speed: '5,000% faster',
->>>>>>> main
       },
       readingTime: '35 min read',
       featured: true,
@@ -36,11 +32,7 @@ const UltimateBusinessIntelligence2025Banner = () => {
         roi: '30,000%',
         savings: '$750B',
         company: '$15.2B',
-<<<<<<< HEAD
         timeline: '18 months'
-=======
-        timeline: '18 months',
->>>>>>> main
       },
       readingTime: '25 min read',
       featured: true,
@@ -56,37 +48,19 @@ const UltimateBusinessIntelligence2025Banner = () => {
         roi: '30,000%',
         success: '99.8%',
         timeline: '18 months',
-<<<<<<< HEAD
         adoption: '100%'
       },
       readingTime: '45 min read',
       featured: true
     }
-=======
-        adoption: '100%',
-      },
-      readingTime: '45 min read',
-      featured: true,
-    },
->>>>>>> main
   ];
   useEffect(() => {
     const interval = setInterval(() => {
-<<<<<<< HEAD
       setCurrentSlide((prev) => (prev + 1) % content.length);
-=======
-      setCurrentSlide(prev => (prev + 1) % content.length);
->>>>>>> main
     }, 5000);
     return () => clearInterval(interval);
   }, [content.length]);
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
   return (
     <section className='relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden'>
       {/* Animated Background Effects */}
@@ -234,18 +208,10 @@ const UltimateBusinessIntelligence2025Banner = () => {
                 }`}
           {/* Carousel Indicators */}
           <div className="flex justify-center gap-2 mt-8">
-<<<<<<< HEAD
-=======
-=======
->>>>>>> main
   if (!isVisible) return null;
 
   return (
-<<<<<<< HEAD
     <section className="relative overflow-hidden bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 py-20">
-=======
-    <div className="relative overflow-hidden bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
->>>>>>> main
       {/* Animated Background Effects */}
       <div className="absolute inset-0">
         <div className="absolute top-10 left-10 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl animate-pulse"></div>
@@ -253,16 +219,11 @@ const UltimateBusinessIntelligence2025Banner = () => {
         <div className="absolute bottom-20 left-1/3 w-80 h-80 bg-cyan-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
       </div>
 
-<<<<<<< HEAD
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-=======
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
->>>>>>> main
         {/* Header */}
         <div className="text-center mb-16">
           <div className="flex items-center justify-center gap-2 mb-6">
             <span className="text-2xl">🚀</span>
-<<<<<<< HEAD
             <span className="text-yellow-400 font-bold text-lg">
               ULTIMATE BUSINESS INTELLIGENCE REVOLUTION 2025
             </span>
@@ -366,110 +327,18 @@ const UltimateBusinessIntelligence2025Banner = () => {
 
           {/* Carousel Controls */}
           <div className="flex justify-center gap-2 mt-6">
-=======
-            <span className="text-yellow-400 font-bold text-xl">
-              ULTIMATE BREAKTHROUGH: AI 2025 BUSINESS INTELLIGENCE REVOLUTION
-            </span>
-            <span className="text-2xl">⚡</span>
-          </div>
-
-          <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-6">
-            <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-              The Ultimate Business Intelligence Revolution
-            </span>
-            <br />
-            <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-              AI 2025 Edition
-            </span>
-          </h2>
-          
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Discover how Fortune 500 enterprises are achieving 30,000% ROI with revolutionary AI-powered business intelligence that transforms decision-making and drives unprecedented growth.
-          </p>
-
-          <div className="flex items-center justify-center gap-8 text-gray-300">
-            <div className="flex items-center gap-2">
-              <span className="text-2xl">📊</span>
-              <span className="font-semibold">30,000% ROI</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <span className="text-2xl">💰</span>
-              <span className="font-semibold">$750B+ Savings</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <span className="text-2xl">🎯</span>
-              <span className="font-semibold">99.99% Accuracy</span>
-            </div>
-          </div>
-        </div>
-
-        {/* Featured Content Carousel */}
-        <div className="relative bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 mb-16">
-          <div className="text-center mb-8">
-            <div className="flex items-center justify-center gap-2 mb-4">
-              <span className="px-3 py-1 bg-red-500 text-white text-sm font-bold rounded-full">🔥 ULTIMATE</span>
-              <span className="px-3 py-1 bg-green-500 text-white text-sm font-bold rounded-full">NEW TODAY</span>
-            </div>
-            
-            <h3 className="text-3xl font-bold text-white mb-4">
-              {currentContent.title}
-            </h3>
-            
-            <p className="text-gray-300 text-lg mb-6 max-w-3xl mx-auto">
-              {currentContent.description}
-            </p>
-
-            {/* Metrics */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-              {Object.entries(currentContent.metrics).map(([key, value]) => (
-                <div key={key} className="text-center">
-                  <div className="text-2xl font-bold text-cyan-400">{value}</div>
-                  <div className="text-sm text-gray-300 capitalize">{key.replace(/([A-Z])/g, ' $1').trim()}</div>
-                </div>
-              ))}
-            </div>
-
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link
-                href={currentContent.url}
-                className="flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl"
-              >
-                <span>Read {currentContent.type}</span>
-                <span>→</span>
-              </Link>
-              <div className="text-gray-400 text-sm">
-                ⏱️ {currentContent.readingTime}
-              </div>
-            </div>
-          </div>
-
-          {/* Slide Indicators */}
-          <div className="flex justify-center gap-2">
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e4e
-=======
->>>>>>> main
->>>>>>> main
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
             {content.map((_, index) => (
               <button
                 key={index}
                 onClick={() => setCurrentSlide(index)}
                 className={`w-3 h-3 rounded-full transition-all duration-300 ${
-<<<<<<< HEAD
                   index === currentSlide ? 'bg-yellow-400' : 'bg-white/30'
-=======
-                  index === currentSlide ? 'bg-cyan-400' : 'bg-white/30'
->>>>>>> main
                 }`}
               />
             ))}
           </div>
         </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
         {/* Call-to-Action Section */}
         <div className="text-center bg-white/5 backdrop-blur-lg rounded-2xl p-12 border border-white/20">
           <h3 className="text-3xl font-bold text-white mb-6">
@@ -493,9 +362,6 @@ const UltimateBusinessIntelligence2025Banner = () => {
               <span className="group-hover:translate-x-1 transition-transform">→</span>
             </Link>
           </div>
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
         {/* Progress Indicators */}
         <div className="flex justify-center space-x-2 mt-8">
           {content.map((_, index) => (
@@ -508,7 +374,6 @@ const UltimateBusinessIntelligence2025Banner = () => {
               aria-label={`Go to slide ${index + 1}`}
             />
           ))}
->>>>>>> main
         </div>
         {/* Call-to-Action Section */}
         <div className='text-center bg-white/5 backdrop-blur-lg rounded-3xl p-12 border border-white/20 mb-16'>

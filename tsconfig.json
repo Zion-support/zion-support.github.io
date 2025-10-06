@@ -14,25 +14,8 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-<<<<<<< HEAD
-    "strict": true,
-=======
-<<<<<<< HEAD
-    "strict": false,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-=======
     "jsxImportSource": "react",
->>>>>>> main
     "strict": true,
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
     "strictNullChecks": true,
     "noUnusedLocals": false,
     "noUnusedParameters": false,
@@ -60,15 +43,6 @@
     },
     "allowJs": true,
     "forceConsistentCasingInFileNames": true,
-<<<<<<< HEAD
-    "noImplicitAny": false,
-    "noImplicitReturns": false,
-    "noImplicitThis": false,
-    "exactOptionalPropertyTypes": false,
-    "noImplicitOverride": false,
-    "noPropertyAccessFromIndexSignature": false,
-    "noUncheckedIndexedAccess": false,
-=======
     "noImplicitAny": true,
     "noImplicitReturns": true,
     "noImplicitThis": true,
@@ -76,26 +50,15 @@
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
     "noUncheckedIndexedAccess": true,
->>>>>>> main
     "allowUnusedLabels": false,
     "allowUnreachableCode": false,
     "verbatimModuleSyntax": false
   },
   "include": [
     "app/**/*",
-    "src/**/*"
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-    "src/**/*"
-=======
     "src/**/*",
     "App.tsx",
     "components/**/*"
->>>>>>> main
->>>>>>> main
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
   ],
   "exclude": [
     "node_modules",
@@ -138,15 +101,12 @@
     "services/**",
     "middleware/**",
     "app/blog/**",
-<<<<<<< HEAD
-    "src/components/disabled-corrupted/**",
-=======
     "app/page-optimized.tsx",
     "app/services/**/*",
     "app/case-studies/**/*",
     "app/guides/**/*",
     "app/components/**/*",
->>>>>>> main
+    "src/components/disabled-corrupted/**",
     "EnhancedFooter.tsx",
     "EnhancedHeader.tsx",
     "EnhancedNavigation.tsx",
@@ -155,52 +115,19 @@
     "api-documentation.tsx",
     "app/components/NewContentPromotionalBanner2026.tsx",
     "app/components/NewestContent2025Banner.tsx",
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     "api/**",
     "lib/**",
-    "utils/seoUtils.ts"
-=======
-    "utils/**/*",
+    "utils/**",
+    "src/utils/**",
     "blog/**",
     "backup-problematic-files/**",
     "automation/**",
     "**/*.disabled/**",
     "**/*.backup/**"
-=======
-    "utils/accessibilityUtils.ts",
-    "utils/bannerLazyLoader.ts",
-    "utils/bannerRegistry.ts",
-    "utils/bannerRotationSystem.ts",
-    "utils/bannerPrioritization.ts",
-    "utils/comprehensiveOptimizer.ts",
-    "utils/performanceUtils.ts",
-    "utils/seoUtils.ts"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d
-=======
-    "utils/bannerLazyLoader.ts",
-    "utils/bannerPrioritization.ts",
-    "utils/bannerRegistry.ts",
-    "utils/bannerRotationSystem.ts",
-    "utils/comprehensiveOptimizer.ts",
-    "utils/performanceUtils.ts",
-    "utils/seoUtils.ts"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-efe9
-=======
-    "utils/**",
-    "src/utils/**"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
-=======
-    "utils/**/*"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6abd
   ],
   "references": [
     {
       "path": "./tsconfig.node.json"
     }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-e18e
   ]
 }

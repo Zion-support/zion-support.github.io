@@ -81,7 +81,7 @@ export default function Page() {
 					</p></p>
 
 					<div className="text-left">	</div><pre className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
-{`// AI Innovation Lab Architecture
+{`//AI Innovation Lab Architecture
 const InnovationLabFramework = 
   ideation: 
     aiBrainstorming: "GPT-4 + Custom Innovation Models"

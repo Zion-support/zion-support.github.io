@@ -36,7 +36,7 @@ class EnhancedErrorHandler {
   private setupGlobalErrorHandling(): void {
     if (typeof window === 'undefined') return;
 
-    // Handle unhandled errors
+    //Handle unhandled errors
     window.addEventListener('error', (event) => {
       this.handleError(event.error, {
         component: 'global',
@@ -49,7 +49,7 @@ class EnhancedErrorHandler {
       });
     });
 
-    // Handle unhandled promise rejections
+    //Handle unhandled promise rejections
     window.addEventListener('unhandledrejection', (event) => {
       this.handleError(new Error(event.reason), {
         component: 'global',
@@ -80,34 +80,34 @@ class EnhancedErrorHandler {
     const existingError = this.errors.get(errorId);
     
     if (existingError) {
-      // Update existing error
+      //Update existing error
       existingError.occurrences += 1;
       existingError.lastSeen = now;
       existingError.context = fullContext;
     } else {
-      // Create new error report
+      //Create new error report
       const errorReport: ErrorReport = {
         id: errorId,
         message: error.message,
         context: fullContext,
-        resolved: false,
+  resolved: false,
         occurrences: 1,
-        firstSeen: now,
+  firstSeen: now,
         lastSeen: now,
       };
 
       this.errors.set(errorId, errorReport);
     }
 
-    // Log to console in development
+    //Log to console in development
     if (process.env['NODE_ENV'] === 'development') {
-      // Error handled and logged
+      //Error handled and logged
     }
 
-    // Report to server
+    //Report to server
     this.reportError(errorId);
 
-    // Clean up old errors if we exceed the limit
+    //Clean up old errors if we exceed the limit
     if (this.errors.size > this.maxErrors) {
       this.cleanupOldErrors();
     }
@@ -131,7 +131,7 @@ class EnhancedErrorHandler {
         body: JSON.stringify(error),
       });
     } catch (reportingError) {
-      // Failed to report error to external service
+      //Failed to report error to external service
     }
   }
 

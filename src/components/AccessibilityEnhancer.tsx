@@ -1,17 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { type ReactNode, useEffect } from 'react';
-=======
-import React, { useEffect } from 'react';
-import type { ReactNode } from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-02dd
-=======
 import React, { type ReactNode, useEffect } from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7834
-=======
 import React, { type ReactNode, useEffect } from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-8da8
 
 interface AccessibilityEnhancerProps {
   children: ReactNode;
@@ -19,7 +8,7 @@ interface AccessibilityEnhancerProps {
 
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
   useEffect(() => {
-    // Add skip link styles
+    //Add skip link styles
     const style = document.createElement('style');
     style.textContent = `
       .skip-link {

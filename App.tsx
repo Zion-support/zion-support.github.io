@@ -1,16 +1,6 @@
-<<<<<<< HEAD
-import React, { memo, useMemo } from 'react';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
 import React, { memo, useMemo, useCallback, Suspense } from 'react';
->>>>>>> main
->>>>>>> main
->>>>>>> main
 import { HelmetProvider, Helmet } from 'react-helmet-async';
-// Memoized components for better performance
+//Memoized components for better performance
 const UnifiedContentPromotion = memo(() => (
   <div className='bg-gradient-to-r from-blue-600 to-purple-700 text-white py-16'>
     <div className='container mx-auto px-4 text-center'>
@@ -51,17 +41,8 @@ const InteractiveContentShowcase2026 = memo(() => (
     </div>
   </div>
 ));
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-// Loading component (removed unused LoadingSpinner)
-=======
-<<<<<<< HEAD
-// Loading component - removed unused LoadingSpinner
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
-// Error Boundary Component
+//Loading component (removed unused LoadingSpinner)
+//Error Boundary Component
 interface ErrorBoundaryState {
   hasError: boolean;
   error: Error | null;
@@ -77,32 +58,9 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
   static getDerivedStateFromError(error: Error): ErrorBoundaryState {
     return { hasError: true, error };
   }
-<<<<<<< HEAD
   override componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
     console.error('App Error Boundary caught an error:', error, errorInfo);
   }
-=======
-
-  override componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-    console.error('App Error Boundary caught an error:', error, errorInfo);
-  }
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3fed
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f83
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-efe9
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6abd
   override render() {
     if (this.state.hasError) {
       return (
@@ -127,18 +85,12 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
     return this.props.children;
   }
 }
-// Loading component
+//Loading component
 const LoadingSpinner = memo(() => (
   <div className="animate-pulse bg-gray-200 h-32 rounded flex items-center justify-center">
     <div className="text-gray-500">Loading...</div>
   </div>
 ));
-<<<<<<< HEAD
-=======
->>>>>>> main
->>>>>>> main
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
 export default function App() {
   const structuredData = useMemo(
     () => ({
@@ -179,17 +131,17 @@ export default function App() {
     }),
     []
   );
-  // Performance optimization: Preload critical resources
+  //Performance optimization: Preload critical resources
   React.useEffect(() => {
     if (typeof document !== 'undefined') {
-      // Preload critical fonts
+      //Preload critical fonts
       const fontLink = document.createElement('link');
       fontLink.rel = 'preload';
       fontLink.href =
         'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap';
       fontLink.as = 'style';
       document.head.appendChild(fontLink);
-      // Preload critical images
+      //Preload critical images
       const preloadImages = [
         'https://ziontechgroup.com/og-image.jpg',
         'https://ziontechgroup.com/logo.png'
@@ -198,7 +150,7 @@ export default function App() {
         const img = new Image();
         img.src = src;
       });
-      // Add performance monitoring
+      //Add performance monitoring
       if ('performance' in window) {
         window.addEventListener('load', () => {
           const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
@@ -213,19 +165,19 @@ export default function App() {
       }
     }
   }, []);
-  // Memoized event handlers for better performance
+  //Memoized event handlers for better performance
   const handleNewsletterSubmit = useCallback((e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const target = e.target as HTMLFormElement;
     const email = (target.elements.namedItem('email') as HTMLInputElement)?.value;
     if (email) {
       console.log('Newsletter signup:', email);
-      // Add actual newsletter signup logic here
+      //Add actual newsletter signup logic here
       alert('Thank you for subscribing!');
     }
   }, []);
   const handlePhoneClick = useCallback(() => {
-    // Track phone clicks for analytics
+    //Track phone clicks for analytics
     if (typeof window !== 'undefined' && 'gtag' in window) {
       (window as any).gtag('event', 'phone_click', {
         event_category: 'engagement',
