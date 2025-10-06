@@ -21,20 +21,26 @@ global.IntersectionObserver = class IntersectionObserver {
   rootMargin: string = '0px';
   thresholds: ReadonlyArray<number> = [0];
   
-  constructor(callback: IntersectionObserverCallback, options?: IntersectionObserverInit) {}
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  constructor(_callback: IntersectionObserverCallback, _options?: IntersectionObserverInit) {}
   disconnect() {}
-  observe(target: Element) {}
-  unobserve(target: Element) {}
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  observe(_target: Element) {}
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  unobserve(_target: Element) {}
   takeRecords(): IntersectionObserverEntry[] { return []; }
-} as any;
+} as unknown as typeof IntersectionObserver;
 
 // Mock ResizeObserver
 global.ResizeObserver = class ResizeObserver {
-  constructor(callback: ResizeObserverCallback) {}
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  constructor(_callback: ResizeObserverCallback) {}
   disconnect() {}
-  observe(target: Element, options?: ResizeObserverOptions) {}
-  unobserve(target: Element) {}
-} as any;
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  observe(_target: Element, _options?: ResizeObserverOptions) {}
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  unobserve(_target: Element) {}
+} as unknown as typeof ResizeObserver;
 
 // Mock scrollTo
 Object.defineProperty(window, 'scrollTo', {
@@ -47,7 +53,7 @@ const originalError = console.error;
 const originalWarn = console.warn;
 
 beforeAll(() => {
-  console.error = (...args: any[]) => {
+  console.error = (...args: unknown[]) => {
     if (
       typeof args[0] === 'string' &&
       args[0].includes('Warning: ReactDOM.render is no longer supported')
@@ -57,7 +63,7 @@ beforeAll(() => {
     originalError.call(console, ...args);
   };
 
-  console.warn = (...args: any[]) => {
+  console.warn = (...args: unknown[]) => {
     if (
       typeof args[0] === 'string' &&
       (args[0].includes('componentWillReceiveProps') ||
