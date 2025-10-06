@@ -1,8 +1,7 @@
 'use client';
 
-import React from 'react';
 import Link from 'next/link';
-import { ArrowLeft, Home, Search, BookOpen, Users, Phone } from 'lucide-react';
+import { ArrowLeft, Home, Search, Phone } from 'lucide-react';
 
 export default function NotFound() {
   const popularPages = [
