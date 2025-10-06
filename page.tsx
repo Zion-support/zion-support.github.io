@@ -1,8 +1,8 @@
 import React from 'react';
-import OptimizedApp from './components/OptimizedApp';
+import App from './app/App';
 
 const HomePage: React.FC = () => {
-  return <OptimizedApp />;
+  return <App />;
 };
 
 export default HomePage;
