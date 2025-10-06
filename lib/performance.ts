@@ -17,6 +17,7 @@ declare global {
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import { onCLS, onFCP, onLCP, onTTFB, type Metric } from 'web-vitals';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-3d1d
@@ -33,6 +34,8 @@ import { onCLS, onFCP, onLCP, onTTFB, type Metric } from 'web-vitals';
 =======
 import { onCLS, onFCP, onLCP, onTTFB, type Metric } from 'web-vitals';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-895b
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2068
 
 // Types
 interface PerformanceMetric {
@@ -144,10 +147,14 @@ function sendToAnalytics(metric: Metric): void {
       ),
       event_label: metric.id,
 <<<<<<< HEAD
+<<<<<<< HEAD
       non_interaction: true
 =======
       non_interaction: true,
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6ac6
+=======
+      non_interaction: true
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2068
     });
   }
   // Send to custom endpoint
@@ -160,6 +167,9 @@ function sendToAnalytics(metric: Metric): void {
         timestamp: new Date().toISOString(),
         url: window.location.href,
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2068
         userAgent: navigator.userAgent
 =======
         userAgent: navigator.userAgent,
@@ -187,6 +197,7 @@ export function initPerformanceMonitoring(): void {
 =======
 }
 
+<<<<<<< HEAD
 /**
  * Generate performance report
  */
@@ -202,6 +213,8 @@ export function generatePerformanceReport(): PerformanceReport {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-895b
 }
 
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2068
 /**
  * Measure custom performance timing
  */
@@ -214,10 +227,14 @@ export function measurePerformance(name: string, startTime: number): number {
 <<<<<<< HEAD
       value: Math.round(duration),
 <<<<<<< HEAD
+<<<<<<< HEAD
       event_category: 'Performance'
 =======
       event_category: 'Performance',
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6ac6
+=======
+      event_category: 'Performance'
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2068
     });
   }
   if (process.env.NODE_ENV === 'development') {
@@ -241,11 +258,14 @@ export function markPerformance(name: string): void {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-be22
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7365
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6ac6
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2068
   try {
     performance.mark(name);
   } catch (error) {
@@ -267,11 +287,14 @@ export function measureBetween(
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-be22
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7365
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6ac6
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2068
   try {
     performance.measure(name, startMark, endMark);
     const measure = performance.getEntriesByName(name)[0] as PerformanceEntry;
@@ -290,6 +313,7 @@ export function getNavigationTiming(): Record<string, number> | null {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 const timing = performance.timing;
   const navigationStart = timing.navigationStart;
 =======
@@ -297,10 +321,13 @@ const timing = performance.timing;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7365
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6ac6
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2068
 
   const timing = performance.timing;
   const navigationStart = timing.navigationStart;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-be22
@@ -308,6 +335,8 @@ const timing = performance.timing;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7365
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6ac6
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2068
   return {
     // DNS lookup
     dnsLookup: timing.domainLookupEnd - timing.domainLookupStart,
@@ -323,10 +352,14 @@ const timing = performance.timing;
     ttfb: timing.responseStart - navigationStart,
     // DOM content loaded
 <<<<<<< HEAD
+<<<<<<< HEAD
     domContentLoaded: timing.domContentLoadedEventEnd - navigationStart
 =======
     domContentLoaded: timing.domContentLoadedEventEnd - navigationStart,
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6ac6
+=======
+    domContentLoaded: timing.domContentLoadedEventEnd - navigationStart
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2068
   };
 }
 
@@ -338,11 +371,14 @@ export function getResourceTiming(): PerformanceResourceTiming[] {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-be22
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7365
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6ac6
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2068
   try {
     return performance.getEntriesByType('resource') as PerformanceResourceTiming[];
   } catch (error) {
@@ -373,12 +409,15 @@ export function getMemoryUsage(): Record<string, number> | null {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   const memory = (performance as PerformanceWithMemory).memory!;
 =======
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7365
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6ac6
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2068
   const memory = (performance as any).memory;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-be22
   return {
@@ -386,10 +425,14 @@ export function getMemoryUsage(): Record<string, number> | null {
     totalJSHeapSize: memory.totalJSHeapSize,
     jsHeapSizeLimit: memory.jsHeapSizeLimit,
 <<<<<<< HEAD
+<<<<<<< HEAD
     usedPercentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100
 =======
     usedPercentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100,
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6ac6
+=======
+    usedPercentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2068
   };
 }
 /**
@@ -399,11 +442,14 @@ export function generatePerformanceReport(): PerformanceReport | null {
   if (typeof window === 'undefined') return null;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   const navigationTiming = getNavigationTiming();
   const metrics: PerformanceMetric[] = [];
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2068
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-be22
 =======
@@ -414,9 +460,12 @@ export function generatePerformanceReport(): PerformanceReport | null {
   const metrics: PerformanceMetric[] = [];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7365
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6ac6
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2068
   // Add navigation timing metrics
   if (navigationTiming) {
     Object.entries(navigationTiming).forEach(([name, value]) => {
@@ -426,6 +475,9 @@ export function generatePerformanceReport(): PerformanceReport | null {
         rating: value < 1000 ? 'good' : value < 3000 ? 'needs-improvement' : 'poor',
         delta: 0,
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2068
         id: `nav-${name}`
       });
     });
@@ -433,6 +485,7 @@ export function generatePerformanceReport(): PerformanceReport | null {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-be22
 =======
@@ -444,10 +497,13 @@ export function generatePerformanceReport(): PerformanceReport | null {
   }
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6ac6
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2068
   return {
     metrics,
     timestamp: new Date().toISOString(),
     url: window.location.href,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -474,6 +530,9 @@ export function generatePerformanceReport(): PerformanceReport | null {
 =======
     userAgent: navigator.userAgent,
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6ac6
+=======
+    userAgent: navigator.userAgent
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2068
   };
 }
 /**
@@ -495,6 +554,7 @@ export function getPerformanceScore(metrics: PerformanceMetric[]): number {
 /**
  * Monitor long tasks
  */
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 export function getPerformanceScore(metrics: PerformanceMetric[]): number {
@@ -532,10 +592,13 @@ export function getPerformanceScore(): number {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6ac6
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-895b
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2068
 export function monitorLongTasks(
   callback: (entries: PerformanceEntry[]) => void
 ): PerformanceObserver | null {
   if (typeof PerformanceObserver === 'undefined') return null;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -547,6 +610,9 @@ export function monitorLongTasks(
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6ac6
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2068
   try {
     const observer = new PerformanceObserver(list => {
       const entries = list.getEntries();
@@ -569,6 +635,7 @@ export function monitorLayoutShifts(
   if (typeof PerformanceObserver === 'undefined') return null;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
@@ -578,6 +645,9 @@ export function monitorLayoutShifts(
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6ac6
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2068
   try {
     const observer = new PerformanceObserver(list => {
       const entries = list.getEntries();
@@ -592,6 +662,7 @@ export function monitorLayoutShifts(
 }
 
 /**
+<<<<<<< HEAD
  * Get connection information
  */
 <<<<<<< HEAD
@@ -632,6 +703,22 @@ export function getConnectionType(): string | null {
   return (
     slowTypes.includes(connection.effectiveType) || connection.saveData === true
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6ac6
+=======
+ * Check if connection is slow
+ */
+export function isSlowConnection(): boolean {
+  if (
+    typeof navigator === 'undefined' ||
+    !(navigator as any).connection
+  ) {
+    return false;
+  }
+
+  const connection = (navigator as any).connection;
+  const slowTypes = ['slow-2g', '2g'];
+  return (
+    slowTypes.includes(connection.effectiveType) || connection.saveData === true
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2068
   );
 }
 
@@ -642,14 +729,19 @@ export function getConnectionType(): string {
   if (
     typeof navigator === 'undefined' ||
 <<<<<<< HEAD
+<<<<<<< HEAD
     !(navigator as NavigatorWithConnection).connection
 =======
     !(navigator as any).connection
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6ac6
+=======
+    !(navigator as any).connection
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2068
   ) {
     return 'unknown';
   }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -682,11 +774,16 @@ export function getPerformanceScore(metrics: PerformanceMetric[]): number {
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7365
 =======
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2068
   const connection = (navigator as any).connection;
   return connection.effectiveType || connection.type || 'unknown';
 }
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6ac6
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2068
 export default {
   init: initPerformanceMonitoring,
   measure: measurePerformance,
@@ -698,13 +795,17 @@ export default {
   getMemoryUsage,
   generateReport: generatePerformanceReport,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   getPerformanceScore,
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6ac6
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2068
   monitorLongTasks,
   monitorLayoutShifts,
   isSlowConnection,
   getConnectionType,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -742,3 +843,7 @@ export {
   sendToAnalytics,
 };
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-895b
+=======
+  getPerformanceScore
+};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2068
