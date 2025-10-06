@@ -12,7 +12,7 @@ import PerformanceDashboard from './components/PerformanceDashboard';
 import HomePage from './page';
 
 // Utils
-import { performanceOptimizer } from '../src/utils/performanceOptimizer';
+import performanceOptimizer from '../src/utils/performanceOptimizer';
 
 // Styles
 import '../index.css';
