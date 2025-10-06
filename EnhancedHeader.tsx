@@ -5,7 +5,12 @@ import { Link } from 'react-router-dom';
 const EnhancedHeader: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const navigationItems = [
->>>>>>> origin/merge-fixes-20251005-193002
+    { name: 'Home', href: '/' },
+    { name: 'Services', href: '/services' },
+    { name: 'About', href: '/about' },
+    { name: 'Contact', href: '/contact' },
+  ];
+
   return (
     <header className='bg-white shadow-lg'>
       <div className='container mx-auto px-4'>
@@ -20,7 +25,11 @@ const EnhancedHeader: React.FC = () => {
                 key={item.name}
                 to={item.href}
                 className='text-gray-700 hover:text-blue-600 transition-colors'
->>>>>>> origin/merge-fixes-20251005-193002
+              >
+                {item.name}
+              </Link>
+            ))}
+          </nav>
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
@@ -31,8 +40,20 @@ const EnhancedHeader: React.FC = () => {
         {isOpen && (
           <div className='md:hidden py-4 border-t'>
             {navigationItems.map(item => (
-              <div key={item.name}>
-        {isOpen && (
-          <div className='md:hidden py-4 border-t'>
-            {navigationItems.map(item => (
-              <div key={item.name}>
+              <Link
+                key={item.name}
+                to={item.href}
+                className='block py-2 text-gray-700 hover:text-blue-600 transition-colors'
+                onClick={() => setIsOpen(false)}
+              >
+                {item.name}
+              </Link>
+            ))}
+          </div>
+        )}
+      </div>
+    </header>
+  );
+};
+
+export default EnhancedHeader;
