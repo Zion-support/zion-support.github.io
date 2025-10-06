@@ -54,7 +54,7 @@ export const lazyLoadImages = (): void => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         const img = entry.target as HTMLImageElement;
-        const src = img.dataset.src;
+        const src = img.dataset['src'];
         if (src) {
           img.src = src;
           img.removeAttribute('data-src');
@@ -381,6 +381,10 @@ class PerformanceOptimizer {
     }
   }
 
+  public measurePageLoad(): WebVitalsMetrics | null {
+    return measurePageLoad();
+  }
+
   // Get performance metrics
   getMetrics(): Record<string, number> {
     return Object.fromEntries(this.metrics);
@@ -408,22 +412,6 @@ class PerformanceOptimizer {
     });
   }
 
-  public reportWebVitals(metrics: WebVitalsMetrics): void {
-    reportWebVitals(metrics);
-  }
-
-  public measurePageLoad(): WebVitalsMetrics | null {
-    return measurePageLoad();
-  }
-
-  public prefetchResources(resources: string[]): void {
-    prefetchResources(resources);
-  }
-
-  // Get performance metrics
-  getMetrics(): Record<string, number> {
-    return Object.fromEntries(this.metrics);
-  }
 
   // Initialize all optimizations
   initialize(): void {
