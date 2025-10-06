@@ -5,7 +5,11 @@ import { HelmetProvider } from 'react-helmet-async';
 // Components
 import ErrorBoundary from '../src/components/ErrorBoundary';
 import SEOOptimizer from '../src/components/SEOOptimizer';
+<<<<<<< HEAD
 import LoadingSpinner from '../src/components/LoadingSpinner';
+=======
+import { LoadingSpinner } from '../components/LoadingComponents';
+>>>>>>> 7cd6c6ab21731dbbaca45ccdac24c52d42664833
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import PerformanceDashboard from './components/PerformanceDashboard';
 
@@ -14,7 +18,7 @@ const HomePage = lazy(() => import('./page'));
 
 // Loading component is imported from components/LoadingComponents
 // Utils
-import { performanceOptimizer } from '../src/utils/performanceOptimizer';
+import { performanceOptimizer, addCriticalResourceHints } from '../src/utils/performanceOptimizer';
 
 // Styles
 import '../index.css';
@@ -26,11 +30,11 @@ const App: React.FC = () => {
 
     // Initialize performance monitoring
     performanceOptimizer.lazyLoadImages();
-    performanceOptimizer.addCriticalResourceHints();
+    addCriticalResourceHints();
     
     // Initialize Web Vitals monitoring
     if (typeof window !== 'undefined' && 'performance' in window) {
-      performanceOptimizer.reportWebVitals(performanceOptimizer.measurePageLoad() || {});
+      performanceOptimizer.initialize();
     }
     
     console.log('Performance monitoring initialized');
