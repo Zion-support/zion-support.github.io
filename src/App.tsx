@@ -81,7 +81,7 @@ const Terms = () => (
   </div>
 );
 
-function App() {
+function App(): React.JSX.Element {
   useEffect(() => {
     // Initialize basic optimizations
     const initializeOptimizations = () => {
