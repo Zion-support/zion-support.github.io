@@ -26,6 +26,7 @@ export interface WebVitalsMetrics {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-8da8
 =======
@@ -38,6 +39,8 @@ export interface WebVitalsMetrics {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f83
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-54ac
 export interface PerformanceBudget {
 =======
 interface PerformanceBudget {
@@ -542,6 +545,7 @@ export const checkPerformanceBudget = (budget: PerformanceBudget): {
       totalSize += 100; // Simplified size estimation
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   } catch (error) {
     console.warn('Long task monitoring not supported:', error);
@@ -703,6 +707,9 @@ class PerformanceOptimizer {
 =======
     }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-e6f9
+=======
+    }
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-54ac
   });
   
   if (totalSize > budget.maxBundleSize) {
@@ -710,8 +717,11 @@ class PerformanceOptimizer {
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-e6f9
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-54ac
   
   // Check load time
   const timing = window.performance.timing;
@@ -752,6 +762,7 @@ export const addCriticalResourceHints = (): void => {
     if (hint.crossOrigin) {
       link.crossOrigin = hint.crossOrigin;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6231
     }
@@ -781,6 +792,11 @@ export const addCriticalResourceHints = (): void => {
     document.head.appendChild(link);
   });
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-e6f9
+=======
+    }
+    document.head.appendChild(link);
+  });
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-54ac
 };
 
 /**
@@ -790,6 +806,7 @@ export const addCriticalResourceHints = (): void => {
 class PerformanceOptimizer {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 export class PerformanceOptimizer {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-3b0a
@@ -797,6 +814,8 @@ export class PerformanceOptimizer {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6231
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-e6f9
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-54ac
   private static instance: PerformanceOptimizer;
   private metrics: Map<string, number> = new Map();
 =======
@@ -812,6 +831,7 @@ export const collectPerformanceMetrics = (): WebVitalsMetrics => {
     return {};
   }
 
+<<<<<<< HEAD
   const metrics: WebVitalsMetrics = {};
 
   // Get navigation timing
@@ -941,6 +961,8 @@ export class PerformanceMonitor {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-54ac
   public measurePerformance(name: string, fn: () => void): void {
     const start = performance.now();
     fn();
@@ -1024,7 +1046,25 @@ export class PerformanceMonitor {
   }
 
   public prefetchResources(urls: string[]): void {
+<<<<<<< HEAD
     prefetchResources(urls);
+=======
+    urls.forEach(url => {
+      const link = document.createElement('link');
+      link.rel = 'prefetch';
+      link.href = url;
+      document.head.appendChild(link);
+    });
+  }
+
+  public preconnectDomains(domains: string[]): void {
+    domains.forEach(domain => {
+      const link = document.createElement('link');
+      link.rel = 'preconnect';
+      link.href = domain;
+      document.head.appendChild(link);
+    });
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-54ac
   }
 
   public reportWebVitals(metrics: WebVitalsMetrics): void {
@@ -1044,6 +1084,19 @@ export class PerformanceMonitor {
     return Object.fromEntries(this.metrics);
   }
 
+<<<<<<< HEAD
+=======
+  // Get performance summary
+  getPerformanceSummary() {
+    const timing = window.performance.timing;
+    return {
+      loadTime: timing.loadEventEnd - timing.navigationStart,
+      interactiveTime: timing.domInteractive - timing.navigationStart,
+      domContentLoaded: timing.domContentLoadedEventEnd - timing.navigationStart
+    };
+  }
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-54ac
   // Clear metrics
   clearMetrics() {
     this.metrics.clear();
@@ -1278,10 +1331,13 @@ class PerformanceOptimizer {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6231
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-e6f9
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-54ac
 export const performanceOptimizer = PerformanceOptimizer.getInstance();
 
 export default {
@@ -1304,6 +1360,7 @@ export default {
   checkPerformanceBudget,
 <<<<<<< HEAD
   addCriticalResourceHints
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 };
@@ -1581,3 +1638,6 @@ export const initializePerformanceOptimization = (): void => {
   }, 5000);
 };
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d
+=======
+};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-54ac
