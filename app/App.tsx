@@ -7,7 +7,6 @@ import ErrorBoundary from './components/ErrorBoundary';
 import SEOOptimizer from './components/SEOOptimizer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import PerformanceDashboard from './components/PerformanceDashboard';
-import PerformanceMonitor from './components/PerformanceMonitor';
 
 // Loading component
 const LoadingSpinner = () => (
@@ -21,9 +20,6 @@ const HomePage = lazy(() => import('./page'));
 
 // Utils
 import { performanceOptimizer } from '../src/utils/performanceOptimizer';
-import { performanceEnhancer } from '../src/utils/performanceEnhancer';
-import { enhancedErrorHandler } from '../src/utils/enhancedErrorHandler';
-import { accessibilityEnhancer } from '../src/utils/accessibilityEnhancer';
 
 // Styles
 import '../index.css';
@@ -37,18 +33,6 @@ const App: React.FC = () => {
     performanceOptimizer.lazyLoadImages();
     performanceOptimizer.preloadCriticalResources();
     
-    // Initialize enhanced performance monitoring
-    performanceEnhancer.initialize();
-    
-    // Initialize enhanced error handling
-    enhancedErrorHandler.handleError(new Error('App initialized'), {
-      component: 'App',
-      action: 'initialization'
-    });
-    
-    // Initialize accessibility enhancements
-    accessibilityEnhancer.initialize();
-    
     // Initialize Web Vitals monitoring
     if (typeof window !== 'undefined' && 'performance' in window) {
       const metrics = performanceOptimizer.measurePageLoad();
@@ -61,18 +45,12 @@ const App: React.FC = () => {
     console.log(
       '🚀 Zion Tech Group App initialized with comprehensive monitoring',
     );
-
-    // Cleanup on unmount
-    return () => {
-      performanceEnhancer.cleanup();
-      accessibilityEnhancer.cleanup();
-    };
   }, []);
 
   return (
     <HelmetProvider>
       <ErrorBoundary>
-        <div>
+        <PerformanceMonitor>
           <SEOOptimizer>
             <AccessibilityEnhancer>
               <Router>
@@ -108,7 +86,7 @@ const App: React.FC = () => {
               </Router>
             </AccessibilityEnhancer>
           </SEOOptimizer>
-        </div>
+        </PerformanceMonitor>
       </ErrorBoundary>
     </HelmetProvider>
   );

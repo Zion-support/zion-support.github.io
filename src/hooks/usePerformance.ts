@@ -102,8 +102,8 @@ export const usePageLoadPerformance = () => {
             domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
             loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
             firstByte: navigation.responseStart - navigation.requestStart,
-            domInteractive: navigation.domInteractive - navigation.fetchStart,
-            totalLoadTime: navigation.loadEventEnd - navigation.fetchStart,
+            domInteractive: navigation.domInteractive - (navigation as any).navigationStart,
+            totalLoadTime: navigation.loadEventEnd - (navigation as any).navigationStart,
           };
 
           // Track each metric
@@ -120,12 +120,13 @@ export const usePageLoadPerformance = () => {
     // Track immediately if page is already loaded
     if (document.readyState === 'complete') {
       trackPageLoad();
-      return undefined;
     } else {
       // Wait for load event
       window.addEventListener('load', trackPageLoad);
       return () => window.removeEventListener('load', trackPageLoad);
     }
+    
+    return undefined;
   }, []);
 };
 
@@ -158,18 +159,14 @@ export const useResourcePerformance = () => {
  */
 export const useLongTaskMonitoring = () => {
   useEffect(() => {
-    if (typeof window === 'undefined' || !window.PerformanceObserver) return;
-
-    const observer = new PerformanceObserver((list) => {
-      list.getEntries().forEach((entry) => {
+    performanceOptimizer.monitorLongTasks((entries: any[]) => {
+      entries.forEach((entry: any) => {
         analytics.track('long_task', 'performance', 'detected', undefined, entry.duration);
       });
     });
 
-    observer.observe({ entryTypes: ['longtask'] });
-
     return () => {
-      observer.disconnect();
+      // Cleanup if needed
     };
   }, []);
 };
