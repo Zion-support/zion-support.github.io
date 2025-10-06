@@ -81,7 +81,7 @@ const Terms = () => (
   </div>
 );
 
-function App() {
+function App(): React.JSX.Element {
   useEffect(() => {
     // Initialize basic optimizations
     const initializeOptimizations = () => {
@@ -135,7 +135,11 @@ class ErrorBoundary extends React.Component<
     this.state = { hasError: false };
   }
 
+<<<<<<< HEAD
   static getDerivedStateFromError() {
+=======
+  static getDerivedStateFromError(_error: Error) { // eslint-disable-line @typescript-eslint/no-unused-vars
+>>>>>>> main
     return { hasError: true };
   }
 

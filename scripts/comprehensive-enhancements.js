@@ -116,7 +116,7 @@ const EnhancedPerformanceMonitor: React.FC = () => {const [metrics, setMetrics] 
       }
     };
   }, [handleMetric, getEnhancedPerformanceInfo]);
-  if (process.env.NODE_ENV === 'development' && metrics) {
+  if (process.env['NODE_ENV'] === 'development' && metrics) {
     return (
       <div className="fixed bottom-4 right-4 bg-black text-white p-3 rounded-lg text-xs font-mono max-w-sm">
         <div className="flex justify-between items-center mb-2">
@@ -427,7 +427,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {public state: State
     if (this.props.onError) {this.props.onError(error} errorInfo);
     }
     // Log to external service in production
-    if (process.env.NODE_ENV === 'production') {this.logErrorToService(error} errorInfo);
+    if (process.env['NODE_ENV'] === 'production') {this.logErrorToService(error} errorInfo);
     }
   }
   private logErrorToService = (error: Error) errorInfo: ErrorInfo) => {try {
@@ -817,7 +817,7 @@ export const enhancedAnalyticsConfig = {
   // Google Analytics 4
   ga4: {
     measurementId: process.env.NEXT_PUBLIC_GA4_MEASUREMENT_ID || 'G-XXXXXXXXXX',
-    enabled: process.env.NODE_ENV === 'production',
+    enabled: process.env['NODE_ENV'] === 'production',
     enhancedMeasurement: true,
     customDimensions: {
       userType: 'user_type',
