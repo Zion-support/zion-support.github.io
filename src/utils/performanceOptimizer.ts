@@ -1,36 +1,8 @@
 /**
- * Performance optimization utilities
+ * Performance Optimizer Utility
+ * Comprehensive performance monitoring and optimization tools
  */
 
-<<<<<<< HEAD
-interface WebVitalsMetrics {
-  LCP?: number;
-  FID?: number;
-  CLS?: number;
-  FCP?: number;
-  TTFB?: number;
-  averageRenderTime?: number;
-  totalComponents?: number;
-  memoryUsage?: number;
-  slowComponents?: number;
-}
-
-interface PerformanceOptimizer {
-  measurePageLoad(): WebVitalsMetrics | null;
-  reportWebVitals(metrics: WebVitalsMetrics): void;
-  monitorLongTasks(callback: (entries: PerformanceEntry[]) => void): PerformanceObserver | null;
-  shouldLoadHeavyAssets(): boolean;
-  preloadRoute(route: string): void;
-  cacheStaticAssets(): void;
-  clearOldCaches(): void;
-  lazyLoadImages(): void;
-  getMetrics(): WebVitalsMetrics | null;
-  preloadCriticalResources(): void;
-}
-
-/**
- * Measure page load timing
-=======
 /**
  * Web Vitals metrics tracking
  */
@@ -147,29 +119,27 @@ export const prefetchResources = (urls: string[]): void => {
 
 /**
  * Measure page load performance
->>>>>>> cursor/fix-errors-and-merge-to-main-e090
  */
 export const measurePageLoad = (): WebVitalsMetrics | null => {
-  if (typeof window === 'undefined' || !window.performance) {
-    return null;
-  }
-
-  const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-  if (!navigation) return null;
+  if (typeof window === 'undefined' || !window.performance) return null;
+  
+  const perfData = window.performance.timing;
+  const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+  
+  if (!perfData || !navigation) return null;
 
   return {
+    FCP: navigation.responseStart - navigation.fetchStart,
     LCP: navigation.loadEventEnd - navigation.loadEventStart,
-    FCP: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
+    FID: 0, // First Input Delay - requires user interaction
+    CLS: 0, // Cumulative Layout Shift - requires layout shift observer
     TTFB: navigation.responseStart - navigation.requestStart,
+    INP: 0 // Interaction to Next Paint - requires user interaction
   };
 };
 
 /**
-<<<<<<< HEAD
- * Report web vitals
-=======
  * Report Web Vitals to analytics
->>>>>>> cursor/fix-errors-and-merge-to-main-e090
  */
 export const reportWebVitals = (metrics: WebVitalsMetrics): void => {
   if (typeof window === 'undefined') return;
@@ -215,14 +185,6 @@ export const shouldLoadHeavyAssets = (): boolean => {
 /**
  * Request Idle Callback wrapper with fallback
  */
-<<<<<<< HEAD
-export const requestIdleCallback = (callback: () => void, options?: { timeout?: number }): number => {
-  if (typeof window !== 'undefined' && 'requestIdleCallback' in window) {
-    return (window as any).requestIdleCallback(callback, options);
-  }
-  
-  return setTimeout(callback, options?.timeout || 0) as any;
-=======
 export const requestIdleCallback = (callback: IdleRequestCallback): number => {
   if (typeof window === 'undefined') return 0;
   
@@ -238,22 +200,16 @@ export const requestIdleCallback = (callback: IdleRequestCallback): number => {
       timeRemaining: () => Math.max(0, 50 - (Date.now() - start))
     });
   }, 1) as unknown as number;
->>>>>>> cursor/fix-errors-and-merge-to-main-e090
 };
 
 /**
  * Cancel Idle Callback wrapper with fallback
  */
 export const cancelIdleCallback = (id: number): void => {
-<<<<<<< HEAD
-  if (typeof window !== 'undefined' && 'cancelIdleCallback' in window) {
-    (window as any).cancelIdleCallback(id);
-=======
   if (typeof window === 'undefined') return;
   
   if ('cancelIdleCallback' in window) {
     window.cancelIdleCallback(id);
->>>>>>> cursor/fix-errors-and-merge-to-main-e090
   } else {
     (window as any).clearTimeout(id);
   }
@@ -279,11 +235,7 @@ export const monitorLongTasks = (callback: (entries: PerformanceEntry[]) => void
   if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return null;
   
   try {
-<<<<<<< HEAD
-    const observer = new PerformanceObserver((list) => {
-=======
     const observer = new PerformanceObserver(list => {
->>>>>>> cursor/fix-errors-and-merge-to-main-e090
       callback(list.getEntries());
     });
     observer.observe({ entryTypes: ['longtask'] });
@@ -297,105 +249,16 @@ export const monitorLongTasks = (callback: (entries: PerformanceEntry[]) => void
 /**
  * Cache static assets
  */
-<<<<<<< HEAD
-export const cacheStaticAssets = (): void => {
-  if (typeof window === 'undefined' || !('caches' in window)) return;
-=======
 export const cacheStaticAssets = async (urls: string[]): Promise<void> => {
   if (typeof caches === 'undefined') return;
->>>>>>> cursor/fix-errors-and-merge-to-main-e090
   
-  requestIdleCallback(() => {
-    caches.open('static-assets-v1').then((cache) => {
-      // Cache critical assets
-      const criticalAssets = [
-        '/',
-        '/favicon.ico',
-        '/manifest.json'
-      ];
-      
-      criticalAssets.forEach((asset) => {
-        cache.add(asset).catch(() => {
-          // Ignore cache errors
-        });
-      });
-    });
-  });
+  const cache = await caches.open('static-assets-v1');
+  await cache.addAll(urls);
 };
 
 /**
  * Clear old caches
  */
-<<<<<<< HEAD
-export const clearOldCaches = (): void => {
-  if (typeof window === 'undefined' || !('caches' in window)) return;
-  
-  caches.keys().then((cacheNames) => {
-    cacheNames.forEach((cacheName) => {
-      if (cacheName !== 'static-assets-v1') {
-        caches.delete(cacheName);
-      }
-    });
-  });
-};
-
-/**
- * Lazy load images
- */
-export const lazyLoadImages = (): void => {
-  if (typeof window === 'undefined' || !('IntersectionObserver' in window)) return;
-  
-  const imageObserver = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        const img = entry.target as HTMLImageElement;
-        if (img.dataset['src']) {
-          img.src = img.dataset['src'];
-          img.removeAttribute('data-src');
-          imageObserver.unobserve(img);
-        }
-      }
-    });
-  });
-  
-  document.querySelectorAll('img[data-src]').forEach((img) => {
-    imageObserver.observe(img);
-  });
-};
-
-/**
- * Get current metrics
- */
-export const getMetrics = (): WebVitalsMetrics | null => {
-  return measurePageLoad();
-};
-
-/**
- * Preload critical resources
- */
-export const preloadCriticalResources = (): void => {
-  if (typeof window === 'undefined') return;
-  
-  const criticalResources = [
-    '/fonts/inter.woff2',
-    '/css/critical.css'
-  ];
-  
-  criticalResources.forEach((resource) => {
-    const link = document.createElement('link');
-    link.rel = 'preload';
-    link.href = resource;
-    link.as = resource.endsWith('.css') ? 'style' : 'font';
-    if (resource.endsWith('.woff2')) {
-      link.crossOrigin = 'anonymous';
-    }
-    document.head.appendChild(link);
-  });
-};
-
-// Export the main performance optimizer object
-export const performanceOptimizer: PerformanceOptimizer = {
-=======
 export const clearOldCaches = async (currentVersion: string): Promise<void> => {
   if (typeof caches === 'undefined') return;
   
@@ -609,25 +472,18 @@ export default {
   lazyLoadImages,
   debounce,
   throttle,
->>>>>>> cursor/fix-errors-and-merge-to-main-e090
   measurePageLoad,
   reportWebVitals,
-  monitorLongTasks,
+  shouldUseWebP,
+  getConnectionQuality,
   shouldLoadHeavyAssets,
+  requestIdleCallback,
+  cancelIdleCallback,
   preloadRoute,
+  monitorLongTasks,
   cacheStaticAssets,
   clearOldCaches,
-<<<<<<< HEAD
-  lazyLoadImages,
-  getMetrics,
-  preloadCriticalResources,
-};
-
-// Default export
-export default performanceOptimizer;
-=======
   checkPerformanceBudget,
   addCriticalResourceHints,
   performanceOptimizer
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-e090
