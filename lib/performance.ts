@@ -11,6 +11,7 @@ declare global {
     gtag?: (...args: any[]) => void;
   }
 }
+
 // Types
 interface PerformanceMetric {
   name: string;
@@ -111,6 +112,7 @@ export function initPerformanceMonitoring(): void {
     console.error('Error initializing performance monitoring:', error);
   }
 }
+
 /**
  * Measure custom performance timing
  */
@@ -131,6 +133,7 @@ export function measurePerformance(name: string, startTime: number): number {
 
   return duration;
 }
+
 /**
  * Mark performance milestone
  */
@@ -143,6 +146,7 @@ export function markPerformance(name: string): void {
     console.error('Error marking performance:', error);
   }
 }
+
 /**
  * Measure between two performance marks
  */
@@ -162,6 +166,7 @@ export function measureBetween(
     return 0;
   }
 }
+
 /**
  * Get navigation timing metrics
  */
@@ -188,6 +193,7 @@ export function getNavigationTiming(): Record<string, number> | null {
     domContentLoaded: timing.domContentLoadedEventEnd - navigationStart
   };
 }
+
 /**
  * Get resource timing metrics
  */
@@ -201,6 +207,7 @@ export function getResourceTiming(): PerformanceResourceTiming[] {
     return [];
   }
 }
+
 /**
  * Analyze slow resources
  */
@@ -208,6 +215,7 @@ export function getSlowResources(threshold: number = 1000): PerformanceResourceT
   const resources = getResourceTiming();
   return resources.filter(resource => resource.duration > threshold);
 }
+
 /**
  * Get memory usage (if available)
  */
@@ -261,6 +269,22 @@ export function generatePerformanceReport(): PerformanceReport | null {
 /**
  * Get performance score based on metrics
  */
+export function getPerformanceScore(metrics: PerformanceMetric[]): number {
+  if (metrics.length === 0) return 0;
+  const scores = metrics.map(metric => {
+    switch (metric.rating) {
+      case 'good': return 100;
+      case 'needs-improvement': return 50;
+      case 'poor': return 0;
+      default: return 0;
+    }
+  });
+  return Math.round(scores.reduce((sum: number, score: number) => sum + score, 0) / scores.length);
+}
+
+/**
+ * Monitor long tasks
+ */
 export function monitorLongTasks(
   callback: (entries: PerformanceEntry[]) => void
 ): PerformanceObserver | null {
@@ -278,6 +302,7 @@ export function monitorLongTasks(
     return null;
   }
 }
+
 /**
  * Monitor layout shifts
  */
@@ -298,6 +323,7 @@ export function monitorLayoutShifts(
     return null;
   }
 }
+
 /**
  * Check if connection is slow
  */
@@ -315,6 +341,7 @@ export function isSlowConnection(): boolean {
     slowTypes.includes(connection.effectiveType) || connection.saveData === true
   );
 }
+
 /**
  * Get connection type
  */
@@ -329,6 +356,7 @@ export function getConnectionType(): string {
   const connection = (navigator as any).connection;
   return connection.effectiveType || connection.type || 'unknown';
 }
+
 export default {
   init: initPerformanceMonitoring,
   measure: measurePerformance,
@@ -342,5 +370,6 @@ export default {
   monitorLongTasks,
   monitorLayoutShifts,
   isSlowConnection,
-  getConnectionType
+  getConnectionType,
+  getPerformanceScore
 };
