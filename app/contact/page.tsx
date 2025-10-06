@@ -61,7 +61,7 @@ const ContactPage: React.FC = () => {
                 <h4 className="font-medium text-gray-900">Address</h4>
                 <p className="text-gray-600">
                   123 Tech Street<br />
-                  Innovation City, IC 12345
+                  San Francisco, CA 94105
                 </p>
               </div>
             </div>
