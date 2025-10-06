@@ -4,10 +4,6 @@ import { HelmetProvider } from 'react-helmet-async';
 import './assets/style.css';
 
 // Import page components
-import HomePage from './app/page';
-import AboutPage from './app/about/page';
-import ContactPage from './app/contact/page';
-import ServicesPage from './app/services/page';
 import TeamPage from './app/team/page';
 import PrivacyPage from './app/privacy/page';
 import TermsPage from './app/terms/page';
