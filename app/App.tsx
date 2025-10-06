@@ -3,12 +3,11 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 
 // Components
-import ErrorBoundary from '../src/components/ErrorBoundary';
-import SEOOptimizer from '../src/components/SEOOptimizer';
-import LoadingSpinner from '../src/components/LoadingSpinner';
+import ErrorBoundary from './components/ErrorBoundary';
+import SEOOptimizer from './components/SEOOptimizer';
+import LoadingSpinner from './components/LoadingSpinner';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import PerformanceDashboard from './components/PerformanceDashboard';
-import PerformanceMonitor from '../src/components/PerformanceMonitor';
 
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./page'));
@@ -45,9 +44,8 @@ const App: React.FC = () => {
   return (
     <HelmetProvider>
       <ErrorBoundary>
-        <PerformanceMonitor>
-          <SEOOptimizer>
-            <AccessibilityEnhancer>
+        <SEOOptimizer>
+          <AccessibilityEnhancer>
             <Router>
               <div className='App'>
                 {/* Skip to main content link for accessibility */}
@@ -79,9 +77,8 @@ const App: React.FC = () => {
                 <PerformanceDashboard />
               </div>
             </Router>
-            </AccessibilityEnhancer>
-          </SEOOptimizer>
-        </PerformanceMonitor>
+          </AccessibilityEnhancer>
+        </SEOOptimizer>
       </ErrorBoundary>
     </HelmetProvider>
   );
