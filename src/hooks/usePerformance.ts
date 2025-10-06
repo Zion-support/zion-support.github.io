@@ -158,16 +158,18 @@ export const useResourcePerformance = () => {
  */
 export const useLongTaskMonitoring = () => {
   useEffect(() => {
-    const observer = performanceOptimizer.monitorLongTasks((entries: PerformanceEntry[]) => {
-      entries.forEach((entry: PerformanceEntry) => {
+    if (typeof window === 'undefined' || !window.PerformanceObserver) return;
+
+    const observer = new PerformanceObserver((list) => {
+      list.getEntries().forEach((entry) => {
         analytics.track('long_task', 'performance', 'detected', undefined, entry.duration);
       });
     });
 
+    observer.observe({ entryTypes: ['longtask'] });
+
     return () => {
-      if (observer) {
-        observer.disconnect();
-      }
+      observer.disconnect();
     };
   }, []);
 };

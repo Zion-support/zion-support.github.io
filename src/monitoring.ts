@@ -11,7 +11,6 @@ if (typeof window !== 'undefined') {
   // Initialize performance optimizer
   performanceOptimizer.lazyLoadImages();
   
-<<<<<<< HEAD
   // Monitor long tasks using Performance Observer
   if ('PerformanceObserver' in window) {
     try {
@@ -26,8 +25,6 @@ if (typeof window !== 'undefined') {
     }
   }
   
-=======
->>>>>>> 54be25b8c3897305113149ee4caa133ccb481ce7
   // Track Web Vitals
   const metrics = performanceOptimizer.measurePageLoad();
   if (metrics) {
