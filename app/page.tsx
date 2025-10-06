@@ -1,52 +1,52 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
 const HomePage: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gray-50">
-      <main id="main-content" className="container mx-auto px-4 py-8">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            Welcome to Zion Tech Group
-          </h1>
-          <p className="text-xl text-gray-600 mb-8">
-            Advanced AI and IT Solutions
-          </p>
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-white rounded-lg shadow-lg p-8">
-              <h2 className="text-2xl font-semibold text-gray-800 mb-4">
-                Our Services
-              </h2>
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div className="p-4 border border-gray-200 rounded-lg">
-                  <h3 className="text-lg font-medium text-gray-700 mb-2">
-                    AI Solutions
-                  </h3>
-                  <p className="text-gray-600">
-                    Cutting-edge artificial intelligence solutions for your business needs.
-                  </p>
-                </div>
-                <div className="p-4 border border-gray-200 rounded-lg">
-                  <h3 className="text-lg font-medium text-gray-700 mb-2">
-                    IT Services
-                  </h3>
-                  <p className="text-gray-600">
-                    Comprehensive IT services and infrastructure management.
-                  </p>
-                </div>
-                <div className="p-4 border border-gray-200 rounded-lg">
-                  <h3 className="text-lg font-medium text-gray-700 mb-2">
-                    Development
-                  </h3>
-                  <p className="text-gray-600">
-                    Custom software development and digital transformation.
-                  </p>
-                </div>
+    <>
+      <Helmet>
+        <title>Zion Tech Group - Advanced AI and IT Solutions</title>
+        <meta name="description" content="Leading technology solutions provider helping businesses transform their digital presence with cutting-edge AI, quantum computing, blockchain infrastructure, and innovative development services." />
+        <meta name="keywords" content="AI solutions, IT services, quantum computing, blockchain, digital transformation" />
+      </Helmet>
+      
+      <main id="main-content" className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-5xl font-bold text-gray-900 mb-6">
+              Welcome to Zion Tech Group
+            </h1>
+            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+              Leading technology solutions provider helping businesses transform their digital presence 
+              with cutting-edge AI, quantum computing, blockchain infrastructure, and innovative development services.
+            </p>
+            
+            <div className="grid md:grid-cols-3 gap-8 mt-12">
+              <div className="bg-white p-6 rounded-lg shadow-lg">
+                <h2 className="text-2xl font-semibold text-gray-900 mb-4">AI Solutions</h2>
+                <p className="text-gray-600">
+                  Advanced artificial intelligence solutions to automate and optimize your business processes.
+                </p>
+              </div>
+              
+              <div className="bg-white p-6 rounded-lg shadow-lg">
+                <h2 className="text-2xl font-semibold text-gray-900 mb-4">Quantum Computing</h2>
+                <p className="text-gray-600">
+                  Cutting-edge quantum computing services for complex problem solving and optimization.
+                </p>
+              </div>
+              
+              <div className="bg-white p-6 rounded-lg shadow-lg">
+                <h2 className="text-2xl font-semibold text-gray-900 mb-4">Blockchain Infrastructure</h2>
+                <p className="text-gray-600">
+                  Secure and scalable blockchain solutions for modern business applications.
+                </p>
               </div>
             </div>
           </div>
         </div>
       </main>
-    </div>
+    </>
   );
 };
 
