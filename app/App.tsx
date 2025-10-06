@@ -7,6 +7,7 @@ import ErrorBoundary from './components/ErrorBoundary';
 import SEOOptimizer from './components/SEOOptimizer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import PerformanceDashboard from './components/PerformanceDashboard';
+import PerformanceMonitor from './components/PerformanceMonitor';
 
 // Loading component
 const LoadingSpinner = () => (

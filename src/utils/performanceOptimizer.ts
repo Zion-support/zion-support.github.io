@@ -186,11 +186,43 @@ class PerformanceOptimizer {
   }
 
   public measurePageLoad(): WebVitalsMetrics | null {
-    return measurePageLoad();
+    if (typeof window === 'undefined' || !window.performance) {
+      return null;
+    }
+    
+    const timing = window.performance.timing;
+    const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+    
+    const loadTime = timing.loadEventEnd - timing.navigationStart;
+    const interactiveTime = timing.domInteractive - timing.navigationStart;
+    
+    return { 
+      loadTime, 
+      interactiveTime,
+      FCP: navigation?.responseStart - navigation?.fetchStart,
+      TTFB: timing.responseStart - timing.navigationStart
+    };
   }
 
-  public monitorLongTasks(callback: (entries: PerformanceEntryList) => void): PerformanceObserver | null {
-    return monitorLongTasks(callback);
+  public monitorLongTasks(callback: (entries: PerformanceEntry[]) => void): PerformanceObserver | null {
+    if (typeof window === 'undefined' || !('PerformanceObserver' in window)) {
+      return null;
+    }
+
+    const observer = new PerformanceObserver((list) => {
+      const longTasks = list.getEntries().filter(entry => entry.duration > 50);
+      if (longTasks.length > 0) {
+        callback(longTasks);
+      }
+    });
+
+    try {
+      observer.observe({ entryTypes: ['longtask'] });
+      return observer;
+    } catch (error) {
+      console.warn('Long task monitoring not supported:', error);
+      return null;
+    }
   }
 
   // Get performance metrics
@@ -220,47 +252,6 @@ class PerformanceOptimizer {
     });
   }
 
-  // Monitor long tasks
-  public monitorLongTasks(callback: (entries: PerformanceEntry[]) => void): PerformanceObserver | null {
-    if (typeof window === 'undefined' || !('PerformanceObserver' in window)) {
-      return null;
-    }
-
-    const observer = new PerformanceObserver((list) => {
-      const longTasks = list.getEntries().filter(entry => entry.duration > 50);
-      if (longTasks.length > 0) {
-        callback(longTasks);
-      }
-    });
-
-    try {
-      observer.observe({ entryTypes: ['longtask'] });
-      return observer;
-    } catch (error) {
-      console.warn('Long task monitoring not supported:', error);
-      return null;
-    }
-  }
-
-  // Measure page load performance
-  measurePageLoad(): WebVitalsMetrics | null {
-    if (typeof window === 'undefined' || !window.performance) {
-      return null;
-    }
-    
-    const timing = window.performance.timing;
-    const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-    
-    const loadTime = timing.loadEventEnd - timing.navigationStart;
-    const interactiveTime = timing.domInteractive - timing.navigationStart;
-    
-    return { 
-      loadTime, 
-      interactiveTime,
-      FCP: navigation?.responseStart - navigation?.fetchStart,
-      TTFB: timing.responseStart - timing.navigationStart
-    };
-  }
 
   // Initialize all optimizations
   initialize(): void {

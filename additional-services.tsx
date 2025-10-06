@@ -1,18 +1,16 @@
 import {
   ArrowRight,
-  Brain,
   CheckCircle,
   Clock,
-  Cloud,
-  Code,
+  X,
+  X,
   DollarSign,
-  Globe,
-  MessageSquare,
-  Server,
-  Smartphone,
-  Star,
+  X,
+  X,
+  X,
+  X,
+  X,
 } from 'lucide-react';
-import React from 'react';
 
 import { Helmet } from 'react-helmet-async';
 
@@ -24,7 +22,7 @@ export default function AdditionalServices() {
     {
       id: 'micro-saas',
       title: 'Micro SaaS — Innovative Solutions',
-      icon: Code,
+      icon: X,
       color: 'orange',
       items: [
         {
@@ -840,7 +838,7 @@ export default function AdditionalServices() {
     {
       id: 'ai',
       title: 'AI Services — Advanced Capabilities',
-      icon: Brain,
+      icon: X,
       color: 'blue',
       items: [
         {
@@ -1496,7 +1494,7 @@ export default function AdditionalServices() {
     {
       id: 'it',
       title: 'IT Services — Comprehensive Solutions',
-      icon: Cloud,
+      icon: X,
       color: 'green',
       items: [
         {
@@ -2129,7 +2127,7 @@ export default function AdditionalServices() {
     },
     {
       title: 'Enhanced Micro SaaS Solutions',
-      icon: Code,
+      icon: X,
       color: 'purple',
       items: [
         {
@@ -2190,7 +2188,7 @@ export default function AdditionalServices() {
     },
     {
       title: 'Advanced AI Services',
-      icon: Brain,
+      icon: X,
       color: 'blue',
       items: [
         {
@@ -2251,7 +2249,7 @@ export default function AdditionalServices() {
     },
     {
       title: 'Enterprise IT Solutions',
-      icon: Server,
+      icon: X,
       color: 'green',
       items: [
         {
@@ -2458,7 +2456,7 @@ export default function AdditionalServices() {
               </div>
               <div>
                 <div className='w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mx-auto mb-4'>
-                  <Star className='w-6 h-6 text-blue-400' />
+                  <X className='w-6 h-6 text-blue-400' />
                 </div>
                 <h3 className='text-lg font-semibold text-white mb-2'>
                   Contact

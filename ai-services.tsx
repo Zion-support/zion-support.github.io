@@ -1,5 +1,4 @@
-import { CheckCircle, FileText, MessageSquare, Users } from 'lucide-react';
-import React from 'react';
+import { CheckCircle, Circle, Circle, Users } from 'lucide-react';
 
 import { Helmet } from 'react-helmet-async';
 
@@ -12,7 +11,7 @@ export default function AIServices() {
       title: 'AI-Powered Email Responder',
       description:
         'Automated email responses with sentiment analysis and intelligent categorization',
-      icon: MessageSquare,
+      icon: Circle,
       features: [
         'Smart email categorization and prioritization',
         'Automated response generation with personalization',
@@ -28,7 +27,7 @@ export default function AIServices() {
       title: 'AI Content Creation Suite',
       description:
         'Comprehensive AI-powered content generation for marketing, social media, and documentation',
-      icon: FileText,
+      icon: Circle,
       features: [
         'Automated blog posts and articles',
         'Social media content generation',
@@ -44,7 +43,7 @@ export default function AIServices() {
       title: 'Intelligent Document Processing',
       description:
         'AI-powered document analysis, extraction, and processing for business automation',
-      icon: FileText,
+      icon: Circle,
       features: [
         'Automated data extraction from PDFs and forms',
         'Document classification and routing',
