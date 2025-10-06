@@ -1,4 +1,4 @@
-import { Suspense, lazy } from 'react';
+import { Suspense } from 'react';
 import { Link } from 'react-router-dom';
 
 // Lazy load heavy components - temporarily disabled
@@ -69,13 +69,13 @@ export default function HomePage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                href="/contact"
+                to="/contact"
                 className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-colors duration-300"
               >
                 Get Started Today
               </Link>
               <Link
-                href="/services"
+                to="/services"
                 className="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white font-bold py-4 px-8 rounded-lg text-lg transition-colors duration-300"
               >
                 View Services
