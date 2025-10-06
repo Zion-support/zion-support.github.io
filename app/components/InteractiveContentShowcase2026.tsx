@@ -1,41 +1,29 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const InteractiveContentShowcase2026: React.FC = () => {
-  return (
-    <div className="interactive-content-showcase-2026">
-      <h2>Interactive Content Showcase 2026</h2>
-      <p>Interactive content showcase 2026 component placeholder</p>
-    </div>
-  );
-};
+  const [activeTab, setActiveTab] = useState(0);
 
-export default InteractiveContentShowcase2026;
-import React from 'react';
-
-const InteractiveContentShowcase2026: React.FC = () => {
-  const features = [
+  const tabs = [
     {
-      icon: '🚀',
-      title: 'Next-Gen AI',
-      description:
-        'Cutting-edge artificial intelligence solutions for 2026 and beyond.',
+      title: "AI Innovation",
+      content: "Cutting-edge artificial intelligence solutions for 2026 and beyond.",
+      icon: "🚀"
     },
     {
-      icon: '⚡',
-      title: 'Lightning Fast',
-      description: 'Optimized performance with sub-second response times.',
+      title: "Performance",
+      content: "Optimized performance with sub-second response times.",
+      icon: "⚡"
     },
     {
-      icon: '🔒',
-      title: 'Enterprise Security',
-      description: 'Bank-level security for your most sensitive data.',
+      title: "Security",
+      content: "Bank-level security for your most sensitive data.",
+      icon: "🔒"
     },
     {
-      icon: '📊',
-      title: 'Real-time Analytics',
-      description:
-        'Live insights and predictive analytics for better decisions.',
-    },
+      title: "Analytics",
+      content: "Live insights and predictive analytics for better decisions.",
+      icon: "📊"
+    }
   ];
 
   return (
@@ -51,112 +39,38 @@ const InteractiveContentShowcase2026: React.FC = () => {
           </p>
         </div>
 
-        <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-6'>
-          {features.map((feature, index) => (
-            <div
-              key={index}
-              className='bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1'
-            >
-              <div className='text-4xl mb-4'>{feature.icon}</div>
-              <h3 className='text-lg font-semibold text-gray-900 mb-2'>
-                {feature.title}
+        <div className='max-w-4xl mx-auto'>
+          <div className='flex flex-wrap justify-center gap-2 mb-8'>
+            {tabs.map((tab, index) => (
+              <button
+                key={index}
+                onClick={() => setActiveTab(index)}
+                className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
+                  activeTab === index
+                    ? 'bg-blue-600 text-white shadow-lg'
+                    : 'bg-white text-gray-600 hover:bg-gray-100'
+                }`}
+              >
+                <span className='mr-2'>{tab.icon}</span>
+                {tab.title}
+              </button>
+            ))}
+          </div>
+
+          <div className='bg-white p-8 rounded-2xl shadow-lg'>
+            <div className='text-center'>
+              <div className='text-6xl mb-4'>{tabs[activeTab].icon}</div>
+              <h3 className='text-2xl font-bold text-gray-900 mb-4'>
+                {tabs[activeTab].title}
               </h3>
-              <p className='text-gray-600 text-sm'>{feature.description}</p>
-            </div>
-          ))}
-        </div>
-
-        <div className='text-center mt-12'>
-          <button className='bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold py-4 px-8 rounded-lg text-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105'>
-            Explore 2026 Solutions
-          </button>
-import React, { useState } from 'react';
-
-const InteractiveContentShowcase2026: React.FC = () => {
-  const [activeTab, setActiveTab] = useState(0);
-
-  const tabs = [
-    {
-      title: "AI Innovation",
-      content: "Discover the latest breakthroughs in artificial intelligence and machine learning technologies.",
-      features: ["Natural Language Processing", "Computer Vision", "Predictive Analytics", "Automated Decision Making"]
-    },
-    {
-      title: "Digital Transformation",
-      content: "Transform your business with cutting-edge digital solutions and modern technologies.",
-      features: ["Cloud Migration", "API Integration", "Microservices Architecture", "DevOps Automation"]
-    },
-    {
-      title: "Enterprise Solutions",
-      content: "Scale your business with enterprise-grade solutions designed for growth and efficiency.",
-      features: ["Scalable Infrastructure", "Security Compliance", "Performance Optimization", "24/7 Support"]
-    }
-  ];
-
-  return (
-    <section className="py-16 bg-white">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Interactive Content Showcase 2026
-          </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Experience the future of technology with our interactive showcase of innovative solutions.
-          </p>
-        </div>
-
-        <div className="max-w-6xl mx-auto">
-          <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-            <div className="border-b border-gray-200">
-              <nav className="flex">
-                {tabs.map((tab, index) => (
-                  <button
-                    key={index}
-                    onClick={() => setActiveTab(index)}
-                    className={`px-6 py-4 text-sm font-medium ${
-                      activeTab === index
-                        ? 'text-blue-600 border-b-2 border-blue-600 bg-blue-50'
-                        : 'text-gray-500 hover:text-gray-700 hover:bg-gray-50'
-                    }`}
-                  >
-                    {tab.title}
-                  </button>
-                ))}
-              </nav>
-            </div>
-
-            <div className="p-8">
-              <div className="grid md:grid-cols-2 gap-8">
-                <div>
-                  <h3 className="text-2xl font-semibold text-gray-900 mb-4">
-                    {tabs[activeTab]?.title}
-                  </h3>
-                  <p className="text-gray-600 mb-6">
-                    {tabs[activeTab]?.content}
-                  </p>
-                  <button className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-lg transition-colors">
-                    Get Started
-                  </button>
-                </div>
-
-                <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-4">
-                    Key Features
-                  </h4>
-                  <ul className="space-y-3">
-                    {tabs[activeTab]?.features.map((feature, index) => (
-                      <li key={index} className="flex items-center">
-                        <div className="w-2 h-2 bg-blue-600 rounded-full mr-3"></div>
-                        <span className="text-gray-600">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
+              <p className='text-lg text-gray-600 mb-6'>
+                {tabs[activeTab].content}
+              </p>
+              <button className='bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold py-3 px-8 rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300'>
+                Learn More
+              </button>
             </div>
           </div>
->>>>>>> main
->>>>>>> main
         </div>
       </div>
     </section>
@@ -164,8 +78,3 @@ const InteractiveContentShowcase2026: React.FC = () => {
 };
 
 export default InteractiveContentShowcase2026;
-export default InteractiveContentShowcase2026;
-export default InteractiveContentShowcase2026;
->>>>>>> main
->>>>>>> main
->>>>>>> main

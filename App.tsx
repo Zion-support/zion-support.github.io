@@ -49,156 +49,115 @@ const InteractiveContentShowcase2026 = memo(() => (
 // Error Boundary Component
 interface ErrorBoundaryState {
   hasError: boolean;
-  error: Error | null;
+  error?: Error;
 }
-interface ErrorBoundaryProps {
-  children: React.ReactNode;
-}
-class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundaryState> {
-  constructor(props: ErrorBoundaryProps) {
+
+class ErrorBoundary extends React.Component<
+  React.PropsWithChildren<{}>,
+  ErrorBoundaryState
+> {
+  constructor(props: React.PropsWithChildren<{}>) {
     super(props);
-    this.state = { hasError: false, error: null };
+    this.state = { hasError: false };
   }
+
   static getDerivedStateFromError(error: Error): ErrorBoundaryState {
     return { hasError: true, error };
   }
-  override componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-    console.error('App Error Boundary caught an error:', error, errorInfo);
+
+  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
   }
-  override render() {
+
+  render() {
     if (this.state.hasError) {
       return (
         <div className="min-h-screen flex items-center justify-center bg-gray-50">
-          <div className="text-center p-8">
+          <div className="text-center">
             <h1 className="text-2xl font-bold text-gray-900 mb-4">
               Something went wrong
             </h1>
             <p className="text-gray-600 mb-4">
-              We're working to fix this issue. Please try refreshing the page.
+              We're sorry, but something unexpected happened.
             </p>
             <button
               onClick={() => window.location.reload()}
-              className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+              className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
             >
-              Refresh Page
+              Reload Page
             </button>
           </div>
         </div>
       );
     }
+
     return this.props.children;
   }
 }
-// Loading component
+
+// Loading Spinner Component
 const LoadingSpinner = memo(() => (
-  <div className="animate-pulse bg-gray-200 h-32 rounded flex items-center justify-center">
-    <div className="text-gray-500">Loading...</div>
+  <div className="min-h-screen flex items-center justify-center bg-gray-50">
+    <div className="text-center">
+      <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-600 mx-auto"></div>
+      <p className="mt-4 text-gray-600">Loading...</p>
+    </div>
   </div>
 ));
 
-// Error Boundary Component
+// Main App Component
+const App: React.FC = () => {
+  const structuredData = useMemo(() => ({
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'Zion Tech Group',
+    description: 'Leading provider of AI-powered enterprise solutions and digital transformation services',
+    url: 'https://ziontechgroup.com',
+    logo: 'https://ziontechgroup.com/logo.png',
+    contactPoint: {
+      '@type': 'ContactPoint',
+      telephone: '+1-302-464-0950',
+      contactType: 'customer service',
+      email: 'kleber@ziontechgroup.com',
+    },
+    address: {
+      '@type': 'PostalAddress',
+      addressCountry: 'US',
+      addressLocality: 'Wilmington',
+      addressRegion: 'DE',
+    },
+    sameAs: [
+      'https://linkedin.com/company/ziontechgroup',
+      'https://twitter.com/ziontechgroup',
+    ],
+    offers: {
+      '@type': 'Offer',
+      description: 'AI Enterprise Transformation Services',
+      price: '300% ROI Guaranteed',
+      priceCurrency: 'USD',
+    },
+  }), []);
 
-export default function App() {
-  const structuredData = useMemo(
-    () => ({
-      '@context': 'https://schema.org',
-      '@type': 'Organization',
-      name: 'Zion Tech Group',
-      description:
-        'Leading provider of AI-powered enterprise solutions and digital transformation services',
-      url: 'https://ziontechgroup.com',
-      logo: 'https://ziontechgroup.com/logo.png',
-      contactPoint: {
-        '@type': 'ContactPoint',
-        telephone: '+1-302-464-0950',
-        contactType: 'customer service',
-        email: 'kleber@ziontechgroup.com',
-      },
-      address: {
-        '@type': 'PostalAddress',
-        streetAddress: '364 E Main St STE 1008',
-        addressLocality: 'Middletown',
-        addressRegion: 'DE',
-        postalCode: '19709',
-        addressCountry: 'US',
-      },
-      sameAs: [
-        'https://linkedin.com/company/zion-tech-group',
-        'https://twitter.com/ziontechgroup',
-      ],
-      offers: {
-        '@type': 'Offer',
-        name: 'AI Enterprise Transformation Services',
-        description:
-          'Transform your enterprise with AI-powered solutions achieving 300% ROI, 70% cost reduction, and 90% efficiency gains',
-        price: '50000',
-        priceCurrency: 'USD',
-        availability: 'https://schema.org/InStock',
-      },
-    }),
-    []
-  );
-  // Performance optimization: Preload critical resources
-  React.useEffect(() => {
-    if (typeof document !== 'undefined') {
-      // Preload critical fonts
-      const fontLink = document.createElement('link');
-      fontLink.rel = 'preload';
-      fontLink.href =
-        'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap';
-      fontLink.as = 'style';
-      document.head.appendChild(fontLink);
-      // Preload critical images
-      const preloadImages = [
-        'https://ziontechgroup.com/og-image.jpg',
-        'https://ziontechgroup.com/logo.png'
-      ];
-      preloadImages.forEach(src => {
-        const img = new Image();
-        img.src = src;
-      });
-      // Add performance monitoring
-      if ('performance' in window) {
-        window.addEventListener('load', () => {
-          const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-          if (perfData) {
-            console.log('Page Load Performance:', {
-              domContentLoaded: perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart,
-              loadComplete: perfData.loadEventEnd - perfData.loadEventStart,
-              totalTime: perfData.loadEventEnd - perfData.fetchStart
-            });
-          }
-        });
-      }
-    }
-  }, []);
-  // Memoized event handlers for better performance
-  const handleNewsletterSubmit = useCallback((e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    const target = e.target as HTMLFormElement;
-    const email = (target.elements.namedItem('email') as HTMLInputElement)?.value;
+  const handleNewsletterSignup = useCallback((email: string) => {
     if (email) {
       console.log('Newsletter signup:', email);
       // Add actual newsletter signup logic here
       alert('Thank you for subscribing!');
     }
   }, []);
+
   const handlePhoneClick = useCallback(() => {
     // Track phone clicks for analytics
-    if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as unknown as { gtag: Function }).gtag('event', 'phone_click', {
+    if (typeof window !== 'undefined' && (window as any).gtag) {
       (window as any).gtag('event', 'phone_click', {
-    if (typeof window !== 'undefined' && (window as unknown as { gtag?: Function }).gtag) {
-      ((window as unknown as { gtag: Function }).gtag)('event', 'phone_click', {
->>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572
         event_category: 'engagement',
         event_label: 'main_phone_number'
       });
     }
+  }, []);
 
   const handleScrollToTop = useCallback(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
->>>>>>> 6c45f99dc7ca17bbf478e03055adf8e9c75097bc
   }, []);
 
   return (
@@ -230,17 +189,10 @@ export default function App() {
             <ContentShowcase />
             <InteractiveContentShowcase2026 />
           </Suspense>
-          
-          {/* Scroll to top button */}
-          <button
-            onClick={handleScrollToTop}
-            className="fixed bottom-4 right-4 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition-colors z-50"
-            aria-label="Scroll to top"
-          >
-            ↑
-          </button>
         </div>
       </HelmetProvider>
     </ErrorBoundary>
   );
-}
+};
+
+export default App;
