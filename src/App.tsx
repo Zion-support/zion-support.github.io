@@ -1,6 +1,6 @@
-import { Suspense, useEffect, useCallback } from 'react';
+import React, { Suspense, useEffect, useCallback } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import performanceOptimizer from './utils/performanceOptimizer';
+import { performanceOptimizer } from './utils/performanceOptimizer';
 import './index.css';
 
 // Simple placeholder components
@@ -69,9 +69,9 @@ function App() {
       // Preload critical resources
       if ('requestIdleCallback' in window) {
         requestIdleCallback(() => {
-          // Preload critical pages
-          import('./pages/Home');
-          import('./pages/About');
+          // Preload critical pages - commented out as pages don't exist yet
+          // import('./pages/Home');
+          // import('./pages/About');
         });
       }
     } catch (error) {
