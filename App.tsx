@@ -1,5 +1,5 @@
 import React, { memo, useMemo } from 'react';
-import { HelmetProvider } from 'react-helmet-async';
+import { HelmetProvider, Helmet } from 'react-helmet-async';
 
 // Memoized components for better performance
 const UnifiedContentPromotion = memo(() => (
@@ -38,12 +38,12 @@ const InteractiveContentShowcase2026 = memo(() => (
   </div>
 ));
 
-// Loading component
-const LoadingSpinner = memo(() => (
-  <div className="animate-pulse bg-gray-200 h-32 rounded flex items-center justify-center">
-    <div className="text-gray-500">Loading...</div>
-  </div>
-));
+// Loading component (unused but kept for potential future use)
+// const LoadingSpinner = memo(() => (
+//   <div className="animate-pulse bg-gray-200 h-32 rounded flex items-center justify-center">
+//     <div className="text-gray-500">Loading...</div>
+//   </div>
+// ));
 
 export default function App() {
   const structuredData = useMemo(() => ({
