@@ -1,14 +1,15 @@
 // Performance monitoring setup
 
 // Mock analytics object
-// Simple analytics object
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e62
 const analytics = {
   trackPageView: (path: string) => {
     console.log('Page view:', path);
   },
   trackPerformance: (name: string, value: number, unit: string = 'ms') => {
     console.log(`Performance: ${name} = ${value}${unit}`);
+  },
+  track: (event: string, category: string, action: string, label?: string, value?: number) => {
+    console.log('Analytics:', event, category, action, label, value);
   }
 };
 
@@ -29,25 +30,12 @@ const performanceOptimizer = {
   }
 };
 
-// Mock error handler
-const errorHandler = {
-  captureException: (error: Error) => {
-    console.error('Error captured:', error);
-  track: (event: string, category: string, action: string, label?: string, value?: number) => {
-    console.log('Analytics:', event, category, action, label, value);
-  }
-};
-
 // Simple error handler
 const errorHandler = {
   reportError: (error: Error, context?: string) => {
     console.error('Error reported:', error, context);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e62
   }
 };
-import { analytics } from './utils/analytics';
-import { errorHandler } from './utils/errorHandler';
->>>>>>> cursor/fix-errors-and-merge-to-main-cfe1
 
 // Initialize performance monitoring
 if (typeof window !== 'undefined') {
@@ -64,11 +52,7 @@ if (typeof window !== 'undefined') {
     analytics.trackPerformance('memory_usage', metrics.memoryUsage, 'MB');
   });
 
-  // Monitor long tasks and navigation (if available)
   // Monitor long tasks if PerformanceObserver is available
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e62
-  // Monitor long tasks (if available)
->>>>>>> cursor/fix-errors-and-merge-to-main-cfe1
   if ('PerformanceObserver' in window) {
     const observer = new PerformanceObserver((list) => {
       for (const entry of list.getEntries()) {
@@ -84,20 +68,6 @@ if (typeof window !== 'undefined') {
     } catch (error) {
       console.warn('Performance monitoring not supported:', error);
     }
-  }
-  
-  // Track Web Vitals
-  const metrics = performanceOptimizer.measurePageLoad();
-  if (metrics) {
-    performanceOptimizer.reportWebVitals(metrics);
-      });
-    });
-    observer.observe({ entryTypes: ['longtask'] });
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e62
-      });
-    });
-    observer.observe({ entryTypes: ['longtask'] });
->>>>>>> cursor/fix-errors-and-merge-to-main-cfe1
   }
 }
 

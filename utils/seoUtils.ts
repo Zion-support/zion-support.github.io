@@ -62,13 +62,6 @@ export const setTwitterCardTags = (twitterData: {
     'twitter:image': twitterData.image,
     'twitter:site': twitterData.site,
     'twitter:creator': twitterData.creator,
-}): void => {
-  const twitterTags = {
-    'twitter:card': twitterData.card,
-    'twitter:title': twitterData.title,
-    'twitter:description': twitterData.description,
-    'twitter:image': twitterData.image
->>>>>>> cursor/fix-errors-and-merge-to-main-13eb
   };
 
   Object.entries(twitterTags).forEach(([name, content]) => {
@@ -260,5 +253,4 @@ export default {
   generateSitemap,
   optimizeImages,
   generateRobotsTxt
->>>>>>> cursor/fix-errors-and-merge-to-main-13eb
 };
