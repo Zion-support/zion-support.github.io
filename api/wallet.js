@@ -17,3 +17,7 @@ async function handler(req, res) {
     console.error('Wallet API error:', err);
     res.statusCode = 500;
     res.json({ error: err.message || 'Wallet operation failed' });
+  }
+}
+
+module.exports = withErrorLogging(handler);

@@ -8,12 +8,7 @@ export type IntegrationProviderId =
   | 'workable' 
   | 'bamboohr';
 export type SyncStatus = 'connected' | 'warning' | 'disconnected';
-export interface IntegrationProviderMeta {
-  id: IntegrationProviderId;
-  name: string;
-  category: 'crm' | 'ats';
-  description: string;
-}
+
 export interface ProviderConnection {
   id: string;
   providerId: IntegrationProviderId;
@@ -22,7 +17,7 @@ export interface ProviderConnection {
   expiresAt?: number;
   status: SyncStatus;
   lastSync?: number;
-  createdAt: number;
+  config?: Record<string, any>;
 }
 export interface SyncLogEntry {
   id: string;
@@ -43,6 +38,14 @@ export interface ZapierEvent {
   timestamp: number;
   payload: Record<string, any>;
 }
+
+export interface IntegrationProviderMeta {
+  id: string;
+  name: string;
+  category: 'crm' | 'ats' | 'hr';
+  description: string;
+}
+
 export interface IntegrationsState {
   connections: ProviderConnection[];
   logs: SyncLogEntry[];
