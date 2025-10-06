@@ -16,7 +16,7 @@ function App() {
   useEffect(() => {
     // Initialize basic optimizations
     console.log('App initialized successfully');
-    
+
     // Cleanup on unmount
     return () => {
       console.log('App cleanup');
@@ -50,7 +50,10 @@ class ErrorBoundary extends React.Component<
   { children: React.ReactNode; fallback?: React.ReactNode },
   { hasError: boolean }
 > {
-  constructor(props: { children: React.ReactNode; fallback?: React.ReactNode }) {
+  constructor(props: {
+    children: React.ReactNode;
+    fallback?: React.ReactNode;
+  }) {
     super(props);
     this.state = { hasError: false };
   }
@@ -65,18 +68,22 @@ class ErrorBoundary extends React.Component<
 
   render() {
     if (this.state.hasError) {
-      return this.props.fallback || (
-        <div className="min-h-screen flex items-center justify-center bg-gray-50">
-          <div className="text-center">
-            <h1 className="text-2xl font-bold text-gray-900 mb-4">Something went wrong</h1>
-            <button
-              onClick={() => this.setState({ hasError: false })}
-              className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
-            >
-              Try again
-            </button>
+      return (
+        this.props.fallback || (
+          <div className='min-h-screen flex items-center justify-center bg-gray-50'>
+            <div className='text-center'>
+              <h1 className='text-2xl font-bold text-gray-900 mb-4'>
+                Something went wrong
+              </h1>
+              <button
+                onClick={() => this.setState({ hasError: false })}
+                className='bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700'
+              >
+                Try again
+              </button>
+            </div>
           </div>
-        </div>
+        )
       );
     }
 

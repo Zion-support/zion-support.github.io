@@ -1,34 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import {
-  CheckCircle,
-  Zap,
-  TrendingUp,
-  Brain,
-  Server,
-  ArrowRight,
-  Mail,
-  Phone,
-  MapPin,
-  DollarSign,
-  CreditCard,
-  Wallet,
-  Coins,
-  PiggyBank,
-  Calculator,
-  BarChart3,
-  Target,
-  Award,
-  Users,
-  Clock,
-  Calendar,
-  Check,
-  X,
-  Crown,
-  Rocket,
-  Cpu,
-} from 'lucide-react';
+import { CheckCircle, Zap, TrendingUp, Brain, ArrowRight } from 'lucide-react';
 
 import { INNOVATIVE_SERVICES_2025 } from '@/data/innovativeServices2025';
 import { SEO } from '@/components/SEO';
@@ -44,7 +17,7 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
         }
         return acc;
       },
-      [] as string[],
+      [] as string[]
     );
     return ['all', ...cats];
   }, [services]);
@@ -53,12 +26,12 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
     let filtered = services;
     if (selectedCategory !== 'all') {
       filtered = filtered.filter(
-        service => service.category === selectedCategory,
+        service => service.category === selectedCategory
       );
     }
     if (selectedPricingModel !== 'all') {
       filtered = filtered.filter(
-        service => service.pricingModel === selectedPricingModel,
+        service => service.pricingModel === selectedPricingModel
       );
     }
     return filtered;

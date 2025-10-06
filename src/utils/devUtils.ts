@@ -33,10 +33,14 @@ export const measurePerformance = (name: string, fn: () => void) => {
 };
 
 export const createDebugger = (componentName: string) => ({
-  log: (message: string, data?: any) => devLog(`[${componentName}] ${message}`, data),
-  error: (message: string, error?: any) => devError(`[${componentName}] ${message}`, error),
-  warn: (message: string, data?: any) => devWarn(`[${componentName}] ${message}`, data),
-  measure: (name: string, fn: () => void) => measurePerformance(`[${componentName}] ${name}`, fn),
+  log: (message: string, data?: any) =>
+    devLog(`[${componentName}] ${message}`, data),
+  error: (message: string, error?: any) =>
+    devError(`[${componentName}] ${message}`, error),
+  warn: (message: string, data?: any) =>
+    devWarn(`[${componentName}] ${message}`, data),
+  measure: (name: string, fn: () => void) =>
+    measurePerformance(`[${componentName}] ${name}`, fn),
 });
 
 export default {
