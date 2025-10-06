@@ -56,7 +56,6 @@
   },
   "include": [
     "app/**/*",
-    "src/**/*",
     "App.tsx",
     "components/**/*"
   ],
