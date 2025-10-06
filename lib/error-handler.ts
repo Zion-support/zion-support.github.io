@@ -23,7 +23,6 @@ export const errorHandler = (
   res: NextApiResponse
 ) => {
   const { statusCode = 500, message } = err;
-
   // Log error for monitoring
   console.error(`API Error [${statusCode}]: ${message}`, {
     url: req.url,
@@ -41,11 +40,7 @@ export const errorHandler = (
           : message,
       statusCode,
       timestamp: new Date().toISOString()
-<<<<<<< HEAD
     }
-=======
-    },
->>>>>>> cursor/fix-errors-and-merge-to-main-13eb
   });
 };
 

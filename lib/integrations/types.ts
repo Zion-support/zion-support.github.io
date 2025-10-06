@@ -10,26 +10,12 @@ export type IntegrationProviderId =
 
 export type SyncStatus = 'connected' | 'warning' | 'disconnected';
 
-<<<<<<< HEAD
-export interface ProviderConnection {
-  id: string;
-  providerId: IntegrationProviderId;
-  name: string;
-  status: SyncStatus;
-  accessToken?: string;
-  refreshToken?: string;
-  expiresAt?: number;
-  lastSyncAt?: number;
-  createdAt: number;
-  updatedAt: number;
-=======
 export interface IntegrationProviderMeta {
   id: IntegrationProviderId;
   name: string;
   category: 'crm' | 'ats';
   description: string;
 }
-
 export interface ProviderConnection {
   id: string;
   providerId: IntegrationProviderId;
@@ -39,7 +25,7 @@ export interface ProviderConnection {
   status: SyncStatus;
   lastSync?: number;
   createdAt: number;
->>>>>>> cursor/fix-errors-and-merge-to-main-13eb
+  updatedAt: number;
 }
 
 export interface SyncLogEntry {
@@ -63,17 +49,6 @@ export interface ZapierEvent {
   timestamp: number;
   payload: Record<string, any>;
 }
-
-<<<<<<< HEAD
-export interface IntegrationProviderMeta {
-  id: IntegrationProviderId;
-  name: string;
-  category: 'crm' | 'ats';
-  description: string;
-}
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-13eb
 export interface IntegrationsState {
   connections: ProviderConnection[];
   logs: SyncLogEntry[];
