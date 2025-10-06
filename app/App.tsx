@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 
 // Components
+<<<<<<< HEAD
 import ErrorBoundary from '../src/components/ErrorBoundary';
 import SEOOptimizer from '../src/components/SEOOptimizer';
 import AccessibilityEnhancer from '../src/components/AccessibilityEnhancer';
@@ -10,6 +11,9 @@ import PerformanceDashboard from './components/PerformanceDashboard';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import LoadingSpinner from './components/LoadingSpinner';
+=======
+import PerformanceDashboard from './components/PerformanceDashboard';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
 
 // Utils
 import { performanceOptimizer } from '../src/utils/performanceOptimizer';
@@ -36,7 +40,11 @@ const App: React.FC = () => {
     
     // Initialize Web Vitals monitoring
     if (typeof window !== 'undefined' && 'performance' in window) {
+<<<<<<< HEAD
       performanceOptimizer.preloadCriticalResources();
+=======
+      performanceOptimizer.addCriticalResourceHints([]);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
       const metrics = performanceOptimizer.measurePageLoad();
       if (metrics) {
         performanceOptimizer.reportWebVitals(metrics);
@@ -47,43 +55,35 @@ const App: React.FC = () => {
 
   return (
     <HelmetProvider>
-      <ErrorBoundary>
-        <SEOOptimizer>
-          <AccessibilityEnhancer>
-            <Router>
-              <div className='App'>
-                {/* Skip to main content link for accessibility */}
-                <a
-                  href='#main-content'
-                  className='skip-link'
-                  onClick={e => {
-                    e.preventDefault();
-                    const main =
-                      document.querySelector('main') ||
-                      document.querySelector('#main-content');
-                    if (main) {
-                      main.focus();
-                      main.scrollIntoView({ behavior: 'smooth' });
-                    }
-                  }}
-                >
-                  Skip to main content
-                </a>
-                <Navigation />
-                <Suspense fallback={<LoadingSpinner />}>
-                  <Routes>
-                    <Route path='/' element={<HomePage />} />
-                    {/* Add more routes as needed */}
-                  </Routes>
-                </Suspense>
-                <Footer />
-                {/* Performance Dashboard */}
-                <PerformanceDashboard />
-              </div>
-            </Router>
-          </AccessibilityEnhancer>
-        </SEOOptimizer>
-      </ErrorBoundary>
+      <Router>
+        <div className='App'>
+          {/* Skip to main content link for accessibility */}
+          <a
+            href='#main-content'
+            className='skip-link'
+            onClick={e => {
+              e.preventDefault();
+              const main =
+                document.querySelector('main') ||
+                document.querySelector('#main-content');
+              if (main) {
+                main.focus();
+                main.scrollIntoView({ behavior: 'smooth' });
+              }
+            }}
+          >
+            Skip to main content
+          </a>
+          <Suspense fallback={<div>Loading...</div>}>
+            <Routes>
+              <Route path='/' element={<HomePage />} />
+              {/* Add more routes as needed */}
+            </Routes>
+          </Suspense>
+          {/* Performance Dashboard */}
+          <PerformanceDashboard />
+        </div>
+      </Router>
     </HelmetProvider>
   );
 };

@@ -41,7 +41,10 @@ async function handler(req, res) {
   try {
     const { email } = req.body || {};
     
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-4606
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
     if (!isValidEmail(email)) {
       res.statusCode = 400;
       res.json({ error: 'Invalid email' });
@@ -57,9 +60,13 @@ async function handler(req, res) {
       'newsletter-subscriptions.json',
     );
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-4606
+=======
+    
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
     let existing = [];
     try {
       existing = JSON.parse(fs.readFileSync(file, 'utf8'));

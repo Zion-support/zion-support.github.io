@@ -1,6 +1,7 @@
 import type { IntegrationProviderMeta } from './types';
 export const PROVIDERS: IntegrationProviderMeta[] = [
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   { id: 'salesforce', name: 'Salesforce', category: 'crm', description: 'Enterprise CRM' },
   { id: 'hubspot', name: 'HubSpot', category: 'crm', description: 'Marketing & Sales CRM' },
@@ -11,6 +12,8 @@ export const PROVIDERS: IntegrationProviderMeta[] = [
   { id: 'workable', name: 'Workable', category: 'ats', description: 'Recruiting software' },
   { id: 'bamboohr', name: 'BambooHR', category: 'ats', description: 'HRIS & ATS' },
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-bcb8
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
   {
     id: 'salesforce',
     name: 'Salesforce',

@@ -29,6 +29,7 @@ async function handler(req, res) {
   }
 }
 
+<<<<<<< HEAD
 module.exports = withErrorLogging(handler);
 =======
 =======
@@ -128,3 +129,6 @@ module.exports = withErrorLogging(handler);
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e3b
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-895b
+=======
+module.exports = withErrorLogging(handler);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854

@@ -1,5 +1,6 @@
 // Performance monitoring setup
 import { analytics } from './utils/analytics';
+<<<<<<< HEAD
 import performanceOptimizer from './utils/performanceOptimizer';
 
 // Initialize performance monitoring
@@ -9,15 +10,24 @@ export function initializePerformanceMonitoring(): void {
 =======
 export const initializePerformanceMonitoring = () => {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7834
+=======
+import { performanceOptimizer } from './utils/performanceOptimizer';
+
+// Initialize performance monitoring
+export const initializeMonitoring = () => {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
   // Initialize performance optimizer
   performanceOptimizer.lazyLoadImages();
   
   // Track Web Vitals
   const metrics = performanceOptimizer.measurePageLoad();
 <<<<<<< HEAD
+<<<<<<< HEAD
   if (metrics) {
     performanceOptimizer.reportWebVitals(metrics);
   }
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
   
   // Monitor long tasks
   const observer = new PerformanceObserver((list) => {
@@ -57,6 +67,7 @@ export function initializeMonitoring() {
       analytics.track('long_task', 'performance', 'detected', undefined, entry.duration);
     });
   });
+<<<<<<< HEAD
   observer.observe({ entryTypes: ['longtask'] });
   
   // Track Web Vitals
@@ -86,3 +97,10 @@ function lazyLoadImages() {
   images.forEach((img) => imageObserver.observe(img));
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-74a6
+=======
+  
+  if (metrics) {
+    performanceOptimizer.reportWebVitals(metrics);
+  }
+};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854

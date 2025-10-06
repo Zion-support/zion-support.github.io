@@ -1,7 +1,7 @@
 /**
- * Analytics and Tracking Utility
- * Provides comprehensive analytics tracking for the application
+ * Analytics utility for tracking events and performance
  */
+<<<<<<< HEAD
 export interface AnalyticsEvent {
   name: string;
   category: string;
@@ -176,3 +176,17 @@ class Analytics {
 // Create singleton instance
 export const analytics = new Analytics();
 export default analytics;
+=======
+
+export const analytics = {
+  track: (event: string, category: string, action: string, label?: string, value?: number) => {
+    console.log('Analytics:', { event, category, action, label, value });
+    // In a real implementation, this would send data to analytics service
+  },
+  
+  trackPerformance: (name: string, value: number, unit: string = 'ms') => {
+    console.log(`Performance: ${name} = ${value}${unit}`);
+    // In a real implementation, this would send performance data to analytics
+  }
+};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854

@@ -41,6 +41,7 @@ export default function EnterprisePage() {
             </p>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
 =======
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
@@ -53,6 +54,8 @@ export default function EnterprisePage() {
                 Get Enterprise Demo
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
               <Link
                 href="/contact"
@@ -64,6 +67,7 @@ export default function EnterprisePage() {
                   →
                 </span>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0883
               </Link>
               <Link
@@ -74,6 +78,8 @@ export default function EnterprisePage() {
                 View Solutions
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
               </Link>
               <Link
                 href="#solutions"
@@ -85,9 +91,12 @@ export default function EnterprisePage() {
                   ↓
                 </span>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0883
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7834
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
               </Link>
             </div>
           </div>
@@ -95,7 +104,11 @@ export default function EnterprisePage() {
       </header>
 
       {/* Solutions Section */}
+<<<<<<< HEAD
       <section id="solutions" className="py-20">
+=======
+      <section id="solutions" className="py-24 bg-black/20">
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -105,6 +118,7 @@ export default function EnterprisePage() {
               Comprehensive AI solutions designed for enterprise-scale operations
             </p>
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -319,11 +333,54 @@ export default function EnterprisePage() {
               </div>
             ))}
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0883
+=======
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-300">
+              <div className="text-4xl mb-4">🤖</div>
+              <h3 className="text-2xl font-bold text-white mb-4">Autonomous Systems</h3>
+              <p className="text-gray-300 mb-6">
+                Self-managing AI systems that optimize operations 24/7 with minimal human intervention.
+              </p>
+              <ul className="text-sm text-gray-400 space-y-2">
+                <li>• 99.9% uptime guarantee</li>
+                <li>• 500% productivity increase</li>
+                <li>• $50M+ annual savings</li>
+              </ul>
+            </div>
+
+            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-300">
+              <div className="text-4xl mb-4">🧠</div>
+              <h3 className="text-2xl font-bold text-white mb-4">Business Intelligence</h3>
+              <p className="text-gray-300 mb-6">
+                Advanced analytics and insights to drive data-driven decision making.
+              </p>
+              <ul className="text-sm text-gray-400 space-y-2">
+                <li>• Real-time analytics</li>
+                <li>• Predictive modeling</li>
+                <li>• Custom dashboards</li>
+              </ul>
+            </div>
+
+            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-300">
+              <div className="text-4xl mb-4">🔒</div>
+              <h3 className="text-2xl font-bold text-white mb-4">Security & Compliance</h3>
+              <p className="text-gray-300 mb-6">
+                Enterprise-grade security with full compliance for regulated industries.
+              </p>
+              <ul className="text-sm text-gray-400 space-y-2">
+                <li>• SOC 2 Type II certified</li>
+                <li>• GDPR compliant</li>
+                <li>• End-to-end encryption</li>
+              </ul>
+            </div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       <section className="py-20">
@@ -385,6 +442,29 @@ export default function EnterprisePage() {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7834
               </Link>
             </div>
+=======
+      <section className="py-24">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            Ready to Transform Your Enterprise?
+          </h2>
+          <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
+            Join 500+ Fortune 500 companies already using our AI solutions to drive innovation and growth.
+          </p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+            <Link
+              href="/contact"
+              className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl"
+            >
+              Get Started Today
+            </Link>
+            <Link
+              href="/services"
+              className="border-2 border-white/30 hover:border-white/60 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 hover:bg-white/10"
+            >
+              View All Services
+            </Link>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
           </div>
         </div>
       </section>

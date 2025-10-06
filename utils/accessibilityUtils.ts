@@ -82,6 +82,7 @@ export const ariaUtils = {
   },
 };
 
+<<<<<<< HEAD
 // Keyboard navigation utilities
 export const keyboardNavigation = {
   // Handle arrow key navigation for lists
@@ -118,6 +119,8 @@ export const keyboardNavigation = {
     }
   },
 };
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
 // Color contrast utilities
 export const colorContrast = {
   // Calculate relative luminance
@@ -126,6 +129,7 @@ export const colorContrast = {
       c = c / 255;
       return c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4);
     });
+<<<<<<< HEAD
     return 0.2126 * (rs || 0) + 0.7152 * (gs || 0) + 0.0722 * (bs || 0);
   },
   // Calculate contrast ratio
@@ -141,12 +145,37 @@ export const colorContrast = {
     const lum1 = colorContrast.getLuminance(...color1);
     const lum2 = colorContrast.getLuminance(...color2);
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0a61
+=======
+    return 0.2126 * (rs ?? 0) + 0.7152 * (gs ?? 0) + 0.0722 * (bs ?? 0);
+  },
+
+  // Calculate contrast ratio
+  getContrastRatio: (color1: string, color2: string): number => {
+    const hexToRgb = (hex: string) => {
+      const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+      return result ? {
+        r: parseInt(result[1]!, 16),
+        g: parseInt(result[2]!, 16),
+        b: parseInt(result[3]!, 16)
+      } : null;
+    };
+
+    const rgb1 = hexToRgb(color1);
+    const rgb2 = hexToRgb(color2);
+    
+    if (!rgb1 || !rgb2) return 0;
+
+    const lum1 = colorContrast.getLuminance(rgb1.r ?? 0, rgb1.g ?? 0, rgb1.b ?? 0);
+    const lum2 = colorContrast.getLuminance(rgb2.r ?? 0, rgb2.g ?? 0, rgb2.b ?? 0);
+    
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
     const brightest = Math.max(lum1, lum2);
     const darkest = Math.min(lum1, lum2);
     return (brightest + 0.05) / (darkest + 0.05);
   },
 
   // Check if contrast meets WCAG standards
+<<<<<<< HEAD
   meetsWCAG: (contrastRatio: number, level: 'AA' | 'AAA' = 'AA'): boolean => {
     const thresholds = { AA: 4.5, AAA: 7 };
     return contrastRatio >= thresholds[level];
@@ -313,4 +342,43 @@ export const accessibilityTesting = {
     ];
     return focusableSelectors.some(selector => element.matches(selector));
   }
+=======
+  meetsWCAG: (color1: string, color2: string, level: 'AA' | 'AAA' = 'AA'): boolean => {
+    const ratio = colorContrast.getContrastRatio(color1, color2);
+    return level === 'AA' ? ratio >= 4.5 : ratio >= 7;
+  },
+};
+
+// Keyboard navigation utilities
+export const keyboardNavigation = {
+  // Handle arrow key navigation
+  handleArrowKeys: (e: KeyboardEvent, items: HTMLElement[], currentIndex: number): number => {
+    switch (e.key) {
+      case 'ArrowDown':
+      case 'ArrowRight':
+        e.preventDefault();
+        return (currentIndex + 1) % items.length;
+      case 'ArrowUp':
+      case 'ArrowLeft':
+        e.preventDefault();
+        return currentIndex === 0 ? items.length - 1 : currentIndex - 1;
+      case 'Home':
+        e.preventDefault();
+        return 0;
+      case 'End':
+        e.preventDefault();
+        return items.length - 1;
+      default:
+        return currentIndex;
+    }
+  },
+
+  // Handle Enter and Space key activation
+  handleActivation: (e: KeyboardEvent, callback: () => void): void => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      callback();
+    }
+  },
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
 };

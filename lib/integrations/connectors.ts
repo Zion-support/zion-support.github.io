@@ -3,9 +3,14 @@ import type { ProviderConnection, SyncLogEntry } from './types';
 // import { v4 as uuidv4 } from 'uuid';
 =======
 import { v4 as uuidv4 } from 'uuid';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-bcb8
 
 export async function simulateAction<T = unknown>(
+=======
+
+export async function simulateAction<T = any>(
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
   connection: ProviderConnection,
   action: string,
   details: Record<string, unknown> = {}
@@ -62,7 +67,10 @@ export const crm = {
     return simulateAction(connection, 'crm.addProjectNote', { note });
   },
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-895b
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
   async addEmailTouchpoint(connection: ProviderConnection, touch: Record<string, any>) {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-bcb8
     return simulateAction(connection, 'crm.addEmailTouchpoint', { touch });

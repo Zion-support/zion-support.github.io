@@ -1,4 +1,8 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
 export interface ApiError extends Error {
   statusCode?: number;
   isOperational?: boolean;
@@ -19,6 +23,10 @@ export const errorHandler = (
   res: NextApiResponse
 ) => {
   const { statusCode = 500, message } = err;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
   // Log error for monitoring
   console.error(`API Error [${statusCode}]: ${message}`, {
     url: req.url,
@@ -33,6 +41,7 @@ export const errorHandler = (
         process.env['NODE_ENV'] === 'production'
           ? 'Internal Server Error'
           : message,
+<<<<<<< HEAD
       statusCode,
       timestamp: new Date().toISOString()
     }
@@ -46,3 +55,17 @@ import {NextApiRequest} NextApiResponse } from 'next' export interface ApiError 
   (req: NextApiRequest, res: NextApiResponse, next: Function) => {
     Promise.resolve(fn(req, res, next)).catch((error: Error) => next(error));
   };
+=======
+      statusCode
+    }
+  });
+};
+
+export const asyncHandler = (fn: Function) => {
+  return (req: NextApiRequest, res: NextApiResponse) => {
+    Promise.resolve(fn(req, res)).catch((err) => {
+      errorHandler(err, req, res);
+    });
+  };
+};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854

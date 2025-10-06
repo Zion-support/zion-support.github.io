@@ -4,6 +4,7 @@
  */
 import { useEffect, useCallback, useRef } from 'react';
 import { performanceOptimizer } from '../utils/performanceOptimizer';
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -122,6 +123,9 @@ const analytics = {
   }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7834
 };
+=======
+import { analytics } from '../utils/analytics';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
 
 /**
  * Hook for monitoring page load performance
@@ -129,6 +133,7 @@ const analytics = {
 export const usePageLoadPerformance = () => {
   useEffect(() => {
     const trackPageLoad = () => {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -150,14 +155,21 @@ export const usePageLoadPerformance = () => {
 =======
             domContentLoaded: navigation.domContentLoadedEventEnd - navigation.fetchStart,
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7834
+=======
+      if (typeof window !== 'undefined' && 'performance' in window) {
+        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+        if (navigation) {
+          const metrics = {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
             domInteractive: navigation.domInteractive - navigation.fetchStart,
             totalLoadTime: navigation.loadEventEnd - navigation.fetchStart,
           };
           
           // Track each metric
           Object.entries(metrics).forEach(([key, value]) => {
-            analytics.trackPerformance(`page_load_${key}`, value);
+            performanceOptimizer.trackPerformance(`page_load_${key}`, value);
           });
+<<<<<<< HEAD
           
           // Track overall page load performance
           analytics.track(
@@ -167,6 +179,8 @@ export const usePageLoadPerformance = () => {
             undefined,
             metrics.totalLoadTime
           );
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
         }
 =======
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
@@ -190,16 +204,24 @@ export const usePageLoadPerformance = () => {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0883
       }
     };
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
     // Track immediately if page is already loaded
     if (typeof window !== 'undefined' && document.readyState === 'complete') {
       trackPageLoad();
+<<<<<<< HEAD
       return;
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
     } else {
       // Wait for load event
       window.addEventListener('load', trackPageLoad);
-      return () => window.removeEventListener('load', trackPageLoad);
     }
+    
+    return () => window.removeEventListener('load', trackPageLoad);
   }, []);
 };
 
@@ -216,7 +238,7 @@ export const useResourcePerformance = () => {
       list.getEntries().forEach(entry => {
         if (entry.entryType === 'resource') {
           const resourceEntry = entry as PerformanceResourceTiming;
-          analytics.trackPerformance(
+          performanceOptimizer.trackPerformance(
             `resource_${resourceEntry.name.split('.').pop()}`,
             resourceEntry.duration,
             'ms'
@@ -242,15 +264,23 @@ export const useLongTaskMonitoring = () => {
 
     const observer = performanceOptimizer.monitorLongTasks((entries: PerformanceEntry[]) => {
       entries.forEach((entry: PerformanceEntry) => {
+<<<<<<< HEAD
         analytics.track('long_task', 'performance', 'detected', undefined, entry.duration);
       });
     });
 
+=======
+        performanceOptimizer.trackPerformance('long_task', entry.duration, 'ms');
+      });
+    });
+    
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
     return () => {
       if (observer && typeof observer.disconnect === 'function') {
         observer.disconnect();
       }
     };
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     // Long task monitoring is disabled due to missing performanceOptimizer
@@ -418,4 +448,7 @@ export const useWebVitals = () => {
     return trackWebVitals();
   }, []);
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7834
+=======
+  }, []);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
 };

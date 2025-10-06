@@ -1,7 +1,7 @@
 /**
- * Centralized Error Handling Utility
- * Provides comprehensive error handling and reporting for the application
+ * Error handling utilities
  */
+<<<<<<< HEAD
 export interface ErrorContext {
   component?: string | undefined;
   action?: string | undefined;
@@ -124,3 +124,17 @@ if (typeof window !== 'undefined') {
   errorHandler.setupGlobalHandlers();
 }
 export default errorHandler;
+=======
+
+export const errorHandler = {
+  log: (error: Error, context?: string) => {
+    console.error('Error:', error.message, context ? `Context: ${context}` : '');
+    // In a real implementation, this would send error data to monitoring service
+  },
+  
+  report: (error: Error, context?: string) => {
+    console.error('Error reported:', error.message, context ? `Context: ${context}` : '');
+    // In a real implementation, this would send error data to error reporting service
+  }
+};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854

@@ -4,6 +4,7 @@ import { performanceOptimizer } from '../../utils/performanceOptimizer';
 import { getErrorMetrics, isErrorRateTooHigh } from '../../utils/errorHandling';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import { performanceOptimizer } from '../../src/utils/performanceOptimizer';
 import { getErrorMetrics, isErrorRateTooHigh } from '../../utils/errorHandling';
@@ -21,6 +22,8 @@ interface PerformanceMetrics {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0883
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7834
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
 interface DashboardData {
   performance: {
     averageRenderTime: number;
@@ -36,7 +39,10 @@ interface DashboardData {
   timestamp: Date;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
 }
 
 interface PerformanceMetrics {
@@ -54,20 +60,26 @@ const PerformanceDashboard: React.FC = (): JSX.Element | null => {
   const [isVisible, setIsVisible] = useState(false);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7834
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     loadTime: 0,
     renderTime: 0,
     memoryUsage: 0,
     fps: 0,
   });
+<<<<<<< HEAD
   const [autoRefresh, setAutoRefresh] = useState(true);
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0883
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7834
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
 
   useEffect(() => {
     const updateData = () => {
@@ -77,6 +89,7 @@ const PerformanceDashboard: React.FC = (): JSX.Element | null => {
         memoryUsage: 0,
         slowComponents: 0,
       };
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       const errorData = getErrorMetrics();
@@ -104,12 +117,19 @@ const PerformanceDashboard: React.FC = (): JSX.Element | null => {
         errorRate: 0,
       };
       const isHealthy = performanceData.averageRenderTime < 16;
+=======
+      
+      const errors = getErrorMetrics();
+      const isHealthy = !isErrorRateTooHigh() && performanceData.averageRenderTime < 16;
+      
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
       setData({
         performance: performanceData,
         errors: errorMetrics,
         isHealthy,
         timestamp: new Date(),
       });
+<<<<<<< HEAD
 <<<<<<< HEAD
       
       try {
@@ -161,6 +181,15 @@ const PerformanceDashboard: React.FC = (): JSX.Element | null => {
         perf as Performance & { memory?: { usedJSHeapSize: number } }
       ).memory;
       const memoryUsage = memory ? memory.usedJSHeapSize / 1024 / 1024 : 0;
+=======
+    };
+
+    const updateMetrics = () => {
+      const loadTime = performance.now();
+      const memory = (performance as any).memory;
+      const memoryUsage = memory ? memory.usedJSHeapSize / 1024 / 1024 : 0;
+      
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
       setMetrics(prev => ({
         ...prev,
         loadTime,
@@ -169,11 +198,15 @@ const PerformanceDashboard: React.FC = (): JSX.Element | null => {
       }));
     };
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7834
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
     // Update metrics on load
     updateMetrics();
     updateData();
     
+<<<<<<< HEAD
     if (autoRefresh) {
       const interval = setInterval(() => {
         updateData();
@@ -183,6 +216,11 @@ const PerformanceDashboard: React.FC = (): JSX.Element | null => {
     }
     return undefined;
   }, [autoRefresh]);
+=======
+    const interval = setInterval(updateData, 5000);
+    return () => clearInterval(interval);
+  }, []);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
 
   const exportData = (): void => {
     const exportData = {
@@ -191,14 +229,22 @@ const PerformanceDashboard: React.FC = (): JSX.Element | null => {
       timestamp: new Date().toISOString(),
     };
 <<<<<<< HEAD
+<<<<<<< HEAD
     console.log('Exporting data:', exportData);
 =======
     console.log('Performance data:', exportData);
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7834
+=======
+    console.log('Performance Data:', exportData);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
   };
 
   // Only show in development
-  if (process.env['NODE_ENV'] !== 'development') {
+  if (process.env.NODE_ENV !== 'development') {
+    return null;
+  }
+
+  if (!data) {
     return null;
   }
 
@@ -328,6 +374,7 @@ const PerformanceDashboard: React.FC = (): JSX.Element | null => {
             </div>
           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
           {/* Error Metrics */}
           {data && (
             <>
@@ -395,6 +442,8 @@ const PerformanceDashboard: React.FC = (): JSX.Element | null => {
       )}
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0883
 =======
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
           
           {/* Error Metrics */}
           <div className='mt-4'>
@@ -459,7 +508,10 @@ const PerformanceDashboard: React.FC = (): JSX.Element | null => {
           </div>
         </div>
       )}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7834
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
     </div>
   );
 };

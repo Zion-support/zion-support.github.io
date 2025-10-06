@@ -19,10 +19,14 @@ export interface WebVitalsMetrics {
  * Performance budget checker
  */
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface PerformanceBudget {
 =======
 interface PerformanceBudget {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7834
+=======
+interface PerformanceBudget {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
   maxBundleSize: number; // in KB
   maxImageSize: number; // in KB
   maxFirstLoad: number; // in ms
@@ -45,7 +49,10 @@ export const prefetchResources = (urls: string[]): void => {
 };
 
 /**
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7834
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
  * Debounce function
  */
 export const debounce = <T extends (...args: unknown[]) => unknown>(
@@ -77,6 +84,7 @@ export const throttle = <T extends (...args: unknown[]) => unknown>(
 };
 
 /**
+<<<<<<< HEAD
  * Lazy load images
  */
 export const lazyLoadImages = (): void => {
@@ -664,10 +672,127 @@ export class PerformanceOptimizer {
     ];
     prefetchResources(criticalResources);
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7834
+=======
+ * Performance monitoring class
+ */
+class PerformanceOptimizer {
+  private metrics: Map<string, number> = new Map();
+  private observers: PerformanceObserver[] = [];
+
+  /**
+   * Track performance metrics
+   */
+  trackPerformance(name: string, value: number, unit: string = 'ms'): void {
+    this.metrics.set(name, value);
+    console.log(`Performance: ${name} = ${value}${unit}`);
+  }
+
+  /**
+   * Get all metrics
+   */
+  getMetrics(): Record<string, number> {
+    return Object.fromEntries(this.metrics);
+  }
+
+  /**
+   * Measure page load performance
+   */
+  measurePageLoad(): WebVitalsMetrics | null {
+    if (typeof window === 'undefined' || !('performance' in window)) {
+      return null;
+    }
+
+    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+    if (!navigation) return null;
+
+    return {
+      TTFB: navigation.responseStart - navigation.requestStart,
+      loadTime: navigation.loadEventEnd - navigation.fetchStart,
+      interactiveTime: navigation.domInteractive - navigation.fetchStart,
+    };
+  }
+
+  /**
+   * Monitor long tasks
+   */
+  monitorLongTasks(callback: (entries: PerformanceEntry[]) => void): PerformanceObserver | null {
+    if (typeof window === 'undefined' || !('PerformanceObserver' in window)) {
+      return null;
+    }
+
+    try {
+      const observer = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        callback(entries);
+      });
+      
+      observer.observe({ entryTypes: ['longtask'] });
+      this.observers.push(observer);
+      return observer;
+    } catch (error) {
+      console.warn('Long task monitoring not supported:', error);
+      return null;
+    }
+  }
+
+  /**
+   * Report Web Vitals
+   */
+  reportWebVitals(metrics: WebVitalsMetrics): void {
+    Object.entries(metrics).forEach(([key, value]) => {
+      if (value !== undefined) {
+        this.trackPerformance(`web_vital_${key}`, value);
+      }
+    });
+  }
+
+  /**
+   * Lazy load images
+   */
+  lazyLoadImages(): void {
+    if (typeof document === 'undefined') return;
+
+    const images = document.querySelectorAll('img[data-src]');
+    const imageObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const img = entry.target as HTMLImageElement;
+          img.src = img.dataset['src'] || '';
+          img.removeAttribute('data-src');
+          imageObserver.unobserve(img);
+        }
+      });
+    });
+
+    images.forEach((img) => imageObserver.observe(img));
+  }
+
+  /**
+   * Add critical resource hints
+   */
+  addCriticalResourceHints(urls: string[]): void {
+    if (typeof document === 'undefined') return;
+    urls.forEach(url => {
+      const link = document.createElement('link');
+      link.rel = 'preload';
+      link.href = url;
+      link.as = 'script';
+      document.head.appendChild(link);
+    });
+  }
+
+  /**
+   * Cleanup observers
+   */
+  cleanup(): void {
+    this.observers.forEach(observer => observer.disconnect());
+    this.observers = [];
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
   }
 }
 
 // Export singleton instance
+<<<<<<< HEAD
 <<<<<<< HEAD
 export const performanceOptimizer = PerformanceOptimizer.getInstance();
 
@@ -699,3 +824,9 @@ export default {
 export const performanceOptimizer = new PerformanceOptimizer();
 export default performanceOptimizer;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7834
+=======
+export const performanceOptimizer = new PerformanceOptimizer();
+
+// Export default for compatibility
+export default performanceOptimizer;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854

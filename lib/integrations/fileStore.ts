@@ -25,6 +25,10 @@ function ensureDataDir(): void {
   if (!fs.existsSync(DATA_DIR)) {
     fs.mkdirSync(DATA_DIR, { recursive: true });
   }
+<<<<<<< HEAD
+=======
+  
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
   if (!fs.existsSync(STATE_FILE)) {
     const initial: IntegrationsState = {
       connections: [],
@@ -37,6 +41,10 @@ function ensureDataDir(): void {
 }
 export function readState(): IntegrationsState {
   ensureDataDir();
+<<<<<<< HEAD
+=======
+  
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
   try {
     const raw = fs.readFileSync(STATE_FILE, 'utf8');
     return JSON.parse(raw) as IntegrationsState;

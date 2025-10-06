@@ -6,6 +6,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { onCLS, onFCP, onLCP, onTTFB } from 'web-vitals';
 import type { Metric } from 'web-vitals';
 
@@ -37,6 +38,11 @@ import { onCLS, onFCP, onLCP, onTTFB, type Metric } from 'web-vitals';
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2068
 
+=======
+import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
+import type { Metric } from 'web-vitals';
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
 // Types
 interface PerformanceMetric {
   name: string;
@@ -142,6 +148,7 @@ function sendToAnalytics(metric: Metric): void {
   if (typeof window !== 'undefined' && window.gtag) {
     window.gtag('event', metric.name, {
       event_category: 'Web Vitals',
+<<<<<<< HEAD
       value: Math.round(
         metric.name === 'CLS' ? metric.value * 1000 : metric.value
       ),
@@ -178,14 +185,25 @@ function sendToAnalytics(metric: Metric): void {
       keepalive: true,
     }).catch(error => console.error('Performance reporting error:', error));
   }
+=======
+      event_label: metric.id,
+      value: Math.round(metric.value),
+      non_interaction: true,
+    });
+  }
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
 }
 /**
  * Initialize performance monitoring
  */
 export function initPerformanceMonitoring(): void {
+<<<<<<< HEAD
   if (typeof window === 'undefined') return;
   try {
     // Core Web Vitals
+=======
+  try {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
     onCLS(sendToAnalytics);
     onFCP(sendToAnalytics);
     onLCP(sendToAnalytics);
@@ -198,6 +216,9 @@ export function initPerformanceMonitoring(): void {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
 /**
  * Generate performance report
  */
@@ -208,6 +229,7 @@ export function generatePerformanceReport(): PerformanceReport {
     metrics,
     timestamp: new Date().toISOString(),
     url: typeof window !== 'undefined' ? window.location.href : '',
+<<<<<<< HEAD
     userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : ''
   };
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-895b
@@ -847,3 +869,16 @@ export {
   getPerformanceScore
 };
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2068
+=======
+    userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : '',
+  };
+}
+/**
+ * Check if performance is within acceptable thresholds
+ */
+export function isPerformanceAcceptable(): boolean {
+  // This would typically check against stored metrics
+  // For now, return true as a placeholder
+  return true;
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
