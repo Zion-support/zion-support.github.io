@@ -368,14 +368,10 @@ class PerformanceOptimizer {
     });
   }
 
-<<<<<<< HEAD
   public reportWebVitals(metrics: WebVitalsMetrics): void {
     reportWebVitals(metrics);
   }
 
-  public measurePageLoad(): WebVitalsMetrics | null {
-    return measurePageLoad();
-  }
 
   public prefetchResources(resources: string[]): void {
     prefetchResources(resources);
