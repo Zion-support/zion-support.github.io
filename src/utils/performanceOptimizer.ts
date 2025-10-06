@@ -374,13 +374,6 @@ class PerformanceOptimizer {
     });
   }
 
-<<<<<<< HEAD
-=======
-  public prefetchResources(resources: string[]): void {
-    prefetchResources(resources);
-  }
-
->>>>>>> 12fa9d4e6a72583ddf5bdcea12fa3aaf020213ad
   public reportWebVitals(metrics: WebVitalsMetrics): void {
     reportWebVitals(metrics);
   }
@@ -401,8 +394,6 @@ class PerformanceOptimizer {
   getMetrics(): Record<string, number> {
     return Object.fromEntries(this.metrics);
   }
-<<<<<<< HEAD
-=======
 
   // Add critical resource hints for better performance
   addCriticalResourceHints(): void {
@@ -425,7 +416,6 @@ class PerformanceOptimizer {
       document.head.appendChild(link);
     });
   }
->>>>>>> 12fa9d4e6a72583ddf5bdcea12fa3aaf020213ad
   // Initialize all optimizations
   initialize(): void {
     this.measurePerformance('lazyLoadImages', () => this.lazyLoadImages());
