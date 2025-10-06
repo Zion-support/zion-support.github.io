@@ -1,100 +1,86 @@
-export interface RevOpsContent { 
-  id: string;
-  title: string;
-  description: string;
-  category: string;
-  date: string;
-  readTime: string;
-  tags: string[];
-  featured: boolean;
-  content: string;
-  author: string;
-  valueProposition: string;
-  highlights: string[];
-  metrics: {
-    [key: string]: string;
-  };
-}
+// October 2025 Newest Revenue Operations Content
+// JUST PUBLISHED: Autonomous RevOps Revolution
 
 export const octoberNewestRevOpsContent: RevOpsContent[] = [
   {
-    id: 'ai-revops-automation-2025',
-    title: 'AI RevOps Automation 2025: 3.2x Pipeline Velocity',
-    description: 'Revolutionary AI-powered RevOps automation delivering 3.2x pipeline velocity and 127% ROI.',
-    category: 'RevOps',
+    id: 'autonomous-revops-revolution-2025',
+    title: '🚀 NEW: Autonomous Revenue Operations Revolution - 127% ROI',
+    slug: 'ai-2025-oct-01-autonomous-revenue-operations-revolution',
+    description: 'JUST PUBLISHED: Discover how autonomous RevOps platforms achieve 127% ROI, 89% forecast accuracy, and 3.2x pipeline velocity through AI-powered revenue intelligence.',
+    category: 'Revenue Operations',
     date: '2025-10-01',
-    readTime: '20 min read',
-    tags: ['RevOps', 'Automation', 'AI', '2025'],
+    readTime: '16 min',
+    icon: '💰',
+    gradient: 'from-emerald-600 to-teal-600',
     featured: true,
-    content: `
-# AI RevOps Automation 2025: 3.2x Pipeline Velocity
-
-Revolutionary AI-powered RevOps automation delivering unprecedented pipeline velocity and ROI.
-
-## Key Features
-- 3.2x pipeline velocity improvement
-- 127% ROI in Fortune 500 deployments
-- End-to-end RevOps automation
-- Live scorecards and KPIs
-    `,
-    author: 'Zion Tech Group',
-    valueProposition: '3.2x pipeline velocity, 127% ROI',
+    breaking: true,
+    tags: [
+      'RevOps',
+      'Revenue Intelligence',
+      'AI Automation',
+      'Sales Optimization',
+    ],
     highlights: [
-      '3.2x pipeline velocity',
-      '127% ROI',
-      'End-to-end automation',
-      'Live scorecards',
+      '127% ROI within first year',
+      '89% forecast accuracy (vs 52% traditional)',
+      '3.2x pipeline velocity improvement',
+      '$127M incremental revenue (Fortune 500 case study)',
+      '85% reduction in manual RevOps tasks',
+      '4.7x faster response times',
     ],
     metrics: {
-      velocity: '3.2x',
       roi: '127%',
-      efficiency: '95%',
-      accuracy: '99.9%',
+      forecastAccuracy: '89%',
+      pipelineVelocity: '3.2x',
+      revenue: '$127M',
+      efficiency: '85%',
+    },
+    cta: {
+      text: 'Read the Complete RevOps Guide',
+      link: '/blog/ai-2025-oct-01-autonomous-revenue-operations-revolution',
     },
   },
   {
-    id: 'autonomous-revenue-operations-2025',
-    title: 'Autonomous Revenue Operations 2025: Self-Healing Systems',
-    description: 'Self-healing RevOps systems with 99.9% uptime and 85% cost reduction.',
-    category: 'RevOps',
-    date: '2025-10-02',
-    readTime: '18 min read',
-    tags: ['RevOps', 'Autonomous', 'Self-Healing', '2025'],
+    id: 'saas-revops-case-study-2025',
+    title: '📊 Fortune 500 SaaS: $127M Revenue Gain with Autonomous RevOps',
+    slug: 'ai-2025-oct-01-global-saas-autonomous-revops-127-million-success',
+    description: 'Real-world case study: How a $2.8B enterprise SaaS company achieved $127M incremental revenue and 89% forecast accuracy through autonomous revenue operations.',
+    category: 'Case Study',
+    date: '2025-10-01',
+    readTime: '12 min',
+    icon: '📈',
+    gradient: 'from-blue-600 to-indigo-600',
     featured: true,
-    content: `
-# Autonomous Revenue Operations 2025: Self-Healing Systems
-
-Self-healing RevOps systems delivering unprecedented reliability and cost efficiency.
-
-## Revolutionary Features
-- 99.9% uptime with self-healing
-- 85% cost reduction
-- Autonomous revenue operations
-- Predictive maintenance
-    `,
-    author: 'Zion Tech Group',
-    valueProposition: '99.9% uptime, 85% cost reduction',
+    breaking: true,
+    tags: ['Case Study', 'SaaS', 'Revenue Operations', 'Enterprise AI'],
     highlights: [
-      '99.9% uptime',
-      '85% cost reduction',
-      'Self-healing systems',
-      'Predictive maintenance',
+      '$127M incremental annual revenue',
+      '89% forecast accuracy (from 49%)',
+      '42% increase in win rates',
+      '3.2x pipeline velocity improvement',
+      '12-month transformation timeline',
+      '704% three-year ROI',
     ],
     metrics: {
-      uptime: '99.9%',
-      costReduction: '85%',
-      efficiency: '98%',
-      reliability: '99.99%',
+      revenue: '$127M',
+      accuracy: '89%',
+      winRate: '+42%',
+      velocity: '3.2x',
+      roi: '704%',
     },
-  }
+    cta: {
+      text: 'Read the Full Case Study',
+      link: '/case-studies/ai-2025-oct-01-global-saas-autonomous-revops-127-million-success',
+    },
+  },
 ];
 
-export const getFeaturedRevOpsContent = () => { 
+export const getFeaturedRevOpsContent = () => {
   return octoberNewestRevOpsContent.filter(content => content.featured);
 };
 
-export const getBreakingRevOpsContent = () => { 
-  return octoberNewestRevOpsContent.filter(content => content.tags.includes('Breaking'));
+export const getBreakingRevOpsContent = () => {
+  return octoberNewestRevOpsContent.filter(content => content.breaking);
 };
 
 export const getAllRevOpsContent = () => {
