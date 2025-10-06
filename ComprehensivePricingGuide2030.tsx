@@ -17,7 +17,7 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
   const services = INNOVATIVE_SERVICES_2025;
   const categories = useMemo(() => {
     const cats = services.reduce(
-      (acc: string[], service: { category: string }) => {
+      (acc: string[], service: any) => {
         if (!acc.includes(service.category)) {
           acc.push(service.category);
         }
@@ -32,12 +32,12 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
     let filtered = services;
     if (selectedCategory !== 'all') {
       filtered = filtered.filter(
-        service => service.category === selectedCategory,
+        (service: any) => service.category === selectedCategory,
       );
     }
     if (selectedPricingModel !== 'all') {
       filtered = filtered.filter(
-        service => service.pricingModel === selectedPricingModel,
+        (service: any) => service.pricingModel === selectedPricingModel,
       );
     }
     return filtered;
@@ -53,11 +53,19 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
       case 'AI & Finance':
         return Brain;
       case 'Cloud & DevOps':
+<<<<<<< HEAD
         return Brain;
       case 'IoT & Digital Twin':
         return Brain;
       case 'Quantum Computing':
         return Brain;
+=======
+        return Zap;
+      case 'IoT & Digital Twin':
+        return Brain;
+      case 'Quantum Computing':
+        return ArrowRight;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3a03
       default:
         return Zap;
     }
@@ -383,7 +391,7 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
           </div>
           {/* Services Grid */}
           <div className='grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
-            {filteredServices.map((service, index) => {
+            {filteredServices.map((service: any, index: number) => {
               const CategoryIcon = getCategoryIcon(service.category);
               const categoryColor = getCategoryColor(service.category);
               return (
@@ -590,7 +598,11 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
               className='grid md:grid-cols-3 gap-8 mb-12'
             >
               <div className='flex flex-col items-center'>
+<<<<<<< HEAD
                 <Brain className='w-8 h-8 text-cyan-400 mb-4' />
+=======
+                <Zap className='w-8 h-8 text-cyan-400 mb-4' />
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3a03
                 <div className='text-white font-semibold mb-2'>Call Us</div>
                 <a
                   href='tel:+13024640950'
@@ -600,7 +612,11 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
                 </a>
               </div>
               <div className='flex flex-col items-center'>
+<<<<<<< HEAD
                 <Brain className='w-8 h-8 text-cyan-400 mb-4' />
+=======
+                <Zap className='w-8 h-8 text-cyan-400 mb-4' />
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3a03
                 <div className='text-white font-semibold mb-2'>Email Us</div>
                 <a
                   href='mailto:kleber@ziontechgroup.com'
@@ -610,7 +626,11 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
                 </a>
               </div>
               <div className='flex flex-col items-center'>
+<<<<<<< HEAD
                 <Brain className='w-8 h-8 text-cyan-400 mb-4' />
+=======
+                <Zap className='w-8 h-8 text-cyan-400 mb-4' />
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3a03
                 <div className='text-white font-semibold mb-2'>Visit Us</div>
                 <div className='text-slate-300 text-center'>
                   364 E Main St STE 1008
