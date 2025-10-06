@@ -63,6 +63,8 @@ const NewestContent2025Banner = () => {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Edge Computing • Neural Networks • Quantum Security — The future of enterprise AI starts here
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e4e
+=======
+>>>>>>> main
           </p>
         </div>
 
@@ -128,6 +130,8 @@ const NewestContent2025Banner = () => {
                 <div className="mb-4">
                   <span className="inline-block px-4 py-2 bg-gradient-to-r from-cyan-50 to-blue-50 text-gray-900 text-sm font-semibold rounded-full border border-white/20">
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e4e
+=======
+>>>>>>> main
                     Edge AI & Real-Time
                   </span>
                 </div>
@@ -136,8 +140,7 @@ const NewestContent2025Banner = () => {
 <<<<<<< HEAD
                 <h3 className='text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors'>
 =======
-                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e4e
+>>>>>>> main
                   AI Edge Computing Real-Time Intelligence 2025
                 </h3>
 
@@ -186,6 +189,8 @@ const NewestContent2025Banner = () => {
                     <div className="text-2xl font-bold text-yellow-400">87%</div>
                     <div className="text-sm text-gray-300">Cost ↓</div>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e4e
+=======
+>>>>>>> main
                   </div>
                 </div>
 
@@ -193,8 +198,7 @@ const NewestContent2025Banner = () => {
 <<<<<<< HEAD
                 <div className='flex items-center justify-between text-sm text-gray-400 mb-6'>
 =======
-                <div className="flex items-center gap-4 text-sm text-gray-400 mb-6">
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e4e
+>>>>>>> main
                   <span>⏱️ 35 min read</span>
                   <span>📅 Sep 30, 2025</span>
                 </div>
@@ -206,11 +210,9 @@ const NewestContent2025Banner = () => {
                   <span className='group-hover:translate-x-1 transition-transform'>
                     →
                   </span>
+                </div>
 =======
-                <div className="flex items-center justify-center gap-2 text-cyan-400 font-semibold group-hover:text-white transition-colors">
-                  <span>Read Full Article</span>
-                  <span className="group-hover:translate-x-1 transition-transform">→</span>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e4e
+>>>>>>> main
                 </div>
               </div>
             </div>
@@ -218,7 +220,7 @@ const NewestContent2025Banner = () => {
 
           {/* Article 2: Neural Networks */}
 <<<<<<< HEAD
-          <ArrowRight href="/blog/ai-neural-networks-enterprise-transformation-2025" className="group">
+          <Link href="/blog/ai-neural-networks-enterprise-transformation-2025" className="group">
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl border-2 border-white/20 hover:border-purple-400 transition-all duration-500 overflow-hidden hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/50">
               <div className="absolute inset-0 bg-gradient-to-br from-purple-500/0 via-pink-500/0 to-purple-500/0 group-hover:from-purple-500/20 group-hover:via-pink-500/20 group-hover:to-purple-500/20 transition-all duration-500"></div>
               
@@ -272,6 +274,8 @@ const NewestContent2025Banner = () => {
                 <div className="mb-4">
                   <span className="inline-block px-4 py-2 bg-gradient-to-r from-purple-50 to-pink-50 text-gray-900 text-sm font-semibold rounded-full border border-white/20">
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e4e
+=======
+>>>>>>> main
                     Neural Networks & AI
                   </span>
                 </div>
@@ -332,6 +336,8 @@ const NewestContent2025Banner = () => {
 
                 <div className="flex items-center gap-4 text-sm text-gray-400 mb-6">
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e4e
+=======
+>>>>>>> main
                   <span>⏱️ 40 min read</span>
                   <span>📅 Sep 30, 2025</span>
                 </div>
@@ -342,11 +348,9 @@ const NewestContent2025Banner = () => {
                   <span className='group-hover:translate-x-1 transition-transform'>
                     →
                   </span>
-=======
-                <div className="flex items-center justify-center gap-2 text-purple-400 font-semibold group-hover:text-white transition-colors">
-                  <span>Read Full Article</span>
-                  <span className="group-hover:translate-x-1 transition-transform">→</span>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e4e
+=======
+>>>>>>> main
                 </div>
               </div>
             </div>
@@ -354,7 +358,7 @@ const NewestContent2025Banner = () => {
 
           {/* Article 3: Quantum Security */}
 <<<<<<< HEAD
-          <ArrowRight href="/blog/ai-quantum-security-protocols-2026" className="group">
+          <Link href="/blog/ai-quantum-security-protocols-2026" className="group">
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl border-2 border-white/20 hover:border-indigo-400 transition-all duration-500 overflow-hidden hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-indigo-500/50 border-4 border-yellow-400/50">
               <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/0 via-purple-500/0 to-indigo-500/0 group-hover:from-indigo-500/20 group-hover:via-purple-500/20 group-hover:to-indigo-500/20 transition-all duration-500"></div>
               
@@ -408,6 +412,8 @@ const NewestContent2025Banner = () => {
                 <div className="mb-4">
                   <span className="inline-block px-4 py-2 bg-gradient-to-r from-red-50 to-orange-50 text-gray-900 text-sm font-semibold rounded-full border border-white/20">
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e4e
+=======
+>>>>>>> main
                     Quantum Security
                   </span>
                 </div>
@@ -472,6 +478,8 @@ const NewestContent2025Banner = () => {
 
                 <div className="flex items-center gap-4 text-sm text-gray-400 mb-6">
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e4e
+=======
+>>>>>>> main
                   <span>⏱️ 45 min read</span>
                   <span>📅 Sep 30, 2025</span>
                 </div>
@@ -482,11 +490,9 @@ const NewestContent2025Banner = () => {
                   <span className='group-hover:translate-x-1 transition-transform'>
                     →
                   </span>
-=======
-                <div className="flex items-center justify-center gap-2 text-red-400 font-semibold group-hover:text-white transition-colors">
-                  <span>Read Full Article</span>
-                  <span className="group-hover:translate-x-1 transition-transform">→</span>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e4e
+=======
+>>>>>>> main
                 </div>
               </div>
             </div>
@@ -540,6 +546,8 @@ const NewestContent2025Banner = () => {
             >
               <span className="text-xl">📧</span>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e4e
+=======
+>>>>>>> main
               <span>Get Expert Consultation</span>
             </a>
           </div>
@@ -549,8 +557,7 @@ const NewestContent2025Banner = () => {
 <<<<<<< HEAD
         <div className='grid grid-cols-2 md:grid-cols-4 gap-8'>
 =======
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e4e
+>>>>>>> main
           {[
             { value: '500+', label: 'Enterprise Clients' },
             { value: '10B+', label: 'Data Points Processed Daily' },
@@ -564,10 +571,7 @@ const NewestContent2025Banner = () => {
               </div>
               <div className='text-gray-300'>{stat.label}</div>
 =======
-            <div key={index} className="text-center">
-              <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
-              <div className="text-gray-300">{stat.label}</div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e4e
+>>>>>>> main
             </div>
           ))}
         </div>
