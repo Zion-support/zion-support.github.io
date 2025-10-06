@@ -2,6 +2,15 @@ const { withSentry } = require('./withSentry.cjs');
 const { isValidEmail } = require('./emailUtils.cjs');
 const fs = require('fs');
 const path = require('path');
+<<<<<<< HEAD
+=======
+
+function isValidEmail(email) {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email);
+}
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-4606
 async function handler(req, res) {
   if (req.method !== 'POST') {
     res.statusCode = 405;
@@ -10,18 +19,33 @@ async function handler(req, res) {
     return;
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
   try {
     const { email } = req.body || {};
+=======
+
+  try {
+    const { email } = req.body || {};
+    
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-4606
     if (!isValidEmail(email)) {
       res.statusCode = 400;
       res.json({ error: 'Invalid email' });
       return;
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-4606
     const file = path.join(
       process.cwd(),
       'data',
       'newsletter-subscriptions.json',
     );
+<<<<<<< HEAD
+=======
+    
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-4606
     let existing = [];
     try {
       existing = JSON.parse(fs.readFileSync(file, 'utf8'));
@@ -29,10 +53,15 @@ async function handler(req, res) {
     } catch {
       // File doesn't exist or is invalid, use empty array
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-4606
     existing.push({
       email,
       subscribedAt: new Date().toISOString()
     });
+<<<<<<< HEAD
     fs.writeFileSync(file, JSON.stringify(existing, null, 2));
     res.statusCode = 200;
     res.json({ success: true });
@@ -76,6 +105,12 @@ async function handler(req, res) {
     res.statusCode = 200;
     res.json({ success: true, message: 'Successfully subscribed to newsletter' });
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-3d1d
+=======
+
+    fs.writeFileSync(file, JSON.stringify(existing, null, 2));
+    res.statusCode = 200;
+    res.json({ success: true });
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-4606
   } catch (err) {
     console.error('Subscribe API error:', err);
     res.statusCode = 500;

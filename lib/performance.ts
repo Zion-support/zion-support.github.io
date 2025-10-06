@@ -3,6 +3,7 @@
  * Tracks and reports web vitals and performance metrics
  */
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { onCLS, onFCP, onLCP, onTTFB } from 'web-vitals';
 import type { Metric } from 'web-vitals';
 
@@ -15,6 +16,9 @@ declare global {
 =======
 import { onCLS, onFCP, onLCP, onTTFB, type Metric } from 'web-vitals';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-3d1d
+=======
+import { onCLS, onFCP, onLCP, onTTFB, type Metric } from 'web-vitals';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-4606
 
 // Types
 interface PerformanceMetric {
@@ -60,10 +64,14 @@ const THRESHOLDS = {
   FCP: { good: 1800, poor: 3000 },
   LCP: { good: 2500, poor: 4000 },
 <<<<<<< HEAD
+<<<<<<< HEAD
   TTFB: { good: 800, poor: 1800 },
 =======
   TTFB: { good: 800, poor: 1800 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-3d1d
+=======
+  TTFB: { good: 800, poor: 1800 },
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-4606
 };
 /**
  * Get rating based on metric value
@@ -87,7 +95,11 @@ function sendToAnalytics(metric: Metric): void {
     value: metric.value,
     rating: getRating(metric.name, metric.value),
     delta: metric.delta,
+<<<<<<< HEAD
     id: metric.id
+=======
+    id: metric.id,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-4606
   };
   // Log in development
   if (process.env.NODE_ENV === 'development') {
@@ -311,12 +323,15 @@ export function generatePerformanceReport(): PerformanceReport | null {
 =======
     userAgent: navigator.userAgent,
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-bcb8
 =======
     userAgent: navigator.userAgent
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-be22
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-3d1d
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-4606
   };
 }
 /**
@@ -439,6 +454,7 @@ export default {
   monitorLayoutShifts,
   isSlowConnection,
   getConnectionType,
+<<<<<<< HEAD
   getPerformanceScore
 <<<<<<< HEAD
 };
@@ -448,3 +464,6 @@ export default {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-be22
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-3d1d
+=======
+};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-4606

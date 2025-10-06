@@ -24,9 +24,13 @@ async function handler(req, res) {
   const file = path.join(process.cwd(), 'data', 'onsite-requests.json');
   let existing = [];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-3d1d
+=======
+  
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-4606
   try {
     existing = JSON.parse(fs.readFileSync(file, 'utf8'));
     if (!Array.isArray(existing)) existing = [];
