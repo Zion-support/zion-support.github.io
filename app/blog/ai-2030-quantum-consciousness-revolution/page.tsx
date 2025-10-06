@@ -1,6 +1,7 @@
 import React from 'react';
 import {Metadata} from 'next';
 
+<<<<<<< HEAD
 export const metadata = {
   
   title: "AI 2030: Quantum Consciousness Revolution - Revolutionary 10,000,000x Performance Gains",
@@ -8,6 +9,18 @@ export const metadata = {
       type: "article",
       published Time: '2030-01-15T00:00:00.000Z'
     
+=======
+export const metadata: Metadata = 
+  title: 'AI 2030: Quantum Consciousness Revolution - Revolutionary 10,000,000x Performance Gains',
+  description: 'Discover the revolutionary AI quantum consciousness revolution achieving 10,000,000x performance improvements through quantum-enhanced consciousness fusion and transcendent neural architectures.',
+  keywords: 'AI quantum consciousness, transcendent AI, quantum neural revolution, 2030 breakthrough, consciousness fusion, quantum transcendence',
+  openGraph: {
+    title: 'AI 2030: Quantum Consciousness Revolution - Revolutionary 10,000,000x Performance Gains',
+      description: 'Discover the revolutionary AI quantum consciousness revolution achieving 10,000,000x performance improvements through quantum-enhanced consciousness fusion and transcendent neural architectures.',
+      type: 'article',
+      publishedTime: '2030-01-15T00:00:00.000Z'
+    },
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6b0a
 };
 
 export default function AIQuantum Consciousness Revolution2030() {/* return (

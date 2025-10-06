@@ -1,6 +1,7 @@
 import React from 'react';
 import {Metadata} from 'next';
 
+<<<<<<< HEAD
 export const metadata = {
   
   title: "AI Governance 2026: Enterprise Safety and Compliance Framework",
@@ -8,6 +9,20 @@ export const metadata = {
     type: "article",
     published Time: "2026-01-20T00:00:00.000Z",
     authors: ['Zion Tech Group']};
+=======
+export const metadata: Metadata = 
+  title: 'AI Governance 2026: Enterprise Safety and Compliance Framework',
+  description: 'Comprehensive guide to AI governance, safety protocols, and compliance frameworks for enterprise organizations in 2026. Learn how to implement robust AI safety measures and ensure regulatory compliance.',
+  keywords: ['AI governance', 'AI safety', 'enterprise compliance', 'AI regulations', 'AI risk management', 'AI ethics', '2026'],
+  openGraph: {
+    title: 'AI Governance 2026: Enterprise Safety and Compliance Framework',
+    description: 'Comprehensive guide to AI governance, safety protocols, and compliance frameworks for enterprise organizations.',
+    type: 'article',
+    publishedTime: '2026-01-20T00:00:00.000Z',
+    authors: ['Zion Tech Group'],
+  },
+};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6b0a
 
 export default function AIGovernance2026 Enterprise Safety() {/* return (
     <div> content */}

@@ -17,10 +17,17 @@ export const metadata = {
       locale: "en_US",
       type: 'article'
     },
+<<<<<<< HEAD
   twitter: {
     card: "summary_large_image",,
     title: "AI 2026-2027 Revolutionary Breakthrough: The Ultimate Comprehensive Guide",,
     description: "Discover the revolutionary AI breakthroughs of 2026-2027: Quantum Neural Superintelligence, Transcendent Meta-Intelligence, and Universal Consciousness. $5.8T in proven ROI.",,
+=======
+  twitter: 
+    card: 'summary_large_image',
+    title: 'AI 2026-2027 Revolutionary Breakthrough: The Ultimate Comprehensive Guide',
+    description: 'Discover the revolutionary AI breakthroughs of 2026-2027: Quantum Neural Superintelligence, Transcendent Meta-Intelligence, and Universal Consciousness. $5.8T in proven ROI.',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6b0a
   },
 };
 

@@ -2,11 +2,19 @@ import React from 'react';
 import {Metadata} from 'next';
 import Link from 'next/link';
 
+<<<<<<< HEAD
 export const metadata = {
   
   title: "AI 2026 February Ultimate Consciousness Breakthrough - Zion Tech Group",
   description: "Discover the groundbreaking February 2026 AI breakthrough achieving synthetic consciousness, universal awareness, and $100B enterprise transformation potential.",
   keywords: 'AI consciousness, synthetic intelligence, enterprise transformation, February 2026, Zion Tech Group'};;
+=======
+export const metadata: Metadata = 
+  title: 'AI 2026 February Ultimate Consciousness Breakthrough - Zion Tech Group',
+  description: 'Discover the groundbreaking February 2026 AI breakthrough achieving synthetic consciousness, universal awareness, and $100B enterprise transformation potential.',
+  keywords: 'AI consciousness, synthetic intelligence, enterprise transformation, February 2026, Zion Tech Group',
+};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6b0a
 
 export default function AI2026FebruaryUltimate Consciousness Breakthrough() {/* return (
     <div> content */}

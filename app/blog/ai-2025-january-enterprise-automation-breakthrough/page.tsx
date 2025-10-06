@@ -1,12 +1,24 @@
 import React from 'react';
 import {Metadata} from 'next';
 
+<<<<<<< HEAD
 export const metadata = {
   
   title: "AI 2025: Enterprise Automation Breakthrough - Revolutionary Business Transformation",
     description: "Discover how Fortune 500 companies achieved 95% operational efficiency gains through advanced AI automation systems.",
     type: "article",
     published Time: "2025-01-20T00:00:00Z",
+=======
+export const metadata: Metadata = 
+  title: 'AI 2025: Enterprise Automation Breakthrough - Revolutionary Business Transformation',
+  description: 'Discover how Fortune 500 companies achieved 95% operational efficiency gains through advanced AI automation systems. Learn practical deployment strategies and proven frameworks for enterprise transformation.',
+  keywords: 'AI automation, enterprise transformation, Fortune 500, business intelligence, operational efficiency, AI deployment, machine learning, artificial intelligence',
+  openGraph: {
+    title: 'AI 2025: Enterprise Automation Breakthrough - Revolutionary Business Transformation',
+    description: 'Discover how Fortune 500 companies achieved 95% operational efficiency gains through advanced AI automation systems.',
+    type: 'article',
+    publishedTime: '2025-01-20T00:00:00Z',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6b0a
     authors: ['Zion Tech Group'],
     tags: ['AI', 'Automation', 'Enterprise', 'Business Intelligence', 'Fortune 500']
   

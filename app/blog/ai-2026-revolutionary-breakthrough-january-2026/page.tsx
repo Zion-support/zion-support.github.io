@@ -1,6 +1,7 @@
 import React from 'react';
 import {Metadata} from 'next';
 
+<<<<<<< HEAD
 export const metadata = {
   
   title: "Revolutionary AI Breakthrough: January 2026",
@@ -8,6 +9,18 @@ export const metadata = {
       type: "article",
       published Time: '2026-01-15T00:00:00.000Z'
     
+=======
+export const metadata: Metadata = 
+  title: 'Revolutionary AI Breakthrough: January 2026 - Zion Tech Group',
+  description: 'Discover the groundbreaking AI innovations revolutionizing enterprise operations in January 2026. Meta-cognitive reasoning, quantum-neural networks, and autonomous systems delivering unprecedented results.',
+  keywords: 'AI breakthrough 2026, meta-cognitive AI, quantum neural networks, autonomous operations, enterprise AI transformation',
+  openGraph: {
+    title: 'Revolutionary AI Breakthrough: January 2026',
+      description: 'Discover the groundbreaking AI innovations revolutionizing enterprise operations in January 2026.',
+      type: 'article',
+      publishedTime: '2026-01-15T00:00:00.000Z'
+    },
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6b0a
 };
 
 export default function RevolutionaryAI Breakthrough January2026() {/* return (

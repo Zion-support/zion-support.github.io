@@ -1,6 +1,7 @@
 import React from 'react';
 import {Metadata} from 'next';
 
+<<<<<<< HEAD
 export const metadata = {
   
   title: "Quantum-AI Hybrid Systems: The Next Frontier in Enterprise Computing",
@@ -8,6 +9,20 @@ export const metadata = {
     type: "article",
     published Time: "2026-01-20T00:00:00Z",
     authors: ['Zion Tech Group']};
+=======
+export const metadata: Metadata = 
+  title: 'Quantum-AI Hybrid Systems: The Next Frontier in Enterprise Computing | Zion Tech Group',
+  description: 'Explore how quantum-AI hybrid systems are revolutionizing enterprise computing with unprecedented processing power and optimization capabilities.',
+  keywords: 'Quantum AI, Hybrid Systems, Enterprise Computing, Quantum Computing, AI Optimization, Quantum Neural Networks',
+  openGraph: {
+    title: 'Quantum-AI Hybrid Systems: The Next Frontier in Enterprise Computing',
+    description: 'Discover the revolutionary potential of quantum-AI hybrid systems in enterprise applications.',
+    type: 'article',
+    publishedTime: '2026-01-20T00:00:00Z',
+    authors: ['Zion Tech Group'],
+  },
+};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6b0a
 
 export default function QuantumAIHybrid Systems Page() {/* return (
     <div> content */}

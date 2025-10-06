@@ -1,11 +1,19 @@
 import React from 'react';
 import {Metadata} from 'next';
 
+<<<<<<< HEAD
 export const metadata = {
   
   title: "AI 2026: Advanced Neural Architectures Revolution | Zion Tech Group",
   description: "Discover revolutionary neural architecture breakthroughs achieving 1000x performance improvements with meta-cognitive reasoning and quantum-enhanced processing.",
   keywords: 'AI 2026, neural architectures, meta-cognitive AI, quantum computing, enterprise AI'};;
+=======
+export const metadata: Metadata = 
+  title: 'AI 2026: Advanced Neural Architectures Revolution | Zion Tech Group',
+  description: 'Discover revolutionary neural architecture breakthroughs achieving 1000x performance improvements with meta-cognitive reasoning and quantum-enhanced processing.',
+  keywords: 'AI 2026, neural architectures, meta-cognitive AI, quantum computing, enterprise AI',
+};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6b0a
 
 export default function AI2026Advanced Neural Architectures() {/* return (
     <div> content */}

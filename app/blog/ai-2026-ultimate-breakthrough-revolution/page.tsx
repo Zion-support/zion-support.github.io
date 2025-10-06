@@ -1,12 +1,24 @@
 import React from 'react';
 import {Metadata} from 'next';
 
+<<<<<<< HEAD
 export const metadata = {
   
   title: "AI 2026: Ultimate Breakthrough Revolution",
     description: "Revolutionary AI technologies delivering 1000x performance improvements and 99% automation rates across Fortune 500 enterprises.",
     type: "article",
     published Time: "2026-01-15T00:00:00.000Z",
+=======
+export const metadata: Metadata = 
+  title: 'AI 2026: Ultimate Breakthrough Revolution - Zion Tech Group',
+  description: 'Discover the revolutionary AI breakthroughs of 2026 that are transforming enterprise operations with 1000x performance improvements, 99% automation rates, and $10B+ ROI success stories.',
+  keywords: 'AI 2026, artificial intelligence, enterprise automation, quantum computing, neural networks, breakthrough technology, business transformation',
+  openGraph: {
+    title: 'AI 2026: Ultimate Breakthrough Revolution',
+    description: 'Revolutionary AI technologies delivering 1000x performance improvements and 99% automation rates across Fortune 500 enterprises.',
+    type: 'article',
+    publishedTime: '2026-01-15T00:00:00.000Z',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6b0a
     authors: ['Zion Tech Group'],
     tags: ['AI', 'Technology', 'Innovation', 'Enterprise', 'Automation']};
 

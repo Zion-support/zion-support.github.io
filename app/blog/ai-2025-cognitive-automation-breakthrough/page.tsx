@@ -1,6 +1,7 @@
 import React from 'react';
 import {Metadata} from 'next';
 
+<<<<<<< HEAD
 export const metadata = {
   
   title: "AI 2025: Cognitive Automation Breakthrough",
@@ -8,6 +9,20 @@ export const metadata = {
     type: "article",
     published Time: "2025-01-20T00:00:00Z",
     authors: ['Zion Tech Group']};
+=======
+export const metadata: Metadata = 
+  title: 'AI 2025: Cognitive Automation Breakthrough | Zion Tech Group',
+  description: 'Revolutionary cognitive automation systems delivering 95% accuracy, 87% faster decisions, and $95B success stories. Learn about the breakthrough in AI-driven cognitive processes.',
+  keywords: 'cognitive automation, AI breakthrough, decision automation, cognitive AI, enterprise automation, AI accuracy',
+  openGraph: {
+    title: 'AI 2025: Cognitive Automation Breakthrough',
+    description: 'Revolutionary cognitive automation systems delivering 95% accuracy, 87% faster decisions, and $95B success stories.',
+    type: 'article',
+    publishedTime: '2025-01-20T00:00:00Z',
+    authors: ['Zion Tech Group'],
+  },
+};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6b0a
 
 export default function AI2025Cognitive Automation Breakthrough() {/* return (
     <div> content */}

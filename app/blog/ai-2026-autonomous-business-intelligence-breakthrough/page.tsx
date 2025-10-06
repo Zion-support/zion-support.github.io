@@ -18,9 +18,17 @@ export const metadata = {
     authors: ['Zion Tech Group'],
   },
   twitter: 
+<<<<<<< HEAD
     card: "summary_large_image",
     title: "AI 2026 Autonomous Business Intelligence Breakthrough",
     description: "Revolutionary autonomous BI systems delivering 300% ROI improvements and automated decision-making."};
+=======
+    card: 'summary_large_image',
+    title: 'AI 2026 Autonomous Business Intelligence Breakthrough',
+    description: 'Revolutionary autonomous BI systems delivering 300% ROI improvements and automated decision-making.',
+  },
+};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6b0a
 
 export default function AutonomousBusiness Intelligence Breakthrough() {/* return (
     <div> content */}

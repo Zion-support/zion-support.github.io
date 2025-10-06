@@ -9,7 +9,11 @@ export const metadata = {
     url: "https://ziontechgroup.com/blog/ai-zero-day-threat-detection-2025",
     images: [
       
+<<<<<<< HEAD
         url: "/og-ai-cybersecurity-2025.jpg",
+=======
+        url: '/og-ai-cybersecurity-2025.jpg',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6b0a
         width: 1200,
         height: 630,
         alt: 'AI-Powered Zero-Day Threat Detection'},

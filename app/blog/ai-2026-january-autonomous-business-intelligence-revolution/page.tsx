@@ -2,6 +2,7 @@ import React from 'react';
 import {Metadata} from 'next';
 import Link from 'next/link';
 
+<<<<<<< HEAD
 export const metadata = {
   
   title: "January 2026 Autonomous Business Intelligence Revolution",
@@ -9,6 +10,20 @@ export const metadata = {
     type: "article",
     published Time: "2026-01-25T00:00:00Z",
     authors: ['Zion Tech Group']};
+=======
+export const metadata: Metadata = 
+  title: 'January 2026 Autonomous Business Intelligence Revolution | Zion Tech Group',
+  description: 'Revolutionary autonomous BI systems that provide real-time insights, predictive analytics, and automated decision support for enterprise operations.',
+  keywords: ['autonomous BI', 'business intelligence', 'predictive analytics', 'enterprise AI', 'real-time insights'],
+  openGraph: {
+    title: 'January 2026 Autonomous Business Intelligence Revolution',
+    description: 'Revolutionary autonomous BI systems that provide real-time insights, predictive analytics, and automated decision support for enterprise operations.',
+    type: 'article',
+    publishedTime: '2026-01-25T00:00:00Z',
+    authors: ['Zion Tech Group'],
+  },
+};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6b0a
 
 export default function January2026AutonomousBusiness Intelligence Revolution() {/* return (
     <div> content */}

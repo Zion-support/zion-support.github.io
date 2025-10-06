@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import {Metadata} from 'next';
 
+<<<<<<< HEAD
 export const metadata = {
   
   title: "AI Enterprise Transformation Ultimate Guide 2025: $2B+ ROI Strategies",
@@ -11,6 +12,20 @@ export const metadata = {
     images: [
       
         url: "https://ziontechgroup.com/images/ai-enterprise-transformation-2025.jpg",
+=======
+export const metadata: Metadata = 
+  title: 'AI Enterprise Transformation Ultimate Guide 2025: $2B+ ROI Strategies | Zion Tech Group',
+  description: 'Complete guide to AI enterprise transformation achieving $2B+ ROI. Learn autonomous operations, quantum AI, and multi-agent orchestration strategies from Fortune 500 success stories.',
+  keywords: 'AI enterprise transformation, autonomous operations, quantum AI, multi-agent orchestration, enterprise AI ROI, Fortune 500 AI success, AI strategy, enterprise automation',
+  openGraph: {
+    title: 'AI Enterprise Transformation Ultimate Guide 2025: $2B+ ROI Strategies',
+    description: 'Complete guide to AI enterprise transformation achieving $2B+ ROI. Learn autonomous operations, quantum AI, and multi-agent orchestration strategies.',
+    type: 'article',
+    url: 'https://ziontechgroup.com/blog/ai-enterprise-transformation-ultimate-guide-2025',
+    images: [
+      
+        url: 'https://ziontechgroup.com/images/ai-enterprise-transformation-2025.jpg',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6b0a
         width: 1200,
         height: 630,
         alt: 'AI Enterprise Transformation Ultimate Guide 2025'

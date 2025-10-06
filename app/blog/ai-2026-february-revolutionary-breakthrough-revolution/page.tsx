@@ -2,11 +2,19 @@ import React from 'react';
 import {Metadata} from 'next';
 import Link from 'next/link';
 
+<<<<<<< HEAD
 export const metadata = {
   
   title: "AI 2026 February Revolutionary Breakthrough: The Future of Autonomous Enterprise",
   description: "Discover the revolutionary AI breakthrough of February 2026 that transformed autonomous enterprise operations with 99.9% automation and $3B+ ROI potential.",
   keywords: 'AI breakthrough, autonomous enterprise, February 2026, revolutionary AI, enterprise automation, artificial intelligence'};;
+=======
+export const metadata: Metadata = 
+  title: 'AI 2026 February Revolutionary Breakthrough: The Future of Autonomous Enterprise',
+  description: 'Discover the revolutionary AI breakthrough of February 2026 that transformed autonomous enterprise operations with 99.9% automation and $3B+ ROI potential.',
+  keywords: 'AI breakthrough, autonomous enterprise, February 2026, revolutionary AI, enterprise automation, artificial intelligence',
+};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6b0a
 
 export default function AI2026FebruaryRevolutionary Breakthrough Page() {/* return (
     <div> content */}

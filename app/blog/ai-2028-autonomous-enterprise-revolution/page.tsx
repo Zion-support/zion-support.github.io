@@ -1,6 +1,7 @@
 import React from 'react';
 import {Metadata} from 'next';
 
+<<<<<<< HEAD
 export const metadata = {
   
   title: "AI 2028: Autonomous Enterprise Revolution - The Future of Business",
@@ -8,6 +9,18 @@ export const metadata = {
       type: "article",
       published Time: '2028-01-01T00:00:00.000Z'
     
+=======
+export const metadata: Metadata = 
+  title: 'AI 2028: Autonomous Enterprise Revolution - The Future of Business',
+  description: 'Discover the 2028 autonomous enterprise revolution where AI achieves complete business autonomy, delivering unprecedented efficiency and revolutionary business transformation.',
+  keywords: 'autonomous enterprise, AI 2028, business autonomy, enterprise revolution, AI transformation, future of business',
+  openGraph: {
+    title: 'AI 2028: Autonomous Enterprise Revolution - The Future of Business',
+      description: 'Discover the 2028 autonomous enterprise revolution where AI achieves complete business autonomy, delivering unprecedented efficiency and revolutionary business transformation.',
+      type: 'article',
+      publishedTime: '2028-01-01T00:00:00.000Z'
+    },
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6b0a
 };
 
 export default function AI2028Autonomous Enterprise Revolution() {/* return (

@@ -2,12 +2,24 @@ import React from 'react';
 import {Metadata} from 'next';
 import Link from 'next/link';
 
+<<<<<<< HEAD
 export const metadata = {
   
   title: "AI 2027 Meta-Cognitive Superintelligence Breakthrough",
     description: "Revolutionary breakthrough in meta-cognitive superintelligence with self-aware AI systems.",
     type: "article",
     published Time: "2027-01-30T00:00:00Z",
+=======
+export const metadata: Metadata = 
+  title: 'AI 2027 Meta-Cognitive Superintelligence Breakthrough - Zion Tech Group',
+  description: 'Revolutionary breakthrough in meta-cognitive superintelligence, achieving unprecedented levels of self-aware AI systems and enterprise transformation capabilities.',
+  keywords: 'AI, meta-cognitive, superintelligence, self-aware AI, enterprise AI, 2027, breakthrough, Zion Tech Group',
+  openGraph: {
+    title: 'AI 2027 Meta-Cognitive Superintelligence Breakthrough',
+    description: 'Revolutionary breakthrough in meta-cognitive superintelligence with self-aware AI systems.',
+    type: 'article',
+    publishedTime: '2027-01-30T00:00:00Z',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6b0a
     authors: ['Zion Tech Group'],
     tags: ['AI', 'Meta-Cognitive', 'Superintelligence', 'Enterprise AI']};
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import {Metadata} from 'next';
 
+<<<<<<< HEAD
 export const metadata = {
   
   title: "AI 2026: Neural Architecture Breakthrough - Revolutionary Multi-Modal Intelligence",
@@ -8,6 +9,20 @@ export const metadata = {
     type: "article",
     published Time: "2026-01-15T00:00:00.000Z",
     authors: ['Zion Tech Group']};
+=======
+export const metadata: Metadata = 
+  title: 'AI 2026: Neural Architecture Breakthrough - Revolutionary Multi-Modal Intelligence',
+  description: 'Discover the groundbreaking neural architecture breakthrough that enables 1000x processing speed and 99% accuracy in multi-modal AI systems. Learn how this technology transforms enterprise operations.',
+  keywords: 'AI 2026, neural architecture, multi-modal AI, enterprise AI, breakthrough technology, machine learning',
+  openGraph: {
+    title: 'AI 2026: Neural Architecture Breakthrough - Revolutionary Multi-Modal Intelligence',
+    description: 'Discover the groundbreaking neural architecture breakthrough that enables 1000x processing speed and 99% accuracy in multi-modal AI systems.',
+    type: 'article',
+    publishedTime: '2026-01-15T00:00:00.000Z',
+    authors: ['Zion Tech Group'],
+  },
+};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6b0a
 
 export default function AINeural Architecture Breakthrough() {/* return (
     <div> content */}

@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import {Metadata} from 'next';
 
+<<<<<<< HEAD
 export const metadata = {
   
   title: "AI 2027 Autonomous Enterprise Revolution: Complete Business Autonomy",
@@ -9,6 +10,18 @@ export const metadata = {
       type: "article",
       published Time: '2027-03-20T00:00:00.000Z'
     
+=======
+export const metadata: Metadata = 
+  title: 'AI 2027 Autonomous Enterprise Revolution: Complete Business Autonomy - Zion Tech Group',
+  description: 'Discover how AI 2027 Autonomous Enterprise Revolution delivers complete business autonomy with self-managing operations, autonomous decision-making, and self-evolving business processes.',
+  keywords: 'autonomous enterprise, business autonomy, AI 2027, self-managing operations, autonomous business',
+  openGraph: {
+    title: 'AI 2027 Autonomous Enterprise Revolution: Complete Business Autonomy',
+      description: 'Complete business autonomy with self-managing operations and autonomous decision-making.',
+      type: 'article',
+      publishedTime: '2027-03-20T00:00:00.000Z'
+    },
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6b0a
 };
 
 export default function Autonomous Enterprise Revolution() {/* return (

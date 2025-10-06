@@ -1,6 +1,7 @@
 import React from 'react';
 import {Metadata} from 'next';
 
+<<<<<<< HEAD
 export const metadata = {
   
   title: "Enterprise Automation 2026: Complete Implementation Guide",
@@ -8,6 +9,20 @@ export const metadata = {
     type: "article",
     published Time: "2026-01-20T00:00:00.000Z",
     authors: ['Zion Tech Group']};
+=======
+export const metadata: Metadata = 
+  title: 'Enterprise Automation 2026: Complete Implementation Guide - Zion Tech Group',
+  description: 'Master enterprise automation with our comprehensive 2026 guide. Learn about meta-cognitive AI, autonomous operations, and achieving 98% automation rates.',
+  keywords: 'enterprise automation, AI 2026, meta-cognitive AI, autonomous operations, business process automation, Zion Tech Group',
+  openGraph: {
+    title: 'Enterprise Automation 2026: Complete Implementation Guide',
+    description: 'Master enterprise automation with our comprehensive 2026 guide featuring meta-cognitive AI and autonomous operations',
+    type: 'article',
+    publishedTime: '2026-01-20T00:00:00.000Z',
+    authors: ['Zion Tech Group'],
+  },
+};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6b0a
 
 export default function EnterpriseAutomation2026Guide() {/* return (
     <div> content */}

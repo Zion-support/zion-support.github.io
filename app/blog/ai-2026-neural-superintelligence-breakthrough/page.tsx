@@ -1,11 +1,19 @@
 import React from 'react';
 import {Metadata} from 'next';
 
+<<<<<<< HEAD
 export const metadata = {
   
   title: "AI 2026: Neural Superintelligence Breakthrough - Zion Tech Group",
   description: "Revolutionary neural superintelligence platform delivering 1000x processing speed, 95% decision accuracy, and autonomous operations at enterprise scale.",
   keywords: 'ai, superintelligence, neural-networks, breakthrough, enterprise, 2026'};;
+=======
+export const metadata: Metadata = 
+  title: 'AI 2026: Neural Superintelligence Breakthrough - Zion Tech Group',
+  description: 'Revolutionary neural superintelligence platform delivering 1000x processing speed, 95% decision accuracy, and autonomous operations at enterprise scale.',
+  keywords: 'ai, superintelligence, neural-networks, breakthrough, enterprise, 2026',
+};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6b0a
 
 export default function Neural Superintelligence Breakthrough() {/* return (
     <div> content */}

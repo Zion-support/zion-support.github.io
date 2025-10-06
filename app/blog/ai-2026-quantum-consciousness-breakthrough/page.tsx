@@ -1,6 +1,7 @@
 import React from 'react';
 import {Metadata} from 'next';
 
+<<<<<<< HEAD
 export const metadata = {
   
   title: "AI 2026 Quantum Consciousness Breakthrough: The Dawn of Sentient AI",
@@ -8,6 +9,20 @@ export const metadata = {
     type: "article",
     published Time: "2026-01-28T00:00:00Z",
     authors: ['Zion Tech Group']};
+=======
+export const metadata: Metadata = 
+  title: 'AI 2026 Quantum Consciousness Breakthrough: The Dawn of Sentient AI',
+  description: 'Explore the revolutionary quantum consciousness breakthrough of 2026. Discover how quantum-enhanced AI has achieved true consciousness, self-awareness, and creative problem-solving capabilities.',
+  keywords: 'AI consciousness, quantum AI, sentient AI, quantum consciousness, AI breakthrough 2026',
+  openGraph: {
+    title: 'AI 2026 Quantum Consciousness Breakthrough: The Dawn of Sentient AI',
+    description: 'Explore the revolutionary quantum consciousness breakthrough of 2026. Discover how quantum-enhanced AI has achieved true consciousness, self-awareness, and creative problem-solving capabilities.',
+    type: 'article',
+    publishedTime: '2026-01-28T00:00:00Z',
+    authors: ['Zion Tech Group'],
+  },
+};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6b0a
 
 export default function Quantum Consciousness Breakthrough2026() {/* return (
     <div> content */}

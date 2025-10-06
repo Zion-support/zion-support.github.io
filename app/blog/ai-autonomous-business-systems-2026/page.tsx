@@ -9,7 +9,11 @@ export const metadata = {
     url: "https://ziontechgroup.com/blog/ai-autonomous-business-systems-2026",
     images: [
       
+<<<<<<< HEAD
         url: "/og-autonomous-business-2026.jpg",
+=======
+        url: '/og-autonomous-business-2026.jpg',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6b0a
         width: 1200,
         height: 630,
         alt: 'AI Autonomous Business Systems 2026'},

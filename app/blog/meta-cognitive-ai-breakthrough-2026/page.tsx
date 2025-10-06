@@ -1,12 +1,24 @@
 import React from 'react';
 import {Metadata} from 'next';
 
+<<<<<<< HEAD
 export const metadata = {
   
   title: "Meta-Cognitive AI Breakthrough 2026: AI That Thinks About Thinking",
     description: "Revolutionary AI achieving 95% decision accuracy through meta-cognitive reasoning",
     type: "article",
     published Time: "2026-01-15T00:00:00Z",
+=======
+export const metadata: Metadata = 
+  title: 'Meta-Cognitive AI Breakthrough 2026: AI That Thinks About Thinking',
+  description: 'Discover the revolutionary Meta-Cognitive AI breakthrough achieving 95% decision accuracy through AI that thinks about thinking. Learn how this technology is transforming enterprise operations.',
+  keywords: 'meta-cognitive AI, artificial intelligence, AI breakthrough, enterprise AI, decision accuracy, cognitive reasoning',
+  openGraph: {
+    title: 'Meta-Cognitive AI Breakthrough 2026: AI That Thinks About Thinking',
+    description: 'Revolutionary AI achieving 95% decision accuracy through meta-cognitive reasoning',
+    type: 'article',
+    publishedTime: '2026-01-15T00:00:00Z',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6b0a
     authors: ['Zion Tech Group'],
     tags: ['AI', 'Meta-Cognitive', 'Breakthrough', 'Enterprise']};
 
@@ -195,6 +207,7 @@ origin/cursor/fix-errors-and-merge-to-main-cc0a
               <div className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
                 {[
                   
+<<<<<<< HEAD
                     phase: "Phase 1: Assessment & Planning",
                     duration: "2-4 weeks",
                     description: "Comprehensive evaluation of current AI infrastructure and identification of meta-cognitive implementation opportunities.",
@@ -211,6 +224,24 @@ origin/cursor/fix-errors-and-merge-to-main-cc0a
                     duration: "12-16 weeks",
                     description: "Full-scale implementation across enterprise operations with comprehensive training and change management.",
                     deliverables: ['Full system deployment', 'Team training', '   Continuous    optimization']
+=======
+                    phase: 'Phase 1: Assessment & Planning',
+                    duration: '2-4 weeks',
+                    description: 'Comprehensive evaluation of current AI infrastructure and identification of meta-cognitive implementation opportunities.',
+                    deliverables: ['AI readiness assessment', 'Meta-cognitive strategy', 'Implementation roadmap']
+                  },
+                  
+                    phase: 'Phase 2: Pilot Implementation',
+                    duration: '6-8 weeks',
+                    description: 'Deployment of Meta-Cognitive AI in controlled environments with specific use cases and measurable outcomes.',
+                    deliverables: ['Pilot system deployment', 'Performance metrics', 'ROI validation']
+                  },
+                  
+                    phase: 'Phase 3: Enterprise Rollout',
+                    duration: '12-16 weeks',
+                    description: 'Full-scale implementation across enterprise operations with comprehensive training and change management.',
+                    deliverables: ['Full system deployment', 'Team training', 'Continuous optimization']
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6b0a
                   }
                 ].map((phase, index) => (</div></div>
                   <div key={index} className="text-left"> </div><h3 className="text-left">{phase.phase}</h3>
@@ -262,6 +293,7 @@ origin/cursor/fix-errors-and-merge-to-main-cc0a
           <div className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
             {[
               
+<<<<<<< HEAD
                 title: "Quantum-Neural Networks: 1000x Processing Power",
       description: "Revolutionary processing power combining quantum computing with neural networks.",
       href: "/blog/quantum-neural-networks-2026",
@@ -277,6 +309,23 @@ origin/cursor/fix-errors-and-merge-to-main-cc0a
                 title: "Enterprise AI Transformation: $50M Savings",
       description: "   Fortune    500 company achieves breakthrough results with AI transformation.",
       href: "/blog/enterprise-transformation-2026",
+=======
+                title: 'Quantum-Neural Networks: 1000x Processing Power',
+      description: 'Revolutionary processing power combining quantum computing with neural networks.',
+      href: '/blog/quantum-neural-networks-2026',
+      icon: '⚛️'
+    },
+              
+                title: 'Autonomous Operations: 98% Automation Success',
+      description: 'Self-healing AI systems achieving unprecedented automation rates.',
+      href: '/blog/autonomous-operations-2026',
+      icon: '🤖'
+    },
+              
+                title: 'Enterprise AI Transformation: $50M Savings',
+      description: 'Fortune 500 company achieves breakthrough results with AI transformation.',
+      href: '/blog/enterprise-transformation-2026',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6b0a
       icon: '💰'
     }
             ].map((content, index) => (</div></div>

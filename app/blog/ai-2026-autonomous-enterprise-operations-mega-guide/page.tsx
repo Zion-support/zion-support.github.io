@@ -1,11 +1,19 @@
 import React from 'react';
 import {Metadata} from 'next';
 
+<<<<<<< HEAD
 export const metadata = {
   
   title: "AI 2026: Autonomous Enterprise Operations - Complete Mega Guide | Zion Tech Group",
   description: "The definitive guide to achieving 98% automation with autonomous AI systems. Complete blueprint for enterprise transformation with proven results.",
   keywords: 'ai, automation, enterprise, autonomous-operations, guide, 2026'};;
+=======
+export const metadata: Metadata = 
+  title: 'AI 2026: Autonomous Enterprise Operations - Complete Mega Guide | Zion Tech Group',
+  description: 'The definitive guide to achieving 98% automation with autonomous AI systems. Complete blueprint for enterprise transformation with proven results.',
+  keywords: 'ai, automation, enterprise, autonomous-operations, guide, 2026',
+};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6b0a
 
 export default function AutonomousEnterprise Operations Guide() {/* return (
     <div> content */}

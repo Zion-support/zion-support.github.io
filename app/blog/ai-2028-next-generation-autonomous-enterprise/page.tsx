@@ -17,9 +17,17 @@ export const metadata = {
       type: 'article'
     },
   twitter: 
+<<<<<<< HEAD
     card: "summary_large_image",
     title: "AI 2028: Next-Generation Autonomous Enterprise Revolution",
     description: "Revolutionary AI breakthrough enabling 99.9% autonomous enterprise operations with quantum-enhanced capabilities."};
+=======
+    card: 'summary_large_image',
+    title: 'AI 2028: Next-Generation Autonomous Enterprise Revolution',
+    description: 'Revolutionary AI breakthrough enabling 99.9% autonomous enterprise operations with quantum-enhanced capabilities.',
+  },
+};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6b0a
 
 export default function AI2028NextGeneration Autonomous Enterprise() {/* return (
     <div> content */}

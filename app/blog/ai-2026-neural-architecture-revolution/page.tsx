@@ -1,6 +1,7 @@
 import React from 'react';
 import {Metadata} from 'next';
 
+<<<<<<< HEAD
 export const metadata = {
   
   title: "AI 2026: Neural Architecture Revolution",
@@ -8,6 +9,20 @@ export const metadata = {
     type: "article",
     published Time: "2026-01-15T00:00:00.000Z",
     authors: ['Zion Tech Group']};
+=======
+export const metadata: Metadata = 
+  title: 'AI 2026: Neural Architecture Revolution - Zion Tech Group',
+  description: 'Discover the revolutionary neural architecture breakthroughs that are transforming enterprise AI in 2026. Learn about quantum-neural fusion, meta-cognitive AI, and autonomous operations.',
+  keywords: 'AI 2026, neural architecture, quantum-neural fusion, meta-cognitive AI, enterprise automation, Zion Tech Group',
+  openGraph: {
+    title: 'AI 2026: Neural Architecture Revolution',
+    description: 'Revolutionary neural architecture breakthroughs transforming enterprise AI in 2026',
+    type: 'article',
+    publishedTime: '2026-01-15T00:00:00.000Z',
+    authors: ['Zion Tech Group'],
+  },
+};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6b0a
 
 export default function AINeural Architecture Revolution2026() {/* return (
     <div> content */}

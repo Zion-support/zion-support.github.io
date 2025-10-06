@@ -61,27 +61,49 @@ origin/cursor/fix-errors-and-merge-to-main-cc0a
             {/* Phase 1-3 */}
             {[
               
+<<<<<<< HEAD
                 phase: "Phase 1", 
                 title: "Strategic Assessment", 
                 duration: "Weeks 1-4",
                 description: "Comprehensive AI readiness assessment, strategic planning, and stakeholder alignment.",
+=======
+                phase: 'Phase 1', 
+                title: 'Strategic Assessment', 
+                duration: 'Weeks 1-4',
+                description: 'Comprehensive AI readiness assessment, strategic planning, and stakeholder alignment.',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6b0a
                 outcomes: ['AI Strategy Defined', 'Stakeholder Buy-in', 'Budget Approved'],
                 icon: '🎯'
               },
               
+<<<<<<< HEAD
                 phase: "Phase 2", 
                 title: "Infrastructure Setup", 
                 duration: "Weeks 5-8",
                 description: "Cloud infrastructure, data pipelines, and AI platform deployment.",
+=======
+                phase: 'Phase 2', 
+                title: 'Infrastructure Setup', 
+                duration: 'Weeks 5-8',
+                description: 'Cloud infrastructure, data pipelines, and AI platform deployment.',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6b0a
                 outcomes: ['Cloud Infrastructure', 'Data Pipelines', 'AI Platform Ready'],
                 icon: '🏗️'
               },
               
+<<<<<<< HEAD
                 phase: "Phase 3", 
                 title: "Data Foundation", 
                 duration: "Weeks 9-12",
                 description: "Data governance, quality assurance, and AI-ready data preparation.",
                 outcomes: ['Data Governance', 'Quality Assurance', 'AI-Ready    Data   '],
+=======
+                phase: 'Phase 3', 
+                title: 'Data Foundation', 
+                duration: 'Weeks 9-12',
+                description: 'Data governance, quality assurance, and AI-ready data preparation.',
+                outcomes: ['Data Governance', 'Quality Assurance', 'AI-Ready Data'],
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6b0a
                 icon: '📊'
               }
             ].map((phase, index) => (</div></div>
@@ -108,27 +130,49 @@ origin/cursor/fix-errors-and-merge-to-main-cc0a
             {/* Phase 4-6 */}
             {[
               
+<<<<<<< HEAD
                 phase: "Phase 4", 
                 title: "AI Model Development", 
                 duration: "Weeks 13-20",
                 description: "Custom AI model development, training, and validation for enterprise use cases.",
+=======
+                phase: 'Phase 4', 
+                title: 'AI Model Development', 
+                duration: 'Weeks 13-20',
+                description: 'Custom AI model development, training, and validation for enterprise use cases.',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6b0a
                 outcomes: ['Custom Models', 'Training Complete', 'Validation Passed'],
                 icon: '🧠'
               },
               
+<<<<<<< HEAD
                 phase: "Phase 5", 
                 title: "Integration & Testing", 
                 duration: "Weeks 21-28",
                 description: "System integration, comprehensive testing, and performance optimization.",
+=======
+                phase: 'Phase 5', 
+                title: 'Integration & Testing', 
+                duration: 'Weeks 21-28',
+                description: 'System integration, comprehensive testing, and performance optimization.',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6b0a
                 outcomes: ['System Integration', 'Testing Complete', 'Performance Optimized'],
                 icon: '🔧'
               },
               
+<<<<<<< HEAD
                 phase: "Phase 6", 
                 title: "Pilot Deployment", 
                 duration: "Weeks 29-32",
                 description: "Controlled pilot deployment with select user groups and departments.",
                 outcomes: ['Pilot Deployed', 'User Feedback', 'Metrics    Collected   '],
+=======
+                phase: 'Phase 6', 
+                title: 'Pilot Deployment', 
+                duration: 'Weeks 29-32',
+                description: 'Controlled pilot deployment with select user groups and departments.',
+                outcomes: ['Pilot Deployed', 'User Feedback', 'Metrics Collected'],
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6b0a
                 icon: '🚀'
               }
             ].map((phase, index) => (</div></div>
@@ -155,27 +199,49 @@ origin/cursor/fix-errors-and-merge-to-main-cc0a
             {/* Phase 7-9 */}
             {[
               
+<<<<<<< HEAD
                 phase: "Phase 7", 
                 title: "Full Deployment", 
                 duration: "Weeks 33-40",
                 description: "Enterprise-wide deployment with comprehensive monitoring and support.",
+=======
+                phase: 'Phase 7', 
+                title: 'Full Deployment', 
+                duration: 'Weeks 33-40',
+                description: 'Enterprise-wide deployment with comprehensive monitoring and support.',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6b0a
                 outcomes: ['Full Deployment', 'Monitoring Active', 'Support Ready'],
                 icon: '🌐'
               },
               
+<<<<<<< HEAD
                 phase: "Phase 8", 
                 title: "Optimization", 
                 duration: "Weeks 41-48",
                 description: "Performance optimization, cost reduction, and continuous improvement.",
+=======
+                phase: 'Phase 8', 
+                title: 'Optimization', 
+                duration: 'Weeks 41-48',
+                description: 'Performance optimization, cost reduction, and continuous improvement.',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6b0a
                 outcomes: ['Performance Optimized', 'Costs Reduced', 'Continuous Improvement'],
                 icon: '⚡'
               },
               
+<<<<<<< HEAD
                 phase: "Phase 9", 
                 title: "Scale & Expand", 
                 duration: "Weeks 49-52",
                 description: "Scale successful implementations and expand to additional use cases.",
                 outcomes: ['Scaled Successfully', 'New Use Cases', 'ROI    Maximized   '],
+=======
+                phase: 'Phase 9', 
+                title: 'Scale & Expand', 
+                duration: 'Weeks 49-52',
+                description: 'Scale successful implementations and expand to additional use cases.',
+                outcomes: ['Scaled Successfully', 'New Use Cases', 'ROI Maximized'],
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6b0a
                 icon: '📈'
               }
             ].map((phase, index) => (</div></div>

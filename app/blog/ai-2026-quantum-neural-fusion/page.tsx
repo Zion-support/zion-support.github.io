@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import {Metadata} from 'next';
 
+<<<<<<< HEAD
 export const metadata = {
   
   title: "Quantum-Neural Fusion: The Next Evolution in AI Computing",
@@ -9,6 +10,18 @@ export const metadata = {
       type: "article",
       published Time: '2026-01-20T00:00:00.000Z'
     
+=======
+export const metadata: Metadata = 
+  title: 'Quantum-Neural Fusion: The Next Evolution in AI Computing - Zion Tech Group',
+  description: 'Explore how quantum computing and neural networks are merging to create unprecedented AI capabilities. Discover the future of computational intelligence.',
+  keywords: 'quantum neural networks, quantum computing, AI fusion, neural network evolution, quantum AI',
+  openGraph: {
+    title: 'Quantum-Neural Fusion: The Next Evolution in AI Computing',
+      description: 'Explore how quantum computing and neural networks are merging to create unprecedented AI capabilities.',
+      type: 'article',
+      publishedTime: '2026-01-20T00:00:00.000Z'
+    },
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6b0a
 };
 
 export default function Quantum Neural Fusion() {/* return (

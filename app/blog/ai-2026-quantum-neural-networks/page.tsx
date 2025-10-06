@@ -2,11 +2,22 @@ import React from 'react';
 import Link from 'next/link';
 import {Metadata} from 'next';
 
+<<<<<<< HEAD
 export const metadata = {
   
   title: "AI 2026 Quantum Neural Networks: 1000x Performance Breakthrough",
       description: "Discover how quantum neural networks achieve 1000x performance improvements in AI processing and revolutionary computational capabilities.",
       url: "https://ziontechgroup.com/blog/ai-2026-quantum-neural-networks",
+=======
+export const metadata: Metadata = 
+  title: 'AI 2026 Quantum Neural Networks: 1000x Performance Breakthrough',
+  description: 'Discover how quantum neural networks achieve 1000x performance improvements in AI processing, enabling real-time complex decision making and revolutionary computational capabilities.',
+  keywords: 'quantum neural networks, quantum AI, quantum computing, AI performance, quantum machine learning, enterprise AI',
+  openGraph: {
+    title: 'AI 2026 Quantum Neural Networks: 1000x Performance Breakthrough',
+      description: 'Discover how quantum neural networks achieve 1000x performance improvements in AI processing and revolutionary computational capabilities.',
+      url: 'https://ziontechgroup.com/blog/ai-2026-quantum-neural-networks',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6b0a
       type: 'article'
     
 };

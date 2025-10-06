@@ -9,7 +9,11 @@ export const metadata = {
     url: "https://ziontechgroup.com/blog/ai-2026-revolutionary-breakthroughs",
     images: [
       
+<<<<<<< HEAD
         url: "/og-ai-2026-breakthroughs.jpg",
+=======
+        url: '/og-ai-2026-breakthroughs.jpg',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6b0a
         width: 1200,
         height: 630,
         alt: 'AI 2026 Revolutionary Breakthroughs'},

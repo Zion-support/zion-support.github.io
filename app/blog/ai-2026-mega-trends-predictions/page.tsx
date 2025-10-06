@@ -18,9 +18,17 @@ export const metadata = {
       published Time: '2026-01-25T00:00:00.000Z'
     },
   twitter: 
+<<<<<<< HEAD
     card: "summary_large_image",
     title: "AI 2026 Mega Trends: The Next Frontier of Enterprise Transformation",
     description: "Explore the revolutionary AI trends shaping 2026: Autonomous Operations, Quantum-Neural Networks, and Enterprise AI Governance."};
+=======
+    card: 'summary_large_image',
+    title: 'AI 2026 Mega Trends: The Next Frontier of Enterprise Transformation',
+    description: 'Explore the revolutionary AI trends shaping 2026: Autonomous Operations, Quantum-Neural Networks, and Enterprise AI Governance.',
+  },
+};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6b0a
 
 export default function AITrends2026Page() {/* return (
     <div> content */}

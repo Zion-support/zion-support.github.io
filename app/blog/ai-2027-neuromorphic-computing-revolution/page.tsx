@@ -1,6 +1,7 @@
 import React from 'react';
 import {Metadata} from 'next';
 
+<<<<<<< HEAD
 export const metadata = {
   
   title: "AI 2027: Neuromorphic Computing Revolution - The Future of Brain-Inspired AI",
@@ -8,6 +9,20 @@ export const metadata = {
     type: "article",
     published Time: "2027-01-20T00:00:00.000Z",
     authors: ['Zion Tech Group']};
+=======
+export const metadata: Metadata = 
+  title: 'AI 2027: Neuromorphic Computing Revolution - The Future of Brain-Inspired AI',
+  description: 'Explore the revolutionary neuromorphic computing breakthrough of 2027 that mimics human brain architecture for unprecedented AI performance. Discover how brain-inspired chips are transforming enterprise operations.',
+  keywords: ['AI 2027', 'neuromorphic computing', 'brain-inspired AI', 'spiking neural networks', 'cognitive computing', 'enterprise AI', 'next-generation processors'],
+  openGraph: {
+    title: 'AI 2027: Neuromorphic Computing Revolution - The Future of Brain-Inspired AI',
+    description: 'Explore the revolutionary neuromorphic computing breakthrough of 2027 that mimics human brain architecture.',
+    type: 'article',
+    publishedTime: '2027-01-20T00:00:00.000Z',
+    authors: ['Zion Tech Group'],
+  },
+};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6b0a
 
 export default function AI2027Neuromorphic Computing Revolution() {/* return (
     <div> content */}

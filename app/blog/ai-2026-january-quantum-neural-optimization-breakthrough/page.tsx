@@ -2,6 +2,7 @@ import React from 'react';
 import {Metadata} from 'next';
 import Link from 'next/link';
 
+<<<<<<< HEAD
 export const metadata = {
   
   title: "January 2026 Quantum Neural Optimization Breakthrough",
@@ -9,6 +10,20 @@ export const metadata = {
     type: "article",
     published Time: "2026-01-20T00:00:00Z",
     authors: ['Zion Tech Group']};
+=======
+export const metadata: Metadata = 
+  title: 'January 2026 Quantum Neural Optimization Breakthrough | Zion Tech Group',
+  description: 'Revolutionary quantum-enhanced neural networks achieving unprecedented optimization capabilities for enterprise AI systems.',
+  keywords: ['quantum AI', 'neural networks', 'optimization', 'quantum computing', 'enterprise AI'],
+  openGraph: {
+    title: 'January 2026 Quantum Neural Optimization Breakthrough',
+    description: 'Revolutionary quantum-enhanced neural networks achieving unprecedented optimization capabilities for enterprise AI systems.',
+    type: 'article',
+    publishedTime: '2026-01-20T00:00:00Z',
+    authors: ['Zion Tech Group'],
+  },
+};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6b0a
 
 export default function January2026QuantumNeural Optimization Breakthrough() {/* return (
     <div> content */}

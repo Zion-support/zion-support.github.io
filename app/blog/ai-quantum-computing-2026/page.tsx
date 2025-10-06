@@ -1,6 +1,7 @@
 import React from 'react';
 import {Metadata} from 'next';
 
+<<<<<<< HEAD
 export const metadata = {
   
   title: "AI-Powered Quantum Computing Breakthroughs in 2026",
@@ -8,6 +9,18 @@ export const metadata = {
       type: "article",
       published Time: '2025-01-30T00:00:00.000Z'
     
+=======
+export const metadata: Metadata = 
+  title: 'AI-Powered Quantum Computing Breakthroughs in 2026 | Zion Tech Group',
+  description: 'Explore the revolutionary intersection of AI and quantum computing, featuring breakthrough algorithms, quantum machine learning, and enterprise applications transforming industries.',
+  keywords: 'quantum computing, AI, machine learning, quantum algorithms, enterprise technology, 2026',
+  openGraph: {
+    title: 'AI-Powered Quantum Computing Breakthroughs in 2026',
+      description: 'Discover how AI and quantum computing are converging to solve previously impossible problems.',
+      type: 'article',
+      publishedTime: '2025-01-30T00:00:00.000Z'
+    },
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6b0a
 };
 
 export default function AI Quantum Computing2026() {/* return (

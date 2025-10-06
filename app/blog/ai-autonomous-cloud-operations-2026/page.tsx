@@ -1,6 +1,7 @@
 import React from 'react';
 import {Metadata} from 'next';
 
+<<<<<<< HEAD
 export const metadata = {
   
   title: "AI Autonomous Cloud Operations 2026: Self-Healing Infrastructure Guide",
@@ -8,6 +9,20 @@ export const metadata = {
     type: "article",
     published Time: "2026-01-20T10:00:00Z",
     authors: ['Zion Tech Group']};
+=======
+export const metadata: Metadata = 
+  title: 'AI Autonomous Cloud Operations 2026: Self-Healing Infrastructure Guide',
+  description: 'Master autonomous cloud operations with AI-powered self-healing infrastructure, predictive maintenance, and zero-touch operations for 99.9% uptime.',
+  keywords: 'autonomous cloud operations, AI infrastructure, self-healing systems, cloud automation, DevOps AI, predictive maintenance',
+  openGraph: {
+    title: 'AI Autonomous Cloud Operations 2026: Self-Healing Infrastructure Guide',
+    description: 'Master autonomous cloud operations with AI-powered self-healing infrastructure, predictive maintenance, and zero-touch operations for 99.9% uptime.',
+    type: 'article',
+    publishedTime: '2026-01-20T10:00:00Z',
+    authors: ['Zion Tech Group'],
+  },
+};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6b0a
 
 export default function AIAutonomous Cloud Ops2026() {/* return (
     <div> content */}
@@ -163,7 +178,11 @@ export default function AIAutonomous Cloud Ops2026() {/* return (
             <pre className="text-left"> </p><h3 className="text-left">Implementation    Example</h3>"
             <div className="text-left"> </div><pre className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
 {`// AI Autonomous Cloud Operations Configuration
+<<<<<<< HEAD
 const autonomous    Config    = 
+=======
+const autonomousConfig = 
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6b0a
   monitoring: 
     metrics: ['cpu', 'memory', 'disk', 'network'],
     thresholds: 

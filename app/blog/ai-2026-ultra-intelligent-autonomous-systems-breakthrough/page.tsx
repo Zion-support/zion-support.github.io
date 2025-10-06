@@ -2,11 +2,19 @@ import React from 'react';
 import {Metadata} from 'next';
 import Link from 'next/link';
 
+<<<<<<< HEAD
 export const metadata = {
   
   title: "AI 2026: Ultra-Intelligent Autonomous Systems Breakthrough | Zion Tech Group",
   description: "Revolutionary 99.99% autonomous AI systems with 50,000x performance boost delivering $15.2B success in Fortune 50 manufacturing.",
   keywords: 'ultra-intelligent AI, autonomous systems, 99.99% autonomy, 50,000x performance, quantum-neural fusion, meta-cognitive processing'};;
+=======
+export const metadata: Metadata = 
+  title: 'AI 2026: Ultra-Intelligent Autonomous Systems Breakthrough | Zion Tech Group',
+  description: 'Revolutionary 99.99% autonomous AI systems with 50,000x performance boost delivering $15.2B success in Fortune 50 manufacturing.',
+  keywords: 'ultra-intelligent AI, autonomous systems, 99.99% autonomy, 50,000x performance, quantum-neural fusion, meta-cognitive processing',
+};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6b0a
 
 export default function UltraIntelligentAutonomous Systems Page() {/* return (
     <div> content */}

@@ -2,6 +2,7 @@ import React from 'react';
 import {Metadata} from 'next';
 import Link from 'next/link';
 
+<<<<<<< HEAD
 export const metadata = {
   
   title: "AI 2026 Next-Generation Autonomous Intelligence Revolution: $5.2B Enterprise Transformation",
@@ -9,6 +10,20 @@ export const metadata = {
     type: "article",
     published Time: "2026-01-15T00:00:00Z",
     authors: ['Zion Tech Group']};
+=======
+export const metadata: Metadata = 
+  title: 'AI 2026 Next-Generation Autonomous Intelligence Revolution: $5.2B Enterprise Transformation',
+  description: 'Discover how next-generation autonomous intelligence is revolutionizing enterprise operations with 99.99% automation, universal consciousness, and $5.2B ROI generation.',
+  keywords: 'AI, Autonomous Intelligence, Enterprise Automation, Revolutionary Breakthrough, 2026, $5.2B ROI',
+  openGraph: {
+    title: 'AI 2026 Next-Generation Autonomous Intelligence Revolution: $5.2B Enterprise Transformation',
+    description: 'Discover how next-generation autonomous intelligence is revolutionizing enterprise operations with 99.99% automation, universal consciousness, and $5.2B ROI generation.',
+    type: 'article',
+    publishedTime: '2026-01-15T00:00:00Z',
+    authors: ['Zion Tech Group'],
+  },
+};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6b0a
 
 export default function NextGenAutonomousIntelligence Revolution Page() {/* return (
     <div> content */}

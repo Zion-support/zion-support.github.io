@@ -1,6 +1,7 @@
 import React from 'react';
 import {Metadata} from 'next';
 
+<<<<<<< HEAD
 export const metadata = {
   
   title: "AI Fin Tech Transformation 2026: Complete Digital Banking Revolution",
@@ -8,6 +9,20 @@ export const metadata = {
     type: "article",
     published Time: "2026-01-20T10:00:00Z",
     authors: ['Zion Tech Group']};
+=======
+export const metadata: Metadata = 
+  title: 'AI FinTech Transformation 2026: Complete Digital Banking Revolution',
+  description: 'Transform your financial services with AI-powered FinTech solutions. Achieve 95% automation, $5M+ savings, and digital banking revolution.',
+  keywords: 'AI FinTech, digital banking, financial automation, AI finance, fintech transformation, banking AI',
+  openGraph: {
+    title: 'AI FinTech Transformation 2026: Complete Digital Banking Revolution',
+    description: 'Transform your financial services with AI-powered FinTech solutions. Achieve 95% automation, $5M+ savings, and digital banking revolution.',
+    type: 'article',
+    publishedTime: '2026-01-20T10:00:00Z',
+    authors: ['Zion Tech Group'],
+  },
+};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6b0a
 
 export default function AIFin Tech Transformation2026() {/* return (
     <div> content */}
@@ -110,6 +125,7 @@ export default function AIFin Tech Transformation2026() {/* return (
             <pre className="text-left"> </p><h3 className="text-left">Digital Banking    Architecture</h3>"
             <div className="text-left"> </div><pre className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
 {`// AI Digital Banking Platform
+<<<<<<< HEAD
 const digital BankingAI = 
   customer Service: 
     chatbot: "AI-powered 24/7 support",
@@ -126,6 +142,25 @@ const digital BankingAI =
     investment Advice: "Robo-advisory services",
     compliance: '   Automated    reporting'
   };`}
+=======
+const digitalBankingAI = 
+  customerService: 
+    chatbot: 'AI-powered 24/7 support',
+    voiceAssistant: 'Natural language processing',
+    personalization: 'Behavioral analysis'
+  },
+  security: 
+    fraudDetection: 'Real-time ML algorithms',
+    biometricAuth: 'Face, voice, fingerprint',
+    riskAssessment: 'Predictive modeling'
+  },
+  operations: 
+    loanProcessing: 'Automated underwriting',
+    investmentAdvice: 'Robo-advisory services',
+    compliance: 'Automated reporting'
+  }
+};`}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6b0a
               </pre></pre>
             </div>
         </section>
@@ -257,6 +292,7 @@ origin/cursor/fix-errors-and-merge-to-main-cc0a
             <pre className="text-left"> </p><h3 className="text-left">AI Risk Assessment    Model</h3>"
             <div className="text-left"> </div><pre className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
 {`// AI Risk Management System
+<<<<<<< HEAD
 const risk Assessment = 
   fraud Detection: 
     algorithm: "Deep Learning Neural Networks",
@@ -266,16 +302,37 @@ const risk Assessment =
     },
   credit Risk: 
     model: "Ensemble ML Models",
+=======
+const riskAssessment = 
+  fraudDetection: 
+    algorithm: 'Deep Learning Neural Networks',
+      accuracy: '99.7%',
+      responseTime: '</pre>< 100ms',
+      falsePositives: '< 0.1%'
+    },
+  creditRisk: 
+    model: 'Ensemble ML Models',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6b0a
     features: ['Payment History', 'Income Stability', 'Debt Ratio'],
     accuracy: "94%",
     processing Time: 'Real-time'
   },
+<<<<<<< HEAD
   market Risk: 
     approach: "Monte Carlo Simulation",
       time Horizon: "1-30 days",
       confidence: "95-99%",
       update Frequency: 'Continuous'
     };`}
+=======
+  marketRisk: 
+    approach: 'Monte Carlo Simulation',
+      timeHorizon: '1-30 days',
+      confidence: '95-99%',
+      updateFrequency: 'Continuous'
+    }
+};`}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6b0a
               </pre>
             </div>
         </section>

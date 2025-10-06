@@ -1,12 +1,24 @@
 import React from 'react';
 import {Metadata} from 'next';
 
+<<<<<<< HEAD
 export const metadata = {
   
   title: "AI 2027: Neuromorphic Edge Computing Breakthrough",
     description: "1000x energy efficiency, sub-microsecond latency, $2.3B savings",
     type: "article",
     published Time: "2027-01-15T00:00:00Z",
+=======
+export const metadata: Metadata = 
+  title: 'AI 2027: Neuromorphic Edge Computing Breakthrough - 1000x Efficiency Revolution',
+  description: 'Discover the revolutionary neuromorphic edge computing breakthrough that delivers 1000x energy efficiency, sub-microsecond latency, and $2.3B in enterprise savings. Complete implementation guide and Fortune 500 case studies.',
+  keywords: 'neuromorphic computing, edge AI, energy efficiency, low latency, Fortune 500, AI breakthrough 2027',
+  openGraph: {
+    title: 'AI 2027: Neuromorphic Edge Computing Breakthrough',
+    description: '1000x energy efficiency, sub-microsecond latency, $2.3B savings',
+    type: 'article',
+    publishedTime: '2027-01-15T00:00:00Z',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6b0a
     authors: ['Zion Tech Group'],
     tags: ['AI', 'Neuromorphic Computing', 'Edge Computing', 'Energy Efficiency']};
 

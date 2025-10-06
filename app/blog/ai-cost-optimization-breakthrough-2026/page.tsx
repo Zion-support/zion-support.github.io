@@ -10,17 +10,30 @@ export const metadata = {
     url: "https://ziontechgroup.com/blog/ai-cost-optimization-breakthrough-2026",
     images: [
       
+<<<<<<< HEAD
         url: "/og-ai-cost-optimization-2026.jpg",
+=======
+        url: '/og-ai-cost-optimization-2026.jpg',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6b0a
         width: 1200,
         height: 630,
         alt: 'AI Cost Optimization Breakthrough 2026 - 90% Cost Reduction'},
     ],
   },
   twitter: 
+<<<<<<< HEAD
     card: "summary_large_image",
     title: "AI Cost Optimization Breakthrough 2026: Cut AI Spending by 90%",
     description: "Revolutionary AI cost optimization strategies delivering 90% cost reduction, $200M+ savings, and 10x efficiency gains for Fortune 500 companies.",
     images: ['/og-ai-cost-optimization-2026.jpg']};
+=======
+    card: 'summary_large_image',
+    title: 'AI Cost Optimization Breakthrough 2026: Cut AI Spending by 90%',
+    description: 'Revolutionary AI cost optimization strategies delivering 90% cost reduction, $200M+ savings, and 10x efficiency gains for Fortune 500 companies.',
+    images: ['/og-ai-cost-optimization-2026.jpg'],
+  },
+};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6b0a
 
 export default function AICost Optimization Breakthrough2026() {/* return (
     <div> content */}

@@ -1,11 +1,24 @@
 import React from 'react';
 import {Metadata} from 'next';
 
+<<<<<<< HEAD
 export const metadata = {
   
   title: "AI Enterprise Automation 2026: Complete Mega Guide",,
   description: "Master enterprise AI automation with our comprehensive guide covering autonomous operations and intelligent workflows.",,
   type: 'article'};
+=======
+export const metadata: Metadata = 
+  title: 'AI Enterprise Automation 2026: Complete Mega Guide | Zion Tech Group',
+  description: 'Comprehensive guide to AI enterprise automation in 2026: Autonomous operations, intelligent workflows, and breakthrough automation technologies delivering 98% automation rates.',
+  keywords: 'AI automation, Enterprise automation, Autonomous operations, AI workflows, Enterprise AI, Automation guide',
+  openGraph: {
+    title: 'AI Enterprise Automation 2026: Complete Mega Guide',
+    description: 'Master enterprise AI automation with our comprehensive guide covering autonomous operations and intelligent workflows.',
+    type: 'article',
+  },
+};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6b0a
 
 export default function AIEnterpriseAutomation2026 Mega Guide() {/* return (
     <div> content */}

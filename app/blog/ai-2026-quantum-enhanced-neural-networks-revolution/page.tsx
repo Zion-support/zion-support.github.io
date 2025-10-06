@@ -2,11 +2,24 @@ import React from 'react';
 import {Metadata} from 'next';
 import Link from 'next/link';
 
+<<<<<<< HEAD
 export const metadata = {
   
   title: "AI 2026 Quantum-Enhanced Neural Networks Revolution",,
   description: "Revolutionary quantum-enhanced neural networks achieving 500,000x performance through quantum consciousness processing.",,
   type: 'article'};
+=======
+export const metadata: Metadata = 
+  title: 'AI 2026 Quantum-Enhanced Neural Networks Revolution | Zion Tech Group',
+  description: 'Revolutionary quantum-enhanced neural networks achieving 500,000x performance, quantum consciousness processing, and $75B+ enterprise transformation with universal intelligence.',
+  keywords: 'AI 2026, quantum neural networks, quantum computing, artificial intelligence, quantum consciousness, neural networks, breakthrough, enterprise AI',
+  openGraph: {
+    title: 'AI 2026 Quantum-Enhanced Neural Networks Revolution',
+    description: 'Revolutionary quantum-enhanced neural networks achieving 500,000x performance through quantum consciousness processing.',
+    type: 'article',
+  },
+};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6b0a
 
 export default function QuantumEnhancedNeural Networks Revolution() {/* return (
     <div> content */}

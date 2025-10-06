@@ -1,11 +1,19 @@
 import React from 'react';
 import {Metadata} from 'next';
 
+<<<<<<< HEAD
 export const metadata = {
   
   title: "AI 2026 Ultimate Neural Fusion Breakthrough: 500,000x Performance Revolution",
   description: "Discover the revolutionary neural fusion technology achieving 500,000x performance improvements with universal consciousness integration and $100B+ ROI potential.",
   keywords: 'AI 2026, neural fusion, performance breakthrough, universal consciousness, quantum neural networks, enterprise AI'};;
+=======
+export const metadata: Metadata = 
+  title: 'AI 2026 Ultimate Neural Fusion Breakthrough: 500,000x Performance Revolution',
+  description: 'Discover the revolutionary neural fusion technology achieving 500,000x performance improvements with universal consciousness integration and $100B+ ROI potential.',
+  keywords: 'AI 2026, neural fusion, performance breakthrough, universal consciousness, quantum neural networks, enterprise AI',
+};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6b0a
 
 export default function UltimateNeural Fusion Breakthrough() {/* return (
     <div> content */}

@@ -1,12 +1,24 @@
 import React from 'react';
 import {Metadata} from 'next';
 
+<<<<<<< HEAD
 export const metadata = {
   
   title: "AI 2027: Quantum AI Security Revolution",
     description: "Protect $847B assets with quantum-resistant AI security",
     type: "article",
     published Time: "2027-01-20T00:00:00Z",
+=======
+export const metadata: Metadata = 
+  title: 'AI 2027: Quantum AI Security Revolution - Protect $847B Assets with Quantum-Resistant AI',
+  description: 'Discover the quantum AI security breakthrough that protects $847B in enterprise assets with quantum-resistant encryption, NIST-approved protocols, and 99.97% threat prevention.',
+  keywords: 'quantum AI security, quantum-resistant encryption, cybersecurity, NIST-approved, enterprise security, AI protection',
+  openGraph: {
+    title: 'AI 2027: Quantum AI Security Revolution',
+    description: 'Protect $847B assets with quantum-resistant AI security',
+    type: 'article',
+    publishedTime: '2027-01-20T00:00:00Z',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6b0a
     authors: ['Zion Tech Group'],
     tags: ['AI Security', 'Quantum Computing', 'Cybersecurity', 'Enterprise Security']};
 

@@ -1,11 +1,19 @@
 import React from 'react';
 import {Metadata} from 'next';
 
+<<<<<<< HEAD
 export const metadata = {
   
   title: "AI 2026 June Revolutionary Breakthrough: The Future of Enterprise Intelligence",
   description: "Discover the latest AI breakthroughs transforming enterprise operations with quantum-neural fusion, autonomous decision-making, and 1000x performance improvements.",
   keywords: ['AI 2026', 'quantum computing', 'neural networks', 'enterprise automation', 'artificial intelligence', 'business transformation']};;
+=======
+export const metadata: Metadata = 
+  title: 'AI 2026 June Revolutionary Breakthrough: The Future of Enterprise Intelligence',
+  description: 'Discover the latest AI breakthroughs transforming enterprise operations with quantum-neural fusion, autonomous decision-making, and 1000x performance improvements.',
+  keywords: ['AI 2026', 'quantum computing', 'neural networks', 'enterprise automation', 'artificial intelligence', 'business transformation'],
+};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6b0a
 
 export default function AI2026June Revolutionary Breakthrough() {/* return (
     <div> content */}

@@ -1,12 +1,24 @@
 import React from 'react';
 import {Metadata} from 'next';
 
+<<<<<<< HEAD
 export const metadata = {
   
   title: "January 2025 Cutting-Edge AI Trends: Revolutionary Breakthrough Technologies",
     description: "Latest cutting-edge AI trends revolutionizing enterprise operations with neural consciousness, quantum optimization, and autonomous intelligence.",
     type: "article",
     published Time: "2025-01-20T00:00:00Z",
+=======
+export const metadata: Metadata = 
+  title: 'January 2025 Cutting-Edge AI Trends: Revolutionary Breakthrough Technologies | Zion Tech Group',
+  description: 'Explore the latest cutting-edge AI trends and breakthrough technologies transforming enterprise operations in January 2025. Neural consciousness, quantum optimization, and autonomous intelligence.',
+  keywords: 'AI trends 2025, cutting-edge AI, breakthrough technologies, neural consciousness, quantum AI, autonomous intelligence, enterprise AI',
+  openGraph: {
+    title: 'January 2025 Cutting-Edge AI Trends: Revolutionary Breakthrough Technologies',
+    description: 'Latest cutting-edge AI trends revolutionizing enterprise operations with neural consciousness, quantum optimization, and autonomous intelligence.',
+    type: 'article',
+    publishedTime: '2025-01-20T00:00:00Z',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6b0a
     authors: ['Zion Tech Group'],
     tags: ['AI Trends', 'Cutting-Edge Technology', 'Breakthrough Innovation', 'Enterprise AI']};
 

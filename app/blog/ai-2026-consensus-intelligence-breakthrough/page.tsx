@@ -1,6 +1,7 @@
 import React from 'react';
 import {Metadata} from 'next';
 
+<<<<<<< HEAD
 export const metadata = {
   
   title: "AI 2026: Consensus Intelligence Breakthrough",
@@ -8,6 +9,20 @@ export const metadata = {
     type: "article",
     published Time: "2026-01-15T00:00:00.000Z",
     authors: ['Zion Tech Group']};
+=======
+export const metadata: Metadata = 
+  title: 'AI 2026: Consensus Intelligence Breakthrough - Zion Tech Group',
+  description: 'Discover the revolutionary Consensus Intelligence system that enables AI agents to reach unanimous decisions through quantum-accelerated consensus protocols, delivering 99.9% accuracy in complex enterprise scenarios.',
+  keywords: 'AI 2026, Consensus Intelligence, Quantum AI, Enterprise AI, Decision Making, AI Agents, Quantum Computing',
+  openGraph: {
+    title: 'AI 2026: Consensus Intelligence Breakthrough',
+    description: 'Revolutionary AI system enabling unanimous decisions through quantum-accelerated consensus protocols.',
+    type: 'article',
+    publishedTime: '2026-01-15T00:00:00.000Z',
+    authors: ['Zion Tech Group'],
+  },
+};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6b0a
 
 export default function Consensus Intelligence Page() {/* return (
     <div> content */}

@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import {Metadata} from 'next';
 
+<<<<<<< HEAD
 export const metadata = {
   
   title: "AI Automation 2026: Complete Guide to Enterprise Process Automation",
@@ -9,6 +10,20 @@ export const metadata = {
     type: "article",
     published Time: "2025-01-30T00:00:00Z",
     authors: ['Zion Tech Group']};
+=======
+export const metadata: Metadata = 
+  title: 'AI Automation 2026: Complete Guide to Enterprise Process Automation',
+  description: 'Master AI automation in 2026 with our comprehensive guide covering autonomous agents, intelligent workflows, and enterprise transformation strategies.',
+  keywords: 'AI automation, enterprise automation, autonomous agents, intelligent workflows, business process automation',
+  openGraph: {
+    title: 'AI Automation 2026: Complete Guide to Enterprise Process Automation',
+    description: 'Master AI automation in 2026 with our comprehensive guide covering autonomous agents, intelligent workflows, and enterprise transformation strategies.',
+    type: 'article',
+    publishedTime: '2025-01-30T00:00:00Z',
+    authors: ['Zion Tech Group'],
+  },
+};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6b0a
 
 export default function AIAutomation2026 Complete Guide() {/* return (
     <div> content */}

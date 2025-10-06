@@ -1,6 +1,7 @@
 import React from 'react';
 import {Metadata} from 'next';
 
+<<<<<<< HEAD
 export const metadata = {
   
   title: "AI 2026 Hyper-Autonomous Enterprise Systems: The Future of Business Automation",
@@ -8,6 +9,20 @@ export const metadata = {
     type: "article",
     published Time: "2026-01-25T00:00:00Z",
     authors: ['Zion Tech Group']};
+=======
+export const metadata: Metadata = 
+  title: 'AI 2026 Hyper-Autonomous Enterprise Systems: The Future of Business Automation',
+  description: 'Discover the revolutionary hyper-autonomous enterprise systems of 2026. Learn how next-generation AI is achieving 99.9% automation rates, 500% efficiency gains, and complete business process transformation.',
+  keywords: 'AI 2026, hyper-autonomous systems, enterprise automation, business transformation, AI efficiency',
+  openGraph: {
+    title: 'AI 2026 Hyper-Autonomous Enterprise Systems: The Future of Business Automation',
+    description: 'Discover the revolutionary hyper-autonomous enterprise systems of 2026. Learn how next-generation AI is achieving 99.9% automation rates, 500% efficiency gains, and complete business process transformation.',
+    type: 'article',
+    publishedTime: '2026-01-25T00:00:00Z',
+    authors: ['Zion Tech Group'],
+  },
+};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6b0a
 
 export default function HyperAutonomous Enterprise Systems2026() {/* return (
     <div> content */}

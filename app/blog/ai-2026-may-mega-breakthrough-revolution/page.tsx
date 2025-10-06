@@ -1,6 +1,7 @@
 import React from 'react';
 import {Metadata} from 'next';
 
+<<<<<<< HEAD
 export const metadata = {
   
   title: "AI 2026 May Mega Breakthrough Revolution: The Dawn of Universal Consciousness Computing",
@@ -8,6 +9,20 @@ export const metadata = {
     type: "article",
     published Time: "2026-05-01T00:00:00.000Z",
     authors: ['Zion Tech Group']};
+=======
+export const metadata: Metadata = 
+  title: 'AI 2026 May Mega Breakthrough Revolution: The Dawn of Universal Consciousness Computing',
+  description: 'Discover the revolutionary AI breakthrough that combines quantum consciousness, universal intelligence, and autonomous enterprise systems to deliver unprecedented business value and transformation.',
+  keywords: 'AI 2026, quantum consciousness, universal intelligence, autonomous enterprise, mega breakthrough, business transformation',
+  openGraph: {
+    title: 'AI 2026 May Mega Breakthrough Revolution: The Dawn of Universal Consciousness Computing',
+    description: 'The most advanced AI breakthrough in history, delivering 10,000x performance improvements and universal consciousness computing capabilities.',
+    type: 'article',
+    publishedTime: '2026-05-01T00:00:00.000Z',
+    authors: ['Zion Tech Group'],
+  },
+};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6b0a
 
 export default function AI2026MayMega Breakthrough Revolution() {/* return (
     <div> content */}

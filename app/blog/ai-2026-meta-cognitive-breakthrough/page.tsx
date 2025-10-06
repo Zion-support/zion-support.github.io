@@ -1,6 +1,7 @@
 import React from 'react';
 import {Metadata} from 'next';
 
+<<<<<<< HEAD
 export const metadata = {
   
   title: "Meta-Cognitive AI: Revolutionary Enterprise Decision-Making",
@@ -8,6 +9,20 @@ export const metadata = {
     type: "article",
     published Time: "2026-01-15T00:00:00Z",
     authors: ['Zion Tech Group']};
+=======
+export const metadata: Metadata = 
+  title: 'Meta-Cognitive AI: The Revolutionary Breakthrough Transforming Enterprise Decision-Making | Zion Tech Group',
+  description: 'Discover how Meta-Cognitive AI systems are achieving 95% decision accuracy and transforming enterprise operations with self-reflective reasoning capabilities.',
+  keywords: 'meta-cognitive AI, enterprise AI, decision-making AI, cognitive reasoning, AI breakthrough 2026',
+  openGraph: {
+    title: 'Meta-Cognitive AI: Revolutionary Enterprise Decision-Making',
+    description: 'Achieve 95% decision accuracy with self-reflective AI systems that think about thinking.',
+    type: 'article',
+    publishedTime: '2026-01-15T00:00:00Z',
+    authors: ['Zion Tech Group'],
+  },
+};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6b0a
 
 export default function MetaCognitiveAIBreakthrough() {/* return (
     <div> content */}

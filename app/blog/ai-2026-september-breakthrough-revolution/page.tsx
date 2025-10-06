@@ -1,11 +1,19 @@
 import React from 'react';
 import {Metadata} from 'next';
 
+<<<<<<< HEAD
 export const metadata = {
   
   title: "AI 2026 September Breakthrough Revolution: The Next Frontier of Autonomous Intelligence",
   description: "Discover the revolutionary AI breakthroughs of September 2026, featuring self-evolving neural architectures, quantum-enhanced consciousness, and autonomous enterprise systems that deliver 99.97% operational excellence.",
   keywords: 'AI 2026, September breakthrough, autonomous intelligence, quantum consciousness, neural architectures, enterprise AI'};;
+=======
+export const metadata: Metadata = 
+  title: 'AI 2026 September Breakthrough Revolution: The Next Frontier of Autonomous Intelligence',
+  description: 'Discover the revolutionary AI breakthroughs of September 2026, featuring self-evolving neural architectures, quantum-enhanced consciousness, and autonomous enterprise systems that deliver 99.97% operational excellence.',
+  keywords: 'AI 2026, September breakthrough, autonomous intelligence, quantum consciousness, neural architectures, enterprise AI',
+};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6b0a
 
 export default function September2026 Breakthrough Revolution() {/* return (
     <div> content */}

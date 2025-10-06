@@ -1,6 +1,7 @@
 import React from 'react';
 import {Metadata} from 'next';
 
+<<<<<<< HEAD
 export const metadata = {
   
   title: "AI 2026 Future Trends: Mega Predictions for Enterprise Transformation",
@@ -8,6 +9,20 @@ export const metadata = {
     type: "article",
     published Time: "2026-05-01T00:00:00.000Z",
     authors: ['Zion Tech Group']};
+=======
+export const metadata: Metadata = 
+  title: 'AI 2026 Future Trends: Mega Predictions for Enterprise Transformation',
+  description: 'Explore the revolutionary AI trends and predictions for 2026 that will transform enterprise operations, featuring meta-cognitive AI, quantum computing, and autonomous systems.',
+  keywords: 'AI trends 2026, future predictions, enterprise AI, meta-cognitive AI, quantum computing, autonomous systems',
+  openGraph: {
+    title: 'AI 2026 Future Trends: Mega Predictions for Enterprise Transformation',
+    description: 'Revolutionary AI trends and predictions for 2026 that will transform enterprise operations with unprecedented capabilities.',
+    type: 'article',
+    publishedTime: '2026-05-01T00:00:00.000Z',
+    authors: ['Zion Tech Group'],
+  },
+};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6b0a
 
 export default function AI2026FutureTrends Mega Predictions() {/* return (
     <div> content */}

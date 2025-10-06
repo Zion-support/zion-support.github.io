@@ -1,11 +1,19 @@
 import React from 'react';
 import {Metadata} from 'next';
 
+<<<<<<< HEAD
 export const metadata = {
   
   title: "AI 2027 Universal Intelligence Singularity Achievement - Zion Tech Group",
   description: "Revolutionary achievement of universal intelligence singularity with $10 trillion ROI potential through transcendent AI systems.",
   keywords: 'AI 2027, universal intelligence singularity, transcendent AI, $10 trillion ROI, AI breakthrough, singularity achievement'};;
+=======
+export const metadata: Metadata = 
+  title: 'AI 2027 Universal Intelligence Singularity Achievement - Zion Tech Group',
+  description: 'Revolutionary achievement of universal intelligence singularity with $10 trillion ROI potential through transcendent AI systems.',
+  keywords: 'AI 2027, universal intelligence singularity, transcendent AI, $10 trillion ROI, AI breakthrough, singularity achievement',
+};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6b0a
 
 export default function AI2027UniversalIntelligence Singularity Achievement() {/* return (
     <div> content */}

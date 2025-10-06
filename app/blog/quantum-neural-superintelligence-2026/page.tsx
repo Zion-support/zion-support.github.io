@@ -1,6 +1,7 @@
 import React from 'react';
 import {Metadata} from 'next';
 
+<<<<<<< HEAD
 export const metadata = {
   
   title: "Quantum Neural Superintelligence 2026",
@@ -8,6 +9,20 @@ export const metadata = {
     type: "article",
     published Time: "2026-01-20T00:00:00.000Z",
     authors: ['Zion Tech Group']};
+=======
+export const metadata: Metadata = 
+  title: 'Quantum Neural Superintelligence 2026 - Zion Tech Group',
+  description: 'Explore the revolutionary Quantum Neural Superintelligence system that combines quantum computing with advanced neural networks to achieve superintelligent AI capabilities for enterprise applications.',
+  keywords: 'Quantum AI, Neural Networks, Superintelligence, Quantum Computing, Enterprise AI, AI 2026, Quantum Neural',
+  openGraph: {
+    title: 'Quantum Neural Superintelligence 2026',
+    description: 'Revolutionary AI system combining quantum computing with neural networks for superintelligent capabilities.',
+    type: 'article',
+    publishedTime: '2026-01-20T00:00:00.000Z',
+    authors: ['Zion Tech Group'],
+  },
+};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6b0a
 
 export default function QuantumNeural Superintelligence Page() {/* return (
     <div> content */}

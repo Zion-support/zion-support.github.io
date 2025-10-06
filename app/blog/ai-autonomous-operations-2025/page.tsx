@@ -1,11 +1,24 @@
 import React from 'react';
 import {Metadata} from 'next';
 
+<<<<<<< HEAD
 export const metadata = {
   
   title: "AI 2025: The Enterprise Autonomous Operations Revolution",,
   description: "Discover how Fortune 500 companies are achieving 95% automation rates and $2M+ annual savings through next-generation autonomous AI operations.",,
   type: 'article'};
+=======
+export const metadata: Metadata = 
+  title: 'AI 2025: The Enterprise Autonomous Operations Revolution | Zion Tech Group',
+  description: 'Discover how Fortune 500 companies are achieving 95% automation rates and $2M+ annual savings through next-generation autonomous AI operations.',
+  keywords: 'autonomous AI operations, enterprise automation, AI transformation, Fortune 500, cost savings',
+  openGraph: {
+    title: 'AI 2025: The Enterprise Autonomous Operations Revolution',
+    description: 'Discover how Fortune 500 companies are achieving 95% automation rates and $2M+ annual savings through next-generation autonomous AI operations.',
+    type: 'article',
+  },
+};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6b0a
 
 export default function AI Autonomous Operations2025() {/* return (
     <div> content */}

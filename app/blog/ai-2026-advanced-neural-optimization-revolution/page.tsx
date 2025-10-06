@@ -2,11 +2,19 @@ import React from 'react';
 import {Metadata} from 'next';
 import Link from 'next/link';
 
+<<<<<<< HEAD
 export const metadata = {
   
   title: "AI 2026: Advanced Neural Optimization Revolution - 1000x Performance Breakthrough",
   description: "Discover the revolutionary neural optimization techniques delivering 1000x performance improvements in AI systems. Complete implementation guide with real-world case studies.",
   keywords: 'neural optimization, AI performance, machine learning, deep learning, neural networks, AI breakthrough 2026'};;
+=======
+export const metadata: Metadata = 
+  title: 'AI 2026: Advanced Neural Optimization Revolution - 1000x Performance Breakthrough',
+  description: 'Discover the revolutionary neural optimization techniques delivering 1000x performance improvements in AI systems. Complete implementation guide with real-world case studies.',
+  keywords: 'neural optimization, AI performance, machine learning, deep learning, neural networks, AI breakthrough 2026',
+};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6b0a
 
 export default function BlogPost() {/* return (
     <div> content */}
