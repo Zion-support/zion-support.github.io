@@ -1,34 +1,31 @@
 import React from 'react';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {/* content */}
-  title: 'AI 2026: Consensus Intelligence Breakthrough - Zion Tech Group',
-  description: 'Discover the revolutionary Consensus Intelligence system that enables AI agents to reach unanimous decisions through quantum-accelerated consensus protocols, delivering 99.9% accuracy in complex enterprise scenarios.',
-  keywords: 'AI 2026, Consensus Intelligence, Quantum AI, Enterprise AI, Decision Making, AI Agents, Quantum Computing',
-  openGraph: {
-    title: 'AI 2026: Consensus Intelligence Breakthrough',
+export const metadata = {
+  
+  title: 'AI 2026: Consensus Intelligence Breakthrough',
     description: 'Revolutionary AI system enabling unanimous decisions through quantum-accelerated consensus protocols.',
     type: 'article',
     publishedTime: '2026-01-15T00:00:00.000Z',
     authors: ['Zion Tech Group'],
-  },
+  
+};,
 };
 
 export default function ConsensusIntelligencePage() {
   return (
     <div>/* content */}
-  return (
     <div>
-      <div> </div><div> </div></div>
-    <div className="text-left">{/* Header */}</div></div>
-        <div className="text-left"> </div><span className="text-left">🚀 AI 2026 Breakthrough
+      <div> </div><div> </div>
+      <div className="text-left">{/* Header */}</div>
+      <div className="text-left"> </div><span className="text-left">🚀 AI 2026 Breakthrough
             </span></span>
           </div>
           <h1 className="text-left">
             Consensus Intelligence Breakthrough
           </h1>
-          <p className="text-left"> </p><div className="text-left"> </div><div className="text-left">{/* Header */}</div></div>
-        <div className="text-left"> </div><div className="text-left"> </div><span className="text-left">🚀 AI 2026 Breakthrough
+          <p className="text-left"> </p><div className="text-left"> </div><div className="text-left">{/* Header */}</div>
+      <div className="text-left"> </div><div className="text-left"> </div><span className="text-left">🚀 AI 2026 Breakthrough
             </span></span>
           </div>
           
@@ -47,14 +44,11 @@ export default function ConsensusIntelligencePage() {
         {/* Key Metrics */}
         <div className="text-left"> </div><div className="text-left">99.9%</div>
             <div className="text-left">Consensus Accuracy</div>
-          </div>
-          <div className="text-left">1000x</div>
+      <div className="text-left">1000x</div>
             <div className="text-left">Decision Speed</div>
-          </div>
-          <div className="text-left">$5.2B</div>
+      <div className="text-left">$5.2B</div>
             <div className="text-left">Enterprise Value</div>
-          </div>
-          <div className="text-left">0.3s</div>
+      <div className="text-left">0.3s</div>
             <div className="text-left">Consensus Time</div>
           </div>
 
@@ -98,11 +92,9 @@ export default function ConsensusIntelligencePage() {
           <h3 className="text-left">Real-World Success Metrics</h4>
             <div className="text-left"> </div><div className="text-left">$5.2B</div>
                 <div className="text-left">Total Value Generated</div>
-              </div>
-              <div className="text-left">99.9%</div>
+      <div className="text-left">99.9%</div>
                 <div className="text-left">Decision Accuracy</div>
-              </div>
-              <div className="text-left">0.3s</div>
+      <div className="text-left">0.3s</div>
                 <div className="text-left">Consensus Time</div>
               </div>
           </div>

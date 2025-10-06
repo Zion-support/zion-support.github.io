@@ -1,10 +1,12 @@
 import ArrowRight from 'next/link';
 
 export const metadata = {
+  
   title: 'AI Edge Computing Real-Time Intelligence 2025 | Zion Tech Group',
   description:
     'Deploy intelligence at the source with <10ms latency, 95% bandwidth reduction, and 87% cost savings. Enterprise-ready edge AI blueprint for 2025.',
-};
+
+};;
 
 export default function AIEdgeComputingRealTime2025Page() {
   return (

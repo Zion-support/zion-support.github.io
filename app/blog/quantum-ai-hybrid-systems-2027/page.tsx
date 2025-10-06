@@ -1,29 +1,26 @@
 import React from 'react';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {/* content */}
+export const metadata = {
+  
   title: 'Quantum-AI Hybrid Systems 2027: The Convergence of Quantum Computing and Artificial Intelligence',
-  description: 'Discover the revolutionary quantum-AI hybrid systems of 2027 that combine quantum computing power with advanced AI algorithms. Explore how these systems are solving previously intractable problems.',
-  keywords: ['quantum AI', 'hybrid systems', 'quantum computing', 'artificial intelligence', 'quantum machine learning', 'enterprise solutions', '2027 breakthrough'],
-  openGraph: {
-    title: 'Quantum-AI Hybrid Systems 2027: The Convergence of Quantum Computing and Artificial Intelligence',
     description: 'Discover the revolutionary quantum-AI hybrid systems of 2027 that combine quantum computing power with advanced AI algorithms.',
     type: 'article',
     publishedTime: '2027-02-15T00:00:00.000Z',
     authors: ['Zion Tech Group'],
-  },
+  
+};,
 };
 
 export default function QuantumAIHybridSystems2027() {
   return (
     <div>/* content */}
-  return (
     <div>
-      <div> </div><div> </div></div>
-    <div className="text-left">{/* Hero Section */}</div></div>
+      <div> </div><div> </div>
+      <div className="text-left">{/* Hero Section */}</div></div>
         <h3 className="text-left">
-    <div className="text-left"> </div><div className="text-left">{/* Hero Section */}</div></div>
-        <div className="text-left"> </div><h1 className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
+    <div className="text-left"> </div><div className="text-left">{/* Hero Section */}</div>
+      <div className="text-left"> </div><h1 className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
             Quantum-AI Hybrid Systems 2027
           </h1></h1>
           <p className="text-left">The revolutionary convergence of quantum computing and artificial intelligence that's solving the world's most complex problems

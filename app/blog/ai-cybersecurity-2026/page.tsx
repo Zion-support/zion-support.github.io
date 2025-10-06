@@ -2,18 +2,19 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
+  
   title: 'AI Cybersecurity 2026: Next-Generation Threat Protection',
   description: 'Explore cutting-edge AI cybersecurity solutions for 2026. Advanced threat detection, autonomous response, and zero-trust architecture.',
   keywords: 'AI cybersecurity, threat detection, autonomous security, zero-trust, cyber defense',
-};
+
+};;
 
 export default function AICybersecurity2026() {
   return (
     <div>/* content */}
-  return (
     <div>
-      <div> </div><div> </div></div>
-    <div className="text-left"> </div><span className="text-left"> </span><div className="text-left"> </div><div className="text-left"> </div><div className="text-left"> </div><span className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
+      <div> </div><div> </div>
+      <div className="text-left"> </div><span className="text-left"> </span><div className="text-left"> </div><div className="text-left"> </div><div className="text-left"> </div><span className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
             NEW 2026
           </span></span>
           <span className="text-left">CYBERSECURITY

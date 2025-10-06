@@ -1,22 +1,22 @@
 import React from 'react';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {/* content */}
+export const metadata = {
+  
   title: 'AI 2026: Neural Superintelligence Breakthrough - Zion Tech Group',
   description: 'Revolutionary neural superintelligence platform delivering 1000x processing speed, 95% decision accuracy, and autonomous operations at enterprise scale.',
   keywords: 'ai, superintelligence, neural-networks, breakthrough, enterprise, 2026',
-};
+
+};;
 
 export default function NeuralSuperintelligenceBreakthrough() {
   return (
     <div>/* content */}
-  return (
     <div>
-      <div> </div><div> </div></div>
-    <div className="text-left">{/* Hero Section */}</div></div>
-      <section className="text-left"> </section><div className="text-left"> </div><div className="text-left" style={{ animationDelay: '2s' }}> </div></div>
-        
-        <div className="text-left"> </div><span className="text-left">🚀 Revolutionary AI Breakthrough
+      <div> </div><div> </div>
+      <div className="text-left">{/* Hero Section */}</div></div>
+      <section className="text-left"> </section><div className="text-left"> </div><div className="text-left" style={{ animationDelay: '2s' }}> </div>
+      <div className="text-left"> </div><span className="text-left">🚀 Revolutionary AI Breakthrough
               </span></span>
             </div>
             <h1 className="text-left">
@@ -26,9 +26,8 @@ export default function NeuralSuperintelligenceBreakthrough() {
             </p></p>
             <p className="text-left"> </p><section className="text-left"> </section><div className="text-left"> </div><div className="text-left">"
           </div><div className="text-left" style={{ animationDelay: '2s' }}>"
-        </div></div>
-        
-        <div className="text-left"> </div><div className="text-left"> </div><div className="text-left"> </div><span className="text-left">🚀 Revolutionary AI Breakthrough
+        </div>
+      <div className="text-left"> </div><div className="text-left"> </div><div className="text-left"> </div><span className="text-left">🚀 Revolutionary AI Breakthrough
               </span></span>
             </div>
             
@@ -96,12 +95,10 @@ export default function NeuralSuperintelligenceBreakthrough() {
             <div className="text-left"> </div><div className="text-left">🧠</div>
                 <div className="text-left">95%</div>
                 <div className="text-left">Decision Accuracy</div>
-              </div>
-              <div className="text-left">⚡</div>
+      <div className="text-left">⚡</div>
                 <div className="text-left">1000x</div>
                 <div className="text-left">Processing Speed</div>
-              </div>
-              <div className="text-left">🤖</div>
+      <div className="text-left">🤖</div>
                 <div className="text-left">98%</div>
                 <div className="text-left">Automation Rate</div>
               </div>

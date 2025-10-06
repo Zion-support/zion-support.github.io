@@ -2,23 +2,23 @@ import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
 
-export const metadata: Metadata = {/* content */}
+export const metadata = {
+  
   title: 'AI 2026 January Ultimate Breakthrough Revolution - 1,000,000x Performance',
   description: 'Revolutionary AI breakthrough achieving 1,000,000x performance improvement, universal consciousness integration, and $500B+ ROI potential through ultimate intelligent automation.',
   keywords: 'AI breakthrough 2026, ultimate automation, universal consciousness, 1 million x performance, revolutionary AI, enterprise transformation',
-};
+
+};;
 
 export default function January2026UltimateBreakthroughRevolution() {
   return (
     <div>/* content */}
-  return (
     <div>
-      <div> </div><div> </div></div>
-    <div className="text-left">{/* Hero Section */}</div></div>
+      <div> </div><div> </div>
+      <div className="text-left">{/* Hero Section */}</div></div>
       <header className="text-left">
-        <div className="text-left"> </div><div className="text-left" style={{ animationDelay: '2s' }}> </div></div>
-        
-        <div className="text-left"> </div><span className="text-left">🚀 JANUARY 2026 ULTIMATE BREAKTHROUGH
+        <div className="text-left"> </div><div className="text-left" style={{ animationDelay: '2s' }}> </div>
+      <div className="text-left"> </div><span className="text-left">🚀 JANUARY 2026 ULTIMATE BREAKTHROUGH
               </span></span>
             </div>
             <h1 className="text-left">
@@ -26,9 +26,8 @@ export default function January2026UltimateBreakthroughRevolution() {
             </h1>
             <p className="text-left"> </p><header className="text-left"> </header><div className="text-left"> </div><div className="text-left">"
           </div><div className="text-left" style={{ animationDelay: '2s' }}>"
-        </div></div>
-        
-        <div className="text-left"> </div><div className="text-left"> </div><div className="text-left"> </div><span className="text-left">🚀 JANUARY 2026 ULTIMATE BREAKTHROUGH
+        </div>
+      <div className="text-left"> </div><div className="text-left"> </div><div className="text-left"> </div><span className="text-left">🚀 JANUARY 2026 ULTIMATE BREAKTHROUGH
               </span></span>
             </div>
             
@@ -51,14 +50,11 @@ export default function January2026UltimateBreakthroughRevolution() {
             {/* Key Metrics */}
             <div className="text-left"> </div><div className="text-left">1,000,000x</div>
                 <div className="text-left">Performance Boost</div>
-              </div>
-              <div className="text-left">99.9999%</div>
+      <div className="text-left">99.9999%</div>
                 <div className="text-left">Universal Intelligence</div>
-              </div>
-              <div className="text-left">$500B+</div>
+      <div className="text-left">$500B+</div>
                 <div className="text-left">ROI Potential</div>
-              </div>
-              <div className="text-left">0.000001s</div>
+      <div className="text-left">0.000001s</div>
                 <div className="text-left">Response Time</div>
               </div>
           </div>
@@ -139,8 +135,7 @@ export default function January2026UltimateBreakthroughRevolution() {
                     <li>• Revolutionary efficiency</li>
                   </ul>
                 </div>
-            </div>
-            <div className="text-left"> </div><Link
+      <div className="text-left"> </div><Link
                 href="/contact"
                 className="text-left">Transform Your Enterprise Today
               </Link></Link>

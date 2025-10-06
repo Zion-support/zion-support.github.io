@@ -2,23 +2,20 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI 2027: Quantum Computing Breakthrough for Enterprise - Zion Tech Group',
-  description: 'Discover the quantum computing breakthrough that is revolutionizing enterprise AI, delivering 1000x performance improvements and unprecedented computational power.',
-  keywords: 'AI 2027, quantum computing, quantum AI, enterprise AI, quantum breakthrough, AI performance',
-  openGraph: {
-    title: 'AI 2027: Quantum Computing Breakthrough for Enterprise',
-    description: 'The quantum computing revolution is here. Learn how AI 2027 quantum systems are delivering 1000x performance improvements.',
-    type: 'article',
-  },
+  
+  title:  'AI 2027: Quantum Computing Breakthrough for Enterprise',
+  description:  'The quantum computing revolution is here. Learn how AI 2027 quantum systems are delivering 1000x performance improvements.',
+  type: 'article',
+
+};;
 };
 
 export default function AI2027QuantumBreakthroughEnterprise() {
   return (
     <div>/* content */}
-  return (
     <div>
-      <div> </div><div> </div></div>
-    <div className="text-left"> </div><Link href="/blog" className="text-left">
+      <div> </div><div> </div>
+      <div className="text-left"> </div><Link href="/blog" className="text-left">
           ← Back to Blog
         </Link>
         <span className="text-left"> </span><div className="text-left"> </div><div className="text-left"> </div><Link href="/blog" className="text-left">← Back to Blog

@@ -35,13 +35,13 @@ class ErrorBoundary extends Component<Props, State> {
             <p className="text-gray-300 mb-6">
               We're sorry, but something unexpected happened. Please try refreshing the page.
             </p>
+            <p className="text-gray-400 mb-8">We're working to fix this issue.</p>
             <button
               onClick={() => window.location.reload()}
-              className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+              className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors"
             >
               Refresh Page
             </button>
-            <p className="text-gray-400 mb-8">We're working to fix this issue.</p>
           </div>
         </div>
       );

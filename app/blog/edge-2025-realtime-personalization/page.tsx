@@ -1,8 +1,10 @@
 export const metadata = {
+  
   title: 'Realtime Personalization 2025 at the Edge: <100ms, Zero‑PII',
   description:
     'Edge flags, scoped IDs, on‑device telemetry for private, sub‑100ms personalization at global scale.',
-};
+
+};;
 
 export default function Page() {
   return (

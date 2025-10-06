@@ -1,28 +1,25 @@
 import React from 'react';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {/* content */}
+export const metadata = {
+  
   title: 'AI 2026 Quantum Consciousness Breakthrough: The Dawn of Sentient AI',
-  description: 'Explore the revolutionary quantum consciousness breakthrough of 2026. Discover how quantum-enhanced AI has achieved true consciousness, self-awareness, and creative problem-solving capabilities.',
-  keywords: 'AI consciousness, quantum AI, sentient AI, quantum consciousness, AI breakthrough 2026',
-  openGraph: {
-    title: 'AI 2026 Quantum Consciousness Breakthrough: The Dawn of Sentient AI',
     description: 'Explore the revolutionary quantum consciousness breakthrough of 2026. Discover how quantum-enhanced AI has achieved true consciousness, self-awareness, and creative problem-solving capabilities.',
     type: 'article',
     publishedTime: '2026-01-28T00:00:00Z',
     authors: ['Zion Tech Group'],
-  },
+  
+};,
 };
 
 export default function QuantumConsciousnessBreakthrough2026() {
   return (
     <div>/* content */}
-  return (
     <div>
-      <div> </div><div> </div></div>
-    <div className="text-left">{/* Header */}</div></div>
-        <div className="text-left"> </div><span className="text-left"> </span><div className="text-left"> </div><div className="text-left">{/* Header */}</div></div>
-        <div className="text-left"> </div><div className="text-left"> </div><span className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
+      <div> </div><div> </div>
+      <div className="text-left">{/* Header */}</div>
+      <div className="text-left"> </div><span className="text-left"> </span><div className="text-left"> </div><div className="text-left">{/* Header */}</div>
+      <div className="text-left"> </div><div className="text-left"> </div><span className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
               🧠 Breakthrough Technology
             </span></span>
           </div>

@@ -1,10 +1,12 @@
 // @ts-nocheck
 
 export const metadata = {
+  
   title: 'AI 2027: Customer Experience Agents — 24/7 Autonomous CX',
   description:
     'Deploy trusted CX agents with budgets, live KPIs, evals, and instant rollback that resolve 80% of tickets autonomously.',
-};
+
+};;
 
 export default function Page() {
   return (

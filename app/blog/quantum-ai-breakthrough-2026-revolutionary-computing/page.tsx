@@ -5,12 +5,11 @@ import { ArrowRight, Atom, Zap, Shield, Brain, TrendingUp, Target, CheckCircle }
 export default function QuantumAIBreakthrough2026() {
   return (
     <div>/* content */}
-  return (
     <div>
-      <div> </div><div> </div></div>
-    <div className="text-left">{/* Hero Section */}</div></div>
-      <section className="text-left"> </section><div className="text-left"> </div><div className="text-left" style={{ animationDelay: '3s' }}> </div><div className="text-left" style={{ animationDelay: '1.5s' }}> </div></div>
-        <div className="text-left"> </div><span className="text-left">⚛️ January 2026 • Quantum AI Revolution
+      <div> </div><div> </div>
+      <div className="text-left">{/* Hero Section */}</div></div>
+      <section className="text-left"> </section><div className="text-left"> </div><div className="text-left" style={{ animationDelay: '3s' }}> </div><div className="text-left" style={{ animationDelay: '1.5s' }}> </div>
+      <div className="text-left"> </div><span className="text-left">⚛️ January 2026 • Quantum AI Revolution
               </span></span>
             </div>
             <h1 className="text-left">
@@ -19,9 +18,8 @@ export default function QuantumAIBreakthrough2026() {
             <p className="text-left">Experience the future of computing as Zion Tech Group unveils the world's first commercially viable quantum-neural AI systems, delivering unprecedented processing power and solving problems previously impossible.
             </p></p>
             <span className="text-left"> </span><Atom className="text-left" />
-      <section className="text-left"> </section><div className="text-left"> </div><div className="text-left"> </div><div className="text-left" style={{ animationDelay: '3s' }}> </div><div className="text-left" style={{ animationDelay: '1.5s' }}> </div></div>
-        
-        <div className="text-left"> </div><div className="text-left"> </div><div className="text-left"> </div><span className="text-left">⚛️ January 2026 • Quantum AI Revolution
+      <section className="text-left"> </section><div className="text-left"> </div><div className="text-left"> </div><div className="text-left" style={{ animationDelay: '3s' }}> </div><div className="text-left" style={{ animationDelay: '1.5s' }}> </div>
+      <div className="text-left"> </div><div className="text-left"> </div><div className="text-left"> </div><span className="text-left">⚛️ January 2026 • Quantum AI Revolution
               </span></span>
             </div>
             
@@ -53,9 +51,8 @@ export default function QuantumAIBreakthrough2026() {
               { value='$10B', label: 'Market Value Created', icon: '💰', color: 'from-yellow-400 to-orange-400' }
             ].map((stat, index) => (</div></div>
               <div key={index} className="text-left"> </div><div className="text-left">{stat.icon}</div>
-                <div className={`text-4xl font-extrabold bg-gradient-to-r ${stat.color} bg-clip-text text-transparent mb-2`}>{stat.value}</div></div>
-                </div>
-                <div className="text-left">{stat.label}</div></div>
+                <div className={`text-4xl font-extrabold bg-gradient-to-r ${stat.color} bg-clip-text text-transparent mb-2`}>{stat.value}</div>
+      <div className="text-left">{stat.label}</div></div>
                 </div>
               </div>
             ))}

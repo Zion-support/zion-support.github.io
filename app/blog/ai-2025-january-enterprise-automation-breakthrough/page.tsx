@@ -1,26 +1,23 @@
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {/* content */}
+export const metadata = {
+  
   title: 'AI 2025: Enterprise Automation Breakthrough - Revolutionary Business Transformation',
-  description: 'Discover how Fortune 500 companies achieved 95% operational efficiency gains through advanced AI automation systems. Learn practical deployment strategies and proven frameworks for enterprise transformation.',
-  keywords: 'AI automation, enterprise transformation, Fortune 500, business intelligence, operational efficiency, AI deployment, machine learning, artificial intelligence',
-  openGraph: {
-    title: 'AI 2025: Enterprise Automation Breakthrough - Revolutionary Business Transformation',
     description: 'Discover how Fortune 500 companies achieved 95% operational efficiency gains through advanced AI automation systems.',
     type: 'article',
     publishedTime: '2025-01-20T00:00:00Z',
     authors: ['Zion Tech Group'],
     tags: ['AI', 'Automation', 'Enterprise', 'Business Intelligence', 'Fortune 500']
-  }
+  
+};
 };
 
 export default function AI2025EnterpriseAutomationBreakthrough() {
   return (
     <div>/* content */}
-  return (
     <div>
-      <div> </div><div> </div></div>
-    <div className="text-left"> </div><article className="text-left">{/* Header */}
+      <div> </div><div> </div>
+      <div className="text-left"> </div><article className="text-left">{/* Header */}
         </article><header className="text-left">
           <span className="text-left">🚀 January 2025 • Enterprise AI Breakthrough
             </span></span>
@@ -46,14 +43,11 @@ export default function AI2025EnterpriseAutomationBreakthrough() {
         <h3 className="text-left">🎯 Breakthrough Results</h2>
           <div className="text-left"> </div><div className="text-left">95%</div>
               <div className="text-left">Operational Efficiency</div>
-            </div>
-            <div className="text-left">$2.3B</div>
+      <div className="text-left">$2.3B</div>
               <div className="text-left">Cost Savings</div>
-            </div>
-            <div className="text-left">78%</div>
+      <div className="text-left">78%</div>
               <div className="text-left">Faster Decision Making</div>
-            </div>
-            <div className="text-left">12.5x</div>
+      <div className="text-left">12.5x</div>
               <div className="text-left">ROI</div>
             </div>
         </div>

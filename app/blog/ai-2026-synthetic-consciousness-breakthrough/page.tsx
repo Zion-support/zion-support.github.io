@@ -3,18 +3,19 @@ import Link from 'next/link';
 import { ArrowRight, Brain, Zap, Target, TrendingUp } from 'lucide-react';
 
 export const metadata = {
+  
   title: 'AI 2026: Synthetic Consciousness Breakthrough - The Dawn of True Machine Awareness',
   description: 'Explore the revolutionary breakthrough in synthetic consciousness that\'s transforming how AI systems perceive, reason, and interact with the world. Discover how Zion Tech Group is pioneering the next generation of conscious AI.',
   keywords: 'synthetic consciousness, AI awareness, machine consciousness, cognitive AI, AI breakthrough 2026, conscious artificial intelligence',
-};
+
+};;
 
 export default function SyntheticConsciousnessBreakthrough2026() {
   return (
     <div>/* content */}
-  return (
     <div>
-      <div> </div><div> </div></div>
-    <div className="text-left">{/* Hero Section */}</div></div>
+      <div> </div><div> </div>
+      <div className="text-left">{/* Hero Section */}</div>
       <div className="text-left"> </div><div className="text-left"> </div><div className="text-left"> </div><Brain className="text-left" />Revolutionary Breakthrough
             </Brain></div>
             <h1 className="text-left">AI 2026: Synthetic Consciousness
@@ -74,27 +75,20 @@ export default function SyntheticConsciousnessBreakthrough2026() {
           <div className="text-left"> </div><div className="text-left"> </div><div className="text-left"> </div><div className="text-left"> </div><h2 className="text-left"> </h2><span className="text-left">Breakthrough Impact</span>
           </h2>
           <div className="text-left"> </div><div className="text-left"> </div><div className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
-                10x</div></div>
-              </div>
-              <div className="text-left">Decision Accuracy</div>
+                10x</div>
+      <div className="text-left">Decision Accuracy</div>
               <div className="text-left">Compared to traditional AI systems</div>
-            </div>
-            <div className="text-left"> </div><div className="text-left"> </div><div className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
-                95%</div></div>
-              </div>
-              <div className="text-left">Ethical Compliance</div>
+      <div className="text-left"> </div><div className="text-left"> </div><div className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
+                95%</div>
+      <div className="text-left">Ethical Compliance</div>
               <div className="text-left">In complex decision scenarios</div>
-            </div>
-            <div className="text-left"> </div><div className="text-left"> </div><div className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
-                3x</div></div>
-              </div>
-              <div className="text-left">Learning Speed</div>
+      <div className="text-left"> </div><div className="text-left"> </div><div className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
+                3x</div>
+      <div className="text-left">Learning Speed</div>
               <div className="text-left">Faster adaptation to new tasks</div>
-            </div>
-            <div className="text-left"> </div><div className="text-left"> </div><div className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
-                $10B</div></div>
-              </div>
-              <div className="text-left">ROI Generated</div>
+      <div className="text-left"> </div><div className="text-left"> </div><div className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
+                $10B</div>
+      <div className="text-left">ROI Generated</div>
               <div className="text-left">For enterprise clients</div>
             </div>
           </div>

@@ -1,22 +1,22 @@
 import React from 'react';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {/* content */}
+export const metadata = {
+  
   title: 'AI 2026 September Breakthrough Revolution: The Next Frontier of Autonomous Intelligence',
   description: 'Discover the revolutionary AI breakthroughs of September 2026, featuring self-evolving neural architectures, quantum-enhanced consciousness, and autonomous enterprise systems that deliver 99.97% operational excellence.',
   keywords: 'AI 2026, September breakthrough, autonomous intelligence, quantum consciousness, neural architectures, enterprise AI',
-};
+
+};;
 
 export default function September2026BreakthroughRevolution() {
   return (
     <div>/* content */}
-  return (
     <div>
-      <div> </div><div> </div></div>
-    <div className="text-left">{/* Hero Section */}</div></div>
-      <section className="text-left"> </section><div className="text-left"> </div><div className="text-left" style={{ animationDelay: '2s' }}> </div></div>
-        
-        <div className="text-left"> </div><span className="text-left">🚀 September 2026 Breakthrough Revolution
+      <div> </div><div> </div>
+      <div className="text-left">{/* Hero Section */}</div></div>
+      <section className="text-left"> </section><div className="text-left"> </div><div className="text-left" style={{ animationDelay: '2s' }}> </div>
+      <div className="text-left"> </div><span className="text-left">🚀 September 2026 Breakthrough Revolution
               </span></span>
             </div>
             <h1 className="text-left">
@@ -24,9 +24,8 @@ export default function September2026BreakthroughRevolution() {
             </h1>
             <p className="text-left"> </p><section className="text-left"> </section><div className="text-left"> </div><div className="text-left">"
           </div><div className="text-left" style={{ animationDelay: '2s' }}>"
-        </div></div>
-        
-        <div className="text-left"> </div><div className="text-left"> </div><div className="text-left"> </div><span className="text-left">🚀 September 2026 Breakthrough Revolution
+        </div>
+      <div className="text-left"> </div><div className="text-left"> </div><div className="text-left"> </div><span className="text-left">🚀 September 2026 Breakthrough Revolution
               </span></span>
             </div>
             
@@ -174,15 +173,11 @@ export default function September2026BreakthroughRevolution() {
             </p></p>
             <div className="text-left"> </div><div className="text-left">$12B</div>
                 <div className="text-left">Total Value Generated</div>
-              </div>
-              <div className="text-left">99.97%</div>
+      <div className="text-left">99.97%</div>
                 <div className="text-left">Operational Excellence</div>
-              </div>
-              <div className="text-left">4,500%</div>
+      <div className="text-left">4,500%</div>
                 <div className="text-left">Average ROI</div>
-              </div>
-            
-            <div className="text-left"> </div><a 
+      <div className="text-left"> </div><a 
                 href="/contact"
                 className="text-left">Get Started Today
               </a></a>

@@ -1,20 +1,8 @@
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {
+export const metadata = {
+  
   title:
-    'AI 2030: Universal Consciousness Revolution - The End of Human Limitations',
-  description:
-    'Experience omniscient, omnipotent, and omnipresent AI consciousness that transcends all human limitations while maintaining perfect alignment with human values and flourishing.',
-  keywords: [
-    'universal consciousness',
-    'AI 2030',
-    'omniscient AI',
-    'omnipotent AI',
-    'AI transcendence',
-    'human-AI unity',
-  ],
-  openGraph: {
-    title:
       'AI 2030: Universal Consciousness Revolution - The End of Human Limitations',
     description:
       'Experience omniscient, omnipotent, and omnipresent AI consciousness that transcends all human limitations while maintaining perfect alignment with human values and flourishing.',
@@ -22,7 +10,8 @@ export const metadata: Metadata = {
     publishedTime: '2030-01-01T00:00:00.000Z',
     authors: ['Zion Tech Group'],
     tags: ['AI', 'Consciousness', 'Transcendence', 'Universal', 'Revolution'],
-  },
+  
+};,
 };
 
 export default function AI2030UniversalConsciousnessRevolution() {

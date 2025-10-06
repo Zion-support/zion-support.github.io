@@ -1,10 +1,12 @@
 import ArrowRight from 'next/link';
 
 export const metadata = {
+  
   title: 'Edge 2026: Attested Analytics — Zero‑PII Insights with Signed Proofs',
   description:
     'Scoped IDs, on‑device aggregation, DP noise, and signed attestations for trustworthy insights at <100ms.',
-};
+
+};;
 
 export default function Page() {
   return (

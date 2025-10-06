@@ -1,19 +1,20 @@
 import React from 'react';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {/* content */}
+export const metadata = {
+  
   title: 'AI 2027: Consensus Intelligence Revolution - 1,000,000x Performance',
   description: 'Revolutionary consensus intelligence AI delivering 1,000,000x performance improvements, universal decision-making, and $50B+ ROI across enterprises.',
   keywords: 'AI 2027, consensus intelligence, 1,000,000x performance, universal AI, revolutionary technology',
-};
+
+};;
 
 export default function ConsensusIntelligenceRevolution() {
   return (
     <div>/* content */}
-  return (
     <div>
-      <div> </div><div> </div></div>
-    <div className="text-left">{/* Header */}</div></div>
+      <div> </div><div> </div>
+      <div className="text-left">{/* Header */}</div>
       <div className="text-left"> </div><span className="text-left">🚀 AI 2027 Consensus Intelligence Revolution
           </span></span>
         </div>
@@ -33,14 +34,11 @@ export default function ConsensusIntelligenceRevolution() {
         </p>
         <div className="text-left"> </div><div className="text-left">1,000,000x</div>
             <div className="text-left">Performance Boost</div>
-          </div>
-          <div className="text-left">Universal</div>
+      <div className="text-left">Universal</div>
             <div className="text-left">Decision Making</div>
-          </div>
-          <div className="text-left">$50B+</div>
+      <div className="text-left">$50B+</div>
             <div className="text-left">Enterprise ROI</div>
-          </div>
-          <div className="text-left">0.0001ms</div>
+      <div className="text-left">0.0001ms</div>
             <div className="text-left">Response Time</div>
           </div>
       </div>
@@ -74,14 +72,10 @@ export default function ConsensusIntelligenceRevolution() {
         <div className="text-left"> </div><div className="text-left">$25B</div>
             <div className="text-left">Global Technology Leader</div>
             <div className="text-left">Fortune 10 company achieved universal consensus across all operations with 1,000,000x performance.</div>
-          </div>
-          
-          <div className="text-left">$15B</div>
+      <div className="text-left">$15B</div>
             <div className="text-left">Financial Services Giant</div>
             <div className="text-left">Leading bank achieved universal decision-making across all trading algorithms and risk management.</div>
-          </div>
-          
-          <div className="text-left">$10B</div>
+      <div className="text-left">$10B</div>
             <div className="text-left">Healthcare Network</div>
             <div className="text-left">Global hospital network achieved universal consensus in diagnostic accuracy and treatment protocols.</div>
           </div>

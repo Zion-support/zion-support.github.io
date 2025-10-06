@@ -1,17 +1,14 @@
 // @ts-nocheck
 
 export const metadata = {
-  title:
-    'AI 2026 Cost Optimization Blueprint: 30–70% Savings without Quality Loss',
-  description:
-    'Practical patterns to cut AI costs: routing, caching, quantization, truncation, and guardrails with measured quality parity.',
-  openGraph: {
-    title: 'AI 2026 Cost Optimization Blueprint',
+  
+  title: 'AI 2026 Cost Optimization Blueprint',
     description:
       'Reduce AI spend 30–70% using small-sufficient routing, semantic caches, and token discipline with quality scorecards.',
     type: 'article',
     publishedTime: '2026-01-15T00:00:00Z',
-  },
+  
+};,
 };
 
 export default function Page() {

@@ -1,25 +1,22 @@
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {/* content */}
+export const metadata = {
+  
   title: 'AI 2026 January: Quantum Consciousness Breakthrough - The Next Evolution',
-  description: 'Discover the revolutionary quantum consciousness breakthrough that is reshaping AI capabilities, enabling unprecedented intelligence and consciousness fusion in enterprise systems.',
-  keywords: ['AI 2026', 'quantum consciousness', 'AI breakthrough', 'consciousness fusion', 'quantum AI', 'enterprise AI'],
-  openGraph: {
-    title: 'AI 2026 January: Quantum Consciousness Breakthrough - The Next Evolution',
     description: 'Discover the revolutionary quantum consciousness breakthrough that is reshaping AI capabilities and enabling unprecedented intelligence.',
     type: 'article',
     publishedTime: '2026-01-01T00:00:00Z',
     authors: ['Zion Tech Group'],
-  },
+  
+};,
 };
 
 export default function AI2026JanuaryQuantumConsciousnessBreakthrough() {
   return (
     <div>/* content */}
-  return (
     <div>
-      <div> </div><div> </div></div>
-    <div className="text-left"> </div><article className="text-left"> </a><header className="text-left">
+      <div> </div><div> </div>
+      <div className="text-left"> </div><article className="text-left"> </a><header className="text-left">
             <span className="text-left"> </span><div className="text-left"> </div><div className="text-left"> </div><article className="text-left"> </article><header className="text-left"> </header><div className="text-left"> </div><span className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
                 🌟 January 2026 Breakthrough
               </span></span>

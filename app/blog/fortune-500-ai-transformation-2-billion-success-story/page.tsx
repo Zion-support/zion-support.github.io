@@ -1,22 +1,22 @@
 import React from 'react';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {/* content */}
+export const metadata = {
+  
   title: 'Fortune 500 AI Transformation: $2.3B Success Story | Zion Tech Group',
   description: 'Exclusive case study: How a Fortune 500 company achieved $2.3B in savings through comprehensive AI transformation using Neural Superintelligence and Autonomous Operations.',
   keywords: 'case-study, fortune-500, ai-transformation, success-story, roi, neural-superintelligence',
-};
+
+};;
 
 export default function Fortune500AITransformationCaseStudy() {
   return (
     <div>/* content */}
-  return (
     <div>
-      <div> </div><div> </div></div>
-    <div className="text-left">{/* Hero Section */}</div></div>
-      <section className="text-left"> </section><div className="text-left"> </div><div className="text-left" style={{ animationDelay: '2s' }}> </div></div>
-        
-        <div className="text-left"> </div><span className="text-left">💰 Exclusive Fortune 500 Case Study
+      <div> </div><div> </div>
+      <div className="text-left">{/* Hero Section */}</div></div>
+      <section className="text-left"> </section><div className="text-left"> </div><div className="text-left" style={{ animationDelay: '2s' }}> </div>
+      <div className="text-left"> </div><span className="text-left">💰 Exclusive Fortune 500 Case Study
               </span></span>
             </div>
             <h1 className="text-left">
@@ -26,9 +26,8 @@ export default function Fortune500AITransformationCaseStudy() {
             </p></p>
             <p className="text-left"> </p><section className="text-left"> </section><div className="text-left"> </div><div className="text-left">"
           </div><div className="text-left" style={{ animationDelay: '2s' }}>"
-        </div></div>
-        
-        <div className="text-left"> </div><div className="text-left"> </div><div className="text-left"> </div><span className="text-left">💰 Exclusive Fortune 500 Case Study
+        </div>
+      <div className="text-left"> </div><div className="text-left"> </div><div className="text-left"> </div><span className="text-left">💰 Exclusive Fortune 500 Case Study
               </span></span>
             </div>
             
@@ -44,18 +43,13 @@ export default function Fortune500AITransformationCaseStudy() {
             </p></p>
             <div className="text-left"> </div><div className="text-left">$2.3B</div>
                 <div className="text-left">Total Savings</div>
-              </div>
-              <div className="text-left">98%</div>
+      <div className="text-left">98%</div>
                 <div className="text-left">Automation Rate</div>
-              </div>
-              <div className="text-left">300%</div>
+      <div className="text-left">300%</div>
                 <div className="text-left">ROI</div>
-              </div>
-              <div className="text-left">18mo</div>
+      <div className="text-left">18mo</div>
                 <div className="text-left">Payback Period</div>
-              </div>
-
-            <div className="text-left"> </div><a 
+      <div className="text-left"> </div><a 
                 href="/"
                 className="text-left">Achieve Similar Results
               </a></a>

@@ -1,16 +1,14 @@
 import ArrowRight from 'next/link';
 
 export const metadata = {
-  title: 'GenAI Reliability Scorecards 2027 | Zion Tech Group',
-  description:
-    'Live KPIs + budgets + rollback for affordable, reliable GenAI in 2027.',
-  openGraph: {
-    title: 'GenAI Reliability Scorecards 2027',
+  
+  title: 'GenAI Reliability Scorecards 2027',
     description:
       'Live KPIs + budgets + rollback for affordable, reliable GenAI.',
     type: 'article',
     publishedTime: '2027-01-20T00:00:00Z',
-  },
+  
+};,
 };
 
 export default function GenAIReliabilityScorecards2027Page() {

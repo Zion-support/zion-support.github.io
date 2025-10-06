@@ -1,29 +1,26 @@
 import React from 'react';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {/* content */}
+export const metadata = {
+  
   title: 'AI 2026: Breakthrough Innovations Reshaping Enterprise Technology',
-  description: 'Discover the revolutionary AI innovations that are transforming enterprise operations in 2026. From autonomous agent factories to quantum neural networks, explore the cutting-edge technologies driving business transformation.',
-  keywords: ['AI 2026', 'enterprise AI', 'autonomous agents', 'quantum computing', 'neural networks', 'business transformation', 'innovation'],
-  openGraph: {
-    title: 'AI 2026: Breakthrough Innovations Reshaping Enterprise Technology',
     description: 'Discover the revolutionary AI innovations that are transforming enterprise operations in 2026.',
     type: 'article',
     publishedTime: '2026-01-15T00:00:00.000Z',
     authors: ['Zion Tech Group'],
-  },
+  
+};,
 };
 
 export default function AI2026BreakthroughInnovations() {
   return (
     <div>/* content */}
-  return (
     <div>
-      <div> </div><div> </div></div>
-    <div className="text-left">{/* Hero Section */}</div></div>
+      <div> </div><div> </div>
+      <div className="text-left">{/* Hero Section */}</div></div>
         <h3 className="text-left">
-    <div className="text-left"> </div><div className="text-left">{/* Hero Section */}</div></div>
-        <div className="text-left"> </div><h1 className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
+    <div className="text-left"> </div><div className="text-left">{/* Hero Section */}</div>
+      <div className="text-left"> </div><h1 className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
             AI 2026: Breakthrough Innovations
           </h1></h1>
           <p className="text-left">Revolutionary AI technologies reshaping enterprise operations and driving unprecedented business transformation

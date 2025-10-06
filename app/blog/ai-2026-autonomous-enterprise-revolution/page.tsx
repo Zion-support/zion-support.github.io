@@ -1,28 +1,25 @@
 import React from 'react';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {/* content */}
-  title: 'AI 2026: Autonomous Enterprise Revolution - Zion Tech Group',
-  description: 'Discover how AI 2026 is revolutionizing enterprise operations with 99% automation rates, self-healing systems, and autonomous decision-making capabilities.',
-  keywords: 'AI automation, enterprise revolution, autonomous operations, self-healing systems, business automation, AI 2026',
-  openGraph: {
-    title: 'AI 2026: Autonomous Enterprise Revolution',
+export const metadata = {
+  
+  title: 'AI 2026: Autonomous Enterprise Revolution',
     description: 'Revolutionary AI automation achieving 99% enterprise autonomy with self-healing systems and autonomous decision-making.',
     type: 'article',
     publishedTime: '2026-01-15T00:00:00.000Z',
     authors: ['Zion Tech Group'],
     tags: ['AI Automation', 'Enterprise', 'Revolution', 'Autonomous', 'Business'],
-  },
+  
+};,
 };
 
 export default function AI2026AutonomousEnterpriseRevolution() {
   return (
     <div>/* content */}
-  return (
     <div>
-      <div> </div><div> </div></div>
-    <div className="text-left">{/* Hero Section */}</div></div>
-        <div className="text-left"> </div><span className="text-left">🤖 AUTONOMOUS REVOLUTION
+      <div> </div><div> </div>
+      <div className="text-left">{/* Hero Section */}</div>
+      <div className="text-left"> </div><span className="text-left">🤖 AUTONOMOUS REVOLUTION
             </span></span>
           </div>
           <h1 className="text-left">
@@ -39,8 +36,8 @@ export default function AI2026AutonomousEnterpriseRevolution() {
             <
             <span className="text-left"> </span><div className="text-left">Zero-Touch</div>
               <div className="text-left">Operations</div>
-    <div className="text-left"> </div><div className="text-left">{/* Hero Section */}</div></div>
-        <div className="text-left"> </div><div className="text-left"> </div><span className="text-left">🤖 AUTONOMOUS REVOLUTION
+    <div className="text-left"> </div><div className="text-left">{/* Hero Section */}</div>
+      <div className="text-left"> </div><div className="text-left"> </div><span className="text-left">🤖 AUTONOMOUS REVOLUTION
             </span></span>
           </div>
           
@@ -241,8 +238,7 @@ origin/cursor/fix-errors-and-merge-to-main-cc0a
             <div className="text-left">99.9%</div>
               <div className="text-left">System Uptime</div>
               <div className="text-left">Self-healing capabilities</div>
-            </div>
-            <div className="text-left">500%</div>
+      <div className="text-left">500%</div>
               <div className="text-left">ROI Achieved</div>
               <div className="text-left">Within 12 months</div>
             </div>

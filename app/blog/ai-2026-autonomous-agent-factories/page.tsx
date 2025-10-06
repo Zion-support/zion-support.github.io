@@ -1,26 +1,23 @@
 import React from 'react';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {/* content */}
+export const metadata = {
+  
   title: 'AI 2026: Autonomous Agent Factories - The Future of Enterprise Automation',
-  description: 'Discover how autonomous agent factories are revolutionizing enterprise automation in 2026. Learn about self-replicating AI systems, agent orchestration, and achieving 95% automation rates with breakthrough agent factory architectures.',
-  keywords: 'autonomous agent factories, AI automation 2026, enterprise AI agents, agent orchestration, self-replicating AI, AI agent systems',
-  openGraph: {
-    title: 'AI 2026: Autonomous Agent Factories - The Future of Enterprise Automation',
     description: 'Revolutionary autonomous agent factories achieving 95% enterprise automation rates through self-replicating AI systems and advanced agent orchestration.',
     type: 'article',
     publishedTime: '2025-01-30T00:00:00Z',
     authors: ['Zion Tech Group'],
-  },
+  
+};,
 };
 
 export default function AI2026AutonomousAgentFactoriesPage() {
   return (
     <div>/* content */}
-  return (
     <div>
-      <div> </div><div> </div></div>
-    <div className="text-left">{/* Header */}</div></div>
+      <div> </div><div> </div>
+      <div className="text-left">{/* Header */}</div></div>
         <header className="text-left">
           <span className="text-left">🤖 Latest AI Innovation • January 30, 2025
             </span></span>
@@ -110,11 +107,9 @@ export default function AI2026AutonomousAgentFactoriesPage() {
           <h3 className="text-left">Proven Results from Fortune 500 Implementations</h4>
             <div className="text-left"> </div><div className="text-left">95%</div>
                 <div className="text-left">Process Automation Rate</div>
-              </div>
-              <div className="text-left">$50M+</div>
+      <div className="text-left">$50M+</div>
                 <div className="text-left">Annual Cost Savings</div>
-              </div>
-              <div className="text-left">300%</div>
+      <div className="text-left">300%</div>
                 <div className="text-left">ROI in First Year</div>
               </div>
           </div>

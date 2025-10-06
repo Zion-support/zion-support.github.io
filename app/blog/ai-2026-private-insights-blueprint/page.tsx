@@ -1,8 +1,10 @@
 export const metadata = {
+  
   title: 'Edge Private Insights 2026: Consentless Metrics Blueprint',
   description:
     'Scoped IDs, on‑device aggregation, and DP noise for actionable insights without PII.',
-};
+
+};;
 
 export default function Page() {
   return (

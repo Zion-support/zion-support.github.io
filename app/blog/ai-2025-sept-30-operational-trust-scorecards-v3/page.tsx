@@ -2,15 +2,13 @@
 import ArrowRight from 'next/link';
 
 export const metadata = {
-  title: 'Operational Trust Scorecards v3 (Sep 30, 2025) | Zion Tech Group',
-  description:
-    'Practical blueprint to measure and improve operational trust for AI systems with live scorecards, budgets, and guardrails.',
-  openGraph: {
-    title: 'Operational Trust Scorecards v3',
-    description:
+  
+  title:  'Operational Trust Scorecards v3',
+  description: 
       'Measure reliability, cost, safety, and value with live AI scorecards.',
-    type: 'article',
-  },
+  type: 'article',
+
+};;
 };
 
 export default function Page() {

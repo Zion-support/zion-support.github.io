@@ -1,26 +1,23 @@
 import React from 'react';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {/* content */}
+export const metadata = {
+  
   title: 'Enterprise Automation 2026: Complete Mega Guide to 98% Automation Success',
-  description: 'The definitive guide to achieving 98% enterprise automation with meta-cognitive AI, autonomous operations, and self-healing systems. Transform your business with proven strategies and real-world case studies.',
-  keywords: 'enterprise automation, AI automation, meta-cognitive AI, autonomous operations, business process automation, digital transformation',
-  openGraph: {
-    title: 'Enterprise Automation 2026: Complete Mega Guide to 98% Automation Success',
     description: 'The definitive guide to achieving 98% enterprise automation with meta-cognitive AI and autonomous operations.',
     type: 'article',
     publishedTime: '2026-01-20T00:00:00.000Z',
     authors: ['Zion Tech Group'],
-  },
+  
+};,
 };
 
 export default function EnterpriseAutomationMegaGuide() {
   return (
     <div>/* content */}
-  return (
     <div>
-      <div> </div><div> </div></div>
-    <div className="text-left"> </div><article className="text-left">{/* Hero Section */}
+      <div> </div><div> </div>
+      <div className="text-left"> </div><article className="text-left">{/* Hero Section */}
           </a><header className="text-left">
             <span className="text-left">🤖 Complete Automation Guide
               </span></span>
@@ -208,14 +205,10 @@ export default function EnterpriseAutomationMegaGuide() {
             <div className="text-left"> </div><div className="text-left">98%</div>
                 <div className="text-left">Automation Rate</div>
                 <div className="text-left">Average across all processes</div>
-              </div>
-              
-              <div className="text-left">$2.3B</div>
+      <div className="text-left">$2.3B</div>
                 <div className="text-left">Total Value</div>
                 <div className="text-left">Generated for clients</div>
-              </div>
-              
-              <div className="text-left">1.4</div>
+      <div className="text-left">1.4</div>
                 <div className="text-left">Month Payback</div>
                 <div className="text-left">Average ROI timeline</div>
               </div>

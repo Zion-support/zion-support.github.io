@@ -1,28 +1,25 @@
 import React from 'react';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {/* content */}
+export const metadata = {
+  
   title: 'AI 2026 Hyper-Autonomous Enterprise Systems: The Future of Business Automation',
-  description: 'Discover the revolutionary hyper-autonomous enterprise systems of 2026. Learn how next-generation AI is achieving 99.9% automation rates, 500% efficiency gains, and complete business process transformation.',
-  keywords: 'AI 2026, hyper-autonomous systems, enterprise automation, business transformation, AI efficiency',
-  openGraph: {
-    title: 'AI 2026 Hyper-Autonomous Enterprise Systems: The Future of Business Automation',
     description: 'Discover the revolutionary hyper-autonomous enterprise systems of 2026. Learn how next-generation AI is achieving 99.9% automation rates, 500% efficiency gains, and complete business process transformation.',
     type: 'article',
     publishedTime: '2026-01-25T00:00:00Z',
     authors: ['Zion Tech Group'],
-  },
+  
+};,
 };
 
 export default function HyperAutonomousEnterpriseSystems2026() {
   return (
     <div>/* content */}
-  return (
     <div>
-      <div> </div><div> </div></div>
-    <div className="text-left">{/* Header */}</div></div>
-        <div className="text-left"> </div><span className="text-left"> </span><div className="text-left"> </div><div className="text-left">{/* Header */}</div></div>
-        <div className="text-left"> </div><div className="text-left"> </div><span className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
+      <div> </div><div> </div>
+      <div className="text-left">{/* Header */}</div>
+      <div className="text-left"> </div><span className="text-left"> </span><div className="text-left"> </div><div className="text-left">{/* Header */}</div>
+      <div className="text-left"> </div><div className="text-left"> </div><span className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
               🚀 Revolutionary Technology
             </span></span>
           </div>

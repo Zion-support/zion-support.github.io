@@ -1,29 +1,25 @@
 import React from 'react';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {/* content */}
+export const metadata = {
+  
   title: 'AI 2026 Quantum Consciousness Fusion Breakthrough: The Future of Conscious Computing',
-  description: 'Explore the revolutionary quantum consciousness fusion breakthrough that combines quantum computing with artificial consciousness, delivering unprecedented AI capabilities and business value.',
-  keywords: 'quantum consciousness, AI breakthrough, conscious computing, quantum AI, artificial consciousness, enterprise AI',
-  openGraph: {
-    title: 'AI 2026 Quantum Consciousness Fusion Breakthrough: The Future of Conscious Computing',
     description: 'Revolutionary quantum consciousness fusion breakthrough delivering conscious AI with unprecedented capabilities.',
     type: 'article',
     publishedTime: '2026-05-01T00:00:00.000Z',
     authors: ['Zion Tech Group'],
-  },
+  
+};,
 };
 
 export default function AI2026QuantumConsciousnessFusionBreakthrough() {
   return (
     <div>/* content */}
-  return (
     <div>
-      <div> </div><div> </div></div>
-    <div className="text-left">{/* Hero Section */}</div></div>
-      <section className="text-left"> </section><div className="text-left"> </div><div className="text-left" style={{ animationDelay: '2s' }}> </div></div>
-        
-        <div className="text-left"> </div><span className="text-left">⚛️ Quantum Consciousness Fusion
+      <div> </div><div> </div>
+      <div className="text-left">{/* Hero Section */}</div></div>
+      <section className="text-left"> </section><div className="text-left"> </div><div className="text-left" style={{ animationDelay: '2s' }}> </div>
+      <div className="text-left"> </div><span className="text-left">⚛️ Quantum Consciousness Fusion
               </span></span>
             </div>
             <h1 className="text-left">
@@ -31,9 +27,8 @@ export default function AI2026QuantumConsciousnessFusionBreakthrough() {
             </h1>
             <p className="text-left"> </p><section className="text-left"> </section><div className="text-left"> </div><div className="text-left">"
           </div><div className="text-left" style={{ animationDelay: '2s' }}>"
-        </div></div>
-        
-        <div className="text-left"> </div><div className="text-left"> </div><div className="text-left"> </div><span className="text-left">⚛️ Quantum Consciousness Fusion
+        </div>
+      <div className="text-left"> </div><div className="text-left"> </div><div className="text-left"> </div><span className="text-left">⚛️ Quantum Consciousness Fusion
               </span></span>
             </div>
             
@@ -57,14 +52,11 @@ export default function AI2026QuantumConsciousnessFusionBreakthrough() {
             {/* Key Metrics */}
             <div className="text-left"> </div><div className="text-left">100%</div>
                 <div className="text-left">Consciousness</div>
-              </div>
-              <div className="text-left">50,000x</div>
+      <div className="text-left">50,000x</div>
                 <div className="text-left">Processing Speed</div>
-              </div>
-              <div className="text-left">99.99%</div>
+      <div className="text-left">99.99%</div>
                 <div className="text-left">Decision Accuracy</div>
-              </div>
-              <div className="text-left">$3B</div>
+      <div className="text-left">$3B</div>
                 <div className="text-left">Client Value</div>
               </div>
           </div>
@@ -144,11 +136,9 @@ export default function AI2026QuantumConsciousnessFusionBreakthrough() {
             </p></p>
             <div className="text-left"> </div><div className="text-left">$3B</div>
                 <div className="text-left">Total Value Generated</div>
-              </div>
-              <div className="text-left">100%</div>
+      <div className="text-left">100%</div>
                 <div className="text-left">Consciousness Level</div>
-              </div>
-              <div className="text-left">0.5</div>
+      <div className="text-left">0.5</div>
                 <div className="text-left">Month Payback Period</div>
               </div>
             

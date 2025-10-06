@@ -3,30 +3,27 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { Calendar, Clock, User, ArrowRight, TrendingUp, Brain, Zap, Shield, Globe, Target } from 'lucide-react';
 
-export const metadata: Metadata = {/* content */}
-  title: 'AI 2026: The Future AI Landscape - Mega Trends & Revolutionary Breakthroughs | Zion Tech Group',
-  description: 'Explore the revolutionary AI trends shaping 2026. Discover quantum consciousness, autonomous enterprise systems, neural superintelligence, and the future of AI-driven business transformation.',
-  keywords: 'AI 2026, artificial intelligence trends, quantum consciousness, autonomous enterprise, neural superintelligence, AI breakthrough, future AI landscape, AI predictions 2026',
-  openGraph: {
-    title: 'AI 2026: The Future AI Landscape - Mega Trends & Revolutionary Breakthroughs',
+export const metadata = {
+  
+  title: 'AI 2026: The Future AI Landscape - Mega Trends & Revolutionary Breakthroughs',
     description: 'Explore the revolutionary AI trends shaping 2026. Discover quantum consciousness, autonomous enterprise systems, and neural superintelligence breakthroughs.',
     type: 'article',
     publishedTime: '2026-01-15T00:00:00.000Z',
     authors: ['Zion Tech Group'],
     tags: ['AI 2026', 'Artificial Intelligence', 'Quantum Consciousness', 'Autonomous Enterprise', 'Neural Superintelligence']
-  }
+  
+};
 };
 
 export default function AI2026FutureLandscapeMegaTrends() {
   return (
     <div>/* content */}
-  return (
     <div>
-      <div> </div><div> </div></div>
-    <div className="text-left">{/* Header */}</div></div>
-        <div className="text-left"> </div><TrendingUp className="text-left" />
-    <div className="text-left"> </div><div className="text-left">{/* Header */}</div></div>
-        <div className="text-left"> </div><div className="text-left"> </div><TrendingUp className="text-left" />origin/cursor/fix-errors-and-merge-to-main-cc0a
+      <div> </div><div> </div>
+      <div className="text-left">{/* Header */}</div>
+      <div className="text-left"> </div><TrendingUp className="text-left" />
+    <div className="text-left"> </div><div className="text-left">{/* Header */}</div>
+      <div className="text-left"> </div><div className="text-left"> </div><TrendingUp className="text-left" />origin/cursor/fix-errors-and-merge-to-main-cc0a
             MEGA TRENDS 2026
           </TrendingUp></div>
           <h1 className="text-left">AI 2026: The Future AI Landscape
@@ -117,11 +114,9 @@ export default function AI2026FutureLandscapeMegaTrends() {
                 </p></p>
                 <div className="text-left"> </div><div className="text-left">$12.4B</div>
                     <div className="text-left">Average Fortune 500 ROI</div>
-                  </div>
-                  <div className="text-left">94%</div>
+      <div className="text-left">94%</div>
                     <div className="text-left">Process Automation Rate</div>
-                  </div>
-                  <div className="text-left">67%</div>
+      <div className="text-left">67%</div>
                     <div className="text-left">Cost Reduction</div>
                   </div>
                 </div>

@@ -1,11 +1,8 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI 2027 Cost Optimization Playbook | Zion Tech Group',
-  description:
-    'Cut AI spend 30–70% with routing, caching, quantization, and guardrails while maintaining quality.',
-  openGraph: {
-    title: 'AI 2027 Cost Optimization Playbook',
+  
+  title: 'AI 2027 Cost Optimization Playbook',
     description:
       'Tier models, cache prompts, and enforce budgets with KPI-linked routes to sustain UX under cost constraints.',
     type: 'article',
@@ -16,7 +13,8 @@ export const metadata = {
         width: 1200,
         height: 630,
         alt: 'AI Cost Optimization 2027',
-      },
+      
+};,
     ],
   },
 };

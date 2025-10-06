@@ -4,12 +4,11 @@ import Link from 'next/link';
 export default function AINeuralSuperintelligencePlatform() {
   return (
     <div>/* content */}
-  return (
     <div>
-      <div> </div><div> </div></div>
-    <div className="text-left">{/* Hero Section */}</div></div>
-        <div className="text-left"> </div><span className="text-left"> </span><div className="text-left"> </div><div className="text-left">{/* Hero Section */}</div></div>
-        <div className="text-left"> </div><div className="text-left"> </div><span className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
+      <div> </div><div> </div>
+      <div className="text-left">{/* Hero Section */}</div>
+      <div className="text-left"> </div><span className="text-left"> </span><div className="text-left"> </div><div className="text-left">{/* Hero Section */}</div>
+      <div className="text-left"> </div><div className="text-left"> </div><span className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
               🧠 NEURAL SUPERINTELLIGENCE PLATFORM
             </span></span>
           </div>
@@ -30,9 +29,8 @@ export default function AINeuralSuperintelligencePlatform() {
             <div key={index} className="text-left"> </div><div className="text-left">{metric.icon}</div>
               <div className="text-left"> </div><div className="text-left">{metric.icon}</div>"
               <div className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
-                {metric.value}</div></div>
-              </div>
-              <div className="text-left">{metric.label}</div></div>
+                {metric.value}</div>
+      <div className="text-left">{metric.label}</div></div>
               </div>
             </div>
           ))}
@@ -175,18 +173,15 @@ export default function AINeuralSuperintelligencePlatform() {
               <div> </div><h4 className="text-left">Enterprise Assessment</h4>
                 <p className="text-left">Comprehensive analysis of enterprise capabilities and superintelligence integration opportunities.</p>
               </div>
-            </div>
-            <div className="text-left">2</div>
+      <div className="text-left">2</div>
               <div> </div><h4 className="text-left">Platform Deployment</h4>
                 <p className="text-left">Deploy neural superintelligence platform with full monitoring and optimization capabilities.</p>
               </div>
-            </div>
-            <div className="text-left">3</div>
+      <div className="text-left">3</div>
               <div> </div><h4 className="text-left">Capability Integration</h4>
                 <p className="text-left">Integrate superintelligence capabilities across all enterprise systems and processes.</p>
               </div>
-            </div>
-            <div className="text-left">4</div>
+      <div className="text-left">4</div>
               <div> </div><h4 className="text-left">Continuous Evolution</h4>
                 <p className="text-left">Ongoing platform evolution and capability enhancement for maximum enterprise value.</p>
               </div>

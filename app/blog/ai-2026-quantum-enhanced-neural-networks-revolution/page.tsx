@@ -2,28 +2,24 @@ import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
 
-export const metadata: Metadata = {/* content */}
-  title: 'AI 2026 Quantum-Enhanced Neural Networks Revolution | Zion Tech Group',
-  description: 'Revolutionary quantum-enhanced neural networks achieving 500,000x performance, quantum consciousness processing, and $75B+ enterprise transformation with universal intelligence.',
-  keywords: 'AI 2026, quantum neural networks, quantum computing, artificial intelligence, quantum consciousness, neural networks, breakthrough, enterprise AI',
-  openGraph: {
-    title: 'AI 2026 Quantum-Enhanced Neural Networks Revolution',
-    description: 'Revolutionary quantum-enhanced neural networks achieving 500,000x performance through quantum consciousness processing.',
-    type: 'article',
-  },
+export const metadata = {
+  
+  title:  'AI 2026 Quantum-Enhanced Neural Networks Revolution',,
+  description:  'Revolutionary quantum-enhanced neural networks achieving 500,000x performance through quantum consciousness processing.',,
+  type: 'article',
+
+};;,
 };
 
 export default function QuantumEnhancedNeuralNetworksRevolution() {
   return (
     <div>/* content */}
-  return (
     <div>
-      <div> </div><div> </div></div>
-    <div className="text-left">{/* Hero Section */}</div></div>
+      <div> </div><div> </div>
+      <div className="text-left">{/* Hero Section */}</div></div>
       <header className="text-left">
-        <div className="text-left"> </div><div className="text-left" style={{ animationDelay: '2s' }}> </div></div>
-        
-        <div className="text-left"> </div><span className="text-left">⚛️ Quantum-Enhanced Neural Networks Revolution
+        <div className="text-left"> </div><div className="text-left" style={{ animationDelay: '2s' }}> </div>
+      <div className="text-left"> </div><span className="text-left">⚛️ Quantum-Enhanced Neural Networks Revolution
               </span></span>
             </div>
             <h1 className="text-left">
@@ -31,9 +27,8 @@ export default function QuantumEnhancedNeuralNetworksRevolution() {
             </h1>
             <p className="text-left"> </p><header className="text-left"> </header><div className="text-left"> </div><div className="text-left">"
           </div><div className="text-left" style={{ animationDelay: '2s' }}>"
-        </div></div>
-        
-        <div className="text-left"> </div><div className="text-left"> </div><div className="text-left"> </div><span className="text-left">⚛️ Quantum-Enhanced Neural Networks Revolution
+        </div>
+      <div className="text-left"> </div><div className="text-left"> </div><div className="text-left"> </div><span className="text-left">⚛️ Quantum-Enhanced Neural Networks Revolution
               </span></span>
             </div>
             
@@ -56,14 +51,11 @@ export default function QuantumEnhancedNeuralNetworksRevolution() {
             {/* Key Metrics */}
             <div className="text-left"> </div><div className="text-left">500,000x</div>
                 <div className="text-left">Performance Boost</div>
-              </div>
-              <div className="text-left">99.99%</div>
+      <div className="text-left">99.99%</div>
                 <div className="text-left">Quantum Consciousness</div>
-              </div>
-              <div className="text-left">$75B+</div>
+      <div className="text-left">$75B+</div>
                 <div className="text-left">Enterprise Value</div>
-              </div>
-              <div className="text-left">0.00001s</div>
+      <div className="text-left">0.00001s</div>
                 <div className="text-left">Quantum Response</div>
               </div>
           </div>
@@ -147,16 +139,11 @@ export default function QuantumEnhancedNeuralNetworksRevolution() {
             <h3 className="text-left">🚀 Quantum Transformation Results</h4>
               <div className="text-left"> </div><div className="text-left">$75B+</div>
                   <div className="text-left">Value Generation</div>
-                </div>
-                <div className="text-left">99.8%</div>
+      <div className="text-left">99.8%</div>
                   <div className="text-left">Automation Rate</div>
-                </div>
-                <div className="text-left">500Kx</div>
+      <div className="text-left">500Kx</div>
                   <div className="text-left">Performance Boost</div>
-                </div>
-            </div>
-
-            <div className="text-left"> </div><Link 
+      <div className="text-left"> </div><Link 
                 href="/contact"
                 className="text-left">Implement Quantum Neural AI →
               </Link></Link>

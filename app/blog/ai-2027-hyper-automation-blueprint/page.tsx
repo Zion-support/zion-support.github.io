@@ -1,15 +1,13 @@
 import ArrowRight from 'next/link';
 
 export const metadata = {
-  title: 'AI 2027 Hyper‑Automation Blueprint | Zion Tech Group',
-  description:
-    'A pragmatic blueprint to scale reliable AI hyper‑automation across the enterprise with guardrails, observability, and measurable ROI.',
-  openGraph: {
-    title: 'AI 2027 Hyper‑Automation Blueprint',
-    description:
+  
+  title:  'AI 2027 Hyper‑Automation Blueprint',
+  description: 
       'Scale reliable AI hyper‑automation with policy gates, evals, and value stream analytics.',
-    type: 'article',
-  },
+  type: 'article',
+
+};;
 };
 
 export default function HyperAutomationBlueprint2027Page() {

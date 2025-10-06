@@ -1,14 +1,12 @@
 // @ts-nocheck
 
 export const metadata = {
-  title: 'AI-Powered Enterprise Autonomous Systems (2025) | Zion Tech Group',
-  description:
-    'Transform your enterprise with autonomous AI systems: 99.99% uptime, 90% efficiency gains, self-healing workflows, and compliant guardrails.',
-  openGraph: {
-    title: 'AI-Powered Enterprise Autonomous Systems (2025)',
+  
+  title: 'AI-Powered Enterprise Autonomous Systems (2025)',
     description:
       'Blueprint to deploy reliable, governed, and ROI-positive autonomous AI at scale.',
-    images: [{ url: '/og/ai-autonomous-2025.jpg' }],
+    images: [{ url: '/og/ai-autonomous-2025.jpg' 
+};],
   },
 };
 

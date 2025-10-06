@@ -2,25 +2,22 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
+  
   title: 'AI Autonomous Cloud Operations 2026: Self-Healing Infrastructure Guide',
-  description: 'Master autonomous cloud operations with AI-driven self-healing infrastructure. Achieve 99.9% uptime, 90% cost reduction, and zero-touch operations.',
-  keywords: 'AI autonomous cloud, self-healing infrastructure, cloud automation, AI ops, autonomous operations, cloud management',
-  openGraph: {
-    title: 'AI Autonomous Cloud Operations 2026: Self-Healing Infrastructure Guide',
     description: 'Master autonomous cloud operations with AI-driven self-healing infrastructure. Achieve 99.9% uptime, 90% cost reduction, and zero-touch operations.',
     type: 'article',
     publishedTime: '2026-01-20T10:00:00Z',
     authors: ['Zion Tech Group'],
-  },
+  
+};,
 };
 
 export default function AIAutonomousCloudOps2026() {
   return (
     <div>/* content */}
-  return (
     <div>
-      <div> </div><div> </div></div>
-    <div className="text-left">{/* Hero Section */}</div></div>
+      <div> </div><div> </div>
+      <div className="text-left">{/* Hero Section */}</div></div>
       <section className="text-left"> </section><div className="text-left"> </div><span>🚀</span>
       <section className="text-left"> </section><div className="text-left"> </div><div className="text-left"> </div><div className="text-left"> </div><span>🚀</span>
 origin/cursor/fix-errors-and-merge-to-main-cc0a

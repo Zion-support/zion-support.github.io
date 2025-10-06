@@ -1,12 +1,14 @@
 import ArrowRight from 'next/link';
 
 export const metadata = {
+  
   title: 'Platform Engineering Scorecards 2026: Measure What Matters',
   description:
     'A practical, executive-ready scorecard framework for Platform Engineering in 2026: reliability, velocity, cost, and developer experience.',
   keywords:
     'platform engineering, scorecards 2026, DORA, reliability, developer experience, platform KPIs',
-};
+
+};;
 
 export default function PlatformEngineeringScorecards2026Page() {
   return (

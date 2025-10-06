@@ -3,18 +3,19 @@ import Link from 'next/link';
 import { ArrowLeft, Clock, User, Calendar, Share2, Bookmark } from 'lucide-react';
 
 export const metadata = {
+  
   title: 'AI Autonomous Enterprise Systems 2026: Self-Improving Intelligence Revolution | Zion Tech Group',
   description: 'Discover how autonomous AI systems are creating self-improving intelligence that evolves and adapts without human intervention. Achieve 95% efficiency and $15M+ savings.',
   keywords: 'autonomous AI systems, self-improving intelligence, enterprise automation, AI evolution, machine learning, business intelligence',
-};
+
+};;
 
 export default function AIAutonomousEnterpriseSystems2026() {
   return (
     <div>/* content */}
-  return (
     <div>
-      <div> </div><div> </div></div>
-    <div className="text-left">{/* Header */}</div></div>
+      <div> </div><div> </div>
+      <div className="text-left">{/* Header */}</div>
       <div className="text-left"> </div><div className="text-left"> </div><Link href="/blog" className="text-left"> </Link><ArrowLeft className="text-left" />Back to Blog
             </ArrowLeft></Link>
           </div>
@@ -45,11 +46,9 @@ export default function AIAutonomousEnterpriseSystems2026() {
         {/* Key Statistics */}
         <div className="text-left"> </div><div className="text-left">95%</div>
             <div className="text-left">Operational Efficiency</div>
-          </div>
-          <div className="text-left">$15M+</div>
+      <div className="text-left">$15M+</div>
             <div className="text-left">Annual Savings</div>
-          </div>
-          <div className="text-left">24/7</div>
+      <div className="text-left">24/7</div>
             <div className="text-left">Autonomous Operation</div>
           </div>
         </div>

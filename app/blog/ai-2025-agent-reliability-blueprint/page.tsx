@@ -1,15 +1,12 @@
 export const metadata = {
-  title:
-    'AI 2025 Agent Reliability Blueprint: Ship Trustworthy Autonomous Workflows',
-  description:
-    'A practical blueprint to achieve reliable, observable, and governable autonomous agents in production with policy gates, evals, and rollback plans.',
-  openGraph: {
-    title: 'AI 2025 Agent Reliability Blueprint',
+  
+  title: 'AI 2025 Agent Reliability Blueprint',
     description:
       'Design and operate reliable autonomous agents with traces, scorecards, policy testing, and continuous verification.',
     type: 'article',
     publishedTime: '2025-10-01T00:00:00Z',
-  },
+  
+};,
 };
 
 export default function AI2025AgentReliabilityBlueprint() {

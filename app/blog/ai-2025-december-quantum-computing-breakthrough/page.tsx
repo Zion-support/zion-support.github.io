@@ -2,22 +2,22 @@ import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
 
-export const metadata: Metadata = {/* content */}
+export const metadata = {
+  
   title: 'AI 2025: Quantum Computing Breakthrough - Zion Tech Group',
   description: 'Revolutionary quantum computing breakthrough achieving 1 million qubits and exponential AI performance gains in December 2025.',
   keywords: 'quantum computing, AI breakthrough, quantum AI, December 2025, Zion Tech Group',
-};
+
+};;
 
 export default function AI2025DecemberQuantumComputingBreakthrough() {
   return (
     <div>/* content */}
-  return (
     <div>
-      <div> </div><div> </div></div>
-    <div className="text-left">{/* Hero Section */}</div></div>
-      <section className="text-left"> </section><div className="text-left"> </div><div className="text-left" style={{ animationDelay: '2s' }}> </div></div>
-        
-        <div className="text-left"> </div><span className="text-left">⚛️ December 2025 Breakthrough
+      <div> </div><div> </div>
+      <div className="text-left">{/* Hero Section */}</div></div>
+      <section className="text-left"> </section><div className="text-left"> </div><div className="text-left" style={{ animationDelay: '2s' }}> </div>
+      <div className="text-left"> </div><span className="text-left">⚛️ December 2025 Breakthrough
               </span></span>
             </div>
             <h1 className="text-left">
@@ -25,9 +25,8 @@ export default function AI2025DecemberQuantumComputingBreakthrough() {
             </h1>
             <p className="text-left"> </p><section className="text-left"> </section><div className="text-left"> </div><div className="text-left">"
           </div><div className="text-left" style={{ animationDelay: '2s' }}>"
-        </div></div>
-        
-        <div className="text-left"> </div><div className="text-left"> </div><div className="text-left"> </div><span className="text-left">⚛️ December 2025 Breakthrough
+        </div>
+      <div className="text-left"> </div><div className="text-left"> </div><div className="text-left"> </div><span className="text-left">⚛️ December 2025 Breakthrough
               </span></span>
             </div>
             
@@ -53,14 +52,11 @@ origin/cursor/fix-errors-and-merge-to-main-cc0a
             {/* Key Metrics */}
             <div className="text-left"> </div><div className="text-left">1M+</div>
                 <div className="text-left">Qubits</div>
-              </div>
-              <div className="text-left">10^15</div>
+      <div className="text-left">10^15</div>
                 <div className="text-left">Performance Gain</div>
-              </div>
-              <div className="text-left">99.99%</div>
+      <div className="text-left">99.99%</div>
                 <div className="text-left">Accuracy</div>
-              </div>
-              <div className="text-left">24/7</div>
+      <div className="text-left">24/7</div>
                 <div className="text-left">Operation</div>
               </div>
           </div>

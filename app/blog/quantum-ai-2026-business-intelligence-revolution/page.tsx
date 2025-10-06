@@ -3,18 +3,19 @@ import Link from 'next/link';
 import { ArrowLeft, Calendar, User, Clock, Tag } from 'lucide-react';
 
 export const metadata = {
+  
   title: 'Quantum AI 2026: Business Intelligence Revolution - Zion Tech Group',
   description: 'Explore how quantum AI is revolutionizing business intelligence in 2026. Discover breakthrough technologies transforming raw data into strategic competitive advantages.',
   keywords: 'Quantum AI, Business Intelligence, Data Analytics, 2026 Innovation, Strategic Intelligence, Quantum Computing',
-};
+
+};;
 
 export default function QuantumAIBusinessIntelligence() {
   return (
     <div>/* content */}
-  return (
     <div>
-      <div> </div><div> </div></div>
-    <div className="text-left">{/* Header */}</div></div>
+      <div> </div><div> </div>
+      <div className="text-left">{/* Header */}</div></div>
       <header className="text-left"> </header><div className="text-left"> </div><Link 
             href="/"
             className="text-left"> </Link><ArrowLeft className="text-left" />Back to Home
@@ -84,11 +85,9 @@ export default function QuantumAIBusinessIntelligence() {
           <h3 className="text-left">Business Impact:</h4>
             <div className="text-left"> </div><div className="text-left">90%</div>
                 <div className="text-left">Improvement in market prediction accuracy</div>
-              </div>
-              <div className="text-left">75%</div>
+      <div className="text-left">75%</div>
                 <div className="text-left">Reduction in investment risk</div>
-              </div>
-              <div className="text-left">60%</div>
+      <div className="text-left">60%</div>
                 <div className="text-left">Increase in profitable trading opportunities</div>
               </div>
             </div>
@@ -129,14 +128,11 @@ export default function QuantumAIBusinessIntelligence() {
             </ul>
             <div className="text-left"> </div><div className="text-left">85%</div>
                 <div className="text-left">Improvement in forecast accuracy</div>
-              </div>
-              <div className="text-left">$15M</div>
+      <div className="text-left">$15M</div>
                 <div className="text-left">Reduction in inventory costs</div>
-              </div>
-              <div className="text-left">95%</div>
+      <div className="text-left">95%</div>
                 <div className="text-left">Reduction in stockouts</div>
-              </div>
-              <div className="text-left">40%</div>
+      <div className="text-left">40%</div>
                 <div className="text-left">Improvement in profit margins</div>
               </div>
             </div>
@@ -154,14 +150,11 @@ export default function QuantumAIBusinessIntelligence() {
             </ul>
             <div className="text-left"> </div><div className="text-left">70%</div>
                 <div className="text-left">Improvement in risk prediction</div>
-              </div>
-              <div className="text-left">50%</div>
+      <div className="text-left">50%</div>
                 <div className="text-left">Reduction in false positives</div>
-              </div>
-              <div className="text-left">$25M</div>
+      <div className="text-left">$25M</div>
                 <div className="text-left">Prevented potential losses</div>
-              </div>
-              <div className="text-left">35%</div>
+      <div className="text-left">35%</div>
                 <div className="text-left">Increase in portfolio returns</div>
               </div>
             </div>
@@ -202,11 +195,9 @@ export default function QuantumAIBusinessIntelligence() {
           <h3 className="text-left">Speed and Scale</h3>
             <div className="text-left"> </div><div className="text-left">1000x</div>
                 <div className="text-left">Processing speed improvement</div>
-              </div>
-              <div className="text-left">Real-time</div>
+      <div className="text-left">Real-time</div>
                 <div className="text-left">Complex query processing</div>
-              </div>
-              <div className="text-left">Unlimited</div>
+      <div className="text-left">Unlimited</div>
                 <div className="text-left">Scalability across organizations</div>
               </div>
             </div>
@@ -217,14 +208,11 @@ export default function QuantumAIBusinessIntelligence() {
           <h3 className="text-left">Quantifiable Benefits</h3>
             <div className="text-left"> </div><div className="text-left">1000x</div>
                 <div className="text-left">Improvement in complex analytics</div>
-              </div>
-              <div className="text-left">60-80%</div>
+      <div className="text-left">60-80%</div>
                 <div className="text-left">Improvement in prediction accuracy</div>
-              </div>
-              <div className="text-left">40-60%</div>
+      <div className="text-left">40-60%</div>
                 <div className="text-left">Reduction in computational costs</div>
-              </div>
-              <div className="text-left">3-5x</div>
+      <div className="text-left">3-5x</div>
                 <div className="text-left">Improvement in strategic decisions</div>
               </div>
             </div>

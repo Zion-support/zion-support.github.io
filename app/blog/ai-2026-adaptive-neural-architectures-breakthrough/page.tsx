@@ -2,23 +2,23 @@ import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
 
-export const metadata: Metadata = {/* content */}
+export const metadata = {
+  
   title: 'AI 2026: Adaptive Neural Architectures - The Future of Enterprise AI | Zion Tech Group',
   description: 'Revolutionary adaptive neural architectures that self-evolve and optimize in real-time, delivering 1000x performance improvements and $25B+ enterprise value.',
   keywords: 'adaptive neural networks, AI 2026, neural architecture, enterprise AI, machine learning, business transformation',
-};
+
+};;
 
 export default function AdaptiveNeuralArchitecturesPage() {
   return (
     <div>/* content */}
-  return (
     <div>
-      <div> </div><div> </div></div>
-    <div className="text-left">{/* Hero Section */}</div></div>
+      <div> </div><div> </div>
+      <div className="text-left">{/* Hero Section */}</div></div>
       <header className="text-left">
-        <div className="text-left"> </div><div className="text-left" style={{ animationDelay: '2s' }}> </div></div>
-        
-        <div className="text-left"> </div><span className="text-left">🧬 REVOLUTIONARY 2026 BREAKTHROUGH
+        <div className="text-left"> </div><div className="text-left" style={{ animationDelay: '2s' }}> </div>
+      <div className="text-left"> </div><span className="text-left">🧬 REVOLUTIONARY 2026 BREAKTHROUGH
               </span></span>
             </div>
             <h1 className="text-left">
@@ -26,9 +26,8 @@ export default function AdaptiveNeuralArchitecturesPage() {
             </h1>
             <p className="text-left"> </p><header className="text-left"> </header><div className="text-left"> </div><div className="text-left">"
           </div><div className="text-left" style={{ animationDelay: '2s' }}>"
-        </div></div>
-        
-        <div className="text-left"> </div><div className="text-left"> </div><div className="text-left"> </div><span className="text-left">🧬 REVOLUTIONARY 2026 BREAKTHROUGH
+        </div>
+      <div className="text-left"> </div><div className="text-left"> </div><div className="text-left"> </div><span className="text-left">🧬 REVOLUTIONARY 2026 BREAKTHROUGH
               </span></span>
             </div>
             
@@ -58,14 +57,11 @@ origin/cursor/fix-errors-and-merge-to-main-cc0a
             {/* Key Metrics */}
             <div className="text-left"> </div><div className="text-left">1000x</div>
                 <div className="text-left">Performance Boost</div>
-              </div>
-              <div className="text-left">$25B+</div>
+      <div className="text-left">$25B+</div>
                 <div className="text-left">ROI Achieved</div>
-              </div>
-              <div className="text-left">99.9%</div>
+      <div className="text-left">99.9%</div>
                 <div className="text-left">Accuracy Rate</div>
-              </div>
-              <div className="text-left">Real-time</div>
+      <div className="text-left">Real-time</div>
                 <div className="text-left">Adaptation</div>
               </div>
           </div>

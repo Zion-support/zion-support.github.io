@@ -2,11 +2,8 @@
 import ArrowRight from 'next/link';
 
 export const metadata = {
-  title: 'AI Value Stream Analytics 2026: Trace ROI from Token to Revenue',
-  description:
-    'Tie AI cost, latency, and quality to business value with end-to-end tracing from model tokens to customer outcomes.',
-  openGraph: {
-    title: 'AI Value Stream Analytics 2026',
+  
+  title: 'AI Value Stream Analytics 2026',
     description:
       'End-to-end tracing that connects model spend to user value with actionable scorecards.',
     url: 'https://ziontechgroup.com/blog/ai-value-stream-analytics-2026',
@@ -15,7 +12,8 @@ export const metadata = {
         url: '/og/ai-value-stream-analytics-2026.jpg',
         width: 1200,
         height: 630,
-      },
+      
+};,
     ],
   },
 };
