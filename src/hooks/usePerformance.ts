@@ -4,32 +4,32 @@
  */
 import { useEffect, useCallback, useRef } from 'react';
 import { performanceOptimizer } from '../utils/performanceOptimizer';
-import { performanceOptimizer } from '../utils/performanceOptimizer';
-            domInteractive: navigation.domInteractive - (navigation as any).navigationStart,
-            totalLoadTime: navigation.loadEventEnd - (navigation as any).navigationStart,
+import { analytics } from '../utils/analytics';
+
+/**
+ * Hook for monitoring page load performance
+ */
+export const usePageLoadPerformance = () => {
+  useEffect(() => {
+    const trackPageLoad = () => {
+      if (typeof window !== 'undefined' && 'performance' in window) {
+        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+        if (navigation) {
+          const metrics = {
             domInteractive: navigation.domInteractive - navigation.fetchStart,
             totalLoadTime: navigation.loadEventEnd - navigation.fetchStart,
           };
           // Track each metric
           Object.entries(metrics).forEach(([key, value]) => {
-            analytics.trackPerformance(`page_load_${key}`, value);
+            performanceOptimizer.trackPerformance(`page_load_${key}`, value);
           });
-          // Track overall page load performance
-          analytics.track(
-            'page_load_complete',
-            'performance',
-            'complete',
-            undefined,
-            metrics.totalLoadTime
-          );
         }
       }
     };
+    
     // Track immediately if page is already loaded
     if (document.readyState === 'complete') {
       trackPageLoad();
-      return undefined;
-      return;
     } else {
       // Wait for load event
       window.addEventListener('load', trackPageLoad);
@@ -46,7 +46,7 @@ export const useResourcePerformance = () => {
       list.getEntries().forEach(entry => {
         if (entry.entryType === 'resource') {
           const resourceEntry = entry as PerformanceResourceTiming;
-          analytics.trackPerformance(
+          performanceOptimizer.trackPerformance(
             `resource_${resourceEntry.name.split('.').pop()}`,
             resourceEntry.duration,
             'ms'
@@ -58,6 +58,7 @@ export const useResourcePerformance = () => {
     return () => observer.disconnect();
   }, []);
 };
+
 /**
  * Hook for monitoring long tasks
  */
@@ -65,23 +66,14 @@ export const useLongTaskMonitoring = () => {
   useEffect(() => {
     const observer = performanceOptimizer.monitorLongTasks((entries: PerformanceEntry[]) => {
       entries.forEach((entry: PerformanceEntry) => {
-        analytics.track('long_task', 'performance', 'detected', undefined, entry.duration);
-    const observer = performanceOptimizer.monitorLongTasks((entries: PerformanceEntry[]) => {
-      entries.forEach((entry: PerformanceEntry) => {
-        analytics.track('long_task', 'performance', 'detected', undefined, entry.duration);
-    const observer = performanceOptimizer.monitorLongTasks((entries: PerformanceEntry[]) => {
-      entries.forEach((entry: PerformanceEntry) => {
-        analytics.track('long_task', 'performance', 'detected', undefined, entry.duration);
-    const observer = performanceOptimizer.monitorLongTasks((entries: PerformanceEntry[]) => {
-      entries.forEach((entry: PerformanceEntry) => {
-        analytics.track('long_task', 'performance', 'detected', undefined, entry.duration);
-    const observer = monitorLongTasks((entries: PerformanceEntry[]) => {
-      entries.forEach((entry: PerformanceEntry) => {
-        analytics.track('long_task', 'performance', 'detected', undefined, entry.duration);
+        performanceOptimizer.trackPerformance('long_task', entry.duration, 'ms');
       });
     });
+    
     return () => {
       if (observer && typeof observer.disconnect === 'function') {
         observer.disconnect();
       }
     };
+  }, []);
+};

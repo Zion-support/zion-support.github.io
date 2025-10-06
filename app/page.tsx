@@ -47,47 +47,13 @@ export default function HomePage() {
       priceCurrency: 'USD',
     },
   };
-const HomePage: React.FC = () => {
+
   return (
     <>
-      <Helmet>
-        <title>Zion Tech Group - Advanced AI and IT Solutions</title>
-        <meta name="description" content="Leading provider of advanced AI and IT solutions. We deliver cutting-edge technology services to transform your business." />
-        <meta name="keywords" content="AI solutions, IT services, software development, digital transformation, artificial intelligence" />
-        <meta property="og:title" content="Zion Tech Group - Advanced AI and IT Solutions" />
-        <meta property="og:description" content="Leading provider of advanced AI and IT solutions. We deliver cutting-edge technology services to transform your business." />
-        <meta property="og:type" content="website" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Zion Tech Group - Advanced AI and IT Solutions" />
-        <meta name="twitter:description" content="Leading provider of advanced AI and IT solutions. We deliver cutting-edge technology services to transform your business." />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-        <main id="main-content" className="container mx-auto px-4 py-12">
-          <div className="text-center">
-            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              Welcome to Zion Tech Group
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-700 mb-12 max-w-3xl mx-auto">
-              Pioneering the future with advanced AI and IT solutions that transform businesses and drive innovation
-            </p>
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-              <Link
-                href='/contact'
-                className='bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-colors duration-300'
-              >
-                Get Started Today
-              </Link>
-              <Link
-                href='/services'
-                className='border-2 border-white text-white hover:bg-white hover:text-blue-900 font-bold py-4 px-8 rounded-lg text-lg transition-colors duration-300'
-              >
-                View Services
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-      {/* Main Content */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
       <main className='container mx-auto px-4 py-16'>
         {/* Unified Content Promotion */}
         <Suspense fallback={<LoadingFallback height='h-32' />}>
@@ -130,7 +96,6 @@ const HomePage: React.FC = () => {
           </div>
         </section>
       </main>
-    </div>
+    </>
   );
-};
-export default HomePage;
+}
