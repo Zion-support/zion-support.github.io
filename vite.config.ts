@@ -4,12 +4,7 @@ import { visualizer } from 'rollup-plugin-visualizer';
 
 export default defineConfig({
   plugins: [
-    react({
-      jsxImportSource: '@emotion/react',
-      babel: {
-        plugins: ['@emotion/babel-plugin'],
-      },
-    }),
+    react(),
     visualizer({
       filename: 'dist/stats.html',
       open: false,

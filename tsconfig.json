@@ -57,8 +57,7 @@
     "app/enterprise/**/*",
     "app/not-found.tsx",
     "app/page.tsx",
-    "app/layout.tsx",
-    "app/App.tsx"
+    "app/layout.tsx"
   ],
   "exclude": [
     "node_modules",

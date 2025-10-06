@@ -1,5 +1,5 @@
 import React, { memo, useMemo } from 'react';
-import { HelmetProvider } from 'react-helmet-async';
+import { HelmetProvider, Helmet } from 'react-helmet-async';
 
 // Memoized components for better performance
 const UnifiedContentPromotion = memo(() => (
