@@ -58,8 +58,7 @@ const getBannerImpressions = (): BannerImpression[] => {
 /**
  * Save banner impression
  */
-export const recordBannerImpression = (impression: Omit<BannerImpression, 'timestamp' | 'sessionId'>)
-) => {
+export const recordBannerImpression = (impression: Omit<BannerImpression, 'timestamp' | 'sessionId'>) => {
   if (typeof window === 'undefined') return;
   try {
     const impressions = getBannerImpressions();
@@ -109,9 +108,7 @@ const calculateBannerScore = (banner: BannerConfig): number => {
 /**
  * Select banners for rotation
  */
-export const selectBannersForRotation = (allBanners: BannerConfig[],
-  maxBanners: number = MAX_VISIBLE_BANNERS)
-): BannerConfig[] => {
+export const selectBannersForRotation = (allBanners: BannerConfig[], maxBanners: number = MAX_VISIBLE_BANNERS): BannerConfig[] => {
   // Calculate scores for all banners
   const scoredBanners = allBanners.map(banner => ({
     banner,
