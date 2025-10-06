@@ -2,7 +2,6 @@
  * Performance Monitoring Utility
  * Tracks and reports web vitals and performance metrics
  */
-<<<<<<< HEAD
 import { onCLS, onFCP, onLCP, onTTFB } from 'web-vitals';
 import type { Metric } from 'web-vitals';
 
@@ -12,10 +11,6 @@ declare global {
     gtag?: (...args: any[]) => void;
   }
 }
-=======
-import { getCLS, getFID, getFCP, getLCP, getTTFB, Metric } from 'web-vitals';
-
->>>>>>> cursor/fix-errors-and-merge-to-main-bd65
 // Types
 interface PerformanceMetric {
   name: string;
@@ -44,10 +39,6 @@ const THRESHOLDS = {
 /**
  * Get rating based on metric value
  */
-<<<<<<< HEAD
-function getRating(name: string, value: number): 'good' | 'needs-improvement' | 'poor' {
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-bd65
 function getRating(
   name: string,
   value: number

@@ -7,7 +7,6 @@ export const focusManagement = {
   // Trap focus within an element
   trapFocus: (element: HTMLElement): (() => void) => {
     const focusableElements = element.querySelectorAll(
-      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])',
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
     );
     const firstElement = focusableElements[0] as HTMLElement;
@@ -62,10 +61,6 @@ export const ariaUtils = {
   },
 
   // Set ARIA attributes
-  setAriaAttributes: (
-    element: HTMLElement,
-    attributes: Record<string, string>,
-  ): void => {
   setAriaAttributes: (element: HTMLElement, attributes: Record<string, string>): void => {
     Object.entries(attributes).forEach(([key, value]) => {
       element.setAttribute(key, value);
@@ -73,10 +68,6 @@ export const ariaUtils = {
   },
 
   // Announce to screen readers
-  announce: (
-    message: string,
-    priority: 'polite' | 'assertive' = 'polite',
-  ): void => {
   announce: (message: string, priority: 'polite' | 'assertive' = 'polite'): void => {
     const announcement = document.createElement('div');
     announcement.setAttribute('aria-live', priority);
@@ -188,7 +179,20 @@ export const formAccessibility = {
     label.setAttribute('for', input.id || formAccessibility.generateInputId());
     if (!input.id) {
       input.id = label.getAttribute('for')!;
+    }
+    return label;
+  },
+
+  // Generate unique input ID
+  generateInputId: (): string => {
+    return `input-${Math.random().toString(36).substr(2, 9)}`;
+  },
+
+  // Check color contrast
+  checkContrast: (foreground: string, background: string, level: 'AA' | 'AAA' = 'AA'): boolean => {
     const thresholds = { AA: 4.5, AAA: 7 };
+    // Simplified contrast calculation - in real implementation, use a proper color contrast library
+    const contrastRatio = 4.5; // Placeholder
     return contrastRatio >= thresholds[level];
   },
 };
