@@ -1,14 +1,14 @@
-import React from 'react';
+// import React from 'react';
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import {
   ArrowLeft,
   Target,
-  TrendingUp,
-  Users,
-  Zap,
+  // TrendingUp,
+  // Users,
+  // Zap,
   CheckCircle,
-  Star,
+  // Star,
   ArrowRight,
 } from 'lucide-react';
 

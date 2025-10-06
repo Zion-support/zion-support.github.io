@@ -438,12 +438,10 @@ class PerformanceOptimizer {
     const timing = window.performance.timing;
     const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
     
-    const loadTime = timing.loadEventEnd - timing.navigationStart;
-    const interactiveTime = timing.domInteractive - timing.navigationStart;
+    // const loadTime = timing.loadEventEnd - timing.navigationStart;
+    // const interactiveTime = timing.domInteractive - timing.navigationStart;
     
     return { 
-      loadTime, 
-      interactiveTime,
       FCP: navigation?.responseStart - navigation?.fetchStart,
       TTFB: timing.responseStart - timing.navigationStart
     };
