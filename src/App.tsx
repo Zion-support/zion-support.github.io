@@ -136,7 +136,6 @@ class ErrorBoundary extends React.Component<
   }
 
   static getDerivedStateFromError() {
-    // Error is intentionally unused - we only need to know an error occurred
     return { hasError: true };
   }
 
