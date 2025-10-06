@@ -91,7 +91,7 @@ export const getFeaturedRevOpsContent = () => {
 
 export const getBreakingRevOpsContent = () => {
   return octoberNewestRevOpsContent.filter(content =>
-    content.tags.includes('Breaking'),
+    content.tags.includes('Breaking')
   );
 };
 

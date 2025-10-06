@@ -26,7 +26,8 @@ export const sept30BreakthroughArticles2025: BreakthroughArticle[] = [
     readTime: '20 min read',
     tags: ['AI Trading', 'Revolution', 'Prediction', '2025'],
     featured: true,
-    impact: 'Revolutionary AI trading system delivering unprecedented prediction accuracy and ROI improvement.',
+    impact:
+      'Revolutionary AI trading system delivering unprecedented prediction accuracy and ROI improvement.',
     metrics: {
       improvement: '95% prediction accuracy',
       roi: '350% returns improvement',
@@ -43,7 +44,8 @@ export const sept30BreakthroughArticles2025: BreakthroughArticle[] = [
     readTime: '18 min read',
     tags: ['Quantum AI', 'Optimization', 'Performance', '2025'],
     featured: true,
-    impact: 'Quantum AI optimization delivering exponential performance gains and unprecedented computational efficiency.',
+    impact:
+      'Quantum AI optimization delivering exponential performance gains and unprecedented computational efficiency.',
     metrics: {
       improvement: 'Exponential performance',
       roi: '1000% efficiency gain',

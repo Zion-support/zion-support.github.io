@@ -17,7 +17,7 @@ export default function April2026UltimateBreakthroughCaseStudyPage() {
     process.cwd(),
     'content',
     'case-studies',
-    'ai-2026-april-ultimate-breakthrough-25-billion-success.md',
+    'ai-2026-april-ultimate-breakthrough-25-billion-success.md'
   );
   const fileContents = fs.readFileSync(filePath, 'utf8');
   const { data, content } = matter(fileContents);
