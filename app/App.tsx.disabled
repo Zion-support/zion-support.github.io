@@ -2,7 +2,7 @@ import React, { useEffect, lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 
-//Components
+// Components
 import ErrorBoundary from './components/ErrorBoundary';
 import SEOOptimizer from './components/SEOOptimizer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
@@ -11,18 +11,18 @@ import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import LoadingSpinner from './components/LoadingSpinner';
 
-//Utils
-import { performanceOptimizer } from '../src/utils/performanceOptimizer';
+// Utils
+import performanceOptimizer from '../src/utils/performanceOptimizer';
 
-//Styles
+// Styles
 import '../src/index.css';
 
-//Lazy load pages for better performance
+// Lazy load pages for better performance
 const HomePage = lazy(() => import('./page'));
 
 const App: React.FC = () => {
   useEffect(() => {
-    //Initialize global error handling
+    // Initialize global error handling
     if (process.env.NODE_ENV === 'development') {
       console.log('App initialized');
       console.log('Performance monitoring initialized');

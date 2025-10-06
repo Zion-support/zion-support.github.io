@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { performanceOptimizer } from '../../utils/performanceOptimizer';
-import { getErrorMetrics, isErrorRateTooHigh } from '../../utils/errorHandling';
+import performanceOptimizer from '../../utils/performanceOptimizer';
+import { getErrorMetrics } from '../../utils/errorHandling';
 
 interface PerformanceMetrics {
   loadTime: number;
@@ -38,7 +38,7 @@ const PerformanceDashboard: React.FC = (): JSX.Element | null => {
       };
 
       const errorData = getErrorMetrics();
-      const isHealthy = !isErrorRateTooHigh(errorData.errorRate);
+      const isHealthy = errorData.errorRate < 0.1; // Simplified error rate check
 
       setData({
         performance: performanceData,
