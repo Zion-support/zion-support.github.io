@@ -1,14 +1,5 @@
 import React, { memo, useMemo, useCallback, Suspense } from 'react';
-
-// Declare gtag for analytics
-declare global {
-  function gtag(...args: any[]): void;
-}
-
-// Declare gtag for analytics
-declare global {
-  function gtag(...args: any[]): void;
-}
+import { HelmetProvider, Helmet } from 'react-helmet-async';
 
 // Memoized components for better performance
 const UnifiedContentPromotion = memo(() => (
@@ -205,8 +196,8 @@ export default function App() {
 
   const handlePhoneClick = useCallback(() => {
     // Track phone clicks for analytics
-    if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as any).gtag('event', 'phone_click', {
+    if (typeof window !== 'undefined' && (window as unknown as { gtag?: Function }).gtag) {
+      ((window as unknown as { gtag: Function }).gtag)('event', 'phone_click', {
         event_category: 'engagement',
         event_label: 'main_phone_number'
       });
@@ -215,12 +206,57 @@ export default function App() {
 
   return (
     <ErrorBoundary>
-      <Suspense fallback={<LoadingSpinner />}>
-        <div>
+      <HelmetProvider>
+        <Suspense fallback={<LoadingSpinner />}>
+          <div>
         <script
           type='application/ld+json'
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
+
+        {/* SEO Meta Tags */}
+        <Helmet>
+          <title>
+            Zion Tech Group - AI-Powered Enterprise Solutions | 300% ROI
+            Guaranteed
+          </title>
+          <meta
+            name='description'
+            content='Transform your enterprise with AI-powered solutions achieving 300% ROI, 70% cost reduction, and 90% efficiency gains. Leading provider of autonomous business systems.'
+          />
+          <meta
+            name='keywords'
+            content='AI solutions, enterprise automation, business intelligence, autonomous systems, digital transformation, ROI optimization'
+          />
+          <meta
+            property='og:title'
+            content='Zion Tech Group - AI-Powered Enterprise Solutions'
+          />
+          <meta
+            property='og:description'
+            content='Transform your enterprise with AI-powered solutions achieving 300% ROI, 70% cost reduction, and 90% efficiency gains.'
+          />
+          <meta property='og:type' content='website' />
+          <meta property='og:url' content='https://ziontechgroup.com' />
+          <meta
+            property='og:image'
+            content='https://ziontechgroup.com/og-image.jpg'
+          />
+          <meta name='twitter:card' content='summary_large_image' />
+          <meta
+            name='twitter:title'
+            content='Zion Tech Group - AI-Powered Enterprise Solutions'
+          />
+          <meta
+            name='twitter:description'
+            content='Transform your enterprise with AI-powered solutions achieving 300% ROI, 70% cost reduction, and 90% efficiency gains.'
+          />
+          <meta
+            name='twitter:image'
+            content='https://ziontechgroup.com/og-image.jpg'
+          />
+          <link rel='canonical' href='https://ziontechgroup.com' />
+        </Helmet>
 
         {/* Unified Content Promotion - Replaces multiple redundant banners */}
         <UnifiedContentPromotion />
@@ -412,6 +448,7 @@ export default function App() {
         </section>
           </div>
         </Suspense>
+      </HelmetProvider>
     </ErrorBoundary>
   );
 }
