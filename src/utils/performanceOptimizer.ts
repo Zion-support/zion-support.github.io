@@ -207,7 +207,7 @@ export const cancelIdleCallback = (id: number): void => {
   if ('cancelIdleCallback' in window) {
     window.cancelIdleCallback(id);
   } else {
-    clearTimeout(id);
+    (window as any).clearTimeout(id);
   }
 };
 
