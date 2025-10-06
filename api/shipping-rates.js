@@ -9,20 +9,12 @@ export default async function handler(req, res) {
   try {
     const { fromAddress, toAddress, parcel } = req.body || {};
     const apiKey = process.env.EASYPOST_API_KEY;
-<<<<<<< HEAD
-
-=======
     
->>>>>>> cursor/fix-errors-and-merge-to-main-bd65
     const response = await fetch('https://api.easypost.com/v2/shipments', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-<<<<<<< HEAD
         Authorization: `Bearer ${apiKey}`,
-=======
-        'Authorization': `Bearer ${apiKey}`,
->>>>>>> cursor/fix-errors-and-merge-to-main-bd65
       },
       body: JSON.stringify({
         shipment: {
@@ -34,11 +26,7 @@ export default async function handler(req, res) {
     });
 
     const data = await response.json();
-<<<<<<< HEAD
-
-=======
     
->>>>>>> cursor/fix-errors-and-merge-to-main-bd65
     if (!response.ok) {
       res.statusCode = 500;
       res.json({ error: data.error || 'Failed to fetch rates' });
