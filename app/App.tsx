@@ -12,7 +12,7 @@ import Footer from './components/Footer';
 import { LoadingSpinner } from '../components/LoadingComponents';
 
 // Utils
-import { performanceOptimizer } from '../src/utils/performanceOptimizer';
+import performanceOptimizer from '../src/utils/performanceOptimizer';
 
 // Styles
 import '../index.css';

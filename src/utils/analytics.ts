@@ -51,7 +51,6 @@ class Analytics {
       language: window.navigator.language,
       timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
       referrer: document.referrer || '',
-      referrer: document.referrer || '',
     };
   }
   /**
@@ -68,14 +67,10 @@ class Analytics {
     const event: AnalyticsEvent = {
       name,
       category,
-      action: action || '',
+      action: action || undefined,
       label: label || undefined,
-      value,
-      properties,
-      action: action || '',
-      label: label || '',
-      value: value || 0,
-      properties: properties || {},
+      value: value || undefined,
+      properties: properties || undefined,
       timestamp: Date.now(),
     };
     this.events.push(event);
