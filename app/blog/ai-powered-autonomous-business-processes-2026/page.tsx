@@ -3,23 +3,26 @@ import Link from 'next/link';
 import { ArrowLeft, Clock, User, Tag, Share2, BookOpen, CheckCircle, TrendingUp, Brain, Zap } from 'lucide-react';
 import { Metadata } from 'next';
 
-export const metadata = {
-  
-  title: 'AI-Powered Autonomous Business Processes: The 2026 Revolution',
+export const metadata: Metadata = 
+  title: 'AI-Powered Autonomous Business Processes: The 2026 Revolution | Zion Tech Group',
+  description: 'Discover how AI-powered autonomous business processes are revolutionizing enterprise operations in 2026, delivering unprecedented efficiency and strategic insights.',
+  keywords: 'autonomous business processes, AI automation, enterprise transformation, business process optimization, AI agents',
+  openGraph: {
+    title: 'AI-Powered Autonomous Business Processes: The 2026 Revolution',
     description: 'Discover how AI-powered autonomous business processes are revolutionizing enterprise operations in 2026, delivering unprecedented efficiency and strategic insights.',
     type: 'article',
     publishedTime: '2026-01-15T00:00:00Z',
     authors: ['Zion Tech Group'],
-  
-};,
+  },
 };
 
 export default function AutonomousBusinessProcessesBlog() {
   return (
     <div>/* content */}
+  return (
     <div>
-      <div> </div><div> </div>
-      <div className="text-left">{/* Header */}</div>
+      <div> </div><div> </div></div>
+    <div className="text-left">{/* Header */}</div></div>
       <div className="text-left"> </div><Link href="/blog" className="text-left">
             <ArrowLeft className="text-left" />
             Back to Blog
@@ -65,9 +68,11 @@ export default function AutonomousBusinessProcessesBlog() {
             </p></p>
             <div className="text-left"> </div><div className="text-left">85%</div>
                 <div className="text-left">Process Automation</div>
-      <div className="text-left">60%</div>
+              </div>
+              <div className="text-left">60%</div>
                 <div className="text-left">Cost Reduction</div>
-      <div className="text-left">95%</div>
+              </div>
+              <div className="text-left">95%</div>
                 <div className="text-left">Quality Improvement</div>
               </div>
             </div>

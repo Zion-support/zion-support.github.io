@@ -1,24 +1,27 @@
 import React from 'react';
 import { Metadata } from 'next';
 
-export const metadata = {
-  
-  title: 'March 2025: Autonomous Enterprise Operations Revolution - The Future of Business Automation',
+export const metadata: Metadata = 
+  title: 'March 2025: Autonomous Enterprise Operations Revolution | Zion Tech Group',
+  description: 'Discover how autonomous AI agents are revolutionizing enterprise operations, delivering 85% automation rates and $35 billion in operational savings.',
+  keywords: ['Autonomous AI', 'Enterprise Operations', 'Business Automation', 'AI Agents', 'Operational Efficiency'],
+  openGraph: {
+    title: 'March 2025: Autonomous Enterprise Operations Revolution - The Future of Business Automation',
     description: 'AI agents now manage complex business operations with unprecedented efficiency, delivering $35 billion in operational savings.',
     type: 'article',
     publishedTime: '2025-03-01T00:00:00Z',
     authors: ['Zion Tech Group AI Research Team'],
     tags: ['Autonomous Operations', 'Enterprise Automation', 'Business Operations', 'AI Agents'],
-  
-};,
+  },
 };
 
 export default function March2025AutonomousOperationsRevolutionPage() {
   return (
     <div>/* content */}
+  return (
     <div>
-      <div> </div><div> </div>
-      <div className="text-left">{/* Hero Section */}</div></div>
+      <div> </div><div> </div></div>
+    <div className="text-left">{/* Hero Section */}</div></div>
       <section className="text-left"> </section><div className="text-left"> </div><span className="text-left">🤖 March 2025 Autonomous Operations Revolution
               </span></span>
             </div>
@@ -39,13 +42,18 @@ export default function March2025AutonomousOperationsRevolutionPage() {
             {/* Key Metrics */}
             <div className="text-left"> </div><div className="text-left">85%</div>
                 <div className="text-left">Autonomous Operations</div>
-      <div className="text-left">$35B</div>
+              </div>
+              <div className="text-left">$35B</div>
                 <div className="text-left">Operational Savings</div>
-      <div className="text-left">92%</div>
+              </div>
+              <div className="text-left">92%</div>
                 <div className="text-left">Exception Resolution</div>
-      <div className="text-left">15%</div>
+              </div>
+              <div className="text-left">15%</div>
                 <div className="text-left">Monthly Improvement</div>
-      <div className="text-left"> </div><a 
+              </div>
+
+            <div className="text-left"> </div><a 
                 href="/services/autonomous-operations-consultation"
                 className="text-left">Get Autonomous Operations Consultation →
               </a></a>
