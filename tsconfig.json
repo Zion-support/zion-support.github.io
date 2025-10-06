@@ -40,9 +40,20 @@
       ]
     },
     "allowJs": true,
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "exactOptionalPropertyTypes": true,
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noUncheckedIndexedAccess": true,
+    "allowUnusedLabels": false,
+    "allowUnreachableCode": false,
+    "verbatimModuleSyntax": true
   },
   "include": [
+<<<<<<< HEAD
     "app/**/*"
   ],
   "exclude": [
@@ -53,5 +64,68 @@
     "app/guides/**/*",
     "app/blog/**/*",
     "app/components/**/*"
+=======
+    "src/**/*",
+    "app/enterprise/**/*",
+    "app/not-found.tsx",
+    "app/page.tsx",
+    "app/layout.tsx",
+    "app/App.tsx"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "build",
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    "**/*.spec.ts",
+    "**/*.spec.tsx",
+    "_app_disabled/**",
+    "_conflicted_disabled/**",
+    "_pages_api_disabled/**",
+    "_pages_disabled/**",
+    "admin-api-disabled/**",
+    "api-disabled/**",
+    "api.disabled/**",
+    "api.disabled.temp/**",
+    "api-backup/**",
+    "apps.backup/**",
+    "automation_backup/**",
+    "ai-optimization-backups/**",
+    "automation_logs/**",
+    "all-automations-reports/**",
+    "accessibility-reports/**",
+    "corrupted-files-backup/**",
+    "corrupted_backup/**",
+    "corrupted_files_backup_2/**",
+    "content/**",
+    "contracts/**",
+    "components_backup/**",
+    "data/**",
+    "data_backup/**",
+    "dao/**",
+    "deployments/**",
+    "disabled-api/**",
+    "e2e/**",
+    "factories/**",
+    "hooks/**",
+    "lib_backup/**",
+    "services/**",
+    "middleware/**",
+    "app/blog/**",
+    "EnhancedFooter.tsx",
+    "EnhancedHeader.tsx",
+    "EnhancedNavigation.tsx",
+    "ModernNavigation.tsx",
+    "SidebarNavigation.tsx",
+    "api-documentation.tsx",
+    "app/components/NewContentPromotionalBanner2026.tsx",
+    "app/components/NewestContent2025Banner.tsx"
+  ],
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
+    }
+>>>>>>> bbed11ac5bc5a9ce3f8009e73761d2eabe4b3313
   ]
 }
