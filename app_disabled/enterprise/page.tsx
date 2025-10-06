@@ -1,4 +1,4 @@
-import Link from 'next/link';
+// import Link from 'next/link'; // Unused for now
 
 export const metadata = {
   title: 'Enterprise Solutions - Zion Tech Group',
@@ -30,13 +30,11 @@ export default function EnterprisePage() {
               </span>
             </div>
 
-            <h1 className="text-5xl md:text-7xl font-extrabold text-white mb-8">
-              Enterprise Solutions
+            <h1 className="text-5xl md:text-6xl font-extrabold text-white mb-6">
+              <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
+                Enterprise Solutions
+              </span>
             </h1>
-
-            <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Trusted by 500+ Fortune 500 Companies Worldwide
-            </p>
 
             <p className="text-lg text-gray-400 mb-12 max-w-3xl mx-auto">
               Transform your enterprise with our proven AI solutions. Achieve
@@ -49,19 +47,26 @@ export default function EnterprisePage() {
                 href="/contact"
                 className="group flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl"
               >
-                <span>Schedule Enterprise Demo</span>
-                <span className="group-hover:translate-x-1 transition-transform">
-                  →
-                </span>
+                <span>Get Enterprise Quote</span>
+                <svg
+                  className="w-5 h-5 group-hover:translate-x-1 transition-transform"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                  />
+                </svg>
               </a>
               <a
                 href="#solutions"
-                className="group flex items-center gap-3 bg-white/10 hover:bg-white/20 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 border border-white/30"
+                className="text-gray-300 hover:text-white font-medium py-4 px-8 transition-colors"
               >
-                <span>View Solutions</span>
-                <span className="group-hover:translate-x-1 transition-transform">
-                  ↓
-                </span>
+                View Solutions
               </a>
             </div>
           </div>
@@ -72,16 +77,17 @@ export default function EnterprisePage() {
       <section id="solutions" className="py-24">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl font-bold text-white mb-4">
               Enterprise AI Solutions
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
               Comprehensive AI solutions designed for enterprise-scale
-              operations and Fortune 500 requirements.
+              transformation
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+<<<<<<< HEAD
             {/* Solution Cards */}
             {[
               {
@@ -160,20 +166,43 @@ export default function EnterprisePage() {
           </div>
         </div>
       </section>
+=======
+            {/* Solution 1 */}
+            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-cyan-500/50 transition-all duration-300 group">
+              <div className="text-4xl mb-4">🤖</div>
+              <h3 className="text-2xl font-bold text-white mb-4">
+                Autonomous AI Systems
+              </h3>
+              <p className="text-gray-400 mb-6">
+                Self-managing AI systems that optimize operations, reduce costs,
+                and improve efficiency across your entire organization.
+              </p>
+              <ul className="space-y-2 text-sm text-gray-300">
+                <li>• 99.9% uptime guarantee</li>
+                <li>• $50M+ annual cost savings</li>
+                <li>• 24/7 autonomous operation</li>
+              </ul>
+            </div>
+>>>>>>> main
 
-      {/* Stats Section */}
-      <section className="py-24 bg-black/20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Proven Results
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our enterprise solutions have delivered measurable results across
-              Fortune 500 companies worldwide.
-            </p>
-          </div>
+            {/* Solution 2 */}
+            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-purple-500/50 transition-all duration-300 group">
+              <div className="text-4xl mb-4">⚡</div>
+              <h3 className="text-2xl font-bold text-white mb-4">
+                Quantum Computing
+              </h3>
+              <p className="text-gray-400 mb-6">
+                Next-generation quantum computing solutions for complex
+                optimization problems and advanced analytics.
+              </p>
+              <ul className="space-y-2 text-sm text-gray-300">
+                <li>• 1000x faster processing</li>
+                <li>• Advanced cryptography</li>
+                <li>• Future-proof technology</li>
+              </ul>
+            </div>
 
+<<<<<<< HEAD
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               { number: '500+', label: 'Fortune 500 Clients' },
@@ -191,11 +220,30 @@ export default function EnterprisePage() {
                 <div className="text-gray-300">{stat.label}</div>
               </div>
             ))}
+=======
+            {/* Solution 3 */}
+            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-green-500/50 transition-all duration-300 group">
+              <div className="text-4xl mb-4">🔒</div>
+              <h3 className="text-2xl font-bold text-white mb-4">
+                Enterprise Security
+              </h3>
+              <p className="text-gray-400 mb-6">
+                Military-grade security solutions with zero-trust architecture
+                and advanced threat detection.
+              </p>
+              <ul className="space-y-2 text-sm text-gray-300">
+                <li>• SOC 2 Type II certified</li>
+                <li>• Zero-trust architecture</li>
+                <li>• Real-time threat detection</li>
+              </ul>
+            </div>
+>>>>>>> main
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
+<<<<<<< HEAD
       <section className="py-24">
         <div className="container mx-auto px-4">
           <div className="text-center bg-white/5 backdrop-blur-lg rounded-3xl p-12 border border-white/20">
@@ -222,6 +270,30 @@ export default function EnterprisePage() {
                 <span>Get Enterprise Consultation</span>
               </a>
             </div>
+=======
+      <section className="py-24 bg-gradient-to-r from-cyan-500/10 to-purple-500/10">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-4xl font-bold text-white mb-6">
+            Ready to Transform Your Enterprise?
+          </h2>
+          <p className="text-xl text-gray-400 mb-8 max-w-3xl mx-auto">
+            Join 500+ Fortune 500 companies already using our AI solutions to
+            drive innovation and growth.
+          </p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+            <a
+              href="/contact"
+              className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl"
+            >
+              Schedule Enterprise Demo
+            </a>
+            <a
+              href="tel:+13024640950"
+              className="text-cyan-400 hover:text-cyan-300 font-medium py-4 px-8 transition-colors"
+            >
+              Call: +1 (302) 464-0950
+            </a>
+>>>>>>> main
           </div>
         </div>
       </section>
