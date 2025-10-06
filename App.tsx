@@ -45,7 +45,10 @@ const InteractiveContentShowcase2026 = memo(() => (
     </div>
   </div>
 ));
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-cea4
 // Error Boundary Component
 interface ErrorBoundaryState {
   hasError: boolean;
@@ -62,6 +65,10 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
   static getDerivedStateFromError(error: Error): ErrorBoundaryState {
     return { hasError: true, error };
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-cea4
   override componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
     console.error('App Error Boundary caught an error:', error, errorInfo);
   }
@@ -95,6 +102,7 @@ const LoadingSpinner = memo(() => (
     <div className="text-gray-500">Loading...</div>
   </div>
 ));
+<<<<<<< HEAD
 
 // Error Boundary Component
 interface ErrorBoundaryState {
@@ -146,6 +154,8 @@ class AppErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundary
   }
 }
 
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-cea4
 export default function App() {
   const structuredData = useMemo(
     () => ({
