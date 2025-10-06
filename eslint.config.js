@@ -7,12 +7,19 @@ import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
 
 export default [
-  // Global ignores - ignore everything except src and app directories
+  // Global ignores - ignore everything except src, app directories and main files
   {
     ignores: [
       '**/*',
       '!src/**',
       '!app/**',
+      '!App.tsx',
+      '!components/**',
+      '!api/**',
+      '!lib/**',
+      '!hooks/**',
+      '!utils/**',
+      '!types/**',
       'src/pages/blog-disabled/**',
       'src/components/**',
       'src/pages/**',
@@ -66,7 +73,7 @@ export default [
     rules: {
       ...(reactHooks.configs.recommended?.rules || {}),
       'react-refresh/only-export-components': 'off',
-      '@typescript-eslint/no-unused-vars': 'warn',
+      '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
       '@typescript-eslint/no-explicit-any': 'warn',
     },
   },

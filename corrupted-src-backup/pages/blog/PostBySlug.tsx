@@ -89,7 +89,7 @@ export default function PostBySlug(): React.JSX.Element {
 
   // Find the current post
   const currentPost = [...latestArticles, ...blogPosts, ...featuredPosts].find(
-    post => post.slug === slug,
+    post => post.slug === slug
   );
 
   if (!currentPost) {

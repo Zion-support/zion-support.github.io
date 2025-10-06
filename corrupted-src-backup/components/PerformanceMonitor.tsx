@@ -1,4 +1,4 @@
-<<<<<<< HEAD:src/components/PerformanceMonitor.tsx
+:src/components/PerformanceMonitor.tsx
 import React, { useEffect, useState } from 'react';
 import performanceOptimizer, { WebVitalsMetrics } from '../utils/performanceOptimizer';
 
@@ -108,13 +108,12 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 
   // Development mode: Log performance metrics
   useEffect(() => {
-    if (process.env.NODE_ENV === 'development' && Object.keys(metrics).length > 0) {
+    if (process.env['NODE_ENV'] === 'development' && Object.keys(metrics).length > 0) {
       console.log('Performance Metrics:', metrics);
     }
   }, [metrics]);
 
   return <>{children}</>;
-=======
 import React, { useEffect, useState, useCallback } from 'react';
 import performanceOptimizer, { WebVitalsMetrics, PerformanceBudget } from '../utils/performanceOptimizer';
 
@@ -288,7 +287,6 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       )}
     </div>
   );
->>>>>>> 816b623ffaed3413410f2a2aa47cedfcc64ada9d:corrupted-src-backup/components/PerformanceMonitor.tsx
 };
 
 export default PerformanceMonitor;

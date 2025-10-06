@@ -11,7 +11,7 @@ class SecurityEnhancer {
     ) {
       location.replace(
         'https:' +
-          window.location.href.substring(window.location.protocol.length),
+          window.location.href.substring(window.location.protocol.length)
       );
     }
   }

@@ -36,7 +36,7 @@ function fixJSXStructure(filePath) {
   // Fix common JSX structure issues
   content = content.replace(
     /<div className="flex items-center gap-3 mb-4">\s*<div className="[^"]*">\s*<[^>]+>\s*<\/div>\s*<div className="[^"]*">\s*<[^>]+>\s*<\/div>\s*<\/div>\s*<div className="flex-1">/g,
-    '<div className="flex items-center gap-3 mb-4">\n              <div className="p-3 bg-emerald-500/20 rounded-xl group-hover:bg-emerald-500/30 transition-colors">\n                <Shield className="w-8 h-8 text-emerald-300" />\n              </div>\n              <div className="flex-1">',
+    '<div className="flex items-center gap-3 mb-4">\n              <div className="p-3 bg-emerald-500/20 rounded-xl group-hover:bg-emerald-500/30 transition-colors">\n                <Shield className="w-8 h-8 text-emerald-300" />\n              </div>\n              <div className="flex-1">'
   );
 
   // Fix missing closing tags
@@ -44,7 +44,7 @@ function fixJSXStructure(filePath) {
     /<Link[^>]*>\s*<div className="flex items-center gap-3 mb-4">\s*<div className="[^"]*">\s*<[^>]+>\s*<\/div>\s*<div className="flex-1">\s*<span[^>]*>[^<]*<\/span>\s*<\/div>\s*<\/div>\s*<h3[^>]*>[^<]*<\/h3>\s*<p[^>]*>[^<]*<\/p>\s*<div className="flex items-center justify-between">\s*<div[^>]*>[^<]*<\/div>\s*<[^>]+>\s*<\/div>\s*<\/div>\s*<\/Link>/g,
     match => {
       return match.replace(/<\/div>\s*<\/Link>/, '</div>\n            </Link>');
-    },
+    }
   );
 
   fs.writeFileSync(filePath, content);
@@ -60,14 +60,14 @@ function addMissingImports(filePath) {
   if (content.includes('Shield') && !content.includes('import { Shield')) {
     content = content.replace(
       /import React[^;]+;/,
-      `import React from 'react';\nimport { Shield, Zap, Sparkles, TrendingUp, ArrowRight } from 'lucide-react';`,
+      `import React from 'react';\nimport { Shield, Zap, Sparkles, TrendingUp, ArrowRight } from 'lucide-react';`
     );
   }
 
   if (content.includes('Link') && !content.includes('import { Link')) {
     content = content.replace(
       /import React[^;]+;/,
-      `import React from 'react';\nimport { Link } from 'react-router-dom';\nimport { Shield, Zap, Sparkles, TrendingUp, ArrowRight } from 'lucide-react';`,
+      `import React from 'react';\nimport { Link } from 'react-router-dom';\nimport { Shield, Zap, Sparkles, TrendingUp, ArrowRight } from 'lucide-react';`
     );
   }
 
