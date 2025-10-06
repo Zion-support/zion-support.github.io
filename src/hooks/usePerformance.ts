@@ -176,13 +176,8 @@ export const useResourcePerformance = () => {
  */
 export const useLongTaskMonitoring = () => {
   useEffect(() => {
-<<<<<<< HEAD
     const observer = performanceOptimizer.monitorLongTasks((entries: PerformanceEntry[]) => {
       entries.forEach((entry: PerformanceEntry) => {
-        analytics.track('long_task', 'performance', 'detected', undefined, entry.duration);
-=======
-    performanceOptimizer.monitorLongTasks((entries: any[]) => {
-      entries.forEach((entry: any) => {
         analytics.track(
           'long_task',
           'performance',
@@ -190,7 +185,6 @@ export const useLongTaskMonitoring = () => {
           undefined,
           entry.duration
         );
->>>>>>> 71655f282840ed9a4a2a6696e410390223898ad3
       });
     });
 

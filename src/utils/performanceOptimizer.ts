@@ -122,7 +122,15 @@ export const preconnectDomains = (domains: string[]): void => {
 export const prefetchResources = (urls: string[]): void => {
   if (typeof document === 'undefined') return;
 
-<<<<<<< HEAD
+  // Prefetch URLs
+  urls.forEach(url => {
+    const link = document.createElement('link');
+    link.rel = 'prefetch';
+    link.href = url;
+    document.head.appendChild(link);
+  });
+
+  // Set up image lazy loading
   const imageObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -142,13 +150,6 @@ export const prefetchResources = (urls: string[]): void => {
 
   document.querySelectorAll('img[data-src]').forEach(img => {
     imageObserver.observe(img);
-=======
-  urls.forEach(url => {
-    const link = document.createElement('link');
-    link.rel = 'prefetch';
-    link.href = url;
-    document.head.appendChild(link);
->>>>>>> 71655f282840ed9a4a2a6696e410390223898ad3
   });
 };
 
