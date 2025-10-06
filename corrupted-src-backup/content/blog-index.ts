@@ -151,7 +151,11 @@ export function getAllTags(): string[] {
 export function getTotalValueProposition(): string {
   const totalValue = allBlogPosts.reduce((sum, post) => {
     const value = post.valueProposition.match(/\$(\d+)M/);
-    return sum + (value ? parseInt(value[1]) : 0);
+<<<<<<< HEAD:src/content/blog-index.ts
+    return sum + (value ? parseInt(value[1], 10) : 0);
+=======
+    return sum + (value ? parseInt(value[1] || '0') : 0);
+>>>>>>> main:corrupted-src-backup/content/blog-index.ts
   }, 0);
   return `$${totalValue}M+ total value proposition`;
 }

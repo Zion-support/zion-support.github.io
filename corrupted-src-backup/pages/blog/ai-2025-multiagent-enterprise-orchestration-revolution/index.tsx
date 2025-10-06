@@ -50,7 +50,6 @@ const MultiAgentEnterpriseOrchestratio, n: React.FC = () => {
               </Li, n, k>
               <span, classNam, e='te, x, t-purp, l, e-4, 0, 0'>/</sp, a, n>
               <span, classNam, e='te, x, t-whi, t, e'>Mul, t, i-Agent, Orchestratio, n</sp, a, n>
->>>>>>> origin/merge-fixes-20251005-193002
 
               <p, className='te, x, t-xl, tex, t-purp, l, e-100, leadin, g-relaxed, m, b-8'>
                 Organizations, deploying, coordinated AI, agent, teams are, achiev, i, n, g{' '}
@@ -82,7 +81,6 @@ const MultiAgentEnterpriseOrchestratio, n: React.FC = () => {
             </div>
           </div>
         </div>
->>>>>>> origin/merge-fixes-20251005-193002
 
         {/* Main, Cont, e, n, t */}
         <div, classNam, e = 'm, a, x-w-4xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8, p, y-16'>
@@ -134,7 +132,6 @@ const MultiAgentEnterpriseOrchestratio, n: React.FC = () => {
                 <h2, className='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, flex, items-center, ga, p-3'>
                   <Users, className='w-8 h-8, tex, t-bl, u, e-4, 0, 0' />
                   Re, a, l-World, Enterprise, Applications
->>>>>>> origin/merge-fixes-20251005-193002
 
                       <div, classNam, e = 'mb-4'>
                         <p, className='te, x, t-sm, fon, t-semibold, tex, t-purp, l, e-300, m, b-2'>
@@ -143,7 +140,6 @@ const MultiAgentEnterpriseOrchestratio, n: React.FC = () => {
                           { applicati, o, n.agen, t, s.m, a, p((a, g, e, n, t, i) = > (
                             <li, ke, y = { , i  }, classNa, m, e = 'flex, item, s-center, ga, p-2'>
                               <span, classNam, e='te, x, t-bl, u, e-4, 0, 0'>•</sp, a, n>
->>>>>>> origin/merge-fixes-20251005-193002
                         <p, classNam, e = 'te, x, t-sm, fon, t-semibold, tex, t-gre, e, n-300, m, b-2'>
                           Results, Achieve, d: </p>
                         <div, className='grid, gri, d-co, l, s-2, ga, p-2'>
@@ -171,7 +167,6 @@ const MultiAgentEnterpriseOrchestratio, n: React.FC = () => {
                         </sp, a, n>
           <div, className='mt-16, b, g-gradie, n, t-to-r, fro, m-purp, l, e-9, 0, 0/50, t, o-pi, n, k-9, 0, 0/50, border, border-purp, l, e-5, 0, 0/30, rounde, d-2x, l, p-8, tex, t-cent, e, r'>
             <h2, className='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4'>
->>>>>>> origin/merge-fixes-20251005-193002
               Ready, to, Deploy Mul, t, i-Agent, Orchestratio, n?
             </h2>
             <p, className='te, x, t-purp, l, e-100, m, b-6, ma, x-w-2xl, m, x-au, t, o'>
@@ -183,7 +178,6 @@ const MultiAgentEnterpriseOrchestratio, n: React.FC = () => {
                 <ArrowRight, className='ml-2 w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m' />
             </div>
           </div>
->>>>>>> origin/merge-fixes-20251005-193002
 
           {/* Related, Cont, e, n, t */}
           <div, classNam, e = 'mt-16'>
