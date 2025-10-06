@@ -74,7 +74,7 @@ export const recordBannerImpression = (impression: Omit<BannerImpression, 'times
   if (typeof window === 'undefined') return;
   
   try {
-    const impressions = getBannerImpressions();
+    const impressions = getStoredImpressions();
     const newImpression: BannerImpression = {
       ...impression,
       timestamp: Date.now(),
@@ -111,9 +111,36 @@ export const shouldShowBanner = (banner: BannerConfig): boolean => {
  * Get rotation score for banner prioritization
  */
 export const getRotationScore = (banner: BannerConfig): number => {
+  // Simple scoring based on priority and recent performance
+  const priorityScore = banner.priority;
+  const recentImpressions = getBannerImpressionCount(banner.id, 24);
+  const performanceScore = Math.max(0, 10 - recentImpressions); // Lower impressions = higher score
+  
+  return priorityScore + performanceScore;
+};
+
+export const selectBannersForRotation = (allBanners: BannerConfig[], maxBanners: number = MAX_VISIBLE_BANNERS): BannerConfig[] => {
+  // Calculate scores for all banners
+  const scoredBanners = allBanners.map(banner => ({
+    banner,
+    score: getRotationScore(banner)
+  }));
+  // Sort by score (highest first)
+  scoredBanners.sort((a, b) => b.score - a.score);
+  // Take top N banners
+  return scoredBanners.slice(0, maxBanners).map(item => item.banner);
+};
+/**
+ * Get banner analytics
+ */
+export const getBannerAnalytics = (bannerId?: string) => {
+  if (!bannerId) return null;
+  
+  const impressions = getStoredImpressions();
+  const bannerImpressions = impressions.filter(imp => imp.bannerId === bannerId);
+  
   // Calculate engagement rate
-  const impressions = getBannerImpressions();
-  const bannerImpressions = impressions.filter(imp => imp.bannerId === banner.id);
+>>>>>>> cursor/fix-errors-and-merge-to-main-40e1
   const clicks = bannerImpressions.filter(imp => imp.clicked).length;
   const engagementRate = bannerImpressions.length > 0 ? clicks / bannerImpressions.length : 0;
   
@@ -124,8 +151,13 @@ export const getRotationScore = (banner: BannerConfig): number => {
   // Calculate fatigue score (too many impressions = lower score)
   const fatigueScore = Math.max(0, 1 - (bannerImpressions.length / 50));
   
-  // Weighted combination
-  return (banner.priority * 0.4) + (engagementRate * 0.3) + (recencyScore * 0.2) + (fatigueScore * 0.1);
+  return {
+    engagementRate,
+    recencyScore,
+    fatigueScore,
+    totalImpressions: bannerImpressions.length,
+    totalClicks: clicks
+  };
 };
 /**
  * Get banner analytics
@@ -214,7 +246,7 @@ export const getBannersForRotation = (banners: BannerConfig[]): BannerConfig[] =
  * Record banner click
  */
 export const recordBannerClick = (bannerId: string): void => {
-  const impressions = getBannerImpressions();
+  const impressions = getStoredImpressions();
   const lastImpression = impressions
     .filter(imp => imp.bannerId === bannerId)
     .pop();
@@ -369,7 +401,7 @@ export class BannerRotationEngine {
 // Export singleton instance
 export const bannerRotationEngine = new BannerRotationEngine();
 
-export const trackBannerClick = (bannerId: string, pageUrl: string): void => {
+export const trackBannerClickWithPage = (bannerId: string, pageUrl: string): void => {
   recordBannerImpression({
     bannerId,
     pageUrl,
@@ -395,6 +427,7 @@ export default {
   shouldShowBanner,
   getRotationScore,
   getBannersForRotation,
-  trackBannerClick,
+  trackBannerClick: recordBannerClick,
+  trackBannerClickWithPage,
   trackBannerVisibility
 };

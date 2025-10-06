@@ -92,6 +92,7 @@ export const keyboardNavigation = {
     orientation: 'horizontal' | 'vertical' = 'vertical',
   ): number => {
     const isVertical = orientation === 'vertical';
+    // const isHorizontal = orientation === 'horizontal';
     switch (event.key) {
       case isVertical ? 'ArrowDown' : 'ArrowRight':
         event.preventDefault();
@@ -128,9 +129,9 @@ export const colorContrast = {
     return 0.2126 * (rs || 0) + 0.7152 * (gs || 0) + 0.0722 * (bs || 0);
   },
   // Calculate contrast ratio
-  getContrastRatio: (color1: [number, number, number], color2: [number, number, number]): number => {
-    const lum1 = colorContrast.getLuminance(...color1);
-    const lum2 = colorContrast.getLuminance(...color2);
+  getContrastRatio: (_color1: [number, number, number], _color2: [number, number, number]): number => {
+    const lum1 = colorContrast.getLuminance(..._color1);
+    const lum2 = colorContrast.getLuminance(..._color2);
     const brightest = Math.max(lum1, lum2);
     const darkest = Math.min(lum1, lum2);
     return (brightest + 0.05) / (darkest + 0.05);

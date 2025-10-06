@@ -26,7 +26,7 @@ export const debounce = <T extends (...args: unknown[]) => unknown>(
 // Throttle function for performance optimization
 export const throttle = <T extends (...args: unknown[]) => unknown>(
   func: T,
-  limit: number
+  _limit: number // eslint-disable-line @typescript-eslint/no-unused-vars
 ): ((...args: Parameters<T>) => void) => {
   let inThrottle: boolean;
   return function executedFunction(this: unknown, ...args: Parameters<T>) {
@@ -44,7 +44,7 @@ export const preloadCriticalResources = (): void => {
   if (typeof window === 'undefined') return;
   
   const criticalResources = [
-    '/fonts/inter.woff2',
+    '/fonts/inter-var.woff2',
     '/css/critical.css'
   ];
   
