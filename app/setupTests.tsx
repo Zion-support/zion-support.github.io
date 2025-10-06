@@ -17,19 +17,30 @@ Object.defineProperty(window, 'matchMedia', {
 
 // Mock IntersectionObserver
 global.IntersectionObserver = class IntersectionObserver {
-  constructor() {}
+  root: Element | null = null;
+  rootMargin: string = '0px';
+  thresholds: ReadonlyArray<number> = [0];
+  
+  constructor(
+    public callback: IntersectionObserverCallback,
+    options?: IntersectionObserverInit
+  ) {}
+  
   disconnect() {}
   observe() {}
   unobserve() {}
-};
+  takeRecords(): IntersectionObserverEntry[] {
+    return [];
+  }
+} as any;
 
 // Mock ResizeObserver
 global.ResizeObserver = class ResizeObserver {
-  constructor() {}
+  constructor(public callback: ResizeObserverCallback) {}
   disconnect() {}
   observe() {}
   unobserve() {}
-};
+} as any;
 
 // Mock scrollTo
 Object.defineProperty(window, 'scrollTo', {
