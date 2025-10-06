@@ -92,7 +92,6 @@ export const keyboardNavigation = {
     orientation: 'horizontal' | 'vertical' = 'vertical',
   ): number => {
     const isVertical = orientation === 'vertical';
-    const isHorizontal = orientation === 'horizontal';
     switch (event.key) {
       case isVertical ? 'ArrowDown' : 'ArrowRight':
         event.preventDefault();
@@ -127,13 +126,6 @@ export const colorContrast = {
       return c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4);
     });
     return 0.2126 * (rs || 0) + 0.7152 * (gs || 0) + 0.0722 * (bs || 0);
-  },
-  // Calculate contrast ratio
-  getContrastRatio: (
-    color1: [number, number, number],
-    color2: [number, number, number],
-  ): number => {
-    return 0.2126 * (rs ?? 0) + 0.7152 * (gs ?? 0) + 0.0722 * (bs ?? 0);
   },
   // Calculate contrast ratio
   getContrastRatio: (color1: [number, number, number], color2: [number, number, number]): number => {
@@ -346,6 +338,7 @@ export const accessibilityTesting = {
       headings: headingCheck,
       score,
     };
+  },
   // Check if element is focusable
   isFocusable: (element: HTMLElement): boolean => {
     const focusableSelectors = [

@@ -104,24 +104,9 @@ export const shouldShowBanner = (banner: BannerConfig): boolean => {
 };
 
 /**
- * Get rotation score for banner prioritization
+ * Calculate banner score for rotation
  */
-export const getRotationScore = (banner: BannerConfig): number => {
-export const selectBannersForRotation = (allBanners: BannerConfig[], maxBanners: number = MAX_VISIBLE_BANNERS): BannerConfig[] => {
-  // Calculate scores for all banners
-  const scoredBanners = allBanners.map(banner => ({
-    banner,
-    score: calculateBannerScore(banner)
-  }));
-  // Sort by score (highest first)
-  scoredBanners.sort((a, b) => b.score - a.score);
-  // Take top N banners
-  return scoredBanners.slice(0, maxBanners).map(item => item.banner);
-};
-/**
- * Get banner analytics
- */
-export const getBannerAnalytics = (bannerId?: string) => {
+const calculateBannerScore = (banner: BannerConfig): number => {
   const impressions = getBannerImpressions();
   const bannerImpressions = impressions.filter(imp => imp.bannerId === banner.id);
   
@@ -138,6 +123,56 @@ export const getBannerAnalytics = (bannerId?: string) => {
   
   // Weighted combination
   return (banner.priority * 0.4) + (engagementRate * 0.3) + (recencyScore * 0.2) + (fatigueScore * 0.1);
+};
+
+/**
+ * Get rotation score for banner prioritization
+ */
+export const getRotationScore = (banner: BannerConfig): number => {
+  return calculateBannerScore(banner);
+};
+
+/**
+ * Select banners for rotation
+ */
+export const selectBannersForRotation = (allBanners: BannerConfig[], maxBanners: number = 10): BannerConfig[] => {
+  // Calculate scores for all banners
+  const scoredBanners = allBanners.map(banner => ({
+    banner,
+    score: calculateBannerScore(banner)
+  }));
+  // Sort by score (highest first)
+  scoredBanners.sort((a, b) => b.score - a.score);
+  // Take top N banners
+  return scoredBanners.slice(0, maxBanners).map(item => item.banner);
+};
+
+/**
+ * Get banner analytics
+ */
+export const getBannerAnalytics = (bannerId?: string) => {
+  const impressions = getBannerImpressions();
+  const bannerImpressions = impressions.filter(imp => imp.bannerId === bannerId);
+  
+  // Calculate engagement rate
+  const clicks = bannerImpressions.filter(imp => imp.clicked).length;
+  const engagementRate = bannerImpressions.length > 0 ? clicks / bannerImpressions.length : 0;
+  
+  // Calculate recency score (more recent impressions = higher score)
+  const recentImpressions = bannerImpressions.filter(imp => imp.timestamp > Date.now() - 24 * 60 * 60 * 1000);
+  const recencyScore = Math.min(1, recentImpressions.length / 10);
+  
+  // Calculate fatigue score (too many impressions = lower score)
+  const fatigueScore = Math.max(0, 1 - (bannerImpressions.length / 50));
+  
+  return {
+    totalImpressions: bannerImpressions.length,
+    clicks,
+    engagementRate,
+    recencyScore,
+    fatigueScore,
+    score: (engagementRate * 0.3) + (recencyScore * 0.2) + (fatigueScore * 0.1)
+  };
 };
 
 /**
