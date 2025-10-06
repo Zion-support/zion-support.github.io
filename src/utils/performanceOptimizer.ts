@@ -394,7 +394,7 @@ class PerformanceOptimizer {
   }
 
   public reportWebVitals(metrics: WebVitalsMetrics): void {
-    if (process.env.NODE_ENV === 'development') {
+    if (process.env['NODE_ENV'] === 'development') {
       console.log('Web Vitals:', metrics);
     }
   }
@@ -443,7 +443,7 @@ class PerformanceOptimizer {
     const interactiveTime = timing.domInteractive - timing.navigationStart;
     
     // Log performance metrics for debugging
-    if (process.env.NODE_ENV === 'development') {
+    if (process.env['NODE_ENV'] === 'development') {
       console.log('Page Load Metrics:', { loadTime, interactiveTime });
     }
     
