@@ -45,7 +45,7 @@ export default function EnterprisePage() {
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-              <Link
+              <a
                 href="/contact"
                 className="group flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl"
               >
@@ -53,8 +53,8 @@ export default function EnterprisePage() {
                 <span className="group-hover:translate-x-1 transition-transform">
                   →
                 </span>
-              </Link>
-              <Link
+              </a>
+              <a
                 href="#solutions"
                 className="group flex items-center gap-3 bg-white/10 hover:bg-white/20 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 border border-white/30"
               >
@@ -62,7 +62,7 @@ export default function EnterprisePage() {
                 <span className="group-hover:translate-x-1 transition-transform">
                   ↓
                 </span>
-              </Link>
+              </a>
             </div>
           </div>
         </div>
@@ -149,20 +149,20 @@ export default function EnterprisePage() {
               transformation with our enterprise AI solutions.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-              <a
+              <Link
                 href="tel:+13024640950"
                 className="group flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl"
               >
                 <span className="text-xl">📞</span>
-                <span>Call +1 (302) 464-0950</span>
-              </a>
-              <a
+                <span>Call +1 302 464 0950</span>
+              </Link>
+              <Link
                 href="mailto:info@ziontechgroup.com"
                 className="group flex items-center gap-3 bg-white/10 hover:bg-white/20 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 border border-white/30"
               >
                 <span className="text-xl">📧</span>
                 <span>Get Enterprise Consultation</span>
-              </a>
+              </Link>
             </div>
           </div>
         </div>
