@@ -26,6 +26,7 @@ const App: React.FC = () => {
 
     // Initialize performance monitoring
     performanceOptimizer.lazyLoadImages();
+    performanceOptimizer.prefetchResources(['/api/health']);
     
     // Initialize Web Vitals monitoring
     if (typeof window !== 'undefined' && 'performance' in window) {
