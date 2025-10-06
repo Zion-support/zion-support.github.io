@@ -16,15 +16,12 @@ export interface IntegrationProviderMeta {
   category: 'crm' | 'ats';
   description: string;
 }
+
 export interface ProviderConnection {
   id: string;
   providerId: IntegrationProviderId;
   accessToken: string;
   refreshToken?: string;
-  status: SyncStatus;
-  lastSync?: number;
-  createdAt: number;
-  updatedAt: number;
   expiresAt?: number;
   status: SyncStatus;
   lastSync?: number;
@@ -53,12 +50,6 @@ export interface ZapierEvent {
   payload: Record<string, any>;
 }
 
-export interface IntegrationProviderMeta {
-  id: IntegrationProviderId;
-  name: string;
-  category: 'crm' | 'ats';
-  description: string;
-}
 export interface IntegrationsState {
   connections: ProviderConnection[];
   logs: SyncLogEntry[];
