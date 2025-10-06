@@ -1,53 +1,7 @@
-<<<<<<< HEAD
-import React, { Suspense, lazy } from 'react';
+import React, { Suspense, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
-=======
-<<<<<<< HEAD
-import React, { Suspense, lazy, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-=======
-<<<<<<< HEAD
-import { Suspense, useEffect } from 'react';
-=======
-<<<<<<< HEAD
-import { Suspense, useEffect } from 'react';
-=======
-<<<<<<< HEAD
-import React, { Suspense, useEffect } from 'react';
-=======
-<<<<<<< HEAD
-import React, { Suspense, useEffect } from 'react';
-=======
-<<<<<<< HEAD
-import { Suspense, useEffect } from 'react';
-=======
-<<<<<<< HEAD
-import React, { Suspense, useEffect } from 'react';
-=======
-<<<<<<< HEAD
-import { Suspense, useEffect } from 'react';
-=======
-import React, { Suspense, useEffect } from 'react';
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-<<<<<<< HEAD
-import performanceOptimizer from './utils/performanceOptimizer';
-=======
-<<<<<<< HEAD
-// import performanceOptimizer from './utils/performanceOptimizer'; // Unused import
-=======
->>>>>>> main
->>>>>>> main
->>>>>>> main
 import './index.css';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
 
 // Components
 import ErrorBoundary from './components/ErrorBoundary';
@@ -56,7 +10,6 @@ import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import LoadingSpinner from './components/LoadingSpinner';
 
-<<<<<<< HEAD
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./pages/HomePage'));
 const AboutPage = lazy(() => import('./pages/AboutPage'));
@@ -65,7 +18,8 @@ const ServicesPage = lazy(() => import('./pages/ServicesPage'));
 const TeamPage = lazy(() => import('./pages/TeamPage'));
 const PrivacyPage = lazy(() => import('./pages/PrivacyPage'));
 const TermsPage = lazy(() => import('./pages/TermsPage'));
-=======
+
+// Simple components for basic functionality
 const About = () => (
   <div className='min-h-screen flex items-center justify-center bg-gray-50'>
     <div className='text-center'>
@@ -77,26 +31,6 @@ const About = () => (
   </div>
 );
 
-<<<<<<< HEAD
-=======
-// About component is now imported from app/about/page
-
-<<<<<<< HEAD
-function App() {
-  const initializeOptimizations = useCallback(() => {
-    try {
-      // Initialize performance optimizer
-      // performanceOptimizer.initialize(); // Method doesn't exist
-      
-      // Preload critical resources
-      if ('requestIdleCallback' in window) {
-        requestIdleCallback(() => {
-          // Preload critical pages
-          import('./pages/Home');
-          import('./pages/About');
-        });
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
 const Services = () => (
   <div className='min-h-screen flex items-center justify-center bg-gray-50'>
     <div className='text-center'>
@@ -158,54 +92,17 @@ function App(): React.JSX.Element {
     // Initialize basic optimizations
     const initializeOptimizations = () => {
       try {
-<<<<<<< HEAD
-        // All optimization systems initialized successfully
-      } catch (error) {
-        // Failed to initialize optimization systems
-=======
-<<<<<<< HEAD
         console.log('All optimization systems initialized successfully');
       } catch (error) {
         console.error('Failed to initialize optimization systems:', error);
-=======
-        // App initialized successfully
-      } catch (error) {
-<<<<<<< HEAD
-        // Failed to initialize app
-=======
-        console.error('Failed to initialize app:', error);
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
-        console.log('All optimization systems initialized successfully');
-      } catch (error) {
-        console.error('Failed to initialize optimization systems:', error);
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
       }
     };
 
     // Initialize optimizations after component mount
     initializeOptimizations();
   }, []);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-e98c
 
-const App: React.FC = () => {
   return (
-<<<<<<< HEAD
     <HelmetProvider>
       <ErrorBoundary>
         <SEOOptimizer>
@@ -230,100 +127,9 @@ const App: React.FC = () => {
         </SEOOptimizer>
       </ErrorBoundary>
     </HelmetProvider>
-=======
-    <div>
-      <Router>
-<<<<<<< HEAD
-        <Suspense fallback={<div className="min-h-screen flex items-center justify-center">Loading...</div>}>
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-        <Suspense fallback={<div className="min-h-screen flex items-center justify-center">Loading...</div>}>
-=======
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
-        <Suspense
-          fallback={
-            <div className="min-h-screen flex items-center justify-center bg-gray-50">
-              <div className="text-center">
-                <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-600 mx-auto"></div>
-                <p className="mt-4 text-gray-600">Loading...</p>
-              </div>
-            </div>
-          }
-        >
-<<<<<<< HEAD
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/services" element={<Services />} />
-            <Route path="/blog" element={<Blog />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/team" element={<Team />} />
-            <Route path="/privacy" element={<Privacy />} />
-            <Route path="/terms" element={<Terms />} />
-=======
-<<<<<<< HEAD
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/services" element={<Services />} />
-            <Route path="/blog" element={<Blog />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/team" element={<Team />} />
-            <Route path="/privacy" element={<Privacy />} />
-            <Route path="/terms" element={<Terms />} />
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
-          <Routes>
-            <Route path='/' element={<Home />} />
-            <Route path='/about' element={<AboutPage />} />
-            <Route path='/services' element={<Services />} />
-            <Route path='/blog' element={<Blog />} />
-            <Route path='/contact' element={<Contact />} />
-            <Route path='/team' element={<TeamPage />} />
-            <Route path='/privacy' element={<PrivacyPage />} />
-            <Route path='/terms' element={<TermsPage />} />
->>>>>>> main
->>>>>>> main
-          </Routes>
-        </Suspense>
-      </Router>
-    </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
   );
 };
 
-<<<<<<< HEAD
-export default App;
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
-=======
 // Simple Error Boundary
 class ErrorBoundary extends React.Component<
   { children: React.ReactNode; fallback?: React.ReactNode },
@@ -334,26 +140,10 @@ class ErrorBoundary extends React.Component<
     this.state = { hasError: false };
   }
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  static getDerivedStateFromError(error: Error) {
-    return { hasError: true, error: error };
-  }
-
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
-  static getDerivedStateFromError(_error: Error) { // eslint-disable-line @typescript-eslint/no-unused-vars
+  static getDerivedStateFromError(_error: Error) {
     return { hasError: true };
   }
 
-<<<<<<< HEAD
-  override componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-    // Error caught by boundary
-=======
-<<<<<<< HEAD
->>>>>>> main
   override componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
     
@@ -368,16 +158,6 @@ class ErrorBoundary extends React.Component<
     this.setState({ hasError: false });
   };
 
-<<<<<<< HEAD
-=======
-=======
-  override componentDidCatch(_error: Error, errorInfo: React.ErrorInfo) {
-    console.error('Error caught by boundary:', errorInfo);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
-  }
-
->>>>>>> main
->>>>>>> main
   override render() {
     if (this.state.hasError) {
       return this.props.fallback || (
@@ -400,10 +180,4 @@ class ErrorBoundary extends React.Component<
 }
 
 export { ErrorBoundary };
-
 export default App;
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-e98c
-=======
->>>>>>> main
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
