@@ -1,9 +1,5 @@
 import React from 'react';
 import { ArrowRight, Bookmark, Rocket, TrendingUp, Zap } from 'lucide-react';
-
-<<<<<<< HEAD
-import ArrowRight from 'next/link';
-
 import Link from 'next/link';
 import {
   Sparkles,
@@ -64,7 +60,6 @@ const September30NewContent2025Banner: React.FC = () => {
       date: '2025-09-30',
       readTime: '16 min',
       icon: '👁️',
-<<<<<<< HEAD
       gradient: 'from-emerald-500 to-teal-600',
     },
   ];
@@ -361,7 +356,6 @@ const September30NewContent2025Banner: React.FC = () => {
         </div>
 
         {/* Call-to-Action Section */}
-<<<<<<< HEAD
         <div>
           <div>
             <div>
@@ -418,7 +412,6 @@ const September30NewContent2025Banner: React.FC = () => {
         </div>
 
         {/* Stats Section */}
-<<<<<<< HEAD
         <div className='grid grid-cols-2 md:grid-cols-4 gap-8'>
 =======
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -427,7 +420,6 @@ const September30NewContent2025Banner: React.FC = () => {
             { value: '500+', label: 'Enterprise Clients' },
             { value: '10B+', label: 'Data Points Processed Daily' },
             { value: '99.9%', label: 'System Uptime' },
-<<<<<<< HEAD
             { value: '5M+', label: 'Autonomous Operations Hours' },
           ].map((stat, index) => (
             <div key={index} className='text-center'>

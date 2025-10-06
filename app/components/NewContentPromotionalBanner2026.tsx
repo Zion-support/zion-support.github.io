@@ -1,9 +1,6 @@
 import React from 'react';
 import { ArrowRight, Bot, Rocket, Shield, Target, TrendingUp, Zap } from 'lucide-react';
 
-<<<<<<< HEAD
-import ArrowRight from 'next/link';
-
 import Link from 'next/link';
 import {
   Sparkles,
@@ -61,7 +58,6 @@ const NewContentPromotionalBanner2026: React.FC = () => {
   ];
 
   return (
-<<<<<<< HEAD
     <div className='relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden'>
       {/* Animated background effects */}
       <div className='absolute inset-0 overflow-hidden opacity-20'>
@@ -165,7 +161,6 @@ const NewContentPromotionalBanner2026: React.FC = () => {
         </div>
 
         {/* Featured Content Cards */}
-<<<<<<< HEAD
         <div className='grid md:grid-cols-3 gap-8 mb-16'>
           {featuredContent.map((content, index) => (
             <div
@@ -207,7 +202,6 @@ const NewContentPromotionalBanner2026: React.FC = () => {
                 </div>
 
                 {/* Category */}
-<<<<<<< HEAD
                 <div className='mb-4'>
                   <span
                     className={`inline-block px-4 py-2 rounded-full bg-gradient-to-r ${content.bgColor} text-gray-900 text-sm font-semibold border border-white/20`}
@@ -228,11 +222,7 @@ const NewContentPromotionalBanner2026: React.FC = () => {
                 </h3>
 
                 {/* Excerpt */}
-<<<<<<< HEAD
                 <p className='text-gray-300 mb-6 leading-relaxed'>
-=======
-                <p className="text-gray-300 mb-6 leading-relaxed">
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e4e
                   {content.excerpt}
                 </p>
 
@@ -241,34 +231,20 @@ const NewContentPromotionalBanner2026: React.FC = () => {
                   href={`/blog/${content.slug}`}
                   className={`group/btn flex items-center justify-center gap-3 w-full bg-gradient-to-r ${content.color} hover:shadow-2xl text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 transform hover:-translate-y-1`}
                 >
-<<<<<<< HEAD
                   <span className="text-lg">Read Full Article</span>
                   <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-2 transition-transform duration-300" />
-                </ArrowRight>
-=======
-                  <span>Read Full Article</span>
-                  <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-1 transition-transform" />
-                </Link>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e4e
-              </div>
                 </Link>
 
-<<<<<<< HEAD
                 {/* Corner accent */}
                 <div
                   className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${content.color} opacity-10 rounded-bl-full`}
                 />
               </div>
-=======
-              {/* Corner accent */}
-              <div className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${content.color} opacity-10 rounded-bl-full`}></div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e4e
             </div>
           ))}
         </div>
 
         {/* Bottom CTA Section */}
-<<<<<<< HEAD
         <div className='text-center bg-white/5 backdrop-blur-lg rounded-3xl border border-white/10 p-12'>
           <div className='flex items-center justify-center gap-4 mb-6'>
             <Rocket className='w-8 h-8 text-cyan-400' />

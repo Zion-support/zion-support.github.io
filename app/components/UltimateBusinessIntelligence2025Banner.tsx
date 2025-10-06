@@ -19,11 +19,7 @@ const UltimateBusinessIntelligence2025Banner = () => {
         roi: '30,000%',
         savings: '$750B+',
         accuracy: '99.99%',
-<<<<<<< HEAD
         speed: '5,000% faster',
-=======
-        speed: '5,000% faster'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e4e
       },
       readingTime: '35 min read',
       featured: true,
@@ -39,11 +35,7 @@ const UltimateBusinessIntelligence2025Banner = () => {
         roi: '30,000%',
         savings: '$750B',
         company: '$15.2B',
-<<<<<<< HEAD
         timeline: '18 months',
-=======
-        timeline: '18 months'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e4e
       },
       readingTime: '25 min read',
       featured: true,
@@ -59,7 +51,6 @@ const UltimateBusinessIntelligence2025Banner = () => {
         roi: '30,000%',
         success: '99.8%',
         timeline: '18 months',
-<<<<<<< HEAD
         adoption: '100%',
       },
       readingTime: '45 min read',
@@ -76,17 +67,12 @@ const UltimateBusinessIntelligence2025Banner = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-<<<<<<< HEAD
       setCurrentSlide(prev => (prev + 1) % content.length);
-=======
-      setCurrentSlide((prev) => (prev + 1) % content.length);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e4e
     }, 5000);
 
     return () => clearInterval(interval);
   }, [content.length]);
 
-<<<<<<< HEAD
   return (
     <section className='relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden'>
       {/* Animated Background Effects */}
@@ -355,7 +341,6 @@ const UltimateBusinessIntelligence2025Banner = () => {
           </div>
         </div>
 
-<<<<<<< HEAD
         {/* Progress Indicators */}
         <div className="flex justify-center space-x-2 mt-8">
           {content.map((_, index) => (
@@ -367,6 +352,9 @@ const UltimateBusinessIntelligence2025Banner = () => {
               }`}
               aria-label={`Go to slide ${index + 1}`}
             />
+          ))}
+        </div>
+
         {/* Call-to-Action Section */}
         <div className='text-center bg-white/5 backdrop-blur-lg rounded-3xl p-12 border border-white/20 mb-16'>
           <h3 className='text-4xl font-bold text-white mb-6'>
