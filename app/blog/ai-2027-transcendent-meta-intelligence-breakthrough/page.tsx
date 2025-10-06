@@ -190,6 +190,6 @@ origin/cursor/fix-errors-and-merge-to-main-cc0a
             </div>
         </section>
   );
-}</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>
+  }</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>
 </span>
 </span>)

@@ -23,7 +23,7 @@ export default function Autonomous Risk BudgetsV2Page() {
         <section className="prose prose-invert prose-slate max-w-none">
           <h2>Operational    risk budgets</h2>
           <p>
-            Risk    budgets set explicit allowances for failure modes (e.g.,
+            Risk    budgets set explicit allowances for failure modes (e?.g.,
             hallucinations, latency spikes) with automated triggers for
             rollbacks and model tier switches.
           </p>
@@ -53,4 +53,4 @@ export default function Autonomous Risk BudgetsV2Page() {
       </article>
     </main>
   );
-}
+  }

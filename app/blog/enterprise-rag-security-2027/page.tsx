@@ -1,3 +1,4 @@
+import { Star } from 'lucide-react';
 import React from 'react';
 'useclient';
 import Link from 'next/link';
@@ -48,4 +49,5 @@ export default function Page() {return (<main class Name Name='min-h-screen bg-g
         </div>
       </div>
     </main>
-  ); }
+  );
+  }

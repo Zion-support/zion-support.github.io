@@ -1,4 +1,5 @@
-import { Metadata } from 'next';
+import { Star } from 'lucide-react';
+import type { Metadata } from 'next';
 // import { notFound } from 'next/navigation';
 
 export const metadata: Metadata = {
@@ -518,4 +519,4 @@ export default function QuantumNeuralFusionSuccessPage() {
       </article>
     </div>
   );
-}
+  }

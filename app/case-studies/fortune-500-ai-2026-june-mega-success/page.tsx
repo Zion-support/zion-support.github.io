@@ -1,4 +1,5 @@
-import { Metadata } from 'next';
+import { Star } from 'lucide-react';
+import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Fortune 500 AI 2026 June Mega Success: $3.2B Transformation Story',
@@ -485,4 +486,4 @@ export default function Fortune500AI2026JuneMegaSuccess() {
       </article>
     </div>
   );
-}
+  }

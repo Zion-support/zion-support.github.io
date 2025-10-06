@@ -1,4 +1,5 @@
-import { Metadata } from 'next';
+import { Star } from 'lucide-react';
+import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Quantum Consciousness Enterprise Success: $3.2B Value Generation',
@@ -178,4 +179,4 @@ export default function QuantumConsciousnessEnterpriseSuccess() {
       </div>
     </div>
   );
-}
+  }

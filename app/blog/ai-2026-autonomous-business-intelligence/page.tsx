@@ -188,5 +188,5 @@ export default function AIAutonomous Business Intelligence2026() {/* return (
       </div>
     </article>
   );
-}
+  }
 </span>)

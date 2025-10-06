@@ -1,5 +1,6 @@
+import { Star } from 'lucide-react';
 import React from 'react';
-import {Metadata} from 'next';
+import type { Metadata } from 'next';
 import {notFound} from 'next/navigation';
 
 export const metadata = {
@@ -177,7 +178,7 @@ export default function QuantumNeuralFusion Breakthrough Page() {/* return (
         </footer>
       </article>
   );
-}</div></div></div></div></div></div>
+  }</div></div></div></div></div></div>
 </span>
 </span>
 </span>

@@ -19,4 +19,4 @@ export default function OctoberFeaturedContentBanner() {
       </div>
     </section>
   );
-}
+  }

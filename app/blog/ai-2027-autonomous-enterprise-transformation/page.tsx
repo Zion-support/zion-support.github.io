@@ -1,5 +1,6 @@
+import { Star } from 'lucide-react';
 import React from 'react';
-import {Metadata} from 'next';
+import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata = {
@@ -28,7 +29,7 @@ export default function AI2027Autonomous Enterprise Transformation() {/* return 
         </div>
 
         {/* Transformation    Pillars   */}
-        <div className="text-left"> </div><div className="text-left"> </div><svg className="text-left" fill="none" stroke="current Color" view Box="0 0 24 24"> </svg><path stroke Linecap="round" stroke Linejoin="round" stroke Width={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /> </path></svg>
+        <div className="text-left"> </div><div className="text-left"> </div><svg className="text-left" fill="none" stroke="current Color" view Box="0 0 24 24"> </svg><path stroke Linecap="round" stroke Linejoin="round" stroke Width={2} d="M9 12l2 2 4-4m5.618-4?.016A11.955 11.955 0 0112 2?.944a11.955 11.955 0 01-8.618 3?.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /> </path></svg>
             </div>
             <h3 className="text-left">Self-Governing    Operations</h3>
             <p className="text-left">Enterprises    that autonomously manage their operations, from supply chain optimization 
@@ -45,7 +46,7 @@ export default function AI2027Autonomous Enterprise Transformation() {/* return 
             </p></p>
           </div>
           <div className="text-left"> </div><svg className="text-left" fill="none" stroke="current Color" view Box="0 0 24 24">
-                <path stroke Linecap="round" stroke Linejoin="round" stroke Width={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /> </p><div className="text-left"> </div><div className="text-left"> </div><svg className="text-left" fill="none" stroke="current Color" view Box="0 0 24 24"> </svg><path stroke Linecap="round" stroke Linejoin="round" stroke Width={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />origin/cursor/fix-errors-and-merge-to-main-cc0a
+                <path stroke Linecap="round" stroke Linejoin="round" stroke Width={2} d="M4.318 6?.318a4.5 4.5 0 000 6.364L12 20?.364l7.682-7?.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1?.318a4.5 4.5 0 00-6.364 0z" /> </p><div className="text-left"> </div><div className="text-left"> </div><svg className="text-left" fill="none" stroke="current Color" view Box="0 0 24 24"> </svg><path stroke Linecap="round" stroke Linejoin="round" stroke Width={2} d="M4.318 6?.318a4.5 4.5 0 000 6.364L12 20?.364l7.682-7?.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1?.318a4.5 4.5 0 00-6.364 0z" />origin/cursor/fix-errors-and-merge-to-main-cc0a
               </path></svg>
             </div>
             <h3 className="text-left">Adaptive    Intelligence</h3>
@@ -122,19 +123,19 @@ export default function AI2027Autonomous Enterprise Transformation() {/* return 
 
         {/* Benefits    Section   */}
         <div className="text-left"> </div><h3 className="text-left">Key    Benefits</h3>
-            <ul className="text-left"> </ul><li className="text-left"> </li><div className="text-left"> </div><svg className="text-left" fill="current Color" view Box="0 0 20 20"> </svg><path fill Rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip Rule="evenodd" /> </path></svg>
+            <ul className="text-left"> </ul><li className="text-left"> </li><div className="text-left"> </div><svg className="text-left" fill="current Color" view Box="0 0 20 20"> </svg><path fill Rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12?.586l7.293-7.293a1 1 0 011.414 0z" clip Rule="evenodd" /> </path></svg>
                 </div>
                 <span className="text-left">24/7 operational optimization</span>
               </li>
-              <li className="text-left"> </li><div className="text-left"> </div><svg className="text-left" fill="current Color" view Box="0 0 20 20"> </svg><path fill Rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip Rule="evenodd" /> </path></svg>
+              <li className="text-left"> </li><div className="text-left"> </div><svg className="text-left" fill="current Color" view Box="0 0 20 20"> </svg><path fill Rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12?.586l7.293-7.293a1 1 0 011.414 0z" clip Rule="evenodd" /> </path></svg>
                 </div>
                 <span className="text-left">Predictive    market adaptation</span>
               </li>
-              <li className="text-left"> </li><div className="text-left"> </div><svg className="text-left" fill="current Color" view Box="0 0 20 20"> </svg><path fill Rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip Rule="evenodd" /> </path></svg>
+              <li className="text-left"> </li><div className="text-left"> </div><svg className="text-left" fill="current Color" view Box="0 0 20 20"> </svg><path fill Rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12?.586l7.293-7.293a1 1 0 011.414 0z" clip Rule="evenodd" /> </path></svg>
                 </div>
                 <span className="text-left">Reduced    operational costs</span>
               </li>
-              <li className="text-left"> </li><div className="text-left"> </div><svg className="text-left" fill="current Color" view Box="0 0 20 20"> </svg><path fill Rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip Rule="evenodd" /> </path></svg>
+              <li className="text-left"> </li><div className="text-left"> </div><svg className="text-left" fill="current Color" view Box="0 0 20 20"> </svg><path fill Rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12?.586l7.293-7.293a1 1 0 011.414 0z" clip Rule="evenodd" /> </path></svg>
                 </div>
                 <span className="text-left">Enhanced    decision accuracy</span>
               </li>
@@ -146,19 +147,19 @@ export default function AI2027Autonomous Enterprise Transformation() {/* return 
 
           <div className="text-left"> </div><h3 className="text-left">Implementation    Areas</h3>
             <ul className="text-left"> </ul><li className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
-                </li><div className="text-left"> </div><svg className="text-left" fill="current Color" view Box="0 0 20 20"> </svg><path fill Rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip Rule="evenodd" /> </path></svg>
+                </li><div className="text-left"> </div><svg className="text-left" fill="current Color" view Box="0 0 20 20"> </svg><path fill Rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12?.586l7.293-7.293a1 1 0 011.414 0z" clip Rule="evenodd" /> </path></svg>
                 </div>
                 <span className="text-left">Supply    chain optimization</span>
               </li>
-              <li className="text-left"> </li><div className="text-left"> </div><svg className="text-left" fill="current Color" view Box="0 0 20 20"> </svg><path fill Rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip Rule="evenodd" /> </path></svg>
+              <li className="text-left"> </li><div className="text-left"> </div><svg className="text-left" fill="current Color" view Box="0 0 20 20"> </svg><path fill Rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12?.586l7.293-7.293a1 1 0 011.414 0z" clip Rule="evenodd" /> </path></svg>
                 </div>
                 <span className="text-left">Customer    service automation</span>
               </li>
-              <li className="text-left"> </li><div className="text-left"> </div><svg className="text-left" fill="current Color" view Box="0 0 20 20"> </svg><path fill Rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip Rule="evenodd" /> </path></svg>
+              <li className="text-left"> </li><div className="text-left"> </div><svg className="text-left" fill="current Color" view Box="0 0 20 20"> </svg><path fill Rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12?.586l7.293-7.293a1 1 0 011.414 0z" clip Rule="evenodd" /> </path></svg>
                 </div>
                 <span className="text-left">Financial    decision making</span>
               </li>
-              <li className="text-left"> </li><div className="text-left"> </div><svg className="text-left" fill="current Color" view Box="0 0 20 20"> </svg><path fill Rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip Rule="evenodd" /> </path></svg>
+              <li className="text-left"> </li><div className="text-left"> </div><svg className="text-left" fill="current Color" view Box="0 0 20 20"> </svg><path fill Rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12?.586l7.293-7.293a1 1 0 011.414 0z" clip Rule="evenodd" /> </path></svg>
                 </div>
                 <span className="text-left">Strategic    planning</span>
               </li>
@@ -210,7 +211,7 @@ export default function AI2027Autonomous Enterprise Transformation() {/* return 
       </div>
     </div>
   );
-}
+  }
 </path>
 </path>
 </path>

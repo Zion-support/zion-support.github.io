@@ -1,4 +1,6 @@
-import { Metadata } from 'next';
+import { Zap, ArrowRight, Target, CheckCircle } from 'lucide-react';
+import { Star } from 'lucide-react';
+import type { Metadata } from 'next';
 import {
   ArrowRight,
   Award,
@@ -533,4 +535,4 @@ export default function Fortune500AITransformation12BROI() {
       </div>
     </div>
   );
-}
+  }

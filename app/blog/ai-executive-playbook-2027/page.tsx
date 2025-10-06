@@ -79,4 +79,4 @@ export default function AI Executive Playbook2027Page() {
       </main>
     </div>
   );
-}
+  }

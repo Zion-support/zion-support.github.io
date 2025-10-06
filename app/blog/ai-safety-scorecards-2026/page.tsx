@@ -26,4 +26,5 @@ export default function Page() {return (<main className="max-w-3xl mx-auto px-4 
         <Arrow Right href="/blog">blog</Arrow>.
       </p>
     </main>
-  ); }
+  );
+  }

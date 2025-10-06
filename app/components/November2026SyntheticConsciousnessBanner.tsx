@@ -1,3 +1,4 @@
+import { Star } from 'lucide-react';
 import Link from 'next/link';
 
 export default function November2026SyntheticConsciousnessBanner() {
@@ -196,4 +197,4 @@ export default function November2026SyntheticConsciousnessBanner() {
       </div>
     </section>
   );
-}
+  }

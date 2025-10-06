@@ -1,3 +1,5 @@
+import { Zap } from 'lucide-react';
+import { Shield } from 'lucide-react';
 import { ArrowRight, Code, ExternalLink, Shield, Zap } from 'lucide-react';
 import React from 'react';
 import { Link } from 'react-router-dom';
@@ -144,7 +146,7 @@ const API: React.FC = () => {
                       Parameters:
                     </h4>
                     <ul className='text-sm text-gray-600'>
-                      {endpoint.parameters.map((param, idx) => (
+                      {endpoint?.parameters.map((param, idx) => (
                         <li key={idx} className='flex items-center'>
                           <span className='w-2 h-2 bg-blue-400 rounded-full mr-2'></span>
                           {param}
@@ -186,7 +188,7 @@ const API: React.FC = () => {
                 <ArrowRight className='ml-2 w-5 h-5' />
               </Link>
               <a
-                href='https://docs.ziontechgroup.com'
+                href='https://docs?.ziontechgroup.com'
                 className='border border-gray-300 text-gray-700 px-8 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors inline-flex items-center'
               >
                 View Full Docs
@@ -198,6 +200,6 @@ const API: React.FC = () => {
       </div>
     </div>
   );
-};
+  };
 
 export default API;

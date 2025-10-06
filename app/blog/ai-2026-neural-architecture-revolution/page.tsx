@@ -1,5 +1,5 @@
 import React from 'react';
-import {Metadata} from 'next';
+import type { Metadata } from 'next';
 
 export const metadata = {
   
@@ -172,7 +172,7 @@ export default function AINeural Architecture Revolution2026() {/* return (
       </main>
     </div>
   );
-}</div></div></div></div>
+  }</div></div></div></div>
 </span>
 </span>
 </span>

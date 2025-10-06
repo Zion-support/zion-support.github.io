@@ -1,3 +1,4 @@
+import { Star } from 'lucide-react';
 import React from 'react';
 import Link from 'next/link';
 
@@ -96,7 +97,7 @@ origin/cursor/fix-errors-and-merge-to-main-cc0a
                 <div className="text-left">{phase.duration}</div>"
                 <p className="text-left">{phase.description}</p>"
                 <div className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
-                  {phase.outcomes.map((outcome, idx) => (</div></div>
+                  {phase?.outcomes.map((outcome, idx) => (</div></div>
                     <div key={idx} className="text-left"> </div><span className="text-left">✓>
                       {outcome}
                     </div>
@@ -143,7 +144,7 @@ origin/cursor/fix-errors-and-merge-to-main-cc0a
                 <div className="text-left">{phase.duration}</div>"
                 <p className="text-left">{phase.description}</p>"
                 <div className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
-                  {phase.outcomes.map((outcome, idx) => (</div></div>
+                  {phase?.outcomes.map((outcome, idx) => (</div></div>
                     <div key={idx} className="text-left"> </div><span className="text-left">✓>
                       {outcome}
                     </div>
@@ -190,7 +191,7 @@ origin/cursor/fix-errors-and-merge-to-main-cc0a
                 <div className="text-left">{phase.duration}</div>"
                 <p className="text-left">{phase.description}</p>"
                 <div className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
-                  {phase.outcomes.map((outcome, idx) => (</div></div>
+                  {phase?.outcomes.map((outcome, idx) => (</div></div>
                     <div key={idx} className="text-left"> </div><span className="text-left">✓>
                       {outcome}
                     </div>
@@ -335,7 +336,7 @@ origin/cursor/fix-errors-and-merge-to-main-cc0a
       </footer>
     </div>
   );
-}</div></div></div></div></div></div></div></div></div></div></div></div></div>
+  }</div></div></div></div></div></div></div></div></div></div></div></div></div>
 </span>
 </span>
 </span>

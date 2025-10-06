@@ -1,5 +1,6 @@
+import { Star } from 'lucide-react';
 import React from 'react';
-import {Metadata} from 'next';
+import type { Metadata } from 'next';
 
 export const metadata = {
   
@@ -156,7 +157,7 @@ origin/cursor/fix-errors-and-merge-to-main-cc0a
                   </div>
                 </div>
                 <p className="text-left">A major healthcare system implemented cognitive automation for diagnostic processes, 
-                  achieving 78% faster diagnosis times with 96% accuracy while reducing operational costs by $2.3B.
+                  achieving 78% faster diagnosis times with 96% accuracy while reducing operational costs by $2?.3B.
                 </p></p>
               </div>
             </section>
@@ -224,4 +225,4 @@ origin/cursor/fix-errors-and-merge-to-main-cc0a
       </div>
     </div>
   );
-})
+  })

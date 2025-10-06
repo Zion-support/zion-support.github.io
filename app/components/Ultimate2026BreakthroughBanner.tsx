@@ -1,3 +1,4 @@
+import { Star } from 'lucide-react';
 // @ts-nocheck
 import Link from 'next/link';
 
@@ -226,4 +227,4 @@ export default function Ultimate2026BreakthroughBanner() {
       </div>
     </section>
   );
-}
+  }

@@ -1,3 +1,4 @@
+import { Zap, ArrowRight, Target } from 'lucide-react';
 import React from 'react';
 import Link from 'next/link';
 import {ArrowRight,Brain,Zap,Target,TrendingUp} from 'lucide-react';
@@ -172,7 +173,7 @@ origin/cursor/fix-errors-and-merge-to-main-cc0a
       </div>
     </div>
   );
-}
+  }
 </Trending>
 </Arrow>
 </Target>

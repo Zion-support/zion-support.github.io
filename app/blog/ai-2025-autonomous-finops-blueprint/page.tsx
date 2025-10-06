@@ -1,3 +1,4 @@
+import { Star } from 'lucide-react';
 import React from 'react';
 export const metadata = {
   
@@ -108,4 +109,5 @@ export default function AutonomousFin Ops Blueprint2025Page() {return (<div clas
         </aside>
       </main>
     </div>
-  ); }
+  );
+  }

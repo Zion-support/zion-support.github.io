@@ -15,4 +15,5 @@ export default function Page() {return (<main className="max-w-3xl mx-auto px-6p
         Published    Sep    30, 2025 • 8 min read
       </p>
     </main>
-  ); }
+  );
+  }

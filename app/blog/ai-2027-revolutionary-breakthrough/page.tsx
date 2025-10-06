@@ -1,3 +1,4 @@
+import { Star } from 'lucide-react';
 import React from 'react';
 import Link from 'next/link';
 
@@ -212,7 +213,7 @@ export default function AI Revolutionary Breakthrough2027() {/* return (
         </div>
     </div>
   );
-}</div></div></div></div></div></div></div>
+  }</div></div></div></div></div></div></div>
 </span>
 </span>
 </span>

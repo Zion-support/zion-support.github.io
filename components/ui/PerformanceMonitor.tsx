@@ -15,6 +15,6 @@ const PerformanceMonitor = React.memo(function PerformanceMonitor({
       <p className='text-blue-600'>This component is under development.</p>
     </div>
   );
-});
+  });
 
 export default PerformanceMonitor;

@@ -1,5 +1,6 @@
+import { Star } from 'lucide-react';
 import React from 'react';
-import {Metadata} from 'next';
+import type { Metadata } from 'next';
 
 export const metadata = {
   
@@ -212,4 +213,4 @@ origin/cursor/fix-errors-and-merge-to-main-cc0a
         </div>
       </section>
   );
-}</div></div></div></div></div></div></div></div></div></div>)
+  }</div></div></div></div></div></div></div></div></div></div>)

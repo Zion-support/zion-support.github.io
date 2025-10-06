@@ -78,4 +78,5 @@ export default function Autonomous Governance Blueprint2025() {return (<main cla
         </div>
       </section>
     </main>
-  ); }
+  );
+  }

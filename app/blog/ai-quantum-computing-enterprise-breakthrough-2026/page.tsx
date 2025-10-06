@@ -424,4 +424,5 @@ export default function BlogPost() {return (<div class Name Name='max-w-4xl mx-a
         </div>
       </article>
     </div>
-  ); }
+  );
+  }

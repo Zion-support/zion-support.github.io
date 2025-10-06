@@ -1,3 +1,4 @@
+import { Zap, ArrowRight, Target } from 'lucide-react';
 import React from 'react';
 import Link from 'next/link';
 import {Clock,ArrowRight,Brain,Zap,Target,TrendingUp} from 'lucide-react';
@@ -244,7 +245,7 @@ export default function AI Cognitive Superintelligence2026() {/* return (
       </div>
     </div>
   );
-}
+  }
 </Trending>
 </Target>
 </Zap>

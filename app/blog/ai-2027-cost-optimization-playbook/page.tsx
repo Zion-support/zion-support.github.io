@@ -76,4 +76,4 @@ export default function AICost Optimization Playbook2027() {
       </div>
     </div>
   );
-}
+  }

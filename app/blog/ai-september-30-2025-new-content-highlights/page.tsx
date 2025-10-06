@@ -34,4 +34,5 @@ export default function Page() {return (<div className="min-h-screenbg-white">
         </p>
       </article>
     </div>
-  ); }
+  );
+  }

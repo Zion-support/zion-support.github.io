@@ -1,4 +1,5 @@
-import { Metadata } from 'next';
+import Link from 'next/link';
+import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title:
@@ -325,7 +326,7 @@ export default function MetaCognitiveSuccessPage() {
                 </div>
                 <div>
                   <p className='text-gray-300 mb-2'>
-                    <strong>Website:</strong> www.ziontechgroup.com
+                    <strong>Website:</strong> www?.ziontechgroup.com
                   </p>
                   <p className='text-gray-300 mb-2'>
                     <strong>LinkedIn:</strong> Zion Tech Group
@@ -365,4 +366,4 @@ export default function MetaCognitiveSuccessPage() {
       </section>
     </div>
   );
-}
+  }

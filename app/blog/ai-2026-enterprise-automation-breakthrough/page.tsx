@@ -1,3 +1,5 @@
+import { ArrowLeft } from 'lucide-react';
+import { Star } from 'lucide-react';
 import React from 'react';
 import Link from 'next/link';
 import {ArrowLeft,Calendar,User,Clock,Tag} from 'lucide-react';
@@ -207,7 +209,7 @@ export default function Enterprise Automation Breakthrough() {/* return (
       </article>
     </div>
   );
-}
+  }
 </Tag>
 </Clock>
 </User>

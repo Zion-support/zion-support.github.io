@@ -148,4 +148,4 @@ export default function AIFutureWorkforceBanner2026() {
       </div>
     </section>
   );
-}
+  }

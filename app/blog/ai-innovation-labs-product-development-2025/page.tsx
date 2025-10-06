@@ -1,3 +1,4 @@
+import { Star } from 'lucide-react';
 import React from 'react';
 
 export const metadata = {
@@ -96,7 +97,8 @@ const Innovation Lab Framework =
     predictive Analytics: "Consumer Behavior AI + Market Modeling",
   a Testing: "AI-Powered Experiments + Statistical Analysis",
   feedback: "Sentiment Analysis + Social Media    Intelligence   "
-  };`}
+  };
+  }
 						</pre></pre>
 					</div>
 

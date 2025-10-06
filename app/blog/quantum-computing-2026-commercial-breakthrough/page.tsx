@@ -1,5 +1,9 @@
+import { Zap, ArrowRight, Target } from 'lucide-react';
+import { Cpu } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Star } from 'lucide-react';
 import React from 'react';
-import {Metadata} from 'next';
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import {Calendar,Clock,User,ArrowRight,Zap,Cpu,Shield,TrendingUp,Target,Brain} from 'lucide-react';
 
@@ -291,7 +295,7 @@ export default function QuantumComputing2026 Commercial Breakthrough() {/* retur
       </div>
     </div>
   );
-}
+  }
 </Arrow>
 </Arrow>
 </Shield>

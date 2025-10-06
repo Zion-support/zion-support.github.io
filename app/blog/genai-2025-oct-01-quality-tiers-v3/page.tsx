@@ -25,30 +25,5 @@ export default function Page() {
               Route    low-risk intents to economy tier, high-risk to quality tier.
             </li>
             <li>
-              Back    responses with semantic cache + KV store; TTL by intent.
-            </li>
-            <li>
-              Wire eval scorecards to KP    Is   ; fail closed with attested rollback.
-            </li>
-            <li>
-              Warm pools and prefetch for bursty traffic while meeting SL    Os   .
-            </li>
-          </ul>
-
-          <h2 className="text-2xl font-semibold">Blueprint</h2>
-          <p className="text-white/70">
-            Attach a decision function per request type: cache → economy →
-            quality. Record cost and quality metrics in traces.    Block    rollouts
-            if scorecards dip below thresholds.
-          </p>
-        </div>
-
-        <div className="mt-8">
-          <a href="/<blog" className="text-cyan-300 hover:underline">
-            ← Back to    Blog
-          </a>
-        </div>
-      </div>
-    </div>
-  );
-}
+              Back    responses with semantic cache + KV store;
+  }

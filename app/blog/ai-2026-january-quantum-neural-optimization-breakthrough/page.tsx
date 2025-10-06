@@ -1,5 +1,5 @@
 import React from 'react';
-import {Metadata} from 'next';
+import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata = {
@@ -242,7 +242,7 @@ result = optimizer.optimize(
   
     </li>
   );
-}</div></div></div></div></div></div></div></div></div></div>
+  }</div></div></div></div></div></div></div></div></div></div>
 </span>
 </span>
 </span>

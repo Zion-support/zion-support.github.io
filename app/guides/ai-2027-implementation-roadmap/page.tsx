@@ -168,7 +168,7 @@ export default function AI2027ImplementationRoadmap() {
                   </div>
                   
                   <div className="grid md:grid-cols-2 gap-4">
-                    {phase.keyActivities.map((activity, i) => (
+                    {phase?.keyActivities.map((activity, i) => (
                       <div key={i} className="flex items-center gap-3">
                         <span className="w-2 h-2 bg-cyan-400 rounded-full"></span>
                         <span className="text-gray-300">{activity}</span>
@@ -227,4 +227,4 @@ export default function AI2027ImplementationRoadmap() {
       </main>
     </div>
   );
-}
+  }

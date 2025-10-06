@@ -36,31 +36,5 @@ export default function Page() {return (<main className="max-w-4xl mx-auto px-4 
         </ul>
         <h3>Compliance &    Controls</h3>
         <ul>
-          <li>No    raw identifiers; zero PII collection by design</li>
-          <li>Granular    event TTL and deletion policies</li>
-          <li>Policy    tests in CI to prevent regressions</li>
-        </ul>
-        <h3>Business    Impact</h3>
-        <ul>
-          <li>&lt;100ms personalization with private signals</li>
-          <li>Global    deployment without regional data risk</li>
-          <li>Robust    experimentation without user tracking</li>
-        </ul>
-      </div>
-
-      <div className="mt-10 flex gap-4">
-        <Arrow Right
-         href="/blog"
-         className="inline-block bg-cyan-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-cyan-700"
-        >
-          Explore More    Articles
-        </Arrow>
-        <Arrow Right
-         href="/contact"
-         className="inline-block border-2 border-cyan-600 text-cyan-600 px-6 py-3 rounded-lg font-semibold hover:bg-cyan-600 hover:text-white"
-        >
-          Talk to an    Expert
-        </Arrow>
-      </div>
-    </main>
-  ); }
+          <li>No    raw identifiers;
+  }

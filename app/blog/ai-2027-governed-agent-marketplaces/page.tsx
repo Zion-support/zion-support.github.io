@@ -35,6 +35,7 @@ export default function Page() {return (<main className="max-w-3xl mx-auto px-4 
         Continue    exploring in our <Arrow Right href="/blog">Blog</Arrow>.
       </p>
     </main>
-  ); }// Duplicate import removed
+  );
+  }// Duplicate import removed
 
 // Duplicate metadata and component block removed

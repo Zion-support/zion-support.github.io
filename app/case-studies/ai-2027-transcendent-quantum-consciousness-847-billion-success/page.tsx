@@ -1,4 +1,5 @@
-import { Metadata } from 'next';
+import { Star } from 'lucide-react';
+import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
@@ -639,4 +640,4 @@ export default function AI2027TranscendentQuantumConsciousness847BillionSuccess(
       </article>
     </div>
   );
-}
+  }

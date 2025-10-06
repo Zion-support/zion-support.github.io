@@ -1,3 +1,6 @@
+import { Zap, ArrowRight, Target, CheckCircle } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Star } from 'lucide-react';
 import React from 'react';
 import Link from 'next/link';
 import {ArrowRight,Brain,Zap,Shield,TrendingUp,Users,Target,CheckCircle} from 'lucide-react';
@@ -197,7 +200,7 @@ export default function AINextGen Enterprise Automation2026() {/* return (
       </section>
     </div>
   );
-}
+  }
 </Arrow>
 </Arrow>
 </Check>

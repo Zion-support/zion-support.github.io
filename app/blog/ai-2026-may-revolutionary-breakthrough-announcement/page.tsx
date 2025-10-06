@@ -1,5 +1,6 @@
+import { Star } from 'lucide-react';
 import React from 'react';
-import {Metadata} from 'next';
+import type { Metadata } from 'next';
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
@@ -13,8 +14,7 @@ export const metadata = {
 export default function May2026Revolutionary Breakthrough Page() {/* return (
     <div> content */}
   const file Path = path.join(process.cwd(), 'content', 'blog', 'ai-2026-may-revolutionary-breakthrough-announcement.md');
-  const file Contents = fs.read File Sync(file Path, 'utf8');
-  const { data, content } = matter(file    Contents   );
+  } = matter(file    Contents   );
 
     <div>
       <div> </div><div> </div>
@@ -25,13 +25,13 @@ export default function May2026Revolutionary Breakthrough Page() {/* return (
             <span className="text-left">$50B ROI
             </span></span>
           </div>
-          <h1 className="text-left">{data.title}
+          <h1 className="text-left">{data['title']}
           </h1></h1>
-          <p className="text-left">{data.description}
+          <p className="text-left">{data['description']}
           </p></p>
-          <span>By    {data.author}</span>
+          <span>By    {data['author']}</span>
             <span>•</span>
-            <span>{new Date(data.date).to Locale Date    String   ()}</span>
+            <span>{new Date(data['date']).to Locale Date    String   ()}</span>
           </div>
         </header>
         <div className="text-left"> </div><div dangerously Set InnerHTML={{ __html: content.replace(/\n/g, '<br />') }} /></div>

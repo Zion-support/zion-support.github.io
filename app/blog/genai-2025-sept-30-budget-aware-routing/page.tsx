@@ -21,41 +21,5 @@ export default function Budget Aware Routing2025() {return (<main class Name Nam
           <h2>Routing    Stack</h2>
           <ul>
             <li>Quality    tiers with fallback: gold, silver, economy.</li>
-            <li>Semantic    caches for frequent intents; TTL by risk tier.</li>
-            <li>Eval    gates in CI and live canaries protect UX.</li>
-            <li>Per   ‑request budgets and dynamic compression.</li>
-          </ul>
-
-          <h2>Measuring    Success</h2>
-          <p>
-            Track $/winlatencyand user outcomes. Route to cheapest model that
-            meets quality SL    Os   .
-          </p>
-        </section>
-
-        <hr />
-
-        <asideclass Name='bg-purple-500/10 border border-purple-400/20 rounded-xl p-6'>
-          <h3class Name='text-xl font-bold text-purple-300 mb-2'>Related</h3>
-          <ulclass Name='list-disc pl-6 text-gray-300 space-y-1'>
-            <li>
-              <Arrow Right
-               href="/blog/genai-routing-blueprints-2026"
-               class Name='text-purple-300 hover:text-purple-200'
-              >
-                Gen AI Routing    Blueprints    2026
-              </Arrow>
-            </li>
-            <li>
-              <Arrow Right
-               href="/blog/practical-rag-in-production"
-               class Name='text-purple-300 hover:text-purple-200'
-              >
-                Practical RAG in    Production
-              </Arrow>
-            </li>
-          </ul>
-        </aside>
-      </article>
-    </main>
-  ); }
+            <li>Semantic    caches for frequent intents;
+  }

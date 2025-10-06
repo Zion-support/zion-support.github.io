@@ -1,3 +1,5 @@
+import { Star } from 'lucide-react';
+import { Calculator } from 'lucide-react';
 import { Suspense, lazy } from 'react';
 import ArrowRight from 'next/link';
 
@@ -140,4 +142,4 @@ export default function HomePage() {
       </main>
     </div>
   );
-}
+  }

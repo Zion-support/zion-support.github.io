@@ -41,30 +41,8 @@ export default function September30NewAIBreakthroughsBanner() {
                 <div className='space-y-2 mb-6'>
                   <div className='flex items-center gap-2 text-sm text-gray-600'>
                     <span className='font-bold text-green-600'>✓</span>
-                    <span>&lt;10ms response time</span>
-                  </div>
-                  <div className='flex items-center gap-2 text-sm text-gray-600'>
-                    <span className='font-bold text-green-600'>✓</span>
-                    <span>90% bandwidth cost reduction</span>
-                  </div>
-                  <div className='flex items-center gap-2 text-sm text-gray-600'>
-                    <span className='font-bold text-green-600'>✓</span>
-                    <span>100% data privacy & offline operation</span>
-                  </div>
-                </div>
-                <div className='flex items-center justify-between'>
-                  <span className='text-green-600 font-bold group-hover:text-green-700'>
-                    Read Full Article →
-                  </span>
-                  <span className='bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-semibold'>
-                    NEW
-                  </span>
-                </div>
-              </div>
-            </div>
-          </Link>
-
-          {/* Security Framework */}
+                    <span>&lt;
+  }
           <Link
             href='/blog/ai-enterprise-security-framework-<2025'
             className='group'

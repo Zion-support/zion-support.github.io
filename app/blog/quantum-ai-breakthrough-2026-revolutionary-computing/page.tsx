@@ -1,3 +1,5 @@
+import { Zap, ArrowRight, Target, CheckCircle } from 'lucide-react';
+import { Shield } from 'lucide-react';
 import React from 'react';
 import Link from 'next/link';
 import {ArrowRight,Atom,Zap,Shield,Brain,TrendingUp,Target,CheckCircle} from 'lucide-react';
@@ -228,7 +230,7 @@ export default function QuantumAIBreakthrough2026() {/* return (
       </section>
     </div>
   );
-}
+  }
 </Arrow>
 </Arrow>
 </Check>

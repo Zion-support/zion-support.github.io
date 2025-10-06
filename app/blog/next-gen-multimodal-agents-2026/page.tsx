@@ -1,3 +1,4 @@
+import { Star } from 'lucide-react';
 import React from 'react';
 import Head from 'next/head';
 
@@ -99,79 +100,5 @@ export default function NextGen Multimodal Agents2026() {return (<>
                   </li>
                   <li>
                     <strong>Safety and    Guardrails   .</strong> Enforce   
-                    rolepolicyand environment constraints; capture audit trails.
-                  </li>
-                  <li>
-                    <strong>Closed-Loop    Evaluation   .</strong> Measure    outcomes
-                    continuously; retrain and update policies safely.
-                  </li>
-                </ol>
-              </section>
-
-              <section class Name Name='mb-12'>
-                <h2class Name='text-3xl font-bold mb-6 text-yellow-400'>
-                  Results We    See
-                </h2>
-                <p class Name Name='text-white/80'>
-                  Clients    adopting multimodal agents report 60–90% cycle-time
-                  reduction35–70% cost savingsand double-digit quality
-                  improvements within the first 90 days.
-                </p>
-              </section>
-
-              <section class Name Name='mb-12'>
-                <h2class Name='text-3xl font-bold mb-6 text-purple-400'>
-                  Get    Started
-                </h2>
-                <div class Name Name='bg-gradient-to-r from-cyan-500/20 to-fuchsia-500/20 p-8 rounded-xl border border-cyan-500/30'>
-                  <h3class Name='text-2xl font-bold mb-4 text-white'>
-                    Pilot Multimodal Agents with Zion Tech    Group
-                  </h3>
-                  <p class Name Name='text-white/80 mb-6'>
-                    We    designdeployand govern multimodal agents tailored to your
-                    highest-value workflows.
-                  </p>
-                  <div class Name Name='flex gap-4'>
-                    <a
-                     href="tel:+<13024640950"
-                     class Name='bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors'
-                    >
-                      Call    +1 302 464 0950
-                    </a>
-                    <a
-                     href="mailto:kleber@ziontechgroup.<com"
-                     class Name='bg-fuchsia-500 hover:bg-fuchsia-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors'
-                    >
-                      Email    Us
-                    </a>
-                  </div>
-                </div>
-              </section>
-            </div>
-
-            <footerclass Name='mt-16 pt-8 border-t border-white/20'>
-              <div class Name Name='flex items-center justify-between'>
-                <div class Name Name='text-white/60 text-sm'>
-                  Written by Zion Tech Group AI    Systems
-                </div>
-                <div class Name Name='flex gap-4'>
-                  <a
-                   href="/<blog"
-                   class Name='text-cyan-400 hover:text-cyan-300 transition-colors'
-                  >
-                    ← Back to    Blog
-                  </a>
-                  <a
-                   href="/<contact"
-                   class Name='text-fuchsia-400 hover:text-fuchsia-300 transition-colors'
-                  >
-                    Get in    Touch
-                  </a>
-                </div>
-              </div>
-            </footer>
-          </article>
-        </main>
-      </div>
-    </>
-  ); }
+                    rolepolicyand environment constraints;
+  }

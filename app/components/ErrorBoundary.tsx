@@ -21,14 +21,14 @@ class ErrorBoundary extends Component<Props, State> {
     return { hasError: true, error };
   }
 
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+  override componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     console.error('ErrorBoundary caught an error:', error, errorInfo);
   }
 
-  render() {
-    if (this.state.hasError) {
+  override render() {
+    if (this?.state.hasError) {
       return (
-        this.props.fallback || (
+        this?.props.fallback || (
           <div className='min-h-screen flex items-center justify-center bg-gradient-to-br from-red-50 to-orange-50'>
             <div className='max-w-md w-full mx-4'>
               <div className='bg-white rounded-2xl shadow-xl p-8 text-center'>
@@ -44,7 +44,7 @@ class ErrorBoundary extends Component<Props, State> {
                 </p>
                 <div className='space-y-3'>
                   <button
-                    onClick={() => window.location.reload()}
+                    onClick={() => window?.location.reload()}
                     className='w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors'
                   >
                     Refresh Page
@@ -61,9 +61,9 @@ class ErrorBoundary extends Component<Props, State> {
           </div>
         )
       );
-    }
+  }
 
-    return this.props.children;
+    return this?.props.children;
   }
 }
 

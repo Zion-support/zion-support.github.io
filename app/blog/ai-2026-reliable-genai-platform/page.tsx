@@ -1,3 +1,4 @@
+import { Star } from 'lucide-react';
 import React from 'react';
 import ArrowRight from 'next/link';
 
@@ -63,37 +64,8 @@ export default function ReliableGenAIPlatform2026Page() {return (<div className=
           <h2>Guardrails &    Evals</h2>
           <p>
             Use pre‑deployment golden tasks and post‑deployment live scorecards.
-               Fail    closed on high‑risk policies; degrade gracefully with
-            human‑in‑the‑loop for edge cases.
-          </p>
-
-          <h2>Cost    Controls</h2>
-          <p>
-            Apply adaptive routingretrieval minimizationand response
-            compression.    Track    unit economics from token to customer value with
-            value‑stream analytics.
-          </p>
-
-          <h2>Adoption    Playbook</h2>
-          <ol>
-            <li>Define SL    Os    and compliance constraints.</li>
-            <li>Instrument    tracing and evaluations before launch.</li>
-            <li>
-              Start    with a thin slice and expand via scorecard‑driven iteration.
-            </li>
-          </ol>
-
-          <h2>Key    Outcomes</h2>
-          <ul>
-            <li>99.9% policy adherence with measurable guardrails</li>
-            <li>30–60% cost reduction via routing and caching</li>
-            <li>Faster    iteration with automated evals and drift detection</li>
-          </ul>
-        </article>
-
-        <footer className="mt-12 pt-6 border-t border-white/10 text-white/70">
-          <p>
-            Continueexploring   :{' '}
+               Fail    closed on high‑risk policies;
+  }
             <Arrow Right
              href="/blog/ai-2027-cost-optimization-playbook"
              className="text-emerald-400 hover:text-emerald-300"

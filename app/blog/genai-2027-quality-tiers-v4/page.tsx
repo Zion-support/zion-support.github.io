@@ -33,4 +33,5 @@ export default function Page() {return (<main className="min-h-screen bg-slate-9
         </div>
       </section>
     </main>
-  ); }
+  );
+  }

@@ -1,5 +1,6 @@
+import { Star } from 'lucide-react';
 import React from 'react';
-import {Metadata} from 'next';
+import type { Metadata } from 'next';
 
 export const metadata = {
   
@@ -34,16 +35,8 @@ export default function NeuromorphicEdge Computing Breakthrough() {/* return (
           </p></p>
           <div className="text-left"> </div><div className="text-left">1000x</div>
               <div className="text-left">Energy    Efficiency</div>
-      <div className="text-left">&lt;1μs</div>
-              <div className="text-left">Latency</div>
-      <div className="text-left">$2.3B</div>
-              <div className="text-left">Savings</div>
-      <div className="text-left">99.99%</div>
-              <div className="text-left">Reliability</div>
-            </div>
-        </div>
-
-        {/* Article    Content   */}
+      <div className="text-left">&lt;
+  }
         <article className="text-left"> </a><h3 className="text-left">The Neuromorphic Edge Computing    Revolution</h2>
             <p className="text-left"> </p><article className="text-left"> </article><div className="text-left"> </div><h2 className="text-left">The Neuromorphic Edge Computing    Revolution</h2>"
             <p className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a

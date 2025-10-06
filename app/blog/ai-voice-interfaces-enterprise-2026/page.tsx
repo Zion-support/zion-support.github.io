@@ -1,3 +1,4 @@
+import { Target } from 'lucide-react';
 import React from 'react';
 import ArrowRight from 'next/link';
 
@@ -113,4 +114,5 @@ export default function AIVoice Interfaces Enterprise2026Page() {return (<div cl
         </article>
       </main>
     </div>
-  ); }
+  );
+  }

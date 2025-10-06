@@ -1,3 +1,4 @@
+import { Star } from 'lucide-react';
 import React from 'react';
 import ArrowRight from 'next/link';
 
@@ -365,4 +366,5 @@ export default function AI2027Neuromorphic Computing Breakthrough() {return (<di
         </div>
       </div>
     </div>
-  ); }
+  );
+  }

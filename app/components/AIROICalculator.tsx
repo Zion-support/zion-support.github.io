@@ -1,3 +1,5 @@
+import { Zap } from 'lucide-react';
+import { Calculator } from 'lucide-react';
 import React, { useState } from 'react';
 import { DollarSign, TrendingUp, Zap } from 'lucide-react';
 
@@ -34,7 +36,7 @@ export default function AIROICalculator() {
           <input
             type='number'
             value={annualRevenue}
-            onChange={e => setAnnualRevenue(Number(e.target.value))}
+            onChange={e => setAnnualRevenue(Number(e?.target.value))}
             className='w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent'
           />
         </div>
@@ -47,7 +49,7 @@ export default function AIROICalculator() {
             min='0'
             max='100'
             value={currentEfficiency}
-            onChange={e => setCurrentEfficiency(Number(e.target.value))}
+            onChange={e => setCurrentEfficiency(Number(e?.target.value))}
             className='w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent'
           />
         </div>
@@ -58,7 +60,7 @@ export default function AIROICalculator() {
           <input
             type='number'
             value={aiImplementationCost}
-            onChange={e => setAiImplementationCost(Number(e.target.value))}
+            onChange={e => setAiImplementationCost(Number(e?.target.value))}
             className='w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent'
           />
         </div>
@@ -124,4 +126,4 @@ export default function AIROICalculator() {
       </div>
     </div>
   );
-}
+  }

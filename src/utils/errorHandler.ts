@@ -36,13 +36,19 @@ class ErrorHandler {
       stack: typeof error === 'string' ? undefined : error.stack,
       context: {
         timestamp: Date.now(),
+<<<<<<< HEAD
         userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : undefined,
         url: typeof window !== 'undefined' ? window.location.href : undefined,
+=======
+        userAgent: typeof window !== 'undefined' ? window?.navigator.userAgent : undefined,
+        url: typeof window !== 'undefined' ? window?.location.href : undefined,
+>>>>>>> cursor/fix-errors-and-merge-to-main-629e
         ...context,
       },
       severity,
     };
 
+<<<<<<< HEAD
     this.errorQueue.push(errorReport);
 
     // Keep queue size manageable
@@ -52,11 +58,26 @@ class ErrorHandler {
 
     // Log to console in development
     if (process.env.NODE_ENV === 'development') {
+=======
+    this?.errorQueue.push(errorReport);
+
+    // Keep queue size manageable
+    if (this?.errorQueue.length > this.maxQueueSize) {
+      this?.errorQueue.shift();
+    }
+
+    // Log to console in development
+    if (process?.env.NODE_ENV === 'development') {
+>>>>>>> cursor/fix-errors-and-merge-to-main-629e
       console.error('Error logged:', errorReport);
     }
 
     // Send to external service in production
+<<<<<<< HEAD
     if (process.env.NODE_ENV === 'production') {
+=======
+    if (process?.env.NODE_ENV === 'production') {
+>>>>>>> cursor/fix-errors-and-merge-to-main-629e
       this.sendToErrorService(errorReport);
     }
   }
@@ -92,7 +113,11 @@ class ErrorHandler {
    * Get errors by severity
    */
   public getErrorsBySeverity(severity: ErrorReport['severity']): ErrorReport[] {
+<<<<<<< HEAD
     return this.errorQueue.filter(error => error.severity === severity);
+=======
+    return this?.errorQueue.filter(error => error.severity === severity);
+>>>>>>> cursor/fix-errors-and-merge-to-main-629e
   }
 
   /**
@@ -100,12 +125,16 @@ class ErrorHandler {
    */
   public setupGlobalHandlers(): void {
     if (typeof window === 'undefined') return;
+<<<<<<< HEAD
 
     // Handle unhandled promise rejections
     window.addEventListener('unhandledrejection', (event) => {
       this.logError(
         new Error(event.reason),
         { action: 'unhandledrejection' },
+=======
+  },
+>>>>>>> cursor/fix-errors-and-merge-to-main-629e
         'high'
       );
     });

@@ -88,4 +88,4 @@ export default function January2026UltimateNeuralRevolutionBanner() {
       </div>
     </section>
   );
-}
+  }

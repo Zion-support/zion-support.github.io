@@ -1,6 +1,7 @@
+import { Star } from 'lucide-react';
 // @ts-nocheck
 import React from 'react';
-import {Metadata} from 'next';
+import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata = {
@@ -180,7 +181,7 @@ export default function AI2027Universal Consciousness Revolution() {/* return (
           </div>
       </section>
   );
-}</div></div></div></div></div></div></div></div></div></div></div>
+  }</div></div></div></div></div></div></div></div></div></div></div>
 </span>
 </span>
 </span>

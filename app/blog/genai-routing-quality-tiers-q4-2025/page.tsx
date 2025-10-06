@@ -73,4 +73,5 @@ export default function GenAIRouting Quality TiersQ42025Page() {return (<div cla
         </footer>
       </main>
     </div>
-  ); }
+  );
+  }

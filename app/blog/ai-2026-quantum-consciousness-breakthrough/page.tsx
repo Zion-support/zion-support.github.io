@@ -1,5 +1,5 @@
 import React from 'react';
-import {Metadata} from 'next';
+import type { Metadata } from 'next';
 
 export const metadata = {
   
@@ -338,7 +338,7 @@ export default function Quantum Consciousness Breakthrough2026() {/* return (
   
     </div>
   );
-}
+  }
 </span>
 </span>
 </span>

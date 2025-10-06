@@ -1,5 +1,7 @@
+import Link from 'next/link';
+import { Star } from 'lucide-react';
 import React from 'react';
-import {Metadata} from 'next';
+import type { Metadata } from 'next';
 
 export const metadata = {
   
@@ -175,7 +177,7 @@ origin/cursor/fix-errors-and-merge-to-main-cc0a
               <div className="text-left"> </div><div> </div><p className="text-left"><strong>Phone   :</strong> +1 (555) 123-4567</p>
                   <p className="text-left"><strong>Email   :</strong> consciousness@ziontechgroup.com</p>
                 </div>
-                <div> </div><p className="text-left"><strong>Website   :</strong> www.ziontechgroup.com</p>
+                <div> </div><p className="text-left"><strong>Website   :</strong> www?.ziontechgroup.com</p>
                   <p className="text-left"><strong>Linked    In   :</strong> Zion Tech    Group</p>
                 </div>
             </div>
@@ -199,6 +201,6 @@ origin/cursor/fix-errors-and-merge-to-main-cc0a
           </div>
       </section>
   );
-}</div></div></div></div></div></div></div></div>
+  }</div></div></div></div></div></div></div></div>
 </span>
 </span>)

@@ -42,4 +42,5 @@ export default function Page() {return (<main class Name Name='min-h-screen bg-s
         </div>
       </section>
     </main>
-  ); }
+  );
+  }

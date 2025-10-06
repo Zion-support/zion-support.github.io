@@ -1,5 +1,8 @@
+import { Zap, ArrowRight, Target } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Star } from 'lucide-react';
 import React from 'react';
-import {Metadata} from 'next';
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import {Calendar,Clock,User,ArrowRight,TrendingUp,Brain,Zap,Shield,Globe,Target} from 'lucide-react';
 
@@ -251,7 +254,7 @@ export default function AI2026FutureLandscape Mega Trends() {/* return (
       </div>
     </div>
   );
-}
+  }
 </Arrow>
 </Arrow>
 </Globe>

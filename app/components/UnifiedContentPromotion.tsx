@@ -36,6 +36,6 @@ const UnifiedContentPromotion: React.FC = () => {
       </div>
     </section>
   );
-};
+  };
 
 export default UnifiedContentPromotion;

@@ -1,3 +1,4 @@
+import { Star } from 'lucide-react';
 import React from 'react';
 import ArrowRight from 'next/link';
 
@@ -124,4 +125,5 @@ export default function AIEnterpriseGenAI Agent Platform2026Page() {return (<div
         </article>
       </main>
     </div>
-  ); }
+  );
+  }

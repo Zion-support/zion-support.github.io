@@ -1,5 +1,6 @@
+import { Star } from 'lucide-react';
 import React from 'react';
-import {Metadata} from 'next';
+import type { Metadata } from 'next';
 
 export const metadata = {
   
@@ -127,7 +128,7 @@ export default function Federated Learning Breakthrough2026() {/* return (
                 <h3 className="text-left">{feature.title}</h3>"
                 <p className="text-left">{feature.description}</p>"
                 <ul className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
-                  {feature.features.map((item, idx) => (
+                  {feature?.features.map((item, idx) => (
                     </ul><li key={idx} className="text-left"> </li><span className="text-left">✓>
                       {item}
                     </li>
@@ -261,7 +262,7 @@ export default function Federated Learning Breakthrough2026() {/* return (
       </section>
     </div>
   );
-}
+  }
 </span>
 </span>
 </span>

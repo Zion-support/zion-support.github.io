@@ -7447,7 +7447,11 @@ snapshots:
 
   '@typescript-eslint/project-service@8.44.1(typescript@5.9.3)':
     dependencies:
+<<<<<<< HEAD
       '@typescript-eslint/tsconfig-utils': 8.45.0(typescript@5.9.3)
+=======
+      '@typescript-eslint/tsconfig-utils': 8.44.1(typescript@5.9.3)
+>>>>>>> cursor/fix-errors-and-merge-to-main-629e
       '@typescript-eslint/types': 8.45.0
       debug: 4.4.3
       typescript: 5.9.3

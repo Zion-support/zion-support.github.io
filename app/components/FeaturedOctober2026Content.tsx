@@ -318,4 +318,4 @@ export default function FeaturedOctober2026Content() {
       </div>
     </section>
   );
-}
+  }

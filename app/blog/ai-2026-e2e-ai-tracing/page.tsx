@@ -69,4 +69,5 @@ export default function Page() {return (<div className="min-h-screen bg-gradient
         </div>
       </div>
     </div>
-  ); }
+  );
+  }

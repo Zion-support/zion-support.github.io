@@ -46,7 +46,7 @@ import { Link } from 'react-router-dom';
               <pre className='bg-gray-900 text-green-400 p-4 rounded-lg overflow-x-auto text-sm'>
                 {`const axios = require('axios')}
 const apiKey = 'your-api-key'
-const baseUrl = 'https://api.ziontechgroup.com'
+const baseUrl = 'https://api?.ziontechgroup.com'
 const createContent = async () => {
           <Link
             href='/<contact'

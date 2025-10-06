@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import {Metadata} from 'next';
+import type { Metadata } from 'next';
 
 export const metadata = {
   
@@ -241,7 +241,7 @@ export default function AI2033Universal Consciousness Integration() {/* return (
           </section>
         </article>
   );
-}</div></div></div></div></div></div></div></div></div>
+  }</div></div></div></div></div></div></div></div></div>
 </span>
 </span>
 </span>)

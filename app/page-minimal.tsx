@@ -1,3 +1,4 @@
+import { Star } from 'lucide-react';
 import React from 'react';
 import Link from 'next/link';
 
@@ -92,7 +93,7 @@ export default function HomePage() {
               <h3 className="text-2xl font-bold text-white mb-4">{feature.title}</h3>
               <p className="text-gray-300 mb-6">{feature.description}</p>
               <div className="space-y-2">
-                {feature.metrics.map((metric, metricIndex) => (
+                {feature?.metrics.map((metric, metricIndex) => (
                   <div key={metricIndex} className="flex items-center gap-2 text-cyan-400 text-sm">
                     <span>✓</span>
                     <span>{metric}</span>
@@ -133,10 +134,8 @@ export default function HomePage() {
 
       <footer className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 border-t border-white/20">
         <div className="text-center text-gray-300">
-          <p>&copy; 2026 Zion Tech Group. All rights reserved.</p>
-          <p className="mt-2">
-            <Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
-            {' | '}
+          <p>&copy;
+  }
             <Link href="/terms" className="hover:text-white transition-colors">Terms of Service</Link>
           </p>
         </div>

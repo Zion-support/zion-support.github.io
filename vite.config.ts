@@ -50,6 +50,10 @@ export default defineConfig({
     include: ['react', 'react-dom', 'react-router-dom'],
   },
   define: {
+<<<<<<< HEAD
     __DEV__: JSON.stringify(process.env.NODE_ENV === 'development'),
+=======
+    __DEV__: JSON.stringify(process?.env.NODE_ENV === 'development'),
+>>>>>>> cursor/fix-errors-and-merge-to-main-629e
   },
 });

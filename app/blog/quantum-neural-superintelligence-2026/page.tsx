@@ -1,5 +1,5 @@
 import React from 'react';
-import {Metadata} from 'next';
+import type { Metadata } from 'next';
 
 export const metadata = {
   
@@ -200,7 +200,7 @@ export default function QuantumNeural Superintelligence Page() {/* return (
       </div>
     </div>
   );
-}
+  }
 </span>
 </span>
 </span>

@@ -1,3 +1,4 @@
+import { Star } from 'lucide-react';
 import Link from 'next/link';
 import { ArrowRight, TrendingUp, Users } from 'lucide-react';
 
@@ -189,4 +190,4 @@ export default function NewContent2026ShowcaseBanner() {
       </div>
     </section>
   );
-}
+  }

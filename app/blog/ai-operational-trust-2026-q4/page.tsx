@@ -44,4 +44,5 @@ export default function Page() {return (<article className="prose prose-invert m
         governance, observability, and cost optimization.
       </p>
     </article>
-  ); }
+  );
+  }

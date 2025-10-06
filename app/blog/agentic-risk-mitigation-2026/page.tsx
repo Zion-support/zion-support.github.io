@@ -64,37 +64,5 @@ export default function Agentic Risk Mitigation2026Page() {return (<main classNa
             Adopt a layered eval strategy: pre-deployment red teaming, unit task
             evals, end-to-end scenario evals, and continuous post-deployment
             telemetry with guardrail alerts.    Optimize    for coverage over
-            cleverness; measure failure rates, cost-to-signal, and
-            time-to-detection.
-          </p>
-
-          <h3>Deployment    quickstart</h3>
-          <ol>
-            <li>Define    risk taxonomy and map to agent capabilities</li>
-            <li>Instrument    policiesbudgetsand escalation paths</li>
-            <li>Stand    up eval pipelines with golden tasks</li>
-            <li>
-              Pilot    under tight budgets; expand with observed safety margins
-            </li>
-            <li>
-              Continuously    retrain refusal and safety policies on incidents
-            </li>
-          </ol>
-
-          <div className="not-prose mt-10 p-6 rounded-xl bg-gradient-to-br from-gray-50 to-white border border-gray-200">
-            <h4 className="text-xl font-bold mb-2">Get    the checklist</h4>
-            <p className="text-gray-700 mb-4">
-              Download    the operational checklist to productionize these controls
-              inside your platform.
-            </p>
-            <Arrow Right
-             href="/case-studies"
-             className="inline-block bg-purple-600 hover:bg-purple-700 text-white px-5 py-3 rounded-lg font-semibold"
-            >
-              Explore    case studies →
-            </Arrow>
-          </div>
-        </div>
-      </section>
-    </main>
-  ); }
+            cleverness;
+  }
