@@ -15,8 +15,6 @@ export interface WebVitalsMetrics {
 }
 
 /**
-<<<<<<< HEAD
-=======
  * Performance budget checker
  */
 export interface PerformanceBudget {
@@ -190,7 +188,6 @@ class PerformanceOptimizer {
 }
 
 /**
->>>>>>> cursor/fix-errors-and-merge-to-main-6ace
  * Resource hints for performance
  */
 export const prefetchResources = (urls: string[]): void => {
