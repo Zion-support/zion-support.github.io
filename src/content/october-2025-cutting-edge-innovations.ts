@@ -1,44 +1,54 @@
 export const octoberCuttingEdgeInnovations = [
   {
-    id: 'quant, u, m-securi, t, y-netw, o, r, k, s',
-    slug: 'ai-20, 2, 5-octob, e, r-quant, u, m-securi, t, y-networ, k, s-enterpr, i, s, e',
-    title: 'AI-Powered, Quantum, Security Netwo, r, k, s',
-    category: 'Quantum, Securi, t, y',
-    description: 'Master, quantu, m-resistant, security, with AI-powered, threat, detectio, n, po, s, t-quantum, cryptograph, y, and, zer, o-trust, network, s. 99.9, 9, 9% uptime, wit, h <100ms, threat, detection.',
-    ic, o, n: '🔐',
-    gradie, n, t: 'fr, o, m-bl, u, e-600, t, o-purp, l, e-60, 0',
-    metri, c, s: {
-      upti, m, e: '99.99, 9%',
-      detecti, o, n: '<10, 0, m, s',
-      mark, e, t: '$8, 5, 0, B',
-      reducti, o, n: '9, 0%',
+    id: 'quantum-security-networks',
+    slug: 'ai-2025-october-quantum-security-networks-enterprise',
+    title: 'AI-Powered Quantum Security Networks',
+    category: 'Quantum Security',
+    description: 'Master quantum-resistant security with AI-powered threat detection, post-quantum cryptography, and zero-trust networks. 99.999% uptime with <100ms threat detection.',
+    icon: '🔐',
+    gradient: 'from-blue-600 to-purple-600',
+    metrics: {
+      uptime: '99.999%',
+      detection: '<100ms',
+      market: '$850B',
+      reduction: '90%',
     },
-    highligh, t, s: [
-      'Po, s, t-quantum, cryptography, with CRYSTA, L, S-Kyber, and, Dilithiu, m',
-      'Quantum, key, distribution (Q, K, D) for, unhackable, communication',
-      'AI-powered, threat, detection with, rea, l-time, anomaly, analysis',
-      'Ze, r, o-trust, architecture, with microsegmentati, o, n',
-      'Proven, in, Fortune 500, financial, institutions',
+    highlights: [
+      'Post-quantum cryptography with CRYSTALS-Kyber and Dilithium',
+      'Quantum key distribution (QKD) for unhackable communication',
+      'AI-powered threat detection with real-time anomaly analysis',
+      'Zero-trust architecture with microsegmentation',
+      'Proven in Fortune 500 financial institutions',
     ],
   },
->>>>>>> origin/merge-fixes-20251005-193002
-      'Spiking, neural, networks (SN, N, s) with, biological, realis, m',
-      'Intel, Loihi, 2 and, BrainChip, Akida deployment, guide, s',
-      'Eve, n, t-driven, sensors, for ult, r, a-low, power, consumption',
-      'Re, a, l-time, edge, AI for, autonomous, systems',
-      'Proven, in, BMW autonomous, driving, and NASA, rover, s',
+  {
+    id: 'neuromorphic-computing-edge',
+    slug: 'ai-2025-october-neuromorphic-computing-edge',
+    title: 'Neuromorphic Computing at the Edge',
+    category: 'Edge Computing',
+    description: 'Revolutionary brain-inspired computing delivering 1000x energy efficiency with spiking neural networks and event-driven processing.',
+    icon: '🧠',
+    gradient: 'from-green-600 to-teal-600',
+    metrics: {
+      efficiency: '1000x',
+      power: '<1W',
+      latency: '<1ms',
+      market: '$2.1T',
+    },
+    highlights: [
+      'Spiking neural networks (SNNs) with biological realism',
+      'Intel Loihi 2 and BrainChip Akida deployment guides',
+      'Event-driven sensors for ultra-low power consumption',
+      'Real-time edge AI for autonomous systems',
+      'Proven in BMW autonomous driving and NASA rovers',
     ],
-  },
->>>>>>> origin/merge-fixes-20251005-193002
-      'Poli, c, y-as-code, with, Open Policy, Agen, t (OP, A)',
-      'Mul, t, i-layered, safety, guardrails and, circuit, breakers',
-      'Hum, a, n-in-t, h, e-lo, o, p (HI, T, L) intelligent, escalatio, n',
-      'GD, P, R, HIP, A, A, SOC, 2, compliance automati, o, n',
-      'Deployed, in, JP Morgan, Chase, and Kaiser, Permanent, e',
-    ],
-  },
-]; export const octoberInnovationMetrics = {
-  totalMark, e, t: '$1.00, 9, T',
-  averageEfficien, c, y: '98, x',
-  combinedComplian, c, e: '99., 9%',
-  enterpriseDeploymen, t, s: '50, 0+',
+  }
+];
+
+export const getFeaturedInnovations = () => {
+  return octoberCuttingEdgeInnovations.filter(innovation => innovation.featured);
+};
+
+export const getInnovationsByCategory = (category: string) => {
+  return octoberCuttingEdgeInnovations.filter(innovation => innovation.category === category);
+};
