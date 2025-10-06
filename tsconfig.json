@@ -118,7 +118,8 @@
     "SidebarNavigation.tsx",
     "api-documentation.tsx",
     "app/components/NewContentPromotionalBanner2026.tsx",
-    "app/components/NewestContent2025Banner.tsx"
+    "app/components/NewestContent2025Banner.tsx",
+    "utils/**/*"
   ],
   "references": [
     {
