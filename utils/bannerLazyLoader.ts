@@ -8,6 +8,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { lazy } from 'react';
 =======
 import React, { lazy } from 'react';
@@ -23,6 +24,10 @@ import { lazy, ComponentType } from 'react';
 =======
 import { lazy, ComponentType } from 'react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d
+=======
+import { lazy, ComponentType } from 'react';
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
 interface BannerModule {
   default: ComponentType<any>;
 }
@@ -50,16 +55,20 @@ export const lazyLoadBanner = (
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-9d58
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
                 retryError
               );
               // Return a fallback component
               resolve({ default: () => null });
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -91,6 +100,8 @@ export const lazyLoadBanner = (
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
             });
         }, 1000);
       });
@@ -142,6 +153,7 @@ export const sortBannersByPriority = (bannerNames: string[]): string[] => {
   return [...bannerNames].sort((a, b) => {
     return getBannerPriority(a) - getBannerPriority(b);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   // Preload in the background
   importFn().catch(error => {
@@ -149,6 +161,8 @@ export const sortBannersByPriority = (bannerNames: string[]): string[] => {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f83
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
   });
 };
 
@@ -157,8 +171,11 @@ export const sortBannersByPriority = (bannerNames: string[]): string[] => {
  */
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
 export class BannerObserver {
   private observer: IntersectionObserver | null = null;
   private loadedBanners = new Set<string>();
@@ -194,8 +211,11 @@ export class BannerObserver {
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
 
   observe(element: Element): void {
     this.observer?.observe(element);
@@ -208,14 +228,18 @@ export class BannerObserver {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 };
 
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
 /**
  * Banner loading state management
  */
+<<<<<<< HEAD
 <<<<<<< HEAD
 export class BannerLoader {
   private loadingStates = new Map<string, boolean>();
@@ -257,6 +281,8 @@ export const bannerLoader = new BannerLoader();
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
 export const trackBannerPerformance = (
   bannerName: string,
   metrics: {
@@ -281,6 +307,7 @@ export default {
   sortBannersByPriority,
   BannerObserver,
   trackBannerPerformance,
+<<<<<<< HEAD
 <<<<<<< HEAD
 };
 =======
@@ -399,3 +426,6 @@ export const loadBannersByPriority = (
 =======
 };
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
+=======
+};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008

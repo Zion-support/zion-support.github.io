@@ -14,6 +14,7 @@ export const focusManagement = {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-698a
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
@@ -40,6 +41,12 @@ export const focusManagement = {
     const lastElement = focusableElements[
       focusableElements.length - 1
     ] as HTMLElement;
+=======
+      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+    );
+    const firstElement = focusableElements[0] as HTMLElement;
+    const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
 
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Tab') {
@@ -58,12 +65,16 @@ export const focusManagement = {
     };
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-efe9
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
 
     element.addEventListener('keydown', handleKeyDown);
     firstElement?.focus();
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     element.addEventListener('keydown', handleKeyDown);
@@ -71,10 +82,13 @@ export const focusManagement = {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-efe9
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
     return () => {
       element.removeEventListener('keydown', handleKeyDown);
     };
   },
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -88,10 +102,14 @@ export const focusManagement = {
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
   // Restore focus to previous element
   restoreFocus: (element: HTMLElement): void => {
     element.focus();
   },
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -102,6 +120,8 @@ export const focusManagement = {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-3fed
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
 
   // Skip to main content
   skipToMain: (): void => {
@@ -188,6 +208,7 @@ export const ariaUtils = {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   setAriaAttributes: (element: HTMLElement, attributes: Record<string, string>): void => {
 =======
   // Set ARIA attributes
@@ -211,11 +232,15 @@ export const ariaUtils = {
   // Set ARIA attributes
   setAria: (element: HTMLElement, attributes: Record<string, string>): void => {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-efe9
+=======
+  setAriaAttributes: (element: HTMLElement, attributes: Record<string, string>): void => {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
     Object.entries(attributes).forEach(([key, value]) => {
       element.setAttribute(key, value);
     });
   },
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   // Announce to screen readers
 <<<<<<< HEAD
@@ -257,10 +282,15 @@ export const ariaUtils = {
   // Announce to screen readers
   announce: (message: string, priority: 'polite' | 'assertive' = 'polite'): void => {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-efe9
+=======
+  // Announce to screen readers
+  announce: (message: string, priority: 'polite' | 'assertive' = 'polite'): void => {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
     const announcement = document.createElement('div');
     announcement.setAttribute('aria-live', priority);
     announcement.setAttribute('aria-atomic', 'true');
     announcement.className = 'sr-only';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -293,6 +323,12 @@ export const ariaUtils = {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d
+=======
+    announcement.textContent = message;
+    
+    document.body.appendChild(announcement);
+    
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
     setTimeout(() => {
       document.body.removeChild(announcement);
     }, 1000);
@@ -307,6 +343,7 @@ export const ariaUtils = {
   }
 };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -606,6 +643,53 @@ export const colorContrast = {
 export const colorContrast = {
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d
+=======
+// Keyboard navigation utilities
+export const keyboardNavigation = {
+  // Handle arrow key navigation
+  handleArrowKeys: (container: HTMLElement, orientation: 'horizontal' | 'vertical' = 'horizontal') => {
+    const focusableElements = Array.from(container.querySelectorAll(
+      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+    )) as HTMLElement[];
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+      const currentIndex = focusableElements.indexOf(document.activeElement as HTMLElement);
+      
+      if (currentIndex === -1) return;
+
+      let nextIndex = currentIndex;
+
+      if (orientation === 'horizontal') {
+        if (e.key === 'ArrowLeft') {
+          nextIndex = currentIndex > 0 ? currentIndex - 1 : focusableElements.length - 1;
+        } else if (e.key === 'ArrowRight') {
+          nextIndex = currentIndex < focusableElements.length - 1 ? currentIndex + 1 : 0;
+        }
+      } else {
+        if (e.key === 'ArrowUp') {
+          nextIndex = currentIndex > 0 ? currentIndex - 1 : focusableElements.length - 1;
+        } else if (e.key === 'ArrowDown') {
+          nextIndex = currentIndex < focusableElements.length - 1 ? currentIndex + 1 : 0;
+        }
+      }
+
+      if (nextIndex !== currentIndex) {
+        e.preventDefault();
+        focusableElements[nextIndex].focus();
+      }
+    };
+
+    container.addEventListener('keydown', handleKeyDown);
+    
+    return () => {
+      container.removeEventListener('keydown', handleKeyDown);
+    };
+  },
+};
+
+// Color contrast utilities
+export const colorContrast = {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
   // Calculate relative luminance
   getLuminance: (r: number, g: number, b: number): number => {
     const [rs, gs, bs] = [r, g, b].map(c => {
@@ -616,6 +700,7 @@ export const colorContrast = {
   },
 
   // Calculate contrast ratio
+<<<<<<< HEAD
 <<<<<<< HEAD
   getContrastRatio: (
     color1: [number, number, number],
@@ -628,18 +713,25 @@ export const colorContrast = {
 =======
   getContrastRatio: (color1: [number, number, number], color2: [number, number, number]): number => {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-698a
+=======
+  getContrastRatio: (color1: [number, number, number], color2: [number, number, number]): number => {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
     const lum1 = colorContrast.getLuminance(...color1);
     const lum2 = colorContrast.getLuminance(...color2);
     const brightest = Math.max(lum1, lum2);
     const darkest = Math.min(lum1, lum2);
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
     return (brightest + 0.05) / (darkest + 0.05);
   },
 
   // Check if contrast meets WCAG standards
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -955,6 +1047,16 @@ export const screenReaderUtils = {
 =======
 export const screenReaderUtils = {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d
+=======
+  meetsWCAG: (color1: [number, number, number], color2: [number, number, number], level: 'AA' | 'AAA' = 'AA'): boolean => {
+    const ratio = colorContrast.getContrastRatio(color1, color2);
+    return level === 'AA' ? ratio >= 4.5 : ratio >= 7;
+  },
+};
+
+// Screen reader utilities
+export const screenReaderUtils = {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
   // Hide element from screen readers
   hideFromScreenReader: (element: HTMLElement): void => {
     element.setAttribute('aria-hidden', 'true');
@@ -964,6 +1066,7 @@ export const screenReaderUtils = {
   showToScreenReader: (element: HTMLElement): void => {
     element.removeAttribute('aria-hidden');
   },
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1147,6 +1250,15 @@ export const accessibilityTesting = {
     return element.getAttribute('aria-hidden') !== 'true' && 
            !element.classList.contains('sr-only');
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
+=======
+
+  // Create screen reader only text
+  createScreenReaderText: (text: string): HTMLElement => {
+    const element = document.createElement('span');
+    element.className = 'sr-only';
+    element.textContent = text;
+    return element;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
   },
 <<<<<<< HEAD
 <<<<<<< HEAD

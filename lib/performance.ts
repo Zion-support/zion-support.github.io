@@ -16,6 +16,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { onCLS, onFCP, onLCP, onTTFB } from 'web-vitals';
 import type { Metric } from 'web-vitals';
 
@@ -89,6 +90,11 @@ import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
 import type { Metric } from 'web-vitals';
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-efe9
+=======
+import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
+import type { Metric } from 'web-vitals';
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
 // Types
 interface PerformanceMetric {
   name: string;
@@ -98,6 +104,7 @@ interface PerformanceMetric {
   id: string;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -154,6 +161,8 @@ interface PerformanceMetric {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-d12c
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-efe9
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
 interface PerformanceReport {
   metrics: PerformanceMetric[];
   timestamp: string;
@@ -167,6 +176,7 @@ const THRESHOLDS = {
   FID: { good: 100, poor: 300 },
   FCP: { good: 1800, poor: 3000 },
   LCP: { good: 2500, poor: 4000 },
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -217,11 +227,15 @@ const THRESHOLDS = {
 =======
   TTFB: { good: 800, poor: 1800 },
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-efe9
+=======
+  TTFB: { good: 800, poor: 1800 },
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
 };
 
 /**
  * Get rating based on metric value
  */
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -244,10 +258,13 @@ const THRESHOLDS = {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-698a
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-efe9
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
 function getRating(
   name: string,
   value: number
 ): 'good' | 'needs-improvement' | 'poor' {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -269,6 +286,8 @@ function getRating(name: string, value: number): 'good' | 'needs-improvement' | 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-d12c
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-efe9
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
   const threshold = THRESHOLDS[name as keyof typeof THRESHOLDS];
   if (!threshold) return 'good';
   if (value <= threshold.good) return 'good';
@@ -280,6 +299,7 @@ function getRating(name: string, value: number): 'good' | 'needs-improvement' | 
  * Send metric to analytics and custom endpoints
  */
 function sendToAnalytics(metric: Metric): void {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -310,11 +330,14 @@ function reportMetric(metric: Metric) {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-d12c
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-efe9
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
   const performanceMetric: PerformanceMetric = {
     name: metric.name,
     value: metric.value,
     rating: getRating(metric.name, metric.value),
     delta: metric.delta,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -367,6 +390,9 @@ function reportMetric(metric: Metric) {
 =======
     id: metric.id
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-efe9
+=======
+    id: metric.id,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
   };
 
   // Log in development
@@ -374,6 +400,7 @@ function reportMetric(metric: Metric) {
     console.log('Performance Metric:', performanceMetric);
   }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   // Send to analytics
@@ -560,12 +587,24 @@ function reportMetric(metric: Metric) {
     });
   }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
+=======
+  // Send to analytics
+  if (typeof window !== 'undefined' && (window as any).gtag) {
+    (window as any).gtag('event', metric.name, {
+      event_category: 'Web Vitals',
+      event_label: metric.id,
+      value: Math.round(metric.value),
+      non_interaction: true,
+    });
+  }
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
 }
 
 /**
  * Initialize performance monitoring
  */
 export function initPerformanceMonitoring(): void {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1297,11 +1336,22 @@ export function getMemoryUsage(): Record<string, number> | null {
     usedPercentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-efe9
   };
+=======
+  if (typeof window === 'undefined') return;
+
+  // Track all web vitals
+  onCLS(sendToAnalytics);
+  onINP(sendToAnalytics);
+  onFCP(sendToAnalytics);
+  onLCP(sendToAnalytics);
+  onTTFB(sendToAnalytics);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
 }
 
 /**
  * Generate performance report
  */
+<<<<<<< HEAD
 export function generatePerformanceReport(): PerformanceReport | null {
   if (typeof window === 'undefined') return null;
 <<<<<<< HEAD
@@ -1545,10 +1595,19 @@ export function generatePerformanceReport(): PerformanceReport {
 =======
     userAgent: navigator.userAgent
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-efe9
+=======
+export function generatePerformanceReport(): PerformanceReport {
+  return {
+    metrics: [],
+    timestamp: new Date().toISOString(),
+    url: typeof window !== 'undefined' ? window.location.href : '',
+    userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : '',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
   };
 }
 
 /**
+<<<<<<< HEAD
 <<<<<<< HEAD
  * Check if performance monitoring is supported
  */
@@ -2283,3 +2342,13 @@ export function generatePerformanceReport(): PerformanceReport {
   getConnectionType
 };
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-efe9
+=======
+ * Performance monitoring hook for React components
+ */
+export function usePerformanceMonitoring() {
+  if (typeof window === 'undefined') return;
+
+  // Initialize monitoring on mount
+  initPerformanceMonitoring();
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008

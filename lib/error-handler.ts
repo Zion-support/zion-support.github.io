@@ -8,6 +8,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
 =======
@@ -53,10 +54,15 @@ import { NextApiRequest, NextApiResponse } from 'next';
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-efe9
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
 export interface ApiError extends Error {
   statusCode?: number;
   isOperational?: boolean;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -89,11 +95,14 @@ export class AppError extends Error implements ApiError {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-d12c
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-efe9
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
 
 export class AppError extends Error implements ApiError {
   public statusCode: number;
   public isOperational: boolean;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -122,6 +131,8 @@ export class AppError extends Error implements ApiError {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-d12c
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-efe9
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
   constructor(message: string, statusCode: number = 500) {
     super(message);
     this.statusCode = statusCode;
@@ -139,6 +150,7 @@ export class AppError extends Error implements ApiError {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0a8c
@@ -169,12 +181,16 @@ export class AppError extends Error implements ApiError {
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-efe9
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
 export const errorHandler = (
   err: ApiError,
   req: NextApiRequest,
   res: NextApiResponse
 ) => {
   const { statusCode = 500, message } = err;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -219,10 +235,14 @@ export const errorHandler = (
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-efe9
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
   // Log error for monitoring
   console.error(`API Error [${statusCode}]: ${message}`, {
     url: req.url,
     method: req.method,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -239,10 +259,13 @@ export const errorHandler = (
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-d12c
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-efe9
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
     timestamp: new Date().toISOString(),
     userAgent: req.headers['user-agent'],
     ip: req.headers['x-forwarded-for'] || req.connection.remoteAddress
   });
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -279,12 +302,16 @@ export const errorHandler = (
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-efe9
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
   res.status(statusCode).json({
     error: {
       message:
         process.env['NODE_ENV'] === 'production'
           ? 'Internal Server Error'
           : message,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -313,6 +340,10 @@ export const errorHandler = (
       statusCode,
       timestamp: new Date().toISOString()
 <<<<<<< HEAD
+=======
+      statusCode,
+      timestamp: new Date().toISOString()
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
     },
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0a8c
 =======
@@ -337,6 +368,7 @@ export const errorHandler = (
 
 export const asyncHandler =
   (fn: Function) =>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -434,3 +466,8 @@ export const asyncHandler = (fn: Function) => {
     Promise.resolve(fn(req, res, next)).catch((error: Error) => next(error));
   };
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-efe9
+=======
+  (req: NextApiRequest, res: NextApiResponse, next: Function) => {
+    Promise.resolve(fn(req, res, next)).catch((error: Error) => next(error));
+  };
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008

@@ -114,6 +114,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     "api/**",
     "lib/**",
     "utils/seoUtils.ts"
@@ -143,6 +144,10 @@
     "utils/performanceUtils.ts",
     "utils/seoUtils.ts"
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-efe9
+=======
+    "utils/**",
+    "src/utils/**"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
   ],
   "references": [
     {
