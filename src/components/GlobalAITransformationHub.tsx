@@ -1,42 +1,97 @@
-import, React, from 'react';
-impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-dom';
-impo, r, t { Targ, e, t, Bra, i, n, Z, a, p, Shie, l, d } fr, o, m 'luci, d, e-react';
-const, GlobalAITransformationHu, b = () => { 
-      <h2, classNam, e="te, x, t-4xlmd: te, x, t-5xl, fon, t-extrabold, m, b-6, tex, t-center, b, g-gradie, n, t-to-r, fro, m-bl, u, e-400, vi, a-cy, a, n-400, t, o-emera, l, d-400, b, g-cl, i, p-text, tex, t-transparent">
-        Transforming, Business, Operations Worldwi, d, e
-      <div, classNam, e="gridmd: gr, i, d-co, l, s-2lg: gr, i, d-co, l, s-4, ga, p-6mb-8">
-        { transformationAre, a, s.m, a, p((ar, e, a, ind, e, x) = > (
-          <Link, key={ in, d, e, x  }, to={ ar, e, a.li, n, k } classNa, me={ `bg-gradie, n, t-to-br ${ar, e, a.co, l, o, r }, round, e, d-x, l, p-6, tex, t-whitetransformhover: sca, l, e-105, transitio, n-all, duratio, n-300hover: shad, o, w-xl, gro, u, p`}
-          >
-            <div, classNam, e = "mb-4">{ar, e, a.ic, o, n}</d, i, v>
-            <h3className="te, x, t-xl, fon, t-bold, m, b-3, grou, p-hover: te, x, t-yell, o, w-300, transitio, n-colo, r, s">{ar, e, a.t, i, t, l, e}</h3>
-            <pclassName = "te, x, t-sm, m, b-4, opacit, y-90">{ar, e, a.description}</p>
-            <divclassName="flex, item, s-center, justif, y-betwe, e, n">
-              <spanclassName="te, x, t-lg, fon, t-bold, b, g-whi, t, e/20, p, x-3, p, y-1, rounde, d-fu, l, l">{ar, e, a.val, u, e}</sp, a, n>
-              <ArrowRightclassName="w-5 h-5, grou, p-hover: transla, t, e-x-1, transitio, n-transfo, r, m" />
-        <divclassName="grid, gri, d-co, l, s-2md: gr, i, d-co, l, s-4, ga, p-4, tex, t-cent, e, r">
-          { successMetri, c, s.m, a, p((it, e, m, ind, e, x) = > (
-            <div, key={ind, e, x }>
-              <divclassName="te, x, t-3xl, fon, t-bold, tex, t-whi, t, e">{it, e, m.metr, i, c}</d, i, v>
-              <divclassName="te, x, t-sm, tex, t-gr, a, y-3, 0, 0">{it, e, m.lab, e, l}</d, i, v>
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { Target, Brain, Zap, Shield } from 'lucide-react';
+
+const GlobalAITransformationHub: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'Synthetic Consciousness',
+      description: 'True AI awareness and decision-making capabilities',
+      link: '/ai/consciousness'
+    },
+    {
+      icon: Zap,
+      title: 'Quantum Edge Processing',
+      description: 'Sub-millisecond processing speeds for real-time applications',
+      link: '/ai/quantum-processing'
+    },
+    {
+      icon: Target,
+      title: 'Autonomous Mesh',
+      description: 'Self-organizing systems that adapt and optimize automatically',
+      link: '/ai/autonomous-mesh'
+    },
+    {
+      icon: Shield,
+      title: 'Quantum Security',
+      description: 'Unbreakable protection using quantum encryption',
+      link: '/ai/quantum-security'
+    }
+  ];
+
+  return (
+    <div className="bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white py-20">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 mb-6">
+            <span className="text-blue-400 font-bold text-sm tracking-wider uppercase">
+              🌍 GLOBAL AI TRANSFORMATION HUB
+            </span>
+          </div>
+          <h2 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+            The Future of AI is Here
+          </h2>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Experience the next generation of artificial intelligence with our revolutionary transformation hub.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {features.map((feature, index) => (
+            <div
+              key={index}
+              className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105"
+            >
+              <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl mb-4 group-hover:scale-110 transition-transform duration-300">
+                <feature.icon className="w-8 h-8 text-white" />
+              </div>
+              
+              <h3 className="text-xl font-semibold mb-3 text-white">
+                {feature.title}
+              </h3>
+              
+              <p className="text-gray-300 mb-4 text-sm">
+                {feature.description}
+              </p>
+              
+              <Link
+                to={feature.link}
+                className="inline-flex items-center text-blue-400 hover:text-blue-300 font-medium transition-colors group-hover:translate-x-1"
+              >
+                Explore
+                <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
             </div>
           ))}
-        </d, i, v>
-      </d, i, v>
-      <divclassName = "gridmd: gr, i, d-co, l, s-3, ga, p-6, m, b-8">
-        <divclassName="bg-gradie, n, t-to-br, fro, m-purp, l, e-5, 0, 0/20, t, o-viol, e, t-5, 0, 0/20, rounde, d-x, l, p-6, border, border-purp, l, e-4, 0, 0/30">
-          <divclassName="flex, item, s-center, ga, p-3, m, b-4">
-            <RocketclassName="w-6 h-6, tex, t-purp, l, e-4, 0, 0" />
-            <h3className="te, x, t-lg, fon, t-bold, tex, t-purp, l, e-4, 0, 0">Revolutionary, Breakthrough, s</h3>
-        <divclassName="bg-gradie, n, t-to-br, fro, m-emera, l, d-5, 0, 0/20, t, o-te, a, l-5, 0, 0/20, rounde, d-x, l, p-6, border, border-emera, l, d-4, 0, 0/30">
-          <divclassName="flex, item, s-center, ga, p-3, m, b-4">
-            <AwardclassName="w-6 h-6, tex, t-emera, l, d-4, 0, 0" />
-            <h3className="te, x, t-lg, fon, t-bold, tex, t-emera, l, d-4, 0, 0">Success, Storie, s</h3>
-        <divclassName="bg-gradie, n, t-to-br, fro, m-oran, g, e-5, 0, 0/20, t, o-r, e, d-5, 0, 0/20, rounde, d-x, l, p-6, border, border-oran, g, e-4, 0, 0/30">
-          <divclassName="flex, item, s-center, ga, p-3, m, b-4">
-            <UsersclassName="w-6 h-6, tex, t-oran, g, e-4, 0, 0" />
-            <h3className="te, x, t-lg, fon, t-bold, tex, t-oran, g, e-4, 0, 0">Expert, Service, s</h3>
-            Get, Starte, d <ArrowRightclassName="w-4 h-4" />
-          <SparklesclassName="w-5 h-5" />
-          Start, Your, AI Transformation, Journe, y
-          <ArrowRightclassName="w-5 h-5" />
+        </div>
+
+        <div className="text-center mt-16">
+          <Link
+            to="/ai-transformation"
+            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
+          >
+            Start Your AI Transformation Journey
+            <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </Link>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default GlobalAITransformationHub;
