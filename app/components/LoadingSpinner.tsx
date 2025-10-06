@@ -28,4 +28,8 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   );
 };
 
+<<<<<<< HEAD
 export default LoadingSpinner;
+=======
+export default LoadingSpinner;
+>>>>>>> cursor/fix-errors-and-merge-to-main-5c0d

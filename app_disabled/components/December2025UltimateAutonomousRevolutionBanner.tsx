@@ -1,9 +1,6 @@
 import Link from 'next/link';
 import { ArrowRight, Brain, CheckCircle, TrendingUp, Zap, Star } from 'lucide-react';
 
-
-
-
 export default function December2025UltimateAutonomousRevolutionBanner() {
   return (
     <div className='relative overflow-hidden bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 text-white'>

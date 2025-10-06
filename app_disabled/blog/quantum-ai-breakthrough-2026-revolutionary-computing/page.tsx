@@ -1,8 +1,6 @@
 import Link from 'next/link';
 import { ArrowRight, Atom, Brain, CheckCircle, Cog, Target, TrendingUp, Zap } from 'lucide-react';
 
-
-
 export default function QuantumAIBreakthrough2026() {
   return (
 import React from 'react';

@@ -1,4 +1,5 @@
 // Performance monitoring setup
+<<<<<<< HEAD
 
 // Mock analytics object
 const analytics = {
@@ -20,6 +21,11 @@ const performanceOptimizer = {
     });
   }
 };
+=======
+import { analytics } from './utils/analytics';
+import { errorHandler } from './utils/errorHandler';
+import { performanceOptimizer } from './utils/performanceOptimizer';
+>>>>>>> cursor/fix-errors-and-merge-to-main-5c0d
 
 // Initialize performance monitoring
 if (typeof window !== 'undefined') {
@@ -27,6 +33,7 @@ if (typeof window !== 'undefined') {
   analytics.trackPageView(window.location.pathname);
   
   // Initialize performance optimizer
+<<<<<<< HEAD
   performanceOptimizer.measurePageLoad().then((metrics: any) => {
     analytics.trackPerformance('page_load', metrics.loadTime);
     analytics.trackPerformance('render_time', metrics.renderTime);
@@ -34,6 +41,11 @@ if (typeof window !== 'undefined') {
   });
 
   // Track Web Vitals
+=======
+  performanceOptimizer.lazyLoadImages();
+  
+  // Monitor long tasks (if available)
+>>>>>>> cursor/fix-errors-and-merge-to-main-5c0d
   if ('PerformanceObserver' in window) {
     const observer = new PerformanceObserver((list) => {
       for (const entry of list.getEntries()) {
@@ -43,6 +55,7 @@ if (typeof window !== 'undefined') {
         }
       }
     });
+<<<<<<< HEAD
 
     try {
       observer.observe({ entryTypes: ['navigation'] });
@@ -51,3 +64,16 @@ if (typeof window !== 'undefined') {
     }
   }
 }
+=======
+    observer.observe({ entryTypes: ['longtask'] });
+  }
+  
+  // Track Web Vitals
+  const metrics = performanceOptimizer.measurePageLoad();
+  if (metrics) {
+    performanceOptimizer.reportWebVitals(metrics);
+  }
+}
+
+export { analytics, errorHandler };
+>>>>>>> cursor/fix-errors-and-merge-to-main-5c0d

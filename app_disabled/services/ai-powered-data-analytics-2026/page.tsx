@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import { ArrowRight, User } from 'lucide-react';
 
-
 export const metadata = {
   title: 'AI-Powered Data Analytics 2026 | Real-Time Intelligence & Predictive Insights | Zion Tech',
   description: 'Transform raw data into actionable intelligence with AI-powered analytics. Real-time insights, predictive modeling, 99.9% accuracy, and $95M+ ROI. Enterprise-grade data analytics solutions.',

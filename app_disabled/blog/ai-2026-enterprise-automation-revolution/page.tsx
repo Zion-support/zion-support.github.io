@@ -1,9 +1,7 @@
 import Link from 'next/link';
 import { ArrowRight, BarChart3, Calculator, Cog, Shield, TrendingUp, User, Users, Zap } from 'lucide-react';
 
-
 import React from 'react';
-import Link from 'next/link';
 import {Cog,Zap,TrendingUp,Shield,Users,BarChart3} from 'lucide-react';
 
 export const metadata = {

@@ -1,9 +1,6 @@
 import Link from 'next/link';
 import { ArrowRight, Award, BookOpen, CheckCircle, Globe, TrendingUp, Zap } from 'lucide-react';
 
-
-
-
 /**
  * Content Intelligence Revolution Banner
  * Promotes the latest autonomous content intelligence blog post and case study
