@@ -1,25 +1,24 @@
 /**
  * Banner Registry - Centralized banner management system
  *
- * This module provides: * - Organized banner categorization
+ * This module provides:
+ * - Organized banner categorization
  * - Priority-based rendering
  * - Dynamic banner loading
  * - Banner analytics tracking
  */
+
 export interface BannerConfig {
   id: string;
   name: string;
   priority: number; // 1 = highest priority, 100 = lowest
-  category: 'breakthrough'
-    | 'content'
-    | 'success-story'
-    | 'feature'
-    | 'announcement';
+  category: 'breakthrough' | 'content' | 'success-story' | 'feature' | 'announcement';
   importPath: string;
   datePublished: string;
   tags: string[];
   enabled: boolean;
 }
+
 /**
  * Banner Registry - All banners in the system
  * Sorted by priority (highest first)
@@ -55,64 +54,48 @@ export const BANNER_REGISTRY: BannerConfig[] = [
     datePublished: '2026-02-01',
     tags: ['february-2026', 'mega-breakthrough', 'revolution'],
     enabled: true
-  },
+  }
 ];
+
 /**
  * Get banners by category
  */
-export function getBannersByCategory(category: BannerConfig['category'])
-): BannerConfig[] {
+export function getBannersByCategory(category: BannerConfig['category']): BannerConfig[] {
   return BANNER_REGISTRY.filter(banner => banner.category === category && banner.enabled);
 }
+
 /**
  * Get banners by priority range
  */
-export function getBannersByPriority(minPriority: number,
-  maxPriority: number)
-): BannerConfig[] {
-  return BANNER_REGISTRY.filter(banner =>
-      banner.priority >= minPriority &&
-      banner.priority <= maxPriority &&
-      banner.enabled
-  );
-}
-/**
- * Get top priority banners
- */
-export function getTopPriorityBanners(count: number = 5): BannerConfig[] {
-  return BANNER_REGISTRY.filter(banner => banner.enabled)
-    .sort((a, b) => a.priority - b.priority)
-    .slice(0, count);
-}
-/**
- * Get banners by tags
- */
-export function getBannersByTags(tags: string[]): BannerConfig[] {
+export function getBannersByPriority(minPriority: number, maxPriority: number): BannerConfig[] {
   return BANNER_REGISTRY.filter(
-    banner => banner.enabled && tags.some(tag => banner.tags.includes(tag))
+    banner => banner.priority >= minPriority && banner.priority <= maxPriority && banner.enabled
   );
 }
+
+/**
+ * Get enabled banners sorted by priority
+ */
+export function getEnabledBanners(): BannerConfig[] {
+  return BANNER_REGISTRY
+    .filter(banner => banner.enabled)
+    .sort((a, b) => a.priority - b.priority);
+}
+
 /**
  * Get banner by ID
  */
 export function getBannerById(id: string): BannerConfig | undefined {
-  return BANNER_REGISTRY.find(banner => banner.id === id && banner.enabled);
+  return BANNER_REGISTRY.find(banner => banner.id === id);
 }
+
 /**
- * Enable/disable banner
+ * Get banners by tags
  */
-export function toggleBanner(id: string, enabled: boolean): void {
-  const banner = BANNER_REGISTRY.find(banner => banner.id === id);
-  if (banner) {
-    banner.enabled = enabled;
-  }
+export function getBannersByTags(tags: string[]): BannerConfig[] {
+  return BANNER_REGISTRY.filter(banner => 
+    banner.enabled && tags.some(tag => banner.tags.includes(tag))
+  );
 }
-export default {
-  BANNER_REGISTRY,
-  getBannersByCategory,
-  getBannersByPriority,
-  getTopPriorityBanners,
-  getBannersByTags,
-  getBannerById,
-  toggleBanner
-};
+
+export default BANNER_REGISTRY;

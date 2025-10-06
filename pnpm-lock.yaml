@@ -17,6 +17,9 @@ importers:
       '@tailwindcss/postcss':
         specifier: ^4.1.13
         version: 4.1.14
+      '@types/uuid':
+        specifier: ^11.0.0
+        version: 11.0.0
       clsx:
         specifier: ^2.1.1
         version: 2.1.1
@@ -59,6 +62,9 @@ importers:
       tailwind-merge:
         specifier: ^3.3.1
         version: 3.3.1
+      uuid:
+        specifier: ^13.0.0
+        version: 13.0.0
       web-vitals:
         specifier: ^5.1.0
         version: 5.1.0
@@ -2077,6 +2083,10 @@ packages:
 
   '@types/use-sync-external-store@0.0.6':
     resolution: {integrity: sha512-zFDAD+tlpf2r4asuHEj0XH6pY6i0g5NeAHPn+15wk3BV6JA69eERFXC1gyGThDkVa1zCyKr5jox1+2LbV/AMLg==}
+
+  '@types/uuid@11.0.0':
+    resolution: {integrity: sha512-HVyk8nj2m+jcFRNazzqyVKiZezyhDKrGUA3jlEcg/nZ6Ms+qHwocba1Y/AaVaznJTAM9xpdFSh+ptbNrhOGvZA==}
+    deprecated: This is a stub types definition. uuid provides its own type definitions, so you do not need this installed.
 
   '@types/yargs-parser@21.0.3':
     resolution: {integrity: sha512-I4q9QU9MQv4oEOz4tAHJtNz1cwuLxn2F3xcc2iV5WdqLPpUnj30aUuxt1mAxYTG+oe8CZMV/+6rU4S4gRDzqtQ==}
@@ -5046,6 +5056,10 @@ packages:
     peerDependencies:
       react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
 
+  uuid@13.0.0:
+    resolution: {integrity: sha512-XQegIaBTVUjSHliKqcnFqYypAd4S+WCYt5NIeRs6w/UAry7z8Y9j5ZwRRL4kzq9U3sD6v+85er9FvkEaBpji2w==}
+    hasBin: true
+
   v8-to-istanbul@9.3.0:
     resolution: {integrity: sha512-kiGUalWN+rgBJ/1OHZsBtU4rXZOfj/7rKQxULKlIzwzQSvMJUUNgPwJEEh7gU6xEVxC0ahoOBvN2YI8GH6FNgA==}
     engines: {node: '>=10.12.0'}
@@ -7375,6 +7389,10 @@ snapshots:
   '@types/tough-cookie@4.0.5': {}
 
   '@types/use-sync-external-store@0.0.6': {}
+
+  '@types/uuid@11.0.0':
+    dependencies:
+      uuid: 13.0.0
 
   '@types/yargs-parser@21.0.3': {}
 
@@ -10964,6 +10982,8 @@ snapshots:
   use-sync-external-store@1.5.0(react@18.3.1):
     dependencies:
       react: 18.3.1
+
+  uuid@13.0.0: {}
 
   v8-to-istanbul@9.3.0:
     dependencies:
