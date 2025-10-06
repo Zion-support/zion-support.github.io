@@ -3,18 +3,17 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 
 // Components
-import ErrorBoundary from './components/ErrorBoundary';
-import SEOOptimizer from './components/SEOOptimizer';
+import ErrorBoundary from '../src/components/ErrorBoundary';
+import SEOOptimizer from '../src/components/SEOOptimizer';
+import { LoadingSpinner } from '../components/LoadingComponents';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import PerformanceDashboard from './components/PerformanceDashboard';
-import PerformanceMonitor from '../components/ui/PerformanceMonitor';
-import LoadingSpinner from '../components/ui/LoadingSpinner';
 
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./page'));
 
 // Utils
-import { performanceOptimizer, prefetchResources } from '../src/utils/performanceOptimizer';
+import { performanceOptimizer } from '../src/utils/performanceOptimizer';
 
 // Styles
 import '../index.css';
@@ -26,13 +25,13 @@ const App: React.FC = () => {
 
     // Initialize performance monitoring
     performanceOptimizer.lazyLoadImages();
-    prefetchResources(['/api/health']);
+    performanceOptimizer.addCriticalResourceHints();
     
     // Initialize Web Vitals monitoring
     if (typeof window !== 'undefined' && 'performance' in window) {
-      const metrics = performanceOptimizer.measurePageLoad();
-      if (metrics) {
-        performanceOptimizer.reportWebVitals(metrics);
+      const pageLoadMetrics = performanceOptimizer.measurePageLoad();
+      if (pageLoadMetrics) {
+        performanceOptimizer.reportWebVitals(pageLoadMetrics);
       }
     }
     
@@ -45,9 +44,9 @@ const App: React.FC = () => {
   return (
     <HelmetProvider>
       <ErrorBoundary>
-        <PerformanceMonitor>
-          <SEOOptimizer>
-            <AccessibilityEnhancer>
+        <div>
+          <SEOOptimizer />
+          <AccessibilityEnhancer>
             <Router>
               <div className='App'>
                 {/* Skip to main content link for accessibility */}
@@ -79,9 +78,8 @@ const App: React.FC = () => {
                 <PerformanceDashboard />
               </div>
             </Router>
-            </AccessibilityEnhancer>
-          </SEOOptimizer>
-        </PerformanceMonitor>
+          </AccessibilityEnhancer>
+        </div>
       </ErrorBoundary>
     </HelmetProvider>
   );
