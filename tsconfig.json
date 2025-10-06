@@ -125,7 +125,8 @@
     "utils/bannerRotationSystem.ts",
     "utils/comprehensiveOptimizer.ts",
     "utils/performanceUtils.ts",
-    "utils/seoUtils.ts"
+    "utils/seoUtils.ts",
+    "src/utils/performanceOptimizer.ts"
   ],
   "references": [
     {

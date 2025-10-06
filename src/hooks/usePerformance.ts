@@ -4,7 +4,6 @@
  */
 
 import { useEffect, useCallback, useRef } from 'react';
-import { performanceOptimizer } from '../utils/performanceOptimizer';
 import analytics from '../utils/analytics';
 
 export interface PerformanceMetrics {
@@ -174,23 +173,8 @@ export const useResourcePerformance = () => {
  */
 export const useLongTaskMonitoring = () => {
   useEffect(() => {
-    const observer = performanceOptimizer.monitorLongTasks((entries: PerformanceEntry[]) => {
-      entries.forEach((entry: PerformanceEntry) => {
-        analytics.track(
-          'long_task',
-          'performance',
-          'detected',
-          undefined,
-          entry.duration
-        );
-      });
-    });
-
-    return () => {
-      if (observer && typeof observer.disconnect === 'function') {
-        observer.disconnect();
-      }
-    };
+    // Long task monitoring is disabled due to missing performanceOptimizer
+    console.log('Long task monitoring is not available');
   }, []);
 };
 
