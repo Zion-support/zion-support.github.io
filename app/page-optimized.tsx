@@ -1,4 +1,5 @@
 import React from 'react';
+import dynamic from 'next/dynamic';
 import { UnifiedBanner, bannerConfigurations } from './components/UnifiedBannerSystem';
 import { LazyWrapper } from './components/LazyLoader';
 import { SEOOptimizer } from './components/SEOOptimizer';
@@ -6,20 +7,20 @@ import { AccessibilityEnhancer } from './components/AccessibilityEnhancer';
 import { PerformanceMonitor } from './components/PerformanceMonitor';
 
 // Lazy load heavy components
-const UnifiedContentPromotion = dynamic(() => import('../components/UnifiedContentPromotion'), {/* content */}
-  loading: () => <div className="text-left">"
+const UnifiedContentPromotion = dynamic(() => import('../components/UnifiedContentPromotion'), {
+  loading: () => <div className="animate-pulse bg-gray-200 h-64 rounded-lg"></div>
 });
 
-const InteractiveAIROICalculator = dynamic(() => import('../components/InteractiveAIROICalculator'), {/* content */}
-  loading: () => </div><div className="text-left">"
+const InteractiveAIROICalculator = dynamic(() => import('../components/InteractiveAIROICalculator'), {
+  loading: () => <div className="animate-pulse bg-gray-200 h-96 rounded-lg"></div>
 });
 
-const ContentShowcase = dynamic(() => import('../components/ContentShowcase'), {/* content */}
-  loading: () => </div><div className="text-left">"
+const ContentShowcase = dynamic(() => import('../components/ContentShowcase'), {
+  loading: () => <div className="animate-pulse bg-gray-200 h-80 rounded-lg"></div>
 });
 
-const InteractiveContentShowcase2026 = dynamic(() => import('../components/InteractiveContentShowcase2026'), {/* content */}
-  loading: () => </div><div className="text-left">"
+const InteractiveContentShowcase2026 = dynamic(() => import('../components/InteractiveContentShowcase2026'), {
+  loading: () => <div className="animate-pulse bg-gray-200 h-80 rounded-lg"></div>
 });
 
 export const metadata = {
@@ -32,7 +33,7 @@ export const metadata = {
     type: 'website',
     url: 'https://ziontechgroup.com',
     images: [
-      {/* content */}
+      {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
@@ -40,16 +41,16 @@ export const metadata = {
       },
     ],
   },
-  twitter: {/* content */}
+  twitter: {
     card: 'summary_large_image',
     title: 'Zion Tech Group — AI Enterprise Transformation & IT Services',
     description: 'Transform your enterprise with AI-powered solutions. Achieve 300% ROI, 70% cost reduction, and 90% efficiency gains.',
     images: ['/og-image.jpg'],
   },
-  robots: {/* content */}
+  robots: {
     index: true,
     follow: true,
-    googleBot: {/* content */}
+    googleBot: {
       index: true,
       follow: true,
       'max-video-preview': -1,
@@ -57,170 +58,149 @@ export const metadata = {
       'max-snippet': -1,
     },
   },
+  alternates: {
+    canonical: 'https://ziontechgroup.com',
+  },
 };
 
-export default function HomePage() {
+export default function HomePageOptimized() {
   return (
-    </div><div>/* content */}
-  const structuredData = {/* content */}
-    "@context": "https://schema.org"
-    "@type": "Organization"
-    "name": "Zion Tech Group"
-    "description": "Leading provider of AI-powered enterprise solutions and digital transformation services"
-    "url": "https://ziontechgroup.com"
-    "logo": "https://ziontechgroup.com/logo.png"
-    "contactPoint": {"
-      "@type": "ContactPoint"
-      "telephone": "+1-302-464-0950"
-      "contactType": "customer service"
-      "email": "kleber@ziontechgroup.com"
-    },
-    "address": {"
-      "@type": "PostalAddress"
-      "streetAddress": "364 E Main St STE 1008"
-      "addressLocality": "Middletown"
-      "addressRegion": "DE"
-      "postalCode": "19709"
-      "addressCountry": "US"
-    },
-    "sameAs": ["
-      "https://linkedin.com/company/zion-tech-group"
-      "https://twitter.com/ziontechgroup"
-    ],
-    "offers": {"
-      "@type": "Offer"
-      "name": "AI Enterprise Transformation Services"
-      "description": "Transform your enterprise with AI-powered solutions achieving 300% ROI, 70% cost reduction, and 90% efficiency gains"
-      "price": "50000"
-      "priceCurrency": "USD"
-      "availability": "https://schema.org/InStock"
-    }
-  };
-
-  return (
-    <div>
-      <div> </div><div> </div></div>
-    <div> </div><script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-      />
-      <div className="text-left">{/* Unified Content Promotion - Replaces multiple redundant banners */}</div></div>
-        <UnifiedContentPromotion />
-
-        {/* Hero Section */}
-        <section className="text-left"> </section><div className="text-left"> </div><h1 className="text-left">
-              Transform Your Business with
-              <span className="text-left">{' '}AI-Powered Solutions
-              </span></span>
+    <div className="min-h-screen bg-white">
+      <SEOOptimizer />
+      <AccessibilityEnhancer />
+      <PerformanceMonitor />
+      
+      {/* Unified Banner System */}
+      <UnifiedBanner configurations={bannerConfigurations} />
+      
+      {/* Hero Section */}
+      <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6">
+              Transform Your Enterprise with
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
+                AI-Powered Solutions
+              </span>
             </h1>
-            <p className="text-left">Zion Tech Group delivers cutting-edge AI micro SaaS services, cloud automation, 
-              and enterprise IT solutions that drive growth, efficiency, and innovation.
-            </p></p>
-            <div className="text-left"> </div><Link
-                href="/services"
-                className="text-left">
-                Explore Our Services
-              </Link>
-              <a
-                href="tel:+13024640950"
-                className="text-left">Call +1 302 464 0950
-              </a></a>
-            </div>
-            <div className="text-left"> </div><div> </div><div className="text-left">500+</div>"
-                <div className="text-left">Projects Delivered</div>"
-              </div>
-              <div> </div><div className="text-left">99.9%</div>"
-                <div className="text-left">Uptime Guarantee</div>"
-              </div>
-              <div> </div><div className="text-left">24/7</div>"
-                <div className="text-left">Expert Support</div>"
-              </div>
-              <div> </div><div className="text-left">$2M+</div>"
-                <div className="text-left">Cost Savings</div>"
-              </div>
+            <p className="text-xl md:text-2xl mb-8 text-gray-300">
+              Achieve 300% ROI, 70% cost reduction, and 90% efficiency gains with our proven AI transformation methodology
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-8 rounded-lg text-lg transition-colors">
+                Get Free AI Assessment
+              </button>
+              <button className="border-2 border-white text-white hover:bg-white hover:text-blue-900 font-semibold py-4 px-8 rounded-lg text-lg transition-colors">
+                View Case Studies
+              </button>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Interactive AI ROI Calculator */}
-        <InteractiveAIROICalculator />
-
-        {/* Dynamic Content Showcase */}
-        <ContentShowcase />
-
-        {/* Interactive Content Showcase 2026 */}
-        <InteractiveContentShowcase2026 />
-
-        {/* Enhanced Newsletter Signup */}
-        <section className="text-left"> </section><div className="text-left"> </div><div className="text-left">{/* Newsletter Signup */}</div></div>
-              <div className="text-left"> </div><h2 className="text-left">
-                  Stay Ahead with AI & Tech Insights
-                </h2>
-                <p className="text-left">Get weekly updates on AI trends, tech innovations, and exclusive service offers
-                </p></p>
-                <div className="text-left"> </div><input
-                    type="email"
-                    placeholder="Enter your email"
-                    className="text-left"
-                  />
-                  <button className="text-left">
-                    Subscribe
-                  </button>
-                </div>
-                <p className="text-left">Join 10,000+ professionals. Unsubscribe anytime.
-                </p></p>
-              </div>
-
-              {/* Content Highlights */}
-              <div className="text-left"> </div><h3 className="text-left">Latest Content Highlights</h3>"
-                <div className="text-left"> </div><a href="/blog/ai-2026-enterprise-rag-guardrails" className="text-left"> </a><div className="text-left">🛡️</div>"
-                    <div> </div><h4 className="text-left">Enterprise RAG Guardrails 2026</h4>"
-                      <p className="text-left">Safe, reliable RAG with verifiable citations</p>"
-                    </div>
-                  </a>
-                  <a href="/blog/ai-2026-autonomous-enterprise-operations" className="text-left"> </a><div className="text-left">🏭</div>"
-                    <div> </div><h4 className="text-left">Autonomous Enterprise Operations 2026</h4>"
-                      <p className="text-left">90% efficiency, 300% ROI with guardrailed agents</p>"
-                    </div>
-                  </a>
-                  <a href="/blog/ai-cloud-cost-optimization-2025" className="text-left"> </a><div className="text-left">💸</div>"
-                    <div> </div><h4 className="text-left">AI Cloud Cost Optimization</h4>"
-                      <p className="text-left">Cut spend by 70–85% with smart routing</p>"
-                    </div>
-                  </a>
-                </div>
-                <div className="text-left"> </div><Link
-                    href="/blog"
-                    className="text-left">
-                    View All Content →
-                  </Link>
-                </div>
-              </div>
+      {/* Key Metrics */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+            <div>
+              <div className="text-4xl font-bold text-blue-600 mb-2">300%</div>
+              <div className="text-gray-600">Average ROI</div>
+            </div>
+            <div>
+              <div className="text-4xl font-bold text-green-600 mb-2">70%</div>
+              <div className="text-gray-600">Cost Reduction</div>
+            </div>
+            <div>
+              <div className="text-4xl font-bold text-purple-600 mb-2">90%</div>
+              <div className="text-gray-600">Efficiency Gains</div>
+            </div>
+            <div>
+              <div className="text-4xl font-bold text-orange-600 mb-2">500+</div>
+              <div className="text-gray-600">Enterprises Transformed</div>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* CTA Section */}
-        <section className="text-left"> </section><div className="text-left"> </div><h2 className="text-left">
-              Ready to Transform Your Business?
+      {/* Services Overview */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Comprehensive AI Solutions
             </h2>
-            <p className="text-left">Let's discuss how our AI and IT solutions can drive your success
-            </p></p>
-            <div className="text-left"> </div><a
-                href="tel:+13024640950"
-                className="text-left">Call +1 302 464 0950
-              </a></a>
-              <a
-                href="mailto:kleber@ziontechgroup.com"
-                className="text-left">Get Free Consultation
-              </a></a>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              From strategy to implementation, we provide end-to-end AI transformation services
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+              <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">AI Strategy & Consulting</h3>
+              <p className="text-gray-600">
+                Develop comprehensive AI strategies aligned with your business objectives
+              </p>
             </div>
-            <div className="text-left"> </div><p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
-              <p>📧 kleber@ziontechgroup.com | 📞 +1 302 464 0950</p>
+            
+            <div className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+              <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+                <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Autonomous Systems</h3>
+              <p className="text-gray-600">
+                Deploy self-managing AI systems that optimize and evolve independently
+              </p>
+            </div>
+            
+            <div className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+              <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+                <svg className="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Data Analytics & Insights</h3>
+              <p className="text-gray-600">
+                Transform raw data into actionable insights with advanced AI analytics
+              </p>
             </div>
           </div>
-        </section>
-      </div>
-    </>
+        </div>
+      </section>
+
+      {/* Lazy Loaded Components */}
+      <LazyWrapper>
+        <UnifiedContentPromotion />
+        <InteractiveAIROICalculator />
+        <ContentShowcase />
+        <InteractiveContentShowcase2026 />
+      </LazyWrapper>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-700 text-white">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-4xl font-bold mb-6">
+            Ready to Transform Your Enterprise?
+          </h2>
+          <p className="text-xl mb-8 text-blue-100">
+            Join 500+ enterprises that have achieved remarkable results with our AI solutions
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-white text-blue-600 hover:bg-gray-100 font-semibold py-4 px-8 rounded-lg text-lg transition-colors">
+              Schedule Free Consultation
+            </button>
+            <button className="border-2 border-white text-white hover:bg-white hover:text-blue-600 font-semibold py-4 px-8 rounded-lg text-lg transition-colors">
+              Download ROI Calculator
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
   );
-})
+}
