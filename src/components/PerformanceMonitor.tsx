@@ -17,7 +17,9 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 
   useEffect(() => {
     // Initialize performance monitoring
-    performanceOptimizer.addCriticalResourceHints();
+    // Add critical resource hints for performance optimization
+    performanceOptimizer.prefetchResources([]);
+    performanceOptimizer.preconnectDomains([]);
     
     // Measure page load performance
     const pageLoadMetrics = performanceOptimizer.measurePageLoad();
