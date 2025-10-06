@@ -26,7 +26,7 @@ const App: React.FC = () => {
 
     // Initialize performance monitoring
     performanceOptimizer.lazyLoadImages();
-    performanceOptimizer.prefetchResources([]);
+    performanceOptimizer.preconnectDomains(['https://fonts.googleapis.com', 'https://fonts.gstatic.com']);
     
     // Initialize Web Vitals monitoring
     if (typeof window !== 'undefined' && 'performance' in window) {
