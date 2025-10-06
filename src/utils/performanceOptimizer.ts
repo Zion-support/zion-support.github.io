@@ -17,163 +17,95 @@ export interface WebVitalsMetrics {
 /**
  * Resource hints for performance
  */
-export const prefetchResources = (urls: string[]): void => {
-  if (typeof document === 'undefined') return;
-  
-  urls.forEach(url => {
-    const link = document.createElement('link');
-    link.rel = 'prefetch';
-    link.href = url;
-    document.head.appendChild(link);
-  });
-};
+export interface ResourceHint {
+  rel: 'preload' | 'prefetch' | 'dns-prefetch' | 'preconnect';
+  href: string;
+  as?: 'script' | 'style' | 'image' | 'font' | 'document';
+  crossOrigin?: 'anonymous' | 'use-credentials';
+}
 
 /**
- * Preconnect to external domains
+ * Performance budget configuration
  */
-export const preconnectDomains = (domains: string[]): void => {
-  if (typeof document === 'undefined') return;
-  
-  domains.forEach(domain => {
-    const link = document.createElement('link');
-    link.rel = 'preconnect';
-    link.href = domain;
-    link.crossOrigin = 'anonymous';
-    document.head.appendChild(link);
-  });
-};
+export interface PerformanceBudget {
+  maxBundleSize: number; // in KB
+  maxImageSize: number; // in KB
+  maxLoadTime: number; // in ms
+  maxFirstContentfulPaint: number; // in ms
+  maxLargestContentfulPaint: number; // in ms
+  maxCumulativeLayoutShift: number; // score
+}
 
 /**
- * Lazy load images with Intersection Observer
+ * Performance metrics
  */
-export const lazyLoadImages = (): void => {
-  if (typeof window === 'undefined') return;
-  
-  const images = document.querySelectorAll('img[data-src]');
-  
-  const imageObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const img = entry.target as HTMLImageElement;
-        img['src'] = img.dataset['src'] || '';
-        img.removeAttribute('data-src');
-        imageObserver.unobserve(img);
-      }
-    });
-  });
-  
-  images.forEach(img => imageObserver.observe(img));
-};
+export interface PerformanceMetrics {
+  bundleSize: number;
+  imageSize: number;
+  loadTime: number;
+  firstContentfulPaint: number;
+  largestContentfulPaint: number;
+  cumulativeLayoutShift: number;
+}
 
 /**
- * Optimize scroll performance
+ * Optimization result
  */
-export const optimizeScroll = (): void => {
-  if (typeof window === 'undefined') return;
-  
-  let ticking = false;
-  
-  const updateScrollPosition = () => {
-    // Throttled scroll handling
-    ticking = false;
-  };
-  
-  const requestTick = () => {
-    if (!ticking) {
-      requestAnimationFrame(updateScrollPosition);
-      ticking = true;
-    }
-  };
-  
-  window.addEventListener('scroll', requestTick, { passive: true });
-};
+export interface OptimizationResult {
+  score: number;
+  recommendations: string[];
+  metrics: PerformanceMetrics;
+  budget: PerformanceBudget;
+}
 
 /**
- * Preload critical resources
+ * Performance Optimizer Class
  */
-export const preloadCriticalResources = (): void => {
-  if (typeof document === 'undefined') return;
-  
-  const criticalResources = [
-    '/fonts/inter-var.woff2',
-    '/css/critical.css'
-  ];
-  
-  criticalResources.forEach(resource => {
-    const link = document.createElement('link');
-    link.rel = 'preload';
-    link.href = resource;
-    link.as = resource.endsWith('.css') ? 'style' : 'font';
-    if (resource.endsWith('.woff2')) {
-      link.crossOrigin = 'anonymous';
-    }
-    document.head.appendChild(link);
-  });
-};
-
-/**
- * Performance monitoring class
- */
-class PerformanceOptimizer {
+export class PerformanceOptimizer {
   private static instance: PerformanceOptimizer;
-  private metrics: Map<string, number> = new Map();
+  private budget: PerformanceBudget;
+  private metrics: PerformanceMetrics;
 
-  private constructor() {}
+  constructor() {
+    this.budget = {
+      maxBundleSize: 500, // 500KB
+      maxImageSize: 200, // 200KB
+      maxLoadTime: 3000, // 3 seconds
+      maxFirstContentfulPaint: 1800, // 1.8 seconds
+      maxLargestContentfulPaint: 2500, // 2.5 seconds
+      maxCumulativeLayoutShift: 0.1 // 0.1 score
+    };
 
-  public static getInstance(): PerformanceOptimizer {
+    this.metrics = {
+      bundleSize: 0,
+      imageSize: 0,
+      loadTime: 0,
+      firstContentfulPaint: 0,
+      largestContentfulPaint: 0,
+      cumulativeLayoutShift: 0
+    };
+  }
+
+  static getInstance(): PerformanceOptimizer {
     if (!PerformanceOptimizer.instance) {
       PerformanceOptimizer.instance = new PerformanceOptimizer();
     }
     return PerformanceOptimizer.instance;
   }
 
-  public measurePerformance(name: string, fn: () => void): number {
-    const start = performance.now();
-    fn();
-    const end = performance.now();
-    const duration = end - start;
-    this.metrics.set(name, duration);
-    return duration;
-  }
-
-  public lazyLoadImages(): void {
-    lazyLoadImages();
-  }
-
-  public optimizeScroll(): void {
-    optimizeScroll();
-  }
-
-  public preloadCriticalResources(): void {
-    preloadCriticalResources();
-  }
-
-  public reportWebVitals(metrics: WebVitalsMetrics): void {
-    if (process.env.NODE_ENV === 'development') {
-      console.log('Web Vitals:', metrics);
-    }
-  }
-
-  // Get performance metrics
-  getMetrics(): Record<string, number> {
-    return Object.fromEntries(this.metrics);
-  }
-
-  // Add critical resource hints for better performance
-  addCriticalResourceHints(): void {
+  /**
+   * Add resource hints for performance
+   */
+  addResourceHints(hints: ResourceHint[]): void {
     if (typeof document === 'undefined') return;
-    
-    const hints = [
-      { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' },
-      { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com' },
-      { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
-      { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossOrigin: 'anonymous' }
-    ];
-    
+
     hints.forEach(hint => {
       const link = document.createElement('link');
       link.rel = hint.rel;
       link.href = hint.href;
+      if (hint.as) {
+        link.as = hint.as;
+      }
       if (hint.crossOrigin) {
         link.crossOrigin = hint.crossOrigin;
       }
@@ -181,86 +113,175 @@ class PerformanceOptimizer {
     });
   }
 
-  // Measure page load performance
+  /**
+   * Preload critical resources
+   */
+  preloadCriticalResources(resources: string[]): void {
+    if (typeof document === 'undefined') return;
+
+    resources.forEach(resource => {
+      const link = document.createElement('link');
+      link.rel = 'preload';
+      link.href = resource;
+      link.as = resource.endsWith('.css') ? 'style' : 'script';
+      document.head.appendChild(link);
+    });
+  }
+
+  /**
+   * Measure page load performance
+   */
   measurePageLoad(): Record<string, number> | null {
     if (typeof window === 'undefined' || !window.performance) {
       return null;
     }
     
-    const timing = window.performance.timing;
+    const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+    const paint = window.performance.getEntriesByType('paint');
+    
+    const fcp = paint.find(entry => entry.name === 'first-contentful-paint');
+    const lcp = window.performance.getEntriesByType('largest-contentful-paint')[0];
+    
     return {
-      loadTime: timing.loadEventEnd - timing.navigationStart,
-      interactiveTime: timing.domInteractive - timing.navigationStart,
-      domContentLoaded: timing.domContentLoadedEventEnd - timing.navigationStart,
-      firstPaint: performance.getEntriesByType('paint')[0]?.startTime || 0
+      domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
+      loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
+      firstContentfulPaint: fcp ? fcp.startTime : 0,
+      largestContentfulPaint: lcp ? lcp.startTime : 0,
+      timeToFirstByte: navigation.responseStart - navigation.requestStart
     };
   }
 
-  // Initialize all optimizations
+  /**
+   * Optimize images with lazy loading
+   */
+  optimizeImages(): void {
+    if (typeof document === 'undefined') return;
+
+    const images = document.querySelectorAll('img[data-src]');
+    
+    const imageObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const img = entry.target as HTMLImageElement;
+          img['src'] = img.dataset['src'] || '';
+          img.removeAttribute('data-src');
+          imageObserver.unobserve(img);
+        }
+      });
+    });
+    
+    images.forEach(img => imageObserver.observe(img));
+  }
+
+  /**
+   * Initialize performance optimizations
+   */
   initialize(): void {
-    this.measurePerformance('lazyLoadImages', () => this.lazyLoadImages());
-    this.measurePerformance('preloadCriticalResources', () => this.preloadCriticalResources());
-    this.measurePerformance('optimizeScroll', () => this.optimizeScroll());
-    this.measurePerformance('addCriticalResourceHints', () => this.addCriticalResourceHints());
+    this.optimizeImages();
+    this.enableServiceWorker();
   }
-}
 
-/**
- * Critical resource hints for better performance
- */
-export const addCriticalResourceHints = (): void => {
-  if (typeof document === 'undefined') return;
-  
-  const hints = [
-    { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' },
-    { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com' },
-    { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
-    { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossOrigin: 'anonymous' }
-  ];
-  
-  hints.forEach(hint => {
-    const link = document.createElement('link');
-    link.rel = hint.rel;
-    link.href = hint.href;
-    if (hint.crossOrigin) {
-      link.crossOrigin = hint.crossOrigin;
+  /**
+   * Lazy load images (alias for optimizeImages)
+   */
+  lazyLoadImages(): void {
+    this.optimizeImages();
+  }
+
+  /**
+   * Enable service worker for caching
+   */
+  enableServiceWorker(): void {
+    if (typeof window === 'undefined' || !('serviceWorker' in navigator)) return;
+
+    navigator.serviceWorker.register('/sw.js')
+      .then(registration => {
+        console.log('Service Worker registered:', registration);
+      })
+      .catch(error => {
+        console.log('Service Worker registration failed:', error);
+      });
+  }
+
+  /**
+   * Analyze performance and provide recommendations
+   */
+  analyzePerformance(): OptimizationResult {
+    const currentMetrics = this.measurePageLoad();
+    
+    if (!currentMetrics) {
+      return {
+        score: 0,
+        recommendations: ['Performance measurement not available'],
+        metrics: this.metrics,
+        budget: this.budget
+      };
     }
-    document.head.appendChild(link);
-  });
-};
 
-interface PerformanceBudget {
-  maxFirstLoad: number;
-  maxInteractive: number;
+    const recommendations: string[] = [];
+    let score = 100;
+
+    // Check bundle size
+    if (currentMetrics['loadComplete'] && currentMetrics['loadComplete'] > this.budget.maxLoadTime) {
+      recommendations.push('Consider code splitting to reduce bundle size');
+      score -= 20;
+    }
+
+    // Check FCP
+    if (currentMetrics['firstContentfulPaint'] && currentMetrics['firstContentfulPaint'] > this.budget.maxFirstContentfulPaint) {
+      recommendations.push('Optimize critical rendering path');
+      score -= 15;
+    }
+
+    // Check LCP
+    if (currentMetrics['largestContentfulPaint'] && currentMetrics['largestContentfulPaint'] > this.budget.maxLargestContentfulPaint) {
+      recommendations.push('Optimize largest contentful paint');
+      score -= 15;
+    }
+
+    return {
+      score: Math.max(0, score),
+      recommendations,
+      metrics: {
+        bundleSize: 0, // Would need to be calculated separately
+        imageSize: 0, // Would need to be calculated separately
+        loadTime: currentMetrics['loadComplete'] || 0,
+        firstContentfulPaint: currentMetrics['firstContentfulPaint'] || 0,
+        largestContentfulPaint: currentMetrics['largestContentfulPaint'] || 0,
+        cumulativeLayoutShift: 0 // Would need to be measured separately
+      },
+      budget: this.budget
+    };
+  }
+
+  /**
+   * Check performance budget compliance
+   */
+  checkBudgetCompliance(): { passed: boolean; violations: string[] } {
+    const analysis = this.analyzePerformance();
+    const violations: string[] = [];
+
+    if (analysis.metrics.loadTime > this.budget.maxLoadTime) {
+      violations.push(`Load time ${analysis.metrics.loadTime}ms exceeds budget ${this.budget.maxLoadTime}ms`);
+    }
+
+    if (analysis.metrics.firstContentfulPaint > this.budget.maxFirstContentfulPaint) {
+      violations.push(`FCP ${analysis.metrics.firstContentfulPaint}ms exceeds budget ${this.budget.maxFirstContentfulPaint}ms`);
+    }
+
+    if (analysis.metrics.largestContentfulPaint > this.budget.maxLargestContentfulPaint) {
+      violations.push(`LCP ${analysis.metrics.largestContentfulPaint}ms exceeds budget ${this.budget.maxLargestContentfulPaint}ms`);
+    }
+
+    return {
+      passed: violations.length === 0,
+      violations
+    };
+  }
 }
-
-export const checkPerformanceBudget = (budget: PerformanceBudget): {
-  passed: boolean;
-  violations: string[];
-} => {
-  const violations: string[] = [];
-  
-  if (typeof window === 'undefined' || !window.performance) {
-    return { passed: true, violations };
-  }
-  
-  const timing = window.performance.timing;
-  const loadTime = timing.loadEventEnd - timing.navigationStart;
-  const interactiveTime = timing.domInteractive - timing.navigationStart;
-  
-  if (loadTime > budget.maxFirstLoad) {
-    violations.push(`First load time (${loadTime}ms) exceeds budget (${budget.maxFirstLoad}ms)`);
-  }
-  
-  if (interactiveTime > budget.maxInteractive) {
-    violations.push(`Time to interactive (${interactiveTime}ms) exceeds budget (${budget.maxInteractive}ms)`);
-  }
-  
-  return {
-    passed: violations.length === 0,
-    violations
-  };
-};
 
 // Export singleton instance
 export const performanceOptimizer = PerformanceOptimizer.getInstance();
+
+// Default export for convenience
+export default performanceOptimizer;

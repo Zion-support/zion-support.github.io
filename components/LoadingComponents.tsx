@@ -2,12 +2,16 @@ import React from 'react';
 
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg';
+<<<<<<< HEAD
 color?: 'blue' | 'gray' | 'white';
 <<<<<<< HEAD
   text?: string | undefined;
 =======
   text: string;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
+=======
+  className?: string;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3927
 }
 
 export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 

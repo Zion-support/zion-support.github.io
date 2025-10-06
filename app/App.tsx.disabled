@@ -2,7 +2,7 @@ import React, { useEffect, Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 
-// Components
+//Components
 import ErrorBoundary from './components/ErrorBoundary';
 import SEOOptimizer from './components/SEOOptimizer';
 <<<<<<< HEAD:app/App.tsx.disabled
@@ -20,19 +20,23 @@ import PerformanceDashboard from './components/PerformanceDashboard';
 const HomePage = React.lazy(() => import('./page'));
 >>>>>>> origin/fix-errors-final:app/App.tsx
 
-// Utils
+//Utils
 import { performanceOptimizer } from '../src/utils/performanceOptimizer';
 
-// Styles
+//Styles
 import '../src/index.css';
 
-// Lazy load pages for better performance
+//Lazy load pages for better performance
 const HomePage = lazy(() => import('./page'));
 
 const App: React.FC = () => {
   useEffect(() => {
+<<<<<<< HEAD:app/App.tsx.disabled
     // Initialize global error handling
 <<<<<<< HEAD:app/App.tsx.disabled
+=======
+    //Initialize global error handling
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3927:app/App.tsx
     if (process.env.NODE_ENV === 'development') {
       console.log('App initialized');
       console.log('Performance monitoring initialized');

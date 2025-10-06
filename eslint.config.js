@@ -1,4 +1,4 @@
-// eslint.config.js
+//eslint.config.js
 import js from '@eslint/js';
 import globals from 'globals';
 import tseslint from '@typescript-eslint/eslint-plugin';
@@ -7,7 +7,7 @@ import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
 
 export default [
-  // Global ignores - ignore everything except src, app directories and main files
+  //Global ignores - ignore everything except src, app directories and main files
   {
     ignores: [
       '**/*',
@@ -29,7 +29,7 @@ export default [
       'src/types/**',
       'src/utils/**',
       'src/config/**',
-      // Ignore all disabled directories
+      //Ignore all disabled directories
       '_app_disabled/**',
       '_conflicted_disabled/**',
       '_pages_api_disabled/**',
@@ -88,7 +88,7 @@ export default [
       'fix_utils_files.ts',
     ],
   },
-  // Base JavaScript configuration (limit to app source only)
+  //Base JavaScript configuration (limit to app source only)
   {
     files: ['src/**/*.{js,cjs,mjs}', '**/*.{js,jsx}'],
     languageOptions: {
@@ -103,7 +103,7 @@ export default [
     },
     ...js.configs.recommended,
   },
-  // Simplified TypeScript configuration (non type-aware)
+  //Simplified TypeScript configuration (non type-aware)
   {
     files: [
       'src/**/*.{ts,tsx}',

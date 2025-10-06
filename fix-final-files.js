@@ -7,7 +7,7 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Files that need to be fixed
+//Files that need to be fixed
 const filesToFix = [
   'src/components/SiteHeader.tsx',
   'src/components/SiteSidebar.tsx',
@@ -61,14 +61,14 @@ const ${componentName}: React.FC<${componentName}Props> = ({
 export default ${componentName};
 `;
   } else if (isTs) {
-    return `// ${componentName} - TypeScript definitions and utilities
+    return `//${componentName} - TypeScript definitions and utilities
 
 export interface ${componentName}Config {
-  // Configuration properties
+  //Configuration properties
 }
 
 export const default${componentName}Config: ${componentName}Config = {
-  // Default configuration
+  //Default configuration
 };
 
 export default {
@@ -76,10 +76,10 @@ export default {
 };
 `;
   } else {
-    return `// ${componentName} - JavaScript module
+    return `//${componentName} - JavaScript module
 
 export const ${componentName} = {
-  // Module implementation
+  //Module implementation
 };
 
 export default ${componentName};

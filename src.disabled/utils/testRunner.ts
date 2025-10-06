@@ -26,7 +26,7 @@ class TestRunner {
 
   public async runSuite(suite: TestSuite): Promise<TestResult[]> {
     this.currentSuite = suite.name;
-    // Running test suite
+    //Running test suite
 
     if (suite.setup) {
       await suite.setup();
@@ -48,7 +48,7 @@ class TestRunner {
     const result: TestResult = {
       name: `${this.currentSuite}: ${name}`,
       passed: false,
-      duration: 0,
+  duration: 0,
       timestamp: Date.now(),
     };
 
@@ -57,13 +57,13 @@ class TestRunner {
       result.passed = true;
     } catch (error) {
       result.error = error instanceof Error ? error.message : String(error);
-      // Test failed
+      //Test failed
     }
 
     result.duration = performance.now() - startTime;
     this.results.push(result);
 
-    // Test result logged
+    //Test result logged
     return result;
   }
 
@@ -149,6 +149,7 @@ export const testUtils = {
       return fn(...args);
     };
 
+<<<<<<< HEAD:src.disabled/utils/testRunner.ts
     // Add properties to the spy function
     Object.assign(spyFn, {
       callCount: () => callCount,
@@ -158,6 +159,14 @@ export const testUtils = {
         lastArgs = [];
       }
     });
+=======
+    (spyFn as unknown as Function & { callCount: () => number; lastArgs: () => unknown[]; reset: () => void }).callCount = () => callCount;
+    (spyFn as unknown as Function & { callCount: () => number; lastArgs: () => unknown[]; reset: () => void }).lastArgs = () => lastArgs;
+    (spyFn as unknown as Function & { callCount: () => number; lastArgs: () => unknown[]; reset: () => void }).reset = () => {
+      callCount = 0;
+      lastArgs = [];
+    };
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3927:src/utils/testRunner.ts
 
     return spyFn as unknown as Function & { callCount: () => number; lastArgs: () => unknown[]; reset: () => void };
   },

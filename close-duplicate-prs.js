@@ -1,11 +1,11 @@
 #!/usr/bin/env node
 
-// Function to close duplicate PRs
+//Function to close duplicate PRs
 async function closeDuplicatePRs() {
   try {
     console.log('🚀 Starting cleanup of duplicate PRs...\n');
     
-    // Get all open PRs
+    //Get all open PRs
     const response = await fetch('https://api.github.com/repos/Zion-Holdings/zion.app/pulls?state=open&per_page=100');
     const prs = await response.json();
     

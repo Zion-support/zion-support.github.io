@@ -18,6 +18,14 @@ export class ErrorHandler {
   }
 }
 
+<<<<<<< HEAD:utils.disabled/errorHandling.ts
+=======
+export interface ErrorInfo {
+  componentStack?: string;
+  errorBoundary?: string;
+}
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3927:utils/errorHandling.ts
 export const logError = (error: Error, errorInfo?: ErrorInfo) => {
   console.error('Error:', error.message, errorInfo);
 };
@@ -36,9 +44,16 @@ export const getErrorMetrics = () => {
   };
 };
 
+<<<<<<< HEAD:utils.disabled/errorHandling.ts
 export const clearErrorMetrics = () => {
   // Clear error metrics
   console.log('Error metrics cleared');
+=======
+export const isErrorRateTooHigh = (threshold = 5) => {
+  // For now, always return false as we don't have actual error tracking
+  console.log(`Checking error rate against threshold: ${threshold}`);
+  return false;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3927:utils/errorHandling.ts
 };
 
 export const reportError = (error: Error, errorInfo?: ErrorInfo) => {
@@ -46,4 +61,11 @@ export const reportError = (error: Error, errorInfo?: ErrorInfo) => {
   console.log('Error reported:', error.message, errorInfo);
 };
 
+<<<<<<< HEAD:utils.disabled/errorHandling.ts
+=======
+export const monitorPerformance = () => {
+  console.log('Performance monitoring setup');
+};
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3927:utils/errorHandling.ts
 export default ErrorHandler;
