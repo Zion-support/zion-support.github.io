@@ -1,6 +1,9 @@
 import { useEffect, useCallback, useRef } from 'react';
 import performanceOptimizer from '../utils/performanceOptimizer';
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-cfe1
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-e9bd
 
 // Mock analytics object for tracking
 const analytics = {
@@ -62,7 +65,33 @@ export const usePageLoadPerformance = () => {
 export const useResourcePerformance = () => {
   const observerRef = useRef<PerformanceObserver | null>(null);
 
+<<<<<<< HEAD
   const trackPerformance = useCallback(() => {
+=======
+  const preloadResources = useCallback(() => {
+    if (typeof window === 'undefined') return;
+    performanceOptimizer.preloadCriticalResources();
+  }, []);
+
+  const optimizeImages = useCallback(() => {
+    if (typeof window === 'undefined') return;
+    performanceOptimizer.lazyLoadImages();
+  }, []);
+
+  const trackPerformance = useCallback(() => {
+    if (typeof window === 'undefined') return;
+    // Track performance metrics
+    console.log('Tracking performance...');
+  }, []);
+
+  const trackLongTasks = useCallback(() => {
+    if (typeof window === 'undefined') return;
+    // Track long tasks
+    console.log('Tracking long tasks...');
+  }, []);
+
+  useEffect(() => {
+>>>>>>> cursor/fix-errors-and-merge-to-main-e9bd
     if (typeof window === 'undefined' || !window.PerformanceObserver) {
       return;
     }
@@ -82,6 +111,7 @@ export const useResourcePerformance = () => {
 
     observerRef.current = observer;
     observer.observe({ entryTypes: ['resource'] });
+<<<<<<< HEAD
   }, []);
 
   const trackLongTasks = useCallback(() => {
@@ -124,6 +154,9 @@ export const useResourcePerformance = () => {
   }, []);
 
   useEffect(() => {
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-e9bd
     trackPerformance();
     const longTaskObserver = trackLongTasks();
     preloadResources();
@@ -156,12 +189,20 @@ export const useLongTaskMonitoring = () => {
       return;
     }
 
+<<<<<<< HEAD
     const observer = new PerformanceObserver((entries) => {
       entries.getEntries().forEach((entry) => {
     const observer = new PerformanceObserver((entries: PerformanceEntryList) => {
       entries.forEach((entry: PerformanceEntry) => {
 >>>>>>> cursor/fix-errors-and-merge-to-main-cfe1
         analytics.track('long_task', 'performance', 'detected', undefined, entry.duration);
+=======
+    const observer = new PerformanceObserver((list) => {
+      list.getEntries().forEach((entry) => {
+        if (entry.duration > 50) {
+          analytics.track('long_task', 'performance', 'detected', undefined, entry.duration);
+        }
+>>>>>>> cursor/fix-errors-and-merge-to-main-e9bd
       });
     });
 
@@ -247,8 +288,12 @@ export const useMemoryMonitoring = () => {
 
     return () => clearInterval(interval);
   }, []);
+<<<<<<< HEAD
 };
 
 export { usePageLoadPerformance, useMemoryMonitoring };
 };
 >>>>>>> cursor/fix-errors-and-merge-to-main-cfe1
+=======
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-e9bd
