@@ -1,20 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { Component, type ErrorInfo, type ReactNode } from 'react';
 import React, { Component, type ErrorInfo, type ReactNode } from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e62
-import React, { Component, type ErrorInfo, type ReactNode } from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-cfe1
-=======
-import React, { Component, type ErrorInfo, type ReactNode } from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-96bc
-=======
-import React, { Component, type ErrorInfo, type ReactNode } from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-debd
-=======
-import React, { Component, type ErrorInfo, type ReactNode } from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-dda3
 import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
 
 interface Props {
@@ -36,36 +20,40 @@ class ErrorBoundary extends Component<Props, State> {
   }
 
   static getDerivedStateFromError(error: Error): State {
-    return { 
-      hasError: true, 
+    return {
+      hasError: true,
       error,
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     };
   }
 
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+  override componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     console.error('ErrorBoundary caught an error:', error, errorInfo);
-    
-    // Report error to analytics/monitoring service
-    this.reportError(error, errorInfo);
     
     // Call custom error handler if provided
     if (this.props.onError) {
       this.props.onError(error, errorInfo);
     }
+
+    // Log error to external service (e.g., Sentry, LogRocket, etc.)
+    this.logErrorToService(error, errorInfo);
   }
 
-  private reportError = (error: Error, errorInfo: ErrorInfo) => {
-    // Report to external service (e.g., Sentry, LogRocket, etc.)
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', 'exception', {
-        description: error.message,
-        fatal: false,
-        custom_map: {
-          error_id: this.state.errorId,
-          component_stack: errorInfo.componentStack
-        }
+  private logErrorToService = (error: Error, errorInfo: ErrorInfo) => {
+    // Example: Send to external logging service
+    try {
+      // Replace with your actual logging service
+      console.log('Logging error to service:', {
+        error: error.message,
+        stack: error.stack,
+        componentStack: errorInfo.componentStack,
+        errorId: this.state.errorId,
+        timestamp: new Date().toISOString(),
+        userAgent: navigator.userAgent,
+        url: window.location.href
       });
+    } catch (loggingError) {
+      console.error('Failed to log error to service:', loggingError);
     }
   };
 
@@ -77,62 +65,58 @@ class ErrorBoundary extends Component<Props, State> {
     window.location.href = '/';
   };
 
-  render() {
+  override render() {
     if (this.state.hasError) {
-      return this.props.fallback || (
-        <div className="min-h-screen flex items-center justify-center bg-gray-50">
-          <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-6 text-center">
-            <div className="flex justify-center mb-4">
-              <AlertTriangle className="h-12 w-12 text-red-500" />
+      // Custom fallback UI
+      if (this.props.fallback) {
+        return this.props.fallback;
+      }
+
+      // Default error UI
+      return (
+        <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4">
+          <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center">
+            <div className="mb-6">
+              <AlertTriangle className="w-16 h-16 text-red-500 mx-auto mb-4" />
+              <h1 className="text-2xl font-bold text-gray-900 mb-2">
+                Something went wrong
+              </h1>
+              <p className="text-gray-600 mb-4">
+                We're sorry, but something unexpected happened. Please try again.
+              </p>
+              {this.state.error && (
+                <details className="text-left bg-gray-100 p-3 rounded text-sm text-gray-700 mb-4">
+                  <summary className="cursor-pointer font-medium">Error Details</summary>
+                  <pre className="mt-2 whitespace-pre-wrap break-words">
+                    {this.state.error.message}
+                  </pre>
+                </details>
+              )}
             </div>
-            <h1 className="text-2xl font-bold text-gray-900 mb-2">
-              Oops! Something went wrong
-            </h1>
-            <p className="text-gray-600 mb-6">
-              We're sorry, but something unexpected happened. Please try again.
-            </p>
-            {process.env.NODE_ENV === 'development' && this.state.error && (
-              <details className="mb-4 text-left">
-                <summary className="cursor-pointer text-sm text-gray-500 hover:text-gray-700">
-                  Error Details (Development)
-                </summary>
-                <pre className="mt-2 text-xs text-red-600 bg-red-50 p-2 rounded overflow-auto">
-                  {this.state.error.message}
-                  {'\n\n'}
-                  {this.state.error.stack}
-                </pre>
-              </details>
-            )}
-            <div className="flex gap-3 justify-center">
+            
+            <div className="space-y-3">
               <button
                 onClick={this.handleRetry}
-                className="flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                className="w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center gap-2"
               >
-                <RefreshCw className="h-4 w-4" />
+                <RefreshCw className="w-4 h-4" />
                 Try Again
               </button>
+              
               <button
                 onClick={this.handleGoHome}
-                className="flex items-center gap-2 bg-gray-600 text-white px-4 py-2 rounded-lg hover:bg-gray-700 transition-colors"
+                className="w-full bg-gray-200 text-gray-800 px-4 py-2 rounded-lg hover:bg-gray-300 transition-colors flex items-center justify-center gap-2"
               >
-                <Home className="h-4 w-4" />
+                <Home className="w-4 h-4" />
                 Go Home
               </button>
             </div>
-<<<<<<< HEAD
-            <button
-              onClick={() => window.location.reload()}
-              className="mt-4 text-gray-400 hover:text-white text-sm underline"
-            >
-              Or refresh the page
-            </button>
-=======
+
             {this.state.errorId && (
-              <p className="text-xs text-gray-400 mt-4">
+              <p className="text-xs text-gray-500 mt-4">
                 Error ID: {this.state.errorId}
               </p>
             )}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-96bc
           </div>
         </div>
       );
@@ -143,14 +127,3 @@ class ErrorBoundary extends Component<Props, State> {
 }
 
 export default ErrorBoundary;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-export default ErrorBoundary;
->>>>>>> cursor/fix-errors-and-merge-to-main-cfe1
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-96bc
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-debd
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-dda3
