@@ -1,5 +1,6 @@
 import { Suspense, lazy } from 'react';
 import Link from 'next/link';
+import { Helmet } from 'react-helmet-async';
 
 // Lazy load heavy components
 const UnifiedContentPromotion = lazy(
@@ -53,6 +54,12 @@ export default function HomePage() {
 
   return (
     <>
+      <Helmet>
+        <title>Zion Tech Group - Advanced AI and IT Solutions</title>
+        <meta name="description" content="Leading technology solutions provider helping businesses transform their digital presence with cutting-edge AI, quantum computing, blockchain infrastructure, and innovative development services." />
+        <meta name="keywords" content="AI solutions, IT services, quantum computing, blockchain, digital transformation" />
+      </Helmet>
+      
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
