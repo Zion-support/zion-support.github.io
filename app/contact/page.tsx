@@ -36,7 +36,11 @@ const ContactPage: React.FC = () => {
                 <textarea
                   rows={4}
                   className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+<<<<<<< HEAD
                 ></textarea>
+=======
+                />
+>>>>>>> cursor/fix-errors-and-merge-to-main-0ff5
               </div>
               <button
                 type="submit"
@@ -51,6 +55,7 @@ const ContactPage: React.FC = () => {
             <div className="space-y-4">
               <div>
                 <h4 className="font-medium text-gray-900">Email</h4>
+<<<<<<< HEAD
                 <p className="text-gray-600">kleber@ziontechgroup.com</p>
               </div>
               <div>
@@ -63,6 +68,18 @@ const ContactPage: React.FC = () => {
                   Zion Tech Group<br />
                   Wilmington, DE 19801<br />
                   United States
+=======
+                <p className="text-gray-600">info@ziontech.com</p>
+              </div>
+              <div>
+                <h4 className="font-medium text-gray-900">Phone</h4>
+                <p className="text-gray-600">(555) 123-4567</p>
+              </div>
+              <div>
+                <h4 className="font-medium text-gray-900">Address</h4>
+                <p className="text-gray-600">123 Tech Street<br />
+                  Innovation City, IC 12345
+>>>>>>> cursor/fix-errors-and-merge-to-main-0ff5
                 </p>
               </div>
             </div>
