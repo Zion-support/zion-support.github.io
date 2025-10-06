@@ -13,12 +13,9 @@ const HomePage = lazy(() => import('./page'));
 const AboutPage = lazy(() => import('./about/page'));
 const ServicesPage = lazy(() => import('./services/page'));
 const ContactPage = lazy(() => import('./contact/page'));
-<<<<<<< HEAD
 const TeamPage = lazy(() => import('./team/page'));
 const PrivacyPage = lazy(() => import('./privacy/page'));
 const TermsPage = lazy(() => import('./terms/page'));
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-83ba
 const EnterprisePage = lazy(() => import('./enterprise/page'));
 
 // Utils
@@ -26,39 +23,12 @@ import performanceOptimizer from '../src/utils/performanceOptimizer';
 
 const App: React.FC = () => {
   useEffect(() => {
-<<<<<<< HEAD
     // Initialize performance optimizations
     performanceOptimizer.init();
-  }, []);
-
-  return (
-    <ErrorBoundary>
-      <HelmetProvider>
-        <SEOOptimizer />
-        <AccessibilityEnhancer>
-          <div></div>
-        </AccessibilityEnhancer>
-        <Router>
-          <Suspense fallback={<LoadingSpinner />}>
-            <Routes>
-              <Route path="/" element={<HomePage />} />
-              <Route path="/about" element={<AboutPage />} />
-              <Route path="/services" element={<ServicesPage />} />
-              <Route path="/contact" element={<ContactPage />} />
-              <Route path="/team" element={<TeamPage />} />
-              <Route path="/privacy" element={<PrivacyPage />} />
-              <Route path="/terms" element={<TermsPage />} />
-              <Route path="/enterprise" element={<EnterprisePage />} />
-            </Routes>
-          </Suspense>
-        </Router>
-      </HelmetProvider>
-    </ErrorBoundary>
-=======
+    
     // Initialize performance monitoring
     if (typeof window !== 'undefined') {
-      performanceOptimizer.preloadCriticalResources();
-      performanceOptimizer.lazyLoadImages();
+      performanceOptimizer.optimizeImages();
     }
   }, []);
 
@@ -75,6 +45,9 @@ const App: React.FC = () => {
                     <Route path="/about" element={<AboutPage />} />
                     <Route path="/services" element={<ServicesPage />} />
                     <Route path="/contact" element={<ContactPage />} />
+                    <Route path="/team" element={<TeamPage />} />
+                    <Route path="/privacy" element={<PrivacyPage />} />
+                    <Route path="/terms" element={<TermsPage />} />
                     <Route path="/enterprise" element={<EnterprisePage />} />
                   </Routes>
                 </Suspense>
@@ -84,7 +57,6 @@ const App: React.FC = () => {
         </Router>
       </ErrorBoundary>
     </HelmetProvider>
->>>>>>> cursor/fix-errors-and-merge-to-main-83ba
   );
 };
 

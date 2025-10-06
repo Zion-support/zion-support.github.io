@@ -18,75 +18,12 @@ import TeamPage from '../app/team/page';
 import PrivacyPage from '../app/privacy/page';
 import TermsPage from '../app/terms/page';
 
-// Simple placeholder components
-const Home = () => (
-  <div className="min-h-screen flex items-center justify-center bg-gray-50">
-    <div className="text-center">
-      <h1 className="text-4xl font-bold text-gray-900 mb-4">Welcome to Zion Tech Group</h1>
-      <p className="text-xl text-gray-600">Advanced AI and IT Solutions</p>
-    </div>
-  </div>
-);
-
-const About = () => (
-  <div className="min-h-screen flex items-center justify-center bg-gray-50">
-    <div className="text-center">
-      <h1 className="text-4xl font-bold text-gray-900 mb-4">About Us</h1>
-      <p className="text-xl text-gray-600">Leading AI and IT Solutions Provider</p>
-    </div>
-  </div>
-);
-
-const Services = () => (
-  <div className="min-h-screen flex items-center justify-center bg-gray-50">
-    <div className="text-center">
-      <h1 className="text-4xl font-bold text-gray-900 mb-4">Our Services</h1>
-      <p className="text-xl text-gray-600">Comprehensive AI and IT Solutions</p>
-    </div>
-  </div>
-);
-
+// Blog component (used in Routes)
 const Blog = () => (
   <div className="min-h-screen flex items-center justify-center bg-gray-50">
     <div className="text-center">
       <h1 className="text-4xl font-bold text-gray-900 mb-4">Blog</h1>
       <p className="text-xl text-gray-600">Latest AI and Technology Insights</p>
-    </div>
-  </div>
-);
-
-const Contact = () => (
-  <div className="min-h-screen flex items-center justify-center bg-gray-50">
-    <div className="text-center">
-      <h1 className="text-4xl font-bold text-gray-900 mb-4">Contact Us</h1>
-      <p className="text-xl text-gray-600">Get in touch with our experts</p>
-    </div>
-  </div>
-);
-
-const Team = () => (
-  <div className="min-h-screen flex items-center justify-center bg-gray-50">
-    <div className="text-center">
-      <h1 className="text-4xl font-bold text-gray-900 mb-4">Our Team</h1>
-      <p className="text-xl text-gray-600">Meet our expert professionals</p>
-    </div>
-  </div>
-);
-
-const Privacy = () => (
-  <div className="min-h-screen flex items-center justify-center bg-gray-50">
-    <div className="text-center">
-      <h1 className="text-4xl font-bold text-gray-900 mb-4">Privacy Policy</h1>
-      <p className="text-xl text-gray-600">Your privacy is important to us</p>
-    </div>
-  </div>
-);
-
-const Terms = () => (
-  <div className="min-h-screen flex items-center justify-center bg-gray-50">
-    <div className="text-center">
-      <h1 className="text-4xl font-bold text-gray-900 mb-4">Terms of Service</h1>
-      <p className="text-xl text-gray-600">Terms and conditions</p>
     </div>
   </div>
 );
