@@ -1,7 +1,7 @@
 // Performance monitoring setup
-import { analytics } from './src/utils/analytics';
-import { errorHandler } from './src/utils/errorHandler';
-import performanceOptimizer from './src/utils/performanceOptimizer';
+import { analytics } from './utils/analytics';
+import { errorHandler } from './utils/errorHandler';
+import { performanceOptimizer } from './utils/performanceOptimizer';
 
 // Initialize performance monitoring
 if (typeof window !== 'undefined') {
@@ -12,8 +12,8 @@ if (typeof window !== 'undefined') {
   performanceOptimizer.lazyLoadImages();
   
   // Monitor long tasks
-  performanceOptimizer.monitorLongTasks((entries) => {
-    entries.forEach((entry) => {
+  performanceOptimizer.monitorLongTasks((entries: PerformanceEntry[]) => {
+    entries.forEach((entry: PerformanceEntry) => {
       analytics.track('long_task', 'performance', 'detected', undefined, entry.duration);
     });
   });

@@ -35,9 +35,11 @@ const PerformanceDashboard: React.FC = () => {
       const interval = setInterval(updateData, 5000);
       return () => clearInterval(interval);
     }
+    
+    return undefined;
   }, [autoRefresh]);
 
-  const exportData = () => {
+  const exportData = (): void => {
     const exportData = {
       performance: performanceOptimizer.exportMetrics(),
       errors: data?.errors,
