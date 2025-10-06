@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, type ReactNode } from 'react';
 
 interface AccessibilityEnhancerProps {
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {

@@ -1,4 +1,4 @@
-import React, { ReactNode, useEffect } from 'react';
+import React, { useEffect, useState, type ReactNode } from 'react';
 
 interface AccessibilityEnhancerProps {
   children: ReactNode;
