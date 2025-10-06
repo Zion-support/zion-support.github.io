@@ -1,7 +1,8 @@
 /**
  * Banner Registry - Centralized banner management system
  *
- * This module provides: * - Organized banner categorization
+ * This module provides:
+ * - Organized banner categorization
  * - Priority-based rendering
  * - Dynamic banner loading
  * - Banner analytics tracking
@@ -20,6 +21,7 @@ export interface BannerConfig {
   tags: string[];
   enabled: boolean;
 }
+
 /**
  * Banner Registry - All banners in the system
  * Sorted by priority (highest first)
@@ -57,13 +59,14 @@ export const BANNER_REGISTRY: BannerConfig[] = [
     enabled: true
   },
 ];
+
 /**
  * Get banners by category
  */
-export function getBannersByCategory(category: BannerConfig['category'])
-): BannerConfig[] {
+export function getBannersByCategory(category: BannerConfig['category']): BannerConfig[] {
   return BANNER_REGISTRY.filter(banner => banner.category === category && banner.enabled);
 }
+
 /**
  * Get banners by priority range
  */

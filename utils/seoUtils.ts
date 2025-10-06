@@ -1,148 +1,181 @@
 /**
  * SEO utilities for optimizing search engine visibility
  */
+
 // Meta tags management
-export const setMetaTags = (tags: Record<string) string>): void => {Object.entries(tags).forEach(([name} content]) => {
-    let meta = document.querySelector(`meta[name="${name}"]`)
-    ) as HTMLMetaElement;
-    if (!meta) {meta = document.createElement('meta');
+export const setMetaTags = (tags: Record<string, string>): void => {
+  Object.entries(tags).forEach(([name, content]) => {
+    let meta = document.querySelector(`meta[name="${name}"]`) as HTMLMetaElement;
+    if (!meta) {
+      meta = document.createElement('meta');
       meta.name = name;
-      document.head.appendChild(meta)}
+      document.head.appendChild(meta);
     }
     meta.content = content;
   });
 };
+
 // Open Graph tags
-export const setOpenGraphTags = (ogData: {title?: string;
+export const setOpenGraphTags = (ogData: {
+  title?: string;
   description?: string;
   image?: string;
-  url?: string)
-  type?: string}
-  siteName?: string}
-}): void => {const ogTags = {
-    'og: title': ogData.title,
-    'og: description': ogData.description,
-    'og: image': ogData.image,
-    'og: url': ogData.url,
-    'og: type': ogData.type || 'website',
-    'og: site_name': ogData.siteName}
+  url?: string;
+  type?: string;
+  siteName?: string;
+}): void => {
+  const ogTags = {
+    'og:title': ogData.title,
+    'og:description': ogData.description,
+    'og:image': ogData.image,
+    'og:url': ogData.url,
+    'og:type': ogData.type || 'website',
+    'og:site_name': ogData.siteName
   };
-  Object.entries(ogTags).forEach(([property) content]) => {
+  
+  Object.entries(ogTags).forEach(([property, content]) => {
     if (content) {
-      let meta = document.querySelector(`meta[property="${property}"]`)
-      ) as HTMLMetaElement;
-      if (!meta) {meta = document.createElement('meta')}
-        meta.setAttribute('property'} property);
+      let meta = document.querySelector(`meta[property="${property}"]`) as HTMLMetaElement;
+      if (!meta) {
+        meta = document.createElement('meta');
+        meta.setAttribute('property', property);
         document.head.appendChild(meta);
       }
       meta.content = content;
     }
   });
 };
+
 // Twitter Card tags
-export const setTwitterCardTags = (twitterData: {card?: string;
+export const setTwitterCardTags = (twitterData: {
+  card?: string;
   site?: string;
   creator?: string;
-  title?: string)
-  description?: string}
-  image?: string}
-}): void => {const twitterTags = {
-    'twitter: card': twitterData.card || 'summary_large_image',
-    'twitter: site': twitterData.site,
-    'twitter: creator': twitterData.creator,
-    'twitter: title': twitterData.title,
-    'twitter: description': twitterData.description,
-    'twitter: image': twitterData.image}
+  title?: string;
+  description?: string;
+  image?: string;
+}): void => {
+  const twitterTags = {
+    'twitter:card': twitterData.card || 'summary_large_image',
+    'twitter:site': twitterData.site,
+    'twitter:creator': twitterData.creator,
+    'twitter:title': twitterData.title,
+    'twitter:description': twitterData.description,
+    'twitter:image': twitterData.image
   };
-  Object.entries(twitterTags).forEach(([name) content]) => {
+  
+  Object.entries(twitterTags).forEach(([name, content]) => {
     if (content) {
-      let meta = document.querySelector(`meta[name="${name}"]`)
-      ) as HTMLMetaElement;
-      if (!meta) {meta = document.createElement('meta');
+      let meta = document.querySelector(`meta[name="${name}"]`) as HTMLMetaElement;
+      if (!meta) {
+        meta = document.createElement('meta');
         meta.name = name;
-        document.head.appendChild(meta)}
+        document.head.appendChild(meta);
       }
       meta.content = content;
     }
   });
 };
+
 // Structured data (JSON-LD)
-export const setStructuredData = (data: any): void => {// Remove existing structured data
+export const setStructuredData = (data: any): void => {
+  // Remove existing structured data
   const existingScript = document.querySelector(
-    'script[type="application/ld+json"]'}
+    'script[type="application/ld+json"]'
   );
-  if (existingScript) {existingScript.remove()}
+  if (existingScript) {
+    existingScript.remove();
   }
+  
   // Add new structured data
   const script = document.createElement('script');
-  script.type = 'application/ld+json'
+  script.type = 'application/ld+json';
   script.textContent = JSON.stringify(data);
   document.head.appendChild(script);
 };
+
 // Canonical URL
-export const setCanonicalUrl = (url: string): void => {let canonical = document.querySelector(
-    'link[rel="canonical"]'}
+export const setCanonicalUrl = (url: string): void => {
+  let canonical = document.querySelector(
+    'link[rel="canonical"]'
   ) as HTMLLinkElement;
-  if (!canonical) {canonical = document.createElement('link');
-    canonical.rel = 'canonical'
-    document.head.appendChild(canonical)}
+  if (!canonical) {
+    canonical = document.createElement('link');
+    canonical.rel = 'canonical';
+    document.head.appendChild(canonical);
   }
   canonical.href = url;
 };
+
 // Page title optimization
-export const setPageTitle = (title: string) siteName?: string): void => {
+export const setPageTitle = (title: string, siteName?: string): void => {
   const fullTitle = siteName ? `${title} | ${siteName}` : title;
   document.title = fullTitle;
 };
+
 // Meta description
-export const setMetaDescription = (description: string): void => {let meta = document.querySelector(
-    'meta[name="description"]'}
+export const setMetaDescription = (description: string): void => {
+  let meta = document.querySelector(
+    'meta[name="description"]'
   ) as HTMLMetaElement;
-  if (!meta) {meta = document.createElement('meta');
-    meta.name = 'description'
-    document.head.appendChild(meta)}
+  if (!meta) {
+    meta = document.createElement('meta');
+    meta.name = 'description';
+    document.head.appendChild(meta);
   }
   meta.content = description;
 };
+
 // Keywords meta tag
-export const setKeywords = (keywords: string[]): void => {let meta = document.querySelector('meta[name="keywords"]') as HTMLMetaElement;
+export const setKeywords = (keywords: string[]): void => {
+  let meta = document.querySelector('meta[name="keywords"]') as HTMLMetaElement;
   if (!meta) {
-    meta = document.createElement('meta')}
-    meta.name = 'keywords'
-    document.head.appendChild(meta)}
+    meta = document.createElement('meta');
+    meta.name = 'keywords';
+    document.head.appendChild(meta);
   }
-  meta.content = keywords.join(') ');
+  meta.content = keywords.join(', ');
 };
+
 // Robots meta tag
-export const setRobotsMeta = (robots: {index?: boolean;
+export const setRobotsMeta = (robots: {
+  index?: boolean;
   follow?: boolean;
-  noarchive?: boolean)
-  nosnippet?: boolean}
-  noimageindex?: boolean}
-}): void => {const directives: string[] = [];
+  noarchive?: boolean;
+  nosnippet?: boolean;
+  noimageindex?: boolean;
+}): void => {
+  const directives: string[] = [];
   if (robots.index === false) directives.push('noindex');
   if (robots.follow === false) directives.push('nofollow');
   if (robots.noarchive) directives.push('noarchive');
-  if (robots.nosnippet) directives.push('nosnippet')}
-  if (robots.noimageindex) directives.push('noimageindex'),
+  if (robots.nosnippet) directives.push('nosnippet');
+  if (robots.noimageindex) directives.push('noimageindex');
+  
   if (directives.length === 0) {
-    directives.push('index'} 'follow');
+    directives.push('index', 'follow');
   }
+  
   let meta = document.querySelector('meta[name="robots"]') as HTMLMetaElement;
-  if (!meta) {meta = document.createElement('meta');
-    meta.name = 'robots'
-    document.head.appendChild(meta)}
+  if (!meta) {
+    meta = document.createElement('meta');
+    meta.name = 'robots';
+    document.head.appendChild(meta);
   }
-  meta.content = directives.join(') ');
+  meta.content = directives.join(', ');
 };
+
 // Language and locale
-export const setLanguage = (lang: string): void => {document.documentElement.lang = lang}
+export const setLanguage = (lang: string): void => {
+  document.documentElement.lang = lang;
 };
+
 // Viewport meta tag
-export const setViewport = (viewport: {width?: string;
-  initialScale?: number)
-  maximumScale?: number}
-  userScalable?: boolean}
+export const setViewport = (viewport: {
+  width?: string;
+  initialScale?: number;
+  maximumScale?: number;
+  userScalable?: boolean;
 }): void => {
   const content = [
     viewport.width ? `width=${viewport.width}` : 'width=device-width',

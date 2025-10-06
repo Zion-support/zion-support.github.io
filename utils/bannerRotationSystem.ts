@@ -58,9 +58,11 @@ const getBannerImpressions = (): BannerImpression[] => {
 /**
  * Save banner impression
  */
-export const recordBannerImpression = (impression: Omit<BannerImpression, 'timestamp' | 'sessionId'>)
+export const recordBannerImpression = (
+  impression: Omit<BannerImpression, 'timestamp' | 'sessionId'>
 ) => {
   if (typeof window === 'undefined') return;
+
   try {
     const impressions = getBannerImpressions();
     const newImpression: BannerImpression = {
