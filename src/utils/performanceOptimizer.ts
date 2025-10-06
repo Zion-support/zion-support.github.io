@@ -135,7 +135,7 @@ export const measurePageLoad = (): WebVitalsMetrics | null => {
  * Report Web Vitals metrics
  */
 export const reportWebVitals = (metrics: WebVitalsMetrics): void => {
-  if (process.env.NODE_ENV === 'development') {
+  if (process.env['NODE_ENV'] === 'development') {
     console.log('Web Vitals:', metrics);
   }
   
@@ -398,7 +398,7 @@ class PerformanceOptimizer {
     
     this.metrics.set(name, duration);
     
-    if (process.env.NODE_ENV === 'development') {
+    if (process.env['NODE_ENV'] === 'development') {
       console.log(`Performance: ${name} took ${duration.toFixed(2)}ms`);
     }
   }
@@ -479,7 +479,7 @@ class PerformanceOptimizer {
 
   // Add Web Vitals reporting method
   reportWebVitals(metrics: WebVitalsMetrics): void {
-    if (process.env.NODE_ENV === 'development') {
+    if (process.env['NODE_ENV'] === 'development') {
       console.log('Web Vitals:', metrics);
     }
 
