@@ -1,11 +1,6 @@
 {
   "target": "ES2022",
-  "lib": [
-    "ES2022",
-    "DOM",
-    "DOM.Iterable",
-    "WebWorker"
-  ],
+  "lib": ["ES2022", "DOM", "DOM.Iterable", "WebWorker"],
   "allowJs": true,
   "skipLibCheck": true,
   "strict": true,
@@ -32,23 +27,11 @@
   ],
   "baseUrl": ".",
   "paths": {
-    "@/*": [
-      "./src/*"
-    ],
-    "@/components/*": [
-      "./src/components/*"
-    ],
-    "@/utils/*": [
-      "./src/utils/*"
-    ],
-    "@/config/*": [
-      "./src/config/*"
-    ],
-    "@/hooks/*": [
-      "./src/hooks/*"
-    ],
-    "@/types/*": [
-      "./src/types/*"
-    ]
+    "@/*": ["./src/*"],
+    "@/components/*": ["./src/components/*"],
+    "@/utils/*": ["./src/utils/*"],
+    "@/config/*": ["./src/config/*"],
+    "@/hooks/*": ["./src/hooks/*"],
+    "@/types/*": ["./src/types/*"]
   }
 }

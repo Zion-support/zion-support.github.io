@@ -3,14 +3,14 @@ import Link from 'next/link';
 
 // Lazy load heavy components
 const UnifiedContentPromotion = lazy(
-  () => import('./components/UnifiedContentPromotion'),
+  () => import('./components/UnifiedContentPromotion')
 );
 const InteractiveAIROICalculator = lazy(
-  () => import('./components/InteractiveAIROICalculator'),
+  () => import('./components/InteractiveAIROICalculator')
 );
 const ContentShowcase = lazy(() => import('./components/ContentShowcase'));
 const InteractiveContentShowcase2026 = lazy(
-  () => import('./components/InteractiveContentShowcase2026'),
+  () => import('./components/InteractiveContentShowcase2026')
 );
 
 // Loading component for Suspense fallback

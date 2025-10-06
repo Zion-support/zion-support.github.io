@@ -117,7 +117,11 @@ class Analytics {
   /**
    * Track performance metrics
    */
-  public trackPerformance(metric: string, value: number, unit: string = 'ms'): void {
+  public trackPerformance(
+    metric: string,
+    value: number,
+    unit: string = 'ms'
+  ): void {
     this.track('performance', 'metrics', metric, unit, value);
   }
 

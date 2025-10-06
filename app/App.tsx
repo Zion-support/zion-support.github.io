@@ -10,8 +10,8 @@ import PerformanceDashboard from './components/PerformanceDashboard';
 
 // Loading component
 const LoadingSpinner = () => (
-  <div className="min-h-screen flex items-center justify-center bg-gray-50">
-    <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
+  <div className='min-h-screen flex items-center justify-center bg-gray-50'>
+    <div className='animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600'></div>
   </div>
 );
 
@@ -32,7 +32,7 @@ const App: React.FC = () => {
     // Initialize performance monitoring
     performanceOptimizer.lazyLoadImages();
     performanceOptimizer.preloadCriticalResources();
-    
+
     // Initialize Web Vitals monitoring
     if (typeof window !== 'undefined' && 'performance' in window) {
       const metrics = performanceOptimizer.measurePageLoad();
@@ -40,17 +40,17 @@ const App: React.FC = () => {
         performanceOptimizer.reportWebVitals(metrics);
       }
     }
-    
+
     console.log('Performance monitoring initialized');
     console.log(
-      '🚀 Zion Tech Group App initialized with comprehensive monitoring',
+      '🚀 Zion Tech Group App initialized with comprehensive monitoring'
     );
   }, []);
 
   return (
     <HelmetProvider>
       <ErrorBoundary>
-        <PerformanceMonitor>
+        <div>
           <SEOOptimizer>
             <AccessibilityEnhancer>
               <Router>
@@ -86,7 +86,7 @@ const App: React.FC = () => {
               </Router>
             </AccessibilityEnhancer>
           </SEOOptimizer>
-        </PerformanceMonitor>
+        </div>
       </ErrorBoundary>
     </HelmetProvider>
   );

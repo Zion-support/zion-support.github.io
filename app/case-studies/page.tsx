@@ -200,7 +200,7 @@ const industries = [
     name: 'Financial Services',
     count: caseStudies.filter(
       item =>
-        item.industry === 'Financial Services' || item.industry === 'Fintech',
+        item.industry === 'Financial Services' || item.industry === 'Fintech'
     ).length,
   },
   {
@@ -210,7 +210,7 @@ const industries = [
   {
     name: 'E-commerce',
     count: caseStudies.filter(
-      item => item.industry === 'E-commerce' || item.industry === 'Retail',
+      item => item.industry === 'E-commerce' || item.industry === 'Retail'
     ).length,
   },
 ];

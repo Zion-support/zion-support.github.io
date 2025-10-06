@@ -3,61 +3,83 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './index.css';
 
 // Simple placeholder components
-const Home = () => <div className="min-h-screen flex items-center justify-center bg-gray-50">
-  <div className="text-center">
-    <h1 className="text-4xl font-bold text-gray-900 mb-4">Welcome to Zion Tech Group</h1>
-    <p className="text-xl text-gray-600">Advanced AI and IT Solutions</p>
+const Home = () => (
+  <div className='min-h-screen flex items-center justify-center bg-gray-50'>
+    <div className='text-center'>
+      <h1 className='text-4xl font-bold text-gray-900 mb-4'>
+        Welcome to Zion Tech Group
+      </h1>
+      <p className='text-xl text-gray-600'>Advanced AI and IT Solutions</p>
+    </div>
   </div>
-</div>;
+);
 
-const About = () => <div className="min-h-screen flex items-center justify-center bg-gray-50">
-  <div className="text-center">
-    <h1 className="text-4xl font-bold text-gray-900 mb-4">About Us</h1>
-    <p className="text-xl text-gray-600">Leading AI and IT Solutions Provider</p>
+const About = () => (
+  <div className='min-h-screen flex items-center justify-center bg-gray-50'>
+    <div className='text-center'>
+      <h1 className='text-4xl font-bold text-gray-900 mb-4'>About Us</h1>
+      <p className='text-xl text-gray-600'>
+        Leading AI and IT Solutions Provider
+      </p>
+    </div>
   </div>
-</div>;
+);
 
-const Services = () => <div className="min-h-screen flex items-center justify-center bg-gray-50">
-  <div className="text-center">
-    <h1 className="text-4xl font-bold text-gray-900 mb-4">Our Services</h1>
-    <p className="text-xl text-gray-600">Comprehensive AI and IT Solutions</p>
+const Services = () => (
+  <div className='min-h-screen flex items-center justify-center bg-gray-50'>
+    <div className='text-center'>
+      <h1 className='text-4xl font-bold text-gray-900 mb-4'>Our Services</h1>
+      <p className='text-xl text-gray-600'>Comprehensive AI and IT Solutions</p>
+    </div>
   </div>
-</div>;
+);
 
-const Blog = () => <div className="min-h-screen flex items-center justify-center bg-gray-50">
-  <div className="text-center">
-    <h1 className="text-4xl font-bold text-gray-900 mb-4">Blog</h1>
-    <p className="text-xl text-gray-600">Latest AI and Technology Insights</p>
+const Blog = () => (
+  <div className='min-h-screen flex items-center justify-center bg-gray-50'>
+    <div className='text-center'>
+      <h1 className='text-4xl font-bold text-gray-900 mb-4'>Blog</h1>
+      <p className='text-xl text-gray-600'>Latest AI and Technology Insights</p>
+    </div>
   </div>
-</div>;
+);
 
-const Contact = () => <div className="min-h-screen flex items-center justify-center bg-gray-50">
-  <div className="text-center">
-    <h1 className="text-4xl font-bold text-gray-900 mb-4">Contact Us</h1>
-    <p className="text-xl text-gray-600">Get in touch with our experts</p>
+const Contact = () => (
+  <div className='min-h-screen flex items-center justify-center bg-gray-50'>
+    <div className='text-center'>
+      <h1 className='text-4xl font-bold text-gray-900 mb-4'>Contact Us</h1>
+      <p className='text-xl text-gray-600'>Get in touch with our experts</p>
+    </div>
   </div>
-</div>;
+);
 
-const Team = () => <div className="min-h-screen flex items-center justify-center bg-gray-50">
-  <div className="text-center">
-    <h1 className="text-4xl font-bold text-gray-900 mb-4">Our Team</h1>
-    <p className="text-xl text-gray-600">Meet our expert professionals</p>
+const Team = () => (
+  <div className='min-h-screen flex items-center justify-center bg-gray-50'>
+    <div className='text-center'>
+      <h1 className='text-4xl font-bold text-gray-900 mb-4'>Our Team</h1>
+      <p className='text-xl text-gray-600'>Meet our expert professionals</p>
+    </div>
   </div>
-</div>;
+);
 
-const Privacy = () => <div className="min-h-screen flex items-center justify-center bg-gray-50">
-  <div className="text-center">
-    <h1 className="text-4xl font-bold text-gray-900 mb-4">Privacy Policy</h1>
-    <p className="text-xl text-gray-600">Your privacy is important to us</p>
+const Privacy = () => (
+  <div className='min-h-screen flex items-center justify-center bg-gray-50'>
+    <div className='text-center'>
+      <h1 className='text-4xl font-bold text-gray-900 mb-4'>Privacy Policy</h1>
+      <p className='text-xl text-gray-600'>Your privacy is important to us</p>
+    </div>
   </div>
-</div>;
+);
 
-const Terms = () => <div className="min-h-screen flex items-center justify-center bg-gray-50">
-  <div className="text-center">
-    <h1 className="text-4xl font-bold text-gray-900 mb-4">Terms of Service</h1>
-    <p className="text-xl text-gray-600">Terms and conditions</p>
+const Terms = () => (
+  <div className='min-h-screen flex items-center justify-center bg-gray-50'>
+    <div className='text-center'>
+      <h1 className='text-4xl font-bold text-gray-900 mb-4'>
+        Terms of Service
+      </h1>
+      <p className='text-xl text-gray-600'>Terms and conditions</p>
+    </div>
   </div>
-</div>;
+);
 
 function App() {
   useEffect(() => {
@@ -77,12 +99,16 @@ function App() {
   return (
     <div>
       <Router>
-        <Suspense fallback={<div className="min-h-screen flex items-center justify-center bg-gray-50">
-          <div className="text-center">
-            <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-600 mx-auto"></div>
-            <p className="mt-4 text-gray-600">Loading...</p>
-          </div>
-        </div>}>
+        <Suspense
+          fallback={
+            <div className='min-h-screen flex items-center justify-center bg-gray-50'>
+              <div className='text-center'>
+                <div className='animate-spin rounded-full h-32 w-32 border-b-2 border-blue-600 mx-auto'></div>
+                <p className='mt-4 text-gray-600'>Loading...</p>
+              </div>
+            </div>
+          }
+        >
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/about' element={<About />} />

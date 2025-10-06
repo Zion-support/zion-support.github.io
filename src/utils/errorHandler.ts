@@ -36,7 +36,8 @@ class ErrorHandler {
       stack: typeof error === 'string' ? '' : error.stack || '',
       context: {
         timestamp: Date.now(),
-        userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : '',
+        userAgent:
+          typeof window !== 'undefined' ? window.navigator.userAgent : '',
         url: typeof window !== 'undefined' ? window.location.href : '',
         ...context,
       } as ErrorContext,
@@ -102,7 +103,7 @@ class ErrorHandler {
     if (typeof window === 'undefined') return;
 
     // Handle unhandled promise rejections
-    window.addEventListener('unhandledrejection', (event) => {
+    window.addEventListener('unhandledrejection', event => {
       this.logError(
         new Error(event.reason),
         { action: 'unhandledrejection' },
@@ -111,7 +112,7 @@ class ErrorHandler {
     });
 
     // Handle JavaScript errors
-    window.addEventListener('error', (event) => {
+    window.addEventListener('error', event => {
       this.logError(
         event.error || new Error(event.message),
         {
