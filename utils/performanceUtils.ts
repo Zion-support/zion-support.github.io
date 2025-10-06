@@ -39,6 +39,10 @@ export const throttle = <T extends (...args: unknown[]) => unknown>(
     }
   };
 };
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-fb16
 // Preload critical resources
 export const preloadCriticalResources = (): void => {
   if (typeof window === 'undefined') return;
