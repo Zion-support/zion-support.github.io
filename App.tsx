@@ -1,4 +1,5 @@
 import React, { memo, useMemo, useCallback, Suspense } from 'react';
+>>>>>>> main
 import { HelmetProvider, Helmet } from 'react-helmet-async';
 // Memoized components for better performance
 const UnifiedContentPromotion = memo(() => (
@@ -41,6 +42,7 @@ const InteractiveContentShowcase2026 = memo(() => (
     </div>
   </div>
 ));
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
 // Error Boundary Component
 interface ErrorBoundaryState {
   hasError: boolean;
@@ -57,9 +59,32 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
   static getDerivedStateFromError(error: Error): ErrorBoundaryState {
     return { hasError: true, error };
   }
+<<<<<<< HEAD
   override componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
     console.error('App Error Boundary caught an error:', error, errorInfo);
   }
+=======
+
+  override componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
+    console.error('App Error Boundary caught an error:', error, errorInfo);
+  }
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3fed
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f83
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-efe9
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6abd
   override render() {
     if (this.state.hasError) {
       return (
@@ -90,6 +115,10 @@ const LoadingSpinner = memo(() => (
     <div className="text-gray-500">Loading...</div>
   </div>
 ));
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
 export default function App() {
   const structuredData = useMemo(
     () => ({
@@ -423,3 +452,5 @@ export default function App() {
     </ErrorBoundary>
   );
 }
+
+export default App;

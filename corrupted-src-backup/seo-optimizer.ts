@@ -24,9 +24,9 @@ export const seoOptimizer = {
   
   trackPageView: () => {
     // Basic analytics tracking
-    if (typeof window !== 'undefined' && (window as unknown as { gtag?: Function }).gtag) {
-      const gtag = (window as unknown as { gtag: Function }).gtag;
-      gtag('config', 'GA_MEASUREMENT_ID', {
+:corrupted-src-backup/seo-optimizer.ts
+>>>>>>> main:corrupted-src-backup/seo-optimizer.ts
+>>>>>>> main:corrupted-src-backup/seo-optimizer.ts
         page_title: document.title,
         page_location: window.location.href,
       });
