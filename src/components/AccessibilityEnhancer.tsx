@@ -1,16 +1,27 @@
-<<<<<<< HEAD
-import React, { useEffect } from 'react';
-=======
 import React, { useEffect, useState } from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-2ff1
 
 interface AccessibilityEnhancerProps {
   children: React.ReactNode;
 }
 
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
-<<<<<<< HEAD
+  const [isHighContrast, setIsHighContrast] = useState(false);
+  const [fontSize, setFontSize] = useState<'small' | 'normal' | 'large'>('normal');
+  const [reducedMotion, setReducedMotion] = useState(false);
+
   useEffect(() => {
+    // Check for user preferences
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const savedHighContrast = localStorage.getItem('highContrast') === 'true';
+    const savedFontSize = (localStorage.getItem('fontSize') as 'small' | 'normal' | 'large') || 'normal';
+    
+    setIsHighContrast(savedHighContrast);
+    setFontSize(savedFontSize);
+    setReducedMotion(prefersReducedMotion);
+
+    // Apply initial styles
+    applyAccessibilityStyles(savedHighContrast, savedFontSize, prefersReducedMotion);
+
     // Add accessibility enhancements
     const addSkipLinks = () => {
       const existingSkipLink = document.querySelector('.skip-link');
@@ -78,6 +89,28 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
         outline: 2px solid #3b82f6;
         outline-offset: 2px;
       }
+
+      .high-contrast {
+        filter: contrast(150%) brightness(120%);
+      }
+
+      .font-small {
+        font-size: 0.875rem;
+      }
+
+      .font-normal {
+        font-size: 1rem;
+      }
+
+      .font-large {
+        font-size: 1.125rem;
+      }
+
+      .reduced-motion * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
     `;
     document.head.appendChild(style);
 
@@ -88,26 +121,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
         document.head.removeChild(existingStyle);
       }
     };
-  }, []);
-
-  return <>{children}</>;
-=======
-  const [isHighContrast, setIsHighContrast] = useState(false);
-  const [fontSize, setFontSize] = useState<'small' | 'normal' | 'large'>('normal');
-  const [reducedMotion, setReducedMotion] = useState(false);
-
-  useEffect(() => {
-    // Check for user preferences
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const savedHighContrast = localStorage.getItem('highContrast') === 'true';
-    const savedFontSize = (localStorage.getItem('fontSize') as 'small' | 'normal' | 'large') || 'normal';
-    
-    setIsHighContrast(savedHighContrast);
-    setFontSize(savedFontSize);
-    setReducedMotion(prefersReducedMotion);
-
-    // Apply initial styles
-    applyAccessibilityStyles(savedHighContrast, savedFontSize, prefersReducedMotion);
   }, []);
 
   const applyAccessibilityStyles = (highContrast: boolean, fontSize: 'small' | 'normal' | 'large', reducedMotion: boolean) => {
@@ -149,7 +162,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     <>
       {children}
       {/* Accessibility Controls - only show in development */}
-      {process.env.NODE_ENV === 'development' && (
+      {process.env['NODE_ENV'] === 'development' && (
         <div className="fixed top-4 left-4 z-50 bg-white border border-gray-200 rounded-lg shadow-lg p-4">
           <h3 className="text-sm font-semibold mb-2">Accessibility Controls</h3>
           <div className="space-y-2">
@@ -181,7 +194,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       )}
     </>
   );
->>>>>>> cursor/fix-errors-and-merge-to-main-2ff1
 };
 
 export default AccessibilityEnhancer;
