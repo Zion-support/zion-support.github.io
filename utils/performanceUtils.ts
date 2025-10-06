@@ -9,10 +9,7 @@ export const debounce = <T extends (...args: any[]) => any>(
   immediate = false
 ): ((...args: Parameters<T>) => void) => {
   let timeout: NodeJS.Timeout | null = null;
-<<<<<<< HEAD
   
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-9fc8
   return function executedFunction(...args: Parameters<T>) {
     const later = () => {
       timeout = null;
@@ -32,23 +29,31 @@ export const throttle = <T extends (...args: any[]) => any>(
   limit: number
 ): ((...args: Parameters<T>) => void) => {
   let inThrottle: boolean;
-  return function executedFunction(this: any, ...args: Parameters<T>) {
+  return function executedFunction(this: unknown, ...args: Parameters<T>) {
     if (!inThrottle) {
       func.apply(this, args);
       inThrottle = true;
+      setTimeout(() => {
+        inThrottle = false;
+      }, limit);
     }
   };
 };
-
-<<<<<<< HEAD
-=======
-};
-
->>>>>>> cursor/fix-errors-and-merge-to-main-9fc8
 // Preload critical resources
 export const preloadCriticalResources = (): void => {
-      link.crossOrigin = 'anonymous';
-    }
+  if (typeof window === 'undefined') return;
+  
+  const criticalResources = [
+    '/fonts/main.woff2',
+    '/css/critical.css'
+  ];
+  
+  criticalResources.forEach(href => {
+    const link = document.createElement('link');
+    link.rel = 'preload';
+    link.href = href;
+    link.as = href.endsWith('.css') ? 'style' : 'font';
+    link.crossOrigin = 'anonymous';
     document.head.appendChild(link);
   });
 };
