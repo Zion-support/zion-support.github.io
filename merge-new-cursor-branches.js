@@ -24,7 +24,7 @@ const newCursorBranches = [
 ];
 
 console.log(
-  `📊 Found ${newCursorBranches.length} new cursor branches to process\n`,
+  `📊 Found ${newCursorBranches.length} new cursor branches to process\n`
 );
 
 // Function to safely execute git commands
@@ -45,7 +45,7 @@ function branchExists(branchName) {
   try {
     execSync(
       `git show-ref --verify --quiet refs/remotes/origin/${branchName}`,
-      { stdio: 'pipe' },
+      { stdio: 'pipe' }
     );
     return true;
   } catch {
@@ -84,7 +84,7 @@ for (const branch of newCursorBranches) {
   // Try to merge the branch
   const mergeResult = safeGitCommand(
     `git merge origin/${branch} --no-ff -m "Merge ${branch} into main"`,
-    `Merge ${branch}`,
+    `Merge ${branch}`
   );
 
   if (mergeResult.success) {
@@ -112,13 +112,13 @@ for (const branch of newCursorBranches) {
 console.log('\n🔧 Running system checks...');
 const typeCheck = safeGitCommand(
   'pnpm run type-check',
-  'TypeScript type checking',
+  'TypeScript type checking'
 );
 const lintCheck = safeGitCommand('pnpm run lint', 'ESLint linting');
 const testCheck = safeGitCommand('pnpm run test', 'Jest testing');
 const buildCheck = safeGitCommand(
   'pnpm run build:no-check',
-  'Production build',
+  'Production build'
 );
 
 // Push changes if any were merged
@@ -126,7 +126,7 @@ if (mergedCount > 0) {
   console.log('\n📤 Pushing changes to main...');
   const pushResult = safeGitCommand(
     'git push origin main',
-    'Push changes to main',
+    'Push changes to main'
   );
   if (pushResult.success) {
     console.log('✅ All changes pushed to main successfully');
@@ -162,7 +162,7 @@ const report = {
 // Save detailed report
 fs.writeFileSync(
   'new-cursor-branches-merge-report.json',
-  JSON.stringify(report, null, 2),
+  JSON.stringify(report, null, 2)
 );
 
 console.log('\n📊 === MERGE SUMMARY ===');
@@ -178,13 +178,13 @@ console.log(`Build: ${buildCheck.success ? '✅' : '❌'}`);
 
 if (report.systemChecks.allPassed) {
   console.log(
-    '\n🎉 All system checks passed! Repository is in excellent condition.',
+    '\n🎉 All system checks passed! Repository is in excellent condition.'
   );
 } else {
   console.log('\n⚠️  Some system checks failed. Please review the issues.');
 }
 
 console.log(
-  '\n📄 Detailed report saved to: new-cursor-branches-merge-report.json',
+  '\n📄 Detailed report saved to: new-cursor-branches-merge-report.json'
 );
 console.log('\n🏁 New Cursor Branches Merge completed!');
