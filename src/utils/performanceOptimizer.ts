@@ -313,7 +313,14 @@ export const addCriticalResourceHints = (): void => {
 // Performance metrics storage
 const metrics = new Map<string, number>();
 
-<<<<<<< HEAD
+class PerformanceOptimizer {
+  private static instance: PerformanceOptimizer;
+  public metrics: Map<string, number>;
+
+  constructor() {
+    this.metrics = new Map<string, number>();
+  }
+
   static getInstance(): PerformanceOptimizer {
     if (!PerformanceOptimizer.instance) {
       PerformanceOptimizer.instance = new PerformanceOptimizer();
@@ -567,10 +574,6 @@ export const preloadCriticalResources = (): void => {
 };
 
 
-// Export singleton instance
-export const performanceOptimizer = PerformanceOptimizer.getInstance();
-
-=======
 // Get performance metrics
 const getMetrics = (): Record<string, number> => {
   return Object.fromEntries(metrics);
@@ -582,7 +585,9 @@ const initialize = (): void => {
   addCriticalResourceHints();
 };
 
->>>>>>> cursor/fix-errors-and-merge-to-main-a3c4
+// Export singleton instance
+export const performanceOptimizer = PerformanceOptimizer.getInstance();
+
 export default {
   prefetchResources,
   preconnectDomains,
@@ -601,12 +606,8 @@ export default {
   cacheStaticAssets,
   clearOldCaches,
   checkPerformanceBudget,
-<<<<<<< HEAD
   preloadCriticalResources: () => performanceOptimizer.preloadCriticalResources(),
-  measurePageLoadMetrics: () => performanceOptimizer.measurePageLoadTiming()
-};
-=======
+  measurePageLoadMetrics: () => performanceOptimizer.measurePageLoadTiming(),
   getMetrics,
   initialize
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-a3c4

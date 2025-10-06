@@ -1,4 +1,4 @@
-import Link from 'next/link';
+// import Link from 'next/link'; // Unused for now
 
 export const metadata = {
   title: 'Enterprise Solutions - Zion Tech Group',
@@ -10,7 +10,6 @@ export const metadata = {
 
 export default function EnterprisePage() {
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
       <header className="relative overflow-hidden">
@@ -31,13 +30,11 @@ export default function EnterprisePage() {
               </span>
             </div>
 
-            <h1 className="text-5xl md:text-7xl font-extrabold text-white mb-8">
-              Enterprise Solutions
+            <h1 className="text-5xl md:text-6xl font-extrabold text-white mb-6">
+              <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
+                Enterprise Solutions
+              </span>
             </h1>
-
-            <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Trusted by 500+ Fortune 500 Companies Worldwide
-            </p>
 
             <p className="text-lg text-gray-400 mb-12 max-w-3xl mx-auto">
               Transform your enterprise with our proven AI solutions. Achieve
@@ -45,232 +42,128 @@ export default function EnterprisePage() {
               uptime with enterprise-grade security and compliance.
             </p>
 
-=======
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
-      {/* Hero Section */}
-      <header className="relative overflow-hidden">
-        <div className="absolute inset-0">
-          <div className="absolute top-10 left-10 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute top-40 right-20 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
-        </div>
-        
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-          <div className="text-center">
-            <div className="flex items-center justify-center gap-2 mb-6">
-              <span className="text-2xl">🏢</span>
-              <span className="text-yellow-400 font-bold text-xl">Enterprise AI Solutions</span>
-            </div>
-            
-            <h1 className="text-5xl md:text-6xl font-extrabold text-white mb-6">
-              <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-                Enterprise Solutions
-              </span>
-            </h1>
-            
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Trusted by 500+ Fortune 500 Companies Worldwide
-            </p>
-            
->>>>>>> cursor/fix-errors-and-merge-to-main-a3c4
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
               <a
                 href="/contact"
                 className="group flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl"
               >
-<<<<<<< HEAD
-                <span>Schedule Enterprise Demo</span>
-                <span className="group-hover:translate-x-1 transition-transform">
-                  →
-                </span>
-              </Link>
-              <Link
-                href="#solutions"
-                className="group flex items-center gap-3 bg-white/10 hover:bg-white/20 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 border border-white/30"
-              >
-                <span>View Solutions</span>
-                <span className="group-hover:translate-x-1 transition-transform">
-                  ↓
-                </span>
-              </Link>
-=======
-                Get Enterprise Consultation
+                <span>Get Enterprise Quote</span>
+                <svg
+                  className="w-5 h-5 group-hover:translate-x-1 transition-transform"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                  />
+                </svg>
               </a>
               <a
-                href="/services"
-                className="border-2 border-white/30 hover:border-white/60 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 hover:bg-white/10"
+                href="#solutions"
+                className="text-gray-300 hover:text-white font-medium py-4 px-8 transition-colors"
               >
-                View All Services
+                View Solutions
               </a>
->>>>>>> cursor/fix-errors-and-merge-to-main-a3c4
             </div>
           </div>
         </div>
       </header>
 
-<<<<<<< HEAD
       {/* Solutions Section */}
       <section id="solutions" className="py-24">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl font-bold text-white mb-4">
               Enterprise AI Solutions
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
               Comprehensive AI solutions designed for enterprise-scale
-              operations and Fortune 500 requirements.
-=======
-      {/* Features Section */}
-      <section className="py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Enterprise-Grade AI Solutions
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive AI and IT solutions designed for Fortune 500 companies, delivering unprecedented ROI and competitive advantage.
->>>>>>> cursor/fix-errors-and-merge-to-main-a3c4
+              transformation
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-<<<<<<< HEAD
-            {/* Solution Cards */}
-            {[
-              {
-                title: 'Autonomous Operations',
-                description:
-                  'Self-healing infrastructure with 99.99% uptime and 95% cost reduction.',
-                icon: '🤖',
-                metrics: [
-                  '99.99% Uptime',
-                  '95% Cost Reduction',
-                  'Zero Touch Operations',
-                ],
-              },
-              {
-                title: 'Business Intelligence',
-                description:
-                  'AI-powered analytics delivering 30,000% ROI and real-time insights.',
-                icon: '📊',
-                metrics: [
-                  '30,000% ROI',
-                  '$750B+ Savings',
-                  'Real-time Analytics',
-                ],
-              },
-              {
-                title: 'Quantum Security',
-                description:
-                  'Quantum-resistant cryptography with 99.99% security against attacks.',
-                icon: '🔒',
-                metrics: ['99.99% Security', '<1ms Overhead', 'Zero Breaches'],
-              },
-            ].map((solution, index) => (
-              <div
-                key={index}
-                className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-white/40 transition-all duration-500 hover:scale-105"
-              >
-                <div className="text-4xl mb-4">{solution.icon}</div>
-                <h3 className="text-2xl font-bold text-white mb-4">
-                  {solution.title}
-                </h3>
-                <p className="text-gray-300 mb-6">{solution.description}</p>
-                <div className="space-y-2">
-                  {solution.metrics.map((metric, i) => (
-                    <div key={i} className="flex items-center gap-2">
-                      <span className="w-2 h-2 bg-cyan-400 rounded-full"></span>
-                      <span className="text-gray-300 text-sm">{metric}</span>
-                    </div>
-                  ))}
-                </div>
-=======
-            {[
-              {
-                title: 'Autonomous Operations',
-                description: 'Self-healing infrastructure achieving 99.99% uptime and 95% cost reduction.',
-                icon: '🤖',
-                metrics: ['99.99% Uptime', '95% Cost Reduction', 'Zero Touch Operations']
-              },
-              {
-                title: 'Business Intelligence',
-                description: 'AI-powered analytics delivering 30,000% ROI and unprecedented insights.',
-                icon: '📊',
-                metrics: ['30,000% ROI', '$750B+ Savings', '99.99% Accuracy']
-              },
-              {
-                title: 'Quantum Security',
-                description: 'Quantum-resistant cryptography protecting against classical and quantum attacks.',
-                icon: '🔒',
-                metrics: ['99.99% Security', '<1ms Overhead', 'Zero Breaches']
-              }
-            ].map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-white/40 transition-all duration-500">
-                <div className="text-4xl mb-4">{feature.icon}</div>
-                <h3 className="text-2xl font-bold text-white mb-4">{feature.title}</h3>
-                <p className="text-gray-300 mb-6">{feature.description}</p>
-                <ul className="space-y-2">
-                  {feature.metrics.map((metric, idx) => (
-                    <li key={idx} className="text-cyan-400 text-sm">✓ {metric}</li>
-                  ))}
-                </ul>
->>>>>>> cursor/fix-errors-and-merge-to-main-a3c4
-              </div>
-            ))}
+            {/* Solution 1 */}
+            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-cyan-500/50 transition-all duration-300 group">
+              <div className="text-4xl mb-4">🤖</div>
+              <h3 className="text-2xl font-bold text-white mb-4">
+                Autonomous AI Systems
+              </h3>
+              <p className="text-gray-400 mb-6">
+                Self-managing AI systems that optimize operations, reduce costs,
+                and improve efficiency across your entire organization.
+              </p>
+              <ul className="space-y-2 text-sm text-gray-300">
+                <li>• 99.9% uptime guarantee</li>
+                <li>• $50M+ annual cost savings</li>
+                <li>• 24/7 autonomous operation</li>
+              </ul>
+            </div>
+
+            {/* Solution 2 */}
+            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-purple-500/50 transition-all duration-300 group">
+              <div className="text-4xl mb-4">⚡</div>
+              <h3 className="text-2xl font-bold text-white mb-4">
+                Quantum Computing
+              </h3>
+              <p className="text-gray-400 mb-6">
+                Next-generation quantum computing solutions for complex
+                optimization problems and advanced analytics.
+              </p>
+              <ul className="space-y-2 text-sm text-gray-300">
+                <li>• 1000x faster processing</li>
+                <li>• Advanced cryptography</li>
+                <li>• Future-proof technology</li>
+              </ul>
+            </div>
+
+            {/* Solution 3 */}
+            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-green-500/50 transition-all duration-300 group">
+              <div className="text-4xl mb-4">🔒</div>
+              <h3 className="text-2xl font-bold text-white mb-4">
+                Enterprise Security
+              </h3>
+              <p className="text-gray-400 mb-6">
+                Military-grade security solutions with zero-trust architecture
+                and advanced threat detection.
+              </p>
+              <ul className="space-y-2 text-sm text-gray-300">
+                <li>• SOC 2 Type II certified</li>
+                <li>• Zero-trust architecture</li>
+                <li>• Real-time threat detection</li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-24">
-<<<<<<< HEAD
-        <div className="container mx-auto px-4">
-          <div className="text-center bg-white/5 backdrop-blur-lg rounded-3xl p-12 border border-white/20">
-            <h3 className="text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Enterprise?
-            </h3>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Join 500+ Fortune 500 companies achieving unprecedented
-              transformation with our enterprise AI solutions.
-            </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-              <Link
-                href="tel:+13024640950"
-                className="group flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl"
-              >
-                <span className="text-xl">📞</span>
-                <span>Call +1 302 464 0950</span>
-              </Link>
-              <Link
-                href="mailto:info@ziontechgroup.com"
-                className="group flex items-center gap-3 bg-white/10 hover:bg-white/20 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 border border-white/30"
-              >
-                <span className="text-xl">📧</span>
-                <span>Get Enterprise Consultation</span>
-              </Link>
-=======
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-12 border border-white/20">
-            <h2 className="text-3xl font-bold text-white mb-6">
-              Ready to Transform Your Enterprise?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Join Fortune 500 companies achieving unprecedented success with our enterprise AI solutions.
-            </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-              <a
-                href="/contact"
-                className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl"
-              >
-                Get Expert Consultation
-              </a>
-              <a
-                href="/blog"
-                className="border-2 border-white/30 hover:border-white/60 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 hover:bg-white/10"
-              >
-                View Case Studies
-              </a>
->>>>>>> cursor/fix-errors-and-merge-to-main-a3c4
-            </div>
+      <section className="py-24 bg-gradient-to-r from-cyan-500/10 to-purple-500/10">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-4xl font-bold text-white mb-6">
+            Ready to Transform Your Enterprise?
+          </h2>
+          <p className="text-xl text-gray-400 mb-8 max-w-3xl mx-auto">
+            Join 500+ Fortune 500 companies already using our AI solutions to
+            drive innovation and growth.
+          </p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+            <a
+              href="/contact"
+              className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl"
+            >
+              Schedule Enterprise Demo
+            </a>
+            <a
+              href="tel:+13024640950"
+              className="text-cyan-400 hover:text-cyan-300 font-medium py-4 px-8 transition-colors"
+            >
+              Call: +1 (302) 464-0950
+            </a>
           </div>
         </div>
       </section>
