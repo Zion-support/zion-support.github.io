@@ -112,15 +112,8 @@ export const usePageLoadPerformance = () => {
               navigation.domContentLoadedEventStart,
             loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
             firstByte: navigation.responseStart - navigation.requestStart,
-<<<<<<< HEAD
-            domInteractive:
-              navigation.domInteractive - (navigation as any).navigationStart,
-            totalLoadTime:
-              navigation.loadEventEnd - (navigation as any).navigationStart,
-=======
             domInteractive: navigation.domInteractive - (navigation as any).navigationStart,
             totalLoadTime: navigation.loadEventEnd - (navigation as any).navigationStart,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a4c9
           };
 
           // Track each metric
@@ -149,8 +142,6 @@ export const usePageLoadPerformance = () => {
       window.addEventListener('load', trackPageLoad);
       return () => window.removeEventListener('load', trackPageLoad);
     }
-    
-    return undefined;
   }, []);
 };
 
@@ -183,15 +174,7 @@ export const useResourcePerformance = () => {
  */
 export const useLongTaskMonitoring = () => {
   useEffect(() => {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a4c9
-    const observer = performanceOptimizer.monitorLongTasks((entries: PerformanceEntry[]) => {
-      entries.forEach((entry: PerformanceEntry) => {
-        analytics.track('long_task', 'performance', 'detected', undefined, entry.duration);
-=======
-    performanceOptimizer.monitorLongTasks((entries: any[]) => {
+    const observer = performanceOptimizer.monitorLongTasks((entries: any[]) => {
       entries.forEach((entry: any) => {
         analytics.track(
           'long_task',
@@ -200,18 +183,13 @@ export const useLongTaskMonitoring = () => {
           undefined,
           entry.duration
         );
->>>>>>> 71655f282840ed9a4a2a6696e410390223898ad3
       });
     });
 
     return () => {
-<<<<<<< HEAD
-      // Cleanup if needed
-=======
       if (observer && typeof observer.disconnect === 'function') {
         observer.disconnect();
       }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a4c9
     };
   }, []);
 };

@@ -1,7 +1,4 @@
-'use client';
-
-// import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function NotFound() {
   const popularPages = [
@@ -55,7 +52,7 @@ export default function NotFound() {
             {popularPages.map((page, index) => (
               <Link
                 key={index}
-                href={page.href}
+                to={page.href}
                 className='group bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-white/40 transition-all duration-500 transform hover:-translate-y-2'
               >
                 <div className='text-4xl mb-4'>{page.icon}</div>
@@ -70,12 +67,12 @@ export default function NotFound() {
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-          <ArrowRight
-            href="/"
+          <Link
+            to="/"
             className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl"
           >
             ← Back to Home
-          </ArrowRight>
+          </Link>
           <a
             href="tel:+13024640950"
             className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-600 hover:text-white transition-colors"
@@ -95,7 +92,7 @@ export default function NotFound() {
           </p>
           <div className='flex flex-col sm:flex-row items-center justify-center gap-4'>
             <Link
-              href='/'
+              to='/'
               className='group flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1'
             >
               <span className='text-xl'>🏠</span>
@@ -103,7 +100,7 @@ export default function NotFound() {
             </Link>
 
             <Link
-              href='/contact'
+              to='/contact'
               className='group flex items-center gap-3 bg-white/10 hover:bg-white/20 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 border border-white/30'
             >
               <span>Contact Support</span>

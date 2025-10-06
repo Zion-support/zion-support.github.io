@@ -632,7 +632,6 @@ class PerformanceOptimizer {
     return Object.fromEntries(this.metrics);
   }
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-28f0
   // Add critical resource hints for better performance
   addCriticalResourceHints(): void {
     if (typeof document === 'undefined') return;
