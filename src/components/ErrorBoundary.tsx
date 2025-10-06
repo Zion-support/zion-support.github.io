@@ -1,5 +1,5 @@
 import { Component, type ErrorInfo, type ReactNode } from 'react';
-// import { '⚠️' } from 'lucide-react';
+// Using a simple error icon instead of lucide-react
 
 interface Props {
   children: ReactNode;
@@ -27,23 +27,30 @@ class ErrorBoundary extends Component<Props, State> {
 
   override render() {
     if (this.state.hasError) {
-      return this.props.fallback || (
-        <div className="min-h-screen flex items-center justify-center bg-gray-900">
-          <div className="text-center p-8">
-            <span className="w-16 h-16 text-red-500 mx-auto mb-4 text-4xl">⚠️</span>
-            <h1 className="text-2xl font-bold text-white mb-4">Something went wrong</h1>
-            <p className="text-gray-300 mb-6">
-              We're sorry, but something unexpected happened. Please try refreshing the page.
-            </p>
-            <p className="text-gray-400 mb-8">We're working to fix this issue.</p>
-            <button
-              onClick={() => window.location.reload()}
-              className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors"
-            >
-              Refresh Page
-            </button>
+      return (
+        this.props.fallback || (
+          <div className='min-h-screen flex items-center justify-center bg-gray-900'>
+            <div className='text-center p-8'>
+              <div className='w-16 h-16 text-red-500 mx-auto mb-4 text-6xl'>⚠️</div>
+              <h1 className='text-2xl font-bold text-white mb-4'>
+                Something went wrong
+              </h1>
+              <p className='text-gray-300 mb-6'>
+                We're sorry, but something unexpected happened. Please try
+                refreshing the page.
+              </p>
+              <p className='text-gray-400 mb-8'>
+                We're working to fix this issue.
+              </p>
+              <button
+                onClick={() => window.location.reload()}
+                className='bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors'
+              >
+                Refresh Page
+              </button>
+            </div>
           </div>
-        </div>
+        )
       );
     }
 

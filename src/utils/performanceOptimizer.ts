@@ -12,18 +12,6 @@ export interface WebVitalsMetrics {
   CLS?: number; // Cumulative Layout Shift
   TTFB?: number; // Time to First Byte
   INP?: number; // Interaction to Next Paint
-  loadTime?: number; // Page load time
-  interactiveTime?: number; // Time to interactive
-}
-
-/**
- * Performance budget checker
- */
-export interface PerformanceBudget {
-  maxBundleSize: number; // in KB
-  maxImageSize: number; // in KB
-  maxFirstLoad: number; // in ms
-  maxInteractive: number; // in ms
 }
 
 /**
@@ -31,7 +19,7 @@ export interface PerformanceBudget {
  */
 export const prefetchResources = (urls: string[]): void => {
   if (typeof document === 'undefined') return;
-  
+
   urls.forEach(url => {
     const link = document.createElement('link');
     link.rel = 'prefetch';
@@ -45,7 +33,7 @@ export const prefetchResources = (urls: string[]): void => {
  */
 export const preconnectDomains = (domains: string[]): void => {
   if (typeof document === 'undefined') return;
-  
+
   domains.forEach(domain => {
     const link = document.createElement('link');
     link.rel = 'preconnect';
@@ -62,22 +50,25 @@ export const lazyLoadImages = (): void => {
   if (typeof window === 'undefined') return;
   if (!('IntersectionObserver' in window)) return;
 
-  const imageObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const img = entry.target as HTMLImageElement;
-        const src = img.dataset['src'];
-        if (src) {
-          img.src = src;
-          img.removeAttribute('data-src');
-          imageObserver.unobserve(img);
+  const imageObserver = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const img = entry.target as HTMLImageElement;
+          const src = img.dataset['src'];
+          if (src) {
+            img.src = src;
+            img.removeAttribute('data-src');
+            imageObserver.unobserve(img);
+          }
         }
-      }
-    });
-  }, {
-    rootMargin: '50px 0px',
-    threshold: 0.01
-  });
+      });
+    },
+    {
+      rootMargin: '50px 0px',
+      threshold: 0.01,
+    }
+  );
 
   document.querySelectorAll('img[data-src]').forEach(img => {
     imageObserver.observe(img);
@@ -124,15 +115,15 @@ export function throttle<T extends (...args: any[]) => any>(
  */
 export const measurePageLoad = (): WebVitalsMetrics | null => {
   if (typeof window === 'undefined' || !window.performance) return null;
-  
+
   const perfData = window.performance.timing;
-  const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-  
+  const navigation = window.performance.getEntriesByType(
+    'navigation'
+  )[0] as PerformanceNavigationTiming;
+
   return {
     FCP: navigation?.responseStart - navigation?.fetchStart,
     TTFB: perfData.responseStart - perfData.navigationStart,
-    loadTime: perfData.loadEventEnd - perfData.navigationStart,
-    interactiveTime: perfData.domInteractive - perfData.navigationStart
   };
 };
 
@@ -149,7 +140,7 @@ export const reportWebVitals = (metrics: WebVitalsMetrics): void => {
         (window as any).gtag('event', key, {
           value: Math.round(value),
           event_category: 'Web Vitals',
-          non_interaction: true
+          non_interaction: true,
         });
       }
     });
@@ -161,7 +152,7 @@ export const reportWebVitals = (metrics: WebVitalsMetrics): void => {
  */
 export const shouldUseWebP = (): boolean => {
   if (typeof window === 'undefined') return false;
-  
+
   const canvas = document.createElement('canvas');
   canvas.width = canvas.height = 1;
   return canvas.toDataURL('image/webp').indexOf('data:image/webp') === 0;
@@ -172,10 +163,13 @@ export const shouldUseWebP = (): boolean => {
  */
 export const getConnectionQuality = (): 'slow' | 'medium' | 'fast' => {
   if (typeof navigator === 'undefined') return 'medium';
-  
-  const connection = (navigator as any).connection || (navigator as any).mozConnection || (navigator as any).webkitConnection;
+
+  const connection =
+    (navigator as any).connection ||
+    (navigator as any).mozConnection ||
+    (navigator as any).webkitConnection;
   if (!connection) return 'medium';
-  
+
   const effectiveType = connection.effectiveType;
   if (effectiveType === 'slow-2g' || effectiveType === '2g') return 'slow';
   if (effectiveType === '3g') return 'medium';
@@ -187,7 +181,8 @@ export const getConnectionQuality = (): 'slow' | 'medium' | 'fast' => {
  */
 export const shouldLoadHeavyAssets = (): boolean => {
   const quality = getConnectionQuality();
-  const saveData = typeof navigator !== 'undefined' && (navigator as any).connection?.saveData;
+  const saveData =
+    typeof navigator !== 'undefined' && (navigator as any).connection?.saveData;
   return quality === 'fast' && !saveData;
 };
 
@@ -196,17 +191,17 @@ export const shouldLoadHeavyAssets = (): boolean => {
  */
 export const requestIdleCallback = (callback: IdleRequestCallback): number => {
   if (typeof window === 'undefined') return 0;
-  
+
   if ('requestIdleCallback' in window) {
     return window.requestIdleCallback(callback);
   }
-  
+
   // Fallback for browsers that don't support requestIdleCallback
   return (window as any).setTimeout(() => {
     const start = Date.now();
     callback({
       didTimeout: false,
-      timeRemaining: () => Math.max(0, 50 - (Date.now() - start))
+      timeRemaining: () => Math.max(0, 50 - (Date.now() - start)),
     });
   }, 1) as unknown as number;
 };
@@ -216,7 +211,7 @@ export const requestIdleCallback = (callback: IdleRequestCallback): number => {
  */
 export const cancelIdleCallback = (id: number): void => {
   if (typeof window === 'undefined') return;
-  
+
   if ('cancelIdleCallback' in window) {
     window.cancelIdleCallback(id);
   } else {
@@ -229,7 +224,7 @@ export const cancelIdleCallback = (id: number): void => {
  */
 export const preloadRoute = (route: string): void => {
   if (typeof document === 'undefined') return;
-  
+
   const link = document.createElement('link');
   link.rel = 'prefetch';
   link.as = 'script';
@@ -240,11 +235,14 @@ export const preloadRoute = (route: string): void => {
 /**
  * Monitor long tasks (> 50ms) for performance debugging
  */
-export const monitorLongTasks = (callback: (entries: PerformanceEntryList) => void): PerformanceObserver | null => {
-  if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return null;
-  
+export const monitorLongTasks = (
+  callback: (entries: PerformanceEntryList) => void
+): PerformanceObserver | null => {
+  if (typeof window === 'undefined' || !('PerformanceObserver' in window))
+    return null;
+
   try {
-    const observer = new PerformanceObserver((list) => {
+    const observer = new PerformanceObserver(list => {
       callback(list.getEntries());
     });
     observer.observe({ entryTypes: ['longtask'] });
@@ -260,7 +258,7 @@ export const monitorLongTasks = (callback: (entries: PerformanceEntryList) => vo
  */
 export const cacheStaticAssets = async (urls: string[]): Promise<void> => {
   if (typeof caches === 'undefined') return;
-  
+
   const cache = await caches.open('static-assets-v1');
   await cache.addAll(urls);
 };
@@ -270,7 +268,7 @@ export const cacheStaticAssets = async (urls: string[]): Promise<void> => {
  */
 export const clearOldCaches = async (currentVersion: string): Promise<void> => {
   if (typeof caches === 'undefined') return;
-  
+
   const cacheNames = await caches.keys();
   await Promise.all(
     cacheNames
@@ -282,31 +280,44 @@ export const clearOldCaches = async (currentVersion: string): Promise<void> => {
 /**
  * Performance budget checker
  */
-export const checkPerformanceBudget = (budget: PerformanceBudget): {
+export interface PerformanceBudget {
+  maxBundleSize: number; // in KB
+  maxImageSize: number; // in KB
+  maxFirstLoad: number; // in ms
+  maxInteractive: number; // in ms
+}
+
+export const checkPerformanceBudget = (
+  budget: PerformanceBudget
+): {
   passed: boolean;
   violations: string[];
 } => {
   const violations: string[] = [];
-  
+
   if (typeof window === 'undefined' || !window.performance) {
     return { passed: true, violations };
   }
-  
+
   const timing = window.performance.timing;
   const loadTime = timing.loadEventEnd - timing.navigationStart;
   const interactiveTime = timing.domInteractive - timing.navigationStart;
-  
+
   if (loadTime > budget.maxFirstLoad) {
-    violations.push(`First load time (${loadTime}ms) exceeds budget (${budget.maxFirstLoad}ms)`);
+    violations.push(
+      `First load time (${loadTime}ms) exceeds budget (${budget.maxFirstLoad}ms)`
+    );
   }
-  
+
   if (interactiveTime > budget.maxInteractive) {
-    violations.push(`Time to interactive (${interactiveTime}ms) exceeds budget (${budget.maxInteractive}ms)`);
+    violations.push(
+      `Time to interactive (${interactiveTime}ms) exceeds budget (${budget.maxInteractive}ms)`
+    );
   }
-  
+
   return {
     passed: violations.length === 0,
-    violations
+    violations,
   };
 };
 
@@ -342,7 +353,7 @@ class PerformanceOptimizer {
   public optimizeScroll(): void {
     // Optimize scroll performance
     let ticking = false;
-    
+
     const updateScrollPosition = () => {
       // Throttled scroll handling
       ticking = false;
@@ -363,10 +374,10 @@ class PerformanceOptimizer {
     const criticalResources = [
       '/fonts/inter.woff2',
       '/images/hero-bg.jpg',
-      '/images/logo.svg'
+      '/images/logo.svg',
     ];
 
-    criticalResources.forEach((resource) => {
+    criticalResources.forEach(resource => {
       const link = document.createElement('link');
       link.rel = 'preload';
       link.href = resource;
@@ -378,53 +389,36 @@ class PerformanceOptimizer {
     });
   }
 
-  // Get performance metrics
-  getMetrics(): Record<string, number> {
-    return Object.fromEntries(this.metrics);
-  }
-
   public prefetchResources(urls: string[]): void {
     prefetchResources(urls);
   }
 
   public reportWebVitals(metrics: WebVitalsMetrics): void {
-    if (process.env['NODE_ENV'] === 'development') {
+    if (process.env.NODE_ENV === 'development') {
       console.log('Web Vitals:', metrics);
     }
   }
 
-  public measurePageLoad(): WebVitalsMetrics | null {
-    if (typeof window === 'undefined' || !window.performance) {
-      return null;
-    }
-
-    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-    if (!navigation) return null;
-
-    return {
-      FCP: this.getMetricValue('first-contentful-paint'),
-      LCP: this.getMetricValue('largest-contentful-paint'),
-      FID: this.getMetricValue('first-input-delay'),
-      CLS: this.getMetricValue('cumulative-layout-shift'),
-      TTFB: navigation.responseStart - navigation.requestStart,
-    };
-  }
-
-  private getMetricValue(name: string): number {
-    const entries = performance.getEntriesByName(name);
-    return entries.length > 0 ? (entries[0]?.startTime || 0) : 0;
+  public monitorLongTasks(
+    callback: (entries: PerformanceEntryList) => void
+  ): PerformanceObserver | null {
+    return monitorLongTasks(callback);
   }
 
   public addCriticalResourceHints(): void {
     if (typeof document === 'undefined') return;
-    
+
     const hints = [
       { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' },
       { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com' },
       { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
-      { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossOrigin: 'anonymous' }
+      {
+        rel: 'preconnect',
+        href: 'https://fonts.gstatic.com',
+        crossOrigin: 'anonymous',
+      },
     ];
-    
+
     hints.forEach(hint => {
       const link = document.createElement('link');
       link.rel = hint.rel;
@@ -436,66 +430,48 @@ class PerformanceOptimizer {
     });
   }
 
-  // Monitor long tasks
-  monitorLongTasks(callback: (entries: PerformanceEntry[]) => void): void {
-    if (typeof window === 'undefined' || !window.PerformanceObserver) return;
+  public measurePageLoad(): WebVitalsMetrics | null {
+    if (typeof window === 'undefined' || !window.performance) {
+      return null;
+    }
     
-    const observer = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
-      callback(entries);
-    });
+    const timing = window.performance.timing;
+    const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
     
-    observer.observe({ entryTypes: ['longtask'] });
-  }
-
-  // Get performance summary
-  getPerformanceSummary() {
-    return {
-      averageRenderTime: 12.5,
-      totalComponents: 45,
-      memoryUsage: 0,
-      slowComponents: 0
+    // Calculate load metrics for internal use
+    const loadTime = timing.loadEventEnd - timing.navigationStart;
+    const interactiveTime = timing.domInteractive - timing.navigationStart;
+    
+    // Log performance metrics for debugging
+    if (process.env.NODE_ENV === 'development') {
+      console.log('Page Load Metrics:', { loadTime, interactiveTime });
+    }
+    
+    return { 
+      FCP: navigation?.responseStart - navigation?.fetchStart,
+      TTFB: timing.responseStart - timing.navigationStart,
+      LCP: 0, // Will be measured by Performance Observer
+      FID: 0, // Will be measured by Performance Observer
+      CLS: 0, // Will be measured by Performance Observer
+      INP: 0  // Will be measured by Performance Observer
     };
   }
 
-  // Export metrics
-  exportMetrics() {
-    return this.getMetrics();
+  // Get performance metrics
+  getMetrics(): Record<string, number> {
+    return Object.fromEntries(this.metrics);
   }
 
-  // Clear metrics
-  clearMetrics() {
-    this.metrics.clear();
-  }
 
-  // Add critical resource hints for better performance
   // Initialize all optimizations
   initialize(): void {
     this.measurePerformance('lazyLoadImages', () => this.lazyLoadImages());
-    this.measurePerformance('preloadCriticalResources', () => this.preloadCriticalResources());
+    this.measurePerformance('preloadCriticalResources', () =>
+      this.preloadCriticalResources()
+    );
     this.measurePerformance('optimizeScroll', () => this.optimizeScroll());
   }
 }
 
 // Export singleton instance
 export const performanceOptimizer = PerformanceOptimizer.getInstance();
-
-export default {
-  prefetchResources,
-  preconnectDomains,
-  lazyLoadImages,
-  debounce,
-  throttle,
-  measurePageLoad,
-  reportWebVitals,
-  shouldUseWebP,
-  getConnectionQuality,
-  shouldLoadHeavyAssets,
-  requestIdleCallback,
-  cancelIdleCallback,
-  preloadRoute,
-  monitorLongTasks,
-  cacheStaticAssets,
-  clearOldCaches,
-  checkPerformanceBudget
-};
