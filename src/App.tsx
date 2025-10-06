@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import { Suspense, useEffect } from 'react';
+=======
+import React, { Suspense, lazy, useEffect } from 'react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e4e
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './index.css';
 
@@ -86,9 +90,15 @@ function App() {
     // Initialize basic optimizations
     const initializeOptimizations = () => {
       try {
+<<<<<<< HEAD
         console.log('App initialized successfully');
       } catch (error) {
         console.error('Failed to initialize app:', error);
+=======
+        console.log('All optimization systems initialized successfully');
+      } catch (error) {
+        console.error('Failed to initialize optimization systems:', error);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e4e
       }
     };
 
@@ -99,6 +109,7 @@ function App() {
   return (
     <div>
       <Router>
+<<<<<<< HEAD
         <Suspense
           fallback={
             <div className='min-h-screen flex items-center justify-center bg-gray-50'>
@@ -109,6 +120,9 @@ function App() {
             </div>
           }
         >
+=======
+        <Suspense fallback={<div className="min-h-screen flex items-center justify-center">Loading...</div>}>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e4e
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/about' element={<About />} />
@@ -125,4 +139,49 @@ function App() {
   );
 }
 
+<<<<<<< HEAD
 export default App;
+=======
+// Simple Error Boundary
+class ErrorBoundary extends React.Component<
+  { children: React.ReactNode; fallback?: React.ReactNode },
+  { hasError: boolean }
+> {
+  constructor(props: { children: React.ReactNode; fallback?: React.ReactNode }) {
+    super(props);
+    this.state = { hasError: false };
+  }
+
+  static getDerivedStateFromError() {
+    return { hasError: true };
+  }
+
+  componentDidCatch(_error: Error, errorInfo: React.ErrorInfo) {
+    console.error('Error caught by boundary:', errorInfo);
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return this.props.fallback || (
+        <div className="min-h-screen flex items-center justify-center bg-gray-50">
+          <div className="text-center">
+            <h1 className="text-2xl font-bold text-gray-900 mb-4">Something went wrong</h1>
+            <button
+              onClick={() => this.setState({ hasError: false })}
+              className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+            >
+              Try again
+            </button>
+          </div>
+        </div>
+      );
+    }
+
+    return this.props.children;
+  }
+}
+
+export { ErrorBoundary };
+
+export default App;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e4e
