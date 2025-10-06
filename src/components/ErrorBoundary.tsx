@@ -41,6 +41,7 @@ class ErrorBoundary extends Component<Props, State> {
             >
               Refresh Page
             </button>
+            <p className="text-gray-400 mb-8">We're working to fix this issue.</p>
           </div>
         </div>
       );
