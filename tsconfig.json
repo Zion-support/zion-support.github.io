@@ -2,7 +2,11 @@
   "compilerOptions": {
     "target": "ES2020",
     "useDefineForClassFields": true,
-    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "lib": [
+      "ES2020",
+      "DOM",
+      "DOM.Iterable"
+    ],
     "module": "ESNext",
     "skipLibCheck": true,
     "moduleResolution": "node",
@@ -19,11 +23,21 @@
     "allowSyntheticDefaultImports": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"],
-      "@/components/*": ["src/components/*"],
-      "@/pages/*": ["src/pages/*"],
-      "@/utils/*": ["src/utils/*"],
-      "@/types/*": ["src/types/*"]
+      "@/*": [
+        "src/*"
+      ],
+      "@/components/*": [
+        "src/components/*"
+      ],
+      "@/pages/*": [
+        "src/pages/*"
+      ],
+      "@/utils/*": [
+        "src/utils/*"
+      ],
+      "@/types/*": [
+        "src/types/*"
+      ]
     },
     "allowJs": true,
     "forceConsistentCasingInFileNames": true,
@@ -38,7 +52,13 @@
     "allowUnreachableCode": false,
     "verbatimModuleSyntax": true
   },
-  "include": ["src/**/*", "app/**/*", "**/*.ts", "**/*.tsx"],
+  "include": [
+    "src/**/*",
+    "app/enterprise/**/*",
+    "app/not-found.tsx",
+    "app/page.tsx",
+    "app/layout.tsx"
+  ],
   "exclude": [
     "node_modules",
     "dist",
@@ -57,9 +77,7 @@
     "api.disabled.temp/**",
     "api-backup/**",
     "apps.backup/**",
-    "apps/**",
     "automation_backup/**",
-    "automation/**",
     "ai-optimization-backups/**",
     "automation_logs/**",
     "all-automations-reports/**",
@@ -67,9 +85,6 @@
     "corrupted-files-backup/**",
     "corrupted_backup/**",
     "corrupted_files_backup_2/**",
-    "corrupted-src-backup/**",
-    "backup-banner-components/**",
-    "backup-pages/**",
     "content/**",
     "contracts/**",
     "components_backup/**",
@@ -85,11 +100,6 @@
     "services/**",
     "middleware/**",
     "app/blog/**",
-    "app/page-optimized.tsx",
-    "app/services/**/*",
-    "app/case-studies/**/*",
-    "app/guides/**/*",
-    "app/components/**/*",
     "EnhancedFooter.tsx",
     "EnhancedHeader.tsx",
     "EnhancedNavigation.tsx",
@@ -97,43 +107,7 @@
     "SidebarNavigation.tsx",
     "api-documentation.tsx",
     "app/components/NewContentPromotionalBanner2026.tsx",
-    "app/components/NewestContent2025Banner.tsx",
-    "backup-problematic-files/**",
-    "backup/**",
-    "blog/**",
-    "broken_files_backup/**",
-    "case-studies/**",
-    "browserstack.config.ts",
-    "clean-build/**",
-    "components-disabled/**",
-    "components.disabled/**",
-    "components.disabled_full/**",
-    "contracts.disabled/**",
-    "corrupted-services-backup/**",
-    "cypress/**",
-    "cypress.disabled/**",
-    "data.disabled/**",
-    "cypress.config.ts",
-    "hooks.disabled/**",
-    "lib.disabled/**",
-    "lib.broken/**",
-    "lib/**",
-    "fix_utils_files.ts",
-    "jest.setup.ts",
-    "lint-target/**",
-    "marketing-index.ts",
-    "middleware.security.ts",
-    "middleware.ts",
-    "netlify/**",
-    "pages/blog/**",
-    "pages_minimal/**",
-    "src.corrupted/**",
-    "utils/**",
-    "vite.config.optimized.ts",
-    "vite.config.performance.ts",
-    "vite.config.d.ts",
-    "vite.config.ts",
-    "zion-website/**"
+    "app/components/NewestContent2025Banner.tsx"
   ],
   "references": [
     {
