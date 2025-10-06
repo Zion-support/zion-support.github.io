@@ -52,19 +52,9 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
         roi: '30,000%',
         success: '99.8%',
         timeline: '18 months',
-        guide: '60 min read'
-      },
-      readingTime: '60 min read',
       featured: true,
-      tags: ['Implementation Guide', 'ROI', 'Strategy', 'Framework', '30,000% ROI']
+      tags: ['Implementation', 'Guide', '30,000% ROI', 'Roadmap', 'Best Practices']
     }
-  ];
-
-  const filters = [
-    { id: 'all', label: 'All Content', count: content.length },
-    { id: 'blog', label: 'Blog Posts', count: content.filter(item => item.category === 'blog').length },
-    { id: 'case-study', label: 'Case Studies', count: content.filter(item => item.category === 'case-study').length },
-    { id: 'resource', label: 'Resources', count: content.filter(item => item.category === 'resource').length }
   ];
 
   const filteredContent = activeFilter === 'all' 
@@ -72,6 +62,7 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
     : content.filter(item => item.category === activeFilter);
 
   return (
+<<<<<<< HEAD
     <div className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 min-h-screen">
       <section className="relative z-10 container mx-auto px-4 py-16">
         {/* Header */}
@@ -86,9 +77,11 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
             Discover the revolutionary AI-powered business intelligence that's delivering 
             <span className="text-cyan-400 font-bold"> 30,000% ROI</span> and 
             <span className="text-green-400 font-bold"> $750B+ in annual savings</span> across Fortune 500 companies.
+=======
+>>>>>>> origin/merge-all-fixes
           </p>
-        </div>
 
+<<<<<<< HEAD
         {/* Success Metrics */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
           <div className="text-center">
@@ -124,10 +117,13 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
               {filter.label} ({filter.count})
             </button>
           ))}
+=======
+>>>>>>> origin/merge-all-fixes
         </div>
 
         {/* Content Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+<<<<<<< HEAD
           {filteredContent.map((item) => (
             <div
               key={item.id}
@@ -226,6 +222,8 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
         </div>
       </section>
     </div>
+=======
+>>>>>>> origin/merge-all-fixes
   );
 };
 

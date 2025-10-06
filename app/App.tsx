@@ -5,7 +5,10 @@ import { HelmetProvider } from 'react-helmet-async';
 // Components
 import ErrorBoundary from '../src/components/ErrorBoundary';
 import SEOOptimizer from '../src/components/SEOOptimizer';
+<<<<<<< HEAD
 import { LoadingSpinner } from '../components/LoadingComponents';
+=======
+>>>>>>> origin/merge-all-fixes
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import PerformanceDashboard from './components/PerformanceDashboard';
 
@@ -14,7 +17,7 @@ const HomePage = lazy(() => import('./page'));
 
 // Loading component is imported from components/LoadingComponents
 // Utils
-import performanceOptimizer from '../src/utils/performanceOptimizer';
+import { performanceOptimizer } from '../src/utils/performanceOptimizer';
 
 // Styles
 import '../index.css';

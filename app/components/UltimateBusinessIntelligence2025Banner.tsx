@@ -48,38 +48,23 @@ const UltimateBusinessIntelligence2025Banner = () => {
         roi: '30,000%',
         success: '99.8%',
         timeline: '18 months',
-        guide: '60 min read'
-      },
-      readingTime: '60 min read',
       featured: true
     }
   ];
 
   useEffect(() => {
-    const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % content.length);
     }, 5000);
 
-    return () => clearInterval(timer);
+    return () => clearInterval(interval);
   }, [content.length]);
-
-  useEffect(() => {
-    const dismissed = localStorage.getItem('ultimate-business-intelligence-2025-banner-dismissed');
-    if (dismissed === 'true') {
-      setIsVisible(false);
-    }
-  }, []);
-
-  const handleDismiss = () => {
-    setIsVisible(false);
-    localStorage.setItem('ultimate-business-intelligence-2025-banner-dismissed', 'true');
-  };
 
   if (!isVisible) return null;
 
   const currentContent = content[currentSlide];
 
   return (
+<<<<<<< HEAD
     <div className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 border-b border-white/10">
       {/* Animated Background */}
       <div className="absolute inset-0">
@@ -189,6 +174,8 @@ const UltimateBusinessIntelligence2025Banner = () => {
                   <div className="text-xs text-gray-400">ROI</div>
                 </div>
               </div>
+=======
+>>>>>>> origin/merge-all-fixes
             ))}
           </div>
 
