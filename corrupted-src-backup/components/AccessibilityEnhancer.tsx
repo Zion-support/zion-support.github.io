@@ -29,6 +29,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       mediaQuery.addEventListener('change', handleChange);
       return () => mediaQuery.removeEventListener('change', handleChange);
     }
+    return undefined;
   }, [enableHighContrast]);
 
   useEffect(() => {
@@ -41,6 +42,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       mediaQuery.addEventListener('change', handleChange);
       return () => mediaQuery.removeEventListener('change', handleChange);
     }
+    return undefined;
   }, [enableReducedMotion]);
 
   useEffect(() => {
@@ -93,6 +95,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
         document.removeEventListener('focusout', handleFocusOut);
       };
     }
+    return undefined;
   }, [enableKeyboardNavigation, enableScreenReaderSupport]);
 
   useEffect(() => {
