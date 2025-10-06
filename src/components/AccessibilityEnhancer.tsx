@@ -1,17 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { type ReactNode, useEffect } from 'react';
-=======
-import React, { useEffect } from 'react';
-import type { ReactNode } from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-02dd
-=======
-import React, { type ReactNode, useEffect } from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7834
-=======
-import React, { type ReactNode, useEffect } from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-8da8
 
 interface AccessibilityEnhancerProps {
   children: ReactNode;
