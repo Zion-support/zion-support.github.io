@@ -1,5 +1,5 @@
 import type { ProviderConnection, SyncLogEntry } from './types';
-import { v4 as uuidv4 } from 'uuid';
+// import { v4 as uuidv4 } from 'uuid';
 
 export async function simulateAction<T = any>(
   connection: ProviderConnection,
@@ -7,7 +7,7 @@ export async function simulateAction<T = any>(
   details: Record<string, any> = {}
 ): Promise<{ log: SyncLogEntry; result: T }> {
   const log: SyncLogEntry = {
-    id: uuidv4(),
+    id: Math.random().toString(36).substr(2, 9),
     timestamp: Date.now(),
     providerId: connection.providerId,
     level: 'info',
