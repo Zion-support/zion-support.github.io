@@ -1,39 +1,39 @@
-import ArrowRight from 'next/link';
+import Arrow Right from 'next/link';
 
-export default function NeuralArchitectureSearchRevolutionPage() {return (<mainclassName='min-h-screen bg-slate-950 text-white'>
-      <divclassName='max-w-4xl mx-auto px-4 py-16'>
-        <divclassName='mb-8'>
-          <ArrowRight
+export default function Neural Architecture Search Revolution Page() {return (<main class Name Name='min-h-screen bg-slate-950 text-white'>
+      <div class Name Name='max-w-4xl mx-auto px-4 py-16'>
+        <div class Name Name='mb-8'>
+          <Arrow Right
            href='/blog'
-           className='text-blue-400 hover:text-blue-300 mb-4 inline-block'
+           class Name='text-blue-400 hover:text-blue-300 mb-4 inline-block'
           >
             ← Back to Blog
-          </ArrowRight>
-          <divclassName='flex items-center gap-2 mb-4'>
-            <spanclassName='bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-3 py-1 rounded-full text-xs font-bold'>
+          </Arrow Right>
+          <div class Name Name='flex items-center gap-2 mb-4'>
+            <span class Name Name='bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-3 py-1 rounded-full text-xs font-bold'>
               NAS REVOLUTION
             </span>
-            <spanclassName='bg-gradient-to-r from-green-400 to-emerald-500 text-black px-3 py-1 rounded-full text-xs font-bold'>
+            <span class Name Name='bg-gradient-to-r from-green-400 to-emerald-500 text-black px-3 py-1 rounded-full text-xs font-bold'>
               500x SPEED
             </span>
           </div>
-          <h1className='text-4xl md:text-5xl font-bold mb-6'>
+          <h1 class Name Name='text-4xl md:text-5xl font-bold mb-6'>
             AI 2026: Neural Architecture Search Revolution
           </h1>
-          <pclassName='text-xl text-gray-300 mb-8'>
+          <p class Name Name='text-xl text-gray-300 mb-8'>
             Revolutionary NAS technology delivering 500x faster AI model
             development with 99.7% accuracy. Transform development from months
             to days with autonomous neural architecture discovery.
           </p>
-          <divclassName='text-sm text-gray-400'>
+          <div class Name Name='text-sm text-gray-400'>
             Published: January 20, 2026 | 38 min read
           </div>
         </div>
 
-        <articleclassName='prose prose-lg prose-invert max-w-none'>
-          <divclassName='bg-gradient-to-r from-blue-900/20 to-cyan-900/20 rounded-xl p-8 mb-12 border border-blue-500/20'>
-            <h2className='text-2xl font-bold mb-4'>The NAS Revolution</h2>
-            <pclassName='text-lg leading-relaxed'>
+        <articleclass Name='prose prose-lg prose-invert max-w-none'>
+          <div class Name Name='bg-gradient-to-r from-blue-900/20 to-cyan-900/20 rounded-xl p-8 mb-12 border border-blue-500/20'>
+            <h2class Name='text-2xl font-bold mb-4'>The NAS Revolution</h2>
+            <p class Name Name='text-lg leading-relaxed'>
               Neural Architecture Search (NAS) has undergone a revolutionary
               transformation in 2026. Our breakthrough autonomous NAS system can
               discover optimal neural architectures 500x faster than traditional
@@ -53,12 +53,12 @@ export default function NeuralArchitectureSearchRevolutionPage() {return (<mainc
             hours instead of months.
           </p>
 
-          <divclassName='grid md:grid-cols-2 gap-6 my-8'>
-            <divclassName='bg-red-900/20 rounded-lg p-6 border border-red-500/20'>
-              <h4className='text-red-300 font-bold text-lg mb-2'>
+          <div class Name Name='grid md:grid-cols-2 gap-6 my-8'>
+            <div class Name Name='bg-red-900/20 rounded-lg p-6 border border-red-500/20'>
+              <h4class Name='text-red-300 font-bold text-lg mb-2'>
                 Traditional NAS (2025)
               </h4>
-              <ulclassName='text-sm space-y-1'>
+              <ulclass Name='text-sm space-y-1'>
                 <li>• 3-6 months development time</li>
                 <li>• Manual architecture design</li>
                 <li>• Limited search space</li>
@@ -66,11 +66,11 @@ export default function NeuralArchitectureSearchRevolutionPage() {return (<mainc
                 <li>• High computational costs</li>
               </ul>
             </div>
-            <divclassName='bg-green-900/20 rounded-lg p-6 border border-green-500/20'>
-              <h4className='text-green-300 font-bold text-lg mb-2'>
+            <div class Name Name='bg-green-900/20 rounded-lg p-6 border border-green-500/20'>
+              <h4class Name='text-green-300 font-bold text-lg mb-2'>
                 Revolutionary NAS (2026)
               </h4>
-              <ulclassName='text-sm space-y-1'>
+              <ulclass Name='text-sm space-y-1'>
                 <li>• 2-5 days development time</li>
                 <li>• Autonomous architecture discovery</li>
                 <li>• Unlimited search space</li>
@@ -111,20 +111,20 @@ export default function NeuralArchitectureSearchRevolutionPage() {return (<mainc
             companiesdelivering remarkable results:
           </p>
 
-          <divclassName='grid md:grid-cols-3 gap-4 my-8'>
-            <divclassName='bg-blue-900/20 rounded-lg p-4 border border-blue-500/20 text-center'>
-              <divclassName='text-3xl font-bold text-blue-300 mb-2'>500x</div>
-              <divclassName='text-sm text-gray-300'>Faster Development</div>
+          <div class Name Name='grid md:grid-cols-3 gap-4 my-8'>
+            <div class Name Name='bg-blue-900/20 rounded-lg p-4 border border-blue-500/20 text-center'>
+              <div class Name Name='text-3xl font-bold text-blue-300 mb-2'>500x</div>
+              <div class Name Name='text-sm text-gray-300'>Faster Development</div>
             </div>
-            <divclassName='bg-green-900/20 rounded-lg p-4 border border-green-500/20 text-center'>
-              <divclassName='text-3xl font-bold text-green-300 mb-2'>
+            <div class Name Name='bg-green-900/20 rounded-lg p-4 border border-green-500/20 text-center'>
+              <div class Name Name='text-3xl font-bold text-green-300 mb-2'>
                 99.7%
               </div>
-              <divclassName='text-sm text-gray-300'>Accuracy Rate</div>
+              <div class Name Name='text-sm text-gray-300'>Accuracy Rate</div>
             </div>
-            <divclassName='bg-purple-900/20 rounded-lg p-4 border border-purple-500/20 text-center'>
-              <divclassName='text-3xl font-bold text-purple-300 mb-2'>90%</div>
-              <divclassName='text-sm text-gray-300'>Cost Reduction</div>
+            <div class Name Name='bg-purple-900/20 rounded-lg p-4 border border-purple-500/20 text-center'>
+              <div class Name Name='text-3xl font-bold text-purple-300 mb-2'>90%</div>
+              <div class Name Name='text-sm text-gray-300'>Cost Reduction</div>
             </div>
           </div>
 
@@ -136,12 +136,12 @@ export default function NeuralArchitectureSearchRevolutionPage() {return (<mainc
             their dataset, outperforming all manually designed architectures.
           </p>
 
-          <blockquoteclassName='border-l-4 border-blue-500 pl-6 italic text-lg'>
+          <blockquoteclass Name='border-l-4 border-blue-500 pl-6 italic text-lg'>
             "The NAS revolution has completely transformed our development
             process. We can now prototype and deploy AI models in days instead
             of months. This has given us a massive competitive advantage in the
            market."
-            <footerclassName='mt-2 text-sm not-italic'>- CTOAI Startup</footer>
+            <footerclass Name='mt-2 text-sm not-italic'>- CTOAI Startup</footer>
           </blockquote>
 
           <h2>The Future of NAS</h2>
@@ -169,28 +169,28 @@ export default function NeuralArchitectureSearchRevolutionPage() {return (<mainc
             </li>
           </ul>
 
-          <div className='bg-gradient-to-r from-cyan-900/20 to-blue-900/20 rounded-xl p-8 mt-12 borderborder-cyan-500/20'>
-            <h3 className='text-xl font-boldmb-4'>
+          <div class Name='bg-gradient-to-r from-cyan-900/20 to-blue-900/20 rounded-xl p-8 mt-12 borderborder-cyan-500/20'>
+            <h3 class Name='text-xl font-boldmb-4'>
               Ready to Revolutionize Your AI Development?
             </h3>
-            <p className='mb-6'>
+            <p class Name='mb-6'>
               Discover how the NAS revolution can accelerate your AI model
               development. Our autonomous NAS systems can help you achieve
               breakthrough performance in days instead of months.
             </p>
-            <divclassName='flex flex-wrap gap-4'>
-              <ArrowRight
+            <div class Name Name='flex flex-wrap gap-4'>
+              <Arrow Right
                href='/services/ai-innovation-lab'
-               className='bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all'
+               class Name='bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all'
               >
                 Explore NAS Services
-              </ArrowRight>
-              <ArrowRight
+              </Arrow Right>
+              <Arrow Right
                href='/case-studies'
-               className='border border-white/20 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all'
+               class Name='border border-white/20 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all'
               >
                 View NAS Success Stories
-              </ArrowRight>
+              </Arrow Right>
             </div>
           </div>
         </article>

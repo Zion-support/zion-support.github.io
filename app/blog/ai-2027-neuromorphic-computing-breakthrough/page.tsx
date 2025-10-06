@@ -1,11 +1,15 @@
 import ArrowRight from 'next/link';
 
-export const metadata = {title:'AI 2027: Neuromorphic Computing Breakthrough',
-  description:
-   'The complete guide to neuromorphic computing revolution in 2027',
-  type:'article',
-  publishedTime:'2027-01-20T00:00:00.000Z',
-  authors:['Zion Tech Group'],
+export const metadata = {
+  
+  title: 'AI 2027: Neuromorphic Computing Breakthrough',
+    description:
+      'The complete guide to neuromorphic computing revolution in 2027',
+    type: 'article',
+    publishedTime: '2027-01-20T00:00:00.000Z',
+    authors: ['Zion Tech Group'],
+  
+};,
 };
 
 export default function AI2027NeuromorphicComputingBreakthrough() {return (<divclassName='max-w-4xl mx-auto px-4 py-8'>

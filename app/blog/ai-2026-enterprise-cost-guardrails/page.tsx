@@ -1,9 +1,12 @@
 import ArrowRight from 'next/link';
 
-export const metadata = {title:'Enterprise Cost Guardrails (2026): Predictable AI spend',
+export const metadata = {
+  
+  title: 'Enterprise Cost Guardrails (2026): Predictable AI spend',
   description:
-   'Budgetstiersand KPI‑linked routing that keep GenAI costs predictable without hurting UX.',
-};
+    'Budgets, tiers, and KPI‑linked routing that keep GenAI costs predictable without hurting UX.',
+
+};;
 
 export default function Page() {return (<mainclassName='max-w-3xl mx-auto px-4 py-12 prose prose-invert'>
       <h1>Enterprise Cost Guardrails (2026)</h1>

@@ -1,9 +1,12 @@
 import ArrowRight from 'next/link';
 
-export const metadata = {title:'Reliable GenAI Platform 2026: ArchitectureGuardrailsand ROI',
+export const metadata = {
+  
+  title: 'Reliable GenAI Platform 2026: Architecture, Guardrails, and ROI',
   description:
-   'Design a reliable, cost‑efficient GenAI platform with routing, memoryevalsand policy guardrails. A pragmatic 2026 blueprint for enterprises.',
-};
+    'Design a reliable, cost‑efficient GenAI platform with routing, memory, evals, and policy guardrails. A pragmatic 2026 blueprint for enterprises.',
+
+};;
 
 export default function ReliableGenAIPlatform2026Page() {return (<divclassName='min-h-screen bg-slate-950 text-white'>
       <mainclassName='max-w-3xl mx-auto px-6 py-16'>

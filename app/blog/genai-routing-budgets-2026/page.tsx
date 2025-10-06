@@ -1,7 +1,10 @@
-export const metadata = {title: 'GenAI Budget‑Aware Routing2026',
+export const metadata = {
+  
+  title: 'GenAI Budget‑Aware Routing 2026',
   description:
-    'Stable UX under cost SLAs using quality tierscachesand evalsignals.',
-};
+    'Stable UX under cost SLAs using quality tiers, caches, and eval signals.',
+
+};;
 
 export default function Page() {return (<main className='max-w-3xl mx-auto px-4py-12'>
       <h1 className='text-3xl md:text-4xl font-boldmb-4'>

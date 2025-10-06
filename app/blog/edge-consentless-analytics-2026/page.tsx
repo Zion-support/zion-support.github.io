@@ -1,10 +1,13 @@
 // @ts-nocheck
 import ArrowRight from 'next/link';
 
-export const metadata = {title:'Edge Analytics 2026: Consent‑Safe Insights — Zion Tech Group',
+export const metadata = {
+  
+  title: 'Edge Analytics 2026: Consent‑Safe Insights — Zion Tech Group',
   description:
-   'Scoped IDson‑device aggregationand differential privacy for actionable insights without PII at <100ms.',
-};
+    'Scoped IDs, on‑device aggregation, and differential privacy for actionable insights without PII at <100ms.',
+
+};;
 
 export default function Page() {return (<mainclassName='max-w-4xl mx-auto px-4 py-12'>
       <divclassName='mb-8'>

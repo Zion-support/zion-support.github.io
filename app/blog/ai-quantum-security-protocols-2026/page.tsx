@@ -1,9 +1,12 @@
 import ArrowRight from 'next/link';
 
-export const metadata = {title:'AI Quantum Security Protocols 2026 | Zion Tech Group',
+export const metadata = {
+  
+  title: 'AI Quantum Security Protocols 2026 | Zion Tech Group',
   description:
-   'Protect AI systems with quantum‑resistant cryptography and verifiable guardrails. Achieve 99.99% security with sub‑millisecond overhead.',
-};
+    'Protect AI systems with quantum‑resistant cryptography and verifiable guardrails. Achieve 99.99% security with sub‑millisecond overhead.',
+
+};;
 
 export default function AIQuantumSecurityProtocols2026Page() {return (<divclassName='min-h-screen bg-gradient-to-br from-slate-950 via-indigo-950 to-purple-950 text-white'>
       <mainclassName='container mx-auto px-6 py-12'>

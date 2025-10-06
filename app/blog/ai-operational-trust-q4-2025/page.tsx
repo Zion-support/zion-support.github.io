@@ -1,9 +1,12 @@
 import ArrowRight from 'next/link';
 
-export const metadata = {title:'AI Operational Trust Q4 2025: Live Scorecards that Ship',
+export const metadata = {
+  
+  title: 'AI Operational Trust Q4 2025: Live Scorecards that Ship',
   description:
-   'KPI‑linked guardrails with PR checksbudgeted actionsand instant rollback to ship faster with confidence.',
-};
+    'KPI‑linked guardrails with PR checks, budgeted actions, and instant rollback to ship faster with confidence.',
+
+};;
 
 export default function AIOperationalTrustQ42025Page() {return (<divclassName='min-h-screen bg-slate-950 text-white'>
       <mainclassName='max-w-3xl mx-auto px-6 py-16'>

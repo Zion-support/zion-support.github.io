@@ -1,12 +1,15 @@
 import ArrowRight from 'next/link';
 
-export const metadata = {title:
-   'AI 2026 Next-Generation Automation Platform - $8.7B Revolutionary Success | Zion Tech Group',
+export const metadata = {
+  
+  title:
+    'AI 2026 Next-Generation Automation Platform - $8.7B Revolutionary Success | Zion Tech Group',
   description:
     "Discover Zion TechGroup's next-generation automation platform delivering $8.7B in value with 99.8% autonomous operations for Fortune 500enterprises.",
   keywords:
-    'automation platform, AI automation, autonomous operations, $8.7B successFortune 500next-generationtechnology',
-};
+    'automation platform, AI automation, autonomous operations, $8.7B success, Fortune 500, next-generation technology',
+
+};;
 
 export default function AI2026NextGenerationAutomationPlatform() {return (<div className='max-w-4xl mx-auto px-4py-8'>
       <div className='bg-gradient-to-r from-purple-600 to-indigo-700 text-white p-6 rounded-lgmb-8'>

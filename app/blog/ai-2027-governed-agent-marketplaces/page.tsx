@@ -1,9 +1,12 @@
 import ArrowRight from 'next/link';
 
-export const metadata = {title:'Governed Agent Marketplaces (2027): BudgetsAttestationsRollback',
+export const metadata = {
+  
+  title: 'Governed Agent Marketplaces (2027): Budgets, Attestations, Rollback',
   description:
-   'Design safe third‑party agent ecosystems with budget guardspolicy attestationsand instant rollback tied to KPIs.',
-};
+    'Design safe third‑party agent ecosystems with budget guards, policy attestations, and instant rollback tied to KPIs.',
+
+};;
 
 export default function Page() {return (<mainclassName='max-w-3xl mx-auto px-4 py-12 prose prose-invert'>
       <h1>Governed Agent Marketplaces (2027)</h1>

@@ -1,9 +1,12 @@
 import ArrowRight from 'next/link';
 
-export const metadata = {title:'Edge 2028: Zero‑PII Observability — <100ms Insights',
+export const metadata = {
+  
+  title: 'Edge 2028: Zero‑PII Observability — <100ms Insights',
   description:
-   'Scoped IDs, on‑device aggregationand DP noise for privacy‑safereal‑time analytics without personal data.',
-};
+    'Scoped IDs, on‑device aggregation, and DP noise for privacy‑safe, real‑time analytics without personal data.',
+
+};;
 
 export default function Page() {return (<articleclassName='py-16'>
       <divclassName='max-w-3xl mx-auto px-4'>

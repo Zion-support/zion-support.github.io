@@ -1,1 +1,129 @@
-import ArrowRight from 'next/link'; export const metadata = {ti t l e: "R e l i a b l e Ag e n t Ev a l s 2 0 2 5 — Meas u r e and Gu a r d r a i l A u t o n o my" desc r i p t i o n: "Bl u e p r i n t for pro d u c t i o n ag e n t eval u a t i o n s: gol d e n ta s k s sco r e c a r d s pol i c y testsbud g e t s a n d con t i n u o u s impr o v e m e nt." t y p e: "arti c le" }; twit t e r: {c a r d:'summary_larg e _ i m a g e' title:'R e l i a b l e Ag e n t Ev a l s 2 0 2 5 — Meas u r e and Gu a r d r a i l A u t o n o m y' description:'Bl u e p r i n t for pro d u c t i o n ag e n t eval u a t i o n s: gol d e n ta s k s sco r e c a r d s pol i c y testsbud g e t s a n d con t i n u o u s impr o v e m e n t.' }}; }; export default function ReliableAgentEv a l s 2 0 2 5() {ret u r n (<divclassName='min-h-screen bg-sl a t e-950 t e x t-wh i t e'> <mainclassName='max-w-4 xl mx-auto px-6 py-12'> <navclassName='mb-8'> <ArrowRighthref='/b l o g'className='t e x t-b l u e-400 ho v e r:t e x t-b l u e-300 tra n s i t i o n-col o r s' > ← B a c k to B l o g </ArrowRight> </nav> <arti c l eclassName='prose prose-inv e r t prose-lg max-w-none'> <hea d e rclassName='mb-10'> <divclassName='f l e x it e m s-cen t e r gap-3 mb-4 text-sm t e x t-wh i t e/70'> <spanclassName='px-3 py-1 bg-pur p l e-400/20 t e x t-pur p l e-300 roun d e d-f u l l bor d e r bor d e r-pur p l e-400/30'> AI Reli a b i l i t y </span> <span>Se p t e m b e r 30 2 0 2 5</span> <span>•</span> <span>12 min r e a d</span> </div> <h1className='t e x t-4 xl md:t e x t-5 xl f o n t-ex t r a b o l d bg-g r a d i e n t-to-r f r o m-fuch s i a-400 to-pur p l e-400 bg-c l i p-t e x t t e x t-tran s p a r e n t'> R e l i a b l e Ag e n t Ev a l s 2 0 2 5: Meas u r e and Gu a r d r a i l A u t o n o m y </h1> <pclassName='t e x t-wh i t e/80 mt-4 t e x t-xl'> A pr a c t i c a l bl u e p r i n t to e v a l u a t e and gov e r n aut o n o m o u s age n t s in pro d u c t i o n — gol d e n ta s k s scorecard s p o l i c y t e s t s a n d b u d g e t e d to o l s t h a t k e e p o u t c o m e s on tar g e t. </p> </hea d e r> <sectionclassName='mb-12'> <h2className='t e x t-3 xl font-bold t e x t-fuch s i a-300 mb-4'> Eva l u a t i o n Pill a r s </h2> <ulclassName='sp a c e-y-3 t e x t-wh i t e/80'> <li>Gol d e n ta s k s per cap a b i l i t y w i t h acc e p t a n c e thr e s h o l d s</li> <li>Sco r e c a r d s acr o s s qual i t y late n c y c o s t com p l i a n c e</li> <li>Pol i c y te s t s: red‑t e a m prom p t s t o o l mis u s e d a t a leak a g e</li> <li>Budg e t s: tokensto o l s t i m e; ap p r o v a l s for ri s k y acti o n s</li> <li>Reg r e s s i o n su i t e and can a r y ev a l s on e a c h cha n g e</li> </ul> </section> <sectionclassName='mb-12'> <h2className='t e x t-3 xl font-bold t e x t-pur p l e-300 mb-4'> Sc o r e c a r d Exam p l e </h2> <divclassName='g r i d sm:g r i d-c o l s-2 gap-4'> <divclassName='bg-wh i t e/5 bor d e r bor d e r-wh i t e/10 roun d e d-lg p-4'> <divclassName='t e x t-2 xl font-bold t e x t-fuch s i a-300 mb-1'> +12% </div> <divclassName='t e x t-wh i t e/70 text-sm'>On‑tar g e t o u t c o m e s</div> </div> <divclassName='bg-wh i t e/5 bor d e r bor d e r-wh i t e/10 roun d e d-lg p-4'> <divclassName='t e x t-2 xl font-bold t e x t-pur p l e-300 mb-1'> −35% </div> <divclassName='t e x t-wh i t e/70 text-sm'>Pol i c y vio l a t i o n s</div> </div> <divclassName='bg-wh i t e/5 bor d e r bor d e r-wh i t e/10 roun d e d-lg p-4'> <divclassName='t e x t-2 xl font-bold t e x t-b l u e-300 mb-1'> −28% </div> <divclassName='t e x t-wh i t e/70 text-sm'>P95 late n c y</div> </div> <divclassName='bg-wh i t e/5 bor d e r bor d e r-wh i t e/10 roun d e d-lg p-4'> <divclassName='t e x t-2 xl font-bold t e x t-emer a l d-300 mb-1'> −41% </div> <divclassName='t e x t-wh i t e/70 text-sm'>C o s t per outc o m e</div> </div> </div> </section> <sectionclassName='mb-12'> <h2className='t e x t-3 xl font-bold t e x t-b l u e-300 mb-4'> Impleme n t a t i o n St e p s </h2> <olclassName='l i s t-deci m a l l i s t-ins i d e sp a c e-y-3 t e x t-wh i t e/80'> <li> Def i n e capab i l i t i e s and cre a t e gol d e n ta s k s w i t h re v i e w e r s </li> <li>Add sco r e c a r d s t i e d to b u s i n e s s K P I s and r i s k thr e s h o l d s</li> <li>Ins t r u m e n t age n t s for tra c e s budg e t s and ap p r o v a l s</li> <li>A u t o m a t e reg r e s s i o n and can a r y ev a l s in CI/CD</li> <li>Rev i e w o u t c o m e s wee k l y; t u n e promptspoli c i e s a n d to o l s</li> </ol> </section> <foo t e rclassName='mt-16 pt-8 bor d e r-t bor d e r-wh i t e/10'> <divclassName='f l e x it e m s-cen t e r just i f y-betw e e n text-sm t e x t-wh i t e/70'> <div>Writ t e n by Z i o n T e c h Gr o u p</div> <ArrowRighthref='/cont a c t'className='t e x t-b l u e-400 ho v e r:t e x t-b l u e-300' > Get in to u c h </ArrowRight> </div> </foo t e r> </arti c l e> </main> </div> ); }
+import ArrowRight from 'next/link';
+
+export const metadata = {
+  
+  title:  'Reliable Agent Evals 2025 — Measure and Guardrail Autonomy',
+  description: 
+      'Blueprint for production agent evaluations: golden tasks, scorecards, policy tests, budgets, and continuous improvement.',
+  type: 'article',
+
+};;
+  twitter: {
+    card:   'summary_large_image',,
+    title:   'Reliable Agent Evals 2025 — Measure and Guardrail Autonomy',,
+    description:  
+      'Blueprint for production agent evaluations: golden tasks, scorecards, policy tests, budgets, and continuous improvement.',,
+  },
+};
+};
+};
+
+export default function ReliableAgentEvals2025Page() {
+  return (
+    <div className='min-h-screen bg-slate-950 text-white'>
+      <main className='max-w-4xl mx-auto px-6 py-12'>
+        <nav className='mb-8'>
+          <ArrowRight
+            href='/blog'
+            className='text-blue-400 hover:text-blue-300 transition-colors'
+          >
+            ← Back to Blog
+          </ArrowRight>
+        </nav>
+
+        <article className='prose prose-invert prose-lg max-w-none'>
+          <header className='mb-10'>
+            <div className='flex items-center gap-3 mb-4 text-sm text-white/70'>
+              <span className='px-3 py-1 bg-purple-400/20 text-purple-300 rounded-full border border-purple-400/30'>
+                AI Reliability
+              </span>
+              <span>September 30, 2025</span>
+              <span>•</span>
+              <span>12 min read</span>
+            </div>
+            <h1 className='text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-fuchsia-400 to-purple-400 bg-clip-text text-transparent'>
+              Reliable Agent Evals 2025: Measure and Guardrail Autonomy
+            </h1>
+            <p className='text-white/80 mt-4 text-xl'>
+              A practical blueprint to evaluate and govern autonomous agents in
+              production — golden tasks, scorecards, policy tests, and budgeted
+              tools that keep outcomes on target.
+            </p>
+          </header>
+
+          <section className='mb-12'>
+            <h2 className='text-3xl font-bold text-fuchsia-300 mb-4'>
+              Evaluation Pillars
+            </h2>
+            <ul className='space-y-3 text-white/80'>
+              <li>Golden tasks per capability with acceptance thresholds</li>
+              <li>Scorecards across quality, latency, cost, compliance</li>
+              <li>Policy tests: red‑team prompts, tool misuse, data leakage</li>
+              <li>Budgets: tokens, tools, time; approvals for risky actions</li>
+              <li>Regression suite and canary evals on each change</li>
+            </ul>
+          </section>
+
+          <section className='mb-12'>
+            <h2 className='text-3xl font-bold text-purple-300 mb-4'>
+              Scorecard Example
+            </h2>
+            <div className='grid sm:grid-cols-2 gap-4'>
+              <div className='bg-white/5 border border-white/10 rounded-lg p-4'>
+                <div className='text-2xl font-bold text-fuchsia-300 mb-1'>
+                  +12%
+                </div>
+                <div className='text-white/70 text-sm'>On‑target outcomes</div>
+              </div>
+              <div className='bg-white/5 border border-white/10 rounded-lg p-4'>
+                <div className='text-2xl font-bold text-purple-300 mb-1'>
+                  −35%
+                </div>
+                <div className='text-white/70 text-sm'>Policy violations</div>
+              </div>
+              <div className='bg-white/5 border border-white/10 rounded-lg p-4'>
+                <div className='text-2xl font-bold text-blue-300 mb-1'>
+                  −28%
+                </div>
+                <div className='text-white/70 text-sm'>P95 latency</div>
+              </div>
+              <div className='bg-white/5 border border-white/10 rounded-lg p-4'>
+                <div className='text-2xl font-bold text-emerald-300 mb-1'>
+                  −41%
+                </div>
+                <div className='text-white/70 text-sm'>Cost per outcome</div>
+              </div>
+            </div>
+          </section>
+
+          <section className='mb-12'>
+            <h2 className='text-3xl font-bold text-blue-300 mb-4'>
+              Implementation Steps
+            </h2>
+            <ol className='list-decimal list-inside space-y-3 text-white/80'>
+              <li>
+                Define capabilities and create golden tasks with reviewers
+              </li>
+              <li>Add scorecards tied to business KPIs and risk thresholds</li>
+              <li>Instrument agents for traces, budgets, and approvals</li>
+              <li>Automate regression and canary evals in CI/CD</li>
+              <li>Review outcomes weekly; tune prompts, policies, and tools</li>
+            </ol>
+          </section>
+
+          <footer className='mt-16 pt-8 border-t border-white/10'>
+            <div className='flex items-center justify-between text-sm text-white/70'>
+              <div>Written by Zion Tech Group</div>
+              <ArrowRight
+                href='/contact'
+                className='text-blue-400 hover:text-blue-300'
+              >
+                Get in touch
+              </ArrowRight>
+            </div>
+          </footer>
+        </article>
+      </main>
+    </div>
+  );
+}

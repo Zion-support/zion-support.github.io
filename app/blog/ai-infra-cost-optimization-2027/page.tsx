@@ -1,9 +1,12 @@
 // @ts-nocheck
 
-export const metadata = {title: 'AI Infra Cost Optimization 2027:FastReliableAffordable',
+export const metadata = {
+  
+  title: 'AI Infra Cost Optimization 2027: Fast, Reliable, Affordable',
   description:
-    'Cut AI infra spend 30–70% using quality tiers, cachingquantizationand routing—while improving reliability andUX.',
-};
+    'Cut AI infra spend 30–70% using quality tiers, caching, quantization, and routing—while improving reliability and UX.',
+
+};;
 
 export default function Page() {return (<div className='min-h-screen bg-slate-950text-white'>
       <main className='max-w-3xl mx-auto px-6py-16'>

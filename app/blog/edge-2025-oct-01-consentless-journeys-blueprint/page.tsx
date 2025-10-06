@@ -1,7 +1,10 @@
-export const metadata = {title: 'Consentless Journeys Blueprint — Personalization <100ms,Zero‑PII',
+export const metadata = {
+  
+  title: 'Consentless Journeys Blueprint — Personalization <100ms, Zero‑PII',
   description:
-    'Edge-native consentless analytics and feature flags for sub-100ms personalization without collectingPII.',
-};
+    'Edge-native consentless analytics and feature flags for sub-100ms personalization without collecting PII.',
+
+};;
 
 export default function Page() {return (<div className='min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950text-white'>
       <div className='max-w-3xl mx-auto px-6py-12'>

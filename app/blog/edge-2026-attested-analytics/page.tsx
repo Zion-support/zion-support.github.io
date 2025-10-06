@@ -1,9 +1,12 @@
 import ArrowRight from 'next/link';
 
-export const metadata = {title:'Edge 2026: Attested Analytics — Zero‑PII Insights with Signed Proofs',
+export const metadata = {
+  
+  title: 'Edge 2026: Attested Analytics — Zero‑PII Insights with Signed Proofs',
   description:
-   'Scoped IDs, on‑device aggregationDP noiseand signed attestations for trustworthy insights at <100ms.',
-};
+    'Scoped IDs, on‑device aggregation, DP noise, and signed attestations for trustworthy insights at <100ms.',
+
+};;
 
 export default function Page() {return (<mainclassName='max-w-3xl mx-auto px-4 py-12 prose prose-invert'>
       <h1>Edge 2026: Attested Analytics</h1>

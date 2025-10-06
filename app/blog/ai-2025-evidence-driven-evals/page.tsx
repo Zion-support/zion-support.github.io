@@ -1,9 +1,12 @@
 import ArrowRight from 'next/link';
 
-export const metadata = {title:'Evidence‑Driven Evals 2025: Traceable Quality Linked to KPIs',
+export const metadata = {
+  
+  title: 'Evidence‑Driven Evals 2025: Traceable Quality Linked to KPIs',
   description:
-   'Design evals that tie model behavior to product KPIs with tracesscorecardsand budgeted guardrails.',
-};
+    'Design evals that tie model behavior to product KPIs with traces, scorecards, and budgeted guardrails.',
+
+};;
 
 export default function Page() {return (<mainclassName='max-w-3xl mx-auto px-4 py-12'>
       <h1className='text-4xl font-bold mb-4'>Evidence‑Driven Evals 2025</h1>

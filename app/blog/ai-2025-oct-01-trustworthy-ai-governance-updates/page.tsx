@@ -1,10 +1,13 @@
 import ArrowRight from 'next/link';
 
-export const metadata = {title:'Trustworthy AI Governance Updates — October 2025',
+export const metadata = {
+  
+  title: 'Trustworthy AI Governance Updates — October 2025',
   description:
-   'Latest governance patterns for agentic systems: policy packsevaluation pipelinesand risk budgets that scale.',
-  keywords:'AI governance, risk budgetsevaluation pipelinescompliance',
-};
+    'Latest governance patterns for agentic systems: policy packs, evaluation pipelines, and risk budgets that scale.',
+  keywords: 'AI governance, risk budgets, evaluation pipelines, compliance',
+
+};;
 
 export default function Page() {return (<mainclassName='max-w-3xl mx-auto px-4 py-12'>
       <headerclassName='mb-8'>

@@ -1,9 +1,12 @@
 import ArrowRight from 'next/link';
 
-export const metadata = {title:'E2E AI Tracing 2026: From Prompts to Outcomes | Zion Tech Group',
+export const metadata = {
+  
+  title: 'E2E AI Tracing 2026: From Prompts to Outcomes | Zion Tech Group',
   description:
-   'Blueprint for end-to-end AI tracing: prompts, tools, callsSLAsand KPI‑linked scorecards for reliable AI at scale.',
-};
+    'Blueprint for end-to-end AI tracing: prompts, tools, calls, SLAs, and KPI‑linked scorecards for reliable AI at scale.',
+
+};;
 
 export default function Page() {return (<divclassName='min-h-screen bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900 text-white'>
       <divclassName='max-w-4xl mx-auto px-6 py-16'>

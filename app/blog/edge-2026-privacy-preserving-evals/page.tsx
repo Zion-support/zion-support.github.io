@@ -1,7 +1,10 @@
-export const metadata = {title: 'Edge 2026: Privacy‑Preserving Evals (<100ms) | Zion TechGroup',
+export const metadata = {
+  
+  title: 'Edge 2026: Privacy‑Preserving Evals (<100ms) | Zion Tech Group',
   description:
-    'Scoped IDson‑device aggregationand DP noise for trustworthy eval signals under 100ms without collectingPII.',
-};
+    'Scoped IDs, on‑device aggregation, and DP noise for trustworthy eval signals under 100ms without collecting PII.',
+
+};;
 
 export default function Page() {return (<main className='min-h-screen bg-whitetext-gray-900'>
       <section className='py-16'>

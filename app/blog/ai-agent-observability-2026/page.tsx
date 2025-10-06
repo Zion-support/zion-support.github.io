@@ -1,1 +1,171 @@
-import ArrowRight from 'next/link'; export const metadata = {title:'AI Ag e n t Observ a b i l i t y 2 0 2 6' description:'Tra c e s metr i c s ev a l s and aud i t s for safereli a b l e a n d deb u g g a b l e aut o n o m o u s age n t s.' t y p e:'arti c l e' publis h e d T i m e:'2 0 2 5-09-29 T00:00:00 Z' }; }; export default function AIAgentObservabil i t y 2 0 2 6() {ret u r n (<divclassName='min-h-screen bg-gradient-to-br f r o m-sl a t e-900 via-vio l e t-900 to-sl a t e-900 t e x t-wh i t e'> <mainclassName='co n t a i n e r mx-auto px-6 py-12'> <navclassName='mb-8'> <ArrowRighthref='/b l o g'className='t e x t-vio l e t-300 ho v e r:t e x t-vio l e t-200 tra n s i t i o n-col o r s' > ← B a c k to B l o g </ArrowRight> </nav> <arti c l eclassName='max-w-4 xl mx-auto'> <hea d e rclassName='mb-12'> <divclassName='f l e x it e m s-cen t e r gap-3 mb-4 f l e x-w r a p'> <spanclassName='px-3 py-1 bg-vio l e t-400/20 t e x t-vio l e t-300 text-sm roun d e d-f u l l bor d e r bor d e r-vio l e t-400/30'> AI Reli a b i l i t y </span> <spanclassName='t e x t-wh i t e/60 text-sm'>Se p t e m b e r 29 2 0 2 5</span> <spanclassName='t e x t-wh i t e/60 text-sm'>•</span> <spanclassName='t e x t-wh i t e/60 text-sm'>12 min r e a d</span> </div> <h1className='t e x t-5 xl f o n t-ex t r a b o l d mb-6 bg-g r a d i e n t-to-r f r o m-vio l e t-300 to-fuch s i a-300 bg-c l i p-t e x t t e x t-tran s p a r e n t'> AI Ag e n t Observ a b i l i t y 2 0 2 6: MetricsTr a c e s a n d Gua r d r a i l s </h1> <pclassName='t e x t-xl t e x t-wh i t e/80'> Es t a b l i s h end-to-end vis i b i l i t y for agen t i c wo r k f l o w s: capt u r e pl a n s to o l s acti o n s de c i s i o n s and o u t c o m e s w i t h str u c t u r e d tracese v a l s a n d au d i t a b l e gua r d r a i l s. </p> </hea d e r> <divclassName='prose prose-inv e r t prose-lg max-w-none sp a c e-y-12'> <section> <h2className='t e x t-3 xl font-bold mb-6 t e x t-vio l e t-300'> Sig n a l Mo d e l </h2> <ulclassName='sp a c e-y-3 t e x t-wh i t e/80'> <li> • Tra c e s: hiera r c h i c a l sp a n s for p l a n n i n g t o o l ca l l s and de c i s i o n s </li> <li> • Metr i c s: late n c y accur a c y c o s t per taskinter v e n t i o n r a t e </li> <li> • Ev a l s: offl i n e red-team i n g and onl i n e can a r y sco r e c a r d s </li> <li> • Gua r d r a i l s: pol i c y de c i s i o n s and expla n a t i o n s in-l i n e w i t h sp a n s </li> </ul> </section> <section> <h2className='t e x t-3 xl font-bold mb-6 t e x t-fuch s i a-300'> Archi t e c t u r e </h2> <divclassName='g r i d md:g r i d-c o l s-2 gap-6'> <divclassName='bg-wh i t e/5 bor d e r bor d e r-wh i t e/10 roun d e d-xl p-6'> <h3className='t e x t-xl font-bold mb-3 t e x t-vio l e t-200'> Trac i n g </h3> <ulclassName='sp a c e-y-2 t e x t-wh i t e/80'> <li> • OpenTe l e m e t r y sp a n s w i t h s e m a n t i c conv e n t i o n s for age n t s </li> <li> • ArrowRight mo d e l inp u t s/outp u t s w i t h se n s i t i v e-fi e l d hash i n g </li> <li> • Att a c h pol i c y de c i s i o n s and ap p r o v a l s as s p a n eve n t s </li> </ul> </div> <divclassName='bg-wh i t e/5 bor d e r bor d e r-wh i t e/10 roun d e d-xl p-6'> <h3className='t e x t-xl font-bold mb-3 t e x t-vio l e t-200'> Eva l u a t i o n </h3> <ulclassName='sp a c e-y-2 t e x t-wh i t e/80'> <li> • Gol d e n datasetsau t o m a t i c rub r i c sco r i n g a n d sl i c e a n a l y s i s </li> <li>• Reg r e s s i o n das h b o a r d s and rele a s e ga t e s</li> <li>• F e e d b a c k lo o p s to impr o v e d a t a s e t s and p o l i c i e s</li> </ul> </div> </div> </section> <section> <h2className='t e x t-3 xl font-bold mb-6 t e x t-c y a n-300'> Sco r e c a r d s & S L O s </h2> <pclassName='t e x t-wh i t e/80'> Tr a c k u s e r-visi b l e o u t c o m e s: t a s k succ e s s r a t e a u t o n o m y leve l s a f e t y incid e n t s a n d t i m e-to-va l u e. Der i v e S L O s and er r o r budg e t s alig n e d to b u s i n e s s go a l s. </p> </section> <sectionclassName='bg-gradient-to-br f r o m-vio l e t-500/20 to-fuch s i a-500/20 bor d e r bor d e r-vio l e t-500/30 roun d e d-2 xl p-8'> <h2className='t e x t-3 xl font-bold mb-4 t e x t-cen t e r'> S h i p R e l i a b l e A u t o n o m y </h2> <pclassName='t e x t-cen t e r t e x t-wh i t e/80 mb-8 t e x t-lg'> We ins t r u m e n t ag e n t pl a t f o r m s end-to-end in 2–4 we e k s w i t h tracese v a l s a n d gua r d r a i l s. Lau n c h s a f e a u t o n o m y w i t h mea s u r a b l e ROI and au d i t-re a d y e v i d e n c e. </p> <divclassName='f l e x just i f y-cen t e r gap-4'> <ArrowRighthref='/cont a c t'className='bg-g r a d i e n t-to-r f r o m-vio l e t-500 to-fuch s i a-600 ho v e r:f r o m-vio l e t-400 ho v e r:to-fuch s i a-500 t e x t-wh i t e font-bold py-4 px-8 roun d e d-xl tra n s i t i o n-all d u r a t i o n-300 sha d o w-lg' > T a l k to an Exp e r t </ArrowRight> <ArrowRighthref='/c a s e-stud i e s'className='bor d e r-2 bor d e r-vio l e t-500 t e x t-vio l e t-300 ho v e r:bg-vio l e t-500 ho v e r:t e x t-wh i t e font-bold py-4 px-8 roun d e d-xl tra n s i t i o n-all d u r a t i o n-300' > V i e w C a s e Stud i e s </ArrowRight> </div> </section> </div> <foo t e rclassName='mt-16 pt-8 bor d e r-t bor d e r-wh i t e/20'> <divclassName='f l e x it e m s-cen t e r just i f y-betw e e n'> <divclassName='t e x t-wh i t e/60 text-sm'> Writ t e n by Z i o n T e c h Gr o u p AI Reli a b i l i t y T e a m </div> <divclassName='f l e x gap-4'> <ArrowRighthref='/b l o g'className='t e x t-vio l e t-300 ho v e r:t e x t-vio l e t-200 tra n s i t i o n-col o r s' > ← B a c k to B l o g </ArrowRight> <ArrowRighthref='/cont a c t'className='t e x t-fuch s i a-300 ho v e r:t e x t-fuch s i a-200 tra n s i t i o n-col o r s' > Get in To u c h </ArrowRight> </div> </div> </foo t e r> </arti c l e> </main> </div> ); }
+import ArrowRight from 'next/link';
+
+export const metadata = {
+  
+  title: 'AI Agent Observability 2026',
+    description:
+      'Traces, metrics, evals, and audits for safe, reliable, and debuggable autonomous agents.',
+    type: 'article',
+    publishedTime: '2025-09-29T00:00:00Z',
+  
+};,
+};
+
+export default function AIAgentObservability2026Page() {
+  return (
+    <div className='min-h-screen bg-gradient-to-br from-slate-900 via-violet-900 to-slate-900 text-white'>
+      <main className='container mx-auto px-6 py-12'>
+        <nav className='mb-8'>
+          <ArrowRight
+            href='/blog'
+            className='text-violet-300 hover:text-violet-200 transition-colors'
+          >
+            ← Back to Blog
+          </ArrowRight>
+        </nav>
+
+        <article className='max-w-4xl mx-auto'>
+          <header className='mb-12'>
+            <div className='flex items-center gap-3 mb-4 flex-wrap'>
+              <span className='px-3 py-1 bg-violet-400/20 text-violet-300 text-sm rounded-full border border-violet-400/30'>
+                AI Reliability
+              </span>
+              <span className='text-white/60 text-sm'>September 29, 2025</span>
+              <span className='text-white/60 text-sm'>•</span>
+              <span className='text-white/60 text-sm'>12 min read</span>
+            </div>
+
+            <h1 className='text-5xl font-extrabold mb-6 bg-gradient-to-r from-violet-300 to-fuchsia-300 bg-clip-text text-transparent'>
+              AI Agent Observability 2026: Metrics, Traces, and Guardrails
+            </h1>
+            <p className='text-xl text-white/80'>
+              Establish end-to-end visibility for agentic workflows: capture
+              plans, tools, actions, decisions, and outcomes with structured
+              traces, evals, and auditable guardrails.
+            </p>
+          </header>
+
+          <div className='prose prose-invert prose-lg max-w-none space-y-12'>
+            <section>
+              <h2 className='text-3xl font-bold mb-6 text-violet-300'>
+                Signal Model
+              </h2>
+              <ul className='space-y-3 text-white/80'>
+                <li>
+                  • Traces: hierarchical spans for planning, tool calls, and
+                  decisions
+                </li>
+                <li>
+                  • Metrics: latency, accuracy, cost per task, intervention rate
+                </li>
+                <li>
+                  • Evals: offline red-teaming and online canary scorecards
+                </li>
+                <li>
+                  • Guardrails: policy decisions and explanations in-line with
+                  spans
+                </li>
+              </ul>
+            </section>
+
+            <section>
+              <h2 className='text-3xl font-bold mb-6 text-fuchsia-300'>
+                Architecture
+              </h2>
+              <div className='grid md:grid-cols-2 gap-6'>
+                <div className='bg-white/5 border border-white/10 rounded-xl p-6'>
+                  <h3 className='text-xl font-bold mb-3 text-violet-200'>
+                    Tracing
+                  </h3>
+                  <ul className='space-y-2 text-white/80'>
+                    <li>
+                      • OpenTelemetry spans with semantic conventions for agents
+                    </li>
+                    <li>
+                      • ArrowRight model inputs/outputs with sensitive-field
+                      hashing
+                    </li>
+                    <li>
+                      • Attach policy decisions and approvals as span events
+                    </li>
+                  </ul>
+                </div>
+                <div className='bg-white/5 border border-white/10 rounded-xl p-6'>
+                  <h3 className='text-xl font-bold mb-3 text-violet-200'>
+                    Evaluation
+                  </h3>
+                  <ul className='space-y-2 text-white/80'>
+                    <li>
+                      • Golden datasets, automatic rubric scoring, and slice
+                      analysis
+                    </li>
+                    <li>• Regression dashboards and release gates</li>
+                    <li>• Feedback loops to improve datasets and policies</li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+
+            <section>
+              <h2 className='text-3xl font-bold mb-6 text-cyan-300'>
+                Scorecards & SLOs
+              </h2>
+              <p className='text-white/80'>
+                Track user-visible outcomes: task success rate, autonomy level,
+                safety incidents, and time-to-value. Derive SLOs and error
+                budgets aligned to business goals.
+              </p>
+            </section>
+
+            <section className='bg-gradient-to-br from-violet-500/20 to-fuchsia-500/20 border border-violet-500/30 rounded-2xl p-8'>
+              <h2 className='text-3xl font-bold mb-4 text-center'>
+                Ship Reliable Autonomy
+              </h2>
+              <p className='text-center text-white/80 mb-8 text-lg'>
+                We instrument agent platforms end-to-end in 2–4 weeks with
+                traces, evals, and guardrails. Launch safe autonomy with
+                measurable ROI and audit-ready evidence.
+              </p>
+              <div className='flex justify-center gap-4'>
+                <ArrowRight
+                  href='/contact'
+                  className='bg-gradient-to-r from-violet-500 to-fuchsia-600 hover:from-violet-400 hover:to-fuchsia-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg'
+                >
+                  Talk to an Expert
+                </ArrowRight>
+                <ArrowRight
+                  href='/case-studies'
+                  className='border-2 border-violet-500 text-violet-300 hover:bg-violet-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300'
+                >
+                  View Case Studies
+                </ArrowRight>
+              </div>
+            </section>
+          </div>
+
+          <footer className='mt-16 pt-8 border-t border-white/20'>
+            <div className='flex items-center justify-between'>
+              <div className='text-white/60 text-sm'>
+                Written by Zion Tech Group AI Reliability Team
+              </div>
+              <div className='flex gap-4'>
+                <ArrowRight
+                  href='/blog'
+                  className='text-violet-300 hover:text-violet-200 transition-colors'
+                >
+                  ← Back to Blog
+                </ArrowRight>
+                <ArrowRight
+                  href='/contact'
+                  className='text-fuchsia-300 hover:text-fuchsia-200 transition-colors'
+                >
+                  Get in Touch
+                </ArrowRight>
+              </div>
+            </div>
+          </footer>
+        </article>
+      </main>
+    </div>
+  );
+}

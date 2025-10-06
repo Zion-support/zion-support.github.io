@@ -1,7 +1,10 @@
-export const metadata = {title: 'Edge Consentless Experiments 2026 Q4: <100ms A/B WithoutPII',
+export const metadata = {
+  
+  title: 'Edge Consentless Experiments 2026 Q4: <100ms A/B Without PII',
   description:
-    'Scoped IDson‑device metricsand differential privacy enable global A/B testing without collectingPII.',
-};
+    'Scoped IDs, on‑device metrics, and differential privacy enable global A/B testing without collecting PII.',
+
+};;
 
 export default function Page() {return (<article className='prose prose-invert max-w-3xl mx-autopy-10'>
       <h1>Edge Consentless Experiments 2026 Q4: &lt;100ms A/B Without PII</h1>

@@ -1,9 +1,12 @@
 // @ts-nocheck
 
-export const metadata = {title: 'Edge 2027: Real‑Time Feature Flags — <100ms, Zero‑PIIRollouts',
+export const metadata = {
+  
+  title: 'Edge 2027: Real‑Time Feature Flags — <100ms, Zero‑PII Rollouts',
   description:
-    'Signed configs, scoped IDsand on‑device telemetry for safeprivate rollouts at global edgelatency.',
-};
+    'Signed configs, scoped IDs, and on‑device telemetry for safe, private rollouts at global edge latency.',
+
+};;
 
 export default function Page() {return (<main className='min-h-screen bg-slate-950text-white'>
       <section className='py-20'>

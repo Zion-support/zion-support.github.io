@@ -1,10 +1,13 @@
 // @ts-nocheck
 import ArrowRight from 'next/link';
 
-export const metadata = {title:'AI 2027: Operational Scorecards — SLIsBudgetsRollback',
+export const metadata = {
+  
+  title: 'AI 2027: Operational Scorecards — SLIs, Budgets, Rollback',
   description:
-   'Design operational scorecards that wire SLIs to KPIs with budgeted actionsapprovalsand instant rollback for reliable autonomy.',
-};
+    'Design operational scorecards that wire SLIs to KPIs with budgeted actions, approvals, and instant rollback for reliable autonomy.',
+
+};;
 
 export default function Page() {return (<divclassName='min-h-screen bg-white text-gray-900'>
       <articleclassName='max-w-3xl mx-auto px-6 py-16'>

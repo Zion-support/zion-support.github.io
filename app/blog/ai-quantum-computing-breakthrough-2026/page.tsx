@@ -1,17 +1,22 @@
 import {Metadata }from 'next';
 
-export const metadata = {title:'AI Quantum Computing Breakthrough 2026: The Future is Here',
-  description:
-   'Revolutionary AI-powered quantum computing systems that solve complex problems in seconds, not years.',
-  type:'article',
-  publishedTime:'2025-01-30T11:00:00Z',
-  authors:['Zion Tech Group Quantum AI Research Team'],
-  tags:['AI',
-   'Quantum Computing',
-   'Machine Learning',
-   'Technology Breakthrough',
-   'Future Tech',
-  ],
+export const metadata = {
+  
+  title: 'AI Quantum Computing Breakthrough 2026: The Future is Here',
+    description:
+      'Revolutionary AI-powered quantum computing systems that solve complex problems in seconds, not years.',
+    type: 'article',
+    publishedTime: '2025-01-30T11:00:00Z',
+    authors: ['Zion Tech Group Quantum AI Research Team'],
+    tags: [
+      'AI',
+      'Quantum Computing',
+      'Machine Learning',
+      'Technology Breakthrough',
+      'Future Tech',
+    ],
+  
+};,
 };
 
 export default function AIQuantumComputingBreakthrough2026() {return (<divclassName='min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900'>

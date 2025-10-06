@@ -1,7 +1,10 @@
-export const metadata = {title: 'AI Enterprise Autonomy Blueprint 2026 | Zion TechGroup',
+export const metadata = {
+  
+  title: 'AI Enterprise Autonomy Blueprint 2026 | Zion Tech Group',
   description:
-    'A practical blueprint to reach 70–95% autonomous operations with safety budgetsguardrailsand measurableROI.',
-};
+    'A practical blueprint to reach 70–95% autonomous operations with safety budgets, guardrails, and measurable ROI.',
+
+};;
 
 export default function AIEnterpriseAutonomyBlueprint2026Page() {return (<div className='min-h-screen bg-gradient-to-br from-slate-950 via-blue-950 to-emerald-950text-white'>
       <main className='container mx-auto px-6py-12'>

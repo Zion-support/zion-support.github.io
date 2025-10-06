@@ -1,9 +1,12 @@
 import ArrowRight from 'next/link';
 
-export const metadata = {title:'Edge‑Governed Feature Flags (2026): Private control at <100ms',
+export const metadata = {
+  
+  title: 'Edge‑Governed Feature Flags (2026): Private control at <100ms',
   description:
-   'Patterns for consent‑aware, policy‑checked feature flags with scoped IDs and on‑device enforcement.',
-};
+    'Patterns for consent‑aware, policy‑checked feature flags with scoped IDs and on‑device enforcement.',
+
+};;
 
 export default function Page() {return (<mainclassName='max-w-3xl mx-auto px-4 py-12 prose prose-invert'>
       <h1>Edge‑Governed Feature Flags (2026)</h1>

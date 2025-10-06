@@ -1,10 +1,13 @@
-export const metadata = {title:
-    'AI Enterprise Automation 2026: Complete Business Process Transformation | Zion TechGroup',
+export const metadata = {
+  
+  title:
+    'AI Enterprise Automation 2026: Complete Business Process Transformation | Zion Tech Group',
   description:
     'Transform your enterprise with AI automation. 95% process efficiencymultimillion-dollar savingsand zero-touch operations acrossfunctions.',
   keywords:
-    'AI enterprise automation 2026, process automation, AI workflowszero-touch operationsenterpriseAI',
-};
+    'AI enterprise automation 2026, process automation, AI workflows, zero-touch operations, enterprise AI',
+
+};;
 
 export default function AIEnterpriseAutomation2026() {return (<article className='max-w-4xl mx-auto px-4py-12'>
       <div className='prose prose-lgmax-w-none'>

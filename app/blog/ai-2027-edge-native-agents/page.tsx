@@ -1,10 +1,13 @@
 // @ts-nocheck
 import ArrowRight from 'next/link';
 
-export const metadata = {title:'AI 2027: Edge‑Native Agents — Real‑TimeReliableLow‑Latency',
+export const metadata = {
+  
+  title: 'AI 2027: Edge‑Native Agents — Real‑Time, Reliable, Low‑Latency',
   description:
-   'Blueprint for deploying edge‑native AI agents with millisecond latencyreliability guardrailsand cost control.',
-};
+    'Blueprint for deploying edge‑native AI agents with millisecond latency, reliability guardrails, and cost control.',
+
+};;
 
 export default function Page() {return (<divclassName='min-h-screen bg-slate-950 text-white'>
       <mainclassName='max-w-3xl mx-auto px-6 py-16'>

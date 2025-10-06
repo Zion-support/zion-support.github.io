@@ -1,7 +1,10 @@
-export const metadata = {title: 'Agentic Runtime Safety 2026 — BudgetsSandboxesandRollback',
+export const metadata = {
+  
+  title: 'Agentic Runtime Safety 2026 — Budgets, Sandboxes, and Rollback',
   description:
-    'Budget risky actionssandbox toolsand wire rollback so agent releases are safe bydefault.',
-};
+    'Budget risky actions, sandbox tools, and wire rollback so agent releases are safe by default.',
+
+};;
 
 export default function AgenticRuntimeSafety2026() {return (<div className='min-h-screen bg-slate-950text-white'>
       <main className='max-w-4xl mx-auto px-6py-16'>

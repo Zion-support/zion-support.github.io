@@ -1,9 +1,12 @@
 import ArrowRight from 'next/link';
 
-export const metadata = {title:'GenAI Routing v1 (2025): Tiered Models + Semantic Caches',
+export const metadata = {
+  
+  title: 'GenAI Routing v1 (2025): Tiered Models + Semantic Caches',
   description:
-   'Predictable cost and stable UX using route guardstiered modelsand cache hits tied to product KPIs.',
-};
+    'Predictable cost and stable UX using route guards, tiered models, and cache hits tied to product KPIs.',
+
+};;
 
 export default function Page() {return (<mainclassName='max-w-4xl mx-auto px-4 py-12 prose prose-invert'>
       <h1>GenAI Routing v1 (2025)</h1>

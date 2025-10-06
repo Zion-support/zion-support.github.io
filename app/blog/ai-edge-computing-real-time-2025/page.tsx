@@ -1,9 +1,12 @@
 import ArrowRight from 'next/link';
 
-export const metadata = {title:'AI Edge Computing Real-Time Intelligence 2025 | Zion Tech Group',
+export const metadata = {
+  
+  title: 'AI Edge Computing Real-Time Intelligence 2025 | Zion Tech Group',
   description:
-   'Deploy intelligence at the source with <10ms latency95% bandwidth reductionand 87% cost savings. Enterprise-ready edge AI blueprint for 2025.',
-};
+    'Deploy intelligence at the source with <10ms latency, 95% bandwidth reduction, and 87% cost savings. Enterprise-ready edge AI blueprint for 2025.',
+
+};;
 
 export default function AIEdgeComputingRealTime2025Page() {return (<divclassName='min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-cyan-950 text-white'>
       <mainclassName='container mx-auto px-6 py-12'>

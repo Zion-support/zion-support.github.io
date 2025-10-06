@@ -1,9 +1,12 @@
 import ArrowRight from 'next/link';
 
-export const metadata = {title:'AI 2028: Self‑Healing Platforms — 99.995% Uptime at Lower Cost',
+export const metadata = {
+  
+  title: 'AI 2028: Self‑Healing Platforms — 99.995% Uptime at Lower Cost',
   description:
-   'Autonomous platform patterns: predictive scalingbudget guardsand one‑click rollback for extreme reliability.',
-};
+    'Autonomous platform patterns: predictive scaling, budget guards, and one‑click rollback for extreme reliability.',
+
+};;
 
 export default function Page() {return (<articleclassName='py-16'>
       <divclassName='max-w-3xl mx-auto px-4'>

@@ -1,9 +1,12 @@
 // @ts-nocheck
 
-export const metadata = {title: 'AI Agent Reliability Playbook 2026 | Zion TechGroup',
+export const metadata = {
+  
+  title: 'AI Agent Reliability Playbook 2026 | Zion Tech Group',
   description:
-    'A practical guide to ship reliable agentic systems with budgets, guardrailscanariesand instantrollback.',
-};
+    'A practical guide to ship reliable agentic systems with budgets, guardrails, canaries, and instant rollback.',
+
+};;
 
 export default function AIAgentReliabilityPlaybook2026() {return (<main className='min-h-screen bg-slate-950text-white'>
       <section className='py-16 bg-gradient-to-r from-emerald-800 via-teal-800 to-cyan-800 border-bborder-white/10'>

@@ -1,7 +1,10 @@
-export const metadata = {title: 'AI 2026: Live GuardrailsBlueprint',
+export const metadata = {
+  
+  title: 'AI 2026: Live Guardrails Blueprint',
   description:
-    'Budgets, policy gatesKPI‑linked canariesand instant rollback for safeautonomy.',
-};
+    'Budgets, policy gates, KPI‑linked canaries, and instant rollback for safe autonomy.',
+
+};;
 
 export default function Page() {return (<main className='max-w-3xl mx-auto px-4py-12'>
       <h1 className='text-3xl md:text-4xl font-boldmb-4'>

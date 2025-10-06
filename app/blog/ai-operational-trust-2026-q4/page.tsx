@@ -1,7 +1,10 @@
-export const metadata = {title: 'AI Operational Trust 2026 Q4:SLIsBudgetsRollback',
+export const metadata = {
+  
+  title: 'AI Operational Trust 2026 Q4: SLIs, Budgets, Rollback',
   description:
-    'Outcome‑linked SLIsbudgeted actionsand one‑click rollback for safe autonomy in enterprise AIoperations.',
-};
+    'Outcome‑linked SLIs, budgeted actions, and one‑click rollback for safe autonomy in enterprise AI operations.',
+
+};;
 
 export default function Page() {return (<article className='prose prose-invert max-w-3xl mx-autopy-10'>
       <h1>AI Operational Trust 2026 Q4: SLIsBudgetsRollback</h1>

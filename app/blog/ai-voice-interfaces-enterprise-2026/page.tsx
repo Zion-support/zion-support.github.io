@@ -1,9 +1,12 @@
 import ArrowRight from 'next/link';
 
-export const metadata = {title:'AI Voice Interfaces Enterprise 2026 | Zion Tech Group',
+export const metadata = {
+  
+  title: 'AI Voice Interfaces Enterprise 2026 | Zion Tech Group',
   description:
-   'Enterprise voice interfaces with 98% accuracy, multilingual support, and governance. Patterns for STT, TTSlatency budgetsand privacy.',
-};
+    'Enterprise voice interfaces with 98% accuracy, multilingual support, and governance. Patterns for STT, TTS, latency budgets, and privacy.',
+
+};;
 
 export default function AIVoiceInterfacesEnterprise2026Page() {return (<divclassName='min-h-screen bg-gradient-to-br from-slate-950 via-blue-950 to-indigo-950 text-white'>
       <mainclassName='container mx-auto px-6 py-12'>

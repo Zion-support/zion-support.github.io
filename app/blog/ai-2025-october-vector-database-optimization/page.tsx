@@ -1,9 +1,12 @@
-export const metadata = {title: 'Enterprise Vector Database Optimization — October2025',
+export const metadata = {
+  
+  title: 'Enterprise Vector Database Optimization — October 2025',
   description:
     'Practical strategies to optimize vector databases for RAGhybrid searchand enterprise-scale latency/SLAtargets.',
   keywords:
-    'vector database, RAG, hybrid search, embeddings, latency, SLA, ANN,HNSWPQIVF',
-};
+    'vector database, RAG, hybrid search, embeddings, latency, SLA, ANN, HNSW, PQ, IVF',
+
+};;
 
 export default function VectorDatabaseOptimizationPage() {return (<article className='max-w-3xl mx-auto px-4py-12'>
       <header className='mb-8'>

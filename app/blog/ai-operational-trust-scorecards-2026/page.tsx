@@ -1,10 +1,13 @@
 // @ts-nocheck
 import ArrowRight from 'next/link';
 
-export const metadata = {title:'AI Operational Trust Scorecards 2026 | Zion Tech Group',
+export const metadata = {
+  
+  title: 'AI Operational Trust Scorecards 2026 | Zion Tech Group',
   description:
-   'SLIs wired to KPIs with budgetscanariesand instant rollback for dependable AI operations in 2026.',
-};
+    'SLIs wired to KPIs with budgets, canaries, and instant rollback for dependable AI operations in 2026.',
+
+};;
 
 export default function AIOperationalTrustScorecards2026Page() {return (<divclassName='min-h-screen bg-slate-950 text-white'>
       <mainclassName='max-w-3xl mx-auto px-6 py-16'>

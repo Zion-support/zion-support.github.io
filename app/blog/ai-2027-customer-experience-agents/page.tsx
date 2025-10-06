@@ -1,9 +1,12 @@
 // @ts-nocheck
 
-export const metadata = {title: 'AI 2027: Customer Experience Agents — 24/7 AutonomousCX',
+export const metadata = {
+  
+  title: 'AI 2027: Customer Experience Agents — 24/7 Autonomous CX',
   description:
-    'Deploy trusted CX agents with budgets, live KPIsevalsand instant rollback that resolve 80% of ticketsautonomously.',
-};
+    'Deploy trusted CX agents with budgets, live KPIs, evals, and instant rollback that resolve 80% of tickets autonomously.',
+
+};;
 
 export default function Page() {return (<main className='min-h-screen bg-slate-950text-white'>
       <section className='py-20'>

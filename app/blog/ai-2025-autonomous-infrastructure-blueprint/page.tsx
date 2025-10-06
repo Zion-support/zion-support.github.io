@@ -1,10 +1,13 @@
 import ArrowRight from 'next/link';
 
-export const metadata = {title:
-   'Autonomous Infrastructure 2025: Self‑HealingSelf‑OptimizingSelf‑Scaling',
+export const metadata = {
+  
+  title:
+    'Autonomous Infrastructure 2025: Self‑Healing, Self‑Optimizing, Self‑Scaling',
   description:
-   'Blueprint for KPI‑linked, policy‑guarded autonomous infrastructure with predictable reliability and cost.',
-};
+    'Blueprint for KPI‑linked, policy‑guarded autonomous infrastructure with predictable reliability and cost.',
+
+};;
 
 export default function Page() {return (<mainclassName='max-w-3xl mx-auto px-4 py-12 prose prose-invert'>
       <h1>Autonomous Infrastructure 2025</h1>

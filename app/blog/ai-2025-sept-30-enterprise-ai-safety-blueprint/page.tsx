@@ -1,1 +1,40 @@
-export const metadata = {title: 'AI 2 0 2 5: Ent e r p r i s e AI Saf e t y Bl u e p r i nt' description: 'KPI-lin k e d sco r e c a r d s CI pol i c y testscana r i e s a n d inst a n t r o l l b a c k to s h i p f a s t with o u t regr e s s i o ns.' }; }; export default function P a g e() {ret u r n (<arti c l e cl a s s N a m e ='prose prose-ind i g omax-w-3xl'> <h1>AI 2 0 2 5: Ent e r p r i s e AI Saf e t y Bl u e p r i n t</h1> <p> S h i p AI f e a t u r e s wee k l y with o u t regr e s s i o n s us i n g KPI-lin k e d scorecardsligh t w e i g h t pol i c y te s t s in CI a n d l i v e c a n a r i e s t h a t trig g e r inst a n t r o l l b a c k w h e n o u t c o m e s dr i f t. </p> <h2>W h a t you w i l l le a r n</h2> <ul> <li>Des i g n KPI-lin k e d sco r e c a r d s en g i n e e r s ad o p t</li> <li>W i r e CI pol i c y te s t s t h a t k e e p te a m s f a s t</li> <li>Run l i v e c a n a r i e s w i t h b u d g e t e d acti o n s</li> <li>Trig g e r inst a n t r o l l b a c k on KPI regr e s s i o n s</li> </ul> <h2>Bl u e p r i n t</h2> <ol> <li>Def i n e S L I s t h a t co r r e l a t e w i t h b u s i n e s s K P I s</li> <li>Add PR pol i c y te s t s and me r g e ga t e s</li> <li>Dep l o y c a n a r i e s w i t h e x p l i c i t er r o r/qual i t y budg e t s</li> <li>A u t o m a t e r o l l b a c k w i t h sig n e d ap p r o v a l s</li> </ol> <p cl a s s N a m e='text-sm t e x t-g r ay-500'> Pu b l i s h e d: 2 0 2 5-09-30 • 8 min r e a d • C a t e g o r y: AI Gov e r n a n c e </p> </arti c l e> ); }
+// @ts-nocheck
+
+export const metadata = {
+  
+  title: 'AI 2025: Enterprise AI Safety Blueprint',
+    description:
+      'KPI-linked scorecards, CI policy tests, canaries, and instant rollback to ship fast without regressions.',
+  
+};,
+};
+
+export default function Page() {
+  return (
+    <article className='prose prose-indigo max-w-3xl'>
+      <h1>AI 2025: Enterprise AI Safety Blueprint</h1>
+      <p>
+        Ship AI features weekly without regressions using KPI-linked scorecards,
+        lightweight policy tests in CI, and live canaries that trigger instant
+        rollback when outcomes drift.
+      </p>
+      <h2>What you will learn</h2>
+      <ul>
+        <li>Design KPI-linked scorecards engineers adopt</li>
+        <li>Wire CI policy tests that keep teams fast</li>
+        <li>Run live canaries with budgeted actions</li>
+        <li>Trigger instant rollback on KPI regressions</li>
+      </ul>
+      <h2>Blueprint</h2>
+      <ol>
+        <li>Define SLIs that correlate with business KPIs</li>
+        <li>Add PR policy tests and merge gates</li>
+        <li>Deploy canaries with explicit error/quality budgets</li>
+        <li>Automate rollback with signed approvals</li>
+      </ol>
+      <p className='text-sm text-gray-500'>
+        Published: 2025-09-30 • 8 min read • Category: AI Governance
+      </p>
+    </article>
+  );
+}

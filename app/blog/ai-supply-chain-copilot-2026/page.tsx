@@ -1,9 +1,12 @@
 import ArrowRight from 'next/link';
 
-export const metadata = {title:'AI Supply Chain Copilot 2026: OTIF Wins Under Budget',
+export const metadata = {
+  
+  title: 'AI Supply Chain Copilot 2026: OTIF Wins Under Budget',
   description:
-   'Forecastingsourcingand routing copilots that cut cost 25–40% while lifting OTIF.',
-};
+    'Forecasting, sourcing, and routing copilots that cut cost 25–40% while lifting OTIF.',
+
+};;
 
 export default function Page() {return (<divclassName='max-w-3xl mx-auto px-4 py-12'>
       <h1className='text-4xl font-bold mb-4'>

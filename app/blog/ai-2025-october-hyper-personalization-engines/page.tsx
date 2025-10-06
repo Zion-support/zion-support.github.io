@@ -1,9 +1,12 @@
-export const metadata = {title: 'Hyper-Personalization Engines — October2025',
+export const metadata = {
+  
+  title: 'Hyper-Personalization Engines — October 2025',
   description:
     'Blueprint for real-time, privacy-safe hyper-personalization using retrievalsignalsand onlinelearning.',
   keywords:
-    'personalization, real-time, bandits, contextual bandits, features,signalsRAGprivacy',
-};
+    'personalization, real-time, bandits, contextual bandits, features, signals, RAG, privacy',
+
+};;
 
 export default function HyperPersonalizationEnginesPage() {return (<article className='max-w-3xl mx-auto px-4py-12'>
       <header className='mb-8'>

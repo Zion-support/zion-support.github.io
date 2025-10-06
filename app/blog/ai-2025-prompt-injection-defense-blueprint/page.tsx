@@ -1,1 +1,165 @@
-export const metadata = {title: 'Pro m p t In j e c t i o n Defe n s e 2 0 25' description: 'Laye r e d d e f e n s e s for Ge n A I saf e t y: in p u t val i d a t i o n cont e x t isolatio n p o l i c y ch e c k s a n d con t i n u o u s ev a ls.' t y p e: 'arti c le' publis h e d T i m e: '2 0 2 5-09-30 T00:00:00Z' }; }; export default function P a g e() {ret u r n (<div cl a s s N a m e ='min-h-screen bg-gradient-to-br f r o m-sl a t e-900 via-g r a y-900 to-sl a t e-900 t e x t-wh i te'> <m a i n cl a s s N a m e='co n t a i n e r mx-auto px-6py-12'> <nav cl a s s N a m e='mb-8'> <a h r ef='/<b l o g' cl a s s N a me='t e x t-b l u e-300 ho v e r:t e x t-b l u e-200 tra n s i t i o n-col o r s' > ← B a c k to B l o g </a> </nav> <arti c l e cl a s s N a me='max-w-4 xl mx-auto'> <hea d e r cl a s s N a me='mb-12'> <div cl a s s N a me='f l e x it e m s-cen t e r gap-3 mb-4 f l e x-w r a p'> <span cl a s s N a me='px-3 py-1 bg-b l u e-400/20 t e x t-b l u e-300 text-sm roun d e d-f u l l bor d e r bor d e r-b l u e-400/30'> AI Saf e t y & Gov e r n a n c e </span> <span cl a s s N a me='t e x t-wh i t e/60 text-sm'>Se p t e m b e r 30 2 0 2 5</span> <span cl a s s N a me='t e x t-wh i t e/60 text-sm'>•</span> <span cl a s s N a me='t e x t-wh i t e/60 text-sm'>14 min r e a d</span> </div> <h1 cl a s s N a me='t e x t-5 xl f o n t-ex t r a b o l d mb-6 bg-g r a d i e n t-to-r f r o m-b l u e-300 to-c y a n-300 bg-c l i p-t e x t t e x t-tran s p a r e n t'> Pro m p t In j e c t i o n Defe n s e 2 0 2 5: Ent e r p r i s e Bl u e p r i n t for S a f e Ge n A I </h1> <p cl a s s N a me='t e x t-xl t e x t-wh i t e/80'> Def e n d Ge n A I syst e m s agai n s t pro m p t in j e c t i o n w i t h laye r e d c o n t r o l s: pol i c y ga t e s cont e x t isolatio n o u t p u t valida t o r s a n d con t i n u o u s red team i n g. S h i p r e l i a b l e a u t o n o m y w i t h mea s u r a b l e saf e t y. </p> </hea d e r> <div cl a s s N a me='prose prose-inv e r t prose-lg max-w-none sp a c e-y-12'> <sect i o n> <h2 cl a s s N a me='t e x t-3 xl font-bold mb-6 t e x t-b l u e-300'> Thr e a t Mo d e l: How In j e c t i o n B y p a s s e s C o n t r o l s </h2> <ul cl a s s N a me='sp a c e-y-3 t e x t-wh i t e/80'> <li> • I n d i r e c t pro m p t in j e c t i o n via re t r i e v e d or t o o l-p r o v i d e d cont e x t </li> <li> • Out p u t hi j a c k i n g w i t h t o o l c a l l manip u l a t i o n and inst r u c t i o n o v e r r i d e </li> <li>• T r a i n i n g d a t a leak a g e prom p t s and ja i l b r e a k p a t t e r n s</li> </ul> </sect i o n> <sect i o n> <h2 cl a s s N a me='t e x t-3 xl font-bold mb-6 t e x t-c y a n-300'> Laye r e d Defe n s e Archi t e c t u r e </h2> <div cl a s s N a me='g r i d md:g r i d-c o l s-2 gap-6'> <div cl a s s N a me='bg-wh i t e/5 bor d e r bor d e r-wh i t e/10 roun d e d-xl p-6'> <h3 cl a s s N a me='t e x t-xl font-bold mb-3 t e x t-b l u e-200'> In p u t & Re t r i e v a l C o n t r o l s </h3> <ul cl a s s N a me='sp a c e-y-2 t e x t-wh i t e/80'> <li>• Sch e m a val i d a t i o n and sc o p e rest r i c t i o n</li> <li>• Sou r c e all o w l i s t s and sig n e d cont e x t</li> <li> • Un t r u s t e d cont e x t d e m o t i o n and ch u n k-le v e l p o l i c i e s </li> </ul> </div> <div cl a s s N a me='bg-wh i t e/5 bor d e r bor d e r-wh i t e/10 roun d e d-xl p-6'> <h3 cl a s s N a me='t e x t-xl font-bold mb-3 t e x t-c y a n-200'> Gen e r a t i o n & Out p u t Val i d a t i o n </h3> <ul cl a s s N a me='sp a c e-y-2 t e x t-wh i t e/80'> <li> • Pol i c y prom p t s w i t h m u s t-c i t e and t o o l-us a g e co n t r a c t s </li> <li>• Str u c t u r e d outp u t s + J S O N sch e m a val i d a t i o n</li> <li>• Saf e t y clas s i f i e r s and adve r s a r i a l pro m p t filt e r s</li> </ul> </div> </div> </sect i o n> <sect i o n> <h2 cl a s s N a me='t e x t-3 xl font-bold mb-6 t e x t-ind i g o-300'> Con t i n u o u s Red Team i n g & Ev a l s </h2> <ul cl a s s N a me='sp a c e-y-2 t e x t-wh i t e/80'> <li> • Cur a t e ja i l b r e a k corp o r a and pro m p t-in j e c t i o n p a t t e r n s </li> <li>• A u t o m a t e regr e s s i o n s w i t h pol i c y sco r e c a r d s and S L A s</li> <li> • Tr a c k i n c i d e n t post m o r t e m s and cl o s e the l o o p w i t h d a t a s e t s </li> </ul> </sect i o n> <sect i o n cl a s s N a me='bg-gradient-to-br f r o m-b l u e-500/20 to-c y a n-500/20 bor d e r bor d e r-b l u e-500/30 roun d e d-2 xl p-8'> <h2 cl a s s N a me='t e x t-3 xl font-bold mb-4 t e x t-cen t e r'> Dep l o y Saf e l y M o v e Fas t e r </h2> <p cl a s s N a me='t e x t-cen t e r t e x t-wh i t e/80 mb-8 t e x t-lg'> Our t e a m imp l e m e n t s ent e r p r i s e AI saf e t y p r o g r a m s—f r o m pol i c y prom p t s and val i d a t o r s to l i v e red team i n g and mon i t o r i n g—so you s h i p f a s t with o u t su r p r i s e s. </p> <div cl a s s N a me='f l e x just i f y-cen t e r gap-4'> <a h r ef='/<cont a c t' cl a s s N a me='bg-g r a d i e n t-to-r f r o m-b l u e-500 to-c y a n-600 ho v e r:f r o m-b l u e-400 ho v e r:to-c y a n-500 t e x t-wh i t e font-bold py-4 px-8 roun d e d-xl tra n s i t i o n-all d u r a t i o n-300 sha d o w-lg' > T a l k to an Exp e r t </a> <a h r ef='/c a s e-<stud i e s' cl a s s N a me='bor d e r-2 bor d e r-c y a n-500 t e x t-c y a n-300 ho v e r:bg-c y a n-500 ho v e r:t e x t-wh i t e font-bold py-4 px-8 roun d e d-xl tra n s i t i o n-all d u r a t i o n-300' > V i e w C a s e Stud i e s </a> </div> </sect i o n> </div> <foo t e r cl a s s N a me='mt-16 pt-8 bor d e r-t bor d e r-wh i t e/20'> <div cl a s s N a me='f l e x it e m s-cen t e r just i f y-betw e e n'> <div cl a s s N a me='t e x t-wh i t e/60 text-sm'> Writ t e n by Z i o n T e c h Gr o u p S e c u r i t y Engi n e e r i n g </div> <div cl a s s N a me='f l e x gap-4'> <a h r ef='/<b l o g' cl a s s N a me='t e x t-b l u e-300 ho v e r:t e x t-b l u e-200 tra n s i t i o n-col o r s' > ← B a c k to B l o g </a> <a h r ef='/<cont a c t' cl a s s N a me='t e x t-c y a n-300 ho v e r:t e x t-c y a n-200 tra n s i t i o n-col o r s' > Get in To u c h </a> </div> </div> </foo t e r> </arti c l e> </m a i n> </div> ); }
+// @ts-nocheck
+
+export const metadata = {
+  
+  title: 'Prompt Injection Defense 2025',
+    description:
+      'Layered defenses for GenAI safety: input validation, context isolation, policy checks, and continuous evals.',
+    type: 'article',
+    publishedTime: '2025-09-30T00:00:00Z',
+  
+};,
+};
+
+export default function Page() {
+  return (
+    <div className='min-h-screen bg-gradient-to-br from-slate-900 via-gray-900 to-slate-900 text-white'>
+      <main className='container mx-auto px-6 py-12'>
+        <nav className='mb-8'>
+          <a
+            href='/<blog'
+            className='text-blue-300 hover:text-blue-200 transition-colors'
+          >
+            ← Back to Blog
+          </a>
+        </nav>
+
+        <article className='max-w-4xl mx-auto'>
+          <header className='mb-12'>
+            <div className='flex items-center gap-3 mb-4 flex-wrap'>
+              <span className='px-3 py-1 bg-blue-400/20 text-blue-300 text-sm rounded-full border border-blue-400/30'>
+                AI Safety & Governance
+              </span>
+              <span className='text-white/60 text-sm'>September 30, 2025</span>
+              <span className='text-white/60 text-sm'>•</span>
+              <span className='text-white/60 text-sm'>14 min read</span>
+            </div>
+
+            <h1 className='text-5xl font-extrabold mb-6 bg-gradient-to-r from-blue-300 to-cyan-300 bg-clip-text text-transparent'>
+              Prompt Injection Defense 2025: Enterprise Blueprint for Safe GenAI
+            </h1>
+            <p className='text-xl text-white/80'>
+              Defend GenAI systems against prompt injection with layered
+              controls: policy gates, context isolation, output validators, and
+              continuous red teaming. Ship reliable autonomy with measurable
+              safety.
+            </p>
+          </header>
+
+          <div className='prose prose-invert prose-lg max-w-none space-y-12'>
+            <section>
+              <h2 className='text-3xl font-bold mb-6 text-blue-300'>
+                Threat Model: How Injection Bypasses Controls
+              </h2>
+              <ul className='space-y-3 text-white/80'>
+                <li>
+                  • Indirect prompt injection via retrieved or tool-provided
+                  context
+                </li>
+                <li>
+                  • Output hijacking with tool call manipulation and instruction
+                  override
+                </li>
+                <li>• Training data leakage prompts and jailbreak patterns</li>
+              </ul>
+            </section>
+
+            <section>
+              <h2 className='text-3xl font-bold mb-6 text-cyan-300'>
+                Layered Defense Architecture
+              </h2>
+              <div className='grid md:grid-cols-2 gap-6'>
+                <div className='bg-white/5 border border-white/10 rounded-xl p-6'>
+                  <h3 className='text-xl font-bold mb-3 text-blue-200'>
+                    Input & Retrieval Controls
+                  </h3>
+                  <ul className='space-y-2 text-white/80'>
+                    <li>• Schema validation and scope restriction</li>
+                    <li>• Source allowlists and signed context</li>
+                    <li>
+                      • Untrusted context demotion and chunk-level policies
+                    </li>
+                  </ul>
+                </div>
+                <div className='bg-white/5 border border-white/10 rounded-xl p-6'>
+                  <h3 className='text-xl font-bold mb-3 text-cyan-200'>
+                    Generation & Output Validation
+                  </h3>
+                  <ul className='space-y-2 text-white/80'>
+                    <li>
+                      • Policy prompts with must-cite and tool-usage contracts
+                    </li>
+                    <li>• Structured outputs + JSON schema validation</li>
+                    <li>• Safety classifiers and adversarial prompt filters</li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+
+            <section>
+              <h2 className='text-3xl font-bold mb-6 text-indigo-300'>
+                Continuous Red Teaming & Evals
+              </h2>
+              <ul className='space-y-2 text-white/80'>
+                <li>
+                  • Curate jailbreak corpora and prompt-injection patterns
+                </li>
+                <li>• Automate regressions with policy scorecards and SLAs</li>
+                <li>
+                  • Track incident postmortems and close the loop with datasets
+                </li>
+              </ul>
+            </section>
+
+            <section className='bg-gradient-to-br from-blue-500/20 to-cyan-500/20 border border-blue-500/30 rounded-2xl p-8'>
+              <h2 className='text-3xl font-bold mb-4 text-center'>
+                Deploy Safely, Move Faster
+              </h2>
+              <p className='text-center text-white/80 mb-8 text-lg'>
+                Our team implements enterprise AI safety programs—from policy
+                prompts and validators to live red teaming and monitoring—so you
+                ship fast without surprises.
+              </p>
+              <div className='flex justify-center gap-4'>
+                <a
+                  href='/<contact'
+                  className='bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-400 hover:to-cyan-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg'
+                >
+                  Talk to an Expert
+                </a>
+                <a
+                  href='/case-<studies'
+                  className='border-2 border-cyan-500 text-cyan-300 hover:bg-cyan-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300'
+                >
+                  View Case Studies
+                </a>
+              </div>
+            </section>
+          </div>
+
+          <footer className='mt-16 pt-8 border-t border-white/20'>
+            <div className='flex items-center justify-between'>
+              <div className='text-white/60 text-sm'>
+                Written by Zion Tech Group Security Engineering
+              </div>
+              <div className='flex gap-4'>
+                <a
+                  href='/<blog'
+                  className='text-blue-300 hover:text-blue-200 transition-colors'
+                >
+                  ← Back to Blog
+                </a>
+                <a
+                  href='/<contact'
+                  className='text-cyan-300 hover:text-cyan-200 transition-colors'
+                >
+                  Get in Touch
+                </a>
+              </div>
+            </div>
+          </footer>
+        </article>
+      </main>
+    </div>
+  );
+}

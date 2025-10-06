@@ -1,7 +1,10 @@
-export const metadata = {title: 'Privacy‑First Experimentation 2026: Insights WithoutPII',
+export const metadata = {
+  
+  title: 'Privacy‑First Experimentation 2026: Insights Without PII',
   description:
-    'Scoped IDsedge aggregationand DP noise for compliant A/B tests under<100ms.',
-};
+    'Scoped IDs, edge aggregation, and DP noise for compliant A/B tests under <100ms.',
+
+};;
 
 export default function Page() {return (<main className='max-w-3xl mx-auto px-6py-16'>
       <h1 className='text-4xl font-boldmb-4'>

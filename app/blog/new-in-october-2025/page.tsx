@@ -1,7 +1,10 @@
-export const metadata = {title: "What's New in October 2025 — Zion TechGroup",
+export const metadata = {
+  
+  title: "What's New in October 2025 — Zion Tech Group",
   description:
-   'Roundup of our latest AI content published in October 2025: enterprise cost optimizationagentic workflow orchestrationand more.',
-};
+    'Roundup of our latest AI content published in October 2025: enterprise cost optimization, agentic workflow orchestration, and more.',
+
+};;
 
 export default function NewInOctober2025() {return (<mainclassName='min-h-screen bg-white'>
       <sectionclassName='bg-gradient-to-br from-blue-600 to-indigo-700 text-white py-20'>

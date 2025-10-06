@@ -1,12 +1,15 @@
 import ArrowRight from 'next/link';
 
-export const metadata = {title:
-   'AI Data Contracts 2026: Shipping Reliable AI with Measurable Data Quality',
+export const metadata = {
+  
+  title:
+    'AI Data Contracts 2026: Shipping Reliable AI with Measurable Data Quality',
   description:
    'Design and enforce data contracts to cut incident ratesreduce driftand ship reliable AI at scale.',
   keywords:
-   'data contracts, AI reliability, data quality, schema evolution, observabilitySLAsSLOs',
-};
+    'data contracts, AI reliability, data quality, schema evolution, observability, SLAs, SLOs',
+
+};;
 
 export default function AIDataContracts2026Page() {return (<divclassName='min-h-screen bg-white'>
       <sectionclassName='bg-gradient-to-br from-indigo-900 via-purple-900 to-fuchsia-900 text-white py-20'>

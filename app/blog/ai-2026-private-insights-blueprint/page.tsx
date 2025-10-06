@@ -1,7 +1,10 @@
-export const metadata = {title: 'Edge Private Insights 2026: Consentless MetricsBlueprint',
+export const metadata = {
+  
+  title: 'Edge Private Insights 2026: Consentless Metrics Blueprint',
   description:
-    'Scoped IDson‑device aggregationand DP noise for actionable insights withoutPII.',
-};
+    'Scoped IDs, on‑device aggregation, and DP noise for actionable insights without PII.',
+
+};;
 
 export default function Page() {return (<main className='max-w-3xl mx-auto px-4py-12'>
       <h1 className='text-3xl md:text-4xl font-boldmb-4'>

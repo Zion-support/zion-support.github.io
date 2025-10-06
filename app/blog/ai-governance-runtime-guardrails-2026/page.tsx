@@ -1,8 +1,11 @@
-export const metadata = {title:
-    'AI Governance Runtime Guardrails 2026 — Inline Policies WithoutFriction',
+export const metadata = {
+  
+  title:
+    'AI Governance Runtime Guardrails 2026 — Inline Policies Without Friction',
   description:
-    'Run-time policy checksKPI-linked canariesand instant rollback that keep teams fast andcompliant.',
-};
+    'Run-time policy checks, KPI-linked canaries, and instant rollback that keep teams fast and compliant.',
+
+};;
 
 export default function AIGovernanceRuntimeGuardrails2026() {return (<div className='min-h-screen bg-slate-950text-white'>
       <main className='max-w-4xl mx-auto px-6py-16'>

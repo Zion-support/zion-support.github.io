@@ -1,9 +1,12 @@
 import ArrowRight from 'next/link';
 
-export const metadata = {title:'GenAI Routing Quality Tiers Q4 2025: Predictable Cost, Stable UX',
+export const metadata = {
+  
+  title: 'GenAI Routing Quality Tiers Q4 2025: Predictable Cost, Stable UX',
   description:
-   'Tiered modelscachingand budget‑aware routes mapped to SLOs to keep quality high and costs predictable.',
-};
+    'Tiered models, caching, and budget‑aware routes mapped to SLOs to keep quality high and costs predictable.',
+
+};;
 
 export default function GenAIRoutingQualityTiersQ42025Page() {return (<divclassName='min-h-screen bg-slate-950 text-white'>
       <mainclassName='max-w-3xl mx-auto px-6 py-16'>

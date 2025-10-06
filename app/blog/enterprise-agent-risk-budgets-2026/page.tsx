@@ -1,9 +1,12 @@
 import ArrowRight from 'next/link';
 
-export const metadata = {title:'Enterprise Agent Risk Budgets: Safe Autonomy at Scale',
+export const metadata = {
+  
+  title: 'Enterprise Agent Risk Budgets: Safe Autonomy at Scale',
   description:
-   'Explicit budgetsapprovalsand rollback triggers for agent actions across orgs.',
-};
+    'Explicit budgets, approvals, and rollback triggers for agent actions across orgs.',
+
+};;
 
 export default function Page() {return (<divclassName='max-w-3xl mx-auto px-4 py-12'>
       <h1className='text-4xl font-bold mb-4'>

@@ -1,1 +1,20 @@
-import {M e t a d a t a }f r o m 'n e xt';import AI2 0 2 6 JanuaryBreakthroughAnnou n c e m e n t f r o m '../../../b l o g/ai-2 0 2 6-janu a r y-break t h r o u g h-annou n c e m e nt';export const metadata = {ti t l e: '' Janu a r y 2 0 2 6 AI Brea k t h r o ug'' h:'M e t a-Co g n i t i v e AI Rev o l u t i o n'' description:'Revolu t i o n a r y AI break t h r o u g h del i v e r i n g 1 0 0 0 x perf o r m a n c e impro v e m e n t s and 98% aut o m a t i o n ra t e s for ent e r p r i s e transfo r m a t i o n.' t y p e:'arti c l e'};}; url:'/b l o g/ai-2 0 2 6-janu a r y-break t h r o u g h-annou n c e m e n t'} alt e r n a t e s:'{' ca n o n i c a l:'/b l o g/ai-2 0 2 6-janu a r y-break t h r o u g h-annou n c e m e n t' };exp o r t defa u l t f u n c t i o n P a g e() {ret u r n <AI2 0 2 6 JanuaryBreakthroughAnnou n c e m e n t />;}
+import { Metadata } from 'next';
+import AI2026JanuaryBreakthroughAnnouncement from '../../../blog/ai-2026-january-breakthrough-announcement';
+
+export const metadata = {
+  
+  title: '🚀 January 2026 AI Breakthrough: Meta-Cognitive AI Revolution',
+    description:
+      'Revolutionary AI breakthrough delivering 1000x performance improvements and 98% automation rates for enterprise transformation.',
+    type: 'article',
+    url: '/blog/ai-2026-january-breakthrough-announcement',
+  
+};,
+  alternates: {
+    canonical: '/blog/ai-2026-january-breakthrough-announcement',
+  },
+};
+
+export default function Page() {
+  return <AI2026JanuaryBreakthroughAnnouncement />;
+}

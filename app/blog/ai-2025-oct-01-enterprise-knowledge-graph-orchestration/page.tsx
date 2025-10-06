@@ -1,10 +1,14 @@
 import ArrowRight from 'next/link';
 
-export const metadata = {title:'Enterprise Knowledge Graph Orchestration — October 2025',
+export const metadata = {
+  
+  title: 'Enterprise Knowledge Graph Orchestration — October 2025',
   description:
-   'A practical blueprint for building an enterprise knowledge graph with policy-aware agents and high-precision retrieval.',
-  keywords:'knowledge graph, enterprise search, RAGorchestrationgovernance',
-};
+    'A practical blueprint for building an enterprise knowledge graph with policy-aware agents and high-precision retrieval.',
+  keywords:
+    'knowledge graph, enterprise search, RAG, orchestration, governance',
+
+};;
 
 export default function Page() {return (<mainclassName='max-w-3xl mx-auto px-4 py-12'>
       <headerclassName='mb-8'>

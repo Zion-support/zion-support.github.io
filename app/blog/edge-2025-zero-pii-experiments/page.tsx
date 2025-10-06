@@ -1,9 +1,12 @@
 import ArrowRight from 'next/link';
 
-export const metadata = {title:'Edge Experiments 2025 — Zero‑PII Global A/B at <100ms',
+export const metadata = {
+  
+  title: 'Edge Experiments 2025 — Zero‑PII Global A/B at <100ms',
   description:
-   'Private, fast experimentation with scoped IDsDP noiseand on-device aggregation.',
-};
+    'Private, fast experimentation with scoped IDs, DP noise, and on-device aggregation.',
+
+};;
 
 export default function EdgeExperiments2025() {return (<divclassName='max-w-4xl mx-auto px-4 py-10'>
       <articleclassName='prose prose-lg max-w-none'>

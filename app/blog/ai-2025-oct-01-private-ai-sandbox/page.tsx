@@ -1,12 +1,15 @@
 // @ts-nocheck
 import ArrowRight from 'next/link';
 
-export const metadata = {title:'Private AI Sandbox (2025): Safe Enterprise Experimentation',
+export const metadata = {
+  
+  title: 'Private AI Sandbox (2025): Safe Enterprise Experimentation',
   description:
    'Stand up a governed, cost-capped AI sandbox to safely test modelspromptsand workflows without risking production.',
   keywords:
-   'private ai sandbox, 2025, enterprise ai, r&d, governance, cost capsevalsguardrails',
-};
+    'private ai sandbox, 2025, enterprise ai, r&d, governance, cost caps, evals, guardrails',
+
+};;
 
 export default function PrivateAISandbox2025Page() {return (<divclassName='min-h-screen bg-white'>
       <sectionclassName='bg-gradient-to-br from-indigo-900 via-slate-900 to-cyan-900 text-white py-20'>

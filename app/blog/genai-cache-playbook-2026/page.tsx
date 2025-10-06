@@ -1,9 +1,12 @@
 import ArrowRight from 'next/link';
 
-export const metadata = {title:'GenAI Cache Playbook (2026): Cut cost 50%+ with semantic caches',
+export const metadata = {
+  
+  title: 'GenAI Cache Playbook (2026): Cut cost 50%+ with semantic caches',
   description:
-   'A practical guide to tieredsemanticand program‑aware caches for stable UX under strict budgets.',
-};
+    'A practical guide to tiered, semantic, and program‑aware caches for stable UX under strict budgets.',
+
+};;
 
 export default function Page() {return (<mainclassName='max-w-3xl mx-auto px-4 py-12 prose prose-invert'>
       <h1>GenAI Cache Playbook (2026)</h1>

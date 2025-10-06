@@ -1,7 +1,10 @@
-export const metadata = {title: 'Autonomous FinOps 2025: Cut AI Spend 50–85%Safely',
+export const metadata = {
+  
+  title: 'Autonomous FinOps 2025: Cut AI Spend 50–85% Safely',
   description:
-    'Blueprint for autonomous FinOps: routing tiers, semantic cacheseval scorecardsand policy budgets to slash AI costs without hurtingquality.',
-};
+    'Blueprint for autonomous FinOps: routing tiers, semantic caches, eval scorecards, and policy budgets to slash AI costs without hurting quality.',
+
+};;
 
 export default function AutonomousFinOpsBlueprint2025Page() {return (<div className='min-h-screen bg-whitetext-gray-900'>
       <header className='bg-gradient-to-r from-emerald-600 to-teal-600 text-whitepy-14'>

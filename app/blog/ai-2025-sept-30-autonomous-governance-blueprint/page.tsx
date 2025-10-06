@@ -1,9 +1,12 @@
 import ArrowRight from 'next/link';
 
-export const metadata = {title:'Autonomous Governance Blueprint (2025) — Zion Tech Group',
+export const metadata = {
+  
+  title: 'Autonomous Governance Blueprint (2025) — Zion Tech Group',
   description:
-   'A pragmatic blueprint for autonomous governance: policy-driven agentsverifiable controlsand operational trust at enterprise scale.',
-};
+    'A pragmatic blueprint for autonomous governance: policy-driven agents, verifiable controls, and operational trust at enterprise scale.',
+
+};;
 
 export default function AutonomousGovernanceBlueprint2025() {return (<mainclassName='min-h-screen bg-slate-950 text-white'>
       <sectionclassName='py-16 border-b border-white/10 bg-white/5'>

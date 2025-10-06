@@ -1,9 +1,12 @@
 import ArrowRight from 'next/link';
 
-export const metadata = {title:'Real‑Time Multimodal Assistants (2028): Voice + Vision + Touch',
+export const metadata = {
+  
+  title: 'Real‑Time Multimodal Assistants (2028): Voice + Vision + Touch',
   description:
-   'Production patterns for assistants that seehearand act with <150ms latency.',
-};
+    'Production patterns for assistants that see, hear, and act with <150ms latency.',
+
+};;
 
 export default function Page() {return (<mainclassName='max-w-3xl mx-auto px-4 py-12 prose prose-invert'>
       <h1>Real‑Time Multimodal Assistants (2028): Voice + Vision + Touch</h1>

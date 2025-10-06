@@ -1,7 +1,10 @@
-export const metadata = {title: 'Realtime Personalization 2025 at the Edge: <100ms,Zero‑PII',
+export const metadata = {
+  
+  title: 'Realtime Personalization 2025 at the Edge: <100ms, Zero‑PII',
   description:
-    'Edge flags, scoped IDson‑device telemetry for privatesub‑100ms personalization at globalscale.',
-};
+    'Edge flags, scoped IDs, on‑device telemetry for private, sub‑100ms personalization at global scale.',
+
+};;
 
 export default function Page() {return (<main className='max-w-3xl mx-auto px-4py-12'>
       <h1 className='text-4xl font-boldmb-4'>

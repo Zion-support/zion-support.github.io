@@ -1,7 +1,10 @@
-export const metadata = {title: 'Edge Privacy Insights 2026 — Actionable Metrics WithoutPII',
+export const metadata = {
+  
+  title: 'Edge Privacy Insights 2026 — Actionable Metrics Without PII',
   description:
-    'Scoped IDson-device aggregationand DP noise for trustworthy insights with zero PIIcollection.',
-};
+    'Scoped IDs, on-device aggregation, and DP noise for trustworthy insights with zero PII collection.',
+
+};;
 
 export default function EdgePrivacyInsights2026() {return (<div className='min-h-screen bg-slate-950text-white'>
       <main className='max-w-4xl mx-auto px-6py-16'>

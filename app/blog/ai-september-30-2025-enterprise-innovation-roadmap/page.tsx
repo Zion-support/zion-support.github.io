@@ -1,12 +1,16 @@
 // @ts-nocheck
 import ArrowRight from 'next/link';
 
-export const metadata = {title:'Enterprise AI Innovation Roadmap (Sept 30, 2025)',
-  description:
-   'Methodical milestones to scale enterprise AI with controlsafetyand outcomes.',
-  type:'article',
-  publishedTime:'2025-09-30T00:00:00.000Z',
-  authors:['Zion Tech Group'],
+export const metadata = {
+  
+  title: 'Enterprise AI Innovation Roadmap (Sept 30, 2025)',
+    description:
+      'Methodical milestones to scale enterprise AI with control, safety, and outcomes.',
+    type: 'article',
+    publishedTime: '2025-09-30T00:00:00.000Z',
+    authors: ['Zion Tech Group'],
+  
+};,
 };
 
 export default function EnterpriseInnovationRoadmapSept302025() {return (<divclassName='min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900'>

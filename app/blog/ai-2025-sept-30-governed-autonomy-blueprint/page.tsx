@@ -1,12 +1,15 @@
 // @ts-nocheck
 import ArrowRight from 'next/link';
 
-export const metadata = {title:'Governed Autonomy Blueprint (2025): SafeReliableCost-Aware AI',
+export const metadata = {
+  
+  title: 'Governed Autonomy Blueprint (2025): Safe, Reliable, Cost-Aware AI',
   description:
    'A practical blueprint to ship governed autonomy: budgets, scorecardsguardrailsand live traces that connect SLIs to business KPIs.',
   keywords:
-   'governed autonomy, ai guardrails, policy tests, operational scorecardsai budgetsenterprise ai 2025',
-};
+    'governed autonomy, ai guardrails, policy tests, operational scorecards, ai budgets, enterprise ai 2025',
+
+};;
 
 export default function GovernedAutonomyBlueprint2025() {return (<divclassName='min-h-screen bg-white'>
       <headerclassName='bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white py-20'>

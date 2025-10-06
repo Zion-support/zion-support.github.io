@@ -1,7 +1,10 @@
-export const metadata = {title: 'Executive AI Roadmap — October 2025 | Zion TechGroup',
+export const metadata = {
+  
+  title: 'Executive AI Roadmap — October 2025 | Zion Tech Group',
   description:
-    'A pragmatic 90‑day enterprise roadmap to ship reliable AI with guardrails, live scorecardsbudgetsand measurableROI.',
-};
+    'A pragmatic 90‑day enterprise roadmap to ship reliable AI with guardrails, live scorecards, budgets, and measurable ROI.',
+
+};;
 
 export default function ExecutiveAIRoadmapPage() {return (<main className='min-h-screen bg-slate-950text-white'>
       <article className='max-w-3xl mx-auto px-4py-16'>

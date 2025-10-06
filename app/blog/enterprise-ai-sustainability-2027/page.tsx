@@ -1,9 +1,12 @@
 // @ts-nocheck
 
-export const metadata = {title: 'Enterprise AI Sustainability2027',
+export const metadata = {
+  
+  title: 'Enterprise AI Sustainability 2027',
   description:
-    'Cut AI spend and carbon 70% with quality tiersgreen routingand workloadshifting.',
-};
+    'Cut AI spend and carbon 70% with quality tiers, green routing, and workload shifting.',
+
+};;
 
 export default function Page() {return (<div className='min-h-screen bg-slate-950text-white'>
       <main className='max-w-3xl mx-auto px-6py-16'>

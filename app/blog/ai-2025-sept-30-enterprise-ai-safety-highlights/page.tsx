@@ -1,1 +1,201 @@
-// Us i n g Re a c t 17+ au t o m a t i c runt i m e; no import nee d e d exp o r t co n s t metadata = {ti t l e: 'Ent e r p r i s e AI Saf e t y Hig h l i g h t s (Sep 30 2 0 25)' desc r i p t i o n: 'L i v e guardrails r u n t i m e scorec a r d s a n d v e r i f i e d d a t a fl o w s. Act i o n a b l e and audi t ed.' t y p e: 'arti c le' url: 'ht t p s://zionte c h g r o u p.com/b l o g/ai-2 0 2 5-s e p t-30-ent e r p r i s e-ai-saf e t y-hig h l i g h ts' ima g e s: [{url: '/og-ent e r p r i s e-ai-saf e t y-hig h l i g h t s-2 0 25.jpg' wi d t h: 1 2 0 0 hei g h t: 630 alt: 'Ent e r p r i s e AI Saf e t y Hig h l i g h t s 2 0 25' }; ]}twit t e r: {c a r d: 'summary_larg e _ i m a ge' title: 'Ent e r p r i s e AI Saf e t y Hig h l i g h t s (Sep 30 2 0 25)' description: 'L i v e guardrails r u n t i m e scorec a r d s a n d v e r i f i e d d a t a fl o w s. Act i o n a b l e and audi t ed.' ima g e s: ['/og-ent e r p r i s e-ai-saf e t y-hig h l i g h t s-2 0 25.jpg']}; }; export default function EnterpriseAISafetyHighlig h t s 2 0 2 5() {ret u r n (<div cl a s s N a m e ='min-h-screen bg-gradient-to-br f r o m-sl a t e-50 via-wh i t e to-r o se-50'> <hea d e r cl a s s N a m e='r e l a t i v e o v e r f l o w-hid d e n bg-gradient-to-br f r o m-sl a t e-900 via-r o s e-900 to-sl a t e-900py-20'> <div cl a s s N a m e='co n t a i n e r mx-auto px-6 r e l a t i v ez-10'> <div cl a s s N a m e='max-w-5 xl mx-auto t e x t-cen t er'> <div cl a s s N a m e='inl i n e-f l e x it e m s-cen t e r gap-2 px-6 py-3 roun d e d-f u l l bg-r o s e-500/20 bor d e r bor d e r-r o s e-500/30mb-8'> <span cl a s s N a m e='t e x t-r o s e-300 font-bold text-sm t r a c k i n g-wi d e r up p e r c a se'> New • Sep 30 2 0 2 5 </span> </div> <h1 cl a s s N a m e='t e x t-5 xl md:t e x t-6 xl f o n t-ex t r a b o l d mb-6 bg-g r a d i e n t-to-r f r o m-r o s e-300 via-am b e r-200 to-yel l o w-200 bg-c l i p-t e x t t e x t-tran s p a r e n t lead i n g-ti g ht'> Ent e r p r i s e AI Saf e t y Hig h l i g h t s </h1> <p cl a s s N a m e='t e x t-2 xl md:t e x t-3 xl t e x t-g r a y-300 mb-10 f o n t-s e m i b o ld'> F r o m pol i c y to runt i m e gua r d r a i l s </p> <div cl a s s N a m e='f l e x f l e x-col sm:f l e x-row gap-4 just i f y-cen t er'> <a h r e f='#<hig h l i g h ts' cl a s s N a m e='bg-r o s e-600 ho v e r:bg-r o s e-500 t e x t-wh i t e font-bold py-4 px-8 roun d e d-xl tra n s i t i on-all' > See Hig h l i g h t s </a> <a h r e f='/<cont a ct' cl a s s N a m e='bor d e r-2 bor d e r-r o s e-400 t e x t-r o s e-300 ho v e r:bg-r o s e-500 ho v e r:t e x t-wh i t e font-bold py-4 px-8 roun d e d-xl tra n s i t i on-all' > S c h e d u l e a Saf e t y Rev i e w </a> </div> </div> </div> </hea d e r> <m a i n cl a s s N a m e='py-20'> <div cl a s s N a me='co n t a i n e r mx-auto px-6'> <div cl a s s N a me='max-w-4 xl mx-auto'> <sect i o nid='<hig h l i g h t s' cl a s s N a me='mb-16'> <h2 cl a s s N a me='t e x t-4 xl font-bold text-gray-900 mb-6'> Top Hig h l i g h t s </h2> <div cl a s s N a me='g r i d md:g r i d-c o l s-2 gap-6'> {[ {i c o n:'🛡️' title:'Runt i m e Gua r d r a i l s' d e s c:'Pol i c y-to-c o d e w i t h z e r o-reg r e t ro l l b a c k s' }{i c o n:'📊' title:'L i v e Sco r e c a r d s' d e s c:'Oper a t i o n a l tr u s t metr i c s per w o r k f l o w' }{i c o n:'🔐' title:'V e r i f i e d D a t a Fl o w s' d e s c:'A t t e s t e d line a g e and PII gua r a n t e e s' }{i c o n:'⚙️' title:'Fail u r e M o d e Li b r a r i e s' d e s c:'P r e b u i l t c o n t r o l s for top ri s k s' }].map((fi) => (<div key={i} cl a s s N a me='bg-wh i t e roun d e d-xl p-6 bor d e r bor d e r-g r a y-200' > <div cl a s s N a me='t e x t-2 xl mb-2'>{f.i c o n}</div> <div cl a s s N a me='f o n t-s e m i b o l d text-gray-900 mb-1'> {f.ti t l e} </div> <div cl a s s N a me='t e x t-g r a y-600'>{f.d e s c}</div> </div> ))} </div> </sect i o n> <sect i o n cl a s s N a me='mb-16'> <h2 cl a s s N a me='t e x t-3 xl font-bold text-gray-900 mb-6'> Metr i c s T h a t Mat t e r </h2> <div cl a s s N a me='g r i d md:g r i d-c o l s-3 gap-6'> {[ {k:'70%' v:'I n c i d e n t Re d u c t i o n' }{k:'55%' v:'Lo w e r Rev i e w C o s t' }{k:'99.99%' v:'Upt i m e Su s t a i n e d' }].map((si) => (<div key={i} cl a s s N a me='bg-gradient-to-br f r o m-r o s e-50 to-am b e r-50 roun d e d-xl p-6 bor d e r bor d e r-r o s e-100 t e x t-cen t e r' > <div cl a s s N a me='t e x t-3 xl f o n t-ex t r a b o l d t e x t-r o s e-600'> {s.k} </div> <div cl a s s N a me='text-gray-700'>{s.v}</div> </div> ))} </div> </sect i o n> <sect i o n cl a s s N a me='bg-g r a d i e n t-to-r f r o m-r o s e-600 to-am b e r-600 roun d e d-2 xl p-12 t e x t-wh i t e t e x t-cen t e r'> <h2 cl a s s N a me='t e x t-3 xl md:t e x t-4 xl font-bold mb-4'> Dep l o y Saf e t y T h a t Sca l e s </h2> <p cl a s s N a me='mb-8 opac i t y-95'> Assessmentde s i g n a n d impleme n t a t i o n in 8 we e k s. </p> <div cl a s s N a me='f l e x f l e x-col sm:f l e x-row gap-4 just i f y-cen t e r'> <a h r ef='tel:+<1302 4 6 4 0 9 5 0' cl a s s N a me='bg-wh i t e t e x t-r o s e-700 px-8 py-4 roun d e d-lg font-bold ho v e r:bg-g r a y-100 tra n s i t i o n-all' > 📞 C a l l +1 302 464 0 9 5 0 </a> <a h r ef='/<cont a c t' cl a s s N a me='bor d e r-2 bor d e r-wh i t e t e x t-wh i t e px-8 py-4 roun d e d-lg font-bold ho v e r:bg-wh i t e ho v e r:t e x t-r o s e-700 tra n s i t i o n-all' > St a r t a Saf e t y Spr i n t </a> </div> </sect i o n> <sect i o n cl a s s N a me='mt-20'> <h3 cl a s s N a me='t e x t-2 xl font-bold text-gray-900 mb-6 t e x t-cen t e r'> Rela t e d Re a d s </h3> <div cl a s s N a me='g r i d md:g r i d-c o l s-3 gap-6'> <a h r ef='/b l o g/ai-gov e r n a n c e-l i v e-sco r e c a r d s-<2 0 2 6' cl a s s N a me='gr o u p' > <div cl a s s N a me='bg-wh i t e roun d e d-xl p-6 bor d e r ho v e r:sha d o w-xl tra n s i t i o n-all'> <div cl a s s N a me='t e x t-3 xl mb-2'>📈</div> <div cl a s s N a me='f o n t-s e m i b o l d gr o u p-ho v e r:t e x t-r o s e-600'> L i v e Gov e r n a n c e Sco r e c a r d s </div> </div> </a> <a h r ef='/b l o g/ai-2 0 2 6-r e l i a b l e-ge n a i-<p l a t f o r m' cl a s s N a me='gr o u p' > <div cl a s s N a me='bg-wh i t e roun d e d-xl p-6 bor d e r ho v e r:sha d o w-xl tra n s i t i o n-all'> <div cl a s s N a me='t e x t-3 xl mb-2'>⚙️</div> <div cl a s s N a me='f o n t-s e m i b o l d gr o u p-ho v e r:t e x t-r o s e-600'> R e l i a b l e Ge n A I P l a t f o r m </div> </div> </a> <a h r ef='/b l o g/ai-2 0 2 6-l i v e-gua r d r a i l s-<bl u e p r i n t' cl a s s N a me='gr o u p' > <div cl a s s N a me='bg-wh i t e roun d e d-xl p-6 bor d e r ho v e r:sha d o w-xl tra n s i t i o n-all'> <div cl a s s N a me='t e x t-3 xl mb-2'>🧭</div> <div cl a s s N a me='f o n t-s e m i b o l d gr o u p-ho v e r:t e x t-r o s e-600'> L i v e Gua r d r a i l s Bl u e p r i n t </div> </div> </a> </div> </sect i o n> </div> </div> </m a i n> </div> ); }
+// Using React 17+ automatic runtime; no import needed
+
+export const metadata = {
+  
+  title: 'Enterprise AI Safety Highlights (Sep 30, 2025)',
+    description:
+      'Live guardrails, runtime scorecards, and verified data flows. Actionable and audited.',
+    type: 'article',
+    url: 'https://ziontechgroup.com/blog/ai-2025-sept-30-enterprise-ai-safety-highlights',
+    images: [
+      {
+        url: '/og-enterprise-ai-safety-highlights-2025.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Enterprise AI Safety Highlights 2025',
+      
+};,
+    ],
+  },
+  twitter: {
+    card:   'summary_large_image',,
+    title:   'Enterprise AI Safety Highlights (Sep 30, 2025)',,
+    description:  
+      'Live guardrails, runtime scorecards, and verified data flows. Actionable and audited.',
+    images: ['/og-enterprise-ai-safety-highlights-2025.jpg'],,
+  },
+};
+};
+};
+
+export default function EnterpriseAISafetyHighlights2025() {
+  return (
+    <div className='min-h-screen bg-gradient-to-br from-slate-50 via-white to-rose-50'>
+      <header className='relative overflow-hidden bg-gradient-to-br from-slate-900 via-rose-900 to-slate-900 py-20'>
+        <div className='container mx-auto px-6 relative z-10'>
+          <div className='max-w-5xl mx-auto text-center'>
+            <div className='inline-flex items-center gap-2 px-6 py-3 rounded-full bg-rose-500/20 border border-rose-500/30 mb-8'>
+              <span className='text-rose-300 font-bold text-sm tracking-wider uppercase'>
+                New • Sep 30, 2025
+              </span>
+            </div>
+            <h1 className='text-5xl md:text-6xl font-extrabold mb-6 bg-gradient-to-r from-rose-300 via-amber-200 to-yellow-200 bg-clip-text text-transparent leading-tight'>
+              Enterprise AI Safety Highlights
+            </h1>
+            <p className='text-2xl md:text-3xl text-gray-300 mb-10 font-semibold'>
+              From policy to runtime guardrails
+            </p>
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+              <a
+                href='#<highlights'
+                className='bg-rose-600 hover:bg-rose-500 text-white font-bold py-4 px-8 rounded-xl transition-all'
+              >
+                See Highlights
+              </a>
+              <a
+                href='/<contact'
+                className='border-2 border-rose-400 text-rose-300 hover:bg-rose-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all'
+              >
+                Schedule a Safety Review
+              </a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main className='py-20'>
+        <div className='container mx-auto px-6'>
+          <div className='max-w-4xl mx-auto'>
+            <section id='<highlights' className='mb-16'>
+              <h2 className='text-4xl font-bold text-gray-900 mb-6'>
+                Top Highlights
+              </h2>
+              <div className='grid md:grid-cols-2 gap-6'>
+                {[
+                  {
+                    icon: '🛡️',
+                    title: 'Runtime Guardrails',
+                    desc: 'Policy-to-code with zero-regret rollbacks',
+                  },
+                  {
+                    icon: '📊',
+                    title: 'Live Scorecards',
+                    desc: 'Operational trust metrics per workflow',
+                  },
+                  {
+                    icon: '🔐',
+                    title: 'Verified Data Flows',
+                    desc: 'Attested lineage and PII guarantees',
+                  },
+                  {
+                    icon: '⚙️',
+                    title: 'Failure Mode Libraries',
+                    desc: 'Prebuilt controls for top risks',
+                  },
+                ].map((f, i) => (
+                  <div
+                    key={i}
+                    className='bg-white rounded-xl p-6 border border-gray-200'
+                  >
+                    <div className='text-2xl mb-2'>{f.icon}</div>
+                    <div className='font-semibold text-gray-900 mb-1'>
+                      {f.title}
+                    </div>
+                    <div className='text-gray-600'>{f.desc}</div>
+                  </div>
+                ))}
+              </div>
+            </section>
+
+            <section className='mb-16'>
+              <h2 className='text-3xl font-bold text-gray-900 mb-6'>
+                Metrics That Matter
+              </h2>
+              <div className='grid md:grid-cols-3 gap-6'>
+                {[
+                  { k: '70%', v: 'Incident Reduction' },
+                  { k: '55%', v: 'Lower Review Cost' },
+                  { k: '99.99%', v: 'Uptime Sustained' },
+                ].map((s, i) => (
+                  <div
+                    key={i}
+                    className='bg-gradient-to-br from-rose-50 to-amber-50 rounded-xl p-6 border border-rose-100 text-center'
+                  >
+                    <div className='text-3xl font-extrabold text-rose-600'>
+                      {s.k}
+                    </div>
+                    <div className='text-gray-700'>{s.v}</div>
+                  </div>
+                ))}
+              </div>
+            </section>
+
+            <section className='bg-gradient-to-r from-rose-600 to-amber-600 rounded-2xl p-12 text-white text-center'>
+              <h2 className='text-3xl md:text-4xl font-bold mb-4'>
+                Deploy Safety That Scales
+              </h2>
+              <p className='mb-8 opacity-95'>
+                Assessment, design, and implementation in 8 weeks.
+              </p>
+              <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+                <a
+                  href='tel:+<13024640950'
+                  className='bg-white text-rose-700 px-8 py-4 rounded-lg font-bold hover:bg-gray-100 transition-all'
+                >
+                  📞 Call +1 302 464 0950
+                </a>
+                <a
+                  href='/<contact'
+                  className='border-2 border-white text-white px-8 py-4 rounded-lg font-bold hover:bg-white hover:text-rose-700 transition-all'
+                >
+                  Start a Safety Sprint
+                </a>
+              </div>
+            </section>
+
+            <section className='mt-20'>
+              <h3 className='text-2xl font-bold text-gray-900 mb-6 text-center'>
+                Related Reads
+              </h3>
+              <div className='grid md:grid-cols-3 gap-6'>
+                <a
+                  href='/blog/ai-governance-live-scorecards-<2026'
+                  className='group'
+                >
+                  <div className='bg-white rounded-xl p-6 border hover:shadow-xl transition-all'>
+                    <div className='text-3xl mb-2'>📈</div>
+                    <div className='font-semibold group-hover:text-rose-600'>
+                      Live Governance Scorecards
+                    </div>
+                  </div>
+                </a>
+                <a
+                  href='/blog/ai-2026-reliable-genai-<platform'
+                  className='group'
+                >
+                  <div className='bg-white rounded-xl p-6 border hover:shadow-xl transition-all'>
+                    <div className='text-3xl mb-2'>⚙️</div>
+                    <div className='font-semibold group-hover:text-rose-600'>
+                      Reliable GenAI Platform
+                    </div>
+                  </div>
+                </a>
+                <a
+                  href='/blog/ai-2026-live-guardrails-<blueprint'
+                  className='group'
+                >
+                  <div className='bg-white rounded-xl p-6 border hover:shadow-xl transition-all'>
+                    <div className='text-3xl mb-2'>🧭</div>
+                    <div className='font-semibold group-hover:text-rose-600'>
+                      Live Guardrails Blueprint
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </section>
+          </div>
+        </div>
+      </main>
+    </div>
+  );
+}

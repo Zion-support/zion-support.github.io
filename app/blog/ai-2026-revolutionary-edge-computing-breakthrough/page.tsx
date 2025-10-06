@@ -1,12 +1,15 @@
 import ArrowRight from 'next/link';
 
-export const metadata = {title:
-   'AI 2026 Revolutionary Edge Computing Breakthrough - $12.5B Success Story | Zion Tech Group',
+export const metadata = {
+  
+  title:
+    'AI 2026 Revolutionary Edge Computing Breakthrough - $12.5B Success Story | Zion Tech Group',
   description:
     "Discover how Zion TechGroup's revolutionary edge computing AI breakthrough delivered $12.5B in value for Fortune 500 enterprises. 500x performance improvements with real-timeprocessing.",
   keywords:
-    'edge computing, AI breakthrough, real-time processing, Fortune 500$12.5B successrevolutionarytechnology',
-};
+    'edge computing, AI breakthrough, real-time processing, Fortune 500, $12.5B success, revolutionary technology',
+
+};;
 
 export default function AI2026RevolutionaryEdgeComputingBreakthrough() {return (<div className='max-w-4xl mx-auto px-4py-8'>
       <div className='bg-gradient-to-r from-blue-600 to-purple-700 text-white p-6 rounded-lgmb-8'>

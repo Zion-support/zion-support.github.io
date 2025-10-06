@@ -1,9 +1,12 @@
 // @ts-nocheck
 
-export const metadata = {title: 'Privacy‑Safe Feature Flags 2026 | Zion TechGroup',
+export const metadata = {
+  
+  title: 'Privacy‑Safe Feature Flags 2026 | Zion Tech Group',
   description:
-    'Consent‑awareidentity‑scopedand DP‑hardened flags for compliant experimentation androllout.',
-};
+    'Consent‑aware, identity‑scoped, and DP‑hardened flags for compliant experimentation and rollout.',
+
+};;
 
 export default function PrivacySafeFeatureFlags2026() {return (<main className='min-h-screen bg-slate-950text-white'>
       <section className='py-16 bg-gradient-to-r from-blue-800 via-indigo-800 to-purple-800 border-bborder-white/10'>

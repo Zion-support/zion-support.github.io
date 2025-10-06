@@ -1,11 +1,14 @@
 import ArrowRight from 'next/link';
 
-export const metadata = {title:'Agent Release Runbooks 2026',
+export const metadata = {
+  
+  title: 'Agent Release Runbooks 2026',
   description:
-   'Approvals + budgets + KPI-linked canary evals with instant rollback for safe agent releases.',
-  type:'article',
-  publishedTime:'2026-01-30T00:00:00Z',
-};
+    'Approvals + budgets + KPI-linked canary evals with instant rollback for safe agent releases.',
+  type: 'article',
+  publishedTime: '2026-01-30T00:00:00Z',
+
+};;
 
 export default function AgentReleaseRunbooks2026() {return (<divclassName='min-h-screen bg-gradient-to-br from-fuchsia-950 via-purple-950 to-indigo-950 text-white'>
       <mainclassName='container mx-auto px-6 py-12'>

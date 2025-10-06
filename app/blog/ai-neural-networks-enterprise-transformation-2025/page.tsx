@@ -1,9 +1,12 @@
 import ArrowRight from 'next/link';
 
-export const metadata = {title:'AI Neural Networks Enterprise Transformation 2025 | Zion Tech Group',
+export const metadata = {
+  
+  title: 'AI Neural Networks Enterprise Transformation 2025 | Zion Tech Group',
   description:
-   'Deploy advanced neural network architectures with enterprise guardrails, achieving 98.5% accuracy10x ROIand 85% efficiency gains.',
-};
+    'Deploy advanced neural network architectures with enterprise guardrails, achieving 98.5% accuracy, 10x ROI, and 85% efficiency gains.',
+
+};;
 
 export default function AINeuralNetworksEnterpriseTransformation2025Page() {return (<divclassName='min-h-screen bg-gradient-to-br from-slate-950 via-purple-950 to-fuchsia-900 text-white'>
       <mainclassName='container mx-auto px-6 py-12'>

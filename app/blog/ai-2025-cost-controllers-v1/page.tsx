@@ -1,7 +1,10 @@
-export const metadata = {title: 'AI Cost Controllers v1 (2025): BudgetsTiersandGuardrails',
+export const metadata = {
+  
+  title: 'AI Cost Controllers v1 (2025): Budgets, Tiers, and Guardrails',
   description:
-    'Practical cost governance: route by quality tierenforce budgetsand prevent overruns with policytests.',
-};
+    'Practical cost governance: route by quality tier, enforce budgets, and prevent overruns with policy tests.',
+
+};;
 
 export default function Page() {return (<main className='max-w-3xl mx-auto px-4py-12'>
       <h1 className='text-4xl font-boldmb-4'>AI Cost Controllers v1 (2025)</h1>

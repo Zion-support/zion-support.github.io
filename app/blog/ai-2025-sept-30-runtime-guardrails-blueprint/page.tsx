@@ -1,22 +1,22 @@
 // @ts-nocheck
-import ArrowRight from 'next/link';
+import Arrow Right from 'next/link';
 
-export default function RuntimeGuardrailsBlueprint2025() {return (<mainclassName='min-h-screen bg-slate-950 text-white'>
-      <articleclassName='max-w-4xl mx-auto px-6 py-16'>
-        <headerclassName='mb-8'>
-          <pclassName='text-sm text-gray-400'>
+export default function Runtime Guardrails Blueprint2025() {return (<main class Name Name='min-h-screen bg-slate-950 text-white'>
+      <articleclass Name='max-w-4xl mx-auto px-6 py-16'>
+        <headerclass Name='mb-8'>
+          <p class Name Name='text-sm text-gray-400'>
             September 30, 2025 • 11 min read
           </p>
-          <h1className='text-4xl md:text-5xl font-extrabold leading-tight bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent'>
-            Runtime Guardrails Blueprint — BudgetsGatesInstant Rollback
+          <h1 class Name Name='text-4xl md:text-5xl font-extrabold leading-tight bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent'>
+            Runtime Guardrails Blueprint — Budgets Gates Instant Rollback
           </h1>
-          <pclassName='mt-4 text-gray-300 text-lg'>
-            Executable policy testsKPI‑linked canariesand budgeted actions for
+          <p class Name Name='mt-4 text-gray-300 text-lg'>
+            Executable policy tests KPI‑linked canariesand budgeted actions for
             safe autonomy in production.
           </p>
         </header>
 
-        <sectionclassName='prose prose-invert prose-emerald max-w-none'>
+        <section class Name Name='prose prose-invert prose-emerald max-w-none'>
           <h2>Why Runtime Guardrails</h2>
           <p>
             As autonomy increases, safety must keep pace. Ship guardrails that
@@ -50,24 +50,24 @@ export default function RuntimeGuardrailsBlueprint2025() {return (<mainclassName
 
         <hr />
 
-        <asideclassName='bg-emerald-500/10 border border-emerald-400/20 rounded-xl p-6'>
-          <h3className='text-xl font-bold text-emerald-300 mb-2'>Related</h3>
-          <ulclassName='list-disc pl-6 text-gray-300 space-y-1'>
+        <asideclass Name='bg-emerald-500/10 border border-emerald-400/20 rounded-xl p-6'>
+          <h3class Name='text-xl font-bold text-emerald-300 mb-2'>Related</h3>
+          <ulclass Name='list-disc pl-6 text-gray-300 space-y-1'>
             <li>
-              <ArrowRight
+              <Arrow Right
                href='/blog/ai-2026-safe-autonomy-scorecards'
-               className='text-emerald-300 hover:text-emerald-200'
+               class Name='text-emerald-300 hover:text-emerald-200'
               >
                 AI 2026 Safe Autonomy Scorecards
-              </ArrowRight>
+              </Arrow Right>
             </li>
             <li>
-              <ArrowRight
+              <Arrow Right
                href='/blog/ai-governance-real-time-2026'
-               className='text-emerald-300 hover:text-emerald-200'
+               class Name='text-emerald-300 hover:text-emerald-200'
               >
                 Real‑Time AI Governance 2026
-              </ArrowRight>
+              </Arrow Right>
             </li>
           </ul>
         </aside>

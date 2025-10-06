@@ -1,1 +1,121 @@
-import C a l e n d a r f r o m 'luc i d e-re a c t/d i s t/esm/ic o n s/c a l e n d ar'; import {C a l e n d a r Cl o c k }f r o m 'luc i d e-re a ct'; import Cl o c k f r o m 'luc i d e-re a c t/d i s t/esm/ic o n s/cl o ck'; import Shi e l d f r o m 'luc i d e-re a c t/d i s t/esm/ic o n s/shi e ld'; import Cpu f r o m 'luc i d e-re a c t/d i s t/esm/ic o ns/cpu'; export const metadata = {title: 'E d g e Priv a t e I n s i g h t s v2 (2 0 26)' description: 'Z e r o‑PII an a l y t i c s w i t h sco p e d I D s D P a n d on‑dev i c e aggr e g a t i on.' t y p e: 'arti c le' url: 'ht t p s://zionte c h g r o u p.com/b l o g/e d g e-priv a t e-i n s i g h t s-v2-2 0 26' }; twit t e r: {c a r d: 'summary_larg e _ i m a ge' title: 'E d g e Priv a t e I n s i g h t s v2 (2 0 26)' description: 'Z e r o‑PII an a l y t i c s w i t h sco p e d I D s D P a n d on‑dev i c e aggr e g a t i on.' }}; }; export default function P a g e() {ret u r n (<m a i n cl a s s N a m e ='min-h-screen bg-gradient-to-br f r o m-c y a n-50 via-wh i t e to-emer a ld-50'> <hea d e r cl a s s N a m e='bg-gradient-to-br f r o m-c y a n-900 via-emer a l d-900 to-sl a t e-900 t e x t-wh i t epy-20'> <div cl a s s N a m e='max-w-5 xl mx-autopx-6'> <div cl a s s N a m e='inl i n e-f l e x it e m s-cen t e r gap-2 px-4 py-2 roun d e d-f u l l bg-wh i t e/10 bor d e r bor d e r-wh i t e/20mb-6'> <Shi e l d /> <span cl a s s N a m e='text-sm f o n t-s e m i b o ld'>Priv a c y • E d g e • 2 0 2 6</span> </div> <h1 cl a s s N a m e='t e x t-5 xl md:t e x t-6 xl f o n t-ex t r a b o l d lead i n g-ti g h tmb-4'> E d g e Priv a t e I n s i g h t s v2 (2 0 2 6) </h1> <p cl a s s N a m e='t e x t-lg md:t e x t-xl t e x t-wh i t e/80max-w-3xl'> Deli v e r act i o n a b l e metr i c s with o u t PII us i n g sco p e d identifiersdiffe r e n t i a l pri v a c y a n d on-dev i c e aggr e g a t i o n—all un d e r 100 ms. </p> <div cl a s s N a m e='f l e x it e m s-cen t e r gap-6 t e x t-wh i t e/70mt-8'> <div cl a s s N a m e='f l e x it e m s-cen t e rgap-2'> <C a l e n d a r /> <span>Jan 30 2 0 2 6</span> </div> <div cl a s s N a m e='f l e x it e m s-cen t e rgap-2'> <Cl o c k /> <span>14 min r e a d</span> </div> </div> </div> </hea d e r> <sect i o n cl a s s N a m e='py-16'> <div cl a s s N a me='max-w-4 xl mx-auto px-6 prose prose-lg'> <h2>Z e r o‑PII An a l y t i c s Archi t e c t u r e</h2> <p> We comb i n e sco p e d identif i e r s p e r-ev e n t DP n o i s e a n d on-dev i c e aggr e g a t i o n to ena b l e r i c h an a l y t i c s w i t h no p e r s o n a l d a t a. T h i s des i g n sh i p s g l o b a l l y w i t h late n c y budg e t s un d e r 100 ms. </p> <h3>Key Com p o n e n t s</h3> <ul> <li> Sco p e d IDs per dev i c e/app t h a t can n o t be joi n e d acr o s s s u r f a c e s </li> <li>Diffe r e n t i a l priv a c y no i s e cal i b r a t e d to KPI sens i t i v i t y</li> <li>On-dev i c e roll u p s; o n l y agg r e g a t e s le a v e the dev i c e</li> <li>Sig n e d conf i g s w i t h r o t a t i o n and rev o c a t i o n</li> </ul> <h3>Dep l o y m e n t Ch e c k l i s t</h3> <ol> <li>Thr e a t mo d e l and priv a c y bud g e t se l e c t i o n</li> <li>E d g e runt i m e pa c k a g i n g and key man a g e m e n t</li> <li>Ag g r e g a t e sche m a s and val i d a t i o n</li> <li>Ser v e r-s i d e atte s t a t i o n and anom a l y de t e c t i o n</li> </ol> </div> </sect i o n> <sect i o n cl a s s N a me='py-12 bg-wh i t e'> <div cl a s s N a me='max-w-6 xl mx-auto px-6 g r i d md:g r i d-c o l s-3 gap-6'> {[ {la b e l:'Late n c y p95' va l u e:'< 100 ms' co l o r:'t e x t-c y a n-600' }{la b e l:'PII Co l l e c t e d' va l u e:'0' co l o r:'t e x t-emer a l d-600' }{la b e l:'C o v e r a g e' va l u e:'Glo b a l' co l o r:'t e x t-fuch s i a-600' }].map((k p i i) => (<div key={i} cl a s s N a me='roun d e d-xl bor d e r p-6'> <div cl a s s N a m e={`t e x t-3 xl f o n t-ex t r a b o l d ${kpi.co l o r}`}> {kpi.va l u e} </div> <div cl a s s N a me='t e x t-sl a t e-600'>{kpi.la b e l}</div> </div> ))} </div> </sect i o n> <sect i o n cl a s s N a me='py-16'> <div cl a s s N a me='max-w-4 xl mx-auto px-6'> <div cl a s s N a me='bg-g r a d i e n t-to-r f r o m-c y a n-600 to-emer a l d-600 t e x t-wh i t e roun d e d-2 xl p-8 f l e x it e m s-cen t e r just i f y-betw e e n gap-4'> <div> <h3 cl a s s N a me='t e x t-2 xl font-bold'> Lau n c h Priv a c y‑Fi r s t An a l y t i c s </h3> <p cl a s s N a me='t e x t-wh i t e/90'> We deli v e r a pro d u c t i o n dep l o y m e n t in 4–6 we e k s w i t h aud i t s. </p> </div> <a h r ef='/cont a c t' cl a s s N a me='bg-wh i t e t e x t-c y a n-700 px-6 py-3 roun d e d-lg f o n t-s e m i b o l d inl i n e-f l e x it e m s-cen t e r gap-2' > Get star t e d <Cpu /> </a> </div> </div> </sect i o n> </m a i n> ); }
+import Calendar from 'lucide-react/dist/esm/icons/calendar';
+import { Calendar, Clock } from 'lucide-react';
+import Clock from 'lucide-react/dist/esm/icons/clock';
+import Shield from 'lucide-react/dist/esm/icons/shield';
+import Cpu from 'lucide-react/dist/esm/icons/cpu';
+
+export const metadata = {
+  
+  title: 'Edge Private Insights v2 (2026)',
+    description:
+      'Zero‑PII analytics with scoped IDs, DP, and on‑device aggregation.',
+    type: 'article',
+    url: 'https://ziontechgroup.com/blog/edge-private-insights-v2-2026',
+  
+};,
+  twitter: {
+    card:   'summary_large_image',,
+    title:   'Edge Private Insights v2 (2026)',,
+    description:  
+      'Zero‑PII analytics with scoped IDs, DP, and on‑device aggregation.',,
+  },
+};
+};
+};
+
+export default function Page() {
+  return (
+    <main className='min-h-screen bg-gradient-to-br from-cyan-50 via-white to-emerald-50'>
+      <header className='bg-gradient-to-br from-cyan-900 via-emerald-900 to-slate-900 text-white py-20'>
+        <div className='max-w-5xl mx-auto px-6'>
+          <div className='inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 mb-6'>
+            <Shield />
+            <span className='text-sm font-semibold'>Privacy • Edge • 2026</span>
+          </div>
+          <h1 className='text-5xl md:text-6xl font-extrabold leading-tight mb-4'>
+            Edge Private Insights v2 (2026)
+          </h1>
+          <p className='text-lg md:text-xl text-white/80 max-w-3xl'>
+            Deliver actionable metrics without PII using scoped identifiers,
+            differential privacy, and on-device aggregation—all under 100ms.
+          </p>
+          <div className='flex items-center gap-6 text-white/70 mt-8'>
+            <div className='flex items-center gap-2'>
+              <Calendar />
+              <span>Jan 30, 2026</span>
+            </div>
+            <div className='flex items-center gap-2'>
+              <Clock />
+              <span>14 min read</span>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <section className='py-16'>
+        <div className='max-w-4xl mx-auto px-6 prose prose-lg'>
+          <h2>Zero‑PII Analytics Architecture</h2>
+          <p>
+            We combine scoped identifiers, per-event DP noise, and on-device
+            aggregation to enable rich analytics with no personal data. This
+            design ships globally with latency budgets under 100ms.
+          </p>
+          <h3>Key Components</h3>
+          <ul>
+            <li>
+              Scoped IDs per device/app that cannot be joined across surfaces
+            </li>
+            <li>Differential privacy noise calibrated to KPI sensitivity</li>
+            <li>On-device rollups; only aggregates leave the device</li>
+            <li>Signed configs with rotation and revocation</li>
+          </ul>
+          <h3>Deployment Checklist</h3>
+          <ol>
+            <li>Threat model and privacy budget selection</li>
+            <li>Edge runtime packaging and key management</li>
+            <li>Aggregate schemas and validation</li>
+            <li>Server-side attestation and anomaly detection</li>
+          </ol>
+        </div>
+      </section>
+
+      <section className='py-12 bg-white'>
+        <div className='max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-6'>
+          {[
+            { label: 'Latency p95', value: '< 100ms', color: 'text-cyan-600' },
+            { label: 'PII Collected', value: '0', color: 'text-emerald-600' },
+            { label: 'Coverage', value: 'Global', color: 'text-fuchsia-600' },
+          ].map((kpi, i) => (
+            <div key={i} className='rounded-xl border p-6'>
+              <div className={`text-3xl font-extrabold ${kpi.color}`}>
+                {kpi.value}
+              </div>
+              <div className='text-slate-600'>{kpi.label}</div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className='py-16'>
+        <div className='max-w-4xl mx-auto px-6'>
+          <div className='bg-gradient-to-r from-cyan-600 to-emerald-600 text-white rounded-2xl p-8 flex items-center justify-between gap-4'>
+            <div>
+              <h3 className='text-2xl font-bold'>
+                Launch Privacy‑First Analytics
+              </h3>
+              <p className='text-white/90'>
+                We deliver a production deployment in 4–6 weeks with audits.
+              </p>
+            </div>
+            <a
+              href='/contact'
+              className='bg-white text-cyan-700 px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2'
+            >
+              Get started <Cpu />
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+  );
+}

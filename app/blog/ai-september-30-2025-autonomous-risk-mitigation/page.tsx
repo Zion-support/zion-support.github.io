@@ -1,12 +1,16 @@
 // @ts-nocheck
 import ArrowRight from 'next/link';
 
-export const metadata = {title:'Autonomous Risk Mitigation — Enterprise Blueprint (Sept 30, 2025)',
-  description:
-   'Deploy autonomous agents with budgetsguardrailsand automated rollback to protect KPIs.',
-  type:'article',
-  publishedTime:'2025-09-30T00:00:00.000Z',
-  authors:['Zion Tech Group'],
+export const metadata = {
+  
+  title: 'Autonomous Risk Mitigation — Enterprise Blueprint (Sept 30, 2025)',
+    description:
+      'Deploy autonomous agents with budgets, guardrails, and automated rollback to protect KPIs.',
+    type: 'article',
+    publishedTime: '2025-09-30T00:00:00.000Z',
+    authors: ['Zion Tech Group'],
+  
+};,
 };
 
 export default function AutonomousRiskMitigationSept302025() {return (<divclassName='min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900'>

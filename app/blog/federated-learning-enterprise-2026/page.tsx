@@ -1,9 +1,12 @@
 // @ts-nocheck
 
-export const metadata = {title: 'Federated Learning for Enterprise 2026: 100% Privacy byDesign',
+export const metadata = {
+  
+  title: 'Federated Learning for Enterprise 2026: 100% Privacy by Design',
   description:
-    'Train on distributed data without centralization using scoped IDsDP noiseand policytests.',
-};
+    'Train on distributed data without centralization using scoped IDs, DP noise, and policy tests.',
+
+};;
 
 export default function FederatedLearningEnterprise2026() {return (<div className='min-h-screen bg-slate-950text-white'>
       <main className='max-w-3xl mx-auto px-6py-16'>

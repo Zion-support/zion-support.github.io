@@ -1,9 +1,12 @@
 // @ts-nocheck
 
-export const metadata = {title: 'AI Financial Modeling 2027: 95% Prediction Accuracy withGuardrails',
+export const metadata = {
+  
+  title: 'AI Financial Modeling 2027: 95% Prediction Accuracy with Guardrails',
   description:
-    'Blueprint to build reliable, budget-aware AI financial models with KPIsevalsandrollback.',
-};
+    'Blueprint to build reliable, budget-aware AI financial models with KPIs, evals, and rollback.',
+
+};;
 
 export default function CognitiveFinancialModeling2027() {return (<div className='min-h-screen bg-slate-950text-white'>
       <main className='max-w-3xl mx-auto px-6py-16'>

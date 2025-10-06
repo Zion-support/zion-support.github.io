@@ -1,24 +1,24 @@
 // @ts-nocheck
-import ArrowRight from 'next/link';
+import Arrow Right from 'next/link';
 
-export default function Page() {return (<mainclassName='min-h-screen bg-slate-950 text-white'>
-      <sectionclassName='py-16 border-b border-white/10 bg-white/5'>
-        <divclassName='max-w-3xl mx-auto px-4'>
-          <divclassName='text-sm text-emerald-300 mb-2'>
+export default function Page() {return (<main class Name Name='min-h-screen bg-slate-950 text-white'>
+      <section class Name Name='py-16 border-b border-white/10 bg-white/5'>
+        <div class Name Name='max-w-3xl mx-auto px-4'>
+          <div class Name Name='text-sm text-emerald-300 mb-2'>
             AI Strategy • 2025-09-30 • 7 min read
           </div>
-          <h1className='text-3xl md:text-5xl font-bold mb-4'>
+          <h1 class Name Name='text-3xl md:text-5xl font-bold mb-4'>
             AI Product Launch Checklist: From Pilot to Production
           </h1>
-          <pclassName='text-white/80 text-lg'>
+          <p class Name Name='text-white/80 text-lg'>
             A battle‑tested checklist to graduate pilots into production with
             reliabilitysafetyand ROI.
           </p>
         </div>
       </section>
 
-      <sectionclassName='py-10'>
-        <divclassName='max-w-3xl mx-auto px-4 prose prose-invert'>
+      <section class Name Name='py-10'>
+        <div class Name Name='max-w-3xl mx-auto px-4 prose prose-invert'>
           <h2>What this includes</h2>
           <ul>
             <li>Readiness gates: data, evals, and policy tests</li>
@@ -30,13 +30,13 @@ export default function Page() {return (<mainclassName='min-h-screen bg-slate-95
             quality and trust.
           </p>
 
-          <divclassName='mt-10'>
-            <ArrowRight
+          <div class Name Name='mt-10'>
+            <Arrow Right
              href='/'
-             className='text-emerald-300 hover:text-emerald-200 font-semibold'
+             class Name='text-emerald-300 hover:text-emerald-200 font-semibold'
             >
               ← Back to Home
-            </ArrowRight>
+            </Arrow Right>
           </div>
         </div>
       </section>

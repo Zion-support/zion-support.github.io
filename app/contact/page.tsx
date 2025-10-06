@@ -39,8 +39,8 @@ const ContactPage: React.FC = () => {
                 ></textarea>
               </div>
               <button
-                type='submit'
-                className='w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg font-semibold transition-colors'
+                type="submit"
+                className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors"
               >
                 Send Message
               </button>
@@ -50,8 +50,8 @@ const ContactPage: React.FC = () => {
             <h3 className='text-xl font-semibold mb-4'>Contact Information</h3>
             <div className='space-y-4'>
               <div>
-                <h4 className='font-medium text-gray-900'>Email</h4>
-                <p className='text-gray-600'>kleber@ziontechgroup.com</p>
+                <h4 className="font-medium text-gray-900">Email</h4>
+                <p className="text-gray-600">kleber@ziontechgroup.com</p>
               </div>
               <div>
                 <h4 className='font-medium text-gray-900'>Phone</h4>

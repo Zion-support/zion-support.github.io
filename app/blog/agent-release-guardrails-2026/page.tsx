@@ -1,10 +1,14 @@
 // @ts-nocheck
 import ArrowRight from 'next/link';
 
-export const metadata = {title:'Agent Release Guardrails 2026: BudgetsApprovalsand Instant Rollback',
+export const metadata = {
+  
+  title:
+    'Agent Release Guardrails 2026: Budgets, Approvals, and Instant Rollback',
   description:
-   'Battle-tested checklists for safe agent updates with budgeted actionsapprovalsand one-click rollback.',
-};
+    'Battle-tested checklists for safe agent updates with budgeted actions, approvals, and one-click rollback.',
+
+};;
 
 export default function Page() {return (<mainclassName='min-h-screen bg-white'>
       <sectionclassName='py-16 bg-gradient-to-r from-fuchsia-600/10 to-purple-600/10 border-b border-gray-200'>

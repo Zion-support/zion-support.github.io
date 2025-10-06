@@ -1,7 +1,10 @@
-export const metadata = {title: 'Digital Transformation Excellence — October 2025 | Zion TechGroup',
+export const metadata = {
+  
+  title: 'Digital Transformation Excellence — October 2025 | Zion Tech Group',
   description:
-    'A comprehensive enterprise guide to AI-powered digital transformation delivering multi-billion dollar value with measurableoutcomes.',
-};
+    'A comprehensive enterprise guide to AI-powered digital transformation delivering multi-billion dollar value with measurable outcomes.',
+
+};;
 
 export default function DigitalTransformationExcellencePage() {return (<main className='min-h-screen bg-slate-950text-white'>
       <article className='max-w-3xl mx-auto px-4py-16'>

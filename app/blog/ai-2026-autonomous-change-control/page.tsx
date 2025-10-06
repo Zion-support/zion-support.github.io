@@ -1,8 +1,11 @@
-export const metadata = {title:
-    'Autonomous Change Control — GatesBudgetsRollback (2026) | Zion TechGroup',
+export const metadata = {
+  
+  title:
+    'Autonomous Change Control — Gates, Budgets, Rollback (2026) | Zion Tech Group',
   description:
-    'Ship weekly without regressions using CI policy testsKPI-linked canariesand instant rollbackplaybooks.',
-};
+    'Ship weekly without regressions using CI policy tests, KPI-linked canaries, and instant rollback playbooks.',
+
+};;
 
 export default function Page() {return (<main className='min-h-screen bg-whitetext-gray-900'>
       <section className='py-16'>

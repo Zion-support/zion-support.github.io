@@ -1,1 +1,57 @@
-export const metadata = {title: 'Aut o n o m o u s R i s k Budg e t s V2 | Z i o n T e c h Gr o up'};}; description: 'Dyna m i c gua r d r a i l s w i t h l i v e sco r e c a r d s to cut in c i d e n t s by 80% wh i l e inc r e a s i n g rele a s e v e l o c i ty.'};export default function AutonomousRiskBu d g e t s V 2() {ret u r n (<m a i n cl a s s N a m e ='min-h-screen bg-sl a t e-950 t e x t-wh i te'> <arti c l e cl a s s N a m e='max-w-3xl mx-auto px-4py-16'> <hea d e r cl a s s N a m e='mb-10'> <p cl a s s N a me='text-sm t e x t-wh i t e/60'>Pu b l i s h e d Sep 30 2 0 2 5</p> <h1 cl a s s N a me='t e x t-4 xl f o n t-ex t r a b o l d mt-2'> Aut o n o m o u s R i s k Budg e t s V2 </h1> <p cl a s s N a me='t e x t-wh i t e/70 mt-3'> Dyna m i c gua r d r a i l s and l i v e sco r e c a r d s t h a t m i n i m i z e in c i d e n t s wh i l e main t a i n i n g sp e e d. </p> </hea d e r> <sect i o n cl a s s N a me='prose prose-inv e r t prose-sl a t e max-w-none'> <h2>Oper a t i o n a l r i s k budg e t s</h2> <p> R i s k budg e t s set e x p l i c i t all o w a n c e s for fail u r e mo d e s (e.g. halluci n a t i o n s late n c y spi k e s) w i t h au t o m a t e d t r i g g e r s for ro l l b a c k s and mo d e l t i e r s w i t c h e s. </p> <h3>Key ingr e d i e n t s</h3> <ul> <li>R e a l t i m e ev a l s for saf e t y qual i t y and late n c y.</li> <li>Pol i c y te s t s in CI to prev e n t regr e s s i o n s p r e m e r g e.</li> <li>B u d g e t e d to k e n ti e r s w i t h s e m a n t i c ca c h e c o n t r o l s.</li> <li>Rele a s e ga t e s wi r e d to b u s i n e s s sco r e c a r d s.</li> </ul> <h3>Impleme n t a t i o n p l a y b o o k</h3> <ol> <li>Def i n e c r i t i c a l u s e r j o u r n e y s and att a c h e v a l c o v e r a g e.</li> <li>Ins t r u m e n t e v a l eve n t s us i n g str u c t u r e d te l e m e t r y.</li> <li>Ca l i b r a t e budg e t s and S L O s w i t h prod u c t and r i s k own e r s.</li> <li>A u t o m a t e r o l l b a c k and mo d e l f a l l b a c k pa t h s.</li> </ol> <h3>E x p e c t e d resu l t s</h3> <p> Te a m s a d o p t i n g V2 see i n c i d e n t cou n t s d r o p 5 0 8 0% w i t h su s t a i n e d wee k l y rele a s e cade n c e. </p> </sect i o n> </arti c l e> </m a i n> );}
+export const metadata = {
+  
+  title: 'Autonomous Risk Budgets V2 | Zion Tech Group',
+  description:
+    'Dynamic guardrails with live scorecards to cut incidents by 80% while increasing release velocity.',
+
+};;
+
+export default function AutonomousRiskBudgetsV2Page() {
+  return (
+    <main className='min-h-screen bg-slate-950 text-white'>
+      <article className='max-w-3xl mx-auto px-4 py-16'>
+        <header className='mb-10'>
+          <p className='text-sm text-white/60'>Published Sep 30, 2025</p>
+          <h1 className='text-4xl font-extrabold mt-2'>
+            Autonomous Risk Budgets V2
+          </h1>
+          <p className='text-white/70 mt-3'>
+            Dynamic guardrails and live scorecards that minimize incidents while
+            maintaining speed.
+          </p>
+        </header>
+
+        <section className='prose prose-invert prose-slate max-w-none'>
+          <h2>Operational risk budgets</h2>
+          <p>
+            Risk budgets set explicit allowances for failure modes (e.g.,
+            hallucinations, latency spikes) with automated triggers for
+            rollbacks and model tier switches.
+          </p>
+
+          <h3>Key ingredients</h3>
+          <ul>
+            <li>Real‑time evals for safety, quality, and latency.</li>
+            <li>Policy tests in CI to prevent regressions pre‑merge.</li>
+            <li>Budgeted token tiers with semantic cache controls.</li>
+            <li>Release gates wired to business scorecards.</li>
+          </ul>
+
+          <h3>Implementation playbook</h3>
+          <ol>
+            <li>Define critical user journeys and attach eval coverage.</li>
+            <li>Instrument eval events using structured telemetry.</li>
+            <li>Calibrate budgets and SLOs with product and risk owners.</li>
+            <li>Automate rollback and model fallback paths.</li>
+          </ol>
+
+          <h3>Expected results</h3>
+          <p>
+            Teams adopting V2 see incident counts drop 50‑80% with sustained
+            weekly release cadence.
+          </p>
+        </section>
+      </article>
+    </main>
+  );
+}

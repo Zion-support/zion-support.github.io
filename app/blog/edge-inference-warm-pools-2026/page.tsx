@@ -1,10 +1,13 @@
 // @ts-nocheck
 
-export const metadata = {title:
-    'Edge Inference Warm Pools 2026: Sub-100ms Global with PredictableCost',
+export const metadata = {
+  
+  title:
+    'Edge Inference Warm Pools 2026: Sub-100ms Global with Predictable Cost',
   description:
-    'Warm pools, intent prefetchingand tiered caches to achieve fastaffordable inferenceworldwide.',
-};
+    'Warm pools, intent prefetching, and tiered caches to achieve fast, affordable inference worldwide.',
+
+};;
 
 export default function Page() {return (<main className='min-h-screenbg-white'>
       <section className='py-16 bg-gradient-to-r from-emerald-600/10 to-teal-600/10 border-bborder-gray-200'>
