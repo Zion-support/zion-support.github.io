@@ -1,7 +1,6 @@
-// Performance optimization utilities
-export class PerformanceOptimizer {
-  private static instance: PerformanceOptimizer;
-  private metrics: Map<string, number> = new Map();
+/**
+ * Performance optimization utilities
+ */
 
 /**
  * Web Vitals metrics tracking
