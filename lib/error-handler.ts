@@ -41,6 +41,7 @@ export const errorHandler = (
           : message,
       statusCode,
       timestamp: new Date().toISOString()
+    },
     }
   });
 };
