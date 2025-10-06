@@ -1,6 +1,12 @@
 // Performance monitoring setup
 import { analytics } from './utils/analytics';
 <<<<<<< HEAD
+import { performanceOptimizer } from './utils/performanceOptimizer';
+=======
+<<<<<<< HEAD
+import { performanceOptimizer } from './utils/performanceOptimizer';
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 import performanceOptimizer from './utils/performanceOptimizer';
@@ -13,6 +19,7 @@ export function initializePerformanceMonitoring(): void {
 export const initializePerformanceMonitoring = () => {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7834
 =======
+<<<<<<< HEAD
 import { performanceOptimizer } from './utils/performanceOptimizer';
 
 // Initialize performance monitoring
@@ -35,6 +42,11 @@ export const initializeMonitoring = () => {
 =======
 import { errorHandler } from './utils/errorHandler';
 import { initPerformanceMonitoring, getPerformanceMetrics } from './utils/performanceOptimizer';
+=======
+>>>>>>> b0d6dda8406c2e54af3529a18b3e8c5f6ab37739
+>>>>>>> main
+>>>>>>> main
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
 
 // Initialize performance monitoring
 if (typeof window !== 'undefined') {
@@ -44,8 +56,26 @@ if (typeof window !== 'undefined') {
   // Initialize performance monitoring
   initPerformanceMonitoring();
   
+<<<<<<< HEAD
   // Monitor long tasks
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  // Monitor long tasks
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
+>>>>>>> main
+  performanceOptimizer.monitorLongTasks((entries: PerformanceEntry[]) => {
+    entries.forEach((entry: PerformanceEntry) => {
+      analytics.track('long_task', 'performance', 'detected', undefined, entry.duration);
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
   if ('PerformanceObserver' in window) {
     const observer = new PerformanceObserver((list) => {
       const entries = list.getEntries();
@@ -56,6 +86,7 @@ if (typeof window !== 'undefined') {
     observer.observe({ entryTypes: ['longtask'] });
   }
   
+>>>>>>> main
   // Track Web Vitals
   const metrics = getPerformanceMetrics();
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8

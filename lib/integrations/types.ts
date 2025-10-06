@@ -44,6 +44,7 @@ export type SyncStatus = 'connected' | 'warning' | 'disconnected';
 
 export type SyncStatus = 'connected' | 'warning' | 'disconnected';
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0a8c
 =======
 
@@ -114,6 +115,16 @@ export type SyncStatus = 'connected' | 'warning' | 'disconnected';
 export type SyncStatus = 'connected' | 'warning' | 'disconnected';
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
+=======
+export interface IntegrationProviderMeta {
+  id: string;
+  name: string;
+  category: 'crm' | 'ats' | 'hr';
+  description: string;
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd65
+>>>>>>> 73aae067a8789e7f94c7cf242d65c42e6717fb43
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
 export interface ProviderConnection {
   id: string;
   providerId: IntegrationProviderId;
@@ -217,6 +228,7 @@ export interface ProviderConnection {
   updatedAt: number;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 
 <<<<<<< HEAD
@@ -231,6 +243,20 @@ export interface ProviderConnection {
   status: SyncStatus;
   lastSync?: number;
   config?: Record<string, any>;
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd65
+  expiresAt?: number;
+  status: SyncStatus;
+  lastSync?: number;
+  createdAt: number;
+  updatedAt: number;
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd65
+  expiresAt?: number;
+  status: SyncStatus;
+  lastSync?: number;
+  config?: Record<string, any>;
+>>>>>>> 73aae067a8789e7f94c7cf242d65c42e6717fb43
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
 }
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f83
@@ -407,6 +433,7 @@ export interface ZapierEvent {
   payload: Record<string, any>;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -462,6 +489,8 @@ export interface IntegrationsState {
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-9d58
 
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
 export interface IntegrationProviderMeta {
   id: IntegrationProviderId;
   name: string;
@@ -470,6 +499,7 @@ export interface IntegrationProviderMeta {
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
 =======
@@ -503,6 +533,10 @@ export interface IntegrationProviderMeta {
 }
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-d12c
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd65
+>>>>>>> 73aae067a8789e7f94c7cf242d65c42e6717fb43
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
 export interface IntegrationsState {
   connections: ProviderConnection[];
   logs: SyncLogEntry[];

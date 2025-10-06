@@ -14,7 +14,25 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
+<<<<<<< HEAD
     "strict": true,
+=======
+<<<<<<< HEAD
+    "strict": false,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+=======
+    "jsxImportSource": "react",
+>>>>>>> main
+    "strict": true,
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
     "strictNullChecks": true,
     "noUnusedLocals": false,
     "noUnusedParameters": false,
@@ -42,6 +60,15 @@
     },
     "allowJs": true,
     "forceConsistentCasingInFileNames": true,
+<<<<<<< HEAD
+    "noImplicitAny": false,
+    "noImplicitReturns": false,
+    "noImplicitThis": false,
+    "exactOptionalPropertyTypes": false,
+    "noImplicitOverride": false,
+    "noPropertyAccessFromIndexSignature": false,
+    "noUncheckedIndexedAccess": false,
+=======
     "noImplicitAny": true,
     "noImplicitReturns": true,
     "noImplicitThis": true,
@@ -49,13 +76,26 @@
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
     "noUncheckedIndexedAccess": true,
+>>>>>>> main
     "allowUnusedLabels": false,
     "allowUnreachableCode": false,
-    "verbatimModuleSyntax": true
+    "verbatimModuleSyntax": false
   },
   "include": [
     "app/**/*",
     "src/**/*"
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+    "src/**/*"
+=======
+    "src/**/*",
+    "App.tsx",
+    "components/**/*"
+>>>>>>> main
+>>>>>>> main
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
   ],
   "exclude": [
     "node_modules",
@@ -98,11 +138,15 @@
     "services/**",
     "middleware/**",
     "app/blog/**",
+<<<<<<< HEAD
+    "src/components/disabled-corrupted/**",
+=======
     "app/page-optimized.tsx",
     "app/services/**/*",
     "app/case-studies/**/*",
     "app/guides/**/*",
     "app/components/**/*",
+>>>>>>> main
     "EnhancedFooter.tsx",
     "EnhancedHeader.tsx",
     "EnhancedNavigation.tsx",

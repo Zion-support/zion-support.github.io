@@ -1,8 +1,17 @@
 import React, { useState, useEffect } from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { performanceOptimizer } from '../../utils/performanceOptimizer';
 import { getErrorMetrics, isErrorRateTooHigh } from '../../utils/errorHandling';
+=======
+// import performanceOptimizer from '../../src/utils/performanceOptimizer'; // Unused import
+import { getErrorMetrics, isErrorRateTooHigh } from '../../utils/errorHandling';
+=======
+<<<<<<< HEAD
+import { performanceOptimizer } from '../../utils/performanceOptimizer';
+>>>>>>> main
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -33,6 +42,13 @@ import { getErrorMetrics, isErrorRateTooHigh } from '../../utils/errorHandling';
 interface DashboardData {
   performance: {
     averageRenderTime: number;
+<<<<<<< HEAD
+    totalLoadTime: number;
+    memoryUsage: number;
+    bundleSize: number;
+  };
+  errors: ReturnType<typeof getErrorMetrics>;
+=======
     totalComponents: number;
     memoryUsage: number;
     slowComponents: number;
@@ -41,6 +57,7 @@ interface DashboardData {
     totalErrors: number;
     errorRate: number;
   };
+>>>>>>> main
   isHealthy: boolean;
   timestamp: Date;
 <<<<<<< HEAD
@@ -99,6 +116,22 @@ const PerformanceDashboard: React.FC = (): JSX.Element | null => {
 
   useEffect(() => {
     const updateData = () => {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      // Mock performance data since getPerformanceSummary doesn't exist
+      const performance = {
+        averageRenderTime: 10,
+        totalLoadTime: 1000,
+        memoryUsage: 50,
+        bundleSize: 500
+      };
+      const errors = getErrorMetrics();
+      const isHealthy =
+        !isErrorRateTooHigh() && performance.averageRenderTime < 16;
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
       const performanceData = {
         averageRenderTime: 0,
         totalComponents: 0,
@@ -133,12 +166,17 @@ const PerformanceDashboard: React.FC = (): JSX.Element | null => {
         errorRate: 0,
       };
       const isHealthy = performanceData.averageRenderTime < 16;
+<<<<<<< HEAD
 =======
       
       const errors = getErrorMetrics();
       const isHealthy = !isErrorRateTooHigh() && performanceData.averageRenderTime < 16;
       
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
+=======
+>>>>>>> main
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
       setData({
         performance: performanceData,
         errors: errorMetrics,
@@ -259,7 +297,11 @@ const PerformanceDashboard: React.FC = (): JSX.Element | null => {
 
   const exportData = (): void => {
     const exportData = {
+<<<<<<< HEAD
+      performance: data?.performance || { averageRenderTime: 0, totalLoadTime: 0, memoryUsage: 0, bundleSize: 0 },
+=======
       performance: data?.performance || {},
+>>>>>>> main
       errors: data?.errors,
       timestamp: new Date().toISOString(),
     };
@@ -410,9 +452,25 @@ const PerformanceDashboard: React.FC = (): JSX.Element | null => {
                 {metrics.memoryUsage.toFixed(2)}MB
               </span>
             </div>
+<<<<<<< HEAD
+            <div className='bg-gray-50 p-2 rounded'>
+              <div className='text-gray-600'>Components</div>
+              <div className='font-semibold'>
+                N/A
+              </div>
+            </div>
+            <div className='bg-gray-50 p-2 rounded'>
+              <div className='text-gray-600'>Memory</div>
+              <div className='font-semibold'>
+                {data.performance.memoryUsage > 0
+                  ? `${(data.performance.memoryUsage / 1024 / 1024).toFixed(1)}MB`
+                  : 'N/A'}
+              </div>
+=======
             <div className='flex justify-between'>
               <span className='text-gray-600'>Render Time:</span>
               <span className='font-mono'>{metrics.renderTime.toFixed(2)}ms</span>
+>>>>>>> main
             </div>
           </div>
 <<<<<<< HEAD
@@ -509,11 +567,66 @@ const PerformanceDashboard: React.FC = (): JSX.Element | null => {
               </div>
             </div>
           </div>
+<<<<<<< HEAD
           
           {/* Recommendations */}
           {data.performance.slowComponents > 0 && (
 <<<<<<< HEAD
             <div className='mt-4'>
+=======
+        </div>
+
+        {/* Recommendations */}
+        {data.performance.averageRenderTime > 16 && (
+          <div>
+            <h4 className='text-sm font-medium text-gray-900 mb-2'>
+              Recommendations
+            </h4>
+            <div className='space-y-1'>
+              {data.performance.averageRenderTime > 16 && (
+                <div className='text-xs text-gray-600 bg-yellow-50 p-2 rounded'>
+                  Slow render time detected ({data.performance.averageRenderTime}ms).
+                  Consider optimizing render performance.
+                </div>
+              )}
+              {data.performance.averageRenderTime > 16 && (
+                <div className='text-xs text-gray-600 bg-yellow-50 p-2 rounded'>
+                  Average render time is{' '}
+                  {data.performance.averageRenderTime.toFixed(1)}ms. Consider
+                  code splitting or memoization.
+                </div>
+              )}
+            </div>
+          </div>
+        )}
+
+        {/* Actions */}
+        <div className='flex space-x-2 pt-2 border-t border-gray-200'>
+          <button
+            onClick={exportData}
+            className='flex-1 bg-blue-600 hover:bg-blue-700 text-white text-xs py-2 px-3 rounded transition-colors'
+          >
+            Export Data
+          </button>
+          <button
+            onClick={() => {
+<<<<<<< HEAD
+              // performanceOptimizer.clearMetrics(); // Method doesn't exist
+=======
+>>>>>>> main
+              setData(null);
+            }}
+            className='flex-1 bg-gray-600 hover:bg-gray-700 text-white text-xs py-2 px-3 rounded transition-colors'
+          >
+            Clear Data
+          </button>
+        </div>
+
+        <div className='text-xs text-gray-400 text-center'>
+          Last updated: {data.timestamp.toLocaleTimeString()}
+        </div>
+      </div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
 =======
             <div>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-8da8

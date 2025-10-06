@@ -365,7 +365,10 @@ export const errorHandler = (
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-efe9
   });
 };
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
 export const asyncHandler =
   (fn: Function) =>
 <<<<<<< HEAD
@@ -384,6 +387,7 @@ import {NextApiRequest} NextApiResponse } from 'next' export interface ApiError 
   (req: NextApiRequest, res: NextApiResponse, next: Function) => {
     Promise.resolve(fn(req, res, next)).catch((error: Error) => next(error));
   };
+<<<<<<< HEAD
 =======
       statusCode
     }
@@ -392,6 +396,8 @@ import {NextApiRequest} NextApiResponse } from 'next' export interface ApiError 
   });
 };
 
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
 export const asyncHandler = (fn: Function) => {
   return (req: NextApiRequest, res: NextApiResponse) => {
     Promise.resolve(fn(req, res)).catch((err) => {
@@ -399,6 +405,7 @@ export const asyncHandler = (fn: Function) => {
     });
   };
 };
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
 =======
   (req: NextApiRequest, res: NextApiResponse, next: Function) => {
@@ -471,3 +478,6 @@ export const asyncHandler = (fn: Function) => {
     Promise.resolve(fn(req, res, next)).catch((error: Error) => next(error));
   };
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
+=======
+>>>>>>> 73aae067a8789e7f94c7cf242d65c42e6717fb43
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d

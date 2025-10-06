@@ -1,5 +1,20 @@
 import React from 'react';
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
+const LoadingSpinner: React.FC = () => {
+  return (
+    <div className="min-h-screen flex items-center justify-center bg-gray-50">
+      <div className="text-center">
+<<<<<<< HEAD
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
+        <p className="text-gray-600">Loading...</p>
+=======
+        <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-600 mx-auto"></div>
+        <p className="mt-4 text-gray-600">Loading...</p>
+=======
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg';
   className?: string;
@@ -23,9 +38,19 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
         aria-label='Loading'
       >
         <span className="sr-only">Loading...</span>
+>>>>>>> main
+>>>>>>> main
       </div>
     </div>
   );
 };
 
+<<<<<<< HEAD
 export default LoadingSpinner;
+=======
+<<<<<<< HEAD
+export default LoadingSpinner;
+=======
+export default LoadingSpinner;
+>>>>>>> main
+>>>>>>> main

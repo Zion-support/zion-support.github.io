@@ -1,3 +1,27 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+// React import removed as it's not used
+=======
+<<<<<<< HEAD
+// import React from 'react'; // Unused import
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
 import Link from 'next/link';
 
 export const metadata = {

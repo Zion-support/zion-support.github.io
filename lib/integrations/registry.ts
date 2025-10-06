@@ -9,6 +9,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { IntegrationProviderMeta } from './types';
 export const PROVIDERS: IntegrationProviderMeta[] = [
 <<<<<<< HEAD
@@ -39,6 +40,13 @@ import type { IntegrationProviderMeta } from './types';
 
 export const PROVIDERS: IntegrationProviderMeta[] = [
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
+=======
+import { IntegrationProviderMeta } from './types';
+>>>>>>> b0d6dda8406c2e54af3529a18b3e8c5f6ab37739
+>>>>>>> 73aae067a8789e7f94c7cf242d65c42e6717fb43
+import type { IntegrationProviderMeta } from './types';
+export const PROVIDERS: IntegrationProviderMeta[] = [
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
   { id: 'salesforce', name: 'Salesforce', category: 'crm', description: 'Enterprise CRM' },
   { id: 'hubspot', name: 'HubSpot', category: 'crm', description: 'Marketing & Sales CRM' },
   { id: 'zoho', name: 'Zoho CRM', category: 'crm', description: 'All-in-one CRM' },
@@ -63,6 +71,7 @@ export const PROVIDERS: IntegrationProviderMeta[] = [
 import type { IntegrationProviderMeta } from './types';
 
 export const PROVIDERS: IntegrationProviderMeta[] = [
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
 =======
 import type { IntegrationProviderMeta } from './types';
@@ -92,6 +101,10 @@ import type { IntegrationProviderMeta } from './types';
 
 export const PROVIDERS: IntegrationProviderMeta[] = [
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-efe9
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd65
+>>>>>>> 73aae067a8789e7f94c7cf242d65c42e6717fb43
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
   {
     id: 'salesforce',
     name: 'Salesforce',

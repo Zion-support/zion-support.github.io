@@ -17,6 +17,15 @@ export default function Page() {
           <h1 className='text-3xl md:text-4xl font-bold text-gray-900'>
             Agent Release Guardrails 2026:{' '}
             <span className='text-fuchsia-700'>
+<<<<<<< HEAD:app/blog/agent-release-guardrails-2026/page.tsx
+              Budgets, Approvals and Instant Rollback
+            </span>
+          </h1>
+          <p className='text-gray-600 mt-4'>
+            Ship reliable agent updates using <strong>budgeted actions</strong>,{' '}
+            <strong>human approvals</strong>, CI policy tests and{' '}
+            <strong>one‑click rollback</strong> wired to outcome KPIs.
+=======
               Budgets Approvalsand Instant Rollback
             </span>
           </h1>
@@ -24,6 +33,7 @@ export default function Page() {
             Ship reliable agent updates using <strong>budgetedactions</strong>,{' '}
             <strong>human approvals</strong>CI policytestsand{' '}
             <strong>one‑click rollback</strong> wired to outcome KP Is .
+>>>>>>> main:app_disabled/blog/agent-release-guardrails-2026/page.tsx
           </p>
           <div className='mt-6 text-sm text-gray-500'>
             7 min read • AI Operations • Published Sep 30, 2025
@@ -43,7 +53,7 @@ export default function Page() {
 
           <h3>Operational Metrics</h3>
           <p>
-            Track on‑policy action rateincidentrateand{' '}
+            Track on‑policy action rate, incident rate and{' '}
             <em>$ per successful outcome</em>. Automate approvals for low‑risk
             updates.
           </p>
@@ -52,22 +62,39 @@ export default function Page() {
 
       <section className='py-12 bg-gray-50 border-t border-gray-200'>
         <div className='max-w-4xl mx-auto px-6 flex items-center justify-between'>
+<<<<<<< HEAD:app/blog/agent-release-guardrails-2026/page.tsx
+          <Link
+=======
           <Arrow
             Right
+>>>>>>> main:app_disabled/blog/agent-release-guardrails-2026/page.tsx
             href='/blog'
             className='text-fuchsia-700 font-semibold hover:text-fuchsia-800'
           >
             ← Back to Blog
+<<<<<<< HEAD:app/blog/agent-release-guardrails-2026/page.tsx
+          </Link>
+          <Link
+=======
           </Arrow>
           <Arrow
             Right
+>>>>>>> main:app_disabled/blog/agent-release-guardrails-2026/page.tsx
             href='/blog/edge-consentless-experiments-2026-q4'
             className='text-purple-700 font-semibold hover:text-purple-800'
           >
             Next: Consentless Experiments →
+<<<<<<< HEAD:app/blog/agent-release-guardrails-2026/page.tsx
+          </Link>
+=======
           </Arrow>
+>>>>>>> main:app_disabled/blog/agent-release-guardrails-2026/page.tsx
         </div>
       </section>
     </main>
   );
+<<<<<<< HEAD:app/blog/agent-release-guardrails-2026/page.tsx
 }
+=======
+}
+>>>>>>> main:app_disabled/blog/agent-release-guardrails-2026/page.tsx

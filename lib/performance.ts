@@ -17,6 +17,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
 import { onCLS, onFCP, onLCP, onTTFB } from 'web-vitals';
 import type { Metric } from 'web-vitals';
 
@@ -26,6 +29,7 @@ declare global {
     gtag?: (...args: unknown[]) => void;
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -95,6 +99,13 @@ import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
 import type { Metric } from 'web-vitals';
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
+=======
+import { getCLS, getFID, getFCP, getLCP, getTTFB, Metric } from 'web-vitals';
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd65
+import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
+import type { Metric } from 'web-vitals';
+>>>>>>> 73aae067a8789e7f94c7cf242d65c42e6717fb43
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
 // Types
 interface PerformanceMetric {
   name: string;
@@ -244,6 +255,7 @@ const THRESHOLDS = {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-3fed
 =======
@@ -260,6 +272,11 @@ const THRESHOLDS = {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-efe9
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
+=======
+function getRating(name: string, value: number): 'good' | 'needs-improvement' | 'poor' {
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd65
+>>>>>>> 73aae067a8789e7f94c7cf242d65c42e6717fb43
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
 function getRating(
   name: string,
   value: number
@@ -349,6 +366,7 @@ function reportMetric(metric: Metric) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6231
 =======
@@ -393,6 +411,12 @@ function reportMetric(metric: Metric) {
 =======
     id: metric.id,
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
+=======
+    id: metric.id,
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd65
+    id: metric.id
+>>>>>>> 73aae067a8789e7f94c7cf242d65c42e6717fb43
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
   };
 
   // Log in development
@@ -410,6 +434,9 @@ function reportMetric(metric: Metric) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
   if (typeof window !== 'undefined' && window.gtag) {
     window.gtag('event', metric.name, {
 =======
@@ -555,6 +582,7 @@ function reportMetric(metric: Metric) {
     }).catch(error => console.error('Performance reporting error:', error));
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       event_label: metric.id,
       value: Math.round(metric.value),
@@ -589,6 +617,9 @@ function reportMetric(metric: Metric) {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
 =======
   // Send to analytics
+=======
+>>>>>>> 73aae067a8789e7f94c7cf242d65c42e6717fb43
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
   if (typeof window !== 'undefined' && (window as any).gtag) {
     (window as any).gtag('event', metric.name, {
       event_category: 'Web Vitals',
@@ -596,6 +627,15 @@ function reportMetric(metric: Metric) {
       value: Math.round(metric.value),
       non_interaction: true,
     });
+<<<<<<< HEAD
+=======
+        userAgent: navigator.userAgent
+      }),
+      keepalive: true,
+    }).catch(error => console.error('Performance reporting error:', error));
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd65
+>>>>>>> 73aae067a8789e7f94c7cf242d65c42e6717fb43
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
   }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
 }
@@ -604,6 +644,7 @@ function reportMetric(metric: Metric) {
  * Initialize performance monitoring
  */
 export function initPerformanceMonitoring(): void {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -633,10 +674,18 @@ export function initPerformanceMonitoring(): void {
   try {
     // Core Web Vitals
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-3fed
+=======
+  if (typeof window === 'undefined') return;
+  try {
+    // Core Web Vitals
+  try {
+>>>>>>> 73aae067a8789e7f94c7cf242d65c42e6717fb43
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
     onCLS(sendToAnalytics);
     onFCP(sendToAnalytics);
     onLCP(sendToAnalytics);
     onTTFB(sendToAnalytics);
+<<<<<<< HEAD
   } catch (error) {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -661,11 +710,18 @@ export function initPerformanceMonitoring(): void {
   try {
     // Core Web Vitals
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
     getCLS(sendToAnalytics);
     getFID(sendToAnalytics);
     getFCP(sendToAnalytics);
     getLCP(sendToAnalytics);
     getTTFB(sendToAnalytics);
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd65
+>>>>>>> 73aae067a8789e7f94c7cf242d65c42e6717fb43
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
   } catch (error) {
     console.error('Error initializing performance monitoring:', error);
 <<<<<<< HEAD
@@ -692,6 +748,7 @@ export function initPerformanceMonitoring(): void {
 <<<<<<< HEAD
 =======
 }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -736,6 +793,8 @@ export function generatePerformanceReport(): PerformanceReport {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-d12c
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-efe9
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
 /**
  * Measure custom performance timing
  */
@@ -1546,6 +1605,7 @@ export function generatePerformanceReport(): PerformanceReport | null {
 <<<<<<< HEAD
 <<<<<<< HEAD
     userAgent: navigator.userAgent
+<<<<<<< HEAD
 =======
     userAgent: navigator.userAgent,
 <<<<<<< HEAD
@@ -1577,16 +1637,19 @@ export function generatePerformanceReport(): PerformanceReport | null {
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6231
 =======
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd65
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
 /**
  * Generate performance report
  */
 export function generatePerformanceReport(): PerformanceReport {
   const metrics: PerformanceMetric[] = [];
-  
   return {
     metrics,
     timestamp: new Date().toISOString(),
     url: typeof window !== 'undefined' ? window.location.href : '',
+<<<<<<< HEAD
     userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : '',
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
 =======
@@ -1603,6 +1666,10 @@ export function generatePerformanceReport(): PerformanceReport {
     url: typeof window !== 'undefined' ? window.location.href : '',
     userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : '',
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
+=======
+    userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : '',
+>>>>>>> 73aae067a8789e7f94c7cf242d65c42e6717fb43
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
   };
 }
 
@@ -1611,6 +1678,7 @@ export function generatePerformanceReport(): PerformanceReport {
 <<<<<<< HEAD
  * Check if performance monitoring is supported
  */
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
  * Monitor long tasks
@@ -1630,6 +1698,8 @@ export function monitorLongTasks(): void {
   
   observer.observe({ entryTypes: ['longtask'] });
 =======
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
 export function monitorLongTasks(
   callback: (entries: PerformanceEntry[]) => void
 ): PerformanceObserver | null {
@@ -2233,6 +2303,7 @@ export default {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 };
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-be22
@@ -2273,11 +2344,15 @@ export {
 /**
  * Check if performance is within acceptable thresholds
  */
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd65
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
 export function isPerformanceAcceptable(): boolean {
   // This would typically check against stored metrics
   // For now, return true as a placeholder
   return true;
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-b781
@@ -2352,3 +2427,6 @@ export function usePerformanceMonitoring() {
   initPerformanceMonitoring();
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
+=======
+>>>>>>> 73aae067a8789e7f94c7cf242d65c42e6717fb43
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d

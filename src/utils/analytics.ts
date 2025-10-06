@@ -67,13 +67,21 @@ class Analytics {
     const event: AnalyticsEvent = {
       name,
       category,
+<<<<<<< HEAD
       action: action || undefined,
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      action: action || '',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
       label: label || undefined,
 <<<<<<< HEAD
 <<<<<<< HEAD
       value: value || 0,
       properties: properties || {},
 =======
+<<<<<<< HEAD
       value,
       properties,
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-02dd
@@ -81,6 +89,18 @@ class Analytics {
       value: value || undefined,
       properties: properties || undefined,
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-8da8
+=======
+>>>>>>> main
+      action: action || undefined,
+      label: label || undefined,
+      value: value || undefined,
+      properties: properties || undefined,
+<<<<<<< HEAD
+=======
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
       timestamp: Date.now(),
     };
     this.events.push(event);

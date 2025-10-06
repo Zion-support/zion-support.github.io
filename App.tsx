@@ -1,4 +1,14 @@
+<<<<<<< HEAD
+import React, { memo, useMemo } from 'react';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
 import React, { memo, useMemo, useCallback, Suspense } from 'react';
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
 import { HelmetProvider, Helmet } from 'react-helmet-async';
 // Memoized components for better performance
 const UnifiedContentPromotion = memo(() => (
@@ -41,6 +51,16 @@ const InteractiveContentShowcase2026 = memo(() => (
     </div>
   </div>
 ));
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+// Loading component (removed unused LoadingSpinner)
+=======
+<<<<<<< HEAD
+// Loading component - removed unused LoadingSpinner
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
 // Error Boundary Component
 interface ErrorBoundaryState {
   hasError: boolean;
@@ -110,6 +130,12 @@ const LoadingSpinner = memo(() => (
     <div className="text-gray-500">Loading...</div>
   </div>
 ));
+<<<<<<< HEAD
+=======
+>>>>>>> main
+>>>>>>> main
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
 export default function App() {
   const structuredData = useMemo(
     () => ({

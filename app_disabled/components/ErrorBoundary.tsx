@@ -1,6 +1,30 @@
 <<<<<<< HEAD:app/components/ErrorBoundary.tsx
+import { Component, type ErrorInfo, type ReactNode } from 'react';
+=======
+<<<<<<< HEAD:app/components/ErrorBoundary.tsx
 import { Component } from 'react';
 import type { ErrorInfo, ReactNode } from 'react';
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD:app/components/ErrorBoundary.tsx
+import { Component, type ErrorInfo, type ReactNode } from 'react';
+=======
+<<<<<<< HEAD:app/components/ErrorBoundary.tsx
+import { Component, type ErrorInfo, type ReactNode } from 'react';
+=======
+<<<<<<< HEAD:app/components/ErrorBoundary.tsx
+import { Component } from 'react';
+import type { ErrorInfo, ReactNode } from 'react';
+=======
+import { Component, type ErrorInfo, type ReactNode } from 'react';
+<<<<<<< HEAD:app/components/ErrorBoundary.tsx
+>>>>>>> main:app_disabled/components/ErrorBoundary.tsx
+>>>>>>> main:app_disabled/components/ErrorBoundary.tsx
+>>>>>>> main:app_disabled/components/ErrorBoundary.tsx
+>>>>>>> main:app_disabled/components/ErrorBoundary.tsx
+>>>>>>> main:app_disabled/components/ErrorBoundary.tsx
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
 import { AlertTriangle } from 'lucide-react';
 interface Props {
   children: ReactNode;

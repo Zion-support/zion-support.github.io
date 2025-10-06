@@ -171,9 +171,12 @@ importers:
       lighthouse:
         specifier: ^12.8.2
         version: 12.8.2
+<<<<<<< HEAD
       lightningcss:
         specifier: ^1.30.2
         version: 1.30.2
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
       lightningcss-linux-x64-gnu:
         specifier: ^1.30.2
         version: 1.30.2
@@ -7541,7 +7544,7 @@ snapshots:
 
   '@typescript-eslint/project-service@8.44.1(typescript@5.9.3)':
     dependencies:
-      '@typescript-eslint/tsconfig-utils': 8.44.1(typescript@5.9.3)
+      '@typescript-eslint/tsconfig-utils': 8.45.0(typescript@5.9.3)
       '@typescript-eslint/types': 8.45.0
       debug: 4.4.3
       typescript: 5.9.3

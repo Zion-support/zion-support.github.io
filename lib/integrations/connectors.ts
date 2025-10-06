@@ -9,11 +9,31 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import { ProviderConnection, SyncLogEntry } from './types';
+import { v4 as uuidv4 } from 'uuid';
+>>>>>>> b0d6dda8406c2e54af3529a18b3e8c5f6ab37739
+import type { ProviderConnection, SyncLogEntry } from './types';
+import { v4 as uuidv4 } from 'uuid';
+// Simple UUID v4 implementation
+function uuidv4(): string {
+  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+    const r = Math.random() * 16 | 0;
+    const v = c === 'x' ? r : (r & 0x3 | 0x8);
+    return v.toString(16);
+  });
+}
+import { ProviderConnection, SyncLogEntry } from './types';
+import { v4 as uuidv4 } from 'uuid';
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd65
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
 import type { ProviderConnection, SyncLogEntry } from './types';
 <<<<<<< HEAD
 // import { v4 as uuidv4 } from 'uuid';
 =======
 import { v4 as uuidv4 } from 'uuid';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-bcb8
@@ -80,6 +100,9 @@ import type { ProviderConnection, SyncLogEntry } from './types';
 import { v4 as uuidv4 } from 'uuid';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
 
+=======
+>>>>>>> 73aae067a8789e7f94c7cf242d65c42e6717fb43
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
 export async function simulateAction<T = any>(
   connection: ProviderConnection,
   action: string,
@@ -205,6 +228,7 @@ export const crm = {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   async addProjectNote(connection: ProviderConnection, note: Record<string, unknown>) {
     return simulateAction(connection, 'crm.addProjectNote', { note });
   },
@@ -248,6 +272,16 @@ export const crm = {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-b781
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6231
+=======
+  async addProjectNote(connection: ProviderConnection, note: Record<string, any>) {
+    return simulateAction(connection, 'crm.addProjectNote', { note });
+  },
+  async addProjectNote(connection: ProviderConnection, note: Record<string, any>) {
+    return simulateAction(connection, 'crm.addProjectNote', { note });
+  },
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd65
+>>>>>>> 73aae067a8789e7f94c7cf242d65c42e6717fb43
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
   async addEmailTouchpoint(connection: ProviderConnection, touch: Record<string, any>) {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-bcb8
     return simulateAction(connection, 'crm.addEmailTouchpoint', { touch });
@@ -372,6 +406,7 @@ export const ats = {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   async updateStatus(connection: ProviderConnection, change: Record<string, any>) {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -385,6 +420,8 @@ export const ats = {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-3fed
 =======
 
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
   async updateStatus(connection: ProviderConnection, change: Record<string, any>) {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f83
 =======
