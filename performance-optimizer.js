@@ -1,3 +1,4 @@
+
 // Performance optimizations
 console.log('🔧 Applying performance optimizations...');
 
