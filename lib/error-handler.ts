@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
+=======
+import { NextApiRequest, NextApiResponse } from 'next';
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd65
 
 export interface ApiError extends Error {
   statusCode?: number;
@@ -23,7 +27,11 @@ export const errorHandler = (
   res: NextApiResponse
 ) => {
   const { statusCode = 500, message } = err;
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd65
   // Log error for monitoring
   console.error(`API Error [${statusCode}]: ${message}`, {
     url: req.url,
