@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import { performanceOptimizer } from '../../utils/performanceOptimizer';
+// import { performanceOptimizer } from '../../utils/performanceOptimizer';
 import { getErrorMetrics, isErrorRateTooHigh } from '../../utils/errorHandling';
 
-interface PerformanceMetrics {
-  loadTime: number;
-  renderTime: number;
-  memoryUsage: number;
-  fps: number;
-}
+// interface PerformanceMetrics {
+//   loadTime: number;
+//   renderTime: number;
+//   memoryUsage: number;
+//   fps: number;
+// }
 
 interface DashboardData {
   performance: {

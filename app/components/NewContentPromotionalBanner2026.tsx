@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Bot, Rocket, Shield, Target, TrendingUp, Zap } from 'lucide-react';
+import { ArrowRight, Rocket, Shield, Target, TrendingUp, Zap } from 'lucide-react';
 import Link from 'next/link';
 import {
   Sparkles,

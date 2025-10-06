@@ -3,16 +3,16 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 
 // Components
-import ErrorBoundary from './components/ErrorBoundary';
-import SEOOptimizer from './components/SEOOptimizer';
+import ErrorBoundary from '../src/components/ErrorBoundary';
+import SEOOptimizer from '../src/components/SEOOptimizer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import PerformanceDashboard from './components/PerformanceDashboard';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
-import { LoadingSpinner } from '../components/LoadingComponents';
+import LoadingSpinner from './components/LoadingSpinner';
 
 // Utils
-import { performanceOptimizer } from '../src/utils/performanceOptimizer';
+// import { performanceOptimizer } from '../src/utils/performanceOptimizer';
 
 // Styles
 import '../src/index.css';
