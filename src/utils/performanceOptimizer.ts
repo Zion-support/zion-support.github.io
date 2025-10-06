@@ -374,6 +374,13 @@ class PerformanceOptimizer {
     });
   }
 
+<<<<<<< HEAD
+=======
+  public prefetchResources(resources: string[]): void {
+    prefetchResources(resources);
+  }
+
+>>>>>>> 12fa9d4e6a72583ddf5bdcea12fa3aaf020213ad
   public reportWebVitals(metrics: WebVitalsMetrics): void {
     reportWebVitals(metrics);
   }
@@ -394,6 +401,31 @@ class PerformanceOptimizer {
   getMetrics(): Record<string, number> {
     return Object.fromEntries(this.metrics);
   }
+<<<<<<< HEAD
+=======
+
+  // Add critical resource hints for better performance
+  addCriticalResourceHints(): void {
+    if (typeof document === 'undefined') return;
+    
+    const hints = [
+      { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' },
+      { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com' },
+      { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+      { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossOrigin: 'anonymous' }
+    ];
+
+    hints.forEach((hint) => {
+      const link = document.createElement('link');
+      link.rel = hint.rel;
+      link.href = hint.href;
+      if (hint.crossOrigin) {
+        link.crossOrigin = hint.crossOrigin;
+      }
+      document.head.appendChild(link);
+    });
+  }
+>>>>>>> 12fa9d4e6a72583ddf5bdcea12fa3aaf020213ad
   // Initialize all optimizations
   initialize(): void {
     this.measurePerformance('lazyLoadImages', () => this.lazyLoadImages());
