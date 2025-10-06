@@ -41,10 +41,8 @@ function fixMergeConflicts(filePath) {
     let modified = false;
     
     // Check if file has merge conflict markers
-    if (content.includes('      console.log(`Fixing merge conflicts in: ${filePath}`);
+    if (content.includes('
       
-      // Remove merge conflict markers and keep HEAD content
-      content = content.replace(/      content = content.replace(/      content = content.replace(/      
       modified = true;
     }
     

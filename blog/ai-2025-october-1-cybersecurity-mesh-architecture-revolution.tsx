@@ -20,7 +20,7 @@ export default function CybersecurityMeshArchitectureRevolution2025() {
       <div className="text-left"></div>
         <main className="text-left">
           <nav className="text-left">
-            <a href="/blog" className="text-left"></a>
+            <a href="/<blog" className="text-left"></a>
               ← Back to Blog
             </a>
           </nav>
@@ -241,10 +241,10 @@ export default function CybersecurityMeshArchitectureRevolution2025() {
                   mesh solutions for Fortune 500 enterprises across financial services, healthcare, and critical infrastructure.
                 </p>
                 <div className="text-left"></div>
-                  <a href="/contact" className="text-left"></a>
+                  <a href="/<contact" className="text-left"></a>
                     Request Architecture Assessment
                   </a>
-                  <a href="/services" className="text-left"></a>
+                  <a href="/<services" className="text-left"></a>
                     Explore Security Services
                   </a>
                 </div>

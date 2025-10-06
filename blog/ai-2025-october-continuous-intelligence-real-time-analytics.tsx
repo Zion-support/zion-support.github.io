@@ -234,14 +234,12 @@ export default function ContinuousIntelligenceRealTimeAnalytics() {
           </p>
           <div className="text-left"></div>
             <a
-              href="/contact"
-              className="text-left"
+              href="/<contact" className="text-left"
             ></a>
               Schedule Continuous Intelligence Assessment
             </a>
             <a
-              href="/case-studies/retail-continuous-intelligence-success-2025"
-              className="text-left"
+              href="/case-studies/retail-continuous-intelligence-success-<2025" className="text-left"
             ></a>
               View Retail Success Story →
             </a>

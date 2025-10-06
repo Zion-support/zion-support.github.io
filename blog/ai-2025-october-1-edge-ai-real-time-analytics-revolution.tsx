@@ -20,7 +20,7 @@ export default function EdgeAIRealTimeAnalyticsRevolution2025() {
       <div className="text-left"></div>
         <main className="text-left">
           <nav className="text-left">
-            <a href="/blog" className="text-left"></a>
+            <a href="/<blog" className="text-left"></a>
               ← Back to Blog
             </a>
           </nav>
@@ -277,14 +277,12 @@ export default function EdgeAIRealTimeAnalyticsRevolution2025() {
                 </p>
                 <div className="text-left"></div>
                   <a
-                    href="/contact"
-                    className="text-left"
+                    href="/<contact" className="text-left"
                   ></a>
                     Schedule Consultation
                   </a>
                   <a
-                    href="/case-studies/manufacturing-edge-ai-success-2025"
-                    className="text-left"
+                    href="/case-studies/manufacturing-edge-ai-success-<2025" className="text-left"
                   ></a>
                     View Case Studies
                   </a>

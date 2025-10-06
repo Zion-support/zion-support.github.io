@@ -285,8 +285,7 @@ const AISyntheticDataGenerationEnterprise2025: React.FC = () =>
               Get expert guidance on implementing production-ready synthetic data pipelines. Our team has deployed synthetic data systems for Fortune 500 companies across healthcare, finance; and retail.
             </p>
             <a
-              href="/contact"
-              className="text-left"
+              href="/<contact" className="text-left"
             ></a>
               Schedule Consultation →
             </a>

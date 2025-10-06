@@ -207,10 +207,10 @@ const AIRealTimeCollaborationSystems2025: React.FC = () =>
               Our experts guide you through tool selection, implementation, change management, and optimization.
             </p>
             <div className="text-left"></div>
-              <a href="/contact" className="text-left"></a>
+              <a href="/<contact" className="text-left"></a>
                 Schedule a Consultation
               </a>
-              <a href="/services" className="text-left"></a>
+              <a href="/<services" className="text-left"></a>
                 Explore Our Services
               </a>
             </div>

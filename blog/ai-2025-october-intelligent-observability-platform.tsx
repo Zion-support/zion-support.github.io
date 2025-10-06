@@ -20,7 +20,7 @@ export default function IntelligentObservabilityPlatform2025() {
       <div className="text-left"></div>
         <main className="text-left">
           <nav className="text-left">
-            <a href="/blog" className="text-left"></a>
+            <a href="/<blog" className="text-left"></a>
               ← Back to Blog
             </a>
           </nav>
@@ -323,14 +323,12 @@ const observabilityPlatform =
                   </p>
                   <div className="text-left"></div>
                     <a
-                      href="/contact"
-                      className="text-left"
+                      href="/<contact" className="text-left"
                     ></a>
                       Book a Demo
                     </a>
                     <a
-                      href="/resources"
-                      className="text-left"
+                      href="/<resources" className="text-left"
                     ></a>
                       Download Whitepaper
                     </a>

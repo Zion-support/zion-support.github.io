@@ -148,8 +148,7 @@ const GenerativeAICodeCopilots2025: React.FC = () =>
             implement a tailored solution that integrates seamlessly with your existing development workflow.
           </p>
           <a
-            href="/contact"
-            className="text-left"
+            href="/<contact" className="text-left"
           ></a>
             Schedule Developer Productivity Assessment →
           </a>

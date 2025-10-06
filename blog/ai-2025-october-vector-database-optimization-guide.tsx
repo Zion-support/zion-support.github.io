@@ -439,8 +439,7 @@ class QdrantOptimizer
             sub-10ms query latency at scale. Let's optimize your vector database together.
           </p>
           <a
-            href="/contact"
-            className="text-left"
+            href="/<contact" className="text-left"
           ></a>
             Schedule Architecture Review
           </a>

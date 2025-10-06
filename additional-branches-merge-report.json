@@ -1,0 +1,124 @@
+{
+  "branches": [
+    {
+      "branch": "y7v6qh-codex/implement-eprivacy-directive-consent-banner",
+      "success": true,
+      "method": "already_merged"
+    },
+    {
+      "branch": "y8b6t3-codex/fix-type-errors-in-typescript-files",
+      "success": true,
+      "method": "already_merged"
+    },
+    {
+      "branch": "y8pqmi-codex/fix-services-fetch-and-fallback-logic",
+      "success": true,
+      "method": "already_merged"
+    },
+    {
+      "branch": "ybn8hb-codex/fix-npm-eio-error-during-install",
+      "success": true,
+      "method": "already_merged"
+    },
+    {
+      "branch": "ye4cs2-codex/add-i18n-support-with-next-i18next",
+      "success": true,
+      "method": "already_merged"
+    },
+    {
+      "branch": "ye7hs1-codex/fix-npm-eio-error-during-install",
+      "success": true,
+      "method": "already_merged"
+    },
+    {
+      "branch": "yggxu4-codex/implement-checkout-flow-with-auth-redirect",
+      "success": true,
+      "method": "already_merged"
+    },
+    {
+      "branch": "yjjjqb-codex/check-logs-and-fix-errors",
+      "success": true,
+      "method": "already_merged"
+    },
+    {
+      "branch": "ypnv26-codex/fix-talent-profile-rendering-issues",
+      "success": true,
+      "method": "already_merged"
+    },
+    {
+      "branch": "yuysa9-codex/fix-errors-and-improve-project",
+      "success": true,
+      "method": "already_merged"
+    },
+    {
+      "branch": "yvyz2j-codex/add-i18n-support-with-next-i18next",
+      "success": true,
+      "method": "already_merged"
+    },
+    {
+      "branch": "yw5tz2-codex/implement-instant-messaging-for-negotiations",
+      "success": true,
+      "method": "already_merged"
+    },
+    {
+      "branch": "yxewy6-codex/fix-toggle-icon-layout-issue",
+      "success": true,
+      "method": "already_merged"
+    },
+    {
+      "branch": "z4gpnj-codex/implement-axios-interceptor-for-api-failures",
+      "success": true,
+      "method": "already_merged"
+    },
+    {
+      "branch": "z5t0go-codex/fix-login-form-submission",
+      "success": true,
+      "method": "already_merged"
+    },
+    {
+      "branch": "zdh03e-codex/fix-link-under-register-form",
+      "success": true,
+      "method": "already_merged"
+    },
+    {
+      "branch": "zhnryo-codex/implement-eprivacy-directive-consent-banner",
+      "success": true,
+      "method": "already_merged"
+    },
+    {
+      "branch": "zjqw50-codex/fix-ui-and-functional-bugs",
+      "success": true,
+      "method": "already_merged"
+    },
+    {
+      "branch": "zreeup-codex/check-logs-and-fix-errors",
+      "success": true,
+      "method": "already_merged"
+    },
+    {
+      "branch": "zzdg1a-codex/add-i18n-support-with-next-i18next",
+      "success": true,
+      "method": "already_merged"
+    }
+  ],
+  "failed": [],
+  "summary": {
+    "total": 20,
+    "successful": 20,
+    "failed": 0,
+    "methods": {
+      "direct": 0,
+      "theirs": 0,
+      "ours": 0,
+      "manual": 0,
+      "failed": 0,
+      "not_found": 0,
+      "already_merged": 20
+    }
+  },
+  "timestamp": "2025-10-05T11:06:41.166Z",
+  "branchCounts": {
+    "total": 20,
+    "processed": 20
+  }
+}

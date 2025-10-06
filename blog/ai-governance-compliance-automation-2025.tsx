@@ -273,8 +273,7 @@ export default function AIGovernanceComplianceAutomation2025() {
               and building customer trust.
             </p>
             <a
-              href="/contact"
-              className="text-left"
+              href="/<contact" className="text-left"
             ></a>
               Schedule a Governance Assessment
             </a>

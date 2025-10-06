@@ -194,14 +194,12 @@ export default function QuantumAIHybridComputing2026() {
           </p>
           <div className="text-left"></div>
             <a
-              href="/contact"
-              className="text-left"
+              href="/<contact" className="text-left"
             ></a>
               Get Started
             </a>
             <a
-              href="/services"
-              className="text-left"
+              href="/<services" className="text-left"
             ></a>
               Quantum Services
             </a>

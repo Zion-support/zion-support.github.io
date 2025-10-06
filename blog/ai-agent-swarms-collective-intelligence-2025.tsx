@@ -189,8 +189,7 @@ export default function AIAgentSwarmsCollectiveIntelligence2025() {
               organization to harness swarm intelligence without the complexity.
             </p>
             <a
-              href="/contact"
-              className="text-left"
+              href="/<contact" className="text-left"
             ></a>
               Schedule a Swarm Intelligence Demo
             </a>

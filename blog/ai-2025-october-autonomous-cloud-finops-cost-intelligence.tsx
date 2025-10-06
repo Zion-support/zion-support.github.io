@@ -324,8 +324,7 @@ const AI2025OctoberAutonomousCloudFinOpsCostIntelligence = () =>
                 <li>4. <strong>Ongoing Optimization:</strong> Continuous improvement with quarterly business reviews</li>
               </ol>
               <a
-                href="/contact"
-                className="text-left"
+                href="/<contact" className="text-left"
               ></a>
                 Schedule FinOps Assessment →
               </a>

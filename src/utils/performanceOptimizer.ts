@@ -1,325 +1,177 @@
-/**
- * Performance Optimization Utility
- *
- * Provides tools for optimizing application performance including:
- * - Component lazy loading
- * - Image optimization
- * - Bundle size monitoring
- * - Memory leak detection
- * - Render performance tracking
- */
-
-import * as React from 'react';
-
-export interface PerformanceMetrics {
-  componentName: string;
-  renderTime: number;
-  mountTime: number;
-  updateCount: number;
-  memoryUsage: number;
-  timestamp: Date;
-}
-
+// Performance optimization utilities
 export class PerformanceOptimizer {
-  private metrics: Map<string, PerformanceMetrics[]> = new Map();
-  private renderStartTimes: Map<string, number> = new Map();
-  private observedComponents: Set<string> = new Set();
+  private static instance: PerformanceOptimizer;
+  private metrics: Map<string, number> = new Map();
 
-  /**
-   * Start tracking a component render
-   */
-  startRender(componentName: string): void {
-    this.renderStartTimes.set(componentName, performance.now());
-    this.observedComponents.add(componentName);
-  }
-
-  /**
-   * End tracking a component render and record metrics
-   */
-  endRender(componentName: string): void {
-    const startTime = this.renderStartTimes.get(componentName);
-    if (!startTime) return;
-
-    const renderTime = performance.now() - startTime;
-    const metrics: PerformanceMetrics = {
-      componentName,
-      renderTime,
-      mountTime: renderTime,
-      updateCount: this.getUpdateCount(componentName),
-      memoryUsage: this.getMemoryUsage(),
-      timestamp: new Date(),
-    };
-
-    this.recordMetrics(componentName, metrics);
-    this.renderStartTimes.delete(componentName);
-  }
-
-  /**
-   * Record performance metrics for a component
-   */
-  private recordMetrics(
-    componentName: string,
-    metrics: PerformanceMetrics,
-  ): void {
-    const existingMetrics = this.metrics.get(componentName) || [];
-    existingMetrics.push(metrics);
-
-    // Keep only last 100 metrics per component
-    if (existingMetrics.length > 100) {
-      existingMetrics.splice(0, existingMetrics.length - 100);
+  static getInstance(): PerformanceOptimizer {
+    if (!PerformanceOptimizer.instance) {
+      PerformanceOptimizer.instance = new PerformanceOptimizer();
     }
-
-    this.metrics.set(componentName, existingMetrics);
+    return PerformanceOptimizer.instance;
   }
 
-  /**
-   * Get update count for a component
-   */
-  private getUpdateCount(componentName: string): number {
-    const existingMetrics = this.metrics.get(componentName) || [];
-    return existingMetrics.length;
-  }
+  // Lazy load images with intersection observer
+  lazyLoadImages(): void {
+    if ('IntersectionObserver' in window) {
+      const imageObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const img = entry.target as HTMLImageElement;
+            if (img.dataset.src) {
+              img.src = img.dataset.src;
+              img.classList.remove('lazy');
+              imageObserver.unobserve(img);
+            }
+          }
+        });
+      });
 
-  /**
-   * Get current memory usage (if available)
-   */
-  private getMemoryUsage(): number {
-    if ('memory' in performance) {
-      return (performance as any).memory.usedJSHeapSize;
+      document.querySelectorAll('img[data-src]').forEach((img) => {
+        imageObserver.observe(img);
+      });
     }
-    return 0;
   }
 
-  /**
-   * Get performance metrics for a component
-   */
-  getMetrics(componentName: string): PerformanceMetrics[] {
-    return this.metrics.get(componentName) || [];
-  }
+  // Preload critical resources
+  preloadCriticalResources(): void {
+    const criticalResources = [
+      '/fonts/inter.woff2',
+      '/images/hero-bg.jpg',
+      '/images/logo.svg'
+    ];
 
-  /**
-   * Get all performance metrics
-   */
-  getAllMetrics(): Map<string, PerformanceMetrics[]> {
-    return new Map(this.metrics);
-  }
-
-  /**
-   * Get average render time for a component
-   */
-  getAverageRenderTime(componentName: string): number {
-    const metrics = this.getMetrics(componentName);
-    if (metrics.length === 0) return 0;
-
-    const totalTime = metrics.reduce(
-      (sum, metric) => sum + metric.renderTime,
-      0,
-    );
-    return totalTime / metrics.length;
-  }
-
-  /**
-   * Get slowest components
-   */
-  getSlowestComponents(
-    limit: number = 10,
-  ): Array<{ componentName: string; averageTime: number }> {
-    const results: Array<{ componentName: string; averageTime: number }> = [];
-
-    for (const [componentName] of this.metrics) {
-      const averageTime = this.getAverageRenderTime(componentName);
-      results.push({ componentName, averageTime });
-    }
-
-    return results
-      .sort((a, b) => b.averageTime - a.averageTime)
-      .slice(0, limit);
-  }
-
-  /**
-   * Check if a component is performing poorly
-   */
-  isComponentSlow(componentName: string, threshold: number = 16): boolean {
-    const averageTime = this.getAverageRenderTime(componentName);
-    return averageTime > threshold; // 16ms = 60fps threshold
-  }
-
-  /**
-   * Get performance summary
-   */
-  getPerformanceSummary(): {
-    totalComponents: number;
-    slowComponents: number;
-    averageRenderTime: number;
-    memoryUsage: number;
-  } {
-    const allMetrics = Array.from(this.metrics.values()).flat();
-    const slowComponents = Array.from(this.metrics.keys()).filter(name =>
-      this.isComponentSlow(name),
-    ).length;
-
-    const totalRenderTime = allMetrics.reduce(
-      (sum, metric) => sum + metric.renderTime,
-      0,
-    );
-    const averageRenderTime =
-      allMetrics.length > 0 ? totalRenderTime / allMetrics.length : 0;
-
-    return {
-      totalComponents: this.metrics.size,
-      slowComponents,
-      averageRenderTime,
-      memoryUsage: this.getMemoryUsage(),
-    };
-  }
-
-  /**
-   * Clear all metrics
-   */
-  clearMetrics(): void {
-    this.metrics.clear();
-    this.renderStartTimes.clear();
-    this.observedComponents.clear();
-  }
-
-  /**
-   * Clear metrics for a specific component
-   */
-  clearComponentMetrics(componentName: string): void {
-    this.metrics.delete(componentName);
-    this.renderStartTimes.delete(componentName);
-    this.observedComponents.delete(componentName);
-  }
-
-  /**
-   * Export metrics as JSON
-   */
-  exportMetrics(): string {
-    const exportData = {
-      timestamp: new Date().toISOString(),
-      summary: this.getPerformanceSummary(),
-      components: Object.fromEntries(this.metrics),
-    };
-
-    return JSON.stringify(exportData, null, 2);
-  }
-
-  /**
-   * Import metrics from JSON
-   */
-  importMetrics(jsonData: string): void {
-    try {
-      const data = JSON.parse(jsonData);
-      if (data.components) {
-        this.metrics = new Map(Object.entries(data.components));
+    criticalResources.forEach((resource) => {
+      const link = document.createElement('link');
+      link.rel = 'preload';
+      link.href = resource;
+      link.as = resource.endsWith('.woff2') ? 'font' : 'image';
+      if (resource.endsWith('.woff2')) {
+        link.crossOrigin = 'anonymous';
       }
-    } catch (error) {
-      console.error('Failed to import metrics:', error);
-    }
-  }
-}
-
-// Global instance
-export const performanceOptimizer = new PerformanceOptimizer();
-
-// React HOC for performance tracking
-export function withPerformanceTracking<P extends object>(
-  WrappedComponent: React.ComponentType<P>,
-  componentName?: string,
-) {
-  const displayName =
-    componentName ||
-    WrappedComponent.displayName ||
-    WrappedComponent.name ||
-    'Component';
-
-  const TrackedComponent = React.forwardRef<any, P>((props, ref) => {
-    React.useEffect(() => {
-      performanceOptimizer.startRender(displayName);
-
-      return () => {
-        performanceOptimizer.endRender(displayName);
-      };
+      document.head.appendChild(link);
     });
+  }
 
-    return React.createElement(WrappedComponent, { ...props, ref } as P);
-  });
-
-  TrackedComponent.displayName = `withPerformanceTracking(${displayName})`;
-
-  return TrackedComponent;
-}
-
-// Hook for performance tracking
-export function usePerformanceTracking(componentName: string) {
-  React.useEffect(() => {
-    performanceOptimizer.startRender(componentName);
-
-    return () => {
-      performanceOptimizer.endRender(componentName);
+  // Optimize scroll performance
+  optimizeScroll(): void {
+    let ticking = false;
+    
+    const updateScrollPosition = () => {
+      // Throttled scroll handling
+      ticking = false;
     };
-  });
-}
 
-// Utility functions
-export const performanceUtils = {
-  /**
-   * Debounce function for performance
-   */
-  debounce<T extends (...args: any[]) => any>(
-    func: T,
-    wait: number,
-  ): (...args: Parameters<T>) => void {
-    let timeout: NodeJS.Timeout;
-    return (...args: Parameters<T>) => {
-      clearTimeout(timeout);
-      timeout = setTimeout(() => func(...args), wait);
-    };
-  },
-
-  /**
-   * Throttle function for performance
-   */
-  throttle<T extends (...args: any[]) => any>(
-    func: T,
-    limit: number,
-  ): (...args: Parameters<T>) => void {
-    let inThrottle: boolean;
-    return (...args: Parameters<T>) => {
-      if (!inThrottle) {
-        func(...args);
-        inThrottle = true;
-        setTimeout(() => (inThrottle = false), limit);
+    const requestTick = () => {
+      if (!ticking) {
+        requestAnimationFrame(updateScrollPosition);
+        ticking = true;
       }
     };
-  },
 
-  /**
-   * Check if component should re-render
-   */
-  shouldComponentUpdate<P extends object>(
-    prevProps: P,
-    nextProps: P,
-    keys: (keyof P)[],
-  ): boolean {
-    return keys.some(key => prevProps[key] !== nextProps[key]);
-  },
+    window.addEventListener('scroll', requestTick, { passive: true });
+  }
 
-  /**
-   * Memoize expensive calculations
-   */
-  memoize<T extends (...args: any[]) => any>(fn: T): T {
-    const cache = new Map();
-    return ((...args: Parameters<T>) => {
-      const key = JSON.stringify(args);
-      if (cache.has(key)) {
-        return cache.get(key);
-      }
-      const result = fn(...args);
-      cache.set(key, result);
-      return result;
-    }) as T;
-  },
+  // Measure performance metrics
+  measurePerformance(name: string, fn: () => void): void {
+    const start = performance.now();
+    fn();
+    const end = performance.now();
+    const duration = end - start;
+    
+    this.metrics.set(name, duration);
+    
+    if (process.env.NODE_ENV === 'development') {
+      console.log(`Performance: ${name} took ${duration.toFixed(2)}ms`);
+    }
+  }
+
+  // Get performance metrics
+  getMetrics(): Record<string, number> {
+    return Object.fromEntries(this.metrics);
+  }
+
+  // Initialize all optimizations
+  initialize(): void {
+    this.measurePerformance('lazyLoadImages', () => this.lazyLoadImages());
+    this.measurePerformance('preloadCriticalResources', () => this.preloadCriticalResources());
+    this.measurePerformance('optimizeScroll', () => this.optimizeScroll());
+  }
+}
+
+<<<<<<< HEAD
+/**
+ * Critical resource hints for better performance
+ */
+export const addCriticalResourceHints = (): void => {
+  if (typeof document === 'undefined') return;
+  
+  const hints = [
+    { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' },
+    { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com' },
+    { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+    { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossOrigin: 'anonymous' }
+  ];
+  
+  hints.forEach(hint => {
+    const link = document.createElement('link');
+    link.rel = hint.rel;
+    link.href = hint.href;
+    if (hint.crossOrigin) {
+      link.crossOrigin = hint.crossOrigin;
+    }
+    document.head.appendChild(link);
+  });
 };
 
-export default performanceOptimizer;
+export const checkPerformanceBudget = (budget: PerformanceBudget): {
+  passed: boolean;
+  violations: string[];
+} => {
+  const violations: string[] = [];
+  
+  if (typeof window === 'undefined' || !window.performance) {
+    return { passed: true, violations };
+  }
+  
+  const timing = window.performance.timing;
+  const loadTime = timing.loadEventEnd - timing.navigationStart;
+  const interactiveTime = timing.domInteractive - timing.navigationStart;
+  
+  if (loadTime > budget.maxFirstLoad) {
+    violations.push(`First load time (${loadTime}ms) exceeds budget (${budget.maxFirstLoad}ms)`);
+  }
+  
+  if (interactiveTime > budget.maxInteractive) {
+    violations.push(`Time to interactive (${interactiveTime}ms) exceeds budget (${budget.maxInteractive}ms)`);
+  }
+  
+  return {
+    passed: violations.length === 0,
+    violations
+  };
+};
+
+export default {
+  prefetchResources,
+  preconnectDomains,
+  lazyLoadImages,
+  debounce,
+  throttle,
+  measurePageLoad,
+  reportWebVitals,
+  shouldUseWebP,
+  getConnectionQuality,
+  shouldLoadHeavyAssets,
+  requestIdleCallback,
+  cancelIdleCallback,
+  preloadRoute,
+  monitorLongTasks,
+  cacheStaticAssets,
+  clearOldCaches,
+  checkPerformanceBudget,
+  addCriticalResourceHints
+};
+=======
+// Export singleton instance
+export const performanceOptimizer = PerformanceOptimizer.getInstance();
+>>>>>>> origin/merge-all-fixes

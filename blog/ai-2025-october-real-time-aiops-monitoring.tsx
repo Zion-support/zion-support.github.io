@@ -296,14 +296,12 @@ export default function AI2025OctoberRealTimeAIOpsMonitoring() {
           </p>
           <div className="text-left"></div>
             <a
-              href="/contact"
-              className="text-left"
+              href="/<contact" className="text-left"
             ></a>
               Get Started
             </a>
             <a
-              href="/blog"
-              className="text-left"
+              href="/<blog" className="text-left"
             ></a>
               More Insights
             </a>

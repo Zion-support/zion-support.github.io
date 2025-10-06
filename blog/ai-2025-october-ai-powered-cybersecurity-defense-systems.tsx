@@ -294,8 +294,7 @@ const AI2025OctoberAIPoweredCybersecurityDefenseSystems = () =>
                 <li>4. <strong>Full Production Rollout:</strong> Enterprise-wide deployment with 24/7 support</li>
               </ol>
               <a
-                href="/contact"
-                className="text-left"
+                href="/<contact" className="text-left"
               ></a>
                 Schedule Security Assessment →
               </a>

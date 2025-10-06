@@ -132,8 +132,7 @@ export default function AINextGenAgenticAISystems() {
               business needs. Our proven frameworks and expert guidance ensure successful deployment and maximum ROI.
             </p>
             <a
-              href="/contact"
-              className="text-left"
+              href="/<contact" className="text-left"
             ></a>
               Schedule a Consultation
             </a>

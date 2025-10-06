@@ -257,10 +257,10 @@ const AIBusinessIntelligenceRevolution2025: React.FC = () =>
               We handle data integration, AI model development, user training, and ongoing optimization.
             </p>
             <div className="text-left"></div>
-              <a href="/contact" className="text-left"></a>
+              <a href="/<contact" className="text-left"></a>
                 Schedule a Demo
               </a>
-              <a href="/services" className="text-left"></a>
+              <a href="/<services" className="text-left"></a>
                 Explore BI Services
               </a>
             </div>

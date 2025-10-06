@@ -51,7 +51,7 @@ module.exports = {
       maxAsyncRequests: 30,
       cacheGroups: {
         vendor: {
-          test: /[\\/]node_modules[\\/]/,
+          test: {},
           name: 'vendors',
           chunks: 'all',
           priority: 10,
@@ -65,7 +65,7 @@ module.exports = {
         },
         styles: {
           name: 'styles',
-          test: /\.(css|scss|sass)$/,
+          test: {},
           chunks: 'all',
           enforce: true,
         },
@@ -96,5 +96,5 @@ module.exports = {
       garbageCollection: true,
     },
   },
-  timestamp: '2025-10-03T22:24:50.021Z',
+  timestamp: '2025-10-05T11:17:50.917Z',
 };

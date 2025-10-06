@@ -198,14 +198,12 @@ const CloudFinOpsAICostOptimization2025: React.FC = () =>
           </p>
           <div className="text-left"></div>
             <a
-              href="/contact"
-              className="text-left"
+              href="/<contact" className="text-left"
             ></a>
               Get Free Cloud Cost Assessment →
             </a>
             <a
-              href="/services-advertising"
-              className="text-left"
+              href="/services-<advertising" className="text-left"
             ></a>
               View FinOps Services
             </a>

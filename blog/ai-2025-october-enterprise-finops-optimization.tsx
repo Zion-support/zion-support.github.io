@@ -333,14 +333,12 @@ export default function AI2025OctoberEnterpriseFinOpsOptimization() {
           </p>
           <div className="text-left"></div>
             <a
-              href="/contact"
-              className="text-left"
+              href="/<contact" className="text-left"
             ></a>
               Get Free Cost Assessment
             </a>
             <a
-              href="/case-studies"
-              className="text-left"
+              href="/case-<studies" className="text-left"
             ></a>
               View ROI Case Studies
             </a>

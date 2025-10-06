@@ -8,7 +8,7 @@ export default function AIMultimodalFusionSystems2025() {
       <div className="text-left"></div>
         <main className="text-left">
           <nav className="text-left">
-            <a href="/blog" className="text-left"></a>
+            <a href="/<blog" className="text-left"></a>
               ← Back to Blog
             </a>
           </nav>
@@ -290,10 +290,10 @@ class CrossModalAttentionFusion
                   for training, deployment, and monitoring.
                 </p>
                 <div className="text-left"></div>
-                  <a href="/contact" className="text-left"></a>
+                  <a href="/<contact" className="text-left"></a>
                     Schedule Demo
                   </a>
-                  <a href="/services" className="text-left"></a>
+                  <a href="/<services" className="text-left"></a>
                     Explore Platform
                   </a>
                 </div>

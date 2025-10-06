@@ -111,8 +111,7 @@ export default function AISeptember302025EnterpriseObservabilityPlatform() {
               Transform your operations with AI-powered observability. Schedule a free consultation to see how our platform can deliver unprecedented visibility and reliability for your enterprise.
             </p>
             <a
-              href="/contact"
-              className="text-left"
+              href="/<contact" className="text-left"
             ></a>
               Schedule Free Consultation →
             </a>

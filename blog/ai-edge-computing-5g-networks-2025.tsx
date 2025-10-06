@@ -208,10 +208,10 @@ export default function AIEdgeComputing5GNetworks2025() {
             of real-time intelligent applications. Get expert guidance on architecture, deployment, and optimization.
           </p>
           <div className="text-left"></div>
-            <a href="/contact" className="text-left"></a>
+            <a href="/<contact" className="text-left"></a>
               Schedule Consultation
             </a>
-            <a href="/services" className="text-left"></a>
+            <a href="/<services" className="text-left"></a>
               Explore Solutions
             </a>
           </div>

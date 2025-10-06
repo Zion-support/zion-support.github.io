@@ -258,10 +258,10 @@ const IntelligentDocumentProcessingAutomationArticle = () =>
             Join Fortune 500 companies achieving 99.7% accuracy and $3.2B+ savings with intelligent document processing.
           </p>
           <div className="text-left"></div>
-            <a href="/contact" className="text-left"></a>
+            <a href="/<contact" className="text-left"></a>
               Schedule Consultation
             </a>
-            <a href="/services" className="text-left"></a>
+            <a href="/<services" className="text-left"></a>
               Explore Solutions
             </a>
           </div>
