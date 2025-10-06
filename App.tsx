@@ -97,6 +97,8 @@ const LoadingSpinner = memo(() => (
 ));
 
 // Error Boundary Component
+<<<<<<< HEAD
+=======
 interface ErrorBoundaryState {
   hasError: boolean;
   error: Error | null;
@@ -106,7 +108,7 @@ interface ErrorBoundaryProps {
   children: React.ReactNode;
 }
 
-class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundaryState> {
+class AppErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundaryState> {
   constructor(props: ErrorBoundaryProps) {
     super(props);
     this.state = { hasError: false, error: null };
@@ -145,6 +147,7 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
     return this.props.children;
   }
 }
+>>>>>>> cursor/fix-errors-and-merge-to-main-7ea5
 
 export default function App() {
   const structuredData = useMemo(
@@ -186,9 +189,67 @@ export default function App() {
     }),
     []
   );
+  // Performance optimization: Preload critical resources
+  React.useEffect(() => {
+    if (typeof document !== 'undefined') {
+      // Preload critical fonts
+      const fontLink = document.createElement('link');
+      fontLink.rel = 'preload';
+      fontLink.href =
+        'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap';
+      fontLink.as = 'style';
+      document.head.appendChild(fontLink);
+      // Preload critical images
+      const preloadImages = [
+        'https://ziontechgroup.com/og-image.jpg',
+        'https://ziontechgroup.com/logo.png'
+      ];
+      preloadImages.forEach(src => {
+        const img = new Image();
+        img.src = src;
+      });
+      // Add performance monitoring
+      if ('performance' in window) {
+        window.addEventListener('load', () => {
+          const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+          if (perfData) {
+            console.log('Page Load Performance:', {
+              domContentLoaded: perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart,
+              loadComplete: perfData.loadEventEnd - perfData.loadEventStart,
+              totalTime: perfData.loadEventEnd - perfData.fetchStart
+            });
+          }
+        });
+      }
+    }
+  }, []);
+  // Memoized event handlers for better performance
+  const handleNewsletterSubmit = useCallback((e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const target = e.target as HTMLFormElement;
+    const email = (target.elements.namedItem('email') as HTMLInputElement)?.value;
+    if (email) {
+      console.log('Newsletter signup:', email);
+      // Add actual newsletter signup logic here
+      alert('Thank you for subscribing!');
+    }
+  }, []);
+  const handlePhoneClick = useCallback(() => {
+    // Track phone clicks for analytics
+    if (typeof window !== 'undefined' && 'gtag' in window) {
+      (window as unknown as { gtag: Function }).gtag('event', 'phone_click', {
+      (window as any).gtag('event', 'phone_click', {
+    if (typeof window !== 'undefined' && (window as unknown as { gtag?: Function }).gtag) {
+      ((window as unknown as { gtag: Function }).gtag)('event', 'phone_click', {
+>>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572
+        event_category: 'engagement',
+        event_label: 'main_phone_number'
+      });
+    }
 
   const handleScrollToTop = useCallback(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
+>>>>>>> 6c45f99dc7ca17bbf478e03055adf8e9c75097bc
   }, []);
 
   return (

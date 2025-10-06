@@ -56,15 +56,40 @@ export default function EnterprisePage() {
         </div>
       </header>
 
+      {/* Stats Section */}
+      <section className="py-20 bg-black/20">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="text-4xl font-bold text-cyan-400 mb-2">500+</div>
+              <div className="text-gray-300">Fortune 500 Clients</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold text-cyan-400 mb-2">$2.5T+</div>
+              <div className="text-gray-300">Cost Savings Delivered</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold text-cyan-400 mb-2">99.9%</div>
+              <div className="text-gray-300">System Uptime</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold text-cyan-400 mb-2">500%</div>
+              <div className="text-gray-300">Productivity Increase</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Solutions Section */}
-      <section id="solutions" className="py-20">
+      <section id="solutions" className="py-24">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Enterprise AI Solutions
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive AI solutions designed for enterprise-scale operations
+              Comprehensive AI solutions designed for enterprise-scale
+              operations and Fortune 500 requirements.
             </p>
           </div>
 
@@ -73,134 +98,74 @@ export default function EnterprisePage() {
               {
                 title: 'Autonomous Operations',
                 description:
-                  'Self-managing AI systems that optimize performance and reduce operational costs by 70%.',
-                features: [
-                  'Predictive Maintenance',
-                  'Automated Decision Making',
-                  'Real-time Optimization',
-                ],
+                  'Self-healing infrastructure with 99.99% uptime and 95% cost reduction.',
                 icon: '🤖',
-              },
-              {
-                title: 'Quantum Computing',
-                description:
-                  'Next-generation quantum algorithms for complex problem solving and data analysis.',
-                features: [
-                  'Quantum Machine Learning',
-                  'Optimization Algorithms',
-                  'Cryptographic Security',
+                metrics: [
+                  '99.99% Uptime',
+                  '95% Cost Reduction',
+                  'Zero Touch Operations',
                 ],
-                icon: '⚛️',
               },
               {
                 title: 'Business Intelligence',
                 description:
-                  'Advanced analytics and insights that drive strategic decision making.',
-                features: [
-                  'Real-time Dashboards',
-                  'Predictive Analytics',
-                  'Custom Reporting',
-                ],
+                  'AI-powered analytics delivering 30,000% ROI and real-time insights.',
                 icon: '📊',
+                metrics: [
+                  '30,000% ROI',
+                  '$750B+ Savings',
+                  'Real-time Analytics',
+                ],
+              },
+              {
+                title: 'Quantum Security',
+                description:
+                  'Quantum-resistant cryptography with 99.99% security against attacks.',
+                icon: '🔒',
+                metrics: ['99.99% Security', '<1ms Overhead', 'Zero Breaches'],
               },
               {
                 title: 'Predictive Analytics',
                 description:
                   'Advanced ML models with 99.7% accuracy for business forecasting.',
-                features: ['99.7% Accuracy', 'Real-time Predictions', 'Auto-scaling'],
                 icon: '🔮',
+                metrics: ['99.7% Accuracy', 'Real-time Predictions', 'Auto-scaling'],
               },
               {
                 title: 'Process Automation',
                 description:
                   'End-to-end automation reducing manual work by 90% and errors by 99%.',
-                features: ['90% Work Reduction', '99% Error Reduction', '24/7 Operations'],
                 icon: '⚡',
+                metrics: ['90% Work Reduction', '99% Error Reduction', '24/7 Operations'],
               },
               {
                 title: 'Cloud Migration',
                 description:
                   'Seamless cloud transformation with zero downtime and 50% cost savings.',
-                features: ['Zero Downtime', '50% Cost Savings', 'Auto-scaling'],
                 icon: '☁️',
+                metrics: ['Zero Downtime', '50% Cost Savings', 'Auto-scaling'],
               },
             ].map((solution, index) => (
               <div
                 key={index}
-                className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-white/40 transition-all duration-500 hover:scale-105"
+                className="group bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 hover:scale-105"
               >
                 <div className="text-4xl mb-4">{solution.icon}</div>
                 <h3 className="text-2xl font-bold text-white mb-4">
                   {solution.title}
                 </h3>
                 <p className="text-gray-300 mb-6">{solution.description}</p>
-                {solution.features && (
-                  <ul className="space-y-2">
-                    {solution.features.map((feature, idx) => (
-                      <li
-                        key={idx}
-                        className="flex items-center gap-2 text-gray-300"
-                      >
-                        <span className="w-2 h-2 bg-cyan-400 rounded-full"></span>
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Results Section */}
-      <section className="py-24">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Proven Results
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our enterprise solutions have delivered measurable results across
-              Fortune 500 companies worldwide.
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              {
-                title: 'Autonomous Operations',
-                description: 'Self-healing infrastructure achieving 99.99% uptime and 95% cost reduction.',
-                icon: '🤖',
-                metrics: ['99.99% Uptime', '95% Cost Reduction', 'Zero Touch Operations']
-              },
-              {
-                title: 'Business Intelligence',
-                description: 'AI-powered analytics delivering 30,000% ROI and unprecedented insights.',
-                icon: '📊',
-                metrics: ['30,000% ROI', '$750B+ Savings', '99.99% Accuracy']
-              },
-              {
-                title: 'Quantum Security',
-                description: 'Quantum-resistant cryptography protecting against classical and quantum attacks.',
-                icon: '🔒',
-                metrics: ['99.99% Security', '<1ms Overhead', 'Zero Breaches']
-              },
-              {
-                title: 'Process Automation',
-                description: 'End-to-end automation reducing manual work by 90% and errors by 99%.',
-                icon: '⚡',
-                metrics: ['90% Work Reduction', '99% Error Reduction', '24/7 Operations']
-              }
-            ].map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-white/40 transition-all duration-500">
-                <div className="text-4xl mb-4">{feature.icon}</div>
-                <h3 className="text-2xl font-bold text-white mb-4">{feature.title}</h3>
-                <p className="text-gray-300 mb-6">{feature.description}</p>
-                <ul className="space-y-2">
-                  {feature.metrics.map((metric, idx) => (
-                    <li key={idx} className="text-cyan-400 text-sm">✓ {metric}</li>
+                <div className="space-y-2">
+                  {solution.metrics.map((metric, idx) => (
+                    <div
+                      key={idx}
+                      className="flex items-center gap-2 text-sm text-cyan-400"
+                    >
+                      <span className="w-2 h-2 bg-cyan-400 rounded-full"></span>
+                      {metric}
+                    </div>
                   ))}
-                </ul>
+                </div>
               </div>
             ))}
           </div>
@@ -210,30 +175,29 @@ export default function EnterprisePage() {
       {/* CTA Section */}
       <section className="py-24">
         <div className="container mx-auto px-4 text-center">
-          <div className="bg-white/5 backdrop-blur-lg rounded-3xl p-12 border border-white/20">
-            <h3 className="text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Enterprise?
-            </h3>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Join 500+ Fortune 500 companies achieving unprecedented
-              transformation with our enterprise AI solutions.
-            </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-              <Link
-                to="tel:+13024640950"
-                className="group flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl"
-              >
-                <span className="text-xl">📞</span>
-                <span>Call +1 302 464 0950</span>
-              </Link>
-              <Link
-                to="mailto:kleber@ziontechgroup.com"
-                className="group flex items-center gap-3 bg-white/10 hover:bg-white/20 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 border border-white/30"
-              >
-                <span className="text-xl">📧</span>
-                <span>Get Enterprise Consultation</span>
-              </Link>
-            </div>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            Ready to Transform Your Enterprise?
+          </h2>
+          <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
+            Join 500+ Fortune 500 companies already using our AI solutions to
+            drive unprecedented growth and efficiency.
+          </p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+            <Link
+              to="/contact"
+              className="group flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl"
+            >
+              <span>Get Started Today</span>
+              <span className="group-hover:translate-x-1 transition-transform">
+                →
+              </span>
+            </Link>
+            <Link
+              to="/services"
+              className="border-2 border-white/30 hover:border-white/60 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 hover:bg-white/10"
+            >
+              View All Services
+            </Link>
           </div>
         </div>
       </section>

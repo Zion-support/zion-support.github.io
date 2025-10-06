@@ -92,18 +92,18 @@ const ContactPage: React.FC = () => {
               
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <h3 className="text-xl font-semibold mb-4">Business Hours</h3>
-                <div className="space-y-2 text-gray-600">
+                <div className="space-y-2">
                   <div className="flex justify-between">
-                    <span>Monday - Friday</span>
-                    <span>9:00 AM - 6:00 PM</span>
+                    <span className="text-gray-600">Monday - Friday</span>
+                    <span className="text-gray-900">9:00 AM - 6:00 PM EST</span>
                   </div>
                   <div className="flex justify-between">
-                    <span>Saturday</span>
-                    <span>10:00 AM - 4:00 PM</span>
+                    <span className="text-gray-600">Saturday</span>
+                    <span className="text-gray-900">10:00 AM - 4:00 PM EST</span>
                   </div>
                   <div className="flex justify-between">
-                    <span>Sunday</span>
-                    <span>Closed</span>
+                    <span className="text-gray-600">Sunday</span>
+                    <span className="text-gray-900">Closed</span>
                   </div>
                 </div>
               </div>
