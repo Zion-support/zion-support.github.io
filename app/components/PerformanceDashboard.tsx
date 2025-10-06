@@ -19,7 +19,7 @@ const PerformanceDashboard: React.FC = () => {
       const performance = performanceOptimizer.getPerformanceSummary();
       const errors = getErrorMetrics();
       const isHealthy =
-        !isErrorRateTooHigh(5) && performance.averageRenderTime < 16;
+        !isErrorRateTooHigh() && performance.averageRenderTime < 16;
 
       setData({
         performance,

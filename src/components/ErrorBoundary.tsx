@@ -1,10 +1,15 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';
+import { Component, ErrorInfo, ReactNode } from 'react';
 import { AlertTriangle } from 'lucide-react';
 
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
->>>>>>> origin/merge-fixes-20251005-193002
+}
+
+interface State {
+  hasError: boolean;
+  error?: Error;
+}
 
 class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
@@ -33,7 +38,17 @@ class ErrorBoundary extends Component<Props, State> {
             <button
               onClick={() => window.location.reload()}
               className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+            >
+              Refresh Page
+            </button>
             <p className="text-gray-400 mb-8">We're working to fix this issue.</p>
-            <button
-              onClick={() => window.location.reload()}
-              className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors"
+          </div>
+        </div>
+      );
+    }
+
+    return this.props.children;
+  }
+}
+
+export default ErrorBoundary;
