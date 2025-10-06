@@ -29,6 +29,12 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
         className={`${sizeClasses[size]} border-2 border-blue-200 border-t-blue-600 rounded-full animate-spin`}
       />
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e62
+        role="status"
+        aria-label="Loading"
+      >
+        <span className="sr-only">Loading...</span>
+      </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-cfe1
     </div>
   );
 };

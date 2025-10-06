@@ -155,6 +155,27 @@ function App() {
           import('./pages/Home');
           import('./pages/About');
         });
+// Lazy load pages for better performance
+const HomePage = React.lazy(() => import('./pages/HomePage'));
+const ContactPage = React.lazy(() => import('./pages/ContactPage'));
+const ServicesPage = React.lazy(() => import('./pages/ServicesPage'));
+
+// Import components
+import ErrorBoundary from './components/ErrorBoundary';
+import SEOOptimizer from './components/SEOOptimizer';
+import AccessibilityEnhancer from './components/AccessibilityEnhancer';
+import PerformanceMonitor from './components/PerformanceMonitor';
+import LoadingSpinner from '../app/components/LoadingSpinner';
+
+function App() {
+  useEffect(() => {
+    // Initialize basic optimizations
+    const initializeOptimizations = () => {
+      try {
+        console.log('App initialized successfully');
+      } catch (error) {
+        console.error('Failed to initialize optimization systems:', error);
+>>>>>>> cursor/fix-errors-and-merge-to-main-cfe1
       }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e62
     } catch (error) {
@@ -215,3 +236,5 @@ function App() {
 }
 
 export default App;
+export default App;
+>>>>>>> cursor/fix-errors-and-merge-to-main-cfe1

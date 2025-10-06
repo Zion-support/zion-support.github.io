@@ -1,5 +1,6 @@
 import { useEffect, useCallback, useRef } from 'react';
 import performanceOptimizer from '../utils/performanceOptimizer';
+>>>>>>> cursor/fix-errors-and-merge-to-main-cfe1
 
 // Mock analytics object for tracking
 const analytics = {
@@ -97,27 +98,43 @@ export const useResourcePerformance = () => {
     observer.observe({ entryTypes: ['longtask'] });
   }, []);
 
+  const trackLongTasks = useCallback(() => {
+    if (typeof window === 'undefined' || !window.PerformanceObserver) {
+      return;
+    }
+
+    const observer = new PerformanceObserver(list => {
+      list.getEntries().forEach(entry => {
+        analytics.track('long_task', 'performance', 'detected', undefined, entry.duration);
+      });
+    });
+
+    observer.observe({ entryTypes: ['longtask'] });
+    return observer;
+  }, []);
+
   const preloadResources = useCallback(() => {
     if (typeof window === 'undefined') return;
-
-    performanceOptimizer.preloadCriticalResources();
+    // Add preloading logic here
   }, []);
 
   const optimizeImages = useCallback(() => {
     if (typeof window === 'undefined') return;
-
-    performanceOptimizer.lazyLoadImages();
+    // Add image optimization logic here
   }, []);
 
   useEffect(() => {
     trackPerformance();
-    trackLongTasks();
+    const longTaskObserver = trackLongTasks();
     preloadResources();
     optimizeImages();
 
     return () => {
       if (observerRef.current) {
         observerRef.current.disconnect();
+      }
+      if (longTaskObserver) {
+        longTaskObserver.disconnect();
       }
     };
   }, [trackPerformance, trackLongTasks, preloadResources, optimizeImages]);
@@ -141,6 +158,9 @@ export const useLongTaskMonitoring = () => {
 
     const observer = new PerformanceObserver((entries) => {
       entries.getEntries().forEach((entry) => {
+    const observer = new PerformanceObserver((entries: PerformanceEntryList) => {
+      entries.forEach((entry: PerformanceEntry) => {
+>>>>>>> cursor/fix-errors-and-merge-to-main-cfe1
         analytics.track('long_task', 'performance', 'detected', undefined, entry.duration);
       });
     });
@@ -148,9 +168,7 @@ export const useLongTaskMonitoring = () => {
     observer.observe({ entryTypes: ['longtask'] });
 
     return () => {
-      if (observer && typeof observer.disconnect === 'function') {
-        observer.disconnect();
-      }
+      observer.disconnect();
     };
   }, []);
 };
@@ -232,3 +250,5 @@ export const useMemoryMonitoring = () => {
 };
 
 export { usePageLoadPerformance, useMemoryMonitoring };
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-cfe1

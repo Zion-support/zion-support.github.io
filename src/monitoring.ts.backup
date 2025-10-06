@@ -1,15 +1,13 @@
 // Performance monitoring setup
-
 <<<<<<< HEAD
+
 // Mock analytics object
-=======
 // Simple analytics object
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e62
 const analytics = {
   trackPageView: (path: string) => {
     console.log('Page view:', path);
   },
-<<<<<<< HEAD
   trackPerformance: (name: string, value: number, unit: string = 'ms') => {
     console.log(`Performance: ${name} = ${value}${unit}`);
   }
@@ -36,7 +34,6 @@ const performanceOptimizer = {
 const errorHandler = {
   captureException: (error: Error) => {
     console.error('Error captured:', error);
-=======
   track: (event: string, category: string, action: string, label?: string, value?: number) => {
     console.log('Analytics:', event, category, action, label, value);
   }
@@ -49,6 +46,10 @@ const errorHandler = {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e62
   }
 };
+=======
+import { analytics } from './utils/analytics';
+import { errorHandler } from './utils/errorHandler';
+>>>>>>> cursor/fix-errors-and-merge-to-main-cfe1
 
 // Initialize performance monitoring
 if (typeof window !== 'undefined') {
@@ -67,9 +68,11 @@ if (typeof window !== 'undefined') {
   });
 
   // Monitor long tasks and navigation (if available)
-=======
   // Monitor long tasks if PerformanceObserver is available
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e62
+=======
+  // Monitor long tasks (if available)
+>>>>>>> cursor/fix-errors-and-merge-to-main-cfe1
   if ('PerformanceObserver' in window) {
     const observer = new PerformanceObserver((list) => {
       for (const entry of list.getEntries()) {
@@ -92,11 +95,15 @@ if (typeof window !== 'undefined') {
   const metrics = performanceOptimizer.measurePageLoad();
   if (metrics) {
     performanceOptimizer.reportWebVitals(metrics);
-=======
       });
     });
     observer.observe({ entryTypes: ['longtask'] });
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e62
+=======
+      });
+    });
+    observer.observe({ entryTypes: ['longtask'] });
+>>>>>>> cursor/fix-errors-and-merge-to-main-cfe1
   }
 }
 

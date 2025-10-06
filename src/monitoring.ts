@@ -45,6 +45,9 @@ const errorHandler = {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e62
   }
 };
+import { analytics } from './utils/analytics';
+import { errorHandler } from './utils/errorHandler';
+>>>>>>> cursor/fix-errors-and-merge-to-main-cfe1
 
 // Initialize performance monitoring
 if (typeof window !== 'undefined') {
@@ -64,6 +67,8 @@ if (typeof window !== 'undefined') {
   // Monitor long tasks and navigation (if available)
   // Monitor long tasks if PerformanceObserver is available
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e62
+  // Monitor long tasks (if available)
+>>>>>>> cursor/fix-errors-and-merge-to-main-cfe1
   if ('PerformanceObserver' in window) {
     const observer = new PerformanceObserver((list) => {
       for (const entry of list.getEntries()) {
@@ -89,6 +94,10 @@ if (typeof window !== 'undefined') {
     });
     observer.observe({ entryTypes: ['longtask'] });
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e62
+      });
+    });
+    observer.observe({ entryTypes: ['longtask'] });
+>>>>>>> cursor/fix-errors-and-merge-to-main-cfe1
   }
 }
 
