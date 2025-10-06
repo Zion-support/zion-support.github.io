@@ -5,9 +5,10 @@ import { HelmetProvider } from 'react-helmet-async';
 // Components
 import ErrorBoundary from '../src/components/ErrorBoundary';
 import SEOOptimizer from '../src/components/SEOOptimizer';
-import { LoadingSpinner } from '../components/LoadingComponents';
+import LoadingSpinner from '../src/components/LoadingSpinner';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import PerformanceDashboard from './components/PerformanceDashboard';
+import PerformanceMonitor from '../src/components/PerformanceMonitor';
 
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./page'));
@@ -42,7 +43,7 @@ const App: React.FC = () => {
   return (
     <HelmetProvider>
       <ErrorBoundary>
-        <div>
+        <PerformanceMonitor>
           <SEOOptimizer>
             <AccessibilityEnhancer>
             <Router>
@@ -78,7 +79,7 @@ const App: React.FC = () => {
             </Router>
             </AccessibilityEnhancer>
           </SEOOptimizer>
-        </div>
+        </PerformanceMonitor>
       </ErrorBoundary>
     </HelmetProvider>
   );
