@@ -55,7 +55,7 @@ export const lazyLoadImages = (): void => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         const img = entry.target as HTMLImageElement;
-        img.src = img.dataset.src || '';
+        img.src = img.dataset['src'] || '';
         img.removeAttribute('data-src');
         imageObserver.unobserve(img);
       }
@@ -192,8 +192,45 @@ class PerformanceOptimizer {
       loadTime: timing.loadEventEnd - timing.navigationStart,
       interactiveTime: timing.domInteractive - timing.navigationStart,
       domContentLoaded: timing.domContentLoadedEventEnd - timing.navigationStart,
-      firstPaint: performance.getEntriesByType('paint')[0]?.startTime || 0
+      firstPaint: performance.getEntriesByType('paint')[0]?.['startTime'] || 0
     };
+  }
+
+  // Monitor long tasks
+  monitorLongTasks(callback: (entries: PerformanceEntry[]) => void): void {
+    if (typeof window === 'undefined') return;
+    
+    const observer = new PerformanceObserver((list) => {
+      callback(list.getEntries());
+    });
+    
+    observer.observe({ entryTypes: ['longtask'] });
+  }
+
+  // Get performance summary
+  getPerformanceSummary(): {
+    averageRenderTime: number;
+    totalComponents: number;
+    memoryUsage: number;
+    slowComponents: number;
+  } {
+    const metrics = this.getMetrics();
+    return {
+      averageRenderTime: metrics['averageRenderTime'] || 0,
+      totalComponents: metrics['totalComponents'] || 0,
+      memoryUsage: metrics['memoryUsage'] || 0,
+      slowComponents: metrics['slowComponents'] || 0,
+    };
+  }
+
+  // Export metrics
+  exportMetrics(): Record<string, any> {
+    return this.getMetrics();
+  }
+
+  // Clear metrics
+  clearMetrics(): void {
+    this.metrics.clear();
   }
 
   // Initialize all optimizations
