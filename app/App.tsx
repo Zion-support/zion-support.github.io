@@ -6,7 +6,6 @@ import { HelmetProvider } from 'react-helmet-async';
 import ErrorBoundary from '../src/components/ErrorBoundary';
 import SEOOptimizer from '../src/components/SEOOptimizer';
 import { LoadingSpinner } from '../components/LoadingComponents';
-import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import PerformanceDashboard from './components/PerformanceDashboard';
 
 // Lazy load pages for better performance
@@ -16,7 +15,7 @@ const HomePage = lazy(() => import('./page'));
 import { performanceOptimizer } from '../src/utils/performanceOptimizer';
 
 // Styles
-import '../index.css';
+import './globals.css';
 
 const App: React.FC = () => {
   useEffect(() => {
@@ -46,7 +45,6 @@ const App: React.FC = () => {
       <ErrorBoundary>
         <div>
           <SEOOptimizer>
-            <AccessibilityEnhancer>
             <Router>
               <div className='App'>
                 {/* Skip to main content link for accessibility */}
@@ -78,7 +76,6 @@ const App: React.FC = () => {
                 <PerformanceDashboard />
               </div>
             </Router>
-            </AccessibilityEnhancer>
           </SEOOptimizer>
         </div>
       </ErrorBoundary>
