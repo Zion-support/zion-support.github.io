@@ -49,9 +49,10 @@ export const october2025RevolutionaryContent: RevolutionaryContent[] = [
     category: 'Quantum AI',
     date: '2025-10-02',
     readTime: '22 min read',
-    tags: ['Quantum AI', 'Synthesis', 'Computing', '2025'],
+    icon: '🔬',
+    gradient: 'from-purple-600 to-pink-600',
     featured: true,
-    tags: ['Healthcare', 'Security', 'AI', 'Compliance'],
+    tags: ['Quantum AI', 'Synthesis', 'Computing', '2025', 'Healthcare', 'Security', 'AI', 'Compliance'],
     highlights: [
       '$280M+ breach prevention',
       '100% compliance maintained',

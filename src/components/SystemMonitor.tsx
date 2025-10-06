@@ -5,7 +5,7 @@ const SystemMonitor: React.FC = () => {
 
   useEffect(() => {
     // Only show in development
-    if (process.env.NODE_ENV !== 'development') return;
+    if (process.env['NODE_ENV'] !== 'development') return;
 
     const handleKeyPress = (e: KeyboardEvent) => {
       if (e.ctrlKey && e.shiftKey && e.key === 'M') {

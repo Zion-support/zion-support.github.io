@@ -11,6 +11,13 @@ export interface NewBreakthroughContent {
   content: string;
   author: string;
   valueProposition: string;
+  icon?: string;
+  gradient?: string;
+  urgent?: boolean;
+  highlights?: string[];
+  metrics?: Record<string, string>;
+  cta?: string;
+  value?: string;
 }
 
 export const octoberNewBreakthroughContent = [
@@ -61,10 +68,13 @@ export const octoberNewBreakthroughContent = [
     category: 'Quantum AI',
     date: '2025-10-02',
     readTime: '18 min read',
-    tags: ['Quantum AI', 'Optimization', 'Performance', '2025'],
     featured: true,
     urgent: true,
     tags: [
+      'Quantum AI',
+      'Optimization',
+      'Performance',
+      '2025',
       'Real-Time Analytics',
       'Business Intelligence',
       'AI',

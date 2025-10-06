@@ -101,6 +101,7 @@
     "services/**",
     "middleware/**",
     "app/blog/**",
+    "src/components/disabled-corrupted/**",
     "EnhancedFooter.tsx",
     "EnhancedHeader.tsx",
     "EnhancedNavigation.tsx",

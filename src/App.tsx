@@ -1,6 +1,6 @@
 import React, { Suspense, lazy, useEffect, memo, useCallback } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { performanceOptimizer } from './utils/performanceOptimizer';
+// import performanceOptimizer from './utils/performanceOptimizer'; // Unused import
 import './index.css';
 
 // Lazy load pages for better performance with preloading
@@ -29,7 +29,7 @@ function App() {
   const initializeOptimizations = useCallback(() => {
     try {
       // Initialize performance optimizer
-      performanceOptimizer.initialize();
+      // performanceOptimizer.initialize(); // Method doesn't exist
       
       // Preload critical resources
       if ('requestIdleCallback' in window) {
@@ -91,21 +91,21 @@ class ErrorBoundary extends React.Component<
     return { hasError: true, error };
   }
 
-  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
+  override componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
     
     // Log to external service in production
-    if (process.env.NODE_ENV === 'production') {
+    if (process.env['NODE_ENV'] === 'production') {
       // Add error reporting service here
       console.log('Error reported to monitoring service');
     }
   }
 
   handleRetry = () => {
-    this.setState({ hasError: false, error: undefined });
+    this.setState({ hasError: false });
   };
 
-  render() {
+  override render() {
     if (this.state.hasError) {
       return (
         this.props.fallback || (

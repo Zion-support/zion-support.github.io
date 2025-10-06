@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import PerformanceMonitor from '../utils/performance-monitor';
-import SEOOptimizer from '../utils/seo-optimizer';
-import ErrorHandler from '../utils/error-handler';
+// import PerformanceMonitor from '../utils/performance-monitor'; // Unused import
+// import SEOOptimizer from '../utils/seo-optimizer'; // Unused import
+// import ErrorHandler from '../utils/error-handler'; // Unused import
 
 interface AnalyticsData {
   pageViews: number;
@@ -66,7 +66,8 @@ const AnalyticsDashboard: React.FC = () => {
         setData(mockData);
       } catch (err) {
         setError('Failed to load analytics data');
-        ErrorHandler.handleError(err as Error);
+        // ErrorHandler.handleError(err as Error); // Method doesn't exist as static
+        console.error('Analytics error:', err);
       } finally {
         setIsLoading(false);
       }

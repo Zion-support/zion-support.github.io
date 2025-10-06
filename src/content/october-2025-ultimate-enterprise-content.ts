@@ -14,6 +14,15 @@ export interface UltimateEnterpriseContent {
   metrics: {
     [key: string]: string;
   };
+  icon?: string;
+  gradient?: string;
+  breaking?: boolean;
+  new?: boolean;
+  cta?: {
+    text: string;
+    link: string;
+    badge: string;
+  };
 }
 
 export const octoberUltimateEnterpriseContent: UltimateEnterpriseContent[] = [
@@ -25,6 +34,9 @@ export const octoberUltimateEnterpriseContent: UltimateEnterpriseContent[] = [
     category: 'AI Consciousness',
     date: '2025-10-01',
     readTime: '18 min',
+    content: 'Multi-cloud intelligence revolution content...',
+    author: 'Zion Tech Group',
+    valueProposition: '$89M annual savings',
     icon: '☁️',
     gradient: 'from-blue-600 via-cyan-600 to-teal-600',
     featured: true,
@@ -68,11 +80,17 @@ export const octoberUltimateEnterpriseContent: UltimateEnterpriseContent[] = [
     category: 'Quantum AI',
     date: '2025-10-02',
     readTime: '22 min read',
-    tags: ['Quantum AI', 'Synthesis', 'Computing', '2025'],
+    content: 'Quantum AI synthesis content...',
+    author: 'Zion Tech Group',
+    valueProposition: '184% ROI within 14 months',
     featured: true,
     breaking: true,
     new: true,
     tags: [
+      'Quantum AI',
+      'Synthesis',
+      'Computing',
+      '2025',
       'Conversational AI',
       'Customer Experience',
       'NLP',
@@ -110,7 +128,7 @@ export const getBreakingUltimateContent = () => {
 };
 
 export const getNewUltimateContent = () => {
-  return octoberUltimateEnterpriseContent.filter(content => content.new);
+  return octoberUltimateEnterpriseContent.filter(content => content.new === true);
 };
 
 export const getAllUltimateEnterpriseContent = () => {

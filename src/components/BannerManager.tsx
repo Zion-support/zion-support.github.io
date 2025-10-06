@@ -1,26 +1,26 @@
 import React, { useState, useEffect } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 
-interface BannerData {
-  id: string;
-  title: string;
-  subtitle?: string;
-  description: string;
-  ctaText: string;
-  ctaLink: string;
-  imageUrl?: string;
-  category: string;
-  priority: number;
-  isActive: boolean;
-  startDate?: string;
-  endDate?: string;
-}
+// interface BannerData { // Unused interface
+//   id: string;
+//   title: string;
+//   subtitle?: string;
+//   description: string;
+//   ctaText: string;
+//   ctaLink: string;
+//   imageUrl?: string;
+//   category: string;
+//   priority: number;
+//   isActive: boolean;
+//   startDate?: string;
+//   endDate?: string;
+// }
 
-interface BannerManagerProps {
-  banners: BannerData[];
-  rotationInterval?: number;
-  maxVisibleBanners?: number;
-}
+// interface BannerManagerProps { // Unused interface
+//   banners: BannerData[];
+//   rotationInterval?: number;
+//   maxVisibleBanners?: number;
+// }
 
 interface Banner {
   id: string;
@@ -90,7 +90,7 @@ const BannerManager: React.FC = () => {
 
   const currentBanner = banners[currentBannerIndex];
 
-  if (!isVisible) return null;
+  if (!isVisible || !currentBanner) return null;
 
   return (
     <div className="relative overflow-hidden">

@@ -10,6 +10,10 @@ export interface LatestBreakthroughContent {
   content: string;
   author: string;
   valueProposition: string;
+  icon?: string;
+  gradient?: string;
+  highlights?: string[];
+  metrics?: Record<string, string>;
 }
 
 export const octoberLatestBreakthroughContent: LatestBreakthroughContent[] = [
