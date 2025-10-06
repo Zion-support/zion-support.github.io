@@ -1,64 +1,81 @@
-import ArrowRight from 'next/link';
+import Link from 'next/link';
 
 export default function RevolutionaryAI2027Banner() {
   return (
-    <div>
+    <div className='relative overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 rounded-2xl p-8 mb-12 border border-purple-500/20'>
       {/* Animated Background */}
-      <div>
-        <div></div>
-        <div></div>
+      <div className='absolute inset-0 opacity-20'>
+        <div className='absolute inset-0 bg-gradient-to-r from-purple-500/30 via-pink-500/30 to-blue-500/30 animate-pulse'></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2240%22%20height%3D%2240%22%20viewBox%3D%220%200%2040%2040%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.05%22%3E%3Cpath%20d%3D%22M20%2020c0-11.046-8.954-20-20-20v20h20z%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')]"></div>
       </div>
 
-      <div>
+      <div className='relative z-10'>
         {/* Header */}
-        <div>
-          <div>
-            <span>🚀</span>
+        <div className='text-center mb-8'>
+          <div className='inline-flex items-center bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-2 rounded-full text-sm font-semibold mb-6 animate-bounce'>
+            <span className='mr-2'>🚀</span>
             Revolutionary Breakthrough 2027
           </div>
-          <h2>
-            <span>
+          <h2 className='text-5xl md:text-6xl font-bold mb-6'>
+            <span className='bg-gradient-to-r from-purple-400 via-pink-500 to-blue-500 bg-clip-text text-transparent'>
               The Future is Now
             </span>
           </h2>
-          <p>
-            Experience the revolutionary AI innovations that are transforming enterprise operations 
-            with unprecedented speed, efficiency, and intelligence
+          <p className='text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed'>
+            Experience the revolutionary AI innovations that are transforming
+            enterprise operations with unprecedented speed, efficiency, and
+            intelligence
           </p>
         </div>
 
         {/* Feature Highlights */}
-        <div>
-          <div>
-            <div>
-              <span>⚡</span>
+        <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8'>
+          <div className='text-center'>
+            <div className='w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4'>
+              <span className='text-2xl'>⚡</span>
             </div>
-            <h3>100,000x Faster</h3>
-            <p>Processing speeds with neuromorphic computing</p>
+            <h3 className='text-lg font-bold text-cyan-300 mb-2'>
+              100,000x Faster
+            </h3>
+            <p className='text-sm text-gray-400'>
+              Processing speeds with neuromorphic computing
+            </p>
           </div>
-          
-          <div>
-            <div>
-              <span>🔮</span>
+
+          <div className='text-center'>
+            <div className='w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4'>
+              <span className='text-2xl'>🔮</span>
             </div>
-            <h3>Quantum Advantage</h3>
-            <p>Solving intractable problems with quantum-AI</p>
+            <h3 className='text-lg font-bold text-purple-300 mb-2'>
+              Quantum Advantage
+            </h3>
+            <p className='text-sm text-gray-400'>
+              Solving intractable problems with quantum-AI
+            </p>
           </div>
-          
-          <div>
-            <div>
-              <span>🎯</span>
+
+          <div className='text-center'>
+            <div className='w-16 h-16 bg-gradient-to-r from-emerald-500 to-green-500 rounded-full flex items-center justify-center mx-auto mb-4'>
+              <span className='text-2xl'>🎯</span>
             </div>
-            <h3>99.9% Accuracy</h3>
-            <p>Autonomous decision-making precision</p>
+            <h3 className='text-lg font-bold text-emerald-300 mb-2'>
+              99.9% Accuracy
+            </h3>
+            <p className='text-sm text-gray-400'>
+              Autonomous decision-making precision
+            </p>
           </div>
-          
-          <div>
-            <div>
-              <span>🔥</span>
+
+          <div className='text-center'>
+            <div className='w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center mx-auto mb-4'>
+              <span className='text-2xl'>🔥</span>
             </div>
-            <h3>24/7 Operations</h3>
-            <p>Self-managing enterprise systems</p>
+            <h3 className='text-lg font-bold text-orange-300 mb-2'>
+              24/7 Operations
+            </h3>
+            <p className='text-sm text-gray-400'>
+              Self-managing enterprise systems
+            </p>
           </div>
         </div>
 
@@ -100,16 +117,17 @@ export default function RevolutionaryAI2027Banner() {
               className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-purple-500 hover:to-pink-500 transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               Transform Your Enterprise
-            </ArrowRight>
-            <ArrowRight 
-              href="/contact"
-              className="border-2 border-white/30 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white/10 hover:border-white/50 transition-all duration-300"
+            </Link>
+            <Link
+              href='/<contact'
+              className='border-2 border-white/30 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white/10 hover:border-white/50 transition-all duration-300'
             >
               Schedule Expert Consultation
-            </ArrowRight>
+            </Link>
           </div>
-          <p>
-            Join the revolution • Get started in 24 hours • No long-term contracts
+          <p className='text-gray-400 mt-4 text-sm'>
+            Join the revolution • Get started in 24 hours • No long-term
+            contracts
           </p>
         </div>
       </div>

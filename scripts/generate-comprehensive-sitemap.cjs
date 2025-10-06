@@ -238,10 +238,8 @@ function generateSitemapIndex(counts) {
  * Main execution
  */
 function main() {
-  console.log('========================================');
-  console.log('Comprehensive Sitemap Generator');
-  console.log('========================================\n');
-  
+  console.log('  console.log('Comprehensive Sitemap Generator');
+  console.log('  
   const counts = {
     main: generateMainSitemap(),
     blog: generateBlogSitemap(),
@@ -251,15 +249,13 @@ function main() {
   
   generateSitemapIndex(counts);
   
-  console.log('\n========================================');
-  console.log('Summary:');
+  console.log('\n  console.log('Summary:');
   console.log(`  Main pages: ${counts.main}`);
   console.log(`  Blog posts: ${counts.blog}`);
   console.log(`  Case studies: ${counts.caseStudies}`);
   console.log(`  Services: ${counts.services}`);
   console.log(`  Total URLs: ${Object.values(counts).reduce((a, b) => a + b, 0)}`);
-  console.log('========================================\n');
-  console.log('✓ All sitemaps generated successfully!');
+  console.log('  console.log('✓ All sitemaps generated successfully!');
   console.log(`  Output directory: ${OUTPUT_DIR}`);
 }
 

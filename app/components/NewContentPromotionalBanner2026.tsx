@@ -1,229 +1,251 @@
-import { ArrowRight, TrendingUp, Rocket, Target, Zap, Sparkles, Shield } from 'lucide-react';
 import React from 'react';
-<<<<<<< HEAD
 import { ArrowRight, Bot, Rocket, Shield, Target, TrendingUp, Zap } from 'lucide-react';
-=======
-import { ArrowRight, Rocket, Shield, Target, TrendingUp, Zap } from 'lucide-react';
->>>>>>> b47e9d4b5bd1af22dc9e86e7460fed7a11146a22
 
 import ArrowRight from 'next/link';
 
+import Link from 'next/link';
+import {
+  Sparkles,
+  TrendingUp,
+  Rocket,
+  Shield,
+  Target,
+  ArrowRight,
+  Zap,
+} from 'lucide-react';
 
 const NewContentPromotionalBanner2026: React.FC = () => {
   const featuredContent = [
     {
       id: 1,
-  title: 'AI Autonomous Workflows 2026',
-  slug: 'ai-autonomous-workflows-2026',
-  excerpt: 'Transform operations with 95% automation, 400% ROI, and seamless multi-system orchestration',
-  category: 'Enterprise Automation',
-  icon: '🤖',
-  color: 'from-cyan-500 to-blue-600',
-  bgColor: 'from-cyan-50 to-blue-50',
-  badge: 'NEW',
-  badgeColor: 'from-cyan-500 to-blue-600'
+      title: 'AI Autonomous Workflows 2026',
+      slug: 'ai-autonomous-workflows-2026',
+      excerpt:
+        'Transform operations with 95% automation, 400% ROI, and seamless multi-system orchestration',
+      category: 'Enterprise Automation',
+      icon: '🤖',
+      color: 'from-cyan-500 to-blue-600',
+      bgColor: 'from-cyan-50 to-blue-50',
+      badge: 'NEW',
+      badgeColor: 'from-cyan-500 to-blue-600',
     },
     {
       id: 2,
-  title: 'Enterprise AI Transformation Roadmap 2026',
-  slug: 'enterprise-ai-transformation-roadmap-2026',
-  excerpt: 'Complete implementation guide delivering 300% ROI, 85% automation, and digital transformation',
-  category: 'Strategic Guide',
-  icon: '🎯',
-  color: 'from-purple-500 to-fuchsia-600',
-  bgColor: 'from-purple-50 to-fuchsia-50',
-  badge: 'STRATEGIC',
-  badgeColor: 'from-purple-500 to-fuchsia-600'
+      title: 'Enterprise AI Transformation Roadmap 2026',
+      slug: 'enterprise-ai-transformation-roadmap-2026',
+      excerpt:
+        'Complete implementation guide delivering 300% ROI, 85% automation, and digital transformation',
+      category: 'Strategic Guide',
+      icon: '🎯',
+      color: 'from-purple-500 to-fuchsia-600',
+      bgColor: 'from-purple-50 to-fuchsia-50',
+      badge: 'STRATEGIC',
+      badgeColor: 'from-purple-500 to-fuchsia-600',
     },
     {
       id: 3,
-  title: 'AI-Powered Security Operations Center 2026',
-  slug: 'ai-security-operations-center-2026',
-  excerpt: '99.9% threat detection, 95% faster response, and autonomous security operations',
-  category: 'Cybersecurity',
-  icon: '🛡️',
-  color: 'from-red-500 to-orange-600',
-  bgColor: 'from-red-50 to-orange-50',
-  badge: 'CRITICAL',
-  badgeColor: 'from-red-500 to-orange-600'
-    }
+      title: 'AI-Powered Security Operations Center 2026',
+      slug: 'ai-security-operations-center-2026',
+      excerpt:
+        '99.9% threat detection, 95% faster response, and autonomous security operations',
+      category: 'Cybersecurity',
+      icon: '🛡️',
+      color: 'from-red-500 to-orange-600',
+      bgColor: 'from-red-50 to-orange-50',
+      badge: 'CRITICAL',
+      badgeColor: 'from-red-500 to-orange-600',
+    },
   ];
 
   return (
-    <div>
+    <div className='relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden'>
       {/* Animated background effects */}
-      <div>
-        <div></div>
-        <div className="absolute top-0 right-0 w-96 h-96 bg-fuchsia-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute bottom-0 left-1/2 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+      <div className='absolute inset-0 overflow-hidden opacity-20'>
+        <div className='absolute top-0 left-1/4 w-96 h-96 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse' />
+        <div
+          className='absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse'
+          style={{ animationDelay: '2s' }}
+        />
+        <div
+          className='absolute top-1/2 left-1/2 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse'
+          style={{ animationDelay: '4s' }}
+        />
       </div>
 
-      <div>
+      <div className='relative z-10 container mx-auto px-4 py-16'>
         {/* Header Section */}
-        <div>
-          <div>
-            <Sparkles />
-            <span>
+        <div className='text-center mb-16'>
+          <div className='flex items-center justify-center gap-3 mb-6'>
+            <Sparkles className='w-8 h-8 text-cyan-400' />
+            <span className='text-2xl font-bold text-white'>
               🚀 JUST PUBLISHED • SEPTEMBER 2026
             </span>
-            <Sparkles />
+            <Sparkles className='w-8 h-8 text-cyan-400' />
           </div>
 
-          <h2>
-            <span>
-              Latest AI Innovations
-            </span>
+          <h2 className='text-4xl md:text-6xl font-extrabold text-white mb-6 bg-gradient-to-r from-violet-400 via-purple-400 to-blue-400 bg-clip-text text-transparent'>
+            Latest AI Innovations
             <br />
-            <span>
-              That Transform Business
-            </span>
+            That Transform Business
           </h2>
-          
-          <p>
-            Explore cutting-edge AI strategies, implementation roadmaps, and security innovations 
-            that are delivering <span>300%+ ROI</span> for enterprises worldwide
+
+          <p className='text-xl text-gray-300 mb-8 max-w-4xl mx-auto'>
+            Explore cutting-edge AI strategies, implementation roadmaps, and
+            security innovations that are delivering{' '}
+            <span className='text-cyan-400 font-semibold'>300%+ ROI</span> for
+            enterprises worldwide
           </p>
 
-          <div>
-            <div>
-              <TrendingUp />
+          <div className='flex items-center justify-center gap-8 text-gray-300'>
+            <div className='flex items-center gap-2'>
+              <TrendingUp className='w-5 h-5' />
               <span>10,000+ Readers</span>
             </div>
-            <div>
-              <Zap />
+            <div className='flex items-center gap-2'>
+              <Zap className='w-5 h-5' />
               <span>3 New Articles</span>
             </div>
-            <div>
-              <Target />
+            <div className='flex items-center gap-2'>
+              <Target className='w-5 h-5' />
               <span>Proven Results</span>
             </div>
           </div>
         </div>
 
         {/* Featured Content Cards */}
-        <div>
+        <div className='grid md:grid-cols-3 gap-8 mb-16'>
           {featuredContent.map((content, index) => (
-            <div 
+            <div
               key={content.id}
-              className="group relative bg-white/5 backdrop-blur-xl rounded-3xl border border-white/10 hover:border-white/30 transition-all duration-500 overflow-hidden hover:transform hover:scale-105 hover:shadow-2xl"
+              className='group relative bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 hover:border-violet-500/50 transition-all duration-500 overflow-hidden hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-violet-500/20'
               style={{ animationDelay: `${index * 150}ms` }}
             >
               {/* Card glow effect */}
-              <div className={`absolute inset-0 bg-gradient-to-br ${content.color} opacity-0 group-hover:opacity-10 transition-all duration-500`}></div>
-              
-              <div>
+              <div
+                className={`absolute inset-0 bg-gradient-to-br ${content.color} opacity-0 group-hover:opacity-10 transition-all duration-500`}
+              />
+
+              <div className='relative p-8'>
                 {/* Icon & Badge */}
-                <div>
-                  <div>
-                    {content.icon}
-                  </div>
-                  <div className={`px-4 py-2 rounded-full bg-gradient-to-r ${content.badgeColor} text-white text-sm font-bold shadow-lg`}>
+                <div className='flex items-center justify-between mb-6'>
+                  <div className='text-4xl'>{content.icon}</div>
+                  <div
+                    className={`px-4 py-2 rounded-full bg-gradient-to-r ${content.badgeColor} text-white text-sm font-bold shadow-lg`}
+                  >
                     {content.badge}
                   </div>
                 </div>
 
                 {/* Category */}
-                <div>
-                  <span className={`px-3 py-1 rounded-full bg-white/10 text-gray-900 text-sm font-semibold border border-white/20`}>
+                <div className='mb-4'>
+                  <span
+                    className={`inline-block px-4 py-2 rounded-full bg-gradient-to-r ${content.bgColor} text-gray-900 text-sm font-semibold border border-white/20`}
+                  >
                     {content.category}
                   </span>
                 </div>
 
                 {/* Title */}
-                <h3 className={`text-2xl font-bold text-white mb-4 group-hover:bg-gradient-to-r group-hover:from-cyan-400 group-hover:to-fuchsia-400 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300 leading-tight`}>
+                <h3
+                  className={`text-3xl font-extrabold text-white mb-4 group-hover:bg-gradient-to-r group-hover:${content.color} group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300 leading-tight`}
+                >
                   {content.title}
                 </h3>
 
                 {/* Excerpt */}
-                <p>
+                <p className='text-gray-300 mb-6 leading-relaxed'>
                   {content.excerpt}
                 </p>
 
                 {/* CTA Button */}
-                <ArrowRight
+                <Link
                   href={`/blog/${content.slug}`}
-                  className={`inline-flex items-center gap-3 bg-gradient-to-r ${content.color} hover:shadow-2xl text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 transform hover:-translate-y-1`}
+                  className={`group/btn flex items-center justify-center gap-3 w-full bg-gradient-to-r ${content.color} hover:shadow-2xl text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 transform hover:-translate-y-1`}
                 >
                   <span className="text-lg">Read Full Article</span>
                   <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-2 transition-transform duration-300" />
                 </ArrowRight>
               </div>
+                </Link>
 
-              {/* Corner accent */}
-              <div className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${content.color} opacity-10 rounded-bl-full`}></div>
+                {/* Corner accent */}
+                <div
+                  className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${content.color} opacity-10 rounded-bl-full`}
+                />
+              </div>
             </div>
           ))}
         </div>
 
         {/* Bottom CTA Section */}
-        <div>
-          <div>
-            <div>
-              <Rocket />
-              <h3>
-                Ready to Transform Your Enterprise?
-              </h3>
-              <Shield />
-            </div>
-            
-            <p>
-              Join 500+ enterprises achieving <span>300% ROI</span>, 
-              <span> 85% automation</span>, and 
-              <span> complete digital transformation</span> with Zion Tech Group's AI solutions
-            </p>
+        <div className='text-center bg-white/5 backdrop-blur-lg rounded-3xl border border-white/10 p-12'>
+          <div className='flex items-center justify-center gap-4 mb-6'>
+            <Rocket className='w-8 h-8 text-cyan-400' />
+            <h3 className='text-3xl font-bold text-white'>
+              Ready to Transform Your Enterprise?
+            </h3>
+            <Shield className='w-8 h-8 text-cyan-400' />
+          </div>
 
-            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-              <ArrowRight
-                href="/contact"
-                className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-5 px-10 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 flex items-center justify-center gap-3 text-lg transform hover:scale-105"
-              >
-                <Sparkles />
-                <span>Start Your AI Journey</span>
-              </ArrowRight>
-              
-              <ArrowRight
-                href="/blog"
-                className="border-2 border-fuchsia-400 text-fuchsia-400 hover:bg-fuchsia-400 hover:text-white font-bold py-5 px-10 rounded-xl transition-all duration-300 flex items-center justify-center gap-3 text-lg transform hover:scale-105"
-              >
-                <span>Explore All Content</span>
-                <ArrowRight className="w-6 h-6" />
-              </ArrowRight>
-            </div>
+          <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>
+            Join 500+ enterprises achieving{' '}
+            <span className='text-cyan-400 font-semibold'>300% ROI</span>,{' '}
+            <span className='text-purple-400 font-semibold'>
+              85% automation
+            </span>
+            , and{' '}
+            <span className='text-blue-400 font-semibold'>
+              complete digital transformation
+            </span>{' '}
+            with Zion Tech Group's AI solutions
+          </p>
 
-            {/* Stats */}
-            <div>
-              <div>
-                <div>
-                  500+
-                </div>
-                <div>
-                  Enterprise Clients
-                </div>
-              </div>
-              <div>
-                <div>
-                  300%
-                </div>
-                <div>
-                  Average ROI
-                </div>
-              </div>
-              <div>
-                <div>
-                  99.9%
-                </div>
-                <div>
-                  System Uptime
-                </div>
-              </div>
-              <div>
-                <div>
-                  24/7
-                </div>
-                <div>
-                  Expert Support
-                </div>
-              </div>
+          <div className='flex flex-col sm:flex-row items-center justify-center gap-4 mb-12'>
+            <Link
+              href='/contact'
+              className='group flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl'
+            >
+              <Sparkles className='w-5 h-5' />
+              <span>Start Your AI Journey</span>
+            </Link>
+            <Link
+              href='/blog'
+              className='group flex items-center gap-3 border-2 border-white/20 hover:border-cyan-400 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 hover:bg-white/5'
+            >
+              <span>Explore All Content</span>
+              <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform duration-300' />
+            </Link>
+          </div>
+
+          {/* Stats */}
+          <div className='grid grid-cols-2 md:grid-cols-4 gap-8'>
+            <div className='text-center'>
+              <div className='text-3xl font-bold text-cyan-400 mb-2'>500+</div>
+              <div className='text-gray-300'>Enterprise Clients</div>
+            </div>
+            <div className='text-center'>
+              <div className='text-3xl font-bold text-blue-400 mb-2'>400%</div>
+              <div className='text-gray-300'>Average ROI</div>
+            </div>
+            <div className='text-center'>
+              <div className='text-3xl font-bold text-blue-400 mb-2'>99.9%</div>
+              <div className='text-gray-300'>System Uptime</div>
+            </div>
+            <div className='text-center'>
+              <div className='text-3xl font-bold text-green-400 mb-2'>24/7</div>
+              <div className='text-gray-300'>Expert Support</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-green-400 mb-2">300%</div>
+              <div className="text-gray-300">Average ROI</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-yellow-400 mb-2">99.9%</div>
+              <div className="text-gray-300">System Uptime</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-purple-400 mb-2">24/7</div>
+              <div className="text-gray-300">Expert Support</div>
             </div>
           </div>
         </div>

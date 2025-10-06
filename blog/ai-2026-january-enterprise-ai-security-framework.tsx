@@ -271,14 +271,12 @@ const AI2026JanuaryEnterpriseAISecurityFramework = () =>
             </p>
             <div className="text-left"></div>
               <a
-                href="/contact"
-                className="text-left"
+                href="/<contact" className="text-left"
               ></a>
                 Request Security Assessment
               </a>
               <a
-                href="/services/cybersecurity"
-                className="text-left"
+                href="/services/<cybersecurity" className="text-left"
               ></a>
                 Learn More
               </a>

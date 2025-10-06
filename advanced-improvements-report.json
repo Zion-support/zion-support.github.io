@@ -1,20 +1,15 @@
 {
-  "timestamp": "2025-10-05T01:54:51.798Z",
+  "timestamp": "2025-10-06T04:49:10.508Z",
   "improvements": {
     "advancedPerformance": {
       "nextjsOptimizations": {
         "experimental": {
           "optimizeCss": true,
-          "optimizePackageImports": [
-            "@mui/material",
-            "@mui/icons-material"
-          ],
+          "optimizePackageImports": ["@mui/material", "@mui/icons-material"],
           "turbo": {
             "rules": {
               "*.svg": {
-                "loaders": [
-                  "@svgr/webpack"
-                ],
+                "loaders": ["@svgr/webpack"],
                 "as": "*.js"
               }
             }
@@ -25,30 +20,9 @@
           "styledComponents": true
         },
         "images": {
-          "formats": [
-            "image/webp",
-            "image/avif"
-          ],
-          "deviceSizes": [
-            640,
-            750,
-            828,
-            1080,
-            1200,
-            1920,
-            2048,
-            3840
-          ],
-          "imageSizes": [
-            16,
-            32,
-            48,
-            64,
-            96,
-            128,
-            256,
-            384
-          ],
+          "formats": ["image/webp", "image/avif"],
+          "deviceSizes": [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+          "imageSizes": [16, 32, 48, 64, 96, 128, 256, 384],
           "minimumCacheTTL": 31536000,
           "dangerouslyAllowSVG": true,
           "contentSecurityPolicy": "default-src 'self'; script-src 'none'; sandbox;"
@@ -68,18 +42,9 @@
           "staleWhileRevalidate": 86400
         },
         "serviceWorker": {
-          "cacheFirst": [
-            "/static/",
-            "/images/",
-            "/fonts/"
-          ],
-          "networkFirst": [
-            "/api/",
-            "/_next/static/"
-          ],
-          "staleWhileRevalidate": [
-            "/"
-          ]
+          "cacheFirst": ["/static/", "/images/", "/fonts/"],
+          "networkFirst": ["/api/", "/_next/static/"],
+          "staleWhileRevalidate": ["/"]
         }
       },
       "bundleOptimization": {
@@ -331,12 +296,7 @@
     "advancedCodeQuality": {
       "typescriptConfig": {
         "target": "ES2022",
-        "lib": [
-          "ES2022",
-          "DOM",
-          "DOM.Iterable",
-          "WebWorker"
-        ],
+        "lib": ["ES2022", "DOM", "DOM.Iterable", "WebWorker"],
         "allowJs": true,
         "skipLibCheck": true,
         "strict": true,
@@ -363,24 +323,12 @@
         ],
         "baseUrl": ".",
         "paths": {
-          "@/*": [
-            "./src/*"
-          ],
-          "@/components/*": [
-            "./src/components/*"
-          ],
-          "@/utils/*": [
-            "./src/utils/*"
-          ],
-          "@/config/*": [
-            "./src/config/*"
-          ],
-          "@/hooks/*": [
-            "./src/hooks/*"
-          ],
-          "@/types/*": [
-            "./src/types/*"
-          ]
+          "@/*": ["./src/*"],
+          "@/components/*": ["./src/components/*"],
+          "@/utils/*": ["./src/utils/*"],
+          "@/config/*": ["./src/config/*"],
+          "@/hooks/*": ["./src/hooks/*"],
+          "@/types/*": ["./src/types/*"]
         }
       },
       "eslintConfig": {
@@ -389,10 +337,7 @@
           "@typescript-eslint/recommended",
           "prettier"
         ],
-        "plugins": [
-          "@typescript-eslint",
-          "prettier"
-        ],
+        "plugins": ["@typescript-eslint", "prettier"],
         "rules": {
           "prettier/prettier": "error",
           "@typescript-eslint/no-unused-vars": "error",
@@ -424,11 +369,7 @@
         },
         "e2e": {
           "framework": "playwright",
-          "browsers": [
-            "chromium",
-            "firefox",
-            "webkit"
-          ]
+          "browsers": ["chromium", "firefox", "webkit"]
         },
         "visual": {
           "framework": "chromatic",

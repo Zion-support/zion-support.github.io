@@ -336,10 +336,10 @@ const RealTimeAIEdgeProcessing2026 = () =>
             Zion Tech Group specializes in edge AI architecture, model optimization, and deployment at scale. We've helped enterprises deploy 10M+ edge AI devices across automotive, manufacturing, healthcare, and smart city applications. Our team delivers production-ready edge solutions with &lt;5ms latency and 99.99% uptime.
           </p>
           <div className="text-left"></div>
-            <a href="/contact" className="text-left"></a>
+            <a href="/<contact" className="text-left"></a>
               Start Your Edge AI Project
             </a>
-            <a href="/services/edge-ai" className="text-left"></a>
+            <a href="/services/edge-<ai" className="text-left"></a>
               Explore Edge AI Services
             </a>
           </div>

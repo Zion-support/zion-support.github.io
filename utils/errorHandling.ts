@@ -18,12 +18,12 @@ export const getErrorMetrics = () => {
   return {
     errorCount: 0,
     errorRate: 0,
-    lastError: null,
-    totalErrors: 0
+    lastError: null as Error | null,
+    totalErrors: 0,
   };
 };
 
-export const isErrorRateTooHigh = () => {
+export const isErrorRateTooHigh = (_threshold: number = 5) => {
   return false;
 };
 

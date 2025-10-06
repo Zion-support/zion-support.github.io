@@ -1,0 +1,94 @@
+{
+  "branches": [
+    {
+      "branch": "ai-dashboard-improvements-merged",
+      "success": true,
+      "method": "already_merged"
+    },
+    {
+      "branch": "bw06m0-codex/fix-typescript-errors-in-components",
+      "success": true,
+      "method": "already_merged"
+    },
+    {
+      "branch": "bwren1-codex/fix-typescript-errors-in-files",
+      "success": true,
+      "method": "already_merged"
+    },
+    {
+      "branch": "candidate/build-fix-postcss-esm",
+      "success": true,
+      "method": "already_merged"
+    },
+    {
+      "branch": "cursor/add-new-services-and-deploy-updates-0c4f",
+      "success": true,
+      "method": "already_merged"
+    },
+    {
+      "branch": "cursor/add-new-services-and-deploy-updates-0f78",
+      "success": true,
+      "method": "already_merged"
+    },
+    {
+      "branch": "cursor/add-new-services-and-deploy-updates-1399",
+      "success": true,
+      "method": "already_merged"
+    },
+    {
+      "branch": "cursor/add-new-services-and-deploy-updates-1503",
+      "success": true,
+      "method": "already_merged"
+    },
+    {
+      "branch": "cursor/add-new-services-and-deploy-updates-1817",
+      "success": true,
+      "method": "already_merged"
+    },
+    {
+      "branch": "cursor/add-new-services-and-deploy-updates-19c7",
+      "success": true,
+      "method": "already_merged"
+    },
+    {
+      "branch": "cursor/add-new-services-and-deploy-updates-27d2",
+      "success": true,
+      "method": "already_merged"
+    },
+    {
+      "branch": "cursor/add-new-services-and-deploy-updates-45bb",
+      "success": true,
+      "method": "already_merged"
+    },
+    {
+      "branch": "cursor/add-new-services-and-deploy-updates-483a",
+      "success": true,
+      "method": "already_merged"
+    },
+    {
+      "branch": "cursor/add-new-services-and-deploy-updates-4d5b",
+      "success": true,
+      "method": "already_merged"
+    }
+  ],
+  "failed": [],
+  "summary": {
+    "total": 14,
+    "successful": 14,
+    "failed": 0,
+    "methods": {
+      "direct": 0,
+      "theirs": 0,
+      "ours": 0,
+      "manual": 0,
+      "failed": 0,
+      "not_found": 0,
+      "already_merged": 14
+    }
+  },
+  "timestamp": "2025-10-05T13:17:28.521Z",
+  "branchCounts": {
+    "total": 14,
+    "processed": 14
+  }
+}

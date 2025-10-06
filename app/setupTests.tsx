@@ -5,28 +5,37 @@ Object.defineProperty(window, 'matchMedia', {
   writable: true,
   value: jest.fn().mockImplementation(query => ({
     matches: false,
-  media: query,
-  onchange: null,
-  addListener: jest.fn(), // deprecated
+    media: query,
+    onchange: null,
+    addListener: jest.fn(), // deprecated
     removeListener: jest.fn(), // deprecated
     addEventListener: jest.fn(),
-  removeEventListener: jest.fn(),
-  dispatchEvent: jest.fn()
-  }))
+    removeEventListener: jest.fn(),
+    dispatchEvent: jest.fn(),
+  })),
 });
 
 // Mock IntersectionObserver
-global.IntersectionObserver = class IntersectionObserver {
+class MockIntersectionObserver implements IntersectionObserver {
   root: Element | null = null;
   rootMargin: string = '0px';
   thresholds: ReadonlyArray<number> = [0];
-  
-  constructor() {}
+
+  constructor(
+    public callback: IntersectionObserverCallback,
+    public options?: IntersectionObserverInit
+  ) {}
+
   disconnect() {}
   observe() {}
   unobserve() {}
-  takeRecords(): IntersectionObserverEntry[] { return []; }
-} as any;
+  takeRecords(): IntersectionObserverEntry[] {
+    return [];
+  }
+}
+
+global.IntersectionObserver =
+  MockIntersectionObserver as typeof IntersectionObserver;
 
 // Mock ResizeObserver
 global.ResizeObserver = class ResizeObserver {

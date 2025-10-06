@@ -277,10 +277,10 @@ const AIAgentSwarmsEnterpriseOrchestration = () =>
               comprehensive consulting) implementation; and optimization services to help you achieve breakthrough results.
             </p>
             <div className="text-left"></div>
-              <a href="/contact" className="text-left"></a>
+              <a href="/<contact" className="text-left"></a>
                 Schedule Strategy Session
               </a>
-              <a href="/services" className="text-left"></a>
+              <a href="/<services" className="text-left"></a>
                 Explore Our Services
               </a>
             </div>

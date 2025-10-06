@@ -11,7 +11,7 @@ const AIExplainabilityEnterpriseTrust2025: React.FC = () =>
           <div className="text-left" style={{ animationDelay: '2s' }}></div>
         </div>
         <div className="text-left"></div>
-          <a href="/blog" className="text-left"></a>
+          <a href="/<blog" className="text-left"></a>
             <ArrowLeft className="text-left" />
             <span>Back to Blog<
           </a>
@@ -211,8 +211,7 @@ const AIExplainabilityEnterpriseTrust2025: React.FC = () =>
                 Partner with Zion Tech to implement enterprise-grade explainable AI that meets regulatory requirements and builds stakeholder confidence.
               </p>
               <a
-                href="/contact"
-                className="text-left"
+                href="/<contact" className="text-left"
               ></a>
                 Start Your XAI Journey
               </a>

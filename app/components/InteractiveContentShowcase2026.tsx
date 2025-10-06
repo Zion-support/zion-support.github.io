@@ -4,25 +4,25 @@ const InteractiveContentShowcase2026: React.FC = () => {
   const features = [
     {
       icon: '🚀',
-  title: 'Next-Gen AI',
-  description:
-        'Cutting-edge artificial intelligence solutions for 2026 and beyond.'
+      title: 'Next-Gen AI',
+      description:
+        'Cutting-edge artificial intelligence solutions for 2026 and beyond.',
     },
     {
       icon: '⚡',
-  title: 'Lightning Fast',
-  description: 'Optimized performance with sub-second response times.'
+      title: 'Lightning Fast',
+      description: 'Optimized performance with sub-second response times.',
     },
     {
       icon: '🔒',
-  title: 'Enterprise Security',
-  description: 'Bank-level security for your most sensitive data.'
+      title: 'Enterprise Security',
+      description: 'Bank-level security for your most sensitive data.',
     },
     {
       icon: '📊',
-  title: 'Real-time Analytics',
-  description:
-        'Live insights and predictive analytics for better decisions.'
+      title: 'Real-time Analytics',
+      description:
+        'Live insights and predictive analytics for better decisions.',
     },
   ];
 

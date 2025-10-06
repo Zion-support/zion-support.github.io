@@ -1,44 +1,48 @@
-import ArrowRight from 'next/link';
-import { ArrowRight, Award, Brain, DollarSign, Target, TrendingUp, Users, Zap } from 'lucide-react';
-
-
-
-
-
-
-
-
-
-
-
-// @ts-ignore
+import Link from 'next/link';
+import {
+  Award,
+  ArrowRight,
+  TrendingUp,
+  Zap,
+  Brain,
+  Target,
+  DollarSign,
+  Users,
+} from 'lucide-react';
 
 // @ts-ignore
 export const metadata = {
-  title: 'Quantum Neural Superintelligence: $25B ROI Success - Revolutionary AI Transformation',
-  description: 'Discover how a Fortune 500 company achieved $25 billion in ROI through Zion Tech Group\'s quantum neural superintelligence implementation. The most successful AI transformation in history.',
-  keywords: 'quantum AI ROI, $25B success, quantum neural superintelligence, Fortune 500 transformation, quantum computing AI'
+  title:
+    'Quantum Neural Superintelligence: $25B ROI Success - Revolutionary AI Transformation',
+  description:
+    "Discover how a Fortune 500 company achieved $25 billion in ROI through Zion Tech Group's quantum neural superintelligence implementation. The most successful AI transformation in history.",
+  keywords:
+    'quantum AI ROI, $25B success, quantum neural superintelligence, Fortune 500 transformation, quantum computing AI',
 };
 
 export default function QuantumNeuralSuperintelligenceSuccessCaseStudy() {
   return (
-    <div>
+    <div className='min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900'>
       {/* Hero Section */}
-      <div>
-        <div></div>
-        <div>
-          <div>
-            <div>
-              <Award />
+      <div className='relative overflow-hidden'>
+        <div className='absolute inset-0 bg-gradient-to-r from-green-600/20 to-indigo-600/20'></div>
+        <div className='relative max-w-6xl mx-auto px-4 py-24'>
+          <div className='text-center'>
+            <div className='inline-flex items-center gap-2 bg-green-600/20 text-green-300 px-4 py-2 rounded-full text-sm font-medium mb-6'>
+              <Award className='w-4 h-4' />
               $25 Billion Success Story
             </div>
-            <h1>
+            <h1 className='text-5xl md:text-7xl font-bold text-white mb-6 leading-tight'>
               Quantum Neural Superintelligence
-              <span> $25B Success</span>
+              <span className='bg-gradient-to-r from-green-400 to-indigo-400 bg-clip-text text-transparent'>
+                {' '}
+                $25B Success
+              </span>
             </h1>
-            <p>
-              How a Fortune 500 technology conglomerate achieved the most successful AI transformation in history 
-              with Zion Tech Group's revolutionary quantum neural superintelligence platform.
+            <p className='text-xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed'>
+              How a Fortune 500 technology conglomerate achieved the most
+              successful AI transformation in history with Zion Tech Group's
+              revolutionary quantum neural superintelligence platform.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <ArrowRight 
@@ -61,74 +65,89 @@ export default function QuantumNeuralSuperintelligenceSuccessCaseStudy() {
       </div>
 
       {/* Client Overview */}
-      <div>
-        <div>
-          <div>
+      <div className='py-20'>
+        <div className='max-w-6xl mx-auto px-4'>
+          <div className='grid lg:grid-cols-2 gap-12 items-center'>
             <div>
-              <h2>
-                The <span>Challenge</span>
+              <h2 className='text-4xl font-bold text-white mb-6'>
+                The{' '}
+                <span className='bg-gradient-to-r from-green-400 to-indigo-400 bg-clip-text text-transparent'>
+                  Challenge
+                </span>
               </h2>
-              <p>
-                A leading Fortune 500 technology conglomerate faced unprecedented challenges in their global operations. 
-                Traditional AI systems had reached their computational limits, unable to solve complex multi-dimensional problems 
-                that required quantum-level processing capabilities.
+              <p className='text-gray-300 mb-6 leading-relaxed'>
+                A leading Fortune 500 technology conglomerate faced
+                unprecedented challenges in their global operations. Traditional
+                AI systems had reached their computational limits, unable to
+                solve complex multi-dimensional problems that required
+                quantum-level processing capabilities.
               </p>
-              <ul>
-                <li>
-                  <div></div>
-                  <span>$5B annual losses from inefficient problem-solving</span>
+              <ul className='space-y-4'>
+                <li className='flex items-start gap-3'>
+                  <div className='w-2 h-2 bg-red-400 rounded-full mt-2'></div>
+                  <span className='text-gray-300'>
+                    $5B annual losses from inefficient problem-solving
+                  </span>
                 </li>
-                <li>
-                  <div></div>
-                  <span>Months-long processing times for critical decisions</span>
+                <li className='flex items-start gap-3'>
+                  <div className='w-2 h-2 bg-red-400 rounded-full mt-2'></div>
+                  <span className='text-gray-300'>
+                    Months-long processing times for critical decisions
+                  </span>
                 </li>
-                <li>
-                  <div></div>
-                  <span>Inability to optimize complex global supply chains</span>
+                <li className='flex items-start gap-3'>
+                  <div className='w-2 h-2 bg-red-400 rounded-full mt-2'></div>
+                  <span className='text-gray-300'>
+                    Inability to optimize complex global supply chains
+                  </span>
                 </li>
-                <li>
-                  <div></div>
-                  <span>Limited scalability across 200+ global facilities</span>
+                <li className='flex items-start gap-3'>
+                  <div className='w-2 h-2 bg-red-400 rounded-full mt-2'></div>
+                  <span className='text-gray-300'>
+                    Limited scalability across 200+ global facilities
+                  </span>
                 </li>
               </ul>
             </div>
-            <div>
-              <h3>Pre-Implementation Metrics</h3>
-              <div>
+            <div className='bg-gradient-to-br from-red-600/20 to-orange-600/20 p-8 rounded-2xl border border-red-500/30'>
+              <h3 className='text-2xl font-bold text-white mb-6'>
+                Pre-Implementation Metrics
+              </h3>
+              <div className='space-y-6'>
                 <div>
-                  <div>
-                    <span>Processing Speed</span>
-                    <span>Days</span>
+                  <div className='flex justify-between items-center mb-2'>
+                    <span className='text-gray-300'>Processing Speed</span>
+                    <span className='text-red-400 font-semibold'>Days</span>
                   </div>
-                  <div>
-                    <div></div>
+                  <div className='w-full h-2 bg-gray-700 rounded-full'>
+                    <div className='w-8 h-2 bg-red-500 rounded-full'></div>
                   </div>
                 </div>
                 <div>
-                  <div>
-                    <span>Problem Complexity</span>
-                    <span>Limited</span>
+                  <div className='flex justify-between items-center mb-2'>
+                    <span className='text-gray-300'>Problem Complexity</span>
+                    <span className='text-red-400 font-semibold'>Limited</span>
                   </div>
-                  <div>
-                    <div></div>
-                  </div>
-                </div>
-                <div>
-                  <div>
-                    <span>Global Optimization</span>
-                    <span>30%</span>
-                  </div>
-                  <div>
-                    <div></div>
+                  <div className='w-full h-2 bg-gray-700 rounded-full'>
+                    <div className='w-12 h-2 bg-red-500 rounded-full'></div>
                   </div>
                 </div>
                 <div>
-                  <div>
-                    <span>ROI Achievement</span>
-                    <span>$0B</span>
+                  <div className='flex justify-between items-center mb-2'>
+                    <span className='text-gray-300'>Global Optimization</span>
+                    <span className='text-red-400 font-semibold'>30%</span>
                   </div>
-                  <div>
-                    <div></div>
+                  <div className='w-full h-2 bg-gray-700 rounded-full'>
+                    <div className='w-8 h-2 bg-red-500 rounded-full'></div>
+                  </div>
+                </div>
+                <div>
+                  <div className='flex justify-between items-center mb-2'>
+                    <span className='text-gray-300'>ROI Achievement</span>
+                    <span className='text-red-400 font-semibold'>$0B</span>
+                  </div>
+                  <div className='w-full h-2 bg-gray-700 rounded-full'>
+                    <div className='w-0 h-2 bg-red-500 rounded-full'></div>
                   </div>
                 </div>
               </div>
@@ -138,40 +157,53 @@ export default function QuantumNeuralSuperintelligenceSuccessCaseStudy() {
       </div>
 
       {/* Solution Implementation */}
-      <div>
-        <div>
-          <h2>
-            The <span>Zion Quantum Solution</span>
+      <div className='py-20 bg-black/20'>
+        <div className='max-w-6xl mx-auto px-4'>
+          <h2 className='text-4xl font-bold text-white text-center mb-16'>
+            The{' '}
+            <span className='bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent'>
+              Zion Quantum Solution
+            </span>
           </h2>
-          <div>
-            <div>
-              <div>
-                <Zap />
+          <div className='grid md:grid-cols-3 gap-8'>
+            <div className='bg-gradient-to-br from-indigo-600/20 to-purple-600/20 p-8 rounded-2xl border border-indigo-500/30'>
+              <div className='w-12 h-12 bg-indigo-600 rounded-lg flex items-center justify-center mb-6'>
+                <Zap className='w-6 h-6 text-white' />
               </div>
-              <h3>Quantum Neural Networks</h3>
-              <p>
-                Implemented revolutionary quantum neural networks that leverage quantum superposition and entanglement 
-                to process infinite possibilities simultaneously, delivering unprecedented computational power.
+              <h3 className='text-2xl font-bold text-white mb-4'>
+                Quantum Neural Networks
+              </h3>
+              <p className='text-gray-300 leading-relaxed'>
+                Implemented revolutionary quantum neural networks that leverage
+                quantum superposition and entanglement to process infinite
+                possibilities simultaneously, delivering unprecedented
+                computational power.
               </p>
             </div>
-            <div>
-              <div>
-                <Brain />
+            <div className='bg-gradient-to-br from-purple-600/20 to-pink-600/20 p-8 rounded-2xl border border-purple-500/30'>
+              <div className='w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mb-6'>
+                <Brain className='w-6 h-6 text-white' />
               </div>
-              <h3>Superintelligent Reasoning</h3>
-              <p>
-                Deployed superintelligent reasoning systems that can solve problems of infinite complexity, 
-                making optimal decisions across all dimensions of business operations.
+              <h3 className='text-2xl font-bold text-white mb-4'>
+                Superintelligent Reasoning
+              </h3>
+              <p className='text-gray-300 leading-relaxed'>
+                Deployed superintelligent reasoning systems that can solve
+                problems of infinite complexity, making optimal decisions across
+                all dimensions of business operations.
               </p>
             </div>
-            <div>
-              <div>
-                <Target />
+            <div className='bg-gradient-to-br from-pink-600/20 to-indigo-600/20 p-8 rounded-2xl border border-pink-500/30'>
+              <div className='w-12 h-12 bg-pink-600 rounded-lg flex items-center justify-center mb-6'>
+                <Target className='w-6 h-6 text-white' />
               </div>
-              <h3>Quantum Optimization</h3>
-              <p>
-                Established quantum optimization engines that can analyze and optimize complex systems 
-                across infinite variables, delivering perfect solutions in real-time.
+              <h3 className='text-2xl font-bold text-white mb-4'>
+                Quantum Optimization
+              </h3>
+              <p className='text-gray-300 leading-relaxed'>
+                Established quantum optimization engines that can analyze and
+                optimize complex systems across infinite variables, delivering
+                perfect solutions in real-time.
               </p>
             </div>
           </div>
@@ -179,86 +211,104 @@ export default function QuantumNeuralSuperintelligenceSuccessCaseStudy() {
       </div>
 
       {/* Results Section */}
-      <div>
-        <div>
-          <h2>
-            <span>Transformation Results</span>
+      <div className='py-20'>
+        <div className='max-w-6xl mx-auto px-4'>
+          <h2 className='text-4xl font-bold text-white text-center mb-16'>
+            <span className='bg-gradient-to-r from-green-400 to-indigo-400 bg-clip-text text-transparent'>
+              Transformation Results
+            </span>
           </h2>
-          <div>
-            <div>
-              <h3>Post-Implementation Metrics</h3>
-              <div>
+          <div className='grid lg:grid-cols-2 gap-12 items-center'>
+            <div className='bg-gradient-to-br from-green-600/20 to-indigo-600/20 p-8 rounded-2xl border border-green-500/30'>
+              <h3 className='text-2xl font-bold text-white mb-6'>
+                Post-Implementation Metrics
+              </h3>
+              <div className='space-y-6'>
                 <div>
-                  <div>
-                    <span>Processing Speed</span>
-                    <span>Milliseconds</span>
+                  <div className='flex justify-between items-center mb-2'>
+                    <span className='text-gray-300'>Processing Speed</span>
+                    <span className='text-green-400 font-semibold'>
+                      Milliseconds
+                    </span>
                   </div>
-                  <div>
-                    <div></div>
+                  <div className='w-full h-2 bg-gray-700 rounded-full'>
+                    <div className='w-full h-2 bg-gradient-to-r from-green-500 to-indigo-500 rounded-full'></div>
                   </div>
                 </div>
                 <div>
-                  <div>
-                    <span>Problem Complexity</span>
-                    <span>Infinite</span>
+                  <div className='flex justify-between items-center mb-2'>
+                    <span className='text-gray-300'>Problem Complexity</span>
+                    <span className='text-green-400 font-semibold'>
+                      Infinite
+                    </span>
                   </div>
-                  <div>
-                    <div></div>
-                  </div>
-                </div>
-                <div>
-                  <div>
-                    <span>Global Optimization</span>
-                    <span>99.9%</span>
-                  </div>
-                  <div>
-                    <div></div>
+                  <div className='w-full h-2 bg-gray-700 rounded-full'>
+                    <div className='w-full h-2 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full'></div>
                   </div>
                 </div>
                 <div>
-                  <div>
-                    <span>ROI Achievement</span>
-                    <span>$25B</span>
+                  <div className='flex justify-between items-center mb-2'>
+                    <span className='text-gray-300'>Global Optimization</span>
+                    <span className='text-green-400 font-semibold'>99.9%</span>
                   </div>
-                  <div>
-                    <div></div>
+                  <div className='w-full h-2 bg-gray-700 rounded-full'>
+                    <div className='w-full h-2 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full'></div>
+                  </div>
+                </div>
+                <div>
+                  <div className='flex justify-between items-center mb-2'>
+                    <span className='text-gray-300'>ROI Achievement</span>
+                    <span className='text-green-400 font-semibold'>$25B</span>
+                  </div>
+                  <div className='w-full h-2 bg-gray-700 rounded-full'>
+                    <div className='w-full h-2 bg-gradient-to-r from-pink-500 to-green-500 rounded-full'></div>
                   </div>
                 </div>
               </div>
             </div>
             <div>
-              <h3>Financial Impact</h3>
-              <div>
-                <div>
-                  <div>
-                    <div>
-                      <DollarSign />
+              <h3 className='text-2xl font-bold text-white mb-6'>
+                Financial Impact
+              </h3>
+              <div className='space-y-6'>
+                <div className='bg-gradient-to-r from-green-600/20 to-indigo-600/20 p-6 rounded-xl border border-green-500/30'>
+                  <div className='flex items-center gap-4'>
+                    <div className='w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center'>
+                      <DollarSign className='w-6 h-6 text-white' />
                     </div>
                     <div>
-                      <div>$25.7B</div>
-                      <div>Total ROI Achieved</div>
-                    </div>
-                  </div>
-                </div>
-                <div>
-                  <div>
-                    <div>
-                      <TrendingUp />
-                    </div>
-                    <div>
-                      <div>10^15x</div>
-                      <div>Processing Speed Improvement</div>
+                      <div className='text-3xl font-bold text-white'>
+                        $25.7B
+                      </div>
+                      <div className='text-gray-300'>Total ROI Achieved</div>
                     </div>
                   </div>
                 </div>
-                <div>
-                  <div>
-                    <div>
-                      <Users />
+                <div className='bg-gradient-to-r from-indigo-600/20 to-purple-600/20 p-6 rounded-xl border border-indigo-500/30'>
+                  <div className='flex items-center gap-4'>
+                    <div className='w-12 h-12 bg-indigo-600 rounded-lg flex items-center justify-center'>
+                      <TrendingUp className='w-6 h-6 text-white' />
                     </div>
                     <div>
-                      <div>500,000+</div>
-                      <div>Employees Impacted</div>
+                      <div className='text-3xl font-bold text-white'>
+                        10^15x
+                      </div>
+                      <div className='text-gray-300'>
+                        Processing Speed Improvement
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className='bg-gradient-to-r from-purple-600/20 to-pink-600/20 p-6 rounded-xl border border-purple-500/30'>
+                  <div className='flex items-center gap-4'>
+                    <div className='w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center'>
+                      <Users className='w-6 h-6 text-white' />
+                    </div>
+                    <div>
+                      <div className='text-3xl font-bold text-white'>
+                        500,000+
+                      </div>
+                      <div className='text-gray-300'>Employees Impacted</div>
                     </div>
                   </div>
                 </div>
@@ -269,91 +319,123 @@ export default function QuantumNeuralSuperintelligenceSuccessCaseStudy() {
       </div>
 
       {/* Key Achievements */}
-      <div>
-        <div>
-          <h2>
-            <span>Quantum Achievements</span>
+      <div className='py-20 bg-black/20'>
+        <div className='max-w-6xl mx-auto px-4'>
+          <h2 className='text-4xl font-bold text-white text-center mb-16'>
+            <span className='bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent'>
+              Quantum Achievements
+            </span>
           </h2>
-          <div>
-            <div>
-              <div>
+          <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-8'>
+            <div className='text-center'>
+              <div className='text-5xl font-bold bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent mb-2'>
                 3 Months
               </div>
-              <div>Implementation Time</div>
-              <div>Full quantum deployment</div>
+              <div className='text-xl text-gray-300 mb-2'>
+                Implementation Time
+              </div>
+              <div className='text-sm text-gray-400'>
+                Full quantum deployment
+              </div>
             </div>
-            <div>
-              <div>
+            <div className='text-center'>
+              <div className='text-5xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-2'>
                 $5B
               </div>
-              <div>Annual Cost Savings</div>
-              <div>From quantum optimization</div>
+              <div className='text-xl text-gray-300 mb-2'>
+                Annual Cost Savings
+              </div>
+              <div className='text-sm text-gray-400'>
+                From quantum optimization
+              </div>
             </div>
-            <div>
-              <div>
+            <div className='text-center'>
+              <div className='text-5xl font-bold bg-gradient-to-r from-pink-400 to-indigo-400 bg-clip-text text-transparent mb-2'>
                 99.9%
               </div>
-              <div>Problem Solving Rate</div>
-              <div>Across all complexity levels</div>
+              <div className='text-xl text-gray-300 mb-2'>
+                Problem Solving Rate
+              </div>
+              <div className='text-sm text-gray-400'>
+                Across all complexity levels
+              </div>
             </div>
-            <div>
-              <div>
+            <div className='text-center'>
+              <div className='text-5xl font-bold bg-gradient-to-r from-indigo-400 to-cyan-400 bg-clip-text text-transparent mb-2'>
                 ∞
               </div>
-              <div>Scalability</div>
-              <div>Quantum infinite processing</div>
+              <div className='text-xl text-gray-300 mb-2'>Scalability</div>
+              <div className='text-sm text-gray-400'>
+                Quantum infinite processing
+              </div>
             </div>
           </div>
         </div>
       </div>
 
       {/* Revolutionary Breakthroughs */}
-      <div>
-        <div>
-          <h2>
-            <span>Revolutionary Breakthroughs</span>
+      <div className='py-20'>
+        <div className='max-w-6xl mx-auto px-4'>
+          <h2 className='text-4xl font-bold text-white text-center mb-16'>
+            <span className='bg-gradient-to-r from-green-400 to-indigo-400 bg-clip-text text-transparent'>
+              Revolutionary Breakthroughs
+            </span>
           </h2>
-          <div>
-            <div>
-              <h3>Quantum Drug Discovery</h3>
-              <p>
-                Accelerated pharmaceutical research by 10^12 times, discovering breakthrough treatments 
-                for previously incurable diseases in days instead of decades.
+          <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>
+            <div className='bg-gradient-to-br from-indigo-600/20 to-purple-600/20 p-6 rounded-2xl border border-indigo-500/30'>
+              <h3 className='text-xl font-bold text-white mb-4'>
+                Quantum Drug Discovery
+              </h3>
+              <p className='text-gray-300 text-sm leading-relaxed'>
+                Accelerated pharmaceutical research by 10^12 times, discovering
+                breakthrough treatments for previously incurable diseases in
+                days instead of decades.
               </p>
             </div>
-            <div>
-              <h3>Global Supply Chain</h3>
-              <p>
-                Optimized complex global supply chains across 200+ facilities, reducing costs by 85% 
-                while improving delivery times by 95%.
+            <div className='bg-gradient-to-br from-purple-600/20 to-pink-600/20 p-6 rounded-2xl border border-purple-500/30'>
+              <h3 className='text-xl font-bold text-white mb-4'>
+                Global Supply Chain
+              </h3>
+              <p className='text-gray-300 text-sm leading-relaxed'>
+                Optimized complex global supply chains across 200+ facilities,
+                reducing costs by 85% while improving delivery times by 95%.
               </p>
             </div>
-            <div>
-              <h3>Financial Modeling</h3>
-              <p>
-                Created perfect financial models that predicted market movements with 99.9% accuracy, 
-                generating $8B in trading profits.
+            <div className='bg-gradient-to-br from-pink-600/20 to-indigo-600/20 p-6 rounded-2xl border border-pink-500/30'>
+              <h3 className='text-xl font-bold text-white mb-4'>
+                Financial Modeling
+              </h3>
+              <p className='text-gray-300 text-sm leading-relaxed'>
+                Created perfect financial models that predicted market movements
+                with 99.9% accuracy, generating $8B in trading profits.
               </p>
             </div>
-            <div>
-              <h3>Climate Solutions</h3>
-              <p>
-                Developed quantum climate models that identified optimal carbon reduction strategies, 
-                achieving net-zero emissions 20 years ahead of schedule.
+            <div className='bg-gradient-to-br from-indigo-600/20 to-cyan-600/20 p-6 rounded-2xl border border-indigo-500/30'>
+              <h3 className='text-xl font-bold text-white mb-4'>
+                Climate Solutions
+              </h3>
+              <p className='text-gray-300 text-sm leading-relaxed'>
+                Developed quantum climate models that identified optimal carbon
+                reduction strategies, achieving net-zero emissions 20 years
+                ahead of schedule.
               </p>
             </div>
-            <div>
-              <h3>Space Exploration</h3>
-              <p>
-                Optimized space mission trajectories and discovered new exoplanets, 
-                advancing humanity's reach into the cosmos exponentially.
+            <div className='bg-gradient-to-br from-cyan-600/20 to-purple-600/20 p-6 rounded-2xl border border-cyan-500/30'>
+              <h3 className='text-xl font-bold text-white mb-4'>
+                Space Exploration
+              </h3>
+              <p className='text-gray-300 text-sm leading-relaxed'>
+                Optimized space mission trajectories and discovered new
+                exoplanets, advancing humanity's reach into the cosmos
+                exponentially.
               </p>
             </div>
-            <div>
-              <h3>AI Research</h3>
-              <p>
-                Accelerated AI research by exploring infinite neural architectures simultaneously, 
-                discovering 50+ new AI paradigms in 3 months.
+            <div className='bg-gradient-to-br from-purple-600/20 to-pink-600/20 p-6 rounded-2xl border border-purple-500/30'>
+              <h3 className='text-xl font-bold text-white mb-4'>AI Research</h3>
+              <p className='text-gray-300 text-sm leading-relaxed'>
+                Accelerated AI research by exploring infinite neural
+                architectures simultaneously, discovering 50+ new AI paradigms
+                in 3 months.
               </p>
             </div>
           </div>
@@ -361,22 +443,27 @@ export default function QuantumNeuralSuperintelligenceSuccessCaseStudy() {
       </div>
 
       {/* Client Testimonial */}
-      <div>
-        <div>
-          <div>
-            <div>"</div>
-            <blockquote>
-              "Zion Tech Group's quantum neural superintelligence has revolutionized our entire organization. 
-              The $25B ROI is just the beginning—we've unlocked solutions to problems we didn't even know existed. 
-              This is the future of business intelligence."
+      <div className='py-20 bg-black/20'>
+        <div className='max-w-4xl mx-auto px-4'>
+          <div className='bg-gradient-to-br from-indigo-600/20 to-purple-600/20 p-12 rounded-2xl border border-indigo-500/30 text-center'>
+            <div className='text-6xl text-indigo-400 mb-6'>"</div>
+            <blockquote className='text-2xl text-white mb-8 leading-relaxed'>
+              "Zion Tech Group's quantum neural superintelligence has
+              revolutionized our entire organization. The $25B ROI is just the
+              beginning—we've unlocked solutions to problems we didn't even know
+              existed. This is the future of business intelligence."
             </blockquote>
-            <div>
-              <div>
-                <span>CEO</span>
+            <div className='flex items-center justify-center gap-4'>
+              <div className='w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center'>
+                <span className='text-white font-bold text-xl'>CEO</span>
               </div>
-              <div>
-                <div>Chief Executive Officer</div>
-                <div>Fortune 500 Technology Conglomerate</div>
+              <div className='text-left'>
+                <div className='text-white font-semibold'>
+                  Chief Executive Officer
+                </div>
+                <div className='text-gray-300'>
+                  Fortune 500 Technology Conglomerate
+                </div>
               </div>
             </div>
           </div>
@@ -384,14 +471,19 @@ export default function QuantumNeuralSuperintelligenceSuccessCaseStudy() {
       </div>
 
       {/* CTA Section */}
-      <div>
-        <div>
-          <h2>
-            Ready to Achieve Your Own <span>$25B Success</span>?
+      <div className='py-20'>
+        <div className='max-w-4xl mx-auto px-4 text-center'>
+          <h2 className='text-4xl font-bold text-white mb-6'>
+            Ready to Achieve Your Own{' '}
+            <span className='bg-gradient-to-r from-green-400 to-indigo-400 bg-clip-text text-transparent'>
+              $25B Success
+            </span>
+            ?
           </h2>
-          <p>
-            Transform your organization with Zion Tech Group's revolutionary quantum neural superintelligence. 
-            Join the quantum revolution and unlock infinite possibilities for your business.
+          <p className='text-xl text-gray-300 mb-8 leading-relaxed'>
+            Transform your organization with Zion Tech Group's revolutionary
+            quantum neural superintelligence. Join the quantum revolution and
+            unlock infinite possibilities for your business.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <ArrowRight 

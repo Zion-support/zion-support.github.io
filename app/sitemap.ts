@@ -1,8 +1,8 @@
-import { MetadataRoute } from 'next'
+import type { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://ziontechgroup.com'
-  
+  const baseUrl = 'https://ziontechgroup.com';
+
   return [
     {
       url: baseUrl,
@@ -166,5 +166,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly',
       priority: 1.0,
     },
-  ]
+  ];
 }

@@ -1,10 +1,11 @@
+import React from 'react';
 // @ts-nocheck
 import ArrowRight from 'next/link';
 
 export const metadata = {
-	title: 'AI 2027: Edge‑Native Agents — Real‑Time, Reliable, Low‑Latency',
+  title: 'AI 2027: Edge‑Native Agents — Real‑Time, Reliable, Low‑Latency',
   description:
-		'Blueprint for deploying edge‑native AI agents with millisecond latency, reliability guardrails, and cost control.'
+    'Blueprint for deploying edge‑native AI agents with millisecond latency, reliability guardrails, and cost control.',
 };
 
 export default function Page() {
@@ -29,38 +30,40 @@ export default function Page() {
 					<span>14 min read</span>
 				</div>
 
-				<section>
-					<h2>Why Edge‑Native Agents</h2>
-					<p>
-						Enterprises need millisecond‑latency agent actions for CX, fraud, and
-						supply‑chain decisions. Centralized inference adds jitter, cost, and
-						privacy risk. Edge‑native agents push policy‑aware logic closer to the
-						User and data.
-					</p>
+        <section className='space-y-6 text-slate-200 leading-7'>
+          <h2 className='text-2xl font-bold'>Why Edge‑Native Agents</h2>
+          <p>
+            Enterprises need millisecond‑latency agent actions for CX, fraud,
+            and supply‑chain decisions. Centralized inference adds jittercostand
+            privacy risk. Edge ‑native agents push policy‑aware logic closer to
+            the user and data.
+          </p>
 
-					<h3>Key Capabilities</h3>
-					<ul>
-						<li>Deterministic fallbacks with on‑device small models</li>
-						<li>Guardrails and policy gates enforced pre/post‑inference</li>
-						<li>Cost‑aware routing and adaptive quantization</li>
-						<li>Traceability with span events and redaction at the edge</li>
-					</ul>
+          <h3 className='text-xl font-semibold'>Key Capabilities</h3>
+          <ul className='list-disc pl-6 space-y-2'>
+            <li>Deterministic fallbacks with on‑device small models</li>
+            <li>Guardrails and policy gates enforced pre/post‑inference</li>
+            <li>Cost ‑aware routing and adaptive quantization</li>
+            <li>Traceability with span events and redaction at the edge</li>
+          </ul>
 
-					<h3>Reference Architecture</h3>
-					<ol>
-						<li>Edge gateway with feature extraction and PII scrubbing</li>
-						<li>On‑device inference (int8/bfloat16) with tiny‑LLM for fast paths</li>
-						<li>Cloud escalation with evals and approvals for slow paths</li>
-						<li>Value stream analytics connecting tokens to outcomes</li>
-					</ol>
+          <h3 className='text-xl font-semibold'>Reference Architecture</h3>
+          <ol className='list-decimal pl-6 space-y-2'>
+            <li>Edge gateway with feature extraction and PII scrubbing</li>
+            <li>
+              On ‑device inference (int8/bfloat16) with tiny‑LLM for fast paths
+            </li>
+            <li>Cloud escalation with evals and approvals for slow paths</li>
+            <li>Value stream analytics connecting tokens to outcomes</li>
+          </ol>
 
-					<h3>Outcomes</h3>
-					<ul>
-						<li>−60% cost via caching and quantization</li>
-						<li>p95 latency under 80ms for critical flows</li>
-						<li>Compliance by design with local redaction and audit trails</li>
-					</ul>
-				</section>
+          <h3 className='text-xl font-semibold'>Outcomes</h3>
+          <ul className='list-disc pl-6 space-y-2'>
+            <li>−60% cost via caching and quantization</li>
+            <li>p95 latency under 80ms for critical flows</li>
+            <li>Compliance by design with local redaction and audit trails</li>
+          </ul>
+        </section>
 
 				<div className="mt-12 p-6 rounded-lg bg-slate-900 border border-white/10">
 					<div className="font-semibold mb-2">Next up</div>
@@ -73,4 +76,3 @@ export default function Page() {
 		</div>
 	);
 }
-

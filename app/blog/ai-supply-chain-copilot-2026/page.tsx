@@ -1,8 +1,10 @@
+import React from 'react';
 import ArrowRight from 'next/link';
 
 export const metadata = {
-	title: 'AI Supply Chain Copilot 2026: OTIF Wins Under Budget',
-  description: 'Forecasting, sourcing, and routing copilots that cut cost 25–40% while lifting OTIF.'
+  title: 'AI Supply Chain Copilot 2026: OTIF Wins Under Budget',
+  description:
+    'Forecasting, sourcing, and routing copilots that cut cost 25–40% while lifting OTIF.',
 };
 
 export default function Page() {
@@ -31,4 +33,3 @@ export default function Page() {
 		</div>
 	);
 }
-

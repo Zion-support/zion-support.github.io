@@ -19,13 +19,15 @@ const PerformanceDashboard: React.FC = () => {
   useEffect(() => {
     const updateMetrics = () => {
       const navigation = performance.getEntriesByType(
-        'navigation',
+        'navigation'
       )[0] as PerformanceNavigationTiming;
       const loadTime = navigation
         ? navigation.loadEventEnd - navigation.loadEventStart
         : 0;
 
-      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory;
+      const memory = (
+        performance as Performance & { memory?: { usedJSHeapSize: number } }
+      ).memory;
       const memoryUsage = memory ? memory.usedJSHeapSize / 1024 / 1024 : 0;
 
       setMetrics(prev => ({

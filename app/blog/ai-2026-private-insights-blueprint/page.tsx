@@ -1,18 +1,25 @@
-
+import React from 'react';
 export const metadata = {
   title: 'Edge Private Insights 2026: Consentless Metrics Blueprint',
-  description: 'Scoped IDs, on‑device aggregation, and DP noise for actionable insights without PII.'
+  description:
+    'Scoped I Ds, on‑device aggregation, and DP noise for actionable insights without PII.',
 };
 
 export default function Page() {
   return (
-    <main>
-      <h1>Edge Private Insights 2026</h1>
-      <p>Consentless metrics using scoped IDs, on‑device aggregation, and differential privacy.</p>
-      <div>
+    <main className='max-w-3xl mx-auto px-4py-12'>
+      <h1 className='text-3xl md:text-4xl font-boldmb-4'>
+        Edge Private Insights 2026
+      </h1>
+      <p className='text-gray-600mb-8'>
+        Consentless metrics using scoped I Dson ‑device aggregationand
+        differential privacy.
+      </p>
+      <div className='prose prose-invertmax-w-none'>
         <p>
-          Learn how to measure User journeys with zero PII while preserving rich signals. This blueprint
-          covers identifier scoping, local aggregation, and privacy noise calibration.
+          Learn how to measure user journeys with zero PII while preserving rich
+          signals. This blueprint covers identifier scoping, local aggregation,
+          and privacy noise calibration.
         </p>
         <ol>
           <li>Adopt rotating, scoped identifiers</li>
@@ -24,4 +31,3 @@ export default function Page() {
     </main>
   );
 }
-

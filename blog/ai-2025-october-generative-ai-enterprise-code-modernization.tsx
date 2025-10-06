@@ -351,8 +351,7 @@ const AI2025OctoberGenerativeAIEnterpriseCodeModernization = () =>
                 <li>4. <strong>Enterprise Rollout:</strong> Full portfolio transformation with continuous support</li>
               </ol>
               <a
-                href="/contact"
-                className="text-left"
+                href="/<contact" className="text-left"
               ></a>
                 Schedule Modernization Assessment →
               </a>

@@ -1,99 +1,69 @@
 'use client';
 
-import ArrowRight from 'next/link';
+// import React from 'react';
+import Link from 'next/link';
 
 export default function NotFound() {
   const popularPages = [
     {
       title: 'AI Services',
-  description: 'Explore our comprehensive AI and IT solutions',
-  href: '/services',
-  icon: '🤖'
+      description: 'Explore our comprehensive AI and IT solutions',
+      href: '/services',
+      icon: '🤖',
     },
     {
       title: 'Blog & Insights',
-  description: 'Read about latest AI trends and innovations',
-  href: '/blog',
-  icon: '📚'
+      description: 'Read about latest AI trends and innovations',
+      href: '/blog',
+      icon: '📚',
     },
     {
       title: 'Case Studies',
-  description: 'See our success stories and client results',
-  href: '/case-studies',
-  icon: '📊'
+      description: 'See our success stories and client results',
+      href: '/case-studies',
+      icon: '📊',
     },
     {
       title: 'Contact Us',
-  description: 'Get in touch with our AI experts',
-  href: '/contact',
-  icon: '📞'
+      description: 'Get in touch with our AI experts',
+      href: '/contact',
+      icon: '📞',
     },
   ];
 
   return (
-    <div>
-      <div>
-        {/* Error Code */}
-        <div>
-          <h1>
-            404
+    <div className='min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 flex items-center justify-center'>
+      <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
+        {/* 404 Error */}
+        <div className='mb-12'>
+          <h1 className='text-9xl font-extrabold text-white mb-4'>
+            <span className='bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent'>
+              404
+            </span>
           </h1>
-          <div>🔍</div>
-        </div>
-
-        {/* Error Message */}
-        <div>
-          <h2>
-            Oops! Page Not Found
-          </h2>
-          <p>
-            The page you're looking for doesn't exist or has been moved. 
-            Don't worry, our AI can help you find what you need!
+          <h2 className='text-4xl font-bold text-white mb-6'>Page Not Found</h2>
+          <p className='text-xl text-gray-300 max-w-2xl mx-auto'>
+            The page you're looking for doesn't exist or has been moved. Let's
+            get you back on track with our AI-powered solutions.
           </p>
         </div>
 
-        {/* Search Bar */}
-        <div>
-          <div>
-            <input
-              type="text"
-              placeholder="Search for AI services, articles, or case studies..."
-              className="w-full px-6 py-4 rounded-lg border-2 border-gray-200 focus:border-blue-500 focus:outline-none text-gray-900 text-lg"
-              onKeyPress={(e) => {
-                if (e.key === 'Enter') {
-                  const searchTerm = (e.target as HTMLInputElement).value;
-                  if (searchTerm) {
-                    window.location.href = `/search?q=${encodeURIComponent(searchTerm)}`;
-                  }
-                }
-              }}
-            />
-            <button>
-              Search
-            </button>
-          </div>
-        </div>
-
         {/* Popular Pages */}
-        <div>
-          <h3>
-            Popular Pages
-          </h3>
-          <div>
-            {popularPages.map((page) => (
-              <ArrowRight
-                key={page.href}
+        <div className='mb-12'>
+          <h3 className='text-2xl font-bold text-white mb-8'>Popular Pages</h3>
+          <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-6'>
+            {popularPages.map((page, index) => (
+              <Link
+                key={index}
                 href={page.href}
-                className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-200 group"
+                className='group bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-white/40 transition-all duration-500 transform hover:-translate-y-2'
               >
-                <div>{page.icon}</div>
-                <h4>
+                <div className='text-4xl mb-4'>{page.icon}</div>
+                <h4 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors'>
                   {page.title}
                 </h4>
-                <p>
-                  {page.description}
-                </p>
-              </ArrowRight>
+                <p className='text-gray-300 text-sm'>{page.description}</p>
+              </Link>
             ))}
           </div>
         </div>
@@ -119,38 +89,29 @@ export default function NotFound() {
           <h3>
             Still need help?
           </h3>
-          <p>
-            Our AI support team is available 24/7 to assist you with any questions or concerns.
+          <p className='text-gray-300 mb-6'>
+            Our AI experts are here to help you navigate our solutions and find
+            exactly what you need.
           </p>
-          <div>
-            <a
-              href="mailto:kleber@ziontechgroup.com"
-              className="inline-flex items-center gap-2 text-blue-600 font-semibold hover:text-blue-700 transition-colors"
+          <div className='flex flex-col sm:flex-row items-center justify-center gap-4'>
+            <Link
+              href='/'
+              className='group flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1'
             >
-              📧 Email: kleber@ziontechgroup.com
-            </a>
-            <span>|</span>
-            <a
-              href="tel:+13024640950"
-              className="inline-flex items-center gap-2 text-blue-600 font-semibold hover:text-blue-700 transition-colors"
-            >
-              📞 Phone: +1 302 464 0950
-            </a>
-          </div>
-        </div>
+              <span className='text-xl'>🏠</span>
+              <span>Go Home</span>
+            </Link>
 
-        {/* Footer Note */}
-        <div>
-          <p>Error Code: 404 | Page Not Found</p>
-          <p>
-            If you believe this is an error, please{' '}
-            <a
-              href="mailto:kleber@ziontechgroup.com"
-              className="text-blue-600 hover:text-blue-700 font-semibold"
+            <Link
+              href='/contact'
+              className='group flex items-center gap-3 bg-white/10 hover:bg-white/20 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 border border-white/30'
             >
-              contact our support team
-            </a>
-          </p>
+              <span>Contact Support</span>
+              <span className='group-hover:translate-x-1 transition-transform'>
+                →
+              </span>
+            </Link>
+          </div>
         </div>
       </div>
     </div>

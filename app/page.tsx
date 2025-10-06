@@ -1,16 +1,16 @@
 import { Suspense, lazy } from 'react';
-import ArrowRight from 'next/link';
+import Link from 'next/link';
 
 // Lazy load heavy components
 const UnifiedContentPromotion = lazy(
-  () => import('./components/UnifiedContentPromotion'),
+  () => import('./components/UnifiedContentPromotion')
 );
 const InteractiveAIROICalculator = lazy(
-  () => import('./components/InteractiveAIROICalculator'),
+  () => import('./components/InteractiveAIROICalculator')
 );
 const ContentShowcase = lazy(() => import('./components/ContentShowcase'));
 const InteractiveContentShowcase2026 = lazy(
-  () => import('./components/InteractiveContentShowcase2026'),
+  () => import('./components/InteractiveContentShowcase2026')
 );
 
 // Loading component for Suspense fallback
@@ -22,33 +22,33 @@ export default function HomePage() {
   const structuredData = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-  name: 'Zion Tech Group',
-  description:
+    name: 'Zion Tech Group',
+    description:
       'Leading provider of AI-powered enterprise solutions and digital transformation services',
-  url: 'https://ziontechgroup.com',
-  logo: 'https://ziontechgroup.com/logo.png',
-  contactPoint: {
+    url: 'https://ziontechgroup.com',
+    logo: 'https://ziontechgroup.com/logo.png',
+    contactPoint: {
       '@type': 'ContactPoint',
-  telephone: '+1-302-464-0950',
-  contactType: 'customer service',
-  email: 'kleber@ziontechgroup.com'
+      telephone: '+1-302-464-0950',
+      contactType: 'customer service',
+      email: 'kleber@ziontechgroup.com',
     },
-  address: {
+    address: {
       '@type': 'PostalAddress',
-  addressCountry: 'US',
-  addressLocality: 'Wilmington',
-  addressRegion: 'DE'
+      addressCountry: 'US',
+      addressLocality: 'Wilmington',
+      addressRegion: 'DE',
     },
-  sameAs: [
+    sameAs: [
       'https://linkedin.com/company/ziontechgroup',
       'https://twitter.com/ziontechgroup',
     ],
-  offers: {
+    offers: {
       '@type': 'Offer',
-  description: 'AI Enterprise Transformation Services',
-  price: '300% ROI Guaranteed',
-  priceCurrency: 'USD'
-    }
+      description: 'AI Enterprise Transformation Services',
+      price: '300% ROI Guaranteed',
+      priceCurrency: 'USD',
+    },
   };
 
   return (
@@ -74,16 +74,18 @@ export default function HomePage() {
               ROI, 70% cost reduction, and 90% efficiency gains.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-              <ArrowRight href='/contact'
+              <Link
+                href='/contact'
                 className='bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-colors duration-300'
               >
                 Get Started Today
-              </ArrowRight>
-              <ArrowRight href='/services'
+              </Link>
+              <Link
+                href='/services'
                 className='border-2 border-white text-white hover:bg-white hover:text-blue-900 font-bold py-4 px-8 rounded-lg text-lg transition-colors duration-300'
               >
                 View Services
-              </ArrowRight>
+              </Link>
             </div>
           </div>
         </div>
@@ -127,11 +129,12 @@ export default function HomePage() {
               Join hundreds of companies already achieving 300% ROI with our AI
               solutions.
             </p>
-            <ArrowRight href='/contact'
+            <Link
+              href='/contact'
               className='bg-white text-blue-600 hover:bg-gray-100 font-bold py-4 px-8 rounded-lg text-lg transition-colors duration-300 inline-block'
             >
               Start Your Transformation
-            </ArrowRight>
+            </Link>
           </div>
         </section>
       </main>

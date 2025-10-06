@@ -1,96 +1,113 @@
-<<<<<<< HEAD
 // import ArrowRight from 'next/link';
 import { AlertTriangle, ArrowRight, Calendar, CheckCircle, Clock, RefreshCw } from 'lucide-react';
 
-=======
-import { Calendar, Clock } from 'lucide-react';
-// import Link from 'next/link';
->>>>>>> b47e9d4b5bd1af22dc9e86e7460fed7a11146a22
+import React from 'react';
+import Link from 'next/link';
 
+import Calendar from'lucide-react/dist/esm/icons/calendar';
+import {Calendar, Clock }from'lucide-react';
+import Clock from'lucide-react/dist/esm/icons/clock';
+import List Checks from'lucide-react/dist/esm/icons/list-checks';
+import File Warning from'lucide-react/dist/esm/icons/file-warning';
+import Refresh Cw from'lucide-react/dist/esm/icons/refresh-cw';
 
 export const metadata = {
-  title: 'Agent Release Runbooks v2 (2026): Budgets, Canaries, Rollback | Zion',
-  description: 'Battle-tested runbooks for safe autonomous agent releases: budgets, KPI-linked canaries, approvals, and instant rollback.',
-  openGraph: {
-    title: 'Agent Release Runbooks v2 (2026)',
-  description: 'Budgets, canaries, approvals, and instant rollback for safe autonomy.',
-  type: 'article',
-  url: 'https://ziontechgroup.com/blog/agent-release-runbooks-v2-2026'
-  },
+  title: "Agent Release Runbooks v2 (2026)",
+  description: "Budgets, canaries, approvals, and instant rollback for safe autonomy.",
+  type: "article",
+  url: "https://ziontechgroup.com/blog/agent-release-runbooks-v2-2026",
   twitter: {
-    card: 'summary_large_image',
-  title: 'Agent Release Runbooks v2 (2026)',
-  description: 'Budgets, canaries, approvals, and instant rollback for safe autonomy.'
-  }
-};
+    card: "summary_large_image",
+    title: "Agent Release Runbooks v2 (2026)",
+    description: "Budgets, canaries, approvals, and instant rollback for safe autonomy."};
 
-export default function Page() {
-  return (
-    <main>
-      <header>
-        <div>
-          <div>
+export default function Page() {return (<main className="min-h-screen bg-gradient-to-br from-fuchsia-50 via-white to-purple-50">
+      <header className="bg-gradient-to-br from-fuchsia-900 via-purple-900 to-slate-900 text-white py-20">
+        <div className="max-w-5xl mx-auto px-6">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 mb-6">
+            <List Checks />
 
-            <ListChecks />
-
-            <span>Agent Ops • 2026</span>
+            <span className="text-sm font-semibold">Agent    Ops    • 2026</span>
           </div>
-          <h1>Agent Release Runbooks v2 (2026)</h1>
-          <p>Ship autonomous agents with budgeted actions, KPI canaries, approvals, and one‑click rollback.</p>
-          <div>
-
-            <div><Calendar /><span>Jan 30, 2026</span></div>
-            <div><Clock /><span>18 min read</span></div>
-
+          <h1 className="text-5xl md:text-6xl font-extrabold leading-tight mb-4">
+            Agent Release    Runbooks    v2 (2026)
+          </h1>
+          <p className="text-lg md:text-xl text-white/80 max-w-3xl">
+            Ship    autonomous agents with budgeted actions, KPI
+            canariesapprovalsand one‑click rollback.
+          </p>
+          <div className="flex items-center gap-6 text-white/70 mt-8">
+            <div className="flex items-center gap-2">
+              <Calendar />
+              <span>Jan    30, 2026</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Clock />
+              <span>18 min read</span>
+            </div>
           </div>
         </div>
       </header>
 
-      <section>
-        <div>
-          <h2>Release Safety Model</h2>
-          <p>Operational safety hinges on three primitives: hard budgets, lightweight approvals, and KPI-linked canaries that trigger automatic rollback when thresholds are breached.</p>
-          <h3>Runbook Outline</h3>
+      <section className="py-16">
+        <div className="max-w-4xl mx-auto px-6 prose prose-lg">
+          <h2>Release Safety    Model</h2>
+          <p>
+            Operational    safety hinges on three primitives: hard
+            budgetslightweight approvalsand KPI-linked canaries that trigger
+            automatic rollback when thresholds are breached.
+          </p>
+          <h3>Runbook    Outline</h3>
           <ol>
-            <li>Define budgeted actions and guardrails</li>
-            <li>Attach canaries to product KPIs</li>
-            <li>Stage rollout with blast-radius limits</li>
-            <li>Automate rollback and postmortems</li>
+            <li>Define    budgeted actions and guardrails</li>
+            <li>Attach canaries to product KP    Is</li>
+            <li>Stage    rollout with blast-radius limits</li>
+            <li>Automate    rollback and postmortems</li>
           </ol>
         </div>
       </section>
 
-      <section>
-        <div>
-          <div>
-            <div>Budgets</div>
-            <div>Max cost, time, scope per release</div>
+      <section className="py-12 bg-white">
+        <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-6">
+          <div className="rounded-xl border p-6">
+            <div className="text-3xl font-extrabold text-fuchsia-600 mb-2">
+              Budgets
+            </div>
+            <div className="text-slate-600">Max    costtimescope per release</div>
           </div>
-          <div>
-            <div>Canaries</div>
-            <div>KPI-linked checks in CI and live</div>
+          <div className="rounded-xl border p-6">
+            <div className="text-3xl font-extrabold text-purple-600 mb-2">
+              Canaries
+            </div>
+            <div className="text-slate-600">
+              KPI-linked checks in CI and live
+            </div>
           </div>
-          <div>
-            <div>Rollback</div>
-            <div>One click, under 60s MTR</div>
+          <div className="rounded-xl border p-6">
+            <div className="text-3xl font-extrabold text-indigo-600 mb-2">
+              Rollback
+            </div>
+            <div className="text-slate-600">One    click, under 60s MTR</div>
           </div>
         </div>
       </section>
 
-      <section>
-        <div>
-          <div>
+      <section className="py-16">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="bg-gradient-to-r from-fuchsia-600 to-indigo-600 text-white rounded-2xl p-8 flex items-center justify-between gap-4">
             <div>
 
               <h3 className="text-2xl font-bold flex items-center gap-2"><FileWarning /> Prevent Regressions</h3>
               <p className="text-white/90">We implement v2 runbooks in 4–6 weeks with audits and training.</p>
             </div>
-            <Link href="/contact" className="bg-white text-fuchsia-700 px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2">Engage <RefreshCw /></Link>
-
+            <Link
+             href="/contact"
+             className="bg-white text-fuchsia-700 px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2"
+            >
+              Engage <Refresh Cw />
+            </Link>
           </div>
         </div>
       </section>
     </main>
-  );
-}
-
+  ); }

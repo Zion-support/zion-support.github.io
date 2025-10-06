@@ -1,44 +1,38 @@
-import { Metadata } from 'next';
+import React from 'react';
+import {Metadata} from 'next';
 
-export const metadata: Metadata = {
-  title: 'Meta-Cognitive AI Breakthrough 2026: AI That Thinks About Thinking',
-  description: 'Discover the revolutionary Meta-Cognitive AI breakthrough achieving 95% decision accuracy through AI that thinks about thinking. Learn how this technology is transforming enterprise operations.',
-  keywords: 'meta-cognitive AI, artificial intelligence, AI breakthrough, enterprise AI, decision accuracy, cognitive reasoning',
-  openGraph: {
-    title: 'Meta-Cognitive AI Breakthrough 2026: AI That Thinks About Thinking',
-  description: 'Revolutionary AI achieving 95% decision accuracy through meta-cognitive reasoning',
-  type: 'article',
-  publishedTime: '2026-01-15T00:00:00Z',
-  authors: ['Zion Tech Group'],
-    
-  }
-};
+export const metadata = {
+  
+  title: "Meta-Cognitive AI Breakthrough 2026: AI That Thinks About Thinking",
+    description: "Revolutionary AI achieving 95% decision accuracy through meta-cognitive reasoning",
+    type: "article",
+    published Time: "2026-01-15T00:00:00Z",
+    authors: ['Zion Tech Group'],
+    tags: ['AI', 'Meta-Cognitive', 'Breakthrough', 'Enterprise']};
 
-export default function MetaCognitiveAIBreakthrough2026() {
-  return (
+export default function MetaCognitiveAIBreakthrough2026() {/* return (
+    <div> content */}
     <div>
-      {/* Hero Section */}
-      <section>
-        <div>
-          <div>
-            {/* Breaking News Badge */}
-            <div>
-              <span>
+      <div> </div><div> </div>
+      <div className="text-left">{/* Hero    Section   */}</div></div>
+      <section className="text-left"> </section><div className="text-left">{/* Breaking News    Badge   */}</div></div>
+            <span className="text-left"> </span><section className="text-left"> </section><div className="text-left"> </div><div className="text-left">{/* Breaking News    Badge   */}</div>
+      <div className="text-left"> </div><span className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
                 🔥 BREAKING BREAKTHROUGH
-              </span>
-              <div></div>
-            </div>
+              </span></span>
+              <div className="text-left"> </div></div>
             
-            <h1>
-              Meta-Cognitive AI Breakthrough 2026
-            </h1>
+            <h1 className="text-left">Meta-Cognitive AI    Breakthrough    2026
+            </h1></h1>
+            <p className="text-left">🧠 AI That Thinks About    Thinking
+            </p></p>
+            <p className="text-left">Revolutionary Meta-   Cognitive    AI achieving </p><span className="text-left">95% decision accuracy< through >
             
-            <p>
-              🧠 AI That Thinks About Thinking
-            </p>
+            <p className="text-left">🧠 AI That Thinks About    Thinking
+            </p></p>
             
-            <p>
-              Revolutionary Meta-Cognitive AI achieving <span>95% decision accuracy</span> through 
+            <p className="text-left">Revolutionary Meta-   Cognitive    AI achieving </p><span className="text-left">95% decision accuracy< through "
+origin/cursor/fix-errors-and-merge-to-main-cc0a
               self-aware reasoning, cognitive introspection, and adaptive learning. The future of intelligent systems is here.
             </p>
             
@@ -60,306 +54,277 @@ export default function MetaCognitiveAIBreakthrough2026() {
               ].map((stat, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20">
                   <div className="text-4xl mb-3">{stat.icon}</div>
-<<<<<<< HEAD
                   <div className={`text-3xl font-bold ${stat.color}`}>
-=======
-                  <div className={`text-3xl font-bold ${stat.color} mb-2`}>
->>>>>>> b47e9d4b5bd1af22dc9e86e7460fed7a11146a22
                     {stat.value}
+            {/* Key    Stats   */}
+            <div className="text-left">{[
+                { value='95%', label: "Decision Accuracy", icon: "🎯", color: 'text-purple-400' },
+                { value='1000x', label: "Reasoning Speed", icon: "⚡", color: 'text-blue-400' },
+                { value='98%', label: "Learning    Efficiency   ", icon: "🧠", color: 'text-green-400' }
+              ].map((stat, index) => (</div></div>
+                <div key={index} className="text-left"> </div><div className="text-left">{stat.icon}</div>
+                  <div className="{`text-3xl" font-extrabold mb-2 ${stat.color}`}> </div><div className="text-left">{stat.icon}</div>"
+                  <div className="{`text-3xl" font-extrabold mb-2 ${stat.color}`}>origin/cursor/fix-errors-and-merge-to-main-cc0a
+                    {stat.value}</div>
+      <div className="text-left">{stat.label}</div></div>
                   </div>
-                  <div>
-                    {stat.label}
-                  </div>
-                </div>
               ))}
             </div>
-          </div>
         </div>
       </section>
 
-      {/* Article Content */}
-      <section>
-        <div>
-          <div>
-            
-            {/* Introduction */}
-            <div>
-              <h2>🚀 The Meta-Cognitive Revolution</h2>
-              <p>
-                We stand at the precipice of a new era in artificial intelligence. Meta-Cognitive AI represents a paradigm shift 
-                from traditional AI systems that process information to systems that <span>think about thinking</span>. 
-                This breakthrough technology achieves unprecedented 95% decision accuracy through self-aware reasoning and cognitive introspection.
+      {/* Article    Content   */}
+      <section className="text-left"> </section><div className="text-left">{/*   Introduction   */}</div></div>
+            <h3 className="text-left">🚀 The Meta-Cognitive    Revolution</h2>
+              <p className="text-left"> </p><section className="text-left"> </section><div className="text-left"> </div><div className="text-left">{/*   Introduction   */}</div>
+      <div className="text-left"> </div><h2 className="text-left">🚀 The Meta-Cognitive    Revolution</h2>"
+              <p className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
+                We stand at the precipice of a new era in artificial intelligence. Meta-   Cognitive    AI represents a paradigm shift 
+                from traditional AI systems that process information to systems that </p><span className="text-left">think about thinking<. >
+                This    breakthrough technology achieves unprecedented 95% decision accuracy through self-aware reasoning and cognitive introspection.
               </p>
-              <p>
-                Unlike conventional AI that operates on predefined algorithms, Meta-Cognitive AI possesses the ability to reflect on its own 
+              <p className="text-left">Unlike conventional AI that operates on predefined algorithms, Meta-   Cognitive    AI possesses the ability to reflect on its own 
                 thought processes, adapt its reasoning strategies, and continuously improve its decision-making capabilities.
-              </p>
+              </p></p>
             </div>
 
-            {/* Core Technology */}
-            <div>
-              <h2>
-                Core Meta-Cognitive Architecture
+            {/* Core    Technology   */}
+            <h3 className="text-left">
+                Core Meta-Cognitive    Architecture
               </h2>
+              <div className="text-left"> </div><h3 className="text-left">🧠 Cognitive Introspection    Engine</h3>
+                  <p className="text-left"> </p><div className="text-left"> </div><h2 className="text-left">Core Meta-Cognitive    Architecture
+              </h2></h2>
               
-              <div>
-                <div>
-                  <h3>🧠 Cognitive Introspection Engine</h3>
-                  <p>
-                    The Cognitive Introspection Engine enables AI systems to analyze their own thought processes, 
+              <div className="text-left"> </div><div className="text-left"> </div><h3 className="text-left">🧠 Cognitive Introspection    Engine</h3>"
+                  <p className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
+                    The Cognitive Introspection    Engine    enables AI systems to analyze their own thought processes, 
                     identify reasoning gaps, and adapt their decision-making strategies in real-time.
-                  </p>
-                  <ul>
-                    <li>
-                      <span>✓</span>
-                      Self-awareness and reflection capabilities
+                  </p></p>
+                  <ul className="text-left"> </ul><li className="text-left"> </li><span className="text-left">✓>
+                         Self   -awareness and reflection capabilities
                     </li>
-                    <li>
-                      <span>✓</span>
-                      Real-time reasoning optimization
+                    <li className="text-left"> </li><span className="text-left">✓>
+                         Real   -time reasoning optimization
                     </li>
-                    <li>
-                      <span>✓</span>
-                      Adaptive learning mechanisms
+                    <li className="text-left"> </li><span className="text-left">✓>
+                         Adaptive    learning mechanisms
                     </li>
                   </ul>
                 </div>
-                
-                <div>
-                  <h3>⚡ Meta-Learning Framework</h3>
-                  <p>
-                    The Meta-Learning Framework allows AI systems to learn how to learn, 
+                <h3 className="text-left">⚡ Meta-Learning    Framework</h3>
+                  <p className="text-left"> </p><div className="text-left"> </div><h3 className="text-left">⚡ Meta-Learning    Framework</h3>"
+                  <p className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
+                    The Meta-Learning    Framework    allows AI systems to learn how to learn, 
                     continuously improving their learning strategies and knowledge acquisition methods.
-                  </p>
-                  <ul>
-                    <li>
-                      <span>✓</span>
-                      Learning-to-learn algorithms
+                  </p></p>
+                  <ul className="text-left"> </ul><li className="text-left"> </li><span className="text-left">✓>
+                         Learning   -to-learn algorithms
                     </li>
-                    <li>
-                      <span>✓</span>
-                      Knowledge transfer mechanisms
+                    <li className="text-left"> </li><span className="text-left">✓>
+                         Knowledge    transfer mechanisms
                     </li>
-                    <li>
-                      <span>✓</span>
-                      Continuous strategy optimization
+                    <li className="text-left"> </li><span className="text-left">✓>
+                         Continuous    strategy optimization
                     </li>
                   </ul>
                 </div>
-              </div>
             </div>
 
-            {/* Revolutionary Capabilities */}
-            <div>
-              <h2>
-                Revolutionary Capabilities
+            {/* Revolutionary    Capabilities   */}
+            <h3 className="text-left">
+                Revolutionary    Capabilities
               </h2>
+              <div className="text-left"> </div><h3 className="text-left">🎯 95% Decision    Accuracy</h3>
+                  <p className="text-left"> </p><div className="text-left"> </div><h2 className="text-left">Revolutionary    Capabilities
+              </h2></h2>
               
-              <div>
-                <div>
-                  <h3>🎯 95% Decision Accuracy</h3>
-                  <p>
+              <div className="text-left"> </div><div className="text-left"> </div><h3 className="text-left">🎯 95% Decision    Accuracy</h3>"
+                  <p className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
                     Our Meta-Cognitive AI achieves unprecedented 95% decision accuracy through multi-layered reasoning processes. 
-                    The system evaluates decisions from multiple cognitive perspectives, identifies potential biases, 
+                       The    system evaluates decisions from multiple cognitive perspectives, identifies potential biases, 
                     and continuously refines its decision-making algorithms based on real-world outcomes.
-                  </p>
+                  </p></p>
                 </div>
-                
-                <div>
-                  <h3>⚡ 1000x Reasoning Speed</h3>
-                  <p>
+                <h3 className="text-left">⚡ 1000x Reasoning    Speed</h3>
+                  <p className="text-left"> </p><div className="text-left"> </div><h3 className="text-left">⚡ 1000x Reasoning    Speed</h3>"
+                  <p className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
                     Through advanced parallel processing and cognitive optimization, Meta-Cognitive AI delivers 1000x faster 
-                    reasoning capabilities compared to traditional AI systems. This enables real-time complex decision-making 
+                    reasoning capabilities compared to traditional AI systems.    This    enables real-time complex decision-making 
                     in mission-critical enterprise environments.
-                  </p>
+                  </p></p>
                 </div>
-                
-                <div>
-                  <h3>🧠 98% Learning Efficiency</h3>
-                  <p>
+                <h3 className="text-left">🧠 98% Learning    Efficiency</h3>
+                  <p className="text-left"> </p><div className="text-left"> </div><h3 className="text-left">🧠 98% Learning    Efficiency</h3>"
+                  <p className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
                     The meta-cognitive approach enables 98% learning efficiency by optimizing knowledge acquisition strategies. 
-                    The AI system learns not just what to learn, but how to learn most effectively, 
+                       The    AI system learns not just what to learn, but how to learn most effectively, 
                     dramatically reducing training time and improving performance outcomes.
-                  </p>
+                  </p></p>
                 </div>
-              </div>
             </div>
 
-            {/* Enterprise Applications */}
-            <div>
-              <h2>
-                Enterprise Applications & Impact
+            {/* Enterprise    Applications   */}
+            <h3 className="text-left">
+                Enterprise Applications &    Impact
               </h2>
+              <div className="text-left"> </div><h3 className="text-left">💰 Financial    Services</h3>
+                  <p className="text-left"> </p><div className="text-left"> </div><h2 className="text-left">Enterprise Applications &    Impact
+              </h2></h2>
               
-              <div>
-                <div>
-                  <h3>💰 Financial Services</h3>
-                  <p>
-                    Meta-Cognitive AI transforms financial decision-making with 95% accuracy in risk assessment, 
+              <div className="text-left"> </div><div className="text-left"> </div><h3 className="text-left">💰 Financial    Services</h3>"
+                  <p className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
+                    Meta-   Cognitive    AI transforms financial decision-making with 95% accuracy in risk assessment, 
                     fraud detection, and investment optimization.
-                  </p>
-                  <div>
-                    <strong>Results:</strong> $50M+ annual savings, 300% ROI improvement
+                  </p></p>
+                  <div className="text-left"> </div><strong>Results   :</strong> $50M+ annual savings, 300% ROI improvement
                   </div>
-                </div>
-                
-                <div>
-                  <h3>🏭 Manufacturing</h3>
-                  <p>
-                    Autonomous quality control and predictive maintenance with self-improving AI systems 
+                <h3 className="text-left">🏭    Manufacturing</h3>
+                  <p className="text-left"> </p><div className="text-left"> </div><h3 className="text-left">🏭    Manufacturing</h3>"
+                  <p className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
+                       Autonomous    quality control and predictive maintenance with self-improving AI systems 
                     that continuously optimize production processes.
-                  </p>
-                  <div>
-                    <strong>Results:</strong> 98% defect reduction, 40% cost savings
+                  </p></p>
+                  <div className="text-left"> </div><strong>Results   :</strong> 98% defect reduction, 40% cost savings
                   </div>
-                </div>
-                
-                <div>
-                  <h3>🏥 Healthcare</h3>
-                  <p>
-                    Medical diagnosis and treatment planning with AI that can explain its reasoning 
+                <h3 className="text-left">🏥    Healthcare</h3>
+                  <p className="text-left"> </p><div className="text-left"> </div><h3 className="text-left">🏥    Healthcare</h3>"
+                  <p className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
+                       Medical    diagnosis and treatment planning with AI that can explain its reasoning 
                     and adapt to new medical knowledge in real-time.
-                  </p>
-                  <div>
-                    <strong>Results:</strong> 95% diagnostic accuracy, 60% faster treatment
+                  </p></p>
+                  <div className="text-left"> </div><strong>Results   :</strong> 95% diagnostic accuracy, 60% faster treatment
                   </div>
-                </div>
-                
-                <div>
-                  <h3>🛡️ Cybersecurity</h3>
-                  <p>
-                    Threat detection and response with AI that learns from its own mistakes 
+                <h3 className="text-left">🛡️    Cybersecurity</h3>
+                  <p className="text-left"> </p><div className="text-left"> </div><h3 className="text-left">🛡️    Cybersecurity</h3>"
+                  <p className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
+                       Threat    detection and response with AI that learns from its own mistakes 
                     and continuously evolves its defense strategies.
-                  </p>
-                  <div>
-                    <strong>Results:</strong> 99% threat detection rate, 90% faster response
+                  </p></p>
+                  <div className="text-left"> </div><strong>Results   :</strong> 99% threat detection rate, 90% faster response
                   </div>
-                </div>
               </div>
-            </div>
 
-            {/* Implementation Roadmap */}
-            <div>
-              <h2>
-                Implementation Roadmap
+            {/* Implementation    Roadmap   */}
+            <h3 className="text-left">
+                Implementation    Roadmap
               </h2>
+              <div className="text-left"> </div><div className="text-left"> </div><h2 className="text-left">Implementation    Roadmap
+              </h2></h2>
               
-              <div>
+              <div className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
                 {[
-                  {
-                    phase: 'Phase 1: Assessment & Planning',
-  duration: '2-4 weeks',
-  description: 'Comprehensive evaluation of current AI infrastructure and identification of meta-cognitive implementation opportunities.',
-  deliverables: ['AI readiness assessment', 'Meta-cognitive strategy', 'Implementation roadmap']
+                  
+                    phase: "Phase 1: Assessment & Planning",
+                    duration: "2-4 weeks",
+                    description: "Comprehensive evaluation of current AI infrastructure and identification of meta-cognitive implementation opportunities.",
+                    deliverables: ['AI readiness assessment', 'Meta-cognitive strategy', 'Implementation roadmap']
                   },
-                  {
-                    phase: 'Phase 2: Pilot Implementation',
-  duration: '6-8 weeks',
-  description: 'Deployment of Meta-Cognitive AI in controlled environments with specific use cases and measurable outcomes.',
-  deliverables: ['Pilot system deployment', 'Performance metrics', 'ROI validation']
+                  
+                    phase: "Phase 2: Pilot Implementation",
+                    duration: "6-8 weeks",
+                    description: "Deployment of Meta-Cognitive AI in controlled environments with specific use cases and measurable outcomes.",
+                    deliverables: ['Pilot system deployment', 'Performance metrics', 'ROI validation']
                   },
-                  {
-                    phase: 'Phase 3: Enterprise Rollout',
-  duration: '12-16 weeks',
-  description: 'Full-scale implementation across enterprise operations with comprehensive training and change management.',
-  deliverables: ['Full system deployment', 'Team training', 'Continuous optimization']
+                  
+                    phase: "Phase 3: Enterprise Rollout",
+                    duration: "12-16 weeks",
+                    description: "Full-scale implementation across enterprise operations with comprehensive training and change management.",
+                    deliverables: ['Full system deployment', 'Team training', '   Continuous    optimization']
                   }
-                ].map((phase, index) => (
-                  <div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
-                    <div>
-                      <h3>{phase.phase}</h3>
-                      <span>
-                        {phase.duration}
-                      </span>
+                ].map((phase, index) => (</div></div>
+                  <div key={index} className="text-left"> </div><h3 className="text-left">{phase.phase}</h3>
+                      <span className="text-left">{phase.duration}
+                      </span></span>
                     </div>
-                    <p>{phase.description}</p>
-                    <div>
-                      {phase.deliverables.map((deliverable, idx) => (
-                        <span key={idx} className="bg-indigo-500/10 text-indigo-300 px-3 py-1 rounded-full text-sm">
-                          ✓ {deliverable}
-                        </span>
+                    <p className="text-left">{phase.description}</p>
+                    <div className="text-left"> </div><div className="text-left"> </div><h3 className="text-left">{phase.phase}</h3>"
+                      <span className="text-left">{phase.duration}
+                      </span></span>
+                    </div>
+                    <p className="text-left">{phase.description}</p>"
+                    <div className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
+                      {phase.deliverables.map((deliverable, idx) => (</div></div>
+                        <span key={idx} className="text-left">✓ {deliverable}
+                        </span></span>
                       ))}
                     </div>
-                  </div>
                 ))}
               </div>
-            </div>
 
-            {/* Call to Action */}
-            <div>
-              <h3>🚀 Ready to Transform Your Enterprise?</h3>
-              <p>
+            {/* Call to    Action   */}
+            <h3 className="text-left">🚀 Ready to Transform Your    Enterprise   ?</h3>
+              <p className="text-left"> </p><div className="text-left"> </div><h3 className="text-left">🚀 Ready to Transform Your    Enterprise   ?</h3>"
+              <p className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
                 Join 500+ leading organizations achieving breakthrough results with Meta-Cognitive AI. 
-                Get started with a free assessment and personalized implementation roadmap.
-              </p>
-              <div>
+                   Get    started with a free assessment and personalized implementation roadmap.
+              </p></p>
+              <div className="text-left"> </div><a 
+                  href="/"
+                  className="text-left">Get Free    Assessment
+                </a></a>
                 <a 
-                  href="/contact" 
-                  className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50"
-                >
-                  Get Free Assessment
-                </a>
-                <a 
-                  href="/case-studies" 
-                  className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
-                >
-                  View Success Stories
-                </a>
+                  href="/"
+                  className="text-left">View Success    Stories
+                </a></a>
               </div>
-            </div>
 
           </div>
-        </div>
       </section>
 
-      {/* Related Content */}
-      <section>
-        <div>
-          <h2>
-            Related Revolutionary Content
+      {/* Related    Content   */}
+      <section className="text-left"> </section><h3 className="text-left">
+            Related Revolutionary    Content
           </h2>
+          <div className="text-left"> </div><section className="text-left"> </section><div className="text-left"> </div><h2 className="text-left">Related Revolutionary    Content
+          </h2></h2>
           
-          <div>
+          <div className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
             {[
-              {
-                title: 'Quantum-Neural Networks: 1000x Processing Power',
-  description: 'Revolutionary processing power combining quantum computing with neural networks.',
-  href: '/blog/quantum-neural-networks-2026',
-  icon: '⚛️'
-              },
-              {
-                title: 'Autonomous Operations: 98% Automation Success',
-  description: 'Self-healing AI systems achieving unprecedented automation rates.',
-  href: '/blog/autonomous-operations-2026',
-  icon: '🤖'
-              },
-              {
-                title: 'Enterprise AI Transformation: $50M Savings',
-  description: 'Fortune 500 company achieves breakthrough results with AI transformation.',
-  href: '/blog/enterprise-transformation-2026',
-  icon: '💰'
-              }
-            ].map((content, index) => (
+              
+                title: "Quantum-Neural Networks: 1000x Processing Power",
+      description: "Revolutionary processing power combining quantum computing with neural networks.",
+      href: "/blog/quantum-neural-networks-2026",
+      icon: '⚛️'
+    },
+              
+                title: "Autonomous Operations: 98% Automation Success",
+      description: "Self-healing AI systems achieving unprecedented automation rates.",
+      href: "/blog/autonomous-operations-2026",
+      icon: '🤖'
+    },
+              
+                title: "Enterprise AI Transformation: $50M Savings",
+      description: "   Fortune    500 company achieves breakthrough results with AI transformation.",
+      href: "/blog/enterprise-transformation-2026",
+      icon: '💰'
+    }
+            ].map((content, index) => (</div></div>
               <a
                 key={index}
                 href={content.href}
-                className="group bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-purple-500/50 transition-all duration-300 hover:transform hover:scale-105"
-              >
-                <div>{content.icon}</div>
-                <h3>
+                className="text-left"> </a><div className="text-left">{content.icon}</div>
+                <h3 className="text-left">
+                class   Name   ="text-left"></a>
+                <div className="text-left">{content.icon}</div>"
+                <h3 className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
                   {content.title}
-                </h3>
-                <p>
-                  {content.description}
-                </p>
-                <span>
-                  Read More →
-                </span>
+                </h3></h3>
+                <p className="text-left">{content.description}
+                </p></p>
+                <span className="text-left">Read    More    →
+                </span></span>
               </a>
             ))}
           </div>
-        </div>
       </section>
-    </div>
   );
-}
+}</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>
+</span>
+</span>
+</span>
+</span>
+</span>
+</span>
+</span>
+</span>)
