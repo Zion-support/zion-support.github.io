@@ -142,26 +142,13 @@ class PerformanceOptimizer {
     });
   }
 
-<<<<<<< HEAD
   // Measure page load performance
   measurePageLoad(): WebVitalsMetrics | null {
-=======
-  // Add Web Vitals reporting method
-  reportWebVitals(metrics: any): void {
-    if (process.env.NODE_ENV === 'development') {
-      console.log('Web Vitals:', metrics);
-    }
-  }
-
-  // Add page load measurement method
-  measurePageLoad(): any {
->>>>>>> a280bf9160af89ad376d37805f2dcc0182dc3f86
     if (typeof window === 'undefined' || !window.performance) {
       return null;
     }
     
     const timing = window.performance.timing;
-<<<<<<< HEAD
     const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
     
     const loadTime = timing.loadEventEnd - timing.navigationStart;
@@ -193,12 +180,6 @@ class PerformanceOptimizer {
         }
       });
     }
-=======
-    return {
-      loadTime: timing.loadEventEnd - timing.navigationStart,
-      interactiveTime: timing.domInteractive - timing.navigationStart
-    };
->>>>>>> a280bf9160af89ad376d37805f2dcc0182dc3f86
   }
 
   // Initialize all optimizations
@@ -209,7 +190,6 @@ class PerformanceOptimizer {
   }
 }
 
-<<<<<<< HEAD
 /**
  * Resource hints for performance
  */
@@ -521,7 +501,3 @@ export default {
   clearOldCaches,
   checkPerformanceBudget
 };
-=======
-// Export singleton instance
-export const performanceOptimizer = PerformanceOptimizer.getInstance();
->>>>>>> a280bf9160af89ad376d37805f2dcc0182dc3f86

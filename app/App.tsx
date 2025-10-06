@@ -16,7 +16,7 @@ const HomePage = lazy(() => import('./page'));
 import { performanceOptimizer } from '../src/utils/performanceOptimizer';
 
 // Styles
-import '../index.css';
+import './globals.css';
 
 const App: React.FC = () => {
   useEffect(() => {
