@@ -64,9 +64,9 @@ function App() {
     // Initialize basic optimizations
     const initializeOptimizations = () => {
       try {
-        console.log('App initialized successfully');
+        // App initialized successfully
       } catch (error) {
-        console.error('Failed to initialize app:', error);
+        // Failed to initialize app
       }
     };
 

@@ -89,7 +89,7 @@ class Analytics {
 
     // Log in development
     if (process.env.NODE_ENV === 'development') {
-      console.log('Analytics event:', event);
+      // Analytics event logged
     }
   }
 
@@ -139,9 +139,9 @@ class Analytics {
     try {
       // In a real application, you would send to services like Google Analytics, Mixpanel, etc.
       // For now, we'll just log to console
-      console.log('Analytics event sent:', event);
+      // Analytics event sent
     } catch (err) {
-      console.error('Failed to send analytics event:', err);
+      // Failed to send analytics event
     }
   }
 

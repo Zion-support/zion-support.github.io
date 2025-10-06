@@ -123,7 +123,7 @@ export const measurePageLoad = (): WebVitalsMetrics | null => {
  * Report Web Vitals to analytics
  */
 export const reportWebVitals = (metrics: WebVitalsMetrics): void => {
-  console.log('Web Vitals: ', metrics);
+  // Web Vitals logged
 
   // Send to analytics service
   if (typeof window !== 'undefined' && (window as any).gtag) {
@@ -233,7 +233,7 @@ export const monitorLongTasks = (callback: (entries: PerformanceEntryList) => vo
     observer.observe({ entryTypes: ['longtask'] });
     return observer;
   } catch (e) {
-    console.warn('Long task monitoring not supported: ', e);
+    // Long task monitoring not supported
     return null;
   }
 };

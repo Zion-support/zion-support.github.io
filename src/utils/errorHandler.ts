@@ -52,7 +52,7 @@ class ErrorHandler {
 
     // Log to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('Error logged:', errorReport);
+      // Error logged
     }
 
     // Send to external service in production
@@ -68,9 +68,9 @@ class ErrorHandler {
     try {
       // In a real application, you would send to services like Sentry, LogRocket, etc.
       // For now, we'll just log to console
-      console.error('Error report:', errorReport);
+      // Error report
     } catch (err) {
-      console.error('Failed to send error report:', err);
+      // Failed to send error report
     }
   }
 

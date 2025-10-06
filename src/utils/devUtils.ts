@@ -5,19 +5,19 @@
 
 export const devLog = (message: string, data?: any) => {
   if (process.env.NODE_ENV === 'development') {
-    console.log(`[DEV] ${message}`, data || '');
+    // DEV: ${message}
   }
 };
 
 export const devError = (message: string, error?: any) => {
   if (process.env.NODE_ENV === 'development') {
-    console.error(`[DEV ERROR] ${message}`, error || '');
+    // DEV ERROR: ${message}
   }
 };
 
 export const devWarn = (message: string, data?: any) => {
   if (process.env.NODE_ENV === 'development') {
-    console.warn(`[DEV WARN] ${message}`, data || '');
+    // DEV WARN: ${message}
   }
 };
 
@@ -26,7 +26,7 @@ export const measurePerformance = (name: string, fn: () => void) => {
     const start = performance.now();
     fn();
     const end = performance.now();
-    console.log(`[PERF] ${name}: ${(end - start).toFixed(2)}ms`);
+    // PERF: ${name}: ${(end - start).toFixed(2)}ms
   } else {
     fn();
   }
