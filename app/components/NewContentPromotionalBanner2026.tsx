@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { Sparkles, TrendingUp, Rocket, Shield, Target, ArrowRight, Zap } from 'lucide-react';
+import { Rocket, Shield, ArrowRight } from 'lucide-react';
 
 const NewContentPromotionalBanner2026: React.FC = () => {
   const featuredContent = [
@@ -43,54 +43,32 @@ const NewContentPromotionalBanner2026: React.FC = () => {
   ];
 
   return (
-    <div className="relative bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 min-h-screen overflow-hidden">
-      {/* Background Elements */}
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-transparent to-purple-500/10"></div>
-        <div className="absolute inset-0" style={{
-          backgroundImage: `radial-gradient(circle at 25% 25%, rgba(6, 182, 212, 0.1) 0%, transparent 50%), radial-gradient(circle at 75% 75%, rgba(147, 51, 234, 0.1) 0%, transparent 50%)`
-        }}></div>
+    <div className="relative bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
+      {/* Animated Background */}
+      <div className="absolute inset-0 overflow-hidden opacity-10">
+        <div className="absolute top-0 left-1/3 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" />
+        <div className="absolute bottom-0 right-1/3 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }} />
+        <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-indigo-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '4s' }} />
       </div>
-      
+
       <div className="relative z-10 container mx-auto px-4 py-16">
         {/* Header Section */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-cyan-500/20 to-blue-600/20 border border-cyan-400/30 mb-8">
-            <Sparkles className="w-5 h-5 text-cyan-400" />
-            <span className="text-cyan-400 font-semibold">New Content 2026</span>
+          <div className="inline-block bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-6 py-3 rounded-full font-bold text-lg mb-6 animate-pulse">
+            💎 NEW 2026 CONTENT
           </div>
-          
-          <h1 className="text-5xl md:text-7xl font-extrabold text-white mb-6">
-            Revolutionary
-            <span className="block bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-              AI Solutions
-            </span>
-          </h1>
-          
-          <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Discover cutting-edge AI technologies and enterprise solutions that deliver unprecedented results
+          <h2 className="text-5xl font-extrabold text-white mb-6">
+            Revolutionary AI Solutions
+          </h2>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Discover cutting-edge AI technologies that will transform your business operations
           </p>
-          
-          <div className="flex flex-wrap justify-center gap-4">
-            <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-green-500/20 to-emerald-600/20 border border-green-400/30">
-              <TrendingUp className="w-4 h-4 text-green-400" />
-              <span className="text-green-400 text-sm font-medium">400% ROI</span>
-            </div>
-            <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/20 to-pink-600/20 border border-purple-400/30">
-              <Rocket className="w-4 h-4 text-purple-400" />
-              <span className="text-purple-400 text-sm font-medium">95% Automation</span>
-            </div>
-            <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-orange-500/20 to-red-600/20 border border-orange-400/30">
-              <Target className="w-4 h-4 text-orange-400" />
-              <span className="text-orange-400 text-sm font-medium">99.9% Accuracy</span>
-            </div>
-          </div>
         </div>
 
         {/* Featured Content Cards */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {featuredContent.map((content) => (
-            <div key={content.id} className="group relative bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-white/20 transition-all duration-300 hover:transform hover:scale-105">
+            <div key={content.id} className="group relative bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl">
               {/* Icon & Badge */}
               <div className="flex items-center justify-between mb-6">
                 <div className="text-4xl">{content.icon}</div>
@@ -117,35 +95,40 @@ const NewContentPromotionalBanner2026: React.FC = () => {
               </p>
 
               {/* CTA Button */}
-              <Link href={`/content/${content.slug}`} className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 group">
-                Explore Now
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              <Link 
+                to={`/blog/${content.slug}`}
+                className={`inline-flex items-center px-6 py-3 bg-gradient-to-r ${content.color} text-white font-bold rounded-lg hover:shadow-lg transform hover:scale-105 transition-all duration-300`}
+              >
+                Read More
+                <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
 
               {/* Corner accent */}
-              <div className="absolute top-4 right-4 w-2 h-2 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full opacity-60"></div>
+              <div className={`absolute top-4 right-4 w-8 h-8 bg-gradient-to-r ${content.color} rounded-full opacity-20`} />
             </div>
           ))}
         </div>
 
         {/* Bottom CTA Section */}
-        <div className="text-center bg-gradient-to-r from-cyan-500/10 to-blue-600/10 rounded-3xl p-12 border border-cyan-400/20">
+        <div className="text-center bg-white/5 backdrop-blur-sm rounded-2xl p-12 border border-white/10">
           <div className="flex justify-center mb-6">
             <Shield className="w-8 h-8 text-cyan-400" />
           </div>
           
-          <h2 className="text-4xl font-bold text-white mb-4">
+          <h3 className="text-3xl font-bold text-white mb-4">
             Ready to Transform Your Business?
-          </h2>
+          </h3>
           
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Join 500+ enterprise clients who have revolutionized their operations with our AI solutions
+            Join thousands of enterprises already using our AI solutions to achieve unprecedented growth and efficiency.
           </p>
           
-          <Link href="/contact" className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold text-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 shadow-2xl hover:shadow-cyan-500/25">
-            <Zap className="w-5 h-5" />
+          <Link 
+            to="/contact"
+            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold rounded-lg hover:shadow-lg transform hover:scale-105 transition-all duration-300"
+          >
             Get Started Today
-            <ArrowRight className="w-5 h-5" />
+            <Rocket className="ml-2 w-5 h-5" />
           </Link>
 
           {/* Stats */}
@@ -155,16 +138,16 @@ const NewContentPromotionalBanner2026: React.FC = () => {
               <div className="text-gray-300">Enterprise Clients</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-blue-400 mb-2">99.9%</div>
-              <div className="text-gray-300">Uptime Guarantee</div>
+              <div className="text-3xl font-bold text-cyan-400 mb-2">99.9%</div>
+              <div className="text-gray-300">Success Rate</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-purple-400 mb-2">24/7</div>
+              <div className="text-3xl font-bold text-cyan-400 mb-2">24/7</div>
               <div className="text-gray-300">Expert Support</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-green-400 mb-2">400%</div>
-              <div className="text-gray-300">Average ROI</div>
+              <div className="text-3xl font-bold text-cyan-400 mb-2">$50M+</div>
+              <div className="text-gray-300">Cost Savings</div>
             </div>
           </div>
         </div>
