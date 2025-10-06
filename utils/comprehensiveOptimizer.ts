@@ -6,6 +6,7 @@ import {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   focusManagement,
   ariaUtils,
   keyboardNavigation,
@@ -43,11 +44,16 @@ import {
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f83
 =======
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d
   accessibilityTesting,
   ariaUtils,
   motionUtils
 } from './accessibilityUtils';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d
 import {
   getMemoryUsage,
   collectPerformanceMetrics,
@@ -56,6 +62,7 @@ import {
   throttle,
   lazyLoadImages,
   preloadCriticalResources,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -82,6 +89,10 @@ import {
   optimizeScrollPerformance
 } from './performanceUtils';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
+=======
+  optimizeScrollPerformance
+} from './performanceUtils';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d
 import {
   setMetaTags,
   setOpenGraphTags,
@@ -98,6 +109,7 @@ import {
   setLanguage,
   setViewport,
   schemaGenerators,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   seoAudit
@@ -142,6 +154,10 @@ export interface OptimizationConfig {
 } from './seoUtils';
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
+=======
+  seoAudit
+} from './seoUtils';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d
 // Comprehensive optimization interface
 export interface OptimizationConfig {
   accessibility: {
@@ -159,6 +175,7 @@ export interface OptimizationConfig {
     autoOptimize: boolean;
     generateStructuredData: boolean;
     optimizeMetaTags: boolean;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
 =======
@@ -275,6 +292,39 @@ export class ComprehensiveOptimizer {
 <<<<<<< HEAD
   constructor(config: OptimizationConfig = DEFAULT_OPTIMIZATION_CONFIG) {
     this.config = config;
+=======
+  };
+};
+
+// Default configuration
+export const defaultConfig: OptimizationConfig = {
+  accessibility: {
+    autoFix: true,
+    announceChanges: true,
+    respectMotionPreferences: true
+  },
+  performance: {
+    enableLazyLoading: true,
+    preloadCritical: true,
+    optimizeScroll: true,
+    monitorMemory: true
+  },
+  seo: {
+    autoOptimize: true,
+    generateStructuredData: true,
+    optimizeMetaTags: true
+  },
+};
+// Comprehensive optimization class
+export class ComprehensiveOptimizer {
+  private config: OptimizationConfig;
+  private isInitialized = false;
+  private performanceObserver: PerformanceObserver | null = null;
+  private memoryInterval: NodeJS.Timeout | null = null;
+  
+  constructor(config: Partial<OptimizationConfig> = {}) {
+    this.config = { ...defaultConfig, ...config };
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d
   }
 
   /**
@@ -339,11 +389,15 @@ export class ComprehensiveOptimizer {
   public async initialize(): Promise<void> {
     if (this.isInitialized) return;
 <<<<<<< HEAD
+<<<<<<< HEAD
     
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
+=======
+    
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d
     try {
       // Initialize accessibility features
       if (this.config.accessibility.enableFocusManagement) {
@@ -361,6 +415,7 @@ export class ComprehensiveOptimizer {
       }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
       // Initialize scroll optimization
       if (this.config.performance.enableScrollOptimization) {
@@ -376,6 +431,14 @@ export class ComprehensiveOptimizer {
       if (this.config.performance.optimizeScroll) {
         optimizeScrollPerformance();
       }
+=======
+      if (this.config.performance.preloadCritical) {
+        preloadCriticalResources();
+      }
+      if (this.config.performance.optimizeScroll) {
+        optimizeScrollPerformance();
+      }
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d
       
       // Initialize accessibility optimizations
       if (this.config.accessibility.respectMotionPreferences) {
@@ -387,6 +450,7 @@ export class ComprehensiveOptimizer {
         this.optimizeSEO();
       }
       
+<<<<<<< HEAD
       // Start monitoring
       if (this.config.performance.monitorMemory) {
         this.startMemoryMonitoring();
@@ -433,6 +497,8 @@ export class ComprehensiveOptimizer {
         this.optimizeSEO();
       }
 
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d
       // Start monitoring
       this.startMonitoring();
       this.isInitialized = true;
@@ -449,9 +515,14 @@ export class ComprehensiveOptimizer {
       style.textContent = `
         *, *::before, *::after {
           animation-duration: 0.01ms !important;
+<<<<<<< HEAD
           animation-iteration-count: 1 !important}
           transition-duration: 0.01ms !important}
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
+=======
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d
         }
       });
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a4f

@@ -114,12 +114,15 @@ export const BANNER_REGISTRY: BannerConfig[] = [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export const getBannersByCategory = (category: BannerConfig['category']): BannerConfig[] => {
   return BANNER_REGISTRY.filter(banner => banner.category === category && banner.enabled);
 };
 =======
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f83
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d
 export function getBannersByCategory(category: BannerConfig['category']): BannerConfig[] {
   return BANNER_REGISTRY.filter(banner => banner.category === category && banner.enabled);
 }

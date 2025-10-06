@@ -8,6 +8,7 @@
 // Debounce function for performance optimization
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export const debounce = <T extends (...args: unknown[]) => unknown>(
 =======
 export const debounce = <T extends (...args: any[]) => any>(
@@ -25,11 +26,15 @@ export const debounce = <T extends (...args: any[]) => any>(
 // Debounce function for performance optimization
 export const debounce = <T extends (...args: any[]) => any>(
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
+=======
+export const debounce = <T extends (...args: any[]) => any>(
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d
   func: T,
   wait: number,
   immediate = false
 ): ((...args: Parameters<T>) => void) => {
   let timeout: NodeJS.Timeout | null = null;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -47,6 +52,8 @@ export const debounce = <T extends (...args: any[]) => any>(
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f83
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d
   return function executedFunction(...args: Parameters<T>) {
     const later = () => {
       timeout = null;

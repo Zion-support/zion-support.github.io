@@ -112,6 +112,7 @@
     "app/components/NewContentPromotionalBanner2026.tsx",
     "app/components/NewestContent2025Banner.tsx",
 <<<<<<< HEAD
+<<<<<<< HEAD
     "api/**",
     "lib/**",
     "utils/seoUtils.ts"
@@ -122,6 +123,16 @@
     "automation/**",
     "**/*.disabled/**",
     "**/*.backup/**"
+=======
+    "utils/accessibilityUtils.ts",
+    "utils/bannerLazyLoader.ts",
+    "utils/bannerRegistry.ts",
+    "utils/bannerRotationSystem.ts",
+    "utils/bannerPrioritization.ts",
+    "utils/comprehensiveOptimizer.ts",
+    "utils/performanceUtils.ts",
+    "utils/seoUtils.ts"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d
   ],
   "references": [
     {

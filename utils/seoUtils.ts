@@ -7,6 +7,7 @@
 
 // Meta tags management
 export const setMetaTags = (tags: Record<string, string>): void => {
+<<<<<<< HEAD
 =======
 
 // Meta tags management
@@ -19,6 +20,8 @@ export const setMetaTags = (tags: Record<string, string>): void => {
 // Meta tags management
 export const setMetaTags = (tags: Record<string, string>): void => {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d
   Object.entries(tags).forEach(([name, content]) => {
     let meta = document.querySelector(`meta[name="${name}"]`) as HTMLMetaElement;
     if (!meta) {

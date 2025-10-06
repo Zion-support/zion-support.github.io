@@ -7,6 +7,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { lazy } from 'react';
 =======
 import React, { lazy } from 'react';
@@ -19,6 +20,9 @@ import { lazy, ComponentType } from 'react';
 import { lazy, ComponentType } from 'react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
 
+=======
+import { lazy, ComponentType } from 'react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d
 interface BannerModule {
   default: ComponentType<any>;
 }
@@ -45,14 +49,18 @@ export const lazyLoadBanner = (
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-9d58
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d
                 retryError
               );
               // Return a fallback component
               resolve({ default: () => null });
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -81,6 +89,8 @@ export const lazyLoadBanner = (
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-9d58
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d
             });
         }, 1000);
       });

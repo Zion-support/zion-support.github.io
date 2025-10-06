@@ -120,11 +120,14 @@ export class BannerPrioritizationEngine {
    */
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   getVisibleBanners(): BannerMetadata[] {
     return this.getPrioritizedBanners()
       .slice(0, this.visibilityThreshold)
       .map(banner => ({ ...banner, isVisible: true }));
 =======
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d
   getBannersByLoadStrategy(strategy: 'immediate' | 'lazy' | 'on-demand'): BannerMetadata[] {
     return Array.from(this.banners.values()).filter(banner => banner.loadStrategy === strategy && banner.isVisible);
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f83

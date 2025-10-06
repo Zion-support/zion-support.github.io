@@ -25,6 +25,7 @@ export interface WebVitalsMetrics {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-8da8
 =======
@@ -35,6 +36,8 @@ export interface WebVitalsMetrics {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f83
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d
 export interface PerformanceBudget {
 =======
 interface PerformanceBudget {
@@ -110,6 +113,7 @@ export const throttle = <T extends (...args: unknown[]) => unknown>(
 export const lazyLoadImages = (): void => {
 <<<<<<< HEAD
   if (typeof window === 'undefined') return;
+<<<<<<< HEAD
   if (!('IntersectionObserver' in window)) return;
 <<<<<<< HEAD
 
@@ -230,27 +234,61 @@ export const initPerformanceMonitoring = (): void => {
 =======
   if (typeof document === 'undefined') return;
   
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d
   const images = document.querySelectorAll('img[data-src]');
   const imageObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         const img = entry.target as HTMLImageElement;
         img.src = img.dataset.src || '';
+<<<<<<< HEAD
         img.classList.remove('lazy');
+=======
+        img.removeAttribute('data-src');
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d
         imageObserver.unobserve(img);
       }
     });
   });
 
   images.forEach((img) => imageObserver.observe(img));
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7834
+=======
+};
+
+/**
+ * Preload critical resources
+ */
+export const preloadCriticalResources = (): void => {
+  if (typeof window === 'undefined') return;
+
+  const criticalResources = [
+    '/fonts/main.woff2',
+    '/css/critical.css',
+  ];
+
+  criticalResources.forEach((resource) => {
+    const link = document.createElement('link');
+    link.rel = 'preload';
+    link.href = resource;
+    link.as = resource.endsWith('.css') ? 'style' : 'font';
+    if (resource.endsWith('.woff2')) {
+      link.crossOrigin = 'anonymous';
+    }
+    document.head.appendChild(link);
+  });
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d
 };
 
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-8da8
 /**
- * Measure page load performance
+ * Optimize scroll performance
  */
+<<<<<<< HEAD
 export const measurePageLoad = (): WebVitalsMetrics | null => {
 <<<<<<< HEAD
   if (typeof window === 'undefined' || !window.performance) return null;
@@ -291,10 +329,30 @@ export const measurePageLoad = (): WebVitalsMetrics | null => {
     interactiveTime: navigation.domInteractive - navigation.fetchStart,
     TTFB: navigation.responseStart - navigation.fetchStart,
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-8da8
+=======
+export const optimizeScrollPerformance = (): void => {
+  if (typeof window === 'undefined') return;
+
+  let ticking = false;
+
+  const updateScrollPosition = () => {
+    // Scroll optimization logic here
+    ticking = false;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d
   };
+
+  const requestTick = () => {
+    if (!ticking) {
+      requestAnimationFrame(updateScrollPosition);
+      ticking = true;
+    }
+  };
+
+  window.addEventListener('scroll', requestTick, { passive: true });
 };
 
 /**
+<<<<<<< HEAD
  * Monitor long tasks
 <<<<<<< HEAD
 =======
@@ -428,10 +486,16 @@ export const monitorLongTasks = (callback: (entries: PerformanceEntry[]) => void
 <<<<<<< HEAD
   } catch (e) {
     // PerformanceObserver not supported in this environment
+=======
+ * Get memory usage
+ */
+export const getMemoryUsage = (): Record<string, number> | null => {
+  if (typeof performance === 'undefined' || !(performance as any).memory) {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d
     return null;
   }
-};
 
+<<<<<<< HEAD
 /**
  * Cache static assets
  */
@@ -656,15 +720,21 @@ class PerformanceOptimizer {
     violations.push(`Load time ${loadTime}ms exceeds budget ${budget.maxFirstLoad}ms`);
   }
   
+=======
+  const memory = (performance as any).memory;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d
   return {
-    passed: violations.length === 0,
-    violations
+    usedJSHeapSize: memory.usedJSHeapSize,
+    totalJSHeapSize: memory.totalJSHeapSize,
+    jsHeapSizeLimit: memory.jsHeapSizeLimit,
+    usedPercentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100,
   };
 };
 
 /**
- * Critical resource hints for better performance
+ * Collect performance metrics
  */
+<<<<<<< HEAD
 export const addCriticalResourceHints = (): void => {
   if (typeof document === 'undefined') return;
   
@@ -736,12 +806,48 @@ export class PerformanceMonitor {
   private metrics: WebVitalsMetrics = {};
   private budget: PerformanceBudget;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f83
+=======
+export const collectPerformanceMetrics = (): WebVitalsMetrics => {
+  if (typeof window === 'undefined') {
+    return {};
+  }
+
+  const metrics: WebVitalsMetrics = {};
+
+  // Get navigation timing
+  if (performance.timing) {
+    const timing = performance.timing;
+    const navigationStart = timing.navigationStart;
+    metrics.TTFB = timing.responseStart - navigationStart;
+  }
+
+  // Get paint timing
+  if (performance.getEntriesByType) {
+    const paintEntries = performance.getEntriesByType('paint');
+    paintEntries.forEach((entry) => {
+      if (entry.name === 'first-contentful-paint') {
+        metrics.FCP = entry.startTime;
+      }
+    });
+  }
+
+  return metrics;
+};
+
+/**
+ * Performance monitor
+ */
+export class PerformanceMonitor {
+  private metrics: WebVitalsMetrics = {};
+  private budget: PerformanceBudget;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d
 
   constructor(budget: PerformanceBudget) {
     this.budget = budget;
   }
 
   /**
+<<<<<<< HEAD
    * Record a performance metric
    */
   recordMetric(name: keyof WebVitalsMetrics, value: number): void {
@@ -752,12 +858,88 @@ export class PerformanceMonitor {
    * Check if performance is within budget
    */
   checkBudget(): { passed: boolean; violations: string[] } {
+=======
+   * Start monitoring
+   */
+  public startMonitoring(): void {
+    if (typeof window === 'undefined') return;
+
+    // Monitor Core Web Vitals
+    this.observeLCP();
+    this.observeFID();
+    this.observeCLS();
+  }
+
+  /**
+   * Observe Largest Contentful Paint
+   */
+  private observeLCP(): void {
+    if (typeof PerformanceObserver === 'undefined') return;
+
+    const observer = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      const lastEntry = entries[entries.length - 1] as any;
+      this.metrics.LCP = lastEntry.startTime;
+    });
+
+    observer.observe({ entryTypes: ['largest-contentful-paint'] });
+  }
+
+  /**
+   * Observe First Input Delay
+   */
+  private observeFID(): void {
+    if (typeof PerformanceObserver === 'undefined') return;
+
+    const observer = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      entries.forEach((entry: any) => {
+        this.metrics.FID = entry.processingStart - entry.startTime;
+      });
+    });
+
+    observer.observe({ entryTypes: ['first-input'] });
+  }
+
+  /**
+   * Observe Cumulative Layout Shift
+   */
+  private observeCLS(): void {
+    if (typeof PerformanceObserver === 'undefined') return;
+
+    let clsValue = 0;
+    const observer = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      entries.forEach((entry: any) => {
+        if (!entry.hadRecentInput) {
+          clsValue += entry.value;
+        }
+      });
+      this.metrics.CLS = clsValue;
+    });
+
+    observer.observe({ entryTypes: ['layout-shift'] });
+  }
+
+  /**
+   * Get current metrics
+   */
+  public getMetrics(): WebVitalsMetrics {
+    return { ...this.metrics };
+  }
+
+  /**
+   * Check if performance budget is exceeded
+   */
+  public checkBudget(): { exceeded: boolean; violations: string[] } {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d
     const violations: string[] = [];
 
     if (this.metrics.FCP && this.metrics.FCP > this.budget.maxFirstLoad) {
       violations.push(`FCP ${this.metrics.FCP}ms exceeds budget ${this.budget.maxFirstLoad}ms`);
     }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   public measurePerformance(name: string, fn: () => void): void {
     const start = performance.now();
@@ -920,11 +1102,14 @@ class PerformanceOptimizer {
       loadTime: navigation.loadEventEnd - navigation.fetchStart,
       interactiveTime: navigation.domInteractive - navigation.fetchStart,
 =======
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d
     if (this.metrics.LCP && this.metrics.LCP > this.budget.maxInteractive) {
       violations.push(`LCP ${this.metrics.LCP}ms exceeds budget ${this.budget.maxInteractive}ms`);
     }
 
     return {
+<<<<<<< HEAD
       passed: violations.length === 0,
       violations
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f83
@@ -1348,3 +1533,51 @@ export const performanceOptimizer = new PerformanceOptimizer({
   maxInteractive: 5000
 });
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f83
+=======
+      exceeded: violations.length > 0,
+      violations,
+    };
+  }
+}
+
+/**
+ * Default performance budget
+ */
+export const defaultPerformanceBudget: PerformanceBudget = {
+  maxBundleSize: 500, // 500KB
+  maxImageSize: 200, // 200KB
+  maxFirstLoad: 2000, // 2 seconds
+  maxInteractive: 3000, // 3 seconds
+};
+
+/**
+ * Initialize performance optimization
+ */
+export const initializePerformanceOptimization = (): void => {
+  if (typeof window === 'undefined') return;
+
+  // Lazy load images
+  lazyLoadImages();
+
+  // Preload critical resources
+  preloadCriticalResources();
+
+  // Optimize scroll performance
+  optimizeScrollPerformance();
+
+  // Start performance monitoring
+  const monitor = new PerformanceMonitor(defaultPerformanceBudget);
+  monitor.startMonitoring();
+
+  // Log performance metrics
+  setTimeout(() => {
+    const metrics = monitor.getMetrics();
+    const budgetCheck = monitor.checkBudget();
+    
+    console.log('Performance Metrics:', metrics);
+    if (budgetCheck.exceeded) {
+      console.warn('Performance Budget Exceeded:', budgetCheck.violations);
+    }
+  }, 5000);
+};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d

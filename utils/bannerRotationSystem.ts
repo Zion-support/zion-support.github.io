@@ -61,6 +61,7 @@ const getBannerImpressions = (): BannerImpression[] => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 const storeImpressions = (impressions: BannerImpression[]): void => {
 =======
 =======
@@ -72,6 +73,9 @@ export const recordBannerImpression = (impression: Omit<BannerImpression, 'times
 export const recordBannerImpression = (
   impression: Omit<BannerImpression, 'timestamp' | 'sessionId'>
 ) => {
+=======
+export const recordBannerImpression = (impression: Omit<BannerImpression, 'timestamp' | 'sessionId'>) => {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d
   if (typeof window === 'undefined') return;
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
