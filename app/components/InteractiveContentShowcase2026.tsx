@@ -1,171 +1,95 @@
-import React from 'react';
-
-const InteractiveContentShowcase2026: React.FC = () => {
-  return (
-    <div className="interactive-content-showcase-2026">
-      <h2>Interactive Content Showcase 2026</h2>
-      <p>Interactive content showcase 2026 component placeholder</p>
-    </div>
-  );
-};
-
-export default InteractiveContentShowcase2026;
-import React from 'react';
-
-const InteractiveContentShowcase2026: React.FC = () => {
-  const features = [
-    {
-      icon: '🚀',
-      title: 'Next-Gen AI',
-      description:
-        'Cutting-edge artificial intelligence solutions for 2026 and beyond.',
-    },
-    {
-      icon: '⚡',
-      title: 'Lightning Fast',
-      description: 'Optimized performance with sub-second response times.',
-    },
-    {
-      icon: '🔒',
-      title: 'Enterprise Security',
-      description: 'Bank-level security for your most sensitive data.',
-    },
-    {
-      icon: '📊',
-      title: 'Real-time Analytics',
-      description:
-        'Live insights and predictive analytics for better decisions.',
-    },
-  ];
-
-  return (
-    <section className='bg-gray-50 py-16 rounded-2xl'>
-      <div className='container mx-auto px-4'>
-        <div className='text-center mb-12'>
-          <h2 className='text-4xl font-bold text-gray-900 mb-4'>
-            Future-Ready Solutions
-          </h2>
-          <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
-            Prepare your enterprise for the next generation of AI technology
-            with our advanced solutions.
-          </p>
-        </div>
-
-        <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-6'>
-          {features.map((feature, index) => (
-            <div
-              key={index}
-              className='bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1'
-            >
-              <div className='text-4xl mb-4'>{feature.icon}</div>
-              <h3 className='text-lg font-semibold text-gray-900 mb-2'>
-                {feature.title}
-              </h3>
-              <p className='text-gray-600 text-sm'>{feature.description}</p>
-            </div>
-          ))}
-        </div>
-
-        <div className='text-center mt-12'>
-          <button className='bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold py-4 px-8 rounded-lg text-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105'>
-            Explore 2026 Solutions
-          </button>
 import React, { useState } from 'react';
 
 const InteractiveContentShowcase2026: React.FC = () => {
   const [activeTab, setActiveTab] = useState(0);
 
   const tabs = [
+    { id: 0, name: 'AI Innovations', icon: '🤖' },
+    { id: 1, name: 'Enterprise Solutions', icon: '🏢' },
+    { id: 2, name: 'Future Trends', icon: '🚀' },
+  ];
+
+  const content = [
     {
-      title: "AI Innovation",
-      content: "Discover the latest breakthroughs in artificial intelligence and machine learning technologies.",
-      features: ["Natural Language Processing", "Computer Vision", "Predictive Analytics", "Automated Decision Making"]
+      title: 'Autonomous AI Systems',
+      description: 'Self-managing AI that adapts and evolves without human intervention.',
+      image: '/api/placeholder/400/300',
+      category: 'AI Innovation',
     },
     {
-      title: "Digital Transformation",
-      content: "Transform your business with cutting-edge digital solutions and modern technologies.",
-      features: ["Cloud Migration", "API Integration", "Microservices Architecture", "DevOps Automation"]
+      title: 'Quantum-Enhanced Computing',
+      description: 'Next-generation computing power for complex problem solving.',
+      image: '/api/placeholder/400/300',
+      category: 'Technology',
     },
     {
-      title: "Enterprise Solutions",
-      content: "Scale your business with enterprise-grade solutions designed for growth and efficiency.",
-      features: ["Scalable Infrastructure", "Security Compliance", "Performance Optimization", "24/7 Support"]
-    }
+      title: 'Neural Network Optimization',
+      description: 'Advanced algorithms that learn and improve continuously.',
+      image: '/api/placeholder/400/300',
+      category: 'Machine Learning',
+    },
   ];
 
   return (
-    <section className="py-16 bg-white">
+    <div className="interactive-content-showcase-2026 py-16 bg-gradient-to-br from-purple-50 to-blue-50">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Interactive Content Showcase 2026
-          </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Experience the future of technology with our interactive showcase of innovative solutions.
-          </p>
+        <h2 className="text-3xl font-bold text-center mb-12">2026 Content Showcase</h2>
+        
+        {/* Tab Navigation */}
+        <div className="flex justify-center mb-8">
+          <div className="bg-white rounded-lg p-1 shadow-lg">
+            {tabs.map((tab) => (
+              <button
+                key={tab.id}
+                onClick={() => setActiveTab(tab.id)}
+                className={`px-6 py-3 rounded-md font-medium transition-colors ${
+                  activeTab === tab.id
+                    ? 'bg-blue-600 text-white'
+                    : 'text-gray-600 hover:text-blue-600'
+                }`}
+              >
+                <span className="mr-2">{tab.icon}</span>
+                {tab.name}
+              </button>
+            ))}
+          </div>
         </div>
 
-        <div className="max-w-6xl mx-auto">
-          <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-            <div className="border-b border-gray-200">
-              <nav className="flex">
-                {tabs.map((tab, index) => (
-                  <button
-                    key={index}
-                    onClick={() => setActiveTab(index)}
-                    className={`px-6 py-4 text-sm font-medium ${
-                      activeTab === index
-                        ? 'text-blue-600 border-b-2 border-blue-600 bg-blue-50'
-                        : 'text-gray-500 hover:text-gray-700 hover:bg-gray-50'
-                    }`}
-                  >
-                    {tab.title}
-                  </button>
-                ))}
-              </nav>
-            </div>
-
-            <div className="p-8">
-              <div className="grid md:grid-cols-2 gap-8">
-                <div>
-                  <h3 className="text-2xl font-semibold text-gray-900 mb-4">
-                    {tabs[activeTab]?.title}
-                  </h3>
-                  <p className="text-gray-600 mb-6">
-                    {tabs[activeTab]?.content}
-                  </p>
-                  <button className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-lg transition-colors">
-                    Get Started
-                  </button>
-                </div>
-
-                <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-4">
-                    Key Features
-                  </h4>
-                  <ul className="space-y-3">
-                    {tabs[activeTab]?.features.map((feature, index) => (
-                      <li key={index} className="flex items-center">
-                        <div className="w-2 h-2 bg-blue-600 rounded-full mr-3"></div>
-                        <span className="text-gray-600">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+        {/* Content Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {content.map((item, index) => (
+            <div
+              key={index}
+              className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+            >
+              <div className="h-48 bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center">
+                <span className="text-white text-4xl">📊</span>
+              </div>
+              <div className="p-6">
+                <span className="text-sm text-blue-600 font-semibold">{item.category}</span>
+                <h3 className="text-xl font-bold mt-2 mb-3">{item.title}</h3>
+                <p className="text-gray-600 mb-4">{item.description}</p>
+                <button className="text-blue-600 hover:text-blue-700 font-medium">
+                  Explore →
+                </button>
               </div>
             </div>
-          </div>
->>>>>>> main
->>>>>>> main
+          ))}
+        </div>
+
+        {/* CTA Section */}
+        <div className="text-center mt-12">
+          <h3 className="text-2xl font-bold mb-4">Ready to Explore the Future?</h3>
+          <p className="text-gray-600 mb-6">
+            Discover how our cutting-edge solutions can transform your business.
+          </p>
+          <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors">
+            Get Started Today
+          </button>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
 export default InteractiveContentShowcase2026;
-export default InteractiveContentShowcase2026;
-export default InteractiveContentShowcase2026;
->>>>>>> main
->>>>>>> main
->>>>>>> main

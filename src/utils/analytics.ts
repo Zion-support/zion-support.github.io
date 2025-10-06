@@ -1,178 +1,126 @@
 /**
- * Analytics utility for tracking events and performance
+ * Analytics utilities for tracking user interactions and performance
  */
-export interface AnalyticsEvent {
-  name: string;
+
+interface AnalyticsEvent {
+  action: string;
   category: string;
-  action?: string | undefined;
-  label?: string | undefined;
-  value?: number | undefined;
-  properties?: Record<string, unknown> | undefined;
-  timestamp: number;
+  label?: string;
+  value?: number;
+  custom_parameters?: Record<string, any>;
 }
-export interface UserProperties {
-  userId?: string | undefined;
-  sessionId: string;
-  userAgent: string;
-  language: string;
-  timezone: string;
-  referrer?: string | undefined;
-}
+
 class Analytics {
-  private events: AnalyticsEvent[] = [];
-  private userProperties: UserProperties;
-  private sessionId: string;
+  private isEnabled: boolean;
+
   constructor() {
-    this.sessionId = this.generateSessionId();
-    this.userProperties = this.initializeUserProperties();
+    this.isEnabled = typeof window !== 'undefined' && process.env.NODE_ENV === 'production';
   }
+
   /**
-   * Generate unique session ID
+   * Track a custom event
    */
-  private generateSessionId(): string {
-    return `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-  }
-  /**
-   * Initialize user properties
-   */
-  private initializeUserProperties(): UserProperties {
-    if (typeof window === 'undefined') {
-      return {
-        sessionId: this.sessionId,
-        userAgent: 'server',
-        language: 'en',
-        timezone: 'UTC',
-      };
+  track(event: AnalyticsEvent): void {
+    if (!this.isEnabled) {
+      console.log('Analytics event:', event);
+      return;
     }
-    return {
-      sessionId: this.sessionId,
-      userAgent: window.navigator.userAgent,
-      language: window.navigator.language,
-      timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
-      referrer: document.referrer || '',
-      referrer: document.referrer || '',
-      referrer: document.referrer || undefined,
->>>>>>> main
->>>>>>> main
->>>>>>> main
-=======
->>>>>>> 6c45f99dc7ca17bbf478e03055adf8e9c75097bc
-    };
-  }
-  /**
-   * Track an event
-   */
-  public track(
-    name: string,
-  category: string,
-    action?: string,
-    label?: string,
-    value?: number,
-    properties?: Record<string, unknown>
-  ): void {
-    const event: AnalyticsEvent = {
-      name,
-      category,
-      action: action || '',
-      label: label || undefined,
-      value,
-      properties,
-      value: value || 0,
-      properties: properties || {},
-<<<<<<< HEAD
-      action: action || undefined,
-      label: label || undefined,
-      value: value || undefined,
-      properties: properties || undefined,
->>>>>>> main
->>>>>>> main
->>>>>>> main
-=======
-      value: value || 0,
-      properties: properties || {},
->>>>>>> 6c45f99dc7ca17bbf478e03055adf8e9c75097bc
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-7ea5
-      timestamp: Date.now(),
-    };
-    this.events.push(event);
-    //Send to analytics service
-    this.sendToAnalytics(event);
-    //Log in development
-    if (process.env.NODE_ENV === 'development') {
-      //Analytics event logged
+
+    try {
+      // Google Analytics 4
+      if (typeof window !== 'undefined' && (window as any).gtag) {
+        (window as any).gtag('event', event.action, {
+          event_category: event.category,
+          event_label: event.label,
+          value: event.value,
+          ...event.custom_parameters,
+        });
+      }
+
+      // Custom analytics endpoint
+      this.sendToAnalytics(event);
+    } catch (error) {
+      console.error('Analytics tracking error:', error);
     }
   }
+
   /**
    * Track page view
-   */public trackPageView(page: string, title?: string): void {
-    this.track('page_view', 'navigation', 'view', page, undefined, {
-      page_title: title || document.title,
-      page_url: typeof window !== 'undefined' ? window.location.href : page,
+   */
+  pageView(page: string, title?: string): void {
+    this.track({
+      action: 'page_view',
+      category: 'navigation',
+      label: page,
+      custom_parameters: {
+        page_title: title || document.title,
+        page_location: window.location.href,
+      },
     });
   }
+
   /**
    * Track user interaction
-   */public trackInteraction(
-    element: string,
-  action: string,
-    category: string = 'user_interaction'
-  ): void {
-    this.track('interaction', category, action, element);
+   */
+  interaction(action: string, element: string, value?: number): void {
+    this.track({
+      action,
+      category: 'interaction',
+      label: element,
+      value,
+    });
   }
+
   /**
    * Track performance metrics
-   */public trackPerformance(metric: string,
-  value: number, unit: string = 'ms'): void {
-    this.track('performance', 'metrics', metric, unit, value);
+   */
+  performance(metric: string, value: number, unit: string = 'ms'): void {
+    this.track({
+      action: 'performance',
+      category: 'metrics',
+      label: metric,
+      value,
+      custom_parameters: {
+        unit,
+      },
+    });
   }
+
   /**
-   * Track business events
-   */public trackBusinessEvent(
-    event: string,
-    value?: number,
-    properties?: Record<string, unknown>
-  ): void {
-    this.track(event, 'business', 'event', undefined, value, properties);
+   * Track error events
+   */
+  error(error: string, fatal: boolean = false): void {
+    this.track({
+      action: 'error',
+      category: 'exception',
+      label: error,
+      value: fatal ? 1 : 0,
+    });
   }
+
   /**
-   * Send event to analytics service
-   */private async sendToAnalytics(event: AnalyticsEvent): Promise<void> {
+   * Send data to analytics endpoint
+   */
+  private async sendToAnalytics(event: AnalyticsEvent): Promise<void> {
     try {
-      //In a real application, you would send to services like Google Analytics, Mixpanel, etc.
-      //For now, we'll just log to console
-      //Analytics event sent
-    } catch (err) {
-      //Failed to send analytics event
+      await fetch('/api/analytics', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          ...event,
+          timestamp: new Date().toISOString(),
+          user_agent: navigator.userAgent,
+          url: window.location.href,
+        }),
+      });
+    } catch (error) {
+      console.error('Failed to send analytics data:', error);
     }
   }
-  /**
-   * Get all events
-   */public getEvents(): AnalyticsEvent[] {
-    return [...this.events];
-  }
-  /**
-   * Get events by category
-   */public getEventsByCategory(category: string): AnalyticsEvent[] {
-    return this.events.filter(event => event.category === category);
-  }
-  /**
-   * Clear all events
-   */public clearEvents(): void {
-    this.events = [];
-  }
-  /**
-   * Get user properties
-   */public getUserProperties(): UserProperties {
-    return { ...this.userProperties };
-  }
-  /**
-   * Update user properties
-   */public updateUserProperties(properties: Partial<UserProperties>): void {
-    this.userProperties = { ...this.userProperties, ...properties };
-  }
 }
-//Create singleton instance
+
+// Export singleton instance
 export const analytics = new Analytics();
 export default analytics;
-

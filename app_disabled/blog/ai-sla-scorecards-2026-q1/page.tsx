@@ -1,9 +1,7 @@
 import Link from 'next/link';
 import { Activity, ArrowRight, Calendar, Clock, Gauge, Map, Shield, ShieldCheck } from 'lucide-react';
 
-
 import React from 'react';
-import Link from 'next/link';
 import {ArrowRight,Clock,Calendar} from 'lucide-react';
 
 export const metadata = {

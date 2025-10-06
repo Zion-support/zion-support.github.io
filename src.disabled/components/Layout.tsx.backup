@@ -1,5 +1,10 @@
 import React from 'react';
 import Link from 'next/link';
+<<<<<<< HEAD:src/components/Layout.tsx
+
+interface LayoutProps {
+  children: React.ReactNode;
+}
 import './globals.css';
 
 function Header(): React.JSX.Element {
@@ -38,6 +43,12 @@ function Header(): React.JSX.Element {
           </div>
           <div className='relative group'>
             <Link
+<<<<<<< HEAD:src/components/Layout.tsx
+              href='/services/quantum-computing-2026'
+              className='text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1'
+            >
+              Quantum Computing 2026
+              <span className='bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-2 py-1 rounded-full text-xs font-semibold'>
               href='/content-hub'
               className='text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1'
             >
@@ -58,6 +69,7 @@ function Header(): React.JSX.Element {
               </span>
             </Link>
           </div>
+<<<<<<< HEAD:src/components/Layout.tsx
           <div className='relative group'>
             <Link
               href='/blog/ai-2026-quantum-enhanced-analytics'
@@ -137,21 +149,13 @@ function Header(): React.JSX.Element {
             Contact
           </Link>
         </div>
-        <button className='md:hidden p-2' aria-label='Toggle menu'>
-          <svg
-            className='w-6 h-6'
-            fill='none'
-            stroke='currentColor'
-            viewBox='0 0 24 24'
-          >
-            <path
-              strokeLinecap='round'
-              strokeLinejoin='round'
-              strokeWidth={2}
-              d='M4 6h16M4 12h16M4 18h16'
-            />
-          </svg>
-        </button>
+        <div className='md:hidden'>
+          <button className='text-gray-700 hover:text-blue-600 transition-colors'>
+            <svg className='w-6 h-6' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
+              <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M4 6h16M4 12h16M4 18h16' />
+            </svg>
+          </button>
+        </div>
       </nav>
     </header>
   );
@@ -159,10 +163,32 @@ function Header(): React.JSX.Element {
 
 function Footer(): React.JSX.Element {
   return (
-    <footer className='border-t border-gray-200 mt-10 py-6 bg-gray-50'>
+    <footer className='bg-gray-900 text-white py-12'>
       <div className='max-w-6xl mx-auto px-4'>
-        <div className='grid grid-cols-1 md:grid-cols-4 gap-6'>
+        <div className='grid md:grid-cols-4 gap-8'>
           <div>
+<<<<<<< HEAD:src/components/Layout.tsx
+            <h3 className='text-lg font-semibold mb-4'>Zion Tech Group</h3>
+            <p className='text-gray-400'>
+              Leading provider of AI-powered enterprise solutions and digital transformation services.
+            </p>
+          </div>
+          <div>
+            <h4 className='text-md font-semibold mb-4'>Services</h4>
+            <ul className='space-y-2 text-gray-400'>
+              <li><Link href='/services' className='hover:text-white transition-colors'>AI Solutions</Link></li>
+              <li><Link href='/services' className='hover:text-white transition-colors'>Quantum Computing</Link></li>
+              <li><Link href='/services' className='hover:text-white transition-colors'>Enterprise Automation</Link></li>
+              <li><Link href='/services' className='hover:text-white transition-colors'>Digital Transformation</Link></li>
+            </ul>
+          </div>
+          <div>
+            <h4 className='text-md font-semibold mb-4'>Company</h4>
+            <ul className='space-y-2 text-gray-400'>
+              <li><Link href='/about' className='hover:text-white transition-colors'>About Us</Link></li>
+              <li><Link href='/contact' className='hover:text-white transition-colors'>Contact</Link></li>
+              <li><Link href='/blog' className='hover:text-white transition-colors'>Blog</Link></li>
+            </ul>
             <h3 className='font-semibold text-gray-900 mb-3'>Services</h3>
             <div className='space-y-2'>
               <Link
@@ -306,43 +332,27 @@ function Footer(): React.JSX.Element {
             </div>
           </div>
           <div>
-            <h3 className='font-semibold text-gray-900 mb-3'>Contact Info</h3>
-            <div className='text-sm text-gray-600 space-y-1'>
-              <div>Mobile: +1 302 464 0950</div>
-              <div>
-                Email:{' '}
-                <a
-                  href='mailto:kleber@ziontechgroup.com'
-                  className='hover:text-blue-600 transition-colors'
-                >
-                  kleber@ziontechgroup.com
-                </a>
-              </div>
-              <div>
-                Address: 364 E Main St STE 1008
-                <br />
-                Middletown DE 19709
-              </div>
+            <h4 className='text-md font-semibold mb-4'>Contact</h4>
+            <div className='text-gray-400 space-y-2'>
+              <p>Email: contact@ziontechgroup.com</p>
+              <p>Phone: +1 (555) 123-4567</p>
+              <p>Address: 123 AI Innovation Drive, Tech City, TC 12345</p>
             </div>
           </div>
         </div>
-        <div className='border-t border-gray-200 mt-6 pt-4 text-xs text-gray-500 text-center'>
-          © {new Date().getFullYear()} Zion Tech Group. All rights reserved.
+        <div className='border-t border-gray-800 mt-8 pt-8 text-center text-gray-400'>
+          <p>&copy; 2025 Zion Tech Group. All rights reserved.</p>
         </div>
       </div>
     </footer>
   );
 }
 
-export default function Layout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function Layout({ children }: LayoutProps): React.JSX.Element {
   return (
-    <div className='min-h-screen bg-white text-gray-900'>
+    <div className='min-h-screen flex flex-col'>
       <Header />
-      <main className='max-w-6xl mx-auto px-4 py-6 min-h-screen'>
+      <main className='flex-1'>
         {children}
       </main>
       <Footer />
