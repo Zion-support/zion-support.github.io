@@ -1,5 +1,5 @@
 import { Suspense, lazy } from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 // Lazy load heavy components
 const UnifiedContentPromotion = lazy(
@@ -75,13 +75,13 @@ export default function HomePage() {
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <Link
-                href='/contact'
+                to='/contact'
                 className='bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-colors duration-300'
               >
                 Get Started Today
               </Link>
               <Link
-                href='/services'
+                to='/services'
                 className='border-2 border-white text-white hover:bg-white hover:text-blue-900 font-bold py-4 px-8 rounded-lg text-lg transition-colors duration-300'
               >
                 View Services
@@ -130,7 +130,7 @@ export default function HomePage() {
               solutions.
             </p>
             <Link
-              href='/contact'
+              to='/contact'
               className='bg-white text-blue-600 hover:bg-gray-100 font-bold py-4 px-8 rounded-lg text-lg transition-colors duration-300 inline-block'
             >
               Start Your Transformation
