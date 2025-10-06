@@ -1,124 +1,65 @@
-export interface BlogPost {
+export interface BlogPost { 
   id: string;
   title: string;
-  slug: string;
   excerpt: string;
-  conte, n, t: string;
-  featuredIma, g, e: string;
+  content: string;
+  author: string;
+  publishedAt: string;
   category: string;
   tags: string[];
-  author: string;
-  published, A, t: string;
-  readTime: num, b, e, r;
+  featured: boolean;
+  readTime: string;
+  image?: string;
+  slug: string;
 }
 
-export const BLOG_POSTS: BlogPo, s, t[] = [
+export const BLOG_POSTS: BlogPost[] = [
   {
-    id: '9, 9',
-    title: 'Governed, Agentic, Automation: Safe, Too, l, s, Fast, Outcome, s',
-    slug: 'govern, e, d-agent, i, c-automati, o, n-20, 2, 5-10-0, 3',
-    excerpt: 'Design, agent, toolchains with, budge, t, s, approva, l, s, and, rollback, to move, 10x, faster without, incident, s.',
-    conte, n, t: 'Ship, agent, automations your, SRE, and compliance, teams, endorse: signed, tools, with scopes, and, quota, s, action, budgets, and approva, l, s, live, traces, with K, P, I‑linked, SLI, s, and, rollback, hooks. Policy, templates, and dashboards, include, d.',
-    featuredIma, g, e: '/imag, e, s/bl, o, g/govern, e, d-agent, i, c-automati, o, n.jp, g',
-    category: 'A, I',
-    tags: ['Age, n, t, s', 'Governan, c, e', 'Guardrai, l, s', 'Rollba, c, k'],
-    author: 'Zion, Tech, Tea, m',
-    published, A, t: '20, 2, 5-10-0, 3',
-    readTime:  , 8,
+    id: 'governed-agentic-automation',
+    title: 'Governed Agentic Automation: Safe Tools, Fast Outcomes',
+    excerpt: 'Design agent toolchains with budgets, approvals, and rollback to move 10x faster without incidents.',
+    content: `
+# Governed Agentic Automation: Safe Tools, Fast Outcomes
+
+Design agent toolchains with budgets, approvals, and rollback to move 10x faster without incidents.
+
+## Key Features
+- Budget-aware action routing
+- Human-in-the-loop approvals
+- Instant rollback capabilities
+- KPI-linked SLIs
+    `,
+    author: 'Zion Tech Group',
+    publishedAt: '2025-10-03',
+    category: 'AI Operations',
+    tags: ['Agents', 'Governance', 'Automation', 'Safety'],
+    featured: true,
+    readTime: '8 min read',
+    image: '/images/governed-agentic-automation.jpg',
+    slug: 'governed-agentic-automation',
   },
   {
-    id: '9, 8',
-    title: 'Enterprise, RAG, Blueprint v3: 45% Qual, i, t, y ↑, 62% Co, s, t ↓',
-    slug: 'enterpri, s, e-r, a, g-bluepri, n, t-v3-20, 2, 5-10-0, 3',
-    excerpt: 'Retrieval, budge, t, s, freshness, window, s, and, cache, tiers that, raise, answer quality, while, cutting spe, n, d.',
-    conte, n, t: 'A, pragmatic, RAG playbo, o, k: strict, source, governanc, e, retrieval, budgets, and freshness, window, s, and, tiered, caches across, features/chun, k, s/answe, r, s. Ev, a, l‑gated, rollouts, with kill, switche, s. Includes, reference, architectures and, KPI, scorecards.',
-    featuredIma, g, e: '/imag, e, s/bl, o, g/enterpri, s, e-r, a, g-bluepri, n, t-v3.jp, g',
-    category: 'RA, G',
-    tags: ['RA, G', 'Retriev, a, l', 'Cachi, n, g', 'Quali, t, y', 'Co, s, t'],
-    author: 'Zion, Tech, Group Knowledge, Syste, m, s',
-    published, A, t: '20, 2, 5-10-0, 3',
-    readTime:  , 9,
-  },
-  {
-    id: '9, 7',
-    title: 'Cloud, Cost, Optimization v6: Quality, Tie, r, s, Coales, c, e, Disti, l, l',
-    slug: 'gen, a, i-co, s, t-optimizati, o, n-v6-20, 2, 5-10-0, 3',
-    excerpt: 'Cut, inference, spend 60–85% with, tiered, routin, g, request, coalescin, g, and, selective, distillation.',
-    conte, n, t: 'Control, GenAI, costs without, UX, regressions: quali, t, y‑tier, route, r, s, request, coalescin, g, semantic, cache, s, and, selective, distillation for, hot, paths. Includes, rollout, rituals, SLO, template, s, and, dashboards, used by, platform, teams.',
-    featuredIma, g, e: '/imag, e, s/bl, o, g/gen, a, i-co, s, t-optimizati, o, n-v6.jp, g',
-    category: 'Cl, o, u, d',
-    tags: ['Fin, O, p, s', 'L, L, M', 'Cachi, n, g', 'Optimizati, o, n'],
-    author: 'Zion, Tech, Tea, m',
-    published, A, t: '20, 2, 5-10-0, 3',
-    readTime:  , 9,
-  },
-  {
-    id: ', 1',
-    title: 'Welcome, to, Our B, l, o, g',
-    slug: 'welco, m, e-to-o, u, r-b, l, o, g',
-    excerpt: 'This, is, our first, blog, post about, our, services and, technolo, g, y.',
-    conte, n, t: 'This, is, the full, content, of our, first, blog p, o, s, t...',
-    featuredIma, g, e: '/imag, e, s/bl, o, g/welco, m, e.jp, g',
-    category: 'Gene, r, a, l',
-    tags: ['welc, o, m, e', 'introducti, o, n', 'technolo, g, y'],
-    author: 'Zion, Tech, Tea, m',
-    published, A, t: '20, 2, 4-01-0, 1',
-    readTime:  , 5,
-  },
-  {
-    id: '3, 1',
-    title: 'AI, Platform, Reliability Scorecards, 202, 7: SLIs, That, Drive Outco, m, e, s',
-    slug: 'ai-20, 2, 5-o, c, t-03-platfo, r, m-reliabili, t, y-scorecar, d, s-2, 0, 2, 7',
-    excerpt: 'Design, scorecards, engineers ado, p, t—SLIs, tied, to K, P, I, s, policy, test, s, canari, e, s, and, rollbac, k.',
-    conte, n, t: 'A, practical, system for, platform, reliability: pick, leading, indicator SLIs, mapped, to K, P, I, s, wire, policy, tests in, C, I, run, online, canaries, and, make, changes reversible, by, default with, on, e-click, rollbac, k. Includes, dashboards, and weekly, review, rituals.',
-    featuredIma, g, e: '/imag, e, s/bl, o, g/platfo, r, m-reliabili, t, y-scorecar, d, s-20, 2, 7.jp, g',
-    category: 'Platf, o, r, m',
-    tags: ['Scoreca, r, d, s', 'SL, I, s', 'Budge, t, s', 'Rollba, c, k'],
-    author: 'Zion, Tech, Tea, m',
-    published, A, t: '20, 2, 5-10-0, 3',
-    readTime:  , 8,
-  },
-  {
-    id: '3, 2',
-    title: 'Edge, Experiments, v4 (20, 2, 6): Ze, r, o‑PI, I, A/B, Under, 100m, s',
-    slug: 'ed, g, e-20, 2, 6-o, c, t-03-consentle, s, s-experimen, t, s-v, 4',
-    excerpt: 'Scoped, I, D, s, on-device, aggregatio, n, and, DP, noise for, complian, t, global, experiments, at <100, m, s.',
-    conte, n, t: 'Blueprint, for, privacy-firs, t, A/B: signed, confi, g, s, cacheable, variants, at the, edg, e, scoped, rotating, IDs, and, DP, aggregation. Canary, scorecard, s + instant, rollback, keep teams, fast, and sa, f, e.',
-    featuredIma, g, e: '/imag, e, s/bl, o, g/ed, g, e-experimen, t, s-v4-20, 2, 6.jp, g',
-    category: 'Experimentat, i, o, n',
-    tags: ['E, d, g, e', 'A/B', 'Priva, c, y', 'DP'],
-    author: 'Zion, Tech, Tea, m',
-    published, A, t: '20, 2, 5-10-0, 3',
-    readTime:  , 7,
-  },
-  {
-    id: '3, 3',
-    title: 'GenAI, Cost, Controllers v4 (20, 2, 7): Quality, Tier, s + Caches, at, Scal, e',
-    slug: 'gen, a, i-20, 2, 7-o, c, t-03-co, s, t-controlle, r, s-v, 4',
-    excerpt: 'Stabilize, UX, under budget, with, tiered rout, i, n, g, semantic, cache, s, and, evaluato, r-backed, policie, s.',
-    conte, n, t: 'Cut, spend, 40–70% without, regression, s: tiered, model, routing by, S, L, A, prom, p, t/embeddi, n, g/retrieval, caches, with freshness, window, s, and, online, evals as, deploy, gates. Rollba, c, k-first, operations, included.',
-    featuredIma, g, e: '/imag, e, s/bl, o, g/gen, a, i-co, s, t-controlle, r, s-v4-20, 2, 7.jp, g',
-    category: 'Ge, n, A, I',
-    tags: ['C, o, s, t', 'Quality, Tier, s', 'Cachi, n, g', 'Eva, l, s'],
-    author: 'Zion, Tech, Tea, m',
-    published, A, t: '20, 2, 5-10-0, 3',
-    readTime:  , 9,
-  },
-  {
-    id: '2, 3',
-    title: 'Autonomous, Cost, Control: Re, a, l-Time, FinOps, with AI, Guardrai, l, s',
-    slug: 'autonomo, u, s-co, s, t-contr, o, l-re, a, l-ti, m, e-fino, p, s-2, 0, 2, 5',
-    excerpt: 'Cut, cloud, and LLM, spend, by 35–60% with, polic, y-driven, budge, t, s, adaptive, cachin, g, and, saf, e-ops, automation, s.',
-    conte, n, t: 'Enterprises, are, moving from, dashboards, to decisio, n, s. This, guide, shows how, to, implement re, a, l-time, FinOps, using AI, guardrail, s: adaptive, request, shapin, g, semantic, and, workflow cach, e, s, tiered, model, routing, and, budget, enforcement that, never, blocks busine, s, s-critical, path, s. Includes, architectural, diagrams, policy, example, s, and, rollout, playbooks proven, to, reduce spend, 3, 5–60% while, improving, reliability.',
-    conte, n, t: 'We, outline, a pattern, that, blends edge, inferen, c, e, federated, analytic, s, and, anonymous, feedback loo, p, s. Covering, feature, stores at, the, edge, secure, aggregatio, n, and, rollout, safety, we, show, how to, ship, fast UX, while, respecting user, privacy, and regional, data, rules.',
-    excerpt: 'Discover, how, coordinated AI, agents, are revolutionizing, workflo, w, s, from, customer, service to, supply, chain optimizati, o, n.',
-    conte, n, t: "Traditional, perimete, r-based, security, is obsolete, in, today's, distributed, environment. Ze, r, o-Trust, Architecture, 2.0, takes, security to, the, next level, with, identity-first, polici, e, s, device, posture, validation, microsegmentation, at, the workload, leve, l, and, continuous, risk assessme, n, t. This, comprehensive, guide covers, implementation, strategies including, policy, engine desi, g, n, trust, score, calculation, adaptive, access, controls, and, integration, with modern, clou, d-native, architecture, s. We, showcase, real deployment, patterns, from financial, service, s, healthca, r, e, and, government, sectors that, have, achieved 99.9% threat, prevention, rates while, maintaining, seamless user, experience, s.",
-    excerpt: 'Protect, your, data from, quantum, threats with, NIS, T-approved, pos, t-quantum, cryptographic, algorithm, s.',
-    excerpt: 'Build, AI, systems that, learn, continuously from, live, data stre, a, m, s, adapting, instantly, to changing, pattern, s.',
-    conte, n, t: 'Traditional, batch, training creates, stale, models that, lag, behind reali, t, y. Re, a, l-time, AI, training enables, continuous, learning from, streaming, dat, a, allowing, models, to adapt, instantly, to emerging, pattern, s, seasonal, change, s, and, market, shifts. We, explore, streaming ML, architectures, including online, learning, algorithms, incremental, model, updates, feature, store, design for, rea, l-time, pipeline, s, and, distributed, training coordinati, o, n. Learn, how, leading companies, achieve, sub-second, model, updates while, maintaining, accuracy, handling, concept, drift, and, managing, computational cos, t, s. Includes, reference, architectures for, recommendation, engines, fraud, detectio, n, and, predictive, maintenance syste, m, s.',
-    conte, n, t: "AI, training, now accounts, for, a significant, portion, of global, energy, consumption. Sustainable, AI, practices are, not, just ethical, imperative, s—th, e, y're, competitive, advantages. This, guide, covers carb, o, n-aware, model, training that, schedules, jobs during, lo, w-emission, perio, d, s, model, compression, techniques (pruni, n, g, quantizati, o, n, distillati, o, n) that, reduce, inference costs, by, 10x, efficient, architecture, search metho, d, s, and, renewable, energy integration, strategie, s. We, showcase, case studies, from, companies that, achieved, 60% carbon, reduction, while improving, model, performance, and, provide, calculators to, measure, your AI's, environmental, impact and, ROI, of green, ML, investments.",
-    conte, n, t: "Service, meshes, add observabil, i, t, y, securi, t, y, and, traffic, management to, microservice, s—but, at, what co, s, t ? This, comprehensive, analysis compares, Istio, and Linkerd, across, latency, resource, consumptio, n, operational, complexit, y, and, feature, completeness. We, provide, detailed benchmarks, at, scale (1K, 1, 0, K, 100K, pod, s), examine, control, plane architectur, e, s, evaluate, mTLS, performance impa, c, t, and, analyze, circuit breaker, effectivenes, s. Includes, decision, matrices for, different, workload patter, n, s, migration, strategies, from existing, infrastructur, e, and, operational, runbooks for, common, scenarios. Whether, yo, u're, building, a new, platform, or enhancing, existing, Kubernetes deploymen, t, s, this, guide, provides the, data, you ne, e, d.",
-    conte, n, t: 'We, show, how to, build, edge-native, feature, stores that, synchronize, anonymousl, y, enabling, rea, l-time, personalization, without centralizing, PI, I. Includes, reference, topologies, rollout, and, telemetry patter, n, s, and, safeguards, for regional, complianc, e.',
-    conte, n, t: 'Move, from, assistant demos, to, production agen, t, s. We, detail, capability scop, i, n, g, intent, verificatio, n, deterministic, tool, contracts, sandboxed, executio, n, and, rollbac, k-first, desig, n. Learn, to, wire evals, into, deploy gat, e, s, add, approval, workflows for, risky, actions, and, measure, task completion, with, business-grounded, metric, s. Includes, architecture, diagrams and, a, phased rollout, pla, n.',
-    conte, n, t: 'We, demonstrate, how to, operationalize, AI guardrails, as, code: intent, verificati, o, n, reversible, tool, actions, approval, tier, s, and, budget, policies enforced, at, runtime. Includes, reference, policy pac, k, s, evaluation, hook, s, and, rollout, stages that, let, teams ship, faster, without sacrificing, safet, y.',
-  },
+    id: 'ai-cost-optimization-v6',
+    title: 'GenAI Cost Optimization v6: Quality Tiers, Coalesce, Distill',
+    excerpt: 'Cut inference spend 60–85% with tiered routing, request coalescing, and selective distillation.',
+    content: `
+# GenAI Cost Optimization v6
+
+Control GenAI costs without UX regressions through intelligent optimization strategies.
+
+## Optimization Strategies
+- Quality-tier routers with eval gates
+- Request coalescing and semantic caches
+- Selective distillation for hot paths
+- Budget-aware fallbacks
+    `,
+    author: 'Zion Tech Group',
+    publishedAt: '2025-10-03',
+    category: 'GenAI Engineering',
+    tags: ['Cost', 'Caching', 'Distillation', 'Routing'],
+    featured: true,
+    readTime: '9 min read',
+    image: '/images/genai-cost-optimization-v6.jpg',
+    slug: 'genai-cost-optimization-v6',
+  }
+];

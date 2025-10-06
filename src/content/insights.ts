@@ -1,14 +1,35 @@
-export type InsightArticle = {
-  id: string; title: string;
-  summa, r, y: string;
+export interface Insight { 
+  id: string;
+  title: string;
+  summary: string;
   category: string;
   date: string; // ISO date string
-  readMinut, e, s: nu, m, b, e, r;
->>>>>>> origin/merge-fixes-20251005-193002
-    id: 'ai-co, s, t-governan, c, e-framew, o, r, k',
-    title: 'AI, Cost, Governance: FinOps, Framework, for ML, Tea, m, s',
-    summa, r, y: 'Control, AI, spend with, token, budget, s, model, righ, t-sizi, n, g, and, automated, cost alerts, tied, to business, KPI, s.',
-    category: 'AI, FinO, p, s',
-    date: '20, 2, 5-09-3, 0',
-    readMinut, e, s:  , 6,
+  readMinutes: number;
+}
+
+export const insights: Insight[] = [
+  {
+    id: 'ai-cost-governance-framework',
+    title: 'AI Cost Governance: FinOps Framework for ML Teams',
+    summary: 'Control AI spend with token budgets, model right-sizing, and automated cost alerts tied to business KPIs.',
+    category: 'AI Operations',
+    date: '2025-10-01',
+    readMinutes: 8,
   },
+  {
+    id: 'enterprise-ai-scorecards-2025',
+    title: 'Enterprise AI Scorecards 2025: KPI-Linked SLIs and Canary Gates',
+    summary: 'Implement production-ready AI scorecards with KPI-linked SLIs, canary deployments, and instant rollback capabilities.',
+    category: 'AI Reliability',
+    date: '2025-10-02',
+    readMinutes: 12,
+  },
+  {
+    id: 'rag-quality-budgets-production',
+    title: 'RAG Quality Budgets in Production: Freshness Windows and Cache Tiers',
+    summary: 'Optimize RAG systems with quality budgets, freshness windows, and tiered caching strategies for cost-effective performance.',
+    category: 'RAG Engineering',
+    date: '2025-10-03',
+    readMinutes: 10,
+  }
+];

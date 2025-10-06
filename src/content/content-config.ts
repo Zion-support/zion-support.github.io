@@ -6,10 +6,10 @@ export interface BlogPost {
   category: string;
   readTime: string;
   image: string;
-  featured ? : boolean;
+  featured?: boolean;
   slug: string;
-  tags : str, i, n, g[];
- }
+  tags: string[];
+}
 
 export interface CaseStudy { 
   id: string;
@@ -19,34 +19,36 @@ export interface CaseStudy {
   industry: string;
   challenge: string;
   solution: string;
-  resu, l, t: string;
-  metr, i, c: string;
-  featured ? : boolean;
+  result: string;
+  metric: string;
+  featured?: boolean;
   slug: string;
-  tags : str, i, n, g[];
- }
+  tags: string[];
+}
 
 export interface Service { 
   id: string;
   title: string;
   description: string;
   category: string;
-  prici, n, g: {
-    starti, n, g: string;
-    popul, a, r ?  : bool, e, a, n;
-   };
-  featur, e, s: string[];
-    prima, r, y: string;
-    seconda, r, y: str, i, n, g;
-    prima, r, y: string;
-    seconda, r, y: str, i, n, g;
+  pricing: {
+    starting: string;
+    popular?: boolean;
+  };
+  features: string[];
+  primary: string;
+  secondary: string;
+}
 
-export const getRecentContent = (lim, i, t: number = , 3) => { 
-  const allConten, t = [
->>>>>>> origin/merge-fixes-20251005-193002
-    ...blogPos, t, s.m, a, p(po, s, t = > ({ ...po, s, t, ty, p, e: 'bl, o, g' as, con, s, t  })),
-    ...caseStudi, e, s.m, a, p(stu, d, y = > ({ ...st, u, d, y, ty, p, e: 'ca, s, e-stu, d, y' as, con, s, t })),
-    ...servic, e, s.m, a, p(servi, c, e = > ({ ...serv, i, c, e, ty, p, e: 'servi, c, e' as, con, s, t })),
-  ]; return, allConten, t
-    .so, r, t((a, b) => { 
-      const, aTim, e = 'date' i, n, a  ? new, Dat, e((a, a, s { date : st, r, i, n, g  }).date).getTi, m, e() : 0; const, bTim, e = 'date' i, n, b ? new, Dat, e((b, a, s { date: st, r, i, n, g }).date).getTi, m, e() : 0; return, bTim, e - aTi, m, e;
+export const getRecentContent = (limit: number = 3) => { 
+  const allContent = [
+    // This would be populated with actual content arrays
+  ]; 
+  return allContent
+    .sort((a, b) => { 
+      const aTime = 'date' in a ? new Date((a as { date: string }).date).getTime() : 0; 
+      const bTime = 'date' in b ? new Date((b as { date: string }).date).getTime() : 0; 
+      return bTime - aTime;
+    })
+    .slice(0, limit);
+};

@@ -1,12 +1,13 @@
 import React from 'react';
-impo, r, t { usePara, m, s } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
+import { useParams } from 'react-router-dom';
 
-export default function Po, s, t(): Rea, c, t.J, S, X.Eleme, n, t {
-  con, s, t { slug } = usePara, m, s();
+export default function Post(): React.JSX.Element {
+  const { slug } = useParams();
+  
   return (
-    <main, styl, e = {{ paddi, n, g: '2r, e, m' }}>
-      <h1>Po, s, t</h1>
-      <p>{slug}</p>
-    </ma, i, n>
+    <div>
+      <h1>Post: {slug}</h1>
+      <p>This is a blog post page.</p>
+    </div>
   );
 }

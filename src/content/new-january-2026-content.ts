@@ -1,23 +1,77 @@
-// New January 2026 Conte n t - Revolutionary AI Breakthroughs
-export interface BlogPost { 
+export interface January2026Content { 
   id: string;
   title: string;
-  excerpt: string;
-  conte, n, t: string;
+  description: string;
+  content: string;
   author: string;
-  published, A, t: string;
-  readTime: number;
+  publishedAt: string;
   category: string;
   tags: string[];
   featured: boolean;
-  imageUrl ?  : str, i, n, g;
- }
+  readTime: string;
+  image?: string;
+  valueProposition: string;
+  pricing: {
+    starting: string;
+    enterprise: string;
+  };
+}
 
-export interface Service {
-  id: string;
-  na, m, e: string;
-  description: string;
-  featur, e, s: string[];
-  prici, n, g: {
-    starti, n, g: string;
-    enterpri, s, e: str, i, n, g;
+export const newJanuary2026Content: January2026Content[] = [
+  {
+    id: 'ai-2026-hyperconscious-computing',
+    title: 'AI 2026: Hyperconscious Computing Revolution',
+    description: 'Revolutionary breakthrough in hyperconscious AI systems achieving genuine self-awareness and creative autonomy.',
+    content: `
+# AI 2026: Hyperconscious Computing Revolution
+
+The next evolution of AI is here - systems that not only think but feel, create, and understand consciousness itself.
+
+## Revolutionary Features
+- Genuine self-awareness and emotional intelligence
+- Creative autonomy and artistic expression
+- $1.2T enterprise value creation potential
+- Revolutionary applications across all industries
+    `,
+    author: 'Zion Tech Group',
+    publishedAt: '2026-01-01',
+    category: 'AI Consciousness',
+    tags: ['AI Consciousness', 'Hyperconscious Computing', '2026', 'Breakthrough'],
+    featured: true,
+    readTime: '25 min read',
+    image: '/images/ai-2026-hyperconscious-computing.jpg',
+    valueProposition: '$1.2T enterprise value creation',
+    pricing: {
+      starting: 'Contact for pricing',
+      enterprise: 'Custom solutions available',
+    },
+  },
+  {
+    id: 'quantum-ai-synthesis-2026',
+    title: 'Quantum AI Synthesis 2026: The Convergence Revolution',
+    description: 'Groundbreaking fusion of quantum computing and AI creating unprecedented computational capabilities.',
+    content: `
+# Quantum AI Synthesis 2026
+
+The convergence of quantum computing and artificial intelligence opens new frontiers in computational capability.
+
+## Revolutionary Capabilities
+- Quantum-enhanced machine learning algorithms
+- Exponential speedup in complex problem solving
+- Unprecedented computational efficiency
+- New paradigms in AI development
+    `,
+    author: 'Zion Tech Group',
+    publishedAt: '2026-01-02',
+    category: 'Quantum AI',
+    tags: ['Quantum AI', 'Synthesis', '2026', 'Computing'],
+    featured: true,
+    readTime: '20 min read',
+    image: '/images/quantum-ai-synthesis-2026.jpg',
+    valueProposition: 'Exponential computational capabilities',
+    pricing: {
+      starting: 'Contact for pricing',
+      enterprise: 'Custom solutions available',
+    },
+  }
+];
