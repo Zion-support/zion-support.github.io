@@ -57,29 +57,76 @@ const AdvancedPerformanceMonitor: React.FC<AdvancedPerformanceMonitorProps> = ({
       observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
     } catch (e) {
       console.warn('Performance Observer not supported');
-  }, [isMonitoring, measurePerformance]);
+    }
 
     return () => {
       observer.disconnect();
-      window.removeEventListener('keydown', handleKeyPress);
-    <div
-      style={{
-        position: 'fixed',
-        top: '20px',
-        right: '20px',
-        background: 'rgba(0, 0, 0, 0.8)',
-        color: 'white',
-        padding: '10px',
-        borderRadius: '5px',
-        fontSize: '12px',
-        zIndex: 9999
-      }}
-    >
-      <h4>Performance Metrics</h4>
-      <div>LCP: {metrics.lcp ? metrics.lcp.toFixed(2) + 'ms' : 'N/A'}</div>
-      <div>FID: {metrics.fid ? metrics.fid.toFixed(2) + 'ms' : 'N/A'}</div>
-      <div>CLS: {metrics.cls ? metrics.cls.toFixed(3) : 'N/A'}</div>
-      <div style={{ marginTop: '10px', fontSize: '10px' }}>
-        Press Ctrl+Shift+P to toggle
-      </div>
-    </div>
+    };
+  }, []);
+
+  useEffect(() => {
+    if (isMonitoring) {
+      const cleanup = measurePerformance();
+      return cleanup;
+    }
+  }, [isMonitoring, measurePerformance]);
+
+  const performanceScore = useMemo(() => {
+    let score = 100;
+    
+    if (metrics.lcp && metrics.lcp > (threshold.lcp || 2500)) {
+      score -= 20;
+    }
+    if (metrics.fid && metrics.fid > (threshold.fid || 100)) {
+      score -= 20;
+    }
+    if (metrics.cls && metrics.cls > (threshold.cls || 0.1)) {
+      score -= 20;
+    }
+    
+    return Math.max(0, score);
+  }, [metrics, threshold]);
+
+  const handleKeyPress = useCallback((event: KeyboardEvent) => {
+    if (event.ctrlKey && event.key === 'p') {
+      setIsMonitoring(prev => !prev);
+    }
+  }, []);
+
+  useEffect(() => {
+    window.addEventListener('keydown', handleKeyPress);
+    return () => window.removeEventListener('keydown', handleKeyPress);
+  }, [handleKeyPress]);
+
+  return (
+    <>
+      {children}
+      {isMonitoring && (
+        <div
+          style={{
+            position: 'fixed',
+            top: '20px',
+            right: '20px',
+            background: 'rgba(0, 0, 0, 0.8)',
+            color: 'white',
+            padding: '10px',
+            borderRadius: '5px',
+            fontSize: '12px',
+            zIndex: 9999,
+            fontFamily: 'monospace'
+          }}
+        >
+          <div>Performance Score: {performanceScore}/100</div>
+          {metrics.lcp && <div>LCP: {metrics.lcp.toFixed(2)}ms</div>}
+          {metrics.fid && <div>FID: {metrics.fid.toFixed(2)}ms</div>}
+          {metrics.cls && <div>CLS: {metrics.cls.toFixed(3)}</div>}
+          <div style={{ fontSize: '10px', marginTop: '5px' }}>
+            Press Ctrl+P to toggle
+          </div>
+        </div>
+      )}
+    </>
+  );
+};
+
+export default AdvancedPerformanceMonitor;

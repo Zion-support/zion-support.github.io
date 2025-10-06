@@ -119,16 +119,12 @@ export const october2025Breakthroughs: BlogPost[] = [
   },
 ];
 
-/**
- * All blog posts combined
- */
+// Combine all blog posts
 export const allBlogPosts: BlogPost[] = [
   ...october2025Breakthroughs,
 ];
 
-/**
- * Helper functions
- */
+// Helper functions
 export const getFeaturedPosts = (): BlogPost[] => {
   return allBlogPosts.filter(post => post.featured);
 };

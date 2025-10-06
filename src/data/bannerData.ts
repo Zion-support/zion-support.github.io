@@ -11,6 +11,7 @@ export interface BannerData {
   isActive: boolean;
   startDate?: string;
   endDate?: string;
+  tags?: string[];
 }
 
 export const bannerData: BannerData[] = [
@@ -26,6 +27,7 @@ export const bannerData: BannerData[] = [
     isActive: true,
     startDate: '2026-01-01',
     endDate: '2026-12-31',
+    tags: ['AI', 'breakthroughs', 'quantum', 'enterprise']
   },
   {
     id: 'october-2025-llm-orchestration',
@@ -39,6 +41,7 @@ export const bannerData: BannerData[] = [
     isActive: true,
     startDate: '2025-10-01',
     endDate: '2026-03-31',
+    tags: ['LLM', 'orchestration', 'enterprise', 'ROI']
   },
   {
     id: 'cognitive-orchestration',
@@ -52,6 +55,7 @@ export const bannerData: BannerData[] = [
     isActive: true,
     startDate: '2025-10-01',
     endDate: '2026-06-30',
+    tags: ['cognitive', 'orchestration', 'autonomous', 'AI agents']
   },
   {
     id: 'ai-ethics-governance',
@@ -65,6 +69,7 @@ export const bannerData: BannerData[] = [
     isActive: true,
     startDate: '2025-10-01',
     endDate: '2026-12-31',
+    tags: ['AI ethics', 'governance', 'compliance', 'framework']
   },
   {
     id: 'real-time-intelligence-mesh',
@@ -78,6 +83,7 @@ export const bannerData: BannerData[] = [
     isActive: true,
     startDate: '2025-10-01',
     endDate: '2026-09-30',
+    tags: ['real-time', 'intelligence', 'mesh', 'latency']
   },
   {
     id: 'edge-ai-5g-revolution',
@@ -91,6 +97,7 @@ export const bannerData: BannerData[] = [
     isActive: true,
     startDate: '2025-10-01',
     endDate: '2026-08-31',
+    tags: ['edge AI', '5G', 'automotive', 'IoT']
   },
   {
     id: 'generative-ai-code-generation',
@@ -104,6 +111,7 @@ export const bannerData: BannerData[] = [
     isActive: true,
     startDate: '2025-10-01',
     endDate: '2026-07-31',
+    tags: ['generative AI', 'code generation', 'development', 'productivity']
   },
   {
     id: 'quantum-edge-computing',
@@ -117,7 +125,8 @@ export const bannerData: BannerData[] = [
     isActive: true,
     startDate: '2025-10-01',
     endDate: '2026-10-31',
-  },
+    tags: ['quantum', 'edge computing', 'accuracy', 'performance']
+  }
 ];
 
 export const getBannersByCategory = (category: string): BannerData[] => {
