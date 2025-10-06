@@ -1,20 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { Component, type ErrorInfo, type ReactNode } from 'react';
 import React, { Component, type ErrorInfo, type ReactNode } from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e62
-import React, { Component, type ErrorInfo, type ReactNode } from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-cfe1
-=======
-import React, { Component, type ErrorInfo, type ReactNode } from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-96bc
-=======
-import React, { Component, type ErrorInfo, type ReactNode } from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-debd
-=======
-import React, { Component, type ErrorInfo, type ReactNode } from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-dda3
 import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
 
 interface Props {
@@ -43,7 +27,7 @@ class ErrorBoundary extends Component<Props, State> {
     };
   }
 
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+  override componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     console.error('ErrorBoundary caught an error:', error, errorInfo);
     
     // Report error to analytics/monitoring service
@@ -77,7 +61,7 @@ class ErrorBoundary extends Component<Props, State> {
     window.location.href = '/';
   };
 
-  render() {
+  override render() {
     if (this.state.hasError) {
       return this.props.fallback || (
         <div className="min-h-screen flex items-center justify-center bg-gray-50">
@@ -119,20 +103,11 @@ class ErrorBoundary extends Component<Props, State> {
                 Go Home
               </button>
             </div>
-<<<<<<< HEAD
-            <button
-              onClick={() => window.location.reload()}
-              className="mt-4 text-gray-400 hover:text-white text-sm underline"
-            >
-              Or refresh the page
-            </button>
-=======
             {this.state.errorId && (
               <p className="text-xs text-gray-400 mt-4">
                 Error ID: {this.state.errorId}
               </p>
             )}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-96bc
           </div>
         </div>
       );
@@ -143,14 +118,3 @@ class ErrorBoundary extends Component<Props, State> {
 }
 
 export default ErrorBoundary;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-export default ErrorBoundary;
->>>>>>> cursor/fix-errors-and-merge-to-main-cfe1
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-96bc
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-debd
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-dda3
