@@ -47,21 +47,30 @@ const InteractiveContentShowcase2026 = memo(() => (
 ));
 
 // Error Boundary Component
-class ErrorBoundary extends React.Component {
-  constructor(props) {
+interface ErrorBoundaryState {
+  hasError: boolean;
+  error: Error | null;
+}
+
+interface ErrorBoundaryProps {
+  children: React.ReactNode;
+}
+
+class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundaryState> {
+  constructor(props: ErrorBoundaryProps) {
     super(props);
     this.state = { hasError: false, error: null };
   }
 
-  static getDerivedStateFromError(error) {
+  static getDerivedStateFromError(error: Error): ErrorBoundaryState {
     return { hasError: true, error };
   }
 
-  componentDidCatch(error, errorInfo) {
+  override componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
     console.error('App Error Boundary caught an error:', error, errorInfo);
   }
 
-  render() {
+  override render() {
     if (this.state.hasError) {
       return (
         <div className="min-h-screen flex items-center justify-center bg-gray-50">
@@ -160,7 +169,7 @@ export default function App() {
       // Add performance monitoring
       if ('performance' in window) {
         window.addEventListener('load', () => {
-          const perfData = performance.getEntriesByType('navigation')[0];
+          const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
           if (perfData) {
             console.log('Page Load Performance:', {
               domContentLoaded: perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart,
@@ -174,9 +183,10 @@ export default function App() {
   }, []);
 
   // Memoized event handlers for better performance
-  const handleNewsletterSubmit = useCallback((e) => {
+  const handleNewsletterSubmit = useCallback((e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const email = e.target.email.value;
+    const target = e.target as HTMLFormElement;
+    const email = (target.elements.namedItem('email') as HTMLInputElement)?.value;
     if (email) {
       console.log('Newsletter signup:', email);
       // Add actual newsletter signup logic here
@@ -186,8 +196,8 @@ export default function App() {
 
   const handlePhoneClick = useCallback(() => {
     // Track phone clicks for analytics
-    if (typeof gtag !== 'undefined') {
-      gtag('event', 'phone_click', {
+    if (typeof window !== 'undefined' && 'gtag' in window) {
+      (window as any).gtag('event', 'phone_click', {
         event_category: 'engagement',
         event_label: 'main_phone_number'
       });
