@@ -1,6 +1,6 @@
 /**
- * Centralized Error Handling Utility
- * Provides comprehensive error handling and reporting for the application
+ * Enhanced Error Handler
+ * Comprehensive error handling and reporting utilities
  */
 
 export interface ErrorContext {
@@ -8,8 +8,8 @@ export interface ErrorContext {
   action?: string;
   userId?: string;
   timestamp: number;
-  userAgent?: string;
-  url?: string;
+  userAgent?: string | undefined;
+  url?: string | undefined;
 }
 
 export interface ErrorReport {
@@ -20,117 +20,148 @@ export interface ErrorReport {
 }
 
 class ErrorHandler {
+  private static instance: ErrorHandler;
   private errorQueue: ErrorReport[] = [];
   private maxQueueSize = 100;
 
+  static getInstance(): ErrorHandler {
+    if (!ErrorHandler.instance) {
+      ErrorHandler.instance = new ErrorHandler();
+    }
+    return ErrorHandler.instance;
+  }
+
   /**
-   * Log an error with context
+   * Report an error with context
    */
-  public logError(
-    error: Error | string,
-    context: Partial<ErrorContext> = {},
-    severity: ErrorReport['severity'] = 'medium'
-  ): void {
+  reportError(error: Error, context: Partial<ErrorContext> = {}): void {
     const errorReport: ErrorReport = {
-      message: typeof error === 'string' ? error : error.message,
-      stack: typeof error === 'string' ? undefined : error.stack,
+      message: error.message,
+      stack: error.stack,
       context: {
         timestamp: Date.now(),
         userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : undefined,
         url: typeof window !== 'undefined' ? window.location.href : undefined,
-        ...context,
-      } as ErrorContext,
-      severity,
+        ...context
+      },
+      severity: this.determineSeverity(error)
     };
 
-    this.errorQueue.push(errorReport);
+    this.addToQueue(errorReport);
+    this.logError(errorReport);
+  }
 
+  /**
+   * Determine error severity based on error type and context
+   */
+  private determineSeverity(error: Error): 'low' | 'medium' | 'high' | 'critical' {
+    if (error.name === 'ChunkLoadError' || error.name === 'Loading chunk') {
+      return 'low'; // Network-related chunk loading errors
+    }
+    
+    if (error.message.includes('ResizeObserver loop limit exceeded')) {
+      return 'low'; // Common browser quirk
+    }
+    
+    if (error.name === 'TypeError' && error.message.includes('Cannot read property')) {
+      return 'medium'; // Common JavaScript errors
+    }
+    
+    if (error.name === 'ReferenceError') {
+      return 'high'; // Undefined variable errors
+    }
+    
+    if (error.name === 'SyntaxError') {
+      return 'critical'; // Syntax errors are critical
+    }
+    
+    return 'medium';
+  }
+
+  /**
+   * Add error to queue for batch processing
+   */
+  private addToQueue(errorReport: ErrorReport): void {
+    this.errorQueue.push(errorReport);
+    
     // Keep queue size manageable
     if (this.errorQueue.length > this.maxQueueSize) {
       this.errorQueue.shift();
     }
+  }
 
-    // Log to console in development
-    if (process.env.NODE_ENV === 'development') {
-      console.error('Error logged:', errorReport);
-    }
-
-    // Send to external service in production
-    if (process.env.NODE_ENV === 'production') {
-      this.sendToErrorService(errorReport);
+  /**
+   * Log error to console and external service
+   */
+  private logError(errorReport: ErrorReport): void {
+    // Console logging
+    console.error('Error Report:', errorReport);
+    
+    // Send to external service (if available)
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', 'error', {
+        error_message: errorReport.message,
+        error_severity: errorReport.severity,
+        error_component: errorReport.context.component,
+        error_action: errorReport.context.action,
+        non_interaction: true
+      });
     }
   }
 
   /**
-   * Send error to external error reporting service
+   * Get error statistics
    */
-  private async sendToErrorService(errorReport: ErrorReport): Promise<void> {
-    try {
-      // In a real application, you would send to services like Sentry, LogRocket, etc.
-      // For now, we'll just log to console
-      console.error('Error report:', errorReport);
-    } catch (err) {
-      console.error('Failed to send error report:', err);
-    }
-  }
+  getErrorStats(): {
+    total: number;
+    bySeverity: Record<string, number>;
+    recent: ErrorReport[];
+  } {
+    const bySeverity = this.errorQueue.reduce((acc, error) => {
+      acc[error.severity] = (acc[error.severity] || 0) + 1;
+      return acc;
+    }, {} as Record<string, number>);
 
-  /**
-   * Get all errors from the queue
-   */
-  public getErrors(): ErrorReport[] {
-    return [...this.errorQueue];
+    return {
+      total: this.errorQueue.length,
+      bySeverity,
+      recent: this.errorQueue.slice(-10) // Last 10 errors
+    };
   }
 
   /**
    * Clear error queue
    */
-  public clearErrors(): void {
+  clearErrors(): void {
     this.errorQueue = [];
-  }
-
-  /**
-   * Get errors by severity
-   */
-  public getErrorsBySeverity(severity: ErrorReport['severity']): ErrorReport[] {
-    return this.errorQueue.filter(error => error.severity === severity);
-  }
-
-  /**
-   * Setup global error handlers
-   */
-  public setupGlobalHandlers(): void {
-    if (typeof window === 'undefined') return;
-
-    // Handle unhandled promise rejections
-    window.addEventListener('unhandledrejection', (event) => {
-      this.logError(
-        new Error(event.reason),
-        { action: 'unhandledrejection' },
-        'high'
-      );
-    });
-
-    // Handle JavaScript errors
-    window.addEventListener('error', (event) => {
-      this.logError(
-        event.error || new Error(event.message),
-        {
-          action: 'javascript_error',
-          url: event.filename,
-          component: 'global',
-        },
-        'high'
-      );
-    });
   }
 }
 
-// Create singleton instance
-export const errorHandler = new ErrorHandler();
+// Export singleton instance
+export const errorHandler = ErrorHandler.getInstance();
 
-// Setup global handlers
+// Global error handler setup
 if (typeof window !== 'undefined') {
-  errorHandler.setupGlobalHandlers();
+  // Handle unhandled promise rejections
+  window.addEventListener('unhandledrejection', (event) => {
+    errorHandler.reportError(
+      new Error(event.reason),
+      { component: 'global', action: 'unhandledrejection' }
+    );
+  });
+
+  // Handle uncaught errors
+  window.addEventListener('error', (event) => {
+    errorHandler.reportError(
+      event.error || new Error(event.message),
+      { 
+        component: 'global', 
+        action: 'uncaught',
+        url: event.filename,
+        timestamp: event.timeStamp
+      }
+    );
+  });
 }
 
 export default errorHandler;
