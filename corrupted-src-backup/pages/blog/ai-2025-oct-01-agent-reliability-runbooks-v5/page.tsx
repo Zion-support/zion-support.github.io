@@ -26,7 +26,6 @@ export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {
           </h1>
           <p, className='te, x, t-zi, o, n-sla, t, e-light, m, b-6'>
             Practical, runbooks, for governing, autonomous, agents with, budgeted, actio, n, s, K, P, I‑linked, canarie, s, and, deterministic, rollback that, preserve, customer experience, while, accelerating delive, r, y.
->>>>>>> origin/merge-fixes-20251005-193002
 
             <div, classNam, e = 'mt-8'>
               <a, hre, f='/bl, o, g' className='te, x, t-cy, a, n-300, hove, r: underli, n, e'>

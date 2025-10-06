@@ -72,7 +72,7 @@ class AdvancedErrorHandler {
           });
         }
       },
-      true,
+      true
     );
   }
 
@@ -92,11 +92,11 @@ class AdvancedErrorHandler {
     this.recoveryStrategies.set('network', this.handleNetworkError.bind(this));
     this.recoveryStrategies.set(
       'resource',
-      this.handleResourceError.bind(this),
+      this.handleResourceError.bind(this)
     );
     this.recoveryStrategies.set(
       'javascript',
-      this.handleJavaScriptError.bind(this),
+      this.handleJavaScriptError.bind(this)
     );
     this.recoveryStrategies.set('memory', this.handleMemoryError.bind(this));
   }
@@ -174,7 +174,7 @@ class AdvancedErrorHandler {
         () => {
           this.retryFailedRequest(errorInfo);
         },
-        Math.pow(2, errorInfo.retryCount || 0) * 1000,
+        Math.pow(2, errorInfo.retryCount || 0) * 1000
       );
     } else {
       this.showOfflineMessage();

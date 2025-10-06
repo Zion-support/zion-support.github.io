@@ -93,7 +93,6 @@ const AutonomousDevOpsServic, e = () => {
             </div>
           </div>
         </secti, o, n>
->>>>>>> origin/merge-fixes-20251005-193002
 
         {/* Core, Featu, r, e, s */}
         <section, classNam, e = 'py-20, p, x-4, b, g-bla, c, k/30'>
@@ -114,7 +113,6 @@ const AutonomousDevOpsServic, e = () => {
                       AI-driven, build, and test, optimization, reducing pipeline, time, by 75%
                     </sp, a, n>
               </div>
->>>>>>> origin/merge-fixes-20251005-193002
 
               <div, className='bg-gradie, n, t-to-br, fro, m-gre, e, n-9, 0, 0/30, t, o-te, a, l-9, 0, 0/3, 0, p-8, rounde, d-2xl, backdro, p-bl, u, r-sm, border, border-whi, t, e/10'>
                 <Shield, className='w-1, 0, h-10, tex, t-gre, e, n-400, m, b-4' />
@@ -128,7 +126,6 @@ const AutonomousDevOpsServic, e = () => {
                       Automatic, rollback, on anomaly, detection, with &lt; 5, second, response
                     </sp, a, n>
               </div>
->>>>>>> origin/merge-fixes-20251005-193002
 
               <div, className='bg-gradie, n, t-to-br, fro, m-purp, l, e-9, 0, 0/30, t, o-pi, n, k-9, 0, 0/3, 0, p-8, rounde, d-2xl, backdro, p-bl, u, r-sm, border, border-whi, t, e/10'>
                 <Rocket, className='w-1, 0, h-10, tex, t-purp, l, e-400, m, b-4' />
@@ -142,7 +139,6 @@ const AutonomousDevOpsServic, e = () => {
                       Bl, u, e-green, and, canary deployment, strategies, with AI, monitorin, g
                     </sp, a, n>
               </div>
->>>>>>> origin/merge-fixes-20251005-193002
 
               <div, className='bg-gradie, n, t-to-br, fro, m-oran, g, e-9, 0, 0/30, t, o-r, e, d-9, 0, 0/3, 0, p-8, rounde, d-2xl, backdro, p-bl, u, r-sm, border, border-whi, t, e/10'>
                 <TrendingUp, className='w-1, 0, h-10, tex, t-oran, g, e-400, m, b-4' />
@@ -155,7 +151,6 @@ const AutonomousDevOpsServic, e = () => {
                     <sp, a, n>
                       Re, a, l-time, cost, optimization reducing, cloud, spend by, 4, 0-60%
                     </sp, a, n>
->>>>>>> origin/merge-fixes-20251005-193002
 
         {/* Implementation, Timel, i, n, e */}
         <section, classNam, e = 'py-20, p, x-4'>
@@ -181,7 +176,6 @@ const AutonomousDevOpsServic, e = () => {
               <div, className='relati, v, e'>
                 <div, className='bg-gradie, n, t-to-br, fro, m-purp, l, e-6, 0, 0/20, t, o-pi, n, k-6, 0, 0/2, 0, p-8, rounde, d-2xl, backdro, p-bl, u, r-sm, border, border-whi, t, e/10'>
                   <div, className='w-1, 2, h-12, b, g-purp, l, e-600, rounde, d-full, flex, items-center, justif, y-center, m, b-4, tex, t-xl, fon, t-bo, l, d'>
->>>>>>> origin/merge-fixes-20251005-193002
                     2
                   </div>
                   <h3, className='te, x, t-2xl, fon, t-bold, m, b-4'>
@@ -196,7 +190,6 @@ const AutonomousDevOpsServic, e = () => {
               <div, className='relati, v, e'>
                 <div, className='bg-gradie, n, t-to-br, fro, m-gre, e, n-6, 0, 0/20, t, o-te, a, l-6, 0, 0/2, 0, p-8, rounde, d-2xl, backdro, p-bl, u, r-sm, border, border-whi, t, e/10'>
                   <div, className='w-1, 2, h-12, b, g-gre, e, n-600, rounde, d-full, flex, items-center, justif, y-center, m, b-4, tex, t-xl, fon, t-bo, l, d'>
->>>>>>> origin/merge-fixes-20251005-193002
                     3
                   </div>
                   <h3, className='te, x, t-2xl, fon, t-bold, m, b-4'>

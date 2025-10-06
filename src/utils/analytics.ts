@@ -6,20 +6,20 @@
 export interface AnalyticsEvent {
   name: string;
   category: string;
-  action?: string;
-  label?: string;
-  value?: number;
-  properties?: Record<string, any>;
+  action?: string | undefined;
+  label?: string | undefined;
+  value?: number | undefined;
+  properties?: Record<string, any> | undefined;
   timestamp: number;
 }
 
 export interface UserProperties {
-  userId?: string;
+  userId?: string | undefined;
   sessionId: string;
   userAgent: string;
   language: string;
   timezone: string;
-  referrer?: string;
+  referrer?: string | undefined;
 }
 
 class Analytics {
@@ -57,7 +57,15 @@ class Analytics {
       userAgent: window.navigator.userAgent,
       language: window.navigator.language,
       timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
+<<<<<<< HEAD
+      referrer: document.referrer || '',
+=======
+<<<<<<< HEAD
+      referrer: document.referrer || '',
+=======
       referrer: document.referrer || undefined,
+>>>>>>> main
+>>>>>>> main
     };
   }
 
@@ -75,10 +83,30 @@ class Analytics {
     const event: AnalyticsEvent = {
       name,
       category,
-      action,
-      label,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      action: action || '',
+      label: label || undefined,
       value,
       properties,
+=======
+<<<<<<< HEAD
+      action: action || '',
+      label: label || '',
+      value: value || 0,
+      properties: properties || {},
+=======
+>>>>>>> main
+      action: action || undefined,
+      label: label || undefined,
+      value: value || undefined,
+      properties: properties || undefined,
+<<<<<<< HEAD
+=======
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
       timestamp: Date.now(),
     };
 
@@ -88,8 +116,13 @@ class Analytics {
     this.sendToAnalytics(event);
 
     // Log in development
+<<<<<<< HEAD
     if (process.env.NODE_ENV === 'development') {
+      // Analytics event logged
+=======
+    if (process.env['NODE_ENV'] === 'development') {
       console.log('Analytics event:', event);
+>>>>>>> main
     }
   }
 
@@ -139,9 +172,9 @@ class Analytics {
     try {
       // In a real application, you would send to services like Google Analytics, Mixpanel, etc.
       // For now, we'll just log to console
-      console.log('Analytics event sent:', event);
+      // Analytics event sent
     } catch (err) {
-      console.error('Failed to send analytics event:', err);
+      // Failed to send analytics event
     }
   }
 

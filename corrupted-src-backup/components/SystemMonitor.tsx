@@ -5,7 +5,7 @@ const SystemMonitor: React.FC = () => {
 
   useEffect(() => {
     // Only show in development
-    if (process.env.NODE_ENV !== 'development') return;
+    if (process.env['NODE_ENV'] !== 'development') return;
 
     const handleKeyPress = (e: KeyboardEvent) => {
       if (e.ctrlKey && e.shiftKey && e.key === 'M') {
@@ -26,7 +26,7 @@ const SystemMonitor: React.FC = () => {
       <div>
         Memory:{' '}
         {Math.round(
-          (performance as any).memory?.usedJSHeapSize / 1024 / 1024 || 0,
+          (performance as any).memory?.usedJSHeapSize / 1024 / 1024 || 0
         )}
         MB
       </div>
