@@ -128,11 +128,7 @@ export const measurePageLoad = (): WebVitalsMetrics | null => {
  */
 export const reportWebVitals = (metrics: WebVitalsMetrics): void => {
   console.log('Web Vitals: ', metrics);
-<<<<<<< HEAD
-  
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-2f51
   // Send to analytics service
   if (typeof window !== 'undefined' && (window as any).gtag) {
     Object.entries(metrics).forEach(([key, value]) => {
@@ -211,11 +207,7 @@ export const cancelIdleCallback = (id: number): void => {
   if ('cancelIdleCallback' in window) {
     window.cancelIdleCallback(id);
   } else {
-<<<<<<< HEAD
     clearTimeout(id);
-=======
-    (window as any).clearTimeout(id);
->>>>>>> cursor/fix-errors-and-merge-to-main-2f51
   }
 };
 
