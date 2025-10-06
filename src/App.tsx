@@ -1,33 +1,15 @@
-<<<<<<< HEAD
 import React, { Suspense, useEffect } from 'react';
-=======
-<<<<<<< HEAD
 import React, { Suspense, useEffect } from 'react';
-=======
-<<<<<<< HEAD
 import { Suspense, useEffect } from 'react';
-=======
-<<<<<<< HEAD
 import React, { Suspense, useEffect } from 'react';
-=======
-<<<<<<< HEAD
 import { Suspense, useEffect } from 'react';
-=======
-import React, { Suspense, useEffect } from 'react';
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './index.css';
-
 // Import page components
 import AboutPage from '../app/about/page';
 import PrivacyPage from '../app/privacy/page';
 import TeamPage from '../app/team/page';
 import TermsPage from '../app/terms/page';
-
 // Simple placeholder components
 const Home = () => (
   <div className='min-h-screen flex items-center justify-center bg-gray-50'>
@@ -39,9 +21,7 @@ const Home = () => (
     </div>
   </div>
 );
-
 // About component is now imported from app/about/page
-
 const Services = () => (
   <div className='min-h-screen flex items-center justify-center bg-gray-50'>
     <div className='text-center'>
@@ -50,7 +30,6 @@ const Services = () => (
     </div>
   </div>
 );
-
 const Blog = () => (
   <div className='min-h-screen flex items-center justify-center bg-gray-50'>
     <div className='text-center'>
@@ -59,7 +38,6 @@ const Blog = () => (
     </div>
   </div>
 );
-
 const Contact = () => (
   <div className='min-h-screen flex items-center justify-center bg-gray-50'>
     <div className='text-center'>
@@ -68,9 +46,7 @@ const Contact = () => (
     </div>
   </div>
 );
-
 // Team, Privacy, and Terms components are now imported from app directory
-
 function App(): React.JSX.Element {
   useEffect(() => {
     // Initialize basic optimizations
@@ -78,56 +54,16 @@ function App(): React.JSX.Element {
       try {
         // App initialized successfully
       } catch (error) {
-<<<<<<< HEAD
         // Failed to initialize app
-=======
-        console.error('Failed to initialize app:', error);
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
-        console.log('All optimization systems initialized successfully');
-      } catch (error) {
-        console.error('Failed to initialize optimization systems:', error);
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
       }
     };
-
     // Initialize optimizations after component mount
     initializeOptimizations();
   }, []);
-
   return (
     <div>
       <Router>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
         <Suspense fallback={<div className="min-h-screen flex items-center justify-center">Loading...</div>}>
-=======
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
         <Suspense
           fallback={
             <div className="min-h-screen flex items-center justify-center bg-gray-50">
@@ -138,7 +74,6 @@ function App(): React.JSX.Element {
             </div>
           }
         >
-<<<<<<< HEAD
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
@@ -148,8 +83,6 @@ function App(): React.JSX.Element {
             <Route path="/team" element={<Team />} />
             <Route path="/privacy" element={<Privacy />} />
             <Route path="/terms" element={<Terms />} />
-=======
-<<<<<<< HEAD
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
@@ -159,17 +92,6 @@ function App(): React.JSX.Element {
             <Route path="/team" element={<Team />} />
             <Route path="/privacy" element={<Privacy />} />
             <Route path="/terms" element={<Terms />} />
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/about' element={<AboutPage />} />
@@ -179,27 +101,12 @@ function App(): React.JSX.Element {
             <Route path='/team' element={<TeamPage />} />
             <Route path='/privacy' element={<PrivacyPage />} />
             <Route path='/terms' element={<TermsPage />} />
->>>>>>> main
->>>>>>> main
           </Routes>
         </Suspense>
       </Router>
     </div>
   );
 }
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> main
->>>>>>> main
 // Simple Error Boundary
 class ErrorBoundary extends React.Component<
   { children: React.ReactNode; fallback?: React.ReactNode },
@@ -209,40 +116,18 @@ class ErrorBoundary extends React.Component<
     super(props);
     this.state = { hasError: false };
   }
-
-<<<<<<< HEAD
   static getDerivedStateFromError(_error: Error) { // eslint-disable-line @typescript-eslint/no-unused-vars
-=======
-<<<<<<< HEAD
   static getDerivedStateFromError() {
-=======
-<<<<<<< HEAD
   static getDerivedStateFromError() {
-=======
-<<<<<<< HEAD
   static getDerivedStateFromError(_error: Error) {
     // Error parameter is intentionally unused as we only need to return error state
-=======
-<<<<<<< HEAD
   static getDerivedStateFromError() {
-=======
-<<<<<<< HEAD
   static getDerivedStateFromError() {
-=======
-  static getDerivedStateFromError(_error: Error) { // eslint-disable-line @typescript-eslint/no-unused-vars
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
     return { hasError: true };
   }
-
   override componentDidCatch(_error: Error, errorInfo: React.ErrorInfo) {
     console.error('Error caught by boundary:', errorInfo);
   }
-
   override render() {
     if (this.state.hasError) {
       return this.props.fallback || (
@@ -259,14 +144,8 @@ class ErrorBoundary extends React.Component<
         </div>
       );
     }
-
     return this.props.children;
   }
 }
-
 export { ErrorBoundary };
-
->>>>>>> main
->>>>>>> main
->>>>>>> main
 export default App;

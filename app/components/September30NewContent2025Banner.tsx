@@ -1,8 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
 import { ArrowRight, Bookmark, Rocket, TrendingUp, Zap } from 'lucide-react';
-=======
->>>>>>> main
 import Link from 'next/link';
 import {
   ArrowRight,
@@ -64,7 +61,6 @@ const September30NewContent2025Banner: React.FC = () => {
       gradient: 'from-emerald-500 to-teal-600',
     },
   ];
-
   return (
     <section className='relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden'>
       {/* Animated Background Effects */}
@@ -79,7 +75,6 @@ const September30NewContent2025Banner: React.FC = () => {
           style={{ animationDelay: '1s' }}
         ></div>
       </div>
-
       <div className='relative z-10 container mx-auto px-4 py-16'>
         {/* Header */}
         <div className='text-center mb-16'>
@@ -90,17 +85,14 @@ const September30NewContent2025Banner: React.FC = () => {
             </span>
             <Zap className='w-6 h-6 text-yellow-400' />
           </div>
-
           <h2 className='text-4xl md:text-6xl font-extrabold text-white mb-6'>
             September 30, 2025 — Cutting-Edge AI Insights
           </h2>
-
           <p className='text-xl text-gray-300 mb-8 max-w-4xl mx-auto'>
             Customer Experience • Autonomous Operations • GenAI Architecture •
             Multimodal AI — The future of enterprise AI starts here
           </p>
         </div>
-
         {/* Featured Articles Grid */}
         <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16'>
           {newArticles.map((article, index) => (
@@ -114,7 +106,6 @@ const September30NewContent2025Banner: React.FC = () => {
                 <div
                   className={`absolute inset-0 bg-gradient-to-br ${article.gradient} opacity-0 group-hover:opacity-10 transition-all duration-500 rounded-2xl`}
                 ></div>
-
                 <div className='relative z-10'>
                   {/* Icon & Badge */}
                   <div className='flex items-center justify-between mb-4'>
@@ -128,24 +119,20 @@ const September30NewContent2025Banner: React.FC = () => {
                       </span>
                     </div>
                   </div>
-
                 {/* Category Tag */}
                 <div className="mb-4">
                   <span className="inline-block bg-gradient-to-r from-purple-600 to-blue-600 px-3 py-1 rounded-full text-white text-sm font-semibold shadow-lg">
                     {article.category}
                   </span>
                 </div>
-
                 {/* Title */}
                 <h3>
                   {article.title}
                 </h3>
-
                 {/* Excerpt */}
                 <p>
                   {article.excerpt}
                 </p>
-
                 {/* Meta Info */}
                 <div>
                   <span>
@@ -156,7 +143,6 @@ const September30NewContent2025Banner: React.FC = () => {
   day: 'numeric',
   year: 'numeric' })}</span>
                 </div>
-
                 {/* CTA Button */}
                 <Link
                   href={`/blog/${article.slug}`}
@@ -169,7 +155,6 @@ const September30NewContent2025Banner: React.FC = () => {
             </div>
           ))}
         </div>
-
         {/* Second Row */}
         <div>
           {newArticles.slice(3).map((article) => (
@@ -179,7 +164,6 @@ const September30NewContent2025Banner: React.FC = () => {
             >
               {/* Card glow effect */}
               <div></div>
-              
               <div>
                 {/* Icon & Badge */}
                 <div>
@@ -193,47 +177,39 @@ const September30NewContent2025Banner: React.FC = () => {
                       {article.category}
                     </span>
                   </div>
-
                   {/* Title */}
                   <h3 className='text-lg font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors leading-tight'>
                     {article.title}
                   </h3>
-
                   {/* Excerpt */}
                   <p className='text-gray-300 text-sm mb-4 leading-relaxed'>
                     {article.excerpt}
                   </p>
-
                   {/* Meta Info */}
                   <div className='flex items-center justify-between text-xs text-gray-400 mb-4'>
                     <span>⏱️ {article.readTime}</span>
                     <span>📅 {article.date}</span>
                   </div>
-
                   {/* CTA Button */}
                   <div className='flex items-center justify-center gap-2 text-cyan-400 font-semibold text-sm group-hover:text-white transition-colors'>
                     <span>Read Full Article</span>
                     <ArrowRight className='w-4 h-4 group-hover:translate-x-1 transition-transform' />
                   </div>
                 </div>
-
                 {/* Category Tag */}
                 <div className="mb-4">
                   <span className="inline-block bg-gradient-to-r from-purple-600 to-blue-600 px-3 py-1 rounded-full text-white text-sm font-semibold shadow-lg">
                     {article.category}
                   </span>
                 </div>
-
                 {/* Title */}
                 <h3>
                   {article.title}
                 </h3>
-
                 {/* Excerpt */}
                 <p>
                   {article.excerpt}
                 </p>
-
                 {/* Meta Info */}
                 <div>
                   <span>
@@ -244,7 +220,6 @@ const September30NewContent2025Banner: React.FC = () => {
   day: 'numeric',
   year: 'numeric' })}</span>
                 </div>
-
                 {/* CTA Button */}
                 <Link
                   href={`/blog/${article.slug}`}
@@ -255,11 +230,9 @@ const September30NewContent2025Banner: React.FC = () => {
                 </Link>
               </div>
           </h2>
-          
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
             Customer Experience • Autonomous Operations • GenAI Architecture • Multimodal AI — The future of enterprise AI starts here
           </p>
-
           <div className="flex items-center justify-center gap-8 text-gray-300">
             <div className="flex items-center gap-2">
               <TrendingUp className="w-5 h-5 text-green-400" />
@@ -275,7 +248,6 @@ const September30NewContent2025Banner: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Featured Articles Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {newArticles.map((article, index) => (
@@ -283,7 +255,6 @@ const September30NewContent2025Banner: React.FC = () => {
               <div className="relative bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-white/40 transition-all duration-500 hover:scale-105 h-full">
                 {/* Card glow effect */}
                 <div className={`absolute inset-0 bg-gradient-to-br ${article.gradient} opacity-0 group-hover:opacity-10 transition-all duration-500 rounded-2xl`}></div>
-                
                 <div className="relative z-10">
                   {/* Icon & Badge */}
                   <div className="flex items-center justify-between mb-4">
@@ -293,30 +264,25 @@ const September30NewContent2025Banner: React.FC = () => {
                       <span className="px-2 py-1 bg-green-500 text-white text-xs font-bold rounded-full">NEW</span>
                     </div>
                   </div>
-
                   {/* Category Tag */}
                   <div className="mb-3">
                     <span className={`inline-block px-3 py-1 bg-gradient-to-r ${article.gradient} bg-opacity-20 text-white text-xs font-semibold rounded-full border border-white/20`}>
                       {article.category}
                     </span>
                   </div>
-
                   {/* Title */}
                   <h3 className={`text-lg font-bold text-white mb-3 group-hover:bg-gradient-to-r group-hover:${article.gradient} group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300 leading-tight`}>
                     {article.title}
                   </h3>
-
                   {/* Excerpt */}
                   <p className="text-gray-300 text-sm mb-4 leading-relaxed line-clamp-3">
                     {article.excerpt}
                   </p>
-
                   {/* Meta Info */}
                   <div className="flex items-center justify-between text-xs text-gray-400 mb-4">
                     <span>⏱️ {article.readTime}</span>
                     <span>📅 {article.date}</span>
                   </div>
-
                   {/* CTA Button */}
                   <div className="flex items-center justify-center gap-2 text-cyan-400 font-semibold group-hover:text-white transition-colors">
                     <span className="text-sm">Read Article</span>
@@ -328,9 +294,7 @@ const September30NewContent2025Banner: React.FC = () => {
             </Link>
           ))}
         </div>
-
         {/* Call-to-Action Section */}
-<<<<<<< HEAD
         <div>
           <div>
             <div>
@@ -358,108 +322,3 @@ const September30NewContent2025Banner: React.FC = () => {
                 </Link>
               </div>
             </div>
-=======
-        <div className="text-center bg-white/5 backdrop-blur-lg rounded-2xl p-12 border border-white/20 mb-16">
-          <h3 className="text-3xl font-bold text-white mb-6">
-            Transform Your Enterprise with Cutting-Edge AI
-          </h3>
-          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Join 50,000+ AI leaders implementing these breakthrough technologies. Get expert guidance 
-            from Zion Tech Group's AI transformation specialists.
-          </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-            <Link
-              href="/contact"
-              className="flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl"
-            >
-              <Sparkles className="w-5 h-5" />
-              <span>Start Your AI Journey</span>
-            </Link>
-            <Link
-              href="/blog"
-              className="flex items-center gap-3 border-2 border-white/30 hover:border-white/60 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 hover:bg-white/10"
-            >
-              <span>Explore All Content</span>
-              <ArrowRight className="w-5 h-5" />
-            </Link>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e4e
-          </div>
-        </div>
-
-        {/* Stats Section */}
-        <div className='grid grid-cols-2 md:grid-cols-4 gap-8'>
-=======
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e4e
-          {[
-            { value: '500+', label: 'Enterprise Clients' },
-            { value: '10B+', label: 'Data Points Processed Daily' },
-            { value: '99.9%', label: 'System Uptime' },
-            { value: '5M+', label: 'Autonomous Operations Hours' },
-          ].map((stat, index) => (
-            <div key={index} className='text-center'>
-              <div className='text-3xl font-bold text-cyan-400 mb-2'>
-                {stat.value}
-              </div>
-              <div className='text-gray-300'>{stat.label}</div>
-        <div className="text-center bg-white/5 backdrop-blur-sm rounded-2xl p-12 border border-white/20 mb-16">
-          <div className="flex items-center justify-center gap-3 mb-6">
-            <Rocket className="w-8 h-8 text-cyan-400" />
-            <h3 className="text-3xl font-bold text-white">
-              Transform Your Enterprise with Cutting-Edge AI
-            </h3>
-            <Rocket className="w-8 h-8 text-cyan-400" />
-          </div>
-          
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Join 50,000+ AI leaders implementing these breakthrough technologies. Get expert guidance 
-            from Zion Tech Group's AI transformation specialists.
-          </p>
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/contact"
-              className="group flex items-center justify-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl"
-            >
-              <Sparkles className="w-5 h-5" />
-              <span>Start Your AI Journey</span>
-            </Link>
-            
-            <Link
-              href="/blog"
-              className="group flex items-center justify-center gap-3 bg-white/10 hover:bg-white/20 text-white font-bold py-4 px-8 rounded-xl border border-white/30 hover:border-white/50 transition-all duration-300 transform hover:-translate-y-1"
-            >
-              <span>Explore All Content</span>
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </Link>
-          </div>
-        </div>
-
-        {/* Stats Section */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-          {[
-            { value: '500+', label: 'Enterprise Clients' },
-            { value: '50K+', label: 'AI Leaders' },
-            { value: '99.9%', label: 'System Uptime' },
-            { value: '24/7', label: 'Expert Support' }
-          ].map((stat, index) => (
-            <div key={index} className="text-center">
-              <div className="text-3xl font-bold text-cyan-400 mb-2">{stat.value}</div>
-=======
-            { value: '5M+', label: 'Autonomous Operations Hours' }
-          ].map((stat, index) => (
-            <div key={index} className="text-center">
-              <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e4e
-              <div className="text-gray-300">{stat.label}</div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-};
-
-export default September30NewContent2025Banner;
-=======
->>>>>>> main

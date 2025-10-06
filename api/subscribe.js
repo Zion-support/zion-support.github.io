@@ -2,7 +2,6 @@ const { withSentry } = require('./withSentry.cjs');
 const { isValidEmail } = require('./emailUtils.cjs');
 const fs = require('fs');
 const path = require('path');
-
 async function handler(req, res) {
   if (req.method !== 'POST') {
     res.statusCode = 405;
@@ -10,11 +9,8 @@ async function handler(req, res) {
     res.end('Method Not Allowed');
     return;
   }
-
   try {
     const { email } = req.body || {};
->>>>>>> cursor/fix-errors-and-merge-to-main-bd65
->>>>>>> b0d6dda8406c2e54af3529a18b3e8c5f6ab37739
     if (!isValidEmail(email)) {
       res.statusCode = 400;
       res.json({ error: 'Invalid email' });
@@ -25,8 +21,6 @@ async function handler(req, res) {
       'data',
       'newsletter-subscriptions.json',
     );
->>>>>>> cursor/fix-errors-and-merge-to-main-bd65
->>>>>>> b0d6dda8406c2e54af3529a18b3e8c5f6ab37739
     let existing = [];
     try {
       existing = JSON.parse(fs.readFileSync(file, 'utf8'));

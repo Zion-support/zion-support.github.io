@@ -1,38 +1,21 @@
 import React, { useEffect, useState } from 'react';
-
 interface AccessibilityEnhancerProps {
   children: React.ReactNode;
 }
-
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
   const [isHighContrast, setIsHighContrast] = useState(false);
   const [fontSize, setFontSize] = useState<'small' | 'normal' | 'large'>('normal');
   const [reducedMotion, setReducedMotion] = useState(false);
-
   useEffect(() => {
-<<<<<<< HEAD
     // Check for user preferences
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-=======
-    // Check for user's motion preferences
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    setReducedMotion(prefersReducedMotion);
-
-    // Load saved preferences
->>>>>>> main
     const savedHighContrast = localStorage.getItem('highContrast') === 'true';
     const savedFontSize = (localStorage.getItem('fontSize') as 'small' | 'normal' | 'large') || 'normal';
-    
     setIsHighContrast(savedHighContrast);
     setFontSize(savedFontSize);
-<<<<<<< HEAD
     setReducedMotion(prefersReducedMotion);
-=======
->>>>>>> main
-
     // Apply initial styles
     applyAccessibilityStyles(savedHighContrast, savedFontSize, prefersReducedMotion);
-
     // Add accessibility enhancements
     const addSkipLinks = () => {
       const existingSkipLink = document.querySelector('.skip-link');
@@ -44,7 +27,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
         document.body.insertBefore(skipLink, document.body.firstChild);
       }
     };
-
     // Add ARIA landmarks
     const addAriaLandmarks = () => {
       const main = document.querySelector('main');
@@ -52,7 +34,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
         main.setAttribute('role', 'main');
       }
     };
-
     // Enhance focus management
     const enhanceFocusManagement = () => {
       document.addEventListener('keydown', (e) => {
@@ -60,16 +41,13 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
           document.body.classList.add('keyboard-navigation');
         }
       });
-
       document.addEventListener('mousedown', () => {
         document.body.classList.remove('keyboard-navigation');
       });
     };
-
     addSkipLinks();
     addAriaLandmarks();
     enhanceFocusManagement();
-
     // Add CSS for accessibility
     const style = document.createElement('style');
     style.textContent = `
@@ -84,7 +62,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
         white-space: nowrap;
         border: 0;
       }
-      
       .focus\\:not-sr-only:focus {
         position: static;
         width: auto;
@@ -95,31 +72,19 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
         clip: auto;
         white-space: normal;
       }
-      
       .keyboard-navigation *:focus {
         outline: 2px solid #3b82f6;
         outline-offset: 2px;
       }
-
       .high-contrast {
         filter: contrast(150%) brightness(120%);
       }
-
       .font-small {
         font-size: 0.875rem;
       }
-
-<<<<<<< HEAD
-=======
-      .font-normal {
-        font-size: 1rem;
-      }
-
->>>>>>> main
       .font-large {
         font-size: 1.125rem;
       }
-
       .reduced-motion * {
         animation-duration: 0.01ms !important;
         animation-iteration-count: 1 !important;
@@ -127,7 +92,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       }
     `;
     document.head.appendChild(style);
-
     return () => {
       // Cleanup
       const existingStyle = document.querySelector('style');
@@ -136,21 +100,17 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       }
     };
   }, []);
-
   const applyAccessibilityStyles = (highContrast: boolean, fontSize: 'small' | 'normal' | 'large', reducedMotion: boolean) => {
     const root = document.documentElement;
-    
     // Apply high contrast
     if (highContrast) {
       root.classList.add('high-contrast');
     } else {
       root.classList.remove('high-contrast');
     }
-
     // Apply font size
     root.classList.remove('font-small', 'font-normal', 'font-large');
     root.classList.add(`font-${fontSize}`);
-
     // Apply reduced motion
     if (reducedMotion) {
       root.classList.add('reduced-motion');
@@ -158,24 +118,20 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       root.classList.remove('reduced-motion');
     }
   };
-
   const toggleHighContrast = () => {
     const newValue = !isHighContrast;
     setIsHighContrast(newValue);
     localStorage.setItem('highContrast', newValue.toString());
     applyAccessibilityStyles(newValue, fontSize, reducedMotion);
   };
-
   const changeFontSize = (size: 'small' | 'normal' | 'large') => {
     setFontSize(size);
     localStorage.setItem('fontSize', size);
     applyAccessibilityStyles(isHighContrast, size, reducedMotion);
   };
-
   return (
     <>
       {children}
-<<<<<<< HEAD
       {/* Accessibility Controls - only show in development */}
       {process.env['NODE_ENV'] === 'development' && (
         <div className="fixed top-4 left-4 z-50 bg-white border border-gray-200 rounded-lg shadow-lg p-4">
@@ -203,45 +159,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
                   {size.charAt(0).toUpperCase()}
                 </button>
               ))}
-=======
-      
-      {/* Accessibility Controls - Only show in development */}
-      {process.env['NODE_ENV'] === 'development' && (
-        <div className="fixed top-4 right-4 z-50 bg-white border border-gray-200 rounded-lg shadow-lg p-4">
-          <h3 className="text-sm font-semibold text-gray-900 mb-3">Accessibility Controls</h3>
-          
-          <div className="space-y-3">
-            <div>
-              <label className="flex items-center space-x-2">
-                <input
-                  type="checkbox"
-                  checked={isHighContrast}
-                  onChange={toggleHighContrast}
-                  className="rounded"
-                />
-                <span className="text-sm">High Contrast</span>
-              </label>
-            </div>
-            
-            <div>
-              <label className="text-sm text-gray-600 mb-1 block">Font Size:</label>
-              <div className="flex space-x-1">
-                {(['small', 'normal', 'large'] as const).map((size) => (
-                  <button
-                    key={size}
-                    onClick={() => changeFontSize(size)}
-                    className={`px-2 py-1 text-xs rounded ${
-                      fontSize === size
-                        ? 'bg-blue-600 text-white'
-                        : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
-                    }`}
-                    aria-label={`Set font size to ${size}`}
-                  >
-                    {size.charAt(0).toUpperCase()}
-                  </button>
-                ))}
-              </div>
->>>>>>> main
             </div>
           </div>
         </div>
@@ -249,5 +166,4 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     </>
   );
 };
-
 export default AccessibilityEnhancer;

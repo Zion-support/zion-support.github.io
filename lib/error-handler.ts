@@ -1,8 +1,4 @@
-import { NextApiRequest, NextApiResponse } from 'next';
->>>>>>> b0d6dda8406c2e54af3529a18b3e8c5f6ab37739
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { NextApiRequest, NextApiResponse } from 'next';
->>>>>>> cursor/fix-errors-and-merge-to-main-bd65
 export interface ApiError extends Error {
   statusCode?: number;
   isOperational?: boolean;
@@ -23,8 +19,6 @@ export const errorHandler = (
   res: NextApiResponse
 ) => {
   const { statusCode = 500, message } = err;
->>>>>>> cursor/fix-errors-and-merge-to-main-bd65
->>>>>>> b0d6dda8406c2e54af3529a18b3e8c5f6ab37739
   // Log error for monitoring
   console.error(`API Error [${statusCode}]: ${message}`, {
     url: req.url,
@@ -42,7 +36,6 @@ export const errorHandler = (
       statusCode,
       timestamp: new Date().toISOString()
     },
-    }
   });
 };
 export const asyncHandler =

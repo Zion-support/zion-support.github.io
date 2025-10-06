@@ -1,7 +1,6 @@
 const { withSentry } = require('./withSentry.cjs');
 const fs = require('fs');
 const path = require('path');
-
 async function handler(req, res) {
   if (req.method !== 'POST') {
     res.statusCode = 405;
@@ -9,7 +8,6 @@ async function handler(req, res) {
     res.end('Method Not Allowed');
     return;
   }
-
   const {
     name,
     email,
@@ -18,17 +16,13 @@ async function handler(req, res) {
     location,
     details: _details
   } = req.body || {};
-
   if (!name || !email || !location) {
     res.statusCode = 400;
     res.json({ error: 'Missing required fields' });
     return;
   }
-
   const file = path.join(process.cwd(), 'data', 'onsite-requests.json');
   let existing = [];
->>>>>>> cursor/fix-errors-and-merge-to-main-bd65
->>>>>>> b0d6dda8406c2e54af3529a18b3e8c5f6ab37739
   try {
     existing = JSON.parse(fs.readFileSync(file, 'utf8'));
     if (!Array.isArray(existing)) existing = [];

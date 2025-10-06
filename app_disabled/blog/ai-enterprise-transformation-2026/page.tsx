@@ -1,6 +1,5 @@
 import React from 'react';
 import {Metadata} from 'next';
-
 <<<<<<< HEAD:app/blog/ai-enterprise-transformation-2026/page.tsx
 export const metadata: Metadata = 
   title: 'AI Enterprise Transformation: Complete Digital Overhaul Guide 2026 | Zion Tech Group',
@@ -12,17 +11,7 @@ export const metadata: Metadata =
       type: 'article',
       publishedTime: '2025-01-30T00:00:00.000Z'
     },
-=======
-export const metadata = {
-  
-  title: "AI Enterprise Transformation: Complete Digital Overhaul Guide 2026",
-      description: "Master the art of AI-driven enterprise transformation with our comprehensive guide.",
-      type: "article",
-      published Time: '2025-01-30T00:00:00.000Z'
-    
->>>>>>> main:app_disabled/blog/ai-enterprise-transformation-2026/page.tsx
 };
-
 export default function AI Enterprise Transformation2026() {/* return (
     <div> content */}
     <div>
@@ -60,7 +49,6 @@ export default function AI Enterprise Transformation2026() {/* return (
                 <p className="text-left">Maximize    ROI and performance</p>
               </div>
           </div>
-
           <h3 className="text-left">The AI Transformation    Imperative</h2>
             <p className="text-left"> </p><div className="text-left"> </div><h2 className="text-left">The AI Transformation    Imperative</h2>"
             <p className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a

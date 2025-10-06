@@ -1,13 +1,8 @@
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg';
   color?: 'blue' | 'gray' | 'white';
-<<<<<<< HEAD
   text?: string | undefined;
-=======
-  text: string;
->>>>>>> main
 }
-
 export function LoadingSpinner({
   size = 'md',
   color = 'blue',
@@ -18,13 +13,11 @@ export function LoadingSpinner({
     md: 'w-8 h-8',
     lg: 'w-12 h-12',
   };
-
   const colorClasses: Record<string, string> = {
     blue: 'text-blue-600',
     gray: 'text-gray-600',
     white: 'text-white',
   };
-
   return (
     <div className='flex flex-col items-center justify-center p-4'>
       <div
@@ -50,7 +43,6 @@ export function LoadingSpinner({
     </div>
   );
 }
-
 export function PageLoader() {
   return (
     <div className='min-h-screen flex items-center justify-center bg-gray-50'>
@@ -63,7 +55,6 @@ export function PageLoader() {
     </div>
   );
 }
-
 export function InlineLoader({ text }: { text?: string }) {
   return (
     <div className='flex items-center justify-center py-8'>
