@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 import performanceOptimizer, { WebVitalsMetrics } from '../utils/performanceOptimizer';
 
@@ -17,9 +18,31 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 
   useEffect(() => {
     // Initialize performance monitoring
+<<<<<<< HEAD
     // Add critical resource hints for performance optimization
     performanceOptimizer.prefetchResources([]);
     performanceOptimizer.preconnectDomains([]);
+=======
+    // Add critical resource hints manually
+    if (typeof document !== 'undefined') {
+      const hints = [
+        { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' },
+        { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com' },
+        { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+        { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossOrigin: 'anonymous' }
+      ];
+      
+      hints.forEach(hint => {
+        const link = document.createElement('link');
+        link.rel = hint.rel;
+        link.href = hint.href;
+        if (hint.crossOrigin) {
+          link.crossOrigin = hint.crossOrigin;
+        }
+        document.head.appendChild(link);
+      });
+    }
+>>>>>>> main
     
     // Measure page load performance
     const pageLoadMetrics = performanceOptimizer.measurePageLoad();
@@ -95,6 +118,37 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       console.log('Performance Metrics:', metrics);
     }
   }, [metrics]);
+=======
+import React, { ReactNode, useEffect } from 'react';
+
+interface PerformanceMonitorProps {
+  children: ReactNode;
+}
+
+const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ children }) => {
+  useEffect(() => {
+    // Monitor performance metrics
+    if (typeof window !== 'undefined' && 'performance' in window) {
+      const observer = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (process.env.NODE_ENV === 'development') {
+            console.log('Performance entry:', entry);
+          }
+        }
+      });
+
+      try {
+        observer.observe({ entryTypes: ['measure', 'navigation', 'paint'] });
+      } catch (error) {
+        console.warn('Performance Observer not supported:', error);
+      }
+
+      return () => {
+        observer.disconnect();
+      };
+    }
+  }, []);
+>>>>>>> main
 
   return <>{children}</>;
 };

@@ -71,7 +71,7 @@ const AdvancedPerformanceMonitor: React.FC = () => {const [metrics, setMetrics] 
   const getStatusColor = (value: number) threshold: number) => {
     return value <= threshold ? 'text-green-600' : 'text-red-600'
   };
-  if (process.env.NODE_ENV === 'development' && metrics) {return (
+  if (process.env['NODE_ENV'] === 'development' && metrics) {return (
       <div className="fixed bottom-4 right-4 bg-black text-white p-3 rounded-lg text-xs font-mono max-w-xs">
         <div className="font-bold mb-2">Performance Metrics</div>
         <div className="space-y-1">
@@ -296,7 +296,7 @@ class AdvancedErrorBoundary extends Component<Props, State> {
     if (this.props.onError) {this.props.onError(error} errorInfo);
     }
     // Log to external service in production
-    if (process.env.NODE_ENV === 'production') {this.logErrorToService(error} errorInfo);
+    if (process.env['NODE_ENV'] === 'production') {this.logErrorToService(error} errorInfo);
     }
   }
   private logErrorToService = (error: Error) errorInfo: ErrorInfo) => {try {
@@ -556,7 +556,7 @@ export const analyticsConfig = {
   // Google Analytics 4
   ga4: {
     measurementId: process.env.NEXT_PUBLIC_GA4_MEASUREMENT_ID || 'G-XXXXXXXXXX'}
-    enabled: process.env.NODE_ENV === 'production'
+    enabled: process.env['NODE_ENV'] === 'production'
   },
   // Performance monitoring
   performance: {enabled: true,
