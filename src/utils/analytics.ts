@@ -57,8 +57,7 @@ class Analytics {
       userAgent: window.navigator.userAgent,
       language: window.navigator.language,
       timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
-<<<<<<< HEAD
-      referrer: document.referrer || '',
+      referrer: document.referrer || undefined,
     };
   }
 
@@ -76,11 +75,10 @@ class Analytics {
     const event: AnalyticsEvent = {
       name,
       category,
-<<<<<<< HEAD
-      action: action || '',
-      label: label || '',
-      value: value || 0,
-      properties: properties || {},
+      action,
+      label,
+      value,
+      properties,
       timestamp: Date.now(),
     };
 

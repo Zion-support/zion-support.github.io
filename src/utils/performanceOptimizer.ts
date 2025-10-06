@@ -385,6 +385,27 @@ class PerformanceOptimizer {
     prefetchResources(resources);
   }
 
+  public addCriticalResourceHints(): void {
+    if (typeof document === 'undefined') return;
+    
+    const hints = [
+      { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' },
+      { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com' },
+      { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+      { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossOrigin: 'anonymous' }
+    ];
+    
+    hints.forEach(hint => {
+      const link = document.createElement('link');
+      link.rel = hint.rel;
+      link.href = hint.href;
+      if (hint.crossOrigin) {
+        link.crossOrigin = hint.crossOrigin;
+      }
+      document.head.appendChild(link);
+    });
+  }
+
   // Monitor long tasks
   monitorLongTasks(callback: (entries: PerformanceEntry[]) => void): void {
     if (typeof window === 'undefined' || !window.PerformanceObserver) return;
