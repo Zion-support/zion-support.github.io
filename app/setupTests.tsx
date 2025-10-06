@@ -16,26 +16,12 @@ Object.defineProperty(window, 'matchMedia', {
 });
 
 // Mock IntersectionObserver
-class MockIntersectionObserver implements IntersectionObserver {
-  root: Element | null = null;
-  rootMargin: string = '0px';
-  thresholds: ReadonlyArray<number> = [0];
-
-  constructor(
-    public callback: IntersectionObserverCallback,
-    public options?: IntersectionObserverInit
-  ) {}
-
+global.IntersectionObserver = class IntersectionObserver {
+  constructor() {}
   disconnect() {}
   observe() {}
   unobserve() {}
-  takeRecords(): IntersectionObserverEntry[] {
-    return [];
-  }
-}
-
-global.IntersectionObserver =
-  MockIntersectionObserver as typeof IntersectionObserver;
+};
 
 // Mock ResizeObserver
 global.ResizeObserver = class ResizeObserver {
@@ -45,16 +31,40 @@ global.ResizeObserver = class ResizeObserver {
   unobserve() {}
 };
 
-// Mock performance
-Object.defineProperty(window, 'performance', {
+// Mock scrollTo
+Object.defineProperty(window, 'scrollTo', {
   writable: true,
-  value: {
-    now: jest.fn(() => Date.now()),
-    mark: jest.fn(),
-    measure: jest.fn(),
-    getEntriesByType: jest.fn(() => []),
-    getEntriesByName: jest.fn(() => []),
-    clearMarks: jest.fn(),
-    clearMeasures: jest.fn(),
-  },
+  value: jest.fn(),
+});
+
+// Mock console methods to reduce noise in tests
+const originalError = console.error;
+const originalWarn = console.warn;
+
+beforeAll(() => {
+  console.error = (...args: any[]) => {
+    if (
+      typeof args[0] === 'string' &&
+      args[0].includes('Warning: ReactDOM.render is no longer supported')
+    ) {
+      return;
+    }
+    originalError.call(console, ...args);
+  };
+
+  console.warn = (...args: any[]) => {
+    if (
+      typeof args[0] === 'string' &&
+      (args[0].includes('componentWillReceiveProps') ||
+        args[0].includes('componentWillUpdate'))
+    ) {
+      return;
+    }
+    originalWarn.call(console, ...args);
+  };
+});
+
+afterAll(() => {
+  console.error = originalError;
+  console.warn = originalWarn;
 });
