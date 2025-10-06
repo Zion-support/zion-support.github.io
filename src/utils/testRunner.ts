@@ -132,7 +132,7 @@ export const testUtils = {
         }
       }
     },
-  },
+  }),
 
   mock: <T>(implementation: Partial<T>): T => {
     return implementation as T;
