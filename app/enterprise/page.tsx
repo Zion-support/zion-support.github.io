@@ -284,7 +284,11 @@ export default function EnterprisePage() {
                       {feature}
                     </li>
                   ))}
+<<<<<<< HEAD
                 </ul>
+=======
+                </div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b7c1
               </div>
             ))}
           </div>
@@ -305,6 +309,7 @@ export default function EnterprisePage() {
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
+<<<<<<< HEAD
               {
                 title: 'Autonomous Operations',
                 description: 'Self-healing infrastructure achieving 99.99% uptime and 95% cost reduction.',
@@ -340,6 +345,21 @@ export default function EnterprisePage() {
                   ))}
                 </ul>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7834
+=======
+              { number: '500+', label: 'Fortune 500 Clients' },
+              { number: '$2.5T+', label: 'Cost Savings Delivered' },
+              { number: '99.9%', label: 'System Uptime' },
+              { number: '500%', label: 'Productivity Increase' },
+            ].map((stat, index) => (
+              <div
+                key={index}
+                className="text-center bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8"
+              >
+                <div className="text-4xl md:text-5xl font-bold text-cyan-400 mb-2">
+                  {stat.number}
+                </div>
+                <div className="text-gray-300">{stat.label}</div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b7c1
               </div>
             ))}
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0883
@@ -433,6 +453,7 @@ export default function EnterprisePage() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       <section className="py-20">
         <div className="container mx-auto px-4 text-center">
           <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-2xl p-12 border border-white/20">
@@ -458,6 +479,8 @@ export default function EnterprisePage() {
 =======
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7834
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b7c1
       <section className="py-24">
         <div className="container mx-auto px-4">
           <div className="text-center bg-white/5 backdrop-blur-lg rounded-3xl p-12 border border-white/20">
@@ -492,6 +515,7 @@ export default function EnterprisePage() {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7834
               </Link>
             </div>
+<<<<<<< HEAD
 =======
       <section className="py-24">
 =======
@@ -526,6 +550,8 @@ export default function EnterprisePage() {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-8da8
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b7c1
           </div>
         </div>
       </section>
