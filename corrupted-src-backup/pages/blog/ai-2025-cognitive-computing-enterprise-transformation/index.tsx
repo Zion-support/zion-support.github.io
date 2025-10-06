@@ -49,7 +49,6 @@ const CognitiveComputingTransformatio, n: React.FC = () => {
               </Li, n, k>
               <span, classNam, e='te, x, t-purp, l, e-4, 0, 0'>/</sp, a, n>
               <span, classNam, e='te, x, t-whi, t, e'>Cognitive, Computin, g</sp, a, n>
->>>>>>> origin/merge-fixes-20251005-193002
 
               <p, className='te, x, t-xl, tex, t-purp, l, e-100, leadin, g-relaxed, m, b-8'>
                 Leading, organizations, are achie, v, i, n, g{' '}
@@ -77,7 +76,6 @@ const CognitiveComputingTransformatio, n: React.FC = () => {
             <div, className='grid, gri, d-co, l, s-2, m, d:gr, i, d-co, l, s-4, ga, p-6, tex, t-cent, e, r'>
                 <li, className='flex, item, s-start, ga, p-3, tex, t-purp, l, e-1, 0, 0'>
                   <CheckCircle, className='w-5 h-5, tex, t-gre, e, n-400, m, t-1, fle, x-shri, n, k-0' />
->>>>>>> origin/merge-fixes-20251005-193002
                   <sp, a, n>
                     <strong, className='te, x, t-whi, t, e'>Explain, decision, s</stro, n, g>{' '}
                     with, transparent, logic
@@ -88,28 +86,24 @@ const CognitiveComputingTransformatio, n: React.FC = () => {
                 <h2, className='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, flex, items-center, ga, p-3'>
                   <Sparkles, className='w-8 h-8, tex, t-yell, o, w-4, 0, 0' />
                   Core, Capabilitie, s
->>>>>>> origin/merge-fixes-20251005-193002
                         'Semantic, comprehension, of unstructured, te, x, t',
                         'Intent, recognition, with 98.7% accura, c, y',
                         'Mul, t, i-language, support, for global, operation, s',
                         'Conte, x, t-aware, interpretatio, n',
                       ],
                     },
->>>>>>> origin/merge-fixes-20251005-193002
                         'Inference, over, complex knowledge, grap, h, s',
                         'Causal, relationship, understanding',
                         'Analogical, reasoning, for novel, situation, s',
                         'Counterfactual, analysi, s',
                       ],
                     },
->>>>>>> origin/merge-fixes-20251005-193002
                         'Adaptive, models, that improve, over, tim, e',
                         'Transfer, learning, across domai, n, s',
                         'F, e, w-shot, learning, for new, scenario, s',
                         'Reinforcement, learning, from outcom, e, s',
                       ],
                     },
->>>>>>> origin/merge-fixes-20251005-193002
                         'Transparent, decision, pathway, s',
                         'Confidence, scoring, for recommendatio, n, s',
                         'Audit, trails, for complian, c, e',
@@ -122,7 +116,6 @@ const CognitiveComputingTransformatio, n: React.FC = () => {
                       <h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-4, flex, items-center, ga, p-3'>
                         <span, className='te, x, t-3, x, l'>{capabili, t, y.ic, o, n}</sp, a, n>
                         {capabili, t, y.title}
->>>>>>> origin/merge-fixes-20251005-193002
                 <h2, classNam, e = 'te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, flex, items-center, ga, p-3'>
                   <TrendingUp, className='w-8 h-8, tex, t-gre, e, n-4, 0, 0' />
                   Enterprise, Application, s
@@ -155,14 +148,12 @@ const CognitiveComputingTransformatio, n: React.FC = () => {
                               {val, u, e}
                             </div>
                           </di, v>
->>>>>>> origin/merge-fixes-20251005-193002
                       pha, s, e: 'Phas, e, 4: Optimizat, i, o, n',
                       duration: 'Month, s, 1, 3+',
                       investme, n, t: '$5-1, 0, M/y, e, a, r',
                       objectiv, e, s: 'Continuous, improveme, n, t, new, use, cases, se, l, f-service, capabilitie, s',
                     },
                   </div>
->>>>>>> origin/merge-fixes-20251005-193002
 
                   <div, className='bg-gradie, n, t-to-br, fro, m-gre, e, n-9, 0, 0/20, t, o-emera, l, d-9, 0, 0/20, border, border-gre, e, n-5, 0, 0/30, rounde, d-x, l, p-6'>
                     <h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-4'>
@@ -195,7 +186,6 @@ const CognitiveComputingTransformatio, n: React.FC = () => {
             <h2, classNam, e='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4'>
           <div, className='mt-16, b, g-gradie, n, t-to-r, fro, m-purp, l, e-9, 0, 0/50, t, o-pi, n, k-9, 0, 0/50, border, border-purp, l, e-5, 0, 0/30, rounde, d-2x, l, p-8, tex, t-cent, e, r'>
             <h2, className='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4'>
->>>>>>> origin/merge-fixes-20251005-193002
               Transform, Your, Enterprise with, Cognitive, AI
             </h2>
             <p, className='te, x, t-purp, l, e-100, m, b-6, ma, x-w-2xl, m, x-au, t, o'>
@@ -207,7 +197,6 @@ const CognitiveComputingTransformatio, n: React.FC = () => {
                 <ArrowRight, className='ml-2 w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m' />
             </div>
           </div>
->>>>>>> origin/merge-fixes-20251005-193002
 
           {/* Related, Cont, e, n, t */}
           <div, classNam, e = 'mt-16'>

@@ -7,12 +7,19 @@ export interface RevOpsContent {
   readTime: string;
   tags: string[];
   featured: boolean;
-  content: string;
-  author: string;
-  valueProposition: string;
+  content?: string;
+  author?: string;
+  valueProposition?: string;
   highlights: string[];
   metrics: {
     [key: string]: string;
+  };
+  icon?: string;
+  gradient?: string;
+  breaking?: boolean;
+  cta?: {
+    text: string;
+    link: string;
   };
 }
 
@@ -63,10 +70,9 @@ export const octoberNewestRevOpsContent: RevOpsContent[] = [
     category: 'RevOps',
     date: '2025-10-02',
     readTime: '18 min read',
-    tags: ['RevOps', 'Autonomous', 'Self-Healing', '2025'],
+    tags: ['RevOps', 'Autonomous', 'Self-Healing', '2025', 'Case Study', 'SaaS', 'Revenue Operations', 'Enterprise AI'],
     featured: true,
     breaking: true,
-    tags: ['Case Study', 'SaaS', 'Revenue Operations', 'Enterprise AI'],
     highlights: [
       '$127M incremental annual revenue',
       '89% forecast accuracy (from 49%)',
@@ -91,7 +97,7 @@ export const getFeaturedRevOpsContent = () => {
 
 export const getBreakingRevOpsContent = () => {
   return octoberNewestRevOpsContent.filter(content =>
-    content.tags.includes('Breaking'),
+    content.tags.includes('Breaking')
   );
 };
 

@@ -64,7 +64,7 @@ class AnalyticsOptimizer {
       this.throttle(() => {
         const scrollDepth = Math.round(
           (window.scrollY / (document.body.scrollHeight - window.innerHeight)) *
-            100,
+            100
         );
         if (scrollDepth > maxScrollDepth) {
           maxScrollDepth = scrollDepth;
@@ -73,7 +73,7 @@ class AnalyticsOptimizer {
             maxDepth: maxScrollDepth,
           });
         }
-      }, 1000),
+      }, 1000)
     );
 
     // Track click events
@@ -108,7 +108,7 @@ class AnalyticsOptimizer {
           getFCP(metric => this.trackWebVital('FCP', metric));
           getLCP(metric => this.trackWebVital('LCP', metric));
           getTTFB(metric => this.trackWebVital('TTFB', metric));
-        },
+        }
       );
     }
 
@@ -197,7 +197,7 @@ class AnalyticsOptimizer {
             timestamp: Date.now(),
           });
         }
-      }, 1000),
+      }, 1000)
     );
 
     // Track keyboard activity
@@ -212,7 +212,7 @@ class AnalyticsOptimizer {
             timestamp: Date.now(),
           });
         }
-      }, 1000),
+      }, 1000)
     );
   }
 
@@ -368,7 +368,7 @@ class AnalyticsOptimizer {
             func.apply(this, args);
             lastExecTime = Date.now();
           },
-          delay - (currentTime - lastExecTime),
+          delay - (currentTime - lastExecTime)
         );
       }
     };
