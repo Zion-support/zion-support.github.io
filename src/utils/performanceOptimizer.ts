@@ -12,6 +12,8 @@ export interface WebVitalsMetrics {
   CLS?: number; // Cumulative Layout Shift
   TTFB?: number; // Time to First Byte
   INP?: number; // Interaction to Next Paint
+  loadTime?: number;
+  interactiveTime?: number;
 }
 
 /**
@@ -401,6 +403,19 @@ class PerformanceOptimizer {
   public reportWebVitals(metrics: WebVitalsMetrics): void {
     if (process.env.NODE_ENV === 'development') {
       console.log('Web Vitals:', metrics);
+    }
+
+    // Send to analytics service
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      Object.entries(metrics).forEach(([key, value]) => {
+        if (value !== undefined) {
+          (window as any).gtag('event', key, {
+            value: Math.round(value),
+            event_category: 'Web Vitals',
+            non_interaction: true
+          });
+        }
+      });
     }
   }
 
