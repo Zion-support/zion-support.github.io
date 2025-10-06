@@ -142,8 +142,6 @@ export const usePageLoadPerformance = () => {
       window.addEventListener('load', trackPageLoad);
       return () => window.removeEventListener('load', trackPageLoad);
     }
-    
-    return undefined;
   }, []);
 };
 
