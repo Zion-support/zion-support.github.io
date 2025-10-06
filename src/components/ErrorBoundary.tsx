@@ -1,4 +1,5 @@
-import { Component, type ErrorInfo, type ReactNode } from 'react';
+import { Component } from 'react';
+import type { ErrorInfo, ReactNode } from 'react';
 
 interface Props {
   children: ReactNode;
@@ -40,6 +41,7 @@ class ErrorBoundary extends Component<Props, State> {
             >
               Refresh Page
             </button>
+            <p className="text-gray-400 mb-8">We're working to fix this issue.</p>
           </div>
         </div>
       );
