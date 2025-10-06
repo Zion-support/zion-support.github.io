@@ -6,10 +6,10 @@
 export interface AnalyticsEvent {
   name: string;
   category: string;
-  action?: string;
-  label?: string;
-  value?: number;
-  properties?: Record<string, any>;
+  action?: string | undefined;
+  label?: string | undefined;
+  value?: number | undefined;
+  properties?: Record<string, any> | undefined;
   timestamp: number;
 }
 
@@ -19,7 +19,7 @@ export interface UserProperties {
   userAgent: string;
   language: string;
   timezone: string;
-  referrer?: string;
+  referrer?: string | undefined;
 }
 
 class Analytics {
