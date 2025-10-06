@@ -11,16 +11,9 @@ import { Suspense, useEffect } from 'react';
 import React, { Suspense, useEffect } from 'react';
 import { Suspense, useEffect } from 'react';
 import React, { Suspense, useEffect } from 'react';
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import performanceOptimizer from './utils/performanceOptimizer';
 // import performanceOptimizer from './utils/performanceOptimizer'; // Unused import
->>>>>>> main
->>>>>>> main
->>>>>>> main
 import './index.css';
 
 // Import page components
@@ -49,7 +42,6 @@ const Home = () => (
       </h1>
       <p className='text-xl text-gray-600'>Advanced AI and IT Solutions</p>
     </div>
-=======
 import { Suspense, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './index.css';
@@ -59,7 +51,6 @@ const Home = () => <div className="min-h-screen flex items-center justify-center
   <div className="text-center">
     <h1 className="text-4xl font-bold text-gray-900 mb-4">Welcome to Zion Tech Group</h1>
     <p className="text-xl text-gray-600">Advanced AI and IT Solutions</p>
->>>>>>> 6c45f99dc7ca17bbf478e03055adf8e9c75097bc
   </div>
 </div>;
 
@@ -158,7 +149,6 @@ const Terms = () => <div className="min-h-screen flex items-center justify-cente
 </div>;
 
 function App() {
->>>>>>> 6c45f99dc7ca17bbf478e03055adf8e9c75097bc
   useEffect(() => {
     // Initialize basic optimizations
     const initializeOptimizations = () => {
@@ -173,15 +163,7 @@ function App() {
         console.log('All optimization systems initialized successfully');
       } catch (error) {
         console.error('Failed to initialize optimization systems:', error);
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
-=======
         console.error('Failed to initialize app:', error);
->>>>>>> 6c45f99dc7ca17bbf478e03055adf8e9c75097bc
       }
     };
 
@@ -218,8 +200,6 @@ function App() {
       <Router>
         <Suspense fallback={<div className="min-h-screen flex items-center justify-center">Loading...</div>}>
         <Suspense fallback={<div className="min-h-screen flex items-center justify-center">Loading...</div>}>
->>>>>>> main
->>>>>>> main
         <Suspense
           fallback={
             <div className="min-h-screen flex items-center justify-center bg-gray-50">
@@ -248,11 +228,6 @@ function App() {
             <Route path="/team" element={<Team />} />
             <Route path="/privacy" element={<Privacy />} />
             <Route path="/terms" element={<Terms />} />
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
-=======
     <div>
       <Router>
         <Suspense fallback={<div className="min-h-screen flex items-center justify-center bg-gray-50">
@@ -261,7 +236,6 @@ function App() {
             <p className="mt-4 text-gray-600">Loading...</p>
           </div>
         </div>}>
->>>>>>> 6c45f99dc7ca17bbf478e03055adf8e9c75097bc
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/about' element={<About />} />
@@ -302,11 +276,6 @@ class ErrorBoundary extends React.Component<
   static getDerivedStateFromError() {
   static getDerivedStateFromError() {
   static getDerivedStateFromError(_error: Error) { // eslint-disable-line @typescript-eslint/no-unused-vars
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
     return { hasError: true };
   }
 
@@ -328,7 +297,6 @@ class ErrorBoundary extends React.Component<
     console.error('Error caught by boundary:', errorInfo);
   }
 
->>>>>>> main
   override render() {
     if (this.state.hasError) {
       return this.props.fallback || (
@@ -353,11 +321,5 @@ class ErrorBoundary extends React.Component<
 export { ErrorBoundary };
 export default App;
 
->>>>>>> main
->>>>>>> main
 export default App;
->>>>>>> main
->>>>>>> main
-=======
 export default App;
->>>>>>> 6c45f99dc7ca17bbf478e03055adf8e9c75097bc

@@ -11,11 +11,9 @@ let content = fs.readFileSync('src/components/Layout.tsx', 'utf8');
 content = content
   .replace(/<<<<<<< HEAD:.*?\n/g, '')
   .replace(/=======.*?\n/g, '')
-  .replace(/>>>>>>> .*?\n/g, '')
-  .replace(/<<<<<<< HEAD\n/g, '')
+  .replace(/  .replace(/<<<<<<< HEAD\n/g, '')
   .replace(/=======\n/g, '')
-  .replace(/>>>>>>> .*\n/g, '');
-
+  .replace(/
 // Fix any remaining issues with href/to attributes
 content = content
   .replace(/href='([^']*)'\s+to='([^']*)'/g, "href='$1'")

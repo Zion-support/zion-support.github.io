@@ -23,7 +23,6 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
           if (entry.entryType === 'navigation') {
             const navEntry = entry as PerformanceNavigationTiming;
             console.log('Page load time:', navEntry.loadEventEnd - navEntry.loadEventStart);
->>>>>>> main
           }
         }
       });
@@ -34,11 +33,8 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     }
     
     // Return undefined if performance is not available
->>>>>>> main
     return undefined;
   }, []);
-=======
-=======
     // Initialize performance monitoring
     // Add critical resource hints for performance optimization
     performanceOptimizer.prefetchResources([]);
@@ -115,12 +111,10 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
           setMetrics(prev => ({ ...prev, CLS: cls }));
           if (enableReporting) {
             performanceOptimizer.reportWebVitals({ CLS: cls });
->>>>>>> main
           }
         }
       });
     });
->>>>>>> main
 
     try {
       observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
@@ -139,7 +133,6 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       console.log('Performance Metrics:', metrics);
     }
   }, [metrics]);
-=======
 import React, { ReactNode, useEffect } from 'react';
 
 interface PerformanceMonitorProps {
@@ -170,7 +163,6 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ children }) => 
     }
     return undefined;
   }, []);
->>>>>>> main
 
   return <>{children}</>;
 };

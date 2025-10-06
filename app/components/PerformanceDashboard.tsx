@@ -32,7 +32,6 @@ interface DashboardData {
   timestamp: Date;
 import { performanceOptimizer } from '../../src/utils/performanceOptimizer';
 import { getErrorMetrics, isErrorRateTooHigh } from '../../utils/errorHandling';
->>>>>>> 6c45f99dc7ca17bbf478e03055adf8e9c75097bc
 
 interface PerformanceMetrics {
   loadTime: number;
