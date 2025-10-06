@@ -1,5 +1,11 @@
+<<<<<<< HEAD
 import { Component, type ErrorInfo, type ReactNode } from 'react';
 // import { AlertTriangle } from 'lucide-react';
+=======
+import { Component } from 'react';
+import type { ErrorInfo, ReactNode } from 'react';
+import { AlertTriangle } from 'lucide-react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0e4c
 
 interface Props {
   children: ReactNode;

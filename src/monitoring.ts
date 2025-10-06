@@ -1,7 +1,7 @@
 // Performance monitoring setup
 import { analytics } from './utils/analytics';
 import { errorHandler } from './utils/errorHandler';
-import { performanceOptimizer } from './utils/performanceOptimizer';
+import { performanceOptimizer, monitorLongTasks } from './utils/performanceOptimizer';
 
 // Initialize performance monitoring
 if (typeof window !== 'undefined') {
@@ -15,12 +15,18 @@ if (typeof window !== 'undefined') {
 =======
   
   // Monitor long tasks
+<<<<<<< HEAD
   const monitorLongTasks = (performanceOptimizer as { monitorLongTasks?: (callback: (entries: PerformanceEntry[]) => void) => PerformanceObserver | null }).monitorLongTasks;
   if (monitorLongTasks) {
     monitorLongTasks((entries: PerformanceEntry[]) => {
       entries.forEach((entry: PerformanceEntry) => {
         analytics.track('long_task', 'performance', 'detected', undefined, entry.duration);
       });
+=======
+  monitorLongTasks((entries: PerformanceEntry[]) => {
+    entries.forEach((entry: PerformanceEntry) => {
+      analytics.track('long_task', 'performance', 'detected', undefined, entry.duration);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0e4c
     });
   }
   
