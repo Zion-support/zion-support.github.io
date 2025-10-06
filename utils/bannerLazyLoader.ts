@@ -29,6 +29,8 @@ export const lazyLoadBanner = (
             .catch(retryError => {
               console.error(
                 `Retry failed for banner: ${componentName}`,
+                retryError
+              );
             });
         }, 1000);
       });
@@ -48,14 +50,10 @@ export const preloadBanner = (importFn: () => Promise<BannerModule>): void => {
           // Silently fail for preload
         });
       });
-    });
+    }
   }
 };
 
 /**
  * Banner loader with intersection observer
  */
-  }
-}
-
-/**
