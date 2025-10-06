@@ -368,7 +368,11 @@ class PerformanceOptimizer {
     });
   }
 
-<<<<<<< HEAD
+  // Get performance metrics
+  getMetrics(): Record<string, number> {
+    return Object.fromEntries(this.metrics);
+  }
+
   public reportWebVitals(metrics: WebVitalsMetrics): void {
     reportWebVitals(metrics);
   }
@@ -379,11 +383,6 @@ class PerformanceOptimizer {
 
   public prefetchResources(resources: string[]): void {
     prefetchResources(resources);
-  }
-
-  // Get performance metrics
-  getMetrics(): Record<string, number> {
-    return Object.fromEntries(this.metrics);
   }
 
   // Monitor long tasks
@@ -418,20 +417,6 @@ class PerformanceOptimizer {
     this.metrics.clear();
   }
 
-  // Measure page load performance
-  measurePageLoad(): Record<string, number> | null {
-    if (typeof window === 'undefined' || !window.performance) {
-      return null;
-    }
-    
-    const timing = window.performance.timing;
-    return {
-      loadTime: timing.loadEventEnd - timing.navigationStart,
-      interactiveTime: timing.domInteractive - timing.navigationStart,
-      domContentLoaded: timing.domContentLoadedEventEnd - timing.navigationStart,
-      firstPaint: performance.getEntriesByType('paint')[0]?.startTime || 0
-    };
-  }
 
   // Initialize all optimizations
   initialize(): void {
