@@ -7,7 +7,8 @@ const PerformanceMonitor: React.FC = () => {
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'navigation') {
-            console.log('Page load time:', entry.loadEventEnd - entry.loadEventStart);
+            const navEntry = entry as PerformanceNavigationTiming;
+            console.log('Page load time:', navEntry.loadEventEnd - navEntry.loadEventStart);
           }
         }
       });
@@ -16,6 +17,8 @@ const PerformanceMonitor: React.FC = () => {
       
       return () => observer.disconnect();
     }
+    
+    return undefined;
   }, []);
 
   return null;
