@@ -7,7 +7,6 @@ export const focusManagement = {
   // Trap focus within an element
   trapFocus: (element: HTMLElement): (() => void) => {
     const focusableElements = element.querySelectorAll(
-      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])',
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
     );
     const firstElement = focusableElements[0] as HTMLElement;
@@ -62,10 +61,6 @@ export const ariaUtils = {
   },
 
   // Set ARIA attributes
-  setAriaAttributes: (
-    element: HTMLElement,
-    attributes: Record<string, string>,
-  ): void => {
   setAriaAttributes: (element: HTMLElement, attributes: Record<string, string>): void => {
     Object.entries(attributes).forEach(([key, value]) => {
       element.setAttribute(key, value);
@@ -73,10 +68,6 @@ export const ariaUtils = {
   },
 
   // Announce to screen readers
-  announce: (
-    message: string,
-    priority: 'polite' | 'assertive' = 'polite',
-  ): void => {
   announce: (message: string, priority: 'polite' | 'assertive' = 'polite'): void => {
     const announcement = document.createElement('div');
     announcement.setAttribute('aria-live', priority);
@@ -138,13 +129,6 @@ export const colorContrast = {
     return 0.2126 * (rs || 0) + 0.7152 * (gs || 0) + 0.0722 * (bs || 0);
   },
   // Calculate contrast ratio
-  getContrastRatio: (
-    color1: [number, number, number],
-    color2: [number, number, number],
-  ): number => {
-    return 0.2126 * (rs ?? 0) + 0.7152 * (gs ?? 0) + 0.0722 * (bs ?? 0);
-  },
-  // Calculate contrast ratio
   getContrastRatio: (color1: [number, number, number], color2: [number, number, number]): number => {
     const lum1 = colorContrast.getLuminance(...color1);
     const lum2 = colorContrast.getLuminance(...color2);
@@ -155,7 +139,8 @@ export const colorContrast = {
 
   // Check if contrast meets WCAG standards
   meetsWCAG: (contrastRatio: number, level: 'AA' | 'AAA' = 'AA'): boolean => {
-    return level === 'AA' ? contrastRatio >= 4.5 : contrastRatio >= 7;
+    const thresholds = { AA: 4.5, AAA: 7 };
+    return contrastRatio >= thresholds[level];
   },
 };
 // Motion and animation utilities
@@ -185,70 +170,11 @@ export const formAccessibility = {
   ): HTMLLabelElement => {
     const label = document.createElement('label');
     label.textContent = labelText;
-    label.setAttribute('for', input.id || formAccessibility.generateInputId());
+    label.setAttribute('for', input.id || `input-${Math.random().toString(36).substr(2, 9)}`);
     if (!input.id) {
       input.id = label.getAttribute('for')!;
-    const thresholds = { AA: 4.5, AAA: 7 };
-    return contrastRatio >= thresholds[level];
-  },
-};
-// Keyboard navigation utilities
-export const keyboardNavigation = {
-  // Handle arrow key navigation
-  handleArrowKeys: (e: KeyboardEvent, items: HTMLElement[], currentIndex: number): number => {
-    let newIndex = currentIndex;
-    switch (e.key) {
-      case 'ArrowDown':
-      case 'ArrowRight':
-        e.preventDefault();
-        newIndex = (currentIndex + 1) % items.length;
-        break;
-      case 'ArrowUp':
-      case 'ArrowLeft':
-        e.preventDefault();
-        newIndex = currentIndex === 0 ? items.length - 1 : currentIndex - 1;
-        break;
-      case 'Home':
-        e.preventDefault();
-        newIndex = 0;
-        break;
-      case 'End':
-        e.preventDefault();
-        newIndex = items.length - 1;
-        break;
     }
-    if (newIndex !== currentIndex) {
-      items[newIndex]?.focus();
-    }
-    
-    return newIndex;
-  },
-
-  // Generate unique input ID
-  generateInputId: (): string => {
-    return `input-${Math.random().toString(36).substr(2, 9)}`;
-  },
-  // Add error message association
-  addErrorMessage: (input: HTMLInputElement, errorMessage: string): void => {
-    const errorId = `error-${input.id}`;
-    const errorElement = document.createElement('div');
-    errorElement.id = errorId;
-    errorElement.className = 'error-message';
-    errorElement.textContent = errorMessage;
-    errorElement.setAttribute('role', 'alert');
-    input.setAttribute('aria-describedby', errorId);
-    input.setAttribute('aria-invalid', 'true');
-    input.parentNode?.insertBefore(errorElement, input.nextSibling);
-  },
-  // Remove error message
-  removeErrorMessage: (input: HTMLInputElement): void => {
-    const errorId = input.getAttribute('aria-describedby');
-    if (errorId) {
-      const errorElement = document.getElementById(errorId);
-      errorElement?.remove();
-      input.removeAttribute('aria-describedby');
-      input.removeAttribute('aria-invalid');
-    }
+    return label;
   },
 };
 // Screen reader utilities
@@ -342,6 +268,7 @@ export const accessibilityTesting = {
       headings: headingCheck,
       score,
     };
+  },
   // Check if element is focusable
   isFocusable: (element: HTMLElement): boolean => {
     const focusableSelectors = [

@@ -39,7 +39,6 @@ const THRESHOLDS = {
 /**
  * Get rating based on metric value
  */
-function getRating(name: string, value: number): 'good' | 'needs-improvement' | 'poor' {
 function getRating(
   name: string,
   value: number
@@ -60,7 +59,6 @@ function sendToAnalytics(metric: Metric): void {
     value: metric.value,
     rating: getRating(metric.name, metric.value),
     delta: metric.delta,
-    id: metric.id,
     id: metric.id
   };
 
@@ -222,11 +220,6 @@ export function getMemoryUsage(): Record<string, number> | null {
     jsHeapSizeLimit: memory.jsHeapSizeLimit,
     usedPercentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100,
   };
-  // Track Core Web Vitals
-  onCLS(sendToAnalytics);
-  onFCP(sendToAnalytics);
-  onLCP(sendToAnalytics);
-  onTTFB(sendToAnalytics);
 }
 
 /**
@@ -255,12 +248,6 @@ export function generatePerformanceReport(): PerformanceReport | null {
     timestamp: new Date().toISOString(),
     url: window.location.href,
     userAgent: navigator.userAgent,
-export function generatePerformanceReport(): PerformanceReport {
-  return {
-    metrics: [],
-    timestamp: new Date().toISOString(),
-    url: typeof window !== 'undefined' ? window.location.href : '',
-    userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : ''
   };
 }
 
