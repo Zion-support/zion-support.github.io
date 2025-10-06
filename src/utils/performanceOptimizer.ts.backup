@@ -48,62 +48,42 @@ export const preconnectDomains = (domains: string[]): void => {
  */
 export const lazyLoadImages = (): void => {
   if (typeof window === 'undefined') return;
-  
-  const images = document.querySelectorAll('img[data-src]');
-  
+  if (!('IntersectionObserver' in window)) return;
+
   const imageObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         const img = entry.target as HTMLImageElement;
-        img.src = img.dataset.src || '';
-        img.removeAttribute('data-src');
-        imageObserver.unobserve(img);
+        const src = img.dataset.src;
+        if (src) {
+          img.src = src;
+          img.classList.remove('lazy');
+          imageObserver.unobserve(img);
+        }
       }
     });
   });
-  
-  images.forEach(img => imageObserver.observe(img));
-};
 
-/**
- * Optimize scroll performance
- */
-export const optimizeScroll = (): void => {
-  if (typeof window === 'undefined') return;
-  
-  let ticking = false;
-  
-  const updateScrollPosition = () => {
-    // Throttled scroll handling
-    ticking = false;
-  };
-  
-  const requestTick = () => {
-    if (!ticking) {
-      requestAnimationFrame(updateScrollPosition);
-      ticking = true;
-    }
-  };
-  
-  window.addEventListener('scroll', requestTick, { passive: true });
+  document.querySelectorAll('img[data-src]').forEach((img) => {
+    imageObserver.observe(img);
+  });
 };
 
 /**
  * Preload critical resources
  */
 export const preloadCriticalResources = (): void => {
-  if (typeof document === 'undefined') return;
-  
   const criticalResources = [
-    '/fonts/inter-var.woff2',
-    '/css/critical.css'
+    '/fonts/inter.woff2',
+    '/images/hero-bg.jpg',
+    '/images/logo.svg'
   ];
-  
+
   criticalResources.forEach(resource => {
     const link = document.createElement('link');
     link.rel = 'preload';
     link.href = resource;
-    link.as = resource.endsWith('.css') ? 'style' : 'font';
+    link.as = resource.endsWith('.woff2') ? 'font' : 'image';
     if (resource.endsWith('.woff2')) {
       link.crossOrigin = 'anonymous';
     }
@@ -112,11 +92,110 @@ export const preloadCriticalResources = (): void => {
 };
 
 /**
- * Performance monitoring class
+ * Measure page load performance
  */
-class PerformanceOptimizer {
+export const measurePageLoad = (): WebVitalsMetrics | null => {
+  if (typeof window === 'undefined' || !('performance' in window)) return null;
+
+  const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+  const paint = performance.getEntriesByType('paint');
+
+  const fcp = paint.find(entry => entry.name === 'first-contentful-paint');
+  const lcp = performance.getEntriesByType('largest-contentful-paint')[0] as PerformanceEntry;
+
+  return {
+    FCP: fcp ? fcp.startTime : undefined,
+    LCP: lcp ? lcp.startTime : undefined,
+    TTFB: navigation ? navigation.responseStart - navigation.requestStart : undefined
+  };
+};
+
+/**
+ * Report Web Vitals to analytics
+ */
+export const reportWebVitals = (metrics: WebVitalsMetrics): void => {
+  console.log('Web Vitals: ', metrics);
+  
+  // Send to analytics service
+  if (typeof window !== 'undefined' && (window as any).gtag) {
+    Object.entries(metrics).forEach(([key, value]) => {
+      if (value !== undefined) {
+        (window as any).gtag('event', key, {
+          value: Math.round(value),
+          event_category: 'Web Vitals',
+          event_label: key
+        });
+      }
+    });
+  }
+};
+
+/**
+ * Add critical resource hints
+ */
+export const addCriticalResourceHints = (): void => {
+  if (typeof document === 'undefined') return;
+
+  // Preconnect to external domains
+  preconnectDomains([
+    'https://fonts.googleapis.com',
+    'https://fonts.gstatic.com'
+  ]);
+
+  // Preload critical resources
+  preloadCriticalResources();
+};
+
+/**
+ * Optimize bundle loading with route-based code splitting
+ */
+export const optimizeBundleLoading = (): void => {
+  if (typeof window === 'undefined') return;
+
+  // Prefetch next likely routes
+  const nextRoutes = ['/about', '/services', '/contact'];
+  prefetchResources(nextRoutes.map(route => route));
+};
+
+/**
+ * Request Idle Callback wrapper with fallback
+ */
+export const requestIdleCallback = (callback: (deadline: IdleDeadline) => void): number => {
+  if (typeof window === 'undefined') return 0;
+  
+  if ('requestIdleCallback' in window) {
+    return window.requestIdleCallback(callback);
+  }
+  
+  // Fallback for browsers that don't support requestIdleCallback
+  return (window as any).setTimeout(() => {
+    const start = Date.now();
+    callback({
+      didTimeout: false,
+      timeRemaining: () => Math.max(0, 50 - (Date.now() - start))
+    });
+  }, 1) as unknown as number;
+};
+
+/**
+ * Cancel Idle Callback wrapper with fallback
+ */
+export const cancelIdleCallback = (id: number): void => {
+  if (typeof window === 'undefined') return;
+  
+  if ('cancelIdleCallback' in window) {
+    window.cancelIdleCallback(id);
+  } else {
+    (window as any).clearTimeout(id);
+  }
+};
+
+/**
+ * Performance optimizer class
+ */
+export class PerformanceOptimizer {
   private static instance: PerformanceOptimizer;
-  private metrics: Map<string, number> = new Map();
+  // private metrics: Map<string, number> = new Map();
 
   private constructor() {}
 
@@ -127,31 +206,20 @@ class PerformanceOptimizer {
     return PerformanceOptimizer.instance;
   }
 
-  public measurePerformance(name: string, fn: () => void): number {
-    const start = performance.now();
-    fn();
-    const end = performance.now();
-    const duration = end - start;
-    this.metrics.set(name, duration);
-    return duration;
-  }
-
   public lazyLoadImages(): void {
     lazyLoadImages();
   }
 
-  public optimizeScroll(): void {
-    optimizeScroll();
+  public addCriticalResourceHints(): void {
+    addCriticalResourceHints();
   }
 
-  public preloadCriticalResources(): void {
-    preloadCriticalResources();
+  public measurePageLoad(): WebVitalsMetrics | null {
+    return measurePageLoad();
   }
 
   public reportWebVitals(metrics: WebVitalsMetrics): void {
-    if (process.env.NODE_ENV === 'development') {
-      console.log('Web Vitals:', metrics);
-    }
+    reportWebVitals(metrics);
   }
 
   // Get performance metrics
@@ -196,6 +264,12 @@ class PerformanceOptimizer {
     };
   }
 
+  // Report web vitals
+  reportWebVitals(metrics: Record<string, number>): void {
+    if (process.env.NODE_ENV === 'development') {
+      console.log('Web Vitals:', metrics);
+    }
+  }
   // Initialize all optimizations
   initialize(): void {
     this.measurePerformance('lazyLoadImages', () => this.lazyLoadImages());

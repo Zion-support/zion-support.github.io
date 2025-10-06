@@ -1,153 +1,73 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useEffect, useState } from 'react';
 
 interface PerformanceMetrics {
-  fps: number;
-  memoryUsage: number;
-  renderTime: number;
-  networkLatency: number;
+  lcp?: number;
+  fid?: number;
+  cls?: number;
+  fcp?: number;
+  ttfb?: number;
+  inp?: number;
 }
 
-interface AdvancedPerformanceMonitorProps {
-  isMonitoring: boolean;
-  onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
-  threshold?: {
-    fps: number;
-    memoryUsage: number;
-    renderTime: number;
-    networkLatency: number;
-  };
-}
+export const AdvancedPerformanceMonitor: React.FC = () => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({});
+  const [isVisible, setIsVisible] = useState(false);
 
-const AdvancedPerformanceMonitor: React.FC<AdvancedPerformanceMonitorProps> = ({
-  isMonitoring,
-  onMetricsUpdate,
-  threshold = {
-    fps: 30,
-    memoryUsage: 100,
-    renderTime: 16,
-    networkLatency: 100,
-  },
-}) => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    fps: 0,
-    memoryUsage: 0,
-    renderTime: 0,
-    networkLatency: 0,
-  });
+  useEffect(() => {
+    // Only run in development
+    if (process.env.NODE_ENV !== 'development') return;
 
-  const measurePerformance = useCallback(() => {
-    if (!isMonitoring) return;
+    const observer = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      entries.forEach((entry) => {
+        if (entry.entryType === 'largest-contentful-paint') {
+          setMetrics(prev => ({ ...prev, lcp: entry.startTime }));
+        } else if (entry.entryType === 'first-input') {
+          setMetrics(prev => ({ ...prev, fid: (entry as any).processingStart - entry.startTime }));
+        } else if (entry.entryType === 'layout-shift' && !(entry as any).hadRecentInput) {
+          setMetrics(prev => ({ ...prev, cls: (prev.cls || 0) + (entry as any).value }));
+        }
+      });
+    });
 
-    // Measure FPS
-    let frameCount = 0;
-    let lastTime = performance.now();
+    observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
 
-    const measureFPS = () => {
-      frameCount++;
-      const currentTime = performance.now();
-
-      if (currentTime - lastTime >= 1000) {
-        const fps = Math.round((frameCount * 1000) / (currentTime - lastTime));
-        setMetrics(prev => ({ ...prev, fps }));
-        frameCount = 0;
-        lastTime = currentTime;
-      }
-
-      if (isMonitoring) {
-        requestAnimationFrame(measureFPS);
+    // Toggle visibility with Ctrl+Shift+P
+    const handleKeyPress = (e: KeyboardEvent) => {
+      if (e.ctrlKey && e.shiftKey && e.key === 'P') {
+        setIsVisible(prev => !prev);
       }
     };
 
-    measureFPS();
+    window.addEventListener('keydown', handleKeyPress);
 
-    // Measure memory usage
-    if ('memory' in performance) {
-      const memory = (performance as any).memory;
-      const memoryUsage = Math.round(memory.usedJSHeapSize / 1024 / 1024);
-      setMetrics(prev => ({ ...prev, memoryUsage }));
-    }
+    return () => {
+      observer.disconnect();
+      window.removeEventListener('keydown', handleKeyPress);
+    };
+  }, []);
 
-    // Measure render time
-    const renderStart = performance.now();
-    requestAnimationFrame(() => {
-      const renderTime = performance.now() - renderStart;
-      setMetrics(prev => ({ ...prev, renderTime }));
-    });
-
-    // Measure network latency
-    const networkStart = performance.now();
-    fetch('/api/ping', { method: 'HEAD' })
-      .then(() => {
-        const networkLatency = performance.now() - networkStart;
-        setMetrics(prev => ({ ...prev, networkLatency }));
-      })
-      .catch(() => {
-        setMetrics(prev => ({ ...prev, networkLatency: 0 }));
-      });
-  }, [isMonitoring]);
-
-  useEffect(() => {
-    if (isMonitoring) {
-      measurePerformance();
-    }
-  }, [isMonitoring, measurePerformance]);
-
-  useEffect(() => {
-    if (onMetricsUpdate) {
-      onMetricsUpdate(metrics);
-    }
-  }, [metrics, onMetricsUpdate]);
-
-  const getStatusColor = (value: number, threshold: number) => {
-    if (value <= threshold) return 'text-green-600';
-    if (value <= threshold * 1.5) return 'text-yellow-600';
-    return 'text-red-600';
-  };
-
-  if (!isMonitoring) {
-    return null;
-  }
+  if (!isVisible) return null;
 
   return (
-    <div className='performance-monitor bg-gray-100 p-4 rounded-lg'>
-      <h3 className='text-lg font-semibold mb-4'>Performance Monitor</h3>
-
-      <div className='grid grid-cols-2 gap-4'>
-        <div className='metric'>
-          <div className='text-sm text-gray-600'>FPS</div>
-          <div
-            className={`text-2xl font-bold ${getStatusColor(metrics.fps, threshold.fps)}`}
-          >
-            {metrics.fps}
-          </div>
-        </div>
-
-        <div className='metric'>
-          <div className='text-sm text-gray-600'>Memory Usage (MB)</div>
-          <div
-            className={`text-2xl font-bold ${getStatusColor(metrics.memoryUsage, threshold.memoryUsage)}`}
-          >
-            {metrics.memoryUsage}
-          </div>
-        </div>
-
-        <div className='metric'>
-          <div className='text-sm text-gray-600'>Render Time (ms)</div>
-          <div
-            className={`text-2xl font-bold ${getStatusColor(metrics.renderTime, threshold.renderTime)}`}
-          >
-            {metrics.renderTime.toFixed(2)}
-          </div>
-        </div>
-
-        <div className='metric'>
-          <div className='text-sm text-gray-600'>Network Latency (ms)</div>
-          <div
-            className={`text-2xl font-bold ${getStatusColor(metrics.networkLatency, threshold.networkLatency)}`}
-          >
-            {metrics.networkLatency.toFixed(2)}
-          </div>
-        </div>
+    <div style={{
+      position: 'fixed',
+      top: '10px',
+      right: '10px',
+      background: 'rgba(0, 0, 0, 0.8)',
+      color: 'white',
+      padding: '10px',
+      borderRadius: '5px',
+      fontSize: '12px',
+      zIndex: 9999,
+      fontFamily: 'monospace',
+    }}>
+      <h4>Performance Metrics</h4>
+      <div>LCP: {metrics.lcp ? metrics.lcp.toFixed(2) + 'ms' : 'N/A'}</div>
+      <div>FID: {metrics.fid ? metrics.fid.toFixed(2) + 'ms' : 'N/A'}</div>
+      <div>CLS: {metrics.cls ? metrics.cls.toFixed(3) : 'N/A'}</div>
+      <div style={{ marginTop: '10px', fontSize: '10px' }}>
+        Press Ctrl+Shift+P to toggle
       </div>
     </div>
   );
