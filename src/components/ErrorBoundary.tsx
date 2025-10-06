@@ -1,8 +1,4 @@
-import { Component, type ErrorInfo, type ReactNode } from 'react';
 import React, { Component, type ErrorInfo, type ReactNode } from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e62
-import React, { Component, type ErrorInfo, type ReactNode } from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-cfe1
 import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
 
 interface Props {
@@ -112,5 +108,3 @@ class ErrorBoundary extends Component<Props, State> {
 }
 
 export default ErrorBoundary;
-export default ErrorBoundary;
->>>>>>> cursor/fix-errors-and-merge-to-main-cfe1
