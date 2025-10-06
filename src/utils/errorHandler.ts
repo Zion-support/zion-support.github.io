@@ -14,7 +14,7 @@ export interface ErrorContext {
 
 export interface ErrorReport {
   message: string;
-  stack?: string;
+  stack?: string | undefined;
   context: ErrorContext;
   severity: 'low' | 'medium' | 'high' | 'critical';
 }
@@ -36,10 +36,12 @@ class ErrorHandler {
       stack: typeof error === 'string' ? undefined : error.stack,
       context: {
         timestamp: Date.now(),
-        userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : undefined,
-        url: typeof window !== 'undefined' ? window.location.href : undefined,
+        ...(typeof window !== 'undefined' && {
+          userAgent: window.navigator.userAgent,
+          url: window.location.href,
+        }),
         ...context,
-      },
+      } as ErrorContext,
       severity,
     };
 
