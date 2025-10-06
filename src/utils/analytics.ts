@@ -19,7 +19,7 @@ export interface UserProperties {
   userAgent: string;
   language: string;
   timezone: string;
-  referrer?: string;
+  referrer?: string | undefined;
 }
 
 class Analytics {
