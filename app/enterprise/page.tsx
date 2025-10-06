@@ -9,69 +9,133 @@ export const metadata = {
 
 export default function EnterprisePage() {
   return (
-    <div>/* content */}
-  return (
-    <div>
-      <div> </div><div> </div></div>
-    <div className="text-left">{/* Hero Section */}</div></div>
-      <header className="text-left">
-        <div className="text-left"> </div><div className="text-left">"
-          </div><div className="text-left" style={{ animationDelay: '2s' }}>"
-        </div></div>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      {/* Hero Section */}
+      <header className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 animate-pulse"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-transparent via-white/5 to-transparent"></div>
+        <div className="absolute bottom-0 right-0 w-full h-full bg-gradient-to-tl from-transparent via-blue-500/5 to-transparent"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
         
-        <div className="text-left"> </div><div className="text-left"> </div><div className="text-left"> </div><span className="text-left">🏢 Enterprise AI Solutions
-              </span></span>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+          <div className="text-center">
+            <div className="flex items-center justify-center gap-2 mb-6">
+              <span className="text-4xl">🏢</span>
+              <span className="text-cyan-400 font-bold text-xl">
+                Enterprise AI Solutions
+              </span>
             </div>
             
-            <h1 className="text-left">
+            <h1 className="text-5xl md:text-6xl font-extrabold text-white mb-6 leading-tight">
               Enterprise Solutions
             </h1>
             
-            <p className="text-left">Trusted by 500+ Fortune 500 Companies Worldwide
-            </p></p>
+            <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Trusted by 500+ Fortune 500 Companies Worldwide
+            </p>
             
-            <p className="text-left">Transform your enterprise with our proven AI solutions. Achieve $100M+ cost savings, 
+            <p className="text-lg text-gray-400 mb-12 max-w-3xl mx-auto">
+              Transform your enterprise with our proven AI solutions. Achieve $100M+ cost savings, 
               500% productivity gains, and 99.9% system uptime with enterprise-grade security and compliance.
-            </p></p>
+            </p>
             
-            <div className="text-left"> </div><a 
-                href="/"
-                className="text-left">Schedule Enterprise Demo
-              </a></a>
-              <a 
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <Link 
+                href="/contact"
+                className="group flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl"
+              >
+                <span>Schedule Enterprise Demo</span>
+                <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
+              <Link 
                 href="#solutions"
-                className="text-left"
-              >View Solutions
-              </a></a>
+                className="group flex items-center gap-3 border-2 border-white/30 hover:border-white/60 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1"
+              >
+                <span>View Solutions</span>
+                <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
             </div>
           </div>
         </div>
       </header>
 
       {/* Solutions Section */}
-      <section id="solutions" className="text-left"> </section><div className="text-left"> </div><div className="text-left"> </div><h2 className="text-left">Enterprise Solutions</h2>"
-            <p className="text-left">Comprehensive AI solutions for enterprise needs</p>"
+      <section id="solutions" className="py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-6">Enterprise Solutions</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Comprehensive AI solutions for enterprise needs
+            </p>
           </div>
           
-          <div className="text-left"> </div><div className="text-left"> </div><h3 className="text-left">AI Automation</h3>"
-              <p className="text-left">Automate complex business processes with AI</p>"
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover:bg-white/20 transition-all duration-500 transform hover:-translate-y-2">
+              <div className="text-4xl mb-4">🤖</div>
+              <h3 className="text-2xl font-bold text-white mb-4">AI Automation</h3>
+              <p className="text-gray-300 mb-6">
+                Automate complex business processes with AI-powered workflows that deliver 95% efficiency gains and 60% cost reduction.
+              </p>
+              <div className="space-y-2">
+                <div className="flex justify-between">
+                  <span className="text-gray-400">Efficiency Gain:</span>
+                  <span className="text-cyan-400 font-bold">95%</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-gray-400">Cost Reduction:</span>
+                  <span className="text-green-400 font-bold">60%</span>
+                </div>
+              </div>
             </div>
             
-            <div className="text-left"> </div><h3 className="text-left">Data Analytics</h3>"
-              <p className="text-left">Advanced analytics and insights for decision making</p>"
+            <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover:bg-white/20 transition-all duration-500 transform hover:-translate-y-2">
+              <div className="text-4xl mb-4">📊</div>
+              <h3 className="text-2xl font-bold text-white mb-4">Data Analytics</h3>
+              <p className="text-gray-300 mb-6">
+                Advanced analytics and insights for decision making with real-time processing of 10B+ data points daily.
+              </p>
+              <div className="space-y-2">
+                <div className="flex justify-between">
+                  <span className="text-gray-400">Data Processed:</span>
+                  <span className="text-purple-400 font-bold">10B+ daily</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-gray-400">Accuracy:</span>
+                  <span className="text-green-400 font-bold">99.9%</span>
+                </div>
+              </div>
             </div>
             
-            <div className="text-left"> </div><h3 className="text-left">Security</h3>"
-              <p className="text-left">Enterprise-grade security and compliance</p>"
+            <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover:bg-white/20 transition-all duration-500 transform hover:-translate-y-2">
+              <div className="text-4xl mb-4">🛡️</div>
+              <h3 className="text-2xl font-bold text-white mb-4">Security</h3>
+              <p className="text-gray-300 mb-6">
+                Enterprise-grade security and compliance with quantum-resistant encryption and zero-trust architecture.
+              </p>
+              <div className="space-y-2">
+                <div className="flex justify-between">
+                  <span className="text-gray-400">Security Level:</span>
+                  <span className="text-red-400 font-bold">Military Grade</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-gray-400">Uptime:</span>
+                  <span className="text-green-400 font-bold">99.99%</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <footer className="text-left">
-        <div className="text-left"> </div><p className="text-left">© 2025 Zion Tech Group. All rights reserved.</p>
+      <footer className="bg-black/20 backdrop-blur-sm border-t border-white/10 py-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <p className="text-gray-400">© 2025 Zion Tech Group. All rights reserved.</p>
         </div>
       </footer>
     </div>
   );
-})
+}
