@@ -1,6 +1,8 @@
 // Performance monitoring setup
 
 // Mock analytics object
+// Simple analytics object
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e62
 const analytics = {
   trackPageView: (path: string) => {
     console.log('Page view:', path);
@@ -31,6 +33,16 @@ const performanceOptimizer = {
 const errorHandler = {
   captureException: (error: Error) => {
     console.error('Error captured:', error);
+  track: (event: string, category: string, action: string, label?: string, value?: number) => {
+    console.log('Analytics:', event, category, action, label, value);
+  }
+};
+
+// Simple error handler
+const errorHandler = {
+  reportError: (error: Error, context?: string) => {
+    console.error('Error reported:', error, context);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e62
   }
 };
 
@@ -50,6 +62,8 @@ if (typeof window !== 'undefined') {
   });
 
   // Monitor long tasks and navigation (if available)
+  // Monitor long tasks if PerformanceObserver is available
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e62
   if ('PerformanceObserver' in window) {
     const observer = new PerformanceObserver((list) => {
       for (const entry of list.getEntries()) {
@@ -71,6 +85,10 @@ if (typeof window !== 'undefined') {
   const metrics = performanceOptimizer.measurePageLoad();
   if (metrics) {
     performanceOptimizer.reportWebVitals(metrics);
+      });
+    });
+    observer.observe({ entryTypes: ['longtask'] });
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e62
   }
 }
 

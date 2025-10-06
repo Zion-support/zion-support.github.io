@@ -1,4 +1,6 @@
 import { Component, type ErrorInfo, type ReactNode } from 'react';
+import React, { Component, type ErrorInfo, type ReactNode } from 'react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e62
 import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
 
 interface Props {
