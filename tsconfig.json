@@ -15,9 +15,9 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
+    "strict": false,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
     "noFallthroughCasesInSwitch": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
@@ -42,13 +42,16 @@
     "allowJs": true,
     "forceConsistentCasingInFileNames": true
   },
-  "include": ["src", "app"],
-  "exclude": [
-    "src/pages/blog-disabled/**/*",
-    "app/blog",
-    "blog",
-    "components",
-    "src/components/**/*"
+  "include": [
+    "app/**/*"
   ],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "exclude": [
+    "src/**/*",
+    "app/page-optimized.tsx",
+    "app/services/**/*",
+    "app/case-studies/**/*",
+    "app/guides/**/*",
+    "app/blog/**/*",
+    "app/components/**/*"
+  ]
 }

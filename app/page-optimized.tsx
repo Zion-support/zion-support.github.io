@@ -1,4 +1,5 @@
 import React from 'react';
+import dynamic from 'next/dynamic';
 import { UnifiedBanner, bannerConfigurations } from './components/UnifiedBannerSystem';
 import { LazyWrapper } from './components/LazyLoader';
 import { SEOOptimizer } from './components/SEOOptimizer';
@@ -6,20 +7,20 @@ import { AccessibilityEnhancer } from './components/AccessibilityEnhancer';
 import { PerformanceMonitor } from './components/PerformanceMonitor';
 
 // Lazy load heavy components
-const UnifiedContentPromotion = dynamic(() => import('../components/UnifiedContentPromotion'), {/* content */}
-  loading: () => <div className="text-left">"
+const UnifiedContentPromotion = dynamic(() => import('../components/UnifiedContentPromotion'), {
+  loading: () => <div className="text-center p-4">Loading content...</div>
 });
 
-const InteractiveAIROICalculator = dynamic(() => import('../components/InteractiveAIROICalculator'), {/* content */}
-  loading: () => </div><div className="text-left">"
+const InteractiveAIROICalculator = dynamic(() => import('../components/InteractiveAIROICalculator'), {
+  loading: () => <div className="text-center p-4">Loading calculator...</div>
 });
 
-const ContentShowcase = dynamic(() => import('../components/ContentShowcase'), {/* content */}
-  loading: () => </div><div className="text-left">"
+const ContentShowcase = dynamic(() => import('../components/ContentShowcase'), {
+  loading: () => <div className="text-center p-4">Loading showcase...</div>
 });
 
-const InteractiveContentShowcase2026 = dynamic(() => import('../components/InteractiveContentShowcase2026'), {/* content */}
-  loading: () => </div><div className="text-left">"
+const InteractiveContentShowcase2026 = dynamic(() => import('../components/InteractiveContentShowcase2026'), {
+  loading: () => <div className="text-center p-4">Loading content...</div>
 });
 
 export const metadata = {
