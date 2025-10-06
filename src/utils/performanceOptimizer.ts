@@ -98,7 +98,6 @@ export class PerformanceOptimizer {
   }
 }
 
-<<<<<<< HEAD
 /**
  * Critical resource hints for better performance
  */
@@ -122,6 +121,11 @@ export const addCriticalResourceHints = (): void => {
     document.head.appendChild(link);
   });
 };
+
+interface PerformanceBudget {
+  maxFirstLoad: number;
+  maxInteractive: number;
+}
 
 export const checkPerformanceBudget = (budget: PerformanceBudget): {
   passed: boolean;
@@ -151,27 +155,5 @@ export const checkPerformanceBudget = (budget: PerformanceBudget): {
   };
 };
 
-export default {
-  prefetchResources,
-  preconnectDomains,
-  lazyLoadImages,
-  debounce,
-  throttle,
-  measurePageLoad,
-  reportWebVitals,
-  shouldUseWebP,
-  getConnectionQuality,
-  shouldLoadHeavyAssets,
-  requestIdleCallback,
-  cancelIdleCallback,
-  preloadRoute,
-  monitorLongTasks,
-  cacheStaticAssets,
-  clearOldCaches,
-  checkPerformanceBudget,
-  addCriticalResourceHints
-};
-=======
 // Export singleton instance
 export const performanceOptimizer = PerformanceOptimizer.getInstance();
->>>>>>> origin/merge-all-fixes
