@@ -2,14 +2,14 @@ import {
   ArrowRight,
   CheckCircle,
   Clock,
-  X,
-  X,
+  Square,
+  Square,
   DollarSign,
-  X,
-  X,
-  X,
-  X,
-  X,
+  Square,
+  Square,
+  Square,
+  Square,
+  Square,
 } from 'lucide-react';
 
 import { Helmet } from 'react-helmet-async';
@@ -22,7 +22,7 @@ export default function AdditionalServices() {
     {
       id: 'micro-saas',
       title: 'Micro SaaS — Innovative Solutions',
-      icon: X,
+      icon: Square,
       color: 'orange',
       items: [
         {
@@ -838,7 +838,7 @@ export default function AdditionalServices() {
     {
       id: 'ai',
       title: 'AI Services — Advanced Capabilities',
-      icon: X,
+      icon: Square,
       color: 'blue',
       items: [
         {
@@ -1494,7 +1494,7 @@ export default function AdditionalServices() {
     {
       id: 'it',
       title: 'IT Services — Comprehensive Solutions',
-      icon: X,
+      icon: Square,
       color: 'green',
       items: [
         {
@@ -2127,7 +2127,7 @@ export default function AdditionalServices() {
     },
     {
       title: 'Enhanced Micro SaaS Solutions',
-      icon: X,
+      icon: Square,
       color: 'purple',
       items: [
         {
@@ -2188,7 +2188,7 @@ export default function AdditionalServices() {
     },
     {
       title: 'Advanced AI Services',
-      icon: X,
+      icon: Square,
       color: 'blue',
       items: [
         {
@@ -2249,7 +2249,7 @@ export default function AdditionalServices() {
     },
     {
       title: 'Enterprise IT Solutions',
-      icon: X,
+      icon: Square,
       color: 'green',
       items: [
         {
@@ -2456,7 +2456,7 @@ export default function AdditionalServices() {
               </div>
               <div>
                 <div className='w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mx-auto mb-4'>
-                  <X className='w-6 h-6 text-blue-400' />
+                  <Square className='w-6 h-6 text-blue-400' />
                 </div>
                 <h3 className='text-lg font-semibold text-white mb-2'>
                   Contact
@@ -2475,7 +2475,7 @@ export default function AdditionalServices() {
               </div>
               <div>
                 <div className='w-12 h-12 bg-fuchsia-500/20 rounded-lg flex items-center justify-center mx-auto mb-4'>
-                  <Globe className='w-6 h-6 text-fuchsia-400' />
+                  <Square className='w-6 h-6 text-fuchsia-400' />
                 </div>
                 <h3 className='text-lg font-semibold text-white mb-2'>
                   Address
@@ -2493,14 +2493,14 @@ export default function AdditionalServices() {
                   href={phoneHref}
                   className='inline-flex items-center gap-2 bg-white text-slate-900 px-6 py-3 rounded-lg font-semibold hover:bg-slate-100 transition-colors'
                 >
-                  <Smartphone className='w-4 h-4' />
+                  <Square className='w-4 h-4' />
                   +1 302 464 0950
                 </a>
                 <a
                   href={emailHref}
                   className='inline-flex items-center gap-2 bg-slate-700 text-white px-6 py-3 rounded-lg font-semibold hover: bg-slate-600 transition-colors'
                 >
-                  <MessageSquare className='w-4 h-4' />
+                  <Square className='w-4 h-4' />
                   kleber@ziontechgroup.com
                 </a>
               </div>

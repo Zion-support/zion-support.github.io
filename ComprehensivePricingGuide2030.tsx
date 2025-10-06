@@ -7,12 +7,12 @@ import {
   TrendingUp,
   Brain,
   ArrowRight,
-  X,
-  X,
-  X,
-  X,
-  X,
-  X,
+  Minus,
+  Minus,
+  Minus,
+  Minus,
+  Minus,
+  Minus,
 } from 'lucide-react';
 
 // import { INNOVATIVE_SERVICES_2025 } from '@/data/innovativeServices2025';
@@ -74,11 +74,11 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
       case 'AI & Finance':
         return Brain;
       case 'Cloud & DevOps':
-        return X;
+        return Minus;
       case 'IoT & Digital Twin':
-        return X;
+        return Minus;
       case 'Quantum Computing':
-        return X;
+        return Minus;
       default:
         return Zap;
     }
@@ -611,7 +611,7 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
               className='grid md:grid-cols-3 gap-8 mb-12'
             >
               <div className='flex flex-col items-center'>
-                <X className='w-8 h-8 text-cyan-400 mb-4' />
+                <Minus className='w-8 h-8 text-cyan-400 mb-4' />
                 <div className='text-white font-semibold mb-2'>Call Us</div>
                 <a
                   href='tel:+13024640950'
@@ -621,7 +621,7 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
                 </a>
               </div>
               <div className='flex flex-col items-center'>
-                <X className='w-8 h-8 text-cyan-400 mb-4' />
+                <Minus className='w-8 h-8 text-cyan-400 mb-4' />
                 <div className='text-white font-semibold mb-2'>Email Us</div>
                 <a
                   href='mailto:kleber@ziontechgroup.com'
@@ -631,7 +631,7 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
                 </a>
               </div>
               <div className='flex flex-col items-center'>
-                <X className='w-8 h-8 text-cyan-400 mb-4' />
+                <Minus className='w-8 h-8 text-cyan-400 mb-4' />
                 <div className='text-white font-semibold mb-2'>Visit Us</div>
                 <div className='text-slate-300 text-center'>
                   364 E Main St STE 1008
