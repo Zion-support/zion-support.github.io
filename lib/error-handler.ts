@@ -39,15 +39,15 @@ export const errorHandler = (
         process.env.NODE_ENV === 'production'
           ? 'Internal Server Error'
           : message,
-      statusCode,
-      timestamp: new Date().toISOString()
-    },
+      statusCode
     }
   });
 };
 
-export const asyncHandler =
-  (fn: Function) =>
-  (req: NextApiRequest, res: NextApiResponse, next: Function) => {
-    Promise.resolve(fn(req, res, next)).catch((error: Error) => next(error));
+export const asyncHandler = (fn: Function) => {
+  return (req: NextApiRequest, res: NextApiResponse) => {
+    Promise.resolve(fn(req, res)).catch((err) => {
+      errorHandler(err, req, res);
+    });
   };
+};
