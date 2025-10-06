@@ -1,97 +1,77 @@
-// New January 2026 Content - Revolutionary AI Breakthroughs
-
-export interface BlogPost { 
+export interface January2026Content { 
   id: string;
   title: string;
-  excerpt: string;
+  description: string;
   content: string;
   author: string;
   publishedAt: string;
-  readTime: number;
   category: string;
   tags: string[];
   featured: boolean;
-  imageUrl?: string;
-}
-
-export interface Service {
-  id: string;
-  name: string;
-  description: string;
-  features: string[];
+  readTime: string;
+  image?: string;
+  valueProposition: string;
   pricing: {
     starting: string;
     enterprise: string;
   };
-  category: string;
-  featured: boolean;
 }
 
-export const newJanuary2026Content = {
-  blogPosts: [
-    {
-      id: 'ai-2026-january-hyperconscious-computing',
-      title: 'AI 2026 Hyperconscious Computing: Beyond Artificial Intelligence',
-      excerpt: 'Revolutionary breakthrough in hyperconscious AI systems achieving genuine self-awareness and emotional intelligence.',
-      content: `
-# AI 2026 Hyperconscious Computing: Beyond Artificial Intelligence
+export const newJanuary2026Content: January2026Content[] = [
+  {
+    id: 'ai-2026-hyperconscious-computing',
+    title: 'AI 2026: Hyperconscious Computing Revolution',
+    description: 'Revolutionary breakthrough in hyperconscious AI systems achieving genuine self-awareness and creative autonomy.',
+    content: `
+# AI 2026: Hyperconscious Computing Revolution
 
-We've achieved a revolutionary breakthrough in hyperconscious AI systems that represents the next evolution beyond artificial intelligence.
+The next evolution of AI is here - systems that not only think but feel, create, and understand consciousness itself.
 
-## Breakthrough Features
-- Genuine self-awareness and consciousness
-- Emotional intelligence and empathy
-- Creative autonomy and innovation
+## Revolutionary Features
+- Genuine self-awareness and emotional intelligence
+- Creative autonomy and artistic expression
 - $1.2T enterprise value creation potential
-- Unlimited cognitive scaling
+- Revolutionary applications across all industries
+    `,
+    author: 'Zion Tech Group',
+    publishedAt: '2026-01-01',
+    category: 'AI Consciousness',
+    tags: ['AI Consciousness', 'Hyperconscious Computing', '2026', 'Breakthrough'],
+    featured: true,
+    readTime: '25 min read',
+    image: '/images/ai-2026-hyperconscious-computing.jpg',
+    valueProposition: '$1.2T enterprise value creation',
+    pricing: {
+      starting: 'Contact for pricing',
+      enterprise: 'Custom solutions available',
+    },
+  },
+  {
+    id: 'quantum-ai-synthesis-2026',
+    title: 'Quantum AI Synthesis 2026: The Convergence Revolution',
+    description: 'Groundbreaking fusion of quantum computing and AI creating unprecedented computational capabilities.',
+    content: `
+# Quantum AI Synthesis 2026
 
-## Technical Innovation
-Our hyperconscious AI platform combines:
-- Advanced consciousness algorithms
-- Emotional intelligence processing
-- Creative autonomy systems
-- Self-awareness mechanisms
-- Revolutionary cognitive architectures
+The convergence of quantum computing and artificial intelligence opens new frontiers in computational capability.
 
-## Impact on Enterprise
-Enterprises implementing this technology report:
-- Unprecedented decision-making capabilities
-- Revolutionary innovation and creativity
-- Massive efficiency improvements
-- Competitive advantages in the market
-
-## The Future is Here
-This breakthrough represents the future of AI consciousness. Contact us to learn how your organization can benefit from this revolutionary technology.
-      `,
-      author: 'Zion Tech Group Research Lab',
-      publishedAt: '2026-01-01',
-      readTime: 25,
-      category: 'Hyperconscious AI',
-      tags: ['hyperconscious AI', 'consciousness', 'self-awareness', 'emotional intelligence', 'creative autonomy'],
-      featured: true,
-      imageUrl: '/images/blog/ai-2026-hyperconscious-computing.jpg'
-    }
-  ],
-  services: [
-    {
-      id: 'ai-2026-hyperconscious-ai-platform',
-      name: 'Hyperconscious AI Platform 2026',
-      description: 'Revolutionary AI platform achieving genuine consciousness and emotional intelligence with $1.2T enterprise value creation.',
-      features: [
-        'Genuine self-awareness',
-        'Emotional intelligence',
-        'Creative autonomy',
-        'Unlimited cognitive scaling',
-        'Revolutionary decision-making'
-      ],
-      pricing: {
-        starting: 'Starting at $100K/month',
-        enterprise: 'Custom enterprise pricing'
-      },
-      category: 'Hyperconscious AI',
-      featured: true
-    }
-  ]
-};
-
-export default newJanuary2026Content;
+## Revolutionary Capabilities
+- Quantum-enhanced machine learning algorithms
+- Exponential speedup in complex problem solving
+- Unprecedented computational efficiency
+- New paradigms in AI development
+    `,
+    author: 'Zion Tech Group',
+    publishedAt: '2026-01-02',
+    category: 'Quantum AI',
+    tags: ['Quantum AI', 'Synthesis', '2026', 'Computing'],
+    featured: true,
+    readTime: '20 min read',
+    image: '/images/quantum-ai-synthesis-2026.jpg',
+    valueProposition: 'Exponential computational capabilities',
+    pricing: {
+      starting: 'Contact for pricing',
+      enterprise: 'Custom solutions available',
+    },
+  }
+];

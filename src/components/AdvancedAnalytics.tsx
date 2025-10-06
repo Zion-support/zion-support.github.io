@@ -6,9 +6,11 @@ interface AdvancedAnalyticsProps {
   enableErrorTracking?: boolean;
 }
 
-export default function AdvancedAnalytics(
-  props: AdvancedAnalyticsProps
-) {
+const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({
+  enableConversionTracking = true,
+  enablePerformanceTracking = true,
+  enableErrorTracking = true,
+}) => {
   const [analytics, setAnalytics] = useState({
     pageViews: 0,
     uniqueVisitors: 0,
@@ -23,26 +25,29 @@ export default function AdvancedAnalytics(
       firstContentfulPaint: 0,
       largestContentfulPaint: 0,
       cumulativeLayoutShift: 0
-    }
+    },
+    conversions: 0,
+    performance: 0,
+    errors: 0,
   });
 
   useEffect(() => {
     // Initialize analytics tracking
-    if (props.enableConversionTracking) {
+    if (enableConversionTracking) {
       // Track conversion events
       console.log('Conversion tracking enabled');
     }
 
-    if (props.enablePerformanceTracking) {
+    if (enablePerformanceTracking) {
       // Track performance metrics
       console.log('Performance tracking enabled');
     }
 
-    if (props.enableErrorTracking) {
+    if (enableErrorTracking) {
       // Track errors
       console.log('Error tracking enabled');
     }
-  }, [props]);
+  }, [enableConversionTracking, enablePerformanceTracking, enableErrorTracking]);
 
   return (
     <div className="advanced-analytics">
@@ -67,4 +72,6 @@ export default function AdvancedAnalytics(
       </div>
     </div>
   );
-}
+};
+
+export default AdvancedAnalytics;

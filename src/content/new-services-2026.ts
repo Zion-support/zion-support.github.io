@@ -1,75 +1,55 @@
-export interface NewService {
+export interface NewService { 
   id: string;
   name: string;
-  title: string;
   description: string;
-  benefits: string[];
-  features: string[];
   category: string;
-  pricing: string;
-  link: string;
-  icon: string;
+  pricing: {
+    starting: string;
+    enterprise: string;
+  };
+  features: string[];
+  valueProposition: string;
+  tags: string[];
   featured: boolean;
-  launchDate: string;
 }
 
 export const newServices2026: NewService[] = [
   {
     id: 'ai-predictive-maintenance',
     name: 'AI Predictive Maintenance Platform',
-    title: '⚙️ AI Predictive Maintenance: Zero Unplanned Downtime',
-    description: 'AI-powered predictive maintenance reducing equipment downtime by 85% and maintenance costs by 40%. Predict failures before they happen with 98% accuracy.',
-    benefits: [
-      '85% reduction in unplanned downtime',
-      '40% lower maintenance costs',
-      '98% failure prediction accuracy',
-      'Real-time equipment monitoring'
-    ],
+    description: 'Revolutionary AI platform for predictive maintenance delivering 99.2% accuracy and 87% cost reduction.',
+    category: 'AI Platform',
+    pricing: {
+      starting: 'Contact for pricing',
+      enterprise: 'Custom solutions available',
+    },
     features: [
-      'Machine learning algorithms',
-      'IoT sensor integration',
-      'Predictive analytics',
-      'Real-time alerts',
-      'Maintenance scheduling'
+      '99.2% failure prediction accuracy',
+      '87% cost reduction',
+      'Real-time monitoring',
+      'Automated maintenance scheduling',
     ],
-    category: 'AI Operations',
-    pricing: 'Starting at $50K/month',
-    link: '/services/ai-predictive-maintenance',
-    icon: '⚙️',
+    valueProposition: '99.2% accuracy, 87% cost reduction',
+    tags: ['AI', 'Predictive Maintenance', 'Platform', '2026'],
     featured: true,
-    launchDate: '2026-01-01'
   },
   {
-    id: 'ai-autonomous-operations',
-    name: 'AI Autonomous Operations Platform',
-    title: '🤖 AI Autonomous Operations: Complete Business Automation',
-    description: 'Revolutionary AI platform achieving 98% process automation, 85% cost reduction, and $650M annual value creation.',
-    benefits: [
-      '98% process automation',
-      '85% cost reduction',
-      '$650M annual value creation',
-      'Zero human intervention'
-    ],
+    id: 'quantum-ai-security',
+    name: 'Quantum AI Security Framework',
+    description: 'Next-generation quantum AI security providing 99.99% threat prevention and zero vulnerabilities.',
+    category: 'AI Security',
+    pricing: {
+      starting: 'Contact for pricing',
+      enterprise: 'Custom solutions available',
+    },
     features: [
-      'Autonomous decision making',
-      'Process optimization',
-      'Cost reduction algorithms',
-      'Value creation tracking',
-      'Performance monitoring'
+      '99.99% threat prevention',
+      'Zero cryptographic vulnerabilities',
+      'Quantum-resistant encryption',
+      'Real-time threat detection',
     ],
-    category: 'Enterprise AI',
-    pricing: 'Custom enterprise pricing',
-    link: '/services/ai-autonomous-operations',
-    icon: '🤖',
+    valueProposition: '99.99% threat prevention, zero vulnerabilities',
+    tags: ['Quantum AI', 'Security', 'Framework', '2026'],
     featured: true,
-    launchDate: '2026-01-01'
   }
 ];
-
-export const getFeaturedServices = (): NewService[] => {
-  return newServices2026.filter(service => service.featured);
-};
-
-export const getServicesByCategory = (category: string): NewService[] => {
-  return newServices2026.filter(service => service.category === category);
-};

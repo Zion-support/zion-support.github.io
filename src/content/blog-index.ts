@@ -119,48 +119,37 @@ export const october2025Breakthroughs: BlogPost[] = [
   },
 ];
 
-// Combine all blog posts
+/**
+ * All blog posts combined
+ */
 export const allBlogPosts: BlogPost[] = [
   ...october2025Breakthroughs,
 ];
 
-// Helper functions
-export const getFeaturedPosts = (): BlogPost[] => {
+/**
+ * Helper functions
+ */
+export function getFeaturedPosts(): BlogPost[] {
   return allBlogPosts.filter(post => post.featured);
-};
+}
 
-export const getPostsByCategory = (category: string): BlogPost[] => {
-  return allBlogPosts.filter(post => post.category === category);
-};
+export function getAllCategories(): string[] {
+  const categories = new Set(allBlogPosts.map(post => post.category));
+  return Array.from(categories);
+}
 
-export const getAllCategories = (): string[] => {
-  return [...new Set(allBlogPosts.map(post => post.category))];
-};
+export function getAllTags(): string[] {
+  const tags = new Set(allBlogPosts.flatMap(post => post.tags));
+  return Array.from(tags);
+}
 
-export const getAllTags = (): string[] => {
-  return [...new Set(allBlogPosts.flatMap(post => post.tags))];
-};
-
-export const getTotalValueProposition = (): string => {
+export function getTotalValueProposition(): string {
   const totalValue = allBlogPosts.reduce((sum, post) => {
-    const value = post.valueProposition.match(/\$[\d.]+[MBK]?/);
-    if (value) {
-      const num = parseFloat(value[0].replace(/[$,MBK]/g, ''));
-      const multiplier = value[0].includes('M') ? 1000000 : value[0].includes('B') ? 1000000000 : value[0].includes('K') ? 1000 : 1;
-      return sum + (num * multiplier);
-    }
-    return sum;
+    const value = post.valueProposition.match(/\$(\d+)M/);
+    return sum + (value ? parseInt(value[1]) : 0);
   }, 0);
-  
-  if (totalValue >= 1000000000) {
-    return `$${(totalValue / 1000000000).toFixed(1)}B`;
-  } else if (totalValue >= 1000000) {
-    return `$${(totalValue / 1000000).toFixed(1)}M`;
-  } else if (totalValue >= 1000) {
-    return `$${(totalValue / 1000).toFixed(1)}K`;
-  }
-  return `$${totalValue.toFixed(0)}`;
-};
+  return `$${totalValue}M+ total value proposition`;
+}
 
 export const blogStats = {
   totalPosts: allBlogPosts.length,
