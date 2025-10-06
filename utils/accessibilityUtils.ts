@@ -37,7 +37,11 @@ export const focusManagement = {
       element.removeEventListener('keydown', handleKeyDown);
     };
   },
+<<<<<<< HEAD
 
+=======
+  },
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-8344
   // Restore focus to previous element
   restoreFocus: (element: HTMLElement): void => {
     element.focus();

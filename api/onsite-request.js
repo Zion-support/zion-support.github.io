@@ -3,12 +3,16 @@ const fs = require('fs');
 const path = require('path');
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0a8c
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-8344
 async function handler(req, res) {
   if (req.method !== 'POST') {
     res.statusCode = 405;
@@ -18,12 +22,16 @@ async function handler(req, res) {
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0a8c
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-8344
   const {
     name,
     email,
@@ -34,12 +42,16 @@ async function handler(req, res) {
   } = req.body || {};
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0a8c
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-8344
   if (!name || !email || !location) {
     res.statusCode = 400;
     res.json({ error: 'Missing required fields' });
@@ -48,6 +60,7 @@ async function handler(req, res) {
 
   const file = path.join(process.cwd(), 'data', 'onsite-requests.json');
   let existing = [];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -80,6 +93,9 @@ async function handler(req, res) {
 =======
   
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
+=======
+  
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-8344
   try {
     existing = JSON.parse(fs.readFileSync(file, 'utf8'));
     if (!Array.isArray(existing)) existing = [];
@@ -88,12 +104,16 @@ async function handler(req, res) {
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0a8c
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-8344
   existing.push({
     name,
     email,
@@ -105,22 +125,30 @@ async function handler(req, res) {
   });
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0a8c
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-8344
   fs.writeFileSync(file, JSON.stringify(existing, null, 2));
   res.statusCode = 200;
   res.json({ success: true });
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0a8c
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-8344
 module.exports = withSentry(handler);
