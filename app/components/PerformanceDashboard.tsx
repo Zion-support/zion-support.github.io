@@ -1,4 +1,37 @@
 import React, { useState, useEffect } from 'react';
+// import { performanceOptimizer } from '../../utils/performanceOptimizer';
+import { getErrorMetrics, isErrorRateTooHigh } from '../../utils/errorHandling';
+
+// interface PerformanceMetrics {
+//   loadTime: number;
+//   renderTime: number;
+//   memoryUsage: number;
+//   fps: number;
+// }
+// import performanceOptimizer from '../../src/utils/performanceOptimizer'; // Unused import
+import { getErrorMetrics, isErrorRateTooHigh } from '../../utils/errorHandling';
+import { performanceOptimizer } from '../../utils/performanceOptimizer';
+
+interface DashboardData {
+  performance: {
+    averageRenderTime: number;
+    totalLoadTime: number;
+    memoryUsage: number;
+    bundleSize: number;
+  };
+  errors: ReturnType<typeof getErrorMetrics>;
+    totalComponents: number;
+    memoryUsage: number;
+    slowComponents: number;
+  };
+  errors: {
+    totalErrors: number;
+    errorRate: number;
+  };
+  isHealthy: boolean;
+  timestamp: Date;
+import { performanceOptimizer } from '../../src/utils/performanceOptimizer';
+import { getErrorMetrics, isErrorRateTooHigh } from '../../utils/errorHandling';
 
 interface PerformanceMetrics {
   loadTime: number;

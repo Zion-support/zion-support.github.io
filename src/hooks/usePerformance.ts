@@ -1,7 +1,3 @@
-/**
- * Performance Monitoring Hook
- * Provides React hooks for performance monitoring and optimization
- */
 import { useEffect, useCallback, useRef } from 'react';
 import { performanceOptimizer } from '../utils/performanceOptimizer';
 
@@ -57,7 +53,6 @@ export const usePageLoadPerformance = () => {
       return () => window.removeEventListener('load', trackPageLoad);
     }
   }, []);
-};
 
 /**
  * Hook for monitoring resource loading performance
@@ -80,10 +75,43 @@ export const useResourcePerformance = () => {
         }
       });
     });
-    
-    observer.observe({ entryTypes: ['resource'] });
-    return () => observer.disconnect();
+
+    if (observer) {
+      observerRef.current = observer;
+    }
   }, []);
+
+  const preloadResources = useCallback(() => {
+    if (typeof window === 'undefined') return;
+
+    performanceOptimizer.preloadCriticalResources();
+  }, []);
+
+  const optimizeImages = useCallback(() => {
+    if (typeof window === 'undefined') return;
+
+    performanceOptimizer.lazyLoadImages();
+  }, []);
+
+  useEffect(() => {
+    trackPerformance();
+    trackLongTasks();
+    preloadResources();
+    optimizeImages();
+
+    return () => {
+      if (observerRef.current) {
+        observerRef.current.disconnect();
+      }
+    };
+  }, [trackPerformance, trackLongTasks, preloadResources, optimizeImages]);
+
+  return {
+    trackPerformance,
+    trackLongTasks,
+    preloadResources,
+    optimizeImages,
+  };
 };
 
 /**
@@ -91,10 +119,6 @@ export const useResourcePerformance = () => {
  */
 export const useLongTaskMonitoring = () => {
   useEffect(() => {
-    if (typeof window === 'undefined' || !window.PerformanceObserver) {
-      return;
-    }
-
     const observer = performanceOptimizer.monitorLongTasks((entries: PerformanceEntry[]) => {
       entries.forEach((entry: PerformanceEntry) => {
         analytics.track('long_task', 'performance', 'detected', undefined, entry.duration);

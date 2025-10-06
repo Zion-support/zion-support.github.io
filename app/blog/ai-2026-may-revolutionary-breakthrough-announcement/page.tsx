@@ -31,6 +31,9 @@ export default function May2026RevolutionaryBreakthroughPage() {
           <span>By    {data['author']}</span>
             <span>•</span>
             <span>{new Date(data['date']).to Locale Date    String   ()}</span>
+          <span>By {data.author}</span>
+            <span>•</span>
+            <span>{new Date(data.date).toLocaleDateString()}</span>
           </div>
         </header>
         <div className="text-left"> </div><div dangerouslySetInnerHTML={{ __html: content.replace(/\n/g, '<br />') }} /></div>

@@ -15,6 +15,19 @@ const path = require('path');
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 async function handler(req, res) {
   if (req.method !== 'POST') {
     res.statusCode = 405;
@@ -36,16 +49,6 @@ async function handler(req, res) {
   try {
     const { email } = req.body || {};
     
-
-  try {
-    const { email } = req.body || {};
-    
-
-  try {
-    const { email } = req.body || {};
-
-  try {
-    const { email } = req.body || {};
     
 
   try {
@@ -54,11 +57,6 @@ async function handler(req, res) {
 
   try {
     const { email } = req.body || {};
-    
-
-  try {
-    const { email } = req.body || {};
-    
 
   try {
     const { email } = req.body || {};
@@ -77,10 +75,38 @@ async function handler(req, res) {
 
   try {
     const { email } = req.body || {};
+    
+
+  try {
+    const { email } = req.body || {};
+
+  try {
+    const { email } = req.body || {};
 
   try {
     const { email } = req.body || {};
     
+
+  try {
+    const { email } = req.body || {};
+    
+
+  try {
+    const { email } = req.body || {};
+    
+
+  try {
+    const { email } = req.body || {};
+
+  try {
+    const { email } = req.body || {};
+
+  try {
+    const { email } = req.body || {};
+    
+
+  try {
+    const { email } = req.body || {};
 
   try {
     const { email } = req.body || {};
@@ -89,6 +115,19 @@ async function handler(req, res) {
       res.json({ error: 'Invalid email' });
       return;
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -127,6 +166,30 @@ async function handler(req, res) {
     let existing = [];
     
     
+    
+    
+    let existing = [];
+    
+    
+    let existing = [];
+    
+    let existing = [];
+    
+    let existing = [];
+    
+    let existing = [];
+    
+    
+    let existing = [];
+    
+    let existing = [];
+    
+    let existing = [];
+    
+    
+    let existing = [];
+    
+    
     let existing = [];
     
     try {
@@ -135,6 +198,19 @@ async function handler(req, res) {
     } catch {
       // File doesn't exist or is invalid, use empty array
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -163,6 +239,8 @@ async function handler(req, res) {
     console.error('Subscribe API error:', err);
   } catch (error) {
     console.error('Subscribe API error:', error);
+  } catch (error) {
+  } catch (error) {
   } catch (error) {
   } catch (error) {
 
@@ -247,6 +325,18 @@ async function handler(req, res) {
     res.json({ error: err.message || 'Subscription failed' });
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

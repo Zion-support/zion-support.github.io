@@ -25,6 +25,22 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 import { NextApiRequest, NextApiResponse } from 'next';
 
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+import { NextApiRequest, NextApiResponse } from 'next';
+import type { NextApiRequest, NextApiResponse } from 'next';
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { NextApiRequest, NextApiResponse } from 'next';
+import type { NextApiRequest, NextApiResponse } from 'next';
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { NextApiRequest, NextApiResponse } from 'next';
+import { NextApiRequest, NextApiResponse } from 'next';
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { NextApiRequest, NextApiResponse } from 'next';
+import type { NextApiRequest, NextApiResponse } from 'next';
+import type { NextApiRequest, NextApiResponse } from 'next';
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { NextApiRequest, NextApiResponse } from 'next';
 export interface ApiError extends Error {
   statusCode?: number;
   isOperational?: boolean;
@@ -37,6 +53,9 @@ export class AppError extends Error implements ApiError {
   public statusCode: number;
   public isOperational: boolean;
 
+export class AppError extends Error implements ApiError {
+  public statusCode: number;
+  public isOperational: boolean;
   constructor(message: string, statusCode: number = 500) {
     super(message);
     this.statusCode = statusCode;
@@ -97,9 +116,12 @@ export const errorHandler = (
   res.status(statusCode).json({
     error: {
       message:
-        process.env['NODE_ENV'] === 'production'
+        process.env.NODE_ENV === 'production'
           ? 'Internal Server Error'
           : message,
+      statusCode,
+      timestamp: new Date().toISOString()
+    }
       statusCode,
       timestamp: new Date().toISOString()
     }
@@ -133,6 +155,34 @@ import {NextApiRequest} NextApiResponse } from 'next' export interface ApiError 
   });
 };
 
+      statusCode,
+      timestamp: new Date().toISOString()
+      statusCode,
+      timestamp: new Date().toISOString()
+    },
+      statusCode,
+      timestamp: new Date().toISOString()
+    }
+      statusCode,
+      timestamp: new Date().toISOString()
+    }
+      statusCode,
+      timestamp: new Date().toISOString()
+    }
+  });
+};
+
+export const asyncHandler =
+  (fn: Function) =>
+  (req: NextApiRequest, res: NextApiResponse, next: Function) => {
+    Promise.resolve(fn(req, res, next)).catch((error: Error) => next(error));
+  };
+  };
+  };
+      statusCode
+    }
+  });
+};
 export const asyncHandler = (fn: Function) => {
   return (req: NextApiRequest, res: NextApiResponse) => {
     Promise.resolve(fn(req, res)).catch((err) => {
@@ -140,6 +190,18 @@ export const asyncHandler = (fn: Function) => {
     });
   };
 };
+  (req: NextApiRequest, res: NextApiResponse, next: Function) => {
+    Promise.resolve(fn(req, res, next)).catch((error: Error) => next(error));
+  };
+  (req: NextApiRequest, res: NextApiResponse, next: Function) => {
+    Promise.resolve(fn(req, res, next)).catch((error: Error) => next(error));
+  };
+  (req: NextApiRequest, res: NextApiResponse, next: Function) => {
+    Promise.resolve(fn(req, res, next)).catch((error: Error) => next(error));
+  };
+  (req: NextApiRequest, res: NextApiResponse, next: Function) => {
+    Promise.resolve(fn(req, res, next)).catch((error: Error) => next(error));
+  };
   (req: NextApiRequest, res: NextApiResponse, next: Function) => {
     Promise.resolve(fn(req, res, next)).catch((error: Error) => next(error));
   };
@@ -154,7 +216,6 @@ export const asyncHandler = (fn: Function) => {
   };
     stack: err.stack
   });
-
   res.status(statusCode).json({
     error: {
       message: message || 'Internal Server Error',
@@ -163,7 +224,6 @@ export const asyncHandler = (fn: Function) => {
     }
   });
 };
-
 export const asyncHandler = (fn: Function) => {
   return (req: NextApiRequest, res: NextApiResponse) => {
     Promise.resolve(fn(req, res)).catch((err) => {
@@ -190,6 +250,24 @@ export const asyncHandler = (fn: Function) => {
     Promise.resolve(fn(req, res, next)).catch((error: Error) => next(error));
   };
 
+  (req: NextApiRequest, res: NextApiResponse, next: Function) => {
+    Promise.resolve(fn(req, res, next)).catch((error: Error) => next(error));
+  };
+  (req: NextApiRequest, res: NextApiResponse, next: Function) => {
+    Promise.resolve(fn(req, res, next)).catch((error: Error) => next(error));
+  };
+  (req: NextApiRequest, res: NextApiResponse, next: Function) => {
+    Promise.resolve(fn(req, res, next)).catch((error: Error) => next(error));
+  };
+  (req: NextApiRequest, res: NextApiResponse, next: Function) => {
+    Promise.resolve(fn(req, res, next)).catch((error: Error) => next(error));
+  };
+  (req: NextApiRequest, res: NextApiResponse, next: Function) => {
+    Promise.resolve(fn(req, res, next)).catch((error: Error) => next(error));
+  };
+  (req: NextApiRequest, res: NextApiResponse, next: Function) => {
+    Promise.resolve(fn(req, res, next)).catch((error: Error) => next(error));
+  };
 export const asyncHandler =
   (fn: Function) =>
   (req: NextApiRequest, res: NextApiResponse, next: Function) => {

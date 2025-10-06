@@ -23,6 +23,30 @@ export default async function handler(req, res) {
 export default async function handler(req, res) {
 export default async function handler(req, res) {
 export default async function handler(req, res) {
+const { withSentry } = require('./withSentry.cjs');
+
+async function handler(req, res) {
+const { withSentry } = require('./withSentry.cjs');
+
+async function handler(req, res) {
+const { withSentry } = require('./withSentry.cjs');
+
+async function handler(req, res) {
+const { withSentry } = require('./withSentry.cjs');
+
+async function handler(req, res) {
+export default async function handler(req, res) {
+export default async function handler(req, res) {
+export default async function handler(req, res) {
+export default async function handler(req, res) {
+export default async function handler(req, res) {
+export default async function handler(req, res) {
+export default async function handler(req, res) {
+export default async function handler(req, res) {
+export default async function handler(req, res) {
+export default async function handler(req, res) {
+export default async function handler(req, res) {
+export default async function handler(req, res) {
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
     res.statusCode = 405;
@@ -38,9 +62,18 @@ export default async function handler(req, res) {
     const { fromAddress, toAddress, parcel } = req.body || {};
     const apiKey = process.env.EASYPOST_API_KEY;
 
+
+
+
   try {
     const { fromAddress, toAddress, parcel } = req.body || {};
     const apiKey = process.env.EASYPOST_API_KEY;
+    
+
+  try {
+    const { fromAddress, toAddress, parcel } = req.body || {};
+    const apiKey = process.env.EASYPOST_API_KEY;
+    
     
 
   try {
@@ -110,6 +143,11 @@ export default async function handler(req, res) {
         Authorization: `Bearer ${apiKey}`,
         'Authorization': `Bearer ${apiKey}`,
         'Authorization': `Bearer ${apiKey}`,
+        'Authorization': `Bearer ${apiKey}`,
+        Authorization: `Bearer ${apiKey}`,
+        'Authorization': `Bearer ${apiKey}`,
+        Authorization: `Bearer ${apiKey}`,
+        'Authorization': `Bearer ${apiKey}`,
       },
       body: JSON.stringify({
         shipment: {
@@ -121,6 +159,21 @@ export default async function handler(req, res) {
     });
 
     const data = await response.json();
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
     
     
@@ -147,6 +200,28 @@ export default async function handler(req, res) {
     res.statusCode = 500;
     res.json({ error: err.message });
   }
+}
+
+module.exports = withSentry(handler);
+}
+
+module.exports = withSentry(handler);
+
+module.exports = withSentry(handler);
+}
+
+module.exports = withSentry(handler);
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
 }
 
 module.exports = withSentry(handler);

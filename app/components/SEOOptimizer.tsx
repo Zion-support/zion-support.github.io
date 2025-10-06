@@ -1,7 +1,6 @@
 import React, { type ReactNode } from 'react';
 import { Helmet } from 'react-helmet-async';
 
-<<<<<<< HEAD
 interface SEOOptimizerProps {
   children: ReactNode;
   title?: string;
@@ -34,7 +33,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       </Helmet>
       {children}
     </>
-=======
 const SEOOptimizer: React.FC = () => {
   return (
     <div className="bg-gradient-to-r from-blue-600 to-purple-700 text-white p-8 rounded-lg shadow-lg">
@@ -47,7 +45,6 @@ const SEOOptimizer: React.FC = () => {
         </p>
       </div>
     </div>
->>>>>>> origin/fix-errors-final
   );
 };
 

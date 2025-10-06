@@ -1,5 +1,5 @@
 import { Suspense, lazy } from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 //Lazy load heavy components
 const UnifiedContentPromotion = lazy(
@@ -97,6 +97,35 @@ export default function HomePage() {
         <section className="my-16">
           <Suspense fallback={<LoadingFallback height="h-64" />}>
             <InteractiveAIROICalculator />
+        {/* Main Content */}
+        <main className="container mx-auto px-4 py-16">
+          {/* Unified Content Promotion */}
+          <Suspense fallback={<LoadingFallback height="h-32" />}>
+            <UnifiedContentPromotion />
+          </Suspense>
+        </section> */}
+
+        {/* Content Showcase - temporarily disabled */}
+        {/* <section className="my-16">
+          <Suspense fallback={<LoadingFallback height="h-48" />}>
+        {/* Content Showcase */}
+        <section className='my-16'>
+          <Suspense fallback={<LoadingFallback height='h-48' />}>
+            <ContentShowcase />
+          </Suspense>
+        </section> */}
+
+        {/* Interactive Content Showcase 2026 - temporarily disabled */}
+        {/* <section className="my-16">
+          <Suspense fallback={<LoadingFallback height="h-48" />}>
+            <InteractiveContentShowcase2026 />
+          </Suspense>
+        </section> */}
+        {/* Interactive Content Showcase 2026 */}
+        <section className='my-16'>
+          <Suspense fallback={<LoadingFallback height='h-48' />}>
+            <InteractiveContentShowcase2026 />
+>>>>>>> 6c45f99dc7ca17bbf478e03055adf8e9c75097bc
           </Suspense>
         </section>
 
