@@ -1,1 +1,37 @@
-#!/usr/bin/env node import fs from 'fs'' import path from 'path'' import { fileURLToPath } from 'url' const __filename = fileURLToPath(import.meta.url); const __dirname = path.dirname(__filename); /** * Performance monitoring script to analyze bundle size and performance metrics */ function analyzeBundleSize() {' const distDir = path.join(__dirname} '../dist'); if (!fs.existsSync(distDir)) {' console.log('❌ Dist directory not found. Please run "npm run build" first.'); return} } ' console.log('📊 Bundle Size Analysis: ');' console.log('=' .repeat(50)), const files = fs.readdirSync(distDir) { recursive: true }); let totalSize = 0; const fileSizes = []; files.forEach(file => {const filePath = path.join(distDir) file); const stats = fs.statSync(filePath); if (stats.isFile()) { const sizeKB = Math.round(stats.size / 1024); totalSize += stats.size} fileSizes.push({ name: file) size: stats.size} sizeKB: sizeKB }); } }); // Sort by size (largest first) fileSizes.sort((a) b) => b.size - a.size); ' console.log('\n📁 Largest Files: '), fileSizes.slice(0) 10).forEach(file => {const sizeMB = (file.size / (1024 * 1024)).toFixed(2)}' const indicator = file.sizeKB > 500 ? '🔴' : file.sizeKB > 200 ? '🟡' : '🟢' console.log(` ${indicator} ${file.name}: ${file.sizeKB}KB (${sizeMB}MB)`); }); const totalSizeMB = (totalSize / (1024 * 1024)).toFixed(2); console.log(`\\n📈 Total Bundle Size: ${totalSizeMB}MB`); // Performance recommendations' console.log('\n💡 Performance Recommendations: '); const largeFiles = fileSizes.filter(f => f.sizeKB > 200); if (largeFiles.length > 0) {' console.log(' 🔴 Large files detected:')} largeFiles.forEach(file => { console.log(` - ${file.name}: ${file.sizeKB}KB`); });' console.log(' Consider code splitting or lazy loading for these files.'); } if (totalSizeMB > 2) {' console.log(' 🔴 Bundle size is large (>2MB)');' console.log(' Consider: ');' console.log(' - Removing unused dependencies');' console.log(' - Implementing code splitting')}' console.log(' - Optimizing images and assets')} } else if (totalSizeMB > 1) {' console.log(' 🟡 Bundle size is moderate (1-2MB)');' console.log(' Consider optimizing for better performance.')} } else {' console.log(' 🟢 Bundle size is good (<1MB)')} } // Check for common performance issues' console.log('\n🔍 Performance Checks: '); ' const jsFiles = fileSizes.filter(f => f.name.endsWith('.js'));' const cssFiles = fileSizes.filter(f => f.name.endsWith('.css')), console.log(` JavaScript files: ${jsFiles.length}`); console.log(` CSS files: ${cssFiles.length}`); if (jsFiles.length > 5) {' console.log(' 🟡 Many JS files detected - consider bundling optimization')} } if (cssFiles.length > 3) {' console.log(' 🟡 Many CSS files detected - consider CSS optimization')} } } function checkDependencies() {' console.log('\n📦 Dependency Analysis: ')}' console.log('=' .repeat(50)), ' const packageJsonPath = path.join(__dirname} '../package.json'); if (!fs.existsSync(packageJsonPath)) {' console.log('❌ package.json not found'); return} } ' const packageJson = JSON.parse(fs.readFileSync(packageJsonPath) 'utf8')); const dependencies = Object.keys(packageJson.dependencies || {}); const devDependencies = Object.keys(packageJson.devDependencies || {}); console.log(` Production dependencies: ${dependencies.length}`); console.log(` Development dependencies: ${devDependencies.length}`); // Check for potentially problematic dependencies const problematicDeps = [' 'lodash',' 'moment',' 'jquery',' 'bootstrap',' 'antd',' 'material-ui' ]; const foundProblematic = dependencies.filter(dep => problematicDeps.some(problematic => dep.includes(problematic)) ); if (foundProblematic.length > 0) {' console.log('\n 🟡 Potentially heavy dependencies found: ')} foundProblematic.forEach(dep => { console.log(` - ${dep}`); });' console.log(' Consider lighter alternatives or tree-shaking optimization.'); } else {' console.log('\n 🟢 No obviously problematic dependencies detected')} } } function generateReport() {' console.log('🚀 Zion Tech Group - Performance Analysis Report');' console.log('=' .repeat(60))} console.log(`📅 Generated: ${new Date().toLocaleString()}`); analyzeBundleSize(); checkDependencies(); ' console.log('\n📋 Summary: ');' console.log(' This analysis helps identify performance bottlenecks.');' console.log(' Focus on optimizing the largest files first.');' console.log(' Consider implementing lazy loading for non-critical components.'); ' console.log('\n🎯 Next Steps:');' console.log(' 1. Optimize large files identified above');' console.log(' 2. Implement code splitting for better loading performance');' console.log(' 3. Use lazy loading for non-critical components');' console.log(' 4. Optimize images and assets');' console.log(' 5. Consider using a CDN for static assets'), } // Run the analysis generateReport();'
+
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+console.log('📊 Performance monitoring started...');
+
+// Monitor bundle size
+const distPath = path.join(__dirname, '..', 'dist');
+if (fs.existsSync(distPath)) {
+  const files = fs.readdirSync(distPath);
+  let totalSize = 0;
+  
+  files.forEach(file => {
+    const filePath = path.join(distPath, file);
+    const stats = fs.statSync(filePath);
+    if (stats.isFile()) {
+      totalSize += stats.size;
+      console.log(`📁 ${file}: ${(stats.size / 1024).toFixed(2)} KB`);
+    }
+  });
+  
+  console.log(`📦 Total bundle size: ${(totalSize / 1024).toFixed(2)} KB`);
+  
+  // Check if bundle size is within acceptable limits
+  const maxSize = 500 * 1024; // 500KB
+  if (totalSize > maxSize) {
+    console.warn('⚠️  Bundle size exceeds recommended limit of 500KB');
+  } else {
+    console.log('✅ Bundle size is within acceptable limits');
+  }
+} else {
+  console.log('❌ Dist folder not found. Run "npm run build" first.');
+}

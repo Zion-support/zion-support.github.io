@@ -30,7 +30,7 @@ class AccessibilityEnhancer {
       enableScreenReaderSupport: true,
       enableHighContrast: false,
       enableReducedMotion: false,
-      ...config
+      ...config,
     };
   }
 
@@ -68,7 +68,7 @@ class AccessibilityEnhancer {
   private setupKeyboardNavigation(): void {
     if (!this.config.enableKeyboardNavigation) return;
 
-    document.addEventListener('keydown', (event) => {
+    document.addEventListener('keydown', event => {
       if (event.key === 'Tab') {
         this.handleTabNavigation(event);
       }
@@ -93,11 +93,11 @@ class AccessibilityEnhancer {
       text-decoration: none;
       z-index: 1000;
     `;
-    
+
     skipLink.addEventListener('focus', () => {
       skipLink.style.top = '6px';
     });
-    
+
     skipLink.addEventListener('blur', () => {
       skipLink.style.top = '-40px';
     });
@@ -138,7 +138,9 @@ class AccessibilityEnhancer {
 
   private handleTabNavigation(event: KeyboardEvent): void {
     const focusableElements = this.getFocusableElements();
-    const currentIndex = focusableElements.indexOf(document.activeElement as HTMLElement);
+    const currentIndex = focusableElements.indexOf(
+      document.activeElement as HTMLElement,
+    );
 
     if (event.shiftKey) {
       // Shift + Tab: move backwards
@@ -162,7 +164,7 @@ class AccessibilityEnhancer {
       'select:not([disabled])',
       'textarea:not([disabled])',
       'a[href]',
-      '[tabindex]:not([tabindex="-1"])'
+      '[tabindex]:not([tabindex="-1"])',
     ].join(', ');
 
     return Array.from(document.querySelectorAll(selectors)) as HTMLElement[];
@@ -174,20 +176,20 @@ class AccessibilityEnhancer {
         name: 'Focusable Elements',
         value: this.getFocusableElements().length,
         threshold: 10,
-        status: 'pass'
+        status: 'pass',
       },
       {
         name: 'Images with Alt Text',
         value: this.getImagesWithAltText().length,
         threshold: 0,
-        status: 'pass'
+        status: 'pass',
       },
       {
         name: 'Headings Structure',
         value: this.getHeadingStructureScore(),
         threshold: 80,
-        status: 'pass'
-      }
+        status: 'pass',
+      },
     ];
   }
 
@@ -217,8 +219,14 @@ class AccessibilityEnhancer {
   }
 
   public getOverallScore(): number {
-    const totalScore = this.metrics.reduce((sum, metric) => sum + metric.value, 0);
-    const maxScore = this.metrics.reduce((sum, metric) => sum + metric.threshold, 0);
+    const totalScore = this.metrics.reduce(
+      (sum, metric) => sum + metric.value,
+      0,
+    );
+    const maxScore = this.metrics.reduce(
+      (sum, metric) => sum + metric.threshold,
+      0,
+    );
     return Math.round((totalScore / maxScore) * 100);
   }
 

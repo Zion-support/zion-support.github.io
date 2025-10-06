@@ -1,4 +1,4 @@
-export interface Banner { 
+export interface Banner {
   id: string;
   title: string;
   description: string;
@@ -36,8 +36,8 @@ export const getFeaturedBanners = (count: number = 3): Banner[] => {
       ctaUrl: '/services/analytics',
       featured: true,
       priority: 3,
-    }
+    },
   ];
-  
+
   return banners.slice(0, count);
 };

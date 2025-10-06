@@ -1,51 +1,52 @@
+import React, { memo, useMemo } from 'react';
 import { HelmetProvider } from 'react-helmet-async';
 
-// Simple placeholder components
-const UnifiedContentPromotion = () => (
+// Memoized components for better performance
+const UnifiedContentPromotion = memo(() => (
   <div className="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-16">
     <div className="container mx-auto px-4 text-center">
       <h2 className="text-3xl font-bold mb-4">Latest AI Innovations</h2>
       <p className="text-xl">Discover cutting-edge AI solutions for your business</p>
     </div>
   </div>
-);
+));
 
-const InteractiveAIROICalculator = () => (
+const InteractiveAIROICalculator = memo(() => (
   <div className="bg-gray-50 py-16">
     <div className="container mx-auto px-4 text-center">
       <h2 className="text-3xl font-bold mb-4">AI ROI Calculator</h2>
       <p className="text-xl text-gray-600">Calculate your potential AI investment returns</p>
     </div>
   </div>
-);
+));
 
-const ContentShowcase = () => (
+const ContentShowcase = memo(() => (
   <div className="py-16">
     <div className="container mx-auto px-4 text-center">
       <h2 className="text-3xl font-bold mb-4">Featured Content</h2>
       <p className="text-xl text-gray-600">Explore our latest insights and case studies</p>
     </div>
   </div>
-);
+));
 
-const InteractiveContentShowcase2026 = () => (
+const InteractiveContentShowcase2026 = memo(() => (
   <div className="bg-blue-50 py-16">
     <div className="container mx-auto px-4 text-center">
       <h2 className="text-3xl font-bold mb-4">2026 Content Showcase</h2>
       <p className="text-xl text-gray-600">Latest trends and innovations for 2026</p>
     </div>
   </div>
-);
+));
 
 // Loading component
-const LoadingSpinner = () => (
+const LoadingSpinner = memo(() => (
   <div className="animate-pulse bg-gray-200 h-32 rounded flex items-center justify-center">
     <div className="text-gray-500">Loading...</div>
   </div>
-);
+));
 
 export default function App() {
-  const structuredData = {
+  const structuredData = useMemo(() => ({
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Zion Tech Group",
@@ -78,7 +79,7 @@ export default function App() {
       "priceCurrency": "USD",
       "availability": "https://schema.org/InStock"
     }
-  };
+  }), []);
 
   return (
     <HelmetProvider>

@@ -1,24 +1,23 @@
 export const metadata = {
-  
-  title: 'Priv, a, c, y‑Fi, r, s, t Experime n t a t, i, o, n 2026: I n s i g, h, t, s With, out PII'
+  title: 'Privacy‑First Experimentation 2026: Insights Without PII',
   description:
-    'Sco, p, e, d IDse, d, g, e aggrega t i o n, a, n, d DP no, i, s, e for co m p l i, a, n, t A/B te, s, t, s un, d, er <100ms.'
+    'Scoped IDsedge aggregationand DP noise for compliant A/B tests under <100ms.',
 };
 
-export default function P, a, g, e() {
+export default function Page() {
   return (
-    <m, a, i, n cl a s s N, a, m, e='max-w-3xl mx-a, uto px-6 py-16'>
-      <h1 cl a s s N, a, m, e='t, e, x, t-4, xl f, o, n, t-b, old mb-4'>
-        Priv, a, c, y‑Fi, r, s, t Experime n t a t, i, o, n 2026
+    <main className='max-w-3xl mx-auto px-6 py-16'>
+      <h1 className='text-4xl font-bold mb-4'>
+        Privacy‑First Experimentation 2026
       </h1>
-      <p cl a s s N, a, m, e='t, e, x, t-g, ray-600 mb-8'>I n s i g, h, t, s With, o, u, t PII</p>
-      <p cl a s s N, a, m, e='mb-4'>
-        Sco, p, e, d IDse, d, g, e aggrega t i o n, a, n, d DP no, i, s, e for co m p l i, a, n, t A/B te, s, t, s un, d, e, r
-        &lt;100, ms.
+      <p className='text-gray-600 mb-8'>Insights Without PII</p>
+      <p className='mb-4'>
+        Scoped IDsedge aggregationand DP noise for compliant A/B tests under
+        &lt;100ms.
       </p>
-      <p cl a s s N, ame='t, e, x, t-sm t, e, x, t-g, r, a, y-500'>
-        Pu b l i s, h, e, d Sep 30, 2, 0, 2, 5 • 7 min r, e, a, d
+      <p className='text-sm text-gray-500'>
+        Published Sep 30, 2025 • 7 min read
       </p>
-    </m, a, i, n>
+    </main>
   );
 }

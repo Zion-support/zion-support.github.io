@@ -16,7 +16,8 @@ export const bannerData: BannerData[] = [
   {
     id: 'ai-platform-2025',
     title: 'AI Platform 2025: Transform Your Business',
-    description: 'Revolutionary AI platform delivering unprecedented business transformation with measurable results.',
+    description:
+      'Revolutionary AI platform delivering unprecedented business transformation with measurable results.',
     ctaText: 'Get Started',
     ctaUrl: '/services/ai-platform',
     featured: true,
@@ -29,7 +30,8 @@ export const bannerData: BannerData[] = [
   {
     id: 'quantum-ai-security',
     title: 'Quantum AI Security: Next-Gen Protection',
-    description: 'Advanced quantum AI security framework providing unprecedented protection against emerging threats.',
+    description:
+      'Advanced quantum AI security framework providing unprecedented protection against emerging threats.',
     ctaText: 'Learn More',
     ctaUrl: '/services/quantum-ai-security',
     featured: true,
@@ -38,5 +40,5 @@ export const bannerData: BannerData[] = [
     endDate: '2025-12-31',
     category: 'AI Security',
     tags: ['Security', 'Quantum', 'AI', 'Protection'],
-  }
+  },
 ];

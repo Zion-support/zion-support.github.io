@@ -19,15 +19,21 @@ export class SEOOptimizer {
     this.setupStructuredData();
     this.setupSitemap();
     this.setupRobotsTxt();
-    
+
     this.isInitialized = true;
     console.log('SEO optimizer initialized');
   }
 
   private setupMetaTags(): void {
     // Set up basic meta tags
-    this.setMetaTag('description', 'Zion Tech Group - Advanced AI and IT Solutions');
-    this.setMetaTag('keywords', 'AI, IT solutions, enterprise, digital transformation');
+    this.setMetaTag(
+      'description',
+      'Zion Tech Group - Advanced AI and IT Solutions',
+    );
+    this.setMetaTag(
+      'keywords',
+      'AI, IT solutions, enterprise, digital transformation',
+    );
     this.setMetaTag('author', 'Zion Tech Group');
     this.setMetaTag('viewport', 'width=device-width, initial-scale=1.0');
   }
@@ -45,30 +51,31 @@ export class SEOOptimizer {
   private setupStructuredData(): void {
     // Set up structured data for better SEO
     const structuredData = {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Zion Tech Group",
-      "description": "Leading provider of AI-powered enterprise solutions and digital transformation services",
-      "url": "https://ziontechgroup.com",
-      "logo": "https://ziontechgroup.com/logo.png",
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+1-302-464-0950",
-        "contactType": "customer service",
-        "email": "kleber@ziontechgroup.com"
+      '@context': 'https://schema.org',
+      '@type': 'Organization',
+      name: 'Zion Tech Group',
+      description:
+        'Leading provider of AI-powered enterprise solutions and digital transformation services',
+      url: 'https://ziontechgroup.com',
+      logo: 'https://ziontechgroup.com/logo.png',
+      contactPoint: {
+        '@type': 'ContactPoint',
+        telephone: '+1-302-464-0950',
+        contactType: 'customer service',
+        email: 'kleber@ziontechgroup.com',
       },
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "364 E Main St STE 1008",
-        "addressLocality": "Middletown",
-        "addressRegion": "DE",
-        "postalCode": "19709",
-        "addressCountry": "US"
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: '364 E Main St STE 1008',
+        addressLocality: 'Middletown',
+        addressRegion: 'DE',
+        postalCode: '19709',
+        addressCountry: 'US',
       },
-      "sameAs": [
-        "https://linkedin.com/company/zion-tech-group",
-        "https://twitter.com/ziontechgroup"
-      ]
+      sameAs: [
+        'https://linkedin.com/company/zion-tech-group',
+        'https://twitter.com/ziontechgroup',
+      ],
     };
 
     const script = document.createElement('script');
@@ -92,7 +99,7 @@ export class SEOOptimizer {
       '/contact',
       '/team',
       '/privacy',
-      '/terms'
+      '/terms',
     ];
   }
 
@@ -103,7 +110,7 @@ Allow: /
 Disallow: /admin/
 Disallow: /api/
 Sitemap: https://ziontechgroup.com/sitemap.xml`;
-    
+
     console.log('Robots.txt content:', robotsContent);
   }
 
@@ -112,21 +119,25 @@ Sitemap: https://ziontechgroup.com/sitemap.xml`;
     const pageData = {
       url: window.location.href,
       title: document.title,
-      timestamp: new Date().toISOString()
+      timestamp: new Date().toISOString(),
     };
-    
+
     console.log('Page view tracked:', pageData);
-    
+
     // Send to analytics service
     this.sendToAnalytics(pageData);
   }
 
-  private sendToAnalytics(data: { url: string; title: string; timestamp: string }): void {
+  private sendToAnalytics(data: {
+    url: string;
+    title: string;
+    timestamp: string;
+  }): void {
     // Send data to analytics service
     if (typeof gtag !== 'undefined') {
       gtag('event', 'page_view', {
         page_title: data.title,
-        page_location: data.url
+        page_location: data.url,
       });
     }
   }

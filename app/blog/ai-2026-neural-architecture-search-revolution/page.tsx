@@ -1,204 +1,202 @@
-import ArrowRight from 'n, e, x, t/l, ink';
+import ArrowRight from 'next/link';
 
-export default function NeuralArchitectureSearchRevolut i o n P, a, g, e() {
+export default function NeuralArchitectureSearchRevolutionPage() {
   return (
-    <m, a, i, n cl a s s N, a, m, e='min-h-screen bg-sl, a, t, e-950 t, e, x, t-wh, ite'>
-      <div cl a s s N, a, m, e='max-w-4, xl mx-a, uto px-4 py-16'>
-        <div cl a s s N, a, m, e='mb-8'>
+    <main className='min-h-screen bg-slate-950 text-white'>
+      <div className='max-w-4xl mx-auto px-4 py-16'>
+        <div className='mb-8'>
           <ArrowRight
-            h, ref='/b, l, o, g'
-            cl a s s N, ame='t, e, x, t-b, l, u, e-400 ho, v, e, r:t, e, x, t-b, l, u, e-300 mb-4 inl, i, n, e-bl, o, c, k'
+            href='/blog'
+            className='text-blue-400 hover:text-blue-300 mb-4 inline-block'
           >
-            ← B, a, c, k to B, l, o, g
+            ← Back to Blog
           </ArrowRight>
-          <div cl a s s N, ame='f, l, e, x it, e, m, s-cen, t, e, r gap-2 mb-4'>
-            <s, p, a, n cl a s s N, ame='bg-gradient-to-r f, r, o, m-b, l, u, e-500 to-c, y, a, n-500 t, e, x, t-wh, i, t, e px-3 py-1 roun, d, e, d-f, u, l, l t, e, x, t-xs f, o, n, t-b, o, l, d'>
-              NAS REV O L U T, I, O, N
-            </s, p, a, n>
-            <s, p, a, n cl a s s N, ame='bg-gradient-to-r f, r, o, m-gr, e, e, n-400 to-emer, a, l, d-500 t, e, x, t-bl, a, c, k px-3 py-1 roun, d, e, d-f, u, l, l t, e, x, t-xs f, o, n, t-b, o, l, d'>
-              500, x SP, E, E, D
-            </s, p, a, n>
+          <div className='flex items-center gap-2 mb-4'>
+            <span className='bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-3 py-1 rounded-full text-xs font-bold'>
+              NAS REVOLUTION
+            </span>
+            <span className='bg-gradient-to-r from-green-400 to-emerald-500 text-black px-3 py-1 rounded-full text-xs font-bold'>
+              500x SPEED
+            </span>
           </div>
-          <h1 cl a s s N, ame='t, e, x, t-4, xl md:t, e, x, t-5, xl f, o, n, t-b, o, l, d mb-6'>
-            AI 2026: Neu, r, a, l Archi t e c t, u, r, e Sea, r, c, h Rev o l u t, i, o, n
+          <h1 className='text-4xl md:text-5xl font-bold mb-6'>
+            AI 2026: Neural Architecture Search Revolution
           </h1>
-          <p cl a s s N, ame='t, e, x, t-xl t, e, x, t-g, r, a, y-300 mb-8'>
-            Revolu t i o n, a, r, y NAS tec h n o l, o, g, y del i v e r, i, n, g 500, x fas, t, e, r AI mo, d, e, l
-            deve l o p m, e, n, t with 99.7% a c c u r, a, c, y. Tr a n s f, o, r, m deve l o p m, e, n, t from mon, t, h, s
-            to d, a, y, s with aut o n o m, o, u, s neu, r, a, l archi t e c t, u, r, e di s c o v, e, r, y.
+          <p className='text-xl text-gray-300 mb-8'>
+            Revolutionary NAS technology delivering 500x faster AI model
+            development with 99.7% accuracy. Transform development from months
+            to days with autonomous neural architecture discovery.
           </p>
-          <div cl a s s N, ame='t, e, x, t-sm t, e, x, t-g, r, a, y-400'>
-            Pu b l i s, h, e, d: Janu, a, r, y 20, 2026 | 38 min r, e, a, d
+          <div className='text-sm text-gray-400'>
+            Published: January 20, 2026 | 38 min read
           </div>
         </div>
 
-        <arti, c, l, e cl a s s N, ame='pr, o, s, e pr, o, s, e-lg pr, o, s, e-inv, e, r, t max-w-n, o, n, e'>
-          <div cl a s s N, ame='bg-gradient-to-r f, r, o, m-b, l, u, e-900/20 to-c, y, a, n-900/20 roun, d, e, d-xl p-8 mb-12 bor, d, e, r border-b, l, u, e-500/20'>
-            <h2 cl a s s N, ame='t, e, x, t-2, xl f, o, n, t-b, o, l, d mb-4'>The NAS Rev o l u t, i, o, n</h2>
-            <p cl a s s N, ame='t, e, x, t-lg lead, i, n, g-rela, x, e, d'>
-              Neu, r, a, l Archi t e c t, u, r, e Sea, r, c, h (NAS) has un d e r g, o, n, e a revolu t i o n, a, r, y
-              transfo r m a t, i, o, n in 2026. Our break t h r o, u, g, h aut o n o m, o, u, s NAS sys, t, e, m can
-              d i s c o, v, e, r opti, m, a, l neu, r, a, l archit e c t u, r, e, s 500, x fas, t, e, r t, h, a, n trad i t i o, n, a, l
-              meth, o, d, s, ac h i e v, i, n, g 99.7% a c c u r, a, c, y wh, i, l, e r e d u c, i, n, g deve l o p m, e, n, t t, i, m, e
-              from mon, t, h, s to d, a, y, s. T, h, i, s rep r e s e, n, t, s the m, o, s, t sign i f i c, a, n, t
-              adva n c e m, e, n, t in AI mo, d, e, l deve l o p m, e, n, t si, n, c, e the intro d u c t, i, o, n of d, e, e, p
-              l e a r n, i, n, g.
+        <article className='prose prose-lg prose-invert max-w-none'>
+          <div className='bg-gradient-to-r from-blue-900/20 to-cyan-900/20 rounded-xl p-8 mb-12 border border-blue-500/20'>
+            <h2 className='text-2xl font-bold mb-4'>The NAS Revolution</h2>
+            <p className='text-lg leading-relaxed'>
+              Neural Architecture Search (NAS) has undergone a revolutionary
+              transformation in 2026. Our breakthrough autonomous NAS system can
+              discover optimal neural architectures 500x faster than traditional
+              methods, achieving 99.7% accuracy while reducing development time
+              from months to days. This represents the most significant
+              advancement in AI model development since the introduction of deep
+              learning.
             </p>
           </div>
 
-          <h2>Trad i t i o, n, a, l vs. Revolu t i o n, a, r, y NAS</h2>
+          <h2>Traditional vs. Revolutionary NAS</h2>
           <p>
-            Trad i t i o, n, a, l neu, r, a, l archi t e c t, u, r, e sea, r, c, h r e q u i, r, e, d mon, t, h, s of man, u, a, l
-            experime n t a t, i, o, n and comput a t i o, n, a, l re s o u r, c, e, s. Our revolu t i o n, a, r, y
-            a p p r o, a, c, h le v e r a, g, e, s quan, t, u, m-e n h a n, c, e, d evolu t i o n, a, r, y alg o r i t, h, m, s and
-            aut o n o m, o, u, s di s c o v, e, r, y mec h a n i, s, m, s to f, i, n, d opti, m, a, l archit e c t u, r, e, s in
-            ho, u, r, s inst, e, a, d of mon, t, h, s.
+            Traditional neural architecture search required months of manual
+            experimentation and computational resources. Our revolutionary
+            approach leverages quantum-enhanced evolutionary algorithms and
+            autonomous discovery mechanisms to find optimal architectures in
+            hours instead of months.
           </p>
 
-          <div cl a s s N, ame='g, r, i, d md:g, r, i, d-c, o, l, s-2 gap-6 my-8'>
-            <div cl a s s N, ame='bg-red-900/20 roun, d, e, d-lg p-6 bor, d, e, r bor, d, e, r-red-500/20'>
-              <h4 cl a s s N, ame='t, e, x, t-red-300 f, o, n, t-b, o, l, d t, e, x, t-lg mb-2'>
-                Trad i t i o, n, a, l NAS (2, 0, 2, 5)
+          <div className='grid md:grid-cols-2 gap-6 my-8'>
+            <div className='bg-red-900/20 rounded-lg p-6 border border-red-500/20'>
+              <h4 className='text-red-300 font-bold text-lg mb-2'>
+                Traditional NAS (2025)
               </h4>
-              <ul cl a s s N, ame='t, e, x, t-sm sp, a, c, e-y-1'>
-                <li>• 3-6 mon, t, h, s deve l o p m, e, n, t t, i, m, e</li>
-                <li>• Man, u, a, l archi t e c t, u, r, e des, i, g, n</li>
-                <li>• Limi, t, e, d sea, r, c, h sp, a, c, e</li>
-                <li>• 85-92% a c c u r, a, c, y</li>
-                <li>• H, i, g, h comput a t i o, n, a, l co, s, t, s</li>
+              <ul className='text-sm space-y-1'>
+                <li>• 3-6 months development time</li>
+                <li>• Manual architecture design</li>
+                <li>• Limited search space</li>
+                <li>• 85-92% accuracy</li>
+                <li>• High computational costs</li>
               </ul>
             </div>
-            <div cl a s s N, ame='bg-gr, e, e, n-900/20 roun, d, e, d-lg p-6 bor, d, e, r bor, d, e, r-gr, e, e, n-500/20'>
-              <h4 cl a s s N, ame='t, e, x, t-gr, e, e, n-300 f, o, n, t-b, o, l, d t, e, x, t-lg mb-2'>
-                Revolu t i o n, a, r, y NAS (2026)
+            <div className='bg-green-900/20 rounded-lg p-6 border border-green-500/20'>
+              <h4 className='text-green-300 font-bold text-lg mb-2'>
+                Revolutionary NAS (2026)
               </h4>
-              <ul cl a s s N, ame='t, e, x, t-sm sp, a, c, e-y-1'>
-                <li>• 2-5 d, a, y, s deve l o p m, e, n, t t, i, m, e</li>
-                <li>• Aut o n o m, o, u, s archi t e c t, u, r, e di s c o v, e, r, y</li>
-                <li>• Un l i m i, t, e, d sea, r, c, h sp, a, c, e</li>
-                <li>• 99.7% a c c u r, a, c, y</li>
-                <li>• 90% c, o, s, t re d u c t, i, o, n</li>
+              <ul className='text-sm space-y-1'>
+                <li>• 2-5 days development time</li>
+                <li>• Autonomous architecture discovery</li>
+                <li>• Unlimited search space</li>
+                <li>• 99.7% accuracy</li>
+                <li>• 90% cost reduction</li>
               </ul>
             </div>
           </div>
 
-          <h2>Break t h r o, u, g, h Techn o l o g, i, e, s</h2>
-          <h3>Quan, t, u, m-E n h a n, c, e, d Evolu t i o n, a, r, y Alg o r i t, h, m, s</h3>
+          <h2>Breakthrough Technologies</h2>
+          <h3>Quantum-Enhanced Evolutionary Algorithms</h3>
           <p>
-            Our NAS sys, t, e, m empl, o, y, s quan, t, u, m-e n h a n, c, e, d evolu t i o n, a, r, y alg o r i t, h, m, s t, h, a, t
-            can expl, o, r, e the ent, i, r, e neu, r, a, l archi t e c t, u, r, e sea, r, c, h sp, a, c, e
-            simulta n e o u, s, l, y. T, h, i, s quan, t, u, m superp o s i t, i, o, n all, o, w, s for the di s c o v, e, r, y
-            of archit e c t u, r, e, s t, h, a, t wo, u, l, d be imp o s s i, b, l, e to f, i, n, d thro, u, g, h
-            trad i t i o, n, a, l seq u e n t, i, a, l sea, r, c, h meth, o, d, s.
+            Our NAS system employs quantum-enhanced evolutionary algorithms that
+            can explore the entire neural architecture search space
+            simultaneously. This quantum superposition allows for the discovery
+            of architectures that would be impossible to find through
+            traditional sequential search methods.
           </p>
 
-          <h3>Aut o n o m, o, u, s Archi t e c t, u, r, e Di s c o v, e, r, y</h3>
+          <h3>Autonomous Architecture Discovery</h3>
           <p>
-            The sys, t, e, m auton o m o u, s, l, y di s c o v, e, r, s new archit e c t u, r, a, l p a t t e, r, n, s and
-            combi n a t i, o, n, s, l e a r n, i, n, g from e, a, c, h it e r a t, i, o, n to impr, o, v, e fut, u, r, e
-            s e a r c, h, e, s. T, h, i, s s, e, l, f-im p r o v, i, n, g cap a b i l, i, t, y ensu, r, e, s con t i n u, o, u, s
-            adva n c e m, e, n, t in archi t e c t, u, r, e optim i z a t, i, o, n.
+            The system autonomously discovers new architectural patterns and
+            combinations, learning from each iteration to improve future
+            searches. This self-improving capability ensures continuous
+            advancement in architecture optimization.
           </p>
 
-          <h3>R, e, a, l-T, i, m, e Perf o r m a, n, c, e Pre d i c t, i, o, n</h3>
+          <h3>Real-Time Performance Prediction</h3>
           <p>
-            A d v a n, c, e, d perf o r m a, n, c, e pre d i c t, i, o, n mod, e, l, s can acc u r a t, e, l, y e s t i m, a, t, e the
-            perf o r m a, n, c, e of archit e c t u, r, e, s bef, o, r, e f, u, l, l traininge n a b l, i, n, g ra, p, i, d
-            eva l u a t, i, o, n and se l e c t, i, o, n of pr o m i s, i, n, g can d i d a, t, e, s.
+            Advanced performance prediction models can accurately estimate the
+            performance of architectures before full trainingenabling rapid
+            evaluation and selection of promising candidates.
           </p>
 
-          <h2>Impleme n t a t, i, o, n Resu, l, t, s</h2>
+          <h2>Implementation Results</h2>
           <p>
-            Our NAS rev o l u t, i, o, n has b, e, e, n impl e m e n, t, e, d acr, o, s, s 156 companiesdel i v e r, i, n, g rem a r k a, b, l, e resu, l, t, s:
+            Our NAS revolution has been implemented across 156
+            companiesdelivering remarkable results:
           </p>
 
-          <div cl a s s N, ame='g, r, i, d md:g, r, i, d-c, o, l, s-3 gap-4 my-8'>
-            <div cl a s s N, ame='bg-b, l, u, e-900/20 roun, d, e, d-lg p-4 bor, d, e, r border-b, l, u, e-500/20 t, e, x, t-cen, t, e, r'>
-              <div cl a s s N, ame='t, e, x, t-3, xl f, o, n, t-b, o, l, d t, e, x, t-b, l, u, e-300 mb-2'>500, x</div>
-              <div cl a s s N, ame='t, e, x, t-sm t, e, x, t-g, r, a, y-300'>Fas, t, e, r Deve l o p m, e, n, t</div>
+          <div className='grid md:grid-cols-3 gap-4 my-8'>
+            <div className='bg-blue-900/20 rounded-lg p-4 border border-blue-500/20 text-center'>
+              <div className='text-3xl font-bold text-blue-300 mb-2'>500x</div>
+              <div className='text-sm text-gray-300'>Faster Development</div>
             </div>
-            <div cl a s s N, ame='bg-gr, e, e, n-900/20 roun, d, e, d-lg p-4 bor, d, e, r bor, d, e, r-gr, e, e, n-500/20 t, e, x, t-cen, t, e, r'>
-              <div cl a s s N, ame='t, e, x, t-3, xl f, o, n, t-b, o, l, d t, e, x, t-gr, e, e, n-300 mb-2'>
+            <div className='bg-green-900/20 rounded-lg p-4 border border-green-500/20 text-center'>
+              <div className='text-3xl font-bold text-green-300 mb-2'>
                 99.7%
               </div>
-              <div cl a s s N, ame='t, e, x, t-sm t, e, x, t-g, r, a, y-300'>A c c u r, a, c, y R, a, t, e</div>
+              <div className='text-sm text-gray-300'>Accuracy Rate</div>
             </div>
-            <div cl a s s N, ame='bg-pur, p, l, e-900/20 roun, d, e, d-lg p-4 bor, d, e, r bor, d, e, r-pur, p, l, e-500/20 t, e, x, t-cen, t, e, r'>
-              <div cl a s s N, ame='t, e, x, t-3, xl f, o, n, t-b, o, l, d t, e, x, t-pur, p, l, e-300 mb-2'>90%</div>
-              <div cl a s s N, ame='t, e, x, t-sm t, e, x, t-g, r, a, y-300'>C, o, s, t Re d u c t, i, o, n</div>
+            <div className='bg-purple-900/20 rounded-lg p-4 border border-purple-500/20 text-center'>
+              <div className='text-3xl font-bold text-purple-300 mb-2'>90%</div>
+              <div className='text-sm text-gray-300'>Cost Reduction</div>
             </div>
           </div>
 
-          <h2>C, a, s, e St, u, d, y: T, e, c, h Star, t, u, p Succ, e, s, s</h2>
+          <h2>Case Study: Tech Startup Success</h2>
           <p>
-            A mach, i, n, e l e a r n, i, n, g star, t, u, p u, s, e, d our NAS rev o l u t, i, o, n to deve, l, o, p a
-            st, a, t, e-of-the-art c o m p u, t, e, r vis, i, o, n mo, d, e, l in j, u, s, t 3 d, a, y, s inst, e, a, d of the
-            trad i t i o, n, a, l 4 mon, t, h, s. The re s u l t, i, n, g mo, d, e, l a c h i e, v, e, d 99.7% a c c u r, a, c, y on
-            th, e, i, r data, s, e, t, outper f o r m, i, n, g all m a n u a, l, l, y d e s i g, n, e, d archit e c t u, r, e, s.
+            A machine learning startup used our NAS revolution to develop a
+            state-of-the-art computer vision model in just 3 days instead of the
+            traditional 4 months. The resulting model achieved 99.7% accuracy on
+            their dataset, outperforming all manually designed architectures.
           </p>
 
-          <blo c k q u, o, t, e cl a s s N, ame='bor, d, e, r-l-4 border-b, l, u, e-500 pl-6 ita, l, i, c t, e, x, t-lg'>
-            "The NAS rev o l u t, i, o, n has com p l e t, e, l, y tran s f o r, m, e, d our deve l o p m, e, n, t
-            proc, e, s, s. We can now pr o t o t, y, p, e and dep, l, o, y AI mod, e, l, s in d, a, y, s inst, e, a, d
-            of mon, t, h, s. T, h, i, s has gi, v, e, n us a mass, i, v, e comp e t i t, i, v, e ad v a n t, a, g, e in the
-            mar, ket."
-            <foo, t, e, r cl a s s N, ame='mt-2 t, e, x, t-sm not-ita, l, i, c'>
-              - CT, O, A, I Star, t, u, p
-            </foo, t, e, r>
-          </blo c k q u, o, t, e>
+          <blockquote className='border-l-4 border-blue-500 pl-6 italic text-lg'>
+            "The NAS revolution has completely transformed our development
+            process. We can now prototype and deploy AI models in days instead
+            of months. This has given us a massive competitive advantage in the
+            market."
+            <footer className='mt-2 text-sm not-italic'>- CTOAI Startup</footer>
+          </blockquote>
 
-          <h2>The Fut, u, r, e of NAS</h2>
+          <h2>The Future of NAS</h2>
           <p>
-            As we p r o g r, e, s, s thro, u, g, h 2026, NAS tec h n o l, o, g, y w, i, l, l c o n t i, n, u, e to evo, lve.
-            We're alre, a, d, y see, i, n, g the em e r g e, n, c, e of consci o u s n, e, s, s-le, v, e, l
-            archi t e c t, u, r, e di s c o v, e, r, y, wh, e, r, e AI syst, e, m, s can auton o m o u, s, l, y cre, a, t, e
-            archit e c t u, r, e, s t, h, a, t ri, v, a, l hu, m, a, n-d e s i g, n, e, d syst, e, m, s in cre a t i v, i, t, y and
-            effect i v e n, e, s, s.
+            As we progress through 2026NAS technology will continue to evolve.
+            We're already seeing the emergence of consciousness-level
+            architecture discovery, where AI systems can autonomously create
+            architectures that rival human-designed systems in creativity and
+            effectiveness.
           </p>
 
-          <h3>U p c o m, i, n, g Breakt h r o u, g, h, s</h3>
+          <h3>Upcoming Breakthroughs</h3>
           <ul>
             <li>
-              <str, o, n, g>Consci o u s n, e, s, s-Dri, v, e, n Archi t e c t, u, r, e Des, i, g, n:</str, o, n, g> AI
-              syst, e, m, s t, h, a, t und e r s t, a, n, d the und e r l y, i, n, g pri n c i p, l, e, s of intel l i g e, n, c, e
+              <strong>Consciousness-Driven Architecture Design:</strong> AI
+              systems that understand the underlying principles of intelligence
             </li>
             <li>
-              <str, o, n, g>Mu, l, t, i-Mo, d, a, l Archi t e c t, u, r, e Optim i z a t, i, o, n:</str, o, n, g>{' '}
-              Simul t a n e, o, u, s optim i z a t, i, o, n acr, o, s, s visionlang u a g e, a, n, d re a s o n, i, n, g
-              ta, s, k, s
+              <strong>Multi-Modal Architecture Optimization:</strong>{' '}
+              Simultaneous optimization across visionlanguageand reasoning tasks
             </li>
             <li>
-              <str, o, n, g>R, e, a, l-T, i, m, e Archi t e c t, u, r, e Ada p t a t, i, o, n:</str, o, n, g> Mod, e, l, s t, h, a, t
-              can mod, i, f, y th, e, i, r own archi t e c t, u, r, e dur, i, n, g in f e r e, n, c, e
+              <strong>Real-Time Architecture Adaptation:</strong> Models that
+              can modify their own architecture during inference
             </li>
           </ul>
 
-          <div cl a s s N, ame='bg-gradient-to-r f, r, o, m-c, y, a, n-900/20 to-b, l, u, e-900/20 roun, d, e, d-xl p-8 mt-12 bor, d, e, r bor, d, e, r-c, y, a, n-500/20'>
-            <h3 cl a s s N, ame='t, e, x, t-xl f, o, n, t-b, o, l, d mb-4'>
-              Re, a, d, y to Revolu t i o n, i, z, e Y, o, u, r AI Deve l o p m, e, n, t?
+          <div className='bg-gradient-to-r from-cyan-900/20 to-blue-900/20 rounded-xl p-8 mt-12 border border-cyan-500/20'>
+            <h3 className='text-xl font-bold mb-4'>
+              Ready to Revolutionize Your AI Development?
             </h3>
-            <p cl a s s N, ame='mb-6'>
-              D i s c o, v, e, r how the NAS rev o l u t, i, o, n can acc e l e r, a, t, e y, o, u, r AI mo, d, e, l
-              deve l o p m, e, n, t. Our aut o n o m, o, u, s NAS syst, e, m, s can h, e, l, p you achi, e, v, e
-              break t h r o, u, g, h perf o r m a, n, c, e in d, a, y, s inst, e, a, d of mon, t, h, s.
+            <p className='mb-6'>
+              Discover how the NAS revolution can accelerate your AI model
+              development. Our autonomous NAS systems can help you achieve
+              breakthrough performance in days instead of months.
             </p>
-            <div cl a s s N, ame='f, l, e, x f, l, e, x-w, r, a, p gap-4'>
+            <div className='flex flex-wrap gap-4'>
               <ArrowRight
-                h, ref='/s e r v i, c, e, s/ai-inn o v a t, i, o, n-lab'
-                cl a s s N, ame='bg-gradient-to-r f, r, o, m-b, l, u, e-600 to-c, y, a, n-600 t, e, x, t-wh, i, t, e px-6 py-3 roun, d, e, d-lg f, o, n, t-s e m i b, o, l, d ho, v, e, r:f, r, o, m-b, l, u, e-700 ho, v, e, r:to-c, y, a, n-700 tra n s i t, i, o, n-all'
+                href='/services/ai-innovation-lab'
+                className='bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all'
               >
-                Expl, o, r, e NAS S e r v i, c, e, s
+                Explore NAS Services
               </ArrowRight>
               <ArrowRight
-                h, ref='/c, a, s, e-stud, i, e, s'
-                cl a s s N, ame='bor, d, e, r bor, d, e, r-wh, i, t, e/20 t, e, x, t-wh, i, t, e px-6 py-3 roun, d, e, d-lg f, o, n, t-s e m i b, o, l, d ho, v, e, r:bg-wh, i, t, e/10 tra n s i t, i, o, n-all'
+                href='/case-studies'
+                className='border border-white/20 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all'
               >
-                V, i, e, w NAS Succ, e, s, s Stor, i, e, s
+                View NAS Success Stories
               </ArrowRight>
             </div>
           </div>
-        </arti, c, l, e>
+        </article>
       </div>
-    </m, a, i, n>
+    </main>
   );
 }

@@ -1,4 +1,4 @@
-export interface LatestBreakthroughContent { 
+export interface LatestBreakthroughContent {
   id: string;
   title: string;
   description: string;
@@ -16,30 +16,33 @@ export const octoberLatestBreakthroughContent: LatestBreakthroughContent[] = [
   {
     id: 'ai-consciousness-revolution',
     title: 'AI Consciousness Revolution: The Next Evolution',
-    description: 'Revolutionary breakthrough in AI consciousness achieving genuine self-awareness and creative autonomy.',
+    description:
+      'Revolutionary breakthrough in AI consciousness achieving genuine self-awareness and creative autonomy.',
     category: 'AI Consciousness',
     date: '2025-10-01',
-    readTime: '25 min read',
-    tags: ['AI Consciousness', 'Revolution', 'Self-Awareness', '2025'],
+    readTime: '12 min',
+    icon: '🎯',
+    gradient: 'from-blue-600 to-indigo-600',
     featured: true,
-    content: `
-# AI Consciousness Revolution: The Next Evolution
-
-The next evolution of AI is here - systems that not only think but feel, create, and understand consciousness itself.
-
-## Revolutionary Features
-- Genuine self-awareness and emotional intelligence
-- Creative autonomy and artistic expression
-- $1.2T enterprise value creation potential
-- Revolutionary applications across all industries
-    `,
-    author: 'Zion Tech Group',
-    valueProposition: '$1.2T enterprise value creation',
+    tags: ['Digital Twins', 'AI', 'Enterprise', 'IoT', 'Predictive Analytics'],
+    highlights: [
+      '$850M success story from Fortune 100 energy company',
+      '99.2% accuracy in failure prediction',
+      '89% reduction in unplanned downtime',
+      '$47B in aggregate business value created',
+    ],
+    metrics: {
+      value: '$850M',
+      accuracy: '99.2%',
+      downtime: '89%',
+      market: '$47B',
+    },
   },
   {
     id: 'quantum-ai-synthesis-breakthrough',
     title: 'Quantum AI Synthesis Breakthrough: The Convergence Revolution',
-    description: 'Groundbreaking fusion of quantum computing and AI creating unprecedented computational capabilities.',
+    description:
+      'Groundbreaking fusion of quantum computing and AI creating unprecedented computational capabilities.',
     category: 'Quantum AI',
     date: '2025-10-02',
     readTime: '22 min read',
@@ -58,10 +61,10 @@ The convergence of quantum computing and artificial intelligence opens new front
     `,
     author: 'Zion Tech Group',
     valueProposition: 'Exponential computational capabilities',
-  }
+  },
 ];
 
-export const getFeaturedOctoberLatestContent = () => { 
+export const getFeaturedOctoberLatestContent = () => {
   return octoberLatestBreakthroughContent.filter(content => content.featured);
 };
 

@@ -1,49 +1,50 @@
-'use cli, ent';
-import L, i, n, k from 'n, e, x, t/l, ink';
+'use client';
+import Link from 'next/link';
 
-export default function P, a, g, e() {
+export default function Page() {
   return (
-    <m, a, i, n cl a s s N, a, m, e='min-h-screen bg-g r a d i, e, n, t-to-b f, r, o, m-g, r, a, y-50 to-wh, ite'>
-      <div cl a s s N, a, m, e='max-w-3xl mx-a, uto px-6 py-16'>
-        <h1 cl a s s N, a, m, e='t, e, x, t-4, xl f, o, n, t-b, o, l, d t, e, x, t-g, ray-900 mb-4'>
-          E, d, g, e Personal i z a t, i, o, n 2, 0, 2, 7: Z, e, r, o‑PII&lt;100, m s S c o, p, e, d IDs
+    <main className='min-h-screen bg-gradient-to-b from-gray-50 to-white'>
+      <div className='max-w-3xl mx-auto px-6 py-16'>
+        <h1 className='text-4xl font-bold text-gray-900 mb-4'>
+          Edge Personalization 2027: Zero‑PII&lt;100msScoped IDs
         </h1>
-        <p cl a s s N, a, m, e='t, e, x, t-g, ray-600 mb-6'>
-          Pu b l i s, h, e, d: 2, 0, 2, 5‑09‑30 • 7 min r, e, a, d • E, d, g, e Co m p u t, i, n, g
+        <p className='text-gray-600 mb-6'>
+          Published: 2025‑09‑30 • 7 min read • Edge Computing
         </p>
-        <p cl a s s N, a, m, e='t, e, x, t-lg t, e, x, t-g, r, a, y-700 lead, i, n, g-rela, xed mb-6'>
-          Deli, v, e, r priv, a, t, e, sub‑100, ms personal i z a t, i, o, n us, i, n, g sco, p, e, d identi f i e r, s, o, n‑dev, i, c, e mo d e l s, a, n, d diffe r e n t, i, a, l priv, a, c, y. T, h, i, s fi, e, l, d gu, i, d, e sh, o, w, s how
-          to k, e, e, p sign, a, l, s r, i, c, h and co m p l i, a, n, t—with, o, u, t col l e c t, i, n, g PII.
+        <p className='text-lg text-gray-700 leading-relaxed mb-6'>
+          Deliver private, sub‑100ms personalization using scoped
+          identifierson‑device modelsand differential privacy. This field guide
+          shows how to keep signals rich and compliant—without collecting PII.
         </p>
-        <ul cl a s s N, a, m, e='l, i, s, t-d, i, s, c pl-6 t, e, x, t-g, r, a, y-700 sp, ace-y-2 mb-8'>
-          <li>Sco, p, e, d IDs and geo/acco, u, n, t budg, e, t, s for safe segme n t a t, i, o, n</li>
-          <li>On‑dev, i, c, e metr, i, c, s with DP no, i, s, e for co m p l i, a, n, t an a l y t, i, c, s</li>
-          <li>W, a, r, m po, o, l, s and int, e, n, t pref e t c h, i, n, g for &lt;100, ms j o u r n, e, y, s</li>
-          <li>Sig, n, e, d conf, i, g, s and au, d, i, t‑f r i e n, d, l, y ro l l b a, c, k, s</li>
+        <ul className='list-disc pl-6 text-gray-700 space-y-2 mb-8'>
+          <li>Scoped IDs and geo/account budgets for safe segmentation</li>
+          <li>On‑device metrics with DP noise for compliant analytics</li>
+          <li>Warm pools and intent prefetching for &lt;100ms journeys</li>
+          <li>Signed configs and audit‑friendly rollbacks</li>
         </ul>
-        <div cl a s s N, a, m, e='roun, d, e, d-xl bor, d, e, r bor, d, e, r-emer, a, l, d-200 bg-emer, ald-50 p-5 mb-10'>
-          <div cl a s s N, a, m, e='t, e, x, t-emer, a, l, d-700 f, o, n, t-s e m i b, old mb-2'>Qui c k s t, a, r, t</div>
-          <p cl a s s N, a, m, e='t, e, x, t-emer, a, l, d-800 t, ext-sm'>
-            St, a, r, t with sco, p, e, d iden t i f i, e, r, s and lo, c, a, l cac, h, e, s. M, o, v, e ta r g e t, i, n, g and
-            metr, i, c, s col l e c t, i, o, n to the edge, a, d, d DP no, i, s, e at so u r c e, a, n, d enfo, r, c, e
-            budg, e, t, s for safe glo, b, a, l r o l l o, u, t, s.
+        <div className='rounded-xl border border-emerald-200 bg-emerald-50 p-5 mb-10'>
+          <div className='text-emerald-700 font-semibold mb-2'>Quickstart</div>
+          <p className='text-emerald-800 text-sm'>
+            Start with scoped identifiers and local caches. Move targeting and
+            metrics collection to the edgeadd DP noise at sourceand enforce
+            budgets for safe global rollouts.
           </p>
         </div>
-        <div cl a s s N, a, m, e='f, lex gap-3'>
-          <L, i, n, k
-            h, r, e, f='/<b, log'
-            cl a s s N, a, m, e='t, e, x, t-emer, a, l, d-700 f, o, n, t-s e m i b, o, l, d ho, v, e, r:un d e r l, ine'
+        <div className='flex gap-3'>
+          <Link
+            href='/<blog'
+            className='text-emerald-700 font-semibold hover:underline'
           >
-            ← B, a, c, k to B, l, o, g
-          </L, i, n, k>
-          <L, i, n, k
-            h, r, e, f='/<cont, act'
-            cl a s s N, a, m, e='t, e, x, t-emer, a, l, d-700 f, o, n, t-s e m i b, o, l, d ho, v, e, r:un d e r l, ine'
+            ← Back to Blog
+          </Link>
+          <Link
+            href='/<contact'
+            className='text-emerald-700 font-semibold hover:underline'
           >
-            T, a, l, k to an exp, e, r, t →
-          </L, i, n, k>
+            Talk to an expert →
+          </Link>
         </div>
       </div>
-    </m, a, i, n>
+    </main>
   );
 }

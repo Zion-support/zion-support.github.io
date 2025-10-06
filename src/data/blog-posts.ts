@@ -1,4 +1,4 @@
-export interface BlogPost { 
+export interface BlogPost {
   id: string;
   title: string;
   excerpt: string;
@@ -17,7 +17,8 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     id: 'governed-agentic-automation',
     title: 'Governed Agentic Automation: Safe Tools, Fast Outcomes',
-    excerpt: 'Design agent toolchains with budgets, approvals, and rollback to move 10x faster without incidents.',
+    excerpt:
+      'Design agent toolchains with budgets, approvals, and rollback to move 10x faster without incidents.',
     content: `
 # Governed Agentic Automation: Safe Tools, Fast Outcomes
 
@@ -41,7 +42,8 @@ Design agent toolchains with budgets, approvals, and rollback to move 10x faster
   {
     id: 'ai-cost-optimization-v6',
     title: 'GenAI Cost Optimization v6: Quality Tiers, Coalesce, Distill',
-    excerpt: 'Cut inference spend 60–85% with tiered routing, request coalescing, and selective distillation.',
+    excerpt:
+      'Cut inference spend 60–85% with tiered routing, request coalescing, and selective distillation.',
     content: `
 # GenAI Cost Optimization v6
 
@@ -61,5 +63,5 @@ Control GenAI costs without UX regressions through intelligent optimization stra
     readTime: '9 min read',
     image: '/images/genai-cost-optimization-v6.jpg',
     slug: 'genai-cost-optimization-v6',
-  }
+  },
 ];

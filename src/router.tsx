@@ -1,1 +1,1 @@
-          <Route path="/terms" element={<Terms />} />
+<Route path='/terms' element={<Terms />} />;

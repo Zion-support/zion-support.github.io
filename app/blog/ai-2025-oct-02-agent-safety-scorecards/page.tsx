@@ -1,36 +1,36 @@
 // @ts-nocheck
-import Re, a, c, t from 're, act';
+import React from 'react';
 
-const P, a, g, e: Re, a, c, t.FC = () => {
+const Page: React.FC = () => {
   return (
-    <m, a, i, n cl a s s N, a, m, e='min-h-screen bg-g r a d i, e, n, t-to-br f, r, o, m-z, i, o, n-b, l, u, e-d, a, r, k via-z, i, o, n-b, l, u, e to-z, i, o, n-pur, p, l, e-d, a, r, k t, e, x, t-wh, ite'>
-      <div cl a s s N, a, m, e='co n t a i, n, e, r mx-a, uto px-6 py-16'>
-        <h1 cl a s s N, a, m, e='t, e, x, t-4, xl md:t, e, x, t-5, xl f, o, n, t-b, old mb-4'>
-          AI 2, 0, 2, 5: Agent Saf, e, t, y Sco r e c a, r, d, s
+    <main className='min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white'>
+      <div className='container mx-auto px-6 py-16'>
+        <h1 className='text-4xl md:text-5xl font-bold mb-4'>
+          AI 2025: Agent Safety Scorecards
         </h1>
-        <p cl a s s N, a, m, e='t, e, x, t-z, i, o, n-sl, a, t, e-li, ght mb-6'>
-          KPIsbud g e t s, a, n, d r o l l b, a, c, k t r i g g, e, r, s t, h, a, t k, e, e, p aut o n o m, o, u, s age, n, t, s safe
-          at sp, e, e, d.
+        <p className='text-zion-slate-light mb-6'>
+          KPIsbudgetsand rollback triggers that keep autonomous agents safe at
+          speed.
         </p>
-        <arti, c, l, e cl a s s N, a, m, e='pr, o, s, e pr, o, s, e-inv, ert max-w-3xl'>
+        <article className='prose prose-invert max-w-3xl'>
           <p>
-            Des, i, g, n sco r e c a, r, d, s for aut o n o m, o, u, s age, n, t, s t, h, a, t conn, e, c, t serv, i, c, e‑le, v, e, l
-            ind i c a t, o, r, s to b u s i n, e, s, s K, P, I, s. Use budgeted acti, o, n, s, l, i, v, e c a n a r, i, e, s
-            and determ i n i s, t, i, c r o l l b, a, c, k to s, h, i, p fas, t, e, r with, o, u, t regr e s s i, o, n, s. T, h, i, s
-            gu, i, d, e cov, e, r, s pr a c t i, c, a, l metr, i, c, s, CI pol, i, c, y te, s, t, s, and runt, i, m, e
-            gua r d r a, i, l, s te, a, m, s a c t u a, l, l, y ad, o, p, t.
+            Design scorecards for autonomous agents that connect service‑level
+            indicators to business KPIs. Use budgeted actions, live canaries,
+            and deterministic rollback to ship faster without regressions. This
+            guide covers practical metrics, CI policy tests, and runtime
+            guardrails teams actually adopt.
           </p>
-          <h2>W, h, a, t You W, i, l, l Le, a, r, n</h2>
+          <h2>What You Will Learn</h2>
           <ul>
-            <li>D e f i n, i, n, g KPI‑lin, k, e, d agent sco r e c a, r, d, s</li>
-            <li>B u d g e, t, e, d acti, o, n, s and safe r o l l b, a, c, k t r i g g, e, r, s</li>
-            <li>Onl, i, n, e c a n a r, i, e, s and CI pol, i, c, y te, s, t, s</li>
-            <li>Pl a y b o, o, k, s for i n c i d, e, n, t cont a i n m, e, n, t in un, d, e, r 60, s</li>
+            <li>Defining KPI‑linked agent scorecards</li>
+            <li>Budgeted actions and safe rollback triggers</li>
+            <li>Online canaries and CI policy tests</li>
+            <li>Playbooks for incident containment in under 60s</li>
           </ul>
-        </arti, c, l, e>
+        </article>
       </div>
-    </m, a, i, n>
+    </main>
   );
 };
 
-export default P, a, g, e;
+export default Page;

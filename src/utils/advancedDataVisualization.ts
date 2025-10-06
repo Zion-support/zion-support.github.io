@@ -8,7 +8,7 @@ import {
   StoredChart,
   VisualizationConfig,
   ChartType,
-  ColorScheme
+  ColorScheme,
 } from '../types/visualization';
 
 export class AdvancedDataVisualization {
@@ -21,14 +21,14 @@ export class AdvancedDataVisualization {
       defaultColorScheme: 'blue',
       animationDuration: 300,
       responsive: true,
-      ...config
+      ...config,
     };
   }
 
   public createChart(
     id: string,
     data: ChartData,
-    type: ChartType = this.config.defaultChartType
+    type: ChartType = this.config.defaultChartType,
   ): StoredChart {
     const chart: StoredChart = {
       id,
@@ -36,10 +36,10 @@ export class AdvancedDataVisualization {
       data,
       config: {
         ...this.config,
-        colorScheme: this.config.defaultColorScheme
+        colorScheme: this.config.defaultColorScheme,
       },
       createdAt: new Date(),
-      updatedAt: new Date()
+      updatedAt: new Date(),
     };
 
     this.charts.set(id, chart);
@@ -78,7 +78,10 @@ export class AdvancedDataVisualization {
     }
   }
 
-  public importChart(data: string, format: 'json' | 'csv' = 'json'): StoredChart {
+  public importChart(
+    data: string,
+    format: 'json' | 'csv' = 'json',
+  ): StoredChart {
     if (format === 'json') {
       const chart = JSON.parse(data) as StoredChart;
       this.charts.set(chart.id, chart);
@@ -88,7 +91,7 @@ export class AdvancedDataVisualization {
       const chart = this.createChart(
         `imported-${Date.now()}`,
         chartData,
-        'line'
+        'line',
       );
       return chart;
     }
@@ -97,10 +100,8 @@ export class AdvancedDataVisualization {
   private convertToCSV(data: ChartData): string {
     const headers = ['x', 'y'];
     const rows = data.points.map(point => [point.x, point.y]);
-    
-    return [headers, ...rows]
-      .map(row => row.join(','))
-      .join('\n');
+
+    return [headers, ...rows].map(row => row.join(',')).join('\n');
   }
 
   private parseCSV(csv: string): ChartData {
@@ -113,7 +114,7 @@ export class AdvancedDataVisualization {
       if (values.length >= 2) {
         points.push({
           x: parseFloat(values[0]) || 0,
-          y: parseFloat(values[1]) || 0
+          y: parseFloat(values[1]) || 0,
         });
       }
     }
@@ -124,14 +125,14 @@ export class AdvancedDataVisualization {
   public generateRandomData(
     count: number,
     min: number = 0,
-    max: number = 100
+    max: number = 100,
   ): ChartData {
     const points: DataPoint[] = [];
-    
+
     for (let i = 0; i < count; i++) {
       points.push({
         x: i,
-        y: Math.random() * (max - min) + min
+        y: Math.random() * (max - min) + min,
       });
     }
 
@@ -140,12 +141,12 @@ export class AdvancedDataVisualization {
 
   public applyColorScheme(
     chart: StoredChart,
-    colorScheme: ColorScheme
+    colorScheme: ColorScheme,
   ): StoredChart {
     const updatedChart = { ...chart };
     updatedChart.config.colorScheme = colorScheme;
     updatedChart.updatedAt = new Date();
-    
+
     this.charts.set(chart.id, updatedChart);
     return updatedChart;
   }
@@ -169,13 +170,13 @@ export class AdvancedDataVisualization {
       pointCount: points.length,
       xRange: {
         min: Math.min(...xValues),
-        max: Math.max(...xValues)
+        max: Math.max(...xValues),
       },
       yRange: {
         min: Math.min(...yValues),
-        max: Math.max(...yValues)
+        max: Math.max(...yValues),
       },
-      averageY: yValues.reduce((sum, y) => sum + y, 0) / yValues.length
+      averageY: yValues.reduce((sum, y) => sum + y, 0) / yValues.length,
     };
   }
 }

@@ -1,4 +1,4 @@
-export interface EnhancedPromotionalBanner { 
+export interface EnhancedPromotionalBanner {
   id: string;
   title: string;
   description: string;
@@ -15,8 +15,10 @@ export interface EnhancedPromotionalBanner {
 export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
   {
     id: 'oct-01-autonomous-business-ops-2025',
-    title: '🚀 JUST RELEASED: Autonomous Business Operations Platform — $650M Value Creation, 85% Cost Reduction in 90 Days!',
-    description: 'Revolutionary AI platform delivering unprecedented business transformation with measurable results.',
+    title:
+      '🚀 JUST RELEASED: Autonomous Business Operations Platform — $650M Value Creation, 85% Cost Reduction in 90 Days!',
+    description:
+      'Revolutionary AI platform delivering unprecedented business transformation with measurable results.',
     ctaText: 'Get Started Now',
     ctaUrl: '/services/autonomous-business-operations',
     featured: true,
@@ -28,8 +30,10 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
   },
   {
     id: 'oct-01-ai-governance-framework-2025',
-    title: 'NEW: AI Governance Framework 2025 — Ship AI Safely with Zero Regret',
-    description: 'Complete governance framework for enterprise AI deployment with policy tests, scorecards, and rollback capabilities.',
+    title:
+      'NEW: AI Governance Framework 2025 — Ship AI Safely with Zero Regret',
+    description:
+      'Complete governance framework for enterprise AI deployment with policy tests, scorecards, and rollback capabilities.',
     ctaText: 'Learn More',
     ctaUrl: '/services/ai-governance',
     featured: true,
@@ -38,5 +42,5 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     endDate: '2025-12-31',
     category: 'AI Governance',
     tags: ['AI Governance', 'Enterprise', 'Safety', 'Compliance'],
-  }
+  },
 ];

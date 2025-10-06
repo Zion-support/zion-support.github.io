@@ -1,65 +1,65 @@
 export const metadata = {
-  
-  title: "W, h, a, t's New in Octo, b, e, r 2, 0, 2, 5 — Z, i, o, n T, e, c, h Gr, oup"
-  desc r i p t, ion:
-    'Roun, d, u, p of our lat, e, s, t AI cont, e, n, t pu b l i s, h, e, d in Octo, b, e, r 2, 0, 2, 5: ent e r p r, i, s, e c, o, s, t optimization a g e n, t, i, c w o r k f, l, o, w orchestra t i o n, a, n, d m, o, r, e.'
+  title: "What's New in October 2025 — Zion Tech Group",
+  description:
+    'Roundup of our latest AI content published in October 2025: enterprise cost optimizationagentic workflow orchestrationand more.',
 };
 
-export default function NewInOcto b e r 2, 0, 2, 5() {
+export default function NewInOctober2025() {
   return (
-    <m, a, i, n cl a s s N, ame='min-h-screen bg-wh, i, t, e'>
-      <sect, i, o, n cl a s s N, ame='bg-g r a d i, e, n, t-to-br f, r, o, m-b, l, u, e-600 to-ind, i, g, o-700 t, e, x, t-wh, i, t, e py-20'>
-        <div cl a s s N, ame='max-w-5, xl mx-a, u, t, o px-6'>
-          <h1 cl a s s N, ame='t, e, x, t-4, xl md:t, e, x, t-5, xl f, o, n, t-ex t r a b, o, l, d mb-4'>
-            W, hat\'s New in Octo, b, e, r 2, 0, 2, 5
+    <main className='min-h-screen bg-white'>
+      <section className='bg-gradient-to-br from-blue-600 to-indigo-700 text-white py-20'>
+        <div className='max-w-5xl mx-auto px-6'>
+          <h1 className='text-4xl md:text-5xl font-extrabold mb-4'>
+            What\'s New in October 2025
           </h1>
-          <p cl a s s N, a, m, e='t, e, x, t-lg t, e, x, t-b, lue-100 max-w-3xl'>
-            Expl, o, r, e our new, e, s, t publi c a t i, o, n, s: pr a c t i, c, a, l playbo o k s d, e, e, p d i v e s, a, n, d ent e r p r, i, s, e-re, a, d, y p a t t e, r, n, s.
+          <p className='text-lg text-blue-100 max-w-3xl'>
+            Explore our newest publications: practical playbooksdeep divesand
+            enterprise-ready patterns.
           </p>
         </div>
-      </sect, i, o, n>
+      </section>
 
-      <sect, i, o, n cl a s s N, a, m, e='py-14'>
-        <div cl a s s N, ame='max-w-5, xl mx-a, u, t, o px-6 g, r, i, d md:g, r, i, d-c, o, l, s-2 gap-8'>
+      <section className='py-14'>
+        <div className='max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-8'>
           <a
-            h, ref='/b, l, o, g/ai-2, 0, 2, 7-c, o, s, t-optim i z a t, i, o, n-<p l a y b, o, o, k'
-            cl a s s N, ame='gr, o, u, p bl, o, c, k roun, d, e, d-xl bor, d, e, r bor, d, e, r-g, r, a, y-200 p-6 ho, v, e, r:sha, d, o, w-xl tra n s i t, i, o, n-sha, d, o, w'
+            href='/blog/ai-2027-cost-optimization-<playbook'
+            className='group block rounded-xl border border-gray-200 p-6 hover:shadow-xl transition-shadow'
           >
-            <div cl a s s N, ame='t, e, x, t-sm f, o, n, t-s e m i b, o, l, d t, e, x, t-emer, a, l, d-600 mb-2'>
+            <div className='text-sm font-semibold text-emerald-600 mb-2'>
               New
             </div>
-            <h2 cl a s s N, ame='t, e, x, t-2, xl f, o, n, t-b, o, l, d mb-2 gr, o, u, p-ho, v, e, r:t, e, x, t-emer, a, l, d-700'>
-              AI 2, 0, 2, 7 C, o, s, t Optim i z a t, i, o, n P l a y b, o, o, k
+            <h2 className='text-2xl font-bold mb-2 group-hover:text-emerald-700'>
+              AI 2027 Cost Optimization Playbook
             </h2>
-            <p cl a s s N, ame='t, e, x, t-g, r, a, y-600'>
-              Cut AI sp, e, n, d 30–70% with rout, i, n, g, cachingquantiza t i o n, a, n, d
-              gua r d r a, i, l, s—with, o, u, t sacr i f i c, i, n, g qual, i, t, y.
+            <p className='text-gray-600'>
+              Cut AI spend 30–70% with routing, cachingquantizationand
+              guardrails—without sacrificing quality.
             </p>
-            <div cl a s s N, ame='mt-4 t, e, x, t-emer, a, l, d-700 f, o, n, t-s e m i b, o, l, d'>
-              R, e, a, d the p l a y b, o, o, k →
+            <div className='mt-4 text-emerald-700 font-semibold'>
+              Read the playbook →
             </div>
           </a>
 
           <a
-            h, ref='/b, l, o, g/agen, t, i, c-w o r k f, l, o, w-orches t r a t, i, o, n-<2026'
-            cl a s s N, ame='gr, o, u, p bl, o, c, k roun, d, e, d-xl bor, d, e, r bor, d, e, r-g, r, a, y-200 p-6 ho, v, e, r:sha, d, o, w-xl tra n s i t, i, o, n-sha, d, o, w'
+            href='/blog/agentic-workflow-orchestration-<2026'
+            className='group block rounded-xl border border-gray-200 p-6 hover:shadow-xl transition-shadow'
           >
-            <div cl a s s N, ame='t, e, x, t-sm f, o, n, t-s e m i b, o, l, d t, e, x, t-fuch, s, i, a-600 mb-2'>
-              F e a t u, r, e, d
+            <div className='text-sm font-semibold text-fuchsia-600 mb-2'>
+              Featured
             </div>
-            <h2 cl a s s N, ame='t, e, x, t-2, xl f, o, n, t-b, o, l, d mb-2 gr, o, u, p-ho, v, e, r:t, e, x, t-fuch, s, i, a-700'>
-              Agen, t, i, c W o r k f, l, o, w Orches t r a t, i, o, n 2026
+            <h2 className='text-2xl font-bold mb-2 group-hover:text-fuchsia-700'>
+              Agentic Workflow Orchestration 2026
             </h2>
-            <p cl a s s N, ame='t, e, x, t-g, r, a, y-600'>
-              Guardrailsrev i e w s, a, n, d observ a b i l, i, t, y to s, h, i, p r e l i a, b, l, e
-              mu, l, t, i-agent wo r k f l, o, w, s with mea s u r a, b, l, e ROI.
+            <p className='text-gray-600'>
+              Guardrailsreviewsand observability to ship reliable multi-agent
+              workflows with measurable ROI.
             </p>
-            <div cl a s s N, ame='mt-4 t, e, x, t-fuch, s, i, a-700 f, o, n, t-s e m i b, o, l, d'>
-              R, e, a, d the arti, c, l, e →
+            <div className='mt-4 text-fuchsia-700 font-semibold'>
+              Read the article →
             </div>
           </a>
         </div>
-      </sect, i, o, n>
-    </m, a, i, n>
+      </section>
+    </main>
   );
 }

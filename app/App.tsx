@@ -12,7 +12,6 @@ import { LoadingSpinner } from '../components/LoadingComponents';
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./page'));
 
-// Loading component is imported from LoadingComponents
 // Utils
 import performanceOptimizer from '../src/utils/performanceOptimizer';
 
