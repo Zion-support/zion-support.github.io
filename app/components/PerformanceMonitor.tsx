@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import performanceOptimizer from '../../src/utils/performanceOptimizer';
+import { performanceOptimizer } from '../../src/utils/performanceOptimizer';
 
 interface PerformanceMonitorProps {
   children: React.ReactNode;
