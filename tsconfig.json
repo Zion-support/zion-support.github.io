@@ -30,7 +30,6 @@
     "noImplicitAny": true,
     "noImplicitReturns": true,
     "noImplicitThis": true,
-<<<<<<< HEAD
     "exactOptionalPropertyTypes": true,
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
@@ -38,15 +37,6 @@
     "allowUnusedLabels": false,
     "allowUnreachableCode": false,
     "verbatimModuleSyntax": true
-=======
-    "exactOptionalPropertyTypes": false,
-    "noImplicitOverride": false,
-    "noPropertyAccessFromIndexSignature": false,
-    "noUncheckedIndexedAccess": false,
-    "allowUnusedLabels": true,
-    "allowUnreachableCode": true,
-    "verbatimModuleSyntax": false
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-014b
   },
   "include": ["src/**/*", "app/**/*", "**/*.ts", "**/*.tsx"],
   "exclude": [

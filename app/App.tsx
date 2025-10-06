@@ -14,7 +14,7 @@ import PerformanceDashboard from './components/PerformanceDashboard';
 const HomePage = lazy(() => import('./page'));
 
 // Utils
-import { performanceOptimizer, prefetchResources } from '../src/utils/performanceOptimizer';
+import { performanceOptimizer } from '../src/utils/performanceOptimizer';
 
 // Styles
 import '../index.css';
@@ -26,13 +26,8 @@ const App: React.FC = () => {
 
     // Initialize performance monitoring
     performanceOptimizer.lazyLoadImages();
-<<<<<<< HEAD
     performanceOptimizer.preloadCriticalResources();
-
-=======
-    prefetchResources(['/api/health']);
-    
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-014b
+    performanceOptimizer.prefetchResources(['/api/health']);
     // Initialize Web Vitals monitoring
     if (typeof window !== 'undefined' && 'performance' in window) {
       const metrics = performanceOptimizer.measurePageLoad();
@@ -50,7 +45,7 @@ const App: React.FC = () => {
   return (
     <HelmetProvider>
       <ErrorBoundary>
-        <PerformanceMonitor>
+        <div>
           <SEOOptimizer>
             <AccessibilityEnhancer>
               <Router>
@@ -86,7 +81,7 @@ const App: React.FC = () => {
               </Router>
             </AccessibilityEnhancer>
           </SEOOptimizer>
-        </PerformanceMonitor>
+        </div>
       </ErrorBoundary>
     </HelmetProvider>
   );
