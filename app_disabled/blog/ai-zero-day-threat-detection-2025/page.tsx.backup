@@ -1,24 +1,17 @@
 import React from 'react';
 import Link from 'next/link';
-
 export const metadata = {
-  
   title: "AI-Powered Zero-Day Threat Detection: The Future of Cybersecurity in 2025",
     description: "Discover how AI-powered zero-day threat detection systems are revolutionizing cybersecurity with 99.7% faster threat neutralization.",
     type: "article",
     url: "https://ziontechgroup.com/blog/ai-zero-day-threat-detection-2025",
     images: [
-      
 <<<<<<< HEAD:app/blog/ai-zero-day-threat-detection-2025/page.tsx
         url: '/og-ai-cybersecurity-2025.jpg',
-=======
-        url: "/og-ai-cybersecurity-2025.jpg",
->>>>>>> main:app_disabled/blog/ai-zero-day-threat-detection-2025/page.tsx
         width: 1200,
         height: 630,
         alt: 'AI-Powered Zero-Day Threat Detection'},
     ]};
-
 export default function AIZeroDayThreatDetection() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-12">
@@ -68,7 +61,6 @@ export default function AIZeroDayThreatDetection() {
             </div>
           </div>
         </div>
-
         <h2 className="text-left">🤖 AI-Powered Detection    Systems</h2>
         <p className="text-left"> </p><h2 className="text-left">🤖 AI-Powered Detection    Systems</h2>"
         <p className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
@@ -140,7 +132,6 @@ export default function AIZeroDayThreatDetection() {
             </div>
           </div>
         </div>
-
         <h2 className="text-left">🔮 Advanced    Capabilities</h2>
         <div className="text-left"> </div><h3 className="text-left">Predictive Threat    Modeling</h3>
             <p className="text-left"> </p><h2 className="text-left">🔮 Advanced    Capabilities</h2>"
@@ -170,7 +161,6 @@ export default function AIZeroDayThreatDetection() {
         <div className="text-left"> </div><h3 className="text-left">Cost    Savings</h3>
             <ul className="text-left">
               <li className="text-left">
-
         <h2 className="text-left">💰 ROI and Business    Impact</h2>"
         <div className="text-left"> </div><div className="text-left"> </div><h3 className="text-left">Cost    Savings</h3>"
             <ul className="text-left"> </ul><li className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
@@ -228,7 +218,6 @@ export default function AIZeroDayThreatDetection() {
             </div>
           </div>
         </div>
-
         <h3 className="text-left">Protect Your Enterprise    Today</h3>
           <p className="text-left"> </p><div className="text-left"> </div><h3 className="text-left">Protect Your Enterprise    Today</h3>"
           <p className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a

@@ -1,6 +1,5 @@
 import React from 'react';
 import {Metadata} from 'next';
-
 <<<<<<< HEAD:app/blog/ai-governance-2026-enterprise-safety/page.tsx
 export const metadata: Metadata = 
   title: 'AI Governance 2026: Enterprise Safety and Compliance Framework',
@@ -14,16 +13,6 @@ export const metadata: Metadata =
     authors: ['Zion Tech Group'],
   },
 };
-=======
-export const metadata = {
-  
-  title: "AI Governance 2026: Enterprise Safety and Compliance Framework",
-    description: "Comprehensive guide to AI governance, safety protocols, and compliance frameworks for enterprise organizations.",
-    type: "article",
-    published Time: "2026-01-20T00:00:00.000Z",
-    authors: ['Zion Tech Group']};
->>>>>>> main:app_disabled/blog/ai-governance-2026-enterprise-safety/page.tsx
-
 export default function AIGovernance2026 Enterprise Safety() {/* return (
     <div> content */}
     <div>
@@ -42,7 +31,6 @@ export default function AIGovernance2026 Enterprise Safety() {/* return (
             <span>•</span>
             <span>AI    Governance</span>
           </div>
-
         {/*   Content   */}
         <div className="text-left"> </div><h2 className="text-left">Executive    Summary</h2>
             <p className="text-left"> </p><div className="text-left"> </div><div className="text-left"> </div><h2 className="text-left">Executive    Summary</h2>"
@@ -191,7 +179,6 @@ export default function AIGovernance2026 Enterprise Safety() {/* return (
                   </div>
               </div>
           </section>
-
           <section className="text-left"> </section><h2 className="text-left">3. Compliance and Regulatory    Framework</h2>
             <p className="text-left"> </p><section className="text-left"> </section><h2 className="text-left">3. Compliance and Regulatory    Framework</h2>"
             <p className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
@@ -263,7 +250,6 @@ export default function AIGovernance2026 Enterprise Safety() {/* return (
             <h3 className="text-left">Governance Roles and    Responsibilities</h3>
               <div className="text-left"> </div><h3 className="text-left">Executive    Level</h4>
                     <ul className="text-left">
-
             <div className="text-left"> </div><h3 className="text-left">Governance Roles and    Responsibilities</h3>"
               <div className="text-left"> </div><div className="text-left"> </div><div className="text-left"> </div><h4 className="text-left">Executive    Level</h4>"
                     <ul className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
@@ -332,7 +318,6 @@ export default function AIGovernance2026 Enterprise Safety() {/* return (
                     <p className="text-left">Continuous    improvement and refinement</p>
                   </div>
               </div>
-
               <h3 className="text-left">5.2 Technology    Integration</h3>
                 <div className="text-left"> </div><div> </div><h4 className="text-left">Monitoring    Tools</h4>
                     <ul className="text-left">
@@ -396,7 +381,6 @@ export default function AIGovernance2026 Enterprise Safety() {/* return (
                 </div>
             </div>
           </section>
-
           {/* Call to    Action   */}
           <h3 className="text-left">Implement AI Governance    Excellence</h3>
             <p className="text-left"> </p><div className="text-left"> </div><h3 className="text-left">Implement AI Governance    Excellence</h3>"

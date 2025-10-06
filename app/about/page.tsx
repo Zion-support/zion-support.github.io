@@ -1,5 +1,6 @@
 import React from 'react';
 
+>>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572
 const AboutPage: React.FC = () => {
   return (
     <div className='min-h-screen bg-white py-16'>
@@ -8,14 +9,12 @@ const AboutPage: React.FC = () => {
           <h1 className='text-5xl font-bold text-gray-900 mb-8 text-center'>
             About Zion Tech Group
           </h1>
-          
           <div className='prose prose-lg mx-auto mb-12'>
             <p className='text-xl text-gray-600 text-center mb-8'>
               Leading the future of AI-powered enterprise transformation with 
               guaranteed 300% ROI and revolutionary technology solutions.
             </p>
           </div>
-
           <div className='grid md:grid-cols-2 gap-12 mb-16'>
             <div>
               <h2 className='text-3xl font-bold text-gray-900 mb-6'>
@@ -32,7 +31,6 @@ const AboutPage: React.FC = () => {
                 operate in the digital age.
               </p>
             </div>
-            
             <div>
               <h2 className='text-3xl font-bold text-gray-900 mb-6'>
                 Our Vision
@@ -49,7 +47,6 @@ const AboutPage: React.FC = () => {
               </p>
             </div>
           </div>
-
           <div className='bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl p-8 mb-16'>
             <h2 className='text-3xl font-bold text-gray-900 mb-6 text-center'>
               Why Choose Zion Tech Group?
@@ -86,7 +83,6 @@ const AboutPage: React.FC = () => {
               </div>
             </div>
           </div>
-
           <div className='text-center'>
             <h2 className='text-3xl font-bold text-gray-900 mb-6'>
               Ready to Transform Your Enterprise?
@@ -129,12 +125,13 @@ export default function AboutPage() {
             <p className='text-gray-600'>
               To be the global leader in AI-driven business transformation, empowering organizations to achieve unprecedented efficiency and innovation.
             </p>
+>>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572
           </div>
         </div>
       </div>
     </div>
   );
 };
-
 export default AboutPage;
 }
+>>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572

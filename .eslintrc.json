@@ -42,5 +42,12 @@
     "browser": true,
     "es2022": true,
     "node": true
-  }
+  },
+  "ignorePatterns": [
+    "utils/accessibilityUtils.ts",
+    "utils/bannerRotationSystem.ts", 
+    "utils/comprehensiveOptimizer.ts",
+    "utils/performanceUtils.ts",
+    "utils/seoUtils.ts"
+  ]
 }

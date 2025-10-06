@@ -1,20 +1,11 @@
 import React from 'react';
 import {Metadata} from 'next';
-
 <<<<<<< HEAD:app/blog/ai-2026-advanced-neural-architectures/page.tsx
 export const metadata: Metadata = 
   title: 'AI 2026: Advanced Neural Architectures Revolution | Zion Tech Group',
   description: 'Discover revolutionary neural architecture breakthroughs achieving 1000x performance improvements with meta-cognitive reasoning and quantum-enhanced processing.',
   keywords: 'AI 2026, neural architectures, meta-cognitive AI, quantum computing, enterprise AI',
 };
-=======
-export const metadata = {
-  
-  title: "AI 2026: Advanced Neural Architectures Revolution | Zion Tech Group",
-  description: "Discover revolutionary neural architecture breakthroughs achieving 1000x performance improvements with meta-cognitive reasoning and quantum-enhanced processing.",
-  keywords: 'AI 2026, neural architectures, meta-cognitive AI, quantum computing, enterprise AI'};;
->>>>>>> main:app_disabled/blog/ai-2026-advanced-neural-architectures/page.tsx
-
 export default function AI2026Advanced Neural Architectures() {/* return (
     <div> content */}
     <div>
@@ -30,7 +21,6 @@ export default function AI2026Advanced Neural Architectures() {/* return (
               quantum-enhanced processing, and autonomous enterprise operations.
             </p></p>
           </div>
-
           {/* Key    Metrics   */}
           <div className="text-left">{[
               { value='1000x', label: "Performance Improvement", icon: '⚡' },
@@ -46,7 +36,6 @@ export default function AI2026Advanced Neural Architectures() {/* return (
                 </div>
             ))}
           </div>
-
           {/* Content    Sections   */}
           <div className="text-left"> </div><section className="text-left"> </section><h2 className="text-left">Meta-Cognitive Neural    Architectures</h2>
               <p className="text-left"> </p><section className="text-left"> </section><h2 className="text-left">Meta-Cognitive Neural    Architectures</h2>"
@@ -119,7 +108,6 @@ export default function AI2026Advanced Neural Architectures() {/* return (
                   </div>
               </div>
             </section>
-
             <section className="text-left"> </section><h2 className="text-left">Future    Roadmap</h2>
               <p className="text-left"> </p><section className="text-left"> </section><h2 className="text-left">Future    Roadmap</h2>"
               <p className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
@@ -137,7 +125,6 @@ export default function AI2026Advanced Neural Architectures() {/* return (
                   <p className="text-left">Complete    enterprise autonomy with self-managing, self-optimizing operations</p>
                 </div>
             </section>
-
           {/* CTA    Section   */}
           <h3 className="text-left">Ready to Transform Your    Enterprise   ?</h2>
             <p className="text-left"> </p><div className="text-left"> </div><h2 className="text-left">Ready to Transform Your    Enterprise   ?</h2>"

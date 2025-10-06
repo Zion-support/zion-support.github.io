@@ -3,9 +3,9 @@
  */
 
 >>>>>>> main
->>>>>>> main
+=======
+>>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572
 import '@testing-library/jest-dom';
-
 // Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {
   writable: true,
@@ -20,14 +20,13 @@ Object.defineProperty(window, 'matchMedia', {
     dispatchEvent: jest.fn(),
   })),
 });
-
 // Mock IntersectionObserver
 global.IntersectionObserver = class IntersectionObserver {
+global.IntersectionObserver = class MockIntersectionObserver {
+>>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572
   root: Element | null = null;
   rootMargin: string = '0px';
   thresholds: ReadonlyArray<number> = [0];
-  
->>>>>>> main
   constructor() {}
   disconnect() {}
   observe() {}
@@ -52,8 +51,11 @@ global.ResizeObserver = class ResizeObserver {
   unobserve(): void {}
   takeRecords(): IntersectionObserverEntry[] { return []; }
 } as unknown as typeof IntersectionObserver;
->>>>>>> main
 
+=======
+  takeRecords() { return []; }
+} as unknown as typeof IntersectionObserver;
+>>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572
 // Mock ResizeObserver
 global.ResizeObserver = class ResizeObserver {
   constructor() {}
@@ -62,18 +64,24 @@ global.ResizeObserver = class ResizeObserver {
   unobserve() {}
 };
 
+// Mock ResizeObserver
+global.ResizeObserver = class ResizeObserver {
+  constructor() {}
+  disconnect() {}
+  observe() {}
+  unobserve() {}
+};
+>>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572
 // Mock scrollTo
 Object.defineProperty(window, 'scrollTo', {
   value: jest.fn(),
   writable: true
 });
-
 // Mock console methods to reduce noise in tests
 const originalError = console.error;
 const originalWarn = console.warn;
-
 beforeAll(() => {
-  console.error = (...args: any[]) => {
+  console.error = (...args: unknown[]) => {
     if (
       typeof args[0] === 'string' &&
       args[0].includes('Warning: ReactDOM.render is no longer supported')
@@ -82,8 +90,7 @@ beforeAll(() => {
     }
     originalError.call(console, ...args);
   };
-  
-  console.warn = (...args: any[]) => {
+  console.warn = (...args: unknown[]) => {
     if (
       typeof args[0] === 'string' &&
       (args[0].includes('componentWillReceiveProps') ||
@@ -94,7 +101,6 @@ beforeAll(() => {
     originalWarn.call(console, ...args);
   };
 });
-
 afterAll(() => {
   console.error = originalError;
   console.warn = originalWarn;
@@ -123,4 +129,5 @@ global.cancelAnimationFrame = (id: number) => {
   unobserve(): void {}
 } as unknown as typeof ResizeObserver;
 >>>>>>> main
->>>>>>> main
+=======
+>>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572

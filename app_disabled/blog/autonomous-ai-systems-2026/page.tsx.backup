@@ -1,6 +1,5 @@
 import React from 'react';
 import {Metadata} from 'next';
-
 <<<<<<< HEAD:app/blog/autonomous-ai-systems-2026/page.tsx
 export const metadata: Metadata = 
   title: 'Autonomous AI Systems: The Future of Enterprise Operations | Zion Tech Group',
@@ -12,17 +11,7 @@ export const metadata: Metadata =
       type: 'article',
       publishedTime: '2025-01-30T00:00:00.000Z'
     },
-=======
-export const metadata = {
-  
-  title: "Autonomous AI Systems: The Future of Enterprise Operations",
-      description: "Learn how autonomous AI systems are transforming enterprise operations and decision-making.",
-      type: "article",
-      published Time: '2025-01-30T00:00:00.000Z'
-    
->>>>>>> main:app_disabled/blog/autonomous-ai-systems-2026/page.tsx
 };
-
 export default function AutonomousAISystems2026() {/* return (
     <div> content */}
     <div>
@@ -66,7 +55,6 @@ export default function AutonomousAISystems2026() {/* return (
               </div>
             </div>
           </div>
-
           <h3 className="text-left">The Autonomous    Revolution</h2>
             <p className="text-left"> </p><div className="text-left"> </div><h2 className="text-left">The Autonomous    Revolution</h2>"
             <p className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a

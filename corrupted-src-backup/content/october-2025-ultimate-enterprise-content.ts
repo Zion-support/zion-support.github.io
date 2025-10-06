@@ -21,11 +21,7 @@ export interface UltimateEnterpriseContent {
   cta?: {
     text: string;
     link: string;
-<<<<<<< HEAD:src/content/october-2025-ultimate-enterprise-content.ts
-    badge: string;
-=======
-    badge?: string;
->>>>>>> main:corrupted-src-backup/content/october-2025-ultimate-enterprise-content.ts
+:corrupted-src-backup/content/october-2025-ultimate-enterprise-content.ts
   };
 }
 
@@ -84,30 +80,7 @@ export const octoberUltimateEnterpriseContent: UltimateEnterpriseContent[] = [
     category: 'Quantum AI',
     date: '2025-10-02',
     readTime: '22 min read',
-<<<<<<< HEAD:src/content/october-2025-ultimate-enterprise-content.ts
-    content: 'Quantum AI synthesis content...',
-    author: 'Zion Tech Group',
-    valueProposition: '184% ROI within 14 months',
-    featured: true,
-    breaking: true,
-    new: true,
-    tags: [
-      'Quantum AI',
-      'Synthesis',
-      'Computing',
-      '2025',
-      'Conversational AI',
-      'Customer Experience',
-      'NLP',
-      'Virtual Assistants',
-      'Omnichannel',
-    ],
-=======
-    tags: ['Quantum AI', 'Synthesis', 'Computing', '2025', 'Conversational AI', 'Customer Experience', 'NLP', 'Virtual Assistants', 'Omnichannel'],
-    featured: true,
-    breaking: true,
-    new: true,
->>>>>>> main:corrupted-src-backup/content/october-2025-ultimate-enterprise-content.ts
+:corrupted-src-backup/content/october-2025-ultimate-enterprise-content.ts
     highlights: [
       '184% ROI within 14 months',
       '94% customer satisfaction (CSAT)',

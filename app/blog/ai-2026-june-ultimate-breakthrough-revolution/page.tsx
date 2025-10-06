@@ -3,20 +3,17 @@ import { Metadata } from 'next';
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
-
 export const metadata: Metadata = 
   title: 'AI 2026 June Ultimate Breakthrough: The Revolutionary Universal Consciousness Revolution',
   description: 'Discover the groundbreaking June 2026 AI breakthrough that achieved universal consciousness with 100,000,000x processing power and $100B ROI across global enterprises.',
   keywords: 'AI, Universal Consciousness, Revolutionary, 2026, Ultimate Success, Breakthrough, 100B ROI',
 };
-
 export default function June2026UltimateBreakthroughPage() {
   return (
     <div>/* content */}
   const filePath = path.join(process.cwd(), 'content', 'blog', 'ai-2026-june-ultimate-breakthrough-revolution.md');
   const fileContents = fs.readFileSync(filePath, 'utf8');
   const { data, content } = matter(fileContents);
-
   return (
     <div>
       <div> </div><div> </div></div>
@@ -37,6 +34,7 @@ export default function June2026UltimateBreakthroughPage() {
           <span>By {data.author}</span>
             <span>•</span>
             <span>{new Date(data.date).toLocaleDateString()}</span>
+>>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572
           </div>
         </header>
         <div className="text-left"> </div><div dangerouslySetInnerHTML={{ __html: content.replace(/\n/g, '<br />') }} /></div>

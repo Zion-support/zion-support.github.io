@@ -1,6 +1,5 @@
 import React from 'react';
 import {Metadata} from 'next';
-
 <<<<<<< HEAD:app/blog/quantum-neural-superintelligence-2026/page.tsx
 export const metadata: Metadata = 
   title: 'Quantum Neural Superintelligence 2026 - Zion Tech Group',
@@ -14,16 +13,6 @@ export const metadata: Metadata =
     authors: ['Zion Tech Group'],
   },
 };
-=======
-export const metadata = {
-  
-  title: "Quantum Neural Superintelligence 2026",
-    description: "Revolutionary AI system combining quantum computing with neural networks for superintelligent capabilities.",
-    type: "article",
-    published Time: "2026-01-20T00:00:00.000Z",
-    authors: ['Zion Tech Group']};
->>>>>>> main:app_disabled/blog/quantum-neural-superintelligence-2026/page.tsx
-
 export default function QuantumNeural Superintelligence Page() {/* return (
     <div> content */}
     <div>
@@ -38,10 +27,8 @@ export default function QuantumNeural Superintelligence Page() {/* return (
             <p className="text-left"> </p><div className="text-left"> </div><div className="text-left"> </div><article className="text-left"> </article><header className="text-left"> </header><div className="text-left"> </div><span className="text-left">⚛️ Quantum AI    Breakthrough
               </span></span>
             </div>
-            
             <h1 className="text-left">Quantum Neural Superintelligence: The Next    Evolution
             </h1></h1>
-            
             <p className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
                  Revolutionary    AI system that combines quantum computing with advanced neural networks 
               to achieve superintelligent capabilities, delivering unprecedented problem-solving 
@@ -72,7 +59,6 @@ export default function QuantumNeural Superintelligence Page() {/* return (
                 </div>
               </div>
             </div>
-
             <h2 className="text-left">Core    Technologies</h2>
             <p className="text-left"> </p><h2 className="text-left">Core    Technologies</h2>"
             <p className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
@@ -99,7 +85,6 @@ export default function QuantumNeural Superintelligence Page() {/* return (
             <h3 className="text-left">Key    Capabilities</h3>
             <div className="text-left"> </div><h3 className="text-left">🧠 Cognitive    Processing</h4>
                   <ul className="text-left">
-
             <h3 className="text-left">Key    Capabilities</h3>"
             <div className="text-left"> </div><div className="text-left"> </div><div className="text-left"> </div><h4 className="text-left">🧠 Cognitive    Processing</h4>"
                   <ul className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
@@ -159,7 +144,6 @@ export default function QuantumNeural Superintelligence Page() {/* return (
                   </div>
                 </div>
               </div>
-
               <h3 className="text-left">Enterprise    Operations</h4>
                 <p className="text-left"> </p><div className="text-left"> </div><h4 className="text-left">Enterprise    Operations</h4>"
                 <p className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
@@ -177,7 +161,6 @@ export default function QuantumNeural Superintelligence Page() {/* return (
                 </div>
               </div>
             </div>
-
             <h3 className="text-left">Implementation    Roadmap</h3>
             <div className="text-left"> </div><div className="text-left">1</div>
                   <h4 className="text-left">Assessment</h4>
@@ -193,7 +176,6 @@ export default function QuantumNeural Superintelligence Page() {/* return (
                 </div>
               </div>
             </div>
-
             <h3 className="text-left">Ready to Experience    Superintelligence   ?</h4>
               <p className="text-left"> </p><div className="text-left"> </div><h4 className="text-left">Ready to Experience    Superintelligence   ?</h4>"
               <p className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a

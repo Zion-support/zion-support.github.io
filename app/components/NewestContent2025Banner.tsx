@@ -54,6 +54,7 @@ const NewestContent2025Banner = () => {
           <p className='text-xl text-gray-300 mb-8 max-w-4xl mx-auto'>
             Edge Computing • Neural Networks • Quantum Security — The future of
             enterprise AI starts here
+>>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572
     <section className="relative overflow-hidden bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
       {/* Animated Background Effects */}
       <div className="absolute inset-0">
@@ -73,6 +74,7 @@ const NewestContent2025Banner = () => {
             <span className="text-2xl">⚡</span>
           </div>
 
+>>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572
           <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-6">
             September 30, 2025 — Cutting-Edge AI Insights
           </h2>
@@ -80,7 +82,11 @@ const NewestContent2025Banner = () => {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Edge Computing • Neural Networks • Quantum Security — The future of enterprise AI starts here
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e4e
->>>>>>> main
+=======
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e4e
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
+>>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572
           </p>
         </div>
 
@@ -91,31 +97,17 @@ const NewestContent2025Banner = () => {
             <div className="relative bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-white/40 transition-all duration-500 hover:transform hover:scale-105 h-full">
               {/* Card glow effect */}
               <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 opacity-0 group-hover:opacity-100 transition-all duration-500 rounded-2xl"></div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
+>>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572
         <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>
-          {/* Article 1: AI Edge Computing */}
-          <ArrowRight href="/blog/ai-edge-computing-real-time-2025" className="group">
-            <div className="bg-white/10 backdrop-blur-lg rounded-2xl border-2 border-white/20 hover:border-cyan-400 transition-all duration-500 overflow-hidden hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/50">
-              {/* Card glow effect */}
-              <div className='absolute inset-0 bg-gradient-to-br from-cyan-500 to-blue-600 opacity-0 group-hover:opacity-10 transition-all duration-500 rounded-2xl'></div>
-
-              <div className='relative z-10'>
-                {/* Icon & Badges */}
-                <div className='flex items-center justify-between mb-6'>
-                  <div className='text-4xl'>⚡</div>
-                  <div className='flex gap-2'>
-                    <span className='px-3 py-1 bg-red-500 text-white text-sm font-bold rounded-full'>
-                      🔥 HOT
-                    </span>
-                    <span className='px-3 py-1 bg-green-500 text-white text-sm font-bold rounded-full'>
-                      NEW TODAY
-                    </span>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {/* Article 1: AI Edge Computing */}
           <Link href="/blog/ai-edge-computing-real-time-2025" className="group">
             <div className="relative bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:border-white/40 transition-all duration-500 hover:scale-105 h-full">
               {/* Card glow effect */}
               <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 to-blue-600/20 opacity-0 group-hover:opacity-100 transition-all duration-500 rounded-2xl"></div>
+>>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572
               
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
               <div className="relative z-10">
                 {/* Icon & Badges */}
                 <div className="flex items-center justify-between mb-6">
@@ -154,18 +146,22 @@ const NewestContent2025Banner = () => {
                 <div className="mb-4">
                   <span className="inline-block px-4 py-2 bg-gradient-to-r from-cyan-50 to-blue-50 text-gray-900 text-sm font-semibold rounded-full border border-white/20">
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e4e
->>>>>>> main
+=======
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
+>>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572
                     Edge AI & Real-Time
                   </span>
                 </div>
-
                 {/* Title */}
                 <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-blue-300 transition-colors">
                 <h3 className='text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors'>
->>>>>>> main
+=======
+                <h3 className='text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors'>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
+>>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572
                   AI Edge Computing Real-Time Intelligence 2025
                 </h3>
-
                 {/* Excerpt */}
                 <p className="text-gray-300 mb-6 leading-relaxed">
                   Deploy intelligence at the source with &lt;10ms latency. Achieve 95% bandwidth reduction, 
@@ -208,6 +204,7 @@ const NewestContent2025Banner = () => {
                       87%
                     </div>
                     <div className='text-gray-400 text-sm'>Cost ↓</div>
+>>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572
                 <p className="text-gray-300 mb-6 leading-relaxed">
                   Deploy intelligence at the source with &lt;10ms latency. Achieve 95% bandwidth reduction, 
                   87% cost savings, and enhanced privacy compliance at enterprise scale.
@@ -227,18 +224,22 @@ const NewestContent2025Banner = () => {
                     <div className="text-2xl font-bold text-yellow-400">87%</div>
                     <div className="text-sm text-gray-300">Cost ↓</div>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e4e
->>>>>>> main
+=======
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
+>>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572
                   </div>
                 </div>
-
                 {/* Meta Info */}
                 <div className="flex items-center gap-4 text-gray-400 text-sm mb-6">
                 <div className='flex items-center justify-between text-sm text-gray-400 mb-6'>
->>>>>>> main
+=======
+                <div className='flex items-center justify-between text-sm text-gray-400 mb-6'>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
+>>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572
                   <span>⏱️ 35 min read</span>
                   <span>📅 Sep 30, 2025</span>
                 </div>
-
                 {/* CTA Button */}
                 <div className="flex items-center justify-center gap-2 text-blue-400 font-semibold group-hover:text-blue-300 transition-colors">
                   <span>Read Full Article</span>
@@ -251,7 +252,11 @@ const NewestContent2025Banner = () => {
                   </span>
                 </div>
                 </div>
->>>>>>> main
+=======
+=======
+                </div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
+>>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572
               </div>
             </div>
           </Link>
@@ -309,6 +314,7 @@ const NewestContent2025Banner = () => {
 
                 <div className="mb-4">
                   <span className="px-4 py-2 bg-gradient-to-r from-purple-500/20 to-fuchsia-500/20 text-purple-300 text-sm font-semibold rounded-full border border-purple-500/30">
+>>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572
           <Link href="/blog/ai-neural-networks-enterprise-transformation-2025" className="group">
             <div className="relative bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-white/40 transition-all duration-500 hover:scale-105 h-full">
               <div className="absolute inset-0 bg-gradient-to-br from-purple-500 to-pink-600 opacity-0 group-hover:opacity-10 transition-all duration-500 rounded-2xl"></div>
@@ -325,7 +331,9 @@ const NewestContent2025Banner = () => {
                 <div className="mb-4">
                   <span className="inline-block px-4 py-2 bg-gradient-to-r from-purple-50 to-pink-50 text-gray-900 text-sm font-semibold rounded-full border border-white/20">
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e4e
->>>>>>> main
+=======
+=======
+>>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572
                     Neural Networks & AI
                   </span>
                 </div>
@@ -366,6 +374,10 @@ const NewestContent2025Banner = () => {
                   AI Neural Networks Enterprise Transformation 2025
                 </h3>
 
+                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-purple-400 transition-colors">
+                  AI Neural Networks Enterprise Transformation 2025
+                </h3>
+>>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572
                 <p className="text-gray-300 mb-6 leading-relaxed">
                   Deploy advanced neural network architectures. Fortune 500 implementations achieving 98.5% accuracy, 
                   10x ROI, and 85% operational efficiency gains.
@@ -388,6 +400,8 @@ const NewestContent2025Banner = () => {
 
                 <div className="flex items-center gap-4 text-gray-400 text-sm mb-6">
                     <div className="text-sm text-gray-300">Accuracy</div>
+<div className="text-sm text-gray-300">Accuracy</div>
+>>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572
                   </div>
                   <div className="text-center">
                     <div className="text-2xl font-bold text-green-400">10x</div>
@@ -401,7 +415,9 @@ const NewestContent2025Banner = () => {
 
                 <div className="flex items-center gap-4 text-sm text-gray-400 mb-6">
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e4e
->>>>>>> main
+=======
+=======
+>>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572
                   <span>⏱️ 40 min read</span>
                   <span>📅 Sep 30, 2025</span>
                 </div>
@@ -415,7 +431,11 @@ const NewestContent2025Banner = () => {
                     →
                   </span>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e4e
->>>>>>> main
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e4e
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
+>>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572
                 </div>
               </div>
             </div>
@@ -474,6 +494,7 @@ const NewestContent2025Banner = () => {
 
                 <div className="mb-4">
                   <span className="px-4 py-2 bg-gradient-to-r from-red-500/20 to-orange-500/20 text-red-300 text-sm font-semibold rounded-full border border-red-500/30">
+>>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572
           <Link href="/blog/ai-quantum-security-protocols-2026" className="group">
             <div className="relative bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-white/40 transition-all duration-500 hover:scale-105 h-full">
               <div className="absolute inset-0 bg-gradient-to-br from-red-500 to-orange-600 opacity-0 group-hover:opacity-10 transition-all duration-500 rounded-2xl"></div>
@@ -490,7 +511,9 @@ const NewestContent2025Banner = () => {
                 <div className="mb-4">
                   <span className="inline-block px-4 py-2 bg-gradient-to-r from-red-50 to-orange-50 text-gray-900 text-sm font-semibold rounded-full border border-white/20">
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e4e
->>>>>>> main
+=======
+=======
+>>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572
                     Quantum Security
                   </span>
                 </div>
@@ -535,6 +558,10 @@ const NewestContent2025Banner = () => {
                   AI Quantum Security Protocols 2026
                 </h3>
 
+                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-red-400 transition-colors">
+                  AI Quantum Security Protocols 2026
+                </h3>
+>>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572
                 <p className="text-gray-300 mb-6 leading-relaxed">
                   Protect AI systems with quantum-resistant cryptography. Achieve 99.99% security against classical 
                   and quantum attacks with sub-millisecond overhead.
@@ -557,6 +584,8 @@ const NewestContent2025Banner = () => {
 
                 <div className="flex items-center gap-4 text-gray-400 text-sm mb-6">
                     <div className="text-sm text-gray-300">Security</div>
+<div className="text-sm text-gray-300">Security</div>
+>>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572
                   </div>
                   <div className="text-center">
                     <div className="text-2xl font-bold text-green-400">&lt;1ms</div>
@@ -570,7 +599,9 @@ const NewestContent2025Banner = () => {
 
                 <div className="flex items-center gap-4 text-sm text-gray-400 mb-6">
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e4e
->>>>>>> main
+=======
+=======
+>>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572
                   <span>⏱️ 45 min read</span>
                   <span>📅 Sep 30, 2025</span>
                 </div>
@@ -584,7 +615,11 @@ const NewestContent2025Banner = () => {
                     →
                   </span>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e4e
->>>>>>> main
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e4e
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
+>>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572
                 </div>
               </div>
             </div>
@@ -614,6 +649,7 @@ const NewestContent2025Banner = () => {
               className='group flex items-center gap-3 bg-white/10 hover:bg-white/20 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 border border-white/30'
             >
               <span className='text-xl'>📧</span>
+>>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572
         <div className="text-center bg-white/5 backdrop-blur-lg rounded-2xl p-12 border border-white/20 mb-16">
           <h3 className="text-3xl font-bold text-white mb-6">
             Transform Your Enterprise with Cutting-Edge AI
@@ -629,6 +665,8 @@ const NewestContent2025Banner = () => {
             >
               <span className="text-2xl">📞</span>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+<p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+>>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572
             Join 50,000+ AI leaders implementing these breakthrough technologies. Get expert guidance 
             from Zion Tech Group's AI transformation specialists.
           </p>
@@ -649,7 +687,14 @@ const NewestContent2025Banner = () => {
             >
               <span className="text-xl">📧</span>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e4e
->>>>>>> main
+=======
+className="flex items-center gap-3 border-2 border-white/30 hover:border-white/60 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 hover:bg-white/10"
+            >
+              <span className="text-xl">📧</span>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e4e
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
+>>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572
               <span>Get Expert Consultation</span>
             </a>
           </div>
@@ -658,7 +703,10 @@ const NewestContent2025Banner = () => {
         {/* Stats Section */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
         <div className='grid grid-cols-2 md:grid-cols-4 gap-8'>
->>>>>>> main
+=======
+        <div className='grid grid-cols-2 md:grid-cols-4 gap-8'>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
+>>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572
           {[
             { value: '500+', label: 'Enterprise Clients' },
             { value: '10B+', label: 'Data Points Processed Daily' },
@@ -673,7 +721,10 @@ const NewestContent2025Banner = () => {
                 {stat.value}
               </div>
               <div className='text-gray-300'>{stat.label}</div>
->>>>>>> main
+=======
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
+>>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572
             </div>
           ))}
         </div>

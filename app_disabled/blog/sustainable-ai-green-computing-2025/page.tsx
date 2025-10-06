@@ -1,24 +1,17 @@
 import React from 'react';
 import Link from 'next/link';
-
 export const metadata = {
-  
   title: "Sustainable AI: Green Computing Solutions for Enterprise 2025",
     description: "Reduce carbon footprints by 85% with sustainable AI and green computing solutions that deliver $30M+ in cost savings.",
     type: "article",
     url: "https://ziontechgroup.com/blog/sustainable-ai-green-computing-2025",
     images: [
-      
 <<<<<<< HEAD:app/blog/sustainable-ai-green-computing-2025/page.tsx
         url: '/og-sustainable-ai-2025.jpg',
-=======
-        url: "/og-sustainable-ai-2025.jpg",
->>>>>>> main:app_disabled/blog/sustainable-ai-green-computing-2025/page.tsx
         width: 1200,
         height: 630,
         alt: 'Sustainable AI Green Computing Solutions'},
     ]};
-
 export default function SustainableAIGreenComputing() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-12">
@@ -71,7 +64,6 @@ export default function SustainableAIGreenComputing() {
             </div>
           </div>
         </div>
-
         <h2 className="text-left">🌱 Green Computing    Solutions</h2>
         <p className="text-left">Sustainable    AI leverages cutting-edge technologies to dramatically reduce environmental impact while 
           maintaining or even improving performance:
@@ -81,7 +73,6 @@ export default function SustainableAIGreenComputing() {
         <p className="text-left">Sustainable    AI leverages cutting-edge technologies to dramatically reduce environmental impact while 
           maintaining or even improving performance:
         </p></p>
-
         <div className="text-left"> </div><div className="text-left"> </div><h3 className="text-left">🔋 Energy-Efficient AI    Architectures</h3>"
             <p className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
                  Next   -generation neural network architectures use sparse computing, quantization, and pruning techniques 
@@ -94,7 +85,6 @@ export default function SustainableAIGreenComputing() {
               </div>
             </div>
           </div>
-
           <h3 className="text-left">☁️ Intelligent Workload    Distribution</h3>
             <p className="text-left"> </p><div className="text-left"> </div><h3 className="text-left">☁️ Intelligent Workload    Distribution</h3>"
             <p className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
@@ -108,7 +98,6 @@ export default function SustainableAIGreenComputing() {
               </div>
             </div>
           </div>
-
           <h3 className="text-left">🎯 Precision    Computing</h3>
             <p className="text-left"> </p><div className="text-left"> </div><h3 className="text-left">🎯 Precision    Computing</h3>"
             <p className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
@@ -123,7 +112,6 @@ export default function SustainableAIGreenComputing() {
             </div>
           </div>
         </div>
-
         <h2 className="text-left">📊 Real-World Success    Stories</h2>
         <blockquote className="text-left">
           <p className="text-left"> </p><h2 className="text-left">📊 Real-World Success    Stories</h2>"
@@ -158,7 +146,6 @@ export default function SustainableAIGreenComputing() {
             </div>
           </div>
         </div>
-
         <h2 className="text-left">🔬 Advanced Green    Technologies</h2>
         <div className="text-left"> </div><div> </div><h4 className="text-left">🌊 Liquid Cooling    Systems</h4>
               <p className="text-left"> </p><h4 className="text-left">🌊 Liquid Cooling    Systems</h4>"
@@ -196,7 +183,6 @@ export default function SustainableAIGreenComputing() {
         <div className="text-left"> </div><h3 className="text-left">Financial    Impact</h3>
             <ul className="text-left">
               <li className="text-left">
-
         <h2 className="text-left">💼 Business Benefits Beyond    Sustainability</h2>"
         <div className="text-left"> </div><div className="text-left"> </div><h3 className="text-left">Financial    Impact</h3>"
             <ul className="text-left"> </ul><li className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
@@ -260,7 +246,6 @@ export default function SustainableAIGreenComputing() {
             </div>
           </div>
         </div>
-
         <h3 className="text-left">Transform Your Business    Sustainably</h3>
           <p className="text-left"> </p><div className="text-left"> </div><h3 className="text-left">Transform Your Business    Sustainably</h3>"
           <p className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a

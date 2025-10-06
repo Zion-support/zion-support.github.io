@@ -8,6 +8,7 @@ const LoadingSpinner: React.FC = () => {
         <p className="text-gray-600">Loading...</p>
         <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-600 mx-auto"></div>
         <p className="mt-4 text-gray-600">Loading...</p>
+>>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg';
   className?: string;
@@ -31,7 +32,8 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
         aria-label='Loading'
       >
         <span className="sr-only">Loading...</span>
->>>>>>> main
+=======
+>>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572
       </div>
     </div>
   );
@@ -40,4 +42,5 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
 export default LoadingSpinner;
 export default LoadingSpinner;
 export default LoadingSpinner;
->>>>>>> main
+=======
+>>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572

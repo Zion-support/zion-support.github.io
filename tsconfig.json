@@ -14,21 +14,7 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-<<<<<<< HEAD
-    "strict": false,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-=======
-    "jsxImportSource": "react",
->>>>>>> main
     "strict": true,
->>>>>>> main
->>>>>>> main
->>>>>>> main
     "strictNullChecks": true,
     "noUnusedLocals": false,
     "noUnusedParameters": false,
@@ -56,41 +42,20 @@
     },
     "allowJs": true,
     "forceConsistentCasingInFileNames": true,
-<<<<<<< HEAD
-    "noImplicitAny": false,
-    "noImplicitReturns": false,
-    "noImplicitThis": false,
-    "exactOptionalPropertyTypes": false,
-    "noImplicitOverride": false,
-    "noPropertyAccessFromIndexSignature": false,
-    "noUncheckedIndexedAccess": false,
-=======
     "noImplicitAny": true,
     "noImplicitReturns": true,
     "noImplicitThis": true,
-    "strictNullChecks": true,
     "exactOptionalPropertyTypes": true,
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
     "noUncheckedIndexedAccess": true,
->>>>>>> main
     "allowUnusedLabels": false,
     "allowUnreachableCode": false,
-    "verbatimModuleSyntax": false
+    "verbatimModuleSyntax": true
   },
   "include": [
     "app/**/*",
-<<<<<<< HEAD
     "src/**/*"
-=======
-<<<<<<< HEAD
-    "src/**/*"
-=======
-    "src/**/*",
-    "App.tsx",
-    "components/**/*"
->>>>>>> main
->>>>>>> main
   ],
   "exclude": [
     "node_modules",
@@ -133,15 +98,11 @@
     "services/**",
     "middleware/**",
     "app/blog/**",
-<<<<<<< HEAD
-    "src/components/disabled-corrupted/**",
-=======
     "app/page-optimized.tsx",
     "app/services/**/*",
     "app/case-studies/**/*",
     "app/guides/**/*",
     "app/components/**/*",
->>>>>>> main
     "EnhancedFooter.tsx",
     "EnhancedHeader.tsx",
     "EnhancedNavigation.tsx",
@@ -152,17 +113,13 @@
     "app/components/NewestContent2025Banner.tsx",
 <<<<<<< HEAD
 <<<<<<< HEAD
-    "api/**",
-    "lib/**"
-=======
-    "utils/bannerLazyLoader.ts",
-    "utils/bannerPrioritization.ts",
-    "utils/bannerRegistry.ts",
-    "utils/bannerRotationSystem.ts",
-    "utils/comprehensiveOptimizer.ts",
-    "utils/performanceUtils.ts",
 <<<<<<< HEAD
+=======
+>>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572
+    "api/**",
+    "lib/**",
     "utils/seoUtils.ts"
+<<<<<<< HEAD
 >>>>>>> main
 =======
     "utils/seoUtils.ts",
@@ -176,5 +133,7 @@
     {
       "path": "./tsconfig.node.json"
     }
+=======
+>>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572
   ]
 }

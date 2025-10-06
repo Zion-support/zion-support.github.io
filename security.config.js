@@ -1,4 +1,4 @@
-// Security headers configuration
+//Security headers configuration
 const securityHeaders = [
   {key: 'X-DNS-Prefetch-Control',
     value: 'on'}

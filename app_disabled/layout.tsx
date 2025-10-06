@@ -1,19 +1,7 @@
 import React from 'react';
 <<<<<<< HEAD:app/layout.tsx
 import Link from 'next/link';
-=======
-<<<<<<< HEAD:app/layout.tsx
-import Link from 'next/link';
-=======
-<<<<<<< HEAD:app/layout.tsx
-import Link from 'next/link';
-=======
-// Using regular anchor tags instead of react-router-dom for simplicity
->>>>>>> main:app_disabled/layout.tsx
->>>>>>> main:app_disabled/layout.tsx
->>>>>>> main:app_disabled/layout.tsx
 import './globals.css';
-
 // Metadata for SEO - handled by React Helmet in Vite projects
 const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
@@ -49,24 +37,12 @@ const metadata = {
     },
   },
 };
-
 function Header() {
   return (
     <header className='border-b border-gray-200 sticky top-0 z-50 bg-white shadow-sm'>
       <nav className='flex items-center justify-between px-4 py-3 max-w-6xl mx-auto'>
 <<<<<<< HEAD:app/layout.tsx
         <Link
-=======
-<<<<<<< HEAD:app/layout.tsx
-        <Link
-=======
-<<<<<<< HEAD:app/layout.tsx
-        <Link
-=======
-        <a
->>>>>>> main:app_disabled/layout.tsx
->>>>>>> main:app_disabled/layout.tsx
->>>>>>> main:app_disabled/layout.tsx
           href='/'
           className='font-bold text-lg text-gray-900 hover:text-blue-600 transition-colors'
         >
@@ -75,23 +51,6 @@ function Header() {
         </Link>
         <div className='hidden md:flex gap-6'>
           <Link
-=======
-<<<<<<< HEAD:app/layout.tsx
-        </Link>
-        <div className='hidden md:flex gap-6'>
-          <Link
-=======
-<<<<<<< HEAD:app/layout.tsx
-        </Link>
-        <div className='hidden md:flex gap-6'>
-          <Link
-=======
-        </a>
-        <div className='hidden md:flex gap-6'>
-          <a
->>>>>>> main:app_disabled/layout.tsx
->>>>>>> main:app_disabled/layout.tsx
->>>>>>> main:app_disabled/layout.tsx
             href='/about'
             className='text-gray-700 hover:text-blue-600 transition-colors'
           >
@@ -99,20 +58,6 @@ function Header() {
 <<<<<<< HEAD:app/layout.tsx
           </Link>
           <Link
-=======
-<<<<<<< HEAD:app/layout.tsx
-          </Link>
-          <Link
-=======
-<<<<<<< HEAD:app/layout.tsx
-          </Link>
-          <Link
-=======
-          </a>
-          <a
->>>>>>> main:app_disabled/layout.tsx
->>>>>>> main:app_disabled/layout.tsx
->>>>>>> main:app_disabled/layout.tsx
             href='/services'
             className='text-gray-700 hover:text-blue-600 transition-colors'
           >
@@ -121,23 +66,6 @@ function Header() {
           </Link>
           <div className='relative group'>
             <Link
-=======
-<<<<<<< HEAD:app/layout.tsx
-          </Link>
-          <div className='relative group'>
-            <Link
-=======
-<<<<<<< HEAD:app/layout.tsx
-          </Link>
-          <div className='relative group'>
-            <Link
-=======
-          </a>
-          <div className='relative group'>
-            <a
->>>>>>> main:app_disabled/layout.tsx
->>>>>>> main:app_disabled/layout.tsx
->>>>>>> main:app_disabled/layout.tsx
               href='/services/ai-autonomous-operations-2026'
               className='text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1'
             >
@@ -146,28 +74,11 @@ function Header() {
                 REVOLUTIONARY
               </span>
 <<<<<<< HEAD:app/layout.tsx
-=======
-<<<<<<< HEAD:app/layout.tsx
-=======
-<<<<<<< HEAD:app/layout.tsx
->>>>>>> main:app_disabled/layout.tsx
->>>>>>> main:app_disabled/layout.tsx
             </Link>
           </div>
           <div className='relative group'>
             <Link
 <<<<<<< HEAD:app/layout.tsx
-=======
-<<<<<<< HEAD:app/layout.tsx
-=======
-=======
-            </a>
-          </div>
-          <div className='relative group'>
-            <a
->>>>>>> main:app_disabled/layout.tsx
->>>>>>> main:app_disabled/layout.tsx
->>>>>>> main:app_disabled/layout.tsx
               href='/content-hub'
               className='text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1'
             >
@@ -176,28 +87,11 @@ function Header() {
                 NEW 2027
               </span>
 <<<<<<< HEAD:app/layout.tsx
-=======
-<<<<<<< HEAD:app/layout.tsx
-=======
-<<<<<<< HEAD:app/layout.tsx
->>>>>>> main:app_disabled/layout.tsx
->>>>>>> main:app_disabled/layout.tsx
             </Link>
           </div>
           <div className='relative group'>
             <Link
 <<<<<<< HEAD:app/layout.tsx
-=======
-<<<<<<< HEAD:app/layout.tsx
-=======
-=======
-            </a>
-          </div>
-          <div className='relative group'>
-            <a
->>>>>>> main:app_disabled/layout.tsx
->>>>>>> main:app_disabled/layout.tsx
->>>>>>> main:app_disabled/layout.tsx
               href='/blog/ai-2026-autonomous-business-intelligence-breakthrough'
               className='text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1'
             >
@@ -206,28 +100,11 @@ function Header() {
                 BREAKTHROUGH
               </span>
 <<<<<<< HEAD:app/layout.tsx
-=======
-<<<<<<< HEAD:app/layout.tsx
-=======
-<<<<<<< HEAD:app/layout.tsx
->>>>>>> main:app_disabled/layout.tsx
->>>>>>> main:app_disabled/layout.tsx
             </Link>
           </div>
           <div className='relative group'>
             <Link
 <<<<<<< HEAD:app/layout.tsx
-=======
-<<<<<<< HEAD:app/layout.tsx
-=======
-=======
-            </a>
-          </div>
-          <div className='relative group'>
-            <a
->>>>>>> main:app_disabled/layout.tsx
->>>>>>> main:app_disabled/layout.tsx
->>>>>>> main:app_disabled/layout.tsx
               href='/blog/ai-2026-quantum-enhanced-analytics'
               className='text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1'
             >
@@ -236,28 +113,11 @@ function Header() {
                 1000x SPEED
               </span>
 <<<<<<< HEAD:app/layout.tsx
-=======
-<<<<<<< HEAD:app/layout.tsx
-=======
-<<<<<<< HEAD:app/layout.tsx
->>>>>>> main:app_disabled/layout.tsx
->>>>>>> main:app_disabled/layout.tsx
             </Link>
           </div>
           <div className='relative group'>
             <Link
 <<<<<<< HEAD:app/layout.tsx
-=======
-<<<<<<< HEAD:app/layout.tsx
-=======
-=======
-            </a>
-          </div>
-          <div className='relative group'>
-            <a
->>>>>>> main:app_disabled/layout.tsx
->>>>>>> main:app_disabled/layout.tsx
->>>>>>> main:app_disabled/layout.tsx
               href='/blog/ai-2028-next-generation-autonomous-enterprise'
               className='text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1'
             >
@@ -266,28 +126,11 @@ function Header() {
                 REVOLUTIONARY
               </span>
 <<<<<<< HEAD:app/layout.tsx
-=======
-<<<<<<< HEAD:app/layout.tsx
-=======
-<<<<<<< HEAD:app/layout.tsx
->>>>>>> main:app_disabled/layout.tsx
->>>>>>> main:app_disabled/layout.tsx
             </Link>
           </div>
           <div className='relative group'>
             <Link
 <<<<<<< HEAD:app/layout.tsx
-=======
-<<<<<<< HEAD:app/layout.tsx
-=======
-=======
-            </a>
-          </div>
-          <div className='relative group'>
-            <a
->>>>>>> main:app_disabled/layout.tsx
->>>>>>> main:app_disabled/layout.tsx
->>>>>>> main:app_disabled/layout.tsx
               href='/blog/ai-2028-neuromorphic-superintelligence'
               className='text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1'
             >
@@ -296,28 +139,11 @@ function Header() {
                 SUPERINTELLIGENCE
               </span>
 <<<<<<< HEAD:app/layout.tsx
-=======
-<<<<<<< HEAD:app/layout.tsx
-=======
-<<<<<<< HEAD:app/layout.tsx
->>>>>>> main:app_disabled/layout.tsx
->>>>>>> main:app_disabled/layout.tsx
             </Link>
           </div>
           <div className='relative group'>
             <Link
 <<<<<<< HEAD:app/layout.tsx
-=======
-<<<<<<< HEAD:app/layout.tsx
-=======
-=======
-            </a>
-          </div>
-          <div className='relative group'>
-            <a
->>>>>>> main:app_disabled/layout.tsx
->>>>>>> main:app_disabled/layout.tsx
->>>>>>> main:app_disabled/layout.tsx
               href='/blog/ai-2027-quantum-breakthrough-enterprise'
               className='text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1'
             >
@@ -326,28 +152,11 @@ function Header() {
                 QUANTUM
               </span>
 <<<<<<< HEAD:app/layout.tsx
-=======
-<<<<<<< HEAD:app/layout.tsx
-=======
-<<<<<<< HEAD:app/layout.tsx
->>>>>>> main:app_disabled/layout.tsx
->>>>>>> main:app_disabled/layout.tsx
             </Link>
           </div>
           <div className='relative group'>
             <Link
 <<<<<<< HEAD:app/layout.tsx
-=======
-<<<<<<< HEAD:app/layout.tsx
-=======
-=======
-            </a>
-          </div>
-          <div className='relative group'>
-            <a
->>>>>>> main:app_disabled/layout.tsx
->>>>>>> main:app_disabled/layout.tsx
->>>>>>> main:app_disabled/layout.tsx
               href='/blog'
               className='text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1'
             >
@@ -359,28 +168,11 @@ function Header() {
                 50+ ARTICLES
               </span>
 <<<<<<< HEAD:app/layout.tsx
-=======
-<<<<<<< HEAD:app/layout.tsx
-=======
-<<<<<<< HEAD:app/layout.tsx
->>>>>>> main:app_disabled/layout.tsx
->>>>>>> main:app_disabled/layout.tsx
             </Link>
           </div>
           <div className='relative group'>
             <Link
 <<<<<<< HEAD:app/layout.tsx
-=======
-<<<<<<< HEAD:app/layout.tsx
-=======
-=======
-            </a>
-          </div>
-          <div className='relative group'>
-            <a
->>>>>>> main:app_disabled/layout.tsx
->>>>>>> main:app_disabled/layout.tsx
->>>>>>> main:app_disabled/layout.tsx
               href='/case-studies'
               className='text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1'
             >
@@ -395,40 +187,12 @@ function Header() {
             </Link>
           </div>
           <Link
-=======
-<<<<<<< HEAD:app/layout.tsx
-            </Link>
-          </div>
-          <Link
-=======
-<<<<<<< HEAD:app/layout.tsx
-            </Link>
-          </div>
-          <Link
-=======
-            </a>
-          </div>
-          <a
->>>>>>> main:app_disabled/layout.tsx
->>>>>>> main:app_disabled/layout.tsx
->>>>>>> main:app_disabled/layout.tsx
             href='/contact'
             className='text-gray-700 hover:text-blue-600 transition-colors'
           >
             Contact
 <<<<<<< HEAD:app/layout.tsx
           </Link>
-=======
-<<<<<<< HEAD:app/layout.tsx
-          </Link>
-=======
-<<<<<<< HEAD:app/layout.tsx
-          </Link>
-=======
-          </a>
->>>>>>> main:app_disabled/layout.tsx
->>>>>>> main:app_disabled/layout.tsx
->>>>>>> main:app_disabled/layout.tsx
         </div>
         <button className='md:hidden p-2' aria-label='Toggle menu'>
           <svg
@@ -449,7 +213,6 @@ function Header() {
     </header>
   );
 }
-
 function Footer() {
   return (
     <footer className='border-t border-gray-200 mt-10 py-6 bg-gray-50'>
@@ -460,17 +223,6 @@ function Footer() {
             <div className='space-y-2'>
 <<<<<<< HEAD:app/layout.tsx
               <Link
-=======
-<<<<<<< HEAD:app/layout.tsx
-              <Link
-=======
-<<<<<<< HEAD:app/layout.tsx
-              <Link
-=======
-              <a
->>>>>>> main:app_disabled/layout.tsx
->>>>>>> main:app_disabled/layout.tsx
->>>>>>> main:app_disabled/layout.tsx
                 href='/services'
                 className='block text-gray-600 hover:text-blue-600 transition-colors'
               >
@@ -478,20 +230,6 @@ function Footer() {
 <<<<<<< HEAD:app/layout.tsx
               </Link>
               <Link
-=======
-<<<<<<< HEAD:app/layout.tsx
-              </Link>
-              <Link
-=======
-<<<<<<< HEAD:app/layout.tsx
-              </Link>
-              <Link
-=======
-              </a>
-              <a
->>>>>>> main:app_disabled/layout.tsx
->>>>>>> main:app_disabled/layout.tsx
->>>>>>> main:app_disabled/layout.tsx
                 href='/services/ai-autonomous-cloud-ops'
                 className='block text-gray-600 hover:text-blue-600 transition-colors'
               >
@@ -499,20 +237,6 @@ function Footer() {
 <<<<<<< HEAD:app/layout.tsx
               </Link>
               <Link
-=======
-<<<<<<< HEAD:app/layout.tsx
-              </Link>
-              <Link
-=======
-<<<<<<< HEAD:app/layout.tsx
-              </Link>
-              <Link
-=======
-              </a>
-              <a
->>>>>>> main:app_disabled/layout.tsx
->>>>>>> main:app_disabled/layout.tsx
->>>>>>> main:app_disabled/layout.tsx
                 href='/services/ai-fintech-transformation'
                 className='block text-gray-600 hover:text-blue-600 transition-colors'
               >
@@ -520,20 +244,6 @@ function Footer() {
 <<<<<<< HEAD:app/layout.tsx
               </Link>
               <Link
-=======
-<<<<<<< HEAD:app/layout.tsx
-              </Link>
-              <Link
-=======
-<<<<<<< HEAD:app/layout.tsx
-              </Link>
-              <Link
-=======
-              </a>
-              <a
->>>>>>> main:app_disabled/layout.tsx
->>>>>>> main:app_disabled/layout.tsx
->>>>>>> main:app_disabled/layout.tsx
                 href='/services/ai-retail-automation'
                 className='block text-gray-600 hover:text-blue-600 transition-colors'
               >
@@ -541,37 +251,12 @@ function Footer() {
 <<<<<<< HEAD:app/layout.tsx
               </Link>
               <Link
-=======
-<<<<<<< HEAD:app/layout.tsx
-              </Link>
-              <Link
-=======
-<<<<<<< HEAD:app/layout.tsx
-              </Link>
-              <Link
-=======
-              </a>
-              <a
->>>>>>> main:app_disabled/layout.tsx
->>>>>>> main:app_disabled/layout.tsx
->>>>>>> main:app_disabled/layout.tsx
                 href='/services/micro-saas'
                 className='block text-gray-600 hover:text-blue-600 transition-colors'
               >
                 Micro SaaS
 <<<<<<< HEAD:app/layout.tsx
               </Link>
-=======
-<<<<<<< HEAD:app/layout.tsx
-              </Link>
-=======
-<<<<<<< HEAD:app/layout.tsx
-              </Link>
-=======
-              </a>
->>>>>>> main:app_disabled/layout.tsx
->>>>>>> main:app_disabled/layout.tsx
->>>>>>> main:app_disabled/layout.tsx
             </div>
           </div>
           <div>
@@ -581,17 +266,6 @@ function Footer() {
             <div className='space-y-2'>
 <<<<<<< HEAD:app/layout.tsx
               <Link
-=======
-<<<<<<< HEAD:app/layout.tsx
-              <Link
-=======
-<<<<<<< HEAD:app/layout.tsx
-              <Link
-=======
-              <a
->>>>>>> main:app_disabled/layout.tsx
->>>>>>> main:app_disabled/layout.tsx
->>>>>>> main:app_disabled/layout.tsx
                 href='/blog/ai-2028-next-generation-autonomous-enterprise'
                 className='block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2'
               >
@@ -602,20 +276,6 @@ function Footer() {
 <<<<<<< HEAD:app/layout.tsx
               </Link>
               <Link
-=======
-<<<<<<< HEAD:app/layout.tsx
-              </Link>
-              <Link
-=======
-<<<<<<< HEAD:app/layout.tsx
-              </Link>
-              <Link
-=======
-              </a>
-              <a
->>>>>>> main:app_disabled/layout.tsx
->>>>>>> main:app_disabled/layout.tsx
->>>>>>> main:app_disabled/layout.tsx
                 href='/blog/ai-2028-neuromorphic-superintelligence'
                 className='block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2'
               >
@@ -626,20 +286,6 @@ function Footer() {
 <<<<<<< HEAD:app/layout.tsx
               </Link>
               <Link
-=======
-<<<<<<< HEAD:app/layout.tsx
-              </Link>
-              <Link
-=======
-<<<<<<< HEAD:app/layout.tsx
-              </Link>
-              <Link
-=======
-              </a>
-              <a
->>>>>>> main:app_disabled/layout.tsx
->>>>>>> main:app_disabled/layout.tsx
->>>>>>> main:app_disabled/layout.tsx
                 href='/case-studies/ai-2028-autonomous-enterprise-mega-success'
                 className='block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2'
               >
@@ -650,20 +296,6 @@ function Footer() {
 <<<<<<< HEAD:app/layout.tsx
               </Link>
               <Link
-=======
-<<<<<<< HEAD:app/layout.tsx
-              </Link>
-              <Link
-=======
-<<<<<<< HEAD:app/layout.tsx
-              </Link>
-              <Link
-=======
-              </a>
-              <a
->>>>>>> main:app_disabled/layout.tsx
->>>>>>> main:app_disabled/layout.tsx
->>>>>>> main:app_disabled/layout.tsx
                 href='/case-studies/ai-2028-neuromorphic-superintelligence-success'
                 className='block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2'
               >
@@ -674,20 +306,6 @@ function Footer() {
 <<<<<<< HEAD:app/layout.tsx
               </Link>
               <Link
-=======
-<<<<<<< HEAD:app/layout.tsx
-              </Link>
-              <Link
-=======
-<<<<<<< HEAD:app/layout.tsx
-              </Link>
-              <Link
-=======
-              </a>
-              <a
->>>>>>> main:app_disabled/layout.tsx
->>>>>>> main:app_disabled/layout.tsx
->>>>>>> main:app_disabled/layout.tsx
                 href='/blog/ai-2026-future-trends-breakthrough'
                 className='block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2'
               >
@@ -698,20 +316,6 @@ function Footer() {
 <<<<<<< HEAD:app/layout.tsx
               </Link>
               <Link
-=======
-<<<<<<< HEAD:app/layout.tsx
-              </Link>
-              <Link
-=======
-<<<<<<< HEAD:app/layout.tsx
-              </Link>
-              <Link
-=======
-              </a>
-              <a
->>>>>>> main:app_disabled/layout.tsx
->>>>>>> main:app_disabled/layout.tsx
->>>>>>> main:app_disabled/layout.tsx
                 href='/blog/ai-future-workforce-2026'
                 className='block text-gray-600 hover:text-blue-600 transition-colors'
               >
@@ -719,20 +323,6 @@ function Footer() {
 <<<<<<< HEAD:app/layout.tsx
               </Link>
               <Link
-=======
-<<<<<<< HEAD:app/layout.tsx
-              </Link>
-              <Link
-=======
-<<<<<<< HEAD:app/layout.tsx
-              </Link>
-              <Link
-=======
-              </a>
-              <a
->>>>>>> main:app_disabled/layout.tsx
->>>>>>> main:app_disabled/layout.tsx
->>>>>>> main:app_disabled/layout.tsx
                 href='/blog/ai-cybersecurity-2026'
                 className='block text-gray-600 hover:text-blue-600 transition-colors'
               >
@@ -740,20 +330,6 @@ function Footer() {
 <<<<<<< HEAD:app/layout.tsx
               </Link>
               <Link
-=======
-<<<<<<< HEAD:app/layout.tsx
-              </Link>
-              <Link
-=======
-<<<<<<< HEAD:app/layout.tsx
-              </Link>
-              <Link
-=======
-              </a>
-              <a
->>>>>>> main:app_disabled/layout.tsx
->>>>>>> main:app_disabled/layout.tsx
->>>>>>> main:app_disabled/layout.tsx
                 href='/case-studies/ai-finance-automation-success-2026'
                 className='block text-gray-600 hover:text-blue-600 transition-colors'
               >
@@ -761,20 +337,6 @@ function Footer() {
 <<<<<<< HEAD:app/layout.tsx
               </Link>
               <Link
-=======
-<<<<<<< HEAD:app/layout.tsx
-              </Link>
-              <Link
-=======
-<<<<<<< HEAD:app/layout.tsx
-              </Link>
-              <Link
-=======
-              </a>
-              <a
->>>>>>> main:app_disabled/layout.tsx
->>>>>>> main:app_disabled/layout.tsx
->>>>>>> main:app_disabled/layout.tsx
                 href='/case-studies'
                 className='block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2'
               >
@@ -784,17 +346,6 @@ function Footer() {
                 </span>
 <<<<<<< HEAD:app/layout.tsx
               </Link>
-=======
-<<<<<<< HEAD:app/layout.tsx
-              </Link>
-=======
-<<<<<<< HEAD:app/layout.tsx
-              </Link>
-=======
-              </a>
->>>>>>> main:app_disabled/layout.tsx
->>>>>>> main:app_disabled/layout.tsx
->>>>>>> main:app_disabled/layout.tsx
             </div>
           </div>
           <div>
@@ -802,17 +353,6 @@ function Footer() {
             <div className='space-y-2'>
 <<<<<<< HEAD:app/layout.tsx
               <Link
-=======
-<<<<<<< HEAD:app/layout.tsx
-              <Link
-=======
-<<<<<<< HEAD:app/layout.tsx
-              <Link
-=======
-              <a
->>>>>>> main:app_disabled/layout.tsx
->>>>>>> main:app_disabled/layout.tsx
->>>>>>> main:app_disabled/layout.tsx
                 href='/'
                 className='block text-gray-600 hover:text-blue-600 transition-colors'
               >
@@ -820,20 +360,6 @@ function Footer() {
 <<<<<<< HEAD:app/layout.tsx
               </Link>
               <Link
-=======
-<<<<<<< HEAD:app/layout.tsx
-              </Link>
-              <Link
-=======
-<<<<<<< HEAD:app/layout.tsx
-              </Link>
-              <Link
-=======
-              </a>
-              <a
->>>>>>> main:app_disabled/layout.tsx
->>>>>>> main:app_disabled/layout.tsx
->>>>>>> main:app_disabled/layout.tsx
                 href='/about'
                 className='block text-gray-600 hover:text-blue-600 transition-colors'
               >
@@ -841,37 +367,12 @@ function Footer() {
 <<<<<<< HEAD:app/layout.tsx
               </Link>
               <Link
-=======
-<<<<<<< HEAD:app/layout.tsx
-              </Link>
-              <Link
-=======
-<<<<<<< HEAD:app/layout.tsx
-              </Link>
-              <Link
-=======
-              </a>
-              <a
->>>>>>> main:app_disabled/layout.tsx
->>>>>>> main:app_disabled/layout.tsx
->>>>>>> main:app_disabled/layout.tsx
                 href='/contact'
                 className='block text-gray-600 hover:text-blue-600 transition-colors'
               >
                 Contact
 <<<<<<< HEAD:app/layout.tsx
               </Link>
-=======
-<<<<<<< HEAD:app/layout.tsx
-              </Link>
-=======
-<<<<<<< HEAD:app/layout.tsx
-              </Link>
-=======
-              </a>
->>>>>>> main:app_disabled/layout.tsx
->>>>>>> main:app_disabled/layout.tsx
->>>>>>> main:app_disabled/layout.tsx
               <a
                 href='https://ziontechgroup.com'
                 className='block text-gray-600 hover:text-blue-600 transition-colors'
@@ -908,7 +409,6 @@ function Footer() {
     </footer>
   );
 }
-
 export default function RootLayout({
   children,
 }: {

@@ -1,21 +1,12 @@
 import React from 'react';
 import {Metadata} from 'next';
 import Link from 'next/link';
-
 <<<<<<< HEAD:app/blog/ai-2025-december-quantum-computing-breakthrough/page.tsx
 export const metadata: Metadata = 
   title: 'AI 2025: Quantum Computing Breakthrough - Zion Tech Group',
   description: 'Revolutionary quantum computing breakthrough achieving 1 million qubits and exponential AI performance gains in December 2025.',
   keywords: 'quantum computing, AI breakthrough, quantum AI, December 2025, Zion Tech Group',
 };
-=======
-export const metadata = {
-  
-  title: "AI 2025: Quantum Computing Breakthrough - Zion Tech Group",
-  description: "Revolutionary quantum computing breakthrough achieving 1 million qubits and exponential AI performance gains in December 2025.",
-  keywords: 'quantum computing, AI breakthrough, quantum AI, December 2025, Zion Tech Group'};;
->>>>>>> main:app_disabled/blog/ai-2025-december-quantum-computing-breakthrough/page.tsx
-
 export default function AI2025DecemberQuantum Computing Breakthrough() {/* return (
     <div> content */}
     <div>
@@ -34,10 +25,8 @@ export default function AI2025DecemberQuantum Computing Breakthrough() {/* retur
       <div className="text-left"> </div><div className="text-left"> </div><div className="text-left"> </div><span className="text-left">⚛️ December 2025    Breakthrough
               </span></span>
             </div>
-            
             <h1 className="text-left">Quantum Computing    Breakthrough
             </h1></h1>
-            
             <p className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
               Achieving 1 Million Qubits with Exponential AI Performance and Revolutionary Problem-Solving    Capabilities
             </p></p>
@@ -53,7 +42,6 @@ origin/cursor/fix-errors-and-merge-to-main-cc0a
                 className="text-left">View $1B Success    Story    →
               </a></a>
             </div>
-            
             {/* Key    Metrics   */}
             <div className="text-left"> </div><div className="text-left">1M+</div>
                 <div className="text-left">Qubits</div>
@@ -66,7 +54,6 @@ origin/cursor/fix-errors-and-merge-to-main-cc0a
               </div>
           </div>
       </section>
-
       {/* Quantum    Details   */}
       <section id="quantum-details" className="text-left"> </section><div className="text-left"> </div><h3 className="text-left">
       <section id="quantum-details" className="text-left"> </section><div className="text-left"> </div><div className="text-left"> </div><div className="text-left"> </div><h2 className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
@@ -101,7 +88,6 @@ origin/cursor/fix-errors-and-merge-to-main-cc0a
                   <li>•    Predictive    analytics</li>
                 </ul>
               </div>
-
             {/*   Applications   */}
             <h3 className="text-left">Revolutionary    Applications</h3>
               <div className="text-left"> </div><div className="text-left">💊</div>
@@ -119,7 +105,6 @@ origin/cursor/fix-errors-and-merge-to-main-cc0a
             </div>
         </div>
       </section>
-
       {/* Call to    Action   */}
       <section className="text-left"> </section><div className="text-left"> </div><h2 className="text-left">
       <section className="text-left"> </section><div className="text-left"> </div><div className="text-left"> </div><h2 className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a

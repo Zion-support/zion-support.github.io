@@ -1,6 +1,5 @@
 import React from 'react';
 import {Metadata} from 'next';
-
 <<<<<<< HEAD:app/blog/quantum-ai-hybrid-systems-2026/page.tsx
 export const metadata: Metadata = 
   title: 'Quantum-AI Hybrid Systems: The Next Frontier in Enterprise Computing | Zion Tech Group',
@@ -14,16 +13,6 @@ export const metadata: Metadata =
     authors: ['Zion Tech Group'],
   },
 };
-=======
-export const metadata = {
-  
-  title: "Quantum-AI Hybrid Systems: The Next Frontier in Enterprise Computing",
-    description: "Discover the revolutionary potential of quantum-AI hybrid systems in enterprise applications.",
-    type: "article",
-    published Time: "2026-01-20T00:00:00Z",
-    authors: ['Zion Tech Group']};
->>>>>>> main:app_disabled/blog/quantum-ai-hybrid-systems-2026/page.tsx
-
 export default function QuantumAIHybrid Systems Page() {/* return (
     <div> content */}
     <div>
@@ -39,10 +28,8 @@ export default function QuantumAIHybrid Systems Page() {/* return (
           <p className="text-left"> </p><header className="text-left"> </header><div className="text-left"> </div><span className="text-left">⚛️ Quantum Computing    Revolution
             </span></span>
           </div>
-          
           <h1 className="text-left">Quantum-AI Hybrid Systems: The Next Frontier in Enterprise    Computing
           </h1></h1>
-          
           <p className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
                Discover    how quantum-AI hybrid systems are unlocking computational possibilities that were once 
             considered impossible, delivering exponential speedups and revolutionary optimization capabilities.
@@ -52,7 +39,6 @@ export default function QuantumAIHybrid Systems Page() {/* return (
             <span className="text-left">Quantum    Computing   >
           </div>
         </header>
-
         {/* Key Performance    Metrics   */}
         <section className="text-left"> </section><h2 className="text-left">Quantum Performance    Breakthroughs</h2>
           <div className="text-left"> </div><div className="text-left">10^6</div>
@@ -70,7 +56,6 @@ origin/cursor/fix-errors-and-merge-to-main-cc0a
               <div className="text-left">Parallel Processing    States</div>
             </div>
         </section>
-
         {/* Main    Content   */}
         <div className="text-left"> </div><section className="text-left"> </section><h2 className="text-left">The Quantum-AI    Convergence</h2>
             <p className="text-left"> </p><section className="text-left"> </section><h2 className="text-left">The Quantum-AI    Convergence</h2>"
@@ -161,7 +146,6 @@ origin/cursor/fix-errors-and-merge-to-main-cc0a
                     <div className="text-left">Annual    savings per bank</div>
                   </div>
               </div>
-
               <h3 className="text-left">Supply Chain & Logistics: Route    Optimization</h3>
                 <p className="text-left"> </p><div className="text-left"> </div><h3 className="text-left">Supply Chain & Logistics: Route    Optimization</h3>"
                 <p className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
@@ -176,7 +160,6 @@ origin/cursor/fix-errors-and-merge-to-main-cc0a
                     <div className="text-left">Carbon    footprint reduction</div>
                   </div>
               </div>
-
               <h3 className="text-left">Healthcare: Drug Discovery & Molecular    Simulation</h3>
                 <p className="text-left"> </p><div className="text-left"> </div><h3 className="text-left">Healthcare: Drug Discovery & Molecular    Simulation</h3>"
                 <p className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
@@ -191,7 +174,6 @@ origin/cursor/fix-errors-and-merge-to-main-cc0a
                     <div className="text-left">R&D cost savings</div>
                   </div>
               </div>
-
               <h3 className="text-left">Manufacturing: Process Optimization & Quality    Control</h3>
                 <p className="text-left"> </p><div className="text-left"> </div><h3 className="text-left">Manufacturing: Process Optimization & Quality    Control</h3>"
                 <p className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
@@ -207,7 +189,6 @@ origin/cursor/fix-errors-and-merge-to-main-cc0a
                   </div>
               </div>
           </section>
-
           <section className="text-left"> </section><h2 className="text-left">🔧 Implementation    Architecture</h2>
             <p className="text-left"> </p><section className="text-left"> </section><h2 className="text-left">🔧 Implementation    Architecture</h2>"
             <p className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
@@ -318,7 +299,6 @@ origin/cursor/fix-errors-and-merge-to-main-cc0a
                 <div className="text-left">Deliverables:    Production    system, ROI documentation</div>
               </div>
           </section>
-
           <section className="text-left"> </section><h2 className="text-left">🔮 The Future of Quantum-AI Hybrid    Systems</h2>
             <p className="text-left"> </p><section className="text-left"> </section><h2 className="text-left">🔮 The Future of Quantum-AI Hybrid    Systems</h2>"
             <p className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
@@ -380,7 +360,6 @@ origin/cursor/fix-errors-and-merge-to-main-cc0a
                 </a></a>
               </div>
           </section>
-
         {/* Author &    Meta   */}
         <footer className="text-left"> </footer><div className="text-left"> </div><div> </div><h4 className="text-left">Zion Tech    Group</h4>
               <p className="text-left"> </p><h4 className="text-left">Zion Tech    Group</h4>"

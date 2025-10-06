@@ -24,22 +24,7 @@ export const seoOptimizer = {
   
   trackPageView: () => {
     // Basic analytics tracking
-<<<<<<< HEAD:src/seo-optimizer.ts
-    if (typeof window !== 'undefined' && (window as unknown as { gtag?: unknown }).gtag) {
-      ((window as unknown as { gtag: (command: string, id: string, config: Record<string, string>) => void }).gtag)('config', 'GA_MEASUREMENT_ID', {
-=======
-<<<<<<< HEAD:src/seo-optimizer.ts
-    if (typeof window !== 'undefined' && (window as unknown as { gtag?: unknown }).gtag) {
-      const gtag = (window as unknown as { gtag: (command: string, id: string, config: Record<string, string>) => void }).gtag;
-      gtag('config', 'GA_MEASUREMENT_ID', {
-=======
-    if (typeof window !== 'undefined' && (window as unknown as { gtag?: Function }).gtag) {
-<<<<<<< HEAD:src/seo-optimizer.ts
-      (window as unknown as { gtag: Function }).gtag('config', 'GA_MEASUREMENT_ID', {
-=======
-      const gtag = (window as unknown as { gtag: Function }).gtag;
-      gtag('config', 'GA_MEASUREMENT_ID', {
->>>>>>> main:corrupted-src-backup/seo-optimizer.ts
+:corrupted-src-backup/seo-optimizer.ts
 >>>>>>> main:corrupted-src-backup/seo-optimizer.ts
 >>>>>>> main:corrupted-src-backup/seo-optimizer.ts
         page_title: document.title,

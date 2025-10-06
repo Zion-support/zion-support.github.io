@@ -7,18 +7,18 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Function to fix corrupted text by removing erroneous commas
+//Function to fix corrupted text by removing erroneous commas
 function fixCorruptedText(text) {
-  // Pattern to match commas that are incorrectly placed in the middle of words
-  // This looks for commas that are followed by a space and then a lowercase letter
-  // or commas that are in the middle of identifiers
+  //Pattern to match commas that are incorrectly placed in the middle of words
+  //This looks for commas that are followed by a space and then a lowercase letter
+  //or commas that are in the middle of identifiers
   let fixed = text;
 
-  // Fix common patterns of corruption
-  // Remove commas that are incorrectly placed in the middle of words
+  //Fix common patterns of corruption
+  //Remove commas that are incorrectly placed in the middle of words
   fixed = fixed.replace(/([a-zA-Z]),\s*([a-zA-Z])/g, '$1$2');
 
-  // Fix specific patterns that appear in the corrupted files
+  //Fix specific patterns that appear in the corrupted files
   fixed = fixed.replace(/impo,\s*r,\s*t/g, 'import');
   fixed = fixed.replace(/fr,\s*o,\s*m/g, 'from');
   fixed = fixed.replace(/descri,\s*b,\s*e/g, 'describe');
@@ -98,17 +98,17 @@ function fixCorruptedText(text) {
   fixed = fixed.replace(/fr,\s*o,\s*m/g, 'from');
   fixed = fixed.replace(/impo,\s*r,\s*t/g, 'import');
 
-  // Fix object property syntax
+  //Fix object property syntax
   fixed = fixed.replace(
     /\{\s*'\s*id:\s*'([^']+)',\s*'\s*compone,\s*n,\s*t:\s*'([^']+)',\s*'\s*priori,\s*t,\s*y:\s*(\d+)\s*'\s*catego,\s*r,\s*y:\s*'([^']+)',\s*'\s*impressio,\s*n,\s*s:\s*(\d+)\s*clic,\s*k,\s*s:\s*(\d+)\s*acti,\s*v,\s*e:\s*(true|false)\s*\}/g,
     "{ id: '$1', component: '$2', priority: $3, category: '$4', impressions: $5, clicks: $6, active: $7 }"
   );
 
-  // Fix array syntax
+  //Fix array syntax
   fixed = fixed.replace(/\[\s*\{/g, '[{');
   fixed = fixed.replace(/\}\s*\]/g, '}]');
 
-  // Fix function calls
+  //Fix function calls
   fixed = fixed.replace(
     /calculateEngagementSco,\s*r,\s*e/g,
     'calculateEngagementScore'
@@ -134,14 +134,14 @@ function fixCorruptedText(text) {
     'selectBalancedBanners'
   );
 
-  // Fix variable names
+  //Fix variable names
   fixed = fixed.replace(/testBanner,\s*s/g, 'testBanners');
   fixed = fixed.replace(/BannerConf,\s*i,\s*g/g, 'BannerConfig');
 
-  // Remove duplicate content (looks like there might be merge conflict markers)
+  //Remove duplicate content (looks like there might be merge conflict markers)
   fixed = fixed.replace(/=======.*?=======/gs, '');
 
-  // Clean up extra semicolons and commas
+  //Clean up extra semicolons and commas
   fixed = fixed.replace(/;+/g, ';');
   fixed = fixed.replace(/,\s*,/g, ',');
   fixed = fixed.replace(/;\s*;/g, ';');
@@ -149,7 +149,7 @@ function fixCorruptedText(text) {
   return fixed;
 }
 
-// Function to process a file
+//Function to process a file
 function processFile(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf8');
@@ -167,7 +167,7 @@ function processFile(filePath) {
   }
 }
 
-// Function to recursively find and process files
+//Function to recursively find and process files
 function processDirectory(dirPath) {
   let processedCount = 0;
 
@@ -179,7 +179,7 @@ function processDirectory(dirPath) {
       const stat = fs.statSync(fullPath);
 
       if (stat.isDirectory()) {
-        // Skip node_modules and other common directories
+        //Skip node_modules and other common directories
         if (!['node_modules', '.git', 'dist', 'build'].includes(item)) {
           processedCount += processDirectory(fullPath);
         }
@@ -201,7 +201,7 @@ function processDirectory(dirPath) {
   return processedCount;
 }
 
-// Main execution
+//Main execution
 console.log('Starting to fix corrupted files...');
 const processedCount = processDirectory('./src');
 console.log(`Fixed ${processedCount} files.`);
