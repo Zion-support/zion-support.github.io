@@ -2,18 +2,14 @@ import React, { useState, useMemo } from 'react'
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import {CheckCircle,
-  Star,
   Zap,
-  Shield,
   TrendingUp,
   Brain,
   Server,
-  Globe,
   ArrowRight,
   Mail,
   Phone,
   MapPin,
-  ExternalLink,
   DollarSign,
   CreditCard,
   Wallet,
