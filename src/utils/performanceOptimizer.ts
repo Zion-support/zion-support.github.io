@@ -15,8 +15,6 @@ export interface WebVitalsMetrics {
 }
 
 /**
-<<<<<<< HEAD
-=======
  * Performance budget checker
  */
 export interface PerformanceBudget {
@@ -190,7 +188,6 @@ class PerformanceOptimizer {
 }
 
 /**
->>>>>>> cursor/fix-errors-and-merge-to-main-6ace
  * Resource hints for performance
  */
 export const prefetchResources = (urls: string[]): void => {
@@ -439,8 +436,6 @@ export const checkPerformanceBudget = (budget: PerformanceBudget): {
 
 // Export singleton instance
 export const performanceOptimizer = PerformanceOptimizer.getInstance();
-<<<<<<< HEAD
-=======
 
 // Export individual functions for backward compatibility
 export {
@@ -468,4 +463,3 @@ export default {
   clearOldCaches,
   checkPerformanceBudget
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ace
