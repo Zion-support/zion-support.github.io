@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const Header: React.FC = () => {
+  const [isMenuOpen] = useState(false);
   return (
     <header className='bg-gray-900 text-white shadow-lg'>
       <div className='container mx-auto px-4 py-4'>

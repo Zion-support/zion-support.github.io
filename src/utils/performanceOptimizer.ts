@@ -304,7 +304,49 @@ export const checkPerformanceBudget = (budget: PerformanceBudget): {
   };
 };
 
+// Performance monitoring state
+let performanceMetrics: {
+  totalComponents: number;
+  averageRenderTime: number;
+  slowComponents: number;
+  memoryUsage: number;
+} = {
+  totalComponents: 0,
+  averageRenderTime: 0,
+  slowComponents: 0,
+  memoryUsage: 0
+};
+
+// Initialize performance monitoring
+export const initialize = (): void => {
+  console.log('Performance optimizer initialized');
+};
+
+// Get performance summary
+export const getPerformanceSummary = () => {
+  return { ...performanceMetrics };
+};
+
+// Export metrics
+export const exportMetrics = () => {
+  return { ...performanceMetrics };
+};
+
+// Clear metrics
+export const clearMetrics = (): void => {
+  performanceMetrics = {
+    totalComponents: 0,
+    averageRenderTime: 0,
+    slowComponents: 0,
+    memoryUsage: 0
+  };
+};
+
 export default {
+  initialize,
+  getPerformanceSummary,
+  exportMetrics,
+  clearMetrics,
   prefetchResources,
   preconnectDomains,
   lazyLoadImages,

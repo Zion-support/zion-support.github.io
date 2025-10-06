@@ -7,7 +7,7 @@ async function reportWebVitals() {
   try {
     const { onCLS, onLCP, onFCP, onTTFB } = await import('web-vitals');
     const log = (metric: { name: string; value: number }) => {
-      if (process.env.NODE_ENV === 'production') {
+      if (process.env['NODE_ENV'] === 'production') {
         console.log('Web Vital:', metric);
       }
     };

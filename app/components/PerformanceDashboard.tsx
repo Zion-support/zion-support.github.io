@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { performanceOptimizer } from '../../utils/performanceOptimizer';
+import performanceOptimizer from '../../utils/performanceOptimizer';
 import { getErrorMetrics, isErrorRateTooHigh } from '../../utils/errorHandling';
 
 interface DashboardData {
@@ -35,6 +35,8 @@ const PerformanceDashboard: React.FC = () => {
       const interval = setInterval(updateData, 5000);
       return () => clearInterval(interval);
     }
+    
+    return undefined;
   }, [autoRefresh]);
 
   const exportData = () => {

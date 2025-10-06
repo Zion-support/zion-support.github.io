@@ -7,8 +7,8 @@ export interface BreakthroughArticle {
   readTime: string;
   tags: string[];
   featured: boolean;
-  readTime: string;
   impact: string;
+  content?: string;
   metrics: {
     improvement: string;
     roi: string;
