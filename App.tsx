@@ -1,4 +1,4 @@
-import React, { memo, useMemo } from 'react';
+import React, { memo, useMemo, useCallback, Suspense } from 'react';
 import { HelmetProvider, Helmet } from 'react-helmet-async';
 
 // Memoized components for better performance
@@ -46,12 +46,62 @@ const InteractiveContentShowcase2026 = memo(() => (
   </div>
 ));
 
-// Loading component (unused but kept for potential future use)
-// const LoadingSpinner = memo(() => (
-//   <div className="animate-pulse bg-gray-200 h-32 rounded flex items-center justify-center">
-//     <div className="text-gray-500">Loading...</div>
-//   </div>
-// ));
+// Error Boundary Component
+interface ErrorBoundaryState {
+  hasError: boolean;
+  error: Error | null;
+}
+
+interface ErrorBoundaryProps {
+  children: React.ReactNode;
+}
+
+class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundaryState> {
+  constructor(props: ErrorBoundaryProps) {
+    super(props);
+    this.state = { hasError: false, error: null };
+  }
+
+  static getDerivedStateFromError(error: Error): ErrorBoundaryState {
+    return { hasError: true, error };
+  }
+
+  override componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
+    console.error('App Error Boundary caught an error:', error, errorInfo);
+  }
+
+  override render() {
+    if (this.state.hasError) {
+      return (
+        <div className="min-h-screen flex items-center justify-center bg-gray-50">
+          <div className="text-center p-8">
+            <h1 className="text-2xl font-bold text-gray-900 mb-4">
+              Something went wrong
+            </h1>
+            <p className="text-gray-600 mb-4">
+              We're working to fix this issue. Please try refreshing the page.
+            </p>
+            <button
+              onClick={() => window.location.reload()}
+              className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+            >
+              Refresh Page
+            </button>
+          </div>
+        </div>
+      );
+    }
+
+    return this.props.children;
+  }
+}
+
+// Loading component
+const LoadingSpinner = memo(() => (
+  <div className="animate-pulse bg-gray-200 h-32 rounded flex items-center justify-center">
+    <div className="text-gray-500">Loading...</div>
+  </div>
+));
 
 export default function App() {
   const structuredData = useMemo(
@@ -104,12 +154,66 @@ export default function App() {
         'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap';
       fontLink.as = 'style';
       document.head.appendChild(fontLink);
+
+      // Preload critical images
+      const preloadImages = [
+        'https://ziontechgroup.com/og-image.jpg',
+        'https://ziontechgroup.com/logo.png'
+      ];
+      
+      preloadImages.forEach(src => {
+        const img = new Image();
+        img.src = src;
+      });
+
+      // Add performance monitoring
+      if ('performance' in window) {
+        window.addEventListener('load', () => {
+          const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+          if (perfData) {
+            console.log('Page Load Performance:', {
+              domContentLoaded: perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart,
+              loadComplete: perfData.loadEventEnd - perfData.loadEventStart,
+              totalTime: perfData.loadEventEnd - perfData.fetchStart
+            });
+          }
+        });
+      }
+    }
+  }, []);
+
+  // Memoized event handlers for better performance
+  const handleNewsletterSubmit = useCallback((e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const target = e.target as HTMLFormElement;
+    const email = (target.elements.namedItem('email') as HTMLInputElement)?.value;
+    if (email) {
+      console.log('Newsletter signup:', email);
+      // Add actual newsletter signup logic here
+      alert('Thank you for subscribing!');
+    }
+  }, []);
+
+  const handlePhoneClick = useCallback(() => {
+    // Track phone clicks for analytics
+<<<<<<< HEAD
+    if (typeof window !== 'undefined' && 'gtag' in window) {
+      (window as any).gtag('event', 'phone_click', {
+=======
+    if (typeof window !== 'undefined' && (window as unknown as { gtag?: Function }).gtag) {
+      ((window as unknown as { gtag: Function }).gtag)('event', 'phone_click', {
+>>>>>>> main
+        event_category: 'engagement',
+        event_label: 'main_phone_number'
+      });
     }
   }, []);
 
   return (
-    <HelmetProvider>
-      <div>
+    <ErrorBoundary>
+      <HelmetProvider>
+        <Suspense fallback={<LoadingSpinner />}>
+          <div>
         <script
           type='application/ld+json'
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
@@ -186,6 +290,7 @@ export default function App() {
               </a>
               <a
                 href='tel:+13024640950'
+                onClick={handlePhoneClick}
                 className='bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors'
               >
                 Call +1 302 464 0950
@@ -234,16 +339,21 @@ export default function App() {
                   Get weekly updates on AI trends, tech innovations, and
                   exclusive service offers
                 </p>
-                <div className='flex gap-2'>
+                <form onSubmit={handleNewsletterSubmit} className='flex gap-2'>
                   <input
                     type='email'
+                    name='email'
                     placeholder='Enter your email'
+                    required
                     className='flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500'
                   />
-                  <button className='bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors'>
+                  <button 
+                    type='submit'
+                    className='bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors'
+                  >
                     Subscribe
                   </button>
-                </div>
+                </form>
                 <p className='text-sm text-gray-500 mt-2'>
                   Join 10,000+ professionals. Unsubscribe anytime.
                 </p>
@@ -323,6 +433,7 @@ export default function App() {
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <a
                 href='tel:+13024640950'
+                onClick={handlePhoneClick}
                 className='bg-yellow-400 text-black px-8 py-3 rounded-lg font-semibold hover:bg-yellow-300 transition-colors'
               >
                 Call +1 302 464 0950
@@ -340,7 +451,9 @@ export default function App() {
             </div>
           </div>
         </section>
-      </div>
-    </HelmetProvider>
+          </div>
+        </Suspense>
+      </HelmetProvider>
+    </ErrorBoundary>
   );
 }
