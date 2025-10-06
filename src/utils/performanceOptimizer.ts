@@ -276,6 +276,30 @@ export interface PerformanceBudget {
   maxInteractive: number; // in ms
 }
 
+/**
+ * Critical resource hints for better performance
+ */
+export const addCriticalResourceHints = (): void => {
+  if (typeof document === 'undefined') return;
+  
+  const hints = [
+    { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' },
+    { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com' },
+    { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+    { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossOrigin: 'anonymous' }
+  ];
+  
+  hints.forEach(hint => {
+    const link = document.createElement('link');
+    link.rel = hint.rel;
+    link.href = hint.href;
+    if (hint.crossOrigin) {
+      link.crossOrigin = hint.crossOrigin;
+    }
+    document.head.appendChild(link);
+  });
+};
+
 export const checkPerformanceBudget = (budget: PerformanceBudget): {
   passed: boolean;
   violations: string[];
@@ -321,5 +345,6 @@ export default {
   monitorLongTasks,
   cacheStaticAssets,
   clearOldCaches,
-  checkPerformanceBudget
+  checkPerformanceBudget,
+  addCriticalResourceHints
 };

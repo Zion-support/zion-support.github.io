@@ -25,6 +25,13 @@ const App: React.FC = () => {
 
     // Initialize performance monitoring
     performanceOptimizer.lazyLoadImages();
+    performanceOptimizer.addCriticalResourceHints();
+    
+    // Initialize Web Vitals monitoring
+    if (typeof window !== 'undefined' && 'performance' in window) {
+      performanceOptimizer.reportWebVitals(performanceOptimizer.measurePageLoad() || {});
+    }
+    
     console.log('Performance monitoring initialized');
     console.log(
       '🚀 Zion Tech Group App initialized with comprehensive monitoring',
@@ -42,7 +49,7 @@ const App: React.FC = () => {
                 {/* Skip to main content link for accessibility */}
                 <a
                   href='#main-content'
-                  className='skip-link'
+                  className='skip-link sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50'
                   onClick={e => {
                     e.preventDefault();
                     const main =
