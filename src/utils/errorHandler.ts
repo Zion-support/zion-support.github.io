@@ -44,7 +44,11 @@ class ErrorHandler {
       this.errorQueue.shift();
     }
     // Log to console in development
+<<<<<<< HEAD
     if (process.env.NODE_ENV === 'development') {
+=======
+    if (process.env['NODE_ENV'] === 'development') {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-e98c
       // Error logged
     }
     // Send to external service in production
@@ -59,7 +63,11 @@ class ErrorHandler {
     try {
       // In a real application, you would send to services like Sentry, LogRocket, etc.
       // For now, we'll just log to console
+<<<<<<< HEAD
       // Error report
+=======
+      // Error report generated
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-e98c
     } catch (err) {
       // Failed to send error report
     }

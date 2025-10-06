@@ -6,6 +6,7 @@ import { useEffect, useCallback, useRef } from 'react';
 import { performanceOptimizer } from '../utils/performanceOptimizer';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Mock analytics object for tracking
 const analytics = {
   trackPerformance: (name: string, value: number, unit: string = 'ms') => {
@@ -23,6 +24,92 @@ const analytics = {
     console.log(`Analytics: ${event} - ${category} - ${action}${label ? ` - ${label}` : ''}${value ? ` - ${value}` : ''}`);
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0883
   }
+=======
+export interface PerformanceMetrics {
+  renderTime: number;
+  componentMountTime: number;
+  memoryUsage?: number;
+  isSlowRender: boolean;
+}
+
+export interface UsePerformanceOptions {
+  componentName: string;
+  trackRenderTime?: boolean;
+  trackMemoryUsage?: boolean;
+  slowRenderThreshold?: number; // in milliseconds
+}
+
+/**
+ * Hook for monitoring component performance
+ */
+export const usePerformance = (options: UsePerformanceOptions) => {
+  const {
+    componentName,
+    trackRenderTime = true,
+    trackMemoryUsage = false,
+    slowRenderThreshold = 16, // 60fps threshold
+  } = options;
+
+  const mountTimeRef = useRef<number>(0);
+  const renderStartTimeRef = useRef<number>(0);
+
+  // Track component mount time
+  useEffect(() => {
+    mountTimeRef.current = performance.now();
+
+    return () => {
+      const mountDuration = performance.now() - mountTimeRef.current;
+      analytics.trackPerformance(`${componentName}_mount_time`, mountDuration);
+    };
+  }, [componentName]);
+
+  // Track render performance
+  const trackRender = useCallback(() => {
+    if (!trackRenderTime) return;
+
+    renderStartTimeRef.current = performance.now();
+
+    // Use requestAnimationFrame to measure actual render time
+    requestAnimationFrame(() => {
+      const renderTime = performance.now() - renderStartTimeRef.current;
+      const isSlowRender = renderTime > slowRenderThreshold;
+
+      const metrics: PerformanceMetrics = {
+        renderTime,
+        componentMountTime: performance.now() - mountTimeRef.current,
+        isSlowRender,
+      };
+
+      // Track memory usage if available
+      if (trackMemoryUsage && 'memory' in performance) {
+        const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number } }).memory;
+        metrics.memoryUsage = memory.usedJSHeapSize;
+      }
+
+      // Send to analytics
+      analytics.trackPerformance(`${componentName}_render_time`, renderTime);
+
+      if (isSlowRender) {
+        analytics.track(
+          'slow_render',
+          'performance',
+          'warning',
+          componentName,
+          renderTime
+        );
+      }
+    });
+  }, [componentName, trackRenderTime, slowRenderThreshold, trackMemoryUsage]);
+
+  return {
+    trackRender,
+    getMetrics: (): PerformanceMetrics => ({
+      renderTime: performance.now() - renderStartTimeRef.current,
+      componentMountTime: performance.now() - mountTimeRef.current,
+      isSlowRender: false,
+    }),
+  };
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-e98c
 };
 
 /**
@@ -36,7 +123,15 @@ export const usePageLoadPerformance = () => {
         const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
         if (navigation) {
           const metrics = {
+<<<<<<< HEAD
             domContentLoaded: navigation.domContentLoadedEventEnd - navigation.fetchStart,
+=======
+            domContentLoaded:
+              navigation.domContentLoadedEventEnd -
+              navigation.domContentLoadedEventStart,
+            loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
+            firstByte: navigation.responseStart - navigation.requestStart,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-e98c
             domInteractive: navigation.domInteractive - navigation.fetchStart,
             totalLoadTime: navigation.loadEventEnd - navigation.fetchStart,
           };
@@ -122,6 +217,7 @@ export const useResourcePerformance = () => {
  */
 export const useLongTaskMonitoring = () => {
   useEffect(() => {
+<<<<<<< HEAD
     if (typeof window === 'undefined' || !window.PerformanceObserver) {
       return;
     }
@@ -137,6 +233,10 @@ export const useLongTaskMonitoring = () => {
         observer.disconnect();
       }
     };
+=======
+    // Long task monitoring is disabled due to missing performanceOptimizer
+    // Long task monitoring not available in this environment
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-e98c
   }, []);
 <<<<<<< HEAD
 };
