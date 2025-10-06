@@ -368,6 +368,36 @@ class PerformanceOptimizer {
     });
   }
 
+  public addCriticalResourceHints(): void {
+    // Add critical resource hints for performance
+    const criticalDomains = [
+      'https://fonts.googleapis.com',
+      'https://fonts.gstatic.com',
+      'https://cdnjs.cloudflare.com'
+    ];
+
+    criticalDomains.forEach(domain => {
+      const link = document.createElement('link');
+      link.rel = 'dns-prefetch';
+      link.href = domain;
+      document.head.appendChild(link);
+    });
+
+    // Add preconnect hints for critical resources
+    const preconnectDomains = [
+      'https://fonts.googleapis.com',
+      'https://fonts.gstatic.com'
+    ];
+
+    preconnectDomains.forEach(domain => {
+      const link = document.createElement('link');
+      link.rel = 'preconnect';
+      link.href = domain;
+      link.crossOrigin = 'anonymous';
+      document.head.appendChild(link);
+    });
+  }
+
   // Get performance metrics
   getMetrics(): Record<string, number> {
     return Object.fromEntries(this.metrics);
@@ -386,8 +416,8 @@ class PerformanceOptimizer {
   }
 
   // Monitor long tasks
-  monitorLongTasks(callback: (entries: PerformanceEntry[]) => void): void {
-    if (typeof window === 'undefined' || !window.PerformanceObserver) return;
+  monitorLongTasks(callback: (entries: PerformanceEntry[]) => void): PerformanceObserver | null {
+    if (typeof window === 'undefined' || !window.PerformanceObserver) return null;
     
     const observer = new PerformanceObserver((list) => {
       const entries = list.getEntries();
@@ -395,6 +425,7 @@ class PerformanceOptimizer {
     });
     
     observer.observe({ entryTypes: ['longtask'] });
+    return observer;
   }
 
   // Get performance summary
