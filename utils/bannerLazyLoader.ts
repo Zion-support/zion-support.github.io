@@ -4,7 +4,7 @@
  * Optimizes banner loading by implementing lazy loading and code splitting
  * to improve initial page load performance.
  */
-import { lazy, ComponentType } from 'react';
+import React, { lazy, ComponentType } from 'react';
 
 interface BannerModule {
   default: ComponentType<any>;
@@ -32,10 +32,8 @@ export const lazyLoadBanner = (
               );
               // Return a fallback component
               resolve({
-                default: () => (
-                  <div className="banner-fallback">
-                    <p>Banner temporarily unavailable</p>
-                  </div>
+                default: () => React.createElement('div', { className: 'banner-fallback' },
+                  React.createElement('p', null, 'Banner temporarily unavailable')
                 )
               });
             });
