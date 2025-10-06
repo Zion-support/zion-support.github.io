@@ -54,7 +54,7 @@ export const lazyLoadImages = (): void => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         const img = entry.target as HTMLImageElement;
-        const src = img.dataset.src;
+        const src = img.dataset['src'];
         if (src) {
           img.src = src;
           img.removeAttribute('data-src');
@@ -377,6 +377,10 @@ class PerformanceOptimizer {
 
   public measurePageLoad(): WebVitalsMetrics | null {
     return measurePageLoad();
+  }
+
+  public monitorLongTasks(callback: (entries: PerformanceEntryList) => void): PerformanceObserver | null {
+    return monitorLongTasks(callback);
   }
 
   public prefetchResources(resources: string[]): void {
