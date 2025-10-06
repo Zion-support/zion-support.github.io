@@ -102,7 +102,90 @@ const NewContentPromotionalBanner2026: React.FC = () => {
             <div className="flex items-center gap-2">
               <Target className="w-5 h-5 text-blue-400" />
               <span className="font-semibold">Proven Results</span>
-    <div className='relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden'>
+            </div>
+          </div>
+        </div>
+
+        {/* Featured Content Cards */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          {featuredContent.map((content, index) => (
+            <div 
+              key={content.id}
+              className="group relative bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-white/40 transition-all duration-500 hover:transform hover:scale-105"
+              style={{ animationDelay: `${index * 150}ms` }}
+            >
+              {/* Card glow effect */}
+              <div className={`absolute inset-0 bg-gradient-to-br ${content.color} opacity-0 group-hover:opacity-10 transition-all duration-500 rounded-2xl`}></div>
+              
+              <div className="relative z-10">
+                {/* Icon & Badge */}
+                <div className="flex items-center justify-between mb-6">
+                  <div className="text-4xl">{content.icon}</div>
+                  <div className={`px-4 py-2 rounded-full bg-gradient-to-r ${content.badgeColor} text-white text-sm font-bold shadow-lg`}>
+                    {content.badge}
+                  </div>
+                </div>
+                {/* Category */}
+                <div className="mb-4">
+                  <span className={`inline-block px-4 py-2 rounded-full bg-gradient-to-r ${content.bgColor} text-gray-900 text-sm font-semibold border border-white/20`}>
+                    {content.category}
+                  </span>
+                </div>
+                {/* Title */}
+                <h3 className="text-xl font-bold text-white mb-4 group-hover:text-cyan-300 transition-colors">
+                  {content.title}
+                </h3>
+                {/* Excerpt */}
+                <p className="text-gray-300 mb-6 leading-relaxed">
+                  {content.excerpt}
+                </p>
+                {/* CTA Button */}
+                <Link 
+                  href={`/blog/${content.slug}`}
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-cyan-500/25"
+                >
+                  Read More
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* CTA Section */}
+        <div className="text-center">
+          <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
+            <h3 className="text-2xl font-bold text-white mb-4">
+              Ready to Transform Your Business?
+            </h3>
+            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+              Join thousands of enterprises already implementing these AI strategies 
+              and achieving remarkable results.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link 
+                href="/contact"
+                className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/25"
+              >
+                <Rocket className="w-5 h-5" />
+                Get Started Today
+              </Link>
+              <Link 
+                href="/blog"
+                className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300"
+              >
+                <Shield className="w-5 h-5" />
+                Explore All Articles
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default NewContentPromotionalBanner2026;
       {/* Animated background effects */}
       <div className='absolute inset-0 overflow-hidden opacity-20'>
         <div className='absolute top-0 left-1/4 w-96 h-96 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse' />
@@ -191,10 +274,6 @@ const NewContentPromotionalBanner2026: React.FC = () => {
                 {/* Category */}
                 <div className="mb-4">
                   <span className={`inline-block px-4 py-2 rounded-full bg-gradient-to-r ${content.bgColor} text-gray-900 text-sm font-semibold border border-white/20`}>
-                <div className='mb-4'>
-                  <span
-                    className={`inline-block px-4 py-2 rounded-full bg-gradient-to-r ${content.bgColor} text-gray-900 text-sm font-semibold border border-white/20`}
-                  >
                     {content.category}
                   </span>
                 </div>
@@ -220,12 +299,9 @@ const NewContentPromotionalBanner2026: React.FC = () => {
                 </Link>
 
               {/* Corner accent */}
-              <div className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${content.color} opacity-10 rounded-bl-full`}></div>
-                {/* Corner accent */}
-                <div
-                  className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${content.color} opacity-10 rounded-bl-full`}
-                />
-              </div>
+              <div
+                className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${content.color} opacity-10 rounded-bl-full`}
+              />
             </div>
           ))}
         </div>
