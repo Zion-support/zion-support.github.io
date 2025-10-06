@@ -148,6 +148,10 @@ class PerformanceOptimizer {
     preloadCriticalResources();
   }
 
+  public prefetchResources(urls: string[]): void {
+    prefetchResources(urls);
+  }
+
   public reportWebVitals(metrics: WebVitalsMetrics): void {
     if (process.env.NODE_ENV === 'development') {
       console.log('Web Vitals:', metrics);
