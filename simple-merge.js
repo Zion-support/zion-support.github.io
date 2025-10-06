@@ -48,13 +48,13 @@ function mergeBranch(branchName) {
     // Try direct merge
     execSync(
       `git merge origin/${branchName} --no-ff -m "Merge ${branchName} into main"`,
-      { stdio: 'inherit' },
+      { stdio: 'inherit' }
     );
     console.log(`✅ Successfully merged ${branchName}`);
     return { success: true, method: 'direct' };
   } catch (error) {
     console.log(
-      `⚠️  Direct merge failed for ${branchName}, attempting conflict resolution...`,
+      `⚠️  Direct merge failed for ${branchName}, attempting conflict resolution...`
     );
 
     try {
@@ -62,10 +62,10 @@ function mergeBranch(branchName) {
       execSync('git reset --hard HEAD', { stdio: 'inherit' });
       execSync(
         `git merge origin/${branchName} -X theirs --no-ff -m "Auto-merge ${branchName} (theirs strategy)"`,
-        { stdio: 'inherit' },
+        { stdio: 'inherit' }
       );
       console.log(
-        `✅ Auto-resolved conflicts for ${branchName} using 'theirs' strategy`,
+        `✅ Auto-resolved conflicts for ${branchName} using 'theirs' strategy`
       );
       return { success: true, method: 'theirs' };
     } catch (theirsError) {
@@ -77,10 +77,10 @@ function mergeBranch(branchName) {
       execSync('git reset --hard HEAD', { stdio: 'inherit' });
       execSync(
         `git merge origin/${branchName} -X ours --no-ff -m "Auto-merge ${branchName} (ours strategy)"`,
-        { stdio: 'inherit' },
+        { stdio: 'inherit' }
       );
       console.log(
-        `✅ Auto-resolved conflicts for ${branchName} using 'ours' strategy`,
+        `✅ Auto-resolved conflicts for ${branchName} using 'ours' strategy`
       );
       return { success: true, method: 'ours' };
     } catch (oursError) {
@@ -99,7 +99,7 @@ function mergeBranch(branchName) {
         .filter(file => file.trim());
 
       console.log(
-        `🔧 Manually resolving ${conflictedFiles.length} conflicted files...`,
+        `🔧 Manually resolving ${conflictedFiles.length} conflicted files...`
       );
 
       // For each conflicted file, try to resolve

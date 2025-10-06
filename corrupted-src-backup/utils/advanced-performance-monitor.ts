@@ -310,27 +310,27 @@ class AdvancedPerformanceMonitor {
 
     if (data.loadTime > this.thresholds.loadTime) {
       warnings.push(
-        `Load time ${data.loadTime}ms exceeds threshold ${this.thresholds.loadTime}ms`,
+        `Load time ${data.loadTime}ms exceeds threshold ${this.thresholds.loadTime}ms`
       );
     }
     if (data.firstContentfulPaint > this.thresholds.firstContentfulPaint) {
       warnings.push(
-        `FCP ${data.firstContentfulPaint}ms exceeds threshold ${this.thresholds.firstContentfulPaint}ms`,
+        `FCP ${data.firstContentfulPaint}ms exceeds threshold ${this.thresholds.firstContentfulPaint}ms`
       );
     }
     if (data.largestContentfulPaint > this.thresholds.largestContentfulPaint) {
       warnings.push(
-        `LCP ${data.largestContentfulPaint}ms exceeds threshold ${this.thresholds.largestContentfulPaint}ms`,
+        `LCP ${data.largestContentfulPaint}ms exceeds threshold ${this.thresholds.largestContentfulPaint}ms`
       );
     }
     if (data.cumulativeLayoutShift > this.thresholds.cumulativeLayoutShift) {
       warnings.push(
-        `CLS ${data.cumulativeLayoutShift} exceeds threshold ${this.thresholds.cumulativeLayoutShift}`,
+        `CLS ${data.cumulativeLayoutShift} exceeds threshold ${this.thresholds.cumulativeLayoutShift}`
       );
     }
     if (data.firstInputDelay > this.thresholds.firstInputDelay) {
       warnings.push(
-        `FID ${data.firstInputDelay}ms exceeds threshold ${this.thresholds.firstInputDelay}ms`,
+        `FID ${data.firstInputDelay}ms exceeds threshold ${this.thresholds.firstInputDelay}ms`
       );
     }
 
@@ -389,7 +389,7 @@ class AdvancedPerformanceMonitor {
         timestamp: new Date().toISOString(),
       },
       null,
-      2,
+      2
     );
   }
 

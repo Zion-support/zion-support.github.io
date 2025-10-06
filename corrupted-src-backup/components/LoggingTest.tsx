@@ -1,12 +1,43 @@
 import React from 'react';
-import { Button } from '@/components/ui/button';
-import { logger } from '@/utils/productionLogger';
+// import { Button } from '@/components/ui/button';
+// import { logger } from '@/utils/productionLogger';
+
+// Simple button component replacement
+const Button: React.FC<{
+  onClick: () => void;
+  variant?: string;
+  className?: string;
+  children: React.ReactNode;
+}> = ({ onClick, className = '', children }) => (
+  <button
+    onClick={onClick}
+    className={`px-4 py-2 rounded ${className}`}
+  >
+    {children}
+  </button>
+);
+
+// Simple logger replacement
+const logger = {
+  error: (message: string, error?: any, meta?: any) => {
+    console.error(message, error, meta);
+  },
+  warn: (message: string, error?: any, meta?: any) => {
+    console.warn(message, error, meta);
+  },
+  info: (message: string, meta?: any) => {
+    console.info(message, meta);
+  },
+  debug: (message: string, meta?: any) => {
+    console.debug(message, meta);
+  },
+};
 
 export const LoggingTest: React.FC = () => {
   const testError = () => {
     try {
       throw new Error(
-        'This is a test error for the production logging service',
+        'This is a test error for the production logging service'
       );
     } catch (error) {
       logger.error('Test error from LoggingTest component', error, {
