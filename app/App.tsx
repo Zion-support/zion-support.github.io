@@ -7,6 +7,7 @@ import ErrorBoundary from '../src/components/ErrorBoundary';
 import SEOOptimizer from '../src/components/SEOOptimizer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import PerformanceDashboard from './components/PerformanceDashboard';
+import { LoadingSpinner } from '../components/LoadingComponents';
 
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./page'));
