@@ -8,7 +8,7 @@ import type { Metric } from 'web-vitals';
 // Extend Window interface for gtag
 declare global {
   interface Window {
-    gtag?: (...args: any[]) => void;
+    gtag?: (...args: unknown[]) => void;
   }
 }
 
@@ -171,7 +171,7 @@ export const performanceUtils = {
   /**
    * Debounce function calls
    */
-  debounce<T extends (...args: any[]) => any>(
+  debounce<T extends (...args: unknown[]) => any>(
     func: T,
     wait: number
   ): (...args: Parameters<T>) => void {
@@ -185,7 +185,7 @@ export const performanceUtils = {
   /**
    * Throttle function calls
    */
-  throttle<T extends (...args: any[]) => any>(
+  throttle<T extends (...args: unknown[]) => any>(
     func: T,
     limit: number
   ): (...args: Parameters<T>) => void {

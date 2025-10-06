@@ -50,7 +50,6 @@ export const BANNER_REGISTRY: BannerConfig[] = [
     name: 'Consensus Intelligence Breakthrough',
     priority: 3,
     category: 'breakthrough',
-<<<<<<< HEAD
     importPath: '/app/components/ConsensusIntelligenceBreakthroughBanner.tsx',
     datePublished: '2025-12-10',
     tags: ['breakthrough', 'intelligence', 'consensus'],
@@ -102,32 +101,18 @@ export const BANNER_REGISTRY: BannerConfig[] = [
     tags: ['service', 'feature', 'card'],
     enabled: true,
   },
-=======
-    importPath: './components/February2026MegaBreakthroughRevolutionBanner',
-    datePublished: '2026-02-01',
-    tags: ['february-2026', 'mega-breakthrough', 'revolution'],
-    enabled: true
-  }
->>>>>>> cursor/fix-errors-and-merge-to-main-13eb
 ];
 
 /**
  * Get banners by category
  */
-<<<<<<< HEAD
 export const getBannersByCategory = (category: BannerConfig['category']): BannerConfig[] => {
   return BANNER_REGISTRY.filter(banner => banner.category === category && banner.enabled);
 };
-=======
-export function getBannersByCategory(category: BannerConfig['category']): BannerConfig[] {
-  return BANNER_REGISTRY.filter(banner => banner.category === category && banner.enabled);
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-13eb
 
 /**
  * Get banners by priority range
  */
-<<<<<<< HEAD
 export const getBannersByPriority = (minPriority: number, maxPriority: number): BannerConfig[] => {
   return BANNER_REGISTRY.filter(
     banner => banner.priority >= minPriority && 
@@ -135,66 +120,35 @@ export const getBannersByPriority = (minPriority: number, maxPriority: number): 
              banner.enabled
   );
 };
-=======
-export function getBannersByPriority(minPriority: number, maxPriority: number): BannerConfig[] {
-  return BANNER_REGISTRY.filter(banner =>
-      banner.priority >= minPriority &&
-      banner.priority <= maxPriority &&
-      banner.enabled
-  );
-}
+
 /**
  * Get top priority banners
  */
-export function getTopPriorityBanners(count: number = 5): BannerConfig[] {
+export const getTopPriorityBanners = (count: number = 5): BannerConfig[] => {
   return BANNER_REGISTRY.filter(banner => banner.enabled)
     .sort((a, b) => a.priority - b.priority)
     .slice(0, count);
-}
-/**
- * Get banners by tags
- */
-export function getBannersByTags(tags: string[]): BannerConfig[] {
-  return BANNER_REGISTRY.filter(
-    banner => banner.priority >= minPriority && banner.priority <= maxPriority && banner.enabled
-  );
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-13eb
+};
 
 /**
  * Get enabled banners sorted by priority
  */
-<<<<<<< HEAD
 export const getEnabledBanners = (): BannerConfig[] => {
   return BANNER_REGISTRY
     .filter(banner => banner.enabled)
     .sort((a, b) => a.priority - b.priority);
 };
-=======
-export function getEnabledBanners(): BannerConfig[] {
-  return BANNER_REGISTRY
-    .filter(banner => banner.enabled)
-    .sort((a, b) => a.priority - b.priority);
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-13eb
 
 /**
  * Get banner by ID
  */
-<<<<<<< HEAD
 export const getBannerById = (id: string): BannerConfig | undefined => {
   return BANNER_REGISTRY.find(banner => banner.id === id);
 };
-=======
-export function getBannerById(id: string): BannerConfig | undefined {
-  return BANNER_REGISTRY.find(banner => banner.id === id);
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-13eb
 
 /**
  * Get banners by tags
  */
-<<<<<<< HEAD
 export const getBannersByTags = (tags: string[]): BannerConfig[] => {
   return BANNER_REGISTRY.filter(banner => 
     banner.enabled && 
@@ -215,12 +169,5 @@ export const getRecentBanners = (days: number = 30): BannerConfig[] => {
     return publishDate >= cutoffDate;
   });
 };
-=======
-export function getBannersByTags(tags: string[]): BannerConfig[] {
-  return BANNER_REGISTRY.filter(banner => 
-    banner.enabled && tags.some(tag => banner.tags.includes(tag))
-  );
-}
 
 export default BANNER_REGISTRY;
->>>>>>> cursor/fix-errors-and-merge-to-main-13eb

@@ -357,5 +357,5 @@ export const accessibilityTesting = {
       '[tabindex]:not([tabindex="-1"])'
     ];
     return focusableSelectors.some(selector => element.matches(selector));
-  },
+  }
 };
