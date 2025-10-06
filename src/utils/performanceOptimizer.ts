@@ -229,7 +229,7 @@ export const lazyLoadImages = (): void => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         const img = entry.target as HTMLImageElement;
-        img.src = img.dataset.src || '';
+        img.src = img.dataset['src'] || '';
         img.removeAttribute('data-src');
         imageObserver.unobserve(img);
       }

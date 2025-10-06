@@ -1,5 +1,10 @@
 import { Suspense, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import ErrorBoundary from './components/ErrorBoundary';
+import SEOHead from './components/SEOHead';
+import PerformanceMonitor from './components/PerformanceMonitor';
+import AccessibilityEnhancer from './components/AccessibilityEnhancer';
+import LoadingSpinner from './components/LoadingSpinner';
 import './index.css';
 
 // Simple placeholder components
@@ -65,6 +70,11 @@ function App() {
     const initializeOptimizations = () => {
       try {
         console.log('App initialized successfully');
+        
+        // Add performance monitoring
+        if (typeof window !== 'undefined' && 'performance' in window) {
+          console.log('Performance monitoring enabled');
+        }
       } catch (error) {
         console.error('Failed to initialize app:', error);
       }
@@ -75,27 +85,29 @@ function App() {
   }, []);
 
   return (
-    <div>
-      <Router>
-        <Suspense fallback={<div className="min-h-screen flex items-center justify-center bg-gray-50">
-          <div className="text-center">
-            <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-600 mx-auto"></div>
-            <p className="mt-4 text-gray-600">Loading...</p>
-          </div>
-        </div>}>
-          <Routes>
-            <Route path='/' element={<Home />} />
-            <Route path='/about' element={<About />} />
-            <Route path='/services' element={<Services />} />
-            <Route path='/blog' element={<Blog />} />
-            <Route path='/contact' element={<Contact />} />
-            <Route path='/team' element={<Team />} />
-            <Route path='/privacy' element={<Privacy />} />
-            <Route path='/terms' element={<Terms />} />
-          </Routes>
-        </Suspense>
-      </Router>
-    </div>
+    <ErrorBoundary>
+      <SEOHead />
+      <PerformanceMonitor>
+        <AccessibilityEnhancer>
+          <Router>
+            <Suspense fallback={<LoadingSpinner size="xl" fullScreen text="Loading application..." />}>
+              <main id="main-content">
+                <Routes>
+                  <Route path='/' element={<Home />} />
+                  <Route path='/about' element={<About />} />
+                  <Route path='/services' element={<Services />} />
+                  <Route path='/blog' element={<Blog />} />
+                  <Route path='/contact' element={<Contact />} />
+                  <Route path='/team' element={<Team />} />
+                  <Route path='/privacy' element={<Privacy />} />
+                  <Route path='/terms' element={<Terms />} />
+                </Routes>
+              </main>
+            </Suspense>
+          </Router>
+        </AccessibilityEnhancer>
+      </PerformanceMonitor>
+    </ErrorBoundary>
   );
 }
 
