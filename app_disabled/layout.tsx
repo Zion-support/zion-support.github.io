@@ -1,8 +1,9 @@
 import React from 'react';
-import Link from 'next/link';
+// Using regular anchor tags instead of react-router-dom for simplicity
 import './globals.css';
 
-export const metadata = {
+// Metadata for SEO - handled by React Helmet in Vite projects
+const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
   description:
     'Enterprise-grade AI, micro SaaS, and IT solutions. Build faster with Zion Tech Group.',
@@ -41,27 +42,27 @@ function Header() {
   return (
     <header className='border-b border-gray-200 sticky top-0 z-50 bg-white shadow-sm'>
       <nav className='flex items-center justify-between px-4 py-3 max-w-6xl mx-auto'>
-        <Link
+        <a
           href='/'
           className='font-bold text-lg text-gray-900 hover:text-blue-600 transition-colors'
         >
           Zion Tech Group
-        </Link>
+        </a>
         <div className='hidden md:flex gap-6'>
-          <Link
+          <a
             href='/about'
             className='text-gray-700 hover:text-blue-600 transition-colors'
           >
             About
-          </Link>
-          <Link
+          </a>
+          <a
             href='/services'
             className='text-gray-700 hover:text-blue-600 transition-colors'
           >
             Services
-          </Link>
+          </a>
           <div className='relative group'>
-            <Link
+            <a
               href='/services/ai-autonomous-operations-2026'
               className='text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1'
             >
@@ -69,10 +70,10 @@ function Header() {
               <span className='bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-2 py-1 rounded-full text-xs font-semibold'>
                 REVOLUTIONARY
               </span>
-            </Link>
+            </a>
           </div>
           <div className='relative group'>
-            <Link
+            <a
               href='/content-hub'
               className='text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1'
             >
@@ -80,10 +81,10 @@ function Header() {
               <span className='bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-2 py-1 rounded-full text-xs font-semibold'>
                 NEW 2027
               </span>
-            </Link>
+            </a>
           </div>
           <div className='relative group'>
-            <Link
+            <a
               href='/blog/ai-2026-autonomous-business-intelligence-breakthrough'
               className='text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1'
             >
@@ -91,10 +92,10 @@ function Header() {
               <span className='bg-gradient-to-r from-green-500 to-emerald-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse'>
                 BREAKTHROUGH
               </span>
-            </Link>
+            </a>
           </div>
           <div className='relative group'>
-            <Link
+            <a
               href='/blog/ai-2026-quantum-enhanced-analytics'
               className='text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1'
             >
@@ -102,10 +103,10 @@ function Header() {
               <span className='bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse'>
                 1000x SPEED
               </span>
-            </Link>
+            </a>
           </div>
           <div className='relative group'>
-            <Link
+            <a
               href='/blog/ai-2028-next-generation-autonomous-enterprise'
               className='text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1'
             >
@@ -113,10 +114,10 @@ function Header() {
               <span className='bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse'>
                 REVOLUTIONARY
               </span>
-            </Link>
+            </a>
           </div>
           <div className='relative group'>
-            <Link
+            <a
               href='/blog/ai-2028-neuromorphic-superintelligence'
               className='text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1'
             >
@@ -124,10 +125,10 @@ function Header() {
               <span className='bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse'>
                 SUPERINTELLIGENCE
               </span>
-            </Link>
+            </a>
           </div>
           <div className='relative group'>
-            <Link
+            <a
               href='/blog/ai-2027-quantum-breakthrough-enterprise'
               className='text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1'
             >
@@ -135,10 +136,10 @@ function Header() {
               <span className='bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-2 py-1 rounded-full text-xs font-semibold'>
                 QUANTUM
               </span>
-            </Link>
+            </a>
           </div>
           <div className='relative group'>
-            <Link
+            <a
               href='/blog'
               className='text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1'
             >
@@ -149,10 +150,10 @@ function Header() {
               <span className='bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-2 py-1 rounded-full text-xs font-semibold ml-1'>
                 50+ ARTICLES
               </span>
-            </Link>
+            </a>
           </div>
           <div className='relative group'>
-            <Link
+            <a
               href='/case-studies'
               className='text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1'
             >
@@ -163,14 +164,14 @@ function Header() {
               <span className='bg-gradient-to-r from-green-500 to-teal-500 text-white px-2 py-1 rounded-full text-xs font-semibold ml-1'>
                 25+ STUDIES
               </span>
-            </Link>
+            </a>
           </div>
-          <Link
+          <a
             href='/contact'
             className='text-gray-700 hover:text-blue-600 transition-colors'
           >
             Contact
-          </Link>
+          </a>
         </div>
         <button className='md:hidden p-2' aria-label='Toggle menu'>
           <svg
@@ -200,36 +201,36 @@ function Footer() {
           <div>
             <h3 className='font-semibold text-gray-900 mb-3'>Services</h3>
             <div className='space-y-2'>
-              <Link
+              <a
                 href='/services'
                 className='block text-gray-600 hover:text-blue-600 transition-colors'
               >
                 All Services
-              </Link>
-              <Link
+              </a>
+              <a
                 href='/services/ai-autonomous-cloud-ops'
                 className='block text-gray-600 hover:text-blue-600 transition-colors'
               >
                 AI Autonomous Cloud Ops
-              </Link>
-              <Link
+              </a>
+              <a
                 href='/services/ai-fintech-transformation'
                 className='block text-gray-600 hover:text-blue-600 transition-colors'
               >
                 AI FinTech Transformation
-              </Link>
-              <Link
+              </a>
+              <a
                 href='/services/ai-retail-automation'
                 className='block text-gray-600 hover:text-blue-600 transition-colors'
               >
                 AI Retail Automation
-              </Link>
-              <Link
+              </a>
+              <a
                 href='/services/micro-saas'
                 className='block text-gray-600 hover:text-blue-600 transition-colors'
               >
                 Micro SaaS
-              </Link>
+              </a>
             </div>
           </div>
           <div>
@@ -237,7 +238,7 @@ function Footer() {
               Latest AI 2028 Revolutionary Content
             </h3>
             <div className='space-y-2'>
-              <Link
+              <a
                 href='/blog/ai-2028-next-generation-autonomous-enterprise'
                 className='block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2'
               >
@@ -245,8 +246,8 @@ function Footer() {
                 <span className='bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse'>
                   REVOLUTIONARY
                 </span>
-              </Link>
-              <Link
+              </a>
+              <a
                 href='/blog/ai-2028-neuromorphic-superintelligence'
                 className='block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2'
               >
@@ -254,8 +255,8 @@ function Footer() {
                 <span className='bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse'>
                   SUPERINTELLIGENCE
                 </span>
-              </Link>
-              <Link
+              </a>
+              <a
                 href='/case-studies/ai-2028-autonomous-enterprise-mega-success'
                 className='block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2'
               >
@@ -263,8 +264,8 @@ function Footer() {
                 <span className='bg-gradient-to-r from-green-500 to-emerald-500 text-white px-2 py-1 rounded-full text-xs font-semibold'>
                   MEGA
                 </span>
-              </Link>
-              <Link
+              </a>
+              <a
                 href='/case-studies/ai-2028-neuromorphic-superintelligence-success'
                 className='block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2'
               >
@@ -272,8 +273,8 @@ function Footer() {
                 <span className='bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-2 py-1 rounded-full text-xs font-semibold'>
                   BREAKTHROUGH
                 </span>
-              </Link>
-              <Link
+              </a>
+              <a
                 href='/blog/ai-2026-future-trends-breakthrough'
                 className='block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2'
               >
@@ -281,26 +282,26 @@ function Footer() {
                 <span className='bg-gradient-to-r from-red-500 to-orange-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse'>
                   BREAKTHROUGH
                 </span>
-              </Link>
-              <Link
+              </a>
+              <a
                 href='/blog/ai-future-workforce-2026'
                 className='block text-gray-600 hover:text-blue-600 transition-colors'
               >
                 👥 AI Future Workforce 2026
-              </Link>
-              <Link
+              </a>
+              <a
                 href='/blog/ai-cybersecurity-2026'
                 className='block text-gray-600 hover:text-blue-600 transition-colors'
               >
                 🛡️ AI Cybersecurity 2026
-              </Link>
-              <Link
+              </a>
+              <a
                 href='/case-studies/ai-finance-automation-success-2026'
                 className='block text-gray-600 hover:text-blue-600 transition-colors'
               >
                 💰 $15M Finance ROI
-              </Link>
-              <Link
+              </a>
+              <a
                 href='/case-studies'
                 className='block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2'
               >
@@ -308,30 +309,30 @@ function Footer() {
                 <span className='bg-yellow-500 text-white px-2 py-1 rounded-full text-xs font-semibold'>
                   FEATURED
                 </span>
-              </Link>
+              </a>
             </div>
           </div>
           <div>
             <h3 className='font-semibold text-gray-900 mb-3'>Content</h3>
             <div className='space-y-2'>
-              <Link
+              <a
                 href='/'
                 className='block text-gray-600 hover:text-blue-600 transition-colors'
               >
                 Home
-              </Link>
-              <Link
+              </a>
+              <a
                 href='/about'
                 className='block text-gray-600 hover:text-blue-600 transition-colors'
               >
                 About
-              </Link>
-              <Link
+              </a>
+              <a
                 href='/contact'
                 className='block text-gray-600 hover:text-blue-600 transition-colors'
               >
                 Contact
-              </Link>
+              </a>
               <a
                 href='https://ziontechgroup.com'
                 className='block text-gray-600 hover:text-blue-600 transition-colors'

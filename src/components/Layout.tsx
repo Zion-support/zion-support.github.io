@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-function Header() {
+function Header(): React.JSX.Element {
   return (
     <header className='border-b border-gray-200 sticky top-0 z-50 bg-white shadow-sm'>
       <nav className='flex items-center justify-between px-4 py-3 max-w-6xl mx-auto'>
@@ -101,7 +101,7 @@ function Header() {
   );
 }
 
-function Footer() {
+function Footer(): React.JSX.Element {
   return (
     <footer className='border-t border-gray-200 mt-10 py-6 bg-gray-50'>
       <div className='max-w-6xl mx-auto px-4'>

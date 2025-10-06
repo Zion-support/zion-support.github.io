@@ -1,7 +1,10 @@
+<<<<<<< HEAD
 /**
  * Jest setup file for testing environment
  */
 
+=======
+>>>>>>> main
 import '@testing-library/jest-dom';
 
 // Mock window.matchMedia
@@ -22,6 +25,7 @@ Object.defineProperty(window, 'matchMedia', {
 // Mock IntersectionObserver
 global.IntersectionObserver = class IntersectionObserver {
   root: Element | null = null;
+<<<<<<< HEAD
   rootMargin: string = '0px';
   thresholds: ReadonlyArray<number> = [0];
   
@@ -31,10 +35,22 @@ global.IntersectionObserver = class IntersectionObserver {
   unobserve() {}
   takeRecords() { return []; }
 } as any;
+=======
+  rootMargin: string = '';
+  thresholds: ReadonlyArray<number> = Object.freeze([]);
+  
+  constructor() {}
+  disconnect(): void {}
+  observe(): void {}
+  unobserve(): void {}
+  takeRecords(): IntersectionObserverEntry[] { return []; }
+} as unknown as typeof IntersectionObserver;
+>>>>>>> main
 
 // Mock ResizeObserver
 global.ResizeObserver = class ResizeObserver {
   constructor() {}
+<<<<<<< HEAD
   disconnect() {}
   observe() {}
   unobserve() {}
@@ -59,3 +75,9 @@ global.requestAnimationFrame = (callback: FrameRequestCallback) => {
 global.cancelAnimationFrame = (id: number) => {
   clearTimeout(id);
 };
+=======
+  disconnect(): void {}
+  observe(): void {}
+  unobserve(): void {}
+} as unknown as typeof ResizeObserver;
+>>>>>>> main
