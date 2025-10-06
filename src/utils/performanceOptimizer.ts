@@ -67,9 +67,12 @@ export const lazyLoadImages = (): void => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         const img = entry.target as HTMLImageElement;
-        img.src = img.dataset.src || '';
-        img.removeAttribute('data-src');
-        imageObserver.unobserve(img);
+        const src = img.dataset['src'];
+        if (src) {
+          img.src = src;
+          img.removeAttribute('data-src');
+          imageObserver.unobserve(img);
+        }
       }
     });
   });
@@ -163,7 +166,6 @@ class PerformanceOptimizer {
   public prefetchResources(urls: string[]): void {
     prefetchResources(urls);
   }
-
   public reportWebVitals(metrics: WebVitalsMetrics): void {
     if (process.env.NODE_ENV === 'development') {
       console.log('Web Vitals:', metrics);
@@ -183,6 +185,14 @@ class PerformanceOptimizer {
     }
   }
 
+  public measurePageLoad(): WebVitalsMetrics | null {
+    return measurePageLoad();
+  }
+
+  public monitorLongTasks(callback: (entries: PerformanceEntryList) => void): PerformanceObserver | null {
+    return monitorLongTasks(callback);
+  }
+
   // Get performance metrics
   getMetrics(): Record<string, number> {
     return Object.fromEntries(this.metrics);
@@ -198,8 +208,8 @@ class PerformanceOptimizer {
       { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
       { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossOrigin: 'anonymous' }
     ];
-    
-    hints.forEach(hint => {
+
+    hints.forEach((hint) => {
       const link = document.createElement('link');
       link.rel = hint.rel;
       link.href = hint.href;
