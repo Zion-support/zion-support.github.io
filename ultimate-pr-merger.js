@@ -24,7 +24,7 @@ function branchExists(branchName) {
   try {
     execSync(
       `git show-ref --verify --quiet refs/remotes/origin/${branchName}`,
-      { stdio: 'pipe' },
+      { stdio: 'pipe' }
     );
     return true;
   } catch {
@@ -84,7 +84,7 @@ const results = [];
 // Process each PR
 for (const pr of allPRs) {
   console.log(
-    `\n--- Processing PR #${pr.number}: ${pr.title} (Priority: ${pr.priority}) ---`,
+    `\n--- Processing PR #${pr.number}: ${pr.title} (Priority: ${pr.priority}) ---`
   );
   console.log(`📝 Description: ${pr.description}`);
 
@@ -107,7 +107,7 @@ for (const pr of allPRs) {
   // Try to merge the branch
   const mergeResult = safeGitCommand(
     `git merge origin/${pr.branch} --no-ff -m "Merge PR #${pr.number}: ${pr.title}"`,
-    `Merge ${pr.branch}`,
+    `Merge ${pr.branch}`
   );
 
   if (mergeResult.success) {
@@ -142,13 +142,13 @@ for (const pr of allPRs) {
 console.log('\n🔧 Running comprehensive system checks...');
 const typeCheck = safeGitCommand(
   'pnpm run type-check',
-  'TypeScript type checking',
+  'TypeScript type checking'
 );
 const lintCheck = safeGitCommand('pnpm run lint', 'ESLint linting');
 const testCheck = safeGitCommand('pnpm run test', 'Jest testing');
 const buildCheck = safeGitCommand(
   'pnpm run build:no-check',
-  'Production build',
+  'Production build'
 );
 
 // Push changes if any were merged
@@ -156,7 +156,7 @@ if (mergedCount > 0) {
   console.log('\n📤 Pushing changes to main...');
   const pushResult = safeGitCommand(
     'git push origin main',
-    'Push changes to main',
+    'Push changes to main'
   );
   if (pushResult.success) {
     console.log('✅ All changes pushed to main successfully');
@@ -199,7 +199,7 @@ const finalReport = {
 // Save detailed final report
 fs.writeFileSync(
   'ultimate-pr-merge-report.json',
-  JSON.stringify(finalReport, null, 2),
+  JSON.stringify(finalReport, null, 2)
 );
 
 console.log('\n📊 === ULTIMATE MERGE SUMMARY ===');
@@ -217,7 +217,7 @@ console.log(`Build: ${buildCheck.success ? '✅' : '❌'}`);
 
 if (finalReport.systemChecks.allPassed) {
   console.log(
-    '\n🎉 All system checks passed! Repository is in excellent condition.',
+    '\n🎉 All system checks passed! Repository is in excellent condition.'
   );
 } else {
   console.log('\n⚠️  Some system checks failed. Please review the issues.');

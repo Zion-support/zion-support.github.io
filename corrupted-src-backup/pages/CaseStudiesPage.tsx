@@ -7,7 +7,8 @@ const CaseStudiesPage: React.FC = () => {
     {
       id: 'fortune-100-manufacturing',
       title: 'Fortune 100 Manufacturing Company',
-      description: 'How we helped a Fortune 100 manufacturing company reduce costs by 40% using AI-powered optimization.',
+      description:
+        'How we helped a Fortune 100 manufacturing company reduce costs by 40% using AI-powered optimization.',
       results: [
         '40% cost reduction',
         '60% faster processing',
@@ -20,7 +21,8 @@ const CaseStudiesPage: React.FC = () => {
     {
       id: 'healthcare-provider',
       title: 'Healthcare Provider Network',
-      description: 'AI-driven patient care optimization that improved outcomes while reducing operational costs.',
+      description:
+        'AI-driven patient care optimization that improved outcomes while reducing operational costs.',
       results: [
         '25% better patient outcomes',
         '30% cost reduction',
@@ -33,7 +35,8 @@ const CaseStudiesPage: React.FC = () => {
     {
       id: 'financial-services',
       title: 'Financial Services Firm',
-      description: 'Advanced fraud detection and risk management system that prevented millions in losses.',
+      description:
+        'Advanced fraud detection and risk management system that prevented millions in losses.',
       results: [
         '99.8% fraud detection accuracy',
         '80% reduction in false positives',
@@ -46,7 +49,7 @@ const CaseStudiesPage: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+    <div className='min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100'>
       <Helmet>
         <title>Case Studies - Zion Tech Group</title>
         <meta
@@ -70,30 +73,34 @@ const CaseStudiesPage: React.FC = () => {
           <SuccessStoriesShowcase />
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {caseStudies.map((study) => (
-            <div key={study.id} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
-              <div className="mb-4">
-                <span className="inline-block bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">
+        <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>
+          {caseStudies.map(study => (
+            <div
+              key={study.id}
+              className='bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow'
+            >
+              <div className='mb-4'>
+                <span className='inline-block bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full'>
                   {study.industry}
                 </span>
-                <span className="ml-2 text-sm text-gray-500">
+                <span className='ml-2 text-sm text-gray-500'>
                   {study.duration}
                 </span>
               </div>
-              
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">
+
+              <h3 className='text-xl font-semibold text-gray-900 mb-2'>
                 {study.title}
               </h3>
-              
-              <p className="text-gray-600 mb-4">
-                {study.description}
-              </p>
-              
-              <ul className="space-y-2">
+
+              <p className='text-gray-600 mb-4'>{study.description}</p>
+
+              <ul className='space-y-2'>
                 {study.results.map((result, index) => (
-                  <li key={index} className="flex items-center text-sm text-gray-600">
-                    <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
+                  <li
+                    key={index}
+                    className='flex items-center text-sm text-gray-600'
+                  >
+                    <span className='w-2 h-2 bg-green-500 rounded-full mr-2'></span>
                     {result}
                   </li>
                 ))}

@@ -45,8 +45,8 @@ const API: React.FC = () => {
             </span>
           </h1>
           <p className='text-xl text-blue-100 mb-8 max-w-3xl mx-auto'>
-            Comprehensive API documentation for integrating with Zion Tech Group's
-            powerful services and data endpoints.
+            Comprehensive API documentation for integrating with Zion Tech
+            Group's powerful services and data endpoints.
           </p>
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>
             <Link
@@ -78,8 +78,8 @@ const API: React.FC = () => {
                 RESTful APIs
               </h3>
               <p className='text-gray-600'>
-                Clean, intuitive REST endpoints following industry best practices
-                for easy integration.
+                Clean, intuitive REST endpoints following industry best
+                practices for easy integration.
               </p>
             </div>
             <div className='text-center'>
@@ -156,9 +156,7 @@ const API: React.FC = () => {
                     <h4 className='font-semibold text-gray-900 mb-2'>
                       Response:
                     </h4>
-                    <p className='text-sm text-gray-600'>
-                      {endpoint.response}
-                    </p>
+                    <p className='text-sm text-gray-600'>{endpoint.response}</p>
                   </div>
                 </div>
               </div>

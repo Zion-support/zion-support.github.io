@@ -55,8 +55,7 @@ export const breakthroughContent2027 = [
     content: `
 *Ready to revolutionize your organization with conscious AI? Contact our Consciousness Specialists today.*
     `,
-    author:
-      'Dr. Elena Consciousness, Chief Synthetic Intelligence Officer',
+    author: 'Dr. Elena Consciousness, Chief Synthetic Intelligence Officer',
     date: '2027-01-25',
     category: 'Synthetic Consciousness',
     tags: [
@@ -82,13 +81,7 @@ export const caseStudies2027 = [
     author: 'Dr. Sarah Chen, Chief AI Consciousness Officer',
     date: '2027-01-15',
     category: 'Case Study',
-    tags: [
-      'consciousness',
-      'AI 2027',
-      'ROI',
-      'transformation',
-      'success',
-    ],
+    tags: ['consciousness', 'AI 2027', 'ROI', 'transformation', 'success'],
     featured: true,
     readTime: '18 min read',
   },

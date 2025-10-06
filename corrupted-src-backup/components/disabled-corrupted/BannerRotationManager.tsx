@@ -10,13 +10,13 @@ const bannerComponents = {
   advertising: lazy(() => import('./AdvertisingBanner')),
   'content-showcase': lazy(() => import('./ContentShowcase')),
   'content-value-testimonials': lazy(
-    () => import('./ContentValueTestimonials'),
+    () => import('./ContentValueTestimonials')
   ),
   'december-revolutionary': lazy(
-    () => import('./December2025RevolutionaryContentShowcase'),
+    () => import('./December2025RevolutionaryContentShowcase')
   ),
   'cognitive-orchestration': lazy(
-    () => import('./CognitiveOrchestrationMegaBanner'),
+    () => import('./CognitiveOrchestrationMegaBanner')
   ),
 };
 
