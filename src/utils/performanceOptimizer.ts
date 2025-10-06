@@ -1,110 +1,90 @@
 // Performance optimization utilities
-export default {
-  initialize() {
-    //Initialize performance monitoring
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      console.log('Performance optimizer initialized');
-    }
-  },
-  
-  lazyLoadImages() {
-    //Lazy load images for better performance
-    if (typeof window !== 'undefined') {
-      const images = document.querySelectorAll('img[data-src]');
-      const imageObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            const img = entry.target as HTMLImageElement;
-            img.src = img.dataset['src'] || '';
-            img.classList.remove('lazy');
-            imageObserver.unobserve(img);
-          }
-        });
-      });
-
-      images.forEach(img => imageObserver.observe(img));
-    }
-  },
-
-  debounce<T extends (...args: any[]) => any>(func: T, wait: number): T {
+export const performanceOptimizer = {
+  // Debounce function for performance
+  debounce: <T extends (...args: any[]) => any>(
+    func: T,
+    wait: number
+  ): ((...args: Parameters<T>) => void) => {
     let timeout: NodeJS.Timeout;
-    return ((...args: any[]) => {
+    return (...args: Parameters<T>) => {
       clearTimeout(timeout);
       timeout = setTimeout(() => func(...args), wait);
-    }) as T;
+    };
   },
 
-  throttle<T extends (...args: any[]) => any>(func: T, limit: number): T {
+  // Throttle function for performance
+  throttle: <T extends (...args: any[]) => any>(
+    func: T,
+    limit: number
+  ): ((...args: Parameters<T>) => void) => {
     let inThrottle: boolean;
-    return ((...args: any[]) => {
+    return (...args: Parameters<T>) => {
       if (!inThrottle) {
         func(...args);
         inThrottle = true;
         setTimeout(() => (inThrottle = false), limit);
       }
-    }) as T;
+    };
   },
 
-  measurePerformance(name: string, fn: () => void) {
-    const start = performance.now();
-    fn();
-    const end = performance.now();
-    console.log(`${name} took ${end - start} milliseconds`);
-  },
-
-  optimizeBundle() {
-    // Bundle optimization logic
-    console.log('Bundle optimization completed');
-  },
-
-  measurePageLoad() {
-    if (typeof window === 'undefined' || !window.performance) {
-      return null;
-    }
-    
-    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-    if (navigation) {
-      return {
-        domContentLoaded: navigation.domContentLoadedEventEnd - navigation.fetchStart,
-        domInteractive: navigation.domInteractive - navigation.fetchStart,
-        totalLoadTime: navigation.loadEventEnd - navigation.fetchStart,
-      };
-    }
-    return null;
-  },
-
-  reportWebVitals(metrics: any) {
-    console.log('Web Vitals:', metrics);
-  },
-
-  monitorLongTasks(callback: (entries: PerformanceEntry[]) => void) {
-    if (typeof window === 'undefined' || !window.PerformanceObserver) {
-      return null;
-    }
-
-    const observer = new PerformanceObserver((list) => {
-      callback(list.getEntries());
+  // Lazy load images
+  lazyLoadImages: () => {
+    const images = document.querySelectorAll('img[data-src]');
+    const imageObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const img = entry.target as HTMLImageElement;
+          img.src = img.dataset['src'] || '';
+          img.classList.remove('lazy');
+          observer.unobserve(img);
+        }
+      });
     });
 
-    observer.observe({ entryTypes: ['longtask'] });
-    return observer;
+    images.forEach(img => imageObserver.observe(img));
   },
 
-  preloadCriticalResources() {
-    // Preload critical resources
-    if (typeof document !== 'undefined') {
-      const criticalResources = [
-        '/fonts/main.woff2',
-        '/css/critical.css'
-      ];
+  // Preload critical resources
+  preloadCriticalResources: () => {
+    const criticalResources = [
+      '/assets/style.css',
+      '/assets/critical.js'
+    ];
 
-      criticalResources.forEach(resource => {
-        const link = document.createElement('link');
-        link.rel = 'preload';
-        link.href = resource;
-        link.as = resource.endsWith('.css') ? 'style' : 'font';
-        document.head.appendChild(link);
-      });
-    }
+    criticalResources.forEach(resource => {
+      const link = document.createElement('link');
+      link.rel = 'preload';
+      link.href = resource;
+      link.as = resource.endsWith('.css') ? 'style' : 'script';
+      document.head.appendChild(link);
+    });
+  },
+
+  // Optimize scroll performance
+  optimizeScroll: () => {
+    let ticking = false;
+    
+    const updateScrollPosition = () => {
+      // Add scroll-based optimizations here
+      ticking = false;
+    };
+
+    const requestTick = () => {
+      if (!ticking) {
+        requestAnimationFrame(updateScrollPosition);
+        ticking = true;
+      }
+    };
+
+    window.addEventListener('scroll', requestTick, { passive: true });
+  },
+
+  // Initialize all optimizations
+  init: () => {
+    performanceOptimizer.lazyLoadImages();
+    performanceOptimizer.preloadCriticalResources();
+    performanceOptimizer.optimizeScroll();
   }
 };
+
+export default performanceOptimizer;
