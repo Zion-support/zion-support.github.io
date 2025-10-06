@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-// import { performanceOptimizer } from '../../utils/performanceOptimizer';
+import { performanceOptimizer } from '../../src/utils/performanceOptimizer';
 import { getErrorMetrics, isErrorRateTooHigh } from '../../utils/errorHandling';
 
 interface DashboardData {
@@ -9,7 +9,10 @@ interface DashboardData {
     memoryUsage: number;
     slowComponents: number;
   };
-  errors: ReturnType<typeof getErrorMetrics>;
+  errors: {
+    totalErrors: number;
+    errorRate: number;
+  };
   isHealthy: boolean;
   timestamp: Date;
 }
@@ -21,15 +24,19 @@ const PerformanceDashboard: React.FC = () => {
 
   useEffect(() => {
     const updateData = () => {
+      const metrics = performanceOptimizer.getMetrics();
       const performance = {
-        averageRenderTime: 0,
-        totalComponents: 0,
-        memoryUsage: 0,
-        slowComponents: 0
+        averageRenderTime: metrics.averageRenderTime || 0,
+        totalComponents: metrics.totalComponents || 0,
+        memoryUsage: metrics.memoryUsage || 0,
+        slowComponents: metrics.slowComponents || 0,
       };
-      const errors = getErrorMetrics();
-      const isHealthy =
-        !isErrorRateTooHigh() && performance.averageRenderTime < 16;
+      const errorMetrics = getErrorMetrics();
+      const errors = {
+        totalErrors: errorMetrics.totalErrors || 0,
+        errorRate: errorMetrics.errorRate || 0,
+      };
+      const isHealthy = !isErrorRateTooHigh() && performance.averageRenderTime < 16;
 
       setData({
         performance,
