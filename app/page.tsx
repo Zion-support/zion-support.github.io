@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Suspense } from 'react';
 import { Link } from 'react-router-dom';
 import UnifiedContentPromotion from './components/UnifiedContentPromotion';
@@ -21,9 +20,6 @@ import InteractiveContentShowcase2026 from './components/InteractiveContentShowc
 const LoadingFallback = ({ height = 'h-32' }: { height?: string }) => (
   <div className={`${height} bg-gray-200 animate-pulse rounded`}></div>
 );
-=======
-import Link from 'next/link';
->>>>>>> cursor/fix-errors-and-merge-to-main-e9bd
 
 export default function HomePage() {
   const structuredData = {
