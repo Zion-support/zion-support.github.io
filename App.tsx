@@ -190,7 +190,6 @@ export default function App() {
       (window as any).gtag('event', 'phone_click', {
     if (typeof window !== 'undefined' && (window as unknown as { gtag?: Function }).gtag) {
       ((window as unknown as { gtag: Function }).gtag)('event', 'phone_click', {
->>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572
         event_category: 'engagement',
         event_label: 'main_phone_number'
       });
@@ -198,7 +197,6 @@ export default function App() {
 
   const handleScrollToTop = useCallback(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
->>>>>>> 6c45f99dc7ca17bbf478e03055adf8e9c75097bc
   }, []);
 
   return (

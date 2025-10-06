@@ -6,6 +6,7 @@ by choosing the HEAD version and cleaning up conflict markers.
 
 import os
 import re
+import glob
 import sys
 from pathlib import Path
 
@@ -61,7 +62,8 @@ def main():
         '*.jsx'
     ]
     
-    files = [f.strip() for f in result.split('\n') if f.strip()]
+    files_processed = 0
+    files_fixed = 0
     
     for pattern in patterns:
         for file_path in glob.glob(pattern, recursive=True):

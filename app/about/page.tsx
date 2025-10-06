@@ -1,6 +1,5 @@
 import React from 'react';
 
->>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572
 const AboutPage: React.FC = () => {
   return (
     <div className='min-h-screen bg-white py-16'>
@@ -125,7 +124,6 @@ export default function AboutPage() {
             <p className='text-gray-600'>
               To be the global leader in AI-driven business transformation, empowering organizations to achieve unprecedented efficiency and innovation.
             </p>
->>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572
           </div>
         </div>
       </div>
@@ -134,4 +132,3 @@ export default function AboutPage() {
 };
 export default AboutPage;
 }
->>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572

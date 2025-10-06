@@ -44,9 +44,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   }, [structuredData]);
 
 import React, { ReactNode } from 'react';
->>>>>>> main
->>>>>>> main
->>>>>>> main
 import { Helmet } from 'react-helmet-async';
 
 interface SEOOptimizerProps {
@@ -157,9 +154,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ children }) => {
         <meta name="twitter:description" content="Transform your business with cutting-edge AI micro SaaS services, cloud automation, and enterprise IT solutions." />
         <meta name="twitter:image" content="https://ziontechgroup.com/og-image.jpg" />
         <link rel="canonical" href="https://ziontechgroup.com" />
->>>>>>> main
       </Helmet>
->>>>>>> main
       {children}
     </>
   );

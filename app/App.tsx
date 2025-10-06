@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 
 // Components
->>>>>>> main
 import ErrorBoundary from '../src/components/ErrorBoundary';
 import SEOOptimizer from '../src/components/SEOOptimizer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
@@ -17,7 +16,6 @@ import LoadingSpinner from './components/LoadingSpinner';
 
 // Styles
 import '../src/index.css';
-=======
 import ErrorBoundary from '../src/components/ErrorBoundary';
 import SEOOptimizer from '../src/components/SEOOptimizer';
 import AccessibilityEnhancer from '../src/components/AccessibilityEnhancer';
@@ -34,8 +32,6 @@ import LoadingSpinner from './components/LoadingSpinner';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import PerformanceDashboard from './components/PerformanceDashboard';
 import PerformanceMonitor from './components/PerformanceMonitor';
->>>>>>> main
->>>>>>> main
 
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./page'));
@@ -58,16 +54,10 @@ import LoadingSpinner from '../src/components/LoadingSpinner';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import AccessibilityEnhancer from '../components/disabled/AccessibilityEnhancer';
 import PerformanceDashboard from './components/PerformanceDashboard';
-=======
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import PerformanceDashboard from './components/PerformanceDashboard';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
->>>>>>> main
 
 // Loading component (fallback if import fails)
 const LoadingSpinnerFallback = () => (
@@ -77,20 +67,15 @@ const LoadingSpinner = () => (
     <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
   </div>
 );
->>>>>>> main
 
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./page'));
-=======
 // Pages
 import HomePage from './page';
->>>>>>> main
 
 // Utils
 import { performanceOptimizer } from '../src/utils/performanceOptimizer';
 // import performanceOptimizer from '../src/utils/performanceOptimizer';
->>>>>>> main
->>>>>>> main
 
 // Styles
 import './globals.css';
@@ -113,7 +98,6 @@ const App: React.FC = () => {
       }
     }
     
-=======
     performanceOptimizer.lazyLoadImages();
     // Initialize Web Vitals monitoring
     if (typeof window !== 'undefined' && 'performance' in window) {
@@ -121,19 +105,13 @@ const App: React.FC = () => {
     performanceOptimizer.addCriticalResourceHints();
     // Initialize Web Vitals monitoring
     if (typeof window !== 'undefined' && 'performance' in window) {
->>>>>>> main
->>>>>>> main
       const metrics = performanceOptimizer.measurePageLoad();
       if (metrics) {
->>>>>>> main
         performanceOptimizer.reportWebVitals(metrics);
       });
     }
-=======
     console.log('Performance monitoring initialized');
->>>>>>> main
 
->>>>>>> main
     console.log('Performance monitoring initialized');
     console.log(
       '🚀 Zion Tech Group App initialized with comprehensive monitoring',
@@ -191,8 +169,6 @@ const App: React.FC = () => {
             <AccessibilityEnhancer>
         <SEOOptimizer>
           <AccessibilityEnhancer>
->>>>>>> main
->>>>>>> main
             <Router>
               <div className='App'>
                 {/* Skip to main content link for accessibility */}
@@ -241,10 +217,7 @@ const App: React.FC = () => {
         </PerformanceMonitor>
           </AccessibilityEnhancer>
         </SEOOptimizer>
->>>>>>> main
->>>>>>> main
       </ErrorBoundary>
->>>>>>> main
     </HelmetProvider>
   );
 };

@@ -45,7 +45,6 @@ const SEOOptimizer: React.FC = () => {
         </p>
       </div>
     </div>
->>>>>>> origin/fix-errors-final
   );
 };
 
