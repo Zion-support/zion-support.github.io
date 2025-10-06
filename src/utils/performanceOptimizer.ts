@@ -120,11 +120,7 @@ class PerformanceOptimizer {
     return Object.fromEntries(this.metrics);
   }
 
-<<<<<<< HEAD
-  // Add critical resource hints
-=======
   // Add critical resource hints method
->>>>>>> main
   addCriticalResourceHints(): void {
     if (typeof document === 'undefined') return;
     
@@ -147,11 +143,7 @@ class PerformanceOptimizer {
   }
 
   // Measure page load performance
-<<<<<<< HEAD
-  measurePageLoad(): Record<string, number> | null {
-=======
   measurePageLoad(): WebVitalsMetrics | null {
->>>>>>> main
     if (typeof window === 'undefined' || !window.performance) {
       return null;
     }
@@ -159,13 +151,6 @@ class PerformanceOptimizer {
     const timing = window.performance.timing;
     const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
     
-<<<<<<< HEAD
-    return {
-      domContentLoaded: timing.domContentLoadedEventEnd - timing.navigationStart,
-      loadComplete: timing.loadEventEnd - timing.navigationStart,
-      firstPaint: navigation ? navigation.loadEventEnd - navigation.startTime : 0,
-      firstContentfulPaint: navigation ? navigation.loadEventEnd - navigation.startTime : 0
-=======
     const loadTime = timing.loadEventEnd - timing.navigationStart;
     const interactiveTime = timing.domInteractive - timing.navigationStart;
     
@@ -174,22 +159,10 @@ class PerformanceOptimizer {
       interactiveTime,
       FCP: navigation?.responseStart - navigation?.fetchStart,
       TTFB: timing.responseStart - timing.navigationStart
->>>>>>> main
     };
   }
 
   // Report web vitals
-<<<<<<< HEAD
-  reportWebVitals(metrics: Record<string, number>): void {
-    if (process.env.NODE_ENV === 'development') {
-      console.log('Web Vitals:', metrics);
-    }
-    
-    // Store metrics for analysis
-    Object.entries(metrics).forEach(([key, value]) => {
-      this.metrics.set(key, value);
-    });
-=======
   reportWebVitals(metrics: WebVitalsMetrics): void {
     if (process.env.NODE_ENV === 'development') {
       console.log('Web Vitals:', metrics);
@@ -207,7 +180,6 @@ class PerformanceOptimizer {
         }
       });
     }
->>>>>>> main
   }
 
   // Initialize all optimizations
@@ -215,6 +187,7 @@ class PerformanceOptimizer {
     this.measurePerformance('lazyLoadImages', () => this.lazyLoadImages());
     this.measurePerformance('preloadCriticalResources', () => this.preloadCriticalResources());
     this.measurePerformance('optimizeScroll', () => this.optimizeScroll());
+    this.measurePerformance('addCriticalResourceHints', () => this.addCriticalResourceHints());
   }
 }
 
@@ -232,10 +205,6 @@ export const prefetchResources = (urls: string[]): void => {
   });
 };
 
-<<<<<<< HEAD
-// Export singleton instance
-export const performanceOptimizer = PerformanceOptimizer.getInstance();
-=======
 /**
  * Preconnect to external domains
  */
@@ -533,4 +502,3 @@ export default {
   clearOldCaches,
   checkPerformanceBudget
 };
->>>>>>> main
