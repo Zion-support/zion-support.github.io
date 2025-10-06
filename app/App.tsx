@@ -14,7 +14,7 @@ const HomePage = lazy(() => import('./page'));
 
 // Loading component is imported from components/LoadingComponents
 // Utils
-import performanceOptimizer from '../src/utils/performanceOptimizer';
+import { performanceOptimizer } from '../src/utils/performanceOptimizer';
 
 // Styles
 import '../index.css';

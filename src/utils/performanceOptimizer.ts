@@ -74,6 +74,16 @@ class PerformanceOptimizer {
     });
   }
 
+  // Prefetch resources for better performance
+  prefetchResources(resources: string[]): void {
+    resources.forEach((resource) => {
+      const link = document.createElement('link');
+      link.rel = 'prefetch';
+      link.href = resource;
+      document.head.appendChild(link);
+    });
+  }
+
   // Optimize scroll performance
   optimizeScroll(): void {
     let ticking = false;
