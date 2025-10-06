@@ -176,7 +176,17 @@ export const useLongTaskMonitoring = () => {
   useEffect(() => {
     const observer = performanceOptimizer.monitorLongTasks((entries: PerformanceEntry[]) => {
       entries.forEach((entry: PerformanceEntry) => {
+<<<<<<< HEAD
         analytics.track('long_task', 'performance', 'detected', undefined, entry.duration);
+=======
+        analytics.track(
+          'long_task',
+          'performance',
+          'detected',
+          undefined,
+          entry.duration
+        );
+>>>>>>> main
       });
     });
 

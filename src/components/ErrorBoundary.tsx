@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 import { Component, type ErrorInfo, type ReactNode } from 'react';
+=======
+import { Component } from 'react';
+import type { ErrorInfo, ReactNode } from 'react';
+>>>>>>> main
 
 interface Props {
   children: ReactNode;
@@ -29,9 +34,13 @@ class ErrorBoundary extends Component<Props, State> {
       return this.props.fallback || (
         <div className="min-h-screen flex items-center justify-center bg-gray-900">
           <div className="text-center p-8">
+<<<<<<< HEAD
             <div className="w-16 h-16 bg-red-500 rounded-full mx-auto mb-4 flex items-center justify-center">
               <span className="text-white text-2xl font-bold">!</span>
             </div>
+=======
+            <div className="w-16 h-16 text-red-500 mx-auto mb-4 text-6xl">⚠️</div>
+>>>>>>> main
             <h1 className="text-2xl font-bold text-white mb-4">Something went wrong</h1>
             <p className="text-gray-300 mb-6">
               We're sorry, but something unexpected happened. Please try refreshing the page.
@@ -42,6 +51,7 @@ class ErrorBoundary extends Component<Props, State> {
             >
               Refresh Page
             </button>
+            <p className="text-gray-400 mb-8">We're working to fix this issue.</p>
           </div>
         </div>
       );
