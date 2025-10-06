@@ -106,7 +106,7 @@ export const october2025Breakthroughs: BlogPost[] = [
     featured: true,
     valueProposition: '$127M annual savings',
   },
->>>>>>> origin/merge-fixes-20251005-193002
+  {
     slug: 'ai-2025-oct-02-rollback-guardrails-blueprint',
     title: 'Runtime Rollback Guardrails Blueprint',
     description: 'Implement instant rollbacks, canary scorecards, and objective quality budgets.',
@@ -117,7 +117,38 @@ export const october2025Breakthroughs: BlogPost[] = [
     featured: true,
     valueProposition: 'Instant reversibility, resilient releases',
   },
->>>>>>> origin/merge-fixes-20251005-193002
+];
+
+// Combine all blog posts
+export const allBlogPosts: BlogPost[] = [
+  ...october2025Breakthroughs,
+];
+
+// Helper functions
+export const getFeaturedPosts = (): BlogPost[] => {
+  return allBlogPosts.filter(post => post.featured);
+};
+
+export const getPostsByCategory = (category: string): BlogPost[] => {
+  return allBlogPosts.filter(post => post.category === category);
+};
+
+export const getAllCategories = (): string[] => {
+  return [...new Set(allBlogPosts.map(post => post.category))];
+};
+
+export const getAllTags = (): string[] => {
+  return [...new Set(allBlogPosts.flatMap(post => post.tags))];
+};
+
+export const getTotalValueProposition = (): string => {
+  const totalValue = allBlogPosts.reduce((sum, post) => {
+    const value = post.valueProposition.match(/\$(\d+)M/);
+    return sum + (value ? parseInt(value[1]) : 0);
+  }, 0);
+  return `$${totalValue}M+ total value proposition`;
+};
+
 export const blogStats = {
   totalPosts: allBlogPosts.length,
   featuredPosts: getFeaturedPosts().length,
