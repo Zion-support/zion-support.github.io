@@ -102,8 +102,8 @@ export const usePageLoadPerformance = () => {
             domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
             loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
             firstByte: navigation.responseStart - navigation.requestStart,
-            domInteractive: navigation.domInteractive - navigation.navigationStart,
-            totalLoadTime: navigation.loadEventEnd - navigation.navigationStart,
+            domInteractive: navigation.domInteractive - navigation.fetchStart,
+            totalLoadTime: navigation.loadEventEnd - navigation.fetchStart,
           };
 
           // Track each metric
@@ -120,6 +120,7 @@ export const usePageLoadPerformance = () => {
     // Track immediately if page is already loaded
     if (document.readyState === 'complete') {
       trackPageLoad();
+      return undefined;
     } else {
       // Wait for load event
       window.addEventListener('load', trackPageLoad);
