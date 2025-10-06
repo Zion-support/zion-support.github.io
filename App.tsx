@@ -1,6 +1,11 @@
 import React, { memo, useMemo, useCallback, Suspense } from 'react';
 import { HelmetProvider, Helmet } from 'react-helmet-async';
 
+// Declare gtag for analytics
+declare global {
+  function gtag(...args: any[]): void;
+}
+
 // Memoized components for better performance
 const UnifiedContentPromotion = memo(() => (
   <div className='bg-gradient-to-r from-blue-600 to-purple-700 text-white py-16'>
@@ -47,17 +52,26 @@ const InteractiveContentShowcase2026 = memo(() => (
 ));
 
 // Error Boundary Component
-class ErrorBoundary extends React.Component {
-  constructor(props) {
+interface ErrorBoundaryState {
+  hasError: boolean;
+  error: Error | null;
+}
+
+interface ErrorBoundaryProps {
+  children: React.ReactNode;
+}
+
+class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundaryState> {
+  constructor(props: ErrorBoundaryProps) {
     super(props);
     this.state = { hasError: false, error: null };
   }
 
-  static getDerivedStateFromError(error) {
+  static getDerivedStateFromError(error: Error): ErrorBoundaryState {
     return { hasError: true, error };
   }
 
-  componentDidCatch(error, errorInfo) {
+  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
     console.error('App Error Boundary caught an error:', error, errorInfo);
   }
 
@@ -174,9 +188,10 @@ export default function App() {
   }, []);
 
   // Memoized event handlers for better performance
-  const handleNewsletterSubmit = useCallback((e) => {
+  const handleNewsletterSubmit = useCallback((e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const email = e.target.email.value;
+    const target = e.target as HTMLFormElement;
+    const email = (target.elements.namedItem('email') as HTMLInputElement)?.value;
     if (email) {
       console.log('Newsletter signup:', email);
       // Add actual newsletter signup logic here
