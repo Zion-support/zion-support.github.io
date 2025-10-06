@@ -4,12 +4,12 @@
  */
 
 export interface ErrorContext {
-  component?: string;
-  action?: string;
-  userId?: string;
+  component?: string | undefined;
+  action?: string | undefined;
+  userId?: string | undefined;
   timestamp: number;
-  userAgent?: string;
-  url?: string;
+  userAgent?: string | undefined;
+  url?: string | undefined;
 }
 
 export interface ErrorReport {
