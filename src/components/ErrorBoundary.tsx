@@ -1,10 +1,15 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';
+import { Component, ErrorInfo, ReactNode } from 'react';
 import { AlertTriangle } from 'lucide-react';
 
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
->>>>>>> origin/merge-fixes-20251005-193002
+}
+
+interface State {
+  hasError: boolean;
+  error?: Error;
+}
 
 class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
@@ -30,10 +35,20 @@ class ErrorBoundary extends Component<Props, State> {
             <p className="text-gray-300 mb-6">
               We're sorry, but something unexpected happened. Please try refreshing the page.
             </p>
-            <button
-              onClick={() => window.location.reload()}
-              className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
             <p className="text-gray-400 mb-8">We're working to fix this issue.</p>
             <button
               onClick={() => window.location.reload()}
               className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors"
+            >
+              Refresh Page
+            </button>
+          </div>
+        </div>
+      );
+    }
+
+    return this.props.children;
+  }
+}
+
+export default ErrorBoundary;
