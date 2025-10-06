@@ -2,7 +2,6 @@
  * Comprehensive optimization utilities that integrate accessibility, performance, and SEO
  */
 import {
-<<<<<<< HEAD
   focusManagement,
   ariaUtils,
   keyboardNavigation,
@@ -10,15 +9,10 @@ import {
   screenReader,
   formAccessibility,
   motionAccessibility,
-  initAccessibility
-} from './accessibilityUtils';
-
-=======
+  initAccessibility,
   accessibilityTesting,
-  ariaUtils,
   motionUtils
 } from './accessibilityUtils';
->>>>>>> cursor/fix-errors-and-merge-to-main-13eb
 import {
   getMemoryUsage,
   collectPerformanceMetrics,
@@ -29,10 +23,6 @@ import {
   preloadCriticalResources,
   optimizeScrollPerformance
 } from './performanceUtils';
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-13eb
 import {
   setMetaTags,
   setOpenGraphTags,
@@ -51,15 +41,11 @@ import {
   schemaGenerators,
   seoAudit
 } from './seoUtils';
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-13eb
 /**
  * Comprehensive optimization configuration
  */
 export interface OptimizationConfig {
-<<<<<<< HEAD
   accessibility: {
     enableFocusManagement: boolean;
     enableAriaUtils: boolean;
@@ -93,13 +79,11 @@ export interface OptimizationConfig {
     maxLoadTime: number;
     maxMemoryUsage: number;
     maxBundleSize: number;
->>>>>>> cursor/fix-errors-and-merge-to-main-13eb
   };
   accessibilityLevel: 'AA' | 'AAA';
   seoLevel: 'basic' | 'advanced';
 }
 
-<<<<<<< HEAD
 /**
  * Default optimization configuration
  */
@@ -237,12 +221,10 @@ export class ComprehensiveOptimizer {
     if (motionUtils.prefersReducedMotion()) {
       document.documentElement.style.setProperty('--animation-duration', '0s');
       document.documentElement.style.setProperty('--transition-duration', '0s');
->>>>>>> cursor/fix-errors-and-merge-to-main-13eb
     }
     // Add skip links
     this.addSkipLinks();
   }
-<<<<<<< HEAD
 
   /**
    * Optimize page for performance
@@ -636,13 +618,11 @@ export class ComprehensiveOptimizer {
       },
       recommendations
     };
->>>>>>> cursor/fix-errors-and-merge-to-main-13eb
   }
 
   /**
    * Update configuration
    */
-<<<<<<< HEAD
   public updateConfig(newConfig: Partial<OptimizationConfig>): void {
     this.config = { ...this.config, ...newConfig };
   }
@@ -695,4 +675,3 @@ export async function quickOptimize(): Promise<void> {
   const optimizer = await createComprehensiveOptimizer();
   console.log('Quick optimization completed:', optimizer.getOptimizationReport());
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-13eb

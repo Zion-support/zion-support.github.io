@@ -22,22 +22,15 @@ export const setOpenGraphTags = (ogData: {
   image?: string;
   url?: string;
   type?: string;
-<<<<<<< HEAD
   siteName?: string;
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-13eb
 }): void => {
   const ogTags = {
     'og:title': ogData.title,
     'og:description': ogData.description,
     'og:image': ogData.image,
     'og:url': ogData.url,
-<<<<<<< HEAD
     'og:type': ogData.type || 'website',
     'og:site_name': ogData.siteName,
-=======
-    'og:type': ogData.type
->>>>>>> cursor/fix-errors-and-merge-to-main-13eb
   };
 
   Object.entries(ogTags).forEach(([property, content]) => {
@@ -59,7 +52,6 @@ export const setTwitterCardTags = (twitterData: {
   title?: string;
   description?: string;
   image?: string;
-<<<<<<< HEAD
   site?: string;
   creator?: string;
 }): void => {
@@ -69,15 +61,15 @@ export const setTwitterCardTags = (twitterData: {
     'twitter:description': twitterData.description,
     'twitter:image': twitterData.image,
     'twitter:site': twitterData.site,
-    'twitter:creator': twitterData.creator,
-=======
+    'twitter:creator': twitterData.creator
 }): void => {
   const twitterTags = {
-    'twitter:card': twitterData.card,
+    'twitter:card': twitterData.card || 'summary_large_image',
     'twitter:title': twitterData.title,
     'twitter:description': twitterData.description,
-    'twitter:image': twitterData.image
->>>>>>> cursor/fix-errors-and-merge-to-main-13eb
+    'twitter:image': twitterData.image,
+    'twitter:site': twitterData.site,
+    'twitter:creator': twitterData.creator
   };
 
   Object.entries(twitterTags).forEach(([name, content]) => {
@@ -101,7 +93,6 @@ export const setStructuredData = (data: Record<string, unknown>): void => {
   document.head.appendChild(script);
 };
 
-<<<<<<< HEAD
 // Canonical URL
 export const setCanonicalUrl = (url: string): void => {
   let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
@@ -271,5 +262,4 @@ export default {
   generateSitemap,
   optimizeImages,
   generateRobotsTxt
->>>>>>> cursor/fix-errors-and-merge-to-main-13eb
 };

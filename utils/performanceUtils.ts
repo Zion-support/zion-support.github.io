@@ -9,10 +9,6 @@ export const debounce = <T extends (...args: any[]) => any>(
   immediate = false
 ): ((...args: Parameters<T>) => void) => {
   let timeout: NodeJS.Timeout | null = null;
-<<<<<<< HEAD
-=======
-  
->>>>>>> cursor/fix-errors-and-merge-to-main-13eb
   return function executedFunction(...args: Parameters<T>) {
     const later = () => {
       timeout = null;
@@ -32,24 +28,15 @@ export const throttle = <T extends (...args: any[]) => any>(
   limit: number
 ): ((...args: Parameters<T>) => void) => {
   let inThrottle: boolean;
-<<<<<<< HEAD
-=======
-  
->>>>>>> cursor/fix-errors-and-merge-to-main-13eb
   return function executedFunction(this: any, ...args: Parameters<T>) {
     if (!inThrottle) {
       func.apply(this, args);
       inThrottle = true;
-<<<<<<< HEAD
       setTimeout(() => (inThrottle = false), limit);
-=======
-      setTimeout(() => inThrottle = false, limit);
->>>>>>> cursor/fix-errors-and-merge-to-main-13eb
     }
   };
 };
 
-<<<<<<< HEAD
 // Memory usage monitoring
 export const getMemoryUsage = (): {
   used: number;
@@ -226,30 +213,10 @@ export const lazyLoadImages = (): void => {
   document.querySelectorAll('img[data-src]').forEach((img) => {
     imageObserver.observe(img);
   });
-=======
-// Lazy load images
-export const lazyLoadImages = (): void => {
-  if (typeof window === 'undefined') return;
-
-  const images = document.querySelectorAll('img[data-src]');
-  const imageObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const img = entry.target as HTMLImageElement;
-        img.src = img.dataset['src'] || '';
-        img.removeAttribute('data-src');
-        imageObserver.unobserve(img);
-      }
-    });
-  });
-
-  images.forEach(img => imageObserver.observe(img));
->>>>>>> cursor/fix-errors-and-merge-to-main-13eb
 };
 
 // Preload critical resources
 export const preloadCriticalResources = (): void => {
-<<<<<<< HEAD
   if (typeof document === 'undefined') return;
 
   const criticalResources = [
@@ -267,41 +234,19 @@ export const preloadCriticalResources = (): void => {
       link.type = resource.type;
     }
     if (resource.as === 'font') {
-=======
-  if (typeof window === 'undefined') return;
-
-  const criticalResources = [
-    '/fonts/main.woff2',
-    '/css/critical.css'
-  ];
-
-  criticalResources.forEach(resource => {
-    const link = document.createElement('link');
-    link.rel = 'preload';
-    link.href = resource;
-    link.as = resource.endsWith('.css') ? 'style' : 'font';
-    if (resource.endsWith('.woff2')) {
->>>>>>> cursor/fix-errors-and-merge-to-main-13eb
       link.crossOrigin = 'anonymous';
     }
     document.head.appendChild(link);
   });
 };
 
-<<<<<<< HEAD
 // Scroll performance optimization
-=======
-// Optimize scroll performance
->>>>>>> cursor/fix-errors-and-merge-to-main-13eb
 export const optimizeScrollPerformance = (): void => {
   if (typeof window === 'undefined') return;
 
   let ticking = false;
 
   const updateScrollPosition = () => {
-<<<<<<< HEAD
-    // Throttled scroll handling
-=======
     // Update scroll position indicators
     const scrollY = window.scrollY;
     const windowHeight = window.innerHeight;
@@ -314,7 +259,6 @@ export const optimizeScrollPerformance = (): void => {
       (progressBar as HTMLElement).style.width = `${scrollPercent}%`;
     }
 
->>>>>>> cursor/fix-errors-and-merge-to-main-13eb
     ticking = false;
   };
 
@@ -326,8 +270,6 @@ export const optimizeScrollPerformance = (): void => {
   };
 
   window.addEventListener('scroll', requestTick, { passive: true });
-<<<<<<< HEAD
-=======
 };
 
 // Performance monitor
@@ -399,5 +341,4 @@ export default {
   performanceMonitor,
   collectPerformanceMetrics,
   getMemoryUsage
->>>>>>> cursor/fix-errors-and-merge-to-main-13eb
 };
