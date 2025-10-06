@@ -1,24 +1,27 @@
 import React from 'react';
 import Link from 'next/link';
 import { Metadata } from 'next';
-import { ArrowLeft, CheckCircle, Star, TrendingUp, Users, Zap } from 'lucide-react';
+import { ArrowLeft, Target, TrendingUp, Users, Zap, CheckCircle, Star, ArrowRight } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Services Advertising & Pricing | Zion Tech Group',
-  description: 'Comprehensive overview of all Zion Tech Group services with competitive pricing, market comparisons, and ROI benefits. Contact us for custom quotes.',
-  keywords: 'AI services pricing, micro SaaS pricing, IT services cost, technology consulting rates, enterprise solutions pricing',
+  title: 'AI Advertising Services & Pricing | Zion Tech Group',
+  description: 'Revolutionize your marketing with AI-powered advertising solutions. Achieve 300% ROI, 95% targeting accuracy, and 60% cost reduction with our breakthrough AI technology.',
+  keywords: 'AI advertising services, AI marketing solutions, programmatic advertising, AI targeting, marketing automation, advertising ROI, AI campaign optimization',
+  openGraph: {
+    title: 'AI Advertising Services & Pricing | Zion Tech Group',
+    description: 'Revolutionize your marketing with AI-powered advertising solutions. Achieve 300% ROI, 95% targeting accuracy, and 60% cost reduction.',
+    type: 'website',
+    url: 'https://ziontechgroup.com/services-advertising',
+  },
 };
 
 export default function ServicesAdvertisingPage() {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       {/* Header */}
       <header className="bg-white shadow-sm border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-          <Link 
-            href="/"
-            className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors"
-          >
+          <Link href="/" className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-200">
             <ArrowLeft className="w-4 h-4 mr-2" />
             Back to Home
           </Link>
@@ -26,124 +29,125 @@ export default function ServicesAdvertisingPage() {
       </header>
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative overflow-hidden bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
+        <div className="absolute inset-0 bg-black opacity-20"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <div className="inline-flex items-center px-4 py-2 bg-white/20 rounded-full text-sm font-medium mb-6">
-              <Zap className="w-4 h-4 mr-2" />
-              🎯 AI-Powered Advertising Solutions
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-600 text-sm font-semibold mb-6">
+              <Target className="w-4 h-4 mr-2" />
+              AI-Powered Advertising Solutions
             </div>
             
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
               AI Advertising Services
             </h1>
             
-            <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-3xl mx-auto">
-              Transform your advertising with AI-powered solutions that deliver measurable results and exceptional ROI.
+            <p className="text-xl md:text-2xl mb-8 text-gray-200 max-w-3xl mx-auto">
+              Revolutionize Your Marketing with 300% ROI Guaranteed
+            </p>
+            
+            <p className="text-lg mb-8 text-gray-300 max-w-4xl mx-auto">
+              Transform your advertising campaigns with our breakthrough AI technology. Achieve 95% targeting accuracy, 
+              60% cost reduction, and 300% ROI with intelligent automation and predictive analytics.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 href="/contact"
-                className="inline-flex items-center px-8 py-4 bg-white text-blue-600 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
+                className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200 inline-flex items-center"
               >
-                Get Started
-                <ArrowLeft className="w-4 h-4 ml-2" />
+                Start Free Consultation
+                <ArrowRight className="w-4 h-4 ml-2" />
               </Link>
               <Link 
-                href="/case-studies"
-                className="inline-flex items-center px-8 py-4 border border-white text-white rounded-lg font-semibold hover:bg-white/10 transition-colors"
+                href="#services"
+                className="border-2 border-white text-white hover:bg-white hover:text-blue-900 font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
               >
-                View Case Studies
+                View Our Services
               </Link>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Services Overview */}
-      <section className="py-16">
+      {/* Key Metrics */}
+      <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Our AI Advertising Services</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Comprehensive AI-powered advertising solutions designed to maximize your marketing ROI and drive business growth.
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Proven Advertising Results
+            </h2>
+            <p className="text-xl text-gray-600">
+              Our AI-powered advertising delivers measurable business impact
             </p>
           </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="text-4xl font-bold text-blue-600 mb-2">300%</div>
+              <div className="text-gray-600">Average ROI</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold text-green-600 mb-2">95%</div>
+              <div className="text-gray-600">Targeting Accuracy</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold text-purple-600 mb-2">60%</div>
+              <div className="text-gray-600">Cost Reduction</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold text-orange-600 mb-2">24/7</div>
+              <div className="text-gray-600">Campaign Optimization</div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Service 1 */}
-            <div className="bg-white rounded-lg shadow-sm border p-6">
-              <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-                <TrendingUp className="w-6 h-6 text-blue-600" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">AI Campaign Optimization</h3>
+      {/* Services Section */}
+      <section id="services" className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              AI Advertising Solutions
+            </h2>
+            <p className="text-xl text-gray-600">
+              Comprehensive AI-powered advertising services for maximum impact
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-200">
+              <div className="text-blue-600 text-4xl mb-4">🎯</div>
+              <h3 className="text-xl font-semibold mb-3">AI-Powered Targeting</h3>
               <p className="text-gray-600 mb-4">
-                Automatically optimize your advertising campaigns using advanced AI algorithms for maximum performance.
+                Advanced machine learning algorithms that identify and target your ideal customers with 95% accuracy.
               </p>
-              <ul className="space-y-2 text-sm text-gray-600">
-                <li className="flex items-center">
-                  <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                  Real-time bid optimization
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                  Audience targeting
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                  Performance analytics
-                </li>
+              <ul className="text-sm text-gray-600 space-y-1">
+                <li>• Behavioral analysis</li>
+                <li>• Predictive modeling</li>
+                <li>• Real-time optimization</li>
               </ul>
             </div>
-
-            {/* Service 2 */}
-            <div className="bg-white rounded-lg shadow-sm border p-6">
-              <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
-                <Users className="w-6 h-6 text-green-600" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Predictive Analytics</h3>
+            <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-200">
+              <div className="text-green-600 text-4xl mb-4">📊</div>
+              <h3 className="text-xl font-semibold mb-3">Campaign Optimization</h3>
               <p className="text-gray-600 mb-4">
-                Leverage AI to predict customer behavior and optimize your advertising strategy accordingly.
+                Continuous AI-driven optimization that maximizes performance and minimizes costs across all channels.
               </p>
-              <ul className="space-y-2 text-sm text-gray-600">
-                <li className="flex items-center">
-                  <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                  Customer lifetime value prediction
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                  Churn prevention
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                  Conversion optimization
-                </li>
+              <ul className="text-sm text-gray-600 space-y-1">
+                <li>• A/B testing automation</li>
+                <li>• Budget allocation</li>
+                <li>• Performance monitoring</li>
               </ul>
             </div>
-
-            {/* Service 3 */}
-            <div className="bg-white rounded-lg shadow-sm border p-6">
-              <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
-                <Zap className="w-6 h-6 text-purple-600" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Automated Content Creation</h3>
+            <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-200">
+              <div className="text-purple-600 text-4xl mb-4">🤖</div>
+              <h3 className="text-xl font-semibold mb-3">Creative Generation</h3>
               <p className="text-gray-600 mb-4">
-                Generate high-performing ad content automatically using AI-powered content creation tools.
+                AI-generated ad creatives that adapt to audience preferences and platform requirements in real-time.
               </p>
-              <ul className="space-y-2 text-sm text-gray-600">
-                <li className="flex items-center">
-                  <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                  Dynamic ad copy generation
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                  A/B testing automation
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                  Multi-platform optimization
-                </li>
+              <ul className="text-sm text-gray-600 space-y-1">
+                <li>• Dynamic creative optimization</li>
+                <li>• Personalization at scale</li>
+                <li>• Multi-platform adaptation</li>
               </ul>
             </div>
           </div>
@@ -151,126 +155,127 @@ export default function ServicesAdvertisingPage() {
       </section>
 
       {/* Pricing Section */}
-      <section className="bg-gray-100 py-16">
+      <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Transparent Pricing</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Transparent Pricing
+            </h2>
             <p className="text-xl text-gray-600">
-              Choose the plan that fits your business needs and budget
+              Choose the plan that fits your advertising needs
             </p>
           </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {/* Basic Plan */}
-            <div className="bg-white rounded-lg shadow-sm border p-6">
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Starter</h3>
-              <div className="text-3xl font-bold text-gray-900 mb-4">$2,999<span className="text-lg text-gray-600">/month</span></div>
-              <ul className="space-y-3 mb-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-white border-2 border-gray-200 rounded-lg p-8 hover:border-blue-500 transition-colors duration-200">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Starter</h3>
+              <div className="text-4xl font-bold text-blue-600 mb-6">$2,500<span className="text-lg text-gray-500">/month</span></div>
+              <ul className="space-y-3 mb-8">
                 <li className="flex items-center">
-                  <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                  Basic AI optimization
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                  <span>Up to $10K ad spend</span>
                 </li>
                 <li className="flex items-center">
-                  <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                  Up to 5 campaigns
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                  <span>AI targeting optimization</span>
                 </li>
                 <li className="flex items-center">
-                  <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                  Email support
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                  <span>Basic reporting</span>
+                </li>
+                <li className="flex items-center">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                  <span>Email support</span>
                 </li>
               </ul>
-              <Link 
-                href="/contact"
-                className="w-full inline-flex justify-center items-center px-4 py-2 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-50 transition-colors"
-              >
+              <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200">
                 Get Started
-              </Link>
+              </button>
             </div>
-
-            {/* Professional Plan */}
-            <div className="bg-white rounded-lg shadow-sm border-2 border-blue-500 p-6 relative">
-              <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                <span className="bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-medium">Most Popular</span>
+            <div className="bg-blue-600 text-white rounded-lg p-8 relative">
+              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                <span className="bg-yellow-400 text-yellow-900 px-4 py-1 rounded-full text-sm font-semibold">Most Popular</span>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Professional</h3>
-              <div className="text-3xl font-bold text-gray-900 mb-4">$7,999<span className="text-lg text-gray-600">/month</span></div>
-              <ul className="space-y-3 mb-6">
+              <h3 className="text-2xl font-bold mb-4">Professional</h3>
+              <div className="text-4xl font-bold mb-6">$5,000<span className="text-lg text-blue-200">/month</span></div>
+              <ul className="space-y-3 mb-8">
                 <li className="flex items-center">
-                  <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                  Advanced AI optimization
+                  <CheckCircle className="w-5 h-5 text-green-300 mr-3" />
+                  <span>Up to $50K ad spend</span>
                 </li>
                 <li className="flex items-center">
-                  <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                  Up to 20 campaigns
+                  <CheckCircle className="w-5 h-5 text-green-300 mr-3" />
+                  <span>Advanced AI optimization</span>
                 </li>
                 <li className="flex items-center">
-                  <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                  Predictive analytics
+                  <CheckCircle className="w-5 h-5 text-green-300 mr-3" />
+                  <span>Creative generation</span>
                 </li>
                 <li className="flex items-center">
-                  <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                  Priority support
+                  <CheckCircle className="w-5 h-5 text-green-300 mr-3" />
+                  <span>Priority support</span>
+                </li>
+                <li className="flex items-center">
+                  <CheckCircle className="w-5 h-5 text-green-300 mr-3" />
+                  <span>Custom reporting</span>
                 </li>
               </ul>
-              <Link 
-                href="/contact"
-                className="w-full inline-flex justify-center items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
-              >
+              <button className="w-full bg-white text-blue-600 hover:bg-gray-100 font-semibold py-3 px-6 rounded-lg transition-colors duration-200">
                 Get Started
-              </Link>
+              </button>
             </div>
-
-            {/* Enterprise Plan */}
-            <div className="bg-white rounded-lg shadow-sm border p-6">
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Enterprise</h3>
-              <div className="text-3xl font-bold text-gray-900 mb-4">Custom<span className="text-lg text-gray-600"> pricing</span></div>
-              <ul className="space-y-3 mb-6">
+            <div className="bg-white border-2 border-gray-200 rounded-lg p-8 hover:border-blue-500 transition-colors duration-200">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Enterprise</h3>
+              <div className="text-4xl font-bold text-blue-600 mb-6">Custom<span className="text-lg text-gray-500">/month</span></div>
+              <ul className="space-y-3 mb-8">
                 <li className="flex items-center">
-                  <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                  Full AI suite
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                  <span>Unlimited ad spend</span>
                 </li>
                 <li className="flex items-center">
-                  <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                  Unlimited campaigns
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                  <span>Full AI suite</span>
                 </li>
                 <li className="flex items-center">
-                  <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                  Custom integrations
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                  <span>Dedicated account manager</span>
                 </li>
                 <li className="flex items-center">
-                  <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                  Dedicated support
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                  <span>24/7 support</span>
+                </li>
+                <li className="flex items-center">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                  <span>Custom integrations</span>
                 </li>
               </ul>
-              <Link 
-                href="/contact"
-                className="w-full inline-flex justify-center items-center px-4 py-2 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-50 transition-colors"
-              >
+              <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200">
                 Contact Sales
-              </Link>
+              </button>
             </div>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="bg-blue-600 text-white py-16">
+      <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Advertising?</h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            Join hundreds of businesses already using our AI-powered advertising solutions to achieve remarkable results.
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            Ready to Transform Your Advertising?
+          </h2>
+          <p className="text-xl mb-8 text-blue-100">
+            Get a free AI advertising assessment and discover how we can boost your ROI by 300%
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
               href="/contact"
-              className="inline-flex items-center px-8 py-4 bg-white text-blue-600 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
+              className="bg-white text-blue-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition-colors duration-200 inline-flex items-center"
             >
-              Start Your Free Trial
-              <ArrowLeft className="w-4 h-4 ml-2" />
+              Get Free Assessment
+              <ArrowRight className="w-4 h-4 ml-2" />
             </Link>
             <Link 
               href="/case-studies"
-              className="inline-flex items-center px-8 py-4 border border-white text-white rounded-lg font-semibold hover:bg-white/10 transition-colors"
+              className="border-2 border-white text-white hover:bg-white hover:text-blue-600 font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
             >
               View Success Stories
             </Link>
