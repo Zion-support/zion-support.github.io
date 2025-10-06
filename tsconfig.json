@@ -14,6 +14,7 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
+    "jsxImportSource": "react",
     "strict": true,
     "strictNullChecks": true,
     "noUnusedLocals": false,
@@ -55,7 +56,9 @@
   },
   "include": [
     "app/**/*",
-    "src/**/*"
+    "src/**/*",
+    "App.tsx",
+    "components/**/*"
   ],
   "exclude": [
     "node_modules",
@@ -103,6 +106,7 @@
     "app/case-studies/**/*",
     "app/guides/**/*",
     "app/components/**/*",
+    "src/components/disabled-corrupted/**",
     "EnhancedFooter.tsx",
     "EnhancedHeader.tsx",
     "EnhancedNavigation.tsx",
@@ -113,6 +117,17 @@
     "app/components/NewestContent2025Banner.tsx",
     "api/**",
     "lib/**",
-    "utils/seoUtils.ts"
+    "utils/**",
+    "src/utils/**",
+    "blog/**",
+    "backup-problematic-files/**",
+    "automation/**",
+    "**/*.disabled/**",
+    "**/*.backup/**"
+  ],
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
+    }
   ]
 }
