@@ -1,4 +1,4 @@
-import React, { useEffect, lazy } from 'react';
+import React, { useEffect, lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 
@@ -19,7 +19,7 @@ const ContactPage = lazy(() => import('./contact/page'));
 const EnterprisePage = lazy(() => import('./enterprise/page'));
 
 // Utils
-import { performanceOptimizer } from '../src/utils/performanceOptimizer';
+import performanceOptimizer from '../src/utils/performanceOptimizer';
 
 // Styles
 import '../src/index.css';
@@ -36,27 +36,29 @@ function App() {
   return (
     <HelmetProvider>
       <ErrorBoundary>
-        <Router>
-          <div className="App">
-            <SEOOptimizer />
-            <AccessibilityEnhancer />
-            <PerformanceDashboard />
-            
-            <Navigation />
-            
-            <Suspense fallback={<LoadingSpinner />}>
-              <Routes>
-                <Route path="/" element={<HomePage />} />
-                <Route path="/about" element={<AboutPage />} />
-                <Route path="/services" element={<ServicesPage />} />
-                <Route path="/contact" element={<ContactPage />} />
-                <Route path="/enterprise" element={<EnterprisePage />} />
-              </Routes>
-            </Suspense>
-            
-            <Footer />
-          </div>
-        </Router>
+        <SEOOptimizer>
+          <AccessibilityEnhancer>
+            <Router>
+              <div className="App">
+                <PerformanceDashboard />
+                
+                <Navigation />
+                
+                <Suspense fallback={<LoadingSpinner />}>
+                  <Routes>
+                    <Route path="/" element={<HomePage />} />
+                    <Route path="/about" element={<AboutPage />} />
+                    <Route path="/services" element={<ServicesPage />} />
+                    <Route path="/contact" element={<ContactPage />} />
+                    <Route path="/enterprise" element={<EnterprisePage />} />
+                  </Routes>
+                </Suspense>
+                
+                <Footer />
+              </div>
+            </Router>
+          </AccessibilityEnhancer>
+        </SEOOptimizer>
       </ErrorBoundary>
     </HelmetProvider>
   );

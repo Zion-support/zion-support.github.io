@@ -13,38 +13,16 @@ interface SEOOptimizerProps {
 
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ 
   children, 
-  title = "Zion Tech Group - AI Enterprise Solutions",
-  description = "Transform your enterprise with AI-powered solutions. Achieve 300% ROI, 70% cost reduction, and 90% efficiency gains.",
-  keywords = ["AI", "enterprise", "automation", "digital transformation", "ROI", "efficiency"],
-  canonicalUrl,
+  title = "Zion Tech Group — Revolutionary AI Solutions for Enterprise",
+  description = "Transform your business with cutting-edge AI micro SaaS services, cloud automation, and enterprise IT solutions.",
+  keywords = ["AI services", "micro SaaS", "IT services", "cloud migration", "DevOps", "SRE", "enterprise software", "AI solutions", "business transformation"],
+  canonicalUrl = "https://ziontechgroup.com",
   ogImage = "https://ziontechgroup.com/og-image.jpg",
   structuredData
 }) => {
   useEffect(() => {
     // Add structured data to the page
-    if (structuredData) {
-      const script = document.createElement('script');
-      script.type = 'application/ld+json';
-      script.text = JSON.stringify(structuredData);
-      document.head.appendChild(script);
-      
-      return () => {
-        document.head.removeChild(script);
-      };
-    }
-    return undefined;
-  }, [structuredData]);
-import React, { useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
-
-interface SEOOptimizerProps {
-  children: React.ReactNode;
-}
-
-const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ children }) => {
-  useEffect(() => {
-    // Add structured data for better SEO
-    const structuredData = {
+    const defaultStructuredData = {
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "Zion Tech Group",
@@ -59,11 +37,12 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ children }) => {
       }
     };
 
+    const dataToUse = structuredData || defaultStructuredData;
     const script = document.createElement('script');
     script.type = 'application/ld+json';
-    script.text = JSON.stringify(structuredData);
+    script.text = JSON.stringify(dataToUse);
     document.head.appendChild(script);
-
+    
     return () => {
       // Cleanup
       const existingScript = document.querySelector('script[type="application/ld+json"]');
@@ -71,8 +50,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ children }) => {
         document.head.removeChild(existingScript);
       }
     };
-  }, []);
->>>>>>> cursor/fix-errors-and-merge-to-main-cfe1
+  }, [structuredData]);
 
   return (
     <>
@@ -87,6 +65,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ children }) => {
         <meta property="og:description" content={description} />
         <meta property="og:image" content={ogImage} />
         <meta property="og:type" content="website" />
+        <meta property="og:url" content={canonicalUrl} />
         
         {/* Twitter Card tags */}
         <meta name="twitter:card" content="summary_large_image" />
@@ -103,21 +82,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ children }) => {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e62
-        <title>Zion Tech Group — Revolutionary AI Solutions for Enterprise</title>
-        <meta name="description" content="Transform your business with cutting-edge AI micro SaaS services, cloud automation, and enterprise IT solutions." />
-        <meta name="keywords" content="AI services, micro SaaS, IT services, cloud migration, DevOps, SRE, enterprise software, AI solutions, business transformation" />
-        <meta property="og:title" content="Zion Tech Group — Revolutionary AI Solutions for Enterprise" />
-        <meta property="og:description" content="Transform your business with cutting-edge AI micro SaaS services, cloud automation, and enterprise IT solutions." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com" />
-        <meta property="og:image" content="https://ziontechgroup.com/og-image.jpg" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Zion Tech Group — Revolutionary AI Solutions for Enterprise" />
-        <meta name="twitter:description" content="Transform your business with cutting-edge AI micro SaaS services, cloud automation, and enterprise IT solutions." />
-        <meta name="twitter:image" content="https://ziontechgroup.com/og-image.jpg" />
-        <link rel="canonical" href="https://ziontechgroup.com" />
->>>>>>> cursor/fix-errors-and-merge-to-main-cfe1
       </Helmet>
       {children}
     </>
