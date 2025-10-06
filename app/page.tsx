@@ -1,16 +1,6 @@
 import { Suspense, lazy } from 'react';
 import Link from 'next/link';
-// Lazy load heavy components
-const UnifiedContentPromotion = lazy(
-  () => import('./components/UnifiedContentPromotion'),
-);
-const InteractiveAIROICalculator = lazy(
-  () => import('./components/InteractiveAIROICalculator'),
-);
-const ContentShowcase = lazy(() => import('./components/ContentShowcase'));
-const InteractiveContentShowcase2026 = lazy(
-  () => import('./components/InteractiveContentShowcase2026'),
-);
+
 // Loading component for Suspense fallback
 const LoadingFallback = ({ height = 'h-32' }: { height?: string }) => (
   <div className={`${height} bg-gray-200 animate-pulse rounded`}></div>
@@ -55,28 +45,30 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
       <main className='container mx-auto px-4 py-16'>
-        {/* Unified Content Promotion */}
-        <Suspense fallback={<LoadingFallback height='h-32' />}>
-          <UnifiedContentPromotion />
-        </Suspense>
-        {/* Interactive AI ROI Calculator */}
-        <section className='my-16'>
-          <Suspense fallback={<LoadingFallback height='h-64' />}>
-            <InteractiveAIROICalculator />
-          </Suspense>
+        {/* Hero Section */}
+        <section className='text-center py-16'>
+          <h1 className='text-5xl font-bold text-gray-900 mb-6'>
+            Welcome to Zion Tech Group
+          </h1>
+          <p className='text-xl text-gray-600 mb-8 max-w-3xl mx-auto'>
+            Leading provider of AI-powered enterprise solutions and digital transformation services
+          </p>
+          <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+            <Link
+              href='/contact'
+              className='bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-colors duration-300'
+            >
+              Get Started Today
+            </Link>
+            <Link
+              href='/services'
+              className='border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white font-bold py-4 px-8 rounded-lg text-lg transition-colors duration-300'
+            >
+              View Services
+            </Link>
+          </div>
         </section>
-        {/* Content Showcase */}
-        <section className='my-16'>
-          <Suspense fallback={<LoadingFallback height='h-48' />}>
-            <ContentShowcase />
-          </Suspense>
-        </section>
-        {/* Interactive Content Showcase 2026 */}
-        <section className='my-16'>
-          <Suspense fallback={<LoadingFallback height='h-48' />}>
-            <InteractiveContentShowcase2026 />
-          </Suspense>
-        </section>
+        
         {/* CTA Section */}
         <section className='bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16 rounded-2xl text-center'>
           <div className='max-w-3xl mx-auto px-4'>

@@ -33,8 +33,9 @@ export const usePageLoadPerformance = () => {
     } else {
       // Wait for load event
       window.addEventListener('load', trackPageLoad);
-      return () => window.removeEventListener('load', trackPageLoad);
     }
+    
+    return () => window.removeEventListener('load', trackPageLoad);
   }, []);
 };
 /**
