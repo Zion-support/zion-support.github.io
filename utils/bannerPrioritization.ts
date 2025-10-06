@@ -69,6 +69,7 @@ export class BannerPrioritizationEngine {
   getBannersByLoadStrategy(strategy: 'immediate' | 'lazy' | 'on-demand'): BannerMetadata[] {
     return Array.from(this.banners.values())
       .filter(banner => banner.loadStrategy === strategy && banner.isVisible);
+    return Array.from(this.banners.values()).filter(banner => banner.loadStrategy === strategy && banner.isVisible);
   }
 
   /**

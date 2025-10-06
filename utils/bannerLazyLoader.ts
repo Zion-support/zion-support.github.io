@@ -6,6 +6,7 @@
  */
 import { lazy } from 'react';
 import type { ComponentType } from 'react';
+import { lazy, ComponentType } from 'react';
 
 interface BannerModule {
   default: ComponentType<any>;
@@ -33,30 +34,38 @@ export const lazyLoadBanner = (
               );
               // Return a fallback component
               resolve({ default: () => null });
+                retryError
+              );
+              // Return a fallback component
+              resolve({
+                default: () => (
+                  <div className="banner-fallback">
+                    <p>Banner temporarily unavailable</p>
+                  </div>
+                )
+              });
             });
         }, 1000);
       });
-    }),
+    })
   );
 };
 
 /**
- * Preload banner components in the background
+ * Preload banner components for better performance
  */
-export const preloadBanners = (
-  importFns: Array<() => Promise<BannerModule>>,
-) => {
-  if (typeof window !== 'undefined' && 'requestIdleCallback' in window) {
-    requestIdleCallback(() => {
-      importFns.forEach(importFn => {
+export const preloadBanner = (importFn: () => Promise<BannerModule>): void => {
+  if (typeof window !== 'undefined') {
+    // Preload on idle
+    if ('requestIdleCallback' in window) {
+      requestIdleCallback(() => {
         importFn().catch(() => {
-          // Silently fail for preloading
+          // Silently fail for preload
         });
       });
     });
   }
 };
-
 /**
  * Get banner priority based on content date and value
  */
@@ -68,16 +77,13 @@ export const getBannerPriority = (bannerName: string): number => {
     }
     return 2;
   }
-
   // 2026+ content gets medium priority
   if (bannerName.includes('2026') || bannerName.includes('2027')) {
     return 3;
   }
-
   // Older content gets lower priority
   return 4;
 };
-
 /**
  * Sort banners by priority for optimal loading
  */
@@ -86,14 +92,12 @@ export const sortBannersByPriority = (bannerNames: string[]): string[] => {
     return getBannerPriority(a) - getBannerPriority(b);
   });
 };
-
 /**
  * Intersection Observer for lazy rendering banners
  */
 export class BannerObserver {
   private observer: IntersectionObserver | null = null;
   private loadedBanners = new Set<string>();
-
   constructor(
     private onBannerVisible: (bannerId: string) => void,
     private options: IntersectionObserverInit = {
@@ -112,23 +116,46 @@ export class BannerObserver {
               this.observer?.unobserve(entry.target);
             }
           }
+    } else {
+      setTimeout(() => {
+        importFn().catch(() => {
+          // Silently fail for preload
         });
-      }, this.options);
+      }, 100);
     }
   }
-
   observe(element: Element): void {
     this.observer?.observe(element);
   }
-
   disconnect(): void {
     this.observer?.disconnect();
     this.loadedBanners.clear();
+};
+/**
+ * Banner loading state manager
+ */
+export class BannerLoadingManager {
+  private loadingStates = new Map<string, boolean>();
+  private loadedComponents = new Set<string>();
+  isLoaded(componentName: string): boolean {
+    return this.loadedComponents.has(componentName);
+  }
+  isLoading(componentName: string): boolean {
+    return this.loadingStates.get(componentName) || false;
+  }
+  setLoading(componentName: string, loading: boolean): void {
+    this.loadingStates.set(componentName, loading);
+    if (!loading) {
+      this.loadedComponents.add(componentName);
+    }
+  }
+  getLoadingCount(): number {
+    return Array.from(this.loadingStates.values()).filter(Boolean).length;
   }
 }
 
 /**
- * Analytics tracking for banner performance
+ * Hook for banner loading state
  */
 export const trackBannerPerformance = (
   bannerName: string,
@@ -146,7 +173,6 @@ export const trackBannerPerformance = (
     // Example: gtag('event', 'banner_performance', {...metrics, banner: bannerName });
   }
 };
-
 export default {
   lazyLoadBanner,
   preloadBanners,
@@ -154,4 +180,11 @@ export default {
   sortBannersByPriority,
   BannerObserver,
   trackBannerPerformance,
+export const useBannerLoading = (componentName: string) => {
+  const manager = new BannerLoadingManager();
+  return {
+    isLoading: manager.isLoading(componentName),
+    isLoaded: manager.isLoaded(componentName),
+    setLoading: (loading: boolean) => manager.setLoading(componentName, loading)
+  };
 };

@@ -8,6 +8,7 @@ export const focusManagement = {
   trapFocus: (element: HTMLElement): (() => void) => {
     const focusableElements = element.querySelectorAll(
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])',
+      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
     );
     const firstElement = focusableElements[0] as HTMLElement;
     const lastElement = focusableElements[
@@ -65,6 +66,7 @@ export const ariaUtils = {
     element: HTMLElement,
     attributes: Record<string, string>,
   ): void => {
+  setAriaAttributes: (element: HTMLElement, attributes: Record<string, string>): void => {
     Object.entries(attributes).forEach(([key, value]) => {
       element.setAttribute(key, value);
     });
@@ -75,13 +77,14 @@ export const ariaUtils = {
     message: string,
     priority: 'polite' | 'assertive' = 'polite',
   ): void => {
+  announce: (message: string, priority: 'polite' | 'assertive' = 'polite'): void => {
     const announcement = document.createElement('div');
     announcement.setAttribute('aria-live', priority);
     announcement.setAttribute('aria-atomic', 'true');
     announcement.className = 'sr-only';
     announcement.textContent = message;
+    
     document.body.appendChild(announcement);
-
     setTimeout(() => {
       document.body.removeChild(announcement);
     }, 1000);
@@ -99,7 +102,6 @@ export const keyboardNavigation = {
   ): number => {
     const isVertical = orientation === 'vertical';
     const isHorizontal = orientation === 'horizontal';
-
     switch (event.key) {
       case isVertical ? 'ArrowDown' : 'ArrowRight':
         event.preventDefault();
@@ -117,7 +119,6 @@ export const keyboardNavigation = {
         return currentIndex;
     }
   },
-
   // Handle Enter and Space key activation
   handleActivation: (event: KeyboardEvent, callback: () => void): void => {
     if (event.key === 'Enter' || event.key === ' ') {
@@ -126,7 +127,6 @@ export const keyboardNavigation = {
     }
   },
 };
-
 // Color contrast utilities
 export const colorContrast = {
   // Calculate relative luminance
@@ -137,12 +137,15 @@ export const colorContrast = {
     });
     return 0.2126 * (rs || 0) + 0.7152 * (gs || 0) + 0.0722 * (bs || 0);
   },
-
   // Calculate contrast ratio
   getContrastRatio: (
     color1: [number, number, number],
     color2: [number, number, number],
   ): number => {
+    return 0.2126 * (rs ?? 0) + 0.7152 * (gs ?? 0) + 0.0722 * (bs ?? 0);
+  },
+  // Calculate contrast ratio
+  getContrastRatio: (color1: [number, number, number], color2: [number, number, number]): number => {
     const lum1 = colorContrast.getLuminance(...color1);
     const lum2 = colorContrast.getLuminance(...color2);
     const brightest = Math.max(lum1, lum2);
@@ -155,14 +158,12 @@ export const colorContrast = {
     return level === 'AA' ? contrastRatio >= 4.5 : contrastRatio >= 7;
   },
 };
-
 // Motion and animation utilities
 export const motionUtils = {
   // Check if user prefers reduced motion
   prefersReducedMotion: (): boolean => {
     return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   },
-
   // Apply reduced motion styles
   applyReducedMotion: (element: HTMLElement): void => {
     if (motionUtils.prefersReducedMotion()) {
@@ -170,13 +171,11 @@ export const motionUtils = {
       element.style.transition = 'none';
     }
   },
-
   // Respect user's motion preferences
   conditionalAnimation: (animation: string, fallback: string = ''): string => {
     return motionUtils.prefersReducedMotion() ? fallback : animation;
   },
 };
-
 // Form accessibility utilities
 export const formAccessibility = {
   // Associate label with input
@@ -189,15 +188,46 @@ export const formAccessibility = {
     label.setAttribute('for', input.id || formAccessibility.generateInputId());
     if (!input.id) {
       input.id = label.getAttribute('for')!;
+    const thresholds = { AA: 4.5, AAA: 7 };
+    return contrastRatio >= thresholds[level];
+  },
+};
+// Keyboard navigation utilities
+export const keyboardNavigation = {
+  // Handle arrow key navigation
+  handleArrowKeys: (e: KeyboardEvent, items: HTMLElement[], currentIndex: number): number => {
+    let newIndex = currentIndex;
+    switch (e.key) {
+      case 'ArrowDown':
+      case 'ArrowRight':
+        e.preventDefault();
+        newIndex = (currentIndex + 1) % items.length;
+        break;
+      case 'ArrowUp':
+      case 'ArrowLeft':
+        e.preventDefault();
+        newIndex = currentIndex === 0 ? items.length - 1 : currentIndex - 1;
+        break;
+      case 'Home':
+        e.preventDefault();
+        newIndex = 0;
+        break;
+      case 'End':
+        e.preventDefault();
+        newIndex = items.length - 1;
+        break;
     }
-    return label;
+    if (newIndex !== currentIndex) {
+      items[newIndex]?.focus();
+    }
+    
+    return newIndex;
   },
 
   // Generate unique input ID
   generateInputId: (): string => {
     return `input-${Math.random().toString(36).substr(2, 9)}`;
   },
-
   // Add error message association
   addErrorMessage: (input: HTMLInputElement, errorMessage: string): void => {
     const errorId = `error-${input.id}`;
@@ -210,7 +240,6 @@ export const formAccessibility = {
     input.setAttribute('aria-invalid', 'true');
     input.parentNode?.insertBefore(errorElement, input.nextSibling);
   },
-
   // Remove error message
   removeErrorMessage: (input: HTMLInputElement): void => {
     const errorId = input.getAttribute('aria-describedby');
@@ -222,19 +251,16 @@ export const formAccessibility = {
     }
   },
 };
-
 // Screen reader utilities
 export const screenReaderUtils = {
   // Hide element from screen readers
   hideFromScreenReader: (element: HTMLElement): void => {
     element.setAttribute('aria-hidden', 'true');
   },
-
   // Show element to screen readers
   showToScreenReader: (element: HTMLElement): void => {
     element.removeAttribute('aria-hidden');
   },
-
   // Create screen reader only text
   createScreenReaderText: (text: string): HTMLElement => {
     const element = document.createElement('span');
@@ -243,7 +269,6 @@ export const screenReaderUtils = {
     return element;
   },
 };
-
 // Accessibility testing utilities
 export const accessibilityTesting = {
   // Check for missing alt text on images
@@ -256,7 +281,6 @@ export const accessibilityTesting = {
     const empty = images.filter(img => img.getAttribute('alt') === '');
     return { missing, empty };
   },
-
   // Check for missing form labels
   checkFormLabels: (): HTMLInputElement[] => {
     const inputs = Array.from(
@@ -270,7 +294,6 @@ export const accessibilityTesting = {
       return !label && !ariaLabel && !ariaLabelledBy;
     }) as HTMLInputElement[];
   },
-
   // Check for proper heading hierarchy
   checkHeadingHierarchy: (): { issues: string[]; structure: string[] } => {
     const headings = Array.from(
@@ -279,27 +302,21 @@ export const accessibilityTesting = {
     const issues: string[] = [];
     const structure: string[] = [];
     let previousLevel = 0;
-
     headings.forEach((heading, index) => {
       const level = parseInt(heading.tagName[1] || '0');
       structure.push(`${heading.tagName}: ${heading.textContent?.trim() || ''}`);
-
       if (index === 0 && level !== 1) {
         issues.push('First heading should be h1');
       }
-
       if (level > previousLevel + 1) {
         issues.push(
           `Heading level skipped from h${previousLevel} to h${level}`,
         );
       }
-
       previousLevel = level;
     });
-
     return { issues, structure };
   },
-
   // Generate accessibility report
   generateReport: (): {
     images: { missing: number; empty: number };
@@ -310,15 +327,12 @@ export const accessibilityTesting = {
     const imageCheck = accessibilityTesting.checkImageAltText();
     const formCheck = accessibilityTesting.checkFormLabels();
     const headingCheck = accessibilityTesting.checkHeadingHierarchy();
-
     const totalIssues =
       imageCheck.missing.length +
       imageCheck.empty.length +
       formCheck.length +
       headingCheck.issues.length;
-
     const score = Math.max(0, 100 - totalIssues * 10);
-
     return {
       images: {
         missing: imageCheck.missing.length,
@@ -328,5 +342,16 @@ export const accessibilityTesting = {
       headings: headingCheck,
       score,
     };
+  // Check if element is focusable
+  isFocusable: (element: HTMLElement): boolean => {
+    const focusableSelectors = [
+      'button:not([disabled])',
+      'input:not([disabled])',
+      'select:not([disabled])',
+      'textarea:not([disabled])',
+      'a[href]',
+      '[tabindex]:not([tabindex="-1"])'
+    ];
+    return focusableSelectors.some(selector => element.matches(selector));
   },
 };

@@ -108,6 +108,21 @@ export const shouldShowBanner = (banner: BannerConfig): boolean => {
  * Get rotation score for banner prioritization
  */
 export const getRotationScore = (banner: BannerConfig): number => {
+export const selectBannersForRotation = (allBanners: BannerConfig[], maxBanners: number = MAX_VISIBLE_BANNERS): BannerConfig[] => {
+  // Calculate scores for all banners
+  const scoredBanners = allBanners.map(banner => ({
+    banner,
+    score: calculateBannerScore(banner)
+  }));
+  // Sort by score (highest first)
+  scoredBanners.sort((a, b) => b.score - a.score);
+  // Take top N banners
+  return scoredBanners.slice(0, maxBanners).map(item => item.banner);
+};
+/**
+ * Get banner analytics
+ */
+export const getBannerAnalytics = (bannerId?: string) => {
   const impressions = getBannerImpressions();
   const bannerImpressions = impressions.filter(imp => imp.bannerId === banner.id);
   
