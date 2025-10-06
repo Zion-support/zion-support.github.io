@@ -155,7 +155,6 @@ export default function EnterprisePage() {
                     </div>
                   ))}
                 </div>
-<<<<<<< HEAD
               </div>
             ))}
           </div>
@@ -190,8 +189,6 @@ export default function EnterprisePage() {
                   {stat.number}
                 </div>
                 <div className="text-gray-300">{stat.label}</div>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-9966
               </div>
             ))}
           </div>
@@ -200,32 +197,6 @@ export default function EnterprisePage() {
 
       {/* CTA Section */}
       <section className="py-24">
-<<<<<<< HEAD
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Ready to Transform Your Enterprise?
-          </h2>
-          <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
-            Join 500+ Fortune 500 companies already using our AI solutions to
-            drive unprecedented growth and efficiency.
-          </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-            <a
-              href="/contact"
-              className="group flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl"
-            >
-              <span>Get Started Today</span>
-              <span className="group-hover:translate-x-1 transition-transform">
-                →
-              </span>
-            </a>
-            <a
-              href="/services"
-              className="border-2 border-white/30 hover:border-white/60 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 hover:bg-white/10"
-            >
-              View All Services
-            </a>
-=======
         <div className="container mx-auto px-4">
           <div className="text-center bg-white/5 backdrop-blur-lg rounded-3xl p-12 border border-white/20">
             <h3 className="text-4xl font-bold text-white mb-6">
@@ -251,7 +222,6 @@ export default function EnterprisePage() {
                 <span>Get Enterprise Consultation</span>
               </a>
             </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-9966
           </div>
         </div>
       </section>
