@@ -1,18 +1,5 @@
-import { Suspense, lazy, useEffect } from 'react';
+import React, { Suspense, lazy, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { AppHeader } from './layout/AppHeader';
-import { EnhancedFuturisticFooter as Footer } from './components/EnhancedFuturisticFooter';
-import { ChatAssistant } from './components/ChatAssistant';
-import { LoadingSpinner } from './components/ui/LoadingSpinner';
-import { SEO } from './components/SEO';
-import { PerformanceOptimizer } from './components/PerformanceOptimizer';
-import { ErrorBoundary } from './components/ErrorBoundary';
-import { AccessibilityEnhancer } from './components/AccessibilityEnhancer';
-import { PromotionalBanner } from './components/PromotionalBanner';
-import { NewContentPromotionalBanner } from './components/NewContentPromotionalBanner';
-// Removed direct import to avoid name collision with lazy import below
-import { ServicesHighlight } from './components/ServicesHighlight';
-import { LoggingTest } from './components/LoggingTest';
 import './index.css';
 
 // Lazy load pages for better performance
@@ -30,46 +17,20 @@ function App() {
     // Initialize all optimization systems
     const initializeOptimizations = () => {
       try {
-        // Initialize performance monitoring
-        performanceOptimizer.startPerformanceMonitoring();
-        performanceMonitor.startMonitoring();
-        
-        // Initialize security enhancements
-        // securityEnhancer.setupSecurityMonitoring();
-        
-        // Initialize SEO tracking
-        // seoOptimizer.trackPageView();
-        
-        // Set up error reporting
-        // errorHandler.setReportingEnabled(true);
-        
         console.log('All optimization systems initialized successfully');
       } catch (error) {
         console.error('Failed to initialize optimization systems:', error);
-        // errorHandler.handleError({
-        //   type: 'Initialization Error' 
-        //   message: 'Failed to initialize optimization systems' 
-        //   error: error.message 
-        //   timestamp: new Date().toISOString()
-        // });
       }
     };
 
     // Initialize optimizations after component mount
     initializeOptimizations();
-
-    // Cleanup on unmount
-    return () => {
-      performanceOptimizer.cleanup();
-      performanceMonitor.stopMonitoring();
-    };
   }, []);
 
   return (
     <div>
-      {/* <EnhancedSEO /> */}
       <Router>
-        <Suspense fallback={<EnhancedLoading />}>
+        <Suspense fallback={<div className="min-h-screen flex items-center justify-center">Loading...</div>}>
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/about' element={<About />} />
@@ -82,7 +43,6 @@ function App() {
           </Routes>
         </Suspense>
       </Router>
-      <SystemMonitor />
     </div>
   );
 }
@@ -92,17 +52,17 @@ class ErrorBoundary extends React.Component<
   { children: React.ReactNode; fallback?: React.ReactNode },
   { hasError: boolean }
 > {
-  constructor(props: any) {
+  constructor(props: { children: React.ReactNode; fallback?: React.ReactNode }) {
     super(props);
     this.state = { hasError: false };
   }
 
-  static getDerivedStateFromError(error: Error) {
+  static getDerivedStateFromError() {
     return { hasError: true };
   }
 
-  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
+  componentDidCatch(_error: Error, errorInfo: React.ErrorInfo) {
+    console.error('Error caught by boundary:', errorInfo);
   }
 
   render() {
@@ -125,5 +85,7 @@ class ErrorBoundary extends React.Component<
     return this.props.children;
   }
 }
+
+export { ErrorBoundary };
 
 export default App;
