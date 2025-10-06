@@ -313,7 +313,13 @@ export const addCriticalResourceHints = (): void => {
 // Performance metrics storage
 const metrics = new Map<string, number>();
 
-<<<<<<< HEAD
+/**
+ * PerformanceOptimizer class
+ */
+class PerformanceOptimizer {
+  private static instance: PerformanceOptimizer;
+  private metrics = new Map<string, number>();
+
   static getInstance(): PerformanceOptimizer {
     if (!PerformanceOptimizer.instance) {
       PerformanceOptimizer.instance = new PerformanceOptimizer();
@@ -321,49 +327,8 @@ const metrics = new Map<string, number>();
     return PerformanceOptimizer.instance;
   }
 
-  // Lazy load images with intersection observer
-  lazyLoadImages(): void {
-    lazyLoadImages();
-  }
 
-  // Preload critical resources
-  preloadCriticalResources(): void {
-    const criticalResources = [
-      '/fonts/inter.woff2',
-      '/images/hero-bg.jpg',
-      '/images/logo.svg'
-    ];
 
-    criticalResources.forEach((resource) => {
-      const link = document.createElement('link');
-      link.rel = 'preload';
-      link.href = resource;
-      link.as = resource.endsWith('.woff2') ? 'font' : 'image';
-      if (resource.endsWith('.woff2')) {
-        link.crossOrigin = 'anonymous';
-      }
-      document.head.appendChild(link);
-    });
-  }
-
-  // Optimize scroll performance
-  optimizeScroll(): void {
-    let ticking = false;
-    
-    const updateScrollPosition = () => {
-      // Throttled scroll handling
-      ticking = false;
-    };
-
-    const requestTick = () => {
-      if (!ticking) {
-        requestAnimationFrame(updateScrollPosition);
-        ticking = true;
-      }
-    };
-
-    window.addEventListener('scroll', requestTick, { passive: true });
-  }
 
   // Measure performance metrics
   measurePerformance(name: string, fn: () => void): void {
@@ -431,57 +396,15 @@ const metrics = new Map<string, number>();
     };
   }
 
-  // Add critical resource hints method
-  addCriticalResourceHints(): void {
-    addCriticalResourceHints();
-  }
 
-  // Add Web Vitals reporting method
-  reportWebVitals(metrics: WebVitalsMetrics): void {
-    reportWebVitals(metrics);
-  }
-
-  // Measure page load performance
-  measurePageLoad(): WebVitalsMetrics | null {
-<<<<<<< HEAD
-=======
-    return measurePageLoad();
-  }
-
-  // Monitor long tasks
-  monitorLongTasks(callback: (entries: PerformanceEntry[]) => void): PerformanceObserver | null {
-    return monitorLongTasks(callback);
-  }
-
-  // Get performance summary
-  getPerformanceSummary() {
-    return {
-      averageRenderTime: 12.5,
-      totalComponents: 45,
-      memoryUsage: 0,
-      slowComponents: 0
-    };
-  }
-
-  // Export metrics
-  exportMetrics() {
-    return this.getMetrics();
-  }
-
-  // Clear metrics
-  clearMetrics() {
-    this.metrics.clear();
-  }
 
   // Measure page load performance
   measurePageLoadTiming(): Record<string, number> | null {
->>>>>>> cursor/fix-errors-and-merge-to-main-e973
     if (typeof window === 'undefined' || !window.performance) {
       return null;
     }
     
     const timing = window.performance.timing;
-<<<<<<< HEAD
     const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
     
     const loadTime = timing.loadEventEnd - timing.navigationStart;
@@ -491,24 +414,18 @@ const metrics = new Map<string, number>();
       loadTime, 
       interactiveTime,
       FCP: navigation?.responseStart - navigation?.fetchStart,
-      TTFB: timing.responseStart - timing.navigationStart
-=======
-    return {
-      loadTime: timing.loadEventEnd - timing.navigationStart,
-      interactiveTime: timing.domInteractive - timing.navigationStart,
+      TTFB: timing.responseStart - timing.navigationStart,
       domContentLoaded: timing.domContentLoadedEventEnd - timing.navigationStart
->>>>>>> cursor/fix-errors-and-merge-to-main-e973
     };
   }
 
   // Initialize all optimizations
   initialize(): void {
-    this.measurePerformance('lazyLoadImages', () => this.lazyLoadImages());
-    this.measurePerformance('preloadCriticalResources', () => this.preloadCriticalResources());
-    this.measurePerformance('optimizeScroll', () => this.optimizeScroll());
+    this.measurePerformance('lazyLoadImages', () => lazyLoadImages());
+    this.measurePerformance('preloadCriticalResources', () => preloadCriticalResources());
+    this.measurePerformance('optimizeScroll', () => optimizeScroll());
   }
 }
-<<<<<<< HEAD
 
 
 
@@ -556,16 +473,11 @@ export const preloadCriticalResources = (): void => {
     }
     document.head.appendChild(link);
   });
-};
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-e973
+}
 
 // Export singleton instance
 export const performanceOptimizer = PerformanceOptimizer.getInstance();
 
-<<<<<<< HEAD
-=======
 // Get performance metrics
 const getMetrics = (): Record<string, number> => {
   return Object.fromEntries(metrics);
@@ -576,18 +488,11 @@ const initialize = (): void => {
   lazyLoadImages();
   addCriticalResourceHints();
 };
-
->>>>>>> cursor/fix-errors-and-merge-to-main-a3c4
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-e973
 export default {
   prefetchResources,
   preconnectDomains,
   lazyLoadImages,
-<<<<<<< HEAD
-=======
   preloadCriticalResources: () => performanceOptimizer.preloadCriticalResources(),
->>>>>>> cursor/fix-errors-and-merge-to-main-e973
   debounce,
   throttle,
   measurePageLoad,
@@ -601,18 +506,8 @@ export default {
   monitorLongTasks,
   cacheStaticAssets,
   clearOldCaches,
-<<<<<<< HEAD
   checkPerformanceBudget,
-<<<<<<< HEAD
-  preloadCriticalResources: () => performanceOptimizer.preloadCriticalResources(),
-  measurePageLoadMetrics: () => performanceOptimizer.measurePageLoadTiming()
-};
-=======
+  measurePageLoadMetrics: () => performanceOptimizer.measurePageLoadTiming(),
   getMetrics,
   initialize
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-a3c4
-=======
-  checkPerformanceBudget
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-e973
