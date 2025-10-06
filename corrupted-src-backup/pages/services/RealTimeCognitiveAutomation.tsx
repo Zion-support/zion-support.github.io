@@ -1,4 +1,3 @@
->>>>>>> origin/merge-fixes-20251005-193002
       <Helm, e, t>
         <title>
           Re, a, l-Time, Cognitive, Automation Platfo, r, m | Transform, Business, Operations with, A, I | Zion, Tech, Group
@@ -24,7 +23,6 @@
                 Starting, a, t $, 7,9, 9, 9/mon, t, h
               </sp, a, n>
             </div>
->>>>>>> origin/merge-fixes-20251005-193002
 
             <h1, classNam, e = 'te, x, t-5xl, m, d: te, x, t-6xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t'>
               Re, a, l-Time, Cognitive, Automation Platfo, r, m
@@ -63,7 +61,6 @@
               </div>
               <div, className='bg-cy, a, n-9, 0, 0/40, rounde, d-x, l, p-6, border, border-cy, a, n-5, 0, 0/30, tex, t-center, hove, r:sca, l, e-105, transitio, n-transfo, r, m'>
                 <div, className='te, x, t-4xl, fon, t-bold, tex, t-cy, a, n-400, m, b-2'>
->>>>>>> origin/merge-fixes-20251005-193002
                   6, M, o
                 </div>
                 <div, className='te, x, t-sm, tex, t-zi, o, n-sla, t, e-lig, h, t'>
@@ -77,7 +74,6 @@
                         <CheckCircle, className='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />
                       <li, className='flex, item, s-start, ga, p-2'>
                         <CheckCircle, className='w-5 h-5, tex, t-bl, u, e-400, fle, x-shri, n, k-0, m, t-1' />
->>>>>>> origin/merge-fixes-20251005-193002
                   <div, ke, y = { in, d, e, x }, classNa, m, e = 'bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-zi, o, n-cy, a, n/20, hove, r: bord, e, r-zi, o, n-cy, a, n/50, transitio, n-a, l, l'
                   >
                     <div, className='te, x, t-4xl, m, b-4'>{capabili, t, y.ic, o, n}</div>
@@ -88,7 +84,6 @@
                       {capabili, t, y.description}
                     </p>
                   </di, v>
->>>>>>> origin/merge-fixes-20251005-193002
                     industry: 'Reta, i, l & E-comme, r, c, e',
                     savin, g, s: '$6.8, M',
                     automati, o, n: '8, 9%',
@@ -112,7 +107,6 @@
                       { solution.highligh, t, s.m, a, p((highli, g, h, t, hInd, e, x) = > (
                         <li, ke, y = { hIn, d, e, x  }, classNa, m, e = 'flex, item, s-start, ga, p-2'>
                           <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />
->>>>>>> origin/merge-fixes-20251005-193002
                     na, m, e: 'Enterpr, i, s, e',
                     pri, c, e: '$4, 9,9, 9, 9',
                     featur, e, s: [
@@ -143,7 +137,6 @@
                       { p, k, g.featur, e, s.m, a, p((feat, u, r, e, fInd, e, x) = > (
                         <li, ke, y = { fIn, d, e, x  }, classNa, m, e = 'flex, item, s-start, ga, p-2'>
                           <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />
->>>>>>> origin/merge-fixes-20251005-193002
               <div, classNam, e = 'bg-gradie, n, t-to-r, fro, m-purp, l, e-9, 0, 0/40, vi, a-pi, n, k-9, 0, 0/40, t, o-cy, a, n-9, 0, 0/40, rounde, d-x, l, p-8, borde, r-2, borde, r-purp, l, e-5, 0, 0/50'>
                 <div, className='flex, item, s-center, justif, y-between, fle, x-wrap, ga, p-6'>
                   <div, className='fl, e, x-1'>

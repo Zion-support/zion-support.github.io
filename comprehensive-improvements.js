@@ -288,7 +288,7 @@ const improvementReport = {
 
 fs.writeFileSync(
   'comprehensive-improvements-report.json',
-  JSON.stringify(improvementReport, null, 2),
+  JSON.stringify(improvementReport, null, 2)
 );
 
 // Step 10: Commit changes
@@ -298,7 +298,7 @@ try {
   execSync('git add .', { stdio: 'inherit' });
   execSync(
     'git commit -m "Implement comprehensive improvements: performance, security, SEO, accessibility, and code quality"',
-    { stdio: 'inherit' },
+    { stdio: 'inherit' }
   );
   console.log('✅ Changes committed');
 } catch (error) {

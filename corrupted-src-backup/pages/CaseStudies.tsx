@@ -6,7 +6,8 @@ const CaseStudies: React.FC = () => {
     {
       id: 'fortune-100-manufacturing',
       title: 'Fortune 100 Manufacturing Company',
-      description: 'How we helped a Fortune 100 manufacturing company reduce costs by 40% using AI-powered optimization.',
+      description:
+        'How we helped a Fortune 100 manufacturing company reduce costs by 40% using AI-powered optimization.',
       results: [
         '40% cost reduction',
         '60% faster processing',
@@ -19,7 +20,8 @@ const CaseStudies: React.FC = () => {
     {
       id: 'healthcare-provider',
       title: 'Healthcare Provider Network',
-      description: 'AI-driven patient care optimization that improved outcomes while reducing operational costs.',
+      description:
+        'AI-driven patient care optimization that improved outcomes while reducing operational costs.',
       results: [
         '25% better patient outcomes',
         '30% cost reduction',
@@ -32,7 +34,8 @@ const CaseStudies: React.FC = () => {
     {
       id: 'financial-services',
       title: 'Financial Services Firm',
-      description: 'Advanced fraud detection and risk management system that prevented millions in losses.',
+      description:
+        'Advanced fraud detection and risk management system that prevented millions in losses.',
       results: [
         '99.8% fraud detection accuracy',
         '80% reduction in false positives',
@@ -45,7 +48,7 @@ const CaseStudies: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+    <div className='min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100'>
       <Helmet>
         <title>Case Studies - Zion Tech Group</title>
         <meta

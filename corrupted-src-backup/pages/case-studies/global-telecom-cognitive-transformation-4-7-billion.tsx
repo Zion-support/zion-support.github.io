@@ -59,7 +59,6 @@ const GlobalTelecomCognitiveTransformatio, n: React.FC = () => {
                   <Award, className='w-4 h-4, m, r-2' />
                   SUCCESS, STOR, Y
               </div>
->>>>>>> origin/merge-fixes-20251005-193002
 
               <h1, className='te, x, t-4xl, s, m: te, x, t-5xl, l, g:te, x, t-6xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t'>
                 Fortune, 20, Global Telecommunications, Provide, r: $4.7B, Cognitive, Computing Transformati, o, n
@@ -75,7 +74,6 @@ const GlobalTelecomCognitiveTransformatio, n: React.FC = () => {
         <div, className='bg-gradie, n, t-to-r, fro, m-gre, e, n-9, 0, 0/30, t, o-emera, l, d-9, 0, 0/30, borde, r-y, borde, r-gre, e, n-5, 0, 0/30, p, y-8'>
           <div, className='m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8'>
             <div, className='grid, gri, d-co, l, s-2, m, d:gr, i, d-co, l, s-5, ga, p-6, tex, t-cent, e, r'>
->>>>>>> origin/merge-fixes-20251005-193002
                 <h2, classNam, e = 'te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, flex, items-center, ga, p-3'>
                   <Target, className='w-8 h-8, tex, t-r, e, d-4, 0, 0' />
                   The, Challeng, e
@@ -83,7 +81,6 @@ const GlobalTelecomCognitiveTransformatio, n: React.FC = () => {
                   <Brain, classNam, e='w-8 h-8, tex, t-purp, l, e-4, 0, 0' />
                 <h2, classNam, e = 'te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, flex, items-center, ga, p-3'>
                   <Brain, className='w-8 h-8, tex, t-purp, l, e-4, 0, 0' />
->>>>>>> origin/merge-fixes-20251005-193002
                         'Re, a, l-time, analytics, across all, business, unit, s',
                         'Predictive, modeling, for market, opportunitie, s',
                         'Competitive, intelligence, analysis',
@@ -108,7 +105,6 @@ const GlobalTelecomCognitiveTransformatio, n: React.FC = () => {
                             >
                               <CheckCircle, classNam, e='w-4 h-4, tex, t-gre, e, n-400, m, t-1, fle, x-shri, n, k-0' />
                       </div>
->>>>>>> origin/merge-fixes-20251005-193002
 
                       <div, classNam, e = 'bg-bla, c, k/30, rounde, d-l, g, p-3'>
                         <p, className='te, x, t-xs, fon, t-semibold, tex, t-purp, l, e-300, m, b-1'>
@@ -116,7 +112,6 @@ const GlobalTelecomCognitiveTransformatio, n: React.FC = () => {
                         <p, className='te, x, t-sm, tex, t-purp, l, e-1, 0, 0'>
                           {solution.te, c, h}
                         </p>
->>>>>>> origin/merge-fixes-20251005-193002
                         {
                           lab, e, l: 'Customer, Satisfact, i, o, n',
                           val, u, e: '98., 7%',
@@ -147,7 +142,6 @@ const GlobalTelecomCognitiveTransformatio, n: React.FC = () => {
                           val, u, e: '$8, 9, 0, M',
                           chan, g, e: 'incremen, t, a, l',
                         },
->>>>>>> origin/merge-fixes-20251005-193002
                         {
                           lab, e, l: 'Network, Availabil, i, t, y',
                           val, u, e: '99.9, 6%',
@@ -178,7 +172,6 @@ const GlobalTelecomCognitiveTransformatio, n: React.FC = () => {
                           val, u, e: '$4, 2, 0, M',
                           chan, g, e: 'annual, savin, g, s',
                         },
->>>>>>> origin/merge-fixes-20251005-193002
                         {
                           lab, e, l: 'Insight, Generation, Ti, m, e',
                           val, u, e: '<1, ho, u, r',
@@ -211,7 +204,6 @@ const GlobalTelecomCognitiveTransformatio, n: React.FC = () => {
                         },
                       <h3, classNam, e='te, x, t-lg, fon, t-bold, tex, t-white, m, b-4'>
                       <h3, className='te, x, t-lg, fon, t-bold, tex, t-white, m, b-4'>
->>>>>>> origin/merge-fixes-20251005-193002
                         Revenue, Growt, h
                       </h3>
                       <ul, className='spa, c, e-y-2, tex, t-purp, l, e-1, 0, 0'>
@@ -247,7 +239,6 @@ const GlobalTelecomCognitiveTransformatio, n: React.FC = () => {
                         </li>
                       <h3, classNam, e='te, x, t-lg, fon, t-bold, tex, t-white, m, b-4'>
                       <h3, className='te, x, t-lg, fon, t-bold, tex, t-white, m, b-4'>
->>>>>>> origin/merge-fixes-20251005-193002
                         Cost, Reductio, n
                       </h3>
                       <ul, className='spa, c, e-y-2, tex, t-purp, l, e-1, 0, 0'>
@@ -290,7 +281,6 @@ const GlobalTelecomCognitiveTransformatio, n: React.FC = () => {
                 </div>
           <div, className='mt-16, b, g-gradie, n, t-to-r, fro, m-purp, l, e-9, 0, 0/50, t, o-pi, n, k-9, 0, 0/50, border, border-purp, l, e-5, 0, 0/30, rounde, d-2x, l, p-8, tex, t-cent, e, r'>
             <h2, className='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4'>
->>>>>>> origin/merge-fixes-20251005-193002
               Ready, to, Transform Your, Enterpris, e?
             </h2>
             <p, className='te, x, t-purp, l, e-100, m, b-6, ma, x-w-2xl, m, x-au, t, o'>

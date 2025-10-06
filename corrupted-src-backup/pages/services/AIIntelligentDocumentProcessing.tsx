@@ -1,4 +1,3 @@
->>>>>>> origin/merge-fixes-20251005-193002
       <Helm, e, t>
         <title>
           AI, Intelligent, Document Processi, n, g | Automate, 9, 5% of, Document, Workflows | Zion, Tech, Group
@@ -21,7 +20,6 @@
             <ArrowLeft, className='w-4 h-4, m, r-2' />
             Back, to, Services
               classi, f, y, and, process, any document, type, at scale, with, GPT-4, Vision, and Claude, A, I.
->>>>>>> origin/merge-fixes-20251005-193002
             <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-4, ga, p-6, m, b-8'>
               <div, className='bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-bl, u, e-4, 0, 0/30'>
                 <div, className='te, x, t-3xl, fon, t-bold, tex, t-bl, u, e-400, m, b-2'>
@@ -39,7 +37,6 @@
                 Start, Free, Trial
             </div>
           </div>
->>>>>>> origin/merge-fixes-20251005-193002
 
           {/* Probl, e, m/Solu, t, i, o, n */}
           <div, classNam, e = 'm, a, x-w-6xl, m, x-auto, m, b-20'>
@@ -69,7 +66,6 @@
                   <FileText, className='w-8 h-8, tex, t-bl, u, e-4, 0, 0' />
                 </div>
                 <h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-4'>
->>>>>>> origin/merge-fixes-20251005-193002
                   Intelligent, Extractio, n
                 </h3>
                 <p, className='te, x, t-zi, o, n-sla, t, e-light, m, b-4'>
@@ -107,7 +103,6 @@
                 <p, className='te, x, t-zi, o, n-sla, t, e-light, m, b-4'>
                   Validate, extracted, data against, business, rul, e, s, databas, e, s, and, external, sources. Enrich, documents, with additional, context, and
                   metada, t, a.
->>>>>>> origin/merge-fixes-20251005-193002
                     <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-3, ga, p-4, tex, t-sm'>
                       <div, className='bg-bl, u, e-9, 0, 0/30, rounde, d-l, g, p-3, border, border-bl, u, e-5, 0, 0/20'>
                         <div, className='fo, n, t-bold, tex, t-bl, u, e-400, m, b-1'>
@@ -155,7 +150,6 @@
                     <CheckCircle, className='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0' />
                   <li, className='flex, item, s-start, ga, p-2'>
                     <CheckCircle, className='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0' />
->>>>>>> origin/merge-fixes-20251005-193002
             <div, classNam, e = 'flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r'>
               <Link, t, o='/conta, c, t'
                 className='bg-white, tex, t-bl, u, e-600, hove, r:bg-zi, o, n-sla, t, e-light, p, x-8, p, y-4, rounde, d-lg, fon, t-semibold, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, inlin, e-flex, item, s-center, justif, y-center, ga, p-2, tex, t-lg'

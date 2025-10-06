@@ -1,46 +1,43 @@
-import React from "react";
-import {
-  ArrowRight,
-  CheckCircle,
-  Globe,
-  Rocket,
-} from 'lucide-react';
+import React from 'react';
+import { ArrowRight, CheckCircle, Globe, Rocket } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 
 const HomeOptimized: React.FC = () => {
   const features = [
     {
-      icon: <Zap className="w-8 h-8" />,
-      title: "Lightning Fast",
-      description: "Optimized for speed and performance with cutting-edge technology.",
+      icon: <Zap className='w-8 h-8' />,
+      title: 'Lightning Fast',
+      description:
+        'Optimized for speed and performance with cutting-edge technology.',
     },
     {
-      icon: <Shield className="w-8 h-8" />,
-      title: "Secure & Reliable",
-      description: "Enterprise-grade security with 99.9% uptime guarantee.",
+      icon: <Shield className='w-8 h-8' />,
+      title: 'Secure & Reliable',
+      description: 'Enterprise-grade security with 99.9% uptime guarantee.',
     },
     {
-      icon: <Target className="w-8 h-8" />,
-      title: "Precision AI",
-      description: "Advanced AI algorithms for accurate and intelligent solutions.",
+      icon: <Target className='w-8 h-8' />,
+      title: 'Precision AI',
+      description:
+        'Advanced AI algorithms for accurate and intelligent solutions.',
     },
     {
-      icon: <Globe className="w-8 h-8" />,
-      title: "Global Scale",
-      description: "Deploy anywhere with our worldwide infrastructure.",
+      icon: <Globe className='w-8 h-8' />,
+      title: 'Global Scale',
+      description: 'Deploy anywhere with our worldwide infrastructure.',
     },
   ];
 
   const stats = [
-    { label: "Happy Customers", value: "10,000+" },
-    { label: "Projects Completed", value: "500+" },
-    { label: "Uptime", value: "99.9%" },
-    { label: "Countries", value: "50+" },
+    { label: 'Happy Customers', value: '10,000+' },
+    { label: 'Projects Completed', value: '500+' },
+    { label: 'Uptime', value: '99.9%' },
+    { label: 'Countries', value: '50+' },
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+    <div className='min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100'>
       <Helmet>
         <title>Home - Zion Tech Group</title>
         <meta
@@ -76,23 +73,21 @@ const HomeOptimized: React.FC = () => {
             </div>
           </div>
 
-        <div className="bg-white rounded-lg shadow-lg p-8 mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 text-center mb-8">
-            Why Choose Us?
-          </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="text-3xl font-bold text-blue-600 mb-2">
-                  {stat.value}
+          <div className='bg-white rounded-lg shadow-lg p-8 mb-16'>
+            <h2 className='text-3xl font-bold text-gray-900 text-center mb-8'>
+              Why Choose Us?
+            </h2>
+            <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-8'>
+              {stats.map((stat, index) => (
+                <div key={index} className='text-center'>
+                  <div className='text-3xl font-bold text-blue-600 mb-2'>
+                    {stat.value}
+                  </div>
+                  <div className='text-gray-600'>{stat.label}</div>
                 </div>
-                <div className="text-gray-600">
-                  {stat.label}
-                </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
 
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>
             <div className='bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow'>

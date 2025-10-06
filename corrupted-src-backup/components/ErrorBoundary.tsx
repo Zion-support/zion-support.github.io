@@ -71,7 +71,7 @@ class ErrorBoundary extends Component<Props, State> {
             <p className="text-gray-300 mb-6">
               We're sorry, but something unexpected happened. Our team has been notified.
             </p>
-<<<<<<< HEAD:src/components/ErrorBoundary.tsx
+:src/components/ErrorBoundary.tsx
             {this.state.errorId && (
               <p className="text-gray-400 mb-4 text-sm">
                 Error ID: {this.state.errorId}
@@ -96,11 +96,9 @@ class ErrorBoundary extends Component<Props, State> {
             <button
               onClick={() => window.location.reload()}
               className="mt-4 text-gray-400 hover:text-white text-sm underline"
-=======
             <button
               onClick={() => window.location.reload()}
               className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
->>>>>>> 816b623ffaed3413410f2a2aa47cedfcc64ada9d:corrupted-src-backup/components/ErrorBoundary.tsx
             >
               Or refresh the page
             </button>
