@@ -4,17 +4,17 @@
  */
 
 export interface ErrorContext {
-  component?: string;
-  action?: string;
-  userId?: string;
+  component?: string | undefined;
+  action?: string | undefined;
+  userId?: string | undefined;
   timestamp: number;
-  userAgent?: string;
-  url?: string;
+  userAgent?: string | undefined;
+  url?: string | undefined;
 }
 
 export interface ErrorReport {
   message: string;
-  stack?: string;
+  stack?: string | undefined;
   context: ErrorContext;
   severity: 'low' | 'medium' | 'high' | 'critical';
 }
@@ -33,13 +33,18 @@ class ErrorHandler {
   ): void {
     const errorReport: ErrorReport = {
       message: typeof error === 'string' ? error : error.message,
-      stack: typeof error === 'string' ? undefined : error.stack,
+      stack: typeof error === 'string' ? '' : error.stack || '',
       context: {
         timestamp: Date.now(),
-        userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : undefined,
-        url: typeof window !== 'undefined' ? window.location.href : undefined,
+<<<<<<< HEAD
+        userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : '',
+=======
+        userAgent:
+          typeof window !== 'undefined' ? window.navigator.userAgent : '',
+>>>>>>> main
+        url: typeof window !== 'undefined' ? window.location.href : '',
         ...context,
-      },
+      } as ErrorContext,
       severity,
     };
 
@@ -51,12 +56,17 @@ class ErrorHandler {
     }
 
     // Log to console in development
+<<<<<<< HEAD
     if (process.env.NODE_ENV === 'development') {
+      // Error logged
+=======
+    if (process.env['NODE_ENV'] === 'development') {
       console.error('Error logged:', errorReport);
+>>>>>>> main
     }
 
     // Send to external service in production
-    if (process.env.NODE_ENV === 'production') {
+    if (process.env['NODE_ENV'] === 'production') {
       this.sendToErrorService(errorReport);
     }
   }
@@ -68,9 +78,9 @@ class ErrorHandler {
     try {
       // In a real application, you would send to services like Sentry, LogRocket, etc.
       // For now, we'll just log to console
-      console.error('Error report:', errorReport);
+      // Error report
     } catch (err) {
-      console.error('Failed to send error report:', err);
+      // Failed to send error report
     }
   }
 
@@ -102,7 +112,7 @@ class ErrorHandler {
     if (typeof window === 'undefined') return;
 
     // Handle unhandled promise rejections
-    window.addEventListener('unhandledrejection', (event) => {
+    window.addEventListener('unhandledrejection', event => {
       this.logError(
         new Error(event.reason),
         { action: 'unhandledrejection' },
@@ -111,7 +121,7 @@ class ErrorHandler {
     });
 
     // Handle JavaScript errors
-    window.addEventListener('error', (event) => {
+    window.addEventListener('error', event => {
       this.logError(
         event.error || new Error(event.message),
         {

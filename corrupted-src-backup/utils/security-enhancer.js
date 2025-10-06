@@ -98,7 +98,7 @@ class SecurityEnhancer {
     const array = new Uint8Array(32);
     crypto.getRandomValues(array);
     return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join(
-      '',
+      ''
     );
   }
 
@@ -221,7 +221,7 @@ class SecurityEnhancer {
       const urlObj = new URL(url);
       return this.securityConfig.trustedDomains.some(
         domain =>
-          urlObj.hostname === domain || urlObj.hostname.endsWith('.' + domain),
+          urlObj.hostname === domain || urlObj.hostname.endsWith('.' + domain)
       );
     } catch {
       return false;
@@ -308,7 +308,7 @@ class SecurityEnhancer {
     // Override innerHTML and textContent to encode by default
     const originalInnerHTML = Object.getOwnPropertyDescriptor(
       Element.prototype,
-      'innerHTML',
+      'innerHTML'
     );
     Object.defineProperty(Element.prototype, 'innerHTML', {
       set: function (value) {

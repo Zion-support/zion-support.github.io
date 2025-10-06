@@ -151,9 +151,9 @@ select:focus-visible {
 }
 
 /* Form accessibility */
-input[type="text"],
-input[type="email"],
-input[type="password"],
+input[type='text'],
+input[type='email'],
+input[type='password'],
 textarea,
 select {
   border: 2px solid #d1d5db;
@@ -202,8 +202,12 @@ select:focus {
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 /* Reduced motion loading */
@@ -218,7 +222,8 @@ table {
   width: 100%;
 }
 
-th, td {
+th,
+td {
   border: 1px solid #d1d5db;
   padding: 8px 12px;
   text-align: left;
@@ -245,7 +250,7 @@ img {
   height: auto;
 }
 
-img[alt=""] {
+img[alt=''] {
   border: 2px dashed #dc2626;
 }
 
@@ -276,21 +281,39 @@ a:focus {
 }
 
 /* Heading hierarchy */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin-top: 1.5em;
   margin-bottom: 0.5em;
   line-height: 1.2;
 }
 
-h1 { font-size: 2.5rem; }
-h2 { font-size: 2rem; }
-h3 { font-size: 1.75rem; }
-h4 { font-size: 1.5rem; }
-h5 { font-size: 1.25rem; }
-h6 { font-size: 1rem; }
+h1 {
+  font-size: 2.5rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.75rem;
+}
+h4 {
+  font-size: 1.5rem;
+}
+h5 {
+  font-size: 1.25rem;
+}
+h6 {
+  font-size: 1rem;
+}
 
 /* List accessibility */
-ul, ol {
+ul,
+ol {
   margin: 1em 0;
   padding-left: 2em;
 }

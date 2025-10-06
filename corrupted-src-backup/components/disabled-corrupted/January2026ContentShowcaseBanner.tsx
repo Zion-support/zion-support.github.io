@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 const January2026ContentShowcaseBanner: React.FC = () => {
   return (
