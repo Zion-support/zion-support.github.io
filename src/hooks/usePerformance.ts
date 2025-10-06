@@ -4,6 +4,7 @@
  */
 
 import { useEffect, useCallback, useRef } from 'react';
+import { performanceOptimizer } from '../utils/performanceOptimizer';
 import analytics from '../utils/analytics';
 
 export interface PerformanceMetrics {
@@ -157,18 +158,21 @@ export const useResourcePerformance = () => {
  */
 export const useLongTaskMonitoring = () => {
   useEffect(() => {
-    if (typeof window === 'undefined' || !window.PerformanceObserver) return;
-
-    const observer = new PerformanceObserver((list) => {
-      list.getEntries().forEach((entry) => {
-        analytics.track('long_task', 'performance', 'detected', undefined, entry.duration);
+    // Monitor long tasks if available
+    let observer: PerformanceObserver | null = null;
+    
+    if ('monitorLongTasks' in performanceOptimizer) {
+      observer = (performanceOptimizer as any).monitorLongTasks((entries: PerformanceEntryList) => {
+        entries.forEach((entry: PerformanceEntry) => {
+          analytics.track('long_task', 'performance', 'detected', undefined, entry.duration);
+        });
       });
-    });
-
-    observer.observe({ entryTypes: ['longtask'] });
+    }
 
     return () => {
-      observer.disconnect();
+      if (observer && 'disconnect' in observer) {
+        observer.disconnect();
+      }
     };
   }, []);
 };

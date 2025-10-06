@@ -14,7 +14,7 @@ export interface AnalyticsEvent {
 }
 
 export interface UserProperties {
-  userId?: string;
+  userId?: string | undefined;
   sessionId: string;
   userAgent: string;
   language: string;
@@ -58,7 +58,7 @@ class Analytics {
       language: window.navigator.language,
       timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
       referrer: document.referrer || undefined,
-    } as UserProperties;
+    };
   }
 
   /**
@@ -88,7 +88,7 @@ class Analytics {
     this.sendToAnalytics(event);
 
     // Log in development
-    if (process.env['NODE_ENV'] === 'development') {
+    if (process.env.NODE_ENV === 'development') {
       console.log('Analytics event:', event);
     }
   }

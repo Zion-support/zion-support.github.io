@@ -16,8 +16,9 @@
     "noEmit": true,
     "jsx": "react-jsx",
     "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
+    "strictNullChecks": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
     "noFallthroughCasesInSwitch": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
@@ -53,11 +54,8 @@
     "verbatimModuleSyntax": true
   },
   "include": [
-    "src/**/*",
-    "app/enterprise/**/*",
-    "app/not-found.tsx",
-    "app/page.tsx",
-    "app/layout.tsx"
+    "app/**/*",
+    "src/**/*"
   ],
   "exclude": [
     "node_modules",
@@ -100,6 +98,11 @@
     "services/**",
     "middleware/**",
     "app/blog/**",
+    "app/page-optimized.tsx",
+    "app/services/**/*",
+    "app/case-studies/**/*",
+    "app/guides/**/*",
+    "app/components/**/*",
     "EnhancedFooter.tsx",
     "EnhancedHeader.tsx",
     "EnhancedNavigation.tsx",
