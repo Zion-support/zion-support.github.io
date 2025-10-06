@@ -31,6 +31,10 @@ export default function June2026UltimateBreakthroughPage() {
           <span>By    {data['author']}</span>
             <span>•</span>
             <span>{new Date(data['date']).to Locale Date    String   ()}</span>
+          <span>By {data.author}</span>
+            <span>•</span>
+            <span>{new Date(data.date).toLocaleDateString()}</span>
+>>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572
           </div>
         </header>
         <div className="text-left"> </div><div dangerouslySetInnerHTML={{ __html: content.replace(/\n/g, '<br />') }} /></div>

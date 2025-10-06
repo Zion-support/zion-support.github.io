@@ -1,6 +1,22 @@
 import React from 'react';
+<<<<<<< HEAD:app/components/September30NewContent2025Banner.tsx
+import { ArrowRight, Bookmark, Rocket, TrendingUp, Zap } from 'lucide-react';
+import Link from 'next/link';
+import { Sparkles, TrendingUp, ArrowRight, Zap, Rocket, Star } from 'lucide-react';
+
+import {
+  ArrowRight,
+  Bookmark,
+  Rocket,
+  TrendingUp,
+  Zap,
+  Sparkles,
+  Star,
+} from 'lucide-react';
+=======
 import { ArrowRight, Sparkles, Zap, TrendingUp, Star, Rocket } from 'lucide-react';
 import Link from 'next/link';
+>>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572:app/components/September30NewContent2025Banner.tsx.disabled
 const September30NewContent2025Banner: React.FC = () => {
   const newArticles = [
     {
@@ -49,7 +65,107 @@ const September30NewContent2025Banner: React.FC = () => {
       date: '2025-09-30',
       readTime: '16 min',
       icon: '👁️',
+<<<<<<< HEAD:app/components/September30NewContent2025Banner.tsx
+      gradient: 'from-emerald-500 to-teal-600'
+    }
+  ];
+
+  return (
+    <section className="relative overflow-hidden bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 py-20">
+      {/* Animated Background Effects */}
+      <div className="absolute inset-0">
+        <div className="absolute top-10 left-10 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute top-40 right-20 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute bottom-20 left-1/3 w-80 h-80 bg-cyan-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+      </div>
+
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
+        <div className="text-center mb-16">
+          <div className="flex items-center justify-center gap-2 mb-6">
+            <Sparkles className="w-6 h-6 text-yellow-400" />
+            <span className="text-yellow-400 font-bold text-lg">
+              🚀 BREAKING: 4 REVOLUTIONARY ARTICLES JUST PUBLISHED!
+            </span>
+            <Sparkles className="w-6 h-6 text-yellow-400" />
+          </div>
+
+          <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-6">
+            September 30, 2025 — Cutting-Edge AI Insights
+          </h2>
+          
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+            Customer Experience • Autonomous Operations • GenAI Architecture • Multimodal AI — The future of enterprise AI starts here
+          </p>
+
+          <div className="flex items-center justify-center gap-8 text-gray-300">
+            <div className="flex items-center gap-2">
+              <TrendingUp className="w-5 h-5 text-green-400" />
+              <span className="font-semibold">50,000+ Readers</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Zap className="w-5 h-5 text-yellow-400" />
+              <span className="font-semibold">4 New Articles</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Star className="w-5 h-5 text-blue-400" />
+              <span className="font-semibold">Proven Results</span>
+            </div>
+          </div>
+        </div>
+
+        {/* Featured Articles Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+          {newArticles.map((article, index) => (
+            <Link key={article.id} href={`/blog/${article.slug}`} className="group">
+              <div className="relative bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-white/40 transition-all duration-500 hover:transform hover:scale-105 h-full">
+                {/* Card glow effect */}
+                <div className={`absolute inset-0 bg-gradient-to-br ${article.gradient} opacity-0 group-hover:opacity-10 transition-all duration-500 rounded-2xl`}></div>
+                
+                <div className="relative z-10">
+                  {/* Icon & Badges */}
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="text-3xl">{article.icon}</div>
+                    <div className="flex gap-2">
+                      <span className="px-2 py-1 bg-red-500 text-white text-xs font-bold rounded-full">🔥 HOT</span>
+                      <span className="px-2 py-1 bg-green-500 text-white text-xs font-bold rounded-full">NEW TODAY</span>
+                    </div>
+                  </div>
+
+                  {/* Category Tag */}
+                  <div className="mb-3">
+                    <span className={`px-3 py-1 bg-gradient-to-r ${article.gradient} text-white text-xs font-semibold rounded-full`}>
+                      {article.category}
+                    </span>
+                  </div>
+
+                  {/* Title */}
+                  <h3 className="text-lg font-bold text-white mb-3 group-hover:text-blue-300 transition-colors leading-tight">
+                    {article.title}
+                  </h3>
+
+                  {/* Excerpt */}
+                  <p className="text-gray-300 text-sm mb-4 leading-relaxed">
+                    {article.excerpt}
+                  </p>
+
+                  {/* Meta Info */}
+                  <div className="flex items-center justify-between text-gray-400 text-xs mb-4">
+                    <span>⏱️ {article.readTime}</span>
+                    <span>📅 {article.date}</span>
+                  </div>
+
+                  {/* CTA Button */}
+                  <div className="flex items-center justify-center gap-2 text-blue-400 font-semibold group-hover:text-blue-300 transition-colors">
+                    <span className="text-sm">Read Article</span>
+                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </div>
+              </div>
+      gradient: 'from-emerald-500 to-teal-600',
+=======
 gradient: 'from-emerald-500 to-teal-600',
+>>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572:app/components/September30NewContent2025Banner.tsx.disabled
     },
   ];
   return (
@@ -189,16 +305,53 @@ gradient: 'from-emerald-500 to-teal-600',
                 </div>
               </div>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e4e
+<<<<<<< HEAD:app/components/September30NewContent2025Banner.tsx
+=======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
+>>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572:app/components/September30NewContent2025Banner.tsx.disabled
             </Link>
           ))}
         </div>
         {/* Call-to-Action Section */}
+<<<<<<< HEAD:app/components/September30NewContent2025Banner.tsx
+        <div>
+          <div>
+            <div>
+              <h3>
+                Transform Your Enterprise with AI
+              </h3>
+              <p>
+                Join 500+ Fortune 500 enterprises achieving breakthrough results with AI-powered operations, 
+                quantum computing, and autonomous systems. Get expert guidance from our team.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-6 justify-center">
+                <Link
+                  href="/blog"
+                  className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-5 px-10 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 flex items-center justify-center gap-3 text-lg"
+                >
+                  <Sparkles />
+                  <span>Explore All Articles</span>
+                </Link>
+                <Link
+                  href="/contact"
+                  className="border-2 border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-bold py-5 px-10 rounded-xl transition-all duration-300 flex items-center justify-center gap-3 text-lg"
+                >
+                  <span>Schedule Expert Consultation</span>
+                  <ArrowRight className="w-6 h-6" />
+                </Link>
+              </div>
+            </div>
+=======
+>>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572:app/components/September30NewContent2025Banner.tsx.disabled
         <div className="text-center bg-white/5 backdrop-blur-lg rounded-2xl p-12 border border-white/20 mb-16">
           <h3 className="text-3xl font-bold text-white mb-6">
             Transform Your Enterprise with Cutting-Edge AI
           </h3>
+<<<<<<< HEAD:app/components/September30NewContent2025Banner.tsx
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+=======
 <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+>>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572:app/components/September30NewContent2025Banner.tsx.disabled
             Join 50,000+ AI leaders implementing these breakthrough technologies. Get expert guidance 
             from Zion Tech Group's AI transformation specialists.
           </p>
@@ -208,38 +361,77 @@ gradient: 'from-emerald-500 to-teal-600',
               className="group flex items-center gap-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl"
             >
               <Rocket className="w-5 h-5" />
+<<<<<<< HEAD:app/components/September30NewContent2025Banner.tsx
+          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            Join 50,000+ AI leaders implementing these breakthrough technologies. Get expert guidance 
+            from Zion Tech Group's AI transformation specialists.
+          </p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+            <Link
+              href="/contact"
+              className="flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl"
+            >
+              <Sparkles className="w-5 h-5" />
+=======
+>>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572:app/components/September30NewContent2025Banner.tsx.disabled
               <span>Start Your AI Journey</span>
             </Link>
             <Link
               href="/blog"
+<<<<<<< HEAD:app/components/September30NewContent2025Banner.tsx
+              className="group flex items-center gap-3 border-2 border-white/30 hover:border-white/60 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1"
+=======
 className="flex items-center gap-3 border-2 border-white/30 hover:border-white/60 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 hover:bg-white/10"
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
+>>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572:app/components/September30NewContent2025Banner.tsx.disabled
             >
               <Sparkles />
               <span>Explore All Articles</span>
             </Link>
+<<<<<<< HEAD:app/components/September30NewContent2025Banner.tsx
+              className="flex items-center gap-3 border-2 border-white/30 hover:border-white/60 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 hover:bg-white/10"
+=======
             <Link
               href="/contact"
               className="border-2 border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-bold py-5 px-10 rounded-xl transition-all duration-300 flex items-center justify-center gap-3 text-lg"
+>>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572:app/components/September30NewContent2025Banner.tsx.disabled
             >
               <span>Schedule Expert Consultation</span>
               <ArrowRight className="w-6 h-6" />
             </Link>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e4e
+<<<<<<< HEAD:app/components/September30NewContent2025Banner.tsx
+=======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
+>>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572:app/components/September30NewContent2025Banner.tsx.disabled
           </div>
         </div>
         {/* Stats Section */}
+<<<<<<< HEAD:app/components/September30NewContent2025Banner.tsx
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div className='grid grid-cols-2 md:grid-cols-4 gap-8'>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e4e
+=======
 <div className='grid grid-cols-2 md:grid-cols-4 gap-8'>
 =======
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e4e
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
+>>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572:app/components/September30NewContent2025Banner.tsx.disabled
           {[
             { value: '500+', label: 'Enterprise Clients' },
             { value: '10B+', label: 'Data Points Processed Daily' },
             { value: '99.9%', label: 'System Uptime' },
+<<<<<<< HEAD:app/components/September30NewContent2025Banner.tsx
+            { value: '5M+', label: 'Autonomous Operations Hours' }
+          ].map((stat, index) => (
+            <div key={index} className="text-center">
+              <div className="text-3xl font-bold text-yellow-400 mb-2">{stat.value}</div>
+            { value: '5M+', label: 'Autonomous Operations Hours' },
+=======
 { value: '5M+', label: 'Autonomous Operations Hours' },
+>>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572:app/components/September30NewContent2025Banner.tsx.disabled
           ].map((stat, index) => (
             <div key={index} className='text-center'>
               <div className='text-3xl font-bold text-cyan-400 mb-2'>
@@ -285,7 +477,6 @@ className="flex items-center gap-3 border-2 border-white/30 hover:border-white/6
           ].map((stat, index) => (
             <div key={index} className="text-center">
               <div className="text-3xl font-bold text-cyan-400 mb-2">{stat.value}</div>
-=======
             { value: '5M+', label: 'Autonomous Operations Hours' }
           ].map((stat, index) => (
             <div key={index} className="text-center">
