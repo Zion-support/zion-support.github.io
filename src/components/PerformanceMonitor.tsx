@@ -1,10 +1,17 @@
 import React, { useEffect, useState } from 'react';
-import performanceOptimizer, { WebVitalsMetrics } from '../utils/performanceOptimizer';
 
 interface PerformanceMonitorProps {
   children: React.ReactNode;
   enableReporting?: boolean;
   enableLongTaskMonitoring?: boolean;
+}
+
+interface WebVitalsMetrics {
+  FCP?: number;
+  LCP?: number;
+  FID?: number;
+  CLS?: number;
+  TTFB?: number;
 }
 
 const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ 
@@ -28,141 +35,77 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       });
       
       observer.observe({ entryTypes: ['navigation'] });
-      
-      return () => observer.disconnect();
-    }
-    
-    // Return undefined if performance is not available
-    return undefined;
-  }, []);
-    // Initialize performance monitoring
-    // Add critical resource hints for performance optimization
-    performanceOptimizer.prefetchResources([]);
-    performanceOptimizer.preconnectDomains([]);
-    // Add critical resource hints manually
-    if (typeof document !== 'undefined') {
-      const hints = [
-        { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' },
-        { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com' },
-        { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
-        { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossOrigin: 'anonymous' }
-      ];
-      
-      hints.forEach(hint => {
-        const link = document.createElement('link');
-        link.rel = hint.rel;
-        link.href = hint.href;
-        if (hint.crossOrigin) {
-          link.crossOrigin = hint.crossOrigin;
-        }
-        document.head.appendChild(link);
-      });
-    }
-    
-    // Measure page load performance
-    const pageLoadMetrics = performanceOptimizer.measurePageLoad();
-    if (pageLoadMetrics) {
-      setMetrics(pageLoadMetrics);
-      if (enableReporting) {
-        performanceOptimizer.reportWebVitals(pageLoadMetrics);
+
+      // Monitor long tasks
+      if (enableLongTaskMonitoring) {
+        const longTaskObserver = new PerformanceObserver((list) => {
+          const longTasks = list.getEntries().filter(entry => entry.duration > 50);
+          setLongTasks(prev => [...prev, ...longTasks]);
+          
+          if (enableReporting) {
+            console.warn('Long task detected:', longTasks);
+          }
+        });
+        
+        longTaskObserver.observe({ entryTypes: ['longtask'] });
       }
-    }
 
-    // Monitor long tasks if enabled
-    if (enableLongTaskMonitoring) {
-      const observer = performanceOptimizer.monitorLongTasks((entries: PerformanceEntryList) => {
-        setLongTasks(prev => [...prev, ...entries]);
-        console.warn('Long tasks detected:', entries);
-      });
-      
-      return () => {
-        if (observer) {
-          observer.disconnect();
-        }
-      };
-    }
-  }, [enableReporting, enableLongTaskMonitoring]);
-
-  // Monitor Web Vitals using Performance Observer
-  useEffect(() => {
-    if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return;
-
-    const observer = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
-      entries.forEach((entry) => {
-        if (entry.entryType === 'largest-contentful-paint') {
-          const lcp = entry.startTime;
-          setMetrics(prev => ({ ...prev, LCP: lcp }));
-          if (enableReporting) {
-            performanceOptimizer.reportWebVitals({ LCP: lcp });
+      // Monitor Core Web Vitals
+      if (enableReporting) {
+        // First Contentful Paint
+        const fcpObserver = new PerformanceObserver((list) => {
+          for (const entry of list.getEntries()) {
+            if (entry.name === 'first-contentful-paint') {
+              setMetrics(prev => ({ ...prev, FCP: entry.startTime }));
+            }
           }
-        }
-        
-        if (entry.entryType === 'first-input') {
-          const fid = (entry as any).processingStart - entry.startTime;
-          setMetrics(prev => ({ ...prev, FID: fid }));
-          if (enableReporting) {
-            performanceOptimizer.reportWebVitals({ FID: fid });
-          }
-        }
-        
-        if (entry.entryType === 'layout-shift') {
-          const cls = (entry as any).value;
-          setMetrics(prev => ({ ...prev, CLS: cls }));
-          if (enableReporting) {
-            performanceOptimizer.reportWebVitals({ CLS: cls });
-          }
-        }
-      });
-    });
+        });
+        fcpObserver.observe({ entryTypes: ['paint'] });
 
-    try {
-      observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
-    } catch (e) {
-      console.warn('Performance Observer not supported:', e);
+        // Largest Contentful Paint
+        const lcpObserver = new PerformanceObserver((list) => {
+          const entries = list.getEntries();
+          const lastEntry = entries[entries.length - 1];
+          setMetrics(prev => ({ ...prev, LCP: lastEntry.startTime }));
+        });
+        lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+
+        // First Input Delay
+        const fidObserver = new PerformanceObserver((list) => {
+          for (const entry of list.getEntries()) {
+            setMetrics(prev => ({ ...prev, FID: entry.processingStart - entry.startTime }));
+          }
+        });
+        fidObserver.observe({ entryTypes: ['first-input'] });
+
+        // Cumulative Layout Shift
+        let clsValue = 0;
+        const clsObserver = new PerformanceObserver((list) => {
+          for (const entry of list.getEntries()) {
+            if (!(entry as any).hadRecentInput) {
+              clsValue += (entry as any).value;
+              setMetrics(prev => ({ ...prev, CLS: clsValue }));
+            }
+          }
+        });
+        clsObserver.observe({ entryTypes: ['layout-shift'] });
+      }
     }
 
     return () => {
-      observer.disconnect();
+      // Cleanup observers
+      if (typeof window !== 'undefined' && 'performance' in window) {
+        // Performance observers are automatically cleaned up when the component unmounts
+      }
     };
-  }, [enableReporting]);
+  }, [enableReporting, enableLongTaskMonitoring]);
 
-  // Development mode: Log performance metrics
+  // Log metrics when they change
   useEffect(() => {
-    if (process.env.NODE_ENV === 'development' && Object.keys(metrics).length > 0) {
+    if (Object.keys(metrics).length > 0 && enableReporting) {
       console.log('Performance Metrics:', metrics);
     }
-  }, [metrics]);
-import React, { ReactNode, useEffect } from 'react';
-
-interface PerformanceMonitorProps {
-  children: ReactNode;
-}
-
-const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ children }) => {
-  useEffect(() => {
-    // Monitor performance metrics
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      const observer = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          if (process.env.NODE_ENV === 'development') {
-            console.log('Performance entry:', entry);
-          }
-        }
-      });
-
-      try {
-        observer.observe({ entryTypes: ['measure', 'navigation', 'paint'] });
-      } catch (error) {
-        console.warn('Performance Observer not supported:', error);
-      }
-
-      return () => {
-        observer.disconnect();
-      };
-    }
-    return undefined;
-  }, []);
+  }, [metrics, enableReporting]);
 
   return <>{children}</>;
 };
