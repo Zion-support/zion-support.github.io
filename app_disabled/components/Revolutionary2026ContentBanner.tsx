@@ -1,6 +1,11 @@
 import Link from 'next/link';
 <<<<<<< HEAD:app/components/Revolutionary2026ContentBanner.tsx
 import { ArrowRight, Brain, Zap, Sparkles, Cpu } from 'lucide-react';
+import { ArrowRight, Brain, Cpu, Zap } from 'lucide-react';
+
+>>>>>>> main:app_disabled/components/Revolutionary2026ContentBanner.tsx
+
+>>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572
 export default function Revolutionary2026ContentBanner() {
   return (
     <section className='relative overflow-hidden bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 py-20'>

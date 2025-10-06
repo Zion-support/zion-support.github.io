@@ -168,5 +168,4 @@ export function getRecentBanners(days: number = 30): BannerConfig[] {
     return publishDate >= cutoffDate;
   });
 }
-
 export default BANNER_REGISTRY;

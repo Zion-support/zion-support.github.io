@@ -1,13 +1,13 @@
 import { TextEncoder, TextDecoder } from 'util';
 
-// Polyfill for react-router-dom in Jest environment
-// @ts-ignore
+//Polyfill for react-router-dom in Jest environment
+//@ts-ignore
 if (typeof (global as any).TextEncoder === 'undefined') {
-  // @ts-ignore
+  //@ts-ignore
   (global as any).TextEncoder = TextEncoder;
 }
 
-// @ts-ignore
+//@ts-ignore
 if (typeof (global as any).TextDecoder === 'undefined') {
   // @ts-ignore
   (global as any).TextDecoder = TextDecoder as unknown as typeof globalThis.TextDecoder;
