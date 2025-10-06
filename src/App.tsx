@@ -139,8 +139,8 @@ class ErrorBoundary extends React.Component<
     return { hasError: true };
   }
 
-  override componentDidCatch(_error: Error, errorInfo: React.ErrorInfo) {
-    console.error('Error caught by boundary:', errorInfo);
+  override componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
   }
 
   override render() {

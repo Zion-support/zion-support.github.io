@@ -1,23 +1,50 @@
 import React, { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { CheckCircle, Zap, TrendingUp, Brain, ArrowRight } from 'lucide-react';
+import {
+  CheckCircle,
+  Zap,
+  TrendingUp,
+  Brain,
+  ArrowRight,
+  Server,
+  Cpu,
+  Rocket,
+  Phone,
+  Mail,
+  MapPin,
+} from 'lucide-react';
 
-import { INNOVATIVE_SERVICES_2025 } from '@/data/innovativeServices2025';
-import { SEO } from '@/components/SEO';
+// import { INNOVATIVE_SERVICES_2025 } from '@/data/innovativeServices2025';
+// import { SEO } from '@/components/SEO';
 const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedPricingModel, setSelectedPricingModel] = useState('all');
-  const services = INNOVATIVE_SERVICES_2025;
+  const services = [
+    {
+      id: 'ai-automation',
+      name: 'AI Automation',
+      category: 'AI',
+      description: 'Advanced AI automation solutions',
+      pricing: { basic: 1000, premium: 5000, enterprise: 15000 }
+    },
+    {
+      id: 'cloud-migration',
+      name: 'Cloud Migration',
+      category: 'Cloud',
+      description: 'Seamless cloud migration services',
+      pricing: { basic: 2000, premium: 8000, enterprise: 25000 }
+    }
+  ];
   const categories = useMemo(() => {
     const cats = services.reduce(
-      (acc: string[], service: { category: string }) => {
+      (acc: string[], service: any) => {
         if (!acc.includes(service.category)) {
           acc.push(service.category);
         }
         return acc;
       },
-      [] as string[]
+      [] as string[],
     );
     return ['all', ...cats];
   }, [services]);
@@ -26,12 +53,12 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
     let filtered = services;
     if (selectedCategory !== 'all') {
       filtered = filtered.filter(
-        service => service.category === selectedCategory
+        (service: any) => service.category === selectedCategory,
       );
     }
     if (selectedPricingModel !== 'all') {
       filtered = filtered.filter(
-        service => service.pricingModel === selectedPricingModel
+        (service: any) => service.pricingModel === selectedPricingModel,
       );
     }
     return filtered;
@@ -377,7 +404,7 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
           </div>
           {/* Services Grid */}
           <div className='grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
-            {filteredServices.map((service, index) => {
+            {filteredServices.map((service: any, index: number) => {
               const CategoryIcon = getCategoryIcon(service.category);
               const categoryColor = getCategoryColor(service.category);
               return (
