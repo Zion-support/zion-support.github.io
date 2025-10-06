@@ -60,7 +60,7 @@ for (const pr of prs) {
     try {
       execSync(
         `git show-ref --verify --quiet refs/remotes/origin/${pr.branch}`,
-        { stdio: 'pipe' },
+        { stdio: 'pipe' }
       );
       console.log(`✓ Branch ${pr.branch} exists`);
     } catch (error) {
@@ -72,13 +72,13 @@ for (const pr of prs) {
     try {
       execSync(
         `git merge origin/${pr.branch} --no-ff -m "Merge PR #${pr.number}: ${pr.title}"`,
-        { stdio: 'inherit' },
+        { stdio: 'inherit' }
       );
       console.log(`✓ Successfully merged PR #${pr.number}`);
     } catch (error) {
       console.log(
         `⚠ Merge conflict or error for PR #${pr.number}:`,
-        error.message,
+        error.message
       );
 
       // Try to resolve conflicts automatically

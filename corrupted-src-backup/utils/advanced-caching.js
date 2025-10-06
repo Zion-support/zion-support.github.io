@@ -234,7 +234,7 @@ class AdvancedCachingSystem {
           }
         }
         return { key, success: true, cached: true };
-      }),
+      })
     );
   }
 

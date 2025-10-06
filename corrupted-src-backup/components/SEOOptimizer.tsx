@@ -11,7 +11,7 @@ interface SEOOptimizerProps {
   structuredData?: object;
 }
 
-<<<<<<< HEAD:src/components/SEOOptimizer.tsx
+:src/components/SEOOptimizer.tsx
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ 
   children, 
   title = "Zion Tech Group - AI Enterprise Solutions",
@@ -66,11 +66,9 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
       </Helmet>
-=======
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ children }) => {
   return (
     <>
->>>>>>> 816b623ffaed3413410f2a2aa47cedfcc64ada9d:corrupted-src-backup/components/SEOOptimizer.tsx
       {children}
     </>
   );
