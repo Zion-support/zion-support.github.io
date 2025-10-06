@@ -196,8 +196,13 @@ export default function App() {
 
   const handlePhoneClick = useCallback(() => {
     // Track phone clicks for analytics
+<<<<<<< HEAD
     if (typeof window !== 'undefined' && 'gtag' in window) {
       (window as any).gtag('event', 'phone_click', {
+=======
+    if (typeof window !== 'undefined' && (window as unknown as { gtag?: Function }).gtag) {
+      ((window as unknown as { gtag: Function }).gtag)('event', 'phone_click', {
+>>>>>>> main
         event_category: 'engagement',
         event_label: 'main_phone_number'
       });
