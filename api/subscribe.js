@@ -13,11 +13,7 @@ async function handler(req, res) {
 
   try {
     const { email } = req.body || {};
-<<<<<<< HEAD
-
-=======
     
->>>>>>> cursor/fix-errors-and-merge-to-main-bd65
     if (!isValidEmail(email)) {
       res.statusCode = 400;
       res.json({ error: 'Invalid email' });
@@ -29,11 +25,7 @@ async function handler(req, res) {
       'data',
       'newsletter-subscriptions.json',
     );
-<<<<<<< HEAD
-
-=======
     
->>>>>>> cursor/fix-errors-and-merge-to-main-bd65
     let existing = [];
     try {
       existing = JSON.parse(fs.readFileSync(file, 'utf8'));
