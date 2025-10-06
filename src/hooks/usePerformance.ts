@@ -208,3 +208,4 @@ export const useMemoryMonitoring = () => {
     return () => clearInterval(interval);
   }, []);
 };
+}

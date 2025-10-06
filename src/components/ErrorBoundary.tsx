@@ -1,20 +1,5 @@
-import { Component } from 'react';
-import type { ErrorInfo, ReactNode } from 'react';
-import { AlertTriangle } from 'lucide-react';
-import { Component, ErrorInfo, ReactNode } from 'react';
+import { Component, type ErrorInfo, type ReactNode } from 'react';
 import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-
-interface Props {
-  children: ReactNode;
-import { Component, type ErrorInfo, type ReactNode } from 'react';
-import { Component, type ErrorInfo, type ReactNode } from 'react';
-import { Component, type ErrorInfo, type ReactNode } from 'react';
-import { Component, type ErrorInfo, type ReactNode } from 'react';
-import { Component, type ErrorInfo, type ReactNode } from 'react';
-import { Component, type ErrorInfo, type ReactNode } from 'react';
-import { Component } from 'react';
-import type { ErrorInfo, ReactNode } from 'react';
 
 interface Props {
   children: ReactNode;
@@ -24,8 +9,8 @@ interface Props {
 
 interface State {
   hasError: boolean;
-  error?: Error;
-  errorId?: string;
+  error?: Error | undefined;
+  errorId?: string | undefined;
 }
 
 class ErrorBoundary extends Component<Props, State> {
@@ -44,7 +29,6 @@ class ErrorBoundary extends Component<Props, State> {
 
   override componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     console.error('ErrorBoundary caught an error:', error, errorInfo);
-    console.error('Error caught by boundary:', error, errorInfo);
     
     // Report error to analytics/monitoring service
     this.reportError(error, errorInfo);
@@ -55,18 +39,6 @@ class ErrorBoundary extends Component<Props, State> {
     }
   }
 
-  handleRetry = () => {
-    this.setState({ hasError: false });
-  };
-
-  handleGoHome = () => {
-    if (typeof window !== 'undefined') {
-      window.location.href = '/';
-    }
-  };
-
-    this.setState({ hasError: false } as State);
-  override render() {
   private reportError = (error: Error, errorInfo: ErrorInfo) => {
     // Report to external service (e.g., Sentry, LogRocket, etc.)
     if (typeof window !== 'undefined' && (window as any).gtag) {
@@ -126,57 +98,6 @@ class ErrorBoundary extends Component<Props, State> {
             >
               Or refresh the page
             </button>
-    return { hasError: true, error };
-  }
-
-  override componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error('ErrorBoundary caught an error:', error, errorInfo);
-  }
-
-  override render() {
-    if (this.state.hasError) {
-      return (
-        <div className="min-h-screen flex items-center justify-center bg-gray-50">
-          <div className="text-center">
-            <h1 className="text-2xl font-bold text-red-600 mb-4">Something went wrong</h1>
-            <p className="text-gray-600 mb-4">We're sorry, but something unexpected happened.</p>
-            <button
-              onClick={() => this.setState({ hasError: false, error: undefined })}
-              className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
-            >
-              Try again
-            </button>
-  override componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    // Error caught by boundary
-  }
-
-  override render() {
-    if (this.state.hasError) {
-      return this.props.fallback || (
-        <div className="min-h-screen flex items-center justify-center bg-gray-900">
-          <div className="text-center p-8">
-            <div className="w-16 h-16 text-red-500 mx-auto mb-4 text-6xl">⚠️</div>
-            <div className="text-6xl mb-4">⚠️</div>
-            <div className="w-16 h-16 text-red-500 mx-auto mb-4 text-6xl">⚠️</div>
-            <div className="w-16 h-16 text-red-500 mx-auto mb-4 text-6xl">⚠️</div>
-            <div className="w-16 h-16 text-red-500 mx-auto mb-4 text-6xl">⚠️</div>
-            <div className="w-16 h-16 bg-red-500 rounded-full mx-auto mb-4 flex items-center justify-center">
-              <span className="text-white text-2xl font-bold">!</span>
-            </div>
-            <div className="w-16 h-16 text-red-500 mx-auto mb-4 text-6xl">⚠️</div>
-            <h1 className="text-2xl font-bold text-white mb-4">Something went wrong</h1>
-            <p className="text-gray-300 mb-6">
-              We're sorry, but something unexpected happened. Please try refreshing the page.
-            </p>
-            <button
-              onClick={() => window.location.reload()}
-              className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-            >
-              Refresh Page
-            </button>
-            <p className="text-gray-400 mb-8">We're working to fix this issue.</p>
           </div>
         </div>
       );
@@ -186,6 +107,4 @@ class ErrorBoundary extends Component<Props, State> {
   }
 }
 
-export default ErrorBoundary;
-export default ErrorBoundary;
 export default ErrorBoundary;
