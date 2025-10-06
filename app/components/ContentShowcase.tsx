@@ -1,7 +1,6 @@
 import React from 'react';
 
 const ContentShowcase: React.FC = () => {
-<<<<<<< HEAD
   const contentItems = [
     {
       title: "AI-Powered Automation",
@@ -64,24 +63,9 @@ const ContentShowcase: React.FC = () => {
             </div>
           ))}
         </div>
-=======
-  return (
-    <section className="py-16 bg-gray-50">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center text-gray-900 mb-8">
-          Content Showcase
-        </h2>
-        <p className="text-lg text-center text-gray-600 max-w-2xl mx-auto">
-          Explore our latest content, case studies, and success stories.
-        </p>
->>>>>>> cursor/fix-errors-and-merge-to-main-5e7d
       </div>
     </section>
   );
 };
 
-<<<<<<< HEAD
 export default ContentShowcase;
-=======
-export default ContentShowcase;
->>>>>>> cursor/fix-errors-and-merge-to-main-5e7d
