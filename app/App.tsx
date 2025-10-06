@@ -5,15 +5,10 @@ import { HelmetProvider } from 'react-helmet-async';
 // Components
 import ErrorBoundary from './components/ErrorBoundary';
 import SEOOptimizer from './components/SEOOptimizer';
+import LoadingSpinner from './components/LoadingSpinner';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import PerformanceDashboard from './components/PerformanceDashboard';
-
-// Loading component
-const LoadingSpinner = () => (
-  <div className="min-h-screen flex items-center justify-center bg-gray-50">
-    <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
-  </div>
-);
+import PerformanceMonitor from './components/PerformanceMonitor';
 
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./page'));
@@ -32,6 +27,7 @@ const App: React.FC = () => {
     // Initialize performance monitoring
     performanceOptimizer.lazyLoadImages();
     performanceOptimizer.preloadCriticalResources();
+    performanceOptimizer.prefetchResources(['/api/health']);
     
     // Initialize Web Vitals monitoring
     if (typeof window !== 'undefined' && 'performance' in window) {
@@ -50,7 +46,7 @@ const App: React.FC = () => {
   return (
     <HelmetProvider>
       <ErrorBoundary>
-        <div>
+        <PerformanceMonitor>
           <SEOOptimizer>
             <AccessibilityEnhancer>
               <Router>
@@ -86,7 +82,7 @@ const App: React.FC = () => {
               </Router>
             </AccessibilityEnhancer>
           </SEOOptimizer>
-        </div>
+        </PerformanceMonitor>
       </ErrorBoundary>
     </HelmetProvider>
   );
