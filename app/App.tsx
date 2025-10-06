@@ -5,11 +5,7 @@ import { HelmetProvider } from 'react-helmet-async';
 // Components
 import ErrorBoundary from '../src/components/ErrorBoundary';
 import SEOOptimizer from '../src/components/SEOOptimizer';
-<<<<<<< HEAD
-import LoadingSpinner from '../src/components/LoadingSpinner';
-=======
 import { LoadingSpinner } from '../components/LoadingComponents';
->>>>>>> 7cd6c6ab21731dbbaca45ccdac24c52d42664833
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import PerformanceDashboard from './components/PerformanceDashboard';
 

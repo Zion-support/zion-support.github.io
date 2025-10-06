@@ -222,94 +222,22 @@ export class PerformanceOptimizer {
     reportWebVitals(metrics);
   }
 
-<<<<<<< HEAD
   public optimizeBundleLoading(): void {
     optimizeBundleLoading();
   }
-}
 
-// Export default instance
-export const performanceOptimizer = PerformanceOptimizer.getInstance();
-=======
   // Get performance metrics
   getMetrics(): Record<string, number> {
-    return Object.fromEntries(this.metrics);
+    return {};
   }
 
-  // Add critical resource hints for better performance
-  addCriticalResourceHints(): void {
-    if (typeof document === 'undefined') return;
-    
-    const hints = [
-      { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' },
-      { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com' },
-      { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
-      { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossOrigin: 'anonymous' }
-    ];
-    
-    hints.forEach(hint => {
-      const link = document.createElement('link');
-      link.rel = hint.rel;
-      link.href = hint.href;
-      if (hint.crossOrigin) {
-        link.crossOrigin = hint.crossOrigin;
-      }
-      document.head.appendChild(link);
-    });
-  }
-
-  // Measure page load performance
-  measurePageLoad(): Record<string, number> | null {
-    if (typeof window === 'undefined' || !window.performance) {
-      return null;
-    }
-    
-    const timing = window.performance.timing;
-    return {
-      loadTime: timing.loadEventEnd - timing.navigationStart,
-      interactiveTime: timing.domInteractive - timing.navigationStart,
-      domContentLoaded: timing.domContentLoadedEventEnd - timing.navigationStart,
-      firstPaint: performance.getEntriesByType('paint')[0]?.startTime || 0
-    };
-  }
-
-  // Report web vitals
-  reportWebVitals(metrics: Record<string, number>): void {
-    if (process.env.NODE_ENV === 'development') {
-      console.log('Web Vitals:', metrics);
-    }
-  }
   // Initialize all optimizations
   initialize(): void {
-    this.measurePerformance('lazyLoadImages', () => this.lazyLoadImages());
-    this.measurePerformance('preloadCriticalResources', () => this.preloadCriticalResources());
-    this.measurePerformance('optimizeScroll', () => this.optimizeScroll());
+    this.lazyLoadImages();
+    this.addCriticalResourceHints();
   }
 }
 
-/**
- * Critical resource hints for better performance
- */
-export const addCriticalResourceHints = (): void => {
-  if (typeof document === 'undefined') return;
-  
-  const hints = [
-    { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' },
-    { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com' },
-    { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
-    { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossOrigin: 'anonymous' }
-  ];
-  
-  hints.forEach(hint => {
-    const link = document.createElement('link');
-    link.rel = hint.rel;
-    link.href = hint.href;
-    if (hint.crossOrigin) {
-      link.crossOrigin = hint.crossOrigin;
-    }
-    document.head.appendChild(link);
-  });
-};
 
 interface PerformanceBudget {
   maxFirstLoad: number;
@@ -346,4 +274,3 @@ export const checkPerformanceBudget = (budget: PerformanceBudget): {
 
 // Export singleton instance
 export const performanceOptimizer = PerformanceOptimizer.getInstance();
->>>>>>> 7cd6c6ab21731dbbaca45ccdac24c52d42664833
