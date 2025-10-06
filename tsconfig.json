@@ -9,18 +9,30 @@
     ],
     "module": "ESNext",
     "skipLibCheck": true,
-    "moduleResolution": "node",
     "allowImportingTsExtensions": false,
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
+<<<<<<< HEAD
     "strict": false,
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+=======
+    "jsxImportSource": "react",
+>>>>>>> main
+    "strict": true,
+>>>>>>> main
+>>>>>>> main
+    "strictNullChecks": true,
     "noUnusedLocals": false,
     "noUnusedParameters": false,
     "noFallthroughCasesInSwitch": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
+    "moduleResolution": "bundler",
     "baseUrl": ".",
     "paths": {
       "@/*": [
@@ -41,6 +53,7 @@
     },
     "allowJs": true,
     "forceConsistentCasingInFileNames": true,
+<<<<<<< HEAD
     "noImplicitAny": false,
     "noImplicitReturns": false,
     "noImplicitThis": false,
@@ -48,13 +61,29 @@
     "noImplicitOverride": false,
     "noPropertyAccessFromIndexSignature": false,
     "noUncheckedIndexedAccess": false,
+=======
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "strictNullChecks": true,
+    "exactOptionalPropertyTypes": true,
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noUncheckedIndexedAccess": true,
+>>>>>>> main
     "allowUnusedLabels": false,
     "allowUnreachableCode": false,
     "verbatimModuleSyntax": false
   },
   "include": [
     "app/**/*",
+<<<<<<< HEAD
     "src/**/*"
+=======
+    "src/**/*",
+    "App.tsx",
+    "components/**/*"
+>>>>>>> main
   ],
   "exclude": [
     "node_modules",
@@ -109,7 +138,24 @@
     "SidebarNavigation.tsx",
     "api-documentation.tsx",
     "app/components/NewContentPromotionalBanner2026.tsx",
-    "app/components/NewestContent2025Banner.tsx"
+    "app/components/NewestContent2025Banner.tsx",
+<<<<<<< HEAD
+    "api/**",
+    "lib/**"
+=======
+    "utils/bannerLazyLoader.ts",
+    "utils/bannerPrioritization.ts",
+    "utils/bannerRegistry.ts",
+    "utils/bannerRotationSystem.ts",
+    "utils/comprehensiveOptimizer.ts",
+    "utils/performanceUtils.ts",
+<<<<<<< HEAD
+    "utils/seoUtils.ts"
+>>>>>>> main
+=======
+    "utils/seoUtils.ts",
+    "src/utils/performanceOptimizer.ts"
+>>>>>>> b0d6dda8406c2e54af3529a18b3e8c5f6ab37739
   ],
   "references": [
     {

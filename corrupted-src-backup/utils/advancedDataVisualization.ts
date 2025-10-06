@@ -28,7 +28,7 @@ export class AdvancedDataVisualization {
   public createChart(
     id: string,
     data: ChartData,
-    type: ChartType = this.config.defaultChartType,
+    type: ChartType = this.config.defaultChartType
   ): StoredChart {
     const chart: StoredChart = {
       id,
@@ -80,7 +80,7 @@ export class AdvancedDataVisualization {
 
   public importChart(
     data: string,
-    format: 'json' | 'csv' = 'json',
+    format: 'json' | 'csv' = 'json'
   ): StoredChart {
     if (format === 'json') {
       const chart = JSON.parse(data) as StoredChart;
@@ -91,7 +91,7 @@ export class AdvancedDataVisualization {
       const chart = this.createChart(
         `imported-${Date.now()}`,
         chartData,
-        'line',
+        'line'
       );
       return chart;
     }
@@ -125,7 +125,7 @@ export class AdvancedDataVisualization {
   public generateRandomData(
     count: number,
     min: number = 0,
-    max: number = 100,
+    max: number = 100
   ): ChartData {
     const points: DataPoint[] = [];
 
@@ -141,7 +141,7 @@ export class AdvancedDataVisualization {
 
   public applyColorScheme(
     chart: StoredChart,
-    colorScheme: ColorScheme,
+    colorScheme: ColorScheme
   ): StoredChart {
     const updatedChart = { ...chart };
     updatedChart.config.colorScheme = colorScheme;

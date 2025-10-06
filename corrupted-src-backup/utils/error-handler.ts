@@ -198,12 +198,12 @@ class ErrorHandler {
     this.errorCount++;
 
     // Log error for development
-    if (process.env.NODE_ENV === 'development') {
+    if (process.env['NODE_ENV'] === 'development') {
       console.error('Error captured:', errorData);
     }
 
     // Send to error reporting service in production
-    if (process.env.NODE_ENV === 'production') {
+    if (process.env['NODE_ENV'] === 'production') {
       this.sendErrorReport(this.errors.get(errorId)!);
     }
 
@@ -229,7 +229,7 @@ class ErrorHandler {
     // High: JavaScript errors in production
     if (
       errorData.type === 'javascript' &&
-      process.env.NODE_ENV === 'production'
+      process.env['NODE_ENV'] === 'production'
     ) {
       return 'high';
     }
@@ -261,7 +261,7 @@ class ErrorHandler {
     errorsArray.sort(
       (a, b) =>
         new Date(b.lastOccurrence).getTime() -
-        new Date(a.lastOccurrence).getTime(),
+        new Date(a.lastOccurrence).getTime()
     );
 
     // Keep only the most recent 500 errors
@@ -290,7 +290,7 @@ class ErrorHandler {
         acc[error.type] = (acc[error.type] || 0) + 1;
         return acc;
       },
-      {} as Record<string, number>,
+      {} as Record<string, number>
     );
 
     const errorsBySeverity = errors.reduce(
@@ -298,7 +298,7 @@ class ErrorHandler {
         acc[error.severity] = (acc[error.severity] || 0) + 1;
         return acc;
       },
-      {} as Record<string, number>,
+      {} as Record<string, number>
     );
 
     const errorRate =
@@ -350,7 +350,7 @@ ${errors
   .slice(-5)
   .map(
     error =>
-      `- [${error.severity.toUpperCase()}] ${error.type}: ${error.message} (${error.frequency}x)`,
+      `- [${error.severity.toUpperCase()}] ${error.type}: ${error.message} (${error.frequency}x)`
   )
   .join('\n')}
 
