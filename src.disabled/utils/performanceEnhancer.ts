@@ -23,9 +23,9 @@ class PerformanceEnhancer {
   private metrics: Map<string, number> = new Map();
   private config: OptimizationConfig = {
     enableLazyLoading: true,
-    enablePreloading: true,
+  enablePreloading: true,
     enableCompression: true,
-    enableCaching: true,
+  enableCaching: true,
     enableMonitoring: true,
   };
 
@@ -39,12 +39,12 @@ class PerformanceEnhancer {
   private initialize(): void {
     if (typeof window === 'undefined') return;
 
-    // Initialize performance monitoring
+    //Initialize performance monitoring
     if (this.config.enableMonitoring) {
       this.setupPerformanceMonitoring();
     }
 
-    // Initialize optimizations
+    //Initialize optimizations
     if (this.config.enableLazyLoading) {
       this.setupLazyLoading();
     }
@@ -55,7 +55,7 @@ class PerformanceEnhancer {
   }
 
   private setupPerformanceMonitoring(): void {
-    // Monitor Core Web Vitals
+    //Monitor Core Web Vitals
     if ('PerformanceObserver' in window) {
       const observer = new PerformanceObserver((list) => {
         list.getEntries().forEach((entry) => {
@@ -66,7 +66,7 @@ class PerformanceEnhancer {
       observer.observe({ entryTypes: ['measure', 'navigation', 'paint'] });
     }
 
-    // Monitor memory usage
+    //Monitor memory usage
     if ('memory' in performance) {
       setInterval(() => {
         const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number } }).memory;
@@ -79,7 +79,7 @@ class PerformanceEnhancer {
   }
 
   private setupLazyLoading(): void {
-    // Enhanced lazy loading with intersection observer
+    //Enhanced lazy loading with intersection observer
     const imageObserver = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -97,14 +97,14 @@ class PerformanceEnhancer {
       threshold: 0.1,
     });
 
-    // Observe all images with data-src
+    //Observe all images with data-src
     document.querySelectorAll('img[data-src]').forEach((img) => {
       imageObserver.observe(img);
     });
   }
 
   private setupPreloading(): void {
-    // Preload critical resources
+    //Preload critical resources
     const criticalResources = [
       { href: '/fonts/inter.woff2', as: 'font', type: 'font/woff2' },
       { href: '/images/hero-bg.jpg', as: 'image' },
@@ -143,37 +143,37 @@ class PerformanceEnhancer {
   public optimizeBundle(): void {
     if (!this.config.enableCompression) return;
 
-    // Implement bundle optimization strategies
-    // Optimizing bundle...
+    //Implement bundle optimization strategies
+    //Optimizing bundle...
     
-    // Tree shaking optimization
+    //Tree shaking optimization
     this.enableTreeShaking();
     
-    // Code splitting optimization
+    //Code splitting optimization
     this.enableCodeSplitting();
   }
 
   private enableTreeShaking(): void {
-    // Remove unused code
-    // Enabling tree shaking...
+    //Remove unused code
+    //Enabling tree shaking...
   }
 
   private enableCodeSplitting(): void {
-    // Implement dynamic imports
-    // Enabling code splitting...
+    //Implement dynamic imports
+    //Enabling code splitting...
   }
 
   public enableCaching(): void {
     if (!this.config.enableCaching) return;
 
-    // Implement service worker caching
+    //Implement service worker caching
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('/sw.js')
         .then((registration) => {
-          // Service Worker registered successfully
+          //Service Worker registered successfully
         })
         .catch((error) => {
-          // Service Worker registration failed
+          //Service Worker registration failed
         });
     }
   }
@@ -183,7 +183,7 @@ class PerformanceEnhancer {
     return `
 Performance Report:
 - Render Time: ${metrics.renderTime}ms
-- Memory Usage: ${(metrics.memoryUsage / 1024 / 1024).toFixed(2)}MB
+- Memory Usage: ${(metrics.memoryUsage / 1024 /1024).toFixed(2)}MB
 - Component Count: ${metrics.componentCount}
 - Bundle Size: ${(metrics.bundleSize / 1024).toFixed(2)}KB
 - Load Time: ${metrics.loadTime}ms
