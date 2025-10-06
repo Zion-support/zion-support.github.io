@@ -23,7 +23,7 @@ export function initializePerformanceMonitoring(): void {
   observer.observe({ entryTypes: ['longtask'] });
   
   // Track additional performance metrics
-  const timingMetrics = performanceOptimizer.measurePageLoadTiming();
+  const timingMetrics = performanceOptimizer.measurePageLoad();
   if (timingMetrics) {
     performanceOptimizer.reportWebVitals(timingMetrics);
   }
