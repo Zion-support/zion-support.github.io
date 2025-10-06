@@ -29,6 +29,8 @@ export const useWebVitals = () => {
   }, []);
 };
 
+// Hook for performance monitoring utilities
+export const usePerformance = () => {
   return {
     // Performance monitoring utilities can be added here
     measurePerformance: (name: string, fn: () => void) => {

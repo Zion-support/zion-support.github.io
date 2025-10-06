@@ -6,6 +6,7 @@ const NewestContent2025Banner = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <section className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
       {/* Animated Background Effects */}
       <div className="absolute inset-0">
@@ -58,10 +59,21 @@ const NewestContent2025Banner = () => {
       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
       <div className="absolute top-1/4 right-1/4 w-64 h-64 bg-gradient-to-r from-pink-500/20 to-orange-500/20 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '1s' }}></div>
 
+=======
+    <section className="relative overflow-hidden bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
+      {/* Animated Background Effects */}
+      <div className="absolute inset-0">
+        <div className="absolute top-10 left-10 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute top-40 right-20 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute bottom-20 left-1/3 w-80 h-80 bg-cyan-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+      </div>
+
+>>>>>>> origin/merge-all-fixes
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Header */}
         <div className="text-center mb-16">
           <div className="flex items-center justify-center gap-2 mb-6">
+<<<<<<< HEAD
             <span className="text-4xl">🚀</span>
             <span className="text-cyan-400 font-bold text-xl">
               BREAKING: 3 REVOLUTIONARY ARTICLES JUST PUBLISHED!
@@ -85,10 +97,15 @@ const NewestContent2025Banner = () => {
           <div className="flex items-center justify-center gap-3 mb-6">
             <span className="text-2xl">🚀</span>
             <span className="text-2xl font-bold text-white">
+=======
+            <span className="text-2xl">🚀</span>
+            <span className="text-yellow-400 font-bold text-xl">
+>>>>>>> origin/merge-all-fixes
               BREAKING: 3 REVOLUTIONARY ARTICLES JUST PUBLISHED!
             </span>
             <span className="text-2xl">⚡</span>
           </div>
+<<<<<<< HEAD
           
           <h2 className="text-4xl md:text-6xl font-extrabold text-white mb-6 bg-gradient-to-r from-violet-400 via-purple-400 to-blue-400 bg-clip-text text-transparent">
 >>>>>>> cursor/fix-errors-and-merge-to-main-a82c
@@ -104,11 +121,20 @@ const NewestContent2025Banner = () => {
           
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
 >>>>>>> cursor/fix-errors-and-merge-to-main-e382
+=======
+
+          <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-6">
+            September 30, 2025 — Cutting-Edge AI Insights
+          </h2>
+          
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+>>>>>>> origin/merge-all-fixes
             Edge Computing • Neural Networks • Quantum Security — The future of enterprise AI starts here
           </p>
         </div>
 
         {/* Featured Articles Grid */}
+<<<<<<< HEAD
 <<<<<<< HEAD
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {/* Article 1: AI Edge Computing */}
@@ -119,11 +145,18 @@ const NewestContent2025Banner = () => {
 =======
             <div className="relative bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover:bg-white/20 transition-all duration-500 transform hover:-translate-y-2">
 >>>>>>> cursor/fix-errors-and-merge-to-main-0181
+=======
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          {/* Article 1: AI Edge Computing */}
+          <Link href="/blog/ai-edge-computing-real-time-2025" className="group">
+            <div className="relative bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-white/40 transition-all duration-500 hover:scale-105 h-full">
+>>>>>>> origin/merge-all-fixes
               {/* Card glow effect */}
               <div className="absolute inset-0 bg-gradient-to-br from-cyan-500 to-blue-600 opacity-0 group-hover:opacity-10 transition-all duration-500 rounded-2xl"></div>
               
               <div className="relative z-10">
                 {/* Icon & Badges */}
+<<<<<<< HEAD
 <<<<<<< HEAD
                 <div className="flex items-center justify-between mb-4">
                   <div className="text-4xl">⚡</div>
@@ -154,11 +187,19 @@ const NewestContent2025Banner = () => {
                     <span className="px-3 py-1 bg-red-500 text-white text-sm font-bold rounded-full">🔥 HOT</span>
                     <span className="px-3 py-1 bg-green-500 text-white text-sm font-bold rounded-full">NEW TODAY</span>
 >>>>>>> cursor/fix-errors-and-merge-to-main-e382
+=======
+                <div className="flex items-center justify-between mb-6">
+                  <div className="text-4xl">⚡</div>
+                  <div className="flex gap-2">
+                    <span className="px-3 py-1 bg-red-500 text-white text-xs font-bold rounded-full">🔥 HOT</span>
+                    <span className="px-3 py-1 bg-green-500 text-white text-xs font-bold rounded-full">NEW TODAY</span>
+>>>>>>> origin/merge-all-fixes
                   </div>
                 </div>
 
                 {/* Category Tag */}
                 <div className="mb-4">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                   <span className="inline-block px-4 py-2 bg-gradient-to-r from-cyan-50 to-blue-50 text-gray-900 text-sm font-semibold rounded-full border border-white/20">
@@ -197,6 +238,15 @@ const NewestContent2025Banner = () => {
 =======
                 <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">
 >>>>>>> cursor/fix-errors-and-merge-to-main-e382
+=======
+                  <span className="inline-block px-4 py-2 bg-gradient-to-r from-cyan-50 to-blue-50 text-gray-900 text-sm font-semibold rounded-full border border-white/20">
+                    Edge AI & Real-Time
+                  </span>
+                </div>
+
+                {/* Title */}
+                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">
+>>>>>>> origin/merge-all-fixes
                   AI Edge Computing Real-Time Intelligence 2025
                 </h3>
 
@@ -210,6 +260,7 @@ const NewestContent2025Banner = () => {
                 <div className="grid grid-cols-3 gap-4 mb-6">
                   <div className="text-center">
                     <div className="text-2xl font-bold text-cyan-400">&lt;10ms</div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                     <div className="text-gray-400 text-sm">Latency</div>
@@ -233,6 +284,8 @@ const NewestContent2025Banner = () => {
                     <div className="text-sm text-gray-300">Cost ↓</div>
 >>>>>>> cursor/fix-errors-and-merge-to-main-0181
 =======
+=======
+>>>>>>> origin/merge-all-fixes
                     <div className="text-sm text-gray-300">Latency</div>
                   </div>
                   <div className="text-center">
@@ -242,11 +295,15 @@ const NewestContent2025Banner = () => {
                   <div className="text-center">
                     <div className="text-2xl font-bold text-yellow-400">87%</div>
                     <div className="text-sm text-gray-300">Cost ↓</div>
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-e382
+=======
+>>>>>>> origin/merge-all-fixes
                   </div>
                 </div>
 
                 {/* Meta Info */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                 <div className="flex items-center gap-4 text-sm text-gray-400 mb-6">
@@ -256,20 +313,28 @@ const NewestContent2025Banner = () => {
 =======
                 <div className="flex items-center gap-4 text-sm text-gray-400 mb-6">
 >>>>>>> cursor/fix-errors-and-merge-to-main-e382
+=======
+                <div className="flex items-center gap-4 text-sm text-gray-400 mb-6">
+>>>>>>> origin/merge-all-fixes
                   <span>⏱️ 35 min read</span>
                   <span>📅 Sep 30, 2025</span>
                 </div>
 
                 {/* CTA Button */}
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <div className="flex items-center justify-center gap-2 text-cyan-400 font-semibold group-hover:text-cyan-300 transition-colors">
 =======
                 <div className="flex items-center justify-center gap-2 text-cyan-400 font-semibold group-hover:text-white transition-colors">
 >>>>>>> cursor/fix-errors-and-merge-to-main-e382
+=======
+                <div className="flex items-center justify-center gap-2 text-cyan-400 font-semibold group-hover:text-white transition-colors">
+>>>>>>> origin/merge-all-fixes
                   <span>Read Full Article</span>
                   <span className="group-hover:translate-x-1 transition-transform">→</span>
                 </div>
               </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -328,10 +393,13 @@ const NewestContent2025Banner = () => {
               </div>
 >>>>>>> cursor/fix-errors-and-merge-to-main-a82c
 >>>>>>> cursor/fix-errors-and-merge-to-main-0b7f
+=======
+>>>>>>> origin/merge-all-fixes
             </div>
           </Link>
 
           {/* Article 2: Neural Networks */}
+<<<<<<< HEAD
 <<<<<<< HEAD
           <Link href="/blog/ai-neural-networks-enterprise-transformation-2025" className="group">
 <<<<<<< HEAD
@@ -348,18 +416,29 @@ const NewestContent2025Banner = () => {
 =======
             <div className="relative bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300 hover:scale-105 h-full">
               <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-fuchsia-600/20 opacity-0 group-hover:opacity-100 transition-all duration-500 rounded-2xl"></div>
+=======
+          <Link href="/blog/ai-neural-networks-enterprise-transformation-2025" className="group">
+            <div className="relative bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-white/40 transition-all duration-500 hover:scale-105 h-full">
+              <div className="absolute inset-0 bg-gradient-to-br from-purple-500 to-pink-600 opacity-0 group-hover:opacity-10 transition-all duration-500 rounded-2xl"></div>
+>>>>>>> origin/merge-all-fixes
               
               <div className="relative z-10">
                 <div className="flex items-center justify-between mb-6">
                   <div className="text-4xl">🧠</div>
                   <div className="flex gap-2">
+<<<<<<< HEAD
                     <span className="px-3 py-1 bg-red-500 text-white text-sm font-bold rounded-full">🔥 HOT</span>
                     <span className="px-3 py-1 bg-green-500 text-white text-sm font-bold rounded-full">NEW TODAY</span>
 >>>>>>> cursor/fix-errors-and-merge-to-main-e382
+=======
+                    <span className="px-3 py-1 bg-red-500 text-white text-xs font-bold rounded-full">🔥 HOT</span>
+                    <span className="px-3 py-1 bg-green-500 text-white text-xs font-bold rounded-full">NEW TODAY</span>
+>>>>>>> origin/merge-all-fixes
                   </div>
                 </div>
 
                 <div className="mb-4">
+<<<<<<< HEAD
 <<<<<<< HEAD
                   <span className="inline-block px-4 py-2 bg-gradient-to-r from-purple-50 to-fuchsia-50 text-gray-900 text-sm font-semibold rounded-full border border-white/20">
 =======
@@ -405,16 +484,23 @@ const NewestContent2025Banner = () => {
 =======
                   <span className="px-4 py-2 bg-gradient-to-r from-purple-50 to-fuchsia-50 text-gray-900 text-sm font-semibold rounded-full border border-white/20">
 >>>>>>> cursor/fix-errors-and-merge-to-main-e382
+=======
+                  <span className="inline-block px-4 py-2 bg-gradient-to-r from-purple-50 to-pink-50 text-gray-900 text-sm font-semibold rounded-full border border-white/20">
+>>>>>>> origin/merge-all-fixes
                     Neural Networks & AI
                   </span>
                 </div>
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
                 {/* Title */}
 >>>>>>> cursor/fix-errors-and-merge-to-main-0181
                 <h3 className="text-2xl font-bold text-white mb-4 group-hover:bg-gradient-to-r group-hover:from-purple-400 group-hover:to-fuchsia-400 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
+=======
+                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-purple-400 transition-colors">
+>>>>>>> origin/merge-all-fixes
                   AI Neural Networks Enterprise Transformation 2025
                 </h3>
 
@@ -438,6 +524,7 @@ const NewestContent2025Banner = () => {
                 <div className="grid grid-cols-3 gap-4 mb-6">
                   <div className="text-center">
                     <div className="text-2xl font-bold text-purple-400">98.5%</div>
+<<<<<<< HEAD
                     <div className="text-gray-400 text-sm">Accuracy</div>
                   </div>
                   <div className="text-center">
@@ -451,6 +538,8 @@ const NewestContent2025Banner = () => {
                 <div className="grid grid-cols-3 gap-4 mb-6">
                   <div className="text-center">
                     <div className="text-2xl font-bold text-purple-400">98.5%</div>
+=======
+>>>>>>> origin/merge-all-fixes
                     <div className="text-sm text-gray-300">Accuracy</div>
                   </div>
                   <div className="text-center">
@@ -460,11 +549,15 @@ const NewestContent2025Banner = () => {
                   <div className="text-center">
                     <div className="text-2xl font-bold text-yellow-400">85%</div>
                     <div className="text-sm text-gray-300">Efficiency</div>
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-e382
+=======
+>>>>>>> origin/merge-all-fixes
                   </div>
                 </div>
 
                 <div className="flex items-center gap-4 text-sm text-gray-400 mb-6">
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
                 {/* Key Stats */}
@@ -488,10 +581,13 @@ const NewestContent2025Banner = () => {
 >>>>>>> cursor/fix-errors-and-merge-to-main-0181
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-e382
+=======
+>>>>>>> origin/merge-all-fixes
                   <span>⏱️ 40 min read</span>
                   <span>📅 Sep 30, 2025</span>
                 </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -501,6 +597,9 @@ const NewestContent2025Banner = () => {
 =======
                 <div className="flex items-center justify-center gap-2 text-purple-400 font-semibold group-hover:text-white transition-colors">
 >>>>>>> cursor/fix-errors-and-merge-to-main-e382
+=======
+                <div className="flex items-center justify-center gap-2 text-purple-400 font-semibold group-hover:text-white transition-colors">
+>>>>>>> origin/merge-all-fixes
                   <span>Read Full Article</span>
                   <span className="group-hover:translate-x-1 transition-transform">→</span>
                 </div>
@@ -562,6 +661,7 @@ const NewestContent2025Banner = () => {
 
           {/* Article 3: Quantum Security */}
 <<<<<<< HEAD
+<<<<<<< HEAD
           <Link href="/blog/ai-quantum-security-protocols-2026" className="group">
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -577,18 +677,29 @@ const NewestContent2025Banner = () => {
 =======
             <div className="relative bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300 hover:scale-105 h-full">
               <div className="absolute inset-0 bg-gradient-to-br from-red-500/20 to-orange-600/20 opacity-0 group-hover:opacity-100 transition-all duration-500 rounded-2xl"></div>
+=======
+          <Link href="/blog/ai-quantum-security-protocols-2026" className="group">
+            <div className="relative bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-white/40 transition-all duration-500 hover:scale-105 h-full">
+              <div className="absolute inset-0 bg-gradient-to-br from-red-500 to-orange-600 opacity-0 group-hover:opacity-10 transition-all duration-500 rounded-2xl"></div>
+>>>>>>> origin/merge-all-fixes
               
               <div className="relative z-10">
                 <div className="flex items-center justify-between mb-6">
                   <div className="text-4xl">⚛️</div>
                   <div className="flex gap-2">
+<<<<<<< HEAD
                     <span className="px-3 py-1 bg-red-600 text-white text-sm font-bold rounded-full">🚨 CRITICAL</span>
                     <span className="px-3 py-1 bg-green-500 text-white text-sm font-bold rounded-full">NEW TODAY</span>
 >>>>>>> cursor/fix-errors-and-merge-to-main-e382
+=======
+                    <span className="px-3 py-1 bg-red-600 text-white text-xs font-bold rounded-full">🚨 CRITICAL</span>
+                    <span className="px-3 py-1 bg-green-500 text-white text-xs font-bold rounded-full">NEW TODAY</span>
+>>>>>>> origin/merge-all-fixes
                   </div>
                 </div>
 
                 <div className="mb-4">
+<<<<<<< HEAD
 <<<<<<< HEAD
                   <span className="inline-block px-4 py-2 bg-gradient-to-r from-red-50 to-orange-50 text-gray-900 text-sm font-semibold rounded-full border border-white/20">
 =======
@@ -634,16 +745,23 @@ const NewestContent2025Banner = () => {
 =======
                   <span className="px-4 py-2 bg-gradient-to-r from-red-50 to-orange-50 text-gray-900 text-sm font-semibold rounded-full border border-white/20">
 >>>>>>> cursor/fix-errors-and-merge-to-main-e382
+=======
+                  <span className="inline-block px-4 py-2 bg-gradient-to-r from-red-50 to-orange-50 text-gray-900 text-sm font-semibold rounded-full border border-white/20">
+>>>>>>> origin/merge-all-fixes
                     Quantum Security
                   </span>
                 </div>
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
                 {/* Title */}
 >>>>>>> cursor/fix-errors-and-merge-to-main-0181
                 <h3 className="text-2xl font-bold text-white mb-4 group-hover:bg-gradient-to-r group-hover:from-red-400 group-hover:to-orange-400 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
+=======
+                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-red-400 transition-colors">
+>>>>>>> origin/merge-all-fixes
                   AI Quantum Security Protocols 2026
                 </h3>
 
@@ -667,6 +785,7 @@ const NewestContent2025Banner = () => {
                 <div className="grid grid-cols-3 gap-4 mb-6">
                   <div className="text-center">
                     <div className="text-2xl font-bold text-red-400">99.99%</div>
+<<<<<<< HEAD
                     <div className="text-gray-400 text-sm">Security</div>
                   </div>
                   <div className="text-center">
@@ -680,6 +799,8 @@ const NewestContent2025Banner = () => {
                 <div className="grid grid-cols-3 gap-4 mb-6">
                   <div className="text-center">
                     <div className="text-2xl font-bold text-red-400">99.99%</div>
+=======
+>>>>>>> origin/merge-all-fixes
                     <div className="text-sm text-gray-300">Security</div>
                   </div>
                   <div className="text-center">
@@ -689,11 +810,15 @@ const NewestContent2025Banner = () => {
                   <div className="text-center">
                     <div className="text-2xl font-bold text-yellow-400">Zero</div>
                     <div className="text-sm text-gray-300">Breaches</div>
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-e382
+=======
+>>>>>>> origin/merge-all-fixes
                   </div>
                 </div>
 
                 <div className="flex items-center gap-4 text-sm text-gray-400 mb-6">
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
                 {/* Key Stats */}
@@ -717,10 +842,13 @@ const NewestContent2025Banner = () => {
 >>>>>>> cursor/fix-errors-and-merge-to-main-0181
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-e382
+=======
+>>>>>>> origin/merge-all-fixes
                   <span>⏱️ 45 min read</span>
                   <span>📅 Sep 30, 2025</span>
                 </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -730,6 +858,9 @@ const NewestContent2025Banner = () => {
 =======
                 <div className="flex items-center justify-center gap-2 text-red-400 font-semibold group-hover:text-white transition-colors">
 >>>>>>> cursor/fix-errors-and-merge-to-main-e382
+=======
+                <div className="flex items-center justify-center gap-2 text-red-400 font-semibold group-hover:text-white transition-colors">
+>>>>>>> origin/merge-all-fixes
                   <span>Read Full Article</span>
                   <span className="group-hover:translate-x-1 transition-transform">→</span>
                 </div>
@@ -794,6 +925,7 @@ const NewestContent2025Banner = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         <div className="text-center bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-12 mb-16">
           <h3 className="text-3xl font-bold text-white mb-6">
             Transform Your Enterprise with Cutting-Edge AI
@@ -815,12 +947,20 @@ const NewestContent2025Banner = () => {
           </h3>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
 >>>>>>> cursor/fix-errors-and-merge-to-main-e382
+=======
+        <div className="text-center bg-white/5 backdrop-blur-lg rounded-2xl p-12 border border-white/20 mb-16">
+          <h3 className="text-3xl font-bold text-white mb-6">
+            Transform Your Enterprise with Cutting-Edge AI
+          </h3>
+          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+>>>>>>> origin/merge-all-fixes
             Join 50,000+ AI leaders implementing these breakthrough technologies. Get expert guidance 
             from Zion Tech Group's AI transformation specialists.
           </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
             <a
               href="tel:+13024640950"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
               className="flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl"
@@ -836,10 +976,16 @@ const NewestContent2025Banner = () => {
             >
               <span className="text-xl">📞</span>
 >>>>>>> cursor/fix-errors-and-merge-to-main-e382
+=======
+              className="flex items-center gap-3 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl"
+            >
+              <span className="text-xl">📞</span>
+>>>>>>> origin/merge-all-fixes
               <span>Call +1 302 464 0950</span>
             </a>
             <a
               href="mailto:kleber@ziontechgroup.com"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
               className="flex items-center gap-3 border-2 border-white/20 hover:border-white/40 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1"
@@ -877,6 +1023,13 @@ const NewestContent2025Banner = () => {
               </a>
             </div>
 >>>>>>> cursor/fix-errors-and-merge-to-main-a82c
+=======
+              className="flex items-center gap-3 border-2 border-white/30 hover:border-white/60 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 hover:bg-white/10"
+            >
+              <span className="text-xl">📧</span>
+              <span>Get Expert Consultation</span>
+            </a>
+>>>>>>> origin/merge-all-fixes
           </div>
         </div>
 
@@ -888,6 +1041,7 @@ const NewestContent2025Banner = () => {
             { value: '99.9%', label: 'System Uptime' },
             { value: '5M+', label: 'Autonomous Operations Hours' }
           ].map((stat, index) => (
+<<<<<<< HEAD
 <<<<<<< HEAD
             <div key={index} className="text-center">
 <<<<<<< HEAD
@@ -909,6 +1063,11 @@ const NewestContent2025Banner = () => {
                 {stat.label}
               </div>
 >>>>>>> cursor/fix-errors-and-merge-to-main-a82c
+=======
+            <div key={index} className="text-center">
+              <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
+              <div className="text-gray-300">{stat.label}</div>
+>>>>>>> origin/merge-all-fixes
             </div>
           ))}
         </div>

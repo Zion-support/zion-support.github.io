@@ -47,32 +47,11 @@ const September30NewContent2025Banner: React.FC = () => {
       readTime: '16 min',
       icon: '👁️',
       gradient: 'from-emerald-500 to-teal-600'
-    },
-    {
-      id: 4,
-      title: 'Quantum-Enhanced Machine Learning 2025',
-      slug: 'quantum-enhanced-machine-learning-2025',
-      excerpt: '1000x performance breakthrough with quantum computing. Real quantum advantage demonstrated in optimization, drug discovery, and financial modeling.',
-      category: 'Quantum ML',
-      date: '2025-09-30',
-      readTime: '20 min',
-      icon: '⚛️',
-      gradient: 'from-indigo-500 to-purple-600'
-    },
-    {
-      id: 5,
-      title: 'AI-Powered Cloud FinOps 2025',
-      slug: 'ai-powered-cloud-finops-2025',
-      excerpt: '60% cloud cost reduction through autonomous optimization. $450M+ annual savings achieved with AI-driven resource management and predictive scaling.',
-      category: 'Cloud FinOps',
-      date: '2025-09-30',
-      readTime: '14 min',
-      icon: '💰',
-      gradient: 'from-orange-500 to-amber-600'
     }
   ];
 
   return (
+<<<<<<< HEAD
     <div className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 min-h-screen">
       {/* Animated background effects */}
       <div className="absolute inset-0">
@@ -219,6 +198,8 @@ const September30NewContent2025Banner: React.FC = () => {
                 </Link>
               </div>
             </div>
+=======
+>>>>>>> origin/merge-all-fixes
           ))}
         </div>
 
@@ -265,7 +246,7 @@ const September30NewContent2025Banner: React.FC = () => {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
