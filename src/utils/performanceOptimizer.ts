@@ -1,6 +1,5 @@
 /**
- * Performance Optimizer Utility
- * Comprehensive performance monitoring and optimization tools
+ * Performance optimization utilities
  */
 
 /**
@@ -329,6 +328,101 @@ export const getPerformanceSummary = (): {
     memoryUsage: (performance as any).memory?.usedJSHeapSize || 0,
   };
 };
+/**
+ * Performance monitoring class
+ */
+class PerformanceOptimizer {
+  private static instance: PerformanceOptimizer;
+  private metrics: Map<string, number> = new Map();
+
+  private constructor() {}
+
+  public static getInstance(): PerformanceOptimizer {
+    if (!PerformanceOptimizer.instance) {
+      PerformanceOptimizer.instance = new PerformanceOptimizer();
+    }
+    return PerformanceOptimizer.instance;
+  }
+
+  public measurePerformance(name: string, fn: () => void): number {
+    const start = performance.now();
+    fn();
+    const end = performance.now();
+    const duration = end - start;
+    this.metrics.set(name, duration);
+    return duration;
+  }
+
+  public lazyLoadImages(): void {
+    lazyLoadImages();
+  }
+
+  public optimizeScroll(): void {
+    // Optimize scroll performance
+    let ticking = false;
+    
+    const updateScrollPosition = () => {
+      // Throttled scroll handling
+      ticking = false;
+    };
+
+    const requestTick = () => {
+      if (!ticking) {
+        requestAnimationFrame(updateScrollPosition);
+        ticking = true;
+      }
+    };
+
+    window.addEventListener('scroll', requestTick, { passive: true });
+  }
+
+  public preloadCriticalResources(): void {
+    // Preload critical resources
+    const criticalResources = [
+      '/fonts/inter.woff2',
+      '/images/hero-bg.jpg',
+      '/images/logo.svg'
+    ];
+
+    criticalResources.forEach((resource) => {
+      const link = document.createElement('link');
+      link.rel = 'preload';
+      link.href = resource;
+      link.as = resource.endsWith('.woff2') ? 'font' : 'image';
+      if (resource.endsWith('.woff2')) {
+        link.crossOrigin = 'anonymous';
+      }
+      document.head.appendChild(link);
+    });
+  }
+
+  public reportWebVitals(metrics: WebVitalsMetrics): void {
+    reportWebVitals(metrics);
+  }
+
+  public measurePageLoad(): WebVitalsMetrics | null {
+    return measurePageLoad();
+  }
+
+  public prefetchResources(resources: string[]): void {
+    prefetchResources(resources);
+  }
+
+  // Get performance metrics
+  getMetrics(): Record<string, number> {
+    return Object.fromEntries(this.metrics);
+  }
+
+  // Initialize all optimizations
+  initialize(): void {
+    this.measurePerformance('lazyLoadImages', () => this.lazyLoadImages());
+    this.measurePerformance('preloadCriticalResources', () => this.preloadCriticalResources());
+    this.measurePerformance('optimizeScroll', () => this.optimizeScroll());
+  }
+}
+
+// Export singleton instance
+export const performanceOptimizer = PerformanceOptimizer.getInstance();
 
 export default {
   prefetchResources,

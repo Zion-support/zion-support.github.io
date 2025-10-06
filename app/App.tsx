@@ -3,18 +3,18 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 
 // Components
-import ErrorBoundary from '../src/components/ErrorBoundary';
-import SEOOptimizer from '../src/components/SEOOptimizer';
-import { LoadingSpinner } from '../components/LoadingComponents';
+import ErrorBoundary from './components/ErrorBoundary';
+import SEOOptimizer from './components/SEOOptimizer';
+import LoadingSpinner from './components/LoadingSpinner';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import PerformanceDashboard from './components/PerformanceDashboard';
+import PerformanceMonitor from './components/PerformanceMonitor';
 
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./page'));
 
-// Loading component is imported from components/LoadingComponents
 // Utils
-import performanceOptimizer from '../src/utils/performanceOptimizer';
+import { performanceOptimizer } from '../src/utils/performanceOptimizer';
 
 // Styles
 import '../index.css';
@@ -26,6 +26,7 @@ const App: React.FC = () => {
 
     // Initialize performance monitoring
     performanceOptimizer.lazyLoadImages();
+    performanceOptimizer.prefetchResources(['/api/health']);
     
     // Initialize Web Vitals monitoring
     if (typeof window !== 'undefined' && 'performance' in window) {
@@ -44,10 +45,10 @@ const App: React.FC = () => {
   return (
     <HelmetProvider>
       <ErrorBoundary>
-        <div>
-          <SEOOptimizer>
-            <AccessibilityEnhancer>
-            <Router>
+        <PerformanceMonitor />
+        <SEOOptimizer>
+          <AccessibilityEnhancer>
+          <Router>
               <div className='App'>
                 {/* Skip to main content link for accessibility */}
                 <a
@@ -78,9 +79,8 @@ const App: React.FC = () => {
                 <PerformanceDashboard />
               </div>
             </Router>
-            </AccessibilityEnhancer>
-          </SEOOptimizer>
-        </div>
+          </AccessibilityEnhancer>
+        </SEOOptimizer>
       </ErrorBoundary>
     </HelmetProvider>
   );

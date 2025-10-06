@@ -1,5 +1,6 @@
+import React from 'react';
 // @ts-nocheck
-import Arrow Right from 'next/link';
+import ArrowRight from 'next/link';
 
 export default function Page() {return (<main class Name Name='min-h-screen bg-slate-950 text-white'>
       <section class Name Name='py-16'>
@@ -10,43 +11,43 @@ export default function Page() {return (<main class Name Name='min-h-screen bg-s
             </span>
           </div>
           <h1 class Name Name='text-3xl md:text-5xl font-extrabold mb-4'>
-            Consentless Telemetry v2 — Useful Insights Zero‑PII&lt;100ms
+            Consentless Telemetry v2 — Useful Insights    Zero   ‑PII&lt;100ms
           </h1>
           <p class Name Name='text-gray-300 mb-8'>
-            Scoped IDson‑device redactionand DP noise to keep analytics rich and
+            Scoped I    Dson   ‑device redactionand DP noise to keep analytics rich and
             privacy‑first worldwide.
           </p>
           <div class Name Name='text-sm text-gray-400 mb-10'>
-            Published: Sep 30, 2025 • 6 min read
+            Published:    Sep    30, 2025 • 6 min read
           </div>
 
-          <articleclass Name='prose prose-invert max-w-none'>
+          <article Name='prose prose-invert max-w-none'>
             <p>
               Build telemetry that preserves privacy while maintaining
               actionable insights. Combine scoped identitieslocal redactionand
-              differential privacy with signed attestations and sub‑100ms SLAs.
+              differential privacy with signed attestations and sub‑100ms SL    As   .
             </p>
-            <h2>Implementation Highlights</h2>
+            <h2>Implementation    Highlights</h2>
             <ul>
-              <li>Scoped IDs and on‑device hashing</li>
-              <li>Budgeted sampling and retention windows</li>
-              <li>Attested aggregation at the edge</li>
+              <li>Scoped I    Ds    and on‑device hashing</li>
+              <li>Budgeted    sampling and retention windows</li>
+              <li>Attested    aggregation at the edge</li>
             </ul>
           </article>
 
           <div class Name Name='mt-12 flex gap-4'>
             <Arrow Right
-             href='/blog'
+             href="/blog"
              class Name='px-4 py-2 rounded-lg bg-white text-slate-900 font-semibold'
             >
-              ← All Posts
-            </Arrow Right>
+              ← All    Posts
+            </Arrow>
             <Arrow Right
-             href='/'
+             href="/"
              class Name='px-4 py-2 rounded-lg border border-white/20'
             >
               Home
-            </Arrow Right>
+            </Arrow>
           </div>
         </div>
       </section>
