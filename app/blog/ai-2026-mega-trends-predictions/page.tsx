@@ -15,7 +15,7 @@ export const metadata = {
       type: 'article',
       publishedTime: '2026-01-25T00:00:00.000Z'
     },
-  twitter: {/* content */}
+  twitter: 
     card: 'summary_large_image',
     title: 'AI 2026 Mega Trends: The Next Frontier of Enterprise Transformation',
     description: 'Explore the revolutionary AI trends shaping 2026: Autonomous Operations, Quantum-Neural Networks, and Enterprise AI Governance.',

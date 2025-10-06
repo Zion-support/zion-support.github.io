@@ -2,7 +2,7 @@ import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
 
-export const metadata: Metadata = {/* content */}
+export const metadata: Metadata = 
   title: 'AI 2026: Autonomous Business Intelligence Mega Breakthrough - 99% Automation',
   description: 'Revolutionary autonomous business intelligence systems achieving 99% automation with $3.5B+ ROI. Complete implementation guide for enterprise transformation.',
   keywords: 'autonomous business intelligence, AI automation, business intelligence, data analytics, enterprise AI, BI automation',

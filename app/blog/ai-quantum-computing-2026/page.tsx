@@ -1,7 +1,7 @@
 import React from 'react';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {/* content */}
+export const metadata: Metadata = 
   title: 'AI-Powered Quantum Computing Breakthroughs in 2026 | Zion Tech Group',
   description: 'Explore the revolutionary intersection of AI and quantum computing, featuring breakthrough algorithms, quantum machine learning, and enterprise applications transforming industries.',
   keywords: 'quantum computing, AI, machine learning, quantum algorithms, enterprise technology, 2026',

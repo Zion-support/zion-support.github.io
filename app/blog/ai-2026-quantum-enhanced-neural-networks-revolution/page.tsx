@@ -2,7 +2,7 @@ import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
 
-export const metadata: Metadata = {/* content */}
+export const metadata: Metadata = 
   title: 'AI 2026 Quantum-Enhanced Neural Networks Revolution | Zion Tech Group',
   description: 'Revolutionary quantum-enhanced neural networks achieving 500,000x performance, quantum consciousness processing, and $75B+ enterprise transformation with universal intelligence.',
   keywords: 'AI 2026, quantum neural networks, quantum computing, artificial intelligence, quantum consciousness, neural networks, breakthrough, enterprise AI',

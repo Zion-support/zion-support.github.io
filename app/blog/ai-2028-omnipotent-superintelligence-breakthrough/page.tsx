@@ -2,7 +2,7 @@ import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
 
-export const metadata: Metadata = {/* content */}
+export const metadata: Metadata = 
   title: 'AI 2028 Omnipotent Superintelligence Breakthrough - Zion Tech Group',
   description: 'Revolutionary breakthrough in AI 2028: Omnipotent Superintelligence achieves $3.2T in enterprise value creation with infinite cognitive capabilities and universal understanding.',
   keywords: 'AI 2028, omnipotent superintelligence, breakthrough, enterprise automation, universal AI, cognitive AI, superintelligence, $3.2T success',
@@ -17,15 +17,15 @@ export const metadata: Metadata = {/* content */}
       publishedTime: '2028-01-15T00:00:00.000Z',
       modifiedTime: '2028-01-15T00:00:00.000Z'
     },
-  twitter: {/* content */}
+  twitter: 
     card: 'summary_large_image',
     title: 'AI 2028 Omnipotent Superintelligence Breakthrough',
     description: 'Revolutionary breakthrough in AI 2028: Omnipotent Superintelligence achieves $3.2T in enterprise value creation.',
   },
-  robots: {/* content */}
+  robots: 
     index: true,
     follow: true,
-    googleBot: {/* content */}
+    googleBot: 
       index: true,
       follow: true,
       'max-video-preview': -1,

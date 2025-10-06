@@ -1,7 +1,7 @@
 import React from 'react';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {/* content */}
+export const metadata: Metadata = 
   title: 'AI 2026: Quantum Neural Optimization - Revolutionary AI Performance Breakthrough',
   description: 'Explore quantum neural optimization in 2026: breakthrough AI performance gains, quantum-enhanced neural networks, and achieving 1000x faster training with quantum computing integration.',
   keywords: 'quantum neural optimization, quantum AI 2026, quantum computing AI, neural network optimization, quantum machine learning, AI performance breakthrough',

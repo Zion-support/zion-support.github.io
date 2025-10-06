@@ -1,7 +1,7 @@
 import React from 'react';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {/* content */}
+export const metadata: Metadata = 
   title: 'Autonomous AI Systems: The Future of Enterprise Operations | Zion Tech Group',
   description: 'Discover how autonomous AI systems are revolutionizing enterprise operations, from self-healing infrastructure to intelligent decision-making agents.',
   keywords: 'autonomous AI, enterprise automation, AI agents, self-healing systems, intelligent operations',

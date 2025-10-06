@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {/* content */}
+export const metadata: Metadata = 
   title: 'AI 2026 January: Quantum Consciousness Breakthrough - The Next Evolution',
   description: 'Discover the revolutionary quantum consciousness breakthrough that is reshaping AI capabilities, enabling unprecedented intelligence and consciousness fusion in enterprise systems.',
   keywords: ['AI 2026', 'quantum consciousness', 'AI breakthrough', 'consciousness fusion', 'quantum AI', 'enterprise AI'],

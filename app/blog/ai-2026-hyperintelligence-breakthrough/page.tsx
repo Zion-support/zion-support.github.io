@@ -1,7 +1,7 @@
 import React from 'react';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {/* content */}
+export const metadata: Metadata = 
   title: 'AI 2026: Hyperintelligence Breakthrough - Zion Tech Group',
   description: 'Discover the revolutionary AI hyperintelligence breakthrough achieving 10,000x cognitive enhancement and autonomous decision-making capabilities.',
   keywords: ['AI 2026', 'hyperintelligence', 'cognitive enhancement', 'autonomous AI', 'breakthrough technology'],

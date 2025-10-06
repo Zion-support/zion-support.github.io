@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {/* content */}
+export const metadata: Metadata = 
   title: 'AI 2027: Quantum AI Security Revolution - Protect $847B Assets with Quantum-Resistant AI',
   description: 'Discover the quantum AI security breakthrough that protects $847B in enterprise assets with quantum-resistant encryption, NIST-approved protocols, and 99.97% threat prevention.',
   keywords: 'quantum AI security, quantum-resistant encryption, cybersecurity, NIST-approved, enterprise security, AI protection',

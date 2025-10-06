@@ -11,7 +11,7 @@ export const metadata = {
     type: 'article',
     url: 'https://ziontechgroup.com/blog/ai-2026-revolutionary-breakthroughs',
     images: [
-      {/* content */}
+      
         url: '/og-ai-2026-breakthroughs.jpg',
         width: 1200,
         height: 630,
