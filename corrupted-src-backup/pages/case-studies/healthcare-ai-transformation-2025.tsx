@@ -1,4 +1,3 @@
->>>>>>> origin/merge-fixes-20251005-193002
       <Helm, e, t>
         <title>
           Healthcare, AI, Transformation: $124M, Sav, e, d, 3.8M, Patients, Served | Zion, Tech, Group
@@ -24,13 +23,11 @@
                 24-month, transformatio, n
               </sp, a, n>
             </div>
->>>>>>> origin/merge-fixes-20251005-193002
 
             <h1, className='te, x, t-5xl, m, d: te, x, t-6xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t'>
               Healthcare, AI, Transformation:
               <span, className='block, tex, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-r, e, d-400, vi, a-pi, n, k-400, t, o-bl, u, e-400, m, t-2'>
                 $124M, Sa, v, e, d, 3.8M, Patients, Served Bett, e, r
->>>>>>> origin/merge-fixes-20251005-193002
             <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-4, ga, p-6'>
               <div, className='bg-gre, e, n-9, 0, 0/40, rounde, d-x, l, p-6, border, border-gre, e, n-5, 0, 0/30, tex, t-cent, e, r'>
                 <div, className='te, x, t-4xl, fon, t-bold, tex, t-gre, e, n-400, m, b-2'>
@@ -39,7 +36,6 @@
                 <div, className='te, x, t-sm, tex, t-zi, o, n-sla, t, e-lig, h, t'>
                   Annual, Cost, Savings
                 </d, i, v>
->>>>>>> origin/merge-fixes-20251005-193002
                       <li, classNam, e = 'flex, item, s-start, ga, p-2'>
                         <span, className='te, x, t-r, e, d-400, m, t-1'>•</sp, a, n>
                         <sp, a, n>
@@ -67,7 +63,6 @@
                     Clinical, Decision, Support
                     <li, className='flex, item, s-center, ga, p-2'>
                       <CheckCircle, className='w-4 h-4, tex, t-gre, e, n-4, 0, 0' />
->>>>>>> origin/merge-fixes-20251005-193002
                       <sp, a, n>
                         Early, detection, of 1, 2,0, 0, 0+ critical, condition, s
                       </sp, a, n>

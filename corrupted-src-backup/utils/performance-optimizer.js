@@ -35,7 +35,7 @@ class PerformanceOptimizer {
           getFCP(this.updateMetric.bind(this, 'firstContentfulPaint'));
           getLCP(this.updateMetric.bind(this, 'largestContentfulPaint'));
           getTTFB(this.updateMetric.bind(this, 'timeToFirstByte'));
-        },
+        }
       );
     }
   }
@@ -211,7 +211,7 @@ class PerformanceOptimizer {
   setupComponentLazyLoading(componentName) {
     // Set up lazy loading for specific components
     const componentElements = document.querySelectorAll(
-      `[data-component="${componentName}"]`,
+      `[data-component="${componentName}"]`
     );
 
     if ('IntersectionObserver' in window) {
@@ -242,7 +242,7 @@ class PerformanceOptimizer {
 
       if (staticallyImportedComponents.includes(componentName)) {
         console.warn(
-          `Component ${componentName} is already statically imported, skipping dynamic import`,
+          `Component ${componentName} is already statically imported, skipping dynamic import`
         );
         return;
       }
@@ -285,7 +285,7 @@ class PerformanceOptimizer {
     }
 
     // Log to console in development
-    if (process.env.NODE_ENV === 'development') {
+    if (process.env['NODE_ENV'] === 'development') {
       console.log('Performance Metrics:', this.metrics);
     }
   }
@@ -336,7 +336,7 @@ class PerformanceOptimizer {
 
   deferNonCriticalCSS() {
     const nonCriticalCSS = document.querySelectorAll(
-      'link[rel="stylesheet"]:not([data-critical])',
+      'link[rel="stylesheet"]:not([data-critical])'
     );
     nonCriticalCSS.forEach(link => {
       link.media = 'print';
