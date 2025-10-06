@@ -23,10 +23,10 @@ function App() {
   return (
     <HelmetProvider>
       <ErrorBoundary>
-        <Router>
-          <div className="App">
-            <SEOOptimizer>
-              <AccessibilityEnhancer>
+        <AccessibilityEnhancer>
+          <SEOOptimizer>
+            <Router>
+              <div className="App">
                 <Suspense fallback={<LoadingSpinner />}>
                   <Routes>
                     <Route path="/" element={<HomePage />} />
@@ -36,10 +36,10 @@ function App() {
                     <Route path="/enterprise" element={<EnterprisePage />} />
                   </Routes>
                 </Suspense>
-              </AccessibilityEnhancer>
-            </SEOOptimizer>
-          </div>
-        </Router>
+              </div>
+            </Router>
+          </SEOOptimizer>
+        </AccessibilityEnhancer>
       </ErrorBoundary>
     </HelmetProvider>
   );
