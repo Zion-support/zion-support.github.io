@@ -177,6 +177,7 @@ export const useLongTaskMonitoring = () => {
     const observer = performanceOptimizer.monitorLongTasks((entries: PerformanceEntry[]) => {
       entries.forEach((entry: PerformanceEntry) => {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         analytics.track('long_task', 'performance', 'detected', undefined, entry.duration);
 >>>>>>> cursor/fix-errors-and-merge-to-main-a3c4
@@ -187,6 +188,9 @@ export const useLongTaskMonitoring = () => {
           undefined,
           entry.duration
         );
+=======
+        analytics.track('long_task', 'performance', 'detected', undefined, entry.duration);
+>>>>>>> cursor/fix-errors-and-merge-to-main-e973
       });
     });
 

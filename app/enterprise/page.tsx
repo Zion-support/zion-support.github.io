@@ -11,6 +11,9 @@ export const metadata = {
 export default function EnterprisePage() {
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-e973
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
       <header className="relative overflow-hidden">
@@ -45,6 +48,7 @@ export default function EnterprisePage() {
               uptime with enterprise-grade security and compliance.
             </p>
 
+<<<<<<< HEAD
 =======
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
       {/* Hero Section */}
@@ -72,12 +76,17 @@ export default function EnterprisePage() {
             </p>
             
 >>>>>>> cursor/fix-errors-and-merge-to-main-a3c4
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-e973
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
               <a
                 href="/contact"
                 className="group flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl"
               >
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-e973
                 <span>Schedule Enterprise Demo</span>
                 <span className="group-hover:translate-x-1 transition-transform">
                   →
@@ -86,6 +95,7 @@ export default function EnterprisePage() {
               <Link
                 href="#solutions"
                 className="group flex items-center gap-3 bg-white/10 hover:bg-white/20 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 border border-white/30"
+<<<<<<< HEAD
               >
                 <span>View Solutions</span>
                 <span className="group-hover:translate-x-1 transition-transform">
@@ -102,12 +112,19 @@ export default function EnterprisePage() {
                 View All Services
               </a>
 >>>>>>> cursor/fix-errors-and-merge-to-main-a3c4
+=======
+              >
+                <span>View Solutions</span>
+                <span className="group-hover:translate-x-1 transition-transform">
+                  ↓
+                </span>
+              </Link>
+>>>>>>> cursor/fix-errors-and-merge-to-main-e973
             </div>
           </div>
         </div>
       </header>
 
-<<<<<<< HEAD
       {/* Solutions Section */}
       <section id="solutions" className="py-24">
         <div className="container mx-auto px-4">
@@ -134,6 +151,9 @@ export default function EnterprisePage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-e973
             {/* Solution Cards */}
             {[
               {
@@ -183,6 +203,7 @@ export default function EnterprisePage() {
                     </div>
                   ))}
                 </div>
+<<<<<<< HEAD
 =======
             {[
               {
@@ -214,6 +235,8 @@ export default function EnterprisePage() {
                   ))}
                 </ul>
 >>>>>>> cursor/fix-errors-and-merge-to-main-a3c4
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-e973
               </div>
             ))}
           </div>
@@ -223,6 +246,9 @@ export default function EnterprisePage() {
       {/* CTA Section */}
       <section className="py-24">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-e973
         <div className="container mx-auto px-4">
           <div className="text-center bg-white/5 backdrop-blur-lg rounded-3xl p-12 border border-white/20">
             <h3 className="text-4xl font-bold text-white mb-6">
@@ -232,6 +258,7 @@ export default function EnterprisePage() {
               Join 500+ Fortune 500 companies achieving unprecedented
               transformation with our enterprise AI solutions.
             </p>
+<<<<<<< HEAD
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
               <Link
                 href="tel:+13024640950"
@@ -270,6 +297,23 @@ export default function EnterprisePage() {
                 View Case Studies
               </a>
 >>>>>>> cursor/fix-errors-and-merge-to-main-a3c4
+=======
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+              <Link
+                href="tel:+13024640950"
+                className="group flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl"
+              >
+                <span className="text-xl">📞</span>
+                <span>Call +1 302 464 0950</span>
+              </Link>
+              <Link
+                href="mailto:info@ziontechgroup.com"
+                className="group flex items-center gap-3 bg-white/10 hover:bg-white/20 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 border border-white/30"
+              >
+                <span className="text-xl">📧</span>
+                <span>Get Enterprise Consultation</span>
+              </Link>
+>>>>>>> cursor/fix-errors-and-merge-to-main-e973
             </div>
           </div>
         </div>
