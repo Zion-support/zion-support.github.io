@@ -63,7 +63,7 @@ export function PageLoader() {
 export function InlineLoader({ text }: { text?: string }) {
   return (
     <div className='flex items-center justify-center py-8'>
-      <LoadingSpinner size='md' color='gray' text={text} />
+      <LoadingSpinner size='md' color='gray' text={text || ''} />
     </div>
   );
 }
