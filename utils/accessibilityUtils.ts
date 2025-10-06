@@ -127,7 +127,6 @@ export const keyboardNavigation = {
   },
 };
 
->>>>>>> 40f0d19ecc0819e0cd100e68e36dd415011c7be9
 // Color contrast utilities
 export const colorContrast = {
   // Calculate relative luminance
@@ -169,7 +168,6 @@ export const colorContrast = {
   ): number => {
     const lum1 = colorContrast.getLuminance(...color1);
     const lum2 = colorContrast.getLuminance(...color2);
->>>>>>> 40f0d19ecc0819e0cd100e68e36dd415011c7be9
     const brightest = Math.max(lum1, lum2);
     const darkest = Math.min(lum1, lum2);
     
@@ -466,5 +464,4 @@ export const initAccessibility = (): void => {
   });
   document.body.insertBefore(skipLink, document.body.firstChild);
   },
->>>>>>> 40f0d19ecc0819e0cd100e68e36dd415011c7be9
 };

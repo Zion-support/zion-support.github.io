@@ -29,14 +29,11 @@ export const throttle = <T extends (...args: any[]) => any>(
 ): ((...args: Parameters<T>) => void) => {
   let inThrottle: boolean;
   
->>>>>>> cursor/fix-errors-and-merge-to-main-13eb
   return function executedFunction(this: any, ...args: Parameters<T>) {
     if (!inThrottle) {
       func.apply(this, args);
       inThrottle = true;
       setTimeout(() => (inThrottle = false), limit);
-      setTimeout(() => inThrottle = false, limit);
->>>>>>> cursor/fix-errors-and-merge-to-main-13eb
     }
   };
 };
