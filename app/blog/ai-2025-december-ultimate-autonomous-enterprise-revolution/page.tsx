@@ -1,3 +1,19 @@
+import Link from 'next/link';
+import { ArrowLeft, ArrowRight, Bookmark, Brain, Calendar, Clock, DollarSign, Shield, Target, TrendingUp, User, Zap } from 'lucide-react';
+
+
+import { ArrowLeft } from 'lucide-react';
+import { Calendar } from 'lucide-react';
+import { User } from 'lucide-react';
+import { Clock } from 'lucide-react';
+import { Tag } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+import { DollarSign } from 'lucide-react';
+import { Users } from 'lucide-react';
+import { Target } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Shield } from 'lucide-react';
 import React from 'react';
 import Link from 'next/link';
 import {ArrowLeft,Calendar,User,Clock,Tag,TrendingUp,DollarSign,Users,Target,Brain,Zap,Shield} from 'lucide-react';
@@ -11,12 +27,16 @@ export const metadata = {
 export default function AI2025DecemberUltimateAutonomous Enterprise Revolution() {/* return (
     <div> content */}
     <div>
-      <div> </div><div> </div>
-      <div className="text-left">{/*   Header   */}</div></div>
-      <header className="text-left"> </header><div className="text-left"> </div><Link 
-            href="/"
-            className="text-left"> </Link><Arrow Left className="text-left" />Back to    Home
-          </Arrow></Link>
+      {/* Header */}
+      <header className="border-b border-gray-200 bg-white sticky top-0 z-50">
+        <div className="max-w-4xl mx-auto px-4 py-4">
+          <Link 
+            href="/" 
+            className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
+          >
+            <ArrowLeft />
+            Back to Home
+          </Link>
         </div>
       </header>
 
@@ -40,10 +60,12 @@ export default function AI2025DecemberUltimateAutonomous Enterprise Revolution()
           <p className="text-left">The most significant AI breakthrough of 2025 has arrived. Discover how Zion Tech Group's revolutionary autonomous enterprise platform is achieving 99.9% operational autonomy across    Fortune    500 companies, delivering unprecedented efficiency and cost savings.
           </p></p>
           
-          <div className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
-            {['AI Revolution', 'Autonomous Enterprise', 'December 2025', 'AI Breakthrough', 'Enterprise    Automation   '].map((tag) => (</div></div>
-              <span key={tag} className="text-left"> </span><Tag className="text-left" />{tag}
-              </Tag><
+          <div className="flex flex-wrap gap-2">
+            {['AI Revolution', 'Autonomous Enterprise', 'December 2025', 'AI Breakthrough', 'Enterprise Automation'].map((tag) => (
+              <span key={tag} className="inline-flex items-center gap-1 bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">
+                <Tag />
+                {tag}
+              </span>
             ))}
           </div>
         </div>

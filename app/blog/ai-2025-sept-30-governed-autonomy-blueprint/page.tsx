@@ -1,6 +1,6 @@
 import React from 'react';
 // @ts-nocheck
-import ArrowRight from 'next/link';
+import Link from 'next/link';
 
 export const metadata = {
   
@@ -157,25 +157,23 @@ export default function Governed Autonomy Blueprint2025() {return (<div classNam
         </div>
       </section>
     </div>
-  ); }function Related Card ({ title, href }: {title: "string; href: string }) {return (<Arrow Right"
-      href={href}
-     className="block bg-white rounded-lg p-6 hover:shadow-lg transition-all duration-300 border"
-    >
+  );
+}
+
+function RelatedCard({ title, href, color }: { title: string; href: string; color: string }) {
+  return (
+    <ArrowRight href={href} className="block bg-white rounded-lg p-6 hover:shadow-lg transition-all duration-300 border">
       <h3 className="text-lg font-semibold text-gray-900 mb-2">{title}</h3>
-      <span className="text-indigo-700 font-semibold">Read    More    →</span>
-    </Arrow>
-  ); }function NextUp Card ({
-  title,
-  descriptionhref,
-}: {title: "string;",
-  description: "string;",
-  href: string;
-}) {return (<a
-      href={href}
-     className="block bg-white rounded-lg p-6 hover:shadow-lg transition-all duration-300 border"
-    >
-      <h3 className="text-xl font-bold text-gray-900 mb-2">{title}</h3>
-      <p className="text-gray-600 mb-3">{description}</p>
-      <span className="text-indigo-700 font-semibold">Explore    →</span>
+      <span className="text-indigo-700 font-semibold">Read More →</span>
+    </ArrowRight>
+  );
+}
+
+function NextUpCard({ title, description, href }: { title: string; description: string; href: string }) {
+  return (
+    <a href={href} className="block bg-white rounded-lg p-6 hover:shadow-lg transition-all duration-300 border">
+      <h3>{title}</h3>
+      <p>{description}</p>
+      <span>Explore →</span>
     </a>
   ); }

@@ -1,5 +1,5 @@
 import React from 'react';
-import ArrowRight from 'next/link';
+import Link from 'next/link';
 
 export const metadata = {
   
@@ -285,49 +285,27 @@ export default function AI2026NextGeneration Automation Platform() {return (<div
           </p>
         </div>
 
-        <h2 className="text-2xl font-bold mt-8 mb-4">
-          🔗 Related    Breakthroughs
-        </h2>
+        <h2 className="text-2xl font-bold mt-8 mb-4">🔗 Related Breakthroughs</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <Arrow Right
-           href="/blog/ai-2026-revolutionary-edge-computing-breakthrough"
-           className="block p-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg hover:shadow-lg transition-shadow"
-          >
-            <h3 className="font-semibold">🚀 Revolutionary Edge    Computing</h3>
-            <p className="text-sm opacity-90">
-              $12.5B success with 500x performance
-            </p>
-          </Arrow>
-
-          <Arrow Right
-           href="/blog/ai-2026-autonomous-business-intelligence-breakthrough"
-           className="block p-4 bg-gradient-to-r from-green-500 to-emerald-500 text-white rounded-lg hover:shadow-lg transition-shadow"
-          >
-            <h3 className="font-semibold">
-              🤖 Autonomous Business    Intelligence
-            </h3>
-            <p className="text-sm opacity-90">
-              99.9% autonomous decision making
-            </p>
-          </Arrow>
-
-          <Arrow Right
-           href="/case-studies/ai-2026-automation-platform-8-7-billion-success"
-           className="block p-4 bg-gradient-to-r from-purple-500 to-indigo-500 text-white rounded-lg hover:shadow-lg transition-shadow"
-          >
-            <h3 className="font-semibold">
-              💰 $8.7B Platform Success Case    Study
-            </h3>
-            <p className="text-sm opacity-90">Detailed    implementation story</p>
-          </Arrow>
-
-          <Arrow Right
-           href="/services/ai-automation-platform"
-           className="block p-4 bg-gradient-to-r from-orange-500 to-red-500 text-white rounded-lg hover:shadow-lg transition-shadow"
-          >
-            <h3 className="font-semibold">🛠️ Automation Platform    Services</h3>
-            <p className="text-sm opacity-90">Implementation    and support</p>
-          </Arrow>
+          <ArrowRight href="/blog/ai-2026-revolutionary-edge-computing-breakthrough" className="block p-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg hover:shadow-lg transition-shadow">
+            <h3 className="font-semibold">🚀 Revolutionary Edge Computing</h3>
+            <p className="text-sm opacity-90">$12.5B success with 500x performance</p>
+          </ArrowRight>
+          
+          <ArrowRight href="/blog/ai-2026-autonomous-business-intelligence-breakthrough" className="block p-4 bg-gradient-to-r from-green-500 to-emerald-500 text-white rounded-lg hover:shadow-lg transition-shadow">
+            <h3 className="font-semibold">🤖 Autonomous Business Intelligence</h3>
+            <p className="text-sm opacity-90">99.9% autonomous decision making</p>
+          </ArrowRight>
+          
+          <ArrowRight href="/case-studies/ai-2026-automation-platform-8-7-billion-success" className="block p-4 bg-gradient-to-r from-purple-500 to-indigo-500 text-white rounded-lg hover:shadow-lg transition-shadow">
+            <h3 className="font-semibold">💰 $8.7B Platform Success Case Study</h3>
+            <p className="text-sm opacity-90">Detailed implementation story</p>
+          </ArrowRight>
+          
+          <ArrowRight href="/services/ai-automation-platform" className="block p-4 bg-gradient-to-r from-orange-500 to-red-500 text-white rounded-lg hover:shadow-lg transition-shadow">
+            <h3 className="font-semibold">🛠️ Automation Platform Services</h3>
+            <p className="text-sm opacity-90">Implementation and support</p>
+          </ArrowRight>
         </div>
 
         <div className="bg-gradient-to-r from-purple-600 to-indigo-700 text-white p-6 rounded-lg mt-8">
@@ -340,18 +318,12 @@ export default function AI2026NextGeneration Automation Platform() {return (<div
             learn how we can deliver similar results for your organization.
           </p>
           <div className="flex flex-wrap gap-4">
-            <Arrow Right
-             href="/contact"
-             className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-            >
-              Start Your Automation    Journey
-            </Arrow>
-            <Arrow Right
-             href="/case-studies/ai-2026-automation-platform-8-7-billion-success"
-             className="bg-purple-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-400 transition-colors"
-            >
-              View Case    Study
-            </Arrow>
+            <ArrowRight href="/contact" className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+              Start Your Automation Journey
+            </ArrowRight>
+            <ArrowRight href="/case-studies/ai-2026-automation-platform-8-7-billion-success" className="bg-purple-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-400 transition-colors">
+              View Case Study
+            </ArrowRight>
           </div>
         </div>
       </div>

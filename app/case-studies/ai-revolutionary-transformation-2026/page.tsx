@@ -419,10 +419,10 @@ export default function AIRevolutionaryTransformation2026() {
           Transform your organization with our proven AI implementation
           methodology and expert guidance.
         </p>
-        <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-          <Link
-            href='tel:+<13024640950'
-            className='bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors'
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <ArrowRight
+            href="tel:+13024640950"
+            className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors"
           >
             📞 Call +1 302 464 0950
           </Link>

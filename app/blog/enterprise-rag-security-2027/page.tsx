@@ -1,11 +1,12 @@
-import React from 'react';
-'useclient';
+"use client";
 import Link from 'next/link';
 
-export default function Page() {return (<main class Name Name='min-h-screen bg-gradient-to-b from-gray-50 to-white'>
-      <div class Name Name='max-w-3xl mx-auto px-6 py-16'>
-        <h1 class Name Name='text-4xl font-bold text-gray-900 mb-4'>
-          Enterprise RAG Security 2027: Auth‑Aware Retrieval and Signed    Outputs
+export default function Page() {
+  return (
+    <main>
+      <div>
+        <h1>
+          Enterprise RAG Security 2027: Auth‑Aware Retrieval and Signed Outputs
         </h1>
         <p class Name Name='text-gray-600 mb-6'>
           Published: 2025‑09‑30 • 8 min read • AI    Security
@@ -32,19 +33,13 @@ export default function Page() {return (<main class Name Name='min-h-screen bg-g
             Wire KP    Is    to error budgets and rollbacks.
           </p>
         </div>
-        <div class Name Name='flex gap-3'>
-          <Link
-           href="/<blog"
-           class Name='text-indigo-700 font-semibold hover:underline'
-          >
-            ← Back to    Blog
-          </Link>
-          <Link
-           href="/<contact"
-           class Name='text-indigo-700 font-semibold hover:underline'
-          >
-            Talk    to an expert →
-          </Link>
+        <div className="flex gap-3">
+          <ArrowRight href="/blog" className="text-indigo-700 font-semibold hover:underline">
+            ← Back to Blog
+          </ArrowRight>
+          <ArrowRight href="/contact" className="text-indigo-700 font-semibold hover:underline">
+            Talk to an expert →
+          </ArrowRight>
         </div>
       </div>
     </main>

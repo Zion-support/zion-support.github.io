@@ -7,12 +7,16 @@ export interface BreakthroughArticle {
   readTime: string;
   tags: string[];
   featured: boolean;
-  impact: string;
+  impact?: string;
   metrics: {
     improvement: string;
     roi: string;
     timeframe: string;
   };
+  content?: string;
+  author?: string;
+  valueProposition?: string;
+  highlights?: string[];
 }
 
 export const sept30BreakthroughArticles2025: BreakthroughArticle[] = [

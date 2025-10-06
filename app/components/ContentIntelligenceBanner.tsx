@@ -1,12 +1,8 @@
 import Link from 'next/link';
-import {
-  Award,
-  BookOpen,
-  CheckCircle,
-  Globe,
-  TrendingUp,
-  Zap,
-} from 'lucide-react';
+import { ArrowRight, Award, BookOpen, CheckCircle, Globe, TrendingUp, Zap } from 'lucide-react';
+
+
+
 
 /**
  * Content Intelligence Revolution Banner
@@ -155,35 +151,31 @@ export default function ContentIntelligenceBanner() {
         </div>
 
         {/* CTA Buttons */}
-        <div className='flex flex-col sm:flex-row gap-4 justify-center items-center mb-8'>
-          <Link
-            href='/blog/ai-2025-oct-01-autonomous-content-intelligence-revolution'
-            className='group bg-yellow-400 text-emerald-900 px-8 py-4 rounded-xl font-bold text-lg hover:bg-yellow-300 transition-all shadow-2xl hover:shadow-yellow-400/50 hover:scale-105 flex items-center gap-2'
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+          <ArrowRight
+            href="/blog/ai-2025-oct-01-autonomous-content-intelligence-revolution"
+            className="group bg-yellow-400 text-emerald-900 px-8 py-4 rounded-xl font-bold text-lg hover:bg-yellow-300 transition-all shadow-2xl hover:shadow-yellow-400/50 hover:scale-105 flex items-center gap-2"
           >
             <BookOpen className='w-6 h-6' />
             <span>📖 Read Complete Guide (18 min)</span>
-            <span className='group-hover:translate-x-1 transition-transform'>
-              →
-            </span>
-          </Link>
-
-          <Link
-            href='/case-studies/ai-2025-oct-01-content-intelligence-127-million-success'
-            className='group bg-white text-emerald-600 px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all shadow-2xl hover:shadow-white/50 hover:scale-105 flex items-center gap-2'
+            <span className="group-hover:translate-x-1 transition-transform">→</span>
+          </ArrowRight>
+          
+          <ArrowRight
+            href="/case-studies/ai-2025-oct-01-content-intelligence-127-million-success"
+            className="group bg-white text-emerald-600 px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all shadow-2xl hover:shadow-white/50 hover:scale-105 flex items-center gap-2"
           >
-            <Award className='w-6 h-6' />
+            <Award />
             <span>💎 View $127M Success Story</span>
-            <span className='group-hover:translate-x-1 transition-transform'>
-              →
-            </span>
-          </Link>
+            <span className="group-hover:translate-x-1 transition-transform">→</span>
+          </ArrowRight>
         </div>
 
         {/* Additional CTA */}
-        <div className='text-center'>
-          <Link
-            href='/contact'
-            className='inline-flex items-center gap-2 border-3 border-white text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white hover:text-emerald-600 transition-all shadow-2xl hover:scale-105'
+        <div className="text-center">
+          <ArrowRight
+            href="/contact"
+            className="inline-flex items-center gap-2 border-3 border-white text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white hover:text-emerald-600 transition-all shadow-2xl hover:scale-105"
           >
             <Zap className='w-6 h-6' />
             <span>🚀 Transform Your Content Operations Today</span>
@@ -230,10 +222,10 @@ export function ContentIntelligenceShowcaseBanner() {
           Transform enterprise content operations with AI-powered autonomous
           systems. Fortune 100 proven success across 84 countries worldwide.
         </p>
-        <div className='flex flex-wrap gap-4 justify-center'>
-          <Link
-            href='/blog/ai-2025-oct-01-autonomous-content-intelligence-revolution'
-            className='bg-yellow-400 text-emerald-900 font-bold py-3 px-8 rounded-lg hover:bg-yellow-300 transition-colors shadow-2xl'
+        <div className="flex flex-wrap gap-4 justify-center">
+          <ArrowRight
+            href="/blog/ai-2025-oct-01-autonomous-content-intelligence-revolution"
+            className="bg-yellow-400 text-emerald-900 font-bold py-3 px-8 rounded-lg hover:bg-yellow-300 transition-colors shadow-2xl"
           >
             📖 Read Revolutionary Guide →
           </Link>

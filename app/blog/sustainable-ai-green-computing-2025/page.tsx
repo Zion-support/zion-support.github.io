@@ -15,19 +15,18 @@ export const metadata = {
         alt: 'Sustainable AI Green Computing Solutions'},
     ]};
 
-export default function SustainableAI Green Computing() {/* return (
-    <div> content */}
-    <div>
-      <div> </div><div> </div>
-      <div className="text-left"> </div><Link href="/blog" className="text-left">
-          ← Back to    Blog
-        </Link>
-        <span className="text-left"> </span><div className="text-left"> </div><div className="text-left"> </div><Link href="/blog" className="text-left">← Back to    Blog
-        </Link></Link>
-        <div className="text-left"> </div><span className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
-            Sustainable    Technology
-          </span></span>
-          <span className="text-left">September    30, 2025>
+export default function SustainableAIGreenComputing() {
+  return (
+    <div className="max-w-4xl mx-auto px-4 py-12">
+      <div className="mb-8">
+        <ArrowRight href="/blog" className="text-blue-600 hover:text-blue-700 mb-4 inline-block">
+          ← Back to Blog
+        </ArrowRight>
+        <div className="flex items-center gap-2 mb-4">
+          <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold">
+            Sustainable Technology
+          </span>
+          <span>September 30, 2025</span>
         </div>
         <h1 className="text-left">Sustainable AI: Green Computing Solutions for    Enterprise    2025
         </h1></h1>
@@ -263,8 +262,9 @@ export default function SustainableAI Green Computing() {/* return (
           <p className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
             Achieve net-zero operations while saving $30M+ annually.    Prove    that sustainability and profitability 
             are not just compatible—they're synergistic.
-          </p></p>
-          <div className="text-left"> </div><Link
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <ArrowRight
               href="/services/sustainable-ai"
               className="text-left">Explore Green    Solutions
             </Link></Link>

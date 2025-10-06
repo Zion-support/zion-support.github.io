@@ -1,6 +1,9 @@
 import Link from 'next/link';
 import { ArrowRight, Brain, TrendingUp, Users } from 'lucide-react';
 
+
+
+
 export default function AIFutureWorkforceBanner2026() {
   return (
     <section className='py-16 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white relative overflow-hidden'>
@@ -63,10 +66,10 @@ export default function AIFutureWorkforceBanner2026() {
             </div>
 
             {/* CTA Buttons */}
-            <div className='flex flex-col sm:flex-row gap-4'>
-              <Link
-                href='/blog/ai-future-workforce-2026'
-                className='bg-white text-indigo-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center'
+            <div className="flex flex-col sm:flex-row gap-4">
+              <ArrowRight
+                href="/blog/ai-future-workforce-2026"
+                className="bg-white text-indigo-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center"
               >
                 <Users className='w-5 h-5 mr-2' />
                 Read Full Article
@@ -133,14 +136,14 @@ export default function AIFutureWorkforceBanner2026() {
                 </div>
               </div>
 
-              <div className='mt-6 pt-6 border-t border-white/20'>
-                <Link
-                  href='/blog/ai-future-workforce-2026'
-                  className='inline-flex items-center text-white hover:text-yellow-200 transition-colors font-semibold'
+              <div className="mt-6 pt-6 border-t border-white/20">
+                <ArrowRight
+                  href="/blog/ai-future-workforce-2026"
+                  className="inline-flex items-center text-white hover:text-yellow-200 transition-colors font-semibold"
                 >
                   Learn More About Workforce Transformation
-                  <ArrowRight className='w-4 h-4 ml-2' />
-                </Link>
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </ArrowRight>
               </div>
             </div>
           </div>

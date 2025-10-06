@@ -1,6 +1,9 @@
 import Link from 'next/link';
 import { ArrowRight, Brain, TrendingUp, Zap } from 'lucide-react';
 
+
+
+
 export default function NewContent2026PromotionalBanner() {
   return (
     <section className='py-16 bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white relative overflow-hidden'>
@@ -160,15 +163,15 @@ export default function NewContent2026PromotionalBanner() {
         </div>
 
         {/* CTA Section */}
-        <div className='mt-12 text-center'>
-          <Link
-            href='/blog'
-            className='inline-flex items-center bg-gradient-to-r from-yellow-400 to-orange-500 text-gray-900 px-8 py-4 rounded-full font-bold text-lg hover:from-yellow-300 hover:to-orange-400 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-2xl'
+        <div className="mt-12 text-center">
+          <ArrowRight
+            href="/blog"
+            className="inline-flex items-center bg-gradient-to-r from-yellow-400 to-orange-500 text-gray-900 px-8 py-4 rounded-full font-bold text-lg hover:from-yellow-300 hover:to-orange-400 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-2xl"
           >
             <Zap className='w-5 h-5 mr-2' />
             Explore All Latest Content
-            <ArrowRight className='w-5 h-5 ml-2' />
-          </Link>
+            <ArrowRight className="w-5 h-5 ml-2" />
+          </ArrowRight>
         </div>
       </div>
     </section>

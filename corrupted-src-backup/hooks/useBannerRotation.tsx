@@ -7,8 +7,6 @@ import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import {
   BannerConfig,
   RotationStrategy,
-  selectBannersForDisplay,
-  selectBalancedBanners,
   trackImpression,
   trackClick,
   loadBannerStats,

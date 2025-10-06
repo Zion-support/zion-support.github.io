@@ -532,10 +532,10 @@ export default function Fortune500QuantumHyperAutomationSuccess2026() {
             Join Fortune 500 companies already achieving unprecedented ROI and
             operational excellence.
           </p>
-          <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-            <Link
-              href='/<services'
-              className='bg-white text-emerald-900 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors shadow-lg'
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <ArrowRight
+              href="/services"
+              className="bg-white text-emerald-900 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors shadow-lg"
             >
               Explore Quantum Automation Services
             </Link>

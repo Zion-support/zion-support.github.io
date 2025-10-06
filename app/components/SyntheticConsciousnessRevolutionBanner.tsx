@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Brain, TrendingUp, Zap } from 'lucide-react';
+import { ArrowRight, Bot, Brain, TrendingUp, Zap } from 'lucide-react';
 
 const SyntheticConsciousnessRevolutionBanner: React.FC = () => {
   return (
@@ -75,18 +75,18 @@ const SyntheticConsciousnessRevolutionBanner: React.FC = () => {
             </div>
 
             {/* CTA Buttons */}
-            <div className='flex flex-col sm:flex-row gap-4'>
-              <Link
-                href='/blog/ai-2026-synthetic-consciousness-revolution'
-                className='inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105'
+            <div className="flex flex-col sm:flex-row gap-4">
+              <ArrowRight 
+                href="/blog/ai-2026-synthetic-consciousness-revolution"
+                className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
               >
                 <Brain className='w-5 h-5 mr-2' />
                 Explore Consciousness AI
-                <ArrowRight className='w-5 h-5 ml-2' />
-              </Link>
-              <Link
-                href='/case-studies/ai-2026-synthetic-consciousness-enterprise-transformation-75-billion-success'
-                className='inline-flex items-center justify-center px-8 py-4 bg-transparent border-2 border-purple-400 text-purple-200 font-semibold rounded-lg hover:bg-purple-400/10 transition-all duration-300'
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </ArrowRight>
+              <ArrowRight 
+                href="/case-studies/ai-2026-synthetic-consciousness-enterprise-transformation-75-billion-success"
+                className="inline-flex items-center justify-center px-8 py-4 bg-transparent border-2 border-purple-400 text-purple-200 font-semibold rounded-lg hover:bg-purple-400/10 transition-all duration-300"
               >
                 $75B Success Story
               </Link>

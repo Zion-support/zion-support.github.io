@@ -387,10 +387,10 @@ export default function AI2026RevolutionaryAutonomousEnterpriseSuccess() {
             unprecedented transformation with our Revolutionary Autonomous
             Enterprise Systems. Your $2.8B ROI success story starts here.
           </p>
-          <div className='flex flex-col sm:flex-row gap-4'>
-            <Link
-              href='/services/ai-2026-revolutionary-autonomous-enterprise-<systems'
-              className='bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-indigo-700 transition-all duration-200 text-center'
+          <div className="flex flex-col sm:flex-row gap-4">
+            <ArrowRight 
+              href="/services/ai-2026-revolutionary-autonomous-enterprise-systems" 
+              className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-indigo-700 transition-all duration-200 text-center"
             >
               Start Your Transformation
             </Link>
@@ -403,33 +403,17 @@ export default function AI2026RevolutionaryAutonomousEnterpriseSuccess() {
           </div>
         </div>
 
-        <div className='border-t border-gray-200 pt-8'>
-          <h3 className='text-xl font-bold text-gray-900 mb-4'>
-            Related Success Stories
-          </h3>
-          <div className='grid md:grid-cols-2 gap-6'>
-            <Link
-              href='/case-studies/ai-2026-neural-architecture-search-mega-<success'
-              className='block p-4 border border-gray-200 rounded-lg hover:border-purple-300 hover:bg-purple-50 transition-all duration-200'
-            >
-              <h4 className='font-semibold text-gray-900 mb-2'>
-                Neural Architecture Search Mega Success
-              </h4>
-              <p className='text-gray-600 text-sm'>
-                $200M ROI achieved with NAS breakthrough implementation.
-              </p>
-            </Link>
-            <Link
-              href='/case-studies/fortune-500-ai-transformation-mega-success-<2026'
-              className='block p-4 border border-gray-200 rounded-lg hover:border-green-300 hover:bg-green-50 transition-all duration-200'
-            >
-              <h4 className='font-semibold text-gray-900 mb-2'>
-                Fortune 500 AI Transformation Success
-              </h4>
-              <p className='text-gray-600 text-sm'>
-                $300M ROI transformation across multiple Fortune 500 companies.
-              </p>
-            </Link>
+        <div className="border-t border-gray-200 pt-8">
+          <h3 className="text-xl font-bold text-gray-900 mb-4">Related Success Stories</h3>
+          <div className="grid md:grid-cols-2 gap-6">
+            <ArrowRight href="/case-studies/ai-2026-neural-architecture-search-mega-success" className="block p-4 border border-gray-200 rounded-lg hover:border-purple-300 hover:bg-purple-50 transition-all duration-200">
+              <h4 className="font-semibold text-gray-900 mb-2">Neural Architecture Search Mega Success</h4>
+              <p className="text-gray-600 text-sm">$200M ROI achieved with NAS breakthrough implementation.</p>
+            </ArrowRight>
+            <ArrowRight href="/case-studies/fortune-500-ai-transformation-mega-success-2026" className="block p-4 border border-gray-200 rounded-lg hover:border-green-300 hover:bg-green-50 transition-all duration-200">
+              <h4 className="font-semibold text-gray-900 mb-2">Fortune 500 AI Transformation Success</h4>
+              <p className="text-gray-600 text-sm">$300M ROI transformation across multiple Fortune 500 companies.</p>
+            </ArrowRight>
           </div>
         </div>
       </article>

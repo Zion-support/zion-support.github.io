@@ -1,3 +1,18 @@
+import Link from 'next/link';
+import { ArrowRight, Brain, CheckCircle, Cog, Target, TrendingUp, User, Users, Zap } from 'lucide-react';
+
+
+import { ArrowRight } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+import { Users } from 'lucide-react';
+import { Target } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
+
+export default function AINextGenEnterpriseAutomation2026() {
+  return (
 import React from 'react';
 import Link from 'next/link';
 import {ArrowRight,Brain,Zap,Shield,TrendingUp,Users,Target,CheckCircle} from 'lucide-react';
@@ -162,17 +177,16 @@ export default function AINextGen Enterprise Automation2026() {/* return (
         </div>
       </section>
 
-      {/* CTA    Section   */}
-      <section className="text-left"> </section><h3 className="text-left">
-      <section className="text-left"> </section><div className="text-left"> </div><h2 className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
-            Ready to Achieve 98% Enterprise    Automation   ?
-          </h2></h2>
-          <p className="text-left">Join the Fortune 500 companies already transforming their operations with Zion Tech    Group   's next-generation AI automation solutions.
-          </p></p>
-          <div className="text-left"> </div><Link 
-              href="/"
-              className="text-left">Start Your    Transformation
-            </Link></Link>
+      {/* CTA Section */}
+      <section>
+        <div>
+          <h2>
+            Ready to Achieve 98% Enterprise Automation?
+          </h2>
+          <p>
+            Join the Fortune 500 companies already transforming their operations with Zion Tech Group's next-generation AI automation solutions.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
               href="/"
               className="text-left">View Success    Stories
@@ -181,12 +195,11 @@ export default function AINextGen Enterprise Automation2026() {/* return (
         </div>
       </section>
 
-      {/*   Navigation   */}
-      <section className="text-left"> </section><div className="text-left"> </div><section className="text-left"> </section><div className="text-left"> </div><div className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
-            </div><div className="text-left"> </div><Link 
-                href="/"
-                className="text-left"> </Link><Arrow Right className="text-left" />Back to    Blog
-              </Arrow></Link>
+      {/* Navigation */}
+      <section className="py-12 bg-slate-950 border-t border-white/10">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto">
+            <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
               <Link 
                 href="/"
                 className="text-left">Explore Our    Services

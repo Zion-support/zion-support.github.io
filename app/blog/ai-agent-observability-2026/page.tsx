@@ -1,5 +1,5 @@
 import React from 'react';
-import ArrowRight from 'next/link';
+import Link from 'next/link';
 
 export const metadata = {
   
@@ -13,12 +13,9 @@ export default function AI Agent Observability2026Page() {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-violet-900 to-slate-900 text-white">
       <main className="container mx-auto px-6 py-12">
         <nav className="mb-8">
-          <Arrow Right
-            href="/blog"
-            className="text-violet-300 hover:text-violet-200 transition-colors"
-          >
-            ← Back to    Blog
-          </Arrow>
+          <ArrowRight href="/blog" className="text-violet-300 hover:text-violet-200 transition-colors">
+            ← Back to Blog
+          </ArrowRight>
         </nav>
 
         <article className="max-w-4xl mx-auto">
@@ -124,18 +121,12 @@ export default function AI Agent Observability2026Page() {
                 measurable ROI and audit-ready evidence.
               </p>
               <div className="flex justify-center gap-4">
-                <Arrow Right
-                  href="/contact"
-                  className="bg-gradient-to-r from-violet-500 to-fuchsia-600 hover:from-violet-400 hover:to-fuchsia-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg"
-                >
-                  Talk to an    Expert
-                </Arrow>
-                <Arrow Right
-                  href="/case-studies"
-                  className="border-2 border-violet-500 text-violet-300 hover:bg-violet-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
-                >
-                  View Case    Studies
-                </Arrow>
+                <ArrowRight href="/contact" className="bg-gradient-to-r from-violet-500 to-fuchsia-600 hover:from-violet-400 hover:to-fuchsia-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg">
+                  Talk to an Expert
+                </ArrowRight>
+                <ArrowRight href="/case-studies" className="border-2 border-violet-500 text-violet-300 hover:bg-violet-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300">
+                  View Case Studies
+                </ArrowRight>
               </div>
             </section>
           </div>
@@ -146,18 +137,8 @@ export default function AI Agent Observability2026Page() {
                 Written by Zion Tech Group AI Reliability    Team
               </div>
               <div className="flex gap-4">
-                <Arrow Right
-                  href="/blog"
-                  className="text-violet-300 hover:text-violet-200 transition-colors"
-                >
-                  ← Back to    Blog
-                </Arrow>
-                <Arrow Right
-                  href="/contact"
-                  className="text-fuchsia-300 hover:text-fuchsia-200 transition-colors"
-                >
-                  Get in    Touch
-                </Arrow>
+                <ArrowRight href="/blog" className="text-violet-300 hover:text-violet-200 transition-colors">← Back to Blog</ArrowRight>
+                <ArrowRight href="/contact" className="text-fuchsia-300 hover:text-fuchsia-200 transition-colors">Get in Touch</ArrowRight>
               </div>
             </div>
           </footer>

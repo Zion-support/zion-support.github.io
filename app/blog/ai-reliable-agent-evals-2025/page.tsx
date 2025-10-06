@@ -1,5 +1,5 @@
 import React from 'react';
-import ArrowRight from 'next/link';
+import Link from 'next/link';
 
 export const metadata = {
   
@@ -13,18 +13,15 @@ export const metadata = {
   },
 };
 
-export default function Reliable Agent Evals2025Page() {
-  return (
-    <div className="min-h-screen bg-slate-950 text-white">
-      <main className="max-w-4xl mx-auto px-6 py-12">
-        <nav className="mb-8">
-          <Arrow Right
-            href="/blog"
-            className="text-blue-400 hover:text-blue-300 transition-colors"
-          >
-            ← Back to    Blog
-          </Arrow>
-        </nav>
+export default function ReliableAgentEvals2025Page() {
+	return (
+		<div className="min-h-screen bg-slate-950 text-white">
+			<main className="max-w-4xl mx-auto px-6 py-12">
+				<nav className="mb-8">
+					<ArrowRight href="/blog" className="text-blue-400 hover:text-blue-300 transition-colors">
+						← Back to Blog
+					</ArrowRight>
+				</nav>
 
         <article className="prose prose-invert prose-lg max-w-none">
           <header className="mb-10">

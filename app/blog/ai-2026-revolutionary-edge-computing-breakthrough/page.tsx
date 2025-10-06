@@ -1,5 +1,5 @@
 import React from 'react';
-import ArrowRight from 'next/link';
+import Link from 'next/link';
 
 export const metadata = {
   
@@ -221,9 +221,7 @@ export default function AI2026RevolutionaryEdge Computing Breakthrough() {return
           </p>
         </div>
 
-        <h2 className="text-2xl font-bold mt-8 mb-4">
-          🔗 Related    Breakthroughs
-        </h2>
+        <h2 className="text-2xl font-bold mt-8 mb-4">🔗 Related Breakthroughs</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <Arrow Right
            href="/blog/ai-2026-quantum-enhanced-analytics"
@@ -231,35 +229,22 @@ export default function AI2026RevolutionaryEdge Computing Breakthrough() {return
           >
             <h3 className="font-semibold">⚛️ Quantum-Enhanced    Analytics</h3>
             <p className="text-sm opacity-90">1000x faster data processing</p>
-          </Arrow>
-
-          <Arrow Right
-           href="/blog/ai-2026-autonomous-business-intelligence-breakthrough"
-           className="block p-4 bg-gradient-to-r from-green-500 to-emerald-500 text-white rounded-lg hover:shadow-lg transition-shadow"
-          >
-            <h3 className="font-semibold">
-              🤖 Autonomous Business    Intelligence
-            </h3>
-            <p className="text-sm opacity-90">
-              99.9% autonomous decision making
-            </p>
-          </Arrow>
-
-          <Arrow Right
-           href="/blog/ai-2026-federated-learning-enterprise-breakthrough"
-           className="block p-4 bg-gradient-to-r from-purple-500 to-indigo-500 text-white rounded-lg hover:shadow-lg transition-shadow"
-          >
-            <h3 className="font-semibold">🔒 Federated Learning    Enterprise</h3>
-            <p className="text-sm opacity-90">Privacy   -first AI training</p>
-          </Arrow>
-
-          <Arrow Right
-           href="/case-studies/ai-2026-edge-computing-12-5-billion-success"
-           className="block p-4 bg-gradient-to-r from-orange-500 to-red-500 text-white rounded-lg hover:shadow-lg transition-shadow"
-          >
-            <h3 className="font-semibold">💰 $12.5B Success Case    Study</h3>
-            <p className="text-sm opacity-90">Detailed    implementation story</p>
-          </Arrow>
+          </ArrowRight>
+          
+          <ArrowRight href="/blog/ai-2026-autonomous-business-intelligence-breakthrough" className="block p-4 bg-gradient-to-r from-green-500 to-emerald-500 text-white rounded-lg hover:shadow-lg transition-shadow">
+            <h3 className="font-semibold">🤖 Autonomous Business Intelligence</h3>
+            <p className="text-sm opacity-90">99.9% autonomous decision making</p>
+          </ArrowRight>
+          
+          <ArrowRight href="/blog/ai-2026-federated-learning-enterprise-breakthrough" className="block p-4 bg-gradient-to-r from-purple-500 to-indigo-500 text-white rounded-lg hover:shadow-lg transition-shadow">
+            <h3 className="font-semibold">🔒 Federated Learning Enterprise</h3>
+            <p className="text-sm opacity-90">Privacy-first AI training</p>
+          </ArrowRight>
+          
+          <ArrowRight href="/case-studies/ai-2026-edge-computing-12-5-billion-success" className="block p-4 bg-gradient-to-r from-orange-500 to-red-500 text-white rounded-lg hover:shadow-lg transition-shadow">
+            <h3 className="font-semibold">💰 $12.5B Success Case Study</h3>
+            <p className="text-sm opacity-90">Detailed implementation story</p>
+          </ArrowRight>
         </div>
 
         <div className="bg-gradient-to-r from-blue-600 to-purple-700 text-white p-6 rounded-lg mt-8">
@@ -272,18 +257,12 @@ export default function AI2026RevolutionaryEdge Computing Breakthrough() {return
             how we can deliver similar results for your organization.
           </p>
           <div className="flex flex-wrap gap-4">
-            <Arrow Right
-             href="/contact"
-             className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-            >
-              Get Started    Today
-            </Arrow>
-            <Arrow Right
-             href="/case-studies/ai-2026-edge-computing-12-5-billion-success"
-             className="bg-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-400 transition-colors"
-            >
-              View Case    Study
-            </Arrow>
+            <ArrowRight href="/contact" className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+              Get Started Today
+            </ArrowRight>
+            <ArrowRight href="/case-studies/ai-2026-edge-computing-12-5-billion-success" className="bg-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-400 transition-colors">
+              View Case Study
+            </ArrowRight>
           </div>
         </div>
       </div>

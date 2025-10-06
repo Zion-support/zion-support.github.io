@@ -75,18 +75,18 @@ const AutonomousManufacturingRevolutionBanner: React.FC = () => {
             </div>
 
             {/* CTA Buttons */}
-            <div className='flex flex-col sm:flex-row gap-4'>
-              <Link
-                href='/blog/ai-2026-autonomous-enterprise-operations'
-                className='inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-orange-600 to-red-600 text-white font-semibold rounded-lg hover:from-orange-700 hover:to-red-700 transition-all duration-300 transform hover:scale-105'
+            <div className="flex flex-col sm:flex-row gap-4">
+              <ArrowRight 
+                href="/blog/ai-2026-autonomous-enterprise-operations"
+                className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-orange-600 to-red-600 text-white font-semibold rounded-lg hover:from-orange-700 hover:to-red-700 transition-all duration-300 transform hover:scale-105"
               >
                 <Factory className='w-5 h-5 mr-2' />
                 Explore Autonomous Operations
-                <ArrowRight className='w-5 h-5 ml-2' />
-              </Link>
-              <Link
-                href='/case-studies/ai-2026-autonomous-manufacturing-revolution-127-billion-success'
-                className='inline-flex items-center justify-center px-8 py-4 bg-transparent border-2 border-orange-400 text-orange-200 font-semibold rounded-lg hover:bg-orange-400/10 transition-all duration-300'
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </ArrowRight>
+              <ArrowRight 
+                href="/case-studies/ai-2026-autonomous-manufacturing-revolution-127-billion-success"
+                className="inline-flex items-center justify-center px-8 py-4 bg-transparent border-2 border-orange-400 text-orange-200 font-semibold rounded-lg hover:bg-orange-400/10 transition-all duration-300"
               >
                 $127B Success Story
               </Link>

@@ -15,19 +15,18 @@ export const metadata = {
         alt: 'AI-Powered Zero-Day Threat Detection'},
     ]};
 
-export default function AIZeroDay Threat Detection() {/* return (
-    <div> content */}
-    <div>
-      <div> </div><div> </div>
-      <div className="text-left"> </div><Link href="/blog" className="text-left">
-          ← Back to    Blog
-        </Link>
-        <span className="text-left"> </span><div className="text-left"> </div><div className="text-left"> </div><Link href="/blog" className="text-left">← Back to    Blog
-        </Link></Link>
-        <div className="text-left"> </div><span className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
-            Cybersecurity    Breakthrough
-          </span></span>
-          <span className="text-left">September    30, 2025>
+export default function AIZeroDayThreatDetection() {
+  return (
+    <div className="max-w-4xl mx-auto px-4 py-12">
+      <div className="mb-8">
+        <ArrowRight href="/blog" className="text-blue-600 hover:text-blue-700 mb-4 inline-block">
+          ← Back to Blog
+        </ArrowRight>
+        <div className="flex items-center gap-2 mb-4">
+          <span className="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm font-semibold">
+            Cybersecurity Breakthrough
+          </span>
+          <span>September 30, 2025</span>
         </div>
         <h1 className="text-left">AI-Powered Zero-Day Threat Detection: The Future of    Cybersecurity    in 2025
         </h1></h1>
@@ -231,8 +230,9 @@ export default function AIZeroDay Threat Detection() {/* return (
           <p className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
             Don't wait for a zero-day attack to compromise your infrastructure.    Deploy    AI-powered threat detection 
             and achieve 99.97% protection with zero false positives.
-          </p></p>
-          <div className="text-left"> </div><Link
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <ArrowRight
               href="/services/ai-cybersecurity"
               className="text-left">Explore Security    Solutions
             </Link></Link>

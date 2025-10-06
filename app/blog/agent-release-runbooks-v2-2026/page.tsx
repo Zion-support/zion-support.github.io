@@ -1,3 +1,6 @@
+// import Link from 'next/link';
+import { AlertTriangle, ArrowRight, Calendar, CheckCircle, Clock, RefreshCw } from 'lucide-react';
+
 import React from 'react';
 import Link from 'next/link';
 
@@ -93,12 +96,9 @@ export default function Page() {return (<main className="min-h-screen bg-gradien
         <div className="max-w-4xl mx-auto px-6">
           <div className="bg-gradient-to-r from-fuchsia-600 to-indigo-600 text-white rounded-2xl p-8 flex items-center justify-between gap-4">
             <div>
-              <h3 className="text-2xl font-bold flex items-center gap-2">
-                <File Warning /> Prevent    Regressions
-              </h3>
-              <p className="text-white/90">
-                We    implement v2 runbooks in 4–6 weeks with audits and training.
-              </p>
+
+              <h3 className="text-2xl font-bold flex items-center gap-2"><FileWarning /> Prevent Regressions</h3>
+              <p className="text-white/90">We implement v2 runbooks in 4–6 weeks with audits and training.</p>
             </div>
             <Link
              href="/contact"

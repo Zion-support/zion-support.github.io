@@ -21,7 +21,7 @@ if (typeof window !== 'undefined') {
   }
   
   // Track Web Vitals
-  const metrics = performanceOptimizer.measurePageLoad();
+  const metrics = performanceOptimizer.measurePageLoadTiming();
   if (metrics) {
     performanceOptimizer.reportWebVitals(metrics);
   }

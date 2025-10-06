@@ -1,5 +1,5 @@
 import React from 'react';
-import ArrowRight from 'next/link';
+import Link from 'next/link';
 
 export const metadata = {
   
@@ -94,12 +94,8 @@ export default function GenAI Reliability Scorecards2027Page() {
               className="group"
             >
               <div className="rounded-xl p-6 border border-blue-800/40 bg-blue-900/20 hover:border-blue-500/50 transition-all">
-                <h4 className="text-white font-semibold mb-2 group-hover:text-blue-300">
-                  Agent Release    Guardrails    2026
-                </h4>
-                <p className="text-gray-300 text-sm">
-                  Budgets   , approvals, and instant rollback for safe releases.
-                </p>
+                <h4 className="text-white font-semibold mb-2 group-hover:text-blue-300">Agent Release Guardrails 2026</h4>
+                <p className="text-gray-300 text-sm">Budgets, approvals, and instant rollback for safe releases.</p>
               </div>
             </Arrow>
           </div>
@@ -114,18 +110,8 @@ export default function GenAI Reliability Scorecards2027Page() {
               We help teams wire budgets and rollbacks into    Gen   AI platforms.
             </p>
             <div className="flex gap-3 justify-center">
-              <Arrow Right
-                href="/contact"
-                className="bg-white text-emerald-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-              >
-                Talk to an    Expert
-              </Arrow>
-              <Arrow Right
-                href="/content-hub"
-                className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-emerald-600 transition-colors"
-              >
-                Explore More    Content
-              </Arrow>
+              <ArrowRight href="/contact" className="bg-white text-emerald-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">Talk to an Expert</ArrowRight>
+              <ArrowRight href="/content-hub" className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-emerald-600 transition-colors">Explore More Content</ArrowRight>
             </div>
           </div>
         </div>

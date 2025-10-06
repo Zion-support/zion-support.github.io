@@ -1,6 +1,9 @@
 import Link from 'next/link';
 import { ArrowRight, TrendingUp, Users } from 'lucide-react';
 
+
+
+
 export default function NewContent2026ShowcaseBanner() {
   return (
     <section className='py-16 bg-gradient-to-r from-purple-600 via-blue-600 to-teal-600 text-white relative overflow-hidden'>
@@ -28,10 +31,10 @@ export default function NewContent2026ShowcaseBanner() {
         {/* Featured Content Grid */}
         <div className='grid md:grid-cols-3 gap-8 mb-12'>
           {/* Featured Article 1 */}
-          <Link href='/blog/ai-future-workforce-2026' className='group'>
-            <div className='bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300 border border-white/20 hover:scale-105'>
-              <div className='flex items-center gap-2 mb-4'>
-                <span className='bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-2 py-1 rounded-full text-xs font-semibold'>
+          <ArrowRight href="/blog/ai-future-workforce-2026" className="group">
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300 border border-white/20 hover:scale-105">
+              <div className="flex items-center gap-2 mb-4">
+                <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
                   NEW 2026
                 </span>
                 <span className='bg-gradient-to-r from-green-400 to-blue-500 text-white px-2 py-1 rounded-full text-xs font-semibold'>
@@ -66,10 +69,10 @@ export default function NewContent2026ShowcaseBanner() {
           </Link>
 
           {/* Featured Article 2 */}
-          <Link href='/blog/ai-cybersecurity-2026' className='group'>
-            <div className='bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300 border border-white/20 hover:scale-105'>
-              <div className='flex items-center gap-2 mb-4'>
-                <span className='bg-gradient-to-r from-red-400 to-orange-500 text-white px-2 py-1 rounded-full text-xs font-semibold'>
+          <ArrowRight href="/blog/ai-cybersecurity-2026" className="group">
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300 border border-white/20 hover:scale-105">
+              <div className="flex items-center gap-2 mb-4">
+                <span className="bg-gradient-to-r from-red-400 to-orange-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
                   NEW 2026
                 </span>
                 <span className='bg-gradient-to-r from-purple-400 to-indigo-500 text-white px-2 py-1 rounded-full text-xs font-semibold'>
@@ -100,13 +103,10 @@ export default function NewContent2026ShowcaseBanner() {
           </Link>
 
           {/* Featured Case Study */}
-          <Link
-            href='/case-studies/ai-finance-automation-success-2026'
-            className='group'
-          >
-            <div className='bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300 border border-white/20 hover:scale-105'>
-              <div className='flex items-center gap-2 mb-4'>
-                <span className='bg-gradient-to-r from-green-400 to-teal-500 text-white px-2 py-1 rounded-full text-xs font-semibold'>
+          <ArrowRight href="/case-studies/ai-finance-automation-success-2026" className="group">
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300 border border-white/20 hover:scale-105">
+              <div className="flex items-center gap-2 mb-4">
+                <span className="bg-gradient-to-r from-green-400 to-teal-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
                   NEW 2026
                 </span>
                 <span className='bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-2 py-1 rounded-full text-xs font-semibold'>
@@ -168,10 +168,10 @@ export default function NewContent2026ShowcaseBanner() {
               latest AI innovations, practical implementations, and proven
               business results.
             </p>
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-              <Link
-                href='/blog'
-                className='bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center'
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <ArrowRight
+                href="/blog"
+                className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center"
               >
                 <TrendingUp className='w-5 h-5 mr-2' />
                 Explore All Content

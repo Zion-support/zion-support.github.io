@@ -1,5 +1,5 @@
 import React from 'react';
-import ArrowRight from 'next/link';
+import Link from 'next/link';
 
 export const metadata = {
   
@@ -94,12 +94,9 @@ export default function Autonomous Data Governance2026Page() {
         </div>
 
         <div className="mt-12">
-          <Arrow Right
-            href="/blog"
-            className="inline-block bg-white text-teal-700 px-6 py-3 rounded-lg font-bold hover:bg-teal-50"
-          >
-            ← Back to    Blog
-          </Arrow>
+          <ArrowRight href="/blog" className="inline-block bg-white text-teal-700 px-6 py-3 rounded-lg font-bold hover:bg-teal-50">
+            ← Back to Blog
+          </ArrowRight>
         </div>
       </main>
     </div>

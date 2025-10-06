@@ -524,10 +524,10 @@ export default function January2026NeuralRevolution500BSuccessPage() {
               the Ultimate Neural Revolution. Transform your business into a
               transcendent, infinitely capable enterprise.
             </p>
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-              <Link
-                href='/<contact'
-                className='bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1'
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <ArrowRight
+                href="/contact"
+                className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1"
               >
                 Get Started Today
               </Link>

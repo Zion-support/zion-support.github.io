@@ -214,16 +214,21 @@ export default function AI2027Quantum Consciousness Fusion() {/* return (
           <p className="text-left"> </p><div className="text-left"> </div><h4 className="text-left">Ready for the Quantum    Revolution   ?</h4>"
           <p className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
             Join the quantum consciousness revolution with Zion Tech Group's breakthrough AI technology. 
-               Contact    us today to secure your exclusive early access slot.
-          </p></p>
-          <div className="text-left"> </div><Link 
-              href="/"
-              className="text-left">Get Quantum    Access
-            </Link></Link>
-            <Link 
-              href="/"
-              className="text-left">View Success    Stories
-            </Link></Link>
+            Contact us today to secure your exclusive early access slot.
+          </p>
+          <div className="flex gap-4">
+            <ArrowRight 
+              href="/contact" 
+              className="bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
+            >
+              Get Quantum Access
+            </ArrowRight>
+            <ArrowRight 
+              href="/case-studies/ai-2027-quantum-breakthrough-success" 
+              className="bg-gray-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-700 transition-colors"
+            >
+              View Success Stories
+            </ArrowRight>
           </div>
       </div>
   );

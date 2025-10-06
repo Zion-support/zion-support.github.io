@@ -227,16 +227,21 @@ export default function AI2026Breakthrough Innovations Page() {/* return (
           <p className="text-left"> </p><div className="text-left"> </div><h3 className="text-left">Ready to Transform Your    Enterprise   ?</h3>"
           <p className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
             Discover how these revolutionary AI breakthrough innovations can transform your organization. 
-               Our    expert team is ready to help you implement these cutting-edge technologies.
-          </p></p>
-          <div className="text-left"> </div><Link 
-              href="/"
-              className="text-left">Schedule    Consultation
-            </Link></Link>
-            <Link 
-              href="/"
-              className="text-left">View Success    Stories
-            </Link></Link>
+            Our expert team is ready to help you implement these cutting-edge technologies.
+          </p>
+          <div className="flex flex-wrap gap-4">
+            <ArrowRight 
+              href="/contact" 
+              className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-indigo-700 transition-all"
+            >
+              Schedule Consultation
+            </ArrowRight>
+            <ArrowRight 
+              href="/case-studies" 
+              className="border border-gray-300 text-gray-700 px-6 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-all"
+            >
+              View Success Stories
+            </ArrowRight>
           </div>
       </div>
   );

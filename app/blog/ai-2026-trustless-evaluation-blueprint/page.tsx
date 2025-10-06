@@ -1,5 +1,5 @@
 import React from 'react';
-import ArrowRight from 'next/link';
+import Link from 'next/link';
 
 export const metadata = {
   
@@ -107,15 +107,12 @@ export default function Trustless Evaluation Blueprint2026Page() {
           </p>
         </div>
 
-        <div className="mt-12">
-          <Arrow Right
-            href="/blog"
-            className="inline-block bg-white text-purple-700 px-6 py-3 rounded-lg font-bold hover:bg-purple-50"
-          >
-            ← Back to    Blog
-          </Arrow>
-        </div>
-      </main>
-    </div>
-  );
+				<div className="mt-12">
+					<ArrowRight href="/blog" className="inline-block bg-white text-purple-700 px-6 py-3 rounded-lg font-bold hover:bg-purple-50">
+						← Back to Blog
+					</ArrowRight>
+				</div>
+			</main>
+		</div>
+	);
 }

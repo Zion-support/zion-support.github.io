@@ -1,5 +1,8 @@
 import Link from 'next/link';
-import { Brain, Clock, TrendingUp } from 'lucide-react';
+import { ArrowRight, Brain, Clock, TrendingUp } from 'lucide-react';
+
+
+
 
 export const metadata = {
   title:
@@ -471,10 +474,10 @@ export default function AICognitiveSuperintelligenceMegaSuccess2026() {
           organization and deliver unprecedented ROI. Our team of experts can
           help you develop a customized implementation strategy.
         </p>
-        <div className='flex flex-col sm:flex-row gap-4'>
-          <Link
-            href='/contact'
-            className='bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center'
+        <div className="flex flex-col sm:flex-row gap-4">
+          <ArrowRight
+            href="/contact"
+            className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center"
           >
             Schedule Consultation
           </Link>
@@ -488,17 +491,12 @@ export default function AICognitiveSuperintelligenceMegaSuccess2026() {
       </div>
 
       {/* Related Content */}
-      <div className='mt-16 pt-8 border-t border-gray-200'>
-        <h3 className='text-2xl font-bold text-gray-900 mb-6'>
-          Related Case Studies
-        </h3>
-        <div className='grid md:grid-cols-3 gap-6'>
-          <Link
-            href='/case-studies/ai-metaverse-enterprise-mega-success-2026'
-            className='group'
-          >
-            <div className='bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow'>
-              <h4 className='text-lg font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors'>
+      <div className="mt-16 pt-8 border-t border-gray-200">
+        <h3 className="text-2xl font-bold text-gray-900 mb-6">Related Case Studies</h3>
+        <div className="grid md:grid-cols-3 gap-6">
+          <ArrowRight href="/case-studies/ai-metaverse-enterprise-mega-success-2026" className="group">
+            <div className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
+              <h4 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
                 $400M Metaverse Success Story
               </h4>
               <p className='text-gray-600 text-sm'>
@@ -506,13 +504,10 @@ export default function AICognitiveSuperintelligenceMegaSuccess2026() {
                 metaverse transformation.
               </p>
             </div>
-          </Link>
-          <Link
-            href='/case-studies/ai-autonomous-robotics-mega-success-2026'
-            className='group'
-          >
-            <div className='bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow'>
-              <h4 className='text-lg font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors'>
+          </ArrowRight>
+          <ArrowRight href="/case-studies/ai-autonomous-robotics-mega-success-2026" className="group">
+            <div className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
+              <h4 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
                 $300M Robotics Success Story
               </h4>
               <p className='text-gray-600 text-sm'>
@@ -520,13 +515,10 @@ export default function AICognitiveSuperintelligenceMegaSuccess2026() {
                 operations.
               </p>
             </div>
-          </Link>
-          <Link
-            href='/blog/ai-cognitive-superintelligence-2026'
-            className='group'
-          >
-            <div className='bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow'>
-              <h4 className='text-lg font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors'>
+          </ArrowRight>
+          <ArrowRight href="/blog/ai-cognitive-superintelligence-2026" className="group">
+            <div className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
+              <h4 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
                 AI Cognitive Superintelligence 2026
               </h4>
               <p className='text-gray-600 text-sm'>

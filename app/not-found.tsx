@@ -1,6 +1,8 @@
 'use client';
 
+// import React from 'react';
 import Link from 'next/link';
+import { ArrowRight } from 'lucide-react';
 
 export default function NotFound() {
   const popularPages = [
@@ -67,10 +69,26 @@ export default function NotFound() {
           </div>
         </div>
 
-        {/* Call to Action */}
-        <div className='bg-gradient-to-r from-cyan-500/20 to-blue-500/20 backdrop-blur-lg rounded-2xl p-8 border border-cyan-500/30'>
-          <h3 className='text-2xl font-bold text-white mb-4'>
-            Need Help Finding Something?
+        {/* CTA Buttons */}
+        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+          <ArrowRight
+            href="/"
+            className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl"
+          >
+            ← Back to Home
+          </ArrowRight>
+          <a
+            href="tel:+13024640950"
+            className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-600 hover:text-white transition-colors"
+          >
+            Call Support: +1 302 464 0950
+          </a>
+        </div>
+
+        {/* Help Section */}
+        <div>
+          <h3>
+            Still need help?
           </h3>
           <p className='text-gray-300 mb-6'>
             Our AI experts are here to help you navigate our solutions and find

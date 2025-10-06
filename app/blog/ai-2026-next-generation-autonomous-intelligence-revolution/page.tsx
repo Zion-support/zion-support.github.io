@@ -29,17 +29,19 @@ export default function NextGenAutonomousIntelligence Revolution Page() {/* retu
             <h1 className="text-left">Next-Generation Autonomous Intelligence    Revolution
             </h1></h1>
             
-            <p className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
-              $5.2B Enterprise Transformation with 99.99% Operational    Autonomy
-            </p></p>
-            <div className="text-left"> </div><Link 
-                href="/"
-                className="text-left">View $5.2B Success    Story    →
-              </Link></Link>
-              <Link 
-                href="/"
-                className="text-left">Get Started    Today
-              </Link></Link>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+              <ArrowRight 
+                href="/case-studies/ai-2026-next-generation-autonomous-intelligence-5-2-billion-success" 
+                className="bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-400 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
+              >
+                View $5.2B Success Story →
+              </ArrowRight>
+              <ArrowRight 
+                href="/contact" 
+                className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
+              >
+                Get Started Today
+              </ArrowRight>
             </div>
             
             {/* Key    Metrics   */}
@@ -281,19 +283,48 @@ origin/cursor/fix-errors-and-merge-to-main-cc0a
                 <p className="text-left">Self   -improving systems with continuous optimization</p>
               </div>
 
-            <h3 className="text-left">Ready to Transform Your    Enterprise   ?</h2>
-              <p className="text-left"> </p><div className="text-left"> </div><h2 className="text-left">Ready to Transform Your    Enterprise   ?</h2>"
-              <p className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
-                   Join    the autonomous intelligence revolution and achieve unprecedented operational excellence
-              </p></p>
-              <div className="text-left"> </div><Link 
-                  href="/"
-                  className="text-left">Start Your    Transformation
-                </Link></Link>
-                <Link 
-                  href="/"
-                  className="text-left">View Success    Story
-                </Link></Link>
+            <h2>Future Implications</h2>
+            <p>
+              The next-generation autonomous intelligence revolution is just beginning. We're seeing early indicators of:
+            </p>
+
+            <div>
+              <div>
+                <h4>Universal Business Consciousness</h4>
+                <p>Complete understanding across all business domains</p>
+              </div>
+              <div>
+                <h4>Infinite Scalability</h4>
+                <p>Systems that grow and adapt without limits</p>
+              </div>
+              <div>
+                <h4>Transcendent Performance</h4>
+                <p>Capabilities beyond current human comprehension</p>
+              </div>
+              <div>
+                <h4>Autonomous Evolution</h4>
+                <p>Self-improving systems with continuous optimization</p>
+              </div>
+            </div>
+
+            <div>
+              <h2>Ready to Transform Your Enterprise?</h2>
+              <p>
+                Join the autonomous intelligence revolution and achieve unprecedented operational excellence
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <ArrowRight 
+                  href="/contact" 
+                  className="bg-white text-purple-600 hover:bg-gray-100 font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg transform hover:-translate-y-1"
+                >
+                  Start Your Transformation
+                </ArrowRight>
+                <ArrowRight 
+                  href="/case-studies/ai-2026-next-generation-autonomous-intelligence-5-2-billion-success" 
+                  className="border-2 border-white text-white hover:bg-white hover:text-purple-600 font-bold py-4 px-8 rounded-xl transition-all duration-300"
+                >
+                  View Success Story
+                </ArrowRight>
               </div>
           </div>
       </main>

@@ -1,5 +1,5 @@
 import React from 'react';
-import ArrowRight from 'next/link';
+import Link from 'next/link';
 
 export const metadata = {
   
@@ -7,15 +7,12 @@ export const metadata = {
   description:
     'Tiered models, caching, and budget‑aware routes mapped to SL Os to keep quality high and costs predictable.'};;
 
-export default function GenAIRouting Quality TiersQ42025Page() {return (<div className="min-h-screen bg-slate-950 text-white">
+export default function GenAIRoutingQualityTiersQ42025Page() {
+  return (
+    <div className="min-h-screen bg-slate-950 text-white">
       <main className="max-w-3xl mx-auto px-6 py-16">
         <div className="mb-8">
-          <Arrow Right
-           href="/blog"
-           className="text-fuchsia-300 hover:text-fuchsia-200"
-          >
-            ← Back to    Blog
-          </Arrow>
+          <ArrowRight href="/blog" className="text-fuchsia-300 hover:text-fuchsia-200">← Back to Blog</ArrowRight>
         </div>
         <header className="mb-6">
           <div className="flex items-center gap-3 text-sm text-white/60 mb-3">

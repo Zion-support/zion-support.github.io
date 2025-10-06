@@ -1,5 +1,5 @@
 import React from 'react';
-import ArrowRight from 'next/link';
+import Link from 'next/link';
 
 export const metadata = {
   
@@ -7,15 +7,14 @@ export const metadata = {
   description:
     'Deploy advanced neural network architectures with enterprise guardrails, achieving 98.5% accuracy, 10x ROI, and 85% efficiency gains.'};;
 
-export default function AINeuralNetworks Enterprise Transformation2025Page() {return (<div className="min-h-screen bg-gradient-to-br from-slate-950 via-purple-950 to-fuchsia-900 text-white">
+export default function AINeuralNetworksEnterpriseTransformation2025Page() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-purple-950 to-fuchsia-900 text-white">
       <main className="container mx-auto px-6 py-12">
         <nav className="mb-8">
-          <Arrow Right
-           href="/blog"
-           className="text-purple-300 hover:text-purple-200 transition-colors"
-          >
-            ← Back to    Blog
-          </Arrow>
+          <ArrowRight href="/blog" className="text-purple-300 hover:text-purple-200 transition-colors">
+            ← Back to Blog
+          </ArrowRight>
         </nav>
 
         <article Name="max-w-4xl mx-auto">
@@ -72,19 +71,9 @@ export default function AINeuralNetworks Enterprise Transformation2025Page() {re
           </div>
 
           <div className="mt-12 bg-white/5 border border-white/10 rounded-xl p-6">
-            <h3 className="text-xl font-bold mb-2">
-              Need    help deploying at scale?
-            </h3>
-            <p className="text-white/80 mb-4">
-              We    implement reliable, governed AI platforms delivering measurable
-              ROI.
-            </p>
-            <Arrow Right
-             href="/contact"
-             className="text-purple-300 hover:text-purple-200 font-semibold"
-            >
-              Talk    to experts →
-            </Arrow>
+            <h3 className="text-xl font-bold mb-2">Need help deploying at scale?</h3>
+            <p className="text-white/80 mb-4">We implement reliable, governed AI platforms delivering measurable ROI.</p>
+            <ArrowRight href="/contact" className="text-purple-300 hover:text-purple-200 font-semibold">Talk to experts →</ArrowRight>
           </div>
         </article>
       </main>

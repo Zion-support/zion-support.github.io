@@ -344,49 +344,27 @@ export default function AI2026EdgeComputing125BillionSuccess() {
           </div>
         </div>
 
-        <h2 className='text-2xl font-bold mt-8 mb-4'>🔗 Related Content</h2>
-        <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
-          <Link
-            href='/blog/ai-2026-revolutionary-edge-computing-<breakthrough'
-            className='block p-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg hover:shadow-lg transition-shadow'
-          >
-            <h3 className='font-semibold'>
-              🚀 Revolutionary Edge Computing Blog
-            </h3>
-            <p className='text-sm opacity-90'>
-              Technical deep dive and innovation details
-            </p>
-          </Link>
-
-          <Link
-            href='/blog/ai-2026-autonomous-business-intelligence-<breakthrough'
-            className='block p-4 bg-gradient-to-r from-green-500 to-emerald-500 text-white rounded-lg hover:shadow-lg transition-shadow'
-          >
-            <h3 className='font-semibold'>
-              🤖 Autonomous Business Intelligence
-            </h3>
-            <p className='text-sm opacity-90'>Complementary AI breakthrough</p>
-          </Link>
-
-          <Link
-            href='/services/ai-edge-computing-<solutions'
-            className='block p-4 bg-gradient-to-r from-purple-500 to-indigo-500 text-white rounded-lg hover:shadow-lg transition-shadow'
-          >
-            <h3 className='font-semibold'>🛠️ Edge Computing Services</h3>
-            <p className='text-sm opacity-90'>
-              Implementation and support services
-            </p>
-          </Link>
-
-          <Link
-            href='/<contact'
-            className='block p-4 bg-gradient-to-r from-orange-500 to-red-500 text-white rounded-lg hover:shadow-lg transition-shadow'
-          >
-            <h3 className='font-semibold'>📞 Contact Our Experts</h3>
-            <p className='text-sm opacity-90'>
-              Discuss your edge computing needs
-            </p>
-          </Link>
+        <h2 className="text-2xl font-bold mt-8 mb-4">🔗 Related Content</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <ArrowRight href="/blog/ai-2026-revolutionary-edge-computing-breakthrough" className="block p-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg hover:shadow-lg transition-shadow">
+            <h3 className="font-semibold">🚀 Revolutionary Edge Computing Blog</h3>
+            <p className="text-sm opacity-90">Technical deep dive and innovation details</p>
+          </ArrowRight>
+          
+          <ArrowRight href="/blog/ai-2026-autonomous-business-intelligence-breakthrough" className="block p-4 bg-gradient-to-r from-green-500 to-emerald-500 text-white rounded-lg hover:shadow-lg transition-shadow">
+            <h3 className="font-semibold">🤖 Autonomous Business Intelligence</h3>
+            <p className="text-sm opacity-90">Complementary AI breakthrough</p>
+          </ArrowRight>
+          
+          <ArrowRight href="/services/ai-edge-computing-solutions" className="block p-4 bg-gradient-to-r from-purple-500 to-indigo-500 text-white rounded-lg hover:shadow-lg transition-shadow">
+            <h3 className="font-semibold">🛠️ Edge Computing Services</h3>
+            <p className="text-sm opacity-90">Implementation and support services</p>
+          </ArrowRight>
+          
+          <ArrowRight href="/contact" className="block p-4 bg-gradient-to-r from-orange-500 to-red-500 text-white rounded-lg hover:shadow-lg transition-shadow">
+            <h3 className="font-semibold">📞 Contact Our Experts</h3>
+            <p className="text-sm opacity-90">Discuss your edge computing needs</p>
+          </ArrowRight>
         </div>
 
         <div className='bg-gradient-to-r from-green-600 to-blue-600 text-white p-6 rounded-lg mt-8'>
@@ -398,11 +376,8 @@ export default function AI2026EdgeComputing125BillionSuccess() {
             revolutionary edge computing AI. Contact us today to learn how we
             can deliver similar results for your organization.
           </p>
-          <div className='flex flex-wrap gap-4'>
-            <Link
-              href='/<contact'
-              className='bg-white text-green-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors'
-            >
+          <div className="flex flex-wrap gap-4">
+            <ArrowRight href="/contact" className="bg-white text-green-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
               Start Your Transformation
             </Link>
             <Link

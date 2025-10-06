@@ -1,3 +1,13 @@
+import Link from 'next/link';
+import { ArrowRight, Bot, Clock, Cog, Target, TrendingUp, Zap } from 'lucide-react';
+
+
+import { Clock } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
+import { Bot } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Target } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
 import React from 'react';
 import Link from 'next/link';
 import {Clock,ArrowRight,Bot,Zap,Target,TrendingUp} from 'lucide-react';
@@ -198,12 +208,14 @@ export default function AI Autonomous Robotics2026() {/* return (
 
           Ready to transform your operations with AI autonomous robotics?    Our    team of experts can help you identify opportunities, develop implementation strategies, and deploy cutting-edge robotic solutions tailored to your specific needs.
         </p>
-        <h3 className="text-left">Transform Your Operations with AI    Robotics</h4>
-          <p className="text-left"> </p><div className="text-left"> </div><h4 className="text-left">Transform Your Operations with AI    Robotics</h4>
-          <p className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
-               Discover    how AI autonomous robotics can revolutionize your business operations, increase efficiency, and unlock new possibilities for growth and innovation.
-          </p></p>
-          <div className="text-left"> </div><Link
+
+        <div>
+          <h4>Transform Your Operations with AI Robotics</h4>
+          <p>
+            Discover how AI autonomous robotics can revolutionize your business operations, increase efficiency, and unlock new possibilities for growth and innovation.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4">
+            <Link
               href="/contact"
               className="text-left">Schedule    Consultation
             </Link></Link>
@@ -215,33 +227,38 @@ export default function AI Autonomous Robotics2026() {/* return (
         </div>
       </div>
 
-      {/* Related    Content   */}
-      <h3 className="text-left">Related    Content</h3>
-        <div className="text-left"> </div><Link href="/blog/ai-cognitive-superintelligence-2026" className="text-left">
-            <h3 className="text-left">
-          <Link href="/blog/ai-cognitive-superintelligence-2026" className="text-left"> </Link><div className="text-left"> </div><h4 className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
-                AI Cognitive    Superintelligence    2026
-              </h4></h4>
-              <p className="text-left">Explore    the revolutionary advances in AI cognitive superintelligence and human-AI collaboration.
-              </p></p>
+      {/* Related Content */}
+      <div className="mt-16 pt-8 border-t border-gray-200">
+        <h3 className="text-2xl font-bold text-gray-900 mb-6">Related Content</h3>
+        <div className="grid md:grid-cols-3 gap-6">
+          <Link href="/blog/ai-cognitive-superintelligence-2026" className="group">
+            <div className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
+              <h4 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
+                AI Cognitive Superintelligence 2026
+              </h4>
+              <p>
+                Explore the revolutionary advances in AI cognitive superintelligence and human-AI collaboration.
+              </p>
             </div>
           </Link>
-          <Link href="/blog/ai-metaverse-enterprise-transformation-2026" className="text-left">
-            <h3 className="text-left">
-          <Link href="/blog/ai-metaverse-enterprise-transformation-2026" className="text-left"> </Link><div className="text-left"> </div><h4 className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
-                AI Metaverse    Enterprise    2026
-              </h4></h4>
-              <p className="text-left">Discover    how AI-powered metaverse technologies are revolutionizing enterprise operations.
-              </p></p>
+          <Link href="/blog/ai-metaverse-enterprise-transformation-2026" className="group">
+            <div className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
+              <h4 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
+                AI Metaverse Enterprise 2026
+              </h4>
+              <p>
+                Discover how AI-powered metaverse technologies are revolutionizing enterprise operations.
+              </p>
             </div>
           </Link>
-          <Link href="/case-studies/ai-autonomous-robotics-mega-success-2026" className="text-left">
-            <h3 className="text-left">
-          <Link href="/case-studies/ai-autonomous-robotics-mega-success-2026" className="text-left"> </Link><div className="text-left"> </div><h4 className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
-                $300M Robotics Success    Story
-              </h4></h4>
-              <p className="text-left">See how a    Fortune    500 company achieved massive ROI with AI autonomous robotics.
-              </p></p>
+          <Link href="/case-studies/ai-autonomous-robotics-mega-success-2026" className="group">
+            <div className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
+              <h4 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
+                $300M Robotics Success Story
+              </h4>
+              <p>
+                See how a Fortune 500 company achieved massive ROI with AI autonomous robotics.
+              </p>
             </div>
           </Link>
         </div>

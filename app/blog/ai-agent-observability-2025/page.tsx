@@ -36,12 +36,9 @@ export default function AI Agent Observability2025Page() {return (<>
       <div className="min-h-screen bg-gradient-to-br from-slate-950 via-blue-950 to-indigo-950 text-white">
         <main className="container mx-auto px-6 py-12">
           <nav className="mb-8">
-            <Arrow Right
-             href="/blog"
-             className="text-cyan-400 hover:text-cyan-300 transition-colors"
-            >
-              ← Back to    Blog
-            </Arrow>
+            <ArrowRight href="/blog" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+              ← Back to Blog
+            </ArrowRight>
           </nav>
 
           <article Name="max-w-4xl mx-auto">
@@ -162,18 +159,12 @@ export default function AI Agent Observability2025Page() {return (<>
                     not months.
                   </p>
                   <div className="flex gap-4">
-                    <Arrow Right
-                     href="/contact"
-                     className="px-6 py-3 rounded-lg bg-cyan-500 text-white font-semibold hover:bg-cyan-400"
-                    >
-                      Talk to an    Expert
-                    </Arrow>
-                    <Arrow Right
-                     href="/blog"
-                     className="px-6 py-3 rounded-lg bg-white/10 border border-white/20 hover:bg-white/20"
-                    >
-                      More    Articles
-                    </Arrow>
+                    <ArrowRight href="/contact" className="px-6 py-3 rounded-lg bg-cyan-500 text-white font-semibold hover:bg-cyan-400">
+                      Talk to an Expert
+                    </ArrowRight>
+                    <ArrowRight href="/blog" className="px-6 py-3 rounded-lg bg-white/10 border border-white/20 hover:bg-white/20">
+                      More Articles
+                    </ArrowRight>
                   </div>
                 </div>
               </section>
@@ -185,18 +176,12 @@ export default function AI Agent Observability2025Page() {return (<>
                   Written by Zion Tech    Group
                 </div>
                 <div className="flex gap-4">
-                  <Arrow Right
-                   href="/blog"
-                   className="text-cyan-400 hover:text-cyan-300 transition-colors"
-                  >
-                    ← Back to    Blog
-                  </Arrow>
-                  <Arrow Right
-                   href="/contact"
-                   className="text-fuchsia-400 hover:text-fuchsia-300 transition-colors"
-                  >
-                    Get in    Touch
-                  </Arrow>
+                  <ArrowRight href="/blog" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+                    ← Back to Blog
+                  </ArrowRight>
+                  <ArrowRight href="/contact" className="text-fuchsia-400 hover:text-fuchsia-300 transition-colors">
+                    Get in Touch
+                  </ArrowRight>
                 </div>
               </div>
             </footer>

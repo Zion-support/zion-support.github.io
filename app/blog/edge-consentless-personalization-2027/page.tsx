@@ -1,11 +1,12 @@
-import React from 'react';
-'useclient';
+"use client";
 import Link from 'next/link';
 
-export default function Page() {return (<main class Name Name='min-h-screen bg-gradient-to-b from-gray-50 to-white'>
-      <div class Name Name='max-w-3xl mx-auto px-6 py-16'>
-        <h1 class Name Name='text-4xl font-bold text-gray-900 mb-4'>
-          Edge Personalization 2027: Zero‑PII&lt;100ms Scoped I    Ds
+export default function Page() {
+  return (
+    <main>
+      <div>
+        <h1>
+          Edge Personalization 2027: Zero‑PII, &lt;100ms, Scoped IDs
         </h1>
         <p class Name Name='text-gray-600 mb-6'>
           Published: 2025‑09‑30 • 7 min read • Edge    Computing
@@ -29,19 +30,13 @@ export default function Page() {return (<main class Name Name='min-h-screen bg-g
             budgets for safe global rollouts.
           </p>
         </div>
-        <div class Name Name='flex gap-3'>
-          <Link
-           href="/<blog"
-           class Name='text-emerald-700 font-semibold hover:underline'
-          >
-            ← Back to    Blog
-          </Link>
-          <Link
-           href="/<contact"
-           class Name='text-emerald-700 font-semibold hover:underline'
-          >
-            Talk    to an expert →
-          </Link>
+        <div className="flex gap-3">
+          <ArrowRight href="/blog" className="text-emerald-700 font-semibold hover:underline">
+            ← Back to Blog
+          </ArrowRight>
+          <ArrowRight href="/contact" className="text-emerald-700 font-semibold hover:underline">
+            Talk to an expert →
+          </ArrowRight>
         </div>
       </div>
     </main>

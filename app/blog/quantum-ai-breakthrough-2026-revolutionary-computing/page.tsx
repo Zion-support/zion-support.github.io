@@ -1,3 +1,10 @@
+import Link from 'next/link';
+import { ArrowRight, Atom, Brain, CheckCircle, Cog, Target, TrendingUp, Zap } from 'lucide-react';
+
+
+
+export default function QuantumAIBreakthrough2026() {
+  return (
 import React from 'react';
 import Link from 'next/link';
 import {ArrowRight,Atom,Zap,Shield,Brain,TrendingUp,Target,CheckCircle} from 'lucide-react';
@@ -193,17 +200,16 @@ export default function QuantumAIBreakthrough2026() {/* return (
         </div>
       </section>
 
-      {/* CTA    Section   */}
-      <section className="text-left"> </section><h3 className="text-left">
-      <section className="text-left"> </section><div className="text-left"> </div><h2 className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
-            Ready to Experience Quantum AI    Computing   ?
-          </h2></h2>
-          <p className="text-left">Join the quantum revolution.    Transform    your enterprise with the world's first commercially viable quantum-neural AI systems.
-          </p></p>
-          <div className="text-left"> </div><Link 
-              href="/"
-              className="text-left">Join Early Access    Program
-            </Link></Link>
+      {/* CTA Section */}
+      <section>
+        <div>
+          <h2>
+            Ready to Experience Quantum AI Computing?
+          </h2>
+          <p>
+            Join the quantum revolution. Transform your enterprise with the world's first commercially viable quantum-neural AI systems.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
               href="/"
               className="text-left">View Quantum Success    Stories
@@ -212,12 +218,11 @@ export default function QuantumAIBreakthrough2026() {/* return (
         </div>
       </section>
 
-      {/*   Navigation   */}
-      <section className="text-left"> </section><div className="text-left"> </div><section className="text-left"> </section><div className="text-left"> </div><div className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
-            </div><div className="text-left"> </div><Link 
-                href="/"
-                className="text-left"> </Link><Arrow Right className="text-left" />Back to    Blog
-              </Arrow></Link>
+      {/* Navigation */}
+      <section className="py-12 bg-slate-950 border-t border-white/10">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto">
+            <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
               <Link 
                 href="/"
                 className="text-left">Explore Quantum AI    Services

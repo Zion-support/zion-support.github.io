@@ -1,6 +1,6 @@
 import React from 'react';
 // @ts-nocheck
-import ArrowRight from 'next/link';
+import Link from 'next/link';
 
 export const metadata = {
   
@@ -88,18 +88,8 @@ export default function AutonomousRisk Mitigation Sept302025() {return (<div cla
               with confidence.
             </p>
             <div className="flex gap-3 justify-center">
-              <Arrow Right
-               href="/contact"
-               className="bg-white text-indigo-700 px-6 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-              >
-                Talk    to experts
-              </Arrow>
-              <Arrow Right
-               href="/blog"
-               className="border border-white/70 text-white px-6 py-2 rounded-lg font-semibold hover:bg-white hover:text-indigo-700 transition-colors"
-              >
-                Explore    more
-              </Arrow>
+              <ArrowRight href="/contact" className="bg-white text-indigo-700 px-6 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors">Talk to experts</ArrowRight>
+              <ArrowRight href="/blog" className="border border-white/70 text-white px-6 py-2 rounded-lg font-semibold hover:bg-white hover:text-indigo-700 transition-colors">Explore more</ArrowRight>
             </div>
           </div>
         </article>

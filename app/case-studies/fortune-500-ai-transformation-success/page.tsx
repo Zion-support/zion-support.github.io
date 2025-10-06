@@ -1,5 +1,8 @@
 import Link from 'next/link';
-import { ArrowLeft, Calendar, Clock, Tag, User } from 'lucide-react';
+import { ArrowLeft, ArrowRight, Bookmark, Calendar, Clock, User } from 'lucide-react';
+
+
+
 
 export const metadata = {
   title:
@@ -14,11 +17,11 @@ export default function Fortune500AITransformationSuccess() {
   return (
     <div className='min-h-screen bg-white'>
       {/* Header */}
-      <header className='border-b border-gray-200 bg-white sticky top-0 z-50'>
-        <div className='max-w-4xl mx-auto px-4 py-4'>
-          <Link
-            href='/'
-            className='inline-flex items-center text-blue-600 hover:text-blue-700 font-medium'
+      <header className="border-b border-gray-200 bg-white sticky top-0 z-50">
+        <div className="max-w-4xl mx-auto px-4 py-4">
+          <ArrowRight 
+            href="/" 
+            className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
           >
             <ArrowLeft className='w-4 h-4 mr-2' />
             Back to Home
@@ -56,20 +59,11 @@ export default function Fortune500AITransformationSuccess() {
             through comprehensive AI implementation, achieving unprecedented
             operational efficiency and cost savings.
           </p>
-
-          <div className='flex flex-wrap gap-2'>
-            {[
-              'AI Transformation',
-              'Fortune 500',
-              'Enterprise Automation',
-              'Digital Transformation',
-              'ROI Success',
-            ].map(tag => (
-              <span
-                key={tag}
-                className='inline-flex items-center gap-1 bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm font-medium'
-              >
-                <Tag className='w-3 h-3' />
+          
+          <div className="flex flex-wrap gap-2">
+            {['AI Transformation', 'Fortune 500', 'Enterprise Automation', 'Digital Transformation', 'ROI Success'].map((tag) => (
+              <span key={tag} className="inline-flex items-center gap-1 bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm font-medium">
+                <Bookmark className="w-3 h-3" />
                 {tag}
               </span>
             ))}
@@ -529,10 +523,10 @@ export default function Fortune500AITransformationSuccess() {
               Get our comprehensive implementation roadmap and expert guidance
               to achieve similar results for your organization.
             </p>
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-              <Link
-                href='/guides/ai-2026-implementation-roadmap'
-                className='bg-white text-orange-600 px-8 py-4 rounded-full font-bold hover:bg-gray-100 transition-colors'
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <ArrowRight 
+                href="/guides/ai-2026-implementation-roadmap"
+                className="bg-white text-orange-600 px-8 py-4 rounded-full font-bold hover:bg-gray-100 transition-colors"
               >
                 Get Implementation Guide
               </Link>

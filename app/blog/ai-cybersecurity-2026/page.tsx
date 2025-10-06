@@ -149,8 +149,9 @@ export default function AICybersecurity2026() {/* return (
           <p className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
             Don't wait for the next cyber attack. Zion Tech    Group    provides comprehensive AI cybersecurity 
             solutions with 99.7% threat detection and autonomous response capabilities.
-          </p></p>
-          <div className="text-left"> </div><Link
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4">
+            <ArrowRight
               href="/contact"
               className="text-left">Get Security    Assessment
             </Link></Link>
@@ -160,23 +161,28 @@ export default function AICybersecurity2026() {/* return (
             </Link></Link>
           </div>
       </div>
-      <h3 className="text-left">Related    Articles</h3>
-        <div className="text-left"> </div><Link href="/blog/ai-enterprise-automation-2026" className="text-left">
-            <h3 className="text-left">
-          <Link href="/blog/ai-enterprise-automation-2026" className="text-left"> </Link><div className="text-left"> </div><h4 className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
-                AI Enterprise    Automation    2026
-              </h4></h4>
-              <p className="text-left">Complete    business process transformation with 95% efficiency and $5M+ savings.
-              </p></p>
+
+      <div className="border-t border-gray-200 pt-8 mt-8">
+        <h3 className="text-2xl font-bold text-gray-900 mb-6">Related Articles</h3>
+        <div className="grid md:grid-cols-2 gap-6">
+          <ArrowRight href="/blog/ai-enterprise-automation-2026" className="group">
+            <div className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+              <h4 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
+                AI Enterprise Automation 2026
+              </h4>
+              <p>
+                Complete business process transformation with 95% efficiency and $5M+ savings.
+              </p>
             </div>
-          </Link>
-          <Link href="/blog/ai-future-workforce-2026" className="text-left">
-            <h3 className="text-left">
-          <Link href="/blog/ai-future-workforce-2026" className="text-left"> </Link><div className="text-left"> </div><h4 className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
-                AI Future    Workforce    2026
-              </h4></h4>
-              <p className="text-left">Human   -AI collaboration revolution reshaping careers and organizations.
-              </p></p>
+          </ArrowRight>
+          <ArrowRight href="/blog/ai-future-workforce-2026" className="group">
+            <div className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+              <h4 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
+                AI Future Workforce 2026
+              </h4>
+              <p>
+                Human-AI collaboration revolution reshaping careers and organizations.
+              </p>
             </div>
           </Link>
         </div>

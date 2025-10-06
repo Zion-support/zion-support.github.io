@@ -1,3 +1,7 @@
+import Link from 'next/link';
+import { Activity, ArrowRight, Calendar, Clock, Gauge, Map, Shield, ShieldCheck } from 'lucide-react';
+
+
 import React from 'react';
 import Link from 'next/link';
 import {ArrowRight,Clock,Calendar} from 'lucide-react';
@@ -104,26 +108,11 @@ export default function Page() {
       <section className="py-16">
         <div className="max-w-4xl mx-auto px-6">
           <div className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-2xl p-8">
-            <h3 className="text-2xl font-bold mb-2 flex items-center gap-2">
-              <Activity /> Ship with    Confidence
-            </h3>
-            <p className="text-white/90 mb-4">
-              Use budgets and rollbacks to move fast without surprises.    We   
-              implement this end‑to‑end in 6–8 weeks.
-            </p>
+            <h3 className="text-2xl font-bold mb-2 flex items-center gap-2"><Activity /> Ship with Confidence</h3>
+            <p className="text-white/90 mb-4">Use budgets and rollbacks to move fast without surprises. We implement this end‑to‑end in 6–8 weeks.</p>
             <div className="flex gap-3">
-              <Link
-                href="/contact"
-                className="bg-white text-indigo-700 px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2"
-              >
-                Talk    to experts <Arrow Right />
-              </Link>
-              <Link
-                href="/blog/ai-governance-live-scorecards-2026"
-                className="border border-white/50 px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2"
-              >
-                Read    live scorecards
-              </Link>
+              <Link href="/contact" className="bg-white text-indigo-700 px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2">Talk to experts <ArrowRight /></Link>
+              <Link href="/blog/ai-governance-live-scorecards-2026" className="border border-white/50 px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2">Read live scorecards</Link>
             </div>
           </div>
         </div>

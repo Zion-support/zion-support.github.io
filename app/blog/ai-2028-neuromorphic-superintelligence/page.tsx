@@ -145,28 +145,23 @@ export default function AI2028 Neuromorphic Superintelligence() {/* return (
           </Link></Link>
         </div>
 
-        <h3 className="text-left">Related Revolutionary    Content</h4>
-          <div className="text-left"> </div><Link 
-              href="/"
-              className="text-left">
-              <h5 className="text-left">AI 2028 Autonomous    Enterprise</h5>
-              <p className="text-left">99.9% autonomous operations breakthrough</p>
-            </Link>
-            <Link 
-              href="/"
-              className="text-left">
-              <h5 className="text-left">AI 2028 Success    Stories</h5>
-              <p className="text-left">Real   -world transformation results</p>
-              class   Name   ="text-left"></Link>
-              <h5 className="text-left">AI 2028 Autonomous    Enterprise</h5>"
-              <p className="text-left">99.9% autonomous operations breakthrough</p>"
-            </Link>
-            <Link 
-              href="/"
-              className="text-left"> </Link><h5 className="text-left">AI 2028 Success    Stories</h5>"
-              <p className="text-left">Real   -world transformation results</p>"
-origin/cursor/fix-errors-and-merge-to-main-cc0a
-            </Link>
+        <div className="border-t pt-6 mt-8">
+          <h4 className="text-xl font-bold text-gray-900 mb-4">Related Revolutionary Content</h4>
+          <div className="grid md:grid-cols-2 gap-4">
+            <ArrowRight 
+              href="/blog/ai-2028-next-generation-autonomous-enterprise" 
+              className="block p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors"
+            >
+              <h5 className="font-semibold text-blue-600 mb-2">AI 2028 Autonomous Enterprise</h5>
+              <p className="text-sm text-gray-600">99.9% autonomous operations breakthrough</p>
+            </ArrowRight>
+            <ArrowRight 
+              href="/case-studies/ai-2028-mega-transformation-success" 
+              className="block p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors"
+            >
+              <h5 className="font-semibold text-blue-600 mb-2">AI 2028 Success Stories</h5>
+              <p className="text-sm text-gray-600">Real-world transformation results</p>
+            </ArrowRight>
           </div>
       </div>
   );

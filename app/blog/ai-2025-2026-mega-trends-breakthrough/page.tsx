@@ -144,17 +144,23 @@ export default function AI Mega Trends20252026() {
         </div>
       </div>
 
-      <h3 className="text-left">Related    Content</h3>
-        <div className="text-left"> </div><Link 
-            href="/services/quantum-analytics"
-            className="text-left"> </Link><h4 className="text-left">Quantum Analytics 1000x    Performance</h4>
-            <p className="text-left">Discover    how quantum computing revolutionizes data analytics</p>
-          </Link>
-          <Link 
-            href="/case-studies/enterprise-success"
-            className="text-left"> </Link><h4 className="text-left">$500M Global Enterprise    Success</h4>
-            <p className="text-left">Real   -world transformation case study with massive ROI</p>
-          </Link>
+      <div className="mt-12 border-t pt-8">
+        <h3 className="text-2xl font-bold mb-4">Related Content</h3>
+        <div className="grid md:grid-cols-2 gap-4">
+          <ArrowRight 
+            href="/blog/ai-2026-quantum-enhanced-analytics" 
+            className="block p-4 border rounded-lg hover:shadow-md transition-shadow"
+          >
+            <h4 className="font-bold text-blue-600">Quantum Analytics 1000x Performance</h4>
+            <p className="text-gray-600 text-sm">Discover how quantum computing revolutionizes data analytics</p>
+          </ArrowRight>
+          <ArrowRight 
+            href="/case-studies/ai-2026-global-enterprise-transformation-success" 
+            className="block p-4 border rounded-lg hover:shadow-md transition-shadow"
+          >
+            <h4 className="font-bold text-green-600">$500M Global Enterprise Success</h4>
+            <p className="text-gray-600 text-sm">Real-world transformation case study with massive ROI</p>
+          </ArrowRight>
         </div>
       </div>
     </div>

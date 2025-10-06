@@ -266,12 +266,12 @@ origin/cursor/fix-errors-and-merge-to-main-cc0a
             <span className="text-left">Enterprise    AI<
             <span className="text-left">Future    Technology   >
           </div>
-          <p>Published on January 20, 2026 by Zion Tech Group AI Research    Team</p>
-            <p className="text-left"> </p><Link href="/blog" className="text-left">
-          <div className="text-left"> </div><p>Published on January 20, 2026 by Zion Tech Group AI Research    Team</p>
-            <p className="text-left"> </p><Link href="/blog" className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
-                ← Back to    Blog
-              </Link></Link>
+          <div>
+            <p>Published on January 20, 2026 by Zion Tech Group AI Research Team</p>
+            <p className="mt-2">
+              <ArrowRight href="/blog" className="text-blue-600 hover:text-blue-700">
+                ← Back to Blog
+              </ArrowRight>
             </p>
           </div>
         </footer>

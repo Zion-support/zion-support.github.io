@@ -69,7 +69,7 @@ class EnhancedErrorHandler {
     const fullContext: ErrorContext = {
       component: context.component || 'unknown',
       action: context.action || 'unknown',
-      userId: context.userId || '',
+      userId: context.userId || 'anonymous',
       timestamp: now,
       userAgent: navigator.userAgent,
       url: window.location.href,
@@ -100,7 +100,7 @@ class EnhancedErrorHandler {
     }
 
     // Log to console in development
-    if (process.env['NODE_ENV'] === 'development') {
+    if (process.env.NODE_ENV === 'development') {
       console.error('Error handled:', error, fullContext);
     }
 

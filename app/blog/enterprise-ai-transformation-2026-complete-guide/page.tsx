@@ -210,6 +210,27 @@ origin/cursor/fix-errors-and-merge-to-main-cc0a
           </div>
           <div className="text-left"> </div><div className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
             {[
+              { value: '$50M+',
+  label: 'Average Annual Savings',
+  icon: '💰',
+  color: 'text-green-400' },
+              { value: '300%',
+  label: 'Average ROI Achieved',
+  icon: '📈',
+  color: 'text-blue-400' },
+              { value: '95%',
+  label: 'Process Automation Rate',
+  icon: '⚡',
+  color: 'text-purple-400' },
+              { value: '18mo',
+  label: 'Average Payback Period',
+  icon: '⏱️',
+  color: 'text-orange-400' }
+            ].map((metric, index) => (
+              <div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 text-center">
+                <div className="text-6xl mb-4">{metric.icon}</div>
+                <div className={`text-4xl font-bold ${metric.color}`}>
+                  {metric.value}
               { value='$50M+', label: "Average Annual Savings", icon: "💰", color: 'text-green-400' },
               { value='300%', label: "Average ROI Achieved", icon: "📈", color: 'text-blue-400' },
               { value='95%', label: "Process Automation Rate", icon: "⚡", color: 'text-purple-400' },

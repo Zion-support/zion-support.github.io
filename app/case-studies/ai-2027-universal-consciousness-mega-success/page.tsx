@@ -290,10 +290,10 @@ export default function AI2027UniversalConsciousnessMegaSuccess() {
               Discover how universal consciousness integration can transform
               your enterprise and unlock unprecedented value creation.
             </p>
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-              <Link
-                href='/<contact'
-                className='bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1'
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <ArrowRight 
+                href="/contact" 
+                className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1"
               >
                 Start Your Transformation
               </Link>
@@ -314,51 +314,27 @@ export default function AI2027UniversalConsciousnessMegaSuccess() {
         </div>
 
         {/* Related Case Studies */}
-        <div className='mt-16'>
-          <h2 className='text-3xl font-bold text-center mb-8 text-green-400'>
-            Related Success Stories
-          </h2>
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
-            <Link
-              href='/case-studies/ai-2027-quantum-consciousness-mega-<success'
-              className='group'
-            >
-              <div className='bg-gradient-to-r from-blue-800/50 to-purple-800/50 backdrop-blur-sm rounded-2xl p-6 border border-blue-700/50 hover:border-blue-500/50 transition-all duration-300 group-hover:transform group-hover:scale-105'>
-                <h3 className='text-xl font-semibold mb-3 text-blue-300 group-hover:text-blue-200'>
-                  Quantum Consciousness Success
-                </h3>
-                <p className='text-gray-400 group-hover:text-gray-300'>
-                  $300B+ value creation through quantum consciousness
-                  integration
-                </p>
+        <div className="mt-16">
+          <h2 className="text-3xl font-bold text-center mb-8 text-green-400">Related Success Stories</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <ArrowRight href="/case-studies/ai-2027-quantum-consciousness-mega-success" className="group">
+              <div className="bg-gradient-to-r from-blue-800/50 to-purple-800/50 backdrop-blur-sm rounded-2xl p-6 border border-blue-700/50 hover:border-blue-500/50 transition-all duration-300 group-hover:transform group-hover:scale-105">
+                <h3 className="text-xl font-semibold mb-3 text-blue-300 group-hover:text-blue-200">Quantum Consciousness Success</h3>
+                <p className="text-gray-400 group-hover:text-gray-300">$300B+ value creation through quantum consciousness integration</p>
               </div>
-            </Link>
-            <Link
-              href='/case-studies/ai-2027-meta-cognitive-superintelligence-<success'
-              className='group'
-            >
-              <div className='bg-gradient-to-r from-purple-800/50 to-pink-800/50 backdrop-blur-sm rounded-2xl p-6 border border-purple-700/50 hover:border-purple-500/50 transition-all duration-300 group-hover:transform group-hover:scale-105'>
-                <h3 className='text-xl font-semibold mb-3 text-purple-300 group-hover:text-purple-200'>
-                  Meta-Cognitive Success
-                </h3>
-                <p className='text-gray-400 group-hover:text-gray-300'>
-                  Revolutionary meta-cognitive AI implementation results
-                </p>
+            </ArrowRight>
+            <ArrowRight href="/case-studies/ai-2027-meta-cognitive-superintelligence-success" className="group">
+              <div className="bg-gradient-to-r from-purple-800/50 to-pink-800/50 backdrop-blur-sm rounded-2xl p-6 border border-purple-700/50 hover:border-purple-500/50 transition-all duration-300 group-hover:transform group-hover:scale-105">
+                <h3 className="text-xl font-semibold mb-3 text-purple-300 group-hover:text-purple-200">Meta-Cognitive Success</h3>
+                <p className="text-gray-400 group-hover:text-gray-300">Revolutionary meta-cognitive AI implementation results</p>
               </div>
-            </Link>
-            <Link
-              href='/case-studies/ai-2027-transcendent-intelligence-mega-<success'
-              className='group'
-            >
-              <div className='bg-gradient-to-r from-orange-800/50 to-red-800/50 backdrop-blur-sm rounded-2xl p-6 border border-orange-700/50 hover:border-orange-500/50 transition-all duration-300 group-hover:transform group-hover:scale-105'>
-                <h3 className='text-xl font-semibold mb-3 text-orange-300 group-hover:text-orange-200'>
-                  Transcendent Intelligence
-                </h3>
-                <p className='text-gray-400 group-hover:text-gray-300'>
-                  $1T+ value creation through transcendent AI capabilities
-                </p>
+            </ArrowRight>
+            <ArrowRight href="/case-studies/ai-2027-transcendent-intelligence-mega-success" className="group">
+              <div className="bg-gradient-to-r from-orange-800/50 to-red-800/50 backdrop-blur-sm rounded-2xl p-6 border border-orange-700/50 hover:border-orange-500/50 transition-all duration-300 group-hover:transform group-hover:scale-105">
+                <h3 className="text-xl font-semibold mb-3 text-orange-300 group-hover:text-orange-200">Transcendent Intelligence</h3>
+                <p className="text-gray-400 group-hover:text-gray-300">$1T+ value creation through transcendent AI capabilities</p>
               </div>
-            </Link>
+            </ArrowRight>
           </div>
         </div>
       </div>

@@ -1,3 +1,12 @@
+import Link from 'next/link';
+import { ArrowLeft, ArrowRight, Bookmark, Calendar, Clock, Cog, User } from 'lucide-react';
+
+
+import { ArrowLeft } from 'lucide-react';
+import { Calendar } from 'lucide-react';
+import { User } from 'lucide-react';
+import { Clock } from 'lucide-react';
+import { Tag } from 'lucide-react';
 import React from 'react';
 import Link from 'next/link';
 import {ArrowLeft,Calendar,User,Clock,Tag} from 'lucide-react';
@@ -11,12 +20,16 @@ export const metadata = {
 export default function Enterprise Automation Breakthrough() {/* return (
     <div> content */}
     <div>
-      <div> </div><div> </div>
-      <div className="text-left">{/*   Header   */}</div></div>
-      <header className="text-left"> </header><div className="text-left"> </div><Link 
-            href="/"
-            className="text-left"> </Link><Arrow Left className="text-left" />Back to    Home
-          </Arrow></Link>
+      {/* Header */}
+      <header className="border-b border-gray-200 bg-white sticky top-0 z-50">
+        <div className="max-w-4xl mx-auto px-4 py-4">
+          <Link 
+            href="/" 
+            className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
+          >
+            <ArrowLeft />
+            Back to Home
+          </Link>
         </div>
       </header>
 
@@ -40,10 +53,12 @@ export default function Enterprise Automation Breakthrough() {/* return (
           <p className="text-left">Discover how AI-driven enterprise automation is revolutionizing business operations in 2026.    From    autonomous decision-making to self-healing systems, explore the breakthrough technologies transforming the corporate landscape.
           </p></p>
           
-          <div className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
-            {['AI', 'Enterprise Automation', 'Business Intelligence', '2026 Trends', 'Autonomous    Operations   '].map((tag) => (</div></div>
-              <span key={tag} className="text-left"> </span><Tag className="text-left" />{tag}
-              </Tag><
+          <div className="flex flex-wrap gap-2">
+            {['AI', 'Enterprise Automation', 'Business Intelligence', '2026 Trends', 'Autonomous Operations'].map((tag) => (
+              <span key={tag} className="inline-flex items-center gap-1 bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
+                <Tag />
+                {tag}
+              </span>
             ))}
           </div>
         </div>
@@ -187,13 +202,14 @@ export default function Enterprise Automation Breakthrough() {/* return (
           <p>The    question isn't whether to implement AI-driven automation, but how quickly and effectively you can transform your organization to harness its full potential.
           </p></p>
 
-          {/* CTA    Section   */}
-          <h3 className="text-left">Ready to Transform Your    Enterprise   ?</h3>
-            <p className="text-left"> </p><div className="text-left"> </div><h3 className="text-left">Ready to Transform Your    Enterprise   ?</h3>
-            <p className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
-              Contact Zion Tech    Group    to discover how our advanced AI solutions can revolutionize your business operations.
-            </p></p>
-            <div className="text-left"> </div><Link 
+          {/* CTA Section */}
+          <div>
+            <h3>Ready to Transform Your Enterprise?</h3>
+            <p>
+              Contact Zion Tech Group to discover how our advanced AI solutions can revolutionize your business operations.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link 
                 href="/guides/ai-2026-implementation-roadmap"
                 className="text-left">Get Implementation    Guide
               </Link></Link>

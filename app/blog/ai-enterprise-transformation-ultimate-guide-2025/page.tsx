@@ -180,29 +180,22 @@ export default function AIEnterpriseTransformation Ultimate Guide2025() {/* retu
                 </Link></Link>
               </div>
 
-              {/* Related    Articles   */}
-              <h3 className="text-left">Related    Articles</h3>
-                <div className="text-left"> </div><Link href="/blog/autonomous-operations-2025" className="text-left">
-                    <div className="text-left">Autonomous    Operations    2025</div>
-                    <div className="text-left">Complete    guide to autonomous business operations</div>
-                  </Link>
-                  <Link href="/blog/quantum-ai-enterprise-2026" className="text-left">
-                    <div className="text-left">Quantum AI Enterprise    Guide</div>
-                    <div className="text-left">Implementing    quantum computing in enterprise</div>
-                  </Link>
-                  <Link href="/blog/multi-agent-orchestration-2025" className="text-left">
-                    <div className="text-left">Multi-Agent    Orchestration</div>
-                    <div className="text-left">Scaling    AI agents across enterprise systems</div>
-                  <Link href="/blog/autonomous-operations-2025" className="text-left"> </Link><div className="text-left">Autonomous    Operations    2025</div>"
-                    <div className="text-left">Complete    guide to autonomous business operations</div>"
-                  </Link>
-                  <Link href="/blog/quantum-ai-enterprise-2026" className="text-left"> </Link><div className="text-left">Quantum AI Enterprise    Guide</div>"
-                    <div className="text-left">Implementing    quantum computing in enterprise</div>"
-                  </Link>
-                  <Link href="/blog/multi-agent-orchestration-2025" className="text-left"> </Link><div className="text-left">Multi-Agent    Orchestration</div>"
-                    <div className="text-left">Scaling    AI agents across enterprise systems</div>"
-origin/cursor/fix-errors-and-merge-to-main-cc0a
-                  </Link>
+              {/* Related Articles */}
+              <div className="bg-white rounded-2xl shadow-lg p-6">
+                <h3 className="text-xl font-bold text-gray-900 mb-4">Related Articles</h3>
+                <div className="space-y-4">
+                  <ArrowRight href="/blog/autonomous-operations-2025" className="block hover:bg-gray-50 p-3 rounded-lg transition-colors">
+                    <div className="font-semibold text-gray-900">Autonomous Operations 2025</div>
+                    <div className="text-sm text-gray-600">Complete guide to autonomous business operations</div>
+                  </ArrowRight>
+                  <ArrowRight href="/blog/quantum-ai-enterprise-2026" className="block hover:bg-gray-50 p-3 rounded-lg transition-colors">
+                    <div className="font-semibold text-gray-900">Quantum AI Enterprise Guide</div>
+                    <div className="text-sm text-gray-600">Implementing quantum computing in enterprise</div>
+                  </ArrowRight>
+                  <ArrowRight href="/blog/multi-agent-orchestration-2025" className="block hover:bg-gray-50 p-3 rounded-lg transition-colors">
+                    <div className="font-semibold text-gray-900">Multi-Agent Orchestration</div>
+                    <div className="text-sm text-gray-600">Scaling AI agents across enterprise systems</div>
+                  </ArrowRight>
                 </div>
               </div>
 

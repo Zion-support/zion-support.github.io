@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect } from 'react';
-import ArrowRight from 'next/link';
+import Link from 'next/link';
 
 export default function Error({
   error,
@@ -55,12 +55,12 @@ export default function Error({
           >
             🔄 Try Again
           </button>
-          <ArrowRight
+          <Link
             href='/'
             className='border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-600 hover:text-white transition-colors inline-block'
           >
             ← Back to Home
-          </ArrowRight>
+          </Link>
         </div>
 
         {/* Help Section */}
@@ -74,13 +74,13 @@ export default function Error({
           </p>
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>
             <a
-              href='tel:+<13024640950'
+              href='tel:+13024640950'
               className='inline-flex items-center gap-2 bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors'
             >
               📞 Call Support: +1 302 464 0950
             </a>
             <a
-              href='mailto:kleber@ziontechgroup.com?subject=Error <Report'
+              href='mailto:kleber@ziontechgroup.com?subject=Error Report'
               className='inline-flex items-center gap-2 border-2 border-green-600 text-green-600 px-6 py-3 rounded-lg font-semibold hover:bg-green-600 hover:text-white transition-colors'
             >
               📧 Email Support

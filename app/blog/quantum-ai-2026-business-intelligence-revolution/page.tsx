@@ -1,3 +1,12 @@
+import Link from 'next/link';
+import { ArrowLeft, ArrowRight, Bookmark, Calendar, Clock, Map, User } from 'lucide-react';
+
+
+import { ArrowLeft } from 'lucide-react';
+import { Calendar } from 'lucide-react';
+import { User } from 'lucide-react';
+import { Clock } from 'lucide-react';
+import { Tag } from 'lucide-react';
 import React from 'react';
 import Link from 'next/link';
 import {ArrowLeft,Calendar,User,Clock,Tag} from 'lucide-react';
@@ -11,12 +20,16 @@ export const metadata = {
 export default function QuantumAI Business Intelligence() {/* return (
     <div> content */}
     <div>
-      <div> </div><div> </div>
-      <div className="text-left">{/*   Header   */}</div></div>
-      <header className="text-left"> </header><div className="text-left"> </div><Link 
-            href="/"
-            className="text-left"> </Link><Arrow Left className="text-left" />Back to    Home
-          </Arrow></Link>
+      {/* Header */}
+      <header className="border-b border-gray-200 bg-white sticky top-0 z-50">
+        <div className="max-w-4xl mx-auto px-4 py-4">
+          <Link 
+            href="/" 
+            className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
+          >
+            <ArrowLeft />
+            Back to Home
+          </Link>
         </div>
       </header>
 
@@ -40,10 +53,12 @@ export default function QuantumAI Business Intelligence() {/* return (
           <p className="text-left">Explore how quantum AI is revolutionizing business intelligence in 2026.    Discover    the breakthrough technologies that are transforming raw data into strategic competitive advantages for forward-thinking enterprises.
           </p></p>
           
-          <div className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
-            {['Quantum AI', 'Business Intelligence', 'Data Analytics', '2026 Innovation', 'Strategic    Intelligence   '].map((tag) => (</div></div>
-              <span key={tag} className="text-left"> </span><Tag className="text-left" />{tag}
-              </Tag><
+          <div className="flex flex-wrap gap-2">
+            {['Quantum AI', 'Business Intelligence', 'Data Analytics', '2026 Innovation', 'Strategic Intelligence'].map((tag) => (
+              <span key={tag} className="inline-flex items-center gap-1 bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">
+                <Tag />
+                {tag}
+              </span>
             ))}
           </div>
         </div>
@@ -222,13 +237,14 @@ export default function QuantumAI Business Intelligence() {/* return (
           <p>The future belongs to organizations that can harness the power of quantum AI to transform data into strategic advantage.    The    question isn't whether to adopt quantum AI for business intelligence, but how quickly you can position your organization to lead this revolution.
           </p></p>
 
-          {/* CTA    Section   */}
-          <h3 className="text-left">Ready to Revolutionize Your Business    Intelligence   ?</h3>
-            <p className="text-left"> </p><div className="text-left"> </div><h3 className="text-left">Ready to Revolutionize Your Business    Intelligence   ?</h3>
-            <p className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
-              Contact Zion Tech    Group    to explore how quantum computing can transform your data into strategic competitive advantage.
-            </p></p>
-            <div className="text-left"> </div><Link 
+          {/* CTA Section */}
+          <div>
+            <h3>Ready to Revolutionize Your Business Intelligence?</h3>
+            <p>
+              Contact Zion Tech Group to explore how quantum computing can transform your data into strategic competitive advantage.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link 
                 href="/guides/quantum-ai-implementation-roadmap-2026"
                 className="text-left">Get Quantum AI    Roadmap
               </Link></Link>

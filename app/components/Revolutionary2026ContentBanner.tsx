@@ -1,5 +1,8 @@
 import Link from 'next/link';
-import { ArrowRight, Brain, Zap } from 'lucide-react';
+import { ArrowRight, Brain, Cpu, Zap } from 'lucide-react';
+
+
+
 
 export default function Revolutionary2026ContentBanner() {
   return (
@@ -84,8 +87,8 @@ export default function Revolutionary2026ContentBanner() {
                 className='inline-flex items-center text-purple-300 hover:text-purple-200 font-medium group-hover:translate-x-1 transition-all duration-300'
               >
                 Explore Quantum Fusion
-                <ArrowRight className='w-4 h-4 ml-2' />
-              </Link>
+                <ArrowRight className="w-4 h-4 ml-2" />
+              </ArrowRight>
             </div>
           </div>
 
@@ -134,8 +137,8 @@ export default function Revolutionary2026ContentBanner() {
                 className='inline-flex items-center text-blue-300 hover:text-blue-200 font-medium group-hover:translate-x-1 transition-all duration-300'
               >
                 Discover Consciousness AI
-                <ArrowRight className='w-4 h-4 ml-2' />
-              </Link>
+                <ArrowRight className="w-4 h-4 ml-2" />
+              </ArrowRight>
             </div>
           </div>
 
@@ -184,8 +187,8 @@ export default function Revolutionary2026ContentBanner() {
                 className='inline-flex items-center text-indigo-300 hover:text-indigo-200 font-medium group-hover:translate-x-1 transition-all duration-300'
               >
                 Explore Autonomous Ops
-                <ArrowRight className='w-4 h-4 ml-2' />
-              </Link>
+                <ArrowRight className="w-4 h-4 ml-2" />
+              </ArrowRight>
             </div>
           </div>
         </div>
@@ -201,11 +204,11 @@ export default function Revolutionary2026ContentBanner() {
               quantum-neural fusion, synthetic consciousness, and autonomous
               operations implementation.
             </p>
-
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-              <Link
-                href='/services/ai-2026-quantum-neural-fusion-enterprise-consulting'
-                className='inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-xl hover:from-purple-700 hover:to-blue-700 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25'
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <ArrowRight 
+                href="/services/ai-2026-quantum-neural-fusion-enterprise-consulting"
+                className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-xl hover:from-purple-700 hover:to-blue-700 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25"
               >
                 <Zap className='w-5 h-5 mr-2' />
                 Quantum Consulting
@@ -216,8 +219,8 @@ export default function Revolutionary2026ContentBanner() {
                 className='inline-flex items-center justify-center px-8 py-4 bg-transparent border-2 border-purple-400 text-purple-300 font-semibold rounded-xl hover:bg-purple-400/10 hover:text-purple-200 transition-all duration-300'
               >
                 Schedule Consultation
-                <ArrowRight className='w-5 h-5 ml-2' />
-              </Link>
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </ArrowRight>
             </div>
           </div>
         </div>

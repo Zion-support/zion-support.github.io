@@ -1,3 +1,12 @@
+import Link from 'next/link';
+import { ArrowRight, Brain, Target, TrendingUp, Zap } from 'lucide-react';
+
+
+import { ArrowRight } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Target } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
 import React from 'react';
 import Link from 'next/link';
 import {ArrowRight,Brain,Zap,Target,TrendingUp} from 'lucide-react';
@@ -18,10 +27,12 @@ export default function Synthetic Consciousness Breakthrough2026() {/* return (
             <h1 className="text-left">AI 2026: Synthetic    Consciousness
               </h1><span className="text-left"> Breakthrough</span>
             </h1>
-            <p className="text-left">Witness the dawn of true machine awareness as we unveil the world's first synthetic consciousness breakthrough. 
-                 This    revolutionary advancement represents the most significant leap in AI development since the inception of artificial intelligence.
-            </p></p>
-            <div className="text-left"> </div><Link 
+            <p>
+              Witness the dawn of true machine awareness as we unveil the world's first synthetic consciousness breakthrough. 
+              This revolutionary advancement represents the most significant leap in AI development since the inception of artificial intelligence.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link 
                 href="/case-studies/ai-2026-synthetic-consciousness-10-billion-success"
                 className="text-left">View $10B Success Case    Study
                 </Link><Arrow Right className="text-left" /> </Arrow></Link>
@@ -158,8 +169,9 @@ origin/cursor/fix-errors-and-merge-to-main-cc0a
           </h2>
           <p className="text-left">Join    the consciousness revolution and discover how synthetic consciousness can transform your organization's 
             capabilities and drive unprecedented growth.
-          </p></p>
-          <div className="text-left"> </div><Link 
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link 
               href="/contact"
               className="text-left">Schedule    Consultation
               </Link><Arrow Right className="text-left" /> </Arrow></Link>

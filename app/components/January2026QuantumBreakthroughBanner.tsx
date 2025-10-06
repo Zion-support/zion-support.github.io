@@ -1,6 +1,9 @@
 import Link from 'next/link';
 import { ArrowRight, Brain, TrendingUp, Zap } from 'lucide-react';
 
+
+
+
 export default function January2026QuantumBreakthroughBanner() {
   return (
     <div className='relative overflow-hidden bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white'>
@@ -36,16 +39,14 @@ export default function January2026QuantumBreakthroughBanner() {
             <p className='text-blue-200 mb-4'>
               99.7% accuracy improvement with 10,000x faster processing
             </p>
-            <div className='flex items-center justify-between'>
-              <span className='text-2xl font-bold text-green-300'>
-                $47M ROI
-              </span>
-              <Link
-                href='/blog/ai-2026-quantum-neural-superintelligence-ultimate-breakthrough'
-                className='flex items-center gap-2 text-yellow-300 hover:text-yellow-200 transition-colors'
+            <div className="flex items-center justify-between">
+              <span className="text-2xl font-bold text-green-300">$47M ROI</span>
+              <ArrowRight 
+                href="/blog/ai-2026-quantum-neural-superintelligence-ultimate-breakthrough"
+                className="flex items-center gap-2 text-yellow-300 hover:text-yellow-200 transition-colors"
               >
-                Learn More <ArrowRight className='w-4 h-4' />
-              </Link>
+                Learn More <ArrowRight className="w-4 h-4" />
+              </ArrowRight>
             </div>
           </div>
 
@@ -58,16 +59,14 @@ export default function January2026QuantumBreakthroughBanner() {
             <p className='text-blue-200 mb-4'>
               AI systems with genuine understanding and emotional intelligence
             </p>
-            <div className='flex items-center justify-between'>
-              <span className='text-2xl font-bold text-green-300'>
-                370% ROI
-              </span>
-              <Link
-                href='/blog/ai-2026-synthetic-consciousness-enterprise-breakthrough'
-                className='flex items-center gap-2 text-yellow-300 hover:text-yellow-200 transition-colors'
+            <div className="flex items-center justify-between">
+              <span className="text-2xl font-bold text-green-300">370% ROI</span>
+              <ArrowRight 
+                href="/blog/ai-2026-synthetic-consciousness-enterprise-breakthrough"
+                className="flex items-center gap-2 text-yellow-300 hover:text-yellow-200 transition-colors"
               >
-                Explore <ArrowRight className='w-4 h-4' />
-              </Link>
+                Explore <ArrowRight className="w-4 h-4" />
+              </ArrowRight>
             </div>
           </div>
 
@@ -80,16 +79,14 @@ export default function January2026QuantumBreakthroughBanner() {
             <p className='text-blue-200 mb-4'>
               Fortune 500 manufacturer achieves $47M ROI in 6 months
             </p>
-            <div className='flex items-center justify-between'>
-              <span className='text-2xl font-bold text-green-300'>
-                96.3% Efficiency
-              </span>
-              <Link
-                href='/case-studies/quantum-ai-manufacturing-success-2026'
-                className='flex items-center gap-2 text-yellow-300 hover:text-yellow-200 transition-colors'
+            <div className="flex items-center justify-between">
+              <span className="text-2xl font-bold text-green-300">96.3% Efficiency</span>
+              <ArrowRight 
+                href="/case-studies/quantum-ai-manufacturing-success-2026"
+                className="flex items-center gap-2 text-yellow-300 hover:text-yellow-200 transition-colors"
               >
-                Case Study <ArrowRight className='w-4 h-4' />
-              </Link>
+                Case Study <ArrowRight className="w-4 h-4" />
+              </ArrowRight>
             </div>
           </div>
         </div>
@@ -128,9 +125,9 @@ export default function January2026QuantumBreakthroughBanner() {
             className='inline-flex items-center gap-3 bg-gradient-to-r from-yellow-400 to-orange-500 text-black font-bold px-8 py-4 rounded-full text-lg hover:from-yellow-300 hover:to-orange-400 transition-all duration-300 transform hover:scale-105 shadow-lg'
           >
             Get Your Quantum AI Demo
-            <ArrowRight className='w-5 h-5' />
-          </Link>
-          <p className='text-blue-200 text-sm mt-3'>
+            <ArrowRight className="w-5 h-5" />
+          </ArrowRight>
+          <p className="text-blue-200 text-sm mt-3">
             Schedule a personalized demonstration and ROI analysis
           </p>
         </div>

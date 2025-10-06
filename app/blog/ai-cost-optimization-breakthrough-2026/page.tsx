@@ -1,3 +1,15 @@
+import Link from 'next/link';
+import { ArrowRight, Calendar, CheckCircle, Clock, DollarSign, Target, TrendingUp, User, Users } from 'lucide-react';
+
+
+import { ArrowRight } from 'lucide-react';
+import { Calendar } from 'lucide-react';
+import { Clock } from 'lucide-react';
+import { Users } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+import { DollarSign } from 'lucide-react';
+import { Target } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
 import React from 'react';
 import Link from 'next/link';
 import {ArrowRight,Calendar,Clock,Users,TrendingUp,DollarSign,Target,CheckCircle} from 'lucide-react';
@@ -349,50 +361,57 @@ export default function AICost Optimization Breakthrough2026() {/* return (
       <section className="text-left"> </section><div className="text-left"> </div><h2 className="text-left">
               Related Cost Optimization    Resources
             </h2>
-            <div className="text-left"> </div><Link href="/blog/generative-ai-cost-breakthrough-2025" className="text-left">
-                <div className="text-left"> </div><section className="text-left"> </section><div className="text-left"> </div><div className="text-left"> </div><h2 className="text-left">Related Cost Optimization    Resources
-            </h2></h2>
-            <div className="text-left"> </div><Link href="/blog/generative-ai-cost-breakthrough-2025" className="text-left"> </Link><div className="text-left"> </div><div className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
-                    </div><div className="text-left">💰</div>
-                    <h3 className="text-left">Cut GenAI    Costs    by 85%
-                    </h3></h3>
-                    <p className="text-left">Proven    strategies to slash generative AI costs without sacrificing quality or performance.
-                    </p></p>
-                    <span>Read    More</span>
-                      <Arrow Right className="text-left" />
-                    <div className="text-left"> </div><span>Read    More</span>
-                      <Arrow Right className="text-left" />origin/cursor/fix-errors-and-merge-to-main-cc0a
-                    </Arrow></div>
+            <div className="grid md:grid-cols-3 gap-8">
+              <Link href="/blog/generative-ai-cost-breakthrough-2025" className="group">
+                <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all hover:scale-105">
+                  <div className="p-8">
+                    <div className="text-4xl mb-4">💰</div>
+                    <h3 className="text-xl font-bold text-gray-900 group-hover:text-green-600 transition-colors mb-3">
+                      Cut GenAI Costs by 85%
+                    </h3>
+                    <p>
+                      Proven strategies to slash generative AI costs without sacrificing quality or performance.
+                    </p>
+                    <div>
+                      <span>Read More</span>
+                      <ArrowRight />
+                    </div>
                   </div>
                 </div>
               </Link>
-              <Link href="/blog/ai-infrastructure-automation-2026" className="text-left">
-                <div className="text-left"> </div><Link href="/blog/ai-infrastructure-automation-2026" className="text-left"> </Link><div className="text-left"> </div><div className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
-                    </div><div className="text-left">⚡</div>
-                    <h3 className="text-left">AI Infrastructure    Automation
-                    </h3></h3>
-                    <p className="text-left">Self   -healing systems with 99.99% uptime and 70% cost reduction through automation.
-                    </p></p>
-                    <span>Read    More</span>
-                      <Arrow Right className="text-left" />
-                    <div className="text-left"> </div><span>Read    More</span>
-                      <Arrow Right className="text-left" />origin/cursor/fix-errors-and-merge-to-main-cc0a
-                    </Arrow></div>
+              
+              <Link href="/blog/ai-infrastructure-automation-2026" className="group">
+                <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all hover:scale-105">
+                  <div className="p-8">
+                    <div className="text-4xl mb-4">⚡</div>
+                    <h3 className="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors mb-3">
+                      AI Infrastructure Automation
+                    </h3>
+                    <p>
+                      Self-healing systems with 99.99% uptime and 70% cost reduction through automation.
+                    </p>
+                    <div>
+                      <span>Read More</span>
+                      <ArrowRight />
+                    </div>
                   </div>
                 </div>
               </Link>
-              <Link href="/case-studies/fortune-500-ai-transformation-mega-success-2026" className="text-left">
-                <div className="text-left"> </div><Link href="/case-studies/fortune-500-ai-transformation-mega-success-2026" className="text-left"> </Link><div className="text-left"> </div><div className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
-                    </div><div className="text-left">🏆</div>
-                    <h3 className="text-left">$300M ROI Success    Story
-                    </h3></h3>
-                    <p className="text-left">How a    Fortune    500 company achieved massive ROI through AI optimization.
-                    </p></p>
-                    <span>Read    More</span>
-                      <Arrow Right className="text-left" />
-                    <div className="text-left"> </div><span>Read    More</span>
-                      <Arrow Right className="text-left" />origin/cursor/fix-errors-and-merge-to-main-cc0a
-                    </Arrow></div>
+              
+              <Link href="/case-studies/fortune-500-ai-transformation-mega-success-2026" className="group">
+                <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all hover:scale-105">
+                  <div className="p-8">
+                    <div className="text-4xl mb-4">🏆</div>
+                    <h3 className="text-xl font-bold text-gray-900 group-hover:text-purple-600 transition-colors mb-3">
+                      $300M ROI Success Story
+                    </h3>
+                    <p>
+                      How a Fortune 500 company achieved massive ROI through AI optimization.
+                    </p>
+                    <div>
+                      <span>Read More</span>
+                      <ArrowRight />
+                    </div>
                   </div>
                 </div>
               </Link>

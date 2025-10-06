@@ -189,8 +189,9 @@ origin/cursor/fix-errors-and-merge-to-main-cc0a
             <p className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
               Discover how Zion Tech Group's AI Autonomous Cloud    Operations    solutions can 
               revolutionize your infrastructure management.
-            </p></p>
-            <div className="text-left"> </div><Link
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <ArrowRight
                 href="/services/ai-autonomous-cloud-ops"
                 className="text-left">Explore Our    Services
               </Link></Link>
@@ -199,23 +200,29 @@ origin/cursor/fix-errors-and-merge-to-main-cc0a
                 className="text-left">Call    +1 302 464 0950
               </a></a>
             </div>
-          <h3 className="text-left">Related    Articles</h2>
-            <div className="text-left"> </div><Link href="/blog/ai-operational-excellence-2026" className="text-left">
-                <h3 className="text-left">
-              <Link href="/blog/ai-operational-excellence-2026" className="text-left"> </Link><div className="text-left"> </div><h3 className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
-                    AI Operational    Excellence    2026
-                  </h3></h3>
-                  <p className="text-left">Complete    enterprise implementation guide for AI-driven operations.
-                  </p></p>
+          </div>
+
+          <div className="border-t pt-8">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Related Articles</h2>
+            <div className="grid md:grid-cols-2 gap-6">
+              <ArrowRight href="/blog/ai-operational-excellence-2026" className="group">
+                <div className="border rounded-lg p-4 hover:shadow-lg transition-shadow">
+                  <h3 className="font-bold text-gray-900 group-hover:text-blue-600 mb-2">
+                    AI Operational Excellence 2026
+                  </h3>
+                  <p>
+                    Complete enterprise implementation guide for AI-driven operations.
+                  </p>
                 </div>
-              </Link>
-              <Link href="/blog/ai-agent-observability-2026" className="text-left">
-                <h3 className="text-left">
-              <Link href="/blog/ai-agent-observability-2026" className="text-left"> </Link><div className="text-left"> </div><h3 className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
-                    AI Agent    Observability    2026
-                  </h3></h3>
-                  <p className="text-left">Comprehensive    monitoring and debugging guide for AI agents.
-                  </p></p>
+              </ArrowRight>
+              <ArrowRight href="/blog/ai-agent-observability-2026" className="group">
+                <div className="border rounded-lg p-4 hover:shadow-lg transition-shadow">
+                  <h3 className="font-bold text-gray-900 group-hover:text-blue-600 mb-2">
+                    AI Agent Observability 2026
+                  </h3>
+                  <p>
+                    Comprehensive monitoring and debugging guide for AI agents.
+                  </p>
                 </div>
               </Link>
             </div>

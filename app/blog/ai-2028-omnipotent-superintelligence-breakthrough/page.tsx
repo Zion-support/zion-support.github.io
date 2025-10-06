@@ -305,16 +305,21 @@ export default function AI2028Omnipotent Superintelligence Breakthrough() {/* re
           <p className="text-left"> </p><div className="text-left"> </div><h2 className="text-left">🌌 Ready for Universal    Transformation   ?</h2>"
           <p className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
             Join the omnipotent superintelligence revolution and unlock infinite value creation for your organization. 
-               Our    universal AI systems are ready to transform every aspect of your enterprise operations.
-          </p></p>
-          <div className="text-left"> </div><Link 
-              href="/"
-              className="text-left">Schedule Universal    Consultation
-            </Link></Link>
-            <Link 
-              href="/"
-              className="text-left">View Universal Success    Story
-            </Link></Link>
+            Our universal AI systems are ready to transform every aspect of your enterprise operations.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4">
+            <ArrowRight 
+              href="/contact" 
+              className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-6 py-3 rounded-lg font-semibold text-center hover:from-indigo-600 hover:to-purple-600 transition-all"
+            >
+              Schedule Universal Consultation
+            </ArrowRight>
+            <ArrowRight 
+              href="/case-studies/ai-2028-omnipotent-superintelligence-3-2-trillion-success" 
+              className="bg-white border border-gray-300 text-gray-700 px-6 py-3 rounded-lg font-semibold text-center hover:bg-gray-50 transition-all"
+            >
+              View Universal Success Story
+            </ArrowRight>
           </div>
       </article>
   );

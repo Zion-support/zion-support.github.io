@@ -370,34 +370,24 @@ export default function December2025AutonomousSystems500MSuccess() {
                 Start Your Transformation
               </Link>
             </div>
-
-            <div className='flex-1'>
-              <h3 className='text-xl font-bold text-white mb-4'>
-                Related Resources
-              </h3>
-              <div className='space-y-3'>
-                <Link
-                  href='/blog/ai-2025-december-advanced-autonomous-<systems'
-                  className='block p-4 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-lg border border-blue-500/30 hover:border-blue-400/50 transition-colors'
+            
+            <div className="flex-1">
+              <h3 className="text-xl font-bold text-white mb-4">Related Resources</h3>
+              <div className="space-y-3">
+                <ArrowRight 
+                  href="/blog/ai-2025-december-advanced-autonomous-systems" 
+                  className="block p-4 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-lg border border-blue-500/30 hover:border-blue-400/50 transition-colors"
                 >
-                  <div className='font-semibold text-blue-400'>
-                    December 2025 Autonomous Systems
-                  </div>
-                  <div className='text-sm text-gray-300'>
-                    Complete technical overview
-                  </div>
-                </Link>
-                <Link
-                  href='/blog/ai-2025-december-quantum-computing-<breakthrough'
-                  className='block p-4 bg-gradient-to-r from-purple-500/20 to-indigo-500/20 rounded-lg border border-purple-500/30 hover:border-purple-400/50 transition-colors'
+                  <div className="font-semibold text-blue-400">December 2025 Autonomous Systems</div>
+                  <div className="text-sm text-gray-300">Complete technical overview</div>
+                </ArrowRight>
+                <ArrowRight 
+                  href="/blog/ai-2025-december-quantum-computing-breakthrough" 
+                  className="block p-4 bg-gradient-to-r from-purple-500/20 to-indigo-500/20 rounded-lg border border-purple-500/30 hover:border-purple-400/50 transition-colors"
                 >
-                  <div className='font-semibold text-purple-400'>
-                    Quantum Computing Breakthrough
-                  </div>
-                  <div className='text-sm text-gray-300'>
-                    Next-generation computing
-                  </div>
-                </Link>
+                  <div className="font-semibold text-purple-400">Quantum Computing Breakthrough</div>
+                  <div className="text-sm text-gray-300">Next-generation computing</div>
+                </ArrowRight>
               </div>
             </div>
           </div>

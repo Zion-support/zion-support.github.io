@@ -163,32 +163,35 @@ export default function BlogPost() {/* return (
           <p className="text-left"> </p><div className="text-left"> </div><h3 className="text-left">🎯 Ready to Transform    Your    AI?</h3>"
           <p className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
             Join 500+ enterprises already achieving breakthrough results with our Advanced Neural Optimization Revolution. 
-               Schedule    a consultation to discover how your organization can achieve 1000x performance improvements.
-          </p></p>
-          <div className="text-left"> </div><Link 
-              href="/"
-              className="text-left">Schedule    Consultation
-            </Link></Link>
-            <Link 
-              href="/"
-              className="text-left">View Success    Stories
-            </Link></Link>
+            Schedule a consultation to discover how your organization can achieve 1000x performance improvements.
+          </p>
+          <div className="flex flex-wrap gap-4">
+            <ArrowRight 
+              href="/contact" 
+              className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-indigo-700 transition-all"
+            >
+              Schedule Consultation
+            </ArrowRight>
+            <ArrowRight 
+              href="/case-studies/ai-2026-neural-optimization-mega-success" 
+              className="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-green-700 hover:to-emerald-700 transition-all"
+            >
+              View Success Stories
+            </ArrowRight>
           </div>
-        <h3 className="text-left">Related    Content</h3>
-          <div className="text-left"> </div><Link href="/blog/ai-2026-quantum-enhanced-analytics" className="text-left">
-              <h4 className="text-left">Quantum-Enhanced Analytics: 1000x    Speed</h4>
-              <p className="text-left">Discover    how quantum computing is revolutionizing data analytics</p>
-            </Link>
-            <Link href="/case-studies/ai-2026-neural-optimization-mega-success" className="text-left">
-              <h4 className="text-left">$200M Neural Optimization    Success</h4>
-              <p className="text-left">Real   -world case study of massive ROI achievement</p>
-            <Link href="/blog/ai-2026-quantum-enhanced-analytics" className="text-left"> </Link><h4 className="text-left">Quantum-Enhanced Analytics: 1000x    Speed</h4>"
-              <p className="text-left">Discover    how quantum computing is revolutionizing data analytics</p>"
-            </Link>
-            <Link href="/case-studies/ai-2026-neural-optimization-mega-success" className="text-left"> </Link><h4 className="text-left">$200M Neural Optimization    Success</h4>"
-              <p className="text-left">Real   -world case study of massive ROI achievement</p>"
-origin/cursor/fix-errors-and-merge-to-main-cc0a
-            </Link>
+        </div>
+
+        <div className="border-t border-gray-700 pt-8 mt-12">
+          <h3 className="text-xl font-bold text-white mb-4">Related Content</h3>
+          <div className="grid md:grid-cols-2 gap-6">
+            <ArrowRight href="/blog/ai-2026-quantum-enhanced-analytics" className="block p-4 border border-gray-600 rounded-lg hover:border-purple-500 transition-colors">
+              <h4 className="font-semibold text-white mb-2">Quantum-Enhanced Analytics: 1000x Speed</h4>
+              <p className="text-gray-400 text-sm">Discover how quantum computing is revolutionizing data analytics</p>
+            </ArrowRight>
+            <ArrowRight href="/case-studies/ai-2026-neural-optimization-mega-success" className="block p-4 border border-gray-600 rounded-lg hover:border-green-500 transition-colors">
+              <h4 className="font-semibold text-white mb-2">$200M Neural Optimization Success</h4>
+              <p className="text-gray-400 text-sm">Real-world case study of massive ROI achievement</p>
+            </ArrowRight>
           </div>
       </div>
   );

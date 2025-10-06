@@ -18,12 +18,9 @@ export const metadata = {
 
 export default function GlobalEnterpriseAITransformationSuccess() {
   return (
-    <div className='max-w-4xl mx-auto px-4 py-8'>
-      <div className='mb-8'>
-        <Link
-          href='/case-<studies'
-          className='text-blue-600 hover:text-blue-800 mb-4 inline-block'
-        >
+    <div className="max-w-4xl mx-auto px-4 py-8">
+      <div className="mb-8">
+        <ArrowRight href="/case-studies" className="text-blue-600 hover:text-blue-800 mb-4 inline-block">
           ← Back to Case Studies
         </Link>
 
@@ -451,11 +448,11 @@ export default function GlobalEnterpriseAITransformationSuccess() {
             revolutionary AI technologies. Your organization can achieve similar
             results with the right strategy, technology, and execution.
           </p>
-
-          <div className='flex flex-wrap gap-4'>
-            <Link
-              href='/services/ai-autonomous-operations-<2026'
-              className='bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-200'
+          
+          <div className="flex flex-wrap gap-4">
+            <ArrowRight 
+              href="/services/ai-autonomous-operations-2026" 
+              className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-200"
             >
               Start Your Transformation
             </Link>
@@ -474,33 +471,17 @@ export default function GlobalEnterpriseAITransformationSuccess() {
           </div>
         </div>
 
-        <div className='border-t border-gray-200 pt-6'>
-          <h3 className='text-xl font-bold text-gray-900 mb-4'>
-            Related Success Stories
-          </h3>
-          <div className='grid md:grid-cols-2 gap-4'>
-            <Link
-              href='/case-studies/fortune-500-ai-transformation-mega-success-<2026'
-              className='block p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors'
-            >
-              <h4 className='font-semibold text-gray-900 mb-2'>
-                Fortune 500 AI Transformation Success
-              </h4>
-              <p className='text-sm text-gray-600'>
-                $300M ROI success story with AI implementation
-              </p>
-            </Link>
-            <Link
-              href='/case-studies/ai-2027-neuromorphic-breakthrough-<success'
-              className='block p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors'
-            >
-              <h4 className='font-semibold text-gray-900 mb-2'>
-                Neuromorphic AI Breakthrough Success
-              </h4>
-              <p className='text-sm text-gray-600'>
-                $750M success story with neuromorphic computing
-              </p>
-            </Link>
+        <div className="border-t border-gray-200 pt-6">
+          <h3 className="text-xl font-bold text-gray-900 mb-4">Related Success Stories</h3>
+          <div className="grid md:grid-cols-2 gap-4">
+            <ArrowRight href="/case-studies/fortune-500-ai-transformation-mega-success-2026" className="block p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
+              <h4 className="font-semibold text-gray-900 mb-2">Fortune 500 AI Transformation Success</h4>
+              <p className="text-sm text-gray-600">$300M ROI success story with AI implementation</p>
+            </ArrowRight>
+            <ArrowRight href="/case-studies/ai-2027-neuromorphic-breakthrough-success" className="block p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
+              <h4 className="font-semibold text-gray-900 mb-2">Neuromorphic AI Breakthrough Success</h4>
+              <p className="text-sm text-gray-600">$750M success story with neuromorphic computing</p>
+            </ArrowRight>
           </div>
         </div>
       </div>

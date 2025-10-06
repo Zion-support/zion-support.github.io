@@ -143,11 +143,11 @@ export default function FreshContent2027ShowcaseBanner() {
         </div>
 
         {/* Call to Action */}
-        <div className='text-center'>
-          <div className='inline-flex flex-wrap gap-4'>
-            <Link
-              href='/<blog'
-              className='bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-500 hover:to-blue-500 transition-all duration-300 transform hover:scale-105'
+        <div className="text-center">
+          <div className="inline-flex flex-wrap gap-4">
+            <ArrowRight 
+              href="/blog"
+              className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-500 hover:to-blue-500 transition-all duration-300 transform hover:scale-105"
             >
               Explore All Articles
             </Link>

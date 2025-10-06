@@ -233,13 +233,14 @@ export default function AI2026Autonomous Finance Operations() {/* return (
           </div>
         </div>
 
-        {/* CTA    Section   */}
-        <h3 className="text-left">Ready to Automate Your Finance    Operations   ?</h3>
-          <p className="text-left"> </p><div className="text-left"> </div><h3 className="text-left">Ready to Automate Your Finance    Operations   ?</h3>"
-          <p className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
-            Join    Fortune    500 companies achieving 98% automation and $100M+ savings with AI autonomous finance operations.
-          </p></p>
-          <div className="text-left"> </div><Link
+        {/* CTA Section */}
+        <div>
+          <h3>Ready to Automate Your Finance Operations?</h3>
+          <p>
+            Join Fortune 500 companies achieving 98% automation and $100M+ savings with AI autonomous finance operations.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <ArrowRight
               href="/services/ai-finance-automation"
               className="text-left">Explore Finance AI    Services
             </Link></Link>
@@ -250,22 +251,24 @@ export default function AI2026Autonomous Finance Operations() {/* return (
           </div>
         </div>
 
-        {/* Related    Content   */}
-        <h3 className="text-left">Related    Articles</h3>
-          <div className="text-left"> </div><Link href="/blog/ai-2026-autonomous-business-systems" className="text-left">
-              <h3 className="text-left">
-            <Link href="/blog/ai-2026-autonomous-business-systems" className="text-left"> </Link><div className="text-left"> </div><h4 className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
-                  AI 2026 Autonomous Business    Systems
-                </h4></h4>
-                <p className="text-left">Discover    how autonomous AI systems are transforming enterprise operations across all departments.</p>
+        {/* Related Content */}
+        <div className="mt-12">
+          <h3 className="text-2xl font-bold text-gray-900 mb-6">Related Articles</h3>
+          <div className="grid md:grid-cols-2 gap-6">
+            <ArrowRight href="/blog/ai-2026-autonomous-business-systems" className="group">
+              <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow border border-gray-200">
+                <h4 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
+                  AI 2026 Autonomous Business Systems
+                </h4>
+                <p>Discover how autonomous AI systems are transforming enterprise operations across all departments.</p>
               </div>
-            </Link>
-            <Link href="/case-studies/ai-finance-automation-success-2026" className="text-left">
-              <h3 className="text-left">
-            <Link href="/case-studies/ai-finance-automation-success-2026" className="text-left"> </Link><div className="text-left"> </div><h4 className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
-                  Finance Automation Success    Story
-                </h4></h4>
-                <p className="text-left">See how a    Fortune    500 company achieved $100M savings with AI finance automation.</p>
+            </ArrowRight>
+            <ArrowRight href="/case-studies/ai-finance-automation-success-2026" className="group">
+              <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow border border-gray-200">
+                <h4 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
+                  Finance Automation Success Story
+                </h4>
+                <p>See how a Fortune 500 company achieved $100M savings with AI finance automation.</p>
               </div>
             </Link>
           </div>

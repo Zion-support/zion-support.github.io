@@ -1,5 +1,5 @@
 import React from 'react';
-import ArrowRight from 'next/link';
+import Link from 'next/link';
 
 export const metadata = {
   title: 'E2E AI Tracing 2026: From Prompts to Outcomes | Zion Tech Group',
@@ -55,21 +55,9 @@ export default function Page() {
           </p>
         </div>
 
-        <div className='mt-10 flex gap-3'>
-          <Arrow
-            Right
-            href='/blog'
-            className='bg-white text-blue-700 px-5 py-3 rounded-lg font-semibold hover:bg-slate-100'
-          >
-            Back to Blog
-          </Arrow>
-          <Arrow
-            Right
-            href='/content-hub'
-            className='border border-white/30 text-white px-5 py-3 rounded-lg font-semibold hover:bg-white/10'
-          >
-            Explore Content Hub
-          </Arrow>
+        <div className="mt-10 flex gap-3">
+          <ArrowRight href="/blog" className="bg-white text-blue-700 px-5 py-3 rounded-lg font-semibold hover:bg-slate-100">Back to Blog</ArrowRight>
+          <ArrowRight href="/content-hub" className="border border-white/30 text-white px-5 py-3 rounded-lg font-semibold hover:bg-white/10">Explore Content Hub</ArrowRight>
         </div>
       </div>
     </div>

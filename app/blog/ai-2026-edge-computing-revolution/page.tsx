@@ -145,13 +145,14 @@ export default function AI2026Edge Computing Revolution() {/* return (
           </div>
         </div>
 
-        {/* CTA    Section   */}
-        <h3 className="text-left">Ready to Revolutionize Your Edge    Computing   ?</h3>
-          <p className="text-left"> </p><div className="text-left"> </div><h3 className="text-left">Ready to Revolutionize Your Edge    Computing   ?</h3>"
-          <p className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
-            Join    Fortune    500 companies achieving sub-10ms AI processing with our edge computing solutions.
-          </p></p>
-          <div className="text-left"> </div><Link
+        {/* CTA Section */}
+        <div>
+          <h3>Ready to Revolutionize Your Edge Computing?</h3>
+          <p>
+            Join Fortune 500 companies achieving sub-10ms AI processing with our edge computing solutions.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <ArrowRight
               href="/services/ai-edge-computing"
               className="text-left">Explore Edge AI    Services
             </Link></Link>
@@ -162,22 +163,24 @@ export default function AI2026Edge Computing Revolution() {/* return (
           </div>
         </div>
 
-        {/* Related    Content   */}
-        <h3 className="text-left">Related    Articles</h3>
-          <div className="text-left"> </div><Link href="/blog/ai-2026-autonomous-business-systems" className="text-left">
-              <h3 className="text-left">
-            <Link href="/blog/ai-2026-autonomous-business-systems" className="text-left"> </Link><div className="text-left"> </div><h4 className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
-                  AI 2026 Autonomous Business    Systems
-                </h4></h4>
-                <p className="text-left">Discover    how autonomous AI systems are transforming enterprise operations.</p>
+        {/* Related Content */}
+        <div className="mt-12">
+          <h3 className="text-2xl font-bold text-gray-900 mb-6">Related Articles</h3>
+          <div className="grid md:grid-cols-2 gap-6">
+            <ArrowRight href="/blog/ai-2026-autonomous-business-systems" className="group">
+              <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow border border-gray-200">
+                <h4 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
+                  AI 2026 Autonomous Business Systems
+                </h4>
+                <p>Discover how autonomous AI systems are transforming enterprise operations.</p>
               </div>
-            </Link>
-            <Link href="/case-studies/ai-edge-computing-success-2026" className="text-left">
-              <h3 className="text-left">
-            <Link href="/case-studies/ai-edge-computing-success-2026" className="text-left"> </Link><div className="text-left"> </div><h4 className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
-                  Edge Computing Success    Story
-                </h4></h4>
-                <p className="text-left">See how a    Fortune    500 company achieved $50M savings with edge AI.</p>
+            </ArrowRight>
+            <ArrowRight href="/case-studies/ai-edge-computing-success-2026" className="group">
+              <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow border border-gray-200">
+                <h4 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
+                  Edge Computing Success Story
+                </h4>
+                <p>See how a Fortune 500 company achieved $50M savings with edge AI.</p>
               </div>
             </Link>
           </div>

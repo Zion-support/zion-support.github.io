@@ -36,6 +36,26 @@ origin/cursor/fix-errors-and-merge-to-main-cc0a
               self-aware reasoning, cognitive introspection, and adaptive learning. The future of intelligent systems is here.
             </p>
             
+            {/* Key Stats */}
+            <div>
+              {[
+                { value: '95%',
+  label: 'Decision Accuracy',
+  icon: '🎯',
+  color: 'text-purple-400' },
+                { value: '1000x',
+  label: 'Reasoning Speed',
+  icon: '⚡',
+  color: 'text-blue-400' },
+                { value: '98%',
+  label: 'Learning Efficiency',
+  icon: '🧠',
+  color: 'text-green-400' }
+              ].map((stat, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20">
+                  <div className="text-4xl mb-3">{stat.icon}</div>
+                  <div className={`text-3xl font-bold ${stat.color}`}>
+                    {stat.value}
             {/* Key    Stats   */}
             <div className="text-left">{[
                 { value='95%', label: "Decision Accuracy", icon: "🎯", color: 'text-purple-400' },

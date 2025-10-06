@@ -368,10 +368,10 @@ export default function AI2027QuantumConsciousnessMegaSuccess() {
             proven AI solutions. Contact us today to secure your implementation
             slot and achieve unprecedented ROI.
           </p>
-          <div className='flex gap-4'>
-            <Link
-              href='/<contact'
-              className='bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors'
+          <div className="flex gap-4">
+            <ArrowRight 
+              href="/contact" 
+              className="bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
             >
               Get Started Today
             </Link>

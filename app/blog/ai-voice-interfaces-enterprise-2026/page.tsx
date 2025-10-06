@@ -1,5 +1,5 @@
 import React from 'react';
-import ArrowRight from 'next/link';
+import Link from 'next/link';
 
 export const metadata = {
   
@@ -7,15 +7,14 @@ export const metadata = {
   description:
     'Enterprise voice interfaces with 98% accuracy, multilingual support, and governance. Patterns for STT, TTS, latency budgets, and privacy.'};;
 
-export default function AIVoice Interfaces Enterprise2026Page() {return (<div className="min-h-screen bg-gradient-to-br from-slate-950 via-blue-950 to-indigo-950 text-white">
+export default function AIVoiceInterfacesEnterprise2026Page() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-blue-950 to-indigo-950 text-white">
       <main className="container mx-auto px-6 py-12">
         <nav className="mb-8">
-          <Arrow Right
-           href="/blog"
-           className="text-indigo-300 hover:text-indigo-200 transition-colors"
-          >
-            ← Back to    Blog
-          </Arrow>
+          <ArrowRight href="/blog" className="text-indigo-300 hover:text-indigo-200 transition-colors">
+            ← Back to Blog
+          </ArrowRight>
         </nav>
 
         <article Name="max-w-4xl mx-auto">
@@ -98,17 +97,9 @@ export default function AIVoice Interfaces Enterprise2026Page() {return (<div cl
           </div>
 
           <div className="mt-12 bg-white/5 border border-white/10 rounded-xl p-6">
-            <h3 className="text-xl font-bold mb-2">We    can help</h3>
-            <p className="text-white/80 mb-4">
-              From    pilot to global rollout, we harden voice AI with reliability
-              and privacy.
-            </p>
-            <Arrow Right
-             href="/contact"
-             className="text-indigo-300 hover:text-indigo-200 font-semibold"
-            >
-              Talk    to experts →
-            </Arrow>
+            <h3 className="text-xl font-bold mb-2">We can help</h3>
+            <p className="text-white/80 mb-4">From pilot to global rollout, we harden voice AI with reliability and privacy.</p>
+            <ArrowRight href="/contact" className="text-indigo-300 hover:text-indigo-200 font-semibold">Talk to experts →</ArrowRight>
           </div>
         </article>
       </main>

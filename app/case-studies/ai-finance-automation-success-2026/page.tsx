@@ -374,10 +374,10 @@ export default function AIFinanceAutomationSuccess2026() {
             solutions. Our proven methodology delivers 95% process automation
             and $15M+ ROI.
           </p>
-          <div className='flex flex-col sm:flex-row gap-4'>
-            <Link
-              href='/<contact'
-              className='bg-white text-green-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center'
+          <div className="flex flex-col sm:flex-row gap-4">
+            <ArrowRight
+              href="/contact"
+              className="bg-white text-green-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center"
             >
               Get Finance Automation Consultation
             </Link>
@@ -391,17 +391,12 @@ export default function AIFinanceAutomationSuccess2026() {
         </div>
       </div>
 
-      <div className='border-t border-gray-200 pt-8 mt-8'>
-        <h3 className='text-2xl font-bold text-gray-900 mb-6'>
-          Related Case Studies
-        </h3>
-        <div className='grid md:grid-cols-2 gap-6'>
-          <Link
-            href='/case-studies/ai-sustainability-transformation-<2026'
-            className='group'
-          >
-            <div className='bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow'>
-              <h4 className='text-lg font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors'>
+      <div className="border-t border-gray-200 pt-8 mt-8">
+        <h3 className="text-2xl font-bold text-gray-900 mb-6">Related Case Studies</h3>
+        <div className="grid md:grid-cols-2 gap-6">
+          <ArrowRight href="/case-studies/ai-sustainability-transformation-2026" className="group">
+            <div className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+              <h4 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
                 AI Sustainability Transformation 2026
               </h4>
               <p className='text-gray-600 text-sm'>
@@ -409,13 +404,10 @@ export default function AIFinanceAutomationSuccess2026() {
                 neutrality with AI sustainability.
               </p>
             </div>
-          </Link>
-          <Link
-            href='/case-studies/ai-quantum-optimization-<2026'
-            className='group'
-          >
-            <div className='bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow'>
-              <h4 className='text-lg font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors'>
+          </ArrowRight>
+          <ArrowRight href="/case-studies/ai-quantum-optimization-2026" className="group">
+            <div className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+              <h4 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
                 AI Quantum Optimization 2026
               </h4>
               <p className='text-gray-600 text-sm'>

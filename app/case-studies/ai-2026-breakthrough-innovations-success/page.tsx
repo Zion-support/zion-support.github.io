@@ -164,10 +164,10 @@ export default function AI2026BreakthroughInnovationsSuccessPage() {
             implement these cutting-edge technologies and achieve unprecedented
             results.
           </p>
-          <div className='flex flex-wrap gap-4'>
-            <Link
-              href='/<contact'
-              className='bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-indigo-700 transition-all'
+          <div className="flex flex-wrap gap-4">
+            <ArrowRight 
+              href="/contact" 
+              className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-indigo-700 transition-all"
             >
               Schedule Consultation
             </Link>

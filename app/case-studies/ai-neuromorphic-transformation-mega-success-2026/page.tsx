@@ -10,12 +10,9 @@ export const metadata = {
 
 export default function AINeuromorphicTransformationMegaSuccess2026() {
   return (
-    <div className='max-w-4xl mx-auto px-4 py-8'>
-      <div className='mb-8'>
-        <Link
-          href='/case-<studies'
-          className='text-blue-600 hover:text-blue-800 transition-colors'
-        >
+    <div className="max-w-4xl mx-auto px-4 py-8">
+      <div className="mb-8">
+        <ArrowRight href="/case-studies" className="text-blue-600 hover:text-blue-800 transition-colors">
           ← Back to Case Studies
         </Link>
       </div>
@@ -489,11 +486,11 @@ export default function AINeuromorphicTransformationMegaSuccess2026() {
             proven methodology and expertise can help your organization achieve
             unprecedented efficiency and performance gains.
           </p>
-
-          <div className='flex flex-col sm:flex-row gap-4'>
-            <Link
-              href='/<contact'
-              className='bg-gradient-to-r from-green-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-green-700 hover:to-blue-700 transition-all duration-200 text-center'
+          
+          <div className="flex flex-col sm:flex-row gap-4">
+            <ArrowRight 
+              href="/contact" 
+              className="bg-gradient-to-r from-green-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-green-700 hover:to-blue-700 transition-all duration-200 text-center"
             >
               Start Your Transformation
             </Link>
@@ -506,33 +503,17 @@ export default function AINeuromorphicTransformationMegaSuccess2026() {
           </div>
         </section>
 
-        <div className='border-t border-gray-200 pt-8 mt-8'>
-          <h3 className='text-lg font-semibold text-gray-900 mb-4'>
-            Related Case Studies
-          </h3>
-          <div className='grid md:grid-cols-2 gap-4'>
-            <Link
-              href='/case-studies/ai-mega-transformation-success-<2026'
-              className='block p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors'
-            >
-              <h4 className='font-semibold text-gray-900'>
-                💰 $150M AI Mega Transformation
-              </h4>
-              <p className='text-gray-600 text-sm'>
-                Another record-breaking AI implementation success
-              </p>
-            </Link>
-            <Link
-              href='/case-studies/ai-autonomous-business-systems-success-<2026'
-              className='block p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors'
-            >
-              <h4 className='font-semibold text-gray-900'>
-                🤖 Autonomous Business Systems
-              </h4>
-              <p className='text-gray-600 text-sm'>
-                Comprehensive autonomous AI transformation
-              </p>
-            </Link>
+        <div className="border-t border-gray-200 pt-8 mt-8">
+          <h3 className="text-lg font-semibold text-gray-900 mb-4">Related Case Studies</h3>
+          <div className="grid md:grid-cols-2 gap-4">
+            <ArrowRight href="/case-studies/ai-mega-transformation-success-2026" className="block p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+              <h4 className="font-semibold text-gray-900">💰 $150M AI Mega Transformation</h4>
+              <p className="text-gray-600 text-sm">Another record-breaking AI implementation success</p>
+            </ArrowRight>
+            <ArrowRight href="/case-studies/ai-autonomous-business-systems-success-2026" className="block p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+              <h4 className="font-semibold text-gray-900">🤖 Autonomous Business Systems</h4>
+              <p className="text-gray-600 text-sm">Comprehensive autonomous AI transformation</p>
+            </ArrowRight>
           </div>
         </div>
       </article>

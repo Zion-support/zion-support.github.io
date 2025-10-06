@@ -1,5 +1,5 @@
 import React from 'react';
-import ArrowRight from 'next/link';
+import Link from 'next/link';
 
 export default function AI Neuromorphic Breakthrough2026() {/* return (<article Name='min-h-screen bg-slate-950 text-white'>
       <div class Name Name='container mx-auto px-6 py-16'>
@@ -386,10 +386,10 @@ export default function AI Neuromorphic Breakthrough2026() {/* return (<article 
                 brain-inspired AI technology can transform your enterprise with
                 unprecedented efficiency and intelligence.
               </p>
-              <div class Name Name='flex flex-col sm:flex-row gap-4 justify-center'>
-                <Arrow Right
-                 href="/contact"
-                 class Name='bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-emerald-500/50 transform hover:-translate-y-1'
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <ArrowRight 
+                  href="/contact" 
+                  className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-emerald-500/50 transform hover:-translate-y-1"
                 >
                   Schedule Neuromorphic    Demo
                 </Arrow>
@@ -403,15 +403,13 @@ export default function AI Neuromorphic Breakthrough2026() {/* return (<article 
             </div>
           </section>
 
-          {/* Related    Content   */}
-          <section class Name Name='mb-16'>
-            <h2class Name='text-3xl font-bold mb-8 text-white'>
-              Related Neuromorphic    Breakthroughs
-            </h2>
-            <div class Name Name='grid md:grid-cols-3 gap-8'>
-              <Arrow Right
-               href="/blog/ai-2026-consciousness-fusion-breakthrough"
-               class Name='group bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-purple-500/50 transition-all duration-300 hover:transform hover:scale-105'
+          {/* Related Content */}
+          <section className="mb-16">
+            <h2 className="text-3xl font-bold mb-8 text-white">Related Neuromorphic Breakthroughs</h2>
+            <div className="grid md:grid-cols-3 gap-8">
+              <ArrowRight 
+                href="/blog/ai-2026-consciousness-fusion-breakthrough"
+                className="group bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-purple-500/50 transition-all duration-300 hover:transform hover:scale-105"
               >
                 <div class Name Name='text-4xl mb-4'>🧠</div>
                 <h3class Name='text-xl font-bold mb-3 text-white group-hover:text-purple-400 transition-colors'>
@@ -457,25 +455,16 @@ export default function AI Neuromorphic Breakthrough2026() {/* return (<article 
               <div class Name Name='text-gray-400 text-sm'>
                 © 2026 Zion Tech Group.    All    rights reserved.
               </div>
-              <div class Name Name='flex gap-6 text-sm'>
-                <Arrow Right
-                 href="/privacy"
-                 class Name='text-gray-400 hover:text-emerald-400 transition-colors'
-                >
-                  Privacy    Policy
-                </Arrow>
-                <Arrow Right
-                 href="/terms"
-                 class Name='text-gray-400 hover:text-emerald-400 transition-colors'
-                >
-                  Terms of    Service
-                </Arrow>
-                <Arrow Right
-                 href="/contact"
-                 class Name='text-gray-400 hover:text-emerald-400 transition-colors'
-                >
-                  Contact    Us
-                </Arrow>
+              <div className="flex gap-6 text-sm">
+                <ArrowRight href="/privacy" className="text-gray-400 hover:text-emerald-400 transition-colors">
+                  Privacy Policy
+                </ArrowRight>
+                <ArrowRight href="/terms" className="text-gray-400 hover:text-emerald-400 transition-colors">
+                  Terms of Service
+                </ArrowRight>
+                <ArrowRight href="/contact" className="text-gray-400 hover:text-emerald-400 transition-colors">
+                  Contact Us
+                </ArrowRight>
               </div>
             </div>
           </footer>

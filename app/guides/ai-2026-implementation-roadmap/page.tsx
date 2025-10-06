@@ -1,15 +1,8 @@
-import React from 'react';
 import Link from 'next/link';
-import {
-  ArrowLeft,
-  Calendar,
-  User,
-  Clock,
-  Tag,
-  Target,
-  CheckCircle,
-  ArrowRight,
-} from 'lucide-react';
+import { ArrowLeft, ArrowRight, Bookmark, Calendar, Clock, User } from 'lucide-react';
+
+
+
 
 export const metadata = {
   title:
@@ -24,25 +17,15 @@ export default function AI2026ImplementationRoadmap() {
   return (
     <div className='min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900'>
       {/* Header */}
-      <header className='relative overflow-hidden'>
-        <div className='absolute inset-0'>
-          <div className='absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl animate-pulse'></div>
-          <div
-            className='absolute top-3/4 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse'
-            style={{ animationDelay: '2s' }}
-          ></div>
-        </div>
-
-        <div className='relative z-10 container mx-auto px-4 py-16'>
-          <div className='mb-8'>
-            <Link
-              href='/'
-              className='group inline-flex items-center gap-2 text-cyan-400 hover:text-white transition-colors'
-            >
-              <ArrowLeft className='w-5 h-5 group-hover:-translate-x-1 transition-transform' />
-              Back to Home
-            </Link>
-          </div>
+      <header className="border-b border-gray-200 bg-white sticky top-0 z-50">
+        <div className="max-w-4xl mx-auto px-4 py-4">
+          <ArrowRight 
+            href="/" 
+            className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
+          >
+            <ArrowLeft className="w-5 h-5" />
+            Back to Home
+          </Link>
         </div>
       </header>
 
@@ -89,6 +72,9 @@ export default function AI2026ImplementationRoadmap() {
                 className='inline-flex items-center gap-2 px-4 py-2 bg-white/10 text-cyan-400 rounded-full text-sm font-semibold'
               >
                 <Tag className='w-4 h-4' />
+            {['AI Implementation', 'Enterprise AI', 'Digital Transformation', 'AI Strategy', '2026 Roadmap'].map((tag) => (
+              <span key={tag} className="inline-flex items-center gap-2 px-4 py-2 bg-cyan-500/20 text-cyan-300 rounded-full text-sm font-semibold border border-cyan-500/30">
+                <Tag className="w-4 h-4" />
                 {tag}
               </span>
             ))}
@@ -108,25 +94,48 @@ export default function AI2026ImplementationRoadmap() {
               deployment, ensuring your organization can successfully navigate
               the complex landscape of AI implementation.
             </p>
-            <div className='grid md:grid-cols-3 gap-6'>
-              <div className='text-center'>
-                <div className='text-3xl font-bold text-cyan-400 mb-2'>
-                  30,000%
-                </div>
-                <div className='text-gray-300'>Average ROI</div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <ArrowRight 
+                href="/case-studies/fortune-500-ai-transformation-success"
+                className="bg-white text-blue-600 px-8 py-4 rounded-full font-bold hover:bg-gray-100 transition-colors"
+              >
+                View Success Stories
+              </ArrowRight>
+              <ArrowRight 
+                href="/tools/ai-roi-calculator"
+                className="border-2 border-white text-white px-8 py-4 rounded-full font-bold hover:bg-white hover:text-blue-600 transition-colors"
+              >
+                Calculate Your ROI
+              </ArrowRight>
               </div>
-              <div className='text-center'>
-                <div className='text-3xl font-bold text-purple-400 mb-2'>
-                  18
+            ))}
+          </div>
+        </section>
+
+        {/* Detailed Implementation Steps */}
+        <section className="mb-16">
+          <h2 className="text-3xl font-bold text-white mb-8">Detailed Implementation Steps</h2>
+          
+          {/* Phase 1 */}
+          <div className="mb-12">
+            <h3 className="text-2xl font-bold text-cyan-400 mb-6">Phase 1: Strategy & Planning (Weeks 1-4)</h3>
+            <div className="space-y-6">
+              {[
+                { step: 'Assess Current State', description: 'Evaluate existing systems, data quality, and organizational readiness for AI implementation' },
+                { step: 'Define AI Objectives', description: 'Set clear, measurable goals aligned with business strategy and expected ROI' },
+                { step: 'Identify Use Cases', description: 'Prioritize AI applications based on impact, feasibility, and resource requirements' },
+                { step: 'Create Implementation Plan', description: 'Develop detailed timeline, budget, and resource allocation for AI projects' }
+              ].map((item, index) => (
+                <div key={index} className="flex gap-4">
+                  <div className="flex-shrink-0 w-8 h-8 bg-cyan-500 rounded-full flex items-center justify-center">
+                    <CheckCircle className="w-5 h-5 text-white" />
+                  </div>
+                  <div>
+                    <h4 className="text-lg font-semibold text-white mb-2">{item.step}</h4>
+                    <p className="text-gray-300">{item.description}</p>
+                  </div>
                 </div>
-                <div className='text-gray-300'>Months Timeline</div>
-              </div>
-              <div className='text-center'>
-                <div className='text-3xl font-bold text-green-400 mb-2'>
-                  99.8%
-                </div>
-                <div className='text-gray-300'>Success Rate</div>
-              </div>
+              ))}
             </div>
           </div>
 
@@ -294,7 +303,7 @@ export default function AI2026ImplementationRoadmap() {
               </div>
             </section>
           </div>
-        </div>
+        </section>
       </article>
     </div>
   );

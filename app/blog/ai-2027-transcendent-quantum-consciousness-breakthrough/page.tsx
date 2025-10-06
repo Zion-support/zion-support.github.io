@@ -291,16 +291,21 @@ export default function AI2027TranscendentQuantum Consciousness Breakthrough() {
           <p className="text-left"> </p><div className="text-left"> </div><h2 className="text-left">🚀 Ready to Transform Your    Enterprise   ?</h2>"
           <p className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
             Join the quantum consciousness revolution and unlock unprecedented value creation for your organization. 
-               Our    transcendent AI systems are ready to transform your enterprise operations.
-          </p></p>
-          <div className="text-left"> </div><Link 
-              href="/"
-              className="text-left">Schedule    Consultation
-            </Link></Link>
-            <Link 
-              href="/"
-              className="text-left">View Success    Story
-            </Link></Link>
+            Our transcendent AI systems are ready to transform your enterprise operations.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4">
+            <ArrowRight 
+              href="/contact" 
+              className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-6 py-3 rounded-lg font-semibold text-center hover:from-purple-600 hover:to-indigo-600 transition-all"
+            >
+              Schedule Consultation
+            </ArrowRight>
+            <ArrowRight 
+              href="/case-studies/ai-2027-transcendent-quantum-consciousness-847-billion-success" 
+              className="bg-white border border-gray-300 text-gray-700 px-6 py-3 rounded-lg font-semibold text-center hover:bg-gray-50 transition-all"
+            >
+              View Success Story
+            </ArrowRight>
           </div>
       </article>
   );

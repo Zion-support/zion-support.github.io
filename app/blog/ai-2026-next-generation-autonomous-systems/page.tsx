@@ -1,5 +1,5 @@
 import React from 'react';
-import ArrowRight from 'next/link';
+import Link from 'next/link';
 
 export default function BlogPost() {return (<div class Name Name='max-w-4xl mx-auto px-4 py-8'>
       <div class Name Name='mb-8'>

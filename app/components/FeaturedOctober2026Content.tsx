@@ -300,10 +300,10 @@ export default function FeaturedOctober2026Content() {
             Want to achieve similar results? Our AI experts can help you
             implement these strategies.
           </p>
-          <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-            <Link
-              href='/<contact'
-              className='inline-flex items-center justify-center bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-xl font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 hover:scale-105'
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <ArrowRight
+              href="/contact"
+              className="inline-flex items-center justify-center bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-xl font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 hover:scale-105"
             >
               Get Free AI Assessment
             </Link>

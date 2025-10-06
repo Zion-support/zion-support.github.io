@@ -1,3 +1,7 @@
+import Link from 'next/link';
+import { ArrowRight, BarChart3, Calculator, Cog, Shield, TrendingUp, User, Users, Zap } from 'lucide-react';
+
+
 import React from 'react';
 import Link from 'next/link';
 import {Cog,Zap,TrendingUp,Shield,Users,BarChart3} from 'lucide-react';
@@ -204,13 +208,14 @@ export default function AI2026Enterprise Automation Revolution() {/* return (
         </div>
       </div>
 
-      {/* Call to    Action   */}
-      <h3 className="text-left">Start Your Automation Revolution    Today</h2>
-        <p className="text-left"> </p><div className="text-left"> </div><h2 className="text-left">Start Your Automation Revolution    Today</h2>
-        <p className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
-             Join    the leading enterprises already transforming their operations with AI automation.
-        </p></p>
-        <div className="text-left"> </div><Link
+      {/* Call to Action */}
+      <div>
+        <h2>Start Your Automation Revolution Today</h2>
+        <p>
+          Join the leading enterprises already transforming their operations with AI automation.
+        </p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <Link
             href="/case-studies/ai-enterprise-automation-success-2026"
             className="text-left">View Success    Stories
           </Link></Link>
@@ -221,24 +226,28 @@ export default function AI2026Enterprise Automation Revolution() {/* return (
         </div>
       </div>
 
-      {/* Related    Content   */}
-      <h3 className="text-left">Related Automation    Content</h3>
-        <div className="text-left"> </div><Link href="/blog/ai-autonomous-operations-2026" className="text-left">
-            <h3 className="text-left">
-          <Link href="/blog/ai-autonomous-operations-2026" className="text-left"> </Link><div className="text-left"> </div><h4 className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
-                Autonomous Operations: The Future of    Business
-              </h4></h4>
-              <p className="text-left">Deep    dive into how autonomous systems are reshaping enterprise operations.
-              </p></p>
+      {/* Related Content */}
+      <div className="mt-12 pt-8 border-t border-gray-200">
+        <h3 className="text-2xl font-bold text-gray-900 mb-6">Related Automation Content</h3>
+        <div className="grid md:grid-cols-2 gap-6">
+          <Link href="/blog/ai-autonomous-operations-2026" className="group">
+            <div className="bg-gradient-to-r from-purple-50 to-pink-50 p-6 rounded-lg border border-purple-200 hover:shadow-lg transition-shadow">
+              <h4 className="font-semibold text-gray-900 group-hover:text-purple-600 mb-2">
+                Autonomous Operations: The Future of Business
+              </h4>
+              <p>
+                Deep dive into how autonomous systems are reshaping enterprise operations.
+              </p>
             </div>
           </Link>
-          <Link href="/case-studies/ai-automation-manufacturing-success-2026" className="text-left">
-            <h3 className="text-left">
-          <Link href="/case-studies/ai-automation-manufacturing-success-2026" className="text-left"> </Link><div className="text-left"> </div><h4 className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
-                Manufacturing Automation: 40% Cost    Reduction
-              </h4></h4>
-              <p className="text-left">Real   -world case study of AI automation transforming manufacturing operations.
-              </p></p>
+          <Link href="/case-studies/ai-automation-manufacturing-success-2026" className="group">
+            <div className="bg-gradient-to-r from-blue-50 to-green-50 p-6 rounded-lg border border-blue-200 hover:shadow-lg transition-shadow">
+              <h4 className="font-semibold text-gray-900 group-hover:text-blue-600 mb-2">
+                Manufacturing Automation: 40% Cost Reduction
+              </h4>
+              <p>
+                Real-world case study of AI automation transforming manufacturing operations.
+              </p>
             </div>
           </Link>
         </div>

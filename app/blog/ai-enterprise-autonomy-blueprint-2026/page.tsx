@@ -5,15 +5,14 @@ export const metadata = {
   description:
     'A practical blueprint to reach 70–95% autonomous operations with safety budgets, guardrails, and measurable ROI.'};;
 
-export default function AIEnterprise Autonomy Blueprint2026Page() {return (<div className="min-h-screen bg-gradient-to-br from-slate-950 via-blue-950 to-emerald-950text-white">
-      <main className="container mx-auto px-6py-12">
+export default function AIEnterpriseAutonomyBlueprint2026Page() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-blue-950 to-emerald-950 text-white">
+      <main className="container mx-auto px-6 py-12">
         <nav className="mb-8">
-          <Arrow Right
-           href="/blog"
-           className="text-emerald-300 hover:text-emerald-200 transition-colors"
-          >
-            ← Back to    Blog
-          </Arrow>
+          <ArrowRight href="/blog" className="text-emerald-300 hover:text-emerald-200 transition-colors">
+            ← Back to Blog
+          </ArrowRight>
         </nav>
 
         <article Name="max-w-4xl mx-auto">
@@ -79,19 +78,9 @@ export default function AIEnterprise Autonomy Blueprint2026Page() {return (<div 
           </div>
 
           <div className="mt-12 bg-white/5 border border-white/10 rounded-xl p-6">
-            <h3 className="text-xl font-bold mb-2">
-              Want    the blueprint implemented?
-            </h3>
-            <p className="text-white/80 mb-4">
-              We    design and deploy safe, autonomous enterprise workflows with
-              measurable ROI.
-            </p>
-            <Arrow Right
-             href="/contact"
-             className="text-emerald-300 hover:text-emerald-200 font-semibold"
-            >
-              Talk    to experts →
-            </Arrow>
+            <h3 className="text-xl font-bold mb-2">Want the blueprint implemented?</h3>
+            <p className="text-white/80 mb-4">We design and deploy safe, autonomous enterprise workflows with measurable ROI.</p>
+            <ArrowRight href="/contact" className="text-emerald-300 hover:text-emerald-200 font-semibold">Talk to experts →</ArrowRight>
           </div>
         </article>
       </main>

@@ -1,6 +1,9 @@
 import Link from 'next/link';
 import { ArrowRight, Brain, TrendingUp, Zap } from 'lucide-react';
 
+
+
+
 export default function RevolutionaryContent2026Banner() {
   return (
     <div className='w-full bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 text-white py-16'>
@@ -22,13 +25,10 @@ export default function RevolutionaryContent2026Banner() {
 
         <div className='grid md:grid-cols-3 gap-8 mb-12'>
           {/* Revolutionary Breakthrough Article */}
-          <Link
-            href='/blog/ai-2026-revolutionary-breakthrough'
-            className='group'
-          >
-            <div className='bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 hover:scale-105'>
-              <div className='flex items-center gap-2 mb-4'>
-                <span className='bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-semibold'>
+          <ArrowRight href="/blog/ai-2026-revolutionary-breakthrough" className="group">
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 hover:scale-105">
+              <div className="flex items-center gap-2 mb-4">
+                <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-semibold">
                   BREAKTHROUGH
                 </span>
                 <span className='text-sm opacity-75'>25 min read</span>
@@ -60,13 +60,10 @@ export default function RevolutionaryContent2026Banner() {
           </Link>
 
           {/* Cognitive Superintelligence Article */}
-          <Link
-            href='/blog/ai-cognitive-superintelligence-2026'
-            className='group'
-          >
-            <div className='bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 hover:scale-105'>
-              <div className='flex items-center gap-2 mb-4'>
-                <span className='bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-semibold'>
+          <ArrowRight href="/blog/ai-cognitive-superintelligence-2026" className="group">
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 hover:scale-105">
+              <div className="flex items-center gap-2 mb-4">
+                <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-semibold">
                   SUPERINTELLIGENCE
                 </span>
                 <span className='text-sm opacity-75'>32 min read</span>
@@ -100,13 +97,10 @@ export default function RevolutionaryContent2026Banner() {
           </Link>
 
           {/* Mega Transformation Case Study */}
-          <Link
-            href='/case-studies/ai-mega-transformation-success-2026'
-            className='group'
-          >
-            <div className='bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 hover:scale-105'>
-              <div className='flex items-center gap-2 mb-4'>
-                <span className='bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-semibold'>
+          <ArrowRight href="/case-studies/ai-mega-transformation-success-2026" className="group">
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 hover:scale-105">
+              <div className="flex items-center gap-2 mb-4">
+                <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-semibold">
                   $150M ROI
                 </span>
                 <span className='text-sm opacity-75'>18 min read</span>
@@ -154,18 +148,18 @@ export default function RevolutionaryContent2026Banner() {
               <span className='font-semibold'>$150M+ ROI</span>
             </div>
           </div>
-
-          <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-            <Link
-              href='/blog'
-              className='bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors inline-flex items-center justify-center'
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <ArrowRight
+              href="/blog"
+              className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors inline-flex items-center justify-center"
             >
               Explore All Revolutionary Content
-              <ArrowRight className='w-5 h-5 ml-2' />
-            </Link>
-            <Link
-              href='/services'
-              className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-purple-600 transition-colors inline-flex items-center justify-center'
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </ArrowRight>
+            <ArrowRight
+              href="/services"
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-purple-600 transition-colors inline-flex items-center justify-center"
             >
               Start Your AI Transformation
             </Link>

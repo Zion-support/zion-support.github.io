@@ -16,12 +16,9 @@ export const metadata = {
 
 export default function AI2027RevolutionaryBreakthroughSuccess() {
   return (
-    <div className='max-w-4xl mx-auto px-4 py-12'>
-      <div className='mb-8'>
-        <Link
-          href='/case-<studies'
-          className='text-blue-600 hover:text-blue-800 transition-colors'
-        >
+    <div className="max-w-4xl mx-auto px-4 py-12">
+      <div className="mb-8">
+        <ArrowRight href="/case-studies" className="text-blue-600 hover:text-blue-800 transition-colors">
           ← Back to Case Studies
         </Link>
       </div>
@@ -404,10 +401,10 @@ export default function AI2027RevolutionaryBreakthroughSuccess() {
               Join 200+ companies achieving breakthrough results with AI 2027
               technology
             </p>
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-              <Link
-                href='/<contact'
-                className='bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors'
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <ArrowRight
+                href="/contact"
+                className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
                 Get Started Today
               </Link>

@@ -1,3 +1,13 @@
+import Link from 'next/link';
+import { ArrowRight, Brain, Cpu, Target, TrendingUp, Zap } from 'lucide-react';
+
+
+import { ArrowRight } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Cpu } from 'lucide-react';
+import { Target } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
 import React from 'react';
 import Link from 'next/link';
 import {ArrowRight,Zap,Brain,Cpu,Target,TrendingUp} from 'lucide-react';
@@ -20,8 +30,9 @@ export default function Quantum Neural Superintelligence2026() {/* return (
             </h1>
             <p className="text-left">Witness    the convergence of quantum computing and neural networks in a revolutionary breakthrough that creates 
               the world's first quantum neural superintelligence—capable of solving problems beyond the reach of classical AI.
-            </p></p>
-            <div className="text-left"> </div><Link 
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link 
                 href="/case-studies/ai-2026-quantum-neural-superintelligence-25-billion-success"
                 className="text-left">View $25B Success Case    Study
                 </Link><Arrow Right className="text-left" /> </Arrow></Link>
@@ -205,10 +216,12 @@ export default function Quantum Neural Superintelligence2026() {/* return (
       <div className="text-left"> </div><div className="text-left"> </div><h2 className="text-left">Ready to    Experience </h2><span className="text-left">Quantum    Superintelligence<?"
 origin/cursor/fix-errors-and-merge-to-main-cc0a
           </h2>
-          <p className="text-left">Transform your organization with the power of quantum neural superintelligence. 
-               Join    the quantum revolution and unlock solutions to problems that were previously unsolvable.
-          </p></p>
-          <div className="text-left"> </div><Link 
+          <p>
+            Transform your organization with the power of quantum neural superintelligence. 
+            Join the quantum revolution and unlock solutions to problems that were previously unsolvable.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link 
               href="/contact"
               className="text-left">Schedule Quantum    Consultation
               </Link><Arrow Right className="text-left" /> </Arrow></Link>
