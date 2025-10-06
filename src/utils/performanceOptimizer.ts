@@ -90,6 +90,57 @@ export class PerformanceOptimizer {
     return Object.fromEntries(this.metrics);
   }
 
+  // Add critical resource hints
+  addCriticalResourceHints(): void {
+    if (typeof document === 'undefined') return;
+    
+    const hints = [
+      { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' },
+      { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com' },
+      { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+      { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossOrigin: 'anonymous' }
+    ];
+    
+    hints.forEach(hint => {
+      const link = document.createElement('link');
+      link.rel = hint.rel;
+      link.href = hint.href;
+      if (hint.crossOrigin) {
+        link.crossOrigin = hint.crossOrigin;
+      }
+      document.head.appendChild(link);
+    });
+  }
+
+  // Measure page load performance
+  measurePageLoad(): Record<string, number> | null {
+    if (typeof window === 'undefined' || !window.performance) {
+      return null;
+    }
+
+    const timing = window.performance.timing;
+    const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+    
+    return {
+      domContentLoaded: timing.domContentLoadedEventEnd - timing.navigationStart,
+      loadComplete: timing.loadEventEnd - timing.navigationStart,
+      firstPaint: navigation ? navigation.loadEventEnd - navigation.startTime : 0,
+      firstContentfulPaint: navigation ? navigation.loadEventEnd - navigation.startTime : 0
+    };
+  }
+
+  // Report web vitals
+  reportWebVitals(metrics: Record<string, number>): void {
+    if (process.env.NODE_ENV === 'development') {
+      console.log('Web Vitals:', metrics);
+    }
+    
+    // Store metrics for analysis
+    Object.entries(metrics).forEach(([key, value]) => {
+      this.metrics.set(key, value);
+    });
+  }
+
   // Initialize all optimizations
   initialize(): void {
     this.measurePerformance('lazyLoadImages', () => this.lazyLoadImages());
@@ -98,7 +149,6 @@ export class PerformanceOptimizer {
   }
 }
 
-<<<<<<< HEAD
 /**
  * Critical resource hints for better performance
  */
@@ -123,55 +173,5 @@ export const addCriticalResourceHints = (): void => {
   });
 };
 
-export const checkPerformanceBudget = (budget: PerformanceBudget): {
-  passed: boolean;
-  violations: string[];
-} => {
-  const violations: string[] = [];
-  
-  if (typeof window === 'undefined' || !window.performance) {
-    return { passed: true, violations };
-  }
-  
-  const timing = window.performance.timing;
-  const loadTime = timing.loadEventEnd - timing.navigationStart;
-  const interactiveTime = timing.domInteractive - timing.navigationStart;
-  
-  if (loadTime > budget.maxFirstLoad) {
-    violations.push(`First load time (${loadTime}ms) exceeds budget (${budget.maxFirstLoad}ms)`);
-  }
-  
-  if (interactiveTime > budget.maxInteractive) {
-    violations.push(`Time to interactive (${interactiveTime}ms) exceeds budget (${budget.maxInteractive}ms)`);
-  }
-  
-  return {
-    passed: violations.length === 0,
-    violations
-  };
-};
-
-export default {
-  prefetchResources,
-  preconnectDomains,
-  lazyLoadImages,
-  debounce,
-  throttle,
-  measurePageLoad,
-  reportWebVitals,
-  shouldUseWebP,
-  getConnectionQuality,
-  shouldLoadHeavyAssets,
-  requestIdleCallback,
-  cancelIdleCallback,
-  preloadRoute,
-  monitorLongTasks,
-  cacheStaticAssets,
-  clearOldCaches,
-  checkPerformanceBudget,
-  addCriticalResourceHints
-};
-=======
 // Export singleton instance
 export const performanceOptimizer = PerformanceOptimizer.getInstance();
->>>>>>> origin/merge-all-fixes
