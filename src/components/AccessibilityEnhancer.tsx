@@ -99,18 +99,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     document.head.appendChild(style);
   };
 
-  const toggleHighContrast = () => {
-    const newHighContrast = !isHighContrast;
-    setIsHighContrast(newHighContrast);
-    localStorage.setItem('highContrast', newHighContrast.toString());
-    applyAccessibilityStyles(newHighContrast, fontSize, reducedMotion);
-  };
-
-  const changeFontSize = (newSize: 'small' | 'normal' | 'large') => {
-    setFontSize(newSize);
-    localStorage.setItem('fontSize', newSize);
-    applyAccessibilityStyles(isHighContrast, newSize, reducedMotion);
-  };
 
   return (
     <>
