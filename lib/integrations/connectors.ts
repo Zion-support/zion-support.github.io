@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { ProviderConnection, SyncLogEntry } from './types';
 <<<<<<< HEAD
 // import { v4 as uuidv4 } from 'uuid';
@@ -38,6 +39,13 @@ import { v4 as uuidv4 } from 'uuid';
 import type { ProviderConnection, SyncLogEntry } from './types';
 import { v4 as uuidv4 } from 'uuid';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-3fed
+=======
+import type { ProviderConnection, SyncLogEntry } from './types';
+// Simple UUID generator since uuid package is not available
+const generateId = (): string => {
+  return Math.random().toString(36).substr(2, 9);
+};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f83
 
 export async function simulateAction<T = any>(
   connection: ProviderConnection,
@@ -45,6 +53,7 @@ export async function simulateAction<T = any>(
   details: Record<string, any> = {}
 ): Promise<{ log: SyncLogEntry; result: T }> {
   const log: SyncLogEntry = {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -59,12 +68,16 @@ export async function simulateAction<T = any>(
 =======
     id: uuidv4(),
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-3fed
+=======
+    id: generateId(),
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f83
     timestamp: Date.now(),
     providerId: connection.providerId,
     level: 'info',
     action,
     details
   };
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -81,12 +94,16 @@ export async function simulateAction<T = any>(
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-3fed
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f83
   // In a real implementation, call provider SDK/API here using connection.accessToken
   return {
     log,
     result: { ok: true } as unknown as T
   };
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -181,15 +198,25 @@ export const ats = {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-8344
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-3fed
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f83
 
 // CRM actions
 export const crm = {
   async syncContact(connection: ProviderConnection, contact: Record<string, any>) {
     return simulateAction(connection, 'crm.syncContact', { contact });
   },
+<<<<<<< HEAD
   async addProjectNote(connection: ProviderConnection, note: Record<string, any>) {
     return simulateAction(connection, 'crm.addProjectNote', { note });
   },
+=======
+
+  async addProjectNote(connection: ProviderConnection, note: Record<string, any>) {
+    return simulateAction(connection, 'crm.addProjectNote', { note });
+  },
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f83
   async addEmailTouchpoint(connection: ProviderConnection, touch: Record<string, any>) {
     return simulateAction(connection, 'crm.addEmailTouchpoint', { touch });
   }
@@ -200,6 +227,7 @@ export const ats = {
   async pushApplicant(connection: ProviderConnection, applicant: Record<string, any>) {
     return simulateAction(connection, 'ats.pushApplicant', { applicant });
   },
+<<<<<<< HEAD
   async updateStatus(connection: ProviderConnection, change: Record<string, any>) {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -211,6 +239,10 @@ export const ats = {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-8344
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-3fed
+=======
+
+  async updateStatus(connection: ProviderConnection, change: Record<string, any>) {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f83
     return simulateAction(connection, 'ats.updateStatus', { change });
   }
 };

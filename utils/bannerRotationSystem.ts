@@ -59,8 +59,11 @@ const getBannerImpressions = (): BannerImpression[] => {
  * Store impressions
  */
 <<<<<<< HEAD
+<<<<<<< HEAD
 const storeImpressions = (impressions: BannerImpression[]): void => {
 =======
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f83
 export const recordBannerImpression = (impression: Omit<BannerImpression, 'timestamp' | 'sessionId'>) => {
   if (typeof window === 'undefined') return;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
@@ -134,6 +137,7 @@ export const shouldShowBanner = (banner: BannerConfig): boolean => {
  * Get rotation score for banner prioritization
  */
 <<<<<<< HEAD
+<<<<<<< HEAD
 export const getRotationScore = (banner: BannerConfig): number => {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -184,6 +188,8 @@ export const getRotationScore = (banner: BannerConfig): number => {
 
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f83
 export const selectBannersForRotation = (allBanners: BannerConfig[], maxBanners: number = MAX_VISIBLE_BANNERS): BannerConfig[] => {
   // Calculate scores for all banners
   const scoredBanners = allBanners.map(banner => ({

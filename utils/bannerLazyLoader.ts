@@ -4,7 +4,11 @@
  * Optimizes banner loading by implementing lazy loading and code splitting
  * to improve initial page load performance.
  */
+<<<<<<< HEAD
 import { lazy } from 'react';
+=======
+import React, { lazy } from 'react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f83
 import type { ComponentType } from 'react';
 
 interface BannerModule {
@@ -27,6 +31,7 @@ export const lazyLoadBanner = (
           importFn()
             .then(resolve)
             .catch(retryError => {
+<<<<<<< HEAD
               console.error(
                 `Retry failed for banner: ${componentName}`,
 <<<<<<< HEAD
@@ -49,10 +54,17 @@ export const lazyLoadBanner = (
                 },
               });
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-3fed
+=======
+              console.error(`Retry failed for banner: ${componentName}`, retryError);
+              // Return a fallback component
+              resolve({
+                default: () => React.createElement('div', null, 'Banner temporarily unavailable')
+              } as BannerModule);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f83
             });
         }, 1000);
       });
-    }),
+    })
   );
 };
 
@@ -60,6 +72,7 @@ export const lazyLoadBanner = (
  * Preload banner components for better performance
  */
 export const preloadBanner = (importFn: () => Promise<BannerModule>): void => {
+<<<<<<< HEAD
   if (typeof window !== 'undefined') {
     // Use requestIdleCallback for non-blocking preloading
     if ('requestIdleCallback' in window) {
@@ -98,12 +111,18 @@ export const getBannerPriority = (bannerName: string): number => {
 export const sortBannersByPriority = (bannerNames: string[]): string[] => {
   return [...bannerNames].sort((a, b) => {
     return getBannerPriority(a) - getBannerPriority(b);
+=======
+  // Preload in the background
+  importFn().catch(error => {
+    console.warn('Banner preload failed:', error);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f83
   });
 };
 
 /**
- * Intersection Observer for lazy rendering banners
+ * Banner loading state management
  */
+<<<<<<< HEAD
 export class BannerObserver {
   private observer: IntersectionObserver | null = null;
   private loadedBanners = new Set<string>();
@@ -271,3 +290,63 @@ export default {
   loadBanners,
 };
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-3fed
+=======
+export class BannerLoader {
+  private static loadingStates = new Map<string, boolean>();
+  private static loadedComponents = new Set<string>();
+
+  static setLoading(componentName: string, isLoading: boolean): void {
+    this.loadingStates.set(componentName, isLoading);
+  }
+
+  static isLoading(componentName: string): boolean {
+    return this.loadingStates.get(componentName) || false;
+  }
+
+  static setLoaded(componentName: string): void {
+    this.loadedComponents.add(componentName);
+    this.setLoading(componentName, false);
+  }
+
+  static isLoaded(componentName: string): boolean {
+    return this.loadedComponents.has(componentName);
+  }
+
+  static reset(): void {
+    this.loadingStates.clear();
+    this.loadedComponents.clear();
+  }
+}
+
+/**
+ * Banner priority management
+ */
+export const bannerPriority = {
+  HIGH: 'high',
+  MEDIUM: 'medium',
+  LOW: 'low'
+} as const;
+
+export type BannerPriority = typeof bannerPriority[keyof typeof bannerPriority];
+
+/**
+ * Load banners based on priority
+ */
+export const loadBannersByPriority = (
+  banners: Array<{
+    name: string;
+    priority: BannerPriority;
+    importFn: () => Promise<BannerModule>;
+  }>
+): void => {
+  const sortedBanners = banners.sort((a, b) => {
+    const priorityOrder = { high: 0, medium: 1, low: 2 };
+    return priorityOrder[a.priority] - priorityOrder[b.priority];
+  });
+
+  sortedBanners.forEach(({ name, importFn }) => {
+    BannerLoader.setLoading(name, true);
+    preloadBanner(importFn);
+  });
+};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f83

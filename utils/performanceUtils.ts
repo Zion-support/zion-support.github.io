@@ -2,6 +2,7 @@
  * Performance Utilities
  */
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 // Debounce function for performance optimization
 <<<<<<< HEAD
@@ -13,11 +14,17 @@ export const debounce = <T extends (...args: any[]) => any>(
 =======
 export const debounce = <T extends (...args: any[]) => any>(
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
+=======
+
+// Debounce function for performance optimization
+export const debounce = <T extends (...args: any[]) => any>(
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f83
   func: T,
   wait: number,
   immediate = false
 ): ((...args: Parameters<T>) => void) => {
   let timeout: NodeJS.Timeout | null = null;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -28,6 +35,9 @@ export const debounce = <T extends (...args: any[]) => any>(
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a4f
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
+=======
+  
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f83
   return function executedFunction(...args: Parameters<T>) {
     const later = () => {
       timeout = null;
@@ -42,6 +52,7 @@ export const debounce = <T extends (...args: any[]) => any>(
 };
 
 // Throttle function for performance optimization
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 export const throttle = <T extends (...args: unknown[]) => unknown>(
@@ -59,11 +70,14 @@ export const throttle = <T extends (...args: unknown[]) => unknown>(
 =======
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f83
 export const throttle = <T extends (...args: any[]) => any>(
   func: T,
   limit: number
 ): ((...args: Parameters<T>) => void) => {
   let inThrottle: boolean;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   return function executedFunction(...args: Parameters<T>) {
@@ -85,10 +99,19 @@ export const throttle = <T extends (...args: any[]) => any>(
       inThrottle = true;
       setTimeout(() => (inThrottle = false), limit);
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
+=======
+  
+  return function executedFunction(...args: Parameters<T>) {
+    if (!inThrottle) {
+      func(...args);
+      inThrottle = true;
+      setTimeout(() => (inThrottle = false), limit);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f83
     }
     setTimeout(() => (inThrottle = false), limit);
   };
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -385,8 +408,86 @@ export const optimizeScrollPerformance = (): void => {
     if (!ticking) {
       requestAnimationFrame(updateScrollPosition);
       ticking = true;
+=======
+
+// Performance monitoring class
+export class PerformanceMonitor {
+  private metrics: Map<string, number> = new Map();
+  private observers: PerformanceObserver[] = [];
+
+  constructor() {
+    this.initializeObservers();
+  }
+
+  private initializeObservers(): void {
+    if (typeof window === 'undefined') return;
+
+    // Observe LCP
+    try {
+      const lcpObserver = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      const lastEntry = entries[entries.length - 1];
+      if (lastEntry) {
+        this.metrics.set('LCP', lastEntry.startTime);
+      }
+      });
+      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+      this.observers.push(lcpObserver);
+    } catch (e) {
+      console.warn('LCP observer not supported');
     }
+
+    // Observe FID
+    try {
+      const fidObserver = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      entries.forEach((entry) => {
+        if ('processingStart' in entry) {
+          this.metrics.set('FID', (entry as any).processingStart - entry.startTime);
+        }
+      });
+      });
+      fidObserver.observe({ entryTypes: ['first-input'] });
+      this.observers.push(fidObserver);
+    } catch (e) {
+      console.warn('FID observer not supported');
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f83
+    }
+  }
+
+  getMetrics(): Record<string, number> {
+    return Object.fromEntries(this.metrics);
+  }
+
+  disconnect(): void {
+    this.observers.forEach(observer => observer.disconnect());
+  }
+}
+
+// Memory usage utility
+export const getMemoryUsage = (): any => {
+  if (typeof window === 'undefined' || !('memory' in performance)) {
+    return null;
+  }
+  
+  return (performance as any).memory;
+};
+
+// Collect performance metrics
+export const collectPerformanceMetrics = (): any => {
+  if (typeof window === 'undefined') return null;
+
+  const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+  
+  return {
+    dns: navigation.domainLookupEnd - navigation.domainLookupStart,
+    tcp: navigation.connectEnd - navigation.connectStart,
+    request: navigation.responseEnd - navigation.requestStart,
+    response: navigation.responseEnd - navigation.responseStart,
+    dom: navigation.domContentLoadedEventEnd - (navigation.activationStart || 0),
+    load: navigation.loadEventEnd - (navigation.activationStart || 0)
   };
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   window.addEventListener('scroll', requestTick, { passive: true });
@@ -458,11 +559,29 @@ export const optimizeBundleSize = {
     exports.forEach(exportName => {
       if (module[exportName]) {
         result[exportName] = module[exportName];
+=======
+};
+
+// Lazy load images
+export const lazyLoadImages = (): void => {
+  if (typeof window === 'undefined') return;
+
+  const images = document.querySelectorAll('img[data-src]');
+  const imageObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const img = entry.target as HTMLImageElement;
+        img.src = img.dataset['src'] || '';
+        img.removeAttribute('data-src');
+        imageObserver.unobserve(img);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f83
       }
     });
-    return result;
-  },
+  });
+
+  images.forEach(img => imageObserver.observe(img));
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 // Performance monitoring
 =======
@@ -619,11 +738,22 @@ export const lazyLoadImages = (): void => {
 export const preloadCriticalResources = (resources: string[]): void => {
   if (typeof window === 'undefined') return;
   
+=======
+
+// Preload critical resources
+export const preloadCriticalResources = (resources: string[] = []): void => {
+  if (typeof document === 'undefined') return;
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f83
   resources.forEach(resource => {
     const link = document.createElement('link');
     link.rel = 'preload';
     link.href = resource;
+<<<<<<< HEAD
     link.as = 'script';
+=======
+    link.as = resource.endsWith('.css') ? 'style' : 'script';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f83
     document.head.appendChild(link);
   });
 };
@@ -631,20 +761,29 @@ export const preloadCriticalResources = (resources: string[]): void => {
 // Optimize scroll performance
 export const optimizeScrollPerformance = (): void => {
   if (typeof window === 'undefined') return;
+<<<<<<< HEAD
   
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f83
   let ticking = false;
   
   const updateScrollPosition = () => {
     // Scroll optimization logic here
     ticking = false;
   };
+<<<<<<< HEAD
   
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f83
   const requestTick = () => {
     if (!ticking) {
       requestAnimationFrame(updateScrollPosition);
       ticking = true;
     }
   };
+<<<<<<< HEAD
   
   window.addEventListener('scroll', requestTick, { passive: true });
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
@@ -652,3 +791,26 @@ export const optimizeScrollPerformance = (): void => {
 =======
 };
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-3fed
+=======
+
+  window.addEventListener('scroll', requestTick, { passive: true });
+};
+
+// Performance budget checker
+export interface PerformanceBudget {
+  maxBundleSize: number;
+  maxImageSize: number;
+  maxFirstLoad: number;
+  maxInteractive: number;
+}
+
+export const checkPerformanceBudget = (budget: PerformanceBudget): boolean => {
+  const metrics = collectPerformanceMetrics();
+  if (!metrics) return true;
+
+  return (
+    metrics.load <= budget.maxFirstLoad &&
+    metrics.dom <= budget.maxInteractive
+  );
+};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f83

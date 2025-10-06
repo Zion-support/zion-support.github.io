@@ -112,10 +112,13 @@ export const BANNER_REGISTRY: BannerConfig[] = [
  * Get banners by category
  */
 <<<<<<< HEAD
+<<<<<<< HEAD
 export const getBannersByCategory = (category: BannerConfig['category']): BannerConfig[] => {
   return BANNER_REGISTRY.filter(banner => banner.category === category && banner.enabled);
 };
 =======
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f83
 export function getBannersByCategory(category: BannerConfig['category']): BannerConfig[] {
   return BANNER_REGISTRY.filter(banner => banner.category === category && banner.enabled);
 }
@@ -126,6 +129,7 @@ export function getBannersByCategory(category: BannerConfig['category']): Banner
  */
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 export const getBannersByPriority = (minPriority: number, maxPriority: number): BannerConfig[] => {
   return BANNER_REGISTRY.filter(
@@ -133,6 +137,8 @@ export const getBannersByPriority = (minPriority: number, maxPriority: number): 
              banner.priority <= maxPriority && 
              banner.enabled
 =======
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f83
 export function getBannersByPriority(minPriority: number, maxPriority: number): BannerConfig[] {
   return BANNER_REGISTRY.filter(banner =>
       banner.priority >= minPriority &&

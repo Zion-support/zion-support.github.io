@@ -68,9 +68,12 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
   }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-3fed
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f83
   override render() {
     if (this.state.hasError) {
       return (

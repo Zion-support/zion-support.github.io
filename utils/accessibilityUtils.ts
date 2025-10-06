@@ -8,10 +8,14 @@ export const focusManagement = {
   trapFocus: (element: HTMLElement): (() => void) => {
     const focusableElements = element.querySelectorAll(
 <<<<<<< HEAD
+<<<<<<< HEAD
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
 =======
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])',
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-3fed
+=======
+      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f83
     );
     const firstElement = focusableElements[0] as HTMLElement;
     const lastElement = focusableElements[
@@ -43,6 +47,7 @@ export const focusManagement = {
   },
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
   },
@@ -66,11 +71,33 @@ export const focusManagement = {
       mainElement.focus();
       mainElement.scrollIntoView();
     }
+=======
+
+  // Move focus to next focusable element
+  focusNext: (currentElement: HTMLElement): void => {
+    const focusableElements = document.querySelectorAll(
+      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])',
+    );
+    const currentIndex = Array.from(focusableElements).indexOf(currentElement);
+    const nextElement = focusableElements[currentIndex + 1] as HTMLElement;
+    nextElement?.focus();
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f83
   },
+
+  // Move focus to previous focusable element
+  focusPrevious: (currentElement: HTMLElement): void => {
+    const focusableElements = document.querySelectorAll(
+      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])',
+    );
+    const currentIndex = Array.from(focusableElements).indexOf(currentElement);
+    const previousElement = focusableElements[currentIndex - 1] as HTMLElement;
+    previousElement?.focus();
+  }
 };
 
 // ARIA utilities
 export const ariaUtils = {
+<<<<<<< HEAD
   // Generate unique IDs for ARIA relationships
   generateId: (prefix: string = 'aria'): string => {
     return `${prefix}-${Math.random().toString(36).substr(2, 9)}`;
@@ -85,10 +112,15 @@ export const ariaUtils = {
 
   // Announce to screen readers
   announce: (message: string, priority: 'polite' | 'assertive' = 'polite'): void => {
+=======
+  // Announce text to screen readers
+  announce: (text: string, priority: 'polite' | 'assertive' = 'polite'): void => {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f83
     const announcement = document.createElement('div');
     announcement.setAttribute('aria-live', priority);
     announcement.setAttribute('aria-atomic', 'true');
     announcement.className = 'sr-only';
+<<<<<<< HEAD
     announcement.textContent = message;
     
     document.body.appendChild(announcement);
@@ -100,12 +132,27 @@ export const ariaUtils = {
 =======
     
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-3fed
+=======
+    announcement.textContent = text;
+    
+    document.body.appendChild(announcement);
+    
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f83
     setTimeout(() => {
       document.body.removeChild(announcement);
     }, 1000);
   },
+
+  // Set focus to element and announce it
+  focusAndAnnounce: (element: HTMLElement, announcement?: string): void => {
+    element.focus();
+    if (announcement) {
+      ariaUtils.announce(announcement);
+    }
+  }
 };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -217,6 +264,55 @@ export const colorContrast = {
 // Color contrast utilities
 export const contrastUtils = {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-3fed
+=======
+// Keyboard navigation utilities
+export const keyboardNavigation = {
+  // Handle arrow key navigation for custom components
+  handleArrowKeys: (
+    event: KeyboardEvent,
+    elements: HTMLElement[],
+    currentIndex: number,
+    orientation: 'horizontal' | 'vertical' = 'horizontal'
+  ): number => {
+    const isVertical = orientation === 'vertical';
+    const isHorizontal = orientation === 'horizontal';
+    
+    let newIndex = currentIndex;
+    
+    if (isVertical && (event.key === 'ArrowUp' || event.key === 'ArrowDown')) {
+      event.preventDefault();
+      newIndex = event.key === 'ArrowUp' 
+        ? Math.max(0, currentIndex - 1)
+        : Math.min(elements.length - 1, currentIndex + 1);
+    } else if (isHorizontal && (event.key === 'ArrowLeft' || event.key === 'ArrowRight')) {
+      event.preventDefault();
+      newIndex = event.key === 'ArrowLeft'
+        ? Math.max(0, currentIndex - 1)
+        : Math.min(elements.length - 1, currentIndex + 1);
+    }
+    
+    if (newIndex !== currentIndex) {
+      elements[newIndex]?.focus();
+    }
+    
+    return newIndex;
+  },
+
+  // Handle Enter and Space key activation
+  handleActivation: (
+    event: KeyboardEvent,
+    callback: () => void
+  ): void => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      callback();
+    }
+  }
+};
+
+// Color contrast utilities
+export const colorContrast = {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f83
   // Calculate relative luminance
   getLuminance: (r: number, g: number, b: number): number => {
     const [rs, gs, bs] = [r, g, b].map(c => {
@@ -225,12 +321,16 @@ export const contrastUtils = {
     });
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-3fed
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f83
     return 0.2126 * (rs || 0) + 0.7152 * (gs || 0) + 0.0722 * (bs || 0);
   },
 
   // Calculate contrast ratio
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -686,3 +786,63 @@ export default {
   highContrastUtils,
 };
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-3fed
+=======
+  getContrastRatio: (color1: string, color2: string): number => {
+    // This is a simplified version - in production, use a proper color parsing library
+    const parseColor = (color: string) => {
+      const hex = color.replace('#', '');
+      return {
+        r: parseInt(hex.substr(0, 2), 16),
+        g: parseInt(hex.substr(2, 2), 16),
+        b: parseInt(hex.substr(4, 2), 16)
+      };
+    };
+
+    const c1 = parseColor(color1);
+    const c2 = parseColor(color2);
+    
+    const l1 = colorContrast.getLuminance(c1.r, c1.g, c1.b);
+    const l2 = colorContrast.getLuminance(c2.r, c2.g, c2.b);
+    
+    const lighter = Math.max(l1, l2);
+    const darker = Math.min(l1, l2);
+    
+    return (lighter + 0.05) / (darker + 0.05);
+  },
+
+  // Check if contrast meets WCAG standards
+  meetsWCAG: (color1: string, color2: string, level: 'AA' | 'AAA' = 'AA'): boolean => {
+    const ratio = colorContrast.getContrastRatio(color1, color2);
+    return level === 'AA' ? ratio >= 4.5 : ratio >= 7;
+  }
+};
+
+// Screen reader utilities
+export const screenReaderUtils = {
+  // Hide element from screen readers
+  hideFromScreenReader: (element: HTMLElement): void => {
+    element.setAttribute('aria-hidden', 'true');
+  },
+
+  // Show element to screen readers
+  showToScreenReader: (element: HTMLElement): void => {
+    element.removeAttribute('aria-hidden');
+  },
+
+  // Make element focusable for screen readers
+  makeFocusable: (element: HTMLElement): void => {
+    element.setAttribute('tabindex', '0');
+  },
+
+  // Remove element from tab order but keep it accessible to screen readers
+  removeFromTabOrder: (element: HTMLElement): void => {
+    element.setAttribute('tabindex', '-1');
+  },
+
+  // Improve ARIA labels
+  improveAriaLabels: (): void => {
+    // Implementation for improving ARIA labels
+    console.log('Improving ARIA labels');
+  }
+};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f83

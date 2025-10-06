@@ -10,6 +10,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { onCLS, onFCP, onLCP, onTTFB } from 'web-vitals';
 import type { Metric } from 'web-vitals';
 
@@ -54,6 +55,10 @@ import { onCLS, onFCP, onLCP, onTTFB } from 'web-vitals';
 import type { Metric } from 'web-vitals';
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-3fed
+=======
+import { onCLS, onFCP, onLCP, onTTFB, type Metric } from 'web-vitals';
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f83
 // Types
 interface PerformanceMetric {
   name: string;
@@ -63,6 +68,7 @@ interface PerformanceMetric {
   id: string;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 // Extended Performance interface for memory API
 interface PerformanceMemory {
@@ -101,6 +107,8 @@ interface PerformanceMetric {
 
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-3fed
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f83
 interface PerformanceReport {
   metrics: PerformanceMetric[];
   timestamp: string;
@@ -114,6 +122,7 @@ const THRESHOLDS = {
   FID: { good: 100, poor: 300 },
   FCP: { good: 1800, poor: 3000 },
   LCP: { good: 2500, poor: 4000 },
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -173,11 +182,27 @@ function getRating(name: string, value: number): 'good' | 'needs-improvement' | 
  * Send metric to analytics and custom endpoints
  */
 function sendToAnalytics(metric: Metric): void {
+=======
+  TTFB: { good: 800, poor: 1800 }
+};
+
+function getRating(metricName: string, value: number): 'good' | 'needs-improvement' | 'poor' {
+  const thresholds = THRESHOLDS[metricName as keyof typeof THRESHOLDS];
+  if (!thresholds) return 'good';
+  
+  if (value <= thresholds.good) return 'good';
+  if (value <= thresholds.poor) return 'needs-improvement';
+  return 'poor';
+}
+
+function reportMetric(metric: Metric) {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f83
   const performanceMetric: PerformanceMetric = {
     name: metric.name,
     value: metric.value,
     rating: getRating(metric.name, metric.value),
     delta: metric.delta,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1149,3 +1174,33 @@ export function isPerformanceMonitoringSupported(): boolean {
 =======
 };
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-3fed
+=======
+    id: metric.id
+  };
+
+  // Send to analytics service
+  console.log('Performance Metric:', performanceMetric);
+  
+  // You can send this to your analytics service
+  // analytics.track('performance_metric', performanceMetric);
+}
+
+// Initialize performance monitoring
+export function initPerformanceMonitoring() {
+  onCLS(reportMetric);
+  // onFID is deprecated, using onINP instead
+  // onFID(reportMetric);
+  onFCP(reportMetric);
+  onLCP(reportMetric);
+  onTTFB(reportMetric);
+}
+
+export function generatePerformanceReport(): PerformanceReport {
+  return {
+    metrics: [],
+    timestamp: new Date().toISOString(),
+    url: typeof window !== 'undefined' ? window.location.href : '',
+    userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : ''
+  };
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f83

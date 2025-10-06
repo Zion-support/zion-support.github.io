@@ -45,6 +45,7 @@ if (typeof window !== 'undefined') {
   initPerformanceMonitoring();
   
   // Monitor long tasks
+<<<<<<< HEAD
   if ('PerformanceObserver' in window) {
     const observer = new PerformanceObserver((list) => {
       const entries = list.getEntries();
@@ -81,6 +82,17 @@ if (typeof window !== 'undefined') {
   if (timingMetrics) {
     performanceOptimizer.reportWebVitals(timingMetrics);
   }
+=======
+  const observer = performanceOptimizer.monitorLongTasks((entries: PerformanceEntry[]) => {
+    entries.forEach((entry: PerformanceEntry) => {
+      analytics.track('long_task', 'performance', 'detected', undefined, entry.duration);
+    });
+  });
+  
+  // Track Web Vitals
+  performanceOptimizer.measurePageLoad();
+  performanceOptimizer.reportWebVitals();
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f83
 }
 
 <<<<<<< HEAD
