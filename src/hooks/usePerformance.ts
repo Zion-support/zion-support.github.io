@@ -1,13 +1,13 @@
 import { useEffect, useCallback, useRef } from 'react';
-import { performanceOptimizer } from '../utils/performanceOptimizer';
+import performanceOptimizer from '../utils/performanceOptimizer';
 
 // Mock analytics object for tracking
 const analytics = {
   trackPerformance: (name: string, value: number, unit: string = 'ms') => {
     console.log(`Performance: ${name} = ${value}${unit}`);
   },
-  track: (event: string, category: string, action: string, label?: string, value?: number) => {
-    console.log(`Analytics: ${event} - ${category} - ${action}`, { label, value });
+  track: (event: { action: string; category: string; label?: string; value?: number }) => {
+    console.log(`Analytics: ${event.action} - ${event.category} - ${event.label}`, { value: event.value });
   }
 };
 
@@ -32,13 +32,12 @@ export const usePageLoadPerformance = () => {
           });
           
           // Track overall page load performance
-          analytics.track(
-            'page_load_complete',
-            'performance',
-            'complete',
-            undefined,
-            metrics.totalLoadTime
-          );
+          analytics.track({
+            action: 'page_load_complete',
+            category: 'performance',
+            label: 'complete',
+            value: metrics.totalLoadTime
+          });
         }
       }
     };
@@ -53,12 +52,15 @@ export const usePageLoadPerformance = () => {
       return () => window.removeEventListener('load', trackPageLoad);
     }
   }, []);
+};
 
 /**
  * Hook for monitoring resource loading performance
  */
 export const useResourcePerformance = () => {
-  useEffect(() => {
+  const observerRef = useRef<PerformanceObserver | null>(null);
+
+  const trackPerformance = useCallback(() => {
     if (typeof window === 'undefined' || !window.PerformanceObserver) {
       return;
     }
@@ -76,9 +78,27 @@ export const useResourcePerformance = () => {
       });
     });
 
-    if (observer) {
-      observerRef.current = observer;
+    observerRef.current = observer;
+    observer.observe({ entryTypes: ['resource'] });
+  }, []);
+
+  const trackLongTasks = useCallback(() => {
+    if (typeof window === 'undefined' || !window.PerformanceObserver) {
+      return;
     }
+
+    const observer = new PerformanceObserver(list => {
+      list.getEntries().forEach(entry => {
+        analytics.track({
+          action: 'long_task',
+          category: 'performance',
+          label: 'detected',
+          value: entry.duration
+        });
+      });
+    });
+
+    observer.observe({ entryTypes: ['longtask'] });
   }, []);
 
   const preloadResources = useCallback(() => {
@@ -119,16 +139,25 @@ export const useResourcePerformance = () => {
  */
 export const useLongTaskMonitoring = () => {
   useEffect(() => {
-    const observer = performanceOptimizer.monitorLongTasks((entries: PerformanceEntry[]) => {
-      entries.forEach((entry: PerformanceEntry) => {
-        analytics.track('long_task', 'performance', 'detected', undefined, entry.duration);
+    if (typeof window === 'undefined' || !window.PerformanceObserver) {
+      return;
+    }
+
+    const observer = new PerformanceObserver((list) => {
+      list.getEntries().forEach((entry) => {
+        analytics.track({
+          action: 'long_task',
+          category: 'performance',
+          label: 'detected',
+          value: entry.duration
+        });
       });
     });
 
+    observer.observe({ entryTypes: ['longtask'] });
+
     return () => {
-      if (observer && typeof observer.disconnect === 'function') {
-        observer.disconnect();
-      }
+      observer.disconnect();
     };
   }, []);
 };
@@ -152,13 +181,12 @@ export const useRenderPerformance = (componentName: string) => {
       );
       
       if (renderTime > 16) { // More than one frame at 60fps
-        analytics.track(
-          'slow_render',
-          'performance',
-          'detected',
-          componentName,
-          renderTime
-        );
+        analytics.track({
+          action: 'slow_render',
+          category: 'performance',
+          label: 'detected',
+          value: renderTime
+        });
       }
     };
   });
@@ -197,7 +225,12 @@ export const useMemoryMonitoring = () => {
       analytics.trackPerformance('memory_percentage', memoryUsage.percentage, '%');
 
       if (memoryUsage.percentage > 80) {
-        analytics.track('high_memory_usage', 'performance', 'warning', undefined, memoryUsage.percentage);
+        analytics.track({
+          action: 'high_memory_usage',
+          category: 'performance',
+          label: 'warning',
+          value: memoryUsage.percentage
+        });
       }
     };
 
@@ -208,4 +241,3 @@ export const useMemoryMonitoring = () => {
     return () => clearInterval(interval);
   }, []);
 };
-}

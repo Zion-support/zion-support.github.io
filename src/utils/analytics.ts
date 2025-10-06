@@ -6,7 +6,7 @@ interface AnalyticsEvent {
   action: string;
   category: string;
   label?: string;
-  value?: number;
+  value?: number | undefined;
   custom_parameters?: Record<string, any>;
 }
 
@@ -14,7 +14,7 @@ class Analytics {
   private isEnabled: boolean;
 
   constructor() {
-    this.isEnabled = typeof window !== 'undefined' && process.env.NODE_ENV === 'production';
+    this.isEnabled = typeof window !== 'undefined' && process.env['NODE_ENV'] === 'production';
   }
 
   /**
@@ -67,7 +67,7 @@ class Analytics {
       action,
       category: 'interaction',
       label: element,
-      value,
+      value: value ?? undefined,
     });
   }
 
