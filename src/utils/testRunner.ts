@@ -127,15 +127,21 @@ export const testUtils = {
         }
         throw new Error('Expected function to throw');
       } catch (error) {
+<<<<<<< HEAD
         if (expectedError && !(error as Error).message.includes(expectedError)) {
           throw new Error(`Expected error to contain "${expectedError}", got "${(error as Error).message}"`);
+=======
+        const errorMessage = error instanceof Error ? error.message : String(error);
+        if (expectedError && !errorMessage.includes(expectedError)) {
+          throw new Error(`Expected error to contain "${expectedError}", got "${errorMessage}"`);
+>>>>>>> origin/by9dba-codex/implement-light/dark-theme-with-persistence
         }
       }
     },
   }),
 
-  mock: <T>(implementation: Partial<T>): T => {
-    return implementation as T;
+  mock: (implementation: any) => {
+    return implementation;
   },
 
   spy: (fn: Function) => {
