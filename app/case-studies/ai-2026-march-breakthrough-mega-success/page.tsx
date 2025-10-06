@@ -1,4 +1,4 @@
-import { Metadata } from 'next';
+import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title:
@@ -384,4 +384,4 @@ export default function March2026BreakthroughMegaSuccessPage() {
       </section>
     </div>
   );
-}
+  }

@@ -73,16 +73,8 @@ export default function Autonomous Data Governance2026Page() {
               Instrument    lineage and attach policy contexts to all data flows.
             </li>
             <li>
-              Add    gates at RAG retrieval and tool calls; start with
-              human-in-the-loop.
-            </li>
-            <li>
-              Automate    audits and publish scorecards to executives monthly.
-            </li>
-          </ol>
-
-          <p>
-            Related    reading:{' '}
+              Add    gates at RAG retrieval and tool calls;
+  }
             <Arrow Right
               href="/blog/agentic-workflow-orchestration-2026"
               className="text-teal-300 hover:text-teal-200"

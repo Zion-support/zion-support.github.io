@@ -1,3 +1,4 @@
+import { Star } from 'lucide-react';
 import React from 'react';
 import Link from 'next/link';
 
@@ -186,4 +187,4 @@ export default function AutonomousBusiness Intelligence Breakthrough() {/* retur
         </div>
     </div>
   );
-}</div></div></div></div></div>)
+  }</div></div></div></div></div>)

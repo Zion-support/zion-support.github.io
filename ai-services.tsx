@@ -105,7 +105,7 @@ export default function AIServices() {
                 </h3>
                 <p className='text-slate-300 mb-6'>{service.description}</p>
                 <div className='space-y-2 mb-6'>
-                  {service.features.map((feature, idx) => (
+                  {service?.features.map((feature, idx) => (
                     <div
                       key={idx}
                       className='flex items-center text-sm text-slate-300'
@@ -128,4 +128,4 @@ export default function AIServices() {
       </div>
     </>
   );
-}
+  }

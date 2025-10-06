@@ -1,3 +1,4 @@
+import { Star } from 'lucide-react';
 import React from 'react';
 // @ts-nocheck
 
@@ -254,4 +255,5 @@ export default function Page() {return (<main className="min-h-screen bg-whitete
         </div>
       </section>
     </main>
-  ); }
+  );
+  }

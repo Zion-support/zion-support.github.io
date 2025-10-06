@@ -1,3 +1,6 @@
+import { Zap, Target } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Star } from 'lucide-react';
 import React from 'react';
 import { ArrowRight, Brain, Target, Zap } from 'lucide-react';
 
@@ -274,4 +277,4 @@ export default function March2026QuantumConsciousnessBanner() {
       </div>
     </div>
   );
-}
+  }

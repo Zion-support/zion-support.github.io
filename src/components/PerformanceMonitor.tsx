@@ -20,10 +20,10 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     // Add critical resource hints manually
     if (typeof document !== 'undefined') {
       const hints = [
-        { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' },
-        { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com' },
-        { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
-        { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossOrigin: 'anonymous' }
+        { rel: 'dns-prefetch', href: 'https://fonts?.googleapis.com' },
+        { rel: 'dns-prefetch', href: 'https://fonts?.gstatic.com' },
+        { rel: 'preconnect', href: 'https://fonts?.googleapis.com' },
+        { rel: 'preconnect', href: 'https://fonts?.gstatic.com', crossOrigin: 'anonymous' }
       ];
       
       hints.forEach(hint => {
@@ -33,7 +33,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         if (hint.crossOrigin) {
           link.crossOrigin = hint.crossOrigin;
         }
-        document.head.appendChild(link);
+        document?.head.appendChild(link);
       });
     }
     
@@ -56,7 +56,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       return () => {
         if (observer) {
           observer.disconnect();
-        }
+  }
       };
     }
   }, [enableReporting, enableLongTaskMonitoring]);
@@ -64,13 +64,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   // Monitor Web Vitals using Performance Observer
   useEffect(() => {
     if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return;
-
-    const observer = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
-      entries.forEach((entry) => {
-        if (entry.entryType === 'largest-contentful-paint') {
-          const lcp = entry.startTime;
-          setMetrics(prev => ({ ...prev, LCP: lcp }));
+  }));
           if (enableReporting) {
             performanceOptimizer.reportWebVitals({ LCP: lcp });
           }
@@ -102,17 +96,17 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 
     return () => {
       observer.disconnect();
-    };
+  };
   }, [enableReporting]);
 
   // Development mode: Log performance metrics
   useEffect(() => {
-    if (process.env.NODE_ENV === 'development' && Object.keys(metrics).length > 0) {
+    if (process?.env.NODE_ENV === 'development' && Object.keys(metrics).length > 0) {
       console.log('Performance Metrics:', metrics);
     }
   }, [metrics]);
 
   return <>{children}</>;
-};
+  };
 
 export default PerformanceMonitor;

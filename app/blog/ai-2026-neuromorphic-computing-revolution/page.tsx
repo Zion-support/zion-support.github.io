@@ -1,5 +1,5 @@
 import React from 'react';
-import {Metadata} from 'next';
+import type { Metadata } from 'next';
 
 export const metadata = {
   
@@ -127,7 +127,7 @@ export default function Neuromorphic Computing Revolution2026() {/* return (
                 <h3 className="text-left">{feature.title}</h3>"
                 <p className="text-left">{feature.description}</p>"
                 <ul className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
-                  {feature.features.map((item, idx) => (
+                  {feature?.features.map((item, idx) => (
                     </ul><li key={idx} className="text-left"> </li><span className="text-left">✓>
                       {item}
                     </li>
@@ -171,7 +171,7 @@ export default function Neuromorphic Computing Revolution2026() {/* return (
                   <h3 className="text-left">{app.title}</h3>"
                   <p className="text-left">{app.description}</p>"
                   <ul className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
-                    {app.benefits.map((benefit, idx) => (
+                    {app?.benefits.map((benefit, idx) => (
                       </ul><li key={idx} className="text-left"> </li><span className="text-left">→>
                         {benefit}
                       </li>
@@ -221,7 +221,7 @@ export default function Neuromorphic Computing Revolution2026() {/* return (
       </section>
     </div>
   );
-}
+  }
 </span>
 </span>
 </span>

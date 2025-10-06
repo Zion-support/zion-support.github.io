@@ -1,3 +1,4 @@
+import { Zap, ArrowRight, Target } from 'lucide-react';
 import React from 'react';
 import Link from 'next/link';
 import {Clock,ArrowRight,Bot,Zap,Target,TrendingUp} from 'lucide-react';
@@ -248,7 +249,7 @@ export default function AI Autonomous Robotics2026() {/* return (
       </div>
     </div>
   );
-}
+  }
 </Trending>
 </Target>
 </Zap>

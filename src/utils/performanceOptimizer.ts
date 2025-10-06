@@ -44,9 +44,9 @@ class PerformanceOptimizer {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             const img = entry.target as HTMLImageElement;
-            if (img.dataset.src) {
-              img.src = img.dataset.src;
-              img.classList.remove('lazy');
+            if (img.dataset['src']) {
+              img['src'] = img.dataset['src'];
+              img?.classList.remove('lazy');
               imageObserver.unobserve(img);
             }
           }
@@ -78,7 +78,7 @@ class PerformanceOptimizer {
       if (resource.endsWith('.woff2')) {
         link.crossOrigin = 'anonymous';
       }
-      document.head.appendChild(link);
+      document?.head.appendChild(link);
     });
   }
 
@@ -92,10 +92,8 @@ class PerformanceOptimizer {
     };
 
     const requestTick = () => {
-      if (!ticking) {
-        requestAnimationFrame(updateScrollPosition);
-        ticking = true;
-      }
+  return null;
+  }
     };
 
     window.addEventListener('scroll', requestTick, { passive: true });
@@ -108,9 +106,9 @@ class PerformanceOptimizer {
     const end = performance.now();
     const duration = end - start;
     
-    this.metrics.set(name, duration);
+    this?.metrics.set(name, duration);
     
-    if (process.env.NODE_ENV === 'development') {
+    if (process?.env.NODE_ENV === 'development') {
       console.log(`Performance: ${name} took ${duration.toFixed(2)}ms`);
     }
   }
@@ -123,12 +121,10 @@ class PerformanceOptimizer {
   // Add critical resource hints method
   addCriticalResourceHints(): void {
     if (typeof document === 'undefined') return;
-    
-    const hints = [
-      { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' },
-      { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com' },
-      { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
-      { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossOrigin: 'anonymous' }
+  },
+      { rel: 'dns-prefetch', href: 'https://fonts?.gstatic.com' },
+      { rel: 'preconnect', href: 'https://fonts?.googleapis.com' },
+      { rel: 'preconnect', href: 'https://fonts?.gstatic.com', crossOrigin: 'anonymous' }
     ];
     
     hints.forEach(hint => {
@@ -138,7 +134,7 @@ class PerformanceOptimizer {
       if (hint.crossOrigin) {
         link.crossOrigin = hint.crossOrigin;
       }
-      document.head.appendChild(link);
+      document?.head.appendChild(link);
     });
   }
 
@@ -146,10 +142,10 @@ class PerformanceOptimizer {
   measurePageLoad(): WebVitalsMetrics | null {
     if (typeof window === 'undefined' || !window.performance) {
       return null;
-    }
+  }
     
-    const timing = window.performance.timing;
-    const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+    const timing = window?.performance.timing;
+    const navigation = window?.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
     
     const loadTime = timing.loadEventEnd - timing.navigationStart;
     const interactiveTime = timing.domInteractive - timing.navigationStart;
@@ -164,7 +160,7 @@ class PerformanceOptimizer {
 
   // Report web vitals
   reportWebVitals(metrics: WebVitalsMetrics): void {
-    if (process.env.NODE_ENV === 'development') {
+    if (process?.env.NODE_ENV === 'development') {
       console.log('Web Vitals:', metrics);
     }
 
@@ -195,12 +191,6 @@ class PerformanceOptimizer {
  */
 export const prefetchResources = (urls: string[]): void => {
   if (typeof document === 'undefined') return;
-  
-  urls.forEach(url => {
-    const link = document.createElement('link');
-    link.rel = 'prefetch';
-    link.href = url;
-    document.head.appendChild(link);
   });
 };
 
@@ -209,13 +199,6 @@ export const prefetchResources = (urls: string[]): void => {
  */
 export const preconnectDomains = (domains: string[]): void => {
   if (typeof document === 'undefined') return;
-  
-  domains.forEach(domain => {
-    const link = document.createElement('link');
-    link.rel = 'preconnect';
-    link.href = domain;
-    link.crossOrigin = 'anonymous';
-    document.head.appendChild(link);
   });
 };
 
@@ -224,18 +207,7 @@ export const preconnectDomains = (domains: string[]): void => {
  */
 export const lazyLoadImagesStandalone = (): void => {
   if (typeof window === 'undefined') return;
-  if (!('IntersectionObserver' in window)) return;
-
-  const imageObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const img = entry.target as HTMLImageElement;
-        const src = img.dataset.src;
-        if (src) {
-          img.src = src;
-          img.removeAttribute('data-src');
-          imageObserver.unobserve(img);
-        }
+  }
       }
     });
   }, {
@@ -253,13 +225,6 @@ export const lazyLoadImagesStandalone = (): void => {
  */
 export const measurePageLoadStandalone = (): WebVitalsMetrics | null => {
   if (typeof window === 'undefined' || !window.performance) return null;
-  
-  const perfData = window.performance.timing;
-  const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-  
-  return {
-    FCP: navigation?.responseStart - navigation?.fetchStart,
-    TTFB: perfData.responseStart - perfData.navigationStart
   };
 };
 
@@ -293,9 +258,8 @@ export function debounce<T extends (...args: any[]) => any>(
   let timeout: NodeJS.Timeout | null = null;
   return function executedFunction(...args: Parameters<T>) {
     const later = () => {
-      timeout = null;
-      func(...args);
-    };
+  return null;
+  };
     if (timeout) clearTimeout(timeout);
     timeout = setTimeout(later, wait);
   };
@@ -312,9 +276,7 @@ export function throttle<T extends (...args: any[]) => any>(
   return function executedFunction(...args: Parameters<T>) {
     if (!inThrottle) {
       func(...args);
-      inThrottle = true;
-      setTimeout(() => (inThrottle = false), limit);
-    }
+  }
   };
 }
 
@@ -323,26 +285,14 @@ export function throttle<T extends (...args: any[]) => any>(
  */
 export const shouldUseWebP = (): boolean => {
   if (typeof window === 'undefined') return false;
-  
-  const canvas = document.createElement('canvas');
-  canvas.width = canvas.height = 1;
-  return canvas.toDataURL('image/webp').indexOf('data:image/webp') === 0;
-};
+  };
 
 /**
  * Get connection quality
  */
 export const getConnectionQuality = (): 'slow' | 'medium' | 'fast' => {
   if (typeof navigator === 'undefined') return 'medium';
-  
-  const connection = (navigator as any).connection || (navigator as any).mozConnection || (navigator as any).webkitConnection;
-  if (!connection) return 'medium';
-  
-  const effectiveType = connection.effectiveType;
-  if (effectiveType === 'slow-2g' || effectiveType === '2g') return 'slow';
-  if (effectiveType === '3g') return 'medium';
-  return 'fast';
-};
+  };
 
 /**
  * Adaptive loading based on network conditions
@@ -351,25 +301,19 @@ export const shouldLoadHeavyAssets = (): boolean => {
   const quality = getConnectionQuality();
   const saveData = typeof navigator !== 'undefined' && (navigator as any).connection?.saveData;
   return quality === 'fast' && !saveData;
-};
+  };
 
 /**
  * Request Idle Callback wrapper with fallback
  */
 export const requestIdleCallback = (callback: IdleRequestCallback): number => {
   if (typeof window === 'undefined') return 0;
-  
-  if ('requestIdleCallback' in window) {
-    return window.requestIdleCallback(callback);
   }
   
   // Fallback for browsers that don't support requestIdleCallback
   return (window as any).setTimeout(() => {
     const start = Date.now();
-    callback({
-      didTimeout: false,
-      timeRemaining: () => Math.max(0, 50 - (Date.now() - start))
-    });
+  });
   }, 1) as unknown as number;
 };
 
@@ -378,9 +322,6 @@ export const requestIdleCallback = (callback: IdleRequestCallback): number => {
  */
 export const cancelIdleCallback = (id: number): void => {
   if (typeof window === 'undefined') return;
-  
-  if ('cancelIdleCallback' in window) {
-    window.cancelIdleCallback(id);
   } else {
     (window as any).clearTimeout(id);
   }
@@ -391,24 +332,14 @@ export const cancelIdleCallback = (id: number): void => {
  */
 export const preloadRoute = (route: string): void => {
   if (typeof document === 'undefined') return;
-  
-  const link = document.createElement('link');
-  link.rel = 'prefetch';
-  link.as = 'script';
-  link.href = route;
-  document.head.appendChild(link);
-};
+  };
 
 /**
  * Monitor long tasks (> 50ms) for performance debugging
  */
 export const monitorLongTasks = (callback: (entries: PerformanceEntryList) => void): PerformanceObserver | null => {
   if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return null;
-  
-  try {
-    const observer = new PerformanceObserver((list) => {
-      callback(list.getEntries());
-    });
+  });
     observer.observe({ entryTypes: ['longtask'] });
     return observer;
   } catch (e) {
@@ -422,24 +353,14 @@ export const monitorLongTasks = (callback: (entries: PerformanceEntryList) => vo
  */
 export const cacheStaticAssets = async (urls: string[]): Promise<void> => {
   if (typeof caches === 'undefined') return;
-  
-  const cache = await caches.open('static-assets-v1');
-  await cache.addAll(urls);
-};
+  };
 
 /**
  * Clear old caches
  */
 export const clearOldCaches = async (currentVersion: string): Promise<void> => {
   if (typeof caches === 'undefined') return;
-  
-  const cacheNames = await caches.keys();
-  await Promise.all(
-    cacheNames
-      .filter(name => name !== currentVersion)
-      .map(name => caches.delete(name))
-  );
-};
+  };
 
 /**
  * Performance budget checker
@@ -454,7 +375,7 @@ export const checkPerformanceBudget = (budget: PerformanceBudget): {
     return { passed: true, violations };
   }
   
-  const timing = window.performance.timing;
+  const timing = window?.performance.timing;
   const loadTime = timing.loadEventEnd - timing.navigationStart;
   const interactiveTime = timing.domInteractive - timing.navigationStart;
   
@@ -470,7 +391,7 @@ export const checkPerformanceBudget = (budget: PerformanceBudget): {
     passed: violations.length === 0,
     violations
   };
-};
+  };
 
 // Export singleton instance
 export const performanceOptimizer = PerformanceOptimizer.getInstance();

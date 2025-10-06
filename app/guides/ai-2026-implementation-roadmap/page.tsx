@@ -1,3 +1,5 @@
+import { ArrowRight, Target, CheckCircle } from 'lucide-react';
+import { Star } from 'lucide-react';
 import React from 'react';
 import Link from 'next/link';
 import { ArrowLeft, Calendar, User, Clock, Tag, Target, CheckCircle, ArrowRight } from 'lucide-react';
@@ -156,7 +158,7 @@ export default function AI2026ImplementationRoadmap() {
                   <p className="text-gray-300 mb-6 text-lg">{phase.description}</p>
                   
                   <div className="grid md:grid-cols-2 gap-4">
-                    {phase.keyActivities.map((activity, i) => (
+                    {phase?.keyActivities.map((activity, i) => (
                       <div key={i} className="flex items-center gap-3">
                         <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                         <span className="text-gray-300">{activity}</span>
@@ -230,4 +232,4 @@ export default function AI2026ImplementationRoadmap() {
       </article>
     </div>
   );
-}
+  }

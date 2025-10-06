@@ -1,3 +1,4 @@
+import { Star } from 'lucide-react';
 import Link from 'next/link';
 
 export default function AIRevolutionaryAutomationSuccess2026() {
@@ -332,4 +333,4 @@ export default function AIRevolutionaryAutomationSuccess2026() {
       </div>
     </div>
   );
-}
+  }

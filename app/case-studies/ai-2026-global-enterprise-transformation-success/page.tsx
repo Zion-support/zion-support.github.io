@@ -1,3 +1,4 @@
+import { Star } from 'lucide-react';
 import Link from 'next/link';
 
 export const metadata = {
@@ -506,4 +507,4 @@ export default function GlobalEnterpriseAITransformationSuccess() {
       </div>
     </div>
   );
-}
+  }

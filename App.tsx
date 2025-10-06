@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React, { memo, useMemo } from 'react';
 import { HelmetProvider } from 'react-helmet-async';
 
@@ -19,46 +20,7 @@ const InteractiveAIROICalculator = memo(() => (
     </div>
   </div>
 ));
-
-const ContentShowcase = memo(() => (
-  <div className="py-16">
-    <div className="container mx-auto px-4 text-center">
-      <h2 className="text-3xl font-bold mb-4">Featured Content</h2>
-      <p className="text-xl text-gray-600">Explore our latest insights and case studies</p>
-    </div>
-  </div>
-));
-
-const InteractiveContentShowcase2026 = memo(() => (
-  <div className="bg-blue-50 py-16">
-    <div className="container mx-auto px-4 text-center">
-      <h2 className="text-3xl font-bold mb-4">2026 Content Showcase</h2>
-      <p className="text-xl text-gray-600">Latest trends and innovations for 2026</p>
-    </div>
-  </div>
-));
-
-// Loading component
-const LoadingSpinner = memo(() => (
-  <div className="animate-pulse bg-gray-200 h-32 rounded flex items-center justify-center">
-    <div className="text-gray-500">Loading...</div>
-  </div>
-));
-
-export default function App() {
-  const structuredData = useMemo(() => ({
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Zion Tech Group",
-    "description": "Leading provider of AI-powered enterprise solutions and digital transformation services",
-    "url": "https://ziontechgroup.com",
-    "logo": "https://ziontechgroup.com/logo.png",
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+1-302-464-0950",
-      "contactType": "customer service",
-      "email": "kleber@ziontechgroup.com"
-    },
+  },
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "364 E Main St STE 1008",
@@ -87,9 +49,9 @@ export default function App() {
       // Preload critical fonts
       const fontLink = document.createElement('link');
       fontLink.rel = 'preload';
-      fontLink.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap';
+      fontLink.href = 'https://fonts?.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap';
       fontLink.as = 'style';
-      document.head.appendChild(fontLink);
+      document?.head.appendChild(fontLink);
     }
   }, []);
 
@@ -263,4 +225,4 @@ export default function App() {
       </div>
     </HelmetProvider>
   );
-}
+  }

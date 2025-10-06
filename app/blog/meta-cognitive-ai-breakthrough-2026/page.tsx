@@ -1,5 +1,5 @@
 import React from 'react';
-import {Metadata} from 'next';
+import type { Metadata } from 'next';
 
 export const metadata = {
   
@@ -224,7 +224,7 @@ origin/cursor/fix-errors-and-merge-to-main-cc0a
                     </div>
                     <p className="text-left">{phase.description}</p>"
                     <div className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
-                      {phase.deliverables.map((deliverable, idx) => (</div></div>
+                      {phase?.deliverables.map((deliverable, idx) => (</div></div>
                         <span key={idx} className="text-left">✓ {deliverable}
                         </span></span>
                       ))}
@@ -299,7 +299,7 @@ origin/cursor/fix-errors-and-merge-to-main-cc0a
           </div>
       </section>
   );
-}</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>
+  }</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>
 </span>
 </span>
 </span>

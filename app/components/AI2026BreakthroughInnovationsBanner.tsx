@@ -1,3 +1,4 @@
+import { Star } from 'lucide-react';
 import Link from 'next/link';
 
 const AI2026BreakthroughInnovationsBanner = () => {
@@ -182,6 +183,6 @@ const AI2026BreakthroughInnovationsBanner = () => {
       </div>
     </section>
   );
-};
+  };
 
 export default AI2026BreakthroughInnovationsBanner;

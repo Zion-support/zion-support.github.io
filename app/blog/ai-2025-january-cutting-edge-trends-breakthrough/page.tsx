@@ -1,5 +1,6 @@
+import { Star } from 'lucide-react';
 import React from 'react';
-import {Metadata} from 'next';
+import type { Metadata } from 'next';
 
 export const metadata = {
   
@@ -145,7 +146,7 @@ export default function CuttingEdgeAITrends2025() {/* return (
       </section>
     </div>
   );
-}
+  }
 </span>
 </span>
 </span>

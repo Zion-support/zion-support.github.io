@@ -1,7 +1,8 @@
+import { ArrowRight, ArrowLeft, Target, CheckCircle } from 'lucide-react';
+import { Star } from 'lucide-react';
 import React from 'react';
 import Link from 'next/link';
-import { Metadata } from 'next';
-import { ArrowLeft, Target, TrendingUp, Users, Zap, CheckCircle, Star, ArrowRight } from 'lucide-react';
+import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'AI Advertising Services & Pricing | Zion Tech Group',
@@ -284,4 +285,4 @@ export default function ServicesAdvertisingPage() {
       </section>
     </div>
   );
-}
+  }

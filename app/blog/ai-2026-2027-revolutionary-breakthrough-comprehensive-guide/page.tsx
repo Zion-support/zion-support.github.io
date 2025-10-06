@@ -1,3 +1,4 @@
+import { Star } from 'lucide-react';
 // @ts-nocheck
 import React from 'react';
 import Link from 'next/link';
@@ -343,7 +344,7 @@ origin/cursor/fix-errors-and-merge-to-main-cc0a
   
     </Link>
   );
-}</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>
+  }</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>
 </span>
 </span>
 </span>

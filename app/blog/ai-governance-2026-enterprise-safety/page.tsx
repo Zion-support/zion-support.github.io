@@ -1,5 +1,5 @@
 import React from 'react';
-import {Metadata} from 'next';
+import type { Metadata } from 'next';
 
 export const metadata = {
   
@@ -401,4 +401,4 @@ export default function AIGovernance2026 Enterprise Safety() {/* return (
         </div>
     </div>
   );
-}</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>)
+  }</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>)

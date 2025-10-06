@@ -1,3 +1,4 @@
+import { Star } from 'lucide-react';
 import React from 'react';
 // @ts-nocheck
 
@@ -38,4 +39,5 @@ export default function Page() {return (<div className="min-h-screen bg-slate-95
         </p>
       </main>
     </div>
-  ); }
+  );
+  }

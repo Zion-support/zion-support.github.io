@@ -128,7 +128,8 @@ export default function AI Data Contracts2026Page() {return (<div className="min
         </div>
       </section>
     </div>
-  ); }function RelatedArticle Card ({
+  );
+  }function RelatedArticle Card ({
   title,
   descriptionhref,
 }: {title: "string;",
@@ -142,4 +143,5 @@ export default function AI Data Contracts2026Page() {return (<div className="min
       <p className="text-gray-600 mb-3">{description}</p>
       <span className="text-indigo-600 font-semibold">Read    More    →</span>
     </Arrow>
-  ); }
+  );
+  }

@@ -1,3 +1,4 @@
+import { ArrowRight, Target, CheckCircle } from 'lucide-react';
 import React from 'react';
 import Link from 'next/link';
 import {ArrowRight,Calendar,Clock,Users,TrendingUp,DollarSign,Target,CheckCircle} from 'lucide-react';
@@ -402,7 +403,7 @@ export default function AICost Optimization Breakthrough2026() {/* return (
       </section>
     </div>
   );
-}
+  }
 </Arrow>
 </Arrow>
 </Arrow>

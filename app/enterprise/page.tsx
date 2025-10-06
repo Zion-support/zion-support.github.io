@@ -96,7 +96,7 @@ export default function EnterprisePage() {
                 <h3 className="text-2xl font-bold text-white mb-4">{solution.title}</h3>
                 <p className="text-gray-300 mb-6">{solution.description}</p>
                 <div className="space-y-2">
-                  {solution.metrics.map((metric, i) => (
+                  {solution?.metrics.map((metric, i) => (
                     <div key={i} className="flex items-center gap-2">
                       <span className="w-2 h-2 bg-cyan-400 rounded-full"></span>
                       <span className="text-gray-300 text-sm">{metric}</span>
@@ -140,4 +140,4 @@ export default function EnterprisePage() {
       </section>
     </div>
   );
-}
+  }

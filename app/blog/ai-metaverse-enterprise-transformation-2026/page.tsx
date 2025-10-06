@@ -1,3 +1,4 @@
+import { Zap, ArrowRight, Target } from 'lucide-react';
 import React from 'react';
 import Link from 'next/link';
 import {Clock,ArrowRight,Globe,Users,Zap,Target} from 'lucide-react';
@@ -244,7 +245,7 @@ export default function AIMetaverse Enterprise Transformation2026() {/* return (
       </div>
     </div>
   );
-}
+  }
 </Globe>
 </Target>
 </Zap>

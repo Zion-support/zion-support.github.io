@@ -62,6 +62,6 @@ const InteractiveContentShowcase2026: React.FC = () => {
       </div>
     </section>
   );
-};
+  };
 
 export default InteractiveContentShowcase2026;

@@ -148,4 +148,4 @@ export default function Ultimate2030ConsciousnessBanner() {
       </div>
     </section>
   );
-}
+  }

@@ -1,3 +1,4 @@
+import { Target } from 'lucide-react';
 import React from 'react';
 // @ts-nocheck
 
@@ -40,28 +41,5 @@ export default function Page() {return (<main className="min-h-screenbg-white">
 
           <h3>Latency and Cost    Targets</h3>
           <p>
-            Target p95 &lt; 100ms for top geos with budget caps per request
-            class.    Measure <em>$ per successful outcome</em> over raw token
-            cost.
-          </p>
-        </div>
-      </section>
-
-      <section className="py-12 bg-gray-50 border-t border-gray-200">
-        <div className="max-w-4xl mx-auto px-6 flex items-center justify-between">
-          <Arrow Right
-           href="/blog"
-           className="text-emerald-700 font-semibold hover:text-emerald-800"
-          >
-            ← Back to    Blog
-          </Arrow>
-          <Arrow Right
-           href="/blog/agent-release-guardrails-2026"
-           className="text-teal-700 font-semibold hover:text-teal-800"
-          >
-            Next: Agent Release    Guardrails    →
-          </Arrow>
-        </div>
-      </section>
-    </main>
-  ); }
+            Target p95 &lt;
+  }

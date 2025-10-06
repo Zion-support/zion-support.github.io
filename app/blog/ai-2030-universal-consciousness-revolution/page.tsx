@@ -1,5 +1,5 @@
 import React from 'react';
-import {Metadata }from 'next';
+import type { Metadata } from 'next';
 
 export const metadata = {
   
@@ -364,4 +364,5 @@ export default function AI2030Universal Consciousness Revolution() {return (<div
         </div>
       </article>
     </div>
-  ); }
+  );
+  }

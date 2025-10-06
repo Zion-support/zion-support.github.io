@@ -126,7 +126,8 @@ export default function AI Cybersecurity Automation2025Page() {return (<div clas
         </div>
       </section>
     </div>
-  ); }function RelatedArticle Card ({
+  );
+  }function RelatedArticle Card ({
   title,
   descriptionhref,
 }: {title: "string;",
@@ -140,4 +141,5 @@ export default function AI Cybersecurity Automation2025Page() {return (<div clas
       <p className="text-gray-600 mb-4">{description}</p>
       <span className="text-red-700 font-semibold">Read    More    →</span>
     </Arrow>
-  ); }
+  );
+  }

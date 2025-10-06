@@ -1,5 +1,5 @@
 import React from 'react';
-import {Metadata} from 'next';
+import type { Metadata } from 'next';
 
 export const metadata = {
   
@@ -270,7 +270,7 @@ export default function HyperAutonomous Enterprise Systems2026() {/* return (
   
     </span>
   );
-}</div></div></div></div></div></div></div></div></div></div></div>
+  }</div></div></div></div></div></div></div></div></div></div></div>
 </span>
 </span>
 </span>

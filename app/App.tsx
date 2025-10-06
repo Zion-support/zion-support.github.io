@@ -55,13 +55,7 @@ const App: React.FC = () => {
                   className='skip-link sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50'
                   onClick={e => {
                     e.preventDefault();
-                    const main =
-                      document.querySelector('main') ||
-                      document.querySelector('#main-content');
-                    if (main) {
-                      main.focus();
-                      main.scrollIntoView({ behavior: 'smooth' });
-                    }
+                    document.getElementById('main-content')?.focus();
                   }}
                 >
                   Skip to main content

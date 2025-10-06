@@ -1,5 +1,5 @@
 import React from 'react';
-import {Metadata} from 'next';
+import type { Metadata } from 'next';
 
 export const metadata = {
   
@@ -125,7 +125,8 @@ const digital BankingAI =
     loan Processing: "Automated underwriting",
     investment Advice: "Robo-advisory services",
     compliance: '   Automated    reporting'
-  };`}
+  };
+  }
               </pre></pre>
             </div>
         </section>

@@ -1,3 +1,4 @@
+import { Star } from 'lucide-react';
 import React from 'react';
 import Link from 'next/link';
 
@@ -199,5 +200,5 @@ export default function AI2026DecemberMega Breakthrough Revolution() {/* return 
       </div>
     </div>
   );
-}
+  }
 </section>)

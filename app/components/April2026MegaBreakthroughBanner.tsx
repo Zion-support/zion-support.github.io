@@ -1,3 +1,4 @@
+import { Star } from 'lucide-react';
 import Link from 'next/link';
 
 export default function April2026MegaBreakthroughBanner() {
@@ -126,4 +127,4 @@ export default function April2026MegaBreakthroughBanner() {
       </div>
     </section>
   );
-}
+  }

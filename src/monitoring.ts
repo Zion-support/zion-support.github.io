@@ -6,7 +6,7 @@ import performanceOptimizer from './src/utils/performanceOptimizer';
 // Initialize performance monitoring
 if (typeof window !== 'undefined') {
   // Track page load
-  analytics.trackPageView(window.location.pathname);
+  analytics.trackPageView(window?.location.pathname);
   
   // Initialize performance optimizer
   performanceOptimizer.lazyLoadImages();

@@ -37,4 +37,5 @@ export default function Page() {return (<article className="prose prose-invert m
         risk control.
       </p>
     </article>
-  ); }
+  );
+  }

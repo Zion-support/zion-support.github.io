@@ -50,12 +50,12 @@ class Analytics {
         language: 'en',
         timezone: 'UTC',
       };
-    }
+  }
 
     return {
       sessionId: this.sessionId,
-      userAgent: window.navigator.userAgent,
-      language: window.navigator.language,
+      userAgent: window?.navigator.userAgent,
+      language: window?.navigator.language,
       timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
       referrer: document.referrer || undefined,
     };
@@ -82,13 +82,13 @@ class Analytics {
       timestamp: Date.now(),
     };
 
-    this.events.push(event);
+    this?.events.push(event);
 
     // Send to analytics service
     this.sendToAnalytics(event);
 
     // Log in development
-    if (process.env.NODE_ENV === 'development') {
+    if (process?.env.NODE_ENV === 'development') {
       console.log('Analytics event:', event);
     }
   }
@@ -99,7 +99,7 @@ class Analytics {
   public trackPageView(page: string, title?: string): void {
     this.track('page_view', 'navigation', 'view', page, undefined, {
       page_title: title || document.title,
-      page_url: typeof window !== 'undefined' ? window.location.href : page,
+      page_url: typeof window !== 'undefined' ? window?.location.href : page,
     });
   }
 
@@ -156,7 +156,7 @@ class Analytics {
    * Get events by category
    */
   public getEventsByCategory(category: string): AnalyticsEvent[] {
-    return this.events.filter(event => event.category === category);
+    return this?.events.filter(event => event.category === category);
   }
 
   /**

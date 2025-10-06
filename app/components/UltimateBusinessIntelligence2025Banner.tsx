@@ -4,22 +4,8 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
 const UltimateBusinessIntelligence2025Banner = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [isVisible, setIsVisible] = useState(true);
-
-  const content = [
-    {
-      id: 'ultimate-business-intelligence-revolution',
-      title: 'AI 2025: The Ultimate Business Intelligence Revolution',
-      description: 'Transform your enterprise with next-generation AI-powered business intelligence that delivers unprecedented insights and competitive advantage.',
-      url: '/blog/ai-2025-ultimate-business-intelligence-revolution-ultimate-breakthrough',
-      type: 'Blog Post',
-      metrics: {
-        roi: '30,000%',
-        savings: '$750B+',
-        accuracy: '99.99%',
-        speed: '5,000% faster'
-      },
+  return null;
+  },
       readingTime: '35 min read',
       featured: true
     },
@@ -237,6 +223,6 @@ const UltimateBusinessIntelligence2025Banner = () => {
       </div>
     </section>
   );
-};
+  };
 
 export default UltimateBusinessIntelligence2025Banner;

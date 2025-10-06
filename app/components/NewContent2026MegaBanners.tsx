@@ -1,3 +1,4 @@
+import { Star } from 'lucide-react';
 import Link from 'next/link';
 
 export default function NewContent2026MegaBanners() {
@@ -285,4 +286,4 @@ export default function NewContent2026MegaBanners() {
       </section>
     </>
   );
-}
+  }

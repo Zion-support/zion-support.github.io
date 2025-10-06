@@ -190,7 +190,7 @@ function Header() {
       </nav>
     </header>
   );
-}
+  }
 
 function Footer() {
   return (
@@ -367,7 +367,7 @@ function Footer() {
       </div>
     </footer>
   );
-}
+  }
 
 export default function RootLayout({
   children,
@@ -385,4 +385,4 @@ export default function RootLayout({
       </body>
     </html>
   );
-}
+  }

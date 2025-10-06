@@ -1,5 +1,6 @@
+import { Star } from 'lucide-react';
 import React from 'react';
-import {Metadata} from 'next';
+import type { Metadata } from 'next';
 
 export const metadata = {
   
@@ -127,7 +128,7 @@ export default function Autonomous Enterprise Operations2026() {/* return (
                 <h3 className="text-left">{feature.title}</h3>"
                 <p className="text-left">{feature.description}</p>"
                 <ul className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
-                  {feature.features.map((item, idx) => (
+                  {feature?.features.map((item, idx) => (
                     </ul><li key={idx} className="text-left"> </li><span className="text-left">✓>
                       {item}
                     </li>
@@ -171,7 +172,7 @@ export default function Autonomous Enterprise Operations2026() {/* return (
                   <h3 className="text-left">{application.title}</h3>"
                   <p className="text-left">{application.description}</p>"
                   <ul className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
-                    {application.benefits.map((benefit, idx) => (
+                    {application?.benefits.map((benefit, idx) => (
                       </ul><li key={idx} className="text-left"> </li><span className="text-left">→>
                         {benefit}
                       </li>
@@ -242,7 +243,7 @@ export default function Autonomous Enterprise Operations2026() {/* return (
                 <h3 className="text-left">{phase.title}</h3>"
                 <p className="text-left">{phase.description}</p>"
                 <ul className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
-                  {phase.deliverables.map((deliverable, idx) => (
+                  {phase?.deliverables.map((deliverable, idx) => (
                     </ul><li key={idx} className="text-left"> </li><span className="text-left">✓>
                       {deliverable}
                     </li>
@@ -274,7 +275,7 @@ export default function Autonomous Enterprise Operations2026() {/* return (
       </section>
     </div>
   );
-}
+  }
 </span>
 </span>
 </span>

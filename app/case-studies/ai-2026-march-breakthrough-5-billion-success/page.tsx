@@ -1,4 +1,4 @@
-import { Metadata } from 'next';
+import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'AI 2026 March Breakthrough: $5 Billion Success Story',
@@ -424,4 +424,4 @@ export default function March2026CaseStudyPage() {
       </main>
     </div>
   );
-}
+  }

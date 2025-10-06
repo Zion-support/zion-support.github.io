@@ -1,3 +1,5 @@
+import { ArrowRight, CheckCircle } from 'lucide-react';
+import Link from 'next/link';
 import {
   ArrowRight,
   Brain,
@@ -2343,25 +2345,7 @@ export default function AdditionalServices() {
             <p className='text-xl text-blue-100 mb-8 max-w-4xl mx-auto'>
               We regularly add pragmatic, production-grade services to maximize
               ROI. Explore our latest micro SaaS, AI) and IT solutions below;
-              then contact us to get a tailored proposal.
-            </p>
-            <div className='flex items-center justify-center gap-6 text-sm text-blue-200'>
-              <div className='flex items-center'>
-                <CheckCircle className='h-4 w-4 text-green-400 mr-2' />
-                <span>Fast Delivery</span>
-              </div>
-              <div className='flex items-center'>
-                <CheckCircle className='h-4 w-4 text-green-400 mr-2' />
-                <span>Proven ROI</span>
-              </div>
-              <div className='flex items-center'>
-                <CheckCircle className='h-4 w-4 text-green-400 mr-2' />
-                <span>Expert Support</span>
-              </div>
-            </div>
-          </div>
-        </section>
-        {/* Services Grid */}
+  }
         <section className='container mx-auto px-6 py-12'>
           <div className='grid grid-cols-1 gap-8'>
             {sections.map(section => {
@@ -2382,7 +2366,7 @@ export default function AdditionalServices() {
                     </h2>
                   </div>
                   <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-6'>
-                    {section.items.map(item => (
+                    {section?.items.map(item => (
                       <div
                         key={item.name}
                         className='group relative rounded-xl border border-slate-700/50 p-6 hover:border-cyan-500/50 transition-all duration-300'
@@ -2394,7 +2378,7 @@ export default function AdditionalServices() {
                           {item.blurb}
                         </p>
                         <ul className='space-y-2 mb-4'>
-                          {item.bullets.map((bullet, idx) => (
+                          {item?.bullets.map((bullet, idx) => (
                             <li
                               key={idx}
                               className='flex items-center gap-2 text-sm text-slate-400'
@@ -2427,7 +2411,7 @@ export default function AdditionalServices() {
                   </div>
                 </div>
               );
-            })}
+  })}
           </div>
         </section>
         {/* Contact Section */}

@@ -1,3 +1,4 @@
+import { Star } from 'lucide-react';
 import React from 'react';
 
 export const metadata = {
@@ -178,7 +179,8 @@ const Transformation Stack =
     cloud: "Multi-cloud (AWS + Azure + GCP)",
   compute: "Kubernetes + Serverless Functions",
   networking: "Istio Service    Mesh    + CDN"
-  };`}
+  };
+  }
 						</pre></pre>
 					</div>
 

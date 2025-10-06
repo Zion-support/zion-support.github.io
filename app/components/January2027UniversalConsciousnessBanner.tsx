@@ -129,6 +129,6 @@ const January2027UniversalConsciousnessBanner: React.FC = () => {
       </div>
     </section>
   );
-};
+  };
 
 export default January2027UniversalConsciousnessBanner;

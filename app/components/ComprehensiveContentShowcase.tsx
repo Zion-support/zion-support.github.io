@@ -1,3 +1,4 @@
+import { Star } from 'lucide-react';
 import Link from 'next/link';
 
 const ComprehensiveContentShowcase = () => {
@@ -295,6 +296,6 @@ const ComprehensiveContentShowcase = () => {
       </div>
     </section>
   );
-};
+  };
 
 export default ComprehensiveContentShowcase;

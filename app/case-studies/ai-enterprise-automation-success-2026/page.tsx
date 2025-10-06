@@ -1,3 +1,5 @@
+import { Target } from 'lucide-react';
+import { Star } from 'lucide-react';
 import Link from 'next/link';
 import { CheckCircle, Clock, DollarSign, Target, User } from 'lucide-react';
 
@@ -761,4 +763,4 @@ export default function AIEnterpriseAutomationSuccess2026() {
       </footer>
     </div>
   );
-}
+  }

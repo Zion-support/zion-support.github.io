@@ -1,5 +1,5 @@
 import React from 'react';
-import {Metadata} from 'next';
+import type { Metadata } from 'next';
 
 export const metadata = {
   
@@ -149,7 +149,7 @@ export default function AI2026Advanced Neural Architectures() {/* return (
         </div>
     </main>
   );
-}</div></div></div></div></div></div></div>
+  }</div></div></div></div></div></div></div>
 </span>
 </span>
 </span>

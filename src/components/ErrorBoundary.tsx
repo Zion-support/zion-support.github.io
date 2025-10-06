@@ -27,26 +27,26 @@ class ErrorBoundary extends Component<Props, State> {
     };
   }
 
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+  override componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
     
     // Report error to analytics/monitoring service
     this.reportError(error, errorInfo);
     
     // Call custom error handler if provided
-    if (this.props.onError) {
-      this.props.onError(error, errorInfo);
+    if (this?.props.onError) {
+      this?.props.onError(error, errorInfo);
     }
   }
 
   private reportError = (error: Error, errorInfo: ErrorInfo) => {
-    // Report to external service (e.g., Sentry, LogRocket, etc.)
+    // Report to external service (e?.g., Sentry, LogRocket, etc.)
     if (typeof window !== 'undefined' && (window as any).gtag) {
       (window as any).gtag('event', 'exception', {
         description: error.message,
         fatal: false,
         custom_map: {
-          error_id: this.state.errorId,
+          error_id: this?.state.errorId,
           component_stack: errorInfo.componentStack
         }
       });
@@ -58,12 +58,12 @@ class ErrorBoundary extends Component<Props, State> {
   };
 
   private handleGoHome = () => {
-    window.location.href = '/';
+    window?.location.href = '/';
   };
 
-  render() {
-    if (this.state.hasError) {
-      return this.props.fallback || (
+  override render() {
+    if (this?.state.hasError) {
+      return this?.props.fallback || (
         <div className="min-h-screen flex items-center justify-center bg-gray-900">
           <div className="text-center p-8 max-w-md">
             <AlertTriangle className="w-16 h-16 text-red-500 mx-auto mb-4" />
@@ -71,9 +71,9 @@ class ErrorBoundary extends Component<Props, State> {
             <p className="text-gray-300 mb-6">
               We're sorry, but something unexpected happened. Our team has been notified.
             </p>
-            {this.state.errorId && (
+            {this?.state.errorId && (
               <p className="text-gray-400 mb-4 text-sm">
-                Error ID: {this.state.errorId}
+                Error ID: {this?.state.errorId}
               </p>
             )}
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -93,7 +93,7 @@ class ErrorBoundary extends Component<Props, State> {
               </button>
             </div>
             <button
-              onClick={() => window.location.reload()}
+              onClick={() => window?.location.reload()}
               className="mt-4 text-gray-400 hover:text-white text-sm underline"
             >
               Or refresh the page
@@ -101,9 +101,9 @@ class ErrorBoundary extends Component<Props, State> {
           </div>
         </div>
       );
-    }
+  }
 
-    return this.props.children;
+    return this?.props.children;
   }
 }
 

@@ -242,4 +242,4 @@ export default function AI2026InnovationShowcaseBanner() {
       </div>
     </section>
   );
-}
+  }

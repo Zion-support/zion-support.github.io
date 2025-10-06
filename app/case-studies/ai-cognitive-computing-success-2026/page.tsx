@@ -1,3 +1,4 @@
+import { ArrowLeft, Target } from 'lucide-react';
 import Link from 'next/link';
 import {
   ArrowLeft,
@@ -547,4 +548,4 @@ export default function AICognitiveComputingSuccess2026() {
       </section>
     </div>
   );
-}
+  }

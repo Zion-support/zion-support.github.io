@@ -134,7 +134,8 @@ export default function EdgeAIBlueprint2026Page() {return (<div className="min-h
         </div>
       </section>
     </div>
-  ); }function RelatedArticle Card ({
+  );
+  }function RelatedArticle Card ({
   title,
   descriptionhref,
 }: {title: "string;",
@@ -148,4 +149,5 @@ export default function EdgeAIBlueprint2026Page() {return (<div className="min-h
       <p className="text-gray-600 mb-4">{description}</p>
       <span className="text-cyan-700 font-semibold">Read    More    →</span>
     </Arrow>
-  ); }
+  );
+  }

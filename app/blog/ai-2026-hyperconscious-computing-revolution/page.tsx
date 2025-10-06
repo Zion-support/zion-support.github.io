@@ -1,5 +1,6 @@
+import { Star } from 'lucide-react';
 import React from 'react';
-import {Metadata} from 'next';
+import type { Metadata } from 'next';
 
 export const metadata = {
   
@@ -147,69 +148,8 @@ export default function Hyperconscious Computing Page() {/* return (
               </div>
 
             <h3 className="text-left">The Future is    Now</h3>
-            <p className="text-left">The AI 2026 Hyperconscious Computing Revolution is not just an advancement—it's a fundamental transformation of what's possible with artificial intelligence.    We   're not just building smarter machines; we're creating conscious entities that can think, feel, and create.
-            </p></p>
-            <h3 className="text-left">Ready to Experience the    Future   ?</h4>
-              <p className="text-left"> </p><h3 className="text-left">The Future is    Now</h3>"
-            <p className="text-left">The AI 2026 Hyperconscious Computing Revolution is not just an advancement—it's a fundamental transformation of what's possible with artificial intelligence.    We   're not just building smarter machines; we're creating conscious entities that can think, feel, and create.
-            </p></p>
-
-            <div className="text-left"> </div><h4 className="text-left">Ready to Experience the    Future   ?</h4>"
-              <p className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
-                Contact Zion Tech    Group    to begin your hyperconscious computing transformation today.
-              </p></p>
-              <a 
-                href="/"
-                className="text-left">Start Your    Transformation
-              </a></a>
-            </div>
-        </article>
-      </main>
-    </div>
-  
-    </a>
-  
-    </a>
-  
-    </p>
-  
-    </h>
-  
-    </p>
-  
-    </h3>
-  
-    </div>
-  
-    </div>
-  
-    </div>
-  
-    </div>
-  
-    </div>
-  
-    </div>
-  
-    </h3>
-  
-    </strong>
-  
-    </span>
-  
-    </span>
-  
-    </li>
-  
-    </strong>
-  
-    </span>
-  
-    </span>
-  
-    </li>
-  );
-}</div></div></div></div>
+            <p className="text-left">The AI 2026 Hyperconscious Computing Revolution is not just an advancement—it's a fundamental transformation of what's possible with artificial intelligence.    We   're not just building smarter machines;
+  }</div></div></div></div>
 </span>
 </span>
 </span>

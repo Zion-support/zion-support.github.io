@@ -53,4 +53,4 @@ export default function AIAutonomous Ops Blueprint2026Page() {
       </main>
     </div>
   );
-}
+  }

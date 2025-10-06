@@ -1,4 +1,5 @@
-import { Metadata } from 'next';
+import { Star } from 'lucide-react';
+import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title:
@@ -332,4 +333,4 @@ export default function Fortune500AIRevolutionSuccess() {
       </section>
     </div>
   );
-}
+  }

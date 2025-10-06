@@ -26,11 +26,11 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       const script = document.createElement('script');
       script.type = 'application/ld+json';
       script.text = JSON.stringify(structuredData);
-      document.head.appendChild(script);
+      document?.head.appendChild(script);
       
       return () => {
-        document.head.removeChild(script);
-      };
+        document?.head.removeChild(script);
+  };
     }
   }, [structuredData]);
 
@@ -61,13 +61,13 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         
         {/* Performance hints */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts?.googleapis.com" />
+        <link rel="preconnect" href="https://fonts?.gstatic.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://fonts?.googleapis.com" />
       </Helmet>
       {children}
     </>
   );
-};
+  };
 
 export default SEOOptimizer;

@@ -1,5 +1,5 @@
 import React from 'react';
-import {Metadata} from 'next';
+import type { Metadata } from 'next';
 
 export const metadata = {
   
@@ -254,7 +254,7 @@ export default function Quantum Neural Consensus2027() {/* return (
         </div>
       </article>
   );
-}</div></div></div></div></div></div></div></div></div></div>
+  }</div></div></div></div></div></div></div></div></div></div>
 </span>
 </span>
 </span>

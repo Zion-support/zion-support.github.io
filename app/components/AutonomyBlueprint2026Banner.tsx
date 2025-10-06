@@ -26,4 +26,4 @@ export default function AutonomyBlueprint2026Banner() {
       </div>
     </section>
   );
-}
+  }

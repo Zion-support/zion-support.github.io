@@ -1,3 +1,4 @@
+import { ArrowLeft } from 'lucide-react';
 import React from 'react';
 import Link from 'next/link';
 import {ArrowLeft,Clock,User,Calendar,Share2,Bookmark} from 'lucide-react';
@@ -189,7 +190,7 @@ export default function AIAutonomous Enterprise Systems2026() {/* return (
       </section>
     </div>
   );
-}
+  }
 </Bookmark>
 </Share2>
 </User>

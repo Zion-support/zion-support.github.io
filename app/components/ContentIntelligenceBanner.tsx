@@ -1,3 +1,5 @@
+import { Zap, CheckCircle } from 'lucide-react';
+import { Star } from 'lucide-react';
 import Link from 'next/link';
 import {
   Award,
@@ -207,7 +209,7 @@ export default function ContentIntelligenceBanner() {
       </div>
     </section>
   );
-}
+  }
 
 /**
  * Compact Content Intelligence Showcase Banner
@@ -253,4 +255,4 @@ export function ContentIntelligenceShowcaseBanner() {
       </div>
     </div>
   );
-}
+  }

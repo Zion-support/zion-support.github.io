@@ -1,3 +1,4 @@
+import { Star } from 'lucide-react';
 import Link from 'next/link';
 
 export default function March2026AutonomousEnterpriseBanner() {
@@ -152,4 +153,4 @@ export default function March2026AutonomousEnterpriseBanner() {
       </div>
     </section>
   );
-}
+  }

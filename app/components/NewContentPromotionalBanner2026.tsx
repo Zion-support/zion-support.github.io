@@ -1,3 +1,6 @@
+import { Zap, ArrowRight, Target } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Star } from 'lucide-react';
 import React from 'react';
 import Link from 'next/link';
 import { Sparkles, TrendingUp, Rocket, Shield, Target, ArrowRight, Zap } from 'lucide-react';
@@ -203,6 +206,6 @@ const NewContentPromotionalBanner2026: React.FC = () => {
       </div>
     </div>
   );
-};
+  };
 
 export default NewContentPromotionalBanner2026;

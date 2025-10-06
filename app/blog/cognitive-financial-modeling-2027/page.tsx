@@ -32,4 +32,5 @@ export default function Cognitive Financial Modeling2027() {return (<div classNa
         </div>
       </main>
     </div>
-  ); }
+  );
+  }

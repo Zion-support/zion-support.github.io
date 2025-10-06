@@ -57,6 +57,6 @@ const ContentShowcase: React.FC = () => {
       </div>
     </section>
   );
-};
+  };
 
 export default ContentShowcase;

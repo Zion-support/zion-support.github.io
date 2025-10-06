@@ -1,5 +1,6 @@
+import { Star } from 'lucide-react';
 import React from 'react';
-import {Metadata} from 'next';
+import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata = {
@@ -267,7 +268,7 @@ export default function Autonomous Enterprise Operations2027() {/* return (
           </div>
       </div>
   );
-}</div></div></div></div></div></div></div></div></div></div>
+  }</div></div></div></div></div></div></div></div></div></div>
 </span>
 </span>
 </span>

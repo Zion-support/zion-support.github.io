@@ -36,27 +36,27 @@ class ErrorHandler {
       stack: typeof error === 'string' ? undefined : error.stack,
       context: {
         timestamp: Date.now(),
-        userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : undefined,
-        url: typeof window !== 'undefined' ? window.location.href : undefined,
+        userAgent: typeof window !== 'undefined' ? window?.navigator.userAgent : undefined,
+        url: typeof window !== 'undefined' ? window?.location.href : undefined,
         ...context,
       },
       severity,
     };
 
-    this.errorQueue.push(errorReport);
+    this?.errorQueue.push(errorReport);
 
     // Keep queue size manageable
-    if (this.errorQueue.length > this.maxQueueSize) {
-      this.errorQueue.shift();
+    if (this?.errorQueue.length > this.maxQueueSize) {
+      this?.errorQueue.shift();
     }
 
     // Log to console in development
-    if (process.env.NODE_ENV === 'development') {
+    if (process?.env.NODE_ENV === 'development') {
       console.error('Error logged:', errorReport);
     }
 
     // Send to external service in production
-    if (process.env.NODE_ENV === 'production') {
+    if (process?.env.NODE_ENV === 'production') {
       this.sendToErrorService(errorReport);
     }
   }
@@ -92,7 +92,7 @@ class ErrorHandler {
    * Get errors by severity
    */
   public getErrorsBySeverity(severity: ErrorReport['severity']): ErrorReport[] {
-    return this.errorQueue.filter(error => error.severity === severity);
+    return this?.errorQueue.filter(error => error.severity === severity);
   }
 
   /**
@@ -100,12 +100,7 @@ class ErrorHandler {
    */
   public setupGlobalHandlers(): void {
     if (typeof window === 'undefined') return;
-
-    // Handle unhandled promise rejections
-    window.addEventListener('unhandledrejection', (event) => {
-      this.logError(
-        new Error(event.reason),
-        { action: 'unhandledrejection' },
+  },
         'high'
       );
     });

@@ -30,4 +30,5 @@ export default function Page() {return (<main className="min-h-screen bg-whitete
         </div>
       </section>
     </main>
-  ); }
+  );
+  }

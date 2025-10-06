@@ -1,3 +1,4 @@
+import { Shield } from 'lucide-react';
 import React from 'react';
 import Link from 'next/link';
 
@@ -79,4 +80,4 @@ export default function Autonomous Governance Blueprint2028() {
       </div>
     </div>
   );
-}
+  }

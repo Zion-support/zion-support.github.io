@@ -423,4 +423,4 @@ export default function AIQuantumBreakthroughSuccess2026() {
       </div>
     </div>
   );
-}
+  }

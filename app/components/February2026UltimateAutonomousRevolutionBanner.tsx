@@ -1,3 +1,4 @@
+import { Star } from 'lucide-react';
 import React from 'react';
 import Link from 'next/link';
 
@@ -126,6 +127,6 @@ const February2026UltimateAutonomousRevolutionBanner: React.FC = () => {
       </div>
     </section>
   );
-};
+  };
 
 export default February2026UltimateAutonomousRevolutionBanner;

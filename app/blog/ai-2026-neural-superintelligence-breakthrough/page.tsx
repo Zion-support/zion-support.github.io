@@ -1,5 +1,6 @@
+import { Star } from 'lucide-react';
 import React from 'react';
-import {Metadata} from 'next';
+import type { Metadata } from 'next';
 
 export const metadata = {
   
@@ -119,4 +120,4 @@ export default function Neural Superintelligence Breakthrough() {/* return (
           </div>
       </section>
   );
-}</div></div></div></div></div></div>)
+  }</div></div></div></div></div></div>)

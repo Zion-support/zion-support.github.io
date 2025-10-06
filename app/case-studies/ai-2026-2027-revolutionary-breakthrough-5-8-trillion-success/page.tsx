@@ -1,3 +1,4 @@
+import { Star } from 'lucide-react';
 // @ts-nocheck
 import Link from 'next/link';
 
@@ -504,4 +505,4 @@ export default function AI20262027RevolutionaryBreakthrough58TrillionSuccess() {
       </div>
     </div>
   );
-}
+  }

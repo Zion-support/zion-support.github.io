@@ -1,5 +1,5 @@
 import React from 'react';
-import {Metadata} from 'next';
+import type { Metadata } from 'next';
 import AI2026January Breakthrough Announcement from '../../../blog/ai-2026-january-breakthrough-announcement';
 
 export const metadata = {
@@ -13,4 +13,4 @@ export const metadata = {
 
 export default function Page() {
   return <AI2026 January Breakthrough Announcement />;
-}
+  }

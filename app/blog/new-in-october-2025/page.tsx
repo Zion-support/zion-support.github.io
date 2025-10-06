@@ -60,4 +60,5 @@ export default function New In October2025() {return (<main className="min-h-scr
         </div>
       </section>
     </main>
-  ); }
+  );
+  }

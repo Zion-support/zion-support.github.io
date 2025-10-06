@@ -11,6 +11,6 @@ const Search = React.memo(function Search({ className = '' }: SearchProps) {
       <p className='text-blue-600'>This component is under development.</p>
     </div>
   );
-});
+  });
 
 export default Search;

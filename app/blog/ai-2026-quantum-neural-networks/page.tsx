@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import {Metadata} from 'next';
+import type { Metadata } from 'next';
 
 export const metadata = {
   
@@ -366,7 +366,7 @@ origin/cursor/fix-errors-and-merge-to-main-cc0a
       </section>
     </div>
   );
-}
+  }
 </span>
 </span>
 </span>

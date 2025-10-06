@@ -1,3 +1,4 @@
+import { Zap, ArrowRight } from 'lucide-react';
 import React from 'react';
 import Link from 'next/link';
 import {ArrowRight,Calendar,Clock,TrendingUp,Users,Zap} from 'lucide-react';
@@ -335,7 +336,7 @@ export default function AI Revolutionary Breakthrough2026() {/* return (
       </section>
     </div>
   );
-}
+  }
 </Arrow>
 </Arrow>
 </Arrow>

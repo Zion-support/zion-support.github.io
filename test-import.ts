@@ -1,3 +1,4 @@
+import { ArrowRight, Target } from 'lucide-react';
 import {
   ArrowRight,
   Brain,

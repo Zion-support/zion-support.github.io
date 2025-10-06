@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React, { useEffect } from 'react';
 
 interface AccessibilityEnhancerProps {
@@ -13,23 +14,8 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       const skipLink = document.createElement('a');
       skipLink.href = '#main-content';
       skipLink.textContent = 'Skip to main content';
-      skipLink.className = 'skip-link';
-      skipLink.style.cssText = `
-        position: absolute;
-        top: -40px;
-        left: 6px;
-        background: #000;
-        color: #fff;
-        padding: 8px;
-        text-decoration: none;
-        z-index: 1000;
-        transition: top 0.3s;
-      `;
-
-      skipLink.addEventListener('focus', () => {
-        skipLink.style.top = '6px';
-      });
-
+      skipLink.className = 'skip-link sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';
+      
       skipLink.addEventListener('blur', () => {
         skipLink.style.top = '-40px';
       });
@@ -56,7 +42,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 
     // Add focus management
     const enhanceFocusManagement = () => {
-      document.addEventListener('keydown', e => {
+      document.addEventListener('keydown', (e) => {
         if (e.key === 'Tab') {
           document.body.classList.add('keyboard-navigation');
         }
@@ -87,6 +73,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   }, []);
 
   return <>{children}</>;
-};
+  };
 
 export default AccessibilityEnhancer;

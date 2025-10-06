@@ -35,4 +35,4 @@ export default function ContentHub() {
       </ul>
     </div>
   );
-}
+  }

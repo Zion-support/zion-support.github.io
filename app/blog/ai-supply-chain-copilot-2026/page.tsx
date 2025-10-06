@@ -1,3 +1,4 @@
+import { Star } from 'lucide-react';
 import React from 'react';
 import ArrowRight from 'next/link';
 
@@ -41,4 +42,5 @@ export default function Page() {return (<div className="max-w-3xl mx-auto px-4 p
         </Arrow>
       </div>
     </div>
-  ); }
+  );
+  }

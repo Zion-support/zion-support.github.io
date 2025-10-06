@@ -12,10 +12,5 @@ export default function Page() {return (<main className="max-w-3xl mx-auto px-6p
       <p className="text-gray-600mb-8">Insights    Without    PII</p>
       <p className="mb-4">
         Scoped I    Dsedge    aggregationand DP noise for compliant A/B tests under
-        &lt;100ms.
-      </p>
-      <p className="text-sm text-gray-500">
-        Published    Sep    30, 2025 • 7 min read
-      </p>
-    </main>
-  ); }
+        &lt;
+  }

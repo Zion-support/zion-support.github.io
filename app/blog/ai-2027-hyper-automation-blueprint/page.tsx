@@ -1,3 +1,4 @@
+import { Star } from 'lucide-react';
 import React from 'react';
 import ArrowRight from 'next/link';
 
@@ -124,4 +125,4 @@ export default function Hyper Automation Blueprint2027Page() {
       </main>
     </div>
   );
-}
+  }

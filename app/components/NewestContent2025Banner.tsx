@@ -63,11 +63,8 @@ const NewestContent2025Banner = () => {
 
                 {/* Excerpt */}
                 <p className="text-gray-300 mb-6 leading-relaxed">
-                  Deploy intelligence at the source with &lt;10ms latency. Achieve 95% bandwidth reduction, 
-                  87% cost savings, and enhanced privacy compliance at enterprise scale.
-                </p>
-
-                {/* Key Stats */}
+                  Deploy intelligence at the source with &lt;
+  }
                 <div className="grid grid-cols-3 gap-4 mb-6">
                   <div className="text-center">
                     <div className="text-2xl font-bold text-cyan-400">&lt;10ms</div>

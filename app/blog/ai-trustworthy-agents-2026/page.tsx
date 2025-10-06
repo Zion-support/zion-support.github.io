@@ -1,3 +1,4 @@
+import { Star } from 'lucide-react';
 import React from 'react';
 
 export const metadata = {
@@ -65,6 +66,6 @@ export default function Page() {/* return (
         </section>
     </article>
   );
-}
+  }
 
 </div>)

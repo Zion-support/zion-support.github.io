@@ -1,5 +1,5 @@
 import React from 'react';
-import {Metadata} from 'next';
+import type { Metadata } from 'next';
 
 export const metadata = {
   
@@ -182,7 +182,8 @@ const autonomous    Config    =
     enable_ml: true,
     model_retraining: "weekly",
     performance_tracking: true
-  };`}
+  };
+  }
               </pre></pre>
             </div>
         </section>
