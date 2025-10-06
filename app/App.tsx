@@ -50,7 +50,7 @@ const App: React.FC = () => {
   return (
     <HelmetProvider>
       <ErrorBoundary>
-        <PerformanceMonitor>
+        <div>
           <SEOOptimizer>
             <AccessibilityEnhancer>
               <Router>
@@ -86,7 +86,7 @@ const App: React.FC = () => {
               </Router>
             </AccessibilityEnhancer>
           </SEOOptimizer>
-        </PerformanceMonitor>
+        </div>
       </ErrorBoundary>
     </HelmetProvider>
   );

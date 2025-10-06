@@ -185,13 +185,6 @@ class PerformanceOptimizer {
     }
   }
 
-  public measurePageLoad(): WebVitalsMetrics | null {
-    return measurePageLoad();
-  }
-
-  public monitorLongTasks(callback: (entries: PerformanceEntryList) => void): PerformanceObserver | null {
-    return monitorLongTasks(callback);
-  }
 
   // Get performance metrics
   getMetrics(): Record<string, number> {
@@ -243,7 +236,7 @@ class PerformanceOptimizer {
   }
 
   // Measure page load performance
-  measurePageLoad(): WebVitalsMetrics | null {
+  public measurePageLoad(): WebVitalsMetrics | null {
     if (typeof window === 'undefined' || !window.performance) {
       return null;
     }
