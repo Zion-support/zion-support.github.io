@@ -11,7 +11,6 @@ import PerformanceDashboard from './components/PerformanceDashboard';
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./page'));
 
-
 // Utils
 import performanceOptimizer from '../src/utils/performanceOptimizer';
 
