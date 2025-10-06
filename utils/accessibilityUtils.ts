@@ -119,8 +119,12 @@ export const keyboardNavigation = {
     }
   },
 };
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6231
 // Color contrast utilities
 export const colorContrast = {
   // Calculate relative luminance
@@ -135,12 +139,15 @@ export const colorContrast = {
   // Calculate contrast ratio
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   getContrastRatio: (_color1: [number, number, number], _color2: [number, number, number]): number => {
     const lum1 = colorContrast.getLuminance(..._color1);
     const lum2 = colorContrast.getLuminance(..._color2);
 =======
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-bcb8
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6231
   getContrastRatio: (color1: [number, number, number], color2: [number, number, number]): number => {
     const lum1 = colorContrast.getLuminance(...color1);
     const lum2 = colorContrast.getLuminance(...color2);
@@ -181,6 +188,7 @@ export const colorContrast = {
     return contrastRatio >= thresholds[level];
   },
 };
+
 // Motion and animation utilities
 export const motionUtils = {
   // Check if user prefers reduced motion
@@ -199,6 +207,7 @@ export const motionUtils = {
     return motionUtils.prefersReducedMotion() ? fallback : animation;
   },
 };
+
 // Form accessibility utilities
 export const formAccessibility = {
   // Associate label with input
@@ -214,6 +223,9 @@ export const formAccessibility = {
     }
     return label;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6231
   },
 
   // Generate unique input ID
@@ -231,6 +243,7 @@ export const formAccessibility = {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-bcb8
   },
 };
+
 // Screen reader utilities
 export const screenReaderUtils = {
   // Hide element from screen readers
@@ -249,6 +262,7 @@ export const screenReaderUtils = {
     return element;
   },
 };
+
 // Accessibility testing utilities
 export const accessibilityTesting = {
   // Check for missing alt text on images
@@ -325,11 +339,14 @@ export const accessibilityTesting = {
   },
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0a61
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-bcb8
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6231
   // Check if element is focusable
   isFocusable: (element: HTMLElement): boolean => {
     const focusableSelectors = [

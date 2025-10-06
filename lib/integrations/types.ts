@@ -55,6 +55,7 @@ export interface ProviderConnection {
 <<<<<<< HEAD
   createdAt: number;
   updatedAt: number;
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-bcb8
 =======
@@ -86,6 +87,9 @@ export interface ProviderConnection {
 =======
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e3b
+=======
+  expiresAt?: number;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6231
 }
 
 export interface ProviderConnection {
@@ -132,6 +136,7 @@ export interface ZapierEvent {
 =======
   payload: Record<string, any>;
 }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -159,6 +164,8 @@ export interface IntegrationProviderMeta {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-b781
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6231
 export interface IntegrationsState {
   connections: ProviderConnection[];
   logs: SyncLogEntry[];

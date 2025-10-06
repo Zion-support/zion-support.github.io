@@ -21,8 +21,11 @@ export interface WebVitalsMetrics {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-8da8
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6231
 export interface PerformanceBudget {
 =======
 interface PerformanceBudget {
@@ -408,6 +411,7 @@ export const checkPerformanceBudget = (budget: PerformanceBudget): {
     const src = (script as HTMLScriptElement).src;
     if (src && !src.startsWith('data:')) {
       totalSize += 100; // Simplified size estimation
+<<<<<<< HEAD
 =======
   } catch (error) {
     console.warn('Long task monitoring not supported:', error);
@@ -605,9 +609,30 @@ export const addCriticalResourceHints = (): void => {
     link.href = hint.href;
     if (hint.crossOrigin) {
       link.crossOrigin = hint.crossOrigin;
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6231
     }
     document.head.appendChild(link);
   });
+<<<<<<< HEAD
+=======
+  
+  if (totalSize > budget.maxBundleSize) {
+    violations.push(`Bundle size ${totalSize}KB exceeds budget ${budget.maxBundleSize}KB`);
+  }
+  
+  // Check load time
+  const timing = window.performance.timing;
+  const loadTime = timing.loadEventEnd - timing.navigationStart;
+  if (loadTime > budget.maxFirstLoad) {
+    violations.push(`Load time ${loadTime}ms exceeds budget ${budget.maxFirstLoad}ms`);
+  }
+  
+  return {
+    passed: violations.length === 0,
+    violations
+  };
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6231
 };
 
 /**
@@ -615,9 +640,12 @@ export const addCriticalResourceHints = (): void => {
  */
 <<<<<<< HEAD
 class PerformanceOptimizer {
+<<<<<<< HEAD
 =======
 export class PerformanceOptimizer {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-3b0a
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6231
   private static instance: PerformanceOptimizer;
   private metrics: Map<string, number> = new Map();
 
@@ -950,6 +978,9 @@ class PerformanceOptimizer {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6231
 export const performanceOptimizer = PerformanceOptimizer.getInstance();
 
 export default {
@@ -970,6 +1001,7 @@ export default {
   cacheStaticAssets,
   clearOldCaches,
   checkPerformanceBudget,
+<<<<<<< HEAD
   addCriticalResourceHints
 <<<<<<< HEAD
 };
@@ -990,3 +1022,7 @@ export default performanceOptimizer;
 const performanceOptimizer = new PerformanceOptimizer();
 export default performanceOptimizer;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-8da8
+=======
+  performanceOptimizer
+};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6231

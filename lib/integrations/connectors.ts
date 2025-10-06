@@ -4,10 +4,13 @@ import type { ProviderConnection, SyncLogEntry } from './types';
 =======
 import { v4 as uuidv4 } from 'uuid';
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-bcb8
 
 export async function simulateAction<T = unknown>(
 =======
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6231
 
 export async function simulateAction<T = any>(
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
@@ -54,6 +57,7 @@ export const crm = {
   async addProjectNote(connection: ProviderConnection, note: Record<string, any>) {
     return simulateAction(connection, 'crm.addProjectNote', { note });
   },
+<<<<<<< HEAD
   
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -79,6 +83,8 @@ export const crm = {
   },
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-b781
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6231
   async addEmailTouchpoint(connection: ProviderConnection, touch: Record<string, any>) {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-bcb8
     return simulateAction(connection, 'crm.addEmailTouchpoint', { touch });

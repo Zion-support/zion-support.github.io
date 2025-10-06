@@ -135,6 +135,9 @@ function sendToAnalytics(metric: Metric): void {
     rating: getRating(metric.name, metric.value),
     delta: metric.delta,
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6231
     id: metric.id
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -561,6 +564,7 @@ export function generatePerformanceReport(): PerformanceReport | null {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-bcb8
 =======
     userAgent: navigator.userAgent
@@ -582,6 +586,8 @@ export function generatePerformanceReport(): PerformanceReport | null {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2068
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-b781
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6231
   };
 }
 /**
