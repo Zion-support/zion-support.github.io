@@ -1,5 +1,6 @@
 import { IntegrationProviderMeta } from './types';
 >>>>>>> b0d6dda8406c2e54af3529a18b3e8c5f6ab37739
+>>>>>>> 73aae067a8789e7f94c7cf242d65c42e6717fb43
 import type { IntegrationProviderMeta } from './types';
 export const PROVIDERS: IntegrationProviderMeta[] = [
   { id: 'salesforce', name: 'Salesforce', category: 'crm', description: 'Enterprise CRM' },
@@ -13,6 +14,7 @@ export const PROVIDERS: IntegrationProviderMeta[] = [
 import { IntegrationProviderMeta } from './types';
 export const PROVIDERS: IntegrationProviderMeta[] = [
 >>>>>>> cursor/fix-errors-and-merge-to-main-bd65
+>>>>>>> 73aae067a8789e7f94c7cf242d65c42e6717fb43
   {
     id: 'salesforce',
     name: 'Salesforce',

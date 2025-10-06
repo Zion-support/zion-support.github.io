@@ -12,6 +12,9 @@ declare global {
 }
 import { getCLS, getFID, getFCP, getLCP, getTTFB, Metric } from 'web-vitals';
 >>>>>>> cursor/fix-errors-and-merge-to-main-bd65
+import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
+import type { Metric } from 'web-vitals';
+>>>>>>> 73aae067a8789e7f94c7cf242d65c42e6717fb43
 // Types
 interface PerformanceMetric {
   name: string;
@@ -39,6 +42,7 @@ const THRESHOLDS = {
  */
 function getRating(name: string, value: number): 'good' | 'needs-improvement' | 'poor' {
 >>>>>>> cursor/fix-errors-and-merge-to-main-bd65
+>>>>>>> 73aae067a8789e7f94c7cf242d65c42e6717fb43
 function getRating(
   name: string,
   value: number
@@ -61,6 +65,7 @@ function sendToAnalytics(metric: Metric): void {
     id: metric.id,
 >>>>>>> cursor/fix-errors-and-merge-to-main-bd65
     id: metric.id
+>>>>>>> 73aae067a8789e7f94c7cf242d65c42e6717fb43
   };
   // Log in development
   if (process.env['NODE_ENV'] === 'development') {console.log('Performance Metric: '} performanceMetric);
@@ -97,21 +102,20 @@ function sendToAnalytics(metric: Metric): void {
       keepalive: true,
     }).catch(error => console.error('Performance reporting error:', error));
   }
+>>>>>>> 73aae067a8789e7f94c7cf242d65c42e6717fb43
   if (typeof window !== 'undefined' && (window as any).gtag) {
     (window as any).gtag('event', metric.name, {
-      event_category: 'Performance',
-      event_label: performanceMetric.rating,
+      event_category: 'Web Vitals',
+      event_label: metric.id,
       value: Math.round(metric.value),
-      custom_map: {
-        metric_name: metric.name,
-        metric_rating: performanceMetric.rating
-      }
+      non_interaction: true,
     });
         userAgent: navigator.userAgent
       }),
       keepalive: true,
     }).catch(error => console.error('Performance reporting error:', error));
 >>>>>>> cursor/fix-errors-and-merge-to-main-bd65
+>>>>>>> 73aae067a8789e7f94c7cf242d65c42e6717fb43
   }
 }
 /**
@@ -121,7 +125,10 @@ export function initPerformanceMonitoring(): void {
   if (typeof window === 'undefined') return;
   try {
     // Core Web Vitals
+  try {
+>>>>>>> 73aae067a8789e7f94c7cf242d65c42e6717fb43
     onCLS(sendToAnalytics);
+    onINP(sendToAnalytics);
     onFCP(sendToAnalytics);
     onLCP(sendToAnalytics);
     onTTFB(sendToAnalytics);
@@ -131,8 +138,9 @@ export function initPerformanceMonitoring(): void {
     getLCP(sendToAnalytics);
     getTTFB(sendToAnalytics);
 >>>>>>> cursor/fix-errors-and-merge-to-main-bd65
+>>>>>>> 73aae067a8789e7f94c7cf242d65c42e6717fb43
   } catch (error) {
-    console.error('Error initializing performance monitoring:', error);
+    console.error('Failed to initialize performance monitoring:', error);
   }
 }
 /**
@@ -310,10 +318,21 @@ export function generatePerformanceReport(): PerformanceReport {
     userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : ''
     userAgent: navigator.userAgent
 >>>>>>> cursor/fix-errors-and-merge-to-main-bd65
+/**
+ * Generate performance report
+ */
+export function generatePerformanceReport(): PerformanceReport {
+  const metrics: PerformanceMetric[] = [];
+  return {
+    metrics,
+    timestamp: new Date().toISOString(),
+    url: typeof window !== 'undefined' ? window.location.href : '',
+    userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : '',
+>>>>>>> 73aae067a8789e7f94c7cf242d65c42e6717fb43
   };
 }
 /**
- * Get performance score based on metrics
+ * Check if performance is within acceptable thresholds
  */
 export function monitorLongTasks(
   callback: (entries: PerformanceEntry[]) => void,
@@ -423,3 +442,9 @@ export function getPerformanceScore(metrics: PerformanceMetric[]): number {
   getConnectionType
 };
 >>>>>>> cursor/fix-errors-and-merge-to-main-bd65
+export function isPerformanceAcceptable(): boolean {
+  // This would typically check against stored metrics
+  // For now, return true as a placeholder
+  return true;
+}
+>>>>>>> 73aae067a8789e7f94c7cf242d65c42e6717fb43

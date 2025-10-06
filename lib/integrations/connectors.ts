@@ -14,6 +14,9 @@ function uuidv4(): string {
 import { ProviderConnection, SyncLogEntry } from './types';
 import { v4 as uuidv4 } from 'uuid';
 >>>>>>> cursor/fix-errors-and-merge-to-main-bd65
+import type { ProviderConnection, SyncLogEntry } from './types';
+import { v4 as uuidv4 } from 'uuid';
+>>>>>>> 73aae067a8789e7f94c7cf242d65c42e6717fb43
 export async function simulateAction<T = any>(
   connection: ProviderConnection,
   action: string,
@@ -45,6 +48,7 @@ export const crm = {
     return simulateAction(connection, 'crm.addProjectNote', { note });
   },
 >>>>>>> cursor/fix-errors-and-merge-to-main-bd65
+>>>>>>> 73aae067a8789e7f94c7cf242d65c42e6717fb43
   async addEmailTouchpoint(connection: ProviderConnection, touch: Record<string, any>) {
     return simulateAction(connection, 'crm.addEmailTouchpoint', { touch });
   }

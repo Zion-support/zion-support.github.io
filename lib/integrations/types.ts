@@ -11,12 +11,13 @@ export type IntegrationProviderId =
 export type SyncStatus = 'connected' | 'warning' | 'disconnected';
 
 export interface IntegrationProviderMeta {
-  id: IntegrationProviderId;
+  id: string;
   name: string;
-  category: 'crm' | 'ats';
+  category: 'crm' | 'ats' | 'hr';
   description: string;
 }
 >>>>>>> cursor/fix-errors-and-merge-to-main-bd65
+>>>>>>> 73aae067a8789e7f94c7cf242d65c42e6717fb43
 export interface ProviderConnection {
   id: string;
   providerId: IntegrationProviderId;
@@ -37,6 +38,11 @@ export interface ProviderConnection {
   createdAt: number;
   updatedAt: number;
 >>>>>>> cursor/fix-errors-and-merge-to-main-bd65
+  expiresAt?: number;
+  status: SyncStatus;
+  lastSync?: number;
+  config?: Record<string, any>;
+>>>>>>> 73aae067a8789e7f94c7cf242d65c42e6717fb43
 }
 export interface SyncLogEntry {
   id: string;
@@ -64,6 +70,7 @@ export interface IntegrationProviderMeta {
   description: string;
 }
 >>>>>>> cursor/fix-errors-and-merge-to-main-bd65
+>>>>>>> 73aae067a8789e7f94c7cf242d65c42e6717fb43
 export interface IntegrationsState {
   connections: ProviderConnection[];
   logs: SyncLogEntry[];
