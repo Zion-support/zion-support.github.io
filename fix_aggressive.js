@@ -21,7 +21,7 @@ function fixCorruptedSyntax(text) {
         .replace(/\s*,\s*/g, ', ')
         .trim();
       return `import React, { ${cleanImports} } from 'react';`;
-    },
+    }
   );
 
   // Fix corrupted import statements
@@ -33,31 +33,31 @@ function fixCorruptedSyntax(text) {
         .replace(/\s*,\s*/g, ', ')
         .trim();
       return `import { ${cleanImports} } from '${module}';`;
-    },
+    }
   );
 
   // Fix corrupted variable declarations
   fixed = fixed.replace(
     /const\s*\[([^,]+),\s*([^,]+)\]\s*=\s*useState\s*\(/g,
-    'const [$1, $2] = useState(',
+    'const [$1, $2] = useState('
   );
   fixed = fixed.replace(
     /const\s*\[([^,]+),\s*([^,]+)\]\s*=\s*useState\s*\(/g,
-    'const [$1, $2] = useState(',
+    'const [$1, $2] = useState('
   );
 
   // Fix corrupted function declarations
   fixed = fixed.replace(
     /export\s*default\s*function\s*([a-zA-Z_$][a-zA-Z0-9_$]*)\s*\(/g,
-    'export default function $1(',
+    'export default function $1('
   );
   fixed = fixed.replace(
     /const\s*([a-zA-Z_$][a-zA-Z0-9_$]*)\s*:\s*React\.FC\s*=\s*\(/g,
-    'const $1: React.FC = (',
+    'const $1: React.FC = ('
   );
   fixed = fixed.replace(
     /const\s*([a-zA-Z_$][a-zA-Z0-9_$]*)\s*=\s*\(/g,
-    'const $1 = (',
+    'const $1 = ('
   );
 
   // Fix corrupted JSX
@@ -67,7 +67,7 @@ function fixCorruptedSyntax(text) {
   // Fix corrupted object properties
   fixed = fixed.replace(
     /\{\s*([a-zA-Z_$][a-zA-Z0-9_$]*)\s*:\s*([^,}]+),\s*([a-zA-Z_$][a-zA-Z0-9_$]*)\s*:\s*([^,}]+)\s*\}/g,
-    '{ $1: $2, $3: $4 }',
+    '{ $1: $2, $3: $4 }'
   );
 
   // Fix corrupted array syntax
@@ -76,7 +76,7 @@ function fixCorruptedSyntax(text) {
   // Fix corrupted function calls
   fixed = fixed.replace(
     /([a-zA-Z_$][a-zA-Z0-9_$]*)\s*\(\s*([^)]*)\s*\)/g,
-    '$1($2)',
+    '$1($2)'
   );
 
   // Fix corrupted arrow functions
@@ -93,15 +93,15 @@ function fixCorruptedSyntax(text) {
   // Fix corrupted variable declarations
   fixed = fixed.replace(
     /const\s*([a-zA-Z_$][a-zA-Z0-9_$]*)\s*=\s*([^;]+);?/g,
-    'const $1 = $2;',
+    'const $1 = $2;'
   );
   fixed = fixed.replace(
     /let\s*([a-zA-Z_$][a-zA-Z0-9_$]*)\s*=\s*([^;]+);?/g,
-    'let $1 = $2;',
+    'let $1 = $2;'
   );
   fixed = fixed.replace(
     /var\s*([a-zA-Z_$][a-zA-Z0-9_$]*)\s*=\s*([^;]+);?/g,
-    'var $1 = $2;',
+    'var $1 = $2;'
   );
 
   // Fix corrupted return statements
@@ -113,7 +113,7 @@ function fixCorruptedSyntax(text) {
   // Fix corrupted for loops
   fixed = fixed.replace(
     /for\s*\(\s*([^;]+);\s*([^;]+);\s*([^)]+)\s*\)\s*\{/g,
-    'for ($1; $2; $3) {',
+    'for ($1; $2; $3) {'
   );
 
   // Fix corrupted while loops
@@ -126,35 +126,35 @@ function fixCorruptedSyntax(text) {
   // Fix corrupted class declarations
   fixed = fixed.replace(
     /class\s*([a-zA-Z_$][a-zA-Z0-9_$]*)\s*extends\s*([a-zA-Z_$][a-zA-Z0-9_$]*)\s*\{/g,
-    'class $1 extends $2 {',
+    'class $1 extends $2 {'
   );
   fixed = fixed.replace(
     /class\s*([a-zA-Z_$][a-zA-Z0-9_$]*)\s*\{/g,
-    'class $1 {',
+    'class $1 {'
   );
 
   // Fix corrupted method declarations
   fixed = fixed.replace(
     /([a-zA-Z_$][a-zA-Z0-9_$]*)\s*\(\s*([^)]*)\s*\)\s*\{/g,
-    '$1($2) {',
+    '$1($2) {'
   );
 
   // Fix corrupted property access
   fixed = fixed.replace(
     /([a-zA-Z_$][a-zA-Z0-9_$]*)\s*\.\s*([a-zA-Z_$][a-zA-Z0-9_$]*)/g,
-    '$1.$2',
+    '$1.$2'
   );
 
   // Fix corrupted array access
   fixed = fixed.replace(
     /([a-zA-Z_$][a-zA-Z0-9_$]*)\s*\[\s*([^\]]+)\s*\]/g,
-    '$1[$2]',
+    '$1[$2]'
   );
 
   // Fix corrupted ternary operators
   fixed = fixed.replace(
     /([^?]+)\s*\?\s*([^:]+)\s*:\s*([^;]+)/g,
-    '$1 ? $2 : $3',
+    '$1 ? $2 : $3'
   );
 
   // Fix corrupted logical operators
@@ -170,7 +170,7 @@ function fixCorruptedSyntax(text) {
   // Fix corrupted assignment operators
   fixed = fixed.replace(
     /([a-zA-Z_$][a-zA-Z0-9_$]*)\s*=\s*([^;]+);?/g,
-    '$1 = $2;',
+    '$1 = $2;'
   );
 
   // Fix corrupted semicolons
@@ -192,7 +192,7 @@ function fixCorruptedSyntax(text) {
   // Fix specific corrupted patterns
   fixed = fixed.replace(
     /useStateuseEffectSuspenselazyuseCallback/g,
-    'useState, useEffect, Suspense, lazy, useCallback',
+    'useState, useEffect, Suspense, lazy, useCallback'
   );
   fixed = fixed.replace(/RouterRoutesRoute/g, 'Router, Routes, Route');
   fixed = fixed.replace(/HelmetProvider/g, 'HelmetProvider');
@@ -205,15 +205,15 @@ function fixCorruptedSyntax(text) {
   fixed = fixed.replace(/MenuX/g, 'Menu, X');
   fixed = fixed.replace(
     /isMobileMenuOpensetIsMobileMenuOpen/g,
-    'isMobileMenuOpen, setIsMobileMenuOpen',
+    'isMobileMenuOpen, setIsMobileMenuOpen'
   );
   fixed = fixed.replace(
     /showPerformanceMonitorsetShowPerformanceMonitor/g,
-    'showPerformanceMonitor, setShowPerformanceMonitor',
+    'showPerformanceMonitor, setShowPerformanceMonitor'
   );
   fixed = fixed.replace(
     /performanceMetricssetPerformanceMetrics/g,
-    'performanceMetrics, setPerformanceMetrics',
+    'performanceMetrics, setPerformanceMetrics'
   );
 
   return fixed;

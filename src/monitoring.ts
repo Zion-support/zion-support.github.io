@@ -7,22 +7,10 @@ import { performanceOptimizer } from './utils/performanceOptimizer';
 if (typeof window !== 'undefined') {
   // Track page load
   analytics.trackPageView(window.location.pathname);
-  
+
   // Initialize performance optimizer
   performanceOptimizer.lazyLoadImages();
-  
-  // Monitor long tasks
-  if ('PerformanceObserver' in window) {
-    const observer = new PerformanceObserver((list) => {
-      list.getEntries().forEach((entry) => {
-        if (entry.entryType === 'longtask') {
-          analytics.track('long_task', 'performance', 'detected', undefined, entry.duration);
-        }
-      });
-    });
-    observer.observe({ entryTypes: ['longtask'] });
-  }
-  
+
   // Track Web Vitals
   const metrics = performanceOptimizer.measurePageLoad();
   if (metrics) {

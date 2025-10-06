@@ -59,7 +59,7 @@ class AccessibilityOptimizer {
 
   private optimizeARIALabels(): void {
     const elements = document.querySelectorAll(
-      'button, input, select, textarea, a, img',
+      'button, input, select, textarea, a, img'
     );
 
     elements.forEach(element => {
@@ -104,7 +104,7 @@ class AccessibilityOptimizer {
 
   private optimizeKeyboardNavigation(): void {
     const focusableElements = document.querySelectorAll(
-      'button, input, select, textarea, a, [tabindex]',
+      'button, input, select, textarea, a, [tabindex]'
     );
 
     focusableElements.forEach(element => {
@@ -164,7 +164,7 @@ class AccessibilityOptimizer {
 
   private optimizeFocusManagement(): void {
     const focusableElements = document.querySelectorAll(
-      'button, input, select, textarea, a, [tabindex]',
+      'button, input, select, textarea, a, [tabindex]'
     );
 
     focusableElements.forEach(element => {
@@ -228,7 +228,7 @@ class AccessibilityOptimizer {
   public getOverallScore(): number {
     const totalScore = this.results.reduce(
       (sum, result) => sum + result.score,
-      0,
+      0
     );
     const maxPossibleScore = this.results.length * 100; // Assuming max score per element is 100
     return Math.round((totalScore / maxPossibleScore) * 100);

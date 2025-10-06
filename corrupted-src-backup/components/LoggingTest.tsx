@@ -6,7 +6,7 @@ export const LoggingTest: React.FC = () => {
   const testError = () => {
     try {
       throw new Error(
-        'This is a test error for the production logging service',
+        'This is a test error for the production logging service'
       );
     } catch (error) {
       logger.error('Test error from LoggingTest component', error, {

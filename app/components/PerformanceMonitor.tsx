@@ -5,15 +5,11 @@ interface PerformanceMonitorProps {
   className?: string;
 }
 
-const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ 
-  children, 
-  className = '' 
+const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
+  children,
+  className = '',
 }) => {
-  return (
-    <div className={`performance-monitor ${className}`}>
-      {children}
-    </div>
-  );
+  return <div className={`performance-monitor ${className}`}>{children}</div>;
 };
 
 export default PerformanceMonitor;

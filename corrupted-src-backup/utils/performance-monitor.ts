@@ -1,4 +1,3 @@
-
 interface PerformanceMetrics {
   lcp: number | null;
   fid: number | null;
@@ -139,7 +138,7 @@ class PerformanceMonitor {
             this.interactions = this.interactions.slice(-100);
           }
         },
-        { passive: true },
+        { passive: true }
       );
     });
   }
@@ -175,7 +174,7 @@ class PerformanceMonitor {
     }, 0);
 
     console.log(
-      `Total resources loaded: ${resources.length}, Total size: ${(totalResourceSize / 1024).toFixed(2)} KB`,
+      `Total resources loaded: ${resources.length}, Total size: ${(totalResourceSize / 1024).toFixed(2)} KB`
     );
   }
 
