@@ -1,237 +1,139 @@
-export, interface, BannerData {
-id: stri, n, g;
-ti, t, l
-  e: stri, n, g;
-subtit, l, e?: stri, n, g;
-descripti, o, n: stri, n, g;
-ctaTe, x, t: stri, n, g;
-ctaL, i, n
-  k: stri, n, g;
-imageU, r, l?: stri, n, g;
-catego, r, y: stri, n, g;
-priori, t, y: numb, e, r;
-isAct, i, v
-  e: boole, a, n;
-startDa, t, e?: stri, n, g;
-endDa, t, e?: stri, n, g;
+export interface BannerData {
+  id: string;
+  title: string;
+  subtitle?: string;
+  description: string;
+  ctaText: string;
+  ctaLink: string;
+  imageUrl?: string;
+  category: string;
+  priority: number;
+  isActive: boolean;
+  startDate?: string;
+  endDate?: string;
 }
-export, const, bannerData: BannerDa, t, a[] = [
+
+export const bannerData: BannerData[] = [
   {
-    id: 'janua, r, y-20, 2, 6-ai-breakthroug, h, s','
-    tit, l, e: 'Revolutionary, AI, Breakthroughs - January, 202, 6','
-    subtit, l, e: 'Ult, r, a-Autonomous, Enterpris, e + Quantum, Consciousness, BI','
-    descripti, o, n: 'Experience, the, future of, AI, with our, latest, breakthrough
-  s: Ult, r, a-Autonomous, Enterprise, solutions, Quantum, Consciousness, Business Intelligen, c, e, and, Neura, l-Quantum, Fusion, technology. Combined, value, of $36.8B, in, transformative capabiliti, e, s.','
-    ctaTe, x, t: 'Explore, Breakthrough, s','
-    ctaLi, n, k: '/ai-breakthroug, h, s-20, 2, 6','
-    catego, r, y: 'ai-breakthroug, h, s','
-    priori, t, y: 1, 0, 0
-    isActi, v, e: tr, u, e
-    startDa, t, e: '20, 2, 6-01-01','
-    endDa, t, e: '20, 2, 6-12-31}
+    id: 'january-2026-ai-breakthroughs',
+    title: 'Revolutionary AI Breakthroughs - January 2026',
+    subtitle: 'Ultra-Autonomous Enterprise + Quantum Consciousness BI',
+    description: 'Experience the future of AI with our latest breakthroughs: Ultra-Autonomous Enterprise solutions, Quantum Consciousness Business Intelligence, and Neural-Quantum Fusion technology. Combined value of $36.8B in transformative capabilities.',
+    ctaText: 'Explore Breakthroughs',
+    ctaLink: '/ai-breakthroughs-2026',
+    category: 'ai-breakthroughs',
+    priority: 100,
+    isActive: true,
+    startDate: '2026-01-01',
+    endDate: '2026-12-31',
+  },
   {
-    id: 'octob, e, r-20, 2, 5-l, l, m-orchestrati, o, n','
-    tit, l, e: 'Enterprise, LLM, Orchestration Revoluti, o, n','
-    subtit, l, e: '$8.2B, Value, Creation, 1,8, 4, 0% R, O, I','
-    descripti, o, n: 'Transform, your, enterprise with, our, LLM Orchestration, platfor, m. Proven, resul, t
-  s: 73% cost, reductio, n, 5, 2, 0% productivity, increas, e, Fortune, 100, validated succe, s, s.','
-    ctaTe, x, t: 'Learn, Mor, e','
-    ctaLi, n, k: '/l, l, m-orchestrati, o, n','
-    catego, r, y: 'enterpri, s, e-ai','
-    priori, t, y: 95
-    isActi, v, e: tr, u, e
-    startDa, t, e: '20, 2, 5-10-01','
-    endDa, t, e: '20, 2, 6-03-31}
+    id: 'october-2025-llm-orchestration',
+    title: 'Enterprise LLM Orchestration Revolution',
+    subtitle: '$8.2B Value Creation, 1,840% ROI',
+    description: 'Transform your enterprise with our LLM Orchestration platform. Proven results: 73% cost reduction, 520% productivity increase, Fortune 100 validated success.',
+    ctaText: 'Learn More',
+    ctaLink: '/llm-orchestration',
+    category: 'enterprise-ai',
+    priority: 95,
+    isActive: true,
+    startDate: '2025-10-01',
+    endDate: '2026-03-31',
+  },
   {
-    id: 'cogniti, v, e-orchestrati, o, n','
-    tit, l, e: 'Cognitive, Orchestration, Platform','
-    subtit, l, e: '$84.7B, Value, Creation, 47,2, 0, 0% R, O, I','
-    descripti, o, n: 'Revolutionary, cognitive, orchestration with, 9, 9.97% autonomous, operation, s, managing, 28, 7,000, AI, agents across, Fortune, 50 enterpris, e, s.','
-    ctaTe, x, t: 'Discover, Platfor, m','
-    ctaLi, n, k: '/cogniti, v, e-orchestrati, o, n','
-    catego, r, y: 'cogniti, v, e-ai','
-    priori, t, y: 90
-    isActi, v, e: tr, u, e
-    startDa, t, e: '20, 2, 5-10-01','
-    endDa, t, e: '20, 2, 6-06-30}
+    id: 'cognitive-orchestration',
+    title: 'Cognitive Orchestration Platform',
+    subtitle: '$84.7B Value Creation, 47,200% ROI',
+    description: 'Revolutionary cognitive orchestration with 99.97% autonomous operations managing 287,000 AI agents across Fortune 50 enterprises.',
+    ctaText: 'Discover Platform',
+    ctaLink: '/cognitive-orchestration',
+    category: 'cognitive-ai',
+    priority: 90,
+    isActive: true,
+    startDate: '2025-10-01',
+    endDate: '2026-06-30',
+  },
   {
-    id: 'ai-ethi, c, s-governan, c, e','
-    tit, l, e: 'AI, Ethic, s & Governance, Framewor, k','
-    subtit, l, e: '$8.7B, Success, Story, 18,4, 0, 0% R, O, I','
-    descripti, o, n: 'Complete, AI, governance framework, with, 99.8% compliance, rat, e, trusted, by, 240+ Fortune, 500, companies for, ethical, AI implementati, o, n.','
-    ctaTe, x, t: 'View, Framewor, k','
-    ctaLi, n, k: '/ai-ethi, c, s-governan, c, e','
-    catego, r, y: 'ai-governan, c, e','
-    priori, t, y: 85
-    isActi, v, e: tr, u, e
-    startDa, t, e: '20, 2, 5-10-01','
-    endDa, t, e: '20, 2, 6-12-31}
+    id: 'ai-ethics-governance',
+    title: 'AI Ethics & Governance Framework',
+    subtitle: '$8.7B Success Story, 18,400% ROI',
+    description: 'Complete AI governance framework with 99.8% compliance rate, trusted by 240+ Fortune 500 companies for ethical AI implementation.',
+    ctaText: 'View Framework',
+    ctaLink: '/ai-ethics-governance',
+    category: 'ai-governance',
+    priority: 85,
+    isActive: true,
+    startDate: '2025-10-01',
+    endDate: '2026-12-31',
+  },
   {
-    id: 're, a, l-ti, m, e-intelligen, c, e-me, s, h','
-    tit, l, e: 'Re, a, l-Time, Intelligence, Mesh','
-    subtit, l, e: 'S, u, b-2ms, Latenc, y, 26,6, 6, 7% R, O, I','
-    descripti, o, n: 'Ne, x, t-generation, intelligence, mesh delivering, rea, l-time, insights, with s, u, b-2ms, latenc, y, proven, in, Fortune 50, logistics, operations.','
-    ctaTe, x, t: 'Experience, Spee, d','
-    ctaLi, n, k: '/intelligen, c, e-me, s, h','
-    catego, r, y: 're, a, l-ti, m, e-ai','
-    priori, t, y: 80
-    isActi, v, e: tr, u, e
-    startDa, t, e: '20, 2, 5-10-01','
-    endDa, t, e: '20, 2, 6-09-30}
+    id: 'real-time-intelligence-mesh',
+    title: 'Real-Time Intelligence Mesh',
+    subtitle: 'Sub-2ms Latency, 26,667% ROI',
+    description: 'Next-generation intelligence mesh delivering real-time insights with sub-2ms latency, proven in Fortune 50 logistics operations.',
+    ctaText: 'Experience Speed',
+    ctaLink: '/intelligence-mesh',
+    category: 'real-time-ai',
+    priority: 80,
+    isActive: true,
+    startDate: '2025-10-01',
+    endDate: '2026-09-30',
+  },
   {
-    id: 'ed, g, e-ai-5g-revoluti, o, n','
-    tit, l, e: 'Edge, A, I + 5G, Revolutio, n','
-    subtit, l, e: '$18.4B, Automotive, Success','
-    descripti, o, n: 'Revolutionary, Edge, AI + 5G, platform, with <10ms, latenc, y, 2,4, 0, 0% R, O, I, powering, 4, 7,0, 0, 0+ AI, devices, in automotive, industr, y.','
-    ctaTe, x, t: 'Join, Revolutio, n','
-    ctaLi, n, k: '/ed, g, e-ai-5g','
-    catego, r, y: 'ed, g, e-computi, n, g','
-    priori, t, y: 75
-    isActi, v, e: tr, u, e
-    startDa, t, e: '20, 2, 5-10-01','
-    endDa, t, e: '20, 2, 6-08-31}
+    id: 'edge-ai-5g-revolution',
+    title: 'Edge AI + 5G Revolution',
+    subtitle: '$18.4B Automotive Success',
+    description: 'Revolutionary Edge AI + 5G platform with <10ms latency, 2,400% ROI, powering 470,000+ AI devices in automotive industry.',
+    ctaText: 'Join Revolution',
+    ctaLink: '/edge-ai-5g',
+    category: 'edge-computing',
+    priority: 75,
+    isActive: true,
+    startDate: '2025-10-01',
+    endDate: '2026-08-31',
+  },
   {
-    id: 'generati, v, e-ai-co, d, e-generati, o, n','
-    tit, l, e: 'Generative, AI, Code Generati, o, n','
-    subtit, l, e: '$47.3M, Value, Creation, 10.2x, Productivit, y','
-    descripti, o, n: 'Revolutionary, code, generation platform, delivering, 85% faster, delivery, times, trusted, by, 2,4, 0, 0+ developers, worldwid, e.','
-    ctaTe, x, t: 'Start, Codin, g','
-    ctaLi, n, k: '/ai-co, d, e-generati, o, n','
-    catego, r, y: 'developme, n, t-too, l, s','
-    priori, t, y: 70
-    isActi, v, e: tr, u, e
-    startDa, t, e: '20, 2, 5-10-01','
-    endDa, t, e: '20, 2, 6-07-31}
+    id: 'generative-ai-code-generation',
+    title: 'Generative AI Code Generation',
+    subtitle: '$47.3M Value Creation, 10.2x Productivity',
+    description: 'Revolutionary code generation platform delivering 85% faster delivery times, trusted by 2,400+ developers worldwide.',
+    ctaText: 'Start Coding',
+    ctaLink: '/ai-code-generation',
+    category: 'development-tools',
+    priority: 70,
+    isActive: true,
+    startDate: '2025-10-01',
+    endDate: '2026-07-31',
+  },
   {
-    id: 'quant, u, m-ed, g, e-computi, n, g','
-    tit, l, e: 'Quant, u, m-Enhanced, Edge, Computing','
-    subtit, l, e: '47,0, 0, 0+ Edge, Device, s, 99.99% Accura, c, y','
-    descripti, o, n: 'Breakthrough, quantu, m-enhanced, edge, computing with, su, b-10ms, latenc, y, 2,4, 0, 0% R, O, I, delivering, unprecedented, accuracy.','
-    ctaTe, x, t: 'Explore, Quantu, m','
-    ctaLi, n, k: '/quant, u, m-ed, g, e','
-    catego, r, y: 'quant, u, m-computi, n, g','
-    priori, t, y: 65
-    isActi, v, e: tr, u, e
-    startDa, t, e: '20, 2, 5-10-01','
-    endDa, t, e: '20, 2, 6-10-31}
-    id: 'janua, r, y-20, 2, 6-ai-breakthroug, h, s',';
-    tit, l, e: 'Revolutionary, AI, Breakthroughs - January, 202, 6',';
-    subtit, l, e: 'Ult, r, a-Autonomous, Enterpris, e + Quantum, Consciousness, BI',';
-    descripti, o, n: 'Experience, the, future of, AI, with our, latest, breakthrough
-  s: Ult, r, a-Autonomous, Enterprise, solutions, Quantum, Consciousness, Business Intelligen, c, e, and, Neura, l-Quantum, Fusion, technology. Combined, value, of $36.8B, in, transformative capabiliti, e, s.',';
-    ctaTe, x, t: 'Explore, Breakthrough, s',';
-    ctaLi, n, k: '/ai-breakthroug, h, s-20, 2, 6',';
-    catego, r, y: 'ai-breakthroug, h, s',';
-    priori, t, y: 1, 0, 0
-    isActi, v, e: tr, u, e
-    startDa, t, e: '20, 2, 6-01-01',';
-    endDa, t, e: '20, 2, 6-12-31'
-  }
-  {
-    id: 'octob, e, r-20, 2, 5-l, l, m-orchestrati, o, n',';
-    tit, l, e: 'Enterprise, LLM, Orchestration Revoluti, o, n',';
-    subtit, l, e: '$8.2B, Value, Creation, 1,8, 4, 0% R, O, I',';
-    descripti, o, n: 'Transform, your, enterprise with, our, LLM Orchestration, platfor, m. Proven, resul, t
-  s: 73% cost, reductio, n, 5, 2, 0% productivity, increas, e, Fortune, 100, validated succe, s, s.',';
-    ctaTe, x, t: 'Learn, Mor, e',';
-    ctaLi, n, k: '/l, l, m-orchestrati, o, n',';
-    catego, r, y: 'enterpri, s, e-ai',';
-    priori, t, y: 95
-    isActi, v, e: tr, u, e
-    startDa, t, e: '20, 2, 5-10-01',';
-    endDa, t, e: '20, 2, 6-03-31'
-  }
-  {
-    id: 'cogniti, v, e-orchestrati, o, n',';
-    tit, l, e: 'Cognitive, Orchestration, Platform',';
-    subtit, l, e: '$84.7B, Value, Creation, 47,2, 0, 0% R, O, I',';
-    descripti, o, n: 'Revolutionary, cognitive, orchestration with, 9, 9.97% autonomous, operation, s, managing, 28, 7,000, AI, agents across, Fortune, 50 enterpris, e, s.',';
-    ctaTe, x, t: 'Discover, Platfor, m',';
-    ctaLi, n, k: '/cogniti, v, e-orchestrati, o, n',';
-    catego, r, y: 'cogniti, v, e-ai',';
-    priori, t, y: 90
-    isActi, v, e: tr, u, e
-    startDa, t, e: '20, 2, 5-10-01',';
-    endDa, t, e: '20, 2, 6-06-30'
-  }
-  {
-    id: 'ai-ethi, c, s-governan, c, e',';
-    tit, l, e: 'AI, Ethic, s & Governance, Framewor, k',';
-    subtit, l, e: '$8.7B, Success, Story, 18,4, 0, 0% R, O, I',';
-    descripti, o, n: 'Complete, AI, governance framework, with, 99.8% compliance, rat, e, trusted, by, 240+ Fortune, 500, companies for, ethical, AI implementati, o, n.',';
-    ctaTe, x, t: 'View, Framewor, k',';
-    ctaLi, n, k: '/ai-ethi, c, s-governan, c, e',';
-    catego, r, y: 'ai-governan, c, e',';
-    priori, t, y: 85
-    isActi, v, e: tr, u, e
-    startDa, t, e: '20, 2, 5-10-01',';
-    endDa, t, e: '20, 2, 6-12-31'
-  }
-  {
-    id: 're, a, l-ti, m, e-intelligen, c, e-me, s, h',';
-    tit, l, e: 'Re, a, l-Time, Intelligence, Mesh',';
-    subtit, l, e: 'S, u, b-2ms, Latenc, y, 26,6, 6, 7% R, O, I',';
-    descripti, o, n: 'Ne, x, t-generation, intelligence, mesh delivering, rea, l-time, insights, with s, u, b-2ms, latenc, y, proven, in, Fortune 50, logistics, operations.',';
-    ctaTe, x, t: 'Experience, Spee, d',';
-    ctaLi, n, k: '/intelligen, c, e-me, s, h',';
-    catego, r, y: 're, a, l-ti, m, e-ai',';
-    priori, t, y: 80
-    isActi, v, e: tr, u, e
-    startDa, t, e: '20, 2, 5-10-01',';
-    endDa, t, e: '20, 2, 6-09-30'
-  }
-  {
-    id: 'ed, g, e-ai-5g-revoluti, o, n',';
-    tit, l, e: 'Edge, A, I + 5G, Revolutio, n',';
-    subtit, l, e: '$18.4B, Automotive, Success',';
-    descripti, o, n: 'Revolutionary, Edge, AI + 5G, platform, with <10ms, latenc, y, 2,4, 0, 0% R, O, I, powering, 4, 7,0, 0, 0+ AI, devices, in automotive, industr, y.',';
-    ctaTe, x, t: 'Join, Revolutio, n',';
-    ctaLi, n, k: '/ed, g, e-ai-5g',';
-    catego, r, y: 'ed, g, e-computi, n, g',';
-    priori, t, y: 75
-    isActi, v, e: tr, u, e
-    startDa, t, e: '20, 2, 5-10-01',';
-    endDa, t, e: '20, 2, 6-08-31'
-  }
-  {
-    id: 'generati, v, e-ai-co, d, e-generati, o, n',';
-    tit, l, e: 'Generative, AI, Code Generati, o, n',';
-    subtit, l, e: '$47.3M, Value, Creation, 10.2x, Productivit, y',';
-    descripti, o, n: 'Revolutionary, code, generation platform, delivering, 85% faster, delivery, times, trusted, by, 2,4, 0, 0+ developers, worldwid, e.',';
-    ctaTe, x, t: 'Start, Codin, g',';
-    ctaLi, n, k: '/ai-co, d, e-generati, o, n',';
-    catego, r, y: 'developme, n, t-too, l, s',';
-    priori, t, y: 70
-    isActi, v, e: tr, u, e
-    startDa, t, e: '20, 2, 5-10-01',';
-    endDa, t, e: '20, 2, 6-07-31'
-  }
-  {
-    id: 'quant, u, m-ed, g, e-computi, n, g',';
-    tit, l, e: 'Quant, u, m-Enhanced, Edge, Computing',';
-    subtit, l, e: '47,0, 0, 0+ Edge, Device, s, 99.99% Accura, c, y',';
-    descripti, o, n: 'Breakthrough, quantu, m-enhanced, edge, computing with, su, b-10ms, latenc, y, 2,4, 0, 0% R, O, I, delivering, unprecedented, accuracy.',';
-    ctaTe, x, t: 'Explore, Quantu, m',';
-    ctaLi, n, k: '/quant, u, m-ed, g, e',';
-    catego, r, y: 'quant, u, m-computi, n, g',';
-    priori, t, y: 65
-    isActi, v, e: tr, u, e
-    startDa, t, e: '20, 2, 5-10-01',';
-    endDa, t, e: '20, 2, 6-10-31'
-  }
+    id: 'quantum-edge-computing',
+    title: 'Quantum-Enhanced Edge Computing',
+    subtitle: '47,000+ Edge Devices, 99.99% Accuracy',
+    description: 'Breakthrough quantum-enhanced edge computing with sub-10ms latency, 2,400% ROI, delivering unprecedented accuracy.',
+    ctaText: 'Explore Quantum',
+    ctaLink: '/quantum-edge',
+    category: 'quantum-computing',
+    priority: 65,
+    isActive: true,
+    startDate: '2025-10-01',
+    endDate: '2026-10-31',
+  },
 ];
-export, const, getBannersByCategory = (catego, r, y: stri, n, g): BannerDa, t, a[] => {
-  return, bannerDat, a.filt, e, r(bann, e, r => bann, e, r.catego, r, y === catego, r, y);
+
+export const getBannersByCategory = (category: string): BannerData[] => {
+  return bannerData.filter(banner => banner.category === category);
 };
-export, const, getActiveBanners = (): BannerDa, t, a[] => {
-  const, no, w = new, Dat, e();
-  return, bannerDat, a.filt, e, r(bann, e, r => {
-    if (!bann, e, r.isActi, v, e) return, fals, e;
-    if (bann, e, r.startDa, t, e && new, Dat, e(bann, e, r.startDa, t, e) > n, o, w) return, fals, e;
-    if (bann, e, r.endDa, t, e && new, Dat, e(bann, e, r.endDa, t, e) < n, o, w) return, fals, e;
-    return, tru, e;
-  }).so, r, t((a, b) => b.priori, t, y - a.priori, t, y);
+
+export const getActiveBanners = (): BannerData[] => {
+  const now = new Date();
+  return bannerData.filter(banner => {
+    if (!banner.isActive) return false;
+    if (banner.startDate && new Date(banner.startDate) > now) return false;
+    if (banner.endDate && new Date(banner.endDate) < now) return false;
+    return true;
+  }).sort((a, b) => b.priority - a.priority);
 };
-export, const, getBannerById = (id: stri, n, g): BannerDa, t, a | undefin, e, d => {
-  return, bannerDat, a.fi, n, d(bann, e, r => bann, e, r.id === id);
+
+export const getBannerById = (id: string): BannerData | undefined => {
+  return bannerData.find(banner => banner.id === id);
 };
