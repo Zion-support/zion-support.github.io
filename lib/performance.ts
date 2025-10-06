@@ -2,6 +2,7 @@
  * Performance Monitoring Utility
  * Tracks and reports web vitals and performance metrics
  */
+<<<<<<< HEAD
 import { onCLS, onFCP, onLCP, onTTFB } from 'web-vitals';
 import type { Metric } from 'web-vitals';
 
@@ -11,6 +12,9 @@ declare global {
     gtag?: (...args: unknown[]) => void;
   }
 }
+=======
+import { onCLS, onFCP, onLCP, onTTFB, type Metric } from 'web-vitals';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3d1d
 
 // Types
 interface PerformanceMetric {
@@ -55,7 +59,11 @@ const THRESHOLDS = {
   FID: { good: 100, poor: 300 },
   FCP: { good: 1800, poor: 3000 },
   LCP: { good: 2500, poor: 4000 },
+<<<<<<< HEAD
   TTFB: { good: 800, poor: 1800 },
+=======
+  TTFB: { good: 800, poor: 1800 }
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3d1d
 };
 /**
  * Get rating based on metric value
@@ -302,10 +310,13 @@ export function generatePerformanceReport(): PerformanceReport | null {
     userAgent: navigator.userAgent
 =======
     userAgent: navigator.userAgent,
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-bcb8
 =======
     userAgent: navigator.userAgent
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-be22
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3d1d
   };
 }
 /**
@@ -431,6 +442,9 @@ export default {
   getPerformanceScore
 <<<<<<< HEAD
 };
+<<<<<<< HEAD
 =======
 };
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-be22
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3d1d

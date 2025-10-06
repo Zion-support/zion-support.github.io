@@ -8,12 +8,17 @@ export type IntegrationProviderId =
   | 'workable' 
   | 'bamboohr';
 export type SyncStatus = 'connected' | 'warning' | 'disconnected';
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3d1d
 export interface IntegrationProviderMeta {
   id: IntegrationProviderId;
   name: string;
   category: 'crm' | 'ats';
   description: string;
 }
+<<<<<<< HEAD
 export interface ProviderConnection {
   id: string;
   providerId: IntegrationProviderId;
@@ -27,6 +32,20 @@ export interface ProviderConnection {
   updatedAt: number;
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-bcb8
+=======
+
+export interface ProviderConnection {
+  id: string;
+  providerId: IntegrationProviderId;
+  name: string;
+  status: SyncStatus;
+  accessToken?: string;
+  refreshToken?: string;
+  expiresAt?: number;
+  lastSyncAt?: number;
+  createdAt: number;
+  updatedAt: number;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3d1d
 }
 export interface SyncLogEntry {
   id: string;
@@ -52,7 +71,10 @@ export interface ZapierEvent {
   payload: Record<string, any>;
 }
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-bcb8
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3d1d
 export interface IntegrationsState {
   connections: ProviderConnection[];
   logs: SyncLogEntry[];

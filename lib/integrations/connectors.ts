@@ -29,12 +29,20 @@ export const crm = {
   async syncContact(connection: ProviderConnection, contact: Record<string, unknown>) {
     return simulateAction(connection, 'crm.syncContact', { contact });
   },
+<<<<<<< HEAD
   async addProjectNote(connection: ProviderConnection, note: Record<string, unknown>) {
     return simulateAction(connection, 'crm.addProjectNote', { note });
   },
 <<<<<<< HEAD
   async addEmailTouchpoint(connection: ProviderConnection, touch: Record<string, unknown>) {
 =======
+=======
+  
+  async addProjectNote(connection: ProviderConnection, note: Record<string, any>) {
+    return simulateAction(connection, 'crm.addProjectNote', { note });
+  },
+  
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3d1d
   async addEmailTouchpoint(connection: ProviderConnection, touch: Record<string, any>) {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-bcb8
     return simulateAction(connection, 'crm.addEmailTouchpoint', { touch });
@@ -45,7 +53,12 @@ export const ats = {
   async pushApplicant(connection: ProviderConnection, applicant: Record<string, unknown>) {
     return simulateAction(connection, 'ats.pushApplicant', { applicant });
   },
+<<<<<<< HEAD
   async updateStatus(connection: ProviderConnection, change: Record<string, unknown>) {
+=======
+  
+  async updateStatus(connection: ProviderConnection, change: Record<string, any>) {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3d1d
     return simulateAction(connection, 'ats.updateStatus', { change });
   }
 };

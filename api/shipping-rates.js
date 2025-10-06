@@ -1,10 +1,20 @@
+<<<<<<< HEAD
 export default async function handler(req, res) {
+=======
+const { withSentry } = require('./withSentry.cjs');
+
+async function handler(req, res) {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3d1d
   if (req.method !== 'POST') {
     res.statusCode = 405;
     res.setHeader('Allow', 'POST');
     res.end('Method Not Allowed');
     return;
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3d1d
   try {
     const { fromAddress, toAddress, parcel } = req.body || {};
     const apiKey = process.env.EASYPOST_API_KEY;
@@ -35,4 +45,10 @@ export default async function handler(req, res) {
     res.statusCode = 500;
     res.json({ error: err.message });
   }
+<<<<<<< HEAD
 }
+=======
+}
+
+module.exports = withSentry(handler);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3d1d

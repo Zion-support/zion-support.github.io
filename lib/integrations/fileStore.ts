@@ -1,9 +1,18 @@
+<<<<<<< HEAD
 import * as fs from 'fs';
 import * as path from 'path';
 import type { IntegrationsState } from './types';
 
 const DATA_DIR = path.resolve(process.cwd(), 'data', 'integrations');
 const STATE_FILE = path.join(DATA_DIR, 'state.json');
+=======
+import fs from "fs";
+import path from "path";
+import type { IntegrationsState } from "./types";
+
+const DATA_DIR = path.resolve(process.cwd(), "data", "integrations");
+const STATE_FILE = path.join(DATA_DIR, "state.json");
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3d1d
 
 function ensureDataDir(): void {
   if (!fs.existsSync(DATA_DIR)) {
@@ -41,4 +50,8 @@ export function writeState(
   mutator(current);
   fs.writeFileSync(STATE_FILE, JSON.stringify(current, null, 2), 'utf8');
   return current;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3d1d
