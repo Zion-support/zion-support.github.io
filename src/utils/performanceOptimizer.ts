@@ -12,21 +12,21 @@ export class PerformanceOptimizer {
 
   // Lazy load images with intersection observer
   lazyLoadImages(): void {
-    if ('IntersectionObserver' in window) {
+    if ("IntersectionObserver" in window) {
       const imageObserver = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             const img = entry.target as HTMLImageElement;
             if (img.dataset.src) {
               img.src = img.dataset.src;
-              img.classList.remove('lazy');
+              img.classList.remove("lazy");
               imageObserver.unobserve(img);
             }
           }
         });
       });
 
-      document.querySelectorAll('img[data-src]').forEach((img) => {
+      document.querySelectorAll("img[data-src]").forEach((img) => {
         imageObserver.observe(img);
       });
     }
@@ -35,18 +35,18 @@ export class PerformanceOptimizer {
   // Preload critical resources
   preloadCriticalResources(): void {
     const criticalResources = [
-      '/fonts/inter.woff2',
-      '/images/hero-bg.jpg',
-      '/images/logo.svg'
+      "/fonts/inter.woff2",
+      "/images/hero-bg.jpg",
+      "/images/logo.svg"
     ];
 
     criticalResources.forEach((resource) => {
-      const link = document.createElement('link');
-      link.rel = 'preload';
+      const link = document.createElement("link");
+      link.rel = "preload";
       link.href = resource;
-      link.as = resource.endsWith('.woff2') ? 'font' : 'image';
-      if (resource.endsWith('.woff2')) {
-        link.crossOrigin = 'anonymous';
+      link.as = resource.endsWith(".woff2") ? "font" : "image";
+      if (resource.endsWith(".woff2")) {
+        link.crossOrigin = "anonymous";
       }
       document.head.appendChild(link);
     });
@@ -68,7 +68,7 @@ export class PerformanceOptimizer {
       }
     };
 
-    window.addEventListener('scroll', requestTick, { passive: true });
+    window.addEventListener("scroll", requestTick, { passive: true });
   }
 
   // Measure performance metrics
@@ -80,7 +80,7 @@ export class PerformanceOptimizer {
     
     this.metrics.set(name, duration);
     
-    if (process.env.NODE_ENV === 'development') {
+    if (process.env.NODE_ENV === "development") {
       console.log(`Performance: ${name} took ${duration.toFixed(2)}ms`);
     }
   }
@@ -90,19 +90,19 @@ export class PerformanceOptimizer {
     return Object.fromEntries(this.metrics);
   }
 
-  // Add critical resource hints
+  // Add critical resource hints for better performance
   addCriticalResourceHints(): void {
-    if (typeof document === 'undefined') return;
+    if (typeof document === "undefined") return;
     
     const hints = [
-      { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' },
-      { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com' },
-      { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
-      { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossOrigin: 'anonymous' }
+      { rel: "dns-prefetch", href: "https://fonts.googleapis.com" },
+      { rel: "dns-prefetch", href: "https://fonts.gstatic.com" },
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" }
     ];
     
     hints.forEach(hint => {
-      const link = document.createElement('link');
+      const link = document.createElement("link");
       link.rel = hint.rel;
       link.href = hint.href;
       if (hint.crossOrigin) {
@@ -114,30 +114,30 @@ export class PerformanceOptimizer {
 
   // Report web vitals
   reportWebVitals(): void {
-    if (typeof window === 'undefined' || !('web-vitals' in window)) return;
+    if (typeof window === "undefined" || !("web-vitals" in window)) return;
     
     // This would integrate with web-vitals library
-    console.log('Web vitals reporting enabled');
+    console.log("Web vitals reporting enabled");
   }
 
   // Measure page load performance
   measurePageLoad(): void {
-    if (typeof window === 'undefined') return;
+    if (typeof window === "undefined") return;
     
-    window.addEventListener('load', () => {
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+    window.addEventListener("load", () => {
+      const navigation = performance.getEntriesByType("navigation")[0] as PerformanceNavigationTiming;
       if (navigation) {
         const loadTime = navigation.loadEventEnd - (navigation as any).navigationStart;
-        this.metrics.set('pageLoad', loadTime);
+        this.metrics.set("pageLoad", loadTime);
       }
     });
   }
 
   // Initialize all optimizations
   initialize(): void {
-    this.measurePerformance('lazyLoadImages', () => this.lazyLoadImages());
-    this.measurePerformance('preloadCriticalResources', () => this.preloadCriticalResources());
-    this.measurePerformance('optimizeScroll', () => this.optimizeScroll());
+    this.measurePerformance("lazyLoadImages", () => this.lazyLoadImages());
+    this.measurePerformance("preloadCriticalResources", () => this.preloadCriticalResources());
+    this.measurePerformance("optimizeScroll", () => this.optimizeScroll());
     this.addCriticalResourceHints();
     this.reportWebVitals();
     this.measurePageLoad();
@@ -148,10 +148,10 @@ export class PerformanceOptimizer {
  * Clear old caches to prevent storage bloat
  */
 export const clearOldCaches = (): void => {
-  if ('caches' in window) {
+  if ("caches" in window) {
     caches.keys().then(names => {
       names.forEach(name => {
-        if (name.includes('old-') || name.includes('v1-')) {
+        if (name.includes("old-") || name.includes("v1-")) {
           caches.delete(name);
         }
       });
@@ -170,7 +170,7 @@ export const checkPerformanceBudget = (): boolean => {
     cls: 0.1   // Cumulative Layout Shift
   };
   
-  const entries = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+  const entries = performance.getEntriesByType("navigation")[0] as PerformanceNavigationTiming;
   if (!entries) return true;
   
   return (
