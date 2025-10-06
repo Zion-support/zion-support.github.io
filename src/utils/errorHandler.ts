@@ -33,11 +33,11 @@ class ErrorHandler {
   ): void {
     const errorReport: ErrorReport = {
       message: typeof error === 'string' ? error : error.message,
-      stack: typeof error === 'string' ? undefined : error.stack,
+      stack: typeof error === 'string' ? '' : error.stack || '',
       context: {
         timestamp: Date.now(),
-        userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : undefined,
-        url: typeof window !== 'undefined' ? window.location.href : undefined,
+        userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : '',
+        url: typeof window !== 'undefined' ? window.location.href : '',
         ...context,
       } as ErrorContext,
       severity,
