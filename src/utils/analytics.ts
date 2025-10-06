@@ -1,7 +1,6 @@
 /**
  * Analytics utility for tracking events and performance
  */
-<<<<<<< HEAD
 export interface AnalyticsEvent {
   name: string;
   category: string;
@@ -11,6 +10,7 @@ export interface AnalyticsEvent {
   properties?: Record<string, unknown> | undefined;
   timestamp: number;
 }
+
 export interface UserProperties {
   userId?: string | undefined;
   sessionId: string;
@@ -19,44 +19,21 @@ export interface UserProperties {
   timezone: string;
   referrer?: string | undefined;
 }
+
 class Analytics {
   private events: AnalyticsEvent[] = [];
   private userProperties: UserProperties;
   private sessionId: string;
+
   constructor() {
     this.sessionId = this.generateSessionId();
     this.userProperties = this.initializeUserProperties();
   }
+
   /**
-   * Generate unique session ID
+   * Track a custom event
    */
-  private generateSessionId(): string {
-    return `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-  }
-  /**
-   * Initialize user properties
-   */
-  private initializeUserProperties(): UserProperties {
-    if (typeof window === 'undefined') {
-      return {
-        sessionId: this.sessionId,
-        userAgent: 'server',
-        language: 'en',
-        timezone: 'UTC',
-      };
-    }
-    return {
-      sessionId: this.sessionId,
-      userAgent: window.navigator.userAgent,
-      language: window.navigator.language,
-      timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
-      referrer: document.referrer || '',
-    };
-  }
-  /**
-   * Track an event
-   */
-  public track(
+  track(
     name: string,
     category: string,
     action?: string,
@@ -67,151 +44,102 @@ class Analytics {
     const event: AnalyticsEvent = {
       name,
       category,
-<<<<<<< HEAD
-      action: action || undefined,
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      action: action || '',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
-      label: label || undefined,
-<<<<<<< HEAD
-<<<<<<< HEAD
-      value: value || 0,
-      properties: properties || {},
-=======
-<<<<<<< HEAD
+      action,
+      label,
       value,
       properties,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-02dd
-=======
-      value: value || undefined,
-      properties: properties || undefined,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-8da8
-=======
->>>>>>> main
-      action: action || undefined,
-      label: label || undefined,
-      value: value || undefined,
-      properties: properties || undefined,
-<<<<<<< HEAD
-=======
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
       timestamp: Date.now(),
     };
+
     this.events.push(event);
-    // Send to analytics service
-    this.sendToAnalytics(event);
-    // Log in development
-<<<<<<< HEAD
-    if (process.env.NODE_ENV === 'development') {
-      // Analytics event logged
-=======
-    if (process.env['NODE_ENV'] === 'development') {
-      // Analytics event tracked
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-e98c
-    }
+    this.sendEvent(event);
   }
+
   /**
    * Track page view
    */
-  public trackPageView(page: string, title?: string): void {
+  trackPageView(page: string, title?: string): void {
     this.track('page_view', 'navigation', 'view', page, undefined, {
-      page_title: title || document.title,
-      page_url: typeof window !== 'undefined' ? window.location.href : page,
+      page_title: title,
+      page_url: window.location.href,
     });
   }
+
   /**
    * Track user interaction
    */
-  public trackInteraction(
-    element: string,
-    action: string,
-    category: string = 'user_interaction'
-  ): void {
-    this.track('interaction', category, action, element);
+  trackInteraction(element: string, action: string, value?: number): void {
+    this.track('interaction', 'user_action', action, element, value);
   }
+
   /**
    * Track performance metrics
    */
-  public trackPerformance(metric: string, value: number, unit: string = 'ms'): void {
-    this.track('performance', 'metrics', metric, unit, value);
+  trackPerformance(name: string, value: number, unit: string = 'ms'): void {
+    this.track('performance', 'metrics', 'measure', name, value, {
+      unit,
+    });
   }
+
   /**
-   * Track business events
+   * Track error
    */
-  public trackBusinessEvent(
-    event: string,
-    value?: number,
-    properties?: Record<string, unknown>
-  ): void {
-    this.track(event, 'business', 'event', undefined, value, properties);
+  trackError(error: Error, context?: string): void {
+    this.track('error', 'exception', 'thrown', context, undefined, {
+      error_message: error.message,
+      error_stack: error.stack,
+    });
   }
-  /**
-   * Send event to analytics service
-   */
-  private async sendToAnalytics(event: AnalyticsEvent): Promise<void> {
-    try {
-      // In a real application, you would send to services like Google Analytics, Mixpanel, etc.
-      // For now, we'll just log to console
-<<<<<<< HEAD
-      // Analytics event sent
-=======
-      // Analytics event sent successfully
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-e98c
-    } catch (err) {
-      // Failed to send analytics event
-    }
-  }
+
   /**
    * Get all events
    */
-  public getEvents(): AnalyticsEvent[] {
+  getEvents(): AnalyticsEvent[] {
     return [...this.events];
   }
-  /**
-   * Get events by category
-   */
-  public getEventsByCategory(category: string): AnalyticsEvent[] {
-    return this.events.filter(event => event.category === category);
-  }
+
   /**
    * Clear all events
    */
-  public clearEvents(): void {
+  clearEvents(): void {
     this.events = [];
   }
+
   /**
    * Get user properties
    */
-  public getUserProperties(): UserProperties {
+  getUserProperties(): UserProperties {
     return { ...this.userProperties };
   }
+
   /**
    * Update user properties
    */
-  public updateUserProperties(properties: Partial<UserProperties>): void {
+  updateUserProperties(properties: Partial<UserProperties>): void {
     this.userProperties = { ...this.userProperties, ...properties };
   }
-}
-// Create singleton instance
-export const analytics = new Analytics();
-export default analytics;
-=======
 
-export const analytics = {
-  track: (event: string, category: string, action: string, label?: string, value?: number) => {
-    console.log('Analytics:', { event, category, action, label, value });
-    // In a real implementation, this would send data to analytics service
-  },
-  
-  trackPerformance: (name: string, value: number, unit: string = 'ms') => {
-    console.log(`Performance: ${name} = ${value}${unit}`);
-    // In a real implementation, this would send performance data to analytics
+  private generateSessionId(): string {
+    return `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
   }
-};
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
+
+  private initializeUserProperties(): UserProperties {
+    return {
+      sessionId: this.sessionId,
+      userAgent: navigator.userAgent,
+      language: navigator.language,
+      timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
+      referrer: document.referrer || undefined,
+    };
+  }
+
+  private sendEvent(event: AnalyticsEvent): void {
+    // In a real implementation, this would send the event to your analytics service
+    console.log('Analytics Event:', event);
+  }
+}
+
+// Create singleton instance
+const analytics = new Analytics();
+
+export default analytics;

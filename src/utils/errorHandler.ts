@@ -1,7 +1,6 @@
 /**
  * Error handling utilities
  */
-<<<<<<< HEAD
 export interface ErrorContext {
   component?: string | undefined;
   action?: string | undefined;
@@ -10,15 +9,18 @@ export interface ErrorContext {
   userAgent?: string | undefined;
   url?: string | undefined;
 }
+
 export interface ErrorReport {
   message: string;
   stack?: string | undefined;
   context: ErrorContext;
   severity: 'low' | 'medium' | 'high' | 'critical';
 }
+
 class ErrorHandler {
   private errorQueue: ErrorReport[] = [];
   private maxQueueSize = 100;
+
   /**
    * Log an error with context
    */
@@ -29,112 +31,104 @@ class ErrorHandler {
   ): void {
     const errorReport: ErrorReport = {
       message: typeof error === 'string' ? error : error.message,
-      stack: typeof error === 'string' ? '' : error.stack || '',
+      stack: typeof error === 'string' ? undefined : error.stack,
       context: {
         timestamp: Date.now(),
-        userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : '',
-        url: typeof window !== 'undefined' ? window.location.href : '',
+        userAgent: navigator.userAgent,
+        url: window.location.href,
         ...context,
-      } as ErrorContext,
+      },
       severity,
     };
-    this.errorQueue.push(errorReport);
-    // Keep queue size manageable
-    if (this.errorQueue.length > this.maxQueueSize) {
-      this.errorQueue.shift();
-    }
-    // Log to console in development
-<<<<<<< HEAD
-    if (process.env.NODE_ENV === 'development') {
-=======
-    if (process.env['NODE_ENV'] === 'development') {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-e98c
-      // Error logged
-    }
-    // Send to external service in production
-    if (process.env['NODE_ENV'] === 'production') {
-      this.sendToErrorService(errorReport);
-    }
+
+    this.addToQueue(errorReport);
+    this.logToConsole(errorReport);
   }
+
   /**
-   * Send error to external error reporting service
+   * Log a warning
    */
-  private async sendToErrorService(errorReport: ErrorReport): Promise<void> {
-    try {
-      // In a real application, you would send to services like Sentry, LogRocket, etc.
-      // For now, we'll just log to console
-<<<<<<< HEAD
-      // Error report
-=======
-      // Error report generated
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-e98c
-    } catch (err) {
-      // Failed to send error report
-    }
+  public logWarning(
+    message: string,
+    context: Partial<ErrorContext> = {}
+  ): void {
+    this.logError(message, context, 'low');
   }
+
   /**
-   * Get all errors from the queue
+   * Log a critical error
+   */
+  public logCritical(
+    error: Error | string,
+    context: Partial<ErrorContext> = {}
+  ): void {
+    this.logError(error, context, 'critical');
+  }
+
+  /**
+   * Get all errors
    */
   public getErrors(): ErrorReport[] {
     return [...this.errorQueue];
   }
+
   /**
-   * Clear error queue
+   * Clear all errors
    */
   public clearErrors(): void {
     this.errorQueue = [];
   }
+
   /**
    * Get errors by severity
    */
   public getErrorsBySeverity(severity: ErrorReport['severity']): ErrorReport[] {
     return this.errorQueue.filter(error => error.severity === severity);
   }
-  /**
-   * Setup global error handlers
-   */
-  public setupGlobalHandlers(): void {
-    if (typeof window === 'undefined') return;
-    // Handle unhandled promise rejections
-    window.addEventListener('unhandledrejection', event => {
-      this.logError(
-        new Error(event.reason),
-        { action: 'unhandledrejection' },
-        'high'
-      );
-    });
-    // Handle JavaScript errors
-    window.addEventListener('error', event => {
-      this.logError(
-        event.error || new Error(event.message),
-        {
-          action: 'javascript_error',
-          url: event.filename,
-          component: 'global',
-        },
-        'high'
-      );
-    });
-  }
-}
-// Create singleton instance
-export const errorHandler = new ErrorHandler();
-// Setup global handlers
-if (typeof window !== 'undefined') {
-  errorHandler.setupGlobalHandlers();
-}
-export default errorHandler;
-=======
 
-export const errorHandler = {
-  log: (error: Error, context?: string) => {
-    console.error('Error:', error.message, context ? `Context: ${context}` : '');
-    // In a real implementation, this would send error data to monitoring service
-  },
-  
-  report: (error: Error, context?: string) => {
-    console.error('Error reported:', error.message, context ? `Context: ${context}` : '');
-    // In a real implementation, this would send error data to error reporting service
+  /**
+   * Get error count
+   */
+  public getErrorCount(): number {
+    return this.errorQueue.length;
   }
-};
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
+
+  private addToQueue(errorReport: ErrorReport): void {
+    this.errorQueue.push(errorReport);
+    
+    // Keep queue size manageable
+    if (this.errorQueue.length > this.maxQueueSize) {
+      this.errorQueue.shift();
+    }
+  }
+
+  private logToConsole(errorReport: ErrorReport): void {
+    const { message, stack, context, severity } = errorReport;
+    
+    const logMessage = `[${severity.toUpperCase()}] ${message}`;
+    const logData = {
+      context,
+      stack,
+    };
+
+    switch (severity) {
+      case 'critical':
+        console.error(logMessage, logData);
+        break;
+      case 'high':
+        console.error(logMessage, logData);
+        break;
+      case 'medium':
+        console.warn(logMessage, logData);
+        break;
+      case 'low':
+        console.info(logMessage, logData);
+        break;
+    }
+  }
+}
+
+// Create singleton instance
+const errorHandler = new ErrorHandler();
+
+export default errorHandler;

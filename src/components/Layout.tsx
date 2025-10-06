@@ -1,193 +1,96 @@
 import React from 'react';
-<<<<<<< HEAD:app/layout.tsx
-import Link from 'next/link';
-import './globals.css';
-=======
 import { Link } from 'react-router-dom';
->>>>>>> main:src/components/Layout.tsx
 
 function Header(): React.JSX.Element {
   return (
-    <header className='border-b border-gray-200 sticky top-0 z-50 bg-white shadow-sm'>
-      <nav className='flex items-center justify-between px-4 py-3 max-w-6xl mx-auto'>
+    <header className="border-b border-gray-200 sticky top-0 z-50 bg-white shadow-sm">
+      <nav className="flex items-center justify-between px-4 py-3 max-w-6xl mx-auto">
         <Link
-<<<<<<< HEAD:app/layout.tsx
-          href='/'
-=======
-          to='/'
->>>>>>> main:src/components/Layout.tsx
-          className='font-bold text-lg text-gray-900 hover:text-blue-600 transition-colors'
+          to="/"
+          className="font-bold text-lg text-gray-900 hover:text-blue-600 transition-colors"
         >
           Zion Tech Group
         </Link>
-        <div className='hidden md:flex gap-6'>
+        <div className="hidden md:flex gap-6">
           <Link
-<<<<<<< HEAD:app/layout.tsx
-            href='/about'
-=======
-            to='/about'
->>>>>>> main:src/components/Layout.tsx
-            className='text-gray-700 hover:text-blue-600 transition-colors'
+            to="/about"
+            className="text-gray-700 hover:text-blue-600 transition-colors"
           >
             About
           </Link>
           <Link
-<<<<<<< HEAD:app/layout.tsx
-            href='/services'
-=======
-            to='/services'
->>>>>>> main:src/components/Layout.tsx
-            className='text-gray-700 hover:text-blue-600 transition-colors'
+            to="/services"
+            className="text-gray-700 hover:text-blue-600 transition-colors"
           >
             Services
           </Link>
-          <div className='relative group'>
+          <div className="relative group">
             <Link
-<<<<<<< HEAD:app/layout.tsx
-              href='/services/ai-autonomous-operations-2026'
-=======
-              to='/services/ai-autonomous-operations-2026'
->>>>>>> main:src/components/Layout.tsx
-              className='text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1'
+              to="/services/ai-autonomous-operations-2026"
+              className="text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1"
             >
-              AI Operations 2026
-              <span className='bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-2 py-1 rounded-full text-xs font-semibold'>
-                REVOLUTIONARY
-              </span>
+              AI Solutions
+              <svg
+                className="w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
             </Link>
-          </div>
-          <div className='relative group'>
-            <Link
-<<<<<<< HEAD:app/layout.tsx
-              href='/content-hub'
-=======
-              to='/content-hub'
->>>>>>> main:src/components/Layout.tsx
-              className='text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1'
-            >
-              Content Hub
-              <span className='bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-2 py-1 rounded-full text-xs font-semibold'>
-                NEW 2027
-              </span>
-            </Link>
-          </div>
-          <div className='relative group'>
-            <Link
-<<<<<<< HEAD:app/layout.tsx
-              href='/blog/ai-2026-autonomous-business-intelligence-breakthrough'
-              className='text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1'
-            >
-              Autonomous BI 2026
-              <span className='bg-gradient-to-r from-green-500 to-emerald-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse'>
-                BREAKTHROUGH
-              </span>
-            </Link>
-          </div>
-          <div className='relative group'>
-            <Link
-              href='/blog/ai-2026-quantum-enhanced-analytics'
-              className='text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1'
-            >
-              Quantum Analytics
-              <span className='bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse'>
-                1000x SPEED
-              </span>
-            </Link>
-          </div>
-          <div className='relative group'>
-            <Link
-              href='/blog/ai-2028-next-generation-autonomous-enterprise'
-              className='text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1'
-            >
-              AI 2028 Autonomous
-              <span className='bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse'>
-                REVOLUTIONARY
-              </span>
-            </Link>
-          </div>
-          <div className='relative group'>
-            <Link
-              href='/blog/ai-2028-neuromorphic-superintelligence'
-              className='text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1'
-            >
-              Neuromorphic AI 2028
-              <span className='bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse'>
-                SUPERINTELLIGENCE
-              </span>
-            </Link>
-          </div>
-          <div className='relative group'>
-            <Link
-              href='/blog/ai-2027-quantum-breakthrough-enterprise'
-              className='text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1'
-            >
-              Quantum AI 2027
-              <span className='bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-2 py-1 rounded-full text-xs font-semibold'>
-                QUANTUM
-              </span>
-            </Link>
-          </div>
-          <div className='relative group'>
-            <Link
-              href='/blog'
-=======
-              to='/blog'
->>>>>>> main:src/components/Layout.tsx
-              className='text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1'
-            >
-              Blog
-              <span className='bg-gradient-to-r from-purple-500 to-pink-500 text-white px-2 py-1 rounded-full text-xs font-semibold'>
-                BREAKTHROUGH 2027
-              </span>
-              <span className='bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-2 py-1 rounded-full text-xs font-semibold ml-1'>
-                50+ ARTICLES
-              </span>
-            </Link>
-          </div>
-          <div className='relative group'>
-            <Link
-<<<<<<< HEAD:app/layout.tsx
-              href='/case-studies'
-=======
-              to='/team'
->>>>>>> main:src/components/Layout.tsx
-              className='text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1'
-            >
-              Case Studies
-              <span className='bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-2 py-1 rounded-full text-xs font-semibold'>
-                $43M+ ROI
-              </span>
-              <span className='bg-gradient-to-r from-green-500 to-teal-500 text-white px-2 py-1 rounded-full text-xs font-semibold ml-1'>
-                25+ STUDIES
-              </span>
-            </Link>
+            <div className="absolute top-full left-0 mt-1 w-48 bg-white rounded-md shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+              <div className="py-2">
+                <Link
+                  to="/services/ai-autonomous-operations-2026"
+                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                >
+                  AI Autonomous Operations
+                </Link>
+                <Link
+                  to="/services/quantum-computing"
+                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                >
+                  Quantum Computing
+                </Link>
+                <Link
+                  to="/services/business-intelligence"
+                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                >
+                  Business Intelligence
+                </Link>
+              </div>
+            </div>
           </div>
           <Link
-<<<<<<< HEAD:app/layout.tsx
-            href='/contact'
-=======
-            to='/contact'
->>>>>>> main:src/components/Layout.tsx
-            className='text-gray-700 hover:text-blue-600 transition-colors'
+            to="/contact"
+            className="text-gray-700 hover:text-blue-600 transition-colors"
           >
             Contact
           </Link>
         </div>
-        <button className='md:hidden p-2' aria-label='Toggle menu'>
-          <svg
-            className='w-6 h-6'
-            fill='none'
-            stroke='currentColor'
-            viewBox='0 0 24 24'
-          >
-            <path
-              strokeLinecap='round'
-              strokeLinejoin='round'
-              strokeWidth={2}
-              d='M4 6h16M4 12h16M4 18h16'
-            />
-          </svg>
-        </button>
+        <div className="md:hidden">
+          <button className="text-gray-700 hover:text-blue-600 transition-colors">
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
+        </div>
       </nav>
     </header>
   );
@@ -195,258 +98,103 @@ function Header(): React.JSX.Element {
 
 function Footer(): React.JSX.Element {
   return (
-    <footer className='border-t border-gray-200 mt-10 py-6 bg-gray-50'>
-      <div className='max-w-6xl mx-auto px-4'>
-        <div className='grid grid-cols-1 md:grid-cols-4 gap-6'>
+    <footer className="bg-gray-900 text-white py-12">
+      <div className="max-w-6xl mx-auto px-4">
+        <div className="grid md:grid-cols-4 gap-8">
           <div>
-            <h3 className='font-semibold text-gray-900 mb-3'>Services</h3>
-            <div className='space-y-2'>
-              <Link
-<<<<<<< HEAD:app/layout.tsx
-                href='/services'
-=======
-                to='/services'
->>>>>>> main:src/components/Layout.tsx
-                className='block text-gray-600 hover:text-blue-600 transition-colors'
-              >
-                All Services
-              </Link>
-              <Link
-<<<<<<< HEAD:app/layout.tsx
-                href='/services/ai-autonomous-cloud-ops'
-=======
-                to='/services/ai-autonomous-cloud-ops'
->>>>>>> main:src/components/Layout.tsx
-                className='block text-gray-600 hover:text-blue-600 transition-colors'
-              >
-                AI Autonomous Cloud Ops
-              </Link>
-              <Link
-<<<<<<< HEAD:app/layout.tsx
-                href='/services/ai-fintech-transformation'
-=======
-                to='/services/ai-fintech-transformation'
->>>>>>> main:src/components/Layout.tsx
-                className='block text-gray-600 hover:text-blue-600 transition-colors'
-              >
-                AI FinTech Transformation
-              </Link>
-              <Link
-<<<<<<< HEAD:app/layout.tsx
-                href='/services/ai-retail-automation'
-=======
-                to='/services/ai-retail-automation'
->>>>>>> main:src/components/Layout.tsx
-                className='block text-gray-600 hover:text-blue-600 transition-colors'
-              >
-                AI Retail Automation
-              </Link>
-              <Link
-<<<<<<< HEAD:app/layout.tsx
-                href='/services/micro-saas'
-=======
-                to='/services/micro-saas'
->>>>>>> main:src/components/Layout.tsx
-                className='block text-gray-600 hover:text-blue-600 transition-colors'
-              >
-                Micro SaaS
-              </Link>
-            </div>
-          </div>
-          <div>
-            <h3 className='font-semibold text-gray-900 mb-3'>
-              Latest AI 2028 Revolutionary Content
-            </h3>
-            <div className='space-y-2'>
-              <Link
-<<<<<<< HEAD:app/layout.tsx
-                href='/blog/ai-2028-next-generation-autonomous-enterprise'
-=======
-                to='/blog'
->>>>>>> main:src/components/Layout.tsx
-                className='block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2'
-              >
-                🚀 AI 2028 Autonomous Enterprise
-                <span className='bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse'>
-                  REVOLUTIONARY
-                </span>
-              </Link>
-              <Link
-<<<<<<< HEAD:app/layout.tsx
-                href='/blog/ai-2028-neuromorphic-superintelligence'
-=======
-                to='/blog'
->>>>>>> main:src/components/Layout.tsx
-                className='block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2'
-              >
-                🧠 AI 2028 Neuromorphic Superintelligence
-                <span className='bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse'>
-                  SUPERINTELLIGENCE
-                </span>
-              </Link>
-              <Link
-<<<<<<< HEAD:app/layout.tsx
-                href='/case-studies/ai-2028-autonomous-enterprise-mega-success'
-=======
-                to='/team'
->>>>>>> main:src/components/Layout.tsx
-                className='block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2'
-              >
-                💰 $100B Autonomous Success
-                <span className='bg-gradient-to-r from-green-500 to-emerald-500 text-white px-2 py-1 rounded-full text-xs font-semibold'>
-                  MEGA
-                </span>
-              </Link>
-              <Link
-<<<<<<< HEAD:app/layout.tsx
-                href='/case-studies/ai-2028-neuromorphic-superintelligence-success'
-=======
-                to='/team'
->>>>>>> main:src/components/Layout.tsx
-                className='block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2'
-              >
-                🧠 $75B Neuromorphic Success
-                <span className='bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-2 py-1 rounded-full text-xs font-semibold'>
-                  BREAKTHROUGH
-                </span>
-              </Link>
-              <Link
-<<<<<<< HEAD:app/layout.tsx
-                href='/blog/ai-2026-future-trends-breakthrough'
-=======
-                to='/blog'
->>>>>>> main:src/components/Layout.tsx
-                className='block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2'
-              >
-                🌟 AI 2026 Future Trends
-                <span className='bg-gradient-to-r from-red-500 to-orange-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse'>
-                  BREAKTHROUGH
-                </span>
-              </Link>
-              <Link
-<<<<<<< HEAD:app/layout.tsx
-                href='/blog/ai-future-workforce-2026'
-=======
-                to='/blog'
->>>>>>> main:src/components/Layout.tsx
-                className='block text-gray-600 hover:text-blue-600 transition-colors'
-              >
-                👥 AI Future Workforce 2026
-              </Link>
-              <Link
-<<<<<<< HEAD:app/layout.tsx
-                href='/blog/ai-cybersecurity-2026'
-=======
-                to='/blog'
->>>>>>> main:src/components/Layout.tsx
-                className='block text-gray-600 hover:text-blue-600 transition-colors'
-              >
-                🛡️ AI Cybersecurity 2026
-              </Link>
-              <Link
-<<<<<<< HEAD:app/layout.tsx
-                href='/case-studies/ai-finance-automation-success-2026'
-=======
-                to='/team'
->>>>>>> main:src/components/Layout.tsx
-                className='block text-gray-600 hover:text-blue-600 transition-colors'
-              >
-                💰 $15M Finance ROI
-              </Link>
-              <Link
-<<<<<<< HEAD:app/layout.tsx
-                href='/case-studies'
-=======
-                to='/team'
->>>>>>> main:src/components/Layout.tsx
-                className='block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2'
-              >
-                Case Studies
-                <span className='bg-yellow-500 text-white px-2 py-1 rounded-full text-xs font-semibold'>
-                  FEATURED
-                </span>
-              </Link>
-            </div>
-          </div>
-          <div>
-            <h3 className='font-semibold text-gray-900 mb-3'>Content</h3>
-            <div className='space-y-2'>
-              <Link
-<<<<<<< HEAD:app/layout.tsx
-                href='/'
-=======
-                to='/'
->>>>>>> main:src/components/Layout.tsx
-                className='block text-gray-600 hover:text-blue-600 transition-colors'
-              >
-                Home
-              </Link>
-              <Link
-<<<<<<< HEAD:app/layout.tsx
-                href='/about'
-=======
-                to='/about'
->>>>>>> main:src/components/Layout.tsx
-                className='block text-gray-600 hover:text-blue-600 transition-colors'
-              >
-                About
-              </Link>
-              <Link
-<<<<<<< HEAD:app/layout.tsx
-                href='/contact'
-=======
-                to='/contact'
->>>>>>> main:src/components/Layout.tsx
-                className='block text-gray-600 hover:text-blue-600 transition-colors'
-              >
-                Contact
-              </Link>
+            <h3 className="font-bold text-lg mb-4">Zion Tech Group</h3>
+            <p className="text-gray-400 mb-4">
+              Leading provider of AI-powered enterprise solutions and digital transformation services.
+            </p>
+            <div className="flex gap-4">
               <a
-                href='https://ziontechgroup.com'
-                className='block text-gray-600 hover:text-blue-600 transition-colors'
+                href="https://linkedin.com/company/ziontechgroup"
+                className="text-gray-400 hover:text-white transition-colors"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                Main Website
+                <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                </svg>
+              </a>
+              <a
+                href="https://twitter.com/ziontechgroup"
+                className="text-gray-400 hover:text-white transition-colors"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                </svg>
               </a>
             </div>
           </div>
           <div>
-            <h3 className='font-semibold text-gray-900 mb-3'>Contact Info</h3>
-            <div className='text-sm text-gray-600 space-y-1'>
-              <div>Mobile: +1 302 464 0950</div>
-              <div>
-                Email:{' '}
-                <a
-                  href='mailto:kleber@ziontechgroup.com'
-                  className='hover:text-blue-600 transition-colors'
-                >
-                  kleber@ziontechgroup.com
-                </a>
-              </div>
-              <div>
-                Address: 364 E Main St STE 1008
-                <br />
-                Middletown DE 19709
-              </div>
+            <h4 className="font-semibold mb-4">Services</h4>
+            <ul className="space-y-2">
+              <li>
+                <Link to="/services/ai-autonomous-operations-2026" className="text-gray-400 hover:text-white transition-colors">
+                  AI Autonomous Operations
+                </Link>
+              </li>
+              <li>
+                <Link to="/services/quantum-computing" className="text-gray-400 hover:text-white transition-colors">
+                  Quantum Computing
+                </Link>
+              </li>
+              <li>
+                <Link to="/services/business-intelligence" className="text-gray-400 hover:text-white transition-colors">
+                  Business Intelligence
+                </Link>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 className="font-semibold mb-4">Company</h4>
+            <ul className="space-y-2">
+              <li>
+                <Link to="/about" className="text-gray-400 hover:text-white transition-colors">
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link to="/contact" className="text-gray-400 hover:text-white transition-colors">
+                  Contact
+                </Link>
+              </li>
+              <li>
+                <Link to="/privacy" className="text-gray-400 hover:text-white transition-colors">
+                  Privacy Policy
+                </Link>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 className="font-semibold mb-4">Contact Info</h4>
+            <div className="space-y-2 text-gray-400">
+              <p>Email: kleber@ziontechgroup.com</p>
+              <p>Phone: +1 (302) 464-0950</p>
+              <p>Address: 364 E Main St STE 1008<br />Middletown, DE 19709</p>
             </div>
           </div>
         </div>
-        <div className='border-t border-gray-200 mt-6 pt-4 text-xs text-gray-500 text-center'>
-          © {new Date().getFullYear()} Zion Tech Group. All rights reserved.
+        <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+          <p>&copy; 2024 Zion Tech Group. All rights reserved.</p>
         </div>
       </div>
     </footer>
   );
 }
 
-export default function Layout({
-  children,
-}: {
+interface LayoutProps {
   children: React.ReactNode;
-}) {
+}
+
+export default function Layout({ children }: LayoutProps): React.JSX.Element {
   return (
-    <div className='min-h-screen bg-white text-gray-900'>
+    <div className="min-h-screen flex flex-col">
       <Header />
-      <main className='max-w-6xl mx-auto px-4 py-6 min-h-screen'>
+      <main className="flex-1">
         {children}
       </main>
       <Footer />

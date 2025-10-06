@@ -1,6 +1,13 @@
 /**
  * Error Handling Utilities
  */
+export interface ErrorInfo {
+  componentStack?: string;
+  errorBoundary?: string;
+  errorBoundaryName?: string;
+  errorBoundaryStack?: string;
+}
+
 export class ErrorHandler {
   static handle(error: Error, context?: string): void {
     console.error(`Error${context ? ` in ${context}` : ''}:`, error);
@@ -11,7 +18,6 @@ export class ErrorHandler {
   }
 }
 
-<<<<<<< HEAD
 export const logError = (error: Error, errorInfo?: ErrorInfo) => {
   console.error('Error:', error.message, errorInfo);
 };
@@ -30,23 +36,14 @@ export const getErrorMetrics = () => {
   };
 };
 
-export const isErrorRateTooHigh = (threshold = 5) => {
-<<<<<<< HEAD
-  // For now, always return false as we don't have actual error tracking
-=======
-  // For now, always return false as this is a placeholder implementation
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a4f
-  console.log(`Checking error rate against threshold: ${threshold}`);
-  return false;
+export const clearErrorMetrics = () => {
+  // Clear error metrics
+  console.log('Error metrics cleared');
 };
 
-export const setupGlobalErrorHandling = () => {
-  console.log('Global error handling setup');
+export const reportError = (error: Error, errorInfo?: ErrorInfo) => {
+  // Report error to external service
+  console.log('Error reported:', error.message, errorInfo);
 };
 
-export const monitorPerformance = () => {
-  console.log('Performance monitoring setup');
-};
-=======
 export default ErrorHandler;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3fed
