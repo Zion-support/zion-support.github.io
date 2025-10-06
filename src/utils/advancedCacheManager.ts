@@ -27,13 +27,13 @@ class AdvancedCacheManager<T> {
       maxAge: 5 * 60 * 1000, // 5 minutes
       maxSize: 1000,
       strategy: 'LRU',
-      ...config
+      ...config,
     };
   }
 
   public get(key: string): T | null {
     const entry = this.cache.get(key);
-    
+
     if (!entry) {
       this.misses++;
       return null;
@@ -65,7 +65,7 @@ class AdvancedCacheManager<T> {
       value,
       timestamp: Date.now(),
       accessCount: 1,
-      lastAccessed: Date.now()
+      lastAccessed: Date.now(),
     };
 
     this.cache.set(key, entry);
@@ -73,7 +73,7 @@ class AdvancedCacheManager<T> {
 
   public has(key: string): boolean {
     const entry = this.cache.get(key);
-    
+
     if (!entry) {
       return false;
     }
@@ -106,7 +106,7 @@ class AdvancedCacheManager<T> {
     return {
       hits: this.hits,
       misses: this.misses,
-      hitRate: total > 0 ? this.hits / total : 0
+      hitRate: total > 0 ? this.hits / total : 0,
     };
   }
 

@@ -1,6 +1,6 @@
 // Enterprise case studies showcasing real-world AI implementations and results
 
-export interface EnterpriseCaseStudy { 
+export interface EnterpriseCaseStudy {
   id: string;
   slug?: string;
   title: string;
@@ -28,7 +28,8 @@ export const enterpriseCaseStudies2025: EnterpriseCaseStudy[] = [
     company: 'Global Manufacturing Corp',
     industry: 'Manufacturing',
     challenge: 'Manual processes causing delays and high operational costs',
-    solution: 'Implemented AI-powered automation platform with intelligent workflow optimization',
+    solution:
+      'Implemented AI-powered automation platform with intelligent workflow optimization',
     results: 'Achieved 85% cost reduction and 300% efficiency improvement',
     metrics: {
       costSavings: '$50M annually',
@@ -46,9 +47,12 @@ export const enterpriseCaseStudies2025: EnterpriseCaseStudy[] = [
     title: 'Financial Services AI Analytics: 99.9% Accuracy',
     company: 'Major Bank',
     industry: 'Financial Services',
-    challenge: 'Manual fraud detection leading to false positives and missed threats',
-    solution: 'Deployed AI-powered analytics platform with real-time fraud detection',
-    results: 'Achieved 99.9% accuracy in fraud detection with 60% reduction in false positives',
+    challenge:
+      'Manual fraud detection leading to false positives and missed threats',
+    solution:
+      'Deployed AI-powered analytics platform with real-time fraud detection',
+    results:
+      'Achieved 99.9% accuracy in fraud detection with 60% reduction in false positives',
     metrics: {
       costSavings: '$25M annually',
       efficiencyGain: '200%',
@@ -58,5 +62,5 @@ export const enterpriseCaseStudies2025: EnterpriseCaseStudy[] = [
     featured: true,
     publishedAt: '2025-10-02',
     tags: ['AI Analytics', 'Financial Services', 'Fraud Detection', 'Accuracy'],
-  }
+  },
 ];

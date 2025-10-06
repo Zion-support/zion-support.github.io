@@ -1,4 +1,4 @@
-export interface BreakthroughArticle { 
+export interface BreakthroughArticle {
   id: string;
   title: string;
   description: string;
@@ -7,10 +7,8 @@ export interface BreakthroughArticle {
   readTime: string;
   tags: string[];
   featured: boolean;
-  content: string;
-  author: string;
-  valueProposition: string;
-  highlights: string[];
+  readTime: string;
+  impact: string;
   metrics: {
     improvement: string;
     roi: string;
@@ -22,7 +20,8 @@ export const sept30BreakthroughArticles2025: BreakthroughArticle[] = [
   {
     id: 'ai-trading-revolution-2025',
     title: 'AI Trading Revolution 2025: 95% Prediction Accuracy',
-    description: 'Revolutionary AI trading system delivering 95% prediction accuracy and 350% ROI improvement.',
+    description:
+      'Revolutionary AI trading system delivering 95% prediction accuracy and 350% ROI improvement.',
     category: 'AI Trading',
     date: '2025-09-30',
     readTime: '20 min read',
@@ -56,7 +55,8 @@ Revolutionary AI trading system delivering unprecedented prediction accuracy and
   {
     id: 'quantum-ai-optimization-2025',
     title: 'Quantum AI Optimization 2025: Exponential Performance',
-    description: 'Quantum AI optimization delivering exponential performance gains and unprecedented computational efficiency.',
+    description:
+      'Quantum AI optimization delivering exponential performance gains and unprecedented computational efficiency.',
     category: 'Quantum AI',
     date: '2025-09-30',
     readTime: '18 min read',
@@ -86,5 +86,5 @@ Quantum AI optimization delivering exponential performance gains and unprecedent
       roi: '1000% efficiency gain',
       timeframe: 'Immediate deployment',
     },
-  }
+  },
 ];

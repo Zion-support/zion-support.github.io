@@ -1,110 +1,110 @@
 // @ts-nocheck
-import ArrowRight from 'n, e, x, t/l, ink';
+import ArrowRight from 'next/link';
 
 export const metadata = {
-  
-  title: 'Aut o n o m, o, u, s R, i, s, k Mit i g a t, i, o, n — Ent e r p r, i, s, e Bl u e p r, i, n, t (S, e, p, t 30, 2, 025)'
-    description:
-      'Dep, l, o, y aut o n o m, o, u, s age, n, t, s with budgetsguardr a i l s, a, n, d au t o m a, t, e, d r o l l b, a, c, k to prot, e, c, t K, PIs.'
-    t, y, p, e: 'arti, cle'
-    publis h e d T, i, m, e: '2, 0, 2, 5-09-30T00:00:00.000Z'
-    auth, o, r, s: ['Z, i, o, n T, e, c, h Gr, oup']};
+  title: 'Autonomous Risk Mitigation — Enterprise Blueprint (Sept 30, 2025)',
+  description:
+    'Deploy autonomous agents with budgetsguardrailsand automated rollback to protect KPIs.',
+  type: 'article',
+  publishedTime: '2025-09-30T00:00:00.000Z',
+  authors: ['Zion Tech Group'],
+};
 
-export default function AutonomousRiskMitigationSep t 3 0 2, 0, 2, 5() {
+export default function AutonomousRiskMitigationSept302025() {
   return (
-    <div cl a s s N, a, m, e='min-h-screen bg-g r a d i, e, n, t-to-br f, r, o, m-sl, a, t, e-900 via-ind, i, g, o-900 to-sl, ate-900'>
-      <div cl a s s N, a, m, e='max-w-4, xl mx-a, uto px-4 py-12'>
-        <hea, d, e, r cl a s s N, a, m, e='mb-10 t, e, x, t-cen, ter'>
-          <div cl a s s N, a, m, e='inl, i, n, e-f, l, e, x it, e, m, s-cen, t, e, r gap-2 bg-ind, i, g, o-600 t, e, x, t-wh, i, t, e px-4 py-1.5 roun, d, e, d-f, u, l, l t, e, x, t-xs f, o, n, t-s e m i b, old mb-4'>
-            <s, p, a, n>NEW</s, p, a, n>
-            <s, p, a, n cl a s s N, a, m, e='opac, ity-80'>S, e, p, t 30, 2, 0, 2, 5</s, p, a, n>
+    <div className='min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900'>
+      <div className='max-w-4xl mx-auto px-4 py-12'>
+        <header className='mb-10 text-center'>
+          <div className='inline-flex items-center gap-2 bg-indigo-600 text-white px-4 py-1.5 rounded-full text-xs font-semibold mb-4'>
+            <span>NEW</span>
+            <span className='opacity-80'>Sept 30, 2025</span>
           </div>
-          <h1 cl a s s N, a, m, e='t, e, x, t-4, xl md:t, e, x, t-5, xl f, o, n, t-ex t r a b, o, l, d t, e, x, t-wh, i, t, e lead, i, n, g-ti, ght'>
-            Aut o n o m, o, u, s R, i, s, k Mit i g a t, i, o, n: BudgetsGuardr a i l s, a, n, d A, u, t, o‑R o l l b, a, c, k
+          <h1 className='text-4xl md:text-5xl font-extrabold text-white leading-tight'>
+            Autonomous Risk Mitigation: BudgetsGuardrailsand Auto‑Rollback
           </h1>
-          <p cl a s s N, a, m, e='t, e, x, t-g, r, a, y-300 mt-4 t, e, x, t-lg max-w-3xl mx-a, uto'>
-            Pr a c t i, c, a, l bl u e p r, i, n, t to s, h, i, p aut o n o m, o, u, s syst, e, m, s saf, e, l, y: def, i, n, e
-            budg, e, t, s t, i, e, d to KPIsins t r u m, e, n, t guardr a i l s, a, n, d im p l e m, e, n, t au t o m a, t, e, d
-            r o l l b, a, c, k for mea s u r a, b, l, e reli a b i l, i, t, y.
+          <p className='text-gray-300 mt-4 text-lg max-w-3xl mx-auto'>
+            Practical blueprint to ship autonomous systems safely: define
+            budgets tied to KPIsinstrument guardrailsand implement automated
+            rollback for measurable reliability.
           </p>
-          <div cl a s s N, a, m, e='t, e, x, t-g, r, a, y-400 t, ext-sm mt-3'>
-            By Z, i, o, n T, e, c, h Gr, o, u, p • 9 min r, e, a, d
+          <div className='text-gray-400 text-sm mt-3'>
+            By Zion Tech Group • 9 min read
           </div>
-        </hea, d, e, r>
+        </header>
 
-        <arti, c, l, e cl a s s N, a, m, e='pr, o, s, e pr, o, s, e-lg pr, o, s, e-inv, e, r, t max-w-n, one'>
-          <div cl a s s N, a, m, e='bg-wh, i, t, e/5 bor, d, e, r bor, d, e, r-wh, i, t, e/10 roun, ded-xl p-6 mb-8'>
-            <h2 cl a s s N, a, m, e='t, e, x, t-2, xl f, o, n, t-b, o, l, d t, e, x, t-wh, ite mb-2'>
-              Ex e c u t, i, v, e Summ, a, r, y
+        <article className='prose prose-lg prose-invert max-w-none'>
+          <div className='bg-white/5 border border-white/10 rounded-xl p-6 mb-8'>
+            <h2 className='text-2xl font-bold text-white mb-2'>
+              Executive Summary
             </h2>
-            <p cl a s s N, a, m, e='t, e, x, t-g, ray-300'>
-              Ad, o, p, t a saf, e, t, y-fi, r, s, t a u t o n, o, m, y st, a, c, k: r, i, s, k budg, e, t, s prot, e, c, t K, P, I, s
-              pol, i, c, y ga, t, e, s enfo, r, c, e constra i n t s, a, n, d con t i n u, o, u, s eva l u a t, i, o, n
-              dete, c, t, s dr, i, f, t. W, h, e, n budg, e, t, s are exce e d e d, t, h, e sys, t, e, m gra c e f u, l, l, y
-              ro, l, l, s b, a, c, k to a safe pol, i, c, y or hu, m, a, n-in-the-l, o, o, p m, o, d, e.
+            <p className='text-gray-300'>
+              Adopt a safety-first autonomy stack: risk budgets protect KPIs,
+              policy gates enforce constraintsand continuous evaluation detects
+              drift. When budgets are exceededthe system gracefully rolls back
+              to a safe policy or human-in-the-loop mode.
             </p>
           </div>
 
-          <h3 cl a s s N, a, m, e='t, e, x, t-xl f, o, n, t-b, o, l, d t, e, x, t-wh, ite mb-3'>
-            C, o, r, e Saf, e, t, y Archi t e c t, u, r, e
+          <h3 className='text-xl font-bold text-white mb-3'>
+            Core Safety Architecture
           </h3>
-          <ul cl a s s N, a, m, e='t, e, x, t-g, r, a, y-300 l, i, s, t-d, i, s, c l, i, s, t-ins, i, d, e sp, ace-y-2 mb-8'>
-            <li>R, i, s, k budg, e, t, s per KPI with h, a, r, d/s, o, f, t thr e s h o, l, d, s</li>
-            <li>Pol, i, c, y ga, t, e, s, cons t r a i, n, t, s, and allo, w, e, d act, i, o, n sche, m, a, s</li>
-            <li>Ev, a, l, s c o v e r, a, g, e acr, o, s, s ta, s, k, s, e, d, g, e ca, s, e, s, and regr e s s i, o, n, s</li>
-            <li>Onl, i, n, e telemetryau d i t s, a, n, d r, o, l, l-forw, a, r, d pl, a, n, s</li>
+          <ul className='text-gray-300 list-disc list-inside space-y-2 mb-8'>
+            <li>Risk budgets per KPI with hard/soft thresholds</li>
+            <li>Policy gates, constraints, and allowed action schemas</li>
+            <li>Evals coverage across tasks, edge cases, and regressions</li>
+            <li>Online telemetryauditsand roll-forward plans</li>
           </ul>
 
-          <div cl a s s N, a, m, e='g, r, i, d md:g, r, i, d-c, ols-3 gap-6 mb-10'>
-            <div cl a s s N, a, m, e='bg-ind, i, g, o-500/10 bor, d, e, r bor, d, e, r-ind, i, g, o-500/30 roun, ded-xl p-5'>
-              <div cl a s s N, a, m, e='t, e, xt-3xl mb-2'>📉</div>
-              <div cl a s s N, a, m, e='t, e, x, t-wh, i, t, e f, o, n, t-s e m i b, old'>In c i d e, n, t, s ↓ 80%</div>
+          <div className='grid md:grid-cols-3 gap-6 mb-10'>
+            <div className='bg-indigo-500/10 border border-indigo-500/30 rounded-xl p-5'>
+              <div className='text-3xl mb-2'>📉</div>
+              <div className='text-white font-semibold'>Incidents ↓ 80%</div>
             </div>
-            <div cl a s s N, a, m, e='bg-emer, a, l, d-500/10 bor, d, e, r bor, d, e, r-emer, a, l, d-500/30 roun, ded-xl p-5'>
-              <div cl a s s N, a, m, e='t, e, xt-3xl mb-2'>⏱️</div>
-              <div cl a s s N, a, m, e='t, e, x, t-wh, i, t, e f, o, n, t-s e m i b, old'>R o l l b, a, c, k &lt; 2, s</div>
+            <div className='bg-emerald-500/10 border border-emerald-500/30 rounded-xl p-5'>
+              <div className='text-3xl mb-2'>⏱️</div>
+              <div className='text-white font-semibold'>Rollback &lt; 2s</div>
             </div>
-            <div cl a s s N, a, m, e='bg-fuch, s, i, a-500/10 bor, d, e, r bor, d, e, r-fuch, s, i, a-500/30 roun, ded-xl p-5'>
-              <div cl a s s N, a, m, e='t, e, xt-3xl mb-2'>🧪</div>
-              <div cl a s s N, a, m, e='t, e, x, t-wh, i, t, e f, o, n, t-s e m i b, old'>C o v e r, a, g, e 95%</div>
+            <div className='bg-fuchsia-500/10 border border-fuchsia-500/30 rounded-xl p-5'>
+              <div className='text-3xl mb-2'>🧪</div>
+              <div className='text-white font-semibold'>Coverage 95%</div>
             </div>
           </div>
 
-          <h3 cl a s s N, a, m, e='t, e, x, t-xl f, o, n, t-b, o, l, d t, e, x, t-wh, ite mb-3'>
-            Impleme n t a t, i, o, n Ch e c k l, i, s, t
+          <h3 className='text-xl font-bold text-white mb-3'>
+            Implementation Checklist
           </h3>
-          <ol cl a s s N, a, m, e='t, e, x, t-g, r, a, y-300 l, i, s, t-deci, m, a, l l, i, s, t-ins, i, d, e sp, ace-y-2 mb-10'>
-            <li>Def, i, n, e K, P, I, s and map fail, u, r, e mo, d, e, s</li>
-            <li>A l l o c, a, t, e budg, e, t, s and set thr e s h o, l, d, s</li>
-            <li>Ins t r u m, e, n, t gua r d r a, i, l, s and allo, w, e, d act, i, o, n sche, m, a, s</li>
-            <li>S, h, i, p ev, a, l, s with can, a, r, y and r o l l b, a, c, k pl, a, n, s</li>
-            <li>Es t a b l, i, s, h l, i, v, e m o n i t, o, r, s and i n c i d, e, n, t r e s p o, n, s, e</li>
+          <ol className='text-gray-300 list-decimal list-inside space-y-2 mb-10'>
+            <li>Define KPIs and map failure modes</li>
+            <li>Allocate budgets and set thresholds</li>
+            <li>Instrument guardrails and allowed action schemas</li>
+            <li>Ship evals with canary and rollback plans</li>
+            <li>Establish live monitors and incident response</li>
           </ol>
 
-          <div cl a s s N, a, m, e='bg-gradient-to-r f, r, o, m-ind, i, g, o-600 to-fuch, s, i, a-600 roun, d, e, d-xl p-6 t, e, x, t-cen, ter'>
-            <h3 cl a s s N, a, m, e='t, e, x, t-2, xl f, o, n, t-b, o, l, d t, e, x, t-wh, ite mb-2'>
-              Re, a, d, y to operati o n a l, i, z, e safe a u t o n, o, m, y?
+          <div className='bg-gradient-to-r from-indigo-600 to-fuchsia-600 rounded-xl p-6 text-center'>
+            <h3 className='text-2xl font-bold text-white mb-2'>
+              Ready to operationalize safe autonomy?
             </h3>
-            <p cl a s s N, a, m, e='t, e, x, t-ind, igo-100 mb-4'>
-              Our t, e, a, m can h, e, l, p you def, i, n, e budge t s b u, i, l, d guardr a i l s, a, n, d dep, l, o, y
-              with con f i d e, n, c, e.
+            <p className='text-indigo-100 mb-4'>
+              Our team can help you define budgetsbuild guardrailsand deploy
+              with confidence.
             </p>
-            <div cl a s s N, a, m, e='f, l, e, x gap-3 just, i, f, y-cen, ter'>
+            <div className='flex gap-3 justify-center'>
               <ArrowRight
-                h, r, e, f='/cont, act'
-                cl a s s N, a, m, e='bg-wh, i, t, e t, e, x, t-ind, i, g, o-700 px-6 py-2 roun, d, e, d-lg f, o, n, t-s e m i b, o, l, d ho, v, e, r:bg-g, r, a, y-100 tra n s i t, i, o, n-col, ors'
+                href='/contact'
+                className='bg-white text-indigo-700 px-6 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors'
               >
-                T, a, l, k to expe, r, t, s
+                Talk to experts
               </ArrowRight>
               <ArrowRight
-                h, r, e, f='/b, log'
-                cl a s s N, a, m, e='bor, d, e, r bor, d, e, r-wh, i, t, e/70 t, e, x, t-wh, i, t, e px-6 py-2 roun, d, e, d-lg f, o, n, t-s e m i b, o, l, d ho, v, e, r:bg-wh, i, t, e ho, v, e, r:t, e, x, t-ind, i, g, o-700 tra n s i t, i, o, n-col, ors'
+                href='/blog'
+                className='border border-white/70 text-white px-6 py-2 rounded-lg font-semibold hover:bg-white hover:text-indigo-700 transition-colors'
               >
-                Expl, o, r, e m, o, r, e
+                Explore more
               </ArrowRight>
             </div>
           </div>
-        </arti, c, l, e>
+        </article>
       </div>
     </div>
   );

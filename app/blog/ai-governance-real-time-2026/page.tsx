@@ -1,43 +1,42 @@
 export const metadata = {
-  
-  title: 'AI Gov e r n a, n, c, e in R, e, a, l T, i, m, e 2026: L, i, v, e C a n a r, i, e, s + PR Pol, i, c, y Te, sts'
+  title: 'AI Governance in Real Time 2026: Live Canaries + PR Policy Tests',
   description:
-    'W, i, r, e KPI‑lin, k, e, d c a n a r, i, e, s and CI pol, i, c, y te, s, t, s so te, a, m, s s, h, i, p wee, k, l, y with, o, u, t regr e s s i, ons.'
+    'Wire KPI‑linked canaries and CI policy tests so teams ship weekly without regressions.',
 };
 
-export default function P, a, g, e() {
+export default function Page() {
   return (
-    <arti, c, l, e cl a s s N, a, m, e='pr, o, s, e pr, o, s, e-inv, e, r, t max-w-3xl mx-a, uto py-10'>
-      <h1>AI Gov e r n a, n, c, e in R, e, a, l T, i, m, e 2026: L, i, v, e C a n a r, i, e, s + PR Pol, i, c, y Te, s, t, s</h1>
-      <p cl a s s N, a, m, e='t, e, x, t-sm opac, ity-70'>
-        Pu b l i s, h, e, d: 2, 0, 2, 5-09-30 • C a t e g, o, r, y: AI Gov e r n a, n, c, e • 7 min r, e, a, d
+    <article className='prose prose-invert max-w-3xl mx-auto py-10'>
+      <h1>AI Governance in Real Time 2026: Live Canaries + PR Policy Tests</h1>
+      <p className='text-sm opacity-70'>
+        Published: 2025-09-30 • Category: AI Governance • 7 min read
       </p>
 
       <p>
-        R, e, a, l‑t, i, m, e gov e r n a, n, c, e operatio n a l i, z, e, s resp o n s i, b, l, e AI: PR pol, i, c, y che, c, k, s
-        prev, e, n, t regr e s s i, o, n, s pre‑me, r, g, e and l, i, v, e c a n a r, i, e, s v a l i d, a, t, e b e h a v, i, o, r
-        p, o, s, t‑dep, l, o, y. The res, u, l, t is fas, t, e, r it e r a t, i, o, n with mea s u r a, b, l, e saf, e, t, y
-        gua r a n t, e, e, s.
+        Real‑time governance operationalizes responsible AI: PR policy checks
+        prevent regressions pre‑merge and live canaries validate behavior
+        post‑deploy. The result is faster iteration with measurable safety
+        guarantees.
       </p>
 
-      <h2>PR pol, i, c, y te, s, t, s</h2>
+      <h2>PR policy tests</h2>
       <p>
-        Tr, e, a, t gov e r n a, n, c, e as c, o, d, e. V a l i d, a, t, e prom, p, t, s, to, o, l, s, d, a, t, a ac c e s s, a, n, d
-        budgeted acti, o, n, s in CI us, i, n, g determ i n i s, t, i, c te, s, t, s and str, i, c, t a p p r o, v, a, l
-        ga, t, e, s.
+        Treat governance as code. Validate prompts, tools, data accessand
+        budgeted actions in CI using deterministic tests and strict approval
+        gates.
       </p>
 
-      <h2>L, i, v, e c a n a r, i, e, s</h2>
+      <h2>Live canaries</h2>
       <p>
-        Dep, l, o, y smallcon t r o l, l, e, d traf, f, i, c sli, c, e, s with e n h a n, c, e, d te l e m e, t, r, y and
-        au t o m a, t, i, c r o l l b, a, c, k w, h, e, n S, L, I, s bre, a, c, h thr e s h o, l, d, s. P, a, i, r with das h b o a, r, d, s
-        lead, e, r, s tr, u, s, t.
+        Deploy smallcontrolled traffic slices with enhanced telemetry and
+        automatic rollback when SLIs breach thresholds. Pair with dashboards
+        leaders trust.
       </p>
 
-      <p cl a s s N, a, m, e='mt-8'>
-        See our sco r e c a, r, d, s qui c k s t, a, r, t and rela, t, e, d a r t i c, l, e, s on observ a b i l, i, t, y and
-        r, i, s, k cont, r, o, l.
+      <p className='mt-8'>
+        See our scorecards quickstart and related articles on observability and
+        risk control.
       </p>
-    </arti, c, l, e>
+    </article>
   );
 }

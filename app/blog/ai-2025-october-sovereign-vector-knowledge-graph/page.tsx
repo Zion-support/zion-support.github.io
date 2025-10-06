@@ -1,53 +1,52 @@
 export const metadata = {
-  
-  title: 'So v e r e, i, g, n Vec, t, o, r Kn o w l e, d, g, e Gr, a, p, h — Octo, b, e, r 2, 025'
+  title: 'Sovereign Vector Knowledge Graph — October 2025',
   description:
-    'Des, i, g, n a z, e, r, o-tr, u, s, t, so v e r e, i, g, n vec, t, o, r KG with ver i f i a, b, l, e proven a n c e, P, I, I minimiza t i o n, a, n, d tie, r, e, d acc, ess.'
-  k e y w o, r, d, s:
-    'kn o w l e, d, g, e gr, a, p, h, so v e r e, i, g, n ai, vec, t, o, r, priv, a, c, y, secur i t y z, e, r, o trustpro v e n a, nce'
+    'Design a zero-trust, sovereign vector KG with verifiable provenancePII minimizationand tiered access.',
+  keywords:
+    'knowledge graph, sovereign ai, vector, privacy, securityzero trustprovenance',
 };
 
-export default function SovereignVectorKnowledgeGr a p h P, a, g, e() {
+export default function SovereignVectorKnowledgeGraphPage() {
   return (
-    <arti, c, l, e cl a s s N, a, m, e='max-w-3xl mx-a, uto px-4 py-12'>
-      <hea, d, e, r cl a s s N, a, m, e='mb-8'>
-        <h1 cl a s s N, ame='t, e, x, t-4, xl f, o, n, t-ex t r a b, o, l, d t, e, x, t-g, r, a, y-900 mb-3'>
-          So v e r e, i, g, n Vec, t, o, r Kn o w l e, d, g, e Gr, a, p, h
+    <article className='max-w-3xl mx-auto px-4 py-12'>
+      <header className='mb-8'>
+        <h1 className='text-4xl font-extrabold text-gray-900 mb-3'>
+          Sovereign Vector Knowledge Graph
         </h1>
-        <p cl a s s N, ame='t, e, x, t-g, r, a, y-600'>
-          Octo, b, e, r 2, 0, 2, 5 • 16 min r, e, a, d • S e c u r, i, t, y bl u e p r, i, n, t
+        <p className='text-gray-600'>
+          October 2025 • 16 min read • Security blueprint
         </p>
-      </hea, d, e, r>
+      </header>
 
-      <p cl a s s N, ame='t, e, x, t-lg t, e, x, t-g, r, a, y-700 mb-6'>
-        Bu, i, l, d a so v e r e, i, g, n kn o w l e, d, g, e la, y, e, r with end-to-end pro v e n a, n, c, e and acc, e, s, s
-        segme n t a t, i, o, n. Achi, e, v, e 99.99% SLO wh, i, l, e en f o r c, i, n, g str, i, c, t jurisdi c t i o, n, a, l
-        and ten, a, n, t is o l a t, i, o, n.
+      <p className='text-lg text-gray-700 mb-6'>
+        Build a sovereign knowledge layer with end-to-end provenance and access
+        segmentation. Achieve 99.99% SLO while enforcing strict jurisdictional
+        and tenant isolation.
       </p>
 
-      <h2 cl a s s N, ame='t, e, x, t-2, xl f, o, n, t-b, o, l, d t, e, x, t-g, r, a, y-900 mt-8 mb-4'>
-        S e c u r, i, t, y C o n t r, o, l, s
+      <h2 className='text-2xl font-bold text-gray-900 mt-8 mb-4'>
+        Security Controls
       </h2>
-      <ul cl a s s N, ame='l, i, s, t-d, i, s, c pl-6 sp, a, c, e-y-2 t, e, x, t-g, r, a, y-700'>
-        <li>C, e, l, l-le, v, e, l enc r y p t, i, o, n with KMS per ten, a, n, t and juris d i c t, i, o, n.</li>
+      <ul className='list-disc pl-6 space-y-2 text-gray-700'>
+        <li>Cell-level encryption with KMS per tenant and jurisdiction.</li>
         <li>
-          Pro v e n a, n, c, e DAG with sig, n, e, d in g e s t, i, o, n ma n i f e, s, t, s and qu, e, r, y-t, i, m, e
-          verif i c a t, i, o, n.
+          Provenance DAG with signed ingestion manifests and query-time
+          verification.
         </li>
-        <li>PII minim i z a t, i, o, n and on-dem, a, n, d re d a c t, i, o, n for dow n s t r, e, a, m RAG.</li>
+        <li>PII minimization and on-demand redaction for downstream RAG.</li>
         <li>
-          Pol, i, c, y-as-c, o, d, e for at t r i b, u, t, e-ba, s, e, d acc, e, s, s and purp, o, s, e lim i t a t, i, o, n.
+          Policy-as-code for attribute-based access and purpose limitation.
         </li>
       </ul>
 
-      <div cl a s s N, ame='mt-10 p-6 bg-emer, a, l, d-50 bor, d, e, r bor, d, e, r-emer, a, l, d-200 roun, d, e, d-lg'>
-        <str, o, n, g cl a s s N, ame='t, e, x, t-emer, a, l, d-800'>Outc, o, m, e:</str, o, n, g>
-        <s, p, a, n cl a s s N, ame='t, e, x, t-emer, a, l, d-900'>
+      <div className='mt-10 p-6 bg-emerald-50 border border-emerald-200 rounded-lg'>
+        <strong className='text-emerald-800'>Outcome:</strong>
+        <span className='text-emerald-900'>
           {' '}
-          Z, e, r, o th, i, r, d-pa, r, t, y d, a, t, a dep e n d e, n, c, y, co m p l i, a, n, t cr, o, s, s-bor, d, e, r in f e r e, n, c, e
-          and re s i l i, e, n, t ope r a t i, o, n, s.
-        </s, p, a, n>
+          Zero third-party data dependency, compliant cross-border inference,
+          and resilient operations.
+        </span>
       </div>
-    </arti, c, l, e>
+    </article>
   );
 }

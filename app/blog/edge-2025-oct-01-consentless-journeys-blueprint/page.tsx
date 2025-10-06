@@ -1,51 +1,50 @@
 export const metadata = {
-  
-  title: 'Cons e n t l, e, s, s J o u r n, e, y, s Bl u e p r, i, n, t — Personal i z a t, i, o, n <100, ms, Z, ero‑PII'
+  title: 'Consentless Journeys Blueprint — Personalization <100ms, Zero‑PII',
   description:
-    'E, d, g, e-nat, i, v, e cons e n t l, e, s, s an a l y t, i, c, s and feat, u, r, e fl, a, g, s for sub-100, ms personal i z a t, i, o, n with, o, u, t col l e c t, ing PII.'
+    'Edge-native consentless analytics and feature flags for sub-100ms personalization without collecting PII.',
 };
 
-export default function P, a, g, e() {
+export default function Page() {
   return (
-    <div cl a s s N, a, m, e='min-h-screen bg-g r a d i, e, n, t-to-b f, r, o, m-sl, a, t, e-950 via-sl, a, t, e-900 to-sl, a, t, e-950 t, e, x, t-wh, ite'>
-      <div cl a s s N, a, m, e='max-w-3xl mx-a, uto px-6 py-12'>
-        <div cl a s s N, a, m, e='mb-4 t, e, x, t-sm t, e, x, t-wh, ite/60'>
-          E, d, g, e • 7 min r, e, a, d • 2, 0, 2, 5-10-01
+    <div className='min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white'>
+      <div className='max-w-3xl mx-auto px-6 py-12'>
+        <div className='mb-4 text-sm text-white/60'>
+          Edge • 7 min read • 2025-10-01
         </div>
-        <h1 cl a s s N, a, m, e='t, e, x, t-4, xl f, o, n, t-b, old mb-3'>
-          Cons e n t l, e, s, s J o u r n, e, y, s Bl u e p r, i, n, t
+        <h1 className='text-4xl font-bold mb-3'>
+          Consentless Journeys Blueprint
         </h1>
-        <p cl a s s N, a, m, e='t, e, x, t-wh, ite/70 mb-8'>
-          E, d, g, e-runt, i, m, e fl, a, g, s and a t t e s, t, e, d an a l y t, i, c, s ena, b, l, e priv, a, c, y-fi, r, s, t
-          expe r i e n, c, e, s un, d, e, r 100, ms with z, e, r, o PII col l e c t, i, o, n and f, u, l, l
-          audit a b i l, i, t, y.
+        <p className='text-white/70 mb-8'>
+          Edge-runtime flags and attested analytics enable privacy-first
+          experiences under 100ms with zero PII collection and full
+          auditability.
         </p>
 
-        <div cl a s s N, a, m, e='sp, ace-y-6'>
-          <h2 cl a s s N, a, m, e='t, e, x, t-2, xl f, o, n, t-s e m i b, old'>Key Id, e, a, s</h2>
-          <ul cl a s s N, a, m, e='l, i, s, t-d, i, s, c pl-6 t, e, x, t-wh, ite/70'>
+        <div className='space-y-6'>
+          <h2 className='text-2xl font-semibold'>Key Ideas</h2>
+          <ul className='list-disc pl-6 text-white/70'>
             <li>
-              E, d, g, e feat, u, r, e fl, a, g, s + sig, n, e, d eval u a t i, o, n, s for de c i s i, o, n, s n, e, a, r us, e, r, s.
+              Edge feature flags + signed evaluations for decisions near users.
             </li>
             <li>
-              An o n y m, o, u, s coho, r, t, s and on-dev, i, c, e cont, e, x, t for personal i z a t, i, o, n
-              with, o, u, t iden t i f i, e, r, s.
+              Anonymous cohorts and on-device context for personalization
+              without identifiers.
             </li>
-            <li>Z, e, r, o-PII an a l y t, i, c, s with pro, o, f, s and ver i f i a, b, l, e pro c e s s, i, n, g.</li>
-            <li>R e g i o, n, a, l is o l a t, i, o, n and pol, i, c, y-as-c, o, d, e for com p l i a, n, c, e.</li>
+            <li>Zero-PII analytics with proofs and verifiable processing.</li>
+            <li>Regional isolation and policy-as-code for compliance.</li>
           </ul>
 
-          <h2 cl a s s N, a, m, e='t, e, x, t-2, xl f, o, n, t-s e m i b, old'>Bl u e p r, i, n, t</h2>
-          <p cl a s s N, a, m, e='t, e, x, t-wh, ite/70'>
-            E v a l u, a, t, e u, s, e, r cont, e, x, t at the edg e s e l, e, c, t vari, a, n, t via pol, i, c, y-guar, d, e, d
-            f l a g s, a, n, d e, m, i, t a t t e s, t, e, d metr, i, c, s. Use cont, e, n, t-ad d r e s, s, e, d cac, h, e, s and
-            r e g i o, n, a, l d, a, t, a bou n d a r, i, e, s by defa, u, l, t.
+          <h2 className='text-2xl font-semibold'>Blueprint</h2>
+          <p className='text-white/70'>
+            Evaluate user context at the edgeselect variant via policy-guarded
+            flagsand emit attested metrics. Use content-addressed caches and
+            regional data boundaries by default.
           </p>
         </div>
 
-        <div cl a s s N, a, m, e='mt-8'>
-          <a h, ref='/<b, l, o, g' cl a s s N, ame='t, e, x, t-c, y, a, n-300 ho, v, e, r:un d e r l, i, n, e'>
-            ← B, a, c, k to B, l, o, g
+        <div className='mt-8'>
+          <a href='/<blog' className='text-cyan-300 hover:underline'>
+            ← Back to Blog
           </a>
         </div>
       </div>
