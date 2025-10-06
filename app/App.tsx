@@ -13,46 +13,44 @@ const HomePage = lazy(() => import('./page'));
 const AboutPage = lazy(() => import('./about/page'));
 const ServicesPage = lazy(() => import('./services/page'));
 const ContactPage = lazy(() => import('./contact/page'));
+const TeamPage = lazy(() => import('./team/page'));
+const PrivacyPage = lazy(() => import('./privacy/page'));
+const TermsPage = lazy(() => import('./terms/page'));
 const EnterprisePage = lazy(() => import('./enterprise/page'));
 
 // Utils
 import performanceOptimizer from '../src/utils/performanceOptimizer';
 
-// Styles
-import '../src/index.css';
-
-function App() {
+const App: React.FC = () => {
   useEffect(() => {
-    // Initialize performance monitoring
-    if (typeof window !== 'undefined') {
-      performanceOptimizer.preloadCriticalResources();
-      performanceOptimizer.lazyLoadImages();
-    }
+    // Initialize performance optimizations
+    performanceOptimizer.init();
   }, []);
 
   return (
-    <HelmetProvider>
-      <ErrorBoundary>
+    <ErrorBoundary>
+      <HelmetProvider>
+        <SEOOptimizer />
+        <AccessibilityEnhancer>
+          <div></div>
+        </AccessibilityEnhancer>
         <Router>
-          <div className="App">
-            <SEOOptimizer>
-              <AccessibilityEnhancer>
-                <Suspense fallback={<LoadingSpinner />}>
-                  <Routes>
-                    <Route path="/" element={<HomePage />} />
-                    <Route path="/about" element={<AboutPage />} />
-                    <Route path="/services" element={<ServicesPage />} />
-                    <Route path="/contact" element={<ContactPage />} />
-                    <Route path="/enterprise" element={<EnterprisePage />} />
-                  </Routes>
-                </Suspense>
-              </AccessibilityEnhancer>
-            </SEOOptimizer>
-          </div>
+          <Suspense fallback={<LoadingSpinner />}>
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/about" element={<AboutPage />} />
+              <Route path="/services" element={<ServicesPage />} />
+              <Route path="/contact" element={<ContactPage />} />
+              <Route path="/team" element={<TeamPage />} />
+              <Route path="/privacy" element={<PrivacyPage />} />
+              <Route path="/terms" element={<TermsPage />} />
+              <Route path="/enterprise" element={<EnterprisePage />} />
+            </Routes>
+          </Suspense>
         </Router>
-      </ErrorBoundary>
-    </HelmetProvider>
+      </HelmetProvider>
+    </ErrorBoundary>
   );
-}
+};
 
 export default App;
