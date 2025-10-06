@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 const { withSentry } = require('./withSentry.cjs');
 
 async function handler(req, res) {
+=======
+export default async function handler(req, res) {
+>>>>>>> cursor/fix-errors-and-merge-to-main-13eb
   if (req.method !== 'POST') {
     res.statusCode = 405;
     res.setHeader('Allow', 'POST');
@@ -8,6 +12,7 @@ async function handler(req, res) {
     return;
   }
 
+<<<<<<< HEAD
   const { weight, destination } = req.body || {};
 
   if (!weight || !destination) {
@@ -47,9 +52,46 @@ async function handler(req, res) {
     res.statusCode = 200;
     res.json({ success: true, rates });
   } catch (error) {
+=======
+  try {
+    const { fromAddress, toAddress, parcel } = req.body || {};
+    const apiKey = process.env.EASYPOST_API_KEY;
+    
+    const response = await fetch('https://api.easypost.com/v2/shipments', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${apiKey}`,
+      },
+      body: JSON.stringify({
+        shipment: {
+          to_address: toAddress,
+          from_address: fromAddress,
+          parcel
+        }
+      }),
+    });
+
+    const data = await response.json();
+    
+    if (!response.ok) {
+      res.statusCode = 500;
+      res.json({ error: data.error || 'Failed to fetch rates' });
+      return;
+    }
+
+    res.statusCode = 200;
+    res.json({ rates: data.rates });
+  } catch (err) {
+    console.error('EasyPost error:', err);
+>>>>>>> cursor/fix-errors-and-merge-to-main-13eb
     res.statusCode = 500;
     res.json({ error: 'Failed to calculate shipping rates' });
   }
+<<<<<<< HEAD
 }
 
 module.exports = withSentry(handler);
+=======
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-13eb

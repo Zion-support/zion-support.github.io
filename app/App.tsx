@@ -17,20 +17,16 @@ import HomePage from './page';
 // import performanceOptimizer from '../src/utils/performanceOptimizer';
 
 // Styles
-import '../index.css';
+import '../src/index.css';
 
 const App: React.FC = () => {
   useEffect(() => {
     // Initialize global error handling
-    console.log('App initialized');
-
-    // Initialize performance monitoring
-    console.log('Performance monitoring initialized');
-
-    console.log('Performance monitoring initialized');
-    console.log(
-      '🚀 Zion Tech Group App initialized with comprehensive monitoring',
-    );
+    if (process.env.NODE_ENV === 'development') {
+      console.log('App initialized');
+      console.log('Performance monitoring initialized');
+      console.log('🚀 Zion Tech Group App initialized with comprehensive monitoring');
+    }
   }, []);
 
   return (

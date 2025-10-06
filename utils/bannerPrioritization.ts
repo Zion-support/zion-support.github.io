@@ -38,6 +38,7 @@ export class BannerPrioritizationEngine {
     if (!banner) return 0;
 
     const now = new Date();
+<<<<<<< HEAD
     const daysSincePublish = (now.getTime() - banner.publishDate.getTime()) / (1000 * 60 * 60 * 24);
     
     // Recency factor (newer = higher priority)
@@ -64,6 +65,19 @@ export class BannerPrioritizationEngine {
     );
 
     return Math.round(priority);
+=======
+    const ageInDays =
+      (now.getTime() - banner.publishDate.getTime()) / (1000 * 60 * 60 * 24);
+
+    // Recency score (0-100): Newer content scores higher
+    const recencyScore = Math.max(0, 100 - ageInDays * 2);
+
+    // Value score (0-100): Higher value content scores higher
+    const valueScore = Math.min(100, (banner.value / 100) * 100);
+
+    // Weighted combination
+    return recencyScore * 0.6 + valueScore * 0.3 + banner.priority * 0.1;
+>>>>>>> cursor/fix-errors-and-merge-to-main-13eb
   }
 
   /**
@@ -75,12 +89,19 @@ export class BannerPrioritizationEngine {
         ...banner,
         priority: this.calculatePriority(banner.id)
       }))
+<<<<<<< HEAD
       .sort((a, b) => b.priority - a.priority);
+=======
+      .sort((a, b) => b.dynamicPriority - a.dynamicPriority);
+
+    return limit ? sortedBanners.slice(0, limit) : sortedBanners;
+>>>>>>> cursor/fix-errors-and-merge-to-main-13eb
   }
 
   /**
    * Get visible banners (above the fold)
    */
+<<<<<<< HEAD
   getVisibleBanners(): BannerMetadata[] {
     return this.getPrioritizedBanners()
       .slice(0, this.visibilityThreshold)
@@ -110,11 +131,29 @@ export class BannerPrioritizationEngine {
    */
   getBanner(id: string): BannerMetadata | undefined {
     return this.banners.get(id);
+=======
+  getBannersByLoadStrategy(strategy: 'immediate' | 'lazy' | 'on-demand'): BannerMetadata[] {
+    return Array.from(this.banners.values())
+      .filter(banner => banner.loadStrategy === strategy && banner.isVisible);
+    return Array.from(this.banners.values()).filter(banner => banner.loadStrategy === strategy && banner.isVisible);
+  }
+
+  /**
+   * Update banner visibility based on performance metrics
+   */
+  updateBannerVisibility(bannerId: string, isVisible: boolean): void {
+    const banner = this.banners.get(bannerId);
+    if (banner) {
+      banner.isVisible = isVisible;
+      this.banners.set(bannerId, banner);
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-13eb
   }
 
   /**
    * Remove banner
    */
+<<<<<<< HEAD
   removeBanner(id: string): boolean {
     return this.banners.delete(id);
   }
@@ -143,3 +182,34 @@ export class BannerPrioritizationEngine {
 
 // Export singleton instance
 export const bannerPrioritizationEngine = new BannerPrioritizationEngine();
+=======
+  getBannerStats(): {
+    total: number;
+    visible: number;
+    byCategory: Record<string, number>;
+    byStrategy: Record<string, number>;
+  } {
+    const banners = Array.from(this.banners.values());
+    const visible = banners.filter(b => b.isVisible);
+    
+    const byCategory = banners.reduce((acc, banner) => {
+      acc[banner.category] = (acc[banner.category] || 0) + 1;
+      return acc;
+    }, {} as Record<string, number>);
+
+    const byStrategy = banners.reduce((acc, banner) => {
+      acc[banner.loadStrategy] = (acc[banner.loadStrategy] || 0) + 1;
+      return acc;
+    }, {} as Record<string, number>);
+
+    return {
+      total: banners.length,
+      visible: visible.length,
+      byCategory,
+      byStrategy
+    };
+  }
+}
+
+export default BannerPrioritizationEngine;
+>>>>>>> cursor/fix-errors-and-merge-to-main-13eb
