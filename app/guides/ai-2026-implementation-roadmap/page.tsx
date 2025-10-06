@@ -10,43 +10,51 @@ export const metadata = {
 
 export default function AI2026ImplementationRoadmap() {
   return (
-    <div>/* content */}
-  return (
-    <div>
-      <div> </div><div> </div></div>
-    <div className="text-left">{/* Header */}</div></div>
-      <header className="text-left">
-        <div className="text-left"> </div><Link 
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+      {/* Header */}
+      <header className="bg-white shadow-sm border-b">
+        <div className="max-w-4xl mx-auto px-6 py-4">
+          <Link 
             href="/"
-            className="text-left">
-            <ArrowLeft className="text-left" />
+            className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors"
+          >
+            <ArrowLeft className="w-4 h-4 mr-2" />
             Back to Home
           </Link>
         </div>
       </header>
 
       {/* Article Content */}
-      <article className="text-left">{/* Article Header */}
-        </a><div className="text-left"> </div><div className="text-left"> </div><div className="text-left"> </div><Calendar className="text-left" />
+      <article className="max-w-4xl mx-auto px-6 py-8">
+        {/* Article Header */}
+        <div className="mb-8">
+          <div className="flex flex-wrap items-center gap-6 text-sm text-gray-600 mb-6">
+            <div className="flex items-center">
+              <Calendar className="w-4 h-4 mr-2" />
               <span>January 22, 2026</span>
             </div>
-            <div className="text-left"> </div><User className="text-left" />
+            <div className="flex items-center">
+              <User className="w-4 h-4 mr-2" />
               <span>Zion Tech Group</span>
             </div>
-            <div className="text-left"> </div><Clock className="text-left" />
+            <div className="flex items-center">
+              <Clock className="w-4 h-4 mr-2" />
               <span>25 min read</span>
             </div>
           </div>
           
-          <h1 className="text-left">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">
             AI 2026 Implementation Roadmap: Your Complete Guide to Enterprise AI Transformation
           </h1>
           
-          <p className="text-left">Master the art of AI implementation with our comprehensive 2026 roadmap. From strategy development to full-scale deployment, learn how to successfully transform your enterprise with AI technologies.
-          </p></p>
+          <p className="text-xl text-gray-700 mb-6">
+            Master the art of AI implementation with our comprehensive 2026 roadmap. From strategy development to full-scale deployment, learn how to successfully transform your enterprise with AI technologies.
+          </p>
           
-          <div className="text-left">{['AI Implementation', 'Enterprise AI', 'Digital Transformation', 'AI Strategy', '2026 Roadmap'].map((tag) => (</div></div>
-              <span key={tag} className="text-left"> </span><Tag className="text-left" />
+          <div className="flex flex-wrap gap-2">
+            {['AI Implementation', 'Enterprise AI', 'Digital Transformation', 'AI Strategy', '2026 Roadmap'].map((tag) => (
+              <span key={tag} className="inline-flex items-center px-3 py-1 rounded-full text-sm bg-blue-100 text-blue-800">
+                <Tag className="w-3 h-3 mr-1" />
                 {tag}
               </span>
             ))}
@@ -54,56 +62,57 @@ export default function AI2026ImplementationRoadmap() {
         </div>
 
         {/* Executive Summary */}
-        <div className="text-left"> </div><h2 className="text-left">🎯 Executive Summary</h2>
-          <div className="text-left"> </div><div className="text-left"> </div><div className="text-left">$2.8T</div>
-              <div className="text-left">AI market by 2026</div>
+        <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg p-8 mb-12">
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">🎯 Executive Summary</h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div className="text-center">
+              <div className="text-3xl font-bold text-blue-600">$2.8T</div>
+              <div className="text-sm text-gray-600">AI market by 2026</div>
             </div>
-            <div className="text-left"> </div><div className="text-left">78%</div>
-              <div className="text-left">Fortune 500 adoption</div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-green-600">78%</div>
+              <div className="text-sm text-gray-600">Fortune 500 adoption</div>
             </div>
-            <div className="text-left"> </div><div className="text-left">156%</div>
-              <div className="text-left">Average ROI</div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-purple-600">156%</div>
+              <div className="text-sm text-gray-600">Average ROI</div>
             </div>
-            <div className="text-left"> </div><div className="text-left">67%</div>
-              <div className="text-left">Success rate</div>
-        <div className="text-left"> </div><h2 className="text-left">🎯 Executive Summary</h2>"
-          <div className="text-left"> </div><div className="text-left"> </div><div className="text-left">$2.8T</div>"
-              <div className="text-left">AI market by 2026</div></div>
-            <div className="text-left"> </div><div className="text-left">78%</div>"
-              <div className="text-left">Fortune 500 adoption</div></div>
-            <div className="text-left"> </div><div className="text-left">156%</div>"
-              <div className="text-left">Average ROI</div></div>
-            <div className="text-left"> </div><div className="text-left">67%</div>"
-              <div className="text-left">Success rate</div></div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-orange-600">67%</div>
+              <div className="text-sm text-gray-600">Success rate</div>
+            </div>
           </div>
         </div>
 
         {/* Article Content */}
-        <div className="text-left"> </div><h2>Introduction</h2>
-          <p>The AI landscape in 2026 presents unprecedented opportunities for enterprise transformation. This comprehensive roadmap provides a structured approach to implementing AI technologies that deliver measurable business value, competitive advantage, and sustainable growth.
-          </p></p>
+        <div className="prose prose-lg max-w-none">
+          <h2>Introduction</h2>
+          <p>
+            The AI landscape in 2026 presents unprecedented opportunities for enterprise transformation. This comprehensive roadmap provides a structured approach to implementing AI technologies that deliver measurable business value, competitive advantage, and sustainable growth.
+          </p>
 
           <h2>Phase 1: Strategic Foundation (Months 1-3)</h2>
           
           <h3>1.1 AI Strategy Development</h3>
           
-          <div className="text-left"> </div><h4 className="text-left">Business Objective Alignment</h4>"
-            <div className="text-left"> </div><div> </div><h5 className="text-left">Step 1: Define Business Goals</h5>"
-                <ul className="text-left">
-                  <li>• Conduct executive interviews and workshops</li>
-                  <li>• Analyze competitive landscape and market trends</li>
-                  <li>• Identify high-impact AI use cases</li>
-                  <li>• Define success metrics and KPIs</li>
-                  <li>• Establish AI governance framework</li>
-                </ul>
-              </div>
-            </div>
+          <h4>Business Objective Alignment</h4>
+          <div className="bg-gray-50 p-6 rounded-lg">
+            <h5 className="font-semibold mb-4">Step 1: Define Business Goals</h5>
+            <ul className="space-y-2">
+              <li>• Conduct executive interviews and workshops</li>
+              <li>• Analyze competitive landscape and market trends</li>
+              <li>• Identify high-impact AI use cases</li>
+              <li>• Define success metrics and KPIs</li>
+              <li>• Establish AI governance framework</li>
+            </ul>
           </div>
 
           <h3>1.2 AI Readiness Assessment</h3>
           
-          <div className="text-left"> </div><div className="text-left"> </div><h4 className="text-left">Data Readiness</h4>"
-              <ul className="text-left">
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="bg-white border rounded-lg p-6">
+              <h4 className="font-semibold mb-4">Data Readiness</h4>
+              <ul className="space-y-2 text-sm">
                 <li>• Data quality and accessibility</li>
                 <li>• Data governance maturity</li>
                 <li>• Infrastructure scalability</li>
@@ -111,8 +120,9 @@ export default function AI2026ImplementationRoadmap() {
               </ul>
             </div>
             
-            <div className="text-left"> </div><h4 className="text-left">Technology Infrastructure</h4>"
-              <ul className="text-left">
+            <div className="bg-white border rounded-lg p-6">
+              <h4 className="font-semibold mb-4">Technology Infrastructure</h4>
+              <ul className="space-y-2 text-sm">
                 <li>• Current technology stack assessment</li>
                 <li>• Cloud readiness and capabilities</li>
                 <li>• Integration architecture evaluation</li>
@@ -121,8 +131,10 @@ export default function AI2026ImplementationRoadmap() {
             </div>
           </div>
 
-          <div className="text-left"> </div><div className="text-left"> </div><h4 className="text-left">Organizational Readiness</h4>"
-              <ul className="text-left">
+          <div className="grid md:grid-cols-2 gap-6 mt-6">
+            <div className="bg-white border rounded-lg p-6">
+              <h4 className="font-semibold mb-4">Organizational Readiness</h4>
+              <ul className="space-y-2 text-sm">
                 <li>• Leadership commitment and sponsorship</li>
                 <li>• Skills and capabilities assessment</li>
                 <li>• Change management capacity</li>
@@ -130,8 +142,9 @@ export default function AI2026ImplementationRoadmap() {
               </ul>
             </div>
             
-            <div className="text-left"> </div><h4 className="text-left">Business Process Maturity</h4>"
-              <ul className="text-left">
+            <div className="bg-white border rounded-lg p-6">
+              <h4 className="font-semibold mb-4">Business Process Maturity</h4>
+              <ul className="space-y-2 text-sm">
                 <li>• Process documentation and standardization</li>
                 <li>• Automation potential assessment</li>
                 <li>• Performance measurement capabilities</li>
@@ -144,33 +157,36 @@ export default function AI2026ImplementationRoadmap() {
           
           <h3>2.1 Pilot Project Selection</h3>
           
-          <div className="text-left"> </div><h4 className="text-left">Criteria for Pilot Selection</h4>"
-            <div className="text-left"> </div><div> </div><ul className="text-left">
-                  <li>• <strong>Business Impact:</strong> High potential for measurable business value</li>
-                  <li>• <strong>Technical Feasibility:</strong> Achievable with current resources and technology</li>
-                  <li>• <strong>Data Availability:</strong> Sufficient quality data for AI model development</li>
-                </ul>
-              </div>
-              <div> </div><ul className="text-left">
-                  <li>• <strong>Risk Level:</strong> Low risk with high probability of success</li>
-                  <li>• <strong>Scalability:</strong> Potential for enterprise-wide deployment</li>
-                </ul>
-              </div>
+          <div className="bg-blue-50 p-6 rounded-lg">
+            <h4 className="font-semibold mb-4">Criteria for Pilot Selection</h4>
+            <div className="grid md:grid-cols-2 gap-6">
+              <ul className="space-y-2">
+                <li>• <strong>Business Impact:</strong> High potential for measurable business value</li>
+                <li>• <strong>Technical Feasibility:</strong> Achievable with current resources and technology</li>
+                <li>• <strong>Data Availability:</strong> Sufficient quality data for AI model development</li>
+              </ul>
+              <ul className="space-y-2">
+                <li>• <strong>Risk Level:</strong> Low risk with high probability of success</li>
+                <li>• <strong>Scalability:</strong> Potential for enterprise-wide deployment</li>
+              </ul>
             </div>
           </div>
 
           <h3>2.2 Common Pilot Use Cases</h3>
           
-          <div className="text-left"> </div><div className="text-left"> </div><h4 className="text-left">Customer Service Automation</h4>"
-              <ul className="text-left">
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="bg-white border rounded-lg p-6">
+              <h4 className="font-semibold mb-4">Customer Service Automation</h4>
+              <ul className="space-y-2 text-sm">
                 <li>• Chatbot implementation</li>
                 <li>• Intelligent routing</li>
                 <li>• Sentiment analysis</li>
               </ul>
             </div>
             
-            <div className="text-left"> </div><h4 className="text-left">Supply Chain Optimization</h4>"
-              <ul className="text-left">
+            <div className="bg-white border rounded-lg p-6">
+              <h4 className="font-semibold mb-4">Supply Chain Optimization</h4>
+              <ul className="space-y-2 text-sm">
                 <li>• Demand forecasting</li>
                 <li>• Inventory optimization</li>
                 <li>• Supplier management</li>
@@ -178,16 +194,19 @@ export default function AI2026ImplementationRoadmap() {
             </div>
           </div>
 
-          <div className="text-left"> </div><div className="text-left"> </div><h4 className="text-left">Financial Process Automation</h4>"
-              <ul className="text-left">
+          <div className="grid md:grid-cols-2 gap-6 mt-6">
+            <div className="bg-white border rounded-lg p-6">
+              <h4 className="font-semibold mb-4">Financial Process Automation</h4>
+              <ul className="space-y-2 text-sm">
                 <li>• Invoice processing</li>
                 <li>• Fraud detection</li>
                 <li>• Risk assessment</li>
               </ul>
             </div>
             
-            <div className="text-left"> </div><h4 className="text-left">Marketing and Sales</h4>"
-              <ul className="text-left">
+            <div className="bg-white border rounded-lg p-6">
+              <h4 className="font-semibold mb-4">Marketing and Sales</h4>
+              <ul className="space-y-2 text-sm">
                 <li>• Lead scoring</li>
                 <li>• Personalized recommendations</li>
                 <li>• Campaign optimization</li>
@@ -199,31 +218,41 @@ export default function AI2026ImplementationRoadmap() {
           
           <h3>3.1 Enterprise-Wide Deployment</h3>
           
-          <div className="text-left"> </div><h4 className="text-left">Scaling Strategy</h4>"
-            <div className="text-left"> </div><div> </div><ul className="text-left">
-                  <li>• <strong>Horizontal Scaling:</strong> Deploy across multiple business units</li>
-                  <li>• <strong>Vertical Scaling:</strong> Expand functionality within existing use cases</li>
-                </ul>
-              </div>
-              <div> </div><ul className="text-left">
-                  <li>• <strong>Geographic Expansion:</strong> Deploy across different regions</li>
-                  <li>• <strong>Channel Expansion:</strong> Extend to different customer touchpoints</li>
-                </ul>
-              </div>
+          <div className="bg-green-50 p-6 rounded-lg">
+            <h4 className="font-semibold mb-4">Scaling Strategy</h4>
+            <div className="grid md:grid-cols-2 gap-6">
+              <ul className="space-y-2">
+                <li>• <strong>Horizontal Scaling:</strong> Deploy across multiple business units</li>
+                <li>• <strong>Vertical Scaling:</strong> Expand functionality within existing use cases</li>
+              </ul>
+              <ul className="space-y-2">
+                <li>• <strong>Geographic Expansion:</strong> Deploy across different regions</li>
+                <li>• <strong>Channel Expansion:</strong> Extend to different customer touchpoints</li>
+              </ul>
             </div>
           </div>
 
           <h3>3.2 Advanced AI Capabilities</h3>
           
-          <div className="text-left"> </div><h4 className="text-left">Autonomous Decision Making</h4>"
-            <div className="text-left"> </div><div className="text-left"> </div><div className="text-left">Real-time</div>"
-                <div className="text-left">Decision Processing</div></div>
-              <div className="text-left"> </div><div className="text-left">Policy</div>"
-                <div className="text-left">Engine Integration</div></div>
-              <div className="text-left"> </div><div className="text-left">Audit</div>"
-                <div className="text-left">Trail Maintenance</div></div>
-              <div className="text-left"> </div><div className="text-left">Human</div>"
-                <div className="text-left">Override Options</div></div>
+          <div className="bg-purple-50 p-6 rounded-lg">
+            <h4 className="font-semibold mb-4">Autonomous Decision Making</h4>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              <div className="text-center">
+                <div className="text-lg font-semibold text-purple-600">Real-time</div>
+                <div className="text-sm text-gray-600">Decision Processing</div>
+              </div>
+              <div className="text-center">
+                <div className="text-lg font-semibold text-purple-600">Policy</div>
+                <div className="text-sm text-gray-600">Engine Integration</div>
+              </div>
+              <div className="text-center">
+                <div className="text-lg font-semibold text-purple-600">Audit</div>
+                <div className="text-sm text-gray-600">Trail Maintenance</div>
+              </div>
+              <div className="text-center">
+                <div className="text-lg font-semibold text-purple-600">Human</div>
+                <div className="text-sm text-gray-600">Override Options</div>
+              </div>
             </div>
           </div>
 
@@ -231,24 +260,26 @@ export default function AI2026ImplementationRoadmap() {
           
           <h3>1. Leadership and Governance</h3>
           
-          <div className="text-left"> </div><h4 className="text-left">Executive Sponsorship</h4>"
-            <div className="text-left"> </div><div> </div><ul className="text-left">
-                  <li>• <strong>CEO Commitment:</strong> Clear leadership support and commitment</li>
-                  <li>• <strong>Cross-Functional Teams:</strong> Multi-disciplinary implementation teams</li>
-                </ul>
-              </div>
-              <div> </div><ul className="text-left">
-                  <li>• <strong>Regular Reviews:</strong> Monthly progress reviews and course corrections</li>
-                  <li>• <strong>Success Communication:</strong> Regular communication of successes and learnings</li>
-                </ul>
-              </div>
+          <div className="bg-yellow-50 p-6 rounded-lg">
+            <h4 className="font-semibold mb-4">Executive Sponsorship</h4>
+            <div className="grid md:grid-cols-2 gap-6">
+              <ul className="space-y-2">
+                <li>• <strong>CEO Commitment:</strong> Clear leadership support and commitment</li>
+                <li>• <strong>Cross-Functional Teams:</strong> Multi-disciplinary implementation teams</li>
+              </ul>
+              <ul className="space-y-2">
+                <li>• <strong>Regular Reviews:</strong> Monthly progress reviews and course corrections</li>
+                <li>• <strong>Success Communication:</strong> Regular communication of successes and learnings</li>
+              </ul>
             </div>
           </div>
 
           <h3>2. Skills and Capabilities</h3>
           
-          <div className="text-left"> </div><div className="text-left"> </div><h4 className="text-left">Team Development</h4>"
-              <ul className="text-left">
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="bg-white border rounded-lg p-6">
+              <h4 className="font-semibold mb-4">Team Development</h4>
+              <ul className="space-y-2 text-sm">
                 <li>• AI talent acquisition</li>
                 <li>• Upskilling programs</li>
                 <li>• Partnership strategy</li>
@@ -256,8 +287,9 @@ export default function AI2026ImplementationRoadmap() {
               </ul>
             </div>
             
-            <div className="text-left"> </div><h4 className="text-left">Capability Building</h4>"
-              <ul className="text-left">
+            <div className="bg-white border rounded-lg p-6">
+              <h4 className="font-semibold mb-4">Capability Building</h4>
+              <ul className="space-y-2 text-sm">
                 <li>• Skill assessment</li>
                 <li>• Training programs</li>
                 <li>• Certification tracks</li>
@@ -268,38 +300,52 @@ export default function AI2026ImplementationRoadmap() {
 
           <h2>Success Metrics and KPIs</h2>
           
-          <div className="text-left"> </div><h3 className="text-left">Business Impact Metrics</h3>"
-            <div className="text-left"> </div><div className="text-left"> </div><div className="text-left">156%</div>"
-                <div className="text-left">Average ROI</div></div>
-              <div className="text-left"> </div><div className="text-left">73%</div>"
-                <div className="text-left">Process efficiency</div></div>
-              <div className="text-left"> </div><div className="text-left">89%</div>"
-                <div className="text-left">Customer satisfaction</div></div>
-              <div className="text-left"> </div><div className="text-left">95%</div>"
-                <div className="text-left">Error reduction</div></div>
+          <div className="bg-gradient-to-r from-green-50 to-blue-50 p-8 rounded-lg">
+            <h3 className="text-xl font-semibold mb-6">Business Impact Metrics</h3>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+              <div className="text-center">
+                <div className="text-3xl font-bold text-green-600">156%</div>
+                <div className="text-sm text-gray-600">Average ROI</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-blue-600">73%</div>
+                <div className="text-sm text-gray-600">Process efficiency</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-purple-600">89%</div>
+                <div className="text-sm text-gray-600">Customer satisfaction</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-orange-600">95%</div>
+                <div className="text-sm text-gray-600">Error reduction</div>
+              </div>
             </div>
           </div>
 
           <h2>Common Pitfalls and How to Avoid Them</h2>
           
-          <div className="text-left"> </div><div className="text-left"> </div><h4 className="text-left">Strategic Pitfalls</h4>"
-              <ul className="text-left">
+          <div className="grid md:grid-cols-3 gap-6">
+            <div className="bg-red-50 border border-red-200 rounded-lg p-6">
+              <h4 className="font-semibold text-red-800 mb-4">Strategic Pitfalls</h4>
+              <ul className="space-y-2 text-sm text-red-700">
                 <li>• Lack of business alignment</li>
                 <li>• Insufficient change management</li>
                 <li>• Unrealistic expectations</li>
               </ul>
             </div>
             
-            <div className="text-left"> </div><h4 className="text-left">Technical Pitfalls</h4>"
-              <ul className="text-left">
+            <div className="bg-orange-50 border border-orange-200 rounded-lg p-6">
+              <h4 className="font-semibold text-orange-800 mb-4">Technical Pitfalls</h4>
+              <ul className="space-y-2 text-sm text-orange-700">
                 <li>• Poor data quality</li>
                 <li>• Integration challenges</li>
                 <li>• Model drift</li>
               </ul>
             </div>
             
-            <div className="text-left"> </div><h4 className="text-left">Operational Pitfalls</h4>"
-              <ul className="text-left">
+            <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-6">
+              <h4 className="font-semibold text-yellow-800 mb-4">Operational Pitfalls</h4>
+              <ul className="space-y-2 text-sm text-yellow-700">
                 <li>• Skills gap</li>
                 <li>• Governance issues</li>
                 <li>• Security concerns</li>
@@ -308,25 +354,34 @@ export default function AI2026ImplementationRoadmap() {
           </div>
 
           <h2>Conclusion</h2>
-          <p>The AI 2026 Implementation Roadmap provides a comprehensive framework for successful enterprise AI transformation. By following this structured approach, organizations can navigate the complexities of AI implementation while maximizing business value and minimizing risks.
-          </p></p>
+          <p>
+            The AI 2026 Implementation Roadmap provides a comprehensive framework for successful enterprise AI transformation. By following this structured approach, organizations can navigate the complexities of AI implementation while maximizing business value and minimizing risks.
+          </p>
           
-          <p>The future belongs to organizations that can successfully harness the power of AI to transform their operations, enhance customer experiences, and drive innovation. This roadmap provides the foundation for that transformation.
-          </p></p>
+          <p>
+            The future belongs to organizations that can successfully harness the power of AI to transform their operations, enhance customer experiences, and drive innovation. This roadmap provides the foundation for that transformation.
+          </p>
 
           {/* CTA Section */}
-          <div className="text-left"> </div><h3 className="text-left">Ready to Begin Your AI Transformation Journey?</h3>"
-            <p className="text-left">Contact Zion Tech Group to learn how our proven methodology and expertise can accelerate your path to AI success.
-            </p></p>
-            <div className="text-left"> </div><Link 
+          <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-8 rounded-lg mt-12">
+            <h3 className="text-2xl font-bold mb-4">Ready to Begin Your AI Transformation Journey?</h3>
+            <p className="text-blue-100 mb-6">
+              Contact Zion Tech Group to learn how our proven methodology and expertise can accelerate your path to AI success.
+            </p>
+            <div className="flex flex-wrap gap-4">
+              <Link 
                 href="/case-studies/fortune-500-ai-transformation-success"
-                className="text-left">
+                className="inline-flex items-center px-6 py-3 bg-white text-blue-600 rounded-lg hover:bg-blue-50 transition-colors"
+              >
                 View Success Stories
+                <ArrowRight className="w-4 h-4 ml-2" />
               </Link>
               <Link 
                 href="/tools/ai-roi-calculator"
-                className="text-left">
+                className="inline-flex items-center px-6 py-3 border border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors"
+              >
                 Calculate Your ROI
+                <Target className="w-4 h-4 ml-2" />
               </Link>
             </div>
           </div>
@@ -334,4 +389,4 @@ export default function AI2026ImplementationRoadmap() {
       </article>
     </div>
   );
-})
+}
