@@ -1,14 +1,10 @@
-<<<<<<< HEAD
 import React, { memo, useMemo } from 'react';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
+import React, { memo, useMemo, useCallback, Suspense } from 'react';
+>>>>>>> main
 =======
 import React, { memo, useMemo, useCallback, Suspense } from 'react';
 >>>>>>> main
->>>>>>> main
->>>>>>> main
+>>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572
 import { HelmetProvider, Helmet } from 'react-helmet-async';
 // Memoized components for better performance
 const UnifiedContentPromotion = memo(() => (
@@ -51,16 +47,11 @@ const InteractiveContentShowcase2026 = memo(() => (
     </div>
   </div>
 ));
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
 // Loading component (removed unused LoadingSpinner)
-=======
-<<<<<<< HEAD
 // Loading component - removed unused LoadingSpinner
-=======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
+>>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572
 // Error Boundary Component
 interface ErrorBoundaryState {
   hasError: boolean;
@@ -77,31 +68,19 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
   static getDerivedStateFromError(error: Error): ErrorBoundaryState {
     return { hasError: true, error };
   }
-<<<<<<< HEAD
   override componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
     console.error('App Error Boundary caught an error:', error, errorInfo);
   }
-=======
 
   override componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
     console.error('App Error Boundary caught an error:', error, errorInfo);
   }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
-=======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-3fed
-=======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f83
-=======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-efe9
-=======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
-=======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6abd
   override render() {
     if (this.state.hasError) {
@@ -133,10 +112,8 @@ const LoadingSpinner = memo(() => (
     <div className="text-gray-500">Loading...</div>
   </div>
 ));
-<<<<<<< HEAD
 =======
->>>>>>> main
->>>>>>> main
+>>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
 export default function App() {
@@ -228,6 +205,9 @@ export default function App() {
     // Track phone clicks for analytics
     if (typeof window !== 'undefined' && 'gtag' in window) {
       (window as any).gtag('event', 'phone_click', {
+    if (typeof window !== 'undefined' && (window as unknown as { gtag?: Function }).gtag) {
+      ((window as unknown as { gtag: Function }).gtag)('event', 'phone_click', {
+>>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572
         event_category: 'engagement',
         event_label: 'main_phone_number'
       });
@@ -238,11 +218,11 @@ export default function App() {
       <HelmetProvider>
         <Suspense fallback={<LoadingSpinner />}>
           <div>
-        <script
-          type='application/ld+json'
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-        />
-        {/* SEO Meta Tags */}
+          <script
+            type='application/ld+json'
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+          />
+          {/* SEO Meta Tags */}
         <Helmet>
           <title>
             Zion Tech Group - AI-Powered Enterprise Solutions | 300% ROI

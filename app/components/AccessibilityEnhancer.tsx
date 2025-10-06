@@ -10,36 +10,37 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
   const [reducedMotion, setReducedMotion] = useState(false);
 
   useEffect(() => {
-    // Check for user preferences
+    //Check for user preferences
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     setReducedMotion(prefersReducedMotion);
 
-    // Load saved preferences
+    //Load saved preferences
     const savedHighContrast = localStorage.getItem('highContrast') === 'true';
     const savedFontSize = (localStorage.getItem('fontSize') as 'small' | 'normal' | 'large') || 'normal';
     
     setIsHighContrast(savedHighContrast);
     setFontSize(savedFontSize);
 
-    // Apply initial styles
+    //Apply initial styles
     applyAccessibilityStyles(savedHighContrast, savedFontSize, prefersReducedMotion);
   }, []);
 
-  const applyAccessibilityStyles = (highContrast: boolean, fontSize: string, reducedMotion: boolean) => {
+  const applyAccessibilityStyles = (highContrast: boolean,
+  fontSize: string, reducedMotion: boolean) => {
     const root = document.documentElement;
     
-    // Apply high contrast
+    //Apply high contrast
     if (highContrast) {
       root.classList.add('high-contrast');
     } else {
       root.classList.remove('high-contrast');
     }
 
-    // Apply font size
+    //Apply font size
     root.classList.remove('font-small', 'font-normal', 'font-large');
     root.classList.add(`font-${fontSize}`);
 
-    // Apply reduced motion
+    //Apply reduced motion
     if (reducedMotion) {
       root.classList.add('reduced-motion');
     } else {

@@ -1,30 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 
-<<<<<<< HEAD:src/components/BannerManager.tsx
-// interface BannerData { // Unused interface
-//   id: string;
-//   title: string;
-//   subtitle?: string;
-//   description: string;
-//   ctaText: string;
-//   ctaLink: string;
-//   imageUrl?: string;
-//   category: string;
-//   priority: number;
-//   isActive: boolean;
-//   startDate?: string;
-//   endDate?: string;
-// }
-
-// interface BannerManagerProps { // Unused interface
-//   banners: BannerData[];
-//   rotationInterval?: number;
-//   maxVisibleBanners?: number;
-// }
-=======
-
->>>>>>> main:corrupted-src-backup/components/BannerManager.tsx
+:corrupted-src-backup/components/BannerManager.tsx
 
 interface Banner {
   id: string;

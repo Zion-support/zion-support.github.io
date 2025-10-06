@@ -4,28 +4,28 @@ import fs from 'fs';
 import path from 'path';
 import { glob } from 'glob';
 
-// Patterns to fix
+//Patterns to fix
 const fixes = [
-  // Fix ArrowRight -> Link mismatches
+  //Fix ArrowRight -> Link mismatches
   {
     pattern: /<ArrowRight\s+([^>]*)>\s*([^<]*)<\/Link>/g,
     replacement: '<Link $1>$2</Link>'
   },
-  // Fix Link -> ArrowRight mismatches  
+  //Fix Link -> ArrowRight mismatches  
   {
     pattern: /<Link\s+([^>]*)>\s*([^<]*)<\/ArrowRight>/g,
     replacement: '<Link $1>$2</Link>'
   },
-  // Fix unclosed ArrowRight tags
+  //Fix unclosed ArrowRight tags
   {
     pattern: /<ArrowRight\s+([^>]*)>\s*([^<]*)(?!<\/ArrowRight>)/g,
     replacement: '<Link $1>$2</Link>'
   },
-  // Fix unclosed Link tags that should be ArrowRight
+  //Fix unclosed Link tags that should be ArrowRight
   {
     pattern: /<Link\s+([^>]*)>\s*([^<]*)(?!<\/Link>)/g,
     replacement: (match, attrs, content) => {
-      // Only fix if it looks like it should be a Link (has href)
+      //Only fix if it looks like it should be a Link (has href)
       if (attrs.includes('href')) {
         return `<Link ${attrs}>${content}</Link>`;
       }
@@ -34,7 +34,7 @@ const fixes = [
   }
 ];
 
-// Get all TypeScript/JSX files
+//Get all TypeScript/JSX files
 const files = await glob('**/*.{ts,tsx,js,jsx}', {
   ignore: [
     'node_modules/**',
@@ -112,7 +112,7 @@ for (const file of files) {
     let originalContent = content;
     let fileFixes = 0;
 
-    // Apply all fixes
+    //Apply all fixes
     fixes.forEach(fix => {
       if (typeof fix.replacement === 'function') {
         content = content.replace(fix.pattern, fix.replacement);
@@ -121,7 +121,7 @@ for (const file of files) {
       }
     });
 
-    // Count fixes
+    //Count fixes
     if (content !== originalContent) {
       const diff = (content.match(/<Link/g) || []).length - (originalContent.match(/<Link/g) || []).length;
       fileFixes += Math.abs(diff);

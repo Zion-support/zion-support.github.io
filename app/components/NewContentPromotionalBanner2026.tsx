@@ -1,12 +1,6 @@
 import React from 'react';
 import { ArrowRight, Bot, Rocket, Shield, Target, TrendingUp, Zap } from 'lucide-react';
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
 import Link from 'next/link';
 import {
   Sparkles,
@@ -17,15 +11,14 @@ import {
   ArrowRight,
   Zap,
 } from 'lucide-react';
-<<<<<<< HEAD
-=======
 
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e4e
+=======
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e4e
 =======
->>>>>>> main
->>>>>>> main
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
+>>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572
 const NewContentPromotionalBanner2026: React.FC = () => {
   const featuredContent = [
     {
@@ -69,9 +62,6 @@ const NewContentPromotionalBanner2026: React.FC = () => {
     },
   ];
   return (
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     <div className="relative overflow-hidden bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 py-20">
       {/* Animated background effects */}
       <div className="absolute inset-0">
@@ -118,9 +108,6 @@ const NewContentPromotionalBanner2026: React.FC = () => {
             <div className="flex items-center gap-2">
               <Target className="w-5 h-5 text-blue-400" />
               <span className="font-semibold">Proven Results</span>
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
     <div className='relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden'>
       {/* Animated background effects */}
       <div className='absolute inset-0 overflow-hidden opacity-20'>
@@ -134,6 +121,7 @@ const NewContentPromotionalBanner2026: React.FC = () => {
           style={{ animationDelay: '4s' }}
         />
       </div>
+
       <div className='relative z-10 container mx-auto px-4 py-16'>
         {/* Header Section */}
         <div className='text-center mb-16'>
@@ -144,17 +132,20 @@ const NewContentPromotionalBanner2026: React.FC = () => {
             </span>
             <Sparkles className='w-8 h-8 text-cyan-400' />
           </div>
+
           <h2 className='text-4xl md:text-6xl font-extrabold text-white mb-6 bg-gradient-to-r from-violet-400 via-purple-400 to-blue-400 bg-clip-text text-transparent'>
             Latest AI Innovations
             <br />
             That Transform Business
           </h2>
+
           <p className='text-xl text-gray-300 mb-8 max-w-4xl mx-auto'>
             Explore cutting-edge AI strategies, implementation roadmaps, and
             security innovations that are delivering{' '}
             <span className='text-cyan-400 font-semibold'>300%+ ROI</span> for
             enterprises worldwide
           </p>
+
           <div className='flex items-center justify-center gap-8 text-gray-300'>
             <div className='flex items-center gap-2'>
               <TrendingUp className='w-5 h-5' />
@@ -167,9 +158,7 @@ const NewContentPromotionalBanner2026: React.FC = () => {
             <div className='flex items-center gap-2'>
               <Target className='w-5 h-5' />
               <span>Proven Results</span>
-<<<<<<< HEAD
-=======
-=======
+>>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572
     <div className="relative overflow-hidden bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
       {/* Animated background effects */}
       <div className="absolute inset-0">
@@ -218,16 +207,13 @@ const NewContentPromotionalBanner2026: React.FC = () => {
               <span className="font-semibold">Proven Results</span>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e4e
 =======
->>>>>>> main
->>>>>>> main
+=======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
+>>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572
             </div>
           </div>
         </div>
         {/* Featured Content Cards */}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {featuredContent.map((content, index) => (
             <div 
@@ -236,9 +222,6 @@ const NewContentPromotionalBanner2026: React.FC = () => {
               style={{ animationDelay: `${index * 150}ms` }}
             >
               {/* Card glow effect */}
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
         <div className='grid md:grid-cols-3 gap-8 mb-16'>
           {featuredContent.map((content, index) => (
             <div
@@ -250,6 +233,7 @@ const NewContentPromotionalBanner2026: React.FC = () => {
               <div
                 className={`absolute inset-0 bg-gradient-to-br ${content.color} opacity-0 group-hover:opacity-10 transition-all duration-500`}
               />
+
               <div className='relative p-8'>
                 {/* Icon & Badge */}
                 <div className='flex items-center justify-between mb-6'>
@@ -257,9 +241,7 @@ const NewContentPromotionalBanner2026: React.FC = () => {
                   <div
                     className={`px-4 py-2 rounded-full bg-gradient-to-r ${content.badgeColor} text-white text-sm font-bold shadow-lg`}
                   >
-<<<<<<< HEAD
-=======
-=======
+>>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {featuredContent.map((content, index) => (
             <div 
@@ -268,7 +250,6 @@ const NewContentPromotionalBanner2026: React.FC = () => {
               style={{ animationDelay: `${index * 150}ms` }}
             >
               {/* Card glow effect */}
->>>>>>> main
               <div className={`absolute inset-0 bg-gradient-to-br ${content.color} opacity-0 group-hover:opacity-10 transition-all duration-500 rounded-2xl`}></div>
               
               <div className="relative z-10">
@@ -276,39 +257,33 @@ const NewContentPromotionalBanner2026: React.FC = () => {
                 <div className="flex items-center justify-between mb-6">
                   <div className="text-4xl">{content.icon}</div>
                   <div className={`px-4 py-2 rounded-full bg-gradient-to-r ${content.badgeColor} text-white text-sm font-bold shadow-lg`}>
-<<<<<<< HEAD
-=======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e4e
 =======
->>>>>>> main
->>>>>>> main
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e4e
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
+>>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572
                     {content.badge}
                   </div>
                 </div>
                 {/* Category */}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
                 <div className="mb-4">
                   <span className={`inline-block px-4 py-2 rounded-full bg-gradient-to-r ${content.bgColor} text-gray-900 text-sm font-semibold border border-white/20`}>
-=======
-<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
+>>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572
                 <div className='mb-4'>
                   <span
                     className={`inline-block px-4 py-2 rounded-full bg-gradient-to-r ${content.bgColor} text-gray-900 text-sm font-semibold border border-white/20`}
                   >
-<<<<<<< HEAD
-=======
-=======
                 <div className="mb-4">
                   <span className={`inline-block px-4 py-2 rounded-full bg-gradient-to-r ${content.bgColor} text-gray-900 text-sm font-semibold border border-white/20`}>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e4e
 =======
->>>>>>> main
->>>>>>> main
+                <div className="mb-4">
+                  <span className={`inline-block px-4 py-2 rounded-full bg-gradient-to-r ${content.bgColor} text-gray-900 text-sm font-semibold border border-white/20`}>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e4e
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
+>>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572
                     {content.category}
                   </span>
                 </div>
@@ -319,18 +294,12 @@ const NewContentPromotionalBanner2026: React.FC = () => {
                   {content.title}
                 </h3>
                 {/* Excerpt */}
-<<<<<<< HEAD
-                <p className='text-gray-300 mb-6 leading-relaxed'>
-=======
-<<<<<<< HEAD
                 <p className="text-gray-300 mb-6 leading-relaxed">
-=======
-<<<<<<< HEAD
                 <p className='text-gray-300 mb-6 leading-relaxed'>
 =======
->>>>>>> main
->>>>>>> main
+                <p className='text-gray-300 mb-6 leading-relaxed'>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
+>>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572
                   {content.excerpt}
                 </p>
                 {/* CTA Button */}
@@ -338,47 +307,32 @@ const NewContentPromotionalBanner2026: React.FC = () => {
                   href={`/blog/${content.slug}`}
                   className={`group/btn flex items-center justify-center gap-3 w-full bg-gradient-to-r ${content.color} hover:shadow-2xl text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 transform hover:-translate-y-1`}
                 >
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
                   <span>Read Full Article</span>
                   <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-1 transition-transform" />
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
                   <span className="text-lg">Read Full Article</span>
                   <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-2 transition-transform duration-300" />
->>>>>>> main
                 </Link>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
               {/* Corner accent */}
               <div className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${content.color} opacity-10 rounded-bl-full`}></div>
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
                 {/* Corner accent */}
                 <div
                   className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${content.color} opacity-10 rounded-bl-full`}
                 />
               </div>
-<<<<<<< HEAD
+              </div>
+                </Link>
+
 =======
 =======
               </div>
                 </Link>
-
->>>>>>> main
->>>>>>> main
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
+>>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572
             </div>
           ))}
         </div>
         {/* Bottom CTA Section */}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
         <div className="text-center bg-white/5 backdrop-blur-lg rounded-2xl p-12 border border-white/20">
           <div className="flex items-center justify-center gap-3 mb-6">
             <Rocket className="w-8 h-8 text-blue-400" />
@@ -389,9 +343,6 @@ const NewContentPromotionalBanner2026: React.FC = () => {
           </div>
           
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
         <div className='text-center bg-white/5 backdrop-blur-lg rounded-3xl border border-white/10 p-12'>
           <div className='flex items-center justify-center gap-4 mb-6'>
             <Rocket className='w-8 h-8 text-cyan-400' />
@@ -400,6 +351,7 @@ const NewContentPromotionalBanner2026: React.FC = () => {
             </h3>
             <Shield className='w-8 h-8 text-cyan-400' />
           </div>
+
           <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>
             Join 500+ enterprises achieving{' '}
             <span className='text-cyan-400 font-semibold'>300% ROI</span>,{' '}
@@ -412,6 +364,7 @@ const NewContentPromotionalBanner2026: React.FC = () => {
             </span>{' '}
             with Zion Tech Group's AI solutions
           </p>
+
           <div className='flex flex-col sm:flex-row items-center justify-center gap-4 mb-12'>
             <Link
               href='/contact'
@@ -428,6 +381,7 @@ const NewContentPromotionalBanner2026: React.FC = () => {
               <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform duration-300' />
             </Link>
           </div>
+
           {/* Stats */}
           <div className='grid grid-cols-2 md:grid-cols-4 gap-8'>
             <div className='text-center'>
@@ -456,9 +410,7 @@ const NewContentPromotionalBanner2026: React.FC = () => {
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold text-purple-400 mb-2">24/7</div>
-<<<<<<< HEAD
-=======
-=======
+>>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572
         <div className="text-center bg-white/5 backdrop-blur-lg rounded-2xl p-12 border border-white/20">
           <div className="flex items-center justify-center gap-3 mb-6">
             <Rocket className="w-8 h-8 text-cyan-400" />
@@ -469,23 +421,24 @@ const NewContentPromotionalBanner2026: React.FC = () => {
           </div>
           
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
->>>>>>> main
             Join 500+ enterprises achieving <span className="text-yellow-400 font-bold">300% ROI</span>, 
             <span className="text-green-400 font-bold"> 85% automation</span>, and 
             <span className="text-blue-400 font-bold"> complete digital transformation</span> with Zion Tech Group's AI solutions
           </p>
 
-<<<<<<< HEAD
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
             <Link
               href="/contact"
               className="group flex items-center gap-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl"
-=======
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
             <Link
               href="/contact"
               className="group flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl"
->>>>>>> main
+<div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
+            <Link
+              href="/contact"
+              className="group flex items-center gap-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl"
+>>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572
             >
               <Sparkles className="w-5 h-5" />
               <span>Start Your AI Journey</span>
@@ -493,11 +446,10 @@ const NewContentPromotionalBanner2026: React.FC = () => {
             
             <Link
               href="/blog"
-<<<<<<< HEAD
               className="group flex items-center gap-3 border-2 border-white/30 hover:border-white/60 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1"
-=======
               className="group flex items-center gap-3 border-2 border-white/30 hover:border-white/60 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 hover:bg-white/10"
->>>>>>> main
+className="group flex items-center gap-3 border-2 border-white/30 hover:border-white/60 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1"
+>>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572
             >
               <span>Explore All Content</span>
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -505,7 +457,6 @@ const NewContentPromotionalBanner2026: React.FC = () => {
           </div>
 
           {/* Stats */}
-<<<<<<< HEAD
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="text-3xl font-bold text-yellow-400 mb-2">500+</div>
@@ -521,8 +472,9 @@ const NewContentPromotionalBanner2026: React.FC = () => {
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold text-purple-400 mb-2">24/7</div>
-=======
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-12 pt-8 border-t border-white/20">
+<div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-12 pt-8 border-t border-white/20">
+>>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572
             <div className="text-center">
               <div className="text-3xl font-bold text-white mb-2">500+</div>
               <div className="text-gray-300">Enterprise Clients</div>
@@ -539,9 +491,9 @@ const NewContentPromotionalBanner2026: React.FC = () => {
               <div className="text-3xl font-bold text-white mb-2">24/7</div>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e4e
 =======
->>>>>>> main
->>>>>>> main
+=======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
+>>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572
               <div className="text-gray-300">Expert Support</div>
             </div>
           </div>

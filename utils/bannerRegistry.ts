@@ -1,5 +1,4 @@
 /**
-<<<<<<< HEAD
  * Banner Registry - Centralized banner management system
  *
  * This module provides:
@@ -101,67 +100,26 @@ export const BANNER_REGISTRY: BannerConfig[] = [
     datePublished: '2025-08-15',
     tags: ['service', 'feature', 'card'],
     enabled: true,
-<<<<<<< HEAD
   },
-=======
-  }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a4f
 ];
 
 /**
  * Get banners by category
  */
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-export const getBannersByCategory = (category: BannerConfig['category']): BannerConfig[] => {
-  return BANNER_REGISTRY.filter(banner => banner.category === category && banner.enabled);
-};
-=======
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f83
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ee0f
 export function getBannersByCategory(category: BannerConfig['category']): BannerConfig[] {
   return BANNER_REGISTRY.filter(banner => banner.category === category && banner.enabled);
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
-=======
-export function getBannersByCategory(category: BannerConfig['category']): BannerConfig[] {
-  return BANNER_REGISTRY.filter(banner => banner.category === category && banner.enabled);
-}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
 
 /**
  * Get banners by priority range
  */
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-export const getBannersByPriority = (minPriority: number, maxPriority: number): BannerConfig[] => {
-  return BANNER_REGISTRY.filter(
-    banner => banner.priority >= minPriority && 
-             banner.priority <= maxPriority && 
-             banner.enabled
-=======
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f83
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ee0f
 export function getBannersByPriority(minPriority: number, maxPriority: number): BannerConfig[] {
   return BANNER_REGISTRY.filter(banner =>
       banner.priority >= minPriority &&
       banner.priority <= maxPriority &&
       banner.enabled
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
   );
-};
+}
 
 /**
  * Get top priority banners
@@ -171,48 +129,36 @@ export function getTopPriorityBanners(count: number = 5): BannerConfig[] {
     .sort((a, b) => a.priority - b.priority)
     .slice(0, count);
 }
-/**
- * Get banners by tags
- */
-export function getBannersByTags(tags: string[]): BannerConfig[] {
-  return BANNER_REGISTRY.filter(
-    banner => tags.some(tag => banner.tags.includes(tag)) && banner.enabled
-  );
-}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a4f
 
 /**
  * Get enabled banners sorted by priority
  */
-<<<<<<< HEAD
-=======
-export const getEnabledBanners = (): BannerConfig[] => {
+export function getEnabledBanners(): BannerConfig[] {
   return BANNER_REGISTRY
     .filter(banner => banner.enabled)
     .sort((a, b) => a.priority - b.priority);
-};
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a4f
+}
 
 /**
  * Get banner by ID
  */
-<<<<<<< HEAD
-=======
-export const getBannerById = (id: string): BannerConfig | undefined => {
+export function getBannerById(id: string): BannerConfig | undefined {
   return BANNER_REGISTRY.find(banner => banner.id === id);
-};
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a4f
+}
 
 /**
- * Get banners by tags (duplicate function - removing)
+ * Get banners by tags
  */
-<<<<<<< HEAD
-=======
+export function getBannersByTags(tags: string[]): BannerConfig[] {
+  return BANNER_REGISTRY.filter(banner => 
+    banner.enabled && tags.some(tag => banner.tags.includes(tag))
+  );
+}
 
 /**
  * Get recent banners (published within last N days)
  */
-export const getRecentBanners = (days: number = 30): BannerConfig[] => {
+export function getRecentBanners(days: number = 30): BannerConfig[] {
   const cutoffDate = new Date();
   cutoffDate.setDate(cutoffDate.getDate() - days);
   
@@ -221,47 +167,4 @@ export const getRecentBanners = (days: number = 30): BannerConfig[] => {
     const publishDate = new Date(banner.datePublished);
     return publishDate >= cutoffDate;
   });
-};
-
-export default BANNER_REGISTRY;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a4f
-=======
- * Banner Registry Utility
- */
-export interface BannerInfo {
-  id: string;
-  name: string;
-  component: any;
-  priority: number;
-  category: string;
 }
-
-export class BannerRegistry {
-  private banners = new Map<string, BannerInfo>();
-
-  register(banner: BannerInfo): void {
-    this.banners.set(banner.id, banner);
-  }
-
-  unregister(id: string): void {
-    this.banners.delete(id);
-  }
-
-  get(id: string): BannerInfo | undefined {
-    return this.banners.get(id);
-  }
-
-  getAll(): BannerInfo[] {
-    return Array.from(this.banners.values());
-  }
-
-  getByCategory(category: string): BannerInfo[] {
-    return Array.from(this.banners.values()).filter(
-      banner => banner.category === category
-    );
-  }
-}
-
-export const bannerRegistry = new BannerRegistry();
-export default bannerRegistry;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3fed
