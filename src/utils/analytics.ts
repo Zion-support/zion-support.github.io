@@ -6,9 +6,9 @@
 export interface AnalyticsEvent {
   action: string;
   category: string;
-  label?: string;
-  value?: number;
-  custom_parameters?: Record<string, any>;
+  label?: string | undefined;
+  value?: number | undefined;
+  custom_parameters?: Record<string, any> | undefined;
 }
 
 export interface PerformanceMetric {
@@ -34,7 +34,7 @@ class Analytics {
   /**
    * Track a custom event
    */
-  track(event: string, category: string, action: string, label?: string, value?: number): void {
+  track(event: string, category: string, action: string, label?: string, value?: number, customParams?: Record<string, any>): void {
     const analyticsEvent: AnalyticsEvent = {
       action,
       category,
@@ -44,7 +44,8 @@ class Analytics {
         event_name: event,
         timestamp: Date.now(),
         url: typeof window !== 'undefined' ? window.location.href : undefined,
-        user_agent: typeof window !== 'undefined' ? window.navigator.userAgent : undefined
+        user_agent: typeof window !== 'undefined' ? window.navigator.userAgent : undefined,
+        ...customParams
       }
     };
 
