@@ -59,10 +59,14 @@ const ContactPage: React.FC = () => {
               </div>
               <div>
                 <h4 className="font-medium text-gray-900">Address</h4>
+<<<<<<< HEAD
                 <p className="text-gray-600">
                   123 Tech Street<br />
                   Innovation City, IC 12345
                 </p>
+=======
+                <p className="text-gray-600">123 Tech Street, Innovation City, IC 12345</p>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-bc1d
               </div>
             </div>
           </div>
