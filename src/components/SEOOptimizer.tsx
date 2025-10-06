@@ -1,16 +1,13 @@
-<<<<<<< HEAD
 import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 
 interface SEOOptimizerProps {
   children: React.ReactNode;
-<<<<<<< HEAD
 }
 
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ children }) => {
   return (
     <>
-=======
   title?: string;
   description?: string;
   keywords?: string[];
@@ -42,8 +39,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     }
   }, [structuredData]);
 
-=======
-<<<<<<< HEAD
 import React, { ReactNode } from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -62,13 +57,11 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   keywords = 'AI, artificial intelligence, IT solutions, technology, business solutions, automation',
   canonical
 }) => {
->>>>>>> main
   return (
     <>
       <Helmet>
         <title>{title}</title>
         <meta name="description" content={description} />
-<<<<<<< HEAD
         <meta name="keywords" content={keywords.join(', ')} />
         {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
         
@@ -94,7 +87,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
-=======
         <meta name="keywords" content={keywords} />
         {canonical && <link rel="canonical" href={canonical} />}
         <meta property="og:title" content={title} />
@@ -103,7 +95,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
-=======
 import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -159,7 +150,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ children }) => {
         <meta name="twitter:description" content="Transform your business with cutting-edge AI micro SaaS services, cloud automation, and enterprise IT solutions." />
         <meta name="twitter:image" content="https://ziontechgroup.com/og-image.jpg" />
         <link rel="canonical" href="https://ziontechgroup.com" />
->>>>>>> main
 >>>>>>> main
       </Helmet>
 >>>>>>> main

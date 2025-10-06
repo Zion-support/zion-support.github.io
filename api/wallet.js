@@ -9,12 +9,9 @@ async function handler(req, res) {
   }
 
   try {
-<<<<<<< HEAD
     // Wallet functionality would go here
     res.statusCode = 200;
     res.json({ message: 'Wallet endpoint' });
-=======
-<<<<<<< HEAD
     // Wallet functionality would go here
     res.statusCode = 200;
     res.json({ message: 'Wallet endpoint' });
@@ -22,24 +19,15 @@ async function handler(req, res) {
     console.error('Wallet error:', error);
     res.statusCode = 500;
     res.json({ error: 'Internal server error' });
-=======
-<<<<<<< HEAD
     // Wallet functionality would go here
-=======
     // Wallet functionality implementation
->>>>>>> main
     res.statusCode = 200;
     res.json({ message: 'Wallet endpoint' });
 >>>>>>> main
   } catch (err) {
-<<<<<<< HEAD
     console.error('Wallet API error:', err);
     res.statusCode = 500;
     res.json({ error: err.message || 'Wallet operation failed' });
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> main
 >>>>>>> main
 =======
 =======

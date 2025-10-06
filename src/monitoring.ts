@@ -1,27 +1,13 @@
 // Performance monitoring setup
 import { analytics } from './utils/analytics';
 import { errorHandler } from './utils/errorHandler';
-<<<<<<< HEAD
 import { performanceOptimizer } from './utils/performanceOptimizer';
-=======
-<<<<<<< HEAD
 import { performanceOptimizer } from './utils/performanceOptimizer';
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { performanceOptimizer } from './utils/performanceOptimizer';
-=======
-<<<<<<< HEAD
 import { performanceOptimizer } from './utils/performanceOptimizer';
-=======
-<<<<<<< HEAD
 import { performanceOptimizer } from './utils/performanceOptimizer';
-=======
-<<<<<<< HEAD
 import performanceOptimizer from './utils/performanceOptimizer';
-=======
 import { performanceOptimizer, lazyLoadImages, measurePageLoad, reportWebVitals } from './utils/performanceOptimizer';
->>>>>>> main
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main
@@ -34,32 +20,18 @@ import { performanceOptimizer, lazyLoadImages, measurePageLoad, reportWebVitals 
 if (typeof window !== 'undefined') {
   // Track page load
   analytics.trackPageView(window.location.pathname);
-<<<<<<< HEAD
   
   // Initialize performance optimizer
-<<<<<<< HEAD
   lazyLoadImages();
 
   // Track Web Vitals
-<<<<<<< HEAD
   const metrics = performanceOptimizer.measurePageLoad();
-=======
   measurePageLoad().then((metrics: any) => {
     reportWebVitals(metrics);
   });
-=======
   performanceOptimizer.lazyLoadImages();
   
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
   // Monitor long tasks
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> main
 >>>>>>> main
   performanceOptimizer.monitorLongTasks((entries: PerformanceEntry[]) => {
     entries.forEach((entry: PerformanceEntry) => {
@@ -88,17 +60,10 @@ if (typeof window !== 'undefined') {
   
 >>>>>>> main
   // Track Web Vitals
-<<<<<<< HEAD
   const metrics = performanceOptimizer.measurePageLoad();
-=======
-<<<<<<< HEAD
   const metrics = performanceOptimizer.measurePageLoad();
-=======
-<<<<<<< HEAD
   const metrics = performanceOptimizer.measurePageLoadTiming();
-=======
   const metrics = performanceOptimizer.measurePageLoad();
->>>>>>> main
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main

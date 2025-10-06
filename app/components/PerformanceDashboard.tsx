@@ -1,22 +1,16 @@
 import React, { useState, useEffect } from 'react';
-<<<<<<< HEAD
 // import performanceOptimizer from '../../src/utils/performanceOptimizer'; // Unused import
 import { getErrorMetrics, isErrorRateTooHigh } from '../../utils/errorHandling';
-=======
-<<<<<<< HEAD
 import { performanceOptimizer } from '../../utils/performanceOptimizer';
->>>>>>> main
 
 interface DashboardData {
   performance: {
     averageRenderTime: number;
-<<<<<<< HEAD
     totalLoadTime: number;
     memoryUsage: number;
     bundleSize: number;
   };
   errors: ReturnType<typeof getErrorMetrics>;
-=======
     totalComponents: number;
     memoryUsage: number;
     slowComponents: number;
@@ -25,15 +19,11 @@ interface DashboardData {
     totalErrors: number;
     errorRate: number;
   };
->>>>>>> main
   isHealthy: boolean;
   timestamp: Date;
 =======
-<<<<<<< HEAD
 import { performanceOptimizer } from '../../src/utils/performanceOptimizer';
 import { getErrorMetrics, isErrorRateTooHigh } from '../../utils/errorHandling';
-=======
->>>>>>> main
 
 interface PerformanceMetrics {
   loadTime: number;
@@ -43,10 +33,8 @@ interface PerformanceMetrics {
 >>>>>>> main
 }
 
-<<<<<<< HEAD
 const PerformanceDashboard: React.FC = (): JSX.Element | null => {
   const [data, setData] = useState<DashboardData | null>(null);
-=======
 const PerformanceDashboard: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     loadTime: 0,
@@ -54,13 +42,10 @@ const PerformanceDashboard: React.FC = () => {
     memoryUsage: 0,
     fps: 0,
   });
->>>>>>> main
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-<<<<<<< HEAD
     const updateData = () => {
-<<<<<<< HEAD
       // Mock performance data since getPerformanceSummary doesn't exist
       const performance = {
         averageRenderTime: 10,
@@ -71,8 +56,6 @@ const PerformanceDashboard: React.FC = () => {
       const errors = getErrorMetrics();
       const isHealthy =
         !isErrorRateTooHigh() && performance.averageRenderTime < 16;
-=======
-<<<<<<< HEAD
       const performanceData = {
         averageRenderTime: 0,
         totalComponents: 0,
@@ -84,7 +67,6 @@ const PerformanceDashboard: React.FC = () => {
         errorRate: 0,
       };
       const isHealthy = performanceData.averageRenderTime < 16;
->>>>>>> main
 
       setData({
         performance: performanceData,
@@ -93,11 +75,8 @@ const PerformanceDashboard: React.FC = () => {
         timestamp: new Date(),
       });
 =======
-<<<<<<< HEAD
       const metrics = performanceOptimizer.performanceOptimizer.getMetrics();
-=======
       const metrics = performanceOptimizer.getPerformanceSummary();
->>>>>>> main
       const performance = {
         averageRenderTime: metrics['averageRenderTime'] || 0,
         totalComponents: metrics['totalComponents'] || 0,
@@ -123,7 +102,6 @@ const PerformanceDashboard: React.FC = () => {
         ).memory;
         const memoryUsage = memory ? memory.usedJSHeapSize / 1024 / 1024 : 0;
 
-<<<<<<< HEAD
         setMetrics(prev => ({
           ...prev,
           loadTime,
@@ -131,20 +109,17 @@ const PerformanceDashboard: React.FC = () => {
           renderTime: performance.now(),
         }));
       }
-=======
       setMetrics(prev => ({
         ...prev,
         loadTime,
         memoryUsage,
       }));
 >>>>>>> main
->>>>>>> main
     };
 
     // Update metrics on load
     updateMetrics();
 
-<<<<<<< HEAD
     if (autoRefresh) {
       const interval = setInterval(updateData, 5000);
       return () => clearInterval(interval);
@@ -155,11 +130,8 @@ const PerformanceDashboard: React.FC = () => {
 
   const exportData = (): void => {
     const exportData = {
-<<<<<<< HEAD
       performance: data?.performance || { averageRenderTime: 0, totalLoadTime: 0, memoryUsage: 0, bundleSize: 0 },
-=======
       performance: data?.performance || {},
->>>>>>> main
       errors: data?.errors,
       timestamp: new Date().toISOString(),
     };
@@ -202,7 +174,6 @@ const PerformanceDashboard: React.FC = () => {
                 {metrics.memoryUsage.toFixed(2)}MB
               </span>
             </div>
-<<<<<<< HEAD
             <div className='bg-gray-50 p-2 rounded'>
               <div className='text-gray-600'>Components</div>
               <div className='font-semibold'>
@@ -216,15 +187,12 @@ const PerformanceDashboard: React.FC = () => {
                   ? `${(data.performance.memoryUsage / 1024 / 1024).toFixed(1)}MB`
                   : 'N/A'}
               </div>
-=======
             <div className='flex justify-between'>
               <span className='text-gray-600'>Render Time:</span>
               <span className='font-mono'>{metrics.renderTime.toFixed(2)}ms</span>
->>>>>>> main
             </div>
           </div>
         </div>
-<<<<<<< HEAD
 
         {/* Error Metrics */}
         <div>
@@ -277,10 +245,7 @@ const PerformanceDashboard: React.FC = () => {
           </button>
           <button
             onClick={() => {
-<<<<<<< HEAD
               // performanceOptimizer.clearMetrics(); // Method doesn't exist
-=======
->>>>>>> main
               setData(null);
             }}
             className='flex-1 bg-gray-600 hover:bg-gray-700 text-white text-xs py-2 px-3 rounded transition-colors'

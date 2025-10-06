@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 import performanceOptimizer, { WebVitalsMetrics } from '../utils/performanceOptimizer';
 
@@ -18,11 +17,9 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 
   useEffect(() => {
     // Initialize performance monitoring
-<<<<<<< HEAD
     // Add critical resource hints for performance optimization
     performanceOptimizer.prefetchResources([]);
     performanceOptimizer.preconnectDomains([]);
-=======
     // Add critical resource hints manually
     if (typeof document !== 'undefined') {
       const hints = [
@@ -42,7 +39,6 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         document.head.appendChild(link);
       });
     }
->>>>>>> main
     
     // Measure page load performance
     const pageLoadMetrics = performanceOptimizer.measurePageLoad();

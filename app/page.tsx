@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Suspense, lazy } from 'react';
 import Link from 'next/link';
 
@@ -51,10 +50,8 @@ export default function HomePage() {
       priceCurrency: 'USD',
     },
   };
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
->>>>>>> main
 
 const HomePage: React.FC = () => {
   return (
@@ -80,7 +77,6 @@ const HomePage: React.FC = () => {
             <p className="text-xl md:text-2xl text-gray-700 mb-12 max-w-3xl mx-auto">
               Pioneering the future with advanced AI and IT solutions that transform businesses and drive innovation
             </p>
-<<<<<<< HEAD
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <Link
                 href='/contact'
@@ -147,7 +143,6 @@ const HomePage: React.FC = () => {
         </section>
       </main>
     </div>
-=======
             
             <div className="max-w-6xl mx-auto">
               {/* Hero Stats */}
@@ -244,7 +239,6 @@ const HomePage: React.FC = () => {
         </main>
       </div>
     </>
->>>>>>> main
   );
 };
 

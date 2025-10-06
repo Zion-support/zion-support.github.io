@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // Performance optimization utilities
 export default {
   initialize() {
@@ -43,7 +42,6 @@ export default {
     }
   }
 };
-=======
 /**
  * Performance Optimizer Utility
  * Comprehensive performance monitoring and optimization tools
@@ -65,18 +63,6 @@ export interface WebVitalsMetrics {
 
 /**
  * Performance budget checker
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> main
 >>>>>>> main
 >>>>>>> main
  */
@@ -87,19 +73,11 @@ interface PerformanceBudget {
   maxInteractive: number; // in ms
 }
 
-<<<<<<< HEAD
 /**
-=======
-<<<<<<< HEAD
 /**
-=======
 /**
-<<<<<<< HEAD
-=======
  * Resource hints for performance
-=======
 >>>>>>> 71655f282840ed9a4a2a6696e410390223898ad3
->>>>>>> main
 >>>>>>> main
  */
 export interface PerformanceBudget {
@@ -109,7 +87,6 @@ export interface PerformanceBudget {
   maxInteractive: number; // in ms
 }
 
-<<<<<<< HEAD
 // Performance optimization utilities
 export class PerformanceOptimizer {
   private static instance: PerformanceOptimizer;
@@ -227,11 +204,6 @@ export class PerformanceOptimizer {
     });
   }
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
   // Add Web Vitals reporting method
   reportWebVitals(metrics: WebVitalsMetrics): void {
     if (process.env.NODE_ENV === 'development') {
@@ -253,8 +225,6 @@ export class PerformanceOptimizer {
     }
   }
 
-=======
->>>>>>> main
 >>>>>>> main
 >>>>>>> main
   // Measure page load performance
@@ -277,8 +247,6 @@ export class PerformanceOptimizer {
     };
   }
 
-<<<<<<< HEAD
-=======
   // Report web vitals
   reportWebVitals(metrics: WebVitalsMetrics): void {
     if (process.env.NODE_ENV === 'development') {
@@ -299,7 +267,6 @@ export class PerformanceOptimizer {
     }
   }
 
->>>>>>> main
   // Initialize all optimizations
   initialize(): void {
     this.measurePerformance('lazyLoadImages', () => this.lazyLoadImages());
@@ -312,10 +279,6 @@ export class PerformanceOptimizer {
 /**
 =======
 /**
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> main
 >>>>>>> main
  * Resource hints for performance
  */
@@ -397,29 +360,20 @@ export const lazyLoadImages = (): void => {
  */
 export const preconnectDomains = (domains: string[]): void => {
   if (typeof document === 'undefined') return;
-<<<<<<< HEAD
   
-=======
-<<<<<<< HEAD
   
-=======
 
->>>>>>> main
 >>>>>>> main
   domains.forEach(domain => {
     const link = document.createElement('link');
     link.rel = 'preconnect';
     link.href = domain;
-<<<<<<< HEAD
     link.crossOrigin = 'anonymous';
-=======
->>>>>>> main
     document.head.appendChild(link);
   });
 };
 
 /**
-<<<<<<< HEAD
  * Lazy load images with Intersection Observer
  */
 export const lazyLoadImages = (): void => {
@@ -427,36 +381,25 @@ export const lazyLoadImages = (): void => {
   
   const images = document.querySelectorAll('img[data-src]');
   
-=======
  * Prefetch resources
  */
 export const prefetchResources = (urls: string[]): void => {
   if (typeof document === 'undefined') return;
-<<<<<<< HEAD
   
-=======
 
   // Prefetch URLs
->>>>>>> main
   urls.forEach(url => {
     const link = document.createElement('link');
     link.rel = 'prefetch';
     link.href = url;
     document.head.appendChild(link);
   });
-<<<<<<< HEAD
-=======
 
   // Set up image lazy loading
->>>>>>> main
   const imageObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         const img = entry.target as HTMLImageElement;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> main
         img.src = img.dataset['src'] || '';
         img.removeAttribute('data-src');
         imageObserver.unobserve(img);
@@ -513,12 +456,9 @@ export const preloadCriticalResources = (): void => {
   });
 };
 
-<<<<<<< HEAD
-=======
 /**
  * Performance monitoring class
  */
-=======
         const src = img.dataset['src'];
         if (src) {
           img.src = src;
@@ -535,7 +475,6 @@ export const preloadCriticalResources = (): void => {
   document.querySelectorAll('img[data-src]').forEach(img => {
     imageObserver.observe(img);
   });
->>>>>>> main
 };
 
 /**
@@ -589,26 +528,10 @@ export const measurePageLoad = (): Promise<WebVitalsMetrics> => {
  * Report web vitals
  */
 export const reportWebVitals = (metrics: WebVitalsMetrics): void => {
-<<<<<<< HEAD
   if (process.env.NODE_ENV === 'development') {
     console.log('Web Vitals:', metrics);
   }
-=======
-<<<<<<< HEAD
   if (typeof window === 'undefined') return;
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> main
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main
@@ -622,7 +545,6 @@ export const reportWebVitals = (metrics: WebVitalsMetrics): void => {
 >>>>>>> main
   
   // Send to analytics service
-<<<<<<< HEAD
   if (typeof window !== 'undefined' && (window as unknown as { gtag?: unknown }).gtag) {
     const gtag = (window as unknown as { gtag: (command: string, event: string, data: Record<string, unknown>) => void }).gtag;
     Object.entries(metrics).forEach(([key, value]) => {
@@ -634,9 +556,7 @@ export const reportWebVitals = (metrics: WebVitalsMetrics): void => {
         });
       }
     });
-=======
   console.log('Web Vitals:', metrics);
->>>>>>> main
 };
 
 /**
@@ -699,9 +619,7 @@ export const cancelIdleCallback = (id: number): void => {
 /**
  * Preload route
  */
-<<<<<<< HEAD
 export function debounce<T extends (...args: unknown[]) => unknown>(
-=======
 export const preloadRoute = (route: string): void => {
   if (typeof document === 'undefined') return;
   
@@ -772,19 +690,13 @@ export const clearOldCaches = (): void => {
 export const checkPerformanceBudget = (_budget: PerformanceBudget): { passed: boolean; violations: string[] } => {
   const violations: string[] = [];
   
-<<<<<<< HEAD
   // Check bundle size (would need to be implemented with actual bundle analysis)
   // Check image sizes (would need to be implemented with actual image analysis)
   // Check load times (would need to be implemented with actual performance measurement)
-=======
   if (typeof window === 'undefined' || !window.performance) {
     return { passed: true, violations };
   }
   
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> main
   const timing = window.performance.timing;
   const loadTime = timing.loadEventEnd - timing.navigationStart;
   const interactiveTime = timing.domInteractive - timing.navigationStart;
@@ -807,8 +719,6 @@ export const checkPerformanceBudget = (_budget: PerformanceBudget): { passed: bo
 /**
  * Performance Optimizer Class
  */
-<<<<<<< HEAD
->>>>>>> main
 class PerformanceOptimizer {
 =======
 export const addCriticalResourceHints = (): void => {
@@ -827,9 +737,6 @@ export const addCriticalResourceHints = (): void => {
     link.href = hint.href;
     if (hint.crossOrigin) {
       link.crossOrigin = hint.crossOrigin;
-<<<<<<< HEAD
-=======
-=======
   // Check bundle size (simplified)
   const scripts = document.querySelectorAll('script[src]');
   let totalSize = 0;
@@ -838,25 +745,17 @@ export const addCriticalResourceHints = (): void => {
     if (src && !src.startsWith('data:')) {
       totalSize += 100; // Simplified size estimation
 >>>>>>> 71655f282840ed9a4a2a6696e410390223898ad3
->>>>>>> main
     }
   });
-<<<<<<< HEAD
 };
 
-<<<<<<< HEAD
-=======
 // Performance optimization utilities class
 export class PerformanceOptimizer {
-<<<<<<< HEAD
-=======
-=======
   
   if (totalSize > budget.maxBundleSize) {
     violations.push(`Bundle size ${totalSize}KB exceeds budget ${budget.maxBundleSize}KB`);
   }
   
-<<<<<<< HEAD
   // Check load time
   const timing = window.performance.timing;
   const loadTime = timing.loadEventEnd - timing.navigationStart;
@@ -864,7 +763,6 @@ export class PerformanceOptimizer {
     violations.push(`Load time ${loadTime}ms exceeds budget ${budget.maxFirstLoad}ms`);
   }
   
-=======
 >>>>>>> origin/cursor/install-dependencies-and-run-type-check-b1ae
   return {
     passed: violations.length === 0,
@@ -873,47 +771,34 @@ export class PerformanceOptimizer {
 };
 
 /**
-<<<<<<< HEAD
  * Performance monitoring class
-=======
  * Performance Optimizer Class
 >>>>>>> origin/cursor/install-dependencies-and-run-type-check-b1ae
  */
 class PerformanceOptimizer {
 >>>>>>> 71655f282840ed9a4a2a6696e410390223898ad3
 >>>>>>> main
->>>>>>> main
   private static instance: PerformanceOptimizer;
   private metrics: Map<string, number> = new Map();
 
   private constructor() {}
 
-<<<<<<< HEAD
   public static getInstance(): PerformanceOptimizer {
-=======
   static getInstance(): PerformanceOptimizer {
->>>>>>> main
     if (!PerformanceOptimizer.instance) {
       PerformanceOptimizer.instance = new PerformanceOptimizer();
     }
     return PerformanceOptimizer.instance;
   }
 
-<<<<<<< HEAD
   // Measure performance of a function
   measurePerformance(name: string, fn: () => void): number {
-=======
-<<<<<<< HEAD
   // Lazy load images with intersection observer
   lazyLoadImages(): void {
     lazyLoadImages();
-=======
-<<<<<<< HEAD
   // Lazy load images with intersection observer
   lazyLoadImages(): void {
-<<<<<<< HEAD
     lazyLoadImages();
-=======
     if ('IntersectionObserver' in window) {
       const imageObserver = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
@@ -933,7 +818,6 @@ class PerformanceOptimizer {
       });
     }
 >>>>>>> main
->>>>>>> main
   }
 
   // Preload critical resources
@@ -950,9 +834,6 @@ class PerformanceOptimizer {
       link.href = resource;
       link.as = resource.endsWith('.woff2') ? 'font' : 'image';
       if (resource.endsWith('.woff2')) {
-<<<<<<< HEAD
-=======
-=======
   public measurePerformance(name: string, fn: () => void): void {
     const start = performance.now();
     fn();
@@ -979,29 +860,20 @@ class PerformanceOptimizer {
         link.as = 'font';
         link.type = 'font/woff2';
 >>>>>>> 71655f282840ed9a4a2a6696e410390223898ad3
->>>>>>> main
         link.crossOrigin = 'anonymous';
       }
       document.head.appendChild(link);
     });
   }
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> main
   // Optimize scroll performance
   optimizeScroll(): void {
     let ticking = false;
     
-<<<<<<< HEAD
-=======
-=======
   public optimizeScroll(): void {
     let ticking = false;
 
 >>>>>>> 71655f282840ed9a4a2a6696e410390223898ad3
->>>>>>> main
     const updateScrollPosition = () => {
       // Throttled scroll handling
       ticking = false;
@@ -1017,10 +889,6 @@ class PerformanceOptimizer {
     window.addEventListener('scroll', requestTick, { passive: true });
   }
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> main
   // Measure performance metrics
   measurePerformance(name: string, fn: () => void): void {
     const start = performance.now();
@@ -1030,11 +898,8 @@ class PerformanceOptimizer {
     
     this.metrics.set(name, duration);
     
-<<<<<<< HEAD
     if (process.env.NODE_ENV === 'development') {
-=======
     if (process.env['NODE_ENV'] === 'development') {
->>>>>>> main
       console.log(`Performance: ${name} took ${duration.toFixed(2)}ms`);
     }
   }
@@ -1044,7 +909,6 @@ class PerformanceOptimizer {
     return Object.fromEntries(this.metrics);
   }
 
-<<<<<<< HEAD
   // Add critical resource hints method
   addCriticalResourceHints(): void {
     addCriticalResourceHints();
@@ -1056,15 +920,9 @@ class PerformanceOptimizer {
   }
 
   // Measure page load performance
-<<<<<<< HEAD
   measurePageLoad(): WebVitalsMetrics | null {
-<<<<<<< HEAD
     return measurePageLoad();
-=======
-<<<<<<< HEAD
     return measurePageLoad();
-=======
-<<<<<<< HEAD
     if (typeof window === 'undefined' || !window.performance) {
       return null;
     }
@@ -1078,16 +936,12 @@ class PerformanceOptimizer {
     };
   }
 
-<<<<<<< HEAD
   // Monitor long tasks
   monitorLongTasks(callback: (entries: PerformanceEntry[]) => void): void {
     if (typeof window === 'undefined' || !('PerformanceObserver' in window)) {
       return;
     }
 
-=======
-<<<<<<< HEAD
-=======
   // Initialize all optimizations
   initialize(): void {
     this.measurePerformance('lazyLoadImages', () => this.lazyLoadImages());
@@ -1096,10 +950,7 @@ class PerformanceOptimizer {
   }
 }
 
->>>>>>> main
 /**
-<<<<<<< HEAD
->>>>>>> main
 >>>>>>> main
 >>>>>>> main
  * Resource hints for performance
@@ -1128,7 +979,6 @@ export const preloadCriticalResources = (): void => {
 };
 
 /**
-<<<<<<< HEAD
  * Preconnect to external domains
  */
 export const preconnectDomains = (domains: string[]): void => {
@@ -1155,12 +1005,6 @@ export const lazyLoadImages = (): void => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         const img = entry.target as HTMLImageElement;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> main
 >>>>>>> main
         const src = img.dataset['src'];
         if (src) {
@@ -1183,9 +1027,7 @@ export const lazyLoadImages = (): void => {
 >>>>>>> main
  * Optimize scroll performance
  */
-<<<<<<< HEAD
 export function debounce<T extends (...args: any[]) => any>(
->>>>>>> main
   func: T,
   wait: number
 ): (...args: Parameters<T>) => void {
@@ -1318,13 +1160,11 @@ export const optimizeScroll = (): void => {
 >>>>>>> main
   if (typeof window === 'undefined') return;
   
-<<<<<<< HEAD
   if ('cancelIdleCallback' in window) {
     window.cancelIdleCallback(id);
   } else {
     (window as unknown as { clearTimeout: (id: number) => void }).clearTimeout(id);
   }
-=======
   let ticking = false;
   
   const updateScrollPosition = () => {
@@ -1340,11 +1180,9 @@ export const optimizeScroll = (): void => {
   };
   
   window.addEventListener('scroll', requestTick, { passive: true });
->>>>>>> main
 };
 
 /**
-<<<<<<< HEAD
  * Preload critical resources
  */
 export const preloadCriticalResources = (): void => {
@@ -1367,7 +1205,6 @@ export const preloadCriticalResources = (): void => {
   });
 };
 
-=======
  * Performance monitoring class
  */
 class PerformanceOptimizer {
@@ -1384,7 +1221,6 @@ class PerformanceOptimizer {
   }
 
   public measurePerformance(name: string, fn: () => void): number {
->>>>>>> main
     const start = performance.now();
     fn();
     const end = performance.now();
@@ -1393,7 +1229,6 @@ class PerformanceOptimizer {
     return duration;
   }
 
-<<<<<<< HEAD
   public lazyLoadImages(): void {
     lazyLoadImages();
   }
@@ -1416,7 +1251,6 @@ class PerformanceOptimizer {
     }
   }
 
-<<<<<<< HEAD
   public monitorLongTasks(callback: (entries: PerformanceEntry[]) => void): PerformanceObserver | null {
     if (typeof window === 'undefined' || !('PerformanceObserver' in window)) {
       return null;
@@ -1439,13 +1273,10 @@ class PerformanceOptimizer {
     return observer;
   }
 
-=======
   public measurePageLoadMetrics(): WebVitalsMetrics | null {
     return measurePageLoad();
   }
 
-=======
->>>>>>> main
 >>>>>>> main
   // Get performance metrics
   getMetrics(): Record<string, number> {
@@ -1482,7 +1313,6 @@ class PerformanceOptimizer {
 >>>>>>> main
   }
 
-<<<<<<< HEAD
   // Optimize scroll performance
   optimizeScroll(): void {
     if (typeof window === 'undefined') return;
@@ -1520,7 +1350,6 @@ class PerformanceOptimizer {
       link.as = resource.endsWith('.css') ? 'style' : 'script';
       document.head.appendChild(link);
     });
-<<<<<<< HEAD
   }
 
   public reportWebVitals(metrics: WebVitalsMetrics): void {
@@ -1548,26 +1377,18 @@ class PerformanceOptimizer {
   monitorLongTasks(callback: (entries: PerformanceEntry[]) => void): PerformanceObserver | null {
     if (typeof window === 'undefined' || !window.PerformanceObserver) return null;
     
->>>>>>> main
     const observer = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       callback(entries);
     });
-<<<<<<< HEAD
 
     observer.observe({ entryTypes: ['longtask'] });
-=======
     
     observer.observe({ entryTypes: ['longtask'] });
     return observer;
-<<<<<<< HEAD
   } catch (e) {
     // Long task monitoring not supported
     return null;
-=======
-=======
-=======
->>>>>>> main
   // Monitor long tasks
   monitorLongTasks(callback: (entries: PerformanceEntry[]) => void): PerformanceObserver | null {
     return monitorLongTasks(callback);
@@ -1595,11 +1416,8 @@ class PerformanceOptimizer {
     this.metrics.clear();
   }
 
-<<<<<<< HEAD
-=======
   // Measure page load timing
   measurePageLoadTiming(): Record<string, number> | null {
-=======
   // Add critical resource hints for better performance
   addCriticalResourceHints(): void {
     if (typeof document === 'undefined') return;
@@ -1620,12 +1438,10 @@ class PerformanceOptimizer {
       }
       document.head.appendChild(link);
     });
-=======
   public prefetchResources(urls: string[]): void {
     prefetchResources(urls);
   }
 
-<<<<<<< HEAD
   // Add Web Vitals reporting method
   reportWebVitals(metrics: WebVitalsMetrics): void {
     if (process.env['NODE_ENV'] === 'development') {
@@ -1644,10 +1460,8 @@ class PerformanceOptimizer {
         }
       });
     }
-=======
   public reportWebVitals(metrics: WebVitalsMetrics): void {
     reportWebVitals(metrics);
->>>>>>> main
   }
 
   public measurePageLoad(): WebVitalsMetrics | null {
@@ -1664,26 +1478,20 @@ class PerformanceOptimizer {
 >>>>>>> 71655f282840ed9a4a2a6696e410390223898ad3
   }
 
-<<<<<<< HEAD
   // Measure page load performance
-<<<<<<< HEAD
   measurePageLoad(): WebVitalsMetrics | null {
-=======
   measurePageLoad(): Record<string, number> | null {
->>>>>>> main
 >>>>>>> main
     if (typeof window === 'undefined' || !window.performance) {
       return null;
     }
     
     const timing = window.performance.timing;
-<<<<<<< HEAD
     const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
     
     return {
       loadTime: timing.loadEventEnd - timing.navigationStart,
       interactiveTime: timing.domInteractive - timing.navigationStart,
-<<<<<<< HEAD
       domContentLoaded: timing.domContentLoadedEventEnd - timing.navigationStart,
       firstPaint: performance.getEntriesByType('paint')[0]?.['startTime'] || 0
     };
@@ -1697,13 +1505,8 @@ class PerformanceOptimizer {
       callback(list.getEntries());
     });
     
-=======
       FCP: navigation?.responseStart - navigation?.fetchStart,
       TTFB: timing.responseStart - timing.navigationStart
-=======
-<<<<<<< HEAD
-=======
-=======
   public prefetchResources(urls: string[]): void {
     urls.forEach(url => {
       const link = document.createElement('link');
@@ -1725,7 +1528,6 @@ class PerformanceOptimizer {
   // Get performance summary
   getPerformanceSummary() {
 >>>>>>> origin/cursor/install-dependencies-and-run-type-check-b1ae
->>>>>>> main
     return {
       loadTime: timing.loadEventEnd - timing.navigationStart,
       interactiveTime: timing.domInteractive - timing.navigationStart,
@@ -1734,10 +1536,6 @@ class PerformanceOptimizer {
     };
   }
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> main
   // Monitor long tasks
   monitorLongTasks(callback: (entries: PerformanceEntry[]) => void): void {
     if (typeof window === 'undefined' || !('PerformanceObserver' in window)) {
@@ -1754,30 +1552,23 @@ class PerformanceOptimizer {
   }
 
   // Get performance summary
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> main
   getPerformanceSummary(): {
     averageRenderTime: number;
     totalComponents: number;
     memoryUsage: number;
     slowComponents: number;
   } {
-<<<<<<< HEAD
     const metrics = this.getMetrics();
     return {
       averageRenderTime: metrics['averageRenderTime'] || 0,
       totalComponents: metrics['totalComponents'] || 0,
       memoryUsage: metrics['memoryUsage'] || 0,
       slowComponents: metrics['slowComponents'] || 0,
-=======
     return {
       averageRenderTime: 10,
       totalComponents: 0,
       memoryUsage: 0,
       slowComponents: 0,
-=======
   getPerformanceSummary() {
     const metrics = this.getMetrics();
     return {
@@ -1785,15 +1576,10 @@ class PerformanceOptimizer {
       slowComponents: metrics['slowComponents'] || 0,
       totalOperations: metrics['totalOperations'] || 0,
 >>>>>>> main
->>>>>>> main
     };
   }
 
   // Export metrics
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> main
   exportMetrics(): Record<string, any> {
     return this.getMetrics();
   }
@@ -1801,11 +1587,8 @@ class PerformanceOptimizer {
   // Clear metrics
   clearMetrics(): void {
     this.metrics.clear();
-<<<<<<< HEAD
   }
 
-=======
->>>>>>> main
   }
 
 =======
@@ -1814,38 +1597,19 @@ class PerformanceOptimizer {
   }
 
 =======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
   // Report web vitals
   reportWebVitals(metrics: Record<string, number>): void {
     if (process.env.NODE_ENV === 'development') {
       console.log('Web Vitals:', metrics);
     }
->>>>>>> main
   }
 
-<<<<<<< HEAD
-=======
->>>>>>> main
   // Clear metrics
   clearMetrics() {
     this.metrics.clear();
   }
 
-<<<<<<< HEAD
-=======
 >>>>>>> 71655f282840ed9a4a2a6696e410390223898ad3
->>>>>>> main
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main
@@ -1865,7 +1629,6 @@ class PerformanceOptimizer {
 >>>>>>> main
 >>>>>>> main
 
-<<<<<<< HEAD
 /**
  * Critical resource hints for better performance
  */
@@ -1890,24 +1653,15 @@ export const addCriticalResourceHints = (): void => {
   });
 };
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 interface PerformanceBudgetCheck {
   maxFirstLoad: number;
   maxInteractive: number;
 }
->>>>>>> main
 
 export const checkPerformanceBudget = (budget: PerformanceBudgetCheck): {
 =======
-<<<<<<< HEAD
-=======
 // PerformanceBudget interface is already defined above
 
->>>>>>> main
 >>>>>>> main
 export const checkPerformanceBudget = (budget: PerformanceBudget): {
 >>>>>>> main
@@ -1938,32 +1692,16 @@ export const checkPerformanceBudget = (budget: PerformanceBudget): {
   };
 };
 
-<<<<<<< HEAD
 // Export individual functions for backward compatibility
 export {
   lazyLoadImagesStandalone as lazyLoadImages,
   measurePageLoadStandalone as measurePageLoad,
   reportWebVitalsStandalone as reportWebVitals
-=======
-=======
->>>>>>> main
 // Export singleton instance
-<<<<<<< HEAD
 export const performanceOptimizer = PerformanceOptimizer.getInstance();
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
 // Export default object with all functions
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
 // Utility functions
 export const debounce = <T extends (...args: any[]) => any>(
   func: T,
@@ -1975,7 +1713,6 @@ export const debounce = <T extends (...args: any[]) => any>(
     timeout = setTimeout(() => func(...args), wait);
   };
 };
->>>>>>> main
 
 export const throttle = <T extends (...args: any[]) => any>(
   func: T,
@@ -2080,12 +1817,9 @@ export const clearOldCaches = (): void => {
 };
 
 =======
-<<<<<<< HEAD
   public reportWebVitals(metrics: WebVitalsMetrics): void {
     reportWebVitals(metrics);
   }
-
-
   public prefetchResources(resources: string[]): void {
     prefetchResources(resources);
   }
@@ -2100,10 +1834,8 @@ export const clearOldCaches = (): void => {
   }
 
   // Monitor long tasks
-<<<<<<< HEAD
   public monitorLongTasks(callback: (entries: PerformanceEntryList) => void): PerformanceObserver | null {
     return monitorLongTasks(callback);
-=======
   monitorLongTasks(callback: (entries: PerformanceEntry[]) => void): void {
     if (typeof window === 'undefined' || !window.PerformanceObserver) return;
     
@@ -2148,7 +1880,6 @@ export const clearOldCaches = (): void => {
       domContentLoaded: timing.domContentLoadedEventEnd - timing.navigationStart,
       firstPaint: performance.getEntriesByType('paint')[0]?.startTime || 0
     };
->>>>>>> main
   }
 
   // Initialize all optimizations
@@ -2161,37 +1892,15 @@ export const clearOldCaches = (): void => {
 
 // Export singleton instance
 =======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 // Export default object for backward compatibility
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 // Export default object for backward compatibility
-=======
-<<<<<<< HEAD
->>>>>>> main
 // Export individual functions for backward compatibility
-<<<<<<< HEAD
-=======
 export {
   lazyLoadImages as lazyLoadImagesStandalone,
   measurePageLoad as measurePageLoadStandalone,
   reportWebVitals as reportWebVitalsStandalone
 };
-=======
 // Export default object for backward compatibility
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> main
 export const performanceOptimizer = PerformanceOptimizer.getInstance();
 >>>>>>> main
 
@@ -2209,37 +1918,20 @@ export default {
   prefetchResources,
   preconnectDomains,
   lazyLoadImages,
-<<<<<<< HEAD
   measurePageLoad: performanceOptimizer.measurePageLoad.bind(performanceOptimizer),
   reportWebVitals: performanceOptimizer.reportWebVitals.bind(performanceOptimizer),
   checkPerformanceBudget,
   performanceOptimizer
 };
-=======
-<<<<<<< HEAD
   optimizeScroll,
   preloadCriticalResources,
   addCriticalResourceHints,
-=======
-<<<<<<< HEAD
   optimizeScroll,
   preloadCriticalResources,
   addCriticalResourceHints,
   checkPerformanceBudget
 };
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
   preloadCriticalResources: () => performanceOptimizer.preloadCriticalResources(),
-=======
->>>>>>> main
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main
@@ -2257,68 +1949,39 @@ export default {
   monitorLongTasks,
   cacheStaticAssets,
   clearOldCaches,
-<<<<<<< HEAD
   checkPerformanceBudget
 };
-=======
-<<<<<<< HEAD
   checkPerformanceBudget,
   preloadCriticalResources,
   optimizeScroll,
   addCriticalResourceHints
-=======
-<<<<<<< HEAD
->>>>>>> main
   checkPerformanceBudget
-<<<<<<< HEAD
 };
-<<<<<<< HEAD
 
 // Export singleton instance
 export const performanceOptimizer = PerformanceOptimizer.getInstance();
-=======
-=======
-<<<<<<< HEAD
 };
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> main
 };
 =======
-<<<<<<< HEAD
   checkPerformanceBudget,
   addCriticalResourceHints
 };
-=======
-<<<<<<< HEAD
   checkPerformanceBudget,
   addCriticalResourceHints,
   preloadCriticalResources: () => performanceOptimizer.preloadCriticalResources(),
   measurePageLoadMetrics: () => performanceOptimizer.measurePageLoadTiming()
 };
-=======
-<<<<<<< HEAD
   checkPerformanceBudget,
   addCriticalResourceHints,
   performanceOptimizer
 };
-=======
-<<<<<<< HEAD
   checkPerformanceBudget,
   addCriticalResourceHints
-=======
   checkPerformanceBudget
 >>>>>>> 71655f282840ed9a4a2a6696e410390223898ad3
 };
-<<<<<<< HEAD
-=======
-=======
 export const performanceOptimizer = PerformanceOptimizer.getInstance();
 >>>>>>> origin/cursor/install-dependencies-and-run-type-check-b1ae
->>>>>>> main
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main

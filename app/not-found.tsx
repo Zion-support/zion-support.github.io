@@ -1,10 +1,7 @@
 'use client';
 
-<<<<<<< HEAD
 // React import removed as it's not used
-=======
 // import React from 'react'; // Unused import
->>>>>>> main
 import Link from 'next/link';
 
 export default function NotFound() {
