@@ -135,7 +135,7 @@ class ErrorBoundary extends React.Component<
     this.state = { hasError: false };
   }
 
-  static getDerivedStateFromError(_error: Error) {
+  static getDerivedStateFromError(_error: Error) { // eslint-disable-line @typescript-eslint/no-unused-vars
     return { hasError: true };
   }
 
