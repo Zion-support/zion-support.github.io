@@ -71,7 +71,6 @@ const NewContentPromotionalBanner2026: React.FC = () => {
           <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
             Explore cutting-edge AI strategies, implementation roadmaps, and security innovations that are delivering <span className="text-cyan-400 font-semibold">300%+ ROI</span> for enterprises worldwide
           </p>
-          
           <div className="flex items-center justify-center gap-8 text-gray-300">
             <div className="flex items-center gap-2">
               <TrendingUp className="w-5 h-5" />
@@ -135,15 +134,10 @@ const NewContentPromotionalBanner2026: React.FC = () => {
         </div>
 
         {/* Bottom CTA Section */}
-        <div className="text-center bg-white/5 backdrop-blur-lg rounded-3xl border border-white/10 p-12">
-          <div className="flex items-center justify-center gap-4 mb-6">
-            <Rocket className="w-8 h-8 text-cyan-400" />
-            <h3 className="text-3xl font-bold text-white">Ready to Transform Your Enterprise?</h3>
             <Shield className="w-8 h-8 text-cyan-400" />
           </div>
           
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Join 500+ enterprises achieving <span className="text-cyan-400 font-semibold">300% ROI</span>, <span className="text-purple-400 font-semibold">85% automation</span>, and <span className="text-blue-400 font-semibold">complete digital transformation</span> with Zion Tech Group's AI solutions
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
@@ -151,7 +145,6 @@ const NewContentPromotionalBanner2026: React.FC = () => {
               <Sparkles className="w-5 h-5" />
               <span>Start Your AI Journey</span>
             </Link>
-            <Link href="/blog" className="group flex items-center gap-3 border-2 border-white/20 hover:border-cyan-400 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 hover:bg-white/5">
               <span>Explore All Content</span>
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
             </Link>
@@ -164,15 +157,6 @@ const NewContentPromotionalBanner2026: React.FC = () => {
               <div className="text-gray-300">Enterprise Clients</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-purple-400 mb-2">300%</div>
-              <div className="text-gray-300">Average ROI</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-blue-400 mb-2">99.9%</div>
-              <div className="text-gray-300">System Uptime</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-green-400 mb-2">24/7</div>
               <div className="text-gray-300">Expert Support</div>
             </div>
           </div>

@@ -1,0 +1,198 @@
+import React from 'react';
+import Link from 'next/link';
+import { Sparkles, TrendingUp, ArrowRight, Zap, Rocket, Star } from 'lucide-react';
+
+const September30NewContent2025Banner: React.FC = () => {
+  const newArticles = [
+    {
+      id: 0,
+      title: 'AI-Accelerated Customer Experience 2025',
+      slug: 'ai-accelerated-customer-experience-2025',
+      excerpt: 'Real-time intent detection and autonomous workflows delivering 95% CSAT and 40% cost reduction across channels.',
+      category: 'Customer Experience',
+      date: '2025-09-30',
+      readTime: '18 min',
+      icon: '✨',
+      gradient: 'from-cyan-600 to-blue-700'
+    },
+    {
+      id: 1,
+      title: 'AI-Powered Autonomous Operations 2025',
+      slug: 'ai-autonomous-operations-2025',
+      excerpt: 'Self-healing infrastructure achieving 99.99% uptime and 95% cost reduction. Discover how Fortune 500 enterprises achieve zero-touch IT operations.',
+      category: 'Autonomous Operations',
+      date: '2025-09-30',
+      readTime: '15 min',
+      icon: '🤖',
+      gradient: 'from-cyan-500 to-blue-600'
+    },
+    {
+      id: 2,
+      title: 'Generative AI for Enterprise Architecture 2025',
+      slug: 'generative-ai-enterprise-architecture-2025',
+      excerpt: 'Production-scale GenAI systems serving 100M+ daily requests. Master LLM orchestration, RAG pipelines, and deployment patterns at enterprise scale.',
+      category: 'GenAI Architecture',
+      date: '2025-09-30',
+      readTime: '18 min',
+      icon: '🎨',
+      gradient: 'from-purple-500 to-fuchsia-600'
+    },
+    {
+      id: 3,
+      title: 'Multimodal AI Agents Enterprise 2025',
+      slug: 'multimodal-ai-agents-enterprise-2025',
+      excerpt: 'Unified vision, language, and audio intelligence achieving 97% cross-modal accuracy. Transform operations with AI that truly sees, hears, and understands.',
+      category: 'Multimodal AI',
+      date: '2025-09-30',
+      readTime: '16 min',
+      icon: '👁️',
+      gradient: 'from-emerald-500 to-teal-600'
+    },
+    {
+      id: 4,
+      title: 'Quantum-Enhanced Machine Learning 2025',
+      slug: 'quantum-enhanced-machine-learning-2025',
+      excerpt: '1000x performance breakthrough with quantum computing. Real quantum advantage demonstrated in optimization, drug discovery, and financial modeling.',
+      category: 'Quantum ML',
+      date: '2025-09-30',
+      readTime: '20 min',
+      icon: '⚛️',
+      gradient: 'from-indigo-500 to-purple-600'
+    },
+    {
+      id: 5,
+      title: 'AI-Powered Cloud FinOps 2025',
+      slug: 'ai-powered-cloud-finops-2025',
+      excerpt: '60% cloud cost reduction through autonomous optimization. $450M+ annual savings achieved with AI-driven resource management and predictive scaling.',
+      category: 'Cloud FinOps',
+      date: '2025-09-30',
+      readTime: '14 min',
+      icon: '💰',
+      gradient: 'from-orange-500 to-amber-600'
+    }
+  ];
+
+  return (
+    <div className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
+      {/* Animated background effects */}
+      <div className="absolute inset-0">
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute top-3/4 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute bottom-1/4 left-1/2 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '4s' }}></div>
+      </div>
+
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header Section */}
+        <div className="text-center mb-16">
+          <div className="flex items-center justify-center gap-2 mb-4">
+            <Rocket className="w-6 h-6 text-cyan-400" />
+            <span className="text-cyan-400 font-bold text-xl">
+              🔥 5 BREAKTHROUGH ARTICLES RELEASED • SEPTEMBER 30, 2025
+            </span>
+            <Sparkles className="w-6 h-6 text-cyan-400" />
+          </div>
+
+          <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-6">
+            Latest AI Breakthroughs & Innovations
+          </h2>
+          
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Discover the cutting-edge AI technologies transforming enterprise operations. 
+            From autonomous systems to quantum computing, explore the future of business intelligence.
+          </p>
+        </div>
+
+        {/* Articles Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          {newArticles.map((article, index) => (
+            <Link
+              key={article.id}
+              href={`/blog/${article.slug}`}
+              className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-500 hover:scale-105"
+              style={{ animationDelay: `${index * 150}ms` }}
+            >
+              {/* Card glow effect */}
+              <div className={`absolute inset-0 bg-gradient-to-br ${article.gradient} opacity-0 group-hover:opacity-10 transition-all duration-500 rounded-2xl`}></div>
+              
+              <div className="relative z-10">
+                {/* Header */}
+                <div className="flex items-center justify-between mb-4">
+                  <div className="text-4xl">{article.icon}</div>
+                  <div className="flex gap-2">
+                    <span className="px-3 py-1 bg-gradient-to-r from-red-500 to-orange-500 text-white text-xs font-bold rounded-full">
+                      🔥 HOT
+                    </span>
+                    <span className="px-3 py-1 bg-gradient-to-r from-green-500 to-emerald-500 text-white text-xs font-bold rounded-full">
+                      NEW TODAY
+                    </span>
+                  </div>
+                </div>
+
+                {/* Category */}
+                <div className="mb-4">
+                  <span className={`inline-block px-4 py-2 bg-gradient-to-r ${article.gradient} bg-opacity-20 text-white text-sm font-semibold rounded-full border border-white/20`}>
+                    {article.category}
+                  </span>
+                </div>
+
+                {/* Title */}
+                <h3 className={`text-2xl font-bold text-white mb-4 group-hover:bg-gradient-to-r group-hover:${article.gradient} group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300`}>
+                  {article.title}
+                </h3>
+
+                {/* Excerpt */}
+                <p className="text-gray-300 mb-6 leading-relaxed">
+                  {article.excerpt}
+                </p>
+
+                {/* Meta Info */}
+                <div className="flex items-center justify-between text-sm text-gray-400 mb-6">
+                  <span>⏱️ {article.readTime}</span>
+                  <span>📅 {article.date}</span>
+                </div>
+
+                {/* CTA */}
+                <div className="flex items-center justify-center gap-2 text-cyan-400 font-semibold group-hover:text-cyan-300 transition-colors">
+                  <span>Read Full Article</span>
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </div>
+              </div>
+
+              {/* Corner accent */}
+              <div className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${article.gradient} opacity-10 rounded-bl-full`}></div>
+            </Link>
+          ))}
+        </div>
+
+        {/* Call-to-Action Section */}
+        <div className="text-center bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-12">
+          <h3 className="text-3xl font-bold text-white mb-6">
+            Ready to Transform Your Enterprise?
+          </h3>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Join 50,000+ AI leaders implementing these breakthrough technologies. 
+            Get expert guidance from Zion Tech Group's AI transformation specialists.
+          </p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <Link
+              href="/contact"
+              className="group flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl"
+            >
+              <Sparkles className="w-5 h-5" />
+              <span>Start Your AI Journey</span>
+            </Link>
+            <Link
+              href="/blog"
+              className="group flex items-center gap-3 border-2 border-white/20 hover:border-white/40 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1"
+            >
+              <span>Explore All Content</span>
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default September30NewContent2025Banner;
