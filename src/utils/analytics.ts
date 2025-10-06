@@ -69,8 +69,13 @@ class Analytics {
       category,
       action: action || '',
       label: label || undefined,
+<<<<<<< HEAD
       value: value || 0,
       properties: properties || {},
+=======
+      value,
+      properties,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-02dd
       timestamp: Date.now(),
     };
     this.events.push(event);

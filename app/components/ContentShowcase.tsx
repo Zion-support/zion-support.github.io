@@ -4,6 +4,7 @@ const ContentShowcase: React.FC = () => {
   const contentItems = [
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
       title: "AI-Powered Automation",
       description: "Streamline your operations with intelligent automation solutions.",
       image: "/api/placeholder/300/200",
@@ -16,10 +17,15 @@ const ContentShowcase: React.FC = () => {
 =======
       title: "AI-Powered Solutions",
       description: "Transform your business with our cutting-edge AI technologies.",
+=======
+      title: "AI-Powered Solutions",
+      description: "Transform your business with cutting-edge AI technology",
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-02dd
       icon: "🤖",
       category: "Technology"
     },
     {
+<<<<<<< HEAD
       title: "Enterprise Consulting",
       description: "Expert guidance for large-scale digital transformation projects.",
       icon: "🏢",
@@ -49,10 +55,29 @@ const ContentShowcase: React.FC = () => {
       icon: "📊",
       category: "Analytics"
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0883
+=======
+      title: "Digital Transformation",
+      description: "Modernize your operations with our comprehensive digital solutions",
+      icon: "💻",
+      category: "Consulting"
+    },
+    {
+      title: "Enterprise Automation",
+      description: "Streamline processes and increase efficiency with intelligent automation",
+      icon: "⚡",
+      category: "Automation"
+    },
+    {
+      title: "Data Analytics",
+      description: "Unlock insights from your data with advanced analytics tools",
+      icon: "📊",
+      category: "Analytics"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-02dd
     }
   ];
 
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
     <section className="py-16 bg-gray-50">
       <div className="container mx-auto px-4">
@@ -101,6 +126,22 @@ const ContentShowcase: React.FC = () => {
             <div className="text-4xl mb-4">{item.icon}</div>
             <h3 className="text-xl font-semibold text-gray-900 mb-2">{item.title}</h3>
             <p className="text-gray-600 mb-4">{item.description}</p>
+=======
+    <div className="bg-white rounded-lg shadow-lg p-8">
+      <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">
+        Our Content Showcase
+      </h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {contentItems.map((item, index) => (
+          <div key={index} className="bg-gray-50 rounded-lg p-6 hover:shadow-md transition-shadow">
+            <div className="text-4xl mb-4 text-center">{item.icon}</div>
+            <h3 className="text-xl font-semibold text-gray-900 mb-2">
+              {item.title}
+            </h3>
+            <p className="text-gray-600 mb-3">
+              {item.description}
+            </p>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-02dd
             <span className="inline-block bg-blue-100 text-blue-800 text-sm px-3 py-1 rounded-full">
               {item.category}
             </span>
@@ -108,7 +149,10 @@ const ContentShowcase: React.FC = () => {
         ))}
       </div>
     </div>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0883
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-02dd
   );
 };
 
