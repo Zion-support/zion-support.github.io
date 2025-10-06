@@ -126,6 +126,7 @@ export function initPerformanceMonitoring(): void {
     console.error('Error initializing performance monitoring:', error);
   }
 }
+
 /**
  * Measure custom performance timing
  */
@@ -144,17 +145,23 @@ export function measurePerformance(name: string, startTime: number): number {
   }
   return duration;
 }
+
 /**
  * Mark performance milestone
  */
 export function markPerformance(name: string): void {
   if (typeof performance === 'undefined') return;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-be22
   try {
     performance.mark(name);
   } catch (error) {
     console.error('Error marking performance:', error);
   }
 }
+
 /**
  * Measure between two performance marks
  */
@@ -164,6 +171,10 @@ export function measureBetween(
   endMark: string
 ): number {
   if (typeof performance === 'undefined') return 0;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-be22
   try {
     performance.measure(name, startMark, endMark);
     const measure = performance.getEntriesByName(name)[0] as PerformanceEntry;
@@ -173,13 +184,21 @@ export function measureBetween(
     return 0;
   }
 }
+
 /**
  * Get navigation timing metrics
  */
 export function getNavigationTiming(): Record<string, number> | null {
   if (typeof performance === 'undefined' || !performance.timing) return null;
+<<<<<<< HEAD
 const timing = performance.timing;
   const navigationStart = timing.navigationStart;
+=======
+
+  const timing = performance.timing;
+  const navigationStart = timing.navigationStart;
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-be22
   return {
     // DNS lookup
     dnsLookup: timing.domainLookupEnd - timing.domainLookupStart,
@@ -197,11 +216,16 @@ const timing = performance.timing;
     domContentLoaded: timing.domContentLoadedEventEnd - navigationStart
   };
 }
+
 /**
  * Get resource timing metrics
  */
 export function getResourceTiming(): PerformanceResourceTiming[] {
   if (typeof performance === 'undefined') return [];
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-be22
   try {
     return performance.getEntriesByType('resource') as PerformanceResourceTiming[];
   } catch (error) {
@@ -209,6 +233,7 @@ export function getResourceTiming(): PerformanceResourceTiming[] {
     return [];
   }
 }
+
 /**
  * Analyze slow resources
  */
@@ -216,6 +241,7 @@ export function getSlowResources(threshold: number = 1000): PerformanceResourceT
   const resources = getResourceTiming();
   return resources.filter(resource => resource.duration > threshold);
 }
+
 /**
  * Get memory usage (if available)
  */
@@ -227,7 +253,11 @@ export function getMemoryUsage(): Record<string, number> | null {
     return null;
   }
 
+<<<<<<< HEAD
   const memory = (performance as PerformanceWithMemory).memory!;
+=======
+  const memory = (performance as any).memory;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-be22
   return {
     usedJSHeapSize: memory.usedJSHeapSize,
     totalJSHeapSize: memory.totalJSHeapSize,
@@ -243,6 +273,10 @@ export function generatePerformanceReport(): PerformanceReport | null {
 
   const navigationTiming = getNavigationTiming();
   const metrics: PerformanceMetric[] = [];
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-be22
   // Add navigation timing metrics
   if (navigationTiming) {
     Object.entries(navigationTiming).forEach(([name, value]) => {
@@ -255,15 +289,23 @@ export function generatePerformanceReport(): PerformanceReport | null {
       });
     });
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-be22
   return {
     metrics,
     timestamp: new Date().toISOString(),
     url: window.location.href,
 <<<<<<< HEAD
+<<<<<<< HEAD
     userAgent: navigator.userAgent
 =======
     userAgent: navigator.userAgent,
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-bcb8
+=======
+    userAgent: navigator.userAgent
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-be22
   };
 }
 /**
@@ -289,6 +331,10 @@ export function monitorLongTasks(
   callback: (entries: PerformanceEntry[]) => void
 ): PerformanceObserver | null {
   if (typeof PerformanceObserver === 'undefined') return null;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-be22
   try {
     const observer = new PerformanceObserver(list => {
       const entries = list.getEntries();
@@ -301,6 +347,7 @@ export function monitorLongTasks(
     return null;
   }
 }
+
 /**
  * Monitor layout shifts
  */
@@ -308,6 +355,10 @@ export function monitorLayoutShifts(
   callback: (entries: PerformanceEntry[]) => void
 ): PerformanceObserver | null {
   if (typeof PerformanceObserver === 'undefined') return null;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-be22
   try {
     const observer = new PerformanceObserver(list => {
       const entries = list.getEntries();
@@ -320,6 +371,7 @@ export function monitorLayoutShifts(
     return null;
   }
 }
+
 /**
  * Check if connection is slow
  */
@@ -331,13 +383,18 @@ export function isSlowConnection(): boolean {
     return false;
   }
 
+<<<<<<< HEAD
   const connection = (navigator as NavigatorWithConnection).connection!;
+=======
+  const connection = (navigator as any).connection;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-be22
   const slowTypes = ['slow-2g', '2g'];
   return (
     (connection.effectiveType && slowTypes.includes(connection.effectiveType)) || 
     connection.saveData === true
   );
 }
+
 /**
  * Get connection type
  */
@@ -349,9 +406,14 @@ export function getConnectionType(): string {
     return 'unknown';
   }
 
+<<<<<<< HEAD
   const connection = (navigator as NavigatorWithConnection).connection!;
+=======
+  const connection = (navigator as any).connection;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-be22
   return connection.effectiveType || connection.type || 'unknown';
 }
+
 export default {
   init: initPerformanceMonitoring,
   measure: measurePerformance,
@@ -367,4 +429,8 @@ export default {
   isSlowConnection,
   getConnectionType,
   getPerformanceScore
+<<<<<<< HEAD
 };
+=======
+};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-be22
