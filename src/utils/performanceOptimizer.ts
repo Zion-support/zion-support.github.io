@@ -439,33 +439,3 @@ export const checkPerformanceBudget = (budget: PerformanceBudget): {
 
 // Export singleton instance
 export const performanceOptimizer = PerformanceOptimizer.getInstance();
-<<<<<<< HEAD
-=======
-
-// Export individual functions for backward compatibility
-export {
-  lazyLoadImagesStandalone as lazyLoadImages,
-  measurePageLoadStandalone as measurePageLoad,
-  reportWebVitalsStandalone as reportWebVitals
-};
-
-export default {
-  prefetchResources,
-  preconnectDomains,
-  lazyLoadImages: lazyLoadImagesStandalone,
-  debounce,
-  throttle,
-  measurePageLoad: measurePageLoadStandalone,
-  reportWebVitals: reportWebVitalsStandalone,
-  shouldUseWebP,
-  getConnectionQuality,
-  shouldLoadHeavyAssets,
-  requestIdleCallback,
-  cancelIdleCallback,
-  preloadRoute,
-  monitorLongTasks,
-  cacheStaticAssets,
-  clearOldCaches,
-  checkPerformanceBudget
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ace
