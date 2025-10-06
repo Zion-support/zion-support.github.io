@@ -1,14 +1,6 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 
 const ServicesPage: React.FC = () => {
-<<<<<<< HEAD
-  return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold text-gray-900 mb-4">Our Services</h1>
-        <p className="text-xl text-gray-600">Comprehensive AI and IT Solutions</p>
-=======
   const services = [
     {
       title: 'AI Solutions',
@@ -49,57 +41,48 @@ const ServicesPage: React.FC = () => {
   ];
 
   return (
-    <>
-      <Helmet>
-        <title>Services - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive AI and IT services including AI solutions, quantum computing, autonomous systems, and business intelligence." />
-        <meta name="keywords" content="AI services, quantum computing, autonomous systems, business intelligence, cloud migration, consulting" />
-      </Helmet>
-
-      <div className="min-h-screen bg-slate-50 py-16">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">
-              Our Services
-            </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Comprehensive AI and IT solutions designed to transform your business and drive innovation
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
-                <div className="text-4xl mb-4">{service.icon}</div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">{service.title}</h3>
-                <p className="text-gray-600 mb-4">{service.description}</p>
-                <ul className="space-y-2">
-                  {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-sm text-gray-500">
-                      <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-
-          <div className="text-center mt-16">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Ready to Get Started?
-            </h2>
-            <p className="text-xl text-gray-600 mb-8">
-              Contact us today to discuss how our services can transform your business
-            </p>
-            <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg text-lg transition-colors">
-              Contact Us
-            </button>
-          </div>
+    <div className="min-h-screen bg-slate-50 py-16">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+            Our Services
+          </h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Comprehensive AI and IT solutions designed to transform your business and drive innovation
+          </p>
         </div>
->>>>>>> 95e1fc27c0bf1ea445ba772900f0204a3209e206
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {services.map((service, index) => (
+            <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+              <div className="text-4xl mb-4">{service.icon}</div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}</h3>
+              <p className="text-gray-600 mb-4">{service.description}</p>
+              <ul className="space-y-2">
+                {service.features.map((feature, featureIndex) => (
+                  <li key={featureIndex} className="flex items-center text-sm text-gray-500">
+                    <span className="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-16 text-center">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            Ready to Transform Your Business?
+          </h2>
+          <p className="text-xl text-gray-600 mb-8">
+            Contact us today to discuss how our AI solutions can help your organization
+          </p>
+          <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+            Get Started
+          </button>
+        </div>
       </div>
-    </>
+    </div>
   );
 };
 

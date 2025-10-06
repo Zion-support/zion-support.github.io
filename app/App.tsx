@@ -15,9 +15,6 @@ const ServicesPage = lazy(() => import('./services/page'));
 const ContactPage = lazy(() => import('./contact/page'));
 const EnterprisePage = lazy(() => import('./enterprise/page'));
 
-// Utils
-import performanceOptimizer from '../src/utils/performanceOptimizer';
-
 // Styles
 import '../src/index.css';
 
@@ -25,18 +22,17 @@ function App() {
   useEffect(() => {
     // Initialize performance monitoring
     if (typeof window !== 'undefined') {
-      performanceOptimizer.preloadCriticalResources();
-      performanceOptimizer.lazyLoadImages();
+      console.log('App initialized successfully');
     }
   }, []);
 
   return (
-    <HelmetProvider>
-      <ErrorBoundary>
-        <Router>
-          <div className="App">
-            <SEOOptimizer>
-              <AccessibilityEnhancer>
+    <ErrorBoundary>
+      <HelmetProvider>
+        <SEOOptimizer>
+          <AccessibilityEnhancer>
+            <Router>
+              <div className="App">
                 <Suspense fallback={<LoadingSpinner />}>
                   <Routes>
                     <Route path="/" element={<HomePage />} />
@@ -46,12 +42,12 @@ function App() {
                     <Route path="/enterprise" element={<EnterprisePage />} />
                   </Routes>
                 </Suspense>
-              </AccessibilityEnhancer>
-            </SEOOptimizer>
-          </div>
-        </Router>
-      </ErrorBoundary>
-    </HelmetProvider>
+              </div>
+            </Router>
+          </AccessibilityEnhancer>
+        </SEOOptimizer>
+      </HelmetProvider>
+    </ErrorBoundary>
   );
 }
 
