@@ -47,21 +47,24 @@ const InteractiveContentShowcase2026 = memo(() => (
 ));
 
 // Error Boundary Component
-class ErrorBoundary extends React.Component {
-  constructor(props) {
+class ErrorBoundary extends React.Component<
+  { children: React.ReactNode },
+  { hasError: boolean; error: Error | null }
+> {
+  constructor(props: { children: React.ReactNode }) {
     super(props);
     this.state = { hasError: false, error: null };
   }
 
-  static getDerivedStateFromError(error) {
+  static getDerivedStateFromError(error: Error) {
     return { hasError: true, error };
   }
 
-  componentDidCatch(error, errorInfo) {
+  override componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
     console.error('App Error Boundary caught an error:', error, errorInfo);
   }
 
-  render() {
+  override render() {
     if (this.state.hasError) {
       return (
         <div className="min-h-screen flex items-center justify-center bg-gray-50">
@@ -162,10 +165,11 @@ export default function App() {
         window.addEventListener('load', () => {
           const perfData = performance.getEntriesByType('navigation')[0];
           if (perfData) {
+            const navTiming = perfData as PerformanceNavigationTiming;
             console.log('Page Load Performance:', {
-              domContentLoaded: perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart,
-              loadComplete: perfData.loadEventEnd - perfData.loadEventStart,
-              totalTime: perfData.loadEventEnd - perfData.fetchStart
+              domContentLoaded: navTiming.domContentLoadedEventEnd - navTiming.domContentLoadedEventStart,
+              loadComplete: navTiming.loadEventEnd - navTiming.loadEventStart,
+              totalTime: navTiming.loadEventEnd - navTiming.fetchStart
             });
           }
         });
@@ -174,9 +178,9 @@ export default function App() {
   }, []);
 
   // Memoized event handlers for better performance
-  const handleNewsletterSubmit = useCallback((e) => {
+  const handleNewsletterSubmit = useCallback((e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const email = e.target.email.value;
+    const email = (e.target as HTMLFormElement)['email'].value;
     if (email) {
       console.log('Newsletter signup:', email);
       // Add actual newsletter signup logic here
@@ -186,8 +190,8 @@ export default function App() {
 
   const handlePhoneClick = useCallback(() => {
     // Track phone clicks for analytics
-    if (typeof gtag !== 'undefined') {
-      gtag('event', 'phone_click', {
+    if (typeof window !== 'undefined' && 'gtag' in window) {
+      (window as any).gtag('event', 'phone_click', {
         event_category: 'engagement',
         event_label: 'main_phone_number'
       });
