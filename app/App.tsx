@@ -14,7 +14,7 @@ import LoadingSpinner from '../components/ui/LoadingSpinner';
 const HomePage = lazy(() => import('./page'));
 
 // Utils
-import { performanceOptimizer } from '../src/utils/performanceOptimizer';
+import { performanceOptimizer, prefetchResources } from '../src/utils/performanceOptimizer';
 
 // Styles
 import '../index.css';
@@ -26,7 +26,7 @@ const App: React.FC = () => {
 
     // Initialize performance monitoring
     performanceOptimizer.lazyLoadImages();
-    performanceOptimizer.prefetchResources(['/api/health']);
+    prefetchResources(['/api/health']);
     
     // Initialize Web Vitals monitoring
     if (typeof window !== 'undefined' && 'performance' in window) {
