@@ -5,12 +5,14 @@ import { HelmetProvider } from 'react-helmet-async';
 // Components
 import ErrorBoundary from '../src/components/ErrorBoundary';
 import SEOOptimizer from '../src/components/SEOOptimizer';
-import LoadingSpinner from '../src/components/LoadingSpinner';
+import { LoadingSpinner } from '../components/LoadingComponents';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import PerformanceDashboard from './components/PerformanceDashboard';
 
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./page'));
+
+// Loading component is imported from components/LoadingComponents
 // Utils
 import performanceOptimizer from '../src/utils/performanceOptimizer';
 
