@@ -27,7 +27,7 @@ interface BannerImpression {
 
 const STORAGE_KEY = 'zion_banner_impressions';
 const SESSION_KEY = 'zion_session_id';
-// const MAX_VISIBLE_BANNERS = 10; // Limit visible banners for performance
+const MAX_VISIBLE_BANNERS = 10; // Limit visible banners for performance
 
 /**
  * Get or create session ID
@@ -56,16 +56,22 @@ const getStoredImpressions = (): BannerImpression[] => {
 /**
  * Store impressions
  */
-<<<<<<< HEAD
 const storeImpressions = (impressions: BannerImpression[]): void => {
   try {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(impressions));
-=======
+  } catch {
+    // Silently fail if localStorage is not available
+  }
+};
+
+/**
+ * Record banner impression
+ */
 export const recordBannerImpression = (impression: Omit<BannerImpression, 'timestamp' | 'sessionId'>) => {
   if (typeof window === 'undefined') return;
   
   try {
-    const impressions = getBannerImpressions();
+    const impressions = getStoredImpressions();
     const newImpression: BannerImpression = {
       ...impression,
       timestamp: Date.now(),
@@ -76,39 +82,17 @@ export const recordBannerImpression = (impression: Omit<BannerImpression, 'times
     
     // Keep only last 1000 impressions to prevent storage bloat
     const trimmedImpressions = impressions.slice(-1000);
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(trimmedImpressions));
->>>>>>> cursor/fix-errors-and-merge-to-main-13eb
+    storeImpressions(trimmedImpressions);
   } catch (error) {
     console.error('Failed to store banner impressions:', error);
   }
 };
 
 /**
-<<<<<<< HEAD
- * Record banner impression
- */
-export const recordBannerImpression = (bannerId: string, pageUrl: string): void => {
-  const impression: BannerImpression = {
-    bannerId,
-    timestamp: Date.now(),
-    sessionId: getSessionId(),
-    pageUrl,
-  };
-
-  const impressions = getStoredImpressions();
-  impressions.push(impression);
-  
-  // Keep only last 1000 impressions to prevent storage bloat
-  if (impressions.length > 1000) {
-    impressions.splice(0, impressions.length - 1000);
-  }
-  
-  storeImpressions(impressions);
-=======
  * Get impression count for a banner
  */
 export const getBannerImpressionCount = (bannerId: string, hours: number = 24): number => {
-  const impressions = getBannerImpressions();
+  const impressions = getStoredImpressions();
   const cutoff = Date.now() - (hours * 60 * 60 * 1000);
   return impressions.filter(imp => imp.bannerId === bannerId && imp.timestamp > cutoff).length;
 };
@@ -124,25 +108,10 @@ export const shouldShowBanner = (banner: BannerConfig): boolean => {
 };
 
 /**
- * Get rotation score for banner prioritization
+ * Calculate banner score for rotation
  */
-export const getRotationScore = (banner: BannerConfig): number => {
-export const selectBannersForRotation = (allBanners: BannerConfig[], maxBanners: number = MAX_VISIBLE_BANNERS): BannerConfig[] => {
-  // Calculate scores for all banners
-  const scoredBanners = allBanners.map(banner => ({
-    banner,
-    score: calculateBannerScore(banner)
-  }));
-  // Sort by score (highest first)
-  scoredBanners.sort((a, b) => b.score - a.score);
-  // Take top N banners
-  return scoredBanners.slice(0, maxBanners).map(item => item.banner);
-};
-/**
- * Get banner analytics
- */
-export const getBannerAnalytics = (bannerId?: string) => {
-  const impressions = getBannerImpressions();
+export const calculateBannerScore = (banner: BannerConfig): number => {
+  const impressions = getStoredImpressions();
   const bannerImpressions = impressions.filter(imp => imp.bannerId === banner.id);
   
   // Calculate engagement rate
@@ -161,204 +130,72 @@ export const getBannerAnalytics = (bannerId?: string) => {
 };
 
 /**
- * Get banners for rotation
+ * Select banners for rotation
  */
-export const getBannersForRotation = (banners: BannerConfig[]): BannerConfig[] => {
-  return banners
-    .filter(shouldShowBanner)
-    .map(banner => ({ ...banner, rotationScore: getRotationScore(banner) }))
-    .sort((a, b) => b.rotationScore - a.rotationScore)
-    .slice(0, MAX_VISIBLE_BANNERS);
->>>>>>> cursor/fix-errors-and-merge-to-main-13eb
+export const selectBannersForRotation = (allBanners: BannerConfig[], maxBanners: number = MAX_VISIBLE_BANNERS): BannerConfig[] => {
+  // Filter banners that should be shown
+  const eligibleBanners = allBanners.filter(shouldShowBanner);
+  
+  // Calculate scores for all eligible banners
+  const scoredBanners = eligibleBanners.map(banner => ({
+    banner,
+    score: calculateBannerScore(banner)
+  }));
+  
+  // Sort by score (highest first)
+  scoredBanners.sort((a, b) => b.score - a.score);
+  
+  // Take top N banners
+  return scoredBanners.slice(0, maxBanners).map(item => item.banner);
 };
 
 /**
- * Record banner click
+ * Get banner analytics
  */
-<<<<<<< HEAD
-export const recordBannerClick = (bannerId: string): void => {
+export const getBannerAnalytics = (bannerId?: string) => {
   const impressions = getStoredImpressions();
-  const lastImpression = impressions
-    .filter(imp => imp.bannerId === bannerId)
-    .pop();
+  const bannerImpressions = bannerId ? impressions.filter(imp => imp.bannerId === bannerId) : impressions;
   
-  if (lastImpression) {
-    lastImpression.clicked = true;
-    storeImpressions(impressions);
-  }
-};
-
-/**
- * Get banner performance metrics
- */
-export const getBannerMetrics = (bannerId: string): {
-  impressions: number;
-  clicks: number;
-  clickRate: number;
-  avgTimeVisible: number;
-} => {
-  const impressions = getStoredImpressions();
-  const bannerImpressions = impressions.filter(imp => imp.bannerId === bannerId);
-  
+  const totalImpressions = bannerImpressions.length;
   const clicks = bannerImpressions.filter(imp => imp.clicked).length;
-  const avgTimeVisible = bannerImpressions
-    .filter(imp => imp.timeVisible)
-    .reduce((sum, imp) => sum + (imp.timeVisible || 0), 0) / bannerImpressions.length || 0;
-
+  const engagementRate = totalImpressions > 0 ? clicks / totalImpressions : 0;
+  
+  // Calculate average time visible
+  const visibleImpressions = bannerImpressions.filter(imp => imp.timeVisible);
+  const avgTimeVisible = visibleImpressions.length > 0 
+    ? visibleImpressions.reduce((sum, imp) => sum + (imp.timeVisible || 0), 0) / visibleImpressions.length
+    : 0;
+  
+  // Calculate average scroll depth
+  const scrollImpressions = bannerImpressions.filter(imp => imp.scrollDepth);
+  const avgScrollDepth = scrollImpressions.length > 0
+    ? scrollImpressions.reduce((sum, imp) => sum + (imp.scrollDepth || 0), 0) / scrollImpressions.length
+    : 0;
+  
   return {
-    impressions: bannerImpressions.length,
+    totalImpressions,
     clicks,
-    clickRate: bannerImpressions.length > 0 ? clicks / bannerImpressions.length : 0,
+    engagementRate,
     avgTimeVisible,
+    avgScrollDepth,
+    recentImpressions: bannerImpressions.filter(imp => imp.timestamp > Date.now() - 24 * 60 * 60 * 1000).length
   };
 };
 
 /**
- * Banner Rotation Engine
+ * Clear old impressions
  */
-export class BannerRotationEngine {
-  private banners: BannerConfig[] = [];
-  private rotationInterval: NodeJS.Timeout | null = null;
-  private currentBannerIndex = 0;
-
-  /**
-   * Register banners for rotation
-   */
-  registerBanners(banners: BannerConfig[]): void {
-    this.banners = banners.sort((a, b) => b.priority - a.priority);
-  }
-
-  /**
-   * Start banner rotation
-   */
-  startRotation(intervalMs: number = 10000): void {
-    if (this.rotationInterval) {
-      clearInterval(this.rotationInterval);
-    }
-
-    this.rotationInterval = setInterval(() => {
-      this.rotateToNextBanner();
-    }, intervalMs);
-  }
-
-  /**
-   * Stop banner rotation
-   */
-  stopRotation(): void {
-    if (this.rotationInterval) {
-      clearInterval(this.rotationInterval);
-      this.rotationInterval = null;
-    }
-  }
-
-  /**
-   * Rotate to next banner
-   */
-  private rotateToNextBanner(): void {
-    if (this.banners.length === 0) return;
-
-    // Get available banners (not exceeding daily limits)
-    const availableBanners = this.banners.filter(banner => {
-      if (!banner.maxDailyImpressions) return true;
-      
-      const today = new Date().toDateString();
-      const todayImpressions = getStoredImpressions().filter(imp => 
-        imp.bannerId === banner.id && 
-        new Date(imp.timestamp).toDateString() === today
-      ).length;
-      
-      return todayImpressions < banner.maxDailyImpressions;
-    });
-
-    if (availableBanners.length === 0) return;
-
-    // Select next banner based on performance
-    const nextBanner = this.selectOptimalBanner(availableBanners);
-    this.currentBannerIndex = this.banners.findIndex(b => b.id === nextBanner.id);
-    
-    // Trigger banner change event
-    this.dispatchBannerChangeEvent(nextBanner);
-  }
-
-  /**
-   * Select optimal banner based on performance metrics
-   */
-  private selectOptimalBanner(availableBanners: BannerConfig[]): BannerConfig {
-    // Simple selection: choose banner with lowest click rate to give it more exposure
-    return availableBanners.reduce((best, current) => {
-      const bestMetrics = getBannerMetrics(best.id);
-      const currentMetrics = getBannerMetrics(current.id);
-      
-      return currentMetrics.clickRate < bestMetrics.clickRate ? current : best;
-    });
-  }
-
-  /**
-   * Dispatch banner change event
-   */
-  private dispatchBannerChangeEvent(banner: BannerConfig): void {
-    const event = new CustomEvent('bannerRotation', {
-      detail: { banner }
-    });
-    window.dispatchEvent(event);
-  }
-
-  /**
-   * Get current banner
-   */
-  getCurrentBanner(): BannerConfig | null {
-    return this.banners[this.currentBannerIndex] || null;
-  }
-
-  /**
-   * Get all banners
-   */
-  getAllBanners(): BannerConfig[] {
-    return [...this.banners];
-  }
-
-  /**
-   * Update banner priority
-   */
-  updateBannerPriority(bannerId: string, newPriority: number): void {
-    const banner = this.banners.find(b => b.id === bannerId);
-    if (banner) {
-      banner.priority = newPriority;
-      this.banners.sort((a, b) => b.priority - a.priority);
-    }
-  }
-}
-
-// Export singleton instance
-export const bannerRotationEngine = new BannerRotationEngine();
-=======
-export const trackBannerClick = (bannerId: string, pageUrl: string): void => {
-  recordBannerImpression({
-    bannerId,
-    pageUrl,
-    clicked: true
-  });
+export const clearOldImpressions = (daysToKeep: number = 30): void => {
+  const cutoff = Date.now() - (daysToKeep * 24 * 60 * 60 * 1000);
+  const impressions = getStoredImpressions();
+  const filteredImpressions = impressions.filter(imp => imp.timestamp > cutoff);
+  storeImpressions(filteredImpressions);
 };
 
 /**
- * Track banner visibility
+ * Reset all banner data
  */
-export const trackBannerVisibility = (bannerId: string, pageUrl: string, timeVisible: number, scrollDepth: number): void => {
-  recordBannerImpression({
-    bannerId,
-    pageUrl,
-    timeVisible,
-    scrollDepth
-  });
+export const resetBannerData = (): void => {
+  localStorage.removeItem(STORAGE_KEY);
+  sessionStorage.removeItem(SESSION_KEY);
 };
-
-export default {
-  recordBannerImpression,
-  getBannerImpressionCount,
-  shouldShowBanner,
-  getRotationScore,
-  getBannersForRotation,
-  trackBannerClick,
-  trackBannerVisibility
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-13eb

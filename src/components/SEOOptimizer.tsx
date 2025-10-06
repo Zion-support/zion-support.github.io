@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react';
+import React, { type ReactNode } from 'react';
 import { Helmet } from 'react-helmet-async';
 
 interface SEOOptimizerProps {

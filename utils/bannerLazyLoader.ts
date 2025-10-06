@@ -55,7 +55,26 @@ export const preloadBanner = (importFn: () => Promise<BannerModule>): void => {
 /**
  * Banner loader with intersection observer
  */
-  }
-}
+export const createBannerLoader = () => {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const element = entry.target as HTMLElement;
+          const importFn = element.dataset.bannerImport;
+          if (importFn) {
+            // Load the banner when it comes into view
+            eval(importFn)();
+          }
+        }
+      });
+    },
+    { rootMargin: '50px' }
+  );
 
-/**
+  return {
+    observe: (element: HTMLElement) => observer.observe(element),
+    unobserve: (element: HTMLElement) => observer.unobserve(element),
+    disconnect: () => observer.disconnect(),
+  };
+};

@@ -129,13 +129,6 @@ export const colorContrast = {
     return 0.2126 * (rs || 0) + 0.7152 * (gs || 0) + 0.0722 * (bs || 0);
   },
   // Calculate contrast ratio
-  getContrastRatio: (
-    color1: [number, number, number],
-    color2: [number, number, number],
-  ): number => {
-    return 0.2126 * (rs ?? 0) + 0.7152 * (gs ?? 0) + 0.0722 * (bs ?? 0);
-  },
-  // Calculate contrast ratio
   getContrastRatio: (color1: [number, number, number], color2: [number, number, number]): number => {
     const lum1 = colorContrast.getLuminance(...color1);
     const lum2 = colorContrast.getLuminance(...color2);
@@ -196,42 +189,8 @@ export const formAccessibility = {
     return contrastRatio >= thresholds[level];
   },
 };
-// Keyboard navigation utilities
-export const keyboardNavigation = {
-  // Handle arrow key navigation
-  handleArrowKeys: (e: KeyboardEvent, items: HTMLElement[], currentIndex: number): number => {
-    let newIndex = currentIndex;
-    switch (e.key) {
-      case 'ArrowDown':
-      case 'ArrowRight':
-        e.preventDefault();
-        newIndex = (currentIndex + 1) % items.length;
-        break;
-      case 'ArrowUp':
-      case 'ArrowLeft':
-        e.preventDefault();
-        newIndex = currentIndex === 0 ? items.length - 1 : currentIndex - 1;
-        break;
-      case 'Home':
-        e.preventDefault();
-        newIndex = 0;
-        break;
-      case 'End':
-        e.preventDefault();
-        newIndex = items.length - 1;
-        break;
-    }
-    if (newIndex !== currentIndex) {
-      items[newIndex]?.focus();
-    }
-    
-    return newIndex;
-  },
-
-  // Generate unique input ID
-  generateInputId: (): string => {
-    return `input-${Math.random().toString(36).substr(2, 9)}`;
-  },
+// Form accessibility utilities (extended)
+export const formAccessibilityExtended = {
   // Add error message association
   addErrorMessage: (input: HTMLInputElement, errorMessage: string): void => {
     const errorId = `error-${input.id}`;
@@ -346,6 +305,8 @@ export const accessibilityTesting = {
       headings: headingCheck,
       score,
     };
+  },
+
   // Check if element is focusable
   isFocusable: (element: HTMLElement): boolean => {
     const focusableSelectors = [
@@ -358,4 +319,65 @@ export const accessibilityTesting = {
     ];
     return focusableSelectors.some(selector => element.matches(selector));
   },
+};
+
+// Motion accessibility utilities
+export const motionAccessibility = {
+  // Check if user prefers reduced motion
+  prefersReducedMotion: (): boolean => {
+    return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  },
+  // Apply reduced motion styles
+  applyReducedMotion: (element: HTMLElement): void => {
+    if (motionAccessibility.prefersReducedMotion()) {
+      element.style.animation = 'none';
+      element.style.transition = 'none';
+    }
+  },
+};
+
+// Screen reader utilities
+export const screenReader = {
+  // Hide element from screen readers
+  hideFromScreenReader: (element: HTMLElement): void => {
+    element.setAttribute('aria-hidden', 'true');
+  },
+  // Show element to screen readers
+  showToScreenReader: (element: HTMLElement): void => {
+    element.removeAttribute('aria-hidden');
+  },
+  // Create screen reader only text
+  createScreenReaderText: (text: string): HTMLElement => {
+    const element = document.createElement('span');
+    element.textContent = text;
+    element.className = 'sr-only';
+    return element;
+  },
+};
+
+// Initialize accessibility features
+export const initAccessibility = (): void => {
+  // Add skip links
+  const skipLink = document.createElement('a');
+  skipLink.href = '#main-content';
+  skipLink.textContent = 'Skip to main content';
+  skipLink.className = 'skip-link';
+  skipLink.style.cssText = `
+    position: absolute;
+    top: -40px;
+    left: 6px;
+    background: #000;
+    color: #fff;
+    padding: 8px;
+    text-decoration: none;
+    z-index: 1000;
+    transition: top 0.3s;
+  `;
+  skipLink.addEventListener('focus', () => {
+    skipLink.style.top = '6px';
+  });
+  skipLink.addEventListener('blur', () => {
+    skipLink.style.top = '-40px';
+  });
+  document.body.insertBefore(skipLink, document.body.firstChild);
 };

@@ -1,17 +1,17 @@
 import { Suspense, lazy } from 'react';
 import Link from 'next/link';
 
-// Lazy load heavy components
-const UnifiedContentPromotion = lazy(
-  () => import('./components/UnifiedContentPromotion'),
-);
-const InteractiveAIROICalculator = lazy(
-  () => import('./components/InteractiveAIROICalculator'),
-);
-const ContentShowcase = lazy(() => import('./components/ContentShowcase'));
-const InteractiveContentShowcase2026 = lazy(
-  () => import('./components/InteractiveContentShowcase2026'),
-);
+// Lazy load heavy components - temporarily disabled
+// const UnifiedContentPromotion = lazy(
+//   () => import('./components/UnifiedContentPromotion'),
+// );
+// const InteractiveAIROICalculator = lazy(
+//   () => import('./components/InteractiveAIROICalculator'),
+// );
+// const ContentShowcase = lazy(() => import('./components/ContentShowcase'));
+// const InteractiveContentShowcase2026 = lazy(
+//   () => import('./components/InteractiveContentShowcase2026'),
+// );
 
 // Loading component for Suspense fallback
 const LoadingFallback = ({ height = 'h-32' }: { height?: string }) => (
@@ -88,31 +88,31 @@ export default function HomePage() {
 
       {/* Main Content */}
       <main className="container mx-auto px-4 py-16">
-        {/* Unified Content Promotion */}
-        <Suspense fallback={<LoadingFallback height="h-32" />}>
+        {/* Unified Content Promotion - temporarily disabled */}
+        {/* <Suspense fallback={<LoadingFallback height="h-32" />}>
           <UnifiedContentPromotion />
-        </Suspense>
+        </Suspense> */}
 
-        {/* Interactive AI ROI Calculator */}
-        <section className="my-16">
+        {/* Interactive AI ROI Calculator - temporarily disabled */}
+        {/* <section className="my-16">
           <Suspense fallback={<LoadingFallback height="h-64" />}>
             <InteractiveAIROICalculator />
           </Suspense>
-        </section>
+        </section> */}
 
-        {/* Content Showcase */}
-        <section className="my-16">
+        {/* Content Showcase - temporarily disabled */}
+        {/* <section className="my-16">
           <Suspense fallback={<LoadingFallback height="h-48" />}>
             <ContentShowcase />
           </Suspense>
-        </section>
+        </section> */}
 
-        {/* Interactive Content Showcase 2026 */}
-        <section className="my-16">
+        {/* Interactive Content Showcase 2026 - temporarily disabled */}
+        {/* <section className="my-16">
           <Suspense fallback={<LoadingFallback height="h-48" />}>
             <InteractiveContentShowcase2026 />
           </Suspense>
-        </section>
+        </section> */}
       </main>
     </>
   );

@@ -59,7 +59,6 @@ function sendToAnalytics(metric: Metric): void {
     id: metric.id
   };
   // Log in development
-  if (process.env['NODE_ENV'] === 'development') {console.log('Performance Metric: '} performanceMetric);
   if (process.env.NODE_ENV === 'development') {
     console.log('Performance Metric:', performanceMetric);
   }

@@ -9,10 +9,6 @@ export const debounce = <T extends (...args: any[]) => any>(
   immediate = false
 ): ((...args: Parameters<T>) => void) => {
   let timeout: NodeJS.Timeout | null = null;
-<<<<<<< HEAD
-=======
-  
->>>>>>> cursor/fix-errors-and-merge-to-main-13eb
   return function executedFunction(...args: Parameters<T>) {
     const later = () => {
       timeout = null;

@@ -22,22 +22,15 @@ export const setOpenGraphTags = (ogData: {
   image?: string;
   url?: string;
   type?: string;
-<<<<<<< HEAD
   siteName?: string;
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-13eb
 }): void => {
   const ogTags = {
     'og:title': ogData.title,
     'og:description': ogData.description,
     'og:image': ogData.image,
     'og:url': ogData.url,
-<<<<<<< HEAD
     'og:type': ogData.type || 'website',
     'og:site_name': ogData.siteName,
-=======
-    'og:type': ogData.type
->>>>>>> cursor/fix-errors-and-merge-to-main-13eb
   };
 
   Object.entries(ogTags).forEach(([property, content]) => {
