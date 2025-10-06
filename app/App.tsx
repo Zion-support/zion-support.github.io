@@ -28,7 +28,7 @@ const App: React.FC = () => {
     performanceOptimizer.lazyLoadImages();
     // Initialize Web Vitals monitoring
     if (typeof window !== 'undefined' && 'performance' in window) {
-      const metrics = performanceOptimizer.measurePageLoadMetrics();
+      const metrics = performanceOptimizer.measurePageLoad();
       if (metrics) {
         performanceOptimizer.reportWebVitals(metrics);
       }
