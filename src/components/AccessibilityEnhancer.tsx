@@ -1,7 +1,7 @@
 import React, { type ReactNode, useEffect, useState } from 'react';
 
 interface AccessibilityEnhancerProps {
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
@@ -10,7 +10,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
   const [reducedMotion, setReducedMotion] = useState(false);
 
   useEffect(() => {
-    // Check for user preferences
+    // Check for user's motion preferences
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     setReducedMotion(prefersReducedMotion);
 
@@ -39,20 +39,30 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     
     // Apply high contrast
     if (highContrast) {
-      root.classList.add('high-contrast');
+      root.style.setProperty('--text-color', '#ffffff');
+      root.style.setProperty('--bg-color', '#000000');
+      root.style.setProperty('--border-color', '#ffffff');
     } else {
-      root.classList.remove('high-contrast');
+      root.style.removeProperty('--text-color');
+      root.style.removeProperty('--bg-color');
+      root.style.removeProperty('--border-color');
     }
 
     // Apply font size
-    root.classList.remove('font-small', 'font-normal', 'font-large');
-    root.classList.add(`font-${fontSize}`);
+    const fontSizeMap = {
+      small: '14px',
+      normal: '16px',
+      large: '18px'
+    };
+    root.style.fontSize = fontSizeMap[fontSize];
 
     // Apply reduced motion
     if (reducedMotion) {
-      root.classList.add('reduced-motion');
+      root.style.setProperty('--animation-duration', '0s');
+      root.style.setProperty('--transition-duration', '0s');
     } else {
-      root.classList.remove('reduced-motion');
+      root.style.removeProperty('--animation-duration');
+      root.style.removeProperty('--transition-duration');
     }
   };
 
@@ -60,15 +70,20 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     const skipLink = document.createElement('a');
     skipLink.href = '#main-content';
     skipLink.textContent = 'Skip to main content';
-    skipLink.className = 'skip-link sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 bg-blue-600 text-white p-2 z-50';
+    skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';
     document.body.insertBefore(skipLink, document.body.firstChild);
   };
 
   const addAriaLandmarks = () => {
     const main = document.querySelector('main');
-    if (main && !main.getAttribute('role')) {
-      main.setAttribute('role', 'main');
+    if (main && !main.getAttribute('id')) {
       main.id = 'main-content';
+      main.setAttribute('role', 'main');
+    }
+
+    const nav = document.querySelector('nav');
+    if (nav && !nav.getAttribute('aria-label')) {
+      nav.setAttribute('aria-label', 'Main navigation');
     }
   };
 
@@ -76,9 +91,21 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     // Add focus indicators
     const style = document.createElement('style');
     style.textContent = `
-      .focus-visible:focus {
+      .focus-visible {
         outline: 2px solid #3b82f6;
         outline-offset: 2px;
+      }
+      
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
       }
     `;
     document.head.appendChild(style);
@@ -98,33 +125,44 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
   };
 
   return (
-    <div className="accessibility-enhancer">
-      <div className="accessibility-controls fixed top-4 right-4 z-50 bg-white p-4 rounded-lg shadow-lg">
-        <h3 className="text-sm font-semibold mb-2">Accessibility Options</h3>
-        <div className="space-y-2">
-          <label className="flex items-center">
-            <input
-              type="checkbox"
-              checked={isHighContrast}
-              onChange={toggleHighContrast}
-              className="mr-2"
-            />
-            High Contrast
-          </label>
-          <div>
-            <label className="text-sm">Font Size:</label>
-            <select
-              value={fontSize}
-              onChange={(e) => changeFontSize(e.target.value as 'small' | 'normal' | 'large')}
-              className="ml-2 text-sm border rounded px-1"
-            >
-              <option value="small">Small</option>
-              <option value="normal">Normal</option>
-              <option value="large">Large</option>
-            </select>
+    <div className={`accessibility-enhanced ${isHighContrast ? 'high-contrast' : ''} ${fontSize} ${reducedMotion ? 'reduced-motion' : ''}`}>
+      {/* Accessibility Controls */}
+      <div className="accessibility-controls fixed top-4 right-4 z-50 bg-white shadow-lg rounded-lg p-4 space-y-2">
+        <h3 className="text-sm font-semibold text-gray-700 mb-2">Accessibility</h3>
+        
+        <button
+          onClick={toggleHighContrast}
+          className={`w-full px-3 py-1 text-xs rounded ${
+            isHighContrast 
+              ? 'bg-blue-600 text-white' 
+              : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+          }`}
+          aria-label={`${isHighContrast ? 'Disable' : 'Enable'} high contrast mode`}
+        >
+          {isHighContrast ? 'High Contrast On' : 'High Contrast Off'}
+        </button>
+        
+        <div className="space-y-1">
+          <label className="text-xs text-gray-600">Font Size:</label>
+          <div className="flex space-x-1">
+            {(['small', 'normal', 'large'] as const).map((size) => (
+              <button
+                key={size}
+                onClick={() => changeFontSize(size)}
+                className={`px-2 py-1 text-xs rounded ${
+                  fontSize === size
+                    ? 'bg-blue-600 text-white'
+                    : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+                }`}
+                aria-label={`Set font size to ${size}`}
+              >
+                {size.charAt(0).toUpperCase() + size.slice(1)}
+              </button>
+            ))}
           </div>
         </div>
       </div>
+
       {children}
     </div>
   );

@@ -13,6 +13,22 @@ const LoadingFallback: React.FC<{ height?: string }> = ({ height = 'h-32' }) => 
   <div className={`animate-pulse bg-gray-200 rounded-lg ${height} w-full`} />
 );
 
+// Structured data for SEO
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Zion Tech Group",
+  "description": "Leading provider of enterprise AI solutions, quantum computing, and autonomous systems",
+  "url": "https://ziontechgroup.com",
+  "logo": "https://ziontechgroup.com/logo.png",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+1-302-464-0950",
+    "contactType": "customer service",
+    "email": "kleber@ziontechgroup.com"
+  }
+};
+
 const HomePage: React.FC = () => {
   const structuredData = {
     '@context': 'https://schema.org',
