@@ -6,20 +6,20 @@
 export interface AnalyticsEvent {
   name: string;
   category: string;
-  action?: string;
-  label?: string;
-  value?: number;
-  properties?: Record<string, any>;
+  action?: string | undefined;
+  label?: string | undefined;
+  value?: number | undefined;
+  properties?: Record<string, any> | undefined;
   timestamp: number;
 }
 
 export interface UserProperties {
-  userId?: string;
+  userId?: string | undefined;
   sessionId: string;
   userAgent: string;
   language: string;
   timezone: string;
-  referrer?: string;
+  referrer?: string | undefined;
 }
 
 class Analytics {
@@ -75,10 +75,10 @@ class Analytics {
     const event: AnalyticsEvent = {
       name,
       category,
-      action,
-      label,
-      value,
-      properties,
+      action: action || undefined,
+      label: label || undefined,
+      value: value || undefined,
+      properties: properties || undefined,
       timestamp: Date.now(),
     };
 
