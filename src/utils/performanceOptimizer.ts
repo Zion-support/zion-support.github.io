@@ -20,6 +20,9 @@ export interface WebVitalsMetrics {
  */
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-8da8
 export interface PerformanceBudget {
 =======
 interface PerformanceBudget {
@@ -50,9 +53,12 @@ export const prefetchResources = (urls: string[]): void => {
 
 /**
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7834
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-8da8
  * Debounce function
  */
 export const debounce = <T extends (...args: unknown[]) => unknown>(
@@ -91,7 +97,11 @@ export const lazyLoadImages = (): void => {
 <<<<<<< HEAD
   if (typeof window === 'undefined') return;
   if (!('IntersectionObserver' in window)) return;
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-8da8
   const imageObserver = new IntersectionObserver(
     entries => {
       entries.forEach(entry => {
@@ -111,12 +121,17 @@ export const lazyLoadImages = (): void => {
       threshold: 0.01,
     }
   );
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-8da8
   document.querySelectorAll('img[data-src]').forEach(img => {
     imageObserver.observe(img);
   });
 };
 
+<<<<<<< HEAD
 /**
  * Preconnect to external domains
  */
@@ -163,12 +178,15 @@ export const prefetchResources = (urls: string[]): void => {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7834
 };
 
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-8da8
 /**
  * Measure page load performance
  */
 export const measurePageLoad = (): WebVitalsMetrics | null => {
 <<<<<<< HEAD
   if (typeof window === 'undefined' || !window.performance) return null;
+<<<<<<< HEAD
   
   const perfData = window.performance.timing;
   const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
@@ -195,14 +213,43 @@ export const measurePageLoad = (): WebVitalsMetrics | null => {
     interactiveTime: navigation.domInteractive - navigation.fetchStart,
     TTFB: navigation.responseStart - navigation.fetchStart,
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7834
+=======
+
+  const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+  if (!navigation) return null;
+
+  return {
+    loadTime: navigation.loadEventEnd - navigation.fetchStart,
+    interactiveTime: navigation.domInteractive - navigation.fetchStart,
+    TTFB: navigation.responseStart - navigation.fetchStart,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-8da8
   };
 };
 
 /**
  * Monitor long tasks
+<<<<<<< HEAD
+=======
+ */
+export const monitorLongTasks = (callback: (entries: PerformanceEntry[]) => void): PerformanceObserver | null => {
+  if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return null;
+
+  const observer = new PerformanceObserver((list) => {
+    const entries = list.getEntries();
+    callback(entries);
+  });
+
+  observer.observe({ entryTypes: ['longtask'] });
+  return observer;
+};
+
+/**
+ * Report Web Vitals
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-8da8
  */
 <<<<<<< HEAD
 export const reportWebVitals = (metrics: WebVitalsMetrics): void => {
+<<<<<<< HEAD
   if (typeof window === 'undefined') return;
   
   // Send to analytics service
@@ -476,17 +523,49 @@ class PerformanceOptimizer {
     }
     // Send to analytics service
     if (typeof window !== 'undefined' && (window as any).gtag) {
+=======
+  console.log('Web Vitals:', metrics);
+  // Here you would typically send metrics to your analytics service
+};
+
+/**
+ * Performance Optimizer Class
+ */
+class PerformanceOptimizer {
+  private metrics: Record<string, number> = {};
+  private observers: PerformanceObserver[] = [];
+
+  /**
+   * Get current metrics
+   */
+  getMetrics(): Record<string, number> {
+    return { ...this.metrics };
+  }
+
+  /**
+   * Initialize performance monitoring
+   */
+  init(): void {
+    this.measurePageLoad();
+    this.setupLongTaskMonitoring();
+    this.setupResourceMonitoring();
+  }
+
+  /**
+   * Measure page load performance
+   */
+  measurePageLoad(): WebVitalsMetrics | null {
+    const metrics = measurePageLoad();
+    if (metrics) {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-8da8
       Object.entries(metrics).forEach(([key, value]) => {
         if (value !== undefined) {
-          (window as any).gtag('event', key, {
-            value: Math.round(value),
-            event_category: 'Web Vitals',
-            non_interaction: true
-          });
+          this.metrics[key] = value;
         }
       });
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7834
     }
+<<<<<<< HEAD
   });
   
   if (totalSize > budget.maxBundleSize) {
@@ -781,17 +860,94 @@ class PerformanceOptimizer {
     });
   }
 
+=======
+    return metrics;
+  }
+
+  /**
+   * Setup long task monitoring
+   */
+  private setupLongTaskMonitoring(): void {
+    const observer = monitorLongTasks((entries) => {
+      entries.forEach(entry => {
+        this.metrics[`long_task_${Date.now()}`] = entry.duration;
+      });
+    });
+    
+    if (observer) {
+      this.observers.push(observer);
+    }
+  }
+
+  /**
+   * Setup resource monitoring
+   */
+  private setupResourceMonitoring(): void {
+    if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return;
+
+    const observer = new PerformanceObserver((list) => {
+      list.getEntries().forEach(entry => {
+        if (entry.entryType === 'resource') {
+          const resourceEntry = entry as PerformanceResourceTiming;
+          this.metrics[`resource_${resourceEntry.name.split('.').pop()}`] = resourceEntry.duration;
+        }
+      });
+    });
+
+    observer.observe({ entryTypes: ['resource'] });
+    this.observers.push(observer);
+  }
+
+  /**
+   * Lazy load images
+   */
+  lazyLoadImages(): void {
+    lazyLoadImages();
+  }
+
+  /**
+   * Report Web Vitals
+   */
+  reportWebVitals(metrics: WebVitalsMetrics): void {
+    reportWebVitals(metrics);
+  }
+
+  /**
+   * Monitor long tasks
+   */
+  monitorLongTasks(callback: (entries: PerformanceEntry[]) => void): PerformanceObserver | null {
+    return monitorLongTasks(callback);
+  }
+
+  /**
+   * Add critical resource hints
+   */
+  addCriticalResourceHints(urls: string[]): void {
+    prefetchResources(urls);
+  }
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-8da8
   /**
    * Cleanup observers
    */
   cleanup(): void {
+<<<<<<< HEAD
     this.observers.forEach(observer => observer.disconnect());
     this.observers = [];
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
+=======
+    this.observers.forEach(observer => {
+      if (observer && typeof observer.disconnect === 'function') {
+        observer.disconnect();
+      }
+    });
+    this.observers = [];
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-8da8
   }
 }
 
 // Export singleton instance
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 export const performanceOptimizer = PerformanceOptimizer.getInstance();
@@ -830,3 +986,7 @@ export const performanceOptimizer = new PerformanceOptimizer();
 // Export default for compatibility
 export default performanceOptimizer;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
+=======
+const performanceOptimizer = new PerformanceOptimizer();
+export default performanceOptimizer;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-8da8

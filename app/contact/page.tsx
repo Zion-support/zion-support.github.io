@@ -3,6 +3,7 @@ import React from 'react';
 const ContactPage: React.FC = () => {
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
     <div className='min-h-screen bg-slate-50 py-16'>
       <div className='container mx-auto px-4'>
 <<<<<<< HEAD
@@ -52,6 +53,8 @@ const ContactPage: React.FC = () => {
                 <div>
                   <label className='block text-sm font-medium text-gray-700 mb-2'>
 =======
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-8da8
     <div className="min-h-screen bg-slate-50 py-16">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
@@ -87,11 +90,15 @@ const ContactPage: React.FC = () => {
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-8da8
                     Message
                   </label>
                   <textarea
                     rows={4}
+<<<<<<< HEAD
 <<<<<<< HEAD
                     className='w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500'
                     placeholder='Tell us about your AI transformation needs...'
@@ -101,18 +108,24 @@ const ContactPage: React.FC = () => {
                   type='submit'
                   className='w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors'
 =======
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-8da8
                     className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                   ></textarea>
                 </div>
                 <button
                   type="submit"
                   className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors"
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-8da8
                 >
                   Send Message
                 </button>
               </form>
             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
             
             <div className='space-y-6'>
@@ -217,6 +230,8 @@ const ContactPage: React.FC = () => {
                 </p>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0883
 =======
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-8da8
             <div className="bg-white p-6 rounded-lg shadow-md">
               <h3 className="text-xl font-semibold mb-4">Contact Information</h3>
               <div className="space-y-4">
@@ -237,7 +252,10 @@ const ContactPage: React.FC = () => {
                     United States
                   </p>
                 </div>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-8da8
               </div>
             </div>
           </div>

@@ -42,6 +42,7 @@ export default function EnterprisePage() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
 =======
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
@@ -56,6 +57,8 @@ export default function EnterprisePage() {
 =======
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-8da8
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
               <Link
                 href="/contact"
@@ -66,6 +69,7 @@ export default function EnterprisePage() {
                 <span className="group-hover:translate-x-1 transition-transform">
                   →
                 </span>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0883
@@ -80,6 +84,8 @@ export default function EnterprisePage() {
 =======
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-8da8
               </Link>
               <Link
                 href="#solutions"
@@ -92,11 +98,14 @@ export default function EnterprisePage() {
                 </span>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0883
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7834
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-8da8
               </Link>
             </div>
           </div>
@@ -118,6 +127,7 @@ export default function EnterprisePage() {
               Comprehensive AI solutions designed for enterprise-scale operations
             </p>
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -337,11 +347,17 @@ export default function EnterprisePage() {
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-300">
+=======
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-8da8
               <div className="text-4xl mb-4">🤖</div>
               <h3 className="text-2xl font-bold text-white mb-4">Autonomous Systems</h3>
               <p className="text-gray-300 mb-6">
                 Self-managing AI systems that optimize operations 24/7 with minimal human intervention.
               </p>
+<<<<<<< HEAD
               <ul className="text-sm text-gray-400 space-y-2">
                 <li>• 99.9% uptime guarantee</li>
                 <li>• 500% productivity increase</li>
@@ -351,10 +367,35 @@ export default function EnterprisePage() {
 
             <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-300">
               <div className="text-4xl mb-4">🧠</div>
+=======
+              <ul className="space-y-2 text-gray-300">
+                <li>• 99.9% uptime guarantee</li>
+                <li>• Real-time optimization</li>
+                <li>• Predictive maintenance</li>
+              </ul>
+            </div>
+
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+              <div className="text-4xl mb-4">⚡</div>
+              <h3 className="text-2xl font-bold text-white mb-4">Quantum Computing</h3>
+              <p className="text-gray-300 mb-6">
+                Next-generation quantum algorithms for complex optimization and cryptography.
+              </p>
+              <ul className="space-y-2 text-gray-300">
+                <li>• Quantum optimization</li>
+                <li>• Advanced cryptography</li>
+                <li>• Future-proof security</li>
+              </ul>
+            </div>
+
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+              <div className="text-4xl mb-4">📊</div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-8da8
               <h3 className="text-2xl font-bold text-white mb-4">Business Intelligence</h3>
               <p className="text-gray-300 mb-6">
                 Advanced analytics and insights to drive data-driven decision making.
               </p>
+<<<<<<< HEAD
               <ul className="text-sm text-gray-400 space-y-2">
                 <li>• Real-time analytics</li>
                 <li>• Predictive modeling</li>
@@ -375,11 +416,20 @@ export default function EnterprisePage() {
               </ul>
             </div>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
+=======
+              <ul className="space-y-2 text-gray-300">
+                <li>• Real-time analytics</li>
+                <li>• Predictive insights</li>
+                <li>• Custom dashboards</li>
+              </ul>
+            </div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-8da8
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -444,12 +494,20 @@ export default function EnterprisePage() {
             </div>
 =======
       <section className="py-24">
+=======
+      <section className="py-24 bg-gradient-to-r from-cyan-500/20 to-blue-500/20">
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-8da8
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Ready to Transform Your Enterprise?
           </h2>
+<<<<<<< HEAD
           <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
             Join 500+ Fortune 500 companies already using our AI solutions to drive innovation and growth.
+=======
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Join hundreds of Fortune 500 companies already using our AI solutions to drive innovation and growth.
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-8da8
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
             <Link
@@ -464,7 +522,10 @@ export default function EnterprisePage() {
             >
               View All Services
             </Link>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-8da8
           </div>
         </div>
       </section>

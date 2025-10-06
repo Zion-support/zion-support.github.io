@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { performanceOptimizer } from '../../utils/performanceOptimizer';
 import { getErrorMetrics, isErrorRateTooHigh } from '../../utils/errorHandling';
 
@@ -24,6 +25,11 @@ interface PerformanceMetrics {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7834
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
+=======
+import performanceOptimizer from '../../utils/performanceOptimizer';
+import { getErrorMetrics, isErrorRateTooHigh } from '../../utils/errorHandling';
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-8da8
 interface DashboardData {
   performance: {
     averageRenderTime: number;
@@ -40,9 +46,12 @@ interface DashboardData {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-8da8
 }
 
 interface PerformanceMetrics {
@@ -61,17 +70,21 @@ const PerformanceDashboard: React.FC = (): JSX.Element | null => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7834
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-8da8
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     loadTime: 0,
     renderTime: 0,
     memoryUsage: 0,
     fps: 0,
   });
+<<<<<<< HEAD
 <<<<<<< HEAD
   const [autoRefresh, setAutoRefresh] = useState(true);
 <<<<<<< HEAD
@@ -80,6 +93,9 @@ const PerformanceDashboard: React.FC = (): JSX.Element | null => {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7834
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
+=======
+  const [autoRefresh, setAutoRefresh] = useState(true);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-8da8
 
   useEffect(() => {
     const updateData = () => {
@@ -129,6 +145,7 @@ const PerformanceDashboard: React.FC = (): JSX.Element | null => {
         isHealthy,
         timestamp: new Date(),
       });
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       
@@ -190,6 +207,15 @@ const PerformanceDashboard: React.FC = (): JSX.Element | null => {
       const memoryUsage = memory ? memory.usedJSHeapSize / 1024 / 1024 : 0;
       
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
+=======
+    };
+
+    const updateMetrics = () => {
+      const loadTime = performance.now();
+      const perfAPI = (window as any).performance;
+      const memory = perfAPI?.memory;
+      const memoryUsage = memory ? memory.usedJSHeapSize / 1024 / 1024 : 0;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-8da8
       setMetrics(prev => ({
         ...prev,
         loadTime,
@@ -199,14 +225,20 @@ const PerformanceDashboard: React.FC = (): JSX.Element | null => {
     };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7834
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-8da8
     // Update metrics on load
     updateMetrics();
     updateData();
     
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-8da8
     if (autoRefresh) {
       const interval = setInterval(() => {
         updateData();
@@ -216,11 +248,14 @@ const PerformanceDashboard: React.FC = (): JSX.Element | null => {
     }
     return undefined;
   }, [autoRefresh]);
+<<<<<<< HEAD
 =======
     const interval = setInterval(updateData, 5000);
     return () => clearInterval(interval);
   }, []);
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-8da8
 
   const exportData = (): void => {
     const exportData = {
@@ -230,6 +265,7 @@ const PerformanceDashboard: React.FC = (): JSX.Element | null => {
     };
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     console.log('Exporting data:', exportData);
 =======
     console.log('Performance data:', exportData);
@@ -237,6 +273,9 @@ const PerformanceDashboard: React.FC = (): JSX.Element | null => {
 =======
     console.log('Performance Data:', exportData);
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
+=======
+    console.log('Performance Data:', exportData);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-8da8
   };
 
   // Only show in development
@@ -249,12 +288,15 @@ const PerformanceDashboard: React.FC = (): JSX.Element | null => {
   }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   if (!data) {
     return null;
   }
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7834
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-8da8
   return (
     <div className='fixed bottom-4 right-4 z-50'>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0883
@@ -375,6 +417,7 @@ const PerformanceDashboard: React.FC = (): JSX.Element | null => {
           </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
           {/* Error Metrics */}
           {data && (
             <>
@@ -447,6 +490,11 @@ const PerformanceDashboard: React.FC = (): JSX.Element | null => {
           
           {/* Error Metrics */}
           <div className='mt-4'>
+=======
+          
+          {/* Error Metrics */}
+          <div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-8da8
             <h4 className='text-sm font-medium text-gray-900 mb-2'>Errors</h4>
             <div className='grid grid-cols-2 gap-2 text-xs'>
               <div className='bg-gray-50 p-2 rounded'>
@@ -464,7 +512,11 @@ const PerformanceDashboard: React.FC = (): JSX.Element | null => {
           
           {/* Recommendations */}
           {data.performance.slowComponents > 0 && (
+<<<<<<< HEAD
             <div className='mt-4'>
+=======
+            <div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-8da8
               <h4 className='text-sm font-medium text-gray-900 mb-2'>
                 Recommendations
               </h4>
@@ -487,7 +539,11 @@ const PerformanceDashboard: React.FC = (): JSX.Element | null => {
           )}
           
           {/* Actions */}
+<<<<<<< HEAD
           <div className='flex space-x-2 pt-2 border-t border-gray-200 mt-4'>
+=======
+          <div className='flex space-x-2 pt-2 border-t border-gray-200'>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-8da8
             <button
               onClick={exportData}
               className='flex-1 bg-blue-600 hover:bg-blue-700 text-white text-xs py-2 px-3 rounded transition-colors'
@@ -503,15 +559,22 @@ const PerformanceDashboard: React.FC = (): JSX.Element | null => {
               Clear Data
             </button>
           </div>
+<<<<<<< HEAD
           <div className='text-xs text-gray-400 text-center mt-2'>
+=======
+          <div className='text-xs text-gray-400 text-center'>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-8da8
             Last updated: {data.timestamp.toLocaleTimeString()}
           </div>
         </div>
       )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7834
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-8da8
     </div>
   );
 };

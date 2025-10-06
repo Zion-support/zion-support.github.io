@@ -16,7 +16,7 @@ import PerformanceDashboard from './components/PerformanceDashboard';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
 
 // Utils
-import { performanceOptimizer } from '../src/utils/performanceOptimizer';
+import performanceOptimizer from '../src/utils/performanceOptimizer';
 
 // Styles
 import '../src/index.css';

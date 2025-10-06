@@ -67,8 +67,9 @@ class Analytics {
     const event: AnalyticsEvent = {
       name,
       category,
-      action: action || '',
+      action: action || undefined,
       label: label || undefined,
+<<<<<<< HEAD
 <<<<<<< HEAD
       value: value || 0,
       properties: properties || {},
@@ -76,6 +77,10 @@ class Analytics {
       value,
       properties,
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-02dd
+=======
+      value: value || undefined,
+      properties: properties || undefined,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-8da8
       timestamp: Date.now(),
     };
     this.events.push(event);

@@ -3,6 +3,7 @@
  * Provides React hooks for performance monitoring and optimization
  */
 import { useEffect, useCallback, useRef } from 'react';
+<<<<<<< HEAD
 import { performanceOptimizer } from '../utils/performanceOptimizer';
 <<<<<<< HEAD
 
@@ -18,12 +19,18 @@ const analytics = {
     console.log(`Analytics: ${event} - ${category} - ${action}`, { label, value });
 =======
 // Mock analytics object for performance tracking
+=======
+import performanceOptimizer from '../utils/performanceOptimizer';
+
+// Mock analytics for now - replace with actual analytics implementation
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-8da8
 const analytics = {
   trackPerformance: (key: string, value: number, unit?: string) => {
     console.log(`Performance: ${key} = ${value}${unit ? ` ${unit}` : ''}`);
   },
   track: (event: string, category: string, action: string, label?: string, value?: number) => {
     console.log(`Analytics: ${event} - ${category} - ${action}${label ? ` - ${label}` : ''}${value ? ` - ${value}` : ''}`);
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0883
   }
 =======
@@ -126,6 +133,10 @@ const analytics = {
 =======
 import { analytics } from '../utils/analytics';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
+=======
+  }
+};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-8da8
 
 /**
  * Hook for monitoring page load performance
@@ -136,12 +147,16 @@ export const usePageLoadPerformance = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7834
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-8da8
       if (typeof window !== 'undefined' && window.performance) {
         const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
         if (navigation) {
           const metrics = {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             domContentLoaded: navigation.domContentLoadedEventEnd - navigation.fetchStart,
@@ -161,6 +176,9 @@ export const usePageLoadPerformance = () => {
         if (navigation) {
           const metrics = {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
+=======
+            domContentLoaded: navigation.domContentLoadedEventEnd - navigation.fetchStart,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-8da8
             domInteractive: navigation.domInteractive - navigation.fetchStart,
             totalLoadTime: navigation.loadEventEnd - navigation.fetchStart,
           };
@@ -170,6 +188,9 @@ export const usePageLoadPerformance = () => {
             performanceOptimizer.trackPerformance(`page_load_${key}`, value);
           });
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-8da8
           
           // Track overall page load performance
           analytics.track(
@@ -205,14 +226,21 @@ export const usePageLoadPerformance = () => {
       }
     };
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
     
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-8da8
     // Track immediately if page is already loaded
     if (typeof window !== 'undefined' && document.readyState === 'complete') {
       trackPageLoad();
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-8da8
       return;
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
@@ -258,6 +286,7 @@ export const useResourcePerformance = () => {
 export const useLongTaskMonitoring = () => {
   useEffect(() => {
 <<<<<<< HEAD
+<<<<<<< HEAD
     if (typeof window === 'undefined' || !window.PerformanceObserver) {
       return;
     }
@@ -275,11 +304,22 @@ export const useLongTaskMonitoring = () => {
     });
     
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
+=======
+    const observer = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      entries.forEach((entry: PerformanceEntry) => {
+        analytics.track('long_task', 'performance', 'detected', undefined, entry.duration);
+      });
+    });
+    observer.observe({ entryTypes: ['longtask'] });
+    
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-8da8
     return () => {
       if (observer && typeof observer.disconnect === 'function') {
         observer.disconnect();
       }
     };
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -350,12 +390,16 @@ export const useRenderPerformance = (componentName: string) => {
     }
   });
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7834
+=======
+  }, []);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-8da8
 };
 
 /**
  * Hook for monitoring memory usage
  */
 export const useMemoryMonitoring = () => {
+<<<<<<< HEAD
   useEffect(() => {
 <<<<<<< HEAD
     if (typeof window === 'undefined' || !(performance as any).memory) {
@@ -451,4 +495,44 @@ export const useWebVitals = () => {
 =======
   }, []);
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
+=======
+  const memoryRef = useRef<{ usedJSHeapSize: number; totalJSHeapSize: number } | null>(null);
+
+  useEffect(() => {
+    const checkMemory = () => {
+      if (typeof window !== 'undefined' && (window as any).performance?.memory) {
+        const memory = (window as any).performance.memory;
+        memoryRef.current = {
+          usedJSHeapSize: memory.usedJSHeapSize,
+          totalJSHeapSize: memory.totalJSHeapSize,
+        };
+        
+        analytics.trackPerformance('memory_used', memory.usedJSHeapSize / 1024 / 1024, 'MB');
+        analytics.trackPerformance('memory_total', memory.totalJSHeapSize / 1024 / 1024, 'MB');
+      }
+    };
+
+    checkMemory();
+    const interval = setInterval(checkMemory, 5000);
+    return () => clearInterval(interval);
+  }, []);
+
+  return memoryRef.current;
+};
+
+/**
+ * Hook for monitoring component render performance
+ */
+export const useRenderPerformance = (componentName: string) => {
+  const renderStartRef = useRef<number>(0);
+
+  useEffect(() => {
+    renderStartRef.current = performance.now();
+  });
+
+  useEffect(() => {
+    const renderTime = performance.now() - renderStartRef.current;
+    analytics.trackPerformance(`render_${componentName}`, renderTime, 'ms');
+  });
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-8da8
 };
