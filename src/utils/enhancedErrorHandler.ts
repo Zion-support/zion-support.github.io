@@ -100,7 +100,7 @@ class EnhancedErrorHandler {
     }
 
     // Log to console in development
-    if (process.env['NODE_ENV'] === 'development') {
+    if (process.env.NODE_ENV === 'development') {
       console.error('Error handled:', error, fullContext);
     }
 
