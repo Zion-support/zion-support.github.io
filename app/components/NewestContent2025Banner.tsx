@@ -1,193 +1,272 @@
 import React from 'react';
 import Link from 'next/link';
 
-const NewestContent2025Banner = () => {/* content */}
+const NewestContent2025Banner = () => {
   return (
-  <div> </div><section className="text-left">{/* Animated Background Effects */}
-      </section><div className="text-left"> </div><div className="text-left">"
-        </div><div className="text-left" style={{ animationDelay: '2s' }}>"
-        </div><div className="text-left" style={{ animationDelay: '1s' }}></div></div>
+    <section className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
+      {/* Animated Background Effects */}
+      <div className="absolute inset-0">
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute top-3/4 right-1/4 w-96 h-96 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute bottom-1/4 left-1/2 w-96 h-96 bg-gradient-to-r from-orange-500/20 to-red-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+      </div>
 
-      <div className="text-left">{/* Header */}
-        </div><div className="text-left"> </div><div className="text-left"> </div><span className="text-left">🚀</span>/span>/span>/span>
-            <span className="text-left">BREAKING: 3 REVOLUTIONARY ARTICLES JUST PUBLISHED!
-            </span></span>/span>/span>/span>
-            <span className="text-left">⚡</span>/span>/span>/span>
+      <div className="relative z-10 container mx-auto px-4">
+        {/* Header */}
+        <div className="text-center mb-16">
+          <div className="flex items-center justify-center gap-2 mb-6">
+            <span className="text-4xl">🚀</span>
+            <span className="text-cyan-400 font-bold text-xl">
+              BREAKING: 3 REVOLUTIONARY ARTICLES JUST PUBLISHED!
+            </span>
+            <span className="text-4xl">⚡</span>
           </div>
 
-          <h2 className="text-left">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-6">
             September 30, 2025 — Cutting-Edge AI Insights
           </h2>
           
-          <p className="text-left">Edge Computing • Neural Networks • Quantum Security — The future of enterprise AI starts here
-          </p></p>
+          <p className="text-xl text-gray-300 max-w-4xl mx-auto">
+            Edge Computing • Neural Networks • Quantum Security — The future of enterprise AI starts here
+          </p>
         </div>
 
         {/* Featured Articles Grid */}
-        <div className="text-left">{/* Article 1: AI Edge Computing */}
-          </div><Link href="/blog/ai-edge-computing-real-time-2025" className="text-left">
-            <div className="text-left">{/* Card glow effect */}
-              </div><div className="text-left"> </div><div className="text-left">{/* Icon & Badges */}
-                </div><div className="text-left"> </div><div className="text-left">⚡
-                  </div></div>
-                  <div className="text-left"> </div><div className="text-left"> </div><span className="text-left">🔥</span>/span>/span>/span>
-                      <span>HOT</span>
-                    </div>
-                    <span className="text-left">NEW TODAY
-                    </span></span>/span>/span>/span>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          {/* Article 1: AI Edge Computing */}
+          <Link href="/blog/ai-edge-computing-real-time-2025" className="group">
+            <div className="relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-500 hover:scale-105">
+              {/* Card glow effect */}
+              <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 opacity-0 group-hover:opacity-100 transition-all duration-500 rounded-2xl"></div>
+              
+              <div className="relative z-10">
+                {/* Icon & Badges */}
+                <div className="flex items-center justify-between mb-6">
+                  <div className="text-4xl">⚡</div>
+                  <div className="flex gap-2">
+                    <span className="px-3 py-1 bg-gradient-to-r from-red-500 to-orange-500 text-white text-sm font-bold rounded-full">
+                      🔥 HOT
+                    </span>
+                    <span className="px-3 py-1 bg-gradient-to-r from-green-500 to-emerald-500 text-white text-sm font-bold rounded-full">
+                      NEW TODAY
+                    </span>
                   </div>
+                </div>
 
                 {/* Category Tag */}
-                <div className="text-left"> </div><span className="text-left">Edge AI & Real-Time
-                  </span></span>/span>/span>/span>
+                <div className="mb-4">
+                  <span className="inline-block px-4 py-2 bg-gradient-to-r from-cyan-50 to-blue-50 text-gray-900 text-sm font-semibold rounded-full border border-white/20">
+                    Edge AI & Real-Time
+                  </span>
                 </div>
 
                 {/* Title */}
-                <h3 className="text-left">
+                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">
                   AI Edge Computing Real-Time Intelligence 2025
                 </h3>
 
                 {/* Excerpt */}
-                <p className="text-left">Deploy intelligence at the source with &lt;10ms latency. Achieve 95% bandwidth reduction, 
+                <p className="text-gray-300 mb-6 leading-relaxed">
+                  Deploy intelligence at the source with &lt;10ms latency. Achieve 95% bandwidth reduction, 
                   87% cost savings, and enhanced privacy compliance at enterprise scale.
-                </p></p>
+                </p>
 
                 {/* Key Stats */}
-                <div className="text-left"> </div><div className="text-left"> </div><div className="text-left">&lt;10ms</div>"
-                    <div className="text-left">Latency</div></div>
-                  <div className="text-left"> </div><div className="text-left">95%</div>"
-                    <div className="text-left">Bandwidth ↓</div></div>
-                  <div className="text-left"> </div><div className="text-left">87%</div>"
-                    <div className="text-left">Cost ↓</div></div>
+                <div className="grid grid-cols-3 gap-4 mb-6">
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-cyan-400">&lt;10ms</div>
+                    <div className="text-sm text-gray-400">Latency</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-green-400">95%</div>
+                    <div className="text-sm text-gray-400">Bandwidth ↓</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-purple-400">87%</div>
+                    <div className="text-sm text-gray-400">Cost ↓</div>
+                  </div>
+                </div>
 
                 {/* Meta Info */}
-                <div className="text-left"> </div><span>⏱️ 35 min read</span>
+                <div className="flex items-center gap-4 mb-6 text-sm text-gray-400">
+                  <span>⏱️ 35 min read</span>
                   <span>📅 Sep 30, 2025</span>
                 </div>
 
                 {/* CTA Button */}
-                <div className="text-left"> </div><span>Read Full Article</span>
-                  <span className="text-left">→</span>/span>/span>/span>
+                <div className="flex items-center justify-center gap-2 text-cyan-400 font-semibold group-hover:text-white transition-colors">
+                  <span>Read Full Article</span>
+                  <span className="group-hover:translate-x-1 transition-transform">→</span>
                 </div>
+              </div>
             </div>
           </Link>
 
           {/* Article 2: Neural Networks */}
-          <Link href="/blog/ai-neural-networks-enterprise-transformation-2025" className="text-left">
-            <div className="text-left"> </div><div className="text-left"> </div><div className="text-left"> </div><div className="text-left"> </div><div className="text-left">🧠
-                  </div></div>
-                  <div className="text-left"> </div><div className="text-left"> </div><span className="text-left">🔥</span>/span>/span>/span>
-                      <span>HOT</span>
-                    </div>
-                    <span className="text-left">NEW TODAY
-                    </span></span>/span>/span>/span>
+          <Link href="/blog/ai-neural-networks-enterprise-transformation-2025" className="group">
+            <div className="relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-500 hover:scale-105">
+              <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-pink-500/10 opacity-0 group-hover:opacity-100 transition-all duration-500 rounded-2xl"></div>
+              
+              <div className="relative z-10">
+                <div className="flex items-center justify-between mb-6">
+                  <div className="text-4xl">🧠</div>
+                  <div className="flex gap-2">
+                    <span className="px-3 py-1 bg-gradient-to-r from-red-500 to-orange-500 text-white text-sm font-bold rounded-full">
+                      🔥 HOT
+                    </span>
+                    <span className="px-3 py-1 bg-gradient-to-r from-green-500 to-emerald-500 text-white text-sm font-bold rounded-full">
+                      NEW TODAY
+                    </span>
                   </div>
-
-                <div className="text-left"> </div><span className="text-left">Neural Networks & AI
-                  </span></span>/span>/span>/span>
                 </div>
 
-                <h3 className="text-left">
+                <div className="mb-4">
+                  <span className="inline-block px-4 py-2 bg-gradient-to-r from-purple-50 to-pink-50 text-gray-900 text-sm font-semibold rounded-full border border-white/20">
+                    Neural Networks & AI
+                  </span>
+                </div>
+
+                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-purple-400 transition-colors">
                   AI Neural Networks Enterprise Transformation 2025
                 </h3>
 
-                <p className="text-left">Deploy advanced neural network architectures. Fortune 500 implementations achieving 98.5% accuracy, 
+                <p className="text-gray-300 mb-6 leading-relaxed">
+                  Deploy advanced neural network architectures. Fortune 500 implementations achieving 98.5% accuracy, 
                   10x ROI, and 85% operational efficiency gains.
-                </p></p>
+                </p>
 
-                <div className="text-left"> </div><div className="text-left"> </div><div className="text-left">98.5%</div>"
-                    <div className="text-left">Accuracy</div></div>
-                  <div className="text-left"> </div><div className="text-left">10x</div>"
-                    <div className="text-left">ROI</div></div>
-                  <div className="text-left"> </div><div className="text-left">85%</div>"
-                    <div className="text-left">Efficiency</div></div>
+                <div className="grid grid-cols-3 gap-4 mb-6">
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-purple-400">98.5%</div>
+                    <div className="text-sm text-gray-400">Accuracy</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-green-400">10x</div>
+                    <div className="text-sm text-gray-400">ROI</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-pink-400">85%</div>
+                    <div className="text-sm text-gray-400">Efficiency</div>
+                  </div>
+                </div>
 
-                <div className="text-left"> </div><span>⏱️ 40 min read</span>
+                <div className="flex items-center gap-4 mb-6 text-sm text-gray-400">
+                  <span>⏱️ 40 min read</span>
                   <span>📅 Sep 30, 2025</span>
                 </div>
 
-                <div className="text-left"> </div><span>Read Full Article</span>
-                  <span className="text-left">→</span>/span>/span>/span>
+                <div className="flex items-center justify-center gap-2 text-purple-400 font-semibold group-hover:text-white transition-colors">
+                  <span>Read Full Article</span>
+                  <span className="group-hover:translate-x-1 transition-transform">→</span>
                 </div>
+              </div>
             </div>
           </Link>
 
           {/* Article 3: Quantum Security */}
-          <Link href="/blog/ai-quantum-security-protocols-2026" className="text-left">
-            <div className="text-left"> </div><div className="text-left"> </div><div className="text-left"> </div><div className="text-left"> </div><div className="text-left">⚛️
-                  </div></div>
-                  <div className="text-left"> </div><div className="text-left"> </div><span className="text-left">🚨</span>/span>/span>/span>
-                      <span>CRITICAL</span>
-                    </div>
-                    <span className="text-left">NEW TODAY
-                    </span></span>/span>/span>/span>
+          <Link href="/blog/ai-quantum-security-protocols-2026" className="group">
+            <div className="relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-500 hover:scale-105">
+              <div className="absolute inset-0 bg-gradient-to-br from-red-500/10 to-orange-500/10 opacity-0 group-hover:opacity-100 transition-all duration-500 rounded-2xl"></div>
+              
+              <div className="relative z-10">
+                <div className="flex items-center justify-between mb-6">
+                  <div className="text-4xl">⚛️</div>
+                  <div className="flex gap-2">
+                    <span className="px-3 py-1 bg-gradient-to-r from-red-500 to-orange-500 text-white text-sm font-bold rounded-full">
+                      🚨 CRITICAL
+                    </span>
+                    <span className="px-3 py-1 bg-gradient-to-r from-green-500 to-emerald-500 text-white text-sm font-bold rounded-full">
+                      NEW TODAY
+                    </span>
                   </div>
-
-                <div className="text-left"> </div><span className="text-left">Quantum Security
-                  </span></span>/span>/span>/span>
                 </div>
 
-                <h3 className="text-left">
+                <div className="mb-4">
+                  <span className="inline-block px-4 py-2 bg-gradient-to-r from-red-50 to-orange-50 text-gray-900 text-sm font-semibold rounded-full border border-white/20">
+                    Quantum Security
+                  </span>
+                </div>
+
+                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-red-400 transition-colors">
                   AI Quantum Security Protocols 2026
                 </h3>
 
-                <p className="text-left">Protect AI systems with quantum-resistant cryptography. Achieve 99.99% security against classical 
+                <p className="text-gray-300 mb-6 leading-relaxed">
+                  Protect AI systems with quantum-resistant cryptography. Achieve 99.99% security against classical 
                   and quantum attacks with sub-millisecond overhead.
-                </p></p>
+                </p>
 
-                <div className="text-left"> </div><div className="text-left"> </div><div className="text-left">99.99%</div>"
-                    <div className="text-left">Security</div></div>
-                  <div className="text-left"> </div><div className="text-left">&lt;1ms</div>"
-                    <div className="text-left">Overhead</div></div>
-                  <div className="text-left"> </div><div className="text-left">Zero</div>"
-                    <div className="text-left">Breaches</div></div>
+                <div className="grid grid-cols-3 gap-4 mb-6">
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-red-400">99.99%</div>
+                    <div className="text-sm text-gray-400">Security</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-orange-400">&lt;1ms</div>
+                    <div className="text-sm text-gray-400">Overhead</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-green-400">Zero</div>
+                    <div className="text-sm text-gray-400">Breaches</div>
+                  </div>
+                </div>
 
-                <div className="text-left"> </div><span>⏱️ 45 min read</span>
+                <div className="flex items-center gap-4 mb-6 text-sm text-gray-400">
+                  <span>⏱️ 45 min read</span>
                   <span>📅 Sep 30, 2025</span>
                 </div>
 
-                <div className="text-left"> </div><span>Read Full Article</span>
-                  <span className="text-left">→</span>/span>/span>/span>
+                <div className="flex items-center justify-center gap-2 text-red-400 font-semibold group-hover:text-white transition-colors">
+                  <span>Read Full Article</span>
+                  <span className="group-hover:translate-x-1 transition-transform">→</span>
                 </div>
+              </div>
             </div>
           </Link>
-
         </div>
 
         {/* Call-to-Action Section */}
-        <div className="text-left"> </div><div className="text-left"> </div><div className="text-left"> </div><h3 className="text-left">
-                Transform Your Enterprise with Cutting-Edge AI
-              </h3>
-              <p className="text-left">Join 50,000+ AI leaders implementing these breakthrough technologies. Get expert guidance 
-                from Zion Tech Group's AI transformation specialists.
-              </p></p>
-              <div className="text-left"> </div><a
-                  href="tel:+13024640950"
-                  className="text-left"> </a><span className="text-left">📞</span>/span>/span>/span>
-                  <span>Call +1 302 464 0950</span>
-                </a>
-                <a
-                  href="mailto:kleber@ziontechgroup.com"
-                  className="text-left"> </a><span className="text-left">📧</span>/span>/span>/span>
-                  <span>Get Expert Consultation</span>
-                </a>
-              </div>
+        <div className="text-center bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-12 mb-16">
+          <h3 className="text-3xl font-bold text-white mb-6">
+            Transform Your Enterprise with Cutting-Edge AI
+          </h3>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Join 50,000+ AI leaders implementing these breakthrough technologies. Get expert guidance 
+            from Zion Tech Group's AI transformation specialists.
+          </p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a
+              href="tel:+13024640950"
+              className="flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl"
+            >
+              <span className="text-2xl">📞</span>
+              <span>Call +1 302 464 0950</span>
+            </a>
+            <a
+              href="mailto:kleber@ziontechgroup.com"
+              className="flex items-center gap-3 border-2 border-white/20 hover:border-white/40 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1"
+            >
+              <span className="text-2xl">📧</span>
+              <span>Get Expert Consultation</span>
+            </a>
           </div>
+        </div>
 
         {/* Stats Section */}
-        <div className="text-left">{[
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          {[
             { value: '500+', label: 'Enterprise Clients' },
             { value: '10B+', label: 'Data Points Processed Daily' },
             { value: '99.9%', label: 'System Uptime' },
             { value: '5M+', label: 'Autonomous Operations Hours' }
           ].map((stat, index) => (
-            </div><div key={index} className="text-left"> </div><div className="text-left">{stat.value}
-              </div></div>
-              <div className="text-left">{stat.label}
-              </div></div>
+            <div key={index} className="text-center">
+              <div className="text-3xl font-bold text-cyan-400 mb-2">{stat.value}</div>
+              <div className="text-gray-300">{stat.label}</div>
             </div>
           ))}
         </div>
+      </div>
     </section>
   );
 };
