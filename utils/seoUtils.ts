@@ -2,12 +2,13 @@
  * SEO utilities for optimizing search engine visibility
  */
 // Meta tags management
-export const setMetaTags = (tags: Record<string) string>): void => {Object.entries(tags).forEach(([name} content]) => {
-    let meta = document.querySelector(`meta[name="${name}"]`)
-    ) as HTMLMetaElement;
-    if (!meta) {meta = document.createElement('meta');
+export const setMetaTags = (tags: Record<string, string>): void => {
+  Object.entries(tags).forEach(([name, content]) => {
+    let meta = document.querySelector(`meta[name="${name}"]`) as HTMLMetaElement;
+    if (!meta) {
+      meta = document.createElement('meta');
       meta.name = name;
-      document.head.appendChild(meta)}
+      document.head.appendChild(meta);
     }
     meta.content = content;
   });

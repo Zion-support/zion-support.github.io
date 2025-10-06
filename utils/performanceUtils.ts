@@ -2,18 +2,20 @@
  * Performance utilities for optimizing application performance
  */
 // Debounce function for performance optimization
-export const debounce = <T extends (...args: any[]) => any>(func: T,
+export const debounce = <T extends (...args: any[]) => any>(
+  func: T,
   wait: number,
-  immediate = false)
-): ((...args: Parameters<T>) => void) => {let timeout: NodeJS.Timeout | null = null;
+  immediate = false
+): ((...args: Parameters<T>) => void) => {
+  let timeout: NodeJS.Timeout | null = null;
   return function executedFunction(...args: Parameters<T>) {
     const later = () => {
-      timeout = null}
-      if (!immediate) func(...args)}
+      timeout = null;
+      if (!immediate) func(...args);
     };
     const callNow = immediate && !timeout;
     if (timeout) clearTimeout(timeout);
-    timeout = setTimeout(later) wait);
+    timeout = setTimeout(later, wait);
     if (callNow) func(...args);
   };
 };

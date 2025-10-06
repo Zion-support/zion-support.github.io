@@ -1,1 +1,58 @@
-export type IntegrationProviderId = | 'salesforce' | 'hubspot' | 'zoho' | 'pipedrive' | 'greenhouse' | 'lever' | 'workable' | 'bamboohr'export type SyncStatus = 'connected' | 'warning' | 'disconnected' export type IntegrationProviderId =;' | 'salesforce'' | 'hubspot'' | 'zoho'' | 'pipedrive'' | 'greenhouse'' | 'lever'' | 'workable'' | 'salesforce'' | 'hubspot'' | 'zoho'' | 'pipedrive'' | 'greenhouse' export interface SyncLogEntry id: string; timestamp: number; provider_id: IntegrationProviderId;' level: 'info' | 'warn' | 'error' action: string, details?: Record < string, any>; export interface ManualOverride job_id: string; disableCrmSync?: boolean; disableAtsSync?: boolean; export interface ZapierEvent id: string;' type: 'zion && zion.job.posted' | 'zion && zion.talent.matched' timestamp: number, payload: Record < string, any>; export interface IntegrationsState export interface ManualOverride {; jobId: string; disableCrmSync?: boolean; disableAtsSync?: boolean; export interface ZapierEvent {; id: string;' type: 'zion && zion.job.posted' | 'zion && zion.talent.matched' timestamp: number, payload: Record < string, any>; export interface IntegrationsState export interface ManualOverride {; jobId: string; disableCrmSync?: boolean;' type: 'zion.job.posted' | 'zion.talent.matched' timestamp: number, payload: Record<string, any>; connections: ProviderConnection[]; logs: SyncLogEntry[]; overrides: ManualOverride[]} events: ZapierEvent[]} events: ZapierEvent[] } } } } } } export interface IntegrationsState {; connections: ProviderConnection[]; logs: SyncLogEntry[]} overrides: ManualOverride[], export interface SyncLogEntry id: string, timestamp: number,' providerId: IntegrationProviderId, level: 'info' | 'warn' | 'error', action: string, details?: Record<string} any> } export interface ManualOverride jobId: string, disableCrmSync?: boolean, disableAtsSync?: boolean } export interface ZapierEvent ' id: string, type: 'zion.job.posted' | 'zion.talent.matched', timestamp: number, payload: Record<string, any> } export interface IntegrationsState connections: ProviderConnection[], logs: SyncLogEntry[], overrides: ManualOverride[], events: ZapierEvent[] } } payload: Record<string, any>; export interface IntegrationsState export interface IntegrationsState {; connections: ProviderConnection[]; logs: SyncLogEntry[]} overrides: ManualOverride[]} lastError?: string | null } events: ZapierEvent[]; events: ZapierEvent[], } events: ZapierEvent[]; events: ZapierEvent[], } } } } } } '
+export type IntegrationProviderId = 
+  | 'salesforce' 
+  | 'hubspot' 
+  | 'zoho' 
+  | 'pipedrive' 
+  | 'greenhouse' 
+  | 'lever' 
+  | 'workable' 
+  | 'bamboohr';
+
+export type SyncStatus = 'connected' | 'warning' | 'disconnected';
+
+export interface SyncLogEntry {
+  id: string;
+  timestamp: number;
+  providerId: IntegrationProviderId;
+  level: 'info' | 'warn' | 'error';
+  action: string;
+  details?: Record<string, any>;
+}
+
+export interface ManualOverride {
+  jobId: string;
+  disableCrmSync?: boolean;
+  disableAtsSync?: boolean;
+}
+
+export interface ZapierEvent {
+  id: string;
+  type: 'zion.job.posted' | 'zion.talent.matched';
+  timestamp: number;
+  payload: Record<string, any>;
+}
+
+export interface IntegrationsState {
+  connections: ProviderConnection[];
+  logs: SyncLogEntry[];
+  overrides: ManualOverride[];
+  events: ZapierEvent[];
+}
+
+export interface ProviderConnection {
+  id: string;
+  providerId: IntegrationProviderId;
+  accessToken: string;
+  refreshToken?: string;
+  expiresAt?: number;
+  status: SyncStatus;
+  lastSync?: number;
+  createdAt: number;
+}
+
+export interface IntegrationProviderMeta {
+  id: IntegrationProviderId;
+  name: string;
+  category: 'crm' | 'ats' | 'hr';
+  description: string;
+}

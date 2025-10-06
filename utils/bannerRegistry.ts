@@ -60,8 +60,7 @@ export const BANNER_REGISTRY: BannerConfig[] = [
 /**
  * Get banners by category
  */
-export function getBannersByCategory(category: BannerConfig['category'])
-): BannerConfig[] {
+export function getBannersByCategory(category: BannerConfig['category']): BannerConfig[] {
   return BANNER_REGISTRY.filter(banner => banner.category === category && banner.enabled);
 }
 /**

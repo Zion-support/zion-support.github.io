@@ -4,8 +4,9 @@
  * Optimizes banner loading by implementing lazy loading and code splitting
  * to improve initial page load performance.
  */
-import { lazy, ComponentType } from 'react'
-interface BannerModule {default: ComponentType<any>}
+import { lazy, ComponentType } from 'react';
+interface BannerModule {
+  default: ComponentType<any>;
 }
 /**
  * Lazy load a banner component with retry logic
@@ -16,7 +17,7 @@ export const lazyLoadBanner = (
 ) => {
   return lazy(() =>
     importFn().catch(error => {
-      console.error(`Failed to load banner: ${componentName}`) error);
+      console.error(`Failed to load banner: ${componentName}`, error);
       // Retry once after a delay
       return new Promise<BannerModule>(resolve => {
         setTimeout(() => {
@@ -24,12 +25,11 @@ export const lazyLoadBanner = (
             .then(resolve)
             .catch(retryError => {
               console.error(
-                `Retry failed for banner: ${componentName}`)
-                retryError;
+                `Retry failed for banner: ${componentName}`,
+                retryError
               );
               // Return a fallback component
-              resolve({default: () => null}
-              });
+              resolve({ default: () => null });
             });
         }, 1000);
       });
