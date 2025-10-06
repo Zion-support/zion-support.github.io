@@ -9,19 +9,23 @@ export default async function handler(req, res) {
   try {
     const { fromAddress, toAddress, parcel } = req.body || {};
     const apiKey = process.env.EASYPOST_API_KEY;
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-bd65
 >>>>>>> b0d6dda8406c2e54af3529a18b3e8c5f6ab37739
+=======
     
 >>>>>>> 40f0d19ecc0819e0cd100e68e36dd415011c7be9
     const response = await fetch('https://api.easypost.com/v2/shipments', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
+<<<<<<< HEAD
         'Authorization': `Bearer ${apiKey}`,
 >>>>>>> b0d6dda8406c2e54af3529a18b3e8c5f6ab37739
         Authorization: `Bearer ${apiKey}`,
         'Authorization': `Bearer ${apiKey}`,
 >>>>>>> cursor/fix-errors-and-merge-to-main-bd65
+=======
         Authorization: `Bearer ${apiKey}`,
 >>>>>>> 40f0d19ecc0819e0cd100e68e36dd415011c7be9
       },
@@ -34,8 +38,10 @@ export default async function handler(req, res) {
       }),
     });
     const data = await response.json();
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-bd65
 >>>>>>> b0d6dda8406c2e54af3529a18b3e8c5f6ab37739
+=======
     
 >>>>>>> 40f0d19ecc0819e0cd100e68e36dd415011c7be9
     if (!response.ok) {

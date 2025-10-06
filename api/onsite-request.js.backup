@@ -27,8 +27,10 @@ async function handler(req, res) {
 
   const file = path.join(process.cwd(), 'data', 'onsite-requests.json');
   let existing = [];
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-bd65
 >>>>>>> b0d6dda8406c2e54af3529a18b3e8c5f6ab37739
+=======
   
 >>>>>>> 40f0d19ecc0819e0cd100e68e36dd415011c7be9
   try {

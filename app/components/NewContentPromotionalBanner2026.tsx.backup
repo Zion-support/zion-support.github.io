@@ -1,9 +1,6 @@
 import React from 'react';
 import { ArrowRight, Bot, Rocket, Shield, Target, TrendingUp, Zap } from 'lucide-react';
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import Link from 'next/link';
 import {
   Sparkles,
@@ -15,10 +12,7 @@ import {
   Zap,
 } from 'lucide-react';
 
-=======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e4e
-=======
->>>>>>> main
 >>>>>>> main
 const NewContentPromotionalBanner2026: React.FC = () => {
   const featuredContent = [
@@ -64,7 +58,6 @@ const NewContentPromotionalBanner2026: React.FC = () => {
   ];
 
   return (
-<<<<<<< HEAD
     <div className="relative overflow-hidden bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 py-20">
       {/* Animated background effects */}
       <div className="absolute inset-0">
@@ -111,8 +104,6 @@ const NewContentPromotionalBanner2026: React.FC = () => {
             <div className="flex items-center gap-2">
               <Target className="w-5 h-5 text-blue-400" />
               <span className="font-semibold">Proven Results</span>
-=======
-<<<<<<< HEAD
     <div className='relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden'>
       {/* Animated background effects */}
       <div className='absolute inset-0 overflow-hidden opacity-20'>
@@ -163,7 +154,6 @@ const NewContentPromotionalBanner2026: React.FC = () => {
             <div className='flex items-center gap-2'>
               <Target className='w-5 h-5' />
               <span>Proven Results</span>
-=======
     <div className="relative overflow-hidden bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
       {/* Animated background effects */}
       <div className="absolute inset-0">
@@ -211,15 +201,12 @@ const NewContentPromotionalBanner2026: React.FC = () => {
               <Target className="w-5 h-5 text-blue-400" />
               <span className="font-semibold">Proven Results</span>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e4e
-=======
->>>>>>> main
 >>>>>>> main
             </div>
           </div>
         </div>
 
         {/* Featured Content Cards */}
-<<<<<<< HEAD
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {featuredContent.map((content, index) => (
             <div 
@@ -228,8 +215,6 @@ const NewContentPromotionalBanner2026: React.FC = () => {
               style={{ animationDelay: `${index * 150}ms` }}
             >
               {/* Card glow effect */}
-=======
-<<<<<<< HEAD
         <div className='grid md:grid-cols-3 gap-8 mb-16'>
           {featuredContent.map((content, index) => (
             <div
@@ -249,7 +234,6 @@ const NewContentPromotionalBanner2026: React.FC = () => {
                   <div
                     className={`px-4 py-2 rounded-full bg-gradient-to-r ${content.badgeColor} text-white text-sm font-bold shadow-lg`}
                   >
-=======
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {featuredContent.map((content, index) => (
             <div 
@@ -258,7 +242,6 @@ const NewContentPromotionalBanner2026: React.FC = () => {
               style={{ animationDelay: `${index * 150}ms` }}
             >
               {/* Card glow effect */}
->>>>>>> main
               <div className={`absolute inset-0 bg-gradient-to-br ${content.color} opacity-0 group-hover:opacity-10 transition-all duration-500 rounded-2xl`}></div>
               
               <div className="relative z-10">
@@ -266,32 +249,22 @@ const NewContentPromotionalBanner2026: React.FC = () => {
                 <div className="flex items-center justify-between mb-6">
                   <div className="text-4xl">{content.icon}</div>
                   <div className={`px-4 py-2 rounded-full bg-gradient-to-r ${content.badgeColor} text-white text-sm font-bold shadow-lg`}>
-<<<<<<< HEAD
-=======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e4e
-=======
->>>>>>> main
 >>>>>>> main
                     {content.badge}
                   </div>
                 </div>
 
                 {/* Category */}
-<<<<<<< HEAD
                 <div className="mb-4">
                   <span className={`inline-block px-4 py-2 rounded-full bg-gradient-to-r ${content.bgColor} text-gray-900 text-sm font-semibold border border-white/20`}>
-=======
-<<<<<<< HEAD
                 <div className='mb-4'>
                   <span
                     className={`inline-block px-4 py-2 rounded-full bg-gradient-to-r ${content.bgColor} text-gray-900 text-sm font-semibold border border-white/20`}
                   >
-=======
                 <div className="mb-4">
                   <span className={`inline-block px-4 py-2 rounded-full bg-gradient-to-r ${content.bgColor} text-gray-900 text-sm font-semibold border border-white/20`}>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e4e
-=======
->>>>>>> main
 >>>>>>> main
                     {content.category}
                   </span>
@@ -305,13 +278,8 @@ const NewContentPromotionalBanner2026: React.FC = () => {
                 </h3>
 
                 {/* Excerpt */}
-<<<<<<< HEAD
                 <p className="text-gray-300 mb-6 leading-relaxed">
-=======
-<<<<<<< HEAD
                 <p className='text-gray-300 mb-6 leading-relaxed'>
-=======
->>>>>>> main
 >>>>>>> main
                   {content.excerpt}
                 </p>
@@ -321,37 +289,28 @@ const NewContentPromotionalBanner2026: React.FC = () => {
                   href={`/blog/${content.slug}`}
                   className={`group/btn flex items-center justify-center gap-3 w-full bg-gradient-to-r ${content.color} hover:shadow-2xl text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 transform hover:-translate-y-1`}
                 >
-<<<<<<< HEAD
                   <span>Read Full Article</span>
                   <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-1 transition-transform" />
-=======
-<<<<<<< HEAD
                   <span className="text-lg">Read Full Article</span>
                   <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-2 transition-transform duration-300" />
->>>>>>> main
                 </Link>
 
-<<<<<<< HEAD
               {/* Corner accent */}
               <div className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${content.color} opacity-10 rounded-bl-full`}></div>
-=======
                 {/* Corner accent */}
                 <div
                   className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${content.color} opacity-10 rounded-bl-full`}
                 />
               </div>
-=======
               </div>
                 </Link>
 
->>>>>>> main
 >>>>>>> main
             </div>
           ))}
         </div>
 
         {/* Bottom CTA Section */}
-<<<<<<< HEAD
         <div className="text-center bg-white/5 backdrop-blur-lg rounded-2xl p-12 border border-white/20">
           <div className="flex items-center justify-center gap-3 mb-6">
             <Rocket className="w-8 h-8 text-blue-400" />
@@ -362,8 +321,6 @@ const NewContentPromotionalBanner2026: React.FC = () => {
           </div>
           
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-=======
-<<<<<<< HEAD
         <div className='text-center bg-white/5 backdrop-blur-lg rounded-3xl border border-white/10 p-12'>
           <div className='flex items-center justify-center gap-4 mb-6'>
             <Rocket className='w-8 h-8 text-cyan-400' />
@@ -431,7 +388,6 @@ const NewContentPromotionalBanner2026: React.FC = () => {
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold text-purple-400 mb-2">24/7</div>
-=======
         <div className="text-center bg-white/5 backdrop-blur-lg rounded-2xl p-12 border border-white/20">
           <div className="flex items-center justify-center gap-3 mb-6">
             <Rocket className="w-8 h-8 text-cyan-400" />
@@ -442,23 +398,19 @@ const NewContentPromotionalBanner2026: React.FC = () => {
           </div>
           
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
->>>>>>> main
             Join 500+ enterprises achieving <span className="text-yellow-400 font-bold">300% ROI</span>, 
             <span className="text-green-400 font-bold"> 85% automation</span>, and 
             <span className="text-blue-400 font-bold"> complete digital transformation</span> with Zion Tech Group's AI solutions
           </p>
 
-<<<<<<< HEAD
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
             <Link
               href="/contact"
               className="group flex items-center gap-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl"
-=======
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
             <Link
               href="/contact"
               className="group flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl"
->>>>>>> main
             >
               <Sparkles className="w-5 h-5" />
               <span>Start Your AI Journey</span>
@@ -466,11 +418,8 @@ const NewContentPromotionalBanner2026: React.FC = () => {
             
             <Link
               href="/blog"
-<<<<<<< HEAD
               className="group flex items-center gap-3 border-2 border-white/30 hover:border-white/60 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1"
-=======
               className="group flex items-center gap-3 border-2 border-white/30 hover:border-white/60 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 hover:bg-white/10"
->>>>>>> main
             >
               <span>Explore All Content</span>
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -478,7 +427,6 @@ const NewContentPromotionalBanner2026: React.FC = () => {
           </div>
 
           {/* Stats */}
-<<<<<<< HEAD
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="text-3xl font-bold text-yellow-400 mb-2">500+</div>
@@ -494,7 +442,6 @@ const NewContentPromotionalBanner2026: React.FC = () => {
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold text-purple-400 mb-2">24/7</div>
-=======
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-12 pt-8 border-t border-white/20">
             <div className="text-center">
               <div className="text-3xl font-bold text-white mb-2">500+</div>
@@ -511,8 +458,6 @@ const NewContentPromotionalBanner2026: React.FC = () => {
             <div className="text-center">
               <div className="text-3xl font-bold text-white mb-2">24/7</div>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e4e
-=======
->>>>>>> main
 >>>>>>> main
               <div className="text-gray-300">Expert Support</div>
             </div>

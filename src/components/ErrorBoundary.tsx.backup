@@ -1,42 +1,21 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> main
 import { Component } from 'react';
 import type { ErrorInfo, ReactNode } from 'react';
 import { AlertTriangle } from 'lucide-react';
 =======
-<<<<<<< HEAD
 import { Component, ErrorInfo, ReactNode } from 'react';
 import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
-=======
-<<<<<<< HEAD
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 
 interface Props {
   children: ReactNode;
-=======
-<<<<<<< HEAD
 import { Component, type ErrorInfo, type ReactNode } from 'react';
-=======
-<<<<<<< HEAD
 import { Component, type ErrorInfo, type ReactNode } from 'react';
-=======
-<<<<<<< HEAD
 import { Component, type ErrorInfo, type ReactNode } from 'react';
-=======
-<<<<<<< HEAD
 import { Component, type ErrorInfo, type ReactNode } from 'react';
-=======
-<<<<<<< HEAD
 import { Component, type ErrorInfo, type ReactNode } from 'react';
-=======
-<<<<<<< HEAD
 import { Component, type ErrorInfo, type ReactNode } from 'react';
-=======
 import { Component } from 'react';
 import type { ErrorInfo, ReactNode } from 'react';
->>>>>>> main
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main
@@ -48,20 +27,14 @@ import type { ErrorInfo, ReactNode } from 'react';
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
-<<<<<<< HEAD
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
-=======
->>>>>>> main
 >>>>>>> main
 }
 
 interface State {
   hasError: boolean;
   error?: Error;
-<<<<<<< HEAD
   errorId?: string;
-=======
->>>>>>> main
 }
 
 class ErrorBoundary extends Component<Props, State> {
@@ -71,7 +44,6 @@ class ErrorBoundary extends Component<Props, State> {
   }
 
   static getDerivedStateFromError(error: Error): State {
-<<<<<<< HEAD
     return { 
       hasError: true, 
       error,
@@ -91,9 +63,7 @@ class ErrorBoundary extends Component<Props, State> {
     }
   }
 
-<<<<<<< HEAD
   override render() {
-=======
   private reportError = (error: Error, errorInfo: ErrorInfo) => {
     // Report to external service (e.g., Sentry, LogRocket, etc.)
     if (typeof window !== 'undefined' && (window as any).gtag) {
@@ -117,7 +87,6 @@ class ErrorBoundary extends Component<Props, State> {
   };
 
   render() {
->>>>>>> main
     if (this.state.hasError) {
       return this.props.fallback || (
         <div className="min-h-screen flex items-center justify-center bg-gray-900">
@@ -158,14 +127,10 @@ class ErrorBoundary extends Component<Props, State> {
     return { hasError: true, error };
   }
 
-<<<<<<< HEAD
   override componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
-=======
-<<<<<<< HEAD
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     console.error('ErrorBoundary caught an error:', error, errorInfo);
->>>>>>> main
   }
 
   override render() {
@@ -191,28 +156,15 @@ class ErrorBoundary extends Component<Props, State> {
       return this.props.fallback || (
         <div className="min-h-screen flex items-center justify-center bg-gray-900">
           <div className="text-center p-8">
-<<<<<<< HEAD
             <div className="w-16 h-16 text-red-500 mx-auto mb-4 text-6xl">⚠️</div>
-=======
-<<<<<<< HEAD
             <div className="text-6xl mb-4">⚠️</div>
-=======
-<<<<<<< HEAD
             <div className="w-16 h-16 text-red-500 mx-auto mb-4 text-6xl">⚠️</div>
-=======
-<<<<<<< HEAD
             <div className="w-16 h-16 text-red-500 mx-auto mb-4 text-6xl">⚠️</div>
-=======
-<<<<<<< HEAD
             <div className="w-16 h-16 text-red-500 mx-auto mb-4 text-6xl">⚠️</div>
-=======
-<<<<<<< HEAD
             <div className="w-16 h-16 bg-red-500 rounded-full mx-auto mb-4 flex items-center justify-center">
               <span className="text-white text-2xl font-bold">!</span>
             </div>
-=======
             <div className="w-16 h-16 text-red-500 mx-auto mb-4 text-6xl">⚠️</div>
->>>>>>> main
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main
@@ -240,12 +192,7 @@ class ErrorBoundary extends Component<Props, State> {
   }
 }
 
-<<<<<<< HEAD
 export default ErrorBoundary;
-=======
-<<<<<<< HEAD
 export default ErrorBoundary;
-=======
 export default ErrorBoundary;
->>>>>>> main
 >>>>>>> main

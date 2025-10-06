@@ -2,9 +2,6 @@ import React from 'react';
 
 const ContactPage: React.FC = () => {
   return (
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     <div className='min-h-screen bg-slate-50 py-16'>
       <div className='container mx-auto px-4'>
         <h1 className='text-4xl font-bold text-gray-900 mb-8 text-center'>
@@ -34,20 +31,6 @@ const ContactPage: React.FC = () => {
               </div>
               <div>
                 <label className='block text-sm font-medium text-gray-700 mb-2'>
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     <div className='min-h-screen bg-slate-50 py-16'>
       <div className='container mx-auto px-4'>
         <div className='max-w-4xl mx-auto'>
@@ -120,8 +103,6 @@ const ContactPage: React.FC = () => {
                     United States
                   </p>
                 </div>
-=======
->>>>>>> main
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main
@@ -157,9 +138,6 @@ const ContactPage: React.FC = () => {
               </div>
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
-<<<<<<< HEAD
-=======
->>>>>>> main
 >>>>>>> main
                   Message
                 </label>
@@ -171,18 +149,12 @@ const ContactPage: React.FC = () => {
               <button
                 type="submit"
                 className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors"
-<<<<<<< HEAD
-=======
->>>>>>> main
 >>>>>>> main
               >
                 Send Message
               </button>
             </form>
           </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
           <div className='bg-white p-6 rounded-lg shadow-md'>
             <h3 className='text-xl font-semibold mb-4'>Contact Information</h3>
             <div className='space-y-4'>
@@ -197,18 +169,13 @@ const ContactPage: React.FC = () => {
               <div>
                 <h4 className='font-medium text-gray-900'>Address</h4>
                 <p className='text-gray-600'>
-=======
->>>>>>> main
           <div className="bg-white p-6 rounded-lg shadow-md">
             <h3 className="text-xl font-semibold mb-4">Contact Information</h3>
             <div className="space-y-4">
               <div>
                 <h4 className="font-medium text-gray-900">Email</h4>
-<<<<<<< HEAD
                 <p className="text-gray-600">kleber@ziontechgroup.com</p>
-=======
                 <p className="text-gray-600">info@ziontechgroup.com</p>
->>>>>>> main
               </div>
               <div>
                 <h4 className="font-medium text-gray-900">Phone</h4>
@@ -217,45 +184,26 @@ const ContactPage: React.FC = () => {
               <div>
                 <h4 className="font-medium text-gray-900">Address</h4>
                 <p className="text-gray-600">
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> main
 >>>>>>> main
                   Zion Tech Group<br />
                   364 E Main St STE 1008<br />
                   Middletown, DE 19709<br />
                   United States
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
                   123 Business Street<br />
                   Suite 100<br />
                   Wilmington, DE 19801
-=======
-<<<<<<< HEAD
                   364 E Main St STE 1008<br />
                   Middletown, DE 19709<br />
                   United States
-=======
                   Zion Tech Group<br />
                   Wilmington, DE 19801<br />
                   United States
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
                   123 Business Street<br />
                   Suite 100<br />
                   Wilmington, DE 19801
-=======
                   Zion Tech Group<br />
                   Wilmington, DE 19801<br />
                   United States
->>>>>>> main
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main

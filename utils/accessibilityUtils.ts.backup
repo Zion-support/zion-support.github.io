@@ -61,7 +61,9 @@ export const ariaUtils = {
   },
 
   // Set ARIA attributes
+<<<<<<< HEAD
   setAriaAttributes: (element: HTMLElement, attributes: Record<string, string>): void => {
+=======
   setAriaAttributes: (
     element: HTMLElement,
     attributes: Record<string, string>
@@ -73,7 +75,9 @@ export const ariaUtils = {
   },
 
   // Announce to screen readers
+<<<<<<< HEAD
   announce: (message: string, priority: 'polite' | 'assertive' = 'polite'): void => {
+=======
   announce: (
     message: string,
     priority: 'polite' | 'assertive' = 'polite'
@@ -92,6 +96,8 @@ export const ariaUtils = {
   },
 };
 
+<<<<<<< HEAD
+=======
 // Keyboard navigation utilities
 export const keyboardNavigation = {
   // Handle arrow key navigation for lists
@@ -140,6 +146,7 @@ export const colorContrast = {
       c = c / 255;
       return c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4);
     });
+<<<<<<< HEAD
     return 0.2126 * (rs ?? 0) + 0.7152 * (gs ?? 0) + 0.0722 * (bs ?? 0);
   },
 
@@ -162,6 +169,7 @@ export const colorContrast = {
     const lum1 = colorContrast.getLuminance(rgb1.r ?? 0, rgb1.g ?? 0, rgb1.b ?? 0);
     const lum2 = colorContrast.getLuminance(rgb2.r ?? 0, rgb2.g ?? 0, rgb2.b ?? 0);
     
+=======
     return 0.2126 * rs + 0.7152 * gs + 0.0722 * bs;
   },
 
@@ -180,6 +188,7 @@ export const colorContrast = {
   },
 
   // Check if contrast meets WCAG standards
+<<<<<<< HEAD
   meetsWCAG: (color1: string, color2: string, level: 'AA' | 'AAA' = 'AA'): boolean => {
     const ratio = colorContrast.getContrastRatio(color1, color2);
     return level === 'AA' ? ratio >= 4.5 : ratio >= 7;
@@ -217,6 +226,7 @@ export const keyboardNavigation = {
       callback();
     }
   },
+=======
   meetsWCAG: (contrastRatio: number, level: 'AA' | 'AAA' = 'AA'): boolean => {
     return level === 'AA' ? contrastRatio >= 4.5 : contrastRatio >= 7;
   },

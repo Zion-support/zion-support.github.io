@@ -3,18 +3,13 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 
 // Components
-<<<<<<< HEAD
 import ErrorBoundary from './components/ErrorBoundary';
 import SEOOptimizer from './components/SEOOptimizer';
 import LoadingSpinner from './components/LoadingSpinner';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import PerformanceDashboard from './components/PerformanceDashboard';
-=======
-<<<<<<< HEAD
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import PerformanceDashboard from './components/PerformanceDashboard';
-=======
-<<<<<<< HEAD
 import ErrorBoundary from './components/ErrorBoundary';
 import SEOOptimizer from './components/SEOOptimizer';
 import LoadingSpinner from './components/LoadingSpinner';
@@ -22,45 +17,27 @@ import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import PerformanceDashboard from './components/PerformanceDashboard';
 import PerformanceMonitor from './components/PerformanceMonitor';
 >>>>>>> main
->>>>>>> main
 
-<<<<<<< HEAD
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./page'));
 
 // Utils
-<<<<<<< HEAD
 import { performanceOptimizer, prefetchResources } from '../src/utils/performanceOptimizer';
-=======
 import performanceOptimizer from '../src/utils/performanceOptimizer';
-=======
-=======
-<<<<<<< HEAD
 import ErrorBoundary from './components/ErrorBoundary';
 import SEOOptimizer from './components/SEOOptimizer';
-=======
-<<<<<<< HEAD
 import ErrorBoundary from './components/ErrorBoundary';
 import SEOOptimizer from './components/SEOOptimizer';
 import { LoadingSpinner } from '../components/LoadingComponents';
-=======
-<<<<<<< HEAD
 import ErrorBoundary from './components/ErrorBoundary';
 import SEOOptimizer from './components/SEOOptimizer';
-=======
-<<<<<<< HEAD
 import ErrorBoundary from './components/ErrorBoundary';
 import SEOOptimizer from './components/SEOOptimizer';
-=======
 import ErrorBoundary from '../src/components/ErrorBoundary';
 import SEOOptimizer from '../src/components/SEOOptimizer';
-<<<<<<< HEAD
 import LoadingSpinner from '../src/components/LoadingSpinner';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-=======
-<<<<<<< HEAD
 import AccessibilityEnhancer from '../components/disabled/AccessibilityEnhancer';
->>>>>>> main
 import PerformanceDashboard from './components/PerformanceDashboard';
 =======
 >>>>>>> main
@@ -73,14 +50,10 @@ import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 >>>>>>> main
 
-<<<<<<< HEAD
 // Loading component (fallback if import fails)
 const LoadingSpinnerFallback = () => (
-=======
-<<<<<<< HEAD
 // Loading component
 const LoadingSpinner = () => (
->>>>>>> main
   <div className="min-h-screen flex items-center justify-center bg-gray-50">
     <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
   </div>
@@ -95,11 +68,8 @@ import HomePage from './page';
 >>>>>>> main
 
 // Utils
-<<<<<<< HEAD
 import { performanceOptimizer } from '../src/utils/performanceOptimizer';
-=======
 // import performanceOptimizer from '../src/utils/performanceOptimizer';
->>>>>>> main
 >>>>>>> main
 >>>>>>> main
 
@@ -112,13 +82,9 @@ const App: React.FC = () => {
     console.log('App initialized');
 
     // Initialize performance monitoring
-<<<<<<< HEAD
     performanceOptimizer.lazyLoadImages();
-<<<<<<< HEAD
     prefetchResources(['/api/health']);
-=======
     performanceOptimizer.prefetchResources([]);
->>>>>>> main
     
     // Initialize Web Vitals monitoring
     if (typeof window !== 'undefined' && 'performance' in window) {
@@ -129,21 +95,11 @@ const App: React.FC = () => {
     }
     
 =======
-<<<<<<< HEAD
     performanceOptimizer.lazyLoadImages();
-<<<<<<< HEAD
     // Initialize Web Vitals monitoring
     if (typeof window !== 'undefined' && 'performance' in window) {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
       performanceOptimizer.measurePageLoad().then(metrics => {
-=======
-<<<<<<< HEAD
     performanceOptimizer.addCriticalResourceHints();
-=======
->>>>>>> main
     // Initialize Web Vitals monitoring
     if (typeof window !== 'undefined' && 'performance' in window) {
 >>>>>>> main
@@ -167,7 +123,6 @@ const App: React.FC = () => {
 
   return (
     <HelmetProvider>
-<<<<<<< HEAD
       <AccessibilityEnhancer>
         <Router>
           <div className='App'>
@@ -206,25 +161,17 @@ const App: React.FC = () => {
           </div>
         </Router>
       </AccessibilityEnhancer>
-=======
       <ErrorBoundary>
-<<<<<<< HEAD
         <SEOOptimizer>
           <AccessibilityEnhancer>
-=======
-<<<<<<< HEAD
         <div>
           <SEOOptimizer />
           <AccessibilityEnhancer>
-=======
-<<<<<<< HEAD
         <PerformanceMonitor>
           <SEOOptimizer>
             <AccessibilityEnhancer>
-=======
         <SEOOptimizer>
           <AccessibilityEnhancer>
->>>>>>> main
 >>>>>>> main
 >>>>>>> main
             <Router>
@@ -247,14 +194,12 @@ const App: React.FC = () => {
                   Skip to main content
                 </a>
 
-<<<<<<< HEAD
                 <Suspense fallback={<LoadingSpinner text="Loading..." />}>
                   <Routes>
                     <Route path='/' element={<HomePage />} />
                     {/* Add more routes as needed */}
                   </Routes>
                 </Suspense>
-=======
                 <Navigation />
                 
                 <Routes>
@@ -263,28 +208,20 @@ const App: React.FC = () => {
                 </Routes>
 
                 <Footer />
->>>>>>> main
 
                 {/* Performance Dashboard */}
                 <PerformanceDashboard />
               </div>
             </Router>
-<<<<<<< HEAD
           </AccessibilityEnhancer>
         </SEOOptimizer>
-=======
-<<<<<<< HEAD
           </AccessibilityEnhancer>
         </div>
-=======
-<<<<<<< HEAD
             </AccessibilityEnhancer>
           </SEOOptimizer>
         </PerformanceMonitor>
-=======
           </AccessibilityEnhancer>
         </SEOOptimizer>
->>>>>>> main
 >>>>>>> main
 >>>>>>> main
       </ErrorBoundary>

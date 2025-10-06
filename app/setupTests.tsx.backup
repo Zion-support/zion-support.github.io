@@ -1,14 +1,7 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 /**
  * Jest setup file for testing environment
  */
 
-=======
->>>>>>> main
 >>>>>>> main
 >>>>>>> main
 import '@testing-library/jest-dom';
@@ -30,13 +23,7 @@ Object.defineProperty(window, 'matchMedia', {
 
 // Mock IntersectionObserver
 global.IntersectionObserver = class IntersectionObserver {
-<<<<<<< HEAD
-=======
   root: Element | null = null;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> main
   rootMargin: string = '0px';
   thresholds: ReadonlyArray<number> = [0];
   
@@ -45,7 +32,6 @@ global.IntersectionObserver = class IntersectionObserver {
   disconnect() {}
   observe() {}
   unobserve() {}
-<<<<<<< HEAD
 };
 
 // Mock ResizeObserver
@@ -55,12 +41,8 @@ global.ResizeObserver = class ResizeObserver {
   observe() {}
   unobserve() {}
 };
-=======
   takeRecords() { return []; }
 } as any;
-<<<<<<< HEAD
-=======
-=======
   rootMargin: string = '';
   thresholds: ReadonlyArray<number> = Object.freeze([]);
   
@@ -71,21 +53,15 @@ global.ResizeObserver = class ResizeObserver {
   takeRecords(): IntersectionObserverEntry[] { return []; }
 } as unknown as typeof IntersectionObserver;
 >>>>>>> main
->>>>>>> main
 
 // Mock ResizeObserver
 global.ResizeObserver = class ResizeObserver {
   constructor() {}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> main
   disconnect() {}
   observe() {}
   unobserve() {}
 };
 
-<<<<<<< HEAD
 // Mock scrollTo
 Object.defineProperty(window, 'scrollTo', {
   value: jest.fn(),
@@ -123,7 +99,6 @@ afterAll(() => {
   console.error = originalError;
   console.warn = originalWarn;
 });
-=======
 // Mock performance API
 Object.defineProperty(window, 'performance', {
   writable: true,
@@ -143,11 +118,9 @@ global.requestAnimationFrame = (callback: FrameRequestCallback) => {
 global.cancelAnimationFrame = (id: number) => {
   clearTimeout(id);
 };
-=======
   disconnect(): void {}
   observe(): void {}
   unobserve(): void {}
 } as unknown as typeof ResizeObserver;
->>>>>>> main
 >>>>>>> main
 >>>>>>> main

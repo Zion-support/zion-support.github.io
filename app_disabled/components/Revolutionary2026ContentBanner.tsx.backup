@@ -4,8 +4,6 @@ import { ArrowRight, Brain, Zap, Sparkles, Cpu } from 'lucide-react';
 =======
 import { ArrowRight, Brain, Cpu, Zap } from 'lucide-react';
 
-
-
 >>>>>>> main:app_disabled/components/Revolutionary2026ContentBanner.tsx
 
 export default function Revolutionary2026ContentBanner() {

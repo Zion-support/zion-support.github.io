@@ -19,11 +19,8 @@ const UltimateBusinessIntelligence2025Banner = () => {
         roi: '30,000%',
         savings: '$750B+',
         accuracy: '99.99%',
-<<<<<<< HEAD
         speed: '5,000% faster'
-=======
         speed: '5,000% faster',
->>>>>>> main
       },
       readingTime: '35 min read',
       featured: true,
@@ -39,11 +36,8 @@ const UltimateBusinessIntelligence2025Banner = () => {
         roi: '30,000%',
         savings: '$750B',
         company: '$15.2B',
-<<<<<<< HEAD
         timeline: '18 months'
-=======
         timeline: '18 months',
->>>>>>> main
       },
       readingTime: '25 min read',
       featured: true,
@@ -59,36 +53,27 @@ const UltimateBusinessIntelligence2025Banner = () => {
         roi: '30,000%',
         success: '99.8%',
         timeline: '18 months',
-<<<<<<< HEAD
         adoption: '100%'
       },
       readingTime: '45 min read',
       featured: true
     }
-=======
         adoption: '100%',
       },
       readingTime: '45 min read',
       featured: true,
     },
->>>>>>> main
   ];
 
   useEffect(() => {
     const interval = setInterval(() => {
-<<<<<<< HEAD
       setCurrentSlide((prev) => (prev + 1) % content.length);
-=======
       setCurrentSlide(prev => (prev + 1) % content.length);
->>>>>>> main
     }, 5000);
 
     return () => clearInterval(interval);
   }, [content.length]);
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
   return (
     <section className='relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden'>
       {/* Animated Background Effects */}
@@ -246,16 +231,11 @@ const UltimateBusinessIntelligence2025Banner = () => {
                 }`}
           {/* Carousel Indicators */}
           <div className="flex justify-center gap-2 mt-8">
-=======
->>>>>>> main
   if (!isVisible) return null;
 
   return (
-<<<<<<< HEAD
     <section className="relative overflow-hidden bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 py-20">
-=======
     <div className="relative overflow-hidden bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
->>>>>>> main
       {/* Animated Background Effects */}
       <div className="absolute inset-0">
         <div className="absolute top-10 left-10 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl animate-pulse"></div>
@@ -263,16 +243,12 @@ const UltimateBusinessIntelligence2025Banner = () => {
         <div className="absolute bottom-20 left-1/3 w-80 h-80 bg-cyan-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
       </div>
 
-<<<<<<< HEAD
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-=======
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
->>>>>>> main
         {/* Header */}
         <div className="text-center mb-16">
           <div className="flex items-center justify-center gap-2 mb-6">
             <span className="text-2xl">🚀</span>
-<<<<<<< HEAD
             <span className="text-yellow-400 font-bold text-lg">
               ULTIMATE BUSINESS INTELLIGENCE REVOLUTION 2025
             </span>
@@ -376,7 +352,6 @@ const UltimateBusinessIntelligence2025Banner = () => {
 
           {/* Carousel Controls */}
           <div className="flex justify-center gap-2 mt-6">
-=======
             <span className="text-yellow-400 font-bold text-xl">
               ULTIMATE BREAKTHROUGH: AI 2025 BUSINESS INTELLIGENCE REVOLUTION
             </span>
@@ -457,26 +432,20 @@ const UltimateBusinessIntelligence2025Banner = () => {
           {/* Slide Indicators */}
           <div className="flex justify-center gap-2">
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e4e
-=======
->>>>>>> main
 >>>>>>> main
             {content.map((_, index) => (
               <button
                 key={index}
                 onClick={() => setCurrentSlide(index)}
                 className={`w-3 h-3 rounded-full transition-all duration-300 ${
-<<<<<<< HEAD
                   index === currentSlide ? 'bg-yellow-400' : 'bg-white/30'
-=======
                   index === currentSlide ? 'bg-cyan-400' : 'bg-white/30'
->>>>>>> main
                 }`}
               />
             ))}
           </div>
         </div>
 
-<<<<<<< HEAD
         {/* Call-to-Action Section */}
         <div className="text-center bg-white/5 backdrop-blur-lg rounded-2xl p-12 border border-white/20">
           <h3 className="text-3xl font-bold text-white mb-6">
@@ -500,8 +469,6 @@ const UltimateBusinessIntelligence2025Banner = () => {
               <span className="group-hover:translate-x-1 transition-transform">→</span>
             </Link>
           </div>
-=======
-<<<<<<< HEAD
         {/* Progress Indicators */}
         <div className="flex justify-center space-x-2 mt-8">
           {content.map((_, index) => (
@@ -514,7 +481,6 @@ const UltimateBusinessIntelligence2025Banner = () => {
               aria-label={`Go to slide ${index + 1}`}
             />
           ))}
->>>>>>> main
         </div>
 
         {/* Call-to-Action Section */}

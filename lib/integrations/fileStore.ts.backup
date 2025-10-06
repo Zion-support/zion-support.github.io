@@ -1,5 +1,6 @@
 import fs from "fs";
 import path from "path";
+<<<<<<< HEAD
 import { IntegrationsState } from "./types";
 const DATA_DIR = path.resolve(process.cwd(), "data", "integrations");
 const STATE_FILE = path.join(DATA_DIR, "state.json");
@@ -13,6 +14,7 @@ import { IntegrationsState } from './types';
 >>>>>>> b0d6dda8406c2e54af3529a18b3e8c5f6ab37739
 const DATA_DIR = path.resolve(process.cwd(), 'data', 'integrations');
 const STATE_FILE = path.join(DATA_DIR, 'state.json');
+=======
 import type { IntegrationsState } from "./types";
 
 const DATA_DIR = path.resolve(process.cwd(), "data", "integrations");
@@ -23,6 +25,8 @@ function ensureDataDir(): void {
   if (!fs.existsSync(DATA_DIR)) {
     fs.mkdirSync(DATA_DIR, { recursive: true });
   }
+<<<<<<< HEAD
+=======
   
 >>>>>>> 40f0d19ecc0819e0cd100e68e36dd415011c7be9
   if (!fs.existsSync(STATE_FILE)) {
@@ -34,16 +38,20 @@ function ensureDataDir(): void {
     };
     fs.writeFileSync(STATE_FILE, JSON.stringify(initial, null, 2), "utf8");
   }
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-bd65
+=======
 >>>>>>> 40f0d19ecc0819e0cd100e68e36dd415011c7be9
 }
 export function readState(): IntegrationsState {
   ensureDataDir();
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-bd65
   try {
     const raw = fs.readFileSync(STATE_FILE, "utf8");
   try {
     const raw = fs.readFileSync(STATE_FILE, 'utf8');
+=======
   
   try {
     const raw = fs.readFileSync(STATE_FILE, "utf8");
@@ -65,7 +73,9 @@ export function writeState(
   const current = readState();
   mutator(current);
   fs.writeFileSync(STATE_FILE, JSON.stringify(current, null, 2), "utf8");
+<<<<<<< HEAD
   fs.writeFileSync(STATE_FILE, JSON.stringify(current, null, 2), 'utf8');
+=======
 >>>>>>> 40f0d19ecc0819e0cd100e68e36dd415011c7be9
   return current;
 }

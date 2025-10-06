@@ -1,13 +1,8 @@
 import React from 'react';
-<<<<<<< HEAD
 import { ArrowRight, Bookmark, Rocket, TrendingUp, Zap } from 'lucide-react';
-=======
->>>>>>> main
 import Link from 'next/link';
-<<<<<<< HEAD
 import { Sparkles, TrendingUp, ArrowRight, Zap, Rocket, Star } from 'lucide-react';
 
-=======
 import {
   ArrowRight,
   Bookmark,
@@ -17,7 +12,6 @@ import {
   Sparkles,
   Star,
 } from 'lucide-react';
->>>>>>> main
 const September30NewContent2025Banner: React.FC = () => {
   const newArticles = [
     {
@@ -66,7 +60,6 @@ const September30NewContent2025Banner: React.FC = () => {
       date: '2025-09-30',
       readTime: '16 min',
       icon: '👁️',
-<<<<<<< HEAD
       gradient: 'from-emerald-500 to-teal-600'
     }
   ];
@@ -163,7 +156,6 @@ const September30NewContent2025Banner: React.FC = () => {
                   </div>
                 </div>
               </div>
-=======
       gradient: 'from-emerald-500 to-teal-600',
     },
   ];
@@ -428,15 +420,11 @@ const September30NewContent2025Banner: React.FC = () => {
                 </div>
               </div>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e4e
->>>>>>> main
             </Link>
           ))}
         </div>
 
         {/* Call-to-Action Section */}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
         <div>
           <div>
             <div>
@@ -464,13 +452,10 @@ const September30NewContent2025Banner: React.FC = () => {
                 </Link>
               </div>
             </div>
-=======
->>>>>>> main
         <div className="text-center bg-white/5 backdrop-blur-lg rounded-2xl p-12 border border-white/20 mb-16">
           <h3 className="text-3xl font-bold text-white mb-6">
             Transform Your Enterprise with Cutting-Edge AI
           </h3>
-<<<<<<< HEAD
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Join 50,000+ AI leaders implementing these breakthrough technologies. Get expert guidance 
             from Zion Tech Group's AI transformation specialists.
@@ -481,7 +466,6 @@ const September30NewContent2025Banner: React.FC = () => {
               className="group flex items-center gap-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl"
             >
               <Rocket className="w-5 h-5" />
-=======
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
             Join 50,000+ AI leaders implementing these breakthrough technologies. Get expert guidance 
             from Zion Tech Group's AI transformation specialists.
@@ -492,47 +476,37 @@ const September30NewContent2025Banner: React.FC = () => {
               className="flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl"
             >
               <Sparkles className="w-5 h-5" />
->>>>>>> main
               <span>Start Your AI Journey</span>
             </Link>
             <Link
               href="/blog"
-<<<<<<< HEAD
               className="group flex items-center gap-3 border-2 border-white/30 hover:border-white/60 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1"
             >
               <span>Explore All Content</span>
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Link>
-=======
               className="flex items-center gap-3 border-2 border-white/30 hover:border-white/60 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 hover:bg-white/10"
             >
               <span>Explore All Content</span>
               <ArrowRight className="w-5 h-5" />
             </Link>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e4e
->>>>>>> main
           </div>
         </div>
 
         {/* Stats Section */}
-<<<<<<< HEAD
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-=======
         <div className='grid grid-cols-2 md:grid-cols-4 gap-8'>
-=======
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e4e
->>>>>>> main
           {[
             { value: '500+', label: 'Enterprise Clients' },
             { value: '10B+', label: 'Data Points Processed Daily' },
             { value: '99.9%', label: 'System Uptime' },
-<<<<<<< HEAD
             { value: '5M+', label: 'Autonomous Operations Hours' }
           ].map((stat, index) => (
             <div key={index} className="text-center">
               <div className="text-3xl font-bold text-yellow-400 mb-2">{stat.value}</div>
-=======
             { value: '5M+', label: 'Autonomous Operations Hours' },
           ].map((stat, index) => (
             <div key={index} className='text-center'>
@@ -583,13 +557,11 @@ const September30NewContent2025Banner: React.FC = () => {
           ].map((stat, index) => (
             <div key={index} className="text-center">
               <div className="text-3xl font-bold text-cyan-400 mb-2">{stat.value}</div>
-=======
             { value: '5M+', label: 'Autonomous Operations Hours' }
           ].map((stat, index) => (
             <div key={index} className="text-center">
               <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e4e
->>>>>>> main
               <div className="text-gray-300">{stat.label}</div>
             </div>
           ))}

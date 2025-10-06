@@ -16,8 +16,10 @@ export interface IntegrationProviderMeta {
   category: 'crm' | 'ats' | 'hr';
   description: string;
 }
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-bd65
 >>>>>>> 73aae067a8789e7f94c7cf242d65c42e6717fb43
+=======
 
 >>>>>>> 40f0d19ecc0819e0cd100e68e36dd415011c7be9
 export interface ProviderConnection {
@@ -25,6 +27,7 @@ export interface ProviderConnection {
   providerId: IntegrationProviderId;
   accessToken: string;
   refreshToken?: string;
+<<<<<<< HEAD
   expiresAt?: number;
   status: SyncStatus;
   lastSync?: number;
@@ -34,11 +37,13 @@ export interface ProviderConnection {
   createdAt: number;
   updatedAt: number;
 >>>>>>> cursor/fix-errors-and-merge-to-main-bd65
+=======
 >>>>>>> 40f0d19ecc0819e0cd100e68e36dd415011c7be9
   expiresAt?: number;
   status: SyncStatus;
   lastSync?: number;
   createdAt: number;
+<<<<<<< HEAD
   updatedAt: number;
 >>>>>>> cursor/fix-errors-and-merge-to-main-bd65
   expiresAt?: number;
@@ -46,6 +51,7 @@ export interface ProviderConnection {
   lastSync?: number;
   config?: Record<string, any>;
 >>>>>>> 73aae067a8789e7f94c7cf242d65c42e6717fb43
+=======
 >>>>>>> 40f0d19ecc0819e0cd100e68e36dd415011c7be9
 }
 export interface SyncLogEntry {
@@ -67,6 +73,7 @@ export interface ZapierEvent {
   timestamp: number;
   payload: Record<string, any>;
 }
+<<<<<<< HEAD
 export interface IntegrationProviderMeta {
   id: IntegrationProviderId;
   name: string;
@@ -75,6 +82,7 @@ export interface IntegrationProviderMeta {
 }
 >>>>>>> cursor/fix-errors-and-merge-to-main-bd65
 >>>>>>> 73aae067a8789e7f94c7cf242d65c42e6717fb43
+=======
 
 >>>>>>> 40f0d19ecc0819e0cd100e68e36dd415011c7be9
 export interface IntegrationsState {

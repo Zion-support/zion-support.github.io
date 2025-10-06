@@ -26,12 +26,14 @@ export class SecurityUtils {
 
   static validatePassword(password) {
     // At least 8 characters, 1 uppercase, 1 lowercase, 1 number
+<<<<<<< HEAD
     const passwordRegex =
       /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d@$!%*?&]{8,}$/;
     const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d@$!%*?&]{8,}$/;
 >>>>>>> cursor/fix-errors-and-merge-to-main-bd65
     const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d@$!%*?&]{8,}$/;
 >>>>>>> 73aae067a8789e7f94c7cf242d65c42e6717fb43
+=======
     const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d@$!%*?&]{8,}$/;
 >>>>>>> 40f0d19ecc0819e0cd100e68e36dd415011c7be9
     return passwordRegex.test(password);
@@ -42,9 +44,11 @@ export class SecurityUtils {
       '<': '&lt;',
       '>': '&gt;',
       '"': '&quot;',
+<<<<<<< HEAD
       "'": '&#039;',
 >>>>>>> cursor/fix-errors-and-merge-to-main-bd65
 >>>>>>> 73aae067a8789e7f94c7cf242d65c42e6717fb43
+=======
 >>>>>>> 40f0d19ecc0819e0cd100e68e36dd415011c7be9
       "'": '&#039;'
     };

@@ -21,14 +21,13 @@ async function handler(req, res) {
     res.json({ error: 'Internal server error' });
     // Wallet functionality would go here
     // Wallet functionality implementation
+>>>>>>> 40f0d19ecc0819e0cd100e68e36dd415011c7be9
     res.statusCode = 200;
     res.json({ message: 'Wallet endpoint' });
->>>>>>> main
   } catch (err) {
     console.error('Wallet API error:', err);
     res.statusCode = 500;
     res.json({ error: err.message || 'Wallet operation failed' });
->>>>>>> main
 =======
 =======
     console.error('Wallet error:', err);
@@ -36,6 +35,11 @@ async function handler(req, res) {
     res.json({ error: err.message });
 >>>>>>> cursor/fix-errors-and-merge-to-main-bd65
 >>>>>>> b0d6dda8406c2e54af3529a18b3e8c5f6ab37739
+=======
+    console.error('Wallet error:', err);
+    res.statusCode = 500;
+    res.json({ error: err.message });
+>>>>>>> 40f0d19ecc0819e0cd100e68e36dd415011c7be9
   }
 }
 

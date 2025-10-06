@@ -1,8 +1,10 @@
+<<<<<<< HEAD
 import { NextApiRequest, NextApiResponse } from 'next';
 >>>>>>> b0d6dda8406c2e54af3529a18b3e8c5f6ab37739
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { NextApiRequest, NextApiResponse } from 'next';
 >>>>>>> cursor/fix-errors-and-merge-to-main-bd65
+=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 >>>>>>> 40f0d19ecc0819e0cd100e68e36dd415011c7be9
@@ -26,8 +28,10 @@ export const errorHandler = (
   res: NextApiResponse
 ) => {
   const { statusCode = 500, message } = err;
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-bd65
 >>>>>>> b0d6dda8406c2e54af3529a18b3e8c5f6ab37739
+=======
 
 >>>>>>> 40f0d19ecc0819e0cd100e68e36dd415011c7be9
   // Log error for monitoring
@@ -44,8 +48,10 @@ export const errorHandler = (
         process.env['NODE_ENV'] === 'production'
           ? 'Internal Server Error'
           : message,
+<<<<<<< HEAD
       statusCode
     }
+=======
       statusCode,
       timestamp: new Date().toISOString()
     },
