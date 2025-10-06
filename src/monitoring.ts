@@ -12,7 +12,7 @@ if (typeof window !== 'undefined') {
   performanceOptimizer.lazyLoadImages();
 
   // Track Web Vitals
-  const metrics = performanceOptimizer.measurePageLoad();
+  const metrics = performanceOptimizer.measurePageLoadMetrics();
   if (metrics) {
     performanceOptimizer.reportWebVitals(metrics);
   }

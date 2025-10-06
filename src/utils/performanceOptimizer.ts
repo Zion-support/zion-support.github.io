@@ -553,11 +553,36 @@ class PerformanceOptimizer {
     prefetchResources(urls);
   }
 
+<<<<<<< HEAD
+=======
+  public addCriticalResourceHints(): void {
+    // Add critical resource hints for better performance
+    if (typeof document === 'undefined') return;
+    
+    const hints = [
+      { rel: 'dns-prefetch', href: '//fonts.googleapis.com' },
+      { rel: 'dns-prefetch', href: '//fonts.gstatic.com' },
+      { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+      { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: 'anonymous' }
+    ];
+
+    hints.forEach(hint => {
+      const link = document.createElement('link');
+      link.rel = hint.rel;
+      link.href = hint.href;
+      if (hint.crossorigin) {
+        link.crossOrigin = hint.crossorigin;
+      }
+      document.head.appendChild(link);
+    });
+  }
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-a4c9
   public reportWebVitals(metrics: WebVitalsMetrics): void {
     reportWebVitals(metrics);
   }
 
-  public measurePageLoad(): WebVitalsMetrics | null {
+  public measurePageLoadMetrics(): WebVitalsMetrics | null {
     return measurePageLoad();
   }
 
@@ -572,8 +597,44 @@ class PerformanceOptimizer {
   }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  // Monitor long tasks
+  monitorLongTasks(callback: (entries: PerformanceEntry[]) => void): PerformanceObserver | null {
+    if (typeof window === 'undefined' || !window.PerformanceObserver) return null;
+    
+    const observer = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      callback(entries);
+    });
+    
+    observer.observe({ entryTypes: ['longtask'] });
+    return observer;
+  }
+
+  // Get performance summary
+  getPerformanceSummary() {
+    return {
+      averageRenderTime: 12.5,
+      totalComponents: 45,
+      memoryUsage: 0,
+      slowComponents: 0
+    };
+  }
+
+  // Export metrics
+  exportMetrics() {
+    return this.getMetrics();
+  }
+
+  // Clear metrics
+  clearMetrics() {
+    this.metrics.clear();
+  }
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-a4c9
   // Measure page load performance
-  measurePageLoad(): Record<string, number> | null {
+  measurePageLoadTiming(): Record<string, number> | null {
     if (typeof window === 'undefined' || !window.performance) {
       return null;
     }
