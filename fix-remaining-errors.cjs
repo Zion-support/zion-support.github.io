@@ -3,39 +3,36 @@
 const fs = require('fs');
 const path = require('path');
 
-// Common syntax error patterns and their fixes
 function fixFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
     
-    // Fix missing commas after numeric literals in object properties
-    const beforeComma = content;
-    content = content.replace(/(\d+)([a-zA-Z])/g, '$1, $2');
-    if (content !== beforeComma) modified = true;
+    // Fix function declarations with commas
+    const beforeFunction = content;
+    content = content.replace(/export default function (\w+),\s*(\w+)\(\)/g, 'export default function $1()');
+    if (content !== beforeFunction) modified = true;
     
-    // Fix extra semicolons and commas in object declarations
-    const beforeSemicolon = content;
-    content = content.replace(/\};,/g, '};');
-    content = content.replace(/;;/g, ';');
-    if (content !== beforeSemicolon) modified = true;
-    
-    // Fix malformed JSX with double closing tags
+    // Fix malformed JSX with missing parent elements
     const beforeJSX = content;
-    content = content.replace(/<\/div><\/div>/g, '</div>');
+    // Fix cases where JSX elements are not properly wrapped
+    content = content.replace(/(<div[^>]*>)\s*<div[^>]*>\s*<\/div><div[^>]*>\s*<\/div>\s*<div[^>]*>\s*<\/div><div[^>]*>\s*<\/div>\s*<h1/g, '$1\n      <div> </div><div> </div>\n      <div className="text-left"> </div><div className="text-left"> </div>\n      <h1');
     if (content !== beforeJSX) modified = true;
     
-    // Fix extra closing braces
-    const beforeBraces = content;
-    content = content.replace(/\}\};/g, '};');
-    content = content.replace(/\}\},/g, '},');
-    if (content !== beforeBraces) modified = true;
+    // Fix missing commas in class names
+    const beforeClass = content;
+    content = content.replace(/max-w-3,\s*xl/g, 'max-w-3xl');
+    if (content !== beforeClass) modified = true;
     
-    // Fix malformed object syntax with extra spaces and braces
+    // Fix malformed object properties
     const beforeObject = content;
-    content = content.replace(/\{\s*\}/g, '{}');
-    content = content.replace(/\{\s*\n\s*\}/g, '{}');
+    content = content.replace(/(\w+)(\w+)(\w+)(\w+)/g, '$1, $2, $3, $4');
     if (content !== beforeObject) modified = true;
+    
+    // Fix missing spaces in descriptions
+    const beforeDesc = content;
+    content = content.replace(/(\w+)(\w+)(\w+)(\w+)(\w+)/g, '$1 $2 $3 $4 $5');
+    if (content !== beforeDesc) modified = true;
     
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');

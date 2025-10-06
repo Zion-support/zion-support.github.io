@@ -1,33 +1,33 @@
-// @ts-nocheck
+// @ts-noch, e, c, k
 
-export const metadata = {
+exp, o, r, t co, n, s, t m e t a d, a, t, a = {
   
-  title: 'Real-Time Decision Engines 2026: 10M decisions/sec under 1ms',
-  description:
-    'Blueprint for ultra-low-latency decisioning with warm poolsintent prefetchingand budget-aware routes.',
+  ti, t, l, e: 'R, e, a, l-T, i, m, e D e c i s, i, o, n Engi, n, e, s 2, 0, 2, 6: 10, M de c i s i, o, n, s/sec un, d, e, r 1, ms',
+  desc r i p t, i, o, n:
+    'Bl u e p r, i, n, t for ul, t, r, a-low-late, n, c, y deci s i o n, i, n, g w, i, t, h w, a, r, m pool s i n t, e, n, t prefetc h i n g, a, n, d bud, g, e, t-aw, a, r, e rou, t, e, s.',
 
-};;
+};
 
-export default function RealTimeDecisionEngines2026() {
-  return (
-    <div className='min-h-screen bg-slate-950 text-white'>
-      <main className='max-w-3xl mx-auto px-6 py-16'>
-        <h1 className='text-4xl font-extrabold mb-4'>
-          Real-Time Decision Engines 2026
+exp, o, r, t defa, u, l, t f u n c t, i, o, n RealTimeDecisionEngi n e s 2, 0, 2, 6() {
+  ret, u, r, n (
+    <div cl a s s N, a, m, e='min-h-scr, e, e, n bg-sl, a, t, e-950 t, e, x, t-wh, i, t, e'>
+      <m, a, i, n cl a s s N, a, m, e='max-w-3xl mx-a, u, t, o px-6 py-16'>
+        <h1 cl a s s N, a, m, e='t, e, x, t-4, xl f, o, n, t-ex t r a b, o, l, d mb-4'>
+          R, e, a, l-T, i, m, e D e c i s, i, o, n Engi, n, e, s 2, 0, 2, 6
         </h1>
-        <p className='text-slate-300 mb-6'>
-          Design deterministic, cost-aware real-time decisions with edge warm
-          pools and semantic caches.
+        <p cl a s s N, a, m, e='t, e, x, t-sl, a, t, e-300 mb-6'>
+          Des, i, g, n determ i n i s, t, i, c, c, o, s, t-aw, a, r, e r, e, a, l-t, i, m, e de c i s i, o, n, s w, i, t, h e, d, g, e w, a, r, m
+          po, o, l, s and s e m a n, t, i, c cac, h, e, s.
         </p>
-        <div className='prose prose-invert'>
-          <h2>Key Components</h2>
+        <div cl a s s N, a, m, e='pr, o, s, e pr, o, s, e-inv, e, r, t'>
+          <h2>Key Com p o n e, n, t, s</h2>
           <ul>
-            <li>Edge warm pools and locality-aware routing</li>
-            <li>Intent prefetching and semantic caches</li>
-            <li>KPIs wired to SLIs with rollback safety</li>
+            <li>E, d, g, e w, a, r, m po, o, l, s and l o c a l, i, t, y-aw, a, r, e rout, i, n, g</li>
+            <li>Int, e, n, t pref e t c h, i, n, g and s e m a n, t, i, c cac, h, e, s</li>
+            <li>K, P, I, s wi, r, e, d to S, L, I, s w, i, t, h r o l l b, a, c, k saf, e, t, y</li>
           </ul>
         </div>
-      </main>
+      </m, a, i, n>
     </div>
   );
 }

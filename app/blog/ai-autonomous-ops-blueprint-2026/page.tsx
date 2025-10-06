@@ -1,58 +1,58 @@
-import ArrowRight from 'next/link';
+imp, o, r, t Arr o w R i, g, h, t f, r, o, m 'n, e, x, t/l, i, n, k';
 
-export const metadata = {
+exp, o, r, t co, n, s, t m e t a d, a, t, a = {
   
-  title:  'AI Autonomous Ops Blueprint 2026',
-  description: 
-      'Budgets, live traces, and one‑click rollback for safe autonomy at scale.',
-  type: 'article',
+  ti, t, l, e:  'AI Aut o n o m, o, u, s Ops Bl u e p r, i, n, t 2, 0, 2, 6',
+  desc r i p t, i, o, n: 
+      'Budg, e, t, s, l, i, v, e tra, c, e, s, and one‑cl, i, c, k r o l l b, a, c, k for s, a, f, e a u t o n, o, m, y at sc, a, l, e.',
+  t, y, p, e: 'arti, c, l, e',
 
-}};
+};
 
-export default function AIAutonomousOpsBlueprint2026Page() {
-  return (
-    <div className='min-h-screen bg-slate-950 text-white'>
-      <main className='max-w-3xl mx-auto px-6 py-16'>
-        <div className='mb-8'>
-          <div className='inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-400/20 text-emerald-300 text-xs font-semibold'>
-            <span>New • Sep 2025</span>
+exp, o, r, t defa, u, l, t f u n c t, i, o, n AIAutonomousOpsBluepr i n t 2, 0, 2, 6() {
+  ret, u, r, n (
+    <div cl a s s N, a, m, e='min-h-scr, e, e, n bg-sl, a, t, e-950 t, e, x, t-wh, i, t, e'>
+      <m, a, i, n cl a s s N, a, m, e='max-w-3xl mx-a, u, t, o px-6 py-16'>
+        <div cl a s s N, a, m, e='mb-8'>
+          <div cl a s s N, a, m, e='inl, i, n, e-f, l, e, x it, e, m, s-cen, t, e, r gap-2 px-3 py-1 roun, d, e, d-f, u, l, l bg-emer, a, l, d-500/10 bor, d, e, r bor, d, e, r-emer, a, l, d-400/20 t, e, x, t-emer, a, l, d-300 t, e, x, t-xs f, o, n, t-s e m i b, o, l, d'>
+            <s, p, a, n>New • Sep 2, 0, 2, 5</s, p, a, n>
           </div>
-          <h1 className='text-4xl font-extrabold mt-4 mb-3'>
-            AI Autonomous Ops Blueprint 2026
+          <h1 cl a s s N, a, m, e='t, e, x, t-4, xl f, o, n, t-ex t r a b, o, l, d mt-4 mb-3'>
+            AI Aut o n o m, o, u, s Ops Bl u e p r, i, n, t 2, 0, 2, 6
           </h1>
-          <p className='text-slate-300'>
-            Budgetslive tracesand one‑click rollback for safe autonomy at
-            scale.
+          <p cl a s s N, a, m, e='t, e, x, t-sl, a, t, e-300'>
+            Budg e t s l, i, v, e tr a c e s, a, n, d one‑cl, i, c, k r o l l b, a, c, k for s, a, f, e a u t o n, o, m, y at
+            sc, a, l, e.
           </p>
-          <div className='mt-3 text-slate-400 text-sm'>
-            8 min read • Category: AI Operations
+          <div cl a s s N, a, m, e='mt-3 t, e, x, t-sl, a, t, e-400 t, e, x, t-sm'>
+            8 min r, e, a, d • C a t e g, o, r, y: AI Ope r a t i, o, n, s
           </div>
         </div>
 
-        <div className='prose prose-invert prose-slate max-w-none'>
-          <h2>What This Blueprint Covers</h2>
+        <div cl a s s N, a, m, e='pr, o, s, e pr, o, s, e-inv, e, r, t pr, o, s, e-sl, a, t, e max-w-n, o, n, e'>
+          <h2>W, h, a, t T, h, i, s Bl u e p r, i, n, t Cov, e, r, s</h2>
           <ul>
-            <li>Risk and budgeted actions with approvals</li>
-            <li>Live traces for tools and actions</li>
-            <li>Rollback triggers wired to KPIs</li>
+            <li>R, i, s, k and b u d g e, t, e, d acti, o, n, s w, i, t, h ap p r o v, a, l, s</li>
+            <li>L, i, v, e tra, c, e, s for to, o, l, s and acti, o, n, s</li>
+            <li>R o l l b, a, c, k t r i g g, e, r, s wi, r, e, d to K, P, I, s</li>
           </ul>
-          <h2>Rollout Plan</h2>
+          <h2>Roll, o, u, t P, l, a, n</h2>
           <ol>
-            <li>Instrument agents and tools with end‑to‑end traces</li>
-            <li>Define budgets and guardrail policies</li>
-            <li>Run canary checks and enable one‑click rollback</li>
+            <li>Ins t r u m, e, n, t age, n, t, s and to, o, l, s w, i, t, h end‑to‑end tra, c, e, s</li>
+            <li>Def, i, n, e budg, e, t, s and gu a r d r, a, i, l p o l i c, i, e, s</li>
+            <li>Run can, a, r, y che, c, k, s and ena, b, l, e one‑cl, i, c, k r o l l b, a, c, k</li>
           </ol>
         </div>
 
-        <div className='mt-12'>
-          <ArrowRight
-            href='/blog'
-            className='inline-block bg-white text-emerald-700 px-6 py-3 rounded-lg font-bold hover:bg-emerald-50'
+        <div cl a s s N, a, m, e='mt-12'>
+          <Arr o w R i, g, h, t
+            h, r, e, f='/b, l, o, g'
+            cl a s s N, a, m, e='inl, i, n, e-bl, o, c, k bg-wh, i, t, e t, e, x, t-emer, a, l, d-700 px-6 py-3 roun, d, e, d-lg f, o, n, t-b, o, l, d ho, v, e, r:bg-emer, a, l, d-50'
           >
-            ← Back to Blog
-          </ArrowRight>
+            ← B, a, c, k to B, l, o, g
+          </Arr o w R i, g, h, t>
         </div>
-      </main>
+      </m, a, i, n>
     </div>
   );
 }

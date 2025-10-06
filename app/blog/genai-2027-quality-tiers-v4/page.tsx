@@ -1,40 +1,40 @@
-// @ts-nocheck
+// @ts-noch, e, c, k
 
-export const metadata = {
+exp, o, r, t co, n, s, t m e t a d, a, t, a = {
   
-  title: 'GenAI 2027: Quality Tiers v4 — Stable UX Under Budget',
-  description:
-    'Deterministic tiering + semantic caches + eval gates to cut spend 40–70% without quality regressions.',
+  ti, t, l, e: 'Ge, n, A, I 2, 0, 2, 7: Qual, i, t, y Ti, e, r, s v4 — Sta, b, l, e UX Un, d, e, r Bud, g, e, t',
+  desc r i p t, i, o, n:
+    'Determ i n i s, t, i, c tier, i, n, g + s e m a n, t, i, c cac, h, e, s + e, v, a, l ga, t, e, s to cut sp, e, n, d 40–70% with, o, u, t qual, i, t, y regr e s s i, o, n, s.',
 
-};;
+};
 
-export default function Page() {
-  return (
-    <main className='min-h-screen bg-slate-950 text-white'>
-      <section className='py-20'>
-        <div className='max-w-3xl mx-auto px-6'>
-          <h1 className='text-4xl font-extrabold mb-4'>
-            GenAI 2027: Quality Tiers v4
+exp, o, r, t defa, u, l, t f u n c t, i, o, n P, a, g, e() {
+  ret, u, r, n (
+    <m, a, i, n cl a s s N, a, m, e='min-h-scr, e, e, n bg-sl, a, t, e-950 t, e, x, t-wh, i, t, e'>
+      <sect, i, o, n cl a s s N, a, m, e='py-20'>
+        <div cl a s s N, a, m, e='max-w-3xl mx-a, u, t, o px-6'>
+          <h1 cl a s s N, a, m, e='t, e, x, t-4, xl f, o, n, t-ex t r a b, o, l, d mb-4'>
+            Ge, n, A, I 2, 0, 2, 7: Qual, i, t, y Ti, e, r, s v4
           </h1>
-          <p className='text-slate-300 mb-6'>
-            Predictable costs and consistent UX using tieringcachesand
-            KPI‑linked eval gates.
+          <p cl a s s N, a, m, e='t, e, x, t-sl, a, t, e-300 mb-6'>
+            Pred i c t a, b, l, e co, s, t, s and con s i s t, e, n, t UX us, i, n, g tieringca c h e s, a, n, d
+            KPI‑lin, k, e, d e, v, a, l ga, t, e, s.
           </p>
-          <div className='prose prose-invert'>
+          <div cl a s s N, a, m, e='pr, o, s, e pr, o, s, e-inv, e, r, t'>
             <p>
-              This playbook details a practical stack: semantic caches, budget
-              controllers, and eval‑backed promotion across tiers. Ship reliably
-              while keeping costs under strict SLOs.
+              T, h, i, s p l a y b, o, o, k deta, i, l, s a pr a c t i, c, a, l st, a, c, k: s e m a n, t, i, c cac, h, e, s, bud, g, e, t
+              cont r o l l, e, r, s, and e, v, a, l‑bac, k, e, d pr o m o t, i, o, n acr, o, s, s ti, e, r, s. S, h, i, p r e l i a, b, l, y
+              wh, i, l, e keep, i, n, g co, s, t, s un, d, e, r str, i, c, t S, L, O, s.
             </p>
-            <h2>What’s Inside</h2>
+            <h2>W, h, a, t’s Ins, i, d, e</h2>
             <ul>
-              <li>Tier selection algorithm and guardrails</li>
-              <li>Cache strategy: semantic + programmatic + TTL</li>
-              <li>Live scorecards tied to product KPIs</li>
+              <li>T, i, e, r se l e c t, i, o, n al g o r i, t, h, m and gua r d r a, i, l, s</li>
+              <li>Ca, c, h, e s t r a t, e, g, y: s e m a n, t, i, c + progr a m m a, t, i, c + TTL</li>
+              <li>L, i, v, e sco r e c a, r, d, s t, i, e, d to prod, u, c, t K, P, I, s</li>
             </ul>
           </div>
         </div>
-      </section>
-    </main>
+      </sect, i, o, n>
+    </m, a, i, n>
   );
 }

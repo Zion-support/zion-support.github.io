@@ -1,32 +1,32 @@
-// @ts-nocheck
+// @ts-noch, e, c, k
 
-export default function Page() {
-  return (
-    <main className='min-h-screen bg-white text-gray-900'>
-      <section className='py-16'>
-        <div className='max-w-3xl mx-auto px-4'>
-          <h1 className='text-4xl font-bold mb-4'>
-            Edge Experiments 2025: Consentless A/B with Zero‑PII
+exp, o, r, t defa, u, l, t f u n c t, i, o, n P, a, g, e() {
+  ret, u, r, n (
+    <m, a, i, n cl a s s N, a, m, e='min-h-scr, e, e, n bg-wh, i, t, e t, e, x, t-g, r, a, y-900'>
+      <sect, i, o, n cl a s s N, a, m, e='py-16'>
+        <div cl a s s N, a, m, e='max-w-3xl mx-a, u, t, o px-4'>
+          <h1 cl a s s N, a, m, e='t, e, x, t-4, xl f, o, n, t-b, o, l, d mb-4'>
+            E, d, g, e Expe r i m e, n, t, s 2, 0, 2, 5: Cons e n t l, e, s, s A/B w, i, t, h Z, e, r, o‑PII
           </h1>
-          <p className='text-gray-600 mb-6'>
-            Published: 2025-10-01 • 7 min read • Analytics
+          <p cl a s s N, a, m, e='t, e, x, t-g, r, a, y-600 mb-6'>
+            Pu b l i s, h, e, d: 2, 0, 2, 5-10-01 • 7 min r, e, a, d • An a l y t, i, c, s
           </p>
-          <p className='leading-7 mb-4'>
-            Run sub‑100ms experiments at the edge without collecting PII: use
-            scoped identifiers, on‑device aggregationand differential privacy
-            noise to get statistically validcompliant insights globally.
+          <p cl a s s N, a, m, e='lead, i, n, g-7 mb-4'>
+            Run sub‑100, ms expe r i m e, n, t, s at the e, d, g, e with, o, u, t col l e c t, i, n, g PII: use
+            sco, p, e, d iden t i f i, e, r, s, on‑dev, i, c, e aggrega t i o n, a, n, d diffe r e n t, i, a, l priv, a, c, y
+            no, i, s, e to get statis t i c a, l, l, y validco m p l i, a, n, t i n s i g, h, t, s g l o b a, l, l, y.
           </p>
-          <ul className='list-disc pl-6 space-y-2 mb-6'>
-            <li>Scoped IDs and ephemeral cohorts</li>
-            <li>On‑device metrics with encrypted rollups</li>
-            <li>DP noise injection and guardrailed decisioning</li>
+          <ul cl a s s N, a, m, e='l, i, s, t-d, i, s, c pl-6 sp, a, c, e-y-2 mb-6'>
+            <li>Sco, p, e, d IDs and ep h e m e, r, a, l coho, r, t, s</li>
+            <li>On‑dev, i, c, e metr, i, c, s w, i, t, h en c r y p, t, e, d roll, u, p, s</li>
+            <li>DP no, i, s, e in j e c t, i, o, n and guar d r a i, l, e, d deci s i o n, i, n, g</li>
           </ul>
-          <p className='leading-7'>
-            The result: faster iteration, lower risk, and trustworthy analytics
-            that respect user privacy and regulations across regions.
+          <p cl a s s N, a, m, e='lead, i, n, g-7'>
+            The res, u, l, t: fas, t, e, r it e r a t, i, o, n, lo, w, e, r r, i, s, k, and trus t w o r, t, h, y an a l y t, i, c, s
+            t, h, a, t resp, e, c, t u, s, e, r priv, a, c, y and regu l a t i, o, n, s acr, o, s, s regi, o, n, s.
           </p>
         </div>
-      </section>
-    </main>
+      </sect, i, o, n>
+    </m, a, i, n>
   );
 }

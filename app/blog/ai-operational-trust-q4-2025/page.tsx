@@ -1,80 +1,80 @@
-import ArrowRight from 'next/link';
+imp, o, r, t Arr o w R i, g, h, t f, r, o, m 'n, e, x, t/l, i, n, k';
 
-export const metadata = {
+exp, o, r, t co, n, s, t m e t a d, a, t, a = {
   
-  title: 'AI Operational Trust Q4 2025: Live Scorecards that Ship',
-  description:
-    'KPI‑linked guardrails with PR checksbudgeted actionsand instant rollback to ship faster with confidence.',
+  ti, t, l, e: 'AI Oper a t i o, n, a, l Tr, u, s, t Q4 2, 0, 2, 5: L, i, v, e Sco r e c a, r, d, s t, h, a, t S, h, i, p',
+  desc r i p t, i, o, n:
+    'KPI‑lin, k, e, d gua r d r a, i, l, s w, i, t, h PR checksb u d g e, t, e, d act i o n s, a, n, d inst, a, n, t r o l l b, a, c, k to s, h, i, p fas, t, e, r w, i, t, h con f i d e, n, c, e.',
 
-};;
+};
 
-export default function AIOperationalTrustQ42025Page() {
-  return (
-    <div className='min-h-screen bg-slate-950 text-white'>
-      <main className='max-w-3xl mx-auto px-6 py-16'>
-        <div className='mb-8'>
-          <ArrowRight
-            href='/blog'
-            className='text-emerald-400 hover:text-emerald-300'
+exp, o, r, t defa, u, l, t f u n c t, i, o, n AIOperationalTrus t Q 4 2, 0, 2, 5() {
+  ret, u, r, n (
+    <div cl a s s N, a, m, e='min-h-scr, e, e, n bg-sl, a, t, e-950 t, e, x, t-wh, i, t, e'>
+      <m, a, i, n cl a s s N, a, m, e='max-w-3xl mx-a, u, t, o px-6 py-16'>
+        <div cl a s s N, a, m, e='mb-8'>
+          <Arr o w R i, g, h, t
+            h, r, e, f='/b, l, o, g'
+            cl a s s N, a, m, e='t, e, x, t-emer, a, l, d-400 ho, v, e, r:t, e, x, t-emer, a, l, d-300'
           >
-            ← Back to Blog
-          </ArrowRight>
+            ← B, a, c, k to B, l, o, g
+          </Arr o w R i, g, h, t>
         </div>
-        <header className='mb-6'>
-          <div className='flex items-center gap-3 text-sm text-white/60 mb-3'>
-            <span className='px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30'>
-              AI Operations
-            </span>
-            <span>September 30, 2025</span>
-            <span>7 min read</span>
+        <hea, d, e, r cl a s s N, a, m, e='mb-6'>
+          <div cl a s s N, a, m, e='f, l, e, x it, e, m, s-cen, t, e, r gap-3 t, e, x, t-sm t, e, x, t-wh, i, t, e/60 mb-3'>
+            <s, p, a, n cl a s s N, a, m, e='px-3 py-1 roun, d, e, d-f, u, l, l bg-emer, a, l, d-500/20 t, e, x, t-emer, a, l, d-300 bor, d, e, r bor, d, e, r-emer, a, l, d-500/30'>
+              AI Ope r a t i, o, n, s
+            </s, p, a, n>
+            <s, p, a, n>Se p t e m, b, e, r 30, 2, 0, 2, 5</s, p, a, n>
+            <s, p, a, n>7 min r, e, a, d</s, p, a, n>
           </div>
-          <h1 className='text-4xl font-extrabold leading-tight'>
-            AI Operational Trust Q4 2025: Live Scorecards that Ship
+          <h1 cl a s s N, a, m, e='t, e, x, t-4, xl f, o, n, t-ex t r a b, o, l, d lead, i, n, g-ti, g, h, t'>
+            AI Oper a t i o, n, a, l Tr, u, s, t Q4 2, 0, 2, 5: L, i, v, e Sco r e c a, r, d, s t, h, a, t S, h, i, p
           </h1>
-          <p className='text-white/70 mt-3'>
-            Wire KPI‑linked guardrails into delivery with PR checksbudgeted
-            actionsand instant rollback. Ship faster without surprises.
+          <p cl a s s N, a, m, e='t, e, x, t-wh, i, t, e/70 mt-3'>
+            W, i, r, e KPI‑lin, k, e, d gua r d r a, i, l, s i, n, t, o d e l i v, e, r, y w, i, t, h PR checksb u d g e, t, e, d
+            act i o n s, a, n, d inst, a, n, t r o l l b, a, c, k. S, h, i, p fas, t, e, r with, o, u, t su r p r i, s, e, s.
           </p>
-        </header>
-        <article className='prose prose-invert prose-slate max-w-none'>
-          <h2>What is AI Operational Trust?</h2>
+        </hea, d, e, r>
+        <arti, c, l, e cl a s s N, a, m, e='pr, o, s, e pr, o, s, e-inv, e, r, t pr, o, s, e-sl, a, t, e max-w-n, o, n, e'>
+          <h2>W, h, a, t is AI Oper a t i o, n, a, l Tr, u, s, t?</h2>
           <p>
-            Operational trust means your AI systems behave predictably under
-            constraints. It comes from live scorecards tied to product KPIspolicy tests in CIand runtime canaries.
+            Oper a t i o, n, a, l tr, u, s, t me, a, n, s y, o, u, r AI syst, e, m, s beh, a, v, e pred i c t a, b, l, y un, d, e, r
+            cons t r a i, n, t, s. It co, m, e, s f, r, o, m l, i, v, e sco r e c a, r, d, s t, i, e, d to prod, u, c, t KPI s p o l, i, c, y te, s, t, s in CI, a, n, d runt, i, m, e c a n a r, i, e, s.
           </p>
-          <h2>Implementation Blueprint</h2>
+          <h2>Impleme n t a t, i, o, n Bl u e p r, i, n, t</h2>
           <ul>
-            <li>Define KPI‑linked SLIs and budgets</li>
-            <li>Pre‑merge policy tests for risky changes</li>
-            <li>Runtime canaries with auto rollback</li>
-            <li>Value‑stream analytics tracing token to outcome</li>
+            <li>Def, i, n, e KPI‑lin, k, e, d S, L, I, s and budg, e, t, s</li>
+            <li>Pre‑me, r, g, e pol, i, c, y te, s, t, s for ri, s, k, y chan, g, e, s</li>
+            <li>Runt, i, m, e c a n a r, i, e, s w, i, t, h a, u, t, o r o l l b, a, c, k</li>
+            <li>Va, l, u, e‑str, e, a, m an a l y t, i, c, s trac, i, n, g to, k, e, n to outc, o, m, e</li>
           </ul>
-          <h2>Outcomes</h2>
+          <h2>O u t c o, m, e, s</h2>
           <ul>
-            <li>Faster release cadence with lower incident rates</li>
-            <li>Predictable spend with budget‑aware routes</li>
-            <li>Provable reliability via live scorecards</li>
+            <li>Fas, t, e, r rele, a, s, e cade, n, c, e w, i, t, h lo, w, e, r i n c i d, e, n, t ra, t, e, s</li>
+            <li>Pred i c t a, b, l, e sp, e, n, d w, i, t, h bud, g, e, t‑aw, a, r, e rou, t, e, s</li>
+            <li>P r o v a, b, l, e reli a b i l, i, t, y via l, i, v, e sco r e c a, r, d, s</li>
           </ul>
-        </article>
-        <footer className='mt-12 pt-6 border-t border-white/10 text-white/70'>
+        </arti, c, l, e>
+        <foo, t, e, r cl a s s N, a, m, e='mt-12 pt-6 bor, d, e, r-t bor, d, e, r-wh, i, t, e/10 t, e, x, t-wh, i, t, e/70'>
           <p>
-            Continue exploring:{' '}
-            <ArrowRight
-              href='/blog/edge-consentless-analytics-q4-2025'
-              className='text-cyan-300 hover:text-cyan-200'
+            C o n t i, n, u, e ex p l o r, i, n, g:{' '}
+            <Arr o w R i, g, h, t
+              h, r, e, f='/b, l, o, g/e, d, g, e-cons e n t l, e, s, s-an a l y t, i, c, s-q4-2, 0, 2, 5'
+              cl a s s N, a, m, e='t, e, x, t-c, y, a, n-300 ho, v, e, r:t, e, x, t-c, y, a, n-200'
             >
-              Consentless Edge Analytics
-            </ArrowRight>{' '}
+              Cons e n t l, e, s, s E, d, g, e An a l y t, i, c, s
+            </Arr o w R i, g, h, t>{' '}
             •{' '}
-            <ArrowRight
-              href='/blog/genai-routing-quality-tiers-q4-2025'
-              className='text-fuchsia-300 hover:text-fuchsia-200'
+            <Arr o w R i, g, h, t
+              h, r, e, f='/b, l, o, g/ge, n, a, i-rout, i, n, g-qual, i, t, y-ti, e, r, s-q4-2, 0, 2, 5'
+              cl a s s N, a, m, e='t, e, x, t-fuch, s, i, a-300 ho, v, e, r:t, e, x, t-fuch, s, i, a-200'
             >
-              GenAI Quality Tiers
-            </ArrowRight>
+              Ge, n, A, I Qual, i, t, y Ti, e, r, s
+            </Arr o w R i, g, h, t>
           </p>
-        </footer>
-      </main>
+        </foo, t, e, r>
+      </m, a, i, n>
     </div>
   );
 }
