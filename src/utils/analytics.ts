@@ -14,7 +14,7 @@ export interface AnalyticsEvent {
 }
 
 export interface UserProperties {
-  userId?: string;
+  userId?: string | undefined;
   sessionId: string;
   userAgent: string;
   language: string;
@@ -57,7 +57,7 @@ class Analytics {
       userAgent: window.navigator.userAgent,
       language: window.navigator.language,
       timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
-      referrer: document.referrer || '',
+      referrer: document.referrer || undefined,
     };
   }
 
@@ -75,10 +75,10 @@ class Analytics {
     const event: AnalyticsEvent = {
       name,
       category,
-      action: action || '',
-      label: label || '',
-      value: value || 0,
-      properties: properties || {},
+      action: action || undefined,
+      label: label || undefined,
+      value: value || undefined,
+      properties: properties || undefined,
       timestamp: Date.now(),
     };
 
@@ -117,11 +117,7 @@ class Analytics {
   /**
    * Track performance metrics
    */
-  public trackPerformance(
-    metric: string,
-    value: number,
-    unit: string = 'ms'
-  ): void {
+  public trackPerformance(metric: string, value: number, unit: string = 'ms'): void {
     this.track('performance', 'metrics', metric, unit, value);
   }
 

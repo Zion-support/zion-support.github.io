@@ -1,4 +1,4 @@
-// import Link from 'next/link';
+import Link from 'next/link';
 
 export const metadata = {
   title: 'Enterprise Solutions - Zion Tech Group',
@@ -113,6 +113,27 @@ export default function EnterprisePage() {
                 icon: '🔒',
                 metrics: ['99.99% Security', '<1ms Overhead', 'Zero Breaches'],
               },
+              {
+                title: 'Predictive Analytics',
+                description:
+                  'Advanced ML models with 99.7% accuracy for business forecasting.',
+                icon: '🔮',
+                metrics: ['99.7% Accuracy', 'Real-time Predictions', 'Auto-scaling'],
+              },
+              {
+                title: 'Process Automation',
+                description:
+                  'End-to-end automation reducing manual work by 90% and errors by 99%.',
+                icon: '⚡',
+                metrics: ['90% Work Reduction', '99% Error Reduction', '24/7 Operations'],
+              },
+              {
+                title: 'Cloud Migration',
+                description:
+                  'Seamless cloud transformation with zero downtime and 50% cost savings.',
+                icon: '☁️',
+                metrics: ['Zero Downtime', '50% Cost Savings', 'Auto-scaling'],
+              },
             ].map((solution, index) => (
               <div
                 key={index}
@@ -131,6 +152,40 @@ export default function EnterprisePage() {
                     </div>
                   ))}
                 </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      <section className="py-24 bg-black/20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Proven Results
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our enterprise solutions have delivered measurable results across
+              Fortune 500 companies worldwide.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              { number: '500+', label: 'Fortune 500 Clients' },
+              { number: '$2.5T+', label: 'Cost Savings Delivered' },
+              { number: '99.9%', label: 'System Uptime' },
+              { number: '500%', label: 'Productivity Increase' },
+            ].map((stat, index) => (
+              <div
+                key={index}
+                className="text-center bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8"
+              >
+                <div className="text-4xl md:text-5xl font-bold text-cyan-400 mb-2">
+                  {stat.number}
+                </div>
+                <div className="text-gray-300">{stat.label}</div>
               </div>
             ))}
           </div>
