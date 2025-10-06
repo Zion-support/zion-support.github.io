@@ -1,19 +1,7 @@
 import React from 'react';
-import Link from 'next/link';
-import type { Metadata } from 'next';
+import { Link } from 'react-router-dom';
 import { ArrowLeft, Target, TrendingUp, Users, Zap, CheckCircle, Star, ArrowRight } from 'lucide-react';
 
-export const metadata: Metadata = {
-  title: 'AI Advertising Services & Pricing | Zion Tech Group',
-  description: 'Revolutionize your marketing with AI-powered advertising solutions. Achieve 300% ROI, 95% targeting accuracy, and 60% cost reduction with our breakthrough AI technology.',
-  keywords: 'AI advertising services, AI marketing solutions, programmatic advertising, AI targeting, marketing automation, advertising ROI, AI campaign optimization',
-  openGraph: {
-    title: 'AI Advertising Services & Pricing | Zion Tech Group',
-    description: 'Revolutionize your marketing with AI-powered advertising solutions. Achieve 300% ROI, 95% targeting accuracy, and 60% cost reduction.',
-    type: 'website',
-    url: 'https://ziontechgroup.com/services-advertising',
-  },
-};
 
 export default function ServicesAdvertisingPage() {
   return (
@@ -21,7 +9,7 @@ export default function ServicesAdvertisingPage() {
       {/* Header */}
       <header className="bg-white shadow-sm border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-          <Link href="/" className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-200">
+          <Link to="/" className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-200">
             <ArrowLeft className="w-4 h-4 mr-2" />
             Back to Home
           </Link>
@@ -53,14 +41,14 @@ export default function ServicesAdvertisingPage() {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
-                href="/contact"
+                to="/contact"
                 className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200 inline-flex items-center"
               >
                 Start Free Consultation
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Link>
               <Link 
-                href="#services"
+                to="#services"
                 className="border-2 border-white text-white hover:bg-white hover:text-blue-900 font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
               >
                 View Our Services
@@ -267,14 +255,14 @@ export default function ServicesAdvertisingPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
-              href="/contact"
+              to="/contact"
               className="bg-white text-blue-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition-colors duration-200 inline-flex items-center"
             >
               Get Free Assessment
               <ArrowRight className="w-4 h-4 ml-2" />
             </Link>
             <Link 
-              href="/case-studies"
+              to="/case-studies"
               className="border-2 border-white text-white hover:bg-white hover:text-blue-600 font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
             >
               View Success Stories
