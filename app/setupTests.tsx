@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+/**
+ * Jest setup file for testing environment
+ */
+
+=======
+>>>>>>> main
+>>>>>>> main
 import '@testing-library/jest-dom';
 
 // Mock window.matchMedia
@@ -18,6 +28,10 @@ Object.defineProperty(window, 'matchMedia', {
 // Mock IntersectionObserver
 global.IntersectionObserver = class IntersectionObserver {
   root: Element | null = null;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
   rootMargin: string = '0px';
   thresholds: ReadonlyArray<number> = [0];
   
@@ -27,15 +41,34 @@ global.IntersectionObserver = class IntersectionObserver {
   unobserve() {}
   takeRecords() { return []; }
 } as any;
+<<<<<<< HEAD
+=======
+=======
+  rootMargin: string = '';
+  thresholds: ReadonlyArray<number> = Object.freeze([]);
+  
+  constructor() {}
+  disconnect(): void {}
+  observe(): void {}
+  unobserve(): void {}
+  takeRecords(): IntersectionObserverEntry[] { return []; }
+} as unknown as typeof IntersectionObserver;
+>>>>>>> main
+>>>>>>> main
 
 // Mock ResizeObserver
 global.ResizeObserver = class ResizeObserver {
   constructor() {}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
   disconnect() {}
   observe() {}
   unobserve() {}
 };
 
+<<<<<<< HEAD
 // Mock scrollTo
 Object.defineProperty(window, 'scrollTo', {
   value: jest.fn(),
@@ -73,3 +106,30 @@ afterAll(() => {
   console.error = originalError;
   console.warn = originalWarn;
 });
+=======
+// Mock performance API
+Object.defineProperty(window, 'performance', {
+  writable: true,
+  value: {
+    now: jest.fn(() => Date.now()),
+    getEntriesByType: jest.fn(() => []),
+    mark: jest.fn(),
+    measure: jest.fn(),
+  },
+});
+
+// Mock requestAnimationFrame
+global.requestAnimationFrame = (callback: FrameRequestCallback) => {
+  return setTimeout(callback, 0);
+};
+
+global.cancelAnimationFrame = (id: number) => {
+  clearTimeout(id);
+};
+=======
+  disconnect(): void {}
+  observe(): void {}
+  unobserve(): void {}
+} as unknown as typeof ResizeObserver;
+>>>>>>> main
+>>>>>>> main
