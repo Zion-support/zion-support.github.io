@@ -1,17 +1,18 @@
 import React from 'react';
+<<<<<<< HEAD
 import { ArrowRight, Bookmark, Rocket, TrendingUp, Zap } from 'lucide-react';
+=======
+>>>>>>> main
 import Link from 'next/link';
 import {
-  Sparkles,
-  TrendingUp,
   ArrowRight,
-  Zap,
+  Bookmark,
   Rocket,
+  TrendingUp,
+  Zap,
+  Sparkles,
   Star,
 } from 'lucide-react';
-
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e4e
 const September30NewContent2025Banner: React.FC = () => {
   const newArticles = [
     {
@@ -253,33 +254,6 @@ const September30NewContent2025Banner: React.FC = () => {
                   <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-2 transition-transform duration-300" />
                 </Link>
               </div>
-=======
-      gradient: 'from-emerald-500 to-teal-600'
-    }
-  ];
-
-  return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
-      {/* Animated Background Effects */}
-      <div className="absolute inset-0">
-        <div className="absolute top-10 left-10 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute top-40 right-20 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute bottom-20 left-1/3 w-80 h-80 bg-cyan-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
-      </div>
-
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <div className="flex items-center justify-center gap-2 mb-6">
-            <Sparkles className="w-6 h-6 text-yellow-400" />
-            <span className="text-yellow-400 font-bold text-xl">
-              🚀 BREAKING: 4 REVOLUTIONARY ARTICLES JUST PUBLISHED!
-            </span>
-            <Zap className="w-6 h-6 text-yellow-400" />
-          </div>
-
-          <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-6">
-            September 30, 2025 — Cutting-Edge AI Insights
           </h2>
           
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
@@ -356,6 +330,7 @@ const September30NewContent2025Banner: React.FC = () => {
         </div>
 
         {/* Call-to-Action Section */}
+<<<<<<< HEAD
         <div>
           <div>
             <div>
@@ -486,3 +461,5 @@ const September30NewContent2025Banner: React.FC = () => {
 };
 
 export default September30NewContent2025Banner;
+=======
+>>>>>>> main

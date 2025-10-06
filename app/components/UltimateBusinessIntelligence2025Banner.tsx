@@ -56,13 +56,6 @@ const UltimateBusinessIntelligence2025Banner = () => {
       readingTime: '45 min read',
       featured: true,
     },
-=======
-        adoption: '100%'
-      },
-      readingTime: '45 min read',
-      featured: true
-    }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e4e
   ];
 
   useEffect(() => {
@@ -73,6 +66,7 @@ const UltimateBusinessIntelligence2025Banner = () => {
     return () => clearInterval(interval);
   }, [content.length]);
 
+<<<<<<< HEAD
   return (
     <section className='relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden'>
       {/* Animated Background Effects */}
@@ -329,6 +323,8 @@ const UltimateBusinessIntelligence2025Banner = () => {
           {/* Slide Indicators */}
           <div className="flex justify-center gap-2">
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e4e
+=======
+>>>>>>> main
             {content.map((_, index) => (
               <button
                 key={index}
@@ -341,6 +337,7 @@ const UltimateBusinessIntelligence2025Banner = () => {
           </div>
         </div>
 
+<<<<<<< HEAD
         {/* Progress Indicators */}
         <div className="flex justify-center space-x-2 mt-8">
           {content.map((_, index) => (
@@ -424,6 +421,8 @@ const UltimateBusinessIntelligence2025Banner = () => {
             </Link>
           </div>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e4e
+=======
+>>>>>>> main
         </div>
       </div>
     </section>

@@ -7,12 +7,25 @@ import { performanceOptimizer } from './utils/performanceOptimizer';
 if (typeof window !== 'undefined') {
   // Track page load
   analytics.trackPageView(window.location.pathname);
-
+  
   // Initialize performance optimizer
   performanceOptimizer.lazyLoadImages();
-
+  
+  // Monitor long tasks (if available)
+  if ('monitorLongTasks' in performanceOptimizer) {
+    (performanceOptimizer as { monitorLongTasks: (callback: (entries: PerformanceEntryList) => void) => void }).monitorLongTasks((entries: PerformanceEntryList) => {
+      entries.forEach((entry: PerformanceEntry) => {
+        analytics.track('long_task', 'performance', 'detected', undefined, entry.duration);
+      });
+    });
+  }
+  
   // Track Web Vitals
-  const metrics = performanceOptimizer.measurePageLoadMetrics();
+<<<<<<< HEAD
+  const metrics = performanceOptimizer.measurePageLoadTiming();
+=======
+  const metrics = performanceOptimizer.measurePageLoad();
+>>>>>>> main
   if (metrics) {
     performanceOptimizer.reportWebVitals(metrics);
   }

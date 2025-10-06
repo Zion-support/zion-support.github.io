@@ -20,7 +20,10 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
         roi: '30,000%',
         savings: '$750B+',
         accuracy: '99.99%',
+<<<<<<< HEAD
         speed: '5,000% faster',
+=======
+>>>>>>> main
       },
       readingTime: '35 min read',
       featured: true,
@@ -45,7 +48,10 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
         roi: '30,000%',
         savings: '$750B',
         company: '$15.2B',
+<<<<<<< HEAD
         timeline: '18 months',
+=======
+>>>>>>> main
       },
       readingTime: '25 min read',
       featured: true,
@@ -70,6 +76,7 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
         roi: '30,000%',
         success: '99.8%',
         timeline: '18 months',
+<<<<<<< HEAD
         adoption: '100%',
       },
       readingTime: '45 min read',
@@ -183,10 +190,15 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
         {/* Filter Tabs */}
         <div className='flex justify-center mb-12'>
           <div className='bg-white/10 backdrop-blur-lg rounded-2xl p-2 border border-white/20'>
+=======
+          </p>
+
+>>>>>>> main
             {[
               { id: 'all', label: 'All Content' },
               { id: 'blog', label: 'Blog Posts' },
               { id: 'case-study', label: 'Case Studies' },
+<<<<<<< HEAD
               { id: 'resource', label: 'Resources' },
             ].map(filter => (
               <button
@@ -196,12 +208,15 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
                   activeFilter === filter.id
                     ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white'
                     : 'text-gray-300 hover:text-white hover:bg-white/10'
+=======
+>>>>>>> main
                 }`}
               >
                 {filter.label}
               </button>
             ))}
           </div>
+<<<<<<< HEAD
         </div>
 
         {/* Content Grid */}
@@ -290,20 +305,29 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
                     {item.featured && (
                       <span className="px-2 py-1 bg-red-500 text-white text-xs font-bold rounded-full">🔥 FEATURED</span>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e4e
+=======
+>>>>>>> main
                     )}
                   </div>
 
                   {/* Title */}
+<<<<<<< HEAD
                   <h3 className='text-xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors leading-tight'>
+=======
+>>>>>>> main
                     {item.title}
                   </h3>
 
                   {/* Description */}
+<<<<<<< HEAD
                   <p className='text-gray-300 mb-6 leading-relaxed'>
+=======
+>>>>>>> main
                     {item.description}
                   </p>
 
                   {/* Metrics */}
+<<<<<<< HEAD
                   <div className='grid grid-cols-2 gap-4 mb-6'>
                     {Object.entries(item.metrics).map(([key, value]) => (
                       <div key={key} className='text-center'>
@@ -313,22 +337,28 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
                         <div className='text-gray-400 text-xs capitalize'>
                           {key.replace(/([A-Z])/g, ' $1').trim()}
                         </div>
+=======
+>>>>>>> main
                       </div>
                     ))}
                   </div>
 
                   {/* Tags */}
+<<<<<<< HEAD
                   <div className='flex flex-wrap gap-2 mb-6'>
                     {item.tags.slice(0, 3).map(tag => (
                       <span
                         key={tag}
                         className='px-2 py-1 bg-white/10 text-gray-300 text-xs rounded-full'
                       >
+=======
+>>>>>>> main
                         {tag}
                       </span>
                     ))}
                   </div>
 
+<<<<<<< HEAD
                   {/* CTA */}
                   <div className='flex items-center justify-between'>
                     <Link
@@ -367,11 +397,14 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
                 </div>
               </div>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e4e
+=======
+>>>>>>> main
             </Link>
           ))}
         </div>
 
         {/* Call-to-Action Section */}
+<<<<<<< HEAD
         <div className='text-center bg-white/5 backdrop-blur-lg rounded-3xl p-12 border border-white/20'>
           <h3 className='text-4xl font-bold text-white mb-6'>
             Ready to Transform Your Business Intelligence?
@@ -423,6 +456,8 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
         </div>
       </div>
     </section>
+=======
+>>>>>>> main
   );
 };
 
