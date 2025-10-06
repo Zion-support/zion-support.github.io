@@ -129,13 +129,6 @@ export const colorContrast = {
     return 0.2126 * (rs || 0) + 0.7152 * (gs || 0) + 0.0722 * (bs || 0);
   },
   // Calculate contrast ratio
-  getContrastRatio: (
-    color1: [number, number, number],
-    color2: [number, number, number],
-  ): number => {
-    return 0.2126 * (rs ?? 0) + 0.7152 * (gs ?? 0) + 0.0722 * (bs ?? 0);
-  },
-  // Calculate contrast ratio
   getContrastRatio: (color1: [number, number, number], color2: [number, number, number]): number => {
     const lum1 = colorContrast.getLuminance(...color1);
     const lum2 = colorContrast.getLuminance(...color2);
@@ -194,65 +187,6 @@ export const formAccessibility = {
     // Simplified contrast calculation - in real implementation, use a proper color contrast library
     const contrastRatio = 4.5; // Placeholder
     return contrastRatio >= thresholds[level];
-  },
-};
-// Keyboard navigation utilities
-export const keyboardNavigation = {
-  // Handle arrow key navigation
-  handleArrowKeys: (e: KeyboardEvent, items: HTMLElement[], currentIndex: number): number => {
-    let newIndex = currentIndex;
-    switch (e.key) {
-      case 'ArrowDown':
-      case 'ArrowRight':
-        e.preventDefault();
-        newIndex = (currentIndex + 1) % items.length;
-        break;
-      case 'ArrowUp':
-      case 'ArrowLeft':
-        e.preventDefault();
-        newIndex = currentIndex === 0 ? items.length - 1 : currentIndex - 1;
-        break;
-      case 'Home':
-        e.preventDefault();
-        newIndex = 0;
-        break;
-      case 'End':
-        e.preventDefault();
-        newIndex = items.length - 1;
-        break;
-    }
-    if (newIndex !== currentIndex) {
-      items[newIndex]?.focus();
-    }
-    
-    return newIndex;
-  },
-
-  // Generate unique input ID
-  generateInputId: (): string => {
-    return `input-${Math.random().toString(36).substr(2, 9)}`;
-  },
-  // Add error message association
-  addErrorMessage: (input: HTMLInputElement, errorMessage: string): void => {
-    const errorId = `error-${input.id}`;
-    const errorElement = document.createElement('div');
-    errorElement.id = errorId;
-    errorElement.className = 'error-message';
-    errorElement.textContent = errorMessage;
-    errorElement.setAttribute('role', 'alert');
-    input.setAttribute('aria-describedby', errorId);
-    input.setAttribute('aria-invalid', 'true');
-    input.parentNode?.insertBefore(errorElement, input.nextSibling);
-  },
-  // Remove error message
-  removeErrorMessage: (input: HTMLInputElement): void => {
-    const errorId = input.getAttribute('aria-describedby');
-    if (errorId) {
-      const errorElement = document.getElementById(errorId);
-      errorElement?.remove();
-      input.removeAttribute('aria-describedby');
-      input.removeAttribute('aria-invalid');
-    }
   },
 };
 // Screen reader utilities
@@ -346,6 +280,8 @@ export const accessibilityTesting = {
       headings: headingCheck,
       score,
     };
+  },
+
   // Check if element is focusable
   isFocusable: (element: HTMLElement): boolean => {
     const focusableSelectors = [

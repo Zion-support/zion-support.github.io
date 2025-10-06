@@ -123,7 +123,7 @@ export const selectBannersForRotation = (allBanners: BannerConfig[], maxBanners:
  */
 export const getBannerAnalytics = (bannerId?: string) => {
   const impressions = getBannerImpressions();
-  const bannerImpressions = impressions.filter(imp => imp.bannerId === banner.id);
+  const bannerImpressions = bannerId ? impressions.filter(imp => imp.bannerId === bannerId) : impressions;
   
   // Calculate engagement rate
   const clicks = bannerImpressions.filter(imp => imp.clicked).length;
@@ -136,8 +136,15 @@ export const getBannerAnalytics = (bannerId?: string) => {
   // Calculate fatigue score (too many impressions = lower score)
   const fatigueScore = Math.max(0, 1 - (bannerImpressions.length / 50));
   
-  // Weighted combination
-  return (banner.priority * 0.4) + (engagementRate * 0.3) + (recencyScore * 0.2) + (fatigueScore * 0.1);
+  // Return analytics data
+  return {
+    totalImpressions: bannerImpressions.length,
+    clicks,
+    engagementRate,
+    recencyScore,
+    fatigueScore,
+    overallScore: (engagementRate * 0.3) + (recencyScore * 0.2) + (fatigueScore * 0.1)
+  };
 };
 
 /**
@@ -339,3 +346,4 @@ export default {
   trackBannerClick,
   trackBannerVisibility
 };
+
