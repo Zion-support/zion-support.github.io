@@ -40,7 +40,6 @@ const ContactPage: React.FC = () => {
               </div>
               <button
                 type="submit"
-                className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg font-semibold transition-colors"
               >
                 Send Message
               </button>
@@ -51,18 +50,6 @@ const ContactPage: React.FC = () => {
             <div className="space-y-4">
               <div>
                 <h4 className="font-medium text-gray-900">Email</h4>
-                <p className="text-gray-600">kleber@ziontechgroup.com</p>
-              </div>
-              <div>
-                <h4 className="font-medium text-gray-900">Phone</h4>
-                <p className="text-gray-600">+1 302 464 0950</p>
-              </div>
-              <div>
-                <h4 className="font-medium text-gray-900">Address</h4>
-                <p className="text-gray-600">
-                  Zion Tech Group<br />
-                  Wilmington, DE 19801<br />
-                  United States
                 </p>
               </div>
             </div>
