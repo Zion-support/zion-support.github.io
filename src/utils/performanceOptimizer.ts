@@ -590,8 +590,6 @@ export const preloadCriticalResources = (): void => {
 
 // Export singleton instance
 export const performanceOptimizer = PerformanceOptimizer.getInstance();
-
->>>>>>> cursor/fix-errors-and-merge-to-main-dbd6
 export default {
   prefetchResources,
   preconnectDomains,
