@@ -16,6 +16,7 @@ Object.defineProperty(window, 'matchMedia', {
 });
 
 // Mock IntersectionObserver
+<<<<<<< HEAD
 global.IntersectionObserver = class IntersectionObserver {
   root: Element | null = null;
   rootMargin: string = '0px';
@@ -73,3 +74,33 @@ afterAll(() => {
   console.error = originalError;
   console.warn = originalWarn;
 });
+=======
+class MockIntersectionObserver implements IntersectionObserver {
+  root: Element | null = null;
+  rootMargin: string = '0px';
+  thresholds: ReadonlyArray<number> = [0];
+
+  constructor(
+    public callback: IntersectionObserverCallback,
+    public options?: IntersectionObserverInit
+  ) {}
+
+  disconnect() {}
+  observe() {}
+  unobserve() {}
+  takeRecords(): IntersectionObserverEntry[] {
+    return [];
+  }
+}
+
+global.IntersectionObserver =
+  MockIntersectionObserver as typeof IntersectionObserver;
+
+// Mock ResizeObserver
+global.ResizeObserver = class ResizeObserver {
+  constructor() {}
+  disconnect() {}
+  observe() {}
+  unobserve() {}
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-9c70
