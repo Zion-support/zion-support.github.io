@@ -36,11 +36,7 @@ const ContactPage: React.FC = () => {
                 <textarea
                   rows={4}
                   className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-<<<<<<< HEAD
                 ></textarea>
-=======
-                />
->>>>>>> cursor/fix-errors-and-merge-to-main-b7da
               </div>
               <button
                 type="submit"
