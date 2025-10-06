@@ -1,7 +1,3 @@
-import React, { type ReactNode, useEffect } from 'react';
-import React, { type ReactNode, useEffect } from 'react';
-import React, { type ReactNode, useEffect } from 'react';
-import React, { type ReactNode, useEffect } from 'react';
 import React, { useEffect, useState } from 'react';
 
 interface AccessibilityEnhancerProps {
@@ -14,8 +10,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
   const [reducedMotion, setReducedMotion] = useState(false);
 
   useEffect(() => {
-    // Check for user preferences
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     // Check for user's motion preferences
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     setReducedMotion(prefersReducedMotion);
@@ -26,7 +20,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     
     setIsHighContrast(savedHighContrast);
     setFontSize(savedFontSize);
-    setReducedMotion(prefersReducedMotion);
 
     // Apply initial styles
     applyAccessibilityStyles(savedHighContrast, savedFontSize, prefersReducedMotion);
@@ -170,34 +163,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
   return (
     <>
       {children}
-      {/* Accessibility Controls - only show in development */}
-      {process.env['NODE_ENV'] === 'development' && (
-        <div className="fixed top-4 left-4 z-50 bg-white border border-gray-200 rounded-lg shadow-lg p-4">
-          <h3 className="text-sm font-semibold mb-2">Accessibility Controls</h3>
-          <div className="space-y-2">
-            <button
-              onClick={toggleHighContrast}
-              className={`px-2 py-1 text-xs rounded ${
-                isHighContrast ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
-              }`}
-              aria-label="Toggle high contrast mode"
-            >
-              High Contrast
-            </button>
-            <div className="flex gap-1">
-              {(['small', 'normal', 'large'] as const).map((size) => (
-                <button
-                  key={size}
-                  onClick={() => changeFontSize(size)}
-                  className={`px-2 py-1 text-xs rounded ${
-                    fontSize === size ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
-                  }`}
-                  aria-label={`Set font size to ${size}`}
-                >
-                  {size.charAt(0).toUpperCase()}
-                </button>
-              ))}
-      
       {/* Accessibility Controls - Only show in development */}
       {process.env['NODE_ENV'] === 'development' && (
         <div className="fixed top-4 right-4 z-50 bg-white border border-gray-200 rounded-lg shadow-lg p-4">

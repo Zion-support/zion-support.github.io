@@ -1,5 +1,4 @@
 import { useEffect, useCallback, useRef } from 'react';
-import { performanceOptimizer } from '../utils/performanceOptimizer';
 
 // Mock analytics object for tracking
 const analytics = {
@@ -53,12 +52,15 @@ export const usePageLoadPerformance = () => {
       return () => window.removeEventListener('load', trackPageLoad);
     }
   }, []);
+};
 
 /**
  * Hook for monitoring resource loading performance
  */
 export const useResourcePerformance = () => {
-  useEffect(() => {
+  const observerRef = useRef<PerformanceObserver | null>(null);
+
+  const trackPerformance = useCallback(() => {
     if (typeof window === 'undefined' || !window.PerformanceObserver) {
       return;
     }
@@ -81,27 +83,43 @@ export const useResourcePerformance = () => {
     }
   }, []);
 
+  const trackLongTasks = useCallback(() => {
+    if (typeof window === 'undefined' || !window.PerformanceObserver) {
+      return;
+    }
+
+    const observer = new PerformanceObserver(list => {
+      list.getEntries().forEach(entry => {
+        analytics.track('long_task', 'performance', 'detected', undefined, entry.duration);
+      });
+    });
+
+    observer.observe({ entryTypes: ['longtask'] });
+    return observer;
+  }, []);
+
   const preloadResources = useCallback(() => {
     if (typeof window === 'undefined') return;
-
-    performanceOptimizer.preloadCriticalResources();
+    // Add preloading logic here
   }, []);
 
   const optimizeImages = useCallback(() => {
     if (typeof window === 'undefined') return;
-
-    performanceOptimizer.lazyLoadImages();
+    // Add image optimization logic here
   }, []);
 
   useEffect(() => {
     trackPerformance();
-    trackLongTasks();
+    const longTaskObserver = trackLongTasks();
     preloadResources();
     optimizeImages();
 
     return () => {
       if (observerRef.current) {
         observerRef.current.disconnect();
+      }
+      if (longTaskObserver) {
+        longTaskObserver.disconnect();
       }
     };
   }, [trackPerformance, trackLongTasks, preloadResources, optimizeImages]);
@@ -119,16 +137,20 @@ export const useResourcePerformance = () => {
  */
 export const useLongTaskMonitoring = () => {
   useEffect(() => {
-    const observer = performanceOptimizer.monitorLongTasks((entries: PerformanceEntry[]) => {
+    if (typeof window === 'undefined' || !window.PerformanceObserver) {
+      return;
+    }
+
+    const observer = new PerformanceObserver((entries: PerformanceEntryList) => {
       entries.forEach((entry: PerformanceEntry) => {
         analytics.track('long_task', 'performance', 'detected', undefined, entry.duration);
       });
     });
 
+    observer.observe({ entryTypes: ['longtask'] });
+
     return () => {
-      if (observer && typeof observer.disconnect === 'function') {
-        observer.disconnect();
-      }
+      observer.disconnect();
     };
   }, []);
 };
