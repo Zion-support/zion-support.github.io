@@ -26,13 +26,13 @@ const App: React.FC = () => {
 
     // Initialize performance monitoring
     performanceOptimizer.lazyLoadImages();
-    performanceOptimizer.prefetchResources(['/api/health']);
+    performanceOptimizer.preconnectDomains(['https://fonts.googleapis.com', 'https://fonts.gstatic.com']);
     
     // Initialize Web Vitals monitoring
     if (typeof window !== 'undefined' && 'performance' in window) {
-      const pageLoadMetrics = performanceOptimizer.measurePageLoad();
-      if (pageLoadMetrics) {
-        performanceOptimizer.reportWebVitals(pageLoadMetrics);
+      const metrics = performanceOptimizer.measurePageLoad();
+      if (metrics) {
+        performanceOptimizer.reportWebVitals(metrics);
       }
     }
     
