@@ -70,13 +70,13 @@ export default function HomePage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                href="/contact"
+                to="/contact"
                 className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-colors duration-300"
               >
                 Get Started Today
               </Link>
               <Link
-                href="/services"
+                to="/services"
                 className="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white font-bold py-4 px-8 rounded-lg text-lg transition-colors duration-300"
               >
                 View Services
@@ -97,35 +97,6 @@ export default function HomePage() {
         <section className="my-16">
           <Suspense fallback={<LoadingFallback height="h-64" />}>
             <InteractiveAIROICalculator />
-        {/* Main Content */}
-        <main className="container mx-auto px-4 py-16">
-          {/* Unified Content Promotion */}
-          <Suspense fallback={<LoadingFallback height="h-32" />}>
-            <UnifiedContentPromotion />
-          </Suspense>
-        </section> */}
-
-        {/* Content Showcase - temporarily disabled */}
-        {/* <section className="my-16">
-          <Suspense fallback={<LoadingFallback height="h-48" />}>
-        {/* Content Showcase */}
-        <section className='my-16'>
-          <Suspense fallback={<LoadingFallback height='h-48' />}>
-            <ContentShowcase />
-          </Suspense>
-        </section> */}
-
-        {/* Interactive Content Showcase 2026 - temporarily disabled */}
-        {/* <section className="my-16">
-          <Suspense fallback={<LoadingFallback height="h-48" />}>
-            <InteractiveContentShowcase2026 />
-          </Suspense>
-        </section> */}
-        {/* Interactive Content Showcase 2026 */}
-        <section className='my-16'>
-          <Suspense fallback={<LoadingFallback height='h-48' />}>
-            <InteractiveContentShowcase2026 />
->>>>>>> 6c45f99dc7ca17bbf478e03055adf8e9c75097bc
           </Suspense>
         </section>
 
@@ -144,18 +115,18 @@ export default function HomePage() {
         </section>
         
         {/* CTA Section */}
-        <section className='bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16 rounded-2xl text-center'>
-          <div className='max-w-3xl mx-auto px-4'>
-            <h2 className='text-4xl font-bold mb-6'>
+        <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16 rounded-2xl text-center">
+          <div className="max-w-3xl mx-auto px-4">
+            <h2 className="text-4xl font-bold mb-6">
               Ready to Transform Your Enterprise?
             </h2>
-            <p className='text-xl mb-8'>
+            <p className="text-xl mb-8">
               Join hundreds of companies already achieving 300% ROI with our AI
               solutions.
             </p>
             <Link
-              href='/contact'
-              className='bg-white text-blue-600 hover:bg-gray-100 font-bold py-4 px-8 rounded-lg text-lg transition-colors duration-300 inline-block'
+              to="/contact"
+              className="bg-white text-blue-600 hover:bg-gray-100 font-bold py-4 px-8 rounded-lg text-lg transition-colors duration-300 inline-block"
             >
               Start Your Transformation
             </Link>

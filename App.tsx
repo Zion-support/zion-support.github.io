@@ -110,7 +110,7 @@ class AppErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundary
   }
 }
 
-export { ErrorBoundary };
+export { AppErrorBoundary as ErrorBoundary };
 
 function App() {
   useEffect(() => {
