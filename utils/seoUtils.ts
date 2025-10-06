@@ -94,7 +94,7 @@ export const setTwitterCardTags = (twitterData: {
 };
 
 // Structured data
-export const setStructuredData = (data: any): void => {
+export const setStructuredData = (data: Record<string, unknown>): void => {
   const script = document.createElement('script');
   script.type = 'application/ld+json';
   script.textContent = JSON.stringify(data);

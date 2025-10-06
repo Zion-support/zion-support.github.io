@@ -27,7 +27,7 @@ interface BannerImpression {
 
 const STORAGE_KEY = 'zion_banner_impressions';
 const SESSION_KEY = 'zion_session_id';
-const MAX_VISIBLE_BANNERS = 10; // Limit visible banners for performance
+// const MAX_VISIBLE_BANNERS = 10; // Limit visible banners for performance
 
 /**
  * Get or create session ID
