@@ -2,30 +2,29 @@
 
 import React from 'react';
 import Link from 'next/link';
+import { ArrowLeft, Home, Search, BookOpen, Users, Phone } from 'lucide-react';
 
 export default function NotFound() {
-  return (
-    <div>/* content */}
   const popularPages = [
-    {/* content */}
+    {
       title: 'AI Services',
       description: 'Explore our comprehensive AI and IT solutions',
       href: '/services',
       icon: '🤖'
     },
-    {/* content */}
+    {
       title: 'Blog & Insights',
       description: 'Read about latest AI trends and innovations',
       href: '/blog',
       icon: '📚'
     },
-    {/* content */}
+    {
       title: 'Case Studies',
       description: 'See our success stories and client results',
       href: '/case-studies',
       icon: '📊'
     },
-    {/* content */}
+    {
       title: 'Contact Us',
       description: 'Get in touch with our AI experts',
       href: '/contact',
@@ -34,100 +33,99 @@ export default function NotFound() {
   ];
 
   return (
-    <div>
-      <div> </div><div> </div></div>
-    <div className="text-left"> </div><div className="text-left">{/* Error Code */}</div></div>
-        <div className="text-left"> </div><h1 className="text-left">
+    <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4">
+      <div className="max-w-2xl mx-auto text-center">
+        {/* Error Code */}
+        <div className="mb-8">
+          <h1 className="text-9xl font-bold text-gray-300 mb-4">
             404
           </h1>
-          <div className="text-left">🔍</div>"
+          <div className="text-6xl mb-4">🔍</div>
         </div>
 
         {/* Error Message */}
-        <div className="text-left"> </div><h2 className="text-left">
+        <div className="mb-8">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">
             Oops! Page Not Found
           </h2>
-          <p className="text-left">The page you're looking for doesn't exist or has been moved. 
-            Don't worry, our AI can help you find what you need!
-          </p></p>
+          <p className="text-lg text-gray-600 mb-6">
+            The page you're looking for doesn't exist or has been moved. 
+            Don't worry, let's get you back on track!
+          </p>
         </div>
 
-        {/* Search Bar */}
-        <div className="text-left"> </div><div className="text-left"> </div><input
-              type="text"
-              placeholder="Search for AI services, articles, or case studies..."
-              className="text-left"
-              onKeyPress={(e) = /> {/* content */}
-                if (e.key === 'Enter') {/* content */}
-                  const searchTerm = (e.target as HTMLInputElement).value;
-                  if (searchTerm) {/* content */}
-                    window.location.href = `/search?q=${encodeURIComponent(searchTerm)}`;
-                  }
-                }
-              }}
-            />
-            <button className="text-left">
-              Search
-            </button>
-          </div>
+        {/* Action Buttons */}
+        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+          <Link
+            href="/"
+            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+          >
+            <Home className="w-5 h-5 mr-2" />
+            Go Home
+          </Link>
+          <button
+            onClick={() => window.history.back()}
+            className="inline-flex items-center px-6 py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors"
+          >
+            <ArrowLeft className="w-5 h-5 mr-2" />
+            Go Back
+          </button>
+        </div>
 
         {/* Popular Pages */}
-        <div className="text-left"> </div><h3 className="text-left">
+        <div className="mb-8">
+          <h3 className="text-xl font-semibold text-gray-900 mb-6">
             Popular Pages
           </h3>
-          <div className="text-left">{popularPages.map((page) => (</div></div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {popularPages.map((page, index) => (
               <Link
-                key={page.href}
+                key={index}
                 href={page.href}
-                className="text-left">
-                <div className="text-left">{page.icon}</div>"
-                <h4 className="text-left">
-                  {page.title}
-                </h4>
-                <p className="text-left">{page.description}
-                </p></p>
+                className="p-4 bg-white rounded-lg border border-gray-200 hover:border-blue-300 hover:shadow-md transition-all text-left"
+              >
+                <div className="flex items-start">
+                  <span className="text-2xl mr-3">{page.icon}</span>
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-1">
+                      {page.title}
+                    </h4>
+                    <p className="text-sm text-gray-600">
+                      {page.description}
+                    </p>
+                  </div>
+                </div>
               </Link>
             ))}
           </div>
-
-        {/* CTA Buttons */}
-        <div className="text-left"> </div><Link
-            href="/"
-            className="text-left">
-            ← Back to Home
-          </Link>
-          <a
-            href="tel:+13024640950"
-            className="text-left">Call Support: +1 302 464 0950
-          </a></a>
         </div>
 
-        {/* Help Section */}
-        <div className="text-left"> </div><h3 className="text-left">
-            Still need help?
+        {/* Search Suggestion */}
+        <div className="bg-blue-50 p-6 rounded-lg">
+          <h3 className="text-lg font-semibold text-gray-900 mb-3">
+            Can't find what you're looking for?
           </h3>
-          <p className="text-left">Our AI support team is available 24/7 to assist you with any questions or concerns.
-          </p></p>
-          <div className="text-left"> </div><a
-              href="mailto:kleber@ziontechgroup.com"
-              className="text-left">📧 Email: kleber@ziontechgroup.com
-            </a></a>
-            <span className="text-left">|>
-            <a
-              href="tel:+13024640950"
-              className="text-left">📞 Phone: +1 302 464 0950
-            </a></a>
-          </div>
-
-        {/* Footer Note */}
-        <div className="text-left"> </div><p>Error Code: 404 | Page Not Found</p>
-          <p className="text-left">If you believe this is an error, please{' '}
-            </p><a
-              href="mailto:kleber@ziontechgroup.com"
-              className="text-left">contact our support team
-            </a></a>
+          <p className="text-gray-600 mb-4">
+            Try searching for what you need or contact our support team.
           </p>
+          <div className="flex flex-col sm:flex-row gap-3">
+            <Link
+              href="/search"
+              className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+            >
+              <Search className="w-4 h-4 mr-2" />
+              Search Our Site
+            </Link>
+            <Link
+              href="/contact"
+              className="inline-flex items-center px-4 py-2 bg-white text-blue-600 border border-blue-600 rounded-lg hover:bg-blue-50 transition-colors"
+            >
+              <Phone className="w-4 h-4 mr-2" />
+              Contact Support
+            </Link>
+          </div>
         </div>
+      </div>
     </div>
   );
-}</div></div></div></div>)
+}

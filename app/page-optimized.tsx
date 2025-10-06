@@ -1,4 +1,5 @@
 import React from 'react';
+import dynamic from 'next/dynamic';
 import { UnifiedBanner, bannerConfigurations } from './components/UnifiedBannerSystem';
 import { LazyWrapper } from './components/LazyLoader';
 import { SEOOptimizer } from './components/SEOOptimizer';
@@ -6,20 +7,20 @@ import { AccessibilityEnhancer } from './components/AccessibilityEnhancer';
 import { PerformanceMonitor } from './components/PerformanceMonitor';
 
 // Lazy load heavy components
-const UnifiedContentPromotion = dynamic(() => import('../components/UnifiedContentPromotion'), {/* content */}
-  loading: () => <div className="text-left">"
+const UnifiedContentPromotion = dynamic(() => import('../components/UnifiedContentPromotion'), {
+  loading: () => <div className="animate-pulse bg-gray-200 h-32 rounded-lg"></div>
 });
 
-const InteractiveAIROICalculator = dynamic(() => import('../components/InteractiveAIROICalculator'), {/* content */}
-  loading: () => </div><div className="text-left">"
+const InteractiveAIROICalculator = dynamic(() => import('../components/InteractiveAIROICalculator'), {
+  loading: () => <div className="animate-pulse bg-gray-200 h-64 rounded-lg"></div>
 });
 
-const ContentShowcase = dynamic(() => import('../components/ContentShowcase'), {/* content */}
-  loading: () => </div><div className="text-left">"
+const ContentShowcase = dynamic(() => import('../components/ContentShowcase'), {
+  loading: () => <div className="animate-pulse bg-gray-200 h-48 rounded-lg"></div>
 });
 
-const InteractiveContentShowcase2026 = dynamic(() => import('../components/InteractiveContentShowcase2026'), {/* content */}
-  loading: () => </div><div className="text-left">"
+const InteractiveContentShowcase2026 = dynamic(() => import('../components/InteractiveContentShowcase2026'), {
+  loading: () => <div className="animate-pulse bg-gray-200 h-48 rounded-lg"></div>
 });
 
 export const metadata = {
@@ -32,7 +33,7 @@ export const metadata = {
     type: 'website',
     url: 'https://ziontechgroup.com',
     images: [
-      {/* content */}
+      {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
@@ -40,16 +41,16 @@ export const metadata = {
       },
     ],
   },
-  twitter: {/* content */}
+  twitter: {
     card: 'summary_large_image',
     title: 'Zion Tech Group — AI Enterprise Transformation & IT Services',
     description: 'Transform your enterprise with AI-powered solutions. Achieve 300% ROI, 70% cost reduction, and 90% efficiency gains.',
     images: ['/og-image.jpg'],
   },
-  robots: {/* content */}
+  robots: {
     index: true,
     follow: true,
-    googleBot: {/* content */}
+    googleBot: {
       index: true,
       follow: true,
       'max-video-preview': -1,
@@ -57,170 +58,82 @@ export const metadata = {
       'max-snippet': -1,
     },
   },
+  alternates: {
+    canonical: 'https://ziontechgroup.com',
+  },
+  verification: {
+    google: 'your-google-verification-code',
+    yandex: 'your-yandex-verification-code',
+    yahoo: 'your-yahoo-verification-code',
+  },
 };
 
-export default function HomePage() {
+export default function OptimizedHomePage() {
   return (
-    </div><div>/* content */}
-  const structuredData = {/* content */}
-    "@context": "https://schema.org"
-    "@type": "Organization"
-    "name": "Zion Tech Group"
-    "description": "Leading provider of AI-powered enterprise solutions and digital transformation services"
-    "url": "https://ziontechgroup.com"
-    "logo": "https://ziontechgroup.com/logo.png"
-    "contactPoint": {"
-      "@type": "ContactPoint"
-      "telephone": "+1-302-464-0950"
-      "contactType": "customer service"
-      "email": "kleber@ziontechgroup.com"
-    },
-    "address": {"
-      "@type": "PostalAddress"
-      "streetAddress": "364 E Main St STE 1008"
-      "addressLocality": "Middletown"
-      "addressRegion": "DE"
-      "postalCode": "19709"
-      "addressCountry": "US"
-    },
-    "sameAs": ["
-      "https://linkedin.com/company/zion-tech-group"
-      "https://twitter.com/ziontechgroup"
-    ],
-    "offers": {"
-      "@type": "Offer"
-      "name": "AI Enterprise Transformation Services"
-      "description": "Transform your enterprise with AI-powered solutions achieving 300% ROI, 70% cost reduction, and 90% efficiency gains"
-      "price": "50000"
-      "priceCurrency": "USD"
-      "availability": "https://schema.org/InStock"
-    }
-  };
-
-  return (
-    <div>
-      <div> </div><div> </div></div>
-    <div> </div><script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-      />
-      <div className="text-left">{/* Unified Content Promotion - Replaces multiple redundant banners */}</div></div>
-        <UnifiedContentPromotion />
-
+    <div className="min-h-screen bg-white">
+      <SEOOptimizer />
+      <AccessibilityEnhancer />
+      <PerformanceMonitor />
+      
+      {/* Unified Banner System */}
+      <UnifiedBanner configurations={bannerConfigurations} />
+      
+      {/* Main Content */}
+      <main className="relative">
         {/* Hero Section */}
-        <section className="text-left"> </section><div className="text-left"> </div><h1 className="text-left">
-              Transform Your Business with
-              <span className="text-left">{' '}AI-Powered Solutions
-              </span></span>
-            </h1>
-            <p className="text-left">Zion Tech Group delivers cutting-edge AI micro SaaS services, cloud automation, 
-              and enterprise IT solutions that drive growth, efficiency, and innovation.
-            </p></p>
-            <div className="text-left"> </div><Link
-                href="/services"
-                className="text-left">
-                Explore Our Services
-              </Link>
-              <a
-                href="tel:+13024640950"
-                className="text-left">Call +1 302 464 0950
-              </a></a>
-            </div>
-            <div className="text-left"> </div><div> </div><div className="text-left">500+</div>"
-                <div className="text-left">Projects Delivered</div>"
-              </div>
-              <div> </div><div className="text-left">99.9%</div>"
-                <div className="text-left">Uptime Guarantee</div>"
-              </div>
-              <div> </div><div className="text-left">24/7</div>"
-                <div className="text-left">Expert Support</div>"
-              </div>
-              <div> </div><div className="text-left">$2M+</div>"
-                <div className="text-left">Cost Savings</div>"
+        <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white overflow-hidden">
+          <div className="absolute inset-0 bg-black opacity-20"></div>
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+            <div className="text-center">
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+                AI Enterprise Transformation
+                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
+                  That Delivers Results
+                </span>
+              </h1>
+              <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-4xl mx-auto">
+                Transform your enterprise with AI-powered solutions that deliver 300% ROI, 
+                70% cost reduction, and 90% efficiency gains. Expert AI consulting, 
+                autonomous systems, and digital transformation services.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a
+                  href="/contact"
+                  className="inline-flex items-center px-8 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold text-lg"
+                >
+                  Get Your Free AI Assessment
+                </a>
+                <a
+                  href="/case-studies"
+                  className="inline-flex items-center px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-900 transition-colors font-semibold text-lg"
+                >
+                  View Success Stories
+                </a>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Interactive AI ROI Calculator */}
-        <InteractiveAIROICalculator />
+        {/* ROI Calculator Section */}
+        <LazyWrapper>
+          <InteractiveAIROICalculator />
+        </LazyWrapper>
 
-        {/* Dynamic Content Showcase */}
-        <ContentShowcase />
+        {/* Content Showcase */}
+        <LazyWrapper>
+          <ContentShowcase />
+        </LazyWrapper>
 
         {/* Interactive Content Showcase 2026 */}
-        <InteractiveContentShowcase2026 />
+        <LazyWrapper>
+          <InteractiveContentShowcase2026 />
+        </LazyWrapper>
 
-        {/* Enhanced Newsletter Signup */}
-        <section className="text-left"> </section><div className="text-left"> </div><div className="text-left">{/* Newsletter Signup */}</div></div>
-              <div className="text-left"> </div><h2 className="text-left">
-                  Stay Ahead with AI & Tech Insights
-                </h2>
-                <p className="text-left">Get weekly updates on AI trends, tech innovations, and exclusive service offers
-                </p></p>
-                <div className="text-left"> </div><input
-                    type="email"
-                    placeholder="Enter your email"
-                    className="text-left"
-                  />
-                  <button className="text-left">
-                    Subscribe
-                  </button>
-                </div>
-                <p className="text-left">Join 10,000+ professionals. Unsubscribe anytime.
-                </p></p>
-              </div>
-
-              {/* Content Highlights */}
-              <div className="text-left"> </div><h3 className="text-left">Latest Content Highlights</h3>"
-                <div className="text-left"> </div><a href="/blog/ai-2026-enterprise-rag-guardrails" className="text-left"> </a><div className="text-left">🛡️</div>"
-                    <div> </div><h4 className="text-left">Enterprise RAG Guardrails 2026</h4>"
-                      <p className="text-left">Safe, reliable RAG with verifiable citations</p>"
-                    </div>
-                  </a>
-                  <a href="/blog/ai-2026-autonomous-enterprise-operations" className="text-left"> </a><div className="text-left">🏭</div>"
-                    <div> </div><h4 className="text-left">Autonomous Enterprise Operations 2026</h4>"
-                      <p className="text-left">90% efficiency, 300% ROI with guardrailed agents</p>"
-                    </div>
-                  </a>
-                  <a href="/blog/ai-cloud-cost-optimization-2025" className="text-left"> </a><div className="text-left">💸</div>"
-                    <div> </div><h4 className="text-left">AI Cloud Cost Optimization</h4>"
-                      <p className="text-left">Cut spend by 70–85% with smart routing</p>"
-                    </div>
-                  </a>
-                </div>
-                <div className="text-left"> </div><Link
-                    href="/blog"
-                    className="text-left">
-                    View All Content →
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="text-left"> </section><div className="text-left"> </div><h2 className="text-left">
-              Ready to Transform Your Business?
-            </h2>
-            <p className="text-left">Let's discuss how our AI and IT solutions can drive your success
-            </p></p>
-            <div className="text-left"> </div><a
-                href="tel:+13024640950"
-                className="text-left">Call +1 302 464 0950
-              </a></a>
-              <a
-                href="mailto:kleber@ziontechgroup.com"
-                className="text-left">Get Free Consultation
-              </a></a>
-            </div>
-            <div className="text-left"> </div><p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
-              <p>📧 kleber@ziontechgroup.com | 📞 +1 302 464 0950</p>
-            </div>
-          </div>
-        </section>
-      </div>
-    </>
+        {/* Unified Content Promotion */}
+        <LazyWrapper>
+          <UnifiedContentPromotion />
+        </LazyWrapper>
+      </main>
+    </div>
   );
-})
+}
