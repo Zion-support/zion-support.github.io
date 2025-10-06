@@ -21,7 +21,7 @@ const PerformanceDashboard: React.FC = () => {
 
   useEffect(() => {
     const updateData = () => {
-      const metrics = performanceOptimizer.getMetrics();
+      const metrics = performanceOptimizer.performanceOptimizer.getMetrics();
       const performance = {
         averageRenderTime: metrics['averageRenderTime'] || 0,
         totalComponents: metrics['totalComponents'] || 0,

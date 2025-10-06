@@ -14,7 +14,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 
   useEffect(() => {
     // Initialize performance monitoring
-    performanceOptimizer.initialize();
+    performanceOptimizer.performanceOptimizer.initialize();
     setIsMonitoring(true);
 
     // Cleanup on unmount
