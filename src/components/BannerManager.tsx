@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 
 interface BannerData {
   id: string;
@@ -35,7 +35,7 @@ interface Banner {
 const BannerManager: React.FC = () => {
   const [currentBannerIndex, setCurrentBannerIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
-
+  
   const banners: Banner[] = [
     {
       id: 'ai-solutions',
