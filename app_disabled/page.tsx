@@ -1,5 +1,5 @@
 import { Suspense, lazy } from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 // Lazy load heavy components
 const UnifiedContentPromotion = lazy(
