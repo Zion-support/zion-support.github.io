@@ -70,11 +70,11 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
     return { hasError: true, error };
   }
 
-  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
+  override componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
     console.error('App Error Boundary caught an error:', error, errorInfo);
   }
 
-  render() {
+  override render() {
     if (this.state.hasError) {
       return (
         <div className="min-h-screen flex items-center justify-center bg-gray-50">
@@ -173,7 +173,7 @@ export default function App() {
       // Add performance monitoring
       if ('performance' in window) {
         window.addEventListener('load', () => {
-          const perfData = performance.getEntriesByType('navigation')[0];
+          const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
           if (perfData) {
             console.log('Page Load Performance:', {
               domContentLoaded: perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart,
