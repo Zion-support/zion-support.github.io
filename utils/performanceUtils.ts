@@ -3,16 +3,13 @@
  */
 
 // Debounce function for performance optimization
-export const debounce = <T extends (...args: any[]) => any>(
+export const debounce = <T extends (...args: unknown[]) => unknown>(
   func: T,
   wait: number,
   immediate = false
 ): ((...args: Parameters<T>) => void) => {
   let timeout: NodeJS.Timeout | null = null;
-<<<<<<< HEAD
   
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-9fc8
   return function executedFunction(...args: Parameters<T>) {
     const later = () => {
       timeout = null;
@@ -27,26 +24,33 @@ export const debounce = <T extends (...args: any[]) => any>(
 };
 
 // Throttle function for performance optimization
-export const throttle = <T extends (...args: any[]) => any>(
+export const throttle = <T extends (...args: unknown[]) => unknown>(
   func: T,
-  limit: number
+  _limit: number // eslint-disable-line @typescript-eslint/no-unused-vars
 ): ((...args: Parameters<T>) => void) => {
   let inThrottle: boolean;
-  return function executedFunction(this: any, ...args: Parameters<T>) {
+  return function executedFunction(this: unknown, ...args: Parameters<T>) {
     if (!inThrottle) {
       func.apply(this, args);
       inThrottle = true;
     }
   };
 };
-
-<<<<<<< HEAD
-=======
-};
-
->>>>>>> cursor/fix-errors-and-merge-to-main-9fc8
 // Preload critical resources
 export const preloadCriticalResources = (): void => {
+  if (typeof window === 'undefined') return;
+  
+  const criticalResources = [
+    '/fonts/inter-var.woff2',
+    '/css/critical.css'
+  ];
+  
+  criticalResources.forEach(resource => {
+    const link = document.createElement('link');
+    link.rel = 'preload';
+    link.href = resource;
+    link.as = resource.endsWith('.css') ? 'style' : 'font';
+    if (resource.endsWith('.woff2')) {
       link.crossOrigin = 'anonymous';
     }
     document.head.appendChild(link);

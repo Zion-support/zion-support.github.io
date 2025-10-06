@@ -25,7 +25,7 @@ export function readState(): IntegrationsState {
   try {
     const raw = fs.readFileSync(STATE_FILE, 'utf8');
     return JSON.parse(raw) as IntegrationsState;
-  } catch (error) {
+  } catch {
     return {
       connections: [],
       logs: [],
