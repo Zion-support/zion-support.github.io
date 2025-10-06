@@ -50,7 +50,29 @@ export const preconnectDomains = (domains: string[]): void => {
  */
 export const lazyLoadImages = (): void => {
   if (typeof window === 'undefined') return;
+<<<<<<< HEAD
   if (!('IntersectionObserver' in window)) return;
+=======
+  
+  const images = document.querySelectorAll('img[data-src]');
+  
+  const imageObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const img = entry.target as HTMLImageElement;
+        const src = img.dataset['src'];
+        if (src) {
+          img.src = src;
+          img.removeAttribute('data-src');
+          imageObserver.unobserve(img);
+        }
+      }
+    });
+  });
+  
+  images.forEach(img => imageObserver.observe(img));
+};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-014b
 
   const imageObserver = new IntersectionObserver(
     entries => {

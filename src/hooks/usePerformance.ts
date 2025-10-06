@@ -112,10 +112,15 @@ export const usePageLoadPerformance = () => {
               navigation.domContentLoadedEventStart,
             loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
             firstByte: navigation.responseStart - navigation.requestStart,
+<<<<<<< HEAD
             domInteractive:
               navigation.domInteractive - (navigation as any).navigationStart,
             totalLoadTime:
               navigation.loadEventEnd - (navigation as any).navigationStart,
+=======
+            domInteractive: navigation.domInteractive - (navigation as any).navigationStart,
+            totalLoadTime: navigation.loadEventEnd - (navigation as any).navigationStart,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-014b
           };
 
           // Track each metric
@@ -178,6 +183,7 @@ export const useResourcePerformance = () => {
  */
 export const useLongTaskMonitoring = () => {
   useEffect(() => {
+<<<<<<< HEAD
     performanceOptimizer.monitorLongTasks((entries: any[]) => {
       entries.forEach((entry: any) => {
         analytics.track(
@@ -187,6 +193,11 @@ export const useLongTaskMonitoring = () => {
           undefined,
           entry.duration
         );
+=======
+    const observer = (performanceOptimizer as any).monitorLongTasks((entries: PerformanceEntry[]) => {
+      entries.forEach((entry) => {
+        analytics.track('long_task', 'performance', 'detected', undefined, entry.duration);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-014b
       });
     });
 
