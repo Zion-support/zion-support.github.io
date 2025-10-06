@@ -1,41 +1,40 @@
-imp, o, r, t Arr o w R i, g, h, t f, r, o, m 'n, e, x, t/l, i, n, k';
+import ArrowRight from 'n, e, x, t/l, ink';
 
-exp, o, r, t co, n, s, t m e t a d, a, t, a = {
+export const metadata = {
   
-  ti, t, l, e: 'AI 2, 0, 2, 7 Aut o n o m, o, u, s Gov e r n a, n, c, e Bl u e p r, i, n, t',
-    desc r i p t, i, o, n:
-      'Des, i, g, n and oper, a, t, e aut o n o m, o, u, s syst, e, m, s w, i, t, h pol, i, c, y guardrailsappro v a l s, a, n, d observ a b i l, i, t, y.',
-    t, y, p, e: 'arti, c, l, e',
-    url: 'ht, t, p, s://zionte c h g r, o, u, p.com/b, l, o, g/ai-2, 0, 2, 7-aut o n o m, o, u, s-gov e r n a, n, c, e-bl u e p r, i, n, t',
+  title: 'AI 2, 0, 2, 7 Aut o n o m, o, u, s Gov e r n a, n, c, e Bl u e p r, int'
+    description:
+      'Des, i, g, n and oper, a, t, e aut o n o m, o, u, s syst, e, m, s with pol, i, c, y guardrailsappro v a l s, a, n, d observ a b i l, ity.'
+    t, y, p, e: 'arti, cle'
+    url: 'ht, t, p, s://zionte c h g r, o, u, p.com/b, l, o, g/ai-2, 0, 2, 7-aut o n o m, o, u, s-gov e r n a, n, c, e-bl u e p r, int'
     ima, g, e, s: [
       {
-        url: '/og-aut o n o m, o, u, s-gov e r n a, n, c, e-2, 0, 2, 7.jpg',
-        wi, d, t, h: 1, 2, 0, 0, hei, g, h, t: 630, alt: 'Aut o n o m, o, u, s Gov e r n a, n, c, e 2, 0, 2, 7',
-      
+        url: '/og-aut o n o m, o, u, s-gov e r n a, n, c, e-2, 027.jpg'
+        wi, d, t, h: 1, 2, 0, 0, hei, g, h, t: 630, alt: 'Aut o n o m, o, u, s Gov e r n a, n, c, e 2, 027'
 };
     ]};
 
-exp, o, r, t defa, u, l, t f u n c t, i, o, n AutonomousGovernanceBluepr i n t 2, 0, 2, 7() {
-  ret, u, r, n (
-    <div cl a s s N, a, m, e='max-w-4, xl mx-a, u, t, o px-4 py-8'>
-      <Arr o w R i, g, h, t
-        h, r, e, f='/b, l, o, g'
-        cl a s s N, a, m, e='t, e, x, t-b, l, u, e-600 ho, v, e, r:t, e, x, t-b, l, u, e-800 mb-6 inl, i, n, e-bl, o, c, k'
+export default function AutonomousGovernanceBluepr i n t 2, 0, 2, 7() {
+  return (
+    <div cl a s s N, a, m, e='max-w-4, xl mx-a, uto px-4 py-8'>
+      <ArrowRight
+        h, r, e, f='/b, log'
+        cl a s s N, a, m, e='t, e, x, t-b, l, u, e-600 ho, v, e, r:t, e, x, t-b, l, u, e-800 mb-6 inl, i, n, e-bl, ock'
       >
         ← B, a, c, k to B, l, o, g
-      </Arr o w R i, g, h, t>
-      <h1 cl a s s N, a, m, e='t, e, x, t-4, xl f, o, n, t-b, o, l, d t, e, x, t-g, r, a, y-900 mb-3'>
+      </ArrowRight>
+      <h1 cl a s s N, a, m, e='t, e, x, t-4, xl f, o, n, t-b, o, l, d t, e, x, t-g, ray-900 mb-3'>
         AI 2, 0, 2, 7 Aut o n o m, o, u, s Gov e r n a, n, c, e Bl u e p r, i, n, t
       </h1>
-      <div cl a s s N, a, m, e='t, e, x, t-g, r, a, y-600 mb-8'>
+      <div cl a s s N, a, m, e='t, e, x, t-g, ray-600 mb-8'>
         Pu b l i s, h, e, d: Se p t e m, b, e, r 30, 2, 0, 2, 5 • 12 min r, e, a, d • Gov e r n a, n, c, e
       </div>
 
-      <div cl a s s N, a, m, e='pr, o, s, e pr, o, s, e-lg max-w-n, o, n, e'>
+      <div cl a s s N, a, m, e='pr, o, s, e pr, o, s, e-lg max-w-n, one'>
         <p>
           T, h, i, s bl u e p r, i, n, t deta, i, l, s a pr a c t i, c, a, l, au d i t a, b, l, e a p p r o, a, c, h to go v e r n, i, n, g
           aut o n o m, o, u, s syst, e, m, s acr, o, s, s pol, i, c, y, c o n t r, o, l, s, te l e m e, t, r, y, and revi, e, w, s. It
-          ali, g, n, s exe c u t i, v, e, s, r, i, s, k, and engi n e e r, i, n, g on a mea s u r a, b, l, e p, a, t, h to s, a, f, e
+          ali, g, n, s exe c u t i, v, e, s, r, i, s, k, and engi n e e r, i, n, g on a mea s u r a, b, l, e p, a, t, h to safe
           a u t o n, o, m, y.
         </p>
 
@@ -60,18 +59,18 @@ exp, o, r, t defa, u, l, t f u n c t, i, o, n AutonomousGovernanceBluepr i n t 2
           <li>Ena, b, l, e ap p r o v, a, l, s for h, i, g, h‑r, i, s, k acti, o, n, s</li>
         </ul>
 
-        <div cl a s s N, a, m, e='bg-yel, l, o, w-50 bor, d, e, r-l-4 bor, d, e, r-yel, l, o, w-500 p-6 roun, d, e, d'>
+        <div cl a s s N, a, m, e='bg-yel, l, o, w-50 bor, d, e, r-l-4 bor, d, e, r-yel, l, o, w-500 p-6 roun, ded'>
           <h3 cl a s s N, a, m, e='m-0'>Get H, e, l, p</h3>
-          <p cl a s s N, a, m, e='m-0'>
-            We dep, l, o, y t, h, i, s bl u e p r, i, n, t end‑to‑end w, i, t, h mea s u r a, b, l, e gua r d r a, i, l, s and
+          <p cl a s s N, ame='m-0'>
+            We dep, l, o, y t, h, i, s bl u e p r, i, n, t end‑to‑end with mea s u r a, b, l, e gua r d r a, i, l, s and
             ROI.
           </p>
-          <Arr o w R i, g, h, t
-            h, r, e, f='/s e r v i, c, e, s/ai-gov e r n a, n, c, e'
-            cl a s s N, a, m, e='inl, i, n, e-bl, o, c, k mt-3 bg-yel, l, o, w-500 ho, v, e, r:bg-yel, l, o, w-600 t, e, x, t-wh, i, t, e px-5 py-3 roun, d, e, d'
+          <ArrowRight
+            h, ref='/s e r v i, c, e, s/ai-gov e r n a, n, c, e'
+            cl a s s N, ame='inl, i, n, e-bl, o, c, k mt-3 bg-yel, l, o, w-500 ho, v, e, r:bg-yel, l, o, w-600 t, e, x, t-wh, i, t, e px-5 py-3 roun, d, e, d'
           >
             Expl, o, r, e Gov e r n a, n, c, e S e r v i, c, e, s
-          </Arr o w R i, g, h, t>
+          </ArrowRight>
         </div>
       </div>
     </div>

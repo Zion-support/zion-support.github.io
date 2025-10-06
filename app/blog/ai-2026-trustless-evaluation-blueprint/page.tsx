@@ -1,35 +1,34 @@
-imp, o, r, t Arr o w R i, g, h, t f, r, o, m 'n, e, x, t/l, i, n, k';
+import ArrowRight from 'n, e, x, t/l, ink';
 
-exp, o, r, t co, n, s, t m e t a d, a, t, a = {
+export const metadata = {
   
-  ti, t, l, e:  'Tr u s t l, e, s, s Eva l u a t, i, o, n Bl u e p r, i, n, t (2, 0, 2, 6)',
-  desc r i p t, i, o, n: 
-      'How to bu, i, l, d sig, n, e, d, repro d u c i, b, l, e, and pol, i, c, y‑alig, n, e, d ev, a, l, s for r e l i a, b, l, e AI at sc, a, l, e.',
-  t, y, p, e: 'arti, c, l, e',
-
+  title:  'Tr u s t l, e, s, s Eva l u a t, i, o, n Bl u e p r, i, n, t (2, 026)'
+  description: 
+      'How to bu, i, l, d sig, n, e, d, repro d u c i, b, l, e, and pol, i, c, y‑alig, n, e, d ev, a, l, s for r e l i a, b, l, e AI at sc, ale.'
+  t, y, p, e: 'arti, cle'
 };
 
-exp, o, r, t defa, u, l, t f u n c t, i, o, n TrustlessEvaluationBluepr i n t 2, 0, 2, 6() {
-  ret, u, r, n (
-    <div cl a s s N, a, m, e='min-h-scr, e, e, n bg-sl, a, t, e-950 t, e, x, t-wh, i, t, e'>
-      <m, a, i, n cl a s s N, a, m, e='max-w-3xl mx-a, u, t, o px-6 py-16'>
+export default function TrustlessEvaluationBluepr i n t 2026() {
+  return (
+    <div cl a s s N, a, m, e='min-h-screen bg-sl, a, t, e-950 t, e, x, t-wh, ite'>
+      <m, a, i, n cl a s s N, a, m, e='max-w-3xl mx-a, uto px-6 py-16'>
         <hea, d, e, r cl a s s N, a, m, e='mb-10'>
-          <div cl a s s N, a, m, e='inl, i, n, e-f, l, e, x it, e, m, s-cen, t, e, r gap-2 px-3 py-1 roun, d, e, d-f, u, l, l bg-pur, p, l, e-500/10 bor, d, e, r bor, d, e, r-pur, p, l, e-400/20 t, e, x, t-pur, p, l, e-300 t, e, x, t-xs f, o, n, t-s e m i b, o, l, d'>
-            New • 2, 0, 2, 6
+          <div cl a s s N, ame='inl, i, n, e-f, l, e, x it, e, m, s-cen, t, e, r gap-2 px-3 py-1 roun, d, e, d-f, u, l, l bg-pur, p, l, e-500/10 bor, d, e, r bor, d, e, r-pur, p, l, e-400/20 t, e, x, t-pur, p, l, e-300 t, e, x, t-xs f, o, n, t-s e m i b, o, l, d'>
+            New • 2026
           </div>
-          <h1 cl a s s N, a, m, e='t, e, x, t-4, xl f, o, n, t-ex t r a b, o, l, d mt-4 mb-3'>
-            Tr u s t l, e, s, s Eva l u a t, i, o, n Bl u e p r, i, n, t (2, 0, 2, 6)
+          <h1 cl a s s N, ame='t, e, x, t-4, xl f, o, n, t-ex t r a b, o, l, d mt-4 mb-3'>
+            Tr u s t l, e, s, s Eva l u a t, i, o, n Bl u e p r, i, n, t (2026)
           </h1>
-          <p cl a s s N, a, m, e='t, e, x, t-sl, a, t, e-300'>
-            Ver i f i a, b, l, e ev, a, l, s w, i, t, h sig, n, e, d datasetsdeterm i n i s, t, i, c sco r i n g, a, n, d
+          <p cl a s s N, ame='t, e, x, t-sl, a, t, e-300'>
+            Ver i f i a, b, l, e ev, a, l, s with sig, n, e, d datasetsdeterm i n i s, t, i, c sco r i n g, a, n, d
             tran s p a r, e, n, t pro v e n a, n, c, e.
           </p>
-          <div cl a s s N, a, m, e='mt-3 t, e, x, t-sl, a, t, e-400 t, e, x, t-sm'>
+          <div cl a s s N, ame='mt-3 t, e, x, t-sl, a, t, e-400 t, e, x, t-sm'>
             16 min r, e, a, d • C a t e g, o, r, y: Reli a b i l, i, t, y & Gov e r n a, n, c, e
           </div>
         </hea, d, e, r>
 
-        <div cl a s s N, a, m, e='pr, o, s, e pr, o, s, e-inv, e, r, t pr, o, s, e-sl, a, t, e max-w-n, o, n, e'>
+        <div cl a s s N, ame='pr, o, s, e pr, o, s, e-inv, e, r, t pr, o, s, e-sl, a, t, e max-w-n, o, n, e'>
           <p>
             T, h, i, s bl u e p r, i, n, t p r o v i, d, e, s a pr a c t i, c, a, l a p p r o, a, c, h to m, a, k, e AI eval u a t i, o, n, s
             tam, p, e, r‑evid, e, n, t and repro d u c i, b, l, e acr, o, s, s te, a, m, s and envir o n m e, n, t, s. It
@@ -42,7 +41,7 @@ exp, o, r, t defa, u, l, t f u n c t, i, o, n TrustlessEvaluationBluepr i n t 2,
           <ul>
             <li>Cryptograp h i c a, l, l, y sig, n, e, d d a t a s, e, t, s and prom, p, t, s</li>
             <li>Repro d u c i, b, l, e r, u, n, s via pin, n, e, d con t a i n, e, r, s and se, e, d, s</li>
-            <li>Pol, i, c, y‑alig, n, e, d metr, i, c, s w, i, t, h e x p l i, c, i, t fail, u, r, e mo, d, e, s</li>
+            <li>Pol, i, c, y‑alig, n, e, d metr, i, c, s with e x p l i, c, i, t fail, u, r, e mo, d, e, s</li>
             <li>Attes t a t i, o, n, s ge n e r a, t, e, d for ev, e, r, y res, u, l, t a r t i f, a, c, t</li>
           </ul>
 
@@ -78,10 +77,10 @@ exp, o, r, t defa, u, l, t f u n c t, i, o, n TrustlessEvaluationBluepr i n t 2,
           <h2>Roll, o, u, t P, l, a, n</h2>
           <ol>
             <li>
-              St, a, r, t w, i, t, h one gol, d, e, n data, s, e, t and str, i, c, t si g n a t, u, r, e verif i c a t, i, o, n.
+              St, a, r, t with one gol, d, e, n data, s, e, t and str, i, c, t si g n a t, u, r, e verif i c a t, i, o, n.
             </li>
             <li>
-              Har, d, e, n w, i, t, h adve r s a r, i, a, l v a r i a, n, t, s and reg r e s s, i, o, n ga, t, e, s in CI.
+              Har, d, e, n with adve r s a r, i, a, l v a r i a, n, t, s and reg r e s s, i, o, n ga, t, e, s in CI.
             </li>
             <li>
               Ad, o, p, t attes t a t i, o, n, s for qu a r t e, r, l, y ex e c u t, i, v, e revi, e, w, s and ven, d, o, r
@@ -93,29 +92,29 @@ exp, o, r, t defa, u, l, t f u n c t, i, o, n TrustlessEvaluationBluepr i n t 2,
           <ul>
             <li>All d a t a s, e, t, s and prom, p, t, s sig, n, e, d and v e r i f, i, e, d</li>
             <li>Co n t a i, n, e, r im, a, g, e dige, s, t, s pin, n, e, d; se, e, d, s fi, x, e, d</li>
-            <li>Fail, u, r, e mo, d, e, s map, p, e, d to metr, i, c, s w, i, t, h thr e s h o, l, d, s</li>
+            <li>Fail, u, r, e mo, d, e, s map, p, e, d to metr, i, c, s with thr e s h o, l, d, s</li>
             <li>Attes t a t i, o, n, s sto, r, e, d and qu e r y a, b, l, e</li>
           </ul>
 
           <p>
-            For rela, t, e, d practices e x p l, o, r, e our gu, i, d, e on{' '}
-            <Arr o w R i, g, h, t
-              h, r, e, f='/b, l, o, g/agen, t, i, c-w o r k f, l, o, w-orches t r a t, i, o, n-2, 0, 2, 6'
-              cl a s s N, a, m, e='t, e, x, t-pur, p, l, e-300 ho, v, e, r:t, e, x, t-pur, p, l, e-200'
+            For rela, t, e, d practices e x p l, o, r, e our gu, ide on{' '}
+            <ArrowRight
+              h, ref='/b, l, o, g/agen, t, i, c-w o r k f, l, o, w-orches t r a t, i, o, n-2026'
+              cl a s s N, ame='t, e, x, t-pur, p, l, e-300 ho, v, e, r:t, e, x, t-pur, p, l, e-200'
             >
-              Agen, t, i, c W o r k f, l, o, w Orches t r a t, i, o, n 2, 0, 2, 6
-            </Arr o w R i, g, h, t>
+              Agen, t, i, c W o r k f, l, o, w Orches t r a t, i, o, n 2026
+            </ArrowRight>
             .
           </p>
         </div>
 
-        <div cl a s s N, a, m, e='mt-12'>
-          <Arr o w R i, g, h, t
-            h, r, e, f='/b, l, o, g'
-            cl a s s N, a, m, e='inl, i, n, e-bl, o, c, k bg-wh, i, t, e t, e, x, t-pur, p, l, e-700 px-6 py-3 roun, d, e, d-lg f, o, n, t-b, o, l, d ho, v, e, r:bg-pur, p, l, e-50'
+        <div cl a s s N, ame='mt-12'>
+          <ArrowRight
+            h, ref='/b, l, o, g'
+            cl a s s N, ame='inl, i, n, e-bl, o, c, k bg-wh, i, t, e t, e, x, t-pur, p, l, e-700 px-6 py-3 roun, d, e, d-lg f, o, n, t-b, o, l, d ho, v, e, r:bg-pur, p, l, e-50'
           >
             ← B, a, c, k to B, l, o, g
-          </Arr o w R i, g, h, t>
+          </ArrowRight>
         </div>
       </m, a, i, n>
     </div>

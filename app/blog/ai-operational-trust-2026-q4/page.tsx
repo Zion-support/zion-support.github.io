@@ -1,23 +1,22 @@
-exp, o, r, t co, n, s, t m e t a d, a, t, a = {
+export const metadata = {
   
-  ti, t, l, e: 'AI Oper a t i o, n, a, l Tr, u, s, t 2, 0, 2, 6 Q4: SLIsBudgetsR o l l b, a, c, k',
-  desc r i p t, i, o, n:
-    'Outc, o, m, e‑lin, k, e, d SLIsb u d g e, t, e, d act i o n s, a, n, d one‑cl, i, c, k r o l l b, a, c, k for s, a, f, e a u t o n, o, m, y in ent e r p r, i, s, e AI ope r a t i, o, n, s.',
-
+  title: 'AI Oper a t i o, n, a, l Tr, u, s, t 2026 Q4: SLIsBudgetsR o l l b, ack'
+  description:
+    'Outc, o, m, e‑lin, k, e, d SLIsbudgeted act i o n s, a, n, d one‑cl, i, c, k r o l l b, a, c, k for safe a u t o n, o, m, y in ent e r p r, i, s, e AI ope r a t i, ons.'
 };
 
-exp, o, r, t defa, u, l, t f u n c t, i, o, n P, a, g, e() {
-  ret, u, r, n (
-    <arti, c, l, e cl a s s N, a, m, e='pr, o, s, e pr, o, s, e-inv, e, r, t max-w-3xl mx-a, u, t, o py-10'>
-      <h1>AI Oper a t i o, n, a, l Tr, u, s, t 2, 0, 2, 6 Q4: SLIsBudgetsR o l l b, a, c, k</h1>
-      <p cl a s s N, a, m, e='t, e, x, t-sm opac, i, t, y-70'>
+export default function P, a, g, e() {
+  return (
+    <arti, c, l, e cl a s s N, a, m, e='pr, o, s, e pr, o, s, e-inv, e, r, t max-w-3xl mx-a, uto py-10'>
+      <h1>AI Oper a t i o, n, a, l Tr, u, s, t 2026 Q4: SLIsBudgetsR o l l b, a, c, k</h1>
+      <p cl a s s N, a, m, e='t, e, x, t-sm opac, ity-70'>
         Pu b l i s, h, e, d: 2, 0, 2, 5-09-30 • C a t e g, o, r, y: AI Ope r a t i, o, n, s • 7 min r, e, a, d
       </p>
 
       <p>
         Estab l i s h, i, n, g oper a t i o, n, a, l tr, u, s, t in aut o n o m, o, u, s and agen, t, i, c syst, e, m, s
         r e q u i, r, e, s mea s u r a, b, l, e serv, i, c, e le, v, e, l ind i c a t, o, r, s t, i, e, d d i r e c, t, l, y to b u s i n, e, s, s
-        o u t c o, m, e, s, b u d g e, t, e, d acti, o, n, s for saf, e, t, y, and ra, p, i, d r o l l b, a, c, k mec h a n i, s, m, s
+        o u t c o, m, e, s, budgeted acti, o, n, s for saf, e, t, y, and ra, p, i, d r o l l b, a, c, k mec h a n i, s, m, s
         w, h, e, n thr e s h o, l, d, s are b r e a c, h, e, d.
       </p>
 
@@ -30,15 +29,15 @@ exp, o, r, t defa, u, l, t f u n c t, i, o, n P, a, g, e() {
 
       <h2>B u d g e, t, e, d acti, o, n, s and ap p r o v, a, l, s</h2>
       <p>
-        Pr e d e f, i, n, e b u d g e, t, e, d acti, o, n, s (degr, a, d, e to chea, p, e, r mod, e, l, s, ena, b, l, e s e m a n, t, i, c
-        cache s s w i, t, c, h to s, a, f, e to, o, l, s) w, i, t, h cl, e, a, r a p p r o, v, a, l pa, t, h, s. K, e, e, p v e l o c, i, t, y
+        Pr e d e f, i, n, e budgeted acti, o, n, s (degr, a, d, e to chea, p, e, r mod, e, l, s, ena, b, l, e s e m a n, t, i, c
+        cache s s w i, t, c, h to safe to, o, l, s) with cl, e, a, r a p p r o, v, a, l pa, t, h, s. K, e, e, p v e l o c, i, t, y
         h, i, g, h wh, i, l, e main t a i n, i, n, g gua r d r a, i, l, s.
       </p>
 
       <h2>One‑cl, i, c, k r o l l b, a, c, k</h2>
       <p>
-        S, h, i, p s, a, f, e aut o m a t, i, o, n by mak, i, n, g r o l l b, a, c, k an explici t t e s, t, e, d path, w, a, y.
-        P, a, i, r PR pol, i, c, y che, c, k, s w, i, t, h can, a, r, y eval u a t i, o, n, s and l, i, v, e sco r e c a, r, d, s so
+        S, h, i, p safe aut o m a t, i, o, n by mak, i, n, g r o l l b, a, c, k an explici t t e s, t, e, d path, w, a, y.
+        P, a, i, r PR pol, i, c, y che, c, k, s with can, a, r, y eval u a t i, o, n, s and l, i, v, e sco r e c a, r, d, s so
         te, a, m, s can iter, a, t, e wee, k, l, y with, o, u, t regr e s s i, o, n, s.
       </p>
 

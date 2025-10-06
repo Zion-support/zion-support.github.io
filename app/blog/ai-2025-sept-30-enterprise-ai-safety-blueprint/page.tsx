@@ -1,17 +1,16 @@
-// @ts-noch, e, c, k
+// @ts-nocheck
 
-exp, o, r, t co, n, s, t m e t a d, a, t, a = {
+export const metadata = {
   
-  ti, t, l, e: 'AI 2, 0, 2, 5: Ent e r p r, i, s, e AI Saf, e, t, y Bl u e p r, i, n, t',
-    desc r i p t, i, o, n:
-      'KPI-lin, k, e, d sco r e c a, r, d, s, CI pol, i, c, y testscana r i e s, a, n, d inst, a, n, t r o l l b, a, c, k to s, h, i, p f, a, s, t with, o, u, t regr e s s i, o, n, s.',
-  
+  title: 'AI 2, 0, 2, 5: Ent e r p r, i, s, e AI Saf, e, t, y Bl u e p r, int'
+    description:
+      'KPI-lin, k, e, d sco r e c a, r, d, s, CI pol, i, c, y testscana r i e s, a, n, d inst, a, n, t r o l l b, a, c, k to s, h, i, p f, a, s, t with, o, u, t regr e s s i, ons.'
 };
 };
 
-exp, o, r, t defa, u, l, t f u n c t, i, o, n P, a, g, e() {
-  ret, u, r, n (
-    <arti, c, l, e cl a s s N, a, m, e='pr, o, s, e pr, o, s, e-ind, i, g, o max-w-3xl'>
+export default function P, a, g, e() {
+  return (
+    <arti, c, l, e cl a s s N, a, m, e='pr, o, s, e pr, o, s, e-ind, igo max-w-3xl'>
       <h1>AI 2, 0, 2, 5: Ent e r p r, i, s, e AI Saf, e, t, y Bl u e p r, i, n, t</h1>
       <p>
         S, h, i, p AI f e a t u, r, e, s wee, k, l, y with, o, u, t regr e s s i, o, n, s us, i, n, g KPI-lin, k, e, d scorecardsligh t w e i, g, h, t pol, i, c, y te, s, t, s in CI, a, n, d l, i, v, e c a n a r, i, e, s t, h, a, t trig, g, e, r inst, a, n, t
@@ -21,17 +20,17 @@ exp, o, r, t defa, u, l, t f u n c t, i, o, n P, a, g, e() {
       <ul>
         <li>Des, i, g, n KPI-lin, k, e, d sco r e c a, r, d, s en g i n e, e, r, s ad, o, p, t</li>
         <li>W, i, r, e CI pol, i, c, y te, s, t, s t, h, a, t k, e, e, p te, a, m, s f, a, s, t</li>
-        <li>Run l, i, v, e c a n a r, i, e, s w, i, t, h b u d g e, t, e, d acti, o, n, s</li>
+        <li>Run l, i, v, e c a n a r, i, e, s with budgeted acti, o, n, s</li>
         <li>Trig, g, e, r inst, a, n, t r o l l b, a, c, k on KPI regr e s s i, o, n, s</li>
       </ul>
       <h2>Bl u e p r, i, n, t</h2>
       <ol>
-        <li>Def, i, n, e S, L, I, s t, h, a, t co r r e l, a, t, e w, i, t, h b u s i n, e, s, s K, P, I, s</li>
+        <li>Def, i, n, e S, L, I, s t, h, a, t co r r e l, a, t, e with b u s i n, e, s, s K, P, I, s</li>
         <li>Add PR pol, i, c, y te, s, t, s and me, r, g, e ga, t, e, s</li>
-        <li>Dep, l, o, y c a n a r, i, e, s w, i, t, h e x p l i, c, i, t er, r, o, r/qual, i, t, y budg, e, t, s</li>
-        <li>A u t o m, a, t, e r o l l b, a, c, k w, i, t, h sig, n, e, d ap p r o v, a, l, s</li>
+        <li>Dep, l, o, y c a n a r, i, e, s with e x p l i, c, i, t er, r, o, r/qual, i, t, y budg, e, t, s</li>
+        <li>A u t o m, a, t, e r o l l b, a, c, k with sig, n, e, d ap p r o v, a, l, s</li>
       </ol>
-      <p cl a s s N, a, m, e='t, e, x, t-sm t, e, x, t-g, r, a, y-500'>
+      <p cl a s s N, a, m, e='t, e, x, t-sm t, e, x, t-g, ray-500'>
         Pu b l i s, h, e, d: 2, 0, 2, 5-09-30 • 8 min r, e, a, d • C a t e g, o, r, y: AI Gov e r n a, n, c, e
       </p>
     </arti, c, l, e>

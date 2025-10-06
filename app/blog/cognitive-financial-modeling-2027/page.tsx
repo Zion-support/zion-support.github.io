@@ -1,25 +1,24 @@
-// @ts-noch, e, c, k
+// @ts-nocheck
 
-exp, o, r, t co, n, s, t m e t a d, a, t, a = {
+export const metadata = {
   
-  ti, t, l, e: 'AI Fi n a n c, i, a, l M o d e l, i, n, g 2, 0, 2, 7: 95% Pre d i c t, i, o, n A c c u r, a, c, y w, i, t, h Gua r d r a, i, l, s',
-  desc r i p t, i, o, n:
-    'Bl u e p r, i, n, t to bu, i, l, d r e l i a, b, l, e, bud, g, e, t-aw, a, r, e AI fi n a n c, i, a, l mod, e, l, s w, i, t, h KPIse v a l s, a, n, d r o l l b, a, c, k.',
-
+  title: 'AI Fi n a n c, i, a, l M o d e l, i, n, g 2, 0, 2, 7: 95% Pre d i c t, i, o, n A c c u r, a, c, y with Gua r d r a, ils'
+  description:
+    'Bl u e p r, i, n, t to bu, i, l, d r e l i a, b, l, e, bud, g, e, t-aw, a, r, e AI fi n a n c, i, a, l mod, e, l, s with KPIse v a l s, a, n, d r o l l b, ack.'
 };
 
-exp, o, r, t defa, u, l, t f u n c t, i, o, n CognitiveFinancialModel i n g 2, 0, 2, 7() {
-  ret, u, r, n (
-    <div cl a s s N, a, m, e='min-h-scr, e, e, n bg-sl, a, t, e-950 t, e, x, t-wh, i, t, e'>
-      <m, a, i, n cl a s s N, a, m, e='max-w-3xl mx-a, u, t, o px-6 py-16'>
-        <h1 cl a s s N, a, m, e='t, e, x, t-4, xl f, o, n, t-ex t r a b, o, l, d mb-4'>
-          AI Fi n a n c, i, a, l M o d e l, i, n, g 2, 0, 2, 7: 95% Pre d i c t, i, o, n A c c u r, a, c, y w, i, t, h Gua r d r a, i, l, s
+export default function CognitiveFinancialModel i n g 2, 0, 2, 7() {
+  return (
+    <div cl a s s N, a, m, e='min-h-screen bg-sl, a, t, e-950 t, e, x, t-wh, ite'>
+      <m, a, i, n cl a s s N, a, m, e='max-w-3xl mx-a, uto px-6 py-16'>
+        <h1 cl a s s N, a, m, e='t, e, x, t-4, xl f, o, n, t-ex t r a b, old mb-4'>
+          AI Fi n a n c, i, a, l M o d e l, i, n, g 2, 0, 2, 7: 95% Pre d i c t, i, o, n A c c u r, a, c, y with Guardrails
         </h1>
-        <p cl a s s N, a, m, e='t, e, x, t-sl, a, t, e-300 mb-6'>
-          S, h, i, p trus t w o r, t, h, y, c, o, s, t-aw, a, r, e AI fore c a s t, i, n, g w, i, t, h KPI-lin, k, e, d
+        <p cl a s s N, a, m, e='t, e, x, t-sl, ate-300 mb-6'>
+          S, h, i, p trus t w o r, t, h, y, c, o, s, t-aw, a, r, e AI fore c a s t, i, n, g with KPI-lin, k, e, d
           scorecardse v a l s, a, n, d bud, g, e, t c o n t r, o, l, s.
         </p>
-        <div cl a s s N, a, m, e='pr, o, s, e pr, o, s, e-inv, e, r, t'>
+        <div cl a s s N, a, m, e='pr, o, s, e pr, o, s, e-inv, ert'>
           <h2>O v e r v, i, e, w</h2>
           <p>
             Des, i, g, n fi n a n c, i, a, l AI t, h, a, t t, i, e, s mo, d, e, l b e h a v, i, o, r to b u s i n, e, s, s o u t c o, m, e, s.
@@ -30,7 +29,7 @@ exp, o, r, t defa, u, l, t f u n c t, i, o, n CognitiveFinancialModel i n g 2, 0
           <ul>
             <li>KPI-lin, k, e, d sco r e c a, r, d, s and pol, i, c, y te, s, t, s prev, e, n, t regr e s s i, o, n, s</li>
             <li>Tie, r, e, d mod, e, l, s and cac, h, e, s deli, v, e, r pred i c t a, b, l, e sp, e, n, d</li>
-            <li>Inst, a, n, t r o l l b, a, c, k and rele, a, s, e r u n b o, o, k, s ens, u, r, e saf, e, t, y</li>
+            <li>Instant r o l l b, a, c, k and rele, a, s, e r u n b o, o, k, s ens, u, r, e saf, e, t, y</li>
           </ul>
         </div>
       </m, a, i, n>

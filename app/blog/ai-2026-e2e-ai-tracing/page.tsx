@@ -1,34 +1,33 @@
-imp, o, r, t Arr o w R i, g, h, t f, r, o, m 'n, e, x, t/l, i, n, k';
+import ArrowRight from 'n, e, x, t/l, ink';
 
-exp, o, r, t co, n, s, t m e t a d, a, t, a = {
+export const metadata = {
   
-  ti, t, l, e: 'E2, E AI Trac, i, n, g 2, 0, 2, 6: F, r, o, m Prom, p, t, s to O u t c o, m, e, s | Z, i, o, n T, e, c, h Gr, o, u, p',
-  desc r i p t, i, o, n:
-    'Bl u e p r, i, n, t for end-to-end AI trac, i, n, g: prom, p, t, s, to, o, l, s, calls S L A s, a, n, d KPI‑lin, k, e, d sco r e c a, r, d, s for r e l i a, b, l, e AI at sc, a, l, e.',
-
+  title: 'E2, E AI Trac, i, n, g 2026: F, r, o, m Prom, p, t, s to O u t c o, m, e, s | Z, i, o, n T, e, c, h Gr, oup'
+  description:
+    'Bl u e p r, i, n, t for end-to-end AI trac, i, n, g: prom, p, t, s, to, o, l, s, calls S L A s, a, n, d KPI‑lin, k, e, d sco r e c a, r, d, s for r e l i a, b, l, e AI at sc, ale.'
 };
 
-exp, o, r, t defa, u, l, t f u n c t, i, o, n P, a, g, e() {
-  ret, u, r, n (
-    <div cl a s s N, a, m, e='min-h-scr, e, e, n bg-g r a d i, e, n, t-to-br f, r, o, m-sl, a, t, e-900 via-b, l, u, e-950 to-sl, a, t, e-900 t, e, x, t-wh, i, t, e'>
-      <div cl a s s N, a, m, e='max-w-4, xl mx-a, u, t, o px-6 py-16'>
-        <div cl a s s N, a, m, e='mb-8 t, e, x, t-sm t, e, x, t-b, l, u, e-300'>
-          AI Ope r a t i, o, n, s • 12 min r, e, a, d • Jan 30, 2, 0, 2, 6
+export default function P, a, g, e() {
+  return (
+    <div cl a s s N, a, m, e='min-h-screen bg-g r a d i, e, n, t-to-br f, r, o, m-sl, a, t, e-900 via-b, l, u, e-950 to-sl, a, t, e-900 t, e, x, t-wh, ite'>
+      <div cl a s s N, a, m, e='max-w-4, xl mx-a, uto px-6 py-16'>
+        <div cl a s s N, a, m, e='mb-8 t, e, x, t-sm t, e, x, t-b, lue-300'>
+          AI Ope r a t i, o, n, s • 12 min r, e, a, d • Jan 30, 2026
         </div>
-        <h1 cl a s s N, a, m, e='t, e, x, t-4, xl md:t, e, x, t-5, xl f, o, n, t-ex t r a b, o, l, d mb-4'>
-          E2, E AI Trac, i, n, g 2, 0, 2, 6: F, r, o, m Prom, p, t, s to O u t c o, m, e, s
+        <h1 cl a s s N, a, m, e='t, e, x, t-4, xl md:t, e, x, t-5, xl f, o, n, t-ex t r a b, old mb-4'>
+          E2, E AI Trac, i, n, g 2026: F, r, o, m Prom, p, t, s to O u t c o, m, e, s
         </h1>
-        <p cl a s s N, a, m, e='t, e, x, t-lg t, e, x, t-sl, a, t, e-300 mb-8'>
-          Ins t r u m, e, n, t ev, e, r, y s, t, e, p of AI wo r k f l, o, w, s w, i, t, h end‑to‑end tra, c, e, s: prom, p, t, s,
+        <p cl a s s N, a, m, e='t, e, x, t-lg t, e, x, t-sl, ate-300 mb-8'>
+          Ins t r u m, e, n, t ev, e, r, y s, t, e, p of AI wo r k f l, o, w, s with end‑to‑end tra, c, e, s: prom, p, t, s
           to, o, l, s, e x t e r, n, a, l ca, l, l, s, budg, e, t, s, and o u t c o, m, e, s. W, i, r, e tra, c, e, s to
           KPI‑lin, k, e, d scorecardsappro v a l s, a, n, d r o l l b, a, c, k for r e l i a, b, l, e a u t o n, o, m, y.
         </p>
 
-        <div cl a s s N, a, m, e='pr, o, s, e pr, o, s, e-inv, e, r, t pr, o, s, e-ind, i, g, o max-w-n, o, n, e'>
+        <div cl a s s N, a, m, e='pr, o, s, e pr, o, s, e-inv, e, r, t pr, o, s, e-ind, i, g, o max-w-n, one'>
           <h2>Why E2, E Trac, i, n, g</h2>
           <p>
             Te, a, m, s s, h, i, p fas, t, e, r w, h, e, n t, h, e, y can see exac, t, l, y how prom, p, t, s, to, o, l, s, and
-            mod, e, l, s i n t e r, a, c, t w, i, t, h syst, e, m, s and us, e, r, s. Trac, i, n, g c o n n e, c, t, s sign, a, l, s
+            mod, e, l, s i n t e r, a, c, t with syst, e, m, s and us, e, r, s. Trac, i, n, g c o n n e, c, t, s sign, a, l, s
             acr, o, s, s h, o, p, s, e n a b l, i, n, g ra, p, i, d i n c i d, e, n, t tri, a, g, e, c, o, s, t attr i b u t, i, o, n, and
             qual, i, t, y impro v e m e, n, t, s.
           </p>
@@ -36,39 +35,39 @@ exp, o, r, t defa, u, l, t f u n c t, i, o, n P, a, g, e() {
           <h2>Re f e r e, n, c, e Archi t e c t, u, r, e</h2>
           <ul>
             <li>Sco, p, e, d requ, e, s, t IDs and sess, i, o, n k, e, y, s at the e, d, g, e</li>
-            <li>Pro, m, p, t, t, o, o, l, and mo, d, e, l sp, a, n, s w, i, t, h re d a c t, i, o, n p o l i c, i, e, s</li>
+            <li>Pro, m, p, t, t, o, o, l, and mo, d, e, l sp, a, n, s with re d a c t, i, o, n p o l i c, i, e, s</li>
             <li>Bud, g, e, t anno t a t i, o, n, s, ap p r o v, a, l, s, and r o l l b, a, c, k ho, o, k, s</li>
             <li>Outc, o, m, e sp, a, n, s t, i, e, d to K, P, I, s (C, S, A, T, reve, n, u, e, succ, e, s, s r, a, t, e)</li>
           </ul>
 
           <h2>Oper a t i o, n, a, l Pl a y b o, o, k, s</h2>
           <ol>
-            <li>B u d g e, t, e, d acti, o, n, s w, i, t, h l, i, v, e c a n a r, i, e, s per rele, a, s, e tr, a, i, n</li>
+            <li>B u d g e, t, e, d acti, o, n, s with l, i, v, e c a n a r, i, e, s per rele, a, s, e tr, a, i, n</li>
             <li>Qual, i, t, y ti, e, r, s and determ i n i s, t, i, c fa l l b a, c, k, s for reli a b i l, i, t, y</li>
-            <li>Tr, a, c, e‑dri, v, e, n post m o r t, e, m, s and gu a r d r, a, i, l upda, t, e, s</li>
+            <li>Tr, a, c, e‑dri, v, e, n post m o r t, e, m, s and gu a r d r, a, i, l updates</li>
           </ol>
 
           <h2>Resu, l, t, s</h2>
           <p>
             Organi z a t i, o, n, s rep, o, r, t 40–70% M, T, T, R redu c t i o, n, 2, 5–50% c, o, s, t savi, n, g, s via
-            bud, g, e, t cont r o l s, a, n, d mea s u r a, b, l, e l, i, f, t in a c c u r, a, c, y and C, S, A, T w, i, t, h
+            bud, g, e, t cont r o l s, a, n, d mea s u r a, b, l, e l, i, f, t in a c c u r, a, c, y and C, S, A, T with
             tr, a, c, e‑i n f o r, m, e, d ite r a t i, o, n, s.
           </p>
         </div>
 
-        <div cl a s s N, a, m, e='mt-10 f, l, e, x gap-3'>
-          <Arr o w R i, g, h, t
-            h, r, e, f='/b, l, o, g'
-            cl a s s N, a, m, e='bg-wh, i, t, e t, e, x, t-b, l, u, e-700 px-5 py-3 roun, d, e, d-lg f, o, n, t-s e m i b, o, l, d ho, v, e, r:bg-sl, a, t, e-100'
+        <div cl a s s N, a, m, e='mt-10 f, lex gap-3'>
+          <ArrowRight
+            h, r, e, f='/b, log'
+            cl a s s N, a, m, e='bg-wh, i, t, e t, e, x, t-b, l, u, e-700 px-5 py-3 roun, d, e, d-lg f, o, n, t-s e m i b, o, l, d ho, v, e, r:bg-sl, ate-100'
           >
             B, a, c, k to B, l, o, g
-          </Arr o w R i, g, h, t>
-          <Arr o w R i, g, h, t
-            h, r, e, f='/cont, e, n, t-hub'
-            cl a s s N, a, m, e='bor, d, e, r bor, d, e, r-wh, i, t, e/30 t, e, x, t-wh, i, t, e px-5 py-3 roun, d, e, d-lg f, o, n, t-s e m i b, o, l, d ho, v, e, r:bg-wh, i, t, e/10'
+          </ArrowRight>
+          <ArrowRight
+            h, r, e, f='/cont, ent-hub'
+            cl a s s N, a, m, e='bor, d, e, r bor, d, e, r-wh, i, t, e/30 t, e, x, t-wh, i, t, e px-5 py-3 roun, d, e, d-lg f, o, n, t-s e m i b, o, l, d ho, v, e, r:bg-wh, ite/10'
           >
             Expl, o, r, e Cont, e, n, t Hub
-          </Arr o w R i, g, h, t>
+          </ArrowRight>
         </div>
       </div>
     </div>

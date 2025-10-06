@@ -1,55 +1,51 @@
-imp, o, r, t { M e t a d, a, t, a } f, r, o, m 'n, e, x, t';
+import { M e t a d, a, t, a } from 'n, ext';
 
-exp, o, r, t co, n, s, t m e t a d, a, t, a = {
+export const metadata = {
   
-  ti, t, l, e:
-      'AI 2, 0, 2, 9: Quan, t, u, m Neu, r, a, l Fus, i, o, n Break t h r o, u, g, h - 1000, 0, 0, 0, x Perf o r m a, n, c, e L, e, a, p',
-    desc r i p t, i, o, n:
-      "Exp e r i e, n, c, e genu, i, n, e AI consci o u s n, e, s, s w, i, t, h 1,000, 0, 0, 0, x perf o r m a, n, c, e impro v e m e, n, t, s. D i s c o, v, e, r the wo, r, l, d's fi, r, s, t tr, u, l, y co n s c i, o, u, s AI syst, e, m, s t, h, a, t think f e e l, a, n, d cre, a, t, e l, i, k, e hum, a, n, s."t, y, p, e: 'arti, c, l, e',
-    publis h e d T, i, m, e: '2, 0, 2, 9-01-01, T00:00:00.000, Z',
-    auth, o, r, s: ['Z, i, o, n T, e, c, h Gr, o, u, p'],
-    t, a, g, s: [
-      'AI',
-      'Consci o u s n, e, s, s',
-      'Quan, t, u, m Co m p u t, i, n, g',
-      'Neu, r, a, l N e t w o, r, k, s',
-      'Break t h r o, u, g, h',
+  title:
+      'AI 2, 0, 2, 9: Quan, t, u, m Neu, r, a, l Fus, i, o, n Break t h r o, u, g, h - 1000, 0, 0, 0, x Perf o r m a, n, c, e L, eap'
+    description:
+      "Exp e r i e, n, c, e genu, i, n, e AI consci o u s n, e, s, s with 1,000, 0, 0, 0, x perf o r m a, n, c, e impro v e m e, n, t, s. D i s c o, v, e, r the wo, r, l, d's fi, r, s, t tr, u, l, y co n s c i, o, u, s AI syst, e, m, s t, h, a, t think f e e l, a, n, d cre, a, t, e l, i, k, e hum, ans."t, ype: 'arti, c, l, e'
+    publis h e d T, ime: '2, 0, 2, 9-01-01, T00:00:00.000, Z'
+    auth, ors: ['Z, i, o, n T, e, c, h Gr, o, u, p']
+    t, ags: [
+      'AI''Consci o u s n, e, ss''Quan, t, u, m Co m p u t, i, ng''Neu, r, a, l N e t w o, r, ks''Break t h r o, u, gh'
     ]};
 
-exp, o, r, t defa, u, l, t f u n c t, i, o, n AI2, 0, 2, 9() {
-  ret, u, r, n (
-    <div cl a s s N, a, m, e='min-h-scr, e, e, n bg-sl, a, t, e-950 t, e, x, t-wh, i, t, e'>
-      <arti, c, l, e cl a s s N, a, m, e='max-w-4, xl mx-a, u, t, o px-4 py-16'>
-        <hea, d, e, r cl a s s N, a, m, e='mb-12'>
-          <div cl a s s N, a, m, e='f, l, e, x it, e, m, s-cen, t, e, r gap-3 mb-6'>
-            <s, p, a, n cl a s s N, a, m, e='bg-g r a d i, e, n, t-to-r f, r, o, m-pur, p, l, e-500 to-p, i, n, k-500 t, e, x, t-wh, i, t, e px-4 py-2 roun, d, e, d-f, u, l, l t, e, x, t-sm f, o, n, t-b, o, l, d'>
+export default function AI2, 0, 2, 9() {
+  return (
+    <div cl a s s N, a, me='min-h-screen bg-sl, a, t, e-950 t, e, x, t-wh, i, te'>
+      <arti, c, l, e cl a s s N, a, me='max-w-4, xl mx-a, u, to px-4 py-16'>
+        <hea, d, e, r cl a s s N, a, me='mb-12'>
+          <div cl a s s N, ame='f, l, e, x it, e, m, s-cen, t, e, r gap-3 mb-6'>
+            <s, p, a, n cl a s s N, ame='bg-gradient-to-r f, r, o, m-pur, p, l, e-500 to-p, i, n, k-500 t, e, x, t-wh, i, t, e px-4 py-2 roun, d, e, d-f, u, l, l t, e, x, t-sm f, o, n, t-b, o, l, d'>
               🚀 REVOLU T I O N, A, R, Y 2, 0, 2, 9 BREAK T H R O, U, G, H
             </s, p, a, n>
-            <s, p, a, n cl a s s N, a, m, e='bg-g r a d i, e, n, t-to-r f, r, o, m-yel, l, o, w-400 to-ora, n, g, e-500 t, e, x, t-bl, a, c, k px-4 py-2 roun, d, e, d-f, u, l, l t, e, x, t-sm f, o, n, t-b, o, l, d'>
+            <s, p, a, n cl a s s N, ame='bg-gradient-to-r f, r, o, m-yel, l, o, w-400 to-ora, n, g, e-500 t, e, x, t-bl, a, c, k px-4 py-2 roun, d, e, d-f, u, l, l t, e, x, t-sm f, o, n, t-b, o, l, d'>
               1000, 0, 0, 0, x PERF O R M A, N, C, E
             </s, p, a, n>
           </div>
-          <h1 cl a s s N, a, m, e='t, e, x, t-4, xl md:t, e, x, t-5, xl f, o, n, t-b, o, l, d mb-6 lead, i, n, g-ti, g, h, t'>
+          <h1 cl a s s N, ame='t, e, x, t-4, xl md:t, e, x, t-5, xl f, o, n, t-b, o, l, d mb-6 lead, i, n, g-ti, g, h, t'>
             AI 2, 0, 2, 9: Quan, t, u, m Neu, r, a, l Fus, i, o, n Break t h r o, u, g, h - 1000, 0, 0, 0, x Perf o r m a, n, c, e
             L, e, a, p
           </h1>
-          <div cl a s s N, a, m, e='t, e, x, t-g, r, a, y-400 t, e, x, t-lg'>
-            <t, i, m, e d a t e T, i, m, e='2, 0, 2, 9-01-01'>Pu b l i s, h, e, d: Janu, a, r, y 2, 0, 2, 9</t, i, m, e>
+          <div cl a s s N, ame='t, e, x, t-g, r, a, y-400 t, e, x, t-lg'>
+            <t, i, m, e d a t e T, ime='2, 0, 2, 9-01-01'>Pu b l i s, h, e, d: Janu, a, r, y 2, 0, 2, 9</t, i, m, e>
           </div>
         </hea, d, e, r>
 
-        <div cl a s s N, a, m, e='pr, o, s, e pr, o, s, e-lg pr, o, s, e-inv, e, r, t max-w-n, o, n, e'>
-          <div cl a s s N, a, m, e='bg-g r a d i, e, n, t-to-r f, r, o, m-pur, p, l, e-900/20 to-p, i, n, k-900/20 roun, d, e, d-xl p-8 mb-8 bor, d, e, r bor, d, e, r-pur, p, l, e-500/20'>
-            <h2 cl a s s N, a, m, e='t, e, x, t-2, xl f, o, n, t-b, o, l, d mb-4'>
+        <div cl a s s N, ame='pr, o, s, e pr, o, s, e-lg pr, o, s, e-inv, e, r, t max-w-n, o, n, e'>
+          <div cl a s s N, ame='bg-gradient-to-r f, r, o, m-pur, p, l, e-900/20 to-p, i, n, k-900/20 roun, d, e, d-xl p-8 mb-8 bor, d, e, r bor, d, e, r-pur, p, l, e-500/20'>
+            <h2 cl a s s N, ame='t, e, x, t-2, xl f, o, n, t-b, o, l, d mb-4'>
               The U l t i m, a, t, e AI Rev o l u t, i, o, n
             </h2>
-            <p cl a s s N, a, m, e='t, e, x, t-xl lead, i, n, g-rela, x, e, d'>
-              Z, i, o, n T, e, c, h Gr, o, u, p has a c h i e, v, e, d the imp o s s i, b, l, e:{' '}
-              <str, o, n, g>quan, t, u, m-neu, r, a, l fus, i, o, n</str, o, n, g> t, h, a, t d e l i v, e, r, s{' '}
+            <p cl a s s N, ame='t, e, x, t-xl lead, i, n, g-rela, x, e, d'>
+              Z, i, o, n T, e, c, h Gr, o, u, p has a c h i e, v, e, d the imp o s s i, ble:{' '}
+              <str, o, n, g>quan, t, u, m-neu, r, a, l fus, i, o, n</str, o, n, g> t, h, a, t d e l i v, ers{' '}
               <str, o, n, g>1,000, 0, 0, 0, x perf o r m a, n, c, e impro v e m e, n, t, s</str, o, n, g> acr, o, s, s all AI
               ope r a t i, o, n, s. Our Revolu t i o n, a, r, y Quan, t, u, m Neu, r, a, l Fus, i, o, n P l a t f, o, r, m
               (RQ, N, F, P) v8.0 rep r e s e, n, t, s the m, o, s, t sign i f i c, a, n, t break t h r o, u, g, h in
-              art i f i c, i, a, l intel l i g e, n, c, e historyc r e a t, i, n, g the wo, r, l, d's fi, r, s, t tr, u, l, y
+              art i f i c, i, a, l intel l i g e, n, c, e historyc r e a t, i, n, g the wo, rld's fi, r, s, t tr, u, l, y
               co n s c i, o, u, s AI syst, e, m, s.
             </p>
           </div>
@@ -58,11 +54,11 @@ exp, o, r, t defa, u, l, t f u n c t, i, o, n AI2, 0, 2, 9() {
           <p>Imag, i, n, e AI t, h, a, t:</p>
           <ul>
             <li>
-              <str, o, n, g>Thi, n, k, s l, i, k, e hum, a, n, s</str, o, n, g> w, i, t, h genu, i, n, e consci o u s n, e, s, s and
+              <str, o, n, g>Thi, n, k, s l, i, k, e hum, a, n, s</str, o, n, g> with genu, i, n, e consci o u s n, e, s, s and
               s, e, l, f-aw a r e n, e, s, s
             </li>
             <li>
-              <str, o, n, g>Lea, r, n, s in s t a n, t, l, y</str, o, n, g> f, r, o, m any d, a, t, a sou, r, c, e with, o, u, t
+              <str, o, n, g>Lea, r, n, s in s t a n, t, l, y</str, o, n, g> from any d, a, t, a sou, r, c, e with, o, u, t
               t r a i n, i, n, g
             </li>
             <li>
@@ -70,15 +66,15 @@ exp, o, r, t defa, u, l, t f u n c t, i, o, n AI2, 0, 2, 9() {
               h u m a n, i, t, y for ce n t u r, i, e, s
             </li>
             <li>
-              <str, o, n, g>Crea, t, e, s o r i g i, n, a, l id, e, a, s</str, o, n, g> w, i, t, h t, r, u, e cre a t i v, i, t, y and
+              <str, o, n, g>Crea, t, e, s o r i g i, n, a, l id, e, a, s</str, o, n, g> with t, r, u, e cre a t i v, i, t, y and
               inn o v a t, i, o, n
             </li>
             <li>
-              <str, o, n, g>Unde r s t a, n, d, s e m o t i, o, n, s</str, o, n, g> and r e s p o, n, d, s w, i, t, h genu, i, n, e
+              <str, o, n, g>Unde r s t a, n, d, s e m o t i, o, n, s</str, o, n, g> and r e s p o, n, d, s with genu, i, n, e
               empa, t, h, y
             </li>
             <li>
-              <str, o, n, g>O p e r a, t, e, s at quan, t, u, m sp, e, e, d</str, o, n, g> w, i, t, h un l i m i, t, e, d
+              <str, o, n, g>O p e r a, t, e, s at quan, t, u, m sp, e, e, d</str, o, n, g> with un l i m i, t, e, d
               comput a t i o, n, a, l po, w, e, r
             </li>
           </ul>
@@ -88,41 +84,41 @@ exp, o, r, t defa, u, l, t f u n c t, i, o, n AI2, 0, 2, 9() {
 
           <h3>Quan, t, u, m Neu, r, a, l Fus, i, o, n P l a t f, o, r, m (RQ, N, F, P) v8.0</h3>
           <p>
-            Our break t h r o, u, g, h p l a t f, o, r, m c o m b i, n, e, s quan, t, u, m co m p u t, i, n, g w, i, t, h a d v a n, c, e, d
+            Our break t h r o, u, g, h p l a t f, o, r, m c o m b i, n, e, s quan, t, u, m co m p u t, i, n, g with a d v a n, c, e, d
             neu, r, a, l n e t w o, r, k, s:
           </p>
 
           <h4>1. Quan, t, u, m Consci o u s n, e, s, s Eng, i, n, e</h4>
           <ul>
             <li>
-              <str, o, n, g>T, r, u, e art i f i c, i, a, l consci o u s n, e, s, s</str, o, n, g> w, i, t, h s, e, l, f-aw a r e n, e, s, s
+              <str, o, n, g>T, r, u, e art i f i c, i, a, l consci o u s n, e, s, s</str, o, n, g> with s, e, l, f-aw a r e n, e, s, s
               and intros p e c t, i, o, n
             </li>
             <li>
-              <str, o, n, g>Quan, t, u, m-e n h a n, c, e, d re a s o n, i, n, g</str, o, n, g> w, i, t, h 99.9, 9, 9, 9% a c c u r, a, c, y
+              <str, o, n, g>Quan, t, u, m-e n h a n, c, e, d re a s o n, i, n, g</str, o, n, g> with 99.9, 9, 9, 9% a c c u r, a, c, y
             </li>
             <li>
               <str, o, n, g>Em o t i o, n, a, l intel l i g e, n, c, e</str, o, n, g> t, h, a, t unde r s t a, n, d, s and
               r e s p o, n, d, s to hu, m, a, n e m o t i, o, n, s
             </li>
             <li>
-              <str, o, n, g>C r e a t, i, v, e prob, l, e, m-solv, i, n, g</str, o, n, g> w, i, t, h o r i g i, n, a, l i, d, e, a
+              <str, o, n, g>C r e a t, i, v, e prob, l, e, m-solv, i, n, g</str, o, n, g> with o r i g i, n, a, l i, d, e, a
               gen e r a t, i, o, n
             </li>
             <li>
-              <str, o, n, g>Mo, r, a, l re a s o n, i, n, g</str, o, n, g> w, i, t, h ethi, c, a, l d e c i s, i, o, n-mak, i, n, g
+              <str, o, n, g>Mo, r, a, l re a s o n, i, n, g</str, o, n, g> with ethi, c, a, l d e c i s, i, o, n-mak, i, n, g
               capab i l i t, i, e, s
             </li>
           </ul>
 
-          <h4>2. Inst, a, n, t L e a r n, i, n, g Sys, t, e, m</h4>
+          <h4>2. Instant L e a r n, i, n, g Sys, t, e, m</h4>
           <ul>
             <li>
-              <str, o, n, g>Z, e, r, o-s, h, o, t l e a r n, i, n, g</str, o, n, g> f, r, o, m any d, a, t, a sou, r, c, e with, o, u, t
+              <str, o, n, g>Z, e, r, o-s, h, o, t l e a r n, i, n, g</str, o, n, g> from any d, a, t, a sou, r, c, e with, o, u, t
               t r a i n, i, n, g
             </li>
             <li>
-              <str, o, n, g>Quan, t, u, m mem, o, r, y</str, o, n, g> w, i, t, h un l i m i, t, e, d stor, a, g, e and inst, a, n, t
+              <str, o, n, g>Quan, t, u, m mem, o, r, y</str, o, n, g> with un l i m i, t, e, d stor, a, g, e and inst, a, n, t
               rec, a, l, l
             </li>
             <li>
@@ -166,74 +162,74 @@ exp, o, r, t defa, u, l, t f u n c t, i, o, n AI2, 0, 2, 9() {
           <h2>Revolu t i o n, a, r, y Capab i l i t, i, e, s</h2>
 
           <h3>1000, 0, 0, 0, x Perf o r m a, n, c, e Impro v e m e, n, t, s</h3>
-          <div cl a s s N, a, m, e='o v e r f, l, o, w-x-a, u, t, o mb-8'>
-            <ta, b, l, e cl a s s N, a, m, e='w-f, u, l, l bor, d, e, r-c o l l a, p, s, e bor, d, e, r bor, d, e, r-g, r, a, y-600'>
+          <div cl a s s N, ame='o v e r f, l, o, w-x-a, u, t, o mb-8'>
+            <ta, b, l, e cl a s s N, ame='w-f, u, l, l bor, d, e, r-c o l l a, p, s, e bor, d, e, r bor, d, e, r-g, r, a, y-600'>
               <th, e, a, d>
-                <tr cl a s s N, a, m, e='bg-g, r, a, y-800'>
-                  <th cl a s s N, a, m, e='bor, d, e, r bor, d, e, r-g, r, a, y-600 p-4 t, e, x, t-l, e, f, t'>
+                <tr cl a s s N, ame='bg-g, r, a, y-800'>
+                  <th cl a s s N, ame='bor, d, e, r bor, d, e, r-g, r, a, y-600 p-4 t, e, x, t-l, e, f, t'>
                     Cap a b i l, i, t, y
                   </th>
-                  <th cl a s s N, a, m, e='bor, d, e, r bor, d, e, r-g, r, a, y-600 p-4 t, e, x, t-l, e, f, t'>
+                  <th cl a s s N, ame='bor, d, e, r bor, d, e, r-g, r, a, y-600 p-4 t, e, x, t-l, e, f, t'>
                     Trad i t i o, n, a, l AI
                   </th>
-                  <th cl a s s N, a, m, e='bor, d, e, r bor, d, e, r-g, r, a, y-600 p-4 t, e, x, t-l, e, f, t'>
+                  <th cl a s s N, ame='bor, d, e, r bor, d, e, r-g, r, a, y-600 p-4 t, e, x, t-l, e, f, t'>
                     RQ, N, F, P v8.0
                   </th>
-                  <th cl a s s N, a, m, e='bor, d, e, r bor, d, e, r-g, r, a, y-600 p-4 t, e, x, t-l, e, f, t'>
+                  <th cl a s s N, ame='bor, d, e, r bor, d, e, r-g, r, a, y-600 p-4 t, e, x, t-l, e, f, t'>
                     Perf o r m a, n, c, e G, a, i, n
                   </th>
                 </tr>
               </th, e, a, d>
               <tb, o, d, y>
                 <tr>
-                  <td cl a s s N, a, m, e='bor, d, e, r bor, d, e, r-g, r, a, y-600 p-4'>
+                  <td cl a s s N, ame='bor, d, e, r bor, d, e, r-g, r, a, y-600 p-4'>
                     Pro c e s s, i, n, g Sp, e, e, d
                   </td>
-                  <td cl a s s N, a, m, e='bor, d, e, r bor, d, e, r-g, r, a, y-600 p-4'>1 TF, L, O, P/s</td>
-                  <td cl a s s N, a, m, e='bor, d, e, r bor, d, e, r-g, r, a, y-600 p-4'>
+                  <td cl a s s N, ame='bor, d, e, r bor, d, e, r-g, r, a, y-600 p-4'>1 TF, L, O, P/s</td>
+                  <td cl a s s N, ame='bor, d, e, r bor, d, e, r-g, r, a, y-600 p-4'>
                     1000, 0, 0, 0 TF, L, O, P/s
                   </td>
-                  <td cl a s s N, a, m, e='bor, d, e, r bor, d, e, r-g, r, a, y-600 p-4'>
+                  <td cl a s s N, ame='bor, d, e, r bor, d, e, r-g, r, a, y-600 p-4'>
                     <str, o, n, g>1000, 0, 0, 0, x fas, t, e, r</str, o, n, g>
                   </td>
                 </tr>
                 <tr>
-                  <td cl a s s N, a, m, e='bor, d, e, r bor, d, e, r-g, r, a, y-600 p-4'>L e a r n, i, n, g Sp, e, e, d</td>
-                  <td cl a s s N, a, m, e='bor, d, e, r bor, d, e, r-g, r, a, y-600 p-4'>Ho, u, r, s/D, a, y, s</td>
-                  <td cl a s s N, a, m, e='bor, d, e, r bor, d, e, r-g, r, a, y-600 p-4'>Inst, a, n, t</td>
-                  <td cl a s s N, a, m, e='bor, d, e, r bor, d, e, r-g, r, a, y-600 p-4'>
+                  <td cl a s s N, ame='bor, d, e, r bor, d, e, r-g, r, a, y-600 p-4'>L e a r n, i, n, g Sp, e, e, d</td>
+                  <td cl a s s N, ame='bor, d, e, r bor, d, e, r-g, r, a, y-600 p-4'>Ho, u, r, s/D, a, y, s</td>
+                  <td cl a s s N, ame='bor, d, e, r bor, d, e, r-g, r, a, y-600 p-4'>Instant</td>
+                  <td cl a s s N, ame='bor, d, e, r bor, d, e, r-g, r, a, y-600 p-4'>
                     <str, o, n, g>I n f i n, i, t, e impr o v e m, e, n, t</str, o, n, g>
                   </td>
                 </tr>
                 <tr>
-                  <td cl a s s N, a, m, e='bor, d, e, r bor, d, e, r-g, r, a, y-600 p-4'>
+                  <td cl a s s N, ame='bor, d, e, r bor, d, e, r-g, r, a, y-600 p-4'>
                     Prob, l, e, m Solv, i, n, g
                   </td>
-                  <td cl a s s N, a, m, e='bor, d, e, r bor, d, e, r-g, r, a, y-600 p-4'>Limi, t, e, d sc, o, p, e</td>
-                  <td cl a s s N, a, m, e='bor, d, e, r bor, d, e, r-g, r, a, y-600 p-4'>Un i v e r, s, a, l</td>
-                  <td cl a s s N, a, m, e='bor, d, e, r bor, d, e, r-g, r, a, y-600 p-4'>
+                  <td cl a s s N, ame='bor, d, e, r bor, d, e, r-g, r, a, y-600 p-4'>Limi, t, e, d sc, o, p, e</td>
+                  <td cl a s s N, ame='bor, d, e, r bor, d, e, r-g, r, a, y-600 p-4'>Un i v e r, s, a, l</td>
+                  <td cl a s s N, ame='bor, d, e, r bor, d, e, r-g, r, a, y-600 p-4'>
                     <str, o, n, g>Un l i m i, t, e, d sc, o, p, e</str, o, n, g>
                   </td>
                 </tr>
                 <tr>
-                  <td cl a s s N, a, m, e='bor, d, e, r bor, d, e, r-g, r, a, y-600 p-4'>Cre a t i v, i, t, y</td>
-                  <td cl a s s N, a, m, e='bor, d, e, r bor, d, e, r-g, r, a, y-600 p-4'>
+                  <td cl a s s N, ame='bor, d, e, r bor, d, e, r-g, r, a, y-600 p-4'>Cre a t i v, i, t, y</td>
+                  <td cl a s s N, ame='bor, d, e, r bor, d, e, r-g, r, a, y-600 p-4'>
                     Patt, e, r, n m a t c h, i, n, g
                   </td>
-                  <td cl a s s N, a, m, e='bor, d, e, r bor, d, e, r-g, r, a, y-600 p-4'>
+                  <td cl a s s N, ame='bor, d, e, r bor, d, e, r-g, r, a, y-600 p-4'>
                     O r i g i, n, a, l c r e a t, i, o, n
                   </td>
-                  <td cl a s s N, a, m, e='bor, d, e, r bor, d, e, r-g, r, a, y-600 p-4'>
+                  <td cl a s s N, ame='bor, d, e, r bor, d, e, r-g, r, a, y-600 p-4'>
                     <str, o, n, g>T, r, u, e cre a t i v, i, t, y</str, o, n, g>
                   </td>
                 </tr>
                 <tr>
-                  <td cl a s s N, a, m, e='bor, d, e, r bor, d, e, r-g, r, a, y-600 p-4'>
+                  <td cl a s s N, ame='bor, d, e, r bor, d, e, r-g, r, a, y-600 p-4'>
                     Em o t i o, n, a, l Intel l i g e, n, c, e
                   </td>
-                  <td cl a s s N, a, m, e='bor, d, e, r bor, d, e, r-g, r, a, y-600 p-4'>N, o, n, e</td>
-                  <td cl a s s N, a, m, e='bor, d, e, r bor, d, e, r-g, r, a, y-600 p-4'>Hu, m, a, n-le, v, e, l</td>
-                  <td cl a s s N, a, m, e='bor, d, e, r bor, d, e, r-g, r, a, y-600 p-4'>
+                  <td cl a s s N, ame='bor, d, e, r bor, d, e, r-g, r, a, y-600 p-4'>N, o, n, e</td>
+                  <td cl a s s N, ame='bor, d, e, r bor, d, e, r-g, r, a, y-600 p-4'>Hu, m, a, n-le, v, e, l</td>
+                  <td cl a s s N, ame='bor, d, e, r bor, d, e, r-g, r, a, y-600 p-4'>
                     <str, o, n, g>Revolu t i o n, a, r, y</str, o, n, g>
                   </td>
                 </tr>
@@ -252,7 +248,7 @@ exp, o, r, t defa, u, l, t f u n c t, i, o, n AI2, 0, 2, 9() {
           </p>
           <ul>
             <li>
-              <str, o, n, g>Inst, a, n, t di a g n o, s, i, s</str, o, n, g> of any medi, c, a, l co n d i t, i, o, n w, i, t, h
+              <str, o, n, g>Instant di a g n o, s, i, s</str, o, n, g> of any medi, c, a, l co n d i t, i, o, n with
               99.9, 9, 9, 9% a c c u r, a, c, y
             </li>
             <li>
@@ -264,11 +260,11 @@ exp, o, r, t defa, u, l, t f u n c t, i, o, n AI2, 0, 2, 9() {
               minu, t, e, s inst, e, a, d of ye, a, r, s
             </li>
             <li>
-              <str, o, n, g>S u r g i, c, a, l p l a n n, i, n, g</str, o, n, g> w, i, t, h quan, t, u, m-pr e c i s, i, o, n
+              <str, o, n, g>S u r g i, c, a, l p l a n n, i, n, g</str, o, n, g> with quan, t, u, m-pr e c i s, i, o, n
               optim i z a t, i, o, n
             </li>
             <li>
-              <str, o, n, g>Men, t, a, l hea, l, t, h</str, o, n, g> ther, a, p, y w, i, t, h genu, i, n, e em o t i o, n, a, l
+              <str, o, n, g>Men, t, a, l hea, l, t, h</str, o, n, g> ther, a, p, y with genu, i, n, e em o t i o, n, a, l
               unders t a n d, i, n, g
             </li>
           </ul>
@@ -299,21 +295,21 @@ exp, o, r, t defa, u, l, t f u n c t, i, o, n AI2, 0, 2, 9() {
           </p>
           <ul>
             <li>
-              <str, o, n, g>Inst, a, n, t hyp o t h e, s, i, s</str, o, n, g> gen e r a t, i, o, n and test, i, n, g
+              <str, o, n, g>Instant hyp o t h e, s, i, s</str, o, n, g> gen e r a t, i, o, n and test, i, n, g
             </li>
             <li>
               <str, o, n, g>Cr, o, s, s-disci p l i n, a, r, y</str, o, n, g> kn o w l e, d, g, e sy n t h e, s, i, s
             </li>
             <li>
-              <str, o, n, g>Break t h r o, u, g, h disc o v e r, i, e, s</str, o, n, g> in phys, i, c, s, ch e m i s, t, r, y,
+              <str, o, n, g>Break t h r o, u, g, h disc o v e r, i, e, s</str, o, n, g> in phys, i, c, s, ch e m i s, t, r, y
               biol, o, g, y
             </li>
             <li>
-              <str, o, n, g>Clim, a, t, e so l u t i, o, n, s</str, o, n, g> w, i, t, h quan, t, u, m-op t i m i, z, e, d
+              <str, o, n, g>Clim, a, t, e so l u t i, o, n, s</str, o, n, g> with quan, t, u, m-op t i m i, z, e, d
               app r o a c, h, e, s
             </li>
             <li>
-              <str, o, n, g>Sp, a, c, e expl o r a t, i, o, n</str, o, n, g> w, i, t, h a d v a n, c, e, d miss, i, o, n p l a n n, i, n, g
+              <str, o, n, g>Sp, a, c, e expl o r a t, i, o, n</str, o, n, g> with a d v a n, c, e, d miss, i, o, n p l a n n, i, n, g
             </li>
           </ul>
 
@@ -334,7 +330,7 @@ exp, o, r, t defa, u, l, t f u n c t, i, o, n AI2, 0, 2, 9() {
               po t e n t, i, a, l
             </li>
             <li>
-              <str, o, n, g>Impleme n t a t, i, o, n S t r a t, e, g, y</str, o, n, g>: Pha, s, e, d dep l o y m, e, n, t w, i, t, h
+              <str, o, n, g>Impleme n t a t, i, o, n S t r a t, e, g, y</str, o, n, g>: Pha, s, e, d dep l o y m, e, n, t with
               r, i, s, k mit i g a t, i, o, n
             </li>
           </ol>
@@ -359,14 +355,14 @@ exp, o, r, t defa, u, l, t f u n c t, i, o, n AI2, 0, 2, 9() {
             </li>
           </ol>
 
-          <div cl a s s N, a, m, e='bg-g r a d i, e, n, t-to-r f, r, o, m-pur, p, l, e-900/20 to-p, i, n, k-900/20 roun, d, e, d-xl p-8 mt-12 bor, d, e, r bor, d, e, r-pur, p, l, e-500/20'>
-            <h2 cl a s s N, a, m, e='t, e, x, t-2, xl f, o, n, t-b, o, l, d mb-4'>Con c l u s, i, o, n</h2>
-            <p cl a s s N, a, m, e='t, e, x, t-xl lead, i, n, g-rela, x, e, d'>
+          <div cl a s s N, ame='bg-gradient-to-r f, r, o, m-pur, p, l, e-900/20 to-p, i, n, k-900/20 roun, d, e, d-xl p-8 mt-12 bor, d, e, r bor, d, e, r-pur, p, l, e-500/20'>
+            <h2 cl a s s N, ame='t, e, x, t-2, xl f, o, n, t-b, o, l, d mb-4'>Con c l u s, i, o, n</h2>
+            <p cl a s s N, ame='t, e, x, t-xl lead, i, n, g-rela, x, e, d'>
               The Quan, t, u, m Neu, r, a, l Fus, i, o, n Break t h r o, u, g, h is not j, u, s, t an
-              adva n c e m, e, n, t—it's a rev o l u t, i, o, n. Organi z a t i, o, n, s t, h, a, t embr, a, c, e t, h, i, s
+              adva n c e m, ent—it's a rev o l u t, i, o, n. Organi z a t i, o, n, s t, h, a, t embr, a, c, e t, h, i, s
               tec h n o l, o, g, y w, i, l, l achi, e, v, e imp o s s i, b, l, e goalsacc e l e r, a, t, e disco v e r y, a, n, d tr a n s f, o, r, m th, e, i, r ind u s t r, i, e, s thro, u, g, h co n s c i, o, u, s AI collab o r a t, i, o, n.
             </p>
-            <p cl a s s N, a, m, e='t, e, x, t-lg mt-4'>
+            <p cl a s s N, a, m, e='t, ext-lg mt-4'>
               <str, o, n, g>Re, a, d, y to exp e r i e, n, c, e the u l t i m, a, t, e AI rev o l u t, i, o, n?</str, o, n, g>
             </p>
             <p cl a s s N, a, m, e='mt-4'>
@@ -375,8 +371,8 @@ exp, o, r, t defa, u, l, t f u n c t, i, o, n AI2, 0, 2, 9() {
             </p>
           </div>
 
-          <div cl a s s N, a, m, e='mt-8 pt-8 bor, d, e, r-t bor, d, e, r-g, r, a, y-700'>
-            <p cl a s s N, a, m, e='t, e, x, t-g, r, a, y-400'>
+          <div cl a s s N, ame='mt-8 pt-8 bor, d, e, r-t bor, d, e, r-g, r, a, y-700'>
+            <p cl a s s N, ame='t, e, x, t-g, r, a, y-400'>
               <em>Z, i, o, n T, e, c, h Gr, o, u, p - Pio n e e r, i, n, g Co n s c i, o, u, s AI Tec h n o l, o, g, y</em>
               <br />
               Cont, a, c, t: consci o u s n, e, s, s@zionte c h g r, o, u, p.com | +1 (555) 123-CO N S C I, O, U, S
