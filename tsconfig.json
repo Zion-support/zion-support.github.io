@@ -9,6 +9,7 @@
     ],
     "module": "ESNext",
     "skipLibCheck": true,
+    "types": [],
     "moduleResolution": "node",
     "allowImportingTsExtensions": false,
     "resolveJsonModule": true,
