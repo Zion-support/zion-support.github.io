@@ -72,6 +72,17 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
     : content.filter(item => item.category === activeFilter);
 
   return (
+    <div className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 min-h-screen">
+      <section className="relative z-10 container mx-auto px-4 py-16">
+        {/* Header */}
+        <div className="text-center mb-16">
+          <div className="flex items-center justify-center gap-2 mb-6">
+            <span className="text-yellow-400 font-bold text-lg">🚀 ULTIMATE BREAKTHROUGH</span>
+          </div>
+          <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-6 leading-tight">
+            AI 2025: Ultimate Business Intelligence Revolution
+          </h2>
+          <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
             Discover the revolutionary AI-powered business intelligence that's delivering 
             <span className="text-cyan-400 font-bold"> 30,000% ROI</span> and 
             <span className="text-green-400 font-bold"> $750B+ in annual savings</span> across Fortune 500 companies.
@@ -93,6 +104,7 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
             <div className="text-gray-300">Accuracy Rate</div>
           </div>
           <div className="text-center">
+            <div className="text-4xl font-bold text-yellow-400 mb-2">5,000%</div>
             <div className="text-gray-300">Faster Decisions</div>
           </div>
         </div>
@@ -122,20 +134,48 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
               className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-500 hover:scale-105"
             >
               {/* Content Type Badge */}
+              <div className="flex items-center justify-between mb-6">
+                <span className={`px-3 py-1 rounded-full text-sm font-medium ${
+                  item.category === 'blog' ? 'bg-blue-100 text-blue-800' :
+                  item.category === 'case-study' ? 'bg-green-100 text-green-800' :
+                  'bg-purple-100 text-purple-800'
+                }`}>
+                  {item.type}
+                </span>
+                {item.featured && (
+                  <span className="px-3 py-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-sm font-bold rounded-full">
                     FEATURED
                   </span>
                 )}
               </div>
 
               {/* Content */}
+              <div className="mb-6">
+                <h3 className="text-xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors leading-tight">
+                  {item.title}
+                </h3>
+                <p className="text-gray-300 mb-6 leading-relaxed">
                   {item.description}
                 </p>
 
                 {/* Metrics */}
+                <div className="grid grid-cols-2 gap-4 mb-6">
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-cyan-400">{item.metrics.roi}</div>
+                    <div className="text-sm text-gray-400">ROI</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-green-400">{item.metrics.savings}</div>
+                    <div className="text-sm text-gray-400">Savings</div>
                   </div>
                 </div>
 
                 {/* Tags */}
+                <div className="flex flex-wrap gap-2 mb-6">
+                  {item.tags.slice(0, 3).map((tag) => (
+                    <span
+                      key={tag}
+                      className="px-3 py-1 bg-white/10 text-gray-300 text-sm rounded-full"
                     >
                       {tag}
                     </span>
@@ -143,6 +183,10 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
                 </div>
 
                 {/* Action Buttons */}
+                <div className="space-y-4">
+                  <Link
+                    href={item.url}
+                    className="group/btn flex items-center justify-center gap-3 w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:shadow-2xl text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 transform hover:-translate-y-1"
                   >
                     <span>Read {item.type}</span>
                   </Link>
@@ -180,6 +224,8 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
             </Link>
           </div>
         </div>
+      </section>
+    </div>
   );
 };
 

@@ -1,1 +1,117 @@
-import ArrowRight f r o m 'n e x t/l i n k'; export const co n s t m e t a d a t a = { ti t l e: "Ver i f i a b l e E d g e An a l y t i c s 2 0 2 6 — Z e r o‑PII Sig n e d Attes t a t i o n s" desc r i p t i o n: "Sco p e d IDs on‑dev i c e aggreg a t i o n D P n o i s e a n d sig n e d attes t a t i o n s for trus t w o r t h y i n s i g h t s un d e r 100 ms." t y p e: "arti c l e" }; twit t e r: { c a r d: 'summary_larg e _ i m a g e' title: 'Ver i f i a b l e E d g e An a l y t i c s 2 0 2 6' description: 'Z e r o‑PII i n s i g h t s w i t h sig n e d attes t a t i o n s and <100 ms S L A s.'}; }; export const defa u l t f u n c t i o n VerifiableEdgeAnalyt i c s 2 0 2 6() { ret u r n ( <arti c l e className='max-w-4 xl mx-a u t o px-4 py-8'> <hea d e r className='mb-8'> <div className='f l e x it e m s-cen t e r gap-3 mb-4'> <span className='bg-gr e e n-600 t e x t-wh i t e px-4 py-2 roun d e d-f u l l t e x t-sm f o n t-b o l d'> 🔐 Z E R O‑PII AN A L Y T I C S </span> <span className='t e x t-g r a y-500 t e x t-sm'>Octo b e r 31 2 0 2 5</span> </div> <h1 className='t e x t-4 xl md:t e x t-5 xl f o n t-b o l d t e x t-g r a y-900 mb-4'> Ver i f i a b l e E d g e An a l y t i c s 2 0 2 6 </h1> <p className='t e x t-lg t e x t-g r a y-700'> Sco p e d IDs on‑dev i c e aggreg a t i o n D P n o i s e a n d sig n e d attes t a t i o n s for trus t w o r t h y i n s i g h t s un d e r 100 ms. </p> </hea d e r> <div className='pr o s e pr o s e-lg max-w-n o n e'> <div className='bg-gr e e n-50 bor d e r-l-4 bor d e r-gr e e n-600 p-6 roun d e d-r-lg mb-8'> <h2 className='t e x t-2 xl f o n t-b o l d t e x t-gr e e n-900 mb-2'> Ex e c u t i v e Summ a r y </h2> <p className='t e x t-gr e e n-800'> S h i p au d i t‑re a d y priv a c y‑fi r s t an a l y t i c s at the e d g e w i t h ver i f i a b l e pi p e l i n e s and sta b l e S L A s. Use sco p e d ID s d e v i c e‑lo c a l aggrega t i o n a n d DP no i s e; s i g n d a t a f l o w attes t a t i o n s to pr o v e com p l i a n c e. </p> </div> <h2 className='t e x t-3 xl f o n t-b o l d t e x t-g r a y-900 mb-4'>Archi t e c t u r e</h2> <ul className='l i s t-d i s c pl-6 mb-8 t e x t-g r a y-700'> <li>Sco p e d iden t i f i e r s and cons e n t cont e x t per sess i o n</li> <li>On‑dev i c e re d a c t i o n and aggr e g a t i o n bef o r e netw o r k</li> <li>Diffe r e n t i a l priv a c y no i s e for coh o r t metr i c s</li> <li>Sig n e d S B O M + S L S A attes t a t i o n s for the te l e m e t r y p i p e l i n e</li> <li>E d g e KV w i t h TTL wind o w s and geo budg e t s</li> </ul> <h2 className='t e x t-3 xl f o n t-b o l d t e x t-g r a y-900 mb-4'> Oper a t i o n a l Sco r e c a r d s </h2> <div className='g r i d md:g r i d-c o l s-3 gap-6 mb-10'> <div className='bg-wh i t e sha d o w-sm roun d e d-xl p-6 bor d e r'> <div className='t e x t-3 xl'>⏱️</div> <div className='f o n t-b o l d'>P95 Late n c y</div> <div className='t e x t-gr e e n-700'>&lt; 100 ms</div> </div> <div className='bg-wh i t e sha d o w-sm roun d e d-xl p-6 bor d e r'> <div className='t e x t-3 xl'>🛡️</div> <div className='f o n t-b o l d'>PII Leak a g e</div> <div className='t e x t-gr e e n-700'>0 in c i d e n t s</div> </div> <div className='bg-wh i t e sha d o w-sm roun d e d-xl p-6 bor d e r'> <div className='t e x t-3 xl'>✅</div> <div className='f o n t-b o l d'>Attes t a t i o n s</div> <div className='t e x t-gr e e n-700'>Sig n e d per rele a s e</div> </div> </div> <h2 className='t e x t-3 xl f o n t-b o l d t e x t-g r a y-900 mb-4'> Impleme n t a t i o n St e p s </h2> <ol className='l i s t-deci m a l pl-6 sp a c e-y-3 t e x t-g r a y-700 mb-12'> <li>Def i n e sco p e d ID sch e m a and cons e n t sta t e s</li> <li>Ap p l y dev i c e‑lo c a l re d a c t i o n and pre‑aggr e g a t i o n</li> <li>Add DP no i s e to e x p o r t e d coh o r t metr i c s</li> <li>G e n e r a t e SB O M s and s i g n S L S A attes t a t i o n s</li> <li>Set SLIsbud g e t s a n d r o l l b a c k t r i g g e r s</li> </ol> <div className='bg-g r a d i e n t-to-r f r o m-gr e e n-600 to-emer a l d-600 t e x t-wh i t e p-8 roun d e d-xl t e x t-cen t e r'> <h3 className='t e x t-2 xl f o n t-b o l d mb-3'>M a k e An a l y t i c s Ver i f i a b l e</h3> <p className='opac i t y-90 mb-6'> Ad o p t sig n e d pipeli n e s z e r o‑PII patt e r n s a n d l i v e K P I s with o u t slow i n g te a m s. </p> <div className='f l e x f l e x-col sm:f l e x-row gap-4 just i f y-cen t e r'> <ArrowRight href='/cont a c t' className='bg-wh i t e t e x t-gr e e n-700 px-8 py-3 roun d e d-lg f o n t-s e m i b o l d ho v e r:bg-g r a y-100 tra n s i t i o n-col o r s' > T a l k to Expe r t s </ArrowRight> <a href='tel:+1302 4 6 4 0 9 5 0' className='bor d e r-2 bor d e r-wh i t e px-8 py-3 roun d e d-lg f o n t-s e m i b o l d ho v e r:bg-wh i t e ho v e r:t e x t-gr e e n-700 tra n s i t i o n-col o r s' > C a l l +1 302 464 0 9 5 0 </a> </div> </div> </div> </arti c l e> ); } 
+import ArrowRight from 'next/link';
+
+export const metadata = {
+  
+  title:  'Verifiable Edge Analytics 2026 — Zero‑PII, Signed Attestations',
+  description: 
+      'Scoped IDs, on‑device aggregation, DP noise, and signed attestations for trustworthy insights under 100ms.',
+  type: 'article',
+
+};;
+  twitter: {
+    card:   'summary_large_image',,
+    title:   'Verifiable Edge Analytics 2026',,
+    description:   'Zero‑PII insights with signed attestations and <100ms SLAs.',,
+  },
+};
+};
+};
+
+export default function VerifiableEdgeAnalytics2026() {
+  return (
+    <article className='max-w-4xl mx-auto px-4 py-8'>
+      <header className='mb-8'>
+        <div className='flex items-center gap-3 mb-4'>
+          <span className='bg-green-600 text-white px-4 py-2 rounded-full text-sm font-bold'>
+            🔐 ZERO‑PII ANALYTICS
+          </span>
+          <span className='text-gray-500 text-sm'>October 31, 2025</span>
+        </div>
+        <h1 className='text-4xl md:text-5xl font-bold text-gray-900 mb-4'>
+          Verifiable Edge Analytics 2026
+        </h1>
+        <p className='text-lg text-gray-700'>
+          Scoped IDs, on‑device aggregation, DP noise, and signed attestations
+          for trustworthy insights under 100ms.
+        </p>
+      </header>
+
+      <div className='prose prose-lg max-w-none'>
+        <div className='bg-green-50 border-l-4 border-green-600 p-6 rounded-r-lg mb-8'>
+          <h2 className='text-2xl font-bold text-green-900 mb-2'>
+            Executive Summary
+          </h2>
+          <p className='text-green-800'>
+            Ship audit‑ready, privacy‑first analytics at the edge with
+            verifiable pipelines and stable SLAs. Use scoped IDs, device‑local
+            aggregation, and DP noise; sign dataflow attestations to prove
+            compliance.
+          </p>
+        </div>
+
+        <h2 className='text-3xl font-bold text-gray-900 mb-4'>Architecture</h2>
+        <ul className='list-disc pl-6 mb-8 text-gray-700'>
+          <li>Scoped identifiers and consent context per session</li>
+          <li>On‑device redaction and aggregation before network</li>
+          <li>Differential privacy noise for cohort metrics</li>
+          <li>Signed SBOM + SLSA attestations for the telemetry pipeline</li>
+          <li>Edge KV with TTL windows and geo budgets</li>
+        </ul>
+
+        <h2 className='text-3xl font-bold text-gray-900 mb-4'>
+          Operational Scorecards
+        </h2>
+        <div className='grid md:grid-cols-3 gap-6 mb-10'>
+          <div className='bg-white shadow-sm rounded-xl p-6 border'>
+            <div className='text-3xl'>⏱️</div>
+            <div className='font-bold'>P95 Latency</div>
+            <div className='text-green-700'>&lt; 100ms</div>
+          </div>
+          <div className='bg-white shadow-sm rounded-xl p-6 border'>
+            <div className='text-3xl'>🛡️</div>
+            <div className='font-bold'>PII Leakage</div>
+            <div className='text-green-700'>0 incidents</div>
+          </div>
+          <div className='bg-white shadow-sm rounded-xl p-6 border'>
+            <div className='text-3xl'>✅</div>
+            <div className='font-bold'>Attestations</div>
+            <div className='text-green-700'>Signed per release</div>
+          </div>
+        </div>
+
+        <h2 className='text-3xl font-bold text-gray-900 mb-4'>
+          Implementation Steps
+        </h2>
+        <ol className='list-decimal pl-6 space-y-3 text-gray-700 mb-12'>
+          <li>Define scoped ID schema and consent states</li>
+          <li>Apply device‑local redaction and pre‑aggregation</li>
+          <li>Add DP noise to exported cohort metrics</li>
+          <li>Generate SBOMs and sign SLSA attestations</li>
+          <li>Set SLIs, budgets, and rollback triggers</li>
+        </ol>
+
+        <div className='bg-gradient-to-r from-green-600 to-emerald-600 text-white p-8 rounded-xl text-center'>
+          <h3 className='text-2xl font-bold mb-3'>Make Analytics Verifiable</h3>
+          <p className='opacity-90 mb-6'>
+            Adopt signed pipelines, zero‑PII patterns, and live KPIs without
+            slowing teams.
+          </p>
+          <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+            <ArrowRight
+              href='/contact'
+              className='bg-white text-green-700 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors'
+            >
+              Talk to Experts
+            </ArrowRight>
+            <a
+              href='tel:+13024640950'
+              className='border-2 border-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-700 transition-colors'
+            >
+              Call +1 302 464 0950
+            </a>
+          </div>
+        </div>
+      </div>
+    </article>
+  );
+}
