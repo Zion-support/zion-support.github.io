@@ -9,13 +9,13 @@ async function handler(req, res) {
   }
 
   try {
-    // Wallet functionality implementation
+    // Wallet functionality would go here
     res.statusCode = 200;
     res.json({ message: 'Wallet endpoint' });
   } catch (err) {
-    console.error('Wallet API error:', err);
+    console.error('Wallet error:', err);
     res.statusCode = 500;
-    res.json({ error: err.message || 'Wallet operation failed' });
+    res.json({ error: err.message });
   }
 }
 

@@ -10,6 +10,13 @@ export type IntegrationProviderId =
 
 export type SyncStatus = 'connected' | 'warning' | 'disconnected';
 
+export interface IntegrationProviderMeta {
+  id: IntegrationProviderId;
+  name: string;
+  category: 'crm' | 'ats';
+  description: string;
+}
+
 export interface ProviderConnection {
   id: string;
   providerId: IntegrationProviderId;
@@ -41,13 +48,6 @@ export interface ZapierEvent {
   type: 'zion.job.posted' | 'zion.talent.matched';
   timestamp: number;
   payload: Record<string, any>;
-}
-
-export interface IntegrationProviderMeta {
-  id: IntegrationProviderId;
-  name: string;
-  category: 'crm' | 'ats';
-  description: string;
 }
 
 export interface IntegrationsState {
