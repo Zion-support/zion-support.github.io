@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react'; // Not needed in Next.js 13+
 import Link from 'next/link';
 
 export const metadata = {
