@@ -1,20 +1,17 @@
-export const metadata = {
-  title: 'Realtime Personalization 2025 at the Edge: <100ms, Zero‑PII',
+export const metadata = {title: 'Realtime Personalization 2025 at the Edge: <100ms,Zero‑PII',
   description:
-    'Edge flags, scoped IDson‑device telemetry for privatesub‑100ms personalization at global scale.',
+    'Edge flags, scoped IDson‑device telemetry for privatesub‑100ms personalization at globalscale.',
 };
 
-export default function Page() {
-  return (
-    <main className='max-w-3xl mx-auto px-4 py-12'>
-      <h1 className='text-4xl font-bold mb-4'>
+export default function Page() {return (<main className='max-w-3xl mx-auto px-4py-12'>
+      <h1 className='text-4xl font-boldmb-4'>
         Realtime Personalization at the Edge
       </h1>
-      <p className='text-gray-600 mb-6'>
+      <p className='text-gray-600mb-6'>
         Deliver private, sub‑100ms experiences with edge feature flags and
         scoped IDs.
       </p>
-      <div className='prose prose-invert'>
+      <div className='proseprose-invert'>
         <p>
           Use edge‑deployed feature flags and on‑device telemetry to personalize
           experiences without PII. Achieve predictable latency and compliance
@@ -28,5 +25,4 @@ export default function Page() {
         </ul>
       </div>
     </main>
-  );
-}
+  ); }

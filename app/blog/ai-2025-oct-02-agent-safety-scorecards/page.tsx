@@ -1,18 +1,16 @@
 // @ts-nocheck
 import React from 'react';
 
-const Page: React.FC = () => {
-  return (
-    <main className='min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white'>
-      <div className='container mx-auto px-6 py-16'>
-        <h1 className='text-4xl md:text-5xl font-bold mb-4'>
+const Page: React.FC = () => {return (<mainclassName='min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white'>
+      <divclassName='container mx-auto px-6 py-16'>
+        <h1className='text-4xl md:text-5xl font-bold mb-4'>
           AI 2025: Agent Safety Scorecards
         </h1>
-        <p className='text-zion-slate-light mb-6'>
+        <pclassName='text-zion-slate-light mb-6'>
           KPIsbudgetsand rollback triggers that keep autonomous agents safe at
           speed.
         </p>
-        <article className='prose prose-invert max-w-3xl'>
+        <articleclassName='prose prose-invert max-w-3xl'>
           <p>
             Design scorecards for autonomous agents that connect service‑level
             indicators to business KPIs. Use budgeted actions, live canaries,

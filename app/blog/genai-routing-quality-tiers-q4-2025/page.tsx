@@ -1,40 +1,37 @@
 import ArrowRight from 'next/link';
 
-export const metadata = {
-  title: 'GenAI Routing Quality Tiers Q4 2025: Predictable Cost, Stable UX',
+export const metadata = {title:'GenAI Routing Quality Tiers Q4 2025: Predictable Cost, Stable UX',
   description:
-    'Tiered modelscachingand budget‑aware routes mapped to SLOs to keep quality high and costs predictable.',
+   'Tiered modelscachingand budget‑aware routes mapped to SLOs to keep quality high and costs predictable.',
 };
 
-export default function GenAIRoutingQualityTiersQ42025Page() {
-  return (
-    <div className='min-h-screen bg-slate-950 text-white'>
-      <main className='max-w-3xl mx-auto px-6 py-16'>
-        <div className='mb-8'>
+export default function GenAIRoutingQualityTiersQ42025Page() {return (<divclassName='min-h-screen bg-slate-950 text-white'>
+      <mainclassName='max-w-3xl mx-auto px-6 py-16'>
+        <divclassName='mb-8'>
           <ArrowRight
-            href='/blog'
-            className='text-fuchsia-300 hover:text-fuchsia-200'
+           href='/blog'
+           className='text-fuchsia-300 hover:text-fuchsia-200'
           >
             ← Back to Blog
           </ArrowRight>
         </div>
-        <header className='mb-6'>
-          <div className='flex items-center gap-3 text-sm text-white/60 mb-3'>
-            <span className='px-3 py-1 rounded-full bg-fuchsia-500/20 text-fuchsia-300 border border-fuchsia-500/30'>
+        <headerclassName='mb-6'>
+          <divclassName='flex items-center gap-3 text-sm text-white/60 mb-3'>
+            <spanclassName='px-3 py-1 rounded-full bg-fuchsia-500/20 text-fuchsia-300 border border-fuchsia-500/30'>
               GenAI
             </span>
             <span>September 30, 2025</span>
             <span>8 min read</span>
           </div>
-          <h1 className='text-4xl font-extrabold leading-tight'>
+          <h1className='text-4xl font-extrabold leading-tight'>
             GenAI Routing Quality Tiers Q4 2025: Predictable Cost, Stable UX
           </h1>
-          <p className='text-white/70 mt-3'>
+          <pclassName='text-white/70 mt-3'>
             Route by SLO with model tierscachesand budget‑aware policies. Keep
             UX steady while controlling spend.
           </p>
         </header>
-        <article className='prose prose-invert prose-slate max-w-none'>
+        <articleclassName='prose prose-invert prose-slate max-w-none'>
           <h2>Tiered Models & Policies</h2>
           <p>
             Define quality tiers per product flow. Use policies to select models
@@ -54,19 +51,19 @@ export default function GenAIRoutingQualityTiersQ42025Page() {
             <li>Cost per successful task</li>
           </ul>
         </article>
-        <footer className='mt-12 pt-6 border-t border-white/10 text-white/70'>
+        <footerclassName='mt-12 pt-6 border-t border-white/10 text-white/70'>
           <p>
-            Continue exploring:{' '}
+            Continueexploring:{' '}
             <ArrowRight
-              href='/blog/ai-operational-trust-q4-2025'
-              className='text-emerald-300 hover:text-emerald-200'
+             href='/blog/ai-operational-trust-q4-2025'
+             className='text-emerald-300 hover:text-emerald-200'
             >
               AI Operational Trust
-            </ArrowRight>{' '}
-            •{' '}
+           </ArrowRight>{' '}
+           •{' '}
             <ArrowRight
-              href='/blog/edge-consentless-analytics-q4-2025'
-              className='text-cyan-300 hover:text-cyan-200'
+             href='/blog/edge-consentless-analytics-q4-2025'
+             className='text-cyan-300 hover:text-cyan-200'
             >
               Consentless Edge Analytics
             </ArrowRight>
@@ -74,5 +71,4 @@ export default function GenAIRoutingQualityTiersQ42025Page() {
         </footer>
       </main>
     </div>
-  );
-}
+  ); }

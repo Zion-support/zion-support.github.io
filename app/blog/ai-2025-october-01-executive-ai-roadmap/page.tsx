@@ -1,25 +1,22 @@
-export const metadata = {
-  title: 'Executive AI Roadmap — October 2025 | Zion Tech Group',
+export const metadata = {title: 'Executive AI Roadmap — October 2025 | Zion TechGroup',
   description:
-    'A pragmatic 90‑day enterprise roadmap to ship reliable AI with guardrails, live scorecardsbudgetsand measurable ROI.',
+    'A pragmatic 90‑day enterprise roadmap to ship reliable AI with guardrails, live scorecardsbudgetsand measurableROI.',
 };
 
-export default function ExecutiveAIRoadmapPage() {
-  return (
-    <main className='min-h-screen bg-slate-950 text-white'>
-      <article className='max-w-3xl mx-auto px-4 py-16'>
+export default function ExecutiveAIRoadmapPage() {return (<main className='min-h-screen bg-slate-950text-white'>
+      <article className='max-w-3xl mx-auto px-4py-16'>
         <header className='mb-10'>
-          <p className='text-sm text-white/60'>Published Oct 1, 2025</p>
-          <h1 className='text-4xl font-extrabold mt-2'>
+          <pclassName='text-sm text-white/60'>Published Oct 1, 2025</p>
+          <h1className='text-4xl font-extrabold mt-2'>
             Executive AI Roadmap — October 2025
           </h1>
-          <p className='text-white/70 mt-3'>
+          <pclassName='text-white/70 mt-3'>
             A pragmatic 90‑day enterprise roadmap to ship reliable AI with
             guardrails, live scorecardsbudgetsand measurable ROI.
           </p>
         </header>
 
-        <section className='prose prose-invert prose-slate max-w-none'>
+        <sectionclassName='prose prose-invert prose-slate max-w-none'>
           <h2>Why now</h2>
           <p>
             Enterprises are past pilot purgatory. The winners are
@@ -70,5 +67,4 @@ export default function ExecutiveAIRoadmapPage() {
         </section>
       </article>
     </main>
-  );
-}
+  ); }

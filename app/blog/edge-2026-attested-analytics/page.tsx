@@ -1,14 +1,11 @@
 import ArrowRight from 'next/link';
 
-export const metadata = {
-  title: 'Edge 2026: Attested Analytics — Zero‑PII Insights with Signed Proofs',
+export const metadata = {title:'Edge 2026: Attested Analytics — Zero‑PII Insights with Signed Proofs',
   description:
-    'Scoped IDs, on‑device aggregationDP noiseand signed attestations for trustworthy insights at <100ms.',
+   'Scoped IDs, on‑device aggregationDP noiseand signed attestations for trustworthy insights at <100ms.',
 };
 
-export default function Page() {
-  return (
-    <main className='max-w-3xl mx-auto px-4 py-12 prose prose-invert'>
+export default function Page() {return (<mainclassName='max-w-3xl mx-auto px-4 py-12 prose prose-invert'>
       <h1>Edge 2026: Attested Analytics</h1>
       <p>
         Deliver decision‑grade analytics without PII. Use scoped identifiers,
@@ -21,19 +18,18 @@ export default function Page() {
         <li>Latency: sub‑100ms collection and evaluation at the edge</li>
       </ul>
       <p>
-        Related reads:{' '}
-        <ArrowRight href='/blog/edge-private-analytics-2027'>
+        Relatedreads:{' '}
+        <ArrowRighthref='/blog/edge-private-analytics-2027'>
           Edge Private Analytics 2027
-        </ArrowRight>{' '}
-        and{' '}
-        <ArrowRight href='/blog/verifiable-edge-analytics-2026'>
+       </ArrowRight>{' '}
+       and{' '}
+        <ArrowRighthref='/blog/verifiable-edge-analytics-2026'>
           Verifiable Edge Analytics 2026
         </ArrowRight>
         .
       </p>
       <p>
-        Continue exploring in our <ArrowRight href='/blog'>Blog</ArrowRight>.
+        Continue exploring in our <ArrowRighthref='/blog'>Blog</ArrowRight>.
       </p>
     </main>
-  );
-}
+  ); }

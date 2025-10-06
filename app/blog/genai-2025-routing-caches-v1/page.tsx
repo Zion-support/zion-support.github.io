@@ -1,14 +1,11 @@
 import ArrowRight from 'next/link';
 
-export const metadata = {
-  title: 'GenAI Routing v1 (2025): Tiered Models + Semantic Caches',
+export const metadata = {title:'GenAI Routing v1 (2025): Tiered Models + Semantic Caches',
   description:
-    'Predictable cost and stable UX using route guardstiered modelsand cache hits tied to product KPIs.',
+   'Predictable cost and stable UX using route guardstiered modelsand cache hits tied to product KPIs.',
 };
 
-export default function Page() {
-  return (
-    <main className='max-w-4xl mx-auto px-4 py-12 prose prose-invert'>
+export default function Page() {return (<mainclassName='max-w-4xl mx-auto px-4 py-12 prose prose-invert'>
       <h1>GenAI Routing v1 (2025)</h1>
       <p>
         Establish predictable costs and a stable UX by routing requests through
@@ -23,12 +20,11 @@ export default function Page() {
         <li>Signed policies and real‑time traces</li>
       </ul>
       <p>
-        Explore more GenAI playbooks on the{' '}
-        <ArrowRight href='/blog' className='font-semibold'>
+        Explore more GenAI playbooks onthe{' '}
+        <ArrowRighthref='/blog'className='font-semibold'>
           blog
         </ArrowRight>
         .
       </p>
     </main>
-  );
-}
+  ); }
