@@ -8,7 +8,6 @@ import ErrorBoundary from './components/ErrorBoundary';
 import SEOOptimizer from './components/SEOOptimizer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import PerformanceMonitor from './components/PerformanceMonitor';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e62
 import LoadingSpinner from '../app/components/LoadingSpinner';
 
 // Simple placeholder components
