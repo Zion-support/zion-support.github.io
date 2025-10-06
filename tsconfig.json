@@ -113,6 +113,7 @@
     "app/components/NewestContent2025Banner.tsx",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     "api/**",
     "lib/**",
     "utils/seoUtils.ts"
@@ -133,6 +134,15 @@
     "utils/performanceUtils.ts",
     "utils/seoUtils.ts"
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d
+=======
+    "utils/bannerLazyLoader.ts",
+    "utils/bannerPrioritization.ts",
+    "utils/bannerRegistry.ts",
+    "utils/bannerRotationSystem.ts",
+    "utils/comprehensiveOptimizer.ts",
+    "utils/performanceUtils.ts",
+    "utils/seoUtils.ts"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-efe9
   ],
   "references": [
     {

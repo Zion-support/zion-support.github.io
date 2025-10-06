@@ -16,6 +16,7 @@ export type IntegrationProviderId =
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export type SyncStatus = 'connected' | 'warning' | 'disconnected';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -242,12 +243,18 @@ export type SyncStatus = 'connected' | 'warning' | 'disconnected';
 }
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-d12c
+=======
+
+export type SyncStatus = 'connected' | 'warning' | 'disconnected';
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-efe9
 export interface SyncLogEntry {
   id: string;
   timestamp: number;
   providerId: IntegrationProviderId;
   level: 'info' | 'warn' | 'error';
   action: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -304,11 +311,17 @@ export interface SyncLogEntry {
 }
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-d12c
+=======
+  details?: Record<string, any>;
+}
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-efe9
 export interface ManualOverride {
   jobId: string;
   disableCrmSync?: boolean;
   disableAtsSync?: boolean;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -345,10 +358,14 @@ export interface ManualOverride {
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-d12c
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-efe9
 export interface ZapierEvent {
   id: string;
   type: 'zion.job.posted' | 'zion.talent.matched';
   timestamp: number;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -501,6 +518,10 @@ export interface IntegrationsState {
   overrides: ManualOverride[];
   events: ZapierEvent[];
 }
+=======
+  payload: Record<string, any>;
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-efe9
 
 export interface ProviderConnection {
   id: string;
@@ -511,6 +532,10 @@ export interface ProviderConnection {
   status: SyncStatus;
   lastSync?: number;
   createdAt: number;
+<<<<<<< HEAD
+=======
+  updatedAt: number;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-efe9
 }
 
 export interface IntegrationProviderMeta {
@@ -518,8 +543,23 @@ export interface IntegrationProviderMeta {
   name: string;
   category: 'crm' | 'ats' | 'hr';
   description: string;
+<<<<<<< HEAD
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d
 =======
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-d12c
+=======
+  logoUrl?: string;
+  websiteUrl?: string;
+  apiDocsUrl?: string;
+}
+
+export interface IntegrationsState {
+  connections: ProviderConnection[];
+  logs: SyncLogEntry[];
+  overrides: ManualOverride[];
+  events: ZapierEvent[];
+  lastError?: string | null;
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-efe9
