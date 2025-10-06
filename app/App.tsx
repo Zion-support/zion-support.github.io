@@ -7,6 +7,8 @@ import ErrorBoundary from '../src/components/ErrorBoundary';
 import SEOOptimizer from '../src/components/SEOOptimizer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import PerformanceDashboard from './components/PerformanceDashboard';
+import Navigation from './components/Navigation';
+import Footer from './components/Footer';
 
 // Pages
 import HomePage from './page';
@@ -15,20 +17,16 @@ import HomePage from './page';
 // import performanceOptimizer from '../src/utils/performanceOptimizer';
 
 // Styles
-import '../index.css';
+import '../src/index.css';
 
 const App: React.FC = () => {
   useEffect(() => {
     // Initialize global error handling
-    console.log('App initialized');
-
-    // Initialize performance monitoring
-    console.log('Performance monitoring initialized');
-
-    console.log('Performance monitoring initialized');
-    console.log(
-      '🚀 Zion Tech Group App initialized with comprehensive monitoring',
-    );
+    if (process.env.NODE_ENV === 'development') {
+      console.log('App initialized');
+      console.log('Performance monitoring initialized');
+      console.log('🚀 Zion Tech Group App initialized with comprehensive monitoring');
+    }
   }, []);
 
   return (
@@ -56,10 +54,14 @@ const App: React.FC = () => {
                   Skip to main content
                 </a>
 
+                <Navigation />
+                
                 <Routes>
                   <Route path='/' element={<HomePage />} />
                   {/* Add more routes as needed */}
                 </Routes>
+
+                <Footer />
 
                 {/* Performance Dashboard */}
                 <PerformanceDashboard />
