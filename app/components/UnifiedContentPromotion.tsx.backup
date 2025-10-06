@@ -2,9 +2,6 @@ import React from 'react';
 
 const UnifiedContentPromotion: React.FC = () => {
   return (
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     <div className="unified-content-promotion">
       <h2>Unified Content Promotion</h2>
       <p>Content promotion component placeholder</p>
@@ -13,9 +10,6 @@ const UnifiedContentPromotion: React.FC = () => {
 };
 
 export default UnifiedContentPromotion;
-=======
-<<<<<<< HEAD
->>>>>>> main
     <section className='bg-gradient-to-r from-blue-50 to-purple-50 py-16 rounded-2xl'>
       <div className='container mx-auto px-4 text-center'>
         <h2 className='text-4xl font-bold text-gray-900 mb-6'>
@@ -45,9 +39,6 @@ export default UnifiedContentPromotion;
             <p className='text-gray-600'>
               Complete enterprise modernization with AI.
             </p>
-<<<<<<< HEAD
-=======
-=======
     <section className="py-16 bg-gradient-to-r from-blue-50 to-indigo-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
@@ -95,7 +86,6 @@ export default UnifiedContentPromotion;
               Learn More →
             </button>
 >>>>>>> main
->>>>>>> main
           </div>
         </div>
       </div>
@@ -104,14 +94,8 @@ export default UnifiedContentPromotion;
 };
 
 export default UnifiedContentPromotion;
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
 export default UnifiedContentPromotion;
-=======
 export default UnifiedContentPromotion;
->>>>>>> main
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main

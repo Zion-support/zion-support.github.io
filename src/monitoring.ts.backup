@@ -70,7 +70,6 @@ if (typeof window !== 'undefined') {
   if (metrics) {
     performanceOptimizer.reportWebVitals(metrics);
   }
-<<<<<<< HEAD
   
   // Monitor long tasks
   const observer = new PerformanceObserver((list) => {
@@ -86,8 +85,6 @@ if (typeof window !== 'undefined') {
   if (timingMetrics) {
     performanceOptimizer.reportWebVitals(timingMetrics);
   }
-=======
->>>>>>> main
 =======
 >>>>>>> b0d6dda8406c2e54af3529a18b3e8c5f6ab37739
 >>>>>>> main

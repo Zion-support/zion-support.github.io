@@ -4,7 +4,6 @@ const ContentShowcase: React.FC = () => {
   const contentItems = [
     {
 =======
-<<<<<<< HEAD
   return (
     <div className="content-showcase">
       <h2>Content Showcase</h2>
@@ -14,11 +13,8 @@ const ContentShowcase: React.FC = () => {
 };
 
 export default ContentShowcase;
-=======
   const contentItems = [
     {
-<<<<<<< HEAD
->>>>>>> main
       title: 'AI-Powered Manufacturing',
       description:
         'Revolutionize your production line with intelligent automation and predictive maintenance.',
@@ -65,9 +61,6 @@ export default ContentShowcase;
                 <p className='text-gray-600 mb-4'>{item.description}</p>
                 <button className='w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors duration-300'>
                   Learn More
-<<<<<<< HEAD
-=======
-=======
       title: "AI-Powered Automation",
       description: "Streamline your operations with intelligent automation solutions.",
       image: "/api/placeholder/300/200",
@@ -124,7 +117,6 @@ export default ContentShowcase;
                 <button className="text-blue-600 hover:text-blue-700 font-medium text-sm">
                   Learn More →
 >>>>>>> main
->>>>>>> main
                 </button>
               </div>
             </div>
@@ -136,14 +128,8 @@ export default ContentShowcase;
 };
 
 export default ContentShowcase;
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
 export default ContentShowcase;
-=======
 export default ContentShowcase;
->>>>>>> main
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main

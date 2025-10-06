@@ -16,7 +16,6 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   const [, setLongTasks] = useState<PerformanceEntry[]>([]);
 
   useEffect(() => {
-<<<<<<< HEAD
     // Basic performance monitoring
     if (typeof window !== 'undefined' && 'performance' in window) {
       const observer = new PerformanceObserver((list) => {
@@ -24,12 +23,6 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
           if (entry.entryType === 'navigation') {
             const navEntry = entry as PerformanceNavigationTiming;
             console.log('Page load time:', navEntry.loadEventEnd - navEntry.loadEventStart);
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> main
 >>>>>>> main
           }
         }
@@ -39,13 +32,8 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       
       return () => observer.disconnect();
     }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
     
     // Return undefined if performance is not available
->>>>>>> main
 >>>>>>> main
     return undefined;
   }, []);

@@ -1,15 +1,7 @@
-<<<<<<< HEAD
 import React, { type ReactNode } from 'react';
-=======
-<<<<<<< HEAD
 import React, { type ReactNode } from 'react';
-=======
-<<<<<<< HEAD
 import React, { type ReactNode } from 'react';
-=======
-<<<<<<< HEAD
 import React, { type ReactNode } from 'react';
-=======
 import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -52,7 +44,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   }, [structuredData]);
 
 import React, { ReactNode } from 'react';
->>>>>>> main
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main

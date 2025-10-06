@@ -52,14 +52,6 @@ class ErrorBoundary extends Component<Props, State> {
   }
 
   override componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> main
 >>>>>>> main
 >>>>>>> main
     console.error('ErrorBoundary caught an error:', error, errorInfo);
@@ -76,14 +68,7 @@ class ErrorBoundary extends Component<Props, State> {
     }
   }
 
-<<<<<<< HEAD
   handleRetry = () => {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> main
 >>>>>>> main
     this.setState({ hasError: false });
   };
@@ -94,13 +79,7 @@ class ErrorBoundary extends Component<Props, State> {
     }
   };
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
     this.setState({ hasError: false } as State);
-=======
   override render() {
   private reportError = (error: Error, errorInfo: ErrorInfo) => {
     // Report to external service (e.g., Sentry, LogRocket, etc.)
@@ -118,7 +97,6 @@ class ErrorBoundary extends Component<Props, State> {
 
   private handleRetry = () => {
     this.setState({ hasError: false, error: undefined, errorId: undefined });
->>>>>>> main
   };
 
   private handleGoHome = () => {
