@@ -47,6 +47,7 @@ const September30NewContent2025Banner: React.FC = () => {
       readTime: '16 min',
       icon: '👁️',
       gradient: 'from-emerald-500 to-teal-600'
+<<<<<<< HEAD
     },
     {
       id: 4,
@@ -69,10 +70,13 @@ const September30NewContent2025Banner: React.FC = () => {
       readTime: '14 min',
       icon: '💰',
       gradient: 'from-orange-500 to-amber-600'
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-e382
     }
   ];
 
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
     <div className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
       {/* Animated background effects */}
@@ -295,10 +299,108 @@ const September30NewContent2025Banner: React.FC = () => {
               {/* Corner accent */}
               <div className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${article.gradient} opacity-10 rounded-bl-full`}></div>
             </div>
+=======
+    <section className="relative overflow-hidden bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 py-20">
+      {/* Animated Background Effects */}
+      <div className="absolute inset-0">
+        <div className="absolute top-10 left-10 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute top-40 right-20 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute bottom-20 left-1/2 w-80 h-80 bg-cyan-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+      </div>
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
+        <div className="text-center mb-16">
+          <div className="flex items-center justify-center gap-2 mb-6">
+            <Sparkles className="w-6 h-6 text-yellow-400" />
+            <span className="text-yellow-400 font-bold text-xl">
+              🚀 BREAKING: 4 REVOLUTIONARY ARTICLES JUST PUBLISHED!
+            </span>
+            <Sparkles className="w-6 h-6 text-yellow-400" />
+          </div>
+
+          <h2 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
+              September 30, 2025
+            </span>
+            <br />
+            <span className="text-white">
+              Cutting-Edge AI Insights
+            </span>
+          </h2>
+          
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Customer Experience • Autonomous Operations • GenAI Architecture • Multimodal AI — The future of enterprise AI starts here
+          </p>
+
+          <div className="flex items-center justify-center gap-8 text-gray-300">
+            <div className="flex items-center gap-2">
+              <TrendingUp className="w-5 h-5 text-green-400" />
+              <span>50,000+ Readers</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Zap className="w-5 h-5 text-yellow-400" />
+              <span>4 New Articles</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Star className="w-5 h-5 text-blue-400" />
+              <span>Proven Results</span>
+            </div>
+          </div>
+        </div>
+
+        {/* Featured Articles Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+          {newArticles.map((article, index) => (
+            <Link key={article.id} href={`/blog/${article.slug}`} className="group">
+              <div className="relative bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 hover:scale-105 h-full">
+                {/* Card glow effect */}
+                <div className={`absolute inset-0 bg-gradient-to-br ${article.gradient} opacity-0 group-hover:opacity-10 transition-all duration-500 rounded-2xl`}></div>
+                
+                <div className="relative z-10">
+                  {/* Icon & Date */}
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="text-3xl">{article.icon}</div>
+                    <div className="text-sm text-gray-400">{article.date}</div>
+                  </div>
+
+                  {/* Category Tag */}
+                  <div className="mb-4">
+                    <span className="px-3 py-1 bg-white/20 text-white text-sm font-semibold rounded-full">
+                      {article.category}
+                    </span>
+                  </div>
+
+                  {/* Title */}
+                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors leading-tight">
+                    {article.title}
+                  </h3>
+
+                  {/* Excerpt */}
+                  <p className="text-gray-300 mb-4 text-sm leading-relaxed">
+                    {article.excerpt}
+                  </p>
+
+                  {/* Meta Info */}
+                  <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
+                    <span>⏱️ {article.readTime}</span>
+                    <span>📅 {article.date}</span>
+                  </div>
+
+                  {/* CTA Button */}
+                  <div className="flex items-center justify-center gap-2 text-cyan-400 font-semibold group-hover:text-white transition-colors">
+                    <span>Read Article</span>
+                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </div>
+              </div>
+            </Link>
+>>>>>>> cursor/fix-errors-and-merge-to-main-e382
           ))}
         </div>
 
         {/* Call-to-Action Section */}
+<<<<<<< HEAD
 <<<<<<< HEAD
         <div className="text-center bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-12 mb-16">
           <h3 className="text-3xl font-bold text-white mb-6">
@@ -335,11 +437,45 @@ const September30NewContent2025Banner: React.FC = () => {
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
+=======
+        <div className="text-center bg-white/5 backdrop-blur-lg rounded-2xl p-12 border border-white/20 mb-16">
+          <div className="flex items-center justify-center gap-3 mb-6">
+            <Rocket className="w-8 h-8 text-cyan-400" />
+            <h3 className="text-3xl font-bold text-white">
+              Ready to Transform Your Enterprise?
+            </h3>
+            <Rocket className="w-8 h-8 text-cyan-400" />
+          </div>
+          
+          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            Join 50,000+ AI leaders implementing these breakthrough technologies. Get expert guidance 
+            from Zion Tech Group's AI transformation specialists.
+          </p>
+
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <Link
+              href="/contact"
+              className="group flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl"
+            >
+              <Sparkles className="w-5 h-5" />
+              <span>Start Your AI Journey</span>
+            </Link>
+            
+            <Link
+              href="/blog"
+              className="group flex items-center gap-3 bg-white/10 hover:bg-white/20 text-white font-bold py-4 px-8 rounded-xl border border-white/30 hover:border-white/50 transition-all duration-300"
+            >
+              <span>Explore All Content</span>
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-e382
         </div>
 
         {/* Stats Section */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {[
+<<<<<<< HEAD
             { value: '500+', label: 'Enterprise Clients', icon: '🏢' },
             { value: '$2.5B+', label: 'Value Delivered', icon: '💎' },
             { value: '99.99%', label: 'System Reliability', icon: '⚡' },
@@ -347,13 +483,21 @@ const September30NewContent2025Banner: React.FC = () => {
           ].map((stat, index) => (
             <div key={index} className="text-center">
               <div className="text-4xl mb-2">{stat.icon}</div>
+=======
+            { value: '50,000+', label: 'AI Leaders' },
+            { value: '4', label: 'New Articles' },
+            { value: '99.99%', label: 'System Uptime' },
+            { value: '24/7', label: 'Expert Support' }
+          ].map((stat, index) => (
+            <div key={index} className="text-center">
+>>>>>>> cursor/fix-errors-and-merge-to-main-e382
               <div className="text-3xl font-bold text-cyan-400 mb-2">{stat.value}</div>
               <div className="text-gray-300">{stat.label}</div>
             </div>
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
