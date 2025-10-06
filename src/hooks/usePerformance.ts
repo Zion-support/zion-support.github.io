@@ -5,6 +5,7 @@
 import { useEffect, useCallback, useRef } from 'react';
 import { performanceOptimizer } from '../utils/performanceOptimizer';
 
+<<<<<<< HEAD
 // Mock analytics object for tracking
 const analytics = {
   trackPerformance: (name: string, value: number, unit: string = 'ms') => {
@@ -12,6 +13,15 @@ const analytics = {
   },
   track: (event: string, category: string, action: string, label?: string, value?: number) => {
     console.log(`Analytics: ${event} - ${category} - ${action}`, { label, value });
+=======
+// Mock analytics object for performance tracking
+const analytics = {
+  trackPerformance: (key: string, value: number, unit?: string) => {
+    console.log(`Performance: ${key} = ${value}${unit ? ` ${unit}` : ''}`);
+  },
+  track: (event: string, category: string, action: string, label?: string, value?: number) => {
+    console.log(`Analytics: ${event} - ${category} - ${action}${label ? ` - ${label}` : ''}${value ? ` - ${value}` : ''}`);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0883
   }
 };
 
@@ -21,6 +31,7 @@ const analytics = {
 export const usePageLoadPerformance = () => {
   useEffect(() => {
     const trackPageLoad = () => {
+<<<<<<< HEAD
       if (typeof window !== 'undefined' && window.performance) {
         const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
         if (navigation) {
@@ -44,6 +55,26 @@ export const usePageLoadPerformance = () => {
             metrics.totalLoadTime
           );
         }
+=======
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      if (navigation) {
+        const metrics = {
+          domInteractive: navigation.domInteractive - navigation.fetchStart,
+          totalLoadTime: navigation.loadEventEnd - navigation.fetchStart,
+        };
+        // Track each metric
+        Object.entries(metrics).forEach(([key, value]) => {
+          analytics.trackPerformance(`page_load_${key}`, value);
+        });
+        // Track overall page load performance
+        analytics.track(
+          'page_load_complete',
+          'performance',
+          'complete',
+          undefined,
+          metrics.totalLoadTime
+        );
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0883
       }
     };
 
@@ -107,6 +138,7 @@ export const useLongTaskMonitoring = () => {
       }
     };
   }, []);
+<<<<<<< HEAD
 };
 
 /**
@@ -183,4 +215,6 @@ export const useMemoryMonitoring = () => {
 
     return () => clearInterval(interval);
   }, []);
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0883
 };
