@@ -40,7 +40,7 @@ const ContactPage: React.FC = () => {
               </div>
               <button
                 type="submit"
-                className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors"
+                className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition duration-200"
               >
                 Send Message
               </button>
@@ -50,19 +50,19 @@ const ContactPage: React.FC = () => {
             <h3 className="text-xl font-semibold mb-4">Contact Information</h3>
             <div className="space-y-4">
               <div>
-                <h4 className="font-medium text-gray-900">Email</h4>
-                <p className="text-gray-600">info@ziontechgroup.com</p>
-              </div>
-              <div>
                 <h4 className="font-medium text-gray-900">Phone</h4>
                 <p className="text-gray-600">+1 (302) 464-0950</p>
               </div>
               <div>
+                <h4 className="font-medium text-gray-900">Email</h4>
+                <p className="text-gray-600">kleber@ziontechgroup.com</p>
+              </div>
+              <div>
                 <h4 className="font-medium text-gray-900">Address</h4>
                 <p className="text-gray-600">
-                  Zion Tech Group<br />
-                  Wilmington, DE 19801<br />
-                  United States
+                  123 Business Street<br />
+                  Suite 100<br />
+                  Wilmington, DE 19801
                 </p>
               </div>
             </div>
