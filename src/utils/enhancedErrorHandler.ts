@@ -69,11 +69,7 @@ class EnhancedErrorHandler {
     const fullContext: ErrorContext = {
       component: context.component || 'unknown',
       action: context.action || 'unknown',
-<<<<<<< HEAD
-      userId: context.userId || '',
-=======
       userId: context.userId || 'anonymous',
->>>>>>> main
       timestamp: now,
       userAgent: navigator.userAgent,
       url: window.location.href,
