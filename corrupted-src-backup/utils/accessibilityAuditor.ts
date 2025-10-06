@@ -44,7 +44,7 @@ export class AccessibilityAuditor {
           'critical',
           `img[${index}]`,
           'Missing alt attribute',
-          'Add descriptive alt text for all images',
+          'Add descriptive alt text for all images'
         );
       }
     });
@@ -62,7 +62,7 @@ export class AccessibilityAuditor {
           'serious',
           `heading[${index}]`,
           'Heading level skipped',
-          'Use proper heading hierarchy',
+          'Use proper heading hierarchy'
         );
       }
 
@@ -78,7 +78,7 @@ export class AccessibilityAuditor {
           'serious',
           `a[${index}]`,
           'Link without href',
-          'Add href attribute or role="button"',
+          'Add href attribute or role="button"'
         );
       }
     });
@@ -92,7 +92,7 @@ export class AccessibilityAuditor {
           'serious',
           `input[${index}]`,
           'Form control without label',
-          'Add id and associated label or aria-label',
+          'Add id and associated label or aria-label'
         );
       }
     });
@@ -106,7 +106,7 @@ export class AccessibilityAuditor {
           'serious',
           `button[${index}]`,
           'Button without accessible name',
-          'Add text content or aria-label',
+          'Add text content or aria-label'
         );
       }
     });
@@ -118,13 +118,13 @@ export class AccessibilityAuditor {
       'moderate',
       'document',
       'Color contrast check needed',
-      'Use automated tools to verify color contrast ratios',
+      'Use automated tools to verify color contrast ratios'
     );
   }
 
   private checkKeyboardNavigation(): void {
     const focusableElements = document.querySelectorAll(
-      'button, a, input, select, textarea, [tabindex]',
+      'button, a, input, select, textarea, [tabindex]'
     );
     focusableElements.forEach((element, index) => {
       if (
@@ -135,7 +135,7 @@ export class AccessibilityAuditor {
           'moderate',
           `element[${index}]`,
           'Focusable element hidden from keyboard',
-          'Consider if element should be focusable',
+          'Consider if element should be focusable'
         );
       }
     });
@@ -143,7 +143,7 @@ export class AccessibilityAuditor {
 
   private checkARIALabels(): void {
     const elementsWithAria = document.querySelectorAll(
-      '[aria-label], [aria-labelledby]',
+      '[aria-label], [aria-labelledby]'
     );
     elementsWithAria.forEach((element, index) => {
       const ariaLabel = element.getAttribute('aria-label');
@@ -154,7 +154,7 @@ export class AccessibilityAuditor {
           'moderate',
           `element[${index}]`,
           'Conflicting ARIA labels',
-          'Use either aria-label or aria-labelledby, not both',
+          'Use either aria-label or aria-labelledby, not both'
         );
       }
     });
@@ -164,7 +164,7 @@ export class AccessibilityAuditor {
     severity: AccessibilityIssue['severity'],
     element: string,
     issue: string,
-    recommendation: string,
+    recommendation: string
   ): void {
     this.issues.push({
       severity,
@@ -178,7 +178,7 @@ export class AccessibilityAuditor {
    * Get issues by severity
    */
   public getIssuesBySeverity(
-    severity: AccessibilityIssue['severity'],
+    severity: AccessibilityIssue['severity']
   ): AccessibilityIssue[] {
     return this.issues.filter(issue => issue.severity === severity);
   }
