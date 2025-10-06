@@ -210,6 +210,40 @@ export default function EnterprisePage() {
         </div>
       </section>
 
+      {/* Stats Section */}
+      <section className="py-24 bg-black/20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Proven Results
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our enterprise solutions have delivered measurable results across
+              Fortune 500 companies worldwide.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              { number: '500+', label: 'Fortune 500 Clients' },
+              { number: '$2.5T+', label: 'Cost Savings Delivered' },
+              { number: '99.9%', label: 'System Uptime' },
+              { number: '500%', label: 'Productivity Increase' },
+            ].map((stat, index) => (
+              <div
+                key={index}
+                className="text-center bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8"
+              >
+                <div className="text-4xl md:text-5xl font-bold text-cyan-400 mb-2">
+                  {stat.number}
+                </div>
+                <div className="text-gray-300">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
 <<<<<<< HEAD
       <section className="py-24">
@@ -228,7 +262,7 @@ export default function EnterprisePage() {
                 className="group flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl"
               >
                 <span className="text-xl">📞</span>
-                <span>Call +1 (302) 464-0950</span>
+                <span>Call +1 302 464 0950</span>
               </a>
               <a
                 href="mailto:info@ziontechgroup.com"

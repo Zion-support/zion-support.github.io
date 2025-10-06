@@ -1,68 +1,32 @@
 import React from 'react';
-import Link from 'next/link';
-import './globals.css';
-
-export const metadata = {
-  title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
-  description:
-    'Enterprise-grade AI, micro SaaS, and IT solutions. Build faster with Zion Tech Group.',
-  keywords:
-    'AI services, micro SaaS, IT services, cloud migration, DevOps, SRE, enterprise software',
-  authors: [{ name: 'Zion Tech Group' }],
-  openGraph: {
-    title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
-    description:
-      'Enterprise-grade AI, micro SaaS, and IT solutions. Build faster with Zion Tech Group.',
-    url: 'https://ziontechgroup.com',
-    siteName: 'Zion Tech Group',
-    locale: 'en_US',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
-    description:
-      'Enterprise-grade AI, micro SaaS, and IT solutions. Build faster with Zion Tech Group.',
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-};
+import { Link } from 'react-router-dom';
 
 function Header() {
   return (
     <header className='border-b border-gray-200 sticky top-0 z-50 bg-white shadow-sm'>
       <nav className='flex items-center justify-between px-4 py-3 max-w-6xl mx-auto'>
         <Link
-          href='/'
+          to='/'
           className='font-bold text-lg text-gray-900 hover:text-blue-600 transition-colors'
         >
           Zion Tech Group
         </Link>
         <div className='hidden md:flex gap-6'>
           <Link
-            href='/about'
+            to='/about'
             className='text-gray-700 hover:text-blue-600 transition-colors'
           >
             About
           </Link>
           <Link
-            href='/services'
+            to='/services'
             className='text-gray-700 hover:text-blue-600 transition-colors'
           >
             Services
           </Link>
           <div className='relative group'>
             <Link
-              href='/services/ai-autonomous-operations-2026'
+              to='/services/ai-autonomous-operations-2026'
               className='text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1'
             >
               AI Operations 2026
@@ -73,7 +37,7 @@ function Header() {
           </div>
           <div className='relative group'>
             <Link
-              href='/content-hub'
+              to='/content-hub'
               className='text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1'
             >
               Content Hub
@@ -84,62 +48,7 @@ function Header() {
           </div>
           <div className='relative group'>
             <Link
-              href='/blog/ai-2026-autonomous-business-intelligence-breakthrough'
-              className='text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1'
-            >
-              Autonomous BI 2026
-              <span className='bg-gradient-to-r from-green-500 to-emerald-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse'>
-                BREAKTHROUGH
-              </span>
-            </Link>
-          </div>
-          <div className='relative group'>
-            <Link
-              href='/blog/ai-2026-quantum-enhanced-analytics'
-              className='text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1'
-            >
-              Quantum Analytics
-              <span className='bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse'>
-                1000x SPEED
-              </span>
-            </Link>
-          </div>
-          <div className='relative group'>
-            <Link
-              href='/blog/ai-2028-next-generation-autonomous-enterprise'
-              className='text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1'
-            >
-              AI 2028 Autonomous
-              <span className='bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse'>
-                REVOLUTIONARY
-              </span>
-            </Link>
-          </div>
-          <div className='relative group'>
-            <Link
-              href='/blog/ai-2028-neuromorphic-superintelligence'
-              className='text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1'
-            >
-              Neuromorphic AI 2028
-              <span className='bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse'>
-                SUPERINTELLIGENCE
-              </span>
-            </Link>
-          </div>
-          <div className='relative group'>
-            <Link
-              href='/blog/ai-2027-quantum-breakthrough-enterprise'
-              className='text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1'
-            >
-              Quantum AI 2027
-              <span className='bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-2 py-1 rounded-full text-xs font-semibold'>
-                QUANTUM
-              </span>
-            </Link>
-          </div>
-          <div className='relative group'>
-            <Link
-              href='/blog'
+              to='/blog'
               className='text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1'
             >
               Blog
@@ -153,7 +62,7 @@ function Header() {
           </div>
           <div className='relative group'>
             <Link
-              href='/case-studies'
+              to='/team'
               className='text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1'
             >
               Case Studies
@@ -166,7 +75,7 @@ function Header() {
             </Link>
           </div>
           <Link
-            href='/contact'
+            to='/contact'
             className='text-gray-700 hover:text-blue-600 transition-colors'
           >
             Contact
@@ -201,31 +110,31 @@ function Footer() {
             <h3 className='font-semibold text-gray-900 mb-3'>Services</h3>
             <div className='space-y-2'>
               <Link
-                href='/services'
+                to='/services'
                 className='block text-gray-600 hover:text-blue-600 transition-colors'
               >
                 All Services
               </Link>
               <Link
-                href='/services/ai-autonomous-cloud-ops'
+                to='/services/ai-autonomous-cloud-ops'
                 className='block text-gray-600 hover:text-blue-600 transition-colors'
               >
                 AI Autonomous Cloud Ops
               </Link>
               <Link
-                href='/services/ai-fintech-transformation'
+                to='/services/ai-fintech-transformation'
                 className='block text-gray-600 hover:text-blue-600 transition-colors'
               >
                 AI FinTech Transformation
               </Link>
               <Link
-                href='/services/ai-retail-automation'
+                to='/services/ai-retail-automation'
                 className='block text-gray-600 hover:text-blue-600 transition-colors'
               >
                 AI Retail Automation
               </Link>
               <Link
-                href='/services/micro-saas'
+                to='/services/micro-saas'
                 className='block text-gray-600 hover:text-blue-600 transition-colors'
               >
                 Micro SaaS
@@ -238,7 +147,7 @@ function Footer() {
             </h3>
             <div className='space-y-2'>
               <Link
-                href='/blog/ai-2028-next-generation-autonomous-enterprise'
+                to='/blog'
                 className='block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2'
               >
                 🚀 AI 2028 Autonomous Enterprise
@@ -247,7 +156,7 @@ function Footer() {
                 </span>
               </Link>
               <Link
-                href='/blog/ai-2028-neuromorphic-superintelligence'
+                to='/blog'
                 className='block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2'
               >
                 🧠 AI 2028 Neuromorphic Superintelligence
@@ -256,7 +165,7 @@ function Footer() {
                 </span>
               </Link>
               <Link
-                href='/case-studies/ai-2028-autonomous-enterprise-mega-success'
+                to='/team'
                 className='block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2'
               >
                 💰 $100B Autonomous Success
@@ -265,7 +174,7 @@ function Footer() {
                 </span>
               </Link>
               <Link
-                href='/case-studies/ai-2028-neuromorphic-superintelligence-success'
+                to='/team'
                 className='block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2'
               >
                 🧠 $75B Neuromorphic Success
@@ -274,7 +183,7 @@ function Footer() {
                 </span>
               </Link>
               <Link
-                href='/blog/ai-2026-future-trends-breakthrough'
+                to='/blog'
                 className='block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2'
               >
                 🌟 AI 2026 Future Trends
@@ -283,25 +192,25 @@ function Footer() {
                 </span>
               </Link>
               <Link
-                href='/blog/ai-future-workforce-2026'
+                to='/blog'
                 className='block text-gray-600 hover:text-blue-600 transition-colors'
               >
                 👥 AI Future Workforce 2026
               </Link>
               <Link
-                href='/blog/ai-cybersecurity-2026'
+                to='/blog'
                 className='block text-gray-600 hover:text-blue-600 transition-colors'
               >
                 🛡️ AI Cybersecurity 2026
               </Link>
               <Link
-                href='/case-studies/ai-finance-automation-success-2026'
+                to='/team'
                 className='block text-gray-600 hover:text-blue-600 transition-colors'
               >
                 💰 $15M Finance ROI
               </Link>
               <Link
-                href='/case-studies'
+                to='/team'
                 className='block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2'
               >
                 Case Studies
@@ -315,19 +224,19 @@ function Footer() {
             <h3 className='font-semibold text-gray-900 mb-3'>Content</h3>
             <div className='space-y-2'>
               <Link
-                href='/'
+                to='/'
                 className='block text-gray-600 hover:text-blue-600 transition-colors'
               >
                 Home
               </Link>
               <Link
-                href='/about'
+                to='/about'
                 className='block text-gray-600 hover:text-blue-600 transition-colors'
               >
                 About
               </Link>
               <Link
-                href='/contact'
+                to='/contact'
                 className='block text-gray-600 hover:text-blue-600 transition-colors'
               >
                 Contact
@@ -369,20 +278,18 @@ function Footer() {
   );
 }
 
-export default function RootLayout({
+export default function Layout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
-    <html lang='en'>
-      <body className='min-h-screen bg-white text-gray-900'>
-        <Header />
-        <main className='max-w-6xl mx-auto px-4 py-6 min-h-screen'>
-          {children}
-        </main>
-        <Footer />
-      </body>
-    </html>
+    <div className='min-h-screen bg-white text-gray-900'>
+      <Header />
+      <main className='max-w-6xl mx-auto px-4 py-6 min-h-screen'>
+        {children}
+      </main>
+      <Footer />
+    </div>
   );
 }
