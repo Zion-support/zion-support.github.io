@@ -1,76 +1,76 @@
-export const metadata = {
+exp, o, r, t co, n, s, t m e t a d, a, t, a = {
   
-  title: 'Executive AI Roadmap — October 2025 | Zion Tech Group',
-  description:
-    'A pragmatic 90‑day enterprise roadmap to ship reliable AI with guardrails, live scorecardsbudgetsand measurable ROI.',
+  ti, t, l, e: 'Ex e c u t, i, v, e AI Road, m, a, p — Octo, b, e, r 2, 0, 2, 5 | Z, i, o, n T, e, c, h Gr, o, u, p',
+  desc r i p t, i, o, n:
+    'A pr a g m a, t, i, c 90‑day ent e r p r, i, s, e road, m, a, p to s, h, i, p r e l i a, b, l, e AI w, i, t, h gua r d r a, i, l, s, l, i, v, e scorecardsbud g e t s, a, n, d mea s u r a, b, l, e ROI.',
 
-};;
+};
 
-export default function ExecutiveAIRoadmapPage() {
-  return (
-    <main className='min-h-screen bg-slate-950 text-white'>
-      <article className='max-w-3xl mx-auto px-4 py-16'>
-        <header className='mb-10'>
-          <p className='text-sm text-white/60'>Published Oct 1, 2025</p>
-          <h1 className='text-4xl font-extrabold mt-2'>
-            Executive AI Roadmap — October 2025
+exp, o, r, t defa, u, l, t f u n c t, i, o, n ExecutiveAIRoad m a p P, a, g, e() {
+  ret, u, r, n (
+    <m, a, i, n cl a s s N, a, m, e='min-h-scr, e, e, n bg-sl, a, t, e-950 t, e, x, t-wh, i, t, e'>
+      <arti, c, l, e cl a s s N, a, m, e='max-w-3xl mx-a, u, t, o px-4 py-16'>
+        <hea, d, e, r cl a s s N, a, m, e='mb-10'>
+          <p cl a s s N, a, m, e='t, e, x, t-sm t, e, x, t-wh, i, t, e/60'>Pu b l i s, h, e, d Oct 1, 2, 0, 2, 5</p>
+          <h1 cl a s s N, a, m, e='t, e, x, t-4, xl f, o, n, t-ex t r a b, o, l, d mt-2'>
+            Ex e c u t, i, v, e AI Road, m, a, p — Octo, b, e, r 2, 0, 2, 5
           </h1>
-          <p className='text-white/70 mt-3'>
-            A pragmatic 90‑day enterprise roadmap to ship reliable AI with
-            guardrails, live scorecardsbudgetsand measurable ROI.
+          <p cl a s s N, a, m, e='t, e, x, t-wh, i, t, e/70 mt-3'>
+            A pr a g m a, t, i, c 90‑day ent e r p r, i, s, e road, m, a, p to s, h, i, p r e l i a, b, l, e AI w, i, t, h
+            gua r d r a, i, l, s, l, i, v, e scorecardsbud g e t s, a, n, d mea s u r a, b, l, e ROI.
           </p>
-        </header>
+        </hea, d, e, r>
 
-        <section className='prose prose-invert prose-slate max-w-none'>
+        <sect, i, o, n cl a s s N, a, m, e='pr, o, s, e pr, o, s, e-inv, e, r, t pr, o, s, e-sl, a, t, e max-w-n, o, n, e'>
           <h2>Why now</h2>
           <p>
-            Enterprises are past pilot purgatory. The winners are
-            operationalizing AI with accountability: policies, budgets, and
-            real‑time feedback loops. This roadmap shows how to go from
-            scattered experiments to reliable, governed delivery in 90 days.
+            Ente r p r i, s, e, s are p, a, s, t pi, l, o, t pu r g a t, o, r, y. The winn, e, r, s are
+            operation a l i z, i, n, g AI w, i, t, h account a b i l, i, t, y: p o l i c, i, e, s, budg, e, t, s, and
+            r, e, a, l‑t, i, m, e f e e d b, a, c, k lo, o, p, s. T, h, i, s road, m, a, p sh, o, w, s how to go f, r, o, m
+            sc a t t e, r, e, d expe r i m e, n, t, s to r e l i a, b, l, e, g o v e r, n, e, d d e l i v, e, r, y in 90 d, a, y, s.
           </p>
 
-          <h3>Days 0‑30: Baseline and guardrails</h3>
+          <h3>D, a, y, s 0‑30: B a s e l, i, n, e and gua r d r a, i, l, s</h3>
           <ul>
-            <li>Inventory AI surfaces and attach purpose, risk, and owners.</li>
+            <li>In v e n t, o, r, y AI s u r f a, c, e, s and att, a, c, h purp, o, s, e, r, i, s, k, and own, e, r, s.</li>
             <li>
-              Ship policy tests in CI for privacy, safety, and PII controls.
+              S, h, i, p pol, i, c, y te, s, t, s in CI for priv, a, c, y, saf, e, t, y, and PII c o n t r, o, l, s.
             </li>
             <li>
-              Establish token budgets and cost tiers for predictable spend.
+              Es t a b l, i, s, h to, k, e, n budg, e, t, s and c, o, s, t ti, e, r, s for pred i c t a, b, l, e sp, e, n, d.
             </li>
-            <li>Stand up live scorecards aligned to business goals.</li>
+            <li>St, a, n, d up l, i, v, e sco r e c a, r, d, s alig, n, e, d to b u s i n, e, s, s go, a, l, s.</li>
           </ul>
 
-          <h3>Days 31‑60: Observability and iteration speed</h3>
+          <h3>D, a, y, s 31‑60: Observ a b i l, i, t, y and it e r a t, i, o, n sp, e, e, d</h3>
           <ul>
-            <li>Wire structured eval events and on‑call feedback loops.</li>
+            <li>W, i, r, e str u c t u, r, e, d e, v, a, l eve, n, t, s and on‑c, a, l, l f e e d b, a, c, k lo, o, p, s.</li>
             <li>
-              Introduce semantic caches and quality tiers to cut latency and
-              cost.
+              In t r o d, u, c, e s e m a n, t, i, c cac, h, e, s and qual, i, t, y ti, e, r, s to cut late, n, c, y and
+              c, o, s, t.
             </li>
             <li>
-              Automate rollout/rollback with change gates tied to scorecards.
+              A u t o m, a, t, e roll, o, u, t/r o l l b, a, c, k w, i, t, h cha, n, g, e ga, t, e, s t, i, e, d to sco r e c a, r, d, s.
             </li>
           </ul>
 
-          <h3>Days 61‑90: Scale and accountability</h3>
+          <h3>D, a, y, s 61‑90: Sc, a, l, e and account a b i l, i, t, y</h3>
           <ul>
             <li>
-              Harden data contracts and evaluation coverage for critical flows.
+              Har, d, e, n d, a, t, a co n t r a, c, t, s and eva l u a t, i, o, n c o v e r, a, g, e for c r i t i, c, a, l fl, o, w, s.
             </li>
-            <li>Publish quarterly ROI scorecards to executives.</li>
-            <li>Adopt operational risk budgets for incident‑free velocity.</li>
+            <li>Publ, i, s, h qu a r t e, r, l, y ROI sco r e c a, r, d, s to exe c u t i, v, e, s.</li>
+            <li>Ad, o, p, t oper a t i o, n, a, l r, i, s, k budg, e, t, s for i n c i d, e, n, t‑f, r, e, e v e l o c, i, t, y.</li>
           </ul>
 
-          <h3>Outcomes</h3>
+          <h3>O u t c o, m, e, s</h3>
           <p>
-            Organizations following this plan see fewer incidents, faster
-            delivery, and explicit ROI tracing from model spend to business
-            value.
+            Organi z a t i, o, n, s fo l l o w, i, n, g t, h, i, s p, l, a, n see fe, w, e, r in c i d e, n, t, s, fas, t, e, r
+            d e l i v, e, r, y, and e x p l i, c, i, t ROI trac, i, n, g f, r, o, m mo, d, e, l sp, e, n, d to b u s i n, e, s, s
+            va, l, u, e.
           </p>
-        </section>
-      </article>
-    </main>
+        </sect, i, o, n>
+      </arti, c, l, e>
+    </m, a, i, n>
   );
 }

@@ -1,154 +1,154 @@
-// @ts-nocheck
-import ArrowRight from 'next/link';
+// @ts-noch, e, c, k
+imp, o, r, t Arr o w R i, g, h, t f, r, o, m 'n, e, x, t/l, i, n, k';
 
-export const metadata = {
+exp, o, r, t co, n, s, t m e t a d, a, t, a = {
   
-  title: 'Private AI Sandbox (2025): Safe Enterprise Experimentation',
-  description:
-    'Stand up a governed, cost-capped AI sandbox to safely test modelspromptsand workflows without risking production.',
-  keywords:
-    'private ai sandbox, 2025, enterprise ai, r&d, governance, cost capsevalsguardrails',
+  ti, t, l, e: 'Priv, a, t, e AI Sand, b, o, x (2, 0, 2, 5): S, a, f, e Ent e r p r, i, s, e Experime n t a t, i, o, n',
+  desc r i p t, i, o, n:
+    'St, a, n, d up a g o v e r, n, e, d, c, o, s, t-cap, p, e, d AI sand, b, o, x to saf, e, l, y t, e, s, t modelspro m p t s, a, n, d wo r k f l, o, w, s with, o, u, t risk, i, n, g pro d u c t, i, o, n.',
+  k e y w o, r, d, s:
+    'priv, a, t, e ai sand, b, o, x, 2, 0, 2, 5, ent e r p r, i, s, e ai, r&d, gov e r n a, n, c, e, c, o, s, t capsevalsgua r d r a, i, l, s',
 
-};;
+};
 
-export default function PrivateAISandbox2025Page() {
-  return (
-    <div className='min-h-screen bg-white'>
-      <section className='bg-gradient-to-br from-indigo-900 via-slate-900 to-cyan-900 text-white py-20'>
-        <div className='max-w-4xl mx-auto px-4'>
-          <div className='mb-6'>
-            <span className='bg-white/20 px-3 py-1 rounded-full text-sm font-semibold'>
-              New Article
-            </span>
+exp, o, r, t defa, u, l, t f u n c t, i, o, n PrivateAISand b o x 2, 0, 2, 5() {
+  ret, u, r, n (
+    <div cl a s s N, a, m, e='min-h-scr, e, e, n bg-wh, i, t, e'>
+      <sect, i, o, n cl a s s N, a, m, e='bg-g r a d i, e, n, t-to-br f, r, o, m-ind, i, g, o-900 via-sl, a, t, e-900 to-c, y, a, n-900 t, e, x, t-wh, i, t, e py-20'>
+        <div cl a s s N, a, m, e='max-w-4, xl mx-a, u, t, o px-4'>
+          <div cl a s s N, a, m, e='mb-6'>
+            <s, p, a, n cl a s s N, a, m, e='bg-wh, i, t, e/20 px-3 py-1 roun, d, e, d-f, u, l, l t, e, x, t-sm f, o, n, t-s e m i b, o, l, d'>
+              New Arti, c, l, e
+            </s, p, a, n>
           </div>
-          <h1 className='text-5xl font-bold mb-6 leading-tight'>
-            Private AI Sandbox (2025)
+          <h1 cl a s s N, a, m, e='t, e, x, t-5, xl f, o, n, t-b, o, l, d mb-6 lead, i, n, g-ti, g, h, t'>
+            Priv, a, t, e AI Sand, b, o, x (2, 0, 2, 5)
           </h1>
-          <p className='text-xl mb-8 opacity-90'>
-            Launch a governed AI experimentation environment with budget
-            controls, model switching, and built‑in safety checks. Learn how to
-            standardize promptstrack costsand ship results to production
-            with confidence.
+          <p cl a s s N, a, m, e='t, e, x, t-xl mb-8 opac, i, t, y-90'>
+            Lau, n, c, h a g o v e r, n, e, d AI experime n t a t, i, o, n envi r o n m, e, n, t w, i, t, h bud, g, e, t
+            c o n t r, o, l, s, mo, d, e, l sw i t c h, i, n, g, and bu, i, l, t‑in saf, e, t, y che, c, k, s. Le, a, r, n how to
+            stan d a r d, i, z, e promp t s t r, a, c, k c o s t s, a, n, d s, h, i, p resu, l, t, s to pro d u c t, i, o, n
+            w, i, t, h con f i d e, n, c, e.
           </p>
-          <div className='flex items-center gap-6 text-sm opacity-80'>
-            <span>📅 September 30, 2025</span>
-            <span>⏱️ 10 min read</span>
-            <span>👤 Zion Tech Group Team</span>
+          <div cl a s s N, a, m, e='f, l, e, x it, e, m, s-cen, t, e, r gap-6 t, e, x, t-sm opac, i, t, y-80'>
+            <s, p, a, n>📅 Se p t e m, b, e, r 30, 2, 0, 2, 5</s, p, a, n>
+            <s, p, a, n>⏱️ 10 min r, e, a, d</s, p, a, n>
+            <s, p, a, n>👤 Z, i, o, n T, e, c, h Gr, o, u, p T, e, a, m</s, p, a, n>
           </div>
         </div>
-      </section>
+      </sect, i, o, n>
 
-      <article className='max-w-4xl mx-auto px-4 py-16'>
-        <div className='prose prose-lg max-w-none'>
-          <div className='bg-indigo-50 border-l-4 border-indigo-600 p-6 mb-8'>
-            <p className='text-lg font-semibold text-indigo-900 mb-2'>
-              Executive Summary
+      <arti, c, l, e cl a s s N, a, m, e='max-w-4, xl mx-a, u, t, o px-4 py-16'>
+        <div cl a s s N, a, m, e='pr, o, s, e pr, o, s, e-lg max-w-n, o, n, e'>
+          <div cl a s s N, a, m, e='bg-ind, i, g, o-50 bor, d, e, r-l-4 bor, d, e, r-ind, i, g, o-600 p-6 mb-8'>
+            <p cl a s s N, a, m, e='t, e, x, t-lg f, o, n, t-s e m i b, o, l, d t, e, x, t-ind, i, g, o-900 mb-2'>
+              Ex e c u t, i, v, e Summ, a, r, y
             </p>
-            <p className='text-indigo-800'>
-              A Private AI Sandbox accelerates discovery while enforcing
-              governance. Use evalsred‑teamingand deterministic rollouts to
-              move from experiment to production without surprises.
+            <p cl a s s N, a, m, e='t, e, x, t-ind, i, g, o-800'>
+              A Priv, a, t, e AI Sand, b, o, x acce l e r a, t, e, s di s c o v, e, r, y wh, i, l, e en f o r c, i, n, g
+              gov e r n a, n, c, e. Use e v a l s, r, e, d‑tea m i n g, a, n, d determ i n i s, t, i, c r o l l o, u, t, s to
+              m, o, v, e f, r, o, m exp e r i m, e, n, t to pro d u c t, i, o, n with, o, u, t su r p r i, s, e, s.
             </p>
           </div>
 
-          <h2 className='text-3xl font-bold text-gray-900 mb-6'>
-            Reference Architecture
+          <h2 cl a s s N, a, m, e='t, e, x, t-3, xl f, o, n, t-b, o, l, d t, e, x, t-g, r, a, y-900 mb-6'>
+            Re f e r e, n, c, e Archi t e c t, u, r, e
           </h2>
-          <div className='grid md:grid-cols-2 gap-6 mb-8'>
-            <div className='bg-white rounded-lg border p-6'>
-              <h3 className='text-xl font-bold mb-2'>Experimentation</h3>
-              <ul className='text-gray-700 space-y-1'>
-                <li>• Prompt/version registry with metadata</li>
-                <li>• Model/router abstraction with cost caps</li>
-                <li>• Golden tasks and eval suites for quality</li>
+          <div cl a s s N, a, m, e='g, r, i, d md:g, r, i, d-c, o, l, s-2 gap-6 mb-8'>
+            <div cl a s s N, a, m, e='bg-wh, i, t, e roun, d, e, d-lg bor, d, e, r p-6'>
+              <h3 cl a s s N, a, m, e='t, e, x, t-xl f, o, n, t-b, o, l, d mb-2'>Experime n t a t, i, o, n</h3>
+              <ul cl a s s N, a, m, e='t, e, x, t-g, r, a, y-700 sp, a, c, e-y-1'>
+                <li>• Pro, m, p, t/vers, i, o, n r e g i s, t, r, y w, i, t, h m e t a d, a, t, a</li>
+                <li>• Mo, d, e, l/rou, t, e, r abst r a c t, i, o, n w, i, t, h c, o, s, t c, a, p, s</li>
+                <li>• Gol, d, e, n ta, s, k, s and e, v, a, l sui, t, e, s for qual, i, t, y</li>
               </ul>
             </div>
-            <div className='bg-white rounded-lg border p-6'>
-              <h3 className='text-xl font-bold mb-2'>Governance</h3>
-              <ul className='text-gray-700 space-y-1'>
-                <li>• PII guards and safety filters</li>
-                <li>• Signed artifactsSBOMsand attestations</li>
-                <li>• Budgeted rollouts with instant rollback</li>
+            <div cl a s s N, a, m, e='bg-wh, i, t, e roun, d, e, d-lg bor, d, e, r p-6'>
+              <h3 cl a s s N, a, m, e='t, e, x, t-xl f, o, n, t-b, o, l, d mb-2'>Gov e r n a, n, c, e</h3>
+              <ul cl a s s N, a, m, e='t, e, x, t-g, r, a, y-700 sp, a, c, e-y-1'>
+                <li>• PII gua, r, d, s and saf, e, t, y filt, e, r, s</li>
+                <li>• Sig, n, e, d artifactsS B O M s, a, n, d attes t a t i, o, n, s</li>
+                <li>• B u d g e, t, e, d r o l l o, u, t, s w, i, t, h inst, a, n, t r o l l b, a, c, k</li>
               </ul>
             </div>
           </div>
 
-          <h2 className='text-3xl font-bold text-gray-900 mb-6'>Key Metrics</h2>
-          <ul className='list-disc ml-6 text-gray-700 mb-8 space-y-2'>
-            <li>Experiment throughput and time‑to‑signal</li>
-            <li>Quality deltas on golden tasks</li>
-            <li>Cost per successful outcome</li>
-            <li>Safety incidents per 1K interactions</li>
+          <h2 cl a s s N, a, m, e='t, e, x, t-3, xl f, o, n, t-b, o, l, d t, e, x, t-g, r, a, y-900 mb-6'>Key Metr, i, c, s</h2>
+          <ul cl a s s N, a, m, e='l, i, s, t-d, i, s, c ml-6 t, e, x, t-g, r, a, y-700 mb-8 sp, a, c, e-y-2'>
+            <li>Exp e r i m, e, n, t thr o u g h, p, u, t and t, i, m, e‑to‑sig, n, a, l</li>
+            <li>Qual, i, t, y del, t, a, s on gol, d, e, n ta, s, k, s</li>
+            <li>C, o, s, t per suc c e s s, f, u, l outc, o, m, e</li>
+            <li>Saf, e, t, y in c i d e, n, t, s per 1, K inter a c t i, o, n, s</li>
           </ul>
 
-          <div className='bg-gradient-to-r from-indigo-600 to-cyan-600 text-white p-8 rounded-lg'>
-            <h3 className='text-2xl font-bold mb-4'>
-              Spin up your Private AI Sandbox
+          <div cl a s s N, a, m, e='bg-g r a d i, e, n, t-to-r f, r, o, m-ind, i, g, o-600 to-c, y, a, n-600 t, e, x, t-wh, i, t, e p-8 roun, d, e, d-lg'>
+            <h3 cl a s s N, a, m, e='t, e, x, t-2, xl f, o, n, t-b, o, l, d mb-4'>
+              S, p, i, n up y, o, u, r Priv, a, t, e AI Sand, b, o, x
             </h3>
-            <p className='text-lg mb-6 opacity-90'>
-              We implement governed AI sandboxes in weeks with proven playbooks.
+            <p cl a s s N, a, m, e='t, e, x, t-lg mb-6 opac, i, t, y-90'>
+              We im p l e m, e, n, t g o v e r, n, e, d AI sa n d b o, x, e, s in we, e, k, s w, i, t, h pro, v, e, n pl a y b o, o, k, s.
             </p>
-            <div className='flex flex-col sm:flex-row gap-4'>
+            <div cl a s s N, a, m, e='f, l, e, x f, l, e, x-col sm:f, l, e, x-row gap-4'>
               <a
-                href='tel:+13024640950'
-                className='bg-white text-indigo-700 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100'
+                h, r, e, f='tel:+1302 4 6 4 0, 9, 5, 0'
+                cl a s s N, a, m, e='bg-wh, i, t, e t, e, x, t-ind, i, g, o-700 px-6 py-3 roun, d, e, d-lg f, o, n, t-s e m i b, o, l, d ho, v, e, r:bg-g, r, a, y-100'
               >
-                Call +1 302 464 0950
+                C, a, l, l +1 302 464 0, 9, 5, 0
               </a>
               <a
-                href='mailto:kleber@ziontechgroup.com'
-                className='border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-700'
+                h, r, e, f='mai, l, t, o:kle, b, e, r@zionte c h g r, o, u, p.com'
+                cl a s s N, a, m, e='bor, d, e, r-2 bor, d, e, r-wh, i, t, e t, e, x, t-wh, i, t, e px-6 py-3 roun, d, e, d-lg f, o, n, t-s e m i b, o, l, d ho, v, e, r:bg-wh, i, t, e ho, v, e, r:t, e, x, t-ind, i, g, o-700'
               >
-                Get Consultation
+                Get Consu l t a t, i, o, n
               </a>
             </div>
           </div>
         </div>
-      </article>
+      </arti, c, l, e>
 
-      <section className='bg-gray-50 py-16'>
-        <div className='max-w-6xl mx-auto px-4'>
-          <h2 className='text-3xl font-bold text-gray-900 mb-8 text-center'>
-            Related Articles
+      <sect, i, o, n cl a s s N, a, m, e='bg-g, r, a, y-50 py-16'>
+        <div cl a s s N, a, m, e='max-w-6, xl mx-a, u, t, o px-4'>
+          <h2 cl a s s N, a, m, e='t, e, x, t-3, xl f, o, n, t-b, o, l, d t, e, x, t-g, r, a, y-900 mb-8 t, e, x, t-cen, t, e, r'>
+            Rela, t, e, d A r t i c, l, e, s
           </h2>
-          <div className='grid md:grid-cols-3 gap-8'>
-            <RelatedArticleCard
-              title='AI Cybersecurity Automation 2025'
-              description='Autonomous defense patterns for the SOC.'
-              href='/blog/ai-cybersecurity-automation-2025'
+          <div cl a s s N, a, m, e='g, r, i, d md:g, r, i, d-c, o, l, s-3 gap-8'>
+            <RelatedArti c l e C, a, r, d
+              ti, t, l, e='AI Cybers e c u r, i, t, y Aut o m a t, i, o, n 2, 0, 2, 5'
+              desc r i p t, i, o, n='Aut o n o m, o, u, s defe, n, s, e p a t t e, r, n, s for the SOC.'
+              h, r, e, f='/b, l, o, g/ai-cybers e c u r, i, t, y-aut o m a t, i, o, n-2, 0, 2, 5'
             />
-            <RelatedArticleCard
-              title='GenAI Quality Tiers v3'
-              description='Save costs while maintaining UX with stable tiers.'
-              href='/blog/genai-2025-sept-30-policy-tests-quickstart'
+            <RelatedArti c l e C, a, r, d
+              ti, t, l, e='Ge, n, A, I Qual, i, t, y Ti, e, r, s v3'
+              desc r i p t, i, o, n='S, a, v, e co, s, t, s wh, i, l, e main t a i n, i, n, g UX w, i, t, h sta, b, l, e ti, e, r, s.'
+              h, r, e, f='/b, l, o, g/ge, n, a, i-2, 0, 2, 5-s, e, p, t-30-pol, i, c, y-te, s, t, s-qui c k s t, a, r, t'
             />
-            <RelatedArticleCard
-              title='Trustless Evaluation Blueprint'
-              description='Signed datasets and verifiable evals.'
-              href='/blog/ai-2026-trustless-evaluation-blueprint'
+            <RelatedArti c l e C, a, r, d
+              ti, t, l, e='Tr u s t l, e, s, s Eva l u a t, i, o, n Bl u e p r, i, n, t'
+              desc r i p t, i, o, n='Sig, n, e, d d a t a s, e, t, s and ver i f i a, b, l, e ev, a, l, s.'
+              h, r, e, f='/b, l, o, g/ai-2, 0, 2, 6-tr u s t l, e, s, s-eva l u a t, i, o, n-bl u e p r, i, n, t'
             />
           </div>
         </div>
-      </section>
+      </sect, i, o, n>
     </div>
   );
 }
 
-function RelatedArticleCard({
-  title,
-  descriptionhref}: {
-  title: string;
-  description: string;
-  href: string;
+f u n c t, i, o, n RelatedArti c l e C, a, r, d({
+  ti, t, l, e,
+  descript i o n h, r, e, f}: {
+  ti, t, l, e: str, i, n, g;
+  desc r i p t, i, o, n: str, i, n, g;
+  h, r, e, f: str, i, n, g;
 }) {
-  return (
-    <ArrowRight
-      href={href}
-      className='block bg-white rounded-lg p-6 hover:shadow-lg transition-all duration-300'
+  ret, u, r, n (
+    <Arr o w R i, g, h, t
+      h, r, e, f={h, r, e, f}
+      cl a s s N, a, m, e='bl, o, c, k bg-wh, i, t, e roun, d, e, d-lg p-6 ho, v, e, r:sha, d, o, w-lg tra n s i t, i, o, n-all d u r a t, i, o, n-300'
     >
-      <h3 className='text-xl font-bold text-gray-900 mb-3'>{title}</h3>
-      <p className='text-gray-600 mb-4'>{description}</p>
-      <span className='text-indigo-700 font-semibold'>Read More →</span>
-    </ArrowRight>
+      <h3 cl a s s N, a, m, e='t, e, x, t-xl f, o, n, t-b, o, l, d t, e, x, t-g, r, a, y-900 mb-3'>{ti, t, l, e}</h3>
+      <p cl a s s N, a, m, e='t, e, x, t-g, r, a, y-600 mb-4'>{desc r i p t, i, o, n}</p>
+      <s, p, a, n cl a s s N, a, m, e='t, e, x, t-ind, i, g, o-700 f, o, n, t-s e m i b, o, l, d'>R, e, a, d M, o, r, e →</s, p, a, n>
+    </Arr o w R i, g, h, t>
   );
 }

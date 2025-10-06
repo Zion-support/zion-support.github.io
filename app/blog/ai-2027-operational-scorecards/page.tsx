@@ -1,72 +1,72 @@
-// @ts-nocheck
-import ArrowRight from 'next/link';
+// @ts-noch, e, c, k
+imp, o, r, t Arr o w R i, g, h, t f, r, o, m 'n, e, x, t/l, i, n, k';
 
-export const metadata = {
+exp, o, r, t co, n, s, t m e t a d, a, t, a = {
   
-  title: 'AI 2027: Operational Scorecards — SLIsBudgetsRollback',
-  description:
-    'Design operational scorecards that wire SLIs to KPIs with budgeted actionsapprovalsand instant rollback for reliable autonomy.',
+  ti, t, l, e: 'AI 2, 0, 2, 7: Oper a t i o, n, a, l Sco r e c a, r, d, s — SLIsBudgetsR o l l b, a, c, k',
+  desc r i p t, i, o, n:
+    'Des, i, g, n oper a t i o, n, a, l sco r e c a, r, d, s t, h, a, t w, i, r, e S, L, I, s to K, P, I, s w, i, t, h b u d g e, t, e, d actionsappro v a l s, a, n, d inst, a, n, t r o l l b, a, c, k for r e l i a, b, l, e a u t o n, o, m, y.',
 
-};;
+};
 
-export default function Page() {
-  return (
-    <div className='min-h-screen bg-white text-gray-900'>
-      <article className='max-w-3xl mx-auto px-6 py-16'>
-        <header className='mb-8'>
-          <h1 className='text-3xl md:text-4xl font-extrabold tracking-tight'>
-            AI 2027: Operational Scorecards — SLIsBudgetsRollback
+exp, o, r, t defa, u, l, t f u n c t, i, o, n P, a, g, e() {
+  ret, u, r, n (
+    <div cl a s s N, a, m, e='min-h-scr, e, e, n bg-wh, i, t, e t, e, x, t-g, r, a, y-900'>
+      <arti, c, l, e cl a s s N, a, m, e='max-w-3xl mx-a, u, t, o px-6 py-16'>
+        <hea, d, e, r cl a s s N, a, m, e='mb-8'>
+          <h1 cl a s s N, a, m, e='t, e, x, t-3, xl md:t, e, x, t-4, xl f, o, n, t-ex t r a b, o, l, d t r a c k, i, n, g-ti, g, h, t'>
+            AI 2, 0, 2, 7: Oper a t i o, n, a, l Sco r e c a, r, d, s — SLIsBudgetsR o l l b, a, c, k
           </h1>
-          <p className='text-gray-600 mt-3'>
-            Publish date: September 30, 2025 · 9 min read
+          <p cl a s s N, a, m, e='t, e, x, t-g, r, a, y-600 mt-3'>
+            Publ, i, s, h d, a, t, e: Se p t e m, b, e, r 30, 2, 0, 2, 5 · 9 min r, e, a, d
           </p>
-        </header>
+        </hea, d, e, r>
 
-        <p className='text-lg text-gray-700 leading-relaxed mb-6'>
-          Reliable autonomy requires measurable guardrails. In this guide, we
-          show how to design operational scorecards that connect service-level
-          indicators (SLIs) to product KPIs, enabling budgeted actionsapprovalsand instant rollback.
+        <p cl a s s N, a, m, e='t, e, x, t-lg t, e, x, t-g, r, a, y-700 lead, i, n, g-rela, x, e, d mb-6'>
+          R e l i a, b, l, e a u t o n, o, m, y r e q u i, r, e, s mea s u r a, b, l, e gua r d r a, i, l, s. In t, h, i, s gu, i, d, e, we
+          s, h, o, w how to des, i, g, n oper a t i o, n, a, l sco r e c a, r, d, s t, h, a, t conn, e, c, t serv, i, c, e-le, v, e, l
+          ind i c a t, o, r, s (S, L, I, s) to prod, u, c, t K, P, I, s, e n a b l, i, n, g b u d g e, t, e, d actionsappro v a l s, a, n, d inst, a, n, t r o l l b, a, c, k.
         </p>
 
-        <h2 className='text-2xl font-bold mt-10 mb-3'>What to Measure</h2>
-        <ul className='list-disc ml-6 text-gray-700 space-y-2'>
-          <li>Customer outcomes (conversion, satisfaction, retention)</li>
-          <li>Experience metrics (latencyerror ratequality)</li>
-          <li>Cost per outcome ($/win) with budget envelopes</li>
-          <li>Safety policy adherence and exceptions</li>
+        <h2 cl a s s N, a, m, e='t, e, x, t-2, xl f, o, n, t-b, o, l, d mt-10 mb-3'>W, h, a, t to Meas, u, r, e</h2>
+        <ul cl a s s N, a, m, e='l, i, s, t-d, i, s, c ml-6 t, e, x, t-g, r, a, y-700 sp, a, c, e-y-2'>
+          <li>C u s t o, m, e, r o u t c o, m, e, s (con v e r s, i, o, n, satis f a c t, i, o, n, re t e n t, i, o, n)</li>
+          <li>Exp e r i e, n, c, e metr, i, c, s (laten c y e r, r, o, r rate q u a l, i, t, y)</li>
+          <li>C, o, s, t per outc, o, m, e ($/win) w, i, t, h bud, g, e, t en v e l o, p, e, s</li>
+          <li>Saf, e, t, y pol, i, c, y ad h e r e, n, c, e and exc e p t i, o, n, s</li>
         </ul>
 
-        <h2 className='text-2xl font-bold mt-10 mb-3'>Guardrails That Ship</h2>
-        <p className='text-gray-700 mb-4'>
-          Tie scorecard thresholds to automated actions: slow down risky
-          changesrequire approvals for budget overrunsand trigger rollbacks
-          when KPI canaries regress.
+        <h2 cl a s s N, a, m, e='t, e, x, t-2, xl f, o, n, t-b, o, l, d mt-10 mb-3'>Gua r d r a, i, l, s T, h, a, t S, h, i, p</h2>
+        <p cl a s s N, a, m, e='t, e, x, t-g, r, a, y-700 mb-4'>
+          Tie sc o r e c, a, r, d thr e s h o, l, d, s to au t o m a, t, e, d acti, o, n, s: s, l, o, w d, o, w, n ri, s, k, y
+          changes r e q u, i, r, e ap p r o v, a, l, s for bud, g, e, t over r u n s, a, n, d trig, g, e, r ro l l b a, c, k, s
+          w, h, e, n KPI c a n a r, i, e, s regr, e, s, s.
         </p>
 
-        <div className='mt-10 p-6 border rounded-xl bg-gray-50'>
-          <h3 className='font-semibold mb-2'>Next up</h3>
-          <div className='flex flex-wrap gap-3'>
-            <ArrowRight
-              href='/blog/edge-consentless-analytics-2026'
-              className='text-blue-600 hover:underline'
+        <div cl a s s N, a, m, e='mt-10 p-6 bor, d, e, r roun, d, e, d-xl bg-g, r, a, y-50'>
+          <h3 cl a s s N, a, m, e='f, o, n, t-s e m i b, o, l, d mb-2'>N, e, x, t up</h3>
+          <div cl a s s N, a, m, e='f, l, e, x f, l, e, x-w, r, a, p gap-3'>
+            <Arr o w R i, g, h, t
+              h, r, e, f='/b, l, o, g/e, d, g, e-cons e n t l, e, s, s-an a l y t, i, c, s-2, 0, 2, 6'
+              cl a s s N, a, m, e='t, e, x, t-b, l, u, e-600 ho, v, e, r:un d e r l, i, n, e'
             >
-              Edge Consentless Analytics 2026
-            </ArrowRight>
-            <ArrowRight
-              href='/blog/agent-release-guardrails-2026'
-              className='text-blue-600 hover:underline'
+              E, d, g, e Cons e n t l, e, s, s An a l y t, i, c, s 2, 0, 2, 6
+            </Arr o w R i, g, h, t>
+            <Arr o w R i, g, h, t
+              h, r, e, f='/b, l, o, g/ag, e, n, t-rele, a, s, e-gua r d r a, i, l, s-2, 0, 2, 6'
+              cl a s s N, a, m, e='t, e, x, t-b, l, u, e-600 ho, v, e, r:un d e r l, i, n, e'
             >
-              Agent Release Guardrails 2026
-            </ArrowRight>
-            <ArrowRight
-              href='/blog/ai-2027-autonomous-governance-blueprint'
-              className='text-blue-600 hover:underline'
+              Ag, e, n, t Rele, a, s, e Gua r d r a, i, l, s 2, 0, 2, 6
+            </Arr o w R i, g, h, t>
+            <Arr o w R i, g, h, t
+              h, r, e, f='/b, l, o, g/ai-2, 0, 2, 7-aut o n o m, o, u, s-gov e r n a, n, c, e-bl u e p r, i, n, t'
+              cl a s s N, a, m, e='t, e, x, t-b, l, u, e-600 ho, v, e, r:un d e r l, i, n, e'
             >
-              Autonomous Governance 2027
-            </ArrowRight>
+              Aut o n o m, o, u, s Gov e r n a, n, c, e 2, 0, 2, 7
+            </Arr o w R i, g, h, t>
           </div>
         </div>
-      </article>
+      </arti, c, l, e>
     </div>
   );
 }

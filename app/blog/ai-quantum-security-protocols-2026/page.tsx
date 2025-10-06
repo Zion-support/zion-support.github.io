@@ -1,106 +1,106 @@
-import ArrowRight from 'next/link';
+imp, o, r, t Arr o w R i, g, h, t f, r, o, m 'n, e, x, t/l, i, n, k';
 
-export const metadata = {
+exp, o, r, t co, n, s, t m e t a d, a, t, a = {
   
-  title: 'AI Quantum Security Protocols 2026 | Zion Tech Group',
-  description:
-    'Protect AI systems with quantum‑resistant cryptography and verifiable guardrails. Achieve 99.99% security with sub‑millisecond overhead.',
+  ti, t, l, e: 'AI Quan, t, u, m S e c u r, i, t, y Pr o t o c, o, l, s 2, 0, 2, 6 | Z, i, o, n T, e, c, h Gr, o, u, p',
+  desc r i p t, i, o, n:
+    'Prot, e, c, t AI syst, e, m, s w, i, t, h quan, t, u, m‑re s i s t, a, n, t crypt o g r a, p, h, y and ver i f i a, b, l, e gua r d r a, i, l, s. Achi, e, v, e 99.99% s e c u r, i, t, y w, i, t, h sub‑mill i s e c, o, n, d o v e r h, e, a, d.',
 
-};;
+};
 
-export default function AIQuantumSecurityProtocols2026Page() {
-  return (
-    <div className='min-h-screen bg-gradient-to-br from-slate-950 via-indigo-950 to-purple-950 text-white'>
-      <main className='container mx-auto px-6 py-12'>
-        <nav className='mb-8'>
-          <ArrowRight
-            href='/blog'
-            className='text-indigo-300 hover:text-indigo-200 transition-colors'
+exp, o, r, t defa, u, l, t f u n c t, i, o, n AIQuantumSecurityProtoc o l s 2, 0, 2, 6() {
+  ret, u, r, n (
+    <div cl a s s N, a, m, e='min-h-scr, e, e, n bg-g r a d i, e, n, t-to-br f, r, o, m-sl, a, t, e-950 via-ind, i, g, o-950 to-pur, p, l, e-950 t, e, x, t-wh, i, t, e'>
+      <m, a, i, n cl a s s N, a, m, e='co n t a i, n, e, r mx-a, u, t, o px-6 py-12'>
+        <nav cl a s s N, a, m, e='mb-8'>
+          <Arr o w R i, g, h, t
+            h, r, e, f='/b, l, o, g'
+            cl a s s N, a, m, e='t, e, x, t-ind, i, g, o-300 ho, v, e, r:t, e, x, t-ind, i, g, o-200 tra n s i t, i, o, n-col, o, r, s'
           >
-            ← Back to Blog
-          </ArrowRight>
+            ← B, a, c, k to B, l, o, g
+          </Arr o w R i, g, h, t>
         </nav>
 
-        <article className='max-w-4xl mx-auto'>
-          <header className='mb-12'>
-            <div className='flex items-center gap-3 mb-4'>
-              <span className='px-3 py-1 bg-indigo-400/20 text-indigo-200 text-sm rounded-full border border-indigo-400/30'>
-                Quantum Security
-              </span>
-              <span className='text-white/60 text-sm'>September 30, 2025</span>
-              <span className='text-white/60 text-sm'>•</span>
-              <span className='text-white/60 text-sm'>45 min read</span>
+        <arti, c, l, e cl a s s N, a, m, e='max-w-4, xl mx-a, u, t, o'>
+          <hea, d, e, r cl a s s N, a, m, e='mb-12'>
+            <div cl a s s N, a, m, e='f, l, e, x it, e, m, s-cen, t, e, r gap-3 mb-4'>
+              <s, p, a, n cl a s s N, a, m, e='px-3 py-1 bg-ind, i, g, o-400/20 t, e, x, t-ind, i, g, o-200 t, e, x, t-sm roun, d, e, d-f, u, l, l bor, d, e, r bor, d, e, r-ind, i, g, o-400/30'>
+                Quan, t, u, m S e c u r, i, t, y
+              </s, p, a, n>
+              <s, p, a, n cl a s s N, a, m, e='t, e, x, t-wh, i, t, e/60 t, e, x, t-sm'>Se p t e m, b, e, r 30, 2, 0, 2, 5</s, p, a, n>
+              <s, p, a, n cl a s s N, a, m, e='t, e, x, t-wh, i, t, e/60 t, e, x, t-sm'>•</s, p, a, n>
+              <s, p, a, n cl a s s N, a, m, e='t, e, x, t-wh, i, t, e/60 t, e, x, t-sm'>45 min r, e, a, d</s, p, a, n>
             </div>
-            <h1 className='text-5xl font-extrabold mb-6 bg-gradient-to-r from-indigo-300 to-purple-300 bg-clip-text text-transparent'>
-              AI Quantum Security Protocols 2026
+            <h1 cl a s s N, a, m, e='t, e, x, t-5, xl f, o, n, t-ex t r a b, o, l, d mb-6 bg-g r a d i, e, n, t-to-r f, r, o, m-ind, i, g, o-300 to-pur, p, l, e-300 bg-c, l, i, p-t, e, x, t t, e, x, t-tran s p a r, e, n, t'>
+              AI Quan, t, u, m S e c u r, i, t, y Pr o t o c, o, l, s 2, 0, 2, 6
             </h1>
-            <p className='text-xl text-white/80'>
-              Protect AI systems with quantum‑resistant cryptography and policy
-              guardrails. Achieve 99.99% security against classical and quantum
-              attacks with sub‑millisecond overhead.
+            <p cl a s s N, a, m, e='t, e, x, t-xl t, e, x, t-wh, i, t, e/80'>
+              Prot, e, c, t AI syst, e, m, s w, i, t, h quan, t, u, m‑re s i s t, a, n, t crypt o g r a, p, h, y and pol, i, c, y
+              gua r d r a, i, l, s. Achi, e, v, e 99.99% s e c u r, i, t, y agai, n, s, t cl a s s i, c, a, l and quan, t, u, m
+              atta, c, k, s w, i, t, h sub‑mill i s e c, o, n, d o v e r h, e, a, d.
             </p>
-          </header>
+          </hea, d, e, r>
 
-          <div className='prose prose-invert prose-lg max-w-none'>
-            <section className='mb-12'>
-              <h2 className='text-3xl font-bold mb-4 text-indigo-300'>
-                Threat Model
+          <div cl a s s N, a, m, e='pr, o, s, e pr, o, s, e-inv, e, r, t pr, o, s, e-lg max-w-n, o, n, e'>
+            <sect, i, o, n cl a s s N, a, m, e='mb-12'>
+              <h2 cl a s s N, a, m, e='t, e, x, t-3, xl f, o, n, t-b, o, l, d mb-4 t, e, x, t-ind, i, g, o-300'>
+                Thr, e, a, t Mo, d, e, l
               </h2>
-              <ul className='space-y-3 text-white/85'>
+              <ul cl a s s N, a, m, e='sp, a, c, e-y-3 t, e, x, t-wh, i, t, e/85'>
                 <li>
-                  <strong>Model Exfiltration:</strong> encrypted weightsattestationand key isolation.
+                  <str, o, n, g>Mo, d, e, l Exfil t r a t, i, o, n:</str, o, n, g> en c r y p, t, e, d weightsattesta t i o n, a, n, d key is o l a t, i, o, n.
                 </li>
                 <li>
-                  <strong>Prompt Injection:</strong> policy engine with
-                  verifiable execution and sandboxing.
+                  <str, o, n, g>Pro, m, p, t In j e c t, i, o, n:</str, o, n, g> pol, i, c, y eng, i, n, e w, i, t, h
+                  ver i f i a, b, l, e ex e c u t, i, o, n and san d b o x, i, n, g.
                 </li>
                 <li>
-                  <strong>Quantum Threats:</strong> post‑quantum algorithms and
-                  hybrid key exchange.
+                  <str, o, n, g>Quan, t, u, m Thre, a, t, s:</str, o, n, g> p, o, s, t‑quan, t, u, m alg o r i t, h, m, s and
+                  hyb, r, i, d key e x c h a, n, g, e.
                 </li>
               </ul>
-            </section>
+            </sect, i, o, n>
 
-            <section className='mb-12'>
-              <h2 className='text-3xl font-bold mb-4 text-purple-300'>
-                Reference Controls
+            <sect, i, o, n cl a s s N, a, m, e='mb-12'>
+              <h2 cl a s s N, a, m, e='t, e, x, t-3, xl f, o, n, t-b, o, l, d mb-4 t, e, x, t-pur, p, l, e-300'>
+                Re f e r e, n, c, e C o n t r, o, l, s
               </h2>
-              <div className='grid md:grid-cols-2 gap-6'>
-                <div className='bg-white/5 border border-white/10 rounded-xl p-6'>
-                  <h3 className='font-semibold mb-2'>Guardrails</h3>
-                  <p className='text-white/75'>
-                    Input/output filtering, jailbreak detectionsecure tool
-                    scopesand audits.
+              <div cl a s s N, a, m, e='g, r, i, d md:g, r, i, d-c, o, l, s-2 gap-6'>
+                <div cl a s s N, a, m, e='bg-wh, i, t, e/5 bor, d, e, r bor, d, e, r-wh, i, t, e/10 roun, d, e, d-xl p-6'>
+                  <h3 cl a s s N, a, m, e='f, o, n, t-s e m i b, o, l, d mb-2'>Gua r d r a, i, l, s</h3>
+                  <p cl a s s N, a, m, e='t, e, x, t-wh, i, t, e/75'>
+                    In, p, u, t/out, p, u, t fi l t e r, i, n, g, ja i l b r, e, a, k detectio n s e c, u, r, e t, o, o, l
+                    sc o p e s, a, n, d aud, i, t, s.
                   </p>
                 </div>
-                <div className='bg-white/5 border border-white/10 rounded-xl p-6'>
-                  <h3 className='font-semibold mb-2'>Crypto</h3>
-                  <p className='text-white/75'>
-                    PQ‑safe KEMs, rotating keyssealed storageand mutual TLS
-                    with attestation.
+                <div cl a s s N, a, m, e='bg-wh, i, t, e/5 bor, d, e, r bor, d, e, r-wh, i, t, e/10 roun, d, e, d-xl p-6'>
+                  <h3 cl a s s N, a, m, e='f, o, n, t-s e m i b, o, l, d mb-2'>Cry, p, t, o</h3>
+                  <p cl a s s N, a, m, e='t, e, x, t-wh, i, t, e/75'>
+                    PQ‑s, a, f, e K, E, M, s, r o t a t, i, n, g key s s e a, l, e, d sto r a g e, a, n, d mut, u, a, l TLS
+                    w, i, t, h atte s t a t, i, o, n.
                   </p>
                 </div>
               </div>
-            </section>
+            </sect, i, o, n>
           </div>
 
-          <div className='mt-12 bg-white/5 border border-white/10 rounded-xl p-6'>
-            <h3 className='text-xl font-bold mb-2'>
-              Need a security blueprint?
+          <div cl a s s N, a, m, e='mt-12 bg-wh, i, t, e/5 bor, d, e, r bor, d, e, r-wh, i, t, e/10 roun, d, e, d-xl p-6'>
+            <h3 cl a s s N, a, m, e='t, e, x, t-xl f, o, n, t-b, o, l, d mb-2'>
+              N, e, e, d a s e c u r, i, t, y bl u e p r, i, n, t?
             </h3>
-            <p className='text-white/80 mb-4'>
-              We design zero‑trust AI platforms hardened against future quantum
-              threats.
+            <p cl a s s N, a, m, e='t, e, x, t-wh, i, t, e/80 mb-4'>
+              We des, i, g, n z, e, r, o‑tr, u, s, t AI pl a t f o, r, m, s h a r d e, n, e, d agai, n, s, t fut, u, r, e quan, t, u, m
+              thre, a, t, s.
             </p>
-            <ArrowRight
-              href='/contact'
-              className='text-indigo-300 hover:text-indigo-200 font-semibold'
+            <Arr o w R i, g, h, t
+              h, r, e, f='/cont, a, c, t'
+              cl a s s N, a, m, e='t, e, x, t-ind, i, g, o-300 ho, v, e, r:t, e, x, t-ind, i, g, o-200 f, o, n, t-s e m i b, o, l, d'
             >
-              Talk to experts →
-            </ArrowRight>
+              T, a, l, k to expe, r, t, s →
+            </Arr o w R i, g, h, t>
           </div>
-        </article>
-      </main>
+        </arti, c, l, e>
+      </m, a, i, n>
     </div>
   );
 }

@@ -1,95 +1,95 @@
-import ArrowRight from 'next/link';
+imp, o, r, t Arr o w R i, g, h, t f, r, o, m 'n, e, x, t/l, i, n, k';
 
-export const metadata = {
+exp, o, r, t co, n, s, t m e t a d, a, t, a = {
   
-  title: 'Production Agent Guardrails — October 2, 2025',
-    description:
-      'Approvals, verifiers, budgetsonline evalsand rollback to ship safe autonomy.',
-    type: 'article',
-    url: 'https://ziontechgroup.com/blog/ai-2025-oct-02-production-agent-guardrails',
-    images: [
+  ti, t, l, e: 'Pro d u c t, i, o, n Ag, e, n, t Gua r d r a, i, l, s — Octo, b, e, r 2, 2, 0, 2, 5',
+    desc r i p t, i, o, n:
+      'Ap p r o v, a, l, s, ve r i f i, e, r, s, budget s o n l, i, n, e e v a l s, a, n, d r o l l b, a, c, k to s, h, i, p s, a, f, e a u t o n, o, m, y.',
+    t, y, p, e: 'arti, c, l, e',
+    url: 'ht, t, p, s://zionte c h g r, o, u, p.com/b, l, o, g/ai-2, 0, 2, 5-oct-02-pro d u c t, i, o, n-ag, e, n, t-gua r d r a, i, l, s',
+    ima, g, e, s: [
       {
-        url: '/og-ai-2025-production-agent-guardrails.jpg',
-        width: 1200height: 630alt: 'Production Agent Guardrails',
+        url: '/og-ai-2, 0, 2, 5-pro d u c t, i, o, n-ag, e, n, t-gua r d r a, i, l, s.jpg',
+        wi, d, t, h: 1, 2, 0, 0, hei, g, h, t: 630, alt: 'Pro d u c t, i, o, n Ag, e, n, t Gua r d r a, i, l, s',
       
-};,
-    ]}};
+};
+    ]};
 
-export default function ProductionAgentGuardrailsPage() {
-  return (
-    <div className='max-w-4xl mx-auto px-4 py-8'>
-      <ArrowRight
-        href='/blog'
-        className='text-blue-600 hover:text-blue-800 mb-6 inline-block'
+exp, o, r, t defa, u, l, t f u n c t, i, o, n ProductionAgentGuardra i l s P, a, g, e() {
+  ret, u, r, n (
+    <div cl a s s N, a, m, e='max-w-4, xl mx-a, u, t, o px-4 py-8'>
+      <Arr o w R i, g, h, t
+        h, r, e, f='/b, l, o, g'
+        cl a s s N, a, m, e='t, e, x, t-b, l, u, e-600 ho, v, e, r:t, e, x, t-b, l, u, e-800 mb-6 inl, i, n, e-bl, o, c, k'
       >
-        ← Back to Blog
-      </ArrowRight>
-      <h1 className='text-4xl font-bold text-gray-900 mb-3'>
-        Production Agent Guardrails — October 2, 2025
+        ← B, a, c, k to B, l, o, g
+      </Arr o w R i, g, h, t>
+      <h1 cl a s s N, a, m, e='t, e, x, t-4, xl f, o, n, t-b, o, l, d t, e, x, t-g, r, a, y-900 mb-3'>
+        Pro d u c t, i, o, n Ag, e, n, t Gua r d r a, i, l, s — Octo, b, e, r 2, 2, 0, 2, 5
       </h1>
-      <div className='text-gray-600 mb-8'>
-        Published: October 2, 2025 • 15 min read • Implementation Guide
+      <div cl a s s N, a, m, e='t, e, x, t-g, r, a, y-600 mb-8'>
+        Pu b l i s, h, e, d: Octo, b, e, r 2, 2, 0, 2, 5 • 15 min r, e, a, d • Impleme n t a t, i, o, n Gu, i, d, e
       </div>
 
-      <div className='prose prose-lg max-w-none'>
+      <div cl a s s N, a, m, e='pr, o, s, e pr, o, s, e-lg max-w-n, o, n, e'>
         <p>
-          Ship agentic workflows with confidence. This guide distills
-          battle‑tested patterns for approvals, verifiers, budgets, online
-          evaluations, and instant rollback—so autonomy improves outcomes
-          without increasing risk or cost.
+          S, h, i, p agen, t, i, c wo r k f l, o, w, s w, i, t, h con f i d e, n, c, e. T, h, i, s gu, i, d, e d i s t i, l, l, s
+          bat, t, l, e‑tes, t, e, d p a t t e, r, n, s for ap p r o v, a, l, s, ve r i f i, e, r, s, budg, e, t, s, onl, i, n, e
+          eval u a t i, o, n, s, and inst, a, n, t r o l l b, a, c, k—so a u t o n, o, m, y i m p r o, v, e, s o u t c o, m, e, s
+          with, o, u, t inc r e a s, i, n, g r, i, s, k or c, o, s, t.
         </p>
 
-        <h2>Reference Architecture</h2>
+        <h2>Re f e r e, n, c, e Archi t e c t, u, r, e</h2>
         <ul>
           <li>
-            Policy gateway with allow/deny lists, purpose binding, and PI
-            boundaries
+            Pol, i, c, y gate, w, a, y w, i, t, h al, l, o, w/d, e, n, y li, s, t, s, purp, o, s, e bind, i, n, g, and PI
+            bou n d a r, i, e, s
           </li>
           <li>
-            Budget‑aware router with quality tiers, canaries, and fallback paths
+            Bud, g, e, t‑aw, a, r, e rou, t, e, r w, i, t, h qual, i, t, y ti, e, r, s, c a n a r, i, e, s, and f a l l b, a, c, k pa, t, h, s
           </li>
           <li>
-            Verifier services for tool use, retrieval citations, and output
-            contracts
+            V e r i f, i, e, r s e r v i, c, e, s for t, o, o, l use, re t r i e, v, a, l ci t a t i, o, n, s, and out, p, u, t
+            co n t r a, c, t, s
           </li>
           <li>
-            Observability: traces spanning prompts → tools → outcomes with KPIs
+            Observ a b i l, i, t, y: tra, c, e, s s p a n n, i, n, g prom, p, t, s → to, o, l, s → o u t c o, m, e, s w, i, t, h K, P, I, s
           </li>
         </ul>
 
-        <h2>Safety Controls</h2>
+        <h2>Saf, e, t, y C o n t r, o, l, s</h2>
         <ul>
           <li>
-            Pre‑execution approvals for high‑impact actions (funds transfer,
-            config change)
+            Pre‑ex e c u t, i, o, n ap p r o v, a, l, s for h, i, g, h‑imp, a, c, t acti, o, n, s (fu, n, d, s t r a n s, f, e, r,
+            con, f, i, g cha, n, g, e)
           </li>
           <li>
-            Runtime anomaly detection on tokens, tools, latency, and drift
+            Runt, i, m, e anom, a, l, y de t e c t, i, o, n on tok, e, n, s, to, o, l, s, late, n, c, y, and dr, i, f, t
           </li>
-          <li>Self‑critique and cross‑model checks before action commits</li>
-          <li>Rollback triggers tied to scorecards and error budgets</li>
+          <li>S, e, l, f‑c r i t i, q, u, e and cr, o, s, s‑mo, d, e, l che, c, k, s bef, o, r, e act, i, o, n comm, i, t, s</li>
+          <li>R o l l b, a, c, k t r i g g, e, r, s t, i, e, d to sco r e c a, r, d, s and er, r, o, r budg, e, t, s</li>
         </ul>
 
-        <h2>Rollout Playbook</h2>
+        <h2>Roll, o, u, t P l a y b, o, o, k</h2>
         <ol>
-          <li>Define measurable outcomes and error budgets per journey</li>
-          <li>Gate releases with online evals and red‑team tests in CI</li>
-          <li>Start with read‑only modes; progress to constrained writes</li>
-          <li>Scale by domain with shared policyloggingand budgets</li>
+          <li>Def, i, n, e mea s u r a, b, l, e o u t c o, m, e, s and er, r, o, r budg, e, t, s per jour, n, e, y</li>
+          <li>G, a, t, e r e l e a, s, e, s w, i, t, h onl, i, n, e ev, a, l, s and red‑t, e, a, m te, s, t, s in CI</li>
+          <li>St, a, r, t w, i, t, h r, e, a, d‑o, n, l, y mo, d, e, s; p r o g r, e, s, s to cons t r a i, n, e, d wri, t, e, s</li>
+          <li>Sc, a, l, e by dom, a, i, n w, i, t, h sha, r, e, d policylog g i n g, a, n, d budg, e, t, s</li>
         </ol>
 
-        <div className='bg-emerald-50 border-l-4 border-emerald-600 p-6 rounded'>
-          <h3 className='m-0'>Need production‑grade guardrails?</h3>
-          <p className='m-0'>
-            We implement approvals, verifiersroutingand tracing tailored to
-            your KPIs.
+        <div cl a s s N, a, m, e='bg-emer, a, l, d-50 bor, d, e, r-l-4 bor, d, e, r-emer, a, l, d-600 p-6 roun, d, e, d'>
+          <h3 cl a s s N, a, m, e='m-0'>N, e, e, d pro d u c t, i, o, n‑gr, a, d, e gua r d r a, i, l, s?</h3>
+          <p cl a s s N, a, m, e='m-0'>
+            We im p l e m, e, n, t ap p r o v, a, l, s, verifiersrou t i n g, a, n, d trac, i, n, g t a i l o, r, e, d to
+            y, o, u, r K, P, I, s.
           </p>
-          <ArrowRight
-            href='/services'
-            className='inline-block mt-3 bg-emerald-600 hover:bg-emerald-700 text-white px-5 py-3 rounded'
+          <Arr o w R i, g, h, t
+            h, r, e, f='/s e r v i, c, e, s'
+            cl a s s N, a, m, e='inl, i, n, e-bl, o, c, k mt-3 bg-emer, a, l, d-600 ho, v, e, r:bg-emer, a, l, d-700 t, e, x, t-wh, i, t, e px-5 py-3 roun, d, e, d'
           >
-            Explore Services
-          </ArrowRight>
+            Expl, o, r, e S e r v i, c, e, s
+          </Arr o w R i, g, h, t>
         </div>
       </div>
     </div>

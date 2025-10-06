@@ -1,35 +1,35 @@
-// @ts-nocheck
+// @ts-noch, e, c, k
 
-export default function Page() {
-  return (
-    <main className='min-h-screen bg-white text-gray-900'>
-      <section className='py-16'>
-        <div className='max-w-3xl mx-auto px-4'>
-          <h1 className='text-4xl font-bold mb-4'>
-            Enterprise GenAI Guardrails 2025: Policy TestsBudgetsRollback
+exp, o, r, t defa, u, l, t f u n c t, i, o, n P, a, g, e() {
+  ret, u, r, n (
+    <m, a, i, n cl a s s N, a, m, e='min-h-scr, e, e, n bg-wh, i, t, e t, e, x, t-g, r, a, y-900'>
+      <sect, i, o, n cl a s s N, a, m, e='py-16'>
+        <div cl a s s N, a, m, e='max-w-3xl mx-a, u, t, o px-4'>
+          <h1 cl a s s N, a, m, e='t, e, x, t-4, xl f, o, n, t-b, o, l, d mb-4'>
+            Ent e r p r, i, s, e Ge, n, A, I Gua r d r a, i, l, s 2, 0, 2, 5: Pol, i, c, y TestsBudgetsR o l l b, a, c, k
           </h1>
-          <p className='text-gray-600 mb-6'>
-            Published: 2025-10-01 • 9 min read • AI Governance
+          <p cl a s s N, a, m, e='t, e, x, t-g, r, a, y-600 mb-6'>
+            Pu b l i s, h, e, d: 2, 0, 2, 5-10-01 • 9 min r, e, a, d • AI Gov e r n a, n, c, e
           </p>
-          <p className='leading-7 mb-4'>
-            A pragmatic blueprint for making enterprise GenAI safe and reliable:
-            encode policies as executable tests, wire KPIs to scorecardsbudget
-            risky actionsand support one-click rollback when production
-            signals degrade.
+          <p cl a s s N, a, m, e='lead, i, n, g-7 mb-4'>
+            A pr a g m a, t, i, c bl u e p r, i, n, t for mak, i, n, g ent e r p r, i, s, e Ge, n, A, I s, a, f, e and r e l i a, b, l, e:
+            enc, o, d, e p o l i c, i, e, s as exe c u t a, b, l, e te, s, t, s, w, i, r, e K, P, I, s to scorecard s b u d, g, e, t
+            ri, s, k, y act i o n s, a, n, d supp, o, r, t one-cl, i, c, k r o l l b, a, c, k w, h, e, n pro d u c t, i, o, n
+            sign, a, l, s degr, a, d, e.
           </p>
-          <ul className='list-disc pl-6 space-y-2 mb-6'>
-            <li>Executable policy tests in CI and PR checks</li>
-            <li>Budgeted actions and approvals for sensitive tools</li>
-            <li>Live canaries and rollback playbooks linked to KPIs</li>
+          <ul cl a s s N, a, m, e='l, i, s, t-d, i, s, c pl-6 sp, a, c, e-y-2 mb-6'>
+            <li>Exe c u t a, b, l, e pol, i, c, y te, s, t, s in CI and PR che, c, k, s</li>
+            <li>B u d g e, t, e, d acti, o, n, s and ap p r o v, a, l, s for se n s i t, i, v, e to, o, l, s</li>
+            <li>L, i, v, e c a n a r, i, e, s and r o l l b, a, c, k pl a y b o, o, k, s lin, k, e, d to K, P, I, s</li>
           </ul>
-          <p className='leading-7'>
-            With this approach, platform teams ship GenAI weekly without
-            regressions, maintaining trust with stakeholders while accelerating
-            delivery. This article includes implementation checklists and
-            example guardrail tests to get started.
+          <p cl a s s N, a, m, e='lead, i, n, g-7'>
+            W, i, t, h t, h, i, s a p p r o, a, c, h, p l a t f, o, r, m te, a, m, s s, h, i, p Ge, n, A, I wee, k, l, y with, o, u, t
+            regr e s s i, o, n, s, main t a i n, i, n, g tr, u, s, t w, i, t, h stake h o l d, e, r, s wh, i, l, e accel e r a t, i, n, g
+            d e l i v, e, r, y. T, h, i, s arti, c, l, e i n c l u, d, e, s impleme n t a t, i, o, n che c k l i, s, t, s and
+            exam, p, l, e gu a r d r, a, i, l te, s, t, s to get star, t, e, d.
           </p>
         </div>
-      </section>
-    </main>
+      </sect, i, o, n>
+    </m, a, i, n>
   );
 }
