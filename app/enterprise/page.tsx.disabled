@@ -1,3 +1,11 @@
+<<<<<<< HEAD:app/enterprise/page.tsx
+=======
+
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
+>>>>>>> cursor/fix-errors-and-merge-to-main-cfd1:app/enterprise/page.tsx.disabled
 import Link from 'next/link';
 
 export const metadata = {
