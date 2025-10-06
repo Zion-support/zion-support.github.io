@@ -9,18 +9,33 @@
     ],
     "module": "ESNext",
     "skipLibCheck": true,
-    "moduleResolution": "node",
     "allowImportingTsExtensions": false,
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
+<<<<<<< HEAD
+    "strict": false,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+=======
+    "jsxImportSource": "react",
+>>>>>>> main
     "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+    "strictNullChecks": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
     "noFallthroughCasesInSwitch": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
+    "moduleResolution": "bundler",
     "baseUrl": ".",
     "paths": {
       "@/*": [
@@ -41,24 +56,41 @@
     },
     "allowJs": true,
     "forceConsistentCasingInFileNames": true,
+<<<<<<< HEAD
+    "noImplicitAny": false,
+    "noImplicitReturns": false,
+    "noImplicitThis": false,
+    "exactOptionalPropertyTypes": false,
+    "noImplicitOverride": false,
+    "noPropertyAccessFromIndexSignature": false,
+    "noUncheckedIndexedAccess": false,
+=======
     "noImplicitAny": true,
     "noImplicitReturns": true,
     "noImplicitThis": true,
+    "strictNullChecks": true,
     "exactOptionalPropertyTypes": true,
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
     "noUncheckedIndexedAccess": true,
+>>>>>>> main
     "allowUnusedLabels": false,
     "allowUnreachableCode": false,
-    "verbatimModuleSyntax": true
+    "verbatimModuleSyntax": false
   },
   "include": [
+    "app/**/*",
+<<<<<<< HEAD
+    "src/**/*"
+=======
+<<<<<<< HEAD
+    "src/**/*"
+=======
     "src/**/*",
-    "app/enterprise/**/*",
-    "app/not-found.tsx",
-    "app/page.tsx",
-    "app/layout.tsx",
-    "app/App.tsx"
+    "App.tsx",
+    "components/**/*"
+>>>>>>> main
+>>>>>>> main
   ],
   "exclude": [
     "node_modules",
@@ -101,6 +133,15 @@
     "services/**",
     "middleware/**",
     "app/blog/**",
+<<<<<<< HEAD
+    "src/components/disabled-corrupted/**",
+=======
+    "app/page-optimized.tsx",
+    "app/services/**/*",
+    "app/case-studies/**/*",
+    "app/guides/**/*",
+    "app/components/**/*",
+>>>>>>> main
     "EnhancedFooter.tsx",
     "EnhancedHeader.tsx",
     "EnhancedNavigation.tsx",
@@ -108,7 +149,24 @@
     "SidebarNavigation.tsx",
     "api-documentation.tsx",
     "app/components/NewContentPromotionalBanner2026.tsx",
-    "app/components/NewestContent2025Banner.tsx"
+    "app/components/NewestContent2025Banner.tsx",
+<<<<<<< HEAD
+    "api/**",
+    "lib/**"
+=======
+    "utils/bannerLazyLoader.ts",
+    "utils/bannerPrioritization.ts",
+    "utils/bannerRegistry.ts",
+    "utils/bannerRotationSystem.ts",
+    "utils/comprehensiveOptimizer.ts",
+    "utils/performanceUtils.ts",
+<<<<<<< HEAD
+    "utils/seoUtils.ts"
+>>>>>>> main
+=======
+    "utils/seoUtils.ts",
+    "src/utils/performanceOptimizer.ts"
+>>>>>>> b0d6dda8406c2e54af3529a18b3e8c5f6ab37739
   ],
   "references": [
     {

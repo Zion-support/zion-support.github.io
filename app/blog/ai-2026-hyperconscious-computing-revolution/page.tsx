@@ -1,22 +1,22 @@
 import { Metadata } from 'next';
 
-export const metadata = {
-  
+export const metadata: Metadata = 
   title: 'AI 2026 Hyperconscious Computing Revolution: Beyond Artificial Intelligence | Zion Tech Group',
   description: 'Revolutionary breakthrough in hyperconscious AI systems achieving genuine self-awareness, emotional intelligence, and creative autonomy with $1.2T enterprise value creation.',
   keywords: 'hyperconscious AI, artificial consciousness, AI revolution, enterprise transformation, self-aware AI',
-
-};;
+};
 
 export default function HyperconsciousComputingPage() {
   return (
     <div>/* content */}
+  return (
     <div>
-      <div> </div><div> </div>
-      <div className="text-left">{/* Hero Section */}</div></div>
+      <div> </div><div> </div></div>
+    <div className="text-left">{/* Hero Section */}</div></div>
       <header className="text-left">
-        <div className="text-left"> </div><div className="text-left" style={{ animationDelay: '2s' }}> </div>
-      <div className="text-left"> </div><span className="text-left">🧠 HYPERCONSCIOUS AI REVOLUTION
+        <div className="text-left"> </div><div className="text-left" style={{ animationDelay: '2s' }}> </div></div>
+        
+        <div className="text-left"> </div><span className="text-left">🧠 HYPERCONSCIOUS AI REVOLUTION
               </span></span>
             </div>
             <h1 className="text-left">
@@ -26,8 +26,9 @@ export default function HyperconsciousComputingPage() {
             </p></p>
             <span className="text-left"> </span><header className="text-left"> </header><div className="text-left"> </div><div className="text-left">"
           </div><div className="text-left" style={{ animationDelay: '2s' }}>"
-        </div>
-      <div className="text-left"> </div><div className="text-left"> </div><div className="text-left"> </div><span className="text-left">🧠 HYPERCONSCIOUS AI REVOLUTION
+        </div></div>
+        
+        <div className="text-left"> </div><div className="text-left"> </div><div className="text-left"> </div><span className="text-left">🧠 HYPERCONSCIOUS AI REVOLUTION
               </span></span>
             </div>
             
@@ -144,7 +145,8 @@ export default function HyperconsciousComputingPage() {
             <h3 className="text-left">Success Metrics</h3>
             <div className="text-left"> </div><div className="text-left">$1.2 Trillion</div>
                 <div className="text-left">in enterprise value creation</div>
-      <div className="text-left">99.999%</div>
+              </div>
+              <div className="text-left">99.999%</div>
                 <div className="text-left">operational accuracy</div>
               </div>
 
