@@ -13,8 +13,12 @@ const UnifiedContentPromotion = memo(() => (
 =======
 import React, { Suspense, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+<<<<<<< HEAD
 import { HelmetProvider } from 'react-helmet-async';
 import './src/index.css';
+=======
+import './assets/style.css';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-fe96
 
 // Import page components
 import HomePage from './app/page';
@@ -255,6 +259,7 @@ class ErrorBoundary extends React.Component<
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-cea4
 export default function App() {
@@ -349,6 +354,15 @@ export default function App() {
         event_category: 'engagement',
         event_label: 'main_phone_number'
       });
+=======
+export { AppErrorBoundary as ErrorBoundary };
+
+function App() {
+  useEffect(() => {
+    // Initialize performance monitoring
+    if (typeof window !== 'undefined') {
+      console.log('App initialized');
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-fe96
     }
   }, []);
 

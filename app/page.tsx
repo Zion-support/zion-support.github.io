@@ -148,8 +148,13 @@ const HomePage: React.FC = () => {
               solutions.
             </p>
             <Link
+<<<<<<< HEAD
               to="/contact"
               className="bg-white text-blue-600 hover:bg-gray-100 font-bold py-4 px-8 rounded-lg text-lg transition-colors duration-300 inline-block"
+=======
+              to='/contact'
+              className='bg-white text-blue-600 hover:bg-gray-100 font-bold py-4 px-8 rounded-lg text-lg transition-colors duration-300 inline-block'
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-fe96
             >
               Start Your Transformation
             </Link>
