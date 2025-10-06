@@ -5,6 +5,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { onCLS, onFCP, onLCP, onTTFB } from 'web-vitals';
 import type { Metric } from 'web-vitals';
 
@@ -29,6 +30,9 @@ import { onCLS, onFCP, onLCP, onTTFB, type Metric } from 'web-vitals';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7365
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6ac6
+=======
+import { onCLS, onFCP, onLCP, onTTFB, type Metric } from 'web-vitals';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-895b
 
 // Types
 interface PerformanceMetric {
@@ -76,6 +80,7 @@ const THRESHOLDS = {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   TTFB: { good: 800, poor: 1800 },
 =======
   TTFB: { good: 800, poor: 1800 }
@@ -86,6 +91,9 @@ const THRESHOLDS = {
 =======
   TTFB: { good: 800, poor: 1800 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e3b
+=======
+  TTFB: { good: 800, poor: 1800 }
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-895b
 };
 /**
  * Get rating based on metric value
@@ -101,7 +109,7 @@ function getRating(
   return 'poor';
 }
 /**
- * Send metric to analytics endpoint
+ * Send metric to analytics and custom endpoints
  */
 function sendToAnalytics(metric: Metric): void {
   const performanceMetric: PerformanceMetric = {
@@ -109,8 +117,8 @@ function sendToAnalytics(metric: Metric): void {
     value: metric.value,
     rating: getRating(metric.name, metric.value),
     delta: metric.delta,
-<<<<<<< HEAD
     id: metric.id
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     id: metric.id,
@@ -120,6 +128,8 @@ function sendToAnalytics(metric: Metric): void {
 =======
     id: metric.id,
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6ac6
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-895b
   };
   // Log in development
   if (process.env.NODE_ENV === 'development') {
@@ -173,6 +183,23 @@ export function initPerformanceMonitoring(): void {
   } catch (error) {
     console.error('Error initializing performance monitoring:', error);
   }
+<<<<<<< HEAD
+=======
+}
+
+/**
+ * Generate performance report
+ */
+export function generatePerformanceReport(): PerformanceReport {
+  const metrics: PerformanceMetric[] = [];
+  
+  return {
+    metrics,
+    timestamp: new Date().toISOString(),
+    url: typeof window !== 'undefined' ? window.location.href : '',
+    userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : ''
+  };
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-895b
 }
 
 /**
@@ -184,6 +211,7 @@ export function measurePerformance(name: string, startTime: number): number {
   if (typeof window !== 'undefined' && window.gtag) {
     window.gtag('event', 'timing_complete', {
       name: name,
+<<<<<<< HEAD
       value: Math.round(duration),
 <<<<<<< HEAD
       event_category: 'Performance'
@@ -195,10 +223,17 @@ export function measurePerformance(name: string, startTime: number): number {
   if (process.env.NODE_ENV === 'development') {
     console.log(`Performance: ${name} took ${duration.toFixed(2)}ms`);
   }
+=======
+      value: Math.round(duration)
+    });
+  }
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-895b
   return duration;
 }
 
 /**
+<<<<<<< HEAD
  * Mark performance milestone
  */
 export function markPerformance(name: string): void {
@@ -473,12 +508,30 @@ export function getPerformanceScore(metrics: PerformanceMetric[]): number {
     }
   });
   return Math.round(scores.reduce((sum: number, score: number) => sum + score, 0) / scores.length);
+=======
+ * Check if performance is good
+ */
+export function isPerformanceGood(): boolean {
+  // This would be implemented based on collected metrics
+  return true;
+}
+
+/**
+ * Get performance score
+ */
+export function getPerformanceScore(): number {
+  // This would calculate a score based on collected metrics
+  return 100;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-895b
 }
 
 /**
  * Monitor long tasks
  */
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6ac6
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-895b
 export function monitorLongTasks(
   callback: (entries: PerformanceEntry[]) => void
 ): PerformanceObserver | null {
@@ -539,8 +592,9 @@ export function monitorLayoutShifts(
 }
 
 /**
- * Check if connection is slow
+ * Get connection information
  */
+<<<<<<< HEAD
 export function isSlowConnection(): boolean {
   if (
     typeof navigator === 'undefined' ||
@@ -551,6 +605,11 @@ export function isSlowConnection(): boolean {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6ac6
   ) {
     return false;
+=======
+export function getConnectionType(): string | null {
+  if (typeof navigator === 'undefined' || !('connection' in navigator)) {
+    return null;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-895b
   }
 
 <<<<<<< HEAD
@@ -568,6 +627,7 @@ export function isSlowConnection(): boolean {
     connection.saveData === true
 =======
   const connection = (navigator as any).connection;
+<<<<<<< HEAD
   const slowTypes = ['slow-2g', '2g'];
   return (
     slowTypes.includes(connection.effectiveType) || connection.saveData === true
@@ -670,3 +730,15 @@ export default {
 =======
 };
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6ac6
+=======
+  return connection?.effectiveType || null;
+}
+
+// Export all functions
+export {
+  type PerformanceMetric,
+  type PerformanceReport,
+  getRating,
+  sendToAnalytics,
+};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-895b

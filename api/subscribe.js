@@ -21,10 +21,13 @@ async function handler(req, res) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   try {
     const { email } = req.body || {};
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-895b
 
   const { email, name, source = 'website' } = req.body || {};
 
@@ -116,6 +119,7 @@ async function handler(req, res) {
     res.statusCode = 200;
     res.json({ success: true, message: 'Successfully subscribed to newsletter' });
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-3d1d
 =======
 
@@ -129,6 +133,9 @@ async function handler(req, res) {
   } catch (error) {
     console.error('Subscribe API error:', error);
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e3b
+=======
+  } catch (error) {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-895b
     res.statusCode = 500;
     res.json({ error: err.message || 'Subscription failed' });
   }

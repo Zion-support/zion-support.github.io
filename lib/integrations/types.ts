@@ -11,6 +11,7 @@ export type SyncStatus = 'connected' | 'warning' | 'disconnected';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-3d1d
@@ -20,11 +21,15 @@ export type SyncStatus = 'connected' | 'warning' | 'disconnected';
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e3b
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-895b
 export interface IntegrationProviderMeta {
   id: IntegrationProviderId;
   name: string;
   category: 'crm' | 'ats';
   description: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
@@ -43,6 +48,9 @@ export interface ProviderConnection {
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-bcb8
 =======
+=======
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-895b
 
 export interface ProviderConnection {
   id: string;
@@ -55,6 +63,7 @@ export interface ProviderConnection {
   lastSyncAt?: number;
   createdAt: number;
   updatedAt: number;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-3d1d
 }
 =======
@@ -76,6 +85,8 @@ export interface ProviderConnection {
 =======
   updatedAt: number;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e3b
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-895b
 }
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-4606
@@ -106,6 +117,7 @@ export interface ZapierEvent {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-bcb8
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-3d1d
@@ -113,6 +125,8 @@ export interface ZapierEvent {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-4606
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e3b
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-895b
 export interface IntegrationsState {
   connections: ProviderConnection[];
   logs: SyncLogEntry[];

@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 const { withErrorLogging } = require('./withErrorLogging.cjs');
 =======
 const { withErrorLogging } = require('./withErrorLogging.cjs');
@@ -32,6 +33,8 @@ module.exports = withErrorLogging(handler);
 =======
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e3b
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-895b
 const { withSentry } = require('./withSentry.cjs');
 
 async function handler(req, res) {
@@ -39,10 +42,13 @@ async function handler(req, res) {
     res.statusCode = 405;
     res.setHeader('Allow', 'POST');
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-4606
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e3b
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-895b
     res.end('Method Not Allowed');
     return;
   }
@@ -102,6 +108,7 @@ async function handler(req, res) {
 
 module.exports = withSentry(handler);
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-3d1d
 =======
   try {
@@ -119,3 +126,5 @@ module.exports = withErrorLogging(handler);
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-4606
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e3b
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-895b
