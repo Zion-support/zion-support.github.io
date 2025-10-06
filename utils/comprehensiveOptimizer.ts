@@ -22,8 +22,7 @@ import {
   setTwitterCardTags,
   setStructuredData,
   generateSitemap,
-  optimizeImages
-} from './seoUtils';
+  optimizeImages,
   setCanonicalUrl,
   setPageTitle,
   setMetaDescription,
@@ -246,6 +245,10 @@ export class ComprehensiveOptimizer {
       accessibility: this.accessibilityReport,
       performance: this.performanceMetrics,
       seo: true,
+    };
+  }
+}
+
 /**
  * Default optimization configuration
  */

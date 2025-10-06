@@ -4,9 +4,7 @@
  * Optimizes banner loading by implementing lazy loading and code splitting
  * to improve initial page load performance.
  */
-import { lazy } from 'react';
-import type { ComponentType } from 'react';
-import { lazy, ComponentType } from 'react';
+import { lazy, type ComponentType } from 'react';
 
 interface BannerModule {
   default: ComponentType<any>;
@@ -33,10 +31,6 @@ export const lazyLoadBanner = (
                 retryError,
               );
               // Return a fallback component
-              resolve({ default: () => null });
-                retryError
-              );
-              // Return a fallback component
               resolve({
                 default: () => (
                   <div className="banner-fallback">
@@ -57,13 +51,11 @@ export const lazyLoadBanner = (
 export const preloadBanner = (importFn: () => Promise<BannerModule>): void => {
   if (typeof window !== 'undefined') {
     // Preload on idle
-    if ('requestIdleCallback' in window) {
-      requestIdleCallback(() => {
-        importFn().catch(() => {
-          // Silently fail for preload
-        });
+    setTimeout(() => {
+      importFn().catch(() => {
+        // Silently fail for preload
       });
-    });
+    }, 0);
   }
 };
 /**
@@ -116,6 +108,8 @@ export class BannerObserver {
               this.observer?.unobserve(entry.target);
             }
           }
+        });
+      }, this.options);
     } else {
       setTimeout(() => {
         importFn().catch(() => {
@@ -130,7 +124,8 @@ export class BannerObserver {
   disconnect(): void {
     this.observer?.disconnect();
     this.loadedBanners.clear();
-};
+  }
+}
 /**
  * Banner loading state manager
  */
@@ -173,13 +168,6 @@ export const trackBannerPerformance = (
     // Example: gtag('event', 'banner_performance', {...metrics, banner: bannerName });
   }
 };
-export default {
-  lazyLoadBanner,
-  preloadBanners,
-  getBannerPriority,
-  sortBannersByPriority,
-  BannerObserver,
-  trackBannerPerformance,
 export const useBannerLoading = (componentName: string) => {
   const manager = new BannerLoadingManager();
   return {
@@ -187,4 +175,14 @@ export const useBannerLoading = (componentName: string) => {
     isLoaded: manager.isLoaded(componentName),
     setLoading: (loading: boolean) => manager.setLoading(componentName, loading)
   };
+};
+
+export default {
+  lazyLoadBanner,
+  preloadBanner,
+  getBannerPriority,
+  sortBannersByPriority,
+  BannerObserver,
+  trackBannerPerformance,
+  useBannerLoading
 };
