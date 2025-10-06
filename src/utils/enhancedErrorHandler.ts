@@ -69,11 +69,11 @@ class EnhancedErrorHandler {
     const fullContext: ErrorContext = {
       component: context.component || 'unknown',
       action: context.action || 'unknown',
-      userId: context.userId || 'anonymous',
+      userId: context.userId || '',
       timestamp: now,
       userAgent: navigator.userAgent,
       url: window.location.href,
-      stack: error.stack || 'No stack trace available',
+      stack: error.stack,
       severity: context.severity || 'medium',
     };
 
