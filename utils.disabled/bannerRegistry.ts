@@ -1,5 +1,4 @@
 /**
-<<<<<<< HEAD
  * Banner Registry - Centralized banner management system
  *
  * This module provides:
@@ -18,250 +17,213 @@ export interface BannerConfig {
   datePublished: string;
   tags: string[];
   enabled: boolean;
+  metadata?: {
+    description?: string;
+    author?: string;
+    version?: string;
+    lastModified?: string;
+  };
 }
 
-/**
- * Banner Registry - All banners in the system
- * Sorted by priority (highest first)
- */
-export const BANNER_REGISTRY: BannerConfig[] = [
-  // === TOP PRIORITY BANNERS (Priority 1-10) ===
-  {
-    id: 'january-2026-fresh-content',
-    name: 'January 2026 Fresh Content',
-    priority: 1,
-    category: 'announcement',
-    importPath: '/app/components/January2026FreshContentBanner.tsx',
-    datePublished: '2026-01-01',
-    tags: ['new', 'announcement', '2026'],
-    enabled: true,
-  },
-  {
-    id: 'autonomous-enterprise-breakthrough',
-    name: 'Autonomous Enterprise Breakthrough',
-    priority: 2,
-    category: 'breakthrough',
-    importPath: '/app/components/AutonomousEnterpriseBreakthroughBanner.tsx',
-    datePublished: '2025-12-15',
-    tags: ['breakthrough', 'enterprise', 'ai'],
-    enabled: true,
-  },
-  {
-    id: 'consensus-intelligence-breakthrough',
-    name: 'Consensus Intelligence Breakthrough',
-    priority: 3,
-    category: 'breakthrough',
-    importPath: '/app/components/ConsensusIntelligenceBreakthroughBanner.tsx',
-    datePublished: '2025-12-10',
-    tags: ['breakthrough', 'intelligence', 'consensus'],
-    enabled: true,
-  },
-
-  // === HIGH PRIORITY BANNERS (Priority 11-30) ===
-  {
-    id: 'ultimate-business-intelligence-2025',
-    name: 'Ultimate Business Intelligence 2025',
-    priority: 15,
-    category: 'feature',
-    importPath: '/app/components/UltimateBusinessIntelligence2025Banner.tsx',
-    datePublished: '2025-11-20',
-    tags: ['business-intelligence', '2025', 'feature'],
-    enabled: true,
-  },
-  {
-    id: 'newest-content-2025',
-    name: 'Newest Content 2025',
-    priority: 20,
-    category: 'content',
-    importPath: '/app/components/NewestContent2025Banner.tsx',
-    datePublished: '2025-11-15',
-    tags: ['content', '2025', 'new'],
-    enabled: true,
-  },
-
-  // === MEDIUM PRIORITY BANNERS (Priority 31-60) ===
-  {
-    id: 'september-30-new-content-2025',
-    name: 'September 30 New Content 2025',
-    priority: 40,
-    category: 'content',
-    importPath: '/app/components/September30NewContent2025Banner.tsx',
-    datePublished: '2025-09-30',
-    tags: ['content', 'september', '2025'],
-    enabled: true,
-  },
-
-  // === LOW PRIORITY BANNERS (Priority 61-100) ===
-  {
-    id: 'featured-service-card',
-    name: 'Featured Service Card',
-    priority: 80,
-    category: 'feature',
-    importPath: '/app/components/FeaturedServiceCard.tsx',
-    datePublished: '2025-08-15',
-    tags: ['service', 'feature', 'card'],
-    enabled: true,
-<<<<<<< HEAD
-  },
-=======
-  }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a4f
-];
-
-/**
- * Get banners by category
- */
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-export const getBannersByCategory = (category: BannerConfig['category']): BannerConfig[] => {
-  return BANNER_REGISTRY.filter(banner => banner.category === category && banner.enabled);
-};
-=======
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f83
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ee0f
-export function getBannersByCategory(category: BannerConfig['category']): BannerConfig[] {
-  return BANNER_REGISTRY.filter(banner => banner.category === category && banner.enabled);
-}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
-=======
-export function getBannersByCategory(category: BannerConfig['category']): BannerConfig[] {
-  return BANNER_REGISTRY.filter(banner => banner.category === category && banner.enabled);
-}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
-
-/**
- * Get banners by priority range
- */
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-export const getBannersByPriority = (minPriority: number, maxPriority: number): BannerConfig[] => {
-  return BANNER_REGISTRY.filter(
-    banner => banner.priority >= minPriority && 
-             banner.priority <= maxPriority && 
-             banner.enabled
-=======
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f83
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ee0f
-export function getBannersByPriority(minPriority: number, maxPriority: number): BannerConfig[] {
-  return BANNER_REGISTRY.filter(banner =>
-      banner.priority >= minPriority &&
-      banner.priority <= maxPriority &&
-      banner.enabled
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
-  );
-};
-
-/**
- * Get top priority banners
- */
-export function getTopPriorityBanners(count: number = 5): BannerConfig[] {
-  return BANNER_REGISTRY.filter(banner => banner.enabled)
-    .sort((a, b) => a.priority - b.priority)
-    .slice(0, count);
-}
-/**
- * Get banners by tags
- */
-export function getBannersByTags(tags: string[]): BannerConfig[] {
-  return BANNER_REGISTRY.filter(
-    banner => tags.some(tag => banner.tags.includes(tag)) && banner.enabled
-  );
-}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a4f
-
-/**
- * Get enabled banners sorted by priority
- */
-<<<<<<< HEAD
-=======
-export const getEnabledBanners = (): BannerConfig[] => {
-  return BANNER_REGISTRY
-    .filter(banner => banner.enabled)
-    .sort((a, b) => a.priority - b.priority);
-};
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a4f
-
-/**
- * Get banner by ID
- */
-<<<<<<< HEAD
-=======
-export const getBannerById = (id: string): BannerConfig | undefined => {
-  return BANNER_REGISTRY.find(banner => banner.id === id);
-};
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a4f
-
-/**
- * Get banners by tags (duplicate function - removing)
- */
-<<<<<<< HEAD
-=======
-
-/**
- * Get recent banners (published within last N days)
- */
-export const getRecentBanners = (days: number = 30): BannerConfig[] => {
-  const cutoffDate = new Date();
-  cutoffDate.setDate(cutoffDate.getDate() - days);
-  
-  return BANNER_REGISTRY.filter(banner => {
-    if (!banner.enabled) return false;
-    const publishDate = new Date(banner.datePublished);
-    return publishDate >= cutoffDate;
-  });
-};
-
-export default BANNER_REGISTRY;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a4f
-=======
- * Banner Registry Utility
- */
-export interface BannerInfo {
-  id: string;
-  name: string;
-  component: any;
-  priority: number;
-  category: string;
+export interface BannerInstance {
+  config: BannerConfig;
+  component?: React.ComponentType;
+  loaded: boolean;
+  error?: string;
+  lastRendered?: Date;
+  renderCount: number;
 }
 
 export class BannerRegistry {
-  private banners = new Map<string, BannerInfo>();
+  private banners: Map<string, BannerInstance> = new Map();
+  private categories: Map<string, string[]> = new Map();
+  private priorityQueue: string[] = [];
+  private maxConcurrentBanners: number = 3;
+  private loadingPromises: Map<string, Promise<void>> = new Map();
 
-  register(banner: BannerInfo): void {
-    this.banners.set(banner.id, banner);
+  constructor(maxConcurrentBanners: number = 3) {
+    this.maxConcurrentBanners = maxConcurrentBanners;
+    this.initializeCategories();
   }
 
-  unregister(id: string): void {
-    this.banners.delete(id);
+  private initializeCategories(): void {
+    this.categories.set('breakthrough', []);
+    this.categories.set('content', []);
+    this.categories.set('success-story', []);
+    this.categories.set('feature', []);
+    this.categories.set('announcement', []);
   }
 
-  get(id: string): BannerInfo | undefined {
+  public registerBanner(config: BannerConfig): void {
+    const instance: BannerInstance = {
+      config,
+      loaded: false,
+      renderCount: 0,
+    };
+
+    this.banners.set(config.id, instance);
+    this.updateCategory(config.id, config.category);
+    this.updatePriorityQueue();
+  }
+
+  public async loadBanner(id: string): Promise<void> {
+    const instance = this.banners.get(id);
+    if (!instance || instance.loaded) {
+      return;
+    }
+
+    // Check if already loading
+    if (this.loadingPromises.has(id)) {
+      return this.loadingPromises.get(id);
+    }
+
+    const loadPromise = this.performBannerLoad(instance);
+    this.loadingPromises.set(id, loadPromise);
+
+    try {
+      await loadPromise;
+    } finally {
+      this.loadingPromises.delete(id);
+    }
+  }
+
+  private async performBannerLoad(instance: BannerInstance): Promise<void> {
+    try {
+      const module = await import(instance.config.importPath);
+      instance.component = module.default || module[instance.config.name];
+      instance.loaded = true;
+    } catch (error) {
+      instance.error = error instanceof Error ? error.message : 'Unknown error';
+      console.error(`Failed to load banner ${instance.config.id}:`, error);
+    }
+  }
+
+  public getBanner(id: string): BannerInstance | undefined {
     return this.banners.get(id);
   }
 
-  getAll(): BannerInfo[] {
-    return Array.from(this.banners.values());
+  public getBannersByCategory(category: string): BannerInstance[] {
+    const bannerIds = this.categories.get(category) || [];
+    return bannerIds
+      .map(id => this.banners.get(id))
+      .filter((banner): banner is BannerInstance => banner !== undefined);
   }
 
-  getByCategory(category: string): BannerInfo[] {
-    return Array.from(this.banners.values()).filter(
-      banner => banner.category === category
-    );
+  public getTopBanners(count: number = this.maxConcurrentBanners): BannerInstance[] {
+    return this.priorityQueue
+      .slice(0, count)
+      .map(id => this.banners.get(id))
+      .filter((banner): banner is BannerInstance => banner !== undefined);
+  }
+
+  public getEnabledBanners(): BannerInstance[] {
+    return Array.from(this.banners.values()).filter(instance => instance.config.enabled);
+  }
+
+  public async preloadBanners(count: number = this.maxConcurrentBanners): Promise<void> {
+    const topBanners = this.getTopBanners(count);
+    const loadPromises = topBanners
+      .filter(instance => !instance.loaded && !instance.error)
+      .map(instance => this.loadBanner(instance.config.id));
+
+    await Promise.allSettled(loadPromises);
+  }
+
+  public recordBannerRender(id: string): void {
+    const instance = this.banners.get(id);
+    if (instance) {
+      instance.renderCount++;
+      instance.lastRendered = new Date();
+    }
+  }
+
+  public getBannerStats(): object {
+    const banners = Array.from(this.banners.values());
+    const loadedBanners = banners.filter(banner => banner.loaded);
+    const errorBanners = banners.filter(banner => banner.error);
+
+    return {
+      totalBanners: banners.length,
+      loadedBanners: loadedBanners.length,
+      errorBanners: errorBanners.length,
+      categories: Object.fromEntries(this.categories),
+      topRenderedBanners: banners
+        .sort((a, b) => b.renderCount - a.renderCount)
+        .slice(0, 5)
+        .map(banner => ({
+          id: banner.config.id,
+          name: banner.config.name,
+          renderCount: banner.renderCount,
+        })),
+    };
+  }
+
+  private updateCategory(bannerId: string, category: string): void {
+    // Remove from all categories first
+    this.categories.forEach((bannerIds, cat) => {
+      const index = bannerIds.indexOf(bannerId);
+      if (index > -1) {
+        bannerIds.splice(index, 1);
+      }
+    });
+
+    // Add to new category
+    const categoryBanners = this.categories.get(category) || [];
+    if (!categoryBanners.includes(bannerId)) {
+      categoryBanners.push(bannerId);
+      this.categories.set(category, categoryBanners);
+    }
+  }
+
+  private updatePriorityQueue(): void {
+    const enabledBanners = this.getEnabledBanners();
+    this.priorityQueue = enabledBanners
+      .sort((a, b) => a.config.priority - b.config.priority)
+      .map(instance => instance.config.id);
+  }
+
+  public enableBanner(id: string): void {
+    const instance = this.banners.get(id);
+    if (instance) {
+      instance.config.enabled = true;
+      this.updatePriorityQueue();
+    }
+  }
+
+  public disableBanner(id: string): void {
+    const instance = this.banners.get(id);
+    if (instance) {
+      instance.config.enabled = false;
+      this.updatePriorityQueue();
+    }
+  }
+
+  public removeBanner(id: string): void {
+    this.banners.delete(id);
+    this.categories.forEach((bannerIds, category) => {
+      const index = bannerIds.indexOf(id);
+      if (index > -1) {
+        bannerIds.splice(index, 1);
+      }
+    });
+    this.priorityQueue = this.priorityQueue.filter(bannerId => bannerId !== id);
+  }
+
+  public destroy(): void {
+    this.banners.clear();
+    this.categories.clear();
+    this.priorityQueue = [];
+    this.loadingPromises.clear();
   }
 }
 
-export const bannerRegistry = new BannerRegistry();
-export default bannerRegistry;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3fed
+// Utility functions
+export const createBannerRegistry = (maxConcurrentBanners?: number): BannerRegistry => {
+  return new BannerRegistry(maxConcurrentBanners);
+};
+
+export const registerBanner = (registry: BannerRegistry, config: BannerConfig): void => {
+  registry.registerBanner(config);
+};
+
+export default BannerRegistry;
