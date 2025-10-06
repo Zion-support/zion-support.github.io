@@ -51,7 +51,7 @@ const Contact = () => (
 
 // Team, Privacy, and Terms components are now imported from app directory
 
-function App() {
+function App(): React.JSX.Element {
   useEffect(() => {
     // Initialize basic optimizations
     const initializeOptimizations = () => {
@@ -105,7 +105,11 @@ class ErrorBoundary extends React.Component<
     this.state = { hasError: false };
   }
 
-  static getDerivedStateFromError(_error: Error) {
+<<<<<<< HEAD
+  static getDerivedStateFromError() {
+=======
+  static getDerivedStateFromError(_error: Error) { // eslint-disable-line @typescript-eslint/no-unused-vars
+>>>>>>> main
     return { hasError: true };
   }
 

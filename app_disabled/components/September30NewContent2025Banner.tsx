@@ -1,7 +1,5 @@
 import React from 'react';
 import Link from 'next/link';
-import { Sparkles, TrendingUp, ArrowRight, Zap, Rocket, Star } from 'lucide-react';
-
 const September30NewContent2025Banner: React.FC = () => {
   const newArticles = [
     {
@@ -46,38 +44,6 @@ const September30NewContent2025Banner: React.FC = () => {
       date: '2025-09-30',
       readTime: '16 min',
       icon: '👁️',
-      gradient: 'from-emerald-500 to-teal-600'
-    }
-  ];
-
-  return (
-    <section className="relative bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white overflow-hidden">
-      {/* Animated Background Effects */}
-      <div className="absolute inset-0">
-        <div className="absolute top-10 left-10 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute top-40 right-10 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute bottom-10 left-1/2 w-80 h-80 bg-cyan-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
-      </div>
-
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <div className="flex items-center justify-center gap-2 mb-6">
-            <Sparkles className="w-6 h-6 text-yellow-400" />
-            <span className="text-lg font-semibold bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">
-              🚀 BREAKING: 4 REVOLUTIONARY ARTICLES JUST PUBLISHED!
-            </span>
-            <Sparkles className="w-6 h-6 text-yellow-400" />
-          </div>
-
-          <h2 className="text-5xl md:text-6xl font-bold mb-6">
-            <span className="bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
-              September 30, 2025
-            </span>
-            <br />
-            <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-              Cutting-Edge AI Insights
-            </span>
           </h2>
           
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -153,56 +119,3 @@ const September30NewContent2025Banner: React.FC = () => {
         </div>
 
         {/* Call-to-Action Section */}
-        <div className="text-center bg-white/5 backdrop-blur-sm rounded-2xl p-12 border border-white/20 mb-16">
-          <div className="flex items-center justify-center gap-4 mb-6">
-            <Rocket className="w-8 h-8 text-yellow-400" />
-            <h3 className="text-3xl font-bold">
-              Transform Your Enterprise with Cutting-Edge AI
-            </h3>
-            <Star className="w-8 h-8 text-green-400" />
-          </div>
-          
-          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Join 75,000+ AI leaders implementing these breakthrough technologies. Get expert guidance 
-            from Zion Tech Group's AI transformation specialists.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link
-              href="/contact"
-              className="group flex items-center gap-3 bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-600 hover:to-orange-600 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl"
-            >
-              <Sparkles className="w-5 h-5" />
-              <span>Start Your AI Journey</span>
-            </Link>
-            
-            <Link
-              href="/blog"
-              className="group flex items-center gap-3 border-2 border-white/30 hover:border-white/60 text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 hover:bg-white/10"
-            >
-              <span>Explore All Content</span>
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </Link>
-          </div>
-        </div>
-
-        {/* Stats Section */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-          {[
-            { value: '75,000+', label: 'AI Leaders' },
-            { value: '15B+', label: 'Data Points Processed Daily' },
-            { value: '99.9%', label: 'System Uptime' },
-            { value: '8M+', label: 'Autonomous Operations Hours' }
-          ].map((stat, index) => (
-            <div key={index} className="text-center">
-              <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
-              <div className="text-gray-400">{stat.label}</div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-};
-
-export default September30NewContent2025Banner;

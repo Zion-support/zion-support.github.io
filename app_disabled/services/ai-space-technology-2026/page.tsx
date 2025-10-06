@@ -1,8 +1,8 @@
-import Link from 'next/link';
+// Using regular anchor tags instead of react-router-dom for simplicity
 import { ArrowRight, Satellite } from 'lucide-react';
 
 
-export const metadata = {
+const metadata = {
   title: 'AI Space Technology 2026 Service | Autonomous Space Operations | Zion Tech Group',
   description: 'Revolutionary AI space technology service. Achieve 99.9% autonomous operations, $2.3B cost savings, and 500% efficiency gains in Satellite management and space exploration.',
   keywords: 'AI space technology service, autonomous satellites, space AI operations, Satellite intelligence, orbital management, space exploration AI',
