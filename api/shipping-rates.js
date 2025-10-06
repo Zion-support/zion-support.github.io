@@ -15,6 +15,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default async function handler(req, res) {
 =======
 const { withSentry } = require('./withSentry.cjs');
@@ -77,12 +78,16 @@ export default async function handler(req, res) {
 =======
 export default async function handler(req, res) {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6abd
+=======
+export default async function handler(req, res) {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ee0f
   if (req.method !== 'POST') {
     res.statusCode = 405;
     res.setHeader('Allow', 'POST');
     res.end('Method Not Allowed');
     return;
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -206,10 +211,18 @@ export default async function handler(req, res) {
     const apiKey = process.env.EASYPOST_API_KEY;
     
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6abd
+=======
+
+  try {
+    const { fromAddress, toAddress, parcel } = req.body || {};
+    const apiKey = process.env.EASYPOST_API_KEY;
+    
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ee0f
     const response = await fetch('https://api.easypost.com/v2/shipments', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -242,6 +255,8 @@ export default async function handler(req, res) {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6abd
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ee0f
         Authorization: `Bearer ${apiKey}`,
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0a8c
 =======
@@ -274,6 +289,7 @@ export default async function handler(req, res) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
@@ -313,6 +329,9 @@ export default async function handler(req, res) {
 =======
     
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6abd
+=======
+    
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ee0f
     if (!response.ok) {
       res.statusCode = 500;
       res.json({ error: data.error || 'Failed to fetch rates' });
@@ -326,6 +345,7 @@ export default async function handler(req, res) {
     res.statusCode = 500;
     res.json({ error: err.message });
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -401,3 +421,6 @@ module.exports = withSentry(handler);
 =======
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6abd
+=======
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ee0f

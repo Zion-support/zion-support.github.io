@@ -16,6 +16,7 @@ export const focusManagement = {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-698a
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
@@ -40,11 +41,15 @@ export const focusManagement = {
 =======
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6abd
+=======
+      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ee0f
     );
     const firstElement = focusableElements[0] as HTMLElement;
     const lastElement = focusableElements[
       focusableElements.length - 1
     ] as HTMLElement;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
@@ -54,6 +59,8 @@ export const focusManagement = {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6abd
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ee0f
 
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Tab') {
@@ -74,16 +81,20 @@ export const focusManagement = {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-efe9
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6abd
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ee0f
 
     element.addEventListener('keydown', handleKeyDown);
     firstElement?.focus();
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -97,10 +108,13 @@ export const focusManagement = {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6abd
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ee0f
     return () => {
       element.removeEventListener('keydown', handleKeyDown);
     };
   },
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -122,10 +136,14 @@ export const focusManagement = {
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6abd
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ee0f
   // Restore focus to previous element
   restoreFocus: (element: HTMLElement): void => {
     element.focus();
   },
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -142,6 +160,8 @@ export const focusManagement = {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6abd
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ee0f
 
   // Skip to main content
   skipToMain: (): void => {
@@ -230,6 +250,7 @@ export const ariaUtils = {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   setAriaAttributes: (element: HTMLElement, attributes: Record<string, string>): void => {
 =======
   // Set ARIA attributes
@@ -240,10 +261,13 @@ export const ariaUtils = {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6abd
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ee0f
   setAriaAttributes: (
     element: HTMLElement,
     attributes: Record<string, string>
   ): void => {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
@@ -261,11 +285,14 @@ export const ariaUtils = {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6abd
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ee0f
     Object.entries(attributes).forEach(([key, value]) => {
       element.setAttribute(key, value);
     });
   },
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -286,10 +313,14 @@ export const ariaUtils = {
 =======
   // Announce to screen readers
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6abd
+=======
+  // Announce to screen readers
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ee0f
   announce: (
     message: string,
     priority: 'polite' | 'assertive' = 'polite'
   ): void => {
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
 =======
@@ -319,10 +350,13 @@ export const ariaUtils = {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6abd
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ee0f
     const announcement = document.createElement('div');
     announcement.setAttribute('aria-live', priority);
     announcement.setAttribute('aria-atomic', 'true');
     announcement.className = 'sr-only';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -336,9 +370,12 @@ export const ariaUtils = {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6abd
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ee0f
     announcement.textContent = message;
     
     document.body.appendChild(announcement);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -368,6 +405,8 @@ export const ariaUtils = {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6abd
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ee0f
     setTimeout(() => {
       document.body.removeChild(announcement);
     }, 1000);
@@ -382,6 +421,7 @@ export const ariaUtils = {
   }
 };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -410,10 +450,16 @@ export const keyboardNavigation = {
 export const keyboardNavigation = {
   // Handle arrow key navigation for lists
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6abd
+=======
+// Keyboard navigation utilities
+export const keyboardNavigation = {
+  // Handle arrow key navigation for lists
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ee0f
   handleArrowKeys: (
     event: KeyboardEvent,
     items: HTMLElement[],
     currentIndex: number,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -443,6 +489,13 @@ export const keyboardNavigation = {
     const isHorizontal = orientation === 'horizontal';
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6abd
+=======
+    orientation: 'horizontal' | 'vertical' = 'vertical'
+  ): number => {
+    const isVertical = orientation === 'vertical';
+    const isHorizontal = orientation === 'horizontal';
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ee0f
     switch (event.key) {
       case isVertical ? 'ArrowDown' : 'ArrowRight':
         event.preventDefault();
@@ -456,6 +509,7 @@ export const keyboardNavigation = {
       case 'End':
         event.preventDefault();
         return items.length - 1;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       default:
@@ -493,6 +547,10 @@ export const keyboardNavigation = {
       default:
         return currentIndex;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6abd
+=======
+      default:
+        return currentIndex;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ee0f
     }
 
     return currentIndex;
@@ -501,6 +559,7 @@ export const keyboardNavigation = {
         return currentIndex;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d
   },
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -539,6 +598,17 @@ export const keyboardNavigation = {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6abd
+=======
+
+  // Handle Enter and Space key activation
+  handleActivation: (
+    event: KeyboardEvent,
+    callback: () => void
+  ): void => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      callback();
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ee0f
     }
 
     if (key === 'End') {
@@ -550,6 +620,7 @@ export const keyboardNavigation = {
     return currentIndex;
   },
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1088,9 +1159,66 @@ export const formUtils = {
   addErrorMessage: (input: HTMLInputElement, errorMessage: string): void => {
     const errorId = `error-${input.id}`;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
+=======
+
+// Color and contrast utilities
+export const colorUtils = {
+  // Check if color meets WCAG contrast requirements
+  getContrastRatio: (color1: string, color2: string): number => {
+    // This is a simplified implementation
+    // In a real application, you'd use a proper color contrast library
+    return 4.5; // Placeholder value
+  },
+
+  // Check if text color meets accessibility standards
+  isAccessibleTextColor: (
+    textColor: string,
+    backgroundColor: string,
+    level: 'AA' | 'AAA' = 'AA'
+  ): boolean => {
+    const ratio = colorUtils.getContrastRatio(textColor, backgroundColor);
+    return level === 'AA' ? ratio >= 4.5 : ratio >= 7;
+  },
+};
+
+// Screen reader utilities
+export const screenReaderUtils = {
+  // Hide element from screen readers
+  hideFromScreenReader: (element: HTMLElement): void => {
+    element.setAttribute('aria-hidden', 'true');
+  },
+
+  // Show element to screen readers
+  showToScreenReader: (element: HTMLElement): void => {
+    element.removeAttribute('aria-hidden');
+  },
+
+  // Make element visible only to screen readers
+  srOnly: (element: HTMLElement): void => {
+    element.className = 'sr-only';
+  },
+};
+
+// Form accessibility utilities
+export const formUtils = {
+  // Associate label with form control
+  associateLabel: (label: HTMLLabelElement, control: HTMLElement): void => {
+    const id = control.id || ariaUtils.generateId('form-control');
+    control.id = id;
+    label.setAttribute('for', id);
+  },
+
+  // Add error message to form control
+  addErrorMessage: (
+    control: HTMLElement,
+    message: string
+  ): HTMLElement => {
+    const errorId = ariaUtils.generateId('error');
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ee0f
     const errorElement = document.createElement('div');
     
     errorElement.id = errorId;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1155,9 +1283,31 @@ export const formUtils = {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6abd
+=======
+    errorElement.className = 'error-message';
+    errorElement.textContent = message;
+    errorElement.setAttribute('role', 'alert');
+    
+    control.setAttribute('aria-describedby', errorId);
+    control.setAttribute('aria-invalid', 'true');
+    
+    control.parentNode?.insertBefore(errorElement, control.nextSibling);
+    return errorElement;
+  },
+
+  // Remove error message from form control
+  removeErrorMessage: (control: HTMLElement): void => {
+    const errorId = control.getAttribute('aria-describedby');
+    if (errorId) {
+      const errorElement = document.getElementById(errorId);
+      errorElement?.remove();
+      control.removeAttribute('aria-describedby');
+      control.removeAttribute('aria-invalid');
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ee0f
     }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
   },
+<<<<<<< HEAD
 };
 
 <<<<<<< HEAD
@@ -1886,3 +2036,6 @@ export const accessibility = {
 
 export default accessibility;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-efe9
+=======
+};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ee0f

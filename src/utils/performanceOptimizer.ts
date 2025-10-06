@@ -64,6 +64,7 @@ export interface WebVitalsMetrics {
 /**
  * Performance budget checker
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -118,6 +119,8 @@ export interface WebVitalsMetrics {
 >>>>>>> 71655f282840ed9a4a2a6696e410390223898ad3
 >>>>>>> main
 >>>>>>> main
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ee0f
  */
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
 export interface PerformanceBudget {
@@ -395,6 +398,7 @@ export const throttle = <T extends (...args: unknown[]) => unknown>(
 };
 
 /**
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -689,6 +693,27 @@ export const optimizeScrollPerformance = (): void => {
     // Scroll optimization logic here
     ticking = false;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d
+=======
+ * Check if performance budget is exceeded
+ */
+export const checkPerformanceBudget = (
+  metrics: WebVitalsMetrics,
+  budget: PerformanceBudget
+): { passed: boolean; violations: string[] } => {
+  const violations: string[] = [];
+
+  if (metrics.FCP && metrics.FCP > budget.maxFirstLoad) {
+    violations.push(`FCP ${metrics.FCP}ms exceeds budget ${budget.maxFirstLoad}ms`);
+  }
+
+  if (metrics.LCP && metrics.LCP > budget.maxInteractive) {
+    violations.push(`LCP ${metrics.LCP}ms exceeds budget ${budget.maxInteractive}ms`);
+  }
+
+  return {
+    passed: violations.length === 0,
+    violations
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ee0f
   };
 
   const requestTick = () => {
@@ -702,6 +727,7 @@ export const optimizeScrollPerformance = (): void => {
 };
 
 /**
+<<<<<<< HEAD
 <<<<<<< HEAD
  * Monitor long tasks
 <<<<<<< HEAD
@@ -824,7 +850,36 @@ export class PerformanceMonitor {
 =======
     clearTimeout(id);
 >>>>>>> main
+=======
+ * Get performance metrics from browser
+ */
+export const getPerformanceMetrics = (): WebVitalsMetrics => {
+  if (typeof window === 'undefined') {
+    return {};
   }
+
+  const metrics: WebVitalsMetrics = {};
+
+  // Get FCP
+  const fcpEntry = performance.getEntriesByName('first-contentful-paint')[0];
+  if (fcpEntry) {
+    metrics.FCP = fcpEntry.startTime;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ee0f
+  }
+
+  // Get LCP
+  const lcpEntries = performance.getEntriesByType('largest-contentful-paint');
+  if (lcpEntries.length > 0) {
+    metrics.LCP = lcpEntries[lcpEntries.length - 1].startTime;
+  }
+
+  // Get TTFB
+  const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+  if (navigationEntry) {
+    metrics.TTFB = navigationEntry.responseStart - navigationEntry.requestStart;
+  }
+
+  return metrics;
 };
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
 
@@ -842,24 +897,41 @@ export class PerformanceMonitor {
 
 <<<<<<< HEAD
 /**
- * Preload route
+ * Optimize images for performance
  */
+<<<<<<< HEAD
 <<<<<<< HEAD
 export function debounce<T extends (...args: unknown[]) => unknown>(
 =======
 export const preloadRoute = (route: string): void => {
-  if (typeof document === 'undefined') return;
+=======
+export const optimizeImage = (src: string, width?: number, quality: number = 80): string => {
+  // This would typically integrate with an image optimization service
+  const params = new URLSearchParams();
+  if (width) params.set('w', width.toString());
+  params.set('q', quality.toString());
   
+  return `${src}?${params.toString()}`;
+};
+
+/**
+ * Preload critical resources
+ */
+export const preloadResource = (href: string, as: string): void => {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ee0f
+  if (typeof document === 'undefined') return;
+
   const link = document.createElement('link');
-  link.rel = 'prefetch';
-  link.as = 'script';
-  link.href = route;
+  link.rel = 'preload';
+  link.href = href;
+  link.as = as;
   document.head.appendChild(link);
 };
 
 /**
- * Monitor long tasks
+ * Lazy load images
  */
+<<<<<<< HEAD
 export const monitorLongTasks = (callback: (entries: PerformanceEntry[]) => void): PerformanceObserver | null => {
   if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return null;
   
@@ -1329,11 +1401,73 @@ export const collectPerformanceMetrics = (): WebVitalsMetrics => {
               img.classList.remove('lazy');
               imageObserver.unobserve(img);
             }
+=======
+export const lazyLoadImage = (img: HTMLImageElement): void => {
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const image = entry.target as HTMLImageElement;
+          if (image.dataset.src) {
+            image.src = image.dataset.src;
+            image.removeAttribute('data-src');
+            observer.unobserve(image);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ee0f
           }
+        }
+      });
+    });
+
+    observer.observe(img);
+  } else {
+    // Fallback for older browsers
+    img.src = img.dataset.src || '';
+  }
+};
+
+/**
+ * Performance monitoring
+ */
+export class PerformanceMonitor {
+  private metrics: WebVitalsMetrics = {};
+  private budget: PerformanceBudget;
+
+  constructor(budget: PerformanceBudget) {
+    this.budget = budget;
+  }
+
+  startMonitoring(): void {
+    if (typeof window === 'undefined') return;
+
+    // Monitor Core Web Vitals
+    this.observeLCP();
+    this.observeFID();
+    this.observeCLS();
+  }
+
+  private observeLCP(): void {
+    if ('PerformanceObserver' in window) {
+      const observer = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        const lastEntry = entries[entries.length - 1];
+        this.metrics.LCP = lastEntry.startTime;
+      });
+
+      observer.observe({ entryTypes: ['largest-contentful-paint'] });
+    }
+  }
+
+  private observeFID(): void {
+    if ('PerformanceObserver' in window) {
+      const observer = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        entries.forEach((entry) => {
+          this.metrics.FID = entry.processingStart - entry.startTime;
         });
       });
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-efe9
 
+<<<<<<< HEAD
   // Get navigation timing
   if (performance.timing) {
     const timing = performance.timing;
@@ -3390,3 +3524,44 @@ export const performanceOptimizer = PerformanceOptimizer.getInstance();
 >>>>>>> main
 >>>>>>> main
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
+=======
+      observer.observe({ entryTypes: ['first-input'] });
+    }
+  }
+
+  private observeCLS(): void {
+    if ('PerformanceObserver' in window) {
+      let clsValue = 0;
+      const observer = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        entries.forEach((entry) => {
+          if (!(entry as any).hadRecentInput) {
+            clsValue += (entry as any).value;
+          }
+        });
+        this.metrics.CLS = clsValue;
+      });
+
+      observer.observe({ entryTypes: ['layout-shift'] });
+    }
+  }
+
+  getMetrics(): WebVitalsMetrics {
+    return { ...this.metrics };
+  }
+
+  checkBudget(): { passed: boolean; violations: string[] } {
+    return checkPerformanceBudget(this.metrics, this.budget);
+  }
+}
+
+/**
+ * Default performance budget
+ */
+export const DEFAULT_BUDGET: PerformanceBudget = {
+  maxBundleSize: 500, // 500KB
+  maxImageSize: 200, // 200KB
+  maxFirstLoad: 2000, // 2s
+  maxInteractive: 3000 // 3s
+};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ee0f

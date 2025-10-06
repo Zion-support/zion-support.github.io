@@ -124,6 +124,7 @@ export class BannerPrioritizationEngine {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   getVisibleBanners(): BannerMetadata[] {
     return this.getPrioritizedBanners()
       .slice(0, this.visibilityThreshold)
@@ -131,6 +132,8 @@ export class BannerPrioritizationEngine {
 =======
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ee0f
   getBannersByLoadStrategy(strategy: 'immediate' | 'lazy' | 'on-demand'): BannerMetadata[] {
     return Array.from(this.banners.values()).filter(banner => banner.loadStrategy === strategy && banner.isVisible);
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f83

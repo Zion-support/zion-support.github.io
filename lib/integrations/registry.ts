@@ -11,6 +11,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { IntegrationProviderMeta } from './types';
 export const PROVIDERS: IntegrationProviderMeta[] = [
 <<<<<<< HEAD
@@ -112,6 +113,11 @@ export const PROVIDERS: IntegrationProviderMeta[] = [
 >>>>>>> cursor/fix-errors-and-merge-to-main-bd65
 >>>>>>> 73aae067a8789e7f94c7cf242d65c42e6717fb43
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
+=======
+import { IntegrationProviderMeta } from './types';
+
+export const PROVIDERS: IntegrationProviderMeta[] = [
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ee0f
   {
     id: 'salesforce',
     name: 'Salesforce',
@@ -167,6 +173,7 @@ export const PROVIDERS: IntegrationProviderMeta[] = [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   { id: 'bamboohr', name: 'BambooHR', category: 'ats', description: 'HRIS & ATS' }
 ];
@@ -215,6 +222,9 @@ export const PROVIDERS: IntegrationProviderMeta[] = [
 ];
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6abd
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ee0f
 export function getProviderById(id: string): IntegrationProviderMeta | undefined {
   return PROVIDERS.find(p => p.id === id);
 }

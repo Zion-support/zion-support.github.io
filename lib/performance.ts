@@ -19,6 +19,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
 import { onCLS, onFCP, onLCP, onTTFB } from 'web-vitals';
@@ -111,6 +112,10 @@ import type { Metric } from 'web-vitals';
 import { onCLS, onFCP, onLCP, onTTFB, type Metric } from 'web-vitals';
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6abd
+=======
+import { getCLS, getFID, getFCP, getLCP, getTTFB, Metric } from 'web-vitals';
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ee0f
 // Types
 interface PerformanceMetric {
   name: string;
@@ -120,6 +125,7 @@ interface PerformanceMetric {
   id: string;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -182,6 +188,8 @@ interface PerformanceMetric {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6abd
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ee0f
 interface PerformanceReport {
   metrics: PerformanceMetric[];
   timestamp: string;
@@ -195,6 +203,7 @@ const THRESHOLDS = {
   FID: { good: 100, poor: 300 },
   FCP: { good: 1800, poor: 3000 },
   LCP: { good: 2500, poor: 4000 },
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -253,11 +262,15 @@ const THRESHOLDS = {
 =======
   TTFB: { good: 800, poor: 1800 },
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6abd
+=======
+  TTFB: { good: 800, poor: 1800 },
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ee0f
 };
 
 /**
  * Get rating based on metric value
  */
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -321,6 +334,9 @@ function getRating(name: string, value: number): 'good' | 'needs-improvement' | 
 =======
 function getRating(name: string, value: number): 'good' | 'needs-improvement' | 'poor' {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6abd
+=======
+function getRating(name: string, value: number): 'good' | 'needs-improvement' | 'poor' {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ee0f
   const threshold = THRESHOLDS[name as keyof typeof THRESHOLDS];
   if (!threshold) return 'good';
   if (value <= threshold.good) return 'good';
@@ -332,6 +348,7 @@ function getRating(name: string, value: number): 'good' | 'needs-improvement' | 
  * Send metric to analytics and custom endpoints
  */
 function sendToAnalytics(metric: Metric): void {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -368,11 +385,14 @@ function reportMetric(metric: Metric) {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6abd
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ee0f
   const performanceMetric: PerformanceMetric = {
     name: metric.name,
     value: metric.value,
     rating: getRating(metric.name, metric.value),
     delta: metric.delta,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -440,6 +460,9 @@ function reportMetric(metric: Metric) {
 =======
     id: metric.id,
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6abd
+=======
+    id: metric.id,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ee0f
   };
 
   // Log in development
@@ -447,6 +470,7 @@ function reportMetric(metric: Metric) {
     console.log('Performance Metric:', performanceMetric);
   }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -682,12 +706,24 @@ function reportMetric(metric: Metric) {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
   }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
+=======
+  // Send to analytics
+  if (typeof window !== 'undefined' && (window as any).gtag) {
+    (window as any).gtag('event', metric.name, {
+      event_category: 'Web Vitals',
+      event_label: metric.id,
+      value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
+      non_interaction: true,
+    });
+  }
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ee0f
 }
 
 /**
  * Initialize performance monitoring
  */
 export function initPerformanceMonitoring(): void {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -855,9 +891,22 @@ export function generatePerformanceReport(): PerformanceReport {
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6abd
+=======
+  if (typeof window === 'undefined') return;
+
+  // Track Core Web Vitals
+  getCLS(sendToAnalytics);
+  getFID(sendToAnalytics);
+  getFCP(sendToAnalytics);
+  getLCP(sendToAnalytics);
+  getTTFB(sendToAnalytics);
+}
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ee0f
 /**
- * Measure custom performance timing
+ * Get current performance report
  */
+<<<<<<< HEAD
 export function measurePerformance(name: string, startTime: number): number {
   const duration = performance.now() - startTime;
 
@@ -1801,10 +1850,21 @@ export function generatePerformanceReport(): PerformanceReport {
 =======
     userAgent: navigator.userAgent,
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6abd
+=======
+export function getPerformanceReport(): PerformanceReport {
+  const metrics: PerformanceMetric[] = [];
+  
+  return {
+    metrics,
+    timestamp: new Date().toISOString(),
+    url: typeof window !== 'undefined' ? window.location.href : '',
+    userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : '',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ee0f
   };
 }
 
 /**
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
  * Check if performance monitoring is supported
@@ -2497,10 +2557,15 @@ export {
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-bd65
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
+=======
+ * Check if performance is within acceptable limits
+ */
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ee0f
 export function isPerformanceAcceptable(): boolean {
   // This would typically check against stored metrics
   // For now, return true as a placeholder
   return true;
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
@@ -2584,3 +2649,6 @@ export function usePerformanceMonitoring() {
   getConnectionType,
 };
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6abd
+=======
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ee0f

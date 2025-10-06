@@ -9,6 +9,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { lazy } from 'react';
 =======
 import React, { lazy } from 'react';
@@ -28,6 +29,10 @@ import { lazy, ComponentType } from 'react';
 import { lazy, ComponentType } from 'react';
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
+=======
+import { lazy, ComponentType } from 'react';
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ee0f
 interface BannerModule {
   default: ComponentType<any>;
 }
@@ -56,6 +61,7 @@ export const lazyLoadBanner = (
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-9d58
 =======
@@ -64,10 +70,13 @@ export const lazyLoadBanner = (
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ee0f
                 retryError
               );
               // Return a fallback component
               resolve({ default: () => null });
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -102,6 +111,8 @@ export const lazyLoadBanner = (
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ee0f
             });
         }, 1000);
       });
@@ -138,10 +149,12 @@ export const getBannerPriority = (bannerName: string): number => {
     }
     return 2;
   }
+  
   // 2026+ content gets medium priority
   if (bannerName.includes('2026') || bannerName.includes('2027')) {
     return 3;
   }
+  
   // Older content gets lower priority
   return 4;
 };
@@ -154,6 +167,7 @@ export const sortBannersByPriority = (bannerNames: string[]): string[] => {
     return getBannerPriority(a) - getBannerPriority(b);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   // Preload in the background
   importFn().catch(error => {
@@ -163,10 +177,13 @@ export const sortBannersByPriority = (bannerNames: string[]): string[] => {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ee0f
   });
 };
 
 /**
+<<<<<<< HEAD
  * Banner loading state management
  */
 <<<<<<< HEAD
@@ -429,3 +446,63 @@ export const loadBannersByPriority = (
 =======
 };
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
+=======
+ * Banner loading configuration
+ */
+export interface BannerConfig {
+  name: string;
+  importFn: () => Promise<BannerModule>;
+  priority: number;
+  preload: boolean;
+}
+
+/**
+ * Create banner configuration
+ */
+export const createBannerConfig = (
+  name: string,
+  importFn: () => Promise<BannerModule>,
+  preload: boolean = false
+): BannerConfig => ({
+  name,
+  importFn,
+  priority: getBannerPriority(name),
+  preload,
+});
+
+/**
+ * Banner manager for handling multiple banners
+ */
+export class BannerManager {
+  private configs: BannerConfig[] = [];
+  private loadedBanners: Map<string, ComponentType<any>> = new Map();
+
+  addBanner(config: BannerConfig): void {
+    this.configs.push(config);
+    if (config.preload) {
+      this.preloadBanner(config);
+    }
+  }
+
+  private async preloadBanner(config: BannerConfig): Promise<void> {
+    try {
+      const module = await config.importFn();
+      this.loadedBanners.set(config.name, module.default);
+    } catch (error) {
+      console.warn(`Failed to preload banner: ${config.name}`, error);
+    }
+  }
+
+  getBanner(name: string): ComponentType<any> | null {
+    return this.loadedBanners.get(name) || null;
+  }
+
+  getAllBanners(): ComponentType<any>[] {
+    return Array.from(this.loadedBanners.values());
+  }
+
+  sortByPriority(): BannerConfig[] {
+    return [...this.configs].sort((a, b) => a.priority - b.priority);
+  }
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ee0f
