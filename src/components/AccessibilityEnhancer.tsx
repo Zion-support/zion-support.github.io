@@ -67,6 +67,19 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     }
   };
 
+  const changeFontSize = (newSize: 'small' | 'normal' | 'large') => {
+    setFontSize(newSize);
+    localStorage.setItem('fontSize', newSize);
+    applyAccessibilityStyles(isHighContrast, newSize, reducedMotion);
+  };
+
+  const toggleHighContrast = () => {
+    const newHighContrast = !isHighContrast;
+    setIsHighContrast(newHighContrast);
+    localStorage.setItem('highContrast', newHighContrast.toString());
+    applyAccessibilityStyles(newHighContrast, fontSize, reducedMotion);
+  };
+
   const addAriaLandmarks = () => {
     const main = document.querySelector('main');
     if (main && !main.getAttribute('role')) {
