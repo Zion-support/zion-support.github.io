@@ -28,6 +28,7 @@ export interface WebVitalsMetrics {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-8da8
 =======
@@ -44,6 +45,8 @@ export interface WebVitalsMetrics {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-54ac
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-06a4
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-8741
 export interface PerformanceBudget {
 =======
 interface PerformanceBudget {
@@ -541,8 +544,11 @@ export const checkPerformanceBudget = (budget: PerformanceBudget): {
   
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-06a4
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-8741
   // Check bundle size (simplified)
   const scripts = document.querySelectorAll('script[src]');
   let totalSize = 0;
@@ -550,6 +556,7 @@ export const checkPerformanceBudget = (budget: PerformanceBudget): {
     const src = (script as HTMLScriptElement).src;
     if (src && !src.startsWith('data:')) {
       totalSize += 100; // Simplified size estimation
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -721,10 +728,14 @@ class PerformanceOptimizer {
 =======
     }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-06a4
+=======
+    }
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-8741
   });
   
   if (totalSize > budget.maxBundleSize) {
     violations.push(`Bundle size ${totalSize}KB exceeds budget ${budget.maxBundleSize}KB`);
+<<<<<<< HEAD
 <<<<<<< HEAD
   }
 <<<<<<< HEAD
@@ -762,6 +773,15 @@ class PerformanceOptimizer {
   if (totalSize > budget.maxBundleSize) {
     violations.push(`Bundle size (${totalSize}KB) exceeds budget (${budget.maxBundleSize}KB)`);
 =======
+=======
+  }
+  
+  // Check load time
+  const timing = window.performance.timing;
+  const loadTime = timing.loadEventEnd - timing.navigationStart;
+  if (loadTime > budget.maxFirstLoad) {
+    violations.push(`Load time ${loadTime}ms exceeds budget ${budget.maxFirstLoad}ms`);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-8741
   }
   
   // Check load time
@@ -801,6 +821,7 @@ export const addCriticalResourceHints = (): void => {
     link.href = hint.href;
     if (hint.crossOrigin) {
       link.crossOrigin = hint.crossOrigin;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -849,6 +870,11 @@ export const addCriticalResourceHints = (): void => {
     document.head.appendChild(link);
   });
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-06a4
+=======
+    }
+    document.head.appendChild(link);
+  });
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-8741
 };
 
 /**
@@ -857,6 +883,7 @@ export const addCriticalResourceHints = (): void => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 class PerformanceOptimizer {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -875,6 +902,8 @@ export class PerformanceOptimizer {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-efe9
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-06a4
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-8741
   private static instance: PerformanceOptimizer;
   private metrics: Map<string, number> = new Map();
 =======
@@ -890,6 +919,7 @@ export const collectPerformanceMetrics = (): WebVitalsMetrics => {
     return {};
   }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1050,6 +1080,8 @@ export class PerformanceMonitor {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-54ac
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-06a4
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-8741
   public measurePerformance(name: string, fn: () => void): void {
     const start = performance.now();
     fn();
@@ -1126,10 +1158,13 @@ export class PerformanceMonitor {
 <<<<<<< HEAD
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-efe9
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-06a4
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-8741
     const updateScrollPosition = () => {
       // Throttled scroll handling
       ticking = false;
@@ -1146,6 +1181,7 @@ export class PerformanceMonitor {
   }
 
   public prefetchResources(urls: string[]): void {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1175,6 +1211,9 @@ export class PerformanceMonitor {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-54ac
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-06a4
+=======
+    prefetchResources(urls);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-8741
   }
 
   public reportWebVitals(metrics: WebVitalsMetrics): void {
@@ -1194,6 +1233,7 @@ export class PerformanceMonitor {
     return Object.fromEntries(this.metrics);
   }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1244,11 +1284,18 @@ export class PerformanceMonitor {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-efe9
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-06a4
+=======
+  public preconnectDomains(domains: string[]): void {
+    preconnectDomains(domains);
+  }
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-8741
   // Clear metrics
   clearMetrics() {
     this.metrics.clear();
   }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1286,6 +1333,8 @@ export class PerformanceMonitor {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-efe9
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-06a4
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-8741
   // Initialize all optimizations
   initialize(): void {
     this.measurePerformance('lazyLoadImages', () => this.lazyLoadImages());
@@ -1518,6 +1567,7 @@ class PerformanceOptimizer {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6231
 =======
@@ -1528,6 +1578,8 @@ class PerformanceOptimizer {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-efe9
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-06a4
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-8741
 export const performanceOptimizer = PerformanceOptimizer.getInstance();
 
 export default {
@@ -1550,6 +1602,7 @@ export default {
   checkPerformanceBudget,
 <<<<<<< HEAD
   addCriticalResourceHints
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1839,3 +1892,6 @@ export const initializePerformanceOptimization = (): void => {
 =======
 };
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-06a4
+=======
+};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-8741
