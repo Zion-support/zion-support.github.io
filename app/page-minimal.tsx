@@ -8,129 +8,139 @@ export const metadata = {
 
 export default function HomePage() {
   return (
-    <div>/* content */}
-  return (
-    <div>
-      <div> </div><div> </div></div>
-    <div className="text-left"> </div><header className="text-left">
-        <div className="text-left"> </div><div className="text-left"> </div><div className="text-left"> </div><Link href="/" className="text-left">
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
+      <header className="relative overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-cyan-500/10 to-blue-500/10 animate-pulse"></div>
+          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-purple-500/10 to-pink-500/10 animate-pulse" style={{ animationDelay: '2s' }}></div>
+        </div>
+        
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <div className="flex items-center justify-between mb-16">
+            <div>
+              <Link href="/" className="text-2xl font-bold text-white">
                 Zion Tech Group
               </Link>
             </div>
-            <nav className="text-left">
-              <Link href="/" className="text-left">Home</Link>"
-              <Link href="/services" className="text-left">Services</Link>"
-              <Link href="/blog" className="text-left">Blog</Link>"
-              <Link href="/case-studies" className="text-left">Case Studies</Link>"
+            <nav className="flex items-center gap-8">
+              <Link href="/" className="text-gray-300 hover:text-white transition-colors">Home</Link>
+              <Link href="/services" className="text-gray-300 hover:text-white transition-colors">Services</Link>
+              <Link href="/blog" className="text-gray-300 hover:text-white transition-colors">Blog</Link>
+              <Link href="/case-studies" className="text-gray-300 hover:text-white transition-colors">Case Studies</Link>
             </nav>
           </div>
         </div>
       </header>
 
-      <main>
-        <section className="text-left"> </section><div className="text-left"> </div><h1 className="text-left">
-              Transform Your Business with
-              <span className="text-left">{' '}AI-Powered Solutions
-              </span></span>/span>/span>/span>/span>/span>/span>
-            </h1>
-            <p className="text-left">Zion Tech Group delivers cutting-edge AI micro SaaS services, cloud automation, 
-              and enterprise IT solutions that drive growth, efficiency, and innovation.
-            </p></p>
-            <div className="text-left"> </div><Link
-                href="/services"
-                className="text-left">
-                Explore Our Services
-              </Link>
-              <a
-                href="tel:+13024640950"
-                className="text-left">Call +1 302 464 0950
-              </a></a>
-            </div>
-          </div>
-        </section>
+      <main className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+        {/* Hero Section */}
+        <div className="text-center mb-16">
+          <h1 className="text-5xl md:text-6xl font-extrabold text-white mb-6">
+            <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
+              Advanced AI Solutions
+            </span>
+          </h1>
+          
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+            Transform your enterprise with cutting-edge AI and IT solutions that deliver 
+            unprecedented performance, automation, and competitive advantage.
+          </p>
 
-        <section className="text-left"> </section><div className="text-left"> </div><div className="text-left"> </div><h2 className="text-left">
-                Latest AI Content & Insights
-              </h2>
-              <p className="text-left">Discover our latest AI insights, case studies, and success stories.
-              </p></p>
-            </div>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <Link
+              href="/contact"
+              className="group flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1"
+            >
+              <span className="text-xl">🚀</span>
+              <span>Get Started</span>
+            </Link>
             
-            <div className="text-left"> </div><Link href="/blog/ai-enterprise-transformation-2026" className="text-left">
-                <div className="text-left"> </div><div className="text-left"> </div><span className="text-left">Featured Article
-                    </span></span>/span>/span>/span>/span>/span>/span>
-                    <span className="text-left">20 min read</span>/span>/span>/span>/span>/span>/span>
-                    <span className="text-left">20 min read>
-                  </span>/span>/span>/span>/span>/span>/div>
-                  <h3 className="text-left">
-                    AI Enterprise Transformation 2026
-                  </h3>
-                  <p className="text-left">Master AI enterprise transformation with proven strategies, ROI frameworks, and implementation roadmaps.
-                  </p></p>
-                  <div className="text-left">Read Article →</div></div>
-                  </div>
-                </div>
-              </Link>
-
-              <Link href="/blog/ai-autonomous-systems-2026" className="text-left">
-                <div className="text-left"> </div><div className="text-left"> </div><span className="text-left">New Article
-                    </span></span>/span>/span>/span>/span>/span>/span>
-                    <span className="text-left">18 min read>
-                  </span>/span>/span>/span>/span>/span>/div>
-                  <h3 className="text-left">
-                    AI Autonomous Systems 2026
-                  </h3>
-                  <p className="text-left">Master autonomous AI systems with 300% ROI strategies and enterprise-ready deployment patterns.
-                  </p></p>
-                  <div className="text-left">Read Article →</div></div>
-                  </div>
-                </div>
-              </Link>
-
-              <Link href="/case-studies/manufacturing-ai-transformation-2026" className="text-left">
-                <div className="text-left"> </div><div className="text-left"> </div><span className="text-left">Success Story
-                    </span></span>/span>/span>/span>/span>/span>/span>
-                    <span className="text-left">Manufacturing>
-                  </span>/span>/span>/span>/span>/span>/div>
-                  <h3 className="text-left">
-                    Manufacturing AI Transformation
-                  </h3>
-                  <p className="text-left">See how a global manufacturer achieved 60% cost reduction and 90% efficiency improvement.
-                  </p></p>
-                  <div className="text-left">View Case Study →</div></div>
-                  </div>
-                </div>
-              </Link>
-            </div>
+            <Link
+              href="/services"
+              className="group flex items-center gap-3 bg-white/10 hover:bg-white/20 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 border border-white/30"
+            >
+              <span>Explore Services</span>
+              <span className="group-hover:translate-x-1 transition-transform">→</span>
+            </Link>
           </div>
-        </section>
+        </div>
+
+        {/* Features Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          {[
+            {
+              title: 'AI Automation',
+              description: 'Automate complex business processes with intelligent AI systems.',
+              icon: '🤖',
+              metrics: ['95% Automation', '300% ROI', 'Zero Touch']
+            },
+            {
+              title: 'Enterprise Solutions',
+              description: 'Comprehensive AI solutions designed for enterprise scale.',
+              icon: '🏢',
+              metrics: ['500+ Clients', '99.9% Uptime', '24/7 Support']
+            },
+            {
+              title: 'Digital Transformation',
+              description: 'Transform your business with cutting-edge AI technologies.',
+              icon: '⚡',
+              metrics: ['70% Cost Reduction', '90% Efficiency', 'Future Ready']
+            }
+          ].map((feature, index) => (
+            <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-white/40 transition-all duration-500">
+              <div className="text-4xl mb-4">{feature.icon}</div>
+              <h3 className="text-2xl font-bold text-white mb-4">{feature.title}</h3>
+              <p className="text-gray-300 mb-6">{feature.description}</p>
+              <div className="space-y-2">
+                {feature.metrics.map((metric, metricIndex) => (
+                  <div key={metricIndex} className="flex items-center gap-2 text-cyan-400 text-sm">
+                    <span>✓</span>
+                    <span>{metric}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* CTA Section */}
+        <div className="text-center bg-white/5 backdrop-blur-lg rounded-2xl p-12 border border-white/20">
+          <h2 className="text-3xl font-bold text-white mb-6">
+            Ready to Transform Your Business?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            Join 500+ enterprises achieving unprecedented results with our AI solutions.
+          </p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <Link
+              href="/contact"
+              className="group flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1"
+            >
+              <span className="text-xl">📞</span>
+              <span>Contact Us Today</span>
+            </Link>
+            
+            <Link
+              href="/case-studies"
+              className="group flex items-center gap-3 bg-white/10 hover:bg-white/20 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 border border-white/30"
+            >
+              <span>View Case Studies</span>
+              <span className="group-hover:translate-x-1 transition-transform">→</span>
+            </Link>
+          </div>
+        </div>
       </main>
 
-      <footer className="text-left">
-        <div className="text-left"> </div><div className="text-left"> </div><div> </div><h3 className="text-left">Zion Tech Group</h3>"
-              <p className="text-left">Leading provider of AI-powered enterprise solutions and digital transformation services.
-              </p></p>
-            </div>
-            <div> </div><h3 className="text-left">Services</h3>"
-              <ul className="text-left">
-                <li><Link href="/services" className="text-left">AI Solutions</Link></li>"
-                <li><Link href="/services" className="text-left">Automation</Link></li>"
-                <li><Link href="/services" className="text-left">Digital Transformation</Link></li></ul>
-            </div>
-            <div> </div><h3 className="text-left">Resources</h3>"
-              <ul className="text-left">
-                <li><Link href="/blog" className="text-left">Blog</Link></li>"
-                <li><Link href="/case-studies" className="text-left">Case Studies</Link></li></ul>
-            </div>
-            <div> </div><h3 className="text-left">Contact</h3>"
-              <p className="text-left">Get in touch for your AI transformation needs.
-              </p></p>
-            </div>
-          </div>
-          <div className="text-left"> </div><p>&copy; 2026 Zion Tech Group. All rights reserved.</p>
-          </div>
+      <footer className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 border-t border-white/20">
+        <div className="text-center text-gray-300">
+          <p>&copy; 2026 Zion Tech Group. All rights reserved.</p>
+          <p className="mt-2">
+            <Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
+            {' | '}
+            <Link href="/terms" className="hover:text-white transition-colors">Terms of Service</Link>
+          </p>
         </div>
       </footer>
     </div>
   );
-})
+}
