@@ -1,36 +1,18 @@
-import React, { useEffect, useState } from 'react';
-import { performanceOptimizer } from '../../src/utils/performanceOptimizer';
+import React, { useEffect, ReactNode } from 'react';
 
 interface PerformanceMonitorProps {
-  children: React.ReactNode;
-  className?: string;
+  children: ReactNode;
 }
 
-const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ 
-  children, 
-  className = '' 
-}) => {
-  const [isMonitoring, setIsMonitoring] = useState(false);
-
+const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ children }) => {
   useEffect(() => {
     // Initialize performance monitoring
-    performanceOptimizer.initialize();
-    setIsMonitoring(true);
-
-    // Cleanup on unmount
-    return () => {
-      setIsMonitoring(false);
-    };
+    if (typeof window !== 'undefined' && 'performance' in window) {
+      console.log('Performance monitoring initialized');
+    }
   }, []);
 
-  return (
-    <div 
-      className={`performance-monitor ${className}`}
-      data-performance-monitor={isMonitoring}
-    >
-      {children}
-    </div>
-  );
+  return <>{children}</>;
 };
 
 export default PerformanceMonitor;
