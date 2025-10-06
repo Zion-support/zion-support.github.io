@@ -101,7 +101,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       .font-normal {
         font-size: 1rem;
       }
-
       .font-large {
         font-size: 1.125rem;
       }
