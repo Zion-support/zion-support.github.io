@@ -18,7 +18,10 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
         roi: '30,000%',
         savings: '$750B+',
         accuracy: '99.99%',
+<<<<<<< HEAD
         speed: '5,000% faster'
+=======
+>>>>>>> 97e2d060e1d7 (Fix merge conflicts and resolve errors in codebase)
       },
       readingTime: '35 min read',
       featured: true,
@@ -35,7 +38,10 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
         roi: '30,000%',
         savings: '$750B',
         company: '$15.2B',
+<<<<<<< HEAD
         timeline: '18 months'
+=======
+>>>>>>> 97e2d060e1d7 (Fix merge conflicts and resolve errors in codebase)
       },
       readingTime: '25 min read',
       featured: true,
@@ -52,6 +58,7 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
         roi: '30,000%',
         success: '99.8%',
         timeline: '18 months',
+<<<<<<< HEAD
         adoption: '100%'
       },
       readingTime: '45 min read',
@@ -97,16 +104,22 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Explore our comprehensive collection of AI-powered business intelligence resources, case studies, 
             and implementation guides that deliver <span className="text-yellow-400 font-bold">30,000% ROI</span> for Fortune 500 companies.
+=======
+>>>>>>> 97e2d060e1d7 (Fix merge conflicts and resolve errors in codebase)
           </p>
         </div>
 
+<<<<<<< HEAD
         {/* Filter Tabs */}
         <div className="flex justify-center mb-12">
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-2 border border-white/20">
+=======
+>>>>>>> 97e2d060e1d7 (Fix merge conflicts and resolve errors in codebase)
             {[
               { id: 'all', label: 'All Content' },
               { id: 'blog', label: 'Blog Posts' },
               { id: 'case-study', label: 'Case Studies' },
+<<<<<<< HEAD
               { id: 'guide', label: 'Guides' }
             ].map((filter) => (
               <button
@@ -116,12 +129,15 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
                   activeFilter === filter.id
                     ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg'
                     : 'text-gray-300 hover:text-white hover:bg-white/10'
+=======
+>>>>>>> 97e2d060e1d7 (Fix merge conflicts and resolve errors in codebase)
                 }`}
               >
                 {filter.label}
               </button>
             ))}
           </div>
+<<<<<<< HEAD
         </div>
 
         {/* Content Grid */}
@@ -151,10 +167,17 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
 
                   {/* Title */}
                   <h3 className="text-2xl font-bold text-white mb-4 group-hover:bg-gradient-to-r group-hover:from-cyan-400 group-hover:to-blue-400 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300 leading-tight">
+=======
+                    )}
+                  </div>
+
+                  {/* Title */}
+>>>>>>> 97e2d060e1d7 (Fix merge conflicts and resolve errors in codebase)
                     {item.title}
                   </h3>
 
                   {/* Description */}
+<<<<<<< HEAD
                   <p className="text-gray-300 mb-6 leading-relaxed">
                     {item.description}
                   </p>
@@ -165,19 +188,29 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
                       <div key={key} className="text-center">
                         <div className="text-xl font-bold text-cyan-400 mb-1">{value}</div>
                         <div className="text-xs text-gray-400 capitalize">{key.replace(/([A-Z])/g, ' $1').trim()}</div>
+=======
+                    {item.description}
+                  </p>
+
+                  {/* Metrics */}
+>>>>>>> 97e2d060e1d7 (Fix merge conflicts and resolve errors in codebase)
                       </div>
                     ))}
                   </div>
 
                   {/* Tags */}
+<<<<<<< HEAD
                   <div className="flex flex-wrap gap-2 mb-6">
                     {item.tags.slice(0, 3).map((tag) => (
                       <span key={tag} className="px-3 py-1 bg-white/20 text-white text-xs rounded-full">
+=======
+>>>>>>> 97e2d060e1d7 (Fix merge conflicts and resolve errors in codebase)
                         {tag}
                       </span>
                     ))}
                   </div>
 
+<<<<<<< HEAD
                   {/* Meta Info */}
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-4 text-sm text-gray-400">
@@ -192,11 +225,14 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
                   </div>
                 </div>
               </div>
+=======
+>>>>>>> 97e2d060e1d7 (Fix merge conflicts and resolve errors in codebase)
             </Link>
           ))}
         </div>
 
         {/* Call-to-Action Section */}
+<<<<<<< HEAD
         <div className="text-center bg-white/5 backdrop-blur-sm rounded-2xl p-12 border border-white/20 mb-16">
           <div className="flex items-center justify-center gap-4 mb-6">
             <span className="text-3xl">🎯</span>
@@ -246,6 +282,8 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
         </div>
       </div>
     </div>
+=======
+>>>>>>> 97e2d060e1d7 (Fix merge conflicts and resolve errors in codebase)
   );
 };
 
