@@ -10,21 +10,13 @@ if (typeof window !== 'undefined') {
 
   // Initialize performance optimizer
   performanceOptimizer.lazyLoadImages();
-<<<<<<< HEAD
-
-=======
   
   // Monitor long tasks
-  const monitorLongTasks = (performanceOptimizer as { monitorLongTasks?: (callback: (entries: PerformanceEntry[]) => void) => PerformanceObserver | null }).monitorLongTasks;
-  if (monitorLongTasks) {
-    monitorLongTasks((entries: PerformanceEntry[]) => {
-      entries.forEach((entry: PerformanceEntry) => {
-        analytics.track('long_task', 'performance', 'detected', undefined, entry.duration);
-      });
+  performanceOptimizer.monitorLongTasks((entries: PerformanceEntryList) => {
+    entries.forEach((entry: PerformanceEntry) => {
+      analytics.track('long_task', 'performance', 'detected', undefined, entry.duration);
     });
-  }
-  
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-014b
+  });
   // Track Web Vitals
   const metrics = performanceOptimizer.measurePageLoad();
   if (metrics) {
