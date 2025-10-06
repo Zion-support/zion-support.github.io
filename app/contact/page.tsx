@@ -51,11 +51,7 @@ const ContactPage: React.FC = () => {
             <div className="space-y-4">
               <div>
                 <h4 className="font-medium text-gray-900">Email</h4>
-<<<<<<< HEAD
-<p className="text-gray-600">kleber@ziontechgroup.com</p>
-=======
                 <p className="text-gray-600">info@ziontechgroup.com</p>
->>>>>>> 7cd6c6ab21731dbbaca45ccdac24c52d42664833
               </div>
               <div>
                 <h4 className="font-medium text-gray-900">Phone</h4>
