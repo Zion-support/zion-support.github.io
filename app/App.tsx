@@ -14,7 +14,7 @@ import PerformanceMonitor from './components/PerformanceMonitor';
 const HomePage = lazy(() => import('./page'));
 
 // Utils
-import performanceOptimizer from '../src/utils/performanceOptimizer';
+import performanceOptimizer, { measurePageLoad } from '../src/utils/performanceOptimizer';
 
 // Styles
 import '../index.css';
@@ -26,10 +26,9 @@ const App: React.FC = () => {
 
     // Initialize performance monitoring
     performanceOptimizer.lazyLoadImages();
-    performanceOptimizer.preloadCriticalResources();
     // Initialize Web Vitals monitoring
     if (typeof window !== 'undefined' && 'performance' in window) {
-      const metrics = performanceOptimizer.measurePageLoadMetrics();
+      const metrics = measurePageLoad();
       if (metrics) {
         performanceOptimizer.reportWebVitals(metrics);
       }
