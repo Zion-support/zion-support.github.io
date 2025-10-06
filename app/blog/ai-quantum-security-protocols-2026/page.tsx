@@ -1,81 +1,80 @@
+import React from 'react';
 import ArrowRight from 'next/link';
 
 export const metadata = {
   
-  title: 'AI Quantum Security Protocols 2026 | Zion Tech Group',
+  title: "AI Quantum Security Protocols 2026 | Zion Tech Group",
   description:
-    'Protect AI systems with quantum‑resistant cryptography and verifiable guardrails. Achieve 99.99% security with sub‑millisecond overhead.',
+    'Protect AI systems with quantum‑resistant cryptography and verifiable guardrails. Achieve 99.99% security with sub‑millisecond overhead.'};;
 
-};;
-
-export default function AIQuantumSecurityProtocols2026Page() {return (<divclassName='min-h-screen bg-gradient-to-br from-slate-950 via-indigo-950 to-purple-950 text-white'>
-      <mainclassName='container mx-auto px-6 py-12'>
-        <navclassName='mb-8'>
-          <ArrowRight
-           href='/blog'
-           className='text-indigo-300 hover:text-indigo-200 transition-colors'
+export default function AIQuantum Security Protocols2026Page() {return (<div className="min-h-screen bg-gradient-to-br from-slate-950 via-indigo-950 to-purple-950 text-white">
+      <main className="container mx-auto px-6 py-12">
+        <nav className="mb-8">
+          <Arrow Right
+           href="/blog"
+           className="text-indigo-300 hover:text-indigo-200 transition-colors"
           >
-            ← Back to Blog
-          </ArrowRight>
+            ← Back to    Blog
+          </Arrow>
         </nav>
 
-        <articleclassName='max-w-4xl mx-auto'>
-          <headerclassName='mb-12'>
-            <divclassName='flex items-center gap-3 mb-4'>
-              <spanclassName='px-3 py-1 bg-indigo-400/20 text-indigo-200 text-sm rounded-full border border-indigo-400/30'>
-                Quantum Security
+        <article Name="max-w-4xl mx-auto">
+          <header className="mb-12">
+            <div className="flex items-center gap-3 mb-4">
+              <span className="px-3 py-1 bg-indigo-400/20 text-indigo-200 text-sm rounded-full border border-indigo-400/30">
+                Quantum    Security
               </span>
-              <spanclassName='text-white/60 text-sm'>September 30, 2025</span>
-              <spanclassName='text-white/60 text-sm'>•</span>
-              <spanclassName='text-white/60 text-sm'>45 min read</span>
+              <span className="text-white/60 text-sm">September    30, 2025</span>
+              <span className="text-white/60 text-sm">•</span>
+              <span className="text-white/60 text-sm">45 min read</span>
             </div>
-            <h1className='text-5xl font-extrabold mb-6 bg-gradient-to-r from-indigo-300 to-purple-300 bg-clip-text text-transparent'>
-              AI Quantum Security Protocols 2026
+            <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-indigo-300 to-purple-300 bg-clip-text text-transparent">
+              AI Quantum Security    Protocols    2026
             </h1>
-            <pclassName='text-xl text-white/80'>
+            <p className="text-xl text-white/80">
               Protect AI systems with quantum‑resistant cryptography and policy
-              guardrails. Achieve 99.99% security against classical and quantum
+              guardrails.    Achieve    99.99% security against classical and quantum
               attacks with sub‑millisecond overhead.
             </p>
           </header>
 
-          <divclassName='prose prose-invert prose-lg max-w-none'>
-            <sectionclassName='mb-12'>
-              <h2className='text-3xl font-bold mb-4 text-indigo-300'>
-                Threat Model
+          <div className="prose prose-invert prose-lg max-w-none">
+            <section className="mb-12">
+              <h2 className="text-3xl font-bold mb-4 text-indigo-300">
+                Threat    Model
               </h2>
-              <ulclassName='space-y-3 text-white/85'>
+              <ul className="space-y-3 text-white/85">
                 <li>
-                  <strong>Model Exfiltration:</strong> encrypted
+                  <strong>Model    Exfiltration   :</strong> encrypted
                   weightsattestationand key isolation.
                 </li>
                 <li>
-                  <strong>Prompt Injection:</strong> policy engine with
+                  <strong>Prompt    Injection   :</strong> policy engine with
                   verifiable execution and sandboxing.
                 </li>
                 <li>
-                  <strong>Quantum Threats:</strong> post‑quantum algorithms and
+                  <strong>Quantum    Threats   :</strong> post‑quantum algorithms and
                   hybrid key exchange.
                 </li>
               </ul>
             </section>
 
-            <sectionclassName='mb-12'>
-              <h2className='text-3xl font-bold mb-4 text-purple-300'>
-                Reference Controls
+            <section className="mb-12">
+              <h2 className="text-3xl font-bold mb-4 text-purple-300">
+                Reference    Controls
               </h2>
-              <divclassName='grid md:grid-cols-2 gap-6'>
-                <divclassName='bg-white/5 border border-white/10 rounded-xl p-6'>
-                  <h3className='font-semibold mb-2'>Guardrails</h3>
-                  <pclassName='text-white/75'>
-                    Input/output filtering, jailbreak detectionsecure tool
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="bg-white/5 border border-white/10 rounded-xl p-6">
+                  <h3 className="font-semibold mb-2">Guardrails</h3>
+                  <p className="text-white/75">
+                    Input   /output filtering, jailbreak detectionsecure tool
                     scopesand audits.
                   </p>
                 </div>
-                <divclassName='bg-white/5 border border-white/10 rounded-xl p-6'>
-                  <h3className='font-semibold mb-2'>Crypto</h3>
-                  <pclassName='text-white/75'>
-                    PQ‑safe KEMs, rotating keyssealed storageand mutual TLS with
+                <div className="bg-white/5 border border-white/10 rounded-xl p-6">
+                  <h3 className="font-semibold mb-2">Crypto</h3>
+                  <p className="text-white/75">
+                    PQ‑safe KE    Ms   , rotating keyssealed storageand mutual TLS with
                     attestation.
                   </p>
                 </div>
@@ -83,20 +82,20 @@ export default function AIQuantumSecurityProtocols2026Page() {return (<divclassN
             </section>
           </div>
 
-          <divclassName='mt-12 bg-white/5 border border-white/10 rounded-xl p-6'>
-            <h3className='text-xl font-bold mb-2'>
-              Need a security blueprint?
+          <div className="mt-12 bg-white/5 border border-white/10 rounded-xl p-6">
+            <h3 className="text-xl font-bold mb-2">
+              Need    a security blueprint?
             </h3>
-            <pclassName='text-white/80 mb-4'>
-              We design zero‑trust AI platforms hardened against future quantum
+            <p className="text-white/80 mb-4">
+              We    design zero‑trust AI platforms hardened against future quantum
               threats.
             </p>
-            <ArrowRight
-             href='/contact'
-             className='text-indigo-300 hover:text-indigo-200 font-semibold'
+            <Arrow Right
+             href="/contact"
+             className="text-indigo-300 hover:text-indigo-200 font-semibold"
             >
-              Talk to experts →
-            </ArrowRight>
+              Talk    to experts →
+            </Arrow>
           </div>
         </article>
       </main>
