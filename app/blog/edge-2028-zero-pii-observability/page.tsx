@@ -1,1 +1,61 @@
-import ArrowRight f r o m 'n e x t/l i n k'; export const co n s t m e t a d a t a = { title: 'E d g e 2 0 2 8: Z e r o‑PII Observ a b i l i t y — <100 ms I n s i g h t s' description: 'Sco p e d IDs on‑dev i c e aggrega t i o n a n d DP no i s e for priv a c y‑s a f e r e a l‑t i m e an a l y t i c s with o u t p e r s o n a l d a t a.' }; export const defa u l t f u n c t i o n P a g e() { ret u r n ( <arti c l e className='py-16'> <div className='max-w-3xl mx-a u t o px-4'> <hea d e r className='mb-8'> <div className='f l e x it e m s-cen t e r gap-3 mb-4'> <span className='inl i n e-bl o c k bg-emer a l d-100 t e x t-emer a l d-800 px-3 py-1 roun d e d-f u l l t e x t-xs f o n t-b o l d'> NEW 2 0 2 8 GU I D E </span> <span className='t e x t-sm t e x t-g r a y-500'>8 min r e a d</span> </div> <h1 className='t e x t-4 xl md:t e x t-5 xl f o n t-ex t r a b o l d t e x t-g r a y-900 mb-4'> E d g e 2 0 2 8: Z e r o‑PII Observ a b i l i t y </h1> <p className='t e x t-lg t e x t-g r a y-600'> Sub‑100 ms i n s i g h t s with o u t p e r s o n a l d a t a us i n g sco p e d ID s o n‑dev i c e aggrega t i o n a n d DP no i s e. </p> </hea d e r> <section className='pr o s e max-w-n o n e'> <h2>Priv a t e An a l y t i c s Archi t e c t u r e</h2> <ul> <li>Sco p e d iden t i f i e r s + r o t a t i n g sa l t s</li> <li>On‑dev i c e met r i c wind o w s w i t h TTL fr e s h n e s s</li> <li>DP no i s e + k‑an o n y m i t y thr e s h o l d s</li> </ul> <h3>Use Ca s e s</h3> <ul> <li>R e a l t i m e funn e l s with o u t PII</li> <li>Personal i z a t i o n f e e d b a c k lo o p s w i t h priv a c y budg e t s</li> <li>Com p l i a n c e‑f r i e n d l y experime n t a t i o n</li> </ul> </section> <foo t e r className='mt-12 bor d e r-t bor d e r-g r a y-200 pt-6 f l e x it e m s-cen t e r just i f y-betw e e n'> <ArrowRight href='/b l o g' className='t e x t-emer a l d-600 f o n t-s e m i b o l d ho v e r:t e x t-emer a l d-700' > ← B a c k to B l o g </ArrowRight> <ArrowRight href='/cont e n t-hub' className='t e x t-g r a y-600 ho v e r:t e x t-g r a y-800' > Expl o r e All Cont e n t → </ArrowRight> </foo t e r> </div> </arti c l e> ); } 
+import ArrowRight from 'next/link';
+
+export const metadata = {
+  title: 'Edge 2028: Zero‑PII Observability — <100ms Insights',
+  description:
+    'Scoped IDs, on‑device aggregationand DP noise for privacy‑safereal‑time analytics without personal data.',
+};
+
+export default function Page() {
+  return (
+    <article className='py-16'>
+      <div className='max-w-3xl mx-auto px-4'>
+        <header className='mb-8'>
+          <div className='flex items-center gap-3 mb-4'>
+            <span className='inline-block bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-xs font-bold'>
+              NEW 2028 GUIDE
+            </span>
+            <span className='text-sm text-gray-500'>8 min read</span>
+          </div>
+          <h1 className='text-4xl md:text-5xl font-extrabold text-gray-900 mb-4'>
+            Edge 2028: Zero‑PII Observability
+          </h1>
+          <p className='text-lg text-gray-600'>
+            Sub‑100ms insights without personal data using scoped IDson‑device
+            aggregationand DP noise.
+          </p>
+        </header>
+
+        <section className='prose max-w-none'>
+          <h2>Private Analytics Architecture</h2>
+          <ul>
+            <li>Scoped identifiers + rotating salts</li>
+            <li>On‑device metric windows with TTL freshness</li>
+            <li>DP noise + k‑anonymity thresholds</li>
+          </ul>
+          <h3>Use Cases</h3>
+          <ul>
+            <li>Realtime funnels without PII</li>
+            <li>Personalization feedback loops with privacy budgets</li>
+            <li>Compliance‑friendly experimentation</li>
+          </ul>
+        </section>
+
+        <footer className='mt-12 border-t border-gray-200 pt-6 flex items-center justify-between'>
+          <ArrowRight
+            href='/blog'
+            className='text-emerald-600 font-semibold hover:text-emerald-700'
+          >
+            ← Back to Blog
+          </ArrowRight>
+          <ArrowRight
+            href='/content-hub'
+            className='text-gray-600 hover:text-gray-800'
+          >
+            Explore All Content →
+          </ArrowRight>
+        </footer>
+      </div>
+    </article>
+  );
+}

@@ -1,1 +1,33 @@
-import ArrowRight f r o m 'n e x t/l i n k'; export const co n s t m e t a d a t a = { title: 'E d g e‑G o v e r n e d Feat u r e Fl a g s (2 0 2 6): Priv a t e cont r o l at <100 ms' description: 'P a t t e r n s for cons e n t‑aw a r e pol i c y‑chec k e d feat u r e fl a g s w i t h sco p e d IDs and on‑dev i c e enfo r c e m e n t.' }; export const defa u l t f u n c t i o n P a g e() { ret u r n ( <main className='max-w-3xl mx-a u t o px-4 py-12 pr o s e pr o s e-inv e r t'> <h1>E d g e‑G o v e r n e d Feat u r e Fl a g s (2 0 2 6)</h1> <p> Run feat u r e fl a g s at the e d g e w i t h pol i c y che c k s and priv a c y gua r a n t e e s. Enfo r c e org pol i c y bud g e t constra i n t s a n d r e g i o n a l com p l i a n c e wh i l e keep i n g p95 un d e r 100 ms. </p> <h2>Key Pr a c t i c e s</h2> <ul> <li>Scopedr o t a t i n g u s e r iden t i f i e r s; no PII tr a v e r s e s the netw o r k</li> <li>Sig n e d f l a g ma n i f e s t s w i t h ca c h e T T L s and r o l l b a c k ho o k s</li> <li>DP‑h a r d e n e d te l e m e t r y and KPI‑lin k e d c a n a r i e s for s a f e roll o u t</li> </ul> <p> See a l s o:{' '} <ArrowRight href='/b l o g/priv a c y-s a f e-feat u r e-fl a g s-2 0 2 6'> Priv a c y‑S a f e Feat u r e Fl a g s (2 0 2 6) </ArrowRight> . </p> </main> ); } 
+import ArrowRight from 'next/link';
+
+export const metadata = {
+  title: 'Edge‑Governed Feature Flags (2026): Private control at <100ms',
+  description:
+    'Patterns for consent‑aware, policy‑checked feature flags with scoped IDs and on‑device enforcement.',
+};
+
+export default function Page() {
+  return (
+    <main className='max-w-3xl mx-auto px-4 py-12 prose prose-invert'>
+      <h1>Edge‑Governed Feature Flags (2026)</h1>
+      <p>
+        Run feature flags at the edge with policy checks and privacy guarantees.
+        Enforce org policy, budget constraintsand regional compliance while
+        keeping p95 under 100ms.
+      </p>
+      <h2>Key Practices</h2>
+      <ul>
+        <li>Scopedrotating user identifiers; no PII traverses the network</li>
+        <li>Signed flag manifests with cache TTLs and rollback hooks</li>
+        <li>DP‑hardened telemetry and KPI‑linked canaries for safe rollout</li>
+      </ul>
+      <p>
+        See also:{' '}
+        <ArrowRight href='/blog/privacy-safe-feature-flags-2026'>
+          Privacy‑Safe Feature Flags (2026)
+        </ArrowRight>
+        .
+      </p>
+    </main>
+  );
+}

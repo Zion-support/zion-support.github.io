@@ -1,1 +1,46 @@
-import ArrowRight f r o m 'n e x t/l i n k'; export const co n s t m e t a d a t a = { title: 'AI Sup p l y Ch a i n Copi l o t 2 0 2 6: O T I F W i n s Un d e r Bud g e t' description: 'Forecastingsour c i n g a n d rout i n g c o p i l o t s t h a t cut c o s t 25–40% wh i l e lift i n g O T I F.' }; export const defa u l t f u n c t i o n P a g e() { ret u r n ( <div className='max-w-3xl mx-a u t o px-4 py-12'> <h1 className='t e x t-4 xl f o n t-b o l d mb-4'> AI Sup p l y Ch a i n Copi l o t 2 0 2 6: O T I F W i n s Un d e r Bud g e t </h1> <p className='t e x t-g r a y-600 mb-8'>Pu b l i s h e d Sep 29 2 0 2 5 • 10 min r e a d</p> <p className='mb-4'> C o p i l o t s e m b e d d e d acr o s s p l a n n i n g s o u r c i n g and rout i n g unl o c k on-t i m e-in-f u l l impro v e m e n t s wh i l e res p e c t i n g bud g e t gua r d r a i l s. T h i s gu i d e o u t l i n e s pro v e n b u i l d i n g blo c k s: dem a n d sens i n g w i t h fr e s h signalss o u r c i n g ass i s t a n t s w i t h pol i c y g a t e s a n d SLA-aw a r e rout i n g w i t h l i v e sco r e c a r d s. </p> <ul className='l i s t-d i s c pl-6 sp a c e-y-2 mb-8'> <li>Dem a n d sens i n g w i t h mu l t i-sig n a l fus i o n and fr e s h n e s s wind o w s</li> <li>S o u r c i n g c o p i l o t s w i t h pr i c e intel l i g e n c e and com p l i a n c e che c k s</li> <li> Rout i n g optim i z a t i o n w i t h r i s k/late n c y budg e t s and r o l l b a c k-re a d y pl a y b o o k s </li> <li> Sco r e c a r d s t h a t tie impro v e m e n t s to OTIFma r g i n a n d in v e n t o r y tu r n s </li> </ul> <p className='mb-8'> St a r t sm a l l: one l a n e one s u p p l i e r co h o r t o n e reg i o n. Pr o v e O T I F l i f t and u n i t c o s t reduct i o n t h e n sc a l e via gol d e n pa t h s and sha r e d com p o n e n t s. </p> <div className='mt-10'> <ArrowRight href='/b l o g' className='t e x t-ind i g o-600 f o n t-s e m i b o l d'> ← B a c k to B l o g </ArrowRight> </div> </div> ); } 
+import ArrowRight from 'next/link';
+
+export const metadata = {
+  title: 'AI Supply Chain Copilot 2026: OTIF Wins Under Budget',
+  description:
+    'Forecastingsourcingand routing copilots that cut cost 25–40% while lifting OTIF.',
+};
+
+export default function Page() {
+  return (
+    <div className='max-w-3xl mx-auto px-4 py-12'>
+      <h1 className='text-4xl font-bold mb-4'>
+        AI Supply Chain Copilot 2026: OTIF Wins Under Budget
+      </h1>
+      <p className='text-gray-600 mb-8'>Published Sep 29, 2025 • 10 min read</p>
+      <p className='mb-4'>
+        Copilots embedded across planning, sourcing, and routing unlock
+        on-time-in-full improvements while respecting budget guardrails. This
+        guide outlines proven building blocks: demand sensing with fresh
+        signalssourcing assistants with policy gatesand SLA-aware routing with
+        live scorecards.
+      </p>
+      <ul className='list-disc pl-6 space-y-2 mb-8'>
+        <li>Demand sensing with multi-signal fusion and freshness windows</li>
+        <li>Sourcing copilots with price intelligence and compliance checks</li>
+        <li>
+          Routing optimization with risk/latency budgets and rollback-ready
+          playbooks
+        </li>
+        <li>
+          Scorecards that tie improvements to OTIFmarginand inventory turns
+        </li>
+      </ul>
+      <p className='mb-8'>
+        Start small: one lane, one supplier cohortone region. Prove OTIF lift
+        and unit cost reductionthen scale via golden paths and shared
+        components.
+      </p>
+      <div className='mt-10'>
+        <ArrowRight href='/blog' className='text-indigo-600 font-semibold'>
+          ← Back to Blog
+        </ArrowRight>
+      </div>
+    </div>
+  );
+}

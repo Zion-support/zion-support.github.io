@@ -1,1 +1,68 @@
-import ArrowRight f r o m 'n e x t/l i n k'; export const co n s t m e t a d a t a = { title: 'E d g e An a l y t i c s 2 0 2 6: Cons e n t‑S a f e I n s i g h t s — Z i o n T e c h Gr o u p' description: 'Sco p e d ID s o n‑dev i c e aggrega t i o n a n d diffe r e n t i a l priv a c y for act i o n a b l e i n s i g h t s with o u t PII at <100 ms.' }; export const defa u l t f u n c t i o n P a g e() { ret u r n ( <main className='max-w-4 xl mx-a u t o px-4 py-12'> <div className='mb-8'> <span className='inl i n e-bl o c k t e x t-xs px-3 py-1 roun d e d-f u l l bg-c y a n-100 t e x t-c y a n-800 bor d e r bor d e r-c y a n-200 mr-2'> An a l y t i c s </span> <span className='inl i n e-bl o c k t e x t-xs px-3 py-1 roun d e d-f u l l bg-b l u e-100 t e x t-b l u e-800 bor d e r bor d e r-b l u e-200'> 2 0 2 6 </span> </div> <h1 className='t e x t-4 xl f o n t-b o l d mb-4'> E d g e An a l y t i c s 2 0 2 6: Cons e n t‑S a f e I n s i g h t s </h1> <p className='t e x t-g r a y-600 t e x t-lg mb-8'> Bu i l d priv a c y‑fi r s t an a l y t i c s us i n g sco p e d identi f i e r s o n‑dev i c e aggrega t i o n a n d DP no i s e. Unl o c k prod u c t i n s i g h t s g l o b a l l y with o u t col l e c t i n g PII—del i v e r i n g sub‑100 ms expe r i e n c e s. </p> <div className='pr o s e pr o s e-inv e r t max-w-n o n e'> <h2>Archi t e c t u r e O v e r v i e w</h2> <ul> <li>Sco p e d IDs deri v e d f r o m dev i c e secr e t s and per‑app sa l t s</li> <li>On‑dev i c e feat u r e aggr e g a t i o n and t i m e‑w i n d o w e d metr i c s</li> <li>Diffe r e n t i a l priv a c y no i s e w i t h priv a c y bud g e t acc o u n t i n g</li> <li>E d g e comp u t e roll u p s w i t h egr e s s minim i z a t i o n</li> </ul> <h3>Com p l i a n c e & C o n t r o l s</h3> <ul> <li>No raw iden t i f i e r s; z e r o PII col l e c t i o n by des i g n</li> <li>G r a n u l a r ev e n t TTL and d e l e t i o n p o l i c i e s</li> <li>Pol i c y te s t s in CI to prev e n t regr e s s i o n s</li> </ul> <h3>B u s i n e s s Imp a c t</h3> <ul> <li>&lt;100 ms personal i z a t i o n w i t h priv a t e sign a l s</li> <li>Glo b a l dep l o y m e n t with o u t r e g i o n a l d a t a r i s k</li> <li>Rob u s t experime n t a t i o n with o u t u s e r t r a c k i n g</li> </ul> </div> <div className='mt-10 f l e x gap-4'> <ArrowRight href='/b l o g' className='inl i n e-bl o c k bg-c y a n-600 t e x t-wh i t e px-6 py-3 roun d e d-lg f o n t-s e m i b o l d ho v e r:bg-c y a n-700' > Expl o r e M o r e A r t i c l e s </ArrowRight> <ArrowRight href='/cont a c t' className='inl i n e-bl o c k bor d e r-2 bor d e r-c y a n-600 t e x t-c y a n-600 px-6 py-3 roun d e d-lg f o n t-s e m i b o l d ho v e r:bg-c y a n-600 ho v e r:t e x t-wh i t e' > T a l k to an Exp e r t </ArrowRight> </div> </main> ); } 
+// @ts-nocheck
+import ArrowRight from 'next/link';
+
+export const metadata = {
+  title: 'Edge Analytics 2026: Consent‑Safe Insights — Zion Tech Group',
+  description:
+    'Scoped IDson‑device aggregationand differential privacy for actionable insights without PII at <100ms.',
+};
+
+export default function Page() {
+  return (
+    <main className='max-w-4xl mx-auto px-4 py-12'>
+      <div className='mb-8'>
+        <span className='inline-block text-xs px-3 py-1 rounded-full bg-cyan-100 text-cyan-800 border border-cyan-200 mr-2'>
+          Analytics
+        </span>
+        <span className='inline-block text-xs px-3 py-1 rounded-full bg-blue-100 text-blue-800 border border-blue-200'>
+          2026
+        </span>
+      </div>
+      <h1 className='text-4xl font-bold mb-4'>
+        Edge Analytics 2026: Consent‑Safe Insights
+      </h1>
+      <p className='text-gray-600 text-lg mb-8'>
+        Build privacy‑first analytics using scoped identifierson‑device
+        aggregationand DP noise. Unlock product insights globally without
+        collecting PII—delivering sub‑100ms experiences.
+      </p>
+
+      <div className='prose prose-invert max-w-none'>
+        <h2>Architecture Overview</h2>
+        <ul>
+          <li>Scoped IDs derived from device secrets and per‑app salts</li>
+          <li>On‑device feature aggregation and time‑windowed metrics</li>
+          <li>Differential privacy noise with privacy budget accounting</li>
+          <li>Edge compute rollups with egress minimization</li>
+        </ul>
+        <h3>Compliance & Controls</h3>
+        <ul>
+          <li>No raw identifiers; zero PII collection by design</li>
+          <li>Granular event TTL and deletion policies</li>
+          <li>Policy tests in CI to prevent regressions</li>
+        </ul>
+        <h3>Business Impact</h3>
+        <ul>
+          <li>&lt;100ms personalization with private signals</li>
+          <li>Global deployment without regional data risk</li>
+          <li>Robust experimentation without user tracking</li>
+        </ul>
+      </div>
+
+      <div className='mt-10 flex gap-4'>
+        <ArrowRight
+          href='/blog'
+          className='inline-block bg-cyan-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-cyan-700'
+        >
+          Explore More Articles
+        </ArrowRight>
+        <ArrowRight
+          href='/contact'
+          className='inline-block border-2 border-cyan-600 text-cyan-600 px-6 py-3 rounded-lg font-semibold hover:bg-cyan-600 hover:text-white'
+        >
+          Talk to an Expert
+        </ArrowRight>
+      </div>
+    </main>
+  );
+}

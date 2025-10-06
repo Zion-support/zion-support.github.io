@@ -1,1 +1,33 @@
-export const co n s t m e t a d a t a = { title: 'E d g e Priv a c y I n s i g h t s 2 0 2 6 — Act i o n a b l e Metr i c s With o u t PII' description: 'Sco p e d ID s o n-dev i c e aggrega t i o n a n d DP no i s e for trus t w o r t h y i n s i g h t s w i t h z e r o PII col l e c t i o n.' }; export const defa u l t f u n c t i o n EdgePrivacyInsig h t s 2 0 2 6() { ret u r n ( <div cl a s s N a m e ='min-h-scr e e n bg-sl a t e-950 t e x t-wh i t e'> <m a i n cl a s s N a m e='max-w-4 xl mx-a u t o px-6 py-16'> <h1 cl a s s N a m e='t e x t-4 xl f o n t-ex t r a b o l d mb-4'> E d g e Priv a c y I n s i g h t s 2 0 2 6 </h1> <p cl a s s N a m e='t e x t-wh i t e/70 mb-8'> Act i o n a b l e metr i c s with o u t col l e c t i n g PII. </p> <sect i o n cl a s s N a m e='sp a c e-y-6'> <p cl a s s N a m e='t e x t-sl a t e-300'> Des i g n an a l y t i c s t h a t te a m s tr u s t and reg u l a t o r s appr o v e. Use sco p e d identifi e r s e d g e aggrega t i o n a n d diffe r e n t i a l priv a c y no i s e to extr a c t i n s i g h t s with o u t h a n d l i n g raw PII. </p> <ul cl a s s N a m e='l i s t-d i s c l i s t-ins i d e sp a c e-y-2 t e x t-sl a t e-300'> <li>Sco p e d IDs w i t h r o t a t i o n and limi t e d link a g e</li> <li>On-dev i c e pre-aggr e g a t i o n to shr i n k r i s k surf a c e</li> <li>Diffe r e n t i a l priv a c y no i s e for s a f e coh o r t an a l y t i c s</li> </ul> </sect i o n> </m a i n> </div> ); } 
+export const metadata = {
+  title: 'Edge Privacy Insights 2026 — Actionable Metrics Without PII',
+  description:
+    'Scoped IDson-device aggregationand DP noise for trustworthy insights with zero PII collection.',
+};
+
+export default function EdgePrivacyInsights2026() {
+  return (
+    <div className='min-h-screen bg-slate-950 text-white'>
+      <main className='max-w-4xl mx-auto px-6 py-16'>
+        <h1 className='text-4xl font-extrabold mb-4'>
+          Edge Privacy Insights 2026
+        </h1>
+        <p className='text-white/70 mb-8'>
+          Actionable metrics without collecting PII.
+        </p>
+
+        <section className='space-y-6'>
+          <p className='text-slate-300'>
+            Design analytics that teams trust and regulators approve. Use scoped
+            identifiersedge aggregationand differential privacy noise to extract
+            insights without handling raw PII.
+          </p>
+          <ul className='list-disc list-inside space-y-2 text-slate-300'>
+            <li>Scoped IDs with rotation and limited linkage</li>
+            <li>On-device pre-aggregation to shrink risk surface</li>
+            <li>Differential privacy noise for safe cohort analytics</li>
+          </ul>
+        </section>
+      </main>
+    </div>
+  );
+}

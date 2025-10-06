@@ -1,4 +1,4 @@
-export interface Insight { 
+export interface Insight {
   id: string;
   title: string;
   summary: string;
@@ -13,8 +13,10 @@ export interface Insight {
 export const newInsights: Insight[] = [
   {
     id: 'ai-platform-optimization-insights',
-    title: 'AI Platform Optimization: Maximizing ROI with Intelligent Scorecards',
-    summary: 'Revolutionary AI platform optimization delivering unprecedented ROI through intelligent scorecards and performance monitoring.',
+    title:
+      'AI Platform Optimization: Maximizing ROI with Intelligent Scorecards',
+    summary:
+      'Revolutionary AI platform optimization delivering unprecedented ROI through intelligent scorecards and performance monitoring.',
     category: 'AI Strategy',
     date: '2025-10-03',
     readMinutes: 7,
@@ -35,7 +37,8 @@ Transform your AI platform with intelligent scorecards and performance monitorin
   {
     id: 'quantum-ai-security-insights',
     title: 'Quantum AI Security: Next-Generation Protection Framework',
-    summary: 'Advanced quantum AI security framework providing unprecedented protection against emerging threats.',
+    summary:
+      'Advanced quantum AI security framework providing unprecedented protection against emerging threats.',
     category: 'AI Security',
     date: '2025-10-04',
     readMinutes: 9,
@@ -52,5 +55,5 @@ Protect your AI systems with next-generation quantum security frameworks.
 - Zero-trust architecture eliminates security vulnerabilities
 - Real-time monitoring provides instant threat response
     `,
-  }
+  },
 ];

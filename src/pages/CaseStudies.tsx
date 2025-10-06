@@ -1,5 +1,5 @@
-import React from "react";
-import { Helmet } from "react-helmet-async";
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
 const CaseStudies: React.FC = () => {
   const caseStudies = [
@@ -47,50 +47,65 @@ const CaseStudies: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <Helmet>
-        <title>Case Studies - Zion Website</title>
-        <meta name="description" content="Explore our success stories and see how we've helped businesses transform with AI." />
+        <title>Case Studies - Zion Tech Group</title>
+        <meta
+          name='description'
+          content='Real-world case studies showcasing our AI solutions and their impact.'
+        />
       </Helmet>
-      
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            Case Studies
-          </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Discover how we've helped businesses across industries transform their operations with AI solutions.
-          </p>
-        </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {caseStudies.map((study) => (
-            <div key={study.id} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
-              <div className="mb-4">
-                <span className="inline-block bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">
-                  {study.industry}
-                </span>
-                <span className="ml-2 text-sm text-gray-500">
-                  {study.duration}
-                </span>
-              </div>
-              
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                {study.title}
+      <div className='min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100'>
+        <div className='container mx-auto px-4 py-16'>
+          <div className='text-center mb-16'>
+            <h1 className='text-5xl font-bold text-gray-900 mb-6'>
+              Case Studies
+            </h1>
+            <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
+              Real-world case studies showcasing our AI solutions and their
+              transformative impact.
+            </p>
+          </div>
+
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+            <div className='bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow'>
+              <h3 className='text-xl font-semibold mb-4'>
+                Fortune 500 AI Transformation
               </h3>
-              
-              <p className="text-gray-600 mb-4">
-                {study.description}
+              <p className='text-gray-600 mb-4'>
+                How we helped a Fortune 500 company achieve 95% efficiency gains
+                with our AI platform.
               </p>
-              
-              <ul className="space-y-2">
-                {study.results.map((result, index) => (
-                  <li key={index} className="flex items-center text-sm text-gray-600">
-                    <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
-                    {result}
-                  </li>
-                ))}
-              </ul>
+              <div className='text-sm text-blue-600 font-medium'>
+                Read Full Case Study →
+              </div>
             </div>
-          ))}
+
+            <div className='bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow'>
+              <h3 className='text-xl font-semibold mb-4'>
+                Quantum AI Security Implementation
+              </h3>
+              <p className='text-gray-600 mb-4'>
+                Implementing quantum AI security framework resulting in 99.9%
+                threat prevention.
+              </p>
+              <div className='text-sm text-blue-600 font-medium'>
+                Read Full Case Study →
+              </div>
+            </div>
+
+            <div className='bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow'>
+              <h3 className='text-xl font-semibold mb-4'>
+                RevOps Automation Success
+              </h3>
+              <p className='text-gray-600 mb-4'>
+                Achieving 3.2x pipeline velocity and 127% ROI with our RevOps
+                automation platform.
+              </p>
+              <div className='text-sm text-blue-600 font-medium'>
+                Read Full Case Study →
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

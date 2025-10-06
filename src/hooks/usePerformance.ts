@@ -1,87 +1,41 @@
-import { useEffect, useState, useRef } from 'react';
+import { useEffect } from 'react';
 
 // Simple web vitals reporter
-const reportWebVitals = (metric: { name: string; value: number; delta: number }) => {
-  if (process.env.NODE_ENV === 'development') {
-    console.log('Web Vital:', metric);
-  }
-  // In production, you might want to send this to an analytics service
+const reportWebVitals = (metrics: {
+  name: string;
+  value: number;
+  delta: number;
+  id: string;
+}) => {
+  console.log('Web Vitals:', metrics);
+  // Here you would typically send metrics to your analytics service
 };
 
 // Hook for monitoring Core Web Vitals
 export const useWebVitals = () => {
   useEffect(() => {
-    // Import web-vitals dynamically
-    import('web-vitals').then(({ onCLS, onFID, onFCP, onLCP, onTTFB }) => {
-      onCLS(reportWebVitals);
-      onFID(reportWebVitals);
-      onFCP(reportWebVitals);
-      onLCP(reportWebVitals);
-      onTTFB(reportWebVitals);
-    });
+    // Report web vitals
+    if (typeof window !== 'undefined' && 'web-vitals' in window) {
+      import('web-vitals').then(
+        ({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
+          getCLS(reportWebVitals);
+          getFID(reportWebVitals);
+          getFCP(reportWebVitals);
+          getLCP(reportWebVitals);
+          getTTFB(reportWebVitals);
+        },
+      );
+    }
   }, []);
 };
 
-// Hook for intersection observer
-export const useIntersectionObserver = (
-  options: IntersectionObserverInit = {}
-) => {
-  const [isIntersecting, setIsIntersecting] = useState(false);
-  const [hasIntersected, setHasIntersected] = useState(false);
-  const ref = useRef<HTMLElement>(null);
-  
-  useEffect(() => {
-    const element = ref.current;
-    if (!element) return;
-    
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        setIsIntersecting(entry.isIntersecting);
-        if (entry.isIntersecting && !hasIntersected) {
-          setHasIntersected(true);
-        }
-      },
-      options
-    );
-    
-    observer.observe(element);
-    
-    return () => {
-      observer.unobserve(element);
-    };
-  }, [options, hasIntersected]);
-  
-  return [ref, isIntersecting, hasIntersected] as const;
-};
-
-// Hook for measuring component render time
-export const useRenderTime = (componentName: string) => {
-  const renderStart = useRef<number>(0);
-  
-  useEffect(() => {
-    renderStart.current = performance.now();
-  });
-  
-  useEffect(() => {
-    const renderTime = performance.now() - renderStart.current;
-    if (process.env.NODE_ENV === 'development') {
-      console.log(`${componentName} render time: ${renderTime.toFixed(2)}ms`);
-    }
-  });
-};
-
-// Hook for lazy loading with performance tracking
-export const useLazyLoad = (threshold: number = 0.1) => {
-  const [shouldLoad, setShouldLoad] = useState(false);
-  const [ref, isIntersecting] = useIntersectionObserver({
-    threshold
-  });
-  
-  useEffect(() => {
-    if (isIntersecting && !shouldLoad) {
-      setShouldLoad(true);
-    }
-  }, [isIntersecting, shouldLoad]);
-  
-  return [ref, shouldLoad] as const;
+  return {
+    // Performance monitoring utilities can be added here
+    measurePerformance: (name: string, fn: () => void) => {
+      const start = performance.now();
+      fn();
+      const end = performance.now();
+      console.log(`${name} took ${end - start} milliseconds`);
+    },
+  };
 };

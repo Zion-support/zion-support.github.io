@@ -1,1 +1,109 @@
-import ArrowRight f r o m 'n e x t/l i n k'; export const co n s t m e t a d a t a = { title: 'Ent e r p r i s e AI Inn o v a t i o n Road m a p (S e p t 30 2 0 2 5)' description: 'Met h o d i c a l mil e s t o n e s to sc a l e ent e r p r i s e AI w i t h controlsa f e t y a n d o u t c o m e s.' t y p e: 'arti c l e' publis h e d T i m e: '2 0 2 5-09-30 T00:00:00.000 Z' auth o r s: ['Z i o n T e c h Gr o u p']}; export const defa u l t f u n c t i o n EnterpriseInnovationRoadmapSep t 3 0 2 0 2 5() { ret u r n ( <div className='min-h-scr e e n bg-g r a d i e n t-to-br f r o m-sl a t e-900 via-emer a l d-900 to-sl a t e-900'> <div className='max-w-4 xl mx-a u t o px-4 py-12'> <hea d e r className='mb-10 t e x t-cen t e r'> <div className='inl i n e-f l e x it e m s-cen t e r gap-2 bg-emer a l d-600 t e x t-wh i t e px-4 py-1.5 roun d e d-f u l l t e x t-xs f o n t-s e m i b o l d mb-4'> <span>NEW</span> <span className='opac i t y-80'>S e p t 30 2 0 2 5</span> </div> <h1 className='t e x t-4 xl md:t e x t-5 xl f o n t-ex t r a b o l d t e x t-wh i t e lead i n g-ti g h t'> Ent e r p r i s e AI Inn o v a t i o n Road m a p: Pi l o t → P l a t f o r m → O u t c o m e s </h1> <p className='t e x t-g r a y-300 mt-4 t e x t-lg max-w-3xl mx-a u t o'> Sc a l e AI init i a t i v e s metho d i c a l l y w i t h gov e r n a n c e r i s k bud g e t s a n d ROI t r a c k i n g. Bu i l d m o m e n t u m f r o m ea r l y w i n s to a securer e l i a b l e p l a t f o r m. </p> <div className='t e x t-g r a y-400 t e x t-sm mt-3'> By Z i o n T e c h Gr o u p • 8 min r e a d </div> </hea d e r> <arti c l e className='pr o s e pr o s e-lg pr o s e-inv e r t max-w-n o n e'> <h2 className='t e x t-2 xl f o n t-b o l d t e x t-wh i t e mb-3'>Road m a p Sta g e s</h2> <div className='sp a c e-y-6 mb-8'> <div className='bg-wh i t e/5 bor d e r bor d e r-wh i t e/10 roun d e d-xl p-5'> <h3 className='t e x t-wh i t e f o n t-s e m i b o l d mb-1'>1) Pi l o t</h3> <p className='t e x t-g r a y-300'> P i c k a h i g h-imp a c t use c a s e w i t h contr o l l a b l e bl a s t rad i u s. Add observ a b i l i t y and budg e t s. </p> </div> <div className='bg-wh i t e/5 bor d e r bor d e r-wh i t e/10 roun d e d-xl p-5'> <h3 className='t e x t-wh i t e f o n t-s e m i b o l d mb-1'>2) Pro d u c t i z e</h3> <p className='t e x t-g r a y-300'> Har d e n s e r v i c e s add guardrails S L A s a n d s e c u r i t y. Exp a n d ev a l s and c o v e r a g e. </p> </div> <div className='bg-wh i t e/5 bor d e r bor d e r-wh i t e/10 roun d e d-xl p-5'> <h3 className='t e x t-wh i t e f o n t-s e m i b o l d mb-1'>3) P l a t f o r m</h3> <p className='t e x t-g r a y-300'> Cre a t e sha r e d in f r a: feat u r e sto r e s pol i c y enginessec r e t s a n d ap p r o v a l s. </p> </div> <div className='bg-wh i t e/5 bor d e r bor d e r-wh i t e/10 roun d e d-xl p-5'> <h3 className='t e x t-wh i t e f o n t-s e m i b o l d mb-1'>4) O u t c o m e s</h3> <p className='t e x t-g r a y-300'> Tie S L I s to KPI s r e p o r t ROI a n d ena b l e rep e a t a b l e l a u n c h e s acr o s s un i t s. </p> </div> </div> <div className='g r i d md:g r i d-c o l s-3 gap-6 mb-10'> <div className='bg-emer a l d-500/10 bor d e r bor d e r-emer a l d-500/30 roun d e d-xl p-5'> <div className='t e x t-3 xl mb-2'>📈</div> <div className='t e x t-wh i t e f o n t-s e m i b o l d'>ROI vis i b i l i t y</div> </div> <div className='bg-c y a n-500/10 bor d e r bor d e r-c y a n-500/30 roun d e d-xl p-5'> <div className='t e x t-3 xl mb-2'>🛡️</div> <div className='t e x t-wh i t e f o n t-s e m i b o l d'>G o v e r n e d sc a l e</div> </div> <div className='bg-yel l o w-500/10 bor d e r bor d e r-yel l o w-500/30 roun d e d-xl p-5'> <div className='t e x t-3 xl mb-2'>🚀</div> <div className='t e x t-wh i t e f o n t-s e m i b o l d'>Fas t e r l a u n c h e s</div> </div> </div> <div className='bg-g r a d i e n t-to-r f r o m-emer a l d-600 to-c y a n-600 roun d e d-xl p-6 t e x t-cen t e r'> <h3 className='t e x t-2 xl f o n t-b o l d t e x t-wh i t e mb-2'> Acc e l e r a t e y o u r AI road m a p </h3> <p className='t e x t-emer a l d-100 mb-4'> We br i n g playbooksguardr a i l s a n d p l a t f o r m p a t t e r n s t h a t w o r k. </p> <div className='f l e x gap-3 just i f y-cen t e r'> <ArrowRight href='/cont a c t' className='bg-wh i t e t e x t-emer a l d-700 px-6 py-2 roun d e d-lg f o n t-s e m i b o l d ho v e r:bg-g r a y-100 tra n s i t i o n-col o r s' > St a r t a pi l o t </ArrowRight> <ArrowRight href='/b l o g' className='bor d e r bor d e r-wh i t e/70 t e x t-wh i t e px-6 py-2 roun d e d-lg f o n t-s e m i b o l d ho v e r:bg-wh i t e ho v e r:t e x t-emer a l d-700 tra n s i t i o n-col o r s' > Le a r n m o r e </ArrowRight> </div> </div> </arti c l e> </div> </div> ); } 
+// @ts-nocheck
+import ArrowRight from 'next/link';
+
+export const metadata = {
+  title: 'Enterprise AI Innovation Roadmap (Sept 30, 2025)',
+  description:
+    'Methodical milestones to scale enterprise AI with controlsafetyand outcomes.',
+  type: 'article',
+  publishedTime: '2025-09-30T00:00:00.000Z',
+  authors: ['Zion Tech Group'],
+};
+
+export default function EnterpriseInnovationRoadmapSept302025() {
+  return (
+    <div className='min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900'>
+      <div className='max-w-4xl mx-auto px-4 py-12'>
+        <header className='mb-10 text-center'>
+          <div className='inline-flex items-center gap-2 bg-emerald-600 text-white px-4 py-1.5 rounded-full text-xs font-semibold mb-4'>
+            <span>NEW</span>
+            <span className='opacity-80'>Sept 30, 2025</span>
+          </div>
+          <h1 className='text-4xl md:text-5xl font-extrabold text-white leading-tight'>
+            Enterprise AI Innovation Roadmap: Pilot → Platform → Outcomes
+          </h1>
+          <p className='text-gray-300 mt-4 text-lg max-w-3xl mx-auto'>
+            Scale AI initiatives methodically with governance, risk budgetsand
+            ROI tracking. Build momentum from early wins to a securereliable
+            platform.
+          </p>
+          <div className='text-gray-400 text-sm mt-3'>
+            By Zion Tech Group • 8 min read
+          </div>
+        </header>
+
+        <article className='prose prose-lg prose-invert max-w-none'>
+          <h2 className='text-2xl font-bold text-white mb-3'>Roadmap Stages</h2>
+          <div className='space-y-6 mb-8'>
+            <div className='bg-white/5 border border-white/10 rounded-xl p-5'>
+              <h3 className='text-white font-semibold mb-1'>1) Pilot</h3>
+              <p className='text-gray-300'>
+                Pick a high-impact use case with controllable blast radius. Add
+                observability and budgets.
+              </p>
+            </div>
+            <div className='bg-white/5 border border-white/10 rounded-xl p-5'>
+              <h3 className='text-white font-semibold mb-1'>2) Productize</h3>
+              <p className='text-gray-300'>
+                Harden services, add guardrailsSLAsand security. Expand evals
+                and coverage.
+              </p>
+            </div>
+            <div className='bg-white/5 border border-white/10 rounded-xl p-5'>
+              <h3 className='text-white font-semibold mb-1'>3) Platform</h3>
+              <p className='text-gray-300'>
+                Create shared infra: feature stores, policy enginessecretsand
+                approvals.
+              </p>
+            </div>
+            <div className='bg-white/5 border border-white/10 rounded-xl p-5'>
+              <h3 className='text-white font-semibold mb-1'>4) Outcomes</h3>
+              <p className='text-gray-300'>
+                Tie SLIs to KPIsreport ROIand enable repeatable launches across
+                units.
+              </p>
+            </div>
+          </div>
+
+          <div className='grid md:grid-cols-3 gap-6 mb-10'>
+            <div className='bg-emerald-500/10 border border-emerald-500/30 rounded-xl p-5'>
+              <div className='text-3xl mb-2'>📈</div>
+              <div className='text-white font-semibold'>ROI visibility</div>
+            </div>
+            <div className='bg-cyan-500/10 border border-cyan-500/30 rounded-xl p-5'>
+              <div className='text-3xl mb-2'>🛡️</div>
+              <div className='text-white font-semibold'>Governed scale</div>
+            </div>
+            <div className='bg-yellow-500/10 border border-yellow-500/30 rounded-xl p-5'>
+              <div className='text-3xl mb-2'>🚀</div>
+              <div className='text-white font-semibold'>Faster launches</div>
+            </div>
+          </div>
+
+          <div className='bg-gradient-to-r from-emerald-600 to-cyan-600 rounded-xl p-6 text-center'>
+            <h3 className='text-2xl font-bold text-white mb-2'>
+              Accelerate your AI roadmap
+            </h3>
+            <p className='text-emerald-100 mb-4'>
+              We bring playbooksguardrailsand platform patterns that work.
+            </p>
+            <div className='flex gap-3 justify-center'>
+              <ArrowRight
+                href='/contact'
+                className='bg-white text-emerald-700 px-6 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors'
+              >
+                Start a pilot
+              </ArrowRight>
+              <ArrowRight
+                href='/blog'
+                className='border border-white/70 text-white px-6 py-2 rounded-lg font-semibold hover:bg-white hover:text-emerald-700 transition-colors'
+              >
+                Learn more
+              </ArrowRight>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  );
+}

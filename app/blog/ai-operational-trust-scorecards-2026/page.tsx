@@ -1,1 +1,76 @@
-import ArrowRight f r o m 'n e x t/l i n k'; export const co n s t m e t a d a t a = { title: 'AI Oper a t i o n a l Tr u s t Sco r e c a r d s 2 0 2 6 | Z i o n T e c h Gr o u p' description: 'S L I s wi r e d to K P I s w i t h budgetscana r i e s a n d inst a n t r o l l b a c k for dep e n d a b l e AI ope r a t i o n s in 2 0 2 6.' }; export const defa u l t f u n c t i o n AIOperationalTrustScoreca r d s 2 0 2 6() { ret u r n ( <div className='min-h-scr e e n bg-sl a t e-950 t e x t-wh i t e'> <main className='max-w-3xl mx-a u t o px-6 py-16'> <h1 className='t e x t-4 xl f o n t-ex t r a b o l d mb-4'> AI Oper a t i o n a l Tr u s t Sco r e c a r d s 2 0 2 6 </h1> <p className='t e x t-wh i t e/80 mb-8'> S h i p r e l i a b l e AI by wir i n g S L I s to prod u c t K P I s w i t h e x p l i c i t er r o r budget s c a n a r y roll o u t s a n d au t o m a t e d r o l l b a c k p o l i c i e s. Use mea s u r a b l e gua r d r a i l s to k e e p syst e m s s a f e and c o s t-ef f i c i e n t. </p> <section className='sp a c e-y-6 mb-10'> <h2 className='t e x t-2 xl f o n t-b o l d'>C o r e Sc o r e c a r d Dim e n s i o n s</h2> <ul className='l i s t-d i s c ml-6 t e x t-wh i t e/90'> <li> Reli a b i l i t y: late n c y time o u t r a t e gu a r d r a i l vi o l a t i o n r a t e </li> <li>Qual i t y: e v a l p a s s r a t e fac t u a l i t y ad h e r e n c e to p o l i c i e s</li> <li> C o s t: tok e n s per requ e s t ca c h e hit r a t e rout i n g eff i c i e n c y </li> <li> B u s i n e s s: con v e r s i o n impactre t e n t i o n delta s u p p o r t def l e c t i o n </li> </ul> </section> <section className='sp a c e-y-6 mb-10'> <h2 className='t e x t-2 xl f o n t-b o l d'>Impleme n t a t i o n Bl u e p r i n t</h2> <ol className='l i s t-deci m a l ml-6 t e x t-wh i t e/90 sp a c e-y-2'> <li> Def i n e S L I s and KPI m a p p i n g s; set budg e t s and al e r t thr e s h o l d s. </li> <li> Ins t r u m e n t tra c e s and ev a l s per u s e r f l o w; add pol i c y te s t s in CI. </li> <li> Ro u t e by qual i t y/c o s t ti e r s; ena b l e s e m a n t i c cach i n g and fa l l b a c k s. </li> <li> A u t o m a t e c a n a r i e s; g a t e by sc o r e c a r d del t a s; ena b l e 1-cl i c k r o l l b a c k. </li> </ol> </section> <div className='f l e x gap-4'> <ArrowRight href='/b l o g' className='bg-wh i t e/10 ho v e r:bg-wh i t e/20 bor d e r bor d e r-wh i t e/20 px-4 py-2 roun d e d-lg' > B a c k to B l o g </ArrowRight> <ArrowRight href='/s e r v i c e s' className='bg-emer a l d-600 ho v e r:bg-emer a l d-700 t e x t-wh i t e px-4 py-2 roun d e d-lg' > Expl o r e S e r v i c e s </ArrowRight> </div> </main> </div> ); } 
+// @ts-nocheck
+import ArrowRight from 'next/link';
+
+export const metadata = {
+  title: 'AI Operational Trust Scorecards 2026 | Zion Tech Group',
+  description:
+    'SLIs wired to KPIs with budgetscanariesand instant rollback for dependable AI operations in 2026.',
+};
+
+export default function AIOperationalTrustScorecards2026Page() {
+  return (
+    <div className='min-h-screen bg-slate-950 text-white'>
+      <main className='max-w-3xl mx-auto px-6 py-16'>
+        <h1 className='text-4xl font-extrabold mb-4'>
+          AI Operational Trust Scorecards 2026
+        </h1>
+        <p className='text-white/80 mb-8'>
+          Ship reliable AI by wiring SLIs to product KPIs with explicit error
+          budgetscanary rolloutsand automated rollback policies. Use measurable
+          guardrails to keep systems safe and cost-efficient.
+        </p>
+
+        <section className='space-y-6 mb-10'>
+          <h2 className='text-2xl font-bold'>Core Scorecard Dimensions</h2>
+          <ul className='list-disc ml-6 text-white/90'>
+            <li>
+              Reliability: latency, timeout rate, guardrail violation rate
+            </li>
+            <li>Quality: eval pass rate, factuality, adherence to policies</li>
+            <li>
+              Cost: tokens per request, cache hit rate, routing efficiency
+            </li>
+            <li>
+              Business: conversion impactretention deltasupport deflection
+            </li>
+          </ul>
+        </section>
+
+        <section className='space-y-6 mb-10'>
+          <h2 className='text-2xl font-bold'>Implementation Blueprint</h2>
+          <ol className='list-decimal ml-6 text-white/90 space-y-2'>
+            <li>
+              Define SLIs and KPI mappings; set budgets and alert thresholds.
+            </li>
+            <li>
+              Instrument traces and evals per user flow; add policy tests in CI.
+            </li>
+            <li>
+              Route by quality/cost tiers; enable semantic caching and
+              fallbacks.
+            </li>
+            <li>
+              Automate canaries; gate by scorecard deltas; enable 1-click
+              rollback.
+            </li>
+          </ol>
+        </section>
+
+        <div className='flex gap-4'>
+          <ArrowRight
+            href='/blog'
+            className='bg-white/10 hover:bg-white/20 border border-white/20 px-4 py-2 rounded-lg'
+          >
+            Back to Blog
+          </ArrowRight>
+          <ArrowRight
+            href='/services'
+            className='bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 rounded-lg'
+          >
+            Explore Services
+          </ArrowRight>
+        </div>
+      </main>
+    </div>
+  );
+}

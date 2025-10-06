@@ -1,7 +1,18 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { Brain, Zap, Shield, Cloud, Database, Users, BarChart3, Cog, Target, Rocket } from "lucide-react";
-import { Helmet } from "react-helmet-async";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import {
+  Brain,
+  Zap,
+  Shield,
+  Cloud,
+  Database,
+  Users,
+  BarChart3,
+  Cog,
+  Target,
+  Rocket,
+} from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 
 const AISolutions: React.FC = () => {
   const aiSolutions = [
@@ -82,54 +93,77 @@ const AISolutions: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <Helmet>
-        <title>AI Solutions - Zion Website</title>
-        <meta name="description" content="Discover our comprehensive AI solutions designed to transform your business operations." />
+        <title>AI Solutions - Zion Tech Group</title>
+        <meta
+          name='description'
+          content='Revolutionary AI solutions delivering unprecedented business value.'
+        />
       </Helmet>
-      
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            AI Solutions
-          </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Comprehensive AI solutions designed to transform your business operations and drive innovation.
-          </p>
-        </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {aiSolutions.map((solution, index) => (
-            <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
-              <div className="flex items-center mb-4">
-                <div className="text-blue-600 mr-3">
-                  {solution.icon}
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900">
-                  {solution.title}
-                </h3>
+      <div className='min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100'>
+        <div className='container mx-auto px-4 py-16'>
+          <div className='text-center mb-16'>
+            <h1 className='text-5xl font-bold text-gray-900 mb-6'>
+              AI Solutions
+            </h1>
+            <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
+              Revolutionary AI solutions delivering unprecedented business value
+              and transformation.
+            </p>
+          </div>
+
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+            <div className='bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow'>
+              <div className='flex items-center mb-4'>
+                <Brain className='h-8 w-8 text-blue-600 mr-3' />
+                <h3 className='text-xl font-semibold'>AI Platform 2025</h3>
               </div>
-              
-              <p className="text-gray-600 mb-4">
-                {solution.description}
+              <p className='text-gray-600 mb-4'>
+                Revolutionary AI platform delivering unprecedented business
+                transformation with measurable results.
               </p>
-              
-              <ul className="space-y-2 mb-6">
-                {solution.features.map((feature, featureIndex) => (
-                  <li key={featureIndex} className="flex items-center text-sm text-gray-600">
-                    <Target className="w-4 h-4 text-green-500 mr-2" />
-                    {feature}
-                  </li>
-                ))}
-              </ul>
-              
               <Link
-                to={solution.link}
-                className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center"
+                to='/services/ai-platform'
+                className='inline-flex items-center text-blue-600 hover:text-blue-800 font-medium'
               >
-                Learn More
-                <Rocket className="w-4 h-4 ml-2" />
+                Learn More <Rocket className='h-4 w-4 ml-2' />
               </Link>
             </div>
-          ))}
+
+            <div className='bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow'>
+              <div className='flex items-center mb-4'>
+                <Shield className='h-8 w-8 text-green-600 mr-3' />
+                <h3 className='text-xl font-semibold'>Quantum AI Security</h3>
+              </div>
+              <p className='text-gray-600 mb-4'>
+                Advanced quantum AI security framework providing unprecedented
+                protection against emerging threats.
+              </p>
+              <Link
+                to='/services/quantum-ai-security'
+                className='inline-flex items-center text-blue-600 hover:text-blue-800 font-medium'
+              >
+                Learn More <Rocket className='h-4 w-4 ml-2' />
+              </Link>
+            </div>
+
+            <div className='bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow'>
+              <div className='flex items-center mb-4'>
+                <Zap className='h-8 w-8 text-yellow-600 mr-3' />
+                <h3 className='text-xl font-semibold'>AI Performance</h3>
+              </div>
+              <p className='text-gray-600 mb-4'>
+                Optimize AI performance with advanced monitoring and
+                optimization tools.
+              </p>
+              <Link
+                to='/services/ai-performance'
+                className='inline-flex items-center text-blue-600 hover:text-blue-800 font-medium'
+              >
+                Learn More <Rocket className='h-4 w-4 ml-2' />
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     </div>

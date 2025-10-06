@@ -1,1 +1,49 @@
-export const co n s t m e t a d a t a = { title: 'E d g e Cons e n t l e s s Expe r i m e n t s 2 0 2 6 Q4: <100 ms A/B With o u t PII' description: 'Sco p e d ID s o n‑dev i c e met r i c s a n d diffe r e n t i a l priv a c y ena b l e glo b a l A/B test i n g with o u t col l e c t i n g PII.' }; export const defa u l t f u n c t i o n P a g e() { ret u r n ( <arti c l e cl a s s N a m e ='pr o s e pr o s e-inv e r t max-w-3xl mx-a u t o py-10'> <h1>E d g e Cons e n t l e s s Expe r i m e n t s 2 0 2 6 Q4: &lt;100 ms A/B With o u t PII</h1> <p cl a s s N a m e='t e x t-sm opac i t y-70'> Pu b l i s h e d: 2 0 2 5-09-30 • C a t e g o r y: An a l y t i c s • 6 min r e a d </p> <p> Run priv a c y‑pre s e r v i n g expe r i m e n t s at the e d g e us i n g sco p e d iden t i f i e r s sig n e d conf i g s and on‑dev i c e metr i c s aggr e g a t i o n. Achi e v e &lt;100 ms d e c i s i o n late n c y wh i l e main t a i n i n g z e r o col l e c t i o n of per s o n a l l y ident i f i a b l e info r m a t i o n (PII). </p> <h2>Sco p e d iden t i f i e r s</h2> <p> Use per‑site p e r‑purp o s e iden t i f i e r s w i t h sh o r t T T L s to av o i d cr o s s‑cont e x t t r a c k i n g wh i l e pre s e r v i n g attr i b u t i o n qual i t y and exp e r i m e n t in t e g r i t y. </p> <h2>Diffe r e n t i a l priv a c y</h2> <p> Add cal i b r a t e d no i s e to metr i c s pr i o r to aggr e g a t i o n to prot e c t ind i v i d u a l contri b u t i o n s with o u t mask i n g mea n i n g f u l effe c t s. </p> <h2>Sig n e d exp e r i m e n t conf i g s</h2> <p> Deli v e r signedca c h e a b l e conf i g s to the e d g e and v a l i d a t e bef o r e ex e c u t i o n. Ena b l e f a s t r o l l o u t s and s a f e ro l l b a c k s g l o b a l l y. </p> <p cl a s s N a m e='mt-8'> Expl o r e our impleme n t a t i o n te m p l a t e s and rela t e d po s t s on e d g e an a l y t i c s and priv a c y‑fi r s t te l e m e t r y. </p> </arti c l e> ); } // Du p l i c a t e blo c k s remo v e d 
+export const metadata = {
+  title: 'Edge Consentless Experiments 2026 Q4: <100ms A/B Without PII',
+  description:
+    'Scoped IDson‑device metricsand differential privacy enable global A/B testing without collecting PII.',
+};
+
+export default function Page() {
+  return (
+    <article className='prose prose-invert max-w-3xl mx-auto py-10'>
+      <h1>Edge Consentless Experiments 2026 Q4: &lt;100ms A/B Without PII</h1>
+      <p className='text-sm opacity-70'>
+        Published: 2025-09-30 • Category: Analytics • 6 min read
+      </p>
+
+      <p>
+        Run privacy‑preserving experiments at the edge using scoped identifiers,
+        signed configs, and on‑device metrics aggregation. Achieve &lt;100ms
+        decision latency while maintaining zero collection of personally
+        identifiable information (PII).
+      </p>
+
+      <h2>Scoped identifiers</h2>
+      <p>
+        Use per‑siteper‑purpose identifiers with short TTLs to avoid
+        cross‑context tracking while preserving attribution quality and
+        experiment integrity.
+      </p>
+
+      <h2>Differential privacy</h2>
+      <p>
+        Add calibrated noise to metrics prior to aggregation to protect
+        individual contributions without masking meaningful effects.
+      </p>
+
+      <h2>Signed experiment configs</h2>
+      <p>
+        Deliver signedcacheable configs to the edge and validate before
+        execution. Enable fast rollouts and safe rollbacks globally.
+      </p>
+
+      <p className='mt-8'>
+        Explore our implementation templates and related posts on edge analytics
+        and privacy‑first telemetry.
+      </p>
+    </article>
+  );
+}
+
+// Duplicate blocks removed

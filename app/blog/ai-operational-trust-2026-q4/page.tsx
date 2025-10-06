@@ -1,1 +1,49 @@
-export const co n s t m e t a d a t a = { title: 'AI Oper a t i o n a l Tr u s t 2 0 2 6 Q4: SLIsBudgetsR o l l b a c k' description: 'Outc o m e‑lin k e d SLIsb u d g e t e d act i o n s a n d one‑cl i c k r o l l b a c k for s a f e a u t o n o m y in ent e r p r i s e AI ope r a t i o n s.' }; export const defa u l t f u n c t i o n P a g e() { ret u r n ( <arti c l e cl a s s N a m e ='pr o s e pr o s e-inv e r t max-w-3xl mx-a u t o py-10'> <h1>AI Oper a t i o n a l Tr u s t 2 0 2 6 Q4: SLIsBudgetsR o l l b a c k</h1> <p cl a s s N a m e='t e x t-sm opac i t y-70'> Pu b l i s h e d: 2 0 2 5-09-30 • C a t e g o r y: AI Ope r a t i o n s • 7 min r e a d </p> <p> Estab l i s h i n g oper a t i o n a l tr u s t in aut o n o m o u s and agen t i c syst e m s r e q u i r e s mea s u r a b l e serv i c e le v e l ind i c a t o r s t i e d d i r e c t l y to b u s i n e s s o u t c o m e s b u d g e t e d acti o n s for saf e t y and ra p i d r o l l b a c k mec h a n i s m s w h e n thr e s h o l d s are b r e a c h e d. </p> <h2>Sco r e c a r d s wi r e d to K P I s</h2> <p> Def i n e S L I s s u c h as groun d e d n e s s late n c y and c o s t per outc o m e t h e n l i n k t h e m to K P I s (C S A T reve n u e oper a t i o n a l thr o u g h p u t). Use ob j e c t i v e thr e s h o l d s and er r o r budg e t s to dr i v e con s i s t e n t au d i t a b l e acti o n s. </p> <h2>B u d g e t e d acti o n s and ap p r o v a l s</h2> <p> Pr e d e f i n e b u d g e t e d acti o n s (degr a d e to chea p e r mod e l s ena b l e s e m a n t i c cache s s w i t c h to s a f e to o l s) w i t h cl e a r a p p r o v a l pa t h s. K e e p v e l o c i t y h i g h wh i l e main t a i n i n g gua r d r a i l s. </p> <h2>One‑cl i c k r o l l b a c k</h2> <p> S h i p s a f e aut o m a t i o n by mak i n g r o l l b a c k an explici t t e s t e d path w a y. P a i r PR pol i c y che c k s w i t h can a r y eval u a t i o n s and l i v e sco r e c a r d s so te a m s can iter a t e wee k l y with o u t regr e s s i o n s. </p> <p cl a s s N a m e='mt-8'> C o n t i n u e read i n g in our Cont e n t Hub or expl o r e rela t e d a r t i c l e s on gov e r n a n c e observ a b i l i t y and c o s t optim i z a t i o n. </p> </arti c l e> ); } 
+export const metadata = {
+  title: 'AI Operational Trust 2026 Q4: SLIsBudgetsRollback',
+  description:
+    'Outcome‑linked SLIsbudgeted actionsand one‑click rollback for safe autonomy in enterprise AI operations.',
+};
+
+export default function Page() {
+  return (
+    <article className='prose prose-invert max-w-3xl mx-auto py-10'>
+      <h1>AI Operational Trust 2026 Q4: SLIsBudgetsRollback</h1>
+      <p className='text-sm opacity-70'>
+        Published: 2025-09-30 • Category: AI Operations • 7 min read
+      </p>
+
+      <p>
+        Establishing operational trust in autonomous and agentic systems
+        requires measurable service level indicators tied directly to business
+        outcomes, budgeted actions for safety, and rapid rollback mechanisms
+        when thresholds are breached.
+      </p>
+
+      <h2>Scorecards wired to KPIs</h2>
+      <p>
+        Define SLIs such as groundedness, latency, and cost per outcome, then
+        link them to KPIs (CSAT, revenue, operational throughput). Use objective
+        thresholds and error budgets to drive consistent, auditable actions.
+      </p>
+
+      <h2>Budgeted actions and approvals</h2>
+      <p>
+        Predefine budgeted actions (degrade to cheaper models, enable semantic
+        cachesswitch to safe tools) with clear approval paths. Keep velocity
+        high while maintaining guardrails.
+      </p>
+
+      <h2>One‑click rollback</h2>
+      <p>
+        Ship safe automation by making rollback an explicittested pathway. Pair
+        PR policy checks with canary evaluations and live scorecards so teams
+        can iterate weekly without regressions.
+      </p>
+
+      <p className='mt-8'>
+        Continue reading in our Content Hub or explore related articles on
+        governance, observability, and cost optimization.
+      </p>
+    </article>
+  );
+}

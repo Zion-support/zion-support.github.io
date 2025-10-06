@@ -34,15 +34,15 @@ interface UseBannerRotationReturn {
 /**
  * Hook for managing banner rotation and tracking
  */
-export const useBannerRotation = ({
-  banners,
-  strategy,
-  autoRotate = true,
-  balancedSelection = false,
-}: UseBannerRotationOptions): UseBannerRotationReturn => {
-  const [displayedBanners, setDisplayedBanners] = useState<BannerConfig[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const [, setLastRotation] = useState(Date.now());
+export const useBannerRotation = (
+  banners: BannerConfig[],
+  strategy: RotationStrategy = 'sequential',
+  interval: number = 5000,
+): BannerRotationHook => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isPlaying, setIsPlaying] = useState(true);
+  const [rotationState, setRotationState] =
+    useState<BannerRotationState>('idle');
 
   // Load banner statistics from storage
   const bannersWithStats = useMemo(() => {
@@ -52,20 +52,57 @@ export const useBannerRotation = ({
     }));
   }, [banners]);
 
-  // Select banners to display
-  const selectBanners = useCallback(() => {
-    const selected = balancedSelection
-      ? selectBalancedBanners(bannersWithStats)
-      : selectBannersForDisplay(bannersWithStats, strategy as RotationStrategy);
-    setDisplayedBanners(selected);
-    setLastRotation(Date.now());
-    setIsLoading(false);
-  }, [bannersWithStats, strategy, balancedSelection]);
+  const getNextIndex = useCallback(() => {
+    if (filteredBanners.length === 0) return 0;
 
-  // Handle banner impression
-  const handleBannerImpression = useCallback((bannerId: string) => {
-    trackImpression(bannerId);
-    trackBannerInteraction(bannerId, 'impression');
+    switch (strategy) {
+      case 'random':
+        return Math.floor(Math.random() * filteredBanners.length);
+      case 'weighted':
+        // Simple weighted selection based on priority
+        const totalWeight = filteredBanners.reduce(
+          (sum, banner) => sum + banner.priority,
+          0,
+        );
+        let random = Math.random() * totalWeight;
+        for (let i = 0; i < filteredBanners.length; i++) {
+          random -= filteredBanners[i].priority;
+          if (random <= 0) return i;
+        }
+        return 0;
+      case 'sequential':
+      default:
+        return (currentIndex + 1) % filteredBanners.length;
+    }
+  }, [strategy, filteredBanners, currentIndex]);
+
+  const nextBanner = useCallback(() => {
+    if (filteredBanners.length === 0) return;
+
+    setRotationState('rotating');
+    const nextIndex = getNextIndex();
+    setCurrentIndex(nextIndex);
+
+    setTimeout(() => {
+      setRotationState('idle');
+    }, 300);
+  }, [getNextIndex, filteredBanners.length]);
+
+  const previousBanner = useCallback(() => {
+    if (filteredBanners.length === 0) return;
+
+    setRotationState('rotating');
+    const prevIndex =
+      currentIndex === 0 ? filteredBanners.length - 1 : currentIndex - 1;
+    setCurrentIndex(prevIndex);
+
+    setTimeout(() => {
+      setRotationState('idle');
+    }, 300);
+  }, [currentIndex, filteredBanners.length]);
+
+  const pauseRotation = useCallback(() => {
+    setIsPlaying(false);
   }, []);
 
   // Handle banner click
@@ -74,10 +111,18 @@ export const useBannerRotation = ({
     trackBannerInteraction(bannerId, 'click');
   }, []);
 
-  // Refresh banners manually
-  const refreshBanners = useCallback(() => {
-    selectBanners();
-  }, [selectBanners]);
+  const goToBanner = useCallback(
+    (index: number) => {
+      if (index >= 0 && index < filteredBanners.length) {
+        setRotationState('rotating');
+        setCurrentIndex(index);
+        setTimeout(() => {
+          setRotationState('idle');
+        }, 300);
+      }
+    },
+    [filteredBanners.length],
+  );
 
   // Initial selection
   useEffect(() => {

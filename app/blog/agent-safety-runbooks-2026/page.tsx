@@ -1,1 +1,54 @@
-import ArrowRight f r o m 'n e x t/l i n k'; export const co n s t m e t a d a t a = { ti t l e: "Ag e n t Saf e t y R u n b o o k s 2 0 2 6" desc r i p t i o n: "Approvalsbud g e t s a n d KPI‑lin k e d can a r y ev a l s." t y p e: "arti c l e" }; export const defa u l t f u n c t i o n AgentSafetyRunbo o k s 2 0 2 6() { ret u r n ( <div className='min-h-scr e e n bg-sl a t e-950 t e x t-wh i t e'> <main className='max-w-3xl mx-a u t o px-6 py-16'> <div className='mb-8'> <div className='inl i n e-f l e x it e m s-cen t e r gap-2 px-3 py-1 roun d e d-f u l l bg-fuch s i a-500/10 bor d e r bor d e r-fuch s i a-400/20 t e x t-fuch s i a-300 t e x t-xs f o n t-s e m i b o l d'> <span>New • Sep 2 0 2 5</span> </div> <h1 className='t e x t-4 xl f o n t-ex t r a b o l d mt-4 mb-3'> Ag e n t Saf e t y R u n b o o k s 2 0 2 6 </h1> <p className='t e x t-sl a t e-300'> Approvalsb u d g e t e d act i o n s a n d KPI‑lin k e d c a n a r i e s for s a f e ag e n t r e l e a s e s. </p> <div className='mt-3 t e x t-sl a t e-400 t e x t-sm'> 7 min r e a d • C a t e g o r y: AI Gov e r n a n c e </div> </div> <div className='pr o s e pr o s e-inv e r t pr o s e-sl a t e max-w-n o n e'> <h2>Rele a s e Re a d i n e s s</h2> <ul> <li>R i s k budg e t s per t o o l and act i o n</li> <li>Hu m a n‑in‑the‑l o o p ap p r o v a l s for se n s i t i v e fl o w s</li> <li>Can a r y eval u a t i o n s wi r e d to prod u c t K P I s</li> </ul> <h3>R o l l b a c k T r i g g e r s</h3> <p> Def i n e e x p l i c i t r o l l b a c k con d i t i o n s t i e d to S L O s and o b s e r v e d regr e s s i o n s. </p> </div> <div className='mt-12'> <ArrowRight href='/b l o g' className='inl i n e-bl o c k bg-wh i t e t e x t-fuch s i a-700 px-6 py-3 roun d e d-lg f o n t-b o l d ho v e r:bg-fuch s i a-50' > ← B a c k to B l o g </ArrowRight> </div> </main> </div> ); } 
+import ArrowRight from 'next/link';
+
+export const metadata = {
+  title: 'Agent Safety Runbooks 2026',
+  description: 'Approvalsbudgetsand KPI‑linked canary evals.',
+  type: 'article',
+};
+
+export default function AgentSafetyRunbooks2026Page() {
+  return (
+    <div className='min-h-screen bg-slate-950 text-white'>
+      <main className='max-w-3xl mx-auto px-6 py-16'>
+        <div className='mb-8'>
+          <div className='inline-flex items-center gap-2 px-3 py-1 rounded-full bg-fuchsia-500/10 border border-fuchsia-400/20 text-fuchsia-300 text-xs font-semibold'>
+            <span>New • Sep 2025</span>
+          </div>
+          <h1 className='text-4xl font-extrabold mt-4 mb-3'>
+            Agent Safety Runbooks 2026
+          </h1>
+          <p className='text-slate-300'>
+            Approvalsbudgeted actionsand KPI‑linked canaries for safe agent
+            releases.
+          </p>
+          <div className='mt-3 text-slate-400 text-sm'>
+            7 min read • Category: AI Governance
+          </div>
+        </div>
+
+        <div className='prose prose-invert prose-slate max-w-none'>
+          <h2>Release Readiness</h2>
+          <ul>
+            <li>Risk budgets per tool and action</li>
+            <li>Human‑in‑the‑loop approvals for sensitive flows</li>
+            <li>Canary evaluations wired to product KPIs</li>
+          </ul>
+          <h3>Rollback Triggers</h3>
+          <p>
+            Define explicit rollback conditions tied to SLOs and observed
+            regressions.
+          </p>
+        </div>
+
+        <div className='mt-12'>
+          <ArrowRight
+            href='/blog'
+            className='inline-block bg-white text-fuchsia-700 px-6 py-3 rounded-lg font-bold hover:bg-fuchsia-50'
+          >
+            ← Back to Blog
+          </ArrowRight>
+        </div>
+      </main>
+    </div>
+  );
+}

@@ -1,1 +1,195 @@
-import ArrowRight f r o m 'n e x t/l i n k'; export const co n s t m e t a d a t a = { title: 'G o v e r n e d A u t o n o m y Bl u e p r i n t (2 0 2 5): SafeRelia b l e C o s t-Aw a r e AI' description: 'A pr a c t i c a l bl u e p r i n t to s h i p g o v e r n e d a u t o n o m y: budg e t s scorecardsguardr a i l s a n d l i v e tra c e s t h a t conn e c t S L I s to b u s i n e s s K P I s.' k e y w o r d s: 'g o v e r n e d a u t o n o m y ai gua r d r a i l s pol i c y te s t s oper a t i o n a l score c a r d s a i budgetsent e r p r i s e ai 2 0 2 5' }; export const defa u l t f u n c t i o n GovernedAutonomyBluepr i n t 2 0 2 5() { ret u r n ( <div className='min-h-scr e e n bg-wh i t e'> <hea d e r className='bg-g r a d i e n t-to-br f r o m-sl a t e-900 via-b l u e-900 to-ind i g o-900 t e x t-wh i t e py-20'> <div className='max-w-5 xl mx-a u t o px-6'> <div className='mb-6'> <span className='bg-wh i t e/20 px-3 py-1 roun d e d-f u l l t e x t-sm f o n t-s e m i b o l d'> New Arti c l e </span> </div> <h1 className='t e x t-5 xl f o n t-ex t r a b o l d mb-6 lead i n g-ti g h t'> G o v e r n e d A u t o n o m y Bl u e p r i n t (2 0 2 5) </h1> <p className='t e x t-xl mb-8 opac i t y-90'> Sc a l e aut o n o m o u s age n t s with o u t su r p r i s e s. Use pol i c y te s t s bud g e t-aw a r e rout i n g and l i v e sco r e c a r d s to s h i p mea s u r a b l e b u s i n e s s o u t c o m e s—safelypredict a b l y a n d c o s t‑effe c t i v e l y. </p> <div className='f l e x it e m s-cen t e r gap-6 t e x t-sm opac i t y-80'> <span>📅 Se p t e m b e r 30 2 0 2 5</span> <span>⏱️ 12 min r e a d</span> <span>👤 Z i o n T e c h Gr o u p T e a m</span> </div> </div> </hea d e r> <main className='max-w-5 xl mx-a u t o px-6 py-16'> <section className='pr o s e pr o s e-lg max-w-n o n e'> <div className='bg-b l u e-50 bor d e r-l-4 bor d e r-b l u e-600 p-6 mb-10'> <p className='t e x t-lg f o n t-s e m i b o l d t e x t-b l u e-900 mb-2'> Ex e c u t i v e Summ a r y </p> <p className='t e x t-b l u e-800'> G o v e r n e d a u t o n o m y c o n n e c t s te c h n i c a l S L I s to b u s i n e s s K P I s via oper a t i o n a l sco r e c a r d s b u d g e t e d acti o n s and inst a n t r o l l b a c k. T h i s bl u e p r i n t stand a r d i z e s the p l a y b o o k acr o s s experimentationsta g i n g a n d pro d u c t i o n. </p> </div> <h2 className='t e x t-3 xl f o n t-b o l d t e x t-g r a y-900 mb-6'> Re f e r e n c e Archi t e c t u r e </h2> <div className='g r i d md:g r i d-c o l s-2 gap-6 mb-10'> <div className='bg-wh i t e roun d e d-lg bor d e r p-6'> <h3 className='t e x t-xl f o n t-b o l d mb-2'> Gua r d r a i l s & Pol i c y Te s t s </h3> <ul className='t e x t-g r a y-700 sp a c e-y-1'> <li>• Red-team i n g sui t e s and saf e t y filt e r s</li> <li>• Sig n e d d a t a s e t s and a t t e s t e d mo d e l ar t i f a c t s</li> <li>• L i v e sco r e c a r d s b l o c k i n g ri s k y r o l l o u t s</li> </ul> </div> <div className='bg-wh i t e roun d e d-lg bor d e r p-6'> <h3 className='t e x t-xl f o n t-b o l d mb-2'> Budg e t s & Observ a b i l i t y </h3> <ul className='t e x t-g r a y-700 sp a c e-y-1'> <li>• Bud g e t-aw a r e rout i n g and econ o m y ti e r s</li> <li>• End-to-end tra c e s f r o m prom p t s to o u t c o m e s</li> <li>• KPI-lin k e d S L O s w i t h au t o m a t e d r o l l b a c k</li> </ul> </div> </div> <h2 className='t e x t-3 xl f o n t-b o l d t e x t-g r a y-900 mb-6'> Op e r a t i n g Mo d e l </h2> <ol className='l i s t-deci m a l ml-6 t e x t-g r a y-700 mb-10 sp a c e-y-2'> <li>Def i n e K P I s and tr a n s l a t e t h e m i n t o mea s u r a b l e S L I s.</li> <li>Enc o d e p o l i c i e s as c o d e and enfo r c e at ev e r y g a t e.</li> <li>Use gol d e n ta s k s and onl i n e ev a l s to prev e n t regr e s s i o n s.</li> <li> Ro u t e by bud g e t and qual i t y t i e r; r o l l b a c k on sc o r e c a r d bre a c h. </li> <li>Conti n u o u s l y le a r n w i t h hu m a n-in-the-l o o p and A/B c a n a r i e s.</li> </ol> <div className='bg-g r a d i e n t-to-r f r o m-ind i g o-600 to-b l u e-600 t e x t-wh i t e p-8 roun d e d-xl mb-12'> <h3 className='t e x t-2 xl f o n t-b o l d mb-3'> S h i p G o v e r n e d A u t o n o m y w i t h Con f i d e n c e </h3> <p className='t e x t-wh i t e/90 mb-6'> We im p l e m e n t t h i s bl u e p r i n t in we e k s us i n g pro v e n pl a y b o o k s. </p> <div className='f l e x f l e x-col sm:f l e x-row gap-4'> <a href='tel:+1302 4 6 4 0 9 5 0' className='bg-wh i t e t e x t-ind i g o-700 px-6 py-3 roun d e d-lg f o n t-s e m i b o l d ho v e r:bg-g r a y-100' > C a l l +1 302 464 0 9 5 0 </a> <a href='mai l t o:kle b e r@zionte c h g r o u p.com' className='bor d e r-2 bor d e r-wh i t e t e x t-wh i t e px-6 py-3 roun d e d-lg f o n t-s e m i b o l d ho v e r:bg-wh i t e ho v e r:t e x t-ind i g o-700' > Get Consu l t a t i o n </a> </div> </div> <h2 className='t e x t-3 xl f o n t-b o l d t e x t-g r a y-900 mb-6'> Rela t e d Re s o u r c e s </h2> <div className='g r i d md:g r i d-c o l s-3 gap-6'> <Rela t e d C a r d ti t l e='Agen t i c W o r k f l o w Orches t r a t i o n 2 0 2 6' href='/b l o g/agen t i c-w o r k f l o w-orches t r a t i o n-2 0 2 6' co l o r='t e x t-fuch s i a-700' /> <Rela t e d C a r d ti t l e='E2 E AI Trac i n g 2 0 2 6' href='/b l o g/ai-2 0 2 6-e2 e-ai-trac i n g' co l o r='t e x t-c y a n-700' /> <Rela t e d C a r d ti t l e='Oper a t i o n a l Tr u s t Sco r e c a r d s 2 0 2 6' href='/b l o g/ai-oper a t i o n a l-tr u s t-sco r e c a r d s-2 0 2 6' co l o r='t e x t-emer a l d-700' /> </div> </section> </main> <section className='bg-g r a y-50 py-16'> <div className='max-w-6 xl mx-a u t o px-6'> <h2 className='t e x t-3 xl f o n t-b o l d t e x t-g r a y-900 mb-8 t e x t-cen t e r'> N e x t Up </h2> <div className='g r i d md:g r i d-c o l s-3 gap-8'> <Nex t U p C a r d ti t l e='Qual i t y Ti e r s v3' desc r i p t i o n='S a v e 40–70% w i t h sta b l e UX us i n g qual i t y ti e r s and pol i c y te s t s.' href='/b l o g/ge n a i-2 0 2 5-oct-01-qual i t y-ti e r s-v3' /> <Nex t U p C a r d ti t l e='Priv a c y‑Fi r s t Observ a b i l i t y' desc r i p t i o n='U s e r-cent r i c tra c e s with o u t PII le a k s.' href='/b l o g/ai-2 0 2 5-oct-01-priv a c y-fi r s t-observ a b i l i t y-v2' /> <Nex t U p C a r d ti t l e='Cons e n t l e s s J o u r n e y s Bl u e p r i n t' desc r i p t i o n='Personal i z a t i o n <100 ms w i t h z e r o‑PII.' href='/b l o g/e d g e-2 0 2 5-oct-01-cons e n t l e s s-j o u r n e y s-bl u e p r i n t' /> </div> </div> </section> </div> ); } f u n c t i o n Rela t e d C a r d({ ti t l e h r e f }: { ti t l e: str i n g; h r e f: str i n g }) { ret u r n ( <ArrowRight h r e f={h r e f} className='bl o c k bg-wh i t e roun d e d-lg p-6 ho v e r:sha d o w-lg tra n s i t i o n-all d u r a t i o n-300 bor d e r' > <h3 className='t e x t-lg f o n t-s e m i b o l d t e x t-g r a y-900 mb-2'>{ti t l e}</h3> <span className='t e x t-ind i g o-700 f o n t-s e m i b o l d'>R e a d M o r e →</span> </ArrowRight> ); } f u n c t i o n Nex t U p C a r d({ ti t l e descript i o n h r e f}: { ti t l e: str i n g; desc r i p t i o n: str i n g; h r e f: str i n g; }) { ret u r n ( <a h r e f={h r e f} className='bl o c k bg-wh i t e roun d e d-lg p-6 ho v e r:sha d o w-lg tra n s i t i o n-all d u r a t i o n-300 bor d e r' > <h3 className='t e x t-xl f o n t-b o l d t e x t-g r a y-900 mb-2'>{ti t l e}</h3> <p className='t e x t-g r a y-600 mb-3'>{desc r i p t i o n}</p> <span className='t e x t-ind i g o-700 f o n t-s e m i b o l d'>Expl o r e →</span> </a> ); } 
+// @ts-nocheck
+import ArrowRight from 'next/link';
+
+export const metadata = {
+  title: 'Governed Autonomy Blueprint (2025): SafeReliableCost-Aware AI',
+  description:
+    'A practical blueprint to ship governed autonomy: budgets, scorecardsguardrailsand live traces that connect SLIs to business KPIs.',
+  keywords:
+    'governed autonomy, ai guardrails, policy tests, operational scorecardsai budgetsenterprise ai 2025',
+};
+
+export default function GovernedAutonomyBlueprint2025() {
+  return (
+    <div className='min-h-screen bg-white'>
+      <header className='bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white py-20'>
+        <div className='max-w-5xl mx-auto px-6'>
+          <div className='mb-6'>
+            <span className='bg-white/20 px-3 py-1 rounded-full text-sm font-semibold'>
+              New Article
+            </span>
+          </div>
+          <h1 className='text-5xl font-extrabold mb-6 leading-tight'>
+            Governed Autonomy Blueprint (2025)
+          </h1>
+          <p className='text-xl mb-8 opacity-90'>
+            Scale autonomous agents without surprises. Use policy tests,
+            budget-aware routing, and live scorecards to ship measurable
+            business outcomes—safelypredictablyand cost‑effectively.
+          </p>
+          <div className='flex items-center gap-6 text-sm opacity-80'>
+            <span>📅 September 30, 2025</span>
+            <span>⏱️ 12 min read</span>
+            <span>👤 Zion Tech Group Team</span>
+          </div>
+        </div>
+      </header>
+
+      <main className='max-w-5xl mx-auto px-6 py-16'>
+        <section className='prose prose-lg max-w-none'>
+          <div className='bg-blue-50 border-l-4 border-blue-600 p-6 mb-10'>
+            <p className='text-lg font-semibold text-blue-900 mb-2'>
+              Executive Summary
+            </p>
+            <p className='text-blue-800'>
+              Governed autonomy connects technical SLIs to business KPIs via
+              operational scorecards, budgeted actions, and instant rollback.
+              This blueprint standardizes the playbook across
+              experimentationstagingand production.
+            </p>
+          </div>
+
+          <h2 className='text-3xl font-bold text-gray-900 mb-6'>
+            Reference Architecture
+          </h2>
+          <div className='grid md:grid-cols-2 gap-6 mb-10'>
+            <div className='bg-white rounded-lg border p-6'>
+              <h3 className='text-xl font-bold mb-2'>
+                Guardrails & Policy Tests
+              </h3>
+              <ul className='text-gray-700 space-y-1'>
+                <li>• Red-teaming suites and safety filters</li>
+                <li>• Signed datasets and attested model artifacts</li>
+                <li>• Live scorecards blocking risky rollouts</li>
+              </ul>
+            </div>
+            <div className='bg-white rounded-lg border p-6'>
+              <h3 className='text-xl font-bold mb-2'>
+                Budgets & Observability
+              </h3>
+              <ul className='text-gray-700 space-y-1'>
+                <li>• Budget-aware routing and economy tiers</li>
+                <li>• End-to-end traces from prompts to outcomes</li>
+                <li>• KPI-linked SLOs with automated rollback</li>
+              </ul>
+            </div>
+          </div>
+
+          <h2 className='text-3xl font-bold text-gray-900 mb-6'>
+            Operating Model
+          </h2>
+          <ol className='list-decimal ml-6 text-gray-700 mb-10 space-y-2'>
+            <li>Define KPIs and translate them into measurable SLIs.</li>
+            <li>Encode policies as code and enforce at every gate.</li>
+            <li>Use golden tasks and online evals to prevent regressions.</li>
+            <li>
+              Route by budget and quality tier; rollback on scorecard breach.
+            </li>
+            <li>Continuously learn with human-in-the-loop and A/B canaries.</li>
+          </ol>
+
+          <div className='bg-gradient-to-r from-indigo-600 to-blue-600 text-white p-8 rounded-xl mb-12'>
+            <h3 className='text-2xl font-bold mb-3'>
+              Ship Governed Autonomy with Confidence
+            </h3>
+            <p className='text-white/90 mb-6'>
+              We implement this blueprint in weeks using proven playbooks.
+            </p>
+            <div className='flex flex-col sm:flex-row gap-4'>
+              <a
+                href='tel:+13024640950'
+                className='bg-white text-indigo-700 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100'
+              >
+                Call +1 302 464 0950
+              </a>
+              <a
+                href='mailto:kleber@ziontechgroup.com'
+                className='border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-700'
+              >
+                Get Consultation
+              </a>
+            </div>
+          </div>
+
+          <h2 className='text-3xl font-bold text-gray-900 mb-6'>
+            Related Resources
+          </h2>
+          <div className='grid md:grid-cols-3 gap-6'>
+            <RelatedCard
+              title='Agentic Workflow Orchestration 2026'
+              href='/blog/agentic-workflow-orchestration-2026'
+              color='text-fuchsia-700'
+            />
+            <RelatedCard
+              title='E2E AI Tracing 2026'
+              href='/blog/ai-2026-e2e-ai-tracing'
+              color='text-cyan-700'
+            />
+            <RelatedCard
+              title='Operational Trust Scorecards 2026'
+              href='/blog/ai-operational-trust-scorecards-2026'
+              color='text-emerald-700'
+            />
+          </div>
+        </section>
+      </main>
+
+      <section className='bg-gray-50 py-16'>
+        <div className='max-w-6xl mx-auto px-6'>
+          <h2 className='text-3xl font-bold text-gray-900 mb-8 text-center'>
+            Next Up
+          </h2>
+          <div className='grid md:grid-cols-3 gap-8'>
+            <NextUpCard
+              title='Quality Tiers v3'
+              description='Save 40–70% with stable UX using quality tiers and policy tests.'
+              href='/blog/genai-2025-oct-01-quality-tiers-v3'
+            />
+            <NextUpCard
+              title='Privacy‑First Observability'
+              description='User-centric traces without PII leaks.'
+              href='/blog/ai-2025-oct-01-privacy-first-observability-v2'
+            />
+            <NextUpCard
+              title='Consentless Journeys Blueprint'
+              description='Personalization <100ms with zero‑PII.'
+              href='/blog/edge-2025-oct-01-consentless-journeys-blueprint'
+            />
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}
+
+function RelatedCard({ title, href }: { title: string; href: string }) {
+  return (
+    <ArrowRight
+      href={href}
+      className='block bg-white rounded-lg p-6 hover:shadow-lg transition-all duration-300 border'
+    >
+      <h3 className='text-lg font-semibold text-gray-900 mb-2'>{title}</h3>
+      <span className='text-indigo-700 font-semibold'>Read More →</span>
+    </ArrowRight>
+  );
+}
+
+function NextUpCard({
+  title,
+  descriptionhref,
+}: {
+  title: string;
+  description: string;
+  href: string;
+}) {
+  return (
+    <a
+      href={href}
+      className='block bg-white rounded-lg p-6 hover:shadow-lg transition-all duration-300 border'
+    >
+      <h3 className='text-xl font-bold text-gray-900 mb-2'>{title}</h3>
+      <p className='text-gray-600 mb-3'>{description}</p>
+      <span className='text-indigo-700 font-semibold'>Explore →</span>
+    </a>
+  );
+}

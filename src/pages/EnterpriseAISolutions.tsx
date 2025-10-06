@@ -1,6 +1,4 @@
-import React from "react";
-import { Helmet } from "react-helmet-async";
-import { Building, Shield, Zap, Users, Target, Globe } from "lucide-react";
+import React from 'react';
 
 export default function EnterpriseAISolutions(): React.JSX.Element {
   const solutions = [

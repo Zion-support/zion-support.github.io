@@ -1,1 +1,40 @@
-export const co n s t m e t a d a t a = { title: 'E d g e 2 0 2 6: Priv a c y‑Pre s e r v i n g Ev a l s (<100 ms) | Z i o n T e c h Gr o u p' description: 'Sco p e d ID s o n‑dev i c e aggrega t i o n a n d DP no i s e for trus t w o r t h y e v a l sign a l s un d e r 100 ms with o u t col l e c t i n g PII.' }; export const defa u l t f u n c t i o n P a g e() { ret u r n ( <m a i n cl a s s N a m e ='min-h-scr e e n bg-wh i t e t e x t-g r a y-900'> <sect i o n cl a s s N a m e='py-16'> <div cl a s s N a m e='max-w-3xl mx-a u t o px-4'> <p cl a s s N a m e='t e x t-sm t e x t-g r a y-500'>An a l y t i c s • 2 0 2 5-09-30</p> <h1 cl a s s N a m e='t e x t-3 xl md:t e x t-5 xl f o n t-b o l d mt-2'> E d g e 2 0 2 6: Priv a c y‑Pre s e r v i n g Ev a l s (&lt;100 ms) </h1> <p cl a s s N a m e='mt-4 t e x t-lg t e x t-g r a y-700'> Des i g n eva l u a t o r s t h a t run wh e r e us e r s are—on dev i c e—w i t h sco p e d iden t i f i e r s DP n o i s e a n d attes t a t i o n s for verifia b l e z e r o‑PII sign a l s. </p> <hr /> <arti c l e cl a s s N a m e='pr o s e pr o s e-sl a t e max-w-n o n e'> <h2>P a t t e r n s</h2> <ul> <li>Sco p e d IDs and re d a c t i o n at the e d g e</li> <li>On‑dev i c e aggr e g a t i o n w i t h t i m e‑bo x e d wind o w s</li> <li>Diffe r e n t i a l priv a c y no i s e for s a f e sign a l s</li> <li>Sig n e d attes t a t i o n s for au d i t and tr u s t</li> </ul> <h3>S L A s</h3> <p> Sub‑100 ms col l e c t i o n and exp o r t w i t h pred i c t a b l e c o s t and geo budg e t s. </p> </arti c l e> </div> </sect i o n> </m a i n> ); } 
+export const metadata = {
+  title: 'Edge 2026: Privacy‑Preserving Evals (<100ms) | Zion Tech Group',
+  description:
+    'Scoped IDson‑device aggregationand DP noise for trustworthy eval signals under 100ms without collecting PII.',
+};
+
+export default function Page() {
+  return (
+    <main className='min-h-screen bg-white text-gray-900'>
+      <section className='py-16'>
+        <div className='max-w-3xl mx-auto px-4'>
+          <p className='text-sm text-gray-500'>Analytics • 2025-09-30</p>
+          <h1 className='text-3xl md:text-5xl font-bold mt-2'>
+            Edge 2026: Privacy‑Preserving Evals (&lt;100ms)
+          </h1>
+          <p className='mt-4 text-lg text-gray-700'>
+            Design evaluators that run where users are—on device—with scoped
+            identifiers, DP noiseand attestations for verifiablezero‑PII
+            signals.
+          </p>
+          <hr />
+          <article className='prose prose-slate max-w-none'>
+            <h2>Patterns</h2>
+            <ul>
+              <li>Scoped IDs and redaction at the edge</li>
+              <li>On‑device aggregation with time‑boxed windows</li>
+              <li>Differential privacy noise for safe signals</li>
+              <li>Signed attestations for audit and trust</li>
+            </ul>
+            <h3>SLAs</h3>
+            <p>
+              Sub‑100ms collection and export with predictable cost and geo
+              budgets.
+            </p>
+          </article>
+        </div>
+      </section>
+    </main>
+  );
+}

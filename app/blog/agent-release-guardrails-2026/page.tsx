@@ -1,1 +1,69 @@
-import ArrowRight f r o m 'n e x t/l i n k'; export const co n s t m e t a d a t a = { title: 'Ag e n t Rele a s e Gua r d r a i l s 2 0 2 6: BudgetsAppro v a l s a n d Inst a n t R o l l b a c k' description: 'Bat t l e-tes t e d che c k l i s t s for s a f e ag e n t upda t e s w i t h b u d g e t e d actionsappro v a l s a n d one-cl i c k r o l l b a c k.' }; export const defa u l t f u n c t i o n P a g e() { ret u r n ( <main className='min-h-scr e e n bg-wh i t e'> <section className='py-16 bg-g r a d i e n t-to-r f r o m-fuch s i a-600/10 to-pur p l e-600/10 bor d e r-b bor d e r-g r a y-200'> <div className='max-w-4 xl mx-a u t o px-6'> <h1 className='t e x t-3 xl md:t e x t-4 xl f o n t-b o l d t e x t-g r a y-900'> Ag e n t Rele a s e Gua r d r a i l s 2 0 2 6:{' '} <span className='t e x t-fuch s i a-700'> BudgetsAppro v a l s a n d Inst a n t R o l l b a c k </span> </h1> <p className='t e x t-g r a y-600 mt-4'> S h i p r e l i a b l e ag e n t upda t e s us i n g <strong>b u d g e t e d acti o n s</strong>{' '} <strong>hu m a n ap p r o v a l s</strong>CI pol i c y t e s t s a n d{' '} <strong>one‑cl i c k r o l l b a c k</strong> wi r e d to outc o m e K P I s. </p> <div className='mt-6 t e x t-sm t e x t-g r a y-500'> 7 min r e a d • AI Ope r a t i o n s • Pu b l i s h e d Sep 30 2 0 2 5 </div> </div> </section> <section className='py-12'> <div className='max-w-4 xl mx-a u t o px-6 pr o s e pr o s e-lg'> <h2>Rele a s e Ch e c k l i s t</h2> <ul> <li>Pol i c y te s t s and ev a l s pas s e d in CI</li> <li>Runt i m e bud g e t c a p s and circ u i t b r e a k e r s</li> <li>Can a r y roll o u t w i t h KPI‑lin k e d sco r e c a r d s</li> <li>R o l l b a c k pl a y b o o k s re h e a r s e d and one‑cl i c k v e r i f i e d</li> </ul> <h3>Oper a t i o n a l Metr i c s</h3> <p> Tr a c k on‑pol i c y act i o n ratei n c i d e n t rate a n d{' '} <em>$ per suc c e s s f u l outc o m e</em>. A u t o m a t e ap p r o v a l s for low‑r i s k upda t e s. </p> </div> </section> <section className='py-12 bg-g r a y-50 bor d e r-t bor d e r-g r a y-200'> <div className='max-w-4 xl mx-a u t o px-6 f l e x it e m s-cen t e r just i f y-betw e e n'> <ArrowRight href='/b l o g' className='t e x t-fuch s i a-700 f o n t-s e m i b o l d ho v e r:t e x t-fuch s i a-800' > ← B a c k to B l o g </ArrowRight> <ArrowRight href='/b l o g/e d g e-cons e n t l e s s-expe r i m e n t s-2 0 2 6-q4' className='t e x t-pur p l e-700 f o n t-s e m i b o l d ho v e r:t e x t-pur p l e-800' > N e x t: Cons e n t l e s s Expe r i m e n t s → </ArrowRight> </div> </section> </main> ); }
+// @ts-nocheck
+import ArrowRight from 'next/link';
+
+export const metadata = {
+  title: 'Agent Release Guardrails 2026: BudgetsApprovalsand Instant Rollback',
+  description:
+    'Battle-tested checklists for safe agent updates with budgeted actionsapprovalsand one-click rollback.',
+};
+
+export default function Page() {
+  return (
+    <main className='min-h-screen bg-white'>
+      <section className='py-16 bg-gradient-to-r from-fuchsia-600/10 to-purple-600/10 border-b border-gray-200'>
+        <div className='max-w-4xl mx-auto px-6'>
+          <h1 className='text-3xl md:text-4xl font-bold text-gray-900'>
+            Agent Release Guardrails 2026:{' '}
+            <span className='text-fuchsia-700'>
+              BudgetsApprovalsand Instant Rollback
+            </span>
+          </h1>
+          <p className='text-gray-600 mt-4'>
+            Ship reliable agent updates using <strong>budgeted actions</strong>,{' '}
+            <strong>human approvals</strong>CI policy testsand{' '}
+            <strong>one‑click rollback</strong> wired to outcome KPIs.
+          </p>
+          <div className='mt-6 text-sm text-gray-500'>
+            7 min read • AI Operations • Published Sep 30, 2025
+          </div>
+        </div>
+      </section>
+
+      <section className='py-12'>
+        <div className='max-w-4xl mx-auto px-6 prose prose-lg'>
+          <h2>Release Checklist</h2>
+          <ul>
+            <li>Policy tests and evals passed in CI</li>
+            <li>Runtime budget caps and circuit breakers</li>
+            <li>Canary rollout with KPI‑linked scorecards</li>
+            <li>Rollback playbooks rehearsed and one‑click verified</li>
+          </ul>
+
+          <h3>Operational Metrics</h3>
+          <p>
+            Track on‑policy action rateincident rateand{' '}
+            <em>$ per successful outcome</em>. Automate approvals for low‑risk
+            updates.
+          </p>
+        </div>
+      </section>
+
+      <section className='py-12 bg-gray-50 border-t border-gray-200'>
+        <div className='max-w-4xl mx-auto px-6 flex items-center justify-between'>
+          <ArrowRight
+            href='/blog'
+            className='text-fuchsia-700 font-semibold hover:text-fuchsia-800'
+          >
+            ← Back to Blog
+          </ArrowRight>
+          <ArrowRight
+            href='/blog/edge-consentless-experiments-2026-q4'
+            className='text-purple-700 font-semibold hover:text-purple-800'
+          >
+            Next: Consentless Experiments →
+          </ArrowRight>
+        </div>
+      </section>
+    </main>
+  );
+}

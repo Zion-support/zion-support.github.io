@@ -10,9 +10,7 @@
       "accessibility": 74,
       "userExperience": 4
     },
-    "criticalIssues": [
-      "3 critical errors detected"
-    ],
+    "criticalIssues": ["3 critical errors detected"],
     "lastUpdated": "2025-10-04T18:06:37.621Z"
   },
   "metrics": {
@@ -62,9 +60,7 @@
       },
       "structuredData": {
         "present": true,
-        "types": [
-          "Organization"
-        ]
+        "types": ["Organization"]
       },
       "technicalSEO": {
         "canonicalUrl": true,

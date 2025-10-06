@@ -1,8 +1,6 @@
-import React from "react";
-import {
-  Helmet,
-} from "react-helmet-async";
-import SuccessStoriesShowcase from "../components/SuccessStoriesShowcase";
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import SuccessStoriesShowcase from '../components/SuccessStoriesShowcase';
 
 const CaseStudiesPage: React.FC = () => {
   const caseStudies = [
@@ -50,18 +48,26 @@ const CaseStudiesPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <Helmet>
-        <title>Case Studies - Zion Website</title>
-        <meta name="description" content="Explore our success stories and see how we've helped businesses transform with AI." />
+        <title>Case Studies - Zion Tech Group</title>
+        <meta
+          name='description'
+          content='Real-world case studies showcasing our AI solutions and their impact.'
+        />
       </Helmet>
-      
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            Case Studies
-          </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Discover how we've helped businesses across industries transform their operations with AI solutions.
-          </p>
+
+      <div className='min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100'>
+        <div className='container mx-auto px-4 py-16'>
+          <div className='text-center mb-16'>
+            <h1 className='text-5xl font-bold text-gray-900 mb-6'>
+              Case Studies
+            </h1>
+            <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
+              Real-world case studies showcasing our AI solutions and their
+              transformative impact.
+            </p>
+          </div>
+
+          <SuccessStoriesShowcase />
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">

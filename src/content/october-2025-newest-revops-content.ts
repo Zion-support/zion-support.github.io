@@ -1,13 +1,28 @@
-// October 2025 Newest Revenue Operations Content
-// JUST PUBLISHED: Autonomous RevOps Revolution
+export interface RevOpsContent {
+  id: string;
+  title: string;
+  description: string;
+  category: string;
+  date: string;
+  readTime: string;
+  tags: string[];
+  featured: boolean;
+  content: string;
+  author: string;
+  valueProposition: string;
+  highlights: string[];
+  metrics: {
+    [key: string]: string;
+  };
+}
 
 export const octoberNewestRevOpsContent: RevOpsContent[] = [
   {
-    id: 'autonomous-revops-revolution-2025',
-    title: '🚀 NEW: Autonomous Revenue Operations Revolution - 127% ROI',
-    slug: 'ai-2025-oct-01-autonomous-revenue-operations-revolution',
-    description: 'JUST PUBLISHED: Discover how autonomous RevOps platforms achieve 127% ROI, 89% forecast accuracy, and 3.2x pipeline velocity through AI-powered revenue intelligence.',
-    category: 'Revenue Operations',
+    id: 'ai-revops-automation-2025',
+    title: 'AI RevOps Automation 2025: 3.2x Pipeline Velocity',
+    description:
+      'Revolutionary AI-powered RevOps automation delivering 3.2x pipeline velocity and 127% ROI.',
+    category: 'RevOps',
     date: '2025-10-01',
     readTime: '16 min',
     icon: '💰',
@@ -41,15 +56,14 @@ export const octoberNewestRevOpsContent: RevOpsContent[] = [
     },
   },
   {
-    id: 'saas-revops-case-study-2025',
-    title: '📊 Fortune 500 SaaS: $127M Revenue Gain with Autonomous RevOps',
-    slug: 'ai-2025-oct-01-global-saas-autonomous-revops-127-million-success',
-    description: 'Real-world case study: How a $2.8B enterprise SaaS company achieved $127M incremental revenue and 89% forecast accuracy through autonomous revenue operations.',
-    category: 'Case Study',
-    date: '2025-10-01',
-    readTime: '12 min',
-    icon: '📈',
-    gradient: 'from-blue-600 to-indigo-600',
+    id: 'autonomous-revenue-operations-2025',
+    title: 'Autonomous Revenue Operations 2025: Self-Healing Systems',
+    description:
+      'Self-healing RevOps systems with 99.9% uptime and 85% cost reduction.',
+    category: 'RevOps',
+    date: '2025-10-02',
+    readTime: '18 min read',
+    tags: ['RevOps', 'Autonomous', 'Self-Healing', '2025'],
     featured: true,
     breaking: true,
     tags: ['Case Study', 'SaaS', 'Revenue Operations', 'Enterprise AI'],
@@ -68,10 +82,6 @@ export const octoberNewestRevOpsContent: RevOpsContent[] = [
       velocity: '3.2x',
       roi: '704%',
     },
-    cta: {
-      text: 'Read the Full Case Study',
-      link: '/case-studies/ai-2025-oct-01-global-saas-autonomous-revops-127-million-success',
-    },
   },
 ];
 
@@ -80,7 +90,9 @@ export const getFeaturedRevOpsContent = () => {
 };
 
 export const getBreakingRevOpsContent = () => {
-  return octoberNewestRevOpsContent.filter(content => content.breaking);
+  return octoberNewestRevOpsContent.filter(content =>
+    content.tags.includes('Breaking'),
+  );
 };
 
 export const getAllRevOpsContent = () => {

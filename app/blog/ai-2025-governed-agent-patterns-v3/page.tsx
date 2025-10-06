@@ -1,1 +1,37 @@
-import ArrowRight f r o m 'n e x t/l i n k'; export const co n s t m e t a d a t a = { title: 'G o v e r n e d Ag e n t P a t t e r n s v3 (2 0 2 5) — Z i o n T e c h Gr o u p' description: 'Pro d u c t i o n p a t t e r n s for s a f e a u t o n o m y: b u d g e t e d ac t i o n s P R pol i c y t e s t s a n d one-cl i c k r e c o v e r y.' }; export const defa u l t f u n c t i o n P a g e() { ret u r n ( <main className='min-h-scr e e n bg-wh i t e t e x t-g r a y-900'> <section className='max-w-3xl mx-a u t o px-6 py-12 pr o s e pr o s e-lg'> <h1>G o v e r n e d Ag e n t P a t t e r n s v3 (2 0 2 5)</h1> <p> Saf e l y s h i p aut o n o m o u s age n t s us i n g budgetscap a b i l i t y sandb o x e s a n d KPI-lin k e d c a n a r i e s. T h i s gu i d e deta i l s p a t t e r n s t h a t k e e p v e l o c i t y h i g h wh i l e pro t e c t i n g us e r s and K P I s. </p> <h2>I n c l u d e d p a t t e r n s</h2> <ul> <li>B u d g e t e d acti o n s w i t h ap p r o v a l s</li> <li>Runt i m e pol i c y te s t s and PR che c k s</li> <li>L i v e c a n a r i e s and r o l l b a c k t r i g g e r s</li> <li>Oper a t i o n a l sco r e c a r d s wi r e d to o u t c o m e s</li> </ul> <p> See rela t e d oper a t i o n a l r u n b o o k s in the{' '} <ArrowRight href='/b l o g' className='t e x t-b l u e-600 ho v e r:un d e r l i n e'> B l o g </ArrowRight> . </p> </section> </main> ); } 
+// @ts-nocheck
+import ArrowRight from 'next/link';
+
+export const metadata = {
+  title: 'Governed Agent Patterns v3 (2025) — Zion Tech Group',
+  description:
+    'Production patterns for safe autonomy: budgeted actionsPR policy testsand one-click recovery.',
+};
+
+export default function Page() {
+  return (
+    <main className='min-h-screen bg-white text-gray-900'>
+      <section className='max-w-3xl mx-auto px-6 py-12 prose prose-lg'>
+        <h1>Governed Agent Patterns v3 (2025)</h1>
+        <p>
+          Safely ship autonomous agents using budgetscapability sandboxesand
+          KPI-linked canaries. This guide details patterns that keep velocity
+          high while protecting users and KPIs.
+        </p>
+        <h2>Included patterns</h2>
+        <ul>
+          <li>Budgeted actions with approvals</li>
+          <li>Runtime policy tests and PR checks</li>
+          <li>Live canaries and rollback triggers</li>
+          <li>Operational scorecards wired to outcomes</li>
+        </ul>
+        <p>
+          See related operational runbooks in the{' '}
+          <ArrowRight href='/blog' className='text-blue-600 hover:underline'>
+            Blog
+          </ArrowRight>
+          .
+        </p>
+      </section>
+    </main>
+  );
+}

@@ -1,33 +1,58 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { Search, MessageCircle, Phone, Mail, BookOpen, Video, Users, Zap, Clock, CheckCircle } from "lucide-react";
-import { Helmet } from "react-helmet-async";
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import {
+  Search,
+  MessageCircle,
+  Phone,
+  Mail,
+  BookOpen,
+  Video,
+  Users,
+  Zap,
+  Clock,
+  CheckCircle,
+} from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 
 const Support: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  
-  const supportChannels = [
+
+  const supportOptions = [
     {
-      icon: <Phone className="w-8 h-8" />,
-      title: "Phone Support",
-      description: "Call us for immediate assistance",
-      contact: "+1 (555) 123-4567",
-      availability: "24/7",
+      title: 'Documentation',
+      description: 'Comprehensive guides and API documentation',
+      icon: BookOpen,
+      link: '/docs',
     },
     {
-      icon: <Mail className="w-8 h-8" />,
-      title: "Email Support",
+      title: 'Live Chat',
+      description: 'Get instant help from our support team',
+      icon: MessageCircle,
+      link: '/chat',
+    },
+    {
+      title: 'Video Tutorials',
+      description: 'Step-by-step video guides',
+      icon: Video,
+      link: '/tutorials',
+    },
+    {
+      title: 'Community Forum',
+      description: 'Connect with other users and experts',
+      icon: Users,
+      link: '/community',
+    },
+    {
+      title: 'Phone Support',
+      description: 'Call us for immediate assistance',
+      icon: Phone,
+      link: 'tel:+1-800-123-4567',
+    },
+    {
+      title: 'Email Support',
       description: "Send us an email and we'll respond quickly",
-      contact: "support@zion.com",
-      availability: "24/7",
-    },
-    {
-      icon: <MessageCircle className="w-8 h-8" />,
-      title: "Live Chat",
-      description: "Chat with our support team in real-time",
-      contact: "Available on website",
-      availability: "Business Hours",
+      icon: Mail,
+      link: 'mailto:support@ziontech.com',
     },
   ];
 
@@ -74,25 +99,31 @@ const Support: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <Helmet>
-        <title>Support - Zion Website</title>
-        <meta name="description" content="Get help and support for your AI solutions. Find answers, contact support, and access resources." />
+        <title>Support - Zion Tech Group</title>
+        <meta
+          name='description'
+          content='Get help and support for our AI solutions.'
+        />
       </Helmet>
-      
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            Support Center
-          </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Get help and support for your AI solutions. Find answers, contact support, and access resources.
-          </p>
-        </div>
 
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
-          {supportChannels.map((channel, index) => (
-            <div key={index} className="bg-white rounded-lg shadow-lg p-6 text-center">
-              <div className="text-blue-600 mb-4 flex justify-center">
-                {channel.icon}
+      <div className='min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100'>
+        <div className='container mx-auto px-4 py-16'>
+          <div className='text-center mb-16'>
+            <h1 className='text-5xl font-bold text-gray-900 mb-6'>Support</h1>
+            <p className='text-xl text-gray-600 max-w-3xl mx-auto mb-8'>
+              Get help and support for our AI solutions.
+            </p>
+
+            <div className='max-w-2xl mx-auto'>
+              <div className='relative'>
+                <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5' />
+                <input
+                  type='text'
+                  placeholder='Search for help...'
+                  value={searchQuery}
+                  onChange={e => setSearchQuery(e.target.value)}
+                  className='w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent'
+                />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">
                 {channel.title}
@@ -154,15 +185,23 @@ const Support: React.FC = () => {
             </div>
           </div>
 
-          <div className="space-y-4">
-            {searchResults.map((faq, index) => (
-              <div key={index} className="border border-gray-200 rounded-lg p-4">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  {faq.question}
-                </h3>
-                <p className="text-gray-600">
-                  {faq.answer}
-                </p>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+            {supportOptions.map((option, index) => (
+              <div
+                key={index}
+                className='bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow'
+              >
+                <div className='flex items-center mb-4'>
+                  <option.icon className='h-8 w-8 text-blue-600 mr-3' />
+                  <h3 className='text-xl font-semibold'>{option.title}</h3>
+                </div>
+                <p className='text-gray-600 mb-6'>{option.description}</p>
+                <Link
+                  to={option.link}
+                  className='inline-flex items-center text-blue-600 hover:text-blue-800 font-medium'
+                >
+                  Get Help <Zap className='h-4 w-4 ml-2' />
+                </Link>
               </div>
             ))}
           </div>

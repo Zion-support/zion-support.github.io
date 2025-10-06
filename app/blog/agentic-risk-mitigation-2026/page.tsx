@@ -1,1 +1,102 @@
-import ArrowRight f r o m 'n e x t/l i n k'; export const co n s t m e t a d a t a = { title: 'Agen t i c R i s k Mit i g a t i o n 2 0 2 6 — GuardrailsE v a l s a n d S a f e A u t o n o m y' description: 'Pr a c t i c a l fr a m e w o r k for mit i g a t i n g ri s k s in agen t i c syst e m s: gov e r n a n c e evaluati o n s k i l l-swit c h e s a n d s a f e a u t o n o m y p a t t e r n s for 2 0 2 6 ent e r p r i s e dep l o y m e n t.' }; export const defa u l t f u n c t i o n AgenticRiskMitigat i o n 2 0 2 6() { ret u r n ( <main className='min-h-scr e e n bg-wh i t e'> <section className='py-16 bg-g r a d i e n t-to-r f r o m-pur p l e-700 via-fuch s i a-700 to-p i n k-600 t e x t-wh i t e'> <div className='max-w-5 xl mx-a u t o px-6'> <h1 className='t e x t-3 xl md:t e x t-5 xl f o n t-ex t r a b o l d lead i n g-ti g h t'> Agen t i c R i s k Mit i g a t i o n 2 0 2 6 </h1> <p className='mt-4 t e x t-lg md:t e x t-xl t e x t-pur p l e-50'> A pr a c t i c a l p l a y b o o k for safereli a b l e a n d g o v e r n e d aut o n o m o u s age n t s in the ent e r p r i s e. </p> <div className='mt-6 f l e x f l e x-w r a p gap-3 t e x t-sm'> <span className='bg-wh i t e/20 px-3 py-1 roun d e d-f u l l'> 🛡️ Saf e t y </span> <span className='bg-wh i t e/20 px-3 py-1 roun d e d-f u l l'> 📏 Eval u a t i o n s </span> <span className='bg-wh i t e/20 px-3 py-1 roun d e d-f u l l'> 🧭 Gov e r n a n c e </span> <span className='bg-wh i t e/20 px-3 py-1 roun d e d-f u l l'> ⚡ A u t o n o m y </span> </div> </div> </section> <section className='py-12'> <div className='max-w-3xl mx-a u t o px-6 pr o s e pr o s e-lg'> <h2>Why r i s k mit i g a t i o n matt e r s now</h2> <p> Agen t i c syst e m s are mov i n g f r o m pil o t s to pro d u c t i o n. W i t h hig h e r a u t o n o m y co m e s m a t e r i a l r i s k: er r o n e o u s acti o n s com p l i a n c e dr i f t c o s t exp l o s i o n s and br a n d r i s k. T h i s gu i d e o u t l i n e s c o n c r e t e p a t t e r n s t h a t k e e p syst e m s s a f e wh i l e e n a b l i n g imp a c t. </p> <h3>C o r e cont r o l p a t t e r n s</h3> <ul> <li> Pol i c y-c o m p i l e d t a s k pl a n s w i t h al l o w/d e n y cap a b i l i t y sco p e s </li> <li>Hu m a n-in-the-l o o p chec k p o i n t s for h i g h-r i s k tran s i t i o n s</li> <li> Determ i n i s t i c saf e t y ra i l s: bud g e t r a t e and sc o p e l i m i t e r s </li> <li> R e a l t i m e eva l u a t o r s for refu s a l t o o l saf e t y and PII leak a g e </li> <li>K i l l-swi t c h and r o l l b a c k wo r k f l o w s w i t h au d i t tra i l s</li> </ul> <h3>Eva l u a t i o n mat r i x</h3> <p> Ad o p t a laye r e d e v a l s t r a t e g y: pre-dep l o y m e n t red team i n g u n i t t a s k ev a l s end-to-end s c e n a r i o ev a l s and con t i n u o u s p o s t-dep l o y m e n t te l e m e t r y w i t h gu a r d r a i l ale r t s. O p t i m i z e for c o v e r a g e o v e r cle v e r n e s s; meas u r e fail u r e ra t e s c o s t-to-sig n a l and t i m e-to-de t e c t i o n. </p> <h3>Dep l o y m e n t qui c k s t a r t</h3> <ol> <li>Def i n e r i s k t a x o n o m y and map to ag e n t capab i l i t i e s</li> <li>Ins t r u m e n t policiesbud g e t s a n d esc a l a t i o n pa t h s</li> <li>St a n d up e v a l pi p e l i n e s w i t h gol d e n ta s k s</li> <li> Pi l o t un d e r ti g h t budg e t s; exp a n d w i t h o b s e r v e d saf e t y marg i n s </li> <li> Conti n u o u s l y retr a i n refu s a l and saf e t y p o l i c i e s on in c i d e n t s </li> </ol> <div className='not-pr o s e mt-10 p-6 roun d e d-xl bg-g r a d i e n t-to-br f r o m-g r a y-50 to-wh i t e bor d e r bor d e r-g r a y-200'> <h4 className='t e x t-xl f o n t-b o l d mb-2'>Get the ch e c k l i s t</h4> <p className='t e x t-g r a y-700 mb-4'> D o w n l o a d the oper a t i o n a l ch e c k l i s t to produc t i o n i z e th e s e c o n t r o l s ins i d e y o u r p l a t f o r m. </p> <ArrowRight href='/c a s e-stud i e s' className='inl i n e-bl o c k bg-pur p l e-600 ho v e r:bg-pur p l e-700 t e x t-wh i t e px-5 py-3 roun d e d-lg f o n t-s e m i b o l d' > Expl o r e c a s e stud i e s → </ArrowRight> </div> </div> </section> </main> ); } 
+import ArrowRight from 'next/link';
+
+export const metadata = {
+  title: 'Agentic Risk Mitigation 2026 — GuardrailsEvalsand Safe Autonomy',
+  description:
+    'Practical framework for mitigating risks in agentic systems: governance, evaluationskill-switchesand safe autonomy patterns for 2026 enterprise deployment.',
+};
+
+export default function AgenticRiskMitigation2026Page() {
+  return (
+    <main className='min-h-screen bg-white'>
+      <section className='py-16 bg-gradient-to-r from-purple-700 via-fuchsia-700 to-pink-600 text-white'>
+        <div className='max-w-5xl mx-auto px-6'>
+          <h1 className='text-3xl md:text-5xl font-extrabold leading-tight'>
+            Agentic Risk Mitigation 2026
+          </h1>
+          <p className='mt-4 text-lg md:text-xl text-purple-50'>
+            A practical playbook for safereliableand governed autonomous agents
+            in the enterprise.
+          </p>
+          <div className='mt-6 flex flex-wrap gap-3 text-sm'>
+            <span className='bg-white/20 px-3 py-1 rounded-full'>
+              🛡️ Safety
+            </span>
+            <span className='bg-white/20 px-3 py-1 rounded-full'>
+              📏 Evaluations
+            </span>
+            <span className='bg-white/20 px-3 py-1 rounded-full'>
+              🧭 Governance
+            </span>
+            <span className='bg-white/20 px-3 py-1 rounded-full'>
+              ⚡ Autonomy
+            </span>
+          </div>
+        </div>
+      </section>
+
+      <section className='py-12'>
+        <div className='max-w-3xl mx-auto px-6 prose prose-lg'>
+          <h2>Why risk mitigation matters now</h2>
+          <p>
+            Agentic systems are moving from pilots to production. With higher
+            autonomy comes material risk: erroneous actions, compliance drift,
+            cost explosions, and brand risk. This guide outlines concrete
+            patterns that keep systems safe while enabling impact.
+          </p>
+
+          <h3>Core control patterns</h3>
+          <ul>
+            <li>
+              Policy-compiled task plans with allow/deny capability scopes
+            </li>
+            <li>Human-in-the-loop checkpoints for high-risk transitions</li>
+            <li>
+              Deterministic safety rails: budget, rate, and scope limiters
+            </li>
+            <li>
+              Realtime evaluators for refusal, tool safety, and PII leakage
+            </li>
+            <li>Kill-switch and rollback workflows with audit trails</li>
+          </ul>
+
+          <h3>Evaluation matrix</h3>
+          <p>
+            Adopt a layered eval strategy: pre-deployment red teaming, unit task
+            evals, end-to-end scenario evals, and continuous post-deployment
+            telemetry with guardrail alerts. Optimize for coverage over
+            cleverness; measure failure rates, cost-to-signal, and
+            time-to-detection.
+          </p>
+
+          <h3>Deployment quickstart</h3>
+          <ol>
+            <li>Define risk taxonomy and map to agent capabilities</li>
+            <li>Instrument policiesbudgetsand escalation paths</li>
+            <li>Stand up eval pipelines with golden tasks</li>
+            <li>
+              Pilot under tight budgets; expand with observed safety margins
+            </li>
+            <li>
+              Continuously retrain refusal and safety policies on incidents
+            </li>
+          </ol>
+
+          <div className='not-prose mt-10 p-6 rounded-xl bg-gradient-to-br from-gray-50 to-white border border-gray-200'>
+            <h4 className='text-xl font-bold mb-2'>Get the checklist</h4>
+            <p className='text-gray-700 mb-4'>
+              Download the operational checklist to productionize these controls
+              inside your platform.
+            </p>
+            <ArrowRight
+              href='/case-studies'
+              className='inline-block bg-purple-600 hover:bg-purple-700 text-white px-5 py-3 rounded-lg font-semibold'
+            >
+              Explore case studies →
+            </ArrowRight>
+          </div>
+        </div>
+      </section>
+    </main>
+  );
+}

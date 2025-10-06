@@ -1,1 +1,36 @@
-export const co n s t m e t a d a t a = { title: 'AI Gov e r n a n c e Runt i m e Gua r d r a i l s 2 0 2 6 — Inl i n e P o l i c i e s With o u t F r i c t i o n' description: 'Run-t i m e pol i c y ch e c k s K P I-lin k e d cana r i e s a n d inst a n t r o l l b a c k t h a t k e e p te a m s f a s t and co m p l i a n t.' }; export const defa u l t f u n c t i o n AIGovernanceRuntimeGuardra i l s 2 0 2 6() { ret u r n ( <div cl a s s N a m e ='min-h-scr e e n bg-sl a t e-950 t e x t-wh i t e'> <m a i n cl a s s N a m e='max-w-4 xl mx-a u t o px-6 py-16'> <h1 cl a s s N a m e='t e x t-4 xl f o n t-ex t r a b o l d mb-4'> AI Gov e r n a n c e Runt i m e Gua r d r a i l s 2 0 2 6 </h1> <p cl a s s N a m e='t e x t-wh i t e/70 mb-8'> Inl i n e pol i c y che c k s and l i v e c a n a r i e s with o u t slow i n g te a m s. </p> <sect i o n cl a s s N a m e='sp a c e-y-6'> <p cl a s s N a m e='t e x t-sl a t e-300'> S h i p f a s t w i t h gov e r n a n c e t h a t r u n s in-l i n e w i t h pro d u c t i o n traf f i c. W i r e pol i c y ch e c k s K P I-lin k e d cana r i e s a n d r o l l b a c k t r i g g e r s so r e l e a s e s s t a y s a f e and v e l o c i t y rema i n s h i g h. </p> <ul cl a s s N a m e='l i s t-d i s c l i s t-ins i d e sp a c e-y-2 t e x t-sl a t e-300'> <li>Inl i n e pol i c y che c k s at c r i t i c a l d e c i s i o n poi n t s</li> <li> KPI-lin k e d c a n a r i e s t h a t bl o c k regr e s s i o n s bef o r e us e r s f e e l t h e m </li> <li>Inst a n t r o l l b a c k t r i g g e r s t i e d to er r o r/qual i t y budg e t s</li> </ul> </sect i o n> </m a i n> </div> ); } 
+export const metadata = {
+  title:
+    'AI Governance Runtime Guardrails 2026 — Inline Policies Without Friction',
+  description:
+    'Run-time policy checksKPI-linked canariesand instant rollback that keep teams fast and compliant.',
+};
+
+export default function AIGovernanceRuntimeGuardrails2026() {
+  return (
+    <div className='min-h-screen bg-slate-950 text-white'>
+      <main className='max-w-4xl mx-auto px-6 py-16'>
+        <h1 className='text-4xl font-extrabold mb-4'>
+          AI Governance Runtime Guardrails 2026
+        </h1>
+        <p className='text-white/70 mb-8'>
+          Inline policy checks and live canaries without slowing teams.
+        </p>
+
+        <section className='space-y-6'>
+          <p className='text-slate-300'>
+            Ship fast with governance that runs in-line with production traffic.
+            Wire policy checksKPI-linked canariesand rollback triggers so
+            releases stay safe and velocity remains high.
+          </p>
+          <ul className='list-disc list-inside space-y-2 text-slate-300'>
+            <li>Inline policy checks at critical decision points</li>
+            <li>
+              KPI-linked canaries that block regressions before users feel them
+            </li>
+            <li>Instant rollback triggers tied to error/quality budgets</li>
+          </ul>
+        </section>
+      </main>
+    </div>
+  );
+}

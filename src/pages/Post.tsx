@@ -3,8 +3,8 @@ import { useParams } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 
 export default function Post(): React.JSX.Element {
-  const { slug } = useParams<{ slug: string }>();
-  
+  const { slug } = useParams();
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <Helmet>
