@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -14,8 +13,17 @@ const SEOOptimizer: React.FC = () => {
       "logo": "https://ziontechgroup.com/logo.png",
       "contactPoint": {
         "@type": "ContactPoint",
-        "telephone": "+1-555-0123",
-        "contactType": "customer service"
+        "telephone": "+1-302-464-0950",
+        "contactType": "customer service",
+        "email": "kleber@ziontechgroup.com"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "364 E Main St STE 1008",
+        "addressLocality": "Middletown",
+        "addressRegion": "DE",
+        "postalCode": "19709",
+        "addressCountry": "US"
       },
       "sameAs": [
         "https://twitter.com/ziontechgroup",
@@ -28,88 +36,48 @@ const SEOOptimizer: React.FC = () => {
     script.text = JSON.stringify(structuredData);
     document.head.appendChild(script);
 
+    // Add canonical URL
+    const canonical = document.createElement('link');
+    canonical.rel = 'canonical';
+    canonical.href = window.location.href;
+    document.head.appendChild(canonical);
+
+    // Add meta viewport if not present
+    if (!document.querySelector('meta[name="viewport"]')) {
+      const viewport = document.createElement('meta');
+      viewport.name = 'viewport';
+      viewport.content = 'width=device-width, initial-scale=1';
+      document.head.appendChild(viewport);
+    }
+
+    // Cleanup function
     return () => {
-      document.head.removeChild(script);
+      const existingScript = document.querySelector('script[type="application/ld+json"]');
+      if (existingScript) {
+        document.head.removeChild(existingScript);
+      }
+      const existingCanonical = document.querySelector('link[rel="canonical"]');
+      if (existingCanonical) {
+        document.head.removeChild(existingCanonical);
+      }
     };
   }, []);
 
   return (
     <Helmet>
-      <meta name="robots" content="index, follow" />
-      <meta name="googlebot" content="index, follow" />
-      <link rel="canonical" href="https://ziontechgroup.com" />
+      <title>Zion Tech Group - Advanced AI and IT Solutions</title>
+      <meta name="description" content="Leading provider of AI-powered enterprise solutions and digital transformation services. Achieve 300% ROI with our cutting-edge AI technology." />
+      <meta name="keywords" content="AI solutions, enterprise technology, quantum computing, autonomous systems, business intelligence, digital transformation" />
+      <meta property="og:title" content="Zion Tech Group - Advanced AI and IT Solutions" />
+      <meta property="og:description" content="Transform your enterprise with AI-powered solutions achieving 300% ROI, 70% cost reduction, and 90% efficiency gains" />
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="https://ziontechgroup.com" />
+      <meta property="og:image" content="https://ziontechgroup.com/og-image.jpg" />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content="Zion Tech Group - Advanced AI and IT Solutions" />
+      <meta name="twitter:description" content="Transform your enterprise with AI-powered solutions achieving 300% ROI, 70% cost reduction, and 90% efficiency gains" />
+      <meta name="twitter:image" content="https://ziontechgroup.com/og-image.jpg" />
     </Helmet>
-=======
-import React, { type ReactNode, useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
-
-interface SEOOptimizerProps {
-  children: ReactNode;
-  title?: string;
-  description?: string;
-  keywords?: string[];
-  canonicalUrl?: string;
-  ogImage?: string;
-  structuredData?: object;
-}
-
-const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ 
-  children, 
-  title = "Zion Tech Group - AI Enterprise Solutions",
-  description = "Transform your enterprise with AI-powered solutions. Achieve 300% ROI, 70% cost reduction, and 90% efficiency gains.",
-  keywords = ["AI", "enterprise", "automation", "digital transformation", "ROI", "efficiency"],
-  canonicalUrl,
-  ogImage = "https://ziontechgroup.com/og-image.jpg",
-  structuredData
-}) => {
-  useEffect(() => {
-    // Add structured data to the page
-    if (structuredData) {
-      const script = document.createElement('script');
-      script.type = 'application/ld+json';
-      script.text = JSON.stringify(structuredData);
-      document.head.appendChild(script);
-      
-      return () => {
-        document.head.removeChild(script);
-      };
-    }
-    return undefined;
-  }, [title, description, keywords, canonicalUrl, ogImage, structuredData]);
-
-  return (
-    <>
-      <Helmet>
-        <title>{title}</title>
-        <meta name="description" content={description} />
-        <meta name="keywords" content={keywords.join(', ')} />
-        {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
-        
-        {/* Open Graph tags */}
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
-        <meta property="og:image" content={ogImage} />
-        <meta property="og:type" content="website" />
-        
-        {/* Twitter Card tags */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={title} />
-        <meta name="twitter:description" content={description} />
-        <meta name="twitter:image" content={ogImage} />
-        
-        {/* Additional SEO meta tags */}
-        <meta name="robots" content="index, follow" />
-        <meta name="author" content="Zion Tech Group" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        
-        {/* Performance hints */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
-      </Helmet>
-      {children}
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-83ba
   );
 };
 
