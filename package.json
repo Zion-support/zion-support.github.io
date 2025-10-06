@@ -58,14 +58,14 @@
     "build:profile": "vite build --mode production --profile",
     "perf:monitor": "node scripts/performance-monitor.js",
     "perf:analyze:full": "pnpm run build:analyze && pnpm run perf:monitor",
-    "perf:optimize": "node scripts/advanced-performance-optimizer.cjs && pnpm run perf:monitor",
+    "perf:optimize": "npm run build:analyze && npm run perf:audit",
     "optimize:final": "node scripts/final-optimization.cjs",
     "optimize:production": "npm run build:enhanced && npm run analyze:bundle",
     "optimize:performance-final": "node scripts/final-performance-optimizer.js",
     "deploy:production": "npm run optimize:all && npm run performance:audit && echo \"Ready for production deployment\"",
     "enhance:performance": "node scripts/performance-enhancer.js",
     "build:enhanced": "NODE_ENV=production vite build --minify terser --sourcemap false",
-    "perf:analyze": "node scripts/performance-optimizer.js",
+    "perf:analyze": "npm run build && npx webpack-bundle-analyzer dist/stats.json",
     "perf:build": "pnpm run build:netlify && pnpm run perf:analyze",
     "netlify:build": "pnpm run build:optimized",
     "netlify:preview": "pnpm run preview:optimized",
@@ -91,7 +91,9 @@
     "build:ultimate": "NODE_ENV=production pnpm run build:minimal && pnpm run optimize:assets",
     "optimize:assets": "node scripts/asset-optimizer.js",
     "seo:audit": "node scripts/seo-audit.js",
-    "comprehensive:audit": "pnpm run performance:audit && pnpm run security:audit && pnpm run accessibility:audit && pnpm run seo:audit"
+    "comprehensive:audit": "pnpm run performance:audit && pnpm run security:audit && pnpm run accessibility:audit && pnpm run seo:audit",
+    "perf:lighthouse": "lighthouse http://localhost:3000 --output=html --output-path=./lighthouse-report.html",
+    "perf:audit": "npm run perf:lighthouse && npm run perf:analyze"
   },
   "dependencies": {
     "@esbuild/linux-x64": "^0.25.10",
