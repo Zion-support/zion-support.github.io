@@ -36,23 +36,13 @@ async function handler(req, res) {
     return;
   }
   try {
-    const { email } = req.body || {};
+    const { email, name, source = 'website' } = req.body || {};
 
-  const { email, name, source = 'website' } = req.body || {};
-
-  if (!email) {
-    res.statusCode = 400;
-    res.json({ error: 'Email is required' });
-    return;
-  }
-
-  try {
-    const { email } = req.body || {};
-    
-    
-
-  try {
-    const { email } = req.body || {};
+    if (!email) {
+      res.statusCode = 400;
+      res.json({ error: 'Email is required' });
+      return;
+    }
     
 
   try {

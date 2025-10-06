@@ -113,7 +113,6 @@ async function handler(req, res) {
   }
 }
 
-module.exports = withErrorLogging(handler);
 const { withSentry } = require('./withSentry.cjs');
 
 async function handler(req, res) {
@@ -190,24 +189,6 @@ module.exports = withSentry(handler);
   }
 }
 
-module.exports = withErrorLogging(handler);
-module.exports = withErrorLogging(handler);
-module.exports = withErrorLogging(handler);
-module.exports = withErrorLogging(handler);
-module.exports = withErrorLogging(handler);
-module.exports = withErrorLogging(handler);
-module.exports = withErrorLogging(handler);
-module.exports = withErrorLogging(handler);
-module.exports = withErrorLogging(handler);
-module.exports = withErrorLogging(handler);
-module.exports = withErrorLogging(handler);
-module.exports = withErrorLogging(handler);
-module.exports = withErrorLogging(handler);
-module.exports = withErrorLogging(handler);
-module.exports = withErrorLogging(handler);
-module.exports = withErrorLogging(handler);
-module.exports = withErrorLogging(handler);
-module.exports = withErrorLogging(handler);
 module.exports = withErrorLogging(handler);
 module.exports = withErrorLogging(handler);
 module.exports = withErrorLogging(handler);

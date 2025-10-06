@@ -62,11 +62,6 @@ export const ariaUtils = {
 
   // Set ARIA attributes
   setAriaAttributes: (element: HTMLElement, attributes: Record<string, string>): void => {
-  setAriaAttributes: (
-    element: HTMLElement,
-    attributes: Record<string, string>
-  ): void => {
->>>>>>> 40f0d19ecc0819e0cd100e68e36dd415011c7be9
     Object.entries(attributes).forEach(([key, value]) => {
       element.setAttribute(key, value);
     });
@@ -74,11 +69,6 @@ export const ariaUtils = {
 
   // Announce to screen readers
   announce: (message: string, priority: 'polite' | 'assertive' = 'polite'): void => {
-  announce: (
-    message: string,
-    priority: 'polite' | 'assertive' = 'polite'
-  ): void => {
->>>>>>> 40f0d19ecc0819e0cd100e68e36dd415011c7be9
     const announcement = document.createElement('div');
     announcement.setAttribute('aria-live', priority);
     announcement.setAttribute('aria-atomic', 'true');
@@ -131,7 +121,6 @@ export const keyboardNavigation = {
   },
 };
 
->>>>>>> 40f0d19ecc0819e0cd100e68e36dd415011c7be9
 // Color contrast utilities
 export const colorContrast = {
   // Calculate relative luminance
@@ -144,36 +133,9 @@ export const colorContrast = {
   },
 
   // Calculate contrast ratio
-  getContrastRatio: (color1: string, color2: string): number => {
-    const hexToRgb = (hex: string) => {
-      const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
-      return result ? {
-        r: parseInt(result[1]!, 16),
-        g: parseInt(result[2]!, 16),
-        b: parseInt(result[3]!, 16)
-      } : null;
-    };
-
-    const rgb1 = hexToRgb(color1);
-    const rgb2 = hexToRgb(color2);
-    
-    if (!rgb1 || !rgb2) return 0;
-
-    const lum1 = colorContrast.getLuminance(rgb1.r ?? 0, rgb1.g ?? 0, rgb1.b ?? 0);
-    const lum2 = colorContrast.getLuminance(rgb2.r ?? 0, rgb2.g ?? 0, rgb2.b ?? 0);
-    
-    return 0.2126 * rs + 0.7152 * gs + 0.0722 * bs;
-  },
-
-  // Calculate contrast ratio
   getContrastRatio: (color1: [number, number, number], color2: [number, number, number]): number => {
-  getContrastRatio: (
-    color1: [number, number, number],
-    color2: [number, number, number]
-  ): number => {
     const lum1 = colorContrast.getLuminance(...color1);
     const lum2 = colorContrast.getLuminance(...color2);
->>>>>>> 40f0d19ecc0819e0cd100e68e36dd415011c7be9
     const brightest = Math.max(lum1, lum2);
     const darkest = Math.min(lum1, lum2);
     
@@ -217,9 +179,6 @@ export const keyboardNavigation = {
       e.preventDefault();
       callback();
     }
-  },
-  meetsWCAG: (contrastRatio: number, level: 'AA' | 'AAA' = 'AA'): boolean => {
-    return level === 'AA' ? contrastRatio >= 4.5 : contrastRatio >= 7;
   },
 };
 
@@ -469,6 +428,4 @@ export const initAccessibility = (): void => {
     skipLink.style.top = '-40px';
   });
   document.body.insertBefore(skipLink, document.body.firstChild);
-  },
->>>>>>> 40f0d19ecc0819e0cd100e68e36dd415011c7be9
 };
