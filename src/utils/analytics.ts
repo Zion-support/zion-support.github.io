@@ -70,12 +70,6 @@ class Analytics {
       label: label || undefined,
       value: value || 0,
       properties: properties || {},
-      value: value || undefined,
-      properties: properties || undefined,
-      action: action || undefined,
-      label: label || undefined,
-      value: value || undefined,
-      properties: properties || undefined,
       timestamp: Date.now(),
     };
     this.events.push(event);
@@ -159,16 +153,3 @@ class Analytics {
 export const analytics = new Analytics();
 export default analytics;
 
-export const analytics = {
-  track: (event: string,
-  category: string, action: string, label?: string, value?: number) => {
-    console.log('Analytics:', { event, category, action, label, value });
-    //In a real implementation, this would send data to analytics service
-  },
-  
-  trackPerformance: (name: string,
-  value: number, unit: string = 'ms') => {
-    console.log(`Performance: ${name} = ${value}${unit}`);
-    // In a real implementation, this would send performance data to analytics
-  }
-};
