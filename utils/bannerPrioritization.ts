@@ -112,9 +112,6 @@ export class BannerPrioritizationEngine {
     return this.banners.get(id);
   }
 
-  /**
-   * Get banners by load strategy
-   */
   getBannersByLoadStrategy(strategy: 'immediate' | 'lazy' | 'on-demand'): BannerMetadata[] {
     return Array.from(this.banners.values())
       .filter(banner => banner.loadStrategy === strategy && banner.isVisible);
@@ -129,7 +126,6 @@ export class BannerPrioritizationEngine {
       banner.isVisible = isVisible;
       this.banners.set(bannerId, banner);
     }
-  }
   }
 
   /**
@@ -160,9 +156,6 @@ export class BannerPrioritizationEngine {
     return this.banners.size;
   }
 
-  /**
-   * Get banner statistics
-   */
   getBannerStats(): {
     total: number;
     visible: number;
