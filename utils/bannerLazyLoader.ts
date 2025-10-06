@@ -5,11 +5,15 @@
  * to improve initial page load performance.
  */
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { lazy } from 'react';
 =======
 import React, { lazy } from 'react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f83
 import type { ComponentType } from 'react';
+=======
+import { lazy, ComponentType } from 'react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-9d58
 
 interface BannerModule {
   default: ComponentType<any>;
@@ -35,10 +39,14 @@ export const lazyLoadBanner = (
               console.error(
                 `Retry failed for banner: ${componentName}`,
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-9d58
                 retryError
               );
               // Return a fallback component
               resolve({ default: () => null });
+<<<<<<< HEAD
 =======
                 retryError,
               );
@@ -61,6 +69,8 @@ export const lazyLoadBanner = (
                 default: () => React.createElement('div', null, 'Banner temporarily unavailable')
               } as BannerModule);
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f83
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-9d58
             });
         }, 1000);
       });

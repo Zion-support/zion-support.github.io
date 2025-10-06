@@ -9,6 +9,7 @@ export const focusManagement = {
     const focusableElements = element.querySelectorAll(
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
 =======
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])',
@@ -16,6 +17,9 @@ export const focusManagement = {
 =======
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])',
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f83
+=======
+      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-9d58
     );
     const firstElement = focusableElements[0] as HTMLElement;
     const lastElement = focusableElements[
@@ -48,6 +52,7 @@ export const focusManagement = {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
   },
@@ -77,10 +82,18 @@ export const focusManagement = {
   focusNext: (currentElement: HTMLElement): void => {
     const focusableElements = document.querySelectorAll(
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])',
+=======
+
+  // Move focus to next focusable element
+  focusNext: (currentElement: HTMLElement): HTMLElement | null => {
+    const focusableElements = document.querySelectorAll(
+      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-9d58
     );
     const currentIndex = Array.from(focusableElements).indexOf(currentElement);
     const nextElement = focusableElements[currentIndex + 1] as HTMLElement;
     nextElement?.focus();
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f83
   },
 
@@ -88,15 +101,29 @@ export const focusManagement = {
   focusPrevious: (currentElement: HTMLElement): void => {
     const focusableElements = document.querySelectorAll(
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])',
+=======
+    return nextElement;
+  },
+
+  // Move focus to previous focusable element
+  focusPrevious: (currentElement: HTMLElement): HTMLElement | null => {
+    const focusableElements = document.querySelectorAll(
+      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-9d58
     );
     const currentIndex = Array.from(focusableElements).indexOf(currentElement);
     const previousElement = focusableElements[currentIndex - 1] as HTMLElement;
     previousElement?.focus();
+<<<<<<< HEAD
+=======
+    return previousElement;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-9d58
   }
 };
 
 // ARIA utilities
 export const ariaUtils = {
+<<<<<<< HEAD
 <<<<<<< HEAD
   // Generate unique IDs for ARIA relationships
   generateId: (prefix: string = 'aria'): string => {
@@ -105,21 +132,30 @@ export const ariaUtils = {
 
   // Set ARIA attributes
   setAriaAttributes: (element: HTMLElement, attributes: Record<string, string>): void => {
+=======
+  // Set ARIA attributes
+  setAriaAttributes: (element: HTMLElement, attributes: Record<string, string>) => {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-9d58
     Object.entries(attributes).forEach(([key, value]) => {
       element.setAttribute(key, value);
     });
   },
 
   // Announce to screen readers
+<<<<<<< HEAD
   announce: (message: string, priority: 'polite' | 'assertive' = 'polite'): void => {
 =======
   // Announce text to screen readers
   announce: (text: string, priority: 'polite' | 'assertive' = 'polite'): void => {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f83
+=======
+  announce: (message: string, priority: 'polite' | 'assertive' = 'polite') => {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-9d58
     const announcement = document.createElement('div');
     announcement.setAttribute('aria-live', priority);
     announcement.setAttribute('aria-atomic', 'true');
     announcement.className = 'sr-only';
+<<<<<<< HEAD
 <<<<<<< HEAD
     announcement.textContent = message;
     
@@ -773,11 +809,77 @@ export const highContrastUtils = {
       element.style.outline = '2px solid';
     }
   },
+=======
+    announcement.textContent = message;
+    
+    document.body.appendChild(announcement);
+    
+    setTimeout(() => {
+      document.body.removeChild(announcement);
+    }, 1000);
+  }
+};
+
+// Keyboard navigation utilities
+export const keyboardUtils = {
+  // Handle arrow key navigation
+  handleArrowNavigation: (
+    event: KeyboardEvent,
+    elements: HTMLElement[],
+    currentIndex: number,
+    orientation: 'horizontal' | 'vertical' = 'horizontal'
+  ): number => {
+    const isHorizontal = orientation === 'horizontal';
+    const isVertical = orientation === 'vertical';
+    
+    let newIndex = currentIndex;
+    
+    if (isHorizontal) {
+      if (event.key === 'ArrowLeft') {
+        newIndex = currentIndex > 0 ? currentIndex - 1 : elements.length - 1;
+      } else if (event.key === 'ArrowRight') {
+        newIndex = currentIndex < elements.length - 1 ? currentIndex + 1 : 0;
+      }
+    }
+    
+    if (isVertical) {
+      if (event.key === 'ArrowUp') {
+        newIndex = currentIndex > 0 ? currentIndex - 1 : elements.length - 1;
+      } else if (event.key === 'ArrowDown') {
+        newIndex = currentIndex < elements.length - 1 ? currentIndex + 1 : 0;
+      }
+    }
+    
+    if (newIndex !== currentIndex) {
+      event.preventDefault();
+      elements[newIndex]?.focus();
+    }
+    
+    return newIndex;
+  },
+
+  // Handle escape key
+  handleEscape: (event: KeyboardEvent, callback: () => void) => {
+    if (event.key === 'Escape') {
+      event.preventDefault();
+      callback();
+    }
+  },
+
+  // Handle enter/space key activation
+  handleActivation: (event: KeyboardEvent, callback: () => void) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      callback();
+    }
+  }
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-9d58
 };
 
 export default {
   focusManagement,
   ariaUtils,
+<<<<<<< HEAD
   keyboardUtils,
   contrastUtils,
   screenReaderUtils,
@@ -846,3 +948,7 @@ export const screenReaderUtils = {
   }
 };
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f83
+=======
+  keyboardUtils
+};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-9d58
