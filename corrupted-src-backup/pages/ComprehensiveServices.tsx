@@ -17,61 +17,65 @@ import { Helmet } from 'react-helmet-async';
 const ComprehensiveServices: React.FC = () => {
   const services = [
     {
-      id: "ai-consulting",
-      name: "AI Consulting",
-      description: "Strategic AI consulting to help you identify opportunities and plan your AI transformation journey.",
+      id: 'ai-consulting',
+      name: 'AI Consulting',
+      description:
+        'Strategic AI consulting to help you identify opportunities and plan your AI transformation journey.',
       features: [
-        "AI Strategy Development",
-        "Technology Assessment",
-        "Implementation Planning",
-        "ROI Analysis",
+        'AI Strategy Development',
+        'Technology Assessment',
+        'Implementation Planning',
+        'ROI Analysis',
       ],
-      icon: <Brain className="w-8 h-8" />,
-      link: "/services/ai-consulting",
+      icon: <Brain className='w-8 h-8' />,
+      link: '/services/ai-consulting',
     },
     {
-      id: "ai-development",
-      name: "AI Development",
-      description: "Custom AI solutions built to your specific requirements and business needs.",
+      id: 'ai-development',
+      name: 'AI Development',
+      description:
+        'Custom AI solutions built to your specific requirements and business needs.',
       features: [
-        "Custom AI Models",
-        "API Development",
-        "Integration Services",
-        "Performance Optimization",
+        'Custom AI Models',
+        'API Development',
+        'Integration Services',
+        'Performance Optimization',
       ],
-      icon: <Cog className="w-8 h-8" />,
-      link: "/services/ai-development",
+      icon: <Cog className='w-8 h-8' />,
+      link: '/services/ai-development',
     },
     {
-      id: "ai-training",
-      name: "AI Training",
-      description: "Comprehensive training programs to upskill your team in AI technologies and best practices.",
+      id: 'ai-training',
+      name: 'AI Training',
+      description:
+        'Comprehensive training programs to upskill your team in AI technologies and best practices.',
       features: [
-        "Technical Training",
-        "Best Practices",
-        "Hands-on Workshops",
-        "Certification Programs",
+        'Technical Training',
+        'Best Practices',
+        'Hands-on Workshops',
+        'Certification Programs',
       ],
-      icon: <Users className="w-8 h-8" />,
-      link: "/services/ai-training",
+      icon: <Users className='w-8 h-8' />,
+      link: '/services/ai-training',
     },
     {
-      id: "ai-support",
-      name: "AI Support",
-      description: "Ongoing support and maintenance for your AI systems to ensure optimal performance.",
+      id: 'ai-support',
+      name: 'AI Support',
+      description:
+        'Ongoing support and maintenance for your AI systems to ensure optimal performance.',
       features: [
-        "24/7 Support",
-        "System Monitoring",
-        "Performance Tuning",
-        "Regular Updates",
+        '24/7 Support',
+        'System Monitoring',
+        'Performance Tuning',
+        'Regular Updates',
       ],
-      icon: <Shield className="w-8 h-8" />,
-      link: "/services/ai-support",
+      icon: <Shield className='w-8 h-8' />,
+      link: '/services/ai-support',
     },
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+    <div className='min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100'>
       <Helmet>
         <title>Comprehensive Services - Zion Tech Group</title>
         <meta

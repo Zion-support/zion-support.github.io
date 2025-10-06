@@ -27,7 +27,7 @@ export class FocusTrap {
     ].join(', ');
 
     this.focusableElements = Array.from(
-      this.element.querySelectorAll(focusableSelectors),
+      this.element.querySelectorAll(focusableSelectors)
     ) as HTMLElement[];
 
     this.firstFocusableElement = this.focusableElements[0];

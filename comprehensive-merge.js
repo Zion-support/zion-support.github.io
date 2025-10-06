@@ -41,7 +41,7 @@ for (const branch of prBranches) {
   // Check if branch exists
   const branchCheck = safeGitCommand(
     `git show-ref --verify --quiet refs/remotes/origin/${branch}`,
-    `Check if ${branch} exists`,
+    `Check if ${branch} exists`
   );
 
   if (!branchCheck.success) {
@@ -52,7 +52,7 @@ for (const branch of prBranches) {
   // Try to merge the branch
   const mergeResult = safeGitCommand(
     `git merge origin/${branch} --no-ff -m "Merge branch ${branch}"`,
-    `Merge ${branch}`,
+    `Merge ${branch}`
   );
 
   if (mergeResult.success) {
@@ -75,7 +75,7 @@ console.log(`⚠ Conflicts/Errors: ${conflictCount} branches`);
 if (mergedCount > 0) {
   const pushResult = safeGitCommand(
     'git push origin main',
-    'Push changes to main',
+    'Push changes to main'
   );
   if (pushResult.success) {
     console.log('✓ All changes pushed to main successfully');

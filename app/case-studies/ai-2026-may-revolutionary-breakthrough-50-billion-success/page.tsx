@@ -17,7 +17,7 @@ export default function May2026RevolutionaryBreakthroughCaseStudyPage() {
     process.cwd(),
     'content',
     'case-studies',
-    'ai-2026-may-revolutionary-breakthrough-50-billion-success.md',
+    'ai-2026-may-revolutionary-breakthrough-50-billion-success.md'
   );
   const fileContents = fs.readFileSync(filePath, 'utf8');
   const { data, content } = matter(fileContents);

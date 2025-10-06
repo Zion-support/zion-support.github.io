@@ -1,4 +1,3 @@
-
 // Bundle analyzer configuration for better code splitting
 export const bundleAnalyzerConfig = {
   analyzerMode: 'static',
@@ -8,8 +7,8 @@ export const bundleAnalyzerConfig = {
   reportFilename: 'bundle-report.html',
   defaultSizes: 'gzip',
   excludeAssets: ['node_modules'],
-  chunkFilter: (chunk) => {
+  chunkFilter: chunk => {
     // Exclude vendor chunks from analysis
     return !chunk.name.includes('vendor');
-  }
+  },
 };

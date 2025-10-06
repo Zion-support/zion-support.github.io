@@ -1,25 +1,18 @@
 // Performance monitoring setup
 import { analytics } from './utils/analytics';
 import { errorHandler } from './utils/errorHandler';
-import performanceOptimizer from './utils/performanceOptimizer';
+import { performanceOptimizer } from './utils/performanceOptimizer';
 
 // Initialize performance monitoring
 if (typeof window !== 'undefined') {
   // Track page load
   analytics.trackPageView(window.location.pathname);
-  
+
   // Initialize performance optimizer
   performanceOptimizer.lazyLoadImages();
-  
-  // Monitor long tasks
-  performanceOptimizer.monitorLongTasks((entries) => {
-    entries.forEach((entry) => {
-      analytics.track('long_task', 'performance', 'detected', undefined, entry.duration);
-    });
-  });
-  
+
   // Track Web Vitals
-  const metrics = performanceOptimizer.measurePageLoad();
+  const metrics = performanceOptimizer.measurePageLoadMetrics();
   if (metrics) {
     performanceOptimizer.reportWebVitals(metrics);
   }

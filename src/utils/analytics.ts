@@ -6,10 +6,10 @@
 export interface AnalyticsEvent {
   name: string;
   category: string;
-  action?: string;
-  label?: string;
-  value?: number;
-  properties?: Record<string, any>;
+  action?: string | undefined;
+  label?: string | undefined;
+  value?: number | undefined;
+  properties?: Record<string, any> | undefined;
   timestamp: number;
 }
 
@@ -19,7 +19,7 @@ export interface UserProperties {
   userAgent: string;
   language: string;
   timezone: string;
-  referrer?: string;
+  referrer?: string | undefined;
 }
 
 class Analytics {
@@ -57,7 +57,7 @@ class Analytics {
       userAgent: window.navigator.userAgent,
       language: window.navigator.language,
       timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
-      referrer: document.referrer || undefined,
+      referrer: document.referrer || '',
     };
   }
 
@@ -75,10 +75,10 @@ class Analytics {
     const event: AnalyticsEvent = {
       name,
       category,
-      action,
-      label,
-      value,
-      properties,
+      action: action || '',
+      label: label || '',
+      value: value || 0,
+      properties: properties || {},
       timestamp: Date.now(),
     };
 
@@ -117,7 +117,11 @@ class Analytics {
   /**
    * Track performance metrics
    */
-  public trackPerformance(metric: string, value: number, unit: string = 'ms'): void {
+  public trackPerformance(
+    metric: string,
+    value: number,
+    unit: string = 'ms'
+  ): void {
     this.track('performance', 'metrics', metric, unit, value);
   }
 
