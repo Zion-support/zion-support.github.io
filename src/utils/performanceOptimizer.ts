@@ -389,22 +389,6 @@ class PerformanceOptimizer {
     }
     
     const timing = window.performance.timing;
-    return {
-      loadTime: timing.loadEventEnd - timing.navigationStart,
-      interactiveTime: timing.domInteractive - timing.navigationStart,
-      domContentLoaded: timing.domContentLoadedEventEnd - timing.navigationStart
-    };
-  }
-
-
-
-  // Measure page load performance
-  measurePageLoadTiming(): Record<string, number> | null {
-    if (typeof window === 'undefined' || !window.performance) {
-      return null;
-    }
-    
-    const timing = window.performance.timing;
     const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
     
     const loadTime = timing.loadEventEnd - timing.navigationStart;
@@ -492,7 +476,7 @@ export default {
   prefetchResources,
   preconnectDomains,
   lazyLoadImages,
-  preloadCriticalResources: () => performanceOptimizer.preloadCriticalResources(),
+  preloadCriticalResources,
   debounce,
   throttle,
   measurePageLoad,
