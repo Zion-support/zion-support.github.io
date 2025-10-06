@@ -7,6 +7,12 @@ import {
   TrendingUp,
   Brain,
   ArrowRight,
+  Server,
+  Cpu,
+  Rocket,
+  Phone,
+  Mail,
+  MapPin,
 } from 'lucide-react';
 
 import { INNOVATIVE_SERVICES_2025 } from '@/data/innovativeServices2025';
@@ -453,7 +459,7 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
                     </div>
                     <div className='space-y-1'>
                       {service.benefits
-                        .slice(0, 2)
+                        ?.slice(0, 2)
                         .map((benefit: string, idx: number) => (
                           <div
                             key={idx}

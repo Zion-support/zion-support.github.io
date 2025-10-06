@@ -1,8 +1,12 @@
 import React from 'react';
-import OptimizedApp from './components/OptimizedApp';
+import OptimizedApp from './src/components/OptimizedApp';
 
 const HomePage: React.FC = () => {
-  return <OptimizedApp />;
+  return (
+    <OptimizedApp>
+      <div>Welcome to Zion Tech Group</div>
+    </OptimizedApp>
+  );
 };
 
 export default HomePage;
