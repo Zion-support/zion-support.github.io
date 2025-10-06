@@ -106,6 +106,7 @@ export default [
       'backup-banner-components/**',
       'blog/**',
       'app/blog/**',
+      'app/blog/**/*',
       'app/services/**',
       'app/guides/**',
       'app/contact/**',

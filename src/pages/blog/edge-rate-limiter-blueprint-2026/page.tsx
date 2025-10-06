@@ -2,19 +2,19 @@ import React from "react";
 
 export default function EdgeRateLimiterBlueprint2026(): React.JSX.Element {
   return (
-    <div>
+    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
       <Helmet>
         <title>Edge Rate Limiter 2026: Globally Consistent, Sub‑10ms Budgets</title>,
-        <meta name="description" content="Design a multi‑region, token‑bucket limiter with consistent hashing and KV to protect APIs and GenAI tools without hurting UX." /><link rel="canonical", href=" " />
+        <meta name="description" content="Design a multi‑region, token‑bucket limiter with consistent hashing and KV to protect APIs and GenAI tools without hurting UX." /><link rel="canonical" href="https://ziontechgroup.com/blog/placeholder" />
       </Helmet>
 
         <meta name="description" content="Design a multi‑region, token‑bucket limiter with consistent hashing and KV to protect APIs and GenAI tools without hurting UX." />
         <p className="text-zion-slate-light mb-8">Globally Consistent, Sub‑10ms Budgets</p>
-        <div>
-        <h1 className="text-4xl md: text-5xl font-bold mb-4">Edge Rate Limiter 2026</h1>
+        <div className="container mx-auto px-6 py-16">
+        <h1 className="text-4xl md:text-5xl font-bold mb-4">Edge Rate Limiter 2026</h1>
         <p className="text-zion-slate-light mb-8">Globally Consistent, Sub‑10ms Budgets</p>
-        <div>
-        <h1 className="text-4xl md: text-5xl font-bold mb-4">Edge Rate Limiter 2026</h1>
+        <div className="container mx-auto px-6 py-16">
+        <h1 className="text-4xl md:text-5xl font-bold mb-4">Edge Rate Limiter 2026</h1>
         <p className="text-zion-slate-light mb-8">Globally Consistent, Sub‑10ms Budgets</p>
         <div className="prose prose-invert max-w-3xl">
           <p >
@@ -30,6 +30,4 @@ export default function EdgeRateLimiterBlueprint2026(): React.JSX.Element {
   </div>
   </div>
   );
-};
-  </div>
-</li>
+}
