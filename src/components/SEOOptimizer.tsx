@@ -33,7 +33,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       };
     }
     return undefined;
-  }, [title, description, keywords, canonicalUrl, ogImage, structuredData]);
+  }, [structuredData]);
 
   return (
     <>

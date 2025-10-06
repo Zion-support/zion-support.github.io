@@ -1,12 +1,7 @@
 import React, { type ReactNode, useEffect, useState } from 'react';
-<<<<<<< HEAD
-import React, { useEffect, useState } from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-cfe1
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-96bc
 
 interface AccessibilityEnhancerProps {
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
@@ -16,11 +11,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
 
   useEffect(() => {
     // Check for user preferences
-<<<<<<< HEAD
-    // Check for user's motion preferences
->>>>>>> cursor/fix-errors-and-merge-to-main-cfe1
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-96bc
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     setReducedMotion(prefersReducedMotion);
 
@@ -30,7 +20,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     
     setIsHighContrast(savedHighContrast);
     setFontSize(savedFontSize);
-<<<<<<< HEAD
 
     // Apply initial styles
     applyAccessibilityStyles(savedHighContrast, savedFontSize, prefersReducedMotion);
@@ -50,42 +39,23 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     
     // High contrast mode
     if (highContrast) {
-=======
-  }, []);
-
-  useEffect(() => {
-    // Apply accessibility preferences
-    const root = document.documentElement;
-    
-    if (isHighContrast) {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-96bc
       root.classList.add('high-contrast');
     } else {
       root.classList.remove('high-contrast');
     }
 
-<<<<<<< HEAD
     // Font size
     root.classList.remove('font-small', 'font-normal', 'font-large');
     root.classList.add(`font-${fontSize}`);
 
     // Reduced motion
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-96bc
     if (reducedMotion) {
       root.classList.add('reduced-motion');
     } else {
       root.classList.remove('reduced-motion');
     }
+  };
 
-    // Apply font size
-    root.style.setProperty('--font-size-multiplier', 
-      fontSize === 'small' ? '0.875' : 
-      fontSize === 'large' ? '1.25' : '1'
-    );
-  }, [isHighContrast, fontSize, reducedMotion]);
-
-<<<<<<< HEAD
   const addSkipLinks = () => {
     const existingSkipLink = document.querySelector('.skip-link');
     if (!existingSkipLink) {
@@ -127,22 +97,10 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       }
     `;
     document.head.appendChild(style);
-=======
-  const toggleHighContrast = () => {
-    const newValue = !isHighContrast;
-    setIsHighContrast(newValue);
-    localStorage.setItem('highContrast', newValue.toString());
-  };
-
-  const setFontSizePreference = (size: 'small' | 'normal' | 'large') => {
-    setFontSize(size);
-    localStorage.setItem('fontSize', size);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-96bc
   };
 
   return (
     <>
-<<<<<<< HEAD
       {children}
       <div className="accessibility-controls fixed bottom-4 left-4 z-50">
         <div className="bg-white shadow-lg rounded-lg p-4 space-y-2">
@@ -175,76 +133,10 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
                   {size}
                 </button>
               ))}
-      {/* Accessibility Controls - Only show in development */}
-      {process.env['NODE_ENV'] === 'development' && (
-        <div className="fixed top-4 right-4 z-50 bg-white border border-gray-200 rounded-lg shadow-lg p-4">
-          <h3 className="text-sm font-semibold text-gray-900 mb-3">Accessibility Controls</h3>
-          
-          <div className="space-y-3">
-            <div>
-              <label className="flex items-center space-x-2">
-                <input
-                  type="checkbox"
-                  checked={isHighContrast}
-                  onChange={toggleHighContrast}
-                  className="rounded"
-                />
-                <span className="text-sm">High Contrast</span>
-              </label>
-            </div>
-            
-            <div>
-              <label className="text-sm text-gray-600 mb-1 block">Font Size:</label>
-              <div className="flex space-x-1">
-                {(['small', 'normal', 'large'] as const).map((size) => (
-                  <button
-                    key={size}
-                    onClick={() => changeFontSize(size)}
-                    className={`px-2 py-1 text-xs rounded ${
-                      fontSize === size
-                        ? 'bg-blue-600 text-white'
-                        : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
-                    }`}
-                    aria-label={`Set font size to ${size}`}
-                  >
-                    {size.charAt(0).toUpperCase()}
-                  </button>
-                ))}
-              </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-cfe1
             </div>
           </div>
         </div>
       </div>
-=======
-      <div className="accessibility-controls fixed top-4 right-4 z-50 bg-white rounded-lg shadow-lg p-4 border">
-        <h3 className="text-sm font-semibold text-gray-700 mb-3">Accessibility</h3>
-        <div className="space-y-2">
-          <label className="flex items-center space-x-2 text-sm">
-            <input
-              type="checkbox"
-              checked={isHighContrast}
-              onChange={toggleHighContrast}
-              className="rounded"
-            />
-            <span>High Contrast</span>
-          </label>
-          <div className="text-sm">
-            <label className="block text-gray-700 mb-1">Font Size:</label>
-            <select
-              value={fontSize}
-              onChange={(e) => setFontSizePreference(e.target.value as 'small' | 'normal' | 'large')}
-              className="w-full text-sm border rounded px-2 py-1"
-            >
-              <option value="small">Small</option>
-              <option value="normal">Normal</option>
-              <option value="large">Large</option>
-            </select>
-          </div>
-        </div>
-      </div>
-      {children}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-96bc
     </>
   );
 };

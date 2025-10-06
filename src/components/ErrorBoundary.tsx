@@ -92,11 +92,6 @@ class ErrorBoundary extends Component<Props, State> {
                 Go Home
               </button>
             </div>
-            {this.state.errorId && (
-              <p className="text-xs text-gray-400 mt-4">
-                Error ID: {this.state.errorId}
-              </p>
-            )}
             <button
               onClick={() => window.location.reload()}
               className="mt-4 text-gray-400 hover:text-white text-sm underline"
