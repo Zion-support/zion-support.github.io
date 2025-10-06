@@ -100,12 +100,22 @@ export const BANNER_REGISTRY: BannerConfig[] = [
     datePublished: '2025-08-15',
     tags: ['service', 'feature', 'card'],
     enabled: true,
+<<<<<<< HEAD
   }
+=======
+  },
+>>>>>>> cursor/fix-errors-and-merge-to-main-9fc8
 ];
 
 /**
  * Get banners by category
  */
+<<<<<<< HEAD
+=======
+export const getBannersByCategory = (category: BannerConfig['category']): BannerConfig[] => {
+  return BANNER_REGISTRY.filter(banner => banner.category === category && banner.enabled);
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-9fc8
 
 /**
  * Get banners by priority range

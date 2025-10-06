@@ -50,14 +50,10 @@ export const preloadBanner = (importFn: () => Promise<BannerModule>): void => {
           // Silently fail for preload
         });
       });
-    });
+    }
   }
 };
 
 /**
  * Banner loader with intersection observer
  */
-  }
-}
-
-/**

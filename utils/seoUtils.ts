@@ -22,7 +22,10 @@ export const setOpenGraphTags = (ogData: {
   image?: string;
   url?: string;
   type?: string;
+<<<<<<< HEAD
   siteName?: string;
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-9fc8
 }): void => {
   const ogTags = {
     'og:title': ogData.title,
@@ -50,6 +53,7 @@ export const setTwitterCardTags = (twitterData: {
   title?: string;
   description?: string;
   image?: string;
+<<<<<<< HEAD
   site?: string;
   creator?: string;
 }) => {
@@ -60,6 +64,8 @@ export const setTwitterCardTags = (twitterData: {
     'twitter:image': twitterData.image,
     'twitter:site': twitterData.site,
     'twitter:creator': twitterData.creator
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-9fc8
   };
 
   Object.entries(twitterTags).forEach(([name, content]) => {
