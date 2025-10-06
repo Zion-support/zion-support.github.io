@@ -221,9 +221,9 @@ export const preconnectDomains = (domains: string[]): void => {
 };
 
 /**
- * Lazy load images with Intersection Observer
+ * Lazy load images with Intersection Observer (standalone function)
  */
-export const lazyLoadImages = (): void => {
+export const lazyLoadImagesStandalone = (): void => {
   if (typeof window === 'undefined') return;
   if (!('IntersectionObserver' in window)) return;
 
@@ -247,6 +247,41 @@ export const lazyLoadImages = (): void => {
   document.querySelectorAll('img[data-src]').forEach(img => {
     imageObserver.observe(img);
   });
+};
+
+/**
+ * Measure page load performance (standalone function)
+ */
+export const measurePageLoadStandalone = (): WebVitalsMetrics | null => {
+  if (typeof window === 'undefined' || !window.performance) return null;
+  
+  const perfData = window.performance.timing;
+  const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+  
+  return {
+    FCP: navigation?.responseStart - navigation?.fetchStart,
+    TTFB: perfData.responseStart - perfData.navigationStart
+  };
+};
+
+/**
+ * Report Web Vitals to analytics (standalone function)
+ */
+export const reportWebVitalsStandalone = (metrics: WebVitalsMetrics): void => {
+  console.log('Web Vitals: ', metrics);
+
+  // Send to analytics service
+  if (typeof window !== 'undefined' && (window as any).gtag) {
+    Object.entries(metrics).forEach(([key, value]) => {
+      if (value !== undefined) {
+        (window as any).gtag('event', key, {
+          value: Math.round(value),
+          event_category: 'Web Vitals',
+          non_interaction: true
+        });
+      }
+    });
+  }
 };
 
 /**
@@ -443,19 +478,19 @@ export const performanceOptimizer = PerformanceOptimizer.getInstance();
 
 // Export individual functions for backward compatibility
 export {
-  lazyLoadImages,
-  measurePageLoad,
-  reportWebVitals
+  lazyLoadImagesStandalone as lazyLoadImages,
+  measurePageLoadStandalone as measurePageLoad,
+  reportWebVitalsStandalone as reportWebVitals
 };
 
 export default {
   prefetchResources,
   preconnectDomains,
-  lazyLoadImages,
+  lazyLoadImages: lazyLoadImagesStandalone,
   debounce,
   throttle,
-  measurePageLoad,
-  reportWebVitals,
+  measurePageLoad: measurePageLoadStandalone,
+  reportWebVitals: reportWebVitalsStandalone,
   shouldUseWebP,
   getConnectionQuality,
   shouldLoadHeavyAssets,
