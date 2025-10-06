@@ -2,11 +2,13 @@
  * Performance Optimizer Utilities
  */
 
+import React from 'react';
+
 interface PerformanceMetrics {
   componentName: string;
   renderTime: number;
   timestamp: number;
-  memoryUsage?: number;
+  memoryUsage: number;
   renderCount: number;
 }
 
@@ -51,7 +53,7 @@ export class PerformanceOptimizer {
     if (!startTime) return;
 
     const renderTime = performance.now() - startTime;
-    const memoryUsage = this.config.enableMemoryMonitoring ? this.getMemoryUsage() : undefined;
+    const memoryUsage = this.config.enableMemoryMonitoring ? this.getMemoryUsage() : 0;
 
     const metric: PerformanceMetrics = {
       componentName,
@@ -96,11 +98,11 @@ export class PerformanceOptimizer {
   /**
    * Get memory usage if available
    */
-  private getMemoryUsage(): number | undefined {
+  private getMemoryUsage(): number {
     if ('memory' in performance) {
       return (performance as any).memory.usedJSHeapSize;
     }
-    return undefined;
+    return 0;
   }
 
   /**
@@ -189,7 +191,7 @@ export class PerformanceOptimizer {
   optimizeWithMemo<T extends React.ComponentType<any>>(Component: T): T {
     if (!this.config.enableMemoization) return Component;
     
-    return React.memo(Component) as T;
+    return React.memo(Component) as unknown as T;
   }
 
   /**
@@ -272,6 +274,46 @@ export class PerformanceOptimizer {
   }
 
   /**
+   * Preload critical resources
+   */
+  preloadCriticalResources(): void {
+    if (typeof window === 'undefined') return;
+    
+    // Preload critical CSS
+    const criticalCSS = document.querySelector('link[rel="preload"][as="style"]');
+    if (criticalCSS) {
+      (criticalCSS as HTMLLinkElement).rel = 'stylesheet';
+    }
+    
+    // Preload critical fonts
+    const fontLinks = document.querySelectorAll('link[rel="preload"][as="font"]');
+    fontLinks.forEach(link => {
+      (link as HTMLLinkElement).rel = 'stylesheet';
+    });
+  }
+
+  /**
+   * Lazy load images
+   */
+  lazyLoadImages(): void {
+    if (typeof window === 'undefined') return;
+    
+    const images = document.querySelectorAll('img[data-src]');
+    const imageObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const img = entry.target as HTMLImageElement;
+          img.setAttribute('src', img.dataset['src'] || '');
+          img.removeAttribute('data-src');
+          imageObserver.unobserve(img);
+        }
+      });
+    });
+    
+    images.forEach(img => imageObserver.observe(img));
+  }
+
+  /**
    * Destroy the optimizer
    */
   destroy(): void {
@@ -291,14 +333,18 @@ export const withPerformanceTracking = <P extends object>(
   const optimizer = createPerformanceOptimizer();
   const name = componentName || Component.displayName || Component.name || 'Unknown';
   
-  return React.forwardRef<any, P>((props, ref) => {
+  const WrappedComponent = React.forwardRef<any, P>((props, ref) => {
     React.useEffect(() => {
       optimizer.startRender(name);
       return () => optimizer.endRender(name);
     });
     
-    return React.createElement(Component, { ...props, ref });
+    return React.createElement(Component, props as any);
   });
+  
+  return WrappedComponent as unknown as React.ComponentType<P>;
 };
 
-export default PerformanceOptimizer;
+// Create and export a default instance
+const performanceOptimizer = new PerformanceOptimizer();
+export default performanceOptimizer;
