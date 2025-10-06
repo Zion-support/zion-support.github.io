@@ -50,11 +50,7 @@ export const preconnectDomains = (domains: string[]): void => {
 export const lazyLoadImages = (): void => {
   if (typeof window === 'undefined') return;
   if (!('IntersectionObserver' in window)) return;
-<<<<<<< HEAD
-  
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-b775
   const imageObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -71,11 +67,7 @@ export const lazyLoadImages = (): void => {
     rootMargin: '50px 0px',
     threshold: 0.01
   });
-<<<<<<< HEAD
-  
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-b775
   document.querySelectorAll('img[data-src]').forEach(img => {
     imageObserver.observe(img);
   });
@@ -136,10 +128,7 @@ export const measurePageLoad = (): WebVitalsMetrics | null => {
  */
 export const reportWebVitals = (metrics: WebVitalsMetrics): void => {
   console.log('Web Vitals: ', metrics);
-<<<<<<< HEAD
-=======
-  
->>>>>>> cursor/fix-errors-and-merge-to-main-b775
+
   // Send to analytics service
   if (typeof window !== 'undefined' && (window as any).gtag) {
     Object.entries(metrics).forEach(([key, value]) => {
@@ -200,11 +189,7 @@ export const requestIdleCallback = (callback: IdleRequestCallback): number => {
   }
   
   // Fallback for browsers that don't support requestIdleCallback
-<<<<<<< HEAD
   return (window as any).setTimeout(() => {
-=======
-  return window.setTimeout(() => {
->>>>>>> cursor/fix-errors-and-merge-to-main-b775
     const start = Date.now();
     callback({
       didTimeout: false,
@@ -222,11 +207,7 @@ export const cancelIdleCallback = (id: number): void => {
   if ('cancelIdleCallback' in window) {
     window.cancelIdleCallback(id);
   } else {
-<<<<<<< HEAD
     (window as any).clearTimeout(id);
-=======
-    clearTimeout(id);
->>>>>>> cursor/fix-errors-and-merge-to-main-b775
   }
 };
 
