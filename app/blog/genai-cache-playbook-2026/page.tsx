@@ -1,5 +1,5 @@
 import React from 'react';
-import ArrowRight from 'next/link';
+import Link from 'next/link';
 
 export const metadata = {
   title: 'GenAI Cache Playbook (2026): Cut cost 50%+ with semantic caches',

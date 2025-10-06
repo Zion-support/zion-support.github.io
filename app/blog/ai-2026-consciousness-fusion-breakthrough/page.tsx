@@ -1,5 +1,5 @@
 import React from 'react';
-import ArrowRight from 'next/link';
+import Link from 'next/link';
 
 export default function AIConsciousness Fusion Breakthrough2026() {/* return (<article Name='min-h-screen bg-slate-950 text-white'>
       <div class Name Name='container mx-auto px-6 py-16'>

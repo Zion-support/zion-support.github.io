@@ -1,6 +1,6 @@
 import React from 'react';
 // @ts-nocheck
-import ArrowRight from 'next/link';
+import Link from 'next/link';
 
 export default function Budget Aware Routing2025() {return (<main class Name Name='min-h-screen bg-slate-950 text-white'>
       <article Name='max-w-4xl mx-auto px-6 py-16'>

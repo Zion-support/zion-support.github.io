@@ -1,5 +1,5 @@
 import React from 'react';
-import ArrowRight from 'next/link';
+import Link from 'next/link';
 
 export default function NeuralArchitectureSearch Revolution Page() {return (<main class Name Name='min-h-screen bg-slate-950 text-white'>
       <div class Name Name='max-w-4xl mx-auto px-4 py-16'>

@@ -1,6 +1,6 @@
 import React from 'react';
 // @ts-nocheck
-import ArrowRight from 'next/link';
+import Link from 'next/link';
 
 export const metadata = {
   title: 'Governed Agent Patterns v3 (2025) — Zion Tech Group',

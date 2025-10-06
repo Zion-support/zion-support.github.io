@@ -1,5 +1,5 @@
 import React from 'react';
-import ArrowRight from 'next/link';
+import Link from 'next/link';
 
 export const metadata = {
   title: 'Reliable GenAI Platform 2026: Architecture, Guardrails, and ROI',

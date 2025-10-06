@@ -1,6 +1,6 @@
 import React from 'react';
 // @ts-nocheck
-import ArrowRight from 'next/link';
+import Link from 'next/link';
 
 export const metadata = {
   

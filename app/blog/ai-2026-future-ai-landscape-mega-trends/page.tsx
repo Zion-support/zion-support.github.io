@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import { ArrowRight, Brain, Calendar, Clock, Globe, Shield, Target, TrendingUp, User, Zap } from 'lucide-react';
 
-import ArrowRight from 'next/link';
+import Link from 'next/link';
 
 import { Calendar } from 'lucide-react';
 import { Clock } from 'lucide-react';

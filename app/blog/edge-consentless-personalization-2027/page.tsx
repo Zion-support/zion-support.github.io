@@ -1,5 +1,5 @@
 "use client";
-import ArrowRight from 'next/link';
+import Link from 'next/link';
 
 export default function Page() {
   return (

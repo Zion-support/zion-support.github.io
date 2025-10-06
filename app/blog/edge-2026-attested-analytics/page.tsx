@@ -1,5 +1,5 @@
 import React from 'react';
-import ArrowRight from 'next/link';
+import Link from 'next/link';
 
 export const metadata = {
   title: 'Edge 2026: Attested Analytics — Zero‑PII Insights with Signed Proofs',

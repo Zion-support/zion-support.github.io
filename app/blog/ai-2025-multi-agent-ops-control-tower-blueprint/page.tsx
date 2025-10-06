@@ -1,4 +1,4 @@
-import ArrowRight from 'next/link';
+import Link from 'next/link';
 import { ArrowLeft, ArrowRight, Calendar, Clock, User } from 'lucide-react';
 
 
@@ -12,7 +12,7 @@ export default function MultiAgentOpsControlTowerBlueprintPage() {
             <div>
               <span>🛰️ MULTI-AGENT OPS CONTROL</span>
 import React from 'react';
-import {Link }from 'react-router-dom';
+import Link from 'next/link';
 import {Arrow Left, Calendar Clock User }from'lucide-react';
 
 import Calendar from'lucide-react/dist/esm/icons/calendar';

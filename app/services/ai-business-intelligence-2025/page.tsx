@@ -1,4 +1,4 @@
-import ArrowRight from 'next/link';
+import Link from 'next/link';
 import { ArrowRight, Calculator, User } from 'lucide-react';
 
 import { Metadata } from 'next';

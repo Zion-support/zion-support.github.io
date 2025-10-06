@@ -1,4 +1,4 @@
-import ArrowRight from 'next/link';
+import Link from 'next/link';
 import { ArrowRight, Brain, CheckCircle, Cog, Target, TrendingUp, User, Users, Zap } from 'lucide-react';
 
 
