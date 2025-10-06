@@ -112,15 +112,8 @@ export class PerformanceOptimizer {
     });
   }
 
-  // Report Web Vitals
-  reportWebVitals(metric: any): void {
-    if (process.env.NODE_ENV === 'development') {
-      console.log('Web Vital:', metric);
-    }
-  }
-
-  // Measure page load time
-  measurePageLoad(): any {
+  // Measure page load performance
+  measurePageLoad(): Record<string, number> | null {
     if (typeof window === 'undefined' || !window.performance) {
       return null;
     }
@@ -128,11 +121,18 @@ export class PerformanceOptimizer {
     const timing = window.performance.timing;
     return {
       loadTime: timing.loadEventEnd - timing.navigationStart,
+      interactiveTime: timing.domInteractive - timing.navigationStart,
       domContentLoaded: timing.domContentLoadedEventEnd - timing.navigationStart,
       firstPaint: performance.getEntriesByType('paint')[0]?.startTime || 0
     };
   }
 
+  // Report web vitals
+  reportWebVitals(metrics: Record<string, number>): void {
+    if (process.env.NODE_ENV === 'development') {
+      console.log('Web Vitals:', metrics);
+    }
+  }
   // Initialize all optimizations
   initialize(): void {
     this.measurePerformance('lazyLoadImages', () => this.lazyLoadImages());
