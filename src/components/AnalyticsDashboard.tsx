@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import PerformanceMonitor from '../utils/performance-monitor';
-import SEOOptimizer from '../utils/seo-optimizer';
 import ErrorHandler from '../utils/error-handler';
 
 interface AnalyticsData {
@@ -66,7 +64,11 @@ const AnalyticsDashboard: React.FC = () => {
         setData(mockData);
       } catch (err) {
         setError('Failed to load analytics data');
-        ErrorHandler.handleError(err as Error);
+        ErrorHandler.getInstance().handleError({
+          type: 'javascript',
+          message: (err as Error).message,
+          error: err as Error,
+        });
       } finally {
         setIsLoading(false);
       }

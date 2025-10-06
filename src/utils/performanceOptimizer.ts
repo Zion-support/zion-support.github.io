@@ -304,6 +304,32 @@ export const checkPerformanceBudget = (budget: PerformanceBudget): {
   };
 };
 
+export const getPerformanceSummary = (): {
+  averageRenderTime: number;
+  totalRequests: number;
+  cacheHitRate: number;
+  memoryUsage: number;
+} => {
+  if (typeof window === 'undefined') {
+    return {
+      averageRenderTime: 0,
+      totalRequests: 0,
+      cacheHitRate: 0,
+      memoryUsage: 0,
+    };
+  }
+
+  const timing = window.performance.timing;
+  const renderTime = timing.domContentLoadedEventEnd - timing.navigationStart;
+  
+  return {
+    averageRenderTime: renderTime,
+    totalRequests: window.performance.getEntriesByType('resource').length,
+    cacheHitRate: 0.85, // Mock value
+    memoryUsage: (performance as any).memory?.usedJSHeapSize || 0,
+  };
+};
+
 export default {
   prefetchResources,
   preconnectDomains,
@@ -321,5 +347,6 @@ export default {
   monitorLongTasks,
   cacheStaticAssets,
   clearOldCaches,
-  checkPerformanceBudget
+  checkPerformanceBudget,
+  getPerformanceSummary
 };

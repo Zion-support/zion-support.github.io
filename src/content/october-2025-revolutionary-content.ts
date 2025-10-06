@@ -5,8 +5,8 @@ export interface RevolutionaryContent {
   category: string;
   date: string;
   readTime: string;
-  icon: string;
-  gradient: string;
+  icon?: string;
+  gradient?: string;
   featured: boolean;
   tags: string[];
   highlights: string[];
@@ -49,9 +49,8 @@ export const october2025RevolutionaryContent: RevolutionaryContent[] = [
     category: 'Quantum AI',
     date: '2025-10-02',
     readTime: '22 min read',
-    tags: ['Quantum AI', 'Synthesis', 'Computing', '2025'],
+    tags: ['Quantum AI', 'Synthesis', 'Computing', '2025', 'Healthcare', 'Security', 'AI', 'Compliance'],
     featured: true,
-    tags: ['Healthcare', 'Security', 'AI', 'Compliance'],
     highlights: [
       '$280M+ breach prevention',
       '100% compliance maintained',
