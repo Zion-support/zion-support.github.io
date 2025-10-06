@@ -74,8 +74,7 @@ const HomeOptimized: React.FC = () => {
                 Watch Demo
               </Link>
             </div>
-          ))}
-        </div>
+          </div>
 
         <div className="bg-white rounded-lg shadow-lg p-8 mb-16">
           <h2 className="text-3xl font-bold text-gray-900 text-center mb-8">
