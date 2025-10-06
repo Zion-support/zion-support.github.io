@@ -37,38 +37,77 @@ const errorHandler = {
   }
 };
 
-// Initialize performance monitoring
-if (typeof window !== 'undefined') {
-  // Track page load
-  analytics.trackPageView(window.location.pathname);
-  
-  // Initialize performance optimizer
-  performanceOptimizer.lazyLoadImages();
-  
-  // Measure page load performance
-  performanceOptimizer.measurePageLoad().then((metrics: any) => {
-    analytics.trackPerformance('page_load', metrics.loadTime);
-    analytics.trackPerformance('render_time', metrics.renderTime);
-    analytics.trackPerformance('memory_usage', metrics.memoryUsage, 'MB');
-  });
+// Performance monitoring class
+class PerformanceMonitor {
+  private startTime: number = 0;
+  private metrics: Record<string, number> = {};
 
-  // Monitor long tasks if PerformanceObserver is available
-  if ('PerformanceObserver' in window) {
+  startTiming(name: string) {
+    this.startTime = performance.now();
+    this.metrics[name] = this.startTime;
+  }
+
+  endTiming(name: string) {
+    if (this.startTime > 0) {
+      const duration = performance.now() - this.startTime;
+      this.metrics[name] = duration;
+      analytics.trackPerformance(name, duration);
+      return duration;
+    }
+    return 0;
+  }
+
+  getMetrics() {
+    return { ...this.metrics };
+  }
+
+  reset() {
+    this.metrics = {};
+    this.startTime = 0;
+  }
+}
+
+// Global performance monitor instance
+export const performanceMonitor = new PerformanceMonitor();
+
+// Web Vitals monitoring
+export const initWebVitals = () => {
+  if (typeof window !== 'undefined' && 'performance' in window) {
+    // Monitor Core Web Vitals
     const observer = new PerformanceObserver((list) => {
       for (const entry of list.getEntries()) {
-        if (entry.entryType === 'navigation') {
-          const navEntry = entry as PerformanceNavigationTiming;
-          analytics.trackPerformance('navigation_time', navEntry.loadEventEnd - navEntry.fetchStart);
+        if (entry.entryType === 'largest-contentful-paint') {
+          analytics.trackPerformance('LCP', entry.startTime);
+        } else if (entry.entryType === 'first-input') {
+          analytics.trackPerformance('FID', entry.processingStart - entry.startTime);
+        } else if (entry.entryType === 'layout-shift') {
+          analytics.trackPerformance('CLS', (entry as any).value);
         }
       }
     });
 
-    try {
-      observer.observe({ entryTypes: ['navigation', 'longtask'] });
-    } catch (error) {
-      console.warn('Performance monitoring not supported:', error);
-    }
+    observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
   }
-}
+};
 
-export { analytics, errorHandler };
+// Error monitoring
+export const initErrorMonitoring = () => {
+  if (typeof window !== 'undefined') {
+    window.addEventListener('error', (event) => {
+      errorHandler.reportError(event.error, 'Global error');
+    });
+
+    window.addEventListener('unhandledrejection', (event) => {
+      errorHandler.reportError(new Error(event.reason), 'Unhandled promise rejection');
+    });
+  }
+};
+
+// Initialize monitoring
+export const initMonitoring = () => {
+  initWebVitals();
+  initErrorMonitoring();
+  console.log('Performance monitoring initialized');
+};
+
+export { analytics, performanceOptimizer, errorHandler };
