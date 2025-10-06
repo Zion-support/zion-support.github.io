@@ -1,9 +1,19 @@
-/**
+#!/usr/bin/env node
+
+import fs from 'fs';
+
+console.log('🔧 Fixing usePerformance.ts syntax errors...');
+
+// Read the file
+let content = fs.readFileSync('src/hooks/usePerformance.ts', 'utf8');
+
+// Fix the duplicate analytics definitions and syntax errors
+const fixedContent = `/**
  * Performance Monitoring Hook
  * Provides React hooks for performance monitoring and optimization
  */
 import { useEffect, useCallback, useRef } from 'react';
-import performanceOptimizer from '../utils/performanceOptimizer';
+import { performanceOptimizer } from '../utils/performanceOptimizer';
 import { analytics } from '../utils/analytics';
 
 /**
@@ -72,7 +82,7 @@ export const useComponentPerformance = (componentName: string) => {
       const endTime = performance.now();
       const renderTime = endTime - startTime.current;
       
-      analytics.trackPerformance(`${componentName}_render`, renderTime);
+      analytics.trackPerformance(\`\${componentName}_render\`, renderTime);
       analytics.track('component_performance', 'render', componentName, undefined, renderTime);
     };
   });
@@ -161,7 +171,7 @@ export const useNetworkPerformance = () => {
           };
 
           Object.entries(networkMetrics).forEach(([key, value]) => {
-            analytics.trackPerformance(`network_${key}`, value);
+            analytics.trackPerformance(\`network_\${key}\`, value);
           });
         }
       }
@@ -235,3 +245,9 @@ export const usePerformanceMonitoring = () => {
     }
   };
 };
+`;
+
+// Write the fixed content
+fs.writeFileSync('src/hooks/usePerformance.ts', fixedContent);
+
+console.log('✅ Fixed usePerformance.ts syntax errors');

@@ -1,43 +1,33 @@
 import React from 'react';
-<<<<<<< HEAD:app/layout.tsx
 import Link from 'next/link';
 import './globals.css';
-import { Link } from 'react-router-dom';
 
 function Header(): React.JSX.Element {
   return (
     <header className='border-b border-gray-200 sticky top-0 z-50 bg-white shadow-sm'>
       <nav className='flex items-center justify-between px-4 py-3 max-w-6xl mx-auto'>
         <Link
-<<<<<<< HEAD:app/layout.tsx
           href='/'
-          to='/'
           className='font-bold text-lg text-gray-900 hover:text-blue-600 transition-colors'
         >
           Zion Tech Group
         </Link>
         <div className='hidden md:flex gap-6'>
           <Link
-<<<<<<< HEAD:app/layout.tsx
             href='/about'
-            to='/about'
             className='text-gray-700 hover:text-blue-600 transition-colors'
           >
             About
           </Link>
           <Link
-<<<<<<< HEAD:app/layout.tsx
             href='/services'
-            to='/services'
             className='text-gray-700 hover:text-blue-600 transition-colors'
           >
             Services
           </Link>
           <div className='relative group'>
             <Link
-<<<<<<< HEAD:app/layout.tsx
               href='/services/ai-autonomous-operations-2026'
-              to='/services/ai-autonomous-operations-2026'
               className='text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1'
             >
               AI Operations 2026
@@ -48,9 +38,7 @@ function Header(): React.JSX.Element {
           </div>
           <div className='relative group'>
             <Link
-<<<<<<< HEAD:app/layout.tsx
               href='/content-hub'
-              to='/content-hub'
               className='text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1'
             >
               Content Hub
@@ -61,7 +49,6 @@ function Header(): React.JSX.Element {
           </div>
           <div className='relative group'>
             <Link
-<<<<<<< HEAD:app/layout.tsx
               href='/blog/ai-2026-autonomous-business-intelligence-breakthrough'
               className='text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1'
             >
@@ -118,7 +105,6 @@ function Header(): React.JSX.Element {
           <div className='relative group'>
             <Link
               href='/blog'
-              to='/blog'
               className='text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1'
             >
               Blog
@@ -132,9 +118,7 @@ function Header(): React.JSX.Element {
           </div>
           <div className='relative group'>
             <Link
-<<<<<<< HEAD:app/layout.tsx
               href='/case-studies'
-              to='/team'
               className='text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1'
             >
               Case Studies
@@ -147,9 +131,7 @@ function Header(): React.JSX.Element {
             </Link>
           </div>
           <Link
-<<<<<<< HEAD:app/layout.tsx
             href='/contact'
-            to='/contact'
             className='text-gray-700 hover:text-blue-600 transition-colors'
           >
             Contact
@@ -184,41 +166,31 @@ function Footer(): React.JSX.Element {
             <h3 className='font-semibold text-gray-900 mb-3'>Services</h3>
             <div className='space-y-2'>
               <Link
-<<<<<<< HEAD:app/layout.tsx
                 href='/services'
-                to='/services'
                 className='block text-gray-600 hover:text-blue-600 transition-colors'
               >
                 All Services
               </Link>
               <Link
-<<<<<<< HEAD:app/layout.tsx
                 href='/services/ai-autonomous-cloud-ops'
-                to='/services/ai-autonomous-cloud-ops'
                 className='block text-gray-600 hover:text-blue-600 transition-colors'
               >
                 AI Autonomous Cloud Ops
               </Link>
               <Link
-<<<<<<< HEAD:app/layout.tsx
                 href='/services/ai-fintech-transformation'
-                to='/services/ai-fintech-transformation'
                 className='block text-gray-600 hover:text-blue-600 transition-colors'
               >
                 AI FinTech Transformation
               </Link>
               <Link
-<<<<<<< HEAD:app/layout.tsx
                 href='/services/ai-retail-automation'
-                to='/services/ai-retail-automation'
                 className='block text-gray-600 hover:text-blue-600 transition-colors'
               >
                 AI Retail Automation
               </Link>
               <Link
-<<<<<<< HEAD:app/layout.tsx
                 href='/services/micro-saas'
-                to='/services/micro-saas'
                 className='block text-gray-600 hover:text-blue-600 transition-colors'
               >
                 Micro SaaS
@@ -231,9 +203,7 @@ function Footer(): React.JSX.Element {
             </h3>
             <div className='space-y-2'>
               <Link
-<<<<<<< HEAD:app/layout.tsx
                 href='/blog/ai-2028-next-generation-autonomous-enterprise'
-                to='/blog'
                 className='block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2'
               >
                 🚀 AI 2028 Autonomous Enterprise
@@ -242,9 +212,7 @@ function Footer(): React.JSX.Element {
                 </span>
               </Link>
               <Link
-<<<<<<< HEAD:app/layout.tsx
                 href='/blog/ai-2028-neuromorphic-superintelligence'
-                to='/blog'
                 className='block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2'
               >
                 🧠 AI 2028 Neuromorphic Superintelligence
@@ -253,9 +221,7 @@ function Footer(): React.JSX.Element {
                 </span>
               </Link>
               <Link
-<<<<<<< HEAD:app/layout.tsx
                 href='/case-studies/ai-2028-autonomous-enterprise-mega-success'
-                to='/team'
                 className='block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2'
               >
                 💰 $100B Autonomous Success
@@ -264,9 +230,7 @@ function Footer(): React.JSX.Element {
                 </span>
               </Link>
               <Link
-<<<<<<< HEAD:app/layout.tsx
                 href='/case-studies/ai-2028-neuromorphic-superintelligence-success'
-                to='/team'
                 className='block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2'
               >
                 🧠 $75B Neuromorphic Success
@@ -275,9 +239,7 @@ function Footer(): React.JSX.Element {
                 </span>
               </Link>
               <Link
-<<<<<<< HEAD:app/layout.tsx
                 href='/blog/ai-2026-future-trends-breakthrough'
-                to='/blog'
                 className='block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2'
               >
                 🌟 AI 2026 Future Trends
@@ -286,33 +248,25 @@ function Footer(): React.JSX.Element {
                 </span>
               </Link>
               <Link
-<<<<<<< HEAD:app/layout.tsx
                 href='/blog/ai-future-workforce-2026'
-                to='/blog'
                 className='block text-gray-600 hover:text-blue-600 transition-colors'
               >
                 👥 AI Future Workforce 2026
               </Link>
               <Link
-<<<<<<< HEAD:app/layout.tsx
                 href='/blog/ai-cybersecurity-2026'
-                to='/blog'
                 className='block text-gray-600 hover:text-blue-600 transition-colors'
               >
                 🛡️ AI Cybersecurity 2026
               </Link>
               <Link
-<<<<<<< HEAD:app/layout.tsx
                 href='/case-studies/ai-finance-automation-success-2026'
-                to='/team'
                 className='block text-gray-600 hover:text-blue-600 transition-colors'
               >
                 💰 $15M Finance ROI
               </Link>
               <Link
-<<<<<<< HEAD:app/layout.tsx
                 href='/case-studies'
-                to='/team'
                 className='block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2'
               >
                 Case Studies
@@ -326,25 +280,19 @@ function Footer(): React.JSX.Element {
             <h3 className='font-semibold text-gray-900 mb-3'>Content</h3>
             <div className='space-y-2'>
               <Link
-<<<<<<< HEAD:app/layout.tsx
                 href='/'
-                to='/'
                 className='block text-gray-600 hover:text-blue-600 transition-colors'
               >
                 Home
               </Link>
               <Link
-<<<<<<< HEAD:app/layout.tsx
                 href='/about'
-                to='/about'
                 className='block text-gray-600 hover:text-blue-600 transition-colors'
               >
                 About
               </Link>
               <Link
-<<<<<<< HEAD:app/layout.tsx
                 href='/contact'
-                to='/contact'
                 className='block text-gray-600 hover:text-blue-600 transition-colors'
               >
                 Contact
