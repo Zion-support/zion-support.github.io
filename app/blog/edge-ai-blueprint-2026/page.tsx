@@ -1,12 +1,14 @@
 import ArrowRight from 'next/link';
 
 export const metadata = {
+  
   title: 'Edge AI Blueprint 2026: Building Sub-100ms Intelligent Systems',
   description:
     'Practical blueprint for deploying low-latency edge AI: models, caching, routing, and observability.',
   keywords:
     'edge ai 2026, latency patterns, on-device inference, streaming, observability',
-};
+
+};;
 
 export default function EdgeAIBlueprint2026Page() {
   return (

@@ -1,33 +1,30 @@
 import React from 'react';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {/* content */}
+export const metadata = {
+  
   title: 'AI 2026 June Autonomous Enterprise Revolution: Complete Business Transformation',
-  description: 'Discover how autonomous enterprise systems are revolutionizing business operations with AI-driven automation, achieving 99.9% efficiency and $2.5B in measurable value.',
-  keywords: 'autonomous enterprise, AI automation, business transformation, enterprise AI, June 2026 breakthrough',
-  openGraph: {
-    title: 'AI 2026 June Autonomous Enterprise Revolution: Complete Business Transformation',
       description: 'Revolutionary autonomous enterprise systems delivering unprecedented business transformation and efficiency gains.',
       type: 'article',
       publishedTime: '2026-06-01T00:00:00.000Z'
-    },
+    
+};,
 };
 
 export default function AI2026JuneAutonomousEnterpriseRevolution() {
   return (
     <div>/* content */}
-  return (
     <div>
-      <div> </div><div> </div></div>
-    <div className="text-left">{/* Hero Section */}</div></div>
-        <div className="text-left"> </div><span className="text-left">🚀 June 2026 Revolution
+      <div> </div><div> </div>
+      <div className="text-left">{/* Hero Section */}</div>
+      <div className="text-left"> </div><span className="text-left">🚀 June 2026 Revolution
             </span></span>
           </div>
           <h1 className="text-left">
             Autonomous Enterprise Revolution
           </h1>
-          <p className="text-left"> </p><div className="text-left"> </div><div className="text-left">{/* Hero Section */}</div></div>
-        <div className="text-left"> </div><div className="text-left"> </div><span className="text-left">🚀 June 2026 Revolution
+          <p className="text-left"> </p><div className="text-left"> </div><div className="text-left">{/* Hero Section */}</div>
+      <div className="text-left"> </div><div className="text-left"> </div><span className="text-left">🚀 June 2026 Revolution
             </span></span>
           </div>
           
@@ -53,14 +50,11 @@ origin/cursor/fix-errors-and-merge-to-main-cc0a
           {/* Key Metrics */}
           <div className="text-left"> </div><div className="text-left">99.9%</div>
               <div className="text-left">Efficiency</div>
-            </div>
-            <div className="text-left">$2.5B</div>
+      <div className="text-left">$2.5B</div>
               <div className="text-left">Value Generated</div>
-            </div>
-            <div className="text-left">1000x</div>
+      <div className="text-left">1000x</div>
               <div className="text-left">Speed Boost</div>
-            </div>
-            <div className="text-left">24/7</div>
+      <div className="text-left">24/7</div>
               <div className="text-left">Autonomous</div>
             </div>
         </div>

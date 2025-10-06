@@ -1,29 +1,25 @@
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {/* content */}
-  title: 'January 2025 Cutting-Edge AI Trends: Revolutionary Breakthrough Technologies | Zion Tech Group',
-  description: 'Explore the latest cutting-edge AI trends and breakthrough technologies transforming enterprise operations in January 2025. Neural consciousness, quantum optimization, and autonomous intelligence.',
-  keywords: 'AI trends 2025, cutting-edge AI, breakthrough technologies, neural consciousness, quantum AI, autonomous intelligence, enterprise AI',
-  openGraph: {
-    title: 'January 2025 Cutting-Edge AI Trends: Revolutionary Breakthrough Technologies',
+export const metadata = {
+  
+  title: 'January 2025 Cutting-Edge AI Trends: Revolutionary Breakthrough Technologies',
     description: 'Latest cutting-edge AI trends revolutionizing enterprise operations with neural consciousness, quantum optimization, and autonomous intelligence.',
     type: 'article',
     publishedTime: '2025-01-20T00:00:00Z',
     authors: ['Zion Tech Group'],
     tags: ['AI Trends', 'Cutting-Edge Technology', 'Breakthrough Innovation', 'Enterprise AI'],
-  },
+  
+};,
 };
 
 export default function CuttingEdgeAITrends2025() {
   return (
     <div>/* content */}
-  return (
     <div>
-      <div> </div><div> </div></div>
-    <div className="text-left">{/* Hero Section */}</div></div>
-      <section className="text-left"> </section><div className="text-left"> </div><div className="text-left" style={{ animationDelay: '2s' }}> </div></div>
-        
-        <div className="text-left"> </div><span className="text-left">🧠 January 2025 Cutting-Edge AI Trends
+      <div> </div><div> </div>
+      <div className="text-left">{/* Hero Section */}</div></div>
+      <section className="text-left"> </section><div className="text-left"> </div><div className="text-left" style={{ animationDelay: '2s' }}> </div>
+      <div className="text-left"> </div><span className="text-left">🧠 January 2025 Cutting-Edge AI Trends
               </span></span>
             </div>
             <h1 className="text-left">
@@ -31,9 +27,8 @@ export default function CuttingEdgeAITrends2025() {
             </h1>
             <p className="text-left"> </p><section className="text-left"> </section><div className="text-left"> </div><div className="text-left">"
           </div><div className="text-left" style={{ animationDelay: '2s' }}>"
-        </div></div>
-        
-        <div className="text-left"> </div><div className="text-left"> </div><div className="text-left"> </div><span className="text-left">🧠 January 2025 Cutting-Edge AI Trends
+        </div>
+      <div className="text-left"> </div><div className="text-left"> </div><div className="text-left"> </div><span className="text-left">🧠 January 2025 Cutting-Edge AI Trends
               </span></span>
             </div>
             
@@ -45,14 +40,11 @@ export default function CuttingEdgeAITrends2025() {
             </p></p>
             <div className="text-left"> </div><div className="text-left">95%</div>
                 <div className="text-left">Accuracy</div>
-              </div>
-              <div className="text-left">10x</div>
+      <div className="text-left">10x</div>
                 <div className="text-left">Performance</div>
-              </div>
-              <div className="text-left">87%</div>
+      <div className="text-left">87%</div>
                 <div className="text-left">Efficiency</div>
-              </div>
-              <div className="text-left">99.9%</div>
+      <div className="text-left">99.9%</div>
                 <div className="text-left">Reliability</div>
               </div>
             </div>
@@ -86,11 +78,9 @@ export default function CuttingEdgeAITrends2025() {
               <h3 className="text-left">Global Transformation Metrics</h4>
                 <div className="text-left"> </div><div className="text-left">$47B</div>
                     <div className="text-left">Global Value Created</div>
-                  </div>
-                  <div className="text-left">95%</div>
+      <div className="text-left">95%</div>
                     <div className="text-left">Average Accuracy</div>
-                  </div>
-                  <div className="text-left">10x</div>
+      <div className="text-left">10x</div>
                     <div className="text-left">Performance Improvement</div>
                   </div>
                 </div>
@@ -124,13 +114,11 @@ export default function CuttingEdgeAITrends2025() {
                     <div> </div><h4 className="text-left">Neural Consciousness Assessment</h4>
                       <p className="text-left">Evaluate current AI capabilities and identify consciousness integration opportunities.</p>
                     </div>
-                  </div>
-                  <div className="text-left">2</div>
+      <div className="text-left">2</div>
                     <div> </div><h4 className="text-left">Quantum Infrastructure Setup</h4>
                       <p className="text-left">Deploy quantum computing capabilities and optimization engines.</p>
                     </div>
-                  </div>
-                  <div className="text-left">3</div>
+      <div className="text-left">3</div>
                     <div> </div><h4 className="text-left">Autonomous Network Deployment</h4>
                       <p className="text-left">Launch self-organizing AI networks with real-time adaptation capabilities.</p>
                     </div>

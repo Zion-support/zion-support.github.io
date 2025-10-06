@@ -3,11 +3,8 @@ import Link from 'next/link';
 import { Shield } from 'lucide-react';
 
 export const metadata = {
-  title: 'AI 2028: Autonomous Governance Blueprint | Zion Tech Group',
-  description:
-    'Budgets, live scorecards, PR policy tests, and rollback playbooks that enable safe, enterprise-scale autonomy.',
-  openGraph: {
-    title: 'AI 2028: Autonomous Governance Blueprint',
+  
+  title: 'AI 2028: Autonomous Governance Blueprint',
     description:
       'KPI‑linked scorecards, budget gates, and live canaries hardwired into delivery for safe autonomy.',
     type: 'article',
@@ -18,7 +15,8 @@ export const metadata = {
         width: 1200,
         height: 630,
         alt: 'AI 2028 Autonomous Governance',
-      },
+      
+};,
     ],
   },
 };

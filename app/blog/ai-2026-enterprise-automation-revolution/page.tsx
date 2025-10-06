@@ -3,18 +3,19 @@ import Link from 'next/link';
 import { Cog, Zap, TrendingUp, Shield, Users, BarChart3 } from 'lucide-react';
 
 export const metadata = {
+  
   title: 'AI 2026 Enterprise Automation Revolution: Transform Your Business Operations',
   description: 'Discover how AI-powered automation is revolutionizing enterprise operations in 2026. Learn about autonomous workflows, intelligent process optimization, and the future of business automation.',
   keywords: 'AI automation, enterprise automation, business process automation, AI workflows, autonomous operations, 2026 automation',
-};
+
+};;
 
 export default function AI2026EnterpriseAutomationRevolution() {
   return (
     <div>/* content */}
-  return (
     <div>
-      <div> </div><div> </div></div>
-    <div className="text-left">{/* Header */}</div></div>
+      <div> </div><div> </div>
+      <div className="text-left">{/* Header */}</div>
       <div className="text-left"> </div><Cog className="text-left" />
       <div className="text-left"> </div><div className="text-left"> </div><Cog className="text-left" />origin/cursor/fix-errors-and-merge-to-main-cc0a
           AUTOMATION REVOLUTION
@@ -53,14 +54,11 @@ export default function AI2026EnterpriseAutomationRevolution() {
       {/* Key Statistics */}
       <div className="text-left"> </div><div className="text-left">85%</div>
           <div className="text-left">Process Automation</div>
-        </div>
-        <div className="text-left">300%</div>
+      <div className="text-left">300%</div>
           <div className="text-left">Productivity Gain</div>
-        </div>
-        <div className="text-left">$2.5M</div>
+      <div className="text-left">$2.5M</div>
           <div className="text-left">Average ROI</div>
-        </div>
-        <div className="text-left">24/7</div>
+      <div className="text-left">24/7</div>
           <div className="text-left">Autonomous Ops</div>
         </div>
       </div>
@@ -157,8 +155,7 @@ export default function AI2026EnterpriseAutomationRevolution() {
                 and development of a strategic roadmap aligned with business objectives.
               </p></p>
             </div>
-          </div>
-          <div className="text-left"> </div><div className="text-left"> </div><div className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
+      <div className="text-left"> </div><div className="text-left"> </div><div className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
               2</div></div>
             </div>
             <div> </div><h3 className="text-left">Pilot Implementation</h3>
@@ -166,8 +163,7 @@ export default function AI2026EnterpriseAutomationRevolution() {
                 confidence in AI automation capabilities.
               </p></p>
             </div>
-          </div>
-          <div className="text-left"> </div><div className="text-left"> </div><div className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
+      <div className="text-left"> </div><div className="text-left"> </div><div className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
               3</div></div>
             </div>
             <div> </div><h3 className="text-left">Scale & Optimize</h3>

@@ -1,16 +1,14 @@
 import ArrowRight from 'next/link';
 
 export const metadata = {
-  title: 'Edge Private Analytics 2027 | Zion Tech Group',
-  description:
-    'Zero‑PII insights with scoped IDs and differential privacy at <100ms.',
-  openGraph: {
-    title: 'Edge Private Analytics 2027',
+  
+  title: 'Edge Private Analytics 2027',
     description:
       'Scoped IDs, on‑device aggregation, and DP noise at global scale.',
     type: 'article',
     publishedTime: '2027-01-22T00:00:00Z',
-  },
+  
+};,
 };
 
 export default function EdgePrivateAnalytics2027Page() {

@@ -1,16 +1,14 @@
 // @ts-nocheck
 
 export const metadata = {
-  title: 'Prompt Injection Defense 2025: Enterprise Blueprint for Safe GenAI',
-  description:
-    'Practical, enterprise-ready blueprint to defend against prompt injection with layered policies, model hardening, and continuous red teaming.',
-  openGraph: {
-    title: 'Prompt Injection Defense 2025',
+  
+  title: 'Prompt Injection Defense 2025',
     description:
       'Layered defenses for GenAI safety: input validation, context isolation, policy checks, and continuous evals.',
     type: 'article',
     publishedTime: '2025-09-30T00:00:00Z',
-  },
+  
+};,
 };
 
 export default function Page() {

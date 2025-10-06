@@ -1,30 +1,26 @@
 import React from 'react';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {/* content */}
-  title: 'AI 2026: Neural Architecture Revolution - Zion Tech Group',
-  description: 'Discover the revolutionary neural architecture breakthroughs that are transforming enterprise AI in 2026. Learn about quantum-neural fusion, meta-cognitive AI, and autonomous operations.',
-  keywords: 'AI 2026, neural architecture, quantum-neural fusion, meta-cognitive AI, enterprise automation, Zion Tech Group',
-  openGraph: {
-    title: 'AI 2026: Neural Architecture Revolution',
+export const metadata = {
+  
+  title: 'AI 2026: Neural Architecture Revolution',
     description: 'Revolutionary neural architecture breakthroughs transforming enterprise AI in 2026',
     type: 'article',
     publishedTime: '2026-01-15T00:00:00.000Z',
     authors: ['Zion Tech Group'],
-  },
+  
+};,
 };
 
 export default function AINeuralArchitectureRevolution2026() {
   return (
     <div>/* content */}
-  return (
     <div>
-      <div> </div><div> </div></div>
-    <div className="text-left">{/* Hero Section */}</div></div>
+      <div> </div><div> </div>
+      <div className="text-left">{/* Hero Section */}</div></div>
       <header className="text-left">
-        <div className="text-left"> </div><div className="text-left" style={{ animationDelay: '2s' }}> </div></div>
-        
-        <div className="text-left"> </div><span className="text-left">🧠 Revolutionary AI Architecture
+        <div className="text-left"> </div><div className="text-left" style={{ animationDelay: '2s' }}> </div>
+      <div className="text-left"> </div><span className="text-left">🧠 Revolutionary AI Architecture
               </span></span>
             </div>
             <h1 className="text-left">
@@ -32,9 +28,8 @@ export default function AINeuralArchitectureRevolution2026() {
             </h1>
             <p className="text-left"> </p><header className="text-left"> </header><div className="text-left"> </div><div className="text-left">"
           </div><div className="text-left" style={{ animationDelay: '2s' }}>"
-        </div></div>
-        
-        <div className="text-left"> </div><div className="text-left"> </div><div className="text-left"> </div><span className="text-left">🧠 Revolutionary AI Architecture
+        </div>
+      <div className="text-left"> </div><div className="text-left"> </div><div className="text-left"> </div><span className="text-left">🧠 Revolutionary AI Architecture
               </span></span>
             </div>
             
@@ -67,11 +62,9 @@ export default function AINeuralArchitectureRevolution2026() {
             </p></p>
             <div className="text-left"> </div><div className="text-left">1000x</div>
                 <div className="text-left">Processing Speed</div>
-              </div>
-              <div className="text-left">95%</div>
+      <div className="text-left">95%</div>
                 <div className="text-left">Decision Accuracy</div>
-              </div>
-              <div className="text-left">98%</div>
+      <div className="text-left">98%</div>
                 <div className="text-left">Automation Rate</div>
               </div>
           </div>

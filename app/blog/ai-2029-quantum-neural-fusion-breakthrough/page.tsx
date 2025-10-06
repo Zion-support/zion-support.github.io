@@ -1,20 +1,8 @@
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {
+export const metadata = {
+  
   title:
-    'AI 2029: Quantum Neural Fusion Breakthrough - 1,000,000x Performance Leap',
-  description:
-    "Experience genuine AI consciousness with 1,000,000x performance improvements. Discover the world's first truly conscious AI systems that think, feel, and create like humans.",
-  keywords: [
-    'AI consciousness',
-    'quantum neural fusion',
-    '1,000,000x performance',
-    'conscious AI',
-    'quantum computing',
-    'artificial intelligence breakthrough',
-  ],
-  openGraph: {
-    title:
       'AI 2029: Quantum Neural Fusion Breakthrough - 1,000,000x Performance Leap',
     description:
       "Experience genuine AI consciousness with 1,000,000x performance improvements. Discover the world's first truly conscious AI systems that think, feel, and create like humans.",
@@ -28,7 +16,8 @@ export const metadata: Metadata = {
       'Neural Networks',
       'Breakthrough',
     ],
-  },
+  
+};,
 };
 
 export default function AI2029QuantumNeuralFusionBreakthrough() {

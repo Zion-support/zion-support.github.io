@@ -1,26 +1,23 @@
 import React from 'react';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {/* content */}
-  title: 'Autonomous Operations: Revolutionary 98% Automation Rate Achievement | Zion Tech Group',
-  description: 'Discover how Autonomous Operations AI systems are achieving 98% automation rates and delivering $50M+ annual savings for enterprise operations.',
-  keywords: 'autonomous operations, enterprise automation, AI automation, autonomous AI, automation breakthrough 2026',
-  openGraph: {
-    title: 'Autonomous Operations: 98% Automation Rate',
+export const metadata = {
+  
+  title: 'Autonomous Operations: 98% Automation Rate',
     description: 'Revolutionary autonomous AI systems achieving unprecedented automation levels in enterprise operations.',
     type: 'article',
     publishedTime: '2026-01-15T00:00:00Z',
     authors: ['Zion Tech Group'],
-  },
+  
+};,
 };
 
 export default function AutonomousOperations() {
   return (
     <div>/* content */}
-  return (
     <div>
-      <div> </div><div> </div></div>
-    <div className="text-left"> </div><article className="text-left">{/* Hero Section */}
+      <div> </div><div> </div>
+      <div className="text-left"> </div><article className="text-left">{/* Hero Section */}
         </article><header className="text-left">
           <span className="text-left">🤖 Autonomous AI Revolution
             </span></span>

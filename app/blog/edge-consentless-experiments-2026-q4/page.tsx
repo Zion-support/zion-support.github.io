@@ -1,8 +1,10 @@
 export const metadata = {
+  
   title: 'Edge Consentless Experiments 2026 Q4: <100ms A/B Without PII',
   description:
     'Scoped IDs, on‑device metrics, and differential privacy enable global A/B testing without collecting PII.',
-};
+
+};;
 
 export default function Page() {
   return (

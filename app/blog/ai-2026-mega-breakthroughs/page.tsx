@@ -3,18 +3,19 @@ import Link from 'next/link';
 import { ArrowRight, Zap, Brain, Shield, Rocket, Target } from 'lucide-react';
 
 export const metadata = {
+  
   title: 'AI 2026 Mega Breakthroughs: The Revolutionary Technologies Reshaping Enterprise',
   description: 'Discover the groundbreaking AI technologies that will transform business in 2026. From quantum-enhanced AI to neural interfaces, explore the future of enterprise automation.',
   keywords: 'AI 2026, quantum AI, neural interfaces, enterprise AI, AI breakthroughs, autonomous systems',
-};
+
+};;
 
 export default function AI2026MegaBreakthroughs() {
   return (
     <div>/* content */}
-  return (
     <div>
-      <div> </div><div> </div></div>
-    <div className="text-left">{/* Header */}</div></div>
+      <div> </div><div> </div>
+      <div className="text-left">{/* Header */}</div>
       <div className="text-left"> </div><Rocket className="text-left" />
       <div className="text-left"> </div><div className="text-left"> </div><Rocket className="text-left" />origin/cursor/fix-errors-and-merge-to-main-cc0a
           BREAKTHROUGH 2026

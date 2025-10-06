@@ -1,25 +1,22 @@
 import React from 'react';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {/* content */}
-  title: 'AI Enterprise Transformation: Complete Digital Overhaul Guide 2026 | Zion Tech Group',
-  description: 'Comprehensive guide to AI-driven enterprise transformation, covering strategy, implementation, and ROI optimization for modern businesses.',
-  keywords: 'AI transformation, enterprise AI, digital transformation, business intelligence, AI strategy',
-  openGraph: {
-    title: 'AI Enterprise Transformation: Complete Digital Overhaul Guide 2026',
+export const metadata = {
+  
+  title: 'AI Enterprise Transformation: Complete Digital Overhaul Guide 2026',
       description: 'Master the art of AI-driven enterprise transformation with our comprehensive guide.',
       type: 'article',
       publishedTime: '2025-01-30T00:00:00.000Z'
-    },
+    
+};,
 };
 
 export default function AIEnterpriseTransformation2026() {
   return (
     <div>/* content */}
-  return (
     <div>
-      <div> </div><div> </div></div>
-    <div className="text-left"> </div><article className="text-left"> </a><header className="text-left">
+      <div> </div><div> </div>
+      <div className="text-left"> </div><article className="text-left"> </a><header className="text-left">
             <div className="text-left"> </div><div className="text-left"> </div><div className="text-left"> </div><article className="text-left"> </article><header className="text-left"> </header><div className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
               Enterprise AI</div></div>
             </div>

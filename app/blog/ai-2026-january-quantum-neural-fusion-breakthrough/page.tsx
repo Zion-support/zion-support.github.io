@@ -1,26 +1,23 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 
-export const metadata: Metadata = {/* content */}
-  title: 'AI 2026: Quantum-Neural Fusion Breakthrough - The Next Frontier of Enterprise Intelligence',
-  description: 'Discover how quantum-neural fusion is revolutionizing enterprise AI with unprecedented computational power, consciousness-level reasoning, and infinite scalability potential.',
-  keywords: 'Quantum AI, Neural Networks, Enterprise AI, Breakthrough Technology, 2026',
-  openGraph: {
-    title: 'AI 2026: Quantum-Neural Fusion Breakthrough',
+export const metadata = {
+  
+  title: 'AI 2026: Quantum-Neural Fusion Breakthrough',
     description: 'Revolutionary quantum-neural fusion technology delivering 500x faster processing, 99.97% accuracy, and consciousness-level decision making.',
     type: 'article',
     publishedTime: '2026-01-15',
     authors: ['Zion Tech Group Research Team'],
-  },
+  
+};,
 };
 
 export default function QuantumNeuralFusionBreakthroughPage() {
   return (
     <div>/* content */}
-  return (
     <div>
-      <div> </div><div> </div></div>
-    <div className="text-left"> </div><article className="text-left"> </a><header className="text-left">
+      <div> </div><div> </div>
+      <div className="text-left"> </div><article className="text-left"> </a><header className="text-left">
           <span className="text-left">🚀 January 2026 Breakthrough
             </span></span>
           </div>
@@ -56,14 +53,11 @@ export default function QuantumNeuralFusionBreakthroughPage() {
             </p></p>
             <div className="text-left"> </div><div className="text-left">500x</div>
                 <div className="text-left">Faster Processing</div>
-              </div>
-              <div className="text-left">99.97%</div>
+      <div className="text-left">99.97%</div>
                 <div className="text-left">Accuracy</div>
-              </div>
-              <div className="text-left">Infinite</div>
+      <div className="text-left">Infinite</div>
                 <div className="text-left">Scalability</div>
-              </div>
-              <div className="text-left">Consciousness</div>
+      <div className="text-left">Consciousness</div>
                 <div className="text-left">Level AI</div>
               </div>
           </div>

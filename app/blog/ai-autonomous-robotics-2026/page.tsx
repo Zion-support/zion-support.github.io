@@ -3,18 +3,19 @@ import Link from 'next/link';
 import { Clock, ArrowRight, Bot, Zap, Target, TrendingUp } from 'lucide-react';
 
 export const metadata = {
+  
   title: 'AI Autonomous Robotics 2026: The Future of Intelligent Automation',
   description: 'Explore the revolutionary advances in AI autonomous robotics for 2026. Discover how intelligent robots are transforming industries and creating new possibilities for automation.',
   keywords: 'AI autonomous robotics, intelligent automation, robotic process automation, AI robots, autonomous systems 2026',
-};
+
+};;
 
 export default function AIAutonomousRobotics2026() {
   return (
     <div>/* content */}
-  return (
     <div>
-      <div> </div><div> </div></div>
-    <div className="text-left">{/* Header */}</div></div>
+      <div> </div><div> </div>
+      <div className="text-left">{/* Header */}</div>
       <div className="text-left"> </div><span className="text-left"> </span><div className="text-left"> </div><div className="text-left"> </div><span className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
             NEW 2026
           </span></span>
@@ -58,16 +59,13 @@ export default function AIAutonomousRobotics2026() {
       <div className="text-left"> </div><div className="text-left">$1.2T</div>
           <div className="text-left">Market Value</div>
           <div className="text-left">Autonomous Robotics</div>
-        </div>
-        <div className="text-left">85%</div>
+      <div className="text-left">85%</div>
           <div className="text-left">Efficiency Gain</div>
           <div className="text-left">Manufacturing</div>
-        </div>
-        <div className="text-left">70%</div>
+      <div className="text-left">70%</div>
           <div className="text-left">Cost Reduction</div>
           <div className="text-left">Operations</div>
-        </div>
-        <div className="text-left">95%</div>
+      <div className="text-left">95%</div>
           <div className="text-left">Accuracy Rate</div>
           <div className="text-left">Complex Tasks</div>
         </div>
@@ -114,24 +112,21 @@ export default function AIAutonomousRobotics2026() {
             </p></p>
             <div className="text-left"> </div><strong>Impact:</strong> 85% efficiency gain, 70% cost reduction, 99.9% uptime
             </div>
-          </div>
-          <div className="text-left"> </div><div className="text-left"> </div><Zap className="text-left" /> </Zap></div>
+      <div className="text-left"> </div><div className="text-left"> </div><Zap className="text-left" /> </Zap></div>
               <h4 className="text-left">Logistics & Warehousing</h4>
             </div>
             <p className="text-left">Intelligent robots managing inventory, picking and packing orders, and optimizing warehouse operations with dynamic routing and load balancing.
             </p></p>
             <div className="text-left"> </div><strong>Impact:</strong> 60% faster order fulfillment, 50% space optimization
             </div>
-          </div>
-          <div className="text-left"> </div><div className="text-left"> </div><Target className="text-left" /> </Target></div>
+      <div className="text-left"> </div><div className="text-left"> </div><Target className="text-left" /> </Target></div>
               <h4 className="text-left">Healthcare & Surgery</h4>
             </div>
             <p className="text-left">Surgical robots performing precise procedures with sub-millimeter accuracy, patient monitoring systems, and rehabilitation assistance.
             </p></p>
             <div className="text-left"> </div><strong>Impact:</strong> 40% faster recovery, 90% precision improvement
             </div>
-          </div>
-          <div className="text-left"> </div><div className="text-left"> </div><TrendingUp className="text-left" /> </TrendingUp></div>
+      <div className="text-left"> </div><div className="text-left"> </div><TrendingUp className="text-left" /> </TrendingUp></div>
               <h4 className="text-left">Agriculture & Food</h4>
             </div>
             <p className="text-left">Autonomous farming robots for planting, harvesting, and crop monitoring, plus food processing and packaging automation.
@@ -181,11 +176,9 @@ export default function AIAutonomousRobotics2026() {
           </p>
           <div className="text-left"> </div><div className="text-left">85%</div>
               <div className="text-left">Efficiency Gain</div>
-            </div>
-            <div className="text-left">90%</div>
+      <div className="text-left">90%</div>
               <div className="text-left">Defect Reduction</div>
-            </div>
-            <div className="text-left">$50M</div>
+      <div className="text-left">$50M</div>
               <div className="text-left">Annual Savings</div>
             </div>
           </div>

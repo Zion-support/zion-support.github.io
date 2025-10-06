@@ -1,14 +1,12 @@
 // @ts-nocheck
 
 export const metadata = {
-  title: 'AI 2025: Enterprise AI Safety Blueprint — KPIs, Budgets, Rollback',
-  description:
-    'Practical guardrails that teams adopt: KPI-linked scorecards, policy tests in CI, live canaries, and instant rollback for safe velocity.',
-  openGraph: {
-    title: 'AI 2025: Enterprise AI Safety Blueprint',
+  
+  title: 'AI 2025: Enterprise AI Safety Blueprint',
     description:
       'KPI-linked scorecards, CI policy tests, canaries, and instant rollback to ship fast without regressions.',
-  },
+  
+};,
 };
 
 export default function Page() {

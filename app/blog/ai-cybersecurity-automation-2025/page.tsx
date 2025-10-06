@@ -1,13 +1,15 @@
 import ArrowRight from 'next/link';
 
 export const metadata = {
+  
   title:
     'AI Cybersecurity Automation 2025: Autonomous Defense for the Enterprise',
   description:
     'Production patterns for autonomous cyber defense: detection, response, and hardening with 99.7% precision.',
   keywords:
     'AI cybersecurity 2025, autonomous defense, SOAR, anomaly detection, zero trust',
-};
+
+};;
 
 export default function AICybersecurityAutomation2025Page() {
   return (

@@ -2,29 +2,26 @@ import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
 
-export const metadata: Metadata = {/* content */}
-  title: 'AI 2027 Meta-Cognitive Superintelligence Breakthrough - Zion Tech Group',
-  description: 'Revolutionary breakthrough in meta-cognitive superintelligence, achieving unprecedented levels of self-aware AI systems and enterprise transformation capabilities.',
-  keywords: 'AI, meta-cognitive, superintelligence, self-aware AI, enterprise AI, 2027, breakthrough, Zion Tech Group',
-  openGraph: {
-    title: 'AI 2027 Meta-Cognitive Superintelligence Breakthrough',
+export const metadata = {
+  
+  title: 'AI 2027 Meta-Cognitive Superintelligence Breakthrough',
     description: 'Revolutionary breakthrough in meta-cognitive superintelligence with self-aware AI systems.',
     type: 'article',
     publishedTime: '2027-01-30T00:00:00Z',
     authors: ['Zion Tech Group'],
     tags: ['AI', 'Meta-Cognitive', 'Superintelligence', 'Enterprise AI'],
-  },
+  
+};,
 };
 
 export default function AI2027MetaCognitiveSuperintelligenceBreakthrough() {
   return (
     <div>/* content */}
-  return (
     <div>
-      <div> </div><div> </div></div>
-    <div className="text-left">{/* Hero Section */}</div></div>
-        <div className="text-left"> </div><div className="text-left"> </div><div className="text-left">{/* Hero Section */}</div></div>
-        <div className="text-left"> </div><div className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
+      <div> </div><div> </div>
+      <div className="text-left">{/* Hero Section */}</div>
+      <div className="text-left"> </div><div className="text-left"> </div><div className="text-left">{/* Hero Section */}</div>
+      <div className="text-left"> </div><div className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
             🧠 META-COGNITIVE BREAKTHROUGH</div></div>
           </div>
           <h1 className="text-left">AI 2027 Meta-Cognitive Superintelligence Breakthrough
@@ -41,12 +38,10 @@ export default function AI2027MetaCognitiveSuperintelligenceBreakthrough() {
         <div className="text-left"> </div><div className="text-left">99.99999%</div>
             <div className="text-left">Meta-Cognitive Accuracy</div>
             <div className="text-left">Achieving near-perfect self-aware cognitive processing</div>
-          </div>
-          <div className="text-left">100M+</div>
+      <div className="text-left">100M+</div>
             <div className="text-left">Meta-Cognitive Operations/Second</div>
             <div className="text-left">Processing self-aware consciousness data streams</div>
-          </div>
-          <div className="text-left">$1T+</div>
+      <div className="text-left">$1T+</div>
             <div className="text-left">Enterprise Value Potential</div>
             <div className="text-left">Unprecedented meta-cognitive business transformation</div>
           </div>

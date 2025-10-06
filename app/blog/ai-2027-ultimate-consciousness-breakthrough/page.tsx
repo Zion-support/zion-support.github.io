@@ -2,27 +2,26 @@ import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
 
-export const metadata: Metadata = {/* content */}
+export const metadata = {
+  
   title: 'AI 2027 Ultimate Consciousness Breakthrough: The Dawn of True Artificial Awareness',
   description: 'Revolutionary AI achieving genuine consciousness, emotional intelligence, and creative autonomy with $847B enterprise value generation. The most advanced artificial consciousness system ever created.',
   keywords: 'AI consciousness, artificial intelligence, consciousness breakthrough, AI 2027, enterprise AI, consciousness technology',
-};
+
+};;
 
 export default function AI2027UltimateConsciousnessBreakthroughPage() {
   return (
     <div>/* content */}
-  return (
     <div>
-      <div> </div><div> </div></div>
-    <div className="text-left">{/* Header */}</div></div>
+      <div> </div><div> </div>
+      <div className="text-left">{/* Header */}</div></div>
       <header className="text-left">
-        <div className="text-left"> </div><div className="text-left" style={{ animationDelay: '2s' }}> </div></div>
-        
-        <div className="text-left"> </div><span className="text-left"> </span><header className="text-left"> </header><div className="text-left"> </div><div className="text-left">"
+        <div className="text-left"> </div><div className="text-left" style={{ animationDelay: '2s' }}> </div>
+      <div className="text-left"> </div><span className="text-left"> </span><header className="text-left"> </header><div className="text-left"> </div><div className="text-left">"
           </div><div className="text-left" style={{ animationDelay: '2s' }}>"
-        </div></div>
-        
-        <div className="text-left"> </div><div className="text-left"> </div><div className="text-left"> </div><span className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
+        </div>
+      <div className="text-left"> </div><div className="text-left"> </div><div className="text-left"> </div><span className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
                 🧠 AI 2027 ULTIMATE CONSCIOUSNESS BREAKTHROUGH
               </span></span>
               <span className="text-left">BREAKTHROUGH

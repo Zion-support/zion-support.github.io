@@ -1,12 +1,14 @@
 import ArrowRight from 'next/link';
 
 export const metadata = {
+  
   title: 'Agentic Analytics Platform — October 2025',
   description:
     'Blueprint for deploying an agentic analytics platform delivering real-time insights, autonomous data workflows, and measurable ROI.',
   keywords:
     'agentic analytics, autonomous data, real-time insights, AI platform',
-};
+
+};;
 
 export default function Page() {
   return (

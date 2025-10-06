@@ -1,30 +1,26 @@
 import React from 'react';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {/* content */}
-  title: 'Enterprise Automation 2026: Complete Implementation Guide - Zion Tech Group',
-  description: 'Master enterprise automation with our comprehensive 2026 guide. Learn about meta-cognitive AI, autonomous operations, and achieving 98% automation rates.',
-  keywords: 'enterprise automation, AI 2026, meta-cognitive AI, autonomous operations, business process automation, Zion Tech Group',
-  openGraph: {
-    title: 'Enterprise Automation 2026: Complete Implementation Guide',
+export const metadata = {
+  
+  title: 'Enterprise Automation 2026: Complete Implementation Guide',
     description: 'Master enterprise automation with our comprehensive 2026 guide featuring meta-cognitive AI and autonomous operations',
     type: 'article',
     publishedTime: '2026-01-20T00:00:00.000Z',
     authors: ['Zion Tech Group'],
-  },
+  
+};,
 };
 
 export default function EnterpriseAutomation2026Guide() {
   return (
     <div>/* content */}
-  return (
     <div>
-      <div> </div><div> </div></div>
-    <div className="text-left">{/* Hero Section */}</div></div>
+      <div> </div><div> </div>
+      <div className="text-left">{/* Hero Section */}</div></div>
       <header className="text-left">
-        <div className="text-left"> </div><div className="text-left" style={{ animationDelay: '2s' }}> </div></div>
-        
-        <div className="text-left"> </div><span className="text-left">🤖 Complete Automation Guide
+        <div className="text-left"> </div><div className="text-left" style={{ animationDelay: '2s' }}> </div>
+      <div className="text-left"> </div><span className="text-left">🤖 Complete Automation Guide
               </span></span>
             </div>
             <h1 className="text-left">
@@ -32,9 +28,8 @@ export default function EnterpriseAutomation2026Guide() {
             </h1>
             <p className="text-left"> </p><header className="text-left"> </header><div className="text-left"> </div><div className="text-left">"
           </div><div className="text-left" style={{ animationDelay: '2s' }}>"
-        </div></div>
-        
-        <div className="text-left"> </div><div className="text-left"> </div><div className="text-left"> </div><span className="text-left">🤖 Complete Automation Guide
+        </div>
+      <div className="text-left"> </div><div className="text-left"> </div><div className="text-left"> </div><span className="text-left">🤖 Complete Automation Guide
               </span></span>
             </div>
             
@@ -67,11 +62,9 @@ export default function EnterpriseAutomation2026Guide() {
             </p></p>
             <div className="text-left"> </div><div className="text-left">98%</div>
                 <div className="text-left">Automation Rate</div>
-              </div>
-              <div className="text-left">99%</div>
+      <div className="text-left">99%</div>
                 <div className="text-left">Operational Efficiency</div>
-              </div>
-              <div className="text-left">$2.3B</div>
+      <div className="text-left">$2.3B</div>
                 <div className="text-left">Value Generated</div>
               </div>
           </div>

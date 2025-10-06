@@ -1,10 +1,12 @@
 import ArrowRight from 'next/link';
 
 export const metadata = {
+  
   title: 'Consentless Edge Analytics Q4 2025: Private Metrics Under 100ms',
   description:
     'Scoped IDs, on‑device aggregation, and differential privacy for compliant, low‑latency analytics with zero PII.',
-};
+
+};;
 
 export default function ConsentlessEdgeAnalyticsQ42025Page() {
   return (

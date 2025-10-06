@@ -2,28 +2,25 @@ import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
 
-export const metadata: Metadata = {/* content */}
-  title: 'January 2026 Autonomous Enterprise Operations Revolution | Zion Tech Group',
-  description: 'Revolutionary breakthrough in autonomous enterprise operations with AI-driven decision making, self-healing infrastructure, and predictive analytics.',
-  keywords: ['autonomous operations', 'enterprise AI', 'self-healing infrastructure', 'predictive analytics', 'AI automation'],
-  openGraph: {
-    title: 'January 2026 Autonomous Enterprise Operations Revolution',
+export const metadata = {
+  
+  title: 'January 2026 Autonomous Enterprise Operations Revolution',
     description: 'Revolutionary breakthrough in autonomous enterprise operations with AI-driven decision making, self-healing infrastructure, and predictive analytics.',
     type: 'article',
     publishedTime: '2026-01-15T00:00:00Z',
     authors: ['Zion Tech Group'],
-  },
+  
+};,
 };
 
 export default function January2026AutonomousEnterpriseOperationsRevolution() {
   return (
     <div>/* content */}
-  return (
     <div>
-      <div> </div><div> </div></div>
-    <div className="text-left"> </div><div className="text-left"> </div><div className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
-        {/* Header */}</div></div>
-        <div className="text-left"> </div><span className="text-left">>
+      <div> </div><div> </div>
+      <div className="text-left"> </div><div className="text-left"> </div><div className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
+        {/* Header */}</div>
+      <div className="text-left"> </div><span className="text-left">>
             Featured Article
           </div>
           <h1 className="text-left">January 2026 Autonomous Enterprise Operations Revolution
@@ -108,14 +105,11 @@ export default function January2026AutonomousEnterpriseOperationsRevolution() {
               </p></p>
               <div className="text-left"> </div><div className="text-left">60%</div>
                   <div className="text-left">reduction in operational downtime</div>
-                </div>
-                <div className="text-left">45%</div>
+      <div className="text-left">45%</div>
                   <div className="text-left">decrease in operational costs</div>
-                </div>
-                <div className="text-left">80%</div>
+      <div className="text-left">80%</div>
                   <div className="text-left">faster incident resolution</div>
-                </div>
-                <div className="text-left">95%</div>
+      <div className="text-left">95%</div>
                   <div className="text-left">improvement in resource utilization</div>
                 </div>
             </section>

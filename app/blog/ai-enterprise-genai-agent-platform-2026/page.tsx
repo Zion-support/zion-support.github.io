@@ -1,10 +1,12 @@
 import ArrowRight from 'next/link';
 
 export const metadata = {
+  
   title: 'AI Enterprise GenAI Agent Platform 2026 | Zion Tech Group',
   description:
     'Blueprint to ship a reliable, governed, and cost‑efficient enterprise GenAI agent platform in 2026—routing, memory, tools, observability, and guardrails.',
-};
+
+};;
 
 export default function AIEnterpriseGenAIAgentPlatform2026Page() {
   return (

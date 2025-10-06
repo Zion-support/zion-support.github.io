@@ -1,11 +1,8 @@
 import ArrowRight from 'next/link';
 
 export const metadata = {
-  title: 'AI 2026 Neural Superintelligence: Enterprise Guide | Zion Tech Group',
-  description:
-    'Explore neural superintelligence architectures delivering 1000x performance and 99.99% reliability for mission‑critical enterprise workloads.',
-  openGraph: {
-    title: 'AI 2026 Neural Superintelligence: Enterprise Guide',
+  
+  title: 'AI 2026 Neural Superintelligence: Enterprise Guide',
     description:
       'Architectures, guardrails, and rollout patterns to safely leverage neural superintelligence in the enterprise.',
     type: 'article',
@@ -16,7 +13,8 @@ export const metadata = {
         width: 1200,
         height: 630,
         alt: 'AI 2026 Neural Superintelligence',
-      },
+      
+};,
     ],
   },
 };

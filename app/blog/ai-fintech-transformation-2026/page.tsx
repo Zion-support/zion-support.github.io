@@ -1,28 +1,25 @@
 import React from 'react';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {/* content */}
+export const metadata = {
+  
   title: 'AI FinTech Transformation 2026: Complete Digital Banking Revolution',
-  description: 'Transform your financial services with AI-powered FinTech solutions. Achieve 95% automation, $5M+ savings, and digital banking revolution.',
-  keywords: 'AI FinTech, digital banking, financial automation, AI finance, fintech transformation, banking AI',
-  openGraph: {
-    title: 'AI FinTech Transformation 2026: Complete Digital Banking Revolution',
     description: 'Transform your financial services with AI-powered FinTech solutions. Achieve 95% automation, $5M+ savings, and digital banking revolution.',
     type: 'article',
     publishedTime: '2026-01-20T10:00:00Z',
     authors: ['Zion Tech Group'],
-  },
+  
+};,
 };
 
 export default function AIFinTechTransformation2026() {
   return (
     <div>/* content */}
-  return (
     <div>
-      <div> </div><div> </div></div>
-    <div className="text-left">{/* Header */}</div></div>
-        <div className="text-left"> </div><span className="text-left"> </span><div className="text-left"> </div><div className="text-left">{/* Header */}</div></div>
-        <div className="text-left"> </div><div className="text-left"> </div><span className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
+      <div> </div><div> </div>
+      <div className="text-left">{/* Header */}</div>
+      <div className="text-left"> </div><span className="text-left"> </span><div className="text-left"> </div><div className="text-left">{/* Header */}</div>
+      <div className="text-left"> </div><div className="text-left"> </div><span className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
               NEW 2026
             </span></span>
             <span className="text-left">22 min read>
@@ -117,18 +114,18 @@ export default function AIFinTechTransformation2026() {
             <pre className="text-left"> </p><h3 className="text-left">Digital Banking Architecture</h3>"
             <div className="text-left"> </div><pre className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
 {`// AI Digital Banking Platform
-const digitalBankingAI = {/* content */}
-  customerService: {/* content */}
+const digitalBankingAI = 
+  customerService: 
     chatbot: 'AI-powered 24/7 support',
     voiceAssistant: 'Natural language processing',
     personalization: 'Behavioral analysis'
   },
-  security: {/* content */}
+  security: 
     fraudDetection: 'Real-time ML algorithms',
     biometricAuth: 'Face, voice, fingerprint',
     riskAssessment: 'Predictive modeling'
   },
-  operations: {/* content */}
+  operations: 
     loanProcessing: 'Automated underwriting',
     investmentAdvice: 'Robo-advisory services',
     compliance: 'Automated reporting'
@@ -265,20 +262,20 @@ origin/cursor/fix-errors-and-merge-to-main-cc0a
             <pre className="text-left"> </p><h3 className="text-left">AI Risk Assessment Model</h3>"
             <div className="text-left"> </div><pre className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
 {`// AI Risk Management System
-const riskAssessment = {/* content */}
-  fraudDetection: {/* content */}
+const riskAssessment = 
+  fraudDetection: 
     algorithm: 'Deep Learning Neural Networks',
       accuracy: '99.7%',
       responseTime: '</pre>< 100ms',
       falsePositives: '< 0.1%'
     },
-  creditRisk: {/* content */}
+  creditRisk: 
     model: 'Ensemble ML Models',
     features: ['Payment History', 'Income Stability', 'Debt Ratio'],
     accuracy: '94%',
     processingTime: 'Real-time'
   },
-  marketRisk: {/* content */}
+  marketRisk: 
     approach: 'Monte Carlo Simulation',
       timeHorizon: '1-30 days',
       confidence: '95-99%',
@@ -325,11 +322,9 @@ const riskAssessment = {/* content */}
             <h3 className="text-left">Customer Experience Metrics</h3>
             <div className="text-left"> </div><div className="text-left">98%</div>
                 <div className="text-left">Customer Satisfaction</div>
-              </div>
-              <div className="text-left">85%</div>
+      <div className="text-left">85%</div>
                 <div className="text-left">Reduction in Wait Times</div>
-              </div>
-              <div className="text-left">75%</div>
+      <div className="text-left">75%</div>
                 <div className="text-left">Increase in Engagement</div>
               </div>
           </div>

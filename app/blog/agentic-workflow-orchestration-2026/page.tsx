@@ -1,22 +1,17 @@
 import ArrowRight from 'next/link';
 
 export const metadata = {
-  title: 'Agentic Workflow Orchestration 2026: Reliable AI Workflows',
+  title: 'Agentic Workflow Orchestration 2026',
   description:
-    'Design multi-step agentic workflows with guardrails, reviews, and observability for measurable ROI.',
-  openGraph: {
-    title: 'Agentic Workflow Orchestration 2026',
-    description:
-      'Guardrails, approvals, and tracing to ship reliable multi-agent workflows.',
-    url: 'https://ziontechgroup.com/blog/agentic-workflow-orchestration-2026',
-    images: [
-      {
-        url: '/og/agentic-workflow-orchestration-2026.jpg',
-        width: 1200,
-        height: 630,
-      },
-    ],
-  },
+    'Guardrails, approvals, and tracing to ship reliable multi-agent workflows.',
+  url: 'https://ziontechgroup.com/blog/agentic-workflow-orchestration-2026',
+  images: [
+    {
+      url: '/og/agentic-workflow-orchestration-2026.jpg',
+      width: 1200,
+      height: 630,
+    },
+  ],
 };
 
 export default function Page() {

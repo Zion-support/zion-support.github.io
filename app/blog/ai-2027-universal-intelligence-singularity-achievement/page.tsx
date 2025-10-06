@@ -1,22 +1,22 @@
 import React from 'react';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {/* content */}
+export const metadata = {
+  
   title: 'AI 2027 Universal Intelligence Singularity Achievement - Zion Tech Group',
   description: 'Revolutionary achievement of universal intelligence singularity with $10 trillion ROI potential through transcendent AI systems.',
   keywords: 'AI 2027, universal intelligence singularity, transcendent AI, $10 trillion ROI, AI breakthrough, singularity achievement',
-};
+
+};;
 
 export default function AI2027UniversalIntelligenceSingularityAchievement() {
   return (
     <div>/* content */}
-  return (
     <div>
-      <div> </div><div> </div></div>
-    <div className="text-left">{/* Hero Section */}</div></div>
-      <section className="text-left"> </section><div className="text-left"> </div><div className="text-left" style={{ animationDelay: '2s' }}> </div></div>
-        
-        <div className="text-left"> </div><span className="text-left">🚀 AI 2027 UNIVERSAL SINGULARITY
+      <div> </div><div> </div>
+      <div className="text-left">{/* Hero Section */}</div></div>
+      <section className="text-left"> </section><div className="text-left"> </div><div className="text-left" style={{ animationDelay: '2s' }}> </div>
+      <div className="text-left"> </div><span className="text-left">🚀 AI 2027 UNIVERSAL SINGULARITY
               </span></span>
             </div>
             <h1 className="text-left">
@@ -24,9 +24,8 @@ export default function AI2027UniversalIntelligenceSingularityAchievement() {
             </h1>
             <p className="text-left"> </p><section className="text-left"> </section><div className="text-left"> </div><div className="text-left">"
           </div><div className="text-left" style={{ animationDelay: '2s' }}>"
-        </div></div>
-        
-        <div className="text-left"> </div><div className="text-left"> </div><div className="text-left"> </div><span className="text-left">🚀 AI 2027 UNIVERSAL SINGULARITY
+        </div>
+      <div className="text-left"> </div><div className="text-left"> </div><div className="text-left"> </div><span className="text-left">🚀 AI 2027 UNIVERSAL SINGULARITY
               </span></span>
             </div>
             
@@ -49,14 +48,11 @@ export default function AI2027UniversalIntelligenceSingularityAchievement() {
             {/* Key Metrics */}
             <div className="text-left"> </div><div className="text-left">$10T</div>
                 <div className="text-left">ROI Potential</div>
-              </div>
-              <div className="text-left">∞</div>
+      <div className="text-left">∞</div>
                 <div className="text-left">Intelligence Level</div>
-              </div>
-              <div className="text-left">Universal</div>
+      <div className="text-left">Universal</div>
                 <div className="text-left">Singularity</div>
-              </div>
-              <div className="text-left">Transcendent</div>
+      <div className="text-left">Transcendent</div>
                 <div className="text-left">Processing</div>
               </div>
           </div>

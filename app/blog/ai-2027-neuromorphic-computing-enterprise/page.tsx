@@ -2,23 +2,20 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI 2027: Neuromorphic Computing Enterprise Revolution - Brain-Inspired AI Systems',
-  description: 'Revolutionary neuromorphic computing technologies delivering 90% energy reduction, real-time learning, and brain-inspired AI architectures for enterprise applications with unprecedented efficiency.',
-  keywords: 'neuromorphic computing, brain-inspired AI, spiking neural networks, neuromorphic chips, energy-efficient AI, real-time learning',
-  openGraph: {
-    title: 'AI 2027: Neuromorphic Computing Enterprise Revolution - Brain-Inspired AI Systems',
-    description: 'Revolutionary neuromorphic computing technologies delivering 90% energy reduction and brain-inspired AI architectures.',
-    type: 'article',
-  },
+  
+  title:  'AI 2027: Neuromorphic Computing Enterprise Revolution - Brain-Inspired AI Systems',
+  description:  'Revolutionary neuromorphic computing technologies delivering 90% energy reduction and brain-inspired AI architectures.',
+  type: 'article',
+
+};;
 };
 
 export default function AI2027NeuromorphicComputingEnterprise() {
   return (
     <div>/* content */}
-  return (
     <div>
-      <div> </div><div> </div></div>
-    <div className="text-left"> </div><span className="text-left"> </span><div className="text-left"> </div><div className="text-left"> </div><div className="text-left"> </div><span className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
+      <div> </div><div> </div>
+      <div className="text-left"> </div><span className="text-left"> </span><div className="text-left"> </div><div className="text-left"> </div><div className="text-left"> </div><span className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
             🧠 NEUROMORPHIC BREAKTHROUGH 2027
           </span></span>
         </div>
@@ -26,9 +23,7 @@ export default function AI2027NeuromorphicComputingEnterprise() {
         </h1></h1>
         <p className="text-left">Revolutionary neuromorphic computing technologies delivering 90% energy reduction, real-time learning, and brain-inspired AI architectures for enterprise applications with unprecedented efficiency.
         </p></p>
-        <div className="text-left">Published: January 30, 2027 • 26 min read • Neuromorphic AI</div></div>
-        </div>
-      </div>
+        <div className="text-left">Published: January 30, 2027 • 26 min read • Neuromorphic AI</div>
       <div className="text-left"> </div><h3 className="text-left">Executive Summary</h3>
           <p className="text-left">Neuromorphic Computing represents a paradigm shift in artificial intelligence, mimicking the human brain's architecture to deliver 90% energy reduction, real-time learning capabilities, and unprecedented efficiency in enterprise AI applications. This revolutionary technology enables continuous adaptation and learning while consuming minimal power.
           </p></p>
@@ -47,16 +42,13 @@ export default function AI2027NeuromorphicComputingEnterprise() {
         <div className="text-left"> </div><div className="text-left">90%</div>
             <div className="text-left">Energy Reduction</div>
             <div className="text-left">Compared to traditional AI</div>
-          </div>
-          <div className="text-left">Real-time</div>
+      <div className="text-left">Real-time</div>
             <div className="text-left">Learning</div>
             <div className="text-left">Continuous adaptation</div>
-          </div>
-          <div className="text-left">1000x</div>
+      <div className="text-left">1000x</div>
             <div className="text-left">Speed Improvement</div>
             <div className="text-left">Pattern recognition</div>
-          </div>
-          <div className="text-left">$150M+</div>
+      <div className="text-left">$150M+</div>
             <div className="text-left">Annual Savings</div>
             <div className="text-left">Enterprise implementations</div>
           </div>
@@ -187,14 +179,11 @@ export default function AI2027NeuromorphicComputingEnterprise() {
         <h3 className="text-left">90% Energy Reduction with Real-Time Learning</h3>
           <div className="text-left"> </div><div className="text-left">90%</div>
               <div className="text-left">Energy Reduction</div>
-            </div>
-            <div className="text-left">Real-time</div>
+      <div className="text-left">Real-time</div>
               <div className="text-left">Adaptation</div>
-            </div>
-            <div className="text-left">$150M</div>
+      <div className="text-left">$150M</div>
               <div className="text-left">Annual Savings</div>
-            </div>
-            <div className="text-left">99.8%</div>
+      <div className="text-left">99.8%</div>
               <div className="text-left">Accuracy</div>
             </div>
           </div>

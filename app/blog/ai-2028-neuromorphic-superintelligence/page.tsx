@@ -2,10 +2,12 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
+  
   title: 'AI 2028: Neuromorphic Superintelligence Breakthrough | Zion Tech Group',
   description: 'Revolutionary neuromorphic superintelligence achieving human-level cognitive abilities with 1,000x energy efficiency and unlimited scalability.',
   keywords: 'AI 2028, neuromorphic computing, superintelligence, cognitive AI, energy efficiency, brain-inspired computing',
-  authors: [{ name: 'Zion Tech Group' }],
+  authors: [{ name: 'Zion Tech Group' 
+};],
   openGraph: {
     title: 'AI 2028: Neuromorphic Superintelligence Breakthrough',
     description: 'Revolutionary neuromorphic superintelligence with human-level cognitive abilities and 1,000x energy efficiency.',
@@ -14,7 +16,7 @@ export const metadata = {
       locale: 'en_US',
       type: 'article'
     },
-  twitter: {/* content */}
+  twitter: 
     card: 'summary_large_image',
     title: 'AI 2028: Neuromorphic Superintelligence Breakthrough',
     description: 'Revolutionary neuromorphic superintelligence with human-level cognitive abilities and 1,000x energy efficiency.',
@@ -24,10 +26,9 @@ export const metadata = {
 export default function AI2028NeuromorphicSuperintelligence() {
   return (
     <div>/* content */}
-  return (
     <div>
-      <div> </div><div> </div></div>
-    <div className="text-left"> </div><h1 className="text-left">
+      <div> </div><div> </div>
+      <div className="text-left"> </div><h1 className="text-left">
     <div className="text-left"> </div><div className="text-left"> </div><h1 className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
           🧠 AI 2028: Neuromorphic Superintelligence Breakthrough
         </h1></h1>

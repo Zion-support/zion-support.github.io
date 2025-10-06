@@ -5,22 +5,22 @@ import Shield from 'lucide-react/dist/esm/icons/shield';
 import Cpu from 'lucide-react/dist/esm/icons/cpu';
 
 export const metadata = {
-  title: 'Edge Private Insights v2 (2026): Scoped IDs + DP + On-device | Zion',
-  description:
-    'Build zero‑PII analytics at the edge with scoped IDs, differential privacy noise, and on‑device aggregation under 100ms.',
-  openGraph: {
-    title: 'Edge Private Insights v2 (2026)',
+  
+  title: 'Edge Private Insights v2 (2026)',
     description:
       'Zero‑PII analytics with scoped IDs, DP, and on‑device aggregation.',
     type: 'article',
     url: 'https://ziontechgroup.com/blog/edge-private-insights-v2-2026',
-  },
+  
+};,
   twitter: {
-    card: 'summary_large_image',
-    title: 'Edge Private Insights v2 (2026)',
-    description:
-      'Zero‑PII analytics with scoped IDs, DP, and on‑device aggregation.',
+    card:   'summary_large_image',,
+    title:   'Edge Private Insights v2 (2026)',,
+    description:  
+      'Zero‑PII analytics with scoped IDs, DP, and on‑device aggregation.',,
   },
+};
+};
 };
 
 export default function Page() {

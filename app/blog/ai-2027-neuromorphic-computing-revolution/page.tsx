@@ -1,29 +1,26 @@
 import React from 'react';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {/* content */}
+export const metadata = {
+  
   title: 'AI 2027: Neuromorphic Computing Revolution - The Future of Brain-Inspired AI',
-  description: 'Explore the revolutionary neuromorphic computing breakthrough of 2027 that mimics human brain architecture for unprecedented AI performance. Discover how brain-inspired chips are transforming enterprise operations.',
-  keywords: ['AI 2027', 'neuromorphic computing', 'brain-inspired AI', 'spiking neural networks', 'cognitive computing', 'enterprise AI', 'next-generation processors'],
-  openGraph: {
-    title: 'AI 2027: Neuromorphic Computing Revolution - The Future of Brain-Inspired AI',
     description: 'Explore the revolutionary neuromorphic computing breakthrough of 2027 that mimics human brain architecture.',
     type: 'article',
     publishedTime: '2027-01-20T00:00:00.000Z',
     authors: ['Zion Tech Group'],
-  },
+  
+};,
 };
 
 export default function AI2027NeuromorphicComputingRevolution() {
   return (
     <div>/* content */}
-  return (
     <div>
-      <div> </div><div> </div></div>
-    <div className="text-left">{/* Hero Section */}</div></div>
+      <div> </div><div> </div>
+      <div className="text-left">{/* Hero Section */}</div></div>
         <h3 className="text-left">
-    <div className="text-left"> </div><div className="text-left">{/* Hero Section */}</div></div>
-        <div className="text-left"> </div><h1 className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
+    <div className="text-left"> </div><div className="text-left">{/* Hero Section */}</div>
+      <div className="text-left"> </div><h1 className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
             AI 2027: Neuromorphic Computing Revolution
           </h1></h1>
           <p className="text-left">The breakthrough in brain-inspired computing that's redefining the boundaries of artificial intelligence

@@ -2,21 +2,19 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
+  
   title: 'Sustainable AI: Green Computing Solutions for Enterprise 2025',
-  description: 'Discover how sustainable AI and green computing solutions are reducing carbon footprints by 85% while improving performance. Achieve net-zero operations with AI systems that deliver $30M+ in cost savings and environmental impact.',
-  keywords: 'sustainable AI, green computing, carbon neutral AI, eco-friendly technology, energy efficient AI, green data centers, sustainable enterprise, carbon footprint reduction',
-  openGraph: {
-    title: 'Sustainable AI: Green Computing Solutions for Enterprise 2025',
     description: 'Reduce carbon footprints by 85% with sustainable AI and green computing solutions that deliver $30M+ in cost savings.',
     type: 'article',
     url: 'https://ziontechgroup.com/blog/sustainable-ai-green-computing-2025',
     images: [
-      {/* content */}
+      
         url: '/og-sustainable-ai-2025.jpg',
         width: 1200,
         height: 630,
         alt: 'Sustainable AI Green Computing Solutions',
-      },
+      
+};,
     ],
   },
 };
@@ -24,10 +22,9 @@ export const metadata = {
 export default function SustainableAIGreenComputing() {
   return (
     <div>/* content */}
-  return (
     <div>
-      <div> </div><div> </div></div>
-    <div className="text-left"> </div><Link href="/blog" className="text-left">
+      <div> </div><div> </div>
+      <div className="text-left"> </div><Link href="/blog" className="text-left">
           ← Back to Blog
         </Link>
         <span className="text-left"> </span><div className="text-left"> </div><div className="text-left"> </div><Link href="/blog" className="text-left">← Back to Blog
@@ -67,12 +64,10 @@ export default function SustainableAIGreenComputing() {
           <div className="text-left"> </div><div className="text-left">3%</div>
               <div className="text-left">Global Electricity Use</div>
               <div className="text-left">From Data Centers</div>
-            </div>
-            <div className="text-left">626k</div>
+      <div className="text-left">626k</div>
               <div className="text-left">Tons of CO₂</div>
               <div className="text-left">Per Large Model Training</div>
-            </div>
-            <div className="text-left">$50M+</div>
+      <div className="text-left">$50M+</div>
               <div className="text-left">Annual Energy Costs</div>
               <div className="text-left">Per Enterprise</div>
             </div>
@@ -96,8 +91,7 @@ export default function SustainableAIGreenComputing() {
             </p></p>
             <div className="text-left"> </div><div className="text-left">60%</div>
                 <div className="text-left">Energy Reduction</div>
-              </div>
-              <div className="text-left">Same</div>
+      <div className="text-left">Same</div>
                 <div className="text-left">Performance Level</div>
               </div>
             </div>
@@ -111,8 +105,7 @@ export default function SustainableAIGreenComputing() {
             </p></p>
             <div className="text-left"> </div><div className="text-left">95%</div>
                 <div className="text-left">Renewable Energy Use</div>
-              </div>
-              <div className="text-left">40%</div>
+      <div className="text-left">40%</div>
                 <div className="text-left">Cost Reduction</div>
               </div>
             </div>
@@ -126,8 +119,7 @@ export default function SustainableAIGreenComputing() {
             </p></p>
             <div className="text-left"> </div><div className="text-left">70%</div>
                 <div className="text-left">Waste Elimination</div>
-              </div>
-              <div className="text-left">100%</div>
+      <div className="text-left">100%</div>
                 <div className="text-left">Resource Optimization</div>
               </div>
             </div>
@@ -255,18 +247,15 @@ export default function SustainableAIGreenComputing() {
               <div> </div><h4 className="text-left">Sustainability Assessment</h4>
                 <p className="text-left">Comprehensive analysis of current energy consumption and carbon footprint</p>
               </div>
-            </div>
-            <div className="text-left">2</div>
+      <div className="text-left">2</div>
               <div> </div><h4 className="text-left">Green Architecture Design</h4>
                 <p className="text-left">Custom sustainable AI architecture optimized for your specific workloads</p>
               </div>
-            </div>
-            <div className="text-left">3</div>
+      <div className="text-left">3</div>
               <div> </div><h4 className="text-left">Phased Migration</h4>
                 <p className="text-left">Gradual transition to sustainable systems with zero disruption to operations</p>
               </div>
-            </div>
-            <div className="text-left">4</div>
+      <div className="text-left">4</div>
               <div> </div><h4 className="text-left">Continuous Optimization</h4>
                 <p className="text-left">Ongoing monitoring and improvement to maximize sustainability and performance</p>
               </div>

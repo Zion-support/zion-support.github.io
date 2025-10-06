@@ -1,25 +1,22 @@
 import React from 'react';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {/* content */}
-  title: 'Autonomous AI Systems: The Future of Enterprise Operations | Zion Tech Group',
-  description: 'Discover how autonomous AI systems are revolutionizing enterprise operations, from self-healing infrastructure to intelligent decision-making agents.',
-  keywords: 'autonomous AI, enterprise automation, AI agents, self-healing systems, intelligent operations',
-  openGraph: {
-    title: 'Autonomous AI Systems: The Future of Enterprise Operations',
+export const metadata = {
+  
+  title: 'Autonomous AI Systems: The Future of Enterprise Operations',
       description: 'Learn how autonomous AI systems are transforming enterprise operations and decision-making.',
       type: 'article',
       publishedTime: '2025-01-30T00:00:00.000Z'
-    },
+    
+};,
 };
 
 export default function AutonomousAISystems2026() {
   return (
     <div>/* content */}
-  return (
     <div>
-      <div> </div><div> </div></div>
-    <div className="text-left"> </div><article className="text-left"> </a><header className="text-left">
+      <div> </div><div> </div>
+      <div className="text-left"> </div><article className="text-left"> </a><header className="text-left">
             <div className="text-left"> </div><div className="text-left"> </div><div className="text-left"> </div><article className="text-left"> </article><header className="text-left"> </header><div className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
               Autonomous AI</div></div>
             </div>
@@ -45,9 +42,7 @@ export default function AutonomousAISystems2026() {
                   <div> </div><h3 className="text-left">Intelligent Optimization</h3>
                     <p className="text-left">Continuously optimizes performance and resource usage</p>
                   </div>
-                </div>
-              </div>
-              <div className="text-left"> </div><span className="text-left">🔮>
+      <div className="text-left"> </div><span className="text-left">🔮>
                   <div> </div><h3 className="text-left">Predictive Analytics</h3>
                     <p className="text-left">Anticipates problems before they occur</p>
                   </div>

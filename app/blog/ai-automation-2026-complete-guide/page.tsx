@@ -2,28 +2,25 @@ import React from 'react';
 import Link from 'next/link';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {/* content */}
+export const metadata = {
+  
   title: 'AI Automation 2026: Complete Guide to Enterprise Process Automation',
-  description: 'Master AI automation in 2026 with our comprehensive guide covering autonomous agents, intelligent workflows, and enterprise transformation strategies.',
-  keywords: 'AI automation, enterprise automation, autonomous agents, intelligent workflows, business process automation',
-  openGraph: {
-    title: 'AI Automation 2026: Complete Guide to Enterprise Process Automation',
     description: 'Master AI automation in 2026 with our comprehensive guide covering autonomous agents, intelligent workflows, and enterprise transformation strategies.',
     type: 'article',
     publishedTime: '2025-01-30T00:00:00Z',
     authors: ['Zion Tech Group'],
-  },
+  
+};,
 };
 
 export default function AIAutomation2026CompleteGuide() {
   return (
     <div>/* content */}
-  return (
     <div>
-      <div> </div><div> </div></div>
-    <div className="text-left">{/* Hero Section */}</div></div>
-        <div className="text-left"> </div><div className="text-left"> </div><div className="text-left">{/* Hero Section */}</div></div>
-        <div className="text-left"> </div><div className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
+      <div> </div><div> </div>
+      <div className="text-left">{/* Hero Section */}</div>
+      <div className="text-left"> </div><div className="text-left"> </div><div className="text-left">{/* Hero Section */}</div>
+      <div className="text-left"> </div><div className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
             🤖 AI Automation Guide</div></div>
           </div>
           <h1 className="text-left">AI Automation 2026
@@ -180,8 +177,7 @@ export default function AIAutomation2026CompleteGuide() {
                       <span className="text-left">Automation Scoring<
                       <span className="text-left">ROI Analysis>
                     </div>
-                </div>
-              <div className="text-left"> </div><div className="text-left">2</div>
+      <div className="text-left"> </div><div className="text-left">2</div>
                   <div> </div><h3 className="text-left">Technology Selection & Architecture</h3>
                     <p className="text-left"> </p><h3 className="text-left">Technology Selection & Architecture</h3>"
                     <p className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
@@ -192,8 +188,7 @@ export default function AIAutomation2026CompleteGuide() {
                       <span className="text-left">Architecture Design<
                       <span className="text-left">Integration Planning>
                     </div>
-                </div>
-              <div className="text-left"> </div><div className="text-left">3</div>
+      <div className="text-left"> </div><div className="text-left">3</div>
                   <div> </div><h3 className="text-left">Pilot Program Development</h3>
                     <p className="text-left"> </p><h3 className="text-left">Pilot Program Development</h3>"
                     <p className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
@@ -204,8 +199,7 @@ export default function AIAutomation2026CompleteGuide() {
                       <span className="text-left">Development<
                       <span className="text-left">Testing>
                     </div>
-                </div>
-              <div className="text-left"> </div><div className="text-left">4</div>
+      <div className="text-left"> </div><div className="text-left">4</div>
                   <div> </div><h3 className="text-left">Deployment & Integration</h3>
                     <p className="text-left"> </p><h3 className="text-left">Deployment & Integration</h3>"
                     <p className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
@@ -216,8 +210,7 @@ export default function AIAutomation2026CompleteGuide() {
                       <span className="text-left">Integration<
                       <span className="text-left">Rollout>
                     </div>
-                </div>
-              <div className="text-left"> </div><div className="text-left">5</div>
+      <div className="text-left"> </div><div className="text-left">5</div>
                   <div> </div><h3 className="text-left">Monitoring & Optimization</h3>
                     <p className="text-left"> </p><h3 className="text-left">Monitoring & Optimization</h3>"
                     <p className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
@@ -228,8 +221,7 @@ export default function AIAutomation2026CompleteGuide() {
                       <span className="text-left">Optimization<
                       <span className="text-left">Continuous Improvement>
                     </div>
-                </div>
-              <div className="text-left"> </div><div className="text-left">6</div>
+      <div className="text-left"> </div><div className="text-left">6</div>
                   <div> </div><h3 className="text-left">Scale & Expand</h3>
                     <p className="text-left"> </p><h3 className="text-left">Scale & Expand</h3>"
                     <p className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a

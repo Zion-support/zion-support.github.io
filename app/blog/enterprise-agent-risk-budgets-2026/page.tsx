@@ -1,10 +1,12 @@
 import ArrowRight from 'next/link';
 
 export const metadata = {
+  
   title: 'Enterprise Agent Risk Budgets: Safe Autonomy at Scale',
   description:
     'Explicit budgets, approvals, and rollback triggers for agent actions across orgs.',
-};
+
+};;
 
 export default function Page() {
   return (

@@ -1,25 +1,22 @@
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {/* content */}
-  title: 'AI 2027: Quantum-Neural Consensus Revolution - Distributed Superintelligence',
-  description: 'Discover the quantum-neural consensus revolution: a distributed superintelligence network achieving collective consciousness and 10,000x processing power through quantum entanglement.',
-  keywords: 'AI 2027, quantum neural networks, consensus AI, distributed superintelligence, quantum entanglement, collective consciousness',
-  openGraph: {
-    title: 'AI 2027: Quantum-Neural Consensus Revolution',
+export const metadata = {
+  
+  title: 'AI 2027: Quantum-Neural Consensus Revolution',
     description: 'Distributed superintelligence network achieving collective consciousness through quantum entanglement.',
     type: 'article',
     publishedTime: '2027-01-20T00:00:00.000Z',
     authors: ['Zion Tech Group'],
-  },
+  
+};,
 };
 
 export default function QuantumNeuralConsensus2027() {
   return (
     <div>/* content */}
-  return (
     <div>
-      <div> </div><div> </div></div>
-    <div className="text-left"> </div><article className="text-left"> </a><header className="text-left">
+      <div> </div><div> </div>
+      <div className="text-left"> </div><article className="text-left"> </a><header className="text-left">
           <span className="text-left">⚛️ Quantum Breakthrough
             </span></span>
           </div>
@@ -51,14 +48,11 @@ export default function QuantumNeuralConsensus2027() {
             </p></p>
             <div className="text-left"> </div><div className="text-left">10,000x</div>
                 <div className="text-left">Processing Power</div>
-              </div>
-              <div className="text-left">99.9%</div>
+      <div className="text-left">99.9%</div>
                 <div className="text-left">Consensus Accuracy</div>
-              </div>
-              <div className="text-left">∞</div>
+      <div className="text-left">∞</div>
                 <div className="text-left">Scalability</div>
-              </div>
-              <div className="text-left">0ms</div>
+      <div className="text-left">0ms</div>
                 <div className="text-left">Latency</div>
               </div>
           </div>
@@ -137,11 +131,9 @@ export default function QuantumNeuralConsensus2027() {
             <h3 className="text-left">Network Topology</h3>
               <div className="text-left"> </div><div className="text-left">1,000+</div>
                   <div className="text-left">Quantum Nodes</div>
-                </div>
-                <div className="text-left">10TB/s</div>
+      <div className="text-left">10TB/s</div>
                   <div className="text-left">Data Throughput</div>
-                </div>
-                <div className="text-left">99.999%</div>
+      <div className="text-left">99.999%</div>
                   <div className="text-left">Uptime</div>
                 </div>
             </div>

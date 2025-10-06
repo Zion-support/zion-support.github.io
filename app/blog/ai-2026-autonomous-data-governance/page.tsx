@@ -1,15 +1,13 @@
 import ArrowRight from 'next/link';
 
 export const metadata = {
-  title: 'AI 2026 Autonomous Data Governance | Zion Tech Group',
-  description:
-    'Blueprint for autonomous data governance: policies-as-code, lineage, consent, and continuous compliance with measurable controls.',
-  openGraph: {
-    title: 'AI 2026 Autonomous Data Governance',
-    description:
+  
+  title:  'AI 2026 Autonomous Data Governance',
+  description: 
       'Policies-as-code, evaluation gates, and end-to-end lineage to automate compliance at scale.',
-    type: 'article',
-  },
+  type: 'article',
+
+};;
 };
 
 export default function AutonomousDataGovernance2026Page() {

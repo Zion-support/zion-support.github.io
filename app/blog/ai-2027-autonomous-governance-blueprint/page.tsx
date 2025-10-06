@@ -1,11 +1,8 @@
 import ArrowRight from 'next/link';
 
 export const metadata = {
-  title: 'AI 2027 Autonomous Governance Blueprint | Zion Tech Group',
-  description:
-    'Policy → controls → telemetry → review. Ship autonomous agents safely with measurable guardrails and auditability.',
-  openGraph: {
-    title: 'AI 2027 Autonomous Governance Blueprint',
+  
+  title: 'AI 2027 Autonomous Governance Blueprint',
     description:
       'Design and operate autonomous systems with policy guardrails, approvals, and observability.',
     type: 'article',
@@ -16,7 +13,8 @@ export const metadata = {
         width: 1200,
         height: 630,
         alt: 'Autonomous Governance 2027',
-      },
+      
+};,
     ],
   },
 };

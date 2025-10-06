@@ -1,17 +1,14 @@
 import ArrowRight from 'next/link';
 
 export const metadata = {
-  title:
-    'AI Governance Live Scorecards 2026: Prevent Regressions Before They Ship',
-  description:
-    'Implement CI policy tests and live scorecards for latency, cost, and correctness to stop regressions pre-release.',
-  openGraph: {
-    title: 'AI Governance Live Scorecards 2026',
+  
+  title: 'AI Governance Live Scorecards 2026',
     description:
       'CI policy tests + live scorecards for latency, cost, and quality. Prevent regressions before they ship.',
     type: 'article',
     publishedTime: '2026-01-30T00:00:00Z',
-  },
+  
+};,
 };
 
 export default function AIGovernanceLiveScorecards2026() {
