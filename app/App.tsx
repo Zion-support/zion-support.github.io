@@ -16,7 +16,7 @@ const ContactPage = lazy(() => import('./contact/page'));
 const EnterprisePage = lazy(() => import('./enterprise/page'));
 
 // Utils
-import performanceOptimizer from '../src/utils/performanceOptimizer';
+import { createPerformanceOptimizer } from '../utils/performanceOptimizer';
 
 // Styles
 import '../src/index.css';
@@ -25,8 +25,9 @@ function App() {
   useEffect(() => {
     // Initialize performance monitoring
     if (typeof window !== 'undefined') {
-      performanceOptimizer.preloadCriticalResources();
-      performanceOptimizer.lazyLoadImages();
+      const optimizer = createPerformanceOptimizer();
+      optimizer.preloadCriticalResources();
+      optimizer.lazyLoadImages();
     }
   }, []);
 

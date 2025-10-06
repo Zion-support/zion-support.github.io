@@ -2,11 +2,14 @@
  * Performance Optimizer Utilities
  */
 
+import React, { forwardRef, memo } from 'react';
+import type { ComponentType } from 'react';
+
 interface PerformanceMetrics {
   componentName: string;
   renderTime: number;
   timestamp: number;
-  memoryUsage?: number;
+  memoryUsage?: number | undefined;
   renderCount: number;
 }
 
@@ -189,7 +192,7 @@ export class PerformanceOptimizer {
   optimizeWithMemo<T extends React.ComponentType<any>>(Component: T): T {
     if (!this.config.enableMemoization) return Component;
     
-    return React.memo(Component) as T;
+    return React.memo(Component) as unknown as T;
   }
 
   /**
@@ -277,6 +280,46 @@ export class PerformanceOptimizer {
   destroy(): void {
     this.clearAllMetrics();
   }
+
+  /**
+   * Preload critical resources
+   */
+  preloadCriticalResources(): void {
+    if (typeof window === 'undefined') return;
+    
+    // Preload critical CSS
+    const criticalCSS = document.querySelector('link[rel="preload"][as="style"]');
+    if (criticalCSS) {
+      criticalCSS.setAttribute('rel', 'stylesheet');
+    }
+    
+    // Preload critical fonts
+    const fontLinks = document.querySelectorAll('link[rel="preload"][as="font"]');
+    fontLinks.forEach(link => {
+      link.setAttribute('rel', 'stylesheet');
+    });
+  }
+
+  /**
+   * Lazy load images
+   */
+  lazyLoadImages(): void {
+    if (typeof window === 'undefined') return;
+    
+    const images = document.querySelectorAll('img[data-src]');
+    const imageObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const img = entry.target as HTMLImageElement;
+          img.src = img.dataset['src'] || '';
+          img.removeAttribute('data-src');
+          imageObserver.unobserve(img);
+        }
+      });
+    });
+    
+    images.forEach(img => imageObserver.observe(img));
+  }
 }
 
 // Utility functions
@@ -285,20 +328,23 @@ export const createPerformanceOptimizer = (config?: OptimizationConfig): Perform
 };
 
 export const withPerformanceTracking = <P extends object>(
-  Component: React.ComponentType<P>,
+  Component: ComponentType<P>,
   componentName?: string
-): React.ComponentType<P> => {
+): ComponentType<P> => {
   const optimizer = createPerformanceOptimizer();
   const name = componentName || Component.displayName || Component.name || 'Unknown';
   
-  return React.forwardRef<any, P>((props, ref) => {
+  const WrappedComponent = forwardRef<any, P>((props, ref) => {
     React.useEffect(() => {
       optimizer.startRender(name);
       return () => optimizer.endRender(name);
     });
     
-    return React.createElement(Component, { ...props, ref });
+    return React.createElement(Component, { ...props, ref } as any);
   });
+  
+  WrappedComponent.displayName = `withPerformanceTracking(${name})`;
+  return WrappedComponent as unknown as ComponentType<P>;
 };
 
 export default PerformanceOptimizer;
