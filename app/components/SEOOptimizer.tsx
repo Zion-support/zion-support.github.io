@@ -2,7 +2,7 @@ import React, { type ReactNode } from 'react';
 import { Helmet } from 'react-helmet-async';
 
 interface SEOOptimizerProps {
-  children: ReactNode;
+  children?: ReactNode;
   title?: string;
   description?: string;
   keywords?: string;
@@ -33,18 +33,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       </Helmet>
       {children}
     </>
-const SEOOptimizer: React.FC = () => {
-  return (
-    <div className="bg-gradient-to-r from-blue-600 to-purple-700 text-white p-8 rounded-lg shadow-lg">
-      <div className="max-w-4xl mx-auto">
-        <h2 className="text-3xl font-bold mb-4">
-          SEO Optimizer
-        </h2>
-        <p className="text-lg mb-6">
-          This component is being restored. Please check back later for full functionality.
-        </p>
-      </div>
-    </div>
   );
 };
 

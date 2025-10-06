@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import { ArrowRight, Brain, CheckCircle, Cog, Target, TrendingUp, User, Users, Zap } from 'lucide-react';
 
-
 import { ArrowRight } from 'lucide-react';
 import { Brain } from 'lucide-react';
 import { Zap } from 'lucide-react';

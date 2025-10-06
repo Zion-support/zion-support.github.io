@@ -6,7 +6,7 @@ interface AnalyticsEvent {
   action: string;
   category: string;
   label?: string;
-  value?: number;
+  value?: number | undefined;
   custom_parameters?: Record<string, any>;
 }
 
@@ -14,7 +14,7 @@ class Analytics {
   private isEnabled: boolean;
 
   constructor() {
-    this.isEnabled = typeof window !== 'undefined' && process.env.NODE_ENV === 'production';
+    this.isEnabled = typeof window !== 'undefined' && process.env['NODE_ENV'] === 'production';
   }
 
   /**
@@ -47,7 +47,7 @@ class Analytics {
   /**
    * Track page view
    */
-  pageView(page: string, title?: string): void {
+  trackPageView(page: string, title?: string): void {
     this.track({
       action: 'page_view',
       category: 'navigation',
@@ -60,6 +60,13 @@ class Analytics {
   }
 
   /**
+   * Track page view (alias for compatibility)
+   */
+  pageView(page: string, title?: string): void {
+    this.trackPageView(page, title);
+  }
+
+  /**
    * Track user interaction
    */
   interaction(action: string, element: string, value?: number): void {
@@ -67,7 +74,11 @@ class Analytics {
       action,
       category: 'interaction',
       label: element,
-      value,
+<<<<<<< HEAD
+      value: value ?? undefined,
+=======
+      value: value || 0,
+>>>>>>> cursor/fix-errors-and-merge-to-main-e9bd
     });
   }
 

@@ -54,7 +54,7 @@ const ContactPage: React.FC = () => {
                   <textarea
                     rows={4}
                     className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    placeholder="Tell us about your AI transformation needs..."
+                    placeholder="Tell us about your AI transformation needs"
                   />
                 </div>
                 <button
@@ -65,46 +65,33 @@ const ContactPage: React.FC = () => {
                 </button>
               </form>
             </div>
-            
             <div className="space-y-6">
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <h3 className="text-xl font-semibold mb-4">Contact Information</h3>
-                <div className="space-y-4">
+                <div className="space-y-3">
                   <div>
-                    <h4 className="font-medium text-gray-900">Email</h4>
-                    <p className="text-gray-600">kleber@ziontechgroup.com</p>
-                  </div>
-                  <div>
-                    <h4 className="font-medium text-gray-900">Phone</h4>
+                    <p className="font-medium text-gray-900">Phone</p>
                     <p className="text-gray-600">+1 (302) 464-0950</p>
                   </div>
                   <div>
-                    <h4 className="font-medium text-gray-900">Address</h4>
+                    <p className="font-medium text-gray-900">Email</p>
+                    <p className="text-gray-600">kleber@ziontechgroup.com</p>
+                  </div>
+                  <div>
+                    <p className="font-medium text-gray-900">Address</p>
                     <p className="text-gray-600">
-                      Zion Tech Group<br />
                       364 E Main St STE 1008<br />
-                      Middletown, DE 19709<br />
-                      United States
+                      Middletown, DE 19709
                     </p>
                   </div>
                 </div>
               </div>
-              
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <h3 className="text-xl font-semibold mb-4">Business Hours</h3>
                 <div className="space-y-2">
-                  <div className="flex justify-between">
-                    <span className="text-gray-600">Monday - Friday</span>
-                    <span className="text-gray-900">9:00 AM - 6:00 PM EST</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-gray-600">Saturday</span>
-                    <span className="text-gray-900">10:00 AM - 4:00 PM EST</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-gray-600">Sunday</span>
-                    <span className="text-gray-900">Closed</span>
-                  </div>
+                  <p className="text-gray-600">Monday - Friday: 9:00 AM - 6:00 PM</p>
+                  <p className="text-gray-600">Saturday: 10:00 AM - 4:00 PM</p>
+                  <p className="text-gray-600">Sunday: Closed</p>
                 </div>
               </div>
             </div>

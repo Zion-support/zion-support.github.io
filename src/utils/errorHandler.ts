@@ -43,8 +43,12 @@ class ErrorHandler {
       this.errorQueue.shift();
     }
     //Log to console in development
-    if (process.env.NODE_ENV === 'development') {
+    if (process.env['NODE_ENV'] === 'development') {
+<<<<<<< HEAD
       //Error logged
+=======
+      console.error('Error logged:', errorReport);
+>>>>>>> cursor/fix-errors-and-merge-to-main-e9bd
     }
     //Send to external service in production
     if (process.env['NODE_ENV'] === 'production') {

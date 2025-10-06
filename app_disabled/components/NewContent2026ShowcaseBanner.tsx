@@ -1,9 +1,6 @@
 import Link from 'next/link';
 import { ArrowRight, TrendingUp, Users, Star } from 'lucide-react';
 
-
-
-
 export default function NewContent2026ShowcaseBanner() {
   return (
     <section className='py-16 bg-gradient-to-r from-purple-600 via-blue-600 to-teal-600 text-white relative overflow-hidden'>

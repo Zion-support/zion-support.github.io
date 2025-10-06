@@ -2,7 +2,6 @@ import Link from 'next/link';
 
 import { ArrowRight, Shield } from 'lucide-react';
 import React from 'react';
-import Link from 'next/link';
 
 import {Shield} from 'lucide-react';
 

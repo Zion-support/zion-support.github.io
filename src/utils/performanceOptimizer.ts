@@ -15,7 +15,7 @@ export default {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
             const img = entry.target as HTMLImageElement;
-            img.src = img.dataset.src || '';
+            img.src = img.dataset['src'] || '';
             img.classList.remove('lazy');
             imageObserver.unobserve(img);
           }
@@ -55,6 +55,39 @@ export default {
   optimizeBundle() {
     // Bundle optimization logic
     console.log('Bundle optimization completed');
+  },
+
+  measurePageLoad() {
+    if (typeof window === 'undefined' || !window.performance) {
+      return null;
+    }
+    
+    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+    if (navigation) {
+      return {
+        domContentLoaded: navigation.domContentLoadedEventEnd - navigation.fetchStart,
+        domInteractive: navigation.domInteractive - navigation.fetchStart,
+        totalLoadTime: navigation.loadEventEnd - navigation.fetchStart,
+      };
+    }
+    return null;
+  },
+
+  reportWebVitals(metrics: any) {
+    console.log('Web Vitals:', metrics);
+  },
+
+  monitorLongTasks(callback: (entries: PerformanceEntry[]) => void) {
+    if (typeof window === 'undefined' || !window.PerformanceObserver) {
+      return null;
+    }
+
+    const observer = new PerformanceObserver((list) => {
+      callback(list.getEntries());
+    });
+
+    observer.observe({ entryTypes: ['longtask'] });
+    return observer;
   },
 
   preloadCriticalResources() {

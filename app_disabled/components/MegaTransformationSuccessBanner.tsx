@@ -1,9 +1,6 @@
 import Link from 'next/link';
 import { ArrowRight, Award, DollarSign, TrendingUp, Users, Star } from 'lucide-react';
 
-
-
-
 export default function MegaTransformationSuccessBanner() {
   return (
     <section className='py-16 bg-gradient-to-br from-green-900 via-emerald-900 to-teal-900 text-white'>
