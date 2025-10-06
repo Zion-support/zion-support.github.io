@@ -22,10 +22,11 @@ export const seoOptimizer = {
     seoOptimizer.updateMeta('keywords', keywords);
   },
   
-  trackPageView: (page: string) => {
+  trackPageView: () => {
     // Basic analytics tracking
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('config', 'GA_MEASUREMENT_ID', {
+    if (typeof window !== 'undefined' && (window as unknown as { gtag?: unknown }).gtag) {
+      const gtag = (window as unknown as { gtag: (command: string, id: string, config: Record<string, string>) => void }).gtag;
+      gtag('config', 'GA_MEASUREMENT_ID', {
         page_title: document.title,
         page_location: window.location.href,
       });

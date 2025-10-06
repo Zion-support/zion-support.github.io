@@ -142,26 +142,34 @@ class PerformanceOptimizer {
     });
   }
 
-<<<<<<< HEAD
-  // Measure page load performance
-  measurePageLoad(): WebVitalsMetrics | null {
-=======
   // Add Web Vitals reporting method
-  reportWebVitals(metrics: any): void {
+  reportWebVitals(metrics: WebVitalsMetrics): void {
     if (process.env.NODE_ENV === 'development') {
       console.log('Web Vitals:', metrics);
     }
+
+    // Send to analytics service
+    if (typeof window !== 'undefined' && (window as unknown as { gtag?: unknown }).gtag) {
+      const gtag = (window as unknown as { gtag: (command: string, event: string, data: Record<string, unknown>) => void }).gtag;
+      Object.entries(metrics).forEach(([key, value]) => {
+        if (value !== undefined) {
+          gtag('event', key, {
+            value: Math.round(value),
+            event_category: 'Web Vitals',
+            non_interaction: true
+          });
+        }
+      });
+    }
   }
 
-  // Add page load measurement method
-  measurePageLoad(): any {
->>>>>>> a280bf9160af89ad376d37805f2dcc0182dc3f86
+  // Measure page load performance
+  measurePageLoad(): WebVitalsMetrics | null {
     if (typeof window === 'undefined' || !window.performance) {
       return null;
     }
     
     const timing = window.performance.timing;
-<<<<<<< HEAD
     const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
     
     const loadTime = timing.loadEventEnd - timing.navigationStart;
@@ -175,32 +183,6 @@ class PerformanceOptimizer {
     };
   }
 
-  // Report web vitals
-  reportWebVitals(metrics: WebVitalsMetrics): void {
-    if (process.env.NODE_ENV === 'development') {
-      console.log('Web Vitals:', metrics);
-    }
-
-    // Send to analytics service
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      Object.entries(metrics).forEach(([key, value]) => {
-        if (value !== undefined) {
-          (window as any).gtag('event', key, {
-            value: Math.round(value),
-            event_category: 'Web Vitals',
-            non_interaction: true
-          });
-        }
-      });
-    }
-=======
-    return {
-      loadTime: timing.loadEventEnd - timing.navigationStart,
-      interactiveTime: timing.domInteractive - timing.navigationStart
-    };
->>>>>>> a280bf9160af89ad376d37805f2dcc0182dc3f86
-  }
-
   // Initialize all optimizations
   initialize(): void {
     this.measurePerformance('lazyLoadImages', () => this.lazyLoadImages());
@@ -209,7 +191,6 @@ class PerformanceOptimizer {
   }
 }
 
-<<<<<<< HEAD
 /**
  * Resource hints for performance
  */
@@ -290,10 +271,11 @@ export const reportWebVitalsStandalone = (metrics: WebVitalsMetrics): void => {
   console.log('Web Vitals: ', metrics);
 
   // Send to analytics service
-  if (typeof window !== 'undefined' && (window as any).gtag) {
+  if (typeof window !== 'undefined' && (window as unknown as { gtag?: unknown }).gtag) {
+    const gtag = (window as unknown as { gtag: (command: string, event: string, data: Record<string, unknown>) => void }).gtag;
     Object.entries(metrics).forEach(([key, value]) => {
       if (value !== undefined) {
-        (window as any).gtag('event', key, {
+        gtag('event', key, {
           value: Math.round(value),
           event_category: 'Web Vitals',
           non_interaction: true
@@ -306,7 +288,7 @@ export const reportWebVitalsStandalone = (metrics: WebVitalsMetrics): void => {
 /**
  * Debounce function for performance optimization
  */
-export function debounce<T extends (...args: any[]) => any>(
+export function debounce<T extends (...args: unknown[]) => unknown>(
   func: T,
   wait: number
 ): (...args: Parameters<T>) => void {
@@ -324,7 +306,7 @@ export function debounce<T extends (...args: any[]) => any>(
 /**
  * Throttle function for performance optimization
  */
-export function throttle<T extends (...args: any[]) => any>(
+export function throttle<T extends (...args: unknown[]) => unknown>(
   func: T,
   limit: number
 ): (...args: Parameters<T>) => void {
@@ -355,7 +337,9 @@ export const shouldUseWebP = (): boolean => {
 export const getConnectionQuality = (): 'slow' | 'medium' | 'fast' => {
   if (typeof navigator === 'undefined') return 'medium';
   
-  const connection = (navigator as any).connection || (navigator as any).mozConnection || (navigator as any).webkitConnection;
+  const connection = (navigator as unknown as { connection?: { effectiveType?: string } }).connection || 
+                   (navigator as unknown as { mozConnection?: { effectiveType?: string } }).mozConnection || 
+                   (navigator as unknown as { webkitConnection?: { effectiveType?: string } }).webkitConnection;
   if (!connection) return 'medium';
   
   const effectiveType = connection.effectiveType;
@@ -369,7 +353,7 @@ export const getConnectionQuality = (): 'slow' | 'medium' | 'fast' => {
  */
 export const shouldLoadHeavyAssets = (): boolean => {
   const quality = getConnectionQuality();
-  const saveData = typeof navigator !== 'undefined' && (navigator as any).connection?.saveData;
+  const saveData = typeof navigator !== 'undefined' && (navigator as unknown as { connection?: { saveData?: boolean } }).connection?.saveData;
   return quality === 'fast' && !saveData;
 };
 
@@ -384,7 +368,7 @@ export const requestIdleCallback = (callback: IdleRequestCallback): number => {
   }
   
   // Fallback for browsers that don't support requestIdleCallback
-  return (window as any).setTimeout(() => {
+  return (window as unknown as { setTimeout: (fn: () => void, delay: number) => number }).setTimeout(() => {
     const start = Date.now();
     callback({
       didTimeout: false,
@@ -402,7 +386,7 @@ export const cancelIdleCallback = (id: number): void => {
   if ('cancelIdleCallback' in window) {
     window.cancelIdleCallback(id);
   } else {
-    (window as any).clearTimeout(id);
+    (window as unknown as { clearTimeout: (id: number) => void }).clearTimeout(id);
   }
 };
 
@@ -521,7 +505,3 @@ export default {
   clearOldCaches,
   checkPerformanceBudget
 };
-=======
-// Export singleton instance
-export const performanceOptimizer = PerformanceOptimizer.getInstance();
->>>>>>> a280bf9160af89ad376d37805f2dcc0182dc3f86
