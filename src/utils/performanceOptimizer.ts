@@ -632,7 +632,6 @@ class PerformanceOptimizer {
     return Object.fromEntries(this.metrics);
   }
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-28f0
   // Add critical resource hints for better performance
   addCriticalResourceHints(): void {
     if (typeof document === 'undefined') return;
@@ -720,21 +719,14 @@ class PerformanceOptimizer {
 // Export singleton instance
 export const performanceOptimizer = PerformanceOptimizer.getInstance();
 
-// Export individual functions for backward compatibility
-export {
-  lazyLoadImagesStandalone as lazyLoadImages,
-  measurePageLoadStandalone as measurePageLoad,
-  reportWebVitalsStandalone as reportWebVitals
-};
-
 export default {
   prefetchResources,
   preconnectDomains,
-  lazyLoadImages: lazyLoadImagesStandalone,
+  lazyLoadImages,
   debounce,
   throttle,
-  measurePageLoad: measurePageLoadStandalone,
-  reportWebVitals: reportWebVitalsStandalone,
+  measurePageLoad,
+  reportWebVitals,
   shouldUseWebP,
   getConnectionQuality,
   shouldLoadHeavyAssets,
