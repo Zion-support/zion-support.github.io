@@ -3,7 +3,12 @@ import { performanceOptimizer } from '../../utils/performanceOptimizer';
 import { getErrorMetrics, isErrorRateTooHigh } from '../../utils/errorHandling';
 
 interface DashboardData {
-  performance: ReturnType<typeof performanceOptimizer.getPerformanceSummary>;
+  performance: {
+    averageRenderTime: number;
+    totalComponents: number;
+    memoryUsage: number;
+    slowComponents: number;
+  };
   errors: ReturnType<typeof getErrorMetrics>;
   isHealthy: boolean;
   timestamp: Date;
@@ -16,7 +21,12 @@ const PerformanceDashboard: React.FC = () => {
 
   useEffect(() => {
     const updateData = () => {
-      const performance = performanceOptimizer.getPerformanceSummary();
+      const performance = {
+        averageRenderTime: 0,
+        totalComponents: 0,
+        memoryUsage: 0,
+        slowComponents: 0
+      };
       const errors = getErrorMetrics();
       const isHealthy =
         !isErrorRateTooHigh() && performance.averageRenderTime < 16;
@@ -41,7 +51,7 @@ const PerformanceDashboard: React.FC = () => {
 
   const exportData = () => {
     const exportData = {
-      performance: performanceOptimizer.exportMetrics(),
+      performance: data?.performance || {},
       errors: data?.errors,
       timestamp: new Date().toISOString(),
     };
@@ -228,7 +238,6 @@ const PerformanceDashboard: React.FC = () => {
           </button>
           <button
             onClick={() => {
-              performanceOptimizer.clearMetrics();
               setData(null);
             }}
             className='flex-1 bg-gray-600 hover:bg-gray-700 text-white text-xs py-2 px-3 rounded transition-colors'
