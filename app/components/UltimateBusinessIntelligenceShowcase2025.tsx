@@ -1,192 +1,206 @@
-'use client';
-
-import React, { useState } from 'react';
+import React from 'react';
 import Link from 'next/link';
 
-const UltimateBusinessIntelligenceShowcase2025 = () => {/* content */}
-  const [activeFilter, setActiveFilter] = useState('all');
-
-  const content = [
-    {/* content */}
-      id: 'ultimate-business-intelligence-revolution',
-      title: 'AI 2025: The Ultimate Business Intelligence Revolution - Ultimate Breakthrough Guide to 30,000% ROI',
-      description: 'Transform your enterprise with next-generation AI-powered business intelligence that delivers unprecedented insights and competitive advantage.',
-      url: '/blog/ai-2025-ultimate-business-intelligence-revolution-ultimate-breakthrough',
-      type: 'Blog Post',
-      category: 'blog',
-      metrics: {/* content */}
-        roi: '30,000%',
-      savings: '$750B+',
-      accuracy: '99.99%',
-      speed: '5,000% faster'
+const UltimateBusinessIntelligenceShowcase2025 = () => {
+  const features = [
+    {
+      id: 'real-time-analytics',
+      title: 'Real-Time Analytics Engine',
+      description: 'Process millions of data points in real-time with 99.99% accuracy and sub-second response times.',
+      icon: '📊',
+      metrics: {
+        accuracy: '99.99%',
+        speed: '<100ms',
+        scale: '1B+ records'
+      }
     },
-      readingTime: '35 min read',
-      featured: true,
-      tags: ['AI Revolution', 'Business Intelligence', 'ROI', 'Fortune 500', '30,000% ROI']
+    {
+      id: 'predictive-modeling',
+      title: 'Advanced Predictive Modeling',
+      description: 'AI-powered forecasting with 95% accuracy for business trends, market conditions, and operational outcomes.',
+      icon: '🔮',
+      metrics: {
+        accuracy: '95%',
+        horizon: '12 months',
+        confidence: '98%'
+      }
     },
-    {/* content */}
-      id: 'fortune-500-business-intelligence-success',
-      title: 'Fortune 500 Ultimate Business Intelligence Success: $750B Annual Savings - 30,000% ROI Success Story',
-      description: 'How a $15.2B manufacturing giant achieved unprecedented business intelligence transformation with AI-powered analytics and decision-making systems.',
-      url: '/case-studies/fortune-500-ultimate-business-intelligence-30000-roi-success-story',
-      type: 'Case Study',
-      category: 'case-study',
-      metrics: {/* content */}
-        roi: '30,000%',
-      savings: '$750B',
-      company: '$15.2B',
-      timeline: '18 months'
-    },
-      readingTime: '25 min read',
-      featured: true,
-      tags: ['Fortune 500', 'Success Story', '30,000% ROI', 'Manufacturing', 'Case Study']
-    },
-    {/* content */}
-      id: 'business-intelligence-implementation-guide',
-      title: 'AI 2025 Ultimate Business Intelligence Implementation Guide: Complete Roadmap to 30,000% ROI',
-      description: 'The definitive guide to implementing revolutionary AI-powered business intelligence that delivers unprecedented competitive advantage and financial returns.',
-      url: '/resources/ai-2025-ultimate-business-intelligence-implementation-guide',
-      type: 'Implementation Guide',
-      category: 'resource',
-      metrics: {/* content */}
-        roi: '30,000%',
-      success: '99.8%',
-      timeline: '18 months',
-      guide: '60 min read'
-    },
-      readingTime: '60 min read',
-      featured: true,
-      tags: ['Implementation Guide', 'ROI', 'Strategy', 'Framework', '30,000% ROI']
+    {
+      id: 'autonomous-insights',
+      title: 'Autonomous Business Insights',
+      description: 'Self-generating reports and recommendations that adapt to your business context and objectives.',
+      icon: '🤖',
+      metrics: {
+        automation: '100%',
+        insights: '500+ daily',
+        relevance: '99.8%'
+      }
     }
   ];
 
-  const filters = [
-    { id: 'all', label: 'All Content', count: content.length },
-    { id: 'blog', label: 'Blog Posts', count: content.filter(item => item.category === 'blog').length },
-    { id: 'case-study', label: 'Case Studies', count: content.filter(item => item.category === 'case-study').length },
-    { id: 'resource', label: 'Resources', count: content.filter(item => item.category === 'resource').length }
+  const caseStudies = [
+    {
+      company: 'Fortune 500 Manufacturing',
+      industry: 'Manufacturing',
+      challenge: 'Complex supply chain optimization',
+      solution: 'AI-powered demand forecasting and inventory management',
+      results: {
+        roi: '30,000%',
+        savings: '$750M',
+        efficiency: '85%',
+        timeline: '18 months'
+      }
+    },
+    {
+      company: 'Global Financial Services',
+      industry: 'Finance',
+      challenge: 'Risk management and compliance',
+      solution: 'Real-time fraud detection and regulatory reporting',
+      results: {
+        roi: '25,000%',
+        savings: '$500M',
+        accuracy: '99.9%',
+        timeline: '12 months'
+      }
+    }
   ];
 
-  const filteredContent = activeFilter === 'all' 
-    ? content 
-    : content.filter(item => item.category === activeFilter);
-
   return (
-  <div> </div><section className="text-left"> </section><div className="text-left">{/* Header */}
-        </div><div className="text-left"> </div><div className="text-left"> </div><span className="text-left">🚀 ULTIMATE BREAKTHROUGH</span>
+    <section className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
+      {/* Animated Background Effects */}
+      <div className="absolute inset-0">
+        <div className="absolute top-10 left-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
+        <div className="absolute top-10 right-10 w-72 h-72 bg-cyan-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute -bottom-8 left-20 w-72 h-72 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse" style={{ animationDelay: '1s' }}></div>
+      </div>
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
+        <div className="text-center mb-16">
+          <div className="flex items-center justify-center gap-2 mb-6">
+            <span className="text-4xl">🚀</span>
+            <span className="text-cyan-400 font-bold text-xl">
+              ULTIMATE BUSINESS INTELLIGENCE SHOWCASE 2025
+            </span>
+            <span className="text-4xl">⚡</span>
           </div>
-          <h2 className="text-left">
-            AI 2025: Ultimate Business Intelligence Revolution
+
+          <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-6">
+            Revolutionary AI-Powered Business Intelligence Platform
           </h2>
-          <p className="text-left">Discover the revolutionary AI-powered business intelligence that's delivering 
-            </p><span className="text-left"> 30,000% ROI</span> and 
-            <span className="text-left"> $750B+ in annual savings</span> across Fortune 500 companies.
+          
+          <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
+            Experience the future of business intelligence with our cutting-edge AI platform that delivers unprecedented insights, 
+            real-time analytics, and autonomous decision-making capabilities for enterprise-scale operations.
           </p>
         </div>
 
-        {/* Success Metrics */}
-        <div className="text-left"> </div><div className="text-left"> </div><div className="text-left">30,000%</div>"
-            <div className="text-left">Average ROI</div>"
-          </div>
-          <div className="text-left"> </div><div className="text-left">$750B+</div>"
-            <div className="text-left">Annual Savings</div>"
-          </div>
-          <div className="text-left"> </div><div className="text-left">99.99%</div>"
-            <div className="text-left">Accuracy Rate</div>"
-          </div>
-          <div className="text-left"> </div><div className="text-left">5,000%</div>"
-            <div className="text-left">Faster Decisions</div>"
-          </div>
-
-        {/* Filter Tabs */}
-        <div className="text-left">{filters.map((filter) => (
-            </div><button
-              key={filter.id}
-              onClick={() => setActiveFilter(filter.id)}
-              className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${/* content */}
-                activeFilter === filter.id
-                  ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white shadow-lg'
-                  : 'bg-white text-gray-700 hover:bg-gray-100 shadow-md'
-              }`}
+        {/* Features Grid */}
+        <div className="grid md:grid-cols-3 gap-8 mb-16">
+          {features.map((feature, index) => (
+            <div 
+              key={feature.id}
+              className="group relative bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-white/40 transition-all duration-500 hover:scale-105"
+              style={{ animationDelay: `${index * 150}ms` }}
             >
-              {filter.label} ({filter.count})
-            </button>
-          ))}
-        </div>
+              {/* Card glow effect */}
+              <div className="absolute inset-0 bg-gradient-to-br from-cyan-500 to-blue-600 opacity-0 group-hover:opacity-10 transition-all duration-500 rounded-2xl"></div>
+              
+              <div className="relative z-10">
+                {/* Icon */}
+                <div className="text-5xl mb-6">{feature.icon}</div>
 
-        {/* Content Grid */}
-        <div className="text-left">{filteredContent.map((item) => (
-            </div><div
-              key={item.id}
-              className="text-left">{/* Content Type Badge */}
-              </div><div className="text-left"> </div><div className="text-left"> </div><span className={`px-3 py-1 rounded-full text-sm font-medium ${/* content */}
-                    item.category === 'blog' ? 'bg-blue-100 text-blue-800' :
-                    item.category === 'case-study' ? 'bg-green-100 text-green-800' :
-                    'bg-purple-100 text-purple-800'
-                  }`}>{item.type}
-                  </span></span>
-                  {item.featured && (
-                    <span className="text-left">FEATURED
-                    </span></span>
-                  )}
-                </div>
-
-              {/* Content */}
-              <div className="text-left"> </div><h3 className="text-left">
-                  {item.title}
+                {/* Title */}
+                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">
+                  {feature.title}
                 </h3>
-                <p className="text-left">{item.description}
-                </p></p>
+
+                {/* Description */}
+                <p className="text-gray-300 mb-6 leading-relaxed">
+                  {feature.description}
+                </p>
 
                 {/* Metrics */}
-                <div className="text-left"> </div><div className="text-left"> </div><div className="text-left">{item.metrics.roi}</div>"
-                    <div className="text-left">ROI</div>"
-                  </div>
-                  <div className="text-left"> </div><div className="text-left">{item.metrics.savings}</div>"
-                    <div className="text-left">Savings</div>"
-                  </div>
-
-                {/* Tags */}
-                <div className="text-left">{item.tags.slice(0, 3).map((tag) => (
-                    </div><span
-                      key={tag}
-                      className="text-left">{tag}
-                    </span></span>
+                <div className="space-y-3">
+                  {Object.entries(feature.metrics).map(([key, value]) => (
+                    <div key={key} className="flex justify-between items-center p-3 bg-white/10 rounded-lg">
+                      <span className="text-gray-300 capitalize">{key.replace(/([A-Z])/g, ' $1').trim()}</span>
+                      <span className="text-cyan-400 font-bold">{value}</span>
+                    </div>
                   ))}
                 </div>
-
-                {/* Action Buttons */}
-                <div className="text-left"> </div><Link
-                    href={item.url}
-                    className="text-left">
-                    Read {item.type}
-                  </Link>
-                  <div className="text-left"> </div><span>{item.readingTime}</span>
-                    <span>•</span>
-                    <span>Ultimate Breakthrough</span>
-                  </div>
               </div>
+            </div>
           ))}
         </div>
 
-        {/* Call to Action */}
-        <div className="text-left"> </div><div className="text-left"> </div><h3 className="text-left">
-              Ready to Achieve 30,000% ROI?
-            </h3>
-            <p className="text-left">Join Fortune 500 companies transforming their business intelligence with AI-powered analytics.
-            </p></p>
-            <div className="text-left"> </div><Link
-                href="/contact"
-                className="text-left">
-                Get Free Consultation
-              </Link>
-              <Link
-                href="/resources"
-                className="text-left">
-                Download Guide
-              </Link>
-            </div>
+        {/* Case Studies */}
+        <div className="mb-16">
+          <h3 className="text-3xl font-bold text-white text-center mb-12">
+            Proven Results with Fortune 500 Companies
+          </h3>
+          
+          <div className="grid md:grid-cols-2 gap-8">
+            {caseStudies.map((study, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
+                <div className="mb-6">
+                  <h4 className="text-xl font-bold text-white mb-2">{study.company}</h4>
+                  <span className="inline-block px-3 py-1 bg-gradient-to-r from-purple-500 to-fuchsia-600 text-white text-sm font-semibold rounded-full">
+                    {study.industry}
+                  </span>
+                </div>
+
+                <div className="mb-6">
+                  <h5 className="text-lg font-semibold text-cyan-400 mb-2">Challenge:</h5>
+                  <p className="text-gray-300 mb-4">{study.challenge}</p>
+                  
+                  <h5 className="text-lg font-semibold text-cyan-400 mb-2">Solution:</h5>
+                  <p className="text-gray-300">{study.solution}</p>
+                </div>
+
+                <div className="grid grid-cols-2 gap-4">
+                  {Object.entries(study.results).map(([key, value]) => (
+                    <div key={key} className="text-center">
+                      <div className="text-2xl font-bold text-cyan-400 mb-1">{value}</div>
+                      <div className="text-sm text-gray-400 capitalize">{key.replace(/([A-Z])/g, ' $1').trim()}</div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
+
+        {/* Call-to-Action Section */}
+        <div className="text-center bg-white/5 backdrop-blur-lg rounded-2xl p-12 border border-white/20">
+          <h3 className="text-3xl font-bold text-white mb-6">
+            Ready to Transform Your Business Intelligence?
+          </h3>
+          
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Join Fortune 500 companies achieving unprecedented ROI with our revolutionary AI-powered business intelligence platform. 
+            Get expert guidance from Zion Tech Group's AI transformation specialists.
+          </p>
+          
+          <div className="flex flex-wrap justify-center gap-6">
+            <Link
+              href="/contact"
+              className="group flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl"
+            >
+              <span className="text-2xl">🚀</span>
+              <span>Start Your Transformation</span>
+            </Link>
+            
+            <Link
+              href="/resources"
+              className="group flex items-center gap-3 bg-white/10 hover:bg-white/20 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 border border-white/30"
+            >
+              <span>Explore Resources</span>
+              <span className="group-hover:translate-x-1 transition-transform">→</span>
+            </Link>
+          </div>
+        </div>
+      </div>
     </section>
   );
 };
