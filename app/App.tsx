@@ -13,8 +13,6 @@ const HomePage = lazy(() => import('./page'));
 const AboutPage = lazy(() => import('./about/page'));
 const ServicesPage = lazy(() => import('./services/page'));
 const ContactPage = lazy(() => import('./contact/page'));
-const AboutPage = lazy(() => import('./about/page'));
-const ServicesPage = lazy(() => import('./services/page'));
 const TeamPage = lazy(() => import('./team/page'));
 const PrivacyPage = lazy(() => import('./privacy/page'));
 const TermsPage = lazy(() => import('./terms/page'));
@@ -31,29 +29,6 @@ function App() {
   return (
     <HelmetProvider>
       <ErrorBoundary>
-<<<<<<< HEAD
-        <Router>
-          <div className="App">
-            <SEOOptimizer />
-            <AccessibilityEnhancer />
-            <PerformanceDashboard />
-            
-            <Navigation />
-            
-            <Suspense fallback={<LoadingSpinner />}>
-              <Routes>
-                <Route path="/" element={<HomePage />} />
-                <Route path="/about" element={<AboutPage />} />
-                <Route path="/services" element={<ServicesPage />} />
-                <Route path="/contact" element={<ContactPage />} />
-                <Route path="/enterprise" element={<EnterprisePage />} />
-              </Routes>
-            </Suspense>
-            
-            <Footer />
-          </div>
-        </Router>
-=======
         <SEOOptimizer>
           <AccessibilityEnhancer>
             <Router>
@@ -73,7 +48,6 @@ function App() {
             </Router>
           </AccessibilityEnhancer>
         </SEOOptimizer>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-96bc
       </ErrorBoundary>
     </HelmetProvider>
   );

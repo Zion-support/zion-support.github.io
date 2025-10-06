@@ -1,12 +1,4 @@
-<<<<<<< HEAD
-import { Component, type ErrorInfo, type ReactNode } from 'react';
 import React, { Component, type ErrorInfo, type ReactNode } from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e62
-import React, { Component, type ErrorInfo, type ReactNode } from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-cfe1
-=======
-import React, { Component, type ErrorInfo, type ReactNode } from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-96bc
 import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
 
 interface Props {
@@ -35,7 +27,7 @@ class ErrorBoundary extends Component<Props, State> {
     };
   }
 
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+  override componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     console.error('ErrorBoundary caught an error:', error, errorInfo);
     
     // Report error to analytics/monitoring service
@@ -69,7 +61,7 @@ class ErrorBoundary extends Component<Props, State> {
     window.location.href = '/';
   };
 
-  render() {
+  override render() {
     if (this.state.hasError) {
       return this.props.fallback || (
         <div className="min-h-screen flex items-center justify-center bg-gray-50">
@@ -83,7 +75,7 @@ class ErrorBoundary extends Component<Props, State> {
             <p className="text-gray-600 mb-6">
               We're sorry, but something unexpected happened. Please try again.
             </p>
-            {process.env.NODE_ENV === 'development' && this.state.error && (
+            {process.env['NODE_ENV'] === 'development' && this.state.error && (
               <details className="mb-4 text-left">
                 <summary className="cursor-pointer text-sm text-gray-500 hover:text-gray-700">
                   Error Details (Development)
@@ -111,20 +103,17 @@ class ErrorBoundary extends Component<Props, State> {
                 Go Home
               </button>
             </div>
-<<<<<<< HEAD
             <button
               onClick={() => window.location.reload()}
               className="mt-4 text-gray-400 hover:text-white text-sm underline"
             >
               Or refresh the page
             </button>
-=======
             {this.state.errorId && (
               <p className="text-xs text-gray-400 mt-4">
                 Error ID: {this.state.errorId}
               </p>
             )}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-96bc
           </div>
         </div>
       );
@@ -135,8 +124,3 @@ class ErrorBoundary extends Component<Props, State> {
 }
 
 export default ErrorBoundary;
-<<<<<<< HEAD
-export default ErrorBoundary;
->>>>>>> cursor/fix-errors-and-merge-to-main-cfe1
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-96bc
