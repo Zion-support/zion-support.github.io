@@ -91,7 +91,6 @@ export const preconnectDomains = (domains: string[]): void => {
     const link = document.createElement('link');
     link.rel = 'preconnect';
     link.href = domain;
-    link.crossOrigin = 'anonymous';
     document.head.appendChild(link);
   });
 };
@@ -111,32 +110,35 @@ export const prefetchResources = (urls: string[]): void => {
 };
 
 /**
- * Measure page load performance
+ * Measure page load metrics
  */
 export const measurePageLoad = (): WebVitalsMetrics | null => {
-  if (typeof window === 'undefined' || !window.performance) return null;
+  if (typeof window === 'undefined') return null;
   
-  const perfData = window.performance.timing;
-  const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-  
-  if (!perfData || !navigation) return null;
+  const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+  if (!navigation) return null;
 
   return {
-    FCP: navigation.responseStart - navigation.fetchStart,
-    LCP: navigation.loadEventEnd - navigation.loadEventStart,
-    FID: 0, // First Input Delay - requires user interaction
-    CLS: 0, // Cumulative Layout Shift - requires layout shift observer
     TTFB: navigation.responseStart - navigation.requestStart,
-    INP: 0 // Interaction to Next Paint - requires user interaction
+    FCP: 0, // Would need to be measured with PerformanceObserver
+    LCP: 0, // Would need to be measured with PerformanceObserver
+    FID: 0, // Would need to be measured with PerformanceObserver
+    CLS: 0, // Would need to be measured with PerformanceObserver
+    INP: 0, // Would need to be measured with PerformanceObserver
   };
 };
 
 /**
+<<<<<<< HEAD
  * Report Web Vitals metrics
+=======
+ * Report web vitals
+>>>>>>> cursor/fix-errors-and-merge-to-main-8fd8
  */
 export const reportWebVitals = (metrics: WebVitalsMetrics): void => {
   if (process.env.NODE_ENV === 'development') {
     console.log('Web Vitals:', metrics);
+<<<<<<< HEAD
   }
   
   // Send to analytics service
@@ -221,12 +223,62 @@ export const preloadRoute = (route: string): void => {
   link.rel = 'prefetch';
   link.href = route;
   document.head.appendChild(link);
+=======
+  }
+};
+
+/**
+ * Optimize scroll performance
+ */
+export const optimizeScroll = (): void => {
+  if (typeof window === 'undefined') return;
+  
+  let ticking = false;
+  
+  const updateScrollPosition = () => {
+    // Scroll optimization logic here
+    ticking = false;
+  };
+  
+  const requestTick = () => {
+    if (!ticking) {
+      requestAnimationFrame(updateScrollPosition);
+      ticking = true;
+    }
+  };
+  
+  window.addEventListener('scroll', requestTick, { passive: true });
+};
+
+/**
+ * Preload critical resources
+ */
+export const preloadCriticalResources = (): void => {
+  if (typeof document === 'undefined') return;
+  
+  const criticalResources = [
+    '/fonts/inter.woff2',
+    '/images/hero-bg.jpg',
+    '/images/logo.svg'
+  ];
+  
+  criticalResources.forEach(resource => {
+    const link = document.createElement('link');
+    link.rel = 'preload';
+    link.href = resource;
+    if (resource.endsWith('.woff2')) {
+      link.crossOrigin = 'anonymous';
+    }
+    document.head.appendChild(link);
+  });
+>>>>>>> cursor/fix-errors-and-merge-to-main-8fd8
 };
 
 /**
  * Monitor long tasks
  */
 export const monitorLongTasks = (callback: (entries: PerformanceEntry[]) => void): PerformanceObserver | null => {
+<<<<<<< HEAD
   if (typeof window === 'undefined' || !('PerformanceObserver' in window)) {
     return null;
   }
@@ -237,6 +289,18 @@ export const monitorLongTasks = (callback: (entries: PerformanceEntry[]) => void
       callback(entries);
     });
     
+=======
+  if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return null;
+  
+  const observer = new PerformanceObserver(list => {
+    const longTasks = list.getEntries().filter(entry => entry.duration > 50);
+    if (longTasks.length > 0) {
+      callback(longTasks);
+    }
+  });
+  
+  try {
+>>>>>>> cursor/fix-errors-and-merge-to-main-8fd8
     observer.observe({ entryTypes: ['longtask'] });
     return observer;
   } catch (error) {
@@ -246,6 +310,7 @@ export const monitorLongTasks = (callback: (entries: PerformanceEntry[]) => void
 };
 
 /**
+<<<<<<< HEAD
  * Cache static assets
  */
 export const cacheStaticAssets = async (urls: string[]): Promise<void> => {
@@ -315,12 +380,24 @@ const metrics = new Map<string, number>();
 
 <<<<<<< HEAD
   static getInstance(): PerformanceOptimizer {
+=======
+ * Performance monitoring class
+ */
+export class PerformanceOptimizer {
+  private static instance: PerformanceOptimizer;
+  private metrics: Map<string, number> = new Map();
+
+  private constructor() {}
+
+  public static getInstance(): PerformanceOptimizer {
+>>>>>>> cursor/fix-errors-and-merge-to-main-8fd8
     if (!PerformanceOptimizer.instance) {
       PerformanceOptimizer.instance = new PerformanceOptimizer();
     }
     return PerformanceOptimizer.instance;
   }
 
+<<<<<<< HEAD
   // Lazy load images with intersection observer
   lazyLoadImages(): void {
     lazyLoadImages();
@@ -367,16 +444,94 @@ const metrics = new Map<string, number>();
 
   // Measure performance metrics
   measurePerformance(name: string, fn: () => void): void {
+=======
+  public measurePerformance(name: string, fn: () => void): number {
+>>>>>>> cursor/fix-errors-and-merge-to-main-8fd8
     const start = performance.now();
     fn();
     const end = performance.now();
     const duration = end - start;
+<<<<<<< HEAD
     
     this.metrics.set(name, duration);
     
     if (process.env.NODE_ENV === 'development') {
       console.log(`Performance: ${name} took ${duration.toFixed(2)}ms`);
     }
+=======
+    this.metrics.set(name, duration);
+    return duration;
+  }
+
+  public lazyLoadImages(): void {
+    lazyLoadImages();
+  }
+
+  public optimizeScroll(): void {
+    optimizeScroll();
+  }
+
+  public preloadCriticalResources(): void {
+    preloadCriticalResources();
+  }
+
+  public reportWebVitals(metrics: WebVitalsMetrics): void {
+    reportWebVitals(metrics);
+  }
+
+  public measurePageLoad(): WebVitalsMetrics | null {
+    return measurePageLoad();
+  }
+
+  public monitorLongTasks(callback: (entries: PerformanceEntry[]) => void): PerformanceObserver | null {
+    return monitorLongTasks(callback);
+  }
+
+  public preconnectDomains(domains: string[]): void {
+    preconnectDomains(domains);
+  }
+
+  public prefetchResources(urls: string[]): void {
+    prefetchResources(urls);
+  }
+
+  public getPerformanceSummary(): Record<string, number> {
+    return Object.fromEntries(this.metrics);
+  }
+
+  public exportMetrics(): string {
+    return JSON.stringify(this.getPerformanceSummary());
+  }
+
+  public clearMetrics(): void {
+    this.metrics.clear();
+  }
+
+  public measurePageLoadTiming(): number {
+    if (typeof window === 'undefined') return 0;
+    
+    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+    if (!navigation) return 0;
+    
+    return navigation.loadEventEnd - navigation.fetchStart;
+  }
+
+  public checkPerformanceBudget(budget: PerformanceBudget): { passed: boolean; violations: string[] } {
+    const violations: string[] = [];
+    
+    // Check bundle size (would need to be implemented with actual bundle analysis)
+    // Check image sizes (would need to be implemented with actual image analysis)
+    // Check load times
+    const loadTime = this.measurePageLoadTiming();
+    if (loadTime > budget.maxFirstLoad) {
+      violations.push(`First load time ${loadTime}ms exceeds budget of ${budget.maxFirstLoad}ms`);
+    }
+    
+    return {
+      passed: violations.length === 0,
+      violations
+    };
+>>>>>>> cursor/fix-errors-and-merge-to-main-8fd8
   }
 
   // Get performance metrics
@@ -384,6 +539,7 @@ const metrics = new Map<string, number>();
     return Object.fromEntries(this.metrics);
   }
 
+<<<<<<< HEAD
   // Monitor long tasks
   monitorLongTasks(callback: (entries: PerformanceEntry[]) => void): PerformanceObserver | null {
     if (typeof window === 'undefined' || !window.PerformanceObserver) return null;
@@ -506,6 +662,28 @@ const metrics = new Map<string, number>();
     this.measurePerformance('lazyLoadImages', () => this.lazyLoadImages());
     this.measurePerformance('preloadCriticalResources', () => this.preloadCriticalResources());
     this.measurePerformance('optimizeScroll', () => this.optimizeScroll());
+=======
+  // Add critical resource hints for better performance
+  addCriticalResourceHints(): void {
+    if (typeof document === 'undefined') return;
+    
+    const hints = [
+      { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' },
+      { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com' },
+      { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+      { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossOrigin: 'anonymous' }
+    ];
+    
+    hints.forEach(hint => {
+      const link = document.createElement('link');
+      link.rel = hint.rel;
+      link.href = hint.href;
+      if (hint.crossOrigin) {
+        link.crossOrigin = hint.crossOrigin;
+      }
+      document.head.appendChild(link);
+    });
+>>>>>>> cursor/fix-errors-and-merge-to-main-8fd8
   }
 }
 <<<<<<< HEAD
@@ -562,6 +740,7 @@ export const preloadCriticalResources = (): void => {
 >>>>>>> cursor/fix-errors-and-merge-to-main-e973
 
 // Export singleton instance
+<<<<<<< HEAD
 export const performanceOptimizer = PerformanceOptimizer.getInstance();
 
 <<<<<<< HEAD
@@ -616,3 +795,6 @@ export default {
   checkPerformanceBudget
 };
 >>>>>>> cursor/fix-errors-and-merge-to-main-e973
+=======
+export const performanceOptimizer = PerformanceOptimizer.getInstance();
+>>>>>>> cursor/fix-errors-and-merge-to-main-8fd8

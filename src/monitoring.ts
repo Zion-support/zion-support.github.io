@@ -23,6 +23,7 @@ if (typeof window !== 'undefined') {
   // Track Web Vitals
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   const metrics = performanceOptimizer.measurePageLoadTiming();
 =======
   const metrics = performanceOptimizer.measurePageLoad();
@@ -30,6 +31,9 @@ if (typeof window !== 'undefined') {
 =======
   const metrics = performanceOptimizer.measurePageLoad();
 >>>>>>> cursor/fix-errors-and-merge-to-main-e973
+=======
+  const metrics = performanceOptimizer.measurePageLoad();
+>>>>>>> cursor/fix-errors-and-merge-to-main-8fd8
   if (metrics) {
     performanceOptimizer.reportWebVitals(metrics);
   }

@@ -60,6 +60,7 @@ const ContactPage: React.FC = () => {
               <div>
                 <h4 className="font-medium text-gray-900">Address</h4>
                 <p className="text-gray-600">
+<<<<<<< HEAD
                   Zion Tech Group<br />
                   Wilmington, DE 19801<br />
                   United States
@@ -71,6 +72,11 @@ const ContactPage: React.FC = () => {
 >>>>>>> cursor/fix-errors-and-merge-to-main-a3c4
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-e973
+=======
+                  123 Business Street<br />
+                  Suite 100<br />
+                  Wilmington, DE 19801
+>>>>>>> cursor/fix-errors-and-merge-to-main-8fd8
                 </p>
               </div>
             </div>

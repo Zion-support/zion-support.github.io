@@ -178,6 +178,7 @@ export const useLongTaskMonitoring = () => {
       entries.forEach((entry: PerformanceEntry) => {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         analytics.track('long_task', 'performance', 'detected', undefined, entry.duration);
 >>>>>>> cursor/fix-errors-and-merge-to-main-a3c4
@@ -191,6 +192,9 @@ export const useLongTaskMonitoring = () => {
 =======
         analytics.track('long_task', 'performance', 'detected', undefined, entry.duration);
 >>>>>>> cursor/fix-errors-and-merge-to-main-e973
+=======
+        analytics.track('long_task', 'performance', 'detected', undefined, entry.duration);
+>>>>>>> cursor/fix-errors-and-merge-to-main-8fd8
       });
     });
 
