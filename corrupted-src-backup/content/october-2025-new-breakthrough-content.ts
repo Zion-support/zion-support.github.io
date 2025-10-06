@@ -100,9 +100,11 @@ export const octoberNewBreakthroughContent = [
   },
   {
     id: 'fortune-100-retailer-real-time-intelligence-success',
-    title: 'Fortune 100 Retailer: $627M Value Through Real-Time AI Intelligence',
+    title:
+      'Fortune 100 Retailer: $627M Value Through Real-Time AI Intelligence',
     slug: 'ai-2025-oct-fortune-100-retailer-real-time-intelligence-627m-success',
-    description: 'Detailed case study of how a Fortune 100 retailer created $627M in value through real-time AI-powered business intelligence across inventory, pricing, and customer experience.',
+    description:
+      'Detailed case study of how a Fortune 100 retailer created $627M in value through real-time AI-powered business intelligence across inventory, pricing, and customer experience.',
     category: 'Case Study',
     date: '2025-10-01',
     readTime: '14 min',

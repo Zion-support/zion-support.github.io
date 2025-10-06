@@ -107,7 +107,7 @@ export const getFeaturedUltimateContent = () => {
 
 export const getBreakingUltimateContent = () => {
   return octoberUltimateEnterpriseContent.filter(content =>
-    content.tags.includes('Breaking'),
+    content.tags.includes('Breaking')
   );
 };
 

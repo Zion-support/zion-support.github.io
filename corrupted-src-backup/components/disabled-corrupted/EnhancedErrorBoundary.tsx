@@ -82,7 +82,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     // Store in localStorage for debugging
     try {
       const existingErrors = JSON.parse(
-        localStorage.getItem('errorLogs') || '[]',
+        localStorage.getItem('errorLogs') || '[]'
       );
       existingErrors.push(errorReport);
       // Keep only last 10 errors

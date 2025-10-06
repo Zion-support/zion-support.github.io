@@ -7,14 +7,17 @@ export interface LatestBreakthroughContent {
   readTime: string;
   tags: string[];
   featured: boolean;
-  content?: string;
-  author?: string;
-  valueProposition?: string;
+  content: string;
+  author: string;
+  valueProposition: string;
   icon?: string;
   gradient?: string;
   highlights?: string[];
   metrics?: {
-    [key: string]: string;
+    value: string;
+    accuracy: string;
+    downtime: string;
+    market: string;
   };
 }
 

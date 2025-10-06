@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import ErrorHandler from '../utils/error-handler';
 
 interface AnalyticsData {
   pageViews: number;
@@ -64,11 +63,7 @@ const AnalyticsDashboard: React.FC = () => {
         setData(mockData);
       } catch (err) {
         setError('Failed to load analytics data');
-        ErrorHandler.getInstance().handleError({
-          type: 'javascript',
-          message: (err as Error).message,
-          error: err as Error,
-        });
+        console.error('Analytics error:', err);
       } finally {
         setIsLoading(false);
       }
