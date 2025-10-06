@@ -132,7 +132,7 @@ export const keyboardNavigation = {
 // Color contrast utilities
 export const colorContrast = {
   // Check if color combination meets WCAG standards
-  checkContrast: (foreground: string, background: string): {
+  checkContrast: (_foreground: string, _background: string): {
     ratio: number;
     meetsAA: boolean;
     meetsAAA: boolean;

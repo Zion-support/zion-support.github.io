@@ -2,13 +2,13 @@
  * Comprehensive optimization utilities that integrate accessibility, performance, and SEO
  */
 import {
-  focusManagement,
-  ariaUtils,
-  keyboardNavigation,
-  colorContrast,
-  screenReader,
-  formAccessibility,
-  motionAccessibility,
+  // focusManagement,
+  // ariaUtils,
+  // keyboardNavigation,
+  // colorContrast,
+  // screenReader,
+  // formAccessibility,
+  // motionAccessibility,
   initAccessibility
 } from './accessibilityUtils';
 
@@ -16,15 +16,15 @@ import {
   getMemoryUsage,
   collectPerformanceMetrics,
   performanceMonitor,
-  debounce,
-  throttle,
+  // debounce,
+  // throttle,
   lazyLoadImages,
   preloadCriticalResources,
   optimizeScrollPerformance
 } from './performanceUtils';
 
 import {
-  setMetaTags,
+  // setMetaTags,
   setOpenGraphTags,
   setTwitterCardTags,
   setStructuredData,
@@ -32,9 +32,9 @@ import {
   setPageTitle,
   setMetaDescription,
   setKeywords,
-  setRobotsMeta,
-  setLanguage,
-  setViewport,
+  // setRobotsMeta,
+  // setLanguage,
+  // setViewport,
   schemaGenerators,
   seoAudit
 } from './seoUtils';
@@ -207,25 +207,25 @@ export class ComprehensiveOptimizer {
 
     // Set Open Graph tags
     if (this.config.seo.enableOpenGraph) {
-      const ogData: any = {
+      const ogData: Record<string, string> = {
         title: pageData.title,
         description: pageData.description,
         url: pageData.url,
       };
       if (pageData.image) {
-        ogData.image = pageData.image;
+        ogData['image'] = pageData.image;
       }
       setOpenGraphTags(ogData);
     }
 
     // Set Twitter Card tags
     if (this.config.seo.enableTwitterCards) {
-      const twitterData: any = {
+      const twitterData: Record<string, string> = {
         title: pageData.title,
         description: pageData.description,
       };
       if (pageData.image) {
-        twitterData.image = pageData.image;
+        twitterData['image'] = pageData.image;
       }
       setTwitterCardTags(twitterData);
     }
@@ -244,9 +244,9 @@ export class ComprehensiveOptimizer {
    * Run comprehensive audit
    */
   public async runAudit(): Promise<{
-    accessibility: any;
-    performance: any;
-    seo: any;
+    accessibility: Record<string, unknown>;
+    performance: Record<string, unknown>;
+    seo: Record<string, unknown>;
   }> {
     const results = {
       accessibility: {},

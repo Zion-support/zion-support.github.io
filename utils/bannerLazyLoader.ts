@@ -8,7 +8,7 @@ import { lazy } from 'react';
 import type { ComponentType } from 'react';
 
 interface BannerModule {
-  default: ComponentType<any>;
+  default: ComponentType<Record<string, unknown>>;
 }
 
 /**

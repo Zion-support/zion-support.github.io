@@ -46,7 +46,7 @@ async function handler(req, res) {
 
     res.statusCode = 200;
     res.json({ success: true, rates });
-  } catch (error) {
+  } catch {
     res.statusCode = 500;
     res.json({ error: 'Failed to calculate shipping rates' });
   }

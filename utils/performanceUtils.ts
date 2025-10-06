@@ -3,7 +3,7 @@
  */
 
 // Debounce function for performance optimization
-export const debounce = <T extends (...args: any[]) => any>(
+export const debounce = <T extends (...args: unknown[]) => unknown>(
   func: T,
   wait: number,
   immediate = false
@@ -22,12 +22,12 @@ export const debounce = <T extends (...args: any[]) => any>(
 };
 
 // Throttle function for performance optimization
-export const throttle = <T extends (...args: any[]) => any>(
+export const throttle = <T extends (...args: unknown[]) => unknown>(
   func: T,
   limit: number
 ): ((...args: Parameters<T>) => void) => {
   let inThrottle: boolean;
-  return function executedFunction(this: any, ...args: Parameters<T>) {
+  return function executedFunction(this: unknown, ...args: Parameters<T>) {
     if (!inThrottle) {
       func.apply(this, args);
       inThrottle = true;
@@ -42,11 +42,11 @@ export const getMemoryUsage = (): {
   total: number;
   percentage: number;
 } => {
-  if (typeof performance === 'undefined' || !(performance as any).memory) {
+  if (typeof performance === 'undefined' || !(performance as unknown as { memory?: unknown }).memory) {
     return { used: 0, total: 0, percentage: 0 };
   }
 
-  const memory = (performance as any).memory;
+  const memory = (performance as unknown as { memory: { usedJSHeapSize: number; totalJSHeapSize: number } }).memory;
   const used = memory.usedJSHeapSize;
   const total = memory.totalJSHeapSize;
   const percentage = (used / total) * 100;
@@ -64,13 +64,29 @@ export const collectPerformanceMetrics = async (): Promise<{
   firstInputDelay: number;
   cumulativeLayoutShift: number;
 }> => {
-  const metrics: any = {};
+  const metrics: {
+    loadTime: number;
+    domContentLoaded: number;
+    firstPaint: number;
+    firstContentfulPaint: number;
+    largestContentfulPaint: number;
+    firstInputDelay: number;
+    cumulativeLayoutShift: number;
+  } = {
+    loadTime: 0,
+    domContentLoaded: 0,
+    firstPaint: 0,
+    firstContentfulPaint: 0,
+    largestContentfulPaint: 0,
+    firstInputDelay: 0,
+    cumulativeLayoutShift: 0,
+  };
 
   // Basic timing metrics
   if (typeof window !== 'undefined' && window.performance) {
     const timing = window.performance.timing;
-    metrics.loadTime = timing.loadEventEnd - timing.navigationStart;
-    metrics.domContentLoaded = timing.domContentLoadedEventEnd - timing.navigationStart;
+    metrics['loadTime'] = timing.loadEventEnd - timing.navigationStart;
+    metrics['domContentLoaded'] = timing.domContentLoadedEventEnd - timing.navigationStart;
   }
 
   // Web Vitals
@@ -80,7 +96,7 @@ export const collectPerformanceMetrics = async (): Promise<{
       const paintObserver = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.name === 'first-paint') {
-            metrics.firstPaint = entry.startTime;
+            metrics['firstPaint'] = entry.startTime;
           }
         }
       });
@@ -90,7 +106,7 @@ export const collectPerformanceMetrics = async (): Promise<{
       const fcpObserver = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.name === 'first-contentful-paint') {
-            metrics.firstContentfulPaint = entry.startTime;
+            metrics['firstContentfulPaint'] = entry.startTime;
           }
         }
       });
@@ -101,7 +117,7 @@ export const collectPerformanceMetrics = async (): Promise<{
         const entries = list.getEntries();
         const lastEntry = entries[entries.length - 1];
         if (lastEntry) {
-          metrics.largestContentfulPaint = lastEntry.startTime;
+          metrics['largestContentfulPaint'] = lastEntry.startTime;
         }
       });
       lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
@@ -109,7 +125,7 @@ export const collectPerformanceMetrics = async (): Promise<{
       // First Input Delay
       const fidObserver = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
-          metrics.firstInputDelay = (entry as any).processingStart - entry.startTime;
+          metrics['firstInputDelay'] = (entry as unknown as { processingStart: number }).processingStart - entry.startTime;
         }
       });
       fidObserver.observe({ entryTypes: ['first-input'] });
@@ -118,11 +134,11 @@ export const collectPerformanceMetrics = async (): Promise<{
       let clsValue = 0;
       const clsObserver = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
-          if (!(entry as any).hadRecentInput) {
-            clsValue += (entry as any).value;
+          if (!(entry as unknown as { hadRecentInput: boolean }).hadRecentInput) {
+            clsValue += (entry as unknown as { value: number }).value;
           }
         }
-        metrics.cumulativeLayoutShift = clsValue;
+        metrics['cumulativeLayoutShift'] = clsValue;
       });
       clsObserver.observe({ entryTypes: ['layout-shift'] });
 

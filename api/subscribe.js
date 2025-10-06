@@ -47,7 +47,7 @@ async function handler(req, res) {
     fs.writeFileSync(file, JSON.stringify(subscribers, null, 2));
     res.statusCode = 200;
     res.json({ success: true, message: 'Successfully subscribed to newsletter' });
-  } catch (error) {
+  } catch {
     res.statusCode = 500;
     res.json({ error: 'Failed to subscribe to newsletter' });
   }

@@ -18,7 +18,7 @@ async function handler(req, res) {
 
   try {
     switch (action) {
-      case 'create_payment_intent':
+      case 'create_payment_intent': {
         if (!amount) {
           res.statusCode = 400;
           res.json({ error: 'Amount is required for payment intent' });
@@ -37,8 +37,9 @@ async function handler(req, res) {
         res.statusCode = 200;
         res.json({ success: true, paymentIntent });
         break;
+      }
 
-      case 'get_balance':
+      case 'get_balance': {
         // Mock balance retrieval
         const balance = {
           available: 1000.00,
@@ -49,12 +50,13 @@ async function handler(req, res) {
         res.statusCode = 200;
         res.json({ success: true, balance });
         break;
+      }
 
       default:
         res.statusCode = 400;
         res.json({ error: 'Invalid action' });
     }
-  } catch (error) {
+  } catch {
     res.statusCode = 500;
     res.json({ error: 'Wallet operation failed' });
   }

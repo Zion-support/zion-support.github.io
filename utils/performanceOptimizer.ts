@@ -92,7 +92,7 @@ export class PerformanceOptimizer {
    */
   private getMemoryUsage(): number {
     if ('memory' in performance) {
-      return (performance as any).memory.usedJSHeapSize;
+      return (performance as unknown as { memory: { usedJSHeapSize: number } }).memory.usedJSHeapSize;
     }
     return 0;
   }
@@ -146,7 +146,7 @@ export class PerformanceOptimizer {
   /**
    * Check if a component is performing poorly
    */
-  isComponentSlow(componentName: string, threshold: number = 16): boolean {
+  isComponentSlow(componentName: string, threshold = 16): boolean {
     const averageTime = this.getAverageRenderTime(componentName);
     return averageTime > threshold; // 16ms = 60fps threshold
   }
@@ -240,7 +240,7 @@ export function withPerformanceTracking<P extends object>(
     WrappedComponent.name ||
     'Component';
 
-  const TrackedComponent = React.forwardRef<any, P>((props, ref) => {
+  const TrackedComponent = React.forwardRef<unknown, P>((props, ref) => {
     React.useEffect(() => {
       performanceOptimizer.startRender(displayName);
 
@@ -273,7 +273,7 @@ export const performanceUtils = {
   /**
    * Debounce function for performance
    */
-  debounce<T extends (...args: any[]) => any>(
+  debounce<T extends (...args: unknown[]) => unknown>(
     func: T,
     wait: number
   ): (...args: Parameters<T>) => void {
@@ -287,7 +287,7 @@ export const performanceUtils = {
   /**
    * Throttle function for performance
    */
-  throttle<T extends (...args: any[]) => any>(
+  throttle<T extends (...args: unknown[]) => unknown>(
     func: T,
     limit: number
   ): (...args: Parameters<T>) => void {
@@ -315,7 +315,7 @@ export const performanceUtils = {
   /**
    * Memoize expensive calculations
    */
-  memoize<T extends (...args: any[]) => any>(fn: T): T {
+  memoize<T extends (...args: unknown[]) => unknown>(fn: T): T {
     const cache = new Map();
     return ((...args: Parameters<T>) => {
       const key = JSON.stringify(args);

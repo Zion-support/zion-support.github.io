@@ -59,8 +59,8 @@ function sendToAnalytics(metric: Metric): void {
   }
 
   // Send to analytics
-  if (typeof window !== 'undefined' && (window as any).gtag) {
-    (window as any).gtag('event', metric.name, {
+  if (typeof window !== 'undefined' && (window as unknown as { gtag?: unknown }).gtag) {
+    ((window as unknown as { gtag: (event: string, name: string, options: Record<string, unknown>) => void }).gtag)('event', metric.name, {
       event_category: 'Web Vitals',
       event_label: performanceMetric.rating,
       value: Math.round(metric.value),
