@@ -39,20 +39,6 @@ export default function EnterprisePage() {
               $100M+ cost savings, 500% productivity gains, and 99.9% system
               uptime with enterprise-grade security and compliance.
             </p>
-<<<<<<< HEAD
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/contact"
-                className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
-              >
-                Get Enterprise Demo
-              </Link>
-              <Link
-                href="/services"
-                className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-              >
-                View All Services
-=======
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
               <Link
                 href="/contact"
@@ -71,7 +57,6 @@ export default function EnterprisePage() {
                 <span className="group-hover:translate-x-1 transition-transform">
                   ↓
                 </span>
->>>>>>> cursor/fix-errors-and-merge-to-main-7ea5
               </Link>
             </div>
           </div>
@@ -81,25 +66,6 @@ export default function EnterprisePage() {
       {/* Stats Section */}
       <section className="py-20 bg-black/20">
         <div className="container mx-auto px-4">
-<<<<<<< HEAD
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="text-4xl font-bold text-cyan-400 mb-2">500+</div>
-              <div className="text-gray-300">Fortune 500 Clients</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-purple-400 mb-2">$100M+</div>
-              <div className="text-gray-300">Cost Savings</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-green-400 mb-2">500%</div>
-              <div className="text-gray-300">Productivity Gain</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-yellow-400 mb-2">99.9%</div>
-              <div className="text-gray-300">Uptime SLA</div>
-            </div>
-=======
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               Enterprise AI Solutions
@@ -190,7 +156,6 @@ export default function EnterprisePage() {
                 )}
               </div>
             ))}
->>>>>>> cursor/fix-errors-and-merge-to-main-7ea5
           </div>
         </div>
       </section>
@@ -207,57 +172,6 @@ export default function EnterprisePage() {
               and mission-critical applications.
             </p>
           </div>
-<<<<<<< HEAD
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
-              <div className="text-4xl mb-4">🤖</div>
-              <h3 className="text-2xl font-bold text-white mb-4">
-                Autonomous Operations
-              </h3>
-              <p className="text-gray-300 mb-6">
-                Fully autonomous AI systems that manage complex enterprise
-                operations with minimal human intervention.
-              </p>
-              <ul className="text-sm text-gray-400 space-y-2">
-                <li>• 24/7 autonomous monitoring</li>
-                <li>• Self-healing systems</li>
-                <li>• Predictive maintenance</li>
-              </ul>
-            </div>
-
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
-              <div className="text-4xl mb-4">🧠</div>
-              <h3 className="text-2xl font-bold text-white mb-4">
-                Quantum Intelligence
-              </h3>
-              <p className="text-gray-300 mb-6">
-                Next-generation quantum computing solutions for complex
-                optimization and machine learning tasks.
-              </p>
-              <ul className="text-sm text-gray-400 space-y-2">
-                <li>• Quantum machine learning</li>
-                <li>• Complex optimization</li>
-                <li>• Advanced cryptography</li>
-              </ul>
-            </div>
-
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
-              <div className="text-4xl mb-4">🔒</div>
-              <h3 className="text-2xl font-bold text-white mb-4">
-                Enterprise Security
-              </h3>
-              <p className="text-gray-300 mb-6">
-                Military-grade security solutions with advanced threat detection
-                and response capabilities.
-              </p>
-              <ul className="text-sm text-gray-400 space-y-2">
-                <li>• SOC 2 Type II certified</li>
-                <li>• GDPR compliant</li>
-                <li>• End-to-end encryption</li>
-              </ul>
-            </div>
-=======
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
@@ -296,7 +210,6 @@ export default function EnterprisePage() {
                 </ul>
               </div>
             ))}
->>>>>>> cursor/fix-errors-and-merge-to-main-7ea5
           </div>
         </div>
       </section>
@@ -312,20 +225,6 @@ export default function EnterprisePage() {
               Join 500+ Fortune 500 companies already using our AI solutions
               to achieve unprecedented growth and efficiency.
             </p>
-<<<<<<< HEAD
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/contact"
-                className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
-              >
-                Schedule Enterprise Demo
-              </Link>
-              <Link
-                href="/services"
-                className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-              >
-                Explore Solutions
-=======
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
               <Link
                 href="tel:+13024640950"
@@ -340,7 +239,6 @@ export default function EnterprisePage() {
               >
                 <span className="text-xl">📧</span>
                 <span>Get Enterprise Consultation</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-7ea5
               </Link>
             </div>
           </div>

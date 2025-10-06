@@ -96,58 +96,7 @@ const LoadingSpinner = memo(() => (
   </div>
 ));
 
-// Error Boundary Component
-<<<<<<< HEAD
-=======
-interface ErrorBoundaryState {
-  hasError: boolean;
-  error: Error | null;
-}
-
-interface ErrorBoundaryProps {
-  children: React.ReactNode;
-}
-
-class AppErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundaryState> {
-  constructor(props: ErrorBoundaryProps) {
-    super(props);
-    this.state = { hasError: false, error: null };
-  }
-
-  static getDerivedStateFromError(error: Error): ErrorBoundaryState {
-    return { hasError: true, error };
-  }
-
-  override componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-    console.error('App Error Boundary caught an error:', error, errorInfo);
-  }
-
-  override render() {
-    if (this.state.hasError) {
-      return (
-        <div className="min-h-screen flex items-center justify-center bg-gray-50">
-          <div className="text-center">
-            <h1 className="text-2xl font-bold text-gray-900 mb-4">
-              Something went wrong
-            </h1>
-            <p className="text-gray-600 mb-4">
-              We're sorry, but something unexpected happened.
-            </p>
-            <button
-              onClick={() => window.location.reload()}
-              className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
-            >
-              Reload Page
-            </button>
-          </div>
-        </div>
-      );
-    }
-
-    return this.props.children;
-  }
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-7ea5
+// Error Boundary Component (already defined above)
 
 export default function App() {
   const structuredData = useMemo(
@@ -236,20 +185,16 @@ export default function App() {
   }, []);
   const handlePhoneClick = useCallback(() => {
     // Track phone clicks for analytics
-    if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as unknown as { gtag: Function }).gtag('event', 'phone_click', {
-      (window as any).gtag('event', 'phone_click', {
     if (typeof window !== 'undefined' && (window as unknown as { gtag?: Function }).gtag) {
       ((window as unknown as { gtag: Function }).gtag)('event', 'phone_click', {
->>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572
         event_category: 'engagement',
         event_label: 'main_phone_number'
       });
     }
+  }, []);
 
   const handleScrollToTop = useCallback(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
->>>>>>> 6c45f99dc7ca17bbf478e03055adf8e9c75097bc
   }, []);
 
   return (

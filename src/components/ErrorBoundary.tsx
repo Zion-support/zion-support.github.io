@@ -16,19 +16,11 @@ import { Component, type ErrorInfo, type ReactNode } from 'react';
 import { Component, type ErrorInfo, type ReactNode } from 'react';
 import { Component } from 'react';
 import type { ErrorInfo, ReactNode } from 'react';
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
 
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
->>>>>>> main
 }
 
 interface State {
@@ -52,12 +44,9 @@ class ErrorBoundary extends Component<Props, State> {
   }
 
   override componentDidCatch(error: Error, errorInfo: ErrorInfo) {
->>>>>>> main
->>>>>>> main
     console.error('ErrorBoundary caught an error:', error, errorInfo);
 =======
     console.error('Error caught by boundary:', error, errorInfo);
->>>>>>> main
     
     // Report error to analytics/monitoring service
     this.reportError(error, errorInfo);
@@ -69,7 +58,6 @@ class ErrorBoundary extends Component<Props, State> {
   }
 
   handleRetry = () => {
->>>>>>> main
     this.setState({ hasError: false });
   };
 
@@ -103,9 +91,6 @@ class ErrorBoundary extends Component<Props, State> {
     window.location.href = '/';
   };
 
->>>>>>> main
->>>>>>> main
->>>>>>> main
   override render() {
     if (this.state.hasError) {
       return this.props.fallback || (
@@ -185,11 +170,6 @@ class ErrorBoundary extends Component<Props, State> {
               <span className="text-white text-2xl font-bold">!</span>
             </div>
             <div className="w-16 h-16 text-red-500 mx-auto mb-4 text-6xl">⚠️</div>
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
             <h1 className="text-2xl font-bold text-white mb-4">Something went wrong</h1>
             <p className="text-gray-300 mb-6">
               We're sorry, but something unexpected happened. Please try refreshing the page.
@@ -201,8 +181,6 @@ class ErrorBoundary extends Component<Props, State> {
               Refresh Page
             </button>
             <p className="text-gray-400 mb-8">We're working to fix this issue.</p>
->>>>>>> main
->>>>>>> main
           </div>
         </div>
       );
@@ -215,4 +193,3 @@ class ErrorBoundary extends Component<Props, State> {
 export default ErrorBoundary;
 export default ErrorBoundary;
 export default ErrorBoundary;
->>>>>>> main

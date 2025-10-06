@@ -52,11 +52,7 @@ class Analytics {
       referrer: document.referrer || '',
       referrer: document.referrer || '',
       referrer: document.referrer || undefined,
->>>>>>> main
->>>>>>> main
->>>>>>> main
 =======
->>>>>>> 6c45f99dc7ca17bbf478e03055adf8e9c75097bc
     };
   }
   /**
@@ -79,20 +75,9 @@ class Analytics {
       properties,
       value: value || 0,
       properties: properties || {},
-<<<<<<< HEAD
-      action: action || undefined,
-      label: label || undefined,
-      value: value || undefined,
-      properties: properties || undefined,
->>>>>>> main
->>>>>>> main
->>>>>>> main
-=======
       value: value || 0,
       properties: properties || {},
->>>>>>> 6c45f99dc7ca17bbf478e03055adf8e9c75097bc
 =======
->>>>>>> cursor/fix-errors-and-merge-to-main-7ea5
       timestamp: Date.now(),
     };
     this.events.push(event);

@@ -3,9 +3,6 @@ import React, { type ReactNode, useEffect } from 'react';
 import React, { type ReactNode, useEffect } from 'react';
 import React, { type ReactNode, useEffect } from 'react';
 import React, { useEffect, useState } from 'react';
->>>>>>> main
->>>>>>> main
->>>>>>> main
 
 interface AccessibilityEnhancerProps {
   children: React.ReactNode;
