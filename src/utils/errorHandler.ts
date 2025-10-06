@@ -43,7 +43,7 @@ class ErrorHandler {
       this.errorQueue.shift();
     }
     //Log to console in development
-    if (process.env.NODE_ENV === 'development') {
+    if (process.env['NODE_ENV'] === 'development') {
       //Error logged
     }
     //Send to external service in production
