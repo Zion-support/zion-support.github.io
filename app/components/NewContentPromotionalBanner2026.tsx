@@ -67,13 +67,14 @@ const NewContentPromotionalBanner2026: React.FC = () => {
               Latest AI Innovations
             </span>
             <br />
-            <span className="text-white">
+            <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
               That Transform Business
             </span>
           </h2>
           
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Explore cutting-edge AI strategies, implementation roadmaps, and security innovations 
+<<<<<<< HEAD
             that are delivering <span className="text-cyan-400 font-bold">300%+ ROI</span> for enterprises worldwide
           </p>
 
@@ -89,6 +90,23 @@ const NewContentPromotionalBanner2026: React.FC = () => {
             <div className="flex items-center gap-2">
               <Target className="w-5 h-5 text-red-400" />
               <span className="text-gray-300">Proven Results</span>
+=======
+            that are delivering <span className="text-yellow-400 font-bold">300%+ ROI</span> for enterprises worldwide
+          </p>
+
+          <div className="flex items-center justify-center gap-8 text-gray-300">
+            <div className="flex items-center gap-2">
+              <TrendingUp className="w-5 h-5 text-green-400" />
+              <span className="font-semibold">10,000+ Readers</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Zap className="w-5 h-5 text-yellow-400" />
+              <span className="font-semibold">3 New Articles</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Target className="w-5 h-5 text-blue-400" />
+              <span className="font-semibold">Proven Results</span>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e4e
             </div>
           </div>
         </div>
@@ -98,7 +116,11 @@ const NewContentPromotionalBanner2026: React.FC = () => {
           {featuredContent.map((content, index) => (
             <div 
               key={content.id}
+<<<<<<< HEAD
               className="group relative bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover:bg-white/20 transition-all duration-500 transform hover:-translate-y-2"
+=======
+              className="group relative bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-white/40 transition-all duration-500 hover:scale-105"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e4e
               style={{ animationDelay: `${index * 150}ms` }}
             >
               {/* Card glow effect */}
@@ -147,7 +169,11 @@ const NewContentPromotionalBanner2026: React.FC = () => {
         </div>
 
         {/* Bottom CTA Section */}
+<<<<<<< HEAD
         <div className="text-center bg-white/5 backdrop-blur-sm border border-white/20 rounded-2xl p-12">
+=======
+        <div className="text-center bg-white/5 backdrop-blur-lg rounded-2xl p-12 border border-white/20">
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e4e
           <div className="flex items-center justify-center gap-3 mb-6">
             <Rocket className="w-8 h-8 text-cyan-400" />
             <h3 className="text-3xl font-bold text-white">
@@ -156,6 +182,7 @@ const NewContentPromotionalBanner2026: React.FC = () => {
             <Shield className="w-8 h-8 text-purple-400" />
           </div>
           
+<<<<<<< HEAD
           <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
             Join 500+ enterprises achieving <span className="text-cyan-400 font-bold">300% ROI</span>, 
             <span className="text-purple-400 font-bold"> 85% automation</span>, and 
@@ -163,6 +190,15 @@ const NewContentPromotionalBanner2026: React.FC = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
+=======
+          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            Join 500+ enterprises achieving <span className="text-yellow-400 font-bold">300% ROI</span>, 
+            <span className="text-green-400 font-bold"> 85% automation</span>, and 
+            <span className="text-blue-400 font-bold"> complete digital transformation</span> with Zion Tech Group's AI solutions
+          </p>
+
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e4e
             <Link
               href="/contact"
               className="group flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl"
@@ -173,7 +209,11 @@ const NewContentPromotionalBanner2026: React.FC = () => {
             
             <Link
               href="/blog"
+<<<<<<< HEAD
               className="group flex items-center gap-3 border-2 border-white/30 hover:border-white/60 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1"
+=======
+              className="group flex items-center gap-3 border-2 border-white/30 hover:border-white/60 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 hover:bg-white/10"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e4e
             >
               <span>Explore All Content</span>
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -181,6 +221,7 @@ const NewContentPromotionalBanner2026: React.FC = () => {
           </div>
 
           {/* Stats */}
+<<<<<<< HEAD
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="text-3xl font-bold text-cyan-400 mb-2">500+</div>
@@ -196,6 +237,23 @@ const NewContentPromotionalBanner2026: React.FC = () => {
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold text-yellow-400 mb-2">24/7</div>
+=======
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-12 pt-8 border-t border-white/20">
+            <div className="text-center">
+              <div className="text-3xl font-bold text-white mb-2">500+</div>
+              <div className="text-gray-300">Enterprise Clients</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-white mb-2">300%</div>
+              <div className="text-gray-300">Average ROI</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-white mb-2">99.9%</div>
+              <div className="text-gray-300">System Uptime</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-white mb-2">24/7</div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e4e
               <div className="text-gray-300">Expert Support</div>
             </div>
           </div>

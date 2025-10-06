@@ -40,7 +40,11 @@ const ContactPage: React.FC = () => {
               </div>
               <button
                 type="submit"
+<<<<<<< HEAD
                 className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-lg font-semibold transition-colors"
+=======
+                className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e4e
               >
                 Send Message
               </button>
@@ -51,17 +55,31 @@ const ContactPage: React.FC = () => {
             <div className="space-y-4">
               <div>
                 <h4 className="font-medium text-gray-900">Email</h4>
+<<<<<<< HEAD
                 <p className="text-gray-600">info@ziontech.com</p>
               </div>
               <div>
                 <h4 className="font-medium text-gray-900">Phone</h4>
                 <p className="text-gray-600">(555) 123-4567</p>
+=======
+                <p className="text-gray-600">info@ziontechgroup.com</p>
+              </div>
+              <div>
+                <h4 className="font-medium text-gray-900">Phone</h4>
+                <p className="text-gray-600">+1 (302) 464-0950</p>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e4e
               </div>
               <div>
                 <h4 className="font-medium text-gray-900">Address</h4>
                 <p className="text-gray-600">
+<<<<<<< HEAD
                   123 Tech Street<br />
                   Innovation City, IC 12345
+=======
+                  123 Business Street<br />
+                  Suite 100<br />
+                  Wilmington, DE 19801
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e4e
                 </p>
               </div>
             </div>

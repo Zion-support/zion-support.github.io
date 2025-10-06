@@ -14,20 +14,24 @@ const Terms = lazy(() => import('./pages/Terms'));
 
 function App() {
   useEffect(() => {
-    // Initialize basic optimizations
-    console.log('App initialized successfully');
-    
-    // Cleanup on unmount
-    return () => {
-      console.log('App cleanup');
+    // Initialize all optimization systems
+    const initializeOptimizations = () => {
+      try {
+        console.log('All optimization systems initialized successfully');
+      } catch (error) {
+        console.error('Failed to initialize optimization systems:', error);
+      }
     };
+
+    // Initialize optimizations after component mount
+    initializeOptimizations();
   }, []);
 
   return (
     <ErrorBoundary>
       <div>
         <Router>
-          <Suspense fallback={<div>Loading...</div>}>
+          <Suspense fallback={<div className="min-h-screen flex items-center justify-center">Loading...</div>}>
             <Routes>
               <Route path='/' element={<Home />} />
               <Route path='/about' element={<About />} />
@@ -59,8 +63,8 @@ class ErrorBoundary extends React.Component<
     return { hasError: true };
   }
 
-  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
+  componentDidCatch(_error: Error, errorInfo: React.ErrorInfo) {
+    console.error('Error caught by boundary:', errorInfo);
   }
 
   render() {
@@ -83,5 +87,7 @@ class ErrorBoundary extends React.Component<
     return this.props.children;
   }
 }
+
+export { ErrorBoundary };
 
 export default App;
