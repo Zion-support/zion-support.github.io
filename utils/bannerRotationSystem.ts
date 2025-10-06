@@ -132,6 +132,7 @@ export const shouldShowBanner = (banner: BannerConfig): boolean => {
  */
 export const getRotationScore = (banner: BannerConfig): number => {
 <<<<<<< HEAD
+<<<<<<< HEAD
   // Simple scoring based on priority and recent performance
   const priorityScore = banner.priority;
   const recentImpressions = getBannerImpressionCount(banner.id, 24);
@@ -159,6 +160,22 @@ export const getRotationScore = (banner: BannerConfig): number => {
   // Weighted combination
   return (banner.priority * 0.4) + (engagementRate * 0.3) + (recencyScore * 0.2) + (fatigueScore * 0.1);
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-bcb8
+=======
+  // Calculate score based on various factors
+  let score = 0;
+  
+  // Base score from impressions
+  const impressions = getBannerImpressionCount(banner.id);
+  score += Math.max(0, 100 - impressions * 2);
+  
+  // Bonus for new banners
+  if (impressions === 0) score += 50;
+  
+  // Penalty for over-impressed banners
+  if (impressions > 10) score -= 30;
+  
+  return Math.max(0, score);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-a05b
 };
 
 export const selectBannersForRotation = (allBanners: BannerConfig[], maxBanners: number = MAX_VISIBLE_BANNERS): BannerConfig[] => {

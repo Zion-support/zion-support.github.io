@@ -500,7 +500,11 @@ export class ComprehensiveOptimizer {
     return {
       accessibility: this.accessibilityReport,
       performance: this.performanceMetrics,
+<<<<<<< HEAD
       seo: true
+=======
+      seo: true,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-a05b
     };
   }
 }

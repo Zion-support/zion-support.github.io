@@ -4,6 +4,7 @@
  * Optimizes banner loading by implementing lazy loading and code splitting
  * to improve initial page load performance.
  */
+<<<<<<< HEAD:utils/bannerLazyLoader.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
 import { lazy } from 'react';
@@ -14,6 +15,9 @@ import { lazy, type ComponentType } from 'react';
 =======
 import React, { lazy, ComponentType } from 'react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-3b0a
+=======
+import { lazy, type ComponentType } from 'react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-a05b:utils/bannerLazyLoader.tsx
 
 interface BannerModule {
   default: ComponentType<Record<string, unknown>>;
@@ -46,6 +50,7 @@ export const lazyLoadBanner = (
               );
               // Return a fallback component
               resolve({
+<<<<<<< HEAD:utils/bannerLazyLoader.ts
 <<<<<<< HEAD
                 default: () => {
                   const React = require('react');
@@ -64,6 +69,14 @@ export const lazyLoadBanner = (
                 retryError
               );
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a4f
+=======
+                default: () => (
+                  <div className="banner-fallback">
+                    <p>Banner temporarily unavailable</p>
+                  </div>
+                )
+              });
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-a05b:utils/bannerLazyLoader.tsx
             });
         }, 1000);
       });
@@ -77,18 +90,20 @@ export const lazyLoadBanner = (
 export const preloadBanner = (importFn: () => Promise<BannerModule>): void => {
   if (typeof window !== 'undefined') {
     // Preload on idle
-    if ('requestIdleCallback' in window) {
-      requestIdleCallback(() => {
-        importFn().catch(() => {
-          // Silently fail for preload
-        });
+    setTimeout(() => {
+      importFn().catch(() => {
+        // Silently fail for preload
       });
+<<<<<<< HEAD:utils/bannerLazyLoader.ts
 <<<<<<< HEAD
     }
   }
 };
 =======
     });
+=======
+    }, 0);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-a05b:utils/bannerLazyLoader.tsx
   }
 };
 /**
@@ -141,6 +156,15 @@ export class BannerObserver {
               this.observer?.unobserve(entry.target);
             }
           }
+<<<<<<< HEAD:utils/bannerLazyLoader.ts
+=======
+        });
+      }, this.options);
+    } else {
+      setTimeout(() => {
+        importFn().catch(() => {
+          // Silently fail for preload
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-a05b:utils/bannerLazyLoader.tsx
         });
       }, {
         rootMargin: '50px',
@@ -201,7 +225,10 @@ export const trackBannerPerformance = (
     // Example: gtag('event', 'banner_performance', {...metrics, banner: bannerName });
   }
 };
+<<<<<<< HEAD:utils/bannerLazyLoader.ts
 
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-a05b:utils/bannerLazyLoader.tsx
 export const useBannerLoading = (componentName: string) => {
   const manager = new BannerLoadingManager();
   return {
@@ -213,11 +240,19 @@ export const useBannerLoading = (componentName: string) => {
 
 export default {
   lazyLoadBanner,
+<<<<<<< HEAD:utils/bannerLazyLoader.ts
   preloadBanners,
+=======
+  preloadBanner,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-a05b:utils/bannerLazyLoader.tsx
   getBannerPriority,
   sortBannersByPriority,
   BannerObserver,
   trackBannerPerformance,
   useBannerLoading
+<<<<<<< HEAD:utils/bannerLazyLoader.ts
 };
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-bcb8
+=======
+};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-a05b:utils/bannerLazyLoader.tsx
