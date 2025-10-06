@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
 =======
@@ -8,21 +9,31 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import { NextApiRequest, NextApiResponse } from 'next';
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0a8c
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
 export interface ApiError extends Error {
   statusCode?: number;
   isOperational?: boolean;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 export class AppError extends Error implements ApiError {
   public statusCode: number;
   public isOperational: boolean;
 =======
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
 
 export class AppError extends Error implements ApiError {
   public statusCode: number;
   public isOperational: boolean;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0a8c
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
   constructor(message: string, statusCode: number = 500) {
     super(message);
     this.statusCode = statusCode;
@@ -31,9 +42,13 @@ export class AppError extends Error implements ApiError {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0a8c
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
 export const errorHandler = (
   err: ApiError,
   req: NextApiRequest,
@@ -42,12 +57,16 @@ export const errorHandler = (
   const { statusCode = 500, message } = err;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0a8c
+=======
+  
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
   // Log error for monitoring
   console.error(`API Error [${statusCode}]: ${message}`, {
     url: req.url,
@@ -57,9 +76,13 @@ export const errorHandler = (
     ip: req.headers['x-forwarded-for'] || req.connection.remoteAddress
   });
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0a8c
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
   res.status(statusCode).json({
     error: {
       message:
@@ -68,11 +91,14 @@ export const errorHandler = (
           : message,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       statusCode,
       timestamp: new Date().toISOString()
     }
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
       statusCode,
       timestamp: new Date().toISOString()
     },
@@ -82,6 +108,7 @@ export const errorHandler = (
 
 export const asyncHandler =
   (fn: Function) =>
+<<<<<<< HEAD
 <<<<<<< HEAD
   (req: NextApiRequest, res: NextApiResponse) next: Function) => {Promise.resolve(fn(req, res) next)).catch((error: Error) => next(error))}
   };
@@ -110,3 +137,8 @@ export const asyncHandler = (fn: Function) => {
     Promise.resolve(fn(req, res, next)).catch((error: Error) => next(error));
   };
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0a8c
+=======
+  (req: NextApiRequest, res: NextApiResponse, next: Function) => {
+    Promise.resolve(fn(req, res, next)).catch((error: Error) => next(error));
+  };
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8

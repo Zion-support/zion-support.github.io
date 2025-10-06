@@ -8,6 +8,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { onCLS, onFCP, onLCP, onTTFB } from 'web-vitals';
 import type { Metric } from 'web-vitals';
 
@@ -77,6 +78,19 @@ interface NetworkConnection {
 interface NavigatorWithConnection extends Navigator {
   connection?: NetworkConnection;
 }
+=======
+import { onCLS, onFCP, onLCP, onTTFB } from 'web-vitals';
+import type { Metric } from 'web-vitals';
+
+// Types
+interface PerformanceMetric {
+  name: string;
+  value: number;
+  rating: 'good' | 'needs-improvement' | 'poor';
+  delta: number;
+  id: string;
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
 
 interface PerformanceReport {
   metrics: PerformanceMetric[];
@@ -84,12 +98,14 @@ interface PerformanceReport {
   url: string;
   userAgent: string;
 }
+
 // Thresholds for ratings (from web.dev)
 const THRESHOLDS = {
   CLS: { good: 0.1, poor: 0.25 },
   FID: { good: 100, poor: 300 },
   FCP: { good: 1800, poor: 3000 },
   LCP: { good: 2500, poor: 4000 },
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -111,20 +127,29 @@ const THRESHOLDS = {
 =======
   TTFB: { good: 800, poor: 1800 },
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-b781
+=======
+  TTFB: { good: 800, poor: 1800 },
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
 };
+
 /**
  * Get rating based on metric value
  */
+<<<<<<< HEAD
 function getRating(
   name: string,
   value: number
 ): 'good' | 'needs-improvement' | 'poor' {
+=======
+function getRating(name: string, value: number): 'good' | 'needs-improvement' | 'poor' {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
   const threshold = THRESHOLDS[name as keyof typeof THRESHOLDS];
   if (!threshold) return 'good';
   if (value <= threshold.good) return 'good';
   if (value <= threshold.poor) return 'needs-improvement';
   return 'poor';
 }
+
 /**
  * Send metric to analytics and custom endpoints
  */
@@ -134,6 +159,7 @@ function sendToAnalytics(metric: Metric): void {
     value: metric.value,
     rating: getRating(metric.name, metric.value),
     delta: metric.delta,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -154,12 +180,18 @@ function sendToAnalytics(metric: Metric): void {
 =======
     id: metric.id,
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-b781
+=======
+    id: metric.id,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
   };
+
   // Log in development
   if (process.env.NODE_ENV === 'development') {
     console.log('Performance Metric:', performanceMetric);
   }
+
   // Send to analytics
+<<<<<<< HEAD
   if (typeof window !== 'undefined' && window.gtag) {
     window.gtag('event', metric.name, {
       event_category: 'Web Vitals',
@@ -213,11 +245,23 @@ function sendToAnalytics(metric: Metric): void {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-b781
+=======
+  if (typeof window !== 'undefined' && (window as any).gtag) {
+    (window as any).gtag('event', metric.name, {
+      event_category: 'Web Vitals',
+      event_label: performanceMetric.rating,
+      value: Math.round(metric.value),
+      non_interaction: true,
+    });
+  }
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
 }
+
 /**
  * Initialize performance monitoring
  */
 export function initPerformanceMonitoring(): void {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -228,18 +272,27 @@ export function initPerformanceMonitoring(): void {
 =======
   try {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
+=======
+  try {
+    // Core Web Vitals
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
     onCLS(sendToAnalytics);
     onFCP(sendToAnalytics);
     onLCP(sendToAnalytics);
     onTTFB(sendToAnalytics);
   } catch (error) {
+<<<<<<< HEAD
     console.error('Error initializing performance monitoring:', error);
+=======
+    console.error('Failed to initialize performance monitoring:', error);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -588,11 +641,26 @@ export function generatePerformanceReport(): PerformanceReport | null {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-b781
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6231
+=======
+/**
+ * Generate performance report
+ */
+export function generatePerformanceReport(): PerformanceReport {
+  const metrics: PerformanceMetric[] = [];
+  
+  return {
+    metrics,
+    timestamp: new Date().toISOString(),
+    url: typeof window !== 'undefined' ? window.location.href : '',
+    userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : '',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
   };
 }
+
 /**
- * Monitor long tasks
+ * Check if performance monitoring is supported
  */
+<<<<<<< HEAD
 export function getPerformanceScore(metrics: PerformanceMetric[]): number {
   if (metrics.length === 0) return 0;
   const scores = metrics.map(metric => {
@@ -921,3 +989,8 @@ export function isPerformanceAcceptable(): boolean {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-b781
+=======
+export function isPerformanceMonitoringSupported(): boolean {
+  return typeof window !== 'undefined' && 'performance' in window;
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8

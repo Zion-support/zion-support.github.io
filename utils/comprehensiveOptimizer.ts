@@ -2,6 +2,7 @@
  * Comprehensive optimization utilities that integrate accessibility, performance, and SEO
  */
 import {
+<<<<<<< HEAD
   focusManagement,
   ariaUtils,
   keyboardNavigation,
@@ -17,6 +18,10 @@ import {
 
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a4f
+=======
+  ariaUtils
+} from './accessibilityUtils';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
 import {
   getMemoryUsage,
   collectPerformanceMetrics,
@@ -28,9 +33,12 @@ import {
   optimizeScrollPerformance
 } from './performanceUtils';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a4f
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
 import {
   setMetaTags,
   setOpenGraphTags,
@@ -49,6 +57,7 @@ import {
   seoAudit
 } from './seoUtils';
 
+<<<<<<< HEAD
 /**
  * Comprehensive optimization configuration
  */
@@ -75,6 +84,25 @@ export interface OptimizationConfig {
     enableTwitterCards: boolean;
     enableStructuredData: boolean;
     enableCanonicalUrl: boolean;
+=======
+// Comprehensive optimization interface
+export interface OptimizationConfig {
+  accessibility: {
+    autoFix: boolean;
+    announceChanges: boolean;
+    respectMotionPreferences: boolean;
+  };
+  performance: {
+    enableLazyLoading: boolean;
+    preloadCritical: boolean;
+    optimizeScroll: boolean;
+    monitorMemory: boolean;
+  };
+  seo: {
+    autoOptimize: boolean;
+    generateStructuredData: boolean;
+    optimizeMetaTags: boolean;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
   };
   enableAccessibility: boolean;
   enablePerformance: boolean;
@@ -91,6 +119,7 @@ export interface OptimizationConfig {
   seoLevel: 'basic' | 'advanced';
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -140,6 +169,43 @@ export class ComprehensiveOptimizer {
   public async initialize(): Promise<void> {
     if (this.isInitialized) return;
 
+=======
+// Default configuration
+export const defaultConfig: OptimizationConfig = {
+  accessibility: {
+    autoFix: true,
+    announceChanges: true,
+    respectMotionPreferences: true
+  },
+  performance: {
+    enableLazyLoading: true,
+    preloadCritical: true,
+    optimizeScroll: true,
+    monitorMemory: true
+  },
+  seo: {
+    autoOptimize: true,
+    generateStructuredData: true,
+    optimizeMetaTags: true
+  }
+};
+
+// Comprehensive optimization class
+export class ComprehensiveOptimizer {
+  private config: OptimizationConfig;
+  private isInitialized = false;
+  private performanceObserver: PerformanceObserver | null = null;
+  private memoryInterval: NodeJS.Timeout | null = null;
+
+  constructor(config: Partial<OptimizationConfig> = {}) {
+    this.config = { ...defaultConfig, ...config };
+  }
+
+  // Initialize all optimizations
+  public async initialize(): Promise<void> {
+    if (this.isInitialized) return;
+    
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
     try {
       // Initialize accessibility features
       if (this.config.accessibility.enableFocusManagement) {
@@ -155,6 +221,7 @@ export class ComprehensiveOptimizer {
       if (this.config.performance.enableLazyLoading) {
         lazyLoadImages();
       }
+<<<<<<< HEAD
 
       // Initialize scroll optimization
       if (this.config.performance.enableScrollOptimization) {
@@ -163,11 +230,37 @@ export class ComprehensiveOptimizer {
 
       this.isInitialized = true;
       console.log('Comprehensive optimizer initialized successfully');
+=======
+      if (this.config.performance.preloadCritical) {
+        preloadCriticalResources(['/critical.css', '/critical.js']);
+      }
+      if (this.config.performance.optimizeScroll) {
+        optimizeScrollPerformance();
+      }
+      
+      // Initialize accessibility optimizations
+      if (this.config.accessibility.respectMotionPreferences) {
+        this.applyMotionPreferences();
+      }
+      
+      // Initialize SEO optimizations
+      if (this.config.seo.autoOptimize) {
+        this.optimizeSEO();
+      }
+      
+      // Start monitoring
+      if (this.config.performance.monitorMemory) {
+        this.startMemoryMonitoring();
+      }
+      
+      this.isInitialized = true;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
     } catch (error) {
       console.error('Failed to initialize comprehensive optimizer:', error);
     }
   }
 
+<<<<<<< HEAD
   /**
    * Optimize page for accessibility
    */
@@ -381,9 +474,33 @@ export class ComprehensiveOptimizer {
       'viewport': 'width=device-width, initial-scale=1',
       'robots': 'index, follow',
       'author': 'Zion Tech Group'
+=======
+  // Apply motion preferences
+  private applyMotionPreferences(): void {
+    if (typeof window === 'undefined') return;
+    
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersReducedMotion) {
+      document.documentElement.style.setProperty('--motion-duration', '0s');
+      document.documentElement.style.setProperty('--motion-delay', '0s');
+    }
+  }
+
+  // Optimize SEO
+  private optimizeSEO(): void {
+    if (typeof window === 'undefined') return;
+    
+    // Set basic meta tags
+    setMetaTags({
+      title: document.title,
+      description: 'Zion Tech Group - Advanced AI and IT Solutions',
+      keywords: 'AI, IT Solutions, Technology, Innovation'
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
     });
+    
     // Set Open Graph tags
     setOpenGraphTags({
+<<<<<<< HEAD
       title: 'Zion Tech Group - Advanced AI and IT Solutions',
       description: 'Leading provider of AI-powered IT solutions and enterprise services',
       type: 'website'
@@ -701,3 +818,38 @@ export async function quickOptimize(): Promise<void> {
   console.log('Quick optimization completed:', optimizer.getOptimizationReport());
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a4f
+=======
+      title: document.title,
+      description: 'Zion Tech Group - Advanced AI and IT Solutions',
+      url: window.location.href,
+      type: 'website'
+    });
+  }
+
+  // Start memory monitoring
+  private startMemoryMonitoring(): void {
+    if (typeof window === 'undefined') return;
+    
+    this.memoryInterval = setInterval(() => {
+      const memoryUsage = getMemoryUsage();
+      if (memoryUsage && memoryUsage.usedJSHeapSize > 100 * 1024 * 1024) { // 100MB
+        console.warn('High memory usage detected:', memoryUsage);
+      }
+    }, 30000); // Check every 30 seconds
+  }
+
+  // Cleanup
+  public destroy(): void {
+    if (this.performanceObserver) {
+      this.performanceObserver.disconnect();
+    }
+    if (this.memoryInterval) {
+      clearInterval(this.memoryInterval);
+    }
+    this.isInitialized = false;
+  }
+}
+
+// Export default instance
+export const optimizer = new ComprehensiveOptimizer();
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8

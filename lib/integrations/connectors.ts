@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { ProviderConnection, SyncLogEntry } from './types';
 <<<<<<< HEAD
 // import { v4 as uuidv4 } from 'uuid';
@@ -24,6 +25,9 @@ export async function simulateAction<T = any>(
 =======
 import { ProviderConnection, SyncLogEntry } from './types';
 import { v4 as uuidv4 } from 'uuid';
+=======
+import type { ProviderConnection, SyncLogEntry } from './types';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
 
 export async function simulateAction<T = any>(
   connection: ProviderConnection,
@@ -31,8 +35,12 @@ export async function simulateAction<T = any>(
   details: Record<string, any> = {}
 ): Promise<{ log: SyncLogEntry; result: T }> {
   const log: SyncLogEntry = {
+<<<<<<< HEAD
     id: uuidv4(),
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0a8c
+=======
+    id: `log_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
     timestamp: Date.now(),
     providerId: connection.providerId,
     level: 'info',
@@ -40,15 +48,20 @@ export async function simulateAction<T = any>(
     details
   };
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0a8c
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
   // In a real implementation, call provider SDK/API here using connection.accessToken
   return {
     log,
     result: { ok: true } as unknown as T
   };
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 // CRM actions
 export const crm = {
@@ -134,6 +147,8 @@ export const ats = {
   async updateStatus(connection: ProviderConnection, change: Record<string, any>) {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-3d1d
 =======
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
 
 // CRM actions
 export const crm = {
@@ -154,7 +169,10 @@ export const ats = {
     return simulateAction(connection, 'ats.pushApplicant', { applicant });
   },
   async updateStatus(connection: ProviderConnection, change: Record<string, any>) {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0a8c
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
     return simulateAction(connection, 'ats.updateStatus', { change });
   }
 };

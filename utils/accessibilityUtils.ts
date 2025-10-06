@@ -76,12 +76,17 @@ export const ariaUtils = {
     announcement.textContent = message;
     
     document.body.appendChild(announcement);
+<<<<<<< HEAD
+=======
+    
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
     setTimeout(() => {
       document.body.removeChild(announcement);
     }, 1000);
   },
 };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 // Keyboard navigation utilities
 export const keyboardNavigation = {
@@ -200,8 +205,47 @@ export const motionUtils = {
     if (motionUtils.prefersReducedMotion()) {
       element.style.animation = 'none';
       element.style.transition = 'none';
-    }
+=======
+// Color contrast utilities
+export const colorContrast = {
+  // Check if color combination meets WCAG standards
+  checkContrast: (foreground: string, background: string): boolean => {
+    // This is a simplified check - in production, use a proper color contrast library
+    return true;
   },
+
+  // Get high contrast version of color
+  getHighContrast: (color: string): string => {
+    // Simplified implementation
+    return color === '#ffffff' ? '#000000' : '#ffffff';
+  },
+};
+
+// Keyboard navigation utilities
+export const keyboardNavigation = {
+  // Handle arrow key navigation
+  handleArrowKeys: (event: KeyboardEvent, items: HTMLElement[]): void => {
+    const currentIndex = items.indexOf(event.target as HTMLElement);
+    let nextIndex = currentIndex;
+
+    switch (event.key) {
+      case 'ArrowDown':
+      case 'ArrowRight':
+        nextIndex = (currentIndex + 1) % items.length;
+        break;
+      case 'ArrowUp':
+      case 'ArrowLeft':
+        nextIndex = currentIndex === 0 ? items.length - 1 : currentIndex - 1;
+        break;
+      default:
+        return;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
+    }
+
+    event.preventDefault();
+    items[nextIndex]?.focus();
+  },
+<<<<<<< HEAD
   // Respect user's motion preferences
   conditionalAnimation: (animation: string, fallback: string = ''): string => {
     return motionUtils.prefersReducedMotion() ? fallback : animation;
@@ -241,19 +285,34 @@ export const formAccessibility = {
     return contrastRatio >= thresholds[level];
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-bcb8
+=======
+
+  // Handle Enter and Space key activation
+  handleActivation: (event: KeyboardEvent, callback: () => void): void => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      callback();
+    }
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
   },
 };
 
 // Screen reader utilities
+<<<<<<< HEAD
 export const screenReaderUtils = {
+=======
+export const screenReader = {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
   // Hide element from screen readers
   hideFromScreenReader: (element: HTMLElement): void => {
     element.setAttribute('aria-hidden', 'true');
   },
+
   // Show element to screen readers
   showToScreenReader: (element: HTMLElement): void => {
     element.removeAttribute('aria-hidden');
   },
+<<<<<<< HEAD
   // Create screen reader only text
   createScreenReaderText: (text: string): HTMLElement => {
     const element = document.createElement('span');
@@ -336,6 +395,13 @@ export const accessibilityTesting = {
       headings: headingCheck,
       score,
     };
+=======
+
+  // Check if element is visible to screen readers
+  isVisibleToScreenReader: (element: HTMLElement): boolean => {
+    return element.getAttribute('aria-hidden') !== 'true' && 
+           !element.classList.contains('sr-only');
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
   },
 <<<<<<< HEAD
 <<<<<<< HEAD

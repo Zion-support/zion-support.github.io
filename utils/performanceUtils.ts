@@ -4,10 +4,14 @@
 
 // Debounce function for performance optimization
 <<<<<<< HEAD
+<<<<<<< HEAD
 export const debounce = <T extends (...args: unknown[]) => unknown>(
 =======
 export const debounce = <T extends (...args: any[]) => any>(
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-3b0a
+=======
+export const debounce = <T extends (...args: any[]) => any>(
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
   func: T,
   wait: number,
   immediate = false
@@ -15,11 +19,14 @@ export const debounce = <T extends (...args: any[]) => any>(
   let timeout: NodeJS.Timeout | null = null;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-3b0a
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a4f
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
   return function executedFunction(...args: Parameters<T>) {
     const later = () => {
       timeout = null;
@@ -35,6 +42,7 @@ export const debounce = <T extends (...args: any[]) => any>(
 
 // Throttle function for performance optimization
 <<<<<<< HEAD
+<<<<<<< HEAD
 export const throttle = <T extends (...args: unknown[]) => unknown>(
   func: T,
   _limit: number // eslint-disable-line @typescript-eslint/no-unused-vars
@@ -48,11 +56,14 @@ export const throttle = <T extends (...args: unknown[]) => unknown>(
         inThrottle = false;
       }, limit);
 =======
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
 export const throttle = <T extends (...args: any[]) => any>(
   func: T,
   limit: number
 ): ((...args: Parameters<T>) => void) => {
   let inThrottle: boolean;
+<<<<<<< HEAD
 <<<<<<< HEAD
   return function executedFunction(...args: Parameters<T>) {
     if (!inThrottle) {
@@ -66,10 +77,18 @@ export const throttle = <T extends (...args: any[]) => any>(
       inThrottle = true;
       setTimeout(() => (inThrottle = false), limit);
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a4f
+=======
+  return function executedFunction(this: any, ...args: Parameters<T>) {
+    if (!inThrottle) {
+      func.apply(this, args);
+      inThrottle = true;
+      setTimeout(() => (inThrottle = false), limit);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
     }
     setTimeout(() => (inThrottle = false), limit);
   };
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -445,26 +464,60 @@ export const optimizeBundleSize = {
 };
 <<<<<<< HEAD
 // Performance monitoring
+=======
+
+// Get memory usage information
+export const getMemoryUsage = (): any => {
+  if (typeof window === 'undefined' || !('performance' in window)) {
+    return null;
+  }
+  
+  const memory = (performance as any).memory;
+  if (!memory) return null;
+  
+  return {
+    usedJSHeapSize: memory.usedJSHeapSize,
+    totalJSHeapSize: memory.totalJSHeapSize,
+    jsHeapSizeLimit: memory.jsHeapSizeLimit
+  };
+};
+
+// Collect performance metrics
+export const collectPerformanceMetrics = (): any => {
+  if (typeof window === 'undefined' || !('performance' in window)) {
+    return null;
+  }
+  
+  const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+  const paint = performance.getEntriesByType('paint');
+  
+  return {
+    navigation: navigation ? {
+      domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
+      loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
+      domInteractive: navigation.domInteractive - navigation.fetchStart,
+      firstByte: navigation.responseStart - navigation.fetchStart
+    } : null,
+    paint: paint.reduce((acc, entry) => {
+      acc[entry.name] = entry.startTime;
+      return acc;
+    }, {} as Record<string, number>)
+  };
+};
+
+// Performance monitor
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
 export const performanceMonitor = {
   start: (name: string) => {
+    if (typeof window === 'undefined' || !('performance' in window)) return;
     performance.mark(`${name}-start`);
   },
   end: (name: string) => {
+    if (typeof window === 'undefined' || !('performance' in window)) return;
     performance.mark(`${name}-end`);
-    performance.measure(name, `${name}-start`) `${name}-end`);
-    const measure = performance.getEntriesByName(name)[0];
-    return measure ? measure.duration: 0,
+    performance.measure(name, `${name}-start`, `${name}-end`);
   },
-  getMetrics: () => {const measures = performance.getEntriesByType('measure'),
-    return measures.map(measure => ({
-      name: measure.name)
-      duration: measure.duration}
-      startTime: measure.startTime;
-    }));
-  },
-  clear: () => {performance.clearMarks()}
-    performance.clearMeasures()}
-  },
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-3b0a
 =======
 
@@ -478,4 +531,63 @@ export default {
   collectPerformanceMetrics,
   getMemoryUsage
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a4f
+=======
+  getMeasurements: (name: string) => {
+    if (typeof window === 'undefined' || !('performance' in window)) return null;
+    return performance.getEntriesByName(name);
+  }
+};
+
+// Lazy load images
+export const lazyLoadImages = (): void => {
+  if (typeof window === 'undefined') return;
+  
+  const images = document.querySelectorAll('img[data-src]');
+  const imageObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const img = entry.target as HTMLImageElement;
+        img.src = img.dataset['src'] || '';
+        img.removeAttribute('data-src');
+        imageObserver.unobserve(img);
+      }
+    });
+  });
+  
+  images.forEach(img => imageObserver.observe(img));
+};
+
+// Preload critical resources
+export const preloadCriticalResources = (resources: string[]): void => {
+  if (typeof window === 'undefined') return;
+  
+  resources.forEach(resource => {
+    const link = document.createElement('link');
+    link.rel = 'preload';
+    link.href = resource;
+    link.as = 'script';
+    document.head.appendChild(link);
+  });
+};
+
+// Optimize scroll performance
+export const optimizeScrollPerformance = (): void => {
+  if (typeof window === 'undefined') return;
+  
+  let ticking = false;
+  
+  const updateScrollPosition = () => {
+    // Scroll optimization logic here
+    ticking = false;
+  };
+  
+  const requestTick = () => {
+    if (!ticking) {
+      requestAnimationFrame(updateScrollPosition);
+      ticking = true;
+    }
+  };
+  
+  window.addEventListener('scroll', requestTick, { passive: true });
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
 };

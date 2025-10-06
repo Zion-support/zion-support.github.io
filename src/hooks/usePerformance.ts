@@ -4,8 +4,13 @@
  */
 import { useEffect, useCallback, useRef } from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { performanceOptimizer } from '../utils/performanceOptimizer';
 <<<<<<< HEAD
+=======
+import { initPerformanceMonitoring, getPerformanceMetrics } from '../utils/performanceOptimizer';
+import analytics from '../utils/analytics';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -287,11 +292,16 @@ export const useLongTaskMonitoring = () => {
   useEffect(() => {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     if (typeof window === 'undefined' || !window.PerformanceObserver) {
       return;
     }
 
     const observer = performanceOptimizer.monitorLongTasks((entries: PerformanceEntry[]) => {
+=======
+    const observer = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
       entries.forEach((entry: PerformanceEntry) => {
 <<<<<<< HEAD
 <<<<<<< HEAD

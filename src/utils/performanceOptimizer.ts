@@ -23,12 +23,15 @@ export interface WebVitalsMetrics {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-8da8
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6231
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-e6f9
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
 export interface PerformanceBudget {
 =======
 interface PerformanceBudget {
@@ -97,6 +100,7 @@ export const throttle = <T extends (...args: unknown[]) => unknown>(
 
 /**
 <<<<<<< HEAD
+<<<<<<< HEAD
  * Lazy load images
  */
 export const lazyLoadImages = (): void => {
@@ -134,31 +138,85 @@ export const lazyLoadImages = (): void => {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-8da8
   document.querySelectorAll('img[data-src]').forEach(img => {
     imageObserver.observe(img);
+=======
+ * Check if performance monitoring is supported
+ */
+export const isPerformanceSupported = (): boolean => {
+  return typeof window !== 'undefined' && 'performance' in window;
+};
+
+/**
+ * Get performance metrics
+ */
+export const getPerformanceMetrics = (): WebVitalsMetrics => {
+  if (!isPerformanceSupported()) {
+    return {};
+  }
+
+  const metrics: WebVitalsMetrics = {};
+  const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+  
+  if (navigation) {
+    metrics.TTFB = navigation.responseStart - navigation.requestStart;
+  }
+
+  return metrics;
+};
+
+/**
+ * Check performance budget
+ */
+export const checkPerformanceBudget = (budget: PerformanceBudget): boolean => {
+  const metrics = getPerformanceMetrics();
+  
+  // Check bundle size (would need to be passed in)
+  // Check image sizes (would need to be measured)
+  // Check load times
+  if (metrics.TTFB && metrics.TTFB > budget.maxFirstLoad) {
+    return false;
+  }
+
+  return true;
+};
+
+/**
+ * Optimize images
+ */
+export const optimizeImages = (): void => {
+  if (typeof window === 'undefined') return;
+
+  const images = document.querySelectorAll('img');
+  images.forEach((img) => {
+    if (!img.loading) {
+      img.loading = 'lazy';
+    }
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
   });
 };
 
 <<<<<<< HEAD
 /**
- * Preconnect to external domains
+ * Preload critical resources
  */
-export const preconnectDomains = (domains: string[]): void => {
-  if (typeof document === 'undefined') return;
+export const preloadCriticalResources = (resources: string[]): void => {
+  if (typeof window === 'undefined') return;
 
-  domains.forEach(domain => {
+  resources.forEach((resource) => {
     const link = document.createElement('link');
-    link.rel = 'preconnect';
-    link.href = domain;
-    link.crossOrigin = 'anonymous';
+    link.rel = 'preload';
+    link.href = resource;
+    link.as = 'script';
     document.head.appendChild(link);
   });
 };
 
 /**
- * Prefetch resources
+ * Initialize performance monitoring
  */
-export const prefetchResources = (urls: string[]): void => {
-  if (typeof document === 'undefined') return;
+export const initPerformanceMonitoring = (): void => {
+  if (!isPerformanceSupported()) return;
 
+<<<<<<< HEAD
   urls.forEach(url => {
     const link = document.createElement('link');
     link.rel = 'prefetch';
@@ -1052,3 +1110,14 @@ export default performanceOptimizer;
 =======
 };
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-e6f9
+=======
+  // Monitor Core Web Vitals
+  const observer = new PerformanceObserver((list) => {
+    list.getEntries().forEach((entry) => {
+      console.log('Performance entry:', entry);
+    });
+  });
+
+  observer.observe({ entryTypes: ['measure', 'navigation', 'paint'] });
+};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
