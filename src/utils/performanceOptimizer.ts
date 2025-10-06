@@ -842,7 +842,6 @@ export const preloadCriticalResources = (): void => {
   // Get performance metrics
   getMetrics(): Record<string, number> {
     return Object.fromEntries(this.metrics);
->>>>>>> 71655f282840ed9a4a2a6696e410390223898ad3
   }
   // Measure page load performance
   measurePageLoad(): WebVitalsMetrics | null {
