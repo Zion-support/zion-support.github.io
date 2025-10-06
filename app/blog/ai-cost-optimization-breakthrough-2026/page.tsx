@@ -15,7 +15,7 @@ export const metadata = {
       
         url: '/og-ai-cost-optimization-2026.jpg',
         width: 1200,
-        height: 630,
+  height: 630,
         alt: 'AI Cost Optimization Breakthrough 2026 - 90% Cost Reduction',
       },
     ],

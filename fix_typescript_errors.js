@@ -4,40 +4,40 @@ import fs from 'fs';
 import path from 'path';
 import { glob } from 'glob';
 
-// Common patterns to fix
+//Common patterns to fix
 const fixes = [
-  // Fix missing commas in object literals
+  //Fix missing commas in object literals
   {
     pattern:
       /(\s+icon:\s*['"`][^'"`]*['"`])\s*\n\s*(gradient:|badge:|insights:|value:|label:)/g,
     replacement: '$1,\n      $2',
   },
-  // Fix missing closing tags for self-closing elements
+  //Fix missing closing tags for self-closing elements
   {
     pattern: /<br\s*$/gm,
     replacement: '<br />',
   },
-  // Fix malformed JSX attributes
+  //Fix malformed JSX attributes
   {
     pattern: /className=\{`([^`]*)\$\{([^}]*)\}\s*([^`]*)\`\}/g,
     replacement: 'className={`$1${$2}$3`}',
   },
-  // Fix missing closing tags for JSX elements
+  //Fix missing closing tags for JSX elements
   {
     pattern: /<(\w+)\s*$/gm,
     replacement: '<$1 />',
   },
-  // Fix malformed template literals
+  //Fix malformed template literals
   {
     pattern: /\$\{>\s*([^}]*)\}/g,
     replacement: '${$1}',
   },
-  // Fix missing commas in arrays
+  //Fix missing commas in arrays
   {
     pattern: /(\s+icon:\s*['"`][^'"`]*['"`])\s*\n\s*(\})/g,
     replacement: '$1,\n    $2',
   },
-  // Fix malformed JSX expressions
+  //Fix malformed JSX expressions
   {
     pattern: /(\s+)\{([^}]*)\}\s*\n\s*(\})/g,
     replacement: '$1{$2}\n    $3',
