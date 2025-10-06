@@ -1,4 +1,4 @@
-import { Suspense, useEffect } from 'react';
+import React, { Suspense, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import performanceOptimizer from './utils/performanceOptimizer';
 import './index.css';
@@ -72,8 +72,8 @@ function App() {
         if ('requestIdleCallback' in window) {
           requestIdleCallback(() => {
             // Preload critical pages
-            import('./pages/Home');
-            import('./pages/About');
+            // import('./pages/Home');
+            // import('./pages/About');
           });
         }
         
