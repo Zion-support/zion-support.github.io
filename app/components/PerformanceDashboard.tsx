@@ -31,6 +31,7 @@ const PerformanceDashboard: React.FC = () => {
         ).memory;
         const memoryUsage = memory ? memory.usedJSHeapSize / 1024 / 1024 : 0;
 
+<<<<<<< HEAD
         setMetrics(prev => ({
           ...prev,
           loadTime,
@@ -38,6 +39,13 @@ const PerformanceDashboard: React.FC = () => {
           renderTime: performance.now(),
         }));
       }
+=======
+      setMetrics(prev => ({
+        ...prev,
+        loadTime,
+        memoryUsage,
+      }));
+>>>>>>> main
     };
 
     // Update metrics on load
