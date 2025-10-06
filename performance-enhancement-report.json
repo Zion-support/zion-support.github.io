@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
   "timestamp": "2025-10-05T11:37:55.908Z",
   "optimizations": [
     {
@@ -31,30 +30,3 @@
   "metrics": {},
   "recommendations": []
 }
-=======
-  "timestamp": "2025-10-03T22:07:05.045Z",
-  "optimizations": {
-    "codeSplitting": "Implemented",
-    "criticalCSS": "Optimized",
-    "lazyLoading": "Enabled",
-    "bundleSize": "Minimized",
-    "caching": "Advanced",
-    "images": "Optimized",
-    "monitoring": "Active"
-  },
-  "performance": {
-    "firstContentfulPaint": "Improved",
-    "largestContentfulPaint": "Optimized",
-    "cumulativeLayoutShift": "Minimized",
-    "firstInputDelay": "Reduced",
-    "timeToInteractive": "Enhanced"
-  },
-  "recommendations": [
-    "Implement service worker for offline functionality",
-    "Use HTTP/2 for better multiplexing",
-    "Enable Brotli compression",
-    "Implement resource hints (preload, prefetch)",
-    "Use CDN for global distribution"
-  ]
-}
->>>>>>> origin/fix-errors-and-merge-final

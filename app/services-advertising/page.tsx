@@ -3,7 +3,6 @@
 
 export default function ServicesAdvertisingPage() {
   return (
-<<<<<<< HEAD
     <div className='min-h-screen bg-slate-950'>
       {/* Hero Section */}
       <header className='relative overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900 py-20'>
@@ -19,20 +18,6 @@ export default function ServicesAdvertisingPage() {
           <div className='text-center max-w-5xl mx-auto'>
             <div className='inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-purple-500/20 to-indigo-500/20 border border-purple-500/30 mb-8'>
               <span className='text-purple-400 font-bold text-sm tracking-wider uppercase'>
-=======
-    <div className="text-left">
-      {/* Hero Section */}</div>
-      <header className="text-left">
-        <div className="text-left">
-          <div className="text-left">"
-          <div className="text-left" style={{ animationDelay: '2s' }}>"
-        </div>
-        
-        <div className="text-left">
-          <div className="text-left">
-            <div className="text-left">
-              <span className="text-left">
->>>>>>> origin/fix-errors-and-merge-final
                 🎯 AI-Powered Advertising Solutions
               </span>
             </div>
@@ -50,20 +35,12 @@ export default function ServicesAdvertisingPage() {
               technology. Achieve 95% targeting accuracy, 60% cost reduction,
               and 300% ROI with intelligent automation and predictive analytics.
             </p>
-<<<<<<< HEAD
 
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <a
                 href='/contact'
                 className='bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-400 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1'
               >
-=======
-            
-            <div className="text-left">
-              <a 
-                href="/"
-                className="text-left">
->>>>>>> origin/fix-errors-and-merge-final
                 Start Free Consultation
               </a>
               <a
@@ -84,7 +61,6 @@ export default function ServicesAdvertisingPage() {
       <section>{/* <AIAdvertisingBanner /> */}</section>
 
       {/* Footer */}
-<<<<<<< HEAD
       <footer className='py-12 bg-slate-950 border-t border-white/10'>
         <div className='container mx-auto px-6'>
           <div className='text-center text-gray-400'>
@@ -111,51 +87,9 @@ export default function ServicesAdvertisingPage() {
                 Contact Us
               </a>
             </div>
-=======
-      <footer className="text-left">
-        <div className="text-left">
-          <div className="text-left">
-            <p className="text-left">© 2025 Zion Tech Group. All rights reserved.</p>"
-            <div className="text-left">
-              <a href="/privacy" className="text-left">Privacy Policy</a>"
-              <a href="/terms" className="text-left">Terms of Service</a>"
-              <a href="/contact" className="text-left">Contact Us</a>"
-            </div>
-            <div>
-              <h4 className="text-left">Services</h4>"
-              <div className="text-left">
-                <Link href="/services/ai-services-comprehensive" className="text-left">AI Services</Link>"
-                <Link href="/services/advanced-micro-saas-solutions" className="text-left">Micro SaaS</Link>"
-                <Link href="/services/it-services-comprehensive" className="text-left">IT Services</Link>"
-                <Link href="/services" className="text-left">All Services</Link>"
-              </div>
-            <div>
-              <h4 className="text-left">Company</h4>"
-              <div className="text-left">
-                <Link href="/about" className="text-left">About Us</Link>"
-                <Link href="/contact" className="text-left">Contact</Link>"
-                <Link href="/case-studies" className="text-left">Case Studies</Link>"
-                <Link href="/blog" className="text-left">Blog</Link>"
-              </div>
-            <div>
-              <h4 className="text-left">Contact Info</h4>"
-              <div className="text-left">
-                <p>📞 +1 302 464 0950</p>
-                <p>✉️ kleber@ziontechgroup.com</p>
-                <p>📍 364 E Main St STE 1008<br />Middletown, DE 19709</p>
-              </div>
-          </div>
-          <div className="text-left">
-            © {new Date().getFullYear()} Zion Tech Group. All rights reserved. | </div>
-            <Link href="https://ziontechgroup.com" className="text-left">ziontechgroup.com</Link>"
->>>>>>> origin/fix-errors-and-merge-final
           </div>
         </div>
       </footer>
     </div>
   );
-<<<<<<< HEAD
 }
-=======
-}</div></div>
->>>>>>> origin/fix-errors-and-merge-final

@@ -59,8 +59,8 @@ function findCorruptedFiles(dir) {
       const content = fs.readFileSync(filePath, 'utf8');
       if (
         content.includes('Merge conflict') ||
-        content.includes('<<<<<<< HEAD') ||
-        content.includes('=======') ||
+        content.includes('') ||
+        content.includes('') ||
         content.includes('className=')
       ) {
         corruptedFiles.push(filePath);

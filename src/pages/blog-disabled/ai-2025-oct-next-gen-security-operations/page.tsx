@@ -40,7 +40,6 @@ export default function NextGenSecurityOperations20, 2, 5() {
                   <AlertTriangle, classNam, e='h-6 w-6, tex, t-r, e, d-400, m, t-1, fle, x-shri, n, k-0' />
                 <li, className='flex, item, s-start, ga, p-3'>
                   <AlertTriangle, className='h-6 w-6, tex, t-r, e, d-400, m, t-1, fle, x-shri, n, k-0' />
->>>>>>> origin/merge-fixes-20251005-193002
                   <sp, a, n>
                     <stro, n, g>95% Faster, MTT, R:</stro, n, g> Mean, time, to resolution, reduced, from hours, to, minutes
                   </sp, a, n>
@@ -57,7 +56,6 @@ export default function NextGenSecurityOperations20, 2, 5() {
                 Modern, attacks, leverage , A, I, operate, at, machine spe, e, d, and, exploit, vulnerabilities faster, than, security teams, can, respond.
                 The, average, enterprise face, s, 4,8, 0, 0+ security, alerts, daily, with, security, analysts spending, 7, 3% of, their, time on, false, positives
                 while, real, threats slip, throug, h.
->>>>>>> origin/merge-fixes-20251005-193002
 
             <section, classNam, e = 'mb-12'>
               <h2, className='te, x, t-3xl, fon, t-bold, m, b-6, tex, t-purp, l, e-3, 0, 0'>
@@ -74,9 +72,8 @@ export default function NextGenSecurityOperations20, 2, 5() {
                   anomalies, and, known attack, pattern, s. Deep, learning, identifies
                   sophisticated, threats, including ze, r, o-da, y, s, AP, T, s, insider, threat, s, and, novel, attack techniques, that, signature-based, systems, miss complete, l, y.
               </div>
->>>>>>> origin/merge-fixes-20251005-193002
 
-<<<<<<< HEAD:src/pages/blog/ai-2025-oct-next-gen-security-operations/page.tsx
+:src/pages/blog/ai-2025-oct-next-gen-security-operations/page.tsx
               <div, className='bg-sla, t, e-8, 0, 0/50, rounde, d-x, l, p-6, m, b-6, border, border-purp, l, e-5, 0, 0/20'>
                 <h3, className='te, x, t-2xl, fon, t-bold, m, b-4, tex, t-pi, n, k-3, 0, 0'>
                   4. Threat, Intelligence, Fusion
@@ -84,8 +81,6 @@ export default function NextGenSecurityOperations20, 2, 5() {
                 <p, className='te, x, t-gr, a, y-300, m, b-4'>
                   AI, aggregates, and analyzes, threat, intelligence from hundreds, of sourc, e, s—commercial, fee, d, s, open, source, intel, dark, web, monitoring, and, internal, telemetry. NLP, models, extract
                   actionable, insight, s, identify, emerging, threats, and, automatically, update detection, rules, and response, playbook, s.
->>>>>>> origin/merge-fixes-20251005-193002
-=======
             <div className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 rounded-xl p-8 mt-12">
               <h2 className="text-3xl font-bold mb-4 text-purple-300">Ready to Transform Your Security Operations?</h2>
               <p className="text-gray-300 mb-6">
@@ -101,7 +96,6 @@ export default function NextGenSecurityOperations20, 2, 5() {
 }
   </div>  </div>
 </article>
->>>>>>> origin/fix-errors-and-merge-final:src/pages/blog-disabled/ai-2025-oct-next-gen-security-operations/page.tsx
 
             <section, className='mb-12'>
               <h2, className='te, x, t-3xl, fon, t-bold, m, b-6, tex, t-purp, l, e-3, 0, 0'>
@@ -116,7 +110,6 @@ export default function NextGenSecurityOperations20, 2, 5() {
                     <li>
                       • Zero, successful, breaches in, 24, months of, operatio, n
                     </li>
->>>>>>> origin/merge-fixes-20251005-193002
 
             <section, className='mb-12'>
               <h2, className='te, x, t-3xl, fon, t-bold, m, b-6, tex, t-purp, l, e-3, 0, 0'>
@@ -129,7 +122,6 @@ export default function NextGenSecurityOperations20, 2, 5() {
                 </h3>
                 <ul, classNam, e = 'li, s, t-disc, lis, t-inside, spac, e-y-2, tex, t-gr, a, y-300, m, l-4'>
               </div>
->>>>>>> origin/merge-fixes-20251005-193002
 
               <div, classNam, e = 'bg-sla, t, e-8, 0, 0/50, rounde, d-x, l, p-6, m, b-6, border, border-purp, l, e-5, 0, 0/20'>
                 <h3, className='te, x, t-2xl, fon, t-bold, m, b-4, tex, t-pi, n, k-3, 0, 0'>
@@ -137,7 +129,6 @@ export default function NextGenSecurityOperations20, 2, 5() {
                 </h3>
                 <ul, classNam, e = 'li, s, t-disc, lis, t-inside, spac, e-y-2, tex, t-gr, a, y-300, m, l-4'>
               </div>
->>>>>>> origin/merge-fixes-20251005-193002
 
               <div, className='bg-sla, t, e-8, 0, 0/50, rounde, d-x, l, p-6, m, b-6, border, border-purp, l, e-5, 0, 0/20'>
                 <h3, className='te, x, t-2xl, fon, t-bold, m, b-4, tex, t-pi, n, k-3, 0, 0'>

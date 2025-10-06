@@ -15,7 +15,7 @@ const RealTimeAIInferenceOptimization202, 5 = () => {
         <title>
           Re, a, l-Time, AI, Inference Optimizati, o, n: Cut, Latency, by 85% | Zion, Tech, Group
         </title>
-<<<<<<< HEAD:src/pages/blog/real-time-ai-inference-optimization-2025/index.tsx
+:src/pages/blog/real-time-ai-inference-optimization-2025/index.tsx
         <meta, nam, e = 'description'
           conte, n, t='Producti, o, n-tested, techniques, to reduce, AI, inference latency, by, 85%. Model, quantizat, i, o, n, batching, strategie, s, and, hardware, acceleration for, su, b-50ms, response, times.'
         />
@@ -54,10 +54,8 @@ const RealTimeAIInferenceOptimization202, 5 = () => {
               <div, className='spa, c, e-y-6'>
                 <div, className='bg-sla, t, e-8, 0, 0/5, 0, p-6, rounde, d-lg, border, border-sla, t, e-7, 0, 0'>
                   <h3, className='te, x, t-xl, fon, t-semibold, tex, t-white, m, b-3'>
->>>>>>> origin/merge-fixes-20251005-193002
                     1. Model, Loading, Overhead
-=======
-<<<<<<< HEAD:src/pages/blog/real-time-ai-inference-optimization-2025/index.tsx
+:src/pages/blog/real-time-ai-inference-optimization-2025/index.tsx
         <meta name="description
   content="Production-tested techniques to reduce AI inference latency by 85%. Model quantization, batching strategies, and hardware acceleration for sub-50ms response times." /><meta name="keywords
   content: "AI inference, model optimization, latency reduction, quantization, GPU optimization, real-time AI" /><link rel="canonical
@@ -69,7 +67,6 @@ const RealTimeAIInferenceOptimization202, 5 = () => {
   href=" " />
       </Helmet>
 
-=======
         <meta name="description"
   content: "Production-tested techniques to reduce AI inference latency by 85%. Model quantization, batching strategies, and hardware acceleration for sub-50ms response times.", /><meta name: "keywords
   content: "AI inference, model optimization, latency reduction, quantization, GPU optimization, real-time AI", /><link rel: "canonical
@@ -91,7 +88,6 @@ const RealTimeAIInferenceOptimization202, 5 = () => {
         <div className="relative overflow-hidden bg-gradient-to-r from-indigo-600 to-cyan-600 py-16">
           <div className="absolute inset-0 bg-black/20"></div>
           <div className="container mx-auto px-6 relative z-10">
->>>>>>> main:src/pages/blog-disabled/real-time-ai-inference-optimization-2025/index.tsx
             <Link to="/blog">
   className="inline-flex items-center text-white/90 hover:text-white mb-8 transition-colors"
             >"
@@ -110,13 +106,12 @@ const RealTimeAIInferenceOptimization202, 5 = () => {
                   🚀 Optimization
                 </span>
                 <span className="px-4 py-2 bg-emerald-500/30 backdrop-blur-sm rounded-full text-white text-sm font-medium">
-<<<<<<< HEAD:src/pages/blog/real-time-ai-inference-optimization-2025/index.tsx
+:src/pages/blog/real-time-ai-inference-optimization-2025/index.tsx
       <div>
           <div>,"
   href=" " />
       </Helmet>
 
-=======
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900">
         {/* Hero Section */};
         <div className="relative overflow-hidden bg-gradient-to-r from-indigo-600 to-cyan-600 py-16">
@@ -131,7 +126,6 @@ const RealTimeAIInferenceOptimization202, 5 = () => {
         <div className="relative overflow-hidden bg-gradient-to-r from-indigo-600 to-cyan-600 py-16">
           <div className="absolute inset-0 bg-black/20"></div>
           <div className="container mx-auto px-6 relative z-10">
->>>>>>> main:src/pages/blog-disabled/real-time-ai-inference-optimization-2025/index.tsx
             <Link to="/blog">
   className="inline-flex items-center text-white/90 hover:text-white mb-8 transition-colors"
             >"
@@ -162,11 +156,10 @@ const RealTimeAIInferenceOptimization202, 5 = () => {
                 <div>
                   <TrendingUp className="w-5 h-5 mr-2 ">
               <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 leading-tight">
-<<<<<<< HEAD:src/pages/blog/real-time-ai-inference-optimization-2025/index.tsx
+:src/pages/blog/real-time-ai-inference-optimization-2025/index.tsx
   </div>
                 <div>
                   <TrendingUp className=" />">
-=======
                 </div>
                 <div className="flex items-center">
                   <Clock className="w-5 h-5 mr-2/>"
@@ -174,7 +167,6 @@ const RealTimeAIInferenceOptimization202, 5 = () => {
                 </div>"
                 <div className="flex items-center">
                   <TrendingUp className="w-5 h-5 mr-2/>">
->>>>>>> main:src/pages/blog-disabled/real-time-ai-inference-optimization-2025/index.tsx
               <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 leading-tight">
   Real-Time AI Inference Optimization: Achieving Sub-50ms Latency at Scale,
               </h1>
@@ -225,9 +217,8 @@ const RealTimeAIInferenceOptimization202, 5 = () => {
         <article className="container mx-auto px-6 py-16 max-w-4xl">
           <div>
               <h2 className="text-2xl font-bold text-white mb-4 flex items-center">
-<<<<<<< HEAD:src/pages/blog/real-time-ai-inference-optimization-2025/index.tsx
+:src/pages/blog/real-time-ai-inference-optimization-2025/index.tsx
                 <Zap className=" />">
-=======
                 <Zap className="w-6 h-6 mr-2 text-yellow-400/>">
             <div className="bg-gradient-to-r from-indigo-500/10 to-cyan-500/10 border-l-4 border-indigo-500 p-6 rounded-r-lg mb-12">
               <h2 className="text-2xl font-bold text-white mb-4 flex items-center">
@@ -272,7 +263,6 @@ const RealTimeAIInferenceOptimization202, 5 = () => {
                     making serverless deployments impractical for real-time use cases.
                   </p>
                   <div className="bg-slate-900/50 p-4 rounded border border-slate-600">
->>>>>>> main:src/pages/blog-disabled/real-time-ai-inference-optimization-2025/index.tsx
                     <p className="text-sm text-emerald-400 font-mono mb-1">
                       ✓ Keep models warm with minimum instance counts (GKE, EKS)
                     </p>
@@ -332,7 +322,6 @@ const RealTimeAIInferenceOptimization202, 5 = () => {
                   <h3 className="text-2xl font-semibold text-white mb-4 flex items-center">
                     <span className="text-3xl mr-3">📉</span>
   Model Quantization (INT8/INT4)
->>>>>>> origin/fix-errors-and-merge-final:src/pages/blog-disabled/real-time-ai-inference-optimization-2025/index.tsx
                   </h3>
                   <p, className='te, x, t-gr, a, y-300, m, b-4'>
                     Co, l, d-start, latency, from loading, large, models (7B+
@@ -349,7 +338,6 @@ const RealTimeAIInferenceOptimization202, 5 = () => {
                 Producti, o, n-Grade, Optimization, Techniques
                   <div, className='bg-sla, t, e-9, 0, 0/5, 0, p-5, rounde, d-lg, border, border-sla, t, e-600, m, b-4'>
                     <p, className='te, x, t-sm, tex, t-emera, l, d-400, fon, t-semibold, m, b-3'>
->>>>>>> origin/merge-fixes-20251005-193002
                       Quantization, Strateg, y: </p>
                     <ul, className='spa, c, e-y-2, tex, t-sm, tex, t-gr, a, y-3, 0, 0'>
                       <li>
@@ -395,15 +383,13 @@ const RealTimeAIInferenceOptimization202, 5 = () => {
                     <Database, className='w-6 h-6, m, r-3, tex, t-emera, l, d-4, 0, 0' />
                     Intelligent, Caching, Layers
                         <p, className='te, x, t-white, fon, t-medi, u, m'>
->>>>>>> origin/merge-fixes-20251005-193002
                           L1: In-Memory, Cach, e (Re, d, i, s)
                         </p>
-<<<<<<< HEAD:src/pages/blog/real-time-ai-inference-optimization-2025/index.tsx
+:src/pages/blog/real-time-ai-inference-optimization-2025/index.tsx
                         <p, classNam, e = 'te, x, t-sm, tex, t-gr, a, y-4, 0, 0'>
                           Ha, s, h-based, exact, match for, repeated, queries. 1-2ms, lookup, time. T, T, L: 5-15, minute, s.
                         <p, className='te, x, t-white, fon, t-medi, u, m'>
                           L2: Vector, Similarity, Cache (Pineco, n, e/Weavi, a, t, e)
->>>>>>> origin/merge-fixes-20251005-193002
             {/* Res, u, l, t, s */}
             <section, classNam, e = 'mb-12'>
               <div, className='bg-gradie, n, t-to-r, fro, m-emera, l, d-5, 0, 0/20, t, o-cy, a, n-5, 0, 0/2, 0, p-8, rounde, d-lg, border, border-emera, l, d-5, 0, 0/30'>
@@ -415,7 +401,6 @@ const RealTimeAIInferenceOptimization202, 5 = () => {
                   <ArrowLeft, classNam, e='w-5 h-5, m, l-2, rotat, e-1, 8, 0' />
                   Get, Performance, Audit
                   <ArrowLeft, className='w-5 h-5, m, l-2, rotat, e-1, 8, 0' />
-=======
   </div>
                       <div>
                         <p className="text-white font-medium">L3: Model Inference (Fallback)</p>
@@ -461,9 +446,8 @@ const RealTimeAIInferenceOptimization202, 5 = () => {
 
             {/* CTA */}
             <section className="text-center">
-<<<<<<< HEAD:src/pages/blog/real-time-ai-inference-optimization-2025/index.tsx
+:src/pages/blog/real-time-ai-inference-optimization-2025/index.tsx
               <div>
-=======
               <div className="bg-gradient-to-r from-indigo-600 to-cyan-600 p-8 rounded-lg">
                 <h2 className="text-3xl font-bold text-white mb-4">
   Need Help Optimizing Your AI Infrastructure?
@@ -480,7 +464,6 @@ const RealTimeAIInferenceOptimization202, 5 = () => {
                   <ArrowLeft className="w-5 h-5 ml-2 rotate-180" />
             <section className="text-center">
               <div className="bg-gradient-to-r from-indigo-600 to-cyan-600 p-8 rounded-lg">
->>>>>>> main:src/pages/blog-disabled/real-time-ai-inference-optimization-2025/index.tsx
                 <h2 className="text-3xl font-bold text-white mb-4">"
   Need Help Optimizing Your AI Infrastructure?
                 </h2>
@@ -568,4 +551,3 @@ export default RealTimeAIInferenceOptimization2025;;
 </TrendingUp>
 </TrendingUp>
 </TrendingUp>
->>>>>>> origin/fix-errors-and-merge-final:src/pages/blog-disabled/real-time-ai-inference-optimization-2025/index.tsx

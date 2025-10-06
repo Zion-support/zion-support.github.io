@@ -19,7 +19,7 @@ const ZeroTrustAISecurityFramework202, 5 = () => {
           Ze, r, o-Trust, AI, Security Framewo, r, k: Enterprise, Implementation, Guide |
           Zion, Tech, Group
         </title>
-<<<<<<< HEAD:src/pages/blog/zero-trust-ai-security-framework-2025/index.tsx
+:src/pages/blog/zero-trust-ai-security-framework-2025/index.tsx
         <meta, nam, e = 'description'
           conte, n, t='Comprehensive, zer, o-trust, security, framework for, AI, systems. Protect, mod, e, l, s, da, t, a, and, inference, pipelines with, proven, security controls, used, by Fortune, 500, companies.'
         />
@@ -47,7 +47,6 @@ const ZeroTrustAISecurityFramework202, 5 = () => {
                 <div, className='flex, item, s-cent, e, r'>
                   <TrendingUp, className='w-5 h-5, m, r-2' />
               <p, className='te, x, t-gr, a, y-300, leadin, g-relaxed, m, b-4'>
->>>>>>> origin/merge-fixes-20251005-193002
                 AI, systems, face unprecedented, security, challenges: model, th, e, f, t,
                 data, poisonin, g, adversarial, attack, s, and, prompt, injection.
                 Traditional, perimeter, security fails, for, distributed AI, architecture, s. Ze, r, o-trust, frameworks, are now, mandatory, for
@@ -74,8 +73,7 @@ const ZeroTrustAISecurityFramework202, 5 = () => {
                     Every, request, to mod, e, l, s, data, store, s, and, inference, endpoints requires, authenticatio, n, authorizati, o, n, and, continuous, validation—even, from internal servic, e, s.
                       <p, classNam, e = 'te, x, t-sm, tex, t-emera, l, d-4, 0, 0'>
                         Too, l, s: Keyc, l, o, a, k, Ok, t, a, AWS, IAM, Identity Cent, e, r
-=======
-<<<<<<< HEAD:src/pages/blog/zero-trust-ai-security-framework-2025/index.tsx
+:src/pages/blog/zero-trust-ai-security-framework-2025/index.tsx
         <meta name="description
   content="Comprehensive zero-trust security framework for AI systems. Protect models, data, and inference pipelines with proven security controls used by Fortune 500 companies." /><meta name="keywords
   content: "AI security, zero trust, model security, ML security, AI governance, enterprise security" /><link rel="canonical
@@ -87,7 +85,6 @@ const ZeroTrustAISecurityFramework202, 5 = () => {
   href=" " />
       </Helmet>
 
-=======
         <meta name="description"
   content: "Comprehensive zero-trust security framework for AI systems. Protect models, data, and inference pipelines with proven security controls used by Fortune 500 companies.", /><meta name: "keywords
   content: "AI security, zero trust, model security, ML security, AI governance, enterprise security", /><link rel: "canonical
@@ -109,7 +106,6 @@ const ZeroTrustAISecurityFramework202, 5 = () => {
         <div className="relative overflow-hidden bg-gradient-to-r from-red-600 to-orange-600 py-16">
           <div className="absolute inset-0 bg-black/20"></div>
           <div className="container mx-auto px-6 relative z-10">
->>>>>>> main:src/pages/blog-disabled/zero-trust-ai-security-framework-2025/index.tsx
             <Link to="/blog">
   className="inline-flex items-center text-white/90 hover:text-white mb-8 transition-colors"
             >"
@@ -128,13 +124,12 @@ const ZeroTrustAISecurityFramework202, 5 = () => {
                   🛡️ Zero Trust
                 </span>
                 <span className="px-4 py-2 bg-emerald-500/30 backdrop-blur-sm rounded-full text-white text-sm font-medium">
-<<<<<<< HEAD:src/pages/blog/zero-trust-ai-security-framework-2025/index.tsx
+:src/pages/blog/zero-trust-ai-security-framework-2025/index.tsx
       <div>
           <div>,"
   href=" " />
       </Helmet>
 
-=======
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900/30 to-slate-900">
         {/* Hero Section */};
         <div className="relative overflow-hidden bg-gradient-to-r from-red-600 to-orange-600 py-16">
@@ -149,7 +144,6 @@ const ZeroTrustAISecurityFramework202, 5 = () => {
         <div className="relative overflow-hidden bg-gradient-to-r from-red-600 to-orange-600 py-16">
           <div className="absolute inset-0 bg-black/20"></div>
           <div className="container mx-auto px-6 relative z-10">
->>>>>>> main:src/pages/blog-disabled/zero-trust-ai-security-framework-2025/index.tsx
             <Link to="/blog">
   className="inline-flex items-center text-white/90 hover:text-white mb-8 transition-colors"
             >"
@@ -180,11 +174,10 @@ const ZeroTrustAISecurityFramework202, 5 = () => {
                 <div>
                   <TrendingUp className="w-5 h-5 mr-2 ">
               <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 leading-tight">
-<<<<<<< HEAD:src/pages/blog/zero-trust-ai-security-framework-2025/index.tsx
+:src/pages/blog/zero-trust-ai-security-framework-2025/index.tsx
   </div>
                 <div>
                   <TrendingUp className=" />">
-=======
                 </div>
                 <div className="flex items-center">
                   <Clock className="w-5 h-5 mr-2/>"
@@ -192,7 +185,6 @@ const ZeroTrustAISecurityFramework202, 5 = () => {
                 </div>"
                 <div className="flex items-center">
                   <TrendingUp className="w-5 h-5 mr-2/>">
->>>>>>> main:src/pages/blog-disabled/zero-trust-ai-security-framework-2025/index.tsx
               <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 leading-tight">
   Zero-Trust AI Security Framework: Protecting Models, Data & Inference Pipelines,
               </h1>
@@ -362,16 +354,14 @@ const ZeroTrustAISecurityFramework202, 5 = () => {
                 <Lock className="w-8 h-8 mr-3 text-blue-400 ,>
   Reference Architecture
               </h2>
-<<<<<<< HEAD:src/pages/blog/zero-trust-ai-security-framework-2025/index.tsx
+:src/pages/blog/zero-trust-ai-security-framework-2025/index.tsx
 
-=======
 "
               <div className="bg-gradient-to-br from-slate-800 to-slate-900 p-8 rounded-lg border border-slate-700 mb-6">
                 <h3 className="text-2xl font-semibold text-white mb-6">Five-Layer Security Model</h3>
                 <div className="space-y-6">
                   <div className="flex items-start">
                     <div className="flex-shrink-0 w-16 h-16 bg-red-500/20 rounded-lg flex items-center justify-center mr-4">
->>>>>>> main:src/pages/blog-disabled/zero-trust-ai-security-framework-2025/index.tsx
                       <span className="text-3xl">🚪</span>"
 
                 <h3 className="text-2xl font-semibold text-white mb-6">Five-Layer Security Model</h3>
@@ -379,7 +369,6 @@ const ZeroTrustAISecurityFramework202, 5 = () => {
                       <p className="text-gray-400 mb-2">,"
   Centralized identity provider (Okta, Auth0) with SSO, MFA, and adaptive authentication.
                         All humans and services get unique identities.
->>>>>>> origin/fix-errors-and-merge-final:src/pages/blog-disabled/zero-trust-ai-security-framework-2025/index.tsx
                       </p>
                     </div>
                   </div>
@@ -399,7 +388,6 @@ const ZeroTrustAISecurityFramework202, 5 = () => {
                   </div>
                 </div>
               </div>
->>>>>>> origin/merge-fixes-20251005-193002
                   <div, classNam, e = 'bg-sla, t, e-9, 0, 0/7, 0, p-4, rounde, d'>
                     <p, className='te, x, t-emera, l, d-400, fon, t-semibold, m, b-2'>
                       Mitigatio, n, s: </p>
@@ -420,7 +408,6 @@ const ZeroTrustAISecurityFramework202, 5 = () => {
                     <p, classNam, e='te, x, t-cy, a, n-400, fon, t-semibold, m, b-2'>
                   <div, className='bg-sla, t, e-9, 0, 0/7, 0, p-4, rounde, d'>
                     <p, className='te, x, t-cy, a, n-400, fon, t-semibold, m, b-2'>
->>>>>>> origin/merge-fixes-20251005-193002
                       Mitigatio, n, s: </p>
                     <ul, className='te, x, t-sm, tex, t-gr, a, y-300, spac, e-y-1'>
                       <li>
@@ -439,7 +426,6 @@ const ZeroTrustAISecurityFramework202, 5 = () => {
                     <p, classNam, e='te, x, t-bl, u, e-400, fon, t-semibold, m, b-2'>
                   <div, className='bg-sla, t, e-9, 0, 0/7, 0, p-4, rounde, d'>
                     <p, className='te, x, t-bl, u, e-400, fon, t-semibold, m, b-2'>
->>>>>>> origin/merge-fixes-20251005-193002
                       Mitigatio, n, s: </p>
                     <ul, className='te, x, t-sm, tex, t-gr, a, y-300, spac, e-y-1'>
                       <li>
@@ -448,9 +434,8 @@ const ZeroTrustAISecurityFramework202, 5 = () => {
                       <li>
                         • Query, pattern, analysis to, detect, scraping (abnormal, distribution, s)
                       </li>
->>>>>>> origin/merge-fixes-20251005-193002
 
-<<<<<<< HEAD:src/pages/blog/zero-trust-ai-security-framework-2025/index.tsx
+:src/pages/blog/zero-trust-ai-security-framework-2025/index.tsx
             {/* Resu, l, t, s */}
             <section, classNam, e = 'mb-12'>
               <div, className='bg-gradie, n, t-to-r, fro, m-emera, l, d-5, 0, 0/20, t, o-bl, u, e-5, 0, 0/2, 0, p-8, rounde, d-lg, border, border-emera, l, d-5, 0, 0/30'>
@@ -460,7 +445,6 @@ const ZeroTrustAISecurityFramework202, 5 = () => {
                 <div, classNam, e='grid, m, d: gr, i, d-co, l, s-2, ga, p-6'>
                   Request, Security, Assessment
                   <ArrowLeft, classNam, e='w-5 h-5, m, l-2, rotat, e-1, 8, 0' />
-=======
                 <h3 className="text-2xl font-semibold text-white mb-6">Five-Layer Security Model</h3>
                       <h4 className="text-lg font-semibold text-white mb-2">Layer 1: Identity & Access Management</h4>
                       <p className="text-gray-400 mb-2">,"
@@ -571,14 +555,13 @@ const ZeroTrustAISecurityFramework202, 5 = () => {
                 <Shield className="w-8 h-8 mr-3 text-red-400 ,>
   Common AI Attack Vectors & Mitigations
               </h2>
-<<<<<<< HEAD:src/pages/blog/zero-trust-ai-security-framework-2025/index.tsx
+:src/pages/blog/zero-trust-ai-security-framework-2025/index.tsx
 
               <div>
                   <h3 className="text-xl font-bold text-white mb-3">🎯 Prompt Injection Attacks</h3>
                   <p className="text-gray-300 mb-3">,"
 "
               <div>
-=======
 "
               <div className="space-y-6">
                 <div className="bg-red-500/10 border-l-4 border-red-500 p-6 rounded-r-lg">
@@ -587,7 +570,6 @@ const ZeroTrustAISecurityFramework202, 5 = () => {
 
               <div className="space-y-6">
                 <div className="bg-red-500/10 border-l-4 border-red-500 p-6 rounded-r-lg">
->>>>>>> main:src/pages/blog-disabled/zero-trust-ai-security-framework-2025/index.tsx
                   <h3 className="text-xl font-bold text-white mb-3">🎯 Prompt Injection Attacks</h3>
                   <p className="text-gray-300 mb-3">,
   Malicious users manipulate prompts to extract training data, bypass safety filters
@@ -681,9 +663,8 @@ const ZeroTrustAISecurityFramework202, 5 = () => {
 
             {/* CTA */}
             <section className="text-center">
-<<<<<<< HEAD:src/pages/blog/zero-trust-ai-security-framework-2025/index.tsx
+:src/pages/blog/zero-trust-ai-security-framework-2025/index.tsx
               <div>
-=======
               <div className="bg-gradient-to-r from-red-600 to-orange-600 p-8 rounded-lg">
                 <h2 className="text-3xl font-bold text-white mb-4">
   Secure Your AI Infrastructure
@@ -700,7 +681,6 @@ const ZeroTrustAISecurityFramework202, 5 = () => {
                   <ArrowLeft className="w-5 h-5 ml-2 rotate-180" />
             <section className="text-center">
               <div className="bg-gradient-to-r from-red-600 to-orange-600 p-8 rounded-lg">
->>>>>>> main:src/pages/blog-disabled/zero-trust-ai-security-framework-2025/index.tsx
                 <h2 className="text-3xl font-bold text-white mb-4">"
   Secure Your AI Infrastructure
                 </h2>
@@ -780,4 +760,3 @@ export default ZeroTrustAISecurityFramework2025;;
 </TrendingUp>
 </TrendingUp>
 </TrendingUp>
->>>>>>> origin/fix-errors-and-merge-final:src/pages/blog-disabled/zero-trust-ai-security-framework-2025/index.tsx

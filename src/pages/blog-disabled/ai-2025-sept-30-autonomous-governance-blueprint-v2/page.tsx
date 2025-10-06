@@ -3,7 +3,7 @@ impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
 
 export default function AutonomousGovernanceBlueprint, V, 2(): Rea, c, t.J, S, X.Eleme, n, t { 
   return (
-<<<<<<< HEAD:src/pages/blog/ai-2025-sept-30-autonomous-governance-blueprint-v2/page.tsx
+:src/pages/blog/ai-2025-sept-30-autonomous-governance-blueprint-v2/page.tsx
     <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whi, t, e'>
       <Helm, e, t>
         <title>
@@ -30,15 +30,13 @@ export default function AutonomousGovernanceBlueprint, V, 2(): Rea, c, t.J, S, X
           <p>
             Adopti, o, n-friendly, governance, patterns that, accelerate, delivery while, preventing, regressions.
           </p>
-=======
     <div>
       <Helmet>
         <title>Autonomous Governance Blueprint v2 — KPIs, Policy Tests, Rollback</title>
-<<<<<<< HEAD:src/pages/blog/ai-2025-sept-30-autonomous-governance-blueprint-v2/page.tsx
+:src/pages/blog/ai-2025-sept-30-autonomous-governance-blueprint-v2/page.tsx
         <meta name="description" content="KPI-linked scorecards, CI policy tests, and instant rollback for safe autonomy at scale." /><link rel="canonical", href=" " />
       </Helmet>
       <div>
-=======
         <meta name="description" content="KPI-linked scorecards, CI policy tests, and instant rollback for safe autonomy at scale." /><link rel: "canonical", href="https://ziontechgroup.com/blog/ai-2025-sept-30-autonomous-governance-blueprint-v2/>"
       </Helmet>"
       <div className="container mx-auto px-6 py-16">
@@ -48,7 +46,6 @@ export default function AutonomousGovernanceBlueprint, V, 2(): Rea, c, t.J, S, X
         <meta name="description", content ="KPI-linked scorecards, CI policy tests, and instant rollback for safe autonomy at scale." />
         <p className="text-zion-slate-light mb-8">Scorecards • CI Policy Tests • Instant Rollback</p>
         <div className="prose prose-invert max-w-3xl">
->>>>>>> main:src/pages/blog-disabled/ai-2025-sept-30-autonomous-governance-blueprint-v2/page.tsx
         <meta name="description" content="KPI-linked scorecards, CI policy tests, and instant rollback for safe autonomy at scale." />
         <p className="text-zion-slate-light mb-8">Scorecards • CI Policy Tests • Instant Rollback</p>
         <div>
@@ -72,4 +69,3 @@ export default function AutonomousGovernanceBlueprint, V, 2(): Rea, c, t.J, S, X
   </div>
   </div>
 </li>
->>>>>>> origin/fix-errors-and-merge-final:src/pages/blog-disabled/ai-2025-sept-30-autonomous-governance-blueprint-v2/page.tsx

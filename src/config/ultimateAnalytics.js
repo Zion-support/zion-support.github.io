@@ -61,10 +61,5 @@ module.exports = {
     trends: true,
     forecasting: true,
   },
-<<<<<<< HEAD
   timestamp: '2025-10-05T11:17:50.920Z',
 };
-=======
-  "timestamp": "2025-10-03T22:04:33.815Z"
-};
->>>>>>> origin/fix-errors-and-merge-final

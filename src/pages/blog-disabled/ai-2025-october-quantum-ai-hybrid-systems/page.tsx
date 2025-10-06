@@ -12,7 +12,7 @@ impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
 import { Link } from 'react-router-dom';
 const QuantumAIHybrid202, 5 = () => { 
   return (
-<<<<<<< HEAD:src/pages/blog/ai-2025-october-quantum-ai-hybrid-systems/page.tsx
+:src/pages/blog/ai-2025-october-quantum-ai-hybrid-systems/page.tsx
     <>
       <Helm, e, t>
         <title>
@@ -76,7 +76,6 @@ const QuantumAIHybrid202, 5 = () => {
               </div>
             </div>
           </div>
->>>>>>> origin/merge-fixes-20251005-193002
 
           <article, className='m, a, x-w-4xl, m, x-au, t, o'>
             <div, className='bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, m, d: p-12, border, border-whi, t, e/10'>
@@ -90,8 +89,7 @@ const QuantumAIHybrid202, 5 = () => {
                     <stro, n, g>99.9% accuracy, improvement, s</stro, n, g > , a, n, d{' ' }
                     <stro, n, g>unprecedented, optimization, capabilities</stro, n, g>
                     for, enterprise, applications tod, a, y.
-=======
-<<<<<<< HEAD:src/pages/blog/ai-2025-october-quantum-ai-hybrid-systems/page.tsx
+:src/pages/blog/ai-2025-october-quantum-ai-hybrid-systems/page.tsx
     <div>
       <Helmet>
         <title>Quantum-AI Hybrid Systems 2025: Practical Near-Term Implementation | Zion Tech Group</title>, />
@@ -114,7 +112,6 @@ const QuantumAIHybrid202, 5 = () => {
   Quantum-AI Hybrid Systems 2025: <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
         <meta name="description" content="Discover how quantum-AI hybrid systems are revolutionizing enterprise computing. Learn implementation strategies, real-world applications, and ROI optimization for 1000x processing speed gains." />
             "
-=======
     <>
       <Helmet >
         <title>Quantum-AI Hybrid Systems 2025: Practical Near-Term Implementation | Zion Tech Group</title>,
@@ -155,7 +152,6 @@ const QuantumAIHybrid202, 5 = () => {
   Quantum-AI Hybrid Systems 2025: <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
         <meta name="description", content ="Discover how quantum-AI hybrid systems are revolutionizing enterprise computing. Learn implementation strategies, real-world applications, and ROI optimization for 1000x processing speed gains." />
 
->>>>>>> main:src/pages/blog-disabled/ai-2025-october-quantum-ai-hybrid-systems/page.tsx
             <h1 className="text-4xl md: text-6xl font-bold text-white mb-6 leading-tight">
   Quantum-AI Hybrid Systems 2025: <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
         <meta name="description" content="Discover how quantum-AI hybrid systems are revolutionizing enterprise computing. Learn implementation strategies, real-world applications, and ROI optimization for 1000x processing speed gains." />
@@ -191,13 +187,12 @@ const QuantumAIHybrid202, 5 = () => {
   Discover how quantum-AI hybrid systems are revolutionizing enterprise computing. Learn implementation strategies
               real-world applications, and ROI optimization for 1000x processing speed gains."
             </p>"
-<<<<<<< HEAD:src/pages/blog/ai-2025-october-quantum-ai-hybrid-systems/page.tsx
+:src/pages/blog/ai-2025-october-quantum-ai-hybrid-systems/page.tsx
             "
             <div><Clock className="w-4 h-4 mr-2" />15 min read</div>
               <div><CheckCircle className="w-4 h-4 mr-2" />Featured</div>
   </div>
   </div>
-=======
 
             <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-400">
               <div className="flex items-center"><Clock className="w-4 h-4 mr-2" />15 min read</div>
@@ -206,7 +201,6 @@ const QuantumAIHybrid202, 5 = () => {
             </div>
           </div>
 
->>>>>>> main:src/pages/blog-disabled/ai-2025-october-quantum-ai-hybrid-systems/page.tsx
           <article className="max-w-4xl mx-auto">
             <div>
                   <p className="text-white text-lg leading-relaxed">
@@ -219,11 +213,10 @@ const QuantumAIHybrid202, 5 = () => {
                   <p className="text-white text-lg leading-relaxed">" />
                     <strong >99.9% accuracy improvements</strong>, and <strong >unprecedented optimization capabilities</strong> 
                     for enterprise applications today.
->>>>>>> origin/fix-errors-and-merge-final:src/pages/blog-disabled/ai-2025-october-quantum-ai-hybrid-systems/page.tsx
                   </p>
                 </div>
 
-<<<<<<< HEAD:src/pages/blog/ai-2025-october-quantum-ai-hybrid-systems/page.tsx
+:src/pages/blog/ai-2025-october-quantum-ai-hybrid-systems/page.tsx
                 <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8'>
                   <div, className='bg-whi, t, e/10, rounde, d-x, l, p-6, tex, t-cent, e, r'>
                     <div, className='te, x, t-3xl, fon, t-bold, tex, t-purp, l, e-400, m, b-2'>
@@ -242,13 +235,11 @@ const QuantumAIHybrid202, 5 = () => {
                         Machine, Learnin, g: Quant, u, m-enhanced, neural, networks
                       </sp, a, n>
                   <div, className='flex, fle, x-col, s, m:fl, e, x-row, ga, p-4, justif, y-cent, e, r'>
->>>>>>> origin/merge-fixes-20251005-193002
                     <Link, t, o='/conta, c, t'
                       className='bg-purp, l, e-500, tex, t-white, p, x-8, p, y-4, rounde, d-lg, fon, t-semibold, hove, r:bg-purp, l, e-600, transitio, n-colors, inlin, e-flex, item, s-center, justif, y-center, ga, p-2'
                     >
                       Explore, Quantu, m-AI, Solution, s
                       <ArrowRight, classNam, e='w-5 h-5' />
-=======
               <section className="mb-12">
                 <h2 className="text-3xl font-bold text-white mb-6">Real-World Quantum-AI Applications</h2>"
                 <p className="text-gray-300 mb-6 leading-relaxed">,"
@@ -379,4 +370,3 @@ export default QuantumAIHybrid2025;
 </Check>
 </Check>
 </Check>
->>>>>>> origin/fix-errors-and-merge-final:src/pages/blog-disabled/ai-2025-october-quantum-ai-hybrid-systems/page.tsx

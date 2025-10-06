@@ -3,7 +3,7 @@ impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
 
 export default function ZeroPIIExperiments, V, 3(): Rea, c, t.J, S, X.Eleme, n, t { 
   return (
-<<<<<<< HEAD:src/pages/blog/edge-2025-sept-30-zero-pii-experiments-v3/page.tsx
+:src/pages/blog/edge-2025-sept-30-zero-pii-experiments-v3/page.tsx
     <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whi, t, e'>
       <Helm, e, t>
         <title>
@@ -30,15 +30,13 @@ export default function ZeroPIIExperiments, V, 3(): Rea, c, t.J, S, X.Eleme, n, 
           <p>
             Blueprint, includes, rollout budge, t, s, signed, config, s, and, verifiable, telemetry pipelin, e, s.
           </p>
-=======
     <div>
       <Helmet>
         <title>Zero‑PII Experiments v3 — Sub‑100ms Global A/B at the Edge</title>
-<<<<<<< HEAD:src/pages/blog/edge-2025-sept-30-zero-pii-experiments-v3/page.tsx
+:src/pages/blog/edge-2025-sept-30-zero-pii-experiments-v3/page.tsx
         <meta name="description" content="Scoped IDs, on‑device metrics, and DP noise for compliant A/B testing worldwide under 100ms." /><link rel="canonical", href=" " />
       </Helmet>
       <div>
-=======
         <meta name="description" content="Scoped IDs, on‑device metrics, and DP noise for compliant A/B testing worldwide under 100ms." /><link rel: "canonical", href="https://ziontechgroup.com/blog/edge-2025-sept-30-zero-pii-experiments-v3/>"
       </Helmet>"
       <div className="container mx-auto px-6 py-16">
@@ -48,7 +46,6 @@ export default function ZeroPIIExperiments, V, 3(): Rea, c, t.J, S, X.Eleme, n, 
         <meta name="description", content ="Scoped IDs, on‑device metrics, and DP noise for compliant A/B testing worldwide under 100ms." />
         <p className="text-zion-slate-light mb-8">Scoped IDs • On‑Device Metrics • DP Noise</p>
         <div className="prose prose-invert max-w-3xl">
->>>>>>> main:src/pages/blog-disabled/edge-2025-sept-30-zero-pii-experiments-v3/page.tsx
         <meta name="description" content="Scoped IDs, on‑device metrics, and DP noise for compliant A/B testing worldwide under 100ms." />
         <p className="text-zion-slate-light mb-8">Scoped IDs • On‑Device Metrics • DP Noise</p>
         <div>
@@ -72,4 +69,3 @@ export default function ZeroPIIExperiments, V, 3(): Rea, c, t.J, S, X.Eleme, n, 
   </div>
   </div>
 </li>
->>>>>>> origin/fix-errors-and-merge-final:src/pages/blog-disabled/edge-2025-sept-30-zero-pii-experiments-v3/page.tsx

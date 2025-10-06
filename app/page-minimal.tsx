@@ -8,21 +8,12 @@ export const metadata = {
 
 export default function HomePage() {
   return (
-<<<<<<< HEAD
     <div className='min-h-screen bg-white'>
       <header className='bg-white shadow-sm border-b'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='flex justify-between items-center h-16'>
             <div className='flex items-center'>
               <ArrowRight href='/' className='text-2xl font-bold text-gray-900'>
-=======
-    <div className="text-left">
-      <header className="text-left">
-        <div className="text-left">
-          <div className="text-left">
-            <div className="text-left">
-              <Link href="/" className="text-left">
->>>>>>> origin/fix-errors-and-merge-final
                 Zion Tech Group
               </ArrowRight>
             </div>
@@ -57,7 +48,6 @@ export default function HomePage() {
       </header>
 
       <main>
-<<<<<<< HEAD
         <section className='text-center py-20 bg-gradient-to-br from-blue-50 via-white to-teal-50'>
           <div className='max-w-4xl mx-auto px-4'>
             <h1 className='text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight'>
@@ -65,14 +55,6 @@ export default function HomePage() {
               <span className='text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-teal-600'>
                 {' '}
                 AI-Powered Solutions
-=======
-        <section className="text-left">
-          <div className="text-left">
-            <h1 className="text-left">
-              Transform Your Business with
-              <span className="text-left">
-                {' '}AI-Powered Solutions
->>>>>>> origin/fix-errors-and-merge-final
               </span>
             </h1>
             <p className='text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed'>
@@ -80,18 +62,11 @@ export default function HomePage() {
               cloud automation, and enterprise IT solutions that drive growth,
               efficiency, and innovation.
             </p>
-<<<<<<< HEAD
             <div className='flex flex-col sm:flex-row gap-4 justify-center mb-12'>
               <ArrowRight
                 href='/services'
                 className='bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl'
               >
-=======
-            <div className="text-left">
-              <Link
-                href="/services"
-                className="text-left">
->>>>>>> origin/fix-errors-and-merge-final
                 Explore Our Services
               </ArrowRight>
               <a
@@ -104,17 +79,10 @@ export default function HomePage() {
           </div>
         </section>
 
-<<<<<<< HEAD
         <section className='py-20 bg-white'>
           <div className='max-w-6xl mx-auto px-4'>
             <div className='text-center mb-16'>
               <h2 className='text-4xl font-bold text-gray-900 mb-6'>
-=======
-        <section className="text-left">
-          <div className="text-left">
-            <div className="text-left">
-              <h2 className="text-left">
->>>>>>> origin/fix-errors-and-merge-final
                 Latest AI Content & Insights
               </h2>
               <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
@@ -122,7 +90,6 @@ export default function HomePage() {
                 stories.
               </p>
             </div>
-<<<<<<< HEAD
 
             <div className='grid md:grid-cols-3 gap-8'>
               <ArrowRight
@@ -137,20 +104,6 @@ export default function HomePage() {
                     <span className='text-sm text-gray-500'>20 min read</span>
                   </div>
                   <h3 className='text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors'>
-=======
-            
-            <div className="text-left">
-              <Link href="/blog/ai-enterprise-transformation-2026" className="text-left">
-                <div className="text-left">
-                  <div className="text-left">
-                    <span className="text-left">
-                      Featured Article
-                    </span>
-                    <span className="text-left">20 min read</span>
-                    <span className="text-left">20 min read>
-                  </div>
-                  <h3 className="text-left">
->>>>>>> origin/fix-errors-and-merge-final
                     AI Enterprise Transformation 2026
                   </h3>
                   <p className='text-gray-600 mb-4'>
@@ -163,7 +116,6 @@ export default function HomePage() {
                 </div>
               </ArrowRight>
 
-<<<<<<< HEAD
               <ArrowRight
                 href='/blog/ai-autonomous-systems-2026'
                 className='group'
@@ -176,17 +128,6 @@ export default function HomePage() {
                     <span className='text-sm text-gray-500'>18 min read</span>
                   </div>
                   <h3 className='text-xl font-bold text-gray-900 mb-3 group-hover:text-purple-600 transition-colors'>
-=======
-              <Link href="/blog/ai-autonomous-systems-2026" className="text-left">
-                <div className="text-left">
-                  <div className="text-left">
-                    <span className="text-left">
-                      New Article
-                    </span>
-                    <span className="text-left">18 min read>
-                  </div>
-                  <h3 className="text-left">
->>>>>>> origin/fix-errors-and-merge-final
                     AI Autonomous Systems 2026
                   </h3>
                   <p className='text-gray-600 mb-4'>
@@ -199,7 +140,6 @@ export default function HomePage() {
                 </div>
               </ArrowRight>
 
-<<<<<<< HEAD
               <ArrowRight
                 href='/case-studies/manufacturing-ai-transformation-2026'
                 className='group'
@@ -212,17 +152,6 @@ export default function HomePage() {
                     <span className='text-sm text-gray-500'>Manufacturing</span>
                   </div>
                   <h3 className='text-xl font-bold text-gray-900 mb-3 group-hover:text-green-600 transition-colors'>
-=======
-              <Link href="/case-studies/manufacturing-ai-transformation-2026" className="text-left">
-                <div className="text-left">
-                  <div className="text-left">
-                    <span className="text-left">
-                      Success Story
-                    </span>
-                    <span className="text-left">Manufacturing>
-                  </div>
-                  <h3 className="text-left">
->>>>>>> origin/fix-errors-and-merge-final
                     Manufacturing AI Transformation
                   </h3>
                   <p className='text-gray-600 mb-4'>
@@ -239,7 +168,6 @@ export default function HomePage() {
         </section>
       </main>
 
-<<<<<<< HEAD
       <footer className='bg-gray-900 text-white py-12'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='grid grid-cols-1 md:grid-cols-4 gap-8'>
@@ -288,42 +216,11 @@ export default function HomePage() {
             <div>
               <h3 className='text-lg font-semibold mb-4'>Contact</h3>
               <p className='text-gray-400'>
-=======
-      <footer className="text-left">
-        <div className="text-left">
-          <div className="text-left">
-            <div>
-              <h3 className="text-left">Zion Tech Group</h3>"
-              <p className="text-left">
-                Leading provider of AI-powered enterprise solutions and digital transformation services.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-left">Services</h3>"
-              <ul className="text-left">
-                <li><Link href="/services" className="text-left">AI Solutions</Link></li>"
-                <li><Link href="/services" className="text-left">Automation</Link></li>"
-                <li><Link href="/services" className="text-left">Digital Transformation</Link></li></ul>
-            </div>
-            <div>
-              <h3 className="text-left">Resources</h3>"
-              <ul className="text-left">
-                <li><Link href="/blog" className="text-left">Blog</Link></li>"
-                <li><Link href="/case-studies" className="text-left">Case Studies</Link></li></ul>
-            </div>
-            <div>
-              <h3 className="text-left">Contact</h3>"
-              <p className="text-left">
->>>>>>> origin/fix-errors-and-merge-final
                 Get in touch for your AI transformation needs.
               </p>
             </div>
           </div>
-<<<<<<< HEAD
           <div className='border-t border-gray-800 mt-8 pt-8 text-center text-gray-400'>
-=======
-          <div className="text-left">
->>>>>>> origin/fix-errors-and-merge-final
             <p>&copy; 2026 Zion Tech Group. All rights reserved.</p>
           </div>
         </div>

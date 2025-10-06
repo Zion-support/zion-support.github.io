@@ -1,9 +1,5 @@
 {
-<<<<<<< HEAD
   "timestamp": "2025-10-05T11:17:50.921Z",
-=======
-  "timestamp": "2025-10-03T22:04:33.815Z",
->>>>>>> origin/fix-errors-and-merge-final
   "improvements": {
     "advancedPerformance": {
       "nextjsOptimizations": {

@@ -44,30 +44,11 @@
   },
   "include": ["src", "app"],
   "exclude": [
-<<<<<<< HEAD
     "src/pages/blog-disabled/**/*",
     "app/blog",
     "blog",
     "components",
     "src/components/**/*"
-=======
-    "app/blog/**/*",
-    "app/components/**/*",
-    "app/contact/**/*",
-    "app/enterprise/**/*",
-    "app/guides/**/*",
-    "app/services/**/*",
-    "app/services-advertising/**/*",
-    "app/not-found.tsx",
-    "app/page-minimal.tsx",
-    "app/page-optimized.tsx",
-    "src/pages/blog-disabled/**/*",
-    "_pages_disabled/**/*",
-    "_app_disabled/**/*",
-    "_conflicted_disabled/**/*",
-    "_pages_api_disabled/**/*",
-    "src/pages/case-studies/fortune-100-autonomous-operations-transformation-2025.tsx"
->>>>>>> origin/fix-errors-and-merge-final
   ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

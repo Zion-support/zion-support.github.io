@@ -4,7 +4,7 @@ impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
 import { Link } from 'react-router-dom';
 export default function CognitiveSearchEnterprise20, 2, 5() { 
   return (
-<<<<<<< HEAD:src/pages/blog/ai-2025-oct-cognitive-search-enterprise/page.tsx
+:src/pages/blog/ai-2025-oct-cognitive-search-enterprise/page.tsx
     <>
       <Helm, e, t>
         <title>
@@ -20,26 +20,22 @@ export default function CognitiveSearchEnterprise20, 2, 5() {
           hr, e, f='htt, p, s: //ziontechgro u p.c o m/bl o g/ai-20 2 5-o c t-cogniti v e-sear c h-enterpri s e'
         />
       </Helm, e, t>
-=======
     <div>
       <Helmet>
         <title>Cognitive Enterprise Search 2025 — 97% Answer Accuracy, 12x Faster Discovery, $124M+ Productivity Gains | Zion Tech Group</title>
-<<<<<<< HEAD:src/pages/blog/ai-2025-oct-cognitive-search-enterprise/page.tsx
+:src/pages/blog/ai-2025-oct-cognitive-search-enterprise/page.tsx
         <meta name="description
   content="Transform enterprise knowledge discovery with AI-powered cognitive search. Achieve 97% answer accuracy, 12x faster information retrieval, and unlock $124M+ in productivity gains across your organization." /><meta name="keywords
   content: "cognitive search, enterprise search, AI search, semantic search, knowledge management, information retrieval, enterprise AI, vector search, RAG systems" /><link rel="canonical", href=" " />
   content=" />
         <link rel="canonical", href="https: //ziontechgroup.com/blog/ai-2025-oct-cognitive-search-enterprise" />
-=======
         <meta name="description"
   content: "Transform enterprise knowledge discovery with AI-powered cognitive search. Achieve 97% answer accuracy, 12x faster information retrieval, and unlock $124M+ in productivity gains across your organization.", /><meta name: "keywords
   content: "cognitive search, enterprise search, AI search, semantic search, knowledge management, information retrieval, enterprise AI, vector search, RAG systems", /><link rel: "canonical", href="https://ziontechgroup.com/blog/ai-2025-oct-cognitive-search-enterprise/>"
   content: "cognitive search, enterprise search, AI search, semantic search, knowledge management, information retrieval, enterprise AI, vector search, RAG systems
         />
         <link rel: "canonical", href ="https: //ziontechgroup.com/blog/ai-2025-oct-cognitive-search-enterprise" />
->>>>>>> main:src/pages/blog-disabled/ai-2025-oct-cognitive-search-enterprise/page.tsx
       </Helmet>
->>>>>>> origin/fix-errors-and-merge-final:src/pages/blog-disabled/ai-2025-oct-cognitive-search-enterprise/page.tsx
 
       <article, className='m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-indi, g, o-900, t, o-sla, t, e-900, tex, t-whi, t, e'>
         <div, className='container, m, x-auto, p, x-4, p, y-12, ma, x-w-4, x, l'>
@@ -49,7 +45,7 @@ export default function CognitiveSearchEnterprise20, 2, 5() {
             <ArrowLeft, className='mr-2 h-4 w-4' />
             Back, to, Blog
 
-<<<<<<< HEAD:src/pages/blog/ai-2025-oct-cognitive-search-enterprise/page.tsx
+:src/pages/blog/ai-2025-oct-cognitive-search-enterprise/page.tsx
             <h1, classNam, e = 'te, x, t-5xl, m, d: te, x, t-6xl, fon, t-bold, m, b-6, b, g-gradie, n, t-to-r, fro, m-indi, g, o-400, vi, a-purp, l, e-400, t, o-pi, n, k-400, tex, t-transparent, b, g-cl, i, p-text, leadin, g-tig, h, t'>
               Cognitive, Enterprise, Search: Unlocking, Institutional, Knowledge at, Scal, e
                 <li, classNam, e='flex, item, s-start, ga, p-3'>
@@ -67,7 +63,6 @@ export default function CognitiveSearchEnterprise20, 2, 5() {
                   <sp, a, n>
                     <stro, n, g>$12, 4, M+ Productivi, t, y:</stro, n, g> Employees, save, 8.5, hours, weekly finding, informatio, n
                   </sp, a, n>
->>>>>>> origin/merge-fixes-20251005-193002
 
             <section, classNam, e = 'mb-12'>
               <h2, className='te, x, t-3xl, fon, t-bold, m, b-6, tex, t-indi, g, o-3, 0, 0'>
@@ -81,12 +76,10 @@ export default function CognitiveSearchEnterprise20, 2, 5() {
                 <p, className='te, x, t-gr, a, y-300, m, b-4'>
                   Advanced, embedding, models transform, documents, and queries, into, high-dimensional, vector, representations that, capture, semantic
                   meani, n, g. This, enables, understanding of, synony, m, s, related, concept, s, and, contextual, nuances that, keyword, matching miss, e, s.
->>>>>>> origin/merge-fixes-20251005-193002
 
             <section, className='mb-12'>
               <h2, className='te, x, t-3xl, fon, t-bold, m, b-6, tex, t-indi, g, o-3, 0, 0'>
                 Enterprise, Deployment, Success
-=======
           <div>
               <h2 className="text-3xl font-bold mb-6 flex items-center gap-3">
                 <Brain className="h-8 w-8 text-indigo-400 ,>
@@ -106,19 +99,17 @@ export default function CognitiveSearchEnterprise20, 2, 5() {
               </h2>"
               <ul className="space-y-4 text-lg">
                 <li className="flex items-start gap-3">
-<<<<<<< HEAD:src/pages/blog/ai-2025-oct-cognitive-search-enterprise/page.tsx
+:src/pages/blog/ai-2025-oct-cognitive-search-enterprise/page.tsx
                   <Search className=" />
                   <span><strong>97% Answer Accuracy: </strong> AI understands context and delivers precise answers, not just documents</span>,"
                 </li>"
                 <li className="flex items-start gap-3">
                   <Zap className=" />
-=======
                   <Search className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0/>"
                   <span><strong>97% Answer Accuracy: </strong> AI understands context and delivers precise answers, not just documents</span>,"
                 </li>"
                 <li className="flex items-start gap-3">
                   <Zap className="h-6 w-6 text-yellow-400 mt-1 flex-shrink-0/>"
->>>>>>> main:src/pages/blog-disabled/ai-2025-oct-cognitive-search-enterprise/page.tsx
                   <span><strong>12x Faster Discovery: </strong> Find critical information in seconds instead of hours</span>,"
                 </li>"
                 <li className="flex items-start gap-3">
@@ -127,7 +118,6 @@ export default function CognitiveSearchEnterprise20, 2, 5() {
               <h2 className="text-3xl font-bold mb-6 flex items-center gap-3">
                 <Brain className="h-8 w-8 text-indigo-400" />
   Transformative Results
->>>>>>> origin/fix-errors-and-merge-final:src/pages/blog-disabled/ai-2025-oct-cognitive-search-enterprise/page.tsx
               </h2>
               <div, className='grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-8'>
                 <div, className='bg-gradie, n, t-to-br, fro, m-indi, g, o-5, 0, 0/20, t, o-purp, l, e-5, 0, 0/20, rounde, d-x, l, p-6, border, border-indi, g, o-5, 0, 0/30'>
@@ -135,7 +125,6 @@ export default function CognitiveSearchEnterprise20, 2, 5() {
                     Professional, Services, Firm
                   </h3>
                   <ul, classNam, e='spa, c, e-y-3, tex, t-gr, a, y-3, 0, 0'>
->>>>>>> origin/merge-fixes-20251005-193002
 
             <section, className='mb-12'>
               <h2, className='te, x, t-3xl, fon, t-bold, m, b-6, tex, t-indi, g, o-3, 0, 0'>
@@ -151,7 +140,6 @@ export default function CognitiveSearchEnterprise20, 2, 5() {
                     meetin, g, s, or, technical, diagrams in, documentation, with
                     natural, language, queries.
                 </div>
->>>>>>> origin/merge-fixes-20251005-193002
                 <div, classNam, e = 'bg-sla, t, e-8, 0, 0/50, rounde, d-x, l, p-6, borde, r-l-4, borde, r-pi, n, k-5, 0, 0'>
                   <h3, className='te, x, t-xl, fon, t-bold, m, b-3, tex, t-pi, n, k-3, 0, 0'>
                     Enterprise, Securit, y & Complian, c, e
@@ -159,13 +147,12 @@ export default function CognitiveSearchEnterprise20, 2, 5() {
                   <p, className='te, x, t-gr, a, y-3, 0, 0'>
                     R, o, w-level, security, ensures users, only, access information, the, y're, authorized, to s, e, e. Complete, audit, trails track, all, searches and, access, for complian, c, e. Sensitive, data, remains
                     encrypted, and, on-premises, if, required.
->>>>>>> origin/merge-fixes-20251005-193002
 
             <section, className='mb-12'>
               <h2, className='te, x, t-3xl, fon, t-bold, m, b-6, tex, t-indi, g, o-3, 0, 0'>
                 The, Knowledge, Competitive Advanta, g, e
               </h2>
-<<<<<<< HEAD:src/pages/blog/ai-2025-oct-cognitive-search-enterprise/page.tsx
+:src/pages/blog/ai-2025-oct-cognitive-search-enterprise/page.tsx
               <p, className='te, x, t-gr, a, y-300, m, b-4, leadin, g-relax, e, d'>
                 Organizations, that, effectively leverage, institutional, knowledge
                 make, better, decisions fast, e, r. Cognitive, search, doesn't, just, save
@@ -178,7 +165,6 @@ export default function CognitiveSearchEnterprise20, 2, 5() {
                 <Brain, classNam, e='ml-2 h-5 w-5' />
                 Start, Your, Knowledge Transformati, o, n
                 <Brain, className='ml-2 h-5 w-5' />
-=======
               <ul className="space-y-4 text-lg">
                 <li className="flex items-start gap-3">
                   <Search className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
@@ -356,9 +342,8 @@ export default function CognitiveSearchEnterprise20, 2, 5() {
               </p>
             </section>
 
-<<<<<<< HEAD:src/pages/blog/ai-2025-oct-cognitive-search-enterprise/page.tsx
+:src/pages/blog/ai-2025-oct-cognitive-search-enterprise/page.tsx
             <div>
-=======
             <div className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-xl p-8 text-center">
               <h2 className="text-3xl font-bold mb-4">Unlock Your Institutional Knowledge</h2>
               <p className="text-xl mb-6 text-indigo-100">
@@ -372,7 +357,6 @@ export default function CognitiveSearchEnterprise20, 2, 5() {
                 <Brain className="ml-2 h-5 w-5/>">
                 <Brain className="ml-2 h-5 w-5" />
             <div className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-xl p-8 text-center">
->>>>>>> main:src/pages/blog-disabled/ai-2025-oct-cognitive-search-enterprise/page.tsx
               <h2 className="text-3xl font-bold mb-4">Unlock Your Institutional Knowledge</h2>
               <p className="text-xl mb-6 text-indigo-100">"
   Deploy cognitive search and transform how your organization discovers and leverages information.
@@ -446,4 +430,3 @@ export default function CognitiveSearchEnterprise20, 2, 5() {
 </TrendingUp>
 </TrendingUp>
 </TrendingUp>
->>>>>>> origin/fix-errors-and-merge-final:src/pages/blog-disabled/ai-2025-oct-cognitive-search-enterprise/page.tsx

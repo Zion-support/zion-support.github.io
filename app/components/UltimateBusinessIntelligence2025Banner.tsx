@@ -90,21 +90,12 @@ const UltimateBusinessIntelligence2025Banner = () => {
   return (
     <div className='relative bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white overflow-hidden'>
       {/* Animated Background */}
-<<<<<<< HEAD
       <div className='absolute inset-0'>
         <div className='absolute top-0 left-0 w-full h-full bg-gradient-to-br from-purple-600/20 via-blue-600/20 to-indigo-600/20'></div>
         <div className='absolute top-10 left-10 w-32 h-32 bg-purple-500/10 rounded-full animate-pulse'></div>
         <div className='absolute top-20 right-20 w-24 h-24 bg-blue-500/10 rounded-full animate-pulse delay-1000'></div>
         <div className='absolute bottom-10 left-1/4 w-40 h-40 bg-indigo-500/10 rounded-full animate-pulse delay-2000'></div>
         <div className='absolute bottom-20 right-1/3 w-28 h-28 bg-purple-500/10 rounded-full animate-pulse delay-3000'></div>
-=======
-      <div className="text-left">
-        <div className="text-left">
-        <div className="text-left">
-        <div className="text-left">
-        <div className="text-left">
-        <div className="text-left">
->>>>>>> origin/fix-errors-and-merge-final
       </div>
 
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12'>
@@ -138,17 +129,10 @@ const UltimateBusinessIntelligence2025Banner = () => {
           </button>
         </div>
 
-<<<<<<< HEAD
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 items-center'>
           <div className='space-y-6'>
             <div className='space-y-4'>
               <h2 className='text-3xl lg:text-4xl font-bold leading-tight'>
-=======
-        <div className="text-left">
-          <div className="text-left">
-            <div className="text-left">
-              <h2 className="text-left">
->>>>>>> origin/fix-errors-and-merge-final
                 {currentContent.title}
               </h2>
               <p className='text-lg text-white/90 leading-relaxed'>
@@ -157,86 +141,10 @@ const UltimateBusinessIntelligence2025Banner = () => {
             </div>
 
             {/* Success Metrics */}
-<<<<<<< HEAD
             <div className='grid grid-cols-2 gap-4'>
               <div className='bg-white/10 backdrop-blur-sm rounded-lg p-4'>
                 <div className='text-2xl font-bold text-yellow-400'>
                   {currentContent.metrics.roi}
-=======
-            <div className="text-left">
-              <div className="text-left">
-                <div className="text-left">{currentContent.metrics.roi}</div>"
-                <div className="text-left">ROI</div>"
-              </div>
-              <div className="text-left">
-                <div className="text-left">{currentContent.metrics.savings}</div>"
-                <div className="text-left">Annual Savings</div>"
-              </div>
-              <div className="text-left">
-                <div className="text-left">{currentContent.metrics.accuracy}</div>"
-                <div className="text-left">Accuracy</div>"
-              </div>
-              <div className="text-left">
-                <div className="text-left">{currentContent.metrics.speed || currentContent.metrics.timeline}</div>"
-                <div className="text-left">{currentContent.metrics.speed ? 'Faster' : 'Timeline'}</div>"
-              </div>
-            </div>
-
-            {/* Action Buttons */}
-            <div className="text-left">
-              <Link
-                href={currentContent.url}
-                className="text-left">
-                Read {currentContent.type}
-              </Link>
-              <Link
-                href="/contact"
-                className="text-left">
-                Get Consultation
-              </Link>
-            </div>
-
-            {/* Content Type Badge */}
-            <div className="text-left">
-              <span className="text-left">
-                {currentContent.type}
-              </span>
-              <span className="text-left">
-                {currentContent.readingTime}
-              </span>
-              {currentContent.featured && (
-                <span className="text-left">
-                  FEATURED
-                </span>
-              )}
-            </div>
-          </div>
-
-          {/* Content Preview Cards */}
-          <div className="text-left">
-            <h3 className="text-left">Featured Content</h3>"
-            {content.map((item, index) => (
-              <div
-                key={item.id}
-                className={`bg-white/10 backdrop-blur-sm rounded-lg p-4 cursor-pointer transition-all duration-300 ${
-                  index === currentSlide ? 'ring-2 ring-yellow-400 bg-white/20' : 'hover:bg-white/15'
-                }`}
-                onClick={() => setCurrentSlide(index)}
-              >
-                <div className="text-left">
-                  <div className="text-left">
-                    <h4 className="text-left">{item.title}</h4>"
-                    <div className="text-left">
-                      <span>{item.type}</span>
-                      <span>•</span>
-                      <span>{item.readingTime}</span>
-                    </div>
-                  </div>
-                  <div className="text-left">
-                    <div className="text-left">{item.metrics.roi}</div>"
-                    <div className="text-left">ROI</div>"
-                  </div>
->>>>>>> origin/fix-errors-and-merge-final
                 </div>
                 <div className='text-sm text-white/80'>ROI</div>
               </div>

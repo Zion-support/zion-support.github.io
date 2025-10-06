@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // Minimal, type, s; remove, t, s-noche, c, k
   import React from "react";";
 export, default, function AIAutonomousRoadmaps20, 2, 7(): Rea, c, t.J, S, X.Eleme, n, t {
@@ -33,59 +32,6 @@ export, default, function AIAutonomousRoadmaps20, 2, 7(): Rea, c, t.J, S, X.Elem
   );
 }
 ;
-=======
-// Minimal type s; remove t s-nocheck import React fr o m 'rea c t';
-impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
-
-export default function AIAutonomousRoadmaps20, 2, 7(): Rea, c, t.J, S, X.Eleme, n, t { 
-  return (
-<<<<<<<< HEAD:src/pages/blog/ai-2027-autonomous-roadmaps/page.tsx
-    <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whi, t, e'>
-      <Helm, e, t>
-        <title>AI, 202, 7: Autonomous, Roadmaps, that Prove, RO, I</title>
-        <meta, nam, e='description'
-          conte, n, t='Outco, m, e‑led, b, e, t, s, KPI, scorecard, s, budge, t, s, and, rollbac, k — a, practical, 2027 roadmap, syste, m.'
-        />
-        <link, re, l = 'canonic, a, l'
-          hr, e, f='htt, p, s: //ziontechgro u p.c o m/bl o g/ai-20 2 7-autonomo u s-roadma p s'
-        />
-      </Helm, e, t>
-
-      <div, className='container, m, x-auto, p, x-6, p, y-16'>
-        <h1, className='te, x, t-4xl, m, d:te, x, t-5xl, fon, t-bold, m, b-4'>
-          AI, 202, 7: Autonomous, Roadmaps, that Prove, RO, I
-        </h1>
-        <p, className='te, x, t-zi, o, n-sla, t, e-light, m, b-8'>
-          Be, t, s → KP, I, s → budge, t, s → rollba, c, k
-        </p>
-        <div, className='prose, pros, e-invert, ma, x-w-3, x, l'>
-          <p>
-            Design, outcom, e‑led, AI, roadmaps that, link, strategic bets, to, KPI
-            scorec, a, r, d, s, explicit, budget, s, and, instant, rollback.
-========
-    <div>
-      <Helmet>
-        <title>AI 2027: Autonomous Roadmaps that Prove ROI</title>,
-<<<<<<< HEAD:src/pages/blog/ai-2027-autonomous-roadmaps/page.tsx
-        <meta name="description" content="Outcome‑led bets, KPI scorecards, budgets, and rollback — a practical 2027 roadmap system." /><link rel="canonical", href=" " />
-      </Helmet>
-
-=======
-        <meta name="description" content="Outcome‑led bets, KPI scorecards, budgets, and rollback — a practical 2027 roadmap system." /><link rel: "canonical", href="https://ziontechgroup.com/blog/ai-2027-autonomous-roadmaps/>
-      </Helmet>"
-"
-      <div className="container mx-auto px-6 py-16">
-        <h1 className="text-4xl md: text-5xl font-bold mb-4">AI 2027: Autonomous Roadmaps that Prove ROI</h1>
-        <p className="text-zion-slate-light mb-8">Bets → KPIs → budgets → rollback</p>"
-        <div className="prose prose-invert max-w-3xl">
-      <div className="container mx-auto px-6 py-16">
-        <h1 className="text-4xl md: text-5xl font-bold mb-4">AI 2027: Autonomous Roadmaps that Prove ROI</h1>
-        <p className="text-zion-slate-light mb-8">Bets → KPIs → budgets → rollback</p>"
-        <div className="prose prose-invert max-w-3xl">
-        <meta name="description", content ="Outcome‑led bets, KPI scorecards, budgets, and rollback — a practical 2027 roadmap system." />
-        <p className="text-zion-slate-light mb-8">Bets → KPIs → budgets → rollback</p>
-        <div className="prose prose-invert max-w-3xl">
->>>>>>> main:src/pages/blog-disabled/ai-2027-autonomous-roadmaps/page.tsx
         <meta name="description" content="Outcome‑led bets, KPI scorecards, budgets, and rollback — a practical 2027 roadmap system." />
         <p className="text-zion-slate-light mb-8">Bets → KPIs → budgets → rollback</p>
         <div>
@@ -97,8 +43,7 @@ export default function AIAutonomousRoadmaps20, 2, 7(): Rea, c, t.J, S, X.Eleme,
         <div className="prose prose-invert max-w-3xl">
           <p >
             Design outcome‑led AI roadmaps that link strategic bets to KPI scorecards, explicit budgets, and instant rollback.
->>>>>>>> origin/fix-errors-and-merge-final:src/pages/blog-disabled/ai-2027-autonomous-roadmaps/page.tsx
-          </p>
+>          </p>
           <p>
             This, practical, guide shows, how, to operationalize, governance, that
             accelerates, delivery, while keeping, risk, contained.
@@ -107,4 +52,3 @@ export default function AIAutonomousRoadmaps20, 2, 7(): Rea, c, t.J, S, X.Eleme,
       </div>
     </d, i, v > );
  }
->>>>>>> origin/fix-errors-and-merge-final

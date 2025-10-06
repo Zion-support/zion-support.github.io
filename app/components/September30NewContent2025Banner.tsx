@@ -80,7 +80,6 @@ const September30NewContent2025Banner: React.FC = () => {
   return (
     <div className='py-24 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden'>
       {/* Animated background effects */}
-<<<<<<< HEAD
       <div className='absolute inset-0 overflow-hidden opacity-20'>
         <div className='absolute top-0 left-1/4 w-96 h-96 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse'></div>
         <div
@@ -91,12 +90,6 @@ const September30NewContent2025Banner: React.FC = () => {
           className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-fuchsia-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse'
           style={{ animationDelay: '4s' }}
         ></div>
-=======
-      <div className="text-left">
-        <div className="text-left">
-        <div className="text-left" style={{ animationDelay: '2s' }}>
-        <div className="text-left" style={{ animationDelay: '4s' }}>
->>>>>>> origin/fix-errors-and-merge-final
       </div>
 
       <div className='container mx-auto px-6 relative z-10'>
@@ -130,14 +123,9 @@ const September30NewContent2025Banner: React.FC = () => {
               style={{ animationDelay: `${index * 150}ms` }}
             >
               {/* Card glow effect */}
-<<<<<<< HEAD
               <div className='absolute inset-0 bg-gradient-to-br from-cyan-500/0 via-purple-500/0 to-fuchsia-500/0 group-hover:from-cyan-500/10 group-hover:via-purple-500/10 group-hover:to-fuchsia-500/10 transition-all duration-500'></div>
 
               <div className='relative p-8'>
-=======
-              <div className="text-left">
-              <div className="text-left">
->>>>>>> origin/fix-errors-and-merge-final
                 {/* Icon & Badge */}
                 <div className='flex items-start justify-between mb-6'>
                   <div className='text-7xl group-hover:scale-110 transition-transform duration-300'>
@@ -148,8 +136,6 @@ const September30NewContent2025Banner: React.FC = () => {
                       <TrendingUp className='w-4 h-4' />
                       <span>NEW</span>
                     </div>
-<<<<<<< HEAD
-=======
                 </div>
 
                 {/* Category Tag */}
@@ -203,7 +189,6 @@ const September30NewContent2025Banner: React.FC = () => {
                 <div className="text-left">
                   <div className="text-left">
                     {article.icon}
->>>>>>> origin/fix-errors-and-merge-final
                   </div>
                 </div>
 

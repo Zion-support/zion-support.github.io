@@ -4,7 +4,7 @@ impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
 import { Link } from 'react-router-dom';
 export default function RealtimePersonalizationEngine20, 2, 5() { 
   return (
-<<<<<<< HEAD:src/pages/blog/ai-2025-oct-realtime-personalization-engine/page.tsx
+:src/pages/blog/ai-2025-oct-realtime-personalization-engine/page.tsx
     <>
       <Helm, e, t>
         <title>
@@ -20,26 +20,22 @@ export default function RealtimePersonalizationEngine20, 2, 5() {
           hr, e, f='htt, p, s: //ziontechgro u p.c o m/bl o g/ai-20 2 5-o c t-realti m e-personalizati o n-engi n e'
         />
       </Helm, e, t>
-=======
     <div>
       <Helmet>
         <title>Real-Time AI Personalization Engine 2025 — 98.4% Relevance, 8.7x Conversion Lift, $234M+ Revenue Growth | Zion Tech Group</title>
-<<<<<<< HEAD:src/pages/blog/ai-2025-oct-realtime-personalization-engine/page.tsx
+:src/pages/blog/ai-2025-oct-realtime-personalization-engine/page.tsx
         <meta name="description
   content="Deploy real-time AI personalization that adapts to user behavior in milliseconds. Achieve 98.4% relevance scoring, 8.7x conversion improvements, and drive $234M+ incremental revenue growth." /><meta name="keywords
   content: "AI personalization, real-time personalization, recommendation engine, customer experience, conversion optimization, behavioral targeting, predictive personalization, marketing AI" /><link rel="canonical", href=" " />
   content=" />
         <link rel="canonical", href="https: //ziontechgroup.com/blog/ai-2025-oct-realtime-personalization-engine" />
-=======
         <meta name="description"
   content: "Deploy real-time AI personalization that adapts to user behavior in milliseconds. Achieve 98.4% relevance scoring, 8.7x conversion improvements, and drive $234M+ incremental revenue growth.", /><meta name: "keywords
   content: "AI personalization, real-time personalization, recommendation engine, customer experience, conversion optimization, behavioral targeting, predictive personalization, marketing AI", /><link rel: "canonical", href="https://ziontechgroup.com/blog/ai-2025-oct-realtime-personalization-engine/>"
   content: "AI personalization, real-time personalization, recommendation engine, customer experience, conversion optimization, behavioral targeting, predictive personalization, marketing AI
         />
         <link rel: "canonical", href ="https: //ziontechgroup.com/blog/ai-2025-oct-realtime-personalization-engine" />
->>>>>>> main:src/pages/blog-disabled/ai-2025-oct-realtime-personalization-engine/page.tsx
       </Helmet>
->>>>>>> origin/fix-errors-and-merge-final:src/pages/blog-disabled/ai-2025-oct-realtime-personalization-engine/page.tsx
 
       <article, className='m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-ro, s, e-900, t, o-sla, t, e-900, tex, t-whi, t, e'>
         <div, className='container, m, x-auto, p, x-4, p, y-12, ma, x-w-4, x, l'>
@@ -49,7 +45,7 @@ export default function RealtimePersonalizationEngine20, 2, 5() {
             <ArrowLeft, className='mr-2 h-4 w-4' />
             Back, to, Blog
 
-<<<<<<< HEAD:src/pages/blog/ai-2025-oct-realtime-personalization-engine/page.tsx
+:src/pages/blog/ai-2025-oct-realtime-personalization-engine/page.tsx
             <h1, classNam, e = 'te, x, t-5xl, m, d: te, x, t-6xl, fon, t-bold, m, b-6, b, g-gradie, n, t-to-r, fro, m-ro, s, e-400, vi, a-pi, n, k-400, t, o-purp, l, e-400, tex, t-transparent, b, g-cl, i, p-text, leadin, g-tig, h, t'>
               Re, a, l-Time, AI, Personalization: The, Revenue, Multiplication Engi, n, e
                 <li, classNam, e='flex, item, s-start, ga, p-3'>
@@ -61,12 +57,10 @@ export default function RealtimePersonalizationEngine20, 2, 5() {
               Re, a, l-Time, AI, Personalization: The, Revenue, Multiplication Engi, n, e
                 <li, className='flex, item, s-start, ga, p-3'>
                   <DollarSign, className='h-6 w-6, tex, t-gre, e, n-400, m, t-1, fle, x-shri, n, k-0' />
->>>>>>> origin/merge-fixes-20251005-193002
                   <sp, a, n>
                     <stro, n, g>$23, 4, M+ Reven, u, e:</stro, n, g> Average, incremental, revenue
                     for, enterprise, deployments
                   </sp, a, n>
->>>>>>> origin/merge-fixes-20251005-193002
 
             <section, classNam, e = 'mb-12'>
               <h2, className='te, x, t-3xl, fon, t-bold, m, b-6, tex, t-ro, s, e-3, 0, 0'>
@@ -80,7 +74,6 @@ export default function RealtimePersonalizationEngine20, 2, 5() {
                 <p, className='te, x, t-gr, a, y-300, m, b-4'>
                   Stream, processing, infrastructure ingests, and, analyzes user, interactions, in under, 50m, s. Behavioral, signa, l, s, contextual, dat, a, and, intent, markers flow, through, the system, continuousl, y,
                   building, dynamic, user models, that, evolve with, every, action.
->>>>>>> origin/merge-fixes-20251005-193002
 
             <section, className='mb-12'>
               <h2, className='te, x, t-3xl, fon, t-bold, m, b-6, tex, t-ro, s, e-3, 0, 0'>
@@ -96,7 +89,6 @@ export default function RealtimePersonalizationEngine20, 2, 5() {
                 <Target, classNam, e='ml-2 h-5 w-5' />
                 Start, Your, Personalization Journ, e, y
                 <Target, className='ml-2 h-5 w-5' />
-=======
           <div>
               <h2 className="text-3xl font-bold mb-6 flex items-center gap-3">
                 <Target className="h-8 w-8 text-rose-400 ,>
@@ -116,19 +108,17 @@ export default function RealtimePersonalizationEngine20, 2, 5() {
               </h2>"
               <ul className="space-y-4 text-lg">
                 <li className="flex items-start gap-3">
-<<<<<<< HEAD:src/pages/blog/ai-2025-oct-realtime-personalization-engine/page.tsx
+:src/pages/blog/ai-2025-oct-realtime-personalization-engine/page.tsx
                   <Zap className=" />
                   <span><strong>98.4% Relevance: </strong> AI predicts user intent and preferences with near-perfect accuracy</span>,"
                 </li>"
                 <li className="flex items-start gap-3">
                   <Users className=" />
-=======
                   <Zap className="h-6 w-6 text-yellow-400 mt-1 flex-shrink-0/>"
                   <span><strong>98.4% Relevance: </strong> AI predicts user intent and preferences with near-perfect accuracy</span>,"
                 </li>"
                 <li className="flex items-start gap-3">
                   <Users className="h-6 w-6 text-blue-400 mt-1 flex-shrink-0/>"
->>>>>>> main:src/pages/blog-disabled/ai-2025-oct-realtime-personalization-engine/page.tsx
                   <span><strong>8.7x Conversion Lift: </strong> Personalized experiences drive dramatic engagement increases</span>,"
                 </li>"
                 <li className="flex items-start gap-3">
@@ -339,9 +329,8 @@ export default function RealtimePersonalizationEngine20, 2, 5() {
               </p>
             </section>
 
-<<<<<<< HEAD:src/pages/blog/ai-2025-oct-realtime-personalization-engine/page.tsx
+:src/pages/blog/ai-2025-oct-realtime-personalization-engine/page.tsx
             <div>
-=======
             <div className="bg-gradient-to-r from-rose-600 to-purple-600 rounded-xl p-8 text-center">
               <h2 className="text-3xl font-bold mb-4">Multiply Your Revenue with AI Personalization</h2>
               <p className="text-xl mb-6 text-rose-100">
@@ -355,7 +344,6 @@ export default function RealtimePersonalizationEngine20, 2, 5() {
                 <Target className="ml-2 h-5 w-5/>">
                 <Target className="ml-2 h-5 w-5" />
             <div className="bg-gradient-to-r from-rose-600 to-purple-600 rounded-xl p-8 text-center">
->>>>>>> main:src/pages/blog-disabled/ai-2025-oct-realtime-personalization-engine/page.tsx
               <h2 className="text-3xl font-bold mb-4">Multiply Your Revenue with AI Personalization</h2>
               <p className="text-xl mb-6 text-rose-100">"
   Deploy real-time personalization and transform every customer interaction into revenue opportunity.
@@ -426,4 +414,3 @@ export default function RealtimePersonalizationEngine20, 2, 5() {
 </DollarSign>
 </DollarSign>
 </DollarSign>
->>>>>>> origin/fix-errors-and-merge-final:src/pages/blog-disabled/ai-2025-oct-realtime-personalization-engine/page.tsx
