@@ -27,15 +27,14 @@ let allBranches = [];
 try {
   const branchOutput = execSync(
     'git branch -r | grep -v backup | grep -E "(cursor|codex|pr|feature|bugfix)"',
-    { encoding: 'utf8' },
+    { encoding: 'utf8' }
   );
   allBranches = branchOutput
     .split('\n')
     .filter(branch => branch.trim())
     .map(branch => branch.trim().replace('origin/', ''))
     .filter(
-      branch =>
-        branch && !branch.includes('backup') && !branch.includes('main'),
+      branch => branch && !branch.includes('backup') && !branch.includes('main')
     );
 } catch (error) {
   console.log('⚠️  Could not fetch branches:', error.message);
@@ -51,7 +50,7 @@ for (let i = 0; i < allBranches.length; i += BATCH_SIZE) {
 }
 
 console.log(
-  `📦 Processing ${batches.length} batches of up to ${BATCH_SIZE} branches each\n`,
+  `📦 Processing ${batches.length} batches of up to ${BATCH_SIZE} branches each\n`
 );
 
 // Step 4: Enhanced conflict resolution function
@@ -90,14 +89,14 @@ function resolveConflictsAndMerge(branchName) {
     // Try initial merge
     execSync(
       `git merge origin/${branchName} --no-ff -m "Merge ${branchName} into main"`,
-      { stdio: 'pipe' },
+      { stdio: 'pipe' }
     );
 
     console.log(`✅ Successfully merged ${branchName}`);
     return { success: true, method: 'direct' };
   } catch (error) {
     console.log(
-      `⚠️  Direct merge failed for ${branchName}, attempting conflict resolution...`,
+      `⚠️  Direct merge failed for ${branchName}, attempting conflict resolution...`
     );
 
     try {
@@ -105,10 +104,10 @@ function resolveConflictsAndMerge(branchName) {
       execSync('git reset --hard HEAD', { stdio: 'pipe' });
       execSync(
         `git merge origin/${branchName} -X theirs --no-ff -m "Auto-merge ${branchName} (theirs strategy)"`,
-        { stdio: 'pipe' },
+        { stdio: 'pipe' }
       );
       console.log(
-        `✅ Auto-resolved conflicts for ${branchName} using 'theirs' strategy`,
+        `✅ Auto-resolved conflicts for ${branchName} using 'theirs' strategy`
       );
       return { success: true, method: 'theirs' };
     } catch (theirsError) {
@@ -120,10 +119,10 @@ function resolveConflictsAndMerge(branchName) {
       execSync('git reset --hard HEAD', { stdio: 'pipe' });
       execSync(
         `git merge origin/${branchName} -X ours --no-ff -m "Auto-merge ${branchName} (ours strategy)"`,
-        { stdio: 'pipe' },
+        { stdio: 'pipe' }
       );
       console.log(
-        `✅ Auto-resolved conflicts for ${branchName} using 'ours' strategy`,
+        `✅ Auto-resolved conflicts for ${branchName} using 'ours' strategy`
       );
       return { success: true, method: 'ours' };
     } catch (oursError) {
@@ -142,7 +141,7 @@ function resolveConflictsAndMerge(branchName) {
         .filter(file => file.trim());
 
       console.log(
-        `🔧 Manually resolving ${conflictedFiles.length} conflicted files...`,
+        `🔧 Manually resolving ${conflictedFiles.length} conflicted files...`
       );
 
       // For each conflicted file, try to resolve
@@ -203,7 +202,7 @@ const results = {
 for (let i = 0; i < batches.length; i++) {
   const batch = batches[i];
   console.log(
-    `\n📦 Processing Batch ${i + 1}/${batches.length} (${batch.length} branches)...`,
+    `\n📦 Processing Batch ${i + 1}/${batches.length} (${batch.length} branches)...`
   );
 
   const batchResults = {
@@ -256,7 +255,7 @@ for (let i = 0; i < batches.length; i++) {
   }
 
   console.log(
-    `📊 Batch ${i + 1} completed: ${batchResults.successful} successful, ${batchResults.failed} failed`,
+    `📊 Batch ${i + 1} completed: ${batchResults.successful} successful, ${batchResults.failed} failed`
   );
 }
 
@@ -275,7 +274,7 @@ results.summary = {
 
 fs.writeFileSync(
   'comprehensive-final-merge-report.json',
-  JSON.stringify(results, null, 2),
+  JSON.stringify(results, null, 2)
 );
 
 // Step 7: Display final summary
@@ -306,6 +305,6 @@ try {
 }
 
 console.log(
-  '\n📄 Detailed report saved to: comprehensive-final-merge-report.json',
+  '\n📄 Detailed report saved to: comprehensive-final-merge-report.json'
 );
 console.log('🎯 Comprehensive final merge process completed successfully!');
