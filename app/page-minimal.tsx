@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Phone, CheckCircle, Star } from 'lucide-react';
+import { ArrowRight, Phone, CheckCircle, Zap, Shield, Cpu } from 'lucide-react';
 
 export const metadata = {
   title: 'Zion Tech Group - Advanced AI and IT Solutions',
@@ -13,45 +13,45 @@ export default function HomePage() {
       {/* Header */}
       <header className="bg-white border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center py-6">
+          <div className="flex justify-between items-center py-4">
             <div className="flex items-center">
               <Link href="/" className="text-2xl font-bold text-gray-900">
                 Zion Tech Group
               </Link>
             </div>
             <nav className="hidden md:flex space-x-8">
-              <Link href="/" className="text-gray-900 hover:text-blue-600">Home</Link>
-              <Link href="/services" className="text-gray-900 hover:text-blue-600">Services</Link>
-              <Link href="/blog" className="text-gray-900 hover:text-blue-600">Blog</Link>
-              <Link href="/case-studies" className="text-gray-900 hover:text-blue-600">Case Studies</Link>
+              <Link href="/" className="text-gray-600 hover:text-gray-900">Home</Link>
+              <Link href="/services" className="text-gray-600 hover:text-gray-900">Services</Link>
+              <Link href="/blog" className="text-gray-600 hover:text-gray-900">Blog</Link>
+              <Link href="/case-studies" className="text-gray-600 hover:text-gray-900">Case Studies</Link>
             </nav>
           </div>
         </div>
       </header>
 
+      {/* Main Content */}
       <main>
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Transform Your Business with
-              <span className="block text-blue-200">AI-Powered Solutions</span>
+            <h1 className="text-5xl font-bold mb-6">
+              Transform Your Business with AI-Powered Solutions
             </h1>
-            <p className="text-xl md:text-2xl mb-8 text-blue-100">
+            <p className="text-xl mb-8 max-w-3xl mx-auto">
               Zion Tech Group delivers cutting-edge AI micro SaaS services, cloud automation, 
               and enterprise IT solutions that drive growth, efficiency, and innovation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/services"
-                className="inline-flex items-center px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-blue-50 transition-colors font-semibold"
+                className="inline-flex items-center px-8 py-3 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors"
               >
                 Explore Our Services
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
               <a
                 href="tel:+13024640950"
-                className="inline-flex items-center px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold"
+                className="inline-flex items-center px-8 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-600 transition-colors"
               >
                 <Phone className="w-5 h-5 mr-2" />
                 Call +1 302 464 0950
@@ -64,48 +64,40 @@ export default function HomePage() {
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">
                 Why Choose Zion Tech Group?
               </h2>
-              <p className="text-xl text-gray-600">
-                We deliver measurable results through innovative AI solutions
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                We combine cutting-edge AI technology with proven business strategies to deliver 
+                exceptional results for our clients.
               </p>
             </div>
             
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="bg-white p-8 rounded-lg shadow-lg">
-                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
-                  <CheckCircle className="w-6 h-6 text-blue-600" />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                  Proven Results
-                </h3>
+                <div className="text-4xl mb-4">🤖</div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">AI-Powered Solutions</h3>
                 <p className="text-gray-600">
-                  Our AI solutions have delivered 300% ROI and 70% cost reduction for enterprise clients.
+                  Leverage advanced artificial intelligence to automate processes, 
+                  gain insights, and drive innovation across your organization.
                 </p>
               </div>
               
               <div className="bg-white p-8 rounded-lg shadow-lg">
-                <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
-                  <Star className="w-6 h-6 text-green-600" />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                  Expert Team
-                </h3>
+                <div className="text-4xl mb-4">☁️</div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Cloud Automation</h3>
                 <p className="text-gray-600">
-                  Our team of AI experts and engineers brings decades of experience in enterprise transformation.
+                  Streamline your operations with intelligent cloud automation 
+                  that reduces costs and improves efficiency.
                 </p>
               </div>
               
               <div className="bg-white p-8 rounded-lg shadow-lg">
-                <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
-                  <ArrowRight className="w-6 h-6 text-purple-600" />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                  Fast Implementation
-                </h3>
+                <div className="text-4xl mb-4">📊</div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Enterprise Solutions</h3>
                 <p className="text-gray-600">
-                  Get your AI solutions up and running quickly with our streamlined implementation process.
+                  Comprehensive IT solutions designed to scale with your business 
+                  and support your digital transformation journey.
                 </p>
               </div>
             </div>
@@ -115,26 +107,26 @@ export default function HomePage() {
         {/* CTA Section */}
         <section className="py-20 bg-blue-600 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            <h2 className="text-4xl font-bold mb-4">
               Ready to Transform Your Business?
             </h2>
-            <p className="text-xl mb-8 text-blue-100">
-              Let's discuss how our AI solutions can drive your success.
+            <p className="text-xl mb-8 max-w-3xl mx-auto">
+              Let's discuss how our AI solutions can drive your success. 
+              Contact us today for a free consultation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/contact"
-                className="inline-flex items-center px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-blue-50 transition-colors font-semibold"
+                className="inline-flex items-center px-8 py-3 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors"
               >
                 Get Started Today
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
               <Link
                 href="/case-studies"
-                className="inline-flex items-center px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold"
+                className="inline-flex items-center px-8 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-600 transition-colors"
               >
                 View Success Stories
-                <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
             </div>
           </div>
@@ -144,22 +136,45 @@ export default function HomePage() {
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h3 className="text-2xl font-bold mb-4">Zion Tech Group</h3>
-            <p className="text-gray-400 mb-6">
-              Advanced AI and IT Solutions for Enterprise Transformation
-            </p>
-            <div className="flex justify-center space-x-6">
-              <Link href="/services" className="text-gray-400 hover:text-white">Services</Link>
-              <Link href="/about" className="text-gray-400 hover:text-white">About</Link>
-              <Link href="/contact" className="text-gray-400 hover:text-white">Contact</Link>
-              <Link href="/privacy" className="text-gray-400 hover:text-white">Privacy</Link>
-            </div>
-            <div className="mt-8 pt-8 border-t border-gray-800">
-              <p className="text-gray-400 text-sm">
-                © 2026 Zion Tech Group. All rights reserved.
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+              <h3 className="text-lg font-semibold mb-4">Zion Tech Group</h3>
+              <p className="text-gray-400">
+                Leading provider of AI-powered enterprise solutions and digital transformation services.
               </p>
             </div>
+            
+            <div>
+              <h4 className="text-lg font-semibold mb-4">Services</h4>
+              <ul className="space-y-2">
+                <li><Link href="/services" className="text-gray-400 hover:text-white">AI Solutions</Link></li>
+                <li><Link href="/services" className="text-gray-400 hover:text-white">Cloud Automation</Link></li>
+                <li><Link href="/services" className="text-gray-400 hover:text-white">Enterprise IT</Link></li>
+              </ul>
+            </div>
+            
+            <div>
+              <h4 className="text-lg font-semibold mb-4">Resources</h4>
+              <ul className="space-y-2">
+                <li><Link href="/blog" className="text-gray-400 hover:text-white">Blog</Link></li>
+                <li><Link href="/case-studies" className="text-gray-400 hover:text-white">Case Studies</Link></li>
+                <Link href="/guides" className="text-gray-400 hover:text-white">Guides</Link>
+              </ul>
+            </div>
+            
+            <div>
+              <h4 className="text-lg font-semibold mb-4">Contact</h4>
+              <ul className="space-y-2">
+                <li className="text-gray-400">+1 302 464 0950</li>
+                <li><Link href="/contact" className="text-gray-400 hover:text-white">Contact Us</Link></li>
+              </ul>
+            </div>
+          </div>
+          
+          <div className="border-t border-gray-800 mt-8 pt-8 text-center">
+            <p className="text-gray-400">
+              © 2026 Zion Tech Group. All rights reserved.
+            </p>
           </div>
         </div>
       </footer>

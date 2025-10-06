@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowLeft, Calendar, User, Clock, Tag, Target, CheckCircle, ArrowRight, Brain, Zap, Shield, TrendingUp } from 'lucide-react';
+import { ArrowLeft, Calendar, User, Clock, Tag, Target, CheckCircle, ArrowRight, Brain, Zap, Shield, Cpu } from 'lucide-react';
 
 export const metadata = {
   title: 'AI 2027 Implementation Roadmap - Complete Guide to Advanced Neural Superintelligence',
@@ -19,11 +19,11 @@ export default function AI2027ImplementationRoadmap() {
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
-      <header className="bg-gradient-to-r from-purple-900 to-blue-900 text-white py-8">
-        <div className="max-w-4xl mx-auto px-4">
+      <header className="bg-white border-b border-gray-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <Link 
             href="/"
-            className="inline-flex items-center text-purple-200 hover:text-white transition-colors mb-6"
+            className="inline-flex items-center text-gray-600 hover:text-gray-900 transition-colors"
           >
             <ArrowLeft className="w-4 h-4 mr-2" />
             Back to Home
@@ -32,10 +32,10 @@ export default function AI2027ImplementationRoadmap() {
       </header>
 
       {/* Article Content */}
-      <article className="max-w-4xl mx-auto px-4 py-8">
+      <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Article Header */}
         <div className="mb-8">
-          <div className="flex flex-wrap items-center gap-6 text-sm text-gray-600 mb-6">
+          <div className="flex flex-wrap items-center gap-4 text-sm text-gray-600 mb-4">
             <div className="flex items-center">
               <Calendar className="w-4 h-4 mr-2" />
               <span>January 22, 2027</span>
@@ -50,34 +50,34 @@ export default function AI2027ImplementationRoadmap() {
             </div>
           </div>
           
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">
             🗺️ AI 2027 Implementation Roadmap
           </h1>
           
-          <p className="text-xl text-gray-700 mb-6">
+          <p className="text-xl text-gray-600 mb-6">
             Complete Guide to Advanced Neural Superintelligence Deployment
           </p>
           
           <div className="flex flex-wrap gap-2 mb-6">
-            <span className="inline-flex items-center px-3 py-1 rounded-full text-sm bg-purple-100 text-purple-800">
-              <Tag className="w-3 h-3 mr-1" />
+            <span className="inline-flex items-center px-3 py-1 rounded-full text-sm bg-green-100 text-green-800">
+              <CheckCircle className="w-3 h-3 mr-1" />
               FREE ROADMAP
             </span>
             <span className="inline-flex items-center px-3 py-1 rounded-full text-sm bg-blue-100 text-blue-800">
-              <Tag className="w-3 h-3 mr-1" />
+              <Calendar className="w-3 h-3 mr-1" />
               12-MONTH PLAN
             </span>
-            <span className="inline-flex items-center px-3 py-1 rounded-full text-sm bg-green-100 text-green-800">
-              <Tag className="w-3 h-3 mr-1" />
+            <span className="inline-flex items-center px-3 py-1 rounded-full text-sm bg-purple-100 text-purple-800">
+              <Target className="w-3 h-3 mr-1" />
               $2.8T PROVEN
             </span>
           </div>
         </div>
 
         {/* Executive Summary */}
-        <div className="bg-gradient-to-r from-purple-50 to-blue-50 rounded-lg p-8 mb-12">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">🎯 Executive Summary</h2>
-          <p className="text-lg text-gray-700 mb-6">
+        <div className="mb-12">
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">🎯 Executive Summary</h2>
+          <p className="text-lg text-gray-600 mb-8">
             This comprehensive roadmap provides a proven 12-month implementation strategy for deploying 
             AI 2027 Advanced Neural Superintelligence in your enterprise. Based on successful deployments 
             delivering $2.8T in enterprise value, this guide ensures maximum ROI and seamless integration.
@@ -88,28 +88,64 @@ export default function AI2027ImplementationRoadmap() {
         <div className="mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-6">📋 Pre-Implementation Checklist</h2>
           
-          <h3 className="text-xl font-semibold text-gray-800 mb-4">✅ Prerequisites</h3>
+          <h3 className="text-2xl font-semibold text-gray-800 mb-4">✅ Prerequisites</h3>
           
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="bg-blue-50 p-6 rounded-lg">
-              <h4 className="text-lg font-semibold text-gray-800 mb-4">Technical Requirements</h4>
-              <ul className="list-disc pl-6 space-y-2">
-                <li>Quantum computing infrastructure</li>
-                <li>Advanced neural network hardware</li>
-                <li>High-speed data processing systems</li>
-                <li>Edge computing capabilities</li>
-                <li>5G/6G network infrastructure</li>
+              <h4 className="font-semibold mb-4 flex items-center">
+                <Cpu className="w-5 h-5 mr-2 text-blue-600" />
+                Technical Requirements
+              </h4>
+              <ul className="space-y-2">
+                <li>• Quantum computing infrastructure</li>
+                <li>• Advanced neural network hardware</li>
+                <li>• High-speed data processing systems</li>
+                <li>• Edge computing capabilities</li>
+                <li>• 5G/6G network infrastructure</li>
               </ul>
             </div>
             
             <div className="bg-green-50 p-6 rounded-lg">
-              <h4 className="text-lg font-semibold text-gray-800 mb-4">Organizational Readiness</h4>
-              <ul className="list-disc pl-6 space-y-2">
-                <li>Executive leadership commitment</li>
-                <li>AI-specialized talent acquisition</li>
-                <li>Change management framework</li>
-                <li>Ethical AI governance policies</li>
-                <li>Security and compliance protocols</li>
+              <h4 className="font-semibold mb-4 flex items-center">
+                <Shield className="w-5 h-5 mr-2 text-green-600" />
+                Security & Compliance
+              </h4>
+              <ul className="space-y-2">
+                <li>• Advanced encryption protocols</li>
+                <li>• AI governance framework</li>
+                <li>• Data privacy compliance</li>
+                <li>• Ethical AI guidelines</li>
+                <li>• Risk assessment completion</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+            <div className="bg-purple-50 p-6 rounded-lg">
+              <h4 className="font-semibold mb-4 flex items-center">
+                <Brain className="w-5 h-5 mr-2 text-purple-600" />
+                Organizational Readiness
+              </h4>
+              <ul className="space-y-2">
+                <li>• Executive leadership commitment</li>
+                <li>• AI talent acquisition</li>
+                <li>• Change management strategy</li>
+                <li>• Training programs</li>
+                <li>• Cultural transformation plan</li>
+              </ul>
+            </div>
+            
+            <div className="bg-orange-50 p-6 rounded-lg">
+              <h4 className="font-semibold mb-4 flex items-center">
+                <Zap className="w-5 h-5 mr-2 text-orange-600" />
+                Performance Metrics
+              </h4>
+              <ul className="space-y-2">
+                <li>• Baseline performance measurement</li>
+                <li>• Success criteria definition</li>
+                <li>• ROI calculation framework</li>
+                <li>• Monitoring systems setup</li>
+                <li>• Continuous improvement processes</li>
               </ul>
             </div>
           </div>
@@ -117,110 +153,79 @@ export default function AI2027ImplementationRoadmap() {
 
         {/* Implementation Phases */}
         <div className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">🚀 Implementation Phases</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">🚀 Implementation Phases</h2>
           
-          {/* Phase 1 */}
-          <div className="mb-8">
-            <div className="bg-gradient-to-r from-purple-100 to-blue-100 p-6 rounded-lg">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Phase 1: Foundation (Months 1-3)</h3>
-              <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <h4 className="text-lg font-semibold text-gray-800 mb-3">Infrastructure Setup</h4>
-                  <ul className="list-disc pl-6 space-y-2">
-                    <li>Quantum computing cluster deployment</li>
-                    <li>Neural network hardware installation</li>
-                    <li>Data pipeline architecture</li>
-                    <li>Security framework implementation</li>
+          <div className="space-y-8">
+            {/* Phase 1 */}
+            <div className="border-l-4 border-blue-500 pl-6">
+              <h3 className="text-2xl font-semibold text-gray-800 mb-4">Phase 1: Foundation (Months 1-3)</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="bg-gray-50 p-6 rounded-lg">
+                  <h4 className="font-semibold mb-4">Infrastructure Setup</h4>
+                  <ul className="space-y-2 text-sm">
+                    <li>• Deploy quantum computing clusters</li>
+                    <li>• Install neural processing units</li>
+                    <li>• Configure edge computing nodes</li>
+                    <li>• Establish data pipelines</li>
                   </ul>
                 </div>
-                <div>
-                  <h4 className="text-lg font-semibold text-gray-800 mb-3">Team Assembly</h4>
-                  <ul className="list-disc pl-6 space-y-2">
-                    <li>AI research scientists recruitment</li>
-                    <li>Quantum computing specialists</li>
-                    <li>Data engineering team</li>
-                    <li>Ethics and governance experts</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Phase 2 */}
-          <div className="mb-8">
-            <div className="bg-gradient-to-r from-blue-100 to-green-100 p-6 rounded-lg">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Phase 2: Development (Months 4-6)</h3>
-              <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <h4 className="text-lg font-semibold text-gray-800 mb-3">Model Training</h4>
-                  <ul className="list-disc pl-6 space-y-2">
-                    <li>Neural superintelligence architecture design</li>
-                    <li>Quantum-enhanced training algorithms</li>
-                    <li>Multi-modal data integration</li>
-                    <li>Continuous learning implementation</li>
-                  </ul>
-                </div>
-                <div>
-                  <h4 className="text-lg font-semibold text-gray-800 mb-3">Testing & Validation</h4>
-                  <ul className="list-disc pl-6 space-y-2">
-                    <li>Performance benchmarking</li>
-                    <li>Safety and alignment testing</li>
-                    <li>Ethical decision-making validation</li>
-                    <li>Scalability assessment</li>
+                <div className="bg-gray-50 p-6 rounded-lg">
+                  <h4 className="font-semibold mb-4">Team Assembly</h4>
+                  <ul className="space-y-2 text-sm">
+                    <li>• Recruit AI specialists</li>
+                    <li>• Train existing staff</li>
+                    <li>• Establish governance teams</li>
+                    <li>• Create knowledge base</li>
                   </ul>
                 </div>
               </div>
             </div>
-          </div>
 
-          {/* Phase 3 */}
-          <div className="mb-8">
-            <div className="bg-gradient-to-r from-green-100 to-orange-100 p-6 rounded-lg">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Phase 3: Deployment (Months 7-9)</h3>
-              <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <h4 className="text-lg font-semibold text-gray-800 mb-3">Pilot Implementation</h4>
-                  <ul className="list-disc pl-6 space-y-2">
-                    <li>Controlled environment deployment</li>
-                    <li>Real-world scenario testing</li>
-                    <li>Performance monitoring</li>
-                    <li>User feedback integration</li>
+            {/* Phase 2 */}
+            <div className="border-l-4 border-green-500 pl-6">
+              <h3 className="text-2xl font-semibold text-gray-800 mb-4">Phase 2: Pilot Deployment (Months 4-6)</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="bg-gray-50 p-6 rounded-lg">
+                  <h4 className="font-semibold mb-4">Core AI Systems</h4>
+                  <ul className="space-y-2 text-sm">
+                    <li>• Deploy neural superintelligence core</li>
+                    <li>• Implement learning algorithms</li>
+                    <li>• Configure decision engines</li>
+                    <li>• Test autonomous capabilities</li>
                   </ul>
                 </div>
-                <div>
-                  <h4 className="text-lg font-semibold text-gray-800 mb-3">Integration</h4>
-                  <ul className="list-disc pl-6 space-y-2">
-                    <li>Legacy system integration</li>
-                    <li>API development</li>
-                    <li>User interface design</li>
-                    <li>Workflow automation</li>
+                <div className="bg-gray-50 p-6 rounded-lg">
+                  <h4 className="font-semibold mb-4">Integration Testing</h4>
+                  <ul className="space-y-2 text-sm">
+                    <li>• System integration validation</li>
+                    <li>• Performance benchmarking</li>
+                    <li>• Security penetration testing</li>
+                    <li>• User acceptance testing</li>
                   </ul>
                 </div>
               </div>
             </div>
-          </div>
 
-          {/* Phase 4 */}
-          <div className="mb-8">
-            <div className="bg-gradient-to-r from-orange-100 to-red-100 p-6 rounded-lg">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Phase 4: Scale & Optimize (Months 10-12)</h3>
-              <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <h4 className="text-lg font-semibold text-gray-800 mb-3">Full Deployment</h4>
-                  <ul className="list-disc pl-6 space-y-2">
-                    <li>Enterprise-wide rollout</li>
-                    <li>Multi-department integration</li>
-                    <li>Global deployment</li>
-                    <li>Performance optimization</li>
+            {/* Phase 3 */}
+            <div className="border-l-4 border-purple-500 pl-6">
+              <h3 className="text-2xl font-semibold text-gray-800 mb-4">Phase 3: Scale & Optimize (Months 7-12)</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="bg-gray-50 p-6 rounded-lg">
+                  <h4 className="font-semibold mb-4">Enterprise Rollout</h4>
+                  <ul className="space-y-2 text-sm">
+                    <li>• Deploy across all business units</li>
+                    <li>• Implement advanced features</li>
+                    <li>• Optimize performance</li>
+                    <li>• Scale infrastructure</li>
                   </ul>
                 </div>
-                <div>
-                  <h4 className="text-lg font-semibold text-gray-800 mb-3">Continuous Improvement</h4>
-                  <ul className="list-disc pl-6 space-y-2">
-                    <li>Advanced learning algorithms</li>
-                    <li>Capability expansion</li>
-                    <li>Performance monitoring</li>
-                    <li>Future roadmap planning</li>
+                <div className="bg-gray-50 p-6 rounded-lg">
+                  <h4 className="font-semibold mb-4">Continuous Improvement</h4>
+                  <ul className="space-y-2 text-sm">
+                    <li>• Monitor system performance</li>
+                    <li>• Implement feedback loops</li>
+                    <li>• Update algorithms</li>
+                    <li>• Expand capabilities</li>
                   </ul>
                 </div>
               </div>
@@ -228,97 +233,52 @@ export default function AI2027ImplementationRoadmap() {
           </div>
         </div>
 
-        {/* Key Capabilities */}
+        {/* Expected Outcomes */}
         <div className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">🧠 Key Capabilities</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">📊 Expected Outcomes</h2>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="bg-purple-50 p-6 rounded-lg text-center">
-              <Brain className="w-12 h-12 text-purple-600 mx-auto mb-4" />
-              <h3 className="text-lg font-semibold text-gray-800 mb-2">Neural Superintelligence</h3>
-              <p className="text-gray-600">Advanced reasoning and problem-solving capabilities</p>
-            </div>
-            
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="bg-blue-50 p-6 rounded-lg text-center">
-              <Zap className="w-12 h-12 text-blue-600 mx-auto mb-4" />
-              <h3 className="text-lg font-semibold text-gray-800 mb-2">Quantum Processing</h3>
-              <p className="text-gray-600">Exponential computational power and speed</p>
+              <div className="text-3xl font-bold text-blue-600 mb-2">1,000,000x</div>
+              <div className="text-gray-600">Performance Gain</div>
             </div>
-            
             <div className="bg-green-50 p-6 rounded-lg text-center">
-              <Shield className="w-12 h-12 text-green-600 mx-auto mb-4" />
-              <h3 className="text-lg font-semibold text-gray-800 mb-2">Ethical AI</h3>
-              <p className="text-gray-600">Built-in ethical decision-making frameworks</p>
+              <div className="text-3xl font-bold text-green-600 mb-2">99.9%</div>
+              <div className="text-gray-600">Accuracy Rate</div>
             </div>
-            
+            <div className="bg-purple-50 p-6 rounded-lg text-center">
+              <div className="text-3xl font-bold text-purple-600 mb-2">$2.8T</div>
+              <div className="text-gray-600">Enterprise Value</div>
+            </div>
             <div className="bg-orange-50 p-6 rounded-lg text-center">
-              <TrendingUp className="w-12 h-12 text-orange-600 mx-auto mb-4" />
-              <h3 className="text-lg font-semibold text-gray-800 mb-2">Continuous Learning</h3>
-              <p className="text-gray-600">Self-improving and adaptive capabilities</p>
-            </div>
-            
-            <div className="bg-red-50 p-6 rounded-lg text-center">
-              <Target className="w-12 h-12 text-red-600 mx-auto mb-4" />
-              <h3 className="text-lg font-semibold text-gray-800 mb-2">Strategic Planning</h3>
-              <p className="text-gray-600">Long-term strategic decision support</p>
-            </div>
-            
-            <div className="bg-indigo-50 p-6 rounded-lg text-center">
-              <CheckCircle className="w-12 h-12 text-indigo-600 mx-auto mb-4" />
-              <h3 className="text-lg font-semibold text-gray-800 mb-2">Quality Assurance</h3>
-              <p className="text-gray-600">Automated quality control and validation</p>
+              <div className="text-3xl font-bold text-orange-600 mb-2">24/7</div>
+              <div className="text-gray-600">Autonomous Operation</div>
             </div>
           </div>
         </div>
 
-        {/* Success Metrics */}
+        {/* Risk Mitigation */}
         <div className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">📊 Expected Outcomes</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">⚠️ Risk Mitigation</h2>
           
-          <div className="bg-gradient-to-r from-green-50 to-blue-50 p-8 rounded-lg">
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <div className="text-center">
-                <div className="text-4xl font-bold text-green-600 mb-2">1,000,000x</div>
-                <div className="text-sm text-gray-600">Performance Improvement</div>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold text-blue-600 mb-2">$2.8T</div>
-                <div className="text-sm text-gray-600">Enterprise Value</div>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold text-purple-600 mb-2">99.9%</div>
-                <div className="text-sm text-gray-600">Accuracy Rate</div>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold text-orange-600 mb-2">24/7</div>
-                <div className="text-sm text-gray-600">Operational Availability</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Risk Management */}
-        <div className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">⚠️ Risk Management</h2>
-          
-          <div className="grid md:grid-cols-2 gap-6">
-            <div className="bg-yellow-50 p-6 rounded-lg">
-              <h3 className="text-lg font-semibold text-gray-800 mb-4">Technical Risks</h3>
-              <ul className="list-disc pl-6 space-y-2">
-                <li>Quantum computing stability</li>
-                <li>Neural network convergence</li>
-                <li>Data security and privacy</li>
-                <li>Integration complexity</li>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="bg-red-50 p-6 rounded-lg">
+              <h4 className="font-semibold mb-4 text-red-800">Technical Risks</h4>
+              <ul className="space-y-2 text-sm">
+                <li>• System failure contingencies</li>
+                <li>• Data backup strategies</li>
+                <li>• Performance monitoring</li>
+                <li>• Rollback procedures</li>
               </ul>
             </div>
             
-            <div className="bg-red-50 p-6 rounded-lg">
-              <h3 className="text-lg font-semibold text-gray-800 mb-4">Mitigation Strategies</h3>
-              <ul className="list-disc pl-6 space-y-2">
-                <li>Redundant quantum systems</li>
-                <li>Advanced monitoring protocols</li>
-                <li>Multi-layer security architecture</li>
-                <li>Phased implementation approach</li>
+            <div className="bg-yellow-50 p-6 rounded-lg">
+              <h4 className="font-semibold mb-4 text-yellow-800">Operational Risks</h4>
+              <ul className="space-y-2 text-sm">
+                <li>• Change management protocols</li>
+                <li>• Staff training programs</li>
+                <li>• Communication strategies</li>
+                <li>• Support systems</li>
               </ul>
             </div>
           </div>
@@ -327,35 +287,36 @@ export default function AI2027ImplementationRoadmap() {
         {/* Conclusion */}
         <div className="mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-6">🎯 Conclusion</h2>
-          <p className="text-lg text-gray-700 mb-6">
-            The AI 2027 Implementation Roadmap represents the pinnacle of artificial intelligence deployment. 
-            By following this comprehensive guide, organizations can achieve unprecedented levels of performance, 
-            efficiency, and competitive advantage in the rapidly evolving AI landscape.
+          <p className="text-lg text-gray-600 mb-6">
+            The AI 2027 Implementation Roadmap provides a comprehensive framework for deploying advanced neural superintelligence 
+            in your enterprise. By following this structured approach, organizations can achieve unprecedented performance gains 
+            while maintaining security, compliance, and operational excellence.
           </p>
           
-          <p className="text-lg text-gray-700">
-            The future belongs to those who can successfully harness the power of advanced neural superintelligence. 
-            This roadmap provides the foundation for that transformation.
+          <p className="text-lg text-gray-600">
+            The future belongs to organizations that can successfully harness the power of advanced AI technologies. 
+            This roadmap provides the foundation for that transformation, ensuring your enterprise remains competitive 
+            in the rapidly evolving AI landscape.
           </p>
         </div>
 
         {/* CTA Section */}
-        <div className="bg-gradient-to-r from-purple-900 to-blue-900 text-white p-8 rounded-lg">
-          <h3 className="text-2xl font-bold mb-4">Ready to Begin Your AI 2027 Journey?</h3>
-          <p className="text-purple-100 mb-6">
-            Contact Zion Tech Group to learn how our proven methodology and expertise can accelerate your path to AI superintelligence.
+        <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-8 rounded-lg">
+          <h3 className="text-2xl font-bold mb-4">Ready to Begin Your AI 2027 Transformation?</h3>
+          <p className="text-lg mb-6">
+            Contact Zion Tech Group to learn how our proven methodology and expertise can accelerate your path to AI superintelligence success.
           </p>
-          <div className="flex flex-wrap gap-4">
+          <div className="flex flex-col sm:flex-row gap-4">
             <Link 
               href="/case-studies/ai-2027-success-stories"
-              className="inline-flex items-center px-6 py-3 bg-white text-purple-900 rounded-lg hover:bg-purple-50 transition-colors"
+              className="inline-flex items-center px-6 py-3 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors"
             >
               View Success Stories
               <ArrowRight className="w-4 h-4 ml-2" />
             </Link>
             <Link 
               href="/tools/ai-2027-roi-calculator"
-              className="inline-flex items-center px-6 py-3 border border-white text-white rounded-lg hover:bg-white hover:text-purple-900 transition-colors"
+              className="inline-flex items-center px-6 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-600 transition-colors"
             >
               Calculate Your ROI
               <Target className="w-4 h-4 ml-2" />
