@@ -1,23 +1,13 @@
-<<<<<<< HEAD
 const { withSentry } = require('./withSentry.cjs');
 
 async function handler(req, res) {
   if (req.method !== 'POST') {
     res.statusCode = 405;
     res.setHeader('Allow', 'POST');
-=======
-const { withErrorLogging } = require('./withErrorLogging.cjs');
-
-async function handler(req, res) {
-  if (req.method !== 'GET') {
-    res.statusCode = 405;
-    res.setHeader('Allow', 'GET');
->>>>>>> cursor/fix-errors-and-merge-to-main-13eb
     res.end('Method Not Allowed');
     return;
   }
 
-<<<<<<< HEAD
   const { action, amount, currency = 'USD' } = req.body || {};
 
   if (!action) {
@@ -71,17 +61,3 @@ async function handler(req, res) {
 }
 
 module.exports = withSentry(handler);
-=======
-  try {
-    // Wallet functionality would go here
-    res.statusCode = 200;
-    res.json({ message: 'Wallet endpoint' });
-  } catch (err) {
-    console.error('Wallet error:', err);
-    res.statusCode = 500;
-    res.json({ error: err.message });
-  }
-}
-
-module.exports = withErrorLogging(handler);
->>>>>>> cursor/fix-errors-and-merge-to-main-13eb
