@@ -52,12 +52,12 @@ class ErrorHandler {
     }
 
     // Log to console in development
-    if (process.env.NODE_ENV === 'development') {
+    if (process.env['NODE_ENV'] === 'development') {
       console.error('Error logged:', errorReport);
     }
 
     // Send to external service in production
-    if (process.env.NODE_ENV === 'production') {
+    if (process.env['NODE_ENV'] === 'production') {
       this.sendToErrorService(errorReport);
     }
   }

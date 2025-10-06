@@ -211,7 +211,7 @@ export class AccessibilityEnhancer {
     this.observers.push(observer);
   }
 
-  private calculateContrast(color1: string, color2: string): number {
+  private calculateContrast(_color1: string, _color2: string): number {
     // Simplified contrast calculation
     // In a real implementation, you'd use a proper color contrast library
     return 4.5; // Placeholder
@@ -273,7 +273,7 @@ export class AccessibilityEnhancer {
     this.observers.push(observer);
   }
 
-  private isValidARIAAttribute(name: string, value: string): boolean {
+  private isValidARIAAttribute(_name: string, _value: string): boolean {
     // Simplified ARIA validation
     // In a real implementation, you'd use a proper ARIA validation library
     return true; // Placeholder

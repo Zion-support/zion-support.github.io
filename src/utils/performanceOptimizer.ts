@@ -388,13 +388,31 @@ class PerformanceOptimizer {
   }
 
   public reportWebVitals(metrics: WebVitalsMetrics): void {
-    if (process.env.NODE_ENV === 'development') {
+    if (process.env['NODE_ENV'] === 'development') {
       console.log('Web Vitals:', metrics);
     }
   }
 
-  public prefetchResources(resources: string[]): void {
-    prefetchResources(resources);
+  public measurePageLoad(): WebVitalsMetrics | null {
+    if (typeof window === 'undefined' || !window.performance) {
+      return null;
+    }
+
+    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+    if (!navigation) return null;
+
+    return {
+      FCP: this.getMetricValue('first-contentful-paint'),
+      LCP: this.getMetricValue('largest-contentful-paint'),
+      FID: this.getMetricValue('first-input-delay'),
+      CLS: this.getMetricValue('cumulative-layout-shift'),
+      TTFB: navigation.responseStart - navigation.requestStart,
+    };
+  }
+
+  private getMetricValue(name: string): number {
+    const entries = performance.getEntriesByName(name);
+    return entries.length > 0 ? (entries[0]?.startTime || 0) : 0;
   }
 
   public addCriticalResourceHints(): void {
@@ -451,26 +469,6 @@ class PerformanceOptimizer {
   }
 
   // Add critical resource hints for better performance
-  addCriticalResourceHints(): void {
-    if (typeof document === 'undefined') return;
-    
-    const hints = [
-      { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' },
-      { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com' },
-      { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
-      { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossOrigin: 'anonymous' }
-    ];
-
-    hints.forEach((hint) => {
-      const link = document.createElement('link');
-      link.rel = hint.rel;
-      link.href = hint.href;
-      if (hint.crossOrigin) {
-        link.crossOrigin = hint.crossOrigin;
-      }
-      document.head.appendChild(link);
-    });
-  }
   // Initialize all optimizations
   initialize(): void {
     this.measurePerformance('lazyLoadImages', () => this.lazyLoadImages());

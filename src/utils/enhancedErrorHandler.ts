@@ -73,7 +73,7 @@ class EnhancedErrorHandler {
       timestamp: now,
       userAgent: navigator.userAgent,
       url: window.location.href,
-      stack: error.stack,
+      stack: error.stack || 'No stack trace available',
       severity: context.severity || 'medium',
     };
 
@@ -100,7 +100,7 @@ class EnhancedErrorHandler {
     }
 
     // Log to console in development
-    if (process.env.NODE_ENV === 'development') {
+    if (process.env['NODE_ENV'] === 'development') {
       console.error('Error handled:', error, fullContext);
     }
 
