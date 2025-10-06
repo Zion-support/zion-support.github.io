@@ -22,10 +22,13 @@ export interface WebVitalsMetrics {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-8da8
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6231
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-e6f9
 export interface PerformanceBudget {
 =======
 interface PerformanceBudget {
@@ -412,6 +415,7 @@ export const checkPerformanceBudget = (budget: PerformanceBudget): {
     if (src && !src.startsWith('data:')) {
       totalSize += 100; // Simplified size estimation
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   } catch (error) {
     console.warn('Long task monitoring not supported:', error);
@@ -570,12 +574,18 @@ class PerformanceOptimizer {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7834
     }
 <<<<<<< HEAD
+=======
+    }
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-e6f9
   });
   
   if (totalSize > budget.maxBundleSize) {
     violations.push(`Bundle size ${totalSize}KB exceeds budget ${budget.maxBundleSize}KB`);
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-e6f9
   
   // Check load time
   const timing = window.performance.timing;
@@ -609,6 +619,7 @@ export const addCriticalResourceHints = (): void => {
     link.href = hint.href;
     if (hint.crossOrigin) {
       link.crossOrigin = hint.crossOrigin;
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6231
     }
@@ -633,6 +644,11 @@ export const addCriticalResourceHints = (): void => {
     violations
   };
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6231
+=======
+    }
+    document.head.appendChild(link);
+  });
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-e6f9
 };
 
 /**
@@ -641,11 +657,14 @@ export const addCriticalResourceHints = (): void => {
 <<<<<<< HEAD
 class PerformanceOptimizer {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 export class PerformanceOptimizer {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-3b0a
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6231
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-e6f9
   private static instance: PerformanceOptimizer;
   private metrics: Map<string, number> = new Map();
 
@@ -979,8 +998,11 @@ class PerformanceOptimizer {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6231
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-e6f9
 export const performanceOptimizer = PerformanceOptimizer.getInstance();
 
 export default {
@@ -1004,6 +1026,7 @@ export default {
 <<<<<<< HEAD
   addCriticalResourceHints
 <<<<<<< HEAD
+<<<<<<< HEAD
 };
 =======
 };
@@ -1026,3 +1049,6 @@ export default performanceOptimizer;
   performanceOptimizer
 };
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6231
+=======
+};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-e6f9
