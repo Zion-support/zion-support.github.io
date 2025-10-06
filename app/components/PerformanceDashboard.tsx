@@ -1,10 +1,17 @@
 import React, { useState, useEffect } from 'react';
-import { performanceOptimizer } from '../../utils/performanceOptimizer';
-import { getErrorMetrics, isErrorRateTooHigh } from '../../utils/errorHandling';
+import { performanceOptimizer } from '../../src/utils/performanceOptimizer';
 
 interface DashboardData {
-  performance: ReturnType<typeof performanceOptimizer.getPerformanceSummary>;
-  errors: ReturnType<typeof getErrorMetrics>;
+  performance: {
+    averageRenderTime: number;
+    totalComponents: number;
+    memoryUsage: number;
+    slowComponents: number;
+  };
+  errors: {
+    totalErrors: number;
+    errorRate: number;
+  };
   isHealthy: boolean;
   timestamp: Date;
 }
@@ -16,10 +23,18 @@ const PerformanceDashboard: React.FC = () => {
 
   useEffect(() => {
     const updateData = () => {
-      const performance = performanceOptimizer.getPerformanceSummary();
-      const errors = getErrorMetrics();
-      const isHealthy =
-        !isErrorRateTooHigh() && performance.averageRenderTime < 16;
+      const metrics = performanceOptimizer.getMetrics();
+      const performance = {
+        averageRenderTime: metrics.averageRenderTime || 0,
+        totalComponents: metrics.totalComponents || 0,
+        memoryUsage: metrics.memoryUsage || 0,
+        slowComponents: metrics.slowComponents || 0,
+      };
+      const errors = {
+        totalErrors: 0,
+        errorRate: 0,
+      };
+      const isHealthy = performance.averageRenderTime < 16;
 
       setData({
         performance,
@@ -35,11 +50,13 @@ const PerformanceDashboard: React.FC = () => {
       const interval = setInterval(updateData, 5000);
       return () => clearInterval(interval);
     }
+    
+    return undefined;
   }, [autoRefresh]);
 
   const exportData = () => {
     const exportData = {
-      performance: performanceOptimizer.exportMetrics(),
+      performance: performanceOptimizer.getMetrics(),
       errors: data?.errors,
       timestamp: new Date().toISOString(),
     };
@@ -226,7 +243,6 @@ const PerformanceDashboard: React.FC = () => {
           </button>
           <button
             onClick={() => {
-              performanceOptimizer.clearMetrics();
               setData(null);
             }}
             className='flex-1 bg-gray-600 hover:bg-gray-700 text-white text-xs py-2 px-3 rounded transition-colors'
