@@ -13,6 +13,9 @@ export interface WebVitalsMetrics {
   CLS?: number; // Cumulative Layout Shift
   TTFB?: number; // Time to First Byte
   INP?: number; // Interaction to Next Paint
+  loadTime?: number; // Page load time
+  interactiveTime?: number; // Interactive time
+  domContentLoaded?: number; // DOM content loaded time
 }
 
 /**
@@ -417,6 +420,53 @@ export class PerformanceOptimizer {
     return Object.fromEntries(this.metrics);
   }
 
+  // Monitor long tasks
+  monitorLongTasks(callback: (entries: PerformanceEntry[]) => void): PerformanceObserver | null {
+    if (typeof window === 'undefined' || !window.PerformanceObserver) return null;
+    
+    const observer = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      callback(entries);
+    });
+    
+    observer.observe({ entryTypes: ['longtask'] });
+    return observer;
+  }
+
+  // Get performance summary
+  getPerformanceSummary() {
+    return {
+      averageRenderTime: 12.5,
+      totalComponents: 45,
+      memoryUsage: 0,
+      slowComponents: 0
+    };
+  }
+
+  // Export metrics
+  exportMetrics() {
+    return this.getMetrics();
+  }
+
+  // Clear metrics
+  clearMetrics() {
+    this.metrics.clear();
+  }
+
+  // Measure page load performance
+  measurePageLoadTiming(): Record<string, number> | null {
+    if (typeof window === 'undefined' || !window.performance) {
+      return null;
+    }
+    
+    const timing = window.performance.timing;
+    return {
+      loadTime: timing.loadEventEnd - timing.navigationStart,
+      interactiveTime: timing.domInteractive - timing.navigationStart,
+      domContentLoaded: timing.domContentLoadedEventEnd - timing.navigationStart
+    };
+  }
+
   // Add critical resource hints method
   addCriticalResourceHints(): void {
     if (typeof document === 'undefined') return;
@@ -487,56 +537,7 @@ export class PerformanceOptimizer {
   }
 }
 
-/**
- * Resource hints for performance
- */
-export const prefetchResources = (urls: string[]): void => {
-  if (typeof document === 'undefined') return;
-  
-  urls.forEach(url => {
-    const link = document.createElement('link');
-    link.rel = 'prefetch';
-    link.href = url;
-    document.head.appendChild(link);
-  });
-};
 
-/**
- * Preconnect to external domains
- */
-export const preconnectDomains = (domains: string[]): void => {
-  if (typeof document === 'undefined') return;
-  
-  domains.forEach(domain => {
-    const link = document.createElement('link');
-    link.rel = 'preconnect';
-    link.href = domain;
-    link.crossOrigin = 'anonymous';
-    document.head.appendChild(link);
-  });
-};
-
-/**
- * Lazy load images with Intersection Observer
- */
-export const lazyLoadImages = (): void => {
-  if (typeof window === 'undefined') return;
-  
-  const images = document.querySelectorAll('img[data-src]');
-  
-  const imageObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const img = entry.target as HTMLImageElement;
-        img.src = img.dataset.src || '';
-        img.removeAttribute('data-src');
-        imageObserver.unobserve(img);
-      }
-    });
-  });
-  
-  images.forEach(img => imageObserver.observe(img));
-};
 
 /**
  * Optimize scroll performance
@@ -584,157 +585,18 @@ export const preloadCriticalResources = (): void => {
   });
 };
 
-/**
- * Performance monitoring class
- */
-class PerformanceOptimizer {
-  private static instance: PerformanceOptimizer;
-  private metrics: Map<string, number> = new Map();
-
-  private constructor() {}
-
-  public static getInstance(): PerformanceOptimizer {
-    if (!PerformanceOptimizer.instance) {
-      PerformanceOptimizer.instance = new PerformanceOptimizer();
-    }
-    return PerformanceOptimizer.instance;
-  }
-
-  public measurePerformance(name: string, fn: () => void): number {
-    const start = performance.now();
-    fn();
-    const end = performance.now();
-    const duration = end - start;
-    this.metrics.set(name, duration);
-    return duration;
-  }
-
-  public lazyLoadImages(): void {
-    lazyLoadImages();
-  }
-
-  public optimizeScroll(): void {
-    optimizeScroll();
-  }
-
-  public preloadCriticalResources(): void {
-    preloadCriticalResources();
-  }
-
-  public reportWebVitals(metrics: WebVitalsMetrics): void {
-    if (process.env.NODE_ENV === 'development') {
-      console.log('Web Vitals:', metrics);
-    }
-  }
-
-  // Get performance metrics
-  getMetrics(): Record<string, number> {
-    return Object.fromEntries(this.metrics);
-  }
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-28f0
-  // Add critical resource hints for better performance
-  addCriticalResourceHints(): void {
-    if (typeof document === 'undefined') return;
-    
-    const hints = [
-      { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' },
-      { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com' },
-      { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
-      { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossOrigin: 'anonymous' }
-    ];
-    
-    hints.forEach(hint => {
-      const link = document.createElement('link');
-      link.rel = hint.rel;
-      link.href = hint.href;
-      if (hint.crossOrigin) {
-        link.crossOrigin = hint.crossOrigin;
-      }
-      document.head.appendChild(link);
-    });
-  }
-
-  // Monitor long tasks
-  monitorLongTasks(callback: (entries: PerformanceEntry[]) => void): PerformanceObserver | null {
-    if (typeof window === 'undefined' || !window.PerformanceObserver) return null;
-    
-    const observer = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
-      callback(entries);
-    });
-    
-    observer.observe({ entryTypes: ['longtask'] });
-    return observer;
-  }
-
-  // Get performance summary
-  getPerformanceSummary() {
-    return {
-      averageRenderTime: 12.5,
-      totalComponents: 45,
-      memoryUsage: 0,
-      slowComponents: 0
-    };
-  }
-
-  // Export metrics
-  exportMetrics() {
-    return this.getMetrics();
-  }
-
-  // Clear metrics
-  clearMetrics() {
-    this.metrics.clear();
-  }
-
-  // Measure page load performance
-  measurePageLoadTiming(): Record<string, number> | null {
-    if (typeof window === 'undefined' || !window.performance) {
-      return null;
-    }
-    
-    const timing = window.performance.timing;
-    return {
-      loadTime: timing.loadEventEnd - timing.navigationStart,
-      interactiveTime: timing.domInteractive - timing.navigationStart,
-      domContentLoaded: timing.domContentLoadedEventEnd - timing.navigationStart
-    };
-  }
-
-  // Report web vitals
-  reportWebVitals(metrics: Record<string, number>): void {
-    if (process.env.NODE_ENV === 'development') {
-      console.log('Web Vitals:', metrics);
-    }
-  }
-
-  // Initialize all optimizations
-  initialize(): void {
-    this.measurePerformance('lazyLoadImages', () => this.lazyLoadImages());
-    this.measurePerformance('preloadCriticalResources', () => this.preloadCriticalResources());
-    this.measurePerformance('optimizeScroll', () => this.optimizeScroll());
-  }
-}
 
 // Export singleton instance
 export const performanceOptimizer = PerformanceOptimizer.getInstance();
 
-// Export individual functions for backward compatibility
-export {
-  lazyLoadImagesStandalone as lazyLoadImages,
-  measurePageLoadStandalone as measurePageLoad,
-  reportWebVitalsStandalone as reportWebVitals
-};
-
 export default {
   prefetchResources,
   preconnectDomains,
-  lazyLoadImages: lazyLoadImagesStandalone,
+  lazyLoadImages,
   debounce,
   throttle,
-  measurePageLoad: measurePageLoadStandalone,
-  reportWebVitals: reportWebVitalsStandalone,
+  measurePageLoad,
+  reportWebVitals,
   shouldUseWebP,
   getConnectionQuality,
   shouldLoadHeavyAssets,
@@ -744,5 +606,7 @@ export default {
   monitorLongTasks,
   cacheStaticAssets,
   clearOldCaches,
-  checkPerformanceBudget
+  checkPerformanceBudget,
+  preloadCriticalResources: () => performanceOptimizer.preloadCriticalResources(),
+  measurePageLoadMetrics: () => performanceOptimizer.measurePageLoadTiming()
 };
