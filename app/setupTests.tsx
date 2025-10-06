@@ -17,20 +17,15 @@ Object.defineProperty(window, 'matchMedia', {
   })),
 });
 // Mock IntersectionObserver
-global.IntersectionObserver = class IntersectionObserver {
+(global as any).IntersectionObserver = class {
+  root: Element | null = null;
   rootMargin: string = '0px';
   thresholds: ReadonlyArray<number> = [0];
   constructor() {}
   disconnect() {}
   observe() {}
   unobserve() {}
-};
-// Mock ResizeObserver
-global.ResizeObserver = class ResizeObserver {
-  constructor() {}
-  disconnect() {}
-  observe() {}
-  unobserve() {}
+  takeRecords() { return []; }
 };
 // Mock ResizeObserver
 global.ResizeObserver = class ResizeObserver {
