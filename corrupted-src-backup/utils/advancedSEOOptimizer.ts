@@ -177,7 +177,7 @@ class AdvancedSEOOptimizer {
     ];
 
     return Math.round(
-      scores.reduce((sum, score) => sum + score, 0) / scores.length,
+      scores.reduce((sum, score) => sum + score, 0) / scores.length
     );
   }
 
@@ -260,8 +260,7 @@ Detailed Scores:
 Recommendations:
 ${this.recommendations
   .map(
-    rec =>
-      `- ${rec.priority.toUpperCase()}: ${rec.message} - ${rec.suggestion}`,
+    rec => `- ${rec.priority.toUpperCase()}: ${rec.message} - ${rec.suggestion}`
   )
   .join('\n')}
     `;

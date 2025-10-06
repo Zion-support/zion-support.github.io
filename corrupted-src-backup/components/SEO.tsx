@@ -9,7 +9,6 @@ interface SEOProps {
   url?: string;
   type?: string;
     <>
->>>>>>> origin/merge-fixes
       <title>{title}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
