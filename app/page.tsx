@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+import React from 'react';
+=======
 import React, { Suspense, lazy } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -12,6 +15,7 @@ const UnifiedContentPromotion = lazy(() => import('./components/UnifiedContentPr
 const LoadingFallback: React.FC<{ height?: string }> = ({ height = 'h-32' }) => (
   <div className={`animate-pulse bg-gray-200 rounded-lg ${height} w-full`} />
 );
+>>>>>>> 95e1fc27c0bf1ea445ba772900f0204a3209e206
 
 // Structured data for SEO
 const structuredData = {
@@ -66,6 +70,14 @@ const HomePage: React.FC = () => {
   };
 
   return (
+<<<<<<< HEAD
+    <div className="min-h-screen flex items-center justify-center bg-gray-50">
+      <div className="text-center">
+        <h1 className="text-4xl font-bold text-gray-900 mb-4">Welcome to Zion Tech Group</h1>
+        <p className="text-xl text-gray-600">Advanced AI and IT Solutions</p>
+      </div>
+    </div>
+=======
     <>
       <Helmet>
         <title>Zion Tech Group - Advanced AI and IT Solutions</title>
@@ -154,6 +166,7 @@ const HomePage: React.FC = () => {
         </section>
       </main>
     </>
+>>>>>>> 95e1fc27c0bf1ea445ba772900f0204a3209e206
   );
 };
 
