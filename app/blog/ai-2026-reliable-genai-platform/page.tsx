@@ -2,42 +2,41 @@ import ArrowRight from 'next/link';
 
 export const metadata = {
   
-  title: 'Reliable GenAI Platform 2026: ArchitectureGuardrailsand ROI',
+  title: 'Reliable GenAI Platform 2026: Architecture, Guardrails, and ROI',
   description:
-    'Design a reliable, cost‑efficient GenAI platform with routing, memoryevalsand policy guardrails. A pragmatic 2026 blueprint for enterprises.',
+    'Design a reliable, cost‑efficient GenAI platform with routing, memory, evals, and policy guardrails. A pragmatic 2026 blueprint for enterprises.',
 
 };;
 
-export default function ReliableGenAIPlatform2026Page() {
-  return (
-    <div className='min-h-screen bg-slate-950 text-white'>
-      <main className='max-w-3xl mx-auto px-6 py-16'>
-        <div className='mb-8'>
+export default function ReliableGenAIPlatform2026Page() {return (<divclassName='min-h-screen bg-slate-950 text-white'>
+      <mainclassName='max-w-3xl mx-auto px-6 py-16'>
+        <divclassName='mb-8'>
           <ArrowRight
-            href='/blog'
-            className='text-blue-400 hover:text-blue-300'
+           href='/blog'
+           className='text-blue-400 hover:text-blue-300'
           >
             ← Back to Blog
           </ArrowRight>
         </div>
-        <header className='mb-6'>
-          <div className='flex items-center gap-3 text-sm text-white/60 mb-3'>
-            <span className='px-3 py-1 rounded-full bg-indigo-500/20 text-indigo-300 border border-indigo-500/30'>
+        <headerclassName='mb-6'>
+          <divclassName='flex items-center gap-3 text-sm text-white/60 mb-3'>
+            <spanclassName='px-3 py-1 rounded-full bg-indigo-500/20 text-indigo-300 border border-indigo-500/30'>
               Implementation Guide
             </span>
             <span>January 2026</span>
             <span>18 min read</span>
           </div>
-          <h1 className='text-4xl font-extrabold leading-tight'>
+          <h1className='text-4xl font-extrabold leading-tight'>
             Reliable GenAI Platform 2026: ArchitectureGuardrailsand ROI
           </h1>
-          <p className='text-white/70 mt-3'>
+          <pclassName='text-white/70 mt-3'>
             A pragmatic blueprint to ship a reliable, governed, and
-            cost‑efficient GenAI platform with policy guardrailsevaluationsand cost‑aware routing.
+            cost‑efficient GenAI platform with policy guardrailsevaluationsand
+            cost‑aware routing.
           </p>
         </header>
 
-        <article className='prose prose-invert prose-slate max-w-none'>
+        <articleclassName='prose prose-invert prose-slate max-w-none'>
           <h2>Why Reliability First</h2>
           <p>
             Production GenAI requires deterministic behavior under constraints.
@@ -93,19 +92,19 @@ export default function ReliableGenAIPlatform2026Page() {
           </ul>
         </article>
 
-        <footer className='mt-12 pt-6 border-t border-white/10 text-white/70'>
+        <footerclassName='mt-12 pt-6 border-t border-white/10 text-white/70'>
           <p>
-            Continue exploring:{' '}
+            Continueexploring:{' '}
             <ArrowRight
-              href='/blog/ai-2027-cost-optimization-playbook'
-              className='text-emerald-400 hover:text-emerald-300'
+             href='/blog/ai-2027-cost-optimization-playbook'
+             className='text-emerald-400 hover:text-emerald-300'
             >
               Cost Optimization Playbook
-            </ArrowRight>{' '}
-            •{' '}
+           </ArrowRight>{' '}
+           •{' '}
             <ArrowRight
-              href='/blog/agentic-workflow-orchestration-2026'
-              className='text-fuchsia-300 hover:text-fuchsia-200'
+             href='/blog/agentic-workflow-orchestration-2026'
+             className='text-fuchsia-300 hover:text-fuchsia-200'
             >
               Agentic Workflow Orchestration
             </ArrowRight>
@@ -113,5 +112,4 @@ export default function ReliableGenAIPlatform2026Page() {
         </footer>
       </main>
     </div>
-  );
-}
+  ); }

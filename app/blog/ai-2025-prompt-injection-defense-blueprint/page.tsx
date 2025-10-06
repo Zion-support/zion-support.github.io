@@ -4,7 +4,7 @@ export const metadata = {
   
   title: 'Prompt Injection Defense 2025',
     description:
-      'Layered defenses for GenAI safety: input validation, context isolationpolicy checksand continuous evals.',
+      'Layered defenses for GenAI safety: input validation, context isolation, policy checks, and continuous evals.',
     type: 'article',
     publishedTime: '2025-09-30T00:00:00Z',
   
@@ -40,7 +40,7 @@ export default function Page() {
             </h1>
             <p className='text-xl text-white/80'>
               Defend GenAI systems against prompt injection with layered
-              controls: policy gates, context isolationoutput validatorsand
+              controls: policy gates, context isolation, output validators, and
               continuous red teaming. Ship reliable autonomy with measurable
               safety.
             </p>

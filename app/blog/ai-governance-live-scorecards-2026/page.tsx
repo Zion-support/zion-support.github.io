@@ -4,7 +4,7 @@ export const metadata = {
   
   title: 'AI Governance Live Scorecards 2026',
     description:
-      'CI policy tests + live scorecards for latencycostand quality. Prevent regressions before they ship.',
+      'CI policy tests + live scorecards for latency, cost, and quality. Prevent regressions before they ship.',
     type: 'article',
     publishedTime: '2026-01-30T00:00:00Z',
   
@@ -39,9 +39,9 @@ export default function AIGovernanceLiveScorecards2026() {
               Ship
             </h1>
             <p className='text-lg text-white/80'>
-              Build CI policy tests and live scorecards for latency, costand
+              Build CI policy tests and live scorecards for latency, cost, and
               correctness. Enforce guardrails with measurable SLOs and rollback
-              playbookskeeping velocity high without sacrificing reliability.
+              playbooks, keeping velocity high without sacrificing reliability.
             </p>
           </header>
 
@@ -51,7 +51,7 @@ export default function AIGovernanceLiveScorecards2026() {
                 Scorecard Design
               </h2>
               <ul className='space-y-2 text-white/80'>
-                <li>• Pair costlatencyand quality metrics per workflow</li>
+                <li>• Pair cost, latency, and quality metrics per workflow</li>
                 <li>
                   • Track drift with golden tasks and periodic adversarial tests
                 </li>
@@ -80,7 +80,7 @@ export default function AIGovernanceLiveScorecards2026() {
               </h2>
               <p className='text-center text-white/80 mb-6 text-lg'>
                 We implement scorecards and CI policy tests end-to-end with
-                dashboardsalertsand automated rollbacks.
+                dashboards, alerts, and automated rollbacks.
               </p>
               <div className='flex justify-center gap-4'>
                 <a

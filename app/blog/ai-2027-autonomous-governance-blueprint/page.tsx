@@ -4,16 +4,20 @@ export const metadata = {
   
   title: 'AI 2027 Autonomous Governance Blueprint',
     description:
-      'Design and operate autonomous systems with policy guardrailsapprovalsand observability.',
+      'Design and operate autonomous systems with policy guardrails, approvals, and observability.',
     type: 'article',
     url: 'https://ziontechgroup.com/blog/ai-2027-autonomous-governance-blueprint',
     images: [
       {
         url: '/og-autonomous-governance-2027.jpg',
-        width: 1200height: 630alt: 'Autonomous Governance 2027',
+        width: 1200,
+        height: 630,
+        alt: 'Autonomous Governance 2027',
       
 };,
-    ]}};
+    ],
+  },
+};
 
 export default function AutonomousGovernanceBlueprint2027() {
   return (
@@ -46,7 +50,7 @@ export default function AutonomousGovernanceBlueprint2027() {
             Controls: Budget limits, tool allowlists, approvals, and circuit
             breakers
           </li>
-          <li>Telemetry: Tracesevaluationsand outcome scorecards</li>
+          <li>Telemetry: Traces, evaluations, and outcome scorecards</li>
           <li>
             Reviews: Human-in-the-loop for exceptions and continuous improvement
           </li>

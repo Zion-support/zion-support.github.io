@@ -3,9 +3,10 @@ import { Link } from 'react-router-dom';
 
 const AICostOptimizationBanner: React.FC = () => {
   const featuredPost = {
-    id: 4title: 'Enterprise AI FinOps: $50M+ Savings Guide',
+    id: 4,
+    title: 'Enterprise AI FinOps: $50M+ Savings Guide',
     slug: 'enterprise-ai-finops-optimization-2026',
-    excerpt: 'Complete guide to AI Financial Operations achieving $50M+ savings through intelligent resource allocationusage optimizationand cost governance.',
+    excerpt: 'Complete guide to AI Financial Operations achieving $50M+ savings through intelligent resource allocation, usage optimization, and cost governance.',
     category: 'AI FinOps',
     date: '2026-01-30',
     readTime: '30 min',

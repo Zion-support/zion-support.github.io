@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export default function AINeuralSuperintelligencePlatform() {
   return (
-    <div>{{/* content */}</div></div>
+    <div>/* content */}
     <div>
       <div> </div><div> </div>
       <div className="text-left">{/* Hero Section */}</div>
@@ -15,7 +15,7 @@ export default function AINeuralSuperintelligencePlatform() {
           <h1 className="text-left">AI 2026: Neural Superintelligence Platform
           </h1></h1>
           <p className="text-left">Revolutionary neural superintelligence platform achieving human-level reasoning with 
-            unlimited scalability99.99% accuracyand transformative enterprise capabilities.
+            unlimited scalability, 99.99% accuracy, and transformative enterprise capabilities.
           </p></p>
         </div>
 
@@ -24,8 +24,8 @@ export default function AINeuralSuperintelligencePlatform() {
             { value='99.99%', label: 'Reasoning Accuracy', icon: '🧠' },
             { value='∞', label: 'Scalability', icon: '📈' },
             { value='100x', label: 'Human Intelligence', icon: '⚡' },
-            { value='0.1ms', label: 'Response Time'icon: '⚡' }
-          ].map((metricindex) => (</div></div>
+            { value='0.1ms', label: 'Response Time', icon: '⚡' }
+          ].map((metric, index) => (</div></div>
             <div key={index} className="text-left"> </div><div className="text-left">{metric.icon}</div>
               <div className="text-left"> </div><div className="text-left">{metric.icon}</div>"
               <div className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
@@ -48,7 +48,8 @@ export default function AINeuralSuperintelligencePlatform() {
             </p></p>
             <div className="text-left"> </div><div className="text-left"> </div><h3 className="text-left">🧠 Superintelligent Reasoning</h3>"
                 <p className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
-                  AI systems that surpass human intelligence in complex reasoningproblem-solvingand creative thinking across all domains.
+                  AI systems that surpass human intelligence in complex reasoning, problem-solving, 
+                  and creative thinking across all domains.
                 </p></p>
               </div>
               <h3 className="text-left">🚀 Unlimited Scalability</h3>

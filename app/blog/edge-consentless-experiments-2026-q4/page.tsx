@@ -2,15 +2,13 @@ export const metadata = {
   
   title: 'Edge Consentless Experiments 2026 Q4: <100ms A/B Without PII',
   description:
-    'Scoped IDson‑device metricsand differential privacy enable global A/B testing without collecting PII.',
+    'Scoped IDs, on‑device metrics, and differential privacy enable global A/B testing without collecting PII.',
 
 };;
 
-export default function Page() {
-  return (
-    <article className='prose prose-invert max-w-3xl mx-auto py-10'>
+export default function Page() {return (<article className='prose prose-invert max-w-3xl mx-autopy-10'>
       <h1>Edge Consentless Experiments 2026 Q4: &lt;100ms A/B Without PII</h1>
-      <p className='text-sm opacity-70'>
+      <p className='text-smopacity-70'>
         Published: 2025-09-30 • Category: Analytics • 6 min read
       </p>
 
@@ -45,7 +43,4 @@ export default function Page() {
         and privacy‑first telemetry.
       </p>
     </article>
-  );
-}
-
-// Duplicate blocks removed
+  ); }// Duplicate blocks removed

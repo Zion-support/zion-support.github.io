@@ -8,19 +8,17 @@ export const metadata = {
 
 };;
 
-export default function Page() {
-  return (
-    <main className='min-h-screen bg-slate-950 text-white'>
+export default function Page() {return (<main className='min-h-screen bg-slate-950text-white'>
       <section className='py-20'>
-        <div className='max-w-3xl mx-auto px-6'>
-          <h1 className='text-4xl font-extrabold mb-4'>
+        <divclassName='max-w-3xl mx-auto px-6'>
+          <h1className='text-4xl font-extrabold mb-4'>
             GenAI 2027: Quality Tiers v4
           </h1>
-          <p className='text-slate-300 mb-6'>
+          <pclassName='text-slate-300 mb-6'>
             Predictable costs and consistent UX using tieringcachesand
             KPI‑linked eval gates.
           </p>
-          <div className='prose prose-invert'>
+          <divclassName='prose prose-invert'>
             <p>
               This playbook details a practical stack: semantic caches, budget
               controllers, and eval‑backed promotion across tiers. Ship reliably
@@ -36,5 +34,4 @@ export default function Page() {
         </div>
       </section>
     </main>
-  );
-}
+  ); }

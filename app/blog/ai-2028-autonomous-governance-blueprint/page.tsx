@@ -6,16 +6,20 @@ export const metadata = {
   
   title: 'AI 2028: Autonomous Governance Blueprint',
     description:
-      'KPI‑linked scorecardsbudget gatesand live canaries hardwired into delivery for safe autonomy.',
+      'KPI‑linked scorecards, budget gates, and live canaries hardwired into delivery for safe autonomy.',
     type: 'article',
     url: 'https://ziontechgroup.com/blog/ai-2028-autonomous-governance-blueprint',
     images: [
       {
         url: '/og-ai-autonomous-governance-2028.jpg',
-        width: 1200height: 630alt: 'AI 2028 Autonomous Governance',
+        width: 1200,
+        height: 630,
+        alt: 'AI 2028 Autonomous Governance',
       
 };,
-    ]}};
+    ],
+  },
+};
 
 export default function AutonomousGovernanceBlueprint2028() {
   return (
@@ -48,7 +52,7 @@ export default function AutonomousGovernanceBlueprint2028() {
             Live canaries, evaluators, and rollback triggers on every release
           </li>
           <li>PR policy tests that block regressions before merge</li>
-          <li>Signed outputsaudit tracesand value stream analytics</li>
+          <li>Signed outputs, audit traces, and value stream analytics</li>
         </ul>
 
         <h2>Adoption Checklist</h2>
@@ -66,7 +70,7 @@ export default function AutonomousGovernanceBlueprint2028() {
             Need a safe rollout?
           </h3>
           <p className='m-0'>
-            We implement governance gatesscorecardsand recovery playbooks in
+            We implement governance gates, scorecards, and recovery playbooks in
             weeks.
           </p>
           <Link

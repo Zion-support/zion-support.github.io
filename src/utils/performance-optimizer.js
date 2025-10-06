@@ -11,7 +11,7 @@ class PerformanceOptimizer {
       largestContentfulPaint: 0,
       cumulativeLayoutShift: 0,
       firstInputDelay: 0,
-      interactionToNextPaint: 0
+      interactionToNextPaint: 0,
     };
     this.observers = new Map();
     this.init();
@@ -28,23 +28,25 @@ class PerformanceOptimizer {
   setupWebVitals() {
     // Core Web Vitals monitoring
     if ('web-vitals' in window) {
-      import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
-        getCLS(this.updateMetric.bind(this, 'cumulativeLayoutShift'));
-        getFID(this.updateMetric.bind(this, 'firstInputDelay'));
-        getFCP(this.updateMetric.bind(this, 'firstContentfulPaint'));
-        getLCP(this.updateMetric.bind(this, 'largestContentfulPaint'));
-        getTTFB(this.updateMetric.bind(this, 'timeToFirstByte'));
-      });
+      import('web-vitals').then(
+        ({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
+          getCLS(this.updateMetric.bind(this, 'cumulativeLayoutShift'));
+          getFID(this.updateMetric.bind(this, 'firstInputDelay'));
+          getFCP(this.updateMetric.bind(this, 'firstContentfulPaint'));
+          getLCP(this.updateMetric.bind(this, 'largestContentfulPaint'));
+          getTTFB(this.updateMetric.bind(this, 'timeToFirstByte'));
+        },
+      );
     }
   }
 
   setupResourceOptimization() {
     // Preload critical resources
     this.preloadCriticalResources();
-    
+
     // Lazy load non-critical resources
     this.setupLazyLoading();
-    
+
     // Optimize font loading
     this.optimizeFontLoading();
   }
@@ -52,7 +54,7 @@ class PerformanceOptimizer {
   setupImageOptimization() {
     // Intersection Observer for lazy loading images
     if ('IntersectionObserver' in window) {
-      const imageObserver = new IntersectionObserver((entries) => {
+      const imageObserver = new IntersectionObserver(entries => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
             const img = entry.target;
@@ -74,7 +76,7 @@ class PerformanceOptimizer {
   setupCodeSplitting() {
     // Dynamic imports for route-based code splitting
     this.setupRouteBasedSplitting();
-    
+
     // Component-based splitting
     this.setupComponentSplitting();
   }
@@ -82,7 +84,8 @@ class PerformanceOptimizer {
   setupCaching() {
     // Service Worker registration for caching
     if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/sw.js')
+      navigator.serviceWorker
+        .register('/sw.js')
         .then(registration => {
           console.log('SW registered: ', registration);
         })
@@ -96,7 +99,7 @@ class PerformanceOptimizer {
     const criticalResources = [
       '/src/pages/Home.tsx',
       '/src/components/Header.tsx',
-      '/src/components/Footer.tsx'
+      '/src/components/Footer.tsx',
     ];
 
     criticalResources.forEach(resource => {
@@ -111,9 +114,9 @@ class PerformanceOptimizer {
   setupLazyLoading() {
     // Lazy load non-critical components
     const lazyComponents = document.querySelectorAll('[data-lazy]');
-    
+
     if ('IntersectionObserver' in window) {
-      const lazyObserver = new IntersectionObserver((entries) => {
+      const lazyObserver = new IntersectionObserver(entries => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
             const component = entry.target;
@@ -132,7 +135,7 @@ class PerformanceOptimizer {
   optimizeFontLoading() {
     // Preload critical fonts
     const criticalFonts = [
-      'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap'
+      'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap',
     ];
 
     criticalFonts.forEach(font => {
@@ -157,7 +160,7 @@ class PerformanceOptimizer {
       '/contact': () => import('../pages/Contact'),
       '/team': () => import('../pages/Team'),
       '/privacy': () => import('../pages/Privacy'),
-      '/terms': () => import('../pages/Terms')
+      '/terms': () => import('../pages/Terms'),
     };
 
     // Preload next likely routes
@@ -170,7 +173,7 @@ class PerformanceOptimizer {
       'Charts',
       'DataVisualization',
       'AdvancedForms',
-      'InteractiveMaps'
+      'InteractiveMaps',
     ];
 
     heavyComponents.forEach(component => {
@@ -182,7 +185,7 @@ class PerformanceOptimizer {
     // Preload likely next routes based on user behavior
     const currentPath = window.location.pathname;
     const likelyNextRoutes = this.getLikelyNextRoutes(currentPath);
-    
+
     likelyNextRoutes.forEach(route => {
       if (routes[route]) {
         routes[route]().catch(console.error);
@@ -199,7 +202,7 @@ class PerformanceOptimizer {
       '/contact': ['/services', '/about'],
       '/team': ['/about', '/contact'],
       '/privacy': ['/terms', '/contact'],
-      '/terms': ['/privacy', '/contact']
+      '/terms': ['/privacy', '/contact'],
     };
 
     return routeMap[currentPath] || [];
@@ -207,10 +210,12 @@ class PerformanceOptimizer {
 
   setupComponentLazyLoading(componentName) {
     // Set up lazy loading for specific components
-    const componentElements = document.querySelectorAll(`[data-component="${componentName}"]`);
-    
+    const componentElements = document.querySelectorAll(
+      `[data-component="${componentName}"]`,
+    );
+
     if ('IntersectionObserver' in window) {
-      const componentObserver = new IntersectionObserver((entries) => {
+      const componentObserver = new IntersectionObserver(entries => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
             this.loadComponent(componentName, entry.target);
@@ -230,16 +235,18 @@ class PerformanceOptimizer {
       // Only load components that are not already statically imported
       const staticallyImportedComponents = [
         'ErrorBoundary',
-        'SEO', 
+        'SEO',
         'Loading',
-        'SystemMonitor'
+        'SystemMonitor',
       ];
-      
+
       if (staticallyImportedComponents.includes(componentName)) {
-        console.warn(`Component ${componentName} is already statically imported, skipping dynamic import`);
+        console.warn(
+          `Component ${componentName} is already statically imported, skipping dynamic import`,
+        );
         return;
       }
-      
+
       const component = await import(`../components/${componentName}.tsx`);
       // Render component to element
       if (component.default) {
@@ -273,7 +280,7 @@ class PerformanceOptimizer {
       window.gtag('event', 'web_vitals', {
         event_category: 'Performance',
         event_label: 'Core Web Vitals',
-        value: Math.round(this.metrics.largestContentfulPaint)
+        value: Math.round(this.metrics.largestContentfulPaint),
       });
     }
 
@@ -308,7 +315,7 @@ class PerformanceOptimizer {
   optimizeStyles() {
     // Inline critical CSS
     this.inlineCriticalCSS();
-    
+
     // Defer non-critical CSS
     this.deferNonCriticalCSS();
   }
@@ -321,14 +328,16 @@ class PerformanceOptimizer {
       .container { max-width: 1200px; margin: 0 auto; }
       .header { background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
     `;
-    
+
     const style = document.createElement('style');
     style.textContent = criticalCSS;
     document.head.appendChild(style);
   }
 
   deferNonCriticalCSS() {
-    const nonCriticalCSS = document.querySelectorAll('link[rel="stylesheet"]:not([data-critical])');
+    const nonCriticalCSS = document.querySelectorAll(
+      'link[rel="stylesheet"]:not([data-critical])',
+    );
     nonCriticalCSS.forEach(link => {
       link.media = 'print';
       link.onload = () => {
@@ -346,13 +355,15 @@ class PerformanceOptimizer {
   // Performance monitoring
   startPerformanceMonitoring() {
     if ('PerformanceObserver' in window) {
-      const observer = new PerformanceObserver((list) => {
+      const observer = new PerformanceObserver(list => {
         list.getEntries().forEach(entry => {
           this.handlePerformanceEntry(entry);
         });
       });
 
-      observer.observe({ entryTypes: ['navigation', 'resource', 'paint', 'layout-shift'] });
+      observer.observe({
+        entryTypes: ['navigation', 'resource', 'paint', 'layout-shift'],
+      });
       this.observers.set('performance', observer);
     }
   }

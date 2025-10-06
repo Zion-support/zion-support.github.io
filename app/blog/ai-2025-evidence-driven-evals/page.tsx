@@ -4,22 +4,21 @@ export const metadata = {
   
   title: 'Evidence‑Driven Evals 2025: Traceable Quality Linked to KPIs',
   description:
-    'Design evals that tie model behavior to product KPIs with tracesscorecardsand budgeted guardrails.',
+    'Design evals that tie model behavior to product KPIs with traces, scorecards, and budgeted guardrails.',
 
 };;
 
-export default function Page() {
-  return (
-    <main className='max-w-3xl mx-auto px-4 py-12'>
-      <h1 className='text-4xl font-bold mb-4'>Evidence‑Driven Evals 2025</h1>
-      <p className='text-gray-600 mb-6'>
+export default function Page() {return (<mainclassName='max-w-3xl mx-auto px-4 py-12'>
+      <h1className='text-4xl font-bold mb-4'>Evidence‑Driven Evals 2025</h1>
+      <pclassName='text-gray-600 mb-6'>
         Traceable quality linked to KPIs with end‑to‑end evidence and budgeted
         guardrails.
       </p>
-      <div className='prose prose-invert'>
+      <divclassName='prose prose-invert'>
         <p>
           This guide shows how to make evaluations first‑class: each eval links
-          to business KPIs, with traces from prompt to outcome, budget controlsand policy tests that run in CI to prevent regressions.
+          to business KPIs, with traces from prompt to outcome, budget
+          controlsand policy tests that run in CI to prevent regressions.
         </p>
         <h2>Key Practices</h2>
         <ul>
@@ -29,10 +28,10 @@ export default function Page() {
         </ul>
         <p>
           Start applying these practices today and measure impact weekly. For
-          related topicssee{' '}
+          relatedtopicssee{' '}
           <ArrowRight
-            href='/blog/genai-2025-routing-caches-v1'
-            className='text-emerald-400 underline'
+           href='/blog/genai-2025-routing-caches-v1'
+           className='text-emerald-400 underline'
           >
             GenAI Routing v1
           </ArrowRight>
@@ -40,5 +39,4 @@ export default function Page() {
         </p>
       </div>
     </main>
-  );
-}
+  ); }

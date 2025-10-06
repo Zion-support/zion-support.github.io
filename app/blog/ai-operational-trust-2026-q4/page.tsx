@@ -1,16 +1,14 @@
 export const metadata = {
   
-  title: 'AI Operational Trust 2026 Q4: SLIsBudgetsRollback',
+  title: 'AI Operational Trust 2026 Q4: SLIs, Budgets, Rollback',
   description:
-    'Outcome‑linked SLIsbudgeted actionsand one‑click rollback for safe autonomy in enterprise AI operations.',
+    'Outcome‑linked SLIs, budgeted actions, and one‑click rollback for safe autonomy in enterprise AI operations.',
 
 };;
 
-export default function Page() {
-  return (
-    <article className='prose prose-invert max-w-3xl mx-auto py-10'>
+export default function Page() {return (<article className='prose prose-invert max-w-3xl mx-autopy-10'>
       <h1>AI Operational Trust 2026 Q4: SLIsBudgetsRollback</h1>
-      <p className='text-sm opacity-70'>
+      <p className='text-smopacity-70'>
         Published: 2025-09-30 • Category: AI Operations • 7 min read
       </p>
 
@@ -37,9 +35,9 @@ export default function Page() {
 
       <h2>One‑click rollback</h2>
       <p>
-        Ship safe automation by making rollback an explicittested pathway.
-        Pair PR policy checks with canary evaluations and live scorecards so
-        teams can iterate weekly without regressions.
+        Ship safe automation by making rollback an explicittested pathway. Pair
+        PR policy checks with canary evaluations and live scorecards so teams
+        can iterate weekly without regressions.
       </p>
 
       <p className='mt-8'>
@@ -47,5 +45,4 @@ export default function Page() {
         governance, observability, and cost optimization.
       </p>
     </article>
-  );
-}
+  ); }

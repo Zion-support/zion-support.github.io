@@ -5,14 +5,12 @@ export const metadata = {
   
   title: 'Governed Agent Patterns v3 (2025) — Zion Tech Group',
   description:
-    'Production patterns for safe autonomy: budgeted actionsPR policy testsand one-click recovery.',
+    'Production patterns for safe autonomy: budgeted actions, PR policy tests, and one-click recovery.',
 
 };;
 
-export default function Page() {
-  return (
-    <main className='min-h-screen bg-white text-gray-900'>
-      <section className='max-w-3xl mx-auto px-6 py-12 prose prose-lg'>
+export default function Page() {return (<mainclassName='min-h-screen bg-white text-gray-900'>
+      <sectionclassName='max-w-3xl mx-auto px-6 py-12 prose prose-lg'>
         <h1>Governed Agent Patterns v3 (2025)</h1>
         <p>
           Safely ship autonomous agents using budgetscapability sandboxesand
@@ -27,13 +25,12 @@ export default function Page() {
           <li>Operational scorecards wired to outcomes</li>
         </ul>
         <p>
-          See related operational runbooks in the{' '}
-          <ArrowRight href='/blog' className='text-blue-600 hover:underline'>
+          See related operational runbooks inthe{' '}
+          <ArrowRighthref='/blog'className='text-blue-600 hover:underline'>
             Blog
           </ArrowRight>
           .
         </p>
       </section>
     </main>
-  );
-}
+  ); }

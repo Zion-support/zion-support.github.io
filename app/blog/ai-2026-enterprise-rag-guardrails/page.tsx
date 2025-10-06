@@ -2,7 +2,7 @@ export const metadata = {
   
   title: 'Enterprise RAG Guardrails 2026',
     description:
-      'Architect safe, reliable Retrieval-Augmented Generation with verifiable citationspolicy enforcementand observability.',
+      'Architect safe, reliable Retrieval-Augmented Generation with verifiable citations, policy enforcement, and observability.',
     type: 'article',
     publishedTime: '2026-01-20T00:00:00Z',
   
@@ -34,14 +34,14 @@ export default function EnterpriseRAGGuardrails2026() {
             </div>
 
             <h1 className='text-5xl font-extrabold mb-6 bg-gradient-to-r from-indigo-300 to-blue-300 bg-clip-text text-transparent'>
-              Enterprise RAG Guardrails 2026: SafeReliableand Controllable
+              Enterprise RAG Guardrails 2026: Safe, Reliable, and Controllable
               AI
             </h1>
             <p className='text-xl text-white/80'>
               Build Retrieval-Augmented Generation platforms that enterprises
               can trust. This guide covers policy guardrails, verifiable
               citations, cost-aware routing, and end-to-end observability to
-              reduce hallucinationsboost reliabilityand meet compliance
+              reduce hallucinations, boost reliability, and meet compliance
               obligations.
             </p>
           </header>
@@ -65,7 +65,7 @@ export default function EnterpriseRAGGuardrails2026() {
                   degradation
                 </li>
                 <li>
-                  • Observability: latency, costretrieval qualityand safety
+                  • Observability: latency, cost, retrieval quality, and safety
                   events
                 </li>
                 <li>
@@ -87,7 +87,7 @@ export default function EnterpriseRAGGuardrails2026() {
                   <ul className='space-y-2 text-white/80'>
                     <li>• PII redaction and scope restriction</li>
                     <li>
-                      • Retrieval filters: freshnessdomainand access level
+                      • Retrieval filters: freshness, domain, and access level
                     </li>
                     <li>
                       • Deduplicate and rank passages by semantic relevance
@@ -105,7 +105,7 @@ export default function EnterpriseRAGGuardrails2026() {
                     <li>
                       • Prohibit claims without evidence (evidence threshold)
                     </li>
-                    <li>• Tonetoxicityand compliance filters</li>
+                    <li>• Tone, toxicity, and compliance filters</li>
                   </ul>
                 </div>
               </div>
@@ -156,8 +156,8 @@ export default function EnterpriseRAGGuardrails2026() {
               </h2>
               <p className='text-center text-white/80 mb-8 text-lg'>
                 Our team implements enterprise RAG guardrails across finance,
-                healthcareand manufacturing. Reduce hallucinations by 70%+ and
-                achieve compliantexplainable answers.
+                healthcare, and manufacturing. Reduce hallucinations by 70%+ and
+                achieve compliant, explainable answers.
               </p>
               <div className='flex justify-center gap-4'>
                 <a

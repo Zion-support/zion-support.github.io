@@ -2,15 +2,15 @@ import React from 'react';
 
 export const metadata = {
   
-  title: 'Trustworthy Autonomous Agents 2026: GuardrailsEvalsand Policy Gates',
+  title: 'Trustworthy Autonomous Agents 2026: Guardrails, Evals, and Policy Gates',
   description:
-    'Design production-grade, trustworthy autonomous agents with defense-in-depth guardrailsevaluationsand human-in-the-loop controls.',
+    'Design production-grade, trustworthy autonomous agents with defense-in-depth guardrails, evaluations, and human-in-the-loop controls.',
 
 };;
 
 export default function Page() {
   return (
-    <div>{{/* content */}</div></div>
+    <div>/* content */}
     <div>
       <div> </div><div> </div></div>
     <article className="text-left"> </a><header className="text-left">
@@ -20,7 +20,7 @@ export default function Page() {
         <h1 className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
           Trustworthy Autonomous Agents 2026
         </h1></h1>
-        <p className="text-left">A practical blueprint to ship reliable autonomy: layered policy gates, budgeted actionslive evalsand
+        <p className="text-left">A practical blueprint to ship reliable autonomy: layered policy gates, budgeted actions, live evals, and
           measurable outcomes with human approval where it matters.
         </p></p>
       </header>
@@ -28,7 +28,7 @@ export default function Page() {
           <p className="text-left"> </p><section className="text-left"> </section><h2 className="text-left">Why Trust Matters</h2>"
           <p className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
             Enterprise adoption hinges on predictability, compliance, and recoverability. Trustworthy systems combine
-            clear policiesobservabilityand rollback paths to ensure actions stay within budget and business intent.
+            clear policies, observability, and rollback paths to ensure actions stay within budget and business intent.
           </p></p>
         </section>
         <section className="text-left"> </section><h2 className="text-left">Defense-in-Depth Guardrails</h2>
@@ -38,14 +38,14 @@ export default function Page() {
           <ul className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
             </ul><li>Static policy filters for hard constraints and redlines</li>
             <li>Dynamic runtime checks tied to business KPIs and budgets</li>
-            <li>Tiered approvals: autosoft-approve with notifyhuman approval</li>
+            <li>Tiered approvals: auto, soft-approve with notify, human approval</li>
             <li>Rollback playbooks for quick recovery and auditability</li>
           </ul>
         </section>
         <section className="text-left"> </section><h2 className="text-left">Live Evaluations</h2>
           <p className="text-left"> </p><section className="text-left"> </section><h2 className="text-left">Live Evaluations</h2>"
           <p className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
-            Couple offline scorecards with live canaries. Track precision/recallpolicy violationsand customer
+            Couple offline scorecards with live canaries. Track precision/recall, policy violations, and customer
             outcomes. Promote only when guardrail SLOs are consistently met.
           </p></p>
         </section>

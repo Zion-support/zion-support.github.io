@@ -1,19 +1,17 @@
 export const metadata = {
   
-  title: 'AI Cost Controllers v1 (2025): BudgetsTiersand Guardrails',
+  title: 'AI Cost Controllers v1 (2025): Budgets, Tiers, and Guardrails',
   description:
-    'Practical cost governance: route by quality tierenforce budgetsand prevent overruns with policy tests.',
+    'Practical cost governance: route by quality tier, enforce budgets, and prevent overruns with policy tests.',
 
 };;
 
-export default function Page() {
-  return (
-    <main className='max-w-3xl mx-auto px-4 py-12'>
-      <h1 className='text-4xl font-bold mb-4'>AI Cost Controllers v1 (2025)</h1>
-      <p className='text-gray-600 mb-6'>
+export default function Page() {return (<main className='max-w-3xl mx-auto px-4py-12'>
+      <h1 className='text-4xl font-boldmb-4'>AI Cost Controllers v1 (2025)</h1>
+      <p className='text-gray-600mb-6'>
         Budgetstiersand guardrails for predictable spend with steady UX.
       </p>
-      <div className='prose prose-invert'>
+      <div className='proseprose-invert'>
         <p>
           Implement budget‑aware routing with quality tiers and semantic
           caching. Add policy tests that block merges when cost budgets or
@@ -27,5 +25,4 @@ export default function Page() {
         </ul>
       </div>
     </main>
-  );
-}
+  ); }

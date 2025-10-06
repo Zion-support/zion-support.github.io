@@ -1,51 +1,52 @@
+import React, { memo, useMemo } from 'react';
 import { HelmetProvider } from 'react-helmet-async';
 
-// Simple placeholder components
-const UnifiedContentPromotion = () => (
+// Memoized components for better performance
+const UnifiedContentPromotion = memo(() => (
   <div className="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-16">
     <div className="container mx-auto px-4 text-center">
       <h2 className="text-3xl font-bold mb-4">Latest AI Innovations</h2>
       <p className="text-xl">Discover cutting-edge AI solutions for your business</p>
     </div>
   </div>
-);
+));
 
-const InteractiveAIROICalculator = () => (
+const InteractiveAIROICalculator = memo(() => (
   <div className="bg-gray-50 py-16">
     <div className="container mx-auto px-4 text-center">
       <h2 className="text-3xl font-bold mb-4">AI ROI Calculator</h2>
       <p className="text-xl text-gray-600">Calculate your potential AI investment returns</p>
     </div>
   </div>
-);
+));
 
-const ContentShowcase = () => (
+const ContentShowcase = memo(() => (
   <div className="py-16">
     <div className="container mx-auto px-4 text-center">
       <h2 className="text-3xl font-bold mb-4">Featured Content</h2>
       <p className="text-xl text-gray-600">Explore our latest insights and case studies</p>
     </div>
   </div>
-);
+));
 
-const InteractiveContentShowcase2026 = () => (
+const InteractiveContentShowcase2026 = memo(() => (
   <div className="bg-blue-50 py-16">
     <div className="container mx-auto px-4 text-center">
       <h2 className="text-3xl font-bold mb-4">2026 Content Showcase</h2>
       <p className="text-xl text-gray-600">Latest trends and innovations for 2026</p>
     </div>
   </div>
-);
+));
 
 // Loading component
-const LoadingSpinner = () => (
+const LoadingSpinner = memo(() => (
   <div className="animate-pulse bg-gray-200 h-32 rounded flex items-center justify-center">
     <div className="text-gray-500">Loading...</div>
   </div>
-);
+));
 
 export default function App() {
-  const structuredData = {
+  const structuredData = useMemo(() => ({
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Zion Tech Group",
@@ -78,7 +79,19 @@ export default function App() {
       "priceCurrency": "USD",
       "availability": "https://schema.org/InStock"
     }
-  };
+  }), []);
+
+  // Performance optimization: Preload critical resources
+  React.useEffect(() => {
+    if (typeof document !== 'undefined') {
+      // Preload critical fonts
+      const fontLink = document.createElement('link');
+      fontLink.rel = 'preload';
+      fontLink.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap';
+      fontLink.as = 'style';
+      document.head.appendChild(fontLink);
+    }
+  }, []);
 
   return (
     <HelmetProvider>
@@ -88,11 +101,28 @@ export default function App() {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
         
+        {/* SEO Meta Tags */}
+        <Helmet>
+          <title>Zion Tech Group - AI-Powered Enterprise Solutions | 300% ROI Guaranteed</title>
+          <meta name="description" content="Transform your enterprise with AI-powered solutions achieving 300% ROI, 70% cost reduction, and 90% efficiency gains. Leading provider of autonomous business systems." />
+          <meta name="keywords" content="AI solutions, enterprise automation, business intelligence, autonomous systems, digital transformation, ROI optimization" />
+          <meta property="og:title" content="Zion Tech Group - AI-Powered Enterprise Solutions" />
+          <meta property="og:description" content="Transform your enterprise with AI-powered solutions achieving 300% ROI, 70% cost reduction, and 90% efficiency gains." />
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content="https://ziontechgroup.com" />
+          <meta property="og:image" content="https://ziontechgroup.com/og-image.jpg" />
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:title" content="Zion Tech Group - AI-Powered Enterprise Solutions" />
+          <meta name="twitter:description" content="Transform your enterprise with AI-powered solutions achieving 300% ROI, 70% cost reduction, and 90% efficiency gains." />
+          <meta name="twitter:image" content="https://ziontechgroup.com/og-image.jpg" />
+          <link rel="canonical" href="https://ziontechgroup.com" />
+        </Helmet>
+        
         {/* Unified Content Promotion - Replaces multiple redundant banners */}
         <UnifiedContentPromotion />
 
         {/* Hero Section */}
-        <section className="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-20">
+        <section className="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-20" role="banner">
           <div className="container mx-auto px-4">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
               Transform Your Business with
@@ -104,11 +134,11 @@ export default function App() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a
-                href="/<services" className="bg-yellow-400 text-black px-8 py-3 rounded-lg font-semibold hover:bg-yellow-300 transition-colors">
+                href="/services" className="bg-yellow-400 text-black px-8 py-3 rounded-lg font-semibold hover:bg-yellow-300 transition-colors">
                 Explore Our Services
               </a>
               <a
-                href="tel:+<13024640950" className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+                href="tel:+13024640950" className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
                 Call +1 302 464 0950
               </a>
             </div>
@@ -157,7 +187,8 @@ export default function App() {
                 <div className="flex gap-2">
                   <input
                     type="email"
-                    placeholder="Enter your <<email className="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                    placeholder="Enter your email"
+                    className="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
                   <button className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors">
                     Subscribe
                   </button>
@@ -171,21 +202,21 @@ export default function App() {
               <div className="space-y-4">
                 <h3 className="text-2xl font-bold mb-6">Latest Content Highlights</h3>
                 <div className="space-y-4">
-                  <a href="/blog/ai-2026-enterprise-rag-<guardrails" className="flex items-start gap-3 p-4 bg-white rounded-lg shadow hover:shadow-md transition-shadow">
+                  <a href="/blog/ai-2026-enterprise-rag-guardrails" className="flex items-start gap-3 p-4 bg-white rounded-lg shadow hover:shadow-md transition-shadow">
                     <div className="text-2xl">🛡️</div>
                     <div>
                       <h4 className="font-semibold">Enterprise RAG Guardrails 2026</h4>
                       <p className="text-gray-600 text-sm">Safe, reliable RAG with verifiable citations</p>
                     </div>
                   </a>
-                  <a href="/blog/ai-2026-autonomous-enterprise-<operations" className="flex items-start gap-3 p-4 bg-white rounded-lg shadow hover:shadow-md transition-shadow">
+                  <a href="/blog/ai-2026-autonomous-enterprise-operations" className="flex items-start gap-3 p-4 bg-white rounded-lg shadow hover:shadow-md transition-shadow">
                     <div className="text-2xl">🏭</div>
                     <div>
                       <h4 className="font-semibold">Autonomous Enterprise Operations 2026</h4>
                       <p className="text-gray-600 text-sm">90% efficiency, 300% ROI with guardrailed agents</p>
                     </div>
                   </a>
-                  <a href="/blog/ai-cloud-cost-optimization-<2025" className="flex items-start gap-3 p-4 bg-white rounded-lg shadow hover:shadow-md transition-shadow">
+                  <a href="/blog/ai-cloud-cost-optimization-2025" className="flex items-start gap-3 p-4 bg-white rounded-lg shadow hover:shadow-md transition-shadow">
                     <div className="text-2xl">💸</div>
                     <div>
                       <h4 className="font-semibold">AI Cloud Cost Optimization</h4>
@@ -195,7 +226,7 @@ export default function App() {
                 </div>
                 <div className="mt-6">
                   <a
-                    href="/<blog" className="text-blue-600 hover:text-blue-800 font-semibold">
+                    href="/blog" className="text-blue-600 hover:text-blue-800 font-semibold">
                     View All Content →
                   </a>
                 </div>
@@ -215,11 +246,11 @@ export default function App() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="tel:+<13024640950" className="bg-yellow-400 text-black px-8 py-3 rounded-lg font-semibold hover:bg-yellow-300 transition-colors">
+                href="tel:+13024640950" className="bg-yellow-400 text-black px-8 py-3 rounded-lg font-semibold hover:bg-yellow-300 transition-colors">
                 Call +1 302 464 0950
               </a>
               <a
-                href="mailto:kleber@ziontechgroup.<com" className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+                href="mailto:kleber@ziontechgroup.com" className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
                 Get Free Consultation
               </a>
             </div>

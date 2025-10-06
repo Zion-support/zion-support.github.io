@@ -4,13 +4,11 @@ export const metadata = {
   
   title: 'Real‑Time Multimodal Assistants (2028): Voice + Vision + Touch',
   description:
-    'Production patterns for assistants that seehearand act with <150ms latency.',
+    'Production patterns for assistants that see, hear, and act with <150ms latency.',
 
 };;
 
-export default function Page() {
-  return (
-    <main className='max-w-3xl mx-auto px-4 py-12 prose prose-invert'>
+export default function Page() {return (<mainclassName='max-w-3xl mx-auto px-4 py-12 prose prose-invert'>
       <h1>Real‑Time Multimodal Assistants (2028): Voice + Vision + Touch</h1>
       <p>
         Build assistants that see, hear, and act in real time. This guide covers
@@ -27,13 +25,12 @@ export default function Page() {
         <li>On‑device caches, signed configs, and safety budgets</li>
       </ul>
       <p>
-        Measure outcomes end‑to‑end: task success ratetime‑to‑resolutionand
-        user satisfaction. Gate changes with policy checks and online canaries
-        tied to KPIs.
+        Measure outcomes end‑to‑end: task success ratetime‑to‑resolutionand user
+        satisfaction. Gate changes with policy checks and online canaries tied
+        to KPIs.
       </p>
       <p>
-        Continue exploring in our <ArrowRight href='/blog'>Blog</ArrowRight>.
+        Continue exploring in our <ArrowRighthref='/blog'>Blog</ArrowRight>.
       </p>
     </main>
-  );
-}
+  ); }

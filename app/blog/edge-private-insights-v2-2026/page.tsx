@@ -8,7 +8,7 @@ export const metadata = {
   
   title: 'Edge Private Insights v2 (2026)',
     description:
-      'Zero‑PII analytics with scoped IDsDPand on‑device aggregation.',
+      'Zero‑PII analytics with scoped IDs, DP, and on‑device aggregation.',
     type: 'article',
     url: 'https://ziontechgroup.com/blog/edge-private-insights-v2-2026',
   
@@ -17,8 +17,9 @@ export const metadata = {
     card:   'summary_large_image',,
     title:   'Edge Private Insights v2 (2026)',,
     description:  
-      'Zero‑PII analytics with scoped IDsDPand on‑device aggregation.',,
+      'Zero‑PII analytics with scoped IDs, DP, and on‑device aggregation.',,
   },
+};
 };
 };
 
@@ -35,7 +36,8 @@ export default function Page() {
             Edge Private Insights v2 (2026)
           </h1>
           <p className='text-lg md:text-xl text-white/80 max-w-3xl'>
-            Deliver actionable metrics without PII using scoped identifiersdifferential privacyand on-device aggregation—all under 100ms.
+            Deliver actionable metrics without PII using scoped identifiers,
+            differential privacy, and on-device aggregation—all under 100ms.
           </p>
           <div className='flex items-center gap-6 text-white/70 mt-8'>
             <div className='flex items-center gap-2'>
@@ -54,7 +56,7 @@ export default function Page() {
         <div className='max-w-4xl mx-auto px-6 prose prose-lg'>
           <h2>Zero‑PII Analytics Architecture</h2>
           <p>
-            We combine scoped identifiersper-event DP noiseand on-device
+            We combine scoped identifiers, per-event DP noise, and on-device
             aggregation to enable rich analytics with no personal data. This
             design ships globally with latency budgets under 100ms.
           </p>
@@ -82,7 +84,8 @@ export default function Page() {
           {[
             { label: 'Latency p95', value: '< 100ms', color: 'text-cyan-600' },
             { label: 'PII Collected', value: '0', color: 'text-emerald-600' },
-            { label: 'Coverage', value: 'Global', color: 'text-fuchsia-600' }].map((kpii) => (
+            { label: 'Coverage', value: 'Global', color: 'text-fuchsia-600' },
+          ].map((kpi, i) => (
             <div key={i} className='rounded-xl border p-6'>
               <div className={`text-3xl font-extrabold ${kpi.color}`}>
                 {kpi.value}

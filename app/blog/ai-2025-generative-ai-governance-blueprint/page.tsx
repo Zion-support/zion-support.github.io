@@ -7,7 +7,8 @@ export const metadata = {
       'Guardrails, red-teaming, and continuous evaluations to manage risk and ROI.',
   type: 'article',
 
-}};
+};;
+};
 
 export default function GenAIGovernanceBlueprint2025Page() {
   return (
@@ -61,7 +62,7 @@ export default function GenAIGovernanceBlueprint2025Page() {
           <h3>Scorecards</h3>
           <p>
             Publish monthly scorecards connecting cost, latency, and quality to
-            revenuesavingsand risk reduction.
+            revenue, savings, and risk reduction.
           </p>
 
           <p>

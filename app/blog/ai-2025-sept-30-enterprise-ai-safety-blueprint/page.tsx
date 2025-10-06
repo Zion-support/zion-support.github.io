@@ -4,7 +4,7 @@ export const metadata = {
   
   title: 'AI 2025: Enterprise AI Safety Blueprint',
     description:
-      'KPI-linked scorecards, CI policy testscanariesand instant rollback to ship fast without regressions.',
+      'KPI-linked scorecards, CI policy tests, canaries, and instant rollback to ship fast without regressions.',
   
 };,
 };
@@ -14,7 +14,8 @@ export default function Page() {
     <article className='prose prose-indigo max-w-3xl'>
       <h1>AI 2025: Enterprise AI Safety Blueprint</h1>
       <p>
-        Ship AI features weekly without regressions using KPI-linked scorecardslightweight policy tests in CIand live canaries that trigger instant
+        Ship AI features weekly without regressions using KPI-linked scorecards,
+        lightweight policy tests in CI, and live canaries that trigger instant
         rollback when outcomes drift.
       </p>
       <h2>What you will learn</h2>

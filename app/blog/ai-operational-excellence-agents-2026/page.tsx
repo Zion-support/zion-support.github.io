@@ -4,15 +4,18 @@ export const metadata = {
   
   title: 'AI Operational Excellence 2026',
     description:
-      'Blueprint for operational excellence with autonomous agentssafety guardrailsand reliability engineering.',
+      'Blueprint for operational excellence with autonomous agents, safety guardrails, and reliability engineering.',
     url: 'https://ziontechgroup.com/blog/ai-operational-excellence-agents-2026',
     images: [
       {
         url: '/og/ai-operational-excellence-agents-2026.jpg',
-        width: 1200height: 630,
+        width: 1200,
+        height: 630,
       
 };,
-    ]}};
+    ],
+  },
+};
 
 export default function Page() {
   return (
@@ -27,7 +30,7 @@ export default function Page() {
         </h1>
         <p className='text-xl text-gray-700 mb-8'>
           Production-grade agentic systems can orchestrate complex workflows
-          safely when paired with guardrailsobservabilityand policy-as-code.
+          safely when paired with guardrails, observability, and policy-as-code.
           This guide shows how to achieve operational excellence with measurable
           reliability and ROI.
         </p>
@@ -53,7 +56,7 @@ export default function Page() {
               Agent coordinator with tool registry and sandboxed execution
             </li>
             <li>
-              Observability: traces, metricslogscost and quality dashboards
+              Observability: traces, metrics, logs, cost and quality dashboards
             </li>
             <li>
               Recovery automation: blue/green model slots and feature flags

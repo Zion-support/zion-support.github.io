@@ -11,15 +11,15 @@ class AnalyticsOptimizer {
       batchSize: 10,
       flushInterval: 30000, // 30 seconds
       maxRetries: 3,
-      retryDelay: 1000
+      retryDelay: 1000,
     };
-    
+
     this.eventQueue = [];
     this.sessionId = this.generateSessionId();
     this.userId = this.getUserId();
     this.pageViews = 0;
     this.startTime = Date.now();
-    
+
     this.init();
   }
 
@@ -33,13 +33,16 @@ class AnalyticsOptimizer {
   }
 
   generateSessionId() {
-    return 'session_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+    return (
+      'session_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9)
+    );
   }
 
   getUserId() {
     let userId = localStorage.getItem('analytics_user_id');
     if (!userId) {
-      userId = 'user_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+      userId =
+        'user_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
       localStorage.setItem('analytics_user_id', userId);
     }
     return userId;
@@ -50,41 +53,47 @@ class AnalyticsOptimizer {
     document.addEventListener('visibilitychange', () => {
       this.track('page_visibility', {
         hidden: document.hidden,
-        timestamp: Date.now()
+        timestamp: Date.now(),
       });
     });
 
     // Track scroll depth
     let maxScrollDepth = 0;
-    window.addEventListener('scroll', this.throttle(() => {
-      const scrollDepth = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
-      if (scrollDepth > maxScrollDepth) {
-        maxScrollDepth = scrollDepth;
-        this.track('scroll_depth', {
-          depth: scrollDepth,
-          maxDepth: maxScrollDepth
-        });
-      }
-    }, 1000));
+    window.addEventListener(
+      'scroll',
+      this.throttle(() => {
+        const scrollDepth = Math.round(
+          (window.scrollY / (document.body.scrollHeight - window.innerHeight)) *
+            100,
+        );
+        if (scrollDepth > maxScrollDepth) {
+          maxScrollDepth = scrollDepth;
+          this.track('scroll_depth', {
+            depth: scrollDepth,
+            maxDepth: maxScrollDepth,
+          });
+        }
+      }, 1000),
+    );
 
     // Track click events
-    document.addEventListener('click', (event) => {
+    document.addEventListener('click', event => {
       const element = event.target;
       this.track('click', {
         element: element.tagName,
         id: element.id,
         className: element.className,
         text: element.textContent?.substring(0, 100),
-        href: element.href
+        href: element.href,
       });
     });
 
     // Track form submissions
-    document.addEventListener('submit', (event) => {
+    document.addEventListener('submit', event => {
       this.track('form_submit', {
         formId: event.target.id,
         formClass: event.target.className,
-        action: event.target.action
+        action: event.target.action,
       });
     });
   }
@@ -92,13 +101,15 @@ class AnalyticsOptimizer {
   setupPerformanceTracking() {
     // Track Core Web Vitals
     if ('web-vitals' in window) {
-      import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
-        getCLS((metric) => this.trackWebVital('CLS', metric));
-        getFID((metric) => this.trackWebVital('FID', metric));
-        getFCP((metric) => this.trackWebVital('FCP', metric));
-        getLCP((metric) => this.trackWebVital('LCP', metric));
-        getTTFB((metric) => this.trackWebVital('TTFB', metric));
-      });
+      import('web-vitals').then(
+        ({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
+          getCLS(metric => this.trackWebVital('CLS', metric));
+          getFID(metric => this.trackWebVital('FID', metric));
+          getFCP(metric => this.trackWebVital('FCP', metric));
+          getLCP(metric => this.trackWebVital('LCP', metric));
+          getTTFB(metric => this.trackWebVital('TTFB', metric));
+        },
+      );
     }
 
     // Track page load performance
@@ -106,22 +117,24 @@ class AnalyticsOptimizer {
       const perfData = performance.getEntriesByType('navigation')[0];
       if (perfData) {
         this.track('page_load_performance', {
-          domContentLoaded: perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart,
+          domContentLoaded:
+            perfData.domContentLoadedEventEnd -
+            perfData.domContentLoadedEventStart,
           loadComplete: perfData.loadEventEnd - perfData.loadEventStart,
           domInteractive: perfData.domInteractive - perfData.navigationStart,
-          totalLoadTime: perfData.loadEventEnd - perfData.navigationStart
+          totalLoadTime: perfData.loadEventEnd - perfData.navigationStart,
         });
       }
     });
 
     // Track resource loading
-    const observer = new PerformanceObserver((list) => {
-      list.getEntries().forEach((entry) => {
+    const observer = new PerformanceObserver(list => {
+      list.getEntries().forEach(entry => {
         this.track('resource_load', {
           name: entry.name,
           duration: entry.duration,
           size: entry.transferSize,
-          type: entry.initiatorType
+          type: entry.initiatorType,
         });
       });
     });
@@ -130,21 +143,21 @@ class AnalyticsOptimizer {
 
   setupErrorTracking() {
     // Track JavaScript errors
-    window.addEventListener('error', (event) => {
+    window.addEventListener('error', event => {
       this.track('javascript_error', {
         message: event.message,
         filename: event.filename,
         lineno: event.lineno,
         colno: event.colno,
-        stack: event.error?.stack
+        stack: event.error?.stack,
       });
     });
 
     // Track unhandled promise rejections
-    window.addEventListener('unhandledrejection', (event) => {
+    window.addEventListener('unhandledrejection', event => {
       this.track('unhandled_rejection', {
         reason: event.reason?.message || 'Unknown rejection',
-        stack: event.reason?.stack
+        stack: event.reason?.stack,
       });
     });
 
@@ -154,7 +167,7 @@ class AnalyticsOptimizer {
       return originalFetch(...args).catch(error => {
         this.track('fetch_error', {
           url: args[0],
-          error: error.message
+          error: error.message,
         });
         throw error;
       });
@@ -168,33 +181,39 @@ class AnalyticsOptimizer {
       timeOnPage += 1000;
       this.track('time_on_page', {
         seconds: timeOnPage / 1000,
-        minutes: Math.round(timeOnPage / 60000)
+        minutes: Math.round(timeOnPage / 60000),
       });
     }, 10000); // Track every 10 seconds
 
     // Track mouse movement patterns
     let mouseMovements = 0;
-    document.addEventListener('mousemove', this.throttle(() => {
-      mouseMovements++;
-      if (mouseMovements % 50 === 0) {
-        this.track('mouse_activity', {
-          movements: mouseMovements,
-          timestamp: Date.now()
-        });
-      }
-    }, 1000));
+    document.addEventListener(
+      'mousemove',
+      this.throttle(() => {
+        mouseMovements++;
+        if (mouseMovements % 50 === 0) {
+          this.track('mouse_activity', {
+            movements: mouseMovements,
+            timestamp: Date.now(),
+          });
+        }
+      }, 1000),
+    );
 
     // Track keyboard activity
     let keystrokes = 0;
-    document.addEventListener('keydown', this.throttle(() => {
-      keystrokes++;
-      if (keystrokes % 20 === 0) {
-        this.track('keyboard_activity', {
-          keystrokes: keystrokes,
-          timestamp: Date.now()
-        });
-      }
-    }, 1000));
+    document.addEventListener(
+      'keydown',
+      this.throttle(() => {
+        keystrokes++;
+        if (keystrokes % 20 === 0) {
+          this.track('keyboard_activity', {
+            keystrokes: keystrokes,
+            timestamp: Date.now(),
+          });
+        }
+      }, 1000),
+    );
   }
 
   setupPrivacyCompliance() {
@@ -229,8 +248,8 @@ class AnalyticsOptimizer {
         userAgent: navigator.userAgent,
         language: navigator.language,
         screenResolution: `${screen.width}x${screen.height}`,
-        viewportSize: `${window.innerWidth}x${window.innerHeight}`
-      }
+        viewportSize: `${window.innerWidth}x${window.innerHeight}`,
+      },
     };
 
     this.eventQueue.push(event);
@@ -247,7 +266,7 @@ class AnalyticsOptimizer {
       value: metric.value,
       delta: metric.delta,
       id: metric.id,
-      navigationType: metric.navigationType
+      navigationType: metric.navigationType,
     });
   }
 
@@ -257,7 +276,7 @@ class AnalyticsOptimizer {
       page: page,
       pageViews: this.pageViews,
       referrer: document.referrer,
-      title: document.title
+      title: document.title,
     });
   }
 
@@ -293,13 +312,13 @@ class AnalyticsOptimizer {
       events: events,
       sessionId: this.sessionId,
       userId: this.userId,
-      timestamp: Date.now()
+      timestamp: Date.now(),
     };
 
     // Send to multiple analytics services
     const promises = [
       this.sendToGoogleAnalytics(payload),
-      this.sendToCustomEndpoint(payload)
+      this.sendToCustomEndpoint(payload),
     ];
 
     await Promise.allSettled(promises);
@@ -309,7 +328,7 @@ class AnalyticsOptimizer {
     if (typeof gtag !== 'undefined') {
       payload.events.forEach(event => {
         gtag('event', event.event, {
-          custom_parameters: event.properties
+          custom_parameters: event.properties,
         });
       });
     }
@@ -320,9 +339,9 @@ class AnalyticsOptimizer {
       const response = await fetch('/api/analytics', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/json',
         },
-        body: JSON.stringify(payload)
+        body: JSON.stringify(payload),
       });
 
       if (!response.ok) {
@@ -338,16 +357,19 @@ class AnalyticsOptimizer {
     let lastExecTime = 0;
     return function (...args) {
       const currentTime = Date.now();
-      
+
       if (currentTime - lastExecTime > delay) {
         func.apply(this, args);
         lastExecTime = currentTime;
       } else {
         clearTimeout(timeoutId);
-        timeoutId = setTimeout(() => {
-          func.apply(this, args);
-          lastExecTime = Date.now();
-        }, delay - (currentTime - lastExecTime));
+        timeoutId = setTimeout(
+          () => {
+            func.apply(this, args);
+            lastExecTime = Date.now();
+          },
+          delay - (currentTime - lastExecTime),
+        );
       }
     };
   }
@@ -359,17 +381,22 @@ class AnalyticsOptimizer {
       userId: this.userId,
       pageViews: this.pageViews,
       timeOnSite: Date.now() - this.startTime,
-      eventsQueued: this.eventQueue.length
+      eventsQueued: this.eventQueue.length,
     };
   }
 
   getPerformanceMetrics() {
     const navigation = performance.getEntriesByType('navigation')[0];
     return {
-      loadTime: navigation ? navigation.loadEventEnd - navigation.navigationStart : 0,
-      domContentLoaded: navigation ? navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart : 0,
+      loadTime: navigation
+        ? navigation.loadEventEnd - navigation.navigationStart
+        : 0,
+      domContentLoaded: navigation
+        ? navigation.domContentLoadedEventEnd -
+          navigation.domContentLoadedEventStart
+        : 0,
       firstPaint: this.getFirstPaint(),
-      memoryUsage: this.getMemoryUsage()
+      memoryUsage: this.getMemoryUsage(),
     };
   }
 
@@ -384,7 +411,7 @@ class AnalyticsOptimizer {
       return {
         used: performance.memory.usedJSHeapSize,
         total: performance.memory.totalJSHeapSize,
-        limit: performance.memory.jsHeapSizeLimit
+        limit: performance.memory.jsHeapSizeLimit,
       };
     }
     return null;

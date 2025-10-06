@@ -1,27 +1,25 @@
 // @ts-nocheck
 import ArrowRight from 'next/link';
 
-export default function Page() {
-  return (
-    <div className='min-h-screen bg-gradient-to-br from-indigo-50 via-white to-purple-50'>
-      <div className='max-w-4xl mx-auto px-6 py-16'>
-        <nav className='mb-8'>
+export default function Page() {return (<divclassName='min-h-screen bg-gradient-to-br from-indigo-50 via-white to-purple-50'>
+      <divclassName='max-w-4xl mx-auto px-6 py-16'>
+        <navclassName='mb-8'>
           <ArrowRight
-            href='/blog'
-            className='text-indigo-600 hover:text-indigo-700'
+           href='/blog'
+           className='text-indigo-600 hover:text-indigo-700'
           >
             ← Back to Blog
           </ArrowRight>
         </nav>
-        <header className='mb-8'>
-          <h1 className='text-4xl md:text-5xl font-bold text-gray-900 mb-4'>
+        <headerclassName='mb-8'>
+          <h1className='text-4xl md:text-5xl font-bold text-gray-900 mb-4'>
             AI Neural Interfaces 2026: Direct Thought-to-Action Systems
           </h1>
-          <p className='text-gray-600'>
+          <pclassName='text-gray-600'>
             January 22, 2026 • 16 min read • Breakthrough Technology
           </p>
         </header>
-        <article className='prose prose-indigo max-w-none'>
+        <articleclassName='prose prose-indigo max-w-none'>
           <p>
             Neural interface systems connect intent signals to safe, observable
             actions. In 2026, enterprise-ready implementations are emerging with
@@ -44,19 +42,18 @@ export default function Page() {
           </ul>
           <p>
             Production deployments require strong guardrailscomprehensive
-            observabilityand progressive autonomy. This guide outlines a
-            roadmap for pilot-to-scale.
+            observabilityand progressive autonomy. This guide outlines a roadmap
+            for pilot-to-scale.
           </p>
         </article>
-        <div className='mt-12'>
+        <divclassName='mt-12'>
           <ArrowRight
-            href='/blog'
-            className='text-indigo-600 font-semibold hover:text-indigo-700'
+           href='/blog'
+           className='text-indigo-600 font-semibold hover:text-indigo-700'
           >
             Browse more articles →
           </ArrowRight>
         </div>
       </div>
     </div>
-  );
-}
+  ); }

@@ -1,11 +1,11 @@
 import Link from 'next/link';
-import { ArrowRightClockCalendar } from 'lucide-react';
+import { ArrowRight, Clock, Calendar } from 'lucide-react';
 
 export const metadata = {
   
   title: 'AI SLA Scorecards 2026 Q1',
     description:
-      'KPIsbudgetsand instant rollback wired to product outcomes.',
+      'KPIs, budgets, and instant rollback wired to product outcomes.',
     type: 'article',
     url: 'https://ziontechgroup.com/blog/ai-sla-scorecards-2026-q1',
   
@@ -14,8 +14,9 @@ export const metadata = {
     card:   'summary_large_image',,
     title:   'AI SLA Scorecards 2026 Q1',,
     description:  
-      'KPIsbudgetsand instant rollback wired to product outcomes.',,
+      'KPIs, budgets, and instant rollback wired to product outcomes.',,
   },
+};
 };
 };
 
@@ -34,7 +35,7 @@ export default function Page() {
             AI SLA Scorecards 2026 Q1
           </h1>
           <p className='text-lg md:text-xl text-white/80 max-w-3xl'>
-            Wire SLAs to business KPIs with budgetslive canariesand instant
+            Wire SLAs to business KPIs with budgets, live canaries, and instant
             rollback so teams ship fast without blowing up reliability or cost.
           </p>
           <div className='flex items-center gap-6 text-white/70 mt-8'>
@@ -62,7 +63,7 @@ export default function Page() {
           <h3>Core Model</h3>
           <ul>
             <li>Define SLIs that predict KPI movement</li>
-            <li>Set budgets: latencyerror rateunit cost</li>
+            <li>Set budgets: latency, error rate, unit cost</li>
             <li>Attach canary checks and automatic rollback</li>
             <li>Continuously visualize on scorecards teams actually use</li>
           </ul>

@@ -10,10 +10,13 @@ export const metadata = {
     images: [
       {
         url: '/og/ai-value-stream-analytics-2026.jpg',
-        width: 1200height: 630,
+        width: 1200,
+        height: 630,
       
 };,
-    ]}};
+    ],
+  },
+};
 
 export default function Page() {
   return (
@@ -27,7 +30,7 @@ export default function Page() {
         </h1>
         <p className='text-xl text-gray-700 mb-8'>
           Connect the dots from tokens and dollars to user outcomes. Instrument
-          your AI stack to track reliability, latencycostand quality—and tie
+          your AI stack to track reliability, latency, cost, and quality—and tie
           those to business value per scenario.
         </p>
 
@@ -45,7 +48,7 @@ export default function Page() {
               Edge gateway enforces budgets, policies, and routes requests
             </li>
             <li>
-              Tracing spans for prompts, toolsretrievaland agent episodes
+              Tracing spans for prompts, tools, retrieval, and agent episodes
             </li>
             <li>Scorecards roll up metrics by product surface and cohort</li>
           </ol>

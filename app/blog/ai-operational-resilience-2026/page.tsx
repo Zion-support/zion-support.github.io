@@ -4,15 +4,18 @@ export const metadata = {
   
   title: 'AI Operational Resilience 2026',
     description:
-      'Policy testsisolation boundariesand automated recovery to achieve 99.99% uptime.',
+      'Policy tests, isolation boundaries, and automated recovery to achieve 99.99% uptime.',
     url: 'https://ziontechgroup.com/blog/ai-operational-resilience-2026',
     images: [
       {
         url: '/og/ai-operational-resilience-2026.jpg',
-        width: 1200height: 630,
+        width: 1200,
+        height: 630,
       
 };,
-    ]}};
+    ],
+  },
+};
 
 export default function Page() {
   return (
@@ -26,8 +29,8 @@ export default function Page() {
         </h1>
         <p className='text-xl text-gray-700 mb-8'>
           Build AI platforms that withstand dependency failures, model
-          regressions, and traffic spikes. Use policy testsisolation
-          boundariesand automated recovery to sustain customer trust.
+          regressions, and traffic spikes. Use policy tests, isolation
+          boundaries, and automated recovery to sustain customer trust.
         </p>
 
         <div className='prose prose-lg max-w-none'>
@@ -57,7 +60,7 @@ export default function Page() {
               score)
             </li>
             <li>
-              Contain with traffic shapingshadow modeand feature kill
+              Contain with traffic shaping, shadow mode, and feature kill
               switches
             </li>
             <li>

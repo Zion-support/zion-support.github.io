@@ -22,7 +22,7 @@ class AdvancedErrorHandler {
 
   setupGlobalErrorHandlers() {
     // Global error handler
-    window.addEventListener('error', (event) => {
+    window.addEventListener('error', event => {
       this.handleError({
         type: 'JavaScript Error',
         message: event.message,
@@ -32,44 +32,48 @@ class AdvancedErrorHandler {
         stack: event.error?.stack,
         timestamp: new Date().toISOString(),
         userAgent: navigator.userAgent,
-        url: window.location.href
+        url: window.location.href,
       });
     });
 
     // Unhandled promise rejection handler
-    window.addEventListener('unhandledrejection', (event) => {
+    window.addEventListener('unhandledrejection', event => {
       this.handleError({
         type: 'Unhandled Promise Rejection',
         message: event.reason?.message || 'Unknown promise rejection',
         stack: event.reason?.stack,
         timestamp: new Date().toISOString(),
         userAgent: navigator.userAgent,
-        url: window.location.href
+        url: window.location.href,
       });
     });
   }
 
   setupUnhandledRejectionHandler() {
     // Additional promise rejection handling
-    window.addEventListener('rejectionhandled', (event) => {
+    window.addEventListener('rejectionhandled', event => {
       console.log('Promise rejection was handled:', event.reason);
     });
   }
 
   setupResourceErrorHandler() {
     // Handle resource loading errors
-    document.addEventListener('error', (event) => {
-      if (event.target !== document) {
-        this.handleError({
-          type: 'Resource Error',
-          message: `Failed to load resource: ${event.target.src || event.target.href}`,
-          element: event.target.tagName,
-          src: event.target.src || event.target.href,
-          timestamp: new Date().toISOString(),
-          url: window.location.href
-        });
-      }
-    }, true);
+    document.addEventListener(
+      'error',
+      event => {
+        if (event.target !== document) {
+          this.handleError({
+            type: 'Resource Error',
+            message: `Failed to load resource: ${event.target.src || event.target.href}`,
+            element: event.target.tagName,
+            src: event.target.src || event.target.href,
+            timestamp: new Date().toISOString(),
+            url: window.location.href,
+          });
+        }
+      },
+      true,
+    );
   }
 
   setupNetworkErrorHandler() {
@@ -86,35 +90,41 @@ class AdvancedErrorHandler {
   setupRecoveryStrategies() {
     // Define recovery strategies for different error types
     this.recoveryStrategies.set('network', this.handleNetworkError.bind(this));
-    this.recoveryStrategies.set('resource', this.handleResourceError.bind(this));
-    this.recoveryStrategies.set('javascript', this.handleJavaScriptError.bind(this));
+    this.recoveryStrategies.set(
+      'resource',
+      this.handleResourceError.bind(this),
+    );
+    this.recoveryStrategies.set(
+      'javascript',
+      this.handleJavaScriptError.bind(this),
+    );
     this.recoveryStrategies.set('memory', this.handleMemoryError.bind(this));
   }
 
   handleError(errorInfo) {
     // Log error
     this.logError(errorInfo);
-    
+
     // Attempt recovery
     this.attemptRecovery(errorInfo);
-    
+
     // Report to external service
     if (this.reportingEnabled) {
       this.reportError(errorInfo);
     }
-    
+
     // Show user-friendly message
     this.showUserError(errorInfo);
   }
 
   logError(errorInfo) {
     this.errorLog.push(errorInfo);
-    
+
     // Maintain log size
     if (this.errorLog.length > this.maxLogSize) {
       this.errorLog.shift();
     }
-    
+
     // Console logging
     console.error('Error logged:', errorInfo);
   }
@@ -122,7 +132,7 @@ class AdvancedErrorHandler {
   attemptRecovery(errorInfo) {
     const errorType = this.categorizeError(errorInfo);
     const recoveryStrategy = this.recoveryStrategies.get(errorType);
-    
+
     if (recoveryStrategy) {
       try {
         recoveryStrategy(errorInfo);
@@ -133,16 +143,25 @@ class AdvancedErrorHandler {
   }
 
   categorizeError(errorInfo) {
-    if (errorInfo.message?.includes('network') || errorInfo.message?.includes('fetch')) {
+    if (
+      errorInfo.message?.includes('network') ||
+      errorInfo.message?.includes('fetch')
+    ) {
       return 'network';
     }
     if (errorInfo.type === 'Resource Error') {
       return 'resource';
     }
-    if (errorInfo.type === 'JavaScript Error' || errorInfo.type === 'Unhandled Promise Rejection') {
+    if (
+      errorInfo.type === 'JavaScript Error' ||
+      errorInfo.type === 'Unhandled Promise Rejection'
+    ) {
       return 'javascript';
     }
-    if (errorInfo.message?.includes('memory') || errorInfo.message?.includes('allocation')) {
+    if (
+      errorInfo.message?.includes('memory') ||
+      errorInfo.message?.includes('allocation')
+    ) {
       return 'memory';
     }
     return 'unknown';
@@ -151,9 +170,12 @@ class AdvancedErrorHandler {
   handleNetworkError(errorInfo) {
     // Retry failed network requests
     if (errorInfo.retryCount < 3) {
-      setTimeout(() => {
-        this.retryFailedRequest(errorInfo);
-      }, Math.pow(2, errorInfo.retryCount || 0) * 1000);
+      setTimeout(
+        () => {
+          this.retryFailedRequest(errorInfo);
+        },
+        Math.pow(2, errorInfo.retryCount || 0) * 1000,
+      );
     } else {
       this.showOfflineMessage();
     }
@@ -191,7 +213,7 @@ class AdvancedErrorHandler {
     // Implement retry logic for failed requests
     const retryCount = (errorInfo.retryCount || 0) + 1;
     errorInfo.retryCount = retryCount;
-    
+
     // Retry the original request
     if (errorInfo.originalRequest) {
       fetch(errorInfo.originalRequest)
@@ -204,7 +226,7 @@ class AdvancedErrorHandler {
           this.handleError({
             ...errorInfo,
             message: `Retry ${retryCount} failed: ${error.message}`,
-            retryCount
+            retryCount,
           });
         });
     }
@@ -374,7 +396,7 @@ class AdvancedErrorHandler {
       </div>
     `;
     document.body.appendChild(toast);
-    
+
     // Auto-remove after 5 seconds
     setTimeout(() => {
       if (toast.parentElement) {
@@ -384,11 +406,12 @@ class AdvancedErrorHandler {
   }
 
   handleNetworkStatusChange(status) {
-    const message = status === 'online' ? 'Connection restored' : 'Connection lost';
+    const message =
+      status === 'online' ? 'Connection restored' : 'Connection lost';
     this.showErrorToast({
       message,
       type: 'Network Status',
-      severity: 'info'
+      severity: 'info',
     });
   }
 
@@ -397,7 +420,7 @@ class AdvancedErrorHandler {
     if (window.gtag) {
       window.gtag('event', 'exception', {
         description: errorInfo.message,
-        fatal: errorInfo.severity === 'critical'
+        fatal: errorInfo.severity === 'critical',
       });
     }
 
@@ -405,9 +428,9 @@ class AdvancedErrorHandler {
     fetch('/api/errors', {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
       },
-      body: JSON.stringify(errorInfo)
+      body: JSON.stringify(errorInfo),
     }).catch(error => {
       console.error('Failed to report error:', error);
     });

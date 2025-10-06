@@ -4,7 +4,7 @@ export const metadata = {
   
   title: 'AI Agent Observability 2026',
     description:
-      'Traces, metrics, evals, and audits for safereliableand debuggable autonomous agents.',
+      'Traces, metrics, evals, and audits for safe, reliable, and debuggable autonomous agents.',
     type: 'article',
     publishedTime: '2025-09-29T00:00:00Z',
   
@@ -36,12 +36,12 @@ export default function AIAgentObservability2026Page() {
             </div>
 
             <h1 className='text-5xl font-extrabold mb-6 bg-gradient-to-r from-violet-300 to-fuchsia-300 bg-clip-text text-transparent'>
-              AI Agent Observability 2026: MetricsTracesand Guardrails
+              AI Agent Observability 2026: Metrics, Traces, and Guardrails
             </h1>
             <p className='text-xl text-white/80'>
               Establish end-to-end visibility for agentic workflows: capture
               plans, tools, actions, decisions, and outcomes with structured
-              tracesevalsand auditable guardrails.
+              traces, evals, and auditable guardrails.
             </p>
           </header>
 
@@ -56,7 +56,7 @@ export default function AIAgentObservability2026Page() {
                   decisions
                 </li>
                 <li>
-                  • Metrics: latency, accuracycost per taskintervention rate
+                  • Metrics: latency, accuracy, cost per task, intervention rate
                 </li>
                 <li>
                   • Evals: offline red-teaming and online canary scorecards
@@ -96,7 +96,7 @@ export default function AIAgentObservability2026Page() {
                   </h3>
                   <ul className='space-y-2 text-white/80'>
                     <li>
-                      • Golden datasetsautomatic rubric scoringand slice
+                      • Golden datasets, automatic rubric scoring, and slice
                       analysis
                     </li>
                     <li>• Regression dashboards and release gates</li>
@@ -111,7 +111,8 @@ export default function AIAgentObservability2026Page() {
                 Scorecards & SLOs
               </h2>
               <p className='text-white/80'>
-                Track user-visible outcomes: task success rate, autonomy levelsafety incidentsand time-to-value. Derive SLOs and error
+                Track user-visible outcomes: task success rate, autonomy level,
+                safety incidents, and time-to-value. Derive SLOs and error
                 budgets aligned to business goals.
               </p>
             </section>
@@ -122,7 +123,7 @@ export default function AIAgentObservability2026Page() {
               </h2>
               <p className='text-center text-white/80 mb-8 text-lg'>
                 We instrument agent platforms end-to-end in 2–4 weeks with
-                tracesevalsand guardrails. Launch safe autonomy with
+                traces, evals, and guardrails. Launch safe autonomy with
                 measurable ROI and audit-ready evidence.
               </p>
               <div className='flex justify-center gap-4'>

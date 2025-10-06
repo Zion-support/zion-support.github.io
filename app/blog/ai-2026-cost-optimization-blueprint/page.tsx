@@ -4,7 +4,7 @@ export const metadata = {
   
   title: 'AI 2026 Cost Optimization Blueprint',
     description:
-      'Reduce AI spend 30–70% using small-sufficient routingsemantic cachesand token discipline with quality scorecards.',
+      'Reduce AI spend 30–70% using small-sufficient routing, semantic caches, and token discipline with quality scorecards.',
     type: 'article',
     publishedTime: '2026-01-15T00:00:00Z',
   
@@ -40,8 +40,8 @@ export default function Page() {
             </h1>
             <p className='text-lg text-white/80'>
               A practical guide to shrink inference bills while sustaining
-              quality: model routing, semantic caching, quantizationprompt
-              truncationand policy guardrails tied to outcome scorecards.
+              quality: model routing, semantic caching, quantization, prompt
+              truncation, and policy guardrails tied to outcome scorecards.
             </p>
           </header>
 

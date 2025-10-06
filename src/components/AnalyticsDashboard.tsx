@@ -12,15 +12,9 @@ interface AnalyticsData {
   topPages: Array<{
     path: string;
     views: number;
-    title: string;
   }>;
   trafficSources: Array<{
     source: string;
-    visitors: number;
-    percentage: number;
-  }>;
-  deviceBreakdown: Array<{
-    device: string;
     percentage: number;
   }>;
 }
@@ -34,100 +28,120 @@ const AnalyticsDashboard: React.FC = () => {
     conversionRate: 0,
     topPages: [],
     trafficSources: [],
-    deviceBreakdown: []
   });
 
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
   useEffect(() => {
-    // Initialize analytics
-    const initializeAnalytics = async () => {
+    const fetchAnalyticsData = async () => {
       try {
-        // Simulate data loading
-        setData({
-          pageViews: 125000,
-          uniqueVisitors: 45000,
-          bounceRate: 35.2,
-          avgSessionDuration: 180,
+        setIsLoading(true);
+        setError(null);
+
+        // Simulate API call
+        await new Promise(resolve => setTimeout(resolve, 1000));
+
+        // Mock data
+        const mockData: AnalyticsData = {
+          pageViews: 12543,
+          uniqueVisitors: 8921,
+          bounceRate: 34.2,
+          avgSessionDuration: 245,
           conversionRate: 2.8,
           topPages: [
-            { path: '/', views: 25000, title: 'Home' },
-            { path: '/services', views: 18000, title: 'Services' },
-            { path: '/about', views: 12000, title: 'About' }
+            { path: '/', views: 3421 },
+            { path: '/services', views: 2156 },
+            { path: '/about', views: 1892 },
+            { path: '/contact', views: 1234 },
           ],
           trafficSources: [
-            { source: 'Organic Search', visitors: 25000, percentage: 55.6 },
-            { source: 'Direct', visitors: 15000, percentage: 33.3 },
-            { source: 'Social Media', visitors: 5000, percentage: 11.1 }
+            { source: 'Organic Search', percentage: 45.2 },
+            { source: 'Direct', percentage: 28.7 },
+            { source: 'Social Media', percentage: 15.3 },
+            { source: 'Referral', percentage: 10.8 },
           ],
-          deviceBreakdown: [
-            { device: 'Desktop', percentage: 60 },
-            { device: 'Mobile', percentage: 35 },
-            { device: 'Tablet', percentage: 5 }
-          ]
-        });
-      } catch (error) {
-        ErrorHandler.handleError(error);
+        };
+
+        setData(mockData);
+      } catch (err) {
+        setError('Failed to load analytics data');
+        ErrorHandler.handleError(err as Error);
+      } finally {
+        setIsLoading(false);
       }
     };
 
-    initializeAnalytics();
+    fetchAnalyticsData();
   }, []);
 
+  if (isLoading) {
+    return (
+      <div className='analytics-dashboard'>
+        <div className='loading'>Loading analytics data...</div>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className='analytics-dashboard'>
+        <div className='error'>Error: {error}</div>
+      </div>
+    );
+  }
+
   return (
-    <div className="analytics-dashboard">
-      <h1>Analytics Dashboard</h1>
-      
-      <div className="metrics-overview">
-        <div className="metric-card">
+    <div className='analytics-dashboard'>
+      <h2>Analytics Dashboard</h2>
+
+      <div className='metrics-grid'>
+        <div className='metric-card'>
           <h3>Page Views</h3>
-          <p className="metric-value">{data.pageViews.toLocaleString()}</p>
+          <div className='metric-value'>{data.pageViews.toLocaleString()}</div>
         </div>
-        <div className="metric-card">
+
+        <div className='metric-card'>
           <h3>Unique Visitors</h3>
-          <p className="metric-value">{data.uniqueVisitors.toLocaleString()}</p>
+          <div className='metric-value'>
+            {data.uniqueVisitors.toLocaleString()}
+          </div>
         </div>
-        <div className="metric-card">
+
+        <div className='metric-card'>
           <h3>Bounce Rate</h3>
-          <p className="metric-value">{data.bounceRate}%</p>
+          <div className='metric-value'>{data.bounceRate}%</div>
         </div>
-        <div className="metric-card">
+
+        <div className='metric-card'>
           <h3>Avg Session Duration</h3>
-          <p className="metric-value">{data.avgSessionDuration}s</p>
+          <div className='metric-value'>{data.avgSessionDuration}s</div>
         </div>
-        <div className="metric-card">
+
+        <div className='metric-card'>
           <h3>Conversion Rate</h3>
-          <p className="metric-value">{data.conversionRate}%</p>
+          <div className='metric-value'>{data.conversionRate}%</div>
         </div>
       </div>
 
-      <div className="analytics-sections">
-        <div className="section">
-          <h2>Top Pages</h2>
+      <div className='charts-section'>
+        <div className='chart'>
+          <h3>Top Pages</h3>
           <ul>
             {data.topPages.map((page, index) => (
               <li key={index}>
-                {page.title} - {page.views.toLocaleString()} views
+                {page.path} - {page.views.toLocaleString()} views
               </li>
             ))}
           </ul>
         </div>
 
-        <div className="section">
-          <h2>Traffic Sources</h2>
+        <div className='chart'>
+          <h3>Traffic Sources</h3>
           <ul>
             {data.trafficSources.map((source, index) => (
               <li key={index}>
-                {source.source} - {source.visitors.toLocaleString()} visitors ({source.percentage}%)
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        <div className="section">
-          <h2>Device Breakdown</h2>
-          <ul>
-            {data.deviceBreakdown.map((device, index) => (
-              <li key={index}>
-                {device.device} - {device.percentage}%
+                {source.source} - {source.percentage}%
               </li>
             ))}
           </ul>

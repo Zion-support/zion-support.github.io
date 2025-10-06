@@ -43,6 +43,7 @@ const NewContentPromotionalBanner2026: React.FC = () => {
   ];
 
   return (
+<<<<<<< HEAD
     <div className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
       {/* Animated background effects */}
       <div className="absolute inset-0 overflow-hidden opacity-20">
@@ -84,11 +85,14 @@ const NewContentPromotionalBanner2026: React.FC = () => {
             <div className="flex items-center gap-2">
               <Target className="w-5 h-5" />
               <span>Proven Results</span>
+=======
+>>>>>>> origin/merge-all-fixes
             </div>
           </div>
         </div>
 
         {/* Featured Content Cards */}
+<<<<<<< HEAD
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           {featuredContent.map((content, index) => (
             <div key={content.id} className="group relative bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 hover:border-violet-500/50 transition-all duration-500 overflow-hidden hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-violet-500/20" style={{ animationDelay: `${index * 150}ms` }}>
@@ -126,20 +130,54 @@ const NewContentPromotionalBanner2026: React.FC = () => {
                   <span>Read Full Article</span>
                   <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-1 transition-transform duration-300" />
                 </Link>
+=======
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+>>>>>>> origin/merge-all-fixes
               </div>
 
+              {/* Category */}
+              <div className="mb-4">
+                <span className={`inline-block px-4 py-2 rounded-full bg-gradient-to-r ${content.bgColor} text-gray-900 text-sm font-semibold border border-white/20`}>
+                  {content.category}
+                </span>
+              </div>
+
+              {/* Title */}
+              <h3 className={`text-3xl font-extrabold text-white mb-4 group-hover:bg-gradient-to-r group-hover:${content.color} group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300 leading-tight`}>
+                {content.title}
+              </h3>
+
+              {/* Excerpt */}
+              <p className="text-gray-300 mb-6 leading-relaxed">
+                {content.excerpt}
+              </p>
+
+              {/* CTA Button */}
+              <Link 
+                href={`/content/${content.slug}`}
+                className={`inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r ${content.color} text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-${content.color}/25 transition-all duration-300 group-hover:scale-105`}
+              >
+                Explore Now
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </Link>
+
               {/* Corner accent */}
+<<<<<<< HEAD
               <div className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${content.color} opacity-10 rounded-bl-full`} />
+=======
+>>>>>>> origin/merge-all-fixes
             </div>
           ))}
         </div>
 
         {/* Bottom CTA Section */}
+<<<<<<< HEAD
         <div className="text-center bg-white/5 backdrop-blur-lg rounded-3xl border border-white/10 p-12">
           <div className="flex items-center justify-center gap-4 mb-6">
             <Rocket className="w-8 h-8 text-cyan-400" />
             <h3 className="text-3xl font-bold text-white">Ready to Transform Your Enterprise?</h3>
             <Shield className="w-8 h-8 text-cyan-400" />
+            <h2 className="text-4xl font-bold text-white">Ready to Transform Your Enterprise?</h2>
           </div>
           
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -154,17 +192,20 @@ const NewContentPromotionalBanner2026: React.FC = () => {
             <Link href="/blog" className="group flex items-center gap-3 border-2 border-white/20 hover:border-cyan-400 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 hover:bg-white/5">
               <span>Explore All Content</span>
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+=======
+>>>>>>> origin/merge-all-fixes
             </Link>
           </div>
 
           {/* Stats */}
+<<<<<<< HEAD
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="text-3xl font-bold text-cyan-400 mb-2">500+</div>
               <div className="text-gray-300">Enterprise Clients</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-purple-400 mb-2">300%</div>
+              <div className="text-3xl font-bold text-blue-400 mb-2">400%</div>
               <div className="text-gray-300">Average ROI</div>
             </div>
             <div className="text-center">
@@ -173,6 +214,8 @@ const NewContentPromotionalBanner2026: React.FC = () => {
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold text-green-400 mb-2">24/7</div>
+=======
+>>>>>>> origin/merge-all-fixes
               <div className="text-gray-300">Expert Support</div>
             </div>
           </div>

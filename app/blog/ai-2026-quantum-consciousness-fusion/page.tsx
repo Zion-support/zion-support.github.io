@@ -14,7 +14,7 @@ export const metadata = {
 
 export default function QuantumConsciousnessFusionPage() {
   return (
-    <div>{{/* content */}</div></div>
+    <div>/* content */}
     <div>
       <div> </div><div> </div>
       <div className="text-left">{/* Hero Section */}</div></div>

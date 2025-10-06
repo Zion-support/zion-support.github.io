@@ -8,23 +8,21 @@ export const metadata = {
 
 };;
 
-export default function AIInfrastructureAutomation2026Page() {
-  return (
-    <div className='min-h-screen bg-slate-950 text-white'>
-      <main className='max-w-3xl mx-auto px-6 py-16'>
-        <h1 className='text-4xl font-extrabold mb-4'>
+export default function AIInfrastructureAutomation2026Page() {return (<divclassName='min-h-screen bg-slate-950 text-white'>
+      <mainclassName='max-w-3xl mx-auto px-6 py-16'>
+        <h1className='text-4xl font-extrabold mb-4'>
           AI Infrastructure Automation 2026
         </h1>
-        <p className='text-white/80 mb-8'>
+        <pclassName='text-white/80 mb-8'>
           Design autonomous infrastructure that provisions, scales, and recovers
           from failures automatically. Reduce MTTR to minutes, improve
           reliability to 99.99%, and cut cloud spend by 70% with predictive
           autoscalingpolicy testsand intelligent healing.
         </p>
 
-        <section className='space-y-6 mb-10'>
-          <h2 className='text-2xl font-bold'>Reference Architecture</h2>
-          <ul className='list-disc ml-6 text-white/90'>
+        <sectionclassName='space-y-6 mb-10'>
+          <h2className='text-2xl font-bold'>Reference Architecture</h2>
+          <ulclassName='list-disc ml-6 text-white/90'>
             <li>Policy-tested IaC with drift detection and auto-remediation</li>
             <li>Quality-tier routing with semantic caches and budget guards</li>
             <li>
@@ -36,43 +34,42 @@ export default function AIInfrastructureAutomation2026Page() {
           </ul>
         </section>
 
-        <section className='space-y-6 mb-10'>
-          <h2 className='text-2xl font-bold'>Key Outcomes</h2>
-          <div className='grid grid-cols-2 gap-4'>
-            <div className='bg-white/5 border border-white/10 rounded-xl p-4'>
-              <div className='text-2xl font-bold text-emerald-400'>8 min</div>
-              <div className='text-sm text-white/80'>Mean Time to Recovery</div>
+        <sectionclassName='space-y-6 mb-10'>
+          <h2className='text-2xl font-bold'>Key Outcomes</h2>
+          <divclassName='grid grid-cols-2 gap-4'>
+            <divclassName='bg-white/5 border border-white/10 rounded-xl p-4'>
+              <divclassName='text-2xl font-bold text-emerald-400'>8 min</div>
+              <divclassName='text-sm text-white/80'>Mean Time to Recovery</div>
             </div>
-            <div className='bg-white/5 border border-white/10 rounded-xl p-4'>
-              <div className='text-2xl font-bold text-cyan-400'>70%</div>
-              <div className='text-sm text-white/80'>Cloud Cost Reduction</div>
+            <divclassName='bg-white/5 border border-white/10 rounded-xl p-4'>
+              <divclassName='text-2xl font-bold text-cyan-400'>70%</div>
+              <divclassName='text-sm text-white/80'>Cloud Cost Reduction</div>
             </div>
-            <div className='bg-white/5 border border-white/10 rounded-xl p-4'>
-              <div className='text-2xl font-bold text-indigo-400'>99.99%</div>
-              <div className='text-sm text-white/80'>Uptime</div>
+            <divclassName='bg-white/5 border border-white/10 rounded-xl p-4'>
+              <divclassName='text-2xl font-bold text-indigo-400'>99.99%</div>
+              <divclassName='text-sm text-white/80'>Uptime</div>
             </div>
-            <div className='bg-white/5 border border-white/10 rounded-xl p-4'>
-              <div className='text-2xl font-bold text-fuchsia-400'>0</div>
-              <div className='text-sm text-white/80'>Manual Interventions</div>
+            <divclassName='bg-white/5 border border-white/10 rounded-xl p-4'>
+              <divclassName='text-2xl font-bold text-fuchsia-400'>0</div>
+              <divclassName='text-sm text-white/80'>Manual Interventions</div>
             </div>
           </div>
         </section>
 
-        <div className='flex gap-4'>
+        <divclassName='flex gap-4'>
           <ArrowRight
-            href='/blog'
-            className='bg-white/10 hover:bg-white/20 border border-white/20 px-4 py-2 rounded-lg'
+           href='/blog'
+           className='bg-white/10 hover:bg-white/20 border border-white/20 px-4 py-2 rounded-lg'
           >
             Back to Blog
           </ArrowRight>
           <ArrowRight
-            href='/services'
-            className='bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg'
+           href='/services'
+           className='bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg'
           >
             Explore Services
           </ArrowRight>
         </div>
       </main>
     </div>
-  );
-}
+  ); }

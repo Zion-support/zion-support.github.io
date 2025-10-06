@@ -1,7 +1,3 @@
-/**
- * Advanced Performance Monitoring System
- * Tracks Core Web Vitals, user interactions, and performance metrics
- */
 
 interface PerformanceMetrics {
   lcp: number | null;
@@ -72,14 +68,21 @@ class PerformanceMonitor {
     }
 
     try {
-      this.observer = new PerformanceObserver((list) => {
+      this.observer = new PerformanceObserver(list => {
         for (const entry of list.getEntries()) {
           this.processPerformanceEntry(entry);
         }
       });
 
       // Observe different types of performance entries
-      this.observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'first-input', 'layout-shift'] });
+      this.observer.observe({
+        entryTypes: [
+          'paint',
+          'largest-contentful-paint',
+          'first-input',
+          'layout-shift',
+        ],
+      });
     } catch (error) {
       console.warn('Performance Observer not supported:', error);
     }
@@ -112,23 +115,32 @@ class PerformanceMonitor {
   private trackUserInteractions(): void {
     if (typeof window === 'undefined') return;
 
-    const interactionTypes: (keyof WindowEventMap)[] = ['click', 'scroll', 'keydown', 'resize'];
-    
-    interactionTypes.forEach(type => {
-        window.addEventListener(type, (event) => {
-        const interaction: UserInteraction = {
-          type: type as UserInteraction['type'],
-          timestamp: performance.now(),
-          element: (event.target as Element)?.tagName?.toLowerCase(),
-        };
+    const interactionTypes: (keyof WindowEventMap)[] = [
+      'click',
+      'scroll',
+      'keydown',
+      'resize',
+    ];
 
-        this.interactions.push(interaction);
-        
-        // Keep only last 100 interactions
-        if (this.interactions.length > 100) {
-          this.interactions = this.interactions.slice(-100);
-        }
-      }, { passive: true });
+    interactionTypes.forEach(type => {
+      window.addEventListener(
+        type,
+        event => {
+          const interaction: UserInteraction = {
+            type: type as UserInteraction['type'],
+            timestamp: performance.now(),
+            element: (event.target as Element)?.tagName?.toLowerCase(),
+          };
+
+          this.interactions.push(interaction);
+
+          // Keep only last 100 interactions
+          if (this.interactions.length > 100) {
+            this.interactions = this.interactions.slice(-100);
+          }
+        },
+        { passive: true },
+      );
     });
   }
 
@@ -137,7 +149,8 @@ class PerformanceMonitor {
 
     // Measure Time to First Byte
     if (performance.timing) {
-      this.metrics.ttfb = performance.timing.responseStart - performance.timing.navigationStart;
+      this.metrics.ttfb =
+        performance.timing.responseStart - performance.timing.navigationStart;
     }
 
     // Measure page load time
@@ -147,7 +160,8 @@ class PerformanceMonitor {
 
     // Measure DOM content loaded
     document.addEventListener('DOMContentLoaded', () => {
-      this.metrics.domContentLoaded = performance.now() - this.metrics.navigationStart;
+      this.metrics.domContentLoaded =
+        performance.now() - this.metrics.navigationStart;
     });
   }
 
@@ -160,7 +174,9 @@ class PerformanceMonitor {
       return total + (resource.transferSize || 0);
     }, 0);
 
-    console.log(`Total resources loaded: ${resources.length}, Total size: ${(totalResourceSize / 1024).toFixed(2)} KB`);
+    console.log(
+      `Total resources loaded: ${resources.length}, Total size: ${(totalResourceSize / 1024).toFixed(2)} KB`,
+    );
   }
 
   getMetrics(): PerformanceMetrics {

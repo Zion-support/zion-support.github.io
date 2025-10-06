@@ -2,7 +2,7 @@ export const metadata = {
   
   title: 'AI 2025 Agent Reliability Blueprint',
     description:
-      'Design and operate reliable autonomous agents with traces, scorecardspolicy testingand continuous verification.',
+      'Design and operate reliable autonomous agents with traces, scorecards, policy testing, and continuous verification.',
     type: 'article',
     publishedTime: '2025-10-01T00:00:00Z',
   
@@ -38,8 +38,8 @@ export default function AI2025AgentReliabilityBlueprint() {
             </h1>
             <p className='text-lg text-white/80'>
               An actionable framework to take agentic systems from demo to
-              dependable production: policy gates, red-team evalsrollout
-              strategiesand real-time telemetry that keeps autonomy
+              dependable production: policy gates, red-team evals, rollout
+              strategies, and real-time telemetry that keeps autonomy
               measurable.
             </p>
           </header>
@@ -51,7 +51,7 @@ export default function AI2025AgentReliabilityBlueprint() {
               </h2>
               <ul className='space-y-2 text-white/80'>
                 <li>
-                  • Guardrails beforeduringand after generation with
+                  • Guardrails before, during, and after generation with
                   explicit policy checks
                 </li>
                 <li>
@@ -75,7 +75,7 @@ export default function AI2025AgentReliabilityBlueprint() {
                     Traces & Budgets
                   </h3>
                   <p className='text-white/80'>
-                    Track every tool calltokenand decision with cost budgets
+                    Track every tool call, token, and decision with cost budgets
                     per task.
                   </p>
                 </div>
@@ -84,7 +84,7 @@ export default function AI2025AgentReliabilityBlueprint() {
                     Eval Scorecards
                   </h3>
                   <p className='text-white/80'>
-                    Continuously evaluate accuracysafetyand business
+                    Continuously evaluate accuracy, safety, and business
                     outcomes with regression alerts.
                   </p>
                 </div>
@@ -97,7 +97,7 @@ export default function AI2025AgentReliabilityBlueprint() {
               </h2>
               <ul className='space-y-2 text-white/80'>
                 <li>
-                  • Staged rollouts with shadowcanarythen regional expansion
+                  • Staged rollouts with shadow, canary, then regional expansion
                 </li>
                 <li>
                   • Incident runbooks with safe-mode fallbacks and operator
@@ -114,7 +114,8 @@ export default function AI2025AgentReliabilityBlueprint() {
                 Make Autonomy Measurable
               </h2>
               <p className='text-center text-white/80 mb-6 text-lg'>
-                We implement production-grade agent ops: traces, scorecardspolicy gatesand ROI analytics across Fortune 500 environments.
+                We implement production-grade agent ops: traces, scorecards,
+                policy gates, and ROI analytics across Fortune 500 environments.
               </p>
               <div className='flex justify-center gap-4'>
                 <a

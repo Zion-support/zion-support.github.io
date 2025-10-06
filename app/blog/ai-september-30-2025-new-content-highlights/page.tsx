@@ -1,7 +1,5 @@
-export default function Page() {
-  return (
-    <div className='min-h-screen bg-white'>
-      <article className='max-w-3xl mx-auto px-6 py-12 prose prose-lg'>
+export default function Page() {return (<div className='min-h-screenbg-white'>
+      <article className='max-w-3xl mx-auto px-6 py-12 proseprose-lg'>
         <h1>AI Insights: New Content Highlights — September 30, 2025</h1>
         <p>
           Explore today’s newest additions across autonomous operations, data
@@ -19,8 +17,8 @@ export default function Page() {
         <h2>Why It Matters</h2>
         <p>
           Enterprises are scaling AI from pilots to production. The latest
-          guides focus on reliabilitygovernanceand measurable ROI—so teams
-          can move fast without sacrificing safety or compliance.
+          guides focus on reliabilitygovernanceand measurable ROI—so teams can
+          move fast without sacrificing safety or compliance.
         </p>
 
         <h2>Read Next</h2>
@@ -30,10 +28,9 @@ export default function Page() {
         </p>
 
         <hr />
-        <p className='text-sm text-gray-500'>
+        <p className='text-smtext-gray-500'>
           Published: September 30, 2025 • 8 min read
         </p>
       </article>
     </div>
-  );
-}
+  ); }

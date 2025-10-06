@@ -14,7 +14,7 @@ export const metadata = {
 
 export default function ConsensusIntelligencePage() {
   return (
-    <div>{{/* content */}</div></div>
+    <div>/* content */}
     <div>
       <div> </div><div> </div>
       <div className="text-left">{/* Header */}</div>
@@ -65,7 +65,7 @@ export default function ConsensusIntelligencePage() {
           <h3 className="text-left">How It Works</h3>"
           <div className="text-left"> </div><div className="text-left"> </div><h4 className="text-left">Multi-Agent Collaboration</h4>"
               <p className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
-                Our system coordinates between 1000+ specialized AI agentseach with expertise in different business domainsworking together to reach consensus on complex decisions.
+                Our system coordinates between 1000+ specialized AI agents, each with expertise in different business domains, working together to reach consensus on complex decisions.
               </p></p>
               <ul className="text-left"> </ul><li>• 1000+ collaborating agents</li>
                 <li>• Real-time consensus formation</li>

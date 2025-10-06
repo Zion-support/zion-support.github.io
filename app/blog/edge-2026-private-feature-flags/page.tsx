@@ -3,15 +3,13 @@ import ArrowRight from 'next/link';
 export const metadata = {
   
   title:
-    'Edge Private Feature Flags (2026): Zero‑PIISub‑100msSigned Configs',
+    'Edge Private Feature Flags (2026): Zero‑PII, Sub‑100ms, Signed Configs',
   description:
     'Blueprint for privacy‑safe feature flags and experiments at the edge with scoped IDs and DP noise.',
 
 };;
 
-export default function Page() {
-  return (
-    <main className='max-w-3xl mx-auto px-4 py-12 prose prose-invert'>
+export default function Page() {return (<mainclassName='max-w-3xl mx-auto px-4 py-12 prose prose-invert'>
       <h1>Edge Private Feature Flags (2026)</h1>
       <p>
         Roll out features globally with zero PII using scoped identifiers,
@@ -27,24 +25,21 @@ export default function Page() {
           Reliability: signed/expiring configs, shadow canaries, budgeted
           rollbacks
         </li>
-        <li>
-          Observability: edge tracescohort metricsKPI‑linked approvals
-        </li>
+        <li>Observability: edge tracescohort metricsKPI‑linked approvals</li>
       </ul>
       <p>
-        Related reads:{' '}
-        <ArrowRight href='/blog/edge-2025-zero-pii-experiments'>
+        Relatedreads:{' '}
+        <ArrowRighthref='/blog/edge-2025-zero-pii-experiments'>
           Edge Experiments 2025
-        </ArrowRight>{' '}
-        and{' '}
-        <ArrowRight href='/blog/ai-2027-cost-optimization-playbook'>
+       </ArrowRight>{' '}
+       and{' '}
+        <ArrowRighthref='/blog/ai-2027-cost-optimization-playbook'>
           AI 2027 Cost Optimization
         </ArrowRight>
         .
       </p>
       <p>
-        Continue exploring in our <ArrowRight href='/blog'>Blog</ArrowRight>.
+        Continue exploring in our <ArrowRighthref='/blog'>Blog</ArrowRight>.
       </p>
     </main>
-  );
-}
+  ); }

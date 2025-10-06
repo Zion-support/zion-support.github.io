@@ -4,7 +4,7 @@ export const metadata = {
   
   title: 'Real-Time Agent Routing 2026',
     description:
-      'Route across models/tools in real time with budgetspoliciesand observability. Reduce spend and improve reliability.',
+      'Route across models/tools in real time with budgets, policies, and observability. Reduce spend and improve reliability.',
     type: 'article',
     publishedTime: '2026-01-20T00:00:00Z',
   
@@ -36,13 +36,13 @@ export default function RealTimeAgentRouting2026() {
             </div>
 
             <h1 className='text-5xl font-extrabold mb-6 bg-gradient-to-r from-indigo-300 to-cyan-300 bg-clip-text text-transparent'>
-              Real-Time Agent Routing 2026: FasterCheaperMore Reliable AI
+              Real-Time Agent Routing 2026: Faster, Cheaper, More Reliable AI
               Ops
             </h1>
             <p className='text-xl text-white/80'>
               Implement a policy-aware, budgeted routing layer that dynamically
               selects the smallest-sufficient model and optimal toolchain per
-              request. Combine semantic cachingtimeoutsand guardrails to
+              request. Combine semantic caching, timeouts, and guardrails to
               deliver predictable latency and cost without sacrificing answer
               quality.
             </p>
@@ -68,7 +68,7 @@ export default function RealTimeAgentRouting2026() {
                 </li>
                 <li>• Semantic cache with freshness and scope controls</li>
                 <li>
-                  • Observability: traces, costsqualityand policy events
+                  • Observability: traces, costs, quality, and policy events
                 </li>
               </ul>
             </section>
@@ -101,7 +101,7 @@ export default function RealTimeAgentRouting2026() {
               </h2>
               <ul className='space-y-2 text-white/80'>
                 <li>
-                  • Define routing policies (security, safetycompliancetone)
+                  • Define routing policies (security, safety, compliance, tone)
                 </li>
                 <li>• Implement budget guards and circuit breakers</li>
                 <li>• Add semantic cache with TTLs and invalidation hooks</li>
@@ -117,7 +117,7 @@ export default function RealTimeAgentRouting2026() {
               <p className='text-center text-white/80 mb-8 text-lg'>
                 We build policy-aware routing layers for enterprises across
                 finance, healthcare, and manufacturing. Achieve reliable
-                performancelower spendand compliant outputs.
+                performance, lower spend, and compliant outputs.
               </p>
               <div className='flex justify-center gap-4'>
                 <a

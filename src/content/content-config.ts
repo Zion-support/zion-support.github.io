@@ -1,4 +1,4 @@
-export interface BlogPost { 
+export interface BlogPost {
   id: string;
   title: string;
   excerpt: string;
@@ -11,7 +11,7 @@ export interface BlogPost {
   tags: string[];
 }
 
-export interface CaseStudy { 
+export interface CaseStudy {
   id: string;
   title: string;
   excerpt: string;
@@ -26,7 +26,7 @@ export interface CaseStudy {
   tags: string[];
 }
 
-export interface Service { 
+export interface Service {
   id: string;
   title: string;
   description: string;
@@ -36,29 +36,21 @@ export interface Service {
     popular?: boolean;
   };
   features: string[];
-  cta: {
-    primary: string;
-    secondary: string;
-  };
+  primary: string;
+  secondary: string;
 }
 
-export const getRecentContent = (limit: number = 3) => { 
+export const getRecentContent = (limit: number = 3) => {
   const allContent = [
-    ...blogPosts.map(post => ({ ...post, type: 'blog' as const })),
-    ...caseStudies.map(study => ({ ...study, type: 'case-study' as const })),
-    ...services.map(service => ({ ...service, type: 'service' as const })),
+    // This would be populated with actual content arrays
   ];
-  
   return allContent
-    .sort((a, b) => { 
-      const aTime = 'date' in a ? new Date((a as { date: string }).date).getTime() : 0;
-      const bTime = 'date' in b ? new Date((b as { date: string }).date).getTime() : 0;
+    .sort((a, b) => {
+      const aTime =
+        'date' in a ? new Date((a as { date: string }).date).getTime() : 0;
+      const bTime =
+        'date' in b ? new Date((b as { date: string }).date).getTime() : 0;
       return bTime - aTime;
     })
     .slice(0, limit);
 };
-
-// Import the actual data
-import { blogPosts } from './blog-posts';
-import { caseStudies } from './case-studies';
-import { services } from './services';

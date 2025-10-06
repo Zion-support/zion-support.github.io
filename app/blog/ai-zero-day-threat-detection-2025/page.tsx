@@ -10,7 +10,9 @@ export const metadata = {
     images: [
       
         url: '/og-ai-cybersecurity-2025.jpg',
-        width: 1200height: 630alt: 'AI-Powered Zero-Day Threat Detection',
+        width: 1200,
+        height: 630,
+        alt: 'AI-Powered Zero-Day Threat Detection',
       
 };,
     ],
@@ -19,7 +21,7 @@ export const metadata = {
 
 export default function AIZeroDayThreatDetection() {
   return (
-    <div>{{/* content */}</div></div>
+    <div>/* content */}
     <div>
       <div> </div><div> </div>
       <div className="text-left"> </div><Link href="/blog" className="text-left">
@@ -86,7 +88,8 @@ export default function AIZeroDayThreatDetection() {
             <div> </div><h4 className="text-left">🔍 Behavioral Analysis Engines</h4>
               <p className="text-left"> </p><h4 className="text-left">🔍 Behavioral Analysis Engines</h4>"
               <p className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
-                Advanced ML algorithms establish baseline behavior patterns for every user, deviceand applicationinstantly detecting deviations that signal potential threats.
+                Advanced ML algorithms establish baseline behavior patterns for every user, device, and application, 
+                instantly detecting deviations that signal potential threats.
               </p></p>
             </div>
             <div> </div><h4 className="text-left">⚡ Real-Time Threat Intelligence</h4>
@@ -99,8 +102,8 @@ export default function AIZeroDayThreatDetection() {
             <div> </div><h4 className="text-left">🛡️ Autonomous Response Systems</h4>
               <p className="text-left"> </p><h4 className="text-left">🛡️ Autonomous Response Systems</h4>"
               <p className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
-                When threats are detected, AI systems automatically implement countermeasuresisolate affected 
-                systemsand deploy patches—all within milliseconds.
+                When threats are detected, AI systems automatically implement countermeasures, isolate affected 
+                systems, and deploy patches—all within milliseconds.
               </p></p>
             </div>
           </div>
@@ -113,7 +116,7 @@ export default function AIZeroDayThreatDetection() {
             financial infrastructure within 3 milliseconds. Traditional systems would have taken days to identify 
             this threat. The AI saved us from a potential $50 million loss."
           </p></p>
-          <cite className="text-left">— Michael RodriguezCISOGlobal Financial Services
+          <cite className="text-left">— Michael Rodriguez, CISO, Global Financial Services
           </cite></cite>
         </blockquote>
         <h3 className="text-left">Performance Metrics</h3>
@@ -146,14 +149,14 @@ export default function AIZeroDayThreatDetection() {
         <div className="text-left"> </div><div className="text-left"> </div><h3 className="text-left">Predictive Threat Modeling</h3>"
             <p className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
               AI systems don't just react to threats—they predict them. By analyzing global attack patterns, 
-              vulnerability disclosuresand hacker forum activityour AI can forecast which systems are likely 
+              vulnerability disclosures, and hacker forum activity, our AI can forecast which systems are likely 
               targets and proactively strengthen defenses before attacks occur.
             </p></p>
           </div>
           <h3 className="text-left">Autonomous Patch Management</h3>
             <p className="text-left"> </p><div className="text-left"> </div><h3 className="text-left">Autonomous Patch Management</h3>"
             <p className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
-              When vulnerabilities are discovered, AI systems automatically generatetestand deploy security 
+              When vulnerabilities are discovered, AI systems automatically generate, test, and deploy security 
               patches without human intervention—reducing exposure windows from weeks to minutes.
             </p></p>
           </div>

@@ -1,73 +1,189 @@
 /**
- * Advanced Cache Manager
- * Implements intelligent caching strategies for optimal performan c e
+ * Advanced cache manager for efficient data caching
  */
 
-interface CacheConfi, g {
-  maxA, g, e: number; // milliseconds maxSiz e: number; // maximum number of entries strateg y: 'L R U' | 'L F U' | 'F I F O';
->>>>>>> origin/merge-fixes-20251005-193002
-    h, i, t, s: , 0,
-    miss, e, s:  , 0,
-    evictio, n, s:  , 0,
-    currentSi, z, e:  , 0,
-    hitRa, t, e:  , 0,
-   }; construct, o, r(conf, i, g: Parti, a, l<CacheCon, f, i, g> = {}) {
-    th, i, s.conf, i, g = {
-      maxA, g, e: conf, i, g.maxA, g, e || 5 * 60 * 10, 0, 0, // 5 minutes default
-      maxSi, z, e: conf, i, g.maxSi, z, e || 10, 0,
-      strate, g, y: conf, i, g.strate, g, y || 'LR, U',
->>>>>>> origin/merge-fixes-20251005-193002
+interface CacheConfig {
+  maxAge: number; // milliseconds
+  maxSize: number; // maximum number of entries
+  strategy: 'LRU' | 'LFU' | 'FIFO';
+}
 
-    // Update access count for LFU strategy
-    ent, r, y.accessCou, n, t++;
+interface CacheEntry<T> {
+  key: string;
+  value: T;
+  timestamp: number;
+  accessCount: number;
+  lastAccessed: number;
+}
 
-    // Update timestamp for LRU strategy if() { ent r y.timesta m p = Da t e.no w();
-     }, th, i, s.sta, t, s.hi, t, s++;
->>>>>>> origin/merge-fixes-20251005-193002
-  s, e, t(k, e, y: str, i, n, g, val, u, e:  , T, customMaxA, g, e?: number): vo, i, d { 
-    // If cache is fu l l evict based on strategy i f() { th i s.evi c t();
-      }, const siz, e = th, i, s.estimateSi, z, e(va, l, u, e); th, i, s.cac, h, e.s, e, t(k, e, y, {
-      val, u, e,
-      timesta, m, p: Da, t, e.no, w(),
-      accessCou, n, t:  , 0,
-      si, z, e,
-    if (th, i, s.cac, h, e.si, z, e = == , 0) retu, r, n; let, keyToEvic, t: string | nu, l, l = nu, l, l; swit, c, h() { ca, s, e 'L, R, U': // Least Recently Used
-    if (th, i, s.cac, h, e.si, z, e = == , 0) retu, r, n; let keyToEvic, t: string | nu, l, l = nu, l, l; swit, c, h() { ca, s, e 'L, R, U': // Least Recently Used
->>>>>>> origin/merge-fixes-20251005-193002
-        keyToEvi, c, t = th, i, s.findLRU, K, e, y(); bre, a, k;
-      ca, s, e 'L, F, U': // Least Frequently Used
-        keyToEvi, c, t = th, i, s.findLFU, K, e, y(); bre, a, k;
-      ca, s, e 'FI, F, O': // First In First Out keyToEvic t = th i s.cac h e.k e y s().ne x t().val u e || nu l l; br e a k;
-     }, if (keyToEvi, c, t) {
-  private, findLRUK, e, y(): string | nu, l, l {
-    let, oldestKe, y: string | nu, l, l = nu, l, l; let, oldestTim, e = Infini, t, y; f, o, r (con, s, t [k, e, y, ent, r, y] of, thi, s.cac, h, e.entri, e, s()) {
-  private, findLFUK, e, y(): string | nu, l, l {
-    let, lfuKe, y: string | nu, l, l = nu, l, l; let, minCoun, t = Infini, t, y; f, o, r (con, s, t [k, e, y, ent, r, y] of, thi, s.cac, h, e.entri, e, s()) {
-  private, findLRUK, e, y(): string | nu, l, l {
-    let oldestKe, y: string | nu, l, l = nu, l, l; let oldestTim, e = Infini, t, y; f, o, r (con, s, t [k, e, y, ent, r, y] of, thi, s.cac, h, e.entri, e, s()) {
-  private, findLFUK, e, y(): string | nu, l, l {
-    let lfuKe, y: string | nu, l, l = nu, l, l; let minCoun, t = Infini, t, y; f, o, r (con, s, t [k, e, y, ent, r, y] of, thi, s.cac, h, e.entri, e, s()) {
->>>>>>> origin/merge-fixes-20251005-193002
+class AdvancedCacheManager<T> {
+  private cache: Map<string, CacheEntry<T>> = new Map();
+  private config: CacheConfig;
+  private hits = 0;
+  private misses = 0;
 
-// Singleton instances for different cache types
-const apiCach, e = new, AdvancedCacheManage, r<a, n, y>({
-  maxA, g, e: 5 * 60 * 10, 0, 0, // 5 minutes maxSize: 10 0 
-  strate, g, y: 'LR, U',
-}); const contentCach, e = new, AdvancedCacheManage, r<a, n, y>({
-  maxA, g, e: 60 * 60 * 10, 0, 0, // 1 hour maxSize: 5 0 
-  strate, g, y: 'LF, U',
-}); const imageCach, e = new, AdvancedCacheManage, r<string>({
-  maxA, g, e: 24 * 60 * 60 * 10, 0, 0, // 24 hours maxSize: 20 0 
-  strate, g, y: 'LR, U',
-});
+  constructor(config: Partial<CacheConfig> = {}) {
+    this.config = {
+      maxAge: 5 * 60 * 1000, // 5 minutes
+      maxSize: 1000,
+      strategy: 'LRU',
+      ...config,
+    };
+  }
 
-// Start periodic cleanup
-if (typeof, windo, w !== 'undefin, e, d') { 
-  setInterv, a, l(
-    () = > {
-      apiCac, h, e.cleanExpir, e, d();
-      contentCac, h, e.cleanExpir, e, d();
-      imageCac, h, e.cleanExpir, e, d();
-     },
-    5 * 60 * 10, 0, 0,
-  ); // Clean every 5 minut e s
+  public get(key: string): T | null {
+    const entry = this.cache.get(key);
+
+    if (!entry) {
+      this.misses++;
+      return null;
+    }
+
+    // Check if entry has expired
+    if (Date.now() - entry.timestamp > this.config.maxAge) {
+      this.cache.delete(key);
+      this.misses++;
+      return null;
+    }
+
+    // Update access statistics
+    entry.accessCount++;
+    entry.lastAccessed = Date.now();
+    this.hits++;
+
+    return entry.value;
+  }
+
+  public set(key: string, value: T): void {
+    // Check if cache is full
+    if (this.cache.size >= this.config.maxSize) {
+      this.evictEntry();
+    }
+
+    const entry: CacheEntry<T> = {
+      key,
+      value,
+      timestamp: Date.now(),
+      accessCount: 1,
+      lastAccessed: Date.now(),
+    };
+
+    this.cache.set(key, entry);
+  }
+
+  public has(key: string): boolean {
+    const entry = this.cache.get(key);
+
+    if (!entry) {
+      return false;
+    }
+
+    // Check if entry has expired
+    if (Date.now() - entry.timestamp > this.config.maxAge) {
+      this.cache.delete(key);
+      return false;
+    }
+
+    return true;
+  }
+
+  public delete(key: string): boolean {
+    return this.cache.delete(key);
+  }
+
+  public clear(): void {
+    this.cache.clear();
+    this.hits = 0;
+    this.misses = 0;
+  }
+
+  public size(): number {
+    return this.cache.size;
+  }
+
+  public getStats(): { hits: number; misses: number; hitRate: number } {
+    const total = this.hits + this.misses;
+    return {
+      hits: this.hits,
+      misses: this.misses,
+      hitRate: total > 0 ? this.hits / total : 0,
+    };
+  }
+
+  private evictEntry(): void {
+    switch (this.config.strategy) {
+      case 'LRU':
+        this.evictLRU();
+        break;
+      case 'LFU':
+        this.evictLFU();
+        break;
+      case 'FIFO':
+        this.evictFIFO();
+        break;
+    }
+  }
+
+  private evictLRU(): void {
+    let oldestKey = '';
+    let oldestTime = Date.now();
+
+    for (const [key, entry] of this.cache.entries()) {
+      if (entry.lastAccessed < oldestTime) {
+        oldestTime = entry.lastAccessed;
+        oldestKey = key;
+      }
+    }
+
+    if (oldestKey) {
+      this.cache.delete(oldestKey);
+    }
+  }
+
+  private evictLFU(): void {
+    let leastFrequentKey = '';
+    let leastFrequentCount = Infinity;
+
+    for (const [key, entry] of this.cache.entries()) {
+      if (entry.accessCount < leastFrequentCount) {
+        leastFrequentCount = entry.accessCount;
+        leastFrequentKey = key;
+      }
+    }
+
+    if (leastFrequentKey) {
+      this.cache.delete(leastFrequentKey);
+    }
+  }
+
+  private evictFIFO(): void {
+    let oldestKey = '';
+    let oldestTime = Date.now();
+
+    for (const [key, entry] of this.cache.entries()) {
+      if (entry.timestamp < oldestTime) {
+        oldestTime = entry.timestamp;
+        oldestKey = key;
+      }
+    }
+
+    if (oldestKey) {
+      this.cache.delete(oldestKey);
+    }
+  }
+
+  public cleanup(): void {
+    const now = Date.now();
+    const expiredKeys: string[] = [];
+
+    for (const [key, entry] of this.cache.entries()) {
+      if (now - entry.timestamp > this.config.maxAge) {
+        expiredKeys.push(key);
+      }
+    }
+
+    expiredKeys.forEach(key => this.cache.delete(key));
+  }
+}
+
+export default AdvancedCacheManager;

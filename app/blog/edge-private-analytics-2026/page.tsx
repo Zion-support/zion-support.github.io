@@ -6,7 +6,8 @@ export const metadata = {
   description:  'Scoped IDs, on‑device metrics, and DP noise without PII.',
   type: 'article',
 
-}};
+};;
+};
 
 export default function EdgePrivateAnalytics2026Page() {
   return (
@@ -20,7 +21,7 @@ export default function EdgePrivateAnalytics2026Page() {
             Edge Private Analytics 2026
           </h1>
           <p className='text-slate-300'>
-            Scoped IDson‑device metricsand DP noise for compliant analytics
+            Scoped IDs, on‑device metrics, and DP noise for compliant analytics
             under &lt;100ms.
           </p>
           <div className='mt-3 text-slate-400 text-sm'>

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const EnhancedNavigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
->>>>>>> origin/merge-fixes-20251005-193002
+
   return (
     <nav className='bg-white shadow-md'>
       <div className='container mx-auto px-4'>

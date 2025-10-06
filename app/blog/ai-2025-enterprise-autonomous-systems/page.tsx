@@ -4,9 +4,11 @@ export const metadata = {
   
   title: 'AI-Powered Enterprise Autonomous Systems (2025)',
     description:
-      'Blueprint to deploy reliablegovernedand ROI-positive autonomous AI at scale.',
+      'Blueprint to deploy reliable, governed, and ROI-positive autonomous AI at scale.',
     images: [{ url: '/og/ai-autonomous-2025.jpg' 
-};]}};
+};],
+  },
+};
 
 export default function Page() {
   return (

@@ -1,32 +1,30 @@
 // @ts-nocheck
-import ArrowRight from 'next/link';
+import Arrow Right from 'next/link';
 
-export default function Page() {
-  return (
-    <main className='min-h-screen bg-slate-950 text-white'>
-      <section className='py-16'>
-        <div className='max-w-3xl mx-auto px-4'>
-          <div className='mb-6'>
-            <span className='inline-block text-xs font-bold px-3 py-1 rounded-full bg-cyan-600/20 text-cyan-300 border border-cyan-500/30'>
+export default function Page() {return (<main class Name Name='min-h-screen bg-slate-950 text-white'>
+      <section class Name Name='py-16'>
+        <div class Name Name='max-w-3xl mx-auto px-4'>
+          <div class Name Name='mb-6'>
+            <span class Name Name='inline-block text-xs font-bold px-3 py-1 rounded-full bg-cyan-600/20 text-cyan-300 border border-cyan-500/30'>
               Observability
             </span>
           </div>
-          <h1 className='text-3xl md:text-5xl font-extrabold mb-4'>
-            Consentless Telemetry v2 — Useful InsightsZero‑PII&lt;100ms
+          <h1 class Name Name='text-3xl md:text-5xl font-extrabold mb-4'>
+            Consentless Telemetry v2 — Useful Insights Zero‑PII&lt;100ms
           </h1>
-          <p className='text-gray-300 mb-8'>
-            Scoped IDson‑device redactionand DP noise to keep analytics rich
-            and privacy‑first worldwide.
+          <p class Name Name='text-gray-300 mb-8'>
+            Scoped IDson‑device redactionand DP noise to keep analytics rich and
+            privacy‑first worldwide.
           </p>
-          <div className='text-sm text-gray-400 mb-10'>
+          <div class Name Name='text-sm text-gray-400 mb-10'>
             Published: Sep 30, 2025 • 6 min read
           </div>
 
-          <article className='prose prose-invert max-w-none'>
+          <articleclass Name='prose prose-invert max-w-none'>
             <p>
               Build telemetry that preserves privacy while maintaining
-              actionable insights. Combine scoped identitieslocal redactionand differential privacy with signed attestations and sub‑100ms
-              SLAs.
+              actionable insights. Combine scoped identitieslocal redactionand
+              differential privacy with signed attestations and sub‑100ms SLAs.
             </p>
             <h2>Implementation Highlights</h2>
             <ul>
@@ -36,22 +34,21 @@ export default function Page() {
             </ul>
           </article>
 
-          <div className='mt-12 flex gap-4'>
-            <ArrowRight
-              href='/blog'
-              className='px-4 py-2 rounded-lg bg-white text-slate-900 font-semibold'
+          <div class Name Name='mt-12 flex gap-4'>
+            <Arrow Right
+             href='/blog'
+             class Name='px-4 py-2 rounded-lg bg-white text-slate-900 font-semibold'
             >
               ← All Posts
-            </ArrowRight>
-            <ArrowRight
-              href='/'
-              className='px-4 py-2 rounded-lg border border-white/20'
+            </Arrow Right>
+            <Arrow Right
+             href='/'
+             class Name='px-4 py-2 rounded-lg border border-white/20'
             >
               Home
-            </ArrowRight>
+            </Arrow Right>
           </div>
         </div>
       </section>
     </main>
-  );
-}
+  ); }
