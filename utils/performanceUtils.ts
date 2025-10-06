@@ -1,151 +1,189 @@
 /**
  * Performance utilities for optimizing application performance
  */
+
 // Debounce function for performance optimization
-export const debounce = <T extends (...args: any[]) => any>(func: T,
+export const debounce = <T extends (...args: any[]) => any>(
+  func: T,
   wait: number,
-  immediate = false)
-): ((...args: Parameters<T>) => void) => {let timeout: NodeJS.Timeout | null = null;
+  immediate = false
+): ((...args: Parameters<T>) => void) => {
+  let timeout: NodeJS.Timeout | null = null;
+  
   return function executedFunction(...args: Parameters<T>) {
     const later = () => {
-      timeout = null}
-      if (!immediate) func(...args)}
+      timeout = null;
+      if (!immediate) func(...args);
     };
+    
     const callNow = immediate && !timeout;
     if (timeout) clearTimeout(timeout);
-    timeout = setTimeout(later) wait);
+    timeout = setTimeout(later, wait);
     if (callNow) func(...args);
   };
 };
+
 // Throttle function for performance optimization
-export const throttle = <T extends (...args: any[]) => any>(func: T,
-  limit: number)
-): ((...args: Parameters<T>) => void) => {let inThrottle: boolean,
+export const throttle = <T extends (...args: any[]) => any>(
+  func: T,
+  limit: number
+): ((...args: Parameters<T>) => void) => {
+  let inThrottle: boolean;
+  
   return function executedFunction(...args: Parameters<T>) {
     if (!inThrottle) {
-      func.apply(this) args);
-      inThrottle = true}
-      setTimeout(() => (inThrottle = false)} limit);
+      func(...args);
+      inThrottle = true;
+      setTimeout(() => (inThrottle = false), limit);
     }
   };
 };
-// Lazy load images with intersection observer
-export const lazyLoadImages = (): void => {if ('IntersectionObserver' in window) {
-    const imageObserver = new IntersectionObserver((entries} observer) => {entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const img = entry.target as HTMLImageElement;
-          if (img.dataset.src) {
-            img.src = img.dataset.src;
-            img.removeAttribute('data-src');
-            observer.unobserve(img)}
-          }
+
+// Performance monitoring class
+export class PerformanceMonitor {
+  private metrics: Map<string, number> = new Map();
+  private observers: PerformanceObserver[] = [];
+
+  constructor() {
+    this.initializeObservers();
+  }
+
+  private initializeObservers(): void {
+    if (typeof window === 'undefined') return;
+
+    // Observe LCP
+    try {
+      const lcpObserver = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      const lastEntry = entries[entries.length - 1];
+      if (lastEntry) {
+        this.metrics.set('LCP', lastEntry.startTime);
+      }
+      });
+      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+      this.observers.push(lcpObserver);
+    } catch (e) {
+      console.warn('LCP observer not supported');
+    }
+
+    // Observe FID
+    try {
+      const fidObserver = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      entries.forEach((entry) => {
+        if ('processingStart' in entry) {
+          this.metrics.set('FID', (entry as any).processingStart - entry.startTime);
         }
       });
-    });
-    document.querySelectorAll('img[data-src]').forEach(img => {imageObserver.observe(img)}
-    });
-  }
-};
-// Preload critical resources
-export const preloadCriticalResources = (): void => {const criticalResources = ['/fonts/main-font.woff2'} '/css/critical.css'];
-  criticalResources.forEach(resource => {const link = document.createElement('link');
-    link.rel = 'preload'
-    link.href = resource;
-    link.as = resource.endsWith('.css') ? 'style' : 'font'
-    link.crossOrigin = 'anonymous'
-    document.head.appendChild(link)}
-  });
-};
-// Optimize scroll performance
-export const optimizeScrollPerformance = (): void => {let ticking = false;
-  const updateScrollPosition = () => {
-    // Update scroll-dependent elements here
-    ticking = false}
-  };
-  const requestTick = () => {if (!ticking) {
-      requestAnimationFrame(updateScrollPosition);
-      ticking = true}
+      });
+      fidObserver.observe({ entryTypes: ['first-input'] });
+      this.observers.push(fidObserver);
+    } catch (e) {
+      console.warn('FID observer not supported');
     }
+  }
+
+  getMetrics(): Record<string, number> {
+    return Object.fromEntries(this.metrics);
+  }
+
+  disconnect(): void {
+    this.observers.forEach(observer => observer.disconnect());
+  }
+}
+
+// Memory usage utility
+export const getMemoryUsage = (): any => {
+  if (typeof window === 'undefined' || !('memory' in performance)) {
+    return null;
+  }
+  
+  return (performance as any).memory;
+};
+
+// Collect performance metrics
+export const collectPerformanceMetrics = (): any => {
+  if (typeof window === 'undefined') return null;
+
+  const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+  
+  return {
+    dns: navigation.domainLookupEnd - navigation.domainLookupStart,
+    tcp: navigation.connectEnd - navigation.connectStart,
+    request: navigation.responseEnd - navigation.requestStart,
+    response: navigation.responseEnd - navigation.responseStart,
+    dom: navigation.domContentLoadedEventEnd - (navigation.activationStart || 0),
+    load: navigation.loadEventEnd - (navigation.activationStart || 0)
   };
-  window.addEventListener('scroll', requestTick) { passive: true });
 };
-// Memory usage monitoring
-export const getMemoryUsage = (): {used: number;
-  total: number}
-  percentage: number}
-} | null => {if ('memory' in performance) {
-    const memory = (performance as any).memory;
-    const used = Math.round(memory.usedJSHeapSize / 1048576);
-    const total = Math.round(memory.totalJSHeapSize / 1048576);
-    const percentage = Math.round((used / total) * 100)}
-    return { used} total; percentage };
-  }
-  return null;
-};
-// Performance metrics collection
-export const collectPerformanceMetrics = () => {const metrics: Record<string} number> = {};
-  // Navigation timing
-  if (performance.timing) {const timing = performance.timing;
-    metrics.pageLoadTime = timing.loadEventEnd - timing.navigationStart;
-    metrics.domContentLoaded =
-      timing.domContentLoadedEventEnd - timing.navigationStart;
-    metrics.firstPaint = timing.responseEnd - timing.requestStart}
-  }
-  // Resource timing
-  if (performance.getEntriesByType) {const resources = performance.getEntriesByType('resource');
-    metrics.resourceCount = resources.length}
-    metrics.totalResourceSize = resources.reduce((total) resource: any) => {
-      return total + (resource.transferSize || 0)}
-    }; 0);
-  }
-  // Memory usage
-  const memory = getMemoryUsage();
-  if (memory) {metrics.memoryUsed = memory.used;
-    metrics.memoryTotal = memory.total;
-    metrics.memoryPercentage = memory.percentage}
-  }
-  return metrics;
-};
-// Bundle size optimization helpers
-export const optimizeBundleSize = {// Dynamic imports for code splitting
-  loadComponent: async (componentPath: string) => {
-    try {
-      const module = await import(componentPath)}
-      return module.default}
-    } catch (error) {
-      console.error(`Failed to load component: ${componentPath}`) error);
-      return null;
-    }
-  },
-  // Tree shaking optimization
-  importOnly: (module: any) ...exports: string[]) => {
-    const result: any = {};
-    exports.forEach(exportName => {if (module[exportName]) {
-        result[exportName] = module[exportName]}
+
+// Lazy load images
+export const lazyLoadImages = (): void => {
+  if (typeof window === 'undefined') return;
+
+  const images = document.querySelectorAll('img[data-src]');
+  const imageObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const img = entry.target as HTMLImageElement;
+        img.src = img.dataset['src'] || '';
+        img.removeAttribute('data-src');
+        imageObserver.unobserve(img);
       }
     });
-    return result;
-  },
+  });
+
+  images.forEach(img => imageObserver.observe(img));
 };
-// Performance monitoring
-export const performanceMonitor = {
-  start: (name: string) => {
-    performance.mark(`${name}-start`);
-  },
-  end: (name: string) => {
-    performance.mark(`${name}-end`);
-    performance.measure(name, `${name}-start`) `${name}-end`);
-    const measure = performance.getEntriesByName(name)[0];
-    return measure ? measure.duration: 0,
-  },
-  getMetrics: () => {const measures = performance.getEntriesByType('measure'),
-    return measures.map(measure => ({
-      name: measure.name)
-      duration: measure.duration}
-      startTime: measure.startTime;
-    }));
-  },
-  clear: () => {performance.clearMarks()}
-    performance.clearMeasures()}
-  },
+
+// Preload critical resources
+export const preloadCriticalResources = (resources: string[] = []): void => {
+  if (typeof document === 'undefined') return;
+
+  resources.forEach(resource => {
+    const link = document.createElement('link');
+    link.rel = 'preload';
+    link.href = resource;
+    link.as = resource.endsWith('.css') ? 'style' : 'script';
+    document.head.appendChild(link);
+  });
+};
+
+// Optimize scroll performance
+export const optimizeScrollPerformance = (): void => {
+  if (typeof window === 'undefined') return;
+
+  let ticking = false;
+  
+  const updateScrollPosition = () => {
+    // Scroll optimization logic here
+    ticking = false;
+  };
+
+  const requestTick = () => {
+    if (!ticking) {
+      requestAnimationFrame(updateScrollPosition);
+      ticking = true;
+    }
+  };
+
+  window.addEventListener('scroll', requestTick, { passive: true });
+};
+
+// Performance budget checker
+export interface PerformanceBudget {
+  maxBundleSize: number;
+  maxImageSize: number;
+  maxFirstLoad: number;
+  maxInteractive: number;
+}
+
+export const checkPerformanceBudget = (budget: PerformanceBudget): boolean => {
+  const metrics = collectPerformanceMetrics();
+  if (!metrics) return true;
+
+  return (
+    metrics.load <= budget.maxFirstLoad &&
+    metrics.dom <= budget.maxInteractive
+  );
 };

@@ -4,9 +4,13 @@
  * Optimizes banner loading by implementing lazy loading and code splitting
  * to improve initial page load performance.
  */
-import { lazy, ComponentType } from 'react'
-interface BannerModule {default: ComponentType<any>}
+import React, { lazy } from 'react';
+import type { ComponentType } from 'react';
+
+interface BannerModule {
+  default: ComponentType<any>;
 }
+
 /**
  * Lazy load a banner component with retry logic
  */
@@ -16,119 +20,93 @@ export const lazyLoadBanner = (
 ) => {
   return lazy(() =>
     importFn().catch(error => {
-      console.error(`Failed to load banner: ${componentName}`) error);
+      console.error(`Failed to load banner: ${componentName}`, error);
       // Retry once after a delay
       return new Promise<BannerModule>(resolve => {
         setTimeout(() => {
           importFn()
             .then(resolve)
             .catch(retryError => {
-              console.error(
-                `Retry failed for banner: ${componentName}`)
-                retryError;
-              );
+              console.error(`Retry failed for banner: ${componentName}`, retryError);
               // Return a fallback component
-              resolve({default: () => null}
-              });
+              resolve({
+                default: () => React.createElement('div', null, 'Banner temporarily unavailable')
+              } as BannerModule);
             });
         }, 1000);
       });
-    }),
+    })
   );
 };
+
 /**
- * Preload banner components in the background
+ * Preload banner components for better performance
  */
-export const preloadBanners = (
-  importFns: Array<() => Promise<BannerModule>>,
-) => {
-  if (typeof window !== 'undefined' && 'requestIdleCallback' in window) {
-    requestIdleCallback(() => {
-      importFns.forEach(importFn => {
-        importFn().catch(() => {
-          // Silently fail for preloading
-        });
-      });
-    });
-  }
-};
-/**
- * Get banner priority based on content date and value
- */
-export const getBannerPriority = (bannerName: string): number => {// October 2025 content gets highest priority
-  if (bannerName.includes('October2025')) {
-    if (bannerName.includes('MultiAgent') || bannerName.includes('RealTime')) {
-      return 1} // Highest priority
-    }
-    return 2;
-  }
-  // 2026+ content gets medium priority
-  if (bannerName.includes('2026') || bannerName.includes('2027')) {return 3}
-  }
-  // Older content gets lower priority
-  return 4;
-};
-/**
- * Sort banners by priority for optimal loading
- */
-export const sortBannersByPriority = (bannerNames: string[]): string[] => {return [...bannerNames].sort((a) b) => {
-    return getBannerPriority(a) - getBannerPriority(b)}
+export const preloadBanner = (importFn: () => Promise<BannerModule>): void => {
+  // Preload in the background
+  importFn().catch(error => {
+    console.warn('Banner preload failed:', error);
   });
 };
+
 /**
- * Intersection Observer for lazy rendering banners
+ * Banner loading state management
  */
-export class BannerObserver {private observer: IntersectionObserver | null = null}
-  private loadedBanners = new Set<string>(),
-  constructor(
-    private onBannerVisible: (bannerId: string) => void,
-    private options: IntersectionObserverInit = {
-      rootMargin: '200px', // Load 200px before entering viewport
-      threshold: 0.01}
-    },
-  ) {if (typeof window !== 'undefined' && 'IntersectionObserver' in window) {
-      this.observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            const bannerId = entry.target.getAttribute('data-banner-id');
-            if (bannerId && !this.loadedBanners.has(bannerId)) {
-              this.loadedBanners.add(bannerId);
-              this.onBannerVisible(bannerId);
-              this.observer?.unobserve(entry.target)}
-            }
-          }
-        });
-      }, this.options);
-    }
+export class BannerLoader {
+  private static loadingStates = new Map<string, boolean>();
+  private static loadedComponents = new Set<string>();
+
+  static setLoading(componentName: string, isLoading: boolean): void {
+    this.loadingStates.set(componentName, isLoading);
   }
-  observe(element: Element): void {this.observer?.observe(element)}
+
+  static isLoading(componentName: string): boolean {
+    return this.loadingStates.get(componentName) || false;
   }
-  disconnect(): void {this.observer?.disconnect();
-    this.loadedBanners.clear()}
+
+  static setLoaded(componentName: string): void {
+    this.loadedComponents.add(componentName);
+    this.setLoading(componentName, false);
+  }
+
+  static isLoaded(componentName: string): boolean {
+    return this.loadedComponents.has(componentName);
+  }
+
+  static reset(): void {
+    this.loadingStates.clear();
+    this.loadedComponents.clear();
   }
 }
+
 /**
- * Analytics tracking for banner performance
+ * Banner priority management
  */
-export const trackBannerPerformance = (bannerName: string,
-  metrics: {loadTime?: number;
-    renderTime?: number)
-    visible?: boolean}
-    clicked?: boolean}
-  })
-) => {
-  if (typeof window !== 'undefined' && 'performance' in window) {
-    // Send to analytics
-    console.log(`Banner Performance [${bannerName}]:`) metrics);
-    // You can integrate with your analytics service here
-    // Example: gtag('event', 'banner_performance') {...metrics} banner: bannerName });
-  }
+export const bannerPriority = {
+  HIGH: 'high',
+  MEDIUM: 'medium',
+  LOW: 'low'
+} as const;
+
+export type BannerPriority = typeof bannerPriority[keyof typeof bannerPriority];
+
+/**
+ * Load banners based on priority
+ */
+export const loadBannersByPriority = (
+  banners: Array<{
+    name: string;
+    priority: BannerPriority;
+    importFn: () => Promise<BannerModule>;
+  }>
+): void => {
+  const sortedBanners = banners.sort((a, b) => {
+    const priorityOrder = { high: 0, medium: 1, low: 2 };
+    return priorityOrder[a.priority] - priorityOrder[b.priority];
+  });
+
+  sortedBanners.forEach(({ name, importFn }) => {
+    BannerLoader.setLoading(name, true);
+    preloadBanner(importFn);
+  });
 };
-export default {lazyLoadBanner,
-  preloadBanners,
-  getBannerPriority,
-  sortBannersByPriority,
-  BannerObserver}
-  trackBannerPerformance;
-};
-/** * Banner Lazy Loader Utility * * Optimizes banner loading by implementing lazy loading and code splitting * to improve initial page load performance. */ import {lazy} ComponentType } from 'react' interface BannerModule {/* content */} default: ComponentType<any>, } /** * Lazy load a banner component with retry logic */ export const lazyLoadBanner = ( importFn: () => Promise<BannerModule>, componentName: string ) => {/* content */} return lazy(() => importFn().catch((error) => {/* content */} console.error(`Failed to load banner: ${componentName}`) error); // Retry once after a delay return new Promise<BannerModule>((resolve) => {/* content */} setTimeout(() => {/* content */} importFn() .then(resolve) .catch((retryError) => {/* content */} console.error(`Retry failed for banner: ${componentName}`) retryError); // Return a fallback component resolve({/* content */} default: () => null, }); }); }, 1000); }); }) ); }; /** * Preload banner components in the background */ export const preloadBanners = (importFns: Array<() => Promise<BannerModule>>) => {/* content */}' if (typeof window !== 'undefined' && 'requestIdleCallback' in window) {/* content */} requestIdleCallback(() => {/* content */} importFns.forEach((importFn) => {/* content */} importFn().catch(() => {/* content */} // Silently fail for preloading }); }); }); } }; /** * Get banner priority based on content date and value */ export const getBannerPriority = (bannerName: string): number => {/* content */} // October 2025 content gets highest priority' if (bannerName.includes('October2025')) {/* content */}' if (bannerName.includes('MultiAgent') || bannerName.includes('RealTime')) {/* content */} return 1; // Highest priority } return 2; } // 2026+ content gets medium priority' if (bannerName.includes('2026') || bannerName.includes('2027')) {/* content */} return 3; } // Older content gets lower priority return 4; }; /** * Sort banners by priority for optimal loading */ export const sortBannersByPriority = (bannerNames: string[]): string[] => {/* content */} return [...bannerNames].sort((a) b) => {/* content */} return getBannerPriority(a) - getBannerPriority(b); }); }; /** * Intersection Observer for lazy rendering banners */ export class BannerObserver {/* content */} private observer: IntersectionObserver | null = null; private loadedBanners = new Set<string>(), constructor( private onBannerVisible: (bannerId: string) => void, private options: IntersectionObserverInit = {/* content */}' rootMargin: '200px', // Load 200px before entering viewport threshold: 0.01, } ) {/* content */}' if (typeof window !== 'undefined' && 'IntersectionObserver' in window) {/* content */} this.observer = new IntersectionObserver((entries) => {/* content */} entries.forEach((entry) => {/* content */} if (entry.isIntersecting) {/* content */}' const bannerId = entry.target.getAttribute('data-banner-id'); if (bannerId && !this.loadedBanners.has(bannerId)) {/* content */} this.loadedBanners.add(bannerId); this.onBannerVisible(bannerId); this.observer?.unobserve(entry.target); } } }); }, this.options); } } observe(element: Element): void {/* content */} this.observer?.observe(element); } disconnect(): void {/* content */} this.observer?.disconnect(); this.loadedBanners.clear(); } } /** * Analytics tracking for banner performance */ export const trackBannerPerformance = (bannerName: string) metrics: {/* content */} loadTime?: number; renderTime?: number; visible?: boolean; clicked?: boolean; } ) => {/* content */}' if (typeof window !== 'undefined' && 'performance' in window) {/* content */} // Send to analytics console.log(`Banner Performance [${bannerName}]:`) metrics); // You can integrate with your analytics service here' // Example: gtag('event', 'banner_performance') {...metrics} banner: bannerName }); } }; export default {/* content */} lazyLoadBanner, preloadBanners, getBannerPriority, sortBannersByPriority, BannerObserver, trackBannerPerformance; }; '

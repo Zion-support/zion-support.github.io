@@ -60,16 +60,13 @@ export const BANNER_REGISTRY: BannerConfig[] = [
 /**
  * Get banners by category
  */
-export function getBannersByCategory(category: BannerConfig['category'])
-): BannerConfig[] {
+export function getBannersByCategory(category: BannerConfig['category']): BannerConfig[] {
   return BANNER_REGISTRY.filter(banner => banner.category === category && banner.enabled);
 }
 /**
  * Get banners by priority range
  */
-export function getBannersByPriority(minPriority: number,
-  maxPriority: number)
-): BannerConfig[] {
+export function getBannersByPriority(minPriority: number, maxPriority: number): BannerConfig[] {
   return BANNER_REGISTRY.filter(banner =>
       banner.priority >= minPriority &&
       banner.priority <= maxPriority &&
