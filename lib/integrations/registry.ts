@@ -43,6 +43,7 @@ export const PROVIDERS: IntegrationProviderMeta[] = [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   { id: 'bamboohr', name: 'BambooHR', category: 'ats', description: 'HRIS & ATS' },
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-bcb8
@@ -75,6 +76,9 @@ import type { IntegrationProviderMeta } from './types';
 
 export const PROVIDERS: IntegrationProviderMeta[] = [
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d
+=======
+  { id: 'bamboohr', name: 'BambooHR', category: 'ats', description: 'HRIS & ATS' },
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-698a
   {
     id: 'salesforce',
     name: 'Salesforce',

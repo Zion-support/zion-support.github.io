@@ -285,11 +285,14 @@ export const errorHandler = (
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-d12c
       statusCode,
       timestamp: new Date().toISOString()
+<<<<<<< HEAD
     },
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0a8c
 =======
       statusCode,
       timestamp: new Date().toISOString()
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-698a
     }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-9d58
 =======

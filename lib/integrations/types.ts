@@ -205,6 +205,7 @@ export interface ProviderConnection {
   lastSync?: number;
   createdAt: number;
   updatedAt: number;
+<<<<<<< HEAD
 }
 
 <<<<<<< HEAD
@@ -235,6 +236,9 @@ export type SyncStatus = 'connected' | 'warning' | 'disconnected';
   status: SyncStatus;
   lastSync?: number;
   createdAt: number;
+=======
+  expiresAt?: number;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-698a
 }
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-d12c

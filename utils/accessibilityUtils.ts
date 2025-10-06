@@ -12,6 +12,9 @@ export const focusManagement = {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-698a
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
 =======
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])',
@@ -153,6 +156,7 @@ export const ariaUtils = {
   // Set ARIA attributes
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   setAriaAttributes: (element: HTMLElement, attributes: Record<string, string>): void => {
 =======
   // Set ARIA attributes
@@ -169,12 +173,16 @@ export const ariaUtils = {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d
+=======
+  setAriaAttributes: (element: HTMLElement, attributes: Record<string, string>): void => {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-698a
     Object.entries(attributes).forEach(([key, value]) => {
       element.setAttribute(key, value);
     });
   },
 
   // Announce to screen readers
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -199,6 +207,9 @@ export const ariaUtils = {
   )
   ): void => {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d
+=======
+  announce: (message: string, priority: 'polite' | 'assertive' = 'polite'): void => {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-698a
     const announcement = document.createElement('div');
     announcement.setAttribute('aria-live', priority);
     announcement.setAttribute('aria-atomic', 'true');
@@ -392,11 +403,15 @@ export const keyboardNavigation = {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6231
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-698a
 // Color contrast utilities
 export const colorContrast = {
 <<<<<<< HEAD
@@ -553,6 +568,7 @@ export const colorContrast = {
   },
 
   // Calculate contrast ratio
+<<<<<<< HEAD
   getContrastRatio: (
     color1: [number, number, number],
     color2: [number, number, number]
@@ -561,6 +577,9 @@ export const colorContrast = {
   )
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d
   ): number => {
+=======
+  getContrastRatio: (color1: [number, number, number], color2: [number, number, number]): number => {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-698a
     const lum1 = colorContrast.getLuminance(...color1);
     const lum2 = colorContrast.getLuminance(...color2);
     const brightest = Math.max(lum1, lum2);
@@ -582,10 +601,15 @@ export const colorContrast = {
     return contrastRatio >= thresholds[level];
 =======
   meetsWCAG: (contrastRatio: number, level: 'AA' | 'AAA' = 'AA'): boolean => {
-    return level === 'AA' ? contrastRatio >= 4.5 : contrastRatio >= 7;
+    const thresholds = { AA: 4.5, AAA: 7 };
+    return contrastRatio >= thresholds[level];
   },
 };
+<<<<<<< HEAD
 };
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-698a
 // Motion and animation utilities
 export const motionUtils = {
   // Check if user prefers reduced motion
@@ -622,6 +646,7 @@ export const colorContrast = {
     // This is a simplified check - in production, use a proper color contrast library
     return true;
   },
+<<<<<<< HEAD
 
   // Get high contrast version of color
   getHighContrast: (color: string): string => {
@@ -653,6 +678,29 @@ export const keyboardNavigation = {
 
     event.preventDefault();
     items[nextIndex]?.focus();
+=======
+  // Respect user's motion preferences
+  conditionalAnimation: (animation: string, fallback: string = ''): string => {
+    return motionUtils.prefersReducedMotion() ? fallback : animation;
+  },
+};
+
+// Form accessibility utilities
+export const formAccessibility = {
+  // Generate unique input ID
+  generateInputId: (): string => {
+    return `input-${Math.random().toString(36).substr(2, 9)}`;
+  },
+  // Associate label with input
+  associateLabel: (input: HTMLInputElement, labelText: string): HTMLLabelElement => {
+    const label = document.createElement('label');
+    label.textContent = labelText;
+    label.setAttribute('for', input.id || formAccessibility.generateInputId());
+    if (!input.id) {
+      input.id = label.getAttribute('for')!;
+    }
+    return label;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-698a
   },
 <<<<<<< HEAD
   // Respect user's motion preferences
@@ -908,7 +956,7 @@ export const accessibilityTesting = {
 <<<<<<< HEAD
 <<<<<<< HEAD
     const inputs = Array.from(
-      document.querySelectorAll('input, select, textarea'),
+      document.querySelectorAll('input, select, textarea')
     );
 =======
     const inputs = Array.from(document.querySelectorAll('input, select, textarea'));
@@ -1043,6 +1091,7 @@ export const accessibilityTesting = {
       score
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d
     };
+<<<<<<< HEAD
 =======
 
   // Check if element is visible to screen readers
@@ -1061,6 +1110,9 @@ export const accessibilityTesting = {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-bcb8
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6231
+=======
+  },
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-698a
   // Check if element is focusable
   isFocusable: (element: HTMLElement): boolean => {
     const focusableSelectors = [
@@ -1073,6 +1125,7 @@ export const accessibilityTesting = {
     ];
     return focusableSelectors.some(selector => element.matches(selector));
   }
+<<<<<<< HEAD
 =======
   meetsWCAG: (color1: string, color2: string, level: 'AA' | 'AAA' = 'AA'): boolean => {
     const ratio = colorContrast.getContrastRatio(color1, color2);
@@ -1287,3 +1340,6 @@ export const screenReaderUtils = {
   keyboardUtils
 };
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-9d58
+=======
+};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-698a
