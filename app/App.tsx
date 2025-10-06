@@ -3,8 +3,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 
 // Components
-import ErrorBoundary from '../src/components/ErrorBoundary';
-import SEOOptimizer from '../src/components/SEOOptimizer';
+import ErrorBoundary from './components/ErrorBoundary';
+import SEOOptimizer from './components/SEOOptimizer';
 import { LoadingSpinner } from '../components/LoadingComponents';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import PerformanceDashboard from './components/PerformanceDashboard';
