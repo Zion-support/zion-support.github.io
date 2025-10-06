@@ -7,8 +7,6 @@ import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import {
   BannerConfig,
   RotationStrategy,
-  selectBannersForDisplay,
-  selectBalancedBanners,
   trackImpression,
   trackClick,
   loadBannerStats,
@@ -37,7 +35,7 @@ interface UseBannerRotationReturn {
 export const useBannerRotation = (
   banners: BannerConfig[],
   strategy: RotationStrategy = 'sequential',
-  interval: number = 5000,
+  interval: number = 5000
 ): BannerRotationHook => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(true);
@@ -62,7 +60,7 @@ export const useBannerRotation = (
         // Simple weighted selection based on priority
         const totalWeight = filteredBanners.reduce(
           (sum, banner) => sum + banner.priority,
-          0,
+          0
         );
         let random = Math.random() * totalWeight;
         for (let i = 0; i < filteredBanners.length; i++) {
@@ -121,7 +119,7 @@ export const useBannerRotation = (
         }, 300);
       }
     },
-    [filteredBanners.length],
+    [filteredBanners.length]
   );
 
   // Initial selection
@@ -134,11 +132,12 @@ export const useBannerRotation = (
     if (!autoRotate) return;
 
     // Calculate refresh interval based on engagement
-    const avgEngagement = bannersWithStats.reduce((sum, b) => {
-      const impressions = b.impressions || 0;
-      const clicks = b.clicks || 0;
-      return sum + (impressions > 0 ? (clicks / impressions) * 100 : 0);
-    }, 0) / bannersWithStats.length;
+    const avgEngagement =
+      bannersWithStats.reduce((sum, b) => {
+        const impressions = b.impressions || 0;
+        const clicks = b.clicks || 0;
+        return sum + (impressions > 0 ? (clicks / impressions) * 100 : 0);
+      }, 0) / bannersWithStats.length;
 
     const interval = getRefreshInterval(avgEngagement);
     const timer = setInterval(() => {
@@ -162,10 +161,10 @@ export const useBannerRotation = (
  */
 export const useBannerVisibility = (
   bannerId: string,
-  onVisible?: () => void,
+  onVisible?: () => void
 ): { ref: React.RefObject<HTMLDivElement | null> } => {
   const ref = React.useRef<HTMLDivElement | null>(null);
-  
+
   useEffect(() => {
     const element = ref.current;
     if (!element) return;
@@ -181,7 +180,7 @@ export const useBannerVisibility = (
       },
       {
         threshold: 0.5, // 50% visible
-      },
+      }
     );
 
     observer.observe(element);
@@ -197,7 +196,7 @@ export const useBannerVisibility = (
  */
 export const useBannerABTest = (
   variations: BannerConfig[],
-  testName: string,
+  testName: string
 ): {
   selectedVariation: BannerConfig;
   trackVariationPerformance: (metric: string, value: number) => void;
@@ -215,16 +214,23 @@ export const useBannerABTest = (
   // Assign variation based on user ID hash
   const selectedVariation = useMemo(() => {
     const hash = userId.split('').reduce((a, b) => {
-      a = ((a << 5) - a) + b.charCodeAt(0);
+      a = (a << 5) - a + b.charCodeAt(0);
       return a & a;
     }, 0);
     const index = Math.abs(hash) % variations.length;
     return variations[index];
   }, [userId, variations]);
 
-  const trackVariationPerformance = useCallback((metric: string, value: number) => {
-    trackBannerInteraction(`${testName}_${selectedVariation.id}`, metric, value);
-  }, [testName, selectedVariation.id]);
+  const trackVariationPerformance = useCallback(
+    (metric: string, value: number) => {
+      trackBannerInteraction(
+        `${testName}_${selectedVariation.id}`,
+        metric,
+        value
+      );
+    },
+    [testName, selectedVariation.id]
+  );
 
   return {
     selectedVariation,

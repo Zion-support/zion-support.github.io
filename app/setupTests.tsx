@@ -23,7 +23,7 @@ class MockIntersectionObserver implements IntersectionObserver {
 
   constructor(
     public callback: IntersectionObserverCallback,
-    public options?: IntersectionObserverInit,
+    public options?: IntersectionObserverInit
   ) {}
 
   disconnect() {}

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { performanceOptimizer } from '../../src/utils/performanceOptimizer';
+import { getErrorMetrics, isErrorRateTooHigh } from '../../utils/errorHandling';
 
 interface DashboardData {
   performance: {
@@ -8,10 +9,7 @@ interface DashboardData {
     memoryUsage: number;
     slowComponents: number;
   };
-  errors: {
-    totalErrors: number;
-    errorRate: number;
-  };
+  errors: ReturnType<typeof getErrorMetrics>;
   isHealthy: boolean;
   timestamp: Date;
 }
@@ -30,11 +28,9 @@ const PerformanceDashboard: React.FC = () => {
         memoryUsage: metrics.memoryUsage || 0,
         slowComponents: metrics.slowComponents || 0,
       };
-      const errors = {
-        totalErrors: 0,
-        errorRate: 0,
-      };
-      const isHealthy = performance.averageRenderTime < 16;
+      const errors = getErrorMetrics();
+      const isHealthy =
+        !isErrorRateTooHigh() && performance.averageRenderTime < 16;
 
       setData({
         performance,
@@ -50,11 +46,13 @@ const PerformanceDashboard: React.FC = () => {
       const interval = setInterval(updateData, 5000);
       return () => clearInterval(interval);
     }
+
+    return undefined;
   }, [autoRefresh]);
 
   const exportData = () => {
     const exportData = {
-      performance: performanceOptimizer.getMetrics(),
+      performance: data?.performance || {},
       errors: data?.errors,
       timestamp: new Date().toISOString(),
     };
@@ -98,7 +96,31 @@ const PerformanceDashboard: React.FC = () => {
     );
   }
 
-  if (!data) return null;
+  if (!data) {
+    return (
+      <div className='fixed bottom-4 right-4 z-50'>
+        <button
+          onClick={() => setIsVisible(true)}
+          className='bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg transition-colors'
+          title='Open Performance Dashboard'
+        >
+          <svg
+            className='w-6 h-6'
+            fill='none'
+            stroke='currentColor'
+            viewBox='0 0 24 24'
+          >
+            <path
+              strokeLinecap='round'
+              strokeLinejoin='round'
+              strokeWidth={2}
+              d='M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z'
+            />
+          </svg>
+        </button>
+      </div>
+    );
+  }
 
   return (
     <div className='fixed bottom-4 right-4 z-50 bg-white rounded-lg shadow-xl border border-gray-200 w-96 max-h-96 overflow-y-auto'>

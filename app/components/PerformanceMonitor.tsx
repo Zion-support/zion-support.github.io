@@ -3,9 +3,13 @@ import { performanceOptimizer } from '../../src/utils/performanceOptimizer';
 
 interface PerformanceMonitorProps {
   children: React.ReactNode;
+  className?: string;
 }
 
-const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ children }) => {
+const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ 
+  children, 
+  className = '' 
+}) => {
   const [isMonitoring, setIsMonitoring] = useState(false);
 
   useEffect(() => {
@@ -20,7 +24,10 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ children }) => 
   }, []);
 
   return (
-    <div data-performance-monitor={isMonitoring}>
+    <div 
+      className={`performance-monitor ${className}`}
+      data-performance-monitor={isMonitoring}
+    >
       {children}
     </div>
   );
