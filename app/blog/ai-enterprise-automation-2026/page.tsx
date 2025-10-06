@@ -1,36 +1,35 @@
-exp, o, r, t co, n, s, t m e t a d, a, t, a = {
+export const metadata = {
   
-  ti, t, l, e:
-    'AI Ent e r p r, i, s, e Aut o m a t, i, o, n 2, 0, 2, 6: C o m p l, e, t, e B u s i n, e, s, s Proc, e, s, s Transfo r m a t, i, o, n | Z, i, o, n T, e, c, h Gr, o, u, p',
-  desc r i p t, i, o, n:
-    'Tr a n s f, o, r, m y, o, u, r ent e r p r, i, s, e w, i, t, h AI aut o m a t, i, o, n. 95% proc, e, s, s efficiencymulti m i l l, i, o, n-dol, l, a, r sav i n g s, a, n, d z, e, r, o-to, u, c, h ope r a t i, o, n, s acr, o, s, s fu n c t i, o, n, s.',
+  title:
+    'AI Ent e r p r, i, s, e Aut o m a t, i, o, n 2026: C o m p l, e, t, e B u s i n, e, s, s Proc, e, s, s Transfo r m a t, i, o, n | Z, i, o, n T, e, c, h Gr, oup'
+  description:
+    'Tr a n s f, o, r, m y, o, u, r ent e r p r, i, s, e with AI aut o m a t, i, o, n. 95% proc, e, s, s efficiencymulti m i l l, i, o, n-dol, l, a, r sav i n g s, a, n, d z, e, r, o-to, u, c, h ope r a t i, o, n, s acr, o, s, s fu n c t i, ons.'
   k e y w o, r, d, s:
-    'AI ent e r p r, i, s, e aut o m a t, i, o, n 2, 0, 2, 6, proc, e, s, s aut o m a t, i, o, n, AI workfl o w s z, e, r, o-to, u, c, h operationsent e r p r, i, s, e AI',
-
+    'AI ent e r p r, i, s, e aut o m a t, i, o, n 2026, proc, e, s, s aut o m a t, i, o, n, AI workfl o w s z, e, r, o-to, u, c, h operationsent e r p r, ise AI'
 };
 
-exp, o, r, t defa, u, l, t f u n c t, i, o, n AIEnterpriseAutomat i o n 2, 0, 2, 6() {
-  ret, u, r, n (
-    <arti, c, l, e cl a s s N, a, m, e='max-w-4, xl mx-a, u, t, o px-4 py-12'>
-      <div cl a s s N, a, m, e='pr, o, s, e pr, o, s, e-lg max-w-n, o, n, e'>
+export default function AIEnterpriseAutomat i o n 2026() {
+  return (
+    <arti, c, l, e cl a s s N, a, m, e='max-w-4, xl mx-a, uto px-4 py-12'>
+      <div cl a s s N, a, m, e='pr, o, s, e pr, o, s, e-lg max-w-n, one'>
         <hea, d, e, r cl a s s N, a, m, e='mb-12'>
-          <div cl a s s N, a, m, e='f, l, e, x it, e, m, s-cen, t, e, r gap-2 mb-4'>
-            <s, p, a, n cl a s s N, a, m, e='bg-gr, e, e, n-100 t, e, x, t-gr, e, e, n-800 px-3 py-1 roun, d, e, d-f, u, l, l t, e, x, t-sm f, o, n, t-s e m i b, o, l, d'>
+          <div cl a s s N, ame='f, l, e, x it, e, m, s-cen, t, e, r gap-2 mb-4'>
+            <s, p, a, n cl a s s N, ame='bg-gr, e, e, n-100 t, e, x, t-gr, e, e, n-800 px-3 py-1 roun, d, e, d-f, u, l, l t, e, x, t-sm f, o, n, t-s e m i b, o, l, d'>
               Aut o m a t, i, o, n
             </s, p, a, n>
-            <s, p, a, n cl a s s N, a, m, e='t, e, x, t-g, r, a, y-500'>•</s, p, a, n>
-            <s, p, a, n cl a s s N, a, m, e='t, e, x, t-g, r, a, y-600'>Se p t e m, b, e, r 29, 2, 0, 2, 5</s, p, a, n>
+            <s, p, a, n cl a s s N, ame='t, e, x, t-g, r, a, y-500'>•</s, p, a, n>
+            <s, p, a, n cl a s s N, ame='t, e, x, t-g, r, a, y-600'>Se p t e m, b, e, r 29, 2, 0, 2, 5</s, p, a, n>
           </div>
-          <h1 cl a s s N, a, m, e='t, e, x, t-4, xl f, o, n, t-b, o, l, d t, e, x, t-g, r, a, y-900 mb-6'>
-            AI Ent e r p r, i, s, e Aut o m a t, i, o, n 2, 0, 2, 6: C o m p l, e, t, e B u s i n, e, s, s Proc, e, s, s
+          <h1 cl a s s N, ame='t, e, x, t-4, xl f, o, n, t-b, o, l, d t, e, x, t-g, r, a, y-900 mb-6'>
+            AI Ent e r p r, i, s, e Aut o m a t, i, o, n 2026: C o m p l, e, t, e B u s i n, e, s, s Proc, e, s, s
             Transfo r m a t, i, o, n
           </h1>
-          <p cl a s s N, a, m, e='t, e, x, t-xl t, e, x, t-g, r, a, y-600 lead, i, n, g-rela, x, e, d'>
+          <p cl a s s N, ame='t, e, x, t-xl t, e, x, t-g, r, a, y-600 lead, i, n, g-rela, x, e, d'>
             A fi, e, l, d-tes, t, e, d a p p r o, a, c, h to a u t o m, a, t, e comp, l, e, x wo r k f l, o, w, s acr, o, s, s
             fina, n, c, e, ope r a t i, o, n, s, and c u s t o, m, e, r exp e r i e, n, c, e. Achi, e, v, e 95%
             effic i e n c, y, 6, 0% c, o, s, t reduc t i o n, a, n, d wo, r, l, d-cl, a, s, s reli a b i l, i, t, y.
           </p>
-          <div cl a s s N, a, m, e='f, l, e, x it, e, m, s-cen, t, e, r gap-6 mt-8 t, e, x, t-sm t, e, x, t-g, r, a, y-500'>
+          <div cl a s s N, ame='f, l, e, x it, e, m, s-cen, t, e, r gap-6 mt-8 t, e, x, t-sm t, e, x, t-g, r, a, y-500'>
             <s, p, a, n>18 min r, e, a, d</s, p, a, n>
             <s, p, a, n>•</s, p, a, n>
             <s, p, a, n>Ent e r p r, i, s, e Aut o m a t, i, o, n</s, p, a, n>
@@ -39,90 +38,90 @@ exp, o, r, t defa, u, l, t f u n c t, i, o, n AIEnterpriseAutomat i o n 2, 0, 2,
           </div>
         </hea, d, e, r>
 
-        <sect, i, o, n cl a s s N, a, m, e='mb-12'>
-          <h2 cl a s s N, a, m, e='t, e, x, t-3, xl f, o, n, t-b, o, l, d t, e, x, t-g, r, a, y-900 mb-6'>
+        <sect, i, o, n cl a s s N, ame='mb-12'>
+          <h2 cl a s s N, ame='t, e, x, t-3, xl f, o, n, t-b, o, l, d t, e, x, t-g, r, a, y-900 mb-6'>
             Aut o m a t, i, o, n Doma, i, n, s
           </h2>
-          <div cl a s s N, a, m, e='g, r, i, d g, r, i, d-c, o, l, s-1 md:g, r, i, d-c, o, l, s-2 gap-6'>
-            <div cl a s s N, a, m, e='bg-wh, i, t, e bor, d, e, r bor, d, e, r-g, r, a, y-200 roun, d, e, d-lg p-6'>
-              <div cl a s s N, a, m, e='t, e, x, t-3, xl mb-3'>💳</div>
-              <h3 cl a s s N, a, m, e='t, e, x, t-xl f, o, n, t-s e m i b, o, l, d t, e, x, t-g, r, a, y-900 mb-2'>
+          <div cl a s s N, ame='g, r, i, d g, r, i, d-c, o, l, s-1 md:g, r, i, d-c, o, l, s-2 gap-6'>
+            <div cl a s s N, ame='bg-wh, i, t, e bor, d, e, r bor, d, e, r-g, r, a, y-200 roun, d, e, d-lg p-6'>
+              <div cl a s s N, ame='t, e, x, t-3, xl mb-3'>💳</div>
+              <h3 cl a s s N, ame='t, e, x, t-xl f, o, n, t-s e m i b, o, l, d t, e, x, t-g, r, a, y-900 mb-2'>
                 Fina, n, c, e
               </h3>
-              <p cl a s s N, a, m, e='t, e, x, t-g, r, a, y-600'>
+              <p cl a s s N, ame='t, e, x, t-g, r, a, y-600'>
                 AP/AR, reconciliation a n o m, a, l, y detec t i o n, a, n, d con t i n u, o, u, s cl, o, s, e.
               </p>
             </div>
-            <div cl a s s N, a, m, e='bg-wh, i, t, e bor, d, e, r bor, d, e, r-g, r, a, y-200 roun, d, e, d-lg p-6'>
-              <div cl a s s N, a, m, e='t, e, x, t-3, xl mb-3'>🏭</div>
-              <h3 cl a s s N, a, m, e='t, e, x, t-xl f, o, n, t-s e m i b, o, l, d t, e, x, t-g, r, a, y-900 mb-2'>
+            <div cl a s s N, ame='bg-wh, i, t, e bor, d, e, r bor, d, e, r-g, r, a, y-200 roun, d, e, d-lg p-6'>
+              <div cl a s s N, ame='t, e, x, t-3, xl mb-3'>🏭</div>
+              <h3 cl a s s N, ame='t, e, x, t-xl f, o, n, t-s e m i b, o, l, d t, e, x, t-g, r, a, y-900 mb-2'>
                 Ope r a t i, o, n, s
               </h3>
-              <p cl a s s N, a, m, e='t, e, x, t-g, r, a, y-600'>
+              <p cl a s s N, ame='t, e, x, t-g, r, a, y-600'>
                 Inte l l i g, e, n, t routingescalat i o n s, a, n, d au t o m a, t, e, d ap p r o v, a, l, s.
               </p>
             </div>
-            <div cl a s s N, a, m, e='bg-wh, i, t, e bor, d, e, r bor, d, e, r-g, r, a, y-200 roun, d, e, d-lg p-6'>
-              <div cl a s s N, a, m, e='t, e, x, t-3, xl mb-3'>🤝</div>
-              <h3 cl a s s N, a, m, e='t, e, x, t-xl f, o, n, t-s e m i b, o, l, d t, e, x, t-g, r, a, y-900 mb-2'>
+            <div cl a s s N, ame='bg-wh, i, t, e bor, d, e, r bor, d, e, r-g, r, a, y-200 roun, d, e, d-lg p-6'>
+              <div cl a s s N, ame='t, e, x, t-3, xl mb-3'>🤝</div>
+              <h3 cl a s s N, ame='t, e, x, t-xl f, o, n, t-s e m i b, o, l, d t, e, x, t-g, r, a, y-900 mb-2'>
                 C u s t o, m, e, r Exp e r i e, n, c, e
               </h3>
-              <p cl a s s N, a, m, e='t, e, x, t-g, r, a, y-600'>
+              <p cl a s s N, ame='t, e, x, t-g, r, a, y-600'>
                 Perso n a l i, z, e, d supp o r t c, a, s, e resolu t i o n, a, n, d pr o a c t, i, v, e o u t r e, a, c, h.
               </p>
             </div>
-            <div cl a s s N, a, m, e='bg-wh, i, t, e bor, d, e, r bor, d, e, r-g, r, a, y-200 roun, d, e, d-lg p-6'>
-              <div cl a s s N, a, m, e='t, e, x, t-3, xl mb-3'>🧠</div>
-              <h3 cl a s s N, a, m, e='t, e, x, t-xl f, o, n, t-s e m i b, o, l, d t, e, x, t-g, r, a, y-900 mb-2'>
+            <div cl a s s N, ame='bg-wh, i, t, e bor, d, e, r bor, d, e, r-g, r, a, y-200 roun, d, e, d-lg p-6'>
+              <div cl a s s N, ame='t, e, x, t-3, xl mb-3'>🧠</div>
+              <h3 cl a s s N, ame='t, e, x, t-xl f, o, n, t-s e m i b, o, l, d t, e, x, t-g, r, a, y-900 mb-2'>
                 Kn o w l e, d, g, e
               </h3>
-              <p cl a s s N, a, m, e='t, e, x, t-g, r, a, y-600'>
-                G r o u n, d, e, d ass i s t a, n, t, s w, i, t, h re t r i e, v, a, l and ap p r o v, a, l, s for acti, o, n, s.
+              <p cl a s s N, ame='t, e, x, t-g, r, a, y-600'>
+                G r o u n, d, e, d ass i s t a, n, t, s with re t r i e, v, a, l and ap p r o v, a, l, s for acti, o, n, s.
               </p>
             </div>
           </div>
         </sect, i, o, n>
 
-        <sect, i, o, n cl a s s N, a, m, e='mb-12'>
-          <h2 cl a s s N, a, m, e='t, e, x, t-3, xl f, o, n, t-b, o, l, d t, e, x, t-g, r, a, y-900 mb-6'>
+        <sect, i, o, n cl a s s N, ame='mb-12'>
+          <h2 cl a s s N, ame='t, e, x, t-3, xl f, o, n, t-b, o, l, d t, e, x, t-g, r, a, y-900 mb-6'>
             Outc, o, m, e Metr, i, c, s
           </h2>
-          <ul cl a s s N, a, m, e='l, i, s, t-d, i, s, c l, i, s, t-ins, i, d, e t, e, x, t-g, r, a, y-700 sp, a, c, e-y-2'>
+          <ul cl a s s N, ame='l, i, s, t-d, i, s, c l, i, s, t-ins, i, d, e t, e, x, t-g, r, a, y-700 sp, a, c, e-y-2'>
             <li>95% aut o m a t, i, o, n r, a, t, e on t a r g e, t, e, d wo r k f l, o, w, s</li>
             <li>60% c, o, s, t re d u c t, i, o, n and 300% produ c t i v, i, t, y ga, i, n, s</li>
-            <li>Un, d, e, r 2% ex c e p t, i, o, n r, a, t, e w, i, t, h hu, m, a, n-in-the-l, o, o, p revi, e, w, s</li>
-            <li>Au, d, i, t-re, a, d, y tra, i, l, s w, i, t, h pol, i, c, y ga, t, e, s and observ a b i l, i, t, y</li>
+            <li>Un, d, e, r 2% ex c e p t, i, o, n r, a, t, e with hu, m, a, n-in-the-l, o, o, p revi, e, w, s</li>
+            <li>Au, d, i, t-re, a, d, y tra, i, l, s with pol, i, c, y ga, t, e, s and observ a b i l, i, t, y</li>
           </ul>
         </sect, i, o, n>
 
-        <sect, i, o, n cl a s s N, a, m, e='mb-12'>
-          <h2 cl a s s N, a, m, e='t, e, x, t-3, xl f, o, n, t-b, o, l, d t, e, x, t-g, r, a, y-900 mb-6'>
+        <sect, i, o, n cl a s s N, ame='mb-12'>
+          <h2 cl a s s N, ame='t, e, x, t-3, xl f, o, n, t-b, o, l, d t, e, x, t-g, r, a, y-900 mb-6'>
             A d o p t, i, o, n P, l, a, n
           </h2>
-          <div cl a s s N, a, m, e='sp, a, c, e-y-6'>
-            <div cl a s s N, a, m, e='bg-g r a d i, e, n, t-to-br f, r, o, m-gr, e, e, n-50 to-emer, a, l, d-50 p-6 roun, d, e, d-lg'>
-              <h3 cl a s s N, a, m, e='t, e, x, t-xl f, o, n, t-s e m i b, o, l, d mb-2'>
+          <div cl a s s N, ame='sp, a, c, e-y-6'>
+            <div cl a s s N, ame='bg-g r a d i, e, n, t-to-br f, r, o, m-gr, e, e, n-50 to-emer, a, l, d-50 p-6 roun, d, e, d-lg'>
+              <h3 cl a s s N, ame='t, e, x, t-xl f, o, n, t-s e m i b, o, l, d mb-2'>
                 W, a, v, e 1: H, i, g, h-ROI Use Ca, s, e, s
               </h3>
-              <ul cl a s s N, a, m, e='l, i, s, t-d, i, s, c l, i, s, t-ins, i, d, e t, e, x, t-g, r, a, y-700 sp, a, c, e-y-1'>
+              <ul cl a s s N, ame='l, i, s, t-d, i, s, c l, i, s, t-ins, i, d, e t, e, x, t-g, r, a, y-700 sp, a, c, e-y-1'>
                 <li>Invo, i, c, e pro c e s s, i, n, g, c u s t o, m, e, r tri, a, g, e, and provi s i o n, i, n, g</li>
                 <li>Guardrailsappro v a l s, a, n, d reg r e s s, i, o, n ev, a, l, s</li>
               </ul>
             </div>
-            <div cl a s s N, a, m, e='bg-g r a d i, e, n, t-to-br f, r, o, m-b, l, u, e-50 to-ind, i, g, o-50 p-6 roun, d, e, d-lg'>
-              <h3 cl a s s N, a, m, e='t, e, x, t-xl f, o, n, t-s e m i b, o, l, d mb-2'>
+            <div cl a s s N, ame='bg-g r a d i, e, n, t-to-br f, r, o, m-b, l, u, e-50 to-ind, i, g, o-50 p-6 roun, d, e, d-lg'>
+              <h3 cl a s s N, ame='t, e, x, t-xl f, o, n, t-s e m i b, o, l, d mb-2'>
                 W, a, v, e 2: Platform i z a t, i, o, n
               </h3>
-              <ul cl a s s N, a, m, e='l, i, s, t-d, i, s, c l, i, s, t-ins, i, d, e t, e, x, t-g, r, a, y-700 sp, a, c, e-y-1'>
+              <ul cl a s s N, ame='l, i, s, t-d, i, s, c l, i, s, t-ins, i, d, e t, e, x, t-g, r, a, y-700 sp, a, c, e-y-1'>
                 <li>Template s g o l, d, e, n p a t h s, a, n, d c, o, s, t/qual, i, t, y das h b o a, r, d, s</li>
                 <li>Cent, r, a, l mo, d, e, l rout, i, n, g and cach, i, n, g</li>
               </ul>
             </div>
-            <div cl a s s N, a, m, e='bg-g r a d i, e, n, t-to-br f, r, o, m-ora, n, g, e-50 to-p, i, n, k-50 p-6 roun, d, e, d-lg'>
-              <h3 cl a s s N, a, m, e='t, e, x, t-xl f, o, n, t-s e m i b, o, l, d mb-2'>
+            <div cl a s s N, ame='bg-g r a d i, e, n, t-to-br f, r, o, m-ora, n, g, e-50 to-p, i, n, k-50 p-6 roun, d, e, d-lg'>
+              <h3 cl a s s N, ame='t, e, x, t-xl f, o, n, t-s e m i b, o, l, d mb-2'>
                 W, a, v, e 3: Ent e r p r, i, s, e Sc, a, l, e
               </h3>
-              <ul cl a s s N, a, m, e='l, i, s, t-d, i, s, c l, i, s, t-ins, i, d, e t, e, x, t-g, r, a, y-700 sp, a, c, e-y-1'>
+              <ul cl a s s N, ame='l, i, s, t-d, i, s, c l, i, s, t-ins, i, d, e t, e, x, t-g, r, a, y-700 sp, a, c, e-y-1'>
                 <li>Cr, o, s, s-dom, a, i, n orches t r a t, i, o, n and a u t o n, o, m, y lev, e, l, s</li>
                 <li>Qu a r t e, r, l, y op e r a t, i, n, g revi, e, w, s and con t i n u, o, u, s optim i z a t, i, o, n</li>
               </ul>
@@ -130,24 +129,24 @@ exp, o, r, t defa, u, l, t f u n c t, i, o, n AIEnterpriseAutomat i o n 2, 0, 2,
           </div>
         </sect, i, o, n>
 
-        <div cl a s s N, a, m, e='bg-g r a d i, e, n, t-to-r f, r, o, m-gr, e, e, n-600 to-b, l, u, e-600 roun, d, e, d-xl p-8 t, e, x, t-wh, i, t, e t, e, x, t-cen, t, e, r'>
-          <h2 cl a s s N, a, m, e='t, e, x, t-2, xl f, o, n, t-b, o, l, d mb-4'>
-            A u t o m, a, t, e Y, o, u, r Ent e r p r, i, s, e w, i, t, h Con f i d e, n, c, e
+        <div cl a s s N, ame='bg-gradient-to-r f, r, o, m-gr, e, e, n-600 to-b, l, u, e-600 roun, d, e, d-xl p-8 t, e, x, t-wh, i, t, e t, e, x, t-cen, t, e, r'>
+          <h2 cl a s s N, ame='t, e, x, t-2, xl f, o, n, t-b, o, l, d mb-4'>
+            A u t o m, a, t, e Y, o, u, r Ent e r p r, i, s, e with Con f i d e, n, c, e
           </h2>
-          <p cl a s s N, a, m, e='t, e, x, t-lg mb-6 opac, i, t, y-90'>
+          <p cl a s s N, ame='t, e, x, t-lg mb-6 opac, i, t, y-90'>
             We des, i, g, n and im p l e m, e, n, t AI aut o m a t, i, o, n t, h, a, t d e l i v, e, r, s mea s u r a, b, l, e
             b u s i n, e, s, s o u t c o, m, e, s.
           </p>
-          <div cl a s s N, a, m, e='f, l, e, x f, l, e, x-col sm:f, l, e, x-row gap-4 just, i, f, y-cen, t, e, r'>
+          <div cl a s s N, ame='f, l, e, x f, l, e, x-col sm:f, l, e, x-row gap-4 just, i, f, y-cen, t, e, r'>
             <a
-              h, r, e, f='/<cont, a, c, t'
-              cl a s s N, a, m, e='bg-wh, i, t, e t, e, x, t-gr, e, e, n-700 px-8 py-3 roun, d, e, d-lg f, o, n, t-s e m i b, o, l, d ho, v, e, r:bg-g, r, a, y-100 tra n s i t, i, o, n-col, o, r, s'
+              h, ref='/<cont, a, c, t'
+              cl a s s N, ame='bg-wh, i, t, e t, e, x, t-gr, e, e, n-700 px-8 py-3 roun, d, e, d-lg f, o, n, t-s e m i b, o, l, d ho, v, e, r:bg-g, r, a, y-100 tra n s i t, i, o, n-col, o, r, s'
             >
               St, a, r, t a Conve r s a t, i, o, n
             </a>
             <a
-              h, r, e, f='/s e r v i, c, e, s/ai-w o r k f, l, o, w-<aut o m a t, i, o, n'
-              cl a s s N, a, m, e='bg-tran s p a r, e, n, t bor, d, e, r-2 bor, d, e, r-wh, i, t, e t, e, x, t-wh, i, t, e px-8 py-3 roun, d, e, d-lg f, o, n, t-s e m i b, o, l, d ho, v, e, r:bg-wh, i, t, e ho, v, e, r:t, e, x, t-gr, e, e, n-700 tra n s i t, i, o, n-col, o, r, s'
+              h, ref='/s e r v i, c, e, s/ai-w o r k f, l, o, w-<aut o m a t, i, o, n'
+              cl a s s N, ame='bg-tran s p a r, e, n, t bor, d, e, r-2 bor, d, e, r-wh, i, t, e t, e, x, t-wh, i, t, e px-8 py-3 roun, d, e, d-lg f, o, n, t-s e m i b, o, l, d ho, v, e, r:bg-wh, i, t, e ho, v, e, r:t, e, x, t-gr, e, e, n-700 tra n s i t, i, o, n-col, o, r, s'
             >
               Expl, o, r, e Aut o m a t, i, o, n S e r v i, c, e, s
             </a>

@@ -1,16 +1,16 @@
-imp, o, r, t Arr o w R i, g, h, t f, r, o, m 'n, e, x, t/l, i, n, k';
+import ArrowRight from 'n, e, x, t/l, ink';
 
-exp, o, r, t defa, u, l, t f u n c t, i, o, n AIProductRoadmapsThatS h i p P, a, g, e() {
-  ret, u, r, n (
-    <div cl a s s N, a, m, e='min-h-scr, e, e, n'>
+export default function AIProductRoadmapsThatS h i p P, a, g, e() {
+  return (
+    <div cl a s s N, a, m, e='min-h-scr, een'>
       <nav cl a s s N, a, m, e='mb-6'>
-        <Arr o w R i, g, h, t h, r, e, f='/b, l, o, g' cl a s s N, a, m, e='t, e, x, t-b, l, u, e-600 ho, v, e, r:un d e r l, i, n, e'>
+        <ArrowRight h, ref='/b, l, o, g' cl a s s N, ame='t, e, x, t-b, l, u, e-600 ho, v, e, r:un d e r l, i, n, e'>
           ← B, a, c, k to B, l, o, g
-        </Arr o w R i, g, h, t>
+        </ArrowRight>
       </nav>
-      <arti, c, l, e cl a s s N, a, m, e='pr, o, s, e pr, o, s, e-lg max-w-n, o, n, e'>
+      <arti, c, l, e cl a s s N, ame='pr, o, s, e pr, o, s, e-lg max-w-n, o, n, e'>
         <h1>AI Prod, u, c, t R o a d m, a, p, s T, h, a, t A c t u a, l, l, y S, h, i, p</h1>
-        <p cl a s s N, a, m, e='t, e, x, t-g, r, a, y-500'>
+        <p cl a s s N, ame='t, e, x, t-g, r, a, y-500'>
           Pu b l i s, h, e, d: 2, 0, 2, 5-09-11 • T, a, g, s: Prod, u, c, t, AI, S t r a t, e, g, y
         </p>
         <p>
@@ -21,7 +21,7 @@ exp, o, r, t defa, u, l, t f u n c t, i, o, n AIProductRoadmapsThatS h i p P, a,
         <h2>Road, m, a, p patt, e, r, n</h2>
         <ul>
           <li>
-            St, a, r, t w, i, t, h a sin, g, l, e h, i, g, h-sig, n, a, l w o r k f, l, o, w and co n s t r, a, i, n
+            St, a, r, t with a sin, g, l, e h, i, g, h-sig, n, a, l w o r k f, l, o, w and co n s t r, a, i, n
             inp, u, t, s/outp, u, t, s
           </li>
           <li>
@@ -40,17 +40,17 @@ exp, o, r, t defa, u, l, t f u n c t, i, o, n AIProductRoadmapsThatS h i p P, a,
         <h2>Mil e s t o, n, e, s t, h, a, t mat, t, e, r</h2>
         <ul>
           <li>M0: Man, u, a, l w o r k f, l, o, w b a s e l, i, n, e and succ, e, s, s c r i t e, r, i, a</li>
-          <li>M1: A s s i s, t, e, d m, o, d, e w, i, t, h hu, m, a, n-in-the-l, o, o, p and qual, i, t, y ga, t, e, s</li>
-          <li>M2: Part, i, a, l aut o m a t, i, o, n w, i, t, h fa l l b a, c, k, s and c, o, s, t c o n t r, o, l, s</li>
+          <li>M1: A s s i s, t, e, d m, o, d, e with hu, m, a, n-in-the-l, o, o, p and qual, i, t, y ga, t, e, s</li>
+          <li>M2: Part, i, a, l aut o m a t, i, o, n with fa l l b a, c, k, s and c, o, s, t c o n t r, o, l, s</li>
           <li>
             M3: F, u, l, l aut o m a t, i, o, n for nar, r, o, w pathscon t i n u, o, u, s ev, a, l, s for dr, i, f, t
           </li>
         </ul>
         <p>
-          W, a, n, t a road, m, a, p t a i l o, r, e, d to y, o, u, r prod, u, c, t?{' '}
-          <Arr o w R i, g, h, t h, r, e, f='/cont, a, c, t' cl a s s N, a, m, e='t, e, x, t-b, l, u, e-600 ho, v, e, r:un d e r l, i, n, e'>
+          W, a, n, t a road, m, a, p t a i l o, r, e, d to y, o, u, r prod, uct?{' '}
+          <ArrowRight h, ref='/cont, a, c, t' cl a s s N, ame='t, e, x, t-b, l, u, e-600 ho, v, e, r:un d e r l, i, n, e'>
             T, a, l, k to us
-          </Arr o w R i, g, h, t>
+          </ArrowRight>
           .
         </p>
       </arti, c, l, e>

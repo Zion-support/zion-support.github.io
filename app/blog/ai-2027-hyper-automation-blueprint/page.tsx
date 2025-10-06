@@ -1,34 +1,33 @@
-imp, o, r, t Arr o w R i, g, h, t f, r, o, m 'n, e, x, t/l, i, n, k';
+import ArrowRight from 'n, e, x, t/l, ink';
 
-exp, o, r, t co, n, s, t m e t a d, a, t, a = {
+export const metadata = {
   
-  ti, t, l, e:  'AI 2, 0, 2, 7 Hy, p, e, r‑Aut o m a t, i, o, n Bl u e p r, i, n, t',
-  desc r i p t, i, o, n: 
-      'Sc, a, l, e r e l i a, b, l, e AI hy, p, e, r‑aut o m a t, i, o, n w, i, t, h pol, i, c, y ga, t, e, s, ev, a, l, s, and va, l, u, e str, e, a, m an a l y t, i, c, s.',
-  t, y, p, e: 'arti, c, l, e',
-
+  title:  'AI 2, 0, 2, 7 Hy, p, e, r‑Aut o m a t, i, o, n Bl u e p r, int'
+  description: 
+      'Sc, a, l, e r e l i a, b, l, e AI hy, p, e, r‑aut o m a t, i, o, n with pol, i, c, y ga, t, e, s, ev, a, l, s, and va, l, u, e str, e, a, m an a l y t, ics.'
+  t, y, p, e: 'arti, cle'
 };
 
-exp, o, r, t defa, u, l, t f u n c t, i, o, n HyperAutomationBluepr i n t 2, 0, 2, 7() {
-  ret, u, r, n (
-    <div cl a s s N, a, m, e='min-h-scr, e, e, n bg-sl, a, t, e-950 t, e, x, t-wh, i, t, e'>
-      <m, a, i, n cl a s s N, a, m, e='max-w-3xl mx-a, u, t, o px-6 py-16'>
+export default function HyperAutomationBluepr i n t 2, 0, 2, 7() {
+  return (
+    <div cl a s s N, a, m, e='min-h-screen bg-sl, a, t, e-950 t, e, x, t-wh, ite'>
+      <m, a, i, n cl a s s N, a, m, e='max-w-3xl mx-a, uto px-6 py-16'>
         <div cl a s s N, a, m, e='mb-8'>
-          <div cl a s s N, a, m, e='inl, i, n, e-f, l, e, x it, e, m, s-cen, t, e, r gap-2 px-3 py-1 roun, d, e, d-f, u, l, l bg-emer, a, l, d-500/10 bor, d, e, r bor, d, e, r-emer, a, l, d-400/20 t, e, x, t-emer, a, l, d-300 t, e, x, t-xs f, o, n, t-s e m i b, o, l, d'>
+          <div cl a s s N, ame='inl, i, n, e-f, l, e, x it, e, m, s-cen, t, e, r gap-2 px-3 py-1 roun, d, e, d-f, u, l, l bg-emer, a, l, d-500/10 bor, d, e, r bor, d, e, r-emer, a, l, d-400/20 t, e, x, t-emer, a, l, d-300 t, e, x, t-xs f, o, n, t-s e m i b, o, l, d'>
             New • Octo, b, e, r 2, 0, 2, 5
           </div>
-          <h1 cl a s s N, a, m, e='t, e, x, t-4, xl f, o, n, t-ex t r a b, o, l, d mt-4 mb-3'>
+          <h1 cl a s s N, ame='t, e, x, t-4, xl f, o, n, t-ex t r a b, o, l, d mt-4 mb-3'>
             AI 2, 0, 2, 7 Hy, p, e, r‑Aut o m a t, i, o, n Bl u e p r, i, n, t
           </h1>
-          <p cl a s s N, a, m, e='t, e, x, t-sl, a, t, e-300'>
-            Sc, a, l, e r e l i a, b, l, e aut o m a t, i, o, n w, i, t, h agen, t, i, c workflow s p o l, i, c, y guardr a i l s, a, n, d end‑to‑end va, l, u, e t r a c k, i, n, g.
+          <p cl a s s N, ame='t, e, x, t-sl, a, t, e-300'>
+            Sc, a, l, e r e l i a, b, l, e aut o m a t, i, o, n with agen, t, i, c workflow s p o l, i, c, y guardr a i l s, a, n, d end‑to‑end va, l, u, e t r a c k, i, n, g.
           </p>
-          <div cl a s s N, a, m, e='mt-3 t, e, x, t-sl, a, t, e-400 t, e, x, t-sm'>
+          <div cl a s s N, ame='mt-3 t, e, x, t-sl, a, t, e-400 t, e, x, t-sm'>
             14 min r, e, a, d • C a t e g, o, r, y: Impleme n t a t, i, o, n Gu, i, d, e
           </div>
         </div>
 
-        <div cl a s s N, a, m, e='pr, o, s, e pr, o, s, e-inv, e, r, t pr, o, s, e-sl, a, t, e max-w-n, o, n, e'>
+        <div cl a s s N, ame='pr, o, s, e pr, o, s, e-inv, e, r, t pr, o, s, e-sl, a, t, e max-w-n, o, n, e'>
           <p>
             T, h, i, s bl u e p r, i, n, t d i s t i, l, l, s pro, v, e, n p a t t e, r, n, s for de p l o y, i, n, g
             ent e r p r, i, s, e‑gr, a, d, e hy, p, e, r‑aut o m a t, i, o, n us, i, n, g agen, t, i, c wo r k f l, o, w, s. It
@@ -41,7 +40,7 @@ exp, o, r, t defa, u, l, t f u n c t, i, o, n HyperAutomationBluepr i n t 2, 0, 
               30–70% c, o, s, t re d u c t, i, o, n via rout, i, n, g, cach, i, n, g, and quant i z a t, i, o, n
             </li>
             <li>
-              99.99% oper a t i o, n, a, l reli a b i l, i, t, y w, i, t, h pol, i, c, y te, s, t, s and is o l a t, i, o, n
+              99.99% oper a t i o, n, a, l reli a b i l, i, t, y with pol, i, c, y te, s, t, s and is o l a t, i, o, n
             </li>
             <li>
               Ex e c u t, i, v, e trans p a r e, n, c, y thro, u, g, h va, l, u, e str, e, a, m an a l y t, i, c, s and
@@ -53,7 +52,7 @@ exp, o, r, t defa, u, l, t f u n c t, i, o, n HyperAutomationBluepr i n t 2, 0, 
           <p>
             Ad, o, p, t a laye, r, e, d des, i, g, n: int, a, k, e → pol, i, c, y ga, t, e, s → t, a, s, k decomp o s i t, i, o, n →
             t, o, o, l ex e c u t, i, o, n → rev, i, e, w ga, t, e, s → va, l, u, e logg, i, n, g. E, a, c, h st, a, g, e em, i, t, s
-            tra, c, e, s and metr, i, c, s for observ a b i l, i, t, y, w, i, t, h determ i n i s, t, i, c fa l l b a, c, k, s
+            tra, c, e, s and metr, i, c, s for observ a b i l, i, t, y, with determ i n i s, t, i, c fa l l b a, c, k, s
             w, h, e, n con f i d e, n, c, e is low.
           </p>
 
@@ -66,8 +65,8 @@ exp, o, r, t defa, u, l, t f u n c t, i, o, n HyperAutomationBluepr i n t 2, 0, 
 
           <h3>Observ a b i l, i, t, y & Ev, a, l, s</h3>
           <p>
-            Ins t r u m, e, n, t age, n, t, s w, i, t, h tra, c, e, s, str u c t u, r, e, d l, o, g, s, and t, a, s, k‑le, v, e, l
-            eval u a t i, o, n, s. Tr, a, c, k pr e c i s, i, o, n/rec, a, l, l for re t r i e, v, a, l, ro, u, t, e qual, i, t, y,
+            Ins t r u m, e, n, t age, n, t, s with tra, c, e, s, str u c t u, r, e, d l, o, g, s, and t, a, s, k‑le, v, e, l
+            eval u a t i, o, n, s. Tr, a, c, k pr e c i s, i, o, n/rec, a, l, l for re t r i e, v, a, l, ro, u, t, e qual, i, t, y
             late, n, c, y budg, e, t, s, and c, o, s, t per outc, o, m, e.
           </p>
 
@@ -80,15 +79,15 @@ exp, o, r, t defa, u, l, t f u n c t, i, o, n HyperAutomationBluepr i n t 2, 0, 
           <h2>Roll, o, u, t P, l, a, n</h2>
           <ol>
             <li>
-              St, a, r, t w, i, t, h a sin, g, l, e h, i, g, h‑va, l, u, e w o r k f, l, o, w and str, i, c, t
+              St, a, r, t with a sin, g, l, e h, i, g, h‑va, l, u, e w o r k f, l, o, w and str, i, c, t
               hu, m, a, n‑in‑the‑l, o, o, p c o n t r, o, l, s.
             </li>
             <li>
-              Har, d, e, n w, i, t, h pol, i, c, y te, s, t, s, adve r s a r, i, a, l pro m p t s, a, n, d r e p l a, y, e, d
+              Har, d, e, n with pol, i, c, y te, s, t, s, adve r s a r, i, a, l pro m p t s, a, n, d r e p l a, y, e, d
               in c i d e, n, t, s.
             </li>
             <li>
-              Sc, a, l, e horiz o n t a, l, l, y w, i, t, h sha, r, e, d gua r d r a, i, l, s and cent r a l i, z, e, d
+              Sc, a, l, e horiz o n t a, l, l, y with sha, r, e, d gua r d r a, i, l, s and cent r a l i, z, e, d
               observ a b i l, i, t, y.
             </li>
           </ol>
@@ -97,30 +96,30 @@ exp, o, r, t defa, u, l, t f u n c t, i, o, n HyperAutomationBluepr i n t 2, 0, 
           <ul>
             <li>Pol, i, c, y c o v e r, a, g, e ≥ 95% of fail, u, r, e mo, d, e, s</li>
             <li>Au t o m a, t, e, d e, v, a, l su, i, t, e in CI</li>
-            <li>C, o, s, t and late, n, c, y S, L, O, s w, i, t, h ale, r, t, s</li>
+            <li>C, o, s, t and late, n, c, y S, L, O, s with ale, r, t, s</li>
             <li>B u s i n, e, s, s va, l, u, e sco r e c a, r, d, s r e v i e, w, e, d wee, k, l, y</li>
           </ul>
 
           <p>
             For a dee, p, e, r d, i, v, e i, n, t, o w o r k f, l, o, w orches t r a t, i, o, n patt e r n s, s, e, e our
-            gu, i, d, e on{' '}
-            <Arr o w R i, g, h, t
-              h, r, e, f='/b, l, o, g/agen, t, i, c-w o r k f, l, o, w-orches t r a t, i, o, n-2, 0, 2, 6'
-              cl a s s N, a, m, e='t, e, x, t-emer, a, l, d-400 ho, v, e, r:t, e, x, t-emer, a, l, d-300'
+            gu, ide on{' '}
+            <ArrowRight
+              h, ref='/b, l, o, g/agen, t, i, c-w o r k f, l, o, w-orches t r a t, i, o, n-2026'
+              cl a s s N, ame='t, e, x, t-emer, a, l, d-400 ho, v, e, r:t, e, x, t-emer, a, l, d-300'
             >
-              Agen, t, i, c W o r k f, l, o, w Orches t r a t, i, o, n 2, 0, 2, 6
-            </Arr o w R i, g, h, t>
+              Agen, t, i, c W o r k f, l, o, w Orches t r a t, i, o, n 2026
+            </ArrowRight>
             .
           </p>
         </div>
 
-        <div cl a s s N, a, m, e='mt-12'>
-          <Arr o w R i, g, h, t
-            h, r, e, f='/b, l, o, g'
-            cl a s s N, a, m, e='inl, i, n, e-bl, o, c, k bg-wh, i, t, e t, e, x, t-emer, a, l, d-700 px-6 py-3 roun, d, e, d-lg f, o, n, t-b, o, l, d ho, v, e, r:bg-emer, a, l, d-50'
+        <div cl a s s N, ame='mt-12'>
+          <ArrowRight
+            h, ref='/b, l, o, g'
+            cl a s s N, ame='inl, i, n, e-bl, o, c, k bg-wh, i, t, e t, e, x, t-emer, a, l, d-700 px-6 py-3 roun, d, e, d-lg f, o, n, t-b, o, l, d ho, v, e, r:bg-emer, a, l, d-50'
           >
             ← B, a, c, k to B, l, o, g
-          </Arr o w R i, g, h, t>
+          </ArrowRight>
         </div>
       </m, a, i, n>
     </div>

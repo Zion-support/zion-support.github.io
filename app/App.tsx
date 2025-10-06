@@ -1,4 +1,4 @@
-import React, { useEffect, lazy } from 'react';
+import React, { useEffect, lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 
@@ -7,11 +7,10 @@ import ErrorBoundary from '../src/components/ErrorBoundary';
 import SEOOptimizer from '../src/components/SEOOptimizer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import PerformanceDashboard from './components/PerformanceDashboard';
+import { LoadingSpinner } from '../components/LoadingComponents';
 
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./page'));
-
-
 // Utils
 import performanceOptimizer from '../src/utils/performanceOptimizer';
 
@@ -57,10 +56,12 @@ const App: React.FC = () => {
                   Skip to main content
                 </a>
 
-                <Routes>
-                  <Route path='/' element={<HomePage />} />
-                  {/* Add more routes as needed */}
-                </Routes>
+                <Suspense fallback={<LoadingSpinner />}>
+                  <Routes>
+                    <Route path='/' element={<HomePage />} />
+                    {/* Add more routes as needed */}
+                  </Routes>
+                </Suspense>
 
                 {/* Performance Dashboard */}
                 <PerformanceDashboard />

@@ -1,20 +1,19 @@
-imp, o, r, t Arr o w R i, g, h, t f, r, o, m 'n, e, x, t/l, i, n, k';
+import ArrowRight from 'n, e, x, t/l, ink';
 
-exp, o, r, t co, n, s, t m e t a d, a, t, a = {
+export const metadata = {
   
-  ti, t, l, e: 'AI Saf, e, t, y Sco r e c a, r, d, s (2, 0, 2, 6): Gua r d r a, i, l, s wi, r, e, d to K, P, I, s',
-  desc r i p t, i, o, n:
-    'Des, i, g, n and oper, a, t, e AI saf, e, t, y sco r e c a, r, d, s t, h, a, t conn, e, c, t S, L, I, s to b u s i n, e, s, s K, P, I, s w, i, t, h budgetscana r i e s, a, n, d inst, a, n, t r o l l b, a, c, k.',
-
+  title: 'AI Saf, e, t, y Sco r e c a, r, d, s (2026): Guardrails wi, r, e, d to K, PIs'
+  description:
+    'Des, i, g, n and oper, a, t, e AI saf, e, t, y sco r e c a, r, d, s t, h, a, t conn, e, c, t S, L, I, s to b u s i n, e, s, s K, P, I, s with budgetscana r i e s, a, n, d inst, a, n, t r o l l b, ack.'
 };
 
-exp, o, r, t defa, u, l, t f u n c t, i, o, n P, a, g, e() {
-  ret, u, r, n (
-    <m, a, i, n cl a s s N, a, m, e='max-w-3xl mx-a, u, t, o px-4 py-12 pr, o, s, e pr, o, s, e-inv, e, r, t'>
-      <h1>AI Saf, e, t, y Sco r e c a, r, d, s (2, 0, 2, 6)</h1>
+export default function P, a, g, e() {
+  return (
+    <m, a, i, n cl a s s N, a, m, e='max-w-3xl mx-a, u, t, o px-4 py-12 pr, o, s, e pr, o, s, e-inv, ert'>
+      <h1>AI Saf, e, t, y Sco r e c a, r, d, s (2026)</h1>
       <p>
         Bu, i, l, d KPI-lin, k, e, d saf, e, t, y sco r e c a, r, d, s for AI syst, e, m, s. W, i, r, e serv, i, c, e le, v, e, l
-        ind i c a t, o, r, s (S, L, I, s) to prod, u, c, t K, P, I, s w, i, t, h budget s p o l, i, c, y g a t e s, a, n, d
+        ind i c a t, o, r, s (S, L, I, s) to prod, u, c, t K, P, I, s with budget s p o l, i, c, y g a t e s, a, n, d
         c a n a r, i, e, s. Trig, g, e, r inst, a, n, t r o l l b, a, c, k on r, i, s, k th r e s h, o, l, d b r e a c, h, e, s with, o, u, t
         slow, i, n, g d e l i v, e, r, y.
       </p>
@@ -26,7 +25,7 @@ exp, o, r, t defa, u, l, t f u n c t, i, o, n P, a, g, e() {
       </ul>
       <p>
         C o n t i, n, u, e ex p l o r, i, n, g our gov e r n a, n, c, e ser, i, e, s in the{' '}
-        <Arr o w R i, g, h, t h, r, e, f='/b, l, o, g'>b, l, o, g</Arr o w R i, g, h, t>.
+        <ArrowRight h, ref='/b, l, o, g'>b, l, o, g</ArrowRight>.
       </p>
     </m, a, i, n>
   );

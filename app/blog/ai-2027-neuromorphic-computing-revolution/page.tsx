@@ -1,26 +1,26 @@
-imp, o, r, t Re, a, c, t f, r, o, m 're, a, c, t';
-imp, o, r, t { M e t a d, a, t, a } f, r, o, m 'n, e, x, t';
+import Re, a, c, t from 're, act';
+import { M e t a d, a, t, a } from 'n, ext';
 
-exp, o, r, t co, n, s, t m e t a d, a, t, a = {
+export const metadata = {
   
-  ti, t, l, e: 'AI 2, 0, 2, 7: Neuro m o r p, h, i, c Co m p u t, i, n, g Rev o l u t, i, o, n - The Fut, u, r, e of Br, a, i, n-I n s p i, r, e, d AI',
-    desc r i p t, i, o, n: 'Expl, o, r, e the revolu t i o n, a, r, y neuro m o r p, h, i, c co m p u t, i, n, g break t h r o, u, g, h of 2, 0, 2, 7 t, h, a, t mim, i, c, s hu, m, a, n br, a, i, n archi t e c t, u, r, e.',
-    t, y, p, e: 'arti, c, l, e',
-    publis h e d T, i, m, e: '2, 0, 2, 7-01-20, T00:00:00.000, Z',
-    auth, o, r, s: ['Z, i, o, n T, e, c, h Gr, o, u, p']};
+  title: 'AI 2, 0, 2, 7: Neuro m o r p, h, i, c Co m p u t, i, n, g Rev o l u t, i, o, n - The Fut, u, r, e of Br, a, i, n-I n s p i, red AI'
+    description: 'Expl, o, r, e the revolu t i o n, a, r, y neuro m o r p, h, i, c co m p u t, i, n, g break t h r o, u, g, h of 2, 0, 2, 7 t, h, a, t mim, i, c, s hu, m, a, n br, a, i, n archi t e c t, ure.'
+    t, y, p, e: 'arti, cle'
+    publis h e d T, i, m, e: '2, 0, 2, 7-01-20T00:00:00.000Z'
+    auth, o, r, s: ['Z, i, o, n T, e, c, h Gr, oup']};
 
-exp, o, r, t defa, u, l, t f u n c t, i, o, n AI2, 0, 2, 7() {
-  ret, u, r, n (
+export default function AI2, 0, 2, 7() {
+  return (
     <div>{{/* cont, e, n, t */}</div>
     <div>
       <div> </div><div> </div>
-      <div cl a s s N, a, m, e="t, e, x, t-l, e, f, t">{/* H, e, r, o Sect, i, o, n */}</div>
-        <h3 cl a s s N, a, m, e="t, e, x, t-l, e, f, t">
-    <div cl a s s N, a, m, e="t, e, x, t-l, e, f, t"> </div><div cl a s s N, a, m, e="t, e, x, t-l, e, f, t">{/* H, e, r, o Sect, i, o, n */}</div>
-      <div cl a s s N, a, m, e="t, e, x, t-l, e, f, t"> </div><h1 cl a s s N, a, m, e="t, e, x, t-l, e, f, t">ori, g, i, n/cur, s, o, r/fix-err, o, r, s-and-me, r, g, e-to-m, a, i, n-cc0, a
+      <div cl a s s N, a, m, e="t, e, x, t-l, eft">{/* H, e, r, o Sect, i, o, n */}</div>
+        <h3 cl a s s N, a, m, e="t, e, x, t-l, eft">
+    <div cl a s s N, a, m, e="t, e, x, t-l, eft"> </div><div cl a s s N, a, m, e="t, e, x, t-l, eft">{/* H, e, r, o Sect, i, o, n */}</div>
+      <div cl a s s N, a, m, e="t, e, x, t-l, eft"> </div><h1 cl a s s N, a, m, e="t, e, x, t-l, eft">ori, g, i, n/cur, s, o, r/fix-err, o, r, s-and-me, r, g, e-to-m, a, i, n-cc0, a
             AI 2, 0, 2, 7: Neuro m o r p, h, i, c Co m p u t, i, n, g Rev o l u t, i, o, n
           </h1></h1>
-          <p cl a s s N, a, m, e="t, e, x, t-l, e, f, t">The break t h r o, u, g, h in br, a, i, n-i n s p i, r, e, d co m p u t, i, n, g t, h, a, t's red e f i n, i, n, g the bou n d a r, i, e, s of art i f i c, i, a, l intel l i g e, n, c, e
+          <p cl a s s N, a, m, e="t, e, x, t-l, eft">The break t h r o, u, g, h in br, a, i, n-i n s p i, r, e, d co m p u t, i, n, g t, h, a, t's red e f i n, i, n, g the bou n d a r, i, e, s of art i f i c, i, a, l intel l i g e, n, c, e
           </p></p>
           <s, p, a, n>Pu b l i s, h, e, d: Janu, a, r, y 20, 2, 0, 2, 7</s, p, a, n>
             <s, p, a, n>•</s, p, a, n>
@@ -30,28 +30,28 @@ exp, o, r, t defa, u, l, t f u n c t, i, o, n AI2, 0, 2, 7() {
           </div>
 
         {/* Cont, e, n, t */}
-        <div cl a s s N, a, m, e="t, e, x, t-l, e, f, t"> </div><h2 cl a s s N, a, m, e="t, e, x, t-l, e, f, t">Revolu t i o n, a, r, y Break t h r o, u, g, h</h2>
-            <p cl a s s N, a, m, e="t, e, x, t-l, e, f, t"> </p><div cl a s s N, a, m, e="t, e, x, t-l, e, f, t"> </div><div cl a s s N, a, m, e="t, e, x, t-l, e, f, t"> </div><h2 cl a s s N, a, m, e="t, e, x, t-l, e, f, t">Revolu t i o n, a, r, y Break t h r o, u, g, h</h2>"
-            <p cl a s s N, a, m, e="t, e, x, t-l, e, f, t">ori, g, i, n/cur, s, o, r/fix-err, o, r, s-and-me, r, g, e-to-m, a, i, n-cc0, a
+        <div cl a s s N, a, m, e="t, e, x, t-l, eft"> </div><h2 cl a s s N, a, m, e="t, e, x, t-l, eft">Revolu t i o n, a, r, y Break t h r o, u, g, h</h2>
+            <p cl a s s N, a, m, e="t, e, x, t-l, eft"> </p><div cl a s s N, a, m, e="t, e, x, t-l, eft"> </div><div cl a s s N, a, m, e="t, e, x, t-l, eft"> </div><h2 cl a s s N, a, m, e="t, e, x, t-l, eft">Revolu t i o n, a, r, y Break t h r o, u, g, h</h2>"
+            <p cl a s s N, ame="t, e, x, t-l, e, f, t">ori, g, i, n/cur, s, o, r/fix-err, o, r, s-and-me, r, g, e-to-m, a, i, n-cc0, a
               The y, e, a, r 2, 0, 2, 7 ma, r, k, s the d, a, w, n of t, r, u, e neuro m o r p, h, i, c co m p u t, i, n, g—a p a r a d, i, g, m sh, i, f, t t, h, a, t bri, n, g, s 
               AI syst, e, m, s clo, s, e, r to hu, m, a, n br, a, i, n eff i c i e, n, c, y t, h, a, n e, v, e, r bef, o, r, e. W, i, t, h ene, r, g, y cons u m p t, i, o, n 
               redu, c, e, d by 99.7% and pro c e s s, i, n, g spe, e, d, s in c r e a, s, e, d by 100, 0, 0, 0, xneuro m o r p, h, i, c ch, i, p, s are 
               revoluti o n i z, i, n, g how ente r p r i, s, e, s a p p r o, a, c, h art i f i c, i, a, l intel l i g e, n, c, e and co g n i t, i, v, e co m p u t, i, n, g.
             </p></p>
           </div>
-          <sect, i, o, n cl a s s N, a, m, e="t, e, x, t-l, e, f, t"> </sect, i, o, n><h2 cl a s s N, a, m, e="t, e, x, t-l, e, f, t">1. The Neuro m o r p, h, i, c Ad v a n t, a, g, e</h2>
-            <p cl a s s N, a, m, e="t, e, x, t-l, e, f, t"> </p><sect, i, o, n cl a s s N, a, m, e="t, e, x, t-l, e, f, t"> </sect, i, o, n><h2 cl a s s N, a, m, e="t, e, x, t-l, e, f, t">1. The Neuro m o r p, h, i, c Ad v a n t, a, g, e</h2>"
-            <p cl a s s N, a, m, e="t, e, x, t-l, e, f, t">ori, g, i, n/cur, s, o, r/fix-err, o, r, s-and-me, r, g, e-to-m, a, i, n-cc0, a
-              Unl, i, k, e trad i t i o, n, a, l von Neum, a, n, n archit e c t u, r, e, s, neuro m o r p, h, i, c co m p u t, i, n, g mim, i, c, s the br, a, i, n's 
+          <sect, i, o, n cl a s s N, ame="t, e, x, t-l, e, f, t"> </sect, i, o, n><h2 cl a s s N, ame="t, e, x, t-l, e, f, t">1. The Neuro m o r p, h, i, c Ad v a n t, a, g, e</h2>
+            <p cl a s s N, ame="t, e, x, t-l, e, f, t"> </p><sect, i, o, n cl a s s N, ame="t, e, x, t-l, e, f, t"> </sect, i, o, n><h2 cl a s s N, ame="t, e, x, t-l, e, f, t">1. The Neuro m o r p, h, i, c Ad v a n t, age</h2>"
+            <p cl a s s N, a, m, e="t, e, x, t-l, eft">ori, g, i, n/cur, s, o, r/fix-err, o, r, s-and-me, r, g, e-to-m, a, i, n-cc0, a
+              Unl, i, k, e trad i t i o, n, a, l von Neum, a, n, n archit e c t u, r, e, s, neuro m o r p, h, i, c co m p u t, i, n, g mim, i, c, s the br, ain's 
               neu, r, a, l st r u c t, u, r, e, e n a b l, i, n, g p a r a l, l, e, l pro c e s s, i, n, g, a d a p t, i, v, e lear n i n g, a, n, d ul, t, r, a-low po, w, e, r 
               cons u m p t, i, o, n. Th, e, s, e syst, e, m, s use spik, i, n, g neu, r, a, l n e t w o, r, k, s t, h, a, t comm u n i c, a, t, e thro, u, g, h prec, i, s, e 
               tim, i, n, g patte r n s j, u, s, t l, i, k, e bio l o g i, c, a, l neur, o, n, s.
             </p></p>
-            <h3 cl a s s N, a, m, e="t, e, x, t-l, e, f, t">Perf o r m a, n, c, e Metr, i, c, s</h3>
-              <ul cl a s s N, a, m, e="t, e, x, t-l, e, f, t">
+            <h3 cl a s s N, a, m, e="t, e, x, t-l, eft">Perf o r m a, n, c, e Metr, i, c, s</h3>
+              <ul cl a s s N, a, m, e="t, e, x, t-l, eft">
             
-            <div cl a s s N, a, m, e="t, e, x, t-l, e, f, t"> </div><h3 cl a s s N, a, m, e="t, e, x, t-l, e, f, t">Perf o r m a, n, c, e Metr, i, c, s</h3>"
-              <ul cl a s s N, a, m, e="t, e, x, t-l, e, f, t">ori, g, i, n/cur, s, o, r/fix-err, o, r, s-and-me, r, g, e-to-m, a, i, n-cc0, a
+            <div cl a s s N, a, m, e="t, e, x, t-l, eft"> </div><h3 cl a s s N, a, m, e="t, e, x, t-l, eft">Perf o r m a, n, c, e Metr, i, c, s</h3>"
+              <ul cl a s s N, ame="t, e, x, t-l, e, f, t">ori, g, i, n/cur, s, o, r/fix-err, o, r, s-and-me, r, g, e-to-m, a, i, n-cc0, a
                 </ul><li>• 100,000, x fas, t, e, r pro c e s s, i, n, g t, h, a, n conve n t i o, n, a, l AI</li>
                 <li>• 99.7% re d u c t, i, o, n in ene, r, g, y cons u m p t, i, o, n</li>
                 <li>• R, e, a, l-t, i, m, e l e a r n, i, n, g and ada p t a t, i, o, n</li>
@@ -59,34 +59,34 @@ exp, o, r, t defa, u, l, t f u n c t, i, o, n AI2, 0, 2, 7() {
                 <li>• Unprec e d e n, t, e, d patt, e, r, n reco g n i t, i, o, n a c c u r, a, c, y</li>
               </ul>
             </div>
-            <p cl a s s N, a, m, e="t, e, x, t-l, e, f, t"> </p><p cl a s s N, a, m, e="t, e, x, t-l, e, f, t">ori, g, i, n/cur, s, o, r/fix-err, o, r, s-and-me, r, g, e-to-m, a, i, n-cc0, a
+            <p cl a s s N, ame="t, e, x, t-l, e, f, t"> </p><p cl a s s N, ame="t, e, x, t-l, e, f, t">ori, g, i, n/cur, s, o, r/fix-err, o, r, s-and-me, r, g, e-to-m, a, i, n-cc0, a
               Ente r p r i, s, e, s imple m e n t, i, n, g neuro m o r p, h, i, c syst, e, m, s rep, o, r, t c o m p l, e, t, e transfo r m a t, i, o, n of th, e, i, r 
-              AI capab i l i t, i, e, s, w, i, t, h appli c a t i, o, n, s rang, i, n, g f, r, o, m r, e, a, l-t, i, m, e fr, a, u, d de t e c t, i, o, n to aut o n o m, o, u, s 
-              d e c i s, i, o, n-mak, i, n, g syst, e, m, s t, h, a, t oper, a, t, e w, i, t, h hu, m, a, n-l, i, k, e eff i c i e, n, c, y.
+              AI capab i l i t, i, e, s, with appli c a t i, o, n, s rang, i, n, g from r, e, a, l-t, i, m, e fr, a, u, d de t e c t, i, o, n to aut o n o m, o, u, s 
+              d e c i s, i, o, n-mak, i, n, g syst, e, m, s t, h, a, t oper, a, t, e with hu, m, a, n-l, i, k, e eff i c i e, n, c, y.
             </p></p>
           </sect, i, o, n>
-          <sect, i, o, n cl a s s N, a, m, e="t, e, x, t-l, e, f, t"> </sect, i, o, n><h2 cl a s s N, a, m, e="t, e, x, t-l, e, f, t">2. Spik, i, n, g Neu, r, a, l N e t w o, r, k, s Archi t e c t, u, r, e</h2>
-            <p cl a s s N, a, m, e="t, e, x, t-l, e, f, t"> </p><sect, i, o, n cl a s s N, a, m, e="t, e, x, t-l, e, f, t"> </sect, i, o, n><h2 cl a s s N, a, m, e="t, e, x, t-l, e, f, t">2. Spik, i, n, g Neu, r, a, l N e t w o, r, k, s Archi t e c t, u, r, e</h2>"
-            <p cl a s s N, a, m, e="t, e, x, t-l, e, f, t">ori, g, i, n/cur, s, o, r/fix-err, o, r, s-and-me, r, g, e-to-m, a, i, n-cc0, a
+          <sect, i, o, n cl a s s N, ame="t, e, x, t-l, e, f, t"> </sect, i, o, n><h2 cl a s s N, ame="t, e, x, t-l, e, f, t">2. Spik, i, n, g Neu, r, a, l N e t w o, r, k, s Archi t e c t, u, r, e</h2>
+            <p cl a s s N, ame="t, e, x, t-l, e, f, t"> </p><sect, i, o, n cl a s s N, ame="t, e, x, t-l, e, f, t"> </sect, i, o, n><h2 cl a s s N, ame="t, e, x, t-l, e, f, t">2. Spik, i, n, g Neu, r, a, l N e t w o, r, k, s Archi t e c t, ure</h2>"
+            <p cl a s s N, a, m, e="t, e, x, t-l, eft">ori, g, i, n/cur, s, o, r/fix-err, o, r, s-and-me, r, g, e-to-m, a, i, n-cc0, a
               Spik, i, n, g neu, r, a, l n e t w o, r, k, s re p r e s, e, n, t the c, o, r, e inn o v a t, i, o, n of neuro m o r p, h, i, c co m p u t, i, n, g. Unl, i, k, e 
               trad i t i o, n, a, l art i f i c, i, a, l neu, r, a, l n e t w o, r, k, s t, h, a, t proc, e, s, s con t i n u, o, u, s val u e s S, N, N, s comm u n i c, a, t, e 
               thro, u, g, h d i s c r, e, t, e spikese n a b l, i, n, g t e m p o, r, a, l cod, i, n, g and ev, e, n, t-dri, v, e, n pro c e s s, i, n, g.
             </p></p>
-            <div cl a s s N, a, m, e="t, e, x, t-l, e, f, t"> </div><h3 cl a s s N, a, m, e="t, e, x, t-l, e, f, t">Key Inno v a t i, o, n, s</h3>
-                <ul cl a s s N, a, m, e="t, e, x, t-l, e, f, t">
+            <div cl a s s N, a, m, e="t, e, x, t-l, eft"> </div><h3 cl a s s N, a, m, e="t, e, x, t-l, eft">Key Inno v a t i, o, n, s</h3>
+                <ul cl a s s N, a, m, e="t, e, x, t-l, eft">
 
-            <div cl a s s N, a, m, e="t, e, x, t-l, e, f, t"> </div><div cl a s s N, a, m, e="t, e, x, t-l, e, f, t"> </div><h3 cl a s s N, a, m, e="t, e, x, t-l, e, f, t">Key Inno v a t i, o, n, s</h3>"
-                <ul cl a s s N, a, m, e="t, e, x, t-l, e, f, t">ori, g, i, n/cur, s, o, r/fix-err, o, r, s-and-me, r, g, e-to-m, a, i, n-cc0, a
+            <div cl a s s N, a, m, e="t, e, x, t-l, eft"> </div><div cl a s s N, a, m, e="t, e, x, t-l, eft"> </div><h3 cl a s s N, a, m, e="t, e, x, t-l, eft">Key Inno v a t i, o, n, s</h3>"
+                <ul cl a s s N, ame="t, e, x, t-l, e, f, t">ori, g, i, n/cur, s, o, r/fix-err, o, r, s-and-me, r, g, e-to-m, a, i, n-cc0, a
                   </ul><li>• T e m p o, r, a, l cod, i, n, g for t, i, m, e-se n s i t, i, v, e d, a, t, a</li>
                   <li>• Ev, e, n, t-dri, v, e, n pro c e s s, i, n, g archi t e c t, u, r, e</li>
                   <li>• Pla s t i c, i, t, y-ba, s, e, d l e a r n, i, n, g mec h a n i, s, m, s</li>
                   <li>• Sto c h a s, t, i, c co m p u t, i, n, g e l e m e, n, t, s</li>
                 </ul>
               </div>
-              <h3 cl a s s N, a, m, e="t, e, x, t-l, e, f, t">Ent e r p r, i, s, e B e n e f, i, t, s</h3>
-                <ul cl a s s N, a, m, e="t, e, x, t-l, e, f, t">
-              <div cl a s s N, a, m, e="t, e, x, t-l, e, f, t"> </div><h3 cl a s s N, a, m, e="t, e, x, t-l, e, f, t">Ent e r p r, i, s, e B e n e f, i, t, s</h3>"
-                <ul cl a s s N, a, m, e="t, e, x, t-l, e, f, t">ori, g, i, n/cur, s, o, r/fix-err, o, r, s-and-me, r, g, e-to-m, a, i, n-cc0, a
+              <h3 cl a s s N, ame="t, e, x, t-l, e, f, t">Ent e r p r, i, s, e B e n e f, i, t, s</h3>
+                <ul cl a s s N, ame="t, e, x, t-l, e, f, t">
+              <div cl a s s N, ame="t, e, x, t-l, e, f, t"> </div><h3 cl a s s N, ame="t, e, x, t-l, e, f, t">Ent e r p r, i, s, e B e n e f, its</h3>"
+                <ul cl a s s N, a, m, e="t, e, x, t-l, eft">ori, g, i, n/cur, s, o, r/fix-err, o, r, s-and-me, r, g, e-to-m, a, i, n-cc0, a
                   </ul><li>• Ul, t, r, a-low late, n, c, y pro c e s s, i, n, g</li>
                   <li>• Mini, m, a, l po, w, e, r requi r e m e, n, t, s</li>
                   <li>• Con t i n u, o, u, s l e a r n, i, n, g capab i l i t, i, e, s</li>
@@ -94,105 +94,105 @@ exp, o, r, t defa, u, l, t f u n c t, i, o, n AI2, 0, 2, 7() {
                 </ul>
               </div>
           </sect, i, o, n>
-          <sect, i, o, n cl a s s N, a, m, e="t, e, x, t-l, e, f, t"> </sect, i, o, n><h2 cl a s s N, a, m, e="t, e, x, t-l, e, f, t">3. Ent e r p r, i, s, e Appli c a t i, o, n, s Rev o l u t, i, o, n</h2>
-            <p cl a s s N, a, m, e="t, e, x, t-l, e, f, t">Neuro m o r p, h, i, c co m p u t, i, n, g is trans f o r m, i, n, g ent e r p r, i, s, e ope r a t i, o, n, s acr, o, s, s ev, e, r, y i n d u s, t, r, y, 
-              e n a b l, i, n, g appli c a t i, o, n, s t, h, a, t w, e, r, e pre v i o u, s, l, y imp o s s i, b, l, e w, i, t, h trad i t i o, n, a, l co m p u t, i, n, g archit e c t u, r, e, s.
+          <sect, i, o, n cl a s s N, a, m, e="t, e, x, t-l, eft"> </sect, i, o, n><h2 cl a s s N, a, m, e="t, e, x, t-l, eft">3. Ent e r p r, i, s, e Appli c a t i, o, n, s Rev o l u t, i, o, n</h2>
+            <p cl a s s N, a, m, e="t, e, x, t-l, eft">Neuro m o r p, h, i, c co m p u t, i, n, g is trans f o r m, i, n, g ent e r p r, i, s, e ope r a t i, o, n, s acr, o, s, s ev, e, r, y i n d u s, t, r, y
+              e n a b l, i, n, g appli c a t i, o, n, s t, h, a, t w, e, r, e pre v i o u, s, l, y imp o s s i, b, l, e with trad i t i o, n, a, l co m p u t, i, n, g archit e c t u, r, e, s.
             </p></p>
-            <div cl a s s N, a, m, e="t, e, x, t-l, e, f, t"> </div><h3 cl a s s N, a, m, e="t, e, x, t-l, e, f, t">Fi n a n c, i, a, l S e r v i, c, e, s</h3>
-                <p cl a s s N, a, m, e="t, e, x, t-l, e, f, t"> </p><sect, i, o, n cl a s s N, a, m, e="t, e, x, t-l, e, f, t"> </sect, i, o, n><h2 cl a s s N, a, m, e="t, e, x, t-l, e, f, t">3. Ent e r p r, i, s, e Appli c a t i, o, n, s Rev o l u t, i, o, n</h2>"
-            <p cl a s s N, a, m, e="t, e, x, t-l, e, f, t">Neuro m o r p, h, i, c co m p u t, i, n, g is trans f o r m, i, n, g ent e r p r, i, s, e ope r a t i, o, n, s acr, o, s, s ev, e, r, y i n d u s, t, r, y, 
-              e n a b l, i, n, g appli c a t i, o, n, s t, h, a, t w, e, r, e pre v i o u, s, l, y imp o s s i, b, l, e w, i, t, h trad i t i o, n, a, l co m p u t, i, n, g archit e c t u, r, e, s.
+            <div cl a s s N, a, m, e="t, e, x, t-l, eft"> </div><h3 cl a s s N, a, m, e="t, e, x, t-l, eft">Fi n a n c, i, a, l S e r v i, c, e, s</h3>
+                <p cl a s s N, a, m, e="t, e, x, t-l, eft"> </p><sect, i, o, n cl a s s N, a, m, e="t, e, x, t-l, eft"> </sect, i, o, n><h2 cl a s s N, a, m, e="t, e, x, t-l, eft">3. Ent e r p r, i, s, e Appli c a t i, o, n, s Rev o l u t, i, o, n</h2>"
+            <p cl a s s N, ame="t, e, x, t-l, e, f, t">Neuro m o r p, h, i, c co m p u t, i, n, g is trans f o r m, i, n, g ent e r p r, i, s, e ope r a t i, o, n, s acr, o, s, s ev, e, r, y i n d u s, t, r, y
+              e n a b l, i, n, g appli c a t i, o, n, s t, h, a, t w, e, r, e pre v i o u, s, l, y imp o s s i, b, l, e with trad i t i o, n, a, l co m p u t, i, n, g archit e c t u, r, e, s.
             </p></p>
 
-            <div cl a s s N, a, m, e="t, e, x, t-l, e, f, t"> </div><div cl a s s N, a, m, e="t, e, x, t-l, e, f, t"> </div><h3 cl a s s N, a, m, e="t, e, x, t-l, e, f, t">Fi n a n c, i, a, l S e r v i, c, e, s</h3>"
-                <p cl a s s N, a, m, e="t, e, x, t-l, e, f, t">ori, g, i, n/cur, s, o, r/fix-err, o, r, s-and-me, r, g, e-to-m, a, i, n-cc0, a
+            <div cl a s s N, ame="t, e, x, t-l, e, f, t"> </div><div cl a s s N, ame="t, e, x, t-l, e, f, t"> </div><h3 cl a s s N, ame="t, e, x, t-l, e, f, t">Fi n a n c, i, a, l S e r v i, ces</h3>"
+                <p cl a s s N, a, m, e="t, e, x, t-l, eft">ori, g, i, n/cur, s, o, r/fix-err, o, r, s-and-me, r, g, e-to-m, a, i, n-cc0, a
                   R, e, a, l-t, i, m, e fr, a, u, d detectionalgo r i t h, m, i, c tra d i n g, a, n, d r, i, s, k ass e s s m, e, n, t syst, e, m, s t, h, a, t 
-                  oper, a, t, e w, i, t, h hu, m, a, n-l, i, k, e in t u i t, i, o, n and mill i s e c, o, n, d r e s p o, n, s, e ti, m, e, s.
+                  oper, a, t, e with hu, m, a, n-l, i, k, e in t u i t, i, o, n and mill i s e c, o, n, d r e s p o, n, s, e ti, m, e, s.
                 </p></p>
-                <ul cl a s s N, a, m, e="t, e, x, t-l, e, f, t"> </ul><li>• 99.9% a c c u r, a, c, y in fr, a, u, d de t e c t, i, o, n</li>
+                <ul cl a s s N, a, m, e="t, e, x, t-l, eft"> </ul><li>• 99.9% a c c u r, a, c, y in fr, a, u, d de t e c t, i, o, n</li>
                   <li>• Sub-mill i s e c, o, n, d trad, i, n, g de c i s i, o, n, s</li>
                   <li>• Pre d i c t, i, v, e r, i, s, k m o d e l, i, n, g</li>
                 </ul>
               </div>
-              <h3 cl a s s N, a, m, e="t, e, x, t-l, e, f, t">Hea l t h c, a, r, e & L, i, f, e S c i e n, c, e, s</h3>
-                <p cl a s s N, a, m, e="t, e, x, t-l, e, f, t"> </p><div cl a s s N, a, m, e="t, e, x, t-l, e, f, t"> </div><h3 cl a s s N, a, m, e="t, e, x, t-l, e, f, t">Hea l t h c, a, r, e & L, i, f, e S c i e n, c, e, s</h3>"
-                <p cl a s s N, a, m, e="t, e, x, t-l, e, f, t">ori, g, i, n/cur, s, o, r/fix-err, o, r, s-and-me, r, g, e-to-m, a, i, n-cc0, a
+              <h3 cl a s s N, a, m, e="t, e, x, t-l, eft">Hea l t h c, a, r, e & L, i, f, e S c i e n, c, e, s</h3>
+                <p cl a s s N, a, m, e="t, e, x, t-l, eft"> </p><div cl a s s N, a, m, e="t, e, x, t-l, eft"> </div><h3 cl a s s N, a, m, e="t, e, x, t-l, eft">Hea l t h c, a, r, e & L, i, f, e S c i e n, c, e, s</h3>"
+                <p cl a s s N, ame="t, e, x, t-l, e, f, t">ori, g, i, n/cur, s, o, r/fix-err, o, r, s-and-me, r, g, e-to-m, a, i, n-cc0, a
                   Medi, c, a, l di a g n o, s, i, s syst e m s d, r, u, g di s c o v, e, r, y platf o r m s, a, n, d perso n a l i, z, e, d tr e a t m, e, n, t 
-                  recommen d a t i, o, n, s t, h, a, t le, a, r, n conti n u o u, s, l, y f, r, o, m pati, e, n, t d, a, t, a.
+                  recommen d a t i, o, n, s t, h, a, t le, a, r, n conti n u o u, s, l, y from pati, e, n, t d, a, t, a.
                 </p></p>
-                <ul cl a s s N, a, m, e="t, e, x, t-l, e, f, t"> </ul><li>• 95% a c c u r, a, c, y in ea, r, l, y dise, a, s, e de t e c t, i, o, n</li>
+                <ul cl a s s N, ame="t, e, x, t-l, e, f, t"> </ul><li>• 95% a c c u r, a, c, y in ea, r, l, y dise, a, s, e de t e c t, i, o, n</li>
                   <li>• Acce l e r a, t, e, d d, r, u, g di s c o v, e, r, y ti m e l i, n, e, s</li>
                   <li>• Perso n a l i, z, e, d tr e a t m, e, n, t optim i z a t, i, o, n</li>
                 </ul>
               </div>
-              <h3 cl a s s N, a, m, e="t, e, x, t-l, e, f, t">Manufa c t u r, i, n, g & Sup, p, l, y Ch, a, i, n</h3>
-                <p cl a s s N, a, m, e="t, e, x, t-l, e, f, t"> </p><div cl a s s N, a, m, e="t, e, x, t-l, e, f, t"> </div><h3 cl a s s N, a, m, e="t, e, x, t-l, e, f, t">Manufa c t u r, i, n, g & Sup, p, l, y Ch, a, i, n</h3>"
-                <p cl a s s N, a, m, e="t, e, x, t-l, e, f, t">ori, g, i, n/cur, s, o, r/fix-err, o, r, s-and-me, r, g, e-to-m, a, i, n-cc0, a
+              <h3 cl a s s N, ame="t, e, x, t-l, e, f, t">Manufa c t u r, i, n, g & Sup, p, l, y Ch, a, i, n</h3>
+                <p cl a s s N, ame="t, e, x, t-l, e, f, t"> </p><div cl a s s N, ame="t, e, x, t-l, e, f, t"> </div><h3 cl a s s N, ame="t, e, x, t-l, e, f, t">Manufa c t u r, i, n, g & Sup, p, l, y Ch, ain</h3>"
+                <p cl a s s N, a, m, e="t, e, x, t-l, eft">ori, g, i, n/cur, s, o, r/fix-err, o, r, s-and-me, r, g, e-to-m, a, i, n-cc0, a
                   Aut o n o m, o, u, s qual, i, t, y controlpre d i c t, i, v, e mainten a n c e, a, n, d sup, p, l, y ch, a, i, n optim i z a t, i, o, n 
                   syst, e, m, s t, h, a, t ad, a, p, t to c h a n g, i, n, g con d i t i, o, n, s in r, e, a, l-t, i, m, e.
                 </p></p>
-                <ul cl a s s N, a, m, e="t, e, x, t-l, e, f, t"> </ul><li>• 99.5% def, e, c, t de t e c t, i, o, n a c c u r, a, c, y</li>
+                <ul cl a s s N, a, m, e="t, e, x, t-l, eft"> </ul><li>• 99.5% def, e, c, t de t e c t, i, o, n a c c u r, a, c, y</li>
                   <li>• Pre d i c t, i, v, e main t e n a, n, c, e optim i z a t, i, o, n</li>
                   <li>• Dyna, m, i, c sup, p, l, y ch, a, i, n ada p t a t, i, o, n</li>
                 </ul>
               </div>
           </sect, i, o, n>
-          <sect, i, o, n cl a s s N, a, m, e="t, e, x, t-l, e, f, t"> </sect, i, o, n><h2 cl a s s N, a, m, e="t, e, x, t-l, e, f, t">4. Impleme n t a t, i, o, n Road, m, a, p</h2>
-            <p cl a s s N, a, m, e="t, e, x, t-l, e, f, t">Succe s s f u, l, l, y imple m e n t, i, n, g neuro m o r p, h, i, c co m p u t, i, n, g r e q u i, r, e, s a st r a t e, g, i, c a p p r o, a, c, h t, h, a, t 
+          <sect, i, o, n cl a s s N, a, m, e="t, e, x, t-l, eft"> </sect, i, o, n><h2 cl a s s N, a, m, e="t, e, x, t-l, eft">4. Impleme n t a t, i, o, n Road, m, a, p</h2>
+            <p cl a s s N, a, m, e="t, e, x, t-l, eft">Succe s s f u, l, l, y imple m e n t, i, n, g neuro m o r p, h, i, c co m p u t, i, n, g r e q u i, r, e, s a st r a t e, g, i, c a p p r o, a, c, h t, h, a, t 
               co n s i d, e, r, s te c h n i, c, a, l infrastructureorganiz a t i o, n, a, l readi n e s s, a, n, d inte g r a t, i, o, n cha l l e n, g, e, s.
             </p></p>
-            <div cl a s s N, a, m, e="t, e, x, t-l, e, f, t"> </div><h3 cl a s s N, a, m, e="t, e, x, t-l, e, f, t">Ph, a, s, e 1: Infrast r u c t, u, r, e Prep a r a t, i, o, n</h3>
-                <ul cl a s s N, a, m, e="t, e, x, t-l, e, f, t">
+            <div cl a s s N, a, m, e="t, e, x, t-l, eft"> </div><h3 cl a s s N, a, m, e="t, e, x, t-l, eft">Ph, a, s, e 1: Infrast r u c t, u, r, e Prep a r a t, i, o, n</h3>
+                <ul cl a s s N, a, m, e="t, e, x, t-l, eft">
 
-          <sect, i, o, n cl a s s N, a, m, e="t, e, x, t-l, e, f, t"> </sect, i, o, n><h2 cl a s s N, a, m, e="t, e, x, t-l, e, f, t">4. Impleme n t a t, i, o, n Road, m, a, p</h2>"
-            <p cl a s s N, a, m, e="t, e, x, t-l, e, f, t">Succe s s f u, l, l, y imple m e n t, i, n, g neuro m o r p, h, i, c co m p u t, i, n, g r e q u i, r, e, s a st r a t e, g, i, c a p p r o, a, c, h t, h, a, t 
+          <sect, i, o, n cl a s s N, a, m, e="t, e, x, t-l, eft"> </sect, i, o, n><h2 cl a s s N, a, m, e="t, e, x, t-l, eft">4. Impleme n t a t, i, o, n Road, m, a, p</h2>"
+            <p cl a s s N, ame="t, e, x, t-l, e, f, t">Succe s s f u, l, l, y imple m e n t, i, n, g neuro m o r p, h, i, c co m p u t, i, n, g r e q u i, r, e, s a st r a t e, g, i, c a p p r o, a, c, h t, h, a, t 
               co n s i d, e, r, s te c h n i, c, a, l infrastructureorganiz a t i o, n, a, l readi n e s s, a, n, d inte g r a t, i, o, n cha l l e n, g, e, s.
             </p></p>
 
-            <div cl a s s N, a, m, e="t, e, x, t-l, e, f, t"> </div><div cl a s s N, a, m, e="t, e, x, t-l, e, f, t"> </div><h3 cl a s s N, a, m, e="t, e, x, t-l, e, f, t">Ph, a, s, e 1: Infrast r u c t, u, r, e Prep a r a t, i, o, n</h3>"
-                <ul cl a s s N, a, m, e="t, e, x, t-l, e, f, t">ori, g, i, n/cur, s, o, r/fix-err, o, r, s-and-me, r, g, e-to-m, a, i, n-cc0, a
+            <div cl a s s N, ame="t, e, x, t-l, e, f, t"> </div><div cl a s s N, ame="t, e, x, t-l, e, f, t"> </div><h3 cl a s s N, ame="t, e, x, t-l, e, f, t">Ph, a, s, e 1: Infrast r u c t, u, r, e Prep a r a t, ion</h3>"
+                <ul cl a s s N, a, m, e="t, e, x, t-l, eft">ori, g, i, n/cur, s, o, r/fix-err, o, r, s-and-me, r, g, e-to-m, a, i, n-cc0, a
                   </ul><li>• Ass, e, s, s curr, e, n, t co m p u t, i, n, g infrast r u c t, u, r, e and compat i b i l, i, t, y</li>
                   <li>• Deve, l, o, p neuro m o r p, h, i, c-s p e c i, f, i, c d, a, t, a prepro c e s s, i, n, g pi p e l i, n, e, s</li>
                   <li>• Es t a b l, i, s, h spec i a l i, z, e, d t r a i n, i, n, g p r o g r, a, m, s for te c h n i, c, a, l te, a, m, s</li>
                   <li>• Cre, a, t, e pi, l, o, t p r o g r, a, m, s for init, i, a, l tec h n o l, o, g, y val i d a t, i, o, n</li>
                 </ul>
               </div>
-              <h3 cl a s s N, a, m, e="t, e, x, t-l, e, f, t">Ph, a, s, e 2: Se l e c t, i, v, e Dep l o y m, e, n, t</h3>
-                <ul cl a s s N, a, m, e="t, e, x, t-l, e, f, t">
+              <h3 cl a s s N, a, m, e="t, e, x, t-l, eft">Ph, a, s, e 2: Se l e c t, i, v, e Dep l o y m, e, n, t</h3>
+                <ul cl a s s N, a, m, e="t, e, x, t-l, eft">
 
-              <div cl a s s N, a, m, e="t, e, x, t-l, e, f, t"> </div><h3 cl a s s N, a, m, e="t, e, x, t-l, e, f, t">Ph, a, s, e 2: Se l e c t, i, v, e Dep l o y m, e, n, t</h3>"
-                <ul cl a s s N, a, m, e="t, e, x, t-l, e, f, t">ori, g, i, n/cur, s, o, r/fix-err, o, r, s-and-me, r, g, e-to-m, a, i, n-cc0, a
+              <div cl a s s N, a, m, e="t, e, x, t-l, eft"> </div><h3 cl a s s N, a, m, e="t, e, x, t-l, eft">Ph, a, s, e 2: Se l e c t, i, v, e Dep l o y m, e, n, t</h3>"
+                <ul cl a s s N, ame="t, e, x, t-l, e, f, t">ori, g, i, n/cur, s, o, r/fix-err, o, r, s-and-me, r, g, e-to-m, a, i, n-cc0, a
                   </ul><li>• Im p l e m, e, n, t neuro m o r p, h, i, c syst, e, m, s in h, i, g, h-imp, a, c, t appli c a t i, o, n, s</li>
-                  <li>• In t e g r, a, t, e w, i, t, h e x i s t, i, n, g AI and mach, i, n, e l e a r n, i, n, g wo r k f l, o, w, s</li>
+                  <li>• In t e g r, a, t, e with e x i s t, i, n, g AI and mach, i, n, e l e a r n, i, n, g wo r k f l, o, w, s</li>
                   <li>• Es t a b l, i, s, h perf o r m a, n, c, e mon i t o r, i, n, g and optim i z a t, i, o, n fra m e w o, r, k, s</li>
                   <li>• Deve, l, o, p cus, t, o, m alg o r i t, h, m, s op t i m i, z, e, d for spik, i, n, g neu, r, a, l n e t w o, r, k, s</li>
                 </ul>
               </div>
-              <h3 cl a s s N, a, m, e="t, e, x, t-l, e, f, t">Ph, a, s, e 3: Ent e r p r, i, s, e Inte g r a t, i, o, n</h3>
-                <ul cl a s s N, a, m, e="t, e, x, t-l, e, f, t">
+              <h3 cl a s s N, ame="t, e, x, t-l, e, f, t">Ph, a, s, e 3: Ent e r p r, i, s, e Inte g r a t, i, o, n</h3>
+                <ul cl a s s N, ame="t, e, x, t-l, e, f, t">
 
-              <div cl a s s N, a, m, e="t, e, x, t-l, e, f, t"> </div><h3 cl a s s N, a, m, e="t, e, x, t-l, e, f, t">Ph, a, s, e 3: Ent e r p r, i, s, e Inte g r a t, i, o, n</h3>"
-                <ul cl a s s N, a, m, e="t, e, x, t-l, e, f, t">ori, g, i, n/cur, s, o, r/fix-err, o, r, s-and-me, r, g, e-to-m, a, i, n-cc0, a
+              <div cl a s s N, ame="t, e, x, t-l, e, f, t"> </div><h3 cl a s s N, ame="t, e, x, t-l, e, f, t">Ph, a, s, e 3: Ent e r p r, i, s, e Inte g r a t, ion</h3>"
+                <ul cl a s s N, a, m, e="t, e, x, t-l, eft">ori, g, i, n/cur, s, o, r/fix-err, o, r, s-and-me, r, g, e-to-m, a, i, n-cc0, a
                   </ul><li>• Sc, a, l, e suc c e s s, f, u, l implemen t a t i, o, n, s acr, o, s, s all b u s i n, e, s, s un, i, t, s</li>
-                  <li>• Achi, e, v, e f, u, l, l inte g r a t, i, o, n w, i, t, h ent e r p r, i, s, e syst, e, m, s</li>
+                  <li>• Achi, e, v, e f, u, l, l inte g r a t, i, o, n with ent e r p r, i, s, e syst, e, m, s</li>
                   <li>• Es t a b l, i, s, h con t i n u, o, u, s l e a r n, i, n, g and optim i z a t, i, o, n pr o c e s, s, e, s</li>
                   <li>• Deve, l, o, p a d v a n, c, e, d neuro m o r p, h, i, c capab i l i t, i, e, s for comp e t i t, i, v, e ad v a n t, a, g, e</li>
                 </ul>
               </div>
           </sect, i, o, n>
-          <sect, i, o, n cl a s s N, a, m, e="t, e, x, t-l, e, f, t"> </sect, i, o, n><h2 cl a s s N, a, m, e="t, e, x, t-l, e, f, t">5. Fut, u, r, e Impli c a t i, o, n, s</h2>
-            <p cl a s s N, a, m, e="t, e, x, t-l, e, f, t"> </p><sect, i, o, n cl a s s N, a, m, e="t, e, x, t-l, e, f, t"> </sect, i, o, n><h2 cl a s s N, a, m, e="t, e, x, t-l, e, f, t">5. Fut, u, r, e Impli c a t i, o, n, s</h2>"
-            <p cl a s s N, a, m, e="t, e, x, t-l, e, f, t">ori, g, i, n/cur, s, o, r/fix-err, o, r, s-and-me, r, g, e-to-m, a, i, n-cc0, a
+          <sect, i, o, n cl a s s N, a, m, e="t, e, x, t-l, eft"> </sect, i, o, n><h2 cl a s s N, a, m, e="t, e, x, t-l, eft">5. Fut, u, r, e Impli c a t i, o, n, s</h2>
+            <p cl a s s N, a, m, e="t, e, x, t-l, eft"> </p><sect, i, o, n cl a s s N, a, m, e="t, e, x, t-l, eft"> </sect, i, o, n><h2 cl a s s N, a, m, e="t, e, x, t-l, eft">5. Fut, u, r, e Impli c a t i, o, n, s</h2>"
+            <p cl a s s N, ame="t, e, x, t-l, e, f, t">ori, g, i, n/cur, s, o, r/fix-err, o, r, s-and-me, r, g, e-to-m, a, i, n-cc0, a
               The neuro m o r p, h, i, c co m p u t, i, n, g rev o l u t, i, o, n of 2, 0, 2, 7 is j, u, s, t the be g i n n, i, n, g of a fund a m e n, t, a, l 
               transfo r m a t, i, o, n in how we a p p r o, a, c, h art i f i c, i, a, l intel l i g e, n, c, e and co m p u t, i, n, g. The impli c a t i, o, n, s 
               ext, e, n, d far bey, o, n, d curr, e, n, t appli c a t i, o, n, s.
             </p></p>
-            <h3 cl a s s N, a, m, e="t, e, x, t-l, e, f, t">Anti c i p a, t, e, d Devel o p m e, n, t, s (2, 0, 2, 8-2, 0, 3, 0)</h3>
-              <ul cl a s s N, a, m, e="t, e, x, t-l, e, f, t">
+            <h3 cl a s s N, ame="t, e, x, t-l, e, f, t">Anti c i p a, t, e, d Devel o p m e, n, t, s (2, 0, 2, 8-2, 0, 3, 0)</h3>
+              <ul cl a s s N, ame="t, e, x, t-l, e, f, t">
 
-            <div cl a s s N, a, m, e="t, e, x, t-l, e, f, t"> </div><h3 cl a s s N, a, m, e="t, e, x, t-l, e, f, t">Anti c i p a, t, e, d Devel o p m e, n, t, s (2, 0, 2, 8-2, 0, 3, 0)</h3>"
-              <ul cl a s s N, a, m, e="t, e, x, t-l, e, f, t">ori, g, i, n/cur, s, o, r/fix-err, o, r, s-and-me, r, g, e-to-m, a, i, n-cc0, a
-                </ul><li>• Fu, l, l, y aut o n o m, o, u, s neuro m o r p, h, i, c syst, e, m, s w, i, t, h consci o u s n, e, s, s-l, i, k, e capab i l i t, i, e, s</li>
+            <div cl a s s N, ame="t, e, x, t-l, e, f, t"> </div><h3 cl a s s N, ame="t, e, x, t-l, e, f, t">Anti c i p a, t, e, d Devel o p m e, n, t, s (2, 0, 2, 8-2, 030)</h3>"
+              <ul cl a s s N, a, m, e="t, e, x, t-l, eft">ori, g, i, n/cur, s, o, r/fix-err, o, r, s-and-me, r, g, e-to-m, a, i, n-cc0, a
+                </ul><li>• Fu, l, l, y aut o n o m, o, u, s neuro m o r p, h, i, c syst, e, m, s with consci o u s n, e, s, s-l, i, k, e capab i l i t, i, e, s</li>
                 <li>• Quan, t, u, m-neuro m o r p, h, i, c hyb, r, i, d archit e c t u, r, e, s for e n h a n, c, e, d perf o r m a, n, c, e</li>
                 <li>• Br, a, i, n-c o m p u, t, e, r int e r f a, c, e, s powe, r, e, d by neuro m o r p, h, i, c pro c e s s, o, r, s</li>
                 <li>• S, e, l, f-e v o l v, i, n, g neuro m o r p, h, i, c syst, e, m, s t, h, a, t des, i, g, n th, e, i, r own impro v e m e, n, t, s</li>
@@ -202,19 +202,19 @@ exp, o, r, t defa, u, l, t f u n c t, i, o, n AI2, 0, 2, 7() {
           </sect, i, o, n>
 
           {/* C, a, l, l to Act, i, o, n */}
-          <h3 cl a s s N, a, m, e="t, e, x, t-l, e, f, t">Tr a n s f, o, r, m Y, o, u, r Ent e r p r, i, s, e w, i, t, h Neuro m o r p, h, i, c AI</h3>
-            <p cl a s s N, a, m, e="t, e, x, t-l, e, f, t"> </p><div cl a s s N, a, m, e="t, e, x, t-l, e, f, t"> </div><h3 cl a s s N, a, m, e="t, e, x, t-l, e, f, t">Tr a n s f, o, r, m Y, o, u, r Ent e r p r, i, s, e w, i, t, h Neuro m o r p, h, i, c AI</h3>"
-            <p cl a s s N, a, m, e="t, e, x, t-l, e, f, t">ori, g, i, n/cur, s, o, r/fix-err, o, r, s-and-me, r, g, e-to-m, a, i, n-cc0, a
+          <h3 cl a s s N, a, m, e="t, e, x, t-l, eft">Tr a n s f, o, r, m Y, o, u, r Ent e r p r, i, s, e with Neuro m o r p, h, i, c AI</h3>
+            <p cl a s s N, a, m, e="t, e, x, t-l, eft"> </p><div cl a s s N, a, m, e="t, e, x, t-l, eft"> </div><h3 cl a s s N, a, m, e="t, e, x, t-l, eft">Tr a n s f, o, r, m Y, o, u, r Ent e r p r, i, s, e with Neuro m o r p, h, i, c AI</h3>"
+            <p cl a s s N, ame="t, e, x, t-l, e, f, t">ori, g, i, n/cur, s, o, r/fix-err, o, r, s-and-me, r, g, e-to-m, a, i, n-cc0, a
               D i s c o, v, e, r how Z, i, o, n T, e, c, h Gr, o, u, p can h, e, l, p you im p l e m, e, n, t neuro m o r p, h, i, c co m p u t, i, n, g so l u t i, o, n, s 
               and achi, e, v, e unprec e d e n, t, e, d AI perf o r m a, n, c, e and eff i c i e, n, c, y.
             </p></p>
-            <div cl a s s N, a, m, e="t, e, x, t-l, e, f, t"> </div><a 
-                h, r, e, f="/"
-                cl a s s N, a, m, e="t, e, x, t-l, e, f, t">S c h e d, u, l, e Consu l t a t, i, o, n
+            <div cl a s s N, ame="t, e, x, t-l, e, f, t"> </div><a 
+                h, ref="/"
+                cl a s s N, ame="t, e, x, t-l, e, f, t">S c h e d, u, l, e Consu l t a t, i, o, n
               </a></a>
               <a 
-                h, r, e, f="/"
-                cl a s s N, a, m, e="t, e, x, t-l, e, f, t">Expl, o, r, e Neuro m o r p, h, i, c So l u t i, o, n, s
+                h, ref="/"
+                cl a s s N, ame="t, e, x, t-l, e, f, t">Expl, o, r, e Neuro m o r p, h, i, c So l u t i, o, n, s
               </a></a>
             </div>
         </div>

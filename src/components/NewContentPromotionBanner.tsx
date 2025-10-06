@@ -8,27 +8,18 @@ interface NewContentPromotionBannerProps {
   ctaLink?: string;
   dismissible?: boolean;
   className?: string;
-  onDismiss?: () => void;
 }
 
 const NewContentPromotionBanner: React.FC<NewContentPromotionBannerProps> = ({
   variant = 'default',
-  title = 'New Content Available!',
-  description = 'Check out our latest articles and insights.',
+  title = 'New Content Available',
+  description = 'Check out our latest articles and insights',
   ctaText = 'Explore Now',
   ctaLink = '/blog',
   dismissible = true,
-  className = '',
-  onDismiss
+  className = ''
 }) => {
   const [isVisible, setIsVisible] = useState(true);
-
-  const handleDismiss = () => {
-    setIsVisible(false);
-    onDismiss?.();
-  };
-
-  if (!isVisible) return null;
 
   const getVariantStyles = () => {
     switch (variant) {
@@ -47,61 +38,29 @@ const NewContentPromotionBanner: React.FC<NewContentPromotionBannerProps> = ({
     }
   };
 
-  const getIcon = () => {
-    switch (variant) {
-      case 'info':
-        return 'ℹ️';
-      case 'success':
-        return '✅';
-      case 'warning':
-        return '⚠️';
-      case 'error':
-        return '❌';
-      case 'premium':
-        return '⭐';
-      default:
-        return '📢';
-    }
-  };
+  if (!isVisible) return null;
 
   return (
     <div className={`border rounded-lg p-4 ${getVariantStyles()} ${className}`}>
-      <div className="flex items-start space-x-3">
-        <div className="text-2xl">{getIcon()}</div>
-        
+      <div className="flex items-center justify-between">
         <div className="flex-1">
-          <h3 className="font-semibold text-lg mb-1">{title}</h3>
-          <p className="text-sm opacity-90 mb-3">{description}</p>
-          
-          <div className="flex items-center space-x-3">
-            {ctaLink && (
-              <a
-                href={ctaLink}
-                className="inline-flex items-center px-4 py-2 bg-white bg-opacity-20 hover:bg-opacity-30 rounded-md text-sm font-medium transition-colors"
-              >
-                {ctaText}
-              </a>
-            )}
-            
-            {dismissible && (
-              <button
-                onClick={handleDismiss}
-                className="text-sm opacity-70 hover:opacity-100 transition-opacity"
-                aria-label="Dismiss banner"
-              >
-                Dismiss
-              </button>
-            )}
-          </div>
+          <h3 className="font-semibold text-lg">{title}</h3>
+          <p className="text-sm mt-1">{description}</p>
+          {ctaText && ctaLink && (
+            <a
+              href={ctaLink}
+              className="inline-block mt-2 px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
+            >
+              {ctaText}
+            </a>
+          )}
         </div>
-        
         {dismissible && (
           <button
-            onClick={handleDismiss}
-            className="text-lg opacity-50 hover:opacity-100 transition-opacity"
-            aria-label="Close banner"
+            onClick={() => setIsVisible(false)}
+            className="ml-4 text-gray-500 hover:text-gray-700 transition-colors"
           >
-            ×
+            ✕
           </button>
         )}
       </div>
