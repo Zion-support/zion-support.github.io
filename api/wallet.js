@@ -9,7 +9,11 @@ async function handler(req, res) {
   }
 
   try {
+<<<<<<< HEAD
     // Wallet functionality would go here
+=======
+    // Wallet functionality implementation
+>>>>>>> main
     res.statusCode = 200;
     res.json({ message: 'Wallet endpoint' });
   } catch (err) {

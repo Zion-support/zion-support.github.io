@@ -24,8 +24,8 @@ async function handler(req, res) {
       'data',
       'newsletter-subscriptions.json',
     );
+
     let existing = [];
-    
     try {
       existing = JSON.parse(fs.readFileSync(file, 'utf8'));
       if (!Array.isArray(existing)) existing = [];

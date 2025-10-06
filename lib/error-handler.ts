@@ -1,4 +1,5 @@
 import { NextApiRequest, NextApiResponse } from 'next';
+import type { NextApiRequest, NextApiResponse } from 'next';
 
 export interface ApiError extends Error {
   statusCode?: number;
@@ -42,6 +43,7 @@ export const errorHandler = (
       statusCode,
       timestamp: new Date().toISOString()
     },
+    }
   });
 };
 
