@@ -18,6 +18,7 @@ export type IntegrationProviderId =
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export type SyncStatus = 'connected' | 'warning' | 'disconnected';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -56,11 +57,17 @@ export type SyncStatus = 'connected' | 'warning' | 'disconnected';
 export type SyncStatus = 'connected' | 'warning' | 'disconnected';
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-d12c
+=======
+
+export type SyncStatus = 'connected' | 'warning' | 'disconnected';
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6abd
 export interface IntegrationProviderMeta {
   id: IntegrationProviderId;
   name: string;
   category: 'crm' | 'ats';
   description: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -125,12 +132,17 @@ export interface IntegrationProviderMeta {
 >>>>>>> cursor/fix-errors-and-merge-to-main-bd65
 >>>>>>> 73aae067a8789e7f94c7cf242d65c42e6717fb43
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
+=======
+}
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6abd
 export interface ProviderConnection {
   id: string;
   providerId: IntegrationProviderId;
   accessToken: string;
   refreshToken?: string;
   expiresAt?: number;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -288,12 +300,20 @@ export type SyncStatus = 'connected' | 'warning' | 'disconnected';
 }
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
+=======
+  status: SyncStatus;
+  lastSync?: number;
+  createdAt: number;
+}
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6abd
 export interface SyncLogEntry {
   id: string;
   timestamp: number;
   providerId: IntegrationProviderId;
   level: 'info' | 'warn' | 'error';
   action: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -362,11 +382,17 @@ export interface SyncLogEntry {
 }
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
+=======
+  details?: Record<string, any>;
+}
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6abd
 export interface ManualOverride {
   jobId: string;
   disableCrmSync?: boolean;
   disableAtsSync?: boolean;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -411,10 +437,14 @@ export interface ManualOverride {
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6abd
 export interface ZapierEvent {
   id: string;
   type: 'zion.job.posted' | 'zion.talent.matched';
   timestamp: number;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -619,6 +649,10 @@ export interface IntegrationProviderMeta {
   websiteUrl?: string;
   apiDocsUrl?: string;
 }
+=======
+  payload: Record<string, any>;
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6abd
 
 export interface IntegrationsState {
   connections: ProviderConnection[];
@@ -626,8 +660,12 @@ export interface IntegrationsState {
   overrides: ManualOverride[];
   events: ZapierEvent[];
   lastError?: string | null;
+<<<<<<< HEAD
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-efe9
 =======
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
+=======
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6abd

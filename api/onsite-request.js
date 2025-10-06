@@ -12,6 +12,7 @@ const path = require('path');
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0a8c
@@ -45,6 +46,9 @@ const path = require('path');
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6abd
 async function handler(req, res) {
   if (req.method !== 'POST') {
     res.statusCode = 405;
@@ -63,6 +67,7 @@ async function handler(req, res) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0a8c
@@ -96,6 +101,9 @@ async function handler(req, res) {
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6abd
   const {
     name,
     email,
@@ -115,6 +123,7 @@ async function handler(req, res) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0a8c
@@ -148,6 +157,9 @@ async function handler(req, res) {
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6abd
   if (!name || !email || !location) {
     res.statusCode = 400;
     res.json({ error: 'Missing required fields' });
@@ -156,6 +168,7 @@ async function handler(req, res) {
 
   const file = path.join(process.cwd(), 'data', 'onsite-requests.json');
   let existing = [];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -224,12 +237,16 @@ async function handler(req, res) {
 =======
   
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
+=======
+  
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6abd
   try {
     existing = JSON.parse(fs.readFileSync(file, 'utf8'));
     if (!Array.isArray(existing)) existing = [];
   } catch {
     // File doesn't exist or is invalid, use empty array
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -274,6 +291,9 @@ async function handler(req, res) {
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6abd
   existing.push({
     name,
     email,
@@ -294,6 +314,7 @@ async function handler(req, res) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0a8c
@@ -327,6 +348,9 @@ async function handler(req, res) {
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6abd
   fs.writeFileSync(file, JSON.stringify(existing, null, 2));
   res.statusCode = 200;
   res.json({ success: true });
@@ -342,6 +366,7 @@ async function handler(req, res) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0a8c
@@ -375,4 +400,7 @@ async function handler(req, res) {
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6abd
 module.exports = withSentry(handler);

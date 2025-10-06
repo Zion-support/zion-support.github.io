@@ -15,6 +15,7 @@ const { withErrorLogging } = require('./withErrorLogging.cjs');
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 const { withErrorLogging } = require('./withErrorLogging.cjs');
 
@@ -52,10 +53,14 @@ const { withErrorLogging } = require('./withErrorLogging.cjs');
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6abd
 async function handler(req, res) {
   if (req.method !== 'GET') {
     res.statusCode = 405;
     res.setHeader('Allow', 'GET');
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -90,11 +95,14 @@ async function handler(req, res) {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-efe9
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6abd
     res.end('Method Not Allowed');
     return;
   }
 
   try {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -268,6 +276,8 @@ module.exports = withSentry(handler);
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-3d1d
 =======
   try {
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6abd
     // Wallet functionality would go here
     res.statusCode = 200;
     res.json({ message: 'Wallet endpoint' });
@@ -278,6 +288,7 @@ module.exports = withSentry(handler);
   }
 }
 
+<<<<<<< HEAD
 module.exports = withErrorLogging(handler);
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-4606
 =======
@@ -322,3 +333,6 @@ module.exports = withErrorLogging(handler);
 =======
 module.exports = withErrorLogging(handler);
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
+=======
+module.exports = withErrorLogging(handler);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6abd

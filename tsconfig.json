@@ -159,6 +159,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     "api/**",
     "lib/**",
     "utils/seoUtils.ts"
@@ -192,6 +193,9 @@
     "utils/**",
     "src/utils/**"
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
+=======
+    "utils/**/*"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6abd
   ],
   "references": [
     {

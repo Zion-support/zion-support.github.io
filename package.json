@@ -112,6 +112,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     "@types/uuid": "^11.0.0",
 =======
     "@types/uuid": "^10.0.0",
@@ -122,6 +123,9 @@
 =======
     "@types/uuid": "^10.0.0",
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
+=======
+    "@types/uuid": "^11.0.0",
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6abd
     "clsx": "^2.1.1",
     "esbuild": "^0.25.10",
     "framer-motion": "^12.23.22",
