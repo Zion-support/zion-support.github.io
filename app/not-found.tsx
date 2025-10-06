@@ -4,130 +4,103 @@ import React from 'react';
 import Link from 'next/link';
 
 export default function NotFound() {
-  return (
-    <div>/* content */}
   const popularPages = [
-    {/* content */}
+    {
       title: 'AI Services',
       description: 'Explore our comprehensive AI and IT solutions',
       href: '/services',
       icon: '🤖'
     },
-    {/* content */}
+    {
       title: 'Blog & Insights',
       description: 'Read about latest AI trends and innovations',
       href: '/blog',
       icon: '📚'
     },
-    {/* content */}
-      title: 'Case Studies',
-      description: 'See our success stories and client results',
-      href: '/case-studies',
-      icon: '📊'
+    {
+      title: 'Enterprise Solutions',
+      description: 'Fortune 500 AI transformation solutions',
+      href: '/enterprise',
+      icon: '🏢'
     },
-    {/* content */}
+    {
       title: 'Contact Us',
       description: 'Get in touch with our AI experts',
       href: '/contact',
       icon: '📞'
-    },
+    }
   ];
 
   return (
-    <div>
-      <div> </div><div> </div></div>
-    <div className="text-left"> </div><div className="text-left">{/* Error Code */}</div></div>
-        <div className="text-left"> </div><h1 className="text-left">
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 flex items-center justify-center px-4">
+      <div className="max-w-4xl mx-auto text-center">
+        {/* 404 Animation */}
+        <div className="mb-8">
+          <div className="text-9xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400 mb-4">
             404
-          </h1>
-          <div className="text-left">🔍</div>"
+          </div>
+          <div className="text-6xl mb-4">🚀</div>
         </div>
 
         {/* Error Message */}
-        <div className="text-left"> </div><h2 className="text-left">
-            Oops! Page Not Found
-          </h2>
-          <p className="text-left">The page you're looking for doesn't exist or has been moved. 
-            Don't worry, our AI can help you find what you need!
-          </p></p>
-        </div>
-
-        {/* Search Bar */}
-        <div className="text-left"> </div><div className="text-left"> </div><input
-              type="text"
-              placeholder="Search for AI services, articles, or case studies..."
-              className="text-left"
-              onKeyPress={(e) = /> {/* content */}
-                if (e.key === 'Enter') {/* content */}
-                  const searchTerm = (e.target as HTMLInputElement).value;
-                  if (searchTerm) {/* content */}
-                    window.location.href = `/search?q=${encodeURIComponent(searchTerm)}`;
-                  }
-                }
-              }}
-            />
-            <button className="text-left">
-              Search
-            </button>
-          </div>
+        <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          Page Not Found
+        </h1>
+        <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+          The page you're looking for seems to have launched into the digital stratosphere. 
+          Don't worry, our AI-powered navigation can help you find what you need.
+        </p>
 
         {/* Popular Pages */}
-        <div className="text-left"> </div><h3 className="text-left">
-            Popular Pages
-          </h3>
-          <div className="text-left">{popularPages.map((page) => (</div></div>
+        <div className="mb-12">
+          <h2 className="text-2xl font-bold text-white mb-6">
+            Popular Destinations
+          </h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+            {popularPages.map((page, index) => (
               <Link
-                key={page.href}
+                key={index}
                 href={page.href}
-                className="text-left">
-                <div className="text-left">{page.icon}</div>"
-                <h4 className="text-left">
+                className="group bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 hover:scale-105"
+              >
+                <div className="text-3xl mb-3">{page.icon}</div>
+                <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors">
                   {page.title}
-                </h4>
-                <p className="text-left">{page.description}
-                </p></p>
+                </h3>
+                <p className="text-gray-300 text-sm">
+                  {page.description}
+                </p>
               </Link>
             ))}
           </div>
+        </div>
 
         {/* CTA Buttons */}
-        <div className="text-left"> </div><Link
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <Link
             href="/"
-            className="text-left">
-            ← Back to Home
+            className="group flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl"
+          >
+            <span className="text-xl">🏠</span>
+            <span>Go Home</span>
           </Link>
-          <a
-            href="tel:+13024640950"
-            className="text-left">Call Support: +1 302 464 0950
-          </a></a>
+          
+          <Link
+            href="/contact"
+            className="group flex items-center gap-3 bg-white/10 hover:bg-white/20 text-white font-bold py-4 px-8 rounded-xl border border-white/30 hover:border-white/50 transition-all duration-300"
+          >
+            <span>Get Help</span>
+            <span className="group-hover:translate-x-1 transition-transform">→</span>
+          </Link>
         </div>
 
-        {/* Help Section */}
-        <div className="text-left"> </div><h3 className="text-left">
-            Still need help?
-          </h3>
-          <p className="text-left">Our AI support team is available 24/7 to assist you with any questions or concerns.
-          </p></p>
-          <div className="text-left"> </div><a
-              href="mailto:kleber@ziontechgroup.com"
-              className="text-left">📧 Email: kleber@ziontechgroup.com
-            </a></a>
-            <span className="text-left">|>
-            <a
-              href="tel:+13024640950"
-              className="text-left">📞 Phone: +1 302 464 0950
-            </a></a>
-          </div>
-
-        {/* Footer Note */}
-        <div className="text-left"> </div><p>Error Code: 404 | Page Not Found</p>
-          <p className="text-left">If you believe this is an error, please{' '}
-            </p><a
-              href="mailto:kleber@ziontechgroup.com"
-              className="text-left">contact our support team
-            </a></a>
+        {/* Fun Message */}
+        <div className="mt-12 text-gray-400">
+          <p className="text-sm">
+            Even our AI got lost in the quantum realm! 🤖✨
           </p>
         </div>
+      </div>
     </div>
   );
-}</div></div></div></div>)
+}
