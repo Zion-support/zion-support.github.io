@@ -3,25 +3,31 @@ import React from 'react';
 const ContentValueTestimonials: React.FC = () => {
   const testimonials = [
     {
-      id: 1name: 'Sarah Johnson',
+      id: 1,
+      name: 'Sarah Johnson',
       company: 'TechCorp Inc.',
       role: 'CTO',
       content: 'The AI solutions provided by Zion Tech Group have revolutionized our operations. We\'ve seen a 300% increase in efficiency.',
-      rating: 5image: '/api/placeholder/60/60'
+      rating: 5,
+      image: '/api/placeholder/60/60'
     },
     {
-      id: 2name: 'Michael Chen',
+      id: 2,
+      name: 'Michael Chen',
       company: 'DataFlow Systems',
       role: 'CEO',
       content: 'Outstanding service and cutting-edge technology. Our team productivity has increased dramatically.',
-      rating: 5image: '/api/placeholder/60/60'
+      rating: 5,
+      image: '/api/placeholder/60/60'
     },
     {
-      id: 3name: 'Emily Rodriguez',
+      id: 3,
+      name: 'Emily Rodriguez',
       company: 'InnovateLab',
       role: 'Product Manager',
       content: 'The AI automation tools have streamlined our processes and saved us countless hours of manual work.',
-      rating: 5image: '/api/placeholder/60/60'
+      rating: 5,
+      image: '/api/placeholder/60/60'
     }
   ];
 
