@@ -12,6 +12,18 @@ export interface WebVitalsMetrics {
   CLS?: number; // Cumulative Layout Shift
   TTFB?: number; // Time to First Byte
   INP?: number; // Interaction to Next Paint
+  loadTime?: number; // Page load time
+  interactiveTime?: number; // Time to interactive
+}
+
+/**
+ * Performance budget checker
+ */
+export interface PerformanceBudget {
+  maxBundleSize: number; // in KB
+  maxImageSize: number; // in KB
+  maxFirstLoad: number; // in ms
+  maxInteractive: number; // in ms
 }
 
 /**
@@ -54,9 +66,12 @@ export const lazyLoadImages = (): void => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         const img = entry.target as HTMLImageElement;
-        img.src = img.dataset['src'] || '';
-        img.removeAttribute('data-src');
-        imageObserver.unobserve(img);
+        const src = img.dataset['src'];
+        if (src) {
+          img.src = src;
+          img.removeAttribute('data-src');
+          imageObserver.unobserve(img);
+        }
       }
     });
   }, {
@@ -115,7 +130,9 @@ export const measurePageLoad = (): WebVitalsMetrics | null => {
   
   return {
     FCP: navigation?.responseStart - navigation?.fetchStart,
-    TTFB: perfData.responseStart - perfData.navigationStart
+    TTFB: perfData.responseStart - perfData.navigationStart,
+    loadTime: perfData.loadEventEnd - perfData.navigationStart,
+    interactiveTime: perfData.domInteractive - perfData.navigationStart
   };
 };
 
@@ -265,13 +282,6 @@ export const clearOldCaches = async (currentVersion: string): Promise<void> => {
 /**
  * Performance budget checker
  */
-export interface PerformanceBudget {
-  maxBundleSize: number; // in KB
-  maxImageSize: number; // in KB
-  maxFirstLoad: number; // in ms
-  maxInteractive: number; // in ms
-}
-
 export const checkPerformanceBudget = (budget: PerformanceBudget): {
   passed: boolean;
   violations: string[];
@@ -368,83 +378,25 @@ class PerformanceOptimizer {
     });
   }
 
+  public reportWebVitals(metrics: WebVitalsMetrics): void {
+    reportWebVitals(metrics);
+  }
+
+  public measurePageLoad(): WebVitalsMetrics | null {
+    return measurePageLoad();
+  }
+
+  public prefetchResources(resources: string[]): void {
+    prefetchResources(resources);
+  }
+
+  public monitorLongTasks(callback: (entries: PerformanceEntryList) => void): PerformanceObserver | null {
+    return monitorLongTasks(callback);
+  }
+
   // Get performance metrics
   getMetrics(): Record<string, number> {
     return Object.fromEntries(this.metrics);
-  }
-
-  // Report Web Vitals
-  public reportWebVitals(metrics: any): void {
-    // Implementation for reporting web vitals
-    console.log('Web Vitals:', metrics);
-  }
-
-  // Prefetch resources
-  public prefetchResources(resources: string[]): void {
-    resources.forEach(resource => {
-      const link = document.createElement('link');
-      link.rel = 'prefetch';
-      link.href = resource;
-      document.head.appendChild(link);
-    });
-  }
-
-  // Add critical resource hints
-  public addCriticalResourceHints(resources: string[]): void {
-    resources.forEach(resource => {
-      const link = document.createElement('link');
-      link.rel = 'preload';
-      link.href = resource;
-      link.as = 'script';
-      document.head.appendChild(link);
-    });
-  }
-
-  // Monitor long tasks
-  public monitorLongTasks(callback: (entries: PerformanceEntry[]) => void): void {
-    if (typeof window === 'undefined' || !window.PerformanceObserver) return;
-    
-    const observer = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
-      callback(entries);
-    });
-    
-    observer.observe({ entryTypes: ['longtask'] });
-  }
-
-  // Get performance summary
-  getPerformanceSummary() {
-    return {
-      averageRenderTime: 12.5,
-      totalComponents: 45,
-      memoryUsage: 0,
-      slowComponents: 0
-    };
-  }
-
-  // Export metrics
-  exportMetrics() {
-    return this.getMetrics();
-  }
-
-  // Clear metrics
-  clearMetrics() {
-    this.metrics.clear();
-  }
-
-  // Measure page load performance
-  measurePageLoad(): Record<string, number> | null {
-    if (typeof window === 'undefined' || !window.performance) {
-      return null;
-    }
-    
-    const timing = window.performance.timing;
-    return {
-      loadTime: timing.loadEventEnd - timing.navigationStart,
-      interactiveTime: timing.domInteractive - timing.navigationStart,
-      domContentLoaded: timing.domContentLoadedEventEnd - timing.navigationStart,
-      firstPaint: performance.getEntriesByType('paint')[0]?.startTime || 0
-    };
   }
 
   // Initialize all optimizations
