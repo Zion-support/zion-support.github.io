@@ -6,10 +6,10 @@
 export interface AnalyticsEvent {
   name: string;
   category: string;
-  action?: string;
-  label?: string;
-  value?: number;
-  properties?: Record<string, any>;
+  action?: string | undefined;
+  label?: string | undefined;
+  value?: number | undefined;
+  properties?: Record<string, any> | undefined;
   timestamp: number;
 }
 
@@ -57,7 +57,7 @@ class Analytics {
       userAgent: window.navigator.userAgent,
       language: window.navigator.language,
       timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
-      referrer: document.referrer || undefined,
+      referrer: document.referrer || '',
     };
   }
 
@@ -75,8 +75,8 @@ class Analytics {
     const event: AnalyticsEvent = {
       name,
       category,
-      action,
-      label,
+      action: action || '',
+      label: label || undefined,
       value,
       properties,
       timestamp: Date.now(),
