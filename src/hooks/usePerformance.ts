@@ -208,3 +208,5 @@ export const useMemoryMonitoring = () => {
     return () => clearInterval(interval);
   }, []);
 };
+
+export { usePageLoadPerformance, useMemoryMonitoring };

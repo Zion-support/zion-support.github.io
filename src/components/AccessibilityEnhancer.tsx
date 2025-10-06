@@ -1,8 +1,4 @@
-import React, { type ReactNode, useEffect } from 'react';
-import React, { type ReactNode, useEffect } from 'react';
-import React, { type ReactNode, useEffect } from 'react';
-import React, { type ReactNode, useEffect } from 'react';
-import React, { useEffect, useState } from 'react';
+import React, { type ReactNode, useEffect, useState } from 'react';
 
 interface AccessibilityEnhancerProps {
   children: React.ReactNode;
@@ -15,8 +11,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
 
   useEffect(() => {
     // Check for user preferences
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    // Check for user's motion preferences
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     setReducedMotion(prefersReducedMotion);
 
