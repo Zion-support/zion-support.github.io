@@ -66,7 +66,7 @@ export default [
     rules: {
       ...(reactHooks.configs.recommended?.rules || {}),
       'react-refresh/only-export-components': 'off',
-      '@typescript-eslint/no-unused-vars': 'warn',
+      '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
       '@typescript-eslint/no-explicit-any': 'warn',
     },
   },
