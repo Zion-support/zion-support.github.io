@@ -2,12 +2,9 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  
-  title:  'AI 2025-2026 Mega Trends Breakthrough: Revolutionary Enterprise Transformation',
-  description:  'Discover the groundbreaking AI trends and breakthroughs that will revolutionize enterprise operations in 2025-2026.',
+  title: 'AI 2025-2026 Mega Trends Breakthrough: Revolutionary Enterprise Transformation',
+  description: 'Discover the groundbreaking AI trends and breakthroughs that will revolutionize enterprise operations in 2025-2026.',
   type: 'article',
-
-};;
 };
 
 export default function AIMegaTrends20252026() {

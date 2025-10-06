@@ -4,13 +4,11 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 
-export const metadata = {
-  
+export const metadata: Metadata = 
   title: 'AI 2026 June Ultimate Breakthrough: The Revolutionary Universal Consciousness Revolution',
   description: 'Discover the groundbreaking June 2026 AI breakthrough that achieved universal consciousness with 100,000,000x processing power and $100B ROI across global enterprises.',
   keywords: 'AI, Universal Consciousness, Revolutionary, 2026, Ultimate Success, Breakthrough, 100B ROI',
-
-};;
+};
 
 export default function June2026UltimateBreakthroughPage() {
   return (
@@ -19,22 +17,29 @@ export default function June2026UltimateBreakthroughPage() {
   const fileContents = fs.readFileSync(filePath, 'utf8');
   const { data, content } = matter(fileContents);
 
+  return (
     <div>
-      <div> </div><div> </div>
-      <div className="text-left"> </div><article className="text-left"> </a><header className="text-left">
+      <div> </div><div> </div></div>
+    <div className="text-left"> </div><article className="text-left"> </a><header className="text-left">
           <span className="text-left"> </span><article className="text-left"> </article><header className="text-left"> </header><div className="text-left"> </div><span className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
               JUNE 2026
             </span></span>
             <span className="text-left">$100B ROI
             </span></span>
           </div>
-          <h1 className="text-left">{data.title}
+          <h1 className="text-left">{data['title']}
           </h1></h1>
-          <p className="text-left">{data.description}
+          <p className="text-left">{data['description']}
           </p></p>
+<<<<<<< HEAD
+          <span>By    {data['author']}</span>
+            <span>•</span>
+            <span>{new Date(data['date']).to Locale Date    String   ()}</span>
+=======
           <span>By {data.author}</span>
             <span>•</span>
             <span>{new Date(data.date).toLocaleDateString()}</span>
+>>>>>>> main
           </div>
         </header>
         <div className="text-left"> </div><div dangerouslySetInnerHTML={{ __html: content.replace(/\n/g, '<br />') }} /></div>

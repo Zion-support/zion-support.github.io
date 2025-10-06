@@ -1,42 +1,42 @@
-import ArrowRight from 'next/link';
+import Link from 'next/link';
 
 export const metadata = {
-  
   title: 'Agentic Risk Mitigation 2026 — Guardrails, Evals, and Safe Autonomy',
   description:
     'Practical framework for mitigating risks in agentic systems: governance, evaluations, kill-switches, and safe autonomy patterns for 2026 enterprise deployment.',
+};
 
-};;
-
-export default function AgenticRiskMitigation2026Page() {return (<mainclassName='min-h-screen bg-white'>
-      <sectionclassName='py-16 bg-gradient-to-r from-purple-700 via-fuchsia-700 to-pink-600 text-white'>
-        <divclassName='max-w-5xl mx-auto px-6'>
-          <h1className='text-3xl md:text-5xl font-extrabold leading-tight'>
+export default function AgenticRiskMitigation2026Page() {
+  return (
+    <main className='min-h-screen bg-white'>
+      <section className='py-16 bg-gradient-to-r from-purple-700 via-fuchsia-700 to-pink-600 text-white'>
+        <div className='max-w-5xl mx-auto px-6'>
+          <h1 className='text-3xl md:text-5xl font-extrabold leading-tight'>
             Agentic Risk Mitigation 2026
           </h1>
-          <pclassName='mt-4 text-lg md:text-xl text-purple-50'>
-            A practical playbook for safereliableand governed autonomous agents
+          <p className='mt-4 text-lg md:text-xl text-purple-50'>
+            A practical playbook for safe, reliable and governed autonomous agents
             in the enterprise.
           </p>
-          <divclassName='mt-6 flex flex-wrap gap-3 text-sm'>
-            <spanclassName='bg-white/20 px-3 py-1 rounded-full'>
+          <div className='mt-6 flex flex-wrap gap-3 text-sm'>
+            <span className='bg-white/20 px-3 py-1 rounded-full'>
               🛡️ Safety
             </span>
-            <spanclassName='bg-white/20 px-3 py-1 rounded-full'>
+            <span className='bg-white/20 px-3 py-1 rounded-full'>
               📏 Evaluations
             </span>
-            <spanclassName='bg-white/20 px-3 py-1 rounded-full'>
+            <span className='bg-white/20 px-3 py-1 rounded-full'>
               🧭 Governance
             </span>
-            <spanclassName='bg-white/20 px-3 py-1 rounded-full'>
+            <span className='bg-white/20 px-3 py-1 rounded-full'>
               ⚡ Autonomy
             </span>
           </div>
         </div>
       </section>
 
-      <sectionclassName='py-12'>
-        <divclassName='max-w-3xl mx-auto px-6 prose prose-lg'>
+      <section className='py-12'>
+        <div className='max-w-3xl mx-auto px-6 prose prose-lg'>
           <h2>Why risk mitigation matters now</h2>
           <p>
             Agentic systems are moving from pilots to production. With higher
@@ -72,7 +72,7 @@ export default function AgenticRiskMitigation2026Page() {return (<mainclassName=
           <h3>Deployment quickstart</h3>
           <ol>
             <li>Define risk taxonomy and map to agent capabilities</li>
-            <li>Instrument policiesbudgetsand escalation paths</li>
+            <li>Instrument policies, budgets and escalation paths</li>
             <li>Stand up eval pipelines with golden tasks</li>
             <li>
               Pilot under tight budgets; expand with observed safety margins
@@ -82,20 +82,21 @@ export default function AgenticRiskMitigation2026Page() {return (<mainclassName=
             </li>
           </ol>
 
-          <divclassName='not-prose mt-10 p-6 rounded-xl bg-gradient-to-br from-gray-50 to-white border border-gray-200'>
-            <h4className='text-xl font-bold mb-2'>Get the checklist</h4>
-            <pclassName='text-gray-700 mb-4'>
+          <div className='not-prose mt-10 p-6 rounded-xl bg-gradient-to-br from-gray-50 to-white border border-gray-200'>
+            <h4 className='text-xl font-bold mb-2'>Get the checklist</h4>
+            <p className='text-gray-700 mb-4'>
               Download the operational checklist to productionize these controls
               inside your platform.
             </p>
-            <ArrowRight
-             href='/case-studies'
-             className='inline-block bg-purple-600 hover:bg-purple-700 text-white px-5 py-3 rounded-lg font-semibold'
+            <Link
+              href='/case-studies'
+              className='inline-block bg-purple-600 hover:bg-purple-700 text-white px-5 py-3 rounded-lg font-semibold'
             >
               Explore case studies →
-            </ArrowRight>
+            </Link>
           </div>
         </div>
       </section>
     </main>
-  ); }
+  );
+}
