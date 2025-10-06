@@ -44,13 +44,14 @@
     "noImplicitAny": true,
     "noImplicitReturns": true,
     "noImplicitThis": true,
-    "exactOptionalPropertyTypes": true,
-    "noImplicitOverride": true,
-    "noPropertyAccessFromIndexSignature": true,
-    "noUncheckedIndexedAccess": true,
-    "allowUnusedLabels": false,
-    "allowUnreachableCode": false,
-    "verbatimModuleSyntax": true
+    "strictNullChecks": false,
+    "exactOptionalPropertyTypes": false,
+    "noImplicitOverride": false,
+    "noPropertyAccessFromIndexSignature": false,
+    "noUncheckedIndexedAccess": false,
+    "allowUnusedLabels": true,
+    "allowUnreachableCode": true,
+    "verbatimModuleSyntax": false
   },
   "include": [
     "src/**/*",

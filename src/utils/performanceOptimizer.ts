@@ -15,6 +15,16 @@ export interface WebVitalsMetrics {
 }
 
 /**
+ * Performance budget interface
+ */
+export interface PerformanceBudget {
+  maxBundleSize: number; // in KB
+  maxImageSize: number; // in KB
+  maxFirstLoad: number; // in ms
+  maxInteractive: number; // in ms
+}
+
+/**
  * Resource hints for performance
  */
 export const prefetchResources = (urls: string[]): void => {
@@ -268,13 +278,6 @@ export const clearOldCaches = async (currentVersion: string): Promise<void> => {
 /**
  * Performance budget checker
  */
-export interface PerformanceBudget {
-  maxBundleSize: number; // in KB
-  maxImageSize: number; // in KB
-  maxFirstLoad: number; // in ms
-  maxInteractive: number; // in ms
-}
-
 export const checkPerformanceBudget = (budget: PerformanceBudget): {
   passed: boolean;
   violations: string[];
@@ -371,16 +374,16 @@ class PerformanceOptimizer {
     });
   }
 
-  public prefetchResources(urls: string[]): void {
-    prefetchResources(urls);
-  }
-
   public reportWebVitals(metrics: WebVitalsMetrics): void {
     reportWebVitals(metrics);
   }
 
   public measurePageLoad(): WebVitalsMetrics | null {
     return measurePageLoad();
+  }
+
+  public prefetchResources(resources: string[]): void {
+    prefetchResources(resources);
   }
 
   public monitorLongTasks(callback: (entries: PerformanceEntryList) => void): PerformanceObserver | null {
@@ -391,29 +394,6 @@ class PerformanceOptimizer {
   getMetrics(): Record<string, number> {
     return Object.fromEntries(this.metrics);
   }
-
-  // Add critical resource hints for better performance
-  addCriticalResourceHints(): void {
-    if (typeof document === 'undefined') return;
-    
-    const hints = [
-      { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' },
-      { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com' },
-      { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
-      { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossOrigin: 'anonymous' }
-    ];
-
-    hints.forEach((hint) => {
-      const link = document.createElement('link');
-      link.rel = hint.rel;
-      link.href = hint.href;
-      if (hint.crossOrigin) {
-        link.crossOrigin = hint.crossOrigin;
-      }
-      document.head.appendChild(link);
-    });
-  }
-
   // Initialize all optimizations
   initialize(): void {
     this.measurePerformance('lazyLoadImages', () => this.lazyLoadImages());
@@ -424,3 +404,23 @@ class PerformanceOptimizer {
 
 // Export singleton instance
 export const performanceOptimizer = PerformanceOptimizer.getInstance();
+
+export default {
+  prefetchResources,
+  preconnectDomains,
+  lazyLoadImages,
+  debounce,
+  throttle,
+  measurePageLoad,
+  reportWebVitals,
+  shouldUseWebP,
+  getConnectionQuality,
+  shouldLoadHeavyAssets,
+  requestIdleCallback,
+  cancelIdleCallback,
+  preloadRoute,
+  monitorLongTasks,
+  cacheStaticAssets,
+  clearOldCaches,
+  checkPerformanceBudget
+};
