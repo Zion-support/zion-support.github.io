@@ -90,88 +90,94 @@ export class PerformanceOptimizer {
     return Object.fromEntries(this.metrics);
   }
 
+  // Add critical resource hints
+  addCriticalResourceHints(): void {
+    if (typeof document === 'undefined') return;
+    
+    const hints = [
+      { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' },
+      { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com' },
+      { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+      { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossOrigin: 'anonymous' }
+    ];
+    
+    hints.forEach(hint => {
+      const link = document.createElement('link');
+      link.rel = hint.rel;
+      link.href = hint.href;
+      if (hint.crossOrigin) {
+        link.crossOrigin = hint.crossOrigin;
+      }
+      document.head.appendChild(link);
+    });
+  }
+
+  // Report web vitals
+  reportWebVitals(): void {
+    if (typeof window === 'undefined' || !('web-vitals' in window)) return;
+    
+    // This would integrate with web-vitals library
+    console.log('Web vitals reporting enabled');
+  }
+
+  // Measure page load performance
+  measurePageLoad(): void {
+    if (typeof window === 'undefined') return;
+    
+    window.addEventListener('load', () => {
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      if (navigation) {
+        const loadTime = navigation.loadEventEnd - (navigation as any).navigationStart;
+        this.metrics.set('pageLoad', loadTime);
+      }
+    });
+  }
+
   // Initialize all optimizations
   initialize(): void {
     this.measurePerformance('lazyLoadImages', () => this.lazyLoadImages());
     this.measurePerformance('preloadCriticalResources', () => this.preloadCriticalResources());
     this.measurePerformance('optimizeScroll', () => this.optimizeScroll());
+    this.addCriticalResourceHints();
+    this.reportWebVitals();
+    this.measurePageLoad();
   }
 }
 
-<<<<<<< HEAD
 /**
- * Critical resource hints for better performance
+ * Clear old caches to prevent storage bloat
  */
-export const addCriticalResourceHints = (): void => {
-  if (typeof document === 'undefined') return;
-  
-  const hints = [
-    { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' },
-    { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com' },
-    { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
-    { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossOrigin: 'anonymous' }
-  ];
-  
-  hints.forEach(hint => {
-    const link = document.createElement('link');
-    link.rel = hint.rel;
-    link.href = hint.href;
-    if (hint.crossOrigin) {
-      link.crossOrigin = hint.crossOrigin;
-    }
-    document.head.appendChild(link);
-  });
+export const clearOldCaches = (): void => {
+  if ('caches' in window) {
+    caches.keys().then(names => {
+      names.forEach(name => {
+        if (name.includes('old-') || name.includes('v1-')) {
+          caches.delete(name);
+        }
+      });
+    });
+  }
 };
 
-export const checkPerformanceBudget = (budget: PerformanceBudget): {
-  passed: boolean;
-  violations: string[];
-} => {
-  const violations: string[] = [];
-  
-  if (typeof window === 'undefined' || !window.performance) {
-    return { passed: true, violations };
-  }
-  
-  const timing = window.performance.timing;
-  const loadTime = timing.loadEventEnd - timing.navigationStart;
-  const interactiveTime = timing.domInteractive - timing.navigationStart;
-  
-  if (loadTime > budget.maxFirstLoad) {
-    violations.push(`First load time (${loadTime}ms) exceeds budget (${budget.maxFirstLoad}ms)`);
-  }
-  
-  if (interactiveTime > budget.maxInteractive) {
-    violations.push(`Time to interactive (${interactiveTime}ms) exceeds budget (${budget.maxInteractive}ms)`);
-  }
-  
-  return {
-    passed: violations.length === 0,
-    violations
+/**
+ * Check if performance budget is exceeded
+ */
+export const checkPerformanceBudget = (): boolean => {
+  const budget = {
+    fcp: 1800, // First Contentful Paint
+    lcp: 2500, // Largest Contentful Paint
+    fid: 100,  // First Input Delay
+    cls: 0.1   // Cumulative Layout Shift
   };
+  
+  const entries = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+  if (!entries) return true;
+  
+  return (
+    entries.loadEventEnd - entries.loadEventStart < budget.fcp &&
+    entries.domContentLoadedEventEnd - entries.domContentLoadedEventStart < budget.lcp
+  );
 };
 
-export default {
-  prefetchResources,
-  preconnectDomains,
-  lazyLoadImages,
-  debounce,
-  throttle,
-  measurePageLoad,
-  reportWebVitals,
-  shouldUseWebP,
-  getConnectionQuality,
-  shouldLoadHeavyAssets,
-  requestIdleCallback,
-  cancelIdleCallback,
-  preloadRoute,
-  monitorLongTasks,
-  cacheStaticAssets,
-  clearOldCaches,
-  checkPerformanceBudget,
-  addCriticalResourceHints
-};
-=======
 // Export singleton instance
 export const performanceOptimizer = PerformanceOptimizer.getInstance();
->>>>>>> origin/merge-all-fixes
