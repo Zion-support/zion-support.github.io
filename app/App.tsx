@@ -73,12 +73,12 @@ const App: React.FC = () => {
                     Skip to main content
                   </a>
 
-                  <Suspense fallback={<LoadingSpinner />}>
-                    <Routes>
-                      <Route path='/' element={<HomePage />} />
-                      {/* Add more routes as needed */}
-                    </Routes>
-                  </Suspense>
+                <Suspense fallback={<LoadingSpinner text="Loading..." />}>
+                  <Routes>
+                    <Route path='/' element={<HomePage />} />
+                    {/* Add more routes as needed */}
+                  </Routes>
+                </Suspense>
 
                   {/* Performance Dashboard */}
                   <PerformanceDashboard />
