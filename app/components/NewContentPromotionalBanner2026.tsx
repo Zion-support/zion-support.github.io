@@ -1,4 +1,6 @@
 import React from 'react';
+import { ArrowRight, Rocket, Shield, Target, TrendingUp, Zap } from 'lucide-react';
+>>>>>>> 6c45f99dc7ca17bbf478e03055adf8e9c75097bc
 import { ArrowRight, Bot, Rocket, Shield, Target, TrendingUp, Zap } from 'lucide-react';
 
 import Link from 'next/link';
