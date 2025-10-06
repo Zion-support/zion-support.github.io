@@ -9,18 +9,30 @@
     ],
     "module": "ESNext",
     "skipLibCheck": true,
-    "moduleResolution": "node",
     "allowImportingTsExtensions": false,
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
+<<<<<<< HEAD
     "strict": false,
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+=======
+    "jsxImportSource": "react",
+>>>>>>> main
+    "strict": true,
+>>>>>>> main
+>>>>>>> main
+    "strictNullChecks": true,
     "noUnusedLocals": false,
     "noUnusedParameters": false,
     "noFallthroughCasesInSwitch": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
+    "moduleResolution": "bundler",
     "baseUrl": ".",
     "paths": {
       "@/*": [
@@ -55,7 +67,13 @@
   },
   "include": [
     "app/**/*",
+<<<<<<< HEAD
     "src/**/*"
+=======
+    "src/**/*",
+    "App.tsx",
+    "components/**/*"
+>>>>>>> main
   ],
   "exclude": [
     "node_modules",
@@ -98,6 +116,11 @@
     "services/**",
     "middleware/**",
     "app/blog/**",
+    "app/page-optimized.tsx",
+    "app/services/**/*",
+    "app/case-studies/**/*",
+    "app/guides/**/*",
+    "app/components/**/*",
     "EnhancedFooter.tsx",
     "EnhancedHeader.tsx",
     "EnhancedNavigation.tsx",
@@ -105,7 +128,19 @@
     "SidebarNavigation.tsx",
     "api-documentation.tsx",
     "app/components/NewContentPromotionalBanner2026.tsx",
-    "app/components/NewestContent2025Banner.tsx"
+    "app/components/NewestContent2025Banner.tsx",
+<<<<<<< HEAD
+    "api/**",
+    "lib/**"
+=======
+    "utils/bannerLazyLoader.ts",
+    "utils/bannerPrioritization.ts",
+    "utils/bannerRegistry.ts",
+    "utils/bannerRotationSystem.ts",
+    "utils/comprehensiveOptimizer.ts",
+    "utils/performanceUtils.ts",
+    "utils/seoUtils.ts"
+>>>>>>> main
   ],
   "references": [
     {

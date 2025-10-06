@@ -72,7 +72,7 @@ class AccessibilityEnhancer {
 
     // Make all interactive elements focusable
     const interactiveElements = document.querySelectorAll(
-      'button, a, input, select, textarea, [tabindex]',
+      'button, a, input, select, textarea, [tabindex]'
     );
     interactiveElements.forEach(element => {
       if (!element.hasAttribute('tabindex')) {
@@ -175,7 +175,7 @@ class AccessibilityEnhancer {
     // Announce focus changes to screen readers
     if (this.config.enableScreenReaderSupport) {
       this.announceToScreenReader(
-        `Focused on ${this.getElementDescription(element)}`,
+        `Focused on ${this.getElementDescription(element)}`
       );
     }
   }
@@ -188,7 +188,7 @@ class AccessibilityEnhancer {
     if (!modal) return;
 
     const focusableElements = modal.querySelectorAll(
-      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])',
+      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
     );
     const firstElement = focusableElements[0] as HTMLElement;
     const lastElement = focusableElements[
@@ -222,14 +222,14 @@ class AccessibilityEnhancer {
 
     // Add ARIA labels to form inputs
     const inputs = document.querySelectorAll(
-      'input:not([aria-label]):not([aria-labelledby])',
+      'input:not([aria-label]):not([aria-labelledby])'
     );
     inputs.forEach(input => {
       const label = this.findAssociatedLabel(input as HTMLInputElement);
       if (label) {
         input.setAttribute(
           'aria-labelledby',
-          label.id || this.generateId(label),
+          label.id || this.generateId(label)
         );
       }
     });
@@ -314,13 +314,13 @@ class AccessibilityEnhancer {
           const label = this.findAssociatedLabel(input as HTMLInputElement);
           if (!label) {
             const generatedLabel = this.generateFormLabel(
-              input as HTMLInputElement,
+              input as HTMLInputElement
             );
             const labelElement = document.createElement('label');
             labelElement.textContent = generatedLabel;
             labelElement.setAttribute(
               'for',
-              input.id || this.generateId(input),
+              input.id || this.generateId(input)
             );
             input.id = input.id || this.generateId(input);
             input.parentNode?.insertBefore(labelElement, input);
@@ -455,7 +455,7 @@ class AccessibilityEnhancer {
   }
 
   private findAssociatedLabel(
-    input: HTMLInputElement,
+    input: HTMLInputElement
   ): HTMLLabelElement | null {
     const id = input.id;
     if (id) {
@@ -533,7 +533,7 @@ class AccessibilityEnhancer {
   private closeModal(modal: HTMLElement): void {
     modal.setAttribute('aria-hidden', 'true');
     const focusableElement = modal.querySelector(
-      '[data-focus-trap-start]',
+      '[data-focus-trap-start]'
     ) as HTMLElement;
     if (focusableElement) {
       focusableElement.focus();
