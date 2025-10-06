@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { ProviderConnection, SyncLogEntry } from './types';
 <<<<<<< HEAD
 // import { v4 as uuidv4 } from 'uuid';
@@ -33,6 +34,10 @@ import type { ProviderConnection, SyncLogEntry } from './types';
 import { ProviderConnection, SyncLogEntry } from './types';
 import { v4 as uuidv4 } from 'uuid';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-8344
+=======
+import type { ProviderConnection, SyncLogEntry } from './types';
+import { v4 as uuidv4 } from 'uuid';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3fed
 
 export async function simulateAction<T = any>(
   connection: ProviderConnection,
@@ -40,6 +45,7 @@ export async function simulateAction<T = any>(
   details: Record<string, any> = {}
 ): Promise<{ log: SyncLogEntry; result: T }> {
   const log: SyncLogEntry = {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     id: uuidv4(),
@@ -50,12 +56,16 @@ export async function simulateAction<T = any>(
 =======
     id: uuidv4(),
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-8344
+=======
+    id: uuidv4(),
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3fed
     timestamp: Date.now(),
     providerId: connection.providerId,
     level: 'info',
     action,
     details
   };
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -68,12 +78,16 @@ export async function simulateAction<T = any>(
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-8344
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3fed
   // In a real implementation, call provider SDK/API here using connection.accessToken
   return {
     log,
     result: { ok: true } as unknown as T
   };
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -165,6 +179,8 @@ export const ats = {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-8344
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3fed
 
 // CRM actions
 export const crm = {
@@ -187,11 +203,14 @@ export const ats = {
   async updateStatus(connection: ProviderConnection, change: Record<string, any>) {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0a8c
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-8344
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3fed
     return simulateAction(connection, 'ats.updateStatus', { change });
   }
 };

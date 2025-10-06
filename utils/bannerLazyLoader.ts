@@ -29,10 +29,26 @@ export const lazyLoadBanner = (
             .catch(retryError => {
               console.error(
                 `Retry failed for banner: ${componentName}`,
+<<<<<<< HEAD
                 retryError
               );
               // Return a fallback component
               resolve({ default: () => null });
+=======
+                retryError,
+              );
+              // Return a fallback component
+              resolve({
+                default: () => {
+                  const div = document.createElement('div');
+                  div.className = 'banner-error';
+                  const p = document.createElement('p');
+                  p.textContent = `Failed to load banner: ${componentName}`;
+                  div.appendChild(p);
+                  return div as any;
+                },
+              });
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3fed
             });
         }, 1000);
       });
@@ -41,18 +57,18 @@ export const lazyLoadBanner = (
 };
 
 /**
- * Preload banner components in the background
+ * Preload banner components for better performance
  */
-export const preloadBanners = (
-  importFns: Array<() => Promise<BannerModule>>,
-) => {
-  if (typeof window !== 'undefined' && 'requestIdleCallback' in window) {
-    requestIdleCallback(() => {
-      importFns.forEach(importFn => {
-        importFn().catch(() => {
-          // Silently fail for preloading
+export const preloadBanner = (importFn: () => Promise<BannerModule>): void => {
+  if (typeof window !== 'undefined') {
+    // Use requestIdleCallback for non-blocking preloading
+    if ('requestIdleCallback' in window) {
+      requestIdleCallback(() => {
+        importFn().catch(error => {
+          console.warn('Banner preload failed:', error);
         });
       });
+<<<<<<< HEAD
     });
   }
 };
@@ -110,10 +126,18 @@ export class BannerObserver {
               this.observer?.unobserve(entry.target);
             }
           }
+=======
+    } else {
+      // Fallback for browsers without requestIdleCallback
+      setTimeout(() => {
+        importFn().catch(error => {
+          console.warn('Banner preload failed:', error);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3fed
         });
-      }, this.options);
+      }, 100);
     }
   }
+<<<<<<< HEAD
 
   observe(element: Element): void {
     this.observer?.observe(element);
@@ -125,9 +149,50 @@ export class BannerObserver {
   }
 }
 
+=======
+};
+
 /**
- * Analytics tracking for banner performance
+ * Banner loading state management
  */
+export class BannerLoader {
+  private loadingStates = new Map<string, boolean>();
+  private loadedComponents = new Set<string>();
+
+  isLoaded(componentName: string): boolean {
+    return this.loadedComponents.has(componentName);
+  }
+
+  isLoading(componentName: string): boolean {
+    return this.loadingStates.get(componentName) || false;
+  }
+
+  setLoading(componentName: string, loading: boolean): void {
+    this.loadingStates.set(componentName, loading);
+  }
+
+  setLoaded(componentName: string): void {
+    this.loadedComponents.add(componentName);
+    this.loadingStates.delete(componentName);
+  }
+
+  getLoadingCount(): number {
+    return Array.from(this.loadingStates.values()).filter(Boolean).length;
+  }
+
+  getAllLoadedComponents(): string[] {
+    return Array.from(this.loadedComponents);
+  }
+}
+
+// Global banner loader instance
+export const bannerLoader = new BannerLoader();
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3fed
+/**
+ * Hook for banner loading state
+ */
+<<<<<<< HEAD
 export const trackBannerPerformance = (
   bannerName: string,
   metrics: {
@@ -153,3 +218,56 @@ export default {
   BannerObserver,
   trackBannerPerformance,
 };
+=======
+export const useBannerLoadingState = (componentName: string) => {
+  return {
+    isLoading: bannerLoader.isLoading(componentName),
+    isLoaded: bannerLoader.isLoaded(componentName),
+  };
+};
+
+/**
+ * Banner loading configuration
+ */
+export interface BannerConfig {
+  componentName: string;
+  importFn: () => Promise<BannerModule>;
+  preload?: boolean;
+  retryAttempts?: number;
+  retryDelay?: number;
+}
+
+/**
+ * Load multiple banners with configuration
+ */
+export const loadBanners = async (configs: BannerConfig[]): Promise<void> => {
+  const loadPromises = configs.map(async config => {
+    const { componentName, importFn, preload = false } = config;
+    
+    if (preload) {
+      preloadBanner(importFn);
+    }
+
+    try {
+      bannerLoader.setLoading(componentName, true);
+      await importFn();
+      bannerLoader.setLoaded(componentName);
+    } catch (error) {
+      console.error(`Failed to load banner: ${componentName}`, error);
+    } finally {
+      bannerLoader.setLoading(componentName, false);
+    }
+  });
+
+  await Promise.allSettled(loadPromises);
+};
+
+export default {
+  lazyLoadBanner,
+  preloadBanner,
+  BannerLoader,
+  bannerLoader,
+  useBannerLoadingState,
+  loadBanners,
+};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3fed

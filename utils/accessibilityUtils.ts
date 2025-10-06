@@ -7,7 +7,11 @@ export const focusManagement = {
   // Trap focus within an element
   trapFocus: (element: HTMLElement): (() => void) => {
     const focusableElements = element.querySelectorAll(
+<<<<<<< HEAD
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+=======
+      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3fed
     );
     const firstElement = focusableElements[0] as HTMLElement;
     const lastElement = focusableElements[
@@ -38,6 +42,7 @@ export const focusManagement = {
     };
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
   },
@@ -46,6 +51,13 @@ export const focusManagement = {
   restoreFocus: (element: HTMLElement): void => {
     element.focus();
   },
+=======
+
+  // Restore focus to previous element
+  restoreFocus: (element: HTMLElement): void => {
+    element.focus();
+  },
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3fed
 
   // Skip to main content
   skipToMain: (): void => {
@@ -81,9 +93,13 @@ export const ariaUtils = {
     
     document.body.appendChild(announcement);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
+=======
+    
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3fed
     setTimeout(() => {
       document.body.removeChild(announcement);
     }, 1000);
@@ -92,13 +108,20 @@ export const ariaUtils = {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Keyboard navigation utilities
 export const keyboardNavigation = {
   // Handle arrow key navigation for lists
+=======
+// Keyboard navigation utilities
+export const keyboardUtils = {
+  // Handle arrow key navigation
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3fed
   handleArrowKeys: (
     event: KeyboardEvent,
     items: HTMLElement[],
     currentIndex: number,
+<<<<<<< HEAD
     orientation: 'horizontal' | 'vertical' = 'vertical',
   ): number => {
     const isVertical = orientation === 'vertical';
@@ -118,16 +141,69 @@ export const keyboardNavigation = {
         return items.length - 1;
       default:
         return currentIndex;
+=======
+    orientation: 'horizontal' | 'vertical' = 'horizontal'
+  ): number => {
+    const { key } = event;
+    const isHorizontal = orientation === 'horizontal';
+    const isVertical = orientation === 'vertical';
+
+    if (
+      (isHorizontal && (key === 'ArrowLeft' || key === 'ArrowRight')) ||
+      (isVertical && (key === 'ArrowUp' || key === 'ArrowDown'))
+    ) {
+      event.preventDefault();
+
+      let nextIndex = currentIndex;
+      if (
+        (isHorizontal && key === 'ArrowLeft') ||
+        (isVertical && key === 'ArrowUp')
+      ) {
+        nextIndex = currentIndex > 0 ? currentIndex - 1 : items.length - 1;
+      } else {
+        nextIndex = currentIndex < items.length - 1 ? currentIndex + 1 : 0;
+      }
+
+      items[nextIndex]?.focus();
+      return nextIndex;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3fed
     }
+
+    return currentIndex;
   },
+<<<<<<< HEAD
   // Handle Enter and Space key activation
   handleActivation: (event: KeyboardEvent, callback: () => void): void => {
     if (event.key === 'Enter' || event.key === ' ') {
       event.preventDefault();
       callback();
+=======
+
+  // Handle home/end keys
+  handleHomeEndKeys: (
+    event: KeyboardEvent,
+    items: HTMLElement[],
+    currentIndex: number
+  ): number => {
+    const { key } = event;
+
+    if (key === 'Home') {
+      event.preventDefault();
+      items[0]?.focus();
+      return 0;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3fed
     }
+
+    if (key === 'End') {
+      event.preventDefault();
+      items[items.length - 1]?.focus();
+      return items.length - 1;
+    }
+
+    return currentIndex;
   },
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
@@ -136,6 +212,11 @@ export const keyboardNavigation = {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6231
 // Color contrast utilities
 export const colorContrast = {
+=======
+
+// Color contrast utilities
+export const contrastUtils = {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3fed
   // Calculate relative luminance
   getLuminance: (r: number, g: number, b: number): number => {
     const [rs, gs, bs] = [r, g, b].map(c => {
@@ -143,9 +224,14 @@ export const colorContrast = {
       return c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4);
     });
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3fed
     return 0.2126 * (rs || 0) + 0.7152 * (gs || 0) + 0.0722 * (bs || 0);
   },
+
   // Calculate contrast ratio
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -187,10 +273,34 @@ export const colorContrast = {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
     const brightest = Math.max(lum1, lum2);
     const darkest = Math.min(lum1, lum2);
+=======
+  getContrastRatio: (color1: string, color2: string): number => {
+    const hexToRgb = (hex: string): [number, number, number] => {
+      const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+      return result
+        ? [
+            parseInt(result[1] || '0', 16),
+            parseInt(result[2] || '0', 16),
+            parseInt(result[3] || '0', 16),
+          ]
+        : [0, 0, 0];
+    };
+
+    const [r1, g1, b1] = hexToRgb(color1);
+    const [r2, g2, b2] = hexToRgb(color2);
+
+    const lum1 = contrastUtils.getLuminance(r1, g1, b1);
+    const lum2 = contrastUtils.getLuminance(r2, g2, b2);
+
+    const brightest = Math.max(lum1, lum2);
+    const darkest = Math.min(lum1, lum2);
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3fed
     return (brightest + 0.05) / (darkest + 0.05);
   },
 
   // Check if contrast meets WCAG standards
+<<<<<<< HEAD
 <<<<<<< HEAD
   meetsWCAG: (contrastRatio: number, level: 'AA' | 'AAA' = 'AA'): boolean => {
     const thresholds = { AA: 4.5, AAA: 7 };
@@ -253,10 +363,35 @@ export const keyboardNavigation = {
   // Respect user's motion preferences
   conditionalAnimation: (animation: string, fallback: string = ''): string => {
     return motionUtils.prefersReducedMotion() ? fallback : animation;
+=======
+  meetsWCAG: (color1: string, color2: string, level: 'AA' | 'AAA' = 'AA'): boolean => {
+    const ratio = contrastUtils.getContrastRatio(color1, color2);
+    return level === 'AA' ? ratio >= 4.5 : ratio >= 7;
+  },
+};
+
+// Screen reader utilities
+export const screenReaderUtils = {
+  // Hide element from screen readers
+  hideFromScreenReader: (element: HTMLElement): void => {
+    element.setAttribute('aria-hidden', 'true');
+  },
+
+  // Show element to screen readers
+  showToScreenReader: (element: HTMLElement): void => {
+    element.removeAttribute('aria-hidden');
+  },
+
+  // Check if element is visible to screen readers
+  isVisibleToScreenReader: (element: HTMLElement): boolean => {
+    return element.getAttribute('aria-hidden') !== 'true' && 
+           !element.classList.contains('sr-only');
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3fed
   },
 };
 
 // Form accessibility utilities
+<<<<<<< HEAD
 export const formAccessibility = {
   // Associate label with input
   associateLabel: (
@@ -296,11 +431,49 @@ export const formAccessibility = {
     if (event.key === 'Enter' || event.key === ' ') {
       event.preventDefault();
       callback();
+=======
+export const formUtils = {
+  // Associate label with input
+  associateLabel: (input: HTMLElement, label: HTMLElement): void => {
+    const inputId = input.id || ariaUtils.generateId('input');
+    const labelId = label.id || ariaUtils.generateId('label');
+
+    input.id = inputId;
+    label.id = labelId;
+    label.setAttribute('for', inputId);
+  },
+
+  // Add error message association
+  addErrorMessage: (input: HTMLElement, errorMessage: string): void => {
+    const errorId = ariaUtils.generateId('error');
+    const errorElement = document.createElement('div');
+    
+    errorElement.id = errorId;
+    errorElement.textContent = errorMessage;
+    errorElement.setAttribute('role', 'alert');
+    errorElement.setAttribute('aria-live', 'polite');
+    
+    input.setAttribute('aria-describedby', errorId);
+    input.setAttribute('aria-invalid', 'true');
+    
+    input.parentNode?.insertBefore(errorElement, input.nextSibling);
+  },
+
+  // Remove error message
+  removeErrorMessage: (input: HTMLElement): void => {
+    const errorId = input.getAttribute('aria-describedby');
+    if (errorId) {
+      const errorElement = document.getElementById(errorId);
+      errorElement?.remove();
+      input.removeAttribute('aria-describedby');
+      input.removeAttribute('aria-invalid');
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3fed
     }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
   },
 };
 
+<<<<<<< HEAD
 // Screen reader utilities
 <<<<<<< HEAD
 export const screenReaderUtils = {
@@ -469,3 +642,47 @@ export const keyboardNavigation = {
   },
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
 };
+=======
+// Animation utilities
+export const animationUtils = {
+  // Respect user's motion preferences
+  respectsMotionPreference: (): boolean => {
+    return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  },
+
+  // Apply reduced motion styles
+  applyReducedMotion: (element: HTMLElement): void => {
+    if (animationUtils.respectsMotionPreference()) {
+      element.style.animation = 'none';
+      element.style.transition = 'none';
+    }
+  },
+};
+
+// High contrast utilities
+export const highContrastUtils = {
+  // Check if high contrast mode is enabled
+  isHighContrastMode: (): boolean => {
+    return window.matchMedia('(prefers-contrast: high)').matches;
+  },
+
+  // Apply high contrast styles
+  applyHighContrast: (element: HTMLElement): void => {
+    if (highContrastUtils.isHighContrastMode()) {
+      element.style.border = '2px solid';
+      element.style.outline = '2px solid';
+    }
+  },
+};
+
+export default {
+  focusManagement,
+  ariaUtils,
+  keyboardUtils,
+  contrastUtils,
+  screenReaderUtils,
+  formUtils,
+  animationUtils,
+  highContrastUtils,
+};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3fed

@@ -1,26 +1,8 @@
 /**
- * Performance Optimization Utility
- *
- * Provides tools for optimizing application performance including:
- * - Component lazy loading
- * - Image optimization
- * - Bundle size monitoring
- * - Memory leak detection
- * - Render performance tracking
+ * Performance Optimizer Utilities
  */
-
-import * as React from 'react';
-
-export interface PerformanceMetrics {
-  componentName: string;
-  renderTime: number;
-  mountTime: number;
-  updateCount: number;
-  memoryUsage: number;
-  timestamp: Date;
-}
-
 export class PerformanceOptimizer {
+<<<<<<< HEAD
   private metrics: Map<string, PerformanceMetrics[]> = new Map();
   private renderStartTimes: Map<string, number> = new Map();
   private observedComponents: Set<string> = new Set();
@@ -330,3 +312,11 @@ export const performanceUtils = {
 };
 
 export default performanceOptimizer;
+=======
+  static optimize(): void {
+    // Performance optimization logic
+  }
+}
+
+export default PerformanceOptimizer;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3fed

@@ -1,4 +1,5 @@
 /**
+<<<<<<< HEAD
  * Banner Prioritization System
  *
  * Manages dynamic banner loading and prioritization based on:
@@ -9,16 +10,17 @@
  */
 
 export interface BannerMetadata {
+=======
+ * Banner Prioritization Utility
+ */
+export interface BannerPriority {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3fed
   id: string;
-  component: string;
   priority: number;
-  value: number; // In billions
-  publishDate: Date;
-  category: 'service' | 'case-study' | 'blog' | 'showcase';
-  isVisible: boolean;
-  loadStrategy: 'immediate' | 'lazy' | 'on-demand';
+  category: string;
 }
 
+<<<<<<< HEAD
 export class BannerPrioritizationEngine {
   private banners: Map<string, BannerMetadata> = new Map();
   private visibilityThreshold = 5; // Max banners to show above the fold
@@ -257,3 +259,32 @@ export default BannerPrioritizationEngine;
 // Default instance
 export const bannerEngine = new BannerPrioritizationEngine();
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
+=======
+export class BannerPrioritizer {
+  private banners: BannerPriority[] = [];
+
+  addBanner(banner: BannerPriority): void {
+    this.banners.push(banner);
+    this.sortBanners();
+  }
+
+  removeBanner(id: string): void {
+    this.banners = this.banners.filter(banner => banner.id !== id);
+  }
+
+  getBanners(): BannerPriority[] {
+    return [...this.banners];
+  }
+
+  getBannersByCategory(category: string): BannerPriority[] {
+    return this.banners.filter(banner => banner.category === category);
+  }
+
+  private sortBanners(): void {
+    this.banners.sort((a, b) => b.priority - a.priority);
+  }
+}
+
+export const bannerPrioritizer = new BannerPrioritizer();
+export default bannerPrioritizer;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3fed

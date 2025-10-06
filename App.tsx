@@ -67,7 +67,10 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
     console.error('App Error Boundary caught an error:', error, errorInfo);
   }
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3fed
   override render() {
     if (this.state.hasError) {
       return (

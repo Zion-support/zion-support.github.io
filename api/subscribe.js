@@ -6,6 +6,7 @@ const path = require('path');
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 function isValidEmail(email) {
@@ -23,6 +24,9 @@ function isValidEmail(email) {
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-8344
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3fed
 async function handler(req, res) {
   if (req.method !== 'POST') {
     res.statusCode = 405;
@@ -30,6 +34,7 @@ async function handler(req, res) {
     res.end('Method Not Allowed');
     return;
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -80,11 +85,18 @@ async function handler(req, res) {
     const { email } = req.body || {};
     
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-8344
+=======
+
+  try {
+    const { email } = req.body || {};
+    
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3fed
     if (!isValidEmail(email)) {
       res.statusCode = 400;
       res.json({ error: 'Invalid email' });
       return;
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -101,11 +113,15 @@ async function handler(req, res) {
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-8344
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3fed
     const file = path.join(
       process.cwd(),
       'data',
       'newsletter-subscriptions.json',
     );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -128,12 +144,17 @@ async function handler(req, res) {
     
     let existing = [];
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-8344
+=======
+    
+    let existing = [];
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3fed
     try {
       existing = JSON.parse(fs.readFileSync(file, 'utf8'));
       if (!Array.isArray(existing)) existing = [];
     } catch {
       // File doesn't exist or is invalid, use empty array
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -150,10 +171,14 @@ async function handler(req, res) {
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-8344
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3fed
     existing.push({
       email,
       subscribedAt: new Date().toISOString()
     });
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -246,10 +271,19 @@ async function handler(req, res) {
   } catch (err) {
     console.error('Subscribe API error:', err);
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-8344
+=======
+
+    fs.writeFileSync(file, JSON.stringify(existing, null, 2));
+    res.statusCode = 200;
+    res.json({ success: true });
+  } catch (err) {
+    console.error('Subscribe API error:', err);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3fed
     res.statusCode = 500;
     res.json({ error: err.message || 'Subscription failed' });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -262,4 +296,7 @@ async function handler(req, res) {
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-8344
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3fed
 module.exports = withSentry(handler);
