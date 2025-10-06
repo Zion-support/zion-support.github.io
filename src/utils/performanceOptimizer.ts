@@ -439,8 +439,6 @@ export const checkPerformanceBudget = (budget: PerformanceBudget): {
 
 // Export singleton instance
 export const performanceOptimizer = PerformanceOptimizer.getInstance();
-<<<<<<< HEAD
-=======
 
 // Export individual functions for backward compatibility
 export {
@@ -468,4 +466,3 @@ export default {
   clearOldCaches,
   checkPerformanceBudget
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ace
