@@ -7,7 +7,7 @@ export interface BreakthroughArticle {
   readTime: string;
   tags: string[];
   featured: boolean;
-  impact?: string;
+:corrupted-src-backup/content/sept-30-breakthrough-articles-2025.ts
   metrics: {
     improvement: string;
     roi: string;

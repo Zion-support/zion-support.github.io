@@ -164,7 +164,7 @@ export default function Page() {
 					</p></p>
 
 					<div className="text-left">	</div><pre className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
-{`// Enterprise AI Transformation Architecture
+{`//Enterprise AI Transformation Architecture
 const TransformationStack = 
   dataLayer: 
     warehouses: "Snowflake + Databricks"

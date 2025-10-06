@@ -5,7 +5,7 @@ import fs from 'fs';
 
 console.log('Starting comprehensive PR merge process...');
 
-// Function to safely execute git commands
+//Function to safely execute git commands
 function safeGitCommand(command, description) {
   try {
     console.log(`Executing: ${description}`);
@@ -18,11 +18,11 @@ function safeGitCommand(command, description) {
   }
 }
 
-// Ensure we're on main branch
+//Ensure we're on main branch
 safeGitCommand('git checkout main', 'Switch to main branch');
 safeGitCommand('git pull origin main', 'Pull latest changes from main');
 
-// List of PR branches to try merging
+//List of PR branches to try merging
 const prBranches = [
   'cursor/fix-web-application-console-errors-0bf5',
   'cursor/build-and-deploy-with-vite-and-netlify-8b37',
@@ -38,7 +38,7 @@ let conflictCount = 0;
 for (const branch of prBranches) {
   console.log(`\n--- Processing branch: ${branch} ---`);
 
-  // Check if branch exists
+  //Check if branch exists
   const branchCheck = safeGitCommand(
     `git show-ref --verify --quiet refs/remotes/origin/${branch}`,
     `Check if ${branch} exists`
@@ -49,7 +49,7 @@ for (const branch of prBranches) {
     continue;
   }
 
-  // Try to merge the branch
+  //Try to merge the branch
   const mergeResult = safeGitCommand(
     `git merge origin/${branch} --no-ff -m "Merge branch ${branch}"`,
     `Merge ${branch}`
@@ -62,7 +62,7 @@ for (const branch of prBranches) {
     conflictCount++;
     console.log(`⚠ Merge conflict or error for ${branch}`);
 
-    // Try to abort the merge if there was a conflict
+    //Try to abort the merge if there was a conflict
     safeGitCommand('git merge --abort', `Abort merge for ${branch}`);
   }
 }
@@ -71,7 +71,7 @@ console.log(`\n--- Merge Summary ---`);
 console.log(`✓ Successfully merged: ${mergedCount} branches`);
 console.log(`⚠ Conflicts/Errors: ${conflictCount} branches`);
 
-// Push changes if any were merged
+//Push changes if any were merged
 if (mergedCount > 0) {
   const pushResult = safeGitCommand(
     'git push origin main',
