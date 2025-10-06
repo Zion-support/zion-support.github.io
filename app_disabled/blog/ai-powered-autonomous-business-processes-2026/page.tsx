@@ -3,11 +3,8 @@ import Link from 'next/link';
 import {ArrowLeft,Clock,User,Tag,Share2,BookOpen,CheckCircle,TrendingUp,Brain,Zap} from 'lucide-react';
 import {Metadata} from 'next';
 
-
-
 import { Metadata } from 'next';
 import { ArrowLeft, Clock, User, Tag, Share2, BookOpen, CheckCircle, TrendingUp, Brain, Zap } from 'lucide-react';
-
 
 export const metadata: Metadata = {
   title: 'AI-Powered Autonomous Business Processes: The 2026 Revolution | Zion Tech Group',

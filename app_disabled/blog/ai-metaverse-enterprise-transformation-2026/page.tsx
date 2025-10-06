@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import { ArrowRight, Clock, Cog, Globe, Target, User, Users, Zap } from 'lucide-react';
 
-
 import { Clock } from 'lucide-react';
 import { ArrowRight } from 'lucide-react';
 import { Globe } from 'lucide-react';
@@ -9,7 +8,6 @@ import { Users } from 'lucide-react';
 import { Zap } from 'lucide-react';
 import { Target } from 'lucide-react';
 import React from 'react';
-import Link from 'next/link';
 import {Clock,ArrowRight,Globe,Users,Zap,Target} from 'lucide-react';
 
 export const metadata = {

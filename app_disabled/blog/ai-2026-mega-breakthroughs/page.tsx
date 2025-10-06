@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import { ArrowRight, Brain, Rocket, Shield, Target, Zap } from 'lucide-react';
 
-
 import { ArrowRight } from 'lucide-react';
 import { Zap } from 'lucide-react';
 import { Brain } from 'lucide-react';
@@ -9,7 +8,6 @@ import { Shield } from 'lucide-react';
 import { Rocket } from 'lucide-react';
 import { Target } from 'lucide-react';
 import React from 'react';
-import Link from 'next/link';
 import {ArrowRight,Zap,Brain,Shield,Rocket,Target} from 'lucide-react';
 
 export const metadata = {

@@ -1,9 +1,6 @@
 import Link from 'next/link';
 import { ArrowRight, Brain, CheckCircle, Cog, DollarSign, Target, TrendingUp, User, Users, Zap } from 'lucide-react';
 
-
-
-
 export const metadata = {
   title: 'AI 2026 Breakthrough Innovations Implementation | Zion Tech Group',
   description: 'Implement revolutionary AI 2026 breakthrough innovations including quantum-neural consciousness fusion, autonomous enterprise systems, and hyper-intelligent analytics. Achieve $2.8 trillion in value.',

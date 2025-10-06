@@ -16,10 +16,10 @@ export, default, function EnhancedNewsletterSign, u, p({ title = 'Stay, Updat, e
 
 
   retu, r, n (
-    <form, onSubmi, t = { handleSub, m, i, t }, classNa, m, e = {`bg-gr, a, y-10, 0, p-6, rounde, d-lg ${classNa, m, e}`} ar, i, a-lab, e, l="Newsletter, signu, p">
+    <form, onSubmi, t = { handleSub, m, i, t }, classNa, m, e = {`bg-gr, a, y-10, 0, p-6, rounde, d-lg ${classNa, m, e}`} ar, i, a-lab, e, l="Newsletter, signu, p"></form>
       <h3, classNam, e="te, x, t-lg, fon, t-semibold, m, b-2">{title}</h3>
       <p, classNam, e="te, x, t-gr, a, y-600, m, b-4">{subtitle}</p>
-      <div, classNam, e="flex, ga, p-2">
+      <div, classNam, e="flex, ga, p-2"></div>
         <input, typ, e="ema, i, l"
           val, u, e = { em, a, i, l }, onChan, g, e={  (, e) = > setEma, i, l(e.targ, e, t.val, u, e)  } placehold, e, r = "Enter, your, email"
           classNa, m, e="fl, e, x-1, p, x-3, p, y-2, border, border-gr, a, y-300, rounde, d-md, focu, s: outli, n, e-none, focu, s:ri, n, g-2, focu, s:ri, n, g-bl, u, e-5, 0, 0"

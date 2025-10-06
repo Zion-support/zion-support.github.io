@@ -1,9 +1,4 @@
 
-
-
-
-
-
 import { Calendar, Clock, Cpu, Shield } from 'lucide-react';
 
 import React from 'react';

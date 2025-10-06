@@ -1,8 +1,6 @@
 import Link from 'next/link';
 import { ArrowRight, CheckCircle, DollarSign, TrendingUp, Users } from 'lucide-react';
 
-
-
 export default function Fortune500QuantumAITransformation2026() {
   return (
     <div className='min-h-screen bg-slate-950 text-white'>

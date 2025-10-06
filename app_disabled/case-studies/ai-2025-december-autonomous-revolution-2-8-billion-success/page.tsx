@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import { ArrowLeft, Bookmark, Brain, Calendar, CheckCircle, Clock, Shield, TrendingUp, User, Zap } from 'lucide-react';
 
-
 // Use simple SVG icons instead of lucide-react to avoid TypeScript issues
 const ArrowLeft = ({ className }: { className?: string }) => (
   <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24" width="24" height="24">
