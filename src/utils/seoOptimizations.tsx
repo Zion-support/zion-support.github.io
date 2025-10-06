@@ -265,8 +265,7 @@ export const SEOComponent = ({/* content */}
   const fullImage = image ? `${siteUrl}${image}` : defaultImage;
 
   return (
-  <div></div>
-    <Helmet>
+  <div> </div><Helmet>
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />

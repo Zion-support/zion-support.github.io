@@ -3,22 +3,15 @@ import Link from 'next/link';
 
 const NewestContent2025Banner = () => {/* content */}
   return (
-  <div></div>
-    <section className="text-left"></section>
-      {/* Animated Background Effects */}
-      <div className="text-left"></div>
-        <div className="text-left"></div>"
-        <div className="text-left" style={{ animationDelay: '2s' }}></div>"
-        <div className="text-left" style={{ animationDelay: '1s' }}></div></div>
+  <div> </div><section className="text-left">{/* Animated Background Effects */}
+      </section><div className="text-left"> </div><div className="text-left">"
+        </div><div className="text-left" style={{ animationDelay: '2s' }}>"
+        </div><div className="text-left" style={{ animationDelay: '1s' }}></div></div>
 
-      <div className="text-left"></div>
-        {/* Header */}
-        <div className="text-left"></div>
-          <div className="text-left"></div>
-            <span className="text-left">🚀</span>/span>/span>/span>
-            <span className="text-left"></span>
-              BREAKING: 3 REVOLUTIONARY ARTICLES JUST PUBLISHED!
-            </span>/span>/span>/span>
+      <div className="text-left">{/* Header */}
+        </div><div className="text-left"> </div><div className="text-left"> </div><span className="text-left">🚀</span>/span>/span>/span>
+            <span className="text-left">BREAKING: 3 REVOLUTIONARY ARTICLES JUST PUBLISHED!
+            </span></span>/span>/span>/span>
             <span className="text-left">⚡</span>/span>/span>/span>
           </div>
 
@@ -26,39 +19,27 @@ const NewestContent2025Banner = () => {/* content */}
             September 30, 2025 — Cutting-Edge AI Insights
           </h2>
           
-          <p className="text-left"></p>
-            Edge Computing • Neural Networks • Quantum Security — The future of enterprise AI starts here
-          </p>
+          <p className="text-left">Edge Computing • Neural Networks • Quantum Security — The future of enterprise AI starts here
+          </p></p>
         </div>
 
         {/* Featured Articles Grid */}
-        <div className="text-left"></div>
-          {/* Article 1: AI Edge Computing */}
-          <Link href="/blog/ai-edge-computing-real-time-2025" className="text-left">
-            <div className="text-left"></div>
-              {/* Card glow effect */}
-              <div className="text-left"></div>
-              <div className="text-left"></div>
-                {/* Icon & Badges */}
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
-                    ⚡
-                  </div>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
-                      <span className="text-left">🔥</span>/span>/span>/span>
+        <div className="text-left">{/* Article 1: AI Edge Computing */}
+          </div><Link href="/blog/ai-edge-computing-real-time-2025" className="text-left">
+            <div className="text-left">{/* Card glow effect */}
+              </div><div className="text-left"> </div><div className="text-left">{/* Icon & Badges */}
+                </div><div className="text-left"> </div><div className="text-left">⚡
+                  </div></div>
+                  <div className="text-left"> </div><div className="text-left"> </div><span className="text-left">🔥</span>/span>/span>/span>
                       <span>HOT</span>
                     </div>
-                    <span className="text-left"></span>
-                      NEW TODAY
-                    </span>/span>/span>/span>
+                    <span className="text-left">NEW TODAY
+                    </span></span>/span>/span>/span>
                   </div>
 
                 {/* Category Tag */}
-                <div className="text-left"></div>
-                  <span className="text-left"></span>
-                    Edge AI & Real-Time
-                  </span>/span>/span>/span>
+                <div className="text-left"> </div><span className="text-left">Edge AI & Real-Time
+                  </span></span>/span>/span>/span>
                 </div>
 
                 {/* Title */}
@@ -67,32 +48,25 @@ const NewestContent2025Banner = () => {/* content */}
                 </h3>
 
                 {/* Excerpt */}
-                <p className="text-left"></p>
-                  Deploy intelligence at the source with &lt;10ms latency. Achieve 95% bandwidth reduction, 
+                <p className="text-left">Deploy intelligence at the source with &lt;10ms latency. Achieve 95% bandwidth reduction, 
                   87% cost savings, and enhanced privacy compliance at enterprise scale.
-                </p>
+                </p></p>
 
                 {/* Key Stats */}
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
-                    <div className="text-left">&lt;10ms</div>"
+                <div className="text-left"> </div><div className="text-left"> </div><div className="text-left">&lt;10ms</div>"
                     <div className="text-left">Latency</div></div>
-                  <div className="text-left"></div>
-                    <div className="text-left">95%</div>"
+                  <div className="text-left"> </div><div className="text-left">95%</div>"
                     <div className="text-left">Bandwidth ↓</div></div>
-                  <div className="text-left"></div>
-                    <div className="text-left">87%</div>"
+                  <div className="text-left"> </div><div className="text-left">87%</div>"
                     <div className="text-left">Cost ↓</div></div>
 
                 {/* Meta Info */}
-                <div className="text-left"></div>
-                  <span>⏱️ 35 min read</span>
+                <div className="text-left"> </div><span>⏱️ 35 min read</span>
                   <span>📅 Sep 30, 2025</span>
                 </div>
 
                 {/* CTA Button */}
-                <div className="text-left"></div>
-                  <span>Read Full Article</span>
+                <div className="text-left"> </div><span>Read Full Article</span>
                   <span className="text-left">→</span>/span>/span>/span>
                 </div>
             </div>
@@ -100,56 +74,39 @@ const NewestContent2025Banner = () => {/* content */}
 
           {/* Article 2: Neural Networks */}
           <Link href="/blog/ai-neural-networks-enterprise-transformation-2025" className="text-left">
-            <div className="text-left"></div>
-              <div className="text-left"></div>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
-                    🧠
-                  </div>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
-                      <span className="text-left">🔥</span>/span>/span>/span>
+            <div className="text-left"> </div><div className="text-left"> </div><div className="text-left"> </div><div className="text-left"> </div><div className="text-left">🧠
+                  </div></div>
+                  <div className="text-left"> </div><div className="text-left"> </div><span className="text-left">🔥</span>/span>/span>/span>
                       <span>HOT</span>
                     </div>
-                    <span className="text-left"></span>
-                      NEW TODAY
-                    </span>/span>/span>/span>
+                    <span className="text-left">NEW TODAY
+                    </span></span>/span>/span>/span>
                   </div>
 
-                <div className="text-left"></div>
-                  <span className="text-left"></span>
-                    Neural Networks & AI
-                  </span>/span>/span>/span>
+                <div className="text-left"> </div><span className="text-left">Neural Networks & AI
+                  </span></span>/span>/span>/span>
                 </div>
 
                 <h3 className="text-left">
                   AI Neural Networks Enterprise Transformation 2025
                 </h3>
 
-                <p className="text-left"></p>
-                  Deploy advanced neural network architectures. Fortune 500 implementations achieving 98.5% accuracy, 
+                <p className="text-left">Deploy advanced neural network architectures. Fortune 500 implementations achieving 98.5% accuracy, 
                   10x ROI, and 85% operational efficiency gains.
-                </p>
+                </p></p>
 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
-                    <div className="text-left">98.5%</div>"
+                <div className="text-left"> </div><div className="text-left"> </div><div className="text-left">98.5%</div>"
                     <div className="text-left">Accuracy</div></div>
-                  <div className="text-left"></div>
-                    <div className="text-left">10x</div>"
+                  <div className="text-left"> </div><div className="text-left">10x</div>"
                     <div className="text-left">ROI</div></div>
-                  <div className="text-left"></div>
-                    <div className="text-left">85%</div>"
+                  <div className="text-left"> </div><div className="text-left">85%</div>"
                     <div className="text-left">Efficiency</div></div>
 
-                <div className="text-left"></div>
-                  <span>⏱️ 40 min read</span>
+                <div className="text-left"> </div><span>⏱️ 40 min read</span>
                   <span>📅 Sep 30, 2025</span>
                 </div>
 
-                <div className="text-left"></div>
-                  <span>Read Full Article</span>
+                <div className="text-left"> </div><span>Read Full Article</span>
                   <span className="text-left">→</span>/span>/span>/span>
                 </div>
             </div>
@@ -157,56 +114,39 @@ const NewestContent2025Banner = () => {/* content */}
 
           {/* Article 3: Quantum Security */}
           <Link href="/blog/ai-quantum-security-protocols-2026" className="text-left">
-            <div className="text-left"></div>
-              <div className="text-left"></div>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
-                    ⚛️
-                  </div>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
-                      <span className="text-left">🚨</span>/span>/span>/span>
+            <div className="text-left"> </div><div className="text-left"> </div><div className="text-left"> </div><div className="text-left"> </div><div className="text-left">⚛️
+                  </div></div>
+                  <div className="text-left"> </div><div className="text-left"> </div><span className="text-left">🚨</span>/span>/span>/span>
                       <span>CRITICAL</span>
                     </div>
-                    <span className="text-left"></span>
-                      NEW TODAY
-                    </span>/span>/span>/span>
+                    <span className="text-left">NEW TODAY
+                    </span></span>/span>/span>/span>
                   </div>
 
-                <div className="text-left"></div>
-                  <span className="text-left"></span>
-                    Quantum Security
-                  </span>/span>/span>/span>
+                <div className="text-left"> </div><span className="text-left">Quantum Security
+                  </span></span>/span>/span>/span>
                 </div>
 
                 <h3 className="text-left">
                   AI Quantum Security Protocols 2026
                 </h3>
 
-                <p className="text-left"></p>
-                  Protect AI systems with quantum-resistant cryptography. Achieve 99.99% security against classical 
+                <p className="text-left">Protect AI systems with quantum-resistant cryptography. Achieve 99.99% security against classical 
                   and quantum attacks with sub-millisecond overhead.
-                </p>
+                </p></p>
 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
-                    <div className="text-left">99.99%</div>"
+                <div className="text-left"> </div><div className="text-left"> </div><div className="text-left">99.99%</div>"
                     <div className="text-left">Security</div></div>
-                  <div className="text-left"></div>
-                    <div className="text-left">&lt;1ms</div>"
+                  <div className="text-left"> </div><div className="text-left">&lt;1ms</div>"
                     <div className="text-left">Overhead</div></div>
-                  <div className="text-left"></div>
-                    <div className="text-left">Zero</div>"
+                  <div className="text-left"> </div><div className="text-left">Zero</div>"
                     <div className="text-left">Breaches</div></div>
 
-                <div className="text-left"></div>
-                  <span>⏱️ 45 min read</span>
+                <div className="text-left"> </div><span>⏱️ 45 min read</span>
                   <span>📅 Sep 30, 2025</span>
                 </div>
 
-                <div className="text-left"></div>
-                  <span>Read Full Article</span>
+                <div className="text-left"> </div><span>Read Full Article</span>
                   <span className="text-left">→</span>/span>/span>/span>
                 </div>
             </div>
@@ -215,47 +155,36 @@ const NewestContent2025Banner = () => {/* content */}
         </div>
 
         {/* Call-to-Action Section */}
-        <div className="text-left"></div>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
-              <h3 className="text-left">
+        <div className="text-left"> </div><div className="text-left"> </div><div className="text-left"> </div><h3 className="text-left">
                 Transform Your Enterprise with Cutting-Edge AI
               </h3>
-              <p className="text-left"></p>
-                Join 50,000+ AI leaders implementing these breakthrough technologies. Get expert guidance 
+              <p className="text-left">Join 50,000+ AI leaders implementing these breakthrough technologies. Get expert guidance 
                 from Zion Tech Group's AI transformation specialists.
-              </p>
-              <div className="text-left"></div>
-                <a
+              </p></p>
+              <div className="text-left"> </div><a
                   href="tel:+13024640950"
-                  className="text-left"></a>
-                  <span className="text-left">📞</span>/span>/span>/span>
+                  className="text-left"> </a><span className="text-left">📞</span>/span>/span>/span>
                   <span>Call +1 302 464 0950</span>
                 </a>
                 <a
                   href="mailto:kleber@ziontechgroup.com"
-                  className="text-left"></a>
-                  <span className="text-left">📧</span>/span>/span>/span>
+                  className="text-left"> </a><span className="text-left">📧</span>/span>/span>/span>
                   <span>Get Expert Consultation</span>
                 </a>
               </div>
           </div>
 
         {/* Stats Section */}
-        <div className="text-left"></div>
-          {[
+        <div className="text-left">{[
             { value: '500+', label: 'Enterprise Clients' },
             { value: '10B+', label: 'Data Points Processed Daily' },
             { value: '99.9%', label: 'System Uptime' },
             { value: '5M+', label: 'Autonomous Operations Hours' }
           ].map((stat, index) => (
-            <div key={index} className="text-left"></div>
-              <div className="text-left"></div>
-                {stat.value}
-              </div>
-              <div className="text-left"></div>
-                {stat.label}
-              </div>
+            </div><div key={index} className="text-left"> </div><div className="text-left">{stat.value}
+              </div></div>
+              <div className="text-left">{stat.label}
+              </div></div>
             </div>
           ))}
         </div>

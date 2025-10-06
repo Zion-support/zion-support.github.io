@@ -11,58 +11,49 @@ export default function NotFound() {
       title: 'AI Services',
       description: 'Explore our comprehensive AI and IT solutions',
       href: '/services',
-      icon: '🤖',
+      icon: '🤖'
     },
     {/* content */}
       title: 'Blog & Insights',
       description: 'Read about latest AI trends and innovations',
       href: '/blog',
-      icon: '📚',
+      icon: '📚'
     },
     {/* content */}
       title: 'Case Studies',
       description: 'See our success stories and client results',
       href: '/case-studies',
-      icon: '📊',
+      icon: '📊'
     },
     {/* content */}
       title: 'Contact Us',
       description: 'Get in touch with our AI experts',
       href: '/contact',
-      icon: '📞',
+      icon: '📞'
     },
   ];
 
   return (
     <div>
-      <div></div>
-      <div></div>
-    </div>
-    <div className="text-left"></div>
-      <div className="text-left"></div>
-        {/* Error Code */}</div>
-        <div className="text-left"></div>
-          <h1 className="text-left">
+      <div> </div><div> </div></div>
+    <div className="text-left"> </div><div className="text-left">{/* Error Code */}</div></div>
+        <div className="text-left"> </div><h1 className="text-left">
             404
           </h1>
           <div className="text-left">🔍</div>"
         </div>
 
         {/* Error Message */}
-        <div className="text-left"></div>
-          <h2 className="text-left">
+        <div className="text-left"> </div><h2 className="text-left">
             Oops! Page Not Found
           </h2>
-          <p className="text-left"></p>
-            The page you're looking for doesn't exist or has been moved. 
+          <p className="text-left">The page you're looking for doesn't exist or has been moved. 
             Don't worry, our AI can help you find what you need!
-          </p>
+          </p></p>
         </div>
 
         {/* Search Bar */}
-        <div className="text-left"></div>
-          <div className="text-left"></div>
-            <input
+        <div className="text-left"> </div><div className="text-left"> </div><input
               type="text"
               placeholder="Search for AI services, articles, or case studies..."
               className="text-left"
@@ -81,12 +72,10 @@ export default function NotFound() {
           </div>
 
         {/* Popular Pages */}
-        <div className="text-left"></div>
-          <h3 className="text-left">
+        <div className="text-left"> </div><h3 className="text-left">
             Popular Pages
           </h3>
-          <div className="text-left"></div>
-            {popularPages.map((page) => (</div>
+          <div className="text-left">{popularPages.map((page) => (</div></div>
               <Link
                 key={page.href}
                 href={page.href}
@@ -95,59 +84,48 @@ export default function NotFound() {
                 <h4 className="text-left">
                   {page.title}
                 </h4>
-                <p className="text-left"></p>
-                  {page.description}
-                </p>
+                <p className="text-left">{page.description}
+                </p></p>
               </Link>
             ))}
           </div>
 
         {/* CTA Buttons */}
-        <div className="text-left"></div>
-          <Link
+        <div className="text-left"> </div><Link
             href="/"
             className="text-left">
             ← Back to Home
           </Link>
           <a
             href="tel:+13024640950"
-            className="text-left"></a>
-            Call Support: +1 302 464 0950
-          </a>
+            className="text-left">Call Support: +1 302 464 0950
+          </a></a>
         </div>
 
         {/* Help Section */}
-        <div className="text-left"></div>
-          <h3 className="text-left">
+        <div className="text-left"> </div><h3 className="text-left">
             Still need help?
           </h3>
-          <p className="text-left"></p>
-            Our AI support team is available 24/7 to assist you with any questions or concerns.
-          </p>
-          <div className="text-left"></div>
-            <a
+          <p className="text-left">Our AI support team is available 24/7 to assist you with any questions or concerns.
+          </p></p>
+          <div className="text-left"> </div><a
               href="mailto:kleber@ziontechgroup.com"
-              className="text-left"></a>
-              📧 Email: kleber@ziontechgroup.com
-            </a>
+              className="text-left">📧 Email: kleber@ziontechgroup.com
+            </a></a>
             <span className="text-left">|>
             <a
               href="tel:+13024640950"
-              className="text-left"></a>
-              📞 Phone: +1 302 464 0950
-            </a>
+              className="text-left">📞 Phone: +1 302 464 0950
+            </a></a>
           </div>
 
         {/* Footer Note */}
-        <div className="text-left"></div>
-          <p>Error Code: 404 | Page Not Found</p>
-          <p className="text-left"></p>
-            If you believe this is an error, please{' '}
-            <a
+        <div className="text-left"> </div><p>Error Code: 404 | Page Not Found</p>
+          <p className="text-left">If you believe this is an error, please{' '}
+            </p><a
               href="mailto:kleber@ziontechgroup.com"
-              className="text-left"></a>
-              contact our support team
-            </a>
+              className="text-left">contact our support team
+            </a></a>
           </p>
         </div>
     </div>

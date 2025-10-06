@@ -7,19 +7,19 @@ import { PerformanceMonitor } from './components/PerformanceMonitor';
 
 // Lazy load heavy components
 const UnifiedContentPromotion = dynamic(() => import('../components/UnifiedContentPromotion'), {/* content */}
-  loading: () => <div className="text-left"></div>"
+  loading: () => <div className="text-left">"
 });
 
 const InteractiveAIROICalculator = dynamic(() => import('../components/InteractiveAIROICalculator'), {/* content */}
-  loading: () => <div className="text-left"></div>"
+  loading: () => </div><div className="text-left">"
 });
 
 const ContentShowcase = dynamic(() => import('../components/ContentShowcase'), {/* content */}
-  loading: () => <div className="text-left"></div>"
+  loading: () => </div><div className="text-left">"
 });
 
 const InteractiveContentShowcase2026 = dynamic(() => import('../components/InteractiveContentShowcase2026'), {/* content */}
-  loading: () => <div className="text-left"></div>"
+  loading: () => </div><div className="text-left">"
 });
 
 export const metadata = {
@@ -61,7 +61,7 @@ export const metadata = {
 
 export default function HomePage() {
   return (
-    <div>/* content */}
+    </div><div>/* content */}
   const structuredData = {/* content */}
     "@context": "https://schema.org"
     "@type": "Organization"
@@ -99,58 +99,43 @@ export default function HomePage() {
 
   return (
     <div>
-      <div></div>
-      <div></div>
-    </div>
-    <div></div>
-      <script
+      <div> </div><div> </div></div>
+    <div> </div><script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
-      <div className="text-left"></div>
-        {/* Unified Content Promotion - Replaces multiple redundant banners */}</div>
+      <div className="text-left">{/* Unified Content Promotion - Replaces multiple redundant banners */}</div></div>
         <UnifiedContentPromotion />
 
         {/* Hero Section */}
-        <section className="text-left"></section>
-          <div className="text-left"></div>
-            <h1 className="text-left">
+        <section className="text-left"> </section><div className="text-left"> </div><h1 className="text-left">
               Transform Your Business with
-              <span className="text-left"></span>
-                {' '}AI-Powered Solutions
-              </span>
+              <span className="text-left">{' '}AI-Powered Solutions
+              </span></span>
             </h1>
-            <p className="text-left"></p>
-              Zion Tech Group delivers cutting-edge AI micro SaaS services, cloud automation, 
+            <p className="text-left">Zion Tech Group delivers cutting-edge AI micro SaaS services, cloud automation, 
               and enterprise IT solutions that drive growth, efficiency, and innovation.
-            </p>
-            <div className="text-left"></div>
-              <Link
+            </p></p>
+            <div className="text-left"> </div><Link
                 href="/services"
                 className="text-left">
                 Explore Our Services
               </Link>
               <a
                 href="tel:+13024640950"
-                className="text-left"></a>
-                Call +1 302 464 0950
-              </a>
+                className="text-left">Call +1 302 464 0950
+              </a></a>
             </div>
-            <div className="text-left"></div>
-              <div></div>
-                <div className="text-left">500+</div>"
+            <div className="text-left"> </div><div> </div><div className="text-left">500+</div>"
                 <div className="text-left">Projects Delivered</div>"
               </div>
-              <div></div>
-                <div className="text-left">99.9%</div>"
+              <div> </div><div className="text-left">99.9%</div>"
                 <div className="text-left">Uptime Guarantee</div>"
               </div>
-              <div></div>
-                <div className="text-left">24/7</div>"
+              <div> </div><div className="text-left">24/7</div>"
                 <div className="text-left">Expert Support</div>"
               </div>
-              <div></div>
-                <div className="text-left">$2M+</div>"
+              <div> </div><div className="text-left">$2M+</div>"
                 <div className="text-left">Cost Savings</div>"
               </div>
             </div>
@@ -167,19 +152,13 @@ export default function HomePage() {
         <InteractiveContentShowcase2026 />
 
         {/* Enhanced Newsletter Signup */}
-        <section className="text-left"></section>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
-              {/* Newsletter Signup */}</div>
-              <div className="text-left"></div>
-                <h2 className="text-left">
+        <section className="text-left"> </section><div className="text-left"> </div><div className="text-left">{/* Newsletter Signup */}</div></div>
+              <div className="text-left"> </div><h2 className="text-left">
                   Stay Ahead with AI & Tech Insights
                 </h2>
-                <p className="text-left"></p>
-                  Get weekly updates on AI trends, tech innovations, and exclusive service offers
-                </p>
-                <div className="text-left"></div>
-                  <input
+                <p className="text-left">Get weekly updates on AI trends, tech innovations, and exclusive service offers
+                </p></p>
+                <div className="text-left"> </div><input
                     type="email"
                     placeholder="Enter your email"
                     className="text-left"
@@ -188,39 +167,29 @@ export default function HomePage() {
                     Subscribe
                   </button>
                 </div>
-                <p className="text-left"></p>
-                  Join 10,000+ professionals. Unsubscribe anytime.
-                </p>
+                <p className="text-left">Join 10,000+ professionals. Unsubscribe anytime.
+                </p></p>
               </div>
 
               {/* Content Highlights */}
-              <div className="text-left"></div>
-                <h3 className="text-left">Latest Content Highlights</h3>"
-                <div className="text-left"></div>
-                  <a href="/blog/ai-2026-enterprise-rag-guardrails" className="text-left"></a>
-                    <div className="text-left">🛡️</div>"
-                    <div></div>
-                      <h4 className="text-left">Enterprise RAG Guardrails 2026</h4>"
+              <div className="text-left"> </div><h3 className="text-left">Latest Content Highlights</h3>"
+                <div className="text-left"> </div><a href="/blog/ai-2026-enterprise-rag-guardrails" className="text-left"> </a><div className="text-left">🛡️</div>"
+                    <div> </div><h4 className="text-left">Enterprise RAG Guardrails 2026</h4>"
                       <p className="text-left">Safe, reliable RAG with verifiable citations</p>"
                     </div>
                   </a>
-                  <a href="/blog/ai-2026-autonomous-enterprise-operations" className="text-left"></a>
-                    <div className="text-left">🏭</div>"
-                    <div></div>
-                      <h4 className="text-left">Autonomous Enterprise Operations 2026</h4>"
+                  <a href="/blog/ai-2026-autonomous-enterprise-operations" className="text-left"> </a><div className="text-left">🏭</div>"
+                    <div> </div><h4 className="text-left">Autonomous Enterprise Operations 2026</h4>"
                       <p className="text-left">90% efficiency, 300% ROI with guardrailed agents</p>"
                     </div>
                   </a>
-                  <a href="/blog/ai-cloud-cost-optimization-2025" className="text-left"></a>
-                    <div className="text-left">💸</div>"
-                    <div></div>
-                      <h4 className="text-left">AI Cloud Cost Optimization</h4>"
+                  <a href="/blog/ai-cloud-cost-optimization-2025" className="text-left"> </a><div className="text-left">💸</div>"
+                    <div> </div><h4 className="text-left">AI Cloud Cost Optimization</h4>"
                       <p className="text-left">Cut spend by 70–85% with smart routing</p>"
                     </div>
                   </a>
                 </div>
-                <div className="text-left"></div>
-                  <Link
+                <div className="text-left"> </div><Link
                     href="/blog"
                     className="text-left">
                     View All Content →
@@ -232,28 +201,21 @@ export default function HomePage() {
         </section>
 
         {/* CTA Section */}
-        <section className="text-left"></section>
-          <div className="text-left"></div>
-            <h2 className="text-left">
+        <section className="text-left"> </section><div className="text-left"> </div><h2 className="text-left">
               Ready to Transform Your Business?
             </h2>
-            <p className="text-left"></p>
-              Let's discuss how our AI and IT solutions can drive your success
-            </p>
-            <div className="text-left"></div>
-              <a
+            <p className="text-left">Let's discuss how our AI and IT solutions can drive your success
+            </p></p>
+            <div className="text-left"> </div><a
                 href="tel:+13024640950"
-                className="text-left"></a>
-                Call +1 302 464 0950
-              </a>
+                className="text-left">Call +1 302 464 0950
+              </a></a>
               <a
                 href="mailto:kleber@ziontechgroup.com"
-                className="text-left"></a>
-                Get Free Consultation
-              </a>
+                className="text-left">Get Free Consultation
+              </a></a>
             </div>
-            <div className="text-left"></div>
-              <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
+            <div className="text-left"> </div><p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
               <p>📧 kleber@ziontechgroup.com | 📞 +1 302 464 0950</p>
             </div>
           </div>

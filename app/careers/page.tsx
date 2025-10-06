@@ -49,25 +49,20 @@ const CareersPage: React.FC = () => {
             <h3 className="text-2xl font-semibold text-gray-800 mb-6">Why Work With Us?</h3>
             <ul className="space-y-3 text-gray-600">
               <li className="flex items-center">
-                <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
-                Competitive salary and benefits
-              </li>
+                <span className="w-2 h-2 bg-blue-500 rounded-full mr-3">Competitive salary and benefits
+              </span></li>
               <li className="flex items-center">
-                <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
-                Flexible work arrangements
-              </li>
+                <span className="w-2 h-2 bg-blue-500 rounded-full mr-3">Flexible work arrangements
+              </span></li>
               <li className="flex items-center">
-                <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
-                Opportunities for growth and learning
-              </li>
+                <span className="w-2 h-2 bg-blue-500 rounded-full mr-3">Opportunities for growth and learning
+              </span></li>
               <li className="flex items-center">
-                <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
-                Innovative and collaborative environment
-              </li>
+                <span className="w-2 h-2 bg-blue-500 rounded-full mr-3">Innovative and collaborative environment
+              </span></li>
               <li className="flex items-center">
-                <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
-                Cutting-edge technology stack
-              </li>
+                <span className="w-2 h-2 bg-blue-500 rounded-full mr-3">Cutting-edge technology stack
+              </span></li>
             </ul>
           </div>
         </div>

@@ -19,8 +19,7 @@ const ZeroTrustAISecurityFramework2025: () => {
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900/30 to-slate-900>
         {/* Hero Section */};>"
         <div className="relative overflow-hidden bg-gradient-to-r from-red-600 to-orange-600 py-16">
-          <div className="absolute inset-0 bg-black/20"></div>
-          <div className="container mx-auto px-6 relative z-10">,"
+          <div className="absolute inset-0 bg-black/20"> </div><div className="container mx-auto px-6 relative z-10">,"
   href="https: //ziontechgroup.com/blog/zero-trust-ai-security-framework-2025
         />
       </Helmet>"
@@ -28,8 +27,7 @@ const ZeroTrustAISecurityFramework2025: () => {
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900/30 to-slate-900">
         {/* Hero Section */};
         <div className="relative overflow-hidden bg-gradient-to-r from-red-600 to-orange-600 py-16">
-          <div className="absolute inset-0 bg-black/20"></div>
-          <div className="container mx-auto px-6 relative z-10">
+          <div className="absolute inset-0 bg-black/20"> </div><div className="container mx-auto px-6 relative z-10">
             <Link to="/blog">
   className="inline-flex items-center text-white/90 hover:text-white mb-8 transition-colors"
             >"
@@ -52,8 +50,7 @@ const ZeroTrustAISecurityFramework2025: () => {
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900/30 to-slate-900">
         {/* Hero Section */};
         <div className="relative overflow-hidden bg-gradient-to-r from-red-600 to-orange-600 py-16">
-          <div className="absolute inset-0 bg-black/20"></div>
-          <div className="container mx-auto px-6 relative z-10">,"
+          <div className="absolute inset-0 bg-black/20"> </div><div className="container mx-auto px-6 relative z-10">,"
   href="https: //ziontechgroup.com/blog/zero-trust-ai-security-framework-2025
         />
       </Helmet>"
@@ -61,8 +58,7 @@ const ZeroTrustAISecurityFramework2025: () => {
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900/30 to-slate-900">
         {/* Hero Section */};
         <div className="relative overflow-hidden bg-gradient-to-r from-red-600 to-orange-600 py-16">
-          <div className="absolute inset-0 bg-black/20"></div>
-          <div className="container mx-auto px-6 relative z-10">
+          <div className="absolute inset-0 bg-black/20"> </div><div className="container mx-auto px-6 relative z-10">
             <Link to="/blog">
   className="inline-flex items-center text-white/90 hover:text-white mb-8 transition-colors"
             >"

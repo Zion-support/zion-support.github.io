@@ -11,71 +11,49 @@ export default function Page() {
     <div>/* content */}
   return (
     <div>
-      <div></div>
-      <div></div>
-    </div>
-    <article className="text-left"></a>
-      <header className="text-left">
+      <div> </div><div> </div></div>
+    <article className="text-left"> </a><header className="text-left">
         <div className="text-left">January 2026 • 14 min read</div>
         <h1 className="text-left">
-    <article className="text-left"></article>
-      <header className="text-left"></header>
-        <div className="text-left">January 2026 • 14 min read</div>"
-        <h1 className="text-left"></h1>
-origin/cursor/fix-errors-and-merge-to-main-cc0a
+    <article className="text-left"> </article><header className="text-left"> </header><div className="text-left">January 2026 • 14 min read</div>"
+        <h1 className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
           AI Agent Security Blueprint 2026
-        </h1>
-        <p className="text-left"></p>
-          A practical zero‑trust approach for autonomous agents: scoped secrets, sandboxed tools, granular policies,
+        </h1></h1>
+        <p className="text-left">A practical zero‑trust approach for autonomous agents: scoped secrets, sandboxed tools, granular policies,
           continuous monitoring, and tamper‑evident auditability.
-        </p>
+        </p></p>
       </header>
-      <div className="text-left"></div>
-        <section className="text-left"></section>
-          <h2 className="text-left">Threat Model</h2>
-          <p className="text-left"></p>
-        <section className="text-left"></section>
-          <h2 className="text-left">Threat Model</h2>"
-          <p className="text-left"></p>
-origin/cursor/fix-errors-and-merge-to-main-cc0a
+      <div className="text-left"> </div><section className="text-left"> </section><h2 className="text-left">Threat Model</h2>
+          <p className="text-left"> </p><section className="text-left"> </section><h2 className="text-left">Threat Model</h2>"
+          <p className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
             Consider prompt injection, tool misuse, data exfiltration, privilege escalation, and supply‑chain risks.
             Design controls assuming compromise and focus on blast‑radius reduction.
-          </p>
+          </p></p>
         </section>
-        <section className="text-left"></section>
-          <h2 className="text-left">Core Controls</h2>
+        <section className="text-left"> </section><h2 className="text-left">Core Controls</h2>
           <ul className="text-left">
 
-        <section className="text-left"></section>
-          <h2 className="text-left">Core Controls</h2>"
-          <ul className="text-left"></ul>
-origin/cursor/fix-errors-and-merge-to-main-cc0a
-            <li>Identity and policy per agent and per tool</li>
+        <section className="text-left"> </section><h2 className="text-left">Core Controls</h2>"
+          <ul className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
+            </ul><li>Identity and policy per agent and per tool</li>
             <li>Network egress allow‑lists and content scanning</li>
             <li>Secrets vault with time‑bound, scope‑bound tokens</li>
             <li>Filesystem and process isolation for tool execution</li>
             <li>Action logs with signed, immutable storage</li>
           </ul>
         </section>
-        <section className="text-left"></section>
-          <h2 className="text-left">Observability</h2>
-          <p className="text-left"></p>
-        <section className="text-left"></section>
-          <h2 className="text-left">Observability</h2>"
-          <p className="text-left"></p>
-origin/cursor/fix-errors-and-merge-to-main-cc0a
+        <section className="text-left"> </section><h2 className="text-left">Observability</h2>
+          <p className="text-left"> </p><section className="text-left"> </section><h2 className="text-left">Observability</h2>"
+          <p className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
             Capture traces across prompts, tools, and outcomes. Attach policy events, approvals, and budget usage.
             Alert on anomaly patterns and policy violations with automated containment.
-          </p>
+          </p></p>
         </section>
-        <section className="text-left"></section>
-        <section className="text-left"></section>
-origin/cursor/fix-errors-and-merge-to-main-cc0a
-          <a
+        <section className="text-left"> </section><section className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
+          </section><a
             href="/contact"
-            className="text-left"></a>
-            Talk to Security Experts
-          </a>
+            className="text-left">Talk to Security Experts
+          </a></a>
         </section>
     </article>
   );

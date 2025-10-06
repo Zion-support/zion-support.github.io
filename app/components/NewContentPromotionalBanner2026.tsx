@@ -43,84 +43,57 @@ const NewContentPromotionalBanner2026: React.FC = () => {/* content */}
   ];
 
   return (
-  <div></div>
-    <div className="text-left"></div>
-      {/* Animated background effects */}
-      <div className="text-left"></div>
-        <div className="text-left"></div>
-        <div className="text-left" style={{ animationDelay: '1s' }}></div>
-        <div className="text-left" style={{ animationDelay: '2s' }}></div>
-      </div>
+  <div> </div><div className="text-left">{/* Animated background effects */}
+      </div><div className="text-left"> </div><div className="text-left"> </div><div className="text-left" style={{ animationDelay: '1s' }}> </div><div className="text-left" style={{ animationDelay: '2s' }}> </div></div>
 
-      <div className="text-left"></div>
-        {/* Header Section */}
-        <div className="text-left"></div>
-          <div className="text-left"></div>
-            <Sparkles className="text-left" />
-            <span className="text-left"></span>
-              🚀 JUST PUBLISHED • SEPTEMBER 2026
-            </span>
+      <div className="text-left">{/* Header Section */}
+        </div><div className="text-left"> </div><div className="text-left"> </div><Sparkles className="text-left" />
+            <span className="text-left">🚀 JUST PUBLISHED • SEPTEMBER 2026
+            </span></span>
             <Sparkles className="text-left" />
           </div>
 
           <h2 className="text-left">
-            <span className="text-left"></span>
-              Latest AI Innovations
-            </span>
+            <span className="text-left">Latest AI Innovations
+            </span></span>
             <br />
-            <span className="text-left"></span>
-              That Transform Business
-            </span>
+            <span className="text-left">That Transform Business
+            </span></span>
           </h2>
           
-          <p className="text-left"></p>
-            Explore cutting-edge AI strategies, implementation roadmaps, and security innovations 
-            that are delivering <span className="text-left">300%+ ROI</span> for enterprises worldwide
+          <p className="text-left">Explore cutting-edge AI strategies, implementation roadmaps, and security innovations 
+            that are delivering </p><span className="text-left">300%+ ROI</span> for enterprises worldwide
           </p>
 
-          <div className="text-left"></div>
-            <div className="text-left"></div>
-              <TrendingUp className="text-left" />
+          <div className="text-left"> </div><div className="text-left"> </div><TrendingUp className="text-left" />
               <span className="text-left">10,000+ Readers</span>
             </div>
-            <div className="text-left"></div>
-              <Zap className="text-left" />
+            <div className="text-left"> </div><Zap className="text-left" />
               <span className="text-left">3 New Articles</span>
             </div>
-            <div className="text-left"></div>
-              <Target className="text-left" />
+            <div className="text-left"> </div><Target className="text-left" />
               <span className="text-left">Proven Results</span>
             </div>
           </div>
         </div>
 
         {/* Featured Content Cards */}
-        <div className="text-left"></div>
-          {featuredContent.map((content, index) => (
-            <div 
+        <div className="text-left">{featuredContent.map((content, index) => (
+            </div><div 
               key={content.id}
               className="text-left"
               style={{ animationDelay: `${index * 150}ms` }}
-            ></div>
-              {/* Card glow effect */}
-              <div className={`absolute inset-0 bg-gradient-to-br ${content.color} opacity-0 group-hover:opacity-10 transition-all duration-500`}></div>
-              
-              <div className="text-left"></div>
-                {/* Icon & Badge */}
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
-                    {content.icon}
-                  </div>
-                  <div className={`px-4 py-2 rounded-full bg-gradient-to-r ${content.badgeColor} text-white text-sm font-bold shadow-lg`}></div>
-                    {content.badge}
-                  </div>
+            >{/* Card glow effect */}
+              </div><div className={`absolute inset-0 bg-gradient-to-br ${content.color} opacity-0 group-hover:opacity-10 transition-all duration-500`}> </div><div className="text-left">{/* Icon & Badge */}
+                </div><div className="text-left"> </div><div className="text-left">{content.icon}
+                  </div></div>
+                  <div className={`px-4 py-2 rounded-full bg-gradient-to-r ${content.badgeColor} text-white text-sm font-bold shadow-lg`}>{content.badge}
+                  </div></div>
                 </div>
 
                 {/* Category */}
-                <div className="text-left"></div>
-                  <span className={`inline-block px-4 py-2 rounded-full bg-gradient-to-r ${content.bgColor} text-gray-900 text-sm font-semibold border border-white/20`}></span>
-                    {content.category}
-                  </span>
+                <div className="text-left"> </div><span className={`inline-block px-4 py-2 rounded-full bg-gradient-to-r ${content.bgColor} text-gray-900 text-sm font-semibold border border-white/20`}>{content.category}
+                  </span></span>
                 </div>
 
                 {/* Title */}
@@ -129,9 +102,8 @@ const NewContentPromotionalBanner2026: React.FC = () => {/* content */}
                 </h3>
 
                 {/* Excerpt */}
-                <p className="text-left"></p>
-                  {content.excerpt}
-                </p>
+                <p className="text-left">{content.excerpt}
+                </p></p>
 
                 {/* CTA Button */}
                 <Link
@@ -144,30 +116,24 @@ const NewContentPromotionalBanner2026: React.FC = () => {/* content */}
               </div>
 
               {/* Corner accent */}
-              <div className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${content.color} opacity-10 rounded-bl-full`}></div>
-            </div>
+              <div className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${content.color} opacity-10 rounded-bl-full`}> </div></div>
           ))}
         </div>
 
         {/* Bottom CTA Section */}
-        <div className="text-left"></div>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
-              <Rocket className="text-left" />
+        <div className="text-left"> </div><div className="text-left"> </div><div className="text-left"> </div><Rocket className="text-left" />
               <h3 className="text-left">
                 Ready to Transform Your Enterprise?
               </h3>
               <Shield className="text-left" />
             </div>
             
-            <p className="text-left"></p>
-              Join 500+ enterprises achieving <span className="text-left">300% ROI</span>, 
+            <p className="text-left">Join 500+ enterprises achieving </p><span className="text-left">300% ROI</span>, 
               <span className="text-left"> 85% automation</span>, and 
               <span className="text-left"> complete digital transformation</span> with Zion Tech Group's AI solutions
             </p>
 
-            <div className="text-left"></div>
-              <Link
+            <div className="text-left"> </div><Link
                 href="/contact"
                 className="text-left">
                 <Sparkles className="text-left" />
@@ -183,38 +149,25 @@ const NewContentPromotionalBanner2026: React.FC = () => {/* content */}
             </div>
 
             {/* Stats */}
-            <div className="text-left"></div>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
-                  500+
-                </div>
-                <div className="text-left"></div>
-                  Enterprise Clients
-                </div>
+            <div className="text-left"> </div><div className="text-left"> </div><div className="text-left">500+
+                </div></div>
+                <div className="text-left">Enterprise Clients
+                </div></div>
               </div>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
-                  300%
-                </div>
-                <div className="text-left"></div>
-                  Average ROI
-                </div>
+              <div className="text-left"> </div><div className="text-left">300%
+                </div></div>
+                <div className="text-left">Average ROI
+                </div></div>
               </div>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
-                  99.9%
-                </div>
-                <div className="text-left"></div>
-                  System Uptime
-                </div>
+              <div className="text-left"> </div><div className="text-left">99.9%
+                </div></div>
+                <div className="text-left">System Uptime
+                </div></div>
               </div>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
-                  24/7
-                </div>
-                <div className="text-left"></div>
-                  Expert Support
-                </div>
+              <div className="text-left"> </div><div className="text-left">24/7
+                </div></div>
+                <div className="text-left">Expert Support
+                </div></div>
               </div>
             </div>
           </div>

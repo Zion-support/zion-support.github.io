@@ -46,10 +46,10 @@ export const services: Service[] = [
     },
     delivery: '4-8 weeks',
     marketValidation: 'Used by 500+ Fortune 1000 companies',
-    roi: '300% ROI within 12 months',
-    icon: '📊',
-    href: '/services/ai-data-analytics'
-  },
+      roi: '300% ROI within 12 months',
+      icon: '📊',
+      href: '/services/ai-data-analytics'
+    },
   {/* content */}
     slug: 'ai-workflow-automation',
     name: 'AI Workflow Automation',
@@ -76,10 +76,10 @@ export const services: Service[] = [
     },
     delivery: '6-10 weeks',
     marketValidation: 'Deployed in 1000+ organizations',
-    roi: '250% ROI within 8 months',
-    icon: '⚡',
-    href: '/services/ai-workflow-automation'
-  },
+      roi: '250% ROI within 8 months',
+      icon: '⚡',
+      href: '/services/ai-workflow-automation'
+    },
   {/* content */}
     slug: 'ai-virtual-assistant',
     name: 'AI Virtual Assistant',
@@ -106,10 +106,10 @@ export const services: Service[] = [
     },
     delivery: '3-6 weeks',
     marketValidation: 'Serving 10M+ customer interactions monthly',
-    roi: '400% ROI within 6 months',
-    icon: '🤖',
-    href: '/services/ai-virtual-assistant'
-  },
+      roi: '400% ROI within 6 months',
+      icon: '🤖',
+      href: '/services/ai-virtual-assistant'
+    },
 
   // NEW MICRO SAAS SERVICES
   {/* content */}
@@ -140,10 +140,10 @@ export const services: Service[] = [
     },
     delivery: '2-4 weeks',
     marketValidation: 'Used by 2,500+ businesses worldwide',
-    roi: '450% ROI within 4 months',
-    icon: '🔄',
-    href: '/services/ai-workflow-automation-suite'
-  },
+      roi: '450% ROI within 4 months',
+      icon: '🔄',
+      href: '/services/ai-workflow-automation-suite'
+    },
   {/* content */}
     slug: 'smart-expense-management-saas',
     name: 'Smart Expense Management SaaS',
@@ -172,10 +172,10 @@ export const services: Service[] = [
     },
     delivery: '1-3 weeks',
     marketValidation: 'Trusted by 5,000+ companies globally',
-    roi: '300% ROI within 3 months',
-    icon: '💰',
-    href: '/services/smart-expense-management-saas'
-  },
+      roi: '300% ROI within 3 months',
+      icon: '💰',
+      href: '/services/smart-expense-management-saas'
+    },
   {/* content */}
     slug: 'ai-inventory-optimizer',
     name: 'AI-Powered Inventory Optimizer',
@@ -204,10 +204,10 @@ export const services: Service[] = [
     },
     delivery: '3-5 weeks',
     marketValidation: 'Optimizing $2B+ in inventory value',
-    roi: '400% ROI within 6 months',
-    icon: '📦',
-    href: '/services/ai-inventory-optimizer'
-  },
+      roi: '400% ROI within 6 months',
+      icon: '📦',
+      href: '/services/ai-inventory-optimizer'
+    },
   {/* content */}
     slug: 'customer-feedback-platform',
     name: 'Intelligent Customer Feedback Platform',
@@ -236,10 +236,10 @@ export const services: Service[] = [
     },
     delivery: '2-4 weeks',
     marketValidation: 'Managing 10M+ customer interactions',
-    roi: '350% ROI within 5 months',
-    icon: '💬',
-    href: '/services/customer-feedback-platform'
-  },
+      roi: '350% ROI within 5 months',
+      icon: '💬',
+      href: '/services/customer-feedback-platform'
+    },
   {/* content */}
     slug: 'ai-scheduling-optimizer',
     name: 'AI-Powered Scheduling Optimizer',
@@ -268,10 +268,10 @@ export const services: Service[] = [
     },
     delivery: '1-2 weeks',
     marketValidation: 'Optimizing 1M+ appointments monthly',
-    roi: '500% ROI within 3 months',
-    icon: '📅',
-    href: '/services/ai-scheduling-optimizer'
-  },
+      roi: '500% ROI within 3 months',
+      icon: '📅',
+      href: '/services/ai-scheduling-optimizer'
+    },
 
   // NEW IT SERVICES
   {/* content */}
@@ -302,10 +302,10 @@ export const services: Service[] = [
     },
     delivery: '8-12 weeks',
     marketValidation: 'Securing 500+ enterprise applications',
-    roi: '200% ROI within 12 months',
-    icon: '🛡️',
-    href: '/services/cloud-native-security-platform'
-  },
+      roi: '200% ROI within 12 months',
+      icon: '🛡️',
+      href: '/services/cloud-native-security-platform'
+    },
   {/* content */}
     slug: 'enterprise-data-governance',
     name: 'Enterprise Data Governance Suite',
@@ -334,10 +334,10 @@ export const services: Service[] = [
     },
     delivery: '10-16 weeks',
     marketValidation: 'Managing 100+ enterprise data assets',
-    roi: '250% ROI within 18 months',
-    icon: '📊',
-    href: '/services/enterprise-data-governance'
-  },
+      roi: '250% ROI within 18 months',
+      icon: '📊',
+      href: '/services/enterprise-data-governance'
+    },
   {/* content */}
     slug: 'devops-automation-platform',
     name: 'DevOps Automation Platform',
@@ -366,10 +366,10 @@ export const services: Service[] = [
     },
     delivery: '6-10 weeks',
     marketValidation: 'Automating 1000+ deployments monthly',
-    roi: '300% ROI within 8 months',
-    icon: '🚀',
-    href: '/services/devops-automation-platform'
-  },
+      roi: '300% ROI within 8 months',
+      icon: '🚀',
+      href: '/services/devops-automation-platform'
+    },
   {/* content */}
     slug: 'enterprise-integration-platform',
     name: 'Enterprise Integration Platform',
@@ -398,10 +398,10 @@ export const services: Service[] = [
     },
     delivery: '8-12 weeks',
     marketValidation: 'Connecting 200+ enterprise systems',
-    roi: '350% ROI within 10 months',
-    icon: '🔗',
-    href: '/services/enterprise-integration-platform'
-  },
+      roi: '350% ROI within 10 months',
+      icon: '🔗',
+      href: '/services/enterprise-integration-platform'
+    },
   {/* content */}
     slug: 'backup-recovery-solutions',
     name: 'Enterprise Backup & Recovery Solutions',
@@ -430,10 +430,10 @@ export const services: Service[] = [
     },
     delivery: '4-6 weeks',
     marketValidation: 'Protecting 50+ enterprise environments',
-    roi: '400% ROI within 6 months',
-    icon: '💾',
-    href: '/services/backup-recovery-solutions'
-  },
+      roi: '400% ROI within 6 months',
+      icon: '💾',
+      href: '/services/backup-recovery-solutions'
+    },
 
   // NEW AI SOLUTIONS
   {/* content */}
@@ -464,10 +464,10 @@ export const services: Service[] = [
     },
     delivery: '12-16 weeks',
     marketValidation: 'Generating 1M+ predictions daily',
-    roi: '500% ROI within 12 months',
-    icon: '🔮',
-    href: '/services/predictive-analytics-engine'
-  },
+      roi: '500% ROI within 12 months',
+      icon: '🔮',
+      href: '/services/predictive-analytics-engine'
+    },
   {/* content */}
     slug: 'nlp-processing-suite',
     name: 'Natural Language Processing Suite',
@@ -496,10 +496,10 @@ export const services: Service[] = [
     },
     delivery: '8-12 weeks',
     marketValidation: 'Processing 100M+ text documents',
-    roi: '400% ROI within 10 months',
-    icon: '🗣️',
-    href: '/services/nlp-processing-suite'
-  },
+      roi: '400% ROI within 10 months',
+      icon: '🗣️',
+      href: '/services/nlp-processing-suite'
+    },
   {/* content */}
     slug: 'computer-vision-platform',
     name: 'Computer Vision Platform',
@@ -528,10 +528,10 @@ export const services: Service[] = [
     },
     delivery: '6-10 weeks',
     marketValidation: 'Analyzing 50M+ images monthly',
-    roi: '350% ROI within 8 months',
-    icon: '👁️',
-    href: '/services/computer-vision-platform'
-  },
+      roi: '350% ROI within 8 months',
+      icon: '👁️',
+      href: '/services/computer-vision-platform'
+    },
   {/* content */}
     slug: 'recommendation-engine',
     name: 'AI Recommendation Engine',
@@ -560,10 +560,10 @@ export const services: Service[] = [
     },
     delivery: '6-8 weeks',
     marketValidation: 'Delivering 100M+ recommendations daily',
-    roi: '300% ROI within 6 months',
-    icon: '🎯',
-    href: '/services/recommendation-engine'
-  },
+      roi: '300% ROI within 6 months',
+      icon: '🎯',
+      href: '/services/recommendation-engine'
+    },
   {/* content */}
     slug: 'fraud-detection-system',
     name: 'AI Fraud Detection System',
@@ -592,10 +592,10 @@ export const services: Service[] = [
     },
     delivery: '8-12 weeks',
     marketValidation: 'Protecting $10B+ in transactions',
-    roi: '600% ROI within 4 months',
-    icon: '🚨',
-    href: '/services/fraud-detection-system'
-  }
+      roi: '600% ROI within 4 months',
+      icon: '🚨',
+      href: '/services/fraud-detection-system'
+    }
 ];
 
 export function getServiceBySlug(slug: string): Service | undefined {/* content */}

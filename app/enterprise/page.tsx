@@ -12,76 +12,56 @@ export default function EnterprisePage() {
     <div>/* content */}
   return (
     <div>
-      <div></div>
-      <div></div>
-    </div>
-    <div className="text-left"></div>
-      {/* Hero Section */}</div>
+      <div> </div><div> </div></div>
+    <div className="text-left">{/* Hero Section */}</div></div>
       <header className="text-left">
-        <div className="text-left"></div>
-          <div className="text-left"></div>"
-          <div className="text-left" style={{ animationDelay: '2s' }}></div>"
-        </div>
+        <div className="text-left"> </div><div className="text-left">"
+          </div><div className="text-left" style={{ animationDelay: '2s' }}>"
+        </div></div>
         
-        <div className="text-left"></div>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
-              <span className="text-left"></span>
-                🏢 Enterprise AI Solutions
-              </span>
+        <div className="text-left"> </div><div className="text-left"> </div><div className="text-left"> </div><span className="text-left">🏢 Enterprise AI Solutions
+              </span></span>
             </div>
             
             <h1 className="text-left">
               Enterprise Solutions
             </h1>
             
-            <p className="text-left"></p>
-              Trusted by 500+ Fortune 500 Companies Worldwide
-            </p>
+            <p className="text-left">Trusted by 500+ Fortune 500 Companies Worldwide
+            </p></p>
             
-            <p className="text-left"></p>
-              Transform your enterprise with our proven AI solutions. Achieve $100M+ cost savings, 
+            <p className="text-left">Transform your enterprise with our proven AI solutions. Achieve $100M+ cost savings, 
               500% productivity gains, and 99.9% system uptime with enterprise-grade security and compliance.
-            </p>
+            </p></p>
             
-            <div className="text-left"></div>
-              <a 
+            <div className="text-left"> </div><a 
                 href="/"
-                className="text-left"></a>
-                Schedule Enterprise Demo
-              </a>
+                className="text-left">Schedule Enterprise Demo
+              </a></a>
               <a 
                 href="#solutions"
                 className="text-left"
-              ></a>
-                View Solutions
-              </a>
+              >View Solutions
+              </a></a>
             </div>
           </div>
         </div>
       </header>
 
       {/* Solutions Section */}
-      <section id="solutions" className="text-left"></section>
-        <div className="text-left"></div>
-          <div className="text-left"></div>
-            <h2 className="text-left">Enterprise Solutions</h2>"
+      <section id="solutions" className="text-left"> </section><div className="text-left"> </div><div className="text-left"> </div><h2 className="text-left">Enterprise Solutions</h2>"
             <p className="text-left">Comprehensive AI solutions for enterprise needs</p>"
           </div>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
-              <h3 className="text-left">AI Automation</h3>"
+          <div className="text-left"> </div><div className="text-left"> </div><h3 className="text-left">AI Automation</h3>"
               <p className="text-left">Automate complex business processes with AI</p>"
             </div>
             
-            <div className="text-left"></div>
-              <h3 className="text-left">Data Analytics</h3>"
+            <div className="text-left"> </div><h3 className="text-left">Data Analytics</h3>"
               <p className="text-left">Advanced analytics and insights for decision making</p>"
             </div>
             
-            <div className="text-left"></div>
-              <h3 className="text-left">Security</h3>"
+            <div className="text-left"> </div><h3 className="text-left">Security</h3>"
               <p className="text-left">Enterprise-grade security and compliance</p>"
             </div>
           </div>
@@ -89,8 +69,7 @@ export default function EnterprisePage() {
       </section>
 
       <footer className="text-left">
-        <div className="text-left"></div>
-          <p className="text-left">© 2025 Zion Tech Group. All rights reserved.</p>
+        <div className="text-left"> </div><p className="text-left">© 2025 Zion Tech Group. All rights reserved.</p>
         </div>
       </footer>
     </div>
