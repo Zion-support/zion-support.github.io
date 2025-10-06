@@ -138,6 +138,7 @@ export const usePageLoadPerformance = () => {
     // Track immediately if page is already loaded
     if (document.readyState === 'complete') {
       trackPageLoad();
+      return undefined;
     } else {
       // Wait for load event
       window.addEventListener('load', trackPageLoad);
