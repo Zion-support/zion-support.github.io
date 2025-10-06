@@ -22,7 +22,7 @@ export const seoOptimizer = {
     seoOptimizer.updateMeta('keywords', keywords);
   },
   
-  trackPageView: (page: string) => {
+  trackPageView: (_page: string) => {
     // Basic analytics tracking
     if (typeof window !== 'undefined' && (window as any).gtag) {
       (window as any).gtag('config', 'GA_MEASUREMENT_ID', {
