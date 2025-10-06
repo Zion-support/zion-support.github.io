@@ -25,11 +25,11 @@ export interface RotationStrategy {
 }
 
 export const trackImpression = (bannerId: string): void => {
-  console.log('Banner impression tracked:', bannerId);
+  // Banner impression tracked
 };
 
 export const trackClick = (bannerId: string): void => {
-  console.log('Banner click tracked:', bannerId);
+  // Banner click tracked
 };
 
 export const loadBannerStats = (): Record<string, number> => {

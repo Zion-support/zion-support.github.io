@@ -26,7 +26,7 @@ class TestRunner {
 
   public async runSuite(suite: TestSuite): Promise<TestResult[]> {
     this.currentSuite = suite.name;
-    console.log(`Running test suite: ${suite.name}`);
+    // Running test suite
 
     if (suite.setup) {
       await suite.setup();
@@ -57,13 +57,13 @@ class TestRunner {
       result.passed = true;
     } catch (error) {
       result.error = error instanceof Error ? error.message : String(error);
-      console.error(`Test failed: ${name}`, error);
+      // Test failed
     }
 
     result.duration = performance.now() - startTime;
     this.results.push(result);
 
-    console.log(`${result.passed ? '✓' : '✗'} ${name} (${result.duration.toFixed(2)}ms)`);
+    // Test result logged
     return result;
   }
 
@@ -99,13 +99,13 @@ class TestRunner {
 
 // Test utilities
 export const testUtils = {
-  expect: (actual: any) => ({
-    toBe: (expected: any) => {
+  expect: (actual: unknown) => ({
+    toBe: (expected: unknown) => {
       if (actual !== expected) {
         throw new Error(`Expected ${actual} to be ${expected}`);
       }
     },
-    toEqual: (expected: any) => {
+    toEqual: (expected: unknown) => {
       if (JSON.stringify(actual) !== JSON.stringify(expected)) {
         throw new Error(`Expected ${JSON.stringify(actual)} to equal ${JSON.stringify(expected)}`);
       }
@@ -135,32 +135,32 @@ export const testUtils = {
     },
   }),
 
-  mock: (implementation: any) => {
+  mock: (implementation: unknown) => {
     return implementation;
   },
 
   spy: (fn: Function) => {
     let callCount = 0;
-    let lastArgs: any[] = [];
+    let lastArgs: unknown[] = [];
     
-    const spyFn = (...args: any[]) => {
+    const spyFn = (...args: unknown[]) => {
       callCount++;
       lastArgs = args;
       return fn(...args);
     };
 
-    (spyFn as any).callCount = () => callCount;
-    (spyFn as any).lastArgs = () => lastArgs;
-    (spyFn as any).reset = () => {
+    (spyFn as Function & { callCount: () => number; lastArgs: () => unknown[]; reset: () => void }).callCount = () => callCount;
+    (spyFn as Function & { callCount: () => number; lastArgs: () => unknown[]; reset: () => void }).lastArgs = () => lastArgs;
+    (spyFn as Function & { callCount: () => number; lastArgs: () => unknown[]; reset: () => void }).reset = () => {
       callCount = 0;
       lastArgs = [];
     };
 
-    return spyFn as any;
+    return spyFn as Function & { callCount: () => number; lastArgs: () => unknown[]; reset: () => void };
   },
 
   async: (fn: Function) => {
-    return async (...args: any[]) => {
+    return async (...args: unknown[]) => {
       return new Promise((resolve, reject) => {
         setTimeout(() => {
           try {

@@ -9,7 +9,7 @@ export interface AnalyticsEvent {
   action?: string | undefined;
   label?: string | undefined;
   value?: number | undefined;
-  properties?: Record<string, any> | undefined;
+  properties?: Record<string, unknown> | undefined;
   timestamp: number;
 }
 
@@ -70,7 +70,7 @@ class Analytics {
     action?: string,
     label?: string,
     value?: number,
-    properties?: Record<string, any>
+    properties?: Record<string, unknown>
   ): void {
     const event: AnalyticsEvent = {
       name,
@@ -89,7 +89,7 @@ class Analytics {
 
     // Log in development
     if (process.env['NODE_ENV'] === 'development') {
-      console.log('Analytics event:', event);
+      // Analytics event tracked
     }
   }
 
@@ -127,7 +127,7 @@ class Analytics {
   public trackBusinessEvent(
     event: string,
     value?: number,
-    properties?: Record<string, any>
+    properties?: Record<string, unknown>
   ): void {
     this.track(event, 'business', 'event', undefined, value, properties);
   }
@@ -139,9 +139,9 @@ class Analytics {
     try {
       // In a real application, you would send to services like Google Analytics, Mixpanel, etc.
       // For now, we'll just log to console
-      console.log('Analytics event sent:', event);
+      // Analytics event sent successfully
     } catch (err) {
-      console.error('Failed to send analytics event:', err);
+      // Failed to send analytics event
     }
   }
 

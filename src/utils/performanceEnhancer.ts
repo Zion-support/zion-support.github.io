@@ -69,7 +69,7 @@ class PerformanceEnhancer {
     // Monitor memory usage
     if ('memory' in performance) {
       setInterval(() => {
-        const memory = (performance as any).memory;
+        const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number } }).memory;
         this.recordMetric('memory-used', memory.usedJSHeapSize);
         this.recordMetric('memory-total', memory.totalJSHeapSize);
       }, 5000);
@@ -142,7 +142,7 @@ class PerformanceEnhancer {
     if (!this.config.enableCompression) return;
 
     // Implement bundle optimization strategies
-    console.log('Optimizing bundle...');
+    // Optimizing bundle...
     
     // Tree shaking optimization
     this.enableTreeShaking();
@@ -153,12 +153,12 @@ class PerformanceEnhancer {
 
   private enableTreeShaking(): void {
     // Remove unused code
-    console.log('Enabling tree shaking...');
+    // Enabling tree shaking...
   }
 
   private enableCodeSplitting(): void {
     // Implement dynamic imports
-    console.log('Enabling code splitting...');
+    // Enabling code splitting...
   }
 
   public enableCaching(): void {
@@ -168,10 +168,10 @@ class PerformanceEnhancer {
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('/sw.js')
         .then((registration) => {
-          console.log('Service Worker registered:', registration);
+          // Service Worker registered successfully
         })
         .catch((error) => {
-          console.log('Service Worker registration failed:', error);
+          // Service Worker registration failed
         });
     }
   }

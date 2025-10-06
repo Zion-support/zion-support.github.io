@@ -3,19 +3,19 @@
  * Tools and helpers for development and debugging
  */
 
-export const devLog = (message: string, data?: any) => {
+export const devLog = (message: string, data?: unknown) => {
   if (process.env['NODE_ENV'] === 'development') {
     console.log(`[DEV] ${message}`, data || '');
   }
 };
 
-export const devError = (message: string, error?: any) => {
+export const devError = (message: string, error?: unknown) => {
   if (process.env['NODE_ENV'] === 'development') {
     console.error(`[DEV ERROR] ${message}`, error || '');
   }
 };
 
-export const devWarn = (message: string, data?: any) => {
+export const devWarn = (message: string, data?: unknown) => {
   if (process.env['NODE_ENV'] === 'development') {
     console.warn(`[DEV WARN] ${message}`, data || '');
   }
@@ -33,11 +33,11 @@ export const measurePerformance = (name: string, fn: () => void) => {
 };
 
 export const createDebugger = (componentName: string) => ({
-  log: (message: string, data?: any) =>
+  log: (message: string, data?: unknown) =>
     devLog(`[${componentName}] ${message}`, data),
-  error: (message: string, error?: any) =>
+  error: (message: string, error?: unknown) =>
     devError(`[${componentName}] ${message}`, error),
-  warn: (message: string, data?: any) =>
+  warn: (message: string, data?: unknown) =>
     devWarn(`[${componentName}] ${message}`, data),
   measure: (name: string, fn: () => void) =>
     measurePerformance(`[${componentName}] ${name}`, fn),

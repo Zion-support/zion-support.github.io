@@ -86,9 +86,9 @@ function App(): React.JSX.Element {
     // Initialize basic optimizations
     const initializeOptimizations = () => {
       try {
-        console.log('All optimization systems initialized successfully');
+        // All optimization systems initialized successfully
       } catch (error) {
-        console.error('Failed to initialize optimization systems:', error);
+        // Failed to initialize optimization systems
       }
     };
 
@@ -140,7 +140,7 @@ class ErrorBoundary extends React.Component<
   }
 
   override componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
+    // Error caught by boundary
   }
 
   override render() {

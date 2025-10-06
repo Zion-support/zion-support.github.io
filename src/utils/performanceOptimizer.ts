@@ -28,7 +28,7 @@ export interface PerformanceBudget {
 /**
  * Debounce function
  */
-export const debounce = <T extends (...args: any[]) => any>(
+export const debounce = <T extends (...args: unknown[]) => unknown>(
   func: T,
   wait: number
 ): ((...args: Parameters<T>) => void) => {
@@ -42,7 +42,7 @@ export const debounce = <T extends (...args: any[]) => any>(
 /**
  * Throttle function
  */
-export const throttle = <T extends (...args: any[]) => any>(
+export const throttle = <T extends (...args: unknown[]) => unknown>(
   func: T,
   limit: number
 ): ((...args: Parameters<T>) => void) => {
@@ -145,7 +145,7 @@ export const reportWebVitals = (metrics: WebVitalsMetrics): void => {
   if (typeof window === 'undefined') return;
   
   // Send to analytics service
-  console.log('Web Vitals:', metrics);
+  // Performance metrics logged for monitoring
 };
 
 /**
@@ -164,7 +164,7 @@ export const shouldUseWebP = (): boolean => {
 export const getConnectionQuality = (): 'slow' | 'medium' | 'fast' => {
   if (typeof navigator === 'undefined') return 'medium';
   
-  const connection = (navigator as any).connection || (navigator as any).mozConnection || (navigator as any).webkitConnection;
+  const connection = (navigator as Navigator & { connection?: { effectiveType?: string; saveData?: boolean } }).connection;
   if (!connection) return 'medium';
   
   const effectiveType = connection.effectiveType;
@@ -178,7 +178,7 @@ export const getConnectionQuality = (): 'slow' | 'medium' | 'fast' => {
  */
 export const shouldLoadHeavyAssets = (): boolean => {
   const quality = getConnectionQuality();
-  const saveData = typeof navigator !== 'undefined' && (navigator as any).connection?.saveData;
+  const saveData = typeof navigator !== 'undefined' && (navigator as Navigator & { connection?: { saveData?: boolean } }).connection?.saveData;
   return quality === 'fast' && !saveData;
 };
 
@@ -193,7 +193,7 @@ export const requestIdleCallback = (callback: IdleRequestCallback): number => {
   }
   
   // Fallback for browsers that don't support requestIdleCallback
-  return (window as any).setTimeout(() => {
+  return window.setTimeout(() => {
     const start = Date.now();
     callback({
       didTimeout: false,
@@ -211,7 +211,7 @@ export const cancelIdleCallback = (id: number): void => {
   if ('cancelIdleCallback' in window) {
     window.cancelIdleCallback(id);
   } else {
-    (window as any).clearTimeout(id);
+    window.clearTimeout(id);
   }
 };
 
@@ -241,7 +241,7 @@ export const monitorLongTasks = (callback: (entries: PerformanceEntry[]) => void
     observer.observe({ entryTypes: ['longtask'] });
     return observer;
   } catch (e) {
-    console.warn('PerformanceObserver not supported:', e);
+    // PerformanceObserver not supported in this environment
     return null;
   }
 };

@@ -63,7 +63,7 @@ export const usePerformance = (options: UsePerformanceOptions) => {
 
       // Track memory usage if available
       if (trackMemoryUsage && 'memory' in performance) {
-        const memory = (performance as any).memory;
+        const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number } }).memory;
         metrics.memoryUsage = memory.usedJSHeapSize;
       }
 
@@ -111,8 +111,8 @@ export const usePageLoadPerformance = () => {
               navigation.domContentLoadedEventStart,
             loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
             firstByte: navigation.responseStart - navigation.requestStart,
-            domInteractive: navigation.domInteractive - (navigation as any).navigationStart,
-            totalLoadTime: navigation.loadEventEnd - (navigation as any).navigationStart,
+            domInteractive: navigation.domInteractive - navigation.fetchStart,
+            totalLoadTime: navigation.loadEventEnd - navigation.fetchStart,
           };
 
           // Track each metric
@@ -174,7 +174,7 @@ export const useResourcePerformance = () => {
 export const useLongTaskMonitoring = () => {
   useEffect(() => {
     // Long task monitoring is disabled due to missing performanceOptimizer
-    console.log('Long task monitoring is not available');
+    // Long task monitoring not available in this environment
   }, []);
 };
 
