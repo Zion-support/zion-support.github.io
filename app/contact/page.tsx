@@ -40,7 +40,7 @@ const ContactPage: React.FC = () => {
               </div>
               <button
                 type="submit"
-                className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors"
+                className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors"
               >
                 Send Message
               </button>
@@ -59,7 +59,10 @@ const ContactPage: React.FC = () => {
               </div>
               <div>
                 <h4 className="font-medium text-gray-900">Address</h4>
-                <p className="text-gray-600">123 Tech Street, Innovation City, IC 12345</p>
+                <p className="text-gray-600">
+                  123 Tech Street<br />
+                  Innovation City, IC 12345
+                </p>
               </div>
             </div>
           </div>

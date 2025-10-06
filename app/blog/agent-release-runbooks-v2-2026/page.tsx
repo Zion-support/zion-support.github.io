@@ -1,119 +1,119 @@
-import Link from 'next/link';
+imp, o, r, t L, i, n, k f, r, o, m 'n, e, x, t/l, i, n, k';
 
-import Calendar from 'lucide-react/dist/esm/icons/calendar';
-import { Calendar, Clock } from 'lucide-react';
-import Clock from 'lucide-react/dist/esm/icons/clock';
-import ListChecks from 'lucide-react/dist/esm/icons/list-checks';
-import FileWarning from 'lucide-react/dist/esm/icons/file-warning';
-import RefreshCw from 'lucide-react/dist/esm/icons/refresh-cw';
+imp, o, r, t C a l e n, d, a, r f, r, o, m 'luc, i, d, e-re, a, c, t/d, i, s, t/esm/ic, o, n, s/c a l e n, d, a, r';
+imp, o, r, t { C a l e n, d, a, r, Cl, o, c, k } f, r, o, m 'luc, i, d, e-re, a, c, t';
+imp, o, r, t Cl, o, c, k f, r, o, m 'luc, i, d, e-re, a, c, t/d, i, s, t/esm/ic, o, n, s/cl, o, c, k';
+imp, o, r, t Lis t C h e, c, k, s f, r, o, m 'luc, i, d, e-re, a, c, t/d, i, s, t/esm/ic, o, n, s/l, i, s, t-che, c, k, s';
+imp, o, r, t File W a r n, i, n, g f, r, o, m 'luc, i, d, e-re, a, c, t/d, i, s, t/esm/ic, o, n, s/f, i, l, e-warn, i, n, g';
+imp, o, r, t Re f r e s, h, C, w f, r, o, m 'luc, i, d, e-re, a, c, t/d, i, s, t/esm/ic, o, n, s/refr, e, s, h-cw';
 
-export const metadata = {
-  title: 'Agent Release Runbooks v2 (2026)',
-  description: 
-    'Budgets, canariesapprovalsand instant rollback for safe autonomy.',
-  type: 'article',
-  url: 'https://ziontechgroup.com/blog/agent-release-runbooks-v2-2026',
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Agent Release Runbooks v2 (2026)',
-    description: 
-      'Budgets, canariesapprovalsand instant rollback for safe autonomy.',
+exp, o, r, t co, n, s, t m e t a d, a, t, a = {
+  ti, t, l, e: 'Ag, e, n, t Rele, a, s, e R u n b o, o, k, s v2 (2, 0, 2, 6)',
+  desc r i p t, i, o, n: 
+    'Budg, e, t, s, canariesappro v a l s, a, n, d inst, a, n, t r o l l b, a, c, k for s, a, f, e a u t o n, o, m, y.',
+  t, y, p, e: 'arti, c, l, e',
+  url: 'ht, t, p, s://zionte c h g r, o, u, p.com/b, l, o, g/ag, e, n, t-rele, a, s, e-r u n b o, o, k, s-v2-2, 0, 2, 6',
+  twit, t, e, r: {
+    c, a, r, d: 'summary_larg e _ i m, a, g, e',
+    ti, t, l, e: 'Ag, e, n, t Rele, a, s, e R u n b o, o, k, s v2 (2, 0, 2, 6)',
+    desc r i p t, i, o, n: 
+      'Budg, e, t, s, canariesappro v a l s, a, n, d inst, a, n, t r o l l b, a, c, k for s, a, f, e a u t o n, o, m, y.',
   },
 };
 
-export default function Page() {
-  return (
-    <main className='min-h-screen bg-gradient-to-br from-fuchsia-50 via-white to-purple-50'>
-      <header className='bg-gradient-to-br from-fuchsia-900 via-purple-900 to-slate-900 text-white py-20'>
-        <div className='max-w-5xl mx-auto px-6'>
-          <div className='inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 mb-6'>
-            <ListChecks />
+exp, o, r, t defa, u, l, t f u n c t, i, o, n P, a, g, e() {
+  ret, u, r, n (
+    <m, a, i, n cl a s s N, a, m, e='min-h-scr, e, e, n bg-g r a d i, e, n, t-to-br f, r, o, m-fuch, s, i, a-50 via-wh, i, t, e to-pur, p, l, e-50'>
+      <hea, d, e, r cl a s s N, a, m, e='bg-g r a d i, e, n, t-to-br f, r, o, m-fuch, s, i, a-900 via-pur, p, l, e-900 to-sl, a, t, e-900 t, e, x, t-wh, i, t, e py-20'>
+        <div cl a s s N, a, m, e='max-w-5, xl mx-a, u, t, o px-6'>
+          <div cl a s s N, a, m, e='inl, i, n, e-f, l, e, x it, e, m, s-cen, t, e, r gap-2 px-4 py-2 roun, d, e, d-f, u, l, l bg-wh, i, t, e/10 bor, d, e, r bor, d, e, r-wh, i, t, e/20 mb-6'>
+            <Lis t C h e, c, k, s />
 
-            <span className='text-sm font-semibold'>Agent Ops • 2026</span>
+            <s, p, a, n cl a s s N, a, m, e='t, e, x, t-sm f, o, n, t-s e m i b, o, l, d'>Ag, e, n, t Ops • 2, 0, 2, 6</s, p, a, n>
           </div>
-          <h1 className='text-5xl md:text-6xl font-extrabold leading-tight mb-4'>
-            Agent Release Runbooks v2 (2026)
+          <h1 cl a s s N, a, m, e='t, e, x, t-5, xl md:t, e, x, t-6, xl f, o, n, t-ex t r a b, o, l, d lead, i, n, g-ti, g, h, t mb-4'>
+            Ag, e, n, t Rele, a, s, e R u n b o, o, k, s v2 (2, 0, 2, 6)
           </h1>
-          <p className='text-lg md:text-xl text-white/80 max-w-3xl'>
-            Ship autonomous agents with budgeted actions, KPI canariesapprovalsand one‑click rollback.
+          <p cl a s s N, a, m, e='t, e, x, t-lg md:t, e, x, t-xl t, e, x, t-wh, i, t, e/80 max-w-3xl'>
+            S, h, i, p aut o n o m, o, u, s age, n, t, s w, i, t, h b u d g e, t, e, d acti, o, n, s, KPI canariesappro v a l s, a, n, d one‑cl, i, c, k r o l l b, a, c, k.
           </p>
-          <div className='flex items-center gap-6 text-white/70 mt-8'>
-            <div className='flex items-center gap-2'>
-              <Calendar />
-              <span>Jan 30, 2026</span>
+          <div cl a s s N, a, m, e='f, l, e, x it, e, m, s-cen, t, e, r gap-6 t, e, x, t-wh, i, t, e/70 mt-8'>
+            <div cl a s s N, a, m, e='f, l, e, x it, e, m, s-cen, t, e, r gap-2'>
+              <C a l e n, d, a, r />
+              <s, p, a, n>Jan 30, 2, 0, 2, 6</s, p, a, n>
             </div>
-            <div className='flex items-center gap-2'>
-              <Clock />
-              <span>18 min read</span>
+            <div cl a s s N, a, m, e='f, l, e, x it, e, m, s-cen, t, e, r gap-2'>
+              <Cl, o, c, k />
+              <s, p, a, n>18 min r, e, a, d</s, p, a, n>
             </div>
           </div>
         </div>
-      </header>
+      </hea, d, e, r>
 
-      <section className='py-16'>
-        <div className='max-w-4xl mx-auto px-6 prose prose-lg'>
-          <h2>Release Safety Model</h2>
+      <sect, i, o, n cl a s s N, a, m, e='py-16'>
+        <div cl a s s N, a, m, e='max-w-4, xl mx-a, u, t, o px-6 pr, o, s, e pr, o, s, e-lg'>
+          <h2>Rele, a, s, e Saf, e, t, y Mo, d, e, l</h2>
           <p>
-            Operational safety hinges on three primitives: hard budgetslightweight approvalsand KPI-linked canaries that trigger
-            automatic rollback when thresholds are breached.
+            Oper a t i o, n, a, l saf, e, t, y hin, g, e, s on th, r, e, e pri m i t i, v, e, s: h, a, r, d budgetsligh t w e i, g, h, t appro v a l s, a, n, d KPI-lin, k, e, d c a n a r, i, e, s t, h, a, t trig, g, e, r
+            au t o m a, t, i, c r o l l b, a, c, k w, h, e, n thr e s h o, l, d, s are b r e a c, h, e, d.
           </p>
-          <h3>Runbook Outline</h3>
+          <h3>Runb, o, o, k Outl, i, n, e</h3>
           <ol>
-            <li>Define budgeted actions and guardrails</li>
-            <li>Attach canaries to product KPIs</li>
-            <li>Stage rollout with blast-radius limits</li>
-            <li>Automate rollback and postmortems</li>
+            <li>Def, i, n, e b u d g e, t, e, d acti, o, n, s and gua r d r a, i, l, s</li>
+            <li>Att, a, c, h c a n a r, i, e, s to prod, u, c, t K, P, I, s</li>
+            <li>St, a, g, e roll, o, u, t w, i, t, h bl, a, s, t-rad, i, u, s lim, i, t, s</li>
+            <li>A u t o m, a, t, e r o l l b, a, c, k and post m o r t, e, m, s</li>
           </ol>
         </div>
-      </section>
+      </sect, i, o, n>
 
-      <section className='py-12 bg-white'>
-        <div className='max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-6'>
-          <div className='rounded-xl border p-6'>
-            <div className='text-3xl font-extrabold text-fuchsia-600 mb-2'>
-              Budgets
+      <sect, i, o, n cl a s s N, a, m, e='py-12 bg-wh, i, t, e'>
+        <div cl a s s N, a, m, e='max-w-6, xl mx-a, u, t, o px-6 g, r, i, d md:g, r, i, d-c, o, l, s-3 gap-6'>
+          <div cl a s s N, a, m, e='roun, d, e, d-xl bor, d, e, r p-6'>
+            <div cl a s s N, a, m, e='t, e, x, t-3, xl f, o, n, t-ex t r a b, o, l, d t, e, x, t-fuch, s, i, a-600 mb-2'>
+              Budg, e, t, s
             </div>
-            <div className='text-slate-600'>
-              Max costtimescope per release
-            </div>
-          </div>
-          <div className='rounded-xl border p-6'>
-            <div className='text-3xl font-extrabold text-purple-600 mb-2'>
-              Canaries
-            </div>
-            <div className='text-slate-600'>
-              KPI-linked checks in CI and live
+            <div cl a s s N, a, m, e='t, e, x, t-sl, a, t, e-600'>
+              Max costti m e s c, o, p, e per rele, a, s, e
             </div>
           </div>
-          <div className='rounded-xl border p-6'>
-            <div className='text-3xl font-extrabold text-indigo-600 mb-2'>
-              Rollback
+          <div cl a s s N, a, m, e='roun, d, e, d-xl bor, d, e, r p-6'>
+            <div cl a s s N, a, m, e='t, e, x, t-3, xl f, o, n, t-ex t r a b, o, l, d t, e, x, t-pur, p, l, e-600 mb-2'>
+              C a n a r, i, e, s
             </div>
-            <div className='text-slate-600'>One click, under 60s MTR</div>
+            <div cl a s s N, a, m, e='t, e, x, t-sl, a, t, e-600'>
+              KPI-lin, k, e, d che, c, k, s in CI and l, i, v, e
+            </div>
+          </div>
+          <div cl a s s N, a, m, e='roun, d, e, d-xl bor, d, e, r p-6'>
+            <div cl a s s N, a, m, e='t, e, x, t-3, xl f, o, n, t-ex t r a b, o, l, d t, e, x, t-ind, i, g, o-600 mb-2'>
+              R o l l b, a, c, k
+            </div>
+            <div cl a s s N, a, m, e='t, e, x, t-sl, a, t, e-600'>One cl, i, c, k, un, d, e, r 60, s MTR</div>
           </div>
         </div>
-      </section>
+      </sect, i, o, n>
 
-      <section className='py-16'>
-        <div className='max-w-4xl mx-auto px-6'>
-          <div className='bg-gradient-to-r from-fuchsia-600 to-indigo-600 text-white rounded-2xl p-8 flex items-center justify-between gap-4'>
+      <sect, i, o, n cl a s s N, a, m, e='py-16'>
+        <div cl a s s N, a, m, e='max-w-4, xl mx-a, u, t, o px-6'>
+          <div cl a s s N, a, m, e='bg-g r a d i, e, n, t-to-r f, r, o, m-fuch, s, i, a-600 to-ind, i, g, o-600 t, e, x, t-wh, i, t, e roun, d, e, d-2, xl p-8 f, l, e, x it, e, m, s-cen, t, e, r just, i, f, y-betw, e, e, n gap-4'>
             <div>
-              <h3 className='text-2xl font-bold flex items-center gap-2'>
-                <FileWarning /> Prevent Regressions
+              <h3 cl a s s N, a, m, e='t, e, x, t-2, xl f, o, n, t-b, o, l, d f, l, e, x it, e, m, s-cen, t, e, r gap-2'>
+                <File W a r n, i, n, g /> Prev, e, n, t Regr e s s i, o, n, s
               </h3>
-              <p className='text-white/90'>
-                We implement v2 runbooks in 4–6 weeks with audits and training.
+              <p cl a s s N, a, m, e='t, e, x, t-wh, i, t, e/90'>
+                We im p l e m, e, n, t v2 r u n b o, o, k, s in 4–6 we, e, k, s w, i, t, h aud, i, t, s and t r a i n, i, n, g.
               </p>
             </div>
-            <Link
-              href='/contact'
-              className='bg-white text-fuchsia-700 px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2'
+            <L, i, n, k
+              h, r, e, f='/cont, a, c, t'
+              cl a s s N, a, m, e='bg-wh, i, t, e t, e, x, t-fuch, s, i, a-700 px-6 py-3 roun, d, e, d-lg f, o, n, t-s e m i b, o, l, d inl, i, n, e-f, l, e, x it, e, m, s-cen, t, e, r gap-2'
             >
-              Engage <RefreshCw />
-            </Link>
+              Eng, a, g, e <Re f r e s, h, C, w />
+            </L, i, n, k>
           </div>
         </div>
-      </section>
-    </main>
+      </sect, i, o, n>
+    </m, a, i, n>
   );
 }

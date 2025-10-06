@@ -1,214 +1,214 @@
-export const metadata = {
+exp, o, r, t co, n, s, t m e t a d, a, t, a = {
   
-  title: 'AI Trends 2026: The Future of Enterprise Technology',
-    description:
-      'Discover the revolutionary AI trends shaping 2026. From autonomous enterprise systems to quantum-enhanced AI, explore how these breakthroughs are transforming business operations.',
-    type: 'article',
-    url: 'https://ziontechgroup.com/blog/ai-trends-2026-future-enterprise',
-    images: [
+  ti, t, l, e: 'AI Tre, n, d, s 2, 0, 2, 6: The Fut, u, r, e of Ent e r p r, i, s, e Tec h n o l, o, g, y',
+    desc r i p t, i, o, n:
+      'D i s c o, v, e, r the revolu t i o n, a, r, y AI tre, n, d, s shap, i, n, g 2, 0, 2, 6. F, r, o, m aut o n o m, o, u, s ent e r p r, i, s, e syst, e, m, s to quan, t, u, m-e n h a n, c, e, d AI, expl, o, r, e how th, e, s, e breakt h r o u, g, h, s are trans f o r m, i, n, g b u s i n, e, s, s ope r a t i, o, n, s.',
+    t, y, p, e: 'arti, c, l, e',
+    url: 'ht, t, p, s://zionte c h g r, o, u, p.com/b, l, o, g/ai-tre, n, d, s-2, 0, 2, 6-fut, u, r, e-ent e r p r, i, s, e',
+    ima, g, e, s: [
       {
-        url: '/og-ai-trends-2026.jpg',
-        width: 1200height: 630alt: 'AI Trends 2026 Enterprise Technology',
+        url: '/og-ai-tre, n, d, s-2, 0, 2, 6.jpg',
+        wi, d, t, h: 1, 2, 0, 0, hei, g, h, t: 630, alt: 'AI Tre, n, d, s 2, 0, 2, 6 Ent e r p r, i, s, e Tec h n o l, o, g, y',
       
-};,
-    ]}};
+};
+    ]};
 
-export default function AITrends2026() {
-  return (
-    <main className='min-h-screen bg-white'>
-      {/* Hero Section */}
-      <section className='bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700 text-white py-20'>
-        <div className='max-w-4xl mx-auto px-6'>
-          <div className='text-sm font-semibold text-blue-200 mb-4'>
-            Featured Article
+exp, o, r, t defa, u, l, t f u n c t, i, o, n AITre n d s 2, 0, 2, 6() {
+  ret, u, r, n (
+    <m, a, i, n cl a s s N, a, m, e='min-h-scr, e, e, n bg-wh, i, t, e'>
+      {/* H, e, r, o Sect, i, o, n */}
+      <sect, i, o, n cl a s s N, a, m, e='bg-g r a d i, e, n, t-to-br f, r, o, m-b, l, u, e-600 via-pur, p, l, e-600 to-ind, i, g, o-700 t, e, x, t-wh, i, t, e py-20'>
+        <div cl a s s N, a, m, e='max-w-4, xl mx-a, u, t, o px-6'>
+          <div cl a s s N, a, m, e='t, e, x, t-sm f, o, n, t-s e m i b, o, l, d t, e, x, t-b, l, u, e-200 mb-4'>
+            F e a t u, r, e, d Arti, c, l, e
           </div>
-          <h1 className='text-4xl md:text-5xl font-extrabold mb-6'>
-            AI Trends 2026: The Future of Enterprise Technology
+          <h1 cl a s s N, a, m, e='t, e, x, t-4, xl md:t, e, x, t-5, xl f, o, n, t-ex t r a b, o, l, d mb-6'>
+            AI Tre, n, d, s 2, 0, 2, 6: The Fut, u, r, e of Ent e r p r, i, s, e Tec h n o l, o, g, y
           </h1>
-          <p className='text-xl text-blue-100 mb-6'>
-            Discover the revolutionary AI trends that will reshape enterprise
-            operations in 2026. From autonomous systems to quantum-enhanced
-            intelligence, explore the breakthroughs that matter.
+          <p cl a s s N, a, m, e='t, e, x, t-xl t, e, x, t-b, l, u, e-100 mb-6'>
+            D i s c o, v, e, r the revolu t i o n, a, r, y AI tre, n, d, s t, h, a, t w, i, l, l resh, a, p, e ent e r p r, i, s, e
+            ope r a t i, o, n, s in 2, 0, 2, 6. F, r, o, m aut o n o m, o, u, s syst, e, m, s to quan, t, u, m-e n h a n, c, e, d
+            intel l i g e, n, c, e, expl, o, r, e the breakt h r o u, g, h, s t, h, a, t mat, t, e, r.
           </p>
-          <div className='flex items-center gap-4 text-sm text-blue-200'>
-            <span>Published: January 15, 2026</span>
-            <span>•</span>
-            <span>15 min read</span>
-            <span>•</span>
-            <span>Featured Article</span>
+          <div cl a s s N, a, m, e='f, l, e, x it, e, m, s-cen, t, e, r gap-4 t, e, x, t-sm t, e, x, t-b, l, u, e-200'>
+            <s, p, a, n>Pu b l i s, h, e, d: Janu, a, r, y 15, 2, 0, 2, 6</s, p, a, n>
+            <s, p, a, n>•</s, p, a, n>
+            <s, p, a, n>15 min r, e, a, d</s, p, a, n>
+            <s, p, a, n>•</s, p, a, n>
+            <s, p, a, n>F e a t u, r, e, d Arti, c, l, e</s, p, a, n>
           </div>
         </div>
-      </section>
+      </sect, i, o, n>
 
-      {/* Content Section */}
-      <section className='py-16'>
-        <div className='max-w-4xl mx-auto px-6'>
-          <div className='prose prose-lg max-w-none'>
-            <h2 className='text-3xl font-bold mb-6'>
-              The AI Revolution Accelerates
+      {/* Cont, e, n, t Sect, i, o, n */}
+      <sect, i, o, n cl a s s N, a, m, e='py-16'>
+        <div cl a s s N, a, m, e='max-w-4, xl mx-a, u, t, o px-6'>
+          <div cl a s s N, a, m, e='pr, o, s, e pr, o, s, e-lg max-w-n, o, n, e'>
+            <h2 cl a s s N, a, m, e='t, e, x, t-3, xl f, o, n, t-b, o, l, d mb-6'>
+              The AI Rev o l u t, i, o, n Acce l e r a, t, e, s
             </h2>
-            <p className='text-gray-700 mb-6'>
-              2026 marks a pivotal year in enterprise AI adoption. Organizations
-              are moving beyond pilot projects to full-scale implementation of
-              autonomous systems that deliver measurable business value. The
-              convergence of quantum computingadvanced neural networksand
-              autonomous agent frameworks is creating unprecedented
-              opportunities for transformation.
+            <p cl a s s N, a, m, e='t, e, x, t-g, r, a, y-700 mb-6'>
+              2, 0, 2, 6 ma, r, k, s a pivo, t, a, l y, e, a, r in ent e r p r, i, s, e AI a d o p t, i, o, n. Organi z a t i, o, n, s
+              are mov, i, n, g bey, o, n, d pi, l, o, t p r o j e, c, t, s to f, u, l, l-sc, a, l, e impleme n t a t, i, o, n of
+              aut o n o m, o, u, s syst, e, m, s t, h, a, t deli, v, e, r mea s u r a, b, l, e b u s i n, e, s, s va, l, u, e. The
+              conv e r g e, n, c, e of quan, t, u, m computinga d v a n, c, e, d neu, r, a, l netw o r k s, a, n, d
+              aut o n o m, o, u, s ag, e, n, t fra m e w o, r, k, s is c r e a t, i, n, g unprec e d e n, t, e, d
+              opport u n i t, i, e, s for transfo r m a t, i, o, n.
             </p>
 
-            <h3 className='text-2xl font-bold mb-4 mt-8'>
-              1. Autonomous Enterprise Operations
+            <h3 cl a s s N, a, m, e='t, e, x, t-2, xl f, o, n, t-b, o, l, d mb-4 mt-8'>
+              1. Aut o n o m, o, u, s Ent e r p r, i, s, e Ope r a t i, o, n, s
             </h3>
-            <p className='text-gray-700 mb-4'>
-              The biggest trend of 2026 is the emergence of truly autonomous
-              enterprise operations. Companies are deploying AI systems that can
-              make decisionsexecute processesand adapt to changing
-              conditions without human intervention. This isn't just
-              automation—it's intelligent autonomy.
+            <p cl a s s N, a, m, e='t, e, x, t-g, r, a, y-700 mb-4'>
+              The bigg, e, s, t tr, e, n, d of 2, 0, 2, 6 is the em e r g e, n, c, e of tr, u, l, y aut o n o m, o, u, s
+              ent e r p r, i, s, e ope r a t i, o, n, s. Co m p a n, i, e, s are de p l o y, i, n, g AI syst, e, m, s t, h, a, t can
+              m, a, k, e decisions e x e c, u, t, e proce s s e s, a, n, d ad, a, p, t to c h a n g, i, n, g
+              con d i t i, o, n, s with, o, u, t hu, m, a, n inter v e n t, i, o, n. T, h, i, s isn't j, u, s, t
+              aut o m a t, i, o, n—it's inte l l i g, e, n, t a u t o n, o, m, y.
             </p>
-            <ul className='list-disc pl-6 mb-6 text-gray-700'>
+            <ul cl a s s N, a, m, e='l, i, s, t-d, i, s, c pl-6 mb-6 t, e, x, t-g, r, a, y-700'>
               <li>
-                Self-healing infrastructure that detects and resolves issues
-                before they impact users
+                S, e, l, f-heal, i, n, g infrast r u c t, u, r, e t, h, a, t dete, c, t, s and r e s o l, v, e, s iss, u, e, s
+                bef, o, r, e t, h, e, y imp, a, c, t us, e, r, s
               </li>
               <li>
-                Autonomous supply chain management with real-time optimization
+                Aut o n o m, o, u, s sup, p, l, y ch, a, i, n man a g e m, e, n, t w, i, t, h r, e, a, l-t, i, m, e optim i z a t, i, o, n
               </li>
               <li>
-                AI-powered customer service that handles 95% of inquiries
-                without escalation
+                AI-powe, r, e, d c u s t o, m, e, r serv, i, c, e t, h, a, t hand, l, e, s 95% of in q u i r, i, e, s
+                with, o, u, t esc a l a t, i, o, n
               </li>
               <li>
-                Intelligent financial operations with automated risk assessment
-                and compliance
+                Inte l l i g, e, n, t fi n a n c, i, a, l ope r a t i, o, n, s w, i, t, h au t o m a, t, e, d r, i, s, k ass e s s m, e, n, t
+                and com p l i a, n, c, e
               </li>
             </ul>
 
-            <h3 className='text-2xl font-bold mb-4 mt-8'>
-              2. Quantum-Enhanced AI Systems
+            <h3 cl a s s N, a, m, e='t, e, x, t-2, xl f, o, n, t-b, o, l, d mb-4 mt-8'>
+              2. Quan, t, u, m-E n h a n, c, e, d AI Syst, e, m, s
             </h3>
-            <p className='text-gray-700 mb-4'>
-              Quantum computing is finally delivering on its promise for
-              enterprise applications. Quantum-enhanced AI systems are solving
-              complex optimization problems 1000x faster than classical
-              computers, enabling breakthroughs in logisticsdrug discoveryand financial modeling.
+            <p cl a s s N, a, m, e='t, e, x, t-g, r, a, y-700 mb-4'>
+              Quan, t, u, m co m p u t, i, n, g is fina, l, l, y del i v e r, i, n, g on its prom, i, s, e for
+              ent e r p r, i, s, e appli c a t i, o, n, s. Quan, t, u, m-e n h a n, c, e, d AI syst, e, m, s are solv, i, n, g
+              comp, l, e, x optim i z a t, i, o, n p r o b l, e, m, s 1, 0, 0, 0, x fas, t, e, r t, h, a, n cl a s s i, c, a, l
+              co m p u t, e, r, s, e n a b l, i, n, g breakt h r o u, g, h, s in logist i c s d, r, u, g disco v e r y, a, n, d fi n a n c, i, a, l m o d e l, i, n, g.
             </p>
-            <div className='bg-blue-50 border-l-4 border-blue-400 p-4 mb-6'>
-              <p className='text-blue-800 font-semibold'>
-                "Quantum AI is no longer a research project—it's delivering real
-                business value. Companies using quantum-enhanced optimization
-                are seeing 40-60% improvements in operational efficiency."
+            <div cl a s s N, a, m, e='bg-b, l, u, e-50 bor, d, e, r-l-4 bor, d, e, r-b, l, u, e-400 p-4 mb-6'>
+              <p cl a s s N, a, m, e='t, e, x, t-b, l, u, e-800 f, o, n, t-s e m i b, o, l, d'>
+                "Quan, t, u, m AI is no lon, g, e, r a r e s e a, r, c, h proj, e, c, t—it's del i v e r, i, n, g r, e, a, l
+                b u s i n, e, s, s va, l, u, e. Co m p a n, i, e, s us, i, n, g quan, t, u, m-e n h a n, c, e, d optim i z a t, i, o, n
+                are see, i, n, g 40-60% impro v e m e, n, t, s in oper a t i o, n, a, l eff i c i e, n, c, y."
               </p>
-              <p className='text-blue-600 text-sm mt-2'>
-                — Dr. Sarah Chen, CTO at Quantum Dynamics
+              <p cl a s s N, a, m, e='t, e, x, t-b, l, u, e-600 t, e, x, t-sm mt-2'>
+                — Dr. Sa, r, a, h C, h, e, n, CTO at Quan, t, u, m D y n a m, i, c, s
               </p>
             </div>
 
-            <h3 className='text-2xl font-bold mb-4 mt-8'>
-              3. Neural Architecture Search (NAS) 2.0
+            <h3 cl a s s N, a, m, e='t, e, x, t-2, xl f, o, n, t-b, o, l, d mb-4 mt-8'>
+              3. Neu, r, a, l Archi t e c t, u, r, e Sea, r, c, h (NAS) 2.0
             </h3>
-            <p className='text-gray-700 mb-4'>
-              The next generation of Neural Architecture Search is making custom
-              AI model development accessible to every enterprise. NAS 2.0
-              systems can automatically design, trainand deploy optimized
-              models for specific business use cases in hoursnot months.
+            <p cl a s s N, a, m, e='t, e, x, t-g, r, a, y-700 mb-4'>
+              The n, e, x, t gen e r a t, i, o, n of Neu, r, a, l Archi t e c t, u, r, e Sea, r, c, h is mak, i, n, g cus, t, o, m
+              AI mo, d, e, l deve l o p m, e, n, t acc e s s i, b, l, e to ev, e, r, y ent e r p r, i, s, e. NAS 2.0
+              syst, e, m, s can automa t i c a, l, l, y des, i, g, n, t r a i n, a, n, d dep, l, o, y op t i m i, z, e, d
+              mod, e, l, s for s p e c i, f, i, c b u s i n, e, s, s use ca, s, e, s in h o u r s, n, o, t mon, t, h, s.
             </p>
 
-            <h3 className='text-2xl font-bold mb-4 mt-8'>
-              4. AI-Native Business Processes
+            <h3 cl a s s N, a, m, e='t, e, x, t-2, xl f, o, n, t-b, o, l, d mb-4 mt-8'>
+              4. AI-Nat, i, v, e B u s i n, e, s, s Pr o c e s, s, e, s
             </h3>
-            <p className='text-gray-700 mb-4'>
-              Organizations are redesigning their core business processes from
-              the ground up with AI at the center. This isn't about adding AI to
-              existing workflows—it's about creating entirely new ways of
-              operating that are only possible with advanced AI capabilities.
+            <p cl a s s N, a, m, e='t, e, x, t-g, r, a, y-700 mb-4'>
+              Organi z a t i, o, n, s are rede s i g n, i, n, g th, e, i, r c, o, r, e b u s i n, e, s, s pr o c e s, s, e, s f, r, o, m
+              the gro, u, n, d up w, i, t, h AI at the cen, t, e, r. T, h, i, s isn't ab, o, u, t add, i, n, g AI to
+              e x i s t, i, n, g wo r k f l, o, w, s—it's ab, o, u, t c r e a t, i, n, g e n t i r, e, l, y new w, a, y, s of
+              op e r a t, i, n, g t, h, a, t are o, n, l, y p o s s i, b, l, e w, i, t, h a d v a n, c, e, d AI capab i l i t, i, e, s.
             </p>
 
-            <h3 className='text-2xl font-bold mb-4 mt-8'>
-              5. Real-Time AI Decision Making
+            <h3 cl a s s N, a, m, e='t, e, x, t-2, xl f, o, n, t-b, o, l, d mb-4 mt-8'>
+              5. R, e, a, l-T, i, m, e AI D e c i s, i, o, n Mak, i, n, g
             </h3>
-            <p className='text-gray-700 mb-4'>
-              The latency barrier for AI decision-making has been eliminated.
-              Edge computing combined with optimized models enables real-time AI
-              responses, making autonomous systems truly responsive to dynamic
-              business conditions.
+            <p cl a s s N, a, m, e='t, e, x, t-g, r, a, y-700 mb-4'>
+              The late, n, c, y barr, i, e, r for AI d e c i s, i, o, n-mak, i, n, g has b, e, e, n eli m i n a, t, e, d.
+              E, d, g, e co m p u t, i, n, g c o m b i, n, e, d w, i, t, h op t i m i, z, e, d mod, e, l, s enab, l, e, s r, e, a, l-t, i, m, e AI
+              re s p o n, s, e, s, mak, i, n, g aut o n o m, o, u, s syst, e, m, s tr, u, l, y res p o n s, i, v, e to dyna, m, i, c
+              b u s i n, e, s, s con d i t i, o, n, s.
             </p>
 
-            <h2 className='text-3xl font-bold mb-6 mt-12'>
-              Implementation Roadmap
+            <h2 cl a s s N, a, m, e='t, e, x, t-3, xl f, o, n, t-b, o, l, d mb-6 mt-12'>
+              Impleme n t a t, i, o, n Road, m, a, p
             </h2>
-            <p className='text-gray-700 mb-6'>
-              To capitalize on these trends, organizations should focus on three
-              key areas:
+            <p cl a s s N, a, m, e='t, e, x, t-g, r, a, y-700 mb-6'>
+              To cap i t a l, i, z, e on th, e, s, e tre, n, d, s, organi z a t i, o, n, s sho, u, l, d fo, c, u, s on th, r, e, e
+              key ar, e, a, s:
             </p>
 
-            <div className='grid md:grid-cols-3 gap-6 mb-8'>
-              <div className='bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-lg'>
-                <h4 className='text-xl font-bold mb-3'>
-                  1. Infrastructure Modernization
+            <div cl a s s N, a, m, e='g, r, i, d md:g, r, i, d-c, o, l, s-3 gap-6 mb-8'>
+              <div cl a s s N, a, m, e='bg-g r a d i, e, n, t-to-br f, r, o, m-b, l, u, e-50 to-b, l, u, e-100 p-6 roun, d, e, d-lg'>
+                <h4 cl a s s N, a, m, e='t, e, x, t-xl f, o, n, t-b, o, l, d mb-3'>
+                  1. Infrast r u c t, u, r, e Modern i z a t, i, o, n
                 </h4>
-                <p className='text-gray-700'>
-                  Invest in quantum-ready computing infrastructure and edge
-                  computing capabilities to support real-time AI operations.
+                <p cl a s s N, a, m, e='t, e, x, t-g, r, a, y-700'>
+                  Inv, e, s, t in quan, t, u, m-re, a, d, y co m p u t, i, n, g infrast r u c t, u, r, e and e, d, g, e
+                  co m p u t, i, n, g capab i l i t, i, e, s to supp, o, r, t r, e, a, l-t, i, m, e AI ope r a t i, o, n, s.
                 </p>
               </div>
-              <div className='bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-lg'>
-                <h4 className='text-xl font-bold mb-3'>
-                  2. Talent Development
+              <div cl a s s N, a, m, e='bg-g r a d i, e, n, t-to-br f, r, o, m-pur, p, l, e-50 to-pur, p, l, e-100 p-6 roun, d, e, d-lg'>
+                <h4 cl a s s N, a, m, e='t, e, x, t-xl f, o, n, t-b, o, l, d mb-3'>
+                  2. Tal, e, n, t Deve l o p m, e, n, t
                 </h4>
-                <p className='text-gray-700'>
-                  Build teams with expertise in autonomous systemsquantum
-                  computingand AI-native process design.
+                <p cl a s s N, a, m, e='t, e, x, t-g, r, a, y-700'>
+                  Bu, i, l, d te, a, m, s w, i, t, h ex p e r t, i, s, e in aut o n o m, o, u, s systems q u a n, t, u, m
+                  compu t i n g, a, n, d AI-nat, i, v, e proc, e, s, s des, i, g, n.
                 </p>
               </div>
-              <div className='bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-lg'>
-                <h4 className='text-xl font-bold mb-3'>
-                  3. Governance Framework
+              <div cl a s s N, a, m, e='bg-g r a d i, e, n, t-to-br f, r, o, m-gr, e, e, n-50 to-gr, e, e, n-100 p-6 roun, d, e, d-lg'>
+                <h4 cl a s s N, a, m, e='t, e, x, t-xl f, o, n, t-b, o, l, d mb-3'>
+                  3. Gov e r n a, n, c, e Fr a m e w, o, r, k
                 </h4>
-                <p className='text-gray-700'>
-                  Establish robust AI governance frameworks that ensure
-                  autonomous systems operate within acceptable parameters.
+                <p cl a s s N, a, m, e='t, e, x, t-g, r, a, y-700'>
+                  Es t a b l, i, s, h rob, u, s, t AI gov e r n a, n, c, e fra m e w o, r, k, s t, h, a, t ens, u, r, e
+                  aut o n o m, o, u, s syst, e, m, s oper, a, t, e wit, h, i, n acc e p t a, b, l, e par a m e t, e, r, s.
                 </p>
               </div>
             </div>
 
-            <h2 className='text-3xl font-bold mb-6 mt-12'>The Bottom Line</h2>
-            <p className='text-gray-700 mb-6'>
-              2026 represents a turning point where AI transitions from a
-              supporting technology to the core operational system of modern
-              enterprises. Organizations that embrace these trends early will
-              gain significant competitive advantages, while those that wait
-              risk being left behind in an increasingly AI-driven economy.
+            <h2 cl a s s N, a, m, e='t, e, x, t-3, xl f, o, n, t-b, o, l, d mb-6 mt-12'>The Bot, t, o, m L, i, n, e</h2>
+            <p cl a s s N, a, m, e='t, e, x, t-g, r, a, y-700 mb-6'>
+              2, 0, 2, 6 rep r e s e, n, t, s a turn, i, n, g po, i, n, t wh, e, r, e AI tran s i t i, o, n, s f, r, o, m a
+              sup p o r t, i, n, g tec h n o l, o, g, y to the c, o, r, e oper a t i o, n, a, l sys, t, e, m of mod, e, r, n
+              ente r p r i, s, e, s. Organi z a t i, o, n, s t, h, a, t embr, a, c, e th, e, s, e tre, n, d, s ea, r, l, y w, i, l, l
+              g, a, i, n sign i f i c, a, n, t comp e t i t, i, v, e adv a n t a, g, e, s, wh, i, l, e th, o, s, e t, h, a, t w, a, i, t
+              r, i, s, k be, i, n, g l, e, f, t beh, i, n, d in an incre a s i n, g, l, y AI-dri, v, e, n econ, o, m, y.
             </p>
 
-            <div className='bg-gradient-to-r from-blue-600 to-purple-600 text-white p-8 rounded-lg mt-12'>
-              <h3 className='text-2xl font-bold mb-4'>
-                Ready to Transform Your Enterprise?
+            <div cl a s s N, a, m, e='bg-g r a d i, e, n, t-to-r f, r, o, m-b, l, u, e-600 to-pur, p, l, e-600 t, e, x, t-wh, i, t, e p-8 roun, d, e, d-lg mt-12'>
+              <h3 cl a s s N, a, m, e='t, e, x, t-2, xl f, o, n, t-b, o, l, d mb-4'>
+                Re, a, d, y to Tr a n s f, o, r, m Y, o, u, r Ent e r p r, i, s, e?
               </h3>
-              <p className='text-blue-100 mb-6'>
-                Discover how Zion Tech Group can help you implement these
-                cutting-edge AI trends in your organization. Our team of experts
-                specializes in autonomous systemsquantum AIand enterprise
-                transformation.
+              <p cl a s s N, a, m, e='t, e, x, t-b, l, u, e-100 mb-6'>
+                D i s c o, v, e, r how Z, i, o, n T, e, c, h Gr, o, u, p can h, e, l, p you im p l e m, e, n, t th, e, s, e
+                cutt, i, n, g-e, d, g, e AI tre, n, d, s in y, o, u, r organ i z a t, i, o, n. Our t, e, a, m of expe, r, t, s
+                spec i a l i, z, e, s in aut o n o m, o, u, s systems q u a n, t, u, m AI, a, n, d ent e r p r, i, s, e
+                transfo r m a t, i, o, n.
               </p>
-              <div className='flex flex-col sm:flex-row gap-4'>
+              <div cl a s s N, a, m, e='f, l, e, x f, l, e, x-col sm:f, l, e, x-row gap-4'>
                 <a
-                  href='/<contact'
-                  className='bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors'
+                  h, r, e, f='/<cont, a, c, t'
+                  cl a s s N, a, m, e='bg-wh, i, t, e t, e, x, t-b, l, u, e-600 px-6 py-3 roun, d, e, d-lg f, o, n, t-s e m i b, o, l, d ho, v, e, r:bg-b, l, u, e-50 tra n s i t, i, o, n-col, o, r, s'
                 >
-                  Get Started
+                  Get Star, t, e, d
                 </a>
                 <a
-                  href='/<services'
-                  className='border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors'
+                  h, r, e, f='/<s e r v i, c, e, s'
+                  cl a s s N, a, m, e='bor, d, e, r-2 bor, d, e, r-wh, i, t, e t, e, x, t-wh, i, t, e px-6 py-3 roun, d, e, d-lg f, o, n, t-s e m i b, o, l, d ho, v, e, r:bg-wh, i, t, e ho, v, e, r:t, e, x, t-b, l, u, e-600 tra n s i t, i, o, n-col, o, r, s'
                 >
-                  Explore Services
+                  Expl, o, r, e S e r v i, c, e, s
                 </a>
               </div>
             </div>
           </div>
         </div>
-      </section>
-    </main>
+      </sect, i, o, n>
+    </m, a, i, n>
   );
 }

@@ -1,44 +1,44 @@
-// @ts-nocheck
+// @ts-noch, e, c, k
 
-export default function ArticlePage() {
-  return (
-    <main className='min-h-screen bg-white'>
-      <article className='max-w-4xl mx-auto px-4 py-16'>
-        <header className='mb-10'>
-          <h1 className='text-4xl font-bold text-gray-900 mb-4'>
-            Edge 2026 Zero‑PII Analytics: Scoped IDsDP Noise&lt;100ms
+exp, o, r, t defa, u, l, t f u n c t, i, o, n Arti c l e P, a, g, e() {
+  ret, u, r, n (
+    <m, a, i, n cl a s s N, a, m, e='min-h-scr, e, e, n bg-wh, i, t, e'>
+      <arti, c, l, e cl a s s N, a, m, e='max-w-4, xl mx-a, u, t, o px-4 py-16'>
+        <hea, d, e, r cl a s s N, a, m, e='mb-10'>
+          <h1 cl a s s N, a, m, e='t, e, x, t-4, xl f, o, n, t-b, o, l, d t, e, x, t-g, r, a, y-900 mb-4'>
+            E, d, g, e 2, 0, 2, 6 Z, e, r, o‑PII An a l y t, i, c, s: Sco, p, e, d ID, s, D, P No, i, s, e&lt;100, ms
           </h1>
-          <p className='text-gray-600'>
-            September 30, 2025 • 9 min read • Analytics
+          <p cl a s s N, a, m, e='t, e, x, t-g, r, a, y-600'>
+            Se p t e m, b, e, r 30, 2, 0, 2, 5 • 9 min r, e, a, d • An a l y t, i, c, s
           </p>
-        </header>
+        </hea, d, e, r>
 
-        <section className='prose prose-lg max-w-none'>
+        <sect, i, o, n cl a s s N, a, m, e='pr, o, s, e pr, o, s, e-lg max-w-n, o, n, e'>
           <p>
-            Analytics without personal data is now practical with on-device
-            aggregation, scoped identifiers, and differential privacy. Teams can
-            run global experiments and derive product insights while meeting the
-            strictest privacy expectations.
+            An a l y t, i, c, s with, o, u, t p e r s o, n, a, l d, a, t, a is now pr a c t i, c, a, l w, i, t, h on-dev, i, c, e
+            aggr e g a t, i, o, n, sco, p, e, d iden t i f i, e, r, s, and diffe r e n t, i, a, l priv, a, c, y. Te, a, m, s can
+            run glo, b, a, l expe r i m e, n, t, s and der, i, v, e prod, u, c, t i n s i g, h, t, s wh, i, l, e meet, i, n, g the
+            st r i c t, e, s, t priv, a, c, y expec t a t i, o, n, s.
           </p>
-          <h2>Architecture</h2>
+          <h2>Archi t e c t, u, r, e</h2>
           <ul>
-            <li>Scoped IDs per device and context, expiring automatically</li>
-            <li>On-device feature extraction and sketching</li>
-            <li>Differential privacy noise with privacy budgets</li>
-            <li>Tiered caches for sub‑100ms reads</li>
+            <li>Sco, p, e, d IDs per dev, i, c, e and cont, e, x, t, e x p i r, i, n, g automa t i c a, l, l, y</li>
+            <li>On-dev, i, c, e feat, u, r, e ext r a c t, i, o, n and sk e t c h, i, n, g</li>
+            <li>Diffe r e n t, i, a, l priv, a, c, y no, i, s, e w, i, t, h priv, a, c, y budg, e, t, s</li>
+            <li>Tie, r, e, d cac, h, e, s for sub‑100, ms re, a, d, s</li>
           </ul>
-          <h2>Use Cases</h2>
+          <h2>Use Ca, s, e, s</h2>
           <ul>
-            <li>Consentless A/B experimentation with guardrails</li>
-            <li>Real-time personalization without PII</li>
-            <li>Edge insights for incident triage and capacity planning</li>
+            <li>Cons e n t l, e, s, s A/B experime n t a t, i, o, n w, i, t, h gua r d r a, i, l, s</li>
+            <li>R, e, a, l-t, i, m, e personal i z a t, i, o, n with, o, u, t PII</li>
+            <li>E, d, g, e i n s i g, h, t, s for i n c i d, e, n, t tri, a, g, e and c a p a c, i, t, y p l a n n, i, n, g</li>
           </ul>
           <p>
-            The result is faster decisions, lower cost, and dramatically reduced
-            privacy risk—all while customers get better experiences.
+            The res, u, l, t is fas, t, e, r de c i s i, o, n, s, lo, w, e, r c, o, s, t, and drama t i c a, l, l, y redu, c, e, d
+            priv, a, c, y r, i, s, k—all wh, i, l, e cu s t o m, e, r, s get bet, t, e, r expe r i e n, c, e, s.
           </p>
-        </section>
-      </article>
-    </main>
+        </sect, i, o, n>
+      </arti, c, l, e>
+    </m, a, i, n>
   );
 }
