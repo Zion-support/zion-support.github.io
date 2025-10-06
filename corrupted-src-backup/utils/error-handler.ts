@@ -198,12 +198,12 @@ class ErrorHandler {
     this.errorCount++;
 
     // Log error for development
-    if (process.env.NODE_ENV === 'development') {
+    if (process.env['NODE_ENV'] === 'development') {
       console.error('Error captured:', errorData);
     }
 
     // Send to error reporting service in production
-    if (process.env.NODE_ENV === 'production') {
+    if (process.env['NODE_ENV'] === 'production') {
       this.sendErrorReport(this.errors.get(errorId)!);
     }
 
@@ -229,7 +229,7 @@ class ErrorHandler {
     // High: JavaScript errors in production
     if (
       errorData.type === 'javascript' &&
-      process.env.NODE_ENV === 'production'
+      process.env['NODE_ENV'] === 'production'
     ) {
       return 'high';
     }

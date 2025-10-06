@@ -3,8 +3,6 @@ import { ArrowRight, Bot, Rocket, Shield, Target, TrendingUp, Zap } from 'lucide
 
 <<<<<<< HEAD
 import Link from 'next/link';
-
-import Link from 'next/link';
 import {
   Sparkles,
   TrendingUp,
@@ -17,6 +15,8 @@ import {
 
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e4e
+=======
+>>>>>>> main
 const NewContentPromotionalBanner2026: React.FC = () => {
   const featuredContent = [
     {
@@ -160,6 +160,8 @@ const NewContentPromotionalBanner2026: React.FC = () => {
               <Target className="w-5 h-5 text-blue-400" />
               <span className="font-semibold">Proven Results</span>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e4e
+=======
+>>>>>>> main
             </div>
           </div>
         </div>
@@ -202,6 +204,8 @@ const NewContentPromotionalBanner2026: React.FC = () => {
                   <div className="text-4xl">{content.icon}</div>
                   <div className={`px-4 py-2 rounded-full bg-gradient-to-r ${content.badgeColor} text-white text-sm font-bold shadow-lg`}>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e4e
+=======
+>>>>>>> main
                     {content.badge}
                   </div>
                 </div>
@@ -216,6 +220,8 @@ const NewContentPromotionalBanner2026: React.FC = () => {
                 <div className="mb-4">
                   <span className={`inline-block px-4 py-2 rounded-full bg-gradient-to-r ${content.bgColor} text-gray-900 text-sm font-semibold border border-white/20`}>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e4e
+=======
+>>>>>>> main
                     {content.category}
                   </span>
                 </div>
@@ -231,8 +237,7 @@ const NewContentPromotionalBanner2026: React.FC = () => {
 <<<<<<< HEAD
                 <p className='text-gray-300 mb-6 leading-relaxed'>
 =======
-                <p className="text-gray-300 mb-6 leading-relaxed">
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e4e
+>>>>>>> main
                   {content.excerpt}
                 </p>
 
@@ -244,25 +249,18 @@ const NewContentPromotionalBanner2026: React.FC = () => {
 <<<<<<< HEAD
                   <span className="text-lg">Read Full Article</span>
                   <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-2 transition-transform duration-300" />
-                </ArrowRight>
-=======
-                  <span>Read Full Article</span>
-                  <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-1 transition-transform" />
-                </Link>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e4e
-              </div>
                 </Link>
 
-<<<<<<< HEAD
                 {/* Corner accent */}
                 <div
                   className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${content.color} opacity-10 rounded-bl-full`}
                 />
               </div>
 =======
-              {/* Corner accent */}
-              <div className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${content.color} opacity-10 rounded-bl-full`}></div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e4e
+              </div>
+                </Link>
+
+>>>>>>> main
             </div>
           ))}
         </div>
@@ -387,6 +385,8 @@ const NewContentPromotionalBanner2026: React.FC = () => {
             <div className="text-center">
               <div className="text-3xl font-bold text-white mb-2">24/7</div>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e4e
+=======
+>>>>>>> main
               <div className="text-gray-300">Expert Support</div>
             </div>
           </div>

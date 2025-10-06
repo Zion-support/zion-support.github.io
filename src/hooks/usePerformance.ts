@@ -174,9 +174,35 @@ export const useResourcePerformance = () => {
  */
 export const useLongTaskMonitoring = () => {
   useEffect(() => {
+<<<<<<< HEAD
     const observer = monitorLongTasks((entries: PerformanceEntry[]) => {
+=======
+    const observer = performanceOptimizer.monitorLongTasks((entries: PerformanceEntry[]) => {
+>>>>>>> main
       entries.forEach((entry: PerformanceEntry) => {
+<<<<<<< HEAD
         analytics.track('long_task', 'performance', 'detected', undefined, entry.duration);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+        analytics.track(
+          'long_task',
+          'performance',
+          'detected',
+          undefined,
+          entry.duration
+        );
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
       });
     });
 
