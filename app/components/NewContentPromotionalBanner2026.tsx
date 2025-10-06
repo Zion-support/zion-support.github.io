@@ -190,8 +190,6 @@ const NewContentPromotionalBanner2026: React.FC = () => {
                 </div>
                 {/* Category */}
                 <div className="mb-4">
-                  <span className={`inline-block px-4 py-2 rounded-full bg-gradient-to-r ${content.bgColor} text-gray-900 text-sm font-semibold border border-white/20`}>
-                <div className='mb-4'>
                   <span
                     className={`inline-block px-4 py-2 rounded-full bg-gradient-to-r ${content.bgColor} text-gray-900 text-sm font-semibold border border-white/20`}
                   >

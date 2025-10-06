@@ -29,14 +29,12 @@ export const throttle = <T extends (...args: any[]) => any>(
 ): ((...args: Parameters<T>) => void) => {
   let inThrottle: boolean;
   
->>>>>>> cursor/fix-errors-and-merge-to-main-13eb
   return function executedFunction(this: any, ...args: Parameters<T>) {
     if (!inThrottle) {
       func.apply(this, args);
       inThrottle = true;
       setTimeout(() => (inThrottle = false), limit);
       setTimeout(() => inThrottle = false, limit);
->>>>>>> cursor/fix-errors-and-merge-to-main-13eb
     }
   };
 };
@@ -234,7 +232,6 @@ export const lazyLoadImages = (): void => {
   });
 
   images.forEach(img => imageObserver.observe(img));
->>>>>>> cursor/fix-errors-and-merge-to-main-13eb
 };
 
 // Preload critical resources
@@ -269,7 +266,6 @@ export const preloadCriticalResources = (): void => {
     link.href = resource;
     link.as = resource.endsWith('.css') ? 'style' : 'font';
     if (resource.endsWith('.woff2')) {
->>>>>>> cursor/fix-errors-and-merge-to-main-13eb
       link.crossOrigin = 'anonymous';
     }
     document.head.appendChild(link);
@@ -278,7 +274,6 @@ export const preloadCriticalResources = (): void => {
 
 // Scroll performance optimization
 // Optimize scroll performance
->>>>>>> cursor/fix-errors-and-merge-to-main-13eb
 export const optimizeScrollPerformance = (): void => {
   if (typeof window === 'undefined') return;
 
@@ -298,7 +293,6 @@ export const optimizeScrollPerformance = (): void => {
       (progressBar as HTMLElement).style.width = `${scrollPercent}%`;
     }
 
->>>>>>> cursor/fix-errors-and-merge-to-main-13eb
     ticking = false;
   };
 
@@ -381,5 +375,4 @@ export default {
   performanceMonitor,
   collectPerformanceMetrics,
   getMemoryUsage
->>>>>>> cursor/fix-errors-and-merge-to-main-13eb
 };

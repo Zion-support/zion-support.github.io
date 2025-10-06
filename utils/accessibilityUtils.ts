@@ -61,24 +61,20 @@ export const ariaUtils = {
   },
 
   // Set ARIA attributes
-  setAriaAttributes: (element: HTMLElement, attributes: Record<string, string>): void => {
   setAriaAttributes: (
     element: HTMLElement,
     attributes: Record<string, string>
   ): void => {
->>>>>>> 40f0d19ecc0819e0cd100e68e36dd415011c7be9
     Object.entries(attributes).forEach(([key, value]) => {
       element.setAttribute(key, value);
     });
   },
 
   // Announce to screen readers
-  announce: (message: string, priority: 'polite' | 'assertive' = 'polite'): void => {
   announce: (
     message: string,
     priority: 'polite' | 'assertive' = 'polite'
   ): void => {
->>>>>>> 40f0d19ecc0819e0cd100e68e36dd415011c7be9
     const announcement = document.createElement('div');
     announcement.setAttribute('aria-live', priority);
     announcement.setAttribute('aria-atomic', 'true');
@@ -131,7 +127,6 @@ export const keyboardNavigation = {
   },
 };
 
->>>>>>> 40f0d19ecc0819e0cd100e68e36dd415011c7be9
 // Color contrast utilities
 export const colorContrast = {
   // Calculate relative luminance

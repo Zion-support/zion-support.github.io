@@ -28,9 +28,9 @@ export const lazyLoadBanner = (
             .then(resolve)
             .catch(retryError => {
               console.error(
-                `Retry failed for banner: ${componentName}`,
-            });
-        }, 1000);
+                `Retry failed for banner: ${componentName}`
+              );
+            }, 1000);
       });
     })
   );

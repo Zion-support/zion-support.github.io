@@ -8,7 +8,6 @@ import ErrorBoundary from './components/ErrorBoundary';
 import SEOOptimizer from './components/SEOOptimizer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import PerformanceMonitor from './components/PerformanceMonitor';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e62
 import LoadingSpinner from '../app/components/LoadingSpinner';
 
 // Simple placeholder components
@@ -175,12 +174,8 @@ function App() {
         console.log('App initialized successfully');
       } catch (error) {
         console.error('Failed to initialize optimization systems:', error);
->>>>>>> cursor/fix-errors-and-merge-to-main-cfe1
       }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e62
-    } catch (error) {
-      console.error('Failed to initialize app:', error);
-    }
+    };
   }, []);
 
   useEffect(() => {
