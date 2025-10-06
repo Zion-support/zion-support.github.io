@@ -389,14 +389,13 @@ class PerformanceOptimizer {
     });
   }
 
-<<<<<<< HEAD
   // Get performance metrics
   getMetrics(): Record<string, number> {
     return Object.fromEntries(this.metrics);
-=======
+  }
+
   public prefetchResources(urls: string[]): void {
     prefetchResources(urls);
->>>>>>> main
   }
 
   public reportWebVitals(metrics: WebVitalsMetrics): void {
@@ -455,18 +454,6 @@ class PerformanceOptimizer {
     };
   }
 
-<<<<<<< HEAD
-  // Monitor long tasks
-  monitorLongTasks(callback: (entries: PerformanceEntry[]) => void): void {
-    if (typeof window === 'undefined' || !window.PerformanceObserver) return;
-    
-    const observer = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
-      callback(entries);
-    });
-    
-    observer.observe({ entryTypes: ['longtask'] });
-  }
 
   // Get performance summary
   getPerformanceSummary() {
@@ -486,13 +473,7 @@ class PerformanceOptimizer {
   // Clear metrics
   clearMetrics() {
     this.metrics.clear();
-=======
-  // Get performance metrics
-  getMetrics(): Record<string, number> {
-    return Object.fromEntries(this.metrics);
->>>>>>> main
   }
-
 
   // Initialize all optimizations
   initialize(): void {

@@ -112,15 +112,10 @@ export const usePageLoadPerformance = () => {
               navigation.domContentLoadedEventStart,
             loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
             firstByte: navigation.responseStart - navigation.requestStart,
-<<<<<<< HEAD
-            domInteractive: navigation.domInteractive - (navigation as any).navigationStart,
-            totalLoadTime: navigation.loadEventEnd - (navigation as any).navigationStart,
-=======
             domInteractive:
               navigation.domInteractive - (navigation as any).navigationStart,
             totalLoadTime:
               navigation.loadEventEnd - (navigation as any).navigationStart,
->>>>>>> main
           };
 
           // Track each metric
