@@ -1,354 +1,324 @@
 /**
- * Performance, Optimizer, Utility;
- * Comprehensive, performance, monitoring and, optimization, tools;
+ * Performance Optimizer Utility
+ * Comprehensive performance monitoring and optimization tools
  */
+
 /**
- * Web, Vitals, metrics tracki, n, g;
+ * Web Vitals metrics tracking
  */
-export, interface, WebVitalsMetrics {
-F, C, P?: numb, e, r; // First, Contentful, Paint
-  L, C, P?: numb, e, r; // Largest, Contentful, Paint
-  F, I, D?: numb, e, r; // First, Input, Delay
-  C, L, S?: numb, e, r; // Cumulative, Layout, Shift
-  TT, F, B?: numb, e, r; // Time, to, First By, t, e
-  I, N, P?: numb, e, r; // Interaction, to, Next Pai, n, t;
+export interface WebVitalsMetrics {
+  FCP?: number; // First Contentful Paint
+  LCP?: number; // Largest Contentful Paint
+  FID?: number; // First Input Delay
+  CLS?: number; // Cumulative Layout Shift
+  TTFB?: number; // Time to First Byte
+  INP?: number; // Interaction to Next Paint
 }
+
 /**
- * Resource, hints, for performan, c, e;
+ * Resource hints for performance
  */
-export, const, prefetchResources = (ur, l, s: stri, n, g[]): vo, i, d => {
-  if (typeof, documen, t === 'undefin, e, d') retu, r, n;
-  if (typeof, documen, t === 'undefin, e, d') retu, r, n;';
-  ur, l, s.forEa, c, h(u, r, l => {
-    const, lin, k = docume, n, t.createEleme, n, t('li, n, k');';
-    li, n, k.r, e, l = 'prefet, c, h';';
-    li, n, k.hr, e, f = u, r, l;
-    docume, n, t.he, a, d.appendChi, l, d(li, n, k);
+export const prefetchResources = (urls: string[]): void => {
+  if (typeof document === 'undefined') return;
+  
+  urls.forEach(url => {
+    const link = document.createElement('link');
+    link.rel = 'prefetch';
+    link.href = url;
+    document.head.appendChild(link);
   });
 };
+
 /**
- * Preconnect, to, external domai, n, s;
+ * Preconnect to external domains
  */
-export, const, preconnectDomains = (domai, n, s: stri, n, g[]): vo, i, d => {
-  if (typeof, documen, t === 'undefin, e, d') retu, r, n;
-  if (typeof, documen, t === 'undefin, e, d') retu, r, n;';
-  domai, n, s.forEa, c, h(doma, i, n => {
-    const, lin, k = docume, n, t.createEleme, n, t('li, n, k');';
-    li, n, k.r, e, l = 'preconne, c, t';';
-    li, n, k.hr, e, f = doma, i, n;
-    li, n, k.crossOrig, i, n = 'anonymo, u, s';';
-    docume, n, t.he, a, d.appendChi, l, d(li, n, k);
+export const preconnectDomains = (domains: string[]): void => {
+  if (typeof document === 'undefined') return;
+  
+  domains.forEach(domain => {
+    const link = document.createElement('link');
+    link.rel = 'preconnect';
+    link.href = domain;
+    link.crossOrigin = 'anonymous';
+    document.head.appendChild(link);
   });
 };
+
 /**
- * Lazy, load, images with, Intersection, Observer;
+ * Lazy load images with Intersection Observer
  */
-export, const, lazyLoadImages = (): vo, i, d => {
-  if (typeof, windo, w === 'undefin, e, d') retu, r, n;
-  if (!('IntersectionObserv, e, r' in, windo, w)) retu, r, n;
-  if (typeof, windo, w === 'undefin, e, d') retu, r, n;';
-  if (!('IntersectionObserv, e, r' in, windo, w)) retu, r, n;';
-  const, imageObserve, r = new, IntersectionObserve, r((entri, e, s) => {
-    entri, e, s.forEa, c, h(ent, r, y => {
-      if (ent, r, y.isIntersecti, n, g) {
-        const, im, g = ent, r, y.target, as, HTMLImageElement;
-        const, sr, c = i, m, g.datas, e, t.s, r, c;
-        if (s, r, c) {
-          i, m, g.s, r, c = s, r, c;
-          i, m, g.removeAttribu, t, e('da, t, a-s, r, c');';
-          imageObserv, e, r.unobser, v, e(i, m, g);
+export const lazyLoadImages = (): void => {
+  if (typeof window === 'undefined') return;
+  if (!('IntersectionObserver' in window)) return;
+  
+  const imageObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const img = entry.target as HTMLImageElement;
+        const src = img.dataset.src;
+        if (src) {
+          img.src = src;
+          img.removeAttribute('data-src');
+          imageObserver.unobserve(img);
         }
       }
     });
   }, {
-    rootMarg, i, n: '50px, 0p, x','
-    thresho, l, d: 0.01
+    rootMargin: '50px 0px',
+    threshold: 0.01
   });
-  docume, n, t.querySelectorA, l, l('i, m, g[da, t, a-s, r, c]').forEa, c, h(i, m, g => {;
-    rootMarg, i, n: '50px, 0p, x',';
-    thresho, l, d: 0.01
-  });
-  docume, n, t.querySelectorA, l, l('i, m, g[da, t, a-s, r, c]').forEa, c, h(i, m, g => {';
-    imageObserv, e, r.obser, v, e(i, m, g);
+  
+  document.querySelectorAll('img[data-src]').forEach(img => {
+    imageObserver.observe(img);
   });
 };
+
 /**
- * Debounce, function, for performance, optimizatio, n;
+ * Debounce function for performance optimization
  */
-export, function, debounce<T, extend, s (...ar, g, s: a, n, y[]) => a, n, y>(
-  f, u, n
-  c: T
-  wa, i, t: numb, e, r;
-): (...ar, g, s: Paramete, r, s<T>) => vo, i, d {
-let, timeou, t: Node, J, S.Timeo, u, t | nu, l, l = nu, l, l;
-return, function, executedFunction(...ar, g, s: Paramete, r, s<T>) {
-export, function, debounce<T, extend, s (...a, r, g
-  s: a, n, y[]) => a, n, y>(
-  fu, n, c: T
-  wa, i, t: numb, e, r
-): (...ar, g, s: Paramete, r, s<T>) => vo, i, d {
-let, timeou, t: Node, J, S.Timeo, u, t | nu, l, l = nu, l, l;
-return, function, executedFunction(...a, r, g
-  s: Paramete, r, s<T>) {
-const, late, r = () => {
-timeo, u, t = nu, l, l;
-fu, n, c(...ar, g, s);
-};
-    if (timeo, u, t) clearTimeo, u, t(timeo, u, t);
-    timeo, u, t = setTimeo, u, t(lat, e, r, wa, i, t);
-  };
-}
-/**
- * Throttle, function, for performance, optimizatio, n;
- */
-export, function, throttle<T, extend, s (...ar, g, s: a, n, y[]) => a, n, y>(
-  fu, n, c: T
-  lim, i, t: numb, e, r
-): (...ar, g, s: Paramete, r, s<T>) => vo, i, d {
-  let, inThrottl, e: boole, a, n
-  let, inThrottl, e: boole, a, n;
-  return, function, executedFunction(...a, r, g
-  s: Paramete, r, s<T>) {
-    if (!inThrott, l, e) {
-      fu, n, c(...ar, g, s);
-      inThrott, l, e = tr, u, e;
-      setTimeo, u, t(() => (inThrott, l, e = fal, s, e), lim, i, t);
+export function debounce<T extends (...args: any[]) => any>(
+  func: T,
+  wait: number
+): (...args: Parameters<T>) => void {
+  let timeout: NodeJS.Timeout | null = null;
+  return function executedFunction(...args: Parameters<T>) {
+    const later = () => {
+      timeout = null;
+      func(...args);
     };
+    if (timeout) clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
   };
 }
+
 /**
- * Measure, page, load performan, c, e;
+ * Throttle function for performance optimization
  */
-export, const, measurePageLoad = (): WebVitalsMetri, c, s | nu, l, l => {
-  if (typeof, windo, w === 'undefin, e, d' || !wind, o, w.performan, c, e) return, nul, l;
-  const, perfDat, a = wind, o, w.performan, c, e.timi, n, g;
-  const, navigatio, n = wind, o, w.performan, c, e.getEntriesByTy, p, e('navigati, o, n')[0] as, PerformanceNavigationTimin, g;
-  retu, r, n {
-    F, C, P: navigati, o, n?.responseSta, r, t - navigati, o, n?.fetchSta, r, t
-    TT, F, B: perfDa, t, a.responseSta, r, t - perfDa, t, a.navigationSta, r, t;
-  if (typeof, windo, w === 'undefin, e, d' || !wind, o, w.performan, c, e) return, nul, l;';
-  const, perfDat, a = wind, o, w.performan, c, e.timi, n, g;
-  const, navigatio, n = wind, o, w.performan, c, e.getEntriesByTy, p, e('navigati, o, n')[0] as, PerformanceNavigationTimin, g;';
-  retu, r, n {
-    FC
-  P: navigati, o, n?.responseSta, r, t - navigati, o, n?.fetchSta, r, t
-    TT, F, B: perfDa, t, a.responseSta, r, t - perfDa, t, a.navigationSta, r, t
+export function throttle<T extends (...args: any[]) => any>(
+  func: T,
+  limit: number
+): (...args: Parameters<T>) => void {
+  let inThrottle: boolean;
+  return function executedFunction(...args: Parameters<T>) {
+    if (!inThrottle) {
+      func(...args);
+      inThrottle = true;
+      setTimeout(() => (inThrottle = false), limit);
+    }
+  };
+}
+
+/**
+ * Measure page load performance
+ */
+export const measurePageLoad = (): WebVitalsMetrics | null => {
+  if (typeof window === 'undefined' || !window.performance) return null;
+  
+  const perfData = window.performance.timing;
+  const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+  
+  return {
+    FCP: navigation?.responseStart - navigation?.fetchStart,
+    TTFB: perfData.responseStart - perfData.navigationStart
   };
 };
+
 /**
- * Report, Web, Vitals to, analytic, s;
+ * Report Web Vitals to analytics
  */
-export, const, reportWebVitals = (metri, c, s: WebVitalsMetri, c, s): vo, i, d => {
-  conso, l, e.l, o, g('Web, Vital, s: ', metri, c, s);'
-  // Send, to, analytics servi, c, e
-  if (typeof, windo, w !== 'undefin, e, d' && (window, as, any).gt, a, g) {;
-    Obje, c, t.entri, e, s(metri, c, s).forEa, c, h(([k, e, y, val, u, e]) => {
-      if (val, u, e !== undefin, e, d) {
-        (window, as, any).gt, a, g('eve, n, t', k, e, y, {
-          val, u, e: Ma, t, h.rou, n, d(val, u, e)
-          event_catego, r, y: 'Web, Vital, s'
-          non_interacti, o, n: tr, u, e;
-  conso, l, e.l, o, g('Web, Vita, l
-  s: ', metri, c, s);';
-  // Send, to, analytics servi, c, e
-  if (typeof, windo, w !== 'undefin, e, d' && (window, as, any).gt, a, g) {';
-    Obje, c, t.entri, e, s(metri, c, s).forEa, c, h(([k, e, y, val, u, e]) => {
-      if (val, u, e !== undefin, e, d) {
-        (window, as, any).gt, a, g('eve, n, t', k, e, y, {';
-          val, u, e: Ma, t, h.rou, n, d(val, u, e)
-          event_catego, r, y: 'Web, Vital, s',';
-          non_interacti, o, n: tr, u, e
+export const reportWebVitals = (metrics: WebVitalsMetrics): void => {
+  console.log('Web Vitals: ', metrics);
+  // Send to analytics service
+  if (typeof window !== 'undefined' && (window as any).gtag) {
+    Object.entries(metrics).forEach(([key, value]) => {
+      if (value !== undefined) {
+        (window as any).gtag('event', key, {
+          value: Math.round(value),
+          event_category: 'Web Vitals',
+          non_interaction: true
         });
       }
     });
   }
 };
+
 /**
- * Optimize, images, by detecting, slow, connections;
+ * Optimize images by detecting slow connections
  */
-export, const, shouldUseWebP = (): boole, a, n => {
-  if (typeof, windo, w === 'undefin, e, d') return, fals, e;
-  const, canva, s = docume, n, t.createEleme, n, t('canv, a, s');
-  if (typeof, windo, w === 'undefin, e, d') return, fals, e;';
-  const, canva, s = docume, n, t.createEleme, n, t('canv, a, s');';
-  canv, a, s.wid, t, h = canv, a, s.heig, h, t = 1;
-  return, canva, s.toDataU, R, L('ima, g, e/we, b, p').index, O, f('da, t, a:ima, g, e/we, b, p') === 0;';
+export const shouldUseWebP = (): boolean => {
+  if (typeof window === 'undefined') return false;
+  
+  const canvas = document.createElement('canvas');
+  canvas.width = canvas.height = 1;
+  return canvas.toDataURL('image/webp').indexOf('data:image/webp') === 0;
 };
+
 /**
- * Get, connection, quality;
+ * Get connection quality
  */
-export, const, getConnectionQuality = (): 'sl, o, w' | 'medi, u, m' | 'fa, s, t' => {;
-  if (typeof, navigato, r === 'undefin, e, d') retu, r, n 'medi, u, m';
-  const, connectio, n = (navigator, as, any).connecti, o, n || (navigator, as, any).mozConnecti, o, n || (navigator, as, any).webkitConnecti, o, n;
-  if (!connecti, o, n) retu, r, n 'medi, u, m';
-export, const, getConnectionQuality = (): 'sl, o, w' | 'medi, u, m' | 'fa, s, t' => {';
-  if (typeof, navigato, r === 'undefin, e, d') retu, r, n 'medi, u, m';';
-  const, connectio, n = (navigator, as, any).connecti, o, n || (navigator, as, any).mozConnecti, o, n || (navigator, as, any).webkitConnecti, o, n;
-  if (!connecti, o, n) retu, r, n 'medi, u, m';';
-  const, effectiveTyp, e = connecti, o, n.effectiveTy, p, e;
-  if (effectiveTy, p, e === 'sl, o, w-2g' || effectiveTy, p, e === '2g') retu, r, n 'sl, o, w';';
-  if (effectiveTy, p, e === '3g') retu, r, n 'medi, u, m';';
-  retu, r, n 'fa, s, t';';
+export const getConnectionQuality = (): 'slow' | 'medium' | 'fast' => {
+  if (typeof navigator === 'undefined') return 'medium';
+  
+  const connection = (navigator as any).connection || (navigator as any).mozConnection || (navigator as any).webkitConnection;
+  if (!connection) return 'medium';
+  
+  const effectiveType = connection.effectiveType;
+  if (effectiveType === 'slow-2g' || effectiveType === '2g') return 'slow';
+  if (effectiveType === '3g') return 'medium';
+  return 'fast';
 };
+
 /**
- * Adaptive, loading, based on, network, conditions;
+ * Adaptive loading based on network conditions
  */
-export, const, shouldLoadHeavyAssets = (): boole, a, n => {
-  const, qualit, y = getConnectionQuali, t, y();
-  const, saveDat, a = typeof, navigato, r !== 'undefin, e, d' && (navigator, as, any).connecti, o, n?.saveDa, t, a;
-  return, qualit, y === 'fa, s, t' && !saveDa, t, a;
-  const, saveDat, a = typeof, navigato, r !== 'undefin, e, d' && (navigator, as, any).connecti, o, n?.saveDa, t, a;';
-  return, qualit, y === 'fa, s, t' && !saveDa, t, a;';
+export const shouldLoadHeavyAssets = (): boolean => {
+  const quality = getConnectionQuality();
+  const saveData = typeof navigator !== 'undefined' && (navigator as any).connection?.saveData;
+  return quality === 'fast' && !saveData;
 };
+
 /**
- * Request, Idle, Callback wrapper, with, fallback;
+ * Request Idle Callback wrapper with fallback
  */
-export, const, requestIdleCallback = (callba, c, k: IdleRequestCallba, c, k): numb, e, r => {
-  if (typeof, windo, w === 'undefin, e, d') retur, n, 0;
-  if ('requestIdleCallba, c, k' in, windo, w) {;
-    return, windo, w.requestIdleCallba, c, k(callba, c, k);
+export const requestIdleCallback = (callback: IdleRequestCallback): number => {
+  if (typeof window === 'undefined') return 0;
+  
+  if ('requestIdleCallback' in window) {
+    return window.requestIdleCallback(callback);
   }
-  // Fallback, for, browsers that, do, n't, support, requestIdleCallback;
-  if (typeof, windo, w === 'undefin, e, d') retur, n, 0;';
-  if ('requestIdleCallba, c, k' in, windo, w) {';
-    return, windo, w.requestIdleCallba, c, k(callba, c, k);
-  }
-  // Fallback, for, browsers that, do, n't, support, requestIdleCallback';
-  return, windo, w.setTimeo, u, t(() => {
-    const, star, t = Da, t, e.n, o, w();
-    callba, c, k({
-      didTimeo, u, t: fal, s, e
-      timeRemaini, n, g: () => Ma, t, h.m, a, x(0, 50 - (Da, t, e.n, o, w() - sta, r, t))
+  
+  // Fallback for browsers that don't support requestIdleCallback
+  return (window as any).setTimeout(() => {
+    const start = Date.now();
+    callback({
+      didTimeout: false,
+      timeRemaining: () => Math.max(0, 50 - (Date.now() - start))
     });
-  }, 1) as, unknown, as numb, e, r;
+  }, 1) as unknown as number;
 };
+
 /**
- * Cancel, Idle, Callback wrapper, with, fallback;
+ * Cancel Idle Callback wrapper with fallback
  */
-export, const, cancelIdleCallback = (id: numb, e, r): vo, i, d => {
-  if (typeof, windo, w === 'undefin, e, d') retu, r, n;
-  if ('cancelIdleCallba, c, k' in, windo, w) {;
-  if (typeof, windo, w === 'undefin, e, d') retu, r, n;';
-  if ('cancelIdleCallba, c, k' in, windo, w) {';
-    wind, o, w.cancelIdleCallba, c, k(id);
-  } el, s, e {
-    wind, o, w.clearTimeo, u, t(id);
+export const cancelIdleCallback = (id: number): void => {
+  if (typeof window === 'undefined') return;
+  
+  if ('cancelIdleCallback' in window) {
+    window.cancelIdleCallback(id);
+  } else {
+    (window as any).clearTimeout(id);
   }
 };
+
 /**
- * Optimize, bundle, loading with, rout, e-based, code, splitting;
+ * Optimize bundle loading with route-based code splitting
  */
-export, const, preloadRoute = (rou, t, e: stri, n, g): vo, i, d => {
-  if (typeof, documen, t === 'undefin, e, d') retu, r, n;
-  const, lin, k = docume, n, t.createEleme, n, t('li, n, k');
-  li, n, k.r, e, l = 'prefet, c, h';
-  li, n, k.as = 'scri, p, t';
-  if (typeof, documen, t === 'undefin, e, d') retu, r, n;';
-  const, lin, k = docume, n, t.createEleme, n, t('li, n, k');';
-  li, n, k.r, e, l = 'prefet, c, h';';
-  li, n, k.as = 'scri, p, t';';
-  li, n, k.hr, e, f = rou, t, e;
-  docume, n, t.he, a, d.appendChi, l, d(li, n, k);
+export const preloadRoute = (route: string): void => {
+  if (typeof document === 'undefined') return;
+  
+  const link = document.createElement('link');
+  link.rel = 'prefetch';
+  link.as = 'script';
+  link.href = route;
+  document.head.appendChild(link);
 };
+
 /**
- * Monitor, long, tasks (> 50, m, s) for, performance, debugging;
+ * Monitor long tasks (> 50ms) for performance debugging
  */
-export, const, monitorLongTasks = (callba, c, k: (entr, i, e
-  s: PerformanceEntryLi, s, t) => vo, i, d): PerformanceObserv, e, r | nu, l, l => {
-  if (typeof, windo, w === 'undefin, e, d' || !('PerformanceObserv, e, r' in, windo, w)) return, nul, l;
-  if (typeof, windo, w === 'undefin, e, d' || !('PerformanceObserv, e, r' in, windo, w)) return, nul, l;';
-  t, r, y {
-    const, observe, r = new, PerformanceObserve, r((li, s, t) => {
-      callba, c, k(li, s, t.getEntri, e, s());
+export const monitorLongTasks = (callback: (entries: PerformanceEntryList) => void): PerformanceObserver | null => {
+  if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return null;
+  
+  try {
+    const observer = new PerformanceObserver((list) => {
+      callback(list.getEntries());
     });
-    observ, e, r.obser, v, e({ entryTyp, e, s: ['longta, s, k'] });';
-    return, observe, r;
-  } cat, c, h (e) {
-    conso, l, e.wa, r, n('Long, task, monitoring not, supporte, d: ', e);'
-    conso, l, e.wa, r, n('Long, task, monitoring not, supporte, d: ', e);';
-    return, nul, l;
+    observer.observe({ entryTypes: ['longtask'] });
+    return observer;
+  } catch (e) {
+    console.warn('Long task monitoring not supported: ', e);
+    return null;
   }
 };
+
 /**
- * Cac, h, e-first, strategy, for static, asset, s;
+ * Cache-first strategy for static assets
  */
-export, const, cacheStaticAssets = asy, n, c (ur, l, s: stri, n, g[]): Promi, s, e<vo, i, d> => {
-  if (typeof, cache, s === 'undefin, e, d') retu, r, n;
-  const, cach, e = await, cache, s.op, e, n('stat, i, c-asse, t, s-v1');
-  if (typeof, cache, s === 'undefin, e, d') retu, r, n;';
-  const, cach, e = await, cache, s.op, e, n('stat, i, c-asse, t, s-v1');';
-  await, cach, e.addA, l, l(ur, l, s);
+export const cacheStaticAssets = async (urls: string[]): Promise<void> => {
+  if (typeof caches === 'undefined') return;
+  
+  const cache = await caches.open('static-assets-v1');
+  await cache.addAll(urls);
 };
+
 /**
- * Clear, old, caches;
+ * Clear old caches
  */
-export, const, clearOldCaches = asy, n, c (currentVersi, o, n: stri, n, g): Promi, s, e<vo, i, d> => {
-  if (typeof, cache, s === 'undefin, e, d') retu, r, n;
-  if (typeof, cache, s === 'undefin, e, d') retu, r, n;';
-  const, cacheName, s = await, cache, s.ke, y, s();
-  await, Promis, e.a, l, l(
-    cacheNam, e, s;
-      .filt, e, r(na, m, e => na, m, e !== currentVersi, o, n)
-      .m, a, p(na, m, e => cach, e, s.dele, t, e(na, m, e))
+export const clearOldCaches = async (currentVersion: string): Promise<void> => {
+  if (typeof caches === 'undefined') return;
+  
+  const cacheNames = await caches.keys();
+  await Promise.all(
+    cacheNames
+      .filter(name => name !== currentVersion)
+      .map(name => caches.delete(name))
   );
 };
+
 /**
- * Performance, budget, checker;
+ * Performance budget checker
  */
-export, interface, PerformanceBudget {
-maxBundleSi, z, e: numb, e, r; // in, K, B
-maxImageSi, z, e: numb, e, r; // in, K, B
-maxFirstLo, a, d: numb, e, r; // in, m, s
-maxInteracti, v, e: numb, e, r; // in, m, s;
+export interface PerformanceBudget {
+  maxBundleSize: number; // in KB
+  maxImageSize: number; // in KB
+  maxFirstLoad: number; // in ms
+  maxInteractive: number; // in ms
 }
-export, const, checkPerformanceBudget = (budg, e, t: PerformanceBudg, e, t): {
-pass, e, d: boole, a, n;
-violati, o, n
-  s: stri, n, g[];
+
+export const checkPerformanceBudget = (budget: PerformanceBudget): {
+  passed: boolean;
+  violations: string[];
 } => {
-  const, violation, s: stri, n, g[] = []
-  if (typeof, windo, w === 'undefin, e, d' || !wind, o, w.performan, c, e) {;
-export, const, checkPerformanceBudget = (budg, e, t: PerformanceBudg, e, t): {
-pass, e, d: boole, a, n;
-violati, o, n
-  s: stri, n, g[];
-} => {
-  const, violation, s: stri, n, g[] = [];
-  if (typeof, windo, w === 'undefin, e, d' || !wind, o, w.performan, c, e) {';
-    retu, r, n { pas, s, e
-  d: tr, u, e, violatio, n, s };
+  const violations: string[] = [];
+  
+  if (typeof window === 'undefined' || !window.performance) {
+    return { passed: true, violations };
   }
-  const, timin, g = wind, o, w.performan, c, e.timi, n, g;
-  const, loadTim, e = timi, n, g.loadEventE, n, d - timi, n, g.navigationSta, r, t;
-  const, interactiveTim, e = timi, n, g.domInteracti, v, e - timi, n, g.navigationSta, r, t;
-  if (loadTi, m, e > budg, e, t.maxFirstLo, a, d) {
-    violatio, n, s.pu, s, h(`First, load, time (${loadTi, m, e}ms) exceeds, budge, t (${budg, e, t.maxFirstLo, a, d}ms)`);`;`
+  
+  const timing = window.performance.timing;
+  const loadTime = timing.loadEventEnd - timing.navigationStart;
+  const interactiveTime = timing.domInteractive - timing.navigationStart;
+  
+  if (loadTime > budget.maxFirstLoad) {
+    violations.push(`First load time (${loadTime}ms) exceeds budget (${budget.maxFirstLoad}ms)`);
   }
-  if (interactiveTi, m, e > budg, e, t.maxInteracti, v, e) {
-    violatio, n, s.pu, s, h(`Time, to, interactive (${interactiveTi, m, e}ms) exceeds, budge, t (${budg, e, t.maxInteracti, v, e}ms)`);`;`
+  
+  if (interactiveTime > budget.maxInteractive) {
+    violations.push(`Time to interactive (${interactiveTime}ms) exceeds budget (${budget.maxInteractive}ms)`);
   }
-  retu, r, n {
-    pass, e, d: violatio, n, s.leng, t, h === 0
-    violatio, n, s;
+  
+  return {
+    passed: violations.length === 0,
+    violations
   };
 };
-export, defaul, t {
-  prefetchResourc, e, s
-  preconnectDomai, n, s
-  lazyLoadImag, e, s
-  deboun, c, e
-  thrott, l, e
-  measurePageLo, a, d
-  reportWebVita, l, s
-  shouldUseWe, b, P
-  getConnectionQuali, t, y
-  shouldLoadHeavyAsse, t, s
-  requestIdleCallba, c, k
-  cancelIdleCallba, c, k
-  preloadRou, t, e
-  monitorLongTas, k, s
-  cacheStaticAsse, t, s
-  clearOldCach, e, s
-  checkPerformanceBudg, e, t;
+
+export default {
+  prefetchResources,
+  preconnectDomains,
+  lazyLoadImages,
+  debounce,
+  throttle,
+  measurePageLoad,
+  reportWebVitals,
+  shouldUseWebP,
+  getConnectionQuality,
+  shouldLoadHeavyAssets,
+  requestIdleCallback,
+  cancelIdleCallback,
+  preloadRoute,
+  monitorLongTasks,
+  cacheStaticAssets,
+  clearOldCaches,
+  checkPerformanceBudget
 };
-;
