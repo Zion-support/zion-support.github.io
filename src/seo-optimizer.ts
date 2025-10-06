@@ -1,7 +1,8 @@
-// SEO Optimizer utility functions
+//SEO Optimizer utility functions
 
 interface GtagWindow extends Window {
-  gtag?: (command: string, targetId: string, config?: Record<string, unknown>) => void;
+  gtag?: (command: string,
+  targetId: string, config?: Record<string, unknown>) => void;
 }
 
 export const seoOptimizer = {

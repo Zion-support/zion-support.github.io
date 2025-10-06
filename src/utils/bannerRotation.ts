@@ -25,7 +25,7 @@ export interface RotationStrategy {
 }
 
 export const trackImpression = (bannerId: string): void => {
-  // Banner impression tracked
+  //Banner impression tracked
 };
 
 export const trackClick = (bannerId: string): void => {
