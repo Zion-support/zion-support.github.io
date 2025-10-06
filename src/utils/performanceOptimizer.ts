@@ -127,7 +127,10 @@ export const measurePageLoad = (): WebVitalsMetrics | null => {
     FID: 0, // First Input Delay - requires user interaction
     CLS: 0, // Cumulative Layout Shift - requires layout shift observer
     TTFB: navigation.responseStart - navigation.requestStart,
-    INP: 0 // Interaction to Next Paint - requires user interaction
+    INP: 0, // Interaction to Next Paint - requires user interaction
+    loadTime: perfData.loadEventEnd - perfData.navigationStart,
+    interactiveTime: perfData.domInteractive - perfData.navigationStart,
+    domContentLoaded: perfData.domContentLoadedEventEnd - perfData.navigationStart
   };
 };
 
@@ -310,10 +313,62 @@ export const addCriticalResourceHints = (): void => {
   });
 };
 
+/**
+ * Preload critical resources
+ */
+export const preloadCriticalResources = (): void => {
+  if (typeof document === 'undefined') return;
+  
+  const criticalResources = [
+    '/fonts/inter-var.woff2',
+    '/css/critical.css'
+  ];
+  
+  criticalResources.forEach(resource => {
+    const link = document.createElement('link');
+    link.rel = 'preload';
+    link.href = resource;
+    link.as = resource.endsWith('.css') ? 'style' : 'font';
+    if (resource.endsWith('.woff2')) {
+      link.crossOrigin = 'anonymous';
+    }
+    document.head.appendChild(link);
+  });
+};
+
+/**
+ * Optimize scroll performance
+ */
+export const optimizeScroll = (): void => {
+  if (typeof window === 'undefined') return;
+  
+  let ticking = false;
+  
+  const updateScrollPosition = () => {
+    // Throttled scroll handling
+    ticking = false;
+  };
+  
+  const requestTick = () => {
+    if (!ticking) {
+      requestAnimationFrame(updateScrollPosition);
+      ticking = true;
+    }
+  };
+  
+  window.addEventListener('scroll', requestTick, { passive: true });
+};
+
 // Performance metrics storage
 const metrics = new Map<string, number>();
 
-<<<<<<< HEAD
+/**
+ * Performance Optimizer Class
+ */
+class PerformanceOptimizer {
+  private static instance: PerformanceOptimizer;
+  private metrics = new Map<string, number>();
+
   static getInstance(): PerformanceOptimizer {
     if (!PerformanceOptimizer.instance) {
       PerformanceOptimizer.instance = new PerformanceOptimizer();
@@ -328,41 +383,12 @@ const metrics = new Map<string, number>();
 
   // Preload critical resources
   preloadCriticalResources(): void {
-    const criticalResources = [
-      '/fonts/inter.woff2',
-      '/images/hero-bg.jpg',
-      '/images/logo.svg'
-    ];
-
-    criticalResources.forEach((resource) => {
-      const link = document.createElement('link');
-      link.rel = 'preload';
-      link.href = resource;
-      link.as = resource.endsWith('.woff2') ? 'font' : 'image';
-      if (resource.endsWith('.woff2')) {
-        link.crossOrigin = 'anonymous';
-      }
-      document.head.appendChild(link);
-    });
+    preloadCriticalResources();
   }
 
   // Optimize scroll performance
   optimizeScroll(): void {
-    let ticking = false;
-    
-    const updateScrollPosition = () => {
-      // Throttled scroll handling
-      ticking = false;
-    };
-
-    const requestTick = () => {
-      if (!ticking) {
-        requestAnimationFrame(updateScrollPosition);
-        ticking = true;
-      }
-    };
-
-    window.addEventListener('scroll', requestTick, { passive: true });
+    optimizeScroll();
   }
 
   // Measure performance metrics
@@ -386,15 +412,7 @@ const metrics = new Map<string, number>();
 
   // Monitor long tasks
   monitorLongTasks(callback: (entries: PerformanceEntry[]) => void): PerformanceObserver | null {
-    if (typeof window === 'undefined' || !window.PerformanceObserver) return null;
-    
-    const observer = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
-      callback(entries);
-    });
-    
-    observer.observe({ entryTypes: ['longtask'] });
-    return observer;
+    return monitorLongTasks(callback);
   }
 
   // Get performance summary
@@ -443,62 +461,7 @@ const metrics = new Map<string, number>();
 
   // Measure page load performance
   measurePageLoad(): WebVitalsMetrics | null {
-<<<<<<< HEAD
-=======
     return measurePageLoad();
-  }
-
-  // Monitor long tasks
-  monitorLongTasks(callback: (entries: PerformanceEntry[]) => void): PerformanceObserver | null {
-    return monitorLongTasks(callback);
-  }
-
-  // Get performance summary
-  getPerformanceSummary() {
-    return {
-      averageRenderTime: 12.5,
-      totalComponents: 45,
-      memoryUsage: 0,
-      slowComponents: 0
-    };
-  }
-
-  // Export metrics
-  exportMetrics() {
-    return this.getMetrics();
-  }
-
-  // Clear metrics
-  clearMetrics() {
-    this.metrics.clear();
-  }
-
-  // Measure page load performance
-  measurePageLoadTiming(): Record<string, number> | null {
->>>>>>> cursor/fix-errors-and-merge-to-main-e973
-    if (typeof window === 'undefined' || !window.performance) {
-      return null;
-    }
-    
-    const timing = window.performance.timing;
-<<<<<<< HEAD
-    const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-    
-    const loadTime = timing.loadEventEnd - timing.navigationStart;
-    const interactiveTime = timing.domInteractive - timing.navigationStart;
-    
-    return { 
-      loadTime, 
-      interactiveTime,
-      FCP: navigation?.responseStart - navigation?.fetchStart,
-      TTFB: timing.responseStart - timing.navigationStart
-=======
-    return {
-      loadTime: timing.loadEventEnd - timing.navigationStart,
-      interactiveTime: timing.domInteractive - timing.navigationStart,
-      domContentLoaded: timing.domContentLoadedEventEnd - timing.navigationStart
->>>>>>> cursor/fix-errors-and-merge-to-main-e973
-    };
   }
 
   // Initialize all optimizations
@@ -508,86 +471,15 @@ const metrics = new Map<string, number>();
     this.measurePerformance('optimizeScroll', () => this.optimizeScroll());
   }
 }
-<<<<<<< HEAD
-
-
-
-/**
- * Optimize scroll performance
- */
-export const optimizeScroll = (): void => {
-  if (typeof window === 'undefined') return;
-  
-  let ticking = false;
-  
-  const updateScrollPosition = () => {
-    // Throttled scroll handling
-    ticking = false;
-  };
-  
-  const requestTick = () => {
-    if (!ticking) {
-      requestAnimationFrame(updateScrollPosition);
-      ticking = true;
-    }
-  };
-  
-  window.addEventListener('scroll', requestTick, { passive: true });
-};
-
-/**
- * Preload critical resources
- */
-export const preloadCriticalResources = (): void => {
-  if (typeof document === 'undefined') return;
-  
-  const criticalResources = [
-    '/fonts/inter-var.woff2',
-    '/css/critical.css'
-  ];
-  
-  criticalResources.forEach(resource => {
-    const link = document.createElement('link');
-    link.rel = 'preload';
-    link.href = resource;
-    link.as = resource.endsWith('.css') ? 'style' : 'font';
-    if (resource.endsWith('.woff2')) {
-      link.crossOrigin = 'anonymous';
-    }
-    document.head.appendChild(link);
-  });
-};
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-e973
 
 // Export singleton instance
 export const performanceOptimizer = PerformanceOptimizer.getInstance();
 
-<<<<<<< HEAD
-=======
-// Get performance metrics
-const getMetrics = (): Record<string, number> => {
-  return Object.fromEntries(metrics);
-};
-
-// Initialize all optimizations
-const initialize = (): void => {
-  lazyLoadImages();
-  addCriticalResourceHints();
-};
-
->>>>>>> cursor/fix-errors-and-merge-to-main-a3c4
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-e973
 export default {
   prefetchResources,
   preconnectDomains,
   lazyLoadImages,
-<<<<<<< HEAD
-=======
-  preloadCriticalResources: () => performanceOptimizer.preloadCriticalResources(),
->>>>>>> cursor/fix-errors-and-merge-to-main-e973
+  preloadCriticalResources,
   debounce,
   throttle,
   measurePageLoad,
@@ -601,18 +493,9 @@ export default {
   monitorLongTasks,
   cacheStaticAssets,
   clearOldCaches,
-<<<<<<< HEAD
   checkPerformanceBudget,
-<<<<<<< HEAD
-  preloadCriticalResources: () => performanceOptimizer.preloadCriticalResources(),
-  measurePageLoadMetrics: () => performanceOptimizer.measurePageLoadTiming()
+  addCriticalResourceHints,
+  optimizeScroll,
+  getMetrics: () => performanceOptimizer.getMetrics(),
+  initialize: () => performanceOptimizer.initialize()
 };
-=======
-  getMetrics,
-  initialize
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-a3c4
-=======
-  checkPerformanceBudget
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-e973
