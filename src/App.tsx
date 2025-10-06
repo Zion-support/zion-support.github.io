@@ -139,11 +139,11 @@ class ErrorBoundary extends React.Component<
     return { hasError: true };
   }
 
-  componentDidCatch(_error: Error, errorInfo: React.ErrorInfo) {
+  override componentDidCatch(_error: Error, errorInfo: React.ErrorInfo) {
     console.error('Error caught by boundary:', errorInfo);
   }
 
-  render() {
+  override render() {
     if (this.state.hasError) {
       return this.props.fallback || (
         <div className="min-h-screen flex items-center justify-center bg-gray-50">
