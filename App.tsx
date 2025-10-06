@@ -47,21 +47,24 @@ const InteractiveContentShowcase2026 = memo(() => (
 ));
 
 // Error Boundary Component
-class ErrorBoundary extends React.Component {
-  constructor(props) {
+class ErrorBoundary extends React.Component<
+  { children: React.ReactNode },
+  { hasError: boolean; error: Error | null }
+> {
+  constructor(props: { children: React.ReactNode }) {
     super(props);
     this.state = { hasError: false, error: null };
   }
 
-  static getDerivedStateFromError(error) {
+  static getDerivedStateFromError(error: Error) {
     return { hasError: true, error };
   }
 
-  componentDidCatch(error, errorInfo) {
+  override componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
     console.error('App Error Boundary caught an error:', error, errorInfo);
   }
 
-  render() {
+  override render() {
     if (this.state.hasError) {
       return (
         <div className="min-h-screen flex items-center justify-center bg-gray-50">
@@ -163,9 +166,9 @@ export default function App() {
           const perfData = performance.getEntriesByType('navigation')[0];
           if (perfData) {
             console.log('Page Load Performance:', {
-              domContentLoaded: perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart,
-              loadComplete: perfData.loadEventEnd - perfData.loadEventStart,
-              totalTime: perfData.loadEventEnd - perfData.fetchStart
+              domContentLoaded: (perfData as any).domContentLoadedEventEnd - (perfData as any).domContentLoadedEventStart,
+              loadComplete: (perfData as any).loadEventEnd - (perfData as any).loadEventStart,
+              totalTime: (perfData as any).loadEventEnd - (perfData as any).fetchStart
             });
           }
         });
@@ -174,7 +177,7 @@ export default function App() {
   }, []);
 
   // Memoized event handlers for better performance
-  const handleNewsletterSubmit = useCallback((e) => {
+  const handleNewsletterSubmit = useCallback((e: any) => {
     e.preventDefault();
     const email = e.target.email.value;
     if (email) {
@@ -186,8 +189,8 @@ export default function App() {
 
   const handlePhoneClick = useCallback(() => {
     // Track phone clicks for analytics
-    if (typeof gtag !== 'undefined') {
-      gtag('event', 'phone_click', {
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', 'phone_click', {
         event_category: 'engagement',
         event_label: 'main_phone_number'
       });

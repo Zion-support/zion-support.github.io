@@ -135,7 +135,7 @@ class ErrorBoundary extends React.Component<
     this.state = { hasError: false };
   }
 
-  static getDerivedStateFromError() {
+  static getDerivedStateFromError(_error: Error) {
     return { hasError: true };
   }
 
@@ -166,8 +166,4 @@ class ErrorBoundary extends React.Component<
 
 export { ErrorBoundary };
 
-<<<<<<< HEAD
 export default App;
-=======
-export default App;
->>>>>>> cursor/fix-errors-and-merge-to-main-a3c4
