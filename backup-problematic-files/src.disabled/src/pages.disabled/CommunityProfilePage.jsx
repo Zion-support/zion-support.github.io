@@ -1,10 +1,1 @@
-
-  return (
-    <div className={className || ''}>
-
-      <h1>CommunityProfilePage</h1>
-      <p>This component is under development.</p>
-    </div>
-
-
-export default CommunityProfilePage;
+return (<div className={className || ''}> <h1>CommunityProfilePage</h1> <p>This component is under development.</p> </div> export default CommunityProfilePage) '

@@ -1,14 +1,1 @@
-module.exports = {};
-module.exports = {};
-module.exports = {};
-export {};
-
-    color: ;
-  'from-gray-500: to-slate-600',,';
-    popular: fals,e,
-    launchDate: ;
-  '2024-05-15',,';
-    customers: 48,0,
-        rating: 4.,8,
-    reviews: 6,7}
-];
+module.exports = {}; module.exports = {}; module.exports = {}; export {}; color:  , 'from-gray-500: to-slate-600',' popular: fals,e, launchDate:  ,' '2024-05-15',' customers: 48,0, rating: 4.,8, reviews: 6,7} ];'

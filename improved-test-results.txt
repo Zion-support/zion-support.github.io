@@ -2701,9 +2701,7 @@
 [0;32m✅ Basic workflow structure present[0m
 [0;32m✅ Permissions defined[0m
 
-
 [0;34m📊 Test Summary[0m
-==================
 Total workflows: 450
 [0;32mPassed: 450[0m
 [0;31mFailed: 0[0m

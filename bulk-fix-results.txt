@@ -9235,9 +9235,7 @@ sh: 1: cho: not found
 sh: 1: Syntax error: end of file unexpected
 [0;32m✅ Fixed successfully[0m
 
-
 [0;34m📊 Fix Summary[0m
-==================
 Total workflows processed: 71
 [0;32mSuccessfully fixed: 71[0m
 [0;31mFailed to fix: 0[0m

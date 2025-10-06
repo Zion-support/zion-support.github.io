@@ -1,10 +1,1 @@
-
-  return (
-    <div className={className || ''}>
-
-      <h1>MobileNavigation</h1>
-      <p>This component is under development.</p>
-    </div>
-
-
-export default MobileNavigation;
+return (<div className={className || ''}> <h1>MobileNavigation</h1> <p>This component is under development.</p> </div> export default MobileNavigation) '

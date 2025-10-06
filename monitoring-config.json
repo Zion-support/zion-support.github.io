@@ -2,10 +2,7 @@
   "healthChecks": {
     "enabled": true,
     "interval": 60000,
-    "endpoints": [
-      "/health",
-      "/api/status"
-    ]
+    "endpoints": ["/health", "/api/status"]
   },
   "logging": {
     "level": "info",

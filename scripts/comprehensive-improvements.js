@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
 /**
- * Comprehensive Codebase Improvements Script
- * Implements various improvements to enhance code quality, performance, and maintainability
+ * Comprehensive Improvements Script
+ * Automates various improvements and optimizations
  */
 
 import fs from 'fs';
@@ -12,120 +12,415 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-console.log('🚀 Starting Comprehensive Codebase Improvements...\n');
+class ComprehensiveImprovements {
+  constructor() {
+    this.improvements = [];
+    this.startTime = Date.now();
+  }
 
-// 1. Clean up backup files
-console.log('📦 Step 1: Cleaning up backup files...');
-const backupPatterns = ['.backup', '.bak', '.old', '.disabled'];
-let backupCount = 0;
+  async run() {
+    console.log('🚀 Starting comprehensive improvements...\n');
 
-function cleanBackups(dir, depth = 0) {
-  if (depth > 3) return; // Limit recursion depth
-  
-  try {
-    const entries = fs.readdirSync(dir, { withFileTypes: true });
+    try {
+      await this.optimizePackageJson();
+      await this.optimizeViteConfig();
+      await this.optimizeTypeScriptConfig();
+      await this.optimizeESLintConfig();
+      await this.createServiceWorker();
+      await this.optimizeImages();
+      await this.createManifest();
+      await this.generateReports();
+
+      this.printSummary();
+    } catch (error) {
+      console.error('❌ Error during improvements:', error);
+      process.exit(1);
+    }
+  }
+
+  async optimizePackageJson() {
+    console.log('📦 Optimizing package.json...');
     
-    for (const entry of entries) {
-      const fullPath = path.join(dir, entry.name);
-      
-      if (entry.isDirectory() && !entry.name.startsWith('.') && !entry.name.includes('node_modules')) {
-        cleanBackups(fullPath, depth + 1);
-      } else if (entry.isFile()) {
-        const shouldDelete = backupPatterns.some(pattern => entry.name.includes(pattern));
-        if (shouldDelete && !entry.name.includes('package')) {
-          try {
-            // Just log, don't actually delete for safety
-            console.log(`  Would clean: ${fullPath}`);
-            backupCount++;
-          } catch (err) {
-            // Skip files we can't access
-          }
+    const packagePath = path.join(process.cwd(), 'package.json');
+    const packageJson = JSON.parse(fs.readFileSync(packagePath, 'utf8'));
+
+    // Add new scripts
+    const newScripts = {
+      'dev:optimized': 'NODE_OPTIONS="--max-old-space-size=4096" vite --host --open',
+      'build:optimized': 'NODE_ENV=production vite build --minify terser --sourcemap false',
+      'analyze:performance': 'node scripts/performance-analyzer.js',
+      'security:audit': 'npm audit --audit-level=moderate',
+      'seo:audit': 'node scripts/seo-audit.js',
+      'accessibility:audit': 'node scripts/accessibility-audit.js',
+      'optimize:all': 'npm run optimize:images && npm run optimize:css && npm run build:optimized',
+      'health:check': 'npm run type-check && npm run lint && npm run build:optimized && npm run test'
+    };
+
+    packageJson.scripts = { ...packageJson.scripts, ...newScripts };
+
+    fs.writeFileSync(packagePath, JSON.stringify(packageJson, null, 2));
+    this.improvements.push('✅ Enhanced package.json with new optimization scripts');
+  }
+
+  async optimizeViteConfig() {
+    console.log('⚡ Optimizing Vite configuration...');
+    
+    const viteConfigPath = path.join(process.cwd(), 'vite.config.js');
+    let viteConfig = '';
+
+    if (fs.existsSync(viteConfigPath)) {
+      viteConfig = fs.readFileSync(viteConfigPath, 'utf8');
+    }
+
+    const optimizedConfig = `
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import { visualizer } from 'rollup-plugin-visualizer';
+
+export default defineConfig({
+  plugins: [
+    react(),
+    visualizer({
+      filename: 'dist/stats.html',
+      open: false,
+      gzipSize: true,
+      brotliSize: true,
+    })
+  ],
+  build: {
+    target: 'es2015',
+    minify: 'terser',
+    sourcemap: false,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['react', 'react-dom'],
+          router: ['react-router-dom'],
+          ui: ['framer-motion', 'lucide-react']
         }
       }
+    },
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true
+      }
     }
-  } catch (err) {
-    // Skip directories we can't access
+  },
+  server: {
+    port: 3000,
+    host: true
+  },
+  preview: {
+    port: 4173,
+    host: true
+  },
+  optimizeDeps: {
+    include: ['react', 'react-dom', 'react-router-dom']
+  }
+});
+`;
+
+    fs.writeFileSync(viteConfigPath, optimizedConfig);
+    this.improvements.push('✅ Optimized Vite configuration for better performance');
+  }
+
+  async optimizeTypeScriptConfig() {
+    console.log('🔧 Optimizing TypeScript configuration...');
+    
+    const tsConfigPath = path.join(process.cwd(), 'tsconfig.json');
+    let tsConfig = {};
+
+    if (fs.existsSync(tsConfigPath)) {
+      tsConfig = JSON.parse(fs.readFileSync(tsConfigPath, 'utf8'));
+    }
+
+    const optimizedConfig = {
+      ...tsConfig,
+      compilerOptions: {
+        ...tsConfig.compilerOptions,
+        target: 'ES2020',
+        lib: ['ES2020', 'DOM', 'DOM.Iterable'],
+        allowJs: true,
+        skipLibCheck: true,
+        esModuleInterop: true,
+        allowSyntheticDefaultImports: true,
+        strict: true,
+        forceConsistentCasingInFileNames: true,
+        module: 'ESNext',
+        moduleResolution: 'node',
+        resolveJsonModule: true,
+        isolatedModules: true,
+        noEmit: true,
+        jsx: 'react-jsx',
+        baseUrl: '.',
+        paths: {
+          '@/*': ['src/*'],
+          '@/components/*': ['src/components/*'],
+          '@/pages/*': ['src/pages/*'],
+          '@/utils/*': ['src/utils/*'],
+          '@/types/*': ['src/types/*']
+        }
+      },
+      include: ['src/**/*'],
+      exclude: ['node_modules', 'dist', 'build']
+    };
+
+    fs.writeFileSync(tsConfigPath, JSON.stringify(optimizedConfig, null, 2));
+    this.improvements.push('✅ Enhanced TypeScript configuration with path mapping');
+  }
+
+  async optimizeESLintConfig() {
+    console.log('🔍 Optimizing ESLint configuration...');
+    
+    const eslintConfigPath = path.join(process.cwd(), '.eslintrc.js');
+    const eslintConfig = `
+module.exports = {
+  root: true,
+  env: {
+    browser: true,
+    es2020: true,
+    node: true
+  },
+  extends: [
+    'eslint:recommended',
+    '@typescript-eslint/recommended',
+    'plugin:react/recommended',
+    'plugin:react-hooks/recommended'
+  ],
+  parser: '@typescript-eslint/parser',
+  parserOptions: {
+    ecmaVersion: 'latest',
+    sourceType: 'module',
+    ecmaFeatures: {
+      jsx: true
+    }
+  },
+  plugins: [
+    'react',
+    'react-hooks',
+    '@typescript-eslint'
+  ],
+  rules: {
+    'react/react-in-jsx-scope': 'off',
+    'react/prop-types': 'off',
+    '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
+    '@typescript-eslint/explicit-function-return-type': 'off',
+    '@typescript-eslint/explicit-module-boundary-types': 'off',
+    '@typescript-eslint/no-explicit-any': 'warn',
+    'no-console': 'warn',
+    'prefer-const': 'error',
+    'no-var': 'error'
+  },
+  settings: {
+    react: {
+      version: 'detect'
+    }
+  }
+};
+`;
+
+    fs.writeFileSync(eslintConfigPath, eslintConfig);
+    this.improvements.push('✅ Enhanced ESLint configuration with modern rules');
+  }
+
+  async createServiceWorker() {
+    console.log('🔧 Creating Service Worker...');
+    
+    const swPath = path.join(process.cwd(), 'public/sw.js');
+    const serviceWorker = `
+const CACHE_NAME = 'zion-website-v1';
+const urlsToCache = [
+  '/',
+  '/static/js/bundle.js',
+  '/static/css/main.css',
+  '/manifest.json'
+];
+
+self.addEventListener('install', (event) => {
+  event.waitUntil(
+    caches.open(CACHE_NAME)
+      .then((cache) => cache.addAll(urlsToCache))
+  );
+});
+
+self.addEventListener('fetch', (event) => {
+  event.respondWith(
+    caches.match(event.request)
+      .then((response) => {
+        if (response) {
+          return response;
+        }
+        return fetch(event.request);
+      }
+    )
+  );
+});
+
+self.addEventListener('activate', (event) => {
+  event.waitUntil(
+    caches.keys().then((cacheNames) => {
+      return Promise.all(
+        cacheNames.map((cacheName) => {
+          if (cacheName !== CACHE_NAME) {
+            return caches.delete(cacheName);
+          }
+        })
+      );
+    })
+  );
+});
+`;
+
+    fs.writeFileSync(swPath, serviceWorker);
+    this.improvements.push('✅ Created Service Worker for offline functionality');
+  }
+
+  async optimizeImages() {
+    console.log('🖼️ Setting up image optimization...');
+    
+    const imageOptimizerPath = path.join(process.cwd(), 'scripts/optimize-images.js');
+    const imageOptimizer = `
+const sharp = require('sharp');
+const fs = require('fs');
+const path = require('path');
+
+class ImageOptimizer {
+  constructor() {
+    this.inputDir = 'src/assets/images';
+    this.outputDir = 'public/images/optimized';
+    this.sizes = [320, 640, 768, 1024, 1200, 1920];
+  }
+
+  async optimizeImages() {
+    if (!fs.existsSync(this.inputDir)) {
+      console.log('No images directory found');
+      return;
+    }
+
+    if (!fs.existsSync(this.outputDir)) {
+      fs.mkdirSync(this.outputDir, { recursive: true });
+    }
+
+    const files = fs.readdirSync(this.inputDir);
+    const imageFiles = files.filter(file => 
+      /\.(jpg|jpeg|png|webp)$/i.test(file)
+    );
+
+    for (const file of imageFiles) {
+      await this.optimizeImage(file);
+    }
+
+    console.log('Image optimization complete');
+  }
+
+  async optimizeImage(filename) {
+    const inputPath = path.join(this.inputDir, filename);
+    const baseName = path.parse(filename).name;
+
+    for (const size of this.sizes) {
+      const outputPath = path.join(this.outputDir, \`\${baseName}-\${size}.webp\`);
+      
+      try {
+        await sharp(inputPath)
+          .resize(size, null, { withoutEnlargement: true })
+          .webp({ quality: 80 })
+          .toFile(outputPath);
+        
+        console.log(\`Generated: \${outputPath}\`);
+      } catch (error) {
+        console.error(\`Error optimizing \${filename} at size \${size}:\`, error);
+      }
+    }
   }
 }
 
-// Only log what would be cleaned
-console.log(`  Found ${backupCount} backup files that could be cleaned\n`);
+const optimizer = new ImageOptimizer();
+optimizer.optimizeImages();
+`;
 
-// 2. Generate performance report
-console.log('⚡ Step 2: Generating performance recommendations...');
-const performanceImprovements = {
-  codeSize: 'Implement code splitting and lazy loading for components',
-  images: 'Optimize images using next/image with proper sizing',
-  caching: 'Implement incremental static regeneration for dynamic content',
-  bundleSize: 'Analyze and reduce bundle size using webpack-bundle-analyzer',
-  fonts: 'Use next/font for optimal font loading'
-};
+    fs.writeFileSync(imageOptimizerPath, imageOptimizer);
+    this.improvements.push('✅ Created image optimization script');
+  }
 
-Object.entries(performanceImprovements).forEach(([key, value]) => {
-  console.log(`  ✓ ${key}: ${value}`);
-});
+  async createManifest() {
+    console.log('📱 Creating Web App Manifest...');
+    
+    const manifestPath = path.join(process.cwd(), 'public/manifest.json');
+    const manifest = {
+      name: 'Zion Tech Group',
+      short_name: 'Zion Tech',
+      description: 'Advanced AI and IT Solutions',
+      start_url: '/',
+      display: 'standalone',
+      background_color: '#ffffff',
+      theme_color: '#007bff',
+      icons: [
+        {
+          src: '/icons/icon-192x192.png',
+          sizes: '192x192',
+          type: 'image/png'
+        },
+        {
+          src: '/icons/icon-512x512.png',
+          sizes: '512x512',
+          type: 'image/png'
+        }
+      ],
+      categories: ['business', 'productivity', 'technology'],
+      lang: 'en',
+      orientation: 'portrait-primary'
+    };
 
-// 3. SEO Improvements
-console.log('\n📈 Step 3: SEO Enhancement Recommendations...');
-const seoImprovements = {
-  metadata: 'All pages should have unique titles and descriptions',
-  structuredData: 'Add JSON-LD structured data for rich snippets',
-  sitemap: 'Ensure sitemap.xml is up-to-date and comprehensive',
-  robots: 'Verify robots.txt allows proper crawling',
-  canonicals: 'Add canonical URLs to prevent duplicate content issues',
-  ogTags: 'Ensure all pages have Open Graph and Twitter Card metadata'
-};
+    fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2));
+    this.improvements.push('✅ Created Web App Manifest for PWA functionality');
+  }
 
-Object.entries(seoImprovements).forEach(([key, value]) => {
-  console.log(`  ✓ ${key}: ${value}`);
-});
+  async generateReports() {
+    console.log('📊 Generating improvement reports...');
+    
+    const reportPath = path.join(process.cwd(), 'improvement-report.json');
+    const report = {
+      timestamp: new Date().toISOString(),
+      duration: Date.now() - this.startTime,
+      improvements: this.improvements,
+      summary: {
+        totalImprovements: this.improvements.length,
+        categories: {
+          performance: this.improvements.filter(i => i.includes('performance')).length,
+          security: this.improvements.filter(i => i.includes('security')).length,
+          seo: this.improvements.filter(i => i.includes('seo')).length,
+          accessibility: this.improvements.filter(i => i.includes('accessibility')).length
+        }
+      }
+    };
 
-// 4. Security Enhancements
-console.log('\n🔒 Step 4: Security Enhancement Recommendations...');
-const securityImprovements = {
-  headers: 'Implement security headers (CSP, HSTS, X-Frame-Options)',
-  rateLimit: 'Add rate limiting for API endpoints',
-  csrf: 'Implement CSRF protection for forms',
-  inputValidation: 'Validate and sanitize all user inputs',
-  errorHandling: 'Implement proper error handling and logging'
-};
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+    this.improvements.push('✅ Generated comprehensive improvement report');
+  }
 
-Object.entries(securityImprovements).forEach(([key, value]) => {
-  console.log(`  ✓ ${key}: ${value}`);
-});
+  printSummary() {
+    const duration = ((Date.now() - this.startTime) / 1000).toFixed(2);
+    
+    console.log('\n🎉 Comprehensive improvements completed!');
+    console.log(`⏱️  Duration: ${duration}s`);
+    console.log(`📈 Total improvements: ${this.improvements.length}\n`);
+    
+    console.log('📋 Summary of improvements:');
+    this.improvements.forEach((improvement, index) => {
+      console.log(`  ${index + 1}. ${improvement}`);
+    });
+    
+    console.log('\n🚀 Next steps:');
+    console.log('  1. Run "npm run build:optimized" to build the optimized version');
+    console.log('  2. Run "npm run analyze:performance" to analyze performance');
+    console.log('  3. Run "npm run security:audit" to check security');
+    console.log('  4. Run "npm run seo:audit" to audit SEO');
+    console.log('  5. Run "npm run accessibility:audit" to check accessibility');
+    console.log('\n✨ Your application is now optimized for production!');
+  }
+}
 
-// 5. Code Quality Improvements
-console.log('\n✨ Step 5: Code Quality Enhancement Recommendations...');
-const codeQualityImprovements = {
-  typescript: 'Ensure strict TypeScript configuration',
-  eslint: 'Fix all ESLint warnings and errors',
-  prettier: 'Format all code with Prettier',
-  testing: 'Add comprehensive test coverage',
-  documentation: 'Add JSDoc comments for public APIs'
-};
-
-Object.entries(codeQualityImprovements).forEach(([key, value]) => {
-  console.log(`  ✓ ${key}: ${value}`);
-});
-
-// Generate summary report
-const report = {
-  timestamp: new Date().toISOString(),
-  improvements: {
-    performance: performanceImprovements,
-    seo: seoImprovements,
-    security: securityImprovements,
-    codeQuality: codeQualityImprovements
-  },
-  backupFilesFound: backupCount,
-  status: 'completed'
-};
-
-fs.writeFileSync(
-  path.join(__dirname, '../improvement-recommendations.json'),
-  JSON.stringify(report, null, 2)
-);
-
-console.log('\n✅ Improvements analysis complete!');
-console.log('📄 Report saved to: improvement-recommendations.json\n');
-
+// Run the improvements
+const improvements = new ComprehensiveImprovements();
+improvements.run().catch(console.error);

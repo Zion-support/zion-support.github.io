@@ -1,13 +1,1 @@
-
-
-
-
-
-
-
-                appStoreUrl={appStoreUrl}
-                googlePlayUrl={googlePlayUrl}
-              />;
-"
-              <div className="text-left">;"
-                <span className="text-left"><;"
+appStoreUrl={appStoreUrl} googlePlayUrl={googlePlayUrl} />; " <div className="text-left" >;" <span className="text-left" ><;"

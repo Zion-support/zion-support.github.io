@@ -41,13 +41,7 @@ function fixMergeConflicts(filePath) {
     let modified = false;
     
     // Check if file has merge conflict markers
-    if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {
-      console.log(`Fixing merge conflicts in: ${filePath}`);
-      
-      // Remove merge conflict markers and keep HEAD content
-      content = content.replace(/<<<<<<< HEAD\n?/g, '');
-      content = content.replace(/=======.*?\n?/g, '');
-      content = content.replace(/>>>>>>> .*?\n?/g, '');
+    if (content.includes('
       
       modified = true;
     }

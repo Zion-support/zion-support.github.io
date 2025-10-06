@@ -1,9 +1,1 @@
-
-
-
-  const imageFiles = files && files.filter(file => 
-
-
-
-
-
+const imageFiles = files && files.filter(file =>

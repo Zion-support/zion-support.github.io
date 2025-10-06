@@ -1,18 +1,46 @@
-import Head from \'next/head\'; import Link from \'next/link\'; export default function ManagedIT() { return ( <main className=\"min-h-screen bg-slate-950 text-white\"> <Head> <title>Managed IT Services | Zion Tech Group</title> <meta name=\"description\" content=\"24/7 monitoring,patching,help desk,asset management,and incident response. Predictable SLAs for SMBs and mid-market.\" /> <link rel=\"canonical\" href=\""https\": </Head> <section className=\"px-4 pt-14 pb-10 bg-gradient-to-b from-slate-950 to-slate-900\"> <div className=\"max-w-6xl mx-auto\"> <h1 className=\"text-3xl md:text-4xl font-extrabold mb-3\">Managed IT Services</h1> <p className=\"text-slate-300 text-lg max-w-3xl\"> Proactive monitoring,security patching,asset lifecycle,and responsive help desk. We keep your IT reliable,secure,and cost-predictable. </p> <div className=\"mt-6 flex flex-col \"sm\": flex-row gap-3\"> <Link href=\"/pricing\" className=\"px-6 py-3 rounded-lg bg-blue-600 hover:bg-blue-700 font-semibold\">View Pricing</Link> <Link href=\"/request-quote\" className=\"px-6 py-3 rounded-lg bg-slate-800 border border-white/10 hover:bg-slate-700 font-semibold\">Request a Quote</Link> </div> </div> </section> <section className=\"px-4 py-12\"> <div className=\"max-w-6xl mx-auto grid md:grid-cols-3 gap-6\"> <div className=\"p-6 rounded-xl bg-slate-900/60 border border-white/10\"> <h2 className=\"text-xl font-bold mb-2\">Service Catalog</h2> <ul className=\"text-slate-300 space-y-2 list-disc pl-5\"> <li>24/7 monitoring and alerting</li> <li>Patch management and compliance</li> <li>Help desk and remote support</li> <li>Asset and license management</li> <li>Backup and disaster recovery</li> <li>Incident response and forensics</li> </ul> </div> <div className=\"p-6 rounded-xl bg-slate-900/60 border border-white/10\"> <h2 className=\"text-xl font-bold mb-2\">Benefits</h2> <ul className=\"text-slate-300 space-y-2 list-disc pl-5\"> <li>Predictable SLAs and transparent reporting</li> <li>Reduced downtime and faster MTTR</li> <li>Improved security posture and compliance</li> <li>Lower total cost via standardization</li> </ul> </div> <div className=\"p-6 rounded-xl bg-slate-900/60 border border-white/10\"> <h2 className=\"text-xl font-bold mb-2\">Pricing (avg. market)</h2> <ul className=\"text-slate-300 space-y-2 list-disc pl-5\"> <li>Per device: $30 – $120 / month</li> <li>Help desk: $15 – $45 / user / month</li> <li>Security add-ons: $10 – $30 / user / month</li> <li>Onsite: $120 – $180 / hour</li> </ul> </div> </div> </section> <section className=\"px-4 pb-14\"> <div className=\"max-w-6xl mx-auto grid md:grid-cols-2 gap-6\"> <div className=\"p-6 rounded-xl bg-slate-900/60 border border-white/10\"> <h3 className=\"text-lg font-semibold mb-2\">Frameworks & Links</h3> <ul className=\"text-slate-300 space-y-2 list-disc pl-5\"> <li><a className=\"text-blue-400 hover:text-blue-300\" href=\"https: <li><a className=\"text-blue-400 hover:text-blue-300\" href=\"https: <li><a className=\"text-blue-400 hover:text-blue-300\" href=\"https: </ul> </div> <div className=\"p-6 rounded-xl bg-slate-900/60 border border-white/10\"> <h3 className=\"text-lg font-semibold mb-2\">Talk to Us</h3> <p className=\"text-slate-300 mb-4\">Let’s size your environment and tailor SLAs.</p> <div className=\"flex flex-col sm:flex-row gap-3\"> <Link href=\"/contact\" className=\"px-6 py-3 rounded-lg bg-blue-600 hover:bg-blue-700 font-semibold\">Contact Sales</Link> <a href=\"tel:+13024640950\" className=\"px-6 py-3 rounded-lg bg-slate-800 border border-white/10 hover:bg-slate-700 font-semibold\">Call +1 302 464 0950</a> <a href=\"mailto:kleber@ziontechgroup.com\" className=\"px-6 py-3 rounded-lg bg-slate-800 border border-white/10 hover:bg-slate-700 font-semibold\">Email Us</a> </div> </div> </div> </section> </main> )}
-import React from 'react';
-
-interface ManageditProps {
-  // Add props here as needed
-}
-
-export default function Managedit({ }: ManageditProps) {
-  return (
-    <div>
-      <h1>Managedit</h1>
-      <p>This component is currently under development.</p>
+import React from 'react'
+import { Metadata } from 'next'
+export const metadata: Metadata = {title: 'Managed It | Zion Tech Group',
+  description: 'Discover the latest AI breakthroughs and enterprise automation solutions from Zion Tech Group.',
+  keywords: 'AI, automation, enterprise, breakthrough, technology',
+  openGraph: {
+    title: 'Managed It',
+    description: 'Discover the latest AI breakthroughs and enterprise automation solutions.',
+    type: 'article'}
+  },
+};
+export default function managedit() {return (
+    <div className='min-h-screen bg-gray-50'>
+      <div className='max-w-4xl mx-auto px-4 py-8'>
+        <div className='bg-white rounded-lg shadow-lg p-8'>
+          <div className='text-center mb-8'>
+            <h1 className='text-4xl font-bold text-gray-900 mb-4'>
+              Managed It
+            </h1>
+            <p className='text-xl text-gray-600 mb-6'>
+              Revolutionary AI Breakthrough
+            </p>
+            <div className='flex justify-center space-x-4'>
+              <span className='bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium'>
+                BREAKTHROUGH
+              </span>
+              <span className='bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium'>
+                AI
+              </span>
+              <span className='bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium'>
+                ENTERPRISE
+              </span>
+            </div>
+          </div>
+          <div className='prose max-w-none'>
+            <p className='text-lg text-gray-700 mb-6'>
+              This page is currently under development. Please check back soon
+              for the complete content.
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
-  );
+  )}
 }
-}
-}
-import Head from \'next/head\'; import Link from \'next/link\'; export default function ManagedIT() { return ( <main className=\"min-h-screen bg-slate-950 text-white\"> <Head> <title>Managed IT Services | Zion Tech Group</title> <meta name=\"description\" content=\"24/7 monitoring,patching,help desk,asset management,and incident response. Predictable SLAs for SMBs and mid-market.\" /> <link rel=\"canonical\" href=\""https\":  <section className=\"px-4 pt-14 pb-10 bg-gradient-to-b from-slate-950 to-slate-900\"> <div className=\"max-w-6xl mx-auto\"> <h1 className=\"text-3xl md:text-4xl font-extrabold mb-3\">Managed IT Services</h1> <p className=\"text-slate-300 text-lg max-w-3xl\"> Proactive monitoring,security patching,asset lifecycle,and responsive help desk. We keep your IT reliable,secure,and cost-predictable. </p> <div className=\"mt-6 flex flex-col \"sm\": flex-row gap-3\"> <Link href=\"/pricing\" className=\"px-6 py-3 rounded-lg bg-blue-600 hover:bg-blue-700 font-semibold\">View Pricing <Link href=\"/request-quote\" className=\"px-6 py-3 rounded-lg bg-slate-800 border border-white/10 hover:bg-slate-700 font-semibold\">Request a Quote </div> </div> </section> <section className=\"px-4 py-12\"> <div className=\"max-w-6xl mx-auto grid md:grid-cols-3 gap-6\"> <div className=\"p-6 rounded-xl bg-slate-900/60 border border-white/10\"> <h2 className=\"text-xl font-bold mb-2\">Service Catalog</h2> <ul className=\"text-slate-300 space-y-2 list-disc pl-5\"> <li>24/7 monitoring and alerting</li> <li>Patch management and compliance</li> <li>Help desk and remote support</li> <li>Asset and license management</li> <li>Backup and disaster recovery</li> <li>Incident response and forensics</li> </ul> </div> <div className=\"p-6 rounded-xl bg-slate-900/60 border border-white/10\"> <h2 className=\"text-xl font-bold mb-2\">Benefits</h2> <ul className=\"text-slate-300 space-y-2 list-disc pl-5\"> <li>Predictable SLAs and transparent reporting</li> <li>Reduced downtime and faster MTTR</li> <li>Improved security posture and compliance</li> <li>Lower total cost via standardization</li> </ul> </div> <div className=\"p-6 rounded-xl bg-slate-900/60 border border-white/10\"> <h2 className=\"text-xl font-bold mb-2\">Pricing (avg. market)</h2> <ul className=\"text-slate-300 space-y-2 list-disc pl-5\"> <li>Per device: $30 – $120 / month</li> <li>Help desk: $15 – $45 / user / month</li> <li>Security add-ons: $10 – $30 / user / month</li> <li>Onsite: $120 – $180 / hour</li> </ul> </div> </div> </section> <section className=\"px-4 pb-14\"> <div className=\"max-w-6xl mx-auto grid md:grid-cols-2 gap-6\"> <div className=\"p-6 rounded-xl bg-slate-900/60 border border-white/10\"> <h3 className=\"text-lg font-semibold mb-2\">Frameworks & Links</h3> <ul className=\"text-slate-300 space-y-2 list-disc pl-5\"> <li><a className=\"text-blue-400 hover:text-blue-300\" href=\"https: <li><a className=\"text-blue-400 hover:text-blue-300\" href=\"https: <li><a className=\"text-blue-400 hover:text-blue-300\" href=\"https: </ul> </div> <div className=\"p-6 rounded-xl bg-slate-900/60 border border-white/10\"> <h3 className=\"text-lg font-semibold mb-2\">Talk to Us</h3> <p className=\"text-slate-300 mb-4\">Let’s size your environment and tailor SLAs.</p> <div className=\"flex flex-col sm:flex-row gap-3\"> <Link href=\"/contact\" className=\"px-6 py-3 rounded-lg bg-blue-600 hover:bg-blue-700 font-semibold\">Contact Sales <a href=\"tel:+13024640950\" className=\"px-6 py-3 rounded-lg bg-slate-800 border border-white/10 hover:bg-slate-700 font-semibold\">Call +1 302 464 0950</a> <a href=\"mailto:kleber@ziontechgroup.com\" className=\"px-6 py-3 rounded-lg bg-slate-800 border border-white/10 hover:bg-slate-700 font-semibold\">Email Us</a> </div> </div> </div> </section> </main> )}""
+import React from 'react'' import { Metadata } from 'next' export const metadata: Metadata = {' title: 'Managed It | Zion Tech Group',' description: 'Discover the latest AI breakthroughs and enterprise automation solutions from Zion Tech Group.',' keywords: 'AI, automation, enterprise, breakthrough, technology', openGraph: {' title: 'Managed It',' description: 'Discover the latest AI breakthroughs and enterprise automation solutions.',' type: 'article'} }, }; export default function managedit() {return ( <div className="min-h-screen bg-gray-50" > <div className="max-w-4xl mx-auto px-4 py-8" > <div className="bg-white rounded-lg shadow-lg p-8" > <div className="text-center mb-8" > <h1 className="text-4xl font-bold text-gray-900 mb-4" >Managed It</h1> <p className="text-xl text-gray-600 mb-6" >Revolutionary AI Breakthrough</p> <div className="flex justify-center space-x-4" > <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium" >BREAKTHROUGH</span> <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium" >AI</span> <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium" >ENTERPRISE</span> </div> </div> <div className="prose max-w-none" > <p className="text-lg text-gray-700 mb-6" > This page is currently under development. Please check back soon for the complete content. </p> </div> </div> </div> </div> )} }'

@@ -2,115 +2,104 @@
 
 import fs from 'fs';
 import path from 'path';
+import { execSync } from 'child_process';
 
-// Function to recursively find all TypeScript/TSX files
-function findTsxFiles(dir, fileList = []) {
-  try {
-    const files = fs.readdirSync(dir);
-    
-    files.forEach(file => {
-      const filePath = path.join(dir, file);
-      try {
-        const stat = fs.statSync(filePath);
-        
-        if (stat.isDirectory()) {
-          // Skip disabled directories and node_modules
-          if (!file.includes('disabled') && !file.includes('backup') && !file.includes('_conflicted') && !file.includes('node_modules')) {
-            findTsxFiles(filePath, fileList);
-          }
-        } else if (file.endsWith('.tsx') || file.endsWith('.ts')) {
-          fileList.push(filePath);
-        }
-      } catch (error) {
-        // Skip broken symlinks or inaccessible files
-        console.log(`Skipping inaccessible file: ${filePath}`);
-      }
-    });
-  } catch (error) {
-    console.log(`Skipping inaccessible directory: ${dir}`);
+console.log('🔧 Starting comprehensive syntax error fixes...');
+
+// Files with known issues
+const filesToFix = [
+  'src/components/October2025CuttingEdgeContentBanner.tsx',
+  'src/components/October2025CuttingEdgeAIBanner.tsx',
+  'src/components/October2025AdvancedAIInnovationsBanner.tsx'
+];
+
+function fixDuplicateKeys(filePath) {
+  if (!fs.existsSync(filePath)) return;
+  
+  let content = fs.readFileSync(filePath, 'utf8');
+  
+  // Fix duplicate icon keys
+  content = content.replace(
+    /icon: '🚀',\s*icon: <[^>]+>/g,
+    (match) => {
+      const iconMatch = match.match(/icon: <([^>]+)>/);
+      return iconMatch ? `icon: ${iconMatch[1]}` : match;
+    }
+  );
+  
+  fs.writeFileSync(filePath, content);
+  console.log(`✅ Fixed duplicate keys in ${filePath}`);
+}
+
+function fixJSXStructure(filePath) {
+  if (!fs.existsSync(filePath)) return;
+  
+  let content = fs.readFileSync(filePath, 'utf8');
+  
+  // Fix common JSX structure issues
+  content = content.replace(
+    /<div className="flex items-center gap-3 mb-4">\s*<div className="[^"]*">\s*<[^>]+>\s*<\/div>\s*<div className="[^"]*">\s*<[^>]+>\s*<\/div>\s*<\/div>\s*<div className="flex-1">/g,
+    '<div className="flex items-center gap-3 mb-4">\n              <div className="p-3 bg-emerald-500/20 rounded-xl group-hover:bg-emerald-500/30 transition-colors">\n                <Shield className="w-8 h-8 text-emerald-300" />\n              </div>\n              <div className="flex-1">'
+  );
+  
+  // Fix missing closing tags
+  content = content.replace(
+    /<Link[^>]*>\s*<div className="flex items-center gap-3 mb-4">\s*<div className="[^"]*">\s*<[^>]+>\s*<\/div>\s*<div className="flex-1">\s*<span[^>]*>[^<]*<\/span>\s*<\/div>\s*<\/div>\s*<h3[^>]*>[^<]*<\/h3>\s*<p[^>]*>[^<]*<\/p>\s*<div className="flex items-center justify-between">\s*<div[^>]*>[^<]*<\/div>\s*<[^>]+>\s*<\/div>\s*<\/div>\s*<\/Link>/g,
+    (match) => {
+      return match.replace(/<\/div>\s*<\/Link>/, '</div>\n            </Link>');
+    }
+  );
+  
+  fs.writeFileSync(filePath, content);
+  console.log(`✅ Fixed JSX structure in ${filePath}`);
+}
+
+function addMissingImports(filePath) {
+  if (!fs.existsSync(filePath)) return;
+  
+  let content = fs.readFileSync(filePath, 'utf8');
+  
+  // Add common missing imports
+  if (content.includes('Shield') && !content.includes("import { Shield")) {
+    content = content.replace(
+      /import React[^;]+;/,
+      `import React from 'react';\nimport { Shield, Zap, Sparkles, TrendingUp, ArrowRight } from 'lucide-react';`
+    );
   }
   
-  return fileList;
-}
-
-// Function to fix syntax errors in a file
-function fixSyntaxErrors(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
-    
-    // Fix missing semicolons after import statements
-    content = content.replace(/import\s+React\s+from\s+['"]react['"]\s*$/gm, 'import React from \'react\';');
-    content = content.replace(/import\s+\{\s*Metadata\s*\}\s+from\s+['"]next['"]\s*$/gm, 'import { Metadata } from \'next\';');
-    
-    // Fix JSX expressions that need parent elements
-    if (content.includes('export default function') && content.includes('return (')) {
-      // Find the return statement and wrap it properly
-      content = content.replace(/return\s*\(\s*$/gm, 'return (\n  <div>');
-      content = content.replace(/^\s*\)\s*$/gm, '  </div>\n)');
-    }
-    
-    // Fix unclosed JSX elements
-    content = content.replace(/<div([^>]*)>\s*$/gm, '<div$1></div>');
-    content = content.replace(/<section([^>]*)>\s*$/gm, '<section$1></section>');
-    content = content.replace(/<p([^>]*)>\s*$/gm, '<p$1></p>');
-    content = content.replace(/<a([^>]*)>\s*$/gm, '<a$1></a>');
-    content = content.replace(/<span([^>]*)>\s*$/gm, '<span$1></span>');
-    
-    // Fix malformed JSX expressions
-    content = content.replace(/\{\s*$/gm, '{/* content */}');
-    
-    // Fix missing closing tags for common patterns
-    content = content.replace(/<div([^>]*)>\s*<span([^>]*)>\s*$/gm, '<div$1><span$2></span></div>');
-    
-    // Fix JSX fragments
-    content = content.replace(/<>([^<]*?)(?=\n\s*<[^\/])/g, '<div>$1</div>');
-    
-    // Fix malformed function declarations
-    content = content.replace(/export\s+default\s+function\s+(\w+)\s*\(\s*\)\s*\{/g, 'export default function $1() {\n  return (\n    <div>');
-    
-    // Fix missing closing braces
-    const openBraces = (content.match(/\{/g) || []).length;
-    const closeBraces = (content.match(/\}/g) || []).length;
-    if (openBraces > closeBraces) {
-      const missingBraces = openBraces - closeBraces;
-      content += '\n' + '}'.repeat(missingBraces);
-    }
-    
-    // Fix missing closing parentheses
-    const openParens = (content.match(/\(/g) || []).length;
-    const closeParens = (content.match(/\)/g) || []).length;
-    if (openParens > closeParens) {
-      const missingParens = openParens - closeParens;
-      content += ')'.repeat(missingParens);
-    }
-    
-    if (content !== fs.readFileSync(filePath, 'utf8')) {
-      modified = true;
-    }
-    
-    if (modified) {
-      fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed syntax errors in: ${filePath}`);
-    }
-    
-    return modified;
-  } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
-    return false;
+  if (content.includes('Link') && !content.includes("import { Link")) {
+    content = content.replace(
+      /import React[^;]+;/,
+      `import React from 'react';\nimport { Link } from 'react-router-dom';\nimport { Shield, Zap, Sparkles, TrendingUp, ArrowRight } from 'lucide-react';`
+    );
   }
+  
+  fs.writeFileSync(filePath, content);
+  console.log(`✅ Added missing imports to ${filePath}`);
 }
 
-// Main execution
-console.log('Starting syntax error fixes...');
-
-const tsxFiles = findTsxFiles('/workspace');
-let fixedCount = 0;
-
-tsxFiles.forEach(file => {
-  if (fixSyntaxErrors(file)) {
-    fixedCount++;
+// Fix each file
+filesToFix.forEach(filePath => {
+  const fullPath = path.join(process.cwd(), filePath);
+  
+  if (fs.existsSync(fullPath)) {
+    console.log(`\n🔧 Fixing ${filePath}...`);
+    
+    fixDuplicateKeys(fullPath);
+    fixJSXStructure(fullPath);
+    addMissingImports(fullPath);
+  } else {
+    console.log(`⚠️  File not found: ${filePath}`);
   }
 });
 
-console.log(`\nFixed ${fixedCount} files out of ${tsxFiles.length} TypeScript files.`);
+console.log('\n✅ Syntax error fixes completed!');
+console.log('🚀 Running build test...');
+
+try {
+  execSync('pnpm run build:no-check', { stdio: 'inherit' });
+  console.log('🎉 Build successful!');
+} catch (error) {
+  console.log('❌ Build still has errors. Manual fixes needed.');
+  process.exit(1);
+}
