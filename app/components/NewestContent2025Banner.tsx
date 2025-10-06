@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+
 const NewestContent2025Banner = () => {
   return (
     <section className='relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden'>
@@ -15,6 +16,7 @@ const NewestContent2025Banner = () => {
           style={{ animationDelay: '1s' }}
         ></div>
       </div>
+
       <div className='relative z-10 container mx-auto px-4 py-16'>
         {/* Header */}
         <div className='text-center mb-16'>
@@ -33,25 +35,9 @@ const NewestContent2025Banner = () => {
             enterprise AI starts here
           </p>
         </div>
+
         {/* Featured Articles Grid */}
         <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>
-          {/* Article 1: AI Edge Computing */}
-          <ArrowRight href="/blog/ai-edge-computing-real-time-2025" className="group">
-            <div className="bg-white/10 backdrop-blur-lg rounded-2xl border-2 border-white/20 hover:border-cyan-400 transition-all duration-500 overflow-hidden hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/50">
-              {/* Card glow effect */}
-              <div className='absolute inset-0 bg-gradient-to-br from-cyan-500 to-blue-600 opacity-0 group-hover:opacity-10 transition-all duration-500 rounded-2xl'></div>
-              <div className='relative z-10'>
-                {/* Icon & Badges */}
-                <div className='flex items-center justify-between mb-6'>
-                  <div className='text-4xl'>⚡</div>
-                  <div className='flex gap-2'>
-                    <span className='px-3 py-1 bg-red-500 text-white text-sm font-bold rounded-full'>
-                      🔥 HOT
-                    </span>
-                    <span className='px-3 py-1 bg-green-500 text-white text-sm font-bold rounded-full'>
-                      NEW TODAY
-                    </span>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {/* Article 1: AI Edge Computing */}
           <Link href="/blog/ai-edge-computing-real-time-2025" className="group">
             <div className="relative bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:border-white/40 transition-all duration-500 hover:scale-105 h-full">
@@ -113,31 +99,11 @@ const NewestContent2025Banner = () => {
                     →
                   </span>
                 </div>
-                </div>
               </div>
             </div>
           </Link>
+
           {/* Article 2: Neural Networks */}
-          <Link href="/blog/ai-neural-networks-enterprise-transformation-2025" className="group">
-            <div className="bg-white/10 backdrop-blur-lg rounded-2xl border-2 border-white/20 hover:border-purple-400 transition-all duration-500 overflow-hidden hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/50">
-              <div className="absolute inset-0 bg-gradient-to-br from-purple-500/0 via-pink-500/0 to-purple-500/0 group-hover:from-purple-500/20 group-hover:via-pink-500/20 group-hover:to-purple-500/20 transition-all duration-500"></div>
-              <div>
-                <div>
-                  <div>
-                    🧠
-                  </div>
-                  <div>
-                    <div>
-                      <span>🔥</span>
-                      <span>HOT</span>
-                    </div>
-                    <span>
-                      NEW TODAY
-                    </span>
-                  </div>
-                </div>
-                <div className='mb-4'>
-                  <span className='inline-block px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-600 text-white text-sm font-semibold rounded-full'>
           <Link href="/blog/ai-neural-networks-enterprise-transformation-2025" className="group">
             <div className="relative bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:border-white/40 transition-all duration-500 hover:scale-105 h-full">
               <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-fuchsia-600/20 opacity-0 group-hover:opacity-100 transition-all duration-500 rounded-2xl"></div>
@@ -187,32 +153,12 @@ const NewestContent2025Banner = () => {
                   <span className='group-hover:translate-x-1 transition-transform'>
                     →
                   </span>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e4e
                 </div>
               </div>
             </div>
           </Link>
+
           {/* Article 3: Quantum Security */}
-          <Link href="/blog/ai-quantum-security-protocols-2026" className="group">
-            <div className="bg-white/10 backdrop-blur-lg rounded-2xl border-2 border-white/20 hover:border-indigo-400 transition-all duration-500 overflow-hidden hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-indigo-500/50 border-4 border-yellow-400/50">
-              <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/0 via-purple-500/0 to-indigo-500/0 group-hover:from-indigo-500/20 group-hover:via-purple-500/20 group-hover:to-indigo-500/20 transition-all duration-500"></div>
-              <div>
-                <div>
-                  <div>
-                    ⚛️
-                  </div>
-                  <div>
-                    <div>
-                      <span>🚨</span>
-                      <span>CRITICAL</span>
-                    </div>
-                    <span>
-                      NEW TODAY
-                    </span>
-                  </div>
-                </div>
-                <div className='mb-4'>
-                  <span className='inline-block px-4 py-2 bg-gradient-to-r from-red-500 to-orange-600 text-white text-sm font-semibold rounded-full'>
           <Link href="/blog/ai-quantum-security-protocols-2026" className="group">
             <div className="relative bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:border-white/40 transition-all duration-500 hover:scale-105 h-full">
               <div className="absolute inset-0 bg-gradient-to-br from-red-500/20 to-orange-600/20 opacity-0 group-hover:opacity-100 transition-all duration-500 rounded-2xl"></div>
@@ -266,12 +212,12 @@ const NewestContent2025Banner = () => {
                   <span className='group-hover:translate-x-1 transition-transform'>
                     →
                   </span>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e4e
                 </div>
               </div>
             </div>
           </Link>
         </div>
+
         {/* Call-to-Action Section */}
         <div className='text-center bg-white/5 backdrop-blur-lg rounded-3xl p-12 border border-white/20 mb-16'>
           <h3 className='text-4xl font-bold text-white mb-6'>
@@ -299,6 +245,7 @@ const NewestContent2025Banner = () => {
             </a>
           </div>
         </div>
+
         {/* Stats Section */}
         <div className='grid grid-cols-2 md:grid-cols-4 gap-8'>
           {[
@@ -319,4 +266,5 @@ const NewestContent2025Banner = () => {
     </section>
   );
 };
+
 export default NewestContent2025Banner;
