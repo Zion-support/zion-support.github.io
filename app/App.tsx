@@ -26,7 +26,7 @@ const App: React.FC = () => {
 
     // Initialize performance monitoring
     performanceOptimizer.lazyLoadImages();
-    performanceOptimizer.addCriticalResourceHints();
+    performanceOptimizer.preloadCriticalResources();
     
     // Initialize Web Vitals monitoring
     if (typeof window !== 'undefined' && 'performance' in window) {
