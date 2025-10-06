@@ -9,7 +9,7 @@ import AccessibilityEnhancer from '../src/components/AccessibilityEnhancer';
 import PerformanceDashboard from './components/PerformanceDashboard';
 
 // Pages
-import HomePage from './page';
+import HomePage from '../page';
 
 // Utils
 // import performanceOptimizer from '../src/utils/performanceOptimizer';
