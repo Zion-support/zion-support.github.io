@@ -1,4 +1,5 @@
 /**
+<<<<<<< HEAD
  * Banner Prioritization System
  *
  * Manages dynamic banner loading and prioritization based on:
@@ -9,16 +10,23 @@
  */
 
 export interface BannerMetadata {
+=======
+ * Banner Prioritization Utility
+ */
+export interface BannerPriority {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3fed
   id: string;
-  component: string;
   priority: number;
-  value: number; // In billions
-  publishDate: Date;
-  category: 'service' | 'case-study' | 'blog' | 'showcase';
-  isVisible: boolean;
-  loadStrategy: 'immediate' | 'lazy' | 'on-demand';
+  category: string;
 }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-d12c
 export class BannerPrioritizationEngine {
   private banners: Map<string, BannerMetadata> = new Map();
   private visibilityThreshold = 5; // Max banners to show above the fold
@@ -38,6 +46,8 @@ export class BannerPrioritizationEngine {
     if (!banner) return 0;
 
     const now = new Date();
+<<<<<<< HEAD
+<<<<<<< HEAD
     const daysSincePublish = (now.getTime() - banner.publishDate.getTime()) / (1000 * 60 * 60 * 24);
     
     // Recency factor (newer = higher priority)
@@ -64,6 +74,29 @@ export class BannerPrioritizationEngine {
     );
 
     return Math.round(priority);
+=======
+    const ageInDays = (now.getTime() - banner.publishDate.getTime()) / (1000 * 60 * 60 * 24);
+    
+    // Recency score (0-100): Newer content scores higher
+    const recencyScore = Math.max(0, 100 - ageInDays * 2);
+    
+    // Value score (0-100): Higher value content scores higher
+    const valueScore = Math.min(100, (banner.value / 100) * 100);
+    
+=======
+    const ageInDays =
+      (now.getTime() - banner.publishDate.getTime()) / (1000 * 60 * 60 * 24);
+
+    // Recency score (0-100): Newer content scores higher
+    const recencyScore = Math.max(0, 100 - ageInDays * 2);
+
+    // Value score (0-100): Higher value content scores higher
+    const valueScore = Math.min(100, (banner.value / 100) * 100);
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
+    // Weighted combination
+    return recencyScore * 0.6 + valueScore * 0.3 + banner.priority * 0.1;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
   }
 
   /**
@@ -75,16 +108,41 @@ export class BannerPrioritizationEngine {
         ...banner,
         priority: this.calculatePriority(banner.id)
       }))
+<<<<<<< HEAD
+<<<<<<< HEAD
       .sort((a, b) => b.priority - a.priority);
+=======
+      .sort((a, b) => b.dynamicPriority - a.dynamicPriority);
+
+    return limit ? sortedBanners.slice(0, limit) : sortedBanners;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
   }
 
   /**
    * Get visible banners (above the fold)
    */
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
   getVisibleBanners(): BannerMetadata[] {
     return this.getPrioritizedBanners()
       .slice(0, this.visibilityThreshold)
       .map(banner => ({ ...banner, isVisible: true }));
+=======
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ee0f
+  getBannersByLoadStrategy(strategy: 'immediate' | 'lazy' | 'on-demand'): BannerMetadata[] {
+    return Array.from(this.banners.values()).filter(banner => banner.loadStrategy === strategy && banner.isVisible);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f83
+=======
+  getBannersByLoadStrategy(strategy: 'immediate' | 'lazy' | 'on-demand'): BannerMetadata[] {
+    return Array.from(this.banners.values()).filter(
+      banner => banner.loadStrategy === strategy && banner.isVisible
+    );
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
   }
 
   /**
@@ -117,18 +175,42 @@ export class BannerPrioritizationEngine {
       .filter(banner => banner.loadStrategy === strategy && banner.isVisible);
   }
 
+=======
+      .sort((a, b) => b.dynamicPriority - a.dynamicPriority);
+
+    return limit ? sortedBanners.slice(0, limit) : sortedBanners;
+  }
+
   /**
-   * Update banner visibility based on performance metrics
+   * Get banners for immediate loading (above the fold)
    */
-  updateBannerVisibility(bannerId: string, isVisible: boolean): void {
-    const banner = this.banners.get(bannerId);
+  getImmediateBanners(): BannerMetadata[] {
+    return this.getPrioritizedBanners(this.visibilityThreshold)
+      .filter(banner => banner.loadStrategy === 'immediate');
+  }
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
+  /**
+   * Get banners for lazy loading
+   */
+  getLazyBanners(): BannerMetadata[] {
+    return this.getPrioritizedBanners()
+      .filter(banner => banner.loadStrategy === 'lazy');
+  }
+
+  /**
+   * Update banner visibility
+   */
+  updateBannerVisibility(id: string, isVisible: boolean): void {
+    const banner = this.banners.get(id);
     if (banner) {
       banner.isVisible = isVisible;
-      this.banners.set(bannerId, banner);
+      this.banners.set(id, banner);
     }
   }
 
   /**
+<<<<<<< HEAD
    * Remove banner
    */
   removeBanner(id: string): boolean {
@@ -187,3 +269,64 @@ export class BannerPrioritizationEngine {
 // Export singleton instance
 export const bannerPrioritizationEngine = new BannerPrioritizationEngine();
 export default BannerPrioritizationEngine;
+=======
+   * Get banner by ID
+   */
+  getBanner(id: string): BannerMetadata | undefined {
+    return this.banners.get(id);
+  }
+
+  /**
+   * Remove banner
+   */
+  removeBanner(id: string): boolean {
+    return this.banners.delete(id);
+  }
+
+  /**
+   * Get all banners
+   */
+  getAllBanners(): BannerMetadata[] {
+    return Array.from(this.banners.values());
+  }
+
+  /**
+   * Clear all banners
+   */
+  clear(): void {
+    this.banners.clear();
+  }
+}
+
+// Default instance
+export const bannerEngine = new BannerPrioritizationEngine();
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
+=======
+export class BannerPrioritizer {
+  private banners: BannerPriority[] = [];
+
+  addBanner(banner: BannerPriority): void {
+    this.banners.push(banner);
+    this.sortBanners();
+  }
+
+  removeBanner(id: string): void {
+    this.banners = this.banners.filter(banner => banner.id !== id);
+  }
+
+  getBanners(): BannerPriority[] {
+    return [...this.banners];
+  }
+
+  getBannersByCategory(category: string): BannerPriority[] {
+    return this.banners.filter(banner => banner.category === category);
+  }
+
+  private sortBanners(): void {
+    this.banners.sort((a, b) => b.priority - a.priority);
+  }
+}
+
+export const bannerPrioritizer = new BannerPrioritizer();
+export default bannerPrioritizer;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3fed

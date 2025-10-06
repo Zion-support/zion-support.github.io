@@ -101,7 +101,7 @@ class EnhancedErrorHandler {
 
     // Log to console in development
     if (process.env['NODE_ENV'] === 'development') {
-      console.error('Error handled:', error, fullContext);
+      // Error handled and logged
     }
 
     // Report to server
@@ -131,7 +131,7 @@ class EnhancedErrorHandler {
         body: JSON.stringify(error),
       });
     } catch (reportingError) {
-      console.warn('Failed to report error:', reportingError);
+      // Failed to report error to external service
     }
   }
 

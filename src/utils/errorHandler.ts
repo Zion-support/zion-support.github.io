@@ -1,7 +1,7 @@
 /**
- * Centralized Error Handling Utility
- * Provides comprehensive error handling and reporting for the application
+ * Error handling utilities
  */
+<<<<<<< HEAD
 export interface ErrorContext {
   component?: string | undefined;
   action?: string | undefined;
@@ -44,7 +44,11 @@ class ErrorHandler {
       this.errorQueue.shift();
     }
     // Log to console in development
+<<<<<<< HEAD
     if (process.env.NODE_ENV === 'development') {
+=======
+    if (process.env['NODE_ENV'] === 'development') {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-e98c
       // Error logged
     }
     // Send to external service in production
@@ -59,7 +63,11 @@ class ErrorHandler {
     try {
       // In a real application, you would send to services like Sentry, LogRocket, etc.
       // For now, we'll just log to console
+<<<<<<< HEAD
       // Error report
+=======
+      // Error report generated
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-e98c
     } catch (err) {
       // Failed to send error report
     }
@@ -116,3 +124,17 @@ if (typeof window !== 'undefined') {
   errorHandler.setupGlobalHandlers();
 }
 export default errorHandler;
+=======
+
+export const errorHandler = {
+  log: (error: Error, context?: string) => {
+    console.error('Error:', error.message, context ? `Context: ${context}` : '');
+    // In a real implementation, this would send error data to monitoring service
+  },
+  
+  report: (error: Error, context?: string) => {
+    console.error('Error reported:', error.message, context ? `Context: ${context}` : '');
+    // In a real implementation, this would send error data to error reporting service
+  }
+};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854

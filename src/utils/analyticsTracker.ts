@@ -4,5 +4,5 @@
  */
 
 export const trackBannerInteraction = (bannerId: string, action: string): void => {
-  console.log('Banner interaction tracked:', { bannerId, action });
+  // Banner interaction tracked
 };

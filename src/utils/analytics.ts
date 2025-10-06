@@ -1,14 +1,14 @@
 /**
- * Analytics and Tracking Utility
- * Provides comprehensive analytics tracking for the application
+ * Analytics utility for tracking events and performance
  */
+<<<<<<< HEAD
 export interface AnalyticsEvent {
   name: string;
   category: string;
   action?: string | undefined;
   label?: string | undefined;
   value?: number | undefined;
-  properties?: Record<string, any> | undefined;
+  properties?: Record<string, unknown> | undefined;
   timestamp: number;
 }
 export interface UserProperties {
@@ -62,23 +62,58 @@ class Analytics {
     action?: string,
     label?: string,
     value?: number,
-    properties?: Record<string, any>
+    properties?: Record<string, unknown>
   ): void {
     const event: AnalyticsEvent = {
       name,
       category,
+<<<<<<< HEAD
+      action: action || undefined,
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
       action: action || '',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
       label: label || undefined,
+<<<<<<< HEAD
+<<<<<<< HEAD
       value: value || 0,
       properties: properties || {},
+=======
+<<<<<<< HEAD
+      value,
+      properties,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-02dd
+=======
+      value: value || undefined,
+      properties: properties || undefined,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-8da8
+=======
+>>>>>>> main
+      action: action || undefined,
+      label: label || undefined,
+      value: value || undefined,
+      properties: properties || undefined,
+<<<<<<< HEAD
+=======
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
       timestamp: Date.now(),
     };
     this.events.push(event);
     // Send to analytics service
     this.sendToAnalytics(event);
     // Log in development
+<<<<<<< HEAD
     if (process.env.NODE_ENV === 'development') {
       // Analytics event logged
+=======
+    if (process.env['NODE_ENV'] === 'development') {
+      // Analytics event tracked
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-e98c
     }
   }
   /**
@@ -112,7 +147,7 @@ class Analytics {
   public trackBusinessEvent(
     event: string,
     value?: number,
-    properties?: Record<string, any>
+    properties?: Record<string, unknown>
   ): void {
     this.track(event, 'business', 'event', undefined, value, properties);
   }
@@ -123,7 +158,11 @@ class Analytics {
     try {
       // In a real application, you would send to services like Google Analytics, Mixpanel, etc.
       // For now, we'll just log to console
+<<<<<<< HEAD
       // Analytics event sent
+=======
+      // Analytics event sent successfully
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-e98c
     } catch (err) {
       // Failed to send analytics event
     }
@@ -162,3 +201,17 @@ class Analytics {
 // Create singleton instance
 export const analytics = new Analytics();
 export default analytics;
+=======
+
+export const analytics = {
+  track: (event: string, category: string, action: string, label?: string, value?: number) => {
+    console.log('Analytics:', { event, category, action, label, value });
+    // In a real implementation, this would send data to analytics service
+  },
+  
+  trackPerformance: (name: string, value: number, unit: string = 'ms') => {
+    console.log(`Performance: ${name} = ${value}${unit}`);
+    // In a real implementation, this would send performance data to analytics
+  }
+};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854

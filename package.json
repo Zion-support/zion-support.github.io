@@ -109,7 +109,23 @@
     "@esbuild/linux-x64": "^0.25.10",
     "@heroicons/react": "^2.2.0",
     "@tailwindcss/postcss": "^4.1.13",
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
     "@types/uuid": "^11.0.0",
+=======
+    "@types/uuid": "^10.0.0",
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3fed
+=======
+    "@types/uuid": "^11.0.0",
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-efe9
+=======
+    "@types/uuid": "^10.0.0",
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
+=======
+    "@types/uuid": "^11.0.0",
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6abd
     "clsx": "^2.1.1",
     "esbuild": "^0.25.10",
     "framer-motion": "^12.23.22",
@@ -162,7 +178,10 @@
     "jest-environment-jsdom": "^30.2.0",
     "jest-esbuild": "^0.4.0",
     "lighthouse": "^12.8.2",
+<<<<<<< HEAD
     "lightningcss": "^1.30.2",
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
     "lightningcss-linux-x64-gnu": "^1.30.2",
     "netlify-plugin-cloudinary": "1.17.0",
     "postcss": "^8.5.0",
