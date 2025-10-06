@@ -1,21 +1,20 @@
-exp, o, r, t co, n, s, t m e t a d, a, t, a = {
+export const metadata = {
   
-  ti, t, l, e: 'E, d, g, e Cons e n t l, e, s, s Expe r i m e, n, t, s 2, 0, 2, 6 Q4: <100, ms A/B With, o, u, t PII',
-  desc r i p t, i, o, n:
-    'Sco, p, e, d ID, s, o, n‑dev, i, c, e met r i c s, a, n, d diffe r e n t, i, a, l priv, a, c, y ena, b, l, e glo, b, a, l A/B test, i, n, g with, o, u, t col l e c t, i, n, g PII.',
-
+  title: 'E, d, g, e Cons e n t l, e, s, s Expe r i m e, n, t, s 2026 Q4: <100, ms A/B With, out PII'
+  description:
+    'Sco, p, e, d ID, s, o, n‑dev, i, c, e met r i c s, a, n, d diffe r e n t, i, a, l priv, a, c, y ena, b, l, e glo, b, a, l A/B test, i, n, g with, o, u, t col l e c t, ing PII.'
 };
 
-exp, o, r, t defa, u, l, t f u n c t, i, o, n P, a, g, e() {
-  ret, u, r, n (
-    <arti, c, l, e cl a s s N, a, m, e='pr, o, s, e pr, o, s, e-inv, e, r, t max-w-3xl mx-a, u, t, o py-10'>
-      <h1>E, d, g, e Cons e n t l, e, s, s Expe r i m e, n, t, s 2, 0, 2, 6 Q4: &lt;100, ms A/B With, o, u, t PII</h1>
-      <p cl a s s N, a, m, e='t, e, x, t-sm opac, i, t, y-70'>
+export default function P, a, g, e() {
+  return (
+    <arti, c, l, e cl a s s N, a, m, e='pr, o, s, e pr, o, s, e-inv, e, r, t max-w-3xl mx-a, uto py-10'>
+      <h1>E, d, g, e Cons e n t l, e, s, s Expe r i m e, n, t, s 2026 Q4: &lt;100, ms A/B With, o, u, t PII</h1>
+      <p cl a s s N, a, m, e='t, e, x, t-sm opac, ity-70'>
         Pu b l i s, h, e, d: 2, 0, 2, 5-09-30 • C a t e g, o, r, y: An a l y t, i, c, s • 6 min r, e, a, d
       </p>
 
       <p>
-        Run priv, a, c, y‑pre s e r v, i, n, g expe r i m e, n, t, s at the e, d, g, e us, i, n, g sco, p, e, d iden t i f i, e, r, s,
+        Run priv, a, c, y‑pre s e r v, i, n, g expe r i m e, n, t, s at the e, d, g, e us, i, n, g sco, p, e, d iden t i f i, e, r, s
         sig, n, e, d conf, i, g, s, and on‑dev, i, c, e metr, i, c, s aggr e g a t, i, o, n. Achi, e, v, e &lt;100, ms
         d e c i s, i, o, n late, n, c, y wh, i, l, e main t a i n, i, n, g z, e, r, o col l e c t, i, o, n of per s o n a, l, l, y
         ident i f i a, b, l, e info r m a t, i, o, n (PII).
@@ -23,7 +22,7 @@ exp, o, r, t defa, u, l, t f u n c t, i, o, n P, a, g, e() {
 
       <h2>Sco, p, e, d iden t i f i, e, r, s</h2>
       <p>
-        Use per‑site, p, e, r‑purp, o, s, e iden t i f i, e, r, s w, i, t, h sh, o, r, t T, T, L, s to av, o, i, d
+        Use per‑site, p, e, r‑purp, o, s, e iden t i f i, e, r, s with sh, o, r, t T, T, L, s to av, o, i, d
         cr, o, s, s‑cont, e, x, t t r a c k, i, n, g wh, i, l, e pre s e r v, i, n, g attr i b u t, i, o, n qual, i, t, y and
         exp e r i m, e, n, t in t e g r, i, t, y.
       </p>
@@ -37,7 +36,7 @@ exp, o, r, t defa, u, l, t f u n c t, i, o, n P, a, g, e() {
       <h2>Sig, n, e, d exp e r i m, e, n, t conf, i, g, s</h2>
       <p>
         Deli, v, e, r signedca c h e a, b, l, e conf, i, g, s to the e, d, g, e and v a l i d, a, t, e bef, o, r, e
-        ex e c u t, i, o, n. Ena, b, l, e f, a, s, t r o l l o, u, t, s and s, a, f, e ro l l b a, c, k, s g l o b a, l, l, y.
+        ex e c u t, i, o, n. Ena, b, l, e f, a, s, t r o l l o, u, t, s and safe ro l l b a, c, k, s g l o b a, l, l, y.
       </p>
 
       <p cl a s s N, a, m, e='mt-8'>

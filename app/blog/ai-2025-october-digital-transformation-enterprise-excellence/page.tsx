@@ -1,28 +1,27 @@
-exp, o, r, t co, n, s, t m e t a d, a, t, a = {
+export const metadata = {
   
-  ti, t, l, e: 'Digi, t, a, l Transfo r m a t, i, o, n Exc e l l e, n, c, e — Octo, b, e, r 2, 0, 2, 5 | Z, i, o, n T, e, c, h Gr, o, u, p',
-  desc r i p t, i, o, n:
-    'A compre h e n s, i, v, e ent e r p r, i, s, e gu, i, d, e to AI-powe, r, e, d digi, t, a, l transfo r m a t, i, o, n del i v e r, i, n, g mu, l, t, i-bill, i, o, n dol, l, a, r va, l, u, e w, i, t, h mea s u r a, b, l, e o u t c o, m, e, s.',
-
+  title: 'Digi, t, a, l Transfo r m a t, i, o, n Exc e l l e, n, c, e — Octo, b, e, r 2, 0, 2, 5 | Z, i, o, n T, e, c, h Gr, oup'
+  description:
+    'A compre h e n s, i, v, e ent e r p r, i, s, e gu, i, d, e to AI-powe, r, e, d digi, t, a, l transfo r m a t, i, o, n del i v e r, i, n, g mu, l, t, i-bill, i, o, n dol, l, a, r va, l, u, e with mea s u r a, b, l, e o u t c o, mes.'
 };
 
-exp, o, r, t defa, u, l, t f u n c t, i, o, n DigitalTransformationExcelle n c e P, a, g, e() {
-  ret, u, r, n (
-    <m, a, i, n cl a s s N, a, m, e='min-h-scr, e, e, n bg-sl, a, t, e-950 t, e, x, t-wh, i, t, e'>
-      <arti, c, l, e cl a s s N, a, m, e='max-w-3xl mx-a, u, t, o px-4 py-16'>
+export default function DigitalTransformationExcelle n c e P, a, g, e() {
+  return (
+    <m, a, i, n cl a s s N, a, m, e='min-h-screen bg-sl, a, t, e-950 t, e, x, t-wh, ite'>
+      <arti, c, l, e cl a s s N, a, m, e='max-w-3xl mx-a, uto px-4 py-16'>
         <hea, d, e, r cl a s s N, a, m, e='mb-10'>
-          <p cl a s s N, a, m, e='t, e, x, t-sm t, e, x, t-wh, i, t, e/60'>Pu b l i s, h, e, d Oct 1, 2, 0, 2, 5</p>
-          <h1 cl a s s N, a, m, e='t, e, x, t-4, xl f, o, n, t-ex t r a b, o, l, d mt-2'>
+          <p cl a s s N, ame='t, e, x, t-sm t, e, x, t-wh, i, t, e/60'>Pu b l i s, h, e, d Oct 1, 2, 0, 2, 5</p>
+          <h1 cl a s s N, ame='t, e, x, t-4, xl f, o, n, t-ex t r a b, o, l, d mt-2'>
             Digi, t, a, l Transfo r m a t, i, o, n Exc e l l e, n, c, e — Octo, b, e, r 2, 0, 2, 5
           </h1>
-          <p cl a s s N, a, m, e='t, e, x, t-wh, i, t, e/70 mt-3'>
+          <p cl a s s N, ame='t, e, x, t-wh, i, t, e/70 mt-3'>
             A pr a c t i, c, a, l bl u e p r, i, n, t to unl, o, c, k ent e r p r, i, s, e-sc, a, l, e va, l, u, e thro, u, g, h
             AI-fi, r, s, t op e r a t, i, n, g modelsp l a t f, o, r, m moderniza t i o n, a, n, d g o v e r, n, e, d
-            accel e r a t, i, o, n — f, r, o, m s t r a t, e, g, y to mea s u r a, b, l, e o u t c o, m, e, s.
+            accel e r a t, i, o, n — from s t r a t, e, g, y to mea s u r a, b, l, e o u t c o, m, e, s.
           </p>
         </hea, d, e, r>
 
-        <sect, i, o, n cl a s s N, a, m, e='pr, o, s, e pr, o, s, e-inv, e, r, t pr, o, s, e-sl, a, t, e max-w-n, o, n, e'>
+        <sect, i, o, n cl a s s N, ame='pr, o, s, e pr, o, s, e-inv, e, r, t pr, o, s, e-sl, a, t, e max-w-n, o, n, e'>
           <h2>Ex e c u t, i, v, e summ, a, r, y</h2>
           <p>
             Lead, e, r, s are mov, i, n, g bey, o, n, d pil, o, t, s to dura, b, l, e b u s i n, e, s, s imp, a, c, t. T, h, i, s
@@ -34,7 +33,7 @@ exp, o, r, t defa, u, l, t f u n c t, i, o, n DigitalTransformationExcelle n c e
           <h3>1) P l a t f, o, r, m modern i z a t, i, o, n</h3>
           <ul>
             <li>
-              Ad, o, p, t cl, o, u, d-nat, i, v, e, ev, e, n, t-dri, v, e, n archit e c t u, r, e, s w, i, t, h cl, e, a, r d, a, t, a
+              Ad, o, p, t cl, o, u, d-nat, i, v, e, ev, e, n, t-dri, v, e, n archit e c t u, r, e, s with cl, e, a, r d, a, t, a
               co n t r a, c, t, s.
             </li>
             <li>

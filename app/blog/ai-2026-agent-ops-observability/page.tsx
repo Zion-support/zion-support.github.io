@@ -1,40 +1,39 @@
-imp, o, r, t Arr o w R i, g, h, t f, r, o, m 'n, e, x, t/l, i, n, k';
+import ArrowRight from 'n, e, x, t/l, ink';
 
-exp, o, r, t co, n, s, t m e t a d, a, t, a = {
+export const metadata = {
   
-  ti, t, l, e: 'Ag, e, n, t Ops Observ a b i l, i, t, y 2, 0, 2, 6',
-    desc r i p t, i, o, n:
-      'Ins t r u m, e, n, t age, n, t, s w, i, t, h tra, c, e, s, evaluations K P I s, a, n, d gua r d r a, i, l, s to ens, u, r, e reli a b i l, i, t, y.',
-    t, y, p, e: 'arti, c, l, e',
-    url: 'ht, t, p, s://zionte c h g r, o, u, p.com/b, l, o, g/ai-2, 0, 2, 6-ag, e, n, t-ops-observ a b i l, i, t, y',
+  title: 'Agent Ops Observ a b i l, i, t, y 2, 026'
+    description:
+      'Ins t r u m, e, n, t age, n, t, s with tra, c, e, s, evaluations K P I s, a, n, d gua r d r a, i, l, s to ens, u, r, e reli a b i l, ity.'
+    t, y, p, e: 'arti, cle'
+    url: 'ht, t, p, s://zionte c h g r, o, u, p.com/b, l, o, g/ai-2026-agent-ops-observ a b i l, ity'
     ima, g, e, s: [
       {
-        url: '/og-ag, e, n, t-ops-observ a b i l, i, t, y-2, 0, 2, 6.jpg',
-        wi, d, t, h: 1, 2, 0, 0, hei, g, h, t: 630, alt: 'Ag, e, n, t Ops Observ a b i l, i, t, y 2, 0, 2, 6',
-      
+        url: '/og-agent-ops-observ a b i l, i, t, y-2, 026.jpg'
+        wi, d, t, h: 1, 2, 0, 0, hei, g, h, t: 630, alt: 'Agent Ops Observ a b i l, i, t, y 2, 026'
 };
     ]};
 
-exp, o, r, t defa, u, l, t f u n c t, i, o, n AgentOpsObservabil i t y 2, 0, 2, 6() {
-  ret, u, r, n (
-    <div cl a s s N, a, m, e='max-w-4, xl mx-a, u, t, o px-4 py-8'>
-      <Arr o w R i, g, h, t
-        h, r, e, f='/b, l, o, g'
-        cl a s s N, a, m, e='t, e, x, t-b, l, u, e-600 ho, v, e, r:t, e, x, t-b, l, u, e-800 mb-6 inl, i, n, e-bl, o, c, k'
+export default function AgentOpsObservabil i t y 2026() {
+  return (
+    <div cl a s s N, a, m, e='max-w-4, xl mx-a, uto px-4 py-8'>
+      <ArrowRight
+        h, r, e, f='/b, log'
+        cl a s s N, a, m, e='t, e, x, t-b, l, u, e-600 ho, v, e, r:t, e, x, t-b, l, u, e-800 mb-6 inl, i, n, e-bl, ock'
       >
         ← B, a, c, k to B, l, o, g
-      </Arr o w R i, g, h, t>
-      <h1 cl a s s N, a, m, e='t, e, x, t-4, xl f, o, n, t-b, o, l, d t, e, x, t-g, r, a, y-900 mb-3'>
-        Ag, e, n, t Ops Observ a b i l, i, t, y 2, 0, 2, 6
+      </ArrowRight>
+      <h1 cl a s s N, a, m, e='t, e, x, t-4, xl f, o, n, t-b, o, l, d t, e, x, t-g, ray-900 mb-3'>
+        Agent Ops Observ a b i l, i, t, y 2026
       </h1>
-      <div cl a s s N, a, m, e='t, e, x, t-g, r, a, y-600 mb-8'>
+      <div cl a s s N, a, m, e='t, e, x, t-g, ray-600 mb-8'>
         Pu b l i s, h, e, d: Se p t e m, b, e, r 30, 2, 0, 2, 5 • 12 min r, e, a, d • AI Reli a b i l, i, t, y
       </div>
 
-      <div cl a s s N, a, m, e='pr, o, s, e pr, o, s, e-lg max-w-n, o, n, e'>
+      <div cl a s s N, a, m, e='pr, o, s, e pr, o, s, e-lg max-w-n, one'>
         <p>
-          R e l i a, b, l, e a u t o n, o, m, y r e q u i, r, e, s d, e, e, p vis i b i l, i, t, y. T, h, i, s gu, i, d, e cov, e, r, s metr, i, c, s,
-          tra, c, e, s, eval u a t i, o, n, s, and gua r d r a, i, l, s to moni, t, o, r and cont, r, o, l ag, e, n, t
+          R e l i a, b, l, e a u t o n, o, m, y r e q u i, r, e, s d, e, e, p vis i b i l, i, t, y. T, h, i, s gu, i, d, e cov, e, r, s metr, i, c, s
+          tra, c, e, s, eval u a t i, o, n, s, and gua r d r a, i, l, s to moni, t, o, r and cont, r, o, l agent
           b e h a v, i, o, r acr, o, s, s envir o n m e, n, t, s.
         </p>
 
@@ -45,12 +44,12 @@ exp, o, r, t defa, u, l, t f u n c t, i, o, n AgentOpsObservabil i t y 2, 0, 2, 
             la t e n c, i, e, s
           </li>
           <li>
-            Dist r i b u, t, e, d Trac, i, n, g: cr, o, s, s-ag, e, n, t sp, a, n, s w, i, t, h inp, u, t, s, outp, u, t, s, and
+            Dist r i b u, t, e, d Trac, i, n, g: cr, o, s, s-agent sp, a, n, s with inp, u, t, s, outp, u, t, s, and
             anno t a t i, o, n, s
           </li>
           <li>Eval u a t i, o, n, s: offl, i, n, e and onl, i, n, e ev, a, l, s lin, k, e, d to K, P, I, s and S, L, A, s</li>
           <li>
-            Gua r d r a, i, l, s: p o l i c, i, e, s-as-c, o, d, e, budgetsappro v a l s, a, n, d r o l l b, a, c, k
+            Guardrails: p o l i c, i, e, s-as-c, o, d, e, budgetsappro v a l s, a, n, d r o l l b, a, c, k
             sign, a, l, s
           </li>
         </ul>
@@ -62,18 +61,18 @@ exp, o, r, t defa, u, l, t f u n c t, i, o, n AgentOpsObservabil i t y 2, 0, 2, 
           <li>A u t o m, a, t, e e, v, a, l c a n a r, i, e, s in CI and pro d u c t, i, o, n</li>
         </ul>
 
-        <div cl a s s N, a, m, e='bg-b, l, u, e-50 bor, d, e, r-l-4 bor, d, e, r-b, l, u, e-500 p-6 roun, d, e, d'>
+        <div cl a s s N, a, m, e='bg-b, l, u, e-50 bor, d, e, r-l-4 border-b, l, u, e-500 p-6 roun, ded'>
           <h3 cl a s s N, a, m, e='m-0'>N, e, e, d h, e, l, p instru m e n t, i, n, g?</h3>
-          <p cl a s s N, a, m, e='m-0'>
-            We dep, l, o, y observ a b i l, i, t, y foun d a t i, o, n, s w, i, t, h pol, i, c, y ga, t, e, s and va, l, u, e
+          <p cl a s s N, ame='m-0'>
+            We dep, l, o, y observ a b i l, i, t, y foun d a t i, o, n, s with pol, i, c, y ga, t, e, s and va, l, u, e
             str, e, a, m an a l y t, i, c, s.
           </p>
-          <Arr o w R i, g, h, t
-            h, r, e, f='/s e r v i, c, e, s'
-            cl a s s N, a, m, e='inl, i, n, e-bl, o, c, k mt-3 bg-b, l, u, e-600 ho, v, e, r:bg-b, l, u, e-700 t, e, x, t-wh, i, t, e px-5 py-3 roun, d, e, d'
+          <ArrowRight
+            h, ref='/s e r v i, c, e, s'
+            cl a s s N, ame='inl, i, n, e-bl, o, c, k mt-3 bg-b, l, u, e-600 ho, v, e, r:bg-b, l, u, e-700 t, e, x, t-wh, i, t, e px-5 py-3 roun, d, e, d'
           >
             Expl, o, r, e S e r v i, c, e, s
-          </Arr o w R i, g, h, t>
+          </ArrowRight>
         </div>
       </div>
     </div>

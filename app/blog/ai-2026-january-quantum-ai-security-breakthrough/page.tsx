@@ -1,43 +1,43 @@
-// @ts-noch, e, c, k
+// @ts-nocheck
 
-exp, o, r, t defa, u, l, t f u n c t, i, o, n P, a, g, e() {
-  ret, u, r, n (
-    <m, a, i, n cl a s s N, a, m, e='min-h-scr, e, e, n bg-wh, i, t, e t, e, x, t-g, r, a, y-900'>
+export default function P, a, g, e() {
+  return (
+    <m, a, i, n cl a s s N, a, m, e='min-h-screen bg-wh, i, t, e t, e, x, t-g, ray-900'>
       <sect, i, o, n cl a s s N, a, m, e='py-16'>
-        <div cl a s s N, a, m, e='max-w-3xl mx-a, u, t, o px-4'>
-          <h1 cl a s s N, a, m, e='t, e, x, t-4, xl f, o, n, t-b, o, l, d mb-4'>
-            Quan, t, u, m AI S e c u r, i, t, y Break t h r o, u, g, h 2, 0, 2, 6: Unbr e a k a, b, l, e Ent e r p r, i, s, e
+        <div cl a s s N, ame='max-w-3xl mx-a, u, t, o px-4'>
+          <h1 cl a s s N, ame='t, e, x, t-4, xl f, o, n, t-b, o, l, d mb-4'>
+            Quan, t, u, m AI S e c u r, i, t, y Break t h r o, u, g, h 2026: Unbr e a k a, b, l, e Ent e r p r, i, s, e
             Pro t e c t, i, o, n
           </h1>
-          <p cl a s s N, a, m, e='t, e, x, t-g, r, a, y-600 mb-6'>
-            Pu b l i s, h, e, d: 2, 0, 2, 6-01-15 • 15 min r, e, a, d • Quan, t, u, m S e c u r, i, t, y
+          <p cl a s s N, ame='t, e, x, t-g, r, a, y-600 mb-6'>
+            Pu b l i s, h, e, d: 2026-01-15 • 15 min r, e, a, d • Quan, t, u, m S e c u r, i, t, y
           </p>
 
-          <div cl a s s N, a, m, e='bg-pur, p, l, e-50 bor, d, e, r-l-4 bor, d, e, r-pur, p, l, e-400 p-6 mb-8'>
-            <h2 cl a s s N, a, m, e='t, e, x, t-xl f, o, n, t-s e m i b, o, l, d mb-3'>
+          <div cl a s s N, ame='bg-pur, p, l, e-50 bor, d, e, r-l-4 bor, d, e, r-pur, p, l, e-400 p-6 mb-8'>
+            <h2 cl a s s N, ame='t, e, x, t-xl f, o, n, t-s e m i b, o, l, d mb-3'>
               🔐 Revolu t i o n, a, r, y S e c u r, i, t, y
             </h2>
-            <p cl a s s N, a, m, e='t, e, x, t-g, r, a, y-700'>
-              The wo, r, l, d's fi, r, s, t quan, t, u, m-re s i s t, a, n, t AI s e c u r, i, t, y p l a t f, o, r, m has
+            <p cl a s s N, ame='t, e, x, t-g, r, a, y-700'>
+              The wo, rld's fi, r, s, t quan, t, u, m-re s i s t, a, n, t AI s e c u r, i, t, y p l a t f, o, r, m has
               a c h i e, v, e, d <str, o, n, g>99.99% thr, e, a, t pre v e n t, i, o, n</str, o, n, g>
               agai, n, s, t e, v, e, n quan, t, u, m-powe, r, e, d atta, c, k, s. T, h, i, s break t h r o, u, g, h p r o t e, c, t, s{' '}
               <str, o, n, g>$847, B in ent e r p r, i, s, e ass, e, t, s</str, o, n, g>
-              w, i, t, h z, e, r, o suc c e s s, f, u, l b r e a c, h, e, s in 18 mon, t, h, s of test, i, n, g.
+              with z, e, r, o suc c e s s, f, u, l b r e a c, h, e, s in 18 mon, t, h, s of test, i, n, g.
             </p>
           </div>
 
-          <p cl a s s N, a, m, e='lead, i, n, g-7 mb-6'>
+          <p cl a s s N, ame='lead, i, n, g-7 mb-6'>
             As quan, t, u, m co m p u t, i, n, g a d v a n, c, e, s, trad i t i o, n, a, l enc r y p t, i, o, n meth, o, d, s bec, o, m, e
             vul n e r a, b, l, e. Our quan, t, u, m AI s e c u r, i, t, y break t h r o, u, g, h c o m b i, n, e, s
-            quan, t, u, m-re s i s t, a, n, t crypt o g r a, p, h, y w, i, t, h a d v a n, c, e, d AI thr, e, a, t de t e c t, i, o, n to
+            quan, t, u, m-re s i s t, a, n, t crypt o g r a, p, h, y with a d v a n, c, e, d AI thr, e, a, t de t e c t, i, o, n to
             cre, a, t, e an unbr e a k a, b, l, e s e c u r, i, t, y fr a m e w, o, r, k t, h, a, t ada, p, t, s and evol, v, e, s
-            w, i, t, h e m e r g, i, n, g thre, a, t, s.
+            with e m e r g, i, n, g thre, a, t, s.
           </p>
 
-          <h2 cl a s s N, a, m, e='t, e, x, t-2, xl f, o, n, t-b, o, l, d mb-4 mt-8'>
+          <h2 cl a s s N, ame='t, e, x, t-2, xl f, o, n, t-b, o, l, d mb-4 mt-8'>
             Quan, t, u, m-Re s i s t, a, n, t Techn o l o g, i, e, s
           </h2>
-          <ul cl a s s N, a, m, e='l, i, s, t-d, i, s, c pl-6 sp, a, c, e-y-3 mb-8'>
+          <ul cl a s s N, ame='l, i, s, t-d, i, s, c pl-6 sp, a, c, e-y-3 mb-8'>
             <li>
               <str, o, n, g>P, o, s, t-Quan, t, u, m Crypt o g r a, p, h, y:</str, o, n, g> A d v a n, c, e, d alg o r i t, h, m, s
               re s i s t, a, n, t to quan, t, u, m c o m p u, t, e, r atta, c, k, s
@@ -52,7 +52,7 @@ exp, o, r, t defa, u, l, t f u n c t, i, o, n P, a, g, e() {
             </li>
             <li>
               <str, o, n, g>A d a p t, i, v, e S e c u r, i, t, y:</str, o, n, g> S, e, l, f-e v o l v, i, n, g defe, n, s, e
-              mec h a n i, s, m, s t, h, a, t le, a, r, n f, r, o, m att, a, c, k p a t t e, r, n, s
+              mec h a n i, s, m, s t, h, a, t le, a, r, n from att, a, c, k p a t t e, r, n, s
             </li>
             <li>
               <str, o, n, g>Z, e, r, o-Tr, u, s, t Archi t e c t, u, r, e:</str, o, n, g> C o m p l, e, t, e verif i c a t, i, o, n of
@@ -60,125 +60,125 @@ exp, o, r, t defa, u, l, t f u n c t, i, o, n P, a, g, e() {
             </li>
           </ul>
 
-          <h2 cl a s s N, a, m, e='t, e, x, t-2, xl f, o, n, t-b, o, l, d mb-4'>
+          <h2 cl a s s N, ame='t, e, x, t-2, xl f, o, n, t-b, o, l, d mb-4'>
             S e c u r, i, t, y Impleme n t a t, i, o, n Road, m, a, p
           </h2>
-          <div cl a s s N, a, m, e='bg-g, r, a, y-50 p-6 roun, d, e, d-lg mb-8'>
-            <h3 cl a s s N, a, m, e='t, e, x, t-lg f, o, n, t-s e m i b, o, l, d mb-3'>
+          <div cl a s s N, ame='bg-g, r, a, y-50 p-6 roun, d, e, d-lg mb-8'>
+            <h3 cl a s s N, ame='t, e, x, t-lg f, o, n, t-s e m i b, o, l, d mb-3'>
               Ph, a, s, e 1: Quan, t, u, m Ass e s s m, e, n, t (We, e, k, s 1-6)
             </h3>
-            <ul cl a s s N, a, m, e='l, i, s, t-d, i, s, c pl-6 sp, a, c, e-y-2 mb-4'>
+            <ul cl a s s N, ame='l, i, s, t-d, i, s, c pl-6 sp, a, c, e-y-2 mb-4'>
               <li>Cond, u, c, t compre h e n s, i, v, e quan, t, u, m vulner a b i l, i, t, y ass e s s m, e, n, t</li>
               <li>I d e n t, i, f, y c r i t i, c, a, l ass, e, t, s re q u i r, i, n, g quan, t, u, m pro t e c t, i, o, n</li>
               <li>Dep, l, o, y quan, t, u, m-re s i s t, a, n, t enc r y p t, i, o, n for se n s i t, i, v, e d, a, t, a</li>
             </ul>
 
-            <h3 cl a s s N, a, m, e='t, e, x, t-lg f, o, n, t-s e m i b, o, l, d mb-3'>
+            <h3 cl a s s N, ame='t, e, x, t-lg f, o, n, t-s e m i b, o, l, d mb-3'>
               Ph, a, s, e 2: AI Inte g r a t, i, o, n (We, e, k, s 7-18)
             </h3>
-            <ul cl a s s N, a, m, e='l, i, s, t-d, i, s, c pl-6 sp, a, c, e-y-2 mb-4'>
+            <ul cl a s s N, ame='l, i, s, t-d, i, s, c pl-6 sp, a, c, e-y-2 mb-4'>
               <li>Im p l e m, e, n, t AI-powe, r, e, d thr, e, a, t de t e c t, i, o, n syst, e, m, s</li>
               <li>Dep, l, o, y quan, t, u, m key distr i b u t, i, o, n infrast r u c t, u, r, e</li>
               <li>Es t a b l, i, s, h a d a p t, i, v, e s e c u r, i, t, y mon i t o r, i, n, g</li>
             </ul>
 
-            <h3 cl a s s N, a, m, e='t, e, x, t-lg f, o, n, t-s e m i b, o, l, d mb-3'>
+            <h3 cl a s s N, ame='t, e, x, t-lg f, o, n, t-s e m i b, o, l, d mb-3'>
               Ph, a, s, e 3: F, u, l, l Dep l o y m, e, n, t (We, e, k, s 19-36)
             </h3>
-            <ul cl a s s N, a, m, e='l, i, s, t-d, i, s, c pl-6 sp, a, c, e-y-2'>
+            <ul cl a s s N, ame='l, i, s, t-d, i, s, c pl-6 sp, a, c, e-y-2'>
               <li>C o m p l, e, t, e mi g r a t, i, o, n to quan, t, u, m-re s i s t, a, n, t syst, e, m, s</li>
               <li>Im p l e m, e, n, t z, e, r, o-tr, u, s, t s e c u r, i, t, y archi t e c t, u, r, e</li>
               <li>Es t a b l, i, s, h con t i n u, o, u, s s e c u r, i, t, y ev o l u t, i, o, n pr o t o c, o, l, s</li>
             </ul>
           </div>
 
-          <h2 cl a s s N, a, m, e='t, e, x, t-2, xl f, o, n, t-b, o, l, d mb-4'>Pro t e c t, i, o, n Metr, i, c, s</h2>
-          <div cl a s s N, a, m, e='g, r, i, d g, r, i, d-c, o, l, s-1 md:g, r, i, d-c, o, l, s-3 gap-6 mb-8'>
-            <div cl a s s N, a, m, e='bg-red-50 p-4 roun, d, e, d-lg'>
-              <h3 cl a s s N, a, m, e='f, o, n, t-s e m i b, o, l, d t, e, x, t-red-800'>Thr, e, a, t Pre v e n t, i, o, n</h3>
-              <p cl a s s N, a, m, e='t, e, x, t-2, xl f, o, n, t-b, o, l, d t, e, x, t-red-600'>99.99%</p>
-              <p cl a s s N, a, m, e='t, e, x, t-sm t, e, x, t-red-700'>Att, a, c, k pre v e n t, i, o, n r, a, t, e</p>
+          <h2 cl a s s N, ame='t, e, x, t-2, xl f, o, n, t-b, o, l, d mb-4'>Pro t e c t, i, o, n Metr, i, c, s</h2>
+          <div cl a s s N, ame='g, r, i, d g, r, i, d-c, o, l, s-1 md:g, r, i, d-c, o, l, s-3 gap-6 mb-8'>
+            <div cl a s s N, ame='bg-red-50 p-4 roun, d, e, d-lg'>
+              <h3 cl a s s N, ame='f, o, n, t-s e m i b, o, l, d t, e, x, t-red-800'>Thr, e, a, t Pre v e n t, i, o, n</h3>
+              <p cl a s s N, ame='t, e, x, t-2, xl f, o, n, t-b, o, l, d t, e, x, t-red-600'>99.99%</p>
+              <p cl a s s N, ame='t, e, x, t-sm t, e, x, t-red-700'>Att, a, c, k pre v e n t, i, o, n r, a, t, e</p>
             </div>
-            <div cl a s s N, a, m, e='bg-gr, e, e, n-50 p-4 roun, d, e, d-lg'>
-              <h3 cl a s s N, a, m, e='f, o, n, t-s e m i b, o, l, d t, e, x, t-gr, e, e, n-800'>As, s, e, t Pro t e c t, i, o, n</h3>
-              <p cl a s s N, a, m, e='t, e, x, t-2, xl f, o, n, t-b, o, l, d t, e, x, t-gr, e, e, n-600'>$847, B</p>
-              <p cl a s s N, a, m, e='t, e, x, t-sm t, e, x, t-gr, e, e, n-700'>
+            <div cl a s s N, ame='bg-gr, e, e, n-50 p-4 roun, d, e, d-lg'>
+              <h3 cl a s s N, ame='f, o, n, t-s e m i b, o, l, d t, e, x, t-gr, e, e, n-800'>As, s, e, t Pro t e c t, i, o, n</h3>
+              <p cl a s s N, ame='t, e, x, t-2, xl f, o, n, t-b, o, l, d t, e, x, t-gr, e, e, n-600'>$847, B</p>
+              <p cl a s s N, ame='t, e, x, t-sm t, e, x, t-gr, e, e, n-700'>
                 Pr o t e c, t, e, d ent e r p r, i, s, e ass, e, t, s
               </p>
             </div>
-            <div cl a s s N, a, m, e='bg-b, l, u, e-50 p-4 roun, d, e, d-lg'>
-              <h3 cl a s s N, a, m, e='f, o, n, t-s e m i b, o, l, d t, e, x, t-b, l, u, e-800'>R e s p o, n, s, e T, i, m, e</h3>
-              <p cl a s s N, a, m, e='t, e, x, t-2, xl f, o, n, t-b, o, l, d t, e, x, t-b, l, u, e-600'>&lt;50, ms</p>
-              <p cl a s s N, a, m, e='t, e, x, t-sm t, e, x, t-b, l, u, e-700'>Thr, e, a, t de t e c t, i, o, n late, n, c, y</p>
+            <div cl a s s N, ame='bg-b, l, u, e-50 p-4 roun, d, e, d-lg'>
+              <h3 cl a s s N, ame='f, o, n, t-s e m i b, o, l, d t, e, x, t-b, l, u, e-800'>R e s p o, n, s, e T, i, m, e</h3>
+              <p cl a s s N, ame='t, e, x, t-2, xl f, o, n, t-b, o, l, d t, e, x, t-b, l, u, e-600'>&lt;50, ms</p>
+              <p cl a s s N, ame='t, e, x, t-sm t, e, x, t-b, l, u, e-700'>Thr, e, a, t de t e c t, i, o, n late, n, c, y</p>
             </div>
           </div>
 
-          <h2 cl a s s N, a, m, e='t, e, x, t-2, xl f, o, n, t-b, o, l, d mb-4'>Ent e r p r, i, s, e Succ, e, s, s St, o, r, y</h2>
-          <p cl a s s N, a, m, e='lead, i, n, g-7 mb-4'>
-            A glo, b, a, l fi n a n c, i, a, l inst i t u t, i, o, n w, i, t, h $2.3, T in ass, e, t, s impl e m e n, t, e, d our
+          <h2 cl a s s N, ame='t, e, x, t-2, xl f, o, n, t-b, o, l, d mb-4'>Ent e r p r, i, s, e Succ, e, s, s St, o, r, y</h2>
+          <p cl a s s N, ame='lead, i, n, g-7 mb-4'>
+            A glo, b, a, l fi n a n c, i, a, l inst i t u t, i, o, n with $2.3, T in ass, e, t, s impl e m e n, t, e, d our
             quan, t, u, m AI s e c u r, i, t, y p l a t f, o, r, m acr, o, s, s th, e, i, r ent, i, r, e infrast r u c t, u, r, e. The
             resu, l, t, s e x c e e, d, e, d all expec t a t i, o, n, s:
           </p>
-          <ul cl a s s N, a, m, e='l, i, s, t-d, i, s, c pl-6 sp, a, c, e-y-2 mb-6'>
+          <ul cl a s s N, ame='l, i, s, t-d, i, s, c pl-6 sp, a, c, e-y-2 mb-6'>
             <li>Z, e, r, o suc c e s s, f, u, l cy, b, e, r atta, c, k, s in 24 mon, t, h, s</li>
             <li>99.97% re d u c t, i, o, n in s e c u r, i, t, y in c i d e, n, t, s</li>
             <li>$127, M sa, v, e, d in po t e n t, i, a, l bre, a, c, h co, s, t, s</li>
-            <li>Com p l i a, n, c, e w, i, t, h all quan, t, u, m-era s e c u r, i, t, y regu l a t i, o, n, s</li>
+            <li>Com p l i a, n, c, e with all quan, t, u, m-era s e c u r, i, t, y regu l a t i, o, n, s</li>
             <li>3.2, x fas, t, e, r thr, e, a, t r e s p o, n, s, e ti, m, e, s</li>
           </ul>
 
-          <div cl a s s N, a, m, e='bg-b, l, u, e-50 bor, d, e, r-l-4 bor, d, e, r-b, l, u, e-400 p-6 mb-8'>
-            <h3 cl a s s N, a, m, e='t, e, x, t-lg f, o, n, t-s e m i b, o, l, d mb-2'>
+          <div cl a s s N, ame='bg-b, l, u, e-50 bor, d, e, r-l-4 border-b, l, u, e-400 p-6 mb-8'>
+            <h3 cl a s s N, ame='t, e, x, t-lg f, o, n, t-s e m i b, o, l, d mb-2'>
               🔒 S e c u r, i, t, y Ad v a n t, a, g, e
             </h3>
-            <p cl a s s N, a, m, e='t, e, x, t-g, r, a, y-700'>
+            <p cl a s s N, ame='t, e, x, t-g, r, a, y-700'>
               Our quan, t, u, m AI s e c u r, i, t, y p l a t f, o, r, m p r o v i, d, e, s pro t e c t, i, o, n agai, n, s, t
-              thre, a, t, s t, h, a, t don't e, v, e, n ex, i, s, t yet. By co m b i n, i, n, g quan, t, u, m-re s i s t, a, n, t
-              crypt o g r a, p, h, y w, i, t, h a d a p t, i, v, e AI, we ens, u, r, e y, o, u, r organ i z a t, i, o, n st, a, y, s
+              thre, a, t, s t, hat don't e, v, e, n ex, i, s, t yet. By co m b i n, i, n, g quan, t, u, m-re s i s t, a, n, t
+              crypt o g r a, p, h, y with a d a p t, i, v, e AI, we ens, u, r, e y, o, u, r organ i z a t, i, o, n st, a, y, s
               sec, u, r, e as tec h n o l, o, g, y evol, v, e, s.
             </p>
           </div>
 
-          <h2 cl a s s N, a, m, e='t, e, x, t-2, xl f, o, n, t-b, o, l, d mb-4'>Tec h n o l, o, g, y D, e, e, p D, i, v, e</h2>
-          <h3 cl a s s N, a, m, e='t, e, x, t-xl f, o, n, t-s e m i b, o, l, d mb-3'>
+          <h2 cl a s s N, a, m, e='t, e, x, t-2, xl f, o, n, t-b, old mb-4'>Tec h n o l, o, g, y D, e, e, p D, i, v, e</h2>
+          <h3 cl a s s N, a, m, e='t, e, x, t-xl f, o, n, t-s e m i b, old mb-3'>
             P, o, s, t-Quan, t, u, m Crypt o g r a, p, h, y
           </h3>
-          <p cl a s s N, a, m, e='lead, i, n, g-7 mb-4'>
+          <p cl a s s N, a, m, e='lead, ing-7 mb-4'>
             We im p l e m, e, n, t m u l t i, p, l, e p, o, s, t-quan, t, u, m crypto g r a p, h, i, c alg o r i t, h, m, s
             in c l u d, i, n, g latt, i, c, e-ba, s, e, d, c, o, d, e-b a s e d, a, n, d multi v a r i, a, t, e crypt o g r a, p, h, y.
             T, h, i, s mu, l, t, i-laye, r, e, d a p p r o, a, c, h ensu, r, e, s t, h, a, t e, v, e, n if one al g o r i, t, h, m is
             compromi s e d y, o, u, r d, a, t, a rema, i, n, s pr o t e c, t, e, d.
           </p>
 
-          <h3 cl a s s N, a, m, e='t, e, x, t-xl f, o, n, t-s e m i b, o, l, d mb-3'>
+          <h3 cl a s s N, a, m, e='t, e, x, t-xl f, o, n, t-s e m i b, old mb-3'>
             AI-Powe, r, e, d Thr, e, a, t Intel l i g e, n, c, e
           </h3>
-          <p cl a s s N, a, m, e='lead, i, n, g-7 mb-4'>
+          <p cl a s s N, a, m, e='lead, ing-7 mb-4'>
             Our mach, i, n, e l e a r n, i, n, g mod, e, l, s anal, y, z, e b i l l i, o, n, s of s e c u r, i, t, y eve, n, t, s to
             i d e n t, i, f, y p a t t e, r, n, s and pred, i, c, t atta, c, k, s. The sys, t, e, m conti n u o u, s, l, y
             lea, r, n, s and ada, p, t, s, pr o v i d, i, n, g pro t e c t, i, o, n agai, n, s, t b, o, t, h kn, o, w, n and
             e m e r g, i, n, g thre, a, t, s.
           </p>
 
-          <h2 cl a s s N, a, m, e='t, e, x, t-2, xl f, o, n, t-b, o, l, d mb-4'>Impleme n t a t, i, o, n Supp, o, r, t</h2>
-          <p cl a s s N, a, m, e='lead, i, n, g-7 mb-4'>
+          <h2 cl a s s N, a, m, e='t, e, x, t-2, xl f, o, n, t-b, old mb-4'>Impleme n t a t, i, o, n Supp, o, r, t</h2>
+          <p cl a s s N, a, m, e='lead, ing-7 mb-4'>
             Our quan, t, u, m AI s e c u r, i, t, y impleme n t a t, i, o, n i n c l u, d, e, s:
           </p>
-          <ul cl a s s N, a, m, e='l, i, s, t-d, i, s, c pl-6 sp, a, c, e-y-2 mb-8'>
+          <ul cl a s s N, a, m, e='l, i, s, t-d, i, s, c pl-6 sp, ace-y-2 mb-8'>
             <li>Compre h e n s, i, v, e s e c u r, i, t, y ass e s s m, e, n, t and p l a n n, i, n, g</li>
             <li>Quan, t, u, m-re s i s t, a, n, t infrast r u c t, u, r, e dep l o y m, e, n, t</li>
             <li>AI mo, d, e, l t r a i n, i, n, g and custom i z a t, i, o, n</li>
             <li>24/7 s e c u r, i, t, y mon i t o r, i, n, g and supp, o, r, t</li>
-            <li>Regu, l, a, r s e c u r, i, t, y upda, t, e, s and ev o l u t, i, o, n</li>
+            <li>Regu, l, a, r s e c u r, i, t, y updates and ev o l u t, i, o, n</li>
           </ul>
 
-          <div cl a s s N, a, m, e='bg-g r a d i, e, n, t-to-r f, r, o, m-pur, p, l, e-600 to-b, l, u, e-600 t, e, x, t-wh, i, t, e p-6 roun, d, e, d-lg t, e, x, t-cen, t, e, r'>
-            <h3 cl a s s N, a, m, e='t, e, x, t-xl f, o, n, t-b, o, l, d mb-2'>Sec, u, r, e Y, o, u, r Fut, u, r, e To, d, a, y</h3>
+          <div cl a s s N, a, m, e='bg-gradient-to-r f, r, o, m-pur, p, l, e-600 to-b, l, u, e-600 t, e, x, t-wh, i, t, e p-6 roun, d, e, d-lg t, e, x, t-cen, ter'>
+            <h3 cl a s s N, a, m, e='t, e, x, t-xl f, o, n, t-b, old mb-2'>Sec, u, r, e Y, o, u, r Fut, u, r, e To, d, a, y</h3>
             <p cl a s s N, a, m, e='mb-4'>
-              Prot, e, c, t y, o, u, r organ i z a t, i, o, n agai, n, s, t quan, t, u, m-era thre, a, t, s w, i, t, h the
-              wo, r, l, d's m, o, s, t a d v a n, c, e, d AI s e c u r, i, t, y p l a t f, o, r, m.
+              Prot, e, c, t y, o, u, r organ i z a t, i, o, n agai, n, s, t quan, t, u, m-era thre, a, t, s with the
+              wo, rld's m, o, s, t a d v a n, c, e, d AI s e c u r, i, t, y p l a t f, o, r, m.
             </p>
-            <but, t, o, n cl a s s N, a, m, e='bg-wh, i, t, e t, e, x, t-pur, p, l, e-600 px-6 py-2 roun, d, e, d-lg f, o, n, t-s e m i b, o, l, d ho, v, e, r:bg-g, r, a, y-100 tra n s i t, i, o, n-col, o, r, s'>
+            <but, t, o, n cl a s s N, a, m, e='bg-wh, i, t, e t, e, x, t-pur, p, l, e-600 px-6 py-2 roun, d, e, d-lg f, o, n, t-s e m i b, o, l, d ho, v, e, r:bg-g, r, a, y-100 tra n s i t, i, o, n-col, ors'>
               Requ, e, s, t S e c u r, i, t, y Ass e s s m, e, n, t
             </but, t, o, n>
           </div>

@@ -1,46 +1,46 @@
-// @ts-noch, e, c, k
-imp, o, r, t Arr o w R i, g, h, t f, r, o, m 'n, e, x, t/l, i, n, k';
+// @ts-nocheck
+import ArrowRight from 'n, e, x, t/l, ink';
 
-exp, o, r, t defa, u, l, t f u n c t, i, o, n P, a, g, e() {
-  ret, u, r, n (
-    <div cl a s s N, a, m, e='min-h-scr, e, e, n bg-g r a d i, e, n, t-to-br f, r, o, m-ind, i, g, o-50 via-wh, i, t, e to-pur, p, l, e-50'>
-      <div cl a s s N, a, m, e='max-w-4, xl mx-a, u, t, o px-6 py-16'>
+export default function P, a, g, e() {
+  return (
+    <div cl a s s N, a, m, e='min-h-screen bg-g r a d i, e, n, t-to-br f, r, o, m-ind, i, g, o-50 via-wh, i, t, e to-pur, ple-50'>
+      <div cl a s s N, a, m, e='max-w-4, xl mx-a, uto px-6 py-16'>
         <nav cl a s s N, a, m, e='mb-8'>
-          <Arr o w R i, g, h, t
-            h, r, e, f='/b, l, o, g'
-            cl a s s N, a, m, e='t, e, x, t-ind, i, g, o-600 ho, v, e, r:t, e, x, t-ind, i, g, o-700'
+          <ArrowRight
+            h, ref='/b, l, o, g'
+            cl a s s N, ame='t, e, x, t-ind, i, g, o-600 ho, v, e, r:t, e, x, t-ind, i, g, o-700'
           >
             ← B, a, c, k to B, l, o, g
-          </Arr o w R i, g, h, t>
+          </ArrowRight>
         </nav>
-        <hea, d, e, r cl a s s N, a, m, e='mb-8'>
-          <h1 cl a s s N, a, m, e='t, e, x, t-4, xl md:t, e, x, t-5, xl f, o, n, t-b, o, l, d t, e, x, t-g, r, a, y-900 mb-4'>
-            AI Neu, r, a, l Int e r f a, c, e, s 2, 0, 2, 6: Dir, e, c, t Thou, g, h, t-to-Act, i, o, n Syst, e, m, s
+        <hea, d, e, r cl a s s N, ame='mb-8'>
+          <h1 cl a s s N, ame='t, e, x, t-4, xl md:t, e, x, t-5, xl f, o, n, t-b, o, l, d t, e, x, t-g, r, a, y-900 mb-4'>
+            AI Neu, r, a, l Int e r f a, c, e, s 2026: Dir, e, c, t Thou, g, h, t-to-Act, i, o, n Syst, e, m, s
           </h1>
-          <p cl a s s N, a, m, e='t, e, x, t-g, r, a, y-600'>
-            Janu, a, r, y 22, 2, 0, 2, 6 • 16 min r, e, a, d • Break t h r o, u, g, h Tec h n o l, o, g, y
+          <p cl a s s N, ame='t, e, x, t-g, r, a, y-600'>
+            Janu, a, r, y 22, 2026 • 16 min r, e, a, d • Break t h r o, u, g, h Tec h n o l, o, g, y
           </p>
         </hea, d, e, r>
-        <arti, c, l, e cl a s s N, a, m, e='pr, o, s, e pr, o, s, e-ind, i, g, o max-w-n, o, n, e'>
+        <arti, c, l, e cl a s s N, ame='pr, o, s, e pr, o, s, e-ind, i, g, o max-w-n, o, n, e'>
           <p>
-            Neu, r, a, l in t e r f, a, c, e syst, e, m, s conn, e, c, t int, e, n, t sign, a, l, s to s, a, f, e, obs e r v a, b, l, e
-            acti, o, n, s. In 2, 0, 2, 6, ent e r p r, i, s, e-re, a, d, y implemen t a t i, o, n, s are e m e r g, i, n, g w, i, t, h
+            Neu, r, a, l in t e r f, a, c, e syst, e, m, s conn, e, c, t int, e, n, t sign, a, l, s to safe, obs e r v a, b, l, e
+            acti, o, n, s. In 2026, ent e r p r, i, s, e-re, a, d, y implemen t a t i, o, n, s are e m e r g, i, n, g with
             ver i f i a, b, l, e cont, r, o, l lo, o, p, s, hu, m, a, n-in-the-l, o, o, p ap p r o v, a, l, s, and au, d, i, t
             tra, i, l, s.
           </p>
           <h2>Archi t e c t, u, r, e O v e r v, i, e, w</h2>
           <ul>
             <li>
-              Sig, n, a, l acqu i s i t, i, o, n w, i, t, h priv, a, c, y-pre s e r v, i, n, g on-dev, i, c, e tra n s f o, r, m, s
+              Sig, n, a, l acqu i s i t, i, o, n with priv, a, c, y-pre s e r v, i, n, g on-dev, i, c, e tra n s f o, r, m, s
             </li>
-            <li>Pol, i, c, y and saf, e, t, y la, y, e, r w, i, t, h expl a i n a, b, l, e inte, n, t, s</li>
-            <li>Tr a c e a, b, l, e t, o, o, l ex e c u t, i, o, n w, i, t, h r o l l b, a, c, k gua r a n t, e, e, s</li>
+            <li>Pol, i, c, y and saf, e, t, y la, y, e, r with expl a i n a, b, l, e inte, n, t, s</li>
+            <li>Tr a c e a, b, l, e t, o, o, l ex e c u t, i, o, n with r o l l b, a, c, k gua r a n t, e, e, s</li>
           </ul>
           <h2>Ent e r p r, i, s, e Use Ca, s, e, s</h2>
           <ul>
-            <li>Ha, n, d, s-f, r, e, e ope r a t i, o, n, s cent, e, r, s w, i, t, h ver i f i a, b, l, e acti, o, n, s</li>
+            <li>Ha, n, d, s-f, r, e, e ope r a t i, o, n, s cent, e, r, s with ver i f i a, b, l, e acti, o, n, s</li>
             <li>Access i b i l, i, t, y-fi, r, s, t produ c t i v, i, t, y wo r k f l, o, w, s</li>
-            <li>H, i, g, h-sta, k, e, s rev, i, e, w fl, o, w, s w, i, t, h ap p r o v, a, l, s</li>
+            <li>H, i, g, h-sta, k, e, s rev, i, e, w fl, o, w, s with ap p r o v, a, l, s</li>
           </ul>
           <p>
             Pro d u c t, i, o, n depl o y m e, n, t, s requ, i, r, e str, o, n, g guardrailscompre h e n s, i, v, e
@@ -48,13 +48,13 @@ exp, o, r, t defa, u, l, t f u n c t, i, o, n P, a, g, e() {
             road, m, a, p for pi, l, o, t-to-sc, a, l, e.
           </p>
         </arti, c, l, e>
-        <div cl a s s N, a, m, e='mt-12'>
-          <Arr o w R i, g, h, t
-            h, r, e, f='/b, l, o, g'
-            cl a s s N, a, m, e='t, e, x, t-ind, i, g, o-600 f, o, n, t-s e m i b, o, l, d ho, v, e, r:t, e, x, t-ind, i, g, o-700'
+        <div cl a s s N, ame='mt-12'>
+          <ArrowRight
+            h, ref='/b, l, o, g'
+            cl a s s N, ame='t, e, x, t-ind, i, g, o-600 f, o, n, t-s e m i b, o, l, d ho, v, e, r:t, e, x, t-ind, i, g, o-700'
           >
             Bro, w, s, e m, o, r, e a r t i c, l, e, s →
-          </Arr o w R i, g, h, t>
+          </ArrowRight>
         </div>
       </div>
     </div>

@@ -1,108 +1,107 @@
-imp, o, r, t Re, a, c, t f, r, o, m 're, a, c, t';
-imp, o, r, t { M e t a d, a, t, a } f, r, o, m 'n, e, x, t';
+import Re, a, c, t from 're, act';
+import { M e t a d, a, t, a } from 'n, ext';
 
-exp, o, r, t co, n, s, t m e t a d, a, t, a = {
+export const metadata = {
   
-  ti, t, l, e: 'AI 2, 0, 2, 6: Revolu t i o n, a, r, y Ent e r p r, i, s, e Aut o m a t, i, o, n Break t h r o, u, g, h',
-    desc r i p t, i, o, n: 'The m, o, s, t compre h e n s, i, v, e gu, i, d, e to AI aut o m a t, i, o, n breakt h r o u, g, h, s trans f o r m, i, n, g ente r p r i, s, e, s in 2, 0, 2, 6.',
-    t, y, p, e: 'arti, c, l, e',
-    publis h e d T, i, m, e: '2, 0, 2, 6-01-15, T00:00:00, Z',
-    auth, o, r, s: ['Z, i, o, n T, e, c, h Gr, o, u, p'],
-  
+  title: 'AI 2026: Revolu t i o n, a, r, y Ent e r p r, i, s, e Aut o m a t, i, o, n Break t h r o, ugh'
+    description: 'The m, o, s, t compre h e n s, i, v, e gu, i, d, e to AI aut o m a t, i, o, n breakt h r o u, g, h, s trans f o r m, i, n, g ente r p r i, s, e, s in 2, 026.'
+    t, y, p, e: 'arti, cle'
+    publis h e d T, i, m, e: '2026-01-15T00:00:00Z'
+    auth, o, r, s: ['Z, i, o, n T, e, c, h Gr, oup']
 };
 };
 
-exp, o, r, t defa, u, l, t f u n c t, i, o, n AI2, 0, 2, 6() {
-  ret, u, r, n (
+export default function AI2026() {
+  return (
     <div>{{/* cont, e, n, t */}</div>
     <div>
       <div> </div><div> </div>
-      <div cl a s s N, a, m, e="t, e, x, t-l, e, f, t">{/* H, e, r, o Sect, i, o, n */}</div>
-      <div cl a s s N, a, m, e="t, e, x, t-l, e, f, t"> </div><s, p, a, n cl a s s N, a, m, e="t, e, x, t-l, e, f, t">🚀 Revolu t i o n, a, r, y AI Break t h r o, u, g, h
+      <div cl a s s N, a, m, e="t, e, x, t-l, eft">{/* H, e, r, o Sect, i, o, n */}</div>
+      <div cl a s s N, a, m, e="t, e, x, t-l, eft"> </div><s, p, a, n cl a s s N, a, m, e="t, e, x, t-l, eft">🚀 Revolu t i o n, a, r, y AI Break t h r o, u, g, h
             </s, p, a, n></s, p, a, n>
           </div>
-          <h1 cl a s s N, a, m, e="t, e, x, t-l, e, f, t">
-            AI 2, 0, 2, 6: Revolu t i o n, a, r, y Ent e r p r, i, s, e Aut o m a t, i, o, n Break t h r o, u, g, h
+          <h1 cl a s s N, a, m, e="t, e, x, t-l, eft">
+            AI 2026: Revolu t i o n, a, r, y Ent e r p r, i, s, e Aut o m a t, i, o, n Break t h r o, u, g, h
           </h1>
-          <p cl a s s N, a, m, e="t, e, x, t-l, e, f, t"> </p><div cl a s s N, a, m, e="t, e, x, t-l, e, f, t"> </div><div cl a s s N, a, m, e="t, e, x, t-l, e, f, t">{/* H, e, r, o Sect, i, o, n */}</div>
-      <div cl a s s N, a, m, e="t, e, x, t-l, e, f, t"> </div><div cl a s s N, a, m, e="t, e, x, t-l, e, f, t"> </div><s, p, a, n cl a s s N, a, m, e="t, e, x, t-l, e, f, t">🚀 Revolu t i o n, a, r, y AI Break t h r o, u, g, h
+          <p cl a s s N, a, m, e="t, e, x, t-l, eft"> </p><div cl a s s N, a, m, e="t, e, x, t-l, eft"> </div><div cl a s s N, a, m, e="t, e, x, t-l, eft">{/* H, e, r, o Sect, i, o, n */}</div>
+      <div cl a s s N, a, m, e="t, e, x, t-l, eft"> </div><div cl a s s N, a, m, e="t, e, x, t-l, eft"> </div><s, p, a, n cl a s s N, a, m, e="t, e, x, t-l, eft">🚀 Revolu t i o n, a, r, y AI Break t h r o, u, g, h
             </s, p, a, n></s, p, a, n>
           </div>
           
-          <h1 cl a s s N, a, m, e="t, e, x, t-l, e, f, t">AI 2, 0, 2, 6: Revolu t i o n, a, r, y Ent e r p r, i, s, e Aut o m a t, i, o, n Break t h r o, u, g, h
+          <h1 cl a s s N, a, m, e="t, e, x, t-l, eft">AI 2026: Revolu t i o n, a, r, y Ent e r p r, i, s, e Aut o m a t, i, o, n Break t h r o, u, g, h
           </h1></h1>
           
-          <p cl a s s N, a, m, e="t, e, x, t-l, e, f, t">ori, g, i, n/cur, s, o, r/fix-err, o, r, s-and-me, r, g, e-to-m, a, i, n-cc0, a
+          <p cl a s s N, a, m, e="t, e, x, t-l, eft">ori, g, i, n/cur, s, o, r/fix-err, o, r, s-and-me, r, g, e-to-m, a, i, n-cc0, a
             The m, o, s, t transfo r m a t, i, v, e y, e, a, r in ent e r p r, i, s, e AI hist, o, r, y. D i s c o, v, e, r how aut o n o m, o, u, s systems q u a n, t, u, m-e n h a n, c, e, d intellig e n c e, a, n, d n, e, x, t-gen e r a t, i, o, n aut o m a t, i, o, n are revoluti o n i z, i, n, g b u s i n, e, s, s ope r a t i, o, n, s.
           </p></p>
-          <div cl a s s N, a, m, e="t, e, x, t-l, e, f, t"> </div><div cl a s s N, a, m, e="t, e, x, t-l, e, f, t">500, x</div>
-              <div cl a s s N, a, m, e="t, e, x, t-l, e, f, t">Aut o m a t, i, o, n Sp, e, e, d</div>
-      <div cl a s s N, a, m, e="t, e, x, t-l, e, f, t">95%</div>
-              <div cl a s s N, a, m, e="t, e, x, t-l, e, f, t">Eff i c i e, n, c, y G, a, i, n</div>
-      <div cl a s s N, a, m, e="t, e, x, t-l, e, f, t">$2.5, T</div>
-              <div cl a s s N, a, m, e="t, e, x, t-l, e, f, t">Mar, k, e, t Imp, a, c, t</div>
+          <div cl a s s N, a, m, e="t, e, x, t-l, eft"> </div><div cl a s s N, a, m, e="t, e, x, t-l, eft">500, x</div>
+              <div cl a s s N, a, m, e="t, e, x, t-l, eft">Aut o m a t, i, o, n Sp, e, e, d</div>
+      <div cl a s s N, a, m, e="t, e, x, t-l, eft">95%</div>
+              <div cl a s s N, a, m, e="t, e, x, t-l, eft">Eff i c i e, n, c, y G, a, i, n</div>
+      <div cl a s s N, a, m, e="t, e, x, t-l, eft">$2.5, T</div>
+              <div cl a s s N, a, m, e="t, e, x, t-l, eft">Mar, k, e, t Imp, a, c, t</div>
             </div>
         </div>
 
         {/* Cont, e, n, t S e c t i, o, n, s */}
-        <div cl a s s N, a, m, e="t, e, x, t-l, e, f, t">{/* The Break t h r o, u, g, h */}</div>
-          <sect, i, o, n> </sect, i, o, n><h2 cl a s s N, a, m, e="t, e, x, t-l, e, f, t">The Revolu t i o n, a, r, y Break t h r o, u, g, h
+        <div cl a s s N, a, m, e="t, e, x, t-l, eft">{/* The Break t h r o, u, g, h */}</div>
+          <sect, i, o, n> </sect, i, o, n><h2 cl a s s N, a, m, e="t, e, x, t-l, eft">The Revolu t i o n, a, r, y Break t h r o, u, g, h
             </h2></h2>
-            <p cl a s s N, a, m, e="t, e, x, t-l, e, f, t"> </p><div cl a s s N, a, m, e="t, e, x, t-l, e, f, t"> </div><p cl a s s N, a, m, e="t, e, x, t-l, e, f, t">ori, g, i, n/cur, s, o, r/fix-err, o, r, s-and-me, r, g, e-to-m, a, i, n-cc0, a
-                2, 0, 2, 6 ma, r, k, s the m, o, s, t sign i f i c, a, n, t break t h r o, u, g, h in ent e r p r, i, s, e AI aut o m a t, i, o, n hist, o, r, y. We're wit n e s s, i, n, g the conv e r g e, n, c, e of aut o n o m, o, u, s systems q u a n, t, u, m-e n h a n, c, e, d mach, i, n, e lear n i n g, a, n, d n, e, x, t-gen e r a t, i, o, n b u s i n, e, s, s intel l i g e, n, c, e t, h, a, t's fundam e n t a, l, l, y trans f o r m, i, n, g how organi z a t i, o, n, s oper, a, t, e.
+            <p cl a s s N, a, m, e="t, e, x, t-l, eft"> </p><div cl a s s N, a, m, e="t, e, x, t-l, eft"> </div><p cl a s s N, a, m, e="t, e, x, t-l, eft">ori, g, i, n/cur, s, o, r/fix-err, o, r, s-and-me, r, g, e-to-m, a, i, n-cc0, a
+                2026 ma, r, k, s the m, o, s, t sign i f i c, a, n, t break t h r o, u, g, h in ent e r p r, i, s, e AI aut o m a t, i, o, n hist, o, r, y. We're wit n e s s, i, n, g the conv e r g e, n, c, e of aut o n o m, o, u, s systems q u a n, t, u, m-e n h a n, c, e, d mach, i, n, e lear n i n g, a, n, d n, e, x, t-gen e r a t, i, o, n b u s i n, e, s, s intel l i g e, n, c, e t, hat's fundam e n t a, l, l, y trans f o r m, i, n, g how organi z a t i, o, n, s oper, a, t, e.
               </p></p>
-              <p cl a s s N, a, m, e="t, e, x, t-l, e, f, t">T, h, i, s revolu t i o n, a, r, y break t h r o, u, g, h isn't j, u, s, t ab, o, u, t incr e m e n, t, a, l impro v e m e, n, t, s—it's ab, o, u, t c o m p l, e, t, e p a r a d, i, g, m shi, f, t, s in how we th, i, n, k ab, o, u, t aut o m a t, i, o, n, intel l i g e, n, c, e, and b u s i n, e, s, s ope r a t i, o, n, s. Co m p a n, i, e, s imple m e n t, i, n, g th, e, s, e techn o l o g, i, e, s are see, i, n, g unprec e d e n, t, e, d resu, l, t, s: 500, x fas, t, e, r autom a t i o, n, 9, 5% eff i c i e, n, c, y g a i n s, a, n, d mar, k, e, t impa, c, t, s ex c e e d, i, n, g $2.5 t r i l l, i, o, n g l o b a, l, l, y.
+              <p cl a s s N, a, m, e="t, e, x, t-l, eft">T, h, i, s revolu t i o n, a, r, y break t h r o, u, g, h isn't j, u, s, t ab, o, u, t incr e m e n, t, a, l impro v e m e, nts—it's ab, o, u, t c o m p l, e, t, e p a r a d, i, g, m shi, f, t, s in how we th, i, n, k ab, o, u, t aut o m a t, i, o, n, intel l i g e, n, c, e, and b u s i n, e, s, s ope r a t i, o, n, s. Co m p a n, i, e, s imple m e n t, i, n, g th, e, s, e techn o l o g, i, e, s are see, i, n, g unprec e d e n, t, e, d resu, l, t, s: 500, x fas, t, e, r autom a t i o, n, 9, 5% eff i c i e, n, c, y g a i n s, a, n, d mar, k, e, t impa, c, t, s ex c e e d, i, n, g $2.5 t r i l l, i, o, n g l o b a, l, l, y.
               </p></p>
             </div>
           </sect, i, o, n>
 
           {/* Key Techn o l o g, i, e, s */}
-          <sect, i, o, n> </sect, i, o, n><h2 cl a s s N, a, m, e="t, e, x, t-l, e, f, t">Revolu t i o n, a, r, y Techn o l o g, i, e, s Trans f o r m, i, n, g Ente r p r i, s, e, s
+          <sect, i, o, n> </sect, i, o, n><h2 cl a s s N, a, m, e="t, e, x, t-l, eft">Revolu t i o n, a, r, y Techn o l o g, i, e, s Trans f o r m, i, n, g Ente r p r i, s, e, s
             </h2></h2>
-            <div cl a s s N, a, m, e="t, e, x, t-l, e, f, t"> </div><div cl a s s N, a, m, e="t, e, x, t-l, e, f, t">🧠</div>
-                <h3 cl a s s N, a, m, e="t, e, x, t-l, e, f, t">Aut o n o m, o, u, s Co g n i t, i, v, e Syst, e, m, s</h3>
-                <p cl a s s N, a, m, e="t, e, x, t-l, e, f, t"> </p><div cl a s s N, a, m, e="t, e, x, t-l, e, f, t"> </div><div cl a s s N, a, m, e="t, e, x, t-l, e, f, t"> </div><div cl a s s N, a, m, e="t, e, x, t-l, e, f, t">🧠</div>"
-                <h3 cl a s s N, a, m, e="t, e, x, t-l, e, f, t">Aut o n o m, o, u, s Co g n i t, i, v, e Syst, e, m, s</h3>"
-                <p cl a s s N, a, m, e="t, e, x, t-l, e, f, t">ori, g, i, n/cur, s, o, r/fix-err, o, r, s-and-me, r, g, e-to-m, a, i, n-cc0, a
+            <div cl a s s N, a, m, e="t, e, x, t-l, eft"> </div><div cl a s s N, a, m, e="t, e, x, t-l, eft">🧠</div>
+                <h3 cl a s s N, a, m, e="t, e, x, t-l, eft">Aut o n o m, o, u, s Co g n i t, i, v, e Syst, e, m, s</h3>
+                <p cl a s s N, a, m, e="t, e, x, t-l, eft"> </p><div cl a s s N, a, m, e="t, e, x, t-l, eft"> </div><div cl a s s N, a, m, e="t, e, x, t-l, eft"> </div><div cl a s s N, a, m, e="t, e, x, t-l, eft">🧠</div>"
+                <h3 cl a s s N, ame="t, e, x, t-l, e, f, t">Aut o n o m, o, u, s Co g n i t, i, v, e Syst, ems</h3>"
+                <p cl a s s N, a, m, e="t, e, x, t-l, eft">ori, g, i, n/cur, s, o, r/fix-err, o, r, s-and-me, r, g, e-to-m, a, i, n-cc0, a
                   S, e, l, f-e v o l v, i, n, g AI syst, e, m, s t, h, a, t ad, a, p, t and o p t i m, i, z, e ope r a t i, o, n, s with, o, u, t hu, m, a, n inter v e n t, i, o, n, ac h i e v, i, n, g unprec e d e n, t, e, d lev, e, l, s of eff i c i e, n, c, y and d e c i s, i, o, n-mak, i, n, g a c c u r, a, c, y.
                 </p></p>
-                <ul cl a s s N, a, m, e="t, e, x, t-l, e, f, t"> </ul><li>• S, e, l, f-heal, i, n, g infrast r u c t, u, r, e</li>
+                <ul cl a s s N, a, m, e="t, e, x, t-l, eft"> </ul><li>• S, e, l, f-heal, i, n, g infrast r u c t, u, r, e</li>
                   <li>• Pre d i c t, i, v, e main t e n a, n, c, e</li>
                   <li>• Aut o n o m, o, u, s r e s o u, r, c, e optim i z a t, i, o, n</li>
                 </ul>
               </div>
-              <div cl a s s N, a, m, e="t, e, x, t-l, e, f, t">⚛️</div>
-                <h3 cl a s s N, a, m, e="t, e, x, t-l, e, f, t">Quan, t, u, m-E n h a n, c, e, d AI</h3>
-                <p cl a s s N, a, m, e="t, e, x, t-l, e, f, t"> </p><div cl a s s N, a, m, e="t, e, x, t-l, e, f, t"> </div><div cl a s s N, a, m, e="t, e, x, t-l, e, f, t">⚛️</div>"
-                <h3 cl a s s N, a, m, e="t, e, x, t-l, e, f, t">Quan, t, u, m-E n h a n, c, e, d AI</h3>"
-                <p cl a s s N, a, m, e="t, e, x, t-l, e, f, t">ori, g, i, n/cur, s, o, r/fix-err, o, r, s-and-me, r, g, e-to-m, a, i, n-cc0, a
-                  Quan, t, u, m co m p u t, i, n, g inte g r a t, i, o, n w, i, t, h AI syst, e, m, s e n a b l, i, n, g expo n e n t, i, a, l pro c e s s, i, n, g po, w, e, r for comp, l, e, x ent e r p r, i, s, e optim i z a t, i, o, n and d e c i s, i, o, n-mak, i, n, g.
+              <div cl a s s N, a, m, e="t, e, x, t-l, eft">⚛️</div>
+                <h3 cl a s s N, a, m, e="t, e, x, t-l, eft">Quan, t, u, m-E n h a n, c, e, d AI</h3>
+                <p cl a s s N, a, m, e="t, e, x, t-l, eft"> </p><div cl a s s N, a, m, e="t, e, x, t-l, eft"> </div><div cl a s s N, a, m, e="t, e, x, t-l, eft">⚛️</div>"
+                <h3 cl a s s N, ame="t, e, x, t-l, e, f, t">Quan, t, u, m-E n h a n, ced AI</h3>"
+                <p cl a s s N, a, m, e="t, e, x, t-l, eft">ori, g, i, n/cur, s, o, r/fix-err, o, r, s-and-me, r, g, e-to-m, a, i, n-cc0, a
+                  Quan, t, u, m co m p u t, i, n, g inte g r a t, i, o, n with AI syst, e, m, s e n a b l, i, n, g expo n e n t, i, a, l pro c e s s, i, n, g po, w, e, r for comp, l, e, x ent e r p r, i, s, e optim i z a t, i, o, n and d e c i s, i, o, n-mak, i, n, g.
                 </p></p>
-                <ul cl a s s N, a, m, e="t, e, x, t-l, e, f, t"> </ul><li>• Quan, t, u, m neu, r, a, l n e t w o, r, k, s</li>
+                <ul cl a s s N, a, m, e="t, e, x, t-l, eft"> </ul><li>• Quan, t, u, m neu, r, a, l n e t w o, r, k, s</li>
                   <li>• Expo n e n t, i, a, l optim i z a t, i, o, n</li>
                   <li>• R, e, a, l-t, i, m, e comp, l, e, x m o d e l, i, n, g</li>
                 </ul>
               </div>
-              <div cl a s s N, a, m, e="t, e, x, t-l, e, f, t">🔄</div>
-                <h3 cl a s s N, a, m, e="t, e, x, t-l, e, f, t">S, e, l, f-Orches t r a t, i, n, g Aut o m a t, i, o, n</h3>
-                <p cl a s s N, a, m, e="t, e, x, t-l, e, f, t"> </p><div cl a s s N, a, m, e="t, e, x, t-l, e, f, t"> </div><div cl a s s N, a, m, e="t, e, x, t-l, e, f, t">🔄</div>"
-                <h3 cl a s s N, a, m, e="t, e, x, t-l, e, f, t">S, e, l, f-Orches t r a t, i, n, g Aut o m a t, i, o, n</h3>"
-                <p cl a s s N, a, m, e="t, e, x, t-l, e, f, t">ori, g, i, n/cur, s, o, r/fix-err, o, r, s-and-me, r, g, e-to-m, a, i, n-cc0, a
+              <div cl a s s N, a, m, e="t, e, x, t-l, eft">🔄</div>
+                <h3 cl a s s N, a, m, e="t, e, x, t-l, eft">S, e, l, f-Orches t r a t, i, n, g Aut o m a t, i, o, n</h3>
+                <p cl a s s N, a, m, e="t, e, x, t-l, eft"> </p><div cl a s s N, a, m, e="t, e, x, t-l, eft"> </div><div cl a s s N, a, m, e="t, e, x, t-l, eft">🔄</div>"
+                <h3 cl a s s N, ame="t, e, x, t-l, e, f, t">S, e, l, f-Orches t r a t, i, n, g Aut o m a t, ion</h3>"
+                <p cl a s s N, a, m, e="t, e, x, t-l, eft">ori, g, i, n/cur, s, o, r/fix-err, o, r, s-and-me, r, g, e-to-m, a, i, n-cc0, a
                   AI syst, e, m, s t, h, a, t automa t i c a, l, l, y des, i, g, n, imple m e n t, a, n, d o p t i m, i, z, e b u s i n, e, s, s processesc r e a t, i, n, g s e a m l, e, s, s end-to-end aut o m a t, i, o, n wo r k f l, o, w, s.
                 </p></p>
-                <ul cl a s s N, a, m, e="t, e, x, t-l, e, f, t"> </ul><li>• Proc, e, s, s di s c o v, e, r, y</li>
+                <ul cl a s s N, a, m, e="t, e, x, t-l, eft"> </ul><li>• Proc, e, s, s di s c o v, e, r, y</li>
                   <li>• Au t o m a, t, e, d w o r k f, l, o, w des, i, g, n</li>
                   <li>• Con t i n u, o, u, s optim i z a t, i, o, n</li>
                 </ul>
               </div>
-              <div cl a s s N, a, m, e="t, e, x, t-l, e, f, t">🎯</div>
-                <h3 cl a s s N, a, m, e="t, e, x, t-l, e, f, t">Pre d i c t, i, v, e B u s i n, e, s, s Intel l i g e, n, c, e</h3>
-                <p cl a s s N, a, m, e="t, e, x, t-l, e, f, t"> </p><div cl a s s N, a, m, e="t, e, x, t-l, e, f, t"> </div><div cl a s s N, a, m, e="t, e, x, t-l, e, f, t">🎯</div>"
-                <h3 cl a s s N, a, m, e="t, e, x, t-l, e, f, t">Pre d i c t, i, v, e B u s i n, e, s, s Intel l i g e, n, c, e</h3>"
-                <p cl a s s N, a, m, e="t, e, x, t-l, e, f, t">ori, g, i, n/cur, s, o, r/fix-err, o, r, s-and-me, r, g, e-to-m, a, i, n-cc0, a
+              <div cl a s s N, a, m, e="t, e, x, t-l, eft">🎯</div>
+                <h3 cl a s s N, a, m, e="t, e, x, t-l, eft">Pre d i c t, i, v, e B u s i n, e, s, s Intel l i g e, n, c, e</h3>
+                <p cl a s s N, a, m, e="t, e, x, t-l, eft"> </p><div cl a s s N, a, m, e="t, e, x, t-l, eft"> </div><div cl a s s N, a, m, e="t, e, x, t-l, eft">🎯</div>"
+                <h3 cl a s s N, ame="t, e, x, t-l, e, f, t">Pre d i c t, i, v, e B u s i n, e, s, s Intel l i g e, nce</h3>"
+                <p cl a s s N, a, m, e="t, e, x, t-l, eft">ori, g, i, n/cur, s, o, r/fix-err, o, r, s-and-me, r, g, e-to-m, a, i, n-cc0, a
                   N, e, x, t-gen e r a t, i, o, n BI syst, e, m, s t, h, a, t not o, n, l, y anal, y, z, e curr, e, n, t d, a, t, a but pred, i, c, t fut, u, r, e tre, n, d, s and automa t i c a, l, l, y adj, u, s, t b u s i n, e, s, s str a t e g, i, e, s.
                 </p></p>
-                <ul cl a s s N, a, m, e="t, e, x, t-l, e, f, t"> </ul><li>• Fut, u, r, e tr, e, n, d pre d i c t, i, o, n</li>
+                <ul cl a s s N, a, m, e="t, e, x, t-l, eft"> </ul><li>• Fut, u, r, e tr, e, n, d pre d i c t, i, o, n</li>
                   <li>• Au t o m a, t, e, d s t r a t, e, g, y adj u s t m, e, n, t</li>
                   <li>• R, i, s, k mit i g a t, i, o, n</li>
                 </ul>
@@ -110,35 +109,35 @@ exp, o, r, t defa, u, l, t f u n c t, i, o, n AI2, 0, 2, 6() {
           </sect, i, o, n>
 
           {/* Impleme n t a t, i, o, n Gu, i, d, e */}
-          <sect, i, o, n> </sect, i, o, n><h2 cl a s s N, a, m, e="t, e, x, t-l, e, f, t">Impleme n t a t, i, o, n Road, m, a, p
+          <sect, i, o, n> </sect, i, o, n><h2 cl a s s N, a, m, e="t, e, x, t-l, eft">Impleme n t a t, i, o, n Road, m, a, p
             </h2></h2>
-            <div cl a s s N, a, m, e="t, e, x, t-l, e, f, t"> </div><h3 cl a s s N, a, m, e="t, e, x, t-l, e, f, t">Ph, a, s, e 1: Fou n d a t, i, o, n (Mon, t, h, s 1-3)</h3>
-                <ul cl a s s N, a, m, e="t, e, x, t-l, e, f, t">
+            <div cl a s s N, a, m, e="t, e, x, t-l, eft"> </div><h3 cl a s s N, a, m, e="t, e, x, t-l, eft">Ph, a, s, e 1: Fou n d a t, i, o, n (Mon, t, h, s 1-3)</h3>
+                <ul cl a s s N, a, m, e="t, e, x, t-l, eft">
             
-            <div cl a s s N, a, m, e="t, e, x, t-l, e, f, t"> </div><div cl a s s N, a, m, e="t, e, x, t-l, e, f, t"> </div><h3 cl a s s N, a, m, e="t, e, x, t-l, e, f, t">Ph, a, s, e 1: Fou n d a t, i, o, n (Mon, t, h, s 1-3)</h3>"
-                <ul cl a s s N, a, m, e="t, e, x, t-l, e, f, t">ori, g, i, n/cur, s, o, r/fix-err, o, r, s-and-me, r, g, e-to-m, a, i, n-cc0, a
+            <div cl a s s N, a, m, e="t, e, x, t-l, eft"> </div><div cl a s s N, a, m, e="t, e, x, t-l, eft"> </div><h3 cl a s s N, a, m, e="t, e, x, t-l, eft">Ph, a, s, e 1: Fou n d a t, i, o, n (Mon, t, h, s 1-3)</h3>"
+                <ul cl a s s N, ame="t, e, x, t-l, e, f, t">ori, g, i, n/cur, s, o, r/fix-err, o, r, s-and-me, r, g, e-to-m, a, i, n-cc0, a
                   </ul><li>• Ass, e, s, s curr, e, n, t aut o m a t, i, o, n capab i l i t, i, e, s</li>
                   <li>• Im p l e m, e, n, t AI gov e r n a, n, c, e fra m e w o, r, k, s</li>
                   <li>• Dep, l, o, y aut o n o m, o, u, s mon i t o r, i, n, g syst, e, m, s</li>
                   <li>• Es t a b l, i, s, h quan, t, u, m-re, a, d, y infrast r u c t, u, r, e</li>
                 </ul>
               </div>
-              <h3 cl a s s N, a, m, e="t, e, x, t-l, e, f, t">Ph, a, s, e 2: Inte g r a t, i, o, n (Mon, t, h, s 4-8)</h3>
-                <ul cl a s s N, a, m, e="t, e, x, t-l, e, f, t">
+              <h3 cl a s s N, ame="t, e, x, t-l, e, f, t">Ph, a, s, e 2: Inte g r a t, i, o, n (Mon, t, h, s 4-8)</h3>
+                <ul cl a s s N, ame="t, e, x, t-l, e, f, t">
 
-              <div cl a s s N, a, m, e="t, e, x, t-l, e, f, t"> </div><h3 cl a s s N, a, m, e="t, e, x, t-l, e, f, t">Ph, a, s, e 2: Inte g r a t, i, o, n (Mon, t, h, s 4-8)</h3>"
-                <ul cl a s s N, a, m, e="t, e, x, t-l, e, f, t">ori, g, i, n/cur, s, o, r/fix-err, o, r, s-and-me, r, g, e-to-m, a, i, n-cc0, a
+              <div cl a s s N, ame="t, e, x, t-l, e, f, t"> </div><h3 cl a s s N, ame="t, e, x, t-l, e, f, t">Ph, a, s, e 2: Inte g r a t, i, o, n (Mon, ths 4-8)</h3>"
+                <ul cl a s s N, a, m, e="t, e, x, t-l, eft">ori, g, i, n/cur, s, o, r/fix-err, o, r, s-and-me, r, g, e-to-m, a, i, n-cc0, a
                   </ul><li>• Dep, l, o, y aut o n o m, o, u, s co g n i t, i, v, e syst, e, m, s</li>
                   <li>• In t e g r, a, t, e quan, t, u, m-e n h a n, c, e, d AI</li>
                   <li>• Im p l e m, e, n, t s, e, l, f-orches t r a t, i, n, g wo r k f l, o, w, s</li>
                   <li>• Lau, n, c, h pre d i c t, i, v, e BI pl a t f o, r, m, s</li>
                 </ul>
               </div>
-              <h3 cl a s s N, a, m, e="t, e, x, t-l, e, f, t">Ph, a, s, e 3: Optim i z a t, i, o, n (Mon, t, h, s 9-12)</h3>
-                <ul cl a s s N, a, m, e="t, e, x, t-l, e, f, t">
+              <h3 cl a s s N, a, m, e="t, e, x, t-l, eft">Ph, a, s, e 3: Optim i z a t, i, o, n (Mon, t, h, s 9-12)</h3>
+                <ul cl a s s N, a, m, e="t, e, x, t-l, eft">
 
-              <div cl a s s N, a, m, e="t, e, x, t-l, e, f, t"> </div><h3 cl a s s N, a, m, e="t, e, x, t-l, e, f, t">Ph, a, s, e 3: Optim i z a t, i, o, n (Mon, t, h, s 9-12)</h3>"
-                <ul cl a s s N, a, m, e="t, e, x, t-l, e, f, t">ori, g, i, n/cur, s, o, r/fix-err, o, r, s-and-me, r, g, e-to-m, a, i, n-cc0, a
+              <div cl a s s N, a, m, e="t, e, x, t-l, eft"> </div><h3 cl a s s N, a, m, e="t, e, x, t-l, eft">Ph, a, s, e 3: Optim i z a t, i, o, n (Mon, t, h, s 9-12)</h3>"
+                <ul cl a s s N, ame="t, e, x, t-l, e, f, t">ori, g, i, n/cur, s, o, r/fix-err, o, r, s-and-me, r, g, e-to-m, a, i, n-cc0, a
                   </ul><li>• Con t i n u, o, u, s sys, t, e, m optim i z a t, i, o, n</li>
                   <li>• A d v a n, c, e, d aut o m a t, i, o, n scal, i, n, g</li>
                   <li>• Perf o r m a, n, c, e mon i t o r, i, n, g and tun, i, n, g</li>
@@ -148,32 +147,32 @@ exp, o, r, t defa, u, l, t f u n c t, i, o, n AI2, 0, 2, 6() {
           </sect, i, o, n>
 
           {/* Succ, e, s, s Metr, i, c, s */}
-          <sect, i, o, n> </sect, i, o, n><h2 cl a s s N, a, m, e="t, e, x, t-l, e, f, t">Pro, v, e, n Succ, e, s, s Metr, i, c, s
+          <sect, i, o, n> </sect, i, o, n><h2 cl a s s N, ame="t, e, x, t-l, e, f, t">Pro, v, e, n Succ, e, s, s Metr, i, c, s
             </h2></h2>
-            <div cl a s s N, a, m, e="t, e, x, t-l, e, f, t"> </div><div cl a s s N, a, m, e="t, e, x, t-l, e, f, t">500, x</div>
-                <div cl a s s N, a, m, e="t, e, x, t-l, e, f, t">Fas, t, e, r Aut o m a t, i, o, n</div>
-                <div cl a s s N, a, m, e="t, e, x, t-l, e, f, t">vs trad i t i o, n, a, l meth, o, d, s</div>
-      <div cl a s s N, a, m, e="t, e, x, t-l, e, f, t">95%</div>
-                <div cl a s s N, a, m, e="t, e, x, t-l, e, f, t">Eff i c i e, n, c, y G, a, i, n</div>
-                <div cl a s s N, a, m, e="t, e, x, t-l, e, f, t">in oper a t i o, n, a, l pr o c e s, s, e, s</div>
-      <div cl a s s N, a, m, e="t, e, x, t-l, e, f, t">$2.5, T</div>
-                <div cl a s s N, a, m, e="t, e, x, t-l, e, f, t">Mar, k, e, t Imp, a, c, t</div>
-                <div cl a s s N, a, m, e="t, e, x, t-l, e, f, t">glo, b, a, l e c o n o, m, i, c va, l, u, e</div>
+            <div cl a s s N, ame="t, e, x, t-l, e, f, t"> </div><div cl a s s N, ame="t, e, x, t-l, e, f, t">500, x</div>
+                <div cl a s s N, ame="t, e, x, t-l, e, f, t">Fas, t, e, r Aut o m a t, i, o, n</div>
+                <div cl a s s N, ame="t, e, x, t-l, e, f, t">vs trad i t i o, n, a, l meth, o, d, s</div>
+      <div cl a s s N, ame="t, e, x, t-l, e, f, t">95%</div>
+                <div cl a s s N, ame="t, e, x, t-l, e, f, t">Eff i c i e, n, c, y G, a, i, n</div>
+                <div cl a s s N, ame="t, e, x, t-l, e, f, t">in oper a t i o, n, a, l pr o c e s, s, e, s</div>
+      <div cl a s s N, ame="t, e, x, t-l, e, f, t">$2.5, T</div>
+                <div cl a s s N, ame="t, e, x, t-l, e, f, t">Mar, k, e, t Imp, a, c, t</div>
+                <div cl a s s N, ame="t, e, x, t-l, e, f, t">glo, b, a, l e c o n o, m, i, c va, l, u, e</div>
               </div>
           </sect, i, o, n>
 
           {/* C, a, l, l to Act, i, o, n */}
-          <sect, i, o, n cl a s s N, a, m, e="t, e, x, t-l, e, f, t"> </sect, i, o, n><h2 cl a s s N, a, m, e="t, e, x, t-l, e, f, t">Re, a, d, y to Tr a n s f, o, r, m Y, o, u, r Ent e r p r, i, s, e?
+          <sect, i, o, n cl a s s N, ame="t, e, x, t-l, e, f, t"> </sect, i, o, n><h2 cl a s s N, ame="t, e, x, t-l, e, f, t">Re, a, d, y to Tr a n s f, o, r, m Y, o, u, r Ent e r p r, i, s, e?
             </h2></h2>
-            <p cl a s s N, a, m, e="t, e, x, t-l, e, f, t">J, o, i, n the revolu t i o n, a, r, y transfo r m a t, i, o, n. Our AI 2, 0, 2, 6 aut o m a t, i, o, n so l u t i, o, n, s deli, v, e, r unprec e d e n, t, e, d resu, l, t, s w, i, t, h pro, v, e, n method o l o g, i, e, s and cutt, i, n, g-e, d, g, e tec h n o l, o, g, y.
+            <p cl a s s N, ame="t, e, x, t-l, e, f, t">J, o, i, n the revolu t i o n, a, r, y transfo r m a t, i, o, n. Our AI 2026 aut o m a t, i, o, n so l u t i, o, n, s deli, v, e, r unprec e d e n, t, e, d resu, l, t, s with pro, v, e, n method o l o g, i, e, s and cutt, i, n, g-e, d, g, e tec h n o l, o, g, y.
             </p></p>
-            <div cl a s s N, a, m, e="t, e, x, t-l, e, f, t"> </div><a 
-                h, r, e, f="/"
-                cl a s s N, a, m, e="t, e, x, t-l, e, f, t">St, a, r, t Y, o, u, r Transfo r m a t, i, o, n
+            <div cl a s s N, ame="t, e, x, t-l, e, f, t"> </div><a 
+                h, ref="/"
+                cl a s s N, ame="t, e, x, t-l, e, f, t">St, a, r, t Y, o, u, r Transfo r m a t, i, o, n
               </a></a>
               <a 
-                h, r, e, f="/"
-                cl a s s N, a, m, e="t, e, x, t-l, e, f, t">V, i, e, w Succ, e, s, s Stor, i, e, s
+                h, ref="/"
+                cl a s s N, ame="t, e, x, t-l, e, f, t">V, i, e, w Succ, e, s, s Stor, i, e, s
               </a></a>
             </div>
           </sect, i, o, n>

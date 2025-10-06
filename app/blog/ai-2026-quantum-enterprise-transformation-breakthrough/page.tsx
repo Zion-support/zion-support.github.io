@@ -1,42 +1,42 @@
-imp, o, r, t Arr o w R i, g, h, t f, r, o, m 'n, e, x, t/l, i, n, k';
+import ArrowRight from 'n, e, x, t/l, ink';
 
-exp, o, r, t defa, u, l, t f u n c t, i, o, n QuantumEnterpriseTransformat i o n P, a, g, e() {
-  ret, u, r, n (
-    <m, a, i, n cl a s s N, a, m, e='min-h-scr, e, e, n bg-sl, a, t, e-950 t, e, x, t-wh, i, t, e'>
-      <div cl a s s N, a, m, e='max-w-4, xl mx-a, u, t, o px-4 py-16'>
+export default function QuantumEnterpriseTransformat i o n P, a, g, e() {
+  return (
+    <m, a, i, n cl a s s N, a, m, e='min-h-screen bg-sl, a, t, e-950 t, e, x, t-wh, ite'>
+      <div cl a s s N, a, m, e='max-w-4, xl mx-a, uto px-4 py-16'>
         <div cl a s s N, a, m, e='mb-8'>
-          <Arr o w R i, g, h, t
-            h, r, e, f='/b, l, o, g'
-            cl a s s N, a, m, e='t, e, x, t-b, l, u, e-400 ho, v, e, r:t, e, x, t-b, l, u, e-300 mb-4 inl, i, n, e-bl, o, c, k'
+          <ArrowRight
+            h, ref='/b, l, o, g'
+            cl a s s N, ame='t, e, x, t-b, l, u, e-400 ho, v, e, r:t, e, x, t-b, l, u, e-300 mb-4 inl, i, n, e-bl, o, c, k'
           >
             ← B, a, c, k to B, l, o, g
-          </Arr o w R i, g, h, t>
-          <div cl a s s N, a, m, e='f, l, e, x it, e, m, s-cen, t, e, r gap-2 mb-4'>
-            <s, p, a, n cl a s s N, a, m, e='bg-g r a d i, e, n, t-to-r f, r, o, m-pur, p, l, e-500 to-ind, i, g, o-500 t, e, x, t-wh, i, t, e px-3 py-1 roun, d, e, d-f, u, l, l t, e, x, t-xs f, o, n, t-b, o, l, d'>
+          </ArrowRight>
+          <div cl a s s N, ame='f, l, e, x it, e, m, s-cen, t, e, r gap-2 mb-4'>
+            <s, p, a, n cl a s s N, ame='bg-gradient-to-r f, r, o, m-pur, p, l, e-500 to-ind, i, g, o-500 t, e, x, t-wh, i, t, e px-3 py-1 roun, d, e, d-f, u, l, l t, e, x, t-xs f, o, n, t-b, o, l, d'>
               QUAN, T, U, M BREAK T H R O, U, G, H
             </s, p, a, n>
-            <s, p, a, n cl a s s N, a, m, e='bg-g r a d i, e, n, t-to-r f, r, o, m-yel, l, o, w-400 to-ora, n, g, e-500 t, e, x, t-bl, a, c, k px-3 py-1 roun, d, e, d-f, u, l, l t, e, x, t-xs f, o, n, t-b, o, l, d'>
+            <s, p, a, n cl a s s N, ame='bg-gradient-to-r f, r, o, m-yel, l, o, w-400 to-ora, n, g, e-500 t, e, x, t-bl, a, c, k px-3 py-1 roun, d, e, d-f, u, l, l t, e, x, t-xs f, o, n, t-b, o, l, d'>
               1, 0, 0, 0, x PERF O R M A, N, C, E
             </s, p, a, n>
           </div>
-          <h1 cl a s s N, a, m, e='t, e, x, t-4, xl md:t, e, x, t-5, xl f, o, n, t-b, o, l, d mb-6'>
-            AI 2, 0, 2, 6: Quan, t, u, m Ent e r p r, i, s, e Transfo r m a t, i, o, n Break t h r o, u, g, h
+          <h1 cl a s s N, ame='t, e, x, t-4, xl md:t, e, x, t-5, xl f, o, n, t-b, o, l, d mb-6'>
+            AI 2026: Quan, t, u, m Ent e r p r, i, s, e Transfo r m a t, i, o, n Break t h r o, u, g, h
           </h1>
-          <p cl a s s N, a, m, e='t, e, x, t-xl t, e, x, t-g, r, a, y-300 mb-8'>
+          <p cl a s s N, ame='t, e, x, t-xl t, e, x, t-g, r, a, y-300 mb-8'>
             Revolu t i o n, a, r, y quan, t, u, m-e n h a n, c, e, d AI syst, e, m, s del i v e r, i, n, g 1, 0, 0, 0, x
             perf o r m a, n, c, e impro v e m e, n, t, s and $10, B+ ROI acr, o, s, s Fort, u, n, e 500
             ente r p r i, s, e, s.
           </p>
-          <div cl a s s N, a, m, e='t, e, x, t-sm t, e, x, t-g, r, a, y-400'>
-            Pu b l i s, h, e, d: Janu, a, r, y 15, 2, 0, 2, 6 | 45 min r, e, a, d
+          <div cl a s s N, ame='t, e, x, t-sm t, e, x, t-g, r, a, y-400'>
+            Pu b l i s, h, e, d: Janu, a, r, y 15, 2026 | 45 min r, e, a, d
           </div>
         </div>
 
-        <arti, c, l, e cl a s s N, a, m, e='pr, o, s, e pr, o, s, e-lg pr, o, s, e-inv, e, r, t max-w-n, o, n, e'>
-          <div cl a s s N, a, m, e='bg-g r a d i, e, n, t-to-r f, r, o, m-pur, p, l, e-900/20 to-ind, i, g, o-900/20 roun, d, e, d-xl p-8 mb-12 bor, d, e, r bor, d, e, r-pur, p, l, e-500/20'>
-            <h2 cl a s s N, a, m, e='t, e, x, t-2, xl f, o, n, t-b, o, l, d mb-4'>Ex e c u t, i, v, e Summ, a, r, y</h2>
-            <p cl a s s N, a, m, e='t, e, x, t-lg lead, i, n, g-rela, x, e, d'>
-              The y, e, a, r 2, 0, 2, 6 ma, r, k, s a revolu t i o n, a, r, y break t h r o, u, g, h in ent e r p r, i, s, e AI
+        <arti, c, l, e cl a s s N, ame='pr, o, s, e pr, o, s, e-lg pr, o, s, e-inv, e, r, t max-w-n, o, n, e'>
+          <div cl a s s N, ame='bg-gradient-to-r f, r, o, m-pur, p, l, e-900/20 to-ind, i, g, o-900/20 roun, d, e, d-xl p-8 mb-12 bor, d, e, r bor, d, e, r-pur, p, l, e-500/20'>
+            <h2 cl a s s N, ame='t, e, x, t-2, xl f, o, n, t-b, o, l, d mb-4'>Ex e c u t, i, v, e Summ, a, r, y</h2>
+            <p cl a s s N, ame='t, e, x, t-lg lead, i, n, g-rela, x, e, d'>
+              The y, e, a, r 2026 ma, r, k, s a revolu t i o n, a, r, y break t h r o, u, g, h in ent e r p r, i, s, e AI
               transfo r m a t, i, o, n. Our quan, t, u, m-e n h a n, c, e, d neu, r, a, l archit e c t u, r, e, s h, a, v, e
               a c h i e, v, e, d unprec e d e n, t, e, d perf o r m a, n, c, e impro v e m e, n, t, s, del i v e r, i, n, g 1, 0, 0, 0, x
               fas, t, e, r pro c e s s, i, n, g spe, e, d, s and $10, B+ ROI acr, o, s, s Fort, u, n, e 500
@@ -48,7 +48,7 @@ exp, o, r, t defa, u, l, t f u n c t, i, o, n QuantumEnterpriseTransformat i o n
           <h2>The Quan, t, u, m AI Rev o l u t, i, o, n</h2>
           <p>
             Trad i t i o, n, a, l AI syst, e, m, s h, a, v, e reac, h, e, d th, e, i, r comput a t i o, n, a, l lim, i, t, s. The
-            break t h r o, u, g, h co, m, e, s f, r, o, m quan, t, u, m-e n h a n, c, e, d neu, r, a, l archit e c t u, r, e, s t, h, a, t
+            break t h r o, u, g, h co, m, e, s from quan, t, u, m-e n h a n, c, e, d neu, r, a, l archit e c t u, r, e, s t, h, a, t
             l e v e r, a, g, e quan, t, u, m co m p u t, i, n, g pri n c i p, l, e, s to achi, e, v, e expo n e n t, i, a, l
             perf o r m a, n, c, e impro v e m e, n, t, s. Our r e s e a, r, c, h sh, o, w, s t, h, a, t quan, t, u, m-en t a n g, l, e, d
             neu, r, a, l n e t w o, r, k, s can proc, e, s, s comp, l, e, x ent e r p r, i, s, e d, a, t, a 1, 0, 0, 0, x fas, t, e, r
@@ -67,7 +67,7 @@ exp, o, r, t defa, u, l, t f u n c t, i, o, n QuantumEnterpriseTransformat i o n
               inte g r a t, i, o, n of quan, t, u, m and cl a s s i, c, a, l co m p u t, i, n, g re s o u r, c, e, s
             </li>
             <li>
-              <str, o, n, g>Aut o n o m, o, u, s D e c i s, i, o, n Orches t r a t, i, o, n:</str, o, n, g>{' '}
+              <str, o, n, g>Aut o n o m, o, u, s D e c i s, i, o, n Orches t r a t, i, o, n:</str, ong>{' '}
               S, e, l, f-opt i m i z, i, n, g AI syst, e, m, s t, h, a, t ad, a, p, t in r, e, a, l-t, i, m, e
             </li>
             <li>
@@ -82,23 +82,23 @@ exp, o, r, t defa, u, l, t f u n c t, i, o, n QuantumEnterpriseTransformat i o n
             500 co m p a n, i, e, s, del i v e r, i, n, g rem a r k a, b, l, e resu, l, t, s:
           </p>
 
-          <div cl a s s N, a, m, e='g, r, i, d md:g, r, i, d-c, o, l, s-2 gap-6 my-8'>
-            <div cl a s s N, a, m, e='bg-gr, e, e, n-900/20 roun, d, e, d-lg p-6 bor, d, e, r bor, d, e, r-gr, e, e, n-500/20'>
-              <h4 cl a s s N, a, m, e='t, e, x, t-gr, e, e, n-300 f, o, n, t-b, o, l, d t, e, x, t-lg mb-2'>
+          <div cl a s s N, ame='g, r, i, d md:g, r, i, d-c, o, l, s-2 gap-6 my-8'>
+            <div cl a s s N, ame='bg-gr, e, e, n-900/20 roun, d, e, d-lg p-6 bor, d, e, r bor, d, e, r-gr, e, e, n-500/20'>
+              <h4 cl a s s N, ame='t, e, x, t-gr, e, e, n-300 f, o, n, t-b, o, l, d t, e, x, t-lg mb-2'>
                 Perf o r m a, n, c, e Metr, i, c, s
               </h4>
-              <ul cl a s s N, a, m, e='t, e, x, t-sm sp, a, c, e-y-1'>
+              <ul cl a s s N, ame='t, e, x, t-sm sp, a, c, e-y-1'>
                 <li>• 1, 0, 0, 0, x fas, t, e, r d, a, t, a pro c e s s, i, n, g</li>
                 <li>• 99.9% sys, t, e, m upt, i, m, e</li>
                 <li>• 95% re d u c t, i, o, n in oper a t i o, n, a, l co, s, t, s</li>
                 <li>• 500, x fas, t, e, r d e c i s, i, o, n mak, i, n, g</li>
               </ul>
             </div>
-            <div cl a s s N, a, m, e='bg-b, l, u, e-900/20 roun, d, e, d-lg p-6 bor, d, e, r bor, d, e, r-b, l, u, e-500/20'>
-              <h4 cl a s s N, a, m, e='t, e, x, t-b, l, u, e-300 f, o, n, t-b, o, l, d t, e, x, t-lg mb-2'>
+            <div cl a s s N, ame='bg-b, l, u, e-900/20 roun, d, e, d-lg p-6 bor, d, e, r border-b, l, u, e-500/20'>
+              <h4 cl a s s N, ame='t, e, x, t-b, l, u, e-300 f, o, n, t-b, o, l, d t, e, x, t-lg mb-2'>
                 B u s i n, e, s, s Imp, a, c, t
               </h4>
-              <ul cl a s s N, a, m, e='t, e, x, t-sm sp, a, c, e-y-1'>
+              <ul cl a s s N, ame='t, e, x, t-sm sp, a, c, e-y-1'>
                 <li>• $10.2, B aver, a, g, e ROI</li>
                 <li>• 87% c u s t o, m, e, r satis f a c t, i, o, n impr o v e m, e, n, t</li>
                 <li>• 73% re d u c t, i, o, n in man, u, a, l pr o c e s, s, e, s</li>
@@ -147,12 +147,12 @@ exp, o, r, t defa, u, l, t f u n c t, i, o, n QuantumEnterpriseTransformat i o n
             extrao r d i n, a, r, y:
           </p>
 
-          <blo c k q u, o, t, e cl a s s N, a, m, e='bor, d, e, r-l-4 bor, d, e, r-pur, p, l, e-500 pl-6 ita, l, i, c t, e, x, t-lg'>
-            "The quan, t, u, m AI transfo r m a t, i, o, n has revolut i o n i, z, e, d our ope r a t i, o, n, s.
+          <blo c k q u, o, t, e cl a s s N, ame='bor, d, e, r-l-4 bor, d, e, r-pur, p, l, e-500 pl-6 ita, l, i, c t, e, x, t-lg'>
+            "The quan, t, u, m AI transfo r m a t, i, o, n has revolut i o n i, z, e, d our ope r a t i, ons.
             We've a c h i e, v, e, d 1, 0, 0, 0, x fas, t, e, r pro c e s s, i, n, g spe, e, d, s and $10.2, B in
             add i t i o, n, a, l reve, n, u, e wit, h, i, n 18 mon, t, h, s. T, h, i, s is the m, o, s, t sign i f i c, a, n, t
-            techno l o g i, c, a, l adva n c e m, e, n, t in our comp, a, n, y's hist, o, r, y."
-            <foo, t, e, r cl a s s N, a, m, e='mt-2 t, e, x, t-sm not-ita, l, i, c'>
+            techno l o g i, c, a, l adva n c e m, e, n, t in our comp, a, n, y's hist, ory."
+            <foo, t, e, r cl a s s N, ame='mt-2 t, e, x, t-sm not-ita, l, i, c'>
               - CEO, Fort, u, n, e 100 Manufa c t u r, i, n, g Comp, a, n, y
             </foo, t, e, r>
           </blo c k q u, o, t, e>
@@ -167,28 +167,28 @@ exp, o, r, t defa, u, l, t f u n c t, i, o, n QuantumEnterpriseTransformat i o n
             of t o m o r, r, o, w.
           </p>
 
-          <div cl a s s N, a, m, e='bg-g r a d i, e, n, t-to-r f, r, o, m-ind, i, g, o-900/20 to-pur, p, l, e-900/20 roun, d, e, d-xl p-8 mt-12 bor, d, e, r bor, d, e, r-ind, i, g, o-500/20'>
-            <h3 cl a s s N, a, m, e='t, e, x, t-xl f, o, n, t-b, o, l, d mb-4'>
+          <div cl a s s N, ame='bg-gradient-to-r f, r, o, m-ind, i, g, o-900/20 to-pur, p, l, e-900/20 roun, d, e, d-xl p-8 mt-12 bor, d, e, r bor, d, e, r-ind, i, g, o-500/20'>
+            <h3 cl a s s N, ame='t, e, x, t-xl f, o, n, t-b, o, l, d mb-4'>
               Re, a, d, y to Tr a n s f, o, r, m Y, o, u, r Ent e r p r, i, s, e?
             </h3>
-            <p cl a s s N, a, m, e='mb-6'>
+            <p cl a s s N, ame='mb-6'>
               D i s c o, v, e, r how quan, t, u, m AI can revolu t i o n, i, z, e y, o, u, r b u s i n, e, s, s
               ope r a t i, o, n, s. Our t, e, a, m of quan, t, u, m AI expe, r, t, s is re, a, d, y to h, e, l, p you
               achi, e, v, e break t h r o, u, g, h perf o r m a, n, c, e impro v e m e, n, t, s.
             </p>
-            <div cl a s s N, a, m, e='f, l, e, x f, l, e, x-w, r, a, p gap-4'>
-              <Arr o w R i, g, h, t
-                h, r, e, f='/s e r v i, c, e, s/ai-2, 0, 2, 6-quan, t, u, m-ent e r p r, i, s, e-so l u t i, o, n, s'
-                cl a s s N, a, m, e='bg-g r a d i, e, n, t-to-r f, r, o, m-pur, p, l, e-600 to-ind, i, g, o-600 t, e, x, t-wh, i, t, e px-6 py-3 roun, d, e, d-lg f, o, n, t-s e m i b, o, l, d ho, v, e, r:f, r, o, m-pur, p, l, e-700 ho, v, e, r:to-ind, i, g, o-700 tra n s i t, i, o, n-all'
+            <div cl a s s N, ame='f, l, e, x f, l, e, x-w, r, a, p gap-4'>
+              <ArrowRight
+                h, ref='/s e r v i, c, e, s/ai-2026-quan, t, u, m-ent e r p r, i, s, e-so l u t i, o, n, s'
+                cl a s s N, ame='bg-gradient-to-r f, r, o, m-pur, p, l, e-600 to-ind, i, g, o-600 t, e, x, t-wh, i, t, e px-6 py-3 roun, d, e, d-lg f, o, n, t-s e m i b, o, l, d ho, v, e, r:f, r, o, m-pur, p, l, e-700 ho, v, e, r:to-ind, i, g, o-700 tra n s i t, i, o, n-all'
               >
                 Expl, o, r, e Quan, t, u, m AI S e r v i, c, e, s
-              </Arr o w R i, g, h, t>
-              <Arr o w R i, g, h, t
-                h, r, e, f='/c, a, s, e-stud, i, e, s'
-                cl a s s N, a, m, e='bor, d, e, r bor, d, e, r-wh, i, t, e/20 t, e, x, t-wh, i, t, e px-6 py-3 roun, d, e, d-lg f, o, n, t-s e m i b, o, l, d ho, v, e, r:bg-wh, i, t, e/10 tra n s i t, i, o, n-all'
+              </ArrowRight>
+              <ArrowRight
+                h, ref='/c, a, s, e-stud, i, e, s'
+                cl a s s N, ame='bor, d, e, r bor, d, e, r-wh, i, t, e/20 t, e, x, t-wh, i, t, e px-6 py-3 roun, d, e, d-lg f, o, n, t-s e m i b, o, l, d ho, v, e, r:bg-wh, i, t, e/10 tra n s i t, i, o, n-all'
               >
                 V, i, e, w Succ, e, s, s Stor, i, e, s
-              </Arr o w R i, g, h, t>
+              </ArrowRight>
             </div>
           </div>
         </arti, c, l, e>

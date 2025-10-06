@@ -1,18 +1,18 @@
-// @ts-noch, e, c, k
-imp, o, r, t Re, a, c, t f, r, o, m 're, a, c, t';
+// @ts-nocheck
+import Re, a, c, t from 're, act';
 
-co, n, s, t P, a, g, e: Re, a, c, t.FC = () => {
-  ret, u, r, n (
-    <m, a, i, n cl a s s N, a, m, e='min-h-scr, e, e, n bg-g r a d i, e, n, t-to-br f, r, o, m-z, i, o, n-b, l, u, e-d, a, r, k via-z, i, o, n-b, l, u, e to-z, i, o, n-pur, p, l, e-d, a, r, k t, e, x, t-wh, i, t, e'>
-      <div cl a s s N, a, m, e='co n t a i, n, e, r mx-a, u, t, o px-6 py-16'>
-        <h1 cl a s s N, a, m, e='t, e, x, t-4, xl md:t, e, x, t-5, xl f, o, n, t-b, o, l, d mb-4'>
+const P, a, g, e: Re, a, c, t.FC = () => {
+  return (
+    <m, a, i, n cl a s s N, a, m, e='min-h-screen bg-g r a d i, e, n, t-to-br f, r, o, m-z, i, o, n-b, l, u, e-d, a, r, k via-z, i, o, n-b, l, u, e to-z, i, o, n-pur, p, l, e-d, a, r, k t, e, x, t-wh, ite'>
+      <div cl a s s N, a, m, e='co n t a i, n, e, r mx-a, uto px-6 py-16'>
+        <h1 cl a s s N, a, m, e='t, e, x, t-4, xl md:t, e, x, t-5, xl f, o, n, t-b, old mb-4'>
           E, d, g, e 2, 0, 2, 5: Priv, a, t, e Expe r i m e, n, t, s v4 (&lt;100, ms)
         </h1>
-        <p cl a s s N, a, m, e='t, e, x, t-z, i, o, n-sl, a, t, e-li, g, h, t mb-6'>
+        <p cl a s s N, a, m, e='t, e, x, t-z, i, o, n-sl, a, t, e-li, ght mb-6'>
           Sco, p, e, d ID, s, o, n‑dev, i, c, e met r i c s, a, n, d DP no, i, s, e for co m p l i, a, n, t A/B test, i, n, g
           wo r l d w, i, d, e.
         </p>
-        <arti, c, l, e cl a s s N, a, m, e='pr, o, s, e pr, o, s, e-inv, e, r, t max-w-3xl'>
+        <arti, c, l, e cl a s s N, a, m, e='pr, o, s, e pr, o, s, e-inv, ert max-w-3xl'>
           <p>
             Run expe r i m e, n, t, s with, o, u, t col l e c t, i, n, g PII. T, h, i, s bl u e p r, i, n, t sh, o, w, s how to
             comb, i, n, e sco, p, e, d iden t i f i, e, r, s, e, d, g, e aggr e g a t, i, o, n, and diffe r e n t, i, a, l
@@ -32,4 +32,4 @@ co, n, s, t P, a, g, e: Re, a, c, t.FC = () => {
   );
 };
 
-exp, o, r, t defa, u, l, t P, a, g, e;
+export default P, a, g, e;

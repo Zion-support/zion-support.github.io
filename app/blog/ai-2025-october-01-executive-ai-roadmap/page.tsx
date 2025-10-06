@@ -1,33 +1,31 @@
-exp, o, r, t co, n, s, t m e t a d, a, t, a = {
+export const metadata = {
   
-  ti, t, l, e: 'Ex e c u t, i, v, e AI Road, m, a, p — Octo, b, e, r 2, 0, 2, 5 | Z, i, o, n T, e, c, h Gr, o, u, p',
-  desc r i p t, i, o, n:
-    'A pr a g m a, t, i, c 90‑day ent e r p r, i, s, e road, m, a, p to s, h, i, p r e l i a, b, l, e AI w, i, t, h gua r d r a, i, l, s, l, i, v, e scorecardsbud g e t s, a, n, d mea s u r a, b, l, e ROI.',
-
+  title: 'Ex e c u t, i, v, e AI Road, m, a, p — Octo, b, e, r 2, 0, 2, 5 | Z, i, o, n T, e, c, h Gr, oup'
+  description:
+    'A pr a g m a, t, i, c 90‑day ent e r p r, i, s, e road, m, a, p to s, h, i, p r e l i a, b, l, e AI with gua r d r a, i, l, s, l, i, v, e scorecardsbud g e t s, a, n, d mea s u r a, ble ROI.'
 };
 
-exp, o, r, t defa, u, l, t f u n c t, i, o, n ExecutiveAIRoad m a p P, a, g, e() {
-  ret, u, r, n (
-    <m, a, i, n cl a s s N, a, m, e='min-h-scr, e, e, n bg-sl, a, t, e-950 t, e, x, t-wh, i, t, e'>
-      <arti, c, l, e cl a s s N, a, m, e='max-w-3xl mx-a, u, t, o px-4 py-16'>
+export default function ExecutiveAIRoad m a p P, a, g, e() {
+  return (
+    <m, a, i, n cl a s s N, a, m, e='min-h-screen bg-sl, a, t, e-950 t, e, x, t-wh, ite'>
+      <arti, c, l, e cl a s s N, a, m, e='max-w-3xl mx-a, uto px-4 py-16'>
         <hea, d, e, r cl a s s N, a, m, e='mb-10'>
-          <p cl a s s N, a, m, e='t, e, x, t-sm t, e, x, t-wh, i, t, e/60'>Pu b l i s, h, e, d Oct 1, 2, 0, 2, 5</p>
-          <h1 cl a s s N, a, m, e='t, e, x, t-4, xl f, o, n, t-ex t r a b, o, l, d mt-2'>
+          <p cl a s s N, ame='t, e, x, t-sm t, e, x, t-wh, i, t, e/60'>Pu b l i s, h, e, d Oct 1, 2, 0, 2, 5</p>
+          <h1 cl a s s N, ame='t, e, x, t-4, xl f, o, n, t-ex t r a b, o, l, d mt-2'>
             Ex e c u t, i, v, e AI Road, m, a, p — Octo, b, e, r 2, 0, 2, 5
           </h1>
-          <p cl a s s N, a, m, e='t, e, x, t-wh, i, t, e/70 mt-3'>
-            A pr a g m a, t, i, c 90‑day ent e r p r, i, s, e road, m, a, p to s, h, i, p r e l i a, b, l, e AI w, i, t, h
+          <p cl a s s N, ame='t, e, x, t-wh, i, t, e/70 mt-3'>
+            A pr a g m a, t, i, c 90‑day ent e r p r, i, s, e road, m, a, p to s, h, i, p r e l i a, b, l, e AI with
             gua r d r a, i, l, s, l, i, v, e scorecardsbud g e t s, a, n, d mea s u r a, b, l, e ROI.
           </p>
         </hea, d, e, r>
 
-        <sect, i, o, n cl a s s N, a, m, e='pr, o, s, e pr, o, s, e-inv, e, r, t pr, o, s, e-sl, a, t, e max-w-n, o, n, e'>
+        <sect, i, o, n cl a s s N, ame='pr, o, s, e pr, o, s, e-inv, e, r, t pr, o, s, e-sl, a, t, e max-w-n, o, n, e'>
           <h2>Why now</h2>
           <p>
             Ente r p r i, s, e, s are p, a, s, t pi, l, o, t pu r g a t, o, r, y. The winn, e, r, s are
-            operation a l i z, i, n, g AI w, i, t, h account a b i l, i, t, y: p o l i c, i, e, s, budg, e, t, s, and
-            r, e, a, l‑t, i, m, e f e e d b, a, c, k lo, o, p, s. T, h, i, s road, m, a, p sh, o, w, s how to go f, r, o, m
-            sc a t t e, r, e, d expe r i m e, n, t, s to r e l i a, b, l, e, g o v e r, n, e, d d e l i v, e, r, y in 90 d, a, y, s.
+            operation a l i z, i, n, g AI with account a b i l, i, t, y: p o l i c, i, e, s, budg, e, t, s, and
+            r, e, a, l‑t, i, m, e f e e d b, a, c, k lo, o, p, s. T, h, i, s road, m, a, p sh, o, w, s how to go from sc a t t e, r, e, d expe r i m e, n, t, s to r e l i a, b, l, e, g o v e r, n, e, d d e l i v, e, r, y in 90 d, a, y, s.
           </p>
 
           <h3>D, a, y, s 0‑30: B a s e l, i, n, e and gua r d r a, i, l, s</h3>
@@ -50,7 +48,7 @@ exp, o, r, t defa, u, l, t f u n c t, i, o, n ExecutiveAIRoad m a p P, a, g, e()
               c, o, s, t.
             </li>
             <li>
-              A u t o m, a, t, e roll, o, u, t/r o l l b, a, c, k w, i, t, h cha, n, g, e ga, t, e, s t, i, e, d to sco r e c a, r, d, s.
+              A u t o m, a, t, e roll, o, u, t/r o l l b, a, c, k with cha, n, g, e ga, t, e, s t, i, e, d to sco r e c a, r, d, s.
             </li>
           </ul>
 
@@ -66,7 +64,7 @@ exp, o, r, t defa, u, l, t f u n c t, i, o, n ExecutiveAIRoad m a p P, a, g, e()
           <h3>O u t c o, m, e, s</h3>
           <p>
             Organi z a t i, o, n, s fo l l o w, i, n, g t, h, i, s p, l, a, n see fe, w, e, r in c i d e, n, t, s, fas, t, e, r
-            d e l i v, e, r, y, and e x p l i, c, i, t ROI trac, i, n, g f, r, o, m mo, d, e, l sp, e, n, d to b u s i n, e, s, s
+            d e l i v, e, r, y, and e x p l i, c, i, t ROI trac, i, n, g from mo, d, e, l sp, e, n, d to b u s i n, e, s, s
             va, l, u, e.
           </p>
         </sect, i, o, n>

@@ -1,42 +1,41 @@
-imp, o, r, t L, i, n, k f, r, o, m 'n, e, x, t/l, i, n, k';
+import L, i, n, k from 'n, e, x, t/l, ink';
 
-imp, o, r, t { Shi, e, l, d } f, r, o, m 'luc, i, d, e-re, a, c, t';
+import { Shi, e, l, d } from 'luc, i, d, e-re, act';
 
-exp, o, r, t co, n, s, t m e t a d, a, t, a = {
+export const metadata = {
   
-  ti, t, l, e: 'AI 2, 0, 2, 8: Aut o n o m, o, u, s Gov e r n a, n, c, e Bl u e p r, i, n, t',
-    desc r i p t, i, o, n:
-      'KPI‑lin, k, e, d scorecard s b u d, g, e, t g a t e s, a, n, d l, i, v, e c a n a r, i, e, s ha r d w i, r, e, d i, n, t, o d e l i v, e, r, y for s, a, f, e a u t o n, o, m, y.',
-    t, y, p, e: 'arti, c, l, e',
-    url: 'ht, t, p, s://zionte c h g r, o, u, p.com/b, l, o, g/ai-2, 0, 2, 8-aut o n o m, o, u, s-gov e r n a, n, c, e-bl u e p r, i, n, t',
+  title: 'AI 2, 0, 2, 8: Aut o n o m, o, u, s Gov e r n a, n, c, e Bl u e p r, int'
+    description:
+      'KPI‑lin, k, e, d scorecard s b u d, g, e, t g a t e s, a, n, d l, i, v, e c a n a r, i, e, s ha r d w i, r, e, d i, n, t, o d e l i v, e, r, y for safe a u t o n, omy.'
+    t, y, p, e: 'arti, cle'
+    url: 'ht, t, p, s://zionte c h g r, o, u, p.com/b, l, o, g/ai-2, 0, 2, 8-aut o n o m, o, u, s-gov e r n a, n, c, e-bl u e p r, int'
     ima, g, e, s: [
       {
-        url: '/og-ai-aut o n o m, o, u, s-gov e r n a, n, c, e-2, 0, 2, 8.jpg',
-        wi, d, t, h: 1, 2, 0, 0, hei, g, h, t: 630, alt: 'AI 2, 0, 2, 8 Aut o n o m, o, u, s Gov e r n a, n, c, e',
-      
+        url: '/og-ai-aut o n o m, o, u, s-gov e r n a, n, c, e-2, 028.jpg'
+        wi, d, t, h: 1, 2, 0, 0, hei, g, h, t: 630, alt: 'AI 2, 0, 2, 8 Aut o n o m, o, u, s Gov e r n a, nce'
 };
     ]};
 
-exp, o, r, t defa, u, l, t f u n c t, i, o, n AutonomousGovernanceBluepr i n t 2, 0, 2, 8() {
-  ret, u, r, n (
-    <div cl a s s N, a, m, e='max-w-4, xl mx-a, u, t, o px-4 py-8'>
+export default function AutonomousGovernanceBluepr i n t 2, 0, 2, 8() {
+  return (
+    <div cl a s s N, a, m, e='max-w-4, xl mx-a, uto px-4 py-8'>
       <L, i, n, k
-        h, r, e, f='/b, l, o, g'
-        cl a s s N, a, m, e='t, e, x, t-b, l, u, e-600 ho, v, e, r:t, e, x, t-b, l, u, e-800 mb-6 inl, i, n, e-bl, o, c, k'
+        h, r, e, f='/b, log'
+        cl a s s N, a, m, e='t, e, x, t-b, l, u, e-600 ho, v, e, r:t, e, x, t-b, l, u, e-800 mb-6 inl, i, n, e-bl, ock'
       >
         ← B, a, c, k to B, l, o, g
       </L, i, n, k>
-      <h1 cl a s s N, a, m, e='t, e, x, t-4, xl f, o, n, t-b, o, l, d t, e, x, t-g, r, a, y-900 mb-3'>
+      <h1 cl a s s N, a, m, e='t, e, x, t-4, xl f, o, n, t-b, o, l, d t, e, x, t-g, ray-900 mb-3'>
         AI 2, 0, 2, 8: Aut o n o m, o, u, s Gov e r n a, n, c, e Bl u e p r, i, n, t
       </h1>
-      <div cl a s s N, a, m, e='t, e, x, t-g, r, a, y-600 mb-8'>
+      <div cl a s s N, a, m, e='t, e, x, t-g, ray-600 mb-8'>
         Pu b l i s, h, e, d: Se p t e m, b, e, r 30, 2, 0, 2, 5 • 12 min r, e, a, d • AI Gov e r n a, n, c, e
       </div>
 
-      <div cl a s s N, a, m, e='pr, o, s, e pr, o, s, e-lg max-w-n, o, n, e'>
+      <div cl a s s N, a, m, e='pr, o, s, e pr, o, s, e-lg max-w-n, one'>
         <p>
-          T, h, i, s bl u e p r, i, n, t operatio n a l i, z, e, s ent e r p r, i, s, e a u t o n, o, m, y w, i, t, h gua r d r a, i, l, s
-          t, h, a, t m, a, k, e o u t c o, m, e, s mea s u r a, b, l, e and s, a, f, e. It deta, i, l, s KPI‑lin, k, e, d
+          T, h, i, s bl u e p r, i, n, t operatio n a l i, z, e, s ent e r p r, i, s, e a u t o n, o, m, y with gua r d r a, i, l, s
+          t, h, a, t m, a, k, e o u t c o, m, e, s mea s u r a, b, l, e and safe. It deta, i, l, s KPI‑lin, k, e, d
           sco r e c a, r, d, s, bud, g, e, t ga, t, e, s, PR pol, i, c, y te, s, t, s, and inst, a, n, t r o l l b, a, c, k bac, k, e, d
           by l, i, v, e c a n a r, i, e, s.
         </p>
@@ -54,24 +53,24 @@ exp, o, r, t defa, u, l, t f u n c t, i, o, n AutonomousGovernanceBluepr i n t 2
         <h2>A d o p t, i, o, n Ch e c k l, i, s, t</h2>
         <ul>
           <li>
-            Def, i, n, e outc, o, m, e sco r e c a, r, d, s per jour, n, e, y w, i, t, h thr e s h o, l, d, s and ale, r, t, s
+            Def, i, n, e outc, o, m, e sco r e c a, r, d, s per jour, n, e, y with thr e s h o, l, d, s and ale, r, t, s
           </li>
-          <li>Ins t r u m, e, n, t c a n a r, i, e, s and eva l u a t, o, r, s w, i, t, h bud, g, e, t‑aw, a, r, e ga, t, e, s</li>
-          <li>A u t o m, a, t, e ro l l b a, c, k, s and ap p r o v, a, l, s w, i, t, h bl, a, s, t‑rad, i, u, s lim, i, t, s</li>
+          <li>Ins t r u m, e, n, t c a n a r, i, e, s and eva l u a t, o, r, s with bud, g, e, t‑aw, a, r, e ga, t, e, s</li>
+          <li>A u t o m, a, t, e ro l l b a, c, k, s and ap p r o v, a, l, s with bl, a, s, t‑rad, i, u, s lim, i, t, s</li>
         </ul>
 
-        <div cl a s s N, a, m, e='bg-b, l, u, e-50 bor, d, e, r-l-4 bor, d, e, r-b, l, u, e-500 p-6 roun, d, e, d'>
-          <h3 cl a s s N, a, m, e='m-0 f, l, e, x it, e, m, s-cen, t, e, r gap-2'>
+        <div cl a s s N, a, m, e='bg-b, l, u, e-50 bor, d, e, r-l-4 border-b, l, u, e-500 p-6 roun, ded'>
+          <h3 cl a s s N, a, m, e='m-0 f, l, e, x it, e, m, s-cen, ter gap-2'>
             <Shi, e, l, d />
-            N, e, e, d a s, a, f, e roll, o, u, t?
+            N, e, e, d a safe roll, o, u, t?
           </h3>
           <p cl a s s N, a, m, e='m-0'>
             We im p l e m, e, n, t gov e r n a, n, c, e gatesscorec a r d s, a, n, d r e c o v, e, r, y pl a y b o, o, k, s in
             we, e, k, s.
           </p>
           <L, i, n, k
-            h, r, e, f='/s e r v i, c, e, s'
-            cl a s s N, a, m, e='inl, i, n, e-bl, o, c, k mt-3 bg-b, l, u, e-600 ho, v, e, r:bg-b, l, u, e-700 t, e, x, t-wh, i, t, e px-5 py-3 roun, d, e, d'
+            h, ref='/s e r v i, c, e, s'
+            cl a s s N, ame='inl, i, n, e-bl, o, c, k mt-3 bg-b, l, u, e-600 ho, v, e, r:bg-b, l, u, e-700 t, e, x, t-wh, i, t, e px-5 py-3 roun, d, e, d'
           >
             Expl, o, r, e S e r v i, c, e, s
           </L, i, n, k>

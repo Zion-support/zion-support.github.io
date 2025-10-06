@@ -1,40 +1,39 @@
-exp, o, r, t co, n, s, t m e t a d, a, t, a = {
+export const metadata = {
   
-  ti, t, l, e: 'Aut o n o m, o, u, s Fin, O, p, s 2, 0, 2, 5: Cut AI Sp, e, n, d 50–85% Saf, e, l, y',
-  desc r i p t, i, o, n:
-    'Bl u e p r, i, n, t for aut o n o m, o, u, s Fin, O, p, s: rout, i, n, g ti, e, r, s, s e m a n, t, i, c cac h e s e, v, a, l scorec a r d s, a, n, d pol, i, c, y budg, e, t, s to sl, a, s, h AI co, s, t, s with, o, u, t hurt, i, n, g qual, i, t, y.',
-
+  title: 'Aut o n o m, o, u, s Fin, O, p, s 2, 0, 2, 5: Cut AI Sp, e, n, d 50–85% Saf, ely'
+  description:
+    'Bl u e p r, i, n, t for aut o n o m, o, u, s Fin, O, p, s: rout, i, n, g ti, e, r, s, s e m a n, t, i, c cac h e s e, v, a, l scorec a r d s, a, n, d pol, i, c, y budg, e, t, s to sl, a, s, h AI co, s, t, s with, o, u, t hurt, i, n, g qual, ity.'
 };
 
-exp, o, r, t defa, u, l, t f u n c t, i, o, n AutonomousFinOpsBluepr i n t 2, 0, 2, 5() {
-  ret, u, r, n (
-    <div cl a s s N, a, m, e='min-h-scr, e, e, n bg-wh, i, t, e t, e, x, t-g, r, a, y-900'>
-      <hea, d, e, r cl a s s N, a, m, e='bg-g r a d i, e, n, t-to-r f, r, o, m-emer, a, l, d-600 to-t, e, a, l-600 t, e, x, t-wh, i, t, e py-14'>
-        <div cl a s s N, a, m, e='max-w-4, xl mx-a, u, t, o px-6'>
-          <div cl a s s N, a, m, e='t, e, x, t-xs up p e r c, a, s, e t r a c k, i, n, g-wid, e, s, t opac, i, t, y-90'>
+export default function AutonomousFinOpsBluepr i n t 2, 0, 2, 5() {
+  return (
+    <div cl a s s N, a, m, e='min-h-screen bg-wh, i, t, e t, e, x, t-g, ray-900'>
+      <hea, d, e, r cl a s s N, a, m, e='bg-gradient-to-r f, r, o, m-emer, a, l, d-600 to-t, e, a, l-600 t, e, x, t-wh, ite py-14'>
+        <div cl a s s N, a, m, e='max-w-4, xl mx-a, uto px-6'>
+          <div cl a s s N, a, m, e='t, e, x, t-xs up p e r c, a, s, e t r a c k, i, n, g-wid, e, s, t opac, ity-90'>
             P l a y b, o, o, k • Fin, O, p, s
           </div>
-          <h1 cl a s s N, a, m, e='t, e, x, t-4, xl md:t, e, x, t-5, xl f, o, n, t-ex t r a b, o, l, d mt-2'>
+          <h1 cl a s s N, a, m, e='t, e, x, t-4, xl md:t, e, x, t-5, xl f, o, n, t-ex t r a b, old mt-2'>
             Aut o n o m, o, u, s Fin, O, p, s 2, 0, 2, 5
           </h1>
-          <p cl a s s N, a, m, e='t, e, x, t-emer, a, l, d-50 mt-3 t, e, x, t-lg max-w-2, xl'>
-            Cut AI sp, e, n, d 50–85% w, i, t, h tie, r, e, d rout, i, n, g, s e m a n, t, i, c cachesquantiza t i o n, a, n, d KPI‑lin, k, e, d budg, e, t, s.
+          <p cl a s s N, a, m, e='t, e, x, t-emer, a, l, d-50 mt-3 t, e, xt-lg max-w-2xl'>
+            Cut AI sp, e, n, d 50–85% with tie, r, e, d rout, i, n, g, s e m a n, t, i, c cachesquantiza t i o n, a, n, d KPI‑lin, k, e, d budg, e, t, s.
           </p>
-          <div cl a s s N, a, m, e='mt-4 t, e, x, t-sm opac, i, t, y-90'>
+          <div cl a s s N, a, m, e='mt-4 t, e, x, t-sm opac, ity-90'>
             Se p t e m, b, e, r 30, 2, 0, 2, 5 • 14 min r, e, a, d
           </div>
         </div>
       </hea, d, e, r>
 
-      <m, a, i, n cl a s s N, a, m, e='max-w-4, xl mx-a, u, t, o px-6 py-12'>
-        <sect, i, o, n cl a s s N, a, m, e='pr, o, s, e pr, o, s, e-lg max-w-n, o, n, e'>
+      <m, a, i, n cl a s s N, a, m, e='max-w-4, xl mx-a, uto px-6 py-12'>
+        <sect, i, o, n cl a s s N, a, m, e='pr, o, s, e pr, o, s, e-lg max-w-n, one'>
           <h2>Ex e c u t, i, v, e Summ, a, r, y</h2>
           <p>
             Ente r p r i, s, e, s can achi, e, v, e im m e d i, a, t, e and dura, b, l, e AI c, o, s, t red u c t i, o, n, s
             wh, i, l, e im p r o v, i, n, g reli a b i l, i, t, y by imple m e n t, i, n, g an aut o n o m, o, u, s Fin, O, p, s
             l, o, o, p: meas, u, r, e, e v a l u, a, t, e, o p t i m, i, z, e, and gov, e, r, n. T, h, i, s gu, i, d, e deta, i, l, s a
             pro d u c t, i, o, n‑re, a, d, y bl u e p r, i, n, t t, h, a, t consi s t e n, t, l, y d e l i v, e, r, s 50–85% savi, n, g, s
-            w, i, t, h sta, b, l, e UX.
+            with sta, b, l, e UX.
           </p>
 
           <h2>The Bl u e p r, i, n, t</h2>
@@ -45,15 +44,15 @@ exp, o, r, t defa, u, l, t f u n c t, i, o, n AutonomousFinOpsBluepr i n t 2, 0,
             </li>
             <li>
               <str, o, n, g>S e m a n, t, i, c Cach, i, n, g:</str, o, n, g> ca, c, h, e emb e d d i, n, g, s and re s p o n, s, e, s
-              w, i, t, h a d a p t, i, v, e T, T, L, s.
+              with a d a p t, i, v, e T, T, L, s.
             </li>
             <li>
-              <str, o, n, g>Qual, i, t, y Ga, t, e, s:</str, o, n, g> pre‑ and p, o, s, t‑dep, l, o, y ev, a, l, s w, i, t, h
+              <str, o, n, g>Qual, i, t, y Ga, t, e, s:</str, o, n, g> pre‑ and p, o, s, t‑dep, l, o, y ev, a, l, s with
               gol, d, e, n d a t a s, e, t, s and K, P, I, s.
             </li>
             <li>
               <str, o, n, g>Budg, e, t, s & R o l l b, a, c, k:</str, o, n, g> enfo, r, c, e sp, e, n, d/qual, i, t, y budg, e, t, s
-              w, i, t, h inst, a, n, t r o l l b, a, c, k.
+              with inst, a, n, t r o l l b, a, c, k.
             </li>
             <li>
               <str, o, n, g>Observ a b i l, i, t, y:</str, o, n, g> tra, c, e, s, c, o, s, t t, a, g, s, and va, l, u, e
@@ -81,12 +80,12 @@ exp, o, r, t defa, u, l, t f u n c t, i, o, n AutonomousFinOpsBluepr i n t 2, 0,
             A pol, i, c, y‑dri, v, e, n rou, t, e, r ev a l u a, t, e, s int, e, n, t, c, o, s, t, and r, i, s, k. It c o n s u, l, t, s
             a s e m a n, t, i, c ca, c, h, e, t, h, e, n rou, t, e, s to the m, o, s, t c, o, s, t‑ef f e c t, i, v, e mo, d, e, l t, h, a, t
             me, e, t, s qual, i, t, y thr e s h o, l, d, s. All de c i s i, o, n, s are log, g, e, d, tra, c, e, d, and
-            subj, e, c, t to bud, g, e, t enfo r c e m, e, n, t w, i, t, h au t o m a, t, i, c r o l l b, a, c, k.
+            subj, e, c, t to bud, g, e, t enfo r c e m, e, n, t with au t o m a, t, i, c r o l l b, a, c, k.
           </p>
 
           <h2>Impleme n t a t, i, o, n Gu, i, d, e</h2>
           <p>
-            St, a, r, t w, i, t, h tie, r, e, d rout, i, n, g and s e m a n, t, i, c cach, i, n, g as y, o, u, r fou n d a t, i, o, n.
+            St, a, r, t with tie, r, e, d rout, i, n, g and s e m a n, t, i, c cach, i, n, g as y, o, u, r fou n d a t, i, o, n.
             Add qual, i, t, y ga, t, e, s and budg, e, t, s increm e n t a, l, l, y. Moni, t, o, r c, o, s, t per
             tran s a c t, i, o, n, ca, c, h, e hit ra, t, e, s, and qual, i, t, y metr, i, c, s to ens, u, r, e
             con s i s t, e, n, t savi, n, g, s with, o, u, t reg r e s s, i, o, n.
@@ -100,12 +99,12 @@ exp, o, r, t defa, u, l, t f u n c t, i, o, n AutonomousFinOpsBluepr i n t 2, 0,
           </p>
         </sect, i, o, n>
 
-        <as, i, d, e cl a s s N, a, m, e='mt-12 p-6 roun, d, e, d-xl bg-g r a d i, e, n, t-to-r f, r, o, m-b, l, u, e-50 to-t, e, a, l-50 bor, d, e, r bor, d, e, r-b, l, u, e-100'>
-          <h3 cl a s s N, a, m, e='f, o, n, t-b, o, l, d t, e, x, t-lg mb-2'>N, e, x, t Up</h3>
-          <ul cl a s s N, a, m, e='l, i, s, t-d, i, s, c l, i, s, t-ins, i, d, e t, e, x, t-sm t, e, x, t-g, r, a, y-700'>
-            <li>Ag, e, n, t Ops Observ a b i l, i, t, y 2, 0, 2, 6</li>
+        <as, i, d, e cl a s s N, a, m, e='mt-12 p-6 roun, d, e, d-xl bg-gradient-to-r f, r, o, m-b, l, u, e-50 to-t, e, a, l-50 bor, d, e, r border-b, lue-100'>
+          <h3 cl a s s N, a, m, e='f, o, n, t-b, o, l, d t, ext-lg mb-2'>N, e, x, t Up</h3>
+          <ul cl a s s N, a, m, e='l, i, s, t-d, i, s, c l, i, s, t-ins, i, d, e t, e, x, t-sm t, e, x, t-g, ray-700'>
+            <li>Agent Ops Observ a b i l, i, t, y 2026</li>
             <li>Aut o n o m, o, u, s Gov e r n a, n, c, e Bl u e p r, i, n, t 2, 0, 2, 7</li>
-            <li>Ge, n, A, I Rout, i, n, g & Cach, i, n, g v2 (2, 0, 2, 6)</li>
+            <li>Ge, n, A, I Rout, i, n, g & Cach, i, n, g v2 (2026)</li>
           </ul>
         </as, i, d, e>
       </m, a, i, n>
