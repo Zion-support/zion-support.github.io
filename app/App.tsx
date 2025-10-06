@@ -45,8 +45,8 @@ const App: React.FC = () => {
     <HelmetProvider>
       <ErrorBoundary>
         <div>
-          <SEOOptimizer>
-            <AccessibilityEnhancer>
+          <SEOOptimizer />
+          <AccessibilityEnhancer>
             <Router>
               <div className='App'>
                 {/* Skip to main content link for accessibility */}
@@ -78,8 +78,7 @@ const App: React.FC = () => {
                 <PerformanceDashboard />
               </div>
             </Router>
-            </AccessibilityEnhancer>
-          </SEOOptimizer>
+          </AccessibilityEnhancer>
         </div>
       </ErrorBoundary>
     </HelmetProvider>
