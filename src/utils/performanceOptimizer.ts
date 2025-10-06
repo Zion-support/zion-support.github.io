@@ -424,23 +424,3 @@ class PerformanceOptimizer {
 
 // Export singleton instance
 export const performanceOptimizer = PerformanceOptimizer.getInstance();
-
-export default {
-  prefetchResources,
-  preconnectDomains,
-  lazyLoadImages,
-  debounce,
-  throttle,
-  measurePageLoad,
-  reportWebVitals,
-  shouldUseWebP,
-  getConnectionQuality,
-  shouldLoadHeavyAssets,
-  requestIdleCallback,
-  cancelIdleCallback,
-  preloadRoute,
-  monitorLongTasks,
-  cacheStaticAssets,
-  clearOldCaches,
-  checkPerformanceBudget
-};

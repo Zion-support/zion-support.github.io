@@ -5,10 +5,15 @@ import { HelmetProvider } from 'react-helmet-async';
 // Components
 import ErrorBoundary from './components/ErrorBoundary';
 import SEOOptimizer from './components/SEOOptimizer';
-import LoadingSpinner from './components/LoadingSpinner';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import PerformanceDashboard from './components/PerformanceDashboard';
-import PerformanceMonitor from './components/PerformanceMonitor';
+
+// Loading component
+const LoadingSpinner = () => (
+  <div className="min-h-screen flex items-center justify-center bg-gray-50">
+    <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
+  </div>
+);
 
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./page'));
@@ -26,7 +31,7 @@ const App: React.FC = () => {
 
     // Initialize performance monitoring
     performanceOptimizer.lazyLoadImages();
-    performanceOptimizer.prefetchResources(['/api/health']);
+    performanceOptimizer.addCriticalResourceHints();
     
     // Initialize Web Vitals monitoring
     if (typeof window !== 'undefined' && 'performance' in window) {
