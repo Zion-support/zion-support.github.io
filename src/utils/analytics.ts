@@ -58,17 +58,8 @@ class Analytics {
       language: window.navigator.language,
       timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
       referrer: document.referrer || '',
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
       referrer: document.referrer || '',
       referrer: document.referrer || undefined,
->>>>>>> main
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main
@@ -92,21 +83,14 @@ class Analytics {
       category,
       action: action || '',
       label: label || undefined,
-<<<<<<< HEAD
       value,
       properties,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
       value: value || 0,
       properties: properties || {},
       action: action || undefined,
       label: label || undefined,
       value: value || undefined,
       properties: properties || undefined,
->>>>>>> main
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main

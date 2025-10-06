@@ -1,17 +1,17 @@
 import { Suspense, lazy } from 'react';
 import Link from 'next/link';
 
-// Lazy load heavy components
-const UnifiedContentPromotion = lazy(
-  () => import('./components/UnifiedContentPromotion'),
-);
-const InteractiveAIROICalculator = lazy(
-  () => import('./components/InteractiveAIROICalculator'),
-);
-const ContentShowcase = lazy(() => import('./components/ContentShowcase'));
-const InteractiveContentShowcase2026 = lazy(
-  () => import('./components/InteractiveContentShowcase2026'),
-);
+// Lazy load heavy components - temporarily disabled
+// const UnifiedContentPromotion = lazy(
+//   () => import('./components/UnifiedContentPromotion'),
+// );
+// const InteractiveAIROICalculator = lazy(
+//   () => import('./components/InteractiveAIROICalculator'),
+// );
+// const ContentShowcase = lazy(() => import('./components/ContentShowcase'));
+// const InteractiveContentShowcase2026 = lazy(
+//   () => import('./components/InteractiveContentShowcase2026'),
+// );
 
 // Loading component for Suspense fallback
 const LoadingFallback = ({ height = 'h-32' }: { height?: string }) => (
@@ -50,10 +50,8 @@ export default function HomePage() {
       priceCurrency: 'USD',
     },
   };
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-=======
 >>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572
 
   return (
@@ -72,9 +70,7 @@ import { Helmet } from 'react-helmet-async';
             <p className="text-xl md:text-2xl text-gray-700 mb-12 max-w-3xl mx-auto">
               Pioneering the future with advanced AI and IT solutions that transform businesses and drive innovation
             </p>
-<<<<<<< HEAD
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-=======
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
 >>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572
               <Link
@@ -93,22 +89,49 @@ import { Helmet } from 'react-helmet-async';
           </div>
         </main>
 
+<<<<<<< HEAD
+      {/* Main Content */}
+      <main className="container mx-auto px-4 py-16">
+        {/* Unified Content Promotion - temporarily disabled */}
+        {/* <Suspense fallback={<LoadingFallback height="h-32" />}>
+          <UnifiedContentPromotion />
+        </Suspense> */}
+
+        {/* Interactive AI ROI Calculator - temporarily disabled */}
+        {/* <section className="my-16">
+          <Suspense fallback={<LoadingFallback height="h-64" />}>
+            <InteractiveAIROICalculator />
+=======
         {/* Main Content */}
         <main className="container mx-auto px-4 py-16">
           {/* Unified Content Promotion */}
           <Suspense fallback={<LoadingFallback height="h-32" />}>
             <UnifiedContentPromotion />
+>>>>>>> main
           </Suspense>
-<<<<<<< HEAD
-        </section>
+        </section> */}
 
+<<<<<<< HEAD
+        {/* Content Showcase - temporarily disabled */}
+        {/* <section className="my-16">
+          <Suspense fallback={<LoadingFallback height="h-48" />}>
+=======
         {/* Content Showcase */}
         <section className='my-16'>
           <Suspense fallback={<LoadingFallback height='h-48' />}>
+>>>>>>> main
             <ContentShowcase />
           </Suspense>
-        </section>
+        </section> */}
 
+<<<<<<< HEAD
+        {/* Interactive Content Showcase 2026 - temporarily disabled */}
+        {/* <section className="my-16">
+          <Suspense fallback={<LoadingFallback height="h-48" />}>
+            <InteractiveContentShowcase2026 />
+          </Suspense>
+        </section> */}
+=======
         {/* Interactive Content Showcase 2026 */}
         <section className='my-16'>
           <Suspense fallback={<LoadingFallback height='h-48' />}>
@@ -134,6 +157,7 @@ import { Helmet } from 'react-helmet-async';
             </Link>
           </div>
         </section>
+>>>>>>> main
       </main>
     </div>
             
@@ -227,7 +251,6 @@ import { Helmet } from 'react-helmet-async';
                   </div>
                 </div>
               </div>
-=======
           
           {/* Interactive AI ROI Calculator */}
           <section className="my-16">

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 const InteractiveAIROICalculator: React.FC = () => {
 =======
+<<<<<<< HEAD
 import React from 'react';
 
 const InteractiveAIROICalculator: React.FC = () => {
@@ -14,9 +15,12 @@ const InteractiveAIROICalculator: React.FC = () => {
 };
 
 export default InteractiveAIROICalculator;
+=======
 import React, { useState } from 'react';
 
 const InteractiveAIROICalculator: React.FC = () => {
+<<<<<<< HEAD
+>>>>>>> main
   const [currentCost, setCurrentCost] = useState(100000);
   const [efficiencyGain, setEfficiencyGain] = useState(70);
   const [timeframe, setTimeframe] = useState(12);
@@ -104,6 +108,9 @@ const InteractiveAIROICalculator: React.FC = () => {
                       ((currentCost * efficiencyGain) / 100) *
                       (timeframe / 12)
                     ).toLocaleString()}
+<<<<<<< HEAD
+=======
+=======
   const [currentSpend, setCurrentSpend] = useState(100000);
   const [expectedSavings, setExpectedSavings] = useState(30);
   const [timeframe, setTimeframe] = useState(12);
@@ -190,6 +197,7 @@ const InteractiveAIROICalculator: React.FC = () => {
                   <span className="font-semibold text-blue-600">
                     {roi.toFixed(1)}%
 >>>>>>> main
+>>>>>>> main
                   </span>
                 </div>
               </div>
@@ -202,8 +210,14 @@ const InteractiveAIROICalculator: React.FC = () => {
 };
 
 export default InteractiveAIROICalculator;
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
 export default InteractiveAIROICalculator;
+=======
 export default InteractiveAIROICalculator;
+>>>>>>> main
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main

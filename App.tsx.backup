@@ -1,7 +1,5 @@
-<<<<<<< HEAD
 import React, { memo, useMemo } from 'react';
 import React, { memo, useMemo, useCallback, Suspense } from 'react';
->>>>>>> main
 >>>>>>> main
 =======
 import React, { memo, useMemo, useCallback, Suspense } from 'react';
@@ -49,11 +47,9 @@ const InteractiveContentShowcase2026 = memo(() => (
     </div>
   </div>
 ));
-<<<<<<< HEAD
 
 // Loading component (removed unused LoadingSpinner)
 // Loading component - removed unused LoadingSpinner
-=======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
 >>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572
 // Error Boundary Component
@@ -72,31 +68,19 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
   static getDerivedStateFromError(error: Error): ErrorBoundaryState {
     return { hasError: true, error };
   }
-<<<<<<< HEAD
   override componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
     console.error('App Error Boundary caught an error:', error, errorInfo);
   }
-=======
 
   override componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
     console.error('App Error Boundary caught an error:', error, errorInfo);
   }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
-=======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-3fed
-=======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f83
-=======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-efe9
-=======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
-=======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6abd
   override render() {
     if (this.state.hasError) {
@@ -128,10 +112,6 @@ const LoadingSpinner = memo(() => (
     <div className="text-gray-500">Loading...</div>
   </div>
 ));
-<<<<<<< HEAD
->>>>>>> main
-=======
-<<<<<<< HEAD
 =======
 >>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572
 
@@ -224,12 +204,14 @@ export default function App() {
   const handlePhoneClick = useCallback(() => {
     // Track phone clicks for analytics
     if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as any).gtag('event', 'phone_click', {
 <<<<<<< HEAD
+      (window as unknown as { gtag: Function }).gtag('event', 'phone_click', {
+=======
+      (window as any).gtag('event', 'phone_click', {
     if (typeof window !== 'undefined' && (window as unknown as { gtag?: Function }).gtag) {
       ((window as unknown as { gtag: Function }).gtag)('event', 'phone_click', {
-=======
 >>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572
+>>>>>>> main
         event_category: 'engagement',
         event_label: 'main_phone_number'
       });

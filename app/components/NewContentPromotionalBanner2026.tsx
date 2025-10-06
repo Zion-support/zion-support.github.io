@@ -1,10 +1,7 @@
 import React from 'react';
-<<<<<<< HEAD
 import { ArrowRight, Rocket, Shield, Target, TrendingUp, Zap } from 'lucide-react';
-=======
 import { ArrowRight, Bot, Rocket, Shield, Target, TrendingUp, Zap } from 'lucide-react';
 
->>>>>>> main
 import Link from 'next/link';
 import {
   Sparkles,

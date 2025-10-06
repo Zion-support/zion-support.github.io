@@ -52,7 +52,20 @@ class ErrorBoundary extends Component<Props, State> {
   }
 
   override componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+    console.error('ErrorBoundary caught an error:', error, errorInfo);
+=======
     console.error('Error caught by boundary:', error, errorInfo);
+>>>>>>> main
     
     // Report error to analytics/monitoring service
     this.reportError(error, errorInfo);
@@ -63,6 +76,31 @@ class ErrorBoundary extends Component<Props, State> {
     }
   }
 
+<<<<<<< HEAD
+  handleRetry = () => {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
+>>>>>>> main
+    this.setState({ hasError: false });
+  };
+
+  handleGoHome = () => {
+    if (typeof window !== 'undefined') {
+      window.location.href = '/';
+    }
+  };
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+    this.setState({ hasError: false } as State);
+=======
   override render() {
   private reportError = (error: Error, errorInfo: ErrorInfo) => {
     // Report to external service (e.g., Sentry, LogRocket, etc.)
@@ -80,13 +118,17 @@ class ErrorBoundary extends Component<Props, State> {
 
   private handleRetry = () => {
     this.setState({ hasError: false, error: undefined, errorId: undefined });
+>>>>>>> main
   };
 
   private handleGoHome = () => {
     window.location.href = '/';
   };
 
-  render() {
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+  override render() {
     if (this.state.hasError) {
       return this.props.fallback || (
         <div className="min-h-screen flex items-center justify-center bg-gray-900">

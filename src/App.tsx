@@ -1,8 +1,6 @@
-<<<<<<< HEAD
 import React, { Suspense, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
-=======
 import React, { Suspense, lazy, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Suspense, useEffect } from 'react';
@@ -13,7 +11,6 @@ import { Suspense, useEffect } from 'react';
 import React, { Suspense, useEffect } from 'react';
 import { Suspense, useEffect } from 'react';
 import React, { Suspense, useEffect } from 'react';
->>>>>>> main
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main
@@ -33,7 +30,6 @@ import PrivacyPage from '../app/privacy/page';
 import TeamPage from '../app/team/page';
 import TermsPage from '../app/terms/page';
 
-<<<<<<< HEAD
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./pages/HomePage'));
 const AboutPage = lazy(() => import('./pages/AboutPage'));
@@ -45,10 +41,8 @@ const TermsPage = lazy(() => import('./pages/TermsPage'));
 
 // Simple components for basic functionality
 const About = () => (
-=======
 // Simple placeholder components
 const Home = () => (
->>>>>>> main
   <div className='min-h-screen flex items-center justify-center bg-gray-50'>
     <div className='text-center'>
       <h1 className='text-4xl font-bold text-gray-900 mb-4'>
@@ -59,8 +53,6 @@ const Home = () => (
   </div>
 );
 
-<<<<<<< HEAD
-=======
 // About component is now imported from app/about/page
 
 function App() {
@@ -76,7 +68,6 @@ function App() {
           import('./pages/Home');
           import('./pages/About');
         });
->>>>>>> main
 const Services = () => (
   <div className='min-h-screen flex items-center justify-center bg-gray-50'>
     <div className='text-center'>
@@ -114,8 +105,6 @@ function App(): React.JSX.Element {
         console.log('All optimization systems initialized successfully');
       } catch (error) {
         console.error('Failed to initialize optimization systems:', error);
-<<<<<<< HEAD
-=======
         // App initialized successfully
       } catch (error) {
         // Failed to initialize app
@@ -123,7 +112,6 @@ function App(): React.JSX.Element {
         console.log('All optimization systems initialized successfully');
       } catch (error) {
         console.error('Failed to initialize optimization systems:', error);
->>>>>>> main
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main
@@ -139,7 +127,6 @@ function App(): React.JSX.Element {
   }, []);
 
   return (
-<<<<<<< HEAD
     <HelmetProvider>
       <ErrorBoundary>
         <SEOOptimizer>
@@ -164,12 +151,10 @@ function App(): React.JSX.Element {
         </SEOOptimizer>
       </ErrorBoundary>
     </HelmetProvider>
-=======
     <div>
       <Router>
         <Suspense fallback={<div className="min-h-screen flex items-center justify-center">Loading...</div>}>
         <Suspense fallback={<div className="min-h-screen flex items-center justify-center">Loading...</div>}>
->>>>>>> main
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main
@@ -224,10 +209,7 @@ function App(): React.JSX.Element {
   );
 }
 
-<<<<<<< HEAD
-=======
 export default App;
->>>>>>> main
 >>>>>>> main
 // Simple Error Boundary
 class ErrorBoundary extends React.Component<
@@ -239,9 +221,7 @@ class ErrorBoundary extends React.Component<
     this.state = { hasError: false };
   }
 
-<<<<<<< HEAD
   static getDerivedStateFromError(_error: Error) {
-=======
   static getDerivedStateFromError(error: Error) {
     return { hasError: true, error: error };
   }
@@ -254,7 +234,6 @@ class ErrorBoundary extends React.Component<
   static getDerivedStateFromError() {
   static getDerivedStateFromError() {
   static getDerivedStateFromError(_error: Error) { // eslint-disable-line @typescript-eslint/no-unused-vars
->>>>>>> main
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main
@@ -277,13 +256,10 @@ class ErrorBoundary extends React.Component<
     this.setState({ hasError: false });
   };
 
-<<<<<<< HEAD
-=======
   override componentDidCatch(_error: Error, errorInfo: React.ErrorInfo) {
     console.error('Error caught by boundary:', errorInfo);
   }
 
->>>>>>> main
 >>>>>>> main
   override render() {
     if (this.state.hasError) {
@@ -307,11 +283,8 @@ class ErrorBoundary extends React.Component<
 }
 
 export { ErrorBoundary };
-<<<<<<< HEAD
 export default App;
-=======
 
->>>>>>> main
 >>>>>>> main
 >>>>>>> main
 export default App;

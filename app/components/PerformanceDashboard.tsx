@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-<<<<<<< HEAD
 // import { performanceOptimizer } from '../../utils/performanceOptimizer';
 import { getErrorMetrics, isErrorRateTooHigh } from '../../utils/errorHandling';
 
@@ -9,11 +8,9 @@ import { getErrorMetrics, isErrorRateTooHigh } from '../../utils/errorHandling';
 //   memoryUsage: number;
 //   fps: number;
 // }
-=======
 // import performanceOptimizer from '../../src/utils/performanceOptimizer'; // Unused import
 import { getErrorMetrics, isErrorRateTooHigh } from '../../utils/errorHandling';
 import { performanceOptimizer } from '../../utils/performanceOptimizer';
->>>>>>> main
 
 interface DashboardData {
   performance: {

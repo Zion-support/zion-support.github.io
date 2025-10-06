@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import React from 'react';
 
 const InteractiveContentShowcase2026: React.FC = () => {
@@ -10,6 +15,9 @@ const InteractiveContentShowcase2026: React.FC = () => {
 };
 
 export default InteractiveContentShowcase2026;
+=======
+<<<<<<< HEAD
+>>>>>>> main
 import React from 'react';
 
 const InteractiveContentShowcase2026: React.FC = () => {
@@ -70,6 +78,10 @@ const InteractiveContentShowcase2026: React.FC = () => {
           <button className='bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold py-4 px-8 rounded-lg text-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105'>
             Explore 2026 Solutions
           </button>
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> main
 import React, { useState } from 'react';
 
 const InteractiveContentShowcase2026: React.FC = () => {
@@ -164,8 +176,14 @@ const InteractiveContentShowcase2026: React.FC = () => {
 };
 
 export default InteractiveContentShowcase2026;
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
 export default InteractiveContentShowcase2026;
+=======
 export default InteractiveContentShowcase2026;
+>>>>>>> main
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main

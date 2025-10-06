@@ -89,7 +89,6 @@ import { Helmet } from 'react-helmet-async';
           </div>
         </main>
 
-<<<<<<< HEAD
       {/* Main Content */}
       <main className="container mx-auto px-4 py-16">
         {/* Unified Content Promotion - temporarily disabled */}
@@ -101,37 +100,30 @@ import { Helmet } from 'react-helmet-async';
         {/* <section className="my-16">
           <Suspense fallback={<LoadingFallback height="h-64" />}>
             <InteractiveAIROICalculator />
-=======
         {/* Main Content */}
         <main className="container mx-auto px-4 py-16">
           {/* Unified Content Promotion */}
           <Suspense fallback={<LoadingFallback height="h-32" />}>
             <UnifiedContentPromotion />
->>>>>>> main
           </Suspense>
         </section> */}
 
-<<<<<<< HEAD
         {/* Content Showcase - temporarily disabled */}
         {/* <section className="my-16">
           <Suspense fallback={<LoadingFallback height="h-48" />}>
-=======
         {/* Content Showcase */}
         <section className='my-16'>
           <Suspense fallback={<LoadingFallback height='h-48' />}>
->>>>>>> main
             <ContentShowcase />
           </Suspense>
         </section> */}
 
-<<<<<<< HEAD
         {/* Interactive Content Showcase 2026 - temporarily disabled */}
         {/* <section className="my-16">
           <Suspense fallback={<LoadingFallback height="h-48" />}>
             <InteractiveContentShowcase2026 />
           </Suspense>
         </section> */}
-=======
         {/* Interactive Content Showcase 2026 */}
         <section className='my-16'>
           <Suspense fallback={<LoadingFallback height='h-48' />}>
@@ -157,7 +149,6 @@ import { Helmet } from 'react-helmet-async';
             </Link>
           </div>
         </section>
->>>>>>> main
       </main>
     </div>
             
