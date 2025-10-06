@@ -17,7 +17,25 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 
   useEffect(() => {
     // Initialize performance monitoring
-    performanceOptimizer.addCriticalResourceHints();
+    // Add critical resource hints manually
+    if (typeof document !== 'undefined') {
+      const hints = [
+        { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' },
+        { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com' },
+        { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+        { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossOrigin: 'anonymous' }
+      ];
+      
+      hints.forEach(hint => {
+        const link = document.createElement('link');
+        link.rel = hint.rel;
+        link.href = hint.href;
+        if (hint.crossOrigin) {
+          link.crossOrigin = hint.crossOrigin;
+        }
+        document.head.appendChild(link);
+      });
+    }
     
     // Measure page load performance
     const pageLoadMetrics = performanceOptimizer.measurePageLoad();
