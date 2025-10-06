@@ -4,7 +4,15 @@
  */
 
 import { useEffect, useCallback, useRef } from 'react';
-import performanceOptimizer from '../utils/performanceOptimizer';
+<<<<<<< HEAD
+import { performanceOptimizer } from '../utils/performanceOptimizer';
+=======
+<<<<<<< HEAD
+import { performanceOptimizer } from '../utils/performanceOptimizer';
+=======
+import { monitorLongTasks } from '../utils/performanceOptimizer';
+>>>>>>> main
+>>>>>>> main
 import analytics from '../utils/analytics';
 
 export interface PerformanceMetrics {
@@ -38,7 +46,7 @@ export const usePerformance = (options: UsePerformanceOptions) => {
   // Track component mount time
   useEffect(() => {
     mountTimeRef.current = performance.now();
-    
+
     return () => {
       const mountDuration = performance.now() - mountTimeRef.current;
       analytics.trackPerformance(`${componentName}_mount_time`, mountDuration);
@@ -50,12 +58,12 @@ export const usePerformance = (options: UsePerformanceOptions) => {
     if (!trackRenderTime) return;
 
     renderStartTimeRef.current = performance.now();
-    
+
     // Use requestAnimationFrame to measure actual render time
     requestAnimationFrame(() => {
       const renderTime = performance.now() - renderStartTimeRef.current;
       const isSlowRender = renderTime > slowRenderThreshold;
-      
+
       const metrics: PerformanceMetrics = {
         renderTime,
         componentMountTime: performance.now() - mountTimeRef.current,
@@ -70,9 +78,15 @@ export const usePerformance = (options: UsePerformanceOptions) => {
 
       // Send to analytics
       analytics.trackPerformance(`${componentName}_render_time`, renderTime);
-      
+
       if (isSlowRender) {
-        analytics.track('slow_render', 'performance', 'warning', componentName, renderTime);
+        analytics.track(
+          'slow_render',
+          'performance',
+          'warning',
+          componentName,
+          renderTime
+        );
       }
     });
   }, [componentName, trackRenderTime, slowRenderThreshold, trackMemoryUsage]);
@@ -95,15 +109,24 @@ export const usePageLoadPerformance = () => {
     const trackPageLoad = () => {
       // Wait for page to be fully loaded
       if (document.readyState === 'complete') {
-        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-        
+        const navigation = performance.getEntriesByType(
+          'navigation'
+        )[0] as PerformanceNavigationTiming;
+
         if (navigation) {
           const metrics = {
-            domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
+            domContentLoaded:
+              navigation.domContentLoadedEventEnd -
+              navigation.domContentLoadedEventStart,
             loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
             firstByte: navigation.responseStart - navigation.requestStart,
-            domInteractive: navigation.domInteractive - navigation.navigationStart,
-            totalLoadTime: navigation.loadEventEnd - navigation.navigationStart,
+<<<<<<< HEAD
+            domInteractive: navigation.domInteractive - navigation.fetchStart,
+            totalLoadTime: navigation.loadEventEnd - navigation.fetchStart,
+=======
+            domInteractive: navigation.domInteractive - (navigation as any).navigationStart,
+            totalLoadTime: navigation.loadEventEnd - (navigation as any).navigationStart,
+>>>>>>> main
           };
 
           // Track each metric
@@ -112,7 +135,13 @@ export const usePageLoadPerformance = () => {
           });
 
           // Track overall page load performance
-          analytics.track('page_load_complete', 'performance', 'complete', undefined, metrics.totalLoadTime);
+          analytics.track(
+            'page_load_complete',
+            'performance',
+            'complete',
+            undefined,
+            metrics.totalLoadTime
+          );
         }
       }
     };
@@ -120,6 +149,11 @@ export const usePageLoadPerformance = () => {
     // Track immediately if page is already loaded
     if (document.readyState === 'complete') {
       trackPageLoad();
+<<<<<<< HEAD
+      return;
+=======
+      return undefined;
+>>>>>>> main
     } else {
       // Wait for load event
       window.addEventListener('load', trackPageLoad);
@@ -133,8 +167,8 @@ export const usePageLoadPerformance = () => {
  */
 export const useResourcePerformance = () => {
   useEffect(() => {
-    const observer = new PerformanceObserver((list) => {
-      list.getEntries().forEach((entry) => {
+    const observer = new PerformanceObserver(list => {
+      list.getEntries().forEach(entry => {
         if (entry.entryType === 'resource') {
           const resourceEntry = entry as PerformanceResourceTiming;
           analytics.trackPerformance(
@@ -157,14 +191,70 @@ export const useResourcePerformance = () => {
  */
 export const useLongTaskMonitoring = () => {
   useEffect(() => {
-    const observer = performanceOptimizer.monitorLongTasks((entries) => {
-      entries.forEach((entry) => {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
+>>>>>>> main
+    const observer = performanceOptimizer.monitorLongTasks((entries: PerformanceEntry[]) => {
+      entries.forEach((entry: PerformanceEntry) => {
         analytics.track('long_task', 'performance', 'detected', undefined, entry.duration);
+=======
+<<<<<<< HEAD
+    const observer = performanceOptimizer.monitorLongTasks((entries: PerformanceEntry[]) => {
+      entries.forEach((entry: PerformanceEntry) => {
+        analytics.track('long_task', 'performance', 'detected', undefined, entry.duration);
+=======
+<<<<<<< HEAD
+    const observer = performanceOptimizer.monitorLongTasks((entries: PerformanceEntry[]) => {
+      entries.forEach((entry: PerformanceEntry) => {
+        analytics.track('long_task', 'performance', 'detected', undefined, entry.duration);
+=======
+<<<<<<< HEAD
+    const observer = performanceOptimizer.monitorLongTasks((entries: PerformanceEntry[]) => {
+      entries.forEach((entry: PerformanceEntry) => {
+        analytics.track('long_task', 'performance', 'detected', undefined, entry.duration);
+=======
+<<<<<<< HEAD
+    const observer = monitorLongTasks((entries: PerformanceEntry[]) => {
+=======
+    const observer = performanceOptimizer.monitorLongTasks((entries: PerformanceEntry[]) => {
+>>>>>>> main
+      entries.forEach((entry: PerformanceEntry) => {
+<<<<<<< HEAD
+        analytics.track('long_task', 'performance', 'detected', undefined, entry.duration);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+        analytics.track(
+          'long_task',
+          'performance',
+          'detected',
+          undefined,
+          entry.duration
+        );
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
       });
     });
 
     return () => {
-      if (observer) {
+      if (observer && typeof observer.disconnect === 'function') {
         observer.disconnect();
       }
     };

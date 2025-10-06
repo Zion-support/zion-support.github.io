@@ -15,81 +15,87 @@ import { Helmet } from 'react-helmet-async';
 const Solutions: React.FC = () => {
   const solutions = [
     {
-      icon: <Zap className="w-8 h-8" />,
-      title: "AI-Powered Automation",
-      description: "Streamline your workflows with intelligent automation solutions.",
+      icon: <Zap className='w-8 h-8' />,
+      title: 'AI-Powered Automation',
+      description:
+        'Streamline your workflows with intelligent automation solutions.',
       features: [
-        "Process Automation",
-        "Workflow Optimization",
-        "Intelligent Routing",
-        "Performance Monitoring",
+        'Process Automation',
+        'Workflow Optimization',
+        'Intelligent Routing',
+        'Performance Monitoring',
       ],
-      link: "/solutions/automation",
+      link: '/solutions/automation',
     },
     {
-      icon: <Shield className="w-8 h-8" />,
-      title: "AI Security Solutions",
-      description: "Protect your business with advanced AI-powered security systems.",
+      icon: <Shield className='w-8 h-8' />,
+      title: 'AI Security Solutions',
+      description:
+        'Protect your business with advanced AI-powered security systems.',
       features: [
-        "Threat Detection",
-        "Anomaly Detection",
-        "Risk Assessment",
-        "Compliance Monitoring",
+        'Threat Detection',
+        'Anomaly Detection',
+        'Risk Assessment',
+        'Compliance Monitoring',
       ],
-      link: "/solutions/security",
+      link: '/solutions/security',
     },
     {
-      icon: <Globe className="w-8 h-8" />,
-      title: "Global AI Platform",
-      description: "Deploy AI solutions across multiple regions with our global platform.",
+      icon: <Globe className='w-8 h-8' />,
+      title: 'Global AI Platform',
+      description:
+        'Deploy AI solutions across multiple regions with our global platform.',
       features: [
-        "Multi-Region Deployment",
-        "Edge Computing",
-        "Global CDN",
-        "Localized Processing",
+        'Multi-Region Deployment',
+        'Edge Computing',
+        'Global CDN',
+        'Localized Processing',
       ],
-      link: "/solutions/global",
+      link: '/solutions/global',
     },
     {
-      icon: <Cpu className="w-8 h-8" />,
-      title: "Edge AI Computing",
-      description: "Bring AI processing closer to your data with edge computing solutions.",
+      icon: <Cpu className='w-8 h-8' />,
+      title: 'Edge AI Computing',
+      description:
+        'Bring AI processing closer to your data with edge computing solutions.',
       features: [
-        "Edge Processing",
-        "Real-time Inference",
-        "Low Latency",
-        "Offline Capability",
+        'Edge Processing',
+        'Real-time Inference',
+        'Low Latency',
+        'Offline Capability',
       ],
-      link: "/solutions/edge",
+      link: '/solutions/edge',
     },
     {
-      icon: <Database className="w-8 h-8" />,
-      title: "Data Intelligence",
-      description: "Transform your data into actionable insights with AI-powered analytics.",
+      icon: <Database className='w-8 h-8' />,
+      title: 'Data Intelligence',
+      description:
+        'Transform your data into actionable insights with AI-powered analytics.',
       features: [
-        "Data Processing",
-        "Predictive Analytics",
-        "Real-time Insights",
-        "Data Visualization",
+        'Data Processing',
+        'Predictive Analytics',
+        'Real-time Insights',
+        'Data Visualization',
       ],
-      link: "/solutions/data",
+      link: '/solutions/data',
     },
     {
-      icon: <Cloud className="w-8 h-8" />,
-      title: "Cloud AI Services",
-      description: "Scalable AI solutions hosted on secure, high-performance cloud infrastructure.",
+      icon: <Cloud className='w-8 h-8' />,
+      title: 'Cloud AI Services',
+      description:
+        'Scalable AI solutions hosted on secure, high-performance cloud infrastructure.',
       features: [
-        "Scalable Infrastructure",
-        "High Performance",
-        "Global Availability",
-        "Cost Optimization",
+        'Scalable Infrastructure',
+        'High Performance',
+        'Global Availability',
+        'Cost Optimization',
       ],
-      link: "/solutions/cloud",
+      link: '/solutions/cloud',
     },
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+    <div className='min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100'>
       <Helmet>
         <title>Solutions - Zion Tech Group</title>
         <meta

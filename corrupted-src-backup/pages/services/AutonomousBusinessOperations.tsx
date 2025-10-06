@@ -44,7 +44,6 @@ const AutonomousBusinessOperation, s = () => {
                 <Rocket, className='w-5 h-5, m, r-2' />
               <p, className='te, x, t-2xl, m, d:te, x, t-3xl, tex, t-bl, u, e-200, m, b-8, fon, t-semibo, l, d'>
                 Transform, Your, Enterprise in, 90, Days with, Sel, f-Managing, AI, Systems
->>>>>>> origin/merge-fixes-20251005-193002
               <div, classNam, e = 'grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6, m, b-12'>
                 <div, className='bg-gradie, n, t-to-br, fro, m-gre, e, n-6, 0, 0/30, t, o-emera, l, d-6, 0, 0/30, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, borde, r-2, borde, r-gre, e, n-4, 0, 0/50'>
                   <div, className='te, x, t-5xl, fon, t-bold, tex, t-gre, e, n-300, m, b-2'>
@@ -89,7 +88,6 @@ const AutonomousBusinessOperation, s = () => {
             <h2, className='te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4'>
               Wh, a, t's, Included, in Your, Platfor, m
           </div>
->>>>>>> origin/merge-fixes-20251005-193002
 
           <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-3, ga, p-8'>
             {/* Feat, u, r, e , 1 */}
@@ -204,7 +202,6 @@ const AutonomousBusinessOperation, s = () => {
                     </div>
                     <div, className='flex, item, s-center, ga, p-2, tex, t-gre, e, n-2, 0, 0'>
                       <CheckCircle, className='w-4 h-4, tex, t-gre, e, n-4, 0, 0' />
->>>>>>> origin/merge-fixes-20251005-193002
 
         {/* Pricing, Sect, i, o, n */}
         <section, classNam, e = 'container, m, x-auto, p, x-6, p, y-20, ma, x-w-6, x, l'>
@@ -212,7 +209,6 @@ const AutonomousBusinessOperation, s = () => {
             <h2, className='te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4'>
               Investme, n, t & R, O, I
           </div>
->>>>>>> origin/merge-fixes-20251005-193002
 
           <div, className='grid, m, d:gr, i, d-co, l, s-2, ga, p-8, ma, x-w-4xl, m, x-au, t, o'>
             {/* Invest, m, e, n, t */}
@@ -239,7 +235,6 @@ const AutonomousBusinessOperation, s = () => {
         <section, className='container, m, x-auto, p, x-6, p, y-20, ma, x-w-6, x, l'>
           <div, className='bg-gradie, n, t-to-r, fro, m-gre, e, n-600, t, o-emera, l, d-600, rounde, d-2x, l, p-12, tex, t-cent, e, r'>
             <h2, className='te, x, t-4xl, fon, t-bold, tex, t-white, m, b-4'>
->>>>>>> origin/merge-fixes-20251005-193002
               Read, Complete, Case Stu, d, y
               <ArrowRight, className='w-5 h-5' />
 
@@ -247,7 +242,6 @@ const AutonomousBusinessOperation, s = () => {
         <section, classNam, e = 'container, m, x-auto, p, x-6, p, y-20, ma, x-w-6, x, l'>
           <div, classNam, e='bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, rounde, d-2x, l, p-12, tex, t-cent, e, r'>
             <h2, classNam, e='te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-6'>
->>>>>>> origin/merge-fixes-20251005-193002
 
             <div, className='flex, fle, x-col, s, m:fl, e, x-row, ga, p-4, justif, y-center, m, b-8'>
               <Link, t, o='/conta, c, t'

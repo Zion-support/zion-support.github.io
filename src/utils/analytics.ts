@@ -14,7 +14,7 @@ export interface AnalyticsEvent {
 }
 
 export interface UserProperties {
-  userId?: string;
+  userId?: string | undefined;
   sessionId: string;
   userAgent: string;
   language: string;
@@ -57,8 +57,16 @@ class Analytics {
       userAgent: window.navigator.userAgent,
       language: window.navigator.language,
       timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
+<<<<<<< HEAD
+      referrer: document.referrer || '',
+=======
+<<<<<<< HEAD
+      referrer: document.referrer || '',
+=======
       referrer: document.referrer || undefined,
-    } as UserProperties;
+>>>>>>> main
+>>>>>>> main
+    };
   }
 
   /**
@@ -75,10 +83,24 @@ class Analytics {
     const event: AnalyticsEvent = {
       name,
       category,
+<<<<<<< HEAD
+      action: action || '',
+      label: label || undefined,
+      value,
+      properties,
+=======
+<<<<<<< HEAD
+      action: action || '',
+      label: label || '',
+      value: value || 0,
+      properties: properties || {},
+=======
       action: action || undefined,
       label: label || undefined,
       value: value || undefined,
       properties: properties || undefined,
+>>>>>>> main
+>>>>>>> main
       timestamp: Date.now(),
     };
 
@@ -88,8 +110,13 @@ class Analytics {
     this.sendToAnalytics(event);
 
     // Log in development
+<<<<<<< HEAD
     if (process.env.NODE_ENV === 'development') {
       // Analytics event logged
+=======
+    if (process.env['NODE_ENV'] === 'development') {
+      console.log('Analytics event:', event);
+>>>>>>> main
     }
   }
 
