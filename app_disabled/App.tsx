@@ -14,10 +14,10 @@ import PerformanceMonitor from './components/PerformanceMonitor';
 const HomePage = lazy(() => import('./page'));
 
 // Utils
-import performanceOptimizer from '../src/utils/performanceOptimizer';
+import { performanceOptimizer } from '../src/utils/performanceOptimizer';
 
 // Styles
-import '../index.css';
+import '../src/index.css';
 
 const App: React.FC = () => {
   useEffect(() => {
