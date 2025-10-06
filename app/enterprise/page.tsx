@@ -155,6 +155,7 @@ export default function EnterprisePage() {
                     </div>
                   ))}
                 </div>
+<<<<<<< HEAD
               </div>
             ))}
           </div>
@@ -189,6 +190,8 @@ export default function EnterprisePage() {
                   {stat.number}
                 </div>
                 <div className="text-gray-300">{stat.label}</div>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-9966
               </div>
             ))}
           </div>
@@ -197,6 +200,7 @@ export default function EnterprisePage() {
 
       {/* CTA Section */}
       <section className="py-24">
+<<<<<<< HEAD
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Ready to Transform Your Enterprise?
@@ -221,6 +225,33 @@ export default function EnterprisePage() {
             >
               View All Services
             </a>
+=======
+        <div className="container mx-auto px-4">
+          <div className="text-center bg-white/5 backdrop-blur-lg rounded-3xl p-12 border border-white/20">
+            <h3 className="text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Enterprise?
+            </h3>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Join 500+ Fortune 500 companies achieving unprecedented
+              transformation with our enterprise AI solutions.
+            </p>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+              <a
+                href="tel:+13024640950"
+                className="group flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl"
+              >
+                <span className="text-xl">📞</span>
+                <span>Call +1 302 464 0950</span>
+              </a>
+              <a
+                href="mailto:info@ziontechgroup.com"
+                className="group flex items-center gap-3 bg-white/10 hover:bg-white/20 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 border border-white/30"
+              >
+                <span className="text-xl">📧</span>
+                <span>Get Enterprise Consultation</span>
+              </a>
+            </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-9966
           </div>
         </div>
       </section>
