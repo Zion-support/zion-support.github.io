@@ -37,18 +37,18 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
   ) => {
     const root = document.documentElement;
     
-    // Apply high contrast
+    // High contrast mode
     if (highContrast) {
       root.classList.add('high-contrast');
     } else {
       root.classList.remove('high-contrast');
     }
 
-    // Apply font size
+    // Font size
     root.classList.remove('font-small', 'font-normal', 'font-large');
     root.classList.add(`font-${fontSize}`);
 
-    // Apply reduced motion
+    // Reduced motion
     if (reducedMotion) {
       root.classList.add('reduced-motion');
     } else {
@@ -57,18 +57,33 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
   };
 
   const addSkipLinks = () => {
-    const skipLink = document.createElement('a');
-    skipLink.href = '#main-content';
-    skipLink.textContent = 'Skip to main content';
-    skipLink.className = 'skip-link sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 bg-blue-600 text-white p-2 z-50';
-    document.body.insertBefore(skipLink, document.body.firstChild);
+    const existingSkipLink = document.querySelector('.skip-link');
+    if (!existingSkipLink) {
+      const skipLink = document.createElement('a');
+      skipLink.href = '#main-content';
+      skipLink.className = 'skip-link sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';
+      skipLink.textContent = 'Skip to main content';
+      document.body.insertBefore(skipLink, document.body.firstChild);
+    }
+  };
+
+  const changeFontSize = (newSize: 'small' | 'normal' | 'large') => {
+    setFontSize(newSize);
+    localStorage.setItem('fontSize', newSize);
+    applyAccessibilityStyles(isHighContrast, newSize, reducedMotion);
+  };
+
+  const toggleHighContrast = () => {
+    const newHighContrast = !isHighContrast;
+    setIsHighContrast(newHighContrast);
+    localStorage.setItem('highContrast', newHighContrast.toString());
+    applyAccessibilityStyles(newHighContrast, fontSize, reducedMotion);
   };
 
   const addAriaLandmarks = () => {
     const main = document.querySelector('main');
     if (main && !main.getAttribute('role')) {
       main.setAttribute('role', 'main');
-      main.id = 'main-content';
     }
   };
 
@@ -84,49 +99,45 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     document.head.appendChild(style);
   };
 
-  const toggleHighContrast = () => {
-    const newValue = !isHighContrast;
-    setIsHighContrast(newValue);
-    localStorage.setItem('highContrast', newValue.toString());
-    applyAccessibilityStyles(newValue, fontSize, reducedMotion);
-  };
-
-  const changeFontSize = (newSize: 'small' | 'normal' | 'large') => {
-    setFontSize(newSize);
-    localStorage.setItem('fontSize', newSize);
-    applyAccessibilityStyles(isHighContrast, newSize, reducedMotion);
-  };
-
   return (
-    <div className="accessibility-enhancer">
-      <div className="accessibility-controls fixed top-4 right-4 z-50 bg-white p-4 rounded-lg shadow-lg">
-        <h3 className="text-sm font-semibold mb-2">Accessibility Options</h3>
-        <div className="space-y-2">
-          <label className="flex items-center">
-            <input
-              type="checkbox"
-              checked={isHighContrast}
-              onChange={toggleHighContrast}
-              className="mr-2"
-            />
-            High Contrast
-          </label>
-          <div>
-            <label className="text-sm">Font Size:</label>
-            <select
-              value={fontSize}
-              onChange={(e) => changeFontSize(e.target.value as 'small' | 'normal' | 'large')}
-              className="ml-2 text-sm border rounded px-1"
-            >
-              <option value="small">Small</option>
-              <option value="normal">Normal</option>
-              <option value="large">Large</option>
-            </select>
+    <>
+      {children}
+      <div className="accessibility-controls fixed bottom-4 left-4 z-50">
+        <div className="bg-white shadow-lg rounded-lg p-4 space-y-2">
+          <h3 className="text-sm font-semibold text-gray-700 mb-2">Accessibility</h3>
+          
+          <button
+            onClick={toggleHighContrast}
+            className={`w-full px-3 py-2 text-xs rounded ${
+              isHighContrast 
+                ? 'bg-blue-600 text-white' 
+                : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+            }`}
+          >
+            {isHighContrast ? 'High Contrast On' : 'High Contrast Off'}
+          </button>
+          
+          <div className="space-y-1">
+            <label className="text-xs text-gray-600">Font Size:</label>
+            <div className="flex space-x-1">
+              {(['small', 'normal', 'large'] as const).map((size) => (
+                <button
+                  key={size}
+                  onClick={() => changeFontSize(size)}
+                  className={`px-2 py-1 text-xs rounded ${
+                    fontSize === size 
+                      ? 'bg-blue-600 text-white' 
+                      : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+                  }`}
+                >
+                  {size}
+                </button>
+              ))}
+            </div>
           </div>
         </div>
       </div>
-      {children}
-    </div>
+    </>
   );
 };
 

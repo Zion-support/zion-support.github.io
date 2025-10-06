@@ -13,6 +13,7 @@ const LoadingFallback: React.FC<{ height?: string }> = ({ height = 'h-32' }) => 
   <div className={`animate-pulse bg-gray-200 rounded-lg ${height} w-full`} />
 );
 
+
 const HomePage: React.FC = () => {
   const structuredData = {
     '@context': 'https://schema.org',
