@@ -8,13 +8,13 @@ import SEOOptimizer from '../src/components/SEOOptimizer';
 import LoadingSpinner from '../src/components/LoadingSpinner';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import PerformanceDashboard from './components/PerformanceDashboard';
+import PerformanceMonitor from '../src/components/PerformanceMonitor';
 
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./page'));
 
-// Loading component is imported from components/LoadingComponents
 // Utils
-import { performanceOptimizer, addCriticalResourceHints } from '../src/utils/performanceOptimizer';
+import { performanceOptimizer } from '../src/utils/performanceOptimizer';
 
 // Styles
 import '../index.css';
@@ -26,11 +26,14 @@ const App: React.FC = () => {
 
     // Initialize performance monitoring
     performanceOptimizer.lazyLoadImages();
-    addCriticalResourceHints();
+    performanceOptimizer.addCriticalResourceHints();
     
     // Initialize Web Vitals monitoring
     if (typeof window !== 'undefined' && 'performance' in window) {
-      performanceOptimizer.initialize();
+      const pageLoadMetrics = performanceOptimizer.measurePageLoad();
+      if (pageLoadMetrics) {
+        performanceOptimizer.reportWebVitals(pageLoadMetrics);
+      }
     }
     
     console.log('Performance monitoring initialized');
@@ -42,7 +45,7 @@ const App: React.FC = () => {
   return (
     <HelmetProvider>
       <ErrorBoundary>
-        <div>
+        <PerformanceMonitor>
           <SEOOptimizer>
             <AccessibilityEnhancer>
             <Router>
@@ -78,7 +81,7 @@ const App: React.FC = () => {
             </Router>
             </AccessibilityEnhancer>
           </SEOOptimizer>
-        </div>
+        </PerformanceMonitor>
       </ErrorBoundary>
     </HelmetProvider>
   );
