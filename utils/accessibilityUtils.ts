@@ -130,10 +130,13 @@ export const colorContrast = {
   },
   // Calculate contrast ratio
 <<<<<<< HEAD
+<<<<<<< HEAD
   getContrastRatio: (_color1: [number, number, number], _color2: [number, number, number]): number => {
     const lum1 = colorContrast.getLuminance(..._color1);
     const lum2 = colorContrast.getLuminance(..._color2);
 =======
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-bcb8
   getContrastRatio: (color1: [number, number, number], color2: [number, number, number]): number => {
     const lum1 = colorContrast.getLuminance(...color1);
     const lum2 = colorContrast.getLuminance(...color2);
@@ -145,7 +148,8 @@ export const colorContrast = {
 
   // Check if contrast meets WCAG standards
   meetsWCAG: (contrastRatio: number, level: 'AA' | 'AAA' = 'AA'): boolean => {
-    return level === 'AA' ? contrastRatio >= 4.5 : contrastRatio >= 7;
+    const thresholds = { AA: 4.5, AAA: 7 };
+    return contrastRatio >= thresholds[level];
   },
 };
 // Motion and animation utilities
@@ -175,11 +179,12 @@ export const formAccessibility = {
   ): HTMLLabelElement => {
     const label = document.createElement('label');
     label.textContent = labelText;
-    label.setAttribute('for', input.id || formAccessibility.generateInputId());
+    label.setAttribute('for', input.id || `input-${Math.random().toString(36).substr(2, 9)}`);
     if (!input.id) {
       input.id = label.getAttribute('for')!;
     }
     return label;
+<<<<<<< HEAD
   },
 
   // Generate unique input ID
@@ -193,6 +198,8 @@ export const formAccessibility = {
     // Simplified contrast calculation - in real implementation, use a proper color contrast library
     const contrastRatio = 4.5; // Placeholder
     return contrastRatio >= thresholds[level];
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-bcb8
   },
 };
 // Screen reader utilities
@@ -288,9 +295,12 @@ export const accessibilityTesting = {
     };
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0a61
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-bcb8
   // Check if element is focusable
   isFocusable: (element: HTMLElement): boolean => {
     const focusableSelectors = [

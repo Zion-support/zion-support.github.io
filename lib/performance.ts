@@ -259,7 +259,11 @@ export function generatePerformanceReport(): PerformanceReport | null {
     metrics,
     timestamp: new Date().toISOString(),
     url: window.location.href,
+<<<<<<< HEAD
     userAgent: navigator.userAgent
+=======
+    userAgent: navigator.userAgent,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-bcb8
   };
 }
 /**

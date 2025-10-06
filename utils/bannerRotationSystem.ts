@@ -118,12 +118,34 @@ export const shouldShowBanner = (banner: BannerConfig): boolean => {
  * Get rotation score for banner prioritization
  */
 export const getRotationScore = (banner: BannerConfig): number => {
+<<<<<<< HEAD
   // Simple scoring based on priority and recent performance
   const priorityScore = banner.priority;
   const recentImpressions = getBannerImpressionCount(banner.id, 24);
   const performanceScore = Math.max(0, 10 - recentImpressions); // Lower impressions = higher score
   
   return priorityScore + performanceScore;
+=======
+  const impressions = getBannerImpressions();
+  const bannerImpressions = impressions.filter(imp => imp.bannerId === banner.id);
+  
+  // Calculate engagement rate
+  const totalImpressions = bannerImpressions.length;
+  const clicks = bannerImpressions.filter(imp => imp.clicked).length;
+  const engagementRate = totalImpressions > 0 ? clicks / totalImpressions : 0;
+  
+  // Calculate recency score (more recent = higher score)
+  const recentImpressions = bannerImpressions.filter(imp => 
+    imp.timestamp > Date.now() - 24 * 60 * 60 * 1000
+  ).length;
+  const recencyScore = Math.min(recentImpressions / 10, 1);
+  
+  // Calculate fatigue score (fewer impressions = higher score)
+  const fatigueScore = Math.max(0, 1 - (totalImpressions / 50));
+  
+  // Weighted combination
+  return (banner.priority * 0.4) + (engagementRate * 0.3) + (recencyScore * 0.2) + (fatigueScore * 0.1);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-bcb8
 };
 
 export const selectBannersForRotation = (allBanners: BannerConfig[], maxBanners: number = MAX_VISIBLE_BANNERS): BannerConfig[] => {
@@ -148,6 +170,7 @@ export const getBannerAnalytics = (bannerId?: string) => {
   const bannerImpressions = impressions.filter(imp => imp.bannerId === bannerId);
 =======
   const impressions = getBannerImpressions();
+<<<<<<< HEAD
   const bannerImpressions = bannerId ? impressions.filter(imp => imp.bannerId === bannerId) : impressions;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0a61
   
@@ -177,6 +200,17 @@ export const getBannerAnalytics = (bannerId?: string) => {
 =======
     overallScore: (engagementRate * 0.3) + (recencyScore * 0.2) + (fatigueScore * 0.1)
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0a61
+=======
+  const bannerImpressions = bannerId ? 
+    impressions.filter(imp => imp.bannerId === bannerId) : 
+    impressions;
+  
+  return {
+    totalImpressions: bannerImpressions.length,
+    clicks: bannerImpressions.filter(imp => imp.clicked).length,
+    engagementRate: bannerImpressions.length > 0 ? 
+      bannerImpressions.filter(imp => imp.clicked).length / bannerImpressions.length : 0
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-bcb8
   };
 };
 

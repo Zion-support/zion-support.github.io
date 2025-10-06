@@ -20,10 +20,13 @@ export interface ProviderConnection {
   accessToken: string;
   refreshToken?: string;
   expiresAt?: number;
+<<<<<<< HEAD
   status: SyncStatus;
   lastSync?: number;
   createdAt: number;
   updatedAt: number;
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-bcb8
 }
 export interface SyncLogEntry {
   id: string;
@@ -42,8 +45,14 @@ export interface ZapierEvent {
   id: string;
   type: 'zion.job.posted' | 'zion.talent.matched';
   timestamp: number;
+<<<<<<< HEAD
   payload: Record<string, unknown>;
 }
+=======
+  payload: Record<string, any>;
+}
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-bcb8
 export interface IntegrationsState {
   connections: ProviderConnection[];
   logs: SyncLogEntry[];

@@ -1,5 +1,9 @@
 import type { ProviderConnection, SyncLogEntry } from './types';
+<<<<<<< HEAD
 // import { v4 as uuidv4 } from 'uuid';
+=======
+import { v4 as uuidv4 } from 'uuid';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-bcb8
 
 export async function simulateAction<T = unknown>(
   connection: ProviderConnection,
@@ -28,7 +32,11 @@ export const crm = {
   async addProjectNote(connection: ProviderConnection, note: Record<string, unknown>) {
     return simulateAction(connection, 'crm.addProjectNote', { note });
   },
+<<<<<<< HEAD
   async addEmailTouchpoint(connection: ProviderConnection, touch: Record<string, unknown>) {
+=======
+  async addEmailTouchpoint(connection: ProviderConnection, touch: Record<string, any>) {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-bcb8
     return simulateAction(connection, 'crm.addEmailTouchpoint', { touch });
   }
 };
