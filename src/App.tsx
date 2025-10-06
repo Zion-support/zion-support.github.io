@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-import { Suspense, useEffect } from 'react';
-=======
-import React, { Suspense, lazy, useEffect } from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e4e
+import React, { Suspense, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './index.css';
 
@@ -90,15 +86,9 @@ function App() {
     // Initialize basic optimizations
     const initializeOptimizations = () => {
       try {
-<<<<<<< HEAD
         console.log('App initialized successfully');
       } catch (error) {
         console.error('Failed to initialize app:', error);
-=======
-        console.log('All optimization systems initialized successfully');
-      } catch (error) {
-        console.error('Failed to initialize optimization systems:', error);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e4e
       }
     };
 
@@ -109,29 +99,25 @@ function App() {
   return (
     <div>
       <Router>
-<<<<<<< HEAD
         <Suspense
           fallback={
-            <div className='min-h-screen flex items-center justify-center bg-gray-50'>
-              <div className='text-center'>
-                <div className='animate-spin rounded-full h-32 w-32 border-b-2 border-blue-600 mx-auto'></div>
-                <p className='mt-4 text-gray-600'>Loading...</p>
+            <div className="min-h-screen flex items-center justify-center bg-gray-50">
+              <div className="text-center">
+                <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-600 mx-auto"></div>
+                <p className="mt-4 text-gray-600">Loading...</p>
               </div>
             </div>
           }
         >
-=======
-        <Suspense fallback={<div className="min-h-screen flex items-center justify-center">Loading...</div>}>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e4e
           <Routes>
-            <Route path='/' element={<Home />} />
-            <Route path='/about' element={<About />} />
-            <Route path='/services' element={<Services />} />
-            <Route path='/blog' element={<Blog />} />
-            <Route path='/contact' element={<Contact />} />
-            <Route path='/team' element={<Team />} />
-            <Route path='/privacy' element={<Privacy />} />
-            <Route path='/terms' element={<Terms />} />
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/team" element={<Team />} />
+            <Route path="/privacy" element={<Privacy />} />
+            <Route path="/terms" element={<Terms />} />
           </Routes>
         </Suspense>
       </Router>
@@ -139,9 +125,6 @@ function App() {
   );
 }
 
-<<<<<<< HEAD
-export default App;
-=======
 // Simple Error Boundary
 class ErrorBoundary extends React.Component<
   { children: React.ReactNode; fallback?: React.ReactNode },
@@ -156,11 +139,11 @@ class ErrorBoundary extends React.Component<
     return { hasError: true };
   }
 
-  componentDidCatch(_error: Error, errorInfo: React.ErrorInfo) {
+  override componentDidCatch(_error: Error, errorInfo: React.ErrorInfo) {
     console.error('Error caught by boundary:', errorInfo);
   }
 
-  render() {
+  override render() {
     if (this.state.hasError) {
       return this.props.fallback || (
         <div className="min-h-screen flex items-center justify-center bg-gray-50">
@@ -184,4 +167,3 @@ class ErrorBoundary extends React.Component<
 export { ErrorBoundary };
 
 export default App;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e4e
