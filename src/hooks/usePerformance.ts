@@ -106,14 +106,15 @@ export const usePageLoadPerformance = () => {
         )[0] as PerformanceNavigationTiming;
 
         if (navigation) {
+          const navTiming = navigation as PerformanceNavigationTiming;
           const metrics = {
             domContentLoaded:
-              navigation.domContentLoadedEventEnd -
-              navigation.domContentLoadedEventStart,
-            loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
-            firstByte: navigation.responseStart - navigation.requestStart,
-            domInteractive: navigation.domInteractive - (navigation as any).navigationStart,
-            totalLoadTime: navigation.loadEventEnd - (navigation as any).navigationStart,
+              navTiming.domContentLoadedEventEnd -
+              navTiming.domContentLoadedEventStart,
+            loadComplete: navTiming.loadEventEnd - navTiming.loadEventStart,
+            firstByte: navTiming.responseStart - navTiming.requestStart,
+            domInteractive: navTiming.domInteractive - navTiming.fetchStart,
+            totalLoadTime: navTiming.loadEventEnd - navTiming.fetchStart,
           };
 
           // Track each metric

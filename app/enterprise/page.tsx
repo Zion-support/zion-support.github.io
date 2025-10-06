@@ -1,4 +1,3 @@
-import Link from 'next/link';
 
 export const metadata = {
   title: 'Enterprise Solutions - Zion Tech Group',
@@ -43,7 +42,6 @@ export default function EnterprisePage() {
               $100M+ cost savings, 500% productivity gains, and 99.9% system
               uptime with enterprise-grade security and compliance.
             </p>
-
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
               <a
                 href="/contact"
@@ -149,20 +147,20 @@ export default function EnterprisePage() {
               transformation with our enterprise AI solutions.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-              <Link
+              <a
                 href="tel:+13024640950"
                 className="group flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl"
               >
                 <span className="text-xl">📞</span>
                 <span>Call +1 302 464 0950</span>
-              </Link>
-              <Link
+              </a>
+              <a
                 href="mailto:info@ziontechgroup.com"
                 className="group flex items-center gap-3 bg-white/10 hover:bg-white/20 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 border border-white/30"
               >
                 <span className="text-xl">📧</span>
                 <span>Get Enterprise Consultation</span>
-              </Link>
+              </a>
             </div>
           </div>
         </div>
