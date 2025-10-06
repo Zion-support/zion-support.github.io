@@ -201,6 +201,7 @@ class PerformanceOptimizer {
     this.measurePerformance('lazyLoadImages', () => this.lazyLoadImages());
     this.measurePerformance('preloadCriticalResources', () => this.preloadCriticalResources());
     this.measurePerformance('optimizeScroll', () => this.optimizeScroll());
+    this.measurePerformance('addCriticalResourceHints', () => this.addCriticalResourceHints());
   }
 }
 
