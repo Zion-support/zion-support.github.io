@@ -1,13 +1,6 @@
 import { Suspense, lazy } from 'react';
 import Link from 'next/link';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import { Helmet } from 'react-helmet-async';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7834
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-8da8
 
 // Lazy load heavy components
 const UnifiedContentPromotion = lazy(
@@ -20,11 +13,6 @@ const ContentShowcase = lazy(() => import('./components/ContentShowcase'));
 const InteractiveContentShowcase2026 = lazy(
   () => import('./components/InteractiveContentShowcase2026'),
 );
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-8da8
 
 // Loading component for Suspense fallback
 const LoadingFallback = ({ height = 'h-32' }: { height?: string }) => (
@@ -36,26 +24,18 @@ export default function HomePage() {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: 'Zion Tech Group',
-    description:
-      'Leading provider of AI-powered enterprise solutions and digital transformation services',
+    description: 'Advanced AI and IT Solutions',
     url: 'https://ziontechgroup.com',
     logo: 'https://ziontechgroup.com/logo.png',
-    contactPoint: {
-      '@type': 'ContactPoint',
-      telephone: '+1-302-464-0950',
-      contactType: 'customer service',
-      email: 'kleber@ziontechgroup.com',
-    },
-    address: {
-      '@type': 'PostalAddress',
-      addressCountry: 'US',
-      addressLocality: 'Wilmington',
-      addressRegion: 'DE',
-    },
     sameAs: [
       'https://linkedin.com/company/ziontechgroup',
       'https://twitter.com/ziontechgroup',
     ],
+    contactPoint: {
+      '@type': 'ContactPoint',
+      telephone: '+1-555-0123',
+      contactType: 'customer service',
+    },
     offers: {
       '@type': 'Offer',
       description: 'AI Enterprise Transformation Services',
@@ -65,254 +45,62 @@ export default function HomePage() {
   };
 
   return (
-    <>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-8da8
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-      />
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-      
-      {/* Hero Section */}
-      <section className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center">
-        <div className="container mx-auto px-4">
-=======
-=======
+    <div>
       <Helmet>
         <title>Zion Tech Group - Advanced AI and IT Solutions</title>
         <meta name="description" content="Leading provider of advanced AI and IT solutions. We deliver cutting-edge technology services to transform your business." />
-        <meta name="keywords" content="AI solutions, IT services, software development, digital transformation, artificial intelligence" />
-        <meta property="og:title" content="Zion Tech Group - Advanced AI and IT Solutions" />
-        <meta property="og:description" content="Leading provider of advanced AI and IT solutions. We deliver cutting-edge technology services to transform your business." />
-        <meta property="og:type" content="website" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Zion Tech Group - Advanced AI and IT Solutions" />
-        <meta name="twitter:description" content="Leading provider of advanced AI and IT solutions. We deliver cutting-edge technology services to transform your business." />
-        <script type="application/ld+json">
-          {JSON.stringify(structuredData)}
-        </script>
+        <meta name="keywords" content="AI, artificial intelligence, IT solutions, enterprise automation, business intelligence" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
       </Helmet>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7834
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-8da8
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-        <main id="main-content" className="container mx-auto px-4 py-12">
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0883
+
+      {/* Hero Section */}
+      <section className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center">
+        <div className="container mx-auto px-4">
           <div className="text-center">
-            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              Welcome to Zion Tech Group
+            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+              Advanced AI & IT Solutions
             </h1>
-            <p className="text-xl md:text-2xl text-gray-700 mb-12 max-w-3xl mx-auto">
-              Pioneering the future with advanced AI and IT solutions that transform businesses and drive innovation
+            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+              Transform your business with cutting-edge artificial intelligence and IT solutions. 
+              We deliver enterprise-grade automation, business intelligence, and digital transformation services.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/contact"
-                className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-colors duration-300"
+                className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition-colors"
               >
-                Get Started Today
+                Get Started
               </Link>
               <Link
-<<<<<<< HEAD
-                href="/services"
-                className="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white font-bold py-4 px-8 rounded-lg text-lg transition-colors duration-300"
-=======
-                href='/services'
-                className='border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white font-bold py-4 px-8 rounded-lg text-lg transition-colors duration-300'
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0883
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7834
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-8da8
+                href="/about"
+                className="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white font-bold py-3 px-8 rounded-lg transition-colors"
               >
-                View Services
+                Learn More
               </Link>
             </div>
           </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
         </div>
       </section>
 
-      {/* Main Content */}
-      <main className="container mx-auto px-4 py-16">
-        {/* Unified Content Promotion */}
-        <Suspense fallback={<LoadingFallback height="h-32" />}>
-          <UnifiedContentPromotion />
-        </Suspense>
+      {/* Content Sections */}
+      <Suspense fallback={<LoadingFallback height="h-64" />}>
+        <UnifiedContentPromotion />
+      </Suspense>
 
-        {/* Interactive AI ROI Calculator */}
-        <section className="my-16">
-          <Suspense fallback={<LoadingFallback height="h-64" />}>
-            <InteractiveAIROICalculator />
-          </Suspense>
-        </section>
+      <Suspense fallback={<LoadingFallback height="h-96" />}>
+        <InteractiveAIROICalculator />
+      </Suspense>
 
-        {/* Content Showcase */}
-        <section className="my-16">
-          <Suspense fallback={<LoadingFallback height="h-48" />}>
-            <ContentShowcase />
-          </Suspense>
-        </section>
+      <Suspense fallback={<LoadingFallback height="h-80" />}>
+        <ContentShowcase />
+      </Suspense>
 
-        {/* Interactive Content Showcase 2026 */}
-        <section className="my-16">
-          <Suspense fallback={<LoadingFallback height="h-48" />}>
-            <InteractiveContentShowcase2026 />
-          </Suspense>
-        </section>
-      </main>
-=======
-        </main>
-
-        {/* Main Content */}
-        <main className='container mx-auto px-4 py-16'>
-          {/* Unified Content Promotion */}
-          <Suspense fallback={<LoadingFallback height='h-32' />}>
-            <UnifiedContentPromotion />
-          </Suspense>
-=======
-        </main>
-        
-        {/* Main Content */}
-        <main className='container mx-auto px-4 py-16'>
-          {/* Unified Content Promotion */}
-          <Suspense fallback={<LoadingFallback height='h-32' />}>
-            <UnifiedContentPromotion />
-          </Suspense>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7834
-=======
-        </main>
-
-        {/* Main Content */}
-        <main className='container mx-auto px-4 py-16'>
-          {/* Unified Content Promotion */}
-          <Suspense fallback={<LoadingFallback height='h-32' />}>
-            <UnifiedContentPromotion />
-          </Suspense>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-8da8
-          
-          {/* Interactive AI ROI Calculator */}
-          <section className='my-16'>
-            <Suspense fallback={<LoadingFallback height='h-64' />}>
-              <InteractiveAIROICalculator />
-            </Suspense>
-          </section>
-<<<<<<< HEAD
-          
-          {/* Content Showcase */}
-          <section className='my-16'>
-            <Suspense fallback={<LoadingFallback height='h-48' />}>
-              <ContentShowcase />
-            </Suspense>
-          </section>
-          
-          {/* Interactive Content Showcase 2026 */}
-          <section className='my-16'>
-            <Suspense fallback={<LoadingFallback height='h-48' />}>
-              <InteractiveContentShowcase2026 />
-            </Suspense>
-          </section>
-          
-          {/* CTA Section */}
-          <section className='bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16 rounded-2xl text-center'>
-            <div className='max-w-3xl mx-auto px-4'>
-              <h2 className='text-4xl font-bold mb-6'>
-                Ready to Transform Your Enterprise?
-              </h2>
-              <p className='text-xl mb-8'>
-                Join hundreds of companies already achieving 300% ROI with our AI
-                solutions.
-              </p>
-              <Link
-                href='/contact'
-                className='bg-white text-blue-600 hover:bg-gray-100 font-bold py-4 px-8 rounded-lg text-lg transition-colors duration-300 inline-block'
-              >
-                Start Your Transformation
-              </Link>
-            </div>
-          </section>
-        </main>
-      </div>
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0883
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7834
-=======
-      <main className='container mx-auto px-4 py-16'>
-        {/* Hero Section */}
-        <section className='text-center py-16'>
-          <h1 className='text-5xl font-bold text-gray-900 mb-6'>
-            Welcome to Zion Tech Group
-          </h1>
-          <p className='text-xl text-gray-600 mb-8 max-w-3xl mx-auto'>
-            Leading provider of AI-powered enterprise solutions and digital transformation services
-          </p>
-          <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-            <Link
-              href='/contact'
-              className='bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-colors duration-300'
-            >
-              Get Started Today
-            </Link>
-            <Link
-              href='/services'
-              className='border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white font-bold py-4 px-8 rounded-lg text-lg transition-colors duration-300'
-            >
-              View Services
-            </Link>
-          </div>
-        </section>
-        
-        {/* CTA Section */}
-        <section className='bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16 rounded-2xl text-center'>
-          <div className='max-w-3xl mx-auto px-4'>
-            <h2 className='text-4xl font-bold mb-6'>
-              Ready to Transform Your Enterprise?
-            </h2>
-            <p className='text-xl mb-8'>
-              Join hundreds of companies already achieving 300% ROI with our AI
-              solutions.
-            </p>
-            <Link
-              href='/contact'
-              className='bg-white text-blue-600 hover:bg-gray-100 font-bold py-4 px-8 rounded-lg text-lg transition-colors duration-300 inline-block'
-            >
-              Start Your Transformation
-            </Link>
-          </div>
-        </section>
-      </main>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
-=======
-
-          {/* Content Showcase */}
-          <section className='my-16'>
-            <Suspense fallback={<LoadingFallback height='h-96' />}>
-              <ContentShowcase />
-            </Suspense>
-          </section>
-
-          {/* Interactive Content Showcase 2026 */}
-          <section className='my-16'>
-            <Suspense fallback={<LoadingFallback height='h-96' />}>
-              <InteractiveContentShowcase2026 />
-            </Suspense>
-          </section>
-        </main>
-      </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-8da8
-    </>
+      <Suspense fallback={<LoadingFallback height="h-96" />}>
+        <InteractiveContentShowcase2026 />
+      </Suspense>
+    </div>
   );
 }

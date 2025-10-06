@@ -68,11 +68,7 @@ export const octoberNewBreakthroughContent = [
     category: 'Quantum AI',
     date: '2025-10-02',
     readTime: '18 min read',
-<<<<<<< HEAD:src/content/october-2025-new-breakthrough-content.ts
-    featured: true,
-    urgent: true,
-=======
->>>>>>> main:corrupted-src-backup/content/october-2025-new-breakthrough-content.ts
+:corrupted-src-backup/content/october-2025-new-breakthrough-content.ts
     tags: [
       'Quantum AI',
       'Optimization',

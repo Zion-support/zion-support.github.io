@@ -1,10 +1,5 @@
 import React, { useState, useEffect } from 'react';
-<<<<<<< HEAD:src/components/AnalyticsDashboard.tsx
-// import PerformanceMonitor from '../utils/performance-monitor'; // Unused import
-// import SEOOptimizer from '../utils/seo-optimizer'; // Unused import
-// import ErrorHandler from '../utils/error-handler'; // Unused import
-=======
->>>>>>> main:corrupted-src-backup/components/AnalyticsDashboard.tsx
+:corrupted-src-backup/components/AnalyticsDashboard.tsx
 
 interface AnalyticsData {
   pageViews: number;
@@ -69,10 +64,7 @@ const AnalyticsDashboard: React.FC = () => {
         setData(mockData);
       } catch (err) {
         setError('Failed to load analytics data');
-<<<<<<< HEAD:src/components/AnalyticsDashboard.tsx
-        // ErrorHandler.handleError(err as Error); // Method doesn't exist as static
-=======
->>>>>>> main:corrupted-src-backup/components/AnalyticsDashboard.tsx
+:corrupted-src-backup/components/AnalyticsDashboard.tsx
         console.error('Analytics error:', err);
       } finally {
         setIsLoading(false);
