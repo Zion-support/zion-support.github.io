@@ -69,10 +69,10 @@ export function AppErrorBoundary({ children }: AppErrorBoundaryProps) {
       FallbackComponent={ErrorFallback}
       onError={(error, errorInfo) => {
         console.error('Error caught by boundary:', error, errorInfo);
-        // Here you could send error to monitoring service
+        //Here you could send error to monitoring service
       }}
       onReset={() => {
-        // Clear any error state or redirect
+        //Clear any error state or redirect
         window.location.reload();
       }}
     >

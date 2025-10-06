@@ -157,6 +157,24 @@ export default function EnterprisePage() {
           </div>
         </div>
       </section>
+            {/* Solution 1 */}
+            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-cyan-500/50 transition-all duration-300 group">
+              <div className="text-4xl mb-4">🤖</div>
+              <h3 className="text-2xl font-bold text-white mb-4">
+                Autonomous AI Systems
+              </h3>
+              <p className="text-gray-400 mb-6">
+                Self-managing AI systems that optimize operations, reduce costs,
+                and improve efficiency across your entire organization.
+              </p>
+              <ul className="space-y-2 text-sm text-gray-300">
+                <li>• 99.9% uptime guarantee</li>
+                <li>• $50M+ annual cost savings</li>
+                <li>• 24/7 autonomous operation</li>
+              </ul>
+            </div>
+
+>>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572
             {/* Solution 2 */}
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-purple-500/50 transition-all duration-300 group">
               <div className="text-4xl mb-4">⚡</div>
@@ -173,6 +191,8 @@ export default function EnterprisePage() {
                 <li>• Future-proof technology</li>
               </ul>
             </div>
+
+>>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               { number: '500+', label: 'Fortune 500 Clients' },
@@ -190,6 +210,23 @@ export default function EnterprisePage() {
                 <div className="text-gray-300">{stat.label}</div>
               </div>
             ))}
+            {/* Solution 3 */}
+            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-green-500/50 transition-all duration-300 group">
+              <div className="text-4xl mb-4">🔒</div>
+              <h3 className="text-2xl font-bold text-white mb-4">
+                Enterprise Security
+              </h3>
+              <p className="text-gray-400 mb-6">
+                Military-grade security solutions with zero-trust architecture
+                and advanced threat detection.
+              </p>
+              <ul className="space-y-2 text-sm text-gray-300">
+                <li>• SOC 2 Type II certified</li>
+                <li>• Zero-trust architecture</li>
+                <li>• Real-time threat detection</li>
+              </ul>
+            </div>
+>>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572
           </div>
         </div>
       </section>
@@ -220,6 +257,29 @@ export default function EnterprisePage() {
                 <span>Get Enterprise Consultation</span>
               </a>
             </div>
+      <section className="py-24 bg-gradient-to-r from-cyan-500/10 to-purple-500/10">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-4xl font-bold text-white mb-6">
+            Ready to Transform Your Enterprise?
+          </h2>
+          <p className="text-xl text-gray-400 mb-8 max-w-3xl mx-auto">
+            Join 500+ Fortune 500 companies already using our AI solutions to
+            drive innovation and growth.
+          </p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+            <a
+              href="/contact"
+              className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl"
+            >
+              Schedule Enterprise Demo
+            </a>
+            <a
+              href="tel:+13024640950"
+              className="text-cyan-400 hover:text-cyan-300 font-medium py-4 px-8 transition-colors"
+            >
+              Call: +1 (302) 464-0950
+            </a>
+>>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572
           </div>
         </div>
       </section>

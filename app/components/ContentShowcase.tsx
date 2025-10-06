@@ -1,8 +1,25 @@
 import React from 'react';
 
 const ContentShowcase: React.FC = () => {
+<<<<<<< HEAD
   const contentItems = [
     {
+=======
+<<<<<<< HEAD
+  return (
+    <div className="content-showcase">
+      <h2>Content Showcase</h2>
+      <p>Content showcase component placeholder</p>
+    </div>
+  );
+};
+
+export default ContentShowcase;
+=======
+  const contentItems = [
+    {
+<<<<<<< HEAD
+>>>>>>> main
       title: 'AI-Powered Manufacturing',
       description:
         'Revolutionize your production line with intelligent automation and predictive maintenance.',
@@ -49,6 +66,66 @@ const ContentShowcase: React.FC = () => {
                 <p className='text-gray-600 mb-4'>{item.description}</p>
                 <button className='w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors duration-300'>
                   Learn More
+<<<<<<< HEAD
+=======
+=======
+      title: "AI-Powered Automation",
+      description: "Streamline your operations with intelligent automation solutions.",
+      image: "/api/placeholder/300/200",
+      category: "AI Solutions"
+    },
+    {
+      title: "Cloud Infrastructure",
+      description: "Scalable and secure cloud solutions for modern businesses.",
+      image: "/api/placeholder/300/200",
+      category: "Infrastructure"
+    },
+    {
+      title: "Data Analytics",
+      description: "Transform your data into actionable insights and business intelligence.",
+      image: "/api/placeholder/300/200",
+      category: "Analytics"
+    },
+    {
+      title: "Cybersecurity",
+      description: "Protect your business with advanced security solutions and monitoring.",
+      image: "/api/placeholder/300/200",
+      category: "Security"
+    }
+  ];
+
+  return (
+    <section className="py-16 bg-gray-50">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            Content Showcase
+          </h2>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            Explore our comprehensive range of services and solutions designed to drive your business forward.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {contentItems.map((item, index) => (
+            <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+              <div className="h-48 bg-gradient-to-br from-blue-100 to-indigo-100 flex items-center justify-center">
+                <div className="text-4xl text-blue-600">📊</div>
+              </div>
+              <div className="p-6">
+                <div className="text-sm text-blue-600 font-medium mb-2">
+                  {item.category}
+                </div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                  {item.title}
+                </h3>
+                <p className="text-gray-600 text-sm mb-4">
+                  {item.description}
+                </p>
+                <button className="text-blue-600 hover:text-blue-700 font-medium text-sm">
+                  Learn More →
+>>>>>>> main
+>>>>>>> main
                 </button>
               </div>
             </div>
@@ -59,4 +136,13 @@ const ContentShowcase: React.FC = () => {
   );
 };
 
+<<<<<<< HEAD
 export default ContentShowcase;
+=======
+<<<<<<< HEAD
+export default ContentShowcase;
+=======
+export default ContentShowcase;
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

@@ -2,8 +2,7 @@
 /**
  * Final PR Merge Solution
  * Handles merging of open PRs with error resolution
- */
-const https = require('https');
+ */const https = require('https');
 const GITHUB_TOKEN = 'ghs_tukMr3CyP2oHSXPRFscExJmUauEJUi4HAU1a'
 const REPO = 'Zion-Holdings/zion.app'
 async function mergePR(prNumber) {

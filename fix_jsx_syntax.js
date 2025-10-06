@@ -5,7 +5,7 @@ import path from 'path';
 import { glob } from 'glob';
 
 async function main() {
-  // Find all TSX files in src/components
+  //Find all TSX files in src/components
   const files = await glob('src/components/**/*.tsx');
 
   console.log(`Found ${files.length} TSX files to process...`);
@@ -15,9 +15,9 @@ async function main() {
       let content = fs.readFileSync(file, 'utf8');
       let modified = false;
 
-      // Fix common JSX syntax issues
+      //Fix common JSX syntax issues
 
-      // 1. Fix key prop placement: <div>\nkey={...} -> <div\nkey={...}
+      //1. Fix key prop placement: <div>\nkey={...} -> <div\nkey={...}
       const keyPropFix = content.replace(
         /<(\w+)>\s*\n\s*key=\{([^}]+)\}/g,
         '<$1\nkey={$2}'
@@ -27,7 +27,7 @@ async function main() {
         modified = true;
       }
 
-      // 2. Fix onClick prop placement: <button>\nonClick={...} -> <button\nonClick={...}
+      //2. Fix onClick prop placement: <button>\nonClick={...} -> <button\nonClick={...}
       const onClickFix = content.replace(
         /<(\w+)>\s*\n\s*onClick=\{([^}]+)\}/g,
         '<$1\nonClick={$2}'
@@ -37,7 +37,7 @@ async function main() {
         modified = true;
       }
 
-      // 3. Fix className prop placement: <div>\nclassName={...} -> <div\nclassName={...}
+      //3. Fix className prop placement: <div>\nclassName={...} -> <div\nclassName={...}
       const classNameFix = content.replace(
         /<(\w+)>\s*\n\s*className=\{([^}]+)\}/g,
         '<$1\nclassName={$2}'
@@ -47,7 +47,7 @@ async function main() {
         modified = true;
       }
 
-      // 4. Fix style prop placement: <div>\nstyle={...} -> <div\nstyle={...}
+      //4. Fix style prop placement: <div>\nstyle={...} -> <div\nstyle={...}
       const styleFix = content.replace(
         /<(\w+)>\s*\n\s*style=\{([^}]+)\}/g,
         '<$1\nstyle={$2}'
@@ -57,14 +57,14 @@ async function main() {
         modified = true;
       }
 
-      // 5. Fix template literal syntax: ${> -> ${
+      //5. Fix template literal syntax: ${> -> ${
       const templateFix = content.replace(/\$\{>/g, '${');
       if (templateFix !== content) {
         content = templateFix;
         modified = true;
       }
 
-      // 6. Fix unclosed input tags: <input\n...\n\n<button -> <input\n...\n/>\n\n<button
+      //6. Fix unclosed input tags: <input\n...\n\n<button -> <input\n...\n/>\n\n<button
       const inputFix = content.replace(
         /<input([^>]*?)\n\s*\n\s*<button/g,
         '<input$1\n/>\n\n<button'
@@ -74,7 +74,7 @@ async function main() {
         modified = true;
       }
 
-      // 7. Fix unclosed br tags: <br> -> <br />
+      //7. Fix unclosed br tags: <br> -> <br />
       const brFix = content.replace(/<br>/g, '<br />');
       if (brFix !== content) {
         content = brFix;

@@ -4,33 +4,33 @@ import fs from 'fs';
 import path from 'path';
 import { glob } from 'glob';
 
-// Function to fix JSX syntax errors
+//Function to fix JSX syntax errors
 function fixJSXSyntax(content) {
   let fixed = content;
 
-  // Fix function declarations with malformed comments
+  //Fix function declarations with malformed comments
   fixed = fixed.replace(
     /const\s+(\w+):\s+React\.FC\s*=\s*\(\)\s*=>\s*\{\/\*\s*content\s*\/\}/g,
     'const $1: React.FC = () => {'
   );
 
-  // Fix malformed JSX elements that are self-closing but shouldn't be
-  // Pattern: <div></div> followed by content that should be inside
+  //Fix malformed JSX elements that are self-closing but shouldn't be
+  //Pattern: <div></div> followed by content that should be inside
   fixed = fixed.replace(/<(\w+)([^>]*?)><\/\1>\s*([^<]+)/g, '<$1$2>$3</$1>');
 
-  // Fix malformed JSX elements with attributes
+  //Fix malformed JSX elements with attributes
   fixed = fixed.replace(
     /<(\w+)([^>]*?)><\/\1>\s*<(\w+)([^>]*?)><\/\3>/g,
     '<$1$2><$3$4></$3></$1>'
   );
 
-  // Fix array syntax issues
+  //Fix array syntax issues
   fixed = fixed.replace(/\[\s*\{\/\*\s*content\s*\/\}/g, '[{');
 
-  // Fix object syntax issues
+  //Fix object syntax issues
   fixed = fixed.replace(/\{\/\*\s*content\s*\/\}/g, '{');
 
-  // Fix missing closing braces for objects
+  //Fix missing closing braces for objects
   fixed = fixed.replace(
     /(\w+):\s*'([^']*)',?\s*(\w+):\s*'([^']*)',?\s*(\w+):\s*'([^']*)',?\s*(\w+):\s*'([^']*)',?\s*\}/g,
     "$1: '$2',\n      $3: '$4',\n      $5: '$6',\n      $7: '$8'\n    }"
@@ -39,7 +39,7 @@ function fixJSXSyntax(content) {
   return fixed;
 }
 
-// Function to process a single file
+//Function to process a single file
 function processFile(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf8');
@@ -57,7 +57,7 @@ function processFile(filePath) {
   }
 }
 
-// Main function
+//Main function
 async function main() {
   const patterns = [
     'src/**/*.tsx',
