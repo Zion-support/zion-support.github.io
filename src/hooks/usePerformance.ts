@@ -7,6 +7,7 @@ import { performanceOptimizer } from '../utils/performanceOptimizer';
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Mock analytics object for tracking
 const analytics = {
   trackPerformance: (name: string, value: number, unit: string = 'ms') => {
@@ -110,6 +111,16 @@ export const usePerformance = (options: UsePerformanceOptions) => {
     }),
   };
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-e98c
+=======
+// Mock analytics for now - replace with actual analytics implementation
+const analytics = {
+  trackPerformance: (metric: string, value: number, unit: string = 'ms') => {
+    console.log(`Performance metric: ${metric} = ${value}${unit}`);
+  },
+  track: (event: string, category: string, action: string, label?: string, value?: number) => {
+    console.log(`Analytics: ${event} - ${category} - ${action}`, { label, value });
+  }
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7834
 };
 
 /**
@@ -119,10 +130,14 @@ export const usePageLoadPerformance = () => {
   useEffect(() => {
     const trackPageLoad = () => {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7834
       if (typeof window !== 'undefined' && window.performance) {
         const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
         if (navigation) {
           const metrics = {
+<<<<<<< HEAD
 <<<<<<< HEAD
             domContentLoaded: navigation.domContentLoadedEventEnd - navigation.fetchStart,
 =======
@@ -132,6 +147,9 @@ export const usePageLoadPerformance = () => {
             loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
             firstByte: navigation.responseStart - navigation.requestStart,
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-e98c
+=======
+            domContentLoaded: navigation.domContentLoadedEventEnd - navigation.fetchStart,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7834
             domInteractive: navigation.domInteractive - navigation.fetchStart,
             totalLoadTime: navigation.loadEventEnd - navigation.fetchStart,
           };
@@ -233,6 +251,7 @@ export const useLongTaskMonitoring = () => {
         observer.disconnect();
       }
     };
+<<<<<<< HEAD
 =======
     // Long task monitoring is disabled due to missing performanceOptimizer
     // Long task monitoring not available in this environment
@@ -243,6 +262,13 @@ export const useLongTaskMonitoring = () => {
 
 /**
  * Hook for measuring component render performance
+=======
+  }, []);
+};
+
+/**
+ * Hook for monitoring component render performance
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7834
  */
 export const useRenderPerformance = (componentName: string) => {
   const renderStart = useRef<number>(0);
@@ -251,6 +277,7 @@ export const useRenderPerformance = (componentName: string) => {
   useEffect(() => {
     renderStart.current = performance.now();
     renderCount.current += 1;
+<<<<<<< HEAD
 
     return () => {
       const renderTime = performance.now() - renderStart.current;
@@ -281,6 +308,18 @@ export const useRenderPerformance = (componentName: string) => {
       return duration;
     }, [componentName])
   };
+=======
+  });
+
+  useEffect(() => {
+    const renderTime = performance.now() - renderStart.current;
+    analytics.trackPerformance(`render_${componentName}`, renderTime);
+    
+    if (renderTime > 16) { // 16ms = 60fps threshold
+      analytics.track('slow_render', 'performance', 'detected', componentName, renderTime);
+    }
+  });
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7834
 };
 
 /**
@@ -288,6 +327,7 @@ export const useRenderPerformance = (componentName: string) => {
  */
 export const useMemoryMonitoring = () => {
   useEffect(() => {
+<<<<<<< HEAD
     if (typeof window === 'undefined' || !(performance as any).memory) {
       return;
     }
@@ -317,4 +357,65 @@ export const useMemoryMonitoring = () => {
   }, []);
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0883
+=======
+    const checkMemory = () => {
+      if ('memory' in performance) {
+        const memory = (performance as any).memory;
+        const memoryUsage = {
+          used: memory.usedJSHeapSize / 1024 / 1024, // MB
+          total: memory.totalJSHeapSize / 1024 / 1024, // MB
+          limit: memory.jsHeapSizeLimit / 1024 / 1024, // MB
+        };
+        
+        analytics.trackPerformance('memory_used', memoryUsage.used, 'MB');
+        analytics.trackPerformance('memory_total', memoryUsage.total, 'MB');
+        
+        if (memoryUsage.used / memoryUsage.limit > 0.8) {
+          analytics.track('high_memory_usage', 'performance', 'warning', undefined, memoryUsage.used);
+        }
+      }
+    };
+
+    const interval = setInterval(checkMemory, 5000);
+    checkMemory(); // Check immediately
+
+    return () => clearInterval(interval);
+  }, []);
+};
+
+/**
+ * Hook for monitoring Web Vitals
+ */
+export const useWebVitals = () => {
+  useEffect(() => {
+    const trackWebVitals = () => {
+      // Track FCP (First Contentful Paint)
+      const fcpObserver = new PerformanceObserver((list) => {
+        list.getEntries().forEach((entry) => {
+          if (entry.name === 'first-contentful-paint') {
+            analytics.trackPerformance('fcp', entry.startTime);
+          }
+        });
+      });
+      fcpObserver.observe({ entryTypes: ['paint'] });
+
+      // Track LCP (Largest Contentful Paint)
+      const lcpObserver = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        const lastEntry = entries[entries.length - 1];
+        if (lastEntry) {
+          analytics.trackPerformance('lcp', lastEntry.startTime);
+        }
+      });
+      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+
+      return () => {
+        fcpObserver.disconnect();
+        lcpObserver.disconnect();
+      };
+    };
+
+    return trackWebVitals();
+  }, []);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7834
 };

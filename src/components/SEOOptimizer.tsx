@@ -1,9 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { type ReactNode } from 'react';
 =======
 import React from 'react';
 import type { ReactNode } from 'react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-02dd
+=======
+import React, { type ReactNode } from 'react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7834
 import { Helmet } from 'react-helmet-async';
 
 interface SEOOptimizerProps {

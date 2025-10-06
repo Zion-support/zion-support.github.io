@@ -23,10 +23,25 @@ const HomePage = lazy(() => import('./page'));
 const App: React.FC = () => {
   useEffect(() => {
     // Initialize global error handling
+<<<<<<< HEAD
     if (process.env.NODE_ENV === 'development') {
       console.log('App initialized');
       console.log('Performance monitoring initialized');
       console.log('🚀 Zion Tech Group App initialized with comprehensive monitoring');
+=======
+    console.log('App initialized');
+    
+    // Initialize performance monitoring
+    performanceOptimizer.lazyLoadImages();
+    
+    // Initialize Web Vitals monitoring
+    if (typeof window !== 'undefined' && 'performance' in window) {
+      performanceOptimizer.preloadCriticalResources();
+      const metrics = performanceOptimizer.measurePageLoad();
+      if (metrics) {
+        performanceOptimizer.reportWebVitals(metrics);
+      }
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7834
     }
   }, []);
 

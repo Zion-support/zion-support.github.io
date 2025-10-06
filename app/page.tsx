@@ -1,5 +1,9 @@
 import { Suspense, lazy } from 'react';
 import Link from 'next/link';
+<<<<<<< HEAD
+=======
+import { Helmet } from 'react-helmet-async';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7834
 
 // Lazy load heavy components
 const UnifiedContentPromotion = lazy(
@@ -53,6 +57,7 @@ export default function HomePage() {
 
   return (
     <>
+<<<<<<< HEAD
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
@@ -63,6 +68,22 @@ export default function HomePage() {
       <section className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center">
         <div className="container mx-auto px-4">
 =======
+=======
+      <Helmet>
+        <title>Zion Tech Group - Advanced AI and IT Solutions</title>
+        <meta name="description" content="Leading provider of advanced AI and IT solutions. We deliver cutting-edge technology services to transform your business." />
+        <meta name="keywords" content="AI solutions, IT services, software development, digital transformation, artificial intelligence" />
+        <meta property="og:title" content="Zion Tech Group - Advanced AI and IT Solutions" />
+        <meta property="og:description" content="Leading provider of advanced AI and IT solutions. We deliver cutting-edge technology services to transform your business." />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Zion Tech Group - Advanced AI and IT Solutions" />
+        <meta name="twitter:description" content="Leading provider of advanced AI and IT solutions. We deliver cutting-edge technology services to transform your business." />
+        <script type="application/ld+json">
+          {JSON.stringify(structuredData)}
+        </script>
+      </Helmet>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7834
       <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
         <main id="main-content" className="container mx-auto px-4 py-12">
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0883
@@ -87,12 +108,16 @@ export default function HomePage() {
 =======
                 href='/services'
                 className='border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white font-bold py-4 px-8 rounded-lg text-lg transition-colors duration-300'
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0883
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7834
               >
                 View Services
               </Link>
             </div>
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
         </div>
       </section>
@@ -134,6 +159,16 @@ export default function HomePage() {
           <Suspense fallback={<LoadingFallback height='h-32' />}>
             <UnifiedContentPromotion />
           </Suspense>
+=======
+        </main>
+        
+        {/* Main Content */}
+        <main className='container mx-auto px-4 py-16'>
+          {/* Unified Content Promotion */}
+          <Suspense fallback={<LoadingFallback height='h-32' />}>
+            <UnifiedContentPromotion />
+          </Suspense>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7834
           
           {/* Interactive AI ROI Calculator */}
           <section className='my-16'>
@@ -176,7 +211,10 @@ export default function HomePage() {
           </section>
         </main>
       </div>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0883
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7834
     </>
   );
 }

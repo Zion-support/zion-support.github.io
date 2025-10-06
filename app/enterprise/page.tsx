@@ -40,6 +40,7 @@ export default function EnterprisePage() {
               uptime with enterprise-grade security and compliance.
             </p>
 <<<<<<< HEAD
+<<<<<<< HEAD
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
 =======
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
@@ -51,10 +52,18 @@ export default function EnterprisePage() {
 <<<<<<< HEAD
                 Get Enterprise Demo
 =======
+=======
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+              <Link
+                href="/contact"
+                className="group flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl"
+              >
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7834
                 <span>Schedule Enterprise Demo</span>
                 <span className="group-hover:translate-x-1 transition-transform">
                   →
                 </span>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0883
               </Link>
               <Link
@@ -64,11 +73,21 @@ export default function EnterprisePage() {
 <<<<<<< HEAD
                 View Solutions
 =======
+=======
+              </Link>
+              <Link
+                href="#solutions"
+                className="group flex items-center gap-3 bg-white/10 hover:bg-white/20 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 border border-white/30"
+              >
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7834
                 <span>View Solutions</span>
                 <span className="group-hover:translate-x-1 transition-transform">
                   ↓
                 </span>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0883
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7834
               </Link>
             </div>
           </div>
@@ -86,6 +105,7 @@ export default function EnterprisePage() {
               Comprehensive AI solutions designed for enterprise-scale operations
             </p>
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -137,6 +157,8 @@ export default function EnterprisePage() {
               </ul>
             </div>
 =======
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7834
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
@@ -176,22 +198,22 @@ export default function EnterprisePage() {
                 title: 'Predictive Analytics',
                 description:
                   'Advanced ML models with 99.7% accuracy for business forecasting.',
+                features: ['99.7% Accuracy', 'Real-time Predictions', 'Auto-scaling'],
                 icon: '🔮',
-                metrics: ['99.7% Accuracy', 'Real-time Predictions', 'Auto-scaling'],
               },
               {
                 title: 'Process Automation',
                 description:
                   'End-to-end automation reducing manual work by 90% and errors by 99%.',
+                features: ['90% Work Reduction', '99% Error Reduction', '24/7 Operations'],
                 icon: '⚡',
-                metrics: ['90% Work Reduction', '99% Error Reduction', '24/7 Operations'],
               },
               {
                 title: 'Cloud Migration',
                 description:
                   'Seamless cloud transformation with zero downtime and 50% cost savings.',
+                features: ['Zero Downtime', '50% Cost Savings', 'Auto-scaling'],
                 icon: '☁️',
-                metrics: ['Zero Downtime', '50% Cost Savings', 'Auto-scaling'],
               },
             ].map((solution, index) => (
               <div
@@ -203,6 +225,7 @@ export default function EnterprisePage() {
                   {solution.title}
                 </h3>
                 <p className="text-gray-300 mb-6">{solution.description}</p>
+<<<<<<< HEAD
                 {solution.features && (
                   <ul className="space-y-2">
                     {solution.features.map((feature, idx) => (
@@ -226,6 +249,73 @@ export default function EnterprisePage() {
                     ))}
                   </div>
                 )}
+=======
+                <ul className="space-y-2">
+                  {solution.features.map((feature, idx) => (
+                    <li
+                      key={idx}
+                      className="flex items-center gap-2 text-gray-300"
+                    >
+                      <span className="w-2 h-2 bg-cyan-400 rounded-full"></span>
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Results Section */}
+      <section className="py-24">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Proven Results
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our enterprise solutions have delivered measurable results across
+              Fortune 500 companies worldwide.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              {
+                title: 'Autonomous Operations',
+                description: 'Self-healing infrastructure achieving 99.99% uptime and 95% cost reduction.',
+                icon: '🤖',
+                metrics: ['99.99% Uptime', '95% Cost Reduction', 'Zero Touch Operations']
+              },
+              {
+                title: 'Business Intelligence',
+                description: 'AI-powered analytics delivering 30,000% ROI and unprecedented insights.',
+                icon: '📊',
+                metrics: ['30,000% ROI', '$750B+ Savings', '99.99% Accuracy']
+              },
+              {
+                title: 'Quantum Security',
+                description: 'Quantum-resistant cryptography protecting against classical and quantum attacks.',
+                icon: '🔒',
+                metrics: ['99.99% Security', '<1ms Overhead', 'Zero Breaches']
+              },
+              {
+                title: 'Process Automation',
+                description: 'End-to-end automation reducing manual work by 90% and errors by 99%.',
+                icon: '⚡',
+                metrics: ['90% Work Reduction', '99% Error Reduction', '24/7 Operations']
+              }
+            ].map((feature, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-white/40 transition-all duration-500">
+                <div className="text-4xl mb-4">{feature.icon}</div>
+                <h3 className="text-2xl font-bold text-white mb-4">{feature.title}</h3>
+                <p className="text-gray-300 mb-6">{feature.description}</p>
+                <ul className="space-y-2">
+                  {feature.metrics.map((metric, idx) => (
+                    <li key={idx} className="text-cyan-400 text-sm">✓ {metric}</li>
+                  ))}
+                </ul>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7834
               </div>
             ))}
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0883
@@ -234,6 +324,7 @@ export default function EnterprisePage() {
       </section>
 
       {/* CTA Section */}
+<<<<<<< HEAD
 <<<<<<< HEAD
       <section className="py-20">
         <div className="container mx-auto px-4 text-center">
@@ -258,6 +349,8 @@ export default function EnterprisePage() {
               >
                 Learn More About Us
 =======
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7834
       <section className="py-24">
         <div className="container mx-auto px-4">
           <div className="text-center bg-white/5 backdrop-blur-lg rounded-3xl p-12 border border-white/20">
@@ -274,7 +367,11 @@ export default function EnterprisePage() {
                 className="group flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl"
               >
                 <span className="text-xl">📞</span>
+<<<<<<< HEAD
                 <span>Call +1 302 464 0950</span>
+=======
+                <span>Call +1 (302) 464-0950</span>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7834
               </Link>
               <Link
                 href="mailto:kleber@ziontechgroup.com"
@@ -282,7 +379,10 @@ export default function EnterprisePage() {
               >
                 <span className="text-xl">📧</span>
                 <span>Get Enterprise Consultation</span>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0883
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7834
               </Link>
             </div>
           </div>

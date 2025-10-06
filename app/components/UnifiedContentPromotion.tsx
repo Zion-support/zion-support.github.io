@@ -5,6 +5,7 @@ const UnifiedContentPromotion: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <section className="py-16 bg-gradient-to-r from-blue-50 to-indigo-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
@@ -148,6 +149,20 @@ const UnifiedContentPromotion: React.FC = () => {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-02dd
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6a72
+=======
+    <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16 rounded-2xl text-center">
+      <h2 className="text-3xl font-bold mb-4">Unified Content Promotion</h2>
+      <p className="text-xl mb-8">Discover our latest content and insights</p>
+      <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <button className="bg-white text-blue-600 hover:bg-gray-100 font-bold py-3 px-6 rounded-lg transition-colors">
+          Explore Content
+        </button>
+        <button className="border-2 border-white text-white hover:bg-white hover:text-blue-600 font-bold py-3 px-6 rounded-lg transition-colors">
+          Learn More
+        </button>
+      </div>
+    </div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7834
   );
 };
 

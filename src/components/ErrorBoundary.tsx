@@ -29,6 +29,9 @@ class ErrorBoundary extends Component<Props, State> {
 
   override componentDidCatch(error: Error, errorInfo: ErrorInfo) {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7834
     console.error('ErrorBoundary caught an error:', error, errorInfo);
     
     // Call the onError callback if provided

@@ -1,8 +1,14 @@
 import React, { useState, useEffect } from 'react';
+<<<<<<< HEAD
 import { performanceOptimizer } from '../../utils/performanceOptimizer';
 import { getErrorMetrics, isErrorRateTooHigh } from '../../utils/errorHandling';
 
 <<<<<<< HEAD
+=======
+import { performanceOptimizer } from '../../src/utils/performanceOptimizer';
+import { getErrorMetrics, isErrorRateTooHigh } from '../../utils/errorHandling';
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7834
 interface PerformanceMetrics {
   loadTime: number;
   renderTime: number;
@@ -10,8 +16,11 @@ interface PerformanceMetrics {
   fps: number;
 }
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0883
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7834
 interface DashboardData {
   performance: {
     averageRenderTime: number;
@@ -26,6 +35,7 @@ interface DashboardData {
   isHealthy: boolean;
   timestamp: Date;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 }
 
@@ -35,13 +45,18 @@ interface PerformanceMetrics {
   memoryUsage: number;
   fps: number;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0883
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7834
 }
 
 const PerformanceDashboard: React.FC = (): JSX.Element | null => {
   const [data, setData] = useState<DashboardData | null>(null);
   const [isVisible, setIsVisible] = useState(false);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7834
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     loadTime: 0,
     renderTime: 0,
@@ -49,7 +64,10 @@ const PerformanceDashboard: React.FC = (): JSX.Element | null => {
     fps: 0,
   });
   const [autoRefresh, setAutoRefresh] = useState(true);
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0883
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7834
 
   useEffect(() => {
     const updateData = () => {
@@ -92,6 +110,7 @@ const PerformanceDashboard: React.FC = (): JSX.Element | null => {
         isHealthy,
         timestamp: new Date(),
       });
+<<<<<<< HEAD
       
       try {
         const metrics = performanceOptimizer.getMetrics ? performanceOptimizer.getMetrics('default') : {};
@@ -132,10 +151,34 @@ const PerformanceDashboard: React.FC = (): JSX.Element | null => {
       }
     };
 
+=======
+    };
+
+    const updateMetrics = () => {
+      const loadTime = performance.now();
+      const perf = window.performance;
+      const memory = (
+        perf as Performance & { memory?: { usedJSHeapSize: number } }
+      ).memory;
+      const memoryUsage = memory ? memory.usedJSHeapSize / 1024 / 1024 : 0;
+      setMetrics(prev => ({
+        ...prev,
+        loadTime,
+        memoryUsage,
+        renderTime: performance.now(),
+      }));
+    };
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7834
     // Update metrics on load
     updateMetrics();
+    updateData();
+    
     if (autoRefresh) {
-      const interval = setInterval(updateData, 5000);
+      const interval = setInterval(() => {
+        updateData();
+        updateMetrics();
+      }, 5000);
       return () => clearInterval(interval);
     }
     return undefined;
@@ -147,7 +190,11 @@ const PerformanceDashboard: React.FC = (): JSX.Element | null => {
       errors: data?.errors,
       timestamp: new Date().toISOString(),
     };
+<<<<<<< HEAD
     console.log('Exporting data:', exportData);
+=======
+    console.log('Performance data:', exportData);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7834
   };
 
   // Only show in development
@@ -155,6 +202,13 @@ const PerformanceDashboard: React.FC = (): JSX.Element | null => {
     return null;
   }
 
+<<<<<<< HEAD
+=======
+  if (!data) {
+    return null;
+  }
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7834
   return (
     <div className='fixed bottom-4 right-4 z-50'>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0883
@@ -273,6 +327,7 @@ const PerformanceDashboard: React.FC = (): JSX.Element | null => {
               <span className='font-mono'>{metrics.renderTime.toFixed(2)}ms</span>
             </div>
           </div>
+<<<<<<< HEAD
           {/* Error Metrics */}
           {data && (
             <>
@@ -339,6 +394,72 @@ const PerformanceDashboard: React.FC = (): JSX.Element | null => {
         </div>
       )}
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0883
+=======
+          
+          {/* Error Metrics */}
+          <div className='mt-4'>
+            <h4 className='text-sm font-medium text-gray-900 mb-2'>Errors</h4>
+            <div className='grid grid-cols-2 gap-2 text-xs'>
+              <div className='bg-gray-50 p-2 rounded'>
+                <div className='text-gray-600'>Total</div>
+                <div className='font-semibold'>{data.errors.totalErrors}</div>
+              </div>
+              <div className='bg-gray-50 p-2 rounded'>
+                <div className='text-gray-600'>Rate/min</div>
+                <div className='font-semibold'>
+                  {data.errors.errorRate.toFixed(2)}
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          {/* Recommendations */}
+          {data.performance.slowComponents > 0 && (
+            <div className='mt-4'>
+              <h4 className='text-sm font-medium text-gray-900 mb-2'>
+                Recommendations
+              </h4>
+              <div className='space-y-1'>
+                {data.performance.slowComponents > 0 && (
+                  <div className='text-xs text-gray-600 bg-yellow-50 p-2 rounded'>
+                    {data.performance.slowComponents} slow components detected.
+                    Consider optimizing render performance.
+                  </div>
+                )}
+                {data.performance.averageRenderTime > 16 && (
+                  <div className='text-xs text-gray-600 bg-yellow-50 p-2 rounded'>
+                    Average render time is{' '}
+                    {data.performance.averageRenderTime.toFixed(1)}ms. Consider
+                    code splitting or memoization.
+                  </div>
+                )}
+              </div>
+            </div>
+          )}
+          
+          {/* Actions */}
+          <div className='flex space-x-2 pt-2 border-t border-gray-200 mt-4'>
+            <button
+              onClick={exportData}
+              className='flex-1 bg-blue-600 hover:bg-blue-700 text-white text-xs py-2 px-3 rounded transition-colors'
+            >
+              Export Data
+            </button>
+            <button
+              onClick={() => {
+                setData(null);
+              }}
+              className='flex-1 bg-gray-600 hover:bg-gray-700 text-white text-xs py-2 px-3 rounded transition-colors'
+            >
+              Clear Data
+            </button>
+          </div>
+          <div className='text-xs text-gray-400 text-center mt-2'>
+            Last updated: {data.timestamp.toLocaleTimeString()}
+          </div>
+        </div>
+      )}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7834
     </div>
   );
 };
