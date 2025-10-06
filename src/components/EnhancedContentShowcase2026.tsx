@@ -1,7 +1,7 @@
-import, Reac, t, {useState} fr, o, m 'react';
-impo, r, t {Link} from 'react -router -dom';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
-interfaceContentItem { 
+interface ContentItem {
   id: string;
   title: string;
   description: string;
@@ -10,56 +10,108 @@ interfaceContentItem {
   publishDate: string;
   category: string;
   featured?: boolean;
-  href: string;
-  metrics?: {
-    label: string;
-    value: string;
-   }[];
-      { label: 'CostOptimization'value: '7, 0%' }{ label: 'Automatio, n', value: '95%' }{ label: 'Accuracy', value: '99%' }],
-  },
+}
 
-  constgetCategoryColor = (category: string) => {
-    switch(category) {
-      case 'Cloud, Operation, s':
-        return 'bg-cyan -100text -cyan -800'; case 'FinTech':
-        return 'bg-emerald -100text -emerald -800';
-      case 'Retail':
-        return 'bg-orange -100text -orange -800';
-      case 'Sustainability':
-        return 'bg-green -100text -green -800';
-      case 'Architecture':
-        return 'bg-indigo -100text -indigo -800';
-      case 'FinOps':
-        return 'bg-violet -100text -violet -800';
-      default: return 'bg-gray-100text -gr, ay-800';
+const EnhancedContentShowcase2026: React.FC = () => {
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+
+  const contentItems: ContentItem[] = [
+    {
+      id: '1',
+      title: 'AI-Powered Business Transformation',
+      description: 'Discover how AI is revolutionizing business operations and driving unprecedented growth.',
+      type: 'case-study',
+      readTime: '15 min',
+      publishDate: '2026-01-15',
+      category: 'AI',
+      featured: true
+    },
+    {
+      id: '2',
+      title: 'Cloud Migration Best Practices',
+      description: 'A comprehensive guide to successful cloud migration strategies.',
+      type: 'guide',
+      readTime: '20 min',
+      publishDate: '2026-01-10',
+      category: 'Cloud'
+    },
+    {
+      id: '3',
+      title: 'Digital Transformation Success Stories',
+      description: 'Real-world examples of successful digital transformation initiatives.',
+      type: 'blog',
+      readTime: '10 min',
+      publishDate: '2026-01-05',
+      category: 'Digital'
     }
-        <divclassName = 'flexflex -colmd: flex-rowgap -4mb -8justify -betweenitems -center'>
-          <divclassName='flexflex -wrapgap-2'>
-            { categories.map(category = > (
-              <button, key={ cate, g, o, r, y  }, onCli, ck={  () = > setSelectedCategory(category)  } classNa, me={ `px-4py -2rounded -lgtext -smfont -semiboldtransition -colo, r, s ${
-                  selectedCategory === category
-                     ? 'bg-blue -600text -white'
-                    : 'bg-whitetext -gray -700hover: bg-gray-100borderborder-gray-200'
-                 }`}
+  ];
 
-          <divclassName = 'flexitems-centergap-2'>
-            <spanclassName ='text -smtext -gray-600'>Sortby: </span>
-            <select, value={ so, r, t, B, y }, onChan, ge={  e = > setSortBy(e.target.va, l, u, e)  } className = 'px-3py -2borderborder -gray -200rounded -lgtext -smfocus: outline-nonefocus: ring -2focus: ring-blue-500'
-            ></sele, c, t>
-                  <divclassName ='flexitems -centergap-2mb-3' > <span, className={`px-2py -1rounded -fulltext -xsfont -semibo, l, d ${getTypeColor(item.t, ype)}`}
-                    >
-                  <h3className = 'text -lgfont -boldtext -gray -900mb -3group -hover: text-blue -600transition -colorsline-clamp-2'>
-                    {item.t, i, t, l, e}
-                <divclassName ='px-6pb-6'>
-                  <divclassName='text -blue -600font -semiboldtext -smgroup -hover: text-blue -700transition -colors'>
-                    Read{' '}
-                    { item.type = == 'case -stu, d, y'
-                      ? 'CaseStudy'
-                      : item.type === 'guide'
-                         ? 'Guide'
-                         : 'Article' }{' '}
-                    →
-          <divclassName='gridgrid -cols -2md: grid-cols -4gap-6'>
-            <divclassName='text -center'>
-              <divclassName='text -3xlfont -boldtext -blue -600mb-2'>50+</d, i, v>
-              <divclassName='text -gray -600'>AI, Article, s</d, i, v>
+  const categories = ['all', 'AI', 'Cloud', 'Digital'];
+  const filteredContent = selectedCategory === 'all' 
+    ? contentItems 
+    : contentItems.filter(item => item.category === selectedCategory);
+
+  return (
+    <div className="max-w-7xl mx-auto px-4 py-8">
+      <div className="text-center mb-8">
+        <h2 className="text-3xl font-bold mb-4">2026 Content Showcase</h2>
+        <p className="text-gray-600 mb-6">Explore our latest insights and solutions</p>
+        
+        <div className="flex justify-center space-x-4 mb-8">
+          {categories.map(category => (
+            <button
+              key={category}
+              onClick={() => setSelectedCategory(category)}
+              className={`px-4 py-2 rounded-lg transition-colors ${
+                selectedCategory === category
+                  ? 'bg-blue-600 text-white'
+                  : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+              }`}
+            >
+              {category === 'all' ? 'All' : category}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {filteredContent.map(item => (
+          <div
+            key={item.id}
+            className={`bg-white rounded-lg shadow-md overflow-hidden ${
+              item.featured ? 'ring-2 ring-blue-500' : ''
+            }`}
+          >
+            <div className="p-6">
+              <div className="flex items-center justify-between mb-2">
+                <span className="text-sm text-gray-500">{item.category}</span>
+                {item.featured && (
+                  <span className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">
+                    Featured
+                  </span>
+                )}
+              </div>
+              
+              <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
+              <p className="text-gray-600 mb-4">{item.description}</p>
+              
+              <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
+                <span>{item.readTime} read</span>
+                <span>{item.publishDate}</span>
+              </div>
+              
+              <Link
+                to={`/content/${item.id}`}
+                className="inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition-colors"
+              >
+                Read More
+              </Link>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default EnhancedContentShowcase2026;

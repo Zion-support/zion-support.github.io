@@ -1,138 +1,147 @@
-import, Reac, t, { useSta, t, e, useEffe, c, t } fr, o, m "react";
-impo, r, t {
-} from "framer -motion";
-interface, BannerDat, a {
-id: string;
-title: string;
-subtitle?: stri, n, g;
-description: string;
-ctaText: string;
-ctaLink: string;
-imageUrl?: stri, n, g;
-category: string;
-priority: number;
-isAct, i, v
-  e: boolean;
-startDate?: stri, n, g;
-endDate?: stri, n, g;
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+
+interface BannerData {
+  id: string;
+  title: string;
+  subtitle?: string;
+  description: string;
+  ctaText: string;
+  ctaLink: string;
+  imageUrl?: string;
+  category: string;
+  priority: number;
+  isActive: boolean;
+  startDate?: string;
+  endDate?: string;
 }
-interface, BannerManagerProp, s {
-banners: BannerData[];
-rotationInterval?: numb, e, r;
-maxVisibleBanners?: numb, e, r;
+
+interface BannerManagerProps {
+  banners: BannerData[];
+  rotationInterval?: number;
+  maxVisibleBanners?: number;
 }
-interface, Banne, r {
-id: string;
-title: string;
-description: string;
-t, y, p
-  e: 'info' | 'success' | 'warning' | 'promotion';
-ctaText?: stri, n, g;
-ctaLink?: stri, n, g;
-icon?: stri, n, g;
+
+interface Banner {
+  id: string;
+  title: string;
+  description: string;
+  type: 'info' | 'success' | 'warning' | 'promotion';
+  ctaText?: string;
+  ctaLink?: string;
+  icon?: string;
 }
-constBannerManager: React.FC = () => {
-  con, s, t [currentBannerInd, e, x, setCurrentBannerInd, e, x] = useState(0);
-  con, s, t [isVisib, l, e, setIsVisib, l, e] = useState(true);
-  constbanners: Banner[] = [
+
+const BannerManager: React.FC = () => {
+  const [currentBannerIndex, setCurrentBannerIndex] = useState(0);
+  const [isVisible, setIsVisible] = useState(true);
+  
+  const banners: Banner[] = [
     {
-      i
-  d: 'ai-solutions'
-      title: '🚀 RevolutionaryAISolutions'
-      description: 'Transform, your, business withcutting -edge, artificial, intelligence andmachinelearning technologies.'
-      type: 'promotion'
-      ctaText: 'LearnMore'
-      ctaLink: '/services'
+      id: 'ai-solutions',
+      title: '🚀 Revolutionary AI Solutions',
+      description: 'Transform your business with cutting-edge artificial intelligence and machine learning technologies.',
+      type: 'promotion',
+      ctaText: 'Learn More',
+      ctaLink: '/services',
       icon: '🤖'
-    }
+    },
     {
-      id: 'clou, d-migration'
-      title: '☁️ CloudMigrationServices'
-      description: 'Seamlesslymigrateto the, cloud, with ourexpertguidance andprovenmethodologies.'
-      type: 'info'
-      ctaText: 'GetStarted'
-      ctaLink: '/contact'
+      id: 'cloud-migration',
+      title: '☁️ Cloud Migration Services',
+      description: 'Seamlessly migrate to the cloud with our expert guidance and proven methodologies.',
+      type: 'info',
+      ctaText: 'Get Started',
+      ctaLink: '/contact',
       icon: '☁️'
-    }
+    },
     {
-      id: 'digita, l-transformation'
-      title: '🚀 DigitalTransformation'
-      description: 'Accelerateyourdigital journeywithour comprehensivetransformationstrategies.'
-      type: 'success'
-      ctaText: 'ExploreSolutions'
-      ctaLink: '/services'
-      ic, on: '🚀'
+      id: 'digital-transformation',
+      title: '🚀 Digital Transformation',
+      description: 'Accelerate your digital journey with our comprehensive transformation strategies.',
+      type: 'success',
+      ctaText: 'Explore Solutions',
+      ctaLink: '/services',
+      icon: '🚀'
     }
   ];
+
   useEffect(() => {
-    const, interval = setInterval(() => {
-      setCurrentBannerIndex((pr, e, v) => (prev + 1) % banners.leng, t, h);
-    }, 80, 0, 0); // Change, banner, every 8, second, s
-  return () => clearInterval(interv, a, l);
-  }, [banners.leng, th]);
-  constgetBannerStyles = (type: Banner['type']) => {
-switch(type) {
-case 'promoti, o, n':
-return 'bg-gradient -to-rfrom -blue -500to -purple -600text -white';
-case 'success':
-return 'bg-gradient -to-rfrom -green -500to -blue -600text -white';
-case 'warning':
-return 'bg-gradient -to-rfrom -yellow -500to -orange -600text -white';
-case 'info':
-default: return 'bg-gradient-to-rfrom -blue -600to -indigo -600text -white';
-}
+    const interval = setInterval(() => {
+      setCurrentBannerIndex((prev) => (prev + 1) % banners.length);
+    }, 8000); // Change banner every 8 seconds
+    
+    return () => clearInterval(interval);
+  }, [banners.length]);
+
+  const getBannerStyles = (type: Banner['type']) => {
+    switch(type) {
+      case 'promotion':
+        return 'bg-gradient-to-r from-blue-500 to-purple-600 text-white';
+      case 'success':
+        return 'bg-gradient-to-r from-green-500 to-blue-600 text-white';
+      case 'warning':
+        return 'bg-gradient-to-r from-yellow-500 to-orange-600 text-white';
+      case 'info':
+      default:
+        return 'bg-gradient-to-r from-blue-600 to-indigo-600 text-white';
+    }
   };
-  const, currentBanner = banne, r, s[currentBannerIndex];
+
+  const currentBanner = banners[currentBannerIndex];
+
+  if (!isVisible || !currentBanner) return null;
+
   return (
-    <divclassName = "relativeoverflow -hidden">
-      <AnimatePresencemode="wait">
-        <motion.d, i, v
-  k, ey={currentBanner.id}
-          initi, al={{ opacity: 0y: -50 }}
-          animate={{ opacity: 1y: 0 }}
-          ex, it={{ opacity: 0y: 50 }}
+    <div className="relative overflow-hidden">
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={currentBanner.id}
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: 50 }}
           transition={{ duration: 0.5 }}
-          classNa, me={`${getBannerStyles(currentBanner.ty, pe)} py-4px-6`}`
+          className={`${getBannerStyles(currentBanner.type)} py-4 px-6`}
         >
-          <divclassName="containermx -autoflexitems -centerjustify -between">
-            <div, className="flexitems-centerspace-x-4">
-              <div, className="text-2xl">{currentBanner.ic, o, n}</d, i, v>
+          <div className="container mx-auto flex items-center justify-between">
+            <div className="flex items-center space-x-4">
+              <div className="text-2xl">{currentBanner.icon}</div>
               <div>
-                <h3, className="text -lgfont-bold">{currentBanner.tit, l, e}</h3>
-                <p, className="text-smopacity-90">{currentBanner.descripti, o, n}</p>
-              </d, i, v>
-            </d, i, v>
-            <div, className="flexitems-centerspace-x-4">
-              {
-currentBanner.ctaText && (
-<button, className="bg-whitebg -opacity -20hover: bg-opacity-30px -4py -2rounded -lgtransition -allduration-200">
-{currentBanner.ctaTe, x, t;
-}
-                </butt, o, n>
+                <h3 className="text-lg font-bold">{currentBanner.title}</h3>
+                <p className="text-sm opacity-90">{currentBanner.description}</p>
+              </div>
+            </div>
+            <div className="flex items-center space-x-4">
+              {currentBanner.ctaText && (
+                <button className="bg-white bg-opacity-20 hover:bg-opacity-30 px-4 py-2 rounded-lg transition-all duration-200">
+                  {currentBanner.ctaText}
+                </button>
               )}
-              <butt, o, n
-  onClick = {() => setIsVisible(fal, s, e)}
-                className ="text -whitehover: text-gray -200transition-colors"
+              <button
+                onClick={() => setIsVisible(false)}
+                className="text-white hover:text-gray-200 transition-colors"
               >
                 ✕
-              </butt, o, n>
-            </d, i, v>
-          </d, i, v>
-        </motion.d, i, v>
-      </AnimatePresen, c, e>
-      {/* BannerIndicators */}
-      <div, className="absolutebottom -2left -1/2transform -translate-x-1/2flexspace-x-2">
-        {banners.map((_, ind, e, x) => (
-          <butt, o, n
-  k, ey={index}
-            onCli, ck={() => setCurrentBannerIndex(ind, ex)}
-            className={`w-2 h-2rounded -fulltransition -colo, r, s ${`
-              index === currentBannerIndex ? 'bg-white' : 'bg-whitebg-opacity-50'
-            }`}`
-           />
+              </button>
+            </div>
+          </div>
+        </motion.div>
+      </AnimatePresence>
+      
+      {/* Banner Indicators */}
+      <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 flex space-x-2">
+        {banners.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setCurrentBannerIndex(index)}
+            className={`w-2 h-2 rounded-full transition-colors ${
+              index === currentBannerIndex ? 'bg-white' : 'bg-white bg-opacity-50'
+            }`}
+          />
         ))}
-      </d, i, v>
-    </d, i, v>
+      </div>
+    </div>
   );
 };
+
 export default BannerManager;
