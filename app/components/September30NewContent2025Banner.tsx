@@ -51,47 +51,125 @@ const September30NewContent2025Banner: React.FC = () => {
   ];
 
   return (
+    <section className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
+      {/* Animated Background Effects */}
+      <div className="absolute inset-0">
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute top-3/4 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute bottom-1/4 left-1/2 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+      </div>
 
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
+        <div className="text-center mb-16">
+          <div className="flex items-center justify-center gap-2 mb-4">
+            <span className="text-2xl">🚀</span>
+            <span className="text-cyan-400 font-bold text-xl">
+              BREAKING: 4 REVOLUTIONARY ARTICLES JUST PUBLISHED!
+            </span>
+            <span className="text-2xl">⚡</span>
+          </div>
+
+          <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-6">
+            September 30, 2025 — Cutting-Edge AI Insights
+          </h2>
+          
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Customer Experience • Autonomous Operations • GenAI Architecture • Multimodal AI — The future of enterprise AI starts here
+          </p>
+        </div>
+
+        {/* Featured Articles Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+          {newArticles.map((article, index) => (
+            <Link key={article.id} href={`/blog/${article.slug}`} className="group">
+              <div className="relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-500 hover:scale-105 h-full">
+                {/* Card glow effect */}
+                <div className={`absolute inset-0 bg-gradient-to-br ${article.gradient} opacity-0 group-hover:opacity-10 transition-all duration-500 rounded-2xl`}></div>
+                
+                <div className="relative z-10">
+                  {/* Icon & Badges */}
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="text-4xl">{article.icon}</div>
+                    <div className="flex gap-2">
+                      <span className="px-3 py-1 bg-gradient-to-r from-red-500 to-orange-500 text-white text-xs font-bold rounded-full">🔥 HOT</span>
+                      <span className="px-3 py-1 bg-gradient-to-r from-green-500 to-emerald-500 text-white text-xs font-bold rounded-full">NEW TODAY</span>
+                    </div>
+                  </div>
+
+                  {/* Category Tag */}
+                  <div className="mb-4">
+                    <span className={`inline-block px-4 py-2 bg-gradient-to-r ${article.gradient} bg-opacity-20 text-white text-sm font-semibold rounded-full border border-white/20`}>
+                      {article.category}
+                    </span>
+                  </div>
+
+                  {/* Title */}
+                  <h3 className={`text-xl font-bold text-white mb-4 group-hover:bg-gradient-to-r group-hover:${article.gradient} group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300 leading-tight`}>
+                    {article.title}
+                  </h3>
+
+                  {/* Excerpt */}
+                  <p className="text-gray-300 mb-6 leading-relaxed text-sm">
+                    {article.excerpt}
+                  </p>
+
+                  {/* Meta Info */}
+                  <div className="flex items-center justify-between text-sm text-gray-400 mb-6">
+                    <span>⏱️ {article.readTime}</span>
+                    <span>📅 {article.date}</span>
+                  </div>
+
+                  {/* CTA Button */}
+                  <div className="flex items-center justify-center gap-2 text-cyan-400 font-semibold group-hover:text-cyan-300 transition-colors">
+                    <span>Read Full Article</span>
+                    <span className="group-hover:translate-x-1 transition-transform">→</span>
+                  </div>
+                </div>
+
+                {/* Corner accent */}
+                <div className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${article.gradient} opacity-10 rounded-bl-full`}></div>
+              </div>
+            </Link>
           ))}
         </div>
 
         {/* Call-to-Action Section */}
         <div className="text-center bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-12 mb-16">
           <h3 className="text-3xl font-bold text-white mb-6">
-            Transform Your Enterprise with AI
+            Transform Your Enterprise with Cutting-Edge AI
           </h3>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Join 500+ Fortune 500 enterprises achieving breakthrough results with AI-powered operations, 
-            quantum computing, and autonomous systems. Get expert guidance from our team.
+            Join 50,000+ AI leaders implementing these breakthrough technologies. Get expert guidance 
+            from Zion Tech Group's AI transformation specialists.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link
-              href="/blog"
-              className="group flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl"
+            <a
+              href="tel:+13024640950"
+              className="flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl"
             >
-              <Sparkles className="w-5 h-5" />
-              <span>Explore All Articles</span>
-            </Link>
-            <Link
-              href="/contact"
-              className="group flex items-center gap-3 border-2 border-white/20 hover:border-white/40 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1"
+              <span className="text-xl">📞</span>
+              <span>Call +1 302 464 0950</span>
+            </a>
+            <a
+              href="mailto:kleber@ziontechgroup.com"
+              className="flex items-center gap-3 border-2 border-white/20 hover:border-white/40 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1"
             >
-              <span>Schedule Expert Consultation</span>
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </Link>
+              <span className="text-xl">📧</span>
+              <span>Get Expert Consultation</span>
+            </a>
           </div>
         </div>
 
         {/* Stats Section */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {[
-            { value: '500+', label: 'Enterprise Clients', icon: '🏢' },
-            { value: '$2.5B+', label: 'Value Delivered', icon: '💎' },
-            { value: '99.99%', label: 'System Reliability', icon: '⚡' },
-            { value: '1000x', label: 'Performance Gains', icon: '🚀' }
+            { value: '500+', label: 'Enterprise Clients' },
+            { value: '10B+', label: 'Data Points Processed Daily' },
+            { value: '99.9%', label: 'System Uptime' },
+            { value: '5M+', label: 'Autonomous Operations Hours' }
           ].map((stat, index) => (
             <div key={index} className="text-center">
-              <div className="text-4xl mb-2">{stat.icon}</div>
               <div className="text-3xl font-bold text-cyan-400 mb-2">{stat.value}</div>
               <div className="text-gray-300">{stat.label}</div>
             </div>

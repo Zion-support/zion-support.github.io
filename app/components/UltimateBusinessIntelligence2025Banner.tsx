@@ -48,38 +48,158 @@ const UltimateBusinessIntelligence2025Banner = () => {
         roi: '30,000%',
         success: '99.8%',
         timeline: '18 months',
+        adoption: '100%'
+      },
+      readingTime: '45 min read',
       featured: true
     }
   ];
 
   useEffect(() => {
+    const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % content.length);
     }, 5000);
 
     return () => clearInterval(interval);
   }, [content.length]);
 
-  if (!isVisible) return null;
-
-  const currentContent = content[currentSlide];
-
   return (
+    <div className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
+      {/* Animated Background Effects */}
+      <div className="absolute inset-0">
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute top-3/4 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute bottom-1/4 left-1/2 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+      </div>
 
-            ))}
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
+        <div className="text-center mb-16">
+          <div className="flex items-center justify-center gap-2 mb-4">
+            <span className="text-2xl">🚀</span>
+            <span className="text-cyan-400 font-bold text-xl">
+              ULTIMATE BUSINESS INTELLIGENCE REVOLUTION 2025
+            </span>
+            <span className="text-2xl">⚡</span>
           </div>
 
-        {/* Progress Indicators */}
-        <div className="flex justify-center gap-2 mt-6">
-          {content.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentSlide(index)}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                index === currentSlide ? 'bg-yellow-400' : 'bg-white/30'
-              }`}
-              aria-label={`Go to slide ${index + 1}`}
-            />
-          ))}
+          <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-6">
+            AI-Powered Business Intelligence That Delivers 30,000% ROI
+          </h2>
+          
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Transform your enterprise with next-generation AI-powered business intelligence that delivers unprecedented insights and competitive advantage.
+          </p>
+        </div>
+
+        {/* Featured Content Carousel */}
+        <div className="relative mb-16">
+          <div className="overflow-hidden rounded-2xl">
+            <div 
+              className="flex transition-transform duration-500 ease-in-out"
+              style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+            >
+              {content.map((item, index) => (
+                <div key={item.id} className="w-full flex-shrink-0">
+                  <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-12">
+                    <div className="grid md:grid-cols-2 gap-12 items-center">
+                      {/* Content */}
+                      <div>
+                        <div className="flex items-center gap-2 mb-4">
+                          <span className="px-3 py-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-sm font-bold rounded-full">
+                            {item.type}
+                          </span>
+                          <span className="px-3 py-1 bg-gradient-to-r from-green-500 to-emerald-500 text-white text-sm font-bold rounded-full">
+                            FEATURED
+                          </span>
+                        </div>
+
+                        <h3 className="text-3xl font-bold text-white mb-4">
+                          {item.title}
+                        </h3>
+
+                        <p className="text-gray-300 mb-6 text-lg leading-relaxed">
+                          {item.description}
+                        </p>
+
+                        {/* Metrics */}
+                        <div className="grid grid-cols-2 gap-4 mb-8">
+                          {Object.entries(item.metrics).map(([key, value]) => (
+                            <div key={key} className="text-center">
+                              <div className="text-2xl font-bold text-cyan-400">{value}</div>
+                              <div className="text-gray-400 text-sm capitalize">{key.replace(/([A-Z])/g, ' $1').trim()}</div>
+                            </div>
+                          ))}
+                        </div>
+
+                        <div className="flex items-center gap-4">
+                          <Link
+                            href={item.url}
+                            className="flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl"
+                          >
+                            <span>Read Full Article</span>
+                            <span>→</span>
+                          </Link>
+                          <span className="text-gray-400 text-sm">{item.readingTime}</span>
+                        </div>
+                      </div>
+
+                      {/* Visual */}
+                      <div className="relative">
+                        <div className="bg-gradient-to-br from-cyan-500/20 to-blue-600/20 rounded-2xl p-8 h-80 flex items-center justify-center">
+                          <div className="text-center">
+                            <div className="text-6xl mb-4">📊</div>
+                            <div className="text-2xl font-bold text-white mb-2">Business Intelligence</div>
+                            <div className="text-cyan-400 font-semibold">AI-Powered Analytics</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Navigation Dots */}
+          <div className="flex justify-center gap-2 mt-8">
+            {content.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentSlide(index)}
+                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                  index === currentSlide ? 'bg-cyan-400' : 'bg-gray-600'
+                }`}
+              />
+            ))}
+          </div>
+        </div>
+
+        {/* Call-to-Action Section */}
+        <div className="text-center bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-12">
+          <h3 className="text-3xl font-bold text-white mb-6">
+            Ready to Transform Your Business Intelligence?
+          </h3>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Join 500+ enterprises achieving 30,000% ROI with AI-powered business intelligence. 
+            Get expert guidance from Zion Tech Group's transformation specialists.
+          </p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a
+              href="tel:+13024640950"
+              className="flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl"
+            >
+              <span className="text-xl">📞</span>
+              <span>Call +1 302 464 0950</span>
+            </a>
+            <a
+              href="mailto:kleber@ziontechgroup.com"
+              className="flex items-center gap-3 border-2 border-white/20 hover:border-white/40 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1"
+            >
+              <span className="text-xl">📧</span>
+              <span>Get Expert Consultation</span>
+            </a>
+          </div>
         </div>
       </div>
     </div>

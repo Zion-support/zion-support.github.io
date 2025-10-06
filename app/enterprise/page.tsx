@@ -41,18 +41,12 @@ export default function EnterprisePage() {
               className="group flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl"
             >
               <span>Schedule Enterprise Demo</span>
-              <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
             </Link>
             <Link 
               href="#solutions"
-              className="group flex items-center gap-3 border-2 border-white/30 hover:border-white/60 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1"
+              className="group flex items-center gap-3 border-2 border-white/20 hover:border-white/40 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1"
             >
-              <span>View Solutions</span>
-              <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
+              <span>Explore Solutions</span>
             </Link>
           </div>
         </div>
@@ -62,40 +56,49 @@ export default function EnterprisePage() {
       <section id="solutions" className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-6">Enterprise Solutions</h2>
-            <p className="text-xl text-gray-300">Comprehensive AI solutions for enterprise needs</p>
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Enterprise AI Solutions
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Comprehensive AI solutions designed for enterprise-scale operations and Fortune 500 requirements.
+            </p>
           </div>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-500">
-              <h3 className="text-2xl font-bold text-white mb-4">AI Automation</h3>
-              <p className="text-gray-300 mb-6">Automate complex business processes with AI</p>
-              <div className="space-y-2 text-sm text-gray-400">
-                <div>• 95% Process Automation</div>
-                <div>• 400% ROI Increase</div>
-                <div>• 99.9% Accuracy</div>
+            {[
+              {
+                title: 'Autonomous Operations',
+                description: 'Self-healing infrastructure with 99.99% uptime and zero-touch management.',
+                icon: '🤖',
+                features: ['99.99% Uptime', '95% Cost Reduction', 'Zero-Touch Management']
+              },
+              {
+                title: 'Business Intelligence',
+                description: 'AI-powered analytics delivering 30,000% ROI and real-time insights.',
+                icon: '📊',
+                features: ['30,000% ROI', 'Real-time Analytics', 'Predictive Insights']
+              },
+              {
+                title: 'Quantum Security',
+                description: 'Quantum-resistant cryptography protecting against future threats.',
+                icon: '🔒',
+                features: ['99.99% Security', 'Quantum-Resistant', 'Zero Breaches']
+              }
+            ].map((solution, index) => (
+              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-500">
+                <div className="text-4xl mb-4">{solution.icon}</div>
+                <h3 className="text-2xl font-bold text-white mb-4">{solution.title}</h3>
+                <p className="text-gray-300 mb-6">{solution.description}</p>
+                <ul className="space-y-2">
+                  {solution.features.map((feature, idx) => (
+                    <li key={idx} className="flex items-center gap-2 text-cyan-400">
+                      <span>✓</span>
+                      <span>{feature}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
-            </div>
-            
-            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-500">
-              <h3 className="text-2xl font-bold text-white mb-4">Data Analytics</h3>
-              <p className="text-gray-300 mb-6">Advanced analytics and business intelligence</p>
-              <div className="space-y-2 text-sm text-gray-400">
-                <div>• Real-time Insights</div>
-                <div>• Predictive Analytics</div>
-                <div>• Custom Dashboards</div>
-              </div>
-            </div>
-            
-            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-500">
-              <h3 className="text-2xl font-bold text-white mb-4">Cloud Solutions</h3>
-              <p className="text-gray-300 mb-6">Scalable cloud infrastructure and services</p>
-              <div className="space-y-2 text-sm text-gray-400">
-                <div>• Multi-cloud Strategy</div>
-                <div>• 99.99% Uptime</div>
-                <div>• Cost Optimization</div>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
@@ -103,18 +106,28 @@ export default function EnterprisePage() {
       {/* CTA Section */}
       <section className="py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">
-            Ready to Transform Your Enterprise?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Join 500+ Fortune 500 companies achieving breakthrough results with our AI solutions.
-          </p>
-          <Link
-            href="/contact"
-            className="group inline-flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl"
-          >
-            <span>Get Started Today</span>
-          </Link>
+          <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-12">
+            <h2 className="text-3xl font-bold text-white mb-6">
+              Ready to Transform Your Enterprise?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Join 500+ Fortune 500 companies achieving unprecedented results with our AI solutions.
+            </p>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <Link
+                href="/contact"
+                className="group flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl"
+              >
+                <span>Get Started Today</span>
+              </Link>
+              <Link
+                href="tel:+13024640950"
+                className="group flex items-center gap-3 border-2 border-white/20 hover:border-white/40 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1"
+              >
+                <span>Call +1 302 464 0950</span>
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
     </div>
