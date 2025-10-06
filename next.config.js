@@ -24,7 +24,7 @@ const nextConfig = {
         new (require('@next/bundle-analyzer')({
           enabled: true,
           openAnalyzer: false,
-        }))(),
+        }))()
       );
       return config;
     },

@@ -5,8 +5,9 @@ import { visualizer } from 'rollup-plugin-visualizer';
 export default defineConfig({
   plugins: [
     react({
+      jsxImportSource: '@emotion/react',
       babel: {
-        plugins: [['@babel/plugin-proposal-decorators', { legacy: true }]],
+        plugins: ['@emotion/babel-plugin'],
       },
     }),
     visualizer({
@@ -19,41 +20,36 @@ export default defineConfig({
   build: {
     target: 'esnext',
     minify: 'terser',
-    cssMinify: true,
-    sourcemap: false,
+    sourcemap: true,
     rollupOptions: {
       output: {
         manualChunks: {
           vendor: ['react', 'react-dom'],
           router: ['react-router-dom'],
           ui: ['framer-motion', 'lucide-react'],
-          utils: ['clsx', 'tailwind-merge'],
-          charts: ['recharts'],
-          helmet: ['react-helmet-async'],
         },
-        chunkFileNames: 'assets/[name]-[hash].js',
-        entryFileNames: 'assets/[name]-[hash].js',
-        assetFileNames: 'assets/[name]-[hash].[ext]',
       },
     },
     terserOptions: {
       compress: {
         drop_console: true,
         drop_debugger: true,
-        pure_funcs: ['console.log', 'console.info'],
-        passes: 2,
-      },
-      mangle: {
-        safari10: true,
       },
     },
   },
   server: {
     port: 3000,
     host: true,
+    open: true,
   },
   preview: {
     port: 4173,
     host: true,
+  },
+  optimizeDeps: {
+    include: ['react', 'react-dom', 'react-router-dom'],
+  },
+  define: {
+    __DEV__: JSON.stringify(process.env.NODE_ENV === 'development'),
   },
 });

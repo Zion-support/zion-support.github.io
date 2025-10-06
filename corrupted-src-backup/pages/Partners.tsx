@@ -4,33 +4,33 @@ import { Helmet } from 'react-helmet-async';
 const Partners: React.FC = () => {
   const partners = [
     {
-      name: "Microsoft",
-      description: "Leading technology partner for enterprise AI solutions.",
-      logo: "Microsoft",
-      category: "Technology",
+      name: 'Microsoft',
+      description: 'Leading technology partner for enterprise AI solutions.',
+      logo: 'Microsoft',
+      category: 'Technology',
     },
     {
-      name: "Google Cloud",
-      description: "Cloud infrastructure and AI services partner.",
-      logo: "Google",
-      category: "Cloud",
+      name: 'Google Cloud',
+      description: 'Cloud infrastructure and AI services partner.',
+      logo: 'Google',
+      category: 'Cloud',
     },
     {
-      name: "Amazon Web Services",
-      description: "Scalable cloud computing and AI platform partner.",
-      logo: "AWS",
-      category: "Cloud",
+      name: 'Amazon Web Services',
+      description: 'Scalable cloud computing and AI platform partner.',
+      logo: 'AWS',
+      category: 'Cloud',
     },
     {
-      name: "IBM",
-      description: "Enterprise AI and data analytics partner.",
-      logo: "IBM",
-      category: "Enterprise",
+      name: 'IBM',
+      description: 'Enterprise AI and data analytics partner.',
+      logo: 'IBM',
+      category: 'Enterprise',
     },
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+    <div className='min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100'>
       <Helmet>
         <title>Partners - Zion Tech Group</title>
         <meta

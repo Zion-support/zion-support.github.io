@@ -7,12 +7,21 @@ export interface UltimateEnterpriseContent {
   readTime: string;
   tags: string[];
   featured: boolean;
-  content: string;
-  author: string;
-  valueProposition: string;
+  content?: string;
+  author?: string;
+  valueProposition?: string;
   highlights: string[];
   metrics: {
     [key: string]: string;
+  };
+  icon?: string;
+  gradient?: string;
+  breaking?: boolean;
+  new?: boolean;
+  cta?: {
+    text: string;
+    link: string;
+    badge?: string;
   };
 }
 
@@ -68,17 +77,10 @@ export const octoberUltimateEnterpriseContent: UltimateEnterpriseContent[] = [
     category: 'Quantum AI',
     date: '2025-10-02',
     readTime: '22 min read',
-    tags: ['Quantum AI', 'Synthesis', 'Computing', '2025'],
+    tags: ['Quantum AI', 'Synthesis', 'Computing', '2025', 'Conversational AI', 'Customer Experience', 'NLP', 'Virtual Assistants', 'Omnichannel'],
     featured: true,
     breaking: true,
     new: true,
-    tags: [
-      'Conversational AI',
-      'Customer Experience',
-      'NLP',
-      'Virtual Assistants',
-      'Omnichannel',
-    ],
     highlights: [
       '184% ROI within 14 months',
       '94% customer satisfaction (CSAT)',
@@ -105,7 +107,7 @@ export const getFeaturedUltimateContent = () => {
 
 export const getBreakingUltimateContent = () => {
   return octoberUltimateEnterpriseContent.filter(content =>
-    content.tags.includes('Breaking'),
+    content.tags.includes('Breaking')
   );
 };
 
