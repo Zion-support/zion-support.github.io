@@ -15,7 +15,7 @@ const PerformanceDashboard: React.FC = () => {
   const [autoRefresh, setAutoRefresh] = useState(true);
 
   useEffect(() => {
-    const updateData = () => {
+    const updateData = (): void => {
       const performance = performanceOptimizer.getPerformanceSummary();
       const errors = getErrorMetrics();
       const isHealthy =
@@ -35,6 +35,8 @@ const PerformanceDashboard: React.FC = () => {
       const interval = setInterval(updateData, 5000);
       return () => clearInterval(interval);
     }
+    
+    return () => {}; // Return empty cleanup function when autoRefresh is false
   }, [autoRefresh]);
 
   const exportData = () => {
