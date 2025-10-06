@@ -1,5 +1,5 @@
 import { useEffect, useCallback, useRef } from 'react';
-import { performanceOptimizer } from '../utils/performanceOptimizer';
+import performanceOptimizer from '../utils/performanceOptimizer';
 
 // Mock analytics object for tracking
 const analytics = {
@@ -53,11 +53,36 @@ export const usePageLoadPerformance = () => {
       return () => window.removeEventListener('load', trackPageLoad);
     }
   }, []);
+};
 
 /**
  * Hook for monitoring resource loading performance
  */
 export const useResourcePerformance = () => {
+  const observerRef = useRef<PerformanceObserver | null>(null);
+
+  const preloadResources = useCallback(() => {
+    if (typeof window === 'undefined') return;
+    performanceOptimizer.preloadCriticalResources();
+  }, []);
+
+  const optimizeImages = useCallback(() => {
+    if (typeof window === 'undefined') return;
+    performanceOptimizer.lazyLoadImages();
+  }, []);
+
+  const trackPerformance = useCallback(() => {
+    if (typeof window === 'undefined') return;
+    // Track performance metrics
+    console.log('Tracking performance...');
+  }, []);
+
+  const trackLongTasks = useCallback(() => {
+    if (typeof window === 'undefined') return;
+    // Track long tasks
+    console.log('Tracking long tasks...');
+  }, []);
+
   useEffect(() => {
     if (typeof window === 'undefined' || !window.PerformanceObserver) {
       return;
@@ -76,24 +101,9 @@ export const useResourcePerformance = () => {
       });
     });
 
-    if (observer) {
-      observerRef.current = observer;
-    }
-  }, []);
+    observerRef.current = observer;
+    observer.observe({ entryTypes: ['resource'] });
 
-  const preloadResources = useCallback(() => {
-    if (typeof window === 'undefined') return;
-
-    performanceOptimizer.preloadCriticalResources();
-  }, []);
-
-  const optimizeImages = useCallback(() => {
-    if (typeof window === 'undefined') return;
-
-    performanceOptimizer.lazyLoadImages();
-  }, []);
-
-  useEffect(() => {
     trackPerformance();
     trackLongTasks();
     preloadResources();
@@ -119,11 +129,19 @@ export const useResourcePerformance = () => {
  */
 export const useLongTaskMonitoring = () => {
   useEffect(() => {
-    const observer = performanceOptimizer.monitorLongTasks((entries: PerformanceEntry[]) => {
-      entries.forEach((entry: PerformanceEntry) => {
-        analytics.track('long_task', 'performance', 'detected', undefined, entry.duration);
+    if (typeof window === 'undefined' || !window.PerformanceObserver) {
+      return;
+    }
+
+    const observer = new PerformanceObserver((list) => {
+      list.getEntries().forEach((entry) => {
+        if (entry.duration > 50) {
+          analytics.track('long_task', 'performance', 'detected', undefined, entry.duration);
+        }
       });
     });
+
+    observer.observe({ entryTypes: ['longtask'] });
 
     return () => {
       if (observer && typeof observer.disconnect === 'function') {
@@ -208,4 +226,3 @@ export const useMemoryMonitoring = () => {
     return () => clearInterval(interval);
   }, []);
 };
-}
