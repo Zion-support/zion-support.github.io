@@ -26,9 +26,6 @@ export interface ProviderConnection {
   createdAt: number;
   updatedAt: number;
   expiresAt?: number;
-  status: SyncStatus;
-  lastSync?: number;
-  createdAt: number;
 }
 
 export interface SyncLogEntry {
