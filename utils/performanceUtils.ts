@@ -44,7 +44,6 @@ export const preloadCriticalResources = (): void => {
   if (typeof window === 'undefined') return;
   
   const criticalResources = [
-<<<<<<< HEAD
     '/fonts/inter.woff2',
     '/css/critical.css'
   ];
@@ -57,18 +56,6 @@ export const preloadCriticalResources = (): void => {
     if (resource.endsWith('.woff2')) {
       link.crossOrigin = 'anonymous';
     }
-=======
-    '/fonts/main.woff2',
-    '/css/critical.css'
-  ];
-  
-  criticalResources.forEach(href => {
-    const link = document.createElement('link');
-    link.rel = 'preload';
-    link.href = href;
-    link.as = href.endsWith('.css') ? 'style' : 'font';
-    link.crossOrigin = 'anonymous';
->>>>>>> cursor/fix-errors-and-merge-to-main-371d
     document.head.appendChild(link);
   });
 };
