@@ -3,6 +3,7 @@
  */
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 // Meta tags management
 export const setMetaTags = (tags: Record<string, string>): void => {
@@ -13,6 +14,11 @@ export const setMetaTags = (tags: Record<string, string>): void => {
   if (typeof document === 'undefined') return;
   
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f83
+=======
+
+// Meta tags management
+export const setMetaTags = (tags: Record<string, string>): void => {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
   Object.entries(tags).forEach(([name, content]) => {
     let meta = document.querySelector(`meta[name="${name}"]`) as HTMLMetaElement;
     if (!meta) {
@@ -32,6 +38,7 @@ export const setOpenGraphTags = (ogData: {
   url?: string;
   type?: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
   siteName?: string;
 }): void => {
   const ogTags = {
@@ -39,10 +46,16 @@ export const setOpenGraphTags = (ogData: {
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
+=======
+  siteName?: string;
+}): void => {
+  const ogTags = {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
     'og:title': ogData.title,
     'og:description': ogData.description,
     'og:image': ogData.image,
     'og:url': ogData.url,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -81,6 +94,13 @@ export const setOpenGraphTags = (ogData: {
 
   ogTags.forEach(({ property, content }) => {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f83
+=======
+    'og:type': ogData.type || 'website',
+    'og:site_name': ogData.siteName
+  };
+  
+  Object.entries(ogTags).forEach(([property, content]) => {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
     if (content) {
       let meta = document.querySelector(`meta[property="${property}"]`) as HTMLMetaElement;
       if (!meta) {
@@ -96,6 +116,7 @@ export const setOpenGraphTags = (ogData: {
 // Twitter Card tags
 export const setTwitterCardTags = (twitterData: {
   card?: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -132,11 +153,16 @@ export const setTwitterCardTags = (twitterData: {
 =======
   site?: string;
   creator?: string;
+=======
+  site?: string;
+  creator?: string;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
   title?: string;
   description?: string;
   image?: string;
 }): void => {
   const twitterTags = {
+<<<<<<< HEAD
     'twitter: card': twitterData.card || 'summary_large_image',
     'twitter: site': twitterData.site,
     'twitter: creator': twitterData.creator,
@@ -178,6 +204,17 @@ export const setTwitterCardTags = (twitterData: {
 
   twitterTags.forEach(({ name, content }) => {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f83
+=======
+    'twitter:card': twitterData.card || 'summary_large_image',
+    'twitter:site': twitterData.site,
+    'twitter:creator': twitterData.creator,
+    'twitter:title': twitterData.title,
+    'twitter:description': twitterData.description,
+    'twitter:image': twitterData.image
+  };
+  
+  Object.entries(twitterTags).forEach(([name, content]) => {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
     if (content) {
       let meta = document.querySelector(`meta[name="${name}"]`) as HTMLMetaElement;
       if (!meta) {
@@ -192,10 +229,14 @@ export const setTwitterCardTags = (twitterData: {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 // Structured data
 export const setStructuredData = (data: Record<string, unknown>): void => {
 =======
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
 // Structured data (JSON-LD)
 export const setStructuredData = (data: any): void => {
   // Remove existing structured data
@@ -205,6 +246,7 @@ export const setStructuredData = (data: any): void => {
   if (existingScript) {
     existingScript.remove();
   }
+  
   // Add new structured data
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-3b0a
 =======
@@ -229,10 +271,14 @@ export const setStructuredData = (data: any): void => {
 };
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 };
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a4f
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
 // Canonical URL
 export const setCanonicalUrl = (url: string): void => {
   let canonical = document.querySelector(
@@ -242,6 +288,7 @@ export const setCanonicalUrl = (url: string): void => {
     canonical = document.createElement('link');
     canonical.rel = 'canonical';
     document.head.appendChild(canonical);
+<<<<<<< HEAD
 =======
 
 // Canonical URL
@@ -252,10 +299,16 @@ export const setCanonicalUrl = (url: string): void => {
     link.rel = 'canonical';
     document.head.appendChild(link);
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
   }
   link.href = url;
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
 // Page title optimization
 export const setPageTitle = (title: string, siteName?: string): void => {
   const fullTitle = siteName ? `${title} | ${siteName}` : title;
@@ -271,6 +324,9 @@ export const setPageTitle = (title: string): void => {
 // Meta description
 export const setMetaDescription = (description: string): void => {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
   let meta = document.querySelector(
     'meta[name="description"]'
   ) as HTMLMetaElement;
@@ -281,15 +337,18 @@ export const setMetaDescription = (description: string): void => {
   }
   meta.content = description;
 };
+
 // Keywords meta tag
-export const setKeywords = (keywords: string[]): void => {let meta = document.querySelector('meta[name="keywords"]') as HTMLMetaElement;
+export const setKeywords = (keywords: string[]): void => {
+  let meta = document.querySelector('meta[name="keywords"]') as HTMLMetaElement;
   if (!meta) {
     meta = document.createElement('meta');
     meta.name = 'keywords';
     document.head.appendChild(meta);
   }
-  meta.content = keywords.join(') ');
+  meta.content = keywords.join(', ');
 };
+
 // Robots meta tag
 export const setRobotsMeta = (robots: {
   index?: boolean;
@@ -304,21 +363,28 @@ export const setRobotsMeta = (robots: {
   if (robots.noarchive) directives.push('noarchive');
   if (robots.nosnippet) directives.push('nosnippet');
   if (robots.noimageindex) directives.push('noimageindex');
+<<<<<<< HEAD
+=======
+  
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
   if (directives.length === 0) {
     directives.push('index', 'follow');
   }
+  
   let meta = document.querySelector('meta[name="robots"]') as HTMLMetaElement;
   if (!meta) {
     meta = document.createElement('meta');
     meta.name = 'robots';
     document.head.appendChild(meta);
   }
-  meta.content = directives.join(') ');
+  meta.content = directives.join(', ');
 };
+
 // Language and locale
 export const setLanguage = (lang: string): void => {
   document.documentElement.lang = lang;
 };
+
 // Viewport meta tag
 export const setViewport = (viewport: {
   width?: string;

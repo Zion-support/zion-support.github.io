@@ -21,6 +21,9 @@ export interface BannerPriority {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
 export class BannerPrioritizationEngine {
   private banners: Map<string, BannerMetadata> = new Map();
   private visibilityThreshold = 5; // Max banners to show above the fold
@@ -40,6 +43,7 @@ export class BannerPrioritizationEngine {
     if (!banner) return 0;
 
     const now = new Date();
+<<<<<<< HEAD
 <<<<<<< HEAD
     const daysSincePublish = (now.getTime() - banner.publishDate.getTime()) / (1000 * 60 * 60 * 24);
     
@@ -76,6 +80,17 @@ export class BannerPrioritizationEngine {
     // Value score (0-100): Higher value content scores higher
     const valueScore = Math.min(100, (banner.value / 100) * 100);
     
+=======
+    const ageInDays =
+      (now.getTime() - banner.publishDate.getTime()) / (1000 * 60 * 60 * 24);
+
+    // Recency score (0-100): Newer content scores higher
+    const recencyScore = Math.max(0, 100 - ageInDays * 2);
+
+    // Value score (0-100): Higher value content scores higher
+    const valueScore = Math.min(100, (banner.value / 100) * 100);
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
     // Weighted combination
     return recencyScore * 0.6 + valueScore * 0.3 + banner.priority * 0.1;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
@@ -91,12 +106,19 @@ export class BannerPrioritizationEngine {
         priority: this.calculatePriority(banner.id)
       }))
 <<<<<<< HEAD
+<<<<<<< HEAD
       .sort((a, b) => b.priority - a.priority);
+=======
+      .sort((a, b) => b.dynamicPriority - a.dynamicPriority);
+
+    return limit ? sortedBanners.slice(0, limit) : sortedBanners;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
   }
 
   /**
    * Get visible banners (above the fold)
    */
+<<<<<<< HEAD
 <<<<<<< HEAD
   getVisibleBanners(): BannerMetadata[] {
     return this.getPrioritizedBanners()
@@ -106,6 +128,12 @@ export class BannerPrioritizationEngine {
   getBannersByLoadStrategy(strategy: 'immediate' | 'lazy' | 'on-demand'): BannerMetadata[] {
     return Array.from(this.banners.values()).filter(banner => banner.loadStrategy === strategy && banner.isVisible);
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f83
+=======
+  getBannersByLoadStrategy(strategy: 'immediate' | 'lazy' | 'on-demand'): BannerMetadata[] {
+    return Array.from(this.banners.values()).filter(
+      banner => banner.loadStrategy === strategy && banner.isVisible
+    );
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
   }
 
   /**

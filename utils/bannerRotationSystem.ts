@@ -60,6 +60,7 @@ const getBannerImpressions = (): BannerImpression[] => {
  */
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 const storeImpressions = (impressions: BannerImpression[]): void => {
 =======
 =======
@@ -67,6 +68,13 @@ const storeImpressions = (impressions: BannerImpression[]): void => {
 export const recordBannerImpression = (impression: Omit<BannerImpression, 'timestamp' | 'sessionId'>) => {
   if (typeof window === 'undefined') return;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
+=======
+export const recordBannerImpression = (
+  impression: Omit<BannerImpression, 'timestamp' | 'sessionId'>
+) => {
+  if (typeof window === 'undefined') return;
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
   try {
 <<<<<<< HEAD
     // Limit to last 1000 impressions to prevent storage bloat

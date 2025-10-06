@@ -10,6 +10,7 @@ export const focusManagement = {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
 =======
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])',
@@ -20,6 +21,9 @@ export const focusManagement = {
 =======
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-9d58
+=======
+      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
     );
     const firstElement = focusableElements[0] as HTMLElement;
     const lastElement = focusableElements[
@@ -53,14 +57,19 @@ export const focusManagement = {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
   },
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-8344
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
   // Restore focus to previous element
   restoreFocus: (element: HTMLElement): void => {
     element.focus();
   },
+<<<<<<< HEAD
 =======
 
   // Restore focus to previous element
@@ -68,6 +77,8 @@ export const focusManagement = {
     element.focus();
   },
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-3fed
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
 
   // Skip to main content
   skipToMain: (): void => {
@@ -131,17 +142,25 @@ export const ariaUtils = {
   },
 
   // Set ARIA attributes
+<<<<<<< HEAD
   setAriaAttributes: (element: HTMLElement, attributes: Record<string, string>): void => {
 =======
   // Set ARIA attributes
   setAriaAttributes: (element: HTMLElement, attributes: Record<string, string>) => {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-9d58
+=======
+  setAriaAttributes: (
+    element: HTMLElement,
+    attributes: Record<string, string>
+  ): void => {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
     Object.entries(attributes).forEach(([key, value]) => {
       element.setAttribute(key, value);
     });
   },
 
   // Announce to screen readers
+<<<<<<< HEAD
 <<<<<<< HEAD
   announce: (message: string, priority: 'polite' | 'assertive' = 'polite'): void => {
 =======
@@ -151,15 +170,25 @@ export const ariaUtils = {
 =======
   announce: (message: string, priority: 'polite' | 'assertive' = 'polite') => {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-9d58
+=======
+  announce: (
+    message: string,
+    priority: 'polite' | 'assertive' = 'polite'
+  ): void => {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
     const announcement = document.createElement('div');
     announcement.setAttribute('aria-live', priority);
     announcement.setAttribute('aria-atomic', 'true');
     announcement.className = 'sr-only';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
     announcement.textContent = message;
     
     document.body.appendChild(announcement);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -174,6 +203,8 @@ export const ariaUtils = {
     document.body.appendChild(announcement);
     
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f83
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
     setTimeout(() => {
       document.body.removeChild(announcement);
     }, 1000);
@@ -192,6 +223,7 @@ export const ariaUtils = {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Keyboard navigation utilities
 export const keyboardNavigation = {
   // Handle arrow key navigation for lists
@@ -200,15 +232,28 @@ export const keyboardNavigation = {
 export const keyboardUtils = {
   // Handle arrow key navigation
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-3fed
+=======
+// Keyboard navigation utilities
+export const keyboardNavigation = {
+  // Handle arrow key navigation for lists
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
   handleArrowKeys: (
     event: KeyboardEvent,
     items: HTMLElement[],
     currentIndex: number,
 <<<<<<< HEAD
+<<<<<<< HEAD
     orientation: 'horizontal' | 'vertical' = 'vertical',
   ): number => {
     const isVertical = orientation === 'vertical';
     // const isHorizontal = orientation === 'horizontal';
+=======
+    orientation: 'horizontal' | 'vertical' = 'vertical'
+  ): number => {
+    const isVertical = orientation === 'vertical';
+    const isHorizontal = orientation === 'horizontal';
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
     switch (event.key) {
       case isVertical ? 'ArrowDown' : 'ArrowRight':
         event.preventDefault();
@@ -224,6 +269,7 @@ export const keyboardUtils = {
         return items.length - 1;
       default:
         return currentIndex;
+<<<<<<< HEAD
 =======
     orientation: 'horizontal' | 'vertical' = 'horizontal'
   ): number => {
@@ -250,16 +296,23 @@ export const keyboardUtils = {
       items[nextIndex]?.focus();
       return nextIndex;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-3fed
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
     }
 
     return currentIndex;
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
   // Handle Enter and Space key activation
   handleActivation: (event: KeyboardEvent, callback: () => void): void => {
     if (event.key === 'Enter' || event.key === ' ') {
       event.preventDefault();
       callback();
+<<<<<<< HEAD
 =======
 
   // Handle home/end keys
@@ -275,6 +328,8 @@ export const keyboardUtils = {
       items[0]?.focus();
       return 0;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-3fed
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
     }
 
     if (key === 'End') {
@@ -286,6 +341,7 @@ export const keyboardUtils = {
     return currentIndex;
   },
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -432,16 +488,45 @@ export const colorContrast = {
     const darkest = Math.min(lum1, lum2);
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-3fed
+=======
+
+// Color contrast utilities
+export const colorContrast = {
+  // Calculate relative luminance
+  getLuminance: (r: number, g: number, b: number): number => {
+    const [rs, gs, bs] = [r, g, b].map(c => {
+      c = c / 255;
+      return c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4);
+    });
+    return 0.2126 * rs + 0.7152 * gs + 0.0722 * bs;
+  },
+
+  // Calculate contrast ratio
+  getContrastRatio: (
+    color1: [number, number, number],
+    color2: [number, number, number]
+  ): number => {
+    const lum1 = colorContrast.getLuminance(...color1);
+    const lum2 = colorContrast.getLuminance(...color2);
+    const brightest = Math.max(lum1, lum2);
+    const darkest = Math.min(lum1, lum2);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
     return (brightest + 0.05) / (darkest + 0.05);
   },
 
   // Check if contrast meets WCAG standards
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   meetsWCAG: (contrastRatio: number, level: 'AA' | 'AAA' = 'AA'): boolean => {
     const thresholds = { AA: 4.5, AAA: 7 };
     return contrastRatio >= thresholds[level];
   },
+=======
+  meetsWCAG: (contrastRatio: number, level: 'AA' | 'AAA' = 'AA'): boolean => {
+    return level === 'AA' ? contrastRatio >= 4.5 : contrastRatio >= 7;
+  }
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
 };
 
 // Motion and animation utilities
@@ -450,11 +535,13 @@ export const motionUtils = {
   prefersReducedMotion: (): boolean => {
     return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   },
+
   // Apply reduced motion styles
   applyReducedMotion: (element: HTMLElement): void => {
     if (motionUtils.prefersReducedMotion()) {
       element.style.animation = 'none';
       element.style.transition = 'none';
+<<<<<<< HEAD
 =======
 // Color contrast utilities
 export const colorContrast = {
@@ -528,15 +615,35 @@ export const screenReaderUtils = {
 
 // Form accessibility utilities
 <<<<<<< HEAD
+=======
+    }
+  },
+
+  // Respect user's motion preferences
+  conditionalAnimation: (animation: string, fallback: string = ''): string => {
+    return motionUtils.prefersReducedMotion() ? fallback : animation;
+  }
+};
+
+// Form accessibility utilities
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
 export const formAccessibility = {
   // Associate label with input
   associateLabel: (
     input: HTMLInputElement,
+<<<<<<< HEAD
     labelText: string,
   ): HTMLLabelElement => {
     const label = document.createElement('label');
     label.textContent = labelText;
     label.setAttribute('for', input.id || `input-${Math.random().toString(36).substr(2, 9)}`);
+=======
+    labelText: string
+  ): HTMLLabelElement => {
+    const label = document.createElement('label');
+    label.textContent = labelText;
+    label.setAttribute('for', input.id || formAccessibility.generateInputId());
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
     if (!input.id) {
       input.id = label.getAttribute('for')!;
     }
@@ -552,6 +659,7 @@ export const formAccessibility = {
     return `input-${Math.random().toString(36).substr(2, 9)}`;
   },
 
+<<<<<<< HEAD
   // Check color contrast
   checkContrast: (foreground: string, background: string, level: 'AA' | 'AAA' = 'AA'): boolean => {
     const thresholds = { AA: 4.5, AAA: 7 };
@@ -582,9 +690,15 @@ export const formUtils = {
   // Add error message association
   addErrorMessage: (input: HTMLElement, errorMessage: string): void => {
     const errorId = ariaUtils.generateId('error');
+=======
+  // Add error message association
+  addErrorMessage: (input: HTMLInputElement, errorMessage: string): void => {
+    const errorId = `error-${input.id}`;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
     const errorElement = document.createElement('div');
     
     errorElement.id = errorId;
+<<<<<<< HEAD
     errorElement.textContent = errorMessage;
     errorElement.setAttribute('role', 'alert');
     errorElement.setAttribute('aria-live', 'polite');
@@ -592,23 +706,38 @@ export const formUtils = {
     input.setAttribute('aria-describedby', errorId);
     input.setAttribute('aria-invalid', 'true');
     
+=======
+    errorElement.className = 'error-message';
+    errorElement.textContent = errorMessage;
+    errorElement.setAttribute('role', 'alert');
+    input.setAttribute('aria-describedby', errorId);
+    input.setAttribute('aria-invalid', 'true');
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
     input.parentNode?.insertBefore(errorElement, input.nextSibling);
   },
 
   // Remove error message
+<<<<<<< HEAD
   removeErrorMessage: (input: HTMLElement): void => {
+=======
+  removeErrorMessage: (input: HTMLInputElement): void => {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
     const errorId = input.getAttribute('aria-describedby');
     if (errorId) {
       const errorElement = document.getElementById(errorId);
       errorElement?.remove();
       input.removeAttribute('aria-describedby');
       input.removeAttribute('aria-invalid');
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-3fed
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
     }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
   },
 };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 // Screen reader utilities
 <<<<<<< HEAD
@@ -616,6 +745,10 @@ export const screenReaderUtils = {
 =======
 export const screenReader = {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
+=======
+// Screen reader utilities
+export const screenReaderUtils = {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
   // Hide element from screen readers
   hideFromScreenReader: (element: HTMLElement): void => {
     element.setAttribute('aria-hidden', 'true');
@@ -626,13 +759,21 @@ export const screenReader = {
     element.removeAttribute('aria-hidden');
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
   // Create screen reader only text
   createScreenReaderText: (text: string): HTMLElement => {
     const element = document.createElement('span');
     element.textContent = text;
     element.className = 'sr-only';
     return element;
+<<<<<<< HEAD
   },
+=======
+  }
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
 };
 
 // Accessibility testing utilities
@@ -647,11 +788,16 @@ export const accessibilityTesting = {
     const empty = images.filter(img => img.getAttribute('alt') === '');
     return { missing, empty };
   },
+
   // Check for missing form labels
   checkFormLabels: (): HTMLInputElement[] => {
+<<<<<<< HEAD
     const inputs = Array.from(
       document.querySelectorAll('input, select, textarea'),
     );
+=======
+    const inputs = Array.from(document.querySelectorAll('input, select, textarea'));
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
     return inputs.filter(input => {
       const id = input.id;
       const label = id ? document.querySelector(`label[for="${id}"]`) : null;
@@ -660,8 +806,10 @@ export const accessibilityTesting = {
       return !label && !ariaLabel && !ariaLabelledBy;
     }) as HTMLInputElement[];
   },
+
   // Check for proper heading hierarchy
   checkHeadingHierarchy: (): { issues: string[]; structure: string[] } => {
+<<<<<<< HEAD
     const headings = Array.from(
       document.querySelectorAll('h1, h2, h3, h4, h5, h6'),
     );
@@ -671,18 +819,40 @@ export const accessibilityTesting = {
     headings.forEach((heading, index) => {
       const level = parseInt(heading.tagName[1] || '0');
       structure.push(`${heading.tagName}: ${heading.textContent?.trim() || ''}`);
+=======
+    const headings = Array.from(document.querySelectorAll('h1, h2, h3, h4, h5, h6'));
+    const issues: string[] = [];
+    const structure: string[] = [];
+    let previousLevel = 0;
+
+    headings.forEach((heading, index) => {
+      const level = parseInt(heading.tagName[1]);
+      structure.push(`${heading.tagName}: ${heading.textContent?.trim()}`);
+      
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
       if (index === 0 && level !== 1) {
         issues.push('First heading should be h1');
       }
+      
       if (level > previousLevel + 1) {
+<<<<<<< HEAD
         issues.push(
           `Heading level skipped from h${previousLevel} to h${level}`,
         );
+=======
+        issues.push(`Heading level skipped from h${previousLevel} to h${level}`);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
       }
+      
       previousLevel = level;
     });
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
     return { issues, structure };
   },
+
   // Generate accessibility report
   generateReport: (): {
     images: { missing: number; empty: number };
@@ -693,11 +863,13 @@ export const accessibilityTesting = {
     const imageCheck = accessibilityTesting.checkImageAltText();
     const formCheck = accessibilityTesting.checkFormLabels();
     const headingCheck = accessibilityTesting.checkHeadingHierarchy();
+    
     const totalIssues =
       imageCheck.missing.length +
       imageCheck.empty.length +
       formCheck.length +
       headingCheck.issues.length;
+<<<<<<< HEAD
     const score = Math.max(0, 100 - totalIssues * 10);
     return {
       images: {
@@ -707,6 +879,19 @@ export const accessibilityTesting = {
       forms: { unlabeled: formCheck.length },
       headings: headingCheck,
       score,
+=======
+    
+    const score = Math.max(0, 100 - totalIssues * 10);
+    
+    return {
+      images: {
+        missing: imageCheck.missing.length,
+        empty: imageCheck.empty.length
+      },
+      forms: { unlabeled: formCheck.length },
+      headings: headingCheck,
+      score
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
     };
 =======
 

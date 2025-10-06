@@ -10,6 +10,7 @@ const { withErrorLogging } = require('./withErrorLogging.cjs');
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 const { withErrorLogging } = require('./withErrorLogging.cjs');
 
@@ -32,6 +33,9 @@ const { withErrorLogging } = require('./withErrorLogging.cjs');
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-9d58
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
 async function handler(req, res) {
   if (req.method !== 'GET') {
     res.statusCode = 405;
@@ -43,6 +47,7 @@ async function handler(req, res) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0a8c
 =======
@@ -55,6 +60,8 @@ async function handler(req, res) {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f83
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-9d58
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
     res.end('Method Not Allowed');
     return;
   }
@@ -66,6 +73,7 @@ async function handler(req, res) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     // Wallet functionality implementation
     res.statusCode = 200;
     res.json({ message: 'Wallet endpoint' });
@@ -95,6 +103,11 @@ async function handler(req, res) {
     res.statusCode = 200;
     res.json({ message: 'Wallet endpoint' });
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-9d58
+=======
+    // Wallet functionality would go here
+    res.statusCode = 200;
+    res.json({ message: 'Wallet endpoint' });
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
   } catch (err) {
     console.error('Wallet API error:', err);
     res.statusCode = 500;
@@ -102,6 +115,7 @@ async function handler(req, res) {
   }
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -237,3 +251,6 @@ module.exports = withErrorLogging(handler);
 =======
 module.exports = withErrorLogging(handler);
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-9d58
+=======
+module.exports = withErrorLogging(handler);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051

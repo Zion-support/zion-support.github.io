@@ -3,6 +3,7 @@
  */
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 // Debounce function for performance optimization
 <<<<<<< HEAD
@@ -19,11 +20,17 @@ export const debounce = <T extends (...args: any[]) => any>(
 // Debounce function for performance optimization
 export const debounce = <T extends (...args: any[]) => any>(
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f83
+=======
+
+// Debounce function for performance optimization
+export const debounce = <T extends (...args: any[]) => any>(
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
   func: T,
   wait: number,
   immediate = false
 ): ((...args: Parameters<T>) => void) => {
   let timeout: NodeJS.Timeout | null = null;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -38,6 +45,8 @@ export const debounce = <T extends (...args: any[]) => any>(
 =======
   
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f83
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
   return function executedFunction(...args: Parameters<T>) {
     const later = () => {
       timeout = null;
@@ -52,6 +61,7 @@ export const debounce = <T extends (...args: any[]) => any>(
 };
 
 // Throttle function for performance optimization
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -72,6 +82,8 @@ export const throttle = <T extends (...args: unknown[]) => unknown>(
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f83
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
 export const throttle = <T extends (...args: any[]) => any>(
   func: T,
   limit: number
@@ -80,10 +92,14 @@ export const throttle = <T extends (...args: any[]) => any>(
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
   return function executedFunction(...args: Parameters<T>) {
     if (!inThrottle) {
       func.apply(this, args);
       inThrottle = true;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-3b0a
 =======
   return function executedFunction(this: any, ...args: Parameters<T>) {
@@ -107,10 +123,14 @@ export const throttle = <T extends (...args: any[]) => any>(
       inThrottle = true;
       setTimeout(() => (inThrottle = false), limit);
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f83
+=======
+      setTimeout(() => (inThrottle = false), limit);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
     }
     setTimeout(() => (inThrottle = false), limit);
   };
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -317,6 +337,9 @@ export const preloadCriticalResources = (): void => {
   ];
   
 =======
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
 // Lazy load images with intersection observer
 export const lazyLoadImages = (): void => {
   if ('IntersectionObserver' in window) {
@@ -340,12 +363,16 @@ export const lazyLoadImages = (): void => {
 // Preload critical resources
 export const preloadCriticalResources = (): void => {
   const criticalResources = ['/fonts/main-font.woff2', '/css/critical.css'];
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-3b0a
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
   criticalResources.forEach(resource => {
     const link = document.createElement('link');
     link.rel = 'preload';
     link.href = resource;
     link.as = resource.endsWith('.css') ? 'style' : 'font';
+<<<<<<< HEAD
 <<<<<<< HEAD
     if (resource.endsWith('.woff2')) {
 =======
@@ -372,10 +399,14 @@ export const preloadCriticalResources = (): void => {
 =======
     link.crossOrigin = 'anonymous';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-3b0a
+=======
+    link.crossOrigin = 'anonymous';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
     document.head.appendChild(link);
   });
 };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 // Scroll performance optimization
@@ -398,11 +429,25 @@ export const optimizeScrollPerformance = (): void => {
     const progressBar = document.querySelector('.scroll-progress');
     if (progressBar) {
       (progressBar as HTMLElement).style.width = `${scrollPercent}%`;
+=======
+// Optimize scroll performance
+export const optimizeScrollPerformance = (): void => {
+  let ticking = false;
+  const updateScrollPosition = () => {
+    // Update scroll-dependent elements here
+    ticking = false;
+  };
+  const requestTick = () => {
+    if (!ticking) {
+      requestAnimationFrame(updateScrollPosition);
+      ticking = true;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
     }
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a4f
     ticking = false;
   };
+<<<<<<< HEAD
 
   const requestTick = () => {
     if (!ticking) {
@@ -496,7 +541,11 @@ export const collectPerformanceMetrics = (): any => {
   window.addEventListener('scroll', requestTick, { passive: true });
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a4f
+=======
+  window.addEventListener('scroll', requestTick, { passive: true });
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
 };
+
 // Memory usage monitoring
 export const getMemoryUsage = (): {
   used: number;
@@ -512,9 +561,14 @@ export const getMemoryUsage = (): {
   }
   return null;
 };
+
 // Performance metrics collection
 export const collectPerformanceMetrics = () => {
   const metrics: Record<string, number> = {};
+<<<<<<< HEAD
+=======
+  
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
   // Navigation timing
   if (performance.timing) {
     const timing = performance.timing;
@@ -523,6 +577,7 @@ export const collectPerformanceMetrics = () => {
       timing.domContentLoadedEventEnd - timing.navigationStart;
     metrics.firstPaint = timing.responseEnd - timing.requestStart;
   }
+  
   // Resource timing
   if (performance.getEntriesByType) {
     const resources = performance.getEntriesByType('resource');
@@ -530,8 +585,12 @@ export const collectPerformanceMetrics = () => {
     metrics.totalResourceSize = resources.reduce((total, resource: any) => {
       return total + (resource.transferSize || 0);
     }, 0);
+<<<<<<< HEAD
   }
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
   }
+  
   // Memory usage
   const memory = getMemoryUsage();
   if (memory) {
@@ -539,8 +598,10 @@ export const collectPerformanceMetrics = () => {
     metrics.memoryTotal = memory.total;
     metrics.memoryPercentage = memory.percentage;
   }
+  
   return metrics;
 };
+
 // Bundle size optimization helpers
 export const optimizeBundleSize = {
   // Dynamic imports for code splitting
@@ -553,12 +614,14 @@ export const optimizeBundleSize = {
       return null;
     }
   },
+  
   // Tree shaking optimization
   importOnly: (module: any, ...exports: string[]) => {
     const result: any = {};
     exports.forEach(exportName => {
       if (module[exportName]) {
         result[exportName] = module[exportName];
+<<<<<<< HEAD
 =======
 };
 
@@ -575,6 +638,8 @@ export const lazyLoadImages = (): void => {
         img.removeAttribute('data-src');
         imageObserver.unobserve(img);
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f83
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
       }
     });
   });
@@ -583,6 +648,10 @@ export const lazyLoadImages = (): void => {
 };
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
 // Performance monitoring
 =======
 
@@ -636,6 +705,7 @@ export const performanceMonitor = {
     if (typeof window === 'undefined' || !('performance' in window)) return;
     performance.mark(`${name}-end`);
     performance.measure(name, `${name}-start`, `${name}-end`);
+<<<<<<< HEAD
   },
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-3b0a
@@ -814,3 +884,21 @@ export const checkPerformanceBudget = (budget: PerformanceBudget): boolean => {
   );
 };
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f83
+=======
+    const measure = performance.getEntriesByName(name)[0];
+    return measure ? measure.duration : 0;
+  },
+  getMetrics: () => {
+    const measures = performance.getEntriesByType('measure');
+    return measures.map(measure => ({
+      name: measure.name,
+      duration: measure.duration,
+      startTime: measure.startTime
+    }));
+  },
+  clear: () => {
+    performance.clearMarks();
+    performance.clearMeasures();
+  },
+};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
