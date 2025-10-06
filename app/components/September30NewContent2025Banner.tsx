@@ -47,71 +47,17 @@ const September30NewContent2025Banner: React.FC = () => {
       readTime: '16 min',
       icon: '👁️',
       gradient: 'from-emerald-500 to-teal-600'
-    },
-    {
-      id: 4,
-      title: 'Quantum-Enhanced Machine Learning 2025',
-      slug: 'quantum-enhanced-machine-learning-2025',
-      excerpt: '1000x performance breakthrough with quantum computing. Real quantum advantage demonstrated in optimization, drug discovery, and financial modeling.',
-      category: 'Quantum ML',
-      date: '2025-09-30',
-      readTime: '20 min',
-      icon: '⚛️',
-      gradient: 'from-indigo-500 to-purple-600'
-    },
-    {
-      id: 5,
-      title: 'AI-Powered Cloud FinOps 2025',
-      slug: 'ai-powered-cloud-finops-2025',
-      excerpt: '60% cloud cost reduction through autonomous optimization. $450M+ annual savings achieved with AI-driven resource management and predictive scaling.',
-      category: 'Cloud FinOps',
-      date: '2025-09-30',
-      readTime: '14 min',
-      icon: '💰',
-      gradient: 'from-orange-500 to-amber-600'
     }
   ];
 
   return (
-          </p>
-        </div>
-
-        {/* Articles Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-              className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-500 hover:scale-105"
-              style={{ animationDelay: `${index * 150}ms` }}
-            >
-              {/* Card glow effect */}
-              <div className={`absolute inset-0 bg-gradient-to-br ${article.gradient} opacity-0 group-hover:opacity-10 transition-all duration-500 rounded-2xl`}></div>
-              
-              <div className="relative z-10">
-                    </span>
-                  </div>
-                </div>
-
-                    {article.category}
-                  </span>
-                </div>
-
-                {/* Title */}
-                  {article.title}
-                </h3>
-
-                {/* Excerpt */}
-                <p className="text-gray-300 mb-6 leading-relaxed">
-                  {article.excerpt}
-                </p>
-
-                {/* Meta Info */}
-              </div>
-
           ))}
         </div>
 
         {/* Call-to-Action Section */}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
