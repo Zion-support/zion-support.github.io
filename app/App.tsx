@@ -5,9 +5,11 @@ import { HelmetProvider } from 'react-helmet-async';
 // Components
 import ErrorBoundary from '../src/components/ErrorBoundary';
 import SEOOptimizer from '../src/components/SEOOptimizer';
+import AccessibilityEnhancer from './components/AccessibilityEnhancer';
+import PerformanceDashboard from './components/PerformanceDashboard';
 
 // Pages
-import HomePage from '../page';
+import HomePage from './page';
 
 // Utils
 // import performanceOptimizer from '../src/utils/performanceOptimizer';
@@ -33,32 +35,37 @@ const App: React.FC = () => {
     <HelmetProvider>
       <ErrorBoundary>
         <SEOOptimizer>
-          <Router>
-            <div className='App'>
-              {/* Skip to main content link for accessibility */}
-              <a
-                href='#main-content'
-                className='skip-link'
-                onClick={e => {
-                  e.preventDefault();
-                  const main =
-                    document.querySelector('main') ||
-                    document.querySelector('#main-content');
-                  if (main) {
-                    main.focus();
-                    main.scrollIntoView({ behavior: 'smooth' });
-                  }
-                }}
-              >
-                Skip to main content
-              </a>
+          <AccessibilityEnhancer>
+            <Router>
+              <div className='App'>
+                {/* Skip to main content link for accessibility */}
+                <a
+                  href='#main-content'
+                  className='skip-link'
+                  onClick={e => {
+                    e.preventDefault();
+                    const main =
+                      document.querySelector('main') ||
+                      document.querySelector('#main-content');
+                    if (main) {
+                      main.focus();
+                      main.scrollIntoView({ behavior: 'smooth' });
+                    }
+                  }}
+                >
+                  Skip to main content
+                </a>
 
-              <Routes>
-                <Route path='/' element={<HomePage />} />
-                {/* Add more routes as needed */}
-              </Routes>
-            </div>
-          </Router>
+                <Routes>
+                  <Route path='/' element={<HomePage />} />
+                  {/* Add more routes as needed */}
+                </Routes>
+
+                {/* Performance Dashboard */}
+                <PerformanceDashboard />
+              </div>
+            </Router>
+          </AccessibilityEnhancer>
         </SEOOptimizer>
       </ErrorBoundary>
     </HelmetProvider>
