@@ -4,22 +4,20 @@ import { HelmetProvider } from 'react-helmet-async';
 
 // Components
 import ErrorBoundary from '../src/components/ErrorBoundary';
-import SEOEnhancer from '../src/components/SEOEnhancer';
-import AccessibilityEnhancer from '../src/components/AccessibilityEnhancer';
-import PerformanceMonitor from '../src/components/PerformanceMonitor';
-import { LoadingSpinner } from '../components/LoadingComponents';
+import SEOOptimizer from '../src/components/SEOOptimizer';
+import LoadingSpinner from '../src/components/LoadingSpinner';
+import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import PerformanceDashboard from './components/PerformanceDashboard';
+import PerformanceMonitor from '../src/components/PerformanceMonitor';
 
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./page'));
 
-// Loading component is imported from components/LoadingComponents
 // Utils
 import { performanceOptimizer } from '../src/utils/performanceOptimizer';
 
 // Styles
 import '../index.css';
-import '../src/styles/accessibility.css';
 
 const App: React.FC = () => {
   useEffect(() => {
@@ -29,7 +27,6 @@ const App: React.FC = () => {
     // Initialize performance monitoring
     performanceOptimizer.lazyLoadImages();
     performanceOptimizer.prefetchResources(['/api/health']);
-    performanceOptimizer.preconnectDomains(['https://fonts.googleapis.com', 'https://fonts.gstatic.com']);
     
     // Initialize Web Vitals monitoring
     if (typeof window !== 'undefined' && 'performance' in window) {
@@ -48,30 +45,9 @@ const App: React.FC = () => {
   return (
     <HelmetProvider>
       <ErrorBoundary>
-        <SEOEnhancer
-          title="Zion Tech Group - Advanced AI and IT Solutions"
-          description="Leading provider of AI-powered enterprise solutions, automation, and digital transformation services. Discover cutting-edge technology solutions for modern businesses."
-          keywords={['AI', 'artificial intelligence', 'enterprise solutions', 'automation', 'digital transformation', 'IT consulting', 'machine learning', 'data analytics']}
-          structuredData={{
-            '@context': 'https://schema.org',
-            '@type': 'Organization',
-            name: 'Zion Tech Group',
-            description: 'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services.',
-            url: window.location.origin,
-            logo: `${window.location.origin}/logo.png`,
-            sameAs: [
-              'https://linkedin.com/company/zion-tech-group',
-              'https://twitter.com/ziontechgroup'
-            ],
-            contactPoint: {
-              '@type': 'ContactPoint',
-              telephone: '+1-555-0123',
-              contactType: 'customer service',
-              availableLanguage: 'English'
-            }
-          }}
-        >
-          <AccessibilityEnhancer>
+        <PerformanceMonitor>
+          <SEOOptimizer>
+            <AccessibilityEnhancer>
             <Router>
               <div className='App'>
                 {/* Skip to main content link for accessibility */}
@@ -92,32 +68,20 @@ const App: React.FC = () => {
                   Skip to main content
                 </a>
 
-                <main id="main-content" tabIndex={-1}>
-                  <Suspense fallback={<LoadingSpinner />}>
-                    <Routes>
-                      <Route path='/' element={<HomePage />} />
-                      {/* Add more routes as needed */}
-                    </Routes>
-                  </Suspense>
-                </main>
-
-                {/* Performance Monitoring */}
-                <PerformanceMonitor 
-                  enabled={process.env.NODE_ENV === 'development'}
-                  budget={{
-                    maxBundleSize: 500,
-                    maxImageSize: 100,
-                    maxFirstLoad: 3000,
-                    maxInteractive: 2000
-                  }}
-                />
+                <Suspense fallback={<LoadingSpinner />}>
+                  <Routes>
+                    <Route path='/' element={<HomePage />} />
+                    {/* Add more routes as needed */}
+                  </Routes>
+                </Suspense>
 
                 {/* Performance Dashboard */}
                 <PerformanceDashboard />
               </div>
             </Router>
-          </AccessibilityEnhancer>
-        </SEOEnhancer>
+            </AccessibilityEnhancer>
+          </SEOOptimizer>
+        </PerformanceMonitor>
       </ErrorBoundary>
     </HelmetProvider>
   );
