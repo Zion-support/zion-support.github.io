@@ -49,7 +49,7 @@ export const measurePageLoad = (): WebVitalsMetrics | null => {
  * Report web vitals
  */
 export const reportWebVitals = (metrics: WebVitalsMetrics): void => {
-  if (process.env.NODE_ENV === 'development') {
+  if (process.env['NODE_ENV'] === 'development') {
     console.log('Web Vitals:', metrics);
   }
   
