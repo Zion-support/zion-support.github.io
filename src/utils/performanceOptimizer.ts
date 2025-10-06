@@ -337,7 +337,11 @@ export const addCriticalResourceHints = (): void => {
 /**
  * Performance Optimizer Class
  */
+<<<<<<< HEAD
 class PerformanceOptimizer {
+=======
+export class PerformanceOptimizer {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3b0a
   private static instance: PerformanceOptimizer;
   private metrics: Map<string, number> = new Map();
 
@@ -453,4 +457,8 @@ export default {
   clearOldCaches,
   checkPerformanceBudget,
   addCriticalResourceHints
+<<<<<<< HEAD
 };
+=======
+};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3b0a

@@ -5,11 +5,15 @@
  * to improve initial page load performance.
  */
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { lazy } from 'react';
 import type { ComponentType } from 'react';
 =======
 import { lazy, type ComponentType } from 'react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-bcb8
+=======
+import React, { lazy, ComponentType } from 'react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3b0a
 
 interface BannerModule {
   default: ComponentType<Record<string, unknown>>;
@@ -41,12 +45,18 @@ export const lazyLoadBanner = (
               );
               // Return a fallback component
               resolve({
+<<<<<<< HEAD
                 default: () => {
                   const React = require('react');
                   return React.createElement('div', { className: 'banner-fallback' },
                     React.createElement('p', null, 'Banner temporarily unavailable')
                   );
                 }
+=======
+                default: () => React.createElement('div', { className: 'banner-fallback' },
+                  React.createElement('p', null, 'Banner temporarily unavailable')
+                )
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3b0a
               });
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-bcb8
             });
