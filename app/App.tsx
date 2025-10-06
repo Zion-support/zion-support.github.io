@@ -1,12 +1,15 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 
 // Components
 import PerformanceDashboard from './components/PerformanceDashboard';
 
-// Pages
-import HomePage from './page';
+// Lazy load pages for better performance
+const HomePage = lazy(() => import('./page'));
+
+// Utils
+import performanceOptimizer from '../src/utils/performanceOptimizer';
 
 // Styles
 import './globals.css';
@@ -16,6 +19,18 @@ const App: React.FC = () => {
     // Initialize global error handling
     console.log('App initialized');
 
+    // Initialize performance monitoring
+    performanceOptimizer.lazyLoadImages();
+    performanceOptimizer.prefetchResources([]);
+    
+    // Initialize Web Vitals monitoring
+    if (typeof window !== 'undefined' && 'performance' in window) {
+      const metrics = performanceOptimizer.measurePageLoad();
+      if (metrics) {
+        performanceOptimizer.reportWebVitals(metrics);
+      }
+    }
+    
     console.log('Performance monitoring initialized');
     console.log(
       '🚀 Zion Tech Group App initialized with comprehensive monitoring',
