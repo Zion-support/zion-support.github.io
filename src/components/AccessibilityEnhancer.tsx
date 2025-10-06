@@ -10,7 +10,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
   const [reducedMotion, setReducedMotion] = useState(false);
 
   useEffect(() => {
-    // Check for user's motion preferences
+    // Check for user preferences
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     setReducedMotion(prefersReducedMotion);
 
@@ -23,6 +23,11 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
 
     // Apply initial styles
     applyAccessibilityStyles(savedHighContrast, savedFontSize, prefersReducedMotion);
+
+    // Add accessibility enhancements
+    addSkipLinks();
+    addAriaLandmarks();
+    enhanceFocusManagement();
   }, []);
 
   const applyAccessibilityStyles = (
@@ -32,23 +37,51 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
   ) => {
     const root = document.documentElement;
     
-    // High contrast mode
+    // Apply high contrast
     if (highContrast) {
       root.classList.add('high-contrast');
     } else {
       root.classList.remove('high-contrast');
     }
 
-    // Font size adjustments
+    // Apply font size
     root.classList.remove('font-small', 'font-normal', 'font-large');
     root.classList.add(`font-${fontSize}`);
 
-    // Reduced motion
+    // Apply reduced motion
     if (reducedMotion) {
       root.classList.add('reduced-motion');
     } else {
       root.classList.remove('reduced-motion');
     }
+  };
+
+  const addSkipLinks = () => {
+    const skipLink = document.createElement('a');
+    skipLink.href = '#main-content';
+    skipLink.textContent = 'Skip to main content';
+    skipLink.className = 'skip-link sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 bg-blue-600 text-white p-2 z-50';
+    document.body.insertBefore(skipLink, document.body.firstChild);
+  };
+
+  const addAriaLandmarks = () => {
+    const main = document.querySelector('main');
+    if (main && !main.getAttribute('role')) {
+      main.setAttribute('role', 'main');
+      main.id = 'main-content';
+    }
+  };
+
+  const enhanceFocusManagement = () => {
+    // Add focus indicators
+    const style = document.createElement('style');
+    style.textContent = `
+      .focus-visible:focus {
+        outline: 2px solid #3b82f6;
+        outline-offset: 2px;
+      }
+    `;
+    document.head.appendChild(style);
   };
 
   const toggleHighContrast = () => {
@@ -66,77 +99,33 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
 
   return (
     <div className="accessibility-enhancer">
-      {children}
-      
-      {/* Accessibility Controls */}
-      <div className="fixed bottom-4 right-4 z-50">
-        <div className="bg-white rounded-lg shadow-lg p-4 space-y-3">
-          <h3 className="text-sm font-semibold text-gray-700">Accessibility</h3>
-          
-          {/* High Contrast Toggle */}
-          <label className="flex items-center space-x-2 text-sm">
+      <div className="accessibility-controls fixed top-4 right-4 z-50 bg-white p-4 rounded-lg shadow-lg">
+        <h3 className="text-sm font-semibold mb-2">Accessibility Options</h3>
+        <div className="space-y-2">
+          <label className="flex items-center">
             <input
               type="checkbox"
               checked={isHighContrast}
               onChange={toggleHighContrast}
-              className="rounded"
+              className="mr-2"
             />
-            <span>High Contrast</span>
+            High Contrast
           </label>
-
-          {/* Font Size Controls */}
-          <div className="space-y-1">
-            <label className="text-xs text-gray-600">Font Size</label>
-            <div className="flex space-x-1">
-              {(['small', 'normal', 'large'] as const).map((size) => (
-                <button
-                  key={size}
-                  onClick={() => changeFontSize(size)}
-                  className={`px-2 py-1 text-xs rounded ${
-                    fontSize === size
-                      ? 'bg-blue-500 text-white'
-                      : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
-                  }`}
-                >
-                  {size.charAt(0).toUpperCase() + size.slice(1)}
-                </button>
-              ))}
-            </div>
+          <div>
+            <label className="text-sm">Font Size:</label>
+            <select
+              value={fontSize}
+              onChange={(e) => changeFontSize(e.target.value as 'small' | 'normal' | 'large')}
+              className="ml-2 text-sm border rounded px-1"
+            >
+              <option value="small">Small</option>
+              <option value="normal">Normal</option>
+              <option value="large">Large</option>
+            </select>
           </div>
         </div>
       </div>
-
-      <style>{`
-        .high-contrast {
-          --text-color: #ffffff;
-          --bg-color: #000000;
-          --border-color: #ffffff;
-        }
-        
-        .high-contrast * {
-          color: var(--text-color) !important;
-          background-color: var(--bg-color) !important;
-          border-color: var(--border-color) !important;
-        }
-
-        .font-small {
-          font-size: 0.875rem;
-        }
-
-        .font-normal {
-          font-size: 1rem;
-        }
-
-        .font-large {
-          font-size: 1.125rem;
-        }
-
-        .reduced-motion * {
-          animation-duration: 0.01ms !important;
-          animation-iteration-count: 1 !important;
-          transition-duration: 0.01ms !important;
-        }
-      `}</style>
+      {children}
     </div>
   );
 };
