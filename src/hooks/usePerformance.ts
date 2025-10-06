@@ -102,8 +102,8 @@ export const usePageLoadPerformance = () => {
             domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
             loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
             firstByte: navigation.responseStart - navigation.requestStart,
-            domInteractive: navigation.domInteractive - (navigation as any).navigationStart,
-            totalLoadTime: navigation.loadEventEnd - (navigation as any).navigationStart,
+            domInteractive: navigation.domInteractive - navigation.fetchStart,
+            totalLoadTime: navigation.loadEventEnd - navigation.fetchStart,
           };
 
           // Track each metric
@@ -120,6 +120,7 @@ export const usePageLoadPerformance = () => {
     // Track immediately if page is already loaded
     if (document.readyState === 'complete') {
       trackPageLoad();
+      return;
     } else {
       // Wait for load event
       window.addEventListener('load', trackPageLoad);
@@ -159,8 +160,8 @@ export const useResourcePerformance = () => {
  */
 export const useLongTaskMonitoring = () => {
   useEffect(() => {
-    performanceOptimizer.monitorLongTasks((entries: any[]) => {
-      entries.forEach((entry: any) => {
+    const observer = performanceOptimizer.monitorLongTasks((entries: PerformanceEntryList) => {
+      entries.forEach((entry: PerformanceEntry) => {
         analytics.track('long_task', 'performance', 'detected', undefined, entry.duration);
       });
     });

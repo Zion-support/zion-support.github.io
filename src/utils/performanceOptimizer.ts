@@ -15,6 +15,16 @@ export interface WebVitalsMetrics {
 }
 
 /**
+ * Performance budget interface
+ */
+export interface PerformanceBudget {
+  maxBundleSize: number; // in KB
+  maxImageSize: number; // in KB
+  maxFirstLoad: number; // in ms
+  maxInteractive: number; // in ms
+}
+
+/**
  * Resource hints for performance
  */
 export const prefetchResources = (urls: string[]): void => {
@@ -268,13 +278,6 @@ export const clearOldCaches = async (currentVersion: string): Promise<void> => {
 /**
  * Performance budget checker
  */
-export interface PerformanceBudget {
-  maxBundleSize: number; // in KB
-  maxImageSize: number; // in KB
-  maxFirstLoad: number; // in ms
-  maxInteractive: number; // in ms
-}
-
 export const checkPerformanceBudget = (budget: PerformanceBudget): {
   passed: boolean;
   violations: string[];
@@ -385,6 +388,10 @@ class PerformanceOptimizer {
     return measurePageLoad();
   }
 
+  public prefetchResources(resources: string[]): void {
+    prefetchResources(resources);
+  }
+
   public monitorLongTasks(callback: (entries: PerformanceEntryList) => void): PerformanceObserver | null {
     return monitorLongTasks(callback);
   }
@@ -415,7 +422,6 @@ class PerformanceOptimizer {
       document.head.appendChild(link);
     });
   }
-
   // Initialize all optimizations
   initialize(): void {
     this.measurePerformance('lazyLoadImages', () => this.lazyLoadImages());
@@ -426,3 +432,23 @@ class PerformanceOptimizer {
 
 // Export singleton instance
 export const performanceOptimizer = PerformanceOptimizer.getInstance();
+
+export default {
+  prefetchResources,
+  preconnectDomains,
+  lazyLoadImages,
+  debounce,
+  throttle,
+  measurePageLoad,
+  reportWebVitals,
+  shouldUseWebP,
+  getConnectionQuality,
+  shouldLoadHeavyAssets,
+  requestIdleCallback,
+  cancelIdleCallback,
+  preloadRoute,
+  monitorLongTasks,
+  cacheStaticAssets,
+  clearOldCaches,
+  checkPerformanceBudget
+};
