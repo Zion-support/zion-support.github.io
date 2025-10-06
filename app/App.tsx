@@ -36,6 +36,7 @@ const App: React.FC = () => {
     // Initialize performance monitoring
     performanceOptimizer.lazyLoadImages();
     performanceOptimizer.preloadCriticalResources();
+    performanceOptimizer.addCriticalResourceHints();
     
     // Initialize enhanced performance monitoring
     performanceEnhancer.initialize();
@@ -72,7 +73,7 @@ const App: React.FC = () => {
   return (
     <HelmetProvider>
       <ErrorBoundary>
-        <div>
+        <PerformanceMonitor>
           <SEOOptimizer>
             <AccessibilityEnhancer>
               <Router>
@@ -108,7 +109,7 @@ const App: React.FC = () => {
               </Router>
             </AccessibilityEnhancer>
           </SEOOptimizer>
-        </div>
+        </PerformanceMonitor>
       </ErrorBoundary>
     </HelmetProvider>
   );

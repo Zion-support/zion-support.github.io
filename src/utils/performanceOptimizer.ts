@@ -383,12 +383,14 @@ class PerformanceOptimizer {
     return Object.fromEntries(this.metrics);
   }
 
-  public reportWebVitals(metrics: WebVitalsMetrics): void {
-    reportWebVitals(metrics);
+  public prefetchResources(urls: string[]): void {
+    prefetchResources(urls);
   }
 
-  public measurePageLoad(): WebVitalsMetrics | null {
-    return measurePageLoad();
+  public reportWebVitals(metrics: WebVitalsMetrics): void {
+    if (process.env.NODE_ENV === 'development') {
+      console.log('Web Vitals:', metrics);
+    }
   }
 
   public prefetchResources(resources: string[]): void {
@@ -446,6 +448,28 @@ class PerformanceOptimizer {
   // Clear metrics
   clearMetrics() {
     this.metrics.clear();
+  }
+
+  // Add critical resource hints for better performance
+  addCriticalResourceHints(): void {
+    if (typeof document === 'undefined') return;
+    
+    const hints = [
+      { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' },
+      { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com' },
+      { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+      { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossOrigin: 'anonymous' }
+    ];
+
+    hints.forEach((hint) => {
+      const link = document.createElement('link');
+      link.rel = hint.rel;
+      link.href = hint.href;
+      if (hint.crossOrigin) {
+        link.crossOrigin = hint.crossOrigin;
+      }
+      document.head.appendChild(link);
+    });
   }
   // Initialize all optimizations
   initialize(): void {
