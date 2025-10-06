@@ -1,4 +1,4 @@
-import React, { useEffect, lazy } from 'react';
+import React, { useEffect, lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 
@@ -11,6 +11,12 @@ import PerformanceDashboard from './components/PerformanceDashboard';
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./page'));
 
+// Loading component
+const LoadingSpinner = () => (
+  <div className="flex justify-center items-center min-h-screen">
+    <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-600"></div>
+  </div>
+);
 // Utils
 import performanceOptimizer from '../src/utils/performanceOptimizer';
 
