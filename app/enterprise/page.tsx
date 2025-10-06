@@ -1,4 +1,4 @@
-// import Link from 'next/link';
+import Link from 'next/link';
 
 export const metadata = {
   title: 'Enterprise Solutions - Zion Tech Group',
@@ -10,7 +10,11 @@ export const metadata = {
 
 export default function EnterprisePage() {
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+=======
+    <div className='min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900'>
+>>>>>>> 97e2d060e1d7 (Fix merge conflicts and resolve errors in codebase)
       {/* Hero Section */}
       <header className="relative overflow-hidden">
         <div className="absolute inset-0">
@@ -44,25 +48,43 @@ export default function EnterprisePage() {
               uptime with enterprise-grade security and compliance.
             </p>
 
+<<<<<<< HEAD
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
               <a
                 href="/contact"
                 className="group flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl"
+=======
+            <div className='flex flex-col sm:flex-row items-center justify-center gap-6'>
+              <Link
+                href='/contact'
+                className='group flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl'
+>>>>>>> 97e2d060e1d7 (Fix merge conflicts and resolve errors in codebase)
               >
                 <span>Schedule Enterprise Demo</span>
                 <span className="group-hover:translate-x-1 transition-transform">
                   →
                 </span>
+<<<<<<< HEAD
               </a>
               <a
                 href="#solutions"
                 className="group flex items-center gap-3 bg-white/10 hover:bg-white/20 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 border border-white/30"
+=======
+              </Link>
+              <Link
+                href='#solutions'
+                className='group flex items-center gap-3 bg-white/10 hover:bg-white/20 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 border border-white/30'
+>>>>>>> 97e2d060e1d7 (Fix merge conflicts and resolve errors in codebase)
               >
                 <span>View Solutions</span>
                 <span className="group-hover:translate-x-1 transition-transform">
                   ↓
                 </span>
+<<<<<<< HEAD
               </a>
+=======
+              </Link>
+>>>>>>> 97e2d060e1d7 (Fix merge conflicts and resolve errors in codebase)
             </div>
           </div>
         </div>
@@ -77,41 +99,49 @@ export default function EnterprisePage() {
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Comprehensive AI solutions designed for enterprise-scale
-              operations and Fortune 500 requirements.
+              transformation and competitive advantage.
             </p>
           </div>
 
+<<<<<<< HEAD
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Solution Cards */}
+=======
+          <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>
+>>>>>>> 97e2d060e1d7 (Fix merge conflicts and resolve errors in codebase)
             {[
               {
                 title: 'Autonomous Operations',
                 description:
-                  'Self-healing infrastructure with 99.99% uptime and 95% cost reduction.',
-                icon: '🤖',
-                metrics: [
-                  '99.99% Uptime',
-                  '95% Cost Reduction',
-                  'Zero Touch Operations',
+                  'Self-managing AI systems that optimize performance and reduce operational costs by 70%.',
+                features: [
+                  'Predictive Maintenance',
+                  'Automated Decision Making',
+                  'Real-time Optimization',
                 ],
+                icon: '🤖',
+              },
+              {
+                title: 'Quantum Computing',
+                description:
+                  'Next-generation quantum algorithms for complex problem solving and data analysis.',
+                features: [
+                  'Quantum Machine Learning',
+                  'Optimization Algorithms',
+                  'Cryptographic Security',
+                ],
+                icon: '⚛️',
               },
               {
                 title: 'Business Intelligence',
                 description:
-                  'AI-powered analytics delivering 30,000% ROI and real-time insights.',
-                icon: '📊',
-                metrics: [
-                  '30,000% ROI',
-                  '$750B+ Savings',
-                  'Real-time Analytics',
+                  'Advanced analytics and insights that drive strategic decision making.',
+                features: [
+                  'Real-time Dashboards',
+                  'Predictive Analytics',
+                  'Custom Reporting',
                 ],
-              },
-              {
-                title: 'Quantum Security',
-                description:
-                  'Quantum-resistant cryptography with 99.99% security against attacks.',
-                icon: '🔒',
-                metrics: ['99.99% Security', '<1ms Overhead', 'Zero Breaches'],
+                icon: '📊',
               },
               {
                 title: 'Predictive Analytics',
@@ -137,12 +167,17 @@ export default function EnterprisePage() {
             ].map((solution, index) => (
               <div
                 key={index}
+<<<<<<< HEAD
                 className="group bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 hover:scale-105"
+=======
+                className='bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:border-cyan-500/50 transition-all duration-300'
+>>>>>>> 97e2d060e1d7 (Fix merge conflicts and resolve errors in codebase)
               >
                 <div className="text-4xl mb-4">{solution.icon}</div>
                 <h3 className="text-2xl font-bold text-white mb-4">
                   {solution.title}
                 </h3>
+<<<<<<< HEAD
                 <p className="text-gray-300 mb-6">{solution.description}</p>
                 <div className="space-y-2">
                   {solution.metrics.map((metric, idx) => (
@@ -155,6 +190,20 @@ export default function EnterprisePage() {
                     </div>
                   ))}
                 </div>
+=======
+                <p className='text-gray-300 mb-6'>{solution.description}</p>
+                <ul className='space-y-2'>
+                  {solution.features.map((feature, idx) => (
+                    <li
+                      key={idx}
+                      className='flex items-center gap-2 text-gray-300'
+                    >
+                      <span className='w-2 h-2 bg-cyan-400 rounded-full'></span>
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+>>>>>>> 97e2d060e1d7 (Fix merge conflicts and resolve errors in codebase)
               </div>
             ))}
           </div>
@@ -162,6 +211,7 @@ export default function EnterprisePage() {
       </section>
 
       {/* CTA Section */}
+<<<<<<< HEAD
       <section className="py-24">
         <div className="container mx-auto px-4">
           <div className="text-center bg-white/5 backdrop-blur-lg rounded-3xl p-12 border border-white/20">
@@ -187,10 +237,45 @@ export default function EnterprisePage() {
                 <span className="text-xl">📧</span>
                 <span>Get Enterprise Consultation</span>
               </a>
+=======
+      <section className='py-24'>
+        <div className='container mx-auto px-4'>
+          <div className='bg-gradient-to-r from-cyan-500/10 to-blue-500/10 backdrop-blur-sm rounded-3xl p-12 border border-cyan-500/20 text-center'>
+            <h2 className='text-4xl font-bold text-white mb-6'>
+              Ready to Transform Your Enterprise?
+            </h2>
+            <p className='text-xl text-gray-300 mb-8 max-w-2xl mx-auto'>
+              Join 500+ Fortune 500 companies already achieving breakthrough
+              results with our AI solutions.
+            </p>
+            <div className='flex flex-col sm:flex-row items-center justify-center gap-6'>
+              <Link
+                href='/contact'
+                className='group flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl'
+              >
+                <span>Get Enterprise Consultation</span>
+                <span className='group-hover:translate-x-1 transition-transform'>
+                  →
+                </span>
+              </Link>
+              <Link
+                href='/case-studies'
+                className='group flex items-center gap-3 border-2 border-white/30 hover:border-white/60 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 hover:bg-white/10'
+              >
+                <span>View Case Studies</span>
+                <span className='group-hover:translate-x-1 transition-transform'>
+                  →
+                </span>
+              </Link>
+>>>>>>> 97e2d060e1d7 (Fix merge conflicts and resolve errors in codebase)
             </div>
           </div>
         </div>
       </section>
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 97e2d060e1d7 (Fix merge conflicts and resolve errors in codebase)

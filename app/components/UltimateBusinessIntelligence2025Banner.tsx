@@ -18,7 +18,11 @@ const UltimateBusinessIntelligence2025Banner = () => {
         roi: '30,000%',
         savings: '$750B+',
         accuracy: '99.99%',
+<<<<<<< HEAD
         speed: '5,000% faster'
+=======
+        speed: '5,000% faster',
+>>>>>>> 97e2d060e1d7 (Fix merge conflicts and resolve errors in codebase)
       },
       readingTime: '35 min read',
       featured: true
@@ -33,7 +37,11 @@ const UltimateBusinessIntelligence2025Banner = () => {
         roi: '30,000%',
         savings: '$750B',
         company: '$15.2B',
+<<<<<<< HEAD
         timeline: '18 months'
+=======
+        timeline: '18 months',
+>>>>>>> 97e2d060e1d7 (Fix merge conflicts and resolve errors in codebase)
       },
       readingTime: '25 min read',
       featured: true
@@ -48,6 +56,7 @@ const UltimateBusinessIntelligence2025Banner = () => {
         roi: '30,000%',
         success: '99.8%',
         timeline: '18 months',
+<<<<<<< HEAD
         adoption: '100%'
       },
       readingTime: '45 min read',
@@ -58,11 +67,24 @@ const UltimateBusinessIntelligence2025Banner = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % content.length);
+=======
+        adoption: '100%',
+      },
+      readingTime: '45 min read',
+      featured: true,
+    },
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide(prev => (prev + 1) % content.length);
+>>>>>>> 97e2d060e1d7 (Fix merge conflicts and resolve errors in codebase)
     }, 5000);
 
     return () => clearInterval(timer);
   }, [content.length]);
 
+<<<<<<< HEAD
   if (!isVisible) return null;
 
   const currentContent = content[currentSlide];
@@ -157,6 +179,8 @@ const UltimateBusinessIntelligence2025Banner = () => {
 
           {/* Carousel Indicators */}
           <div className="flex justify-center gap-2 mt-6">
+=======
+>>>>>>> 97e2d060e1d7 (Fix merge conflicts and resolve errors in codebase)
             {content.map((_, index) => (
               <button
                 key={index}
@@ -169,6 +193,7 @@ const UltimateBusinessIntelligence2025Banner = () => {
           </div>
         </div>
 
+<<<<<<< HEAD
         {/* Call-to-Action Section */}
         <div className="text-center bg-white/5 backdrop-blur-sm rounded-2xl p-12 border border-white/20 mb-16">
           <div className="flex items-center justify-center gap-4 mb-6">
@@ -216,6 +241,8 @@ const UltimateBusinessIntelligence2025Banner = () => {
               <div className="text-gray-400">{stat.label}</div>
             </div>
           ))}
+=======
+>>>>>>> 97e2d060e1d7 (Fix merge conflicts and resolve errors in codebase)
         </div>
       </div>
     </div>
