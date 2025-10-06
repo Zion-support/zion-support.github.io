@@ -10,7 +10,7 @@ export const metadata = {
 
 export default function QuantumNeuralConsensus2027() {
   return (
-    <div>/* content */}
+    <div>{{/* content */}</div></div>
     <div>
       <div> </div><div> </div>
       <div className="text-left"> </div><article className="text-left"> </a><header className="text-left">

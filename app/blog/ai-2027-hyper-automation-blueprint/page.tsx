@@ -1,10 +1,13 @@
 import ArrowRight from 'next/link';
 
 export const metadata = {
-  title: "AI 2027 Hyper‑Automation Blueprint",
-  description: "Scale reliable AI hyper‑automation with policy gatesevalsand value stream analytics.",
-  type: "article",
-};;
+  
+  title:  'AI 2027 Hyper‑Automation Blueprint',
+  description: 
+      'Scale reliable AI hyper‑automation with policy gates, evals, and value stream analytics.',
+  type: 'article',
+
+}};
 
 export default function HyperAutomationBlueprint2027Page() {
   return (

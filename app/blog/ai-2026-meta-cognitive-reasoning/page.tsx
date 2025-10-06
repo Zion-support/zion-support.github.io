@@ -13,7 +13,7 @@ export const metadata = {
 
 export default function MetaCognitiveReasoning() {
   return (
-    <div>/* content */}
+    <div>{{/* content */}</div></div>
     <div>
       <div> </div><div> </div>
       <div className="text-left"> </div><article className="text-left">{/* Hero Section */}

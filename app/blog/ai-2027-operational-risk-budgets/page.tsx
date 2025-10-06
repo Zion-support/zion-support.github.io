@@ -2,10 +2,13 @@
 import ArrowRight from 'next/link';
 
 export const metadata = {
-  title: "AI 2027: Operational Risk Budgets",
-  description: "KPI-linked canariesbudgeted actionsand instant rollback to keep autonomy safe.",
-  type: "article",
-};;
+  
+  title:  'AI 2027: Operational Risk Budgets',
+  description: 
+      'KPI-linked canaries, budgeted actions, and instant rollback to keep autonomy safe.',
+  type: 'article',
+
+}};
 
 export default function AI2027OperationalRiskBudgetsPage() {
   return (

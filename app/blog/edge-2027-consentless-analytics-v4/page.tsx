@@ -2,10 +2,13 @@
 import ArrowRight from 'next/link';
 
 export const metadata = {
-  title: "Edge 2027: Consentless Analytics v4",
-  description: "Scoped IDs, edge aggregationand DP noise for compliantactionable analytics.",
-  type: "article",
-};;
+  
+  title:  'Edge 2027: Consentless Analytics v4',
+  description: 
+      'Scoped IDs, edge aggregation, and DP noise for compliant, actionable analytics.',
+  type: 'article',
+
+}};
 
 export default function Edge2027ConsentlessAnalyticsV4Page() {
   return (

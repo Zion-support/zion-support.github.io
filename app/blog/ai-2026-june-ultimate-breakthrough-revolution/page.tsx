@@ -14,7 +14,7 @@ export const metadata = {
 
 export default function June2026UltimateBreakthroughPage() {
   return (
-    <div>/* content */}
+    <div>{{/* content */}</div></div>
   const filePath = path.join(process.cwd(), 'content', 'blog', 'ai-2026-june-ultimate-breakthrough-revolution.md');
   const fileContents = fs.readFileSync(filePath, 'utf8');
   const { datacontent } = matter(fileContents);

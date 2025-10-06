@@ -1,10 +1,13 @@
 import ArrowRight from 'next/link';
 
 export const metadata = {
-  title: "AI Executive Playbook 2027",
-  description: "Planfundand govern reliable AI with measurable outcomes across the enterprise.",
-  type: "article",
-};;
+  
+  title:  'AI Executive Playbook 2027',
+  description: 
+      'Plan, fund, and govern reliable AI with measurable outcomes across the enterprise.',
+  type: 'article',
+
+}};
 
 export default function AIExecutivePlaybook2027Page() {
   return (

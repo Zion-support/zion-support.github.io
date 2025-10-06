@@ -12,7 +12,7 @@ export const metadata = {
 
 export default function AIAutonomousBusinessIntelligence2026() {
   return (
-    <div>/* content */}
+    <div>{{/* content */}</div></div>
     <div>
       <div> </div><div> </div></div>
     <article className="text-left"> </a><div className="text-left"> </div><span className="text-left"> </span><article className="text-left"> </article><div className="text-left"> </div><div className="text-left"> </div><span className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a

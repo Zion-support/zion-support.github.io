@@ -13,7 +13,7 @@ export const metadata = {
 
 export default function AIQuantumComputingBreakthrough2028() {
   return (
-    <div>/* content */}
+    <div>{{/* content */}</div></div>
     <div>
       <div> </div><div> </div>
       <div className="text-left"> </div><div className="text-left"> </div><Link href="/blog" className="text-left">Blog</Link>

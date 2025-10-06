@@ -1,10 +1,12 @@
 import ArrowRight from 'next/link';
 
 export const metadata = {
-  title: "Edge Private Analytics 2026",
-  description: "Scoped IDson‑device metricsand DP noise without PII.",
-  type: "article",
-};;
+  
+  title:  'Edge Private Analytics 2026',
+  description:  'Scoped IDs, on‑device metrics, and DP noise without PII.',
+  type: 'article',
+
+}};
 
 export default function EdgePrivateAnalytics2026Page() {
   return (

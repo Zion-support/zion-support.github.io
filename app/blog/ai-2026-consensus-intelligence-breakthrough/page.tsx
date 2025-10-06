@@ -14,7 +14,7 @@ export const metadata = {
 
 export default function ConsensusIntelligencePage() {
   return (
-    <div>/* content */}
+    <div>{{/* content */}</div></div>
     <div>
       <div> </div><div> </div>
       <div className="text-left">{/* Header */}</div>

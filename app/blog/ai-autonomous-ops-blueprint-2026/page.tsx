@@ -1,10 +1,13 @@
 import ArrowRight from 'next/link';
 
 export const metadata = {
-  title: "AI Autonomous Ops Blueprint 2026",
-  description: "Budgetslive tracesand one‑click rollback for safe autonomy at scale.",
-  type: "article",
-};;
+  
+  title:  'AI Autonomous Ops Blueprint 2026',
+  description: 
+      'Budgets, live traces, and one‑click rollback for safe autonomy at scale.',
+  type: 'article',
+
+}};
 
 export default function AIAutonomousOpsBlueprint2026Page() {
   return (

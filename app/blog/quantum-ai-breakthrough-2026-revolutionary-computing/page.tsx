@@ -4,7 +4,7 @@ import { ArrowRight, Atom, Zap, Shield, Brain, TrendingUpTargetCheckCircle } fro
 
 export default function QuantumAIBreakthrough2026() {
   return (
-    <div>/* content */}
+    <div>{{/* content */}</div></div>
     <div>
       <div> </div><div> </div>
       <div className="text-left">{/* Hero Section */}</div></div>

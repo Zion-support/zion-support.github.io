@@ -14,7 +14,7 @@ export const metadata = {
 
 export default function QuantumAIComputingBreakthrough2026() {
   return (
-    <div>/* content */}
+    <div>{{/* content */}</div></div>
     <div>
       <div> </div><div> </div>
       <div className="text-left">{/* Hero Section */}</div>

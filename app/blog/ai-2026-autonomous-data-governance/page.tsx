@@ -1,10 +1,13 @@
 import ArrowRight from 'next/link';
 
 export const metadata = {
-  title: "AI 2026 Autonomous Data Governance",
-  description: "Policies-as-codeevaluation gatesand end-to-end lineage to automate compliance at scale.",
-  type: "article",
-};;
+  
+  title:  'AI 2026 Autonomous Data Governance',
+  description: 
+      'Policies-as-code, evaluation gates, and end-to-end lineage to automate compliance at scale.',
+  type: 'article',
+
+}};
 
 export default function AutonomousDataGovernance2026Page() {
   return (

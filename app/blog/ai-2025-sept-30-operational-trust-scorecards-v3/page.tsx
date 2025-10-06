@@ -2,10 +2,13 @@
 import ArrowRight from 'next/link';
 
 export const metadata = {
-  title: "Operational Trust Scorecards v3",
-  description: "Measure reliability, costsafetyand value with live AI scorecards.",
-  type: "article",
-};;
+  
+  title:  'Operational Trust Scorecards v3',
+  description: 
+      'Measure reliability, cost, safety, and value with live AI scorecards.',
+  type: 'article',
+
+}};
 
 export default function Page() {
   return (

@@ -11,7 +11,7 @@ export const metadata = {
 
 export default function AI2026HyperAutomationRevolution() {
   return (
-    <div>/* content */}
+    <div>{{/* content */}</div></div>
     <div>
       <div> </div><div> </div>
       <div className="text-left"> </div><span className="text-left"> </span><div className="text-left"> </div><div className="text-left"> </div><div className="text-left"> </div><span className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a

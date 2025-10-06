@@ -1,10 +1,13 @@
 import ArrowRight from 'next/link';
 
 export const metadata = {
-  title: "Trustless Evaluation Blueprint (2026)",
-  description: "How to build signedreproducibleand policy‑aligned evals for reliable AI at scale.",
-  type: "article",
-};;
+  
+  title:  'Trustless Evaluation Blueprint (2026)',
+  description: 
+      'How to build signed, reproducible, and policy‑aligned evals for reliable AI at scale.',
+  type: 'article',
+
+}};
 
 export default function TrustlessEvaluationBlueprint2026Page() {
   return (

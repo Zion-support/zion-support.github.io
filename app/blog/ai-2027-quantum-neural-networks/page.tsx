@@ -12,7 +12,7 @@ export const metadata = {
 
 export default function AI2027QuantumNeuralNetworks() {
   return (
-    <div>/* content */}
+    <div>{{/* content */}</div></div>
     <div>
       <div> </div><div> </div>
       <div className="text-left"> </div><Link href="/blog" className="text-left">

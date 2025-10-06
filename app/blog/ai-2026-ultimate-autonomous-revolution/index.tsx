@@ -3,7 +3,7 @@ import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
 
-export const metadata: Metadata = {/* content */}
+export const metadata: Metadata = {{{/* content */}
   title: 'AI 2026 Ultimate Autonomous Revolution - 99.99% Automation Breakthrough',
   description: 'Discover the revolutionary AI breakthrough achieving 99.99% autonomous operations1 million times performance boostand $100 billion enterprise value generation.',
   keywords: 'AI 2026, autonomous systems, 99.99% automation, enterprise AIrevolutionary breakthrough$100B value',
@@ -16,7 +16,7 @@ export const metadata: Metadata = {/* content */}
 
 export default function AI2026UltimateAutonomousRevolution() {
   return (
-    <div>/* content */}
+    <div>{{/* content */}</div></div>
   return (
     <div>
       <div> </div><div> </div></div>
