@@ -43,54 +43,6 @@ const NewContentPromotionalBanner2026: React.FC = () => {
   ];
 
   return (
-<<<<<<< HEAD
-    <div className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      {/* Animated background effects */}
-      <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 animate-pulse"></div>
-      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-transparent via-white/5 to-transparent"></div>
-      <div className="absolute bottom-0 right-0 w-full h-full bg-gradient-to-tl from-transparent via-blue-500/5 to-transparent"></div>
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
-      <div className="absolute top-1/4 right-1/4 w-64 h-64 bg-gradient-to-r from-pink-500/20 to-orange-500/20 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '2s' }}></div>
-
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        {/* Header Section */}
-        <div className="text-center mb-16">
-          <div className="flex items-center justify-center gap-2 mb-6">
-            <Sparkles className="w-6 h-6 text-cyan-400 animate-pulse" />
-            <span className="text-cyan-400 font-semibold text-lg">
-              🚀 JUST PUBLISHED • SEPTEMBER 2026
-            </span>
-            <Sparkles className="w-6 h-6 text-cyan-400 animate-pulse" />
-          </div>
-
-          <h2 className="text-5xl md:text-6xl font-extrabold text-white mb-6 leading-tight">
-            <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-              Latest AI Innovations
-            </span>
-            <br />
-            <span className="text-white">
-              That Transform Business
-            </span>
-          </h2>
-          
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Explore cutting-edge AI strategies, implementation roadmaps, and security innovations 
-            that are delivering <span className="text-cyan-400 font-bold">300%+ ROI</span> for enterprises worldwide
-          </p>
-
-          <div className="flex items-center justify-center gap-8 mb-12">
-            <div className="flex items-center gap-2">
-              <TrendingUp className="w-5 h-5 text-green-400" />
-              <span className="text-gray-300">10,000+ Readers</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <Zap className="w-5 h-5 text-yellow-400" />
-              <span className="text-gray-300">3 New Articles</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <Target className="w-5 h-5 text-red-400" />
-              <span className="text-gray-300">Proven Results</span>
-=======
     <div className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
       {/* Animated background effects */}
       <div className="absolute inset-0 overflow-hidden opacity-20">
@@ -132,25 +84,11 @@ const NewContentPromotionalBanner2026: React.FC = () => {
             <div className="flex items-center gap-2">
               <Target className="w-5 h-5" />
               <span>Proven Results</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-a82c
             </div>
           </div>
         </div>
 
         {/* Featured Content Cards */}
-<<<<<<< HEAD
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {featuredContent.map((content, index) => (
-            <div 
-              key={content.id}
-              className="group relative bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover:bg-white/20 transition-all duration-500 transform hover:-translate-y-2"
-              style={{ animationDelay: `${index * 150}ms` }}
-            >
-              {/* Card glow effect */}
-              <div className={`absolute inset-0 bg-gradient-to-br ${content.color} opacity-0 group-hover:opacity-10 transition-all duration-500 rounded-2xl`}></div>
-              
-              <div className="relative z-10">
-=======
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           {featuredContent.map((content, index) => (
             <div key={content.id} className="group relative bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 hover:border-violet-500/50 transition-all duration-500 overflow-hidden hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-violet-500/20" style={{ animationDelay: `${index * 150}ms` }}>
@@ -158,7 +96,6 @@ const NewContentPromotionalBanner2026: React.FC = () => {
               <div className={`absolute inset-0 bg-gradient-to-br ${content.color} opacity-0 group-hover:opacity-10 transition-all duration-500`} />
               
               <div className="relative p-8">
->>>>>>> cursor/fix-errors-and-merge-to-main-a82c
                 {/* Icon & Badge */}
                 <div className="flex items-center justify-between mb-6">
                   <div className="text-4xl">{content.icon}</div>
@@ -185,64 +122,19 @@ const NewContentPromotionalBanner2026: React.FC = () => {
                 </p>
 
                 {/* CTA Button */}
-<<<<<<< HEAD
-                <Link
-                  href={`/blog/${content.slug}`}
-                  className={`group/btn flex items-center justify-center gap-3 w-full bg-gradient-to-r ${content.color} hover:shadow-2xl text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 transform hover:-translate-y-1`}
-                >
-                  <span>Read Full Article</span>
-                  <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-1 transition-transform" />
-=======
                 <Link href={`/blog/${content.slug}`} className={`group/btn flex items-center justify-center gap-3 w-full bg-gradient-to-r ${content.color} hover:shadow-2xl text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 transform hover:-translate-y-1`}>
                   <span>Read Full Article</span>
                   <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-1 transition-transform duration-300" />
->>>>>>> cursor/fix-errors-and-merge-to-main-a82c
                 </Link>
               </div>
 
               {/* Corner accent */}
-<<<<<<< HEAD
-              <div className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${content.color} opacity-10 rounded-bl-full`}></div>
-=======
               <div className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${content.color} opacity-10 rounded-bl-full`} />
->>>>>>> cursor/fix-errors-and-merge-to-main-a82c
             </div>
           ))}
         </div>
 
         {/* Bottom CTA Section */}
-<<<<<<< HEAD
-        <div className="text-center bg-white/5 backdrop-blur-sm border border-white/20 rounded-2xl p-12">
-          <div className="flex items-center justify-center gap-3 mb-6">
-            <Rocket className="w-8 h-8 text-cyan-400" />
-            <h3 className="text-3xl font-bold text-white">
-              Ready to Transform Your Enterprise?
-            </h3>
-            <Shield className="w-8 h-8 text-purple-400" />
-          </div>
-          
-          <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
-            Join 500+ enterprises achieving <span className="text-cyan-400 font-bold">300% ROI</span>, 
-            <span className="text-purple-400 font-bold"> 85% automation</span>, and 
-            <span className="text-pink-400 font-bold"> complete digital transformation</span> with Zion Tech Group's AI solutions
-          </p>
-
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
-            <Link
-              href="/contact"
-              className="group flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl"
-            >
-              <Sparkles className="w-5 h-5" />
-              <span>Start Your AI Journey</span>
-            </Link>
-            
-            <Link
-              href="/blog"
-              className="group flex items-center gap-3 border-2 border-white/30 hover:border-white/60 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1"
-            >
-              <span>Explore All Content</span>
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-=======
         <div className="text-center bg-white/5 backdrop-blur-lg rounded-3xl border border-white/10 p-12">
           <div className="flex items-center justify-center gap-4 mb-6">
             <Rocket className="w-8 h-8 text-cyan-400" />
@@ -262,7 +154,6 @@ const NewContentPromotionalBanner2026: React.FC = () => {
             <Link href="/blog" className="group flex items-center gap-3 border-2 border-white/20 hover:border-cyan-400 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 hover:bg-white/5">
               <span>Explore All Content</span>
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
->>>>>>> cursor/fix-errors-and-merge-to-main-a82c
             </Link>
           </div>
 
@@ -277,19 +168,11 @@ const NewContentPromotionalBanner2026: React.FC = () => {
               <div className="text-gray-300">Average ROI</div>
             </div>
             <div className="text-center">
-<<<<<<< HEAD
-              <div className="text-3xl font-bold text-green-400 mb-2">99.9%</div>
-              <div className="text-gray-300">System Uptime</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-yellow-400 mb-2">24/7</div>
-=======
               <div className="text-3xl font-bold text-blue-400 mb-2">99.9%</div>
               <div className="text-gray-300">System Uptime</div>
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold text-green-400 mb-2">24/7</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-a82c
               <div className="text-gray-300">Expert Support</div>
             </div>
           </div>
