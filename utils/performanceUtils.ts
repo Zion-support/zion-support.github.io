@@ -41,12 +41,15 @@ export const throttle = <T extends (...args: unknown[]) => unknown>(
 };
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-fb16
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0a61
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-11d4
 // Preload critical resources
 export const preloadCriticalResources = (): void => {
   if (typeof window === 'undefined') return;

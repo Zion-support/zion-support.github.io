@@ -82,7 +82,14 @@ export const recordBannerImpression = (impression: Omit<BannerImpression, 'times
     };
     
     impressions.push(newImpression);
+<<<<<<< HEAD
     storeImpressions(impressions);
+=======
+    
+    // Keep only last 1000 impressions to prevent storage bloat
+    const trimmedImpressions = impressions.slice(-1000);
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(trimmedImpressions));
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-11d4
   } catch (error) {
     console.error('Failed to record banner impression:', error);
   }
@@ -373,4 +380,7 @@ export default {
   trackBannerClickWithPage,
   trackBannerVisibility
 };
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-11d4
