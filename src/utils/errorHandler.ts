@@ -4,12 +4,12 @@
  */
 
 export interface ErrorContext {
-  component?: string;
-  action?: string;
-  userId?: string;
+  component?: string | undefined;
+  action?: string | undefined;
+  userId?: string | undefined;
   timestamp: number;
-  userAgent?: string;
-  url?: string;
+  userAgent?: string | undefined;
+  url?: string | undefined;
 }
 
 export interface ErrorReport {
@@ -33,13 +33,18 @@ class ErrorHandler {
   ): void {
     const errorReport: ErrorReport = {
       message: typeof error === 'string' ? error : error.message,
-      stack: typeof error === 'string' ? undefined : error.stack,
+      stack: typeof error === 'string' ? '' : error.stack || '',
       context: {
         timestamp: Date.now(),
+<<<<<<< HEAD
         userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : '',
+=======
+        userAgent:
+          typeof window !== 'undefined' ? window.navigator.userAgent : '',
+>>>>>>> main
         url: typeof window !== 'undefined' ? window.location.href : '',
         ...context,
-      },
+      } as ErrorContext,
       severity,
     };
 
@@ -51,12 +56,12 @@ class ErrorHandler {
     }
 
     // Log to console in development
-    if (process.env.NODE_ENV === 'development') {
+    if (process.env['NODE_ENV'] === 'development') {
       console.error('Error logged:', errorReport);
     }
 
     // Send to external service in production
-    if (process.env.NODE_ENV === 'production') {
+    if (process.env['NODE_ENV'] === 'production') {
       this.sendToErrorService(errorReport);
     }
   }
@@ -102,7 +107,7 @@ class ErrorHandler {
     if (typeof window === 'undefined') return;
 
     // Handle unhandled promise rejections
-    window.addEventListener('unhandledrejection', (event) => {
+    window.addEventListener('unhandledrejection', event => {
       this.logError(
         new Error(event.reason),
         { action: 'unhandledrejection' },
@@ -111,7 +116,7 @@ class ErrorHandler {
     });
 
     // Handle JavaScript errors
-    window.addEventListener('error', (event) => {
+    window.addEventListener('error', event => {
       this.logError(
         event.error || new Error(event.message),
         {

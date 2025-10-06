@@ -21,7 +21,9 @@ const Demo: React.FC = () => {
     message: '',
   });
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
@@ -37,19 +39,21 @@ const Demo: React.FC = () => {
 
   const features = [
     {
-      icon: <Calendar className="w-6 h-6" />,
-      title: "Schedule Demo",
-      description: "Book a personalized demo with our AI experts.",
+      icon: <Calendar className='w-6 h-6' />,
+      title: 'Schedule Demo',
+      description: 'Book a personalized demo with our AI experts.',
     },
     {
-      icon: <Play className="w-6 h-6" />,
-      title: "Live Demo",
-      description: "See our AI solutions in action with real-time demonstrations.",
+      icon: <Play className='w-6 h-6' />,
+      title: 'Live Demo',
+      description:
+        'See our AI solutions in action with real-time demonstrations.',
     },
     {
-      icon: <CheckCircle className="w-6 h-6" />,
-      title: "Custom Solutions",
-      description: "Get tailored AI solutions for your specific business needs.",
+      icon: <CheckCircle className='w-6 h-6' />,
+      title: 'Custom Solutions',
+      description:
+        'Get tailored AI solutions for your specific business needs.',
     },
   ];
 
