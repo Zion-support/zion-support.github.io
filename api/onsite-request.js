@@ -27,13 +27,14 @@ async function handler(req, res) {
 
   const file = path.join(process.cwd(), 'data', 'onsite-requests.json');
   let existing = [];
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd65
+>>>>>>> b0d6dda8406c2e54af3529a18b3e8c5f6ab37739
   try {
     existing = JSON.parse(fs.readFileSync(file, 'utf8'));
     if (!Array.isArray(existing)) existing = [];
   } catch {
     // File doesn't exist or is invalid, use empty array
   }
-
   existing.push({
     name,
     email,
@@ -43,10 +44,8 @@ async function handler(req, res) {
     details: _details,
     createdAt: new Date().toISOString()
   });
-
   fs.writeFileSync(file, JSON.stringify(existing, null, 2));
   res.statusCode = 200;
   res.json({ success: true });
 }
-
 module.exports = withSentry(handler);

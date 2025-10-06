@@ -1,15 +1,15 @@
 import { NextApiRequest, NextApiResponse } from 'next';
+>>>>>>> b0d6dda8406c2e54af3529a18b3e8c5f6ab37739
 import type { NextApiRequest, NextApiResponse } from 'next';
-
+import { NextApiRequest, NextApiResponse } from 'next';
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd65
 export interface ApiError extends Error {
   statusCode?: number;
   isOperational?: boolean;
 }
-
 export class AppError extends Error implements ApiError {
   public statusCode: number;
   public isOperational: boolean;
-
   constructor(message: string, statusCode: number = 500) {
     super(message);
     this.statusCode = statusCode;
@@ -17,13 +17,14 @@ export class AppError extends Error implements ApiError {
     Error.captureStackTrace(this, this.constructor);
   }
 }
-
 export const errorHandler = (
   err: ApiError,
   req: NextApiRequest,
   res: NextApiResponse
 ) => {
   const { statusCode = 500, message } = err;
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd65
+>>>>>>> b0d6dda8406c2e54af3529a18b3e8c5f6ab37739
   // Log error for monitoring
   console.error(`API Error [${statusCode}]: ${message}`, {
     url: req.url,
@@ -32,7 +33,6 @@ export const errorHandler = (
     userAgent: req.headers['user-agent'],
     ip: req.headers['x-forwarded-for'] || req.connection.remoteAddress
   });
-
   res.status(statusCode).json({
     error: {
       message:
@@ -45,7 +45,6 @@ export const errorHandler = (
     }
   });
 };
-
 export const asyncHandler =
   (fn: Function) =>
   (req: NextApiRequest, res: NextApiResponse) next: Function) => {Promise.resolve(fn(req, res) next)).catch((error: Error) => next(error))}

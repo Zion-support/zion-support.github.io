@@ -32,13 +32,22 @@ async function handler(req, res) {
     res.json({ message: 'Wallet endpoint' });
 >>>>>>> main
   } catch (err) {
+<<<<<<< HEAD
     console.error('Wallet API error:', err);
     res.statusCode = 500;
     res.json({ error: err.message || 'Wallet operation failed' });
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> main
 >>>>>>> main
+=======
+=======
+    console.error('Wallet error:', err);
+    res.statusCode = 500;
+    res.json({ error: err.message });
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd65
+>>>>>>> b0d6dda8406c2e54af3529a18b3e8c5f6ab37739
   }
 }
 

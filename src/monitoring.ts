@@ -2,6 +2,7 @@
 import { analytics } from './utils/analytics';
 import { errorHandler } from './utils/errorHandler';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { performanceOptimizer } from './utils/performanceOptimizer';
 =======
 <<<<<<< HEAD
@@ -18,11 +19,14 @@ import { performanceOptimizer, lazyLoadImages, measurePageLoad, reportWebVitals 
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main
+=======
+>>>>>>> b0d6dda8406c2e54af3529a18b3e8c5f6ab37739
 
 // Initialize performance monitoring
 if (typeof window !== 'undefined') {
   // Track page load
   analytics.trackPageView(window.location.pathname);
+<<<<<<< HEAD
   
   // Initialize performance optimizer
 <<<<<<< HEAD
@@ -88,6 +92,8 @@ if (typeof window !== 'undefined') {
     performanceOptimizer.reportWebVitals(metrics);
   }
 >>>>>>> main
+=======
+>>>>>>> b0d6dda8406c2e54af3529a18b3e8c5f6ab37739
 }
 
-export { analytics, errorHandler, performanceOptimizer };
+export { analytics, errorHandler };

@@ -1,5 +1,6 @@
 import { ProviderConnection, SyncLogEntry } from './types';
 import { v4 as uuidv4 } from 'uuid';
+>>>>>>> b0d6dda8406c2e54af3529a18b3e8c5f6ab37739
 import type { ProviderConnection, SyncLogEntry } from './types';
 import { v4 as uuidv4 } from 'uuid';
 // Simple UUID v4 implementation
@@ -10,7 +11,9 @@ function uuidv4(): string {
     return v.toString(16);
   });
 }
-
+import { ProviderConnection, SyncLogEntry } from './types';
+import { v4 as uuidv4 } from 'uuid';
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd65
 export async function simulateAction<T = any>(
   connection: ProviderConnection,
   action: string,
@@ -24,14 +27,12 @@ export async function simulateAction<T = any>(
     action,
     details
   };
-
   // In a real implementation, call provider SDK/API here using connection.accessToken
   return {
     log,
     result: { ok: true } as unknown as T
   };
 }
-
 // CRM actions
 export const crm = {
   async syncContact(connection: ProviderConnection, contact: Record<string, any>) {
@@ -43,11 +44,11 @@ export const crm = {
   async addProjectNote(connection: ProviderConnection, note: Record<string, any>) {
     return simulateAction(connection, 'crm.addProjectNote', { note });
   },
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd65
   async addEmailTouchpoint(connection: ProviderConnection, touch: Record<string, any>) {
     return simulateAction(connection, 'crm.addEmailTouchpoint', { touch });
   }
 };
-
 // ATS actions
 export const ats = {
   async pushApplicant(connection: ProviderConnection, applicant: Record<string, any>) {

@@ -13,18 +13,20 @@ async function handler(req, res) {
 
   try {
     const { email } = req.body || {};
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd65
+>>>>>>> b0d6dda8406c2e54af3529a18b3e8c5f6ab37739
     if (!isValidEmail(email)) {
       res.statusCode = 400;
       res.json({ error: 'Invalid email' });
       return;
     }
-
     const file = path.join(
       process.cwd(),
       'data',
       'newsletter-subscriptions.json',
     );
-    
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd65
+>>>>>>> b0d6dda8406c2e54af3529a18b3e8c5f6ab37739
     let existing = [];
     try {
       existing = JSON.parse(fs.readFileSync(file, 'utf8'));
@@ -32,7 +34,6 @@ async function handler(req, res) {
     } catch {
       // File doesn't exist or is invalid, use empty array
     }
-
     existing.push({
       email,
       subscribedAt: new Date().toISOString()
@@ -46,5 +47,4 @@ async function handler(req, res) {
     res.json({ error: err.message || 'Subscription failed' });
   }
 }
-
 module.exports = withSentry(handler);
