@@ -342,11 +342,7 @@ export const withPerformanceTracking = <P extends object>(
     return React.createElement(Component, props as any);
   });
   
-<<<<<<< HEAD
-  return WrappedComponent as React.ComponentType<P>;
-=======
   return WrappedComponent as unknown as React.ComponentType<P>;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-445b
 };
 
 // Create and export a default instance

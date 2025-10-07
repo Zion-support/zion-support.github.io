@@ -7,43 +7,36 @@ interface AccessibilityEnhancerProps {
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
   const [isHighContrast, setIsHighContrast] = useState(false);
   const [fontSize, setFontSize] = useState('normal');
+  const [reducedMotion, setReducedMotion] = useState(false);
 
   useEffect(() => {
     // Check for saved accessibility preferences
     const savedHighContrast = localStorage.getItem('highContrast') === 'true';
     const savedFontSize = localStorage.getItem('fontSize') || 'normal';
+    const savedReducedMotion = localStorage.getItem('reducedMotion') === 'true';
     
     setIsHighContrast(savedHighContrast);
     setFontSize(savedFontSize);
+    setReducedMotion(savedReducedMotion);
     
     // Apply initial styles
-    applyAccessibilityStyles(savedHighContrast, savedFontSize);
+    applyAccessibilityStyles(savedHighContrast, savedFontSize, savedReducedMotion);
+    
+    // Add accessibility enhancements
+    addSkipLinks();
+    addAriaLandmarks();
+    enhanceFocusManagement();
   }, []);
 
-  const applyAccessibilityStyles = (highContrast: boolean, fontSize: string) => {
+  const applyAccessibilityStyles = (highContrast: boolean, fontSize: string, reducedMotion: boolean) => {
     const root = document.documentElement;
     
-<<<<<<< HEAD
-=======
     // High contrast mode
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-445b
     if (highContrast) {
       root.classList.add('high-contrast');
     } else {
       root.classList.remove('high-contrast');
     }
-<<<<<<< HEAD
-    
-    // Apply font size
-    root.style.setProperty('--font-size', fontSize === 'large' ? '1.2em' : '1em');
-  };
-
-  const toggleHighContrast = () => {
-    const newHighContrast = !isHighContrast;
-    setIsHighContrast(newHighContrast);
-    localStorage.setItem('highContrast', newHighContrast.toString());
-    applyAccessibilityStyles(newHighContrast, fontSize);
-=======
 
     // Font size
     root.classList.remove('font-small', 'font-normal', 'font-large');
@@ -66,60 +59,14 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       skipLink.textContent = 'Skip to main content';
       document.body.insertBefore(skipLink, document.body.firstChild);
     }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-445b
   };
 
   const changeFontSize = (newSize: string) => {
     setFontSize(newSize);
     localStorage.setItem('fontSize', newSize);
-    applyAccessibilityStyles(isHighContrast, newSize);
+    applyAccessibilityStyles(isHighContrast, newSize, reducedMotion);
   };
 
-<<<<<<< HEAD
-  return (
-    <div className="accessibility-enhancer">
-      <div className="accessibility-controls fixed top-4 right-4 z-50 bg-white p-4 rounded-lg shadow-lg">
-        <h3 className="text-sm font-semibold mb-2">Accessibility</h3>
-        <div className="space-y-2">
-          <button
-            onClick={toggleHighContrast}
-            className={`px-3 py-1 text-xs rounded ${
-              isHighContrast ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-700'
-            }`}
-          >
-            High Contrast
-          </button>
-          <div className="flex space-x-1">
-            <button
-              onClick={() => changeFontSize('small')}
-              className={`px-2 py-1 text-xs rounded ${
-                fontSize === 'small' ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-700'
-              }`}
-            >
-              A-
-            </button>
-            <button
-              onClick={() => changeFontSize('normal')}
-              className={`px-2 py-1 text-xs rounded ${
-                fontSize === 'normal' ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-700'
-              }`}
-            >
-              A
-            </button>
-            <button
-              onClick={() => changeFontSize('large')}
-              className={`px-2 py-1 text-xs rounded ${
-                fontSize === 'large' ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-700'
-              }`}
-            >
-              A+
-            </button>
-          </div>
-        </div>
-      </div>
-      {children}
-    </div>
-=======
   const toggleHighContrast = () => {
     const newHighContrast = !isHighContrast;
     setIsHighContrast(newHighContrast);
@@ -185,7 +132,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
         </div>
       </div>
     </>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-445b
   );
 };
 
