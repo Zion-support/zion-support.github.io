@@ -77,8 +77,8 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 
       if (enableConsoleLogging) {
         logger.group('Performance Metrics', () => {
-          logger.info('Metrics:', { metrics: currentMetrics });
-          logger.info('Score:', { score });
+          logger.debug('Metrics', { metrics: currentMetrics });
+          logger.debug('Score', { score });
         });
       }
     };
@@ -245,9 +245,15 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
               onClick={() => {
                 // Trigger optimization suggestions
                 logger.group('Performance Optimization Suggestions', () => {
+<<<<<<< HEAD
                   if (metrics.bundleSize > 500000) logger.info('⚠️ Reduce bundle size');
                   if (metrics.loadTime > 3000) logger.info('⚠️ Optimize images');
                   if (metrics.cacheHitRate < 0.8) logger.info('⚠️ Improve caching');
+=======
+                  if (metrics.bundleSize > 500000) logger.warn('⚠️ Reduce bundle size');
+                  if (metrics.loadTime > 3000) logger.warn('⚠️ Optimize images');
+                  if (metrics.cacheHitRate < 0.8) logger.warn('⚠️ Improve caching');
+>>>>>>> cursor/fix-errors-and-merge-to-main-b18d
                 });
               }}
               className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-colors text-sm"
