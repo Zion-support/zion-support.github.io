@@ -1,30 +1,12 @@
 import React from 'react';
-<<<<<<< HEAD
-import Link from 'next/link';
-
-=======
-<<<<<<< HEAD
-import Link from 'next/link';
-
-const ApiDocumentation: React.FC = () => {
-  return (
-    <div className='min-h-screen bg-gray-50 py-12'>
-      <div className='container mx-auto px-4'>
-        <div className='max-w-4xl mx-auto'>
-          <h1 className='text-4xl font-bold text-gray-900 mb-8'>
-            API Documentation
-          </h1>
-=======
 import { Link } from 'react-router-dom';
 
-<<<<<<< HEAD
 const APIDocumentation: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-50 py-8">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-3xl font-bold text-gray-800 mb-8">API Documentation</h1>
->>>>>>> origin/main
           
           <div className='bg-white rounded-lg shadow-lg p-8 mb-8'>
             <h2 className='text-2xl font-semibold text-gray-800 mb-6'>
@@ -38,50 +20,73 @@ const APIDocumentation: React.FC = () => {
                 <div className='space-y-2 text-sm'>
                   <div>
                     <code className='bg-gray-100 px-2 py-1 rounded'>
-<<<<<<< HEAD
-                      GET /api/content
-=======
                       GET /content
->>>>>>> origin/main
                     </code>{' '}
                     - List all content
                   </div>
                   <div>
                     <code className='bg-gray-100 px-2 py-1 rounded'>
-<<<<<<< HEAD
-                      POST /api/content
-=======
                       POST /content
->>>>>>> origin/main
                     </code>{' '}
-                    - Create content
+                    - Create new content
                   </div>
                   <div>
                     <code className='bg-gray-100 px-2 py-1 rounded'>
-<<<<<<< HEAD
-                      GET /api/content/[id]
-=======
-                      GET /content/{'{id}'}
->>>>>>> origin/main
-                    </code>{' '}
-                    - Get content by ID
-                  </div>
-                  <div>
-                    <code className='bg-gray-100 px-2 py-1 rounded'>
-<<<<<<< HEAD
-                      PUT /api/content/[id]
-=======
-                      PUT /content/{'{id}'}
->>>>>>> origin/main
+                      PUT /content/:id
                     </code>{' '}
                     - Update content
                   </div>
                   <div>
                     <code className='bg-gray-100 px-2 py-1 rounded'>
-<<<<<<< HEAD
-                      DELETE /api/content/[id]
+                      DELETE /content/:id
                     </code>{' '}
                     - Delete content
+                  </div>
+                </div>
+              </div>
+              
+              <div className='border-l-4 border-green-500 pl-4'>
+                <h3 className='text-lg font-medium text-gray-800 mb-2'>
+                  Authentication
+                </h3>
+                <div className='space-y-2 text-sm'>
+                  <div>
+                    <code className='bg-gray-100 px-2 py-1 rounded'>
+                      POST /auth/login
+                    </code>{' '}
+                    - User login
+                  </div>
+                  <div>
+                    <code className='bg-gray-100 px-2 py-1 rounded'>
+                      POST /auth/register
+                    </code>{' '}
+                    - User registration
+                  </div>
+                  <div>
+                    <code className='bg-gray-100 px-2 py-1 rounded'>
+                      POST /auth/refresh
+                    </code>{' '}
+                    - Refresh token
+                  </div>
+                </div>
+              </div>
+              
+              <div className='border-l-4 border-purple-500 pl-4'>
+                <h3 className='text-lg font-medium text-gray-800 mb-2'>
+                  Analytics
+                </h3>
+                <div className='space-y-2 text-sm'>
+                  <div>
+                    <code className='bg-gray-100 px-2 py-1 rounded'>
+                      GET /analytics/overview
+                    </code>{' '}
+                    - Get analytics overview
+                  </div>
+                  <div>
+                    <code className='bg-gray-100 px-2 py-1 rounded'>
+                      GET /analytics/performance
+                    </code>{' '}
+                    - Get performance metrics
                   </div>
                 </div>
               </div>
@@ -93,118 +98,19 @@ const APIDocumentation: React.FC = () => {
               Code Examples
             </h2>
             <div className='space-y-6'>
-              <div>
+              <div className='border-l-4 border-green-500 pl-4'>
                 <h3 className='text-lg font-medium text-gray-800 mb-3'>
-                  JavaScript/Node.js
+                  JavaScript/Node.js Example
                 </h3>
-                <pre className='bg-gray-900 text-green-400 p-4 rounded-lg overflow-x-auto text-sm'>
-                  {`const axios = require('axios')
-
-const apiKey = 'your-api-key'
-const baseUrl = 'https://api.ziontechgroup.com'
-=======
-                      DELETE /content/{'{id}'}
-                    </code>{' '}
-                    - Delete content
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className='bg-white rounded-lg shadow-lg p-8 mb-8'>
-            <h2 className='text-2xl font-semibold text-gray-800 mb-6'>
-              Code Examples
-            </h2>
-            <div className='space-y-6'>
-              <div>
-                <h3 className='text-lg font-medium text-gray-800 mb-3'>
-                  JavaScript/Node.js
-                </h3>
-                <pre className='bg-gray-900 text-green-400 p-4 rounded-lg overflow-x-auto text-sm'>
+                <pre className="bg-gray-900 text-green-400 p-4 rounded-lg overflow-x-auto text-sm">
                   {`const axios = require('axios');
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-edf2
-const ApiDocumentation: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gray-50 py-8">
-      <div className="max-w-4xl mx-auto px-4">
-        <h1 className="text-3xl font-bold text-gray-900 mb-8">API Documentation</h1>
-        
-        <div className="bg-white rounded-lg shadow-lg p-8 mb-8">
-          <h2 className="text-2xl font-semibold text-gray-800 mb-6">
-            API Endpoints
-          </h2>
-          <div className="space-y-6">
-            <div className="border-l-4 border-blue-500 pl-4">
-              <h3 className="text-lg font-medium text-gray-800 mb-2">
-                Content Management
-              </h3>
-              <div className="space-y-2 text-sm">
-                <div>
-                  <code className="bg-gray-100 px-2 py-1 rounded">
-                    GET /api/content
-                  </code>{' '}
-                  - List all content
-                </div>
-                <div>
-                  <code className="bg-gray-100 px-2 py-1 rounded">
-                    POST /api/content
-                  </code>{' '}
-                  - Create content
-                </div>
-                <div>
-                  <code className="bg-gray-100 px-2 py-1 rounded">
-                    GET /api/content/{'{id}'}
-                  </code>{' '}
-                  - Get content by ID
-                </div>
-                <div>
-                  <code className="bg-gray-100 px-2 py-1 rounded">
-                    PUT /api/content/{'{id}'}
-                  </code>{' '}
-                  - Update content
-                </div>
-                <div>
-                  <code className="bg-gray-100 px-2 py-1 rounded">
-                    DELETE /api/content/{'{id}'}
-                  </code>{' '}
-                  - Delete content
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="bg-white rounded-lg shadow-lg p-8 mb-8">
-          <h2 className="text-2xl font-semibold text-gray-800 mb-6">
-            Authentication
-          </h2>
-          <p className="text-gray-600 mb-4">
-            All API requests require authentication using an API key in the Authorization header.
-          </p>
-          <pre className="bg-gray-900 text-green-400 p-4 rounded-lg overflow-x-auto text-sm">
-            {`Authorization: Bearer your-api-key`}
-          </pre>
-        </div>
-
-        <div className="bg-white rounded-lg shadow-lg p-8 mb-8">
-          <h2 className="text-2xl font-semibold text-gray-800 mb-6">
-            Example Usage
-          </h2>
-          <h3 className="text-lg font-medium text-gray-800 mb-3">
-            JavaScript/Node.js
-          </h3>
-          <pre className="bg-gray-900 text-green-400 p-4 rounded-lg overflow-x-auto text-sm">
-            {`const axios = require('axios');
 
 const apiKey = 'your-api-key';
 const baseUrl = 'https://api.ziontechgroup.com';
->>>>>>> origin/main
 
 const createContent = async () => {
   try {
-    const response = await axios.post(\`\${baseUrl}/api/content\`, {
+    const response = await axios.post(\`\${baseUrl}/content\`, {
       title: 'New Content',
       body: 'Content body here'
     }, {
@@ -212,53 +118,14 @@ const createContent = async () => {
         'Authorization': \`Bearer \${apiKey}\`,
         'Content-Type': 'application/json'
       }
-<<<<<<< HEAD
-    })
-    console.log(response.data)
-  } catch (error) {
-    console.error('Error:', error.response.data)
-  }
-}`}
-=======
     });
     console.log('Content created:', response.data);
   } catch (error) {
-    console.error('Error:', error.response.data);
-  }
-};`}
-<<<<<<< HEAD
-          </pre>
-        </div>
-
-        <div className="text-center">
-          <Link
-            href="/contact"
-            className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
-          >
-            Contact Support
-          </Link>
-=======
->>>>>>> origin/main
-                </pre>
-              </div>
-            </div>
-          </div>
-
-          <div className='text-center'>
-<<<<<<< HEAD
-            <Link href='/contact'>
-              <span className='inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors'>
-                Contact Support
-              </span>
-=======
-            <Link
-              to='/contact'
-              className='inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors'
-=======
     console.error('Error:', error.response?.data || error.message);
   }
 };`}
-              </pre>
+                </pre>
+              </div>
             </div>
           </div>
           
@@ -266,29 +133,14 @@ const createContent = async () => {
             <Link
               to="/contact"
               className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
->>>>>>> cursor/fix-errors-and-merge-to-main-ccfd
             >
               Contact Support
->>>>>>> origin/main
             </Link>
           </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-edf2
         </div>
       </div>
     </div>
   );
 };
 
-<<<<<<< HEAD
-export default ApiDocumentation;
-=======
-<<<<<<< HEAD
-export default ApiDocumentation;
-=======
-<<<<<<< HEAD
 export default APIDocumentation;
-=======
-export default ApiDocumentation;
->>>>>>> cursor/fix-errors-and-merge-to-main-ccfd
->>>>>>> origin/main
->>>>>>> cursor/fix-errors-and-merge-to-main-edf2
