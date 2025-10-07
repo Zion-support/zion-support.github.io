@@ -41,11 +41,7 @@ const HomePage: React.FC = () => {
       />
       <AccessibilityEnhancer>
         <div className='min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100'>
-<<<<<<< HEAD
-        <header className="bg-white shadow-sm sticky top-0 z-50" role="banner">
-=======
           <header className="bg-white shadow-sm sticky top-0 z-50" role="banner">
->>>>>>> cursor/fix-errors-and-merge-to-main-5a1e
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex justify-between items-center py-6">
               <div className="flex items-center">

@@ -19,49 +19,6 @@ const LoadingFallback = memo(() => (
   </div>
 ));
 
-<<<<<<< HEAD
-const App = memo(() => {
-  // Structured data for SEO
-  const structuredData = useMemo(
-    () => ({
-      '@context': 'https://schema.org',
-      '@type': 'Organization',
-      name: 'Zion Tech Group',
-      description:
-        'Leading provider of AI-powered enterprise solutions and digital transformation services',
-      url: 'https://ziontechgroup.com',
-      logo: 'https://ziontechgroup.com/logo.png',
-      contactPoint: {
-        '@type': 'ContactPoint',
-        telephone: '+1-302-464-0950',
-        contactType: 'customer service',
-        email: 'kleber@ziontechgroup.com',
-      },
-      address: {
-        '@type': 'PostalAddress',
-        streetAddress: '364 E Main St STE 1008',
-        addressLocality: 'Middletown',
-        addressRegion: 'DE',
-        postalCode: '19709',
-        addressCountry: 'US',
-      },
-      sameAs: [
-        'https://linkedin.com/company/zion-tech-group',
-        'https://twitter.com/ziontechgroup',
-      ],
-      offers: {
-        '@type': 'Offer',
-        name: 'AI Enterprise Transformation Services',
-        description:
-          'Transform your enterprise with AI-powered solutions achieving 300% ROI, 70% cost reduction, and 90% efficiency gains',
-        price: '50000',
-        priceCurrency: 'USD',
-        availability: 'https://schema.org/InStock',
-      },
-    }),
-    []
-  );
-=======
 // Structured data for SEO
 const structuredData = useMemo(
   () => ({
@@ -102,8 +59,8 @@ const structuredData = useMemo(
   }),
   []
 );
->>>>>>> cursor/fix-errors-and-merge-to-main-5a1e
 
+const App = memo(() => {
   // Performance optimization: Preload critical resources
   useEffect(() => {
     if (typeof document !== 'undefined') {
@@ -188,11 +145,7 @@ const structuredData = useMemo(
 
 App.displayName = 'App';
 
-<<<<<<< HEAD
-=======
 export default App;
-
->>>>>>> cursor/fix-errors-and-merge-to-main-5a1e
 const container = document.getElementById('root');
 if (container) {
   const root = createRoot(container);
