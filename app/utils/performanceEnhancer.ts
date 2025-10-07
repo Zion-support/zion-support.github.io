@@ -120,7 +120,6 @@ export const usePerformanceMonitor = (componentName: string) => {
       fn();
       const duration = performance.now() - start;
       monitor.trackRender(`${componentName}_function`, duration);
->>>>>>> e2aec618376f3db9bd60312768ea5d9abc7086c8
     }
   };
 };
@@ -184,6 +183,8 @@ export const optimizeScrollPerformance = () => {
     }
   };
 
+  window.addEventListener('scroll', requestTick, { passive: true });
+
   // Track Core Web Vitals
   const trackCLS = () => {
     let clsValue = 0;
@@ -210,17 +211,22 @@ export const optimizeScrollPerformance = () => {
       observer.disconnect();
       return clsValue;
     };
->>>>>>> e2aec618376f3db9bd60312768ea5d9abc7086c8
   };
 
-  const requestTick = () => {
-    if (!ticking) {
-      requestAnimationFrame(updateScrollPosition);
-      ticking = true;
-    }
-  };
+  const trackLCP = () => {
+    let lcpValue = 0;
 
-  window.addEventListener('scroll', requestTick, { passive: true });
+    const observer = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      const lastEntry = entries[entries.length - 1];
+      lcpValue = lastEntry.startTime;
+      console.log('[Web Vitals] LCP:', lcpValue);
+    });
+
+    observer.observe({ entryTypes: ['largest-contentful-paint'] });
+
+    return () => observer.disconnect();
+  };
 
   const trackFID = () => {
     interface FirstInputEntry extends PerformanceEntry {
@@ -250,7 +256,6 @@ export const optimizeScrollPerformance = () => {
     cleanupLCP();
     cleanupFID();
   };
->>>>>>> e2aec618376f3db9bd60312768ea5d9abc7086c8
 };
 
 // Memory usage monitoring
@@ -260,6 +265,8 @@ export const getMemoryUsage = () => {
   }
 
   const memory = (performance as { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
+  if (!memory) return null;
+
   return {
     used: memory.usedJSHeapSize,
     total: memory.totalJSHeapSize,
@@ -274,6 +281,8 @@ export const collectPerformanceMetrics = () => {
 
   const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
   const paint = performance.getEntriesByType('paint');
+
+  if (!navigation) return null;
 
   return {
     navigation: {

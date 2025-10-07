@@ -3,6 +3,8 @@
  * Tools to improve accessibility and user experience
  */
 
+import { useEffect, useRef } from 'react';
+
 // Check if element is visible to screen readers
 export const isVisibleToScreenReader = (element: HTMLElement): boolean => {
   const style = window.getComputedStyle(element);
@@ -56,6 +58,167 @@ export const focusManagement = {
 
     element.addEventListener('keydown', handleTabKey);
     firstElement?.focus();
+
+    return () => {
+      element.removeEventListener('keydown', handleTabKey);
+    };
+  },
+
+  // Restore focus to previously focused element
+  restoreFocus: (element: HTMLElement) => {
+    element.focus();
+  },
+};
+
+// Announce to screen readers
+export const announceToScreenReader = (message: string, priority: 'polite' | 'assertive' = 'polite') => {
+  if (typeof document === 'undefined') return;
+
+  const announcement = document.createElement('div');
+  announcement.setAttribute('aria-live', priority);
+  announcement.setAttribute('aria-atomic', 'true');
+  announcement.className = 'sr-only';
+  announcement.textContent = message;
+
+  document.body.appendChild(announcement);
+
+  setTimeout(() => {
+    document.body.removeChild(announcement);
+  }, 1000);
+};
+
+// Color contrast checker
+export const getColorContrast = (color1: string, color2: string): number => {
+  const getLuminance = (color: string): number => {
+    const rgb = color.match(/\d+/g);
+    if (!rgb || rgb.length !== 3) return 0;
+
+    const [r, g, b] = rgb.map((c) => {
+      const val = parseInt(c, 10) / 255;
+      return val <= 0.03928 ? val / 12.92 : Math.pow((val + 0.055) / 1.055, 2.4);
+    });
+
+    return 0.2126 * r + 0.7152 * g + 0.0722 * b;
+  };
+
+  const lum1 = getLuminance(color1);
+  const lum2 = getLuminance(color2);
+  const brightest = Math.max(lum1, lum2);
+  const darkest = Math.min(lum1, lum2);
+
+  return (brightest + 0.05) / (darkest + 0.05);
+};
+
+// Accessibility validation
+export const validateAccessibility = () => {
+  if (typeof document === 'undefined') return [];
+
+  const issues: string[] = [];
+
+  // Check for missing alt text
+  const imagesWithoutAlt = document.querySelectorAll('img:not([alt])');
+  imagesWithoutAlt.forEach((img) => {
+    issues.push(`Image missing alt text: ${img.getAttribute('src')}`);
+  });
+
+  // Check for missing labels
+  const inputsWithoutLabels = document.querySelectorAll('input:not([aria-label]):not([aria-labelledby])');
+  inputsWithoutLabels.forEach((input) => {
+    const id = input.getAttribute('id');
+    const hasLabel = id && document.querySelector(`label[for="${id}"]`);
+    if (!hasLabel) {
+      issues.push(`Input missing label: ${input.getAttribute('name') || input.getAttribute('type')}`);
+    }
+  });
+
+  // Check heading hierarchy
+  const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
+  let previousLevel = 0;
+  headings.forEach((heading) => {
+    const level = parseInt(heading.tagName.charAt(1), 10);
+    if (level > previousLevel + 1) {
+      issues.push(`Heading hierarchy skipped: ${heading.tagName} after h${previousLevel}`);
+    }
+    previousLevel = level;
+  });
+
+  return issues;
+};
+
+// Keyboard navigation enhancement
+export const addKeyboardNavigation = () => {
+  if (typeof document === 'undefined') return;
+
+  // Add keyboard navigation for custom elements
+  const customElements = document.querySelectorAll('[data-keyboard-navigation]');
+  customElements.forEach((element) => {
+    element.setAttribute('tabindex', '0');
+    element.addEventListener('keydown', (e: Event) => {
+      const keyEvent = e as KeyboardEvent;
+      if (keyEvent.key === 'Enter' || keyEvent.key === ' ') {
+        keyEvent.preventDefault();
+        (element as HTMLElement).click();
+      }
+    });
+  });
+};
+
+// Accessibility configuration
+export interface AccessibilityConfig {
+  enableScreenReaderSupport: boolean;
+  enableHighContrast: boolean;
+  enableReducedMotion: boolean;
+  enableFocusManagement: boolean;
+  enableSkipLinks: boolean;
+  enableARIALabels: boolean;
+  enableColorContrast: boolean;
+  enableFontSizeAdjustment: boolean;
+  enableFocusTrapping: boolean;
+}
+
+const defaultAccessibilityConfig: AccessibilityConfig = {
+  enableScreenReaderSupport: true,
+  enableHighContrast: true,
+  enableReducedMotion: true,
+  enableFocusManagement: true,
+  enableSkipLinks: true,
+  enableARIALabels: true,
+  enableColorContrast: true,
+  enableFontSizeAdjustment: true,
+  enableFocusTrapping: true,
+};
+
+// Accessibility Enhancer class
+export class AccessibilityEnhancer {
+  private static instance: AccessibilityEnhancer;
+  private config: AccessibilityConfig;
+  private skipLinks: HTMLElement[] = [];
+  private focusableElements: HTMLElement[] = [];
+
+  constructor(config: Partial<AccessibilityConfig> = {}) {
+    this.config = { ...defaultAccessibilityConfig, ...config };
+  }
+
+  static getInstance(config?: Partial<AccessibilityConfig>): AccessibilityEnhancer {
+    if (!AccessibilityEnhancer.instance) {
+      AccessibilityEnhancer.instance = new AccessibilityEnhancer(config);
+    }
+    return AccessibilityEnhancer.instance;
+  }
+
+  // Initialize all accessibility features
+  initialize() {
+    if (typeof document === 'undefined') return;
+
+    this.setupScreenReaderSupport();
+    this.setupHighContrast();
+    this.setupReducedMotion();
+    this.setupFocusManagement();
+    this.setupSkipLinks();
+    this.setupARIALabels();
+    this.setupColorContrast();
+    this.setupFontSizeAdjustment();
+    this.setupFocusTrapping();
   }
 
   // Screen reader support
@@ -364,109 +527,13 @@ export const useAccessibility = (config?: Partial<AccessibilityConfig>) => {
   useEffect(() => {
     enhancer.current = AccessibilityEnhancer.getInstance(config);
     enhancer.current.initialize();
->>>>>>> e2aec618376f3db9bd60312768ea5d9abc7086c8
 
     return () => {
-      element.removeEventListener('keydown', handleTabKey);
+      enhancer.current?.cleanup();
     };
-  },
+  }, [config]);
 
-  // Restore focus to previously focused element
-  restoreFocus: (element: HTMLElement) => {
-    element.focus();
-  },
-};
-
-// Announce to screen readers
-export const announceToScreenReader = (message: string, priority: 'polite' | 'assertive' = 'polite') => {
-  if (typeof document === 'undefined') return;
-
-  const announcement = document.createElement('div');
-  announcement.setAttribute('aria-live', priority);
-  announcement.setAttribute('aria-atomic', 'true');
-  announcement.className = 'sr-only';
-  announcement.textContent = message;
-
-  document.body.appendChild(announcement);
-
-  setTimeout(() => {
-    document.body.removeChild(announcement);
-  }, 1000);
-};
-
-// Color contrast checker
-export const getColorContrast = (color1: string, color2: string): number => {
-  const getLuminance = (color: string): number => {
-    const rgb = color.match(/\d+/g);
-    if (!rgb || rgb.length !== 3) return 0;
-
-    const [r, g, b] = rgb.map((c) => {
-      const val = parseInt(c, 10) / 255;
-      return val <= 0.03928 ? val / 12.92 : Math.pow((val + 0.055) / 1.055, 2.4);
-    });
-
-    return 0.2126 * r + 0.7152 * g + 0.0722 * b;
-  };
-
-  const lum1 = getLuminance(color1);
-  const lum2 = getLuminance(color2);
-  const brightest = Math.max(lum1, lum2);
-  const darkest = Math.min(lum1, lum2);
-
-  return (brightest + 0.05) / (darkest + 0.05);
-};
-
-// Accessibility validation
-export const validateAccessibility = () => {
-  if (typeof document === 'undefined') return [];
-
-  const issues: string[] = [];
-
-  // Check for missing alt text
-  const imagesWithoutAlt = document.querySelectorAll('img:not([alt])');
-  imagesWithoutAlt.forEach((img) => {
-    issues.push(`Image missing alt text: ${img.getAttribute('src')}`);
-  });
-
-  // Check for missing labels
-  const inputsWithoutLabels = document.querySelectorAll('input:not([aria-label]):not([aria-labelledby])');
-  inputsWithoutLabels.forEach((input) => {
-    const id = input.getAttribute('id');
-    const hasLabel = id && document.querySelector(`label[for="${id}"]`);
-    if (!hasLabel) {
-      issues.push(`Input missing label: ${input.getAttribute('name') || input.getAttribute('type')}`);
-    }
-  });
-
-  // Check heading hierarchy
-  const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
-  let previousLevel = 0;
-  headings.forEach((heading) => {
-    const level = parseInt(heading.tagName.charAt(1), 10);
-    if (level > previousLevel + 1) {
-      issues.push(`Heading hierarchy skipped: ${heading.tagName} after h${previousLevel}`);
-    }
-    previousLevel = level;
-  });
-
-  return issues;
-};
-
-// Keyboard navigation enhancement
-export const addKeyboardNavigation = () => {
-  if (typeof document === 'undefined') return;
-
-  // Add keyboard navigation for custom elements
-  const customElements = document.querySelectorAll('[data-keyboard-navigation]');
-  customElements.forEach((element) => {
-    element.setAttribute('tabindex', '0');
-    element.addEventListener('keydown', (e: KeyboardEvent) => {
-      if (e.key === 'Enter' || e.key === ' ') {
-        e.preventDefault();
-        (element as HTMLElement).click();
-      }
-    });
-  });
+  return enhancer.current;
 };
 
 // Initialize accessibility enhancements
