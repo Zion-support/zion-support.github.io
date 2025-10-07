@@ -53,12 +53,103 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     }
   }
 
+<<<<<<< HEAD
   handleRetry = () => {
     this.setState({
       hasError: false,
       error: null,
       errorInfo: null,
     });
+=======
+  private generateSessionId(): string {
+    try {
+      return `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+    } catch {
+      return `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+    }
+  }
+
+  private async reportError(
+    error: Error,
+    errorInfo: ErrorInfo,
+    errorId: string,
+    retryCount: number
+  ): Promise<void> {
+    try {
+      const errorReport: ErrorReport = {
+        errorId,
+        error: {
+          name: error.name,
+          message: error.message,
+          stack: error.stack,
+        },
+        errorInfo: {
+          componentStack: errorInfo.componentStack,
+        },
+        timestamp: new Date().toISOString(),
+        userAgent: navigator.userAgent,
+        url: window.location.href,
+        sessionId: this.sessionId,
+        retryCount,
+        userId: this.getUserId(),
+        buildVersion: process.env.REACT_APP_VERSION || 'unknown',
+      };
+
+      // Send to error reporting service
+      await fetch('/api/error-report', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(errorReport),
+      });
+
+      // Send to analytics if enabled
+      if (this.props.enableAnalytics && typeof window !== 'undefined' && 'gtag' in window) {
+        (window as unknown as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag('event', 'error_boundary_error', {
+          event_category: 'Error',
+          event_label: error.name,
+          value: retryCount,
+        });
+      }
+    } catch (reportError) {
+      console.error('Failed to report error:', reportError);
+    }
+  }
+
+  private getUserId(): string | undefined {
+    try {
+      // Try to get user ID from localStorage or other sources
+      return localStorage.getItem('userId') || undefined;
+    } catch {
+      return undefined;
+    }
+  }
+
+  private handleRetry = (): void => {
+    const { maxRetries = 3, retryDelay = 1000 } = this.props;
+    const { retryCount } = this.state;
+
+    if (retryCount >= maxRetries) {
+      return;
+    }
+
+    // Clear any existing timeout
+    if (this.retryTimeoutId) {
+      clearTimeout(this.retryTimeoutId);
+    }
+
+    // Retry after delay
+    this.retryTimeoutId = setTimeout(() => {
+      this.setState(prevState => ({
+        hasError: false,
+        error: null,
+        errorInfo: null,
+        errorId: '',
+        retryCount: prevState.retryCount + 1,
+      }));
+    }, retryDelay);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6fe3
   };
 
   handleReload = () => {
