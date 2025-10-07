@@ -257,28 +257,11 @@ const NewContentPromotionalBanner2026: React.FC = () => {
                 <Shield className="w-5 h-5" />
                 Explore All Articles
               </Link>
+            </div>
+          </div>
+        </div>
+
         {/* Call to Action */}
-        <div className="text-center">
-          <div className="bg-gradient-to-r from-slate-800/50 to-slate-900/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50">
-            <h3 className="text-2xl font-bold text-white mb-4">
-              Ready to Transform Your Enterprise?
-            </h3>
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-              Join thousands of organizations already leveraging these breakthrough AI technologies
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                href="/services/ai-services"
-                className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300"
-              >
-                Explore AI Services
-              </Link>
-              <Link 
-                href="/contact"
-                className="px-8 py-4 border border-slate-600 text-white font-semibold rounded-lg hover:bg-slate-800/50 transition-all duration-300"
-              >
-                Get Started
-              </Link>
         <div className="text-center bg-white/5 backdrop-blur-sm border border-white/20 rounded-2xl p-12">
           <div className="flex items-center justify-center gap-3 mb-6">
             <Rocket className="w-8 h-8 text-cyan-400" />

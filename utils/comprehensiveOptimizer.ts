@@ -1,42 +1,42 @@
 /**
  * Comprehensive optimization utilities that integrate accessibility, performance, and SEO
  */
-import {
-  focusManagement,
-  ariaUtils,
-  keyboardNavigation,
-  colorContrast,
-  screenReader,
-  formAccessibility,
-  motionAccessibility,
-  initAccessibility
-} from './accessibilityUtils';
+// import {
+//   focusManagement,
+//   ariaUtils,
+//   keyboardNavigation,
+//   colorContrast,
+//   screenReader,
+//   formAccessibility,
+//   motionAccessibility,
+//   initAccessibility
+// } from './accessibilityUtils';
 
 import {
   getMemoryUsage,
   collectPerformanceMetrics,
   performanceMonitor,
-  debounce,
-  throttle,
+  // debounce,
+  // throttle,
   lazyLoadImages,
   preloadCriticalResources,
   optimizeScrollPerformance
 } from './performanceUtils';
 
 import {
-  setMetaTags,
+  // setMetaTags,
   setOpenGraphTags,
   setTwitterCardTags,
   setStructuredData,
-  generateSitemap,
-  optimizeImages,
+  // generateSitemap,
+  // optimizeImages,
   setCanonicalUrl,
   setPageTitle,
   setMetaDescription,
   setKeywords,
-  setRobotsMeta,
-  setLanguage,
-  setViewport,
+  // setRobotsMeta,
+  // setLanguage,
+  // setViewport,
   schemaGenerators,
   seoAudit
 } from './seoUtils';
@@ -216,7 +216,7 @@ export class ComprehensiveOptimizer {
 
     // Set Open Graph tags
     if (this.config.seo.enableOpenGraph) {
-      const ogData: any = {
+      const ogData: Record<string, unknown> = {
         title: pageData.title,
         description: pageData.description,
         url: pageData.url,
@@ -229,7 +229,7 @@ export class ComprehensiveOptimizer {
 
     // Set Twitter Card tags
     if (this.config.seo.enableTwitterCards) {
-      const twitterData: any = {
+      const twitterData: Record<string, unknown> = {
         title: pageData.title,
         description: pageData.description,
       };
@@ -253,9 +253,9 @@ export class ComprehensiveOptimizer {
    * Run comprehensive audit
    */
   public async runAudit(): Promise<{
-    accessibility: any;
-    performance: any;
-    seo: any;
+    accessibility: Record<string, unknown>;
+    performance: Record<string, unknown>;
+    seo: Record<string, unknown>;
   }> {
     const results = {
       accessibility: {},

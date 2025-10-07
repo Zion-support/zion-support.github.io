@@ -15,18 +15,18 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ children }) => 
             console.log('LCP:', entry.startTime);
           }
           if (entry.entryType === 'first-input') {
-            const fidEntry = entry as any;
+            const fidEntry = entry as PerformanceEventTiming;
             console.log('FID:', fidEntry.processingStart - fidEntry.startTime);
           }
           if (entry.entryType === 'layout-shift') {
-            console.log('CLS:', (entry as any).value);
+            console.log('CLS:', (entry as LayoutShift).value);
           }
         }
       });
 
       try {
         observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
-      } catch (e) {
+      } catch {
         // Fallback for browsers that don't support all entry types
         console.log('Performance monitoring partially available');
       }

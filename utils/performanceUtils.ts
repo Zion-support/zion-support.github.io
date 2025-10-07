@@ -3,7 +3,7 @@
  */
 
 // Debounce function for performance optimization
-export const debounce = <T extends (...args: any[]) => any>(
+export const debounce = <T extends (...args: unknown[]) => unknown>(
   func: T,
   wait: number,
   immediate = false
@@ -23,13 +23,13 @@ export const debounce = <T extends (...args: any[]) => any>(
 };
 
 // Throttle function for performance optimization
-export const throttle = <T extends (...args: any[]) => any>(
+export const throttle = <T extends (...args: unknown[]) => unknown>(
   func: T,
   limit: number
 ): ((...args: Parameters<T>) => void) => {
   let inThrottle: boolean;
   
-  return function executedFunction(this: any, ...args: Parameters<T>) {
+  return function executedFunction(this: unknown, ...args: Parameters<T>) {
     if (!inThrottle) {
       func.apply(this, args);
       inThrottle = true;
@@ -44,11 +44,11 @@ export const getMemoryUsage = (): {
   total: number;
   percentage: number;
 } => {
-  if (typeof performance === 'undefined' || !(performance as any).memory) {
+  if (typeof performance === 'undefined' || !(performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory) {
     return { used: 0, total: 0, percentage: 0 };
   }
 
-  const memory = (performance as any).memory;
+  const memory = (performance as Performance & { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
   const used = memory.usedJSHeapSize;
   const total = memory.totalJSHeapSize;
   const percentage = (used / total) * 100;
@@ -66,7 +66,7 @@ export const collectPerformanceMetrics = async (): Promise<{
   firstInputDelay: number;
   cumulativeLayoutShift: number;
 }> => {
-  const metrics: any = {};
+  const metrics: Record<string, unknown> = {};
 
   // Basic timing metrics
   if (typeof window !== 'undefined' && window.performance) {
@@ -111,7 +111,7 @@ export const collectPerformanceMetrics = async (): Promise<{
       // First Input Delay
       const fidObserver = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
-          metrics.firstInputDelay = (entry as any).processingStart - entry.startTime;
+          metrics.firstInputDelay = (entry as PerformanceEventTiming).processingStart - entry.startTime;
         }
       });
       fidObserver.observe({ entryTypes: ['first-input'] });
@@ -120,8 +120,8 @@ export const collectPerformanceMetrics = async (): Promise<{
       let clsValue = 0;
       const clsObserver = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
-          if (!(entry as any).hadRecentInput) {
-            clsValue += (entry as any).value;
+          if (!(entry as LayoutShift).hadRecentInput) {
+            clsValue += (entry as LayoutShift).value;
           }
         }
         metrics.cumulativeLayoutShift = clsValue;
@@ -283,7 +283,7 @@ export const performanceMonitor = {
     if ('PerformanceObserver' in window) {
       const observer = new PerformanceObserver((list) => {
         list.getEntries().forEach(entry => {
-          console.log('Performance metric:', entry.name, (entry as any).value);
+          console.log('Performance metric:', entry.name, (entry as PerformanceEntry & { value?: number }).value);
         });
       });
       
@@ -297,10 +297,10 @@ export const performanceMonitor = {
 };
 
 // Collect performance metrics array
-export const collectPerformanceMetricsArray = async (): Promise<any[]> => {
+export const collectPerformanceMetricsArray = async (): Promise<Record<string, unknown>[]> => {
   if (typeof window === 'undefined') return [];
 
-  const metrics: any[] = [];
+  const metrics: Record<string, unknown>[] = [];
 
   // Navigation timing
   if (performance.timing) {
@@ -326,12 +326,12 @@ export const collectPerformanceMetricsArray = async (): Promise<any[]> => {
 };
 
 // Get memory usage
-export const getMemoryUsage = (): any => {
-  if (typeof window === 'undefined' || !(performance as any).memory) {
+export const getMemoryUsage = (): Record<string, unknown> | null => {
+  if (typeof window === 'undefined' || !(performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory) {
     return null;
   }
 
-  return (performance as any).memory;
+  return (performance as Performance & { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
 };
 
 export default {

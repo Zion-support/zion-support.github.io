@@ -28,19 +28,11 @@ interface PerformanceMemory {
   jsHeapSizeLimit: number;
 }
 
-interface PerformanceWithMemory extends Performance {
-  memory?: PerformanceMemory;
-}
-
 // Network connection interface
 interface NetworkConnection {
   effectiveType?: string;
   type?: string;
   saveData?: boolean;
-}
-
-interface NavigatorWithConnection extends Navigator {
-  connection?: NetworkConnection;
 }
 
 interface PerformanceReport {
@@ -231,9 +223,9 @@ export function getSlowResources(threshold: number = 1000): PerformanceResourceT
  * Get memory usage (Chrome only)
  */
 export function getMemoryUsage(): Record<string, number> | null {
-  if (typeof window === 'undefined' || !(window as any).performance?.memory) return null;
+  if (typeof window === 'undefined' || !(window as Window & { performance: Performance & { memory?: PerformanceMemory } }).performance?.memory) return null;
   
-  const memory = (window as any).performance.memory;
+  const memory = (window as Window & { performance: Performance & { memory?: PerformanceMemory } }).performance.memory!;
   return {
     usedJSHeapSize: memory.usedJSHeapSize,
     totalJSHeapSize: memory.totalJSHeapSize,
@@ -300,11 +292,11 @@ export function monitorLayoutShifts(
  * Check if connection is slow
  */
 export function isSlowConnection(): boolean {
-  if (typeof navigator === 'undefined' || !(navigator as any).connection) {
+  if (typeof navigator === 'undefined' || !(navigator as Navigator & { connection?: NetworkConnection }).connection) {
     return false;
   }
 
-  const connection = (navigator as any).connection;
+  const connection = (navigator as Navigator & { connection?: NetworkConnection }).connection!;
   const slowTypes = ['slow-2g', '2g'];
   return (
     slowTypes.includes(connection.effectiveType) || connection.saveData === true
@@ -315,11 +307,11 @@ export function isSlowConnection(): boolean {
  * Get connection type
  */
 export function getConnectionType(): string {
-  if (typeof navigator === 'undefined' || !(navigator as any).connection) {
+  if (typeof navigator === 'undefined' || !(navigator as Navigator & { connection?: NetworkConnection }).connection) {
     return 'unknown';
   }
 
-  const connection = (navigator as any).connection;
+  const connection = (navigator as Navigator & { connection?: NetworkConnection }).connection!;
   return connection.effectiveType || connection.type || 'unknown';
 }
 

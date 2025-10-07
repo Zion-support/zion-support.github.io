@@ -2,7 +2,7 @@
  * Performance Optimizer Utilities
  */
 
-import React, { forwardRef, memo } from 'react';
+import React, { forwardRef } from 'react';
 import type { ComponentType } from 'react';
 
 interface PerformanceMetrics {
@@ -101,7 +101,7 @@ export class PerformanceOptimizer {
    */
   private getMemoryUsage(): number | undefined {
     if ('memory' in performance) {
-      return (performance as any).memory.usedJSHeapSize;
+      return (performance as Performance & { memory: { usedJSHeapSize: number } }).memory.usedJSHeapSize;
     }
     return undefined;
   }
@@ -348,7 +348,7 @@ export class PerformanceOptimizer {
   /**
    * Measure page load performance
    */
-  measurePageLoad(): any {
+  measurePageLoad(): Record<string, unknown> | null {
     if (typeof window === 'undefined' || !('performance' in window)) {
       return null;
     }
@@ -366,17 +366,17 @@ export class PerformanceOptimizer {
   /**
    * Report Web Vitals
    */
-  reportWebVitals(metrics: any): void {
+  reportWebVitals(metrics: Record<string, unknown>): void {
     if (typeof window === 'undefined') return;
     
     console.log('Web Vitals:', metrics);
     
     // Send to analytics if available
     if ('gtag' in window) {
-      (window as any).gtag('event', 'web_vitals', {
+      (window as Window & { gtag?: (...args: unknown[]) => void }).gtag?.('event', 'web_vitals', {
         event_category: 'Performance',
         event_label: 'Page Load',
-        value: Math.round(metrics.totalTime || 0)
+        value: Math.round((metrics.totalTime as number) || 0)
       });
     }
   }
@@ -400,7 +400,7 @@ export const withPerformanceTracking = <P extends object>(
       return () => optimizer.endRender(name);
     });
     
-    return React.createElement(Component, { ...props, ref } as any);
+    return React.createElement(Component, { ...props, ref } as P);
   });
   
   WrappedComponent.displayName = `withPerformanceTracking(${name})`;
