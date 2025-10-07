@@ -1,78 +1,103 @@
-import React, { memo, Suspense, useMemo, useEffect } from 'react';
+import React, { Suspense } from 'react';
 import { createRoot } from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
+import HomePage from './app/page';
 import { performanceEnhancer } from './app/utils/performanceEnhancer';
-import { performanceOptimizer } from './app/utils/performanceOptimizer';
-import ErrorBoundary from './app/components/ErrorBoundary';
+// import { errorHandler } from './app/utils/enhancedErrorHandler';
+// import ErrorBoundary from './app/components/ErrorBoundary';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
+import EnhancedErrorBoundary from './app/components/EnhancedErrorBoundary';
+import AdvancedSEOOptimizer, { defaultSEOConfig } from './app/components/AdvancedSEOOptimizer';
+import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
+import { performanceOptimizer } from './app/utils/performanceOptimizer';
 
-// Lazy load the main page for better performance
-const HomePage = React.lazy(() => import('./app/page'));
+// Memoized components for better performance
+// const UnifiedContentPromotion = memo(() => (
+//   <div className='bg-gradient-to-r from-blue-600 to-purple-700 text-white py-16'>
+//     <div className='container mx-auto px-4 text-center'>
+//       <h2 className='text-3xl font-bold mb-4'>Latest AI Innovations</h2>
+//       <p className='text-xl'>
+//         Discover cutting-edge AI solutions for your business
+//       </p>
+//     </div>
+//   </div>
+// ));
 
-// Loading fallback component
-const LoadingFallback = memo(() => (
-  <div className="min-h-screen flex items-center justify-center bg-gray-50">
-    <div className="text-center">
-      <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-indigo-600 mx-auto mb-4"></div>
-      <p className="text-gray-600">Loading Zion Tech Group...</p>
-    </div>
-  </div>
-));
+// const InteractiveAIROICalculator = memo(() => (
+//   <div className='bg-gray-50 py-16'>
+//     <div className='container mx-auto px-4 text-center'>
+//       <h2 className='text-3xl font-bold mb-4'>AI ROI Calculator</h2>
+//       <p className='text-xl text-gray-600'>
+//         Calculate your potential AI investment returns
+//       </p>
+//     </div>
+//   </div>
+// ));
 
-const App = memo(() => {
-  // Structured data for SEO
-  const structuredData = useMemo(
-    () => ({
-      '@context': 'https://schema.org',
-      '@type': 'Organization',
-      name: 'Zion Tech Group',
-      description:
-        'Leading provider of AI-powered enterprise solutions and digital transformation services',
-      url: 'https://ziontechgroup.com',
-      logo: 'https://ziontechgroup.com/logo.png',
-      contactPoint: {
-        '@type': 'ContactPoint',
-        telephone: '+1-302-464-0950',
-        contactType: 'customer service',
-        email: 'kleber@ziontechgroup.com',
-      },
-      address: {
-        '@type': 'PostalAddress',
-        streetAddress: '364 E Main St STE 1008',
-        addressLocality: 'Middletown',
-        addressRegion: 'DE',
-        postalCode: '19709',
-        addressCountry: 'US',
-      },
-      sameAs: [
-        'https://linkedin.com/company/zion-tech-group',
-        'https://twitter.com/ziontechgroup',
-      ],
-      offers: {
-        '@type': 'Offer',
-        name: 'AI Enterprise Transformation Services',
-        description:
-          'Transform your enterprise with AI-powered solutions achieving 300% ROI, 70% cost reduction, and 90% efficiency gains',
-        price: '50000',
-        priceCurrency: 'USD',
-        availability: 'https://schema.org/InStock',
-      },
-    }),
-    []
-  );
+// const ContentShowcase = memo(() => (
+//   <div className='py-16'>
+//     <div className='container mx-auto px-4 text-center'>
+//       <h2 className='text-3xl font-bold mb-4'>Featured Content</h2>
+//       <p className='text-xl text-gray-600'>
+//         Explore our latest insights and case studies
+//       </p>
+//     </div>
+//   </div>
+// ));
 
+// Loading component
+// const LoadingSpinner = memo(() => (
+//   <div className="animate-pulse bg-gray-200 h-32 rounded flex items-center justify-center">
+//     <div className="text-gray-500">Loading...</div>
+//   </div>
+// ));
+
+const App = () => {
+  // const structuredData = useMemo(
+  //   () => ({
+  //     '@context': 'https://schema.org',
+  //     '@type': 'Organization',
+  //     name: 'Zion Tech Group',
+  //     description:
+  //       'Leading provider of AI-powered enterprise solutions and digital transformation services',
+  //     url: 'https://ziontechgroup.com',
+  //     logo: 'https://ziontechgroup.com/logo.png',
+  //     contactPoint: {
+  //       '@type': 'ContactPoint',
+  //       telephone: '+1-302-464-0950',
+  //       contactType: 'customer service',
+  //       email: 'kleber@ziontechgroup.com',
+  //     },
+  //     address: {
+  //       '@type': 'PostalAddress',
+  //       streetAddress: '364 E Main St STE 1008',
+  //       addressLocality: 'Middletown',
+  //       addressRegion: 'DE',
+  //       postalCode: '19709',
+  //       addressCountry: 'US',
+  //     },
+  //     sameAs: [
+  //       'https://linkedin.com/company/zion-tech-group',
+  //       'https://twitter.com/ziontechgroup',
+  //     ],
+  //     offers: {
+  //       '@type': 'Offer',
+  //       name: 'AI Enterprise Transformation Services',
+  //       description:
+  //         'Transform your enterprise with AI-powered solutions achieving 300% ROI, 70% cost reduction, and 90% efficiency gains',
+  //       price: '50000',
+  //       priceCurrency: 'USD',
+  //       availability: 'https://schema.org/InStock',
+  //     },
+  //   }),
+  //   []
+  // );
   // Performance optimization: Preload critical resources
-  useEffect(() => {
+  React.useEffect(() => {
     if (typeof document !== 'undefined') {
-      // Initialize performance monitoring
+      // Initialize enhanced performance monitoring
       performanceEnhancer.startMonitoring();
-      
-      // Add structured data to head
-      const script = document.createElement('script');
-      script.type = 'application/ld+json';
-      script.textContent = JSON.stringify(structuredData);
-      document.head.appendChild(script);
       
       // Preload critical fonts
       const fontLink = document.createElement('link');
@@ -127,25 +152,60 @@ const App = memo(() => {
     // Cleanup on unmount
     return () => {
       performanceEnhancer.stopMonitoring();
+      performanceOptimizer.cleanup();
     };
-  }, [structuredData]);
+  }, []);
 
-
+  // const handlePhoneClick = useCallback(() => {
+  //   // Track phone clicks for analytics
+  //   if (typeof window !== 'undefined' && (window as unknown as { gtag?: Function }).gtag) {
+  //     ((window as unknown as { gtag: Function }).gtag)('event', 'phone_click', {
+  //       event_category: 'engagement',
+  //       event_label: 'main_phone_number'
+  //     });
+  //   }
+  // }, []);
   return (
-    <ErrorBoundary>
-      <HelmetProvider>
-        <BrowserRouter>
-          <Suspense fallback={<LoadingFallback />}>
-            <HomePage />
-          </Suspense>
-          <PerformanceMonitor />
-        </BrowserRouter>
-      </HelmetProvider>
-    </ErrorBoundary>
+    <EnhancedErrorBoundary
+      enableErrorReporting={true}
+      enableRetry={true}
+      maxRetries={3}
+      enableAnalytics={true}
+    >
+      <AccessibilityEnhancer
+        config={{
+          enableKeyboardNavigation: true,
+          enableScreenReaderSupport: true,
+          enableHighContrast: true,
+          enableReducedMotion: true,
+          enableFocusManagement: true,
+          enableSkipLinks: true,
+          enableARIALabels: true,
+          enableColorContrast: true,
+        }}
+      >
+        <AdvancedSEOOptimizer
+          config={defaultSEOConfig}
+          enableStructuredData={true}
+          enableAnalytics={true}
+          enablePerformanceTracking={true}
+        />
+        <HelmetProvider>
+          <BrowserRouter>
+            <Suspense fallback={
+              <div className="flex items-center justify-center min-h-screen">
+                <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-indigo-600"></div>
+              </div>
+            }>
+              <HomePage />
+            </Suspense>
+            <PerformanceMonitor />
+          </BrowserRouter>
+        </HelmetProvider>
+      </AccessibilityEnhancer>
+    </EnhancedErrorBoundary>
   );
-});
-
-App.displayName = 'App';
+}
 
 const container = document.getElementById('root');
 if (container) {
