@@ -29,13 +29,6 @@ describe('Performance Tests', () => {
       },
     };
 
-    // Mock window object
-    delete window.location;
-    window.location = {
-      href: 'http://localhost:3000',
-      reload: jest.fn(),
-    };
-
     // Mock navigator
     Object.defineProperty(navigator, 'userAgent', {
       value: 'Mozilla/5.0 (Test Browser)',
@@ -45,12 +38,19 @@ describe('Performance Tests', () => {
   });
 
   beforeEach(() => {
-    // Mock window.location using spies instead of redefining
-    locationSpy = jest.spyOn(window.location, 'reload').mockImplementation(() => {});
+    // Mock window.location using delete and redefine
+    delete window.location;
+    window.location = {
+      href: 'http://localhost:3000',
+      reload: jest.fn(),
+    };
   });
 
   afterEach(() => {
-    locationSpy.mockRestore();
+    // Clean up
+    if (locationSpy) {
+      locationSpy.mockRestore();
+    }
   });
 
   test('PerformanceOptimizer should initialize correctly', () => {
