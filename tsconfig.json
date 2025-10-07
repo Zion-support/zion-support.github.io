@@ -14,7 +14,7 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx",
+    "jsx": "preserve",
     "jsxImportSource": "react",
     "strict": true,
     "strictNullChecks": true,
@@ -52,13 +52,20 @@
     "noUncheckedIndexedAccess": false,
     "allowUnusedLabels": false,
     "allowUnreachableCode": false,
-    "verbatimModuleSyntax": false
+    "verbatimModuleSyntax": false,
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
   },
   "include": [
-    "app/**/*",
-    "src/**/*",
     "App.tsx",
-    "components/**/*"
+    "app/**/*",
+    "components/**/*",
+    "src/**/*",
+    ".next/types/**/*.ts"
   ],
   "exclude": [
     "node_modules",

@@ -135,8 +135,9 @@ describe('AdvancedSEOOptimizer', () => {
   });
 
   it('renders structured data when enabled', () => {
+    const helmetContext = {};
     const { container } = render(
-      <HelmetProvider>
+      <HelmetProvider context={helmetContext}>
         <AdvancedSEOOptimizer
           config={mockSEOData}
           enableStructuredData={true}
@@ -144,30 +145,37 @@ describe('AdvancedSEOOptimizer', () => {
       </HelmetProvider>
     );
 
-    // Helmet is a well-tested library, so we just verify the component renders without crashing
-    // and that the Helmet component is in the tree
+    // Check that component renders without crashing
+    // Note: react-helmet-async manages head tags in a way that's not easily testable with querySelector
+    // The important part is that the component renders without errors
     expect(container).toBeTruthy();
   });
 
   it('renders Open Graph tags when enabled', () => {
+    const helmetContext = {};
     const { container } = render(
-      <HelmetProvider>
+      <HelmetProvider context={helmetContext}>
         <AdvancedSEOOptimizer config={mockSEOData} enableOpenGraph={true} />
       </HelmetProvider>
     );
 
-    // Helmet is a well-tested library, so we just verify the component renders without crashing
+    // Check that component renders without crashing
+    // Note: react-helmet-async manages head tags in a way that's not easily testable with querySelector
+    // The important part is that the component renders without errors
     expect(container).toBeTruthy();
   });
 
   it('renders Twitter Card tags when enabled', () => {
+    const helmetContext = {};
     const { container } = render(
-      <HelmetProvider>
+      <HelmetProvider context={helmetContext}>
         <AdvancedSEOOptimizer config={mockSEOData} enableTwitterCards={true} />
       </HelmetProvider>
     );
 
-    // Helmet is a well-tested library, so we just verify the component renders without crashing
+    // Check that component renders without crashing
+    // Note: react-helmet-async manages head tags in a way that's not easily testable with querySelector
+    // The important part is that the component renders without errors
     expect(container).toBeTruthy();
   });
 });
