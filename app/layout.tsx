@@ -73,6 +73,31 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'Zion Tech Group',
+    url: 'https://ziontechgroup.com',
+    logo: 'https://ziontechgroup.com/logo.png',
+    description:
+      'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services.',
+    contactPoint: {
+      '@type': 'ContactPoint',
+      telephone: '+1-302-464-0950',
+      contactType: 'Customer Service',
+      areaServed: 'US',
+      availableLanguage: 'en',
+    },
+    sameAs: [
+      'https://twitter.com/ziontechgroup',
+      'https://linkedin.com/company/ziontechgroup',
+    ],
+    address: {
+      '@type': 'PostalAddress',
+      addressCountry: 'US',
+    },
+  };
+
   return (
     <html lang='en'>
       <head>
@@ -97,6 +122,10 @@ export default function RootLayout({
         <link rel='manifest' href='/site.webmanifest' />
         <meta name='theme-color' content='#4f46e5' />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
+        <script
+          type='application/ld+json'
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
       </head>
       <body className='antialiased'>
         <AnalyticsProvider>
