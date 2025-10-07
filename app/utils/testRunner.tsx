@@ -20,13 +20,6 @@ export interface TestConfig {
   accessibilityThreshold: number;
 }
 
-// Performance metrics interface
-export interface PerformanceMetrics {
-  renderTime: number;
-  memoryUsage: number;
-  timestamp: string;
-}
-
 // Default test configuration
 export const defaultTestConfig: TestConfig = {
   enableMocking: true,
@@ -81,7 +74,7 @@ export class TestRunner {
   async runPerformanceTest(
     component: ReactElement,
     testName: string
-  ): Promise<{ passed: boolean; metrics: PerformanceMetrics }> {
+  ): Promise<{ passed: boolean; metrics: { renderTime: number; memoryUsage: number; timestamp: string } }> {
     const startTime = performance.now();
     
     const { unmount } = this.customRender(component);
@@ -91,10 +84,7 @@ export class TestRunner {
     // Measure memory usage if available
     let memoryUsage = 0;
     if ('memory' in performance) {
-      const memory = (performance as { memory?: { usedJSHeapSize: number } }).memory;
-      if (memory) {
-        memoryUsage = memory.usedJSHeapSize;
-      }
+      memoryUsage = (performance as Performance & { memory: { usedJSHeapSize: number } }).memory.usedJSHeapSize;
     }
 
     unmount();
@@ -122,7 +112,7 @@ export class TestRunner {
     component: ReactElement,
     testName: string
   ): Promise<{ passed: boolean; violations: string[] }> {
-    const { container, unmount } = this.customRender(component);
+    const { container } = this.customRender(component);
     
     // Basic accessibility checks
     const violations: string[] = [];
@@ -479,48 +469,4 @@ export const testUtils = {
   },
 };
 
-// Test helpers
-export const waitForAsync = (ms: number = 0): Promise<void> => {
-  return new Promise((resolve) => setTimeout(resolve, ms));
-};
-
-export const flushPromises = (): Promise<void> => {
-  return new Promise((resolve) => setImmediate(resolve));
-};
-
-// Performance testing utilities
-export const measureRenderTime = async (
-  fn: () => void | Promise<void>
-): Promise<number> => {
-  const startTime = performance.now();
-  await fn();
-  return performance.now() - startTime;
-};
-
-export const measureMemoryUsage = (): number => {
-  if ('memory' in performance) {
-    const memory = (performance as { memory?: { usedJSHeapSize: number } }).memory;
-    return memory?.usedJSHeapSize || 0;
-  }
-  return 0;
-};
-
-// Test data generators
-export const generateTestId = (prefix: string = 'test'): string => {
-  return `${prefix}-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
-};
-
-export const generateTestData = <T extends Record<string, unknown>>(
-  schema: T,
-  overrides?: Partial<T>
-): T => {
-  return { ...schema, ...overrides };
-};
-
-// Initialize test runner
-export const initializeTestRunner = (config?: Partial<TestConfig>): TestRunner => {
-  return TestRunner.getInstance(config);
-};
-
-// Export test runner instance
 export default TestRunner;

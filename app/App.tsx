@@ -6,7 +6,6 @@ import { HelmetProvider } from 'react-helmet-async';
 import ErrorBoundary from './components/ErrorBoundary';
 import SEOOptimizer from './components/SEOOptimizer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-import PerformanceDashboard from './components/PerformanceDashboard';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import LoadingSpinner from './components/LoadingSpinner';
@@ -46,8 +45,6 @@ const App: React.FC = () => {
         <AccessibilityEnhancer>
           <Router>
             <div className="App">
-              <PerformanceDashboard />
-              
               <Navigation />
               
               <Suspense fallback={<LoadingSpinner />}>

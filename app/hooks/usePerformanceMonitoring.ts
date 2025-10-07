@@ -17,7 +17,7 @@ export const usePerformanceMonitoring = () => {
 
   useEffect(() => {
     if (typeof window === 'undefined' || !('PerformanceObserver' in window)) {
-      return () => {};
+      return undefined;
     }
 
     try {
@@ -114,7 +114,6 @@ export const usePerformanceMonitoring = () => {
     } catch (error) {
       // eslint-disable-next-line no-console
       console.warn('Performance monitoring not supported:', error);
-      return undefined;
     }
 
     // Return cleanup function

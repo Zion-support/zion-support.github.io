@@ -48,10 +48,10 @@ export const useErrorMonitoring = () => {
       error: Error,
       errorInfo: unknown
     ) => {
-      const info = errorInfo as { componentStack?: string } | undefined;
+      const componentStack = (errorInfo as { componentStack?: string })?.componentStack || 'unknown';
       reportError(
         error,
-        `react_error_boundary: ${info?.componentStack || 'unknown'}`
+        `react_error_boundary: ${componentStack}`
       );
     };
 
