@@ -1,6 +1,32 @@
 const { withSentry } = require('./withSentry.cjs');
 
 async function handler(req, res) {
+export default async function handler(req, res) {
+const { withSentry } = require('./withSentry.cjs');
+
+async function handler(req, res) {
+const { withSentry } = require('./withSentry.cjs');
+
+async function handler(req, res) {
+const { withSentry } = require('./withSentry.cjs');
+
+async function handler(req, res) {
+const { withSentry } = require('./withSentry.cjs');
+
+async function handler(req, res) {
+export default async function handler(req, res) {
+export default async function handler(req, res) {
+export default async function handler(req, res) {
+export default async function handler(req, res) {
+export default async function handler(req, res) {
+export default async function handler(req, res) {
+export default async function handler(req, res) {
+export default async function handler(req, res) {
+export default async function handler(req, res) {
+export default async function handler(req, res) {
+export default async function handler(req, res) {
+export default async function handler(req, res) {
+export default async function handler(req, res) {
   if (req.method !== 'POST') {
     res.statusCode = 405;
     res.setHeader('Allow', 'POST');
@@ -18,10 +44,85 @@ async function handler(req, res) {
       return;
     }
 
+
+
+
+
+  try {
+    const { fromAddress, toAddress, parcel } = req.body || {};
+    const apiKey = process.env.EASYPOST_API_KEY;
+
+  try {
+    const { fromAddress, toAddress, parcel } = req.body || {};
+    const apiKey = process.env.EASYPOST_API_KEY;
+    
+
+  try {
+    const { fromAddress, toAddress, parcel } = req.body || {};
+    const apiKey = process.env.EASYPOST_API_KEY;
+    
+
+  try {
+    const { fromAddress, toAddress, parcel } = req.body || {};
+    const apiKey = process.env.EASYPOST_API_KEY;
+    
+
+  try {
+    const { fromAddress, toAddress, parcel } = req.body || {};
+    const apiKey = process.env.EASYPOST_API_KEY;
+    
+
+  try {
+    const { fromAddress, toAddress, parcel } = req.body || {};
+    const apiKey = process.env.EASYPOST_API_KEY;
+    
+
+  try {
+    const { fromAddress, toAddress, parcel } = req.body || {};
+    const apiKey = process.env.EASYPOST_API_KEY;
+    
+
+  try {
+    const { fromAddress, toAddress, parcel } = req.body || {};
+    const apiKey = process.env.EASYPOST_API_KEY;
+    
+
+  try {
+    const { fromAddress, toAddress, parcel } = req.body || {};
+    const apiKey = process.env.EASYPOST_API_KEY;
+    
+
+  try {
+    const { fromAddress, toAddress, parcel } = req.body || {};
+    const apiKey = process.env.EASYPOST_API_KEY;
+    
+
+  try {
+    const { fromAddress, toAddress, parcel } = req.body || {};
+    const apiKey = process.env.EASYPOST_API_KEY;
+    
+
+  try {
+    const { fromAddress, toAddress, parcel } = req.body || {};
+    const apiKey = process.env.EASYPOST_API_KEY;
+    
+
+  try {
+    const { fromAddress, toAddress, parcel } = req.body || {};
+    const apiKey = process.env.EASYPOST_API_KEY;
+    
+
+  try {
+    const { fromAddress, toAddress, parcel } = req.body || {};
+    const apiKey = process.env.EASYPOST_API_KEY;
+    
     const response = await fetch('https://api.easypost.com/v2/shipments', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
+        'Authorization': `Bearer ${apiKey}`,
+        Authorization: `Bearer ${apiKey}`,
+        'Authorization': `Bearer ${apiKey}`,
         'Authorization': `Bearer ${apiKey}`,
       },
       body: JSON.stringify({
@@ -35,6 +136,19 @@ async function handler(req, res) {
 
     const data = await response.json();
 
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     if (!response.ok) {
       res.statusCode = 500;
       res.json({ error: data.error || 'Failed to fetch rates' });
@@ -51,3 +165,27 @@ async function handler(req, res) {
 }
 
 module.exports = withSentry(handler);
+}
+
+module.exports = withSentry(handler);
+}
+
+module.exports = withSentry(handler);
+
+module.exports = withSentry(handler);
+}
+
+module.exports = withSentry(handler);
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}

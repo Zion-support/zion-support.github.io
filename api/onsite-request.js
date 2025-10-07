@@ -25,6 +25,18 @@ const path = require('path');
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 async function handler(req, res) {
   if (req.method !== 'POST') {
     res.statusCode = 405;
@@ -32,6 +44,18 @@ async function handler(req, res) {
     res.end('Method Not Allowed');
     return;
   }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -64,6 +88,18 @@ async function handler(req, res) {
     location,
     details: _details
   } = req.body || {};
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -134,12 +170,42 @@ async function handler(req, res) {
   
   
   
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+
+
+  
+  
+  
   try {
     existing = JSON.parse(fs.readFileSync(file, 'utf8'));
     if (!Array.isArray(existing)) existing = [];
   } catch {
     // File doesn't exist or is invalid, use empty array
   }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -197,10 +263,34 @@ async function handler(req, res) {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
   fs.writeFileSync(file, JSON.stringify(existing, null, 2));
   res.statusCode = 200;
   res.json({ success: true });
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

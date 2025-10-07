@@ -196,6 +196,15 @@ const NewContentPromotionalBanner2026: React.FC = () => {
                 <div className="mb-4">
                   <span className={`px-3 py-1 bg-gradient-to-r ${item.color} text-white text-xs font-semibold rounded-full`}>
                     {item.category}
+                    {content.badge}
+                  </div>
+                </div>
+                {/* Category */}
+                <div className='mb-4'>
+                  <span
+                    className={`inline-block px-4 py-2 rounded-full bg-gradient-to-r ${content.bgColor} text-gray-900 text-sm font-semibold border border-white/20`}
+                  >
+                    {content.category}
                   </span>
                 </div>
                 {/* Title */}
@@ -205,6 +214,8 @@ const NewContentPromotionalBanner2026: React.FC = () => {
                 {/* Excerpt */}
                 <p className="text-gray-300 mb-6 leading-relaxed">
                   {item.excerpt}
+                <p className='text-gray-300 mb-6 leading-relaxed'>
+                  {content.excerpt}
                 </p>
                 {/* CTA Button */}
                 <Link 
@@ -222,6 +233,7 @@ const NewContentPromotionalBanner2026: React.FC = () => {
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </div>
+                </Link>
             </div>
           ))}
         </div>

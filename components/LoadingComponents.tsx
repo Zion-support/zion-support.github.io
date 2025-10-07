@@ -4,6 +4,7 @@ interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg';
   className?: string;
   text?: string | undefined;
+  text: string;
 }
 
 export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 

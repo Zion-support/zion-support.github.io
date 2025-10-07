@@ -227,3 +227,142 @@ export const registerBanner = (registry: BannerRegistry, config: BannerConfig): 
 };
 
 export default BannerRegistry;
+  },
+<<<<<<< HEAD:utils/bannerRegistry.ts
+];
+
+/**
+ * Get banners by category
+ */
+<<<<<<< HEAD:utils/bannerRegistry.ts
+export function getBannersByCategory(category: BannerConfig['category']): BannerConfig[] {
+  return BANNER_REGISTRY.filter(banner => banner.category === category && banner.enabled);
+}
+export const getBannersByCategory = (category: BannerConfig['category']): BannerConfig[] => {
+  return BANNER_REGISTRY.filter(banner => banner.category === category && banner.enabled);
+};
+export function getBannersByCategory(category: BannerConfig['category']): BannerConfig[] {
+  return BANNER_REGISTRY.filter(banner => banner.category === category && banner.enabled);
+}
+export function getBannersByCategory(category: BannerConfig['category']): BannerConfig[] {
+  return BANNER_REGISTRY.filter(banner => banner.category === category && banner.enabled);
+}
+
+/**
+ * Get banners by priority range
+ */
+<<<<<<< HEAD:utils/bannerRegistry.ts
+export function getBannersByPriority(minPriority: number, maxPriority: number): BannerConfig[] {
+  return BANNER_REGISTRY.filter(banner =>
+      banner.priority >= minPriority &&
+      banner.priority <= maxPriority &&
+      banner.enabled
+  );
+<<<<<<< HEAD:utils/bannerRegistry.ts
+}
+};
+
+/**
+ * Get top priority banners
+ */
+export function getTopPriorityBanners(count: number = 5): BannerConfig[] {
+  return BANNER_REGISTRY.filter(banner => banner.enabled)
+    .sort((a, b) => a.priority - b.priority)
+    .slice(0, count);
+}
+<<<<<<< HEAD:utils/bannerRegistry.ts
+/**
+ * Get banners by tags
+ */
+export function getBannersByTags(tags: string[]): BannerConfig[] {
+  return BANNER_REGISTRY.filter(
+    banner => tags.some(tag => banner.tags.includes(tag)) && banner.enabled
+  );
+}
+
+/**
+ * Get enabled banners sorted by priority
+ */
+<<<<<<< HEAD:utils/bannerRegistry.ts
+export function getEnabledBanners(): BannerConfig[] {
+  return BANNER_REGISTRY
+    .filter(banner => banner.enabled)
+    .sort((a, b) => a.priority - b.priority);
+}
+
+/**
+ * Get banner by ID
+ */
+<<<<<<< HEAD:utils/bannerRegistry.ts
+export function getBannerById(id: string): BannerConfig | undefined {
+  return BANNER_REGISTRY.find(banner => banner.id === id);
+}
+
+/**
+ * Get banners by tags (duplicate function - removing)
+ */
+<<<<<<< HEAD:utils/bannerRegistry.ts
+export function getBannersByTags(tags: string[]): BannerConfig[] {
+  return BANNER_REGISTRY.filter(banner => 
+    banner.enabled && tags.some(tag => banner.tags.includes(tag))
+  );
+}
+
+/**
+ * Get recent banners (published within last N days)
+ */
+export function getRecentBanners(days: number = 30): BannerConfig[] {
+  const cutoffDate = new Date();
+  cutoffDate.setDate(cutoffDate.getDate() - days);
+  
+  return BANNER_REGISTRY.filter(banner => {
+    if (!banner.enabled) return false;
+    const publishDate = new Date(banner.datePublished);
+    return publishDate >= cutoffDate;
+  });
+<<<<<<< HEAD:utils/bannerRegistry.ts
+}
+<<<<<<<< HEAD:utils/bannerRegistry.ts
+export default BANNER_REGISTRY;
+========
+};
+
+export default BANNER_REGISTRY;
+ * Banner Registry Utility
+ */
+export interface BannerInfo {
+  id: string;
+  name: string;
+  component: any;
+  priority: number;
+  category: string;
+}
+
+export class BannerRegistry {
+  private banners = new Map<string, BannerInfo>();
+
+  register(banner: BannerInfo): void {
+    this.banners.set(banner.id, banner);
+  }
+
+  unregister(id: string): void {
+    this.banners.delete(id);
+  }
+
+  get(id: string): BannerInfo | undefined {
+    return this.banners.get(id);
+  }
+
+  getAll(): BannerInfo[] {
+    return Array.from(this.banners.values());
+  }
+
+  getByCategory(category: string): BannerInfo[] {
+    return Array.from(this.banners.values()).filter(
+      banner => banner.category === category
+    );
+  }
+}
+
+export const bannerRegistry = new BannerRegistry();
+export default bannerRegistry;
