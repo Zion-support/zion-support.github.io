@@ -1,24 +1,10 @@
-<<<<<<< HEAD
-import React from 'react';
+import React, { memo, useMemo, useCallback, Suspense } from 'react';
 import { createRoot } from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import HomePage from './app/page';
 import { performanceEnhancer } from './app/utils/performanceEnhancer';
 import { errorHandler } from './app/utils/enhancedErrorHandler';
-
-// Memoized components for better performance
-const App = () => {
-  // Initialize performance monitoring and error handling
-=======
-import React, { memo, useMemo } from 'react';
-import React, { memo, useMemo, useCallback, Suspense } from 'react';
-<<<<<<< HEAD
-=======
-=======
->>>>>>> main
->>>>>>> main
-import { HelmetProvider, Helmet } from 'react-helmet-async';
 
 // Memoized components for better performance
 const UnifiedContentPromotion = memo(() => (
@@ -65,9 +51,6 @@ const InteractiveContentShowcase2026 = memo(() => (
   </div>
 ));
 
-<<<<<<< HEAD
-// Loading component - removed unused LoadingSpinner
-=======
 // Error Boundary Component
 interface ErrorBoundaryState {
   hasError: boolean;
@@ -118,14 +101,6 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
   }
 }
 
-// Loading component
-const LoadingSpinner = memo(() => (
-  <div className="animate-pulse bg-gray-200 h-32 rounded flex items-center justify-center">
-    <div className="text-gray-500">Loading...</div>
-  </div>
-));
->>>>>>> main
-
 export default function App() {
   const structuredData = useMemo(
     () => ({
@@ -168,7 +143,6 @@ export default function App() {
   );
 
   // Performance optimization: Preload critical resources
->>>>>>> cursor/fix-errors-and-merge-to-main-e42d
   React.useEffect(() => {
     if (typeof document !== 'undefined') {
       // Initialize performance monitoring
@@ -229,8 +203,6 @@ export default function App() {
       performanceEnhancer.stopMonitoring();
     };
   }, []);
-<<<<<<< HEAD
-=======
 
   const handlePhoneClick = useCallback(() => {
     // Track phone clicks for analytics
@@ -241,8 +213,6 @@ export default function App() {
       });
     }
   }, []);
-
->>>>>>> cursor/fix-errors-and-merge-to-main-e42d
   return (
     <HelmetProvider>
       <BrowserRouter>
@@ -257,5 +227,3 @@ if (container) {
   const root = createRoot(container);
   root.render(<App />);
 }
-
-export default App;
