@@ -34,11 +34,7 @@ const EnhancedHeader: React.FC = () => {
             onClick={() => setIsOpen(!isOpen)}
             className='md:hidden text-gray-700'
           >
-<<<<<<< HEAD
             {isOpen ? <span className='w-6 h-6'>✕</span> : <span className='w-6 h-6'>☰</span>}
-=======
-            {isOpen ? <span className='text-xl'>✕</span> : <span className='text-xl'>☰</span>}
->>>>>>> origin/main
           </button>
         </div>
         {isOpen && (
