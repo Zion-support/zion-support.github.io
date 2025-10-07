@@ -30,16 +30,10 @@ export class PerformanceMonitor {
   // Track memory usage
   trackMemory(componentName: string) {
     if ('memory' in performance) {
-<<<<<<< HEAD
       const memory = (performance as { memory?: { usedJSHeapSize: number } }).memory;
       if (memory) {
         this.metrics.set(`${componentName}_memory`, memory.usedJSHeapSize);
       }
-=======
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      const memory = (performance as any).memory;
-      this.metrics.set(`${componentName}_memory`, memory.usedJSHeapSize);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a80a
     }
   }
 
@@ -205,18 +199,10 @@ export const trackWebVitals = () => {
 
     const observer = new PerformanceObserver((list) => {
       for (const entry of list.getEntries()) {
-<<<<<<< HEAD
         const layoutShiftEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value?: number };
         if (!layoutShiftEntry.hadRecentInput) {
           clsEntries.push(entry);
           clsValue += layoutShiftEntry.value || 0;
-=======
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        if (!(entry as any).hadRecentInput) {
-          clsEntries.push(entry);
-          // eslint-disable-next-line @typescript-eslint/no-explicit-any
-          clsValue += (entry as any).value;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a80a
         }
       }
     });
@@ -244,13 +230,8 @@ export const trackWebVitals = () => {
   const trackFID = () => {
     const observer = new PerformanceObserver((list) => {
       for (const entry of list.getEntries()) {
-<<<<<<< HEAD
         const fidEntry = entry as PerformanceEntry & { processingStart?: number };
         const fid = (fidEntry.processingStart || 0) - entry.startTime;
-=======
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        const fid = (entry as any).processingStart - entry.startTime;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a80a
         console.log('[Web Vitals] FID:', fid);
       }
     });

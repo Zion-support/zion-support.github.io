@@ -157,12 +157,7 @@ export class ErrorHandler {
   }
 
   // Handle validation error
-<<<<<<< HEAD
   handleValidationError(field: string, message: string, value?: unknown): AppError {
-=======
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  handleValidationError(field: string, message: string, value?: any): AppError {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a80a
     const appError: AppError = {
       id: this.generateErrorId(),
       type: ErrorType.VALIDATION,
@@ -537,12 +532,7 @@ export class ErrorBoundary extends React.Component<
 export const useErrorHandler = () => {
   const errorHandler = ErrorHandler.getInstance();
 
-<<<<<<< HEAD
   const handleError = useCallback((error: Error, context?: Record<string, unknown>) => {
-=======
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const handleError = useCallback((error: Error, context?: Record<string, any>) => {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a80a
     return errorHandler.handleError(error, undefined, context);
   }, [errorHandler]);
 
@@ -550,12 +540,7 @@ export const useErrorHandler = () => {
     return errorHandler.handleNetworkError(error, url, status);
   }, [errorHandler]);
 
-<<<<<<< HEAD
   const handleValidationError = useCallback((field: string, message: string, value?: unknown) => {
-=======
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const handleValidationError = useCallback((field: string, message: string, value?: any) => {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a80a
     return errorHandler.handleValidationError(field, message, value);
   }, [errorHandler]);
 

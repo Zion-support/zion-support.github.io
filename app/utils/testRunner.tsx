@@ -5,10 +5,6 @@
 
 import React, { ReactElement, useCallback } from 'react';
 import { render, RenderOptions, RenderResult } from '@testing-library/react';
-<<<<<<< HEAD
-=======
-import React, { ReactElement, useCallback } from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a80a
 import { BrowserRouter } from 'react-router-dom';
 
 // Test configuration interface
@@ -78,12 +74,7 @@ export class TestRunner {
   async runPerformanceTest(
     component: ReactElement,
     testName: string
-<<<<<<< HEAD
   ): Promise<{ passed: boolean; metrics: Record<string, unknown> }> {
-=======
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  ): Promise<{ passed: boolean; metrics: any }> {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a80a
     const startTime = performance.now();
     
     const { unmount } = this.customRender(component);
