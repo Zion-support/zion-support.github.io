@@ -10,13 +10,13 @@ import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import LoadingSpinner from './components/LoadingSpinner';
 
+// Performance utilities
+import { performanceOptimizer } from './utils/performanceOptimizer';
+
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./page'));
 const ContactPage = lazy(() => import('./contact/page'));
 const EnterprisePage = lazy(() => import('./enterprise/page'));
-
-// Utils
-import performanceOptimizer from '../src/utils/performanceOptimizer';
 
 // Styles
 import '../src/index.css';
@@ -33,9 +33,12 @@ const App: React.FC = () => {
     });
 
     // Initialize performance monitoring
-    if (performanceOptimizer) {
-      performanceOptimizer.lazyLoadImages();
+    if (typeof window !== 'undefined' && 'performance' in window) {
+      performanceOptimizer.optimize();
+      performanceOptimizer.optimizeImages();
+      console.log('Performance monitoring initialized');
     }
+    // Performance monitoring is handled by other components
   }, []);
 
   return (

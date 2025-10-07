@@ -1,7 +1,8 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
-import { PerformanceMonitor as PerfMonitor } from '../utils/performanceEnhancer';
+import performanceOptimizer from '../utils/performanceOptimizer';
+import { logger } from '../utils/logger';
 
 interface LayoutShift extends PerformanceEntry {
   hadRecentInput: boolean;
@@ -43,31 +44,48 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   useEffect(() => {
     if (!enableRealTimeMonitoring) return;
 
-    const perfMonitor = PerfMonitor.getInstance();
-    
-    const updateMetrics = () => {
-      const rawMetrics = perfMonitor.getMetrics();
+    const getMetrics = (): PerformanceMetrics => {
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming | undefined;
+      const memory = (performance as Performance & {
+        memory?: {
+          usedJSHeapSize: number;
+          totalJSHeapSize: number;
+          jsHeapSizeLimit: number;
+        };
+      }).memory;
       
-      // Convert raw metrics to our PerformanceMetrics format
-      const currentMetrics: PerformanceMetrics = {
-        loadTime: rawMetrics['loadTime'] || 0,
-        renderTime: rawMetrics['renderTime'] || 0,
-        memoryUsage: rawMetrics['memoryUsage'] || 0,
-        bundleSize: rawMetrics['bundleSize'] || 0,
-        cacheHitRate: rawMetrics['cacheHitRate'] || 0,
+      return {
+        loadTime: navigation?.loadEventEnd ?? 0,
+        renderTime: navigation?.domContentLoadedEventEnd ?? 0,
+        memoryUsage: memory?.usedJSHeapSize ?? 0,
+        bundleSize: 0,
+        cacheHitRate: 0,
       };
+    };
+
+    const getPerformanceScore = (): number => {
+      const metrics = getMetrics();
+      let score = 100;
       
-      // Calculate a simple performance score (0-100)
-      const score = Math.min(100, Math.max(0, 
-        100 - (currentMetrics.loadTime / 50) - (currentMetrics.renderTime / 20)
-      ));
+      if (metrics.loadTime > 3000) score -= 20;
+      if (metrics.renderTime > 1500) score -= 15;
+      if (metrics.memoryUsage > 50000000) score -= 15;
+      
+      return Math.max(0, score);
+    };
+
+    const updateMetrics = () => {
+      const currentMetrics = getMetrics();
+      const score = getPerformanceScore();
       
       setMetrics(currentMetrics);
       setPerformanceScore(score);
 
       if (enableConsoleLogging) {
-        console.log('Performance Metrics:', currentMetrics);
-        console.log('Performance Score:', score);
+        logger.group('Performance Metrics', () => {
+          logger.debug('Metrics', { metrics: currentMetrics });
+          logger.debug('Score', { score });
+        });
       }
     };
 
@@ -231,13 +249,16 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
           <div className="mt-4 pt-4 border-t border-gray-200">
             <button
               onClick={() => {
-                const perfMonitor = PerfMonitor.getInstance();
-                perfMonitor.clearMetrics();
-                console.log('Performance metrics cleared');
+                // Trigger optimization suggestions
+                logger.group('Performance Optimization Suggestions', () => {
+                  if (metrics.bundleSize > 500000) logger.warn('⚠️ Reduce bundle size');
+                  if (metrics.loadTime > 3000) logger.warn('⚠️ Optimize images');
+                  if (metrics.cacheHitRate < 0.8) logger.warn('⚠️ Improve caching');
+                });
               }}
               className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-colors text-sm"
             >
-              Clear Metrics
+              Show Optimization Tips
             </button>
           </div>
         </div>

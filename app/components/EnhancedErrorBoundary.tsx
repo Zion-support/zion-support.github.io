@@ -100,15 +100,25 @@ class EnhancedErrorBoundary extends Component<Props, State> {
   }
 
   private trackError(error: Error): void {
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', 'exception', {
-        description: error.message,
-        fatal: false,
-        custom_map: {
-          error_name: error.name,
-          error_stack: error.stack?.substring(0, 500),
-        },
-      });
+    if (typeof window !== 'undefined') {
+      const windowWithGtag = window as Window & {
+        gtag?: (
+          command: string,
+          action: string,
+          parameters: Record<string, unknown>
+        ) => void;
+      };
+      
+      if (windowWithGtag.gtag) {
+        windowWithGtag.gtag('event', 'exception', {
+          description: error.message,
+          fatal: false,
+          custom_map: {
+            error_name: error.name,
+            error_stack: error.stack?.substring(0, 500),
+          },
+        });
+      }
     }
   }
 
