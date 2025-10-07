@@ -25,7 +25,7 @@
       "@/components/*": ["src/components/*"],
       "@/pages/*": ["src/pages/*"],
       "@/utils/*": ["src/utils/*"],
-      "@/types/*": ["src/types/*"]
+      "@/types/*": ["types/*"]
     },
     "allowJs": true,
     "forceConsistentCasingInFileNames": true,
@@ -40,7 +40,7 @@
     "allowUnreachableCode": false,
     "verbatimModuleSyntax": false
   },
-  "include": ["app/**/*", "App.tsx", "components/**/*"],
+  "include": ["app/**/*", "App.tsx", "components/**/*", "types/**/*"],
   "exclude": [
     "node_modules",
     "dist",
