@@ -1,6 +1,21 @@
-import React, { memo, useMemo, useCallback, Suspense, useEffect } from 'react';
+<<<<<<< HEAD
+import React, { memo, useMemo, useCallback, Suspense } from 'react';
 import { HelmetProvider, Helmet } from 'react-helmet-async';
-import { performanceOptimizer } from './app/utils/performanceOptimizer';
+=======
+import React, { Suspense } from 'react';
+import { createRoot } from 'react-dom/client';
+import { BrowserRouter } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
+import HomePage from './app/page';
+import { initializePerformanceEnhancements } from './app/utils/performanceEnhancer';
+// import { errorHandler } from './app/utils/enhancedErrorHandler';
+// import ErrorBoundary from './app/components/ErrorBoundary';
+import PerformanceMonitor from './app/components/PerformanceMonitor';
+import EnhancedErrorBoundary from './app/components/EnhancedErrorBoundary';
+import AdvancedSEOOptimizer from './app/components/AdvancedSEOOptimizer';
+import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
+// import { performanceOptimizer } from './app/utils/performanceOptimizer';
+>>>>>>> main
 
 // Memoized components for better performance
 const UnifiedContentPromotion = memo(() => (
@@ -195,26 +210,6 @@ export default function App() {
 
   const handleScrollToTop = useCallback(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
-  }, []);
-
-  // Performance optimization
-  useEffect(() => {
-    // Initialize performance monitoring
-    performanceOptimizer.optimize();
-    
-    // Set up performance monitoring
-    const interval = setInterval(() => {
-      const metrics = performanceOptimizer.getMetrics();
-      const score = performanceOptimizer.getPerformanceScore();
-      
-      // Log performance metrics in development
-      if (process.env.NODE_ENV === 'development') {
-        console.log('Performance Score:', score);
-        console.log('Performance Metrics:', metrics);
-      }
-    }, 10000); // Check every 10 seconds
-
-    return () => clearInterval(interval);
   }, []);
 
   return (
