@@ -1,11 +1,11 @@
 // usePerformance - TypeScript definitions and utilities
-
-export interface usePerformanceConfig {
-  // Configuration properties
 import { useEffect, useCallback, useRef } from 'react';
 import { monitorLongTasks } from '../utils/performanceOptimizer';
 import { performanceOptimizer } from '../utils/performanceOptimizer';
 import analytics from '../utils/analytics';
+
+export interface usePerformanceConfig {
+  // Configuration properties
 
 export interface PerformanceMetrics {
   renderTime: number;

@@ -9,14 +9,7 @@ import SEOOptimizer from './components/SEOOptimizer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import LoadingSpinner from '../app/components/LoadingSpinner';
-import React, { Suspense, lazy, useEffect } from 'react';
-import React, { Suspense, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { Suspense, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import performanceOptimizer from './utils/performanceOptimizer';
-// import performanceOptimizer from './utils/performanceOptimizer'; // Unused import
-import './index.css';
 
 // Import page components
 import AboutPage from '../app/about/page';

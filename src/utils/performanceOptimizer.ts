@@ -1,8 +1,8 @@
-export default {
-export interface WebVitalsMetrics {
 /**
  * Performance optimization utilities
  */
+
+export interface WebVitalsMetrics {
 
 /**
  * Web Vitals metrics tracking

@@ -1,9 +1,6 @@
 // Performance monitoring setup
 import { analytics } from './utils/analytics';
 import { errorHandler } from './utils/errorHandler';
-import { performanceOptimizer } from './utils/performanceOptimizer';
-import performanceOptimizer from './utils/performanceOptimizer';
-import { performanceOptimizer } from './utils/performanceOptimizer';
 import { performanceOptimizer, lazyLoadImages, measurePageLoad, reportWebVitals } from './utils/performanceOptimizer';
 
 // Initialize performance monitoring
