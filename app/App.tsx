@@ -1,5 +1,4 @@
 import React, { Suspense, lazy, useEffect } from 'react';
-import Link from 'next/link';
 import { HelmetProvider } from 'react-helmet-async';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 
@@ -25,11 +24,17 @@ const App: React.FC = () => {
   useEffect(() => {
     // Initialize global error handling
     window.addEventListener('error', (event) => {
-      console.error('Global error:', event.error);
+      // Log errors in development only
+      if (process.env.NODE_ENV === 'development') {
+        console.error('Global error:', event.error);
+      }
     });
 
     window.addEventListener('unhandledrejection', (event) => {
-      console.error('Unhandled promise rejection:', event.reason);
+      // Log errors in development only
+      if (process.env.NODE_ENV === 'development') {
+        console.error('Unhandled promise rejection:', event.reason);
+      }
     });
 
     return () => {
