@@ -23,11 +23,7 @@ const ErrorBoundary = ({ children }: { children: React.ReactNode }) => {
 const HomePage = lazy(() => import('./page'));
 
 // Utils
-<<<<<<< HEAD
-import { lazyLoadImages, preloadCriticalResources, collectPerformanceMetrics } from './utils/performanceOptimizer';
-=======
 import { performanceOptimizer } from './utils/performanceOptimizer';
->>>>>>> cursor/fix-errors-and-merge-to-main-0754
 
 // Styles
 import '../index.css';
@@ -38,16 +34,6 @@ const App: React.FC = () => {
     console.log('App initialized');
 
     // Initialize performance monitoring
-<<<<<<< HEAD
-    lazyLoadImages();
-    preloadCriticalResources();
-    
-    // Initialize Web Vitals monitoring
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      const pageLoadMetrics = collectPerformanceMetrics();
-      if (pageLoadMetrics) {
-        console.log('Performance metrics collected:', pageLoadMetrics);
-=======
     performanceOptimizer.init();
     
     // Initialize Web Vitals monitoring
@@ -55,7 +41,6 @@ const App: React.FC = () => {
       const metrics = performanceOptimizer.getMetrics();
       if (metrics) {
         console.log('Performance metrics:', metrics);
->>>>>>> cursor/fix-errors-and-merge-to-main-0754
       }
     }
     
