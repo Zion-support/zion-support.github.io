@@ -58,5 +58,8 @@ const EnhancedNavigation: React.FC = () => {
     </nav>
   );
 };
+<<<<<<< HEAD
 
 export default EnhancedNavigation;
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-88cd
