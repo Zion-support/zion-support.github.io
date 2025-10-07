@@ -205,7 +205,11 @@ const NewContentPromotionalBanner2026: React.FC = () => {
         </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         {/* CTA Section */}
+=======
+        {/* Call to Action */}
+>>>>>>> cursor/fix-errors-and-merge-to-main-abd1
         <div className="text-center bg-white/5 backdrop-blur-sm border border-white/20 rounded-2xl p-12">
           <div className="flex items-center justify-center gap-3 mb-6">
             <Rocket className="w-8 h-8 text-cyan-400" />

@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+// import { Calculator } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-abd1
 import React, { useState } from 'react';
 
 const InteractiveAIROICalculator: React.FC = () => {

@@ -1,6 +1,7 @@
 /**
  * Comprehensive optimization utilities that integrate accessibility, performance, and SEO
  */
+<<<<<<< HEAD
 import {
   initAccessibility
 } from './accessibilityUtils';
@@ -25,6 +26,47 @@ import {
   schemaGenerators,
   seoAudit
 } from './seoUtils';
+=======
+// import {
+//   focusManagement,
+//   ariaUtils,
+//   keyboardNavigation,
+//   colorContrast,
+//   screenReader,
+//   formAccessibility,
+//   motionAccessibility,
+//   initAccessibility
+// } from './accessibilityUtils';
+
+// import {
+//   getMemoryUsage,
+//   collectPerformanceMetrics,
+//   performanceMonitor,
+//   debounce,
+//   throttle,
+//   lazyLoadImages,
+//   preloadCriticalResources,
+//   optimizeScrollPerformance
+// } from './performanceUtils';
+
+// import {
+//   setMetaTags,
+//   setOpenGraphTags,
+//   setTwitterCardTags,
+//   setStructuredData,
+//   generateSitemap,
+//   optimizeImages,
+//   setCanonicalUrl,
+//   setPageTitle,
+//   setMetaDescription,
+//   setKeywords,
+//   setRobotsMeta,
+//   setLanguage,
+//   setViewport,
+//   schemaGenerators,
+//   seoAudit
+// } from './seoUtils';
+>>>>>>> cursor/fix-errors-and-merge-to-main-abd1
 
 /**
  * Comprehensive optimization configuration
@@ -201,7 +243,11 @@ export class ComprehensiveOptimizer {
 
     // Set Open Graph tags
     if (this.config.seo.enableOpenGraph) {
+<<<<<<< HEAD
       const ogData: { title: string; description: string; url: string; image?: string } = {
+=======
+      const ogData: Record<string, string> = {
+>>>>>>> cursor/fix-errors-and-merge-to-main-abd1
         title: pageData.title,
         description: pageData.description,
         url: pageData.url,
@@ -214,7 +260,11 @@ export class ComprehensiveOptimizer {
 
     // Set Twitter Card tags
     if (this.config.seo.enableTwitterCards) {
+<<<<<<< HEAD
       const twitterData: { title: string; description: string; image?: string } = {
+=======
+      const twitterData: Record<string, string> = {
+>>>>>>> cursor/fix-errors-and-merge-to-main-abd1
         title: pageData.title,
         description: pageData.description,
       };

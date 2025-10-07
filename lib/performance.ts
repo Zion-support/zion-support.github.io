@@ -22,7 +22,26 @@ interface PerformanceMetric {
 }
 
 // Extended Performance interface for memory API
+<<<<<<< HEAD
 // Performance and network interfaces removed as they are not used
+=======
+interface PerformanceMemory {
+  usedJSHeapSize: number;
+  totalJSHeapSize: number;
+  jsHeapSizeLimit: number;
+}
+
+// Network connection interface
+interface NetworkConnection {
+  effectiveType?: string;
+  type?: string;
+  saveData?: boolean;
+}
+
+interface NavigatorWithConnection extends Navigator {
+  connection?: NetworkConnection;
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-abd1
 
 interface PerformanceReport {
   metrics: PerformanceMetric[];
@@ -212,9 +231,15 @@ export function getSlowResources(threshold: number = 1000): PerformanceResourceT
  * Get memory usage (Chrome only)
  */
 export function getMemoryUsage(): Record<string, number> | null {
+<<<<<<< HEAD
   if (typeof window === 'undefined' || !(window as Window & { performance?: { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } } }).performance?.memory) return null;
   
   const memory = (window as Window & { performance: { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } } }).performance.memory;
+=======
+  if (typeof window === 'undefined' || !(window as Window & { performance: Performance & { memory?: PerformanceMemory } }).performance?.memory) return null;
+
+  const memory = (window as Window & { performance: Performance & { memory?: PerformanceMemory } }).performance.memory;
+>>>>>>> cursor/fix-errors-and-merge-to-main-abd1
   return {
     usedJSHeapSize: memory.usedJSHeapSize,
     totalJSHeapSize: memory.totalJSHeapSize,
@@ -281,11 +306,19 @@ export function monitorLayoutShifts(
  * Check if connection is slow
  */
 export function isSlowConnection(): boolean {
+<<<<<<< HEAD
   if (typeof navigator === 'undefined' || !(navigator as Navigator & { connection?: { effectiveType?: string; saveData?: boolean } }).connection) {
     return false;
   }
 
   const connection = (navigator as Navigator & { connection: { effectiveType: string; saveData: boolean } }).connection;
+=======
+  if (typeof navigator === 'undefined' || !(navigator as NavigatorWithConnection).connection) {
+    return false;
+  }
+
+  const connection = (navigator as NavigatorWithConnection).connection;
+>>>>>>> cursor/fix-errors-and-merge-to-main-abd1
   const slowTypes = ['slow-2g', '2g'];
   return (
     slowTypes.includes(connection.effectiveType) || connection.saveData === true
@@ -296,11 +329,19 @@ export function isSlowConnection(): boolean {
  * Get connection type
  */
 export function getConnectionType(): string {
+<<<<<<< HEAD
   if (typeof navigator === 'undefined' || !(navigator as Navigator & { connection?: { effectiveType?: string; type?: string } }).connection) {
     return 'unknown';
   }
 
   const connection = (navigator as Navigator & { connection: { effectiveType?: string; type?: string } }).connection;
+=======
+  if (typeof navigator === 'undefined' || !(navigator as NavigatorWithConnection).connection) {
+    return 'unknown';
+  }
+
+  const connection = (navigator as NavigatorWithConnection).connection;
+>>>>>>> cursor/fix-errors-and-merge-to-main-abd1
   return connection.effectiveType || connection.type || 'unknown';
 }
 
