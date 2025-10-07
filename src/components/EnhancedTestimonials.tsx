@@ -1,10 +1,5 @@
 import React from 'react';
 
-<<<<<<< HEAD
-export default function EnhancedTestimonials(): React.JSX.Element {
-	return <section aria-label="Enhanced Testimonials" />;
-}
-=======
 interface EnhancedTestimonialsProps {
   className?: string;
   children?: React.ReactNode;
@@ -27,4 +22,4 @@ const EnhancedTestimonials: React.FC<EnhancedTestimonialsProps> = ({
 };
 
 export default EnhancedTestimonials;
->>>>>>> cursor/fix-errors-and-merge-to-main-8d57
+

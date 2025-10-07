@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-export { default } from '../../components/PromotionalBanner';
-=======
 import React from 'react';
 
 interface PromotionalBannerProps {
@@ -25,4 +22,4 @@ const PromotionalBanner: React.FC<PromotionalBannerProps> = ({
 };
 
 export default PromotionalBanner;
->>>>>>> cursor/fix-errors-and-merge-to-main-8d57
+

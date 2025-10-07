@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-=======
 import React, { Component, type ErrorInfo, type ReactNode } from 'react';
 import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
->>>>>>> origin/main
 
 interface Props {
   children: ReactNode;
@@ -104,37 +99,12 @@ class ErrorBoundary extends Component<Props, State> {
               Or refresh the page
             </button>
           </div>
-<<<<<<< HEAD
-=======
-import React from 'react';
-=======
         </div>
       );
     }
->>>>>>> origin/main
 
     return this.props.children;
   }
 }
 
-<<<<<<< HEAD
-const ErrorBoundary: React.FC<ErrorBoundaryProps> = ({ 
-  className = '', 
-  children 
-}) => {
-  return (
-    <div className={`errorboundary-component ${className}`}>
-      {children || (
-        <div className="p-4 text-center text-gray-600">
-          <h3 className="text-lg font-semibold mb-2">ErrorBoundary</h3>
-          <p>Component placeholder - implementation needed</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-8d57
-        </div>
-      )}
-    </div>
-  );
-};
-
-=======
->>>>>>> origin/main
 export default ErrorBoundary;
