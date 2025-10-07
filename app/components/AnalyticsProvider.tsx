@@ -2,14 +2,6 @@
 
 import React, { createContext, useContext, useEffect, useState } from 'react';
 
-// Type definitions for Google Analytics
-interface WindowWithGtag extends Window {
-  dataLayer: unknown[];
-  gtag: (...args: unknown[]) => void;
-}
-
-type WindowWithAnalytics = Window & WindowWithGtag;
-
 interface AnalyticsEvent {
   event: string;
   category: string;
@@ -23,6 +15,21 @@ interface AnalyticsContextType {
   trackPageView: (page: string) => void;
   trackPerformance: (metric: string, value: number) => void;
   trackError: (error: Error, context?: string) => void;
+}
+
+// Google Analytics types
+interface GtagDataLayer {
+  push: (args: unknown[]) => number;
+}
+
+interface GtagFunction {
+  (command: string, targetId: string, config?: Record<string, unknown>): void;
+  (command: string, eventName: string, parameters?: Record<string, unknown>): void;
+}
+
+interface WindowWithGtag extends Window {
+  dataLayer?: unknown[];
+  gtag?: GtagFunction;
 }
 
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
@@ -59,11 +66,12 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
 
     script.onload = () => {
       // Initialize gtag
-      (window as WindowWithAnalytics).dataLayer = (window as WindowWithAnalytics).dataLayer || [];
+      const windowWithGtag = window as WindowWithGtag;
+      windowWithGtag.dataLayer = windowWithGtag.dataLayer || [];
       function gtag(...args: unknown[]) {
-        (window as WindowWithAnalytics).dataLayer.push(args);
+        (windowWithGtag.dataLayer as unknown[]).push(args);
       }
-      (window as WindowWithAnalytics).gtag = gtag;
+      windowWithGtag.gtag = gtag;
 
       gtag('js', new Date());
       gtag('config', googleAnalyticsId, {
@@ -90,8 +98,9 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
       console.log('Analytics Event:', event);
     }
 
-    if ((window as WindowWithAnalytics).gtag) {
-      (window as WindowWithAnalytics).gtag('event', event.action, {
+    const windowWithGtag = window as WindowWithGtag;
+    if (windowWithGtag.gtag) {
+      windowWithGtag.gtag('event', event.action, {
         event_category: event.category,
         event_label: event.label,
         value: event.value,
@@ -107,8 +116,9 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
       console.log('Page View:', page);
     }
 
-    if ((window as WindowWithAnalytics).gtag) {
-      (window as WindowWithAnalytics).gtag('config', googleAnalyticsId, {
+    const windowWithGtag = window as WindowWithGtag;
+    if (windowWithGtag.gtag) {
+      windowWithGtag.gtag('config', googleAnalyticsId, {
         page_title: document.title,
         page_location: page,
       });
@@ -123,8 +133,9 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
       console.log('Performance Metric:', metric, value);
     }
 
-    if ((window as WindowWithAnalytics).gtag) {
-      (window as WindowWithAnalytics).gtag('event', 'web_vitals', {
+    const windowWithGtag = window as WindowWithGtag;
+    if (windowWithGtag.gtag) {
+      windowWithGtag.gtag('event', 'web_vitals', {
         event_category: 'Performance',
         event_label: metric,
         value: Math.round(value),
@@ -141,8 +152,9 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
       console.error('Analytics Error:', error, context);
     }
 
-    if ((window as WindowWithAnalytics).gtag) {
-      (window as WindowWithAnalytics).gtag('event', 'exception', {
+    const windowWithGtag = window as WindowWithGtag;
+    if (windowWithGtag.gtag) {
+      windowWithGtag.gtag('event', 'exception', {
         description: error.message,
         fatal: false,
         custom_map: {

@@ -1,4 +1,5 @@
 import { TextEncoder, TextDecoder } from 'util';
+import '@testing-library/jest-dom';
 
 //Polyfill for react-router-dom in Jest environment
 //@ts-expect-error - Global TextEncoder may not be defined in Jest environment

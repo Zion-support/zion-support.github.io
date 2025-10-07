@@ -54,7 +54,7 @@ export const focusManagement = {
       }
     };
 
-    element.addEventListener('keydown', handleTabKey as EventListener);
+    element.addEventListener('keydown', handleTabKey);
     firstElement?.focus();
 
     return () => {
@@ -151,10 +151,9 @@ export const addKeyboardNavigation = () => {
   const customElements = document.querySelectorAll('[data-keyboard-navigation]');
   customElements.forEach((element) => {
     element.setAttribute('tabindex', '0');
-    element.addEventListener('keydown', (e: Event) => {
-      const keyEvent = e as KeyboardEvent;
-      if (keyEvent.key === 'Enter' || keyEvent.key === ' ') {
-        keyEvent.preventDefault();
+    element.addEventListener('keydown', (e: KeyboardEvent) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
         (element as HTMLElement).click();
       }
     });
@@ -174,10 +173,7 @@ export const initializeAccessibilityEnhancements = () => {
   // Validate accessibility
   const issues = validateAccessibility();
   if (issues.length > 0) {
-    // Log accessibility issues in development only
-    if (process.env.NODE_ENV === 'development') {
-      // eslint-disable-next-line no-console
-      console.warn('Accessibility issues found:', issues);
-    }
+    // eslint-disable-next-line no-console
+    console.warn('Accessibility issues found:', issues);
   }
 };

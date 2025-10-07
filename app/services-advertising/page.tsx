@@ -4,7 +4,11 @@ import {
   ArrowLeft,
   ArrowRight,
   Target,
+  TrendingUp,
+  Users,
+  Zap,
   CheckCircle,
+  Star,
 } from 'lucide-react';
 
 export default function ServicesAdvertisingPage() {

@@ -92,13 +92,25 @@ export const optimizeScrollPerformance = () => {
   window.addEventListener('scroll', requestTick, { passive: true });
 };
 
+// Memory usage interface
+interface PerformanceMemory {
+  usedJSHeapSize: number;
+  totalJSHeapSize: number;
+  jsHeapSizeLimit: number;
+}
+
+interface PerformanceWithMemory extends Performance {
+  memory?: PerformanceMemory;
+}
+
 // Memory usage monitoring
 export const getMemoryUsage = () => {
   if (typeof window === 'undefined' || !('memory' in performance)) {
     return null;
   }
 
-  const memory = (performance as { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
+  const perf = performance as PerformanceWithMemory;
+  const memory = perf.memory;
   if (!memory) return null;
   
   return {
@@ -145,8 +157,11 @@ export const initializePerformanceEnhancements = () => {
 
   // Collect performance metrics
   const metrics = collectPerformanceMetrics();
-  if (metrics && process.env.NODE_ENV === 'development') {
+  if (metrics) {
     // eslint-disable-next-line no-console
     console.log('Performance metrics:', metrics);
   }
 };
+
+// Export the main performance enhancer function
+export const performanceEnhancer = initializePerformanceEnhancements;

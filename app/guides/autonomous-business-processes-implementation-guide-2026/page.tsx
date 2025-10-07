@@ -8,9 +8,12 @@ import {
   Target,
   Users,
   Zap,
+  TrendingUp,
   Brain,
+  Shield,
   Settings,
   BarChart3,
+  Star,
 } from 'lucide-react';
 import type { Metadata } from 'next';
 
