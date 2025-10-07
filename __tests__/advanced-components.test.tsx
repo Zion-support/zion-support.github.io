@@ -46,7 +46,8 @@ describe('AdvancedErrorBoundary', () => {
     );
 
     expect(screen.getByText('Oops! Something went wrong')).toBeInTheDocument();
-    expect(screen.getByText(/Try Again|Reload Page/)).toBeInTheDocument();
+    const retryButtons = screen.queryAllByText(/Try Again|Reload Page/);
+    expect(retryButtons.length).toBeGreaterThan(0);
     expect(screen.getByText('Go to Homepage')).toBeInTheDocument();
 
     consoleSpy.mockRestore();

@@ -14,8 +14,6 @@ class MockPerformanceObserver {
 global.PerformanceObserver = MockPerformanceObserver;
 
 describe('Performance Tests', () => {
-  let locationSpy;
-
   beforeAll(() => {
     // Mock performance API
     global.performance = {
@@ -29,28 +27,12 @@ describe('Performance Tests', () => {
       },
     };
 
-    // Mock window object
-    delete window.location;
-    window.location = {
-      href: 'http://localhost:3000',
-      reload: jest.fn(),
-    };
-
     // Mock navigator
     Object.defineProperty(navigator, 'userAgent', {
       value: 'Mozilla/5.0 (Test Browser)',
       writable: true,
       configurable: true,
     });
-  });
-
-  beforeEach(() => {
-    // Mock window.location using spies instead of redefining
-    locationSpy = jest.spyOn(window.location, 'reload').mockImplementation(() => {});
-  });
-
-  afterEach(() => {
-    locationSpy.mockRestore();
   });
 
   test('PerformanceOptimizer should initialize correctly', () => {
