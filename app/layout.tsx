@@ -1,6 +1,9 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import PerformanceMonitor from './components/PerformanceMonitor';
+import AnalyticsProvider from './components/AnalyticsProvider';
+import ErrorBoundary from './components/ErrorBoundary';
+import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 
 export const metadata: Metadata = {
   title: 'Zion Tech Group - AI & IT Solutions',
@@ -73,8 +76,14 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
       <body className="antialiased">
-        <PerformanceMonitor />
-        {children}
+        <AnalyticsProvider>
+          <ErrorBoundary>
+            <AccessibilityEnhancer>
+              <PerformanceMonitor />
+              {children}
+            </AccessibilityEnhancer>
+          </ErrorBoundary>
+        </AnalyticsProvider>
       </body>
     </html>
   );

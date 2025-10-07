@@ -83,6 +83,7 @@ function sendToAnalytics(metric: Metric): void {
 
   // Log in development
   if (process.env.NODE_ENV === 'development') {
+     
     console.log('Performance Metric:', performanceMetric);
   }
 
@@ -111,6 +112,7 @@ function sendToAnalytics(metric: Metric): void {
       }),
       keepalive: true,
     }).catch(error => 
+     
     console.error('Performance reporting error:', error));
   }
 }
@@ -128,6 +130,7 @@ export function initPerformanceMonitoring(): void {
     onLCP(sendToAnalytics);
     onTTFB(sendToAnalytics);
   } catch (error) {
+     
     console.error('Error initializing performance monitoring:', error);
   }
 }
@@ -155,6 +158,7 @@ export function measurePerformance(name: string, startTime: number): number {
   }
 
   if (process.env.NODE_ENV === 'development') {
+     
     console.log(`Performance: ${name} took ${duration.toFixed(2)}ms`);
   }
 
@@ -170,6 +174,7 @@ export function markPerformance(name: string): void {
   try {
     performance.mark(name);
   } catch (error) {
+     
     console.error('Error marking performance:', error);
   }
 }
@@ -189,6 +194,7 @@ export function measureBetween(
     const measure = performance.getEntriesByName(name)[0] as PerformanceEntry;
     return measure.duration;
   } catch (error) {
+     
     console.error('Error measuring between marks:', error);
     return 0;
   }
@@ -295,6 +301,7 @@ export function monitorLongTasks(
     observer.observe({ entryTypes: ['longtask'] });
     return observer;
   } catch (error) {
+     
     console.error('Error monitoring long tasks:', error);
     return null;
   }
@@ -316,6 +323,7 @@ export function monitorLayoutShifts(
     observer.observe({ entryTypes: ['layout-shift'] });
     return observer;
   } catch (error) {
+     
     console.error('Error monitoring layout shifts:', error);
     return null;
   }
