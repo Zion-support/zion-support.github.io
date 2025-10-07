@@ -3,7 +3,27 @@
  * Comprehensive performance optimization utilities for React applications
  */
 
-import { useEffect, useCallback, useRef, useState } from 'react';
+import { useEffect, useCallback, useRef } from 'react';
+
+// Extended Performance Memory interface
+interface PerformanceMemory {
+  usedJSHeapSize: number;
+  totalJSHeapSize: number;
+  jsHeapSizeLimit: number;
+}
+
+interface ExtendedPerformance extends Performance {
+  memory?: PerformanceMemory;
+}
+
+interface LayoutShiftEntry extends PerformanceEntry {
+  hadRecentInput?: boolean;
+  value: number;
+}
+
+interface FirstInputEntry extends PerformanceEntry {
+  processingStart: number;
+}
 
 // Performance monitoring utilities
 export class PerformanceMonitor {
@@ -30,8 +50,10 @@ export class PerformanceMonitor {
   // Track memory usage
   trackMemory(componentName: string) {
     if ('memory' in performance) {
-      const memory = (performance as any).memory;
-      this.metrics.set(`${componentName}_memory`, memory.usedJSHeapSize);
+      const memory = (performance as ExtendedPerformance).memory;
+      if (memory) {
+        this.metrics.set(`${componentName}_memory`, memory.usedJSHeapSize);
+      }
     }
   }
 
@@ -197,9 +219,10 @@ export const trackWebVitals = () => {
 
     const observer = new PerformanceObserver((list) => {
       for (const entry of list.getEntries()) {
-        if (!(entry as any).hadRecentInput) {
+        const layoutShiftEntry = entry as LayoutShiftEntry;
+        if (!layoutShiftEntry.hadRecentInput) {
           clsEntries.push(entry);
-          clsValue += (entry as any).value;
+          clsValue += layoutShiftEntry.value;
         }
       }
     });
@@ -227,7 +250,8 @@ export const trackWebVitals = () => {
   const trackFID = () => {
     const observer = new PerformanceObserver((list) => {
       for (const entry of list.getEntries()) {
-        const fid = (entry as any).processingStart - entry.startTime;
+        const fidEntry = entry as FirstInputEntry;
+        const fid = fidEntry.processingStart - entry.startTime;
         console.log('[Web Vitals] FID:', fid);
       }
     });

@@ -4,8 +4,44 @@
  */
 
 import { render, RenderOptions, RenderResult } from '@testing-library/react';
-import { ReactElement } from 'react';
+import React, { ReactElement, useCallback } from 'react';
 import { BrowserRouter } from 'react-router-dom';
+
+// Performance metrics interface
+interface PerformanceMetrics {
+  renderTime: number;
+  memoryUsage: number;
+  timestamp: string;
+}
+
+// Coverage result interface
+interface CoverageResult {
+  statements: number;
+  branches: number;
+  functions: number;
+  lines: number;
+}
+
+// Test result interface
+interface TestResult {
+  passed: boolean;
+  name?: string;
+  type?: string;
+  error?: string;
+  metrics?: PerformanceMetrics;
+  violations?: string[];
+  diff?: unknown;
+  coverage?: CoverageResult;
+}
+
+// Extended Performance interface for memory
+interface ExtendedPerformance extends Performance {
+  memory?: {
+    usedJSHeapSize: number;
+    totalJSHeapSize: number;
+    jsHeapSizeLimit: number;
+  };
+}
 
 // Test configuration interface
 export interface TestConfig {
@@ -74,7 +110,7 @@ export class TestRunner {
   async runPerformanceTest(
     component: ReactElement,
     testName: string
-  ): Promise<{ passed: boolean; metrics: any }> {
+  ): Promise<{ passed: boolean; metrics: PerformanceMetrics }> {
     const startTime = performance.now();
     
     const { unmount } = this.customRender(component);
@@ -84,7 +120,8 @@ export class TestRunner {
     // Measure memory usage if available
     let memoryUsage = 0;
     if ('memory' in performance) {
-      memoryUsage = (performance as any).memory.usedJSHeapSize;
+      const extPerf = performance as ExtendedPerformance;
+      memoryUsage = extPerf.memory?.usedJSHeapSize || 0;
     }
 
     unmount();
@@ -111,7 +148,7 @@ export class TestRunner {
   async runAccessibilityTest(
     component: ReactElement,
     testName: string
-  ): Promise<{ passed: boolean; violations: any[] }> {
+  ): Promise<{ passed: boolean; violations: string[] }> {
     const { container } = this.customRender(component);
     
     // Basic accessibility checks
@@ -237,7 +274,7 @@ export class TestRunner {
   async runVisualRegressionTest(
     component: ReactElement,
     testName: string
-  ): Promise<{ passed: boolean; diff?: any }> {
+  ): Promise<{ passed: boolean; diff?: unknown }> {
     // This would typically use a tool like Percy or Chromatic
     // For now, we'll just return a placeholder
     console.log(`Visual regression test for ${testName} would run here`);
@@ -252,7 +289,7 @@ export class TestRunner {
   }
 
   // Coverage test
-  async runCoverageTest(): Promise<{ passed: boolean; coverage: any }> {
+  async runCoverageTest(): Promise<{ passed: boolean; coverage: CoverageResult }> {
     // This would typically use Istanbul or similar
     // For now, we'll just return a placeholder
     const coverage = {
@@ -281,7 +318,7 @@ export class TestRunner {
     component: ReactElement;
     assertions?: (result: RenderResult) => void;
     userInteractions?: (result: RenderResult) => Promise<void>;
-  }>): Promise<{ passed: boolean; results: any[] }> {
+  }>): Promise<{ passed: boolean; results: TestResult[] }> {
     const results = [];
 
     for (const test of tests) {
