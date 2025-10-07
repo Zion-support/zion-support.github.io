@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 :src/components/PerformanceMonitor.tsx
 import React, { useEffect, useState } from 'react';
 import performanceOptimizer, { WebVitalsMetrics } from '../utils/performanceOptimizer';
@@ -289,7 +287,6 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       )}
     </div>
   );
->>>>>>> e4aba06acc6d8264f43e20480700872d8b21daec
 };
 
 export default PerformanceMonitor;
