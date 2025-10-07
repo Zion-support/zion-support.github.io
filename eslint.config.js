@@ -4,17 +4,8 @@ import tseslint from '@typescript-eslint/eslint-plugin';
 import tsParser from '@typescript-eslint/parser';
 import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
-import nextPlugin from '@next/eslint-plugin-next';
-import { FlatCompat } from "@eslint/eslintrc";
-import { fileURLToPath } from "url";
-import { dirname } from "path";
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
-
-const compat = new FlatCompat({
-  baseDirectory: __dirname
-});
+// import nextPlugin from '@next/eslint-plugin-next'; // Removed - not installed
+// Removed FlatCompat and file system imports - not needed for basic config
 
 export default [{
   ignores: ["node_modules/**", ".next/**", "out/**", "build/**", "next-env.d.ts"]

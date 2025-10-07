@@ -235,7 +235,7 @@ export class PerformanceMonitor {
 }
 
 // Export singleton instance
-export const performanceMonitor = new PerformanceMonitor();
+export const performanceMonitorInstance = new PerformanceMonitor();
 
 // Lazy loading utilities
 export const lazyLoadImages = (): void => {

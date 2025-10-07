@@ -30,6 +30,9 @@ interface AdvancedSEOOptimizerProps {
   enableStructuredData?: boolean;
   enableAnalytics?: boolean;
   enablePerformanceTracking?: boolean;
+  enableOpenGraph?: boolean;
+  enableTwitterCards?: boolean;
+  enableSchemaMarkup?: boolean;
 }
 
 const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
@@ -37,6 +40,9 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
   enableStructuredData = true,
   enableAnalytics = true,
   enablePerformanceTracking = true,
+  enableOpenGraph = true,
+  enableTwitterCards = true,
+  enableSchemaMarkup = true,
 }) => {
   const structuredDataRef = useRef<HTMLScriptElement | null>(null);
 

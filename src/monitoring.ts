@@ -1,6 +1,5 @@
 // Performance monitoring setup
 import { analytics } from './utils/analytics';
-import { errorHandler } from './utils/errorHandler';
 import { performanceOptimizer, measurePageLoad, reportWebVitals } from './utils/performanceOptimizer';
 
 // Initialize performance monitoring
@@ -18,7 +17,8 @@ if (typeof window !== 'undefined') {
         'performance',
         'detected',
         undefined,
-        entry.duration
+        entry.duration,
+        undefined
       );
     });
   });
@@ -39,4 +39,4 @@ if (typeof window !== 'undefined') {
   }
 }
 
-export { analytics, errorHandler, performanceOptimizer };
+export { analytics, performanceOptimizer };
