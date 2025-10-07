@@ -186,11 +186,11 @@ const App = () => {
       >
         <AdvancedSEOOptimizer
           seoData={{
-            title: 'Zion Tech Group - AI & IT Solutions',
-            description: 'Advanced AI and IT solutions for modern businesses',
-            keywords: ['AI', 'IT Solutions', 'Technology'],
+            title: 'Zion Tech Group - Advanced AI and IT Solutions',
+            description: 'Enterprise-grade AI and IT solutions designed for large organizations. Scalable, secure, and reliable technology solutions.',
+            keywords: ['AI', 'IT Solutions', 'Enterprise', 'Technology'],
             canonicalUrl: 'https://ziontechgroup.com',
-            ogImage: 'https://ziontechgroup.com/og-image.png',
+            ogImage: 'https://ziontechgroup.com/og-image.jpg',
           }}
           enableStructuredData={true}
           enableOpenGraph={true}

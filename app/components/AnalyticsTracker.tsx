@@ -2,6 +2,7 @@
 
 import React, { useEffect } from 'react';
 
+// Window interface for Google Analytics is already declared in types/global.d.ts
 interface AnalyticsEvent {
   action: string;
   category: string;
