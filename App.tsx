@@ -109,7 +109,7 @@ const LoadingSpinner = memo(() => (
   </div>
 ));
 
-export default function App() {
+const App = () => {
   const structuredData = useMemo(
     () => ({
       '@context': 'https://schema.org',
@@ -149,8 +149,6 @@ export default function App() {
     }),
     []
   );
-
-const App = () => {
   // Performance optimization: Preload critical resources
   React.useEffect(() => {
     if (typeof document !== 'undefined') {
