@@ -1,6 +1,6 @@
 'use client';
 
-import React, { Suspense, lazy, useEffect } from 'react';
+import React, { Suspense, useEffect } from 'react';
 import { HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
@@ -51,42 +51,40 @@ const App: React.FC = () => {
   return (
     <HelmetProvider>
       <ErrorBoundary>
-        <div>
-          <SEOOptimizer />
-          <AccessibilityEnhancer>
-            <Router>
-              <div className='App'>
-                {/* Skip to main content link for accessibility */}
-                <a
-                  href='#main-content'
-                  className='skip-link sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50'
-                  onClick={e => {
-                    e.preventDefault();
-                    const main =
-                      document.querySelector('main') ||
-                      document.querySelector('#main-content');
-                    if (main) {
-                      main.focus();
-                      main.scrollIntoView({ behavior: 'smooth' });
-                    }
-                  }}
-                >
-                  Skip to main content
-                </a>
+        <SEOOptimizer />
+        <AccessibilityEnhancer>
+          <Router>
+            <div className='App'>
+              {/* Skip to main content link for accessibility */}
+              <a
+                href='#main-content'
+                className='skip-link sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50'
+                onClick={e => {
+                  e.preventDefault();
+                  const main =
+                    document.querySelector('main') ||
+                    document.querySelector('#main-content');
+                  if (main) {
+                    main.focus();
+                    main.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
+              >
+                Skip to main content
+              </a>
 
-                <Suspense fallback={<LoadingSpinner />}>
-                  <Routes>
-                    <Route path='/' element={<HomePage />} />
-                    {/* Add more routes as needed */}
-                  </Routes>
-                </Suspense>
+              <Suspense fallback={<LoadingSpinner />}>
+                <Routes>
+                  <Route path='/' element={<HomePage />} />
+                  {/* Add more routes as needed */}
+                </Routes>
+              </Suspense>
 
-                {/* Performance Dashboard */}
-                <PerformanceDashboard />
-              </div>
-            </Router>
-            </AccessibilityEnhancer>
-        </div>
+              {/* Performance Dashboard - only shows in development */}
+              <PerformanceDashboard />
+            </div>
+          </Router>
+        </AccessibilityEnhancer>
       </ErrorBoundary>
     </HelmetProvider>
   );
