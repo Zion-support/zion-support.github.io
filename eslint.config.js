@@ -4,6 +4,7 @@ import tseslint from '@typescript-eslint/eslint-plugin';
 import tsParser from '@typescript-eslint/parser';
 import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
+import nextPlugin from '@next/eslint-plugin-next';
 import { FlatCompat } from "@eslint/eslintrc";
 import { fileURLToPath } from "url";
 import { dirname } from "path";
@@ -15,7 +16,9 @@ const compat = new FlatCompat({
   baseDirectory: __dirname
 });
 
-export default [...compat.extends("next/core-web-vitals", "next/typescript"), {
+export default [
+  ...compat.extends("next/core-web-vitals", "next/typescript"),
+  {
   ignores: ["node_modules/**", ".next/**", "out/**", "build/**", "next-env.d.ts"]
 }, //Global ignores - ignore everything except src, app directories and main files
 {
@@ -185,6 +188,7 @@ export default [...compat.extends("next/core-web-vitals", "next/typescript"), {
     '@typescript-eslint': tseslint,
     'react-hooks': reactHooks,
     'react-refresh': reactRefresh,
+    '@next/next': nextPlugin,
   },
   rules: {
     ...(reactHooks.configs.recommended?.rules || {}),
