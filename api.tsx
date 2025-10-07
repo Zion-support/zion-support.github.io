@@ -159,31 +159,33 @@ const Api: React.FC = () => {
           </div>
         </div>
 
-      <div className='py-16 bg-white'>
-        <div className='container mx-auto px-4'>
-          <div className='max-w-3xl mx-auto text-center'>
-            <h2 className='text-3xl font-bold text-gray-900 mb-6'>
-              Getting Started
-            </h2>
-            <p className='text-lg text-gray-600 mb-8'>
-              Ready to integrate with our APIs? Get your API key and start
-              building amazing applications.
-            </p>
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-              <Link
-                to='/contact'
-                className='bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-flex items-center'
-              >
-                Get API Key
-                <ArrowRight className='ml-2 w-5 h-5' />
-              </Link>
-              <a
-                href='https://docs?.ziontechgroup.com'
-                className='border border-gray-300 text-gray-700 px-8 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors inline-flex items-center'
-              >
-                View Full Docs
-                <ExternalLink className='ml-2 w-5 h-5' />
-              </a>
+        {/* Getting Started Section */}
+        <div className='py-16 bg-white'>
+          <div className='container mx-auto px-4'>
+            <div className='max-w-3xl mx-auto text-center'>
+              <h2 className='text-3xl font-bold text-gray-900 mb-6'>
+                Getting Started
+              </h2>
+              <p className='text-lg text-gray-600 mb-8'>
+                Ready to integrate with our APIs? Get your API key and start
+                building amazing applications.
+              </p>
+              <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+                <Link
+                  to='/contact'
+                  className='bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-flex items-center'
+                >
+                  Get API Key
+                  <ArrowRight className='ml-2 w-5 h-5' />
+                </Link>
+                <a
+                  href='https://docs.ziontechgroup.com'
+                  className='border border-gray-300 text-gray-700 px-8 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors inline-flex items-center'
+                >
+                  View Full Docs
+                  <ExternalLink className='ml-2 w-5 h-5' />
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -192,4 +194,4 @@ const Api: React.FC = () => {
   );
 };
 
-export default API;
+export default Api;

@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   experimental: {
-    optimizeCss: true,
+    optimizeCss: false,
     optimizePackageImports: ['@mui/material', '@mui/icons-material', 'lucide-react', 'framer-motion'],
     webVitalsAttribution: ['CLS', 'LCP', 'FCP', 'FID', 'TTFB'],
   },
