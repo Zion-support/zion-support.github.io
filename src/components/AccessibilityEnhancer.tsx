@@ -8,9 +8,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   children,
 }) => {
   useEffect(() => {
-<<<<<<< HEAD
     // Add skip links
-=======
     // Check for user's motion preferences
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     setReducedMotion(prefersReducedMotion);
@@ -26,7 +24,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     applyAccessibilityStyles(savedHighContrast, savedFontSize, prefersReducedMotion);
 
     // Add accessibility enhancements
->>>>>>> cursor/fix-errors-and-merge-to-main-e42d
     const addSkipLinks = () => {
       const skipLinks = document.querySelector('.skip-links');
       if (!skipLinks) {
@@ -161,10 +158,8 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       }
     };
 
-<<<<<<< HEAD
     // Announce after a short delay to ensure content is loaded
     const timeoutId = setTimeout(announcePageChange, 1000);
-=======
       .font-normal {
         font-size: 1rem;
       }
@@ -180,16 +175,13 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       }
     `;
     document.head.appendChild(style);
->>>>>>> cursor/fix-errors-and-merge-to-main-e42d
 
     return () => {
       clearTimeout(timeoutId);
     };
   }, []);
 
-<<<<<<< HEAD
   return <>{children}</>;
-=======
   const applyAccessibilityStyles = (highContrast: boolean, fontSize: 'small' | 'normal' | 'large', reducedMotion: boolean) => {
     const root = document.documentElement;
     
@@ -271,7 +263,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       )}
     </>
   );
->>>>>>> cursor/fix-errors-and-merge-to-main-e42d
 };
 
 export default AccessibilityEnhancer;

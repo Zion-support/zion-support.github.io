@@ -57,10 +57,7 @@ class Analytics {
       userAgent: window.navigator.userAgent,
       language: window.navigator.language,
       timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
-<<<<<<< HEAD
-=======
       referrer: document.referrer || '',
->>>>>>> cursor/fix-errors-and-merge-to-main-e42d
       referrer: document.referrer || undefined,
     };
   }
@@ -79,12 +76,10 @@ class Analytics {
     const event: AnalyticsEvent = {
       name,
       category,
-<<<<<<< HEAD
       action,
       label,
       value,
       properties,
-=======
       action: action || '',
       label: label || undefined,
       value,
@@ -97,7 +92,6 @@ class Analytics {
       label: label || undefined,
       value: value || undefined,
       properties: properties || undefined,
->>>>>>> cursor/fix-errors-and-merge-to-main-e42d
       timestamp: Date.now(),
     };
 
@@ -107,11 +101,8 @@ class Analytics {
     this.sendToAnalytics(event);
 
     // Log in development
-<<<<<<< HEAD
     if (process.env.NODE_ENV === 'development') {
-=======
     if (process.env['NODE_ENV'] === 'development') {
->>>>>>> cursor/fix-errors-and-merge-to-main-e42d
       console.log('Analytics event:', event);
     }
   }

@@ -1,14 +1,11 @@
-<<<<<<< HEAD
 import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 
 interface SEOOptimizerProps {
   children: React.ReactNode;
-=======
 import React, { ReactNode } from 'react';
 import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/fix-errors-and-merge-to-main-e42d
   title?: string;
   description?: string;
   keywords?: string[];
@@ -47,8 +44,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     }
   }, [structuredData]);
 
-<<<<<<< HEAD
-=======
 
 interface SEOOptimizerProps {
   children: ReactNode;
@@ -65,12 +60,10 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   keywords = 'AI, artificial intelligence, IT solutions, technology, business solutions, automation',
   canonical
 }) => {
->>>>>>> cursor/fix-errors-and-merge-to-main-e42d
   return (
     <>
       <Helmet>
         <title>{title}</title>
-<<<<<<< HEAD
         <meta name='description' content={description} />
         <meta name='keywords' content={keywords.join(', ')} />
         {canonicalUrl && <link rel='canonical' href={canonicalUrl} />}
@@ -101,7 +94,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
           crossOrigin='anonymous'
         />
         <link rel='dns-prefetch' href='https://fonts?.googleapis.com' />
-=======
         <meta name="description" content={description} />
 import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -166,7 +158,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ children }) => {
         <meta name="twitter:description" content="Transform your business with cutting-edge AI micro SaaS services, cloud automation, and enterprise IT solutions." />
         <meta name="twitter:image" content="https://ziontechgroup.com/og-image.jpg" />
         <link rel="canonical" href="https://ziontechgroup.com" />
->>>>>>> cursor/fix-errors-and-merge-to-main-e42d
       </Helmet>
       {children}
     </>

@@ -1,7 +1,5 @@
-<<<<<<< HEAD
 import { Component, ErrorInfo, ReactNode } from 'react';
 import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
-=======
 import { Component } from 'react';
 import type { ErrorInfo, ReactNode } from 'react';
 import { AlertTriangle } from 'lucide-react';
@@ -14,24 +12,17 @@ import { Component, type ErrorInfo, type ReactNode } from 'react';
 
 interface Props {
   children: ReactNode;
->>>>>>> cursor/fix-errors-and-merge-to-main-e42d
 
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
-<<<<<<< HEAD
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-e42d
 }
 
 interface State {
   hasError: boolean;
   error?: Error;
-<<<<<<< HEAD
   errorId?: string;
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-e42d
 }
 
 class ErrorBoundary extends Component<Props, State> {
@@ -41,7 +32,6 @@ class ErrorBoundary extends Component<Props, State> {
   }
 
   static getDerivedStateFromError(error: Error): State {
-<<<<<<< HEAD
     return {
       hasError: true,
       error,
@@ -61,8 +51,6 @@ class ErrorBoundary extends Component<Props, State> {
     }
   }
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-e42d
   private reportError = (error: Error, errorInfo: ErrorInfo) => {
     // Report to external service (e?.g., Sentry, LogRocket, etc.)
     if (typeof window !== 'undefined' && (window as any).gtag) {
@@ -87,8 +75,6 @@ class ErrorBoundary extends Component<Props, State> {
     }
   };
 
-<<<<<<< HEAD
-=======
   render() {
     if (this.state.hasError) {
       return this.props.fallback || (
@@ -133,11 +119,9 @@ class ErrorBoundary extends Component<Props, State> {
     console.error('ErrorBoundary caught an error:', error, errorInfo);
   }
 
->>>>>>> cursor/fix-errors-and-merge-to-main-e42d
   override render() {
     if (this?.state.hasError) {
       return (
-<<<<<<< HEAD
         this?.props.fallback || (
           <div className='min-h-screen flex items-center justify-center bg-gray-900'>
             <div className='text-center p-8 max-w-md'>
@@ -177,7 +161,6 @@ class ErrorBoundary extends Component<Props, State> {
                 Or refresh the page
               </button>
             </div>
-=======
         <div className="min-h-screen flex items-center justify-center bg-gray-50">
           <div className="text-center">
             <h1 className="text-2xl font-bold text-red-600 mb-4">Something went wrong</h1>
@@ -216,7 +199,6 @@ class ErrorBoundary extends Component<Props, State> {
               Refresh Page
             </button>
             <p className="text-gray-400 mb-8">We're working to fix this issue.</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-e42d
           </div>
         )
       );

@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-=======
 export default {
 export interface WebVitalsMetrics {
->>>>>>> cursor/fix-errors-and-merge-to-main-e42d
 /**
  * Performance optimization utilities
  */
@@ -22,8 +19,6 @@ export interface WebVitalsMetrics {
 }
 
 /**
-<<<<<<< HEAD
-=======
  * Performance budget checker
  */
 interface PerformanceBudget {
@@ -117,7 +112,6 @@ export class PerformanceOptimizer {
 
 /**
 /**
->>>>>>> cursor/fix-errors-and-merge-to-main-e42d
  * Resource hints for performance
  */
 export const prefetchResources = (urls: string[]): void => {
@@ -128,9 +122,7 @@ export const prefetchResources = (urls: string[]): void => {
     link.rel = 'prefetch';
     link.href = url;
     document.head.appendChild(link);
-<<<<<<< HEAD
   });
-=======
  * Debounce function
  */
 export const debounce = <T extends (...args: any[]) => any>(
@@ -142,7 +134,6 @@ export const debounce = <T extends (...args: any[]) => any>(
     clearTimeout(timeout);
     timeout = setTimeout(() => func(...args), wait) as unknown as number;
   };
->>>>>>> cursor/fix-errors-and-merge-to-main-e42d
 };
 
 /**
@@ -195,7 +186,6 @@ export const lazyLoadImages = (): void => {
 /**
  * Debounce function for performance optimization
  */
-<<<<<<< HEAD
 export function debounce<T extends (...args: any[]) => any>(
   func: T,
   wait: number
@@ -227,7 +217,6 @@ export function throttle<T extends (...args: any[]) => any>(
     }
   };
 }
-=======
 export const preconnectDomains = (domains: string[]): void => {
   if (typeof document === 'undefined') return;
   
@@ -337,12 +326,10 @@ export const preloadCriticalResources = (): void => {
     imageObserver.observe(img);
   });
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-e42d
 
 /**
  * Measure page load performance
  */
-<<<<<<< HEAD
 export const measurePageLoad = (): WebVitalsMetrics | null => {
   if (typeof window === 'undefined' || !window.performance) return null;
 
@@ -389,7 +376,6 @@ export const shouldUseWebP = (): boolean => {
 
   const canvas = document.createElement('canvas');
   canvas.width = canvas.height = 1;
-=======
 export const measurePageLoad = (): Promise<WebVitalsMetrics> => {
   return new Promise((resolve) => {
     if (typeof window === 'undefined') {
@@ -457,14 +443,12 @@ export const shouldUseWebP = (): boolean => {
   const canvas = document.createElement('canvas');
   canvas.width = 1;
   canvas.height = 1;
->>>>>>> cursor/fix-errors-and-merge-to-main-e42d
   return canvas.toDataURL('image/webp').indexOf('data:image/webp') === 0;
 };
 
 /**
  * Get connection quality
  */
-<<<<<<< HEAD
 export const getConnectionQuality = (): 'slow' | 'medium' | 'fast' => {
   if (typeof navigator === 'undefined') return 'medium';
 
@@ -626,7 +610,6 @@ export const checkPerformanceBudget = (
 };
 
 /**
-=======
 export const getConnectionQuality = (): 'slow' | 'fast' | 'unknown' => {
   if (typeof navigator === 'undefined' || !('connection' in navigator)) {
     return 'unknown';
@@ -1045,7 +1028,6 @@ export function throttle<T extends (...args: unknown[]) => unknown>(
 
 /**
 export const preloadCriticalResources = (): void => {
->>>>>>> cursor/fix-errors-and-merge-to-main-e42d
  * Performance monitoring class
  */
 class PerformanceOptimizer {
@@ -1070,7 +1052,6 @@ class PerformanceOptimizer {
     return duration;
   }
 
-<<<<<<< HEAD
   public lazyLoadImages(): void {
     lazyLoadImages();
   }
@@ -1130,7 +1111,6 @@ class PerformanceOptimizer {
   public monitorLongTasks(
     callback: (entries: PerformanceEntryList) => void
   ): PerformanceObserver | null {
-=======
   public measurePageLoadMetrics(): WebVitalsMetrics | null {
     return measurePageLoad();
   }
@@ -1248,15 +1228,12 @@ class PerformanceOptimizer {
   }
 
   public monitorLongTasks(callback: (entries: PerformanceEntry[]) => void): PerformanceObserver | null {
->>>>>>> cursor/fix-errors-and-merge-to-main-e42d
     return monitorLongTasks(callback);
   }
 
   // Get performance metrics
   getMetrics(): Record<string, number> {
     return Object.fromEntries(this.metrics);
-<<<<<<< HEAD
-=======
   }
 
   measurePageLoad(): Record<string, number> | null {
@@ -1562,7 +1539,6 @@ export const clearOldCaches = (): void => {
       domContentLoaded: timing.domContentLoadedEventEnd - timing.navigationStart,
       firstPaint: performance.getEntriesByType('paint')[0]?.startTime || 0
     };
->>>>>>> cursor/fix-errors-and-merge-to-main-e42d
   }
 
   // Initialize all optimizations
@@ -1576,8 +1552,6 @@ export const clearOldCaches = (): void => {
 }
 
 // Export singleton instance
-<<<<<<< HEAD
-=======
 // Export default object for backward compatibility
 // Export default object for backward compatibility
 // Export individual functions for backward compatibility
@@ -1587,15 +1561,12 @@ export {
   reportWebVitals as reportWebVitalsStandalone
 };
 // Export default object for backward compatibility
->>>>>>> cursor/fix-errors-and-merge-to-main-e42d
 export const performanceOptimizer = PerformanceOptimizer.getInstance();
 
 export default {
   prefetchResources,
   preconnectDomains,
   lazyLoadImages,
-<<<<<<< HEAD
-=======
   optimizeScroll,
   preloadCriticalResources,
   addCriticalResourceHints,
@@ -1605,7 +1576,6 @@ export default {
   checkPerformanceBudget
 };
   preloadCriticalResources: () => performanceOptimizer.preloadCriticalResources(),
->>>>>>> cursor/fix-errors-and-merge-to-main-e42d
   debounce,
   throttle,
   measurePageLoad,
@@ -1620,9 +1590,7 @@ export default {
   cacheStaticAssets,
   clearOldCaches,
   checkPerformanceBudget,
-<<<<<<< HEAD
 };
-=======
   preloadCriticalResources,
   optimizeScroll,
   addCriticalResourceHints
@@ -1644,4 +1612,3 @@ export const performanceOptimizer = PerformanceOptimizer.getInstance();
   checkPerformanceBudget
 };
 export const performanceOptimizer = PerformanceOptimizer.getInstance();
->>>>>>> cursor/fix-errors-and-merge-to-main-e42d

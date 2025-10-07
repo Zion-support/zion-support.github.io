@@ -1,9 +1,7 @@
 // usePerformance - TypeScript definitions and utilities
 
-<<<<<<< HEAD
 export interface usePerformanceConfig {
   // Configuration properties
-=======
 import { useEffect, useCallback, useRef } from 'react';
 import { monitorLongTasks } from '../utils/performanceOptimizer';
 import { performanceOptimizer } from '../utils/performanceOptimizer';
@@ -14,7 +12,6 @@ export interface PerformanceMetrics {
   componentMountTime: number;
   memoryUsage?: number;
   isSlowRender: boolean;
->>>>>>> cursor/fix-errors-and-merge-to-main-e42d
 }
 
 export const defaultusePerformanceConfig: usePerformanceConfig = {
@@ -28,8 +25,6 @@ const usePerformance = () => {
   };
 };
 
-<<<<<<< HEAD
-=======
 /**
  * Hook for monitoring page load performance
  */
@@ -146,5 +141,4 @@ export const useLongTaskMonitoring = () => {
   }, []);
 };
 
->>>>>>> cursor/fix-errors-and-merge-to-main-e42d
 export default usePerformance;

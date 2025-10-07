@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-<<<<<<< HEAD
 import performanceOptimizer, {
   WebVitalsMetrics,
 } from '../utils/performanceOptimizer';
@@ -20,9 +19,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 
   useEffect(() => {
     // Initialize performance monitoring
-=======
 import performanceOptimizer, { WebVitalsMetrics } from '../utils/performanceOptimizer';
->>>>>>> cursor/fix-errors-and-merge-to-main-e42d
     // Add critical resource hints manually
     if (typeof document !== 'undefined') {
       const hints = [
@@ -46,11 +43,8 @@ import performanceOptimizer, { WebVitalsMetrics } from '../utils/performanceOpti
         document?.head.appendChild(link);
       });
     }
-<<<<<<< HEAD
 
-=======
     
->>>>>>> cursor/fix-errors-and-merge-to-main-e42d
     // Measure page load performance
     const pageLoadMetrics = performanceOptimizer.measurePageLoad();
     if (pageLoadMetrics) {

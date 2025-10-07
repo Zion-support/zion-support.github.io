@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { Suspense, useEffect, useCallback } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
@@ -10,7 +9,6 @@ import SEOOptimizer from './components/SEOOptimizer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import LoadingSpinner from '../app/components/LoadingSpinner';
-=======
 import React, { Suspense, lazy, useEffect } from 'react';
 import React, { Suspense, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -48,7 +46,6 @@ const Services = () => (
     </div>
   </div>
 );
->>>>>>> cursor/fix-errors-and-merge-to-main-e42d
 
 // Blog component (used in Routes)
 const Blog = () => (
@@ -99,11 +96,9 @@ const Terms = () => (
 );
 
 function App(): React.JSX.Element {
-<<<<<<< HEAD
   const initializeOptimizations = useCallback(() => {
     try {
       console.log('App initialized successfully');
-=======
   useEffect(() => {
     // Initialize basic optimizations
     const initializeOptimizations = () => {
@@ -120,7 +115,6 @@ function App(): React.JSX.Element {
         console.error('Failed to initialize optimization systems:', error);
       }
     };
->>>>>>> cursor/fix-errors-and-merge-to-main-e42d
 
       // Preload critical resources
       if ('requestIdleCallback' in window) {
@@ -140,7 +134,6 @@ function App(): React.JSX.Element {
   }, [initializeOptimizations]);
 
   return (
-<<<<<<< HEAD
     <HelmetProvider>
       <ErrorBoundary>
         <SEOOptimizer>
@@ -184,7 +177,6 @@ function App(): React.JSX.Element {
         </Router>
       </ErrorBoundary>
     </HelmetProvider>
-=======
     <div>
       <Router>
         <Suspense fallback={<div className="min-h-screen flex items-center justify-center">Loading...</div>}>
@@ -220,13 +212,10 @@ function App(): React.JSX.Element {
         </Suspense>
       </Router>
     </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-e42d
   );
 }
 
 export default App;
-<<<<<<< HEAD
-=======
 // Simple Error Boundary
 class ErrorBoundary extends React.Component<
   { children: React.ReactNode; fallback?: React.ReactNode },
@@ -276,4 +265,3 @@ class ErrorBoundary extends React.Component<
 export { ErrorBoundary };
 
 export default App;
->>>>>>> cursor/fix-errors-and-merge-to-main-e42d
