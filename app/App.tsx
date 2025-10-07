@@ -19,8 +19,7 @@ import AdvancedPerformanceMonitor from './components/AdvancedPerformanceMonitor'
 const HomePage = lazy(() => import('./page'));
 
 // Utils
-import { performanceOptimizer } from '../utils/performanceOptimizer';
-import { lazyLoadImages, preloadCriticalResources, collectPerformanceMetrics } from './utils/performanceOptimizer';
+import { performanceOptimizer } from './utils/performanceOptimizer';
 
 // Styles
 import './globals.css';
@@ -31,34 +30,18 @@ const App: React.FC = () => {
     logger.lifecycle('initialized', 'App');
 
     // Initialize performance monitoring
-    performanceOptimizer.lazyLoadImages();
-    performanceOptimizer.addCriticalResourceHints();
-    lazyLoadImages();
-    preloadCriticalResources();
     performanceOptimizer.init();
+    
     // Initialize Web Vitals monitoring
     if (typeof window !== 'undefined' && 'performance' in window) {
-      const pageLoadMetrics = performanceOptimizer.measurePageLoad();
-      const collectMetrics = collectPerformanceMetrics();
       const metrics = performanceOptimizer.getMetrics();
-      if (pageLoadMetrics) {
-        performanceOptimizer.reportWebVitals(pageLoadMetrics);
-      }
-      if (collectMetrics) {
-        console.log('Performance metrics collected:', collectMetrics);
-      }
       if (metrics) {
         console.log('Performance metrics:', metrics);
       }
     }
     
-<<<<<<< HEAD
     logger.lifecycle('performance monitoring initialized', 'App');
     logger.info('🚀 Zion Tech Group App initialized with comprehensive monitoring', 'App');
-=======
-    console.log('Performance monitoring initialized');
-    console.log('🚀 Zion Tech Group App initialized with comprehensive monitoring');
->>>>>>> 66f2409a72d6502f743b9af976ac4e828aac768e
   }, []);
 
   return (
