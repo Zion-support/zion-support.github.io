@@ -1,7 +1,6 @@
 'use client';
 
 import React, { Suspense, lazy, useCallback, useEffect } from 'react';
-import Link from 'next/link';
 import { HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
@@ -11,7 +10,6 @@ import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import AdvancedErrorBoundary from './components/AdvancedErrorBoundary';
 import AdvancedSEOOptimizer from './components/AdvancedSEOOptimizer';
 import AdvancedPerformanceMonitor from './components/AdvancedPerformanceMonitor';
-import SEOEnhancer from './components/SEOEnhancer';
 import PerformanceDashboard from './components/PerformanceDashboard';
 import LoadingSpinner from './components/LoadingSpinner';
 
@@ -25,7 +23,7 @@ const InteractiveAIROICalculator = lazy(
 );
 
 // Utils
-import { performanceOptimizer, collectPerformanceMetrics, preloadCriticalResources } from './utils/performanceOptimizer';
+import { performanceOptimizer, preloadCriticalResources } from './utils/performanceOptimizer';
 import { logger } from './utils/logger';
 
 // Styles
@@ -52,7 +50,7 @@ const App: React.FC = () => {
     logger.info('🚀 Zion Tech Group App initialized with comprehensive monitoring', 'App');
   }, []);
 
-  const handleError = useCallback((error: Error, errorInfo: any) => {
+  const handleError = useCallback((error: Error, errorInfo: React.ErrorInfo) => {
     logger.error('Application Error', 'ErrorBoundary', { error: error.message, errorInfo });
   }, []);
 
@@ -105,12 +103,4 @@ const App: React.FC = () => {
   );
 };
 
-// Loading fallback component
-const LoadingFallback: React.FC<{ height?: string }> = ({
-  height = 'h-32',
-}) => (
-  <div className={`flex items-center justify-center ${height} w-full`}>
-    <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-indigo-600"></div>
-  </div>
-);
 export default App;
