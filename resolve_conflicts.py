@@ -1,84 +1,48 @@
 #!/usr/bin/env python3
-"""
-Script to automatically resolve merge conflicts
-"""
-
 import os
-import subprocess
-import sys
+import re
+import glob
 
-def run_command(cmd, check=True):
-    """Run a command and return the result"""
+def resolve_merge_conflicts(file_path):
+    """Resolve merge conflicts by keeping the HEAD version and removing conflict markers."""
     try:
-        result = subprocess.run(cmd, shell=True, capture_output=True, text=True, check=check)
-        return result.returncode == 0, result.stdout, result.stderr
-    except subprocess.CalledProcessError as e:
-        return False, e.stdout, e.stderr
-
-def resolve_conflicts():
-    """Resolve merge conflicts by choosing the appropriate version"""
-    print("🔧 Resolving merge conflicts...")
-    
-    # Get list of files with conflicts
-    success, stdout, stderr = run_command("git diff --name-only --diff-filter=U")
-    if not success:
-        print(f"❌ Error getting conflicted files: {stderr}")
-        return False
-    
-    conflicted_files = stdout.strip().split('\n')
-    if not conflicted_files or conflicted_files == ['']:
-        print("✅ No merge conflicts found!")
+        with open(file_path, 'r', encoding='utf-8') as f:
+            content = f.read()
+        
+        if '<<<<<<< HEAD' not in content:
+            return False
+        
+        # Remove all conflict markers and keep only the HEAD version
+        # Pattern: <<<<<<< HEAD\n(.*?)\n=======.*?\n>>>>>>> [^\n]+
+        pattern = r'<<<<<<< HEAD\n(.*?)\n=======.*?\n>>>>>>> [^\n]+'
+        resolved_content = re.sub(pattern, r'\1', content, flags=re.DOTALL)
+        
+        # Clean up any remaining conflict markers
+        resolved_content = re.sub(r'<<<<<<< HEAD\n?', '', resolved_content)
+        resolved_content = re.sub(r'=======\n?', '', resolved_content)
+        resolved_content = re.sub(r'>>>>>>> [^\n]+\n?', '', resolved_content)
+        
+        # Write the resolved content back
+        with open(file_path, 'w', encoding='utf-8') as f:
+            f.write(resolved_content)
+        
+        print(f"Resolved conflicts in: {file_path}")
         return True
-    
-    print(f"📋 Found {len(conflicted_files)} files with conflicts")
-    
-    for file_path in conflicted_files:
-        if not file_path.strip():
-            continue
-            
-        print(f"🔧 Resolving conflicts in: {file_path}")
-        
-        # For most conflicts, we'll accept the incoming version (theirs)
-        # This is typically what we want when merging PRs
-        success, stdout, stderr = run_command(f"git checkout --theirs '{file_path}'")
-        if success:
-            print(f"   ✅ Resolved conflicts in {file_path}")
-        else:
-            print(f"   ⚠️  Warning resolving {file_path}: {stderr}")
-        
-        # Add the resolved file
-        run_command(f"git add '{file_path}'")
-    
-    return True
+    except Exception as e:
+        print(f"Error processing {file_path}: {e}")
+        return False
 
 def main():
-    print("🚀 Starting conflict resolution process...")
+    # Find all TypeScript/TSX files in the app directory
+    pattern = '/workspace/app/**/*.{ts,tsx}'
+    files = glob.glob(pattern, recursive=True)
     
-    # Resolve conflicts
-    if not resolve_conflicts():
-        print("❌ Failed to resolve conflicts")
-        return 1
+    resolved_count = 0
+    for file_path in files:
+        if resolve_merge_conflicts(file_path):
+            resolved_count += 1
     
-    # Commit the merge
-    print("\n💾 Committing the merge...")
-    success, stdout, stderr = run_command("git commit -m 'Merge all open PRs - resolved conflicts automatically'")
-    if success:
-        print("✅ Successfully committed merge!")
-    else:
-        print(f"❌ Failed to commit merge: {stderr}")
-        return 1
-    
-    # Push changes
-    print("\n🚀 Pushing changes to remote...")
-    success, stdout, stderr = run_command("git push origin main")
-    if success:
-        print("✅ Successfully pushed changes to remote!")
-    else:
-        print(f"❌ Failed to push changes: {stderr}")
-        return 1
-    
-    print("\n🎉 All conflicts resolved and changes pushed successfully!")
-    return 0
+    print(f"Resolved conflicts in {resolved_count} files")
 
 if __name__ == "__main__":
-    sys.exit(main())
+    main()

@@ -4,78 +4,138 @@ import fs from 'fs';
 import path from 'path';
 import { glob } from 'glob';
 
-// Find all blog page files with JSX errors
-const blogFiles = await glob('app/blog/**/page.tsx');
-
-console.log(`Found ${blogFiles.length} blog files to check...`);
-
-let fixedCount = 0;
-
-for (const filePath of blogFiles) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let originalContent = content;
-
-    // Fix common JSX issues
-
-    // 1. Fix unterminated string literals (remove stray quotes)
-    content = content.replace(/"[^"]*$/gm, match => {
-      if (match.endsWith('"') && match.length > 1) {
-        return match;
+//Patterns to fix
+const fixes = [
+  //Fix ArrowRight -> Link mismatches
+  {
+    pattern: /<ArrowRight\s+([^>]*)>\s*([^<]*)<\/Link>/g,
+    replacement: '<Link $1>$2</Link>'
+  },
+  //Fix Link -> ArrowRight mismatches  
+  {
+    pattern: /<Link\s+([^>]*)>\s*([^<]*)<\/ArrowRight>/g,
+    replacement: '<Link $1>$2</Link>'
+  },
+  //Fix unclosed ArrowRight tags
+  {
+    pattern: /<ArrowRight\s+([^>]*)>\s*([^<]*)(?!<\/ArrowRight>)/g,
+    replacement: '<Link $1>$2</Link>'
+  },
+  //Fix unclosed Link tags that should be ArrowRight
+  {
+    pattern: /<Link\s+([^>]*)>\s*([^<]*)(?!<\/Link>)/g,
+    replacement: (match, attrs, content) => {
+      //Only fix if it looks like it should be a Link (has href)
+      if (attrs.includes('href')) {
+        return `<Link ${attrs}>${content}</Link>`;
       }
-      return match.replace(/"[^"]*$/, '');
+      return match;
+    }
+  }
+];
+
+//Get all TypeScript/JSX files
+const files = await glob('**/*.{ts,tsx,js,jsx}', {
+  ignore: [
+    'node_modules/**',
+    'dist/**',
+    'build/**',
+    '__tests__/**',
+    '_app_disabled/**',
+    '_conflicted_disabled/**',
+    '_pages_api_disabled/**',
+    '_pages_disabled/**',
+    'admin-api-disabled/**',
+    'api-disabled/**',
+    'api.disabled/**',
+    'api.disabled.temp/**',
+    'api-backup/**',
+    'apps.backup/**',
+    'automation_backup/**',
+    'ai-optimization-backups/**',
+    'automation_logs/**',
+    'all-automations-reports/**',
+    'accessibility-reports/**',
+    'app/blog/**',
+    'corrupted-files-backup/**',
+    'corrupted_backup/**',
+    'corrupted_files_backup_2/**',
+    'content/**',
+    'contracts/**',
+    'components_backup/**',
+    'app/services/**',
+    'app/guides/**',
+    'data/**',
+    'data_backup/**',
+    'dao/**',
+    'deployments/**',
+    'disabled-api/**',
+    'e2e/**',
+    'factories/**',
+    'src/pages/blog-disabled/**',
+    'hooks/**',
+    'lib_backup/**',
+    'services/**',
+    'middleware/**',
+    'fix-*.jsx',
+    'fix-*.ts',
+    'jest.setup.*',
+    'lib/integrations/**',
+    'lint-target/**',
+    'middleware.security.ts',
+    'components/AutonomousEnterpriseBreakthroughBanner.tsx',
+    'components/ConsensusIntelligenceBreakthroughBanner.tsx',
+    'components/FeaturedServiceCard.tsx',
+    'app/components/NewestContent2025Banner.tsx',
+    'app/components/September30NewContent2025Banner.tsx',
+    'app/components/UltimateBusinessIntelligence2025Banner.tsx',
+    'app/components/UltimateBusinessIntelligenceShowcase2025.tsx',
+    'app/contact/page.tsx',
+    'app/enterprise/page.tsx',
+    'app/not-found.tsx',
+    'app/page-minimal.tsx',
+    'app/page-optimized.tsx',
+    'app/services-advertising/page.tsx',
+    'fix_typescript_syntax_errors.jsx',
+    'fix_utils_files.ts'
+  ]
+});
+
+let fixedFiles = 0;
+let totalFixes = 0;
+
+console.log(`Found ${files.length} files to process...`);
+
+for (const file of files) {
+  try {
+    let content = fs.readFileSync(file, 'utf8');
+    let originalContent = content;
+    let fileFixes = 0;
+
+    //Apply all fixes
+    fixes.forEach(fix => {
+      if (typeof fix.replacement === 'function') {
+        content = content.replace(fix.pattern, fix.replacement);
+      } else {
+        content = content.replace(fix.pattern, fix.replacement);
+      }
     });
 
-    // 2. Fix JSX expressions without parent element
-    // Look for patterns like: return (\n    <div></div>\n      <div></div>
-    content = content.replace(
-      /return\s*\(\s*\n\s*<[^>]+><\/[^>]+>\s*\n\s*<[^>]+>/g,
-      match => {
-        return match.replace(
-          /return\s*\(\s*\n\s*/,
-          'return (\n    <div className="container">\n      ',
-        );
-      },
-    );
-
-    // 3. Fix missing closing tags by ensuring proper nesting
-    // This is a simplified approach - wrap everything in a main container if needed
-    if (
-      content.includes('export default function') &&
-      !content.includes('<div className="container">')
-    ) {
-      content = content.replace(
-        /(export default function[^{]*\{\s*return\s*\(\s*)(<[^>]+>)/,
-        '$1<div className="container">\n      $2',
-      );
-
-      // Add closing div before the last closing parenthesis
-      const lastReturnIndex = content.lastIndexOf('return (');
-      if (lastReturnIndex !== -1) {
-        const closingParenIndex = content.lastIndexOf(');');
-        if (closingParenIndex !== -1) {
-          content =
-            content.substring(0, closingParenIndex) + '\n    </div>\n  );';
-        }
+    //Count fixes
+    if (content !== originalContent) {
+      const diff = (content.match(/<Link/g) || []).length - (originalContent.match(/<Link/g) || []).length;
+      fileFixes += Math.abs(diff);
+      
+      if (fileFixes > 0) {
+        fs.writeFileSync(file, content, 'utf8');
+        console.log(`Fixed ${fileFixes} issues in ${file}`);
+        fixedFiles++;
+        totalFixes += fileFixes;
       }
     }
-
-    // 4. Fix unexpected tokens like > in JSX
-    content = content.replace(/([^=])>([^<])/g, '$1&gt;$2');
-
-    // 5. Fix object literal syntax errors (= instead of :)
-    content = content.replace(/(\w+)=(\w+)/g, '$1: $2');
-
-    // Only write if content changed
-    if (content !== originalContent) {
-      fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed: ${filePath}`);
-      fixedCount++;
-    }
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
+    console.error(`Error processing ${file}:`, error.message);
   }
 }
 
-console.log(`Fixed ${fixedCount} files.`);
-#!/usr/bin/env node import fs from 'fs';' import path from 'path';' import { glob } from 'glob'; // Find all blog page files with JSX errors' const blogFiles = await glob('app/blog/**/page.tsx'); console.log(`Found ${blogFiles.length} blog files to check...`); let fixedCount = 0; for (const filePath of blogFiles) { try {' let content = fs.readFileSync(filePath, 'utf8'); let originalContent = content; // Fix common JSX issues // 1. Fix unterminated string literals (remove stray quotes) content = content.replace(/"[^"]*$/gm, (match) => {' if (match.endsWith('"') && match.length > 1) { return match; }' return match.replace(/"[^"]*$/, ''); }); // 2. Fix JSX expressions without parent element // Look for patterns like: return (\\n <div></div>\\n <div></div> content = content.replace( /return\\s*\\(\\s*\\n\\s*<[^>]+><\\/[^>]+>\\s*\\n\\s*<[^>]+>/g, (match) => {' return match.replace(/return\s*\(\s*\n\s*/, 'return (\n <div className="container" >\n '); } ); // 3. Fix missing closing tags by ensuring proper nesting // This is a simplified approach - wrap everything in a main container if needed' if (content.includes('export default function') && !content.includes('<div className="container" >')) { content = content.replace( /(export default function[^{]*\\{\\s*return\\s*\\(\\s*)(<[^>]+>)/,' '$1<div className="container" >\n $2' ); // Add closing div before the last closing parenthesis' const lastReturnIndex = content.lastIndexOf('return ('); if (lastReturnIndex !== -1) {' const closingParenIndex = content.lastIndexOf(');'); if (closingParenIndex !== -1) {' content = content.substring(0, closingParenIndex) + '\n </div>\n );'; } } } // 4. Fix unexpected tokens like > in JSX' content = content.replace(/([^=])>([^<])/g, '$1&gt;$2'); // 5. Fix object literal syntax errors (= instead of :)' content = content.replace(/(\w+)=(\w+)/g, '$1: $2'); // Only write if content changed if (content !== originalContent) {' fs.writeFileSync(filePath, content, 'utf8'); console.log(`Fixed: ${filePath}`); fixedCount++; } } catch (error) { console.error(`Error processing ${filePath}:`, error.message); } } console.log(`Fixed ${fixedCount} files.`);'
+console.log(`\nFixed ${totalFixes} JSX issues across ${fixedFiles} files.`);

@@ -11,7 +11,7 @@ async function handler(req, res) {
   }
 
   const { productId, userId } = req.body || {};
-
+  
   if (!productId) {
     res.statusCode = 400;
     res.json({ error: 'Product ID is required' });
@@ -19,19 +19,21 @@ async function handler(req, res) {
   }
 
   try {
-    // Create checkout session logic here
+    // Basic checkout session creation logic
     const sessionData = {
       productId,
       userId,
-      successUrl: `${PROD_DOMAIN}/success`,
-      cancelUrl: `${PROD_DOMAIN}/cancel`
+      domain: PROD_DOMAIN,
+      timestamp: new Date().toISOString()
     };
 
     res.statusCode = 200;
-    res.json({ sessionId: 'session_' + Date.now(), ...sessionData });
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ success: true, session: sessionData }));
   } catch (error) {
+    console.error('Checkout session creation error:', error);
     res.statusCode = 500;
-    res.json({ error: 'Failed to create checkout session' });
+    res.end('Internal Server Error');
   }
 }
 

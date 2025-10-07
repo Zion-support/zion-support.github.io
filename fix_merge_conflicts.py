@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
 """
-Script to fix merge conflicts in blog files by resolving conflicts and fixing syntax errors.
+Script to automatically resolve common merge conflicts in TypeScript/JavaScript files.
 """
 
 import os
 import re
-import glob
+import sys
+from pathlib import Path
 
 def fix_merge_conflicts(file_path):
     """Fix merge conflicts in a single file."""
@@ -15,78 +16,49 @@ def fix_merge_conflicts(file_path):
         
         original_content = content
         
-        # Remove Next.js imports since this is a Vite project
-        content = re.sub(r"import { Metadata } from 'next';\n", '', content)
+        # Pattern 1: Multiple nested merge conflicts with imports
+        # Look for patterns like <<<<<<< HEAD ... ======= ... >>>>>>> main
+        # and resolve by keeping the most complete import statement
         
-        # Fix merge conflict markers by keeping the newer version (after =======)
-        # Pattern: <<<<<<< HEAD ... ======= ... >>>>>>> branch-name
-        content = re.sub(
-            r'<<<<<<< HEAD.*?=======(.*?)>>>>>>> [^\n]+',
-            r'\1',
-            content,
-            flags=re.DOTALL
-        )
+        # Fix import conflicts - keep the most comprehensive import
+        import_pattern = r'<<<<<<< HEAD\s*\n(.*?)\n=======\s*\n(.*?)\n>>>>>>> main'
         
-        # Fix syntax errors - add missing commas and braces
-        # Fix missing comma before closing brace in metadata
-        content = re.sub(
-            r'(\s+type: \'article\',?)\s*(\n\s*}\s*;)',
-            r'\1\n  },\n};',
-            content
-        )
+        def resolve_imports(match):
+            head_content = match.group(1).strip()
+            main_content = match.group(2).strip()
+            
+            # If main content has more imports or is more complete, use it
+            if len(main_content) > len(head_content) or 'import' in main_content:
+                return main_content
+            else:
+                return head_content
         
-        # Fix missing comma in metadata object
-        content = re.sub(
-            r'(\s+type: \'article\',?)\s*(\n\s*}\s*;?\s*export)',
-            r'\1\n  },\n};\n\nexport',
-            content
-        )
+        content = re.sub(import_pattern, resolve_imports, content, flags=re.DOTALL)
         
-        # Fix function declarations with missing braces
-        content = re.sub(
-            r'export default function ([^(]+)\s*\)\s*(\n\s*return)',
-            r'export default function \1() {\n  \2',
-            content
-        )
+        # Pattern 2: Simple property conflicts (keep the version with trailing comma)
+        property_pattern = r'<<<<<<< HEAD\s*\n\s*([^,}]+)\s*\n=======\s*\n\s*([^,}]+),\s*\n>>>>>>> main'
+        content = re.sub(property_pattern, r'\2,', content)
         
-        # Fix missing opening brace after function declaration
-        content = re.sub(
-            r'(export default function [^{]+)\s*(\n\s*return)',
-            r'\1 {\n  \2',
-            content
-        )
+        # Pattern 3: Remove any remaining simple merge conflict markers
+        # Keep the content between ======= and >>>>>>> main (usually the main branch)
+        simple_conflict_pattern = r'<<<<<<< HEAD\s*\n.*?\n=======\s*\n(.*?)\n>>>>>>> main'
+        content = re.sub(simple_conflict_pattern, r'\1', content, flags=re.DOTALL)
         
-        # Fix missing closing brace at end of function
-        if 'export default function' in content and content.count('{') > content.count('}'):
-            # Add missing closing brace before the last line
-            lines = content.split('\n')
-            if lines and not lines[-1].strip():
-                lines.pop()
-            lines.append('}')
-            content = '\n'.join(lines)
+        # Pattern 4: Remove any remaining conflict markers
+        content = re.sub(r'<<<<<<< HEAD.*?=======.*?>>>>>>> main', '', content, flags=re.DOTALL)
+        content = re.sub(r'<<<<<<< HEAD.*?>>>>>>> main', '', content, flags=re.DOTALL)
+        content = re.sub(r'=======.*?>>>>>>> main', '', content, flags=re.DOTALL)
         
-        # Fix metadata object syntax
-        content = re.sub(
-            r'export const metadata: Metadata = \s*(\n\s*title:)',
-            r'export const metadata: Metadata = {\n  \1',
-            content
-        )
+        # Clean up multiple newlines
+        content = re.sub(r'\n\s*\n\s*\n', '\n\n', content)
         
-        # Fix missing opening brace in metadata
-        content = re.sub(
-            r'export const metadata: Metadata = \s*(\n\s*title: [^,]+,\s*\n\s*description:)',
-            r'export const metadata: Metadata = {\n  \1',
-            content
-        )
-        
-        # Only write if content changed
+        # If content changed, write it back
         if content != original_content:
             with open(file_path, 'w', encoding='utf-8') as f:
                 f.write(content)
-            print(f"Fixed: {file_path}")
+            print(f"Fixed merge conflicts in: {file_path}")
             return True
         else:
-            print(f"No changes needed: {file_path}")
             return False
             
     except Exception as e:
@@ -94,20 +66,20 @@ def fix_merge_conflicts(file_path):
         return False
 
 def main():
-    """Main function to process all blog files."""
-    # Get all blog files with merge conflicts
-    blog_files = glob.glob('/workspace/app/blog/**/*.tsx', recursive=True)
+    """Main function to process all files with merge conflicts."""
+    # Get list of files with merge conflicts
+    result = os.popen("find . -name '*.tsx' -o -name '*.ts' -o -name '*.js' -o -name '*.jsx' | grep -v node_modules | grep -v '.git' | xargs grep -l '^<<<<<<<\\|^=======\\|^>>>>>>>'").read()
+    
+    files = [f.strip() for f in result.split('\n') if f.strip()]
+    
+    print(f"Found {len(files)} files with merge conflicts")
     
     fixed_count = 0
-    total_count = 0
+    for file_path in files:
+        if fix_merge_conflicts(file_path):
+            fixed_count += 1
     
-    for file_path in blog_files:
-        if os.path.exists(file_path):
-            total_count += 1
-            if fix_merge_conflicts(file_path):
-                fixed_count += 1
-    
-    print(f"\nProcessed {total_count} files, fixed {fixed_count} files")
+    print(f"Fixed merge conflicts in {fixed_count} files")
 
 if __name__ == "__main__":
     main()

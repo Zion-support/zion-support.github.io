@@ -1,443 +1,431 @@
 /**
- * Advanced Performance Optimizer
- * Comprehensive performance monitoring and optimization utilities
+ * Performance optimization utilities
  */
 
-interface PerformanceConfig {
-  enableWebVitals: boolean;
-  enableResourceTiming: boolean;
-  enableMemoryMonitoring: boolean;
-  enableNetworkMonitoring: boolean;
-  enableBatteryMonitoring: boolean;
-  enableDeviceMonitoring: boolean;
-  sampleRate: number;
-  maxHistorySize: number;
-  thresholds: {
-    cls: number;
-    inp: number;
-    fcp: number;
-    lcp: number;
-    ttfb: number;
-  };
+/**
+ * Web Vitals metrics tracking
+ */
+export interface WebVitalsMetrics {
+  FCP?: number; // First Contentful Paint
+  LCP?: number; // Largest Contentful Paint
+  FID?: number; // First Input Delay
+  CLS?: number; // Cumulative Layout Shift
+  TTFB?: number; // Time to First Byte
+  INP?: number; // Interaction to Next Paint
+  loadTime?: number;
+  interactiveTime?: number;
+  domContentLoaded?: number;
 }
 
-interface PerformanceMetrics {
-  webVitals: {
-    cls?: number;
-    inp?: number;
-    fcp?: number;
-    lcp?: number;
-    ttfb?: number;
-  };
-  resources: PerformanceResourceTiming[];
-  memory?: {
-    usedJSHeapSize: number;
-    totalJSHeapSize: number;
-    jsHeapSizeLimit: number;
-  };
-  network?: {
-    effectiveType: string;
-    downlink: number;
-    rtt: number;
-    saveData: boolean;
-  };
-  battery?: {
-    charging: boolean;
-    chargingTime: number;
-    dischargingTime: number;
-    level: number;
-  };
-  device: {
-    pixelRatio: number;
-    connectionType: string;
-    connectionSpeed: number;
-    timestamp: number;
-  };
-}
+/**
+ * Resource hints for performance
+ */
+export const prefetchResources = (urls: string[]): void => {
+  if (typeof document === 'undefined') return;
+  
+  urls.forEach(url => {
+    const link = document.createElement('link');
+    link.rel = 'prefetch';
+    link.href = url;
+    document.head.appendChild(link);
+  });
+};
 
-interface OptimizationReport {
-  score: number;
-  recommendations: string[];
-  criticalIssues: string[];
-  performanceMetrics: PerformanceMetrics;
-  timestamp: number;
-}
+/**
+ * Preconnect to external domains
+ */
+export const preconnectDomains = (domains: string[]): void => {
+  if (typeof document === 'undefined') return;
+  
+  domains.forEach(domain => {
+    const link = document.createElement('link');
+    link.rel = 'preconnect';
+    link.href = domain;
+    link.crossOrigin = 'anonymous';
+    document.head.appendChild(link);
+  });
+};
 
-class PerformanceOptimizer {
-  private config: PerformanceConfig;
-  private metrics: PerformanceMetrics;
-  private history: PerformanceMetrics[] = [];
-  private observers: PerformanceObserver[] = [];
-  private isInitialized = false;
+/**
+ * Lazy load images with Intersection Observer
+ */
+export const lazyLoadImages = (): void => {
+  if (typeof window === 'undefined') return;
+  if (!('IntersectionObserver' in window)) return;
 
-  constructor(config: Partial<PerformanceConfig> = {}) {
-    this.config = {
-      enableWebVitals: true,
-      enableResourceTiming: true,
-      enableMemoryMonitoring: true,
-      enableNetworkMonitoring: true,
-      enableBatteryMonitoring: true,
-      enableDeviceMonitoring: true,
-      sampleRate: 1.0,
-      maxHistorySize: 50,
-      thresholds: {
-        cls: 0.1,
-        inp: 200,
-        fcp: 1800,
-        lcp: 2500,
-        ttfb: 800,
-      },
-      ...config,
-    };
-
-    this.metrics = {
-      webVitals: {},
-      resources: [],
-      device: {
-        pixelRatio: window.devicePixelRatio || 1,
-        connectionType: 'unknown',
-        connectionSpeed: 0,
-        timestamp: Date.now(),
-      },
-    };
-  }
-
-  /**
-   * Initialize performance monitoring
-   */
-  async initialize(): Promise<void> {
-    if (this.isInitialized) return;
-
-    try {
-      // Initialize Web Vitals monitoring
-      if (this.config.enableWebVitals) {
-        await this.initializeWebVitals();
-      }
-
-      // Initialize Resource Timing
-      if (this.config.enableResourceTiming) {
-        this.initializeResourceTiming();
-      }
-
-      // Initialize Memory Monitoring
-      if (this.config.enableMemoryMonitoring) {
-        this.initializeMemoryMonitoring();
-      }
-
-      // Initialize Network Monitoring
-      if (this.config.enableNetworkMonitoring) {
-        this.initializeNetworkMonitoring();
-      }
-
-      // Initialize Battery Monitoring
-      if (this.config.enableBatteryMonitoring) {
-        await this.initializeBatteryMonitoring();
-      }
-
-      // Initialize Device Monitoring
-      if (this.config.enableDeviceMonitoring) {
-        this.initializeDeviceMonitoring();
-      }
-
-      this.isInitialized = true;
-      console.log('🚀 Performance Optimizer initialized successfully');
-    } catch (error) {
-      console.error('❌ Failed to initialize Performance Optimizer:', error);
-    }
-  }
-
-  /**
-   * Initialize Web Vitals monitoring
-   */
-  private async initializeWebVitals(): Promise<void> {
-    try {
-      const { onCLS, onINP, onFCP, onLCP, onTTFB } = await import('web-vitals');
-
-      const handleMetric = (metric: any) => {
-        if (Math.random() > this.config.sampleRate) return;
-
-        this.metrics.webVitals[
-          metric.name.toLowerCase() as keyof typeof this.metrics.webVitals
-        ] = metric.value;
-        this.checkThresholds(metric.name.toLowerCase(), metric.value);
-      };
-
-      onCLS(handleMetric);
-      onINP(handleMetric);
-      onFCP(handleMetric);
-      onLCP(handleMetric);
-      onTTFB(handleMetric);
-    } catch (error) {
-      console.warn('Web Vitals not available:', error);
-    }
-  }
-
-  /**
-   * Initialize Resource Timing monitoring
-   */
-  private initializeResourceTiming(): void {
-    if (!('PerformanceObserver' in window)) return;
-
-    try {
-      const observer = new PerformanceObserver(list => {
-        const entries = list.getEntries();
-        entries.forEach(entry => {
-          if (entry.entryType === 'resource') {
-            this.metrics.resources.push(entry as PerformanceResourceTiming);
-          }
-        });
-      });
-
-      observer.observe({ entryTypes: ['resource'] });
-      this.observers.push(observer);
-    } catch (error) {
-      console.warn('Resource Timing not available:', error);
-    }
-  }
-
-  /**
-   * Initialize Memory monitoring
-   */
-  private initializeMemoryMonitoring(): void {
-    if (!('memory' in performance)) return;
-
-    try {
-      const memoryInfo = (performance as any).memory;
-      this.metrics.memory = {
-        usedJSHeapSize: memoryInfo.usedJSHeapSize,
-        totalJSHeapSize: memoryInfo.totalJSHeapSize,
-        jsHeapSizeLimit: memoryInfo.jsHeapSizeLimit,
-      };
-    } catch (error) {
-      console.warn('Memory monitoring not available:', error);
-    }
-  }
-
-  /**
-   * Initialize Network monitoring
-   */
-  private initializeNetworkMonitoring(): void {
-    if (!('connection' in navigator)) return;
-
-    try {
-      const connection = (navigator as any).connection;
-      this.metrics.network = {
-        effectiveType: connection.effectiveType,
-        downlink: connection.downlink,
-        rtt: connection.rtt,
-        saveData: connection.saveData,
-      };
-
-      this.metrics.device.connectionType =
-        connection.effectiveType || 'unknown';
-      this.metrics.device.connectionSpeed = connection.downlink || 0;
-    } catch (error) {
-      console.warn('Network monitoring not available:', error);
-    }
-  }
-
-  /**
-   * Initialize Battery monitoring
-   */
-  private async initializeBatteryMonitoring(): Promise<void> {
-    if (!('getBattery' in navigator)) return;
-
-    try {
-      const battery = await (navigator as any).getBattery();
-      this.metrics.battery = {
-        charging: battery.charging,
-        chargingTime: battery.chargingTime,
-        dischargingTime: battery.dischargingTime,
-        level: battery.level,
-      };
-    } catch (error) {
-      console.warn('Battery monitoring not available:', error);
-    }
-  }
-
-  /**
-   * Initialize Device monitoring
-   */
-  private initializeDeviceMonitoring(): void {
-    this.metrics.device = {
-      pixelRatio: window.devicePixelRatio || 1,
-      connectionType: this.metrics.device.connectionType,
-      connectionSpeed: this.metrics.device.connectionSpeed,
-      timestamp: Date.now(),
-    };
-  }
-
-  /**
-   * Check performance thresholds
-   */
-  private checkThresholds(metric: string, value: number): void {
-    const threshold =
-      this.config.thresholds[metric as keyof typeof this.config.thresholds];
-    if (threshold && value > threshold) {
-      console.warn(
-        `⚠️ Performance threshold exceeded: ${metric} = ${value} (threshold: ${threshold})`,
-      );
-    }
-  }
-
-  /**
-   * Get current performance metrics
-   */
-  getMetrics(): PerformanceMetrics {
-    return { ...this.metrics };
-  }
-
-  /**
-   * Get performance history
-   */
-  getHistory(): PerformanceMetrics[] {
-    return [...this.history];
-  }
-
-  /**
-   * Generate optimization report
-   */
-  generateReport(): OptimizationReport {
-    const score = this.calculatePerformanceScore();
-    const recommendations = this.generateRecommendations();
-    const criticalIssues = this.identifyCriticalIssues();
-
-    return {
-      score,
-      recommendations,
-      criticalIssues,
-      performanceMetrics: this.getMetrics(),
-      timestamp: Date.now(),
-    };
-  }
-
-  /**
-   * Calculate performance score (0-100)
-   */
-  private calculatePerformanceScore(): number {
-    let score = 100;
-    const { webVitals, resources, memory } = this.metrics;
-
-    // Web Vitals scoring
-    Object.entries(webVitals).forEach(([metric, value]) => {
-      if (value !== undefined) {
-        const threshold =
-          this.config.thresholds[metric as keyof typeof this.config.thresholds];
-        if (threshold) {
-          const ratio = value / threshold;
-          if (ratio > 1) {
-            score -= Math.min(20, (ratio - 1) * 20);
-          }
+  const imageObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const img = entry.target as HTMLImageElement;
+        const src = img.dataset['src'];
+        if (src) {
+          img.src = src;
+          img.removeAttribute('data-src');
+          imageObserver.unobserve(img);
         }
       }
     });
+  }, {
+    rootMargin: '50px 0px',
+    threshold: 0.01
+  });
 
-    // Resource timing scoring
-    if (resources.length > 0) {
-      const slowResources = resources.filter(r => r.duration > 1000).length;
-      score -= Math.min(15, slowResources * 3);
+  document.querySelectorAll('img[data-src]').forEach(img => {
+    imageObserver.observe(img);
+  });
+};
+
+/**
+ * Debounce function for performance optimization
+ */
+export function debounce<T extends (...args: any[]) => any>(
+  func: T,
+  wait: number
+): (...args: Parameters<T>) => void {
+  let timeout: NodeJS.Timeout | null = null;
+  return function executedFunction(...args: Parameters<T>) {
+    const later = () => {
+      timeout = null;
+      func(...args);
+    };
+    if (timeout) clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+  };
+}
+
+/**
+ * Throttle function for performance optimization
+ */
+export function throttle<T extends (...args: any[]) => any>(
+  func: T,
+  limit: number
+): (...args: Parameters<T>) => void {
+  let inThrottle: boolean;
+  return function executedFunction(...args: Parameters<T>) {
+    if (!inThrottle) {
+      func(...args);
+      inThrottle = true;
+      setTimeout(() => (inThrottle = false), limit);
     }
+  };
+}
 
-    // Memory scoring
-    if (memory) {
-      const memoryUsage = memory.usedJSHeapSize / memory.jsHeapSizeLimit;
-      if (memoryUsage > 0.8) {
-        score -= 10;
+/**
+ * Measure page load performance
+ */
+export const measurePageLoad = (): WebVitalsMetrics | null => {
+  if (typeof window === 'undefined' || !window.performance) return null;
+  
+  const perfData = window.performance.timing;
+  const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+  
+  return {
+    FCP: navigation?.responseStart - navigation?.fetchStart,
+    TTFB: perfData.responseStart - perfData.navigationStart,
+    loadTime: perfData.loadEventEnd - perfData.navigationStart,
+    interactiveTime: perfData.domInteractive - perfData.navigationStart,
+    domContentLoaded: perfData.domContentLoadedEventEnd - perfData.navigationStart
+  };
+};
+
+/**
+ * Report Web Vitals to analytics
+ */
+export const reportWebVitals = (metrics: WebVitalsMetrics): void => {
+  console.log('Web Vitals: ', metrics);
+
+  // Send to analytics service
+  if (typeof window !== 'undefined' && (window as any).gtag) {
+    Object.entries(metrics).forEach(([key, value]) => {
+      if (value !== undefined) {
+        (window as any).gtag('event', key, {
+          value: Math.round(value),
+          event_category: 'Web Vitals',
+          non_interaction: true
+        });
       }
-    }
+    });
+  }
+};
 
-    return Math.max(0, Math.round(score));
+/**
+ * Optimize images by detecting slow connections
+ */
+export const shouldUseWebP = (): boolean => {
+  if (typeof window === 'undefined') return false;
+  
+  const canvas = document.createElement('canvas');
+  canvas.width = canvas.height = 1;
+  return canvas.toDataURL('image/webp').indexOf('data:image/webp') === 0;
+};
+
+/**
+ * Get connection quality
+ */
+export const getConnectionQuality = (): 'slow' | 'medium' | 'fast' => {
+  if (typeof navigator === 'undefined') return 'medium';
+  
+  const connection = (navigator as any).connection || (navigator as any).mozConnection || (navigator as any).webkitConnection;
+  if (!connection) return 'medium';
+  
+  const effectiveType = connection.effectiveType;
+  if (effectiveType === 'slow-2g' || effectiveType === '2g') return 'slow';
+  if (effectiveType === '3g') return 'medium';
+  return 'fast';
+};
+
+/**
+ * Adaptive loading based on network conditions
+ */
+export const shouldLoadHeavyAssets = (): boolean => {
+  const quality = getConnectionQuality();
+  const saveData = typeof navigator !== 'undefined' && (navigator as any).connection?.saveData;
+  return quality === 'fast' && !saveData;
+};
+
+/**
+ * Request Idle Callback wrapper with fallback
+ */
+export const requestIdleCallback = (callback: IdleRequestCallback): number => {
+  if (typeof window === 'undefined') return 0;
+  
+  if ('requestIdleCallback' in window) {
+    return window.requestIdleCallback(callback);
+  }
+  
+  // Fallback for browsers that don't support requestIdleCallback
+  return (window as any).setTimeout(() => {
+    const start = Date.now();
+    callback({
+      didTimeout: false,
+      timeRemaining: () => Math.max(0, 50 - (Date.now() - start))
+    });
+  }, 1) as unknown as number;
+};
+
+/**
+ * Cancel Idle Callback wrapper with fallback
+ */
+export const cancelIdleCallback = (id: number): void => {
+  if (typeof window === 'undefined') return;
+  
+  if ('cancelIdleCallback' in window) {
+    window.cancelIdleCallback(id);
+  } else {
+    (window as any).clearTimeout(id);
+  }
+};
+
+/**
+ * Optimize bundle loading with route-based code splitting
+ */
+export const preloadRoute = (route: string): void => {
+  if (typeof document === 'undefined') return;
+  
+  const link = document.createElement('link');
+  link.rel = 'prefetch';
+  link.as = 'script';
+  link.href = route;
+  document.head.appendChild(link);
+};
+
+/**
+ * Monitor long tasks (> 50ms) for performance debugging
+ */
+export const monitorLongTasks = (callback: (entries: PerformanceEntryList) => void): PerformanceObserver | null => {
+  if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return null;
+  
+  try {
+    const observer = new PerformanceObserver((list) => {
+      callback(list.getEntries());
+    });
+    observer.observe({ entryTypes: ['longtask'] });
+    return observer;
+  } catch (e) {
+    console.warn('Long task monitoring not supported: ', e);
+    return null;
+  }
+};
+
+/**
+ * Cache-first strategy for static assets
+ */
+export const cacheStaticAssets = async (urls: string[]): Promise<void> => {
+  if (typeof caches === 'undefined') return;
+  
+  const cache = await caches.open('static-assets-v1');
+  await cache.addAll(urls);
+};
+
+/**
+ * Clear old caches
+ */
+export const clearOldCaches = async (currentVersion: string): Promise<void> => {
+  if (typeof caches === 'undefined') return;
+  
+  const cacheNames = await caches.keys();
+  await Promise.all(
+    cacheNames
+      .filter(name => name !== currentVersion)
+      .map(name => caches.delete(name))
+  );
+};
+
+/**
+ * Performance budget checker
+ */
+export interface PerformanceBudget {
+  maxBundleSize: number; // in KB
+  maxImageSize: number; // in KB
+  maxFirstLoad: number; // in ms
+  maxInteractive: number; // in ms
+}
+
+export const checkPerformanceBudget = (budget: PerformanceBudget): {
+  passed: boolean;
+  violations: string[];
+} => {
+  const violations: string[] = [];
+  
+  if (typeof window === 'undefined' || !window.performance) {
+    return { passed: true, violations };
+  }
+  
+  const timing = window.performance.timing;
+  const loadTime = timing.loadEventEnd - timing.navigationStart;
+  const interactiveTime = timing.domInteractive - timing.navigationStart;
+  
+  if (loadTime > budget.maxFirstLoad) {
+    violations.push(`First load time (${loadTime}ms) exceeds budget (${budget.maxFirstLoad}ms)`);
+  }
+  
+  if (interactiveTime > budget.maxInteractive) {
+    violations.push(`Time to interactive (${interactiveTime}ms) exceeds budget (${budget.maxInteractive}ms)`);
+  }
+  
+  return {
+    passed: violations.length === 0,
+    violations
+  };
+};
+
+/**
+ * Performance monitoring class
+ */
+class PerformanceOptimizer {
+  private static instance: PerformanceOptimizer;
+  private metrics: Map<string, number> = new Map();
+
+  private constructor() {}
+
+  public static getInstance(): PerformanceOptimizer {
+    if (!PerformanceOptimizer.instance) {
+      PerformanceOptimizer.instance = new PerformanceOptimizer();
+    }
+    return PerformanceOptimizer.instance;
   }
 
-  /**
-   * Generate performance recommendations
-   */
-  private generateRecommendations(): string[] {
-    const recommendations: string[] = [];
-    const { webVitals, resources, memory } = this.metrics;
+  public measurePerformance(name: string, fn: () => void): number {
+    const start = performance.now();
+    fn();
+    const end = performance.now();
+    const duration = end - start;
+    this.metrics.set(name, duration);
+    return duration;
+  }
 
-    // Web Vitals recommendations
-    if (webVitals.cls && webVitals.cls > this.config.thresholds.cls) {
-      recommendations.push(
-        'Optimize layout shifts by setting explicit dimensions for images and dynamic content',
-      );
-    }
-    if (webVitals.lcp && webVitals.lcp > this.config.thresholds.lcp) {
-      recommendations.push(
-        'Optimize Largest Contentful Paint by preloading critical resources and optimizing images',
-      );
-    }
-    if (webVitals.fcp && webVitals.fcp > this.config.thresholds.fcp) {
-      recommendations.push(
-        'Reduce First Contentful Paint by minimizing render-blocking resources',
-      );
-    }
+  public lazyLoadImages(): void {
+    lazyLoadImages();
+  }
 
-    // Resource recommendations
-    if (resources.length > 0) {
-      const largeResources = resources.filter(r => r.transferSize > 100000);
-      if (largeResources.length > 0) {
-        recommendations.push(
-          `Optimize ${largeResources.length} large resources (>100KB) for better loading performance`,
-        );
+  public optimizeScroll(): void {
+    // Optimize scroll performance
+    let ticking = false;
+    
+    const updateScrollPosition = () => {
+      // Throttled scroll handling
+      ticking = false;
+    };
+
+    const requestTick = () => {
+      if (!ticking) {
+        requestAnimationFrame(updateScrollPosition);
+        ticking = true;
       }
-    }
+    };
 
-    // Memory recommendations
-    if (memory && memory.usedJSHeapSize / memory.jsHeapSizeLimit > 0.7) {
-      recommendations.push(
-        'High memory usage detected - consider implementing memory cleanup strategies',
-      );
-    }
-
-    return recommendations;
+    window.addEventListener('scroll', requestTick, { passive: true });
   }
 
-  /**
-   * Identify critical performance issues
-   */
-  private identifyCriticalIssues(): string[] {
-    const issues: string[] = [];
-    const { webVitals } = this.metrics;
+  public preloadCriticalResources(): void {
+    // Preload critical resources
+    const criticalResources = [
+      '/fonts/inter.woff2',
+      '/images/hero-bg.jpg',
+      '/images/logo.svg'
+    ];
 
-    // Critical Web Vitals issues
-    if (webVitals.cls && webVitals.cls > this.config.thresholds.cls * 2) {
-      issues.push('Critical: Excessive Cumulative Layout Shift detected');
-    }
-    if (webVitals.lcp && webVitals.lcp > this.config.thresholds.lcp * 2) {
-      issues.push('Critical: Very slow Largest Contentful Paint');
-    }
-    if (webVitals.inp && webVitals.inp > this.config.thresholds.inp * 2) {
-      issues.push('Critical: Poor Interaction to Next Paint');
-    }
-
-    return issues;
+    criticalResources.forEach((resource) => {
+      const link = document.createElement('link');
+      link.rel = 'preload';
+      link.href = resource;
+      link.as = resource.endsWith('.woff2') ? 'font' : 'image';
+      if (resource.endsWith('.woff2')) {
+        link.crossOrigin = 'anonymous';
+      }
+      document.head.appendChild(link);
+    });
   }
 
-  /**
-   * Save metrics to history
-   */
-  saveToHistory(): void {
-    this.history.push({ ...this.metrics });
-    if (this.history.length > this.config.maxHistorySize) {
-      this.history.shift();
-    }
+  public reportWebVitals(metrics: WebVitalsMetrics): void {
+    reportWebVitals(metrics);
   }
 
-  /**
-   * Cleanup observers
-   */
-  cleanup(): void {
-    this.observers.forEach(observer => observer.disconnect());
-    this.observers = [];
-    this.isInitialized = false;
+  public measurePageLoad(): WebVitalsMetrics | null {
+    return measurePageLoad();
+  }
+
+  public prefetchResources(resources: string[]): void {
+    prefetchResources(resources);
+  }
+
+  // Monitor long tasks
+  public monitorLongTasks(callback: (entries: PerformanceEntryList) => void): PerformanceObserver | null {
+    return monitorLongTasks(callback);
+  }
+
+  // Get performance metrics
+  getMetrics(): Record<string, number> {
+    return Object.fromEntries(this.metrics);
+  }
+
+  // Initialize all optimizations
+  initialize(): void {
+    this.measurePerformance('lazyLoadImages', () => this.lazyLoadImages());
+    this.measurePerformance('preloadCriticalResources', () => this.preloadCriticalResources());
+    this.measurePerformance('optimizeScroll', () => this.optimizeScroll());
   }
 }
 
 // Export singleton instance
-export const performanceOptimizer = new PerformanceOptimizer();
+export const performanceOptimizer = PerformanceOptimizer.getInstance();
 
-// Export types and class for advanced usage
-export type { PerformanceConfig, PerformanceMetrics, OptimizationReport };
-export { PerformanceOptimizer };
-/** * Performance, Optimizer, Utility; * Comprehensive, performance, monitoring and, optimization, tools; */ /** * Web, Vitals, metrics tracki, n, g; */ export, interface, WebVitalsMetrics { F, C, P?: numb, e, r; // First, Contentful, Paint L, C, P?: numb, e, r; // Largest, Contentful, Paint F, I, D?: numb, e, r; // First, Input, Delay C, L, S?: numb, e, r; // Cumulative, Layout, Shift TT, F, B?: numb, e, r; // Time, to, First By, t, e I, N, P?: numb, e, r; // Interaction, to, Next Pai, n, t; } /** * Resource, hints, for performan, c, e; */ export, const, prefetchResources = (ur, l, s: stri, n, g[]): vo, i, d => { if (typeof, documen, t === 'undefin, e, d') retu, r, n; ' if (typeof, documen, t === 'undefin, e, d') retu, r, n;'; ur, l, s.forEa, c, h(u, r, l => {' const, lin, k = docume, n, t.createEleme, n, t('li, n, k');';' li, n, k.r, e, l = 'prefet, c, h';'; li, n, k.hr, e, f = u, r, l; docume, n, t.he, a, d.appendChi, l, d(li, n, k); }); }; /** * Preconnect, to, external domai, n, s; */ export, const, preconnectDomains = (domai, n, s: stri, n, g[]): vo, i, d => {' if (typeof, documen, t === 'undefin, e, d') retu, r, n; ' if (typeof, documen, t === 'undefin, e, d') retu, r, n;'; domai, n, s.forEa, c, h(doma, i, n => {' const, lin, k = docume, n, t.createEleme, n, t('li, n, k');';' li, n, k.r, e, l = 'preconne, c, t';'; li, n, k.hr, e, f = doma, i, n;' li, n, k.crossOrig, i, n = 'anonymo, u, s';'; docume, n, t.he, a, d.appendChi, l, d(li, n, k); }); }; /** * Lazy, load, images with, Intersection, Observer; */ export, const, lazyLoadImages = (): vo, i, d => {' if (typeof, windo, w === 'undefin, e, d') retu, r, n;' if (!('IntersectionObserv, e, r' in, windo, w)) retu, r, n; ' if (typeof, windo, w === 'undefin, e, d') retu, r, n;';' if (!('IntersectionObserv, e, r' in, windo, w)) retu, r, n;'; const, imageObserve, r = new, IntersectionObserve, r((entri, e, s) => { entri, e, s.forEa, c, h(ent, r, y => { if (ent, r, y.isIntersecti, n, g) { const, im, g = ent, r, y.target, as, HTMLImageElement; const, sr, c = i, m, g.datas, e, t.s, r, c; if (s, r, c) { i, m, g.s, r, c = s, r, c;' i, m, g.removeAttribu, t, e('da, t, a-s, r, c');'; imageObserv, e, r.unobser, v, e(i, m, g); } } }); }, {' rootMarg, i, n: '50px, 0p, x',' thresho, l, d: 0.01 });' docume, n, t.querySelectorA, l, l('i, m, g[da, t, a-s, r, c]').forEa, c, h(i, m, g => {; ' rootMarg, i, n: '50px, 0p, x','; thresho, l, d: 0.01 });' docume, n, t.querySelectorA, l, l('i, m, g[da, t, a-s, r, c]').forEa, c, h(i, m, g => {'; imageObserv, e, r.obser, v, e(i, m, g); }); }; /** * Debounce, function, for performance, optimizatio, n; */ export, function, debounce<T, extend, s (...ar, g, s: a, n, y[]) => a, n, y>( f, u, n c: T wa, i, t: numb, e, r; ): (...ar, g, s: Paramete, r, s<T>) => vo, i, d { let, timeou, t: Node, J, S.Timeo, u, t | nu, l, l = nu, l, l; return, function, executedFunction(...ar, g, s: Paramete, r, s<T>) {  export, function, debounce<T, extend, s (...a, r, g s: a, n, y[]) => a, n, y>( fu, n, c: T wa, i, t: numb, e, r ): (...ar, g, s: Paramete, r, s<T>) => vo, i, d { let, timeou, t: Node, J, S.Timeo, u, t | nu, l, l = nu, l, l; return, function, executedFunction(...a, r, g s: Paramete, r, s<T>) { const, late, r = () => { timeo, u, t = nu, l, l; fu, n, c(...ar, g, s); }; if (timeo, u, t) clearTimeo, u, t(timeo, u, t); timeo, u, t = setTimeo, u, t(lat, e, r, wa, i, t); }; } /** * Throttle, function, for performance, optimizatio, n; */ export, function, throttle<T, extend, s (...ar, g, s: a, n, y[]) => a, n, y>( fu, n, c: T lim, i, t: numb, e, r ): (...ar, g, s: Paramete, r, s<T>) => vo, i, d { let, inThrottl, e: boole, a, n  let, inThrottl, e: boole, a, n; return, function, executedFunction(...a, r, g s: Paramete, r, s<T>) { if (!inThrott, l, e) { fu, n, c(...ar, g, s); inThrott, l, e = tr, u, e; setTimeo, u, t(() => (inThrott, l, e = fal, s, e), lim, i, t); }; }; } /** * Measure, page, load performan, c, e; */ export, const, measurePageLoad = (): WebVitalsMetri, c, s | nu, l, l => {' if (typeof, windo, w === 'undefin, e, d' || !wind, o, w.performan, c, e) return, nul, l; const, perfDat, a = wind, o, w.performan, c, e.timi, n, g;' const, navigatio, n = wind, o, w.performan, c, e.getEntriesByTy, p, e('navigati, o, n')[0] as, PerformanceNavigationTimin, g; retu, r, n { F, C, P: navigati, o, n?.responseSta, r, t - navigati, o, n?.fetchSta, r, t TT, F, B: perfDa, t, a.responseSta, r, t - perfDa, t, a.navigationSta, r, t; ' if (typeof, windo, w === 'undefin, e, d' || !wind, o, w.performan, c, e) return, nul, l;'; const, perfDat, a = wind, o, w.performan, c, e.timi, n, g;' const, navigatio, n = wind, o, w.performan, c, e.getEntriesByTy, p, e('navigati, o, n')[0] as, PerformanceNavigationTimin, g;'; retu, r, n { FC P: navigati, o, n?.responseSta, r, t - navigati, o, n?.fetchSta, r, t TT, F, B: perfDa, t, a.responseSta, r, t - perfDa, t, a.navigationSta, r, t }; }; /** * Report, Web, Vitals to, analytic, s; */ export, const, reportWebVitals = (metri, c, s: WebVitalsMetri, c, s): vo, i, d => {' conso, l, e.l, o, g('Web, Vital, s: ', metri, c, s);' // Send, to, analytics servi, c, e' if (typeof, windo, w !== 'undefin, e, d' && (window, as, any).gt, a, g) {; Obje, c, t.entri, e, s(metri, c, s).forEa, c, h(([k, e, y, val, u, e]) => { if (val, u, e !== undefin, e, d) {' (window, as, any).gt, a, g('eve, n, t', k, e, y, { val, u, e: Ma, t, h.rou, n, d(val, u, e)' event_catego, r, y: 'Web, Vital, s' non_interacti, o, n: tr, u, e; ' conso, l, e.l, o, g('Web, Vita, l' s: ', metri, c, s);'; // Send, to, analytics servi, c, e' if (typeof, windo, w !== 'undefin, e, d' && (window, as, any).gt, a, g) {'; Obje, c, t.entri, e, s(metri, c, s).forEa, c, h(([k, e, y, val, u, e]) => { if (val, u, e !== undefin, e, d) {' (window, as, any).gt, a, g('eve, n, t', k, e, y, {'; val, u, e: Ma, t, h.rou, n, d(val, u, e)' event_catego, r, y: 'Web, Vital, s','; non_interacti, o, n: tr, u, e }); } }); } }; /** * Optimize, images, by detecting, slow, connections; */ export, const, shouldUseWebP = (): boole, a, n => {' if (typeof, windo, w === 'undefin, e, d') return, fals, e;' const, canva, s = docume, n, t.createEleme, n, t('canv, a, s'); ' if (typeof, windo, w === 'undefin, e, d') return, fals, e;';' const, canva, s = docume, n, t.createEleme, n, t('canv, a, s');'; canv, a, s.wid, t, h = canv, a, s.heig, h, t = 1;' return, canva, s.toDataU, R, L('ima, g, e/we, b, p').index, O, f('da, t, a:ima, g, e/we, b, p') === 0;'; }; /** * Get, connection, quality; */' export, const, getConnectionQuality = (): 'sl, o, w' | 'medi, u, m' | 'fa, s, t' => {;' if (typeof, navigato, r === 'undefin, e, d') retu, r, n 'medi, u, m'; const, connectio, n = (navigator, as, any).connecti, o, n || (navigator, as, any).mozConnecti, o, n || (navigator, as, any).webkitConnecti, o, n;' if (!connecti, o, n) retu, r, n 'medi, u, m'; ' export, const, getConnectionQuality = (): 'sl, o, w' | 'medi, u, m' | 'fa, s, t' => {';' if (typeof, navigato, r === 'undefin, e, d') retu, r, n 'medi, u, m';'; const, connectio, n = (navigator, as, any).connecti, o, n || (navigator, as, any).mozConnecti, o, n || (navigator, as, any).webkitConnecti, o, n;' if (!connecti, o, n) retu, r, n 'medi, u, m';'; const, effectiveTyp, e = connecti, o, n.effectiveTy, p, e;' if (effectiveTy, p, e === 'sl, o, w-2g' || effectiveTy, p, e === '2g') retu, r, n 'sl, o, w';';' if (effectiveTy, p, e === '3g') retu, r, n 'medi, u, m';';' retu, r, n 'fa, s, t';'; }; /** * Adaptive, loading, based on, network, conditions; */ export, const, shouldLoadHeavyAssets = (): boole, a, n => { const, qualit, y = getConnectionQuali, t, y();' const, saveDat, a = typeof, navigato, r !== 'undefin, e, d' && (navigator, as, any).connecti, o, n?.saveDa, t, a;' return, qualit, y === 'fa, s, t' && !saveDa, t, a; ' const, saveDat, a = typeof, navigato, r !== 'undefin, e, d' && (navigator, as, any).connecti, o, n?.saveDa, t, a;';' return, qualit, y === 'fa, s, t' && !saveDa, t, a;'; }; /** * Request, Idle, Callback wrapper, with, fallback; */ export, const, requestIdleCallback = (callba, c, k: IdleRequestCallba, c, k): numb, e, r => {' if (typeof, windo, w === 'undefin, e, d') retur, n, 0;' if ('requestIdleCallba, c, k' in, windo, w) {; return, windo, w.requestIdleCallba, c, k(callba, c, k); }' // Fallback, for, browsers that, do, n't, support, requestIdleCallback; ' if (typeof, windo, w === 'undefin, e, d') retur, n, 0;';' if ('requestIdleCallba, c, k' in, windo, w) {'; return, windo, w.requestIdleCallba, c, k(callba, c, k); }' // Fallback, for, browsers that, do, n't, support, requestIdleCallback'; return, windo, w.setTimeo, u, t(() => { const, star, t = Da, t, e.n, o, w(); callba, c, k({ didTimeo, u, t: fal, s, e timeRemaini, n, g: () => Ma, t, h.m, a, x(0, 50 - (Da, t, e.n, o, w() - sta, r, t)) }); }, 1) as, unknown, as numb, e, r; }; /** * Cancel, Idle, Callback wrapper, with, fallback; */ export, const, cancelIdleCallback = (id: numb, e, r): vo, i, d => {' if (typeof, windo, w === 'undefin, e, d') retu, r, n;' if ('cancelIdleCallba, c, k' in, windo, w) {; ' if (typeof, windo, w === 'undefin, e, d') retu, r, n;';' if ('cancelIdleCallba, c, k' in, windo, w) {'; wind, o, w.cancelIdleCallba, c, k(id); } el, s, e { wind, o, w.clearTimeo, u, t(id); } }; /** * Optimize, bundle, loading with, rout, e-based, code, splitting; */ export, const, preloadRoute = (rou, t, e: stri, n, g): vo, i, d => {' if (typeof, documen, t === 'undefin, e, d') retu, r, n;' const, lin, k = docume, n, t.createEleme, n, t('li, n, k');' li, n, k.r, e, l = 'prefet, c, h';' li, n, k.as = 'scri, p, t'; ' if (typeof, documen, t === 'undefin, e, d') retu, r, n;';' const, lin, k = docume, n, t.createEleme, n, t('li, n, k');';' li, n, k.r, e, l = 'prefet, c, h';';' li, n, k.as = 'scri, p, t';'; li, n, k.hr, e, f = rou, t, e; docume, n, t.he, a, d.appendChi, l, d(li, n, k); }; /** * Monitor, long, tasks (> 50, m, s) for, performance, debugging; */ export, const, monitorLongTasks = (callba, c, k: (entr, i, e s: PerformanceEntryLi, s, t) => vo, i, d): PerformanceObserv, e, r | nu, l, l => {' if (typeof, windo, w === 'undefin, e, d' || !('PerformanceObserv, e, r' in, windo, w)) return, nul, l; ' if (typeof, windo, w === 'undefin, e, d' || !('PerformanceObserv, e, r' in, windo, w)) return, nul, l;'; t, r, y { const, observe, r = new, PerformanceObserve, r((li, s, t) => { callba, c, k(li, s, t.getEntri, e, s()); });' observ, e, r.obser, v, e({ entryTyp, e, s: ['longta, s, k'] });'; return, observe, r; } cat, c, h (e) {' conso, l, e.wa, r, n('Long, task, monitoring not, supporte, d: ', e);' ' conso, l, e.wa, r, n('Long, task, monitoring not, supporte, d: ', e);'; return, nul, l; } }; /** * Cac, h, e-first, strategy, for static, asset, s; */ export, const, cacheStaticAssets = asy, n, c (ur, l, s: stri, n, g[]): Promi, s, e<vo, i, d> => {' if (typeof, cache, s === 'undefin, e, d') retu, r, n;' const, cach, e = await, cache, s.op, e, n('stat, i, c-asse, t, s-v1'); ' if (typeof, cache, s === 'undefin, e, d') retu, r, n;';' const, cach, e = await, cache, s.op, e, n('stat, i, c-asse, t, s-v1');'; await, cach, e.addA, l, l(ur, l, s); }; /** * Clear, old, caches; */ export, const, clearOldCaches = asy, n, c (currentVersi, o, n: stri, n, g): Promi, s, e<vo, i, d> => {' if (typeof, cache, s === 'undefin, e, d') retu, r, n; ' if (typeof, cache, s === 'undefin, e, d') retu, r, n;'; const, cacheName, s = await, cache, s.ke, y, s(); await, Promis, e.a, l, l( cacheNam, e, s; .filt, e, r(na, m, e => na, m, e !== currentVersi, o, n) .m, a, p(na, m, e => cach, e, s.dele, t, e(na, m, e)) ); }; /** * Performance, budget, checker; */ export, interface, PerformanceBudget { maxBundleSi, z, e: numb, e, r; // in, K, B maxImageSi, z, e: numb, e, r; // in, K, B maxFirstLo, a, d: numb, e, r; // in, m, s maxInteracti, v, e: numb, e, r; // in, m, s; } export, const, checkPerformanceBudget = (budg, e, t: PerformanceBudg, e, t): { pass, e, d: boole, a, n; violati, o, n s: stri, n, g[]; } => { const, violation, s: stri, n, g[] = []' if (typeof, windo, w === 'undefin, e, d' || !wind, o, w.performan, c, e) {;  export, const, checkPerformanceBudget = (budg, e, t: PerformanceBudg, e, t): { pass, e, d: boole, a, n; violati, o, n s: stri, n, g[]; } => { const, violation, s: stri, n, g[] = [];' if (typeof, windo, w === 'undefin, e, d' || !wind, o, w.performan, c, e) {'; retu, r, n { pas, s, e d: tr, u, e, violatio, n, s }; } const, timin, g = wind, o, w.performan, c, e.timi, n, g; const, loadTim, e = timi, n, g.loadEventE, n, d - timi, n, g.navigationSta, r, t; const, interactiveTim, e = timi, n, g.domInteracti, v, e - timi, n, g.navigationSta, r, t; if (loadTi, m, e > budg, e, t.maxFirstLo, a, d) { violatio, n, s.pu, s, h(`First, load, time (${loadTi, m, e}ms) exceeds, budge, t (${budg, e, t.maxFirstLo, a, d}ms)`);`;` } if (interactiveTi, m, e > budg, e, t.maxInteracti, v, e) { violatio, n, s.pu, s, h(`Time, to, interactive (${interactiveTi, m, e}ms) exceeds, budge, t (${budg, e, t.maxInteracti, v, e}ms)`);`;` } retu, r, n { pass, e, d: violatio, n, s.leng, t, h === 0 violatio, n, s; }; }; export, defaul, t { prefetchResourc, e, s preconnectDomai, n, s lazyLoadImag, e, s deboun, c, e thrott, l, e measurePageLo, a, d reportWebVita, l, s shouldUseWe, b, P getConnectionQuali, t, y shouldLoadHeavyAsse, t, s requestIdleCallba, c, k cancelIdleCallba, c, k preloadRou, t, e monitorLongTas, k, s cacheStaticAsse, t, s clearOldCach, e, s checkPerformanceBudg, e, t; };'
+export default {
+  prefetchResources,
+  preconnectDomains,
+  lazyLoadImages,
+  debounce,
+  throttle,
+  measurePageLoad,
+  reportWebVitals,
+  shouldUseWebP,
+  getConnectionQuality,
+  shouldLoadHeavyAssets,
+  requestIdleCallback,
+  cancelIdleCallback,
+  preloadRoute,
+  monitorLongTasks,
+  cacheStaticAssets,
+  clearOldCaches,
+  checkPerformanceBudget
+};

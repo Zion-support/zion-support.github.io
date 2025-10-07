@@ -1,1 +1,102 @@
-#!/usr/bin/env node import fs from 'fs';' import path from 'path';' import { execSync } from 'child_process'; // Common patterns to fix const fixes = [ // Fix malformed JSX comments { pattern: /<div>\\{\\/\\* content \\*\\/\\}/g,' replacement: '<div>' }, { pattern: /<div>\\{\\/\\* content \\*\\/\\}/g,' replacement: '<div>' }, // Fix duplicate return statements { pattern: /return \\(\\s*<div>\\{\\/\\* content \\*\\/\\}\\s*return \\(/g,' replacement: 'return (' }, // Fix malformed object syntax { pattern: /const config: StorybookConfig = \\s*stories:/g,' replacement: 'const config: StorybookConfig = {\n stories:' }, { pattern: /const preview: Preview = \\s*parameters:/g,' replacement: 'const preview: Preview = {\n parameters:' }, // Fix missing opening braces in objects { pattern: /(\\w+):\\s*\\[/g,' replacement: '$1: [' }, { pattern: /(\\w+):\\s*\\{/g,' replacement: '$1: {' }, // Fix malformed imports {' pattern: /import\s*\{([^}]+)\}\s*from\s*'([^']+)';/g, replacement: (match, imports, module) => {' const cleanImports = imports.replace(/\s+/g, ' ').trim();' return `import { ${cleanImports} } from '${module}';`; } }, // Fix unterminated strings {' pattern: /'([^']*)$/gm, replacement: (match, content) => {' if (content.includes('\\')) {' return `'${content.replace(/\\/g, '\\\\')}'`; }' return `'${content}'`; } }, // Fix JSX closing tag issues { pattern: /<(\\w+)[^>]*>\\s*<\\/\\1>/g,' replacement: '<$1></$1>' }, // Fix malformed JSX attributes { pattern: /className="([^" ]*)"\\s*([^>]*>)/g,' replacement: 'className="$1" $2' }, // Fix duplicate content {' pattern: /import _React from 'react'; import Head from 'next\/head'; import { MessageSquare,FileText,Users,CheckCircle } from 'lucide-react'; export default function AIServices\(\) \{[\s\S]*?\}\s*import _React from 'react';/g,' replacement: '' } ]; function fixFile(filePath) { try {' let content = fs.readFileSync(filePath, 'utf8'); let originalContent = content; // Apply fixes fixes.forEach(fix => {' if (typeof fix.replacement === 'function') { content = content.replace(fix.pattern, fix.replacement); } else { content = content.replace(fix.pattern, fix.replacement); } }); // Additional cleanup content = content' .replace(/\s+/g, ' ') // Normalize whitespace' .replace(/\n\s*\n/g, '\n') // Remove empty lines' .replace(/;\s*;/g, ';') // Remove duplicate semicolons' .replace(/,\s*,/g, ',') // Remove duplicate commas' .replace(/\{\s*\}/g, '{}') // Clean empty objects' .replace(/\[\s*\]/g, '[]') // Clean empty arrays .trim(); if (content !== originalContent) { fs.writeFileSync(filePath, content); console.log(`Fixed: ${filePath}`); return true; } return false; } catch (error) { console.error(`Error fixing ${filePath}:`, error.message); return false; } } ' function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) { let files = []; try { const items = fs.readdirSync(dir); for (const item of items) { const fullPath = path.join(dir, item); const stat = fs.statSync(fullPath); ' if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') { files = files.concat(getAllFiles(fullPath, extensions)); } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) { files.push(fullPath); } } } catch (error) { console.error(`Error reading directory ${dir}:`, error.message); } return files; } function main() {' console.log('Starting syntax error fixes...'); ' const files = getAllFiles('.'); let fixedCount = 0; console.log(`Found ${files.length} files to check`); for (const file of files) { if (fixFile(file)) { fixedCount++; } } console.log(`Fixed ${fixedCount} files`); // Run ESLint to check remaining errors try {' console.log('Running ESLint to check remaining errors...');' const result = execSync('npx eslint . --ext .ts,.tsx,.js,.jsx --max-warnings 0', { ' encoding: 'utf8',' stdio: 'pipe' });' console.log('No ESLint errors remaining!'); } catch (error) { const errorOutput = error.stdout || error.stderr || error.message; const errorCount = (errorOutput.match(/error/g) || []).length; console.log(`Remaining ESLint errors: ${errorCount}`); } } main();'
+#!/usr/bin/env node
+
+import fs from 'fs';
+import path from 'path';
+import { execSync } from 'child_process';
+
+console.log('🔧 Starting comprehensive syntax error fixes...');
+
+//Files with known issues
+const filesToFix = [
+  'src/components/October2025CuttingEdgeContentBanner.tsx',
+  'src/components/October2025CuttingEdgeAIBanner.tsx',
+  'src/components/October2025AdvancedAIInnovationsBanner.tsx',
+];
+
+function fixDuplicateKeys(filePath) {
+  if (!fs.existsSync(filePath)) return;
+
+  let content = fs.readFileSync(filePath, 'utf8');
+
+  //Fix duplicate icon keys
+  content = content.replace(/icon: '🚀',\s*icon: <[^>]+>/g, match => {
+    const iconMatch = match.match(/icon: <([^>]+)>/);
+    return iconMatch ? `icon: ${iconMatch[1]}` : match;
+  });
+
+  fs.writeFileSync(filePath, content);
+  console.log(`✅ Fixed duplicate keys in ${filePath}`);
+}
+
+function fixJSXStructure(filePath) {
+  if (!fs.existsSync(filePath)) return;
+
+  let content = fs.readFileSync(filePath, 'utf8');
+
+  //Fix common JSX structure issues
+  content = content.replace(
+    /<div className="flex items-center gap-3 mb-4">\s*<div className="[^"]*">\s*<[^>]+>\s*<\/div>\s*<div className="[^"]*">\s*<[^>]+>\s*<\/div>\s*<\/div>\s*<div className="flex-1">/g,
+    '<div className="flex items-center gap-3 mb-4">\n              <div className="p-3 bg-emerald-500/20 rounded-xl group-hover:bg-emerald-500/30 transition-colors">\n                <Shield className="w-8 h-8 text-emerald-300" />\n              </div>\n              <div className="flex-1">'
+  );
+
+  //Fix missing closing tags
+  content = content.replace(
+    /<Link[^>]*>\s*<div className="flex items-center gap-3 mb-4">\s*<div className="[^"]*">\s*<[^>]+>\s*<\/div>\s*<div className="flex-1">\s*<span[^>]*>[^<]*<\/span>\s*<\/div>\s*<\/div>\s*<h3[^>]*>[^<]*<\/h3>\s*<p[^>]*>[^<]*<\/p>\s*<div className="flex items-center justify-between">\s*<div[^>]*>[^<]*<\/div>\s*<[^>]+>\s*<\/div>\s*<\/div>\s*<\/Link>/g,
+    match => {
+      return match.replace(/<\/div>\s*<\/Link>/, '</div>\n            </Link>');
+    }
+  );
+
+  fs.writeFileSync(filePath, content);
+  console.log(`✅ Fixed JSX structure in ${filePath}`);
+}
+
+function addMissingImports(filePath) {
+  if (!fs.existsSync(filePath)) return;
+
+  let content = fs.readFileSync(filePath, 'utf8');
+
+  //Add common missing imports
+  if (content.includes('Shield') && !content.includes('import { Shield')) {
+    content = content.replace(
+      /import React[^;]+;/,
+      `import React from 'react';\nimport { Shield, Zap, Sparkles, TrendingUp, ArrowRight } from 'lucide-react';`
+    );
+  }
+
+  if (content.includes('Link') && !content.includes('import { Link')) {
+    content = content.replace(
+      /import React[^;]+;/,
+      `import React from 'react';\nimport { Link } from 'react-router-dom';\nimport { Shield, Zap, Sparkles, TrendingUp, ArrowRight } from 'lucide-react';`
+    );
+  }
+
+  fs.writeFileSync(filePath, content);
+  console.log(`✅ Added missing imports to ${filePath}`);
+}
+
+// Fix each file
+filesToFix.forEach(filePath => {
+  const fullPath = path.join(process.cwd(), filePath);
+
+  if (fs.existsSync(fullPath)) {
+    console.log(`\n🔧 Fixing ${filePath}...`);
+
+    fixDuplicateKeys(fullPath);
+    fixJSXStructure(fullPath);
+    addMissingImports(fullPath);
+  } else {
+    console.log(`⚠️  File not found: ${filePath}`);
+  }
+});
+
+console.log('\n✅ Syntax error fixes completed!');
+console.log('🚀 Running build test...');
+
+try {
+  execSync('pnpm run build:no-check', { stdio: 'inherit' });
+  console.log('🎉 Build successful!');
+} catch (error) {
+  console.log('❌ Build still has errors. Manual fixes needed.');
+  process.exit(1);
+}

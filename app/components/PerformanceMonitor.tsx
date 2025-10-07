@@ -1,45 +1,55 @@
-import React, { useEffect, useState } from 'react';
-import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals';
+import React, { type ReactNode, useEffect } from 'react';
 
-interface PerformanceMetrics {
-  cls: number;
-  fid: number;
-  fcp: number;
-  lcp: number;
-  ttfb: number;
+interface PerformanceMonitorProps {
+  children: ReactNode;
 }
 
-const PerformanceMonitor: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
-
+const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ children }) => {
   useEffect(() => {
-    const handleMetric = (metric: { name: string; value: number }) => {
-      setMetrics(prev => ({
-        ...prev,
-        [metric.name]: metric.value,
-      }));
-    };
+    // Performance monitoring
+    if (typeof window !== 'undefined' && 'performance' in window) {
+      // Monitor Core Web Vitals
+      const observer = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (entry.entryType === 'largest-contentful-paint') {
+            console.log('LCP:', entry.startTime);
+          }
+          if (entry.entryType === 'first-input') {
+            const fidEntry = entry as any;
+            console.log('FID:', fidEntry.processingStart - fidEntry.startTime);
+          }
+          if (entry.entryType === 'layout-shift') {
+            console.log('CLS:', (entry as any).value);
+          }
+        }
+      });
 
-    getCLS(handleMetric);
-    getFID(handleMetric);
-    getFCP(handleMetric);
-    getLCP(handleMetric);
-    getTTFB(handleMetric);
+      try {
+        observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
+      } catch (e) {
+        // Fallback for browsers that don't support all entry types
+        console.log('Performance monitoring partially available');
+      }
+
+      // Monitor page load time
+      const handleLoad = () => {
+        const loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart;
+        console.log('Page load time:', loadTime + 'ms');
+      };
+
+      window.addEventListener('load', handleLoad);
+
+      return () => {
+        observer.disconnect();
+        window.removeEventListener('load', handleLoad);
+      };
+    }
+    
+    // Return undefined for cleanup when performance API is not available
+    return undefined;
   }, []);
 
-  if (process.env.NODE_ENV === 'development') {
-    return (
-      <div className='fixed bottom-4 right-4 bg-black text-white p-2 rounded text-xs'>
-        <div>CLS: {metrics?.cls?.toFixed(3)}</div>
-        <div>FID: {metrics?.fid?.toFixed(1)}ms</div>
-        <div>FCP: {metrics?.fcp?.toFixed(1)}ms</div>
-        <div>LCP: {metrics?.lcp?.toFixed(1)}ms</div>
-        <div>TTFB: {metrics?.ttfb?.toFixed(1)}ms</div>
-      </div>
-    );
-  }
-
-  return null;
+  return <>{children}</>;
 };
 
 export default PerformanceMonitor;

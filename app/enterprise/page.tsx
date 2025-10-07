@@ -1,1 +1,126 @@
-import React from 'react';' import Link from 'next/link'; export const metadata = {' title: 'Enterprise Solutions - Zion Tech Group',' description: 'Comprehensive enterprise AI and IT solutions designed for Fortune 500 companies. Transform your business with our advanced autonomous systems and quantum computing solutions.',' keywords: 'enterprise AI, Fortune 500, autonomous systems, quantum computing, enterprise transformation, business intelligence', }; export default function EnterprisePage() { return ( <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900" > {/* Hero Section */} <header className="relative overflow-hidden" > <div></div> <div className="relative z-10 container mx-auto px-4 py-20" > <div className="text-center" > <h1 className="text-6xl font-extrabold text-white mb-6" > <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" > Enterprise Solutions </span> </h1> <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" > Comprehensive AI and IT solutions designed for Fortune 500 companies. Transform your business with our advanced autonomous systems and quantum computing solutions. </p> <div className="flex flex-col sm:flex-row items-center justify-center gap-6" > <Link href="/contact" className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl" > Get Started </Link> <Link href="/services" className="bg-white/10 hover:bg-white/20 text-white font-bold py-4 px-8 rounded-xl border border-white/20 hover:border-white/40 transition-all duration-300" > View Services </Link> </div> </div> </div> </header> {/* Services Section */} <section className="py-20" > <div className="container mx-auto px-4" > <div className="text-center mb-16" > <h2 className="text-4xl font-bold text-white mb-6" > Enterprise AI Solutions </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Advanced AI technologies designed for enterprise-scale operations and transformation. </p> </div> <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" > {/* AI Autonomous Operations */} <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-white/40 transition-all duration-500" > <div className="text-4xl mb-4" >🤖</div> <h3 className="text-2xl font-bold text-white mb-4" >AI Autonomous Operations</h3> <p className="text-gray-300 mb-6" > End-to-end automation with 99.9% reliability, 300% efficiency gains, and self-healing infrastructure. </p> <div className="space-y-2 mb-6" > <div className="text-cyan-400 font-semibold" >99.9% Uptime</div> <div className="text-purple-400 font-semibold" >300% Efficiency</div> <div className="text-green-400 font-semibold" >Self-Healing</div> </div> <Link href="/services/ai-autonomous-operations" className="block w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center" > Learn More </Link> </div> {/* Quantum Computing */} <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-white/40 transition-all duration-500" > <div className="text-4xl mb-4" >⚛️</div> <h3 className="text-2xl font-bold text-white mb-4" >Quantum Computing</h3> <p className="text-gray-300 mb-6" > Next-generation quantum algorithms processing 1000x faster with quantum supremacy capabilities. </p> <div className="space-y-2 mb-6" > <div className="text-cyan-400 font-semibold" >1000x Faster</div> <div className="text-purple-400 font-semibold" >Quantum Supremacy</div> <div className="text-green-400 font-semibold" >Advanced Algorithms</div> </div> <Link href="/services/quantum-computing" className="block w-full bg-gradient-to-r from-purple-500 to-fuchsia-600 hover:from-purple-600 hover:to-fuchsia-700 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center" > Learn More </Link> </div> {/* Enterprise Security */} <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-white/40 transition-all duration-500" > <div className="text-4xl mb-4" >🛡️</div> <h3 className="text-2xl font-bold text-white mb-4" >Enterprise Security</h3> <p className="text-gray-300 mb-6" > Advanced threat detection with 99.99% accuracy, autonomous response, and zero-trust architecture. </p> <div className="space-y-2 mb-6" > <div className="text-cyan-400 font-semibold" >99.99% Accuracy</div> <div className="text-purple-400 font-semibold" >Zero-Trust</div> <div className="text-green-400 font-semibold" >Autonomous Response</div> </div> <Link href="/services/enterprise-security" className="block w-full bg-gradient-to-r from-red-500 to-orange-600 hover:from-red-600 hover:to-orange-700 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center" > Learn More </Link> </div> </div> </div> </section> {/* CTA Section */} <section className="py-20" > <div className="container mx-auto px-4" > <div className="text-center bg-white/5 backdrop-blur-lg rounded-2xl p-12 border border-white/20" > <h2 className="text-4xl font-bold text-white mb-6" > Ready to Transform Your Enterprise? </h2> <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" > Join 500+ Fortune 500 companies already implementing our cutting-edge AI solutions with proven results and exceptional ROI. </p> <div className="flex flex-col sm:flex-row items-center justify-center gap-6" > <Link href="/contact" className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl" > Start Your Transformation </Link> <Link href="/case-studies" className="bg-white/10 hover:bg-white/20 text-white font-bold py-4 px-8 rounded-xl border border-white/20 hover:border-white/40 transition-all duration-300" > View Case Studies </Link> </div> </div> </div> </section> </div> ); }'
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
+const EnterprisePage: React.FC = () => {
+  const enterpriseFeatures = [
+    {
+      title: 'Scalable AI Infrastructure',
+      description: 'Enterprise-grade AI solutions that scale with your business needs.',
+      icon: '🏢'
+    },
+    {
+      title: '24/7 Support',
+      description: 'Round-the-clock technical support and monitoring for critical systems.',
+      icon: '🛠️'
+    },
+    {
+      title: 'Custom Solutions',
+      description: 'Tailored AI and IT solutions designed specifically for your organization.',
+      icon: '⚙️'
+    },
+    {
+      title: 'Security & Compliance',
+      description: 'Enterprise-level security with compliance for industry standards.',
+      icon: '🔒'
+    }
+  ];
+
+  return (
+    <>
+      <Helmet>
+        <title>Enterprise Solutions - Zion Tech Group</title>
+        <meta name="description" content="Enterprise AI and IT solutions for large organizations. Scalable, secure, and customized for your business needs." />
+      </Helmet>
+      
+      <div className="min-h-screen bg-slate-50 py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <h1 className="text-4xl font-bold text-gray-900 mb-4">
+                Enterprise Solutions
+              </h1>
+              <p className="text-xl text-gray-600">
+                Advanced AI and IT solutions designed for large organizations
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+              {enterpriseFeatures.map((feature, index) => (
+                <div key={index} className="bg-white rounded-lg shadow-lg p-6 text-center">
+                  <div className="text-4xl mb-4">{feature.icon}</div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">
+                    {feature.title}
+                  </h3>
+                  <p className="text-gray-600">
+                    {feature.description}
+                  </p>
+                </div>
+              ))}
+            </div>
+
+            <div className="bg-white rounded-lg shadow-lg p-8 mb-16">
+              <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">
+                Why Choose Our Enterprise Solutions?
+              </h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">Advanced Technology</h3>
+                  <ul className="space-y-2 text-gray-600">
+                    <li className="flex items-start">
+                      <span className="w-2 h-2 bg-blue-500 rounded-full mr-3 mt-2"></span>
+                      <span>Cutting-edge AI and machine learning algorithms</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="w-2 h-2 bg-blue-500 rounded-full mr-3 mt-2"></span>
+                      <span>Quantum computing capabilities</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="w-2 h-2 bg-blue-500 rounded-full mr-3 mt-2"></span>
+                      <span>Autonomous system management</span>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">Enterprise Support</h3>
+                  <ul className="space-y-2 text-gray-600">
+                    <li className="flex items-start">
+                      <span className="w-2 h-2 bg-blue-500 rounded-full mr-3 mt-2"></span>
+                      <span>Dedicated account management</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="w-2 h-2 bg-blue-500 rounded-full mr-3 mt-2"></span>
+                      <span>24/7 technical support</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="w-2 h-2 bg-blue-500 rounded-full mr-3 mt-2"></span>
+                      <span>Custom training and onboarding</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div className="text-center">
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">
+                Ready to Transform Your Enterprise?
+              </h2>
+              <p className="text-xl text-gray-600 mb-8">
+                Contact our enterprise team to discuss your specific needs and requirements.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+                  Schedule Consultation
+                </button>
+                <button className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors">
+                  Download Brochure
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default EnterprisePage;
