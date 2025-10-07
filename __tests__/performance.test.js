@@ -16,7 +16,7 @@ global.PerformanceObserver = MockPerformanceObserver;
 describe('Performance Tests', () => {
   let locationSpy;
 
-  beforeAll(() => {
+  beforeEach(() => {
     // Mock performance API
     const performanceMock = {
       now: jest.fn(() => Date.now()),

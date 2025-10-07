@@ -134,7 +134,7 @@ describe('AdvancedSEOOptimizer', () => {
     expect(document.title).toBe('Test Title');
   });
 
-  it('renders structured data when enabled', () => {
+  it('renders structured data when enabled', async () => {
     const { container } = render(
       <HelmetProvider>
         <AdvancedSEOOptimizer
@@ -144,40 +144,46 @@ describe('AdvancedSEOOptimizer', () => {
       </HelmetProvider>
     );
 
-    const structuredDataScript = container.querySelector(
-      'script[type="application/ld+json"]'
-    );
-    expect(structuredDataScript).toBeTruthy();
+    await waitFor(() => {
+      const structuredDataScript = container.querySelector(
+        'script[type="application/ld+json"]'
+      );
+      expect(structuredDataScript).toBeTruthy();
+    });
   });
 
-  it('renders Open Graph tags when enabled', () => {
+  it('renders Open Graph tags when enabled', async () => {
     const { container } = render(
       <HelmetProvider>
         <AdvancedSEOOptimizer config={mockSEOData} enableOpenGraph={true} />
       </HelmetProvider>
     );
 
-    expect(
-      container.querySelector('meta[property="og:title"]')
-    ).toBeTruthy();
-    expect(
-      container.querySelector('meta[property="og:description"]')
-    ).toBeTruthy();
+    await waitFor(() => {
+      expect(
+        container.querySelector('meta[property="og:title"]')
+      ).toBeTruthy();
+      expect(
+        container.querySelector('meta[property="og:description"]')
+      ).toBeTruthy();
+    });
   });
 
-  it('renders Twitter Card tags when enabled', () => {
+  it('renders Twitter Card tags when enabled', async () => {
     const { container } = render(
       <HelmetProvider>
         <AdvancedSEOOptimizer config={mockSEOData} enableTwitterCards={true} />
       </HelmetProvider>
     );
 
-    expect(
-      container.querySelector('meta[name="twitter:card"]')
-    ).toBeTruthy();
-    expect(
-      container.querySelector('meta[name="twitter:title"]')
-    ).toBeTruthy();
+    await waitFor(() => {
+      expect(
+        container.querySelector('meta[name="twitter:card"]')
+      ).toBeTruthy();
+      expect(
+        container.querySelector('meta[name="twitter:title"]')
+      ).toBeTruthy();
+    });
   });
 });
 
