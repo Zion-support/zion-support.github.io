@@ -12,44 +12,44 @@ const UltimateBusinessIntelligence2025Banner = () => {
       description: 'Transform your enterprise with next-generation AI-powered business intelligence that delivers unprecedented insights and competitive advantage.',
       url: '/blog/ai-2025-ultimate-business-intelligence-revolution-ultimate-breakthrough',
       type: 'Blog Post',
-      category: 'AI & Business Intelligence',
-      readTime: '12 min read',
-      publishDate: 'January 15, 2025',
-      stats: {
-        views: '2.5M+',
-        shares: '45K+',
-        comments: '1.2K+'
-      }
+      metrics: {
+        efficiency: '300%',
+        accuracy: '99.7%',
+        timeline: '6 months',
+        adoption: '95%'
+      },
+      readingTime: '15 min read',
+      featured: true
     },
     {
-      id: 'advanced-analytics-platform',
-      title: 'Advanced Analytics Platform: Real-Time Intelligence',
-      description: 'Deploy cutting-edge analytics solutions that process millions of data points in real-time, delivering actionable insights instantly.',
-      url: '/blog/advanced-analytics-platform-real-time-intelligence-2025',
-      type: 'Technical Guide',
-      category: 'Analytics & Data Science',
-      readTime: '18 min read',
-      publishDate: 'January 12, 2025',
-      stats: {
-        views: '1.8M+',
-        shares: '32K+',
-        comments: '890+'
-      }
+      id: 'fortune-500-business-intelligence-success',
+      title: 'Fortune 500 Ultimate Business Intelligence Success',
+      description: 'How a $15.2B manufacturing giant achieved unprecedented business intelligence transformation with AI-powered analytics.',
+      url: '/case-studies/fortune-500-ultimate-business-intelligence-30000-roi-success-story',
+      type: 'Case Study',
+      metrics: {
+        roi: '30,000%',
+        costReduction: '70%',
+        timeToInsight: '90%',
+        dataAccuracy: '99.9%'
+      },
+      readingTime: '12 min read',
+      featured: true
     },
     {
-      id: 'enterprise-ai-transformation',
-      title: 'Enterprise AI Transformation: Complete Implementation Guide',
-      description: 'Step-by-step guide to implementing AI across your entire organization, from strategy to execution and optimization.',
-      url: '/blog/enterprise-ai-transformation-complete-implementation-guide-2025',
-      type: 'Implementation Guide',
-      category: 'Enterprise AI',
-      readTime: '25 min read',
-      publishDate: 'January 10, 2025',
-      stats: {
-        views: '3.2M+',
-        shares: '67K+',
-        comments: '2.1K+'
-      }
+      id: 'ai-powered-dashboard-suite',
+      title: 'AI-Powered Dashboard Suite 2025',
+      description: 'Revolutionary dashboard technology that transforms complex data into actionable insights with real-time AI analysis.',
+      url: '/products/ai-dashboard-suite-2025',
+      type: 'Product',
+      metrics: {
+        realTimeProcessing: '99.9%',
+        userSatisfaction: '98%',
+        implementationTime: '2 weeks',
+        costSavings: '60%'
+      },
+      readingTime: '8 min read',
+      featured: true
     }
   ];
 
@@ -61,186 +61,162 @@ const UltimateBusinessIntelligence2025Banner = () => {
     return () => clearInterval(interval);
   }, [content.length]);
 
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % content.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + content.length) % content.length);
-  };
-
   if (!isVisible) return null;
-
-  const currentContent = content[currentSlide];
 
   return (
     <section className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 py-20 overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0">
-        <div className="absolute top-20 left-20 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-20 w-80 h-80 bg-purple-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-cyan-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '4s' }}></div>
+        <div className="absolute top-20 left-20 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-20 right-20 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-cyan-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '4s' }}></div>
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <div className="flex items-center justify-center gap-2 mb-6">
+          <div className="flex items-center justify-center gap-3 mb-6">
             <span className="text-3xl">🚀</span>
-            <span className="text-yellow-400 font-bold text-2xl">
-              BREAKING: ULTIMATE AI BREAKTHROUGH 2025
+            <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-transparent bg-clip-text text-2xl font-bold">
+              ULTIMATE BREAKTHROUGH: AI Business Intelligence 2025
             </span>
             <span className="text-3xl">⚡</span>
           </div>
-          <h2 className="text-5xl md:text-6xl font-extrabold text-white mb-6">
-            Business Intelligence Revolution
+          <h2 className="text-4xl md:text-6xl font-extrabold text-white mb-6">
+            Revolutionary AI-Powered
+            <span className="block bg-gradient-to-r from-blue-400 to-purple-400 text-transparent bg-clip-text">
+              Business Intelligence
+            </span>
           </h2>
-          <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-            Discover the most advanced AI-powered business intelligence solutions that are transforming Fortune 500 companies worldwide
+          <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+            Transform your enterprise with cutting-edge AI analytics that deliver 300% efficiency gains, 
+            99.7% accuracy, and unprecedented competitive advantage in just 6 months.
           </p>
         </div>
 
-        {/* Main Content Card */}
-        <div className="relative bg-white/10 backdrop-blur-lg rounded-3xl p-8 md:p-12 border border-white/20 mb-16">
-          {/* Close Button */}
-          <button
-            onClick={() => setIsVisible(false)}
-            className="absolute top-6 right-6 text-white/60 hover:text-white transition-colors"
-            aria-label="Close banner"
-          >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          </button>
-
-          {/* Content */}
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="mb-8">
-              <span className="inline-block px-6 py-3 bg-gradient-to-r from-blue-500/30 to-purple-500/30 text-blue-200 text-lg font-bold rounded-full border border-blue-400/50 mb-6">
-                {currentContent.category}
-              </span>
-              <h3 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                {currentContent.title}
-              </h3>
-              <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                {currentContent.description}
-              </p>
-            </div>
-
-            {/* Stats */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-cyan-400 mb-2">
-                  {currentContent.stats.views}
-                </div>
-                <div className="text-gray-300">Views</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-green-400 mb-2">
-                  {currentContent.stats.shares}
-                </div>
-                <div className="text-gray-300">Shares</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-yellow-400 mb-2">
-                  {currentContent.stats.comments}
-                </div>
-                <div className="text-gray-300">Comments</div>
-              </div>
-            </div>
-
-            {/* Meta Info */}
-            <div className="flex items-center justify-center gap-6 text-gray-400 mb-8">
-              <span className="flex items-center gap-2">
-                <span>⏱️</span>
-                <span>{currentContent.readTime}</span>
-              </span>
-              <span className="flex items-center gap-2">
-                <span>📅</span>
-                <span>{currentContent.publishDate}</span>
-              </span>
-              <span className="flex items-center gap-2">
-                <span>📝</span>
-                <span>{currentContent.type}</span>
-              </span>
-            </div>
-
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href={currentContent.url}
-                className="inline-block bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
-              >
-                Read Full Article
-              </Link>
-              <Link
-                href="/contact"
-                className="inline-block border border-white/30 text-white px-8 py-4 rounded-xl font-semibold hover:bg-white/10 transition-all duration-300"
-              >
-                Get Expert Consultation
-              </Link>
-            </div>
-          </div>
-
-          {/* Navigation */}
-          <div className="flex items-center justify-center gap-4 mt-8">
-            <button
-              onClick={prevSlide}
-              className="p-3 bg-white/10 hover:bg-white/20 rounded-full transition-colors"
-              aria-label="Previous slide"
+        {/* Content Carousel */}
+        <div className="relative">
+          <div className="overflow-hidden rounded-2xl">
+            <div 
+              className="flex transition-transform duration-500 ease-in-out"
+              style={{ transform: `translateX(-${currentSlide * 100}%)` }}
             >
-              <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-              </svg>
-            </button>
-            
-            <div className="flex gap-2">
-              {content.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentSlide(index)}
-                  className={`w-3 h-3 rounded-full transition-colors ${
-                    index === currentSlide ? 'bg-white' : 'bg-white/30'
-                  }`}
-                  aria-label={`Go to slide ${index + 1}`}
-                />
+              {content.map((item, index) => (
+                <div key={item.id} className="w-full flex-shrink-0">
+                  <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 md:p-12 border border-white/20">
+                    <div className="grid md:grid-cols-2 gap-8 items-center">
+                      {/* Content */}
+                      <div>
+                        <div className="flex items-center gap-3 mb-4">
+                          <span className="px-4 py-2 bg-gradient-to-r from-blue-500/20 to-purple-500/20 text-blue-300 text-sm font-semibold rounded-full">
+                            {item.type}
+                          </span>
+                          <span className="text-gray-400 text-sm">{item.readingTime}</span>
+                          {item.featured && (
+                            <span className="px-3 py-1 bg-yellow-500/20 text-yellow-300 text-xs font-bold rounded-full">
+                              FEATURED
+                            </span>
+                          )}
+                        </div>
+                        
+                        <h3 className="text-3xl md:text-4xl font-bold text-white mb-6 leading-tight">
+                          {item.title}
+                        </h3>
+                        
+                        <p className="text-lg text-gray-300 mb-8 leading-relaxed">
+                          {item.description}
+                        </p>
+
+                        {/* Metrics */}
+                        <div className="grid grid-cols-2 gap-4 mb-8">
+                          {Object.entries(item.metrics).map(([key, value]) => (
+                            <div key={key} className="text-center">
+                              <div className="text-2xl font-bold text-blue-400">{value}</div>
+                              <div className="text-sm text-gray-400 capitalize">
+                                {key.replace(/([A-Z])/g, ' $1').trim()}
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+
+                        <Link
+                          href={item.url}
+                          className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
+                        >
+                          Explore {item.type}
+                          <span className="text-lg">→</span>
+                        </Link>
+                      </div>
+
+                      {/* Visual Element */}
+                      <div className="relative">
+                        <div className="bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-2xl p-8 h-80 flex items-center justify-center">
+                          <div className="text-center">
+                            <div className="w-32 h-32 bg-gradient-to-br from-blue-400 to-purple-400 rounded-full flex items-center justify-center mx-auto mb-4">
+                              <span className="text-4xl">📊</span>
+                            </div>
+                            <h4 className="text-xl font-bold text-white mb-2">AI Analytics</h4>
+                            <p className="text-gray-300">Real-time insights powered by advanced machine learning</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               ))}
             </div>
-            
-            <button
-              onClick={nextSlide}
-              className="p-3 bg-white/10 hover:bg-white/20 rounded-full transition-colors"
-              aria-label="Next slide"
-            >
-              <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </button>
+          </div>
+
+          {/* Navigation Dots */}
+          <div className="flex justify-center mt-8 space-x-2">
+            {content.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentSlide(index)}
+                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                  index === currentSlide 
+                    ? 'bg-blue-400 scale-125' 
+                    : 'bg-white/30 hover:bg-white/50'
+                }`}
+              />
+            ))}
           </div>
         </div>
 
-        {/* Bottom CTA */}
-        <div className="text-center">
-          <h3 className="text-3xl font-bold text-white mb-6">
-            Ready to Transform Your Business Intelligence?
-          </h3>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Join thousands of enterprises already using our AI solutions to achieve unprecedented growth and efficiency.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="tel:+13024640950"
-              className="inline-block bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
-            >
-              Call +1 302 464 0950
-            </a>
-            <a
-              href="mailto:kleber@ziontechgroup.com"
-              className="inline-block border border-white/30 text-white px-8 py-4 rounded-xl font-semibold hover:bg-white/10 transition-all duration-300"
-            >
-              Get Expert Consultation
-            </a>
+        {/* Call to Action */}
+        <div className="text-center mt-16">
+          <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/20 max-w-4xl mx-auto">
+            <h3 className="text-3xl font-bold text-white mb-4">
+              Ready to Transform Your Business Intelligence?
+            </h3>
+            <p className="text-xl text-gray-300 mb-8">
+              Join thousands of enterprises already using our AI-powered analytics platform.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/contact"
+                className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
+              >
+                Get Started Today
+              </Link>
+              <Link
+                href="/demo"
+                className="border border-white/30 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300"
+              >
+                Schedule Demo
+              </Link>
+            </div>
           </div>
+        </div>
+
+        {/* Close Button */}
+        <div className="flex justify-center mt-8">
+          <button
+            onClick={() => setIsVisible(false)}
+            className="text-gray-400 hover:text-white transition-colors text-sm"
+          >
+            Close this banner
+          </button>
         </div>
       </div>
     </section>
