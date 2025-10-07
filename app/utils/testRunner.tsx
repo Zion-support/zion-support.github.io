@@ -89,11 +89,7 @@ export class TestRunner {
   async runPerformanceTest(
     component: ReactElement,
     testName: string
-<<<<<<< HEAD
   ): Promise<{ passed: boolean; metrics: PerformanceMetrics }> {
-=======
-  ): Promise<{ passed: boolean; metrics: { renderTime: number; memoryUsage: number; timestamp: string } }> {
->>>>>>> main
     const startTime = performance.now();
     
     const { unmount } = this.customRender(component);
@@ -103,14 +99,10 @@ export class TestRunner {
     // Measure memory usage if available
     let memoryUsage = 0;
     if ('memory' in performance) {
-<<<<<<< HEAD
       const memory = (performance as { memory?: { usedJSHeapSize: number } }).memory;
       if (memory) {
         memoryUsage = memory.usedJSHeapSize;
       }
-=======
-      memoryUsage = (performance as Performance & { memory: { usedJSHeapSize: number } }).memory.usedJSHeapSize;
->>>>>>> main
     }
 
     const metrics: PerformanceMetrics = {
@@ -137,10 +129,6 @@ export class TestRunner {
   async runAccessibilityTest(
     component: ReactElement,
     testName: string
-<<<<<<< HEAD
-  ): Promise<{ passed: boolean; violations: Array<{ description: string; impact: string }> }> {
-    const { container, unmount } = this.customRender(component);
-=======
   ): Promise<{ passed: boolean; violations: string[] }> {
     const { container } = this.customRender(component);
     
@@ -154,33 +142,16 @@ export class TestRunner {
         violations.push(`Image ${index} missing alt text`);
       }
     });
->>>>>>> main
-
-    const violations: Array<{ description: string; impact: string }> = [];
-
-    // Check for missing alt text
-    const imagesWithoutAlt = container.querySelectorAll('img:not([alt])');
-    imagesWithoutAlt.forEach((img) => {
-      violations.push({
-        description: `Image missing alt text: ${img.getAttribute('src')}`,
-        impact: 'critical',
-      });
-    });
 
     // Check for missing labels
-    const inputsWithoutLabels = container.querySelectorAll('input:not([aria-label]):not([aria-labelledby])');
-    inputsWithoutLabels.forEach((input) => {
+    const inputs = container.querySelectorAll('input:not([aria-label]):not([aria-labelledby])');
+    inputs.forEach((input, index) => {
       const id = input.getAttribute('id');
       const hasLabel = id && container.querySelector(`label[for="${id}"]`);
       if (!hasLabel) {
-        violations.push({
-          description: `Input missing label: ${input.getAttribute('name') || input.getAttribute('type')}`,
-          impact: 'serious',
-        });
+        violations.push(`Input ${index} missing label`);
       }
     });
-
-    unmount();
 
     const passed = violations.length === 0;
 
@@ -194,8 +165,6 @@ export class TestRunner {
     return { passed, violations };
   }
 
-<<<<<<< HEAD
-=======
   // Component test
   async runComponentTest(
     component: ReactElement,
@@ -348,7 +317,6 @@ export class TestRunner {
     return { passed, results };
   }
 
->>>>>>> main
   // Get test results
   getResults() {
     return this.testResults;
@@ -410,7 +378,6 @@ export const createMockData = <T,>(
   return Array.from({ length: count }, () => ({ ...template }));
 };
 
-<<<<<<< HEAD
 // Test helpers
 export const waitForAsync = (ms: number = 0): Promise<void> => {
   return new Promise((resolve) => setTimeout(resolve, ms));
@@ -456,6 +423,3 @@ export const initializeTestRunner = (config?: Partial<TestConfig>): TestRunner =
 
 // Export test runner instance
 export default TestRunner;
-=======
-export default TestRunner;
->>>>>>> main
