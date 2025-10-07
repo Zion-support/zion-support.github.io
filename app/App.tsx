@@ -1,19 +1,16 @@
 'use client';
 
+<<<<<<< HEAD
 import React, { Suspense, lazy, useCallback, useEffect, ErrorInfo } from 'react';
+=======
+import React, { Suspense, lazy, useEffect } from 'react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-90ff
 import { HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // Components
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-import AdvancedErrorBoundary from './components/AdvancedErrorBoundary';
-import AdvancedSEOOptimizer from './components/AdvancedSEOOptimizer';
-import AdvancedPerformanceMonitor from './components/AdvancedPerformanceMonitor';
-import SEOEnhancer from './components/SEOEnhancer';
 import PerformanceDashboard from './components/PerformanceDashboard';
-import ContentShowcase from './components/ContentShowcase';
-import InteractiveContentShowcase2026 from './components/InteractiveContentShowcase2026';
-import InteractiveAIROICalculator from './components/InteractiveAIROICalculator';
 
 // Loading component
 const LoadingSpinner = () => (
@@ -29,10 +26,14 @@ const ErrorBoundary = ({ children }: { children: React.ReactNode }) => {
 
 // Utils
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { lazyLoadImages, preloadCriticalResources, collectPerformanceMetrics, performanceOptimizer } from './utils/performanceOptimizer';
 =======
 import { performanceOptimizer } from './utils/performanceOptimizer';
 >>>>>>> cursor/fix-errors-and-merge-to-main-d703
+=======
+import { preloadCriticalResources, performanceOptimizer } from './utils/performanceOptimizer';
+>>>>>>> cursor/fix-errors-and-merge-to-main-90ff
 import { logger } from './utils/logger';
 
 // Lazy load pages for better performance
@@ -43,9 +44,6 @@ import '../index.css';
 
 const App: React.FC = () => {
   useEffect(() => {
-    // Initialize global error handling
-    console.log('App initialized');
-
     // Initialize performance monitoring
     performanceOptimizer.init();
     
@@ -53,23 +51,23 @@ const App: React.FC = () => {
     if (typeof window !== 'undefined' && 'performance' in window) {
       const metrics = performanceOptimizer.getMetrics();
       if (metrics) {
-        // eslint-disable-next-line no-console
-        console.log('Performance metrics:', metrics);
+        logger.info('Performance metrics collected', 'App', { metrics });
       }
     }
 
     // Preload critical resources
     preloadCriticalResources();
     
-    // eslint-disable-next-line no-console
-    console.log('Performance monitoring initialized');
-    // eslint-disable-next-line no-console
-    console.log('🚀 Zion Tech Group App initialized with comprehensive monitoring');
+    logger.info('Performance monitoring initialized', 'App');
+    logger.info('🚀 Zion Tech Group App initialized with comprehensive monitoring', 'App');
   }, []);
 
+<<<<<<< HEAD
   const handleError = useCallback((error: Error, errorInfo: ErrorInfo) => {
     logger.error('Application Error', 'ErrorBoundary', { error: error.message, errorInfo });
   }, []);
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-90ff
 
   return (
     <HelmetProvider>
