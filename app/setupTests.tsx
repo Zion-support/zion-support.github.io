@@ -112,19 +112,25 @@ global.PerformanceObserver = class MockPerformanceObserver {
 };
 
 // Mock window.location
-delete (window as any).location;
-(window as any).location = {
-  href: 'http://localhost:3000',
-  origin: 'http://localhost:3000',
-  protocol: 'http:',
-  host: 'localhost:3000',
-  hostname: 'localhost',
-  port: '3000',
-  pathname: '/',
-  search: '',
-  hash: '',
-  assign: jest.fn(),
-  replace: jest.fn(),
-  reload: jest.fn(),
-  ancestorOrigins: [] as unknown as DOMStringList,
-};
+try {
+  delete (window as any).location;
+  (window as any).location = {
+    href: 'http://localhost:3000',
+    origin: 'http://localhost:3000',
+    protocol: 'http:',
+    host: 'localhost:3000',
+    hostname: 'localhost',
+    port: '3000',
+    pathname: '/',
+    search: '',
+    hash: '',
+    assign: jest.fn(),
+    replace: jest.fn(),
+    reload: jest.fn(),
+    ancestorOrigins: [] as unknown as DOMStringList,
+  };
+} catch (error) {
+  // Location property cannot be mocked in this environment
+  // This is expected in some test environments
+  console.warn('Could not mock window.location:', error);
+}
