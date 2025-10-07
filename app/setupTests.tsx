@@ -127,4 +127,8 @@ delete (window as any).location;
   replace: jest.fn(),
   reload: jest.fn(),
   ancestorOrigins: [] as unknown as DOMStringList,
+<<<<<<< HEAD
 };
+=======
+} as Location;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0475

@@ -235,7 +235,7 @@ export class PerformanceMonitor {
 }
 
 // Export singleton instance
-export const performanceMonitor = new PerformanceMonitor();
+export const performanceMonitorInstance = new PerformanceMonitor();
 
 // Lazy loading utilities
 export const lazyLoadImages = (): void => {
@@ -370,7 +370,11 @@ export const collectPerformanceMetricsArray = async (): Promise<
 
   // Memory usage
   const memory = getMemoryUsage();
+<<<<<<< HEAD
   if (memory && memory.used > 0) {
+=======
+  if (memory) {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0475
     metrics.push({ name: 'memoryUsage', value: memory.used });
   }
 

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 'use client';
+=======
+"use client";
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0475
 
 import React, { useEffect, useRef, useState, useCallback } from 'react';
 
