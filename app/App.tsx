@@ -23,7 +23,7 @@ const ErrorBoundary = ({ children }: { children: React.ReactNode }) => {
 const HomePage = lazy(() => import('./page'));
 
 // Utils
-import { performanceOptimizer } from './utils/performanceOptimizer';
+import { performanceOptimizer, collectPerformanceMetrics } from './utils/performanceOptimizer';
 
 // Styles
 import '../index.css';
@@ -36,10 +36,24 @@ const App: React.FC = () => {
     // Initialize performance monitoring
     performanceOptimizer.init();
     
+    // Initialize Web Vitals monitoring
+    if (typeof window !== 'undefined' && 'performance' in window) {
+      const pageLoadMetrics = collectPerformanceMetrics();
+      const metrics = performanceOptimizer.getMetrics();
+      if (pageLoadMetrics) {
+        // eslint-disable-next-line no-console
+        console.log('Performance metrics collected:', pageLoadMetrics);
+      }
+      if (metrics) {
+        // eslint-disable-next-line no-console
+        console.log('Performance metrics:', metrics);
+      }
+    }
+    
+    // eslint-disable-next-line no-console
     console.log('Performance monitoring initialized');
-    console.log(
-      '🚀 Zion Tech Group App initialized with comprehensive monitoring',
-    );
+    // eslint-disable-next-line no-console
+    console.log('🚀 Zion Tech Group App initialized with comprehensive monitoring');
   }, []);
 
   return (

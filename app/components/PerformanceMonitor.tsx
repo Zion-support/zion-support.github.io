@@ -62,7 +62,8 @@ const PerformanceMonitor: React.FC = () => {
 
       // Log performance data in development
       if (process.env.NODE_ENV === 'development') {
-        console.log('Performance Metrics:', performanceData);
+        // eslint-disable-next-line no-console
+console.log('Performance Metrics:', performanceData);
       }
     };
 
