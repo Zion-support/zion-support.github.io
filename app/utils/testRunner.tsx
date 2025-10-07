@@ -3,22 +3,44 @@
  * Comprehensive testing utilities for React applications
  */
 
-import React, { ReactElement, useCallback } from 'react';
 import { render, RenderOptions, RenderResult } from '@testing-library/react';
+import React, { ReactElement, useCallback } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 
-// Test result types
-export interface PerformanceMetrics {
+// Performance metrics interface
+interface PerformanceMetrics {
   renderTime: number;
   memoryUsage: number;
   timestamp: string;
 }
 
-export interface CoverageMetrics {
+// Coverage result interface
+interface CoverageResult {
   statements: number;
   branches: number;
   functions: number;
   lines: number;
+}
+
+// Test result interface
+interface TestResult {
+  passed: boolean;
+  name?: string;
+  type?: string;
+  error?: string;
+  metrics?: PerformanceMetrics;
+  violations?: string[];
+  diff?: unknown;
+  coverage?: CoverageResult;
+}
+
+// Extended Performance interface for memory
+interface ExtendedPerformance extends Performance {
+  memory?: {
+    usedJSHeapSize: number;
+    totalJSHeapSize: number;
+    jsHeapSizeLimit: number;
+  };
 }
 
 // Test configuration interface
@@ -98,13 +120,13 @@ export class TestRunner {
     // Measure memory usage if available
     let memoryUsage = 0;
     if ('memory' in performance) {
-      const perfWithMemory = performance as { memory?: { usedJSHeapSize: number } };
-      memoryUsage = perfWithMemory.memory?.usedJSHeapSize || 0;
+      const extPerf = performance as ExtendedPerformance;
+      memoryUsage = extPerf.memory?.usedJSHeapSize || 0;
     }
 
     unmount();
 
-    const metrics: PerformanceMetrics = {
+    const metrics = {
       renderTime,
       memoryUsage,
       timestamp: new Date().toISOString(),
@@ -255,7 +277,6 @@ export class TestRunner {
   ): Promise<{ passed: boolean; diff?: unknown }> {
     // This would typically use a tool like Percy or Chromatic
     // For now, we'll just return a placeholder
-    // eslint-disable-next-line no-console
     console.log(`Visual regression test for ${testName} would run here`);
     
     this.testResults.push({
@@ -268,10 +289,10 @@ export class TestRunner {
   }
 
   // Coverage test
-  async runCoverageTest(): Promise<{ passed: boolean; coverage: CoverageMetrics }> {
+  async runCoverageTest(): Promise<{ passed: boolean; coverage: CoverageResult }> {
     // This would typically use Istanbul or similar
     // For now, we'll just return a placeholder
-    const coverage: CoverageMetrics = {
+    const coverage = {
       statements: 85,
       branches: 80,
       functions: 90,
@@ -297,7 +318,7 @@ export class TestRunner {
     component: ReactElement;
     assertions?: (result: RenderResult) => void;
     userInteractions?: (result: RenderResult) => Promise<void>;
-  }>): Promise<{ passed: boolean; results: Array<{ name: string; type: string; passed: boolean; error?: string }> }> {
+  }>): Promise<{ passed: boolean; results: TestResult[] }> {
     const results = [];
 
     for (const test of tests) {
