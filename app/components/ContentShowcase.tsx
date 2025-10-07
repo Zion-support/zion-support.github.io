@@ -1,6 +1,6 @@
-import React, { memo } from 'react';
+import React from 'react';
 
-const ContentShowcase: React.FC = memo(() => {
+const ContentShowcase: React.FC = () => {
   return (
     <div className='bg-white rounded-lg shadow-lg p-8'>
       <h2 className='text-2xl font-bold mb-4'>Content Showcase</h2>
@@ -9,8 +9,6 @@ const ContentShowcase: React.FC = memo(() => {
       </p>
     </div>
   );
-});
-
-ContentShowcase.displayName = 'ContentShowcase';
+};
 
 export default ContentShowcase;

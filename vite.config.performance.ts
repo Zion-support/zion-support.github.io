@@ -35,7 +35,7 @@ export default defineConfig({plugins: [
         manualChunks: {
           // Vendor chunks
           'vendor-react': ['react', 'react-dom', 'react-router-dom'],
-          'vendor-ui': ['lucide-react'],
+          'vendor-ui': ['lucide-react', 'framer-motion'],
           'vendor-utils': ['clsx', 'tailwind-merge'],
           // Feature chunks
           blog: ['./src/pages/blog', './src/content/blog-posts'],
@@ -75,6 +75,7 @@ export default defineConfig({plugins: [
       'react-dom',
       'react-router-dom',
       'lucide-react',
+      'framer-motion',
     ],
     exclude: []}
   },

@@ -11,8 +11,6 @@ interface SEOOptimizerProps {
   structuredData?: object;
 }
 
-<<<<<<< HEAD
-=======
 :src/components/SEOOptimizer.tsx
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ 
   children, 
@@ -71,7 +69,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ children }) => {
   return (
     <>
->>>>>>> e4aba06acc6d8264f43e20480700872d8b21daec
       {children}
     </>
   );

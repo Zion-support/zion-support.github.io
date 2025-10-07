@@ -90,39 +90,3 @@ const sessionStorageMock = {
 Object.defineProperty(window, 'sessionStorage', {
   value: sessionStorageMock,
 });
-
-// Mock TextEncoder and TextDecoder for Node.js environment
-if (typeof TextEncoder === 'undefined') {
-  global.TextEncoder = require('util').TextEncoder;
-  global.TextDecoder = require('util').TextDecoder;
-}
-
-// Mock URL for Node.js environment
-global.URL = URL;
-
-// Mock PerformanceObserver
-global.PerformanceObserver = class MockPerformanceObserver {
-  constructor(public callback: PerformanceObserverCallback) {}
-  observe() {}
-  disconnect() {}
-  takeRecords() {
-    return [];
-  }
-};
-
-// Mock window.location
-delete (window as any).location;
-(window as any).location = {
-  href: 'http://localhost:3000',
-  origin: 'http://localhost:3000',
-  protocol: 'http:',
-  host: 'localhost:3000',
-  hostname: 'localhost',
-  port: '3000',
-  pathname: '/',
-  search: '',
-  hash: '',
-  reload: jest.fn(),
-  assign: jest.fn(),
-  replace: jest.fn(),
-};
