@@ -30,11 +30,28 @@ const App = () => {
         window.addEventListener('load', () => {
           const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
           if (perfData) {
-            console.log('Page Load Performance:', {
+            const performanceMetrics = {
               domContentLoaded: perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart,
               loadComplete: perfData.loadEventEnd - perfData.loadEventStart,
               totalTime: perfData.loadEventEnd - perfData.fetchStart
-            });
+            };
+            
+            // Only log in development
+            if (process.env.NODE_ENV === 'development') {
+              console.log('Page Load Performance:', performanceMetrics);
+            }
+            
+            // Report to analytics in production
+            if (process.env.NODE_ENV === 'production' && typeof window !== 'undefined') {
+              // Send to analytics service
+              if ('gtag' in window) {
+                (window as any).gtag('event', 'page_load_performance', {
+                  event_category: 'Performance',
+                  event_label: 'Page Load',
+                  value: Math.round(performanceMetrics.totalTime)
+                });
+              }
+            }
           }
         });
       }
