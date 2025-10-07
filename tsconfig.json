@@ -61,13 +61,13 @@
     ]
   },
   "include": [
-    "vite-env.d.ts",
     "App.tsx",
     "app/**/*",
     "components/**/*",
     "src/**/*",
-    ".next/types/**/*.ts",
-    "types/**/*.d.ts"
+    "types/**/*",
+    "vite-env.d.ts",
+    ".next/types/**/*.ts"
   ],
   "exclude": [
     "node_modules",

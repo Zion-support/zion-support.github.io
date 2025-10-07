@@ -1,15 +1,41 @@
 // Learn more: https://github.com/testing-library/jest-dom
 import '@testing-library/jest-dom';
 
-// Mock import.meta for Vite compatibility
-global.importMeta = {
-  env: {
-    DEV: process.env.NODE_ENV !== 'production',
-    PROD: process.env.NODE_ENV === 'production',
-    MODE: process.env.NODE_ENV || 'test',
+// Mock files that use import.meta.env
+jest.mock('./app/utils/logger.ts', () => ({
+  logger: {
+    debug: jest.fn(),
+    info: jest.fn(),
+    warn: jest.fn(),
+    error: jest.fn(),
+    log: jest.fn(),
   },
-  url: 'file:///test',
-};
+}));
+
+jest.mock('./app/utils/analytics.ts', () => ({
+  trackEvent: jest.fn(),
+  trackPageView: jest.fn(),
+  initAnalytics: jest.fn(),
+}));
+
+jest.mock('./app/utils/errorReporter.ts', () => ({
+  reportError: jest.fn(),
+  initErrorReporting: jest.fn(),
+}));
+
+jest.mock('./app/hooks/usePerformanceOptimization.ts', () => ({
+  usePerformanceOptimization: jest.fn(() => ({
+    metrics: {},
+    optimize: jest.fn(),
+  })),
+}));
+
+jest.mock('./app/hooks/usePerformanceMonitoring.ts', () => ({
+  usePerformanceMonitoring: jest.fn(() => ({
+    metrics: {},
+    report: {},
+  })),
+}));
 
 // Mock Next.js router
 jest.mock('next/router', () => ({
