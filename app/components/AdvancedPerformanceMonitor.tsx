@@ -45,7 +45,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     // Measure First Input Delay (FID)
     const fidObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
-      entries.forEach((entry: any) => {
+      entries.forEach((entry: PerformanceEventTiming) => {
         setMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime }));
       });
     });
@@ -55,7 +55,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     let clsValue = 0;
     const clsObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
-      entries.forEach((entry: any) => {
+      entries.forEach((entry: LayoutShift) => {
         if (!entry.hadRecentInput) {
           clsValue += entry.value;
           setMetrics(prev => ({ ...prev, cls: clsValue }));
@@ -69,7 +69,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     const ttfb = navigationEntry ? navigationEntry.responseStart - navigationEntry.requestStart : null;
 
     // Measure Memory Usage
-    const memory = (performance as any).memory ? (performance as any).memory.usedJSHeapSize : null;
+    const memory = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory?.usedJSHeapSize || null;
 
     setMetrics(prev => ({
       ...prev,
@@ -90,10 +90,10 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     if (typeof window === 'undefined' || !('performance' in window)) return;
 
     const resources = performance.getEntriesByType('resource');
-    const slowResources = resources.filter((resource: any) => resource.duration > 1000);
+    const slowResources = resources.filter((resource: PerformanceResourceTiming) => resource.duration > 1000);
     
     if (slowResources.length > 0) {
-      console.warn('Slow resources detected:', slowResources.map((r: any) => ({
+      console.warn('Slow resources detected:', slowResources.map((r: PerformanceResourceTiming) => ({
         name: r.name,
         duration: r.duration,
         size: r.transferSize,
@@ -106,26 +106,32 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 
     // Use web-vitals library if available
     try {
-      import('web-vitals').then((webVitals: any) => {
+      import('web-vitals').then((webVitals: { 
+        getCLS?: (callback: (metric: { value: number }) => void) => void;
+        getFID?: (callback: (metric: { value: number }) => void) => void;
+        getFCP?: (callback: (metric: { value: number }) => void) => void;
+        getLCP?: (callback: (metric: { value: number }) => void) => void;
+        getTTFB?: (callback: (metric: { value: number }) => void) => void;
+      }) => {
         if (webVitals.getCLS) {
-          webVitals.getCLS((metric: any) => setMetrics(prev => ({ ...prev, cls: metric.value })));
+          webVitals.getCLS((metric: { value: number }) => setMetrics(prev => ({ ...prev, cls: metric.value })));
         }
         if (webVitals.getFID) {
-          webVitals.getFID((metric: any) => setMetrics(prev => ({ ...prev, fid: metric.value })));
+          webVitals.getFID((metric: { value: number }) => setMetrics(prev => ({ ...prev, fid: metric.value })));
         }
         if (webVitals.getFCP) {
-          webVitals.getFCP((metric: any) => setMetrics(prev => ({ ...prev, fcp: metric.value })));
+          webVitals.getFCP((metric: { value: number }) => setMetrics(prev => ({ ...prev, fcp: metric.value })));
         }
         if (webVitals.getLCP) {
-          webVitals.getLCP((metric: any) => setMetrics(prev => ({ ...prev, lcp: metric.value })));
+          webVitals.getLCP((metric: { value: number }) => setMetrics(prev => ({ ...prev, lcp: metric.value })));
         }
         if (webVitals.getTTFB) {
-          webVitals.getTTFB((metric: any) => setMetrics(prev => ({ ...prev, ttfb: metric.value })));
+          webVitals.getTTFB((metric: { value: number }) => setMetrics(prev => ({ ...prev, ttfb: metric.value })));
         }
       }).catch(() => {
         // web-vitals not available, continue without it
       });
-    } catch (error) {
+    } catch {
       // web-vitals not available, continue without it
     }
   }, []);
