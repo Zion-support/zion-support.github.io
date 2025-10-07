@@ -1,4 +1,3 @@
-
 // Accessibility improvements
 console.log('♿ Applying accessibility improvements...');
 

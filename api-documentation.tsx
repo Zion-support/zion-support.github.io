@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
->>>>>>> origin/merge-fixes-20251005-193002
         <div className='bg-white rounded-lg shadow-lg p-8 mb-8'>
           <h2 className='text-2xl font-semibold text-gray-800 mb-6'>
             API Endpoints
@@ -41,7 +40,6 @@ import { Link } from 'react-router-dom';
                   </code>{' '}
                   - Delete content
                 </div>
->>>>>>> origin/merge-fixes-20251005-193002
               <h3 className='text-lg font-medium text-gray-800 mb-3'>
                 JavaScript/Node.js
               </h3>
@@ -50,7 +48,6 @@ import { Link } from 'react-router-dom';
 const apiKey = 'your-api-key'
 const baseUrl = 'https://api.ziontechgroup.com'
 const createContent = async () => {
->>>>>>> origin/merge-fixes-20251005-193002
           <Link
             href='/<contact'
             className='inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors'

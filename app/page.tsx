@@ -1,143 +1,53 @@
-import { Suspense, lazy } from 'react';
-import ArrowRight from 'next/link';
+import React from 'react';
 
-// Lazy load heavy components
-const UnifiedContentPromotion = lazy(
-  () => import('./components/UnifiedContentPromotion'),
-);
-const InteractiveAIROICalculator = lazy(
-  () => import('./components/InteractiveAIROICalculator'),
-);
-const ContentShowcase = lazy(() => import('./components/ContentShowcase'));
-const InteractiveContentShowcase2026 = lazy(
-  () => import('./components/InteractiveContentShowcase2026'),
-);
-
-// Loading component for Suspense fallback
-const LoadingFallback = ({ height = 'h-32' }: { height?: string }) => (
-  <div className={`${height} bg-gray-200 animate-pulse rounded`}></div>
-);
-
-export default function HomePage() {
-  const structuredData = {
-    '@context': 'https://schema.org',
-    '@type': 'Organization',
-    name: 'Zion Tech Group',
-    description:
-      'Leading provider of AI-powered enterprise solutions and digital transformation services',
-    url: 'https://ziontechgroup.com',
-    logo: 'https://ziontechgroup.com/logo.png',
-    contactPoint: {
-      '@type': 'ContactPoint',
-      telephone: '+1-302-464-0950',
-      contactType: 'customer service',
-      email: 'kleber@ziontechgroup.com',
-    },
-    address: {
-      '@type': 'PostalAddress',
-      addressCountry: 'US',
-      addressLocality: 'Wilmington',
-      addressRegion: 'DE',
-    },
-    sameAs: [
-      'https://linkedin.com/company/ziontechgroup',
-      'https://twitter.com/ziontechgroup',
-    ],
-    offers: {
-      '@type': 'Offer',
-      description: 'AI Enterprise Transformation Services',
-      price: '300% ROI Guaranteed',
-      priceCurrency: 'USD',
-    },
-  };
-
+const HomePage: React.FC = () => {
   return (
-    <div className='min-h-screen bg-white'>
-      {/* Structured Data */}
-      <script
-        type='application/ld+json'
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-      />
-
-      {/* Hero Section */}
-      <section className='relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20'>
-        <div className='container mx-auto px-4'>
-          <div className='max-w-4xl mx-auto text-center'>
-            <h1 className='text-5xl md:text-6xl font-bold mb-6 leading-tight'>
-              AI Enterprise Transformation
-              <span className='block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400'>
-                300% ROI Guaranteed
-              </span>
-            </h1>
-            <p className='text-xl md:text-2xl mb-8 text-gray-200'>
-              Transform your enterprise with AI-powered solutions. Achieve 300%
-              ROI, 70% cost reduction, and 90% efficiency gains.
-            </p>
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-              <ArrowRight
-                href='/contact'
-                className='bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-colors duration-300'
-              >
-                Get Started Today
-              </ArrowRight>
-              <ArrowRight
-                href='/services'
-                className='border-2 border-white text-white hover:bg-white hover:text-blue-900 font-bold py-4 px-8 rounded-lg text-lg transition-colors duration-300'
-              >
-                View Services
-              </ArrowRight>
+    <div className="min-h-screen bg-gray-50">
+      <main id="main-content" className="container mx-auto px-4 py-8">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+            Welcome to Zion Tech Group
+          </h1>
+          <p className="text-xl text-gray-600 mb-8">
+            Advanced AI and IT Solutions
+          </p>
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-white rounded-lg shadow-lg p-8">
+              <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+                Our Services
+              </h2>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="p-4 border border-gray-200 rounded-lg">
+                  <h3 className="text-lg font-medium text-gray-700 mb-2">
+                    AI Solutions
+                  </h3>
+                  <p className="text-gray-600">
+                    Cutting-edge artificial intelligence solutions for your business needs.
+                  </p>
+                </div>
+                <div className="p-4 border border-gray-200 rounded-lg">
+                  <h3 className="text-lg font-medium text-gray-700 mb-2">
+                    IT Services
+                  </h3>
+                  <p className="text-gray-600">
+                    Comprehensive IT services and infrastructure management.
+                  </p>
+                </div>
+                <div className="p-4 border border-gray-200 rounded-lg">
+                  <h3 className="text-lg font-medium text-gray-700 mb-2">
+                    Development
+                  </h3>
+                  <p className="text-gray-600">
+                    Custom software development and digital transformation.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </section>
-
-      {/* Main Content */}
-      <main className='container mx-auto px-4 py-16'>
-        {/* Unified Content Promotion */}
-        <Suspense fallback={<LoadingFallback height='h-32' />}>
-          <UnifiedContentPromotion />
-        </Suspense>
-
-        {/* Interactive AI ROI Calculator */}
-        <section className='my-16'>
-          <Suspense fallback={<LoadingFallback height='h-64' />}>
-            <InteractiveAIROICalculator />
-          </Suspense>
-        </section>
-
-        {/* Content Showcase */}
-        <section className='my-16'>
-          <Suspense fallback={<LoadingFallback height='h-48' />}>
-            <ContentShowcase />
-          </Suspense>
-        </section>
-
-        {/* Interactive Content Showcase 2026 */}
-        <section className='my-16'>
-          <Suspense fallback={<LoadingFallback height='h-48' />}>
-            <InteractiveContentShowcase2026 />
-          </Suspense>
-        </section>
-
-        {/* CTA Section */}
-        <section className='bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16 rounded-2xl text-center'>
-          <div className='max-w-3xl mx-auto px-4'>
-            <h2 className='text-4xl font-bold mb-6'>
-              Ready to Transform Your Enterprise?
-            </h2>
-            <p className='text-xl mb-8'>
-              Join hundreds of companies already achieving 300% ROI with our AI
-              solutions.
-            </p>
-            <ArrowRight
-              href='/contact'
-              className='bg-white text-blue-600 hover:bg-gray-100 font-bold py-4 px-8 rounded-lg text-lg transition-colors duration-300 inline-block'
-            >
-              Start Your Transformation
-            </ArrowRight>
-          </div>
-        </section>
       </main>
     </div>
   );
-}
+};
+
+export default HomePage;

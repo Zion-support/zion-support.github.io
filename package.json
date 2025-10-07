@@ -91,7 +91,19 @@
     "build:ultimate": "NODE_ENV=production pnpm run build:minimal && pnpm run optimize:assets",
     "optimize:assets": "node scripts/asset-optimizer.js",
     "seo:audit": "node scripts/seo-audit.js",
-    "comprehensive:audit": "pnpm run performance:audit && pnpm run security:audit && pnpm run accessibility:audit && pnpm run seo:audit"
+    "comprehensive:audit": "pnpm run performance:audit && pnpm run security:audit && pnpm run accessibility:audit && pnpm run seo:audit",
+    "perf:lighthouse": "lighthouse http://localhost:3000 --output=html --output-path=./lighthouse-report.html",
+    "perf:audit": "npm run perf:lighthouse && npm run perf:analyze",
+    "dev:analyze": "NODE_OPTIONS=\"--max-old-space-size=4096\" vite --host --open --mode analyze",
+    "test:unit": "jest --testPathPattern=src --passWithNoTests",
+    "test:integration": "jest --testPathPattern=app --passWithNoTests",
+    "lint:fix-all": "eslint . --ext .ts,.tsx,.js,.jsx --fix --max-warnings 0",
+    "type-check:strict": "tsc --noEmit --strict --noImplicitAny --noImplicitReturns",
+    "format:all": "prettier --write \"**/*.{ts,tsx,js,jsx,json,css,md}\"",
+    "clean:all": "rm -rf dist node_modules/.vite .next .turbo",
+    "precommit": "npm run type-check && npm run lint && npm run test:unit",
+    "postinstall": "npm run type-check",
+    "pre-commit": "npm run type-check && npm run lint && npm run test"
   },
   "dependencies": {
     "@esbuild/linux-x64": "^0.25.10",
@@ -124,6 +136,7 @@
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.1.0",
     "@types/jest": "^30.0.0",
+    "@types/json-schema": "^7.0.15",
     "@types/node": "^24.5.2",
     "@types/react": "^18.3.11",
     "@types/react-dom": "^18.3.0",

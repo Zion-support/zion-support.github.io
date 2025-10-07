@@ -40,7 +40,7 @@ const remainingBranches = [
 ];
 
 console.log(
-  `📊 Found ${remainingBranches.length} remaining branches to process\n`,
+  `📊 Found ${remainingBranches.length} remaining branches to process\n`
 );
 
 // Step 3: Enhanced conflict resolution function
@@ -79,14 +79,14 @@ function resolveConflictsAndMerge(branchName) {
     // Try initial merge
     execSync(
       `git merge origin/${branchName} --no-ff -m "Merge ${branchName} into main"`,
-      { stdio: 'inherit' },
+      { stdio: 'inherit' }
     );
 
     console.log(`✅ Successfully merged ${branchName}`);
     return { success: true, method: 'direct' };
   } catch (error) {
     console.log(
-      `⚠️  Direct merge failed for ${branchName}, attempting conflict resolution...`,
+      `⚠️  Direct merge failed for ${branchName}, attempting conflict resolution...`
     );
 
     try {
@@ -94,10 +94,10 @@ function resolveConflictsAndMerge(branchName) {
       execSync('git reset --hard HEAD', { stdio: 'inherit' });
       execSync(
         `git merge origin/${branchName} -X theirs --no-ff -m "Auto-merge ${branchName} (theirs strategy)"`,
-        { stdio: 'inherit' },
+        { stdio: 'inherit' }
       );
       console.log(
-        `✅ Auto-resolved conflicts for ${branchName} using 'theirs' strategy`,
+        `✅ Auto-resolved conflicts for ${branchName} using 'theirs' strategy`
       );
       return { success: true, method: 'theirs' };
     } catch (theirsError) {
@@ -109,10 +109,10 @@ function resolveConflictsAndMerge(branchName) {
       execSync('git reset --hard HEAD', { stdio: 'inherit' });
       execSync(
         `git merge origin/${branchName} -X ours --no-ff -m "Auto-merge ${branchName} (ours strategy)"`,
-        { stdio: 'inherit' },
+        { stdio: 'inherit' }
       );
       console.log(
-        `✅ Auto-resolved conflicts for ${branchName} using 'ours' strategy`,
+        `✅ Auto-resolved conflicts for ${branchName} using 'ours' strategy`
       );
       return { success: true, method: 'ours' };
     } catch (oursError) {
@@ -131,7 +131,7 @@ function resolveConflictsAndMerge(branchName) {
         .filter(file => file.trim());
 
       console.log(
-        `🔧 Manually resolving ${conflictedFiles.length} conflicted files...`,
+        `🔧 Manually resolving ${conflictedFiles.length} conflicted files...`
       );
 
       // For each conflicted file, try to resolve
@@ -219,7 +219,7 @@ results.branchCounts = {
 
 fs.writeFileSync(
   'comprehensive-remaining-merge-report.json',
-  JSON.stringify(results, null, 2),
+  JSON.stringify(results, null, 2)
 );
 
 // Step 6: Display summary
@@ -253,6 +253,6 @@ try {
 }
 
 console.log(
-  '\n📄 Detailed report saved to: comprehensive-remaining-merge-report.json',
+  '\n📄 Detailed report saved to: comprehensive-remaining-merge-report.json'
 );
 console.log('🎯 Comprehensive merge process completed successfully!');

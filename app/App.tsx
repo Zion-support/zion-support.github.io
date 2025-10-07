@@ -5,7 +5,7 @@ import { HelmetProvider } from 'react-helmet-async';
 // Components
 import ErrorBoundary from '../src/components/ErrorBoundary';
 import SEOOptimizer from '../src/components/SEOOptimizer';
-import AccessibilityEnhancer from '../src/components/AccessibilityEnhancer';
+import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import PerformanceDashboard from './components/PerformanceDashboard';
 
 // Pages

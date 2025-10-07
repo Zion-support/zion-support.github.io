@@ -29,7 +29,7 @@ function fixCorruptedText(text) {
   fixed = fixed.replace(/toHaveLeng,\s*t,\s*h/g, 'toHaveLength');
   fixed = fixed.replace(
     /toBeGreaterThanOrEqu,\s*a,\s*l/g,
-    'toBeGreaterThanOrEqual',
+    'toBeGreaterThanOrEqual'
   );
   fixed = fixed.replace(/toBeLessThanOrEqu,\s*a,\s*l/g, 'toBeLessThanOrEqual');
   fixed = fixed.replace(/forEa,\s*c,\s*h/g, 'forEach');
@@ -87,7 +87,7 @@ function fixCorruptedText(text) {
   fixed = fixed.replace(/toBeLessThanOrEqu,\s*a,\s*l/g, 'toBeLessThanOrEqual');
   fixed = fixed.replace(
     /toBeGreaterThanOrEqu,\s*a,\s*l/g,
-    'toBeGreaterThanOrEqual',
+    'toBeGreaterThanOrEqual'
   );
   fixed = fixed.replace(/toHaveLeng,\s*t,\s*h/g, 'toHaveLength');
   fixed = fixed.replace(/toBeGreaterTh,\s*a,\s*n/g, 'toBeGreaterThan');
@@ -101,7 +101,7 @@ function fixCorruptedText(text) {
   // Fix object property syntax
   fixed = fixed.replace(
     /\{\s*'\s*id:\s*'([^']+)',\s*'\s*compone,\s*n,\s*t:\s*'([^']+)',\s*'\s*priori,\s*t,\s*y:\s*(\d+)\s*'\s*catego,\s*r,\s*y:\s*'([^']+)',\s*'\s*impressio,\s*n,\s*s:\s*(\d+)\s*clic,\s*k,\s*s:\s*(\d+)\s*acti,\s*v,\s*e:\s*(true|false)\s*\}/g,
-    "{ id: '$1', component: '$2', priority: $3, category: '$4', impressions: $5, clicks: $6, active: $7 }",
+    "{ id: '$1', component: '$2', priority: $3, category: '$4', impressions: $5, clicks: $6, active: $7 }"
   );
 
   // Fix array syntax
@@ -111,27 +111,27 @@ function fixCorruptedText(text) {
   // Fix function calls
   fixed = fixed.replace(
     /calculateEngagementSco,\s*r,\s*e/g,
-    'calculateEngagementScore',
+    'calculateEngagementScore'
   );
   fixed = fixed.replace(
     /calculateFreshnessSco,\s*r,\s*e/g,
-    'calculateFreshnessScore',
+    'calculateFreshnessScore'
   );
   fixed = fixed.replace(
     /calculateBannerSco,\s*r,\s*e/g,
-    'calculateBannerScore',
+    'calculateBannerScore'
   );
   fixed = fixed.replace(
     /selectBannersForDispl,\s*a,\s*y/g,
-    'selectBannersForDisplay',
+    'selectBannersForDisplay'
   );
   fixed = fixed.replace(
     /groupBannersByCatego,\s*r,\s*y/g,
-    'groupBannersByCategory',
+    'groupBannersByCategory'
   );
   fixed = fixed.replace(
     /selectBalancedBanne,\s*r,\s*s/g,
-    'selectBalancedBanners',
+    'selectBalancedBanners'
   );
 
   // Fix variable names

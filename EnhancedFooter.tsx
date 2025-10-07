@@ -12,7 +12,32 @@ import { Link } from 'react-router-dom';
 
 const EnhancedFooter: React.FC = () => {
   const currentYear = new Date().getFullYear();
->>>>>>> origin/merge-fixes-20251005-193002
+
+  const services = [
+    { name: 'AI Solutions', href: '/services/ai' },
+    { name: 'Cloud Architecture', href: '/services/cloud' },
+    { name: 'Web Development', href: '/services/web' },
+    { name: 'Mobile Apps', href: '/services/mobile' },
+    { name: 'Data Analytics', href: '/services/analytics' },
+    { name: 'DevOps', href: '/services/devops' },
+  ];
+
+  const products = [
+    { name: 'AI Platform', href: '/products/ai-platform' },
+    { name: 'Cloud Suite', href: '/products/cloud-suite' },
+    { name: 'Analytics Dashboard', href: '/products/analytics' },
+    { name: 'Mobile SDK', href: '/products/mobile-sdk' },
+  ];
+
+  const quickLinks = [
+    { name: 'About Us', href: '/about' },
+    { name: 'Contact', href: '/contact' },
+    { name: 'Blog', href: '/blog' },
+    { name: 'Careers', href: '/careers' },
+    { name: 'Privacy Policy', href: '/privacy' },
+    { name: 'Terms of Service', href: '/terms' },
+  ];
+
   return (
     <footer className='bg-gray-900 text-white'>
       <div className='container mx-auto px-4 py-12'>
@@ -66,19 +91,38 @@ const EnhancedFooter: React.FC = () => {
                       {service.name}
                     </span>
                   </Link>
->>>>>>> origin/merge-fixes-20251005-193002
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <h3 className='text-lg font-semibold mb-4'>Products</h3>
+            <ul className='space-y-2'>
+              {products.slice(0, 6).map(product => (
+                <li key={product.name}>
                   <Link to={product.href}>
                     <span className='text-gray-300 hover:text-white transition-colors'>
                       {product.name}
                     </span>
                   </Link>
->>>>>>> origin/merge-fixes-20251005-193002
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <h3 className='text-lg font-semibold mb-4'>Quick Links</h3>
+            <ul className='space-y-2'>
+              {quickLinks.map(item => (
+                <li key={item.name}>
                   <Link to={item.href}>
                     <span className='text-gray-300 hover:text-white transition-colors'>
                       {item.name}
                     </span>
                   </Link>
->>>>>>> origin/merge-fixes-20251005-193002
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
         <div className='border-t border-gray-700 mt-8 pt-8'>
           <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>

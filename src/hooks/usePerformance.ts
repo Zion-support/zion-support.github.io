@@ -1,85 +1,197 @@
-impo, r, t {
-} fr, o, m "rea, c, t";
-// Simple, web, vitals report, e, r
-  const, reportWebVital, s = (metr, i, c: { na, m, e: stri, n, g; val, u, e: numb, e, r; de, l, t
-  a: numb, e, r }) => {
-  if (proce, s, s.e, n, v.NODE_E, N, V === 'developme, n, t') {;
-    conso, l, e.l, o, g('Web, Vita, l: ', metr, i, c);'
-} fr, o, m "rea, c, t";';
-// Simple, web, vitals report, e, r
-  const, reportWebVital, s = (metr, i, c: { na, m, e: stri, n, g; val, u, e: numb, e, r; de, l, t
-  a: numb, e, r }) => {
-  if (proce, s, s.e, n, v.NODE_E, N, V === 'developme, n, t') {';
-    conso, l, e.l, o, g('Web, Vita, l: ', metr, i, c);';
-  };
-  // In, productio, n, you, might, want to, send, this to, an, analytics servi, c, e;
-};
-// Hook, for, monitoring Core, Web, Vitals
-  export, const, useWebVitals = () => {
-  useEffe, c, t(() => {
-    // Import, we, b-vitals, dynamicall, y
-  impo, r, t('w, e, b-vita, l, s').th, e, n(({ onC, L, S, onF, I, D, onF, C, P, onL, C, P, onTT, F, B }) => {;
-    impo, r, t('w, e, b-vita, l, s').th, e, n(({ onC, L, S, onF, I, D, onF, C, P, onL, C, P, onTT, F, B }) => {';
-      onC, L, S(reportWebVita, l, s);
-      onF, I, D(reportWebVita, l, s);
-      onF, C, P(reportWebVita, l, s);
-      onL, C, P(reportWebVita, l, s);
-      onTT, F, B(reportWebVita, l, s);
+/**
+ * Performance Monitoring Hook
+ * Provides React hooks for performance monitoring and optimization
+ */
+
+import { useEffect, useCallback, useRef } from 'react';
+import performanceOptimizer from '../utils/performanceOptimizer';
+import analytics from '../utils/analytics';
+
+export interface PerformanceMetrics {
+  renderTime: number;
+  componentMountTime: number;
+  memoryUsage?: number;
+  isSlowRender: boolean;
+}
+
+export interface UsePerformanceOptions {
+  componentName: string;
+  trackRenderTime?: boolean;
+  trackMemoryUsage?: boolean;
+  slowRenderThreshold?: number; // in milliseconds
+}
+
+/**
+ * Hook for monitoring component performance
+ */
+export const usePerformance = (options: UsePerformanceOptions) => {
+  const {
+    componentName,
+    trackRenderTime = true,
+    trackMemoryUsage = false,
+    slowRenderThreshold = 16, // 60fps threshold
+  } = options;
+
+  const mountTimeRef = useRef<number>(0);
+  const renderStartTimeRef = useRef<number>(0);
+
+  // Track component mount time
+  useEffect(() => {
+    mountTimeRef.current = performance.now();
+
+    return () => {
+      const mountDuration = performance.now() - mountTimeRef.current;
+      analytics.trackPerformance(`${componentName}_mount_time`, mountDuration);
+    };
+  }, [componentName]);
+
+  // Track render performance
+  const trackRender = useCallback(() => {
+    if (!trackRenderTime) return;
+
+    renderStartTimeRef.current = performance.now();
+
+    // Use requestAnimationFrame to measure actual render time
+    requestAnimationFrame(() => {
+      const renderTime = performance.now() - renderStartTimeRef.current;
+      const isSlowRender = renderTime > slowRenderThreshold;
+
+      const metrics: PerformanceMetrics = {
+        renderTime,
+        componentMountTime: performance.now() - mountTimeRef.current,
+        isSlowRender,
+      };
+
+      // Track memory usage if available
+      if (trackMemoryUsage && 'memory' in performance) {
+        const memory = (performance as any).memory;
+        metrics.memoryUsage = memory.usedJSHeapSize;
+      }
+
+      // Send to analytics
+      analytics.trackPerformance(`${componentName}_render_time`, renderTime);
+
+      if (isSlowRender) {
+        analytics.track(
+          'slow_render',
+          'performance',
+          'warning',
+          componentName,
+          renderTime
+        );
+      }
     });
-  }, []);
+  }, [componentName, trackRenderTime, slowRenderThreshold, trackMemoryUsage]);
+
+  return {
+    trackRender,
+    getMetrics: (): PerformanceMetrics => ({
+      renderTime: performance.now() - renderStartTimeRef.current,
+      componentMountTime: performance.now() - mountTimeRef.current,
+      isSlowRender: false,
+    }),
+  };
 };
-// Hook, for, intersection observ, e, r
-  export, const, useIntersectionObserver = (
-  optio, n, s: IntersectionObserverIn, i, t = {}
-) => {
-  con, s, t [isIntersecti, n, g, setIsIntersecti, n, g] = useSta, t, e(fal, s, e);
-  con, s, t [hasIntersect, e, d, setHasIntersect, e, d] = useSta, t, e(fal, s, e);
-  const, re, f = useR, e, f<HTMLEleme, n, t>(nu, l, l);
-  useEffe, c, t(() => {
-    const, elemen, t = r, e, f.curre, n, t;
-    if (!eleme, n, t) retu, r, n;
-    const, observe, r = new, IntersectionObserve, r(
-      ([ent, r, y]) => {
-        setIsIntersecti, n, g(ent, r, y.isIntersecti, n, g);
-        if (ent, r, y.isIntersecti, n, g && !hasIntersect, e, d) {
-          setHasIntersect, e, d(tr, u, e);
+
+/**
+ * Hook for monitoring page load performance
+ */
+export const usePageLoadPerformance = () => {
+  useEffect(() => {
+    const trackPageLoad = () => {
+      // Wait for page to be fully loaded
+      if (document.readyState === 'complete') {
+        const navigation = performance.getEntriesByType(
+          'navigation'
+        )[0] as PerformanceNavigationTiming;
+
+        if (navigation) {
+          const metrics = {
+            domContentLoaded:
+              navigation.domContentLoadedEventEnd -
+              navigation.domContentLoadedEventStart,
+            loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
+            firstByte: navigation.responseStart - navigation.requestStart,
+            domInteractive: navigation.domInteractive - (navigation as any).navigationStart,
+            totalLoadTime: navigation.loadEventEnd - (navigation as any).navigationStart,
+          };
+
+          // Track each metric
+          Object.entries(metrics).forEach(([key, value]) => {
+            analytics.trackPerformance(`page_load_${key}`, value);
+          });
+
+          // Track overall page load performance
+          analytics.track(
+            'page_load_complete',
+            'performance',
+            'complete',
+            undefined,
+            metrics.totalLoadTime
+          );
         }
       }
-        };
-      }
-      optio, n, s;
-    );
-    observ, e, r.obser, v, e(eleme, n, t);
-    return () => {
-      observ, e, r.unobser, v, e(eleme, n, t);
     };
-  }, [optio, n, s, hasIntersect, e, d]);
-  retu, r, n [r, e, f, isIntersecti, n, g, hasIntersect, e, d] as, cons, t;
-};
-// Hook, for, measuring component, render, time
-  export, const, useRenderTime = (componentNa, m, e: stri, n, g) => {
-  const, renderStar, t = useR, e, f<numb, e, r>(0);
-  useEffe, c, t(() => {
-    renderSta, r, t.curre, n, t = performan, c, e.n, o, w();
-  });
-  useEffe, c, t(() => {
-    const, renderTim, e = performan, c, e.n, o, w() - renderSta, r, t.curre, n, t;
-    if (proce, s, s.e, n, v.NODE_E, N, V === 'developme, n, t') {;
-    if (proce, s, s.e, n, v.NODE_E, N, V === 'developme, n, t') {';
-      conso, l, e.l, o, g(`${componentNa, m, e} render, tim, e: ${renderTi, m, e.toFix, e, d(2)}ms`);`;`
+
+    // Track immediately if page is already loaded
+    if (document.readyState === 'complete') {
+      trackPageLoad();
+      return undefined;
+    } else {
+      // Wait for load event
+      window.addEventListener('load', trackPageLoad);
+      return () => window.removeEventListener('load', trackPageLoad);
     }
-  });
+  }, []);
 };
-// Hook, for, lazy loading, with, performance tracki, n, g
-  export, const, useLazyLoad = (thresho, l, d: numb, e, r = 0.1) => {
-  con, s, t [shouldLo, a, d, setShouldLo, a, d] = useSta, t, e(fal, s, e);
-  con, s, t [r, e, f, isIntersecti, n, g] = useIntersectionObserv, e, r({
-    thresho, l, d;
-  });
-  useEffe, c, t(() => {
-    if (isIntersecti, n, g && !shouldLo, a, d) {
-      setShouldLo, a, d(tr, u, e);
-    }
-  }, [isIntersecti, n, g, shouldLo, a, d]);
-  retu, r, n [r, e, f, shouldLo, a, d] as, cons, t;
+
+/**
+ * Hook for monitoring resource loading performance
+ */
+export const useResourcePerformance = () => {
+  useEffect(() => {
+    const observer = new PerformanceObserver(list => {
+      list.getEntries().forEach(entry => {
+        if (entry.entryType === 'resource') {
+          const resourceEntry = entry as PerformanceResourceTiming;
+          analytics.trackPerformance(
+            `resource_${resourceEntry.name.split('.').pop()}`,
+            resourceEntry.duration,
+            'ms'
+          );
+        }
+      });
+    });
+
+    observer.observe({ entryTypes: ['resource'] });
+
+    return () => observer.disconnect();
+  }, []);
 };
+
+/**
+ * Hook for monitoring long tasks
+ */
+export const useLongTaskMonitoring = () => {
+  useEffect(() => {
+    const observer = performanceOptimizer.monitorLongTasks((entries: PerformanceEntry[]) => {
+      entries.forEach((entry: PerformanceEntry) => {
+        analytics.track(
+          'long_task',
+          'performance',
+          'detected',
+          undefined,
+          entry.duration
+        );
+      });
+    });
+
+    return () => {
+      if (observer && typeof observer.disconnect === 'function') {
+        observer.disconnect();
+      }
+    };
+  }, []);
+};
+
+export default usePerformance;

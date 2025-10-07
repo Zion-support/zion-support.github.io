@@ -4,11 +4,7 @@ import { visualizer } from 'rollup-plugin-visualizer';
 
 export default defineConfig({
   plugins: [
-    react({
-      babel: {
-        plugins: [['@babel/plugin-proposal-decorators', { legacy: true }]],
-      },
-    }),
+    react(),
     visualizer({
       filename: 'dist/stats.html',
       open: false,
@@ -19,22 +15,13 @@ export default defineConfig({
   build: {
     target: 'esnext',
     minify: 'terser',
-    cssMinify: true,
-    sourcemap: false,
+    sourcemap: true,
     rollupOptions: {
       output: {
         manualChunks: {
           vendor: ['react', 'react-dom'],
           router: ['react-router-dom'],
           ui: ['framer-motion', 'lucide-react'],
-          utils: ['clsx', 'tailwind-merge'],
-        },
-      },
-      proxy: {
-        '/api': {
-          target: 'http://localhost:5000',
-          changeOrigin: true,
-          secure: false,
         },
       },
     },
@@ -42,16 +29,22 @@ export default defineConfig({
       compress: {
         drop_console: true,
         drop_debugger: true,
-        pure_funcs: ['console.log', 'console.info'],
       },
     },
   },
   server: {
     port: 3000,
     host: true,
+    open: true,
   },
   preview: {
     port: 4173,
     host: true,
+  },
+  optimizeDeps: {
+    include: ['react', 'react-dom', 'react-router-dom'],
+  },
+  define: {
+    __DEV__: JSON.stringify(process.env.NODE_ENV === 'development'),
   },
 });

@@ -20,7 +20,7 @@ async function main() {
       // 1. Fix key prop placement: <div>\nkey={...} -> <div\nkey={...}
       const keyPropFix = content.replace(
         /<(\w+)>\s*\n\s*key=\{([^}]+)\}/g,
-        '<$1\nkey={$2}',
+        '<$1\nkey={$2}'
       );
       if (keyPropFix !== content) {
         content = keyPropFix;
@@ -30,7 +30,7 @@ async function main() {
       // 2. Fix onClick prop placement: <button>\nonClick={...} -> <button\nonClick={...}
       const onClickFix = content.replace(
         /<(\w+)>\s*\n\s*onClick=\{([^}]+)\}/g,
-        '<$1\nonClick={$2}',
+        '<$1\nonClick={$2}'
       );
       if (onClickFix !== content) {
         content = onClickFix;
@@ -40,7 +40,7 @@ async function main() {
       // 3. Fix className prop placement: <div>\nclassName={...} -> <div\nclassName={...}
       const classNameFix = content.replace(
         /<(\w+)>\s*\n\s*className=\{([^}]+)\}/g,
-        '<$1\nclassName={$2}',
+        '<$1\nclassName={$2}'
       );
       if (classNameFix !== content) {
         content = classNameFix;
@@ -50,7 +50,7 @@ async function main() {
       // 4. Fix style prop placement: <div>\nstyle={...} -> <div\nstyle={...}
       const styleFix = content.replace(
         /<(\w+)>\s*\n\s*style=\{([^}]+)\}/g,
-        '<$1\nstyle={$2}',
+        '<$1\nstyle={$2}'
       );
       if (styleFix !== content) {
         content = styleFix;
@@ -67,7 +67,7 @@ async function main() {
       // 6. Fix unclosed input tags: <input\n...\n\n<button -> <input\n...\n/>\n\n<button
       const inputFix = content.replace(
         /<input([^>]*?)\n\s*\n\s*<button/g,
-        '<input$1\n/>\n\n<button',
+        '<input$1\n/>\n\n<button'
       );
       if (inputFix !== content) {
         content = inputFix;

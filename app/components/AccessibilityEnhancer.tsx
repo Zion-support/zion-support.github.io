@@ -1,92 +1,113 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 
 interface AccessibilityEnhancerProps {
   children: React.ReactNode;
 }
 
-const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
-  children,
-}) => {
+const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
+  const [isHighContrast, setIsHighContrast] = useState(false);
+  const [fontSize, setFontSize] = useState<'small' | 'normal' | 'large'>('normal');
+  const [reducedMotion, setReducedMotion] = useState(false);
+
   useEffect(() => {
-    // Add accessibility enhancements
-    const addSkipLinks = () => {
-      const skipLink = document.createElement('a');
-      skipLink.href = '#main-content';
-      skipLink.textContent = 'Skip to main content';
-      skipLink.className = 'skip-link';
-      skipLink.style.cssText = `
-        position: absolute;
-        top: -40px;
-        left: 6px;
-        background: #000;
-        color: #fff;
-        padding: 8px;
-        text-decoration: none;
-        z-index: 1000;
-        transition: top 0.3s;
-      `;
+    // Check for user preferences
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    setReducedMotion(prefersReducedMotion);
 
-      skipLink.addEventListener('focus', () => {
-        skipLink.style.top = '6px';
-      });
+    // Load saved preferences
+    const savedHighContrast = localStorage.getItem('highContrast') === 'true';
+    const savedFontSize = (localStorage.getItem('fontSize') as 'small' | 'normal' | 'large') || 'normal';
+    
+    setIsHighContrast(savedHighContrast);
+    setFontSize(savedFontSize);
 
-      skipLink.addEventListener('blur', () => {
-        skipLink.style.top = '-40px';
-      });
-
-      document.body.insertBefore(skipLink, document.body.firstChild);
-    };
-
-    // Add ARIA labels to interactive elements
-    const enhanceInteractiveElements = () => {
-      const buttons = document.querySelectorAll('button:not([aria-label])');
-      buttons.forEach(button => {
-        if (!button.getAttribute('aria-label') && !button.textContent?.trim()) {
-          button.setAttribute('aria-label', 'Button');
-        }
-      });
-
-      const links = document.querySelectorAll('a:not([aria-label])');
-      links.forEach(link => {
-        if (!link.getAttribute('aria-label') && !link.textContent?.trim()) {
-          link.setAttribute('aria-label', 'Link');
-        }
-      });
-    };
-
-    // Add focus management
-    const enhanceFocusManagement = () => {
-      document.addEventListener('keydown', e => {
-        if (e.key === 'Tab') {
-          document.body.classList.add('keyboard-navigation');
-        }
-      });
-
-      document.addEventListener('mousedown', () => {
-        document.body.classList.remove('keyboard-navigation');
-      });
-    };
-
-    addSkipLinks();
-    enhanceInteractiveElements();
-    enhanceFocusManagement();
-
-    // Re-run enhancements when DOM changes
-    const observer = new MutationObserver(() => {
-      enhanceInteractiveElements();
-    });
-
-    observer.observe(document.body, {
-      childList: true,
-      subtree: true,
-    });
-
-    return () => {
-      observer.disconnect();
-    };
+    // Apply initial styles
+    applyAccessibilityStyles(savedHighContrast, savedFontSize, prefersReducedMotion);
   }, []);
 
-  return <>{children}</>;
+  const applyAccessibilityStyles = (highContrast: boolean, fontSize: string, reducedMotion: boolean) => {
+    const root = document.documentElement;
+    
+    // Apply high contrast
+    if (highContrast) {
+      root.classList.add('high-contrast');
+    } else {
+      root.classList.remove('high-contrast');
+    }
+
+    // Apply font size
+    root.classList.remove('font-small', 'font-normal', 'font-large');
+    root.classList.add(`font-${fontSize}`);
+
+    // Apply reduced motion
+    if (reducedMotion) {
+      root.classList.add('reduced-motion');
+    } else {
+      root.classList.remove('reduced-motion');
+    }
+  };
+
+  const toggleHighContrast = () => {
+    const newValue = !isHighContrast;
+    setIsHighContrast(newValue);
+    localStorage.setItem('highContrast', newValue.toString());
+    applyAccessibilityStyles(newValue, fontSize, reducedMotion);
+  };
+
+  const changeFontSize = (size: 'small' | 'normal' | 'large') => {
+    setFontSize(size);
+    localStorage.setItem('fontSize', size);
+    applyAccessibilityStyles(isHighContrast, size, reducedMotion);
+  };
+
+  return (
+    <>
+      {children}
+      
+      {/* Accessibility Controls - Only show in development */}
+      {process.env['NODE_ENV'] === 'development' && (
+        <div className="fixed top-4 left-4 z-50 bg-white border border-gray-200 rounded-lg shadow-lg p-4">
+          <h3 className="text-sm font-semibold text-gray-900 mb-3">
+            Accessibility Controls
+          </h3>
+          
+          <div className="space-y-3">
+            <div>
+              <label className="flex items-center space-x-2">
+                <input
+                  type="checkbox"
+                  checked={isHighContrast}
+                  onChange={toggleHighContrast}
+                  className="rounded"
+                />
+                <span className="text-sm text-gray-700">High Contrast</span>
+              </label>
+            </div>
+            
+            <div>
+              <label className="text-sm text-gray-700 block mb-2">Font Size:</label>
+              <div className="flex space-x-1">
+                {(['small', 'normal', 'large'] as const).map((size) => (
+                  <button
+                    key={size}
+                    onClick={() => changeFontSize(size)}
+                    className={`px-2 py-1 text-xs rounded ${
+                      fontSize === size
+                        ? 'bg-blue-600 text-white'
+                        : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+                    }`}
+                    aria-label={`Set font size to ${size}`}
+                  >
+                    {size.charAt(0).toUpperCase()}
+                  </button>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+    </>
+  );
 };
 
 export default AccessibilityEnhancer;

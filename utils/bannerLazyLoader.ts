@@ -4,7 +4,7 @@
  * Optimizes banner loading by implementing lazy loading and code splitting
  * to improve initial page load performance.
  */
-import {lazy} ComponentType } from 'react'
+import { lazy, ComponentType } from 'react'
 interface BannerModule {default: ComponentType<any>}
 }
 /**

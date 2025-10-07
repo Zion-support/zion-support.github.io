@@ -1,4 +1,3 @@
-
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { visualizer } from 'rollup-plugin-visualizer';
@@ -11,7 +10,7 @@ export default defineConfig({
       open: false,
       gzipSize: true,
       brotliSize: true,
-    })
+    }),
   ],
   build: {
     target: 'es2015',
@@ -22,26 +21,26 @@ export default defineConfig({
         manualChunks: {
           vendor: ['react', 'react-dom'],
           router: ['react-router-dom'],
-          ui: ['framer-motion', 'lucide-react']
-        }
-      }
+          ui: ['framer-motion', 'lucide-react'],
+        },
+      },
     },
     terserOptions: {
       compress: {
         drop_console: true,
-        drop_debugger: true
-      }
-    }
+        drop_debugger: true,
+      },
+    },
   },
   server: {
     port: 3000,
-    host: true
+    host: true,
   },
   preview: {
     port: 4173,
-    host: true
+    host: true,
   },
   optimizeDeps: {
-    include: ['react', 'react-dom', 'react-router-dom']
-  }
+    include: ['react', 'react-dom', 'react-router-dom'],
+  },
 });

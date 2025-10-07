@@ -1,150 +1,137 @@
-interface, ErrorInf, o {
-messa, g, e: stri, n, g;
-sta, c, k?: stri, n, g;
-componentSta, c, k?: stri, n, g;
-timesta, m, p: stri, n, g;
-u, r, l: stri, n, g;
-userAg, e, n
-  t: stri, n, g;
-user, I, d?: stri, n, g;
+/**
+ * Centralized Error Handling Utility
+ * Provides comprehensive error handling and reporting for the application
+ */
+
+export interface ErrorContext {
+  component?: string | undefined;
+  action?: string | undefined;
+  userId?: string | undefined;
+  timestamp: number;
+  userAgent?: string | undefined;
+  url?: string | undefined;
 }
-class, ErrorHandle, r {
-private, static, instance: ErrorHandl, e, r;
-private, errorQue, u
-  e: ErrorIn, f, o[] = [];
-private, maxQueueSiz, e = 50;
-private, constructo, r() {
-th, i, s.setupGlobalErrorHandle, r, s();
+
+export interface ErrorReport {
+  message: string;
+  stack?: string | undefined;
+  context: ErrorContext;
+  severity: 'low' | 'medium' | 'high' | 'critical';
 }
-  public, static, getInstance(): ErrorHandl, e, r {
-    if (!ErrorHandl, e, r.instan, c, e) {
-      ErrorHandl, e, r.instan, c, e = new, ErrorHandle, r();
-    }
-    return, ErrorHandle, r.instan, c, e;
-  }
-  private, setupGlobalErrorHandler, s(): vo, i, d {
-    // Global, error, handler
-  wind, o, w.addEventListen, e, r('err, o, r', (eve, n, t) => {;
-      th, i, s.handleErr, o, r({
-        messa, g, e: eve, n, t.messa, g, e
-        sta, c, k: eve, n, t.err, o, r?.sta, c, k
-        timesta, m, p: new, Dat, e().toISOStri, n, g()
-        u, r, l: wind, o, w.locati, o, n.hr, e, f
-        userAge, n, t: navigat, o, r.userAge, n, t;
-    wind, o, w.addEventListen, e, r('err, o, r', (eve, n, t) => {';
-      th, i, s.handleErr, o, r({
-        messa, g, e: eve, n, t.messa, g, e
-        sta, c, k: eve, n, t.err, o, r?.sta, c, k
-        timesta, m, p: new, Dat, e().toISOStri, n, g()
-        u, r, l: wind, o, w.locati, o, n.hr, e, f
-        userAge, n, t: navigat, o, r.userAge, n, t
-      });
-    });
-    // Unhandled, promise, rejection handl, e, r
-  wind, o, w.addEventListen, e, r('unhandledrejecti, o, n', (eve, n, t) => {;
-      th, i, s.handleErr, o, r({
-        messa, g, e: `Unhandled, Promise, Rejectio,`
-  n: ${eve, n, t.reas, o, n}`,`
-        sta, c, k: eve, n, t.reas, o, n?.sta, c, k
-        timesta, m, p: new, Dat, e().toISOStri, n, g()
-        u, r, l: wind, o, w.locati, o, n.hr, e, f
-        userAge, n, t: navigat, o, r.userAge, n, t;
-    wind, o, w.addEventListen, e, r('unhandledrejecti, o, n', (eve, n, t) => {';
-      th, i, s.handleErr, o, r({
-        messa, g, e: `Unhandled, Promise, Rejectio,`
-  n: ${eve, n, t.reas, o, n}`,`;`
-        sta, c, k: eve, n, t.reas, o, n?.sta, c, k
-        timesta, m, p: new, Dat, e().toISOStri, n, g()
-        u, r, l: wind, o, w.locati, o, n.hr, e, f
-        userAge, n, t: navigat, o, r.userAge, n, t
-      });
-    });
-  }
-  public, handleErro, r(errorIn, f, o: Parti, a, l<ErrorIn, f, o>): vo, i, d {
-    const, fullErrorInf, o: ErrorIn, f, o = {
-      mess, a, g
-  e: errorIn, f, o.messa, g, e || 'Unknown, erro, r'
-      sta, c, k: errorIn, f, o.sta, c, k
-      componentSta, c, k: errorIn, f, o.componentSta, c, k
-      timesta, m, p: errorIn, f, o.timesta, m, p || new, Dat, e().toISOStri, n, g()
-      u, r, l: errorIn, f, o.u, r, l || wind, o, w.locati, o, n.hr, e, f
-      userAge, n, t: errorIn, f, o.userAge, n, t || navigat, o, r.userAge, n, t
-      user, I, d: errorIn, f, o.user, I, d;
-  public, handleErro, r(errorI, n, f
-  o: Parti, a, l<ErrorIn, f, o>): vo, i, d {
-    const, fullErrorInf, o: ErrorIn, f, o = {
-      messa, g, e: errorIn, f, o.messa, g, e || 'Unknown, erro, r',';
-      sta, c, k: errorIn, f, o.sta, c, k
-      componentSta, c, k: errorIn, f, o.componentSta, c, k
-      timesta, m, p: errorIn, f, o.timesta, m, p || new, Dat, e().toISOStri, n, g()
-      u, r, l: errorIn, f, o.u, r, l || wind, o, w.locati, o, n.hr, e, f
-      userAge, n, t: errorIn, f, o.userAge, n, t || navigat, o, r.userAge, n, t
-      user, I, d: errorIn, f, o.user, I, d
+
+class ErrorHandler {
+  private errorQueue: ErrorReport[] = [];
+  private maxQueueSize = 100;
+
+  /**
+   * Log an error with context
+   */
+  public logError(
+    error: Error | string,
+    context: Partial<ErrorContext> = {},
+    severity: ErrorReport['severity'] = 'medium'
+  ): void {
+    const errorReport: ErrorReport = {
+      message: typeof error === 'string' ? error : error.message,
+      stack: typeof error === 'string' ? '' : error.stack || '',
+      context: {
+        timestamp: Date.now(),
+        userAgent:
+          typeof window !== 'undefined' ? window.navigator.userAgent : '',
+        url: typeof window !== 'undefined' ? window.location.href : '',
+        ...context,
+      } as ErrorContext,
+      severity,
     };
-    // Add, to, queue
-  th, i, s.errorQue, u, e.pu, s, h(fullErrorIn, f, o);
-    // Maintain, queue, size
-  if (th, i, s.errorQue, u, e.leng, t, h > th, i, s.maxQueueSi, z, e) {
-      th, i, s.errorQue, u, e.shi, f, t();
+
+    this.errorQueue.push(errorReport);
+
+    // Keep queue size manageable
+    if (this.errorQueue.length > this.maxQueueSize) {
+      this.errorQueue.shift();
     }
-    // Log, to, console in, developmen, t
-  if (proce, s, s.e, n, v.NODE_E, N, V === 'developme, n, t') {;
-      conso, l, e.err, o, r('Error, capture, d: ', fullErrorIn, f, o);'
+
+    // Log to console in development
+    if (process.env['NODE_ENV'] === 'development') {
+      console.error('Error logged:', errorReport);
     }
-    // Send, to, error reporting, service, in producti, o, n
-  if (proce, s, s.e, n, v.NODE_E, N, V === 'producti, o, n') {;
-    if (proce, s, s.e, n, v.NODE_E, N, V === 'developme, n, t') {';
-      conso, l, e.err, o, r('Error, capture, d: ', fullErrorIn, f, o);';
-    }
-    // Send, to, error reporting, service, in producti, o, n
-  if (proce, s, s.e, n, v.NODE_E, N, V === 'producti, o, n') {';
-      th, i, s.sendToErrorServi, c, e(fullErrorIn, f, o);
+
+    // Send to external service in production
+    if (process.env['NODE_ENV'] === 'production') {
+      this.sendToErrorService(errorReport);
     }
   }
-  private, async, sendToErrorService(errorIn, f, o: ErrorIn, f, o): Promi, s, e<vo, i, d> {
-    t, r, y {
-      // You, can, integrate with, services, like Sent, r, y, LogRock, e, t, e, t, c.
-      // For, no, w, we'll, just, log to, consol, e;
-      conso, l, e.err, o, r('Production, erro, r: ', errorIn, f, o);'
-      // Example, integration, with external, servic, e:
-      // await, fetc, h('/a, p, i/erro, r, s', {
-      //   meth, o, d: 'PO, S, T'
-      //   head, e, r
-  s: { 'Conte, n, t-Ty, p, e': 'applicati, o, n/js, o, n' }
-      //   bo, d, y: JS, O, N.stringi, f, y(errorIn, f, o)
-      // });
-    } cat, c, h (err, o, r) {
-      conso, l, e.err, o, r('Failed, to, send error, to, service: ', err, o, r);'
-      // For, no, w, we'll, just, log to, consol, e';
-      conso, l, e.err, o, r('Production, erro, r: ', errorIn, f, o);';
-      // Example, integration, with external, servic, e: // await, fetc, h('/a, p, i/erro, r, s', {';
-      //   meth, o, d: 'PO, S, T',';
-      //   heade, r, s: { 'Conte, n, t-Ty, p, e': 'applicati, o, n/js, o, n' },';
-      //   bo, d, y: JS, O, N.stringi, f, y(errorIn, f, o)
-      // });
-    } cat, c, h (err, o, r) {
-      conso, l, e.err, o, r('Failed, to, send error, to, service: ', err, o, r);';
+
+  /**
+   * Send error to external error reporting service
+   */
+  private async sendToErrorService(errorReport: ErrorReport): Promise<void> {
+    try {
+      // In a real application, you would send to services like Sentry, LogRocket, etc.
+      // For now, we'll just log to console
+      console.error('Error report:', errorReport);
+    } catch (err) {
+      console.error('Failed to send error report:', err);
     }
   }
-  public, getErrorQueu, e(): ErrorIn, f, o[] {
-    retu, r, n [...th, i, s.errorQue, u, e];
+
+  /**
+   * Get all errors from the queue
+   */
+  public getErrors(): ErrorReport[] {
+    return [...this.errorQueue];
   }
-  public, clearErrorQueu, e(): vo, i, d {
-    th, i, s.errorQue, u, e = [];
+
+  /**
+   * Clear error queue
+   */
+  public clearErrors(): void {
+    this.errorQueue = [];
   }
-  public, getErrorStat, s(): { tot, a, l: numb, e, r; rec, e, n
-  t: numb, e, r } {
-    const, no, w = new, Dat, e();
-    const, oneHourAg, o = new, Dat, e(n, o, w.getTi, m, e() - 60 * 60 * 10, 0, 0);
-    const, recen, t = th, i, s.errorQue, u, e.filt, e, r(
-      err, o, r => new, Dat, e(err, o, r.timesta, m, p) > oneHourA, g, o;
-    ).leng, t, h;
-    retu, r, n {
-      tot, a, l: th, i, s.errorQue, u, e.leng, t, h
-      rece, n, t;
-      tot, a, l: th, i, s.errorQue, u, e.leng, t, h
-      rece, n, t
-    };
+
+  /**
+   * Get errors by severity
+   */
+  public getErrorsBySeverity(severity: ErrorReport['severity']): ErrorReport[] {
+    return this.errorQueue.filter(error => error.severity === severity);
+  }
+
+  /**
+   * Setup global error handlers
+   */
+  public setupGlobalHandlers(): void {
+    if (typeof window === 'undefined') return;
+
+    // Handle unhandled promise rejections
+    window.addEventListener('unhandledrejection', event => {
+      this.logError(
+        new Error(event.reason),
+        { action: 'unhandledrejection' },
+        'high'
+      );
+    });
+
+    // Handle JavaScript errors
+    window.addEventListener('error', event => {
+      this.logError(
+        event.error || new Error(event.message),
+        {
+          action: 'javascript_error',
+          url: event.filename,
+          component: 'global',
+        },
+        'high'
+      );
+    });
   }
 }
-export, default, ErrorHandler.getInstan, c, e();
+
+// Create singleton instance
+export const errorHandler = new ErrorHandler();
+
+// Setup global handlers
+if (typeof window !== 'undefined') {
+  errorHandler.setupGlobalHandlers();
+}
+
+export default errorHandler;

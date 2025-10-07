@@ -6,7 +6,7 @@ const blogTemplate = (
   title,
   description,
   slug,
-  content,
+  content
 ) => `import React from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";

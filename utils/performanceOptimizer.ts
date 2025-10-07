@@ -66,7 +66,7 @@ export class PerformanceOptimizer {
    */
   private recordMetrics(
     componentName: string,
-    metrics: PerformanceMetrics,
+    metrics: PerformanceMetrics
   ): void {
     const existingMetrics = this.metrics.get(componentName) || [];
     existingMetrics.push(metrics);
@@ -120,7 +120,7 @@ export class PerformanceOptimizer {
 
     const totalTime = metrics.reduce(
       (sum, metric) => sum + metric.renderTime,
-      0,
+      0
     );
     return totalTime / metrics.length;
   }
@@ -129,7 +129,7 @@ export class PerformanceOptimizer {
    * Get slowest components
    */
   getSlowestComponents(
-    limit: number = 10,
+    limit: number = 10
   ): Array<{ componentName: string; averageTime: number }> {
     const results: Array<{ componentName: string; averageTime: number }> = [];
 
@@ -162,12 +162,12 @@ export class PerformanceOptimizer {
   } {
     const allMetrics = Array.from(this.metrics.values()).flat();
     const slowComponents = Array.from(this.metrics.keys()).filter(name =>
-      this.isComponentSlow(name),
+      this.isComponentSlow(name)
     ).length;
 
     const totalRenderTime = allMetrics.reduce(
       (sum, metric) => sum + metric.renderTime,
-      0,
+      0
     );
     const averageRenderTime =
       allMetrics.length > 0 ? totalRenderTime / allMetrics.length : 0;
@@ -232,7 +232,7 @@ export const performanceOptimizer = new PerformanceOptimizer();
 // React HOC for performance tracking
 export function withPerformanceTracking<P extends object>(
   WrappedComponent: React.ComponentType<P>,
-  componentName?: string,
+  componentName?: string
 ) {
   const displayName =
     componentName ||
@@ -275,7 +275,7 @@ export const performanceUtils = {
    */
   debounce<T extends (...args: any[]) => any>(
     func: T,
-    wait: number,
+    wait: number
   ): (...args: Parameters<T>) => void {
     let timeout: NodeJS.Timeout;
     return (...args: Parameters<T>) => {
@@ -289,7 +289,7 @@ export const performanceUtils = {
    */
   throttle<T extends (...args: any[]) => any>(
     func: T,
-    limit: number,
+    limit: number
   ): (...args: Parameters<T>) => void {
     let inThrottle: boolean;
     return (...args: Parameters<T>) => {
@@ -307,7 +307,7 @@ export const performanceUtils = {
   shouldComponentUpdate<P extends object>(
     prevProps: P,
     nextProps: P,
-    keys: (keyof P)[],
+    keys: (keyof P)[]
   ): boolean {
     return keys.some(key => prevProps[key] !== nextProps[key]);
   },

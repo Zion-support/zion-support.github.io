@@ -1,4 +1,3 @@
-
 // Security improvements
 console.log('🔒 Applying security improvements...');
 

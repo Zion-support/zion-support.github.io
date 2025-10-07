@@ -57,7 +57,7 @@ const priorityBranches = [
 ];
 
 console.log(
-  `📊 Found ${priorityBranches.length} priority branches to process\n`,
+  `📊 Found ${priorityBranches.length} priority branches to process\n`
 );
 
 // Step 3: Merge function with conflict resolution
@@ -71,7 +71,7 @@ function mergeBranch(branchName) {
     // Check if already merged
     const isMerged = execSync(
       `git branch --merged main | grep -q "${branchName}" || echo "not_merged"`,
-      { encoding: 'utf8' },
+      { encoding: 'utf8' }
     ).trim();
     if (isMerged !== 'not_merged') {
       console.log(`✅ Branch ${branchName} is already merged, skipping...`);
@@ -82,13 +82,13 @@ function mergeBranch(branchName) {
     try {
       execSync(
         `git merge origin/${branchName} --no-ff -m "Merge ${branchName}: automated merge"`,
-        { stdio: 'inherit' },
+        { stdio: 'inherit' }
       );
       console.log(`✅ Successfully merged ${branchName}`);
       return { success: true, method: 'direct' };
     } catch (mergeError) {
       console.log(
-        `⚠️  Merge conflict detected for ${branchName}, attempting resolution...`,
+        `⚠️  Merge conflict detected for ${branchName}, attempting resolution...`
       );
 
       // Try different conflict resolution strategies
@@ -96,10 +96,10 @@ function mergeBranch(branchName) {
         // Strategy 1: Use theirs
         execSync(
           `git merge origin/${branchName} --strategy-option=theirs --no-ff -m "Merge ${branchName}: using theirs strategy"`,
-          { stdio: 'inherit' },
+          { stdio: 'inherit' }
         );
         console.log(
-          `✅ Successfully merged ${branchName} using 'theirs' strategy`,
+          `✅ Successfully merged ${branchName} using 'theirs' strategy`
         );
         return { success: true, method: 'theirs' };
       } catch (theirsError) {
@@ -107,15 +107,15 @@ function mergeBranch(branchName) {
           // Strategy 2: Use ours
           execSync(
             `git merge origin/${branchName} --strategy-option=ours --no-ff -m "Merge ${branchName}: using ours strategy"`,
-            { stdio: 'inherit' },
+            { stdio: 'inherit' }
           );
           console.log(
-            `✅ Successfully merged ${branchName} using 'ours' strategy`,
+            `✅ Successfully merged ${branchName} using 'ours' strategy`
           );
           return { success: true, method: 'ours' };
         } catch (oursError) {
           console.log(
-            `❌ Failed to merge ${branchName} after trying all strategies`,
+            `❌ Failed to merge ${branchName} after trying all strategies`
           );
           return { success: false, method: 'failed' };
         }
@@ -180,7 +180,7 @@ const report = {
 
 fs.writeFileSync(
   'priority-branches-merge-report.json',
-  JSON.stringify(report, null, 2),
+  JSON.stringify(report, null, 2)
 );
 
 // Step 6: Push changes

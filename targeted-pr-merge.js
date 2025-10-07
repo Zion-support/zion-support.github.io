@@ -58,7 +58,7 @@ const targetBranches = [
   'merge-pr-25212',
   'resolve-pr-25168',
   'temp-merge-branch',
-  'auto-merge-main'
+  'auto-merge-main',
 ];
 
 console.log(`📊 Found ${targetBranches.length} target branches to process\n`);
@@ -66,40 +66,60 @@ console.log(`📊 Found ${targetBranches.length} target branches to process\n`);
 // Step 3: Enhanced merge function with conflict resolution
 function mergeBranch(branchName) {
   console.log(`\n🔄 Processing ${branchName}...`);
-  
+
   try {
     // Check if branch exists
     execSync(`git fetch origin ${branchName}`, { stdio: 'pipe' });
-    
+
     // Check if already merged
-    const isMerged = execSync(`git branch --merged main | grep -q "${branchName}" || echo "not_merged"`, { encoding: 'utf8' }).trim();
+    const isMerged = execSync(
+      `git branch --merged main | grep -q "${branchName}" || echo "not_merged"`,
+      { encoding: 'utf8' }
+    ).trim();
     if (isMerged !== 'not_merged') {
       console.log(`✅ Branch ${branchName} is already merged, skipping...`);
       return { success: true, method: 'already_merged' };
     }
-    
+
     // Try to merge
     try {
-      execSync(`git merge origin/${branchName} --no-ff -m "Merge ${branchName}: automated merge"`, { stdio: 'inherit' });
+      execSync(
+        `git merge origin/${branchName} --no-ff -m "Merge ${branchName}: automated merge"`,
+        { stdio: 'inherit' }
+      );
       console.log(`✅ Successfully merged ${branchName}`);
       return { success: true, method: 'direct' };
     } catch (mergeError) {
-      console.log(`⚠️  Merge conflict detected for ${branchName}, attempting resolution...`);
-      
+      console.log(
+        `⚠️  Merge conflict detected for ${branchName}, attempting resolution...`
+      );
+
       // Try different conflict resolution strategies
       try {
         // Strategy 1: Use theirs
-        execSync(`git merge origin/${branchName} --strategy-option=theirs --no-ff -m "Merge ${branchName}: using theirs strategy"`, { stdio: 'inherit' });
-        console.log(`✅ Successfully merged ${branchName} using 'theirs' strategy`);
+        execSync(
+          `git merge origin/${branchName} --strategy-option=theirs --no-ff -m "Merge ${branchName}: using theirs strategy"`,
+          { stdio: 'inherit' }
+        );
+        console.log(
+          `✅ Successfully merged ${branchName} using 'theirs' strategy`
+        );
         return { success: true, method: 'theirs' };
       } catch (theirsError) {
         try {
           // Strategy 2: Use ours
-          execSync(`git merge origin/${branchName} --strategy-option=ours --no-ff -m "Merge ${branchName}: using ours strategy"`, { stdio: 'inherit' });
-          console.log(`✅ Successfully merged ${branchName} using 'ours' strategy`);
+          execSync(
+            `git merge origin/${branchName} --strategy-option=ours --no-ff -m "Merge ${branchName}: using ours strategy"`,
+            { stdio: 'inherit' }
+          );
+          console.log(
+            `✅ Successfully merged ${branchName} using 'ours' strategy`
+          );
           return { success: true, method: 'ours' };
         } catch (oursError) {
-          console.log(`❌ Failed to merge ${branchName} after trying all strategies`);
+          console.log(
+            `❌ Failed to merge ${branchName} after trying all strategies`
+          );
           return { success: false, method: 'failed' };
         }
       }
@@ -124,9 +144,9 @@ const results = {
       ours: 0,
       already_merged: 0,
       not_found: 0,
-      failed: 0
-    }
-  }
+      failed: 0,
+    },
+  },
 };
 
 console.log('🚀 Step 3: Executing merge strategy...\n');
@@ -134,12 +154,12 @@ console.log('🚀 Step 3: Executing merge strategy...\n');
 for (const branch of targetBranches) {
   const result = mergeBranch(branch);
   results.summary.total++;
-  
+
   if (result.success) {
     results.successful.push({
       branch: branch,
       success: true,
-      method: result.method
+      method: result.method,
     });
     results.summary.successful++;
     results.summary.methods[result.method]++;
@@ -147,7 +167,7 @@ for (const branch of targetBranches) {
     results.failed.push({
       branch: branch,
       success: false,
-      method: result.method
+      method: result.method,
     });
     results.summary.failed++;
     results.summary.methods[result.method]++;
@@ -158,10 +178,13 @@ for (const branch of targetBranches) {
 console.log('\n📊 Step 4: Generating merge report...');
 const report = {
   ...results,
-  timestamp: new Date().toISOString()
+  timestamp: new Date().toISOString(),
 };
 
-fs.writeFileSync('targeted-pr-merge-report.json', JSON.stringify(report, null, 2));
+fs.writeFileSync(
+  'targeted-pr-merge-report.json',
+  JSON.stringify(report, null, 2)
+);
 
 // Step 6: Push changes
 console.log('\n🚀 Step 5: Pushing merged changes...');

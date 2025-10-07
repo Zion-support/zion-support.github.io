@@ -1,4 +1,3 @@
-
 // SEO improvements
 console.log('🔍 Applying SEO improvements...');
 

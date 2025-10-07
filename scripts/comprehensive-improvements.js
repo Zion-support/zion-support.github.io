@@ -1,426 +1,364 @@
 #!/usr/bin/env node
 
 /**
- * Comprehensive Improvements Script
- * Automates various improvements and optimizations
+ * Comprehensive Code Improvements Script
+ * Automatically applies various code quality and performance improvements
  */
 
 import fs from 'fs';
 import path from 'path';
+import { execSync } from 'child_process';
 import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-class ComprehensiveImprovements {
-  constructor() {
-    this.improvements = [];
-    this.startTime = Date.now();
-  }
+console.log('🚀 Starting comprehensive code improvements...\n');
 
-  async run() {
-    console.log('🚀 Starting comprehensive improvements...\n');
+// 1. Code Quality Improvements
+console.log('📝 Applying code quality improvements...');
 
-    try {
-      await this.optimizePackageJson();
-      await this.optimizeViteConfig();
-      await this.optimizeTypeScriptConfig();
-      await this.optimizeESLintConfig();
-      await this.createServiceWorker();
-      await this.optimizeImages();
-      await this.createManifest();
-      await this.generateReports();
+// Update package.json with better scripts
+const packageJsonPath = path.join(__dirname, '..', 'package.json');
+const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
 
-      this.printSummary();
-    } catch (error) {
-      console.error('❌ Error during improvements:', error);
-      process.exit(1);
-    }
-  }
+// Add new scripts for better development experience
+packageJson.scripts = {
+  ...packageJson.scripts,
+  'dev:analyze': 'NODE_OPTIONS="--max-old-space-size=4096" vite --host --open --mode analyze',
+  'build:analyze': 'vite build --mode analyze && npx vite-bundle-analyzer dist/stats.html',
+  'test:unit': 'jest --testPathPattern=src --passWithNoTests',
+  'test:integration': 'jest --testPathPattern=app --passWithNoTests',
+  'lint:fix-all': 'eslint . --ext .ts,.tsx,.js,.jsx --fix --max-warnings 0',
+  'type-check:strict': 'tsc --noEmit --strict --noImplicitAny --noImplicitReturns',
+  'format:all': 'prettier --write "**/*.{ts,tsx,js,jsx,json,css,md}"',
+  'clean:all': 'rm -rf dist node_modules/.vite .next .turbo',
+  'precommit': 'npm run type-check && npm run lint && npm run test:unit',
+  'postinstall': 'npm run type-check',
+};
 
-  async optimizePackageJson() {
-    console.log('📦 Optimizing package.json...');
-    
-    const packagePath = path.join(process.cwd(), 'package.json');
-    const packageJson = JSON.parse(fs.readFileSync(packagePath, 'utf8'));
+fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));
+console.log('✅ Updated package.json with improved scripts');
 
-    // Add new scripts
-    const newScripts = {
-      'dev:optimized': 'NODE_OPTIONS="--max-old-space-size=4096" vite --host --open',
-      'build:optimized': 'NODE_ENV=production vite build --minify terser --sourcemap false',
-      'analyze:performance': 'node scripts/performance-analyzer.js',
-      'security:audit': 'npm audit --audit-level=moderate',
-      'seo:audit': 'node scripts/seo-audit.js',
-      'accessibility:audit': 'node scripts/accessibility-audit.js',
-      'optimize:all': 'npm run optimize:images && npm run optimize:css && npm run build:optimized',
-      'health:check': 'npm run type-check && npm run lint && npm run build:optimized && npm run test'
-    };
+// 2. Create TypeScript configuration improvements
+console.log('🔧 Improving TypeScript configuration...');
 
-    packageJson.scripts = { ...packageJson.scripts, ...newScripts };
+const tsConfigPath = path.join(__dirname, '..', 'tsconfig.json');
+let tsConfig = {};
 
-    fs.writeFileSync(packagePath, JSON.stringify(packageJson, null, 2));
-    this.improvements.push('✅ Enhanced package.json with new optimization scripts');
-  }
+if (fs.existsSync(tsConfigPath)) {
+  tsConfig = JSON.parse(fs.readFileSync(tsConfigPath, 'utf8'));
+}
 
-  async optimizeViteConfig() {
-    console.log('⚡ Optimizing Vite configuration...');
-    
-    const viteConfigPath = path.join(process.cwd(), 'vite.config.js');
-    let viteConfig = '';
+// Enhanced TypeScript configuration
+const improvedTsConfig = {
+  ...tsConfig,
+  compilerOptions: {
+    ...tsConfig.compilerOptions,
+    strict: true,
+    noImplicitAny: true,
+    noImplicitReturns: true,
+    noImplicitThis: true,
+    noUnusedLocals: true,
+    noUnusedParameters: true,
+    exactOptionalPropertyTypes: true,
+    noImplicitOverride: true,
+    noPropertyAccessFromIndexSignature: true,
+    noUncheckedIndexedAccess: true,
+    allowUnusedLabels: false,
+    allowUnreachableCode: false,
+    skipLibCheck: true,
+    forceConsistentCasingInFileNames: true,
+    resolveJsonModule: true,
+    isolatedModules: true,
+    verbatimModuleSyntax: true,
+  },
+  include: [
+    'src/**/*',
+    'app/**/*',
+    '**/*.ts',
+    '**/*.tsx',
+  ],
+  exclude: [
+    'node_modules',
+    'dist',
+    'build',
+    '**/*.test.ts',
+    '**/*.test.tsx',
+    '**/*.spec.ts',
+    '**/*.spec.tsx',
+  ],
+};
 
-    if (fs.existsSync(viteConfigPath)) {
-      viteConfig = fs.readFileSync(viteConfigPath, 'utf8');
-    }
+fs.writeFileSync(tsConfigPath, JSON.stringify(improvedTsConfig, null, 2));
+console.log('✅ Enhanced TypeScript configuration');
 
-    const optimizedConfig = `
-import { defineConfig } from 'vite';
+// 3. Create ESLint configuration improvements
+console.log('🔍 Improving ESLint configuration...');
+
+const eslintConfig = {
+  extends: [
+    'eslint:recommended',
+    '@typescript-eslint/recommended',
+    'plugin:react/recommended',
+    'plugin:react-hooks/recommended',
+  ],
+  parser: '@typescript-eslint/parser',
+  parserOptions: {
+    ecmaVersion: 2022,
+    sourceType: 'module',
+    ecmaFeatures: {
+      jsx: true,
+    },
+  },
+  plugins: ['@typescript-eslint', 'react', 'react-hooks'],
+  rules: {
+    'react/react-in-jsx-scope': 'off',
+    'react/prop-types': 'off',
+    '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
+    '@typescript-eslint/explicit-function-return-type': 'warn',
+    '@typescript-eslint/no-explicit-any': 'warn',
+    '@typescript-eslint/prefer-const': 'error',
+    'prefer-const': 'error',
+    'no-var': 'error',
+    'no-console': 'warn',
+    'no-debugger': 'error',
+    'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/exhaustive-deps': 'warn',
+  },
+  settings: {
+    react: {
+      version: 'detect',
+    },
+  },
+  env: {
+    browser: true,
+    es2022: true,
+    node: true,
+  },
+};
+
+fs.writeFileSync(path.join(__dirname, '..', '.eslintrc.json'), JSON.stringify(eslintConfig, null, 2));
+console.log('✅ Enhanced ESLint configuration');
+
+// 4. Create Prettier configuration
+console.log('💅 Setting up Prettier configuration...');
+
+const prettierConfig = {
+  semi: true,
+  trailingComma: 'es5',
+  singleQuote: true,
+  printWidth: 80,
+  tabWidth: 2,
+  useTabs: false,
+  bracketSpacing: true,
+  arrowParens: 'avoid',
+  endOfLine: 'lf',
+  jsxSingleQuote: true,
+  quoteProps: 'as-needed',
+  bracketSameLine: false,
+  proseWrap: 'preserve',
+  htmlWhitespaceSensitivity: 'css',
+  vueIndentScriptAndStyle: false,
+  embeddedLanguageFormatting: 'auto',
+  singleAttributePerLine: false,
+};
+
+fs.writeFileSync(path.join(__dirname, '..', '.prettierrc.json'), JSON.stringify(prettierConfig, null, 2));
+console.log('✅ Created Prettier configuration');
+
+// 5. Create Vite configuration improvements
+console.log('⚡ Improving Vite configuration...');
+
+const viteConfigPath = path.join(__dirname, '..', 'vite.config.ts');
+let viteConfig = '';
+
+if (fs.existsSync(viteConfigPath)) {
+  viteConfig = fs.readFileSync(viteConfigPath, 'utf8');
+}
+
+// Enhanced Vite configuration
+const improvedViteConfig = `import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { visualizer } from 'rollup-plugin-visualizer';
 
 export default defineConfig({
   plugins: [
-    react(),
+    react({
+      jsxImportSource: '@emotion/react',
+      babel: {
+        plugins: ['@emotion/babel-plugin'],
+      },
+    }),
     visualizer({
       filename: 'dist/stats.html',
       open: false,
       gzipSize: true,
       brotliSize: true,
-    })
+    }),
   ],
   build: {
-    target: 'es2015',
+    target: 'esnext',
     minify: 'terser',
-    sourcemap: false,
+    sourcemap: true,
     rollupOptions: {
       output: {
         manualChunks: {
           vendor: ['react', 'react-dom'],
           router: ['react-router-dom'],
-          ui: ['framer-motion', 'lucide-react']
-        }
-      }
+          ui: ['framer-motion', 'lucide-react'],
+        },
+      },
     },
     terserOptions: {
       compress: {
         drop_console: true,
-        drop_debugger: true
-      }
-    }
+        drop_debugger: true,
+      },
+    },
   },
   server: {
     port: 3000,
-    host: true
+    host: true,
+    open: true,
   },
   preview: {
     port: 4173,
-    host: true
+    host: true,
   },
   optimizeDeps: {
-    include: ['react', 'react-dom', 'react-router-dom']
-  }
-});
-`;
-
-    fs.writeFileSync(viteConfigPath, optimizedConfig);
-    this.improvements.push('✅ Optimized Vite configuration for better performance');
-  }
-
-  async optimizeTypeScriptConfig() {
-    console.log('🔧 Optimizing TypeScript configuration...');
-    
-    const tsConfigPath = path.join(process.cwd(), 'tsconfig.json');
-    let tsConfig = {};
-
-    if (fs.existsSync(tsConfigPath)) {
-      tsConfig = JSON.parse(fs.readFileSync(tsConfigPath, 'utf8'));
-    }
-
-    const optimizedConfig = {
-      ...tsConfig,
-      compilerOptions: {
-        ...tsConfig.compilerOptions,
-        target: 'ES2020',
-        lib: ['ES2020', 'DOM', 'DOM.Iterable'],
-        allowJs: true,
-        skipLibCheck: true,
-        esModuleInterop: true,
-        allowSyntheticDefaultImports: true,
-        strict: true,
-        forceConsistentCasingInFileNames: true,
-        module: 'ESNext',
-        moduleResolution: 'node',
-        resolveJsonModule: true,
-        isolatedModules: true,
-        noEmit: true,
-        jsx: 'react-jsx',
-        baseUrl: '.',
-        paths: {
-          '@/*': ['src/*'],
-          '@/components/*': ['src/components/*'],
-          '@/pages/*': ['src/pages/*'],
-          '@/utils/*': ['src/utils/*'],
-          '@/types/*': ['src/types/*']
-        }
-      },
-      include: ['src/**/*'],
-      exclude: ['node_modules', 'dist', 'build']
-    };
-
-    fs.writeFileSync(tsConfigPath, JSON.stringify(optimizedConfig, null, 2));
-    this.improvements.push('✅ Enhanced TypeScript configuration with path mapping');
-  }
-
-  async optimizeESLintConfig() {
-    console.log('🔍 Optimizing ESLint configuration...');
-    
-    const eslintConfigPath = path.join(process.cwd(), '.eslintrc.js');
-    const eslintConfig = `
-module.exports = {
-  root: true,
-  env: {
-    browser: true,
-    es2020: true,
-    node: true
+    include: ['react', 'react-dom', 'react-router-dom'],
   },
-  extends: [
-    'eslint:recommended',
-    '@typescript-eslint/recommended',
-    'plugin:react/recommended',
-    'plugin:react-hooks/recommended'
-  ],
-  parser: '@typescript-eslint/parser',
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    ecmaFeatures: {
-      jsx: true
-    }
+  define: {
+    __DEV__: JSON.stringify(process.env.NODE_ENV === 'development'),
   },
-  plugins: [
-    'react',
-    'react-hooks',
-    '@typescript-eslint'
-  ],
-  rules: {
-    'react/react-in-jsx-scope': 'off',
-    'react/prop-types': 'off',
-    '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
-    '@typescript-eslint/explicit-function-return-type': 'off',
-    '@typescript-eslint/explicit-module-boundary-types': 'off',
-    '@typescript-eslint/no-explicit-any': 'warn',
-    'no-console': 'warn',
-    'prefer-const': 'error',
-    'no-var': 'error'
-  },
-  settings: {
-    react: {
-      version: 'detect'
-    }
+});`;
+
+fs.writeFileSync(viteConfigPath, improvedViteConfig);
+console.log('✅ Enhanced Vite configuration');
+
+// 6. Create performance monitoring setup
+console.log('📊 Setting up performance monitoring...');
+
+const performanceSetup = `// Performance monitoring setup
+import { analytics } from './src/utils/analytics';
+import { errorHandler } from './src/utils/errorHandler';
+import performanceOptimizer from './src/utils/performanceOptimizer';
+
+// Initialize performance monitoring
+if (typeof window !== 'undefined') {
+  // Track page load
+  analytics.trackPageView(window.location.pathname);
+  
+  // Initialize performance optimizer
+  performanceOptimizer.lazyLoadImages();
+  
+  // Monitor long tasks
+  performanceOptimizer.monitorLongTasks((entries) => {
+    entries.forEach((entry) => {
+      analytics.track('long_task', 'performance', 'detected', undefined, entry.duration);
+    });
+  });
+  
+  // Track Web Vitals
+  const metrics = performanceOptimizer.measurePageLoad();
+  if (metrics) {
+    performanceOptimizer.reportWebVitals(metrics);
+  }
+}
+
+export { analytics, errorHandler, performanceOptimizer };`;
+
+fs.writeFileSync(path.join(__dirname, '..', 'src', 'monitoring.ts'), performanceSetup);
+console.log('✅ Created performance monitoring setup');
+
+// 7. Create development utilities
+console.log('🛠️ Creating development utilities...');
+
+const devUtils = `/**
+ * Development Utilities
+ * Tools and helpers for development and debugging
+ */
+
+export const devLog = (message: string, data?: any) => {
+  if (process.env.NODE_ENV === 'development') {
+    console.log(\`[DEV] \${message}\`, data || '');
   }
 };
-`;
 
-    fs.writeFileSync(eslintConfigPath, eslintConfig);
-    this.improvements.push('✅ Enhanced ESLint configuration with modern rules');
+export const devError = (message: string, error?: any) => {
+  if (process.env.NODE_ENV === 'development') {
+    console.error(\`[DEV ERROR] \${message}\`, error || '');
   }
+};
 
-  async createServiceWorker() {
-    console.log('🔧 Creating Service Worker...');
-    
-    const swPath = path.join(process.cwd(), 'public/sw.js');
-    const serviceWorker = `
-const CACHE_NAME = 'zion-website-v1';
-const urlsToCache = [
-  '/',
-  '/static/js/bundle.js',
-  '/static/css/main.css',
-  '/manifest.json'
-];
+export const devWarn = (message: string, data?: any) => {
+  if (process.env.NODE_ENV === 'development') {
+    console.warn(\`[DEV WARN] \${message}\`, data || '');
+  }
+};
 
-self.addEventListener('install', (event) => {
-  event.waitUntil(
-    caches.open(CACHE_NAME)
-      .then((cache) => cache.addAll(urlsToCache))
-  );
+export const measurePerformance = (name: string, fn: () => void) => {
+  if (process.env.NODE_ENV === 'development') {
+    const start = performance.now();
+    fn();
+    const end = performance.now();
+    console.log(\`[PERF] \${name}: \${(end - start).toFixed(2)}ms\`);
+  } else {
+    fn();
+  }
+};
+
+export const createDebugger = (componentName: string) => ({
+  log: (message: string, data?: any) => devLog(\`[\${componentName}] \${message}\`, data),
+  error: (message: string, error?: any) => devError(\`[\${componentName}] \${message}\`, error),
+  warn: (message: string, data?: any) => devWarn(\`[\${componentName}] \${message}\`, data),
+  measure: (name: string, fn: () => void) => measurePerformance(\`[\${componentName}] \${name}\`, fn),
 });
 
-self.addEventListener('fetch', (event) => {
-  event.respondWith(
-    caches.match(event.request)
-      .then((response) => {
-        if (response) {
-          return response;
-        }
-        return fetch(event.request);
-      }
-    )
-  );
-});
+export default {
+  devLog,
+  devError,
+  devWarn,
+  measurePerformance,
+  createDebugger,
+};`;
 
-self.addEventListener('activate', (event) => {
-  event.waitUntil(
-    caches.keys().then((cacheNames) => {
-      return Promise.all(
-        cacheNames.map((cacheName) => {
-          if (cacheName !== CACHE_NAME) {
-            return caches.delete(cacheName);
-          }
-        })
-      );
-    })
-  );
-});
-`;
+fs.writeFileSync(path.join(__dirname, '..', 'src', 'utils', 'devUtils.ts'), devUtils);
+console.log('✅ Created development utilities');
 
-    fs.writeFileSync(swPath, serviceWorker);
-    this.improvements.push('✅ Created Service Worker for offline functionality');
-  }
+// 8. Run final checks
+console.log('🔍 Running final checks...');
 
-  async optimizeImages() {
-    console.log('🖼️ Setting up image optimization...');
-    
-    const imageOptimizerPath = path.join(process.cwd(), 'scripts/optimize-images.js');
-    const imageOptimizer = `
-const sharp = require('sharp');
-const fs = require('fs');
-const path = require('path');
+try {
+  // Type check
+  console.log('Running TypeScript check...');
+  execSync('npm run type-check', { stdio: 'inherit' });
+  console.log('✅ TypeScript check passed');
 
-class ImageOptimizer {
-  constructor() {
-    this.inputDir = 'src/assets/images';
-    this.outputDir = 'public/images/optimized';
-    this.sizes = [320, 640, 768, 1024, 1200, 1920];
-  }
+  // Lint check
+  console.log('Running ESLint check...');
+  execSync('npm run lint', { stdio: 'inherit' });
+  console.log('✅ ESLint check passed');
 
-  async optimizeImages() {
-    if (!fs.existsSync(this.inputDir)) {
-      console.log('No images directory found');
-      return;
-    }
+  // Build check
+  console.log('Running build check...');
+  execSync('npm run build', { stdio: 'inherit' });
+  console.log('✅ Build check passed');
 
-    if (!fs.existsSync(this.outputDir)) {
-      fs.mkdirSync(this.outputDir, { recursive: true });
-    }
-
-    const files = fs.readdirSync(this.inputDir);
-    const imageFiles = files.filter(file => 
-      /\.(jpg|jpeg|png|webp)$/i.test(file)
-    );
-
-    for (const file of imageFiles) {
-      await this.optimizeImage(file);
-    }
-
-    console.log('Image optimization complete');
-  }
-
-  async optimizeImage(filename) {
-    const inputPath = path.join(this.inputDir, filename);
-    const baseName = path.parse(filename).name;
-
-    for (const size of this.sizes) {
-      const outputPath = path.join(this.outputDir, \`\${baseName}-\${size}.webp\`);
-      
-      try {
-        await sharp(inputPath)
-          .resize(size, null, { withoutEnlargement: true })
-          .webp({ quality: 80 })
-          .toFile(outputPath);
-        
-        console.log(\`Generated: \${outputPath}\`);
-      } catch (error) {
-        console.error(\`Error optimizing \${filename} at size \${size}:\`, error);
-      }
-    }
-  }
+} catch (error) {
+  console.error('❌ Some checks failed:', error.message);
+  process.exit(1);
 }
 
-const optimizer = new ImageOptimizer();
-optimizer.optimizeImages();
-`;
-
-    fs.writeFileSync(imageOptimizerPath, imageOptimizer);
-    this.improvements.push('✅ Created image optimization script');
-  }
-
-  async createManifest() {
-    console.log('📱 Creating Web App Manifest...');
-    
-    const manifestPath = path.join(process.cwd(), 'public/manifest.json');
-    const manifest = {
-      name: 'Zion Tech Group',
-      short_name: 'Zion Tech',
-      description: 'Advanced AI and IT Solutions',
-      start_url: '/',
-      display: 'standalone',
-      background_color: '#ffffff',
-      theme_color: '#007bff',
-      icons: [
-        {
-          src: '/icons/icon-192x192.png',
-          sizes: '192x192',
-          type: 'image/png'
-        },
-        {
-          src: '/icons/icon-512x512.png',
-          sizes: '512x512',
-          type: 'image/png'
-        }
-      ],
-      categories: ['business', 'productivity', 'technology'],
-      lang: 'en',
-      orientation: 'portrait-primary'
-    };
-
-    fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2));
-    this.improvements.push('✅ Created Web App Manifest for PWA functionality');
-  }
-
-  async generateReports() {
-    console.log('📊 Generating improvement reports...');
-    
-    const reportPath = path.join(process.cwd(), 'improvement-report.json');
-    const report = {
-      timestamp: new Date().toISOString(),
-      duration: Date.now() - this.startTime,
-      improvements: this.improvements,
-      summary: {
-        totalImprovements: this.improvements.length,
-        categories: {
-          performance: this.improvements.filter(i => i.includes('performance')).length,
-          security: this.improvements.filter(i => i.includes('security')).length,
-          seo: this.improvements.filter(i => i.includes('seo')).length,
-          accessibility: this.improvements.filter(i => i.includes('accessibility')).length
-        }
-      }
-    };
-
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    this.improvements.push('✅ Generated comprehensive improvement report');
-  }
-
-  printSummary() {
-    const duration = ((Date.now() - this.startTime) / 1000).toFixed(2);
-    
-    console.log('\n🎉 Comprehensive improvements completed!');
-    console.log(`⏱️  Duration: ${duration}s`);
-    console.log(`📈 Total improvements: ${this.improvements.length}\n`);
-    
-    console.log('📋 Summary of improvements:');
-    this.improvements.forEach((improvement, index) => {
-      console.log(`  ${index + 1}. ${improvement}`);
-    });
-    
-    console.log('\n🚀 Next steps:');
-    console.log('  1. Run "npm run build:optimized" to build the optimized version');
-    console.log('  2. Run "npm run analyze:performance" to analyze performance');
-    console.log('  3. Run "npm run security:audit" to check security');
-    console.log('  4. Run "npm run seo:audit" to audit SEO');
-    console.log('  5. Run "npm run accessibility:audit" to check accessibility');
-    console.log('\n✨ Your application is now optimized for production!');
-  }
-}
-
-// Run the improvements
-const improvements = new ComprehensiveImprovements();
-improvements.run().catch(console.error);
+console.log('\n🎉 Comprehensive improvements completed successfully!');
+console.log('\n📋 Summary of improvements:');
+console.log('  ✅ Enhanced package.json scripts');
+console.log('  ✅ Improved TypeScript configuration');
+console.log('  ✅ Enhanced ESLint configuration');
+console.log('  ✅ Added Prettier configuration');
+console.log('  ✅ Improved Vite configuration');
+console.log('  ✅ Created performance monitoring setup');
+console.log('  ✅ Added development utilities');
+console.log('  ✅ All checks passed');
+console.log('\n🚀 Your codebase is now optimized and ready for production!');

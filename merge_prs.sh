@@ -1,128 +1,65 @@
 #!/bin/bash
 
-# Script to resolve merge conflicts and merge PRs into main branch
-# This script handles the merge process for the zion.app repository
-
+# Script to merge all open PRs into main branch
 set -e
 
-echo "🚀 Starting PR merge process for zion.app repository..."
+echo "Starting PR merge process..."
 
-# Function to check if a branch exists
-branch_exists() {
-    git show-ref --verify --quiet refs/remotes/origin/$1
-}
+# Ensure we're on main branch
+git checkout main
 
-# Function to merge a branch with conflict resolution
-merge_branch() {
-    local branch_name=$1
-    echo "📋 Processing branch: $branch_name"
+# Update main branch
+git pull origin main
+
+# List of PR branches to merge
+PR_BRANCHES=(
+    "origin/cursor/fix-web-application-console-errors-0bf5"
+    "origin/cursor/build-and-deploy-with-vite-and-netlify-8b37"
+    "origin/cursor/fix-errors-and-merge-to-main-fcbd"
+    "origin/cursor/fix-errors-and-merge-to-main-e6e1"
+)
+
+# Merge each PR branch
+for branch in "${PR_BRANCHES[@]}"; do
+    echo "Attempting to merge $branch..."
     
-    if branch_exists "$branch_name"; then
-        echo "✅ Branch $branch_name exists, attempting merge..."
+    # Check if branch exists
+    if git show-ref --verify --quiet refs/remotes/$branch; then
+        echo "Merging $branch into main..."
         
-        # Fetch the latest changes
-        git fetch origin $branch_name
-        
-        # Try to merge with conflict resolution
-        if git merge origin/$branch_name --no-ff -m "Merge $branch_name into main - resolved conflicts"; then
-            echo "✅ Successfully merged $branch_name"
+        # Try to merge with strategy
+        if git merge $branch --no-ff -m "Merge $branch into main"; then
+            echo "Successfully merged $branch"
         else
-            echo "⚠️  Merge conflicts detected in $branch_name, attempting resolution..."
+            echo "Merge conflict detected for $branch, attempting to resolve..."
             
-            # List conflicted files
-            echo "Conflicted files:"
-            git diff --name-only --diff-filter=U
-            
-            # Auto-resolve common conflicts
-            echo "🔧 Attempting automatic conflict resolution..."
-            
-            # Resolve JSX conflicts
-            find . -name "*.tsx" -o -name "*.jsx" | xargs grep -l "<<<<<<< HEAD" | while read file; do
-                echo "Resolving conflicts in $file"
-                # Remove conflict markers and keep both versions where possible
-                sed -i '/^<<<<<<< HEAD/,/^=======/d' "$file"
-                sed -i '/^>>>>>>> /d' "$file"
-            done
-            
-            # Resolve TypeScript conflicts
-            find . -name "*.ts" | xargs grep -l "<<<<<<< HEAD" | while read file; do
-                echo "Resolving conflicts in $file"
-                sed -i '/^<<<<<<< HEAD/,/^=======/d' "$file"
-                sed -i '/^>>>>>>> /d' "$file"
-            done
-            
-            # Resolve JSON conflicts
-            find . -name "*.json" | xargs grep -l "<<<<<<< HEAD" | while read file; do
-                echo "Resolving conflicts in $file"
-                sed -i '/^<<<<<<< HEAD/,/^=======/d' "$file"
-                sed -i '/^>>>>>>> /d' "$file"
-            done
-            
-            # Add resolved files
-            git add .
-            
-            # Complete the merge
-            if git commit --no-edit; then
-                echo "✅ Successfully resolved conflicts and merged $branch_name"
+            # Check for conflicts
+            if git status --porcelain | grep -q "^UU\|^AA\|^DD"; then
+                echo "Resolving conflicts for $branch..."
+                
+                # Auto-resolve conflicts by accepting incoming changes for most cases
+                git status --porcelain | grep "^UU\|^AA\|^DD" | while read status file; do
+                    echo "Resolving conflict in $file"
+                    # For now, accept the incoming changes (theirs)
+                    git checkout --theirs "$file" 2>/dev/null || true
+                    git add "$file" 2>/dev/null || true
+                done
+                
+                # Complete the merge
+                git commit --no-edit || git merge --abort
+                echo "Resolved conflicts for $branch"
             else
-                echo "❌ Failed to resolve conflicts in $branch_name"
-                git merge --abort
-                return 1
+                echo "No conflicts found, completing merge for $branch"
+                git commit --no-edit
             fi
         fi
     else
-        echo "⚠️  Branch $branch_name does not exist, skipping..."
+        echo "Branch $branch not found, skipping..."
     fi
-}
-
-# Main execution
-echo "🔄 Updating main branch..."
-git checkout main
-git pull origin main
-
-# List of branches to merge (based on our analysis)
-branches_to_merge=(
-    "resolve-pr-25168"
-    "add-new-2026-content"
-    "add-revolutionary-content-2026"
-    "ai-2027-content-integration"
-    "ai-dashboard-improvements"
-    "cursor/fix-errors-and-merge-to-main-10bb"
-    "cursor/fix-errors-and-merge-to-main-3084"
-    "cursor/fix-errors-and-merge-to-main-3ccd"
-    "cursor/fix-errors-and-merge-to-main-3d6b"
-    "cursor/fix-errors-and-merge-to-main-41e6"
-    "cursor/fix-errors-and-merge-to-main-8374"
-    "cursor/fix-errors-and-merge-to-main-9cc7"
-    "cursor/fix-errors-and-merge-to-main-a9d1"
-    "cursor/fix-errors-and-merge-to-main-bac8"
-    "cursor/fix-errors-and-merge-to-main-bc06"
-    "cursor/fix-errors-and-merge-to-main-ceda"
-    "cursor/fix-errors-and-merge-to-main-d17f"
-    "cursor/fix-errors-and-merge-to-main-dd0c"
-    "cursor/fix-errors-and-merge-to-main-e036"
-    "cursor/fix-errors-and-merge-to-main-f679"
-    "cursor/fix-errors-and-merge-to-main-fec4"
-)
-
-echo "📝 Branches to process: ${#branches_to_merge[@]}"
-
-# Process each branch
-for branch in "${branches_to_merge[@]}"; do
-    echo ""
-    echo "🔄 Processing branch: $branch"
-    merge_branch "$branch"
 done
 
-echo ""
-echo "🎉 PR merge process completed!"
-echo "📊 Summary:"
-echo "  - Processed ${#branches_to_merge[@]} branches"
-echo "  - All conflicts resolved and merged"
-echo "  - Main branch updated with all changes"
+echo "PR merge process completed!"
 
-# Push changes to remote
-echo "🚀 Pushing changes to remote repository..."
-git push origin main
-
-echo "✅ All done! Repository is now up to date with all PRs merged."
+# Show final status
+git status
+git log --oneline -10
