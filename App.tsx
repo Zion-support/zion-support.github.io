@@ -1,9 +1,11 @@
-import React, { Suspense } from 'react';
+import React, { memo, useMemo, useCallback, Suspense } from 'react';
 import { createRoot } from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import HomePage from './app/page';
 import { initializePerformanceEnhancements } from './app/utils/performanceEnhancer';
+import { errorHandler } from './app/utils/enhancedErrorHandler';
+import ErrorBoundary from './app/components/ErrorBoundary';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
 import EnhancedErrorBoundary from './app/components/EnhancedErrorBoundary';
 import AdvancedSEOOptimizer from './app/components/AdvancedSEOOptimizer';
@@ -96,6 +98,7 @@ const App = () => {
     if (typeof document !== 'undefined') {
       // Initialize enhanced performance monitoring
       initializePerformanceEnhancements();
+      performanceOptimizer.init();
       
       // Preload critical fonts
       const fontLink = document.createElement('link');
@@ -183,20 +186,15 @@ const App = () => {
       >
         <AdvancedSEOOptimizer
           seoData={{
-            title: 'Zion Tech Group - Advanced AI and IT Solutions',
-            description: 'Leading provider of AI-powered enterprise solutions and digital transformation services',
-            keywords: ['AI', 'IT Solutions', 'Digital Transformation', 'Enterprise Solutions', 'Automation'],
+            title: 'Zion Tech Group - AI & IT Solutions',
+            description: 'Advanced AI and IT solutions for modern businesses',
+            keywords: ['AI', 'IT Solutions', 'Technology'],
             canonicalUrl: 'https://ziontechgroup.com',
-            ogImage: 'https://ziontechgroup.com/og-image.jpg',
-            structuredData: {
-              '@type': 'Organization',
-              name: 'Zion Tech Group'
-            }
+            ogImage: 'https://ziontechgroup.com/og-image.png',
           }}
           enableStructuredData={true}
           enableOpenGraph={true}
           enableTwitterCards={true}
-          enableSchemaMarkup={true}
         />
         <HelmetProvider>
           <BrowserRouter>
