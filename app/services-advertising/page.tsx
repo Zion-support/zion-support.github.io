@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+<<<<<<< HEAD
 import {
   ArrowLeft,
   ArrowRight,
@@ -10,6 +11,9 @@ import {
   CheckCircle,
   Star,
 } from 'lucide-react';
+=======
+import { ArrowLeft, ArrowRight, Target, CheckCircle } from 'lucide-react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e7b
 
 export default function ServicesAdvertisingPage() {
   return (

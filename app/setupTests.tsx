@@ -4,6 +4,24 @@
 
 import '@testing-library/jest-dom';
 
+<<<<<<< HEAD
+=======
+// Suppress jsdom navigation warnings
+// eslint-disable-next-line no-console
+const originalConsoleError = console.error;
+// eslint-disable-next-line no-console
+console.error = (...args) => {
+  const message = args[0]?.toString?.() || args[0]?.message || '';
+  if (
+    message.includes('Not implemented: navigation') ||
+    message.includes('navigation (except hash changes)')
+  ) {
+    return;
+  }
+  originalConsoleError(...args);
+};
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e7b
 // Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {
   writable: true,
@@ -89,9 +107,61 @@ Object.defineProperty(window, 'performance', {
   },
 });
 
+<<<<<<< HEAD
 // Mock requestAnimationFrame
 global.requestAnimationFrame = (callback: FrameRequestCallback) => {
   return setTimeout(callback, 0);
+=======
+// Mock localStorage
+const localStorageMock = {
+  getItem: jest.fn(),
+  setItem: jest.fn(),
+  removeItem: jest.fn(),
+  clear: jest.fn(),
+};
+Object.defineProperty(window, 'localStorage', {
+  value: localStorageMock,
+});
+
+// Mock sessionStorage
+const sessionStorageMock = {
+  getItem: jest.fn(),
+  setItem: jest.fn(),
+  removeItem: jest.fn(),
+  clear: jest.fn(),
+};
+Object.defineProperty(window, 'sessionStorage', {
+  value: sessionStorageMock,
+});
+
+// Mock TextEncoder and TextDecoder for Node.js environment
+if (typeof TextEncoder === 'undefined') {
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
+  global.TextEncoder = require('util').TextEncoder;
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
+  global.TextDecoder = require('util').TextDecoder;
+}
+
+// Mock URL for Node.js environment
+global.URL = URL;
+
+// Mock PerformanceObserver
+global.PerformanceObserver = class MockPerformanceObserver {
+  static readonly supportedEntryTypes: readonly string[] = [
+    'navigation',
+    'paint',
+    'largest-contentful-paint',
+    'first-input',
+    'layout-shift',
+  ];
+
+  constructor(public callback: PerformanceObserverCallback) {}
+  observe() {}
+  disconnect() {}
+  takeRecords() {
+    return [];
+  }
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e7b
 };
 
 global.cancelAnimationFrame = (id: number) => {

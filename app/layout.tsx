@@ -1,11 +1,21 @@
-import React from 'react';
 import type { Metadata } from 'next';
 import './globals.css';
+import PerformanceMonitor from './components/PerformanceMonitor';
+import AnalyticsProvider from './components/AnalyticsProvider';
+import ErrorBoundary from './components/ErrorBoundary';
+import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 
 export const metadata: Metadata = {
-  title: 'Zion Tech Group - Advanced AI and IT Solutions',
-  description: 'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services. Transform your business with cutting-edge AI micro SaaS services and cloud automation.',
-  keywords: ['AI solutions', 'enterprise AI', 'digital transformation', 'automation', 'cloud services', 'AI consulting', 'business intelligence', 'machine learning', 'artificial intelligence', 'enterprise software'],
+  title: 'Zion Tech Group - AI & IT Solutions',
+  description:
+    'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services.',
+  keywords: [
+    'AI solutions',
+    'enterprise AI',
+    'digital transformation',
+    'automation',
+    'cloud services',
+  ],
   authors: [{ name: 'Zion Tech Group' }],
   creator: 'Zion Tech Group',
   publisher: 'Zion Tech Group',
@@ -14,21 +24,22 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://zion.app'),
+  metadataBase: new URL('https://ziontechgroup.com'),
   alternates: {
     canonical: '/',
   },
   openGraph: {
-    title: 'Zion Tech Group - Advanced AI and IT Solutions',
-    description: 'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services.',
-    url: 'https://zion.app',
+    title: 'Zion Tech Group - AI & IT Solutions',
+    description:
+      'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services.',
+    url: 'https://ziontechgroup.com',
     siteName: 'Zion Tech Group',
     images: [
       {
-        url: '/og-image.jpg',
+        url: 'https://ziontechgroup.com/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Zion Tech Group - AI and IT Solutions',
+        alt: 'Zion Tech Group - AI & IT Solutions',
       },
     ],
     locale: 'en_US',
@@ -36,9 +47,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Zion Tech Group - Advanced AI and IT Solutions',
-    description: 'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services.',
-    images: ['/og-image.jpg'],
+    title: 'Zion Tech Group - AI & IT Solutions',
+    description:
+      'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services.',
+    images: ['https://ziontechgroup.com/og-image.jpg'],
   },
   robots: {
     index: true,
@@ -62,18 +74,39 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang='en'>
       <head>
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-        <link rel="manifest" href="/site.webmanifest" />
-        <meta name="theme-color" content="#4f46e5" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel='icon' href='/favicon.ico' />
+        <link
+          rel='apple-touch-icon'
+          sizes='180x180'
+          href='/apple-touch-icon.png'
+        />
+        <link
+          rel='icon'
+          type='image/png'
+          sizes='32x32'
+          href='/favicon-32x32.png'
+        />
+        <link
+          rel='icon'
+          type='image/png'
+          sizes='16x16'
+          href='/favicon-16x16.png'
+        />
+        <link rel='manifest' href='/site.webmanifest' />
+        <meta name='theme-color' content='#4f46e5' />
+        <meta name='viewport' content='width=device-width, initial-scale=1' />
       </head>
-      <body className="antialiased">
-        {children}
+      <body className='antialiased'>
+        <AnalyticsProvider>
+          <ErrorBoundary>
+            <AccessibilityEnhancer>
+              <PerformanceMonitor />
+              {children}
+            </AccessibilityEnhancer>
+          </ErrorBoundary>
+        </AnalyticsProvider>
       </body>
     </html>
   );

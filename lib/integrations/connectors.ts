@@ -12,7 +12,7 @@ export async function simulateAction<T = unknown>(
     status: 'success',
     message: `Action ${action} completed successfully`,
     details,
-    timestamp: new Date()
+    timestamp: new Date(),
   };
 
   // Simulate some processing time
@@ -34,13 +34,15 @@ export async function simulateAction<T = unknown>(
   const result = {
     success: true,
     data: details,
-    timestamp: new Date().toISOString()
+    timestamp: new Date().toISOString(),
   } as T;
 
   return { log, result };
 }
 
-export async function testConnection(connection: ProviderConnection): Promise<boolean> {
+export async function testConnection(
+  connection: ProviderConnection
+): Promise<boolean> {
   try {
     await simulateAction(connection, 'test_connection');
     return true;
@@ -49,12 +51,14 @@ export async function testConnection(connection: ProviderConnection): Promise<bo
   }
 }
 
-export async function syncData(connection: ProviderConnection): Promise<SyncLogEntry[]> {
+export async function syncData(
+  connection: ProviderConnection
+): Promise<SyncLogEntry[]> {
   const logs: SyncLogEntry[] = [];
-  
+
   try {
     const { log } = await simulateAction(connection, 'sync_data', {
-      lastSync: connection.lastSync?.toISOString()
+      lastSync: connection.lastSync?.toISOString(),
     });
     logs.push(log);
   } catch (error) {
@@ -64,7 +68,7 @@ export async function syncData(connection: ProviderConnection): Promise<SyncLogE
       action: 'sync_data',
       status: 'error',
       message: error instanceof Error ? error.message : 'Unknown error',
-      timestamp: new Date()
+      timestamp: new Date(),
     });
   }
 

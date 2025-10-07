@@ -3,13 +3,18 @@ import Link from 'next/link';
 export const metadata = {
   title: 'Enterprise Solutions - Zion Tech Group',
   description:
+<<<<<<< HEAD
     'Comprehensive enterprise AI and IT solutions designed for Fortune 500 companies. Transform your business with our advanced autonomous systems and quantum computing solutions.',
   keywords:
     'enterprise AI, Fortune 500, autonomous systems, quantum computing, enterprise transformation, business intelligence',
+=======
+    'Enterprise-grade AI and IT solutions designed for large organizations. Scalable, secure, and reliable technology solutions.',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e7b
 };
 
 export default function EnterprisePage() {
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
       <header className="relative overflow-hidden">
@@ -28,6 +33,19 @@ export default function EnterprisePage() {
               <span className="text-cyan-400 font-bold text-xl">
                 Enterprise AI Solutions
               </span>
+=======
+    <>
+      <div className='min-h-screen bg-slate-50 py-16'>
+        <div className='container mx-auto px-4'>
+          <div className='max-w-6xl mx-auto'>
+            <div className='text-center mb-16'>
+              <h1 className='text-4xl font-bold text-gray-900 mb-4'>
+                Enterprise Solutions
+              </h1>
+              <p className='text-xl text-gray-600'>
+                Advanced AI and IT solutions designed for large organizations
+              </p>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e7b
             </div>
 
             <h1 className="text-5xl md:text-7xl font-extrabold text-white mb-8">

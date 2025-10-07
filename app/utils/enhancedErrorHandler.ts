@@ -22,7 +22,13 @@ interface ErrorReport {
   stack?: string;
   context: ErrorContext;
   severity: 'low' | 'medium' | 'high' | 'critical';
-  category: 'syntax' | 'runtime' | 'network' | 'security' | 'performance' | 'unknown';
+  category:
+    | 'syntax'
+    | 'runtime'
+    | 'network'
+    | 'security'
+    | 'performance'
+    | 'unknown';
   tags: string[];
   metadata: Record<string, unknown>;
   resolved: boolean;
@@ -83,15 +89,15 @@ class EnhancedErrorHandler {
     this.setupErrorCleanup();
 
     this.isInitialized = true;
-     
-console.log('🛡️ Enhanced Error Handler initialized');
+    // eslint-disable-next-line no-console
+    console.log('🛡️ Enhanced Error Handler initialized');
   }
 
   /**
    * Setup global error handlers
    */
   private setupGlobalErrorHandlers(): void {
-    window.addEventListener('error', (event) => {
+    window.addEventListener('error', event => {
       this.handleError({
         type: 'javascript',
         message: event.message,
@@ -108,7 +114,7 @@ console.log('🛡️ Enhanced Error Handler initialized');
    * Setup unhandled promise rejection handler
    */
   private setupUnhandledRejectionHandler(): void {
-    window.addEventListener('unhandledrejection', (event) => {
+    window.addEventListener('unhandledrejection', event => {
       this.handleError({
         type: 'promise',
         message: event.reason?.message || String(event.reason),
@@ -122,17 +128,24 @@ console.log('🛡️ Enhanced Error Handler initialized');
    * Setup resource error handler
    */
   private setupResourceErrorHandler(): void {
-    window.addEventListener('error', (event) => {
-      if (event.target !== window) {
-        const target = event.target as HTMLElement & { src?: string; href?: string };
-        this.handleError({
-          type: 'resource',
-          message: `Failed to load resource: ${target?.src || target?.href}`,
-          element: event.target?.constructor.name,
-          src: target?.src || target?.href,
-        });
-      }
-    }, true);
+    window.addEventListener(
+      'error',
+      event => {
+        if (event.target !== window) {
+          const target = event.target as HTMLElement & {
+            src?: string;
+            href?: string;
+          };
+          this.handleError({
+            type: 'resource',
+            message: `Failed to load resource: ${target?.src || target?.href}`,
+            element: event.target?.constructor.name,
+            src: target?.src || target?.href,
+          });
+        }
+      },
+      true
+    );
   }
 
   /**
@@ -175,9 +188,10 @@ console.log('🛡️ Enhanced Error Handler initialized');
     // Monitor long tasks that might indicate performance issues
     if ('PerformanceObserver' in window) {
       try {
-        const observer = new PerformanceObserver((list) => {
+        const observer = new PerformanceObserver(list => {
           list.getEntries().forEach(entry => {
-            if (entry.duration > 100) { // Tasks longer than 100ms
+            if (entry.duration > 100) {
+              // Tasks longer than 100ms
               this.handleError({
                 type: 'custom',
                 message: `Long task detected: ${entry.duration.toFixed(2)}ms`,
@@ -189,8 +203,8 @@ console.log('🛡️ Enhanced Error Handler initialized');
         });
         observer.observe({ type: 'longtask', buffered: true });
       } catch (error) {
-         
-console.warn('Failed to setup performance error handler:', error);
+        // eslint-disable-next-line no-console
+        console.warn('Failed to setup performance error handler:', error);
       }
     }
   }
@@ -212,9 +226,12 @@ console.warn('Failed to setup performance error handler:', error);
    */
   private setupErrorCleanup(): void {
     // Clean up old errors
-    setInterval(() => {
-      this.cleanupOldErrors();
-    }, 24 * 60 * 60 * 1000); // Daily cleanup
+    setInterval(
+      () => {
+        this.cleanupOldErrors();
+      },
+      24 * 60 * 60 * 1000
+    ); // Daily cleanup
   }
 
   /**
@@ -348,10 +365,17 @@ console.warn('Failed to setup performance error handler:', error);
     status?: number;
     element?: string;
   }): ErrorReport['severity'] {
-    if (errorData.type === 'network' && errorData.status && errorData.status >= 500) {
+    if (
+      errorData.type === 'network' &&
+      errorData.status &&
+      errorData.status >= 500
+    ) {
       return 'critical';
     }
-    if (errorData.type === 'javascript' && errorData.message.includes('Cannot read property')) {
+    if (
+      errorData.type === 'javascript' &&
+      errorData.message.includes('Cannot read property')
+    ) {
       return 'high';
     }
     if (errorData.type === 'resource' && errorData.element === 'img') {
@@ -376,7 +400,10 @@ console.warn('Failed to setup performance error handler:', error);
     if (errorData.type === 'resource') {
       return 'performance';
     }
-    if (errorData.message.includes('SecurityError') || errorData.message.includes('CORS')) {
+    if (
+      errorData.message.includes('SecurityError') ||
+      errorData.message.includes('CORS')
+    ) {
       return 'security';
     }
     if (errorData.message.includes('SyntaxError')) {
@@ -397,7 +424,7 @@ console.warn('Failed to setup performance error handler:', error);
     duration?: number;
   }): string[] {
     const tags: string[] = [];
-    
+
     if (errorData.filename) {
       tags.push('client-side');
     }
@@ -410,7 +437,7 @@ console.warn('Failed to setup performance error handler:', error);
     if (errorData.duration && errorData.duration > 1000) {
       tags.push('slow');
     }
-    
+
     return tags;
   }
 
@@ -446,8 +473,9 @@ console.warn('Failed to setup performance error handler:', error);
   private checkRateLimit(): boolean {
     const now = Date.now();
     const timeDiff = now - this.lastErrorTime;
-    
-    if (timeDiff < 60000) { // Within 1 minute
+
+    if (timeDiff < 60000) {
+      // Within 1 minute
       this.errorRateLimit++;
       if (this.errorRateLimit > this.config.maxErrorsPerMinute) {
         return false;
@@ -455,7 +483,7 @@ console.warn('Failed to setup performance error handler:', error);
     } else {
       this.errorRateLimit = 1;
     }
-    
+
     this.lastErrorTime = now;
     return true;
   }
@@ -466,7 +494,10 @@ console.warn('Failed to setup performance error handler:', error);
   private updateErrorCounts(errorReport: ErrorReport): void {
     const key = `${errorReport.type}_${errorReport.category}`;
     this.errorCounts.set(key, (this.errorCounts.get(key) || 0) + 1);
-    this.errorCategories.set(errorReport.category, (this.errorCategories.get(errorReport.category) || 0) + 1);
+    this.errorCategories.set(
+      errorReport.category,
+      (this.errorCategories.get(errorReport.category) || 0) + 1
+    );
   }
 
   /**
@@ -474,25 +505,25 @@ console.warn('Failed to setup performance error handler:', error);
    */
   private logError(errorReport: ErrorReport): void {
     const emoji = this.getSeverityEmoji(errorReport.severity);
-     
+    // eslint-disable-next-line no-console
     console.group(`${emoji} Error Report: ${errorReport.id}`);
-     
+    // eslint-disable-next-line no-console
     console.error('Message:', errorReport.message);
-     
-console.error('Type:', errorReport.type);
-     
-console.error('Severity:', errorReport.severity);
-     
-console.error('Category:', errorReport.category);
-     
-console.error('Context:', errorReport.context);
-     
-console.error('Metadata:', errorReport.metadata);
+    // eslint-disable-next-line no-console
+    console.error('Type:', errorReport.type);
+    // eslint-disable-next-line no-console
+    console.error('Severity:', errorReport.severity);
+    // eslint-disable-next-line no-console
+    console.error('Category:', errorReport.category);
+    // eslint-disable-next-line no-console
+    console.error('Context:', errorReport.context);
+    // eslint-disable-next-line no-console
+    console.error('Metadata:', errorReport.metadata);
     if (errorReport.stack) {
-       
-console.error('Stack:', errorReport.stack);
+      // eslint-disable-next-line no-console
+      console.error('Stack:', errorReport.stack);
     }
-     
+    // eslint-disable-next-line no-console
     console.groupEnd();
   }
 
@@ -501,11 +532,16 @@ console.error('Stack:', errorReport.stack);
    */
   private getSeverityEmoji(severity: ErrorReport['severity']): string {
     switch (severity) {
-      case 'critical': return '🚨';
-      case 'high': return '🔴';
-      case 'medium': return '🟡';
-      case 'low': return '🟢';
-      default: return '❓';
+      case 'critical':
+        return '🚨';
+      case 'high':
+        return '🔴';
+      case 'medium':
+        return '🟡';
+      case 'low':
+        return '🟢';
+      default:
+        return '❓';
     }
   }
 
@@ -520,13 +556,13 @@ console.error('Stack:', errorReport.stack);
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': `Bearer ${this.config.apiKey}`,
+          Authorization: `Bearer ${this.config.apiKey}`,
         },
         body: JSON.stringify(errorReport),
       });
     } catch (error) {
-       
-console.warn('Failed to report error to remote service:', error);
+      // eslint-disable-next-line no-console
+      console.warn('Failed to report error to remote service:', error);
     }
   }
 
@@ -535,17 +571,22 @@ console.warn('Failed to report error to remote service:', error);
    */
   private aggregateError(errorReport: ErrorReport): void {
     // This could be expanded to include more sophisticated aggregation
-     
-console.log(`📊 Error aggregated: ${errorReport.type} - ${errorReport.category}`);
+    // eslint-disable-next-line no-console
+    console.log(
+      `📊 Error aggregated: ${errorReport.type} - ${errorReport.category}`
+    );
   }
 
   /**
    * Assess performance impact
    */
   private assessPerformanceImpact(errorReport: ErrorReport): void {
-    if (errorReport.type === 'resource' || errorReport.category === 'performance') {
-       
-console.warn('⚠️ Performance impact detected from error');
+    if (
+      errorReport.type === 'resource' ||
+      errorReport.category === 'performance'
+    ) {
+      // eslint-disable-next-line no-console
+      console.warn('⚠️ Performance impact detected from error');
     }
   }
 
@@ -554,13 +595,14 @@ console.warn('⚠️ Performance impact detected from error');
    */
   private attemptErrorRecovery(): void {
     const recentErrors = this.errors.filter(
-      error => !error.resolved && 
-      Date.now() - new Date(error.context.timestamp).getTime() < 300000 // Last 5 minutes
+      error =>
+        !error.resolved &&
+        Date.now() - new Date(error.context.timestamp).getTime() < 300000 // Last 5 minutes
     );
 
     if (recentErrors.length > 5) {
-       
-console.log('🔄 Attempting error recovery...');
+      // eslint-disable-next-line no-console
+      console.log('🔄 Attempting error recovery...');
       // Implement recovery strategies here
       this.clearErrorState();
     }
@@ -574,9 +616,9 @@ console.log('🔄 Attempting error recovery...');
     this.errorCounts.clear();
     this.errorCategories.clear();
     this.errorRateLimit = 0;
-    
-     
-console.log('🧹 Error state cleared');
+
+    // eslint-disable-next-line no-console
+    console.log('🧹 Error state cleared');
   }
 
   /**
@@ -585,13 +627,13 @@ console.log('🧹 Error state cleared');
   private cleanupOldErrors(): void {
     const cutoffDate = new Date();
     cutoffDate.setDate(cutoffDate.getDate() - this.config.errorRetentionDays);
-    
+
     this.errors = this.errors.filter(
       error => new Date(error.context.timestamp) > cutoffDate
     );
-    
-     
-console.log(`🧹 Cleaned up old errors, ${this.errors.length} remaining`);
+
+    // eslint-disable-next-line no-console
+    console.log(`🧹 Cleaned up old errors, ${this.errors.length} remaining`);
   }
 
   /**
@@ -610,13 +652,19 @@ console.log(`🧹 Cleaned up old errors, ${this.errors.length} remaining`);
 
     this.errors.forEach(error => {
       errorsByType[error.type] = (errorsByType[error.type] || 0) + 1;
-      errorsByCategory[error.category] = (errorsByCategory[error.category] || 0) + 1;
-      errorsBySeverity[error.severity] = (errorsBySeverity[error.severity] || 0) + 1;
+      errorsByCategory[error.category] =
+        (errorsByCategory[error.category] || 0) + 1;
+      errorsBySeverity[error.severity] =
+        (errorsBySeverity[error.severity] || 0) + 1;
     });
 
     const recentErrors = this.errors
       .filter(error => !error.resolved)
-      .sort((a, b) => new Date(b.context.timestamp).getTime() - new Date(a.context.timestamp).getTime())
+      .sort(
+        (a, b) =>
+          new Date(b.context.timestamp).getTime() -
+          new Date(a.context.timestamp).getTime()
+      )
       .slice(0, 10);
 
     return {
@@ -632,12 +680,16 @@ console.log(`🧹 Cleaned up old errors, ${this.errors.length} remaining`);
    * Export error data
    */
   public exportErrorData(): string {
-    return JSON.stringify({
-      errors: this.errors,
-      statistics: this.getErrorStatistics(),
-      config: this.config,
-      timestamp: new Date().toISOString(),
-    }, null, 2);
+    return JSON.stringify(
+      {
+        errors: this.errors,
+        statistics: this.getErrorStatistics(),
+        config: this.config,
+        timestamp: new Date().toISOString(),
+      },
+      null,
+      2
+    );
   }
 
   /**
@@ -649,7 +701,7 @@ console.log(`🧹 Cleaned up old errors, ${this.errors.length} remaining`);
       message,
       ...context,
     });
-    
+
     this.processError(errorReport);
     return errorReport.id;
   }
@@ -659,4 +711,9 @@ console.log(`🧹 Cleaned up old errors, ${this.errors.length} remaining`);
 export const errorHandler = new EnhancedErrorHandler();
 
 // Export class for custom instances
-export { EnhancedErrorHandler, type ErrorReport, type ErrorContext, type ErrorHandlerConfig };
+export {
+  EnhancedErrorHandler,
+  type ErrorReport,
+  type ErrorContext,
+  type ErrorHandlerConfig,
+};

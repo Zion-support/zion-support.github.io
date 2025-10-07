@@ -9,13 +9,13 @@ function ensureDataDir(): void {
   if (!fs.existsSync(DATA_DIR)) {
     fs.mkdirSync(DATA_DIR, { recursive: true });
   }
-  
+
   if (!fs.existsSync(STATE_FILE)) {
     const initial: IntegrationsState = {
       connections: [],
       logs: [],
       overrides: [],
-      events: []
+      events: [],
     };
     fs.writeFileSync(STATE_FILE, JSON.stringify(initial, null, 2), 'utf8');
   }
@@ -23,7 +23,7 @@ function ensureDataDir(): void {
 
 export function readState(): IntegrationsState {
   ensureDataDir();
-  
+
   try {
     const raw = fs.readFileSync(STATE_FILE, 'utf8');
     return JSON.parse(raw) as IntegrationsState;
@@ -32,7 +32,7 @@ export function readState(): IntegrationsState {
       connections: [],
       logs: [],
       overrides: [],
-      events: []
+      events: [],
     };
     fs.writeFileSync(STATE_FILE, JSON.stringify(initial, null, 2), 'utf8');
     return initial;
@@ -71,10 +71,10 @@ export class FileStore {
   async writeFile(filePath: string, content: string): Promise<void> {
     const fullPath = path.join(this.basePath, filePath);
     const dir = path.dirname(fullPath);
-    
+
     // Ensure directory exists
     await fs.promises.mkdir(dir, { recursive: true });
-    
+
     return fs.promises.writeFile(fullPath, content, this.encoding);
   }
 
@@ -112,4 +112,5 @@ export class FileStore {
   }
 }
 
-export const createFileStore = (options: FileStoreOptions) => new FileStore(options);
+export const createFileStore = (options: FileStoreOptions) =>
+  new FileStore(options);

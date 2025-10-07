@@ -1,46 +1,60 @@
-'use client';
-
 /**
  * System Monitor Component
  * Real-time monitoring dashboard for performance, errors, and system health
  */
 
 import React, { useState, useEffect, useCallback } from 'react';
-import { PerformanceMonitor } from '../utils/performanceEnhancer';
+import {
+  // getMemoryUsage,
+  collectPerformanceMetrics,
+} from '../utils/performanceEnhancer';
 import { errorHandler } from '../utils/enhancedErrorHandler';
 
 // Helper functions
 const calculatePerformanceScore = () => {
-  const monitor = PerformanceMonitor.getInstance();
-  const metrics = monitor.getMetrics();
-  if (!metrics || Object.keys(metrics).length === 0) return 0;
-  
+  const metrics = collectPerformanceMetrics();
+  if (!metrics) return 0;
+
   let score = 100;
-  
-  // Deduct points for slow render times
-  const renderTimes = Object.values(metrics).filter(value => typeof value === 'number') as number[];
-  const avgRenderTime = renderTimes.length > 0 ? renderTimes.reduce((a, b) => a + b, 0) / renderTimes.length : 0;
-  
-  if (avgRenderTime > 16) score -= 10; // 60fps threshold
-  if (avgRenderTime > 33) score -= 20; // 30fps threshold
-  if (avgRenderTime > 100) score -= 30; // Very slow
-  
+
+  // Deduct points for slow load times
+  if (metrics.navigation.totalTime > 3000) score -= 20;
+  if (metrics.navigation.totalTime > 5000) score -= 30;
+
+  // Deduct points for slow paint times
+  if (metrics.paint.firstContentfulPaint > 2000) score -= 15;
+  if (metrics.paint.firstContentfulPaint > 3000) score -= 25;
+
   return Math.max(0, score);
 };
 
-// Network connection interface
-interface NetworkConnection {
-  effectiveType?: string;
-  downlink?: number;
-  rtt?: number;
-  saveData?: boolean;
-}
+// const getMemoryInfo = () => {
+//   const memory = getMemoryUsage();
+//   return memory
+//     ? {
+//         used: memory.used,
+//         total: memory.total,
+//         limit: memory.limit,
+//         percentage: memory.percentage,
+//       }
+//     : null;
+// };
 
-interface NavigatorWithConnection extends Navigator {
-  connection?: NetworkConnection;
-  mozConnection?: NetworkConnection;
-  webkitConnection?: NetworkConnection;
-}
+// const getNetworkInfo = () => {
+//   if (typeof navigator === 'undefined') return null;
+
+//   const connection =
+//     (navigator as unknown as { connection?: unknown }).connection ||
+//     (navigator as unknown as { mozConnection?: unknown }).mozConnection ||
+//     (navigator as unknown as { webkitConnection?: unknown }).webkitConnection;
+//   return connection
+//     ? {
+//         effectiveType: connection.effectiveType,
+//         downlink: connection.downlink,
+//         rtt: connection.rtt,
+//       }
+//     : null;
+// };
 
 interface SystemMetrics {
   performance: {
@@ -98,8 +112,7 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
   // Update metrics
   const updateMetrics = useCallback(() => {
     try {
-      const monitor = PerformanceMonitor.getInstance();
-      const performanceMetrics = monitor.getMetrics();
+      const performanceMetrics = collectPerformanceMetrics();
       const performanceScore = calculatePerformanceScore();
       const errorStats = errorHandler.getErrorStatistics();
 
@@ -112,8 +125,9 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
       const newMetrics: SystemMetrics = {
         performance: {
           score: performanceScore,
-          loadTime: 0, // Not available in current metrics
-          firstContentfulPaint: 0, // Not available in current metrics
+          loadTime: performanceMetrics?.navigation?.totalTime || 0,
+          firstContentfulPaint:
+            performanceMetrics?.paint?.firstContentfulPaint || 0,
           largestContentfulPaint: 0, // Not available in current metrics
           firstInputDelay: 0, // Not available in current metrics
           cumulativeLayoutShift: 0, // Not available in current metrics
@@ -138,8 +152,8 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
       setMetrics(newMetrics);
       setLastUpdate(new Date());
     } catch (error) {
-       
-console.error('Failed to update metrics:', error);
+      // eslint-disable-next-line no-console
+      console.error('Failed to update metrics:', error);
     }
   }, []);
 
@@ -170,7 +184,15 @@ console.error('Failed to update metrics:', error);
   // Get memory information
   const getMemoryInfo = () => {
     if ('memory' in performance) {
-      const memory = (performance as Performance & { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
+      const memory = (
+        performance as Performance & {
+          memory: {
+            usedJSHeapSize: number;
+            totalJSHeapSize: number;
+            jsHeapSizeLimit: number;
+          };
+        }
+      ).memory;
       const used = memory.usedJSHeapSize / 1024 / 1024; // MB
       const total = memory.totalJSHeapSize / 1024 / 1024; // MB
       const limit = memory.jsHeapSizeLimit / 1024 / 1024; // MB
@@ -185,12 +207,20 @@ console.error('Failed to update metrics:', error);
   // Get network information
   const getNetworkInfo = () => {
     if ('connection' in navigator) {
-      const nav = navigator as NavigatorWithConnection;
-      const connection = nav.connection;
+      const connection = (
+        navigator as Navigator & {
+          connection: {
+            effectiveType?: string;
+            downlink?: number;
+            rtt?: number;
+            saveData?: boolean;
+          };
+        }
+      ).connection;
       return {
-        effectiveType: connection?.effectiveType || 'unknown',
-        downlink: connection?.downlink || 0,
-        rtt: connection?.rtt || 0,
+        effectiveType: connection.effectiveType || 'unknown',
+        downlink: connection.downlink || 0,
+        rtt: connection.rtt || 0,
         saveData: connection.saveData || false,
       };
     }
@@ -209,7 +239,7 @@ console.error('Failed to update metrics:', error);
 
     const exportData = {
       metrics,
-      performanceData: PerformanceMonitor.getInstance().getMetrics(),
+      performanceData: collectPerformanceMetrics(),
       errorData: errorHandler.exportErrorData(),
       timestamp: new Date().toISOString(),
     };
@@ -237,20 +267,25 @@ console.error('Failed to update metrics:', error);
   // Get severity color
   const getSeverityColor = (severity: string) => {
     switch (severity) {
-      case 'critical': return 'text-red-600 bg-red-100';
-      case 'high': return 'text-red-500 bg-red-50';
-      case 'medium': return 'text-yellow-600 bg-yellow-100';
-      case 'low': return 'text-green-600 bg-green-100';
-      default: return 'text-gray-600 bg-gray-100';
+      case 'critical':
+        return 'text-red-600 bg-red-100';
+      case 'high':
+        return 'text-red-500 bg-red-50';
+      case 'medium':
+        return 'text-yellow-600 bg-yellow-100';
+      case 'low':
+        return 'text-green-600 bg-green-100';
+      default:
+        return 'text-gray-600 bg-gray-100';
     }
   };
 
   if (!metrics) {
     return (
       <div className={`p-4 bg-gray-100 rounded-lg ${className}`}>
-        <div className="flex items-center justify-center">
-          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
-          <span className="ml-2 text-gray-600">Loading system metrics...</span>
+        <div className='flex items-center justify-center'>
+          <div className='animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600'></div>
+          <span className='ml-2 text-gray-600'>Loading system metrics...</span>
         </div>
       </div>
     );
@@ -258,19 +293,21 @@ console.error('Failed to update metrics:', error);
 
   return (
     <div className={`bg-white rounded-lg shadow-lg p-6 ${className}`}>
-      <div className="flex items-center justify-between mb-6">
-        <h2 className="text-2xl font-bold text-gray-900">System Monitor</h2>
-        <div className="flex items-center space-x-4">
-          <div className="flex items-center space-x-2">
-            <div className={`w-3 h-3 rounded-full ${isMonitoring ? 'bg-green-500' : 'bg-red-500'}`}></div>
-            <span className="text-sm text-gray-600">
+      <div className='flex items-center justify-between mb-6'>
+        <h2 className='text-2xl font-bold text-gray-900'>System Monitor</h2>
+        <div className='flex items-center space-x-4'>
+          <div className='flex items-center space-x-2'>
+            <div
+              className={`w-3 h-3 rounded-full ${isMonitoring ? 'bg-green-500' : 'bg-red-500'}`}
+            ></div>
+            <span className='text-sm text-gray-600'>
               {isMonitoring ? 'Monitoring' : 'Stopped'}
             </span>
           </div>
           {enableExport && (
             <button
               onClick={handleExport}
-              className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className='px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500'
             >
               Export Data
             </button>
@@ -279,59 +316,67 @@ console.error('Failed to update metrics:', error);
       </div>
 
       {lastUpdate && (
-        <p className="text-sm text-gray-500 mb-4">
+        <p className='text-sm text-gray-500 mb-4'>
           Last updated: {lastUpdate.toLocaleTimeString()}
         </p>
       )}
 
       {/* Performance Metrics */}
-      <div className="mb-8">
-        <h3 className="text-lg font-semibold text-gray-900 mb-4">Performance</h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          <div className="bg-gray-50 p-4 rounded-lg">
-            <div className="flex items-center justify-between">
-              <span className="text-sm font-medium text-gray-600">Performance Score</span>
-              <span className={`text-2xl font-bold ${getPerformanceScoreColor(metrics.performance.score)}`}>
+      <div className='mb-8'>
+        <h3 className='text-lg font-semibold text-gray-900 mb-4'>
+          Performance
+        </h3>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
+          <div className='bg-gray-50 p-4 rounded-lg'>
+            <div className='flex items-center justify-between'>
+              <span className='text-sm font-medium text-gray-600'>
+                Performance Score
+              </span>
+              <span
+                className={`text-2xl font-bold ${getPerformanceScoreColor(metrics.performance.score)}`}
+              >
                 {metrics.performance.score}
               </span>
             </div>
           </div>
-          <div className="bg-gray-50 p-4 rounded-lg">
-            <div className="flex items-center justify-between">
-              <span className="text-sm font-medium text-gray-600">Load Time</span>
-              <span className="text-lg font-semibold text-gray-900">
+          <div className='bg-gray-50 p-4 rounded-lg'>
+            <div className='flex items-center justify-between'>
+              <span className='text-sm font-medium text-gray-600'>
+                Load Time
+              </span>
+              <span className='text-lg font-semibold text-gray-900'>
                 {metrics.performance.loadTime.toFixed(0)}ms
               </span>
             </div>
           </div>
-          <div className="bg-gray-50 p-4 rounded-lg">
-            <div className="flex items-center justify-between">
-              <span className="text-sm font-medium text-gray-600">FCP</span>
-              <span className="text-lg font-semibold text-gray-900">
+          <div className='bg-gray-50 p-4 rounded-lg'>
+            <div className='flex items-center justify-between'>
+              <span className='text-sm font-medium text-gray-600'>FCP</span>
+              <span className='text-lg font-semibold text-gray-900'>
                 {metrics.performance.firstContentfulPaint.toFixed(0)}ms
               </span>
             </div>
           </div>
-          <div className="bg-gray-50 p-4 rounded-lg">
-            <div className="flex items-center justify-between">
-              <span className="text-sm font-medium text-gray-600">LCP</span>
-              <span className="text-lg font-semibold text-gray-900">
+          <div className='bg-gray-50 p-4 rounded-lg'>
+            <div className='flex items-center justify-between'>
+              <span className='text-sm font-medium text-gray-600'>LCP</span>
+              <span className='text-lg font-semibold text-gray-900'>
                 {metrics.performance.largestContentfulPaint.toFixed(0)}ms
               </span>
             </div>
           </div>
-          <div className="bg-gray-50 p-4 rounded-lg">
-            <div className="flex items-center justify-between">
-              <span className="text-sm font-medium text-gray-600">FID</span>
-              <span className="text-lg font-semibold text-gray-900">
+          <div className='bg-gray-50 p-4 rounded-lg'>
+            <div className='flex items-center justify-between'>
+              <span className='text-sm font-medium text-gray-600'>FID</span>
+              <span className='text-lg font-semibold text-gray-900'>
                 {metrics.performance.firstInputDelay.toFixed(0)}ms
               </span>
             </div>
           </div>
-          <div className="bg-gray-50 p-4 rounded-lg">
-            <div className="flex items-center justify-between">
-              <span className="text-sm font-medium text-gray-600">CLS</span>
-              <span className="text-lg font-semibold text-gray-900">
+          <div className='bg-gray-50 p-4 rounded-lg'>
+            <div className='flex items-center justify-between'>
+              <span className='text-sm font-medium text-gray-600'>CLS</span>
+              <span className='text-lg font-semibold text-gray-900'>
                 {metrics.performance.cumulativeLayoutShift.toFixed(3)}
               </span>
             </div>
@@ -340,37 +385,41 @@ console.error('Failed to update metrics:', error);
       </div>
 
       {/* Error Metrics */}
-      <div className="mb-8">
-        <h3 className="text-lg font-semibold text-gray-900 mb-4">Errors</h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-          <div className="bg-gray-50 p-4 rounded-lg">
-            <div className="flex items-center justify-between">
-              <span className="text-sm font-medium text-gray-600">Total Errors</span>
-              <span className="text-2xl font-bold text-red-600">
+      <div className='mb-8'>
+        <h3 className='text-lg font-semibold text-gray-900 mb-4'>Errors</h3>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4'>
+          <div className='bg-gray-50 p-4 rounded-lg'>
+            <div className='flex items-center justify-between'>
+              <span className='text-sm font-medium text-gray-600'>
+                Total Errors
+              </span>
+              <span className='text-2xl font-bold text-red-600'>
                 {metrics.errors.total}
               </span>
             </div>
           </div>
-          <div className="bg-gray-50 p-4 rounded-lg">
-            <div className="flex items-center justify-between">
-              <span className="text-sm font-medium text-gray-600">Critical</span>
-              <span className="text-lg font-semibold text-red-600">
+          <div className='bg-gray-50 p-4 rounded-lg'>
+            <div className='flex items-center justify-between'>
+              <span className='text-sm font-medium text-gray-600'>
+                Critical
+              </span>
+              <span className='text-lg font-semibold text-red-600'>
                 {metrics.errors.bySeverity.critical || 0}
               </span>
             </div>
           </div>
-          <div className="bg-gray-50 p-4 rounded-lg">
-            <div className="flex items-center justify-between">
-              <span className="text-sm font-medium text-gray-600">High</span>
-              <span className="text-lg font-semibold text-red-500">
+          <div className='bg-gray-50 p-4 rounded-lg'>
+            <div className='flex items-center justify-between'>
+              <span className='text-sm font-medium text-gray-600'>High</span>
+              <span className='text-lg font-semibold text-red-500'>
                 {metrics.errors.bySeverity.high || 0}
               </span>
             </div>
           </div>
-          <div className="bg-gray-50 p-4 rounded-lg">
-            <div className="flex items-center justify-between">
-              <span className="text-sm font-medium text-gray-600">Medium</span>
-              <span className="text-lg font-semibold text-yellow-600">
+          <div className='bg-gray-50 p-4 rounded-lg'>
+            <div className='flex items-center justify-between'>
+              <span className='text-sm font-medium text-gray-600'>Medium</span>
+              <span className='text-lg font-semibold text-yellow-600'>
                 {metrics.errors.bySeverity.medium || 0}
               </span>
             </div>
@@ -379,51 +428,60 @@ console.error('Failed to update metrics:', error);
       </div>
 
       {/* Memory and Network */}
-      <div className="mb-8">
-        <h3 className="text-lg font-semibold text-gray-900 mb-4">System Resources</h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div className="bg-gray-50 p-4 rounded-lg">
-            <h4 className="text-sm font-medium text-gray-600 mb-2">Memory Usage</h4>
-            <div className="space-y-2">
-              <div className="flex justify-between text-sm">
+      <div className='mb-8'>
+        <h3 className='text-lg font-semibold text-gray-900 mb-4'>
+          System Resources
+        </h3>
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+          <div className='bg-gray-50 p-4 rounded-lg'>
+            <h4 className='text-sm font-medium text-gray-600 mb-2'>
+              Memory Usage
+            </h4>
+            <div className='space-y-2'>
+              <div className='flex justify-between text-sm'>
                 <span>Used</span>
                 <span>{metrics.memory.used.toFixed(2)} MB</span>
               </div>
-              <div className="flex justify-between text-sm">
+              <div className='flex justify-between text-sm'>
                 <span>Total</span>
                 <span>{metrics.memory.total.toFixed(2)} MB</span>
               </div>
-              <div className="flex justify-between text-sm">
+              <div className='flex justify-between text-sm'>
                 <span>Limit</span>
                 <span>{metrics.memory.limit.toFixed(2)} MB</span>
               </div>
-              <div className="w-full bg-gray-200 rounded-full h-2">
+              <div className='w-full bg-gray-200 rounded-full h-2'>
                 <div
                   className={`h-2 rounded-full ${
-                    metrics.memory.percentage > 80 ? 'bg-red-500' :
-                    metrics.memory.percentage > 60 ? 'bg-yellow-500' : 'bg-green-500'
+                    metrics.memory.percentage > 80
+                      ? 'bg-red-500'
+                      : metrics.memory.percentage > 60
+                        ? 'bg-yellow-500'
+                        : 'bg-green-500'
                   }`}
-                  style={{ width: `${Math.min(metrics.memory.percentage, 100)}%` }}
+                  style={{
+                    width: `${Math.min(metrics.memory.percentage, 100)}%`,
+                  }}
                 ></div>
               </div>
             </div>
           </div>
-          <div className="bg-gray-50 p-4 rounded-lg">
-            <h4 className="text-sm font-medium text-gray-600 mb-2">Network</h4>
-            <div className="space-y-2">
-              <div className="flex justify-between text-sm">
+          <div className='bg-gray-50 p-4 rounded-lg'>
+            <h4 className='text-sm font-medium text-gray-600 mb-2'>Network</h4>
+            <div className='space-y-2'>
+              <div className='flex justify-between text-sm'>
                 <span>Connection</span>
                 <span>{metrics.network.effectiveType}</span>
               </div>
-              <div className="flex justify-between text-sm">
+              <div className='flex justify-between text-sm'>
                 <span>Downlink</span>
                 <span>{metrics.network.downlink} Mbps</span>
               </div>
-              <div className="flex justify-between text-sm">
+              <div className='flex justify-between text-sm'>
                 <span>RTT</span>
                 <span>{metrics.network.rtt} ms</span>
               </div>
-              <div className="flex justify-between text-sm">
+              <div className='flex justify-between text-sm'>
                 <span>Save Data</span>
                 <span>{metrics.network.saveData ? 'Yes' : 'No'}</span>
               </div>
@@ -434,18 +492,24 @@ console.error('Failed to update metrics:', error);
 
       {/* Recent Errors */}
       {showDetails && metrics.errors.recent.length > 0 && (
-        <div className="mb-8">
-          <h3 className="text-lg font-semibold text-gray-900 mb-4">Recent Errors</h3>
-          <div className="space-y-2 max-h-64 overflow-y-auto">
-            {metrics.errors.recent.map((error) => (
-              <div key={error.id} className="bg-gray-50 p-3 rounded-lg">
-                <div className="flex items-center justify-between mb-2">
-                  <span className="text-sm font-medium text-gray-900">{error.message}</span>
-                  <span className={`px-2 py-1 rounded-full text-xs font-medium ${getSeverityColor(error.severity)}`}>
+        <div className='mb-8'>
+          <h3 className='text-lg font-semibold text-gray-900 mb-4'>
+            Recent Errors
+          </h3>
+          <div className='space-y-2 max-h-64 overflow-y-auto'>
+            {metrics.errors.recent.map(error => (
+              <div key={error.id} className='bg-gray-50 p-3 rounded-lg'>
+                <div className='flex items-center justify-between mb-2'>
+                  <span className='text-sm font-medium text-gray-900'>
+                    {error.message}
+                  </span>
+                  <span
+                    className={`px-2 py-1 rounded-full text-xs font-medium ${getSeverityColor(error.severity)}`}
+                  >
                     {error.severity}
                   </span>
                 </div>
-                <div className="flex items-center justify-between text-xs text-gray-500">
+                <div className='flex items-center justify-between text-xs text-gray-500'>
                   <span>{error.type}</span>
                   <span>{new Date(error.timestamp).toLocaleTimeString()}</span>
                 </div>
@@ -457,29 +521,40 @@ console.error('Failed to update metrics:', error);
 
       {/* Error Distribution */}
       {showDetails && (
-        <div className="mb-8">
-          <h3 className="text-lg font-semibold text-gray-900 mb-4">Error Distribution</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div className="bg-gray-50 p-4 rounded-lg">
-              <h4 className="text-sm font-medium text-gray-600 mb-2">By Type</h4>
-              <div className="space-y-1">
+        <div className='mb-8'>
+          <h3 className='text-lg font-semibold text-gray-900 mb-4'>
+            Error Distribution
+          </h3>
+          <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+            <div className='bg-gray-50 p-4 rounded-lg'>
+              <h4 className='text-sm font-medium text-gray-600 mb-2'>
+                By Type
+              </h4>
+              <div className='space-y-1'>
                 {Object.entries(metrics.errors.byType).map(([type, count]) => (
-                  <div key={type} className="flex justify-between text-sm">
-                    <span className="capitalize">{type}</span>
+                  <div key={type} className='flex justify-between text-sm'>
+                    <span className='capitalize'>{type}</span>
                     <span>{count}</span>
                   </div>
                 ))}
               </div>
             </div>
-            <div className="bg-gray-50 p-4 rounded-lg">
-              <h4 className="text-sm font-medium text-gray-600 mb-2">By Category</h4>
-              <div className="space-y-1">
-                {Object.entries(metrics.errors.byCategory).map(([category, count]) => (
-                  <div key={category} className="flex justify-between text-sm">
-                    <span className="capitalize">{category}</span>
-                    <span>{count}</span>
-                  </div>
-                ))}
+            <div className='bg-gray-50 p-4 rounded-lg'>
+              <h4 className='text-sm font-medium text-gray-600 mb-2'>
+                By Category
+              </h4>
+              <div className='space-y-1'>
+                {Object.entries(metrics.errors.byCategory).map(
+                  ([category, count]) => (
+                    <div
+                      key={category}
+                      className='flex justify-between text-sm'
+                    >
+                      <span className='capitalize'>{category}</span>
+                      <span>{count}</span>
+                    </div>
+                  )
+                )}
               </div>
             </div>
           </div>

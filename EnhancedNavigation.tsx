@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const EnhancedNavigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
-  
+
   const navigationItems = [
     { name: 'Home', href: '/' },
     { name: 'Services', href: '/services' },

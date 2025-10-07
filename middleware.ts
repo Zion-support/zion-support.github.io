@@ -2,13 +2,13 @@ import { NextResponse } from 'next/server';
 
 export function middleware() {
   const response = NextResponse.next();
-  
+
   // Security headers
   response.headers.set('X-Frame-Options', 'DENY');
   response.headers.set('X-Content-Type-Options', 'nosniff');
   response.headers.set('Referrer-Policy', 'origin-when-cross-origin');
   response.headers.set('X-XSS-Protection', '1; mode=block');
-  
+
   // Content Security Policy
   const csp = [
     "default-src 'self'",
@@ -19,9 +19,9 @@ export function middleware() {
     "connect-src 'self'",
     "frame-ancestors 'none'",
   ].join(' ');
-  
+
   response.headers.set('Content-Security-Policy', csp);
-  
+
   return response;
 }
 
