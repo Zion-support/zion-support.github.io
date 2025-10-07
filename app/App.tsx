@@ -1,7 +1,11 @@
-import React, { Suspense, lazy, useEffect } from 'react';
-import Link from 'next/link';
+import React, { useEffect, lazy, Suspense } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
+
+// Components
+import SEOOptimizer from './components/SEOOptimizer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
+import PerformanceDashboard from './components/PerformanceDashboard';
 
 // Loading component
 const LoadingSpinner = () => (
@@ -18,35 +22,79 @@ const ErrorBoundary = ({ children }: { children: React.ReactNode }) => {
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./page'));
 
+// Utils
+import { performanceOptimizer, collectPerformanceMetrics } from './utils/performanceOptimizer';
+
 // Styles
 import '../index.css';
 
 const App: React.FC = () => {
   useEffect(() => {
     // Initialize global error handling
-    window.addEventListener('error', (event) => {
-      console.error('Global error:', event.error);
-    });
+    console.log('App initialized');
 
-    window.addEventListener('unhandledrejection', (event) => {
-      console.error('Unhandled promise rejection:', event.reason);
-    });
-
-    return () => {
-      // Cleanup
-    };
+    // Initialize performance monitoring
+    performanceOptimizer.init();
+    
+    // Initialize Web Vitals monitoring
+    if (typeof window !== 'undefined' && 'performance' in window) {
+      const pageLoadMetrics = collectPerformanceMetrics();
+      const metrics = performanceOptimizer.getMetrics();
+      if (pageLoadMetrics) {
+        // eslint-disable-next-line no-console
+        console.log('Performance metrics collected:', pageLoadMetrics);
+      }
+      if (metrics) {
+        // eslint-disable-next-line no-console
+        console.log('Performance metrics:', metrics);
+      }
+    }
+    
+    // eslint-disable-next-line no-console
+    console.log('Performance monitoring initialized');
+    // eslint-disable-next-line no-console
+    console.log('🚀 Zion Tech Group App initialized with comprehensive monitoring');
   }, []);
 
   return (
     <HelmetProvider>
       <ErrorBoundary>
-        <AccessibilityEnhancer>
-          <div className="min-h-screen bg-gray-50">
-            <Suspense fallback={<LoadingSpinner />}>
-              <HomePage />
-            </Suspense>
-          </div>
-        </AccessibilityEnhancer>
+        <div>
+          <SEOOptimizer />
+          <AccessibilityEnhancer>
+            <Router>
+              <div className='App'>
+                {/* Skip to main content link for accessibility */}
+                <a
+                  href='#main-content'
+                  className='skip-link sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50'
+                  onClick={e => {
+                    e.preventDefault();
+                    const main =
+                      document.querySelector('main') ||
+                      document.querySelector('#main-content');
+                    if (main) {
+                      main.focus();
+                      main.scrollIntoView({ behavior: 'smooth' });
+                    }
+                  }}
+                >
+                  Skip to main content
+                </a>
+
+                <Suspense fallback={<LoadingSpinner />}>
+                  <Routes>
+                    <Route path='/' element={<HomePage />} />
+                    {/* Add more routes as needed */}
+                  </Routes>
+                </Suspense>
+
+                {/* Performance Dashboard */}
+                <PerformanceDashboard />
+              </div>
+            </Router>
+            </AccessibilityEnhancer>
+        </div>
       </ErrorBoundary>
     </HelmetProvider>
   );
