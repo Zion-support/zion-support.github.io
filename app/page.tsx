@@ -1,6 +1,7 @@
 import React, { Suspense, lazy } from 'react';
-import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+import SEOOptimizer from './components/SEOOptimizer';
+import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 
 // Lazy load components for better performance
 const ContentShowcase = lazy(() => import('./components/ContentShowcase'));
@@ -23,17 +24,12 @@ const LoadingFallback: React.FC<{ height?: string }> = ({
 const HomePage: React.FC = () => {
   return (
     <>
-      <Helmet>
-        <title>Zion Tech Group - Advanced AI and IT Solutions</title>
-        <meta
-          name='description'
-          content='Leading provider of AI-powered enterprise solutions, automation, and digital transformation services. Transform your business with cutting-edge AI micro SaaS services and cloud automation.'
-        />
-        <meta
-          name='keywords'
-          content='AI solutions, enterprise AI, digital transformation, automation, cloud services, AI consulting, business intelligence, machine learning, artificial intelligence, enterprise software'
-        />
-      </Helmet>
+      <SEOOptimizer 
+        title="Zion Tech Group - Advanced AI and IT Solutions"
+        description="Leading provider of AI-powered enterprise solutions, automation, and digital transformation services. Transform your business with cutting-edge AI micro SaaS services and cloud automation."
+        keywords={['AI solutions', 'enterprise AI', 'digital transformation', 'automation', 'cloud services', 'AI consulting', 'business intelligence', 'machine learning', 'artificial intelligence', 'enterprise software']}
+      />
+      <AccessibilityEnhancer />
 
       <div className='min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100'>
         <header className="bg-white shadow-sm sticky top-0 z-50">
