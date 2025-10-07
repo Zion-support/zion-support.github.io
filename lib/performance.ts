@@ -2,7 +2,8 @@
  * Performance Monitoring Utility
  * Tracks and reports web vitals and performance metrics
  */
-import { onCLS, onFCP, onLCP, onTTFB, type Metric } from 'web-vitals';
+import { onCLS, onFCP, onLCP, onTTFB } from 'web-vitals';
+import type { Metric } from 'web-vitals';
 
 // Extend Window interface for gtag
 declare global {
@@ -21,25 +22,22 @@ interface PerformanceMetric {
 }
 
 // Extended Performance interface for memory API
-interface PerformanceWithMemory extends Performance {
-  memory?: {
-    usedJSHeapSize: number;
-    totalJSHeapSize: number;
-    jsHeapSizeLimit: number;
-  };
+interface PerformanceMemory {
+  usedJSHeapSize: number;
+  totalJSHeapSize: number;
+  jsHeapSizeLimit: number;
 }
 
 // Network connection interface
 interface NetworkConnection {
-  effectiveType: string;
-  downlink: number;
-  rtt: number;
+  effectiveType?: string;
+  type?: string;
+  saveData?: boolean;
 }
 
 interface NavigatorWithConnection extends Navigator {
   connection?: NetworkConnection;
 }
-
 interface PerformanceReport {
   metrics: PerformanceMetric[];
   timestamp: string;
@@ -56,18 +54,25 @@ const THRESHOLDS = {
   TTFB: { good: 800, poor: 1800 },
 };
 
-// Get rating based on thresholds
-function getRating(name: string, value: number): 'good' | 'needs-improvement' | 'poor' {
+/**
+ * Get performance rating based on thresholds
+ */
+function getRating(
+  name: string,
+  value: number
+): 'good' | 'needs-improvement' | 'poor' {
   const threshold = THRESHOLDS[name as keyof typeof THRESHOLDS];
   if (!threshold) return 'good';
-  
+
   if (value <= threshold.good) return 'good';
   if (value <= threshold.poor) return 'needs-improvement';
   return 'poor';
 }
 
-// Convert metric to our format
-function convertMetric(metric: Metric): PerformanceMetric {
+/**
+ * Send performance data to analytics
+ */
+function sendToAnalytics(metric: Metric): void {
   const performanceMetric: PerformanceMetric = {
     name: metric.name,
     value: metric.value,
@@ -76,10 +81,10 @@ function convertMetric(metric: Metric): PerformanceMetric {
     id: metric.id,
   };
 
-  // Log in development (removed console.log for production)
-  // if (process.env.NODE_ENV === 'development') {
-  //   console.log('Performance Metric:', performanceMetric);
-  // }
+  // Log in development
+  if (process.env.NODE_ENV === 'development') {
+    console.log('Performance Metric:', performanceMetric);
+  }
 
   // Send to analytics
   if (typeof window !== 'undefined' && window.gtag) {
@@ -93,108 +98,276 @@ function convertMetric(metric: Metric): PerformanceMetric {
     });
   }
 
-  return performanceMetric;
+  // Send to custom endpoint
+  if (process.env.NEXT_PUBLIC_PERFORMANCE_ENDPOINT) {
+    fetch(process.env.NEXT_PUBLIC_PERFORMANCE_ENDPOINT, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        ...performanceMetric,
+        timestamp: new Date().toISOString(),
+        url: window.location.href,
+        userAgent: navigator.userAgent,
+      }),
+      keepalive: true,
+    }).catch(error => 
+    console.error('Performance reporting error:', error));
+  }
 }
 
-// Collect performance metrics
-export function collectPerformanceMetrics(): PerformanceReport {
-  const metrics: PerformanceMetric[] = [];
-  
-  // Collect Web Vitals
-  onCLS((metric) => metrics.push(convertMetric(metric)));
-  onFCP((metric) => metrics.push(convertMetric(metric)));
-  onLCP((metric) => metrics.push(convertMetric(metric)));
-  onTTFB((metric) => metrics.push(convertMetric(metric)));
+/**
+ * Initialize performance monitoring
+ */
+export function initPerformanceMonitoring(): void {
+  if (typeof window === 'undefined') return;
+
+  try {
+    // Core Web Vitals
+    onCLS(sendToAnalytics);
+    onFCP(sendToAnalytics);
+    onLCP(sendToAnalytics);
+    onTTFB(sendToAnalytics);
+  } catch (error) {
+    console.error('Error initializing performance monitoring:', error);
+  }
+}
+
+/**
+ * Generate performance report
+ */
+export function getPerformanceMetrics(): PerformanceMetric[] {
+  if (typeof window === 'undefined') return [];
+  return [];
+}
+
+/**
+ * Measure performance of a custom function
+ */
+export function measurePerformance(name: string, startTime: number): number {
+  const duration = performance.now() - startTime;
+
+  if (typeof window !== 'undefined' && window.gtag) {
+    window.gtag('event', 'timing_complete', {
+      name: name,
+      value: Math.round(duration),
+      event_category: 'Performance',
+    });
+  }
+
+  if (process.env.NODE_ENV === 'development') {
+    console.log(`Performance: ${name} took ${duration.toFixed(2)}ms`);
+  }
+
+  return duration;
+}
+
+/**
+ * Mark performance milestone
+ */
+export function markPerformance(name: string): void {
+  if (typeof performance === 'undefined') return;
+
+  try {
+    performance.mark(name);
+  } catch (error) {
+    console.error('Error marking performance:', error);
+  }
+}
+
+/**
+ * Measure between two performance marks
+ */
+export function measureBetween(
+  name: string,
+  startMark: string,
+  endMark: string
+): number {
+  if (typeof performance === 'undefined') return 0;
+
+  try {
+    performance.measure(name, startMark, endMark);
+    const measure = performance.getEntriesByName(name)[0] as PerformanceEntry;
+    return measure.duration;
+  } catch (error) {
+    console.error('Error measuring between marks:', error);
+    return 0;
+  }
+}
+
+/**
+ * Get navigation timing metrics
+ */
+export function getNavigationTiming(): Record<string, number> | null {
+  if (typeof window === 'undefined' || !window.performance) return null;
+
+  const navigation = performance.getEntriesByType(
+    'navigation'
+  )[0] as PerformanceNavigationTiming;
+  if (!navigation) return null;
 
   return {
-    metrics,
+    domContentLoaded:
+      navigation.domContentLoadedEventEnd -
+      navigation.domContentLoadedEventStart,
+    loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
+    domInteractive: navigation.domInteractive - navigation.fetchStart,
+    firstByte: navigation.responseStart - navigation.fetchStart,
+    dns: navigation.domainLookupEnd - navigation.domainLookupStart,
+    tcp: navigation.connectEnd - navigation.connectStart,
+    ssl: navigation.secureConnectionStart
+      ? navigation.connectEnd - navigation.secureConnectionStart
+      : 0,
+  };
+}
+
+/**
+ * Get resource timing data
+ */
+export function getResourceTiming(): PerformanceResourceTiming[] {
+  if (typeof window === 'undefined' || !window.performance) return [];
+
+  return performance.getEntriesByType(
+    'resource'
+  ) as PerformanceResourceTiming[];
+}
+
+/**
+ * Get slow resources
+ */
+export function getSlowResources(
+  threshold: number = 1000
+): PerformanceResourceTiming[] {
+  return getResourceTiming().filter(resource => resource.duration > threshold);
+}
+
+/**
+ * Get memory usage (Chrome only)
+ */
+export function getMemoryUsage(): Record<string, number> | null {
+  if (
+    typeof window === 'undefined' ||
+    !(
+      window as Window & {
+        performance: Performance & { memory?: PerformanceMemory };
+      }
+    ).performance?.memory
+  )
+    return null;
+
+  const memory = (
+    window as Window & {
+      performance: Performance & { memory?: PerformanceMemory };
+    }
+  ).performance.memory;
+  return {
+    usedJSHeapSize: memory.usedJSHeapSize,
+    totalJSHeapSize: memory.totalJSHeapSize,
+    jsHeapSizeLimit: memory.jsHeapSizeLimit,
+    usedPercentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100,
+  };
+}
+
+/**
+ * Generate performance report
+ */
+export function generatePerformanceReport(): PerformanceReport {
+  return {
+    metrics: [],
     timestamp: new Date().toISOString(),
     url: typeof window !== 'undefined' ? window.location.href : '',
     userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : '',
   };
 }
 
-// Monitor memory usage
-export function monitorMemoryUsage(): void {
-  if (typeof window !== 'undefined' && 'performance' in window) {
-    const performance = window.performance as PerformanceWithMemory;
-    
-    if (performance.memory) {
-      const memoryInfo = performance.memory;
-      const memoryUsage = {
-        used: Math.round(memoryInfo.usedJSHeapSize / 1048576), // Convert to MB
-        total: Math.round(memoryInfo.totalJSHeapSize / 1048576),
-        limit: Math.round(memoryInfo.jsHeapSizeLimit / 1048576),
-      };
+/**
+ * Monitor long tasks
+ */
+export function monitorLongTasks(
+  callback: (entries: PerformanceEntry[]) => void
+): PerformanceObserver | null {
+  if (typeof PerformanceObserver === 'undefined') return null;
 
-      // Log memory usage in development
-      if (process.env.NODE_ENV === 'development') {
-        console.log('Memory Usage:', memoryUsage);
-      }
-
-      // Send to analytics
-      if (window.gtag) {
-        window.gtag('event', 'memory_usage', {
-          event_category: 'Performance',
-          value: memoryUsage.used,
-          custom_parameters: {
-            total_memory: memoryUsage.total,
-            memory_limit: memoryUsage.limit,
-          },
-        });
-      }
-    }
+  try {
+    const observer = new PerformanceObserver(list => {
+      const entries = list.getEntries();
+      callback(entries);
+    });
+    observer.observe({ entryTypes: ['longtask'] });
+    return observer;
+  } catch (error) {
+    console.error('Error monitoring long tasks:', error);
+    return null;
   }
 }
 
-// Monitor network connection
-export function monitorNetworkConnection(): void {
-  if (typeof navigator !== 'undefined' && 'connection' in navigator) {
-    const connection = (navigator as NavigatorWithConnection).connection;
-    
-    if (connection) {
-      const networkInfo = {
-        effectiveType: connection.effectiveType,
-        downlink: connection.downlink,
-        rtt: connection.rtt,
-      };
+/**
+ * Monitor layout shifts
+ */
+export function monitorLayoutShifts(
+  callback: (entries: PerformanceEntry[]) => void
+): PerformanceObserver | null {
+  if (typeof PerformanceObserver === 'undefined') return null;
 
-      // Log network info in development
-      if (process.env.NODE_ENV === 'development') {
-        console.log('Network Connection:', networkInfo);
-      }
-
-      // Send to analytics
-      if (typeof window !== 'undefined' && window.gtag) {
-        window.gtag('event', 'network_connection', {
-          event_category: 'Performance',
-          custom_parameters: networkInfo,
-        });
-      }
-    }
+  try {
+    const observer = new PerformanceObserver(list => {
+      const entries = list.getEntries();
+      callback(entries);
+    });
+    observer.observe({ entryTypes: ['layout-shift'] });
+    return observer;
+  } catch (error) {
+    console.error('Error monitoring layout shifts:', error);
+    return null;
   }
 }
 
-// Initialize performance monitoring
-export function initializePerformanceMonitoring(): void {
-  // Collect initial metrics
-  const report = collectPerformanceMetrics();
-  
-  // Monitor memory usage
-  monitorMemoryUsage();
-  
-  // Monitor network connection
-  monitorNetworkConnection();
-  
-  // Set up periodic monitoring
-  if (typeof window !== 'undefined') {
-    // Monitor memory every 30 seconds
-    setInterval(monitorMemoryUsage, 30000);
-    
-    // Monitor network connection every 60 seconds
-    setInterval(monitorNetworkConnection, 60000);
+/**
+ * Check if connection is slow
+ */
+export function isSlowConnection(): boolean {
+  if (
+    typeof navigator === 'undefined' ||
+    !(navigator as NavigatorWithConnection).connection
+  ) {
+    return false;
   }
+
+  const connection = (navigator as NavigatorWithConnection).connection;
+  const slowTypes = ['slow-2g', '2g'];
+  return (
+    slowTypes.includes(connection.effectiveType) || connection.saveData === true
+  );
 }
 
-// Export the main function
-export default initializePerformanceMonitoring;
+/**
+ * Get connection type
+ */
+export function getConnectionType(): string {
+  if (
+    typeof navigator === 'undefined' ||
+    !(navigator as NavigatorWithConnection).connection
+  ) {
+    return 'unknown';
+  }
+
+  const connection = (navigator as NavigatorWithConnection).connection;
+  return connection.effectiveType || connection.type || 'unknown';
+}
+
+const performanceUtils = {
+  init: initPerformanceMonitoring,
+  measure: measurePerformance,
+  mark: markPerformance,
+  measureBetween,
+  getNavigationTiming,
+  getResourceTiming,
+  getSlowResources,
+  getMemoryUsage,
+  generateReport: generatePerformanceReport,
+  monitorLongTasks,
+  monitorLayoutShifts,
+  isSlowConnection,
+  getConnectionType,
+};
+
+export default performanceUtils;
