@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 // import { ArrowRight, Code, ExternalLink, Shield, Zap } from 'lucide-react';
+=======
+import { ArrowRight, Code, ExternalLink, Shield, Zap, Atom } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-dbc2
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -41,11 +45,22 @@ const API: React.FC = () => {
             powerful AI and technology solutions.
           </p>
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+<<<<<<< HEAD
+=======
+            <Link
+              to='/contact'
+              className='bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center'
+            >
+              Get API Key
+              <ArrowRight className='ml-2 w-5 h-5' />
+            </Link>
+>>>>>>> cursor/fix-errors-and-merge-to-main-dbc2
             <a
               href='#endpoints'
               className='bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center'
             >
               View Endpoints
+<<<<<<< HEAD
               <span className='ml-2 w-5 h-5'>→</span>
             </a>
             <a
@@ -54,6 +69,9 @@ const API: React.FC = () => {
             >
               Full Documentation
               <span className='ml-2 w-5 h-5'>⚛️</span>
+=======
+              <Atom className='ml-2 w-5 h-5' />
+>>>>>>> cursor/fix-errors-and-merge-to-main-dbc2
             </a>
           </div>
         </div>
@@ -65,7 +83,11 @@ const API: React.FC = () => {
           <div className='grid md:grid-cols-3 gap-8'>
             <div className='text-center'>
               <div className='w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4'>
+<<<<<<< HEAD
                 <span className='w-8 h-8 text-blue-600'>⚛️</span>
+=======
+                <Atom className='w-8 h-8 text-blue-600' />
+>>>>>>> cursor/fix-errors-and-merge-to-main-dbc2
               </div>
               <h3 className='text-xl font-semibold text-gray-900 mb-2'>
                 RESTful APIs
@@ -77,7 +99,11 @@ const API: React.FC = () => {
             </div>
             <div className='text-center'>
               <div className='w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4'>
+<<<<<<< HEAD
                 <span className='w-8 h-8 text-green-600'>⚛️</span>
+=======
+                <Shield className='w-8 h-8 text-green-600' />
+>>>>>>> cursor/fix-errors-and-merge-to-main-dbc2
               </div>
               <h3 className='text-xl font-semibold text-gray-900 mb-2'>
                 Secure & Reliable
@@ -89,7 +115,11 @@ const API: React.FC = () => {
             </div>
             <div className='text-center'>
               <div className='w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4'>
+<<<<<<< HEAD
                 <span className='w-8 h-8 text-purple-600'>⚡</span>
+=======
+                <Zap className='w-8 h-8 text-purple-600' />
+>>>>>>> cursor/fix-errors-and-merge-to-main-dbc2
               </div>
               <h3 className='text-xl font-semibold text-gray-900 mb-2'>
                 High Performance
@@ -137,6 +167,7 @@ const API: React.FC = () => {
         </div>
       </div>
 
+<<<<<<< HEAD
       {/* CTA Section */}
       <div className='py-16 bg-blue-600 text-white'>
         <div className='container mx-auto px-4 text-center'>
@@ -160,6 +191,34 @@ const API: React.FC = () => {
               View Documentation
               <span className='ml-2 w-5 h-5'>⚛️</span>
             </a>
+=======
+      <div className='py-16 bg-white'>
+        <div className='container mx-auto px-4'>
+          <div className='max-w-3xl mx-auto text-center'>
+            <h2 className='text-3xl font-bold text-gray-900 mb-6'>
+              Getting Started
+            </h2>
+            <p className='text-lg text-gray-600 mb-8'>
+              Ready to integrate with our APIs? Get your API key and start
+              building amazing applications.
+            </p>
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+              <Link
+                to='/contact'
+                className='bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-flex items-center'
+              >
+                Get API Key
+                <ArrowRight className='ml-2 w-5 h-5' />
+              </Link>
+              <a
+                href='https://docs?.ziontechgroup.com'
+                className='border border-gray-300 text-gray-700 px-8 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors inline-flex items-center'
+              >
+                View Full Docs
+                <ExternalLink className='ml-2 w-5 h-5' />
+              </a>
+            </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-dbc2
           </div>
         </div>
       </div>

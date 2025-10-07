@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 // import { Menu, X } from 'lucide-react';
+=======
+import { Menu, X } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-dbc2
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -42,7 +46,7 @@ const ModernNavigation: React.FC<ModernNavigationProps> = ({ className = '' }) =
             onClick={() => setIsOpen(!isOpen)}
             className='md:hidden text-gray-700 hover:text-blue-600 transition-colors'
           >
-            {isOpen ? <span className='w-6 h-6'>✕</span> : <span className='w-6 h-6'>☰</span>}
+            {isOpen ? <X className='w-6 h-6' /> : <Menu className='w-6 h-6' />}
           </button>
         </div>
         
@@ -66,4 +70,8 @@ const ModernNavigation: React.FC<ModernNavigationProps> = ({ className = '' }) =
   );
 };
 
+<<<<<<< HEAD
 export default ModernNavigation;
+=======
+export default ModernNavigation;
+>>>>>>> cursor/fix-errors-and-merge-to-main-dbc2
