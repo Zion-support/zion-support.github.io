@@ -115,6 +115,11 @@ export const usePerformanceMonitoring = () => {
       // eslint-disable-next-line no-console
       console.warn('Performance monitoring not supported:', error);
     }
+
+    // Return cleanup function
+    return () => {
+      // Cleanup observers if needed
+    };
   }, [reportMetric]);
 
   // Monitor page load performance
