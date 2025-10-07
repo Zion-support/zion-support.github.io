@@ -46,8 +46,8 @@ describe('AdvancedErrorBoundary', () => {
     );
 
     expect(screen.getByText('Oops! Something went wrong')).toBeInTheDocument();
-    const retryButtons = screen.queryAllByText(/Try Again|Reload Page/);
-    expect(retryButtons.length).toBeGreaterThan(0);
+    expect(screen.getByText(/Try Again/)).toBeInTheDocument();
+    expect(screen.getByText('Reload Page')).toBeInTheDocument();
     expect(screen.getByText('Go to Homepage')).toBeInTheDocument();
 
     consoleSpy.mockRestore();
@@ -134,9 +134,10 @@ describe('AdvancedSEOOptimizer', () => {
     expect(document.title).toBe('Test Title');
   });
 
-  it('renders structured data when enabled', () => {
+  it('renders with structured data enabled', () => {
+    const helmetContext = {};
     const { container } = render(
-      <HelmetProvider>
+      <HelmetProvider context={helmetContext}>
         <AdvancedSEOOptimizer
           config={mockSEOData}
           enableStructuredData={true}
@@ -144,30 +145,32 @@ describe('AdvancedSEOOptimizer', () => {
       </HelmetProvider>
     );
 
-    // Helmet is a well-tested library, so we just verify the component renders without crashing
-    // and that the Helmet component is in the tree
+    // Check that component renders without crashing
+    // Note: react-helmet-async manages head tags in a way that's not easily testable with querySelector
     expect(container).toBeTruthy();
   });
 
-  it('renders Open Graph tags when enabled', () => {
+  it('renders with Open Graph enabled', () => {
+    const helmetContext = {};
     const { container } = render(
-      <HelmetProvider>
+      <HelmetProvider context={helmetContext}>
         <AdvancedSEOOptimizer config={mockSEOData} enableOpenGraph={true} />
       </HelmetProvider>
     );
 
-    // Helmet is a well-tested library, so we just verify the component renders without crashing
+    // Check that component renders without crashing
     expect(container).toBeTruthy();
   });
 
-  it('renders Twitter Card tags when enabled', () => {
+  it('renders with Twitter Cards enabled', () => {
+    const helmetContext = {};
     const { container } = render(
-      <HelmetProvider>
+      <HelmetProvider context={helmetContext}>
         <AdvancedSEOOptimizer config={mockSEOData} enableTwitterCards={true} />
       </HelmetProvider>
     );
 
-    // Helmet is a well-tested library, so we just verify the component renders without crashing
+    // Check that component renders without crashing
     expect(container).toBeTruthy();
   });
 });

@@ -11,6 +11,15 @@ const nextConfig = {
     formats: ['image/webp', 'image/avif'],
   },
   webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
+    // Fix for "self is not defined" error by providing a polyfill
+    if (isServer) {
+      config.plugins.push(
+        new webpack.DefinePlugin({
+          'self': 'undefined',
+        })
+      );
+    }
+
     // Optimize bundle size
     config.optimization.splitChunks = {
       chunks: 'all',
