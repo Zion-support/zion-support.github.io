@@ -198,5 +198,9 @@ export default [
       { argsIgnorePattern: '^_' },
     ],
     '@typescript-eslint/no-explicit-any': 'warn',
+    'no-console': 'warn',
+    'prefer-const': 'error',
+    'no-var': 'error',
+    ...(nextPlugin.configs.recommended?.rules || {}),
   },
 }];
