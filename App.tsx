@@ -118,15 +118,6 @@ const App = () => {
     };
   }, [structuredData]);
 
-  // Analytics tracking for phone clicks
-  const handlePhoneClick = useCallback(() => {
-    if (typeof window !== 'undefined' && (window as unknown as { gtag?: Function }).gtag) {
-      ((window as unknown as { gtag: Function }).gtag)('event', 'phone_click', {
-        event_category: 'engagement',
-        event_label: 'main_phone_number'
-      });
-    }
-  }, []);
 
   return (
     <ErrorBoundary>
