@@ -43,9 +43,6 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     const fcp = fcpEntries.length > 0 ? fcpEntries[0].startTime : null;
 
     // Initialize observers
-    let lcpObserver: PerformanceObserver | null = null;
-    let fidObserver: PerformanceObserver | null = null;
-    let clsObserver: PerformanceObserver | null = null;
 
     // Measure Largest Contentful Paint (LCP)
     if ('PerformanceObserver' in window) {
