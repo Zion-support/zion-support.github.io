@@ -1,0 +1,232 @@
+[2025-09-07T20:55:39.189Z] 🚀 Starting selective branch merging process...
+[2025-09-07T20:55:39.191Z] Getting recent branches...
+[2025-09-07T20:55:39.547Z] Found 12 recent branches
+[2025-09-07T20:55:39.548Z] Processing 12 recent branches...
+[2025-09-07T20:55:39.548Z] Processing branch: 0t8m4m-codex/update-project-color-palette
+[2025-09-07T20:55:39.548Z] Attempting to merge branch: 0t8m4m-codex/update-project-color-palette
+[2025-09-07T20:55:39.548Z] Starting: Fetching 0t8m4m-codex/update-project-color-palette
+[2025-09-07T20:55:39.908Z] Completed: Fetching 0t8m4m-codex/update-project-color-palette
+[2025-09-07T20:55:39.908Z] Starting: Checking differences for 0t8m4m-codex/update-project-color-palette
+[2025-09-07T20:55:39.929Z] Completed: Checking differences for 0t8m4m-codex/update-project-color-palette
+[2025-09-07T20:55:39.929Z] Starting: Merging 0t8m4m-codex/update-project-color-palette
+[2025-09-07T20:55:39.936Z] Error in Merging 0t8m4m-codex/update-project-color-palette: Command failed: git merge origin/0t8m4m-codex/update-project-color-palette --no-ff -m "Merge branch 0t8m4m-codex/update-project-color-palette into main"
+error: Merging is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: Exiting because of an unresolved conflict.
+
+[2025-09-07T20:55:39.936Z] ❌ Merge conflict in 0t8m4m-codex/update-project-color-palette: Command failed: git merge origin/0t8m4m-codex/update-project-color-palette --no-ff -m "Merge branch 0t8m4m-codex/update-project-color-palette into main"
+error: Merging is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: Exiting because of an unresolved conflict.
+
+[2025-09-07T20:55:39.936Z] Resolving conflicts for 0t8m4m-codex/update-project-color-palette...
+[2025-09-07T20:55:39.989Z] Found 0 conflicted files
+[2025-09-07T20:55:39.989Z] Starting: Committing resolved conflicts for 0t8m4m-codex/update-project-color-palette
+[2025-09-07T20:55:40.012Z] Error in Committing resolved conflicts for 0t8m4m-codex/update-project-color-palette: Command failed: git commit -m "Resolve merge conflicts in 0t8m4m-codex/update-project-color-palette"
+error: Committing is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: Exiting because of an unresolved conflict.
+
+[2025-09-07T20:55:40.012Z] ❌ Failed to resolve conflicts in 0t8m4m-codex/update-project-color-palette
+[2025-09-07T20:55:40.012Z] Starting: Aborting merge for 0t8m4m-codex/update-project-color-palette
+[2025-09-07T20:55:40.064Z] Completed: Aborting merge for 0t8m4m-codex/update-project-color-palette
+[2025-09-07T20:55:42.066Z] Processing branch: 0une71-codex/fix-unsupported-shell-syntax-in-setup.sh
+[2025-09-07T20:55:42.066Z] Attempting to merge branch: 0une71-codex/fix-unsupported-shell-syntax-in-setup.sh
+[2025-09-07T20:55:42.066Z] Starting: Fetching 0une71-codex/fix-unsupported-shell-syntax-in-setup.sh
+[2025-09-07T20:55:42.416Z] Completed: Fetching 0une71-codex/fix-unsupported-shell-syntax-in-setup.sh
+[2025-09-07T20:55:42.416Z] Starting: Checking differences for 0une71-codex/fix-unsupported-shell-syntax-in-setup.sh
+[2025-09-07T20:55:42.436Z] Completed: Checking differences for 0une71-codex/fix-unsupported-shell-syntax-in-setup.sh
+[2025-09-07T20:55:42.436Z] Starting: Merging 0une71-codex/fix-unsupported-shell-syntax-in-setup.sh
+[2025-09-07T20:55:42.459Z] Completed: Merging 0une71-codex/fix-unsupported-shell-syntax-in-setup.sh
+[2025-09-07T20:55:42.459Z] ✅ Successfully merged 0une71-codex/fix-unsupported-shell-syntax-in-setup.sh
+[2025-09-07T20:55:44.462Z] Processing branch: 14gqd5-codex/implement-checkout-flow-with-auth-redirect
+[2025-09-07T20:55:44.462Z] Attempting to merge branch: 14gqd5-codex/implement-checkout-flow-with-auth-redirect
+[2025-09-07T20:55:44.462Z] Starting: Fetching 14gqd5-codex/implement-checkout-flow-with-auth-redirect
+[2025-09-07T20:55:44.804Z] Completed: Fetching 14gqd5-codex/implement-checkout-flow-with-auth-redirect
+[2025-09-07T20:55:44.805Z] Starting: Checking differences for 14gqd5-codex/implement-checkout-flow-with-auth-redirect
+[2025-09-07T20:55:44.825Z] Completed: Checking differences for 14gqd5-codex/implement-checkout-flow-with-auth-redirect
+[2025-09-07T20:55:44.825Z] Starting: Merging 14gqd5-codex/implement-checkout-flow-with-auth-redirect
+[2025-09-07T20:55:44.848Z] Completed: Merging 14gqd5-codex/implement-checkout-flow-with-auth-redirect
+[2025-09-07T20:55:44.848Z] ✅ Successfully merged 14gqd5-codex/implement-checkout-flow-with-auth-redirect
+[2025-09-07T20:55:46.850Z] Processing branch: 1dcwqi-codex/implement-global-pricing-with-currency-selection
+[2025-09-07T20:55:46.850Z] Attempting to merge branch: 1dcwqi-codex/implement-global-pricing-with-currency-selection
+[2025-09-07T20:55:46.850Z] Starting: Fetching 1dcwqi-codex/implement-global-pricing-with-currency-selection
+[2025-09-07T20:55:47.199Z] Completed: Fetching 1dcwqi-codex/implement-global-pricing-with-currency-selection
+[2025-09-07T20:55:47.199Z] Starting: Checking differences for 1dcwqi-codex/implement-global-pricing-with-currency-selection
+[2025-09-07T20:55:47.219Z] Completed: Checking differences for 1dcwqi-codex/implement-global-pricing-with-currency-selection
+[2025-09-07T20:55:47.219Z] Starting: Merging 1dcwqi-codex/implement-global-pricing-with-currency-selection
+[2025-09-07T20:55:47.241Z] Completed: Merging 1dcwqi-codex/implement-global-pricing-with-currency-selection
+[2025-09-07T20:55:47.242Z] ✅ Successfully merged 1dcwqi-codex/implement-global-pricing-with-currency-selection
+[2025-09-07T20:55:49.244Z] Processing branch: 1fjs4s-codex/implement-instant-messaging-for-negotiations
+[2025-09-07T20:55:49.244Z] Attempting to merge branch: 1fjs4s-codex/implement-instant-messaging-for-negotiations
+[2025-09-07T20:55:49.244Z] Starting: Fetching 1fjs4s-codex/implement-instant-messaging-for-negotiations
+[2025-09-07T20:55:49.601Z] Completed: Fetching 1fjs4s-codex/implement-instant-messaging-for-negotiations
+[2025-09-07T20:55:49.601Z] Starting: Checking differences for 1fjs4s-codex/implement-instant-messaging-for-negotiations
+[2025-09-07T20:55:49.621Z] Completed: Checking differences for 1fjs4s-codex/implement-instant-messaging-for-negotiations
+[2025-09-07T20:55:49.621Z] Starting: Merging 1fjs4s-codex/implement-instant-messaging-for-negotiations
+[2025-09-07T20:55:49.643Z] Completed: Merging 1fjs4s-codex/implement-instant-messaging-for-negotiations
+[2025-09-07T20:55:49.643Z] ✅ Successfully merged 1fjs4s-codex/implement-instant-messaging-for-negotiations
+[2025-09-07T20:55:51.644Z] Processing branch: 1m9jcs-codex/fix-client-side-rendering-and-javascript-errors
+[2025-09-07T20:55:51.644Z] Attempting to merge branch: 1m9jcs-codex/fix-client-side-rendering-and-javascript-errors
+[2025-09-07T20:55:51.644Z] Starting: Fetching 1m9jcs-codex/fix-client-side-rendering-and-javascript-errors
+[2025-09-07T20:55:52.000Z] Completed: Fetching 1m9jcs-codex/fix-client-side-rendering-and-javascript-errors
+[2025-09-07T20:55:52.000Z] Starting: Checking differences for 1m9jcs-codex/fix-client-side-rendering-and-javascript-errors
+[2025-09-07T20:55:52.023Z] Completed: Checking differences for 1m9jcs-codex/fix-client-side-rendering-and-javascript-errors
+[2025-09-07T20:55:52.023Z] Starting: Merging 1m9jcs-codex/fix-client-side-rendering-and-javascript-errors
+[2025-09-07T20:55:52.049Z] Completed: Merging 1m9jcs-codex/fix-client-side-rendering-and-javascript-errors
+[2025-09-07T20:55:52.049Z] ✅ Successfully merged 1m9jcs-codex/fix-client-side-rendering-and-javascript-errors
+[2025-09-07T20:55:54.051Z] Processing branch: 1nc0kn-codex/fix-blank-screen-on-app-load
+[2025-09-07T20:55:54.051Z] Attempting to merge branch: 1nc0kn-codex/fix-blank-screen-on-app-load
+[2025-09-07T20:55:54.051Z] Starting: Fetching 1nc0kn-codex/fix-blank-screen-on-app-load
+[2025-09-07T20:55:54.388Z] Completed: Fetching 1nc0kn-codex/fix-blank-screen-on-app-load
+[2025-09-07T20:55:54.389Z] Starting: Checking differences for 1nc0kn-codex/fix-blank-screen-on-app-load
+[2025-09-07T20:55:54.409Z] Completed: Checking differences for 1nc0kn-codex/fix-blank-screen-on-app-load
+[2025-09-07T20:55:54.409Z] Starting: Merging 1nc0kn-codex/fix-blank-screen-on-app-load
+[2025-09-07T20:55:54.431Z] Completed: Merging 1nc0kn-codex/fix-blank-screen-on-app-load
+[2025-09-07T20:55:54.432Z] ✅ Successfully merged 1nc0kn-codex/fix-blank-screen-on-app-load
+[2025-09-07T20:55:56.434Z] Processing branch: 1nq1ky-codex/render-talent-profiles-with-error-states
+[2025-09-07T20:55:56.434Z] Attempting to merge branch: 1nq1ky-codex/render-talent-profiles-with-error-states
+[2025-09-07T20:55:56.434Z] Starting: Fetching 1nq1ky-codex/render-talent-profiles-with-error-states
+[2025-09-07T20:55:56.784Z] Completed: Fetching 1nq1ky-codex/render-talent-profiles-with-error-states
+[2025-09-07T20:55:56.784Z] Starting: Checking differences for 1nq1ky-codex/render-talent-profiles-with-error-states
+[2025-09-07T20:55:56.804Z] Completed: Checking differences for 1nq1ky-codex/render-talent-profiles-with-error-states
+[2025-09-07T20:55:56.804Z] Starting: Merging 1nq1ky-codex/render-talent-profiles-with-error-states
+[2025-09-07T20:55:56.827Z] Completed: Merging 1nq1ky-codex/render-talent-profiles-with-error-states
+[2025-09-07T20:55:56.827Z] ✅ Successfully merged 1nq1ky-codex/render-talent-profiles-with-error-states
+[2025-09-07T20:55:58.829Z] Processing branch: 1ry69n-codex/fix-npm-eio-error-during-install
+[2025-09-07T20:55:58.829Z] Attempting to merge branch: 1ry69n-codex/fix-npm-eio-error-during-install
+[2025-09-07T20:55:58.829Z] Starting: Fetching 1ry69n-codex/fix-npm-eio-error-during-install
+[2025-09-07T20:55:59.173Z] Completed: Fetching 1ry69n-codex/fix-npm-eio-error-during-install
+[2025-09-07T20:55:59.173Z] Starting: Checking differences for 1ry69n-codex/fix-npm-eio-error-during-install
+[2025-09-07T20:55:59.194Z] Completed: Checking differences for 1ry69n-codex/fix-npm-eio-error-during-install
+[2025-09-07T20:55:59.194Z] Starting: Merging 1ry69n-codex/fix-npm-eio-error-during-install
+[2025-09-07T20:55:59.217Z] Completed: Merging 1ry69n-codex/fix-npm-eio-error-during-install
+[2025-09-07T20:55:59.217Z] ✅ Successfully merged 1ry69n-codex/fix-npm-eio-error-during-install
+[2025-09-07T20:56:01.219Z] Processing branch: origin
+[2025-09-07T20:56:01.219Z] Attempting to merge branch: origin
+[2025-09-07T20:56:01.219Z] Starting: Fetching origin
+[2025-09-07T20:56:01.334Z] Error in Fetching origin: Command failed: git fetch origin origin
+fatal: couldn't find remote ref origin
+
+[2025-09-07T20:56:01.334Z] Starting: Checking differences for origin
+[2025-09-07T20:56:01.337Z] Error in Checking differences for origin: Command failed: git diff main...origin/origin --name-only
+fatal: ambiguous argument 'main...origin/origin': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+
+[2025-09-07T20:56:01.337Z] No differences found for origin, skipping
+[2025-09-07T20:56:03.337Z] Processing branch: cursor/automate-test-improve-and-merge-code-6b26
+[2025-09-07T20:56:03.337Z] Attempting to merge branch: cursor/automate-test-improve-and-merge-code-6b26
+[2025-09-07T20:56:03.337Z] Starting: Fetching cursor/automate-test-improve-and-merge-code-6b26
+[2025-09-07T20:56:03.678Z] Completed: Fetching cursor/automate-test-improve-and-merge-code-6b26
+[2025-09-07T20:56:03.678Z] Starting: Checking differences for cursor/automate-test-improve-and-merge-code-6b26
+[2025-09-07T20:56:04.137Z] Completed: Checking differences for cursor/automate-test-improve-and-merge-code-6b26
+[2025-09-07T20:56:04.137Z] Starting: Merging cursor/automate-test-improve-and-merge-code-6b26
+[2025-09-07T20:56:04.569Z] Completed: Merging cursor/automate-test-improve-and-merge-code-6b26
+[2025-09-07T20:56:04.570Z] ✅ Successfully merged cursor/automate-test-improve-and-merge-code-6b26
+[2025-09-07T20:56:06.571Z] Processing branch: cursor/automate-test-improve-and-merge-code-8714
+[2025-09-07T20:56:06.571Z] Attempting to merge branch: cursor/automate-test-improve-and-merge-code-8714
+[2025-09-07T20:56:06.571Z] Starting: Fetching cursor/automate-test-improve-and-merge-code-8714
+[2025-09-07T20:56:06.926Z] Completed: Fetching cursor/automate-test-improve-and-merge-code-8714
+[2025-09-07T20:56:06.926Z] Starting: Checking differences for cursor/automate-test-improve-and-merge-code-8714
+[2025-09-07T20:56:07.011Z] Completed: Checking differences for cursor/automate-test-improve-and-merge-code-8714
+[2025-09-07T20:56:07.011Z] Starting: Merging cursor/automate-test-improve-and-merge-code-8714
+[2025-09-07T20:56:09.066Z] Error in Merging cursor/automate-test-improve-and-merge-code-8714: Command failed: git merge origin/cursor/automate-test-improve-and-merge-code-8714 --no-ff -m "Merge branch cursor/automate-test-improve-and-merge-code-8714 into main"
+[2025-09-07T20:56:09.066Z] ❌ Merge conflict in cursor/automate-test-improve-and-merge-code-8714: Command failed: git merge origin/cursor/automate-test-improve-and-merge-code-8714 --no-ff -m "Merge branch cursor/automate-test-improve-and-merge-code-8714 into main"
+[2025-09-07T20:56:09.066Z] Resolving conflicts for cursor/automate-test-improve-and-merge-code-8714...
+[2025-09-07T20:56:09.141Z] Found 45 conflicted files
+[2025-09-07T20:56:09.206Z] Resolved conflict in .eslintignore
+[2025-09-07T20:56:09.267Z] Resolved conflict in AUTOMATION_REPORT.md
+[2025-09-07T20:56:09.329Z] Resolved conflict in App.smoke.test.tsx
+[2025-09-07T20:56:09.384Z] Resolved conflict in App.test.tsx
+[2025-09-07T20:56:09.438Z] Resolved conflict in App.tsx
+[2025-09-07T20:56:09.488Z] Resolved conflict in AppMinimal.tsx
+[2025-09-07T20:56:09.536Z] Resolved conflict in __tests__/profile-page.test.tsx
+[2025-09-07T20:56:09.586Z] Resolved conflict in __tests__/signup-auto-login.test.tsx
+[2025-09-07T20:56:09.632Z] Resolved conflict in __tests__/signup.test.tsx
+[2025-09-07T20:56:09.713Z] Resolved conflict in __tests__/smoke.test.ts
+[2025-09-07T20:56:09.786Z] Resolved conflict in __tests__/utils.test.ts
+[2025-09-07T20:56:09.861Z] Resolved conflict in advanced-app-improvements.js
+[2025-09-07T20:56:09.909Z] Resolved conflict in aggressive-fix.js
+[2025-09-07T20:56:09.969Z] Resolved conflict in analyze-missing-pages.js
+[2025-09-07T20:56:10.018Z] Resolved conflict in api/create-checkout-session.js
+[2025-09-07T20:56:10.071Z] Resolved conflict in api/create-payment-intent.js
+[2025-09-07T20:56:10.128Z] Resolved conflict in api/newsletter/subscribe.js
+[2025-09-07T20:56:10.177Z] Resolved conflict in api/quotes.js
+[2025-09-07T20:56:10.222Z] Resolved conflict in api/shipping-rates.js
+[2025-09-07T20:56:10.270Z] Resolved conflict in api/wallet.js
+[2025-09-07T20:56:10.317Z] Resolved conflict in app/layout.tsx
+[2025-09-07T20:56:10.378Z] Resolved conflict in app/page.tsx
+[2025-09-07T20:56:10.441Z] Resolved conflict in comprehensive-automation-report.json
+[2025-09-07T20:56:10.492Z] Resolved conflict in enhanced-optimization-report.json
+[2025-09-07T20:56:10.537Z] Resolved conflict in eslint.config.cjs
+[2025-09-07T20:56:10.588Z] Resolved conflict in eslint.config.js
+[2025-09-07T20:56:10.639Z] Resolved conflict in next.config.js
+[2025-09-07T20:56:10.702Z] Resolved conflict in package-lock.json
+[2025-09-07T20:56:10.764Z] Resolved conflict in package.json
+[2025-09-07T20:56:10.771Z] Error resolving pages/_document.js: Command failed: git checkout --ours "pages/_document.js"
+error: path 'pages/_document.js' does not have our version
+
+[2025-09-07T20:56:10.777Z] Error resolving pages/space-tech.tsx: Command failed: git checkout --ours "pages/space-tech.tsx"
+error: path 'pages/space-tech.tsx' does not have our version
+
+[2025-09-07T20:56:10.833Z] Resolved conflict in scripts/advanced-build-optimizer.js
+[2025-09-07T20:56:10.890Z] Resolved conflict in scripts/auto-fixer.js
+[2025-09-07T20:56:10.944Z] Resolved conflict in scripts/automated-testing-enhancer.cjs
+[2025-09-07T20:56:10.998Z] Resolved conflict in scripts/comprehensive-automation-orchestrator.cjs
+[2025-09-07T20:56:11.054Z] Resolved conflict in scripts/performance-monitor-enhanced.js
+[2025-09-07T20:56:11.103Z] Resolved conflict in scripts/performance-optimizer.cjs
+[2025-09-07T20:56:11.153Z] Resolved conflict in scripts/security-audit.cjs
+[2025-09-07T20:56:11.199Z] Resolved conflict in scripts/security-enhancement-automation.cjs
+[2025-09-07T20:56:11.246Z] Resolved conflict in tsconfig.json
+[2025-09-07T20:56:11.587Z] Resolved conflict in tsconfig.tsbuildinfo
+[2025-09-07T20:56:11.845Z] Resolved conflict in types/global.d.ts
+[2025-09-07T20:56:12.102Z] Resolved conflict in types/index.ts
+[2025-09-07T20:56:12.152Z] Resolved conflict in types/moderation.ts
+[2025-09-07T20:56:12.204Z] Resolved conflict in yarn.lock
+[2025-09-07T20:56:12.204Z] Starting: Committing resolved conflicts for cursor/automate-test-improve-and-merge-code-8714
+[2025-09-07T20:56:12.225Z] Error in Committing resolved conflicts for cursor/automate-test-improve-and-merge-code-8714: Command failed: git commit -m "Resolve merge conflicts in cursor/automate-test-improve-and-merge-code-8714"
+error: Committing is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: Exiting because of an unresolved conflict.
+
+[2025-09-07T20:56:12.225Z] ❌ Failed to resolve conflicts in cursor/automate-test-improve-and-merge-code-8714
+[2025-09-07T20:56:12.225Z] Starting: Aborting merge for cursor/automate-test-improve-and-merge-code-8714
+[2025-09-07T20:56:12.506Z] Completed: Aborting merge for cursor/automate-test-improve-and-merge-code-8714
+[2025-09-07T20:56:14.509Z] Starting: Pushing merged changes to main
+[2025-09-07T20:56:15.354Z] Error in Pushing merged changes to main: Command failed: git push origin main
+To https://github.com/Zion-Holdings/zion.app
+ ! [rejected]                main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/Zion-Holdings/zion.app'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+[2025-09-07T20:56:15.354Z] 
+📊 SELECTIVE BRANCH MERGING SUMMARY
+Total Branches Processed: 12
+Successful Merges: 9 ✅
+Skipped Branches: 1 ⏭️
+Failed Merges: 2 ❌
+Conflicts Resolved: 0 🔧
+
+Failed Branches:
+  - 0t8m4m-codex/update-project-color-palette: Command failed: git commit -m "Resolve merge conflicts in 0t8m4m-codex/update-project-color-palette"
+error: Committing is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: Exiting because of an unresolved conflict.
+
+  - cursor/automate-test-improve-and-merge-code-8714: Command failed: git commit -m "Resolve merge conflicts in cursor/automate-test-improve-and-merge-code-8714"
+error: Committing is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: Exiting because of an unresolved conflict.
+
+[2025-09-07T20:56:15.354Z] ✅ Selective branch merging process completed!

@@ -1,102 +1,112 @@
 import React, { useEffect, useState } from 'react';
+import performanceOptimizer, { WebVitalsMetrics } from '../utils/performanceOptimizer';
 
-interface PerformanceMetrics {
-  lcp?: number;
-  fid?: number;
-  cls?: number;
-  fcp?: number;
-  ttfb?: number;
-  inp?: number;
+interface PerformanceMonitorProps {
+  children: React.ReactNode;
+  enableReporting?: boolean;
+  enableLongTaskMonitoring?: boolean;
 }
 
-const PerformanceMonitor: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    cls: undefined,
-    inp: undefined,
-    fcp: undefined,
-    lcp: undefined,
-    ttfb: undefined,
-  });
-
-  const [isVisible, setIsVisible] = useState(false);
+const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ 
+  children, 
+  enableReporting = true,
+  enableLongTaskMonitoring = true 
+}) => {
+  const [metrics, setMetrics] = useState<WebVitalsMetrics>({});
+  const [, setLongTasks] = useState<PerformanceEntry[]>([]);
 
   useEffect(() => {
-    // Dynamically import web-vitals to avoid build issues
-    import('web-vitals')
-      .then(webVitals => {
-        const { onCLS, onFCP, onLCP, onTTFB } = webVitals;
-
-        // Measure Core Web Vitals
-        onCLS((metric: { value: number }) => {
-          setMetrics((prev: PerformanceMetrics) => ({
-            ...prev,
-            cls: metric.value,
-          }));
-        });
-
-        onFCP((metric: { value: number }) => {
-          setMetrics((prev: PerformanceMetrics) => ({
-            ...prev,
-            fcp: metric.value,
-          }));
-        });
-
-        onLCP((metric: { value: number }) => {
-          setMetrics((prev: PerformanceMetrics) => ({
-            ...prev,
-            lcp: metric.value,
-          }));
-        });
-
-        onTTFB((metric: { value: number }) => {
-          setMetrics((prev: PerformanceMetrics) => ({
-            ...prev,
-            ttfb: metric.value,
-          }));
-        });
-
-        // Try to use onINP if available (for newer versions)
-        if (webVitals.onINP) {
-          webVitals.onINP((metric: { value: number }) => {
-            setMetrics((prev: PerformanceMetrics) => ({
-              ...prev,
-              inp: metric.value,
-            }));
-          });
+    // Initialize performance monitoring
+    // Add critical resource hints manually
+    if (typeof document !== 'undefined') {
+      const hints = [
+        { rel: 'dns-prefetch', href: 'https://fonts?.googleapis.com' },
+        { rel: 'dns-prefetch', href: 'https://fonts?.gstatic.com' },
+        { rel: 'preconnect', href: 'https://fonts?.googleapis.com' },
+        { rel: 'preconnect', href: 'https://fonts?.gstatic.com', crossOrigin: 'anonymous' }
+      ];
+      
+      hints.forEach(hint => {
+        const link = document.createElement('link');
+        link.rel = hint.rel;
+        link.href = hint.href;
+        if (hint.crossOrigin) {
+          link.crossOrigin = hint.crossOrigin;
         }
-      })
-      .catch(error => {
-        console.warn('Failed to load web-vitals:', error);
+        document?.head.appendChild(link);
       });
-  }, []);
+    }
+    
+    // Measure page load performance
+    const pageLoadMetrics = performanceOptimizer.measurePageLoad();
+    if (pageLoadMetrics) {
+      setMetrics(pageLoadMetrics);
+      if (enableReporting) {
+        performanceOptimizer.reportWebVitals(pageLoadMetrics);
+      }
+    }
 
-  if (!isVisible) {
-    return (
-      <button
-onClick={() => setIsVisible(true)}
-        className='fixed bottom-4 right-4 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition-colors z-50'
-        title='Open Performance Monitor'
-      >
-        <Activity className='h-5 w-5'</button>
-    );
+    // Monitor long tasks if enabled
+    if (enableLongTaskMonitoring) {
+      const observer = performanceOptimizer.monitorLongTasks((entries: PerformanceEntryList) => {
+        setLongTasks(prev => [...prev, ...entries]);
+        console.warn('Long tasks detected:', entries);
+      });
+      
+      return () => {
+        if (observer) {
+          observer.disconnect();
   }
+      };
+    }
+  }, [enableReporting, enableLongTaskMonitoring]);
 
-  return (
-    <div className='fixed bottom-4 right-4 bg-black bg-opacity-80 text-white p-4 rounded-lg text-xs font-mono z-50'>
-      <div className='font-bold mb-2'>Performance Metrics</div>
-      <div>CLS: {metrics.cls?.toFixed(3) || 'N/A'}</div>
-      <div>INP: {metrics.inp?.toFixed(2) || 'N/A'}ms</div>
-      <div>FCP: {metrics.fcp?.toFixed(2) || 'N/A'}ms</div>
-      <div>LCP: {metrics.lcp?.toFixed(2) || 'N/A'}ms</div>
-      <div>TTFB: {metrics.ttfb?.toFixed(2) || 'N/A'}ms</div>
-      <button
-onClick={() => setIsVisible(false)}
-        className='mt-2 text-xs text-gray-400 hover:text-white'
-      >
-        Close
-      </button>
-    </div>
-  );
-};
+  // Monitor Web Vitals using Performance Observer
+  useEffect(() => {
+    if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return;
+  }));
+          if (enableReporting) {
+            performanceOptimizer.reportWebVitals({ LCP: lcp });
+          }
+        }
+        
+        if (entry.entryType === 'first-input') {
+          const fid = (entry as any).processingStart - entry.startTime;
+          setMetrics(prev => ({ ...prev, FID: fid }));
+          if (enableReporting) {
+            performanceOptimizer.reportWebVitals({ FID: fid });
+          }
+        }
+        
+        if (entry.entryType === 'layout-shift') {
+          const cls = (entry as any).value;
+          setMetrics(prev => ({ ...prev, CLS: cls }));
+          if (enableReporting) {
+            performanceOptimizer.reportWebVitals({ CLS: cls });
+          }
+        }
+      });
+    });
+
+    try {
+      observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
+    } catch (e) {
+      console.warn('Performance Observer not supported:', e);
+    }
+
+    return () => {
+      observer.disconnect();
+  };
+  }, [enableReporting]);
+
+  // Development mode: Log performance metrics
+  useEffect(() => {
+    if (process?.env.NODE_ENV === 'development' && Object.keys(metrics).length > 0) {
+      console.log('Performance Metrics:', metrics);
+    }
+  }, [metrics]);
+
+  return <>{children}</>;
+  };
 
 export default PerformanceMonitor;

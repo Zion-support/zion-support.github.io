@@ -1,1 +1,0 @@
-import { FileText } from 'lucide-react' export function ProfileProjects({ projects } ProfileProjectsProps) {; return (; <div className="text-left" >;" </div>" <h3 className="text-left" >Projects</h1>"" <div className="text-left" >}" <Card key={project.id} className="text-left" >;" alt={project.title}" className="text-left" ;"" loading="lazy"" />) '

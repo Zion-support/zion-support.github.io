@@ -251,8 +251,7 @@ const AI2025OctAutonomousAPIOrchestrationRevolution = () =>
               Join enterprise leaders achieving 99.8% uptime and $6.4B in value with autonomous API orchestration.
             </p>
             <a
-              href="/contact"
-              className="text-left"
+              href="/<contact" className="text-left"
             ></a>
               Start Your Transformation
             </a>

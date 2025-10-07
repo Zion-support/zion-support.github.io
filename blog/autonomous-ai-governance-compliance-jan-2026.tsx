@@ -346,10 +346,10 @@ const AutonomousAIGovernanceCompliance = () =>
               you achieve 100% compliance while accelerating innovation.
             </p>
             <div className="text-left"></div>
-              <a href="/contact" className="text-left"></a>
+              <a href="/<contact" className="text-left"></a>
                 Schedule Governance Assessment
               </a>
-              <a href="/services" className="text-left"></a>
+              <a href="/<services" className="text-left"></a>
                 Explore Compliance Services
               </a>
             </div>

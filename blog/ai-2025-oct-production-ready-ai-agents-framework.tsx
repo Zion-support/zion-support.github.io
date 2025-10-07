@@ -620,8 +620,7 @@ const ProductionReadyAIAgentsFramework: React.FC = () =>
             <li>✅ 90-day success guarantee</li>
           </ul>
           <a
-            href="/contact"
-            className="text-left"
+            href="/<contact" className="text-left"
           ></a>
             Schedule Your Assessment →
           </a>
@@ -630,22 +629,22 @@ const ProductionReadyAIAgentsFramework: React.FC = () =>
           <h3 className="text-left">📚 Related Resources</h3>
           <ul className="text-left">
             <li>
-              <a href="/blog/ai-2025-october-autonomous-ai-agents-production-deployment" className="text-left"></a>
+              <a href="/blog/ai-2025-october-autonomous-ai-agents-production-<deployment" className="text-left"></a>
                 → Autonomous AI Agents: Production Deployment
               </a>
             </li>
             <li>
-              <a href="/blog/ai-2025-october-agentic-workflow-orchestration-mastery" className="text-left"></a>
+              <a href="/blog/ai-2025-october-agentic-workflow-orchestration-<mastery" className="text-left"></a>
                 → Agentic Workflow Orchestration Mastery
               </a>
             </li>
             <li>
-              <a href="/blog/ai-2025-october-enterprise-ai-orchestration-mastery" className="text-left"></a>
+              <a href="/blog/ai-2025-october-enterprise-ai-orchestration-<mastery" className="text-left"></a>
                 → Enterprise AI Orchestration Mastery
               </a>
             </li>
             <li>
-              <a href="/services/ai-workflow-automation" className="text-left"></a>
+              <a href="/services/ai-workflow-<automation" className="text-left"></a>
                 → Explore Our AI Workflow Automation Services
               </a>
             </li>

@@ -509,8 +509,7 @@ const VectorDatabaseOptimizationBreakthrough: React.FC = () =>
             <li>✅ 60-day performance guarantee</li>
           </ul>
           <a
-            href="/contact"
-            className="text-left"
+            href="/<contact" className="text-left"
           ></a>
             Start Your Optimization Journey →
           </a>
@@ -519,22 +518,22 @@ const VectorDatabaseOptimizationBreakthrough: React.FC = () =>
           <h3 className="text-left">📚 Related Resources</h3>
           <ul className="text-left">
             <li>
-              <a href="/blog/ai-2025-oct-20-rag-optimization-mastery" className="text-left"></a>
+              <a href="/blog/ai-2025-oct-20-rag-optimization-<mastery" className="text-left"></a>
                 → RAG Optimization Mastery: Complete Guide
               </a>
             </li>
             <li>
-              <a href="/blog/agentic-rag-systems-enterprise-2025" className="text-left"></a>
+              <a href="/blog/agentic-rag-systems-enterprise-<2025" className="text-left"></a>
                 → Agentic RAG Systems for Enterprise
               </a>
             </li>
             <li>
-              <a href="/blog/ai-2025-october-enterprise-rag-implementation" className="text-left"></a>
+              <a href="/blog/ai-2025-october-enterprise-rag-<implementation" className="text-left"></a>
                 → Enterprise RAG Implementation Best Practices
               </a>
             </li>
             <li>
-              <a href="/services/ai-data-analytics" className="text-left"></a>
+              <a href="/services/ai-data-<analytics" className="text-left"></a>
                 → Explore Our AI Data Analytics Services
               </a>
             </li>

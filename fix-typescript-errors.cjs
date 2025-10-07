@@ -4,80 +4,134 @@ const fs = require('fs');
 const path = require('path');
 const glob = require('glob');
 
-// Fix lucide-react imports
-function fixLucideImports(content) {
-  // Replace destructured imports with default imports
-  const lucideImports = content.match(/import\s*{\s*([^}]+)\s*}\s*from\s*['"]lucide-react['"];?/g);
+// Function to fix Metadata import
+function fixMetadataImport(content) {
+  // Fix: import { Metadata } from 'next';
+  // To: import type { Metadata } from 'next';
+  return content.replace(
+    /import\s*{\s*Metadata\s*}\s*from\s*['"]next['"];?/g,
+    'import type { Metadata } from \'next\';'
+  );
+}
+
+// Function to fix other type imports
+function fixTypeImports(content) {
+  // Fix ErrorInfo and ReactNode imports
+  content = content.replace(
+    /import\s*{\s*ErrorInfo\s*}\s*from\s*['"]react['"];?/g,
+    'import type { ErrorInfo } from \'react\';'
+  );
+  content = content.replace(
+    /import\s*{\s*ReactNode\s*}\s*from\s*['"]react['"];?/g,
+    'import type { ReactNode } from \'react\';'
+  );
+  return content;
+}
+
+// Function to fix property access with index signatures
+function fixPropertyAccess(content) {
+  // Fix: data.title -> data['title']
+  // Fix: data.description -> data['description']
+  // Fix: data.author -> data['author']
+  // Fix: data.date -> data['date']
+  content = content.replace(/\bdata\.title\b/g, 'data[\'title\']');
+  content = content.replace(/\bdata\.description\b/g, 'data[\'description\']');
+  content = content.replace(/\bdata\.author\b/g, 'data[\'author\']');
+  content = content.replace(/\bdata\.date\b/g, 'data[\'date\']');
+  return content;
+}
+
+// Function to fix missing icon imports
+function fixIconImports(content) {
+  // Add missing icon imports at the top
+  const iconImports = [
+    'import { Calculator } from \'lucide-react\';',
+    'import { Factory, Cogs } from \'lucide-react\';',
+    'import { Star } from \'lucide-react\';',
+    'import { Building2 } from \'lucide-react\';'
+  ];
   
-  if (lucideImports) {
-    lucideImports.forEach(importStatement => {
-      const matches = importStatement.match(/import\s*{\s*([^}]+)\s*}\s*from\s*['"]lucide-react['"];?/);
-      if (matches) {
-        const imports = matches[1].split(',').map(imp => imp.trim());
-        const newImports = imports.map(imp => 
-          `import ${imp} from 'lucide-react/dist/esm/icons/${imp.toLowerCase().replace(/([A-Z])/g, '-$1').substring(1)}';`
-        ).join('\n');
-        
-        content = content.replace(importStatement, newImports);
-      }
-    });
+  // Check if any of these icons are used but not imported
+  if (content.includes('Calculator') && !content.includes('import { Calculator }')) {
+    content = iconImports[0] + '\n' + content;
+  }
+  if ((content.includes('Factory') || content.includes('Cogs')) && !content.includes('import { Factory')) {
+    content = iconImports[1] + '\n' + content;
+  }
+  if (content.includes('Star') && !content.includes('import { Star }')) {
+    content = iconImports[2] + '\n' + content;
+  }
+  if (content.includes('Building2') && !content.includes('import { Building2 }')) {
+    content = iconImports[3] + '\n' + content;
   }
   
   return content;
 }
 
-// Remove unused React imports
-function removeUnusedReactImports(content) {
-  // Check if React is imported but not used
-  const hasReactImport = content.includes("import React from 'react';");
-  const usesReact = content.includes('React.') || content.includes('<React.');
-  
-  if (hasReactImport && !usesReact) {
-    content = content.replace(/import React from 'react';\n?/, '');
-  }
-  
+// Function to fix override modifiers
+function fixOverrideModifiers(content) {
+  // Fix componentDidCatch and componentDidMount methods
+  content = content.replace(
+    /componentDidCatch\(/g,
+    'override componentDidCatch('
+  );
+  content = content.replace(
+    /componentDidMount\(/g,
+    'override componentDidMount('
+  );
   return content;
 }
 
-// Fix className prop issues on self-closing tags
-function fixClassNameProps(content) {
-  // Fix className on self-closing tags that don't support it
-  content = content.replace(/<(\w+)\s+className="[^"]*"\s*\/>/g, '<$1 />');
-  
+// Function to fix undefined object access
+function fixUndefinedAccess(content) {
+  // Add optional chaining for potentially undefined objects
+  content = content.replace(
+    /(\w+)\.(\w+)(?=\s*\.)/g,
+    '$1?.$2'
+  );
   return content;
 }
 
-// Process all TypeScript/TSX files in the app/blog directory
-const blogFiles = glob.sync('app/blog/**/*.tsx');
-
-console.log(`Found ${blogFiles.length} blog files to process...`);
-
-let processedCount = 0;
-let errorCount = 0;
-
-blogFiles.forEach(filePath => {
+// Main function to process files
+function processFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
+    
     const originalContent = content;
     
-    // Apply fixes
-    content = fixLucideImports(content);
-    content = removeUnusedReactImports(content);
-    content = fixClassNameProps(content);
+    // Apply all fixes
+    content = fixMetadataImport(content);
+    content = fixTypeImports(content);
+    content = fixPropertyAccess(content);
+    content = fixIconImports(content);
+    content = fixOverrideModifiers(content);
+    content = fixUndefinedAccess(content);
     
-    // Only write if content changed
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8');
-      processedCount++;
       console.log(`Fixed: ${filePath}`);
+      modified = true;
     }
+    
+    return modified;
   } catch (error) {
     console.error(`Error processing ${filePath}:`, error.message);
-    errorCount++;
+    return false;
+  }
+}
+
+// Find all TypeScript/TSX files in the app directory
+const pattern = 'app/**/*.{ts,tsx}';
+const files = glob.sync(pattern, { cwd: process.cwd() });
+
+console.log(`Found ${files.length} TypeScript files to process...`);
+
+let fixedCount = 0;
+files.forEach(file => {
+  if (processFile(file)) {
+    fixedCount++;
   }
 });
 
-console.log(`\nProcessed ${processedCount} files successfully`);
-if (errorCount > 0) {
-  console.log(`Errors in ${errorCount} files`);
-}
+console.log(`\nFixed ${fixedCount} files.`);

@@ -41,8 +41,7 @@ check_success() {
 }
 
 echo "🚀 Zion Tech Group - Comprehensive Deployment Script"
-echo "=================================================="
-echo ""
+echo "echo ""
 
 # Step 1: Check current state
 print_status "Step 1: Checking current state..."
@@ -211,8 +210,7 @@ git branch -d cursor/analyze-improve-and-deploy-ziontechgroup-app-4210 2>/dev/nu
 # Final status
 echo ""
 echo "🎉 DEPLOYMENT COMPLETED SUCCESSFULLY! 🎉"
-echo "======================================="
-echo ""
+echo "echo ""
 print_success "All improvements have been successfully merged and deployed"
 print_success "The Zion Tech Group website now includes:"
 echo "  • Advanced performance monitoring"

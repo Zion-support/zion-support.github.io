@@ -1,13 +1,16 @@
 import { Component, ErrorInfo, ReactNode } from 'react';
+import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
 
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
+  onError?: (error: Error, errorInfo: ErrorInfo) => void;
 }
 
 interface State {
   hasError: boolean;
   error?: Error;
+  errorId?: string;
 }
 
 class ErrorBoundary extends Component<Props, State> {
@@ -17,52 +20,90 @@ class ErrorBoundary extends Component<Props, State> {
   }
 
   static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
+    return { 
+      hasError: true, 
+      error,
+      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
+    };
   }
 
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error('ErrorBoundary caught an error:', error, errorInfo);
-  }
-
-  render() {
-    if (this.state.hasError) {
-      return (
-        this.props.fallback || (
-          <div className='min-h-screen flex items-center justify-center bg-gradient-to-br from-red-50 to-orange-50'>
-            <div className='max-w-md w-full mx-4'>
-              <div className='bg-white rounded-2xl shadow-xl p-8 text-center'>
-                <div className='inline-flex items-center justify-center w-16 h-16 rounded-full bg-red-100 mb-4'>
-                  <div className='w-8 h-8 text-red-600 text-4xl'>⚠️</div>
-                </div>
-                <h1 className='text-2xl font-bold text-gray-900 mb-2'>
-                  Oops! Something went wrong
-                </h1>
-                <p className='text-gray-600 mb-6'>
-                  We're sorry for the inconvenience. Please try refreshing the
-                  page.
-                </p>
-                <div className='space-y-3'>
-                  <button
-                    onClick={() => window.location.reload()}
-                    className='w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors'
-                  >
-                    Refresh Page
-                  </button>
-                  <a
-                    href='/'
-                    className='block w-full border-2 border-red-600 text-red-600 hover:bg-red-50 font-semibold py-3 px-6 rounded-lg transition-colors'
-                  >
-                    Go to Homepage
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        )
-      );
+  override componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+    
+    // Report error to analytics/monitoring service
+    this.reportError(error, errorInfo);
+    
+    // Call custom error handler if provided
+    if (this?.props.onError) {
+      this?.props.onError(error, errorInfo);
     }
+  }
 
-    return this.props.children;
+  private reportError = (error: Error, errorInfo: ErrorInfo) => {
+    // Report to external service (e?.g., Sentry, LogRocket, etc.)
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', 'exception', {
+        description: error.message,
+        fatal: false,
+        custom_map: {
+          error_id: this?.state.errorId,
+          component_stack: errorInfo.componentStack
+        }
+      });
+    }
+  };
+
+  private handleRetry = () => {
+    this.setState({ hasError: false, error: undefined, errorId: undefined });
+  };
+
+  private handleGoHome = () => {
+    window?.location.href = '/';
+  };
+
+  override render() {
+    if (this?.state.hasError) {
+      return this?.props.fallback || (
+        <div className="min-h-screen flex items-center justify-center bg-gray-900">
+          <div className="text-center p-8 max-w-md">
+            <AlertTriangle className="w-16 h-16 text-red-500 mx-auto mb-4" />
+            <h1 className="text-2xl font-bold text-white mb-4">Something went wrong</h1>
+            <p className="text-gray-300 mb-6">
+              We're sorry, but something unexpected happened. Our team has been notified.
+            </p>
+            {this?.state.errorId && (
+              <p className="text-gray-400 mb-4 text-sm">
+                Error ID: {this?.state.errorId}
+              </p>
+            )}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button
+                onClick={this.handleRetry}
+                className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors flex items-center justify-center gap-2"
+              >
+                <RefreshCw className="w-4 h-4" />
+                Try Again
+              </button>
+              <button
+                onClick={this.handleGoHome}
+                className="bg-gray-600 hover:bg-gray-700 text-white px-6 py-3 rounded-lg transition-colors flex items-center justify-center gap-2"
+              >
+                <Home className="w-4 h-4" />
+                Go Home
+              </button>
+            </div>
+            <button
+              onClick={() => window?.location.reload()}
+              className="mt-4 text-gray-400 hover:text-white text-sm underline"
+            >
+              Or refresh the page
+            </button>
+          </div>
+        </div>
+      );
+  }
+
+    return this?.props.children;
   }
 }
 
