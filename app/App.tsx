@@ -6,6 +6,7 @@ import { HelmetProvider } from 'react-helmet-async';
 import ErrorBoundary from '../src/components/ErrorBoundary';
 import SEOOptimizer from '../src/components/SEOOptimizer';
 import AccessibilityEnhancer from '../src/components/AccessibilityEnhancer';
+import PerformanceMonitor from './components/PerformanceMonitor';
 import LoadingSpinner from './components/LoadingSpinner';
 
 // Lazy load pages for better performance
@@ -31,19 +32,21 @@ function App() {
       <ErrorBoundary>
         <AccessibilityEnhancer>
           <SEOOptimizer>
-            <Router>
-              <div className="App">
-                <Suspense fallback={<LoadingSpinner />}>
-                  <Routes>
-                    <Route path="/" element={<HomePage />} />
-                    <Route path="/about" element={<AboutPage />} />
-                    <Route path="/services" element={<ServicesPage />} />
-                    <Route path="/contact" element={<ContactPage />} />
-                    <Route path="/enterprise" element={<EnterprisePage />} />
-                  </Routes>
-                </Suspense>
-              </div>
-            </Router>
+            <PerformanceMonitor>
+              <Router>
+                <div className="App">
+                  <Suspense fallback={<LoadingSpinner />}>
+                    <Routes>
+                      <Route path="/" element={<HomePage />} />
+                      <Route path="/about" element={<AboutPage />} />
+                      <Route path="/services" element={<ServicesPage />} />
+                      <Route path="/contact" element={<ContactPage />} />
+                      <Route path="/enterprise" element={<EnterprisePage />} />
+                    </Routes>
+                  </Suspense>
+                </div>
+              </Router>
+            </PerformanceMonitor>
           </SEOOptimizer>
         </AccessibilityEnhancer>
       </ErrorBoundary>
