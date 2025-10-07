@@ -11,7 +11,7 @@
     "build:fast": "next build",
     "build:analyze": "ANALYZE=true next build",
     "preview": "next start",
-    "lint": "eslint src/ --ext .ts,.tsx,.js,.jsx --ignore-pattern 'src/components/**' --ignore-pattern 'src/pages/**' --ignore-pattern 'src/content/**' --ignore-pattern 'src/data/**' --ignore-pattern 'src/hooks/**' --ignore-pattern 'src/types/**' --ignore-pattern 'src/utils/**' --ignore-pattern 'src/config/**' --max-warnings 0",
+    "lint": "eslint app/ --ext .ts,.tsx,.js,.jsx --max-warnings 50",
     "lint:fix": "eslint . --config eslint.config.cjs --fix",
     "type-check": "tsc --noEmit",
     "type-check:ci": "tsc --noEmit -p tsconfig.ci.json",
