@@ -152,7 +152,13 @@ export class AccessibilityEnhancer {
     };
 
     prefersHighContrast.addEventListener('change', handleHighContrast);
-    handleHighContrast(prefersHighContrast);
+    
+    // Initial setup
+    if (prefersHighContrast.matches) {
+      document.documentElement.classList.add('high-contrast');
+    } else {
+      document.documentElement.classList.remove('high-contrast');
+    }
   }
 
   // Reduced motion
@@ -170,7 +176,13 @@ export class AccessibilityEnhancer {
     };
 
     prefersReducedMotion.addEventListener('change', handleReducedMotion);
-    handleReducedMotion(prefersReducedMotion);
+    
+    // Initial setup
+    if (prefersReducedMotion.matches) {
+      document.documentElement.classList.add('reduced-motion');
+    } else {
+      document.documentElement.classList.remove('reduced-motion');
+    }
   }
 
   // Focus management
