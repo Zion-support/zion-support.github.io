@@ -62,6 +62,7 @@ class PerformanceOptimizer {
    */
   private measureLoadTime(): void {
     if (typeof window === 'undefined' || !window.performance) return;
+    if (typeof window.performance.getEntriesByType !== 'function') return;
 
     const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
     if (navigation) {
@@ -74,17 +75,24 @@ class PerformanceOptimizer {
    */
   private measureRenderTime(): void {
     if (typeof window === 'undefined' || !window.performance) return;
+    
+    // Check if PerformanceObserver exists (may not be available in test environments)
+    if (typeof PerformanceObserver === 'undefined') return;
 
-    const observer = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
-      entries.forEach((entry) => {
-        if (entry.entryType === 'measure') {
-          this.metrics.renderTime = entry.duration;
-        }
+    try {
+      const observer = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        entries.forEach((entry) => {
+          if (entry.entryType === 'measure') {
+            this.metrics.renderTime = entry.duration;
+          }
+        });
       });
-    });
 
-    observer.observe({ entryTypes: ['measure'] });
+      observer.observe({ entryTypes: ['measure'] });
+    } catch (error) {
+      // PerformanceObserver may not support 'measure' entryType in some environments
+    }
   }
 
   /**

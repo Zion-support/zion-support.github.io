@@ -51,7 +51,7 @@ export const generateMetaTags = (data: {
   return tags;
 };
 
-// SEO config interface
+// SEO Config interface
 interface SEOConfig {
   title: string;
   description: string;
@@ -74,11 +74,12 @@ interface SEOConfig {
   tags?: string[];
 }
 
+// Default SEO config
 const defaultSEOConfig: SEOConfig = {
   title: 'Zion Holdings',
   description: 'Leading provider of AI-powered business solutions',
-  keywords: ['AI', 'business', 'solutions'],
-  canonicalUrl: '',
+  keywords: [],
+  canonicalUrl: 'https://zion.app',
   ogImage: '/og-image.jpg',
   ogType: 'website',
   twitterCard: 'summary_large_image',
@@ -90,6 +91,29 @@ const defaultSEOConfig: SEOConfig = {
   locale: 'en_US',
   siteName: 'Zion Holdings',
   author: 'Zion Holdings',
+}
+
+// Generate structured data
+export const generateStructuredData = (data: {
+  type: 'Organization' | 'WebSite' | 'Article' | 'Service';
+  name: string;
+  description: string;
+  url?: string;
+  logo?: string;
+  sameAs?: string[];
+  [key: string]: unknown;
+}) => {
+  const baseStructure = {
+    '@context': 'https://schema.org',
+    '@type': data.type,
+    name: data.name,
+    description: data.description,
+    url: data.url || '',
+    logo: data.logo || '',
+    sameAs: data.sameAs || [],
+  };
+
+  return { ...baseStructure, ...data };
 };
 
 // SEO Enhancer class
@@ -287,17 +311,18 @@ Sitemap: ${this.config.canonicalUrl}/sitemap.xml`;
   // Get current SEO data
   getCurrentSEO() {
     if (typeof document === 'undefined') return {};
-
+    
     return {
       title: document.title,
       description: document.querySelector('meta[name="description"]')?.getAttribute('content') || '',
+      keywords: document.querySelector('meta[name="keywords"]')?.getAttribute('content') || '',
       canonical: document.querySelector('link[rel="canonical"]')?.getAttribute('href') || '',
     };
   }
 }
 
-// Generate structured data
-export const generateStructuredData = (data: {
+// Generate structured data with type-specific properties
+export const generateAdvancedStructuredData = (data: {
   type: 'Organization' | 'WebSite' | 'Article' | 'Service';
   name: string;
   description: string;
