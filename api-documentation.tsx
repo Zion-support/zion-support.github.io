@@ -1,6 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-        <div className='bg-white rounded-lg shadow-lg p-8 mb-8'>
+
+const APIDocumentation: React.FC = () => {
+  return (
+    <div className='bg-white rounded-lg shadow-lg p-8 mb-8'>
           <h2 className='text-2xl font-semibold text-gray-800 mb-6'>
             API Endpoints
           </h2>
@@ -49,8 +52,15 @@ const apiKey = 'your-api-key'
 const baseUrl = 'https://api?.ziontechgroup.com'
 const createContent = async () => {
           <Link
-            href='/<contact'
+            to='/contact'
             className='inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors'
           >
             Contact Support
           </Link>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default APIDocumentation;
