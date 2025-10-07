@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 import PerformanceMonitor from './components/PerformanceMonitor';
 
-export const metadata: Metadata = {
+const metadata: Metadata = {
   title: 'Zion Tech Group - AI & IT Solutions',
   description: 'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services.',
   keywords: ['AI solutions', 'enterprise AI', 'digital transformation', 'automation', 'cloud services'],
@@ -55,6 +55,8 @@ export const metadata: Metadata = {
     google: 'your-google-verification-code',
   },
 };
+
+export { metadata };
 
 export default function RootLayout({
   children,

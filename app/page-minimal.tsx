@@ -2,11 +2,13 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Phone, CheckCircle, Star } from 'lucide-react';
 
-export const metadata = {
+const metadata = {
   title: 'Zion Tech Group - Advanced AI and IT Solutions',
   description:
     'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services.',
 };
+
+export { metadata };
 
 export default function HomePage() {
   return (

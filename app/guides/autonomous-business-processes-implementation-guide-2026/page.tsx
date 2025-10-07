@@ -14,7 +14,7 @@ import {
 } from 'lucide-react';
 import type { Metadata } from 'next';
 
-export const metadata: Metadata = {
+const metadata: Metadata = {
   title:
     'Complete Guide to Implementing Autonomous Business Processes in 2026 | Zion Tech Group',
   description:
@@ -31,6 +31,8 @@ export const metadata: Metadata = {
     authors: ['Zion Tech Group'],
   },
 };
+
+export { metadata };
 
 export default function ImplementationGuide() {
   return (

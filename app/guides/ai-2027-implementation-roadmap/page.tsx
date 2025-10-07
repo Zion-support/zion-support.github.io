@@ -11,7 +11,7 @@ import {
   Brain,
 } from 'lucide-react';
 
-export const metadata = {
+const metadata = {
   title:
     'AI 2027 Implementation Roadmap - Complete Guide to Advanced Neural Superintelligence',
   description:
@@ -27,6 +27,8 @@ export const metadata = {
     type: 'article',
   },
 };
+
+export { metadata };
 
 export default function AI2027ImplementationRoadmap() {
   return (

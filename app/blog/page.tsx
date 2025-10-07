@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {
+const metadata: Metadata = {
   title: 'AI & Technology Blog | Zion Tech Group',
   description: 'Latest insights on AI, enterprise automation, and digital transformation from Zion Tech Group experts.',
   keywords: 'AI blog, enterprise technology, automation insights, digital transformation',
@@ -13,6 +13,8 @@ export const metadata: Metadata = {
     url: 'https://ziontechgroup.com/blog',
   },
 };
+
+export { metadata };
 
 export default function BlogPage() {
   return (
