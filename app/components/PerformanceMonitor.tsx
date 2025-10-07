@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, memo, useCallback } from 'react';
 
 interface PerformanceMetrics {
   loadTime: number;
@@ -9,7 +9,7 @@ interface PerformanceMetrics {
   firstInputDelay: number;
 }
 
-const PerformanceMonitor: React.FC = () => {
+const PerformanceMonitor: React.FC = memo(() => {
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -124,6 +124,8 @@ const PerformanceMonitor: React.FC = () => {
       )}
     </div>
   );
-};
+});
+
+PerformanceMonitor.displayName = 'PerformanceMonitor';
 
 export default PerformanceMonitor;
