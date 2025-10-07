@@ -113,7 +113,7 @@ global.PerformanceObserver = class MockPerformanceObserver {
 
 // Mock window.location
 delete (window as { location?: unknown }).location;
-(window as { location: { href: string; origin: string; protocol: string; host: string; hostname: string; port: string; pathname: string; search: string; hash: string } }).location = {
+(window as { location: { href: string; origin: string; protocol: string; host: string; hostname: string; port: string; pathname: string; search: string; hash: string; reload: () => void; assign: (url: string) => void; replace: (url: string) => void } }).location = {
   href: 'http://localhost:3000',
   origin: 'http://localhost:3000',
   protocol: 'http:',
