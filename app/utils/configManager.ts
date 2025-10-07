@@ -308,7 +308,7 @@ export class ConfigManager {
         this.config[key] = Object.assign({}, currentValue, { [nestedKeyOrValue]: value }) as AppConfig[K];
       } else {
         // If current value is not an object, create a new object
-        this.config[key] = { [nestedKeyOrValue]: value } as AppConfig[K];
+        this.config[key] = { [nestedKeyOrValue]: value } as unknown as AppConfig[K];
       }
     } else {
       this.config[key] = nestedKeyOrValue as AppConfig[K];
