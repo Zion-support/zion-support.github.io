@@ -154,10 +154,10 @@ export const reportWebVitals = (metrics: WebVitalsMetrics): void => {
   console.log('Web Vitals: ', metrics);
 
   // Send to analytics service
-  if (typeof window !== 'undefined' && (window as any).gtag) {
+  if (typeof window !== 'undefined' && (window as unknown as { gtag?: Function }).gtag) {
     Object.entries(metrics).forEach(([key, value]) => {
       if (value !== undefined) {
-        (window as any).gtag('event', key, {
+        (window as unknown as { gtag: Function }).gtag('event', key, {
           value: Math.round(value),
           event_category: 'Web Vitals',
           non_interaction: true,
@@ -191,7 +191,7 @@ export const monitorLongTasks = (
 /**
  * Debounce function
  */
-export const debounce = <T extends (...args: any[]) => any>(
+export const debounce = <T extends (...args: unknown[]) => unknown>(
   func: T,
   wait: number
 ): ((...args: Parameters<T>) => void) => {
@@ -205,7 +205,7 @@ export const debounce = <T extends (...args: any[]) => any>(
 /**
  * Throttle function
  */
-export const throttle = <T extends (...args: any[]) => any>(
+export const throttle = <T extends (...args: unknown[]) => unknown>(
   func: T,
   limit: number
 ): ((...args: Parameters<T>) => void) => {

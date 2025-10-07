@@ -188,7 +188,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
             </h1>
 
             <p className='text-sm text-gray-600 mb-6'>
-              We're sorry, but something unexpected happened. Please try again
+              We&apos;re sorry, but something unexpected happened. Please try again
               or contact support if the problem persists.
             </p>
 
