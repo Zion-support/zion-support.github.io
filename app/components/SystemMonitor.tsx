@@ -3,9 +3,9 @@
  * Real-time monitoring dashboard for performance, errors, and system health
  */
 
-import React, { useState, useCallback, useEffect } from 'react';
-import { initializePerformanceEnhancements } from '../utils/performanceEnhancer';
-import { errorHandler } from '../utils/enhancedErrorHandler';
+import React, { useState, useEffect, useCallback } from 'react';
+import { collectPerformanceMetrics, getMemoryUsage } from '../utils/performanceEnhancer';
+// import { errorHandler } from '../utils/enhancedErrorHandler';
 
 interface SystemMetrics {
   performance: {
@@ -63,19 +63,16 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
   // Update metrics
   const updateMetrics = useCallback(() => {
     try {
-      // Get basic performance metrics
-      const navigationTiming = performance.timing;
-      const loadTime = navigationTiming.loadEventEnd - navigationTiming.navigationStart;
-      
-      const performanceMetrics = {
-        loadTime: loadTime || performance.now(),
-        firstContentfulPaint: 0,
-        largestContentfulPaint: 0,
-        firstInputDelay: 0,
-        cumulativeLayoutShift: 0
+      const performanceMetrics = collectPerformanceMetrics();
+      const performanceScore = 85; // Default score
+      // const errorStats = errorHandler.getErrorStatistics();
+      const errorStats = {
+        totalErrors: 0,
+        errorsByType: {},
+        errorsByCategory: {},
+        errorsBySeverity: {},
+        recentErrors: []
       };
-      const performanceScore = 85;
-      const errorStats = errorHandler.getErrorStatistics();
 
       // Get memory info
       const memoryInfo = getMemoryInfo();
@@ -85,9 +82,9 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
 
       const newMetrics: SystemMetrics = {
         performance: {
-          score: 0.85,
-          loadTime: loadTime || 0,
-          firstContentfulPaint: 0,
+          score: performanceScore,
+          loadTime: performanceMetrics?.navigation?.totalTime || 0,
+          firstContentfulPaint: performanceMetrics?.paint?.firstContentfulPaint || 0,
           largestContentfulPaint: 0,
           firstInputDelay: 0,
           cumulativeLayoutShift: 0,
@@ -119,7 +116,6 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
   // Initialize monitoring
   useEffect(() => {
     const initializeMonitoring = () => {
-      // startMonitoring(); // Placeholder
       setIsMonitoring(true);
       updateMetrics();
     };
@@ -127,7 +123,6 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
     initializeMonitoring();
 
     return () => {
-      // stopMonitoring(); // Placeholder
       setIsMonitoring(false);
     };
   }, [updateMetrics]);
@@ -179,14 +174,14 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
   const handleExport = () => {
     if (!metrics) return;
 
-    const dataToExport: any = {
+    const exportData = {
       metrics,
-      performanceData: metrics.performance,
-      errorData: errorHandler.exportErrorData(),
+      performanceData: collectPerformanceMetrics(),
+      // errorData: errorHandler.exportErrorData(),
       timestamp: new Date().toISOString(),
     };
 
-    const blob = new Blob([JSON.stringify(dataToExport, null, 2)], {
+    const blob = new Blob([JSON.stringify(exportData, null, 2)], {
       type: 'application/json',
     });
     const url = URL.createObjectURL(blob);

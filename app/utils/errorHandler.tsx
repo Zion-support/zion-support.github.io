@@ -257,12 +257,15 @@ export class ErrorHandler {
       switch (error.severity) {
         case ErrorSeverity.CRITICAL:
         case ErrorSeverity.HIGH:
+          // eslint-disable-next-line no-console
           console.error(logMessage, error);
           break;
         case ErrorSeverity.MEDIUM:
+          // eslint-disable-next-line no-console
           console.warn(logMessage, error);
           break;
         case ErrorSeverity.LOW:
+          // eslint-disable-next-line no-console
           console.info(logMessage, error);
           break;
       }

@@ -1,60 +1,58 @@
 // Performance monitoring setup
 import { analytics } from './utils/analytics';
+import { errorHandler } from './utils/errorHandler';
+import {
+  performanceOptimizer,
+  measurePageLoad,
+  reportWebVitals,
+} from './utils/performanceOptimizer';
 
 // Initialize performance monitoring
 if (typeof window !== 'undefined') {
   // Track page load
   analytics.trackPageView(window.location.pathname);
 
+  // Initialize performance optimizer
+
   // Monitor long tasks
-  if ('PerformanceObserver' in window) {
-    try {
-      const longTaskObserver = new PerformanceObserver((list) => {
-        list.getEntries().forEach((entry) => {
-          analytics.track(
-            'long_task',
-            'performance',
-            'detected',
-            undefined,
-            entry.duration
-          );
-        });
-      });
-      longTaskObserver.observe({ entryTypes: ['longtask'] });
-    } catch (error) {
-      console.warn('Long task monitoring not available:', error);
-    }
-  }
+  performanceOptimizer.monitorLongTasks((entries: PerformanceEntry[]) => {
+    entries.forEach((entry: PerformanceEntry) => {
+      analytics.track(
+        'long_task',
+        'performance',
+        'detected',
+        undefined,
+        entry.duration
+      );
+    });
+  });
 
   // Track Web Vitals
-  if (typeof window !== 'undefined' && 'PerformanceObserver' in window) {
-    try {
-      const observer = new PerformanceObserver((list) => {
-        list.getEntries().forEach((entry) => {
-          if (entry.entryType === 'paint' || entry.entryType === 'largest-contentful-paint') {
-            analytics.trackPerformance(entry.name, entry.startTime);
-          }
-        });
-      });
-      observer.observe({ entryTypes: ['paint', 'largest-contentful-paint'] });
-    } catch (error) {
-      console.warn('Performance monitoring not available:', error);
-    }
+  const metrics = measurePageLoad();
+  if (metrics) {
+    reportWebVitals(metrics);
   }
-  
+
   // Monitor long tasks (if available)
-  if ('PerformanceObserver' in window) {
-    try {
-      const longTaskObserver = new PerformanceObserver((list) => {
-        list.getEntries().forEach((entry) => {
-          analytics.track('long_task', 'performance', 'detected', undefined, entry.duration);
-        });
+  if ('monitorLongTasks' in performanceOptimizer) {
+    (
+      performanceOptimizer as {
+        monitorLongTasks: (
+          callback: (entries: PerformanceEntryList) => void
+        ) => void;
+      }
+    ).monitorLongTasks((entries: PerformanceEntryList) => {
+      entries.forEach((entry: PerformanceEntry) => {
+        analytics.track(
+          'long_task',
+          'performance',
+          'detected',
+          undefined,
+          entry.duration
+        );
       });
-      longTaskObserver.observe({ entryTypes: ['longtask'] });
-    } catch (error) {
-      console.warn('Long task monitoring not available:', error);
-    }
+    });
   }
 }
 
-export { analytics };
+export { analytics, errorHandler, performanceOptimizer };
