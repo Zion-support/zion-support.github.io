@@ -4,8 +4,28 @@
  */
 
 import React, { useState, useEffect, useCallback } from 'react';
-import { collectPerformanceMetrics } from '../utils/performanceOptimizer';
 import { errorHandler } from '../utils/enhancedErrorHandler';
+
+// Define interface for performance metrics
+interface PerformanceMetrics {
+  loadTime: number;
+  firstContentfulPaint: number;
+}
+
+// Helper function to collect performance metrics
+const collectPerformanceMetrics = (): PerformanceMetrics | null => {
+  if (typeof window === 'undefined' || !('performance' in window)) return null;
+  
+  const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+  const paint = performance.getEntriesByType('paint');
+  
+  if (!navigation) return null;
+  
+  return {
+    loadTime: navigation.loadEventEnd - navigation.fetchStart,
+    firstContentfulPaint: paint.find((entry) => entry.name === 'first-contentful-paint')?.startTime || 0,
+  };
+};
 
 // Helper functions
 const calculatePerformanceScore = () => {
@@ -39,7 +59,6 @@ interface NavigatorWithConnection extends Navigator {
   webkitConnection?: NetworkConnection;
 }
 
->>>>>>> e2aec618376f3db9bd60312768ea5d9abc7086c8
 interface SystemMetrics {
   performance: {
     score: number;
@@ -97,8 +116,8 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
   const updateMetrics = useCallback(() => {
     try {
       // Get basic performance metrics
-      const navigationTiming = performance.timing;
-      const loadTime = navigationTiming.loadEventEnd - navigationTiming.navigationStart;
+      const performanceMetrics = collectPerformanceMetrics();
+      const performanceScore = calculatePerformanceScore();
       
       const errorStats = errorHandler.getErrorStatistics();
 
