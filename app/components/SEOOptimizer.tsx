@@ -14,18 +14,22 @@ interface SEOOptimizerProps {
 
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   title = 'Zion Tech Group - AI & IT Solutions',
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   description: _description = 'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services.',
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   keywords: _keywords = ['AI solutions', 'enterprise AI', 'digital transformation', 'automation', 'cloud services'],
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   image: _image = 'https://ziontechgroup.com/og-image.jpg',
   url = 'https://ziontechgroup.com',
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   type: _type = 'website'
 }) => {
   const pathname = usePathname();
 
   useEffect(() => {
     // Track page view
-    if (typeof window !== 'undefined' && (window as { gtag?: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag) {
-      (window as unknown as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag('event', 'page_view', {
+    if (typeof window !== 'undefined' && (window as { gtag?: (command: string, eventName: string, parameters: Record<string, unknown>) => void }).gtag) {
+      (window as unknown as { gtag: (command: string, eventName: string, parameters: Record<string, unknown>) => void }).gtag('event', 'page_view', {
         page_title: title,
         page_location: url + pathname
       });
