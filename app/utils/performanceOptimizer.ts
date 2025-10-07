@@ -105,7 +105,13 @@ class PerformanceOptimizer {
   private measureMemoryUsage(): void {
     if (typeof window === 'undefined' || !('memory' in window.performance)) return;
 
-    const memory = (window.performance as any).memory;
+    const memory = (window.performance as Performance & {
+      memory?: {
+        usedJSHeapSize: number;
+        totalJSHeapSize: number;
+        jsHeapSizeLimit: number;
+      };
+    }).memory;
     if (memory) {
       this.metrics.memoryUsage = memory.usedJSHeapSize;
     }
