@@ -107,11 +107,14 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
       // Get network info
       const networkInfo = getNetworkInfo();
 
+      // Calculate performance score
+      const performanceScore = calculatePerformanceScore();
+      
       const newMetrics: SystemMetrics = {
         performance: {
           score: performanceScore,
-          loadTime: performanceMetrics?.loadTime || 0,
-          firstContentfulPaint: performanceMetrics?.firstContentfulPaint || 0,
+          loadTime: loadTime,
+          firstContentfulPaint: 0,
           largestContentfulPaint: 0, // Not available in current metrics
           firstInputDelay: 0, // Not available in current metrics
           cumulativeLayoutShift: 0, // Not available in current metrics
