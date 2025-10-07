@@ -15,12 +15,15 @@ interface SEOOptimizerProps {
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   title = 'Zion Tech Group - AI & IT Solutions',
 <<<<<<< HEAD
+<<<<<<< HEAD
   description = 'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services.',
   keywords = ['AI solutions', 'enterprise AI', 'digital transformation', 'automation', 'cloud services'],
   image = 'https://ziontechgroup.com/og-image.jpg',
   url = 'https://ziontechgroup.com',
   type = 'website'
 =======
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-3b5f
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   description: _description = 'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services.',
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -37,12 +40,17 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   useEffect(() => {
     // Track page view
 <<<<<<< HEAD
+<<<<<<< HEAD
     if (typeof window !== 'undefined' && (window as { gtag?: (command: string, eventName: string, parameters: Record<string, unknown>) => void }).gtag) {
       (window as unknown as { gtag: (command: string, eventName: string, parameters: Record<string, unknown>) => void }).gtag('event', 'page_view', {
 =======
     if (typeof window !== 'undefined' && (window as { gtag?: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag) {
       (window as unknown as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag('event', 'page_view', {
 >>>>>>> cursor/fix-errors-and-merge-to-main-90ff
+=======
+    if (typeof window !== 'undefined' && (window as { gtag?: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag) {
+      (window as unknown as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag('event', 'page_view', {
+>>>>>>> cursor/fix-errors-and-merge-to-main-3b5f
         page_title: title,
         page_location: url + pathname
       });

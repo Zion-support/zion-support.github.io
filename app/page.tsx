@@ -27,12 +27,17 @@ const HomePage: React.FC = () => {
   // Analytics tracking for phone clicks
   const handlePhoneClick = useCallback(() => {
 <<<<<<< HEAD
+<<<<<<< HEAD
     if (typeof window !== 'undefined' && (window as unknown as { gtag?: (command: string, eventName: string, parameters: Record<string, unknown>) => void }).gtag) {
       ((window as unknown as { gtag: (command: string, eventName: string, parameters: Record<string, unknown>) => void }).gtag)('event', 'phone_click', {
 =======
     if (typeof window !== 'undefined' && (window as unknown as { gtag?: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag) {
       ((window as unknown as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag)('event', 'phone_click', {
 >>>>>>> cursor/fix-errors-and-merge-to-main-90ff
+=======
+    if (typeof window !== 'undefined' && (window as unknown as { gtag?: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag) {
+      ((window as unknown as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag)('event', 'phone_click', {
+>>>>>>> cursor/fix-errors-and-merge-to-main-3b5f
         event_category: 'engagement',
         event_label: 'main_phone_number'
       });

@@ -66,6 +66,13 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
     }
   }, []);
 
+<<<<<<< HEAD
+=======
+  // const handleClose = () => {
+  //   setIsVisible(false);
+  //   localStorage.setItem('ultimate-business-intelligence-showcase-2025-dismissed', 'true');
+  // };
+>>>>>>> cursor/fix-errors-and-merge-to-main-3b5f
 
   if (!isVisible) return null;
 

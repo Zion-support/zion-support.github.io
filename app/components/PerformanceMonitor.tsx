@@ -2,10 +2,26 @@
 
 import React, { useEffect } from 'react';
 
+<<<<<<< HEAD
 const PerformanceMonitor: React.FC = () => {
   useEffect(() => {
     // Web Vitals monitoring
     const reportWebVitals = (metric: { name: string; value: number }) => {
+=======
+// Performance metrics interface (currently unused but available for future use)
+// interface PerformanceMetrics {
+//   lcp?: number;
+//   fid?: number;
+//   cls?: number;
+//   fcp?: number;
+//   ttfb?: number;
+// }
+
+const PerformanceMonitor: React.FC = () => {
+  useEffect(() => {
+    // Web Vitals monitoring
+    const reportWebVitals = (metric: { name: string; value: number; id: string }) => {
+>>>>>>> cursor/fix-errors-and-merge-to-main-3b5f
       // Send to analytics service
       if (typeof window !== 'undefined' && (window as { gtag?: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag) {
         (window as unknown as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag('event', 'web_vitals', {
@@ -39,7 +55,11 @@ const PerformanceMonitor: React.FC = () => {
         // FID - First Input Delay
         new PerformanceObserver((list) => {
           const entries = list.getEntries();
+<<<<<<< HEAD
           entries.forEach((entry: PerformanceEntry & { processingStart?: number }) => {
+=======
+          entries.forEach((entry: PerformanceEventTiming) => {
+>>>>>>> cursor/fix-errors-and-merge-to-main-3b5f
             reportWebVitals({
               name: 'FID',
               value: (entry.processingStart || entry.startTime) - entry.startTime,
@@ -51,8 +71,13 @@ const PerformanceMonitor: React.FC = () => {
         let clsValue = 0;
         new PerformanceObserver((list) => {
           const entries = list.getEntries();
+<<<<<<< HEAD
           entries.forEach((entry: PerformanceEntry & { hadRecentInput?: boolean; value?: number }) => {
             if (!entry.hadRecentInput && entry.value) {
+=======
+          entries.forEach((entry: LayoutShift) => {
+            if (!entry.hadRecentInput) {
+>>>>>>> cursor/fix-errors-and-merge-to-main-3b5f
               clsValue += entry.value;
             }
           });

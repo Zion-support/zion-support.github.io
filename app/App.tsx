@@ -1,10 +1,14 @@
 'use client';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { Suspense, lazy, useCallback, useEffect, ErrorInfo } from 'react';
 =======
 import React, { Suspense, lazy, useEffect } from 'react';
 >>>>>>> cursor/fix-errors-and-merge-to-main-90ff
+=======
+import React, { Suspense, lazy, useEffect } from 'react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-3b5f
 import { HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
@@ -27,6 +31,7 @@ const ErrorBoundary = ({ children }: { children: React.ReactNode }) => {
 // Utils
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { lazyLoadImages, preloadCriticalResources, collectPerformanceMetrics, performanceOptimizer } from './utils/performanceOptimizer';
 =======
 import { performanceOptimizer } from './utils/performanceOptimizer';
@@ -35,6 +40,9 @@ import { performanceOptimizer } from './utils/performanceOptimizer';
 import { preloadCriticalResources, performanceOptimizer } from './utils/performanceOptimizer';
 >>>>>>> cursor/fix-errors-and-merge-to-main-90ff
 import { logger } from './utils/logger';
+=======
+import { preloadCriticalResources, performanceOptimizer } from './utils/performanceOptimizer';
+>>>>>>> cursor/fix-errors-and-merge-to-main-3b5f
 
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./page'));
@@ -50,13 +58,20 @@ const App: React.FC = () => {
     // Initialize Web Vitals monitoring
     if (typeof window !== 'undefined' && 'performance' in window) {
       const metrics = performanceOptimizer.getMetrics();
+<<<<<<< HEAD
       if (metrics) {
         logger.info('Performance metrics collected', 'App', { metrics });
+=======
+      if (metrics && process.env.NODE_ENV === 'development') {
+        // eslint-disable-next-line no-console
+        console.log('Performance metrics:', metrics);
+>>>>>>> cursor/fix-errors-and-merge-to-main-3b5f
       }
     }
 
     // Preload critical resources
     preloadCriticalResources();
+<<<<<<< HEAD
     
     logger.info('Performance monitoring initialized', 'App');
     logger.info('🚀 Zion Tech Group App initialized with comprehensive monitoring', 'App');
@@ -65,6 +80,8 @@ const App: React.FC = () => {
 <<<<<<< HEAD
   const handleError = useCallback((error: Error, errorInfo: ErrorInfo) => {
     logger.error('Application Error', 'ErrorBoundary', { error: error.message, errorInfo });
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-3b5f
   }, []);
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-90ff
