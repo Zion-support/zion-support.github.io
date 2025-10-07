@@ -4,8 +4,22 @@
  */
 
 import { render, RenderOptions, RenderResult } from '@testing-library/react';
-import { ReactElement } from 'react';
+import { ReactElement, useCallback } from 'react';
 import { BrowserRouter } from 'react-router-dom';
+
+// Test result types
+export interface PerformanceMetrics {
+  renderTime: number;
+  memoryUsage: number;
+  timestamp: string;
+}
+
+export interface CoverageMetrics {
+  statements: number;
+  branches: number;
+  functions: number;
+  lines: number;
+}
 
 // Test configuration interface
 export interface TestConfig {
@@ -74,7 +88,7 @@ export class TestRunner {
   async runPerformanceTest(
     component: ReactElement,
     testName: string
-  ): Promise<{ passed: boolean; metrics: any }> {
+  ): Promise<{ passed: boolean; metrics: PerformanceMetrics }> {
     const startTime = performance.now();
     
     const { unmount } = this.customRender(component);
@@ -84,12 +98,13 @@ export class TestRunner {
     // Measure memory usage if available
     let memoryUsage = 0;
     if ('memory' in performance) {
-      memoryUsage = (performance as any).memory.usedJSHeapSize;
+      const perfWithMemory = performance as { memory?: { usedJSHeapSize: number } };
+      memoryUsage = perfWithMemory.memory?.usedJSHeapSize || 0;
     }
 
     unmount();
 
-    const metrics = {
+    const metrics: PerformanceMetrics = {
       renderTime,
       memoryUsage,
       timestamp: new Date().toISOString(),
@@ -111,7 +126,7 @@ export class TestRunner {
   async runAccessibilityTest(
     component: ReactElement,
     testName: string
-  ): Promise<{ passed: boolean; violations: any[] }> {
+  ): Promise<{ passed: boolean; violations: string[] }> {
     const { container } = this.customRender(component);
     
     // Basic accessibility checks
@@ -237,7 +252,7 @@ export class TestRunner {
   async runVisualRegressionTest(
     component: ReactElement,
     testName: string
-  ): Promise<{ passed: boolean; diff?: any }> {
+  ): Promise<{ passed: boolean; diff?: unknown }> {
     // This would typically use a tool like Percy or Chromatic
     // For now, we'll just return a placeholder
     console.log(`Visual regression test for ${testName} would run here`);
@@ -252,10 +267,10 @@ export class TestRunner {
   }
 
   // Coverage test
-  async runCoverageTest(): Promise<{ passed: boolean; coverage: any }> {
+  async runCoverageTest(): Promise<{ passed: boolean; coverage: CoverageMetrics }> {
     // This would typically use Istanbul or similar
     // For now, we'll just return a placeholder
-    const coverage = {
+    const coverage: CoverageMetrics = {
       statements: 85,
       branches: 80,
       functions: 90,
@@ -281,7 +296,7 @@ export class TestRunner {
     component: ReactElement;
     assertions?: (result: RenderResult) => void;
     userInteractions?: (result: RenderResult) => Promise<void>;
-  }>): Promise<{ passed: boolean; results: any[] }> {
+  }>): Promise<{ passed: boolean; results: Array<{ name: string; type: string; passed: boolean; error?: string }> }> {
     const results = [];
 
     for (const test of tests) {
