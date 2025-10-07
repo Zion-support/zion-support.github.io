@@ -3,6 +3,48 @@
  * Tools to improve search engine optimization
  */
 
+// SEO Configuration interface
+export interface SEOConfig {
+  title: string;
+  description: string;
+  keywords: string[];
+  canonicalUrl: string;
+  ogImage: string;
+  ogType: string;
+  twitterCard: string;
+  twitterSite: string;
+  twitterCreator: string;
+  structuredData: Record<string, unknown>;
+  robots: string;
+  language: string;
+  locale: string;
+  siteName: string;
+  author: string;
+  publishedTime?: string;
+  modifiedTime?: string;
+  section?: string;
+  tags?: string[];
+}
+
+// Default SEO configuration
+export const defaultSEOConfig: SEOConfig = {
+  title: 'Zion Holdings - AI-Powered Business Solutions',
+  description: 'Leading provider of AI-powered business solutions',
+  keywords: ['AI', 'business', 'solutions'],
+  canonicalUrl: 'https://zion.app',
+  ogImage: '/og-image.jpg',
+  ogType: 'website',
+  twitterCard: 'summary_large_image',
+  twitterSite: '@zionholdings',
+  twitterCreator: '@zionholdings',
+  structuredData: {},
+  robots: 'index, follow',
+  language: 'en',
+  locale: 'en_US',
+  siteName: 'Zion Holdings',
+  author: 'Zion Holdings',
+};
+
 // Generate meta tags
 export const generateMetaTags = (data: {
   title: string;
@@ -47,25 +89,6 @@ export const generateMetaTags = (data: {
       content: data.twitterImage || data.ogImage || '/og-image.jpg',
     },
   ];
-=======
-  keywords: string[];
-  canonicalUrl: string;
-  ogImage: string;
-  ogType: string;
-  twitterCard: string;
-  twitterSite: string;
-  twitterCreator: string;
-  structuredData: Record<string, unknown>;
-  robots: string;
-  language: string;
-  locale: string;
-  siteName: string;
-  author: string;
-  publishedTime?: string;
-  modifiedTime?: string;
-  section?: string;
-  tags?: string[];
-}
 
   return tags;
 };
@@ -90,7 +113,57 @@ export const generateStructuredData = (data: {
     sameAs: data.sameAs || [],
   };
 
-  return { ...baseStructure, ...data };
+  // Add type-specific properties
+  if (data.type === 'Organization') {
+    return {
+      ...baseStructure,
+      address: {
+        '@type': 'PostalAddress',
+        addressCountry: 'US',
+      },
+      contactPoint: {
+        '@type': 'ContactPoint',
+        telephone: '+1-555-0123',
+        contactType: 'customer service',
+      },
+    };
+  }
+
+  if (data.type === 'WebSite') {
+    return {
+      ...baseStructure,
+      potentialAction: {
+        '@type': 'SearchAction',
+        target: {
+          '@type': 'EntryPoint',
+          urlTemplate: `${data.url}/search?q={search_term_string}`,
+        },
+        'query-input': 'required name=search_term_string',
+      },
+    };
+  }
+
+  if (data.type === 'Article') {
+    return {
+      ...baseStructure,
+      author: {
+        '@type': 'Organization',
+        name: 'Zion Holdings',
+      },
+      publisher: {
+        '@type': 'Organization',
+        name: 'Zion Holdings',
+        logo: {
+          '@type': 'ImageObject',
+          url: data.logo || '/logo.jpg',
+        },
+      },
+      datePublished: new Date().toISOString(),
+      dateModified: new Date().toISOString(),
+    };
+  }
+
+  return baseStructure;
 };
 
 // SEO Enhancer class
@@ -128,6 +201,8 @@ export class SEOEnhancer {
 
   // Update canonical URL
   updateCanonicalUrl(url: string) {
+    if (typeof document === 'undefined') return;
+    
     let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
     if (!canonical) {
       canonical = document.createElement('link');
@@ -188,6 +263,8 @@ export class SEOEnhancer {
 
   // Update structured data
   updateStructuredData(data: Record<string, unknown>) {
+    if (typeof document === 'undefined') return;
+    
     const script = document.createElement('script');
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify(data);
@@ -288,60 +365,14 @@ Sitemap: ${this.config.canonicalUrl}/sitemap.xml`;
   // Get current SEO data
   getCurrentSEO() {
     if (typeof document === 'undefined') return {};
->>>>>>> e2aec618376f3db9bd60312768ea5d9abc7086c8
-
-  // Add type-specific properties
-  if (data.type === 'Organization') {
+    
     return {
-      ...baseStructure,
-      address: {
-        '@type': 'PostalAddress',
-        addressCountry: 'US',
-      },
-      contactPoint: {
-        '@type': 'ContactPoint',
-        telephone: '+1-555-0123',
-        contactType: 'customer service',
-      },
+      title: document.title,
+      description: document.querySelector('meta[name="description"]')?.getAttribute('content') || '',
+      keywords: document.querySelector('meta[name="keywords"]')?.getAttribute('content') || '',
     };
   }
-
-  if (data.type === 'WebSite') {
-    return {
-      ...baseStructure,
-      potentialAction: {
-        '@type': 'SearchAction',
-        target: {
-          '@type': 'EntryPoint',
-          urlTemplate: `${data.url}/search?q={search_term_string}`,
-        },
-        'query-input': 'required name=search_term_string',
-      },
-    };
-  }
-
-  if (data.type === 'Article') {
-    return {
-      ...baseStructure,
-      author: {
-        '@type': 'Organization',
-        name: 'Zion Holdings',
-      },
-      publisher: {
-        '@type': 'Organization',
-        name: 'Zion Holdings',
-        logo: {
-          '@type': 'ImageObject',
-          url: data.logo || '/logo.jpg',
-        },
-      },
-      datePublished: new Date().toISOString(),
-      dateModified: new Date().toISOString(),
-    };
-  }
-
-  return baseStructure;
-};
+}
 
 // Generate sitemap data
 export const generateSitemapData = (
