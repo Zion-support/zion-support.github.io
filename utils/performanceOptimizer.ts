@@ -348,11 +348,7 @@ export class PerformanceOptimizer {
   /**
    * Measure page load performance
    */
-<<<<<<< HEAD
   measurePageLoad(): { domContentLoaded: number; loadComplete: number; totalTime: number } | null {
-=======
-  measurePageLoad(): Record<string, number> | null {
->>>>>>> cursor/fix-errors-and-merge-to-main-abd1
     if (typeof window === 'undefined' || !('performance' in window)) {
       return null;
     }
@@ -370,11 +366,7 @@ export class PerformanceOptimizer {
   /**
    * Report Web Vitals
    */
-<<<<<<< HEAD
   reportWebVitals(metrics: { totalTime?: number; [key: string]: unknown }): void {
-=======
-  reportWebVitals(metrics: Record<string, number>): void {
->>>>>>> cursor/fix-errors-and-merge-to-main-abd1
     if (typeof window === 'undefined') return;
     
     console.log('Web Vitals:', metrics);
@@ -402,21 +394,13 @@ export const withPerformanceTracking = <P extends object>(
   const optimizer = createPerformanceOptimizer();
   const name = componentName || Component.displayName || Component.name || 'Unknown';
   
-<<<<<<< HEAD
   const WrappedComponent = forwardRef<unknown, P>((props, ref) => {
-=======
-  const WrappedComponent = forwardRef<HTMLElement, P>((props, ref) => {
->>>>>>> cursor/fix-errors-and-merge-to-main-abd1
     React.useEffect(() => {
       optimizer.startRender(name);
       return () => optimizer.endRender(name);
     });
     
-<<<<<<< HEAD
     return React.createElement(Component, { ...props, ref } as P & { ref?: React.Ref<unknown> });
-=======
-    return React.createElement(Component, { ...props, ref } as P & { ref?: React.Ref<HTMLElement> });
->>>>>>> cursor/fix-errors-and-merge-to-main-abd1
   });
   
   WrappedComponent.displayName = `withPerformanceTracking(${name})`;
