@@ -7,7 +7,7 @@ interface SEOData {
   keywords: string[];
   canonicalUrl: string;
   ogImage: string;
-  structuredData?: any;
+  structuredData?: Record<string, unknown>;
 }
 
 interface AdvancedSEOOptimizerProps {

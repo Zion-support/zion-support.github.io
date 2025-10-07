@@ -4,7 +4,8 @@ import { BrowserRouter } from 'react-router-dom';
 import { HelmetProvider, Helmet } from 'react-helmet-async';
 import HomePage from './app/page';
 import { performanceEnhancer } from './app/utils/performanceEnhancer';
-// ErrorBoundary is defined below
+// import { errorHandler } from './app/utils/enhancedErrorHandler';
+import ErrorBoundary from './app/components/ErrorBoundary';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
 
 // Memoized components for better performance
@@ -19,88 +20,27 @@ const UnifiedContentPromotion = memo(() => (
   </div>
 ));
 
-const InteractiveAIROICalculator = memo(() => (
-  <div className='bg-gray-50 py-16'>
-    <div className='container mx-auto px-4 text-center'>
-      <h2 className='text-3xl font-bold mb-4'>AI ROI Calculator</h2>
-      <p className='text-xl text-gray-600'>
-        Calculate your potential AI investment returns
-      </p>
-    </div>
-  </div>
-));
+// const InteractiveAIROICalculator = memo(() => (
+//   <div className='bg-gray-50 py-16'>
+//     <div className='container mx-auto px-4 text-center'>
+//       <h2 className='text-3xl font-bold mb-4'>AI ROI Calculator</h2>
+//       <p className='text-xl text-gray-600'>
+//         Calculate your potential AI investment returns
+//       </p>
+//     </div>
+//   </div>
+// ));
 
-const ContentShowcase = memo(() => (
-  <div className='py-16'>
-    <div className='container mx-auto px-4 text-center'>
-      <h2 className='text-3xl font-bold mb-4'>Featured Content</h2>
-      <p className='text-xl text-gray-600'>
-        Explore our latest insights and case studies
-      </p>
-    </div>
-  </div>
-));
-
-const InteractiveContentShowcase2026 = memo(() => (
-  <div className='bg-blue-50 py-16'>
-    <div className='container mx-auto px-4 text-center'>
-      <h2 className='text-3xl font-bold mb-4'>2026 Content Showcase</h2>
-      <p className='text-xl text-gray-600'>
-        Latest trends and innovations for 2026
-      </p>
-    </div>
-  </div>
-));
-
-// Error Boundary Component
-interface ErrorBoundaryState {
-  hasError: boolean;
-  error: Error | null;
-}
-
-interface ErrorBoundaryProps {
-  children: React.ReactNode;
-}
-
-class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundaryState> {
-  constructor(props: ErrorBoundaryProps) {
-    super(props);
-    this.state = { hasError: false, error: null };
-  }
-
-  static getDerivedStateFromError(error: Error): ErrorBoundaryState {
-    return { hasError: true, error };
-  }
-
-  override componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-    console.error('App Error Boundary caught an error:', error, errorInfo);
-  }
-
-  override render() {
-    if (this.state.hasError) {
-      return (
-        <div className="min-h-screen flex items-center justify-center bg-gray-50">
-          <div className="text-center p-8">
-            <h1 className="text-2xl font-bold text-gray-900 mb-4">
-              Something went wrong
-            </h1>
-            <p className="text-gray-600 mb-4">
-              We're working to fix this issue. Please try refreshing the page.
-            </p>
-            <button
-              onClick={() => window.location.reload()}
-              className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors"
-            >
-              Refresh Page
-            </button>
-          </div>
-        </div>
-      );
-    }
-
-    return this.props.children;
-  }
-}
+// const ContentShowcase = memo(() => (
+//   <div className='py-16'>
+//     <div className='container mx-auto px-4 text-center'>
+//       <h2 className='text-3xl font-bold mb-4'>Featured Content</h2>
+//       <p className='text-xl text-gray-600'>
+//         Explore our latest insights and case studies
+//       </p>
+//     </div>
+//   </div>
+// ));
 
 // Loading component
 const LoadingSpinner = memo(() => (
@@ -108,6 +48,17 @@ const LoadingSpinner = memo(() => (
     <div className="text-gray-500">Loading...</div>
   </div>
 ));
+
+// const InteractiveContentShowcase2026 = memo(() => (
+//   <div className='bg-blue-50 py-16'>
+//     <div className='container mx-auto px-4 text-center'>
+//       <h2 className='text-3xl font-bold mb-4'>2026 Content Showcase</h2>
+//       <p className='text-xl text-gray-600'>
+//         Latest trends and innovations for 2026
+//       </p>
+//     </div>
+//   </div>
+// ));
 
 const App = () => {
   // Performance optimization: Preload critical resources
@@ -191,7 +142,7 @@ const App = () => {
       </HelmetProvider>
     </ErrorBoundary>
   );
-};
+}
 
 const container = document.getElementById('root');
 if (container) {

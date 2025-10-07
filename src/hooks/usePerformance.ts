@@ -6,6 +6,10 @@ import analytics from '../utils/analytics';
 
 export interface usePerformanceConfig {
   // Configuration properties
+  enableMonitoring?: boolean;
+  trackLongTasks?: boolean;
+  trackResourceLoading?: boolean;
+}
 
 export interface PerformanceMetrics {
   renderTime: number;
@@ -15,7 +19,9 @@ export interface PerformanceMetrics {
 }
 
 export const defaultusePerformanceConfig: usePerformanceConfig = {
-  // Default configuration
+  enableMonitoring: true,
+  trackLongTasks: true,
+  trackResourceLoading: true,
 };
 
 const usePerformance = () => {
@@ -46,8 +52,6 @@ export const usePageLoadPerformance = () => {
             firstByte: navigation.responseStart - navigation.requestStart,
             domInteractive: navigation.domInteractive - navigation.fetchStart,
             totalLoadTime: navigation.loadEventEnd - navigation.fetchStart,
-            domInteractive: navigation.domInteractive - (navigation as any).navigationStart,
-            totalLoadTime: navigation.loadEventEnd - (navigation as any).navigationStart,
           };
 
           // Track each metric
@@ -71,7 +75,6 @@ export const usePageLoadPerformance = () => {
     if (document.readyState === 'complete') {
       trackPageLoad();
       return;
-      return undefined;
     } else {
       // Wait for load event
       window.addEventListener('load', trackPageLoad);
@@ -109,17 +112,7 @@ export const useResourcePerformance = () => {
  */
 export const useLongTaskMonitoring = () => {
   useEffect(() => {
-    const observer = performanceOptimizer.monitorLongTasks((entries: PerformanceEntry[]) => {
-      entries.forEach((entry: PerformanceEntry) => {
-        analytics.track('long_task', 'performance', 'detected', undefined, entry.duration);
-    const observer = performanceOptimizer.monitorLongTasks((entries: PerformanceEntry[]) => {
-      entries.forEach((entry: PerformanceEntry) => {
-        analytics.track('long_task', 'performance', 'detected', undefined, entry.duration);
-    const observer = performanceOptimizer.monitorLongTasks((entries: PerformanceEntry[]) => {
-      entries.forEach((entry: PerformanceEntry) => {
-        analytics.track('long_task', 'performance', 'detected', undefined, entry.duration);
     const observer = monitorLongTasks((entries: PerformanceEntry[]) => {
-    const observer = performanceOptimizer.monitorLongTasks((entries: PerformanceEntry[]) => {
       entries.forEach((entry: PerformanceEntry) => {
         analytics.track(
           'long_task',
@@ -136,8 +129,6 @@ export const useLongTaskMonitoring = () => {
         observer.disconnect();
       }
     };
-    // Long task monitoring is disabled due to missing performanceOptimizer
-    console.log('Long task monitoring is not available');
   }, []);
 };
 
