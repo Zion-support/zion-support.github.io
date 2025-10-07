@@ -6,20 +6,20 @@
 export interface AnalyticsEvent {
   name: string;
   category: string;
-  action?: string | undefined;
-  label?: string | undefined;
-  value?: number | undefined;
-  properties?: Record<string, any> | undefined;
+  action?: string;
+  label?: string;
+  value?: number;
+  properties?: Record<string, any>;
   timestamp: number;
 }
 
 export interface UserProperties {
-  userId?: string | undefined;
+  userId?: string;
   sessionId: string;
   userAgent: string;
   language: string;
   timezone: string;
-  referrer?: string | undefined;
+  referrer?: string;
 }
 
 class Analytics {
@@ -75,10 +75,10 @@ class Analytics {
     const event: AnalyticsEvent = {
       name,
       category,
-      action: action || undefined,
-      label: label || undefined,
-      value: value || undefined,
-      properties: properties || undefined,
+      action,
+      label,
+      value,
+      properties,
       timestamp: Date.now(),
     };
 
@@ -88,7 +88,7 @@ class Analytics {
     this.sendToAnalytics(event);
 
     // Log in development
-    if (process.env['NODE_ENV'] === 'development') {
+    if (process.env.NODE_ENV === 'development') {
       console.log('Analytics event:', event);
     }
   }

@@ -1,3 +1,5 @@
+import { ArrowRight, CheckCircle } from 'lucide-react';
+import { Star } from 'lucide-react';
 import React from 'react';
 import {
   ArrowRight,
@@ -5,6 +7,7 @@ import {
   CheckCircle,
   TrendingUp,
   Users,
+  Star,
 } from 'lucide-react';
 
 export default function Fortune500TransformationShowcaseBanner() {
@@ -293,4 +296,4 @@ export default function Fortune500TransformationShowcaseBanner() {
       </div>
     </div>
   );
-}
+  }

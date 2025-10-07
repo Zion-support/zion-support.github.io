@@ -1,8 +1,6 @@
+import { ArrowLeft, Target } from 'lucide-react';
 import Link from 'next/link';
 import { ArrowLeft, ArrowRight, Bookmark, Calendar, Clock, DollarSign, Share, Target, TrendingUp, User } from 'lucide-react';
-
-
-
 
 export const metadata = {
   title:
@@ -526,4 +524,4 @@ export default function AICognitiveComputingSuccess2026() {
       </section>
     </div>
   );
-}
+  }

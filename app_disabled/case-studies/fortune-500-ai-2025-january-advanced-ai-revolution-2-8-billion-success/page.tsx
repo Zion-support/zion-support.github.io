@@ -1,4 +1,6 @@
-import { Metadata } from 'next';
+:app_disabled/case-studies/fortune-500-ai-2025-january-advanced-ai-revolution-2-8-billion-success/page.tsx
+import { Star } from 'lucide-react';
+import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title:
@@ -332,4 +334,4 @@ export default function Fortune500AIRevolutionSuccess() {
       </section>
     </div>
   );
-}
+  }

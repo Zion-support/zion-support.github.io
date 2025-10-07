@@ -1,8 +1,7 @@
+import { Zap, CheckCircle } from 'lucide-react';
+import { Star } from 'lucide-react';
 import Link from 'next/link';
-import { ArrowRight, Brain, CheckCircle, TrendingUp, Zap } from 'lucide-react';
-
-
-
+import { ArrowRight, Brain, CheckCircle, TrendingUp, Zap, Star } from 'lucide-react';
 
 export default function December2025UltimateAutonomousRevolutionBanner() {
   return (
@@ -12,7 +11,7 @@ export default function December2025UltimateAutonomousRevolutionBanner() {
         <div
           className='absolute inset-0'
           style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www?.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
           }}
         />
       </div>
@@ -211,4 +210,4 @@ export default function December2025UltimateAutonomousRevolutionBanner() {
       <div className='absolute top-1/2 left-20 w-12 h-12 bg-indigo-500/20 rounded-full animate-pulse delay-500'></div>
     </div>
   );
-}
+  }

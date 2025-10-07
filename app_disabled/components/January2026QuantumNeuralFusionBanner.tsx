@@ -1,3 +1,4 @@
+import { Star } from 'lucide-react';
 import React from 'react';
 
 const January2026QuantumNeuralFusionBanner: React.FC = () => {
@@ -142,6 +143,6 @@ const January2026QuantumNeuralFusionBanner: React.FC = () => {
       </div>
     </section>
   );
-};
+  };
 
 export default January2026QuantumNeuralFusionBanner;

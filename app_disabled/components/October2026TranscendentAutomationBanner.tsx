@@ -178,4 +178,4 @@ export default function October2026TranscendentAutomationBanner() {
       </div>
     </section>
   );
-}
+  }

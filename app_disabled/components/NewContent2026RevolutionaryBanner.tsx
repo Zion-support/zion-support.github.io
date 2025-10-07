@@ -1,8 +1,7 @@
+import { Zap } from 'lucide-react';
+import { Star } from 'lucide-react';
 import Link from 'next/link';
-import { ArrowRight, Brain, TrendingUp, Zap } from 'lucide-react';
-
-
-
+import { ArrowRight, Brain, TrendingUp, Zap, Star } from 'lucide-react';
 
 export default function NewContent2026RevolutionaryBanner() {
   return (
@@ -94,4 +93,4 @@ export default function NewContent2026RevolutionaryBanner() {
       </div>
     </div>
   );
-}
+  }

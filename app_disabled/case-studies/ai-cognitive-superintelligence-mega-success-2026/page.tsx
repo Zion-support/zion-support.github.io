@@ -1,9 +1,6 @@
 import Link from 'next/link';
 import { ArrowRight, Brain, Clock, TrendingUp } from 'lucide-react';
 
-
-
-
 export const metadata = {
   title:
     'AI Cognitive Superintelligence Mega Success 2026: $750M ROI Case Study',
@@ -531,4 +528,4 @@ export default function AICognitiveSuperintelligenceMegaSuccess2026() {
       </div>
     </div>
   );
-}
+  }

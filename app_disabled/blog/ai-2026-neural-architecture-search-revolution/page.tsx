@@ -1,3 +1,4 @@
+import { Star } from 'lucide-react';
 import React from 'react';
 import Link from 'next/link';
 
@@ -197,4 +198,5 @@ export default function NeuralArchitectureSearch Revolution Page() {return (<mai
         </article>
       </div>
     </main>
-  ); }
+  );
+  }

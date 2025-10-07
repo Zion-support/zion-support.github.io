@@ -15,7 +15,7 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
 
   useEffect(() => {
     // Only run in development
-    if (process.env.NODE_ENV !== 'development') return;
+    if (process.env['NODE_ENV'] !== 'development') return;
 
     const observer = new PerformanceObserver(list => {
       const entries = list.getEntries();

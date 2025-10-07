@@ -1,4 +1,8 @@
 import React from 'react';
+<<<<<<< HEAD:src/components/NewServicesPromoBanner.tsx
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main:corrupted-src-backup/components/NewServicesPromoBanner.tsx.backup
 import { Link } from 'react-router-dom';
 import { newServices2026 } from '../content/new-services-2026';
 
@@ -203,8 +207,39 @@ key={service.id}
           </div>
         ))}
       </div>
+<<<<<<< HEAD:src/components/NewServicesPromoBanner.tsx
+=======
+
+interface NewServicesPromoBannerProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const NewServicesPromoBanner: React.FC<NewServicesPromoBannerProps> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={`newservicespromobanner-component ${className}`}>
+      {children || (
+        <div className="p-4 text-center text-gray-600">
+          <h3 className="text-lg font-semibold mb-2">NewServicesPromoBanner</h3>
+          <p>Component placeholder - implementation needed</p>
+        </div>
+      )}
+>>>>>>> cursor/fix-errors-and-merge-to-main-8d57
+=======
+>>>>>>> origin/main:corrupted-src-backup/components/NewServicesPromoBanner.tsx.backup
     </div>
   );
 };
 
+<<<<<<< HEAD:src/components/NewServicesPromoBanner.tsx
+<<<<<<< HEAD
 export default NewServicesPromoBanner;
+=======
+export default NewServicesPromoBanner;
+>>>>>>> cursor/fix-errors-and-merge-to-main-8d57
+=======
+export default NewServicesPromoBanner;
+>>>>>>> origin/main:corrupted-src-backup/components/NewServicesPromoBanner.tsx.backup

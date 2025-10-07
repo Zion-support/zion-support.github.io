@@ -85,4 +85,4 @@ export default function GenAI Governance Blueprint2025Page() {
       </main>
     </div>
   );
-}
+  }

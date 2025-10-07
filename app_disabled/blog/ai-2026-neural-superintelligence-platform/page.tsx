@@ -232,4 +232,4 @@ export default function AINeural Superintelligence Platform() {/* return (
       </div>
     </div>
   );
-})
+  })

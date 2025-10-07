@@ -1,3 +1,4 @@
+import { Star } from 'lucide-react';
 import Link from 'next/link';
 
 export const metadata = {
@@ -403,4 +404,4 @@ export default function AIMegaTransformationSuccess20252026() {
       </div>
     </div>
   );
-}
+  }

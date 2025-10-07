@@ -1,4 +1,6 @@
-import { Metadata } from 'next';
+:app_disabled/case-studies/fortune-500-autonomous-operations-2-7-billion-success/page.tsx
+import { Star } from 'lucide-react';
+import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title:
@@ -503,4 +505,4 @@ export default function Fortune500AutonomousOperationsSuccess() {
       </div>
     </div>
   );
-}
+  }

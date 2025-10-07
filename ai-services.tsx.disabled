@@ -1,4 +1,6 @@
+<<<<<<< HEAD:ai-services.tsx.disabled
 import { CheckCircle, Users } from 'lucide-react';
+import { CheckCircle, Atom, Atom, Users } from 'lucide-react';
 
 import { Helmet } from 'react-helmet-async';
 
@@ -11,7 +13,9 @@ export default function AIServices() {
       title: 'AI-Powered Email Responder',
       description:
         'Automated email responses with sentiment analysis and intelligent categorization',
+<<<<<<< HEAD:ai-services.tsx.disabled
       icon: CheckCircle,
+      icon: Atom,
       features: [
         'Smart email categorization and prioritization',
         'Automated response generation with personalization',
@@ -27,7 +31,9 @@ export default function AIServices() {
       title: 'AI Content Creation Suite',
       description:
         'Comprehensive AI-powered content generation for marketing, social media, and documentation',
+<<<<<<< HEAD:ai-services.tsx.disabled
       icon: CheckCircle,
+      icon: Atom,
       features: [
         'Automated blog posts and articles',
         'Social media content generation',
@@ -43,7 +49,9 @@ export default function AIServices() {
       title: 'Intelligent Document Processing',
       description:
         'AI-powered document analysis, extraction, and processing for business automation',
+<<<<<<< HEAD:ai-services.tsx.disabled
       icon: CheckCircle,
+      icon: Atom,
       features: [
         'Automated data extraction from PDFs and forms',
         'Document classification and routing',
@@ -104,7 +112,7 @@ export default function AIServices() {
                 </h3>
                 <p className='text-slate-300 mb-6'>{service.description}</p>
                 <div className='space-y-2 mb-6'>
-                  {service.features.map((feature, idx) => (
+                  {service?.features.map((feature, idx) => (
                     <div
                       key={idx}
                       className='flex items-center text-sm text-slate-300'
@@ -127,4 +135,4 @@ export default function AIServices() {
       </div>
     </>
   );
-}
+  }

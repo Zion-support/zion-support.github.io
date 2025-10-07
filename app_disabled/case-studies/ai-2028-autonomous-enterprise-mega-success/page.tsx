@@ -1,3 +1,4 @@
+import { Star } from 'lucide-react';
 import Link from 'next/link';
 export const metadata = {
   title:
@@ -279,4 +280,4 @@ export default function AI2028AutonomousEnterpriseMegaSuccess() {
       </div>
     </div>
   );
-}
+  }

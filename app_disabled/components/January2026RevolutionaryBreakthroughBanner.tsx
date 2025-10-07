@@ -262,4 +262,4 @@ export default function January2026RevolutionaryBreakthroughBanner() {
       </div>
     </section>
   );
-}
+  }

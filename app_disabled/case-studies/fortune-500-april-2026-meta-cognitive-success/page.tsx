@@ -1,4 +1,6 @@
-import { Metadata } from 'next';
+:app_disabled/case-studies/fortune-500-april-2026-meta-cognitive-success/page.tsx
+import { Target } from 'lucide-react';
+import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title:
     'Fortune 500 April 2026 Meta-Cognitive AI Success: $5.2B Value Generated',
@@ -454,4 +456,4 @@ export default function Fortune500April2026MetaCognitiveSuccess() {
       </div>
     </div>
   );
-}
+  }

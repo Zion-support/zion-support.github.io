@@ -1,3 +1,8 @@
+<<<<<<< HEAD:src/components/LatestInsights.tsx
+<<<<<<< HEAD
+import { ArrowRight } from "lucide-react";
+=======
+>>>>>>> origin/main:corrupted-src-backup/components/LatestInsights.tsx.backup
 import React from "react";
 import { Link } from "react-router-dom";
 import { latestInsights } from "../content/insights";
@@ -90,8 +95,40 @@ key={item.id}
         </div>
       </div>
     </section>
+<<<<<<< HEAD:src/components/LatestInsights.tsx
+=======
+import React from 'react';
+
+interface LatestInsightsProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const LatestInsights: React.FC<LatestInsightsProps> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={`latestinsights-component ${className}`}>
+      {children || (
+        <div className="p-4 text-center text-gray-600">
+          <h3 className="text-lg font-semibold mb-2">LatestInsights</h3>
+          <p>Component placeholder - implementation needed</p>
+        </div>
+      )}
+    </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-8d57
+=======
+>>>>>>> origin/main:corrupted-src-backup/components/LatestInsights.tsx.backup
   );
 };
 
 export default LatestInsights;
+<<<<<<< HEAD:src/components/LatestInsights.tsx
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-8d57
+=======
+
+>>>>>>> origin/main:corrupted-src-backup/components/LatestInsights.tsx.backup

@@ -1,4 +1,7 @@
-import { Metadata } from 'next';
+:app_disabled/case-studies/fortune-500-ai-2026-breakthrough-success/page.tsx
+import { Star } from 'lucide-react';
+import { Factory, Cog } from 'lucide-react';
+import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Fortune 500 AI Transformation: Breakthrough Success Story 2026',
@@ -449,4 +452,4 @@ export default function Fortune500AIBreakthroughSuccess() {
       </div>
     </div>
   );
-}
+  }

@@ -1,5 +1,5 @@
-import React from 'react';
-import Link from 'next/link';
+:app_disabled/components/September30NewContent2025Banner.tsx
+
 const September30NewContent2025Banner: React.FC = () => {
   const newArticles = [
     {
@@ -119,3 +119,50 @@ const September30NewContent2025Banner: React.FC = () => {
         </div>
 
         {/* Call-to-Action Section */}
+:app_disabled/components/September30NewContent2025Banner.tsx
+        <div className="text-center bg-white/5 backdrop-blur-lg rounded-3xl p-12 border border-white/20 mb-16">
+          <h3 className="text-4xl font-bold text-white mb-6">
+            Transform Your Enterprise with Cutting-Edge AI
+          </h3>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Join 50,000+ AI leaders implementing these breakthrough technologies. Get expert guidance 
+            from Zion Tech Group's AI transformation specialists.
+          </p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+            <a
+              href="tel:+13024640950"
+              className="group flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl"
+            >
+              <span className="text-xl">📞</span>
+              <span>Call +1 302 464 0950</span>
+            </a>
+            <a
+              href="mailto:kleber@ziontechgroup.com"
+              className="group flex items-center gap-3 bg-white/10 hover:bg-white/20 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 border border-white/30"
+            >
+              <span className="text-xl">📧</span>
+              <span>Get Expert Consultation</span>
+            </a>
+          </div>
+        </div>
+
+        {/* Stats Section */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          {[
+            { value: '500+', label: 'Enterprise Clients' },
+            { value: '10B+', label: 'Data Points Processed Daily' },
+            { value: '99.9%', label: 'System Uptime' },
+            { value: '5M+', label: 'Autonomous Operations Hours' }
+          ].map((stat, index) => (
+            <div key={index} className="text-center">
+              <div className="text-3xl font-bold text-cyan-400 mb-2">{stat.value}</div>
+              <div className="text-gray-300">{stat.label}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+  };
+
+export default September30NewContent2025Banner;

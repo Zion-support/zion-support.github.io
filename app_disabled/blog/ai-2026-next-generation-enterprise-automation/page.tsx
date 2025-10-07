@@ -1,6 +1,6 @@
+:app_disabled/blog/ai-2026-next-generation-enterprise-automation/page.tsx
 import Link from 'next/link';
 import { ArrowRight, Brain, CheckCircle, Cog, Target, TrendingUp, User, Users, Zap } from 'lucide-react';
-
 
 import { ArrowRight } from 'lucide-react';
 import { Brain } from 'lucide-react';
@@ -13,6 +13,9 @@ import { CheckCircle } from 'lucide-react';
 
 export default function AINextGenEnterpriseAutomation2026() {
   return (
+import { Zap, ArrowRight, Target, CheckCircle } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Star } from 'lucide-react';
 import React from 'react';
 import Link from 'next/link';
 import {ArrowRight,Brain,Zap,Shield,TrendingUp,Users,Target,CheckCircle} from 'lucide-react';
@@ -210,7 +213,7 @@ export default function AINextGen Enterprise Automation2026() {/* return (
       </section>
     </div>
   );
-}
+  }
 </Arrow>
 </Arrow>
 </Check>

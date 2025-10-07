@@ -1,3 +1,4 @@
+import { Star } from 'lucide-react';
 import React from 'react';
 import Link from 'next/link';
 
@@ -61,42 +62,8 @@ export default function Trustless Evaluation Blueprint2026Page() {
           <h3>Deterministic    Scoring</h3>
           <p>
             Pin model versions, seeds, temperature, and decoding settings.
-               Prefer    exact‑match or rule‑based scoring for critical tasks; reserve
-            LLM‑as‑a‑grader only when accompanied by rubric checks and spot
-            audits.
-          </p>
-
-          <h3>Attestations &    Provenance</h3>
-          <p>
-            Generate a signed SBOM and evaluation attestation capturing
-            datasets, code digests, hyperparameters, and artifact hashes.
-               Publish    to an internal registry for auditability.
-          </p>
-
-          <h2>Rollout    Plan</h2>
-          <ol>
-            <li>
-              Start    with one golden dataset and strict signature verification.
-            </li>
-            <li>
-              Harden    with adversarial variants and regression gates in CI.
-            </li>
-            <li>
-              Adopt    attestations for quarterly executive reviews and vendor
-              comparisons.
-            </li>
-          </ol>
-
-          <h2>Checklist</h2>
-          <ul>
-            <li>All    datasets and prompts signed and verified</li>
-            <li>Container    image digests pinned; seeds fixed</li>
-            <li>Failure    modes mapped to metrics with thresholds</li>
-            <li>Attestations    stored and queryable</li>
-          </ul>
-
-          <p>
-            For    related practices, explore our guide on{' '}
+               Prefer    exact‑match or rule‑based scoring for critical tasks;
+  }
             <Arrow Right
               href="/blog/agentic-workflow-orchestration-2026"
               className="text-purple-300 hover:text-purple-200"

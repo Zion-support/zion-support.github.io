@@ -1,6 +1,8 @@
+import { Zap, ArrowLeft, CheckCircle } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Star } from 'lucide-react';
 import Link from 'next/link';
 import { ArrowLeft, Bookmark, Brain, Calendar, CheckCircle, Clock, Shield, TrendingUp, User, Zap } from 'lucide-react';
-
 
 // Use simple SVG icons instead of lucide-react to avoid TypeScript issues
 const ArrowLeft = ({ className }: { className?: string }) => (
@@ -610,4 +612,4 @@ export default function AI2025DecemberAutonomousRevolution28BillionSuccess() {
       </article>
     </div>
   );
-}
+  }

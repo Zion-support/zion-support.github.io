@@ -1,10 +1,8 @@
 import Link from 'next/link';
 import { ArrowRight, DollarSign } from 'lucide-react';
 
-
 import { DollarSign } from 'lucide-react';
 import React from 'react';
-import Link from 'next/link';
 
 export const metadata = {
   
@@ -64,4 +62,4 @@ export default function AICost Optimization Playbook2027() {
       </div>
     </div>
   );
-}
+  }

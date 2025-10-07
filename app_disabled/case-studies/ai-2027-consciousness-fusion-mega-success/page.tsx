@@ -1,4 +1,6 @@
-import { Metadata } from 'next';
+:app_disabled/case-studies/ai-2027-consciousness-fusion-mega-success/page.tsx
+import { Star } from 'lucide-react';
+import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title:
@@ -407,4 +409,4 @@ export default function AI2027ConsciousnessFusionMegaSuccess() {
       </section>
     </div>
   );
-}
+  }

@@ -1,9 +1,11 @@
+:app_disabled/blog/ai-sla-scorecards-2026-q1/page.tsx
+import { ArrowRight } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import React from 'react';
 import Link from 'next/link';
 import { Activity, ArrowRight, Calendar, Clock, Gauge, Map, Shield, ShieldCheck } from 'lucide-react';
 
-
 import React from 'react';
-import Link from 'next/link';
 import {ArrowRight,Clock,Calendar} from 'lucide-react';
 
 export const metadata = {
@@ -85,6 +87,7 @@ export default function Page() {
           <div className="grid md:grid-cols-3 gap-6">
             <div className="rounded-xl border p-6">
               <div className="text-3xl font-extrabold text-indigo-600 mb-2">
+:app_disabled/blog/ai-sla-scorecards-2026-q1/page.tsx
                 p95 &lt; 150ms
               </div>
               <div className="text-slate-600">Inference    latency</div>
@@ -120,3 +123,5 @@ export default function Page() {
     </main>
   );
 }
+                p95 &lt;
+  }

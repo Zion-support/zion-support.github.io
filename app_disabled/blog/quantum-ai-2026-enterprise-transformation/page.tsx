@@ -1,5 +1,5 @@
 import React from 'react';
-import {Metadata} from 'next';
+import type { Metadata } from 'next';
 import QuantumAI2026 Enterprise Transformation from '../../../blog/quantum-ai-2026-enterprise-transformation';
 
 export const metadata = {
@@ -13,4 +13,4 @@ export const metadata = {
 
 export default function Page() {
   return <QuantumAI2026 Enterprise Transformation />;
-}
+  }

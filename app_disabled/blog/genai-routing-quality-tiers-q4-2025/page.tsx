@@ -70,4 +70,5 @@ export default function GenAIRoutingQualityTiersQ42025Page() {
         </footer>
       </main>
     </div>
-  ); }
+  );
+  }

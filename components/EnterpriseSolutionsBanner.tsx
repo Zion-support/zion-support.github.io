@@ -1,4 +1,4 @@
-// import React from 'react';
+//import React from 'react';
 
 export default function EnterpriseSolutionsBanner() {
   return (
@@ -13,4 +13,4 @@ export default function EnterpriseSolutionsBanner() {
       </div>
     </div>
   );
-}
+  }

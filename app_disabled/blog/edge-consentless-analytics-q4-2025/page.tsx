@@ -45,14 +45,8 @@ export default function ConsentlessEdgeAnalyticsQ42025Page() {
           </ul>
           <h2>Outcomes</h2>
           <ul>
-            <li>&lt;100ms telemetry without PII</li>
-            <li>Global    compliance with minimal friction</li>
-            <li>Accurate    product insights at scale</li>
-          </ul>
-        </article>
-        <footer className="mt-12 pt-6 border-t border-white/10 text-white/70">
-          <p>
-            Continueexploring   :{' '}
+            <li>&lt;
+  }
             <Arrow Right
              href="/blog/ai-operational-trust-q4-2025"
              className="text-emerald-300 hover:text-emerald-200"

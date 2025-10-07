@@ -1,3 +1,8 @@
+<<<<<<< HEAD:src/components/October2025AutonomousInfrastructureBanner.tsx
+<<<<<<< HEAD
+import { Shield, TrendingUp, Zap, Target, CheckCircle, ArrowRight, Bot, Cpu, Cloud, Activity, DollarSign, Clock } from 'lucide-react';
+=======
+>>>>>>> origin/main:corrupted-src-backup/components/October2025AutonomousInfrastructureBanner.tsx.bak
 import { Link } from 'react-router-dom';
 const October2025AutonomousInfrastructureBanner = () => {
   return (
@@ -277,6 +282,30 @@ const October2025AutonomousInfrastructureBanner = () => {
           </div>
         </div>
       </div>
+<<<<<<< HEAD:src/components/October2025AutonomousInfrastructureBanner.tsx
+=======
+import React from 'react';
+
+interface October2025AutonomousInfrastructureBannerProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const October2025AutonomousInfrastructureBanner: React.FC<October2025AutonomousInfrastructureBannerProps> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={`october2025autonomousinfrastructurebanner-component ${className}`}>
+      {children || (
+        <div className="p-4 text-center text-gray-600">
+          <h3 className="text-lg font-semibold mb-2">October2025AutonomousInfrastructureBanner</h3>
+          <p>Component placeholder - implementation needed</p>
+        </div>
+      )}
+>>>>>>> cursor/fix-errors-and-merge-to-main-8d57
+=======
+>>>>>>> origin/main:corrupted-src-backup/components/October2025AutonomousInfrastructureBanner.tsx.bak
     </div>
   );
 };

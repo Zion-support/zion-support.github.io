@@ -32,19 +32,5 @@ export default function Page() {
         </h2>
         <p className="text-gray-800 mb-4">
           Event bus + agent controller + policy engine + evaluation loop. Attach
-          domain skills and connectors; enforce SL    As    with health checks and
-          budgets.
-        </p>
-        <h2 className="text-2xl font-bold mt-10 mb-4">
-          Implementation    Checklist
-        </h2>
-        <ol className="list-decimal pl-6 space-y-2 text-gray-800">
-          <li>Define    critical paths and success metrics</li>
-          <li>Instrument end‑to‑end traces with I    Ds    and costs</li>
-          <li>Add    guardrails, timeouts, and fallback playbooks</li>
-          <li>Run    A/B evaluation and progressive rollout</li>
-        </ol>
-      </article>
-    </div>
-  );
-}
+          domain skills and connectors;
+  }

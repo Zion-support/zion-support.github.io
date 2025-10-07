@@ -1,3 +1,5 @@
+import { Zap, ArrowRight, Target } from 'lucide-react';
+import { Star } from 'lucide-react';
 import Link from 'next/link';
 import {
   ArrowRight,
@@ -381,4 +383,4 @@ export default function AI2026BreakthroughInnovationsCaseStudyPage() {
       </section>
     </div>
   );
-}
+  }

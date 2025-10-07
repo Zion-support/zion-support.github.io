@@ -1,4 +1,6 @@
-import { Metadata } from 'next';
+:app_disabled/case-studies/hyperintelligence-mega-success-2026/page.tsx
+import { Star } from 'lucide-react';
+import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Hyperintelligence Mega Success 2026 - Fortune 500 Case Study',
@@ -331,4 +333,4 @@ export default function HyperintelligenceMegaSuccess2026() {
       </div>
     </div>
   );
-}
+  }

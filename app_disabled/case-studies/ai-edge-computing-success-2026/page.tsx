@@ -55,23 +55,8 @@ export default function AIEdgeComputingSuccess2026() {
           </div>
           <div className='bg-white rounded-xl p-6 shadow-lg border border-blue-200 text-center'>
             <div className='text-3xl font-bold text-blue-600 mb-2'>
-              &lt; 10ms
-            </div>
-            <div className='text-sm text-gray-600'>Response Time</div>
-          </div>
-          <div className='bg-white rounded-xl p-6 shadow-lg border border-purple-200 text-center'>
-            <div className='text-3xl font-bold text-purple-600 mb-2'>
-              99.99%
-            </div>
-            <div className='text-sm text-gray-600'>Uptime</div>
-          </div>
-          <div className='bg-white rounded-xl p-6 shadow-lg border border-orange-200 text-center'>
-            <div className='text-3xl font-bold text-orange-600 mb-2'>450%</div>
-            <div className='text-sm text-gray-600'>ROI</div>
-          </div>
-        </div>
-
-        {/* Client Overview */}
+              &lt;
+  }
         <div className='bg-white rounded-xl shadow-lg p-8 mb-8'>
           <h2 className='text-3xl font-bold text-gray-900 mb-6'>
             Client Overview

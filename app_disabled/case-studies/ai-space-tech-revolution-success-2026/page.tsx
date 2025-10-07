@@ -1,8 +1,6 @@
+import { Zap } from 'lucide-react';
 import Link from 'next/link';
 import { ArrowRight, DollarSign, Globe, Rocket, Satellite, Zap } from 'lucide-react';
-
-
-
 
 export const metadata = {
   title: 'AI Space Tech Revolution: $100M Mission Success Case Study',
@@ -516,4 +514,4 @@ export default function AISpaceTechRevolutionSuccess() {
       </div>
     </div>
   );
-}
+  }

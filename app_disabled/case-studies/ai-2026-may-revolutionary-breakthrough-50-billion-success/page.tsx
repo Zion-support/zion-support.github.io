@@ -1,4 +1,6 @@
-import { Metadata } from 'next';
+:app_disabled/case-studies/ai-2026-may-revolutionary-breakthrough-50-billion-success/page.tsx
+import { Star } from 'lucide-react';
+import type { Metadata } from 'next';
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
@@ -38,13 +40,13 @@ export default function May2026RevolutionaryBreakthroughCaseStudyPage() {
             </span>
           </div>
           <h1 className='text-4xl md:text-5xl font-extrabold text-gray-900 mb-6 leading-tight'>
-            {data.title}
+            {data['title']}
           </h1>
-          <p className='text-xl text-gray-600 mb-8'>{data.description}</p>
+          <p className='text-xl text-gray-600 mb-8'>{data['description']}</p>
           <div className='flex items-center gap-4 text-sm text-gray-500'>
-            <span>By {data.author}</span>
+            <span>By {data['author']}</span>
             <span>•</span>
-            <span>{new Date(data.date).toLocaleDateString()}</span>
+            <span>{new Date(data['date']).toLocaleDateString()}</span>
           </div>
         </header>
 
@@ -83,4 +85,4 @@ export default function May2026RevolutionaryBreakthroughCaseStudyPage() {
       </article>
     </div>
   );
-}
+  }

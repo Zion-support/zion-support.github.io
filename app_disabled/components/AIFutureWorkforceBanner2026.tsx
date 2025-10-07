@@ -1,9 +1,6 @@
 import Link from 'next/link';
 import { ArrowRight, Brain, TrendingUp, Users } from 'lucide-react';
 
-
-
-
 export default function AIFutureWorkforceBanner2026() {
   return (
     <section className='py-16 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white relative overflow-hidden'>
@@ -151,4 +148,4 @@ export default function AIFutureWorkforceBanner2026() {
       </div>
     </section>
   );
-}
+  }

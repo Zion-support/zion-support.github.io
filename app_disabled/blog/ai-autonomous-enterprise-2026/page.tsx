@@ -218,4 +218,4 @@ origin/cursor/fix-errors-and-merge-to-main-cc0a
         </section>
       </article>
   );
-}</div></div></div></div></div></div></div></div></div></div>)
+  }</div></div></div></div></div></div></div></div></div></div>)

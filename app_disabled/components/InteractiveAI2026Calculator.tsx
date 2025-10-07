@@ -1,3 +1,5 @@
+import { Star } from 'lucide-react';
+import { Calculator } from 'lucide-react';
 'use client';
 
 import React, { useState } from 'react';
@@ -11,16 +13,18 @@ export default function InteractiveAI2026Calculator() {
     aiInvestment: 500000,
   });
 
-  const [results, setResults] = useState(null);
+  const [results, setResults] = useState<{
+    efficiencyGain: number;
+    costSavings: number;
+    revenueIncrease: number;
+    totalBenefits: number;
+    roi: number;
+    paybackPeriod: number;
+  } | null>(null);
 
   const calculateROI = () => {
-    const {
-      companySize,
-      industry,
-      currentEfficiency,
-      currentCosts,
-      aiInvestment,
-    } = inputs;
+  return null;
+  } = inputs;
 
     // Industry multipliers for 2026
     const industryMultipliers = {
@@ -39,15 +43,15 @@ export default function InteractiveAI2026Calculator() {
       enterprise: 2.0,
     };
 
-    const industry =
-      industryMultipliers[industry] || industryMultipliers.manufacturing;
-    const sizeMultiplier = sizeMultipliers[companySize] || 1.0;
+    const industryData =
+      industryMultipliers[industry as keyof typeof industryMultipliers] || industryMultipliers.manufacturing;
+    const sizeMultiplier = sizeMultipliers[companySize as keyof typeof sizeMultipliers] || 1.0;
 
     // Calculate improvements
     const efficiencyGain =
-      currentEfficiency * industry.efficiency * sizeMultiplier;
-    const costSavings = currentCosts * industry.costReduction * sizeMultiplier;
-    const revenueIncrease = currentCosts * industry.revenue * sizeMultiplier;
+      currentEfficiency * industryData.efficiency * sizeMultiplier;
+    const costSavings = currentCosts * industryData.costReduction * sizeMultiplier;
+    const revenueIncrease = currentCosts * industryData.revenue * sizeMultiplier;
 
     // Total benefits
     const totalBenefits = costSavings + revenueIncrease;
@@ -93,7 +97,7 @@ export default function InteractiveAI2026Calculator() {
                 <select
                   value={inputs.companySize}
                   onChange={e =>
-                    setInputs({ ...inputs, companySize: e.target.value })
+                    setInputs({ ...inputs, companySize: e?.target.value })
                   }
                   className='w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent'
                 >
@@ -113,7 +117,7 @@ export default function InteractiveAI2026Calculator() {
                 <select
                   value={inputs.industry}
                   onChange={e =>
-                    setInputs({ ...inputs, industry: e.target.value })
+                    setInputs({ ...inputs, industry: e?.target.value })
                   }
                   className='w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent'
                 >
@@ -137,7 +141,7 @@ export default function InteractiveAI2026Calculator() {
                   onChange={e =>
                     setInputs({
                       ...inputs,
-                      currentEfficiency: parseInt(e.target.value),
+                      currentEfficiency: parseInt(e?.target.value),
                     })
                   }
                   className='w-full'
@@ -161,7 +165,7 @@ export default function InteractiveAI2026Calculator() {
                   onChange={e =>
                     setInputs({
                       ...inputs,
-                      currentCosts: parseInt(e.target.value) || 0,
+                      currentCosts: parseInt(e?.target.value) || 0,
                     })
                   }
                   className='w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent'
@@ -179,7 +183,7 @@ export default function InteractiveAI2026Calculator() {
                   onChange={e =>
                     setInputs({
                       ...inputs,
-                      aiInvestment: parseInt(e.target.value) || 0,
+                      aiInvestment: parseInt(e?.target.value) || 0,
                     })
                   }
                   className='w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent'
@@ -236,7 +240,7 @@ export default function InteractiveAI2026Calculator() {
                       Cost Savings
                     </span>
                     <span className='text-xl font-bold text-green-600'>
-                      ${results.costSavings.toLocaleString()}
+                      ${results?.costSavings.toLocaleString()}
                     </span>
                   </div>
                   <div className='flex justify-between items-center p-4 bg-gray-50 rounded-lg'>
@@ -244,7 +248,7 @@ export default function InteractiveAI2026Calculator() {
                       Revenue Increase
                     </span>
                     <span className='text-xl font-bold text-blue-600'>
-                      ${results.revenueIncrease.toLocaleString()}
+                      ${results?.revenueIncrease.toLocaleString()}
                     </span>
                   </div>
                   <div className='flex justify-between items-center p-4 bg-gradient-to-r from-green-50 to-blue-50 rounded-lg border-2 border-green-200'>
@@ -252,7 +256,7 @@ export default function InteractiveAI2026Calculator() {
                       Total Annual Benefits
                     </span>
                     <span className='text-2xl font-bold text-green-600'>
-                      ${results.totalBenefits.toLocaleString()}
+                      ${results?.totalBenefits.toLocaleString()}
                     </span>
                   </div>
                 </div>
@@ -314,4 +318,4 @@ export default function InteractiveAI2026Calculator() {
       </div>
     </section>
   );
-}
+  }

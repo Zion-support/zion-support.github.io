@@ -1,5 +1,8 @@
+import { Zap } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Star } from 'lucide-react';
 import React from 'react';
-import { ArrowRight, Brain, TrendingUp, Users, Zap } from 'lucide-react';
+import { ArrowRight, Brain, TrendingUp, Users, Zap, Shield } from 'lucide-react';
 
 export default function February2026NextGenAutonomousIntelligenceBanner() {
   return (
@@ -209,4 +212,4 @@ export default function February2026NextGenAutonomousIntelligenceBanner() {
       </div>
     </div>
   );
-}
+  }

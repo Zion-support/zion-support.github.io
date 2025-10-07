@@ -1,4 +1,8 @@
+:app_disabled/blog/enterprise-rag-security-2027/page.tsx
 "use client";
+import { Star } from 'lucide-react';
+import React from 'react';
+'useclient';
 import Link from 'next/link';
 
 export default function Page() {
@@ -43,4 +47,5 @@ export default function Page() {
         </div>
       </div>
     </main>
-  ); }
+  );
+  }

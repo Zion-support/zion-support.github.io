@@ -1,4 +1,6 @@
-export default async function handler(req, res) {
+const { withSentry } = require('./withSentry.cjs');
+
+async function handler(req, res) {
   if (req.method !== 'POST') {
     res.statusCode = 405;
     res.setHeader('Allow', 'POST');
@@ -9,12 +11,18 @@ export default async function handler(req, res) {
   try {
     const { fromAddress, toAddress, parcel } = req.body || {};
     const apiKey = process.env.EASYPOST_API_KEY;
-    
+
+    if (!apiKey) {
+      res.statusCode = 500;
+      res.json({ error: 'EasyPost API key not configured' });
+      return;
+    }
+
     const response = await fetch('https://api.easypost.com/v2/shipments', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        Authorization: `Bearer ${apiKey}`,
+        'Authorization': `Bearer ${apiKey}`,
       },
       body: JSON.stringify({
         shipment: {
@@ -26,7 +34,7 @@ export default async function handler(req, res) {
     });
 
     const data = await response.json();
-    
+
     if (!response.ok) {
       res.statusCode = 500;
       res.json({ error: data.error || 'Failed to fetch rates' });
@@ -41,3 +49,5 @@ export default async function handler(req, res) {
     res.json({ error: err.message });
   }
 }
+
+module.exports = withSentry(handler);

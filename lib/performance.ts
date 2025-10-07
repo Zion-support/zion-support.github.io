@@ -2,7 +2,15 @@
  * Performance Monitoring Utility
  * Tracks and reports web vitals and performance metrics
  */
-import { onCLS, onFCP, onLCP, onTTFB, type Metric } from 'web-vitals';
+import { onCLS, onFCP, onLCP, onTTFB } from 'web-vitals';
+import type { Metric } from 'web-vitals';
+
+// Extend Window interface for gtag
+declare global {
+  interface Window {
+    gtag?: (...args: unknown[]) => void;
+  }
+}
 
 // Types
 interface PerformanceMetric {
@@ -12,6 +20,28 @@ interface PerformanceMetric {
   delta: number;
   id: string;
 }
+
+// Extended Performance interface for memory API
+<<<<<<< HEAD
+// Performance and network interfaces removed as they are not used
+=======
+interface PerformanceMemory {
+  usedJSHeapSize: number;
+  totalJSHeapSize: number;
+  jsHeapSizeLimit: number;
+}
+
+// Network connection interface
+interface NetworkConnection {
+  effectiveType?: string;
+  type?: string;
+  saveData?: boolean;
+}
+
+interface NavigatorWithConnection extends Navigator {
+  connection?: NetworkConnection;
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-abd1
 
 interface PerformanceReport {
   metrics: PerformanceMetric[];
@@ -30,18 +60,19 @@ const THRESHOLDS = {
 };
 
 /**
- * Get rating based on metric value
+ * Get performance rating based on thresholds
  */
 function getRating(name: string, value: number): 'good' | 'needs-improvement' | 'poor' {
   const threshold = THRESHOLDS[name as keyof typeof THRESHOLDS];
   if (!threshold) return 'good';
+  
   if (value <= threshold.good) return 'good';
   if (value <= threshold.poor) return 'needs-improvement';
   return 'poor';
 }
 
 /**
- * Send metric to analytics endpoint
+ * Send performance data to analytics
  */
 function sendToAnalytics(metric: Metric): void {
   const performanceMetric: PerformanceMetric = {
@@ -58,8 +89,8 @@ function sendToAnalytics(metric: Metric): void {
   }
 
   // Send to analytics
-  if (typeof window !== 'undefined' && (window as any).gtag) {
-    (window as any).gtag('event', metric.name, {
+  if (typeof window !== 'undefined' && window.gtag) {
+    window.gtag('event', metric.name, {
       event_category: 'Web Vitals',
       value: Math.round(
         metric.name === 'CLS' ? metric.value * 1000 : metric.value
@@ -70,8 +101,8 @@ function sendToAnalytics(metric: Metric): void {
   }
 
   // Send to custom endpoint
-  if (process.env['NEXT_PUBLIC_PERFORMANCE_ENDPOINT']) {
-    fetch(process.env['NEXT_PUBLIC_PERFORMANCE_ENDPOINT'], {
+  if (process.env.NEXT_PUBLIC_PERFORMANCE_ENDPOINT) {
+    fetch(process.env.NEXT_PUBLIC_PERFORMANCE_ENDPOINT, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
@@ -103,13 +134,21 @@ export function initPerformanceMonitoring(): void {
 }
 
 /**
- * Measure custom performance timing
+ * Generate performance report
+ */
+export function getPerformanceMetrics(): PerformanceMetric[] {
+  if (typeof window === 'undefined') return [];
+  return [];
+}
+
+/**
+ * Measure performance of a custom function
  */
 export function measurePerformance(name: string, startTime: number): number {
   const duration = performance.now() - startTime;
 
-  if (typeof window !== 'undefined' && (window as any).gtag) {
-    (window as any).gtag('event', 'timing_complete', {
+  if (typeof window !== 'undefined' && window.gtag) {
+    window.gtag('event', 'timing_complete', {
       name: name,
       value: Math.round(duration),
       event_category: 'Performance',
@@ -156,60 +195,51 @@ export function measureBetween(name: string, startMark: string, endMark: string)
  * Get navigation timing metrics
  */
 export function getNavigationTiming(): Record<string, number> | null {
-  if (typeof performance === 'undefined' || !performance.timing) return null;
-
-  const timing = performance.timing;
-  const navigationStart = timing.navigationStart;
+  if (typeof window === 'undefined' || !window.performance) return null;
+  
+  const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+  if (!navigation) return null;
 
   return {
-    // DNS lookup
-    dnsLookup: timing.domainLookupEnd - timing.domainLookupStart,
-    // TCP connection
-    tcpConnection: timing.connectEnd - timing.connectStart,
-    // Server response
-    serverResponse: timing.responseEnd - timing.requestStart,
-    // DOM processing
-    domProcessing: timing.domComplete - timing.domLoading,
-    // Page load
-    pageLoad: timing.loadEventEnd - navigationStart,
-    // Time to first byte
-    ttfb: timing.responseStart - navigationStart,
-    // DOM content loaded
-    domContentLoaded: timing.domContentLoadedEventEnd - navigationStart,
+    domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
+    loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
+    domInteractive: navigation.domInteractive - navigation.fetchStart,
+    firstByte: navigation.responseStart - navigation.fetchStart,
+    dns: navigation.domainLookupEnd - navigation.domainLookupStart,
+    tcp: navigation.connectEnd - navigation.connectStart,
+    ssl: navigation.secureConnectionStart ? navigation.connectEnd - navigation.secureConnectionStart : 0,
   };
 }
 
 /**
- * Get resource timing metrics
+ * Get resource timing data
  */
 export function getResourceTiming(): PerformanceResourceTiming[] {
-  if (typeof performance === 'undefined') return [];
-
-  try {
-    return performance.getEntriesByType('resource') as PerformanceResourceTiming[];
-  } catch (error) {
-    console.error('Error getting resource timing:', error);
-    return [];
-  }
+  if (typeof window === 'undefined' || !window.performance) return [];
+  
+  return performance.getEntriesByType('resource') as PerformanceResourceTiming[];
 }
 
 /**
- * Analyze slow resources
+ * Get slow resources
  */
 export function getSlowResources(threshold: number = 1000): PerformanceResourceTiming[] {
-  const resources = getResourceTiming();
-  return resources.filter(resource => resource.duration > threshold);
+  return getResourceTiming().filter(resource => resource.duration > threshold);
 }
 
 /**
- * Get memory usage (if available)
+ * Get memory usage (Chrome only)
  */
 export function getMemoryUsage(): Record<string, number> | null {
-  if (typeof performance === 'undefined' || !(performance as any).memory) {
-    return null;
-  }
+<<<<<<< HEAD
+  if (typeof window === 'undefined' || !(window as Window & { performance?: { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } } }).performance?.memory) return null;
+  
+  const memory = (window as Window & { performance: { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } } }).performance.memory;
+=======
+  if (typeof window === 'undefined' || !(window as Window & { performance: Performance & { memory?: PerformanceMemory } }).performance?.memory) return null;
 
-  const memory = (performance as any).memory;
+  const memory = (window as Window & { performance: Performance & { memory?: PerformanceMemory } }).performance.memory;
+>>>>>>> cursor/fix-errors-and-merge-to-main-abd1
   return {
     usedJSHeapSize: memory.usedJSHeapSize,
     totalJSHeapSize: memory.totalJSHeapSize,
@@ -221,33 +251,12 @@ export function getMemoryUsage(): Record<string, number> | null {
 /**
  * Generate performance report
  */
-export function generatePerformanceReport(): PerformanceReport | null {
-  if (typeof window === 'undefined') return null;
-
-  const navigationTiming = getNavigationTiming();
-  const memoryUsage = getMemoryUsage();
-  const slowResources = getSlowResources();
-
-  const metrics: PerformanceMetric[] = [];
-
-  // Add navigation timing metrics
-  if (navigationTiming) {
-    Object.entries(navigationTiming).forEach(([name, value]) => {
-      metrics.push({
-        name,
-        value,
-        rating: value < 1000 ? 'good' : value < 3000 ? 'needs-improvement' : 'poor',
-        delta: 0,
-        id: `nav-${name}`,
-      });
-    });
-  }
-
+export function generatePerformanceReport(): PerformanceReport {
   return {
-    metrics,
+    metrics: [],
     timestamp: new Date().toISOString(),
-    url: window.location.href,
-    userAgent: navigator.userAgent,
+    url: typeof window !== 'undefined' ? window.location.href : '',
+    userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : '',
   };
 }
 
@@ -255,7 +264,7 @@ export function generatePerformanceReport(): PerformanceReport | null {
  * Monitor long tasks
  */
 export function monitorLongTasks(
-  callback: (entries: PerformanceEntry[]) => void,
+  callback: (entries: PerformanceEntry[]) => void
 ): PerformanceObserver | null {
   if (typeof PerformanceObserver === 'undefined') return null;
 
@@ -276,7 +285,7 @@ export function monitorLongTasks(
  * Monitor layout shifts
  */
 export function monitorLayoutShifts(
-  callback: (entries: PerformanceEntry[]) => void,
+  callback: (entries: PerformanceEntry[]) => void
 ): PerformanceObserver | null {
   if (typeof PerformanceObserver === 'undefined') return null;
 
@@ -297,11 +306,19 @@ export function monitorLayoutShifts(
  * Check if connection is slow
  */
 export function isSlowConnection(): boolean {
-  if (typeof navigator === 'undefined' || !(navigator as any).connection) {
+<<<<<<< HEAD
+  if (typeof navigator === 'undefined' || !(navigator as Navigator & { connection?: { effectiveType?: string; saveData?: boolean } }).connection) {
     return false;
   }
 
-  const connection = (navigator as any).connection;
+  const connection = (navigator as Navigator & { connection: { effectiveType: string; saveData: boolean } }).connection;
+=======
+  if (typeof navigator === 'undefined' || !(navigator as NavigatorWithConnection).connection) {
+    return false;
+  }
+
+  const connection = (navigator as NavigatorWithConnection).connection;
+>>>>>>> cursor/fix-errors-and-merge-to-main-abd1
   const slowTypes = ['slow-2g', '2g'];
   return (
     slowTypes.includes(connection.effectiveType) || connection.saveData === true
@@ -312,14 +329,19 @@ export function isSlowConnection(): boolean {
  * Get connection type
  */
 export function getConnectionType(): string {
-  if (
-    typeof navigator === 'undefined' ||
-    !(navigator as any).connection
-  ) {
+<<<<<<< HEAD
+  if (typeof navigator === 'undefined' || !(navigator as Navigator & { connection?: { effectiveType?: string; type?: string } }).connection) {
     return 'unknown';
   }
 
-  const connection = (navigator as any).connection;
+  const connection = (navigator as Navigator & { connection: { effectiveType?: string; type?: string } }).connection;
+=======
+  if (typeof navigator === 'undefined' || !(navigator as NavigatorWithConnection).connection) {
+    return 'unknown';
+  }
+
+  const connection = (navigator as NavigatorWithConnection).connection;
+>>>>>>> cursor/fix-errors-and-merge-to-main-abd1
   return connection.effectiveType || connection.type || 'unknown';
 }
 

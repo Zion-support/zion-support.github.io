@@ -1,3 +1,4 @@
+import { Star } from 'lucide-react';
 import React from 'react';
 import Link from 'next/link';
 
@@ -115,4 +116,5 @@ export default function AIEnterpriseGenAIAgentPlatform2026Page() {
         </article>
       </main>
     </div>
-  ); }
+  );
+  }

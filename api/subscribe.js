@@ -12,8 +12,14 @@ async function handler(req, res) {
   }
 
   try {
-    const { email } = req.body || {};
-    
+    const { email, name, source = 'website' } = req.body || {};
+
+    if (!email) {
+      res.statusCode = 400;
+      res.json({ error: 'Email is required' });
+      return;
+    }
+
     if (!isValidEmail(email)) {
       res.statusCode = 400;
       res.json({ error: 'Invalid email' });
@@ -23,10 +29,11 @@ async function handler(req, res) {
     const file = path.join(
       process.cwd(),
       'data',
-      'newsletter-subscriptions.json',
+      'newsletter-subscriptions.json'
     );
-    
+
     let existing = [];
+    
     try {
       existing = JSON.parse(fs.readFileSync(file, 'utf8'));
       if (!Array.isArray(existing)) existing = [];
@@ -36,9 +43,11 @@ async function handler(req, res) {
 
     existing.push({
       email,
+      name,
+      source,
       subscribedAt: new Date().toISOString()
     });
-
+    
     fs.writeFileSync(file, JSON.stringify(existing, null, 2));
     res.statusCode = 200;
     res.json({ success: true });

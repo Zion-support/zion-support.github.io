@@ -1,8 +1,7 @@
+import { Zap } from 'lucide-react';
+import { Lock } from 'lucide-react';
 import Link from 'next/link';
-import { ArrowRight, Brain, TrendingUp, Zap } from 'lucide-react';
-
-
-
+import { ArrowRight, Brain, TrendingUp, Zap, Lock } from 'lucide-react';
 
 export default function NewContent2026PromotionalBanner() {
   return (
@@ -176,4 +175,4 @@ export default function NewContent2026PromotionalBanner() {
       </div>
     </section>
   );
-}
+  }
