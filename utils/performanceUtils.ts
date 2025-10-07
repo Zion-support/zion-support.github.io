@@ -165,21 +165,11 @@ export const collectPerformanceMetrics = async (): Promise<{
       });
       clsObserver.observe({ entryTypes: ['layout-shift'] });
     } catch (error) {
-      if (process.env.NODE_ENV === 'development') {
-        console.warn('Performance Observer not fully supported:', error);
-      }
+      console.warn('Performance Observer not fully supported:', error);
     }
   }
 
-  return metrics as {
-    loadTime: number;
-    domContentLoaded: number;
-    firstPaint: number;
-    firstContentfulPaint: number;
-    largestContentfulPaint: number;
-    firstInputDelay: number;
-    cumulativeLayoutShift: number;
-  };
+  return metrics;
 };
 
 // Performance monitor class
@@ -197,17 +187,13 @@ export class PerformanceMonitor {
       try {
         const longTaskObserver = new PerformanceObserver(list => {
           for (const entry of list.getEntries()) {
-            if (process.env.NODE_ENV === 'development') {
-              console.warn(`Long task detected: ${entry.duration}ms`);
-            }
+            console.warn(`Long task detected: ${entry.duration}ms`);
           }
         });
         longTaskObserver.observe({ entryTypes: ['longtask'] });
         this.observers.push(longTaskObserver);
       } catch (error) {
-        if (process.env.NODE_ENV === 'development') {
-          console.warn('Long task monitoring not supported:', error);
-        }
+        console.warn('Long task monitoring not supported:', error);
       }
     }
   }
@@ -235,7 +221,7 @@ export class PerformanceMonitor {
 }
 
 // Export singleton instance
-export const performanceMonitorInstance = new PerformanceMonitor();
+export const performanceMonitor = new PerformanceMonitor();
 
 // Lazy loading utilities
 export const lazyLoadImages = (): void => {
@@ -325,8 +311,8 @@ export const optimizeScrollPerformance = (): void => {
   window.addEventListener('scroll', requestTick, { passive: true });
 };
 
-// Performance monitor object (alternative implementation)
-export const performanceMonitorObject = {
+// Additional performance monitoring utilities
+export const additionalPerformanceMonitor = {
   start: () => {
     if (typeof window === 'undefined') return;
 
@@ -334,13 +320,11 @@ export const performanceMonitorObject = {
     if ('PerformanceObserver' in window) {
       const observer = new PerformanceObserver(list => {
         list.getEntries().forEach(entry => {
-          if (process.env.NODE_ENV === 'development') {
-            console.log(
-              'Performance metric:',
-              entry.name,
-              (entry as PerformanceEntry & { value?: number }).value
-            );
-          }
+          console.log(
+            'Performance metric:',
+            entry.name,
+            (entry as PerformanceEntry & { value?: number }).value
+          );
         });
       });
 
@@ -370,7 +354,7 @@ export const collectPerformanceMetricsArray = async (): Promise<
 
   // Memory usage
   const memory = getMemoryUsage();
-  if (memory && memory.used > 0) {
+  if (memory) {
     metrics.push({ name: 'memoryUsage', value: memory.used });
   }
 
@@ -392,7 +376,7 @@ const performanceUtils = {
   lazyLoadImages,
   preloadCriticalResources,
   optimizeScrollPerformance,
-  performanceMonitorInstance,
+  performanceMonitor,
   collectPerformanceMetrics,
   collectPerformanceMetricsArray,
   getMemoryUsage,

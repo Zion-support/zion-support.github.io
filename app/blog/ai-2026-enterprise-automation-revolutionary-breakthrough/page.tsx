@@ -5,13 +5,15 @@ import { Metadata } from 'next';
 export const metadata: Metadata = {
   title: "AI 2026: Revolutionary Enterprise Automation Breakthrough",
   description: "The most comprehensive guide to AI automation breakthroughs transforming enterprises in 2026.",
+  type: "article",
+  publishedTime: "2026-01-15T00:00:00Z",
   authors: [{ name: 'Zion Tech Group' }],
   openGraph: {
     title: 'AI 2026: Revolutionary Enterprise Automation Breakthrough',
     description: 'The most comprehensive guide to AI automation breakthroughs transforming enterprises in 2026.',
     type: 'article',
     publishedTime: '2026-01-15T00:00:00Z',
-    authors: ['Zion Tech Group']
+    authors: [{ name: 'Zion Tech Group' }]
   }
 };
 
