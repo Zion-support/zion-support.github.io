@@ -3,7 +3,7 @@
  * Advanced performance optimization tools for the application
  */
 
-import { useRef, useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 
 // Debounce function for performance optimization
 export const debounce = <T extends (...args: unknown[]) => unknown>(
@@ -211,6 +211,18 @@ export const optimizeScrollPerformance = () => {
     };
   };
 
+  const trackLCP = () => {
+    const observer = new PerformanceObserver((list) => {
+      for (const entry of list.getEntries()) {
+        console.log('[Web Vitals] LCP:', entry.startTime);
+      }
+    });
+
+    observer.observe({ entryTypes: ['largest-contentful-paint'] });
+
+    return () => observer.disconnect();
+  };
+
   const trackFID = () => {
     interface FirstInputEntry extends PerformanceEntry {
       processingStart: number;
@@ -233,10 +245,12 @@ export const optimizeScrollPerformance = () => {
 
   // Start tracking
   const cleanupCLS = trackCLS();
+  const cleanupLCP = trackLCP();
   const cleanupFID = trackFID();
 
   return () => {
     cleanupCLS();
+    cleanupLCP();
     cleanupFID();
   };
 };

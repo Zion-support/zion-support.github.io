@@ -33,11 +33,6 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     if (typeof window === 'undefined' || !('performance' in window)) return;
     if (typeof PerformanceObserver === 'undefined') return;
 
-    // Declare observers outside try-catch so they're accessible in cleanup
-    let lcpObserver: PerformanceObserver | null = null;
-    let fidObserver: PerformanceObserver | null = null;
-    let clsObserver: PerformanceObserver | null = null;
-
     const observers: PerformanceObserver[] = [];
 
     // Measure First Contentful Paint (FCP)
@@ -47,7 +42,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     // Measure Largest Contentful Paint (LCP)
     if ('PerformanceObserver' in window) {
       try {
-        lcpObserver = new PerformanceObserver(list => {
+        const lcpObserver = new PerformanceObserver(list => {
           const entries = list.getEntries();
           const lastEntry = entries[entries.length - 1];
           setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
@@ -56,14 +51,13 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         observers.push(lcpObserver);
       } catch (error) {
         console.warn('LCP observer not supported:', error);
-        lcpObserver = null;
       }
     }
 
     // Measure First Input Delay (FID)
     if ('PerformanceObserver' in window) {
       try {
-        fidObserver = new PerformanceObserver(list => {
+        const fidObserver = new PerformanceObserver(list => {
           const entries = list.getEntries();
           entries.forEach(entry => {
             if (
@@ -83,7 +77,6 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         observers.push(fidObserver);
       } catch (error) {
         console.warn('FID observer not supported:', error);
-        fidObserver = null;
       }
     }
 
@@ -91,7 +84,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     if ('PerformanceObserver' in window) {
       try {
         let clsValue = 0;
-        clsObserver = new PerformanceObserver(list => {
+        const clsObserver = new PerformanceObserver(list => {
           const entries = list.getEntries();
           entries.forEach(entry => {
             if (
@@ -111,34 +104,41 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         observers.push(clsObserver);
       } catch (error) {
         console.warn('CLS observer not supported:', error);
-        clsObserver = null;
       }
     }
 
     // Measure Time to First Byte (TTFB)
-    const navigationEntries = performance.getEntriesByType('navigation') || [];
-    const navigationEntry = navigationEntries[0] as PerformanceNavigationTiming;
-    const ttfb = navigationEntry
-      ? navigationEntry.responseStart - navigationEntry.requestStart
-      : null;
+    try {
+      const navigationEntries = performance.getEntriesByType?.('navigation') || [];
+      const navigationEntry = navigationEntries[0] as PerformanceNavigationTiming;
+      const ttfb = navigationEntry
+        ? navigationEntry.responseStart - navigationEntry.requestStart
+        : null;
 
-    // Measure Memory Usage
-    const memory =
-      (performance as Performance & { memory?: { usedJSHeapSize: number } })
-        .memory?.usedJSHeapSize || null;
+      // Measure Memory Usage
+      const memory =
+        (performance as Performance & { memory?: { usedJSHeapSize: number } })
+          .memory?.usedJSHeapSize || null;
 
-    setMetrics(prev => ({
-      ...prev,
-      fcp,
-      ttfb,
-      memory,
-    }));
+      setMetrics(prev => ({
+        ...prev,
+        fcp,
+        ttfb,
+        memory,
+      }));
+    } catch (error) {
+      console.warn('Performance measurement failed:', error);
+    }
 
     // Cleanup observers
     return () => {
-      if (lcpObserver) lcpObserver.disconnect();
-      if (fidObserver) fidObserver.disconnect();
-      if (clsObserver) clsObserver.disconnect();
+      observers.forEach(observer => {
+        try {
+          observer.disconnect();
+        } catch (error) {
+          console.warn('Error disconnecting observer:', error);
+        }
+      });
     };
   }, []);
 
