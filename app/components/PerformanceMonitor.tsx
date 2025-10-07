@@ -2,21 +2,14 @@
 
 import React, { useEffect } from 'react';
 
-interface PerformanceMetrics {
-  lcp?: number;
-  fid?: number;
-  cls?: number;
-  fcp?: number;
-  ttfb?: number;
-}
 
 const PerformanceMonitor: React.FC = () => {
   useEffect(() => {
     // Web Vitals monitoring
-    const reportWebVitals = (metric: any) => {
+    const reportWebVitals = (metric: { name: string; value: number; id: string }) => {
       // Send to analytics service
-      if (typeof window !== 'undefined' && (window as { gtag?: Function }).gtag) {
-        (window as unknown as { gtag: Function }).gtag('event', 'web_vitals', {
+      if (typeof window !== 'undefined' && (window as { gtag?: (command: string, eventName: string, parameters: Record<string, unknown>) => void }).gtag) {
+        (window as unknown as { gtag: (command: string, eventName: string, parameters: Record<string, unknown>) => void }).gtag('event', 'web_vitals', {
           event_category: 'Performance',
           event_label: metric.name,
           value: Math.round(metric.value),
@@ -26,6 +19,7 @@ const PerformanceMonitor: React.FC = () => {
 
       // Log to console in development
       if (process.env.NODE_ENV === 'development') {
+        // eslint-disable-next-line no-console
         console.log('Web Vital:', metric);
       }
     };
@@ -47,7 +41,7 @@ const PerformanceMonitor: React.FC = () => {
         // FID - First Input Delay
         new PerformanceObserver((list) => {
           const entries = list.getEntries();
-          entries.forEach((entry: any) => {
+          entries.forEach((entry: PerformanceEntry & { processingStart?: number }) => {
             reportWebVitals({
               name: 'FID',
               value: (entry.processingStart || entry.startTime) - entry.startTime,
@@ -60,7 +54,7 @@ const PerformanceMonitor: React.FC = () => {
         let clsValue = 0;
         new PerformanceObserver((list) => {
           const entries = list.getEntries();
-          entries.forEach((entry: any) => {
+          entries.forEach((entry: PerformanceEntry & { hadRecentInput?: boolean; value?: number }) => {
             if (!entry.hadRecentInput) {
               clsValue += entry.value;
             }
@@ -85,6 +79,7 @@ const PerformanceMonitor: React.FC = () => {
         }).observe({ entryTypes: ['paint'] });
 
       } catch (error) {
+        // eslint-disable-next-line no-console
         console.warn('Performance monitoring not supported:', error);
       }
     }

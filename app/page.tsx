@@ -26,8 +26,8 @@ const LoadingFallback: React.FC<{ height?: string }> = ({
 const HomePage: React.FC = () => {
   // Analytics tracking for phone clicks
   const handlePhoneClick = useCallback(() => {
-    if (typeof window !== 'undefined' && (window as unknown as { gtag?: Function }).gtag) {
-      ((window as unknown as { gtag: Function }).gtag)('event', 'phone_click', {
+    if (typeof window !== 'undefined' && (window as unknown as { gtag?: (command: string, eventName: string, parameters: Record<string, unknown>) => void }).gtag) {
+      ((window as unknown as { gtag: (command: string, eventName: string, parameters: Record<string, unknown>) => void }).gtag)('event', 'phone_click', {
         event_category: 'engagement',
         event_label: 'main_phone_number'
       });
