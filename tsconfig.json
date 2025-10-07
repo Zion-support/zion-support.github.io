@@ -86,7 +86,6 @@
     "app/services/**/*",
     "app/case-studies/**/*",
     "app/guides/**/*",
-    "app/components/**/*",
     "src/components/disabled-corrupted/**",
     "EnhancedFooter.tsx",
     "EnhancedHeader.tsx",
