@@ -161,7 +161,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
 
   const trackPageView = (config: SEOConfig) => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as { gtag: (command: string, targetId: string, config: Record<string, unknown>) => void }).gtag('config', 'GA_MEASUREMENT_ID', {
+      (window as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag('config', 'GA_MEASUREMENT_ID', {
         page_title: config.title,
         page_location: config.canonicalUrl,
       });

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState, useCallback, useMemo } from 'react';
+import React, { useEffect, useRef, useState, useCallback } from 'react';
 
 interface AccessibilityConfig {
   enableKeyboardNavigation: boolean;
@@ -22,12 +22,9 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 }) => {
   const [isHighContrast, setIsHighContrast] = useState(false);
   const [isReducedMotion, setIsReducedMotion] = useState(false);
-  const [fontSize] = useState(16);
-  // const [focusVisible] = useState(false);
   const skipLinkRef = useRef<HTMLAnchorElement>(null);
-  // const mainContentRef = useRef<HTMLElement>(null);
 
-  const defaultConfig: AccessibilityConfig = useMemo(() => ({
+  const defaultConfig: AccessibilityConfig = {
     enableKeyboardNavigation: true,
     enableScreenReaderSupport: true,
     enableHighContrast: true,
@@ -37,9 +34,24 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     enableARIALabels: true,
     enableColorContrast: true,
     ...config,
-  }), [config]);
+  };
 
-  // Helper functions
+  const updateHighContrastStyles = (enabled: boolean) => {
+    if (enabled) {
+      document.body.classList.add('high-contrast');
+    } else {
+      document.body.classList.remove('high-contrast');
+    }
+  };
+
+  const updateReducedMotionStyles = (enabled: boolean) => {
+    if (enabled) {
+      document.body.classList.add('reduced-motion');
+    } else {
+      document.body.classList.remove('reduced-motion');
+    }
+  };
+
   const detectHighContrast = useCallback(() => {
     if (window.matchMedia) {
       const query = window.matchMedia('(prefers-contrast: high)');
@@ -75,7 +87,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     if (defaultConfig.enableReducedMotion) {
       detectReducedMotion();
     }
-  }, [defaultConfig, detectHighContrast, detectReducedMotion]);
+  }, [defaultConfig.enableSkipLinks, defaultConfig.enableHighContrast, defaultConfig.enableReducedMotion, detectHighContrast, detectReducedMotion]);
 
   const setupKeyboardNavigation = useCallback(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
@@ -116,13 +128,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   }, []);
 
   const setupFocusManagement = useCallback(() => {
-    // Track focus visibility
-    // const handleFocusIn = () => setFocusVisible(true);
-    // const handleFocusOut = () => setFocusVisible(false);
-    
-    // document.addEventListener('focusin', handleFocusIn);
-    // document.addEventListener('focusout', handleFocusOut);
-
     // Trap focus in modals
     const handleTabKey = (event: KeyboardEvent) => {
       if (event.key === 'Tab') {
@@ -161,7 +166,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     }
   }, [setIsHighContrast, setIsReducedMotion]);
 
-  const setupARIALiveRegions = useCallback(() => {
+  const setupARIALiveRegions = () => {
     // Create live region for announcements
     const liveRegion = document.createElement('div');
     liveRegion.setAttribute('aria-live', 'polite');
@@ -169,7 +174,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     liveRegion.className = 'sr-only';
     liveRegion.id = 'live-region';
     document.body.appendChild(liveRegion);
-  }, []);
+  };
 
   const addSkipLinks = () => {
     const skipLinksContainer = document.createElement('div');
@@ -348,21 +353,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     }
   };
 
-  const updateHighContrastStyles = (enabled: boolean) => {
-    if (enabled) {
-      document.body.classList.add('high-contrast');
-    } else {
-      document.body.classList.remove('high-contrast');
-    }
-  };
 
-  const updateReducedMotionStyles = (enabled: boolean) => {
-    if (enabled) {
-      document.body.classList.add('reduced-motion');
-    } else {
-      document.body.classList.remove('reduced-motion');
-    }
-  };
 
   const cleanupEventListeners = useCallback(() => {
     // Remove event listeners
@@ -400,22 +391,13 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     return () => {
       cleanupEventListeners();
     };
-  }, [cleanupEventListeners, defaultConfig.enableFocusManagement, defaultConfig.enableKeyboardNavigation, defaultConfig.enableScreenReaderSupport, initializeAccessibility, setupFocusManagement, setupKeyboardNavigation, setupMediaQueries, setupScreenReaderSupport, setupARIALiveRegions]);
-
-  // Announce changes to screen readers
-  // const announceToScreenReader = (message: string) => {
-  //   const liveRegion = document.getElementById('live-region');
-  //   if (liveRegion) {
-  //     liveRegion.textContent = message;
-  //   }
-  // };
+  }, [cleanupEventListeners, defaultConfig.enableFocusManagement, defaultConfig.enableKeyboardNavigation, defaultConfig.enableScreenReaderSupport, initializeAccessibility, setupFocusManagement, setupKeyboardNavigation, setupMediaQueries, setupScreenReaderSupport]);
 
   // Utility functions are available through the component's internal state
 
   return (
     <div
       className={`accessibility-enhancer ${isHighContrast ? 'high-contrast' : ''} ${isReducedMotion ? 'reduced-motion' : ''}`}
-      style={{ fontSize: `${fontSize}px` }}
     >
       {children}
     </div>
