@@ -600,17 +600,10 @@ console.log(`📊 Performance Metric - ${name}: ${value}ms`);
     logger.performance('Web Vitals reported', metrics as unknown as Record<string, unknown>, 'PerformanceOptimizer');
     
     // Send to analytics if available
-<<<<<<< HEAD
     if (typeof window !== 'undefined' && (window as { gtag?: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag) {
       Object.entries(metrics).forEach(([key, value]) => {
         if (typeof value === 'number') {
           (window as unknown as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag('event', 'web_vitals', {
-=======
-    if (typeof window !== 'undefined' && (window as { gtag?: (command: string, eventName: string, parameters: Record<string, unknown>) => void }).gtag) {
-      Object.entries(metrics).forEach(([key, value]) => {
-        if (typeof value === 'number') {
-          (window as unknown as { gtag: (command: string, eventName: string, parameters: Record<string, unknown>) => void }).gtag('event', 'web_vitals', {
->>>>>>> cursor/fix-errors-and-merge-to-main-85f5
             metric_name: key,
             metric_value: value,
             metric_rating: value < 100 ? 'good' : value < 300 ? 'needs-improvement' : 'poor'
