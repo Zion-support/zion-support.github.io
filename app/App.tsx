@@ -46,7 +46,7 @@ const App: React.FC = () => {
   return (
     <HelmetProvider>
       <ErrorBoundary>
-        <div>
+        <PerformanceMonitor>
           <SEOOptimizer>
             <Router>
               <div className='App'>
@@ -74,7 +74,7 @@ const App: React.FC = () => {
               </div>
             </Router>
           </SEOOptimizer>
-        </div>
+        </PerformanceMonitor>
       </ErrorBoundary>
     </HelmetProvider>
   );
