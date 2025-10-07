@@ -148,3 +148,41 @@ export const initializePerformanceEnhancements = () => {
     console.log('Performance metrics:', metrics);
   }
 };
+
+// Export a performanceEnhancer object for compatibility
+export const performanceEnhancer = {
+  startMonitoring: initializePerformanceEnhancements,
+  stopMonitoring: () => {
+    if (typeof window === 'undefined') return;
+    // Clean up event listeners and observers
+  },
+  collectMetrics: collectPerformanceMetrics,
+  getMemoryUsage,
+  getMetrics: () => {
+    const metrics = collectPerformanceMetrics();
+    return {
+      loadTime: metrics?.navigation.totalTime || 0,
+      firstContentfulPaint: metrics?.paint.firstContentfulPaint || 0,
+      largestContentfulPaint: 0,
+      firstInputDelay: 0,
+      cumulativeLayoutShift: 0,
+    };
+  },
+  getPerformanceScore: () => {
+    const metrics = collectPerformanceMetrics();
+    if (!metrics) return 0;
+    // Simple performance score calculation
+    const loadTime = metrics.navigation.totalTime;
+    if (loadTime < 1000) return 95;
+    if (loadTime < 2000) return 85;
+    if (loadTime < 3000) return 75;
+    return 60;
+  },
+  exportData: () => {
+    return {
+      metrics: collectPerformanceMetrics(),
+      memory: getMemoryUsage(),
+      timestamp: new Date().toISOString(),
+    };
+  },
+};

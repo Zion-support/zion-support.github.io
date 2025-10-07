@@ -7,7 +7,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 // Components
 import SEOOptimizer from './components/SEOOptimizer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-import PerformanceDashboard from './components/PerformanceDashboard';
+import PerformanceMonitor from './components/PerformanceMonitor';
 
 // Loading component
 const LoadingSpinner = () => (
@@ -81,8 +81,8 @@ const App: React.FC = () => {
                   </Routes>
                 </Suspense>
 
-                {/* Performance Dashboard */}
-                <PerformanceDashboard />
+                {/* Performance Monitor */}
+                <PerformanceMonitor />
               </div>
             </Router>
             </AccessibilityEnhancer>

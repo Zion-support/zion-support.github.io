@@ -57,7 +57,7 @@ export default function EnterprisePage() {
             </div>
           </div>
         </div>
-      </header>
+      </div>
 
       {/* Solutions Section */}
       <section id="solutions" className="py-24">
@@ -158,6 +158,6 @@ export default function EnterprisePage() {
           </div>
         </div>
       </section>
-    </div>
+    </>
   );
 }

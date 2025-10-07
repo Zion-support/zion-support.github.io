@@ -186,10 +186,11 @@ const App = () => {
         }}
       >
         <AdvancedSEOOptimizer
-          config={defaultSEOConfig}
+          seoData={defaultSEOConfig}
           enableStructuredData={true}
-          enableAnalytics={true}
-          enablePerformanceTracking={true}
+          enableOpenGraph={true}
+          enableTwitterCards={true}
+          enableSchemaMarkup={true}
         />
         <HelmetProvider>
           <BrowserRouter>
