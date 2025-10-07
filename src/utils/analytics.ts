@@ -9,7 +9,7 @@ export interface AnalyticsEvent {
   action?: string;
   label?: string;
   value?: number;
-  properties?: Record<string, any>;
+  properties?: Record<string, unknown>;
   timestamp: number;
 }
 
@@ -70,7 +70,7 @@ class Analytics {
     action?: string,
     label?: string,
     value?: number,
-    properties?: Record<string, any>
+    properties?: Record<string, unknown>
   ): void {
     const event: AnalyticsEvent = {
       name,
@@ -131,7 +131,7 @@ class Analytics {
   trackBusinessEvent(
     event: string,
     value?: number,
-    properties?: Record<string, any>
+    properties?: Record<string, unknown>
   ): void {
     this.track(event, 'business', 'event', undefined, value, properties);
   }

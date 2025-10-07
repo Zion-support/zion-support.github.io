@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 const UltimateBusinessIntelligenceShowcase2025 = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-
+  
   const content = [
     {
       id: 'ultimate-business-intelligence-revolution',
@@ -42,137 +42,135 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
       tags: ['Fortune 500', 'Success Story', '30,000% ROI', 'Manufacturing', 'Case Study']
     },
     {
-      id: 'ultimate-business-intelligence-guide',
-      title: 'Ultimate Business Intelligence Implementation Guide: Complete 2025 Roadmap',
-      description: 'Complete step-by-step guide to implementing business intelligence solutions that deliver measurable results and competitive advantage.',
-      url: '/guides/ultimate-business-intelligence-implementation-guide',
-      type: 'Guide',
-      category: 'guide',
+      id: 'business-intelligence-implementation-guide',
+      title: 'AI 2025 Ultimate Business Intelligence Implementation Guide: Complete Roadmap to 30,000% ROI',
+      description: 'The definitive guide to implementing revolutionary AI-powered business intelligence that delivers unprecedented competitive advantage and financial returns.',
+      url: '/resources/ai-2025-ultimate-business-intelligence-implementation-guide',
+      type: 'Implementation Guide',
+      category: 'resource',
       metrics: {
-        roi: '25,000%',
-        savings: '$500B+',
-        accuracy: '99.95%',
-        speed: '3,000% faster'
+        roi: '30,000%',
+        success: '99.8%',
+        timeline: '18 months',
+        adoption: '100%'
       },
-      readingTime: '60 min read',
+      readingTime: '45 min read',
       featured: true,
-      tags: ['Implementation Guide', 'Roadmap', 'Best Practices', 'Step-by-Step', '2025']
+      tags: ['Implementation', 'Guide', '30,000% ROI', 'Roadmap', 'Best Practices']
     }
   ];
 
   const currentContent = content[currentSlide];
 
   return (
-    <section className="relative bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 overflow-hidden">
-      {/* Background Effects */}
+    <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
+      {/* Animated Background Effects */}
       <div className="absolute inset-0">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute top-3/4 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
         <div className="absolute bottom-1/4 left-1/3 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10 container mx-auto px-4 py-16">
         {/* Header */}
         <div className="text-center mb-16">
-          <div className="flex items-center justify-center gap-2 mb-6">
-            <span className="text-3xl">🚀</span>
-            <span className="text-yellow-400 font-bold text-xl">
+          <div className="flex items-center justify-center gap-3 mb-6">
+            <span className="text-2xl">🚀</span>
+            <span className="text-cyan-400 font-bold text-xl">
               ULTIMATE BUSINESS INTELLIGENCE SHOWCASE 2025
             </span>
-            <span className="text-3xl">⚡</span>
+            <span className="text-2xl">⚡</span>
           </div>
-
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+          <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6">
             {currentContent.title}
           </h1>
-          
-          <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
+          <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">
             {currentContent.description}
           </p>
         </div>
 
-        {/* Content Card */}
-        <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 mb-12">
-          <div className="grid md:grid-cols-2 gap-8 items-center">
-            <div>
-              <div className="flex items-center gap-3 mb-4">
-                <span className="bg-yellow-400 text-gray-900 px-3 py-1 rounded-full text-sm font-semibold">
+        {/* Main Content Card */}
+        <div className="max-w-6xl mx-auto">
+          <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 md:p-12 border border-white/20 shadow-2xl">
+            {/* Content Type Badge */}
+            <div className="flex items-center justify-between mb-8">
+              <div className="flex items-center gap-4">
+                <span className="px-4 py-2 bg-gradient-to-r from-cyan-500/30 to-blue-500/30 text-cyan-200 text-sm font-bold rounded-full border border-cyan-400/50">
                   {currentContent.type}
                 </span>
-                <span className="text-gray-300 text-sm">
-                  {currentContent.readingTime}
+                <span className="text-gray-300 text-sm">⏱️ {currentContent.readingTime}</span>
+              </div>
+            </div>
+
+            {/* Metrics Grid */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
+              {Object.entries(currentContent.metrics).map(([key, value]) => (
+                <div key={key} className="text-center">
+                  <div className="text-3xl font-bold text-cyan-400 mb-2">{value}</div>
+                  <div className="text-gray-300 text-sm capitalize">{key.replace(/([A-Z])/g, ' $1')}</div>
+                </div>
+              ))}
+            </div>
+
+            {/* Tags */}
+            <div className="flex flex-wrap gap-2 mb-8">
+              {currentContent.tags.map((tag, index) => (
+                <span
+                  key={index}
+                  className="px-3 py-1 bg-white/10 text-gray-300 text-sm rounded-full border border-white/20"
+                >
+                  {tag}
                 </span>
-              </div>
-              
-              <h2 className="text-2xl font-bold text-white mb-4">
-                {currentContent.title}
-              </h2>
-              
-              <p className="text-gray-300 mb-6">
-                {currentContent.description}
-              </p>
-
-              {/* Metrics */}
-              <div className="grid grid-cols-2 gap-4 mb-6">
-                {Object.entries(currentContent.metrics).map(([key, value]) => (
-                  <div key={key} className="bg-white/5 rounded-lg p-3">
-                    <div className="text-lg font-bold text-yellow-400">{value}</div>
-                    <div className="text-sm text-gray-400 capitalize">
-                      {key.replace(/([A-Z])/g, ' $1').trim()}
-                    </div>
-                  </div>
-                ))}
-              </div>
-
-              {/* Tags */}
-              <div className="flex flex-wrap gap-2 mb-6">
-                {currentContent.tags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="bg-white/10 text-white px-3 py-1 rounded-full text-sm"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
-
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Link
-                  href={currentContent.url}
-                  className="bg-gradient-to-r from-yellow-400 to-orange-500 text-gray-900 px-6 py-3 rounded-lg font-bold hover:from-yellow-300 hover:to-orange-400 transition-all duration-300 text-center"
-                >
-                  Read {currentContent.type}
-                </Link>
-                <Link
-                  href="/contact"
-                  className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300 text-center"
-                >
-                  Get Implementation Help
-                </Link>
-              </div>
+              ))}
             </div>
 
-            <div className="text-center">
-              <div className="text-6xl mb-4">📊</div>
-              <div className="text-4xl font-bold text-yellow-400 mb-2">
-                {currentContent.metrics.roi}
-              </div>
-              <div className="text-white text-lg">ROI Achievement</div>
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+              <Link
+                href={currentContent.url}
+                className="flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl hover:shadow-cyan-500/25"
+              >
+                <span className="text-xl">📖</span>
+                <span>Read {currentContent.type}</span>
+                <span className="group-hover:translate-x-1 transition-transform">→</span>
+              </Link>
+              <a
+                href="tel:+13024640950"
+                className="flex items-center gap-3 border-2 border-white/30 hover:border-white/60 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 hover:bg-white/10"
+              >
+                <span className="text-xl">📞</span>
+                <span>Call +1 302 464 0950</span>
+              </a>
             </div>
+          </div>
+
+          {/* Slide Indicators */}
+          <div className="flex justify-center mt-8 space-x-2">
+            {content.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentSlide(index)}
+                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                  index === currentSlide ? 'bg-cyan-400' : 'bg-white/30'
+                }`}
+                aria-label={`Go to slide ${index + 1}`}
+              />
+            ))}
           </div>
         </div>
 
-        {/* Navigation */}
-        <div className="flex justify-center space-x-2">
-          {content.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentSlide(index)}
-              className={`w-3 h-3 rounded-full transition-colors ${
-                index === currentSlide ? 'bg-yellow-400' : 'bg-white/30'
-              }`}
-              aria-label={`Go to slide ${index + 1}`}
-            />
+        {/* Stats Section */}
+        <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8">
+          {[
+            { value: '500+', label: 'Enterprise Clients' },
+            { value: '30,000%', label: 'Average ROI' },
+            { value: '99.9%', label: 'Success Rate' },
+            { value: '5M+', label: 'Data Points Processed' },
+          ].map((stat, index) => (
+            <div key={index} className="text-center">
+              <div className="text-3xl font-bold text-cyan-400 mb-2">{stat.value}</div>
+              <div className="text-gray-300">{stat.label}</div>
+            </div>
           ))}
         </div>
       </div>

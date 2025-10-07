@@ -84,7 +84,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         }
 
         if (entry.entryType === 'first-input') {
-          const fid = (entry as any).processingStart - entry.startTime;
+          const fid = (entry as PerformanceEventTiming).processingStart - entry.startTime;
           setMetrics(prev => ({ ...prev, FID: fid }));
           if (enableReporting) {
             performanceOptimizer.reportWebVitals({ FID: fid });
@@ -92,7 +92,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         }
 
         if (entry.entryType === 'layout-shift') {
-          const cls = (entry as any).value;
+          const cls = (entry as LayoutShift).value;
           setMetrics(prev => ({ ...prev, CLS: cls }));
           if (enableReporting) {
             performanceOptimizer.reportWebVitals({ CLS: cls });
