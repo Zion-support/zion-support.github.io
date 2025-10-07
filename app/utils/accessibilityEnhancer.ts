@@ -143,7 +143,7 @@ export class AccessibilityEnhancer {
 
     const prefersHighContrast = window.matchMedia('(prefers-contrast: high)');
     
-    const handleHighContrast = (e: MediaQueryListEvent) => {
+    const handleHighContrast = (e: MediaQueryListEvent | MediaQueryList) => {
       if (e.matches) {
         document.documentElement.classList.add('high-contrast');
       } else {
@@ -161,7 +161,7 @@ export class AccessibilityEnhancer {
 
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
     
-    const handleReducedMotion = (e: MediaQueryListEvent) => {
+    const handleReducedMotion = (e: MediaQueryListEvent | MediaQueryList) => {
       if (e.matches) {
         document.documentElement.classList.add('reduced-motion');
       } else {

@@ -290,6 +290,7 @@ export const checkPerformanceBudget = () => {
   }
 };
 
+
 // Initialize performance monitoring
 export const initializePerformanceMonitoring = () => {
   if (typeof window === 'undefined') return;

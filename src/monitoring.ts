@@ -1,7 +1,7 @@
 // Performance monitoring setup
 import { analytics } from './utils/analytics';
 import { errorHandler } from './utils/errorHandler';
-import { performanceOptimizer, lazyLoadImages, measurePageLoad, reportWebVitals } from './utils/performanceOptimizer';
+import { performanceOptimizer, lazyLoadImages, measurePageLoad, reportWebVitals, type WebVitalsMetrics } from './utils/performanceOptimizer';
 
 // Initialize performance monitoring
 if (typeof window !== 'undefined') {
@@ -12,7 +12,7 @@ if (typeof window !== 'undefined') {
   lazyLoadImages();
 
   // Track Web Vitals
-  measurePageLoad().then((metrics: any) => {
+  measurePageLoad().then((metrics: WebVitalsMetrics) => {
     reportWebVitals(metrics);
   });
 }

@@ -8,12 +8,13 @@ import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import LoadingSpinner from './components/LoadingSpinner';
+import PerformanceMonitor from './components/PerformanceMonitor';
+
+// Performance optimization
+import { performanceOptimizer } from './utils/performanceOptimizer';
 
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./page'));
-
-// Utils
-import performanceOptimizer from '../src/utils/performanceOptimizer';
 
 // Styles
 import './globals.css';
@@ -21,20 +22,26 @@ import './globals.css';
 const App: React.FC = () => {
   useEffect(() => {
     // Initialize global error handling
-    console.log('App initialized');
+    if (process.env.NODE_ENV === 'development') {
+      console.log('App initialized');
+    }
 
     // Initialize performance monitoring
     performanceOptimizer.lazyLoadImages();
     // Initialize Web Vitals monitoring
     if (typeof window !== 'undefined' && 'performance' in window) {
-      performanceOptimizer.measurePageLoad().then(metrics => {
+      const metrics = performanceOptimizer.measurePageLoad();
+      if (metrics) {
         performanceOptimizer.reportWebVitals(metrics);
-      });
+      }
     }
-    console.log('Performance monitoring initialized');
-    console.log(
-      '🚀 Zion Tech Group App initialized with comprehensive monitoring',
-    );
+    
+    if (process.env.NODE_ENV === 'development') {
+      console.log('Performance monitoring initialized');
+      console.log(
+        '🚀 Zion Tech Group App initialized with comprehensive monitoring',
+      );
+    }
   }, []);
 
   return (
@@ -70,13 +77,14 @@ const App: React.FC = () => {
                 </Routes>
               </Suspense>
 
-              <Footer />
-            </div>
-          </Router>
-        </AccessibilityEnhancer>
-      </ErrorBoundary>
-    </HelmetProvider>
-  );
+            <Footer />
+            <PerformanceMonitor />
+          </div>
+        </Router>
+      </AccessibilityEnhancer>
+    </ErrorBoundary>
+  </HelmetProvider>
+);
 };
 
 export default App;

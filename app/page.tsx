@@ -1,4 +1,4 @@
-import { Suspense, lazy } from 'react';
+import { Suspense, lazy, memo } from 'react';
 import Link from 'next/link';
 
 // Lazy load heavy components
@@ -15,10 +15,16 @@ const InteractiveContentShowcase2026 = lazy(
 
 // Loading component for Suspense fallback
 const LoadingFallback = ({ height = 'h-32' }: { height?: string }) => (
-  <div className={`${height} bg-gray-200 animate-pulse rounded`}></div>
+  <div 
+    className={`${height} bg-gray-200 animate-pulse rounded`}
+    role="status"
+    aria-label="Loading content"
+  >
+    <span className="sr-only">Loading content...</span>
+  </div>
 );
 
-export default function HomePage() {
+const HomePage = memo(function HomePage() {
   const structuredData = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
@@ -137,4 +143,6 @@ export default function HomePage() {
       </main>
     </>
   );
-}
+});
+
+export default HomePage;
