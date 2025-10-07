@@ -1,95 +1,51 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 
-interface ErrorBoundaryState {
-  hasError: boolean;
-  error: Error | null;
-  errorInfo: ErrorInfo | null;
-  errorId: string;
-  retryCount: number;
-  lastErrorTime: number;
-}
-
-interface ErrorBoundaryProps {
+interface Props {
   children: ReactNode;
   fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo, errorId: string) => void;
   enableErrorReporting?: boolean;
-  enableRetry?: boolean;
-  maxRetries?: number;
-  retryDelay?: number;
-  enableAnalytics?: boolean;
+  onError?: (error: Error, errorInfo: ErrorInfo) => void;
 }
 
-interface ErrorReport {
-  errorId: string;
-  error: {
-    name: string;
-    message: string;
-    stack?: string;
-  };
-  errorInfo: {
-    componentStack: string;
-  };
-  timestamp: string;
-  userAgent: string;
-  url: string;
-  sessionId: string;
-  retryCount: number;
-  userId?: string;
-  buildVersion?: string;
+interface State {
+  hasError: boolean;
+  error?: Error;
+  errorInfo?: ErrorInfo;
 }
 
-class EnhancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
-  private retryTimeoutId: NodeJS.Timeout | null = null;
-  private sessionId: string;
-
-  constructor(props: ErrorBoundaryProps) {
+class EnhancedErrorBoundary extends Component<Props, State> {
+  constructor(props: Props) {
     super(props);
-    this.state = {
-      hasError: false,
-      error: null,
-      errorInfo: null,
-      errorId: '',
-      retryCount: 0,
-      lastErrorTime: 0,
-    };
-    this.sessionId = this.generateSessionId();
+    this.state = { hasError: false };
   }
 
-  static getDerivedStateFromError(error: Error): Partial<ErrorBoundaryState> {
-    return {
-      hasError: true,
-      error,
-      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
-      lastErrorTime: Date.now(),
-    };
+  static getDerivedStateFromError(error: Error): State {
+    return { hasError: true, error };
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    const { onError, enableErrorReporting = true } = this.props;
-    const { errorId, retryCount } = this.state;
-
-    // Update state with error info
     this.setState({
+      error,
       errorInfo,
     });
 
-    // Call custom error handler
-    if (onError) {
-      onError(error, errorInfo, errorId);
-    }
-
-    // Report error if enabled
-    if (enableErrorReporting) {
-      this.reportError(error, errorInfo, errorId, retryCount);
-    }
-
-    // Log error in development
+    // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
       // eslint-disable-next-line no-console
       console.error('🚨 Error Boundary caught an error:', error);
       // eslint-disable-next-line no-console
       console.error('Error Info:', errorInfo);
+    }
+
+    // Call custom error handler if provided
+    if (this.props.onError) {
+      this.props.onError(error, errorInfo);
+    }
+
+    // Report error to external service in production
+    if (process.env.NODE_ENV === 'production') {
+      this.reportError(error, errorInfo);
+>>>>>>> e63efe09618661008f9e1f2fa8c21e8a7549bc53
     }
 
     // Call custom error handler if provided
@@ -104,132 +60,35 @@ class EnhancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
     }
   }
 
-  private generateSessionId(): string {
-    try {
-      return `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-    } catch {
-      return `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-    }
-  }
-
-  private async reportError(
-    error: Error,
-    errorInfo: ErrorInfo,
-    errorId: string,
-    retryCount: number
-  ): Promise<void> {
-    try {
-      const errorReport: ErrorReport = {
-        errorId,
-        error: {
-          name: error.name,
-          message: error.message,
-          stack: error.stack,
-        },
-        errorInfo: {
-          componentStack: errorInfo.componentStack || '',
-        },
-        timestamp: new Date().toISOString(),
-        userAgent: navigator.userAgent,
-        url: window.location.href,
-        sessionId: this.sessionId,
-        retryCount,
-        userId: this.getUserId(),
-        buildVersion: process.env.REACT_APP_VERSION || 'unknown',
-      };
-
-      // Send to error reporting service
-      await fetch('/api/error-report', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(errorReport),
-      });
-
-      // Send to analytics if enabled
-      if (this.props.enableAnalytics && typeof window !== 'undefined' && 'gtag' in window) {
-        (window as any).gtag('event', 'error_boundary_error', {
-          event_category: 'Error',
-          event_label: error.name,
-          value: retryCount,
-        });
-      }
-    } catch (reportError) {
-      console.error('Failed to report error:', reportError);
-    }
-  }
-
-  private getUserId(): string | undefined {
-    try {
-      // Try to get user ID from localStorage or other sources
-      return localStorage.getItem('userId') || undefined;
-    } catch {
-      return undefined;
-    }
-  }
-
-  private handleRetry = (): void => {
-    const { maxRetries = 3, retryDelay = 1000 } = this.props;
-    const { retryCount } = this.state;
-
-    if (retryCount >= maxRetries) {
-      return;
-    }
-
-    // Clear any existing timeout
-    if (this.retryTimeoutId) {
-      clearTimeout(this.retryTimeoutId);
-    }
-
-    // Retry after delay
-    this.retryTimeoutId = setTimeout(() => {
-      this.setState(prevState => ({
-        hasError: false,
-        error: null,
-        errorInfo: null,
-        errorId: '',
-        retryCount: prevState.retryCount + 1,
-      }));
-    }, retryDelay);
+  private reportError = (error: Error, errorInfo: ErrorInfo) => {
+    // Here you would typically send the error to an external service
+    // like Sentry, LogRocket, or your own error reporting service
+    console.error('Error reported:', {
+      error: error.message,
+      stack: error.stack,
+      componentStack: errorInfo.componentStack,
+      timestamp: new Date().toISOString(),
+    });
   };
 
-  private handleReload = (): void => {
+  private handleRetry = () => {
+    this.setState({ hasError: false, error: undefined, errorInfo: undefined });
+  };
+
+  private handleReload = () => {
     window.location.reload();
   };
 
-  private handleGoHome = (): void => {
-    window.location.href = '/';
-  };
-
-  private handleReportBug = (): void => {
-    const { error, errorId } = this.state;
-    const subject = encodeURIComponent(`Error Report - ${errorId}`);
-    const body = encodeURIComponent(`
-Error ID: ${errorId}
-Error: ${error?.name}: ${error?.message}
-URL: ${window.location.href}
-User Agent: ${navigator.userAgent}
-Time: ${new Date().toISOString()}
-    `);
-    
-    window.open(`mailto:support@ziontechgroup.com?subject=${subject}&body=${body}`);
-  };
-
-  componentWillUnmount() {
-    if (this.retryTimeoutId) {
-      clearTimeout(this.retryTimeoutId);
-    }
-  }
-
   render() {
-    const { hasError, error, errorInfo, errorId, retryCount } = this.state;
-    const { children, fallback, enableRetry = true, maxRetries = 3 } = this.props;
+    const { children, fallback } = this.props;
+    const { hasError, error, errorInfo } = this.state;
 
     if (hasError) {
       if (fallback) {
         return fallback;
       }
+
+      const errorId = Math.random().toString(36).substr(2, 9);
 
       return (
         <div className="min-h-screen bg-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
@@ -290,6 +149,27 @@ Time: ${new Date().toISOString()}
                 </p>
               </div>
 
+              <div className="mt-6 space-y-3">
+                <button
+                  onClick={this.handleRetry}
+                  className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500"
+                >
+                  Try Again
+                </button>
+                <button
+                  onClick={this.handleReload}
+                  className="w-full flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500"
+                >
+                  Reload Page
+                </button>
+                <a
+                  href="/"
+                  className="w-full flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500"
+                >
+                  Go to Homepage
+                </a>
+              </div>
+
               {process.env.NODE_ENV === 'development' && error && (
                 <div className="mt-6">
                   <details className="bg-red-50 border border-red-200 rounded-md p-4">
@@ -315,51 +195,6 @@ Time: ${new Date().toISOString()}
                   </details>
                 </div>
               )}
-
-              <div className="mt-6 space-y-3">
-                {enableRetry && retryCount < maxRetries && (
-                  <button
-                    onClick={this.handleRetry}
-                    className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 disabled:opacity-50 disabled:cursor-not-allowed"
-                    disabled={retryCount >= maxRetries}
-                  >
-                    Try Again ({maxRetries - retryCount} attempts left)
-                  </button>
-                )}
-                
-                <button
-                  onClick={this.handleReload}
-                  className="w-full flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                >
-                  Reload Page
-                </button>
-                
-                <button
-                  onClick={this.handleGoHome}
-                  className="w-full flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                >
-                  Go to Homepage
-                </button>
-
-                <button
-                  onClick={this.handleReportBug}
-                  className="w-full flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                >
-                  Report Bug
-                </button>
-              </div>
-
-              <div className="mt-6 text-center">
-                <p className="text-xs text-gray-500">
-                  If this problem persists, please contact our support team at{' '}
-                  <a
-                    href="mailto:support@ziontechgroup.com"
-                    className="text-indigo-600 hover:text-indigo-500"
-                  >
-                    support@ziontechgroup.com
-                  </a>
-                </p>
-              </div>
             </div>
           </div>
         </div>
