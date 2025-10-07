@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 export default function NotFound() {
   const popularPages = [
@@ -56,7 +56,7 @@ export default function NotFound() {
             {popularPages.map((page, index) => (
               <Link
                 key={index}
-                to={page.href}
+                href={page.href}
                 className='group bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 hover:bg-white/20 transition-all duration-300 transform hover:-translate-y-2'
               >
                 <div className='text-4xl mb-4'>{page.icon}</div>
@@ -74,7 +74,7 @@ export default function NotFound() {
         {/* Action Buttons */}
         <div className='flex flex-col sm:flex-row items-center justify-center gap-4'>
           <Link
-            to='/'
+            href='/'
             className='group flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl'
           >
             <span>Go Home</span>
@@ -93,7 +93,7 @@ export default function NotFound() {
             </svg>
           </Link>
           <Link
-            to='/contact'
+            href='/contact'
             className='group flex items-center gap-3 border-2 border-white/30 hover:border-white/60 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1'
           >
             <span>Get Help</span>
