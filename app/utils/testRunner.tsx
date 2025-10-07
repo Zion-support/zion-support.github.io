@@ -3,6 +3,7 @@
  * Comprehensive testing utilities for React applications
  */
 
+import React, { useCallback } from 'react';
 import { render, RenderOptions, RenderResult } from '@testing-library/react';
 import { ReactElement } from 'react';
 import { BrowserRouter } from 'react-router-dom';

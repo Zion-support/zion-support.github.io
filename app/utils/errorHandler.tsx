@@ -3,7 +3,7 @@
  * Comprehensive error handling utilities for React applications
  */
 
-import { ErrorInfo } from 'react';
+import React, { ErrorInfo, useCallback } from 'react';
 
 // Error types
 export enum ErrorType {

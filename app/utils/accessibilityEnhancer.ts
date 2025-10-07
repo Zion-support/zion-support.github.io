@@ -152,7 +152,7 @@ export class AccessibilityEnhancer {
     };
 
     prefersHighContrast.addEventListener('change', handleHighContrast);
-    handleHighContrast(prefersHighContrast);
+    handleHighContrast({ matches: prefersHighContrast.matches } as MediaQueryListEvent);
   }
 
   // Reduced motion
@@ -170,7 +170,7 @@ export class AccessibilityEnhancer {
     };
 
     prefersReducedMotion.addEventListener('change', handleReducedMotion);
-    handleReducedMotion(prefersReducedMotion);
+    handleReducedMotion({ matches: prefersReducedMotion.matches } as MediaQueryListEvent);
   }
 
   // Focus management

@@ -4,11 +4,7 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
 const UltimateBusinessIntelligenceShowcase2025 = () => {
-<<<<<<< HEAD
-  const [activeTab, setActiveTab] = useState('all');
-=======
   const [currentSlide, setCurrentSlide] = useState(0);
->>>>>>> origin/main
   
   const content = [
     {
@@ -64,21 +60,6 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
     }
   ];
 
-<<<<<<< HEAD
-  const filteredContent = activeTab === 'all' 
-    ? content 
-    : content.filter(item => item.category === activeTab);
-
-  const tabs = [
-    { id: 'all', label: 'All Content', count: content.length },
-    { id: 'blog', label: 'Blog Posts', count: content.filter(item => item.category === 'blog').length },
-    { id: 'case-study', label: 'Case Studies', count: content.filter(item => item.category === 'case-study').length },
-    { id: 'resource', label: 'Resources', count: content.filter(item => item.category === 'resource').length }
-  ];
-=======
-  const currentContent = content[currentSlide];
->>>>>>> origin/main
-
   return (
     <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
       {/* Animated Background Effects */}
@@ -104,7 +85,6 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
             </span>
             <span className="text-2xl">⚡</span>
           </div>
-<<<<<<< HEAD
 
           <h2 className="text-4xl md:text-6xl font-extrabold text-white mb-6">
             Revolutionary AI Content
@@ -119,26 +99,10 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
           </p>
         </div>
 
-        {/* Tab Navigation */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
-          {tabs.map((tab) => (
-            <button
-              key={tab.id}
-              onClick={() => setActiveTab(tab.id)}
-              className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
-                activeTab === tab.id
-                  ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white'
-                  : 'bg-white/10 text-gray-300 hover:bg-white/20'
-              }`}
-            >
-              {tab.label} ({tab.count})
-            </button>
-          ))}
-        </div>
 
         {/* Content Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredContent.map((item) => (
+          {content.map((item) => (
             <div
               key={item.id}
               className="group relative bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105"

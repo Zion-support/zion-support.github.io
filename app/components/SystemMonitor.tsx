@@ -6,12 +6,13 @@
  */
 
 import React, { useState, useEffect, useCallback } from 'react';
-import { collectPerformanceMetrics } from '../utils/performanceEnhancer';
+import { PerformanceMonitor } from '../utils/performanceEnhancer';
 import { errorHandler } from '../utils/enhancedErrorHandler';
 
 // Helper functions
 const calculatePerformanceScore = () => {
-  const metrics = collectPerformanceMetrics();
+  const monitor = PerformanceMonitor.getInstance();
+  const metrics = monitor.getMetrics();
   if (!metrics) return 0;
   
   let score = 100;
