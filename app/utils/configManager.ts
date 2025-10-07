@@ -307,12 +307,59 @@ export class ConfigManager {
       if (typeof currentValue === 'object' && !Array.isArray(currentValue) && currentValue !== null) {
         this.config[key] = Object.assign({}, currentValue, { [nestedKeyOrValue]: value }) as AppConfig[K];
       } else {
-        // If current value is not an object, create a new object
-        this.config[key] = { [nestedKeyOrValue]: value } as unknown as AppConfig[K];
+        // If current value is not an object, create a new object by merging with default
+        const defaultValue = this.getDefaultForKey(key);
+        this.config[key] = Object.assign({}, defaultValue, { [nestedKeyOrValue]: value }) as AppConfig[K];
       }
     } else {
       this.config[key] = nestedKeyOrValue as AppConfig[K];
     }
+  }
+
+  /**
+   * Get default value for a config key
+   */
+  private getDefaultForKey<K extends keyof AppConfig>(key: K): AppConfig[K] {
+    const defaultValues: AppConfig = {
+      environment: 'development',
+      api: {
+        baseURL: '',
+        timeout: 30000,
+        retryAttempts: 3,
+        enableCaching: true,
+      },
+      features: {
+        enableAnalytics: false,
+        enableErrorReporting: true,
+        enablePerformanceMonitoring: false,
+        enableAccessibility: true,
+        enableSEO: true,
+        enablePWA: false,
+      },
+      performance: {
+        enableCodeSplitting: true,
+        enableLazyLoading: true,
+        enableImageOptimization: true,
+        enableCaching: true,
+      },
+      security: {
+        enableCSP: true,
+        enableCORS: false,
+        enableRateLimiting: true,
+        maxRequestsPerMinute: 100,
+      },
+      ui: {
+        theme: 'light',
+        language: 'en',
+        timezone: 'UTC',
+      },
+      logging: {
+        level: 'info',
+        enableConsole: true,
+        enableNetwork: false,
+      },
+    };
+    return defaultValues[key];
   }
 
   /**
