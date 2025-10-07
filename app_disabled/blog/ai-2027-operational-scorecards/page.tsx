@@ -11,7 +11,7 @@ export const metadata = {
 export default function Page() {
   return (
     <div className='min-h-screen bg-white text-gray-900'>
-      <article Name='max-w-3xl mx-auto px-6 py-16'>
+      <article name='max-w-3xl mx-auto px-6 py-16'>
         <header className='mb-8'>
           <h1 className='text-3xl md:text-4xl font-extrabold tracking-tight'>
             AI 2027: Operational Scorecards — SL Is Budgets Rollback

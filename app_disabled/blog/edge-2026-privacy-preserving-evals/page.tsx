@@ -20,7 +20,7 @@ export default function Page() {
             signals.
           </p>
           <hr />
-          <article Name='prose prose-slate max-w-none'>
+          <article name='prose prose-slate max-w-none'>
             <h2>Patterns</h2>
             <ul>
               <li>Scoped I Ds and redaction at the edge</li>

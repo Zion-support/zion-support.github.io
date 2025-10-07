@@ -19,7 +19,7 @@ export default function AIEnterpriseAutonomyBlueprint2026Page() {
           </ArrowRight>
         </nav>
 
-        <article Name='max-w-4xl mx-auto'>
+        <article name='max-w-4xl mx-auto'>
           <header className='mb-12'>
             <div className='flex items-center gap-3 mb-4'>
               <span className='px-3 py-1 bg-emerald-400/20 text-emerald-200 text-sm rounded-full border border-emerald-400/30'>

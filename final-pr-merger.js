@@ -78,7 +78,7 @@ console.log('\n🔍 Checking all PR branches...');
 let mergedCount = 0;
 let conflictCount = 0;
 let notFoundCount = 0;
-let skippedCount = 0;
+const skippedCount = 0;
 const results = [];
 
 //Process each PR
