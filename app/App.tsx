@@ -1,4 +1,4 @@
-import React, { useEffect, lazy } from 'react';
+import React, { useEffect, lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 
@@ -13,12 +13,14 @@ import LoadingSpinner from './components/LoadingSpinner';
 
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./page'));
+const ContactPage = lazy(() => import('./contact/page'));
+const EnterprisePage = lazy(() => import('./enterprise/page'));
 
 // Utils
-// import { performanceOptimizer } from '../src/utils/performanceOptimizer';
+import performanceOptimizer from '../src/utils/performanceOptimizer';
 
 // Styles
-import './globals.css';
+import '../src/index.css';
 
 const App: React.FC = () => {
   useEffect(() => {
@@ -32,39 +34,38 @@ const App: React.FC = () => {
     });
 
     // Initialize performance monitoring
-    // if (performanceOptimizer) {
-    //   performanceOptimizer.init();
-    // }
+    if (performanceOptimizer) {
+      performanceOptimizer.initialize();
+      performanceOptimizer.lazyLoadImages();
+    }
   }, []);
 
   return (
-    <ErrorBoundary>
-      <HelmetProvider>
+    <HelmetProvider>
+      <ErrorBoundary>
         <SEOOptimizer>
           <AccessibilityEnhancer>
-            <PerformanceDashboard />
+            <Router>
+              <div className="App">
+                <PerformanceDashboard />
+                
+                <Navigation />
+                
+                <Suspense fallback={<LoadingSpinner />}>
+                  <Routes>
+                    <Route path="/" element={<HomePage />} />
+                    <Route path="/contact" element={<ContactPage />} />
+                    <Route path="/enterprise" element={<EnterprisePage />} />
+                  </Routes>
+                </Suspense>
+                
+                <Footer />
+              </div>
+            </Router>
           </AccessibilityEnhancer>
         </SEOOptimizer>
-        <Router>
-          <div className="min-h-screen bg-white">
-            <Navigation />
-            <main>
-              <Routes>
-                <Route 
-                  path="/" 
-                  element={
-                    <React.Suspense fallback={<LoadingSpinner />}>
-                      <HomePage />
-                    </React.Suspense>
-                  } 
-                />
-              </Routes>
-            </main>
-            <Footer />
-          </div>
-        </Router>
-      </HelmetProvider>
-    </ErrorBoundary>
+      </ErrorBoundary>
+    </HelmetProvider>
   );
 };
 
