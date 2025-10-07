@@ -29,7 +29,6 @@ describe('Performance Tests', () => {
       },
     };
 
-<<<<<<< HEAD
     // Mock window object
     delete window.location;
     window.location = {
@@ -37,8 +36,6 @@ describe('Performance Tests', () => {
       reload: jest.fn(),
     };
 
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2d9f
     // Mock navigator
     Object.defineProperty(navigator, 'userAgent', {
       value: 'Mozilla/5.0 (Test Browser)',
