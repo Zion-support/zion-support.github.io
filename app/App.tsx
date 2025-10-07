@@ -6,14 +6,10 @@ import { HelmetProvider } from 'react-helmet-async';
 import ErrorBoundary from './components/ErrorBoundary';
 import SEOOptimizer from './components/SEOOptimizer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-<<<<<<< HEAD
-import PerformanceDashboard from '../components/PerformanceDashboard';
-=======
 import PerformanceDashboard from './components/PerformanceDashboard';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import LoadingSpinner from './components/LoadingSpinner';
->>>>>>> main
 
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./page'));
@@ -38,8 +34,8 @@ const App: React.FC = () => {
     });
 
     // Initialize performance monitoring
-    if (performanceOptimizer) {
-      performanceOptimizer.initialize();
+    if (performanceOptimizer && performanceOptimizer.performanceOptimizer) {
+      performanceOptimizer.performanceOptimizer.initialize();
       performanceOptimizer.lazyLoadImages();
     }
   }, []);

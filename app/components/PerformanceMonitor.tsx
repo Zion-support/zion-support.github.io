@@ -2,6 +2,11 @@
 
 import React, { useEffect, useState, memo } from 'react';
 
+interface LayoutShift extends PerformanceEntry {
+  hadRecentInput: boolean;
+  value: number;
+}
+
 interface PerformanceMetrics {
   loadTime: number;
   domContentLoaded: number;

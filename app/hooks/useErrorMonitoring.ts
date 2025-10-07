@@ -46,11 +46,12 @@ export const useErrorMonitoring = () => {
     // React error boundary handler (if available)
     const handleReactError = (
       error: Error,
-      errorInfo: { componentStack?: string }
+      errorInfo: unknown
     ) => {
+      const info = errorInfo as { componentStack?: string };
       reportError(
         error,
-        `react_error_boundary: ${errorInfo.componentStack || 'unknown'}`
+        `react_error_boundary: ${info.componentStack || 'unknown'}`
       );
     };
 
@@ -63,7 +64,7 @@ export const useErrorMonitoring = () => {
       window as Window & {
         __REACT_ERROR_HANDLER__?: (
           error: Error,
-          errorInfo: { componentStack?: string }
+          errorInfo: unknown
         ) => void;
       }
     ).__REACT_ERROR_HANDLER__ = handleReactError;
