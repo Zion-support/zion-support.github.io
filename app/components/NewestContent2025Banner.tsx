@@ -250,6 +250,24 @@ const NewestContent2025Banner = () => {
             </div>
           ))}
         </div>
+
+        {/* Call to Action */}
+        <div className="text-center">
+          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8">
+            <h3 className="text-2xl font-bold text-white mb-4">
+              Stay Ahead of the Curve
+            </h3>
+            <p className="text-blue-100 mb-6">
+              Get exclusive access to our latest research and implementation guides
+            </p>
+            <Link
+              href="/contact"
+              className="inline-block bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+            >
+              Get Started Today
+            </Link>
+          </div>
+        </div>
       </div>
     </section>
   );

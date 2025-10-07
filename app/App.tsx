@@ -25,7 +25,7 @@ const InteractiveAIROICalculator = lazy(
 );
 
 // Utils
-import { performanceOptimizer, collectPerformanceMetrics } from './utils/performanceOptimizer';
+import { lazyLoadImages, preloadCriticalResources, collectPerformanceMetrics, performanceOptimizer } from './utils/performanceOptimizer';
 import { logger } from './utils/logger';
 
 // Styles
@@ -42,7 +42,8 @@ const App: React.FC = () => {
       logger.performance('Performance Metrics', metrics as unknown as Record<string, unknown>, 'PerformanceMonitor');
     }
 
-    // Performance monitoring initialized
+    // Preload critical resources
+    preloadCriticalResources();
   }, []);
 
   const handleError = useCallback((error: Error, errorInfo: any) => {
@@ -101,5 +102,14 @@ const App: React.FC = () => {
     </HelmetProvider>
   );
 };
+
+// Loading fallback component
+const LoadingFallback: React.FC<{ height?: string }> = ({
+  height = 'h-32',
+}) => (
+  <div className={`flex items-center justify-center ${height} w-full`}>
+    <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-indigo-600"></div>
+  </div>
+);
 
 export default App;
