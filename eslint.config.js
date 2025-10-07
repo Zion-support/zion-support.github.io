@@ -1,11 +1,7 @@
 import globals from 'globals';
 import js from '@eslint/js';
-<<<<<<< HEAD
-import react from 'eslint-plugin-react';
-=======
 import tseslint from '@typescript-eslint/eslint-plugin';
 import tsParser from '@typescript-eslint/parser';
->>>>>>> 0f3808905e74017d7a86a4a72d37e609d34f40ad
 import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
 import nextPlugin from '@next/eslint-plugin-next';
@@ -20,78 +16,7 @@ const compat = new FlatCompat({
   baseDirectory: __dirname
 });
 
-export default [
-  ...compat.extends("next/core-web-vitals", "next/typescript"),
-  {
-<<<<<<< HEAD
-    ignores: [
-      'node_modules/**/*',
-      '.next/**/*',
-      'out/**/*',
-      'build/**/*',
-      'dist/**/*',
-      'coverage/**/*',
-      '*.config.js',
-      '*.config.ts',
-      '*.config.cjs',
-      '*.config.mjs',
-      'scripts/**/*',
-      'automation/**/*',
-      'backup-problematic-files/**/*',
-      'corrupted-src-backup/**/*',
-      'src.disabled/**/*',
-      'app_disabled/**/*',
-      '_app_disabled/**/*',
-      '_conflicted_disabled/**/*',
-      '_pages_api_disabled/**/*',
-      '_pages_disabled/**/*',
-      'admin-api-disabled/**/*',
-      'api-disabled/**/*',
-      'api.disabled/**/*',
-      'api.disabled.temp/**/*',
-      'api-backup/**/*',
-      'apps.backup/**/*',
-      'automation_backup/**/*',
-      'ai-optimization-backups/**/*',
-      'automation_logs/**/*',
-      'all-automations-reports/**/*',
-      'accessibility-reports/**/*',
-      'corrupted-files-backup/**/*',
-      'corrupted_backup/**/*',
-      'corrupted_files_backup_2/**/*',
-      'content/**/*',
-      'contracts/**/*',
-      'components_backup/**/*',
-      'data/**/*',
-      'data_backup/**/*',
-      'dao/**/*',
-      'deployments/**/*',
-      'disabled-api/**/*',
-      'e2e/**/*',
-      'factories/**/*',
-      'hooks/**/*',
-      'lib_backup/**/*',
-      'services/**/*',
-      'middleware/**/*',
-      'lib/integrations/**/*',
-      'lint-target/**/*',
-      'middleware.security.ts',
-      'components/AutonomousEnterpriseBreakthroughBanner.tsx',
-      'components/ConsensusIntelligenceBreakthroughBanner.tsx',
-      'components/FeaturedServiceCard.tsx',
-      'app/components/NewestContent2025Banner.tsx',
-      'app/components/September30NewContent2025Banner.tsx',
-      'app/components/UltimateBusinessIntelligence2025Banner.tsx',
-      'app/components/UltimateBusinessIntelligenceShowcase2025.tsx',
-      'app/contact/page.tsx',
-      'app/enterprise/page.tsx',
-      'app/not-found.tsx',
-      'app/page-minimal.tsx',
-      'app/page-optimized.tsx',
-      'app/services-advertising/page.tsx',
-      'fix_typescript_syntax_errors.jsx',
-      'fix_utils_files.ts',
-=======
+export default [...compat.extends("next/core-web-vitals", "next/typescript"), {
   ignores: ["node_modules/**", ".next/**", "out/**", "build/**", "next-env.d.ts"]
 }, //Global ignores - ignore everything except src, app directories and main files
 {
@@ -261,7 +186,6 @@ export default [
     '@typescript-eslint': tseslint,
     'react-hooks': reactHooks,
     'react-refresh': reactRefresh,
-    '@next/next': nextPlugin,
   },
   rules: {
     ...(reactHooks.configs.recommended?.rules || {}),
@@ -269,198 +193,7 @@ export default [
     '@typescript-eslint/no-unused-vars': [
       'warn',
       { argsIgnorePattern: '^_' },
->>>>>>> 0f3808905e74017d7a86a4a72d37e609d34f40ad
     ],
     '@typescript-eslint/no-explicit-any': 'warn',
-    'no-console': 'warn',
-    'prefer-const': 'error',
-    'no-var': 'error',
-    ...(nextPlugin.configs.recommended?.rules || {}),
   },
-<<<<<<< HEAD
-  js.configs.recommended,
-  {
-    files: ['**/*.{js,jsx}'],
-    languageOptions: {
-      ecmaVersion: 'latest',
-      sourceType: 'module',
-      globals: {
-        window: 'readonly',
-        document: 'readonly',
-        console: 'readonly',
-        process: 'readonly',
-        global: 'readonly',
-        navigator: 'readonly',
-        performance: 'readonly',
-        localStorage: 'readonly',
-        sessionStorage: 'readonly',
-        fetch: 'readonly',
-        setTimeout: 'readonly',
-        clearTimeout: 'readonly',
-        setInterval: 'readonly',
-        clearInterval: 'readonly',
-        requestAnimationFrame: 'readonly',
-        URL: 'readonly',
-        Blob: 'readonly',
-        Image: 'readonly',
-        Element: 'readonly',
-        HTMLElement: 'readonly',
-        HTMLFormElement: 'readonly',
-        HTMLImageElement: 'readonly',
-        KeyboardEvent: 'readonly',
-        FocusEvent: 'readonly',
-        MediaQueryListEvent: 'readonly',
-        PerformanceObserver: 'readonly',
-        PerformanceEntry: 'readonly',
-        PerformanceEntryList: 'readonly',
-        PerformanceNavigationTiming: 'readonly',
-        PerformanceResourceTiming: 'readonly',
-        PerformanceEventTiming: 'readonly',
-        LayoutShift: 'readonly',
-        IntersectionObserver: 'readonly',
-        IntersectionObserverCallback: 'readonly',
-        IntersectionObserverInit: 'readonly',
-        Navigator: 'readonly',
-        Window: 'readonly',
-        Document: 'readonly',
-        Performance: 'readonly',
-        NodeJS: 'readonly',
-        ResizeObserverCallback: 'readonly',
-        PerformanceObserverCallback: 'readonly',
-        require: 'readonly',
-        jest: 'readonly',
-        React: 'readonly',
-      },
-      parserOptions: {
-        ecmaFeatures: {
-          jsx: true,
-        },
-      },
-    },
-    plugins: {
-      react,
-      'react-hooks': reactHooks,
-      'react-refresh': reactRefresh,
-    },
-    rules: {
-      ...react.configs.recommended.rules,
-      ...reactHooks.configs.recommended.rules,
-      'react-refresh/only-export-components': [
-        'warn',
-        { allowConstantExport: true },
-      ],
-      'react/react-in-jsx-scope': 'off',
-      'react/prop-types': 'off',
-      'no-unused-vars': [
-        'warn',
-        { argsIgnorePattern: '^_' }
-      ],
-      'no-console': 'warn',
-      'prefer-const': 'error',
-      'no-var': 'error',
-      'react/no-unescaped-entities': 'off',
-    },
-    settings: {
-      react: {
-        version: 'detect',
-      },
-    },
-  },
-  {
-    files: ['**/*.{ts,tsx}'],
-    languageOptions: {
-      parser: tsparser,
-      globals: {
-        window: 'readonly',
-        document: 'readonly',
-        console: 'readonly',
-        process: 'readonly',
-        global: 'readonly',
-        navigator: 'readonly',
-        performance: 'readonly',
-        localStorage: 'readonly',
-        sessionStorage: 'readonly',
-        fetch: 'readonly',
-        setTimeout: 'readonly',
-        clearTimeout: 'readonly',
-        setInterval: 'readonly',
-        clearInterval: 'readonly',
-        requestAnimationFrame: 'readonly',
-        URL: 'readonly',
-        Blob: 'readonly',
-        Image: 'readonly',
-        Element: 'readonly',
-        HTMLElement: 'readonly',
-        HTMLFormElement: 'readonly',
-        HTMLImageElement: 'readonly',
-        KeyboardEvent: 'readonly',
-        FocusEvent: 'readonly',
-        MediaQueryListEvent: 'readonly',
-        PerformanceObserver: 'readonly',
-        PerformanceEntry: 'readonly',
-        PerformanceEntryList: 'readonly',
-        PerformanceNavigationTiming: 'readonly',
-        PerformanceResourceTiming: 'readonly',
-        PerformanceEventTiming: 'readonly',
-        LayoutShift: 'readonly',
-        IntersectionObserver: 'readonly',
-        IntersectionObserverCallback: 'readonly',
-        IntersectionObserverInit: 'readonly',
-        Navigator: 'readonly',
-        Window: 'readonly',
-        Document: 'readonly',
-        Performance: 'readonly',
-        NodeJS: 'readonly',
-        ResizeObserverCallback: 'readonly',
-        PerformanceObserverCallback: 'readonly',
-        require: 'readonly',
-        jest: 'readonly',
-        React: 'readonly',
-      },
-      parserOptions: {
-        ecmaVersion: 'latest',
-        sourceType: 'module',
-        ecmaFeatures: {
-          jsx: true,
-        },
-      },
-    },
-    plugins: {
-      react,
-      'react-hooks': reactHooks,
-      'react-refresh': reactRefresh,
-      '@typescript-eslint': tseslint,
-    },
-    rules: {
-      ...react.configs.recommended.rules,
-      ...reactHooks.configs.recommended.rules,
-      'react-refresh/only-export-components': [
-        'warn',
-        { allowConstantExport: true },
-      ],
-      'react/react-in-jsx-scope': 'off',
-      'react/prop-types': 'off',
-      'no-unused-vars': 'off',
-      '@typescript-eslint/no-unused-vars': [
-        'warn',
-        { argsIgnorePattern: '^_' }
-      ],
-      '@typescript-eslint/no-explicit-any': 'warn',
-      '@typescript-eslint/no-unsafe-function-type': 'warn',
-      '@typescript-eslint/no-require-imports': 'warn',
-      'no-console': 'warn',
-      'prefer-const': 'error',
-      'no-var': 'error',
-      'react/no-unescaped-entities': 'off',
-      'no-useless-escape': 'warn',
-    },
-    settings: {
-      react: {
-        version: 'detect',
-      },
-    },
-  },
-];
-=======
 }];
->>>>>>> 0f3808905e74017d7a86a4a72d37e609d34f40ad
