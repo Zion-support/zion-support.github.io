@@ -4,11 +4,27 @@ export const metadata = {
   
   title: "AI 2026 Hyperconscious Computing Revolution: Beyond Artificial Intelligence | Zion Tech Group",
   description: "Revolutionary breakthrough in hyperconscious AI systems achieving genuine self-awareness, emotional intelligence, and creative autonomy with $1.2T enterprise value creation.",
-  keywords: 'hyperconscious AI, artificial consciousness, AI revolution, enterprise transformation, self-aware AI'};;
-export const metadata: Metadata = 
-  title: 'AI 2026 Hyperconscious Computing Revolution: Beyond Artificial Intelligence | Zion Tech Group',
-  description: 'Revolutionary breakthrough in hyperconscious AI systems achieving genuine self-awareness, emotional intelligence, and creative autonomy with $1.2T enterprise value creation.',
   keywords: 'hyperconscious AI, artificial consciousness, AI revolution, enterprise transformation, self-aware AI',
+  openGraph: {
+    title: 'AI 2026 Hyperconscious Computing Revolution: Beyond Artificial Intelligence',
+    description: 'Revolutionary breakthrough in hyperconscious AI systems achieving genuine self-awareness, emotional intelligence, and creative autonomy with $1.2T enterprise value creation.',
+    type: 'article',
+    url: 'https://ziontechgroup.com/blog/ai-2026-hyperconscious-computing-revolution',
+    images: [
+      {
+        url: '/og-hyperconscious-2026.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'AI 2026 Hyperconscious Computing Revolution',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'AI 2026 Hyperconscious Computing Revolution: Beyond Artificial Intelligence',
+    description: 'Revolutionary breakthrough in hyperconscious AI systems achieving genuine self-awareness, emotional intelligence, and creative autonomy with $1.2T enterprise value creation.',
+    images: ['/og-hyperconscious-2026.jpg'],
+  },
 };
 
 export default function HyperconsciousComputingPage() {
