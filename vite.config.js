@@ -13,9 +13,9 @@ export default defineConfig({
     }),
   ],
   build: {
-    target: 'esnext',
+    target: 'es2015',
     minify: 'terser',
-    sourcemap: true,
+    sourcemap: false,
     rollupOptions: {
       output: {
         manualChunks: {
@@ -35,14 +35,6 @@ export default defineConfig({
   server: {
     port: 3000,
     host: true,
-    open: true,
-    headers: {
-      'X-Content-Type-Options': 'nosniff',
-      'X-Frame-Options': 'DENY',
-      'X-XSS-Protection': '1; mode=block',
-      'Referrer-Policy': 'strict-origin-when-cross-origin',
-      'Permissions-Policy': 'camera=(), microphone=(), geolocation=()',
-    },
   },
   preview: {
     port: 4173,
@@ -50,8 +42,5 @@ export default defineConfig({
   },
   optimizeDeps: {
     include: ['react', 'react-dom', 'react-router-dom'],
-  },
-  define: {
-    __DEV__: JSON.stringify(process.env.NODE_ENV === 'development'),
   },
 });
