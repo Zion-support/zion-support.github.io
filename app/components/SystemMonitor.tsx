@@ -4,7 +4,7 @@
  */
 
 import React, { useState, useEffect, useCallback } from 'react';
-import { getMemoryUsage, collectPerformanceMetrics } from '../utils/performanceEnhancer';
+import { collectPerformanceMetrics } from '../utils/performanceEnhancer';
 import { errorHandler } from '../utils/enhancedErrorHandler';
 
 // Helper functions
@@ -25,26 +25,7 @@ const calculatePerformanceScore = () => {
   return Math.max(0, score);
 };
 
-const getMemoryInfo = () => {
-  const memory = getMemoryUsage();
-  return memory ? {
-    used: memory.used,
-    total: memory.total,
-    limit: memory.limit,
-    percentage: memory.percentage,
-  } : null;
-};
-
-const getNetworkInfo = () => {
-  if (typeof navigator === 'undefined') return null;
-  
-  const connection = (navigator as any).connection || (navigator as any).mozConnection || (navigator as any).webkitConnection;
-  return connection ? {
-    effectiveType: connection.effectiveType,
-    downlink: connection.downlink,
-    rtt: connection.rtt,
-  } : null;
-};
+// Removed unused functions getMemoryInfo and getNetworkInfo
 
 interface SystemMetrics {
   performance: {

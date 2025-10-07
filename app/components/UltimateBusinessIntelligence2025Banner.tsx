@@ -44,17 +44,10 @@ const UltimateBusinessIntelligence2025Banner = () => {
       url: '/resources/ai-2025-ultimate-business-intelligence-implementation-guide',
       type: 'Implementation Guide',
       metrics: {
-<<<<<<< HEAD
         roi: '30,000%',
         success: '99.8%',
         timeline: '18 months',
         adoption: '100%'
-=======
-        efficiency: '300%',
-        accuracy: '99.7%',
-        timeline: '6 months',
-        adoption: '95%'
->>>>>>> bb911b0617a971df5b6d8a662a626d7ff658a0a7
       },
       readingTime: '60 min read',
       featured: true
@@ -137,7 +130,6 @@ const UltimateBusinessIntelligence2025Banner = () => {
               </button>
             </div>
 
-<<<<<<< HEAD
             {/* Metrics Grid */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
               {Object.entries(currentContent.metrics).map(([key, value]) => (
@@ -165,58 +157,10 @@ const UltimateBusinessIntelligence2025Banner = () => {
                 <span className="text-xl">📞</span>
                 <span>Call +1 302 464 0950</span>
               </a>
-=======
-            {/* Content Details */}
-            <div className="flex-1">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
-                <span className="text-green-400 font-semibold text-sm uppercase tracking-wide">
-                  New Release
-                </span>
-              </div>
-              
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                {currentContent.title}
-              </h2>
-              
-              <p className="text-lg text-gray-200 mb-6 max-w-3xl">
-                {currentContent.description}
-              </p>
-
-              {/* Metrics Grid */}
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
-                {Object.entries(currentContent.metrics).map(([key, value]) => (
-                  <div key={key} className="text-center">
-                    <div className="text-3xl font-bold text-cyan-400 mb-2">{value}</div>
-                    <div className="text-gray-300 text-sm capitalize">{key.replace(/([A-Z])/g, ' $1')}</div>
-                  </div>
-                ))}
-              </div>
-
-              {/* CTA Buttons */}
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-                <Link
-                  href={currentContent.url}
-                  className="flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl hover:shadow-cyan-500/25"
-                >
-                  <span className="text-xl">📖</span>
-                  <span>Read {currentContent.type}</span>
-                  <span className="group-hover:translate-x-1 transition-transform">→</span>
-                </Link>
-                <a
-                  href="tel:+13024640950"
-                  className="flex items-center gap-3 border-2 border-white/30 hover:border-white/60 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 hover:bg-white/10"
-                >
-                  <span className="text-xl">📞</span>
-                  <span>Call +1 302 464 0950</span>
-                </a>
-              </div>
->>>>>>> bb911b0617a971df5b6d8a662a626d7ff658a0a7
             </div>
           </div>
 
           {/* Slide Indicators */}
-<<<<<<< HEAD
           <div className="flex justify-center mt-8 space-x-2">
             {content.map((_, index) => (
               <button
@@ -229,22 +173,6 @@ const UltimateBusinessIntelligence2025Banner = () => {
               />
             ))}
           </div>
-=======
-          {content.length > 1 && (
-            <div className="flex justify-center mt-8 space-x-2">
-              {content.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentSlide(index)}
-                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                    index === currentSlide ? 'bg-cyan-400' : 'bg-white/30'
-                  }`}
-                  aria-label={`Go to slide ${index + 1}`}
-                />
-              ))}
-            </div>
-          )}
->>>>>>> bb911b0617a971df5b6d8a662a626d7ff658a0a7
         </div>
 
         {/* Stats Section */}
