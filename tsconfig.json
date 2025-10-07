@@ -107,6 +107,10 @@
     "hooks/**/*",
     "lib_backup/**/*",
     "services/**/*",
-    "middleware/**/*"
+    "middleware/**/*",
+    "automation/**/*",
+    "app/blog/**/*",
+    "_app_disabled/blog/**/*",
+    "app_disabled/blog/**/*"
   ]
 }

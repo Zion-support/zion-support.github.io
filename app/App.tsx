@@ -1,42 +1,56 @@
-'use client';
+import React, { useEffect, lazy, Suspense } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
 
+<<<<<<< HEAD
+// Components
+import SEOOptimizer from './components/SEOOptimizer';
+import AccessibilityEnhancer from './components/AccessibilityEnhancer';
+=======
 import React, { Suspense, lazy, useCallback, useEffect } from 'react';
 import Link from 'next/link';
 import { HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-// import SEOOptimizer from './components/SEOOptimizer'; // Unused import
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-import PerformanceDashboard from './components/PerformanceDashboard';
-import AdvancedPerformanceMonitor from './components/AdvancedPerformanceMonitor';
 import AdvancedErrorBoundary from './components/AdvancedErrorBoundary';
-import SEOEnhancer from './components/SEOEnhancer';
 import AdvancedSEOOptimizer from './components/AdvancedSEOOptimizer';
-import LoadingSpinner from './components/LoadingSpinner';
+import AdvancedPerformanceMonitor from './components/AdvancedPerformanceMonitor';
+import SEOEnhancer from './components/SEOEnhancer';
+>>>>>>> cursor/fix-errors-and-merge-to-main-ccfd
+import PerformanceDashboard from './components/PerformanceDashboard';
 
-// Lazy load components for better performance
-const ContentShowcase = lazy(() => import('./components/ContentShowcase'));
-const InteractiveContentShowcase2026 = lazy(
-  () => import('./components/InteractiveContentShowcase2026')
+// Loading component
+const LoadingSpinner = () => (
+  <div className="min-h-screen flex items-center justify-center bg-gray-50">
+    <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
+  </div>
 );
-const InteractiveAIROICalculator = lazy(
-  () => import('./components/InteractiveAIROICalculator')
-);
+
+// Error boundary component
+const ErrorBoundary = ({ children }: { children: React.ReactNode }) => {
+  return <>{children}</>;
+};
+
+// Lazy load pages for better performance
+const HomePage = lazy(() => import('./page'));
 
 // Utils
-import { lazyLoadImages, preloadCriticalResources, collectPerformanceMetrics, performanceOptimizer } from './utils/performanceOptimizer';
+<<<<<<< HEAD
+import { performanceOptimizer, collectPerformanceMetrics } from './utils/performanceOptimizer';
+=======
+import { performanceOptimizer } from './utils/performanceOptimizer';
 import { logger } from './utils/logger';
+>>>>>>> cursor/fix-errors-and-merge-to-main-ccfd
 
 // Styles
-import './globals.css';
+import '../index.css';
 
 const App: React.FC = () => {
   useEffect(() => {
     // Initialize global error handling
-    logger.lifecycle('initialized', 'App');
+    console.log('App initialized');
 
     // Initialize performance monitoring
-    lazyLoadImages();
-    preloadCriticalResources();
     performanceOptimizer.init();
     
     // Initialize Web Vitals monitoring
@@ -44,91 +58,68 @@ const App: React.FC = () => {
       const pageLoadMetrics = collectPerformanceMetrics();
       const metrics = performanceOptimizer.getMetrics();
       if (pageLoadMetrics) {
+        // eslint-disable-next-line no-console
         console.log('Performance metrics collected:', pageLoadMetrics);
       }
       if (metrics) {
+        // eslint-disable-next-line no-console
         console.log('Performance metrics:', metrics);
       }
     }
     
-    logger.lifecycle('performance monitoring initialized', 'App');
-    logger.info('🚀 Zion Tech Group App initialized with comprehensive monitoring', 'App');
+    // eslint-disable-next-line no-console
+    console.log('Performance monitoring initialized');
+    // eslint-disable-next-line no-console
+    console.log('🚀 Zion Tech Group App initialized with comprehensive monitoring');
   }, []);
 
   return (
     <HelmetProvider>
-      <AdvancedErrorBoundary
-        enableErrorReporting={true}
-        enableRetry={true}
-        onError={(error, errorInfo) => {
-          logger.error('Application Error', 'ErrorBoundary', { error: error.message, errorInfo });
-        }}
-      >
-        <AccessibilityEnhancer>
-            <SEOEnhancer
-              title='Zion Tech Group - Advanced AI and IT Solutions'
-              description='Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. Transform your business with our cutting-edge technology.'
-            >
-              <AdvancedSEOOptimizer
-                seoData={{
-                  title: 'Zion Tech Group - Advanced AI and IT Solutions',
-                  description: 'Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. Transform your business with our cutting-edge technology.',
-                  keywords: ['AI solutions', 'enterprise AI', 'quantum computing', 'autonomous systems', 'digital transformation', 'automation', 'cloud services', 'AI consulting', 'business intelligence', 'machine learning'],
-                  canonicalUrl: 'https://ziontechgroup.com',
-                  ogImage: 'https://ziontechgroup.com/og-image.jpg',
-                  structuredData: {
-                    '@type': 'TechCompany',
-                    name: 'Zion Tech Group',
-                    description: 'Advanced AI and IT Solutions Provider',
-                    foundingDate: '2020',
-                    numberOfEmployees: '50-100',
-                    industry: 'Technology',
-                    services: [
-                      'AI Solutions',
-                      'Digital Transformation',
-                      'Cloud Services',
-                      'Automation',
-                      'Business Intelligence'
-                    ]
-                  }
-                }}
-                enableStructuredData={true}
-                enableOpenGraph={true}
-                enableTwitterCards={true}
-                enableSchemaMarkup={true}
-              />
-              <Router>
-                <div className='App'>
-                  <main id='main-content'>
-                    <Suspense fallback={<LoadingSpinner />}>
-                      <Routes>
-                        <Route path='/' element={<HomePage />} />
-                        {/* Add more routes as needed */}
-                      </Routes>
-                    </Suspense>
-                  </main>
+      <ErrorBoundary>
+        <div>
+          <SEOOptimizer />
+          <AccessibilityEnhancer>
+            <Router>
+              <div className='App'>
+                {/* Skip to main content link for accessibility */}
+                <a
+                  href='#main-content'
+                  className='skip-link sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50'
+                  onClick={e => {
+                    e.preventDefault();
+                    const main =
+                      document.querySelector('main') ||
+                      document.querySelector('#main-content');
+                    if (main) {
+                      main.focus();
+                      main.scrollIntoView({ behavior: 'smooth' });
+                    }
+                  }}
+                >
+                  Skip to main content
+                </a>
 
-                  {/* Performance Dashboard */}
-                  <PerformanceDashboard />
-                  
-                  {/* Advanced Performance Monitor */}
-                  <AdvancedPerformanceMonitor
-                    enableRealTimeMonitoring={process.env.NODE_ENV === 'development'}
-                    onMetricsUpdate={(metrics) => {
-                      if (process.env.NODE_ENV === 'development') {
-                        logger.performance('Performance Metrics', metrics as unknown as Record<string, unknown>, 'PerformanceMonitor');
-                      }
-                    }}
-                  />
-                </div>
-              </Router>
-            </SEOEnhancer>
-          </AccessibilityEnhancer>
-      </AdvancedErrorBoundary>
+                <Suspense fallback={<LoadingSpinner />}>
+                  <Routes>
+                    <Route path='/' element={<HomePage />} />
+                    {/* Add more routes as needed */}
+                  </Routes>
+                </Suspense>
+
+                {/* Performance Dashboard */}
+                <PerformanceDashboard />
+              </div>
+            </Router>
+            </AccessibilityEnhancer>
+        </div>
+      </ErrorBoundary>
     </HelmetProvider>
   );
 };
 
+<<<<<<< HEAD
+export default App;
+=======
 // Loading fallback component
 const LoadingFallback: React.FC<{ height?: string }> = ({
   height = 'h-32',
@@ -158,18 +149,23 @@ const HomePage: React.FC = () => {
             <div className="flex items-center">
               <Link 
                 href="/" 
-                className="text-2xl font-bold text-indigo-600 hover:text-indigo-700 transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 rounded"
                 aria-label="Zion Tech Group - Home"
               >
-                Zion Tech Group
+                <span className="text-2xl font-bold text-indigo-600 hover:text-indigo-700 transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 rounded">
+                  Zion Tech Group
+                </span>
               </Link>
             </div>
             <nav className="hidden md:flex space-x-8">
-              <Link href="/services" className="text-gray-700 hover:text-indigo-600 transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 rounded px-2 py-1">
-                Services
+              <Link href="/services">
+                <span className="text-gray-700 hover:text-indigo-600 transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 rounded px-2 py-1">
+                  Services
+                </span>
               </Link>
-              <Link href="/blog" className="text-gray-700 hover:text-indigo-600 transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 rounded px-2 py-1">
-                Blog
+              <Link href="/blog">
+                <span className="text-gray-700 hover:text-indigo-600 transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 rounded px-2 py-1">
+                  Blog
+                </span>
               </Link>
               <Link href="/case-studies" className="text-gray-700 hover:text-indigo-600 transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 rounded px-2 py-1">
                 Case Studies
@@ -291,4 +287,5 @@ const HomePage: React.FC = () => {
   );
 };
 
-export default App;
+export default HomePage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-ccfd

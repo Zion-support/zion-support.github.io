@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 // import { Menu, X } from 'lucide-react';
+=======
+>>>>>>> cb79024a938ec4cdfb9bf2295cb3ecd71e1ace22
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -35,8 +38,14 @@ const EnhancedHeader: React.FC = () => {
             onClick={() => setIsOpen(!isOpen)}
             className='md:hidden text-gray-700'
           >
+<<<<<<< HEAD
             {isOpen ? <span className='w-6 h-6'>✕</span> : <span className='w-6 h-6'>☰</span>}
           </button>
+=======
+            {isOpen ? <span className='text-xl'>✕</span> : <span className='text-xl'>☰</span>}
+          </button>
+        </div>
+>>>>>>> cb79024a938ec4cdfb9bf2295cb3ecd71e1ace22
         {isOpen && (
           <div className='md:hidden py-4 border-t'>
             {navigationItems.map(item => (

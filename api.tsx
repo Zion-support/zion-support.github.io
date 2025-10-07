@@ -1,4 +1,11 @@
+<<<<<<< HEAD
 // import { ArrowRight, Code, ExternalLink, Shield, Zap } from 'lucide-react';
+=======
+<<<<<<< HEAD
+import { ArrowRight, Code, ExternalLink, Shield, Zap, Atom } from 'lucide-react';
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-ccfd
+>>>>>>> cb79024a938ec4cdfb9bf2295cb3ecd71e1ace22
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -54,14 +61,22 @@ const API: React.FC = () => {
               className='bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center'
             >
               Get API Key
+<<<<<<< HEAD
               <span className='ml-2 w-5 h-5'>→</span>
+=======
+              <span className='ml-2'>→</span>
+>>>>>>> cb79024a938ec4cdfb9bf2295cb3ecd71e1ace22
             </Link>
             <a
               href='#endpoints'
               className='border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors inline-flex items-center'
             >
               View Endpoints
+<<<<<<< HEAD
               <span className='ml-2 w-5 h-5'>⚛️</span>
+=======
+              <span className='ml-2'>⚛️</span>
+>>>>>>> cb79024a938ec4cdfb9bf2295cb3ecd71e1ace22
             </a>
           </div>
         </div>
@@ -72,7 +87,11 @@ const API: React.FC = () => {
           <div className='grid md:grid-cols-3 gap-8'>
             <div className='text-center'>
               <div className='w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4'>
+<<<<<<< HEAD
                 <span className='w-8 h-8 text-blue-600'>⚛️</span>
+=======
+                <span className='text-2xl'>⚛️</span>
+>>>>>>> cb79024a938ec4cdfb9bf2295cb3ecd71e1ace22
               </div>
               <h3 className='text-xl font-semibold text-gray-900 mb-2'>
                 RESTful APIs
@@ -84,7 +103,11 @@ const API: React.FC = () => {
             </div>
             <div className='text-center'>
               <div className='w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4'>
+<<<<<<< HEAD
                 <span className='w-8 h-8 text-green-600'>⚛️</span>
+=======
+                <span className='text-2xl'>⚛️</span>
+>>>>>>> cb79024a938ec4cdfb9bf2295cb3ecd71e1ace22
               </div>
               <h3 className='text-xl font-semibold text-gray-900 mb-2'>
                 Secure & Reliable
@@ -96,7 +119,11 @@ const API: React.FC = () => {
             </div>
             <div className='text-center'>
               <div className='w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4'>
+<<<<<<< HEAD
                 <span className='w-8 h-8 text-purple-600'>⚡</span>
+=======
+                <span className='text-2xl'>⚡</span>
+>>>>>>> cb79024a938ec4cdfb9bf2295cb3ecd71e1ace22
               </div>
               <h3 className='text-xl font-semibold text-gray-900 mb-2'>
                 High Performance
@@ -181,14 +208,22 @@ const API: React.FC = () => {
                 className='bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-flex items-center'
               >
                 Get API Key
+<<<<<<< HEAD
                 <span className='ml-2 w-5 h-5'>→</span>
+=======
+                <span className='ml-2'>→</span>
+>>>>>>> cb79024a938ec4cdfb9bf2295cb3ecd71e1ace22
               </Link>
               <a
                 href='https://docs?.ziontechgroup.com'
                 className='border border-gray-300 text-gray-700 px-8 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors inline-flex items-center'
               >
                 View Full Docs
+<<<<<<< HEAD
                 <span className='ml-2 w-5 h-5'>⚛️</span>
+=======
+                <span className='ml-2'>⚛️</span>
+>>>>>>> cb79024a938ec4cdfb9bf2295cb3ecd71e1ace22
               </a>
             </div>
           </div>

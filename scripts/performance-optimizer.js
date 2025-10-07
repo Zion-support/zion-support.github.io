@@ -1,5 +1,10 @@
 #!/usr/bin/env node
 
+/**
+ * Performance Optimization Script
+ * Automatically optimizes the Next.js application for better performance
+ */
+
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -7,248 +12,216 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-/**
- * Performance Optimization Script
- * Adds lazy loading, code splitting, and other performance improvements
- */
-
 console.log('🚀 Starting performance optimization...');
 
-// 1. Create a lazy loading utility
-const lazyLoadingUtil = `
-// Lazy loading utility for better performance
-import { lazy, Suspense } from 'react';
-
-export const createLazyComponent = (importFunc, fallback = null) => {
-  const LazyComponent = lazy(importFunc);
+// 1. Optimize Next.js configuration
+function optimizeNextConfig() {
+  const nextConfigPath = path.join(process.cwd(), 'next.config.js');
   
-  return (props) => (
-    <Suspense fallback={fallback || <div className="animate-pulse bg-gray-200 h-32 rounded flex items-center justify-center">
-      <div className="text-gray-500">Loading...</div>
-    </div>}>
-      <LazyComponent {...props} />
-    </Suspense>
-  );
-};
+  if (fs.existsSync(nextConfigPath)) {
+    let config = fs.readFileSync(nextConfigPath, 'utf8');
+    
+    // Add performance optimizations
+    const optimizations = `
+    // Performance optimizations
+    experimental: {
+      optimizeCss: true,
+      optimizePackageImports: ['@heroicons/react', 'lucide-react'],
+    },
+    compiler: {
+      removeConsole: process.env.NODE_ENV === 'production',
+    },
+    images: {
+      formats: ['image/webp', 'image/avif'],
+      minimumCacheTTL: 60,
+      dangerouslyAllowSVG: true,
+      contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
+    },
+    poweredByHeader: false,
+    compress: true,
+    generateEtags: false,
+    `;
+    
+    if (!config.includes('experimental:')) {
+      config = config.replace(
+        'module.exports = {',
+        `module.exports = {${optimizations}`
+      );
+    }
+    
+    fs.writeFileSync(nextConfigPath, config);
+    console.log('✅ Next.js configuration optimized');
+  }
+}
 
-// Preload critical components
-export const preloadComponent = (importFunc) => {
-  return () => {
-    importFunc();
+// 2. Optimize package.json scripts
+function optimizePackageScripts() {
+  const packagePath = path.join(process.cwd(), 'package.json');
+  const packageJson = JSON.parse(fs.readFileSync(packagePath, 'utf8'));
+  
+  // Add performance scripts
+  packageJson.scripts = {
+    ...packageJson.scripts,
+    'build:optimized': 'NODE_ENV=production next build && npm run optimize:assets',
+    'optimize:assets': 'node scripts/optimize-assets.js',
+    'analyze:bundle': 'ANALYZE=true next build',
+    'lighthouse': 'lighthouse http://localhost:3000 --output=html --output-path=./lighthouse-report.html',
+    'perf:audit': 'npm run build && npm run lighthouse',
   };
-};
+  
+  fs.writeFileSync(packagePath, JSON.stringify(packageJson, null, 2));
+  console.log('✅ Package.json scripts optimized');
+}
+
+// 3. Create asset optimization script
+function createAssetOptimizer() {
+  const assetOptimizerPath = path.join(process.cwd(), 'scripts', 'optimize-assets.js');
+  const assetOptimizerContent = `#!/usr/bin/env node
+
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+console.log('🎨 Optimizing assets...');
+
+// Optimize CSS
+function optimizeCSS() {
+  const cssPath = path.join(process.cwd(), '.next/static/css');
+  if (fs.existsSync(cssPath)) {
+    const files = fs.readdirSync(cssPath);
+    files.forEach(file => {
+      if (file.endsWith('.css')) {
+        const filePath = path.join(cssPath, file);
+        let content = fs.readFileSync(filePath, 'utf8');
+        
+        // Remove unnecessary whitespace
+        content = content.replace(/\\s+/g, ' ');
+        content = content.replace(/;\\s*}/g, '}');
+        content = content.replace(/,\\s+/g, ',');
+        
+        fs.writeFileSync(filePath, content);
+      }
+    });
+    console.log('✅ CSS optimized');
+  }
+}
+
+// Optimize JavaScript bundles
+function optimizeJS() {
+  const jsPath = path.join(process.cwd(), '.next/static/chunks');
+  if (fs.existsSync(jsPath)) {
+    const files = fs.readdirSync(jsPath);
+    files.forEach(file => {
+      if (file.endsWith('.js')) {
+        const filePath = path.join(jsPath, file);
+        let content = fs.readFileSync(filePath, 'utf8');
+        
+        // Remove console.log statements in production
+        if (process.env.NODE_ENV === 'production') {
+          content = content.replace(/console\\.log\\([^)]*\\);?/g, '');
+          content = content.replace(/console\\.warn\\([^)]*\\);?/g, '');
+          content = content.replace(/console\\.info\\([^)]*\\);?/g, '');
+        }
+        
+        fs.writeFileSync(filePath, content);
+      }
+    });
+    console.log('✅ JavaScript bundles optimized');
+  }
+}
+
+optimizeCSS();
+optimizeJS();
+console.log('🎉 Asset optimization complete!');
 `;
 
-// 2. Create performance monitoring utility
-const performanceMonitor = `
-// Performance monitoring utility
-export const performanceMonitor = {
-  measureRender: (componentName, renderFn) => {
-    const start = performance.now();
-    const result = renderFn();
-    const end = performance.now();
-    console.log(\`\${componentName} render time: \${end - start}ms\`);
-    return result;
-  },
-  
-  measureAsync: async (operationName, asyncFn) => {
-    const start = performance.now();
-    const result = await asyncFn();
-    const end = performance.now();
-    console.log(\`\${operationName} execution time: \${end - start}ms\`);
-    return result;
-  },
-  
-  measureWebVitals: () => {
-    if (typeof window !== 'undefined' && 'web-vitals' in window) {
-      import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
-        getCLS(console.log);
-        getFID(console.log);
-        getFCP(console.log);
-        getLCP(console.log);
-        getTTFB(console.log);
+  fs.writeFileSync(assetOptimizerPath, assetOptimizerContent);
+  fs.chmodSync(assetOptimizerPath, '755');
+  console.log('✅ Asset optimizer created');
+}
+
+// 4. Create performance monitoring component
+function createPerformanceMonitor() {
+  const monitorPath = path.join(process.cwd(), 'app/components/PerformanceMonitor.tsx');
+  const monitorContent = `import React, { useEffect, useState } from 'react';
+
+interface PerformanceMetrics {
+  fcp: number;
+  lcp: number;
+  fid: number;
+  cls: number;
+  ttfb: number;
+}
+
+export default function PerformanceMonitor() {
+  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+
+    const observer = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      entries.forEach((entry) => {
+        if (entry.entryType === 'paint') {
+          if (entry.name === 'first-contentful-paint') {
+            setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
+          }
+        }
       });
-    }
+    });
+
+    observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'first-input', 'layout-shift'] });
+
+    return () => observer.disconnect();
+  }, []);
+
+  if (process.env.NODE_ENV !== 'development' || !metrics) {
+    return null;
   }
-};
-`;
 
-// 3. Create image optimization utility
-const imageOptimizer = `
-// Image optimization utility
-export const optimizeImage = (src, options = {}) => {
-  const {
-    width = 800,
-    height = 600,
-    quality = 80,
-    format = 'webp',
-    lazy = true
-  } = options;
-  
-  const optimizedSrc = \`\${src}?w=\${width}&h=\${height}&q=\${quality}&f=\${format}\`;
-  
-  return {
-    src: optimizedSrc,
-    loading: lazy ? 'lazy' : 'eager',
-    decoding: 'async',
-    ...options
-  };
-};
-
-// Lazy image component
-export const LazyImage = ({ src, alt, ...props }) => {
-  const optimizedProps = optimizeImage(src, props);
-  
   return (
-    <img
-      {...optimizedProps}
-      alt={alt}
-      onLoad={(e) => {
-        e.target.classList.add('loaded');
-      }}
-      className={\`transition-opacity duration-300 opacity-0 \${props.className || ''}\`}
-    />
+    <div className="fixed bottom-4 right-4 bg-black bg-opacity-75 text-white p-4 rounded-lg text-xs font-mono">
+      <div className="font-bold mb-2">Performance Metrics</div>
+      {metrics.fcp && <div>FCP: {metrics.fcp.toFixed(2)}ms</div>}
+      {metrics.lcp && <div>LCP: {metrics.lcp.toFixed(2)}ms</div>}
+      {metrics.fid && <div>FID: {metrics.fid.toFixed(2)}ms</div>}
+      {metrics.cls && <div>CLS: {metrics.cls.toFixed(4)}</div>}
+      {metrics.ttfb && <div>TTFB: {metrics.ttfb.toFixed(2)}ms</div>}
+    </div>
   );
-};
-`;
-
-// 4. Create bundle analyzer configuration
-const bundleAnalyzerConfig = `
-// Bundle analyzer configuration for better code splitting
-export const bundleAnalyzerConfig = {
-  analyzerMode: 'static',
-  openAnalyzer: false,
-  generateStatsFile: true,
-  statsFilename: 'bundle-stats.json',
-  reportFilename: 'bundle-report.html',
-  defaultSizes: 'gzip',
-  excludeAssets: ['node_modules'],
-  chunkFilter: (chunk) => {
-    // Exclude vendor chunks from analysis
-    return !chunk.name.includes('vendor');
-  }
-};
-`;
-
-// Write the utility files
-const utilsDir = path.join(__dirname, '..', 'src', 'utils');
-if (!fs.existsSync(utilsDir)) {
-  fs.mkdirSync(utilsDir, { recursive: true });
-}
-
-fs.writeFileSync(path.join(utilsDir, 'lazy-loading.ts'), lazyLoadingUtil);
-fs.writeFileSync(path.join(utilsDir, 'performance-monitor.ts'), performanceMonitor);
-fs.writeFileSync(path.join(utilsDir, 'image-optimizer.ts'), imageOptimizer);
-fs.writeFileSync(path.join(utilsDir, 'bundle-analyzer.ts'), bundleAnalyzerConfig);
-
-console.log('✅ Performance optimization utilities created');
-
-// 5. Update package.json with performance scripts
-const packageJsonPath = path.join(__dirname, '..', 'package.json');
-const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
-
-// Add performance scripts
-packageJson.scripts = {
-  ...packageJson.scripts,
-  'perf:analyze': 'npm run build && npx webpack-bundle-analyzer dist/stats.json',
-  'perf:lighthouse': 'lighthouse http://localhost:3000 --output=html --output-path=./lighthouse-report.html',
-  'perf:audit': 'npm run perf:lighthouse && npm run perf:analyze',
-  'perf:monitor': 'node scripts/performance-monitor.js',
-  'perf:optimize': 'npm run build:analyze && npm run perf:audit'
-};
-
-fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));
-
-console.log('✅ Package.json updated with performance scripts');
-
-// 6. Create performance monitoring script
-const performanceMonitorScript = `
-#!/usr/bin/env node
-
-const fs = require('fs');
-const path = require('path');
-
-console.log('📊 Performance monitoring started...');
-
-// Monitor bundle size
-const distPath = path.join(__dirname, '..', 'dist');
-if (fs.existsSync(distPath)) {
-  const files = fs.readdirSync(distPath);
-  let totalSize = 0;
-  
-  files.forEach(file => {
-    const filePath = path.join(distPath, file);
-    const stats = fs.statSync(filePath);
-    if (stats.isFile()) {
-      totalSize += stats.size;
-      console.log(\`📁 \${file}: \${(stats.size / 1024).toFixed(2)} KB\`);
-    }
-  });
-  
-  console.log(\`📦 Total bundle size: \${(totalSize / 1024).toFixed(2)} KB\`);
-  
-  // Check if bundle size is within acceptable limits
-  const maxSize = 500 * 1024; // 500KB
-  if (totalSize > maxSize) {
-    console.warn('⚠️  Bundle size exceeds recommended limit of 500KB');
-  } else {
-    console.log('✅ Bundle size is within acceptable limits');
-  }
-} else {
-  console.log('❌ Dist folder not found. Run "npm run build" first.');
 }
 `;
 
-fs.writeFileSync(path.join(__dirname, 'performance-monitor.js'), performanceMonitorScript);
+  fs.writeFileSync(monitorPath, monitorContent);
+  console.log('✅ Performance monitor created');
+}
 
-console.log('✅ Performance monitoring script created');
+// 5. Optimize TypeScript configuration
+function optimizeTypeScriptConfig() {
+  const tsConfigPath = path.join(process.cwd(), 'tsconfig.json');
+  const tsConfig = JSON.parse(fs.readFileSync(tsConfigPath, 'utf8'));
+  
+  // Add performance optimizations
+  tsConfig.compilerOptions = {
+    ...tsConfig.compilerOptions,
+    skipLibCheck: true,
+    incremental: true,
+    tsBuildInfoFile: '.next/cache/tsconfig.tsbuildinfo',
+  };
+  
+  fs.writeFileSync(tsConfigPath, JSON.stringify(tsConfig, null, 2));
+  console.log('✅ TypeScript configuration optimized');
+}
 
-// 7. Create .htaccess for better caching
-const htaccessContent = `
-# Performance optimizations
-<IfModule mod_expires.c>
-  ExpiresActive On
-  ExpiresByType text/css "access plus 1 year"
-  ExpiresByType application/javascript "access plus 1 year"
-  ExpiresByType image/png "access plus 1 year"
-  ExpiresByType image/jpg "access plus 1 year"
-  ExpiresByType image/jpeg "access plus 1 year"
-  ExpiresByType image/gif "access plus 1 year"
-  ExpiresByType image/webp "access plus 1 year"
-  ExpiresByType image/svg+xml "access plus 1 year"
-  ExpiresByType font/woff "access plus 1 year"
-  ExpiresByType font/woff2 "access plus 1 year"
-</IfModule>
+// Run all optimizations
+optimizeNextConfig();
+optimizePackageScripts();
+createAssetOptimizer();
+createPerformanceMonitor();
+optimizeTypeScriptConfig();
 
-# Compression
-<IfModule mod_deflate.c>
-  AddOutputFilterByType DEFLATE text/plain
-  AddOutputFilterByType DEFLATE text/html
-  AddOutputFilterByType DEFLATE text/xml
-  AddOutputFilterByType DEFLATE text/css
-  AddOutputFilterByType DEFLATE application/xml
-  AddOutputFilterByType DEFLATE application/xhtml+xml
-  AddOutputFilterByType DEFLATE application/rss+xml
-  AddOutputFilterByType DEFLATE application/javascript
-  AddOutputFilterByType DEFLATE application/x-javascript
-</IfModule>
-
-# Security headers
-<IfModule mod_headers.c>
-  Header always set X-Content-Type-Options nosniff
-  Header always set X-Frame-Options DENY
-  Header always set X-XSS-Protection "1; mode=block"
-  Header always set Referrer-Policy "strict-origin-when-cross-origin"
-</IfModule>
-`;
-
-fs.writeFileSync(path.join(__dirname, '..', '.htaccess'), htaccessContent);
-
-console.log('✅ .htaccess file created for better caching');
-
-console.log('🎉 Performance optimization completed successfully!');
-console.log('');
-console.log('Next steps:');
-console.log('1. Run "npm run build" to test the optimizations');
-console.log('2. Run "npm run perf:audit" to analyze performance');
-console.log('3. Check the generated reports in the dist folder');
+console.log('🎉 Performance optimization complete!');
+console.log('Run "npm run build:optimized" to build with optimizations');

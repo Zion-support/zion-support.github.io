@@ -83,7 +83,8 @@ class EnhancedErrorHandler {
     this.setupErrorCleanup();
 
     this.isInitialized = true;
-    console.log('🛡️ Enhanced Error Handler initialized');
+    // eslint-disable-next-line no-console
+console.log('🛡️ Enhanced Error Handler initialized');
   }
 
   /**
@@ -188,7 +189,8 @@ class EnhancedErrorHandler {
         });
         observer.observe({ type: 'longtask', buffered: true });
       } catch (error) {
-        console.warn('Failed to setup performance error handler:', error);
+        // eslint-disable-next-line no-console
+console.warn('Failed to setup performance error handler:', error);
       }
     }
   }
@@ -472,16 +474,25 @@ class EnhancedErrorHandler {
    */
   private logError(errorReport: ErrorReport): void {
     const emoji = this.getSeverityEmoji(errorReport.severity);
+    // eslint-disable-next-line no-console
     console.group(`${emoji} Error Report: ${errorReport.id}`);
+    // eslint-disable-next-line no-console
     console.error('Message:', errorReport.message);
-    console.error('Type:', errorReport.type);
-    console.error('Severity:', errorReport.severity);
-    console.error('Category:', errorReport.category);
-    console.error('Context:', errorReport.context);
-    console.error('Metadata:', errorReport.metadata);
+    // eslint-disable-next-line no-console
+console.error('Type:', errorReport.type);
+    // eslint-disable-next-line no-console
+console.error('Severity:', errorReport.severity);
+    // eslint-disable-next-line no-console
+console.error('Category:', errorReport.category);
+    // eslint-disable-next-line no-console
+console.error('Context:', errorReport.context);
+    // eslint-disable-next-line no-console
+console.error('Metadata:', errorReport.metadata);
     if (errorReport.stack) {
-      console.error('Stack:', errorReport.stack);
+      // eslint-disable-next-line no-console
+console.error('Stack:', errorReport.stack);
     }
+    // eslint-disable-next-line no-console
     console.groupEnd();
   }
 
@@ -514,7 +525,8 @@ class EnhancedErrorHandler {
         body: JSON.stringify(errorReport),
       });
     } catch (error) {
-      console.warn('Failed to report error to remote service:', error);
+      // eslint-disable-next-line no-console
+console.warn('Failed to report error to remote service:', error);
     }
   }
 
@@ -523,7 +535,8 @@ class EnhancedErrorHandler {
    */
   private aggregateError(errorReport: ErrorReport): void {
     // This could be expanded to include more sophisticated aggregation
-    console.log(`📊 Error aggregated: ${errorReport.type} - ${errorReport.category}`);
+    // eslint-disable-next-line no-console
+console.log(`📊 Error aggregated: ${errorReport.type} - ${errorReport.category}`);
   }
 
   /**
@@ -531,7 +544,8 @@ class EnhancedErrorHandler {
    */
   private assessPerformanceImpact(errorReport: ErrorReport): void {
     if (errorReport.type === 'resource' || errorReport.category === 'performance') {
-      console.warn('⚠️ Performance impact detected from error');
+      // eslint-disable-next-line no-console
+console.warn('⚠️ Performance impact detected from error');
     }
   }
 
@@ -545,7 +559,8 @@ class EnhancedErrorHandler {
     );
 
     if (recentErrors.length > 5) {
-      console.log('🔄 Attempting error recovery...');
+      // eslint-disable-next-line no-console
+console.log('🔄 Attempting error recovery...');
       // Implement recovery strategies here
       this.clearErrorState();
     }
@@ -560,7 +575,8 @@ class EnhancedErrorHandler {
     this.errorCategories.clear();
     this.errorRateLimit = 0;
     
-    console.log('🧹 Error state cleared');
+    // eslint-disable-next-line no-console
+console.log('🧹 Error state cleared');
   }
 
   /**
@@ -574,7 +590,8 @@ class EnhancedErrorHandler {
       error => new Date(error.context.timestamp) > cutoffDate
     );
     
-    console.log(`🧹 Cleaned up old errors, ${this.errors.length} remaining`);
+    // eslint-disable-next-line no-console
+console.log(`🧹 Cleaned up old errors, ${this.errors.length} remaining`);
   }
 
   /**

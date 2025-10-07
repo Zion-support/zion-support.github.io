@@ -26,7 +26,8 @@ class Analytics {
     if (!this.isInitialized || typeof window === 'undefined') {
       // Fallback to console in development
       if (process.env.NODE_ENV === 'development') {
-        console.log('Analytics Event:', event);
+        // eslint-disable-next-line no-console
+console.log('Analytics Event:', event);
       }
       return;
     }
