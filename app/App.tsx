@@ -1,14 +1,17 @@
 'use client';
 
-import React, { Suspense, lazy, useCallback } from 'react';
+import React, { Suspense, lazy, useCallback, useEffect } from 'react';
 import Link from 'next/link';
+import { HelmetProvider } from 'react-helmet-async';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import SEOOptimizer from './components/SEOOptimizer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-<<<<<<< HEAD
 import PerformanceDashboard from './components/PerformanceDashboard';
 import AdvancedPerformanceMonitor from './components/AdvancedPerformanceMonitor';
-=======
->>>>>>> fe17d64a40e0f1e2ab1b565c469bddeb33ac5c68
+import AdvancedErrorBoundary from './components/AdvancedErrorBoundary';
+import SEOEnhancer from './components/SEOEnhancer';
+import AdvancedSEOOptimizer from './components/AdvancedSEOOptimizer';
+import LoadingSpinner from './components/LoadingSpinner';
 
 // Lazy load components for better performance
 const ContentShowcase = lazy(() => import('./components/ContentShowcase'));
@@ -19,9 +22,9 @@ const InteractiveAIROICalculator = lazy(
   () => import('./components/InteractiveAIROICalculator')
 );
 
-<<<<<<< HEAD
 // Utils
 import { performanceOptimizer } from './utils/performanceOptimizer';
+import { logger } from './utils/logger';
 
 // Styles
 import './globals.css';
@@ -114,7 +117,9 @@ const App: React.FC = () => {
           </AccessibilityEnhancer>
       </AdvancedErrorBoundary>
     </HelmetProvider>
-=======
+  );
+};
+
 // Loading fallback component
 const LoadingFallback: React.FC<{ height?: string }> = ({
   height = 'h-32',
@@ -274,7 +279,6 @@ const HomePage: React.FC = () => {
         </div>
       </footer>
     </div>
->>>>>>> fe17d64a40e0f1e2ab1b565c469bddeb33ac5c68
   );
 };
 
