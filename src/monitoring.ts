@@ -54,12 +54,7 @@ function initializeMonitoring(): void {
         const observer = new PerformanceObserver((list) => {
           const entries = list.getEntries();
           entries.forEach((entry: PerformanceEntry) => {
-            analytics.track({
-              event: 'long_task',
-              category: 'performance',
-              label: 'detected',
-              value: entry.duration,
-            });
+            analytics.track('long_task', 'performance', 'detected', 'long_task', entry.duration);
           });
         });
         observer.observe({ entryTypes: ['longtask'] });
