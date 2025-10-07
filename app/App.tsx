@@ -1,6 +1,9 @@
-import React, { useEffect, lazy, Suspense } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+'use client';
+
+import React, { Suspense, lazy, useCallback, useEffect } from 'react';
+import Link from 'next/link';
 import { HelmetProvider } from 'react-helmet-async';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // Components
 import SEOOptimizer from './components/SEOOptimizer';
@@ -10,97 +13,91 @@ import AdvancedSEOOptimizer from './components/AdvancedSEOOptimizer';
 import AdvancedPerformanceMonitor from './components/AdvancedPerformanceMonitor';
 import SEOEnhancer from './components/SEOEnhancer';
 import PerformanceDashboard from './components/PerformanceDashboard';
+import LoadingSpinner from './components/LoadingSpinner';
 
-// Loading component
-const LoadingSpinner = () => (
-  <div className="min-h-screen flex items-center justify-center bg-gray-50">
-    <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
-  </div>
+// Lazy load components for better performance
+const ContentShowcase = lazy(() => import('./components/ContentShowcase'));
+const InteractiveContentShowcase2026 = lazy(
+  () => import('./components/InteractiveContentShowcase2026')
 );
-
-// Error boundary component
-const ErrorBoundary = ({ children }: { children: React.ReactNode }) => {
-  return <>{children}</>;
-};
-
-// Lazy load pages for better performance
-const HomePage = lazy(() => import('./page'));
+const InteractiveAIROICalculator = lazy(
+  () => import('./components/InteractiveAIROICalculator')
+);
 
 // Utils
 import { performanceOptimizer, collectPerformanceMetrics } from './utils/performanceOptimizer';
 import { logger } from './utils/logger';
 
 // Styles
-import '../index.css';
+import './globals.css';
 
 const App: React.FC = () => {
   useEffect(() => {
     // Initialize global error handling
-    console.log('App initialized');
+    logger.lifecycle('initialized', 'App');
 
     // Initialize performance monitoring
-    performanceOptimizer.init();
-    
-    // Initialize Web Vitals monitoring
     if (typeof window !== 'undefined' && 'performance' in window) {
-      const pageLoadMetrics = collectPerformanceMetrics();
       const metrics = performanceOptimizer.getMetrics();
-      if (pageLoadMetrics) {
-        // eslint-disable-next-line no-console
-        console.log('Performance metrics collected:', pageLoadMetrics);
-      }
-      if (metrics) {
-        // eslint-disable-next-line no-console
-        console.log('Performance metrics:', metrics);
-      }
+      logger.performance('Performance Metrics', metrics as unknown as Record<string, unknown>, 'PerformanceMonitor');
     }
-    
-    // eslint-disable-next-line no-console
-    console.log('Performance monitoring initialized');
-    // eslint-disable-next-line no-console
-    console.log('🚀 Zion Tech Group App initialized with comprehensive monitoring');
+
+    // Performance monitoring initialized
+  }, []);
+
+  const handleError = useCallback((error: Error, errorInfo: any) => {
+    logger.error('Application Error', 'ErrorBoundary', { error: error.message, errorInfo });
   }, []);
 
   return (
     <HelmetProvider>
-      <ErrorBoundary>
-        <div>
-          <SEOOptimizer />
-          <AccessibilityEnhancer>
+      <AdvancedErrorBoundary
+        enableErrorReporting={true}
+        enableRetry={true}
+        onError={handleError}
+      >
+        <AccessibilityEnhancer>
+          <SEOEnhancer
+            title="Zion Tech Group - Advanced AI and IT Solutions"
+            description="Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. Transform your business with our cutting-edge technology."
+          >
+            <AdvancedSEOOptimizer
+              seoData={{
+                title: 'Zion Tech Group - Advanced AI and IT Solutions',
+                description: 'Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. Transform your business with our cutting-edge technology.',
+                keywords: ['AI', 'artificial intelligence', 'quantum computing', 'enterprise solutions', 'technology consulting'],
+                canonicalUrl: 'https://ziontechgroup.com',
+                ogImage: 'https://ziontechgroup.com/og-image.jpg'
+              }}
+              enableSchemaMarkup={true}
+            />
             <Router>
-              <div className='App'>
-                {/* Skip to main content link for accessibility */}
-                <a
-                  href='#main-content'
-                  className='skip-link sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50'
-                  onClick={e => {
-                    e.preventDefault();
-                    const main =
-                      document.querySelector('main') ||
-                      document.querySelector('#main-content');
-                    if (main) {
-                      main.focus();
-                      main.scrollIntoView({ behavior: 'smooth' });
-                    }
-                  }}
-                >
-                  Skip to main content
-                </a>
+              <div className="App">
+                <main id="main-content">
+                  <Suspense fallback={<LoadingSpinner />}>
+                    <Routes>
+                      <Route path="/" element={<ContentShowcase />} />
+                      {/* Add more routes as needed */}
+                    </Routes>
+                  </Suspense>
 
-                <Suspense fallback={<LoadingSpinner />}>
-                  <Routes>
-                    <Route path='/' element={<HomePage />} />
-                    {/* Add more routes as needed */}
-                  </Routes>
-                </Suspense>
+                  {/* Performance Dashboard */}
+                  <PerformanceDashboard />
 
-                {/* Performance Dashboard */}
-                <PerformanceDashboard />
+                  {/* Advanced Performance Monitor */}
+                  <AdvancedPerformanceMonitor />
+
+                  {/* Interactive Components */}
+                  <Suspense fallback={<div>Loading...</div>}>
+                    <InteractiveContentShowcase2026 />
+                    <InteractiveAIROICalculator />
+                  </Suspense>
+                </main>
               </div>
             </Router>
-            </AccessibilityEnhancer>
-        </div>
-      </ErrorBoundary>
+          </SEOEnhancer>
+        </AccessibilityEnhancer>
+      </AdvancedErrorBoundary>
     </HelmetProvider>
   );
 };

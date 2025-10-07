@@ -2,11 +2,18 @@
 const nextConfig = {
   experimental: {
     optimizeCss: false,
-    optimizePackageImports: ['@mui/material', '@mui/icons-material', 'lucide-react', 'framer-motion'],
-    webVitalsAttribution: ['CLS', 'LCP', 'FCP', 'FID', 'TTFB'],
+    optimizePackageImports: ['@mui/material', '@mui/icons-material'],
   },
-  poweredByHeader: false,
-  compress: true,
+  // Exclude disabled directories from build
+  pageExtensions: ['ts', 'tsx', 'js', 'jsx'],
+  webpack: (config, { isServer }) => {
+    // Exclude app_disabled directory from webpack processing
+    config.module.rules.push({
+      test: /app_disabled/,
+      loader: 'ignore-loader'
+    });
+    return config;
+  },
   turbopack: {
     rules: {
       '*.svg': {
@@ -43,14 +50,6 @@ const nextConfig = {
           {
             key: 'Referrer-Policy',
             value: 'strict-origin-when-cross-origin',
-          },
-          {
-            key: 'Permissions-Policy',
-            value: 'camera=(), microphone=(), geolocation=()',
-          },
-          {
-            key: 'X-XSS-Protection',
-            value: '1; mode=block',
           },
         ],
       },
