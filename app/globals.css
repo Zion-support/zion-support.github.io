@@ -8,7 +8,6 @@ body {
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-<<<<<<< HEAD
 }
 
 /* Accessibility improvements */
@@ -43,6 +42,3 @@ body {
     padding: 0 0.5rem;
   }
 }
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-d868

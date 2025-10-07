@@ -18,7 +18,7 @@ const ContactPage: React.FC = () => {
                 Contact Us
               </h1>
               <p className='text-xl text-gray-600'>
-                Ready to transform your business? Let's discuss your needs.
+                Ready to transform your business? Let&apos;s discuss your needs.
               </p>
             </div>
 

@@ -32,7 +32,7 @@ console.log('Analytics Event:', event);
       return;
     }
 
-    const gtag = (window as unknown as { gtag: Function }).gtag;
+    const gtag = (window as unknown as { gtag: (command: string, eventName: string, parameters: Record<string, unknown>) => void }).gtag;
     gtag('event', event.event, {
       event_category: event.category,
       event_label: event.label,
