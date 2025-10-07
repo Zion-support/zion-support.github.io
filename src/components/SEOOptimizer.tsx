@@ -115,10 +115,10 @@ interface SEOOptimizerProps {
 
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ 
   children, 
-  title = "Zion Tech Group - AI Enterprise Solutions",
-  description = "Transform your enterprise with AI-powered solutions. Achieve 300% ROI, 70% cost reduction, and 90% efficiency gains.",
-  keywords = ["AI", "enterprise", "automation", "digital transformation", "ROI", "efficiency"],
-  canonicalUrl,
+  title = "Zion Tech Group — Revolutionary AI Solutions for Enterprise",
+  description = "Transform your business with cutting-edge AI micro SaaS services, cloud automation, and enterprise IT solutions.",
+  keywords = ["AI services", "micro SaaS", "IT services", "cloud migration", "DevOps", "SRE", "enterprise software", "AI solutions", "business transformation"],
+  canonicalUrl = "https://ziontechgroup.com",
   ogImage = "https://ziontechgroup.com/og-image.jpg",
   structuredData
 }) => {
@@ -150,6 +150,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
         <meta property="og:description" content={description} />
         <meta property="og:image" content={ogImage} />
         <meta property="og:type" content="website" />
+        <meta property="og:url" content={canonicalUrl} />
         
         {/* Twitter Card tags */}
         <meta name="twitter:card" content="summary_large_image" />
