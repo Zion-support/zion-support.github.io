@@ -252,29 +252,25 @@ export class ConfigManager {
    * Deep merge two config objects
    */
   private mergeConfig(base: AppConfig, override: Partial<AppConfig>): AppConfig {
-    const result: AppConfig = { ...base };
+    const result = { ...base } as AppConfig;
 
-    // Handle each property type safely
-    if (override.environment !== undefined) {
-      result.environment = override.environment;
-    }
-    if (override.api !== undefined) {
-      result.api = { ...base.api, ...override.api };
-    }
-    if (override.features !== undefined) {
-      result.features = { ...base.features, ...override.features };
-    }
-    if (override.performance !== undefined) {
-      result.performance = { ...base.performance, ...override.performance };
-    }
-    if (override.security !== undefined) {
-      result.security = { ...base.security, ...override.security };
-    }
-    if (override.ui !== undefined) {
-      result.ui = { ...base.ui, ...override.ui };
-    }
-    if (override.logging !== undefined) {
-      result.logging = { ...base.logging, ...override.logging };
+    for (const key in override) {
+      if (Object.prototype.hasOwnProperty.call(override, key)) {
+        const value = override[key as keyof AppConfig];
+        if (value !== undefined) {
+          if (typeof value === 'object' && !Array.isArray(value) && value !== null) {
+            const baseValue = result[key as keyof AppConfig];
+            if (typeof baseValue === 'object' && !Array.isArray(baseValue) && baseValue !== null) {
+              // Use Object.assign for safer type handling
+              (result as any)[key] = Object.assign({}, baseValue, value);
+            } else {
+              (result as any)[key] = value;
+            }
+          } else {
+            (result as any)[key] = value;
+          }
+        }
+      }
     }
 
     return result;
@@ -312,17 +308,16 @@ export class ConfigManager {
     nestedKeyOrValue: NK | AppConfig[K],
     value?: AppConfig[K][NK]
   ): void {
-    if (value !== undefined && typeof nestedKeyOrValue !== 'object') {
-      // Handle nested property update
+    if (value !== undefined && typeof nestedKeyOrValue === 'string') {
       const currentValue = this.config[key];
       if (typeof currentValue === 'object' && !Array.isArray(currentValue) && currentValue !== null) {
-        (this.config[key] as Record<string, unknown>) = {
-          ...(currentValue as Record<string, unknown>),
-          [nestedKeyOrValue as string]: value,
-        };
+        // Use Object.assign for safer type handling
+        (this.config as any)[key] = Object.assign({}, currentValue, { [nestedKeyOrValue]: value });
+      } else {
+        // If current value is not an object, create a new object
+        (this.config as any)[key] = { [nestedKeyOrValue]: value };
       }
     } else {
-      // Handle direct property update
       this.config[key] = nestedKeyOrValue as AppConfig[K];
     }
   }
