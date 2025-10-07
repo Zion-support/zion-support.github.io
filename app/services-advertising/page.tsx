@@ -1,10 +1,14 @@
 import React from 'react';
 import Link from 'next/link';
 import {
-  ArrowLeft,
-  ArrowRight,
-  Target,
-  CheckCircle,
+  ArrowLeftIcon as ArrowLeft,
+  ArrowRightIcon as ArrowRight,
+  TargetIcon as Target,
+  TrendingUpIcon as TrendingUp,
+  UsersIcon as Users,
+  ZapIcon as Zap,
+  CheckCircleIcon as CheckCircle,
+  StarIcon as Star,
 } from 'lucide-react';
 
 export default function ServicesAdvertisingPage() {

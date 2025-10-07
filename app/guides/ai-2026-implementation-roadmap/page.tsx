@@ -1,15 +1,18 @@
 import React from 'react';
 import Link from 'next/link';
 import {
-  ArrowLeft,
-  ArrowRight,
-  Calendar,
-  User,
-  Clock,
-  Tag,
+  ArrowLeftIcon as ArrowLeft,
+  ArrowRightIcon as ArrowRight,
+  CalendarIcon as Calendar,
+  UserIcon as User,
+  ClockIcon as Clock,
+  TagIcon as Tag,
+  TargetIcon as Target,
+  CheckCircleIcon as CheckCircle,
+  StarIcon as Star,
 } from 'lucide-react';
 
-const metadata = {
+export const metadata = {
   title:
     'AI 2026 Implementation Roadmap: Complete Guide to Enterprise AI Transformation',
   description:
@@ -17,8 +20,6 @@ const metadata = {
   keywords:
     'AI Implementation, Enterprise AI, Digital Transformation, AI Strategy, 2026 Roadmap, Implementation Guide',
 };
-
-export { metadata };
 
 export default function AI2026ImplementationRoadmap() {
   return (

@@ -1,17 +1,21 @@
 import React from 'react';
 import Link from 'next/link';
 import {
-  ArrowLeft,
-  Clock,
-  Target,
-  CheckCircle,
-  ArrowRight,
-  Zap,
-  TrendingUp,
-  Brain,
+  ArrowLeftIcon as ArrowLeft,
+  CalendarIcon as Calendar,
+  UserIcon as User,
+  ClockIcon as Clock,
+  TagIcon as Tag,
+  TargetIcon as Target,
+  CheckCircleIcon as CheckCircle,
+  ArrowRightIcon as ArrowRight,
+  ZapIcon as Zap,
+  TrendingUpIcon as TrendingUp,
+  BrainIcon as Brain,
+  CpuIcon as Cpu,
 } from 'lucide-react';
 
-const metadata = {
+export const metadata = {
   title:
     'AI 2027 Implementation Roadmap - Complete Guide to Advanced Neural Superintelligence',
   description:
@@ -27,8 +31,6 @@ const metadata = {
     type: 'article',
   },
 };
-
-export { metadata };
 
 export default function AI2027ImplementationRoadmap() {
   return (

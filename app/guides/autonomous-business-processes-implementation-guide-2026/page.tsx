@@ -1,20 +1,23 @@
 import React from 'react';
 import Link from 'next/link';
 import {
-  ArrowLeft,
-  BookOpen,
-  CheckCircle,
-  Clock,
-  Target,
-  Users,
-  Zap,
-  Brain,
-  Settings,
-  BarChart3,
+  ArrowLeftIcon as ArrowLeft,
+  BookOpenIcon as BookOpen,
+  CheckCircleIcon as CheckCircle,
+  ClockIcon as Clock,
+  TargetIcon as Target,
+  UsersIcon as Users,
+  ZapIcon as Zap,
+  TrendingUpIcon as TrendingUp,
+  BrainIcon as Brain,
+  ShieldIcon as Shield,
+  SettingsIcon as Settings,
+  BarChart3Icon as BarChart3,
+  StarIcon as Star,
 } from 'lucide-react';
 import type { Metadata } from 'next';
 
-const metadata: Metadata = {
+export const metadata: Metadata = {
   title:
     'Complete Guide to Implementing Autonomous Business Processes in 2026 | Zion Tech Group',
   description:
@@ -31,8 +34,6 @@ const metadata: Metadata = {
     authors: ['Zion Tech Group'],
   },
 };
-
-export { metadata };
 
 export default function ImplementationGuide() {
   return (
