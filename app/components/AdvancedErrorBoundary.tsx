@@ -115,10 +115,6 @@ class AdvancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
     }
   };
 
-  private generateErrorId = (): string => {
-    return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-  };
-
   private sendErrorReport = async (errorReport: ErrorReport) => {
     try {
       // Send to your error reporting service

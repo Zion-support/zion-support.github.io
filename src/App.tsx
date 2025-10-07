@@ -9,7 +9,6 @@ import SEOOptimizer from './components/SEOOptimizer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import LoadingSpinner from '../app/components/LoadingSpinner';
-// import performanceOptimizer from './utils/performanceOptimizer';
 
 // Import page components
 import AboutPage from '../app/about/page';
@@ -56,15 +55,27 @@ const Contact = () => (
   </div>
 );
 
->>>>>>> 37545c2e32f35044aa55b03169325560ba719e8b
+=======
+>>>>>>> d036f175540638f8b5413a83a3b4c745136e895b
 
 function App(): React.JSX.Element {
   const initializeOptimizations = useCallback(() => {
     try {
->>>>>>> 37545c2e32f35044aa55b03169325560ba719e8b
+=======
+      console.log('All optimization systems initialized successfully');
+      
+      // Preload critical resources
+      if ('requestIdleCallback' in window) {
+        requestIdleCallback(() => {
+          // Preload critical pages
+          import('./pages/Home');
+          import('./pages/About');
+        });
+      }
+    } catch (error) {
+      console.error('Failed to initialize optimization systems:', error);
+>>>>>>> d036f175540638f8b5413a83a3b4c745136e895b
     }
-
-    initializeOptimizations();
   }, []);
 
   useEffect(() => {
