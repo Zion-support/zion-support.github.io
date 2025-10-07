@@ -1,14 +1,10 @@
-import React from 'react';
-import { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: 'Ai Chatbot | Zion Tech Group',
+import React from 'react'
+import { Metadata } from 'next'
+export const metadata: Metadata = {title: 'Ai Chatbot | Zion Tech Group',
   description: 'Professional ai chatbot services for your business needs.',
-  keywords: 'ai chatbot, services, business, technology',
+  keywords: 'ai chatbot, services, business, technology'}
 };
-
-export default function ServicePage() {
-  return (
+export default function ServicePage() {return (
     <div className='text-left'>
       <div className='text-left'>
         <div className='text-left'>
@@ -17,7 +13,6 @@ export default function ServicePage() {
             Professional ai chatbot services for your business needs.
           </p>
         </div>
-
         <div className='text-left'>
           <div className='text-left'>
             <div className='text-left'>🚀</div>
@@ -27,7 +22,6 @@ export default function ServicePage() {
               consistently.
             </p>
           </div>
-
           <div className='text-left'>
             <div className='text-left'>🔧</div>
             <h3 className='text-left'>Easy Integration</h3>
@@ -35,7 +29,6 @@ export default function ServicePage() {
               Seamlessly integrate with your existing systems and workflows.
             </p>
           </div>
-
           <div className='text-left'>
             <div className='text-left'>📈</div>
             <h3 className='text-left'>Scalable Solutions</h3>
@@ -44,7 +37,6 @@ export default function ServicePage() {
             </p>
           </div>
         </div>
-
         <div className='text-left'>
           <h2 className='text-left'>Ready to Get Started?</h2>
           <p className='text-left'>
@@ -55,6 +47,6 @@ export default function ServicePage() {
         </div>
       </div>
     </div>
-  );
+  )}
 }
-import React from 'react';' import { Metadata } from 'next'; export const metadata: Metadata = {' title: 'Ai Chatbot | Zion Tech Group',' description: 'Professional ai chatbot services for your business needs.',' keywords: 'ai chatbot, services, business, technology', }; export default function ServicePage() { return ( <div className="text-left" > <div className="text-left" > <div className="text-left" > <h1 className="text-left" >Ai Chatbot</h1> <p className="text-left" > Professional ai chatbot services for your business needs. </p> </div> <div className="text-left" > <div className="text-left" > <div className="text-left" >🚀</div> <h3 className="text-left" >Fast & Reliable</h3> <p className="text-left" >High-performance solutions that deliver results quickly and consistently.</p> </div> <div className="text-left" > <div className="text-left" >🔧</div> <h3 className="text-left" >Easy Integration</h3> <p className="text-left" >Seamlessly integrate with your existing systems and workflows.</p> </div> <div className="text-left" > <div className="text-left" >📈</div> <h3 className="text-left" >Scalable Solutions</h3> <p className="text-left" >Grow with your business with our flexible and scalable platform.</p> </div> </div> <div className="text-left" > <h2 className="text-left" >Ready to Get Started?</h2> <p className="text-left" > Contact us today to learn how our ai chatbot services can transform your business. </p> <button className="text-left" > Contact Sales </button> </div> </div> </div> ); } '
+import React from 'react'' import { Metadata } from 'next' export const metadata: Metadata = {' title: 'Ai Chatbot | Zion Tech Group',' description: 'Professional ai chatbot services for your business needs.',' keywords: 'ai chatbot, services, business, technology'} }; export default function ServicePage() {return ( <div className="text-left" > <div className="text-left" > <div className="text-left" > <h1 className="text-left" >Ai Chatbot</h1> <p className="text-left" > Professional ai chatbot services for your business needs. </p> </div> <div className="text-left" > <div className="text-left" > <div className="text-left" >🚀</div> <h3 className="text-left" >Fast & Reliable</h3> <p className="text-left" >High-performance solutions that deliver results quickly and consistently.</p> </div> <div className="text-left" > <div className="text-left" >🔧</div> <h3 className="text-left" >Easy Integration</h3> <p className="text-left" >Seamlessly integrate with your existing systems and workflows.</p> </div> <div className="text-left" > <div className="text-left" >📈</div> <h3 className="text-left" >Scalable Solutions</h3> <p className="text-left" >Grow with your business with our flexible and scalable platform.</p> </div> </div> <div className="text-left" > <h2 className="text-left" >Ready to Get Started?</h2> <p className="text-left" > Contact us today to learn how our ai chatbot services can transform your business. </p> <button className="text-left" > Contact Sales </button> </div> </div> </div> )} } '

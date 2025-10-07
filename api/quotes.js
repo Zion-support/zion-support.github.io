@@ -5,7 +5,7 @@ export default async function handler(req, res) {
     res.end('Method Not Allowed');
     return;
   }
-
+  
   try {
     const { name, email, phone, details, country, service } = req.body || {};
     
@@ -14,7 +14,7 @@ export default async function handler(req, res) {
       res.json({ error: 'Name, email, phone, and details are required' });
       return;
     }
-
+    
     // Process quote submission logic here
     const quote = {
       id: 'quote_' + Date.now(),
@@ -24,16 +24,20 @@ export default async function handler(req, res) {
       details,
       country: country || 'US',
       service: service || 'general',
-      submittedAt: new Date().toISOString(),
-      status: 'pending'
+      submittedAt: new Date().toISOString()
     };
-
+    
+    // In a real application, you would save this to a database
+    console.log('Quote submission:', quote);
+    
     res.statusCode = 200;
     res.json({ 
+      success: true, 
       message: 'Quote submitted successfully',
-      quoteId: quote.id 
+      quote 
     });
   } catch (error) {
+    console.error('Quote submission error:', error);
     res.statusCode = 500;
     res.json({ error: error.message || 'Quote submission failed' });
   }

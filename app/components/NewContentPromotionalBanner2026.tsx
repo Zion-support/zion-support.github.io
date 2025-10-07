@@ -1,1 +1,185 @@
-import React from 'react';' import Link from 'next/link';' import { Sparkles, TrendingUp, Rocket, Shield, Target, ArrowRight, Zap } from 'lucide-react'; const NewContentPromotionalBanner2026: React.FC = () => { const featuredContent = [ { id: 1,' title: 'AI Autonomous Workflows 2026',' slug: 'ai-autonomous-workflows-2026',' excerpt: 'Transform operations with 95% automation, 400% ROI, and seamless multi-system orchestration',' category: 'Enterprise Automation',' icon: '🤖',' color: 'from-cyan-500 to-blue-600',' bgColor: 'from-cyan-50 to-blue-50',' badge: 'NEW',' badgeColor: 'from-cyan-500 to-blue-600' }, { id: 2,' title: 'Enterprise AI Transformation Roadmap 2026',' slug: 'enterprise-ai-transformation-roadmap-2026',' excerpt: 'Complete implementation guide delivering 300% ROI, 85% automation, and digital transformation',' category: 'Strategic Guide',' icon: '🎯',' color: 'from-purple-500 to-fuchsia-600',' bgColor: 'from-purple-50 to-fuchsia-50',' badge: 'STRATEGIC',' badgeColor: 'from-purple-500 to-fuchsia-600' }, { id: 3,' title: 'AI-Powered Security Operations Center 2026',' slug: 'ai-security-operations-center-2026',' excerpt: '99.9% threat detection, 95% faster response, and autonomous security operations',' category: 'Cybersecurity',' icon: '🛡️',' color: 'from-red-500 to-orange-600',' bgColor: 'from-red-50 to-orange-50',' badge: 'CRITICAL',' badgeColor: 'from-red-500 to-orange-600' } ]; return ( <div className="text-left" > {/* Animated background effects */} <div className="text-left" > <div></div>' <div></div>' <div></div> </div> <div className="text-left" > {/* Header Section */} <div className="text-left" > <div className="text-left" > <Sparkles className="text-left" /> <span className="text-left" > 🚀 JUST PUBLISHED • SEPTEMBER 2026 </span> <Sparkles className="text-left" /> </div> <h2 className="text-left" > <span className="text-left" > Latest AI Innovations </span> <br /> <span className="text-left" > That Transform Business </span> </h2> <p className="text-left" > Explore cutting-edge AI strategies, implementation roadmaps, and security innovations that are delivering <span className="text-left" >300%+ ROI</span> for enterprises worldwide </p> <div className="text-left" > <div className="text-left" > <TrendingUp className="text-left" /> <span className="text-left" >10,000+ Readers</span> </div> <div className="text-left" > <Zap className="text-left" /> <span className="text-left" >3 New Articles</span> </div> </div> <div className="text-left" > <Target className="text-left" /> <span className="text-left" >Proven Results</span> </div> </div> </div> {/* Featured Content Cards */} <div className="text-left" > {featuredContent.map((content, index) => ( <div key={content.id} className="text-left" style={{ animationDelay: `${index * 150}ms` }} > {/* Card glow effect */} <div></div> <div className="text-left" > {/* Icon & Badge */} <div className="text-left" > <div className="text-left" > {content.icon} </div> <div className={`px-4 py-2 rounded-full bg-gradient-to-r ${content.badgeColor} text-white text-sm font-bold shadow-lg`}> {content.badge} </div> </div> {/* Category */} <div className="text-left" > <span className={`inline-block px-4 py-2 rounded-full bg-gradient-to-r ${content.bgColor} text-gray-900 text-sm font-semibold border border-white/20`}> {content.category} </span> </div> {/* Title */} <h3 className={`text-3xl font-extrabold text-white mb-4 group-hover:bg-gradient-to-r group-hover:${content.color} group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300 leading-tight`}> {content.title} </h3> {/* Excerpt */} <p className="text-left" > {content.excerpt} </p> {/* CTA Button */} <Link href={`/blog/${content.slug}`} className={`group/btn flex items-center justify-center gap-3 w-full bg-gradient-to-r ${content.color} hover:shadow-2xl text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 transform hover:-translate-y-1`} > <span className="text-left" >Read Full Article</span> <ArrowRight className="text-left" /> </Link> </div> {/* Corner accent */} <div></div> </div> ))} </div> {/* Bottom CTA Section */} <div></div> <div></div> <div></div> <Rocket className="text-left" /> <h3 className="text-left" > Ready to Transform Your Enterprise? </h3> <Shield className="text-left" /> </div> <p></p> Join 500+ enterprises achieving <span className="text-left" >300% ROI</span>, <span className="text-left" > 85% automation</span>, and ' <span className="text-left" > complete digital transformation</span> with Zion Tech Group's AI solutions </p> <div></div> <Link href="/contact" className="text-left" > <Sparkles className="text-left" /> <span>Start Your AI Journey</span> </Link> <Link href="/blog" className="text-left" > <span>Explore All Content</span> <ArrowRight className="text-left" /> </Link> </div> {/* Stats */} <div></div> <div></div> <div></div> 500+ </div> <div></div> Enterprise Clients </div> </div> <div></div> <div></div> 300% </div> <div></div> Average ROI </div> </div> <div className="text-left" > <div className="text-left" > 99.9% </div> <div className="text-left" > System Uptime </div> </div> <div className="text-left" > <div className="text-left" > 24/7 </div> <div className="text-left" > Expert Support </div> </div> </div> </div> </div> </div> </div> ); }; export default NewContentPromotionalBanner2026;'
+import React from 'react';
+import Link from 'next/link';
+import {
+  Sparkles,
+  TrendingUp,
+  Rocket,
+  Shield,
+  Target,
+  ArrowRight,
+  Zap,
+} from 'lucide-react';
+
+const NewContentPromotionalBanner2026: React.FC = () => {
+  const featuredContent = [
+    {
+      id: 1,
+      title: 'AI Autonomous Workflows 2026',
+      slug: 'ai-autonomous-workflows-2026',
+      excerpt:
+        'Transform operations with 95% automation, 400% ROI, and seamless multi-system orchestration',
+      category: 'Enterprise Automation',
+      icon: '🤖',
+      color: 'from-cyan-500 to-blue-600',
+      bgColor: 'from-cyan-50 to-blue-50',
+      badge: 'NEW',
+      badgeColor: 'from-cyan-500 to-blue-600',
+    },
+    {
+      id: 2,
+      title: 'Enterprise AI Transformation Roadmap 2026',
+      slug: 'enterprise-ai-transformation-roadmap-2026',
+      excerpt:
+        'Complete implementation guide delivering 300% ROI, 85% automation, and digital transformation',
+      category: 'Strategic Guide',
+      icon: '🎯',
+      color: 'from-purple-500 to-fuchsia-600',
+      bgColor: 'from-purple-50 to-fuchsia-50',
+      badge: 'STRATEGIC',
+      badgeColor: 'from-purple-500 to-fuchsia-600',
+    },
+    {
+      id: 3,
+      title: 'AI-Powered Security Operations Center 2026',
+      slug: 'ai-security-operations-center-2026',
+      excerpt:
+        '99.9% threat detection, 95% faster response, and autonomous security operations',
+      category: 'Cybersecurity',
+      icon: '🛡️',
+      color: 'from-red-500 to-orange-600',
+      bgColor: 'from-red-50 to-orange-50',
+      badge: 'CRITICAL',
+      badgeColor: 'from-red-500 to-orange-600',
+    },
+  ];
+  return (
+    <div className="relative overflow-hidden bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 py-20">
+      {/* Animated background effects */}
+      <div className="absolute inset-0">
+        <div className="absolute top-10 left-10 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute top-40 right-20 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute bottom-20 left-1/3 w-80 h-80 bg-cyan-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+      </div>
+
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header Section */}
+        <div className="text-center mb-16">
+          <div className="flex items-center justify-center gap-2 mb-6">
+            <Sparkles className="w-6 h-6 text-yellow-400" />
+            <span className="text-yellow-400 font-semibold text-lg">
+              🚀 JUST PUBLISHED • SEPTEMBER 2026
+            </span>
+            <Sparkles className="w-6 h-6 text-yellow-400" />
+          </div>
+
+          <h2 className="text-5xl md:text-6xl font-extrabold text-white mb-6">
+            <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
+              Latest AI Innovations
+            </span>
+            <br />
+            <span className="text-white">
+              That Transform Business
+            </span>
+          </h2>
+          
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+            Explore cutting-edge AI strategies, implementation roadmaps, and security innovations 
+            that are delivering <span className="text-yellow-400 font-bold">300%+ ROI</span> for enterprises worldwide
+          </p>
+
+          <div className="flex items-center justify-center gap-8 text-gray-300">
+            <div className="flex items-center gap-2">
+              <TrendingUp className="w-5 h-5 text-green-400" />
+              <span className="font-semibold">10,000+ Readers</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Zap className="w-5 h-5 text-yellow-400" />
+              <span className="font-semibold">3 New Articles</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Target className="w-5 h-5 text-blue-400" />
+              <span className="font-semibold">Proven Results</span>
+            </div>
+          </div>
+        </div>
+
+        {/* Featured Content Cards */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          {featuredContent.map((content, index) => (
+            <div 
+              key={content.id}
+              className="group relative bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-white/40 transition-all duration-500 hover:transform hover:scale-105"
+              style={{ animationDelay: `${index * 150}ms` }}
+            >
+              {/* Card glow effect */}
+              <div className={`absolute inset-0 bg-gradient-to-br ${content.color} opacity-0 group-hover:opacity-10 transition-all duration-500 rounded-2xl`}></div>
+              
+              <div className="relative z-10">
+                {/* Icon & Badge */}
+                <div className="flex items-center justify-between mb-6">
+                  <div className="text-4xl">{content.icon}</div>
+                  <div className={`px-4 py-2 rounded-full bg-gradient-to-r ${content.badgeColor} text-white text-sm font-bold shadow-lg`}>
+                    {content.badge}
+                  </div>
+                </div>
+                {/* Category */}
+                <div className="mb-4">
+                  <span className={`inline-block px-4 py-2 rounded-full bg-gradient-to-r ${content.bgColor} text-gray-900 text-sm font-semibold border border-white/20`}>
+                    {content.category}
+                  </span>
+                </div>
+                {/* Title */}
+                <h3 className="text-xl font-bold text-white mb-4 group-hover:text-cyan-300 transition-colors">
+                  {content.title}
+                </h3>
+                {/* Excerpt */}
+                <p className="text-gray-300 mb-6 leading-relaxed">
+                  {content.excerpt}
+                </p>
+                {/* CTA Button */}
+                <Link 
+                  href={`/blog/${content.slug}`}
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-cyan-500/25"
+                >
+                  Read More
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* CTA Section */}
+        <div className="text-center">
+          <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
+            <h3 className="text-2xl font-bold text-white mb-4">
+              Ready to Transform Your Business?
+            </h3>
+            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+              Join thousands of enterprises already implementing these AI strategies 
+              and achieving remarkable results.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link 
+                href="/contact"
+                className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/25"
+              >
+                <Rocket className="w-5 h-5" />
+                Get Started Today
+              </Link>
+              <Link 
+                href="/blog"
+                className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300"
+              >
+                <Shield className="w-5 h-5" />
+                Explore All Articles
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default NewContentPromotionalBanner2026;
