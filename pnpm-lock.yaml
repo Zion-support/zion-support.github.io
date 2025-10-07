@@ -87,9 +87,12 @@ importers:
       '@next/bundle-analyzer':
         specifier: ^15.5.4
         version: 15.5.4
+<<<<<<< HEAD
       '@next/eslint-plugin-next':
         specifier: ^15.5.4
         version: 15.5.4
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-118c
       '@rollup/rollup-linux-x64-gnu':
         specifier: 4.52.3
         version: 4.52.3
@@ -126,9 +129,12 @@ importers:
       '@typescript-eslint/parser':
         specifier: ^8.15.0
         version: 8.46.0(eslint@9.37.0(jiti@1.21.7))(typescript@5.9.3)
+<<<<<<< HEAD
       '@vitejs/plugin-react':
         specifier: ^5.0.4
         version: 5.0.4(vite@7.1.9(@types/node@24.7.0)(jiti@1.21.7)(lightningcss@1.30.1)(terser@5.44.0))
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-118c
       autoprefixer:
         specifier: ^10.4.20
         version: 10.4.21(postcss@8.5.6)
@@ -144,9 +150,12 @@ importers:
       eslint:
         specifier: ^9.15.0
         version: 9.37.0(jiti@1.21.7)
+<<<<<<< HEAD
       eslint-config-next:
         specifier: ^15.5.4
         version: 15.5.4(eslint@9.37.0(jiti@1.21.7))(typescript@5.9.3)
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-118c
       eslint-plugin-cypress:
         specifier: 3.6.0
         version: 3.6.0(eslint@9.37.0(jiti@1.21.7))
@@ -207,9 +216,12 @@ importers:
       typescript-eslint:
         specifier: 8.44.1
         version: 8.44.1(eslint@9.37.0(jiti@1.21.7))(typescript@5.9.3)
+<<<<<<< HEAD
       vite:
         specifier: ^7.1.9
         version: 7.1.9(@types/node@24.7.0)(jiti@1.21.7)(lightningcss@1.30.1)(terser@5.44.0)
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-118c
 
 packages:
 
@@ -733,18 +745,6 @@ packages:
 
   '@babel/plugin-transform-react-jsx-development@7.27.1':
     resolution: {integrity: sha512-ykDdF5yI4f1WrAolLqeF3hmYU12j9ntLQl/AOG1HAS21jxyg1Q0/J/tpREuYLfatGdGmXp/3yS0ZA76kOlVq9Q==}
-    engines: {node: '>=6.9.0'}
-    peerDependencies:
-      '@babel/core': ^7.0.0-0
-
-  '@babel/plugin-transform-react-jsx-self@7.27.1':
-    resolution: {integrity: sha512-6UzkCs+ejGdZ5mFFC/OCUrv028ab2fp1znZmCZjAOBKiBK2jXD1O+BPSfX8X2qjJ75fZBMSnQn3Rq2mrBJK2mw==}
-    engines: {node: '>=6.9.0'}
-    peerDependencies:
-      '@babel/core': ^7.0.0-0
-
-  '@babel/plugin-transform-react-jsx-source@7.27.1':
-    resolution: {integrity: sha512-zbwoTsBruTeKB9hSq73ha66iFeJHuaFkUbwvqElnygoNbj/jHRsSeokowZFN3CZ64IvEqcmmkVe89OPXc7ldAw==}
     engines: {node: '>=6.9.0'}
     peerDependencies:
       '@babel/core': ^7.0.0-0
@@ -1718,9 +1718,6 @@ packages:
       react-redux:
         optional: true
 
-  '@rolldown/pluginutils@1.0.0-beta.38':
-    resolution: {integrity: sha512-N/ICGKleNhA5nc9XXQG/kkKHJ7S55u0x0XUJbbkmdCnFuoRkM1Il12q9q0eX19+M7KKUEPw/daUPIRnxhcxAIw==}
-
   '@rollup/rollup-android-arm-eabi@4.52.3':
     resolution: {integrity: sha512-h6cqHGZ6VdnwliFG1NXvMPTy/9PS3h8oLh7ImwR+kl+oYnQizgjxsONmmPSb2C66RksfkfIxEVtDSEcJiO0tqw==}
     cpu: [arm]
@@ -2341,12 +2338,6 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@vitejs/plugin-react@5.0.4':
-    resolution: {integrity: sha512-La0KD0vGkVkSk6K+piWDKRUyg8Rl5iAIKRMH0vMJI0Eg47bq1eOxmoObAaQG37WMW9MSyk7Cs8EIWwJC1PtzKA==}
-    engines: {node: ^20.19.0 || >=22.12.0}
-    peerDependencies:
-      vite: ^4.2.0 || ^5.0.0 || ^6.0.0 || ^7.0.0
-
   abab@2.0.6:
     resolution: {integrity: sha512-j2afSsaIENvHZN2B8GOpF566vZ5WVk5opAiMTvWgaQT8DkbOqsTfvNAvHoRGU2zzP8cPoqys+xHTRDWW8L+/BA==}
     deprecated: Use your platform's native atob() and btoa() methods instead
@@ -2893,6 +2884,7 @@ packages:
   debounce@1.2.1:
     resolution: {integrity: sha512-XRRe6Glud4rd/ZGQfiV1ruXSfbvfJedlV9Y6zOlP+2K04vBYiJEte6stfFkCP03aMnY5tsipamumUjL14fofug==}
 
+<<<<<<< HEAD
   debug@3.2.7:
     resolution: {integrity: sha512-CFjzYYAi4ThfiQvizrFQevTTXHtnCqWfe7x1AhgEscTz6ZbLbfoLRLPugTQyBth6f8ZERVUSyWHFD/7Wu4t1XQ==}
     peerDependencies:
@@ -2901,6 +2893,8 @@ packages:
       supports-color:
         optional: true
 
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-118c
   debug@4.4.3:
     resolution: {integrity: sha512-RGwwWnwQvkVfavKVt22FGLw+xYSdzARwm0ru6DhTVA3umU5hZc28V3kO4stgYryrTlLpuvgI9GiijltAjNbcqA==}
     engines: {node: '>=6.0'}
@@ -3298,15 +3292,6 @@ packages:
 
   fd-slicer@1.1.0:
     resolution: {integrity: sha512-cE1qsB/VwyQozZ+q1dGxR8LBYNZeofhEdUNGSMbQD3Gw2lAzX9Zb3uIU6Ebc/Fmyjo9AWWfnn0AUCHqtevs/8g==}
-
-  fdir@6.5.0:
-    resolution: {integrity: sha512-tIbYtZbucOs0BRGqPJkshJUYdL+SDH7dVM8gjy+ERp3WAUjLEFJE+02kanyHtwjWOnwrKYBiwAmM0p4kLJAnXg==}
-    engines: {node: '>=12.0.0'}
-    peerDependencies:
-      picomatch: ^3 || ^4
-    peerDependenciesMeta:
-      picomatch:
-        optional: true
 
   file-entry-cache@8.0.0:
     resolution: {integrity: sha512-XXTUwCvisa5oacNGRP9SfNtYBNAMi+RPwBFmblZEF7N7swHYQS6/Zfk7SRwx4D5j3CH211YNRco1DEMNVfZCnQ==}
@@ -4566,9 +4551,12 @@ packages:
       yaml:
         optional: true
 
+<<<<<<< HEAD
   postcss-media-query-parser@0.2.3:
     resolution: {integrity: sha512-3sOlxmbKcSHMjlUXQZKQ06jOswE7oVkXPxmZdoB1r5l0q6gTFTQSHxNxOrCccElbW7dxNytifNEo8qidX2Vsig==}
 
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-118c
   postcss-nested@6.2.0:
     resolution: {integrity: sha512-HQbt28KulC5AJzG+cZtj9kvKB93CFCdLvog1WFLf1D+xmMvPGlBstkpTEZfK5+AN9hfJocyBFCNiqyS48bpgzQ==}
     engines: {node: '>=12.0'}
@@ -4705,10 +4693,6 @@ packages:
         optional: true
       redux:
         optional: true
-
-  react-refresh@0.17.0:
-    resolution: {integrity: sha512-z6F7K9bV85EfseRCp2bzrpyQ0Gkw1uLoCel9XBVWPg/TjRj94SkJzUTGfOa4bs7iJvBWtQG0Wq7wnI0syw3EBQ==}
-    engines: {node: '>=0.10.0'}
 
   react-router-dom@7.9.3:
     resolution: {integrity: sha512-1QSbA0TGGFKTAc/aWjpfW/zoEukYfU4dc1dLkT/vvf54JoGMkW+fNA+3oyo2gWVW1GM7BxjJVHz5GnPJv40rvg==}
@@ -5168,10 +5152,6 @@ packages:
   tiny-invariant@1.3.3:
     resolution: {integrity: sha512-+FbBPE1o9QAYvviau/qC5SE3caw21q3xkvWKBtja5vgqOWIHHJ3ioaq1VPfn/Szqctz2bU/oYeKd9/z5BL+PVg==}
 
-  tinyglobby@0.2.15:
-    resolution: {integrity: sha512-j2Zq4NyQYG5XMST4cbs02Ak8iJUdxRM0XI5QyxXuZOzKOINmWurp3smXu3y5wDcJrptwpSjgXHzIQxR0omXljQ==}
-    engines: {node: '>=12.0.0'}
-
   tldts-core@6.1.86:
     resolution: {integrity: sha512-Je6p7pkk+KMzMv2XXKmAE3McmolOQFdxkKw0R8EYNr7sELW46JqnNeTX8ybPiQgvg1ymCoF8LXs5fzFaZvJPTA==}
 
@@ -5386,6 +5366,7 @@ packages:
   victory-vendor@37.3.6:
     resolution: {integrity: sha512-SbPDPdDBYp+5MJHhBCAyI7wKM3d5ivekigc2Dk2s7pgbZ9wIgIBYGVw4zGHBml/qTFbexrofXW6Gu4noGxrOwQ==}
 
+<<<<<<< HEAD
   vite@7.1.9:
     resolution: {integrity: sha512-4nVGliEpxmhCL8DslSAUdxlB6+SMrhB0a1v5ijlh1xB1nEPuy1mxaHxysVucLHuWryAxLWg6a5ei+U4TLn/rFg==}
     engines: {node: ^20.19.0 || >=22.12.0}
@@ -5426,6 +5407,8 @@ packages:
       yaml:
         optional: true
 
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-118c
   w3c-xmlserializer@4.0.0:
     resolution: {integrity: sha512-d+BFHzbiCx6zGfz0HyQ6Rg69w9k19nviJspaj4yNscGjrHu94sVP+aRm75yEbCh+r2/yR+7q6hux9LVtbuTGBw==}
     engines: {node: '>=14'}
@@ -6224,16 +6207,6 @@ snapshots:
       '@babel/plugin-transform-react-jsx': 7.27.1(@babel/core@7.28.4)
     transitivePeerDependencies:
       - supports-color
-
-  '@babel/plugin-transform-react-jsx-self@7.27.1(@babel/core@7.28.4)':
-    dependencies:
-      '@babel/core': 7.28.4
-      '@babel/helper-plugin-utils': 7.27.1
-
-  '@babel/plugin-transform-react-jsx-source@7.27.1(@babel/core@7.28.4)':
-    dependencies:
-      '@babel/core': 7.28.4
-      '@babel/helper-plugin-utils': 7.27.1
 
   '@babel/plugin-transform-react-jsx@7.27.1(@babel/core@7.28.4)':
     dependencies:
@@ -7346,8 +7319,6 @@ snapshots:
       react: 18.3.1
       react-redux: 9.2.0(@types/react@18.3.25)(react@18.3.1)(redux@5.0.1)
 
-  '@rolldown/pluginutils@1.0.0-beta.38': {}
-
   '@rollup/rollup-android-arm-eabi@4.52.3':
     optional: true
 
@@ -7991,6 +7962,7 @@ snapshots:
   '@unrs/resolver-binding-win32-x64-msvc@1.11.1':
     optional: true
 
+<<<<<<< HEAD
   '@vitejs/plugin-react@5.0.4(vite@7.1.9(@types/node@24.7.0)(jiti@1.21.7)(lightningcss@1.30.1)(terser@5.44.0))':
     dependencies:
       '@babel/core': 7.28.4
@@ -8003,6 +7975,8 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-118c
   abab@2.0.6: {}
 
   acorn-globals@7.0.1:
@@ -8624,10 +8598,13 @@ snapshots:
 
   debounce@1.2.1: {}
 
+<<<<<<< HEAD
   debug@3.2.7:
     dependencies:
       ms: 2.1.3
 
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-118c
   debug@4.4.3:
     dependencies:
       ms: 2.1.3
@@ -8903,6 +8880,7 @@ snapshots:
     optionalDependencies:
       source-map: 0.6.1
 
+<<<<<<< HEAD
   eslint-config-next@15.5.4(eslint@9.37.0(jiti@1.21.7))(typescript@5.9.3):
     dependencies:
       '@next/eslint-plugin-next': 15.5.4
@@ -9018,6 +8996,21 @@ snapshots:
     dependencies:
       eslint: 9.37.0(jiti@1.21.7)
 
+=======
+  eslint-plugin-cypress@3.6.0(eslint@9.37.0(jiti@1.21.7)):
+    dependencies:
+      eslint: 9.37.0(jiti@1.21.7)
+      globals: 13.24.0
+
+  eslint-plugin-react-hooks@5.2.0(eslint@9.37.0(jiti@1.21.7)):
+    dependencies:
+      eslint: 9.37.0(jiti@1.21.7)
+
+  eslint-plugin-react-refresh@0.4.23(eslint@9.37.0(jiti@1.21.7)):
+    dependencies:
+      eslint: 9.37.0(jiti@1.21.7)
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-118c
   eslint-plugin-react@7.37.5(eslint@9.37.0(jiti@1.21.7)):
     dependencies:
       array-includes: 3.1.9
@@ -9189,10 +9182,6 @@ snapshots:
   fd-slicer@1.1.0:
     dependencies:
       pend: 1.2.0
-
-  fdir@6.5.0(picomatch@4.0.3):
-    optionalDependencies:
-      picomatch: 4.0.3
 
   file-entry-cache@8.0.0:
     dependencies:
@@ -10697,8 +10686,11 @@ snapshots:
       jiti: 1.21.7
       postcss: 8.5.6
 
+<<<<<<< HEAD
   postcss-media-query-parser@0.2.3: {}
 
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-118c
   postcss-nested@6.2.0(postcss@8.5.6):
     dependencies:
       postcss: 8.5.6
@@ -10841,8 +10833,6 @@ snapshots:
     optionalDependencies:
       '@types/react': 18.3.25
       redux: 5.0.1
-
-  react-refresh@0.17.0: {}
 
   react-router-dom@7.9.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
     dependencies:
@@ -11020,6 +11010,7 @@ snapshots:
       '@rollup/rollup-win32-x64-gnu': 4.52.3
       '@rollup/rollup-win32-x64-msvc': 4.52.3
       fsevents: 2.3.3
+    optional: true
 
   rrweb-cssom@0.6.0: {}
 
@@ -11445,11 +11436,6 @@ snapshots:
 
   tiny-invariant@1.3.3: {}
 
-  tinyglobby@0.2.15:
-    dependencies:
-      fdir: 6.5.0(picomatch@4.0.3)
-      picomatch: 4.0.3
-
   tldts-core@6.1.86: {}
 
   tldts-core@7.0.16: {}
@@ -11694,6 +11680,7 @@ snapshots:
       d3-time: 3.1.0
       d3-timer: 3.0.1
 
+<<<<<<< HEAD
   vite@7.1.9(@types/node@24.7.0)(jiti@1.21.7)(lightningcss@1.30.1)(terser@5.44.0):
     dependencies:
       esbuild: 0.25.10
@@ -11709,6 +11696,8 @@ snapshots:
       lightningcss: 1.30.1
       terser: 5.44.0
 
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-118c
   w3c-xmlserializer@4.0.0:
     dependencies:
       xml-name-validator: 4.0.0
