@@ -1,5 +1,10 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Our Team - Zion Tech Group',
+  description: 'Meet the talented team of AI and IT experts at Zion Tech Group, driving innovation in enterprise technology solutions.',
+};
 
 const TeamPage: React.FC = () => {
   const teamMembers = [
@@ -31,13 +36,6 @@ const TeamPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Our Team - Zion Tech Group</title>
-        <meta
-          name='description'
-          content="Meet the expert team behind Zion Tech Group's AI and IT solutions."
-        />
-      </Helmet>
 
       <div className='min-h-screen bg-slate-50 py-16'>
         <div className='container mx-auto px-4'>
