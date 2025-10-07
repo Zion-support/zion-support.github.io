@@ -14,6 +14,7 @@ interface SEOOptimizerProps {
 
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   title = 'Zion Tech Group - AI & IT Solutions',
+<<<<<<< HEAD
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   description: _description = 'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services.',
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -23,6 +24,13 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   url = 'https://ziontechgroup.com',
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   type: _type = 'website'
+=======
+  description = 'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services.',
+  keywords = ['AI solutions', 'enterprise AI', 'digital transformation', 'automation', 'cloud services'],
+  image = 'https://ziontechgroup.com/og-image.jpg',
+  url = 'https://ziontechgroup.com',
+  type = 'website'
+>>>>>>> cursor/fix-errors-and-merge-to-main-90b9
 }) => {
   const pathname = usePathname();
 

@@ -23,6 +23,10 @@ const ErrorBoundary = ({ children }: { children: React.ReactNode }) => {
 
 // Utils
 import { preloadCriticalResources, performanceOptimizer } from './utils/performanceOptimizer';
+<<<<<<< HEAD
+=======
+import { logger } from './utils/logger';
+>>>>>>> cursor/fix-errors-and-merge-to-main-90b9
 
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./page'));
@@ -38,14 +42,25 @@ const App: React.FC = () => {
     // Initialize Web Vitals monitoring
     if (typeof window !== 'undefined' && 'performance' in window) {
       const metrics = performanceOptimizer.getMetrics();
+<<<<<<< HEAD
       if (metrics && process.env.NODE_ENV === 'development') {
         // eslint-disable-next-line no-console
         console.log('Performance metrics:', metrics);
+=======
+      if (metrics) {
+        logger.info('Performance metrics collected', 'App', { metrics });
+>>>>>>> cursor/fix-errors-and-merge-to-main-90b9
       }
     }
 
     // Preload critical resources
     preloadCriticalResources();
+<<<<<<< HEAD
+=======
+    
+    logger.info('Performance monitoring initialized', 'App');
+    logger.info('🚀 Zion Tech Group App initialized with comprehensive monitoring', 'App');
+>>>>>>> cursor/fix-errors-and-merge-to-main-90b9
   }, []);
 
   return (
