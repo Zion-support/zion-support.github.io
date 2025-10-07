@@ -108,11 +108,12 @@ global.PerformanceObserver = class MockPerformanceObserver {
   takeRecords() {
     return [];
   }
+  static readonly supportedEntryTypes: readonly string[] = ['paint', 'largest-contentful-paint', 'first-input', 'layout-shift', 'navigation'];
 };
 
 // Mock window.location
-delete (window as any).location;
-(window as any).location = {
+delete (window as unknown as { location: unknown }).location;
+(window as unknown as { location: unknown }).location = {
   href: 'http://localhost:3000',
   origin: 'http://localhost:3000',
   protocol: 'http:',

@@ -1,10 +1,13 @@
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import React from 'react';
 import './globals.css'
 
-const inter = Inter({ subsets: ['latin'] })
+// Font configuration for Vite
+const inter = {
+  className: 'font-inter'
+}
 
-export const metadata: Metadata = {
+// Metadata for Vite/React app
+const metadata = {
   title: 'Zion Tech Group - Advanced AI and IT Solutions',
   description: 'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services. Transform your business with cutting-edge AI micro SaaS services and cloud automation.',
   keywords: ['AI solutions', 'enterprise AI', 'digital transformation', 'automation', 'cloud services', 'AI consulting', 'business intelligence', 'machine learning', 'artificial intelligence', 'enterprise software'],
@@ -58,6 +61,9 @@ export const metadata: Metadata = {
     google: 'your-google-verification-code',
   },
 }
+
+// Export metadata for use in other components
+export { metadata };
 
 export default function RootLayout({
   children,
