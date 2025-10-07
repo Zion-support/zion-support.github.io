@@ -122,6 +122,7 @@
     "blockchain-solutions.tsx",
     "app/components/NewestContent2025Banner.tsx",
     "app/components/UltimateBusinessIntelligence2025Banner.tsx",
-    "app/components/UltimateBusinessIntelligenceShowcase2025.tsx"
+    "app/components/UltimateBusinessIntelligenceShowcase2025.tsx",
+    "zion-website_disabled"
   ]
 }

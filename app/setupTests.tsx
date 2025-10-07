@@ -125,4 +125,6 @@ delete (window as { location?: unknown }).location;
   hash: '',
   assign: jest.fn(),
   replace: jest.fn(),
-};
+  reload: jest.fn(),
+  ancestorOrigins: [] as unknown as DOMStringList,
+} as Location;

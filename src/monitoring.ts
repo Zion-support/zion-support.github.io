@@ -1,6 +1,5 @@
 // Performance monitoring setup
 import { analytics } from './utils/analytics';
-import { errorHandler } from './utils/errorHandler';
 import { performanceOptimizer, measurePageLoad, reportWebVitals } from './utils/performanceOptimizer';
 
 // Initialize performance monitoring
@@ -18,15 +17,17 @@ if (typeof window !== 'undefined') {
         'performance',
         'detected',
         undefined,
-        entry.duration
+        entry.duration,
+        undefined
       );
     });
   });
 
   // Track Web Vitals
-  measurePageLoad().then((metrics: { fcp?: number; lcp?: number; fid?: number; cls?: number; ttfb?: number }) => {
+  const metrics = measurePageLoad();
+  if (metrics) {
     reportWebVitals(metrics);
-  });
+  }
   
   // Monitor long tasks (if available)
   if ('monitorLongTasks' in performanceOptimizer) {
@@ -38,4 +39,4 @@ if (typeof window !== 'undefined') {
   }
 }
 
-export { analytics, errorHandler, performanceOptimizer };
+export { analytics, performanceOptimizer };
