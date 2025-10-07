@@ -98,6 +98,10 @@ const App = () => {
     if (typeof document !== 'undefined') {
       // Initialize enhanced performance monitoring
       performanceEnhancer.startMonitoring();
+<<<<<<< HEAD
+=======
+      performanceOptimizer.init();
+>>>>>>> cursor/fix-errors-and-merge-to-main-32ba
       
       // Preload critical fonts
       const fontLink = document.createElement('link');
