@@ -93,7 +93,9 @@ Object.defineProperty(window, 'sessionStorage', {
 
 // Mock TextEncoder and TextDecoder for Node.js environment
 if (typeof TextEncoder === 'undefined') {
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
   global.TextEncoder = require('util').TextEncoder;
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
   global.TextDecoder = require('util').TextDecoder;
 }
 
