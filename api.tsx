@@ -1,4 +1,4 @@
-// import { ArrowRight, Code, ExternalLink, Shield, Zap } from 'lucide-react';
+import { ArrowRight, Code, ExternalLink, Shield, Zap } from 'lucide-react';
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -65,7 +65,6 @@ const Api: React.FC = () => {
             Comprehensive API documentation for Zion Tech Group's services. 
             Build powerful applications with our robust and scalable API.
           </p>
-<<<<<<< HEAD
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>
             <a
               href='#endpoints'
@@ -82,53 +81,8 @@ const Api: React.FC = () => {
               <span className='ml-2 w-5 h-5'>⚛️</span>
             </a>
           </div>
-=======
->>>>>>> c122ace256a93e0bb3b33b12f92a0d16580a74c2
         </div>
 
-<<<<<<< HEAD
-      {/* Features Section */}
-      <div className='py-16 bg-white'>
-        <div className='container mx-auto px-4'>
-          <div className='grid md:grid-cols-3 gap-8'>
-            <div className='text-center'>
-              <div className='w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4'>
-                <span className='w-8 h-8 text-blue-600'>⚛️</span>
-              </div>
-              <h3 className='text-xl font-semibold text-gray-900 mb-2'>
-                RESTful APIs
-              </h3>
-              <p className='text-gray-600'>
-                Clean, intuitive REST endpoints following industry best
-                practices for easy integration.
-              </p>
-            </div>
-            <div className='text-center'>
-              <div className='w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4'>
-                <span className='w-8 h-8 text-green-600'>⚛️</span>
-              </div>
-              <h3 className='text-xl font-semibold text-gray-900 mb-2'>
-                Secure & Reliable
-              </h3>
-              <p className='text-gray-600'>
-                Enterprise-grade security with 99.9% uptime and
-                comprehensive error handling.
-              </p>
-            </div>
-            <div className='text-center'>
-              <div className='w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4'>
-                <span className='w-8 h-8 text-purple-600'>⚡</span>
-              </div>
-              <h3 className='text-xl font-semibold text-gray-900 mb-2'>
-                High Performance
-              </h3>
-              <p className='text-gray-600'>
-                Optimized for speed with sub-100ms response times and
-                comprehensive error handling.
-              </p>
-            </div>
-          </div>
-=======
         {/* Features Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {features.map((feature, index) => (
@@ -141,7 +95,6 @@ const Api: React.FC = () => {
               <p className="text-gray-300">{feature.description}</p>
             </div>
           ))}
->>>>>>> c122ace256a93e0bb3b33b12f92a0d16580a74c2
         </div>
 
         {/* API Endpoints */}
@@ -184,31 +137,6 @@ const Api: React.FC = () => {
           </div>
         </div>
 
-<<<<<<< HEAD
-      {/* CTA Section */}
-      <div className='py-16 bg-blue-600 text-white'>
-        <div className='container mx-auto px-4 text-center'>
-          <h2 className='text-3xl font-bold mb-6'>Ready to Get Started?</h2>
-          <p className='text-xl mb-8 max-w-2xl mx-auto'>
-            Start building with our powerful APIs and transform your business
-            with cutting-edge AI technology.
-          </p>
-          <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-            <Link
-              to='/contact'
-              className='bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center'
-            >
-              Get API Key
-              <span className='ml-2 w-5 h-5'>→</span>
-            </Link>
-            <a
-              href='https://docs.ziontechgroup.com'
-              className='border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors inline-flex items-center'
-            >
-              View Documentation
-              <span className='ml-2 w-5 h-5'>⚛️</span>
-            </a>
-=======
         {/* Getting Started */}
         <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 mb-16">
           <h2 className="text-3xl font-bold text-white mb-8">Getting Started</h2>
@@ -236,7 +164,6 @@ const Api: React.FC = () => {
                 </code>
               </div>
             </div>
->>>>>>> c122ace256a93e0bb3b33b12f92a0d16580a74c2
           </div>
         </div>
 
@@ -255,8 +182,4 @@ const Api: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
-export default API;
-=======
 export default Api;
->>>>>>> c122ace256a93e0bb3b33b12f92a0d16580a74c2
