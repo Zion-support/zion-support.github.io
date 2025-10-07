@@ -149,11 +149,12 @@ export function runWhenIdle(
   options?: IdleRequestOptions
 ): number {
   if (typeof window !== 'undefined') {
-    if ('requestIdleCallback' in window) {
-      return (window as Window & { requestIdleCallback: (cb: () => void, opts?: IdleRequestOptions) => number }).requestIdleCallback(callback, options);
+    const win = window as Window & { requestIdleCallback?: (cb: () => void, opts?: IdleRequestOptions) => number };
+    if ('requestIdleCallback' in win && win.requestIdleCallback) {
+      return win.requestIdleCallback(callback, options);
     }
     // Fallback for browsers that don't support requestIdleCallback
-    return (window as Window).setTimeout(callback, 1) as unknown as number;
+    return win.setTimeout(callback, 1) as unknown as number;
   }
   return 0;
 }
@@ -163,10 +164,11 @@ export function runWhenIdle(
  */
 export function cancelIdle(id: number): void {
   if (typeof window !== 'undefined') {
-    if ('cancelIdleCallback' in window) {
-      (window as Window & { cancelIdleCallback: (id: number) => void }).cancelIdleCallback(id);
+    const win = window as Window & { cancelIdleCallback?: (id: number) => void };
+    if ('cancelIdleCallback' in win && win.cancelIdleCallback) {
+      win.cancelIdleCallback(id);
     } else {
-      (window as Window).clearTimeout(id);
+      win.clearTimeout(id);
     }
   }
 }
@@ -253,9 +255,8 @@ export function preloadResources(resources: Array<{ url: string; as: string }>):
  * Check if code splitting is supported
  */
 export function supportsCodeSplitting(): boolean {
-  // Check if dynamic imports are supported
   try {
-    return typeof Function('return import("data:text/javascript,")') === 'function';
+    return typeof Function('return import')() === 'object';
   } catch {
     return false;
   }

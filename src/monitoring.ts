@@ -30,7 +30,9 @@ function initializeMonitoring(): void {
       const error = event.error || new Error(event.message);
       errorHandler.handleError(error, undefined, {
         errorId: `global_error_${Date.now()}`,
-        componentStack: `${event.filename}:${event.lineno}:${event.colno}`,
+        filename: event.filename,
+        lineno: event.lineno,
+        colno: event.colno,
       });
     });
 
@@ -39,7 +41,7 @@ function initializeMonitoring(): void {
       const error = new Error(`Unhandled Promise Rejection: ${event.reason}`);
       errorHandler.handleError(error, undefined, {
         errorId: `unhandled_rejection_${Date.now()}`,
-        componentStack: String(event.reason),
+        reason: String(event.reason),
       });
     });
 
