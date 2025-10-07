@@ -1,4 +1,4 @@
-import { Star, Calculator as CalcIcon } from 'lucide-react';
+import { Star } from 'lucide-react';
 import React from 'react';
 import Link from 'next/link';
 import { Metadata } from 'next';
