@@ -5,6 +5,7 @@ import tseslint from '@typescript-eslint/eslint-plugin';
 import tsParser from '@typescript-eslint/parser';
 import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
+import nextPlugin from '@next/eslint-plugin-next';
 
 export default [
   //Global ignores - ignore everything except src, app directories and main files
@@ -126,9 +127,11 @@ export default [
       '@typescript-eslint': tseslint,
       'react-hooks': reactHooks,
       'react-refresh': reactRefresh,
+      '@next/next': nextPlugin,
     },
     rules: {
       ...(reactHooks.configs.recommended?.rules || {}),
+      ...(nextPlugin.configs.recommended?.rules || {}),
       'react-refresh/only-export-components': 'off',
       '@typescript-eslint/no-unused-vars': [
         'warn',
