@@ -2,6 +2,7 @@
 import { analytics } from '../app/utils/analytics';
 import { ErrorHandler } from '../app/utils/errorHandler';
 import { performanceOptimizer } from '../app/utils/performanceOptimizer';
+import { logger } from '../src/utils/logger';
 
 // Create error handler instance
 const errorHandler = new ErrorHandler();
@@ -66,8 +67,10 @@ function initializeMonitoring(): void {
     }
 
     // Get performance metrics
-    const metrics = performanceOptimizer.getMetrics();
     const score = performanceOptimizer.getPerformanceScore();
+    
+    // Log performance data for monitoring
+    logger.info('Performance metrics:', { metrics, score });
     
     // Track performance metrics
     analytics.track({
