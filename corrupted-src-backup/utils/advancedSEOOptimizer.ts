@@ -245,6 +245,7 @@ class AdvancedSEOOptimizer {
   public generateReport(): string {
     const report = `
 SEO Analysis Report
+==================
 
 Overall Score: ${this.metrics.overallScore}/100
 

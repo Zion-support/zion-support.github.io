@@ -15,17 +15,6 @@ import React from 'react';
 import Link from 'next/link';
 <<<<<<< HEAD:app/blog/ai-2025-generative-design-systems-blueprint/page.tsx
 import { ArrowLeft, Calendar, Clock, User } from 'lucide-react';
-import Arrow Left from'lucide-react/dist/esm/icons/arrow-left';
-
-export default function GenerativeDesignSystems Blueprint Page() {return (<div class Name Name='min-h-screen bg-white'>
-      <section class Name Name='bg-gradient-to-r from-purple-600 via-fuchsia-600 to-pink-600 text-white py-20'>
-        <div class Name Name='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8'>
-          <div class Name Name='text-center'>
-            <div class Name Name='inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6'>
-              <span class Name Name='text-sm font-medium'>
-=======
-<<<<<<< HEAD:app/blog/ai-2025-generative-design-systems-blueprint/page.tsx
-import { ArrowLeft, Calendar, Clock, User } from 'lucide-react';
 export default function GenerativeDesignSystemsBlueprintPage() {
   return (
     <div className='min-h-screen bg-white'>
@@ -34,7 +23,6 @@ export default function GenerativeDesignSystemsBlueprintPage() {
           <div className='text-center'>
             <div className='inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6'>
               <span className='text-sm font-medium'>
->>>>>>> e4aba06acc6d8264f43e20480700872d8b21daec:app_disabled/blog/ai-2025-generative-design-systems-blueprint/page.tsx.backup
                 🎨 GENERATIVE DESIGN SYSTEMS
               </span>
             </div>

@@ -1,24 +1,14 @@
-// import { Calculator } from 'lucide-react';
-import React, { useState, memo, useCallback, useMemo } from 'react';
+'use client';
 
-const InteractiveAIROICalculator: React.FC = memo(() => {
+// import { Calculator } from 'lucide-react';
+import React, { useState } from 'react';
+
+const InteractiveAIROICalculator: React.FC = () => {
   const [investment, setInvestment] = useState(100000);
   const [savings, setSavings] = useState(300000);
   const [timeframe, setTimeframe] = useState(12);
 
-  const roi = useMemo(() => ((savings - investment) / investment) * 100, [savings, investment]);
-
-  const handleInvestmentChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
-    setInvestment(Number(e.target.value));
-  }, []);
-
-  const handleSavingsChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
-    setSavings(Number(e.target.value));
-  }, []);
-
-  const handleTimeframeChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
-    setTimeframe(Number(e.target.value));
-  }, []);
+  const roi = ((savings - investment) / investment) * 100;
 
   return (
     <div className='bg-white rounded-lg shadow-lg p-8'>
@@ -32,7 +22,7 @@ const InteractiveAIROICalculator: React.FC = memo(() => {
           <input
             type='number'
             value={investment}
-            onChange={handleInvestmentChange}
+            onChange={e => setInvestment(Number(e.target.value))}
             className='w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent'
           />
         </div>
@@ -44,7 +34,7 @@ const InteractiveAIROICalculator: React.FC = memo(() => {
           <input
             type='number'
             value={savings}
-            onChange={handleSavingsChange}
+            onChange={e => setSavings(Number(e.target.value))}
             className='w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent'
           />
         </div>
@@ -56,7 +46,7 @@ const InteractiveAIROICalculator: React.FC = memo(() => {
           <input
             type='number'
             value={timeframe}
-            onChange={handleTimeframeChange}
+            onChange={e => setTimeframe(Number(e.target.value))}
             className='w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent'
           />
         </div>
@@ -75,8 +65,6 @@ const InteractiveAIROICalculator: React.FC = memo(() => {
       </div>
     </div>
   );
-});
-
-InteractiveAIROICalculator.displayName = 'InteractiveAIROICalculator';
+};
 
 export default InteractiveAIROICalculator;
