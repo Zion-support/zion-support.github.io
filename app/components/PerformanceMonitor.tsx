@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
+import { Cpu, Zap, Clock } from 'lucide-react';
 
 interface PerformanceMetrics {
   fcp: number;
@@ -45,13 +46,29 @@ export default function PerformanceMonitor() {
   }
 
   return (
-    <div className='fixed bottom-4 right-4 bg-black bg-opacity-75 text-white p-4 rounded-lg text-xs font-mono'>
-      <div className='font-bold mb-2'>Performance Metrics</div>
-      {metrics.fcp && <div>FCP: {metrics.fcp.toFixed(2)}ms</div>}
-      {metrics.lcp && <div>LCP: {metrics.lcp.toFixed(2)}ms</div>}
-      {metrics.fid && <div>FID: {metrics.fid.toFixed(2)}ms</div>}
-      {metrics.cls && <div>CLS: {metrics.cls.toFixed(4)}</div>}
-      {metrics.ttfb && <div>TTFB: {metrics.ttfb.toFixed(2)}ms</div>}
+    <div className="fixed bottom-4 right-4 bg-black bg-opacity-90 text-white p-4 rounded-lg shadow-lg z-50 text-sm font-mono">
+      <div className="flex items-center gap-2 mb-2">
+        <Cpu className="w-4 h-4" />
+        <span className="font-bold">Performance Monitor</span>
+      </div>
+      <div className="space-y-1">
+        <div className="flex items-center gap-2">
+          <Clock className="w-3 h-3" />
+          <span>Load: {metrics.loadTime}ms</span>
+        </div>
+        <div className="flex items-center gap-2">
+          <Zap className="w-3 h-3" />
+          <span>Render: {metrics.renderTime}ms</span>
+        </div>
+        <div className="flex items-center gap-2">
+          <Cpu className="w-3 h-3" />
+          <span>Memory: {metrics.memoryUsage}MB</span>
+        </div>
+      </div>
+      <div className="text-xs text-gray-400 mt-2">
+        Press Ctrl+Shift+P to toggle
+      </div>
+>>>>>>> acb7be8aee560111b0c604d2546781c6b7658122
     </div>
   );
 }
