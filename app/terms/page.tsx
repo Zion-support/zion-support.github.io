@@ -1,16 +1,14 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Terms of Service - Zion Tech Group',
+  description: 'Terms of service and usage agreement for Zion Tech Group services and website.',
+};
 
 const TermsPage: React.FC = () => {
   return (
     <>
-      <Helmet>
-        <title>Terms of Service - Zion Tech Group</title>
-        <meta
-          name='description'
-          content='Terms of service for Zion Tech Group. Read our terms and conditions for using our AI and IT solutions.'
-        />
-      </Helmet>
 
       <div className='min-h-screen bg-slate-50 py-16'>
         <div className='container mx-auto px-4'>

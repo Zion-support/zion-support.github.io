@@ -90,3 +90,35 @@ const sessionStorageMock = {
 Object.defineProperty(window, 'sessionStorage', {
   value: sessionStorageMock,
 });
+
+// Mock TextEncoder and TextDecoder for Node.js environment
+if (typeof TextEncoder === 'undefined') {
+  global.TextEncoder = require('util').TextEncoder;
+  global.TextDecoder = require('util').TextDecoder;
+}
+
+// Mock URL for Node.js environment
+global.URL = URL;
+
+// Mock PerformanceObserver
+global.PerformanceObserver = class MockPerformanceObserver {
+  constructor(public callback: PerformanceObserverCallback) {}
+  observe() {}
+  disconnect() {}
+  takeRecords() {
+    return [];
+  }
+  static readonly supportedEntryTypes: readonly string[] = ['navigation', 'paint', 'largest-contentful-paint', 'first-input', 'layout-shift'];
+};
+
+// Suppress jsdom navigation warnings
+const originalConsoleError = console.error;
+console.error = (...args) => {
+  if (
+    typeof args[0] === 'string' &&
+    args[0].includes('Not implemented: navigation')
+  ) {
+    return;
+  }
+  originalConsoleError.apply(console, args);
+};

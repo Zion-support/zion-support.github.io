@@ -4,7 +4,7 @@ interface PerformanceOptimizerProps {
   children: React.ReactNode;
 }
 
-const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
+const PerformanceOptimizerComponent: React.FC<PerformanceOptimizerProps> = ({
   children,
 }) => {
   // Preload critical resources
@@ -79,4 +79,4 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   return <>{children}</>;
 };
 
-export default PerformanceOptimizer;
+export default PerformanceOptimizerComponent;

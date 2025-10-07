@@ -1,16 +1,14 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Privacy Policy - Zion Tech Group',
+  description: 'Privacy policy and data protection information for Zion Tech Group services and website.',
+};
 
 const PrivacyPage: React.FC = () => {
   return (
     <>
-      <Helmet>
-        <title>Privacy Policy - Zion Tech Group</title>
-        <meta
-          name='description'
-          content='Privacy policy for Zion Tech Group. Learn how we protect and handle your personal information.'
-        />
-      </Helmet>
 
       <div className='min-h-screen bg-slate-50 py-16'>
         <div className='container mx-auto px-4'>
