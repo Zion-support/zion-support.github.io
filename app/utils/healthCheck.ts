@@ -30,7 +30,7 @@ async function checkApiHealth(): Promise<boolean> {
     // Simple health check - can be expanded to actual API endpoint
     return true;
   } catch (error) {
-    logger.error('API health check failed:', error);
+    logger.error('API health check failed', error as Error);
     return false;
   }
 }
@@ -129,9 +129,9 @@ export async function performHealthCheck(): Promise<HealthStatus> {
   };
 
   logger.group('Health Check Results', () => {
-    logger.log('Status:', status.status);
-    logger.log('Checks:', status.checks);
-    logger.log('Metrics:', status.metrics);
+    logger.info('Status:', { status: status.status });
+    logger.info('Checks:', { checks: status.checks });
+    logger.info('Metrics:', { metrics: status.metrics });
     logger.perf('Health check duration', performance.now() - startTime);
   });
 
@@ -142,18 +142,18 @@ export async function performHealthCheck(): Promise<HealthStatus> {
  * Start periodic health checks
  */
 export function startHealthMonitoring(intervalMs: number = 60000): () => void {
-  logger.log('Starting health monitoring...');
+  logger.info('Starting health monitoring...');
 
   const intervalId = setInterval(async () => {
     const health = await performHealthCheck();
     
     if (health.status !== 'healthy') {
-      logger.warn('Application health degraded:', health);
+      logger.warn('Application health degraded', { health: health as unknown as Record<string, unknown> });
     }
   }, intervalMs);
 
   return () => {
-    logger.log('Stopping health monitoring');
+    logger.info('Stopping health monitoring');
     clearInterval(intervalId);
   };
 }
