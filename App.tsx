@@ -1,57 +1,57 @@
-import React, { memo } from 'react';
+import React from 'react';
 import { createRoot } from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import HomePage from './app/page';
 import { performanceEnhancer } from './app/utils/performanceEnhancer';
-import { errorHandler } from './app/utils/enhancedErrorHandler';
+// import { errorHandler } from './app/utils/enhancedErrorHandler';
 import ErrorBoundary from './app/components/ErrorBoundary';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
 
-// Memoized components for better performance
-const UnifiedContentPromotion = memo(() => (
-  <div className='bg-gradient-to-r from-blue-600 to-purple-700 text-white py-16'>
-    <div className='container mx-auto px-4 text-center'>
-      <h2 className='text-3xl font-bold mb-4'>Latest AI Innovations</h2>
-      <p className='text-xl'>
-        Discover cutting-edge AI solutions for your business
-      </p>
-    </div>
-  </div>
-));
+// Memoized components for better performance (currently unused but kept for future use)
+// const UnifiedContentPromotion = memo(() => (
+//   <div className='bg-gradient-to-r from-blue-600 to-purple-700 text-white py-16'>
+//     <div className='container mx-auto px-4 text-center'>
+//       <h2 className='text-3xl font-bold mb-4'>Latest AI Innovations</h2>
+//       <p className='text-xl'>
+//         Discover cutting-edge AI solutions for your business
+//       </p>
+//     </div>
+//   </div>
+// ));
 
-const InteractiveAIROICalculator = memo(() => (
-  <div className='bg-gray-50 py-16'>
-    <div className='container mx-auto px-4 text-center'>
-      <h2 className='text-3xl font-bold mb-4'>AI ROI Calculator</h2>
-      <p className='text-xl text-gray-600'>
-        Calculate your potential AI investment returns
-      </p>
-    </div>
-  </div>
-));
+// const InteractiveAIROICalculator = memo(() => (
+//   <div className='bg-gray-50 py-16'>
+//     <div className='container mx-auto px-4 text-center'>
+//       <h2 className='text-3xl font-bold mb-4'>AI ROI Calculator</h2>
+//       <p className='text-xl text-gray-600'>
+//         Calculate your potential AI investment returns
+//       </p>
+//     </div>
+//   </div>
+// ));
 
-const ContentShowcase = memo(() => (
-  <div className='py-16'>
-    <div className='container mx-auto px-4 text-center'>
-      <h2 className='text-3xl font-bold mb-4'>Featured Content</h2>
-      <p className='text-xl text-gray-600'>
-        Explore our latest insights and case studies
-      </p>
-    </div>
-  </div>
-));
+// const ContentShowcase = memo(() => (
+//   <div className='py-16'>
+//     <div className='container mx-auto px-4 text-center'>
+//       <h2 className='text-3xl font-bold mb-4'>Featured Content</h2>
+//       <p className='text-xl text-gray-600'>
+//         Explore our latest insights and case studies
+//       </p>
+//     </div>
+//   </div>
+// ));
 
-const InteractiveContentShowcase2026 = memo(() => (
-  <div className='bg-blue-50 py-16'>
-    <div className='container mx-auto px-4 text-center'>
-      <h2 className='text-3xl font-bold mb-4'>2026 Content Showcase</h2>
-      <p className='text-xl text-gray-600'>
-        Latest trends and innovations for 2026
-      </p>
-    </div>
-  </div>
-));
+// const InteractiveContentShowcase2026 = memo(() => (
+//   <div className='bg-blue-50 py-16'>
+//     <div className='container mx-auto px-4 text-center'>
+//       <h2 className='text-3xl font-bold mb-4'>2026 Content Showcase</h2>
+//       <p className='text-xl text-gray-600'>
+//         Latest trends and innovations for 2026
+//       </p>
+//     </div>
+//   </div>
+// ));
 export default function App() {
 
   // Performance optimization: Preload critical resources
