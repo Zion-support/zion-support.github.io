@@ -109,7 +109,7 @@ class AdvancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
     }
   };
 
-  private sendErrorReport = async (errorReport: ErrorReport) => {
+  private sendErrorReport = async (errorReport: Record<string, unknown>) => {
     try {
       // Send to your error reporting service
       await fetch('/api/errors', {

@@ -28,8 +28,8 @@ const PerformanceMonitor: React.FC = () => {
       if ('PerformanceObserver' in window) {
         const observer = new PerformanceObserver((list) => {
           for (const entry of list.getEntries()) {
-            if (entry.entryType === 'layout-shift' && !(entry as LayoutShift).hadRecentInput) {
-              cumulativeLayoutShift += (entry as LayoutShift).value;
+            if (entry.entryType === 'layout-shift' && !(entry as PerformanceEntry & { hadRecentInput?: boolean }).hadRecentInput) {
+              cumulativeLayoutShift += (entry as PerformanceEntry & { value: number }).value;
             }
           }
         });
@@ -42,7 +42,7 @@ const PerformanceMonitor: React.FC = () => {
         const observer = new PerformanceObserver((list) => {
           for (const entry of list.getEntries()) {
             if (entry.entryType === 'first-input') {
-              firstInputDelay = (entry as PerformanceEventTiming).processingStart - entry.startTime;
+              firstInputDelay = (entry as PerformanceEntry & { processingStart: number }).processingStart - entry.startTime;
             }
           }
         });

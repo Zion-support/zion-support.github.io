@@ -45,8 +45,9 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     // Measure First Input Delay (FID)
     const fidObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
-      entries.forEach((entry: PerformanceEventTiming) => {
-        setMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime }));
+      entries.forEach((entry) => {
+        const fidEntry = entry as PerformanceEntry & { processingStart: number };
+        setMetrics(prev => ({ ...prev, fid: fidEntry.processingStart - fidEntry.startTime }));
       });
     });
     fidObserver.observe({ entryTypes: ['first-input'] });
@@ -55,9 +56,10 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     let clsValue = 0;
     const clsObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
-      entries.forEach((entry: LayoutShift) => {
-        if (!entry.hadRecentInput) {
-          clsValue += entry.value;
+      entries.forEach((entry) => {
+        const clsEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value: number };
+        if (!clsEntry.hadRecentInput) {
+          clsValue += clsEntry.value;
           setMetrics(prev => ({ ...prev, cls: clsValue }));
         }
       });
@@ -106,27 +108,18 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 
     // Use web-vitals library if available
     try {
-      import('web-vitals').then((webVitals: { 
-        getCLS?: (callback: (metric: { value: number }) => void) => void;
-        getFID?: (callback: (metric: { value: number }) => void) => void;
-        getFCP?: (callback: (metric: { value: number }) => void) => void;
-        getLCP?: (callback: (metric: { value: number }) => void) => void;
-        getTTFB?: (callback: (metric: { value: number }) => void) => void;
-      }) => {
-        if (webVitals.getCLS) {
-          webVitals.getCLS((metric: { value: number }) => setMetrics(prev => ({ ...prev, cls: metric.value })));
+      import('web-vitals').then((webVitals) => {
+        if (webVitals.onCLS) {
+          webVitals.onCLS((metric: { value: number }) => setMetrics(prev => ({ ...prev, cls: metric.value })));
         }
-        if (webVitals.getFID) {
-          webVitals.getFID((metric: { value: number }) => setMetrics(prev => ({ ...prev, fid: metric.value })));
+        if (webVitals.onFCP) {
+          webVitals.onFCP((metric: { value: number }) => setMetrics(prev => ({ ...prev, fcp: metric.value })));
         }
-        if (webVitals.getFCP) {
-          webVitals.getFCP((metric: { value: number }) => setMetrics(prev => ({ ...prev, fcp: metric.value })));
+        if (webVitals.onLCP) {
+          webVitals.onLCP((metric: { value: number }) => setMetrics(prev => ({ ...prev, lcp: metric.value })));
         }
-        if (webVitals.getLCP) {
-          webVitals.getLCP((metric: { value: number }) => setMetrics(prev => ({ ...prev, lcp: metric.value })));
-        }
-        if (webVitals.getTTFB) {
-          webVitals.getTTFB((metric: { value: number }) => setMetrics(prev => ({ ...prev, ttfb: metric.value })));
+        if (webVitals.onTTFB) {
+          webVitals.onTTFB((metric: { value: number }) => setMetrics(prev => ({ ...prev, ttfb: metric.value })));
         }
       }).catch(() => {
         // web-vitals not available, continue without it

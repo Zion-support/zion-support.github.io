@@ -1,7 +1,7 @@
 // Performance monitoring setup
 import { analytics } from './utils/analytics';
 import { errorHandler } from './utils/errorHandler';
-import { performanceOptimizer } from './utils/performanceOptimizer';
+import { performanceOptimizer, measurePageLoad, reportWebVitals } from './utils/performanceOptimizer';
 
 // Initialize performance monitoring
 if (typeof window !== 'undefined') {
@@ -12,6 +12,25 @@ if (typeof window !== 'undefined') {
   performanceOptimizer.lazyLoadImages();
 
   // Monitor long tasks
+  performanceOptimizer.monitorLongTasks((entries: PerformanceEntry[]) => {
+    entries.forEach((entry: PerformanceEntry) => {
+      analytics.track(
+        'long_task',
+        'performance',
+        'detected',
+        undefined,
+        entry.duration
+      );
+    });
+  });
+
+  // Track Web Vitals
+  const metrics = performanceOptimizer.measurePageLoad();
+  measurePageLoad().then((metrics: Record<string, number>) => {
+    reportWebVitals(metrics);
+  });
+
+  // Monitor long tasks (if available)
   if ('PerformanceObserver' in window) {
     const observer = new PerformanceObserver((list) => {
       list.getEntries().forEach((entry) => {
@@ -23,8 +42,16 @@ if (typeof window !== 'undefined') {
     observer.observe({ entryTypes: ['longtask'] });
   }
 
+  // Monitor long tasks (if available)
+  if ('monitorLongTasks' in performanceOptimizer) {
+    (performanceOptimizer as { monitorLongTasks: (callback: (entries: PerformanceEntryList) => void) => void }).monitorLongTasks((entries: PerformanceEntryList) => {
+      entries.forEach((entry: PerformanceEntry) => {
+        analytics.track('long_task', 'performance', 'detected', undefined, entry.duration);
+      });
+    });
+  }
+
   // Track Web Vitals
-  const metrics = performanceOptimizer.measurePageLoad();
   if (metrics) {
     performanceOptimizer.reportWebVitals(metrics);
   }
