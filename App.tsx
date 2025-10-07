@@ -4,7 +4,6 @@ import { BrowserRouter } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import HomePage from './app/page';
 import { performanceEnhancer } from './app/utils/performanceEnhancer';
-import { errorHandler } from './app/utils/enhancedErrorHandler';
 
 // Memoized components for better performance
 const App = () => {
