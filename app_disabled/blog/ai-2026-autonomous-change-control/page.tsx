@@ -21,7 +21,7 @@ export default function Page() {
             rollback.
           </p>
           <hr />
-          <article Name='prose prose-slate max-w-none'>
+          <article name='prose prose-slate max-w-none'>
             <h2>Why autonomous change control</h2>
             <p>
               As AI surfaces evolve quickly, organizations need lightweight but

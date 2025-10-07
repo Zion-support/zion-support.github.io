@@ -23,7 +23,7 @@ export default function Page() {
             January 22, 2026 • 16 min read • Breakthrough Technology
           </p>
         </header>
-        <article Name='prose prose-indigo max-w-none'>
+        <article name='prose prose-indigo max-w-none'>
           <p>
             Neural interface systems connect intent signals to safe, observable
             actions. In 2026, enterprise-ready implementations are emerging with

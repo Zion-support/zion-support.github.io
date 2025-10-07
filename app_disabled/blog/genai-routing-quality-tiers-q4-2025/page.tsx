@@ -35,7 +35,7 @@ export default function GenAIRoutingQualityTiersQ42025Page() {
             UX steady while controlling spend.
           </p>
         </header>
-        <article Name='prose prose-invert prose-slate max-w-none'>
+        <article name='prose prose-invert prose-slate max-w-none'>
           <h2>Tiered Models & Policies</h2>
           <p>
             Define quality tiers per product flow. Use policies to select models

@@ -10,7 +10,7 @@ export const metadata = {
 export default function EdgeExperiments2025() {
   return (
     <div className='max-w-4xl mx-auto px-4 py-10'>
-      <article Name='prose prose-lg max-w-none'>
+      <article name='prose prose-lg max-w-none'>
         <header className='mb-8'>
           <div className='flex items-center gap-2 mb-3'>
             <span className='bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-3 py-1 rounded-full text-xs font-bold'>
