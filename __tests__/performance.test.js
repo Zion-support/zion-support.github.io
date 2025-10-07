@@ -2,12 +2,26 @@
  * Performance tests for the Zion Tech Group website
  */
 
+// Mock PerformanceObserver globally before any imports
+class MockPerformanceObserver {
+  constructor(callback) {
+    this.callback = callback;
+  }
+  observe() {}
+  disconnect() {}
+  takeRecords() { return []; }
+}
+global.PerformanceObserver = MockPerformanceObserver;
+
 describe('Performance Tests', () => {
-  beforeEach(() => {
+  let locationSpy;
+
+  beforeAll(() => {
     // Mock performance API
     global.performance = {
       now: jest.fn(() => Date.now()),
       getEntriesByType: jest.fn(() => []),
+      getEntriesByName: jest.fn(() => []),
       mark: jest.fn(),
       measure: jest.fn(),
       memory: {
@@ -15,20 +29,31 @@ describe('Performance Tests', () => {
       },
     };
 
+<<<<<<< HEAD
     // Mock window object
-    Object.defineProperty(window, 'location', {
-      value: {
-        href: 'http://localhost:3000',
-        reload: jest.fn(),
-      },
-      writable: true,
-    });
+    delete window.location;
+    window.location = {
+      href: 'http://localhost:3000',
+      reload: jest.fn(),
+    };
 
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2d9f
     // Mock navigator
     Object.defineProperty(navigator, 'userAgent', {
       value: 'Mozilla/5.0 (Test Browser)',
       writable: true,
+      configurable: true,
     });
+  });
+
+  beforeEach(() => {
+    // Mock window.location using spies instead of redefining
+    locationSpy = jest.spyOn(window.location, 'reload').mockImplementation(() => {});
+  });
+
+  afterEach(() => {
+    locationSpy.mockRestore();
   });
 
   test('PerformanceOptimizer should initialize correctly', () => {
