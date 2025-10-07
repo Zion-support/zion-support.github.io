@@ -206,7 +206,8 @@ class TestRunner {
     this.results = [];
 
     try {
-      console.log('🚀 Starting test run...');
+      // eslint-disable-next-line no-console
+console.log('🚀 Starting test run...');
       
       for (const suite of this.suites) {
         await this.runSuite(suite);
@@ -223,7 +224,8 @@ class TestRunner {
    * Run a test suite
    */
   private async runSuite(suite: TestSuite): Promise<void> {
-    console.log(`\n📁 Running suite: ${suite.name}`);
+    // eslint-disable-next-line no-console
+console.log(`\n📁 Running suite: ${suite.name}`);
 
     // Run beforeAll hooks
     for (const hook of suite.beforeAll) {
@@ -281,7 +283,8 @@ class TestRunner {
       });
 
       if (this.config.verbose) {
-        console.log(`✅ ${testName} (${Date.now() - startTime}ms)`);
+        // eslint-disable-next-line no-console
+console.log(`✅ ${testName} (${Date.now() - startTime}ms)`);
       }
     } catch (error) {
       this.results.push({
@@ -292,8 +295,10 @@ class TestRunner {
         assertions,
       });
 
-      console.error(`❌ ${testName} (${Date.now() - startTime}ms)`);
-      console.error(error);
+      // eslint-disable-next-line no-console
+console.error(`❌ ${testName} (${Date.now() - startTime}ms)`);
+      // eslint-disable-next-line no-console
+console.error(error);
 
       if (this.config.bail) {
         throw error;
@@ -308,7 +313,8 @@ class TestRunner {
     try {
       await hook();
     } catch (error) {
-      console.error(`❌ ${hookName} hook failed:`, error);
+      // eslint-disable-next-line no-console
+console.error(`❌ ${hookName} hook failed:`, error);
       throw error;
     }
   }
@@ -343,12 +349,18 @@ class TestRunner {
     const failed = this.results.filter(r => r.status === 'failed').length;
     const skipped = this.results.filter(r => r.status === 'skipped').length;
 
-    console.log('\n📊 Test Results:');
-    console.log(`Total: ${this.results.length}`);
-    console.log(`Passed: ${passed}`);
-    console.log(`Failed: ${failed}`);
-    console.log(`Skipped: ${skipped}`);
-    console.log(`Duration: ${duration}ms`);
+    // eslint-disable-next-line no-console
+console.log('\n📊 Test Results:');
+    // eslint-disable-next-line no-console
+console.log(`Total: ${this.results.length}`);
+    // eslint-disable-next-line no-console
+console.log(`Passed: ${passed}`);
+    // eslint-disable-next-line no-console
+console.log(`Failed: ${failed}`);
+    // eslint-disable-next-line no-console
+console.log(`Skipped: ${skipped}`);
+    // eslint-disable-next-line no-console
+console.log(`Duration: ${duration}ms`);
 
     if (this.config.reporter === 'json') {
       this.generateJsonReport();
@@ -375,8 +387,10 @@ class TestRunner {
       timestamp: new Date().toISOString(),
     };
 
-    console.log('\n📄 JSON Report:');
-    console.log(JSON.stringify(report, null, 2));
+    // eslint-disable-next-line no-console
+console.log('\n📄 JSON Report:');
+    // eslint-disable-next-line no-console
+console.log(JSON.stringify(report, null, 2));
   }
 
   /**
@@ -420,8 +434,10 @@ class TestRunner {
 </body>
 </html>`;
 
-    console.log('\n📄 HTML Report generated');
-    console.log(html);
+    // eslint-disable-next-line no-console
+console.log('\n📄 HTML Report generated');
+    // eslint-disable-next-line no-console
+console.log(html);
   }
 
   /**
@@ -440,8 +456,10 @@ class TestRunner {
     </testsuite>
 </testsuites>`;
 
-    console.log('\n📄 JUnit Report:');
-    console.log(xml);
+    // eslint-disable-next-line no-console
+console.log('\n📄 JUnit Report:');
+    // eslint-disable-next-line no-console
+console.log(xml);
   }
 }
 

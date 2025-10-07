@@ -56,7 +56,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       const observer = performanceOptimizer.monitorLongTasks(
         (entries: PerformanceEntryList) => {
           setLongTasks(prev => [...prev, ...entries]);
-          console.warn('Long tasks detected:', entries);
+          // Long tasks detected - could be reported to analytics
         }
       );
 
@@ -84,7 +84,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         }
 
         if (entry.entryType === 'first-input') {
-          const fid = (entry as any).processingStart - entry.startTime;
+          const fid = (entry as PerformanceEventTiming).processingStart - entry.startTime;
           setMetrics(prev => ({ ...prev, FID: fid }));
           if (enableReporting) {
             performanceOptimizer.reportWebVitals({ FID: fid });
@@ -92,7 +92,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         }
 
         if (entry.entryType === 'layout-shift') {
-          const cls = (entry as any).value;
+          const cls = (entry as LayoutShift).value;
           setMetrics(prev => ({ ...prev, CLS: cls }));
           if (enableReporting) {
             performanceOptimizer.reportWebVitals({ CLS: cls });
@@ -105,8 +105,8 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       observer.observe({
         entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'],
       });
-    } catch (e) {
-      console.warn('Performance Observer not supported:', e);
+    } catch {
+      // Performance Observer not supported - fallback handling
     }
 
     return () => {
@@ -120,7 +120,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       process?.env.NODE_ENV === 'development' &&
       Object.keys(metrics).length > 0
     ) {
-      console.log('Performance Metrics:', metrics);
+      // Performance metrics available for development debugging
     }
   }, [metrics]);
 

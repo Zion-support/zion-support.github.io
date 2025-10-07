@@ -106,7 +106,8 @@ class PerformanceEnhancer {
     this.initializeRealTimeMonitoring();
 
     if (process.env.NODE_ENV === 'development') {
-      console.log('🚀 Performance monitoring started');
+      // eslint-disable-next-line no-console
+console.log('🚀 Performance monitoring started');
     }
   }
 
@@ -121,7 +122,8 @@ class PerformanceEnhancer {
     this.isMonitoring = false;
 
     if (process.env.NODE_ENV === 'development') {
-      console.log('⏹️ Performance monitoring stopped');
+      // eslint-disable-next-line no-console
+console.log('⏹️ Performance monitoring stopped');
     }
   }
 
@@ -192,7 +194,8 @@ class PerformanceEnhancer {
     this.observePerformanceEntry('measure', (entries) => {
       entries.forEach(entry => {
         if (process.env.NODE_ENV === 'development') {
-          console.log(`📊 User Timing: ${entry.name} - ${entry.duration.toFixed(2)}ms`);
+          // eslint-disable-next-line no-console
+console.log(`📊 User Timing: ${entry.name} - ${entry.duration.toFixed(2)}ms`);
         }
       });
     });
@@ -200,7 +203,8 @@ class PerformanceEnhancer {
     this.observePerformanceEntry('mark', (entries) => {
       entries.forEach(entry => {
         if (process.env.NODE_ENV === 'development') {
-          console.log(`📍 Performance Mark: ${entry.name}`);
+          // eslint-disable-next-line no-console
+console.log(`📍 Performance Mark: ${entry.name}`);
         }
       });
     });
@@ -215,7 +219,8 @@ class PerformanceEnhancer {
     this.observePerformanceEntry('longtask', (entries) => {
       entries.forEach(entry => {
         if (process.env.NODE_ENV === 'development') {
-          console.warn(`⚠️ Long Task detected: ${entry.duration.toFixed(2)}ms`);
+          // eslint-disable-next-line no-console
+console.warn(`⚠️ Long Task detected: ${entry.duration.toFixed(2)}ms`);
         }
         this.metrics.totalBlockingTime += entry.duration - 50; // 50ms threshold
       });
@@ -233,7 +238,8 @@ class PerformanceEnhancer {
       setInterval(() => {
         const memory = (performance as Performance & { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
         if (process.env.NODE_ENV === 'development') {
-          console.log('🧠 Memory Usage:', {
+          // eslint-disable-next-line no-console
+console.log('🧠 Memory Usage:', {
             used: `${(memory.usedJSHeapSize / 1024 / 1024).toFixed(2)} MB`,
             total: `${(memory.totalJSHeapSize / 1024 / 1024).toFixed(2)} MB`,
             limit: `${(memory.jsHeapSizeLimit / 1024 / 1024).toFixed(2)} MB`,
@@ -252,7 +258,8 @@ class PerformanceEnhancer {
     // Monitor connection changes
     if ('connection' in navigator) {
       const connection = (navigator as Navigator & { connection: { effectiveType: string; downlink: number; rtt: number; saveData: boolean; addEventListener: (event: string, listener: () => void) => void } }).connection;
-      console.log('🌐 Network Info:', {
+      // eslint-disable-next-line no-console
+console.log('🌐 Network Info:', {
         effectiveType: connection.effectiveType,
         downlink: connection.downlink,
         rtt: connection.rtt,
@@ -260,7 +267,8 @@ class PerformanceEnhancer {
       });
 
       connection.addEventListener('change', () => {
-        console.log('🔄 Network changed:', {
+        // eslint-disable-next-line no-console
+console.log('🔄 Network changed:', {
           effectiveType: connection.effectiveType,
           downlink: connection.downlink,
           rtt: connection.rtt,
@@ -277,7 +285,8 @@ class PerformanceEnhancer {
 
     // JavaScript errors
     window.addEventListener('error', (event) => {
-      console.error('🚨 JavaScript Error:', {
+      // eslint-disable-next-line no-console
+console.error('🚨 JavaScript Error:', {
         message: event.message,
         filename: event.filename,
         lineno: event.lineno,
@@ -288,14 +297,16 @@ class PerformanceEnhancer {
 
     // Unhandled promise rejections
     window.addEventListener('unhandledrejection', (event) => {
-      console.error('🚨 Unhandled Promise Rejection:', event.reason);
+      // eslint-disable-next-line no-console
+console.error('🚨 Unhandled Promise Rejection:', event.reason);
     });
 
     // Resource loading errors
     window.addEventListener('error', (event) => {
       if (event.target !== window) {
         const target = event.target as HTMLElement & { src?: string; href?: string };
-        console.error('🚨 Resource Error:', {
+        // eslint-disable-next-line no-console
+console.error('🚨 Resource Error:', {
           type: event.target?.constructor.name,
           src: target?.src || target?.href,
         });
@@ -333,7 +344,8 @@ class PerformanceEnhancer {
       observer.observe({ type, buffered: true });
       this.observers.push(observer);
     } catch (error) {
-      console.warn(`Failed to observe ${type}:`, error);
+      // eslint-disable-next-line no-console
+console.warn(`Failed to observe ${type}:`, error);
     }
   }
 
@@ -345,7 +357,8 @@ class PerformanceEnhancer {
     const size = entry.transferSize || 0;
     
     if (loadTime > 1000) { // Resources taking more than 1 second
-      console.warn(`🐌 Slow Resource: ${entry.name} - ${loadTime.toFixed(2)}ms (${(size / 1024).toFixed(2)}KB)`);
+      // eslint-disable-next-line no-console
+console.warn(`🐌 Slow Resource: ${entry.name} - ${loadTime.toFixed(2)}ms (${(size / 1024).toFixed(2)}KB)`);
     }
   }
 
@@ -355,7 +368,8 @@ class PerformanceEnhancer {
   private checkPerformanceBudget(metric: string, value: number): void {
     const threshold = this.performanceBudget.get(metric);
     if (threshold && value > threshold) {
-      console.warn(`⚠️ Performance Budget Exceeded: ${metric} (${value.toFixed(2)}ms > ${threshold}ms)`);
+      // eslint-disable-next-line no-console
+console.warn(`⚠️ Performance Budget Exceeded: ${metric} (${value.toFixed(2)}ms > ${threshold}ms)`);
     }
   }
 
@@ -381,7 +395,8 @@ class PerformanceEnhancer {
       recommendations: this.generateRecommendations(),
     };
 
-    console.log('📊 Performance Report:', report);
+    // eslint-disable-next-line no-console
+console.log('📊 Performance Report:', report);
     
     // Send to analytics if available
     if ('gtag' in window) {

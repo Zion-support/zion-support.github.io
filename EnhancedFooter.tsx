@@ -1,4 +1,18 @@
+<<<<<<< HEAD
 // import * as Icons from 'lucide-react';
+=======
+<<<<<<< HEAD
+import {
+  Github,
+  Linkedin,
+  Mail,
+  MapPin,
+  Phone,
+  Twitter,
+} from 'lucide-react';
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-ccfd
+>>>>>>> origin/main
 import React from 'react';
 import Link from 'next/link';
 
@@ -59,18 +73,27 @@ const EnhancedFooter: React.FC = () => {
                 href='https://linkedin.com/company/ziontechgroup'
                 className='text-gray-400 hover:text-white transition-colors'
               >
+<<<<<<< HEAD
                 <span className='w-5 h-5'>in</span>
+=======
+                <span className='text-lg'>💼</span>
+>>>>>>> origin/main
               </a>
               <a
                 href='https://twitter.com/ziontechgroup'
                 className='text-gray-400 hover:text-white transition-colors'
               >
+<<<<<<< HEAD
                 <span className='w-5 h-5'>🐦</span>
+=======
+                <span className='text-lg'>🐦</span>
+>>>>>>> origin/main
               </a>
               <a
                 href='https://github.com/ziontechgroup'
                 className='text-gray-400 hover:text-white transition-colors'
               >
+<<<<<<< HEAD
                 <span className='w-5 h-5'>⚡</span>
               </a>
               <a
@@ -78,6 +101,13 @@ const EnhancedFooter: React.FC = () => {
                 className='text-gray-400 hover:text-white transition-colors'
               >
                 <span className='w-5 h-5'>✉️</span>
+=======
+<<<<<<< HEAD
+                <Github className='w-5 h-5' />
+=======
+                <span className='text-lg'>🐙</span>
+>>>>>>> cursor/fix-errors-and-merge-to-main-ccfd
+>>>>>>> origin/main
               </a>
             </div>
           </div>
@@ -109,6 +139,7 @@ const EnhancedFooter: React.FC = () => {
               ))}
             </ul>
           </div>
+<<<<<<< HEAD
           <div>
             <h3 className='text-lg font-semibold mb-4'>Resources</h3>
             <ul className='space-y-2'>
@@ -122,6 +153,32 @@ const EnhancedFooter: React.FC = () => {
                 </li>
               ))}
             </ul>
+=======
+        </div>
+        <div className='border-t border-gray-700 mt-8 pt-8'>
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
+            <div className='flex items-center space-x-3'>
+              <span className='text-blue-400 text-lg'>📧</span>
+              <div>
+                <p className='text-sm text-gray-400'>Email</p>
+                <p className='text-white'>info@ziontechgroup.com</p>
+              </div>
+            </div>
+            <div className='flex items-center space-x-3'>
+              <span className='text-blue-400 text-lg'>📞</span>
+              <div>
+                <p className='text-sm text-gray-400'>Phone</p>
+                <p className='text-white'>+1 (555) 123-4567</p>
+              </div>
+            </div>
+            <div className='flex items-center space-x-3'>
+              <span className='text-blue-400 text-lg'>📍</span>
+              <div>
+                <p className='text-sm text-gray-400'>Address</p>
+                <p className='text-white'>123 Tech Street, Innovation City</p>
+              </div>
+            </div>
+>>>>>>> origin/main
           </div>
         </div>
         
@@ -151,13 +208,20 @@ const EnhancedFooter: React.FC = () => {
               ))}
             </div>
           </div>
+<<<<<<< HEAD
           <div className='mt-6 text-center text-gray-400 text-sm'>
             <p>&copy; {currentYear} Zion Tech Group. All rights reserved.</p>
           </div>
+=======
+>>>>>>> origin/main
         </div>
       </div>
     </footer>
   );
 };
 
+<<<<<<< HEAD
 export default EnhancedFooter;
+=======
+export default EnhancedFooter;
+>>>>>>> origin/main

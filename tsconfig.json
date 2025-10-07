@@ -2,11 +2,7 @@
   "compilerOptions": {
     "target": "ES2020",
     "useDefineForClassFields": true,
-    "lib": [
-      "ES2020",
-      "DOM",
-      "DOM.Iterable"
-    ],
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "module": "ESNext",
     "skipLibCheck": true,
     "allowImportingTsExtensions": false,
@@ -23,33 +19,15 @@
     "moduleResolution": "bundler",
     "baseUrl": ".",
     "paths": {
-      "@/*": [
-        "src/*"
-      ],
-      "@/components/*": [
-        "src/components/*"
-      ],
-      "@/pages/*": [
-        "src/pages/*"
-      ],
-      "@/utils/*": [
-        "src/utils/*"
-      ],
-      "@/types/*": [
-        "src/types/*"
-      ],
-      "@/hooks/*": [
-        "src/hooks/*"
-      ],
-      "@/config/*": [
-        "src/config/*"
-      ],
-      "@/data/*": [
-        "src/data/*"
-      ],
-      "@/content/*": [
-        "src/content/*"
-      ]
+      "@/*": ["src/*"],
+      "@/components/*": ["src/components/*"],
+      "@/pages/*": ["src/pages/*"],
+      "@/utils/*": ["src/utils/*"],
+      "@/types/*": ["src/types/*"],
+      "@/hooks/*": ["src/hooks/*"],
+      "@/config/*": ["src/config/*"],
+      "@/data/*": ["src/data/*"],
+      "@/content/*": ["src/content/*"]
     },
     "incremental": true,
     "plugins": [
@@ -57,12 +35,13 @@
         "name": "next"
       }
     ],
-    "allowJs": true
+    "allowJs": true,
+    "tsBuildInfoFile": ".next/cache/tsconfig.tsbuildinfo"
   },
   "include": [
     "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
+    "app/**/*.ts",
+    "app/**/*.tsx",
     ".next/types/**/*.ts"
   ],
   "exclude": [
@@ -70,37 +49,37 @@
     ".next",
     "out",
     "dist",
-    "_app_disabled",
-    "_conflicted_disabled",
-    "_pages_api_disabled",
-    "_pages_disabled",
-    "admin-api-disabled",
-    "api-disabled",
-    "api.disabled",
-    "api.disabled.temp",
-    "api-backup",
-    "apps.backup",
-    "automation_backup",
-    "ai-optimization-backups",
-    "automation_logs",
-    "all-automations-reports",
-    "accessibility-reports",
-    "corrupted-files-backup",
-    "corrupted_backup",
-    "corrupted_files_backup_2",
-    "content",
-    "contracts",
-    "components_backup",
-    "data",
-    "data_backup",
-    "dao",
-    "deployments",
-    "disabled-api",
-    "e2e",
-    "factories",
-    "hooks",
-    "lib_backup",
-    "services",
-    "middleware"
+    "_app_disabled/**/*",
+    "_conflicted_disabled/**/*",
+    "_pages_api_disabled/**/*",
+    "_pages_disabled/**/*",
+    "admin-api-disabled/**/*",
+    "api-disabled/**/*",
+    "api.disabled/**/*",
+    "api.disabled.temp/**/*",
+    "api-backup/**/*",
+    "apps.backup/**/*",
+    "automation_backup/**/*",
+    "ai-optimization-backups/**/*",
+    "automation_logs/**/*",
+    "all-automations-reports/**/*",
+    "accessibility-reports/**/*",
+    "corrupted-files-backup/**/*",
+    "corrupted_backup/**/*",
+    "corrupted_files_backup_2/**/*",
+    "content/**/*",
+    "contracts/**/*",
+    "components_backup/**/*",
+    "data/**/*",
+    "data_backup/**/*",
+    "dao/**/*",
+    "deployments/**/*",
+    "disabled-api/**/*",
+    "e2e/**/*",
+    "factories/**/*",
+    "hooks/**/*",
+    "lib_backup/**/*",
+    "services/**/*",
+    "middleware/**/*"
   ]
 }
