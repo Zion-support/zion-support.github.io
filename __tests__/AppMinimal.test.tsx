@@ -5,13 +5,9 @@ import React from 'react';
 
 describe('AppMinimal', () => {
   it('renders without crashing', () => {
-<<<<<<<< HEAD:temp-files/AppMinimal.test.tsx
-    render(<AppMinimal />);
-========
     // Mock component for testing
     const MockAppMinimal = () => <div>Zion Tech Group</div>;
     render(<MockAppMinimal />);
->>>>>>>> origin/main:__tests__/AppMinimal.test.tsx
     expect(screen.getByText(/Zion Tech Group/i)).toBeInTheDocument();
   });
 });
