@@ -36,10 +36,20 @@ const App: React.FC = () => {
     // Initialize performance monitoring
     performanceOptimizer.init();
     
-    console.log('Performance monitoring initialized');
-    console.log(
-      '🚀 Zion Tech Group App initialized with comprehensive monitoring',
-    );
+    // Initialize Web Vitals monitoring
+    if (typeof window !== 'undefined' && 'performance' in window) {
+      const pageLoadMetrics = collectPerformanceMetrics();
+      const metrics = performanceOptimizer.getMetrics();
+      if (pageLoadMetrics) {
+        logger.info('Performance metrics collected', 'App', pageLoadMetrics);
+      }
+      if (metrics) {
+        logger.info('Performance metrics', 'App', metrics);
+      }
+    }
+    
+    logger.lifecycle('performance monitoring initialized', 'App');
+    logger.info('🚀 Zion Tech Group App initialized with comprehensive monitoring', 'App');
   }, []);
 
   return (

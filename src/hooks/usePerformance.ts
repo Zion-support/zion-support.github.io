@@ -1,7 +1,6 @@
 // usePerformance - TypeScript definitions and utilities
-import { useEffect, useCallback, useRef } from 'react';
+import { useEffect } from 'react';
 import { monitorLongTasks } from '../utils/performanceOptimizer';
-import { performanceOptimizer } from '../utils/performanceOptimizer';
 import analytics from '../utils/analytics';
 
 export interface usePerformanceConfig {

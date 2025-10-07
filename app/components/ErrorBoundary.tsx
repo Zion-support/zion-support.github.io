@@ -38,6 +38,10 @@ class ErrorBoundary extends Component<Props, State> {
         });
       }
     }
+
+    if (this.props.enableErrorReporting) {
+      console.error('Error caught by boundary:', error, errorInfo);
+    }
   }
 
   render() {
@@ -54,13 +58,8 @@ class ErrorBoundary extends Component<Props, State> {
                   Oops! Something went wrong
                 </h1>
                 <p className='text-gray-600 mb-6'>
-<<<<<<< HEAD
                   We&apos;re sorry for the inconvenience. Please try refreshing the
                   page.
-=======
-                We&apos;re sorry for the inconvenience. Please try refreshing the
-                page.
->>>>>>> 5992c11d02162c3948067fa004a2bdaa5f45a736
                 </p>
                 <div className='space-y-3'>
                   <button

@@ -102,7 +102,8 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
       setMetrics(newMetrics);
       setLastUpdate(new Date());
     } catch (error) {
-      console.error('Failed to update metrics:', error);
+      // eslint-disable-next-line no-console
+console.error('Failed to update metrics:', error);
     }
   }, []);
 

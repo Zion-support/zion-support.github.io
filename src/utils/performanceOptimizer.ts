@@ -151,7 +151,8 @@ export const measurePageLoad = (): WebVitalsMetrics | null => {
  * Report Web Vitals to analytics
  */
 export const reportWebVitals = (metrics: WebVitalsMetrics): void => {
-  console.log('Web Vitals: ', metrics);
+  // eslint-disable-next-line no-console
+console.log('Web Vitals: ', metrics);
 
   // Send to analytics service
   if (typeof window !== 'undefined' && (window as unknown as { gtag?: Function }).gtag) {
@@ -183,7 +184,8 @@ export const monitorLongTasks = (
     observer.observe({ entryTypes: ['longtask'] });
     return observer;
   } catch (e) {
-    console.warn('Long task monitoring not supported: ', e);
+    // eslint-disable-next-line no-console
+console.warn('Long task monitoring not supported: ', e);
     return null;
   }
 };
@@ -287,7 +289,7 @@ class PerformanceOptimizer {
 // Export singleton instance
 export const performanceOptimizer = PerformanceOptimizer.getInstance();
 
-export default {
+const performanceOptimizerUtils = {
   lazyLoadImages,
   preloadCriticalResources,
   optimizeScroll,
@@ -299,3 +301,5 @@ export default {
   throttle,
   performanceOptimizer
 };
+
+export default performanceOptimizerUtils;

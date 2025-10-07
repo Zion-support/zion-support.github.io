@@ -25,7 +25,8 @@ export const errorHandler = (
   const { statusCode = 500, message } = err;
 
   // Log error for monitoring
-  console.error(`API Error [${statusCode}]: ${message}`, {
+  // eslint-disable-next-line no-console
+console.error(`API Error [${statusCode}]: ${message}`, {
     url: req.url,
     method: req.method,
     timestamp: new Date().toISOString(),
