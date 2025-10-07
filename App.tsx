@@ -98,7 +98,6 @@ const App = () => {
     if (typeof document !== 'undefined') {
       // Initialize enhanced performance monitoring
       performanceEnhancer.startMonitoring();
-      performanceOptimizer.initialize();
       
       // Preload critical fonts
       const fontLink = document.createElement('link');
