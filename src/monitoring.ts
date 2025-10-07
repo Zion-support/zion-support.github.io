@@ -2,6 +2,7 @@
 import { analytics } from './utils/analytics';
 import { errorHandler } from './utils/errorHandler';
 import { performanceOptimizer, measurePageLoad, reportWebVitals } from './utils/performanceOptimizer';
+import logger from '../lib/logger';
 
 /**
  * Initialize performance monitoring for the application
@@ -46,22 +47,22 @@ function initializeMonitoring(): void {
 
     // Track errors globally
     window.addEventListener('error', (event) => {
-      errorHandler.logError(event.error || new Error(event.message), {
-        filename: event.filename,
-        lineno: event.lineno,
-        colno: event.colno,
+      const errorMessage = event.error?.message || event.message;
+      const additionalInfo = event.filename ? ` (${event.filename}:${event.lineno}:${event.colno})` : '';
+      errorHandler.logError(event.error || new Error(errorMessage + additionalInfo), {
+        url: event.filename,
       });
     });
 
     // Track unhandled promise rejections
     window.addEventListener('unhandledrejection', (event) => {
-      errorHandler.logError(new Error(`Unhandled Promise Rejection: ${event.reason}`), {
-        type: 'unhandledrejection',
-        promise: event.promise,
+      const errorMessage = `Unhandled Promise Rejection: ${event.reason}`;
+      errorHandler.logError(new Error(errorMessage), {
+        componentStack: 'unhandledrejection',
       });
     });
   } catch (error) {
-    console.error('Failed to initialize monitoring:', error);
+    logger.error('Failed to initialize monitoring:', error as Error);
   }
 }
 
