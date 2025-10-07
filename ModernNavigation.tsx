@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-// import { Menu, X } from 'lucide-react';
-=======
 import { Menu, X } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-dbc2
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -70,8 +66,4 @@ const ModernNavigation: React.FC<ModernNavigationProps> = ({ className = '' }) =
   );
 };
 
-<<<<<<< HEAD
 export default ModernNavigation;
-=======
-export default ModernNavigation;
->>>>>>> cursor/fix-errors-and-merge-to-main-dbc2
