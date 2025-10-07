@@ -1,16 +1,17 @@
+'use client';
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
 const UltimateBusinessIntelligence2025Banner = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
-
+  
   const content = [
     {
-      id: 'ultimate-business-intelligence-2025',
-      title: 'Ultimate Business Intelligence Revolution 2025',
-      description: 'Transform your enterprise with AI-powered business intelligence achieving 30,000% ROI, 70% cost reduction, and 90% efficiency gains.',
-      url: '/blog/ultimate-business-intelligence-2025',
+      id: 'ultimate-business-intelligence-revolution',
+      title: 'AI 2025: The Ultimate Business Intelligence Revolution',
+      description: 'Transform your enterprise with next-generation AI-powered business intelligence that delivers unprecedented insights and competitive advantage.',
+      url: '/blog/ai-2025-ultimate-business-intelligence-revolution-ultimate-breakthrough',
       type: 'Blog Post',
       metrics: {
         roi: '30,000%',
@@ -18,55 +19,58 @@ const UltimateBusinessIntelligence2025Banner = () => {
         accuracy: '99.99%',
         speed: '5,000% faster'
       },
-      tags: ['AI', 'Business Intelligence', 'Enterprise', 'ROI', '2025']
+      readingTime: '35 min read',
+      featured: true,
     },
     {
-      id: 'ai-dashboard-2025',
-      title: 'Revolutionary AI Dashboard 2025',
-      description: 'Experience the future of data visualization with our cutting-edge AI dashboard featuring real-time analytics and predictive insights.',
-      url: '/services/ai-dashboard',
-      type: 'Service',
+      id: 'fortune-500-business-intelligence-success',
+      title: 'Fortune 500 Ultimate Business Intelligence Success',
+      description: 'How a $15.2B manufacturing giant achieved unprecedented business intelligence transformation with AI-powered analytics.',
+      url: '/case-studies/fortune-500-ultimate-business-intelligence-30000-roi-success-story',
+      type: 'Case Study',
       metrics: {
-        users: '1M+',
-        uptime: '99.9%',
-        response: '<100ms',
-        insights: 'Real-time'
+        roi: '30,000%',
+        savings: '$750B',
+        company: '$15.2B',
+        timeline: '18 months'
       },
-      tags: ['Dashboard', 'Analytics', 'Real-time', 'AI', '2025']
+      readingTime: '25 min read',
+      featured: true,
     },
     {
-      id: 'enterprise-automation-2025',
-      title: 'Enterprise Automation Suite 2025',
-      description: 'Automate your entire business process with our comprehensive automation suite, reducing manual work by 95% and increasing productivity by 300%.',
-      url: '/services/automation',
-      type: 'Service',
+      id: 'business-intelligence-implementation-guide',
+      title: 'AI 2025 Ultimate Business Intelligence Implementation Guide',
+      description: 'Complete roadmap to 30,000% ROI through revolutionary AI-powered business intelligence transformation.',
+      url: '/resources/ai-2025-ultimate-business-intelligence-implementation-guide',
+      type: 'Implementation Guide',
       metrics: {
-<<<<<<< HEAD
         roi: '30,000%',
         success: '99.8%',
         timeline: '18 months',
         adoption: '100%'
-=======
-        automation: '95%',
-        productivity: '300%',
-        efficiency: '400%',
-        cost: '80% reduction'
->>>>>>> c122ace256a93e0bb3b33b12f92a0d16580a74c2
       },
-      tags: ['Automation', 'Enterprise', 'Productivity', 'Efficiency', '2025']
+      readingTime: '60 min read',
+      featured: true
     }
   ];
 
   useEffect(() => {
-    const timer = setInterval(() => {
+    const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % content.length);
     }, 5000);
-
-    return () => clearInterval(timer);
+    return () => clearInterval(interval);
   }, [content.length]);
 
-  const handleClose = () => {
+  useEffect(() => {
+    const dismissed = localStorage.getItem('ultimate-business-intelligence-2025-banner-dismissed');
+    if (dismissed === 'true') {
+      setIsVisible(false);
+    }
+  }, []);
+
+  const handleDismiss = () => {
     setIsVisible(false);
+    localStorage.setItem('ultimate-business-intelligence-2025-banner-dismissed', 'true');
   };
 
   if (!isVisible) return null;
@@ -74,17 +78,47 @@ const UltimateBusinessIntelligence2025Banner = () => {
   const currentContent = content[currentSlide];
 
   return (
-    <div className="relative bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 text-white overflow-hidden">
-      <div className="absolute inset-0 bg-black/20"></div>
-      <div className="relative z-10 p-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex items-center justify-between">
-            <div className="flex-1">
-              <div className="flex items-center gap-3 mb-2">
-                <span className="bg-blue-500/20 text-blue-300 px-3 py-1 rounded-full text-sm font-semibold">
+    <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
+      {/* Animated Background Effects */}
+      <div className="absolute inset-0">
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl animate-pulse"></div>
+        <div
+          className="absolute top-3/4 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse"
+          style={{ animationDelay: '2s' }}
+        ></div>
+        <div
+          className="absolute bottom-1/4 left-1/3 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse"
+          style={{ animationDelay: '1s' }}
+        ></div>
+      </div>
+
+      <div className="relative z-10 container mx-auto px-4 py-16">
+        {/* Header */}
+        <div className="text-center mb-16">
+          <div className="flex items-center justify-center gap-3 mb-6">
+            <span className="text-2xl">🚀</span>
+            <span className="text-cyan-400 font-bold text-xl">
+              BREAKING: ULTIMATE BUSINESS INTELLIGENCE REVOLUTION 2025
+            </span>
+            <span className="text-2xl">⚡</span>
+          </div>
+          <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6">
+            {currentContent.title}
+          </h1>
+          <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">
+            {currentContent.description}
+          </p>
+        </div>
+
+        {/* Main Content Card */}
+        <div className="max-w-6xl mx-auto">
+          <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 md:p-12 border border-white/20 shadow-2xl">
+            {/* Content Type Badge */}
+            <div className="flex items-center justify-between mb-8">
+              <div className="flex items-center gap-4">
+                <span className="px-4 py-2 bg-gradient-to-r from-cyan-500/30 to-blue-500/30 text-cyan-200 text-sm font-bold rounded-full border border-cyan-400/50">
                   {currentContent.type}
                 </span>
-<<<<<<< HEAD
                 <span className="text-gray-300 text-sm">⏱️ {currentContent.readingTime}</span>
               </div>
               <button
@@ -154,84 +188,9 @@ const UltimateBusinessIntelligence2025Banner = () => {
               <div className="text-gray-300">{stat.label}</div>
             </div>
           ))}
-=======
-                <span className="text-yellow-400 text-sm font-medium">
-                  NEW 2025
-                </span>
-              </div>
-              
-              <h2 className="text-2xl font-bold mb-2">
-                {currentContent.title}
-              </h2>
-              
-              <p className="text-gray-200 mb-4 max-w-2xl">
-                {currentContent.description}
-              </p>
-              
-              <div className="flex flex-wrap gap-4 mb-4">
-                {Object.entries(currentContent.metrics).map(([key, value]) => (
-                  <div key={key} className="text-center">
-                    <div className="text-2xl font-bold text-cyan-400">{value}</div>
-                    <div className="text-xs text-gray-300 capitalize">
-                      {key.replace(/([A-Z])/g, ' $1').trim()}
-                    </div>
-                  </div>
-                ))}
-              </div>
-              
-              <div className="flex flex-wrap gap-2 mb-4">
-                {currentContent.tags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="bg-white/10 text-white px-2 py-1 rounded text-xs"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
-              
-              <div className="flex items-center gap-4">
-                <Link
-                  href={currentContent.url}
-                  className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-2 px-6 rounded-lg transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg"
-                >
-                  Learn More
-                </Link>
-                <button
-                  onClick={() => setCurrentSlide((prev) => (prev + 1) % content.length)}
-                  className="text-gray-300 hover:text-white transition-colors"
-                >
-                  Next →
-                </button>
-              </div>
-            </div>
-            
-            <div className="flex items-center gap-2 ml-8">
-              {content.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentSlide(index)}
-                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                    index === currentSlide
-                      ? 'bg-cyan-400 scale-125'
-                      : 'bg-white/30 hover:bg-white/50'
-                  }`}
-                />
-              ))}
-            </div>
-            
-            <button
-              onClick={handleClose}
-              className="ml-4 text-gray-300 hover:text-white transition-colors"
-              aria-label="Close banner"
-            >
-              ×
-            </button>
-          </div>
->>>>>>> c122ace256a93e0bb3b33b12f92a0d16580a74c2
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
