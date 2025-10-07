@@ -9,7 +9,6 @@ import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import AdvancedErrorBoundary from './components/AdvancedErrorBoundary';
 import AdvancedSEOOptimizer from './components/AdvancedSEOOptimizer';
 import AdvancedPerformanceMonitor from './components/AdvancedPerformanceMonitor';
-import SEOEnhancer from './components/SEOEnhancer';
 import PerformanceDashboard from './components/PerformanceDashboard';
 import LoadingSpinner from './components/LoadingSpinner';
 
@@ -23,8 +22,16 @@ const InteractiveAIROICalculator = lazy(
 );
 
 // Utils
+<<<<<<< HEAD
 import { preloadCriticalResources, performanceOptimizer } from './utils/performanceOptimizer';
 import { logger } from './utils/logger';
+=======
+import { performanceOptimizer, preloadCriticalResources } from './utils/performanceOptimizer';
+import { logger } from './utils/logger';
+
+// Lazy load pages for better performance
+const HomePage = lazy(() => import('./page'));
+>>>>>>> c122ace256a93e0bb3b33b12f92a0d16580a74c2
 
 // Styles
 import './globals.css';
@@ -45,6 +52,12 @@ const App: React.FC = () => {
 
     // Preload critical resources
     preloadCriticalResources();
+<<<<<<< HEAD
+=======
+    
+    logger.info('Performance monitoring initialized', 'App');
+    logger.info('🚀 Zion Tech Group App initialized with comprehensive monitoring', 'App');
+>>>>>>> c122ace256a93e0bb3b33b12f92a0d16580a74c2
   }, []);
 
   const handleError = useCallback((error: Error, errorInfo: React.ErrorInfo) => {
@@ -104,4 +117,8 @@ const App: React.FC = () => {
   );
 };
 
+<<<<<<< HEAD
 export default App;
+=======
+export default App;
+>>>>>>> c122ace256a93e0bb3b33b12f92a0d16580a74c2
