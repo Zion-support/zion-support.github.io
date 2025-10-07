@@ -2,7 +2,7 @@
 
 /**
  * Targeted PR Merge - Focus on the most recent and important branches
- */import { execSync } from 'child_process';
+ */ import { execSync } from 'child_process';
 import fs from 'fs';
 
 console.log('🚀 Starting Targeted PR Merge Process...\n');
@@ -134,15 +134,15 @@ const results = {
   failed: [],
   summary: {
     total: 0,
-  successful: 0,
+    successful: 0,
     failed: 0,
     methods: {
       direct: 0,
-  theirs: 0,
+      theirs: 0,
       ours: 0,
-  already_merged: 0,
+      already_merged: 0,
       not_found: 0,
-  failed: 0,
+      failed: 0,
     },
   },
 };
@@ -156,7 +156,7 @@ for (const branch of targetBranches) {
   if (result.success) {
     results.successful.push({
       branch: branch,
-  success: true,
+      success: true,
       method: result.method,
     });
     results.summary.successful++;
@@ -164,7 +164,7 @@ for (const branch of targetBranches) {
   } else {
     results.failed.push({
       branch: branch,
-  success: false,
+      success: false,
       method: result.method,
     });
     results.summary.failed++;

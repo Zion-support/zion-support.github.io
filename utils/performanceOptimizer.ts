@@ -2,11 +2,14 @@
  * Performance Optimizer Utilities
  */
 
+import React, { forwardRef } from 'react';
+import type { ComponentType } from 'react';
+
 interface PerformanceMetrics {
   componentName: string;
   renderTime: number;
   timestamp: number;
-  memoryUsage?: number;
+  memoryUsage?: number | undefined;
   renderCount: number;
 }
 
@@ -51,7 +54,9 @@ export class PerformanceOptimizer {
     if (!startTime) return;
 
     const renderTime = performance.now() - startTime;
-    const memoryUsage = this.config.enableMemoryMonitoring ? this.getMemoryUsage() : undefined;
+    const memoryUsage = this.config.enableMemoryMonitoring
+      ? this.getMemoryUsage()
+      : undefined;
 
     const metric: PerformanceMetrics = {
       componentName,
@@ -76,12 +81,12 @@ export class PerformanceOptimizer {
   private recordMetric(metric: PerformanceMetrics): void {
     const existingMetrics = this.metrics.get(metric.componentName) || [];
     existingMetrics.push(metric);
-    
+
     // Keep only last 100 metrics per component
     if (existingMetrics.length > 100) {
       existingMetrics.splice(0, existingMetrics.length - 100);
     }
-    
+
     this.metrics.set(metric.componentName, existingMetrics);
   }
 
@@ -98,7 +103,9 @@ export class PerformanceOptimizer {
    */
   private getMemoryUsage(): number | undefined {
     if ('memory' in performance) {
-      return (performance as any).memory.usedJSHeapSize;
+      return (
+        performance as Performance & { memory: { usedJSHeapSize: number } }
+      ).memory.usedJSHeapSize;
     }
     return undefined;
   }
@@ -107,24 +114,33 @@ export class PerformanceOptimizer {
    * Suggest optimization for slow components
    */
   private suggestOptimization(componentName: string, renderTime: number): void {
-    console.warn(`Performance warning: ${componentName} took ${renderTime.toFixed(2)}ms to render`);
-    
+    if (process.env.NODE_ENV === 'development') {
+      console.warn(
+        `Performance warning: ${componentName} took ${renderTime.toFixed(2)}ms to render`
+      );
+    }
+
     const suggestions = [];
-    
+
     if (renderTime > 50) {
       suggestions.push('Consider using React.memo() for memoization');
     }
-    
+
     if (renderTime > 100) {
       suggestions.push('Consider code splitting or lazy loading');
     }
-    
+
     if (renderTime > 200) {
       suggestions.push('Consider virtualization for large lists');
     }
-    
+
     if (suggestions.length > 0) {
-      console.log(`Optimization suggestions for ${componentName}:`, suggestions);
+      if (process.env.NODE_ENV === 'development') {
+        console.log(
+          `Optimization suggestions for ${componentName}:`,
+          suggestions
+        );
+      }
     }
   }
 
@@ -141,8 +157,11 @@ export class PerformanceOptimizer {
   getAverageRenderTime(componentName: string): number {
     const metrics = this.getMetrics(componentName);
     if (metrics.length === 0) return 0;
-    
-    const totalTime = metrics.reduce((sum, metric) => sum + metric.renderTime, 0);
+
+    const totalTime = metrics.reduce(
+      (sum, metric) => sum + metric.renderTime,
+      0
+    );
     return totalTime / metrics.length;
   }
 
@@ -164,10 +183,13 @@ export class PerformanceOptimizer {
     this.observedComponents.forEach(componentName => {
       const metrics = this.getMetrics(componentName);
       const avgTime = this.getAverageRenderTime(componentName);
-      
+
       totalRenders += metrics.length;
-      totalRenderTime += metrics.reduce((sum, metric) => sum + metric.renderTime, 0);
-      
+      totalRenderTime += metrics.reduce(
+        (sum, metric) => sum + metric.renderTime,
+        0
+      );
+
       if (avgTime > (this.config.maxRenderTime || 16)) {
         summary.slowComponents.push({
           name: componentName,
@@ -177,8 +199,10 @@ export class PerformanceOptimizer {
     });
 
     summary.totalRenders = totalRenders;
-    summary.averageRenderTime = totalRenders > 0 ? 
-      Math.round((totalRenderTime / totalRenders) * 100) / 100 : 0;
+    summary.averageRenderTime =
+      totalRenders > 0
+        ? Math.round((totalRenderTime / totalRenders) * 100) / 100
+        : 0;
 
     return summary;
   }
@@ -186,22 +210,24 @@ export class PerformanceOptimizer {
   /**
    * Optimize component with memoization
    */
-  optimizeWithMemo<T extends React.ComponentType<any>>(Component: T): T {
+  optimizeWithMemo<T extends React.ComponentType<Record<string, unknown>>>(
+    Component: T
+  ): T {
     if (!this.config.enableMemoization) return Component;
-    
-    return React.memo(Component) as T;
+
+    return React.memo(Component) as unknown as T;
   }
 
   /**
    * Create lazy loaded component
    */
-  createLazyComponent<T extends React.ComponentType<any>>(
+  createLazyComponent<T extends React.ComponentType<Record<string, unknown>>>(
     importFunc: () => Promise<{ default: T }>
   ): React.LazyExoticComponent<T> {
     if (!this.config.enableLazyLoading) {
       throw new Error('Lazy loading is disabled');
     }
-    
+
     return React.lazy(importFunc);
   }
 
@@ -220,23 +246,25 @@ export class PerformanceOptimizer {
     const recommendations = [];
     const avgTime = this.getAverageRenderTime(componentName);
     const metrics = this.getMetrics(componentName);
-    
+
     if (avgTime > 16) {
       recommendations.push('Consider using React.memo() for memoization');
     }
-    
+
     if (avgTime > 50) {
       recommendations.push('Consider code splitting or lazy loading');
     }
-    
+
     if (avgTime > 100) {
       recommendations.push('Consider virtualization for large lists');
     }
-    
+
     if (metrics.length > 10) {
-      recommendations.push('Component is rendering frequently - check for unnecessary re-renders');
+      recommendations.push(
+        'Component is rendering frequently - check for unnecessary re-renders'
+      );
     }
-    
+
     return recommendations;
   }
 
@@ -267,7 +295,7 @@ export class PerformanceOptimizer {
       config: this.config,
       timestamp: new Date().toISOString(),
     };
-    
+
     return JSON.stringify(data, null, 2);
   }
 
@@ -277,27 +305,165 @@ export class PerformanceOptimizer {
   destroy(): void {
     this.clearAllMetrics();
   }
+
+  /**
+   * Preload critical resources
+   */
+  preloadCriticalResources(): void {
+    if (typeof window === 'undefined') return;
+
+    // Preload critical CSS
+    const criticalCSS = document.querySelector(
+      'link[rel="preload"][as="style"]'
+    );
+    if (criticalCSS) {
+      criticalCSS.setAttribute('rel', 'stylesheet');
+    }
+
+    // Preload critical fonts
+    const fontLinks = document.querySelectorAll(
+      'link[rel="preload"][as="font"]'
+    );
+    fontLinks.forEach(link => {
+      link.setAttribute('rel', 'stylesheet');
+    });
+  }
+
+  /**
+   * Lazy load images
+   */
+  lazyLoadImages(): void {
+    if (typeof window === 'undefined') return;
+
+    const images = document.querySelectorAll('img[data-src]');
+    const imageObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const img = entry.target as HTMLImageElement;
+          img.src = img.dataset['src'] || '';
+          img.removeAttribute('data-src');
+          imageObserver.unobserve(img);
+        }
+      });
+    });
+
+    images.forEach(img => imageObserver.observe(img));
+  }
+
+  /**
+   * Add critical resource hints for performance optimization
+   */
+  addCriticalResourceHints(): void {
+    if (typeof document === 'undefined') return;
+
+    const hints = [
+      { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' },
+      { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com' },
+      { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+      {
+        rel: 'preconnect',
+        href: 'https://fonts.gstatic.com',
+        crossOrigin: 'anonymous',
+      },
+    ];
+
+    hints.forEach(hint => {
+      const link = document.createElement('link');
+      link.rel = hint.rel;
+      link.href = hint.href;
+      if (hint.crossOrigin) {
+        link.crossOrigin = hint.crossOrigin;
+      }
+      document.head.appendChild(link);
+    });
+  }
+
+  /**
+   * Measure page load performance
+   */
+  measurePageLoad(): Record<string, unknown> | null {
+    if (typeof window === 'undefined' || !('performance' in window)) {
+      return null;
+    }
+
+    const timing = performance.getEntriesByType(
+      'navigation'
+    )[0] as PerformanceNavigationTiming;
+    if (!timing) return null;
+
+    return {
+      domContentLoaded:
+        timing.domContentLoadedEventEnd - timing.domContentLoadedEventStart,
+      loadComplete: timing.loadEventEnd - timing.loadEventStart,
+      totalTime: timing.loadEventEnd - timing.fetchStart,
+    };
+  }
+
+  /**
+   * Report Web Vitals
+   */
+  reportWebVitals(metrics: Record<string, unknown>): void {
+    if (typeof window === 'undefined') return;
+
+    if (process.env.NODE_ENV === 'development') {
+      console.log('Web Vitals:', metrics);
+    }
+
+    // Send to analytics if available
+    if ('gtag' in window) {
+      (window as Window & { gtag?: (...args: unknown[]) => void }).gtag?.(
+        'event',
+        'web_vitals',
+        {
+          event_category: 'Performance',
+          event_label: 'Page Load',
+          value: Math.round((metrics.totalTime as number) || 0),
+        }
+      );
+    }
+  }
 }
 
 // Utility functions
-export const createPerformanceOptimizer = (config?: OptimizationConfig): PerformanceOptimizer => {
+export const createPerformanceOptimizer = (
+  config?: OptimizationConfig
+): PerformanceOptimizer => {
   return new PerformanceOptimizer(config);
 };
 
 export const withPerformanceTracking = <P extends object>(
-  Component: React.ComponentType<P>,
+  Component: ComponentType<P>,
   componentName?: string
-): React.ComponentType<P> => {
+): ComponentType<P> => {
   const optimizer = createPerformanceOptimizer();
-  const name = componentName || Component.displayName || Component.name || 'Unknown';
-  
-  return React.forwardRef<any, P>((props, ref) => {
+  const name =
+    componentName || Component.displayName || Component.name || 'Unknown';
+
+  const WrappedComponent = forwardRef<unknown, P>((props, ref) => {
     React.useEffect(() => {
       optimizer.startRender(name);
       return () => optimizer.endRender(name);
     });
-    
-    return React.createElement(Component, { ...props, ref });
+
+    return React.createElement(Component, { ...props, ref } as P);
+  });
+
+  WrappedComponent.displayName = `withPerformanceTracking(${name})`;
+  return WrappedComponent as unknown as ComponentType<P>;
+};
+
+// Create and export a default instance
+export const performanceOptimizer = new PerformanceOptimizer();
+
+// Export utility functions
+export const prefetchResources = (urls: string[]): void => {
+  if (typeof window === 'undefined') return;
+
+  urls.forEach(url => {
+    const link = document.createElement('link');
+    link.rel = 'prefetch';
+    link.href = url;
+    document.head.appendChild(link);
   });
 };
 

@@ -1,28 +1,27 @@
 {
-  "name": "Zion Tech Group",
+  "name": "Zion Tech Group - AI & IT Solutions",
   "short_name": "Zion Tech",
-  "description": "Advanced AI and IT Solutions",
+  "description": "Leading provider of AI-powered enterprise solutions, automation, and digital transformation services.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#007bff",
+  "theme_color": "#4f46e5",
+  "orientation": "portrait-primary",
   "icons": [
     {
-      "src": "/icons/icon-192x192.png",
+      "src": "/favicon-192x192.png",
       "sizes": "192x192",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any maskable"
     },
     {
-      "src": "/icons/icon-512x512.png",
+      "src": "/favicon-512x512.png",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any maskable"
     }
   ],
-  "categories": [
-    "business",
-    "productivity",
-    "technology"
-  ],
-  "lang": "en",
-  "orientation": "portrait-primary"
+  "categories": ["business", "productivity", "technology"],
+  "lang": "en-US",
+  "dir": "ltr"
 }

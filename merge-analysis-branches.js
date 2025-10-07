@@ -3,7 +3,7 @@
 /**
  * Merge Analysis and Improvement Branches
  * This script will merge all the analysis and improvement branches
- */import { execSync } from 'child_process';
+ */ import { execSync } from 'child_process';
 import fs from 'fs';
 
 console.log('🚀 Starting Analysis and Improvement Branch Merge Process...\n');
@@ -107,10 +107,9 @@ console.log('🚀 Step 4: Processing analysis and improvement branches...\n');
 const results = {
   summary: {
     total: 0,
-  successful: 0,
+    successful: 0,
     failed: 0,
-    methods: { direct: 0,
-  theirs: 0, ours: 0, failed: 0 },
+    methods: { direct: 0, theirs: 0, ours: 0, failed: 0 },
   },
   branches: [],
   failed: [],

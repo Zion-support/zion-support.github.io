@@ -43,12 +43,15 @@ class TestRunner {
     return this.results;
   }
 
-  public async runTest(name: string, testFn: TestFunction): Promise<TestResult> {
+  public async runTest(
+    name: string,
+    testFn: TestFunction
+  ): Promise<TestResult> {
     const startTime = performance.now();
     const result: TestResult = {
       name: `${this.currentSuite}: ${name}`,
       passed: false,
-  duration: 0,
+      duration: 0,
       timestamp: Date.now(),
     };
 
@@ -90,10 +93,14 @@ class TestRunner {
   }
 
   public exportResults(): string {
-    return JSON.stringify({
-      summary: this.getSummary(),
-      results: this.results,
-    }, null, 2);
+    return JSON.stringify(
+      {
+        summary: this.getSummary(),
+        results: this.results,
+      },
+      null,
+      2
+    );
   }
 }
 
@@ -107,7 +114,9 @@ export const testUtils = {
     },
     toEqual: (expected: unknown) => {
       if (JSON.stringify(actual) !== JSON.stringify(expected)) {
-        throw new Error(`Expected ${JSON.stringify(actual)} to equal ${JSON.stringify(expected)}`);
+        throw new Error(
+          `Expected ${JSON.stringify(actual)} to equal ${JSON.stringify(expected)}`
+        );
       }
     },
     toBeTruthy: () => {
@@ -127,9 +136,12 @@ export const testUtils = {
         }
         throw new Error('Expected function to throw');
       } catch (error) {
-        const errorMessage = error instanceof Error ? error.message : String(error);
+        const errorMessage =
+          error instanceof Error ? error.message : String(error);
         if (expectedError && !errorMessage.includes(expectedError)) {
-          throw new Error(`Expected error to contain "${expectedError}", got "${errorMessage}"`);
+          throw new Error(
+            `Expected error to contain "${expectedError}", got "${errorMessage}"`
+          );
         }
       }
     },
@@ -142,7 +154,7 @@ export const testUtils = {
   spy: (fn: Function) => {
     let callCount = 0;
     let lastArgs: unknown[] = [];
-    
+
     const spyFn = (...args: unknown[]) => {
       callCount++;
       lastArgs = args;
@@ -156,10 +168,14 @@ export const testUtils = {
       reset: () => {
         callCount = 0;
         lastArgs = [];
-      }
+      },
     });
 
-    return spyFn as unknown as Function & { callCount: () => number; lastArgs: () => unknown[]; reset: () => void };
+    return spyFn as unknown as Function & {
+      callCount: () => number;
+      lastArgs: () => unknown[];
+      reset: () => void;
+    };
   },
 
   async: (fn: Function) => {

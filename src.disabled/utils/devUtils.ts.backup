@@ -4,40 +4,47 @@
  */
 
 export const devLog = (message: string, data?: any) => {
-<<<<<<< HEAD
+<<<<<<< HEAD:src.disabled/utils/devUtils.ts.backup
   if (process.env.NODE_ENV === 'development') {
+<<<<<<< HEAD:src.disabled/utils/devUtils.ts.backup
     // DEV: ${message}
 =======
   if (process.env['NODE_ENV'] === 'development') {
+>>>>>>> cursor/fix-errors-and-merge-to-main-e42d:src/utils/devUtils.ts
     console.log(`[DEV] ${message}`, data || '');
->>>>>>> main
   }
 };
 
 export const devError = (message: string, error?: any) => {
-<<<<<<< HEAD
+<<<<<<< HEAD:src.disabled/utils/devUtils.ts.backup
   if (process.env.NODE_ENV === 'development') {
     // DEV ERROR: ${message}
+  return null;
+  }`, error || '');
 =======
   if (process.env['NODE_ENV'] === 'development') {
     console.error(`[DEV ERROR] ${message}`, error || '');
->>>>>>> main
+>>>>>>> cursor/fix-errors-and-merge-to-main-e42d:src/utils/devUtils.ts
   }
 };
 
 export const devWarn = (message: string, data?: any) => {
-<<<<<<< HEAD
+<<<<<<< HEAD:src.disabled/utils/devUtils.ts.backup
   if (process.env.NODE_ENV === 'development') {
     // DEV WARN: ${message}
+  return null;
+  }`, data || '');
 =======
   if (process.env['NODE_ENV'] === 'development') {
     console.warn(`[DEV WARN] ${message}`, data || '');
->>>>>>> main
+>>>>>>> cursor/fix-errors-and-merge-to-main-e42d:src/utils/devUtils.ts
   }
 };
 
 export const measurePerformance = (name: string, fn: () => void) => {
+<<<<<<< HEAD:src.disabled/utils/devUtils.ts.backup
   if (process.env['NODE_ENV'] === 'development') {
+  if (process.env.NODE_ENV === 'development') {
     const start = performance.now();
     fn();
     const end = performance.now();

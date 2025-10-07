@@ -10,9 +10,9 @@ interface PerformanceMetrics {
 const PerformanceDashboard: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     loadTime: 0,
-  renderTime: 0,
+    renderTime: 0,
     memoryUsage: 0,
-  fps: 0,
+    fps: 0,
   });
   const [isVisible, setIsVisible] = useState(false);
 
@@ -28,7 +28,7 @@ const PerformanceDashboard: React.FC = () => {
       const memory = (
         performance as Performance & { memory?: { usedJSHeapSize: number } }
       ).memory;
-      const memoryUsage = memory ? memory.usedJSHeapSize /1024 / 1024 : 0;
+      const memoryUsage = memory ? memory.usedJSHeapSize / 1024 / 1024 : 0;
 
       setMetrics(prev => ({
         ...prev,
@@ -69,17 +69,19 @@ const PerformanceDashboard: React.FC = () => {
           <div className='space-y-2 text-xs'>
             <div className='flex justify-between'>
               <span className='text-gray-600'>Load Time:</span>
-              <span className='font-mono'>{metrics.loadTime.toFixed(2)}ms</span>
+              <span className='font-mono'>
+                {metrics?.loadTime.toFixed(2)}ms
+              </span>
             </div>
             <div className='flex justify-between'>
               <span className='text-gray-600'>Memory:</span>
               <span className='font-mono'>
-                {metrics.memoryUsage.toFixed(2)}MB
+                {metrics?.memoryUsage.toFixed(2)}MB
               </span>
             </div>
             <div className='flex justify-between'>
               <span className='text-gray-600'>FPS:</span>
-              <span className='font-mono'>{metrics.fps.toFixed(1)}</span>
+              <span className='font-mono'>{metrics?.fps.toFixed(1)}</span>
             </div>
           </div>
         </div>

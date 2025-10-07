@@ -33,6 +33,7 @@ async function handler(req, res) {
     );
 
     let existing = [];
+
     try {
       existing = JSON.parse(fs.readFileSync(file, 'utf8'));
       if (!Array.isArray(existing)) existing = [];
@@ -44,7 +45,7 @@ async function handler(req, res) {
       email,
       name,
       source,
-      subscribedAt: new Date().toISOString()
+      subscribedAt: new Date().toISOString(),
     });
 
     fs.writeFileSync(file, JSON.stringify(existing, null, 2));

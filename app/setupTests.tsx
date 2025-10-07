@@ -21,34 +21,62 @@ Object.defineProperty(window, 'matchMedia', {
 
 // Mock IntersectionObserver
 global.IntersectionObserver = class MockIntersectionObserver {
-  root: Element | Document | null = null;
+  root: Element | null = null;
   rootMargin: string = '';
-  thresholds: ReadonlyArray<number> = [];
+  thresholds: ReadonlyArray<number> = Object.freeze([]);
   
-  constructor(
-    public callback: IntersectionObserverCallback,
-    options?: IntersectionObserverInit
-  ) {
-    if (options) {
-      this.root = options.root || null;
-      this.rootMargin = options.rootMargin || '0px';
-      this.thresholds = options.threshold ? (Array.isArray(options.threshold) ? options.threshold : [options.threshold]) : [0];
-    }
-  }
-  
-  observe() {}
-  unobserve() {}
-  disconnect() {}
-  takeRecords() { return []; }
-};
+  constructor() {}
+  disconnect(): void {}
+  observe(): void {}
+  unobserve(): void {}
+  takeRecords(): IntersectionObserverEntry[] { return []; }
+} as unknown as typeof IntersectionObserver;
 
 // Mock ResizeObserver
 global.ResizeObserver = class MockResizeObserver {
-  constructor(public callback: ResizeObserverCallback) {}
+  constructor() {}
+  disconnect() {}
   observe() {}
   unobserve() {}
-  disconnect() {}
-};
+} as unknown as typeof ResizeObserver;
+
+// Mock scrollTo
+Object.defineProperty(window, 'scrollTo', {
+  value: jest.fn(),
+  writable: true
+});
+
+// Mock console methods to reduce noise in tests
+const originalError = console.error;
+const originalWarn = console.warn;
+
+beforeAll(() => {
+  console.error = (...args: unknown[]) => {
+    if (
+      typeof args[0] === 'string' &&
+      args[0].includes('Warning: ReactDOM.render is no longer supported')
+    ) {
+      return;
+    }
+    originalError.call(console, ...args);
+  };
+  
+  console.warn = (...args: unknown[]) => {
+    if (
+      typeof args[0] === 'string' &&
+      (args[0].includes('componentWillReceiveProps') ||
+       args[0].includes('componentWillMount'))
+    ) {
+      return;
+    }
+    originalWarn.call(console, ...args);
+  };
+});
+
+afterAll(() => {
+  console.error = originalError;
+  console.warn = originalWarn;
+});
 
 // Mock performance API
 Object.defineProperty(window, 'performance', {
@@ -58,29 +86,14 @@ Object.defineProperty(window, 'performance', {
     getEntriesByType: jest.fn(() => []),
     mark: jest.fn(),
     measure: jest.fn(),
-    clearMarks: jest.fn(),
-    clearMeasures: jest.fn(),
   },
 });
 
-// Mock localStorage
-const localStorageMock = {
-  getItem: jest.fn(),
-  setItem: jest.fn(),
-  removeItem: jest.fn(),
-  clear: jest.fn(),
+// Mock requestAnimationFrame
+global.requestAnimationFrame = (callback: FrameRequestCallback) => {
+  return setTimeout(callback, 0);
 };
-Object.defineProperty(window, 'localStorage', {
-  value: localStorageMock,
-});
 
-// Mock sessionStorage
-const sessionStorageMock = {
-  getItem: jest.fn(),
-  setItem: jest.fn(),
-  removeItem: jest.fn(),
-  clear: jest.fn(),
+global.cancelAnimationFrame = (id: number) => {
+  clearTimeout(id);
 };
-Object.defineProperty(window, 'sessionStorage', {
-  value: sessionStorageMock,
-});

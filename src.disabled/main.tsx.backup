@@ -1,3 +1,4 @@
+<<<<<<< HEAD:src.disabled/main.tsx.backup
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from '../App'
@@ -7,6 +8,16 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 import './index.css';
+=======
+import './index.css'
+import './index.css';
+import App from './App'
+import App from './App';
+import React from 'react'
+import React from 'react';
+import ReactDOM from 'react-dom/client'
+import ReactDOM from 'react-dom/client';
+>>>>>>> cursor/fix-errors-and-merge-to-main-e42d:src/main.tsx
 
 =======
 >>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572:src.disabled/main.tsx

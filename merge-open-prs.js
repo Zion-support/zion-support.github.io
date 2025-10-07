@@ -2,7 +2,7 @@
 
 /**
  * Merge Open PRs - Focused script to merge the specific open PRs
- */import { execSync } from 'child_process';
+ */ import { execSync } from 'child_process';
 import fs from 'fs';
 
 console.log('🚀 Starting Open PR Merge Process...\n');
@@ -150,11 +150,9 @@ const results = {
   failed: [],
   summary: {
     total: 0,
-  successful: 0,
+    successful: 0,
     failed: 0,
-    methods: { direct: 0,
-  theirs: 0, ours: 0,
-  manual: 0, failed: 0 },
+    methods: { direct: 0, theirs: 0, ours: 0, manual: 0, failed: 0 },
   },
 };
 

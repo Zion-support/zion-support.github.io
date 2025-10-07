@@ -81,7 +81,7 @@ export const ariaUtils = {
     announcement.className = 'sr-only';
     announcement.textContent = message;
     document.body.appendChild(announcement);
-    
+
     setTimeout(() => {
       document.body.removeChild(announcement);
     }, 1000);
@@ -98,7 +98,7 @@ export const keyboardNavigation = {
     orientation: 'horizontal' | 'vertical' = 'vertical'
   ): number => {
     const isVertical = orientation === 'vertical';
-    const isHorizontal = orientation === 'horizontal';
+    // const isHorizontal = orientation === 'horizontal';
 
     switch (event.key) {
       case isVertical ? 'ArrowDown' : 'ArrowRight':
@@ -147,7 +147,7 @@ export const colorContrast = {
     const lum2 = colorContrast.getLuminance(...color2);
     const brightest = Math.max(lum1, lum2);
     const darkest = Math.min(lum1, lum2);
-    
+
     return (brightest + 0.05) / (darkest + 0.05);
   },
 
@@ -200,7 +200,11 @@ export const formAccessibility = {
   },
 
   // Check color contrast
-  checkContrast: (foreground: string, background: string, level: 'AA' | 'AAA' = 'AA'): boolean => {
+  checkContrast: (
+    foreground: string,
+    background: string,
+    level: 'AA' | 'AAA' = 'AA'
+  ): boolean => {
     const thresholds = { AA: 4.5, AAA: 7 };
     // Simplified contrast calculation - in real implementation, use a proper color contrast library
     const contrastRatio = 4.5; // Placeholder
@@ -272,7 +276,9 @@ export const accessibilityTesting = {
         issues.push('First heading should be h1');
       }
       if (level > previousLevel + 1) {
-        issues.push(`Heading level skipped from h${previousLevel} to h${level}`);
+        issues.push(
+          `Heading level skipped from h${previousLevel} to h${level}`
+        );
       }
       previousLevel = level;
     });
@@ -316,7 +322,7 @@ export const accessibilityTesting = {
       'select:not([disabled])',
       'textarea:not([disabled])',
       'a[href]',
-      '[tabindex]:not([tabindex="-1"])'
+      '[tabindex]:not([tabindex="-1"])',
     ];
     return focusableSelectors.some(selector => element.matches(selector));
   },

@@ -25,13 +25,15 @@ export const errorHandler = (
   const { statusCode = 500, message } = err;
 
   // Log error for monitoring
-  console.error(`API Error [${statusCode}]: ${message}`, {
-    url: req.url,
-    method: req.method,
-    timestamp: new Date().toISOString(),
-    userAgent: req.headers['user-agent'],
-    ip: req.headers['x-forwarded-for'] || req.connection.remoteAddress
-  });
+  if (process.env.NODE_ENV === 'development') {
+    console.error(`API Error [${statusCode}]: ${message}`, {
+      url: req.url,
+      method: req.method,
+      timestamp: new Date().toISOString(),
+      userAgent: req.headers['user-agent'],
+      ip: req.headers['x-forwarded-for'] || req.connection.remoteAddress,
+    });
+  }
 
   res.status(statusCode).json({
     error: {
@@ -40,14 +42,14 @@ export const errorHandler = (
           ? 'Internal Server Error'
           : message,
       statusCode,
-      timestamp: new Date().toISOString()
-    }
+      timestamp: new Date().toISOString(),
+    },
   });
 };
 
-export const asyncHandler = (fn: Function) => {
+export const asyncHandler = (fn: (req: NextApiRequest, res: NextApiResponse) => Promise<void> | void) => {
   return (req: NextApiRequest, res: NextApiResponse) => {
-    Promise.resolve(fn(req, res)).catch((err) => {
+    Promise.resolve(fn(req, res)).catch(err => {
       errorHandler(err, req, res);
     });
   };

@@ -4,7 +4,9 @@ interface AccessibilityEnhancerProps {
   children: ReactNode;
 }
 
-const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
+const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
+  children,
+}) => {
   useEffect(() => {
     // Add skip link styles
     const style = document.createElement('style');

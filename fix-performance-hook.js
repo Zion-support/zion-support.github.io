@@ -5,7 +5,7 @@ import fs from 'fs';
 console.log('🔧 Fixing usePerformance.ts syntax errors...');
 
 // Read the file
-let content = fs.readFileSync('src/hooks/usePerformance.ts', 'utf8');
+const content = fs.readFileSync('src/hooks/usePerformance.ts', 'utf8');
 
 // Fix the duplicate analytics definitions and syntax errors
 const fixedContent = `/**

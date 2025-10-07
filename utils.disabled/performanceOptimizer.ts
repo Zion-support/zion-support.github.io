@@ -81,15 +81,21 @@ export class PerformanceOptimizer {
     const metrics = this.getMetrics(componentName);
     if (metrics.length === 0) return 0;
 
-    const totalTime = metrics.reduce((sum, metric) => sum + metric.renderTime, 0);
+    const totalTime = metrics.reduce(
+      (sum, metric) => sum + metric.renderTime,
+      0
+    );
     return totalTime / metrics.length;
   }
 
   /**
    * Get slowest components
    */
-  getSlowestComponents(limit: number = 10): Array<{ componentName: string; averageTime: number }> {
-    const components: Array<{ componentName: string; averageTime: number }> = [];
+  getSlowestComponents(
+    limit: number = 10
+  ): Array<{ componentName: string; averageTime: number }> {
+    const components: Array<{ componentName: string; averageTime: number }> =
+      [];
 
     for (const [componentName] of this.metrics) {
       const averageTime = this.getAverageRenderTime(componentName);
@@ -143,10 +149,14 @@ export class PerformanceOptimizer {
 
     for (const metrics of this.metrics.values()) {
       totalRenders += metrics.length;
-      totalRenderTime += metrics.reduce((sum, metric) => sum + metric.renderTime, 0);
+      totalRenderTime += metrics.reduce(
+        (sum, metric) => sum + metric.renderTime,
+        0
+      );
     }
 
-    const averageRenderTime = totalRenders > 0 ? totalRenderTime / totalRenders : 0;
+    const averageRenderTime =
+      totalRenders > 0 ? totalRenderTime / totalRenders : 0;
     const slowestComponents = this.getSlowestComponents(5);
 
     return {

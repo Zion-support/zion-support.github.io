@@ -6,7 +6,7 @@ exports.handler = async function (event, context) {
       statusCode: 200,
       headers: {
         'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
+        'Access-Control-Allow-Origin': '*',
       },
       body: JSON.stringify({
         message: 'Todo scanner runner executed successfully',
@@ -16,9 +16,9 @@ exports.handler = async function (event, context) {
         scanning: {
           status: 'active',
           todosFound: 0,
-          lastScan: new Date().toISOString()
-        }
-      })
+          lastScan: new Date().toISOString(),
+        },
+      }),
     };
     return result;
   } catch (error) {
@@ -27,13 +27,13 @@ exports.handler = async function (event, context) {
       statusCode: 500,
       headers: {
         'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
+        'Access-Control-Allow-Origin': '*',
       },
       body: JSON.stringify({
         error: 'Internal server error',
         message: error.message,
-        function: 'todo-scanner-runner'
-      })
+        function: 'todo-scanner-runner',
+      }),
     };
   }
 };

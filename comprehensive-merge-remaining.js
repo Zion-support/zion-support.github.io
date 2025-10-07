@@ -3,7 +3,7 @@
 /**
  * Comprehensive Merge Remaining - Merges all remaining important branches
  * This script targets the remaining branches that need to be merged
- */import { execSync } from 'child_process';
+ */ import { execSync } from 'child_process';
 import fs from 'fs';
 
 console.log('🚀 Starting Comprehensive Merge of Remaining Branches...\n');
@@ -176,15 +176,15 @@ const results = {
   failed: [],
   summary: {
     total: 0,
-  successful: 0,
+    successful: 0,
     failed: 0,
     methods: {
       direct: 0,
-  theirs: 0,
+      theirs: 0,
       ours: 0,
-  manual: 0,
+      manual: 0,
       failed: 0,
-  not_found: 0,
+      not_found: 0,
       already_merged: 0,
     },
   },
