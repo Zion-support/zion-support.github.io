@@ -52,9 +52,6 @@ export function collectPerformanceMetrics(): PerformanceMetrics | null {
   }
 
   const perfData = window.performance.timing;
-  const navigation = window.performance.getEntriesByType(
-    'navigation'
-  )[0] as PerformanceNavigationTiming;
   const paint = window.performance.getEntriesByType('paint');
 
   return {

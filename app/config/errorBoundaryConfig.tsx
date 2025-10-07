@@ -3,6 +3,8 @@
  * Centralized configuration for error handling across the application
  */
 
+import React from 'react';
+
 export interface ErrorBoundaryConfig {
   /**
    * Whether to log errors to console
@@ -145,7 +147,6 @@ function DefaultErrorFallback({
  * Network error fallback component
  */
 function NetworkErrorFallback({
-  error,
   resetError,
 }: {
   error: Error;
@@ -192,13 +193,7 @@ function NetworkErrorFallback({
 /**
  * Not found error fallback component
  */
-function NotFoundFallback({
-  error,
-  resetError,
-}: {
-  error: Error;
-  resetError: () => void;
-}) {
+function NotFoundFallback(): JSX.Element {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4">
       <div className="max-w-md w-full text-center">
