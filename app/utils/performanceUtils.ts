@@ -149,11 +149,11 @@ export function runWhenIdle(
   options?: IdleRequestOptions
 ): number {
   if (typeof window !== 'undefined' && 'requestIdleCallback' in window) {
-    return (window as Window & typeof globalThis).requestIdleCallback(callback, options);
+    return window.requestIdleCallback(callback, options);
   }
   // Fallback for browsers that don't support requestIdleCallback
   if (typeof window !== 'undefined') {
-    return (window as Window & typeof globalThis).setTimeout(callback, 1) as unknown as number;
+    return (window as Window).setTimeout(callback, 1) as unknown as number;
   }
   return 0;
 }
@@ -164,19 +164,10 @@ export function runWhenIdle(
 export function cancelIdle(id: number): void {
   if (typeof window !== 'undefined') {
     if ('cancelIdleCallback' in window) {
-<<<<<<< HEAD
       window.cancelIdleCallback(id);
     } else {
-      (window as Window & typeof globalThis).clearTimeout(id);
+      (window as Window).clearTimeout(id);
     }
-  } else {
-    clearTimeout(id);
-=======
-      (window as Window & typeof globalThis).cancelIdleCallback(id);
-    } else {
-      (window as Window & typeof globalThis).clearTimeout(id);
-    }
->>>>>>> origin/main
   }
 }
 
@@ -262,15 +253,11 @@ export function preloadResources(resources: Array<{ url: string; as: string }>):
  * Check if code splitting is supported
  */
 export function supportsCodeSplitting(): boolean {
+  // Dynamic imports are supported in modern browsers
+  // We can check by testing if Function constructor accepts import syntax
   try {
-<<<<<<< HEAD
-    // Dynamic import is always supported in modern browsers
-    // Check if the environment supports ES modules
-    return typeof Promise !== 'undefined' && typeof Function !== 'undefined';
-=======
-    // Check if dynamic import is supported
-    return typeof (Function('return import("")')) === 'function';
->>>>>>> origin/main
+    new Function('return import("data:text/javascript,")');
+    return true;
   } catch {
     return false;
   }
