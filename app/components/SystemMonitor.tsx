@@ -3,9 +3,9 @@
  * Real-time monitoring dashboard for performance, errors, and system health
  */
 
-import React, { useState, useEffect, useCallback } from 'react';
-import { collectPerformanceMetrics, getMemoryUsage } from '../utils/performanceEnhancer';
-// import { errorHandler } from '../utils/enhancedErrorHandler';
+import React, { useState, useCallback, useEffect } from 'react';
+import { initializePerformanceEnhancements, collectPerformanceMetrics, getMemoryUsage } from '../utils/performanceEnhancer';
+import { errorHandler } from '../utils/enhancedErrorHandler';
 
 interface SystemMetrics {
   performance: {
@@ -64,27 +64,26 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
   const updateMetrics = useCallback(() => {
     try {
       const performanceMetrics = collectPerformanceMetrics();
-      const performanceScore = 85; // Default score
-      // const errorStats = errorHandler.getErrorStatistics();
-      const errorStats = {
-        totalErrors: 0,
-        errorsByType: {},
-        errorsByCategory: {},
-        errorsBySeverity: {},
-        recentErrors: []
-      };
+      const performanceScore = performanceMetrics ? 
+        Math.round((performanceMetrics.paint.firstContentfulPaint || 0) / 10) : 0;
+      
+      // Get basic performance metrics
+      const navigationTiming = performance.timing;
+      const loadTime = navigationTiming.loadEventEnd - navigationTiming.navigationStart;
+      
+      const errorStats = errorHandler.getErrorStatistics();
 
       // Get memory info
-      const memoryInfo = getMemoryInfo();
+      const memoryInfo = getMemoryUsage();
 
       // Get network info
       const networkInfo = getNetworkInfo();
 
       const newMetrics: SystemMetrics = {
         performance: {
-          score: performanceScore,
-          loadTime: performanceMetrics?.navigation?.totalTime || 0,
-          firstContentfulPaint: performanceMetrics?.paint?.firstContentfulPaint || 0,
+          score: 0.85,
+          loadTime: loadTime || 0,
+          firstContentfulPaint: 0,
           largestContentfulPaint: 0,
           firstInputDelay: 0,
           cumulativeLayoutShift: 0,
@@ -116,6 +115,7 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
   // Initialize monitoring
   useEffect(() => {
     const initializeMonitoring = () => {
+      // startMonitoring(); // Placeholder
       setIsMonitoring(true);
       updateMetrics();
     };
@@ -123,6 +123,7 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
     initializeMonitoring();
 
     return () => {
+      // stopMonitoring(); // Placeholder
       setIsMonitoring(false);
     };
   }, [updateMetrics]);
@@ -174,14 +175,14 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
   const handleExport = () => {
     if (!metrics) return;
 
-    const exportData = {
+    const dataToExport: any = {
       metrics,
-      performanceData: collectPerformanceMetrics(),
-      // errorData: errorHandler.exportErrorData(),
+      performanceData: metrics.performance,
+      errorData: errorHandler.exportErrorData(),
       timestamp: new Date().toISOString(),
     };
 
-    const blob = new Blob([JSON.stringify(exportData, null, 2)], {
+    const blob = new Blob([JSON.stringify(dataToExport, null, 2)], {
       type: 'application/json',
     });
     const url = URL.createObjectURL(blob);
