@@ -248,11 +248,7 @@ export class ComprehensiveOptimizer {
 
     // Set Open Graph tags
     if (this.config.seo.enableOpenGraph) {
-<<<<<<< HEAD
-      const ogData: Record<string, unknown> = {
-=======
       const ogData: Record<string, string> = {
->>>>>>> 70bc12821306b80c749458dd79d42cb25e604290
         title: pageData.title,
         description: pageData.description,
         url: pageData.url,
@@ -266,11 +262,7 @@ export class ComprehensiveOptimizer {
 
     // Set Twitter Card tags
     if (this.config.seo.enableTwitterCards) {
-<<<<<<< HEAD
-      const twitterData: Record<string, unknown> = {
-=======
       const twitterData: Record<string, string> = {
->>>>>>> 70bc12821306b80c749458dd79d42cb25e604290
         title: pageData.title,
         description: pageData.description,
       };
