@@ -116,7 +116,11 @@ const NewContentPromotionalBanner2026: React.FC = () => {
               <div
                 className={`absolute inset-0 bg-gradient-to-br ${content.color} opacity-0 group-hover:opacity-10 transition-all duration-500`}
               />
+<<<<<<< HEAD
               <div className="relative p-8">
+=======
+              <div className="relative z-10 p-8">
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-445b
                 {/* Icon & Badge */}
                 <div className="flex items-center justify-between mb-6">
                   <div className="text-4xl">{content.icon}</div>
@@ -182,6 +186,62 @@ const NewContentPromotionalBanner2026: React.FC = () => {
             </span>{' '}
             with Zion Tech Group's AI solutions
           </p>
+<<<<<<< HEAD
+=======
+          <div className='flex flex-col sm:flex-row items-center justify-center gap-4 mb-12'>
+            <Link
+              href='/contact'
+              className='group flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl'
+            >
+              <Sparkles className='w-5 h-5' />
+              <span>Start Your AI Journey</span>
+            </Link>
+            <Link
+              href='/blog'
+              className='group flex items-center gap-3 border-2 border-white/20 hover:border-cyan-400 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 hover:bg-white/5'
+            >
+              <span>Explore All Content</span>
+              <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform duration-300' />
+            </Link>
+          </div>
+          {/* Stats */}
+          <div className='grid grid-cols-2 md:grid-cols-4 gap-8'>
+            <div className='text-center'>
+              <div className='text-3xl font-bold text-cyan-400 mb-2'>500+</div>
+              <div className='text-gray-300'>Enterprise Clients</div>
+            </div>
+            <div className='text-center'>
+              <div className='text-3xl font-bold text-blue-400 mb-2'>400%</div>
+              <div className='text-gray-300'>Average ROI</div>
+            </div>
+            <div className='text-center'>
+              <div className='text-3xl font-bold text-blue-400 mb-2'>99.9%</div>
+              <div className='text-gray-300'>System Uptime</div>
+            </div>
+            <div className='text-center'>
+              <div className='text-3xl font-bold text-green-400 mb-2'>24/7</div>
+              <div className='text-gray-300'>Expert Support</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-green-400 mb-2">300%</div>
+              <div className="text-gray-300">Average ROI</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-yellow-400 mb-2">99.9%</div>
+              <div className="text-gray-300">System Uptime</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-purple-400 mb-2">24/7</div>
+              <div className="text-gray-300">Expert Support</div>
+            </div>
+          </div>
+
+          <p className="text-lg text-gray-300 text-center mb-8 max-w-3xl mx-auto">
+            Join 500+ enterprises achieving <span className="text-yellow-400 font-bold">300% ROI</span>, 
+            <span className="text-green-400 font-bold"> 85% automation</span>, and 
+            <span className="text-blue-400 font-bold"> complete digital transformation</span> with Zion Tech Group's AI solutions
+          </p>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-445b
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
             <Link
