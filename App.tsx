@@ -6,7 +6,7 @@ import HomePage from './app/page';
 import { initializePerformanceEnhancements } from './app/utils/performanceEnhancer';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
 import EnhancedErrorBoundary from './app/components/EnhancedErrorBoundary';
-import AdvancedSEOOptimizer, { defaultSEOConfig } from './app/components/AdvancedSEOOptimizer';
+import AdvancedSEOOptimizer from './app/components/AdvancedSEOOptimizer';
 import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
 import { performanceOptimizer } from './app/utils/performanceOptimizer';
 
@@ -96,7 +96,6 @@ const App = () => {
     if (typeof document !== 'undefined') {
       // Initialize enhanced performance monitoring
       initializePerformanceEnhancements();
-      performanceOptimizer.initialize();
       
       // Preload critical fonts
       const fontLink = document.createElement('link');
@@ -183,7 +182,6 @@ const App = () => {
         }}
       >
         <AdvancedSEOOptimizer
-          config={defaultSEOConfig}
           enableStructuredData={true}
           enableAnalytics={true}
           enablePerformanceTracking={true}

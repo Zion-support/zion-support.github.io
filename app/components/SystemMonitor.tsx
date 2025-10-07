@@ -4,7 +4,7 @@
  */
 
 import React, { useState, useEffect, useCallback } from 'react';
-import { performanceEnhancer } from '../utils/performanceEnhancer';
+import { initializePerformanceEnhancements } from '../utils/performanceEnhancer';
 import { errorHandler } from '../utils/enhancedErrorHandler';
 
 interface SystemMetrics {
