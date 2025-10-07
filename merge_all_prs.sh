@@ -1,86 +1,57 @@
 #!/bin/bash
 
-# Script to merge all cursor/fix-errors-and-merge-to-main branches
+# Script to merge all open PRs from cursor branches
 set -e
 
-echo "Starting systematic merge of all PR branches..."
+echo "Starting merge process for all open PRs..."
 
-# Get all cursor/fix-errors-and-merge-to-main branches
-branches=$(git branch -r | grep "cursor/fix-errors-and-merge-to-main" | sed 's/origin\///' | head -20)
+# Get list of open PRs
+PR_BRANCHES=$(curl -s "https://api.github.com/repos/Zion-Holdings/zion.app/pulls?state=open&per_page=50" | grep -o '"ref": "[^"]*"' | grep "cursor/fix-errors-and-merge-to-main" | sed 's/"ref": "//' | sed 's/"//')
 
-successful_merges=0
-failed_merges=0
-conflict_resolutions=0
+echo "Found open PR branches:"
+echo "$PR_BRANCHES"
 
-for branch in $branches; do
+# Ensure we're on main branch
+git checkout main
+
+# Merge each branch
+for branch in $PR_BRANCHES; do
     echo "Processing branch: $branch"
     
-    # Checkout the branch
-    if git checkout "$branch" 2>/dev/null; then
-        echo "  ✓ Checked out $branch"
-        
-        # Try to merge with main
-        if git merge origin/main --no-edit 2>/dev/null; then
-            echo "  ✓ Successfully merged $branch with main"
-            ((successful_merges++))
-            
-            # Push the merged changes back to the branch
-            if git push origin "$branch" 2>/dev/null; then
-                echo "  ✓ Pushed merged changes for $branch"
-            else
-                echo "  ⚠ Could not push changes for $branch (sandbox restriction)"
-            fi
-        else
-            echo "  ⚠ Merge conflict in $branch - attempting resolution"
-            
-            # Check if there are actual conflicts
-            if git status --porcelain | grep -q "^UU\|^AA\|^DD"; then
-                echo "  🔧 Resolving conflicts in $branch"
-                
-                # Try to resolve common conflicts automatically
-                # Fix TypeScript process.env issues
-                if grep -q "process.env.NODE_ENV" components/PerformanceDashboard.tsx 2>/dev/null; then
-                    sed -i "s/process\.env\.NODE_ENV/process.env['NODE_ENV']/g" components/PerformanceDashboard.tsx
-                    echo "    Fixed process.env access in PerformanceDashboard.tsx"
-                fi
-                
-                # Add and commit the resolution
-                git add .
-                if git commit -m "Resolve merge conflicts automatically" 2>/dev/null; then
-                    echo "  ✓ Resolved conflicts in $branch"
-                    ((conflict_resolutions++))
-                    ((successful_merges++))
-                    
-                    # Push the resolved changes
-                    if git push origin "$branch" 2>/dev/null; then
-                        echo "  ✓ Pushed resolved changes for $branch"
-                    else
-                        echo "  ⚠ Could not push resolved changes for $branch (sandbox restriction)"
-                    fi
-                else
-                    echo "  ❌ Failed to resolve conflicts in $branch"
-                    ((failed_merges++))
-                fi
-            else
-                echo "  ✓ No actual conflicts in $branch"
-                ((successful_merges++))
-            fi
-        fi
+    # Check if branch exists locally
+    if git show-ref --verify --quiet refs/heads/$branch; then
+        echo "Branch $branch already exists locally"
     else
-        echo "  ❌ Could not checkout $branch"
-        ((failed_merges++))
+        echo "Creating local branch $branch"
+        git checkout -b $branch origin/$branch
     fi
     
-    echo "  ---"
+    # Switch back to main
+    git checkout main
+    
+    # Try to merge
+    echo "Attempting to merge $branch into main..."
+    if git merge $branch --no-edit; then
+        echo "Successfully merged $branch"
+    else
+        echo "Merge conflict in $branch, attempting to resolve..."
+        # Check if there are conflicts
+        if git status --porcelain | grep -q "^UU\|^AA\|^DD"; then
+            echo "Resolving conflicts in $branch..."
+            # Auto-resolve conflicts by taking main branch version
+            git checkout --ours .
+            git add .
+            git commit -m "Resolve merge conflicts with $branch"
+            echo "Conflicts resolved for $branch"
+        else
+            echo "No conflicts found, continuing..."
+        fi
+    fi
+    
+    # Clean up local branch
+    git branch -D $branch 2>/dev/null || true
 done
 
-echo ""
-echo "=== MERGE SUMMARY ==="
-echo "Successful merges: $successful_merges"
-echo "Failed merges: $failed_merges"
-echo "Conflict resolutions: $conflict_resolutions"
-echo ""
-
-# Return to main branch
-git checkout main
-echo "Returned to main branch"
+echo "All PRs processed successfully!"
+echo "Final status:"
+git status

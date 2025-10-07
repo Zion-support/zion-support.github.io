@@ -58,3 +58,8 @@ const EnhancedNavigation: React.FC = () => {
     </nav>
   );
 };
+<<<<<<< HEAD
+=======
+
+export default EnhancedNavigation;
+>>>>>>> 49ee820968f6910db9b3aa56c9254128dde2e192

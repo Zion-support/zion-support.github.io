@@ -57,4 +57,8 @@ const EnhancedHeader: React.FC = () => {
   );
 };
 
+<<<<<<< HEAD
 export default EnhancedHeader;
+=======
+export default EnhancedHeader;
+>>>>>>> 49ee820968f6910db9b3aa56c9254128dde2e192

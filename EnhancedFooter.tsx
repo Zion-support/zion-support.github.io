@@ -1,5 +1,8 @@
 import {
+<<<<<<< HEAD
   Facebook,
+=======
+>>>>>>> 49ee820968f6910db9b3aa56c9254128dde2e192
   Github,
   Linkedin,
   Mail,
@@ -73,12 +76,15 @@ const EnhancedFooter: React.FC = () => {
               >
                 <Github className='w-5 h-5' />
               </a>
+<<<<<<< HEAD
               <a
                 href='https://facebook.com/ziontechgroup'
                 className='text-gray-400 hover:text-white transition-colors'
               >
                 <Facebook className='w-5 h-5' />
               </a>
+=======
+>>>>>>> 49ee820968f6910db9b3aa56c9254128dde2e192
             </div>
           </div>
           <div>
@@ -152,7 +158,11 @@ const EnhancedFooter: React.FC = () => {
         <div className='border-t border-gray-700 mt-8 pt-8'>
           <div className='flex flex-col md:flex-row justify-between items-center'>
             <p className='text-gray-300 text-sm'>
+<<<<<<< HEAD
               &copy, {currentYear} Zion Tech Group. All rights reserved.
+=======
+              &copy; {currentYear} Zion Tech Group. All rights reserved.
+>>>>>>> 49ee820968f6910db9b3aa56c9254128dde2e192
             </p>
             <div className='flex space-x-6 mt-4 md:mt-0'>
               <Link to='/legal/privacy'>
@@ -178,4 +188,8 @@ const EnhancedFooter: React.FC = () => {
   );
 };
 
+<<<<<<< HEAD
 export default EnhancedFooter;
+=======
+export default EnhancedFooter;
+>>>>>>> 49ee820968f6910db9b3aa56c9254128dde2e192

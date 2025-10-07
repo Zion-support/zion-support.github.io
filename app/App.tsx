@@ -129,6 +129,7 @@ const App: React.FC = () => {
     </HelmetProvider>
   );
 };
+
 // Loading fallback component
 const LoadingFallback: React.FC<{ height?: string }> = ({
   height = 'h-32',

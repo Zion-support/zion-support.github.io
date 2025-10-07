@@ -1,4 +1,3 @@
-'use client';
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
@@ -6,6 +5,7 @@ import Link from 'next/link';
 const UltimateBusinessIntelligence2025Banner = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
+<<<<<<< HEAD
   
 =======
 const UltimateBusinessIntelligence2025Banner: React.FC = () => {
@@ -23,8 +23,18 @@ const UltimateBusinessIntelligence2025Banner: React.FC = () => {
 =======
       url: '/blog/ai-2025-ultimate-business-intelligence-revolution',
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-118c
+=======
+
+  const content = [
+    {
+      id: 'ultimate-business-intelligence-2025',
+      title: 'Ultimate Business Intelligence Revolution 2025',
+      description: 'Transform your enterprise with AI-powered business intelligence achieving 30,000% ROI, 70% cost reduction, and 90% efficiency gains.',
+      url: '/blog/ultimate-business-intelligence-2025',
+>>>>>>> 49ee820968f6910db9b3aa56c9254128dde2e192
       type: 'Blog Post',
       metrics: {
+<<<<<<< HEAD
         roi: '30,000%',
         savings: '$750B+',
         accuracy: '99.99%',
@@ -56,13 +66,16 @@ const UltimateBusinessIntelligence2025Banner: React.FC = () => {
       id: 'business-intelligence-implementation-guide',
       title: 'AI 2025 Ultimate Business Intelligence Implementation Guide',
       description: 'Complete roadmap to 30,000% ROI through revolutionary AI-powered business intelligence transformation.',
-      url: '/resources/ai-2025-ultimate-business-intelligence-implementation-guide',
+      url: '/guides/ai-2025-ultimate-business-intelligence-implementation-guide',
       type: 'Implementation Guide',
       metrics: {
-        roi: '30,000%',
-        success: '99.8%',
-        timeline: '18 months',
-        adoption: '100%'
+=======
+>>>>>>> a592ab53728fe9c95b917d9d019e153fe1af034e
+        efficiency: '300%',
+        accuracy: '99.7%',
+        timeline: '6 months',
+        adoption: '95%'
+<<<<<<< HEAD
       },
 <<<<<<< HEAD
       readingTime: '60 min read',
@@ -70,16 +83,21 @@ const UltimateBusinessIntelligence2025Banner: React.FC = () => {
       readingTime: '45 min read',
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-118c
       featured: true
+=======
+      }
+>>>>>>> a592ab53728fe9c95b917d9d019e153fe1af034e
     }
   ];
 
   useEffect(() => {
-    const interval = setInterval(() => {
+    const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % content.length);
     }, 5000);
-    return () => clearInterval(interval);
+
+    return () => clearInterval(timer);
   }, [content.length]);
 
+<<<<<<< HEAD
   useEffect(() => {
     const dismissed = localStorage.getItem('ultimate-business-intelligence-2025-banner-dismissed');
     if (dismissed === 'true') {
@@ -87,13 +105,16 @@ const UltimateBusinessIntelligence2025Banner: React.FC = () => {
     }
   }, []);
 
-  const handleDismiss = () => {
+=======
+>>>>>>> a592ab53728fe9c95b917d9d019e153fe1af034e
+  const handleClose = () => {
     setIsVisible(false);
     localStorage.setItem('ultimate-business-intelligence-2025-banner-dismissed', 'true');
   };
 
   if (!isVisible) return null;
 
+<<<<<<< HEAD
   return (
 <<<<<<< HEAD
     <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
@@ -120,6 +141,19 @@ const UltimateBusinessIntelligence2025Banner: React.FC = () => {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-118c
           style={{ animationDelay: '1s' }}
         ></div>
+=======
+<<<<<<< HEAD
+  const currentContent = content[currentSlide];
+
+=======
+>>>>>>> a592ab53728fe9c95b917d9d019e153fe1af034e
+  return (
+    <div className="relative bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 text-white overflow-hidden">
+      <div className="absolute inset-0">
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-blue-600/20 to-purple-600/20 animate-pulse"></div>
+        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl animate-bounce"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-bounce" style={{ animationDelay: '1s' }}></div>
+>>>>>>> 49ee820968f6910db9b3aa56c9254128dde2e192
       </div>
 
 <<<<<<< HEAD
@@ -162,14 +196,25 @@ const UltimateBusinessIntelligence2025Banner: React.FC = () => {
                 <span className="text-gray-300 text-sm">⏱️ {currentContent.readingTime}</span>
               </div>
               <button
-                onClick={handleDismiss}
+                onClick={handleClose}
                 className="text-gray-400 hover:text-white transition-colors"
                 aria-label="Dismiss banner"
               >
                 ✕
               </button>
+=======
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="flex items-center justify-between">
+          <div className="flex-1">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
+              <span className="text-green-400 font-semibold text-sm uppercase tracking-wide">
+                New Release
+              </span>
+>>>>>>> a592ab53728fe9c95b917d9d019e153fe1af034e
             </div>
 
+<<<<<<< HEAD
             {/* Metrics Grid */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
               {Object.entries(currentContent.metrics).map(([key, value]) => (
@@ -259,11 +304,112 @@ const UltimateBusinessIntelligence2025Banner: React.FC = () => {
                 Get Custom AI Solutions
               </Link>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-118c
+=======
+<<<<<<< HEAD
+            {/* Content Details */}
+            <div className="flex-1">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
+                <span className="text-green-400 font-semibold text-sm uppercase tracking-wide">
+                  New Release
+                </span>
+              </div>
+              
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                {currentContent.title}
+              </h2>
+              
+              <p className="text-lg text-gray-200 mb-6 max-w-3xl">
+                {currentContent.description}
+              </p>
+
+              {/* Metrics Grid */}
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
+                {Object.entries(currentContent.metrics).map(([key, value]) => (
+                  <div key={key} className="text-center">
+                    <div className="text-3xl font-bold text-cyan-400 mb-2">{value}</div>
+                    <div className="text-gray-300 text-sm capitalize">{key.replace(/([A-Z])/g, ' $1')}</div>
+                  </div>
+                ))}
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link
+                  href={currentContent.url}
+                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
+                >
+                  Read Full Article
+                  <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </Link>
+                <button className="inline-flex items-center px-6 py-3 border border-white/30 text-white rounded-lg font-semibold hover:bg-white/10 transition-colors">
+                  Learn More
+                </button>
+              </div>
+>>>>>>> 49ee820968f6910db9b3aa56c9254128dde2e192
             </div>
           </div>
 
           {/* Slide Indicators */}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+          {content.length > 1 && (
+            <div className="flex justify-center mt-8 space-x-2">
+              {content.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentSlide(index)}
+                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                    index === currentSlide ? 'bg-cyan-400' : 'bg-white/30'
+                  }`}
+                  aria-label={`Go to slide ${index + 1}`}
+                />
+              ))}
+            </div>
+          )}
+        </div>
+=======
+            <div className="flex flex-wrap gap-4 mb-6">
+              {Object.entries(content[currentSlide].metrics).map(([key, value]) => (
+                <div key={key} className="bg-white/10 backdrop-blur-sm rounded-lg px-4 py-2">
+                  <div className="text-2xl font-bold text-cyan-400">{value}</div>
+                  <div className="text-sm text-gray-300 capitalize">{key.replace(/([A-Z])/g, ' $1')}</div>
+                </div>
+              ))}
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Link
+                href={content[currentSlide].url}
+                className="inline-flex items-center px-6 py-3 bg-white text-blue-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+              >
+                Read Full Article
+                <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
+              
+              <button className="inline-flex items-center px-6 py-3 border border-white/30 text-white rounded-lg font-semibold hover:bg-white/10 transition-colors">
+                Learn More
+              </button>
+            </div>
+          </div>
+
+          <button
+            onClick={handleClose}
+            className="ml-4 p-2 hover:bg-white/10 rounded-lg transition-colors"
+            aria-label="Close banner"
+          >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+
+        {content.length > 1 && (
+>>>>>>> 49ee820968f6910db9b3aa56c9254128dde2e192
           <div className="flex justify-center mt-8 space-x-2">
 =======
           <div className='flex justify-center mt-8 space-x-2'>
@@ -272,14 +418,15 @@ const UltimateBusinessIntelligence2025Banner: React.FC = () => {
               <button
                 key={index}
                 onClick={() => setCurrentSlide(index)}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                  index === currentSlide ? 'bg-cyan-400' : 'bg-white/30'
+                className={`w-3 h-3 rounded-full transition-colors ${
+                  index === currentSlide ? 'bg-white' : 'bg-white/30'
                 }`}
                 aria-label={`Go to slide ${index + 1}`}
               />
             ))}
           </div>
-        </div>
+        )}
+>>>>>>> a592ab53728fe9c95b917d9d019e153fe1af034e
 
 <<<<<<< HEAD
         {/* Stats Section */}
@@ -307,7 +454,7 @@ const UltimateBusinessIntelligence2025Banner: React.FC = () => {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-118c
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

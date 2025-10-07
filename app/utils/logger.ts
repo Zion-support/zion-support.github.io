@@ -59,16 +59,20 @@ class Logger {
     // Use appropriate console method based on level
     switch (level) {
       case LogLevel.DEBUG:
-        console.debug(formattedMessage);
+        // eslint-disable-next-line no-console
+console.debug(formattedMessage);
         break;
       case LogLevel.INFO:
-        console.info(formattedMessage);
+        // eslint-disable-next-line no-console
+console.info(formattedMessage);
         break;
       case LogLevel.WARN:
-        console.warn(formattedMessage);
+        // eslint-disable-next-line no-console
+console.warn(formattedMessage);
         break;
       case LogLevel.ERROR:
-        console.error(formattedMessage);
+        // eslint-disable-next-line no-console
+console.error(formattedMessage);
         break;
     }
 
@@ -90,7 +94,8 @@ class Logger {
       }
     } catch (error) {
       // Fallback to console if external logging fails
-      console.error('Failed to send log to external service:', error);
+      // eslint-disable-next-line no-console
+console.error('Failed to send log to external service:', error);
     }
   }
 
