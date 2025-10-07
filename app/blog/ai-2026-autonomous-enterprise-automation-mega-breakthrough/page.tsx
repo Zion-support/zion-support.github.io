@@ -27,13 +27,13 @@ export default function AutonomousEnterpriseAutomationMegaBreakthrough() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
                 href="/case-studies/ai-2026-autonomous-enterprise-automation-15-billion-success"
-                className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-purple-600 hover:bg-purple-700 transition-colors"
+                className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-purple-600 hover:bg-purple-700 transition-colors"
               >
                 View $15B Success Story
               </a>
               <a 
                 href="/services/ai-2026-autonomous-enterprise-automation-consulting"
-                className="inline-flex items-center px-6 py-3 border border-white text-base font-medium rounded-md text-white hover:bg-white hover:text-purple-900 transition-colors"
+                className="inline-flex items-center px-8 py-3 border border-white text-base font-medium rounded-md text-white hover:bg-white hover:text-purple-900 transition-colors"
               >
                 Get Automation Consultation
               </a>
@@ -53,7 +53,6 @@ export default function AutonomousEnterpriseAutomationMegaBreakthrough() {
               Experience the most advanced autonomous enterprise automation system ever developed, delivering unprecedented operational excellence and business transformation.
             </p>
           </div>
-          
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center p-6 rounded-lg border border-gray-200 hover:shadow-lg transition-shadow">
               <div className="text-4xl mb-4">🤖</div>
@@ -69,7 +68,7 @@ export default function AutonomousEnterpriseAutomationMegaBreakthrough() {
               </ul>
               <a 
                 href="/services/ai-2026-autonomous-enterprise-automation-consulting"
-                className="inline-flex items-center text-purple-600 hover:text-purple-800 font-medium"
+                className="inline-flex items-center text-purple-600 hover:text-purple-700 font-medium"
               >
                 Learn More →
               </a>
@@ -89,7 +88,7 @@ export default function AutonomousEnterpriseAutomationMegaBreakthrough() {
               </ul>
               <a 
                 href="/case-studies/ai-2026-autonomous-enterprise-automation-15-billion-success"
-                className="inline-flex items-center text-purple-600 hover:text-purple-800 font-medium"
+                className="inline-flex items-center text-purple-600 hover:text-purple-700 font-medium"
               >
                 View Case Study →
               </a>
@@ -109,7 +108,7 @@ export default function AutonomousEnterpriseAutomationMegaBreakthrough() {
               </ul>
               <a 
                 href="/case-studies/ai-2026-autonomous-enterprise-automation-15-billion-success"
-                className="inline-flex items-center text-purple-600 hover:text-purple-800 font-medium"
+                className="inline-flex items-center text-purple-600 hover:text-purple-700 font-medium"
               >
                 Read Success Story →
               </a>
@@ -126,10 +125,9 @@ export default function AutonomousEnterpriseAutomationMegaBreakthrough() {
               Technical Innovation Deep Dive
             </h2>
           </div>
-          
-          <div className="grid lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white p-8 rounded-lg shadow-lg">
-              <h3 className="text-2xl font-semibold text-gray-900 mb-4">🤖 99.98% Autonomous Operations</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">🤖 99.98% Autonomous Operations</h3>
               <p className="text-gray-600 mb-6">
                 Our breakthrough autonomous enterprise automation system achieves 99.98% operational independence through advanced AI orchestration, self-healing capabilities, and intelligent decision-making algorithms that operate without human intervention.
               </p>
@@ -140,9 +138,8 @@ export default function AutonomousEnterpriseAutomationMegaBreakthrough() {
                 <li>• Zero human intervention requirements</li>
               </ul>
             </div>
-
             <div className="bg-white p-8 rounded-lg shadow-lg">
-              <h3 className="text-2xl font-semibold text-gray-900 mb-4">🧠 Intelligent Process Optimization</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">🧠 Intelligent Process Optimization</h3>
               <p className="text-gray-600 mb-6">
                 Revolutionary process optimization technology that continuously analyzes business workflows, identifies improvement opportunities, and automatically implements optimizations for maximum efficiency and productivity gains.
               </p>
@@ -153,9 +150,8 @@ export default function AutonomousEnterpriseAutomationMegaBreakthrough() {
                 <li>• Real-time performance monitoring</li>
               </ul>
             </div>
-
             <div className="bg-white p-8 rounded-lg shadow-lg">
-              <h3 className="text-2xl font-semibold text-gray-900 mb-4">🚀 Enterprise Transformation Engine</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">🚀 Enterprise Transformation Engine</h3>
               <p className="text-gray-600 mb-6">
                 Complete enterprise transformation through intelligent automation that reimagines business processes, eliminates inefficiencies, and delivers unprecedented operational excellence across all organizational functions.
               </p>
@@ -178,7 +174,6 @@ export default function AutonomousEnterpriseAutomationMegaBreakthrough() {
               Industry Applications
             </h2>
           </div>
-          
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center p-6 rounded-lg border border-gray-200">
               <div className="text-3xl mb-4">🏭</div>
@@ -193,7 +188,6 @@ export default function AutonomousEnterpriseAutomationMegaBreakthrough() {
                 <li>• Self-managing quality control</li>
               </ul>
             </div>
-
             <div className="text-center p-6 rounded-lg border border-gray-200">
               <div className="text-3xl mb-4">🏢</div>
               <h3 className="text-lg font-semibold text-gray-900 mb-3">Financial Services</h3>
@@ -207,7 +201,6 @@ export default function AutonomousEnterpriseAutomationMegaBreakthrough() {
                 <li>• Self-optimizing investment strategies</li>
               </ul>
             </div>
-
             <div className="text-center p-6 rounded-lg border border-gray-200">
               <div className="text-3xl mb-4">🏥</div>
               <h3 className="text-lg font-semibold text-gray-900 mb-3">Healthcare & Life Sciences</h3>
@@ -221,7 +214,6 @@ export default function AutonomousEnterpriseAutomationMegaBreakthrough() {
                 <li>• Self-optimizing healthcare workflows</li>
               </ul>
             </div>
-
             <div className="text-center p-6 rounded-lg border border-gray-200">
               <div className="text-3xl mb-4">🛒</div>
               <h3 className="text-lg font-semibold text-gray-900 mb-3">Retail & E-commerce</h3>
@@ -252,36 +244,34 @@ export default function AutonomousEnterpriseAutomationMegaBreakthrough() {
             <p className="text-xl text-purple-100 mb-8 max-w-3xl mx-auto">
               Transform your business with the most advanced autonomous enterprise automation system ever developed. Join Fortune 500 companies achieving unprecedented results with 99.98% autonomous operations.
             </p>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
-            <div className="text-center">
-              <div className="text-4xl font-bold text-white mb-2">$15B</div>
-              <div className="text-purple-200">Total Value Generated</div>
+            <div className="grid md:grid-cols-3 gap-8 mb-12">
+              <div className="text-center">
+                <div className="text-3xl font-bold text-white mb-2">$15B</div>
+                <div className="text-purple-200">Total Value Generated</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-white mb-2">99.98%</div>
+                <div className="text-purple-200">Autonomous Operations</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-white mb-2">5,200%</div>
+                <div className="text-purple-200">Average ROI</div>
+              </div>
             </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-white mb-2">99.98%</div>
-              <div className="text-purple-200">Autonomous Operations</div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a 
+                href="/contact"
+                className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-purple-600 bg-white hover:bg-gray-50 transition-colors"
+              >
+                Get Started Today
+              </a>
+              <a 
+                href="/case-studies/ai-2026-autonomous-enterprise-automation-15-billion-success"
+                className="inline-flex items-center px-8 py-3 border border-white text-base font-medium rounded-md text-white hover:bg-white hover:text-purple-600 transition-colors"
+              >
+                View $15B Success Story
+              </a>
             </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-white mb-2">5,200%</div>
-              <div className="text-purple-200">Average ROI</div>
-            </div>
-          </div>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
-              href="/contact"
-              className="inline-flex items-center px-8 py-4 border border-transparent text-lg font-medium rounded-md text-purple-600 bg-white hover:bg-gray-50 transition-colors"
-            >
-              Get Started Today
-            </a>
-            <a 
-              href="/case-studies/ai-2026-autonomous-enterprise-automation-15-billion-success"
-              className="inline-flex items-center px-8 py-4 border border-white text-lg font-medium rounded-md text-white hover:bg-white hover:text-purple-600 transition-colors"
-            >
-              View $15B Success Story
-            </a>
           </div>
         </div>
       </section>
