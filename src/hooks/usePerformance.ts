@@ -1,15 +1,11 @@
-// usePerformance - TypeScript definitions and utilities
+/**
+ * Performance Monitoring Hook
+ * Provides React hooks for performance monitoring and optimization
+ */
+
 import { useEffect, useCallback, useRef } from 'react';
-import { monitorLongTasks } from '../utils/performanceOptimizer';
 import { performanceOptimizer } from '../utils/performanceOptimizer';
 import analytics from '../utils/analytics';
-
-export interface usePerformanceConfig {
-  // Configuration properties
-  enableMonitoring?: boolean;
-  trackLongTasks?: boolean;
-  trackResourceLoading?: boolean;
-}
 
 export interface PerformanceMetrics {
   renderTime: number;
@@ -18,16 +14,82 @@ export interface PerformanceMetrics {
   isSlowRender: boolean;
 }
 
-export const defaultusePerformanceConfig: usePerformanceConfig = {
-  enableMonitoring: true,
-  trackLongTasks: true,
-  trackResourceLoading: true,
-};
+export interface UsePerformanceOptions {
+  componentName: string;
+  trackRenderTime?: boolean;
+  trackMemoryUsage?: boolean;
+  slowRenderThreshold?: number; // in milliseconds
+}
 
-const usePerformance = () => {
-  // Performance monitoring logic would go here
+/**
+ * Hook for monitoring component performance
+ */
+export const usePerformance = (options: UsePerformanceOptions) => {
+  const {
+    componentName,
+    trackRenderTime = true,
+    trackMemoryUsage = false,
+    slowRenderThreshold = 16, // 60fps threshold
+  } = options;
+
+  const mountTimeRef = useRef<number>(0);
+  const renderStartTimeRef = useRef<number>(0);
+
+  // Track component mount time
+  useEffect(() => {
+    mountTimeRef.current = performance.now();
+
+    return () => {
+      const mountDuration = performance.now() - mountTimeRef.current;
+      analytics.trackPerformance(`${componentName}_mount_time`, mountDuration);
+    };
+  }, [componentName]);
+
+  // Track render performance
+  const trackRender = useCallback(() => {
+    if (!trackRenderTime) return;
+
+    renderStartTimeRef.current = performance.now();
+
+    // Use requestAnimationFrame to measure actual render time
+    requestAnimationFrame(() => {
+      const renderTime = performance.now() - renderStartTimeRef.current;
+      const isSlowRender = renderTime > slowRenderThreshold;
+
+      const metrics: PerformanceMetrics = {
+        renderTime,
+        componentMountTime: performance.now() - mountTimeRef.current,
+        isSlowRender,
+      };
+
+      // Track memory usage if available
+      if (trackMemoryUsage && 'memory' in performance) {
+        const memory = (performance as any).memory;
+        metrics.memoryUsage = memory.usedJSHeapSize;
+      }
+
+      // Send to analytics
+      analytics.trackPerformance(`${componentName}_render_time`, renderTime);
+
+      if (isSlowRender) {
+        analytics.track(
+          'slow_render',
+          'performance',
+          'warning',
+          componentName,
+          renderTime
+        );
+      }
+    });
+  }, [componentName, trackRenderTime, slowRenderThreshold, trackMemoryUsage]);
+
   return {
-    defaultusePerformanceConfig,
+    trackRender,
+    getMetrics: (): PerformanceMetrics => ({
+      renderTime: performance.now() - renderStartTimeRef.current,
+      componentMountTime: performance.now() - mountTimeRef.current,
+      isSlowRender: false,
+    }),
   };
 };
 
@@ -50,8 +112,8 @@ export const usePageLoadPerformance = () => {
               navigation.domContentLoadedEventStart,
             loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
             firstByte: navigation.responseStart - navigation.requestStart,
-            domInteractive: navigation.domInteractive - navigation.fetchStart,
-            totalLoadTime: navigation.loadEventEnd - navigation.fetchStart,
+            domInteractive: navigation.domInteractive - (navigation as any).navigationStart,
+            totalLoadTime: navigation.loadEventEnd - (navigation as any).navigationStart,
           };
 
           // Track each metric
@@ -74,7 +136,7 @@ export const usePageLoadPerformance = () => {
     // Track immediately if page is already loaded
     if (document.readyState === 'complete') {
       trackPageLoad();
-      return;
+      return undefined;
     } else {
       // Wait for load event
       window.addEventListener('load', trackPageLoad);
@@ -112,22 +174,14 @@ export const useResourcePerformance = () => {
  */
 export const useLongTaskMonitoring = () => {
   useEffect(() => {
-    const observer = monitorLongTasks((entries: PerformanceEntry[]) => {
+    performanceOptimizer.monitorLongTasks((entries: PerformanceEntryList) => {
       entries.forEach((entry: PerformanceEntry) => {
-        analytics.track(
-          'long_task',
-          'performance',
-          'detected',
-          undefined,
-          entry.duration
-        );
+        analytics.track('long_task', 'performance', 'detected', undefined, entry.duration);
       });
     });
 
     return () => {
-      if (observer && typeof observer.disconnect === 'function') {
-        observer.disconnect();
-      }
+      // Cleanup if needed
     };
   }, []);
 };

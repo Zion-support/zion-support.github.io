@@ -1,4 +1,5 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
+import { logger } from '../utils/logger';
 
 interface ErrorBoundaryState {
   hasError: boolean;
@@ -59,7 +60,7 @@ class AdvancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
 
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('Error Boundary caught an error:', error, errorInfo);
+      logger.error('Error Boundary caught an error', 'ErrorBoundary', { error: error.message, errorInfo }, error);
     }
 
     // Call custom error handler
@@ -130,7 +131,7 @@ class AdvancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
         body: JSON.stringify(errorReport),
       });
     } catch (reportError) {
-      console.error('Failed to send error report:', reportError);
+      logger.error('Failed to send error report', 'ErrorReporting', { reportError: (reportError as Error).message }, reportError as Error);
     }
   };
 
