@@ -1,19 +1,14 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-import Link from 'next/link';
+import { Component, ErrorInfo, ReactNode } from 'react';
 import { FileWarning } from 'lucide-react';
 
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
-  enableErrorReporting?: boolean;
-  enableRetry?: boolean;
 }
 
 interface State {
   hasError: boolean;
   error?: Error;
-  errorInfo?: ErrorInfo;
 }
 
 class ErrorBoundary extends Component<Props, State> {
@@ -27,23 +22,28 @@ class ErrorBoundary extends Component<Props, State> {
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    this.setState({ errorInfo });
-    
-    if (this.props.onError) {
-      this.props.onError(error, errorInfo);
+    // Log error to console in development
+    if (process.env.NODE_ENV === 'development') {
+      console.error('ErrorBoundary caught an error:', error, errorInfo);
     }
 
-    if (this.props.enableErrorReporting) {
-      console.error('Error caught by boundary:', error, errorInfo);
+    // Report error to monitoring service in production
+    if (process.env.NODE_ENV === 'production') {
+      // eslint-disable-next-line no-console
+      console.error('Production error caught:', error.message);
+      
+      // Send to error tracking service
+      if (typeof window !== 'undefined' && 'gtag' in window) {
+        (window as unknown as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag('event', 'exception', {
+          description: error.message,
+          fatal: false
+        });
+      }
     }
   }
 
   render() {
     if (this.state.hasError) {
-      if (this.props.fallback) {
-        return this.props.fallback;
-      }
-
       return (
         this.props.fallback || (
           <div className='min-h-screen flex items-center justify-center bg-gradient-to-br from-red-50 to-orange-50'>
@@ -56,8 +56,8 @@ class ErrorBoundary extends Component<Props, State> {
                   Oops! Something went wrong
                 </h1>
                 <p className='text-gray-600 mb-6'>
-                We&apos;re sorry for the inconvenience. Please try refreshing the
-                page.
+                  We&apos;re sorry for the inconvenience. Please try refreshing the
+                  page.
                 </p>
                 <div className='space-y-3'>
                   <button
@@ -66,31 +66,13 @@ class ErrorBoundary extends Component<Props, State> {
                   >
                     Refresh Page
                   </button>
-                  <Link
-                    href='/'
+                  <button
+                    onClick={() => window.location.href = '/'}
                     className='block w-full border-2 border-red-600 text-red-600 hover:bg-red-50 font-semibold py-3 px-6 rounded-lg transition-colors'
                   >
                     Go to Homepage
-                  </Link>
+                  </button>
                 </div>
-                {this.props.enableErrorReporting && this.state.error && (
-                  <details className="mt-6 text-left">
-                    <summary className="cursor-pointer text-sm text-gray-500 hover:text-gray-700">
-                      Error Details
-                    </summary>
-                    <div className="mt-2 p-4 bg-gray-100 rounded text-xs">
-                      <div className="mb-2">
-                        <strong>Error:</strong> {this.state.error.message}
-                      </div>
-                      {this.state.errorInfo && (
-                        <div>
-                          <strong>Component Stack:</strong>
-                          <pre className="whitespace-pre-wrap">{this.state.errorInfo.componentStack}</pre>
-                        </div>
-                      )}
-                    </div>
-                  </details>
-                )}
               </div>
             </div>
           </div>

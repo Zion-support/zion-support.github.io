@@ -240,7 +240,7 @@ class AdvancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
 
               <div className="mt-6 text-center">
                 <p className="text-xs text-gray-500">
-                  If this problem persists, please contact our support team at{' '}
+                  If this problem persists, please contact our support team at&nbsp;
                   <a
                     href="mailto:kleber@ziontechgroup.com"
                     className="text-indigo-600 hover:text-indigo-500"

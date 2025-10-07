@@ -89,7 +89,8 @@ export const usePerformanceMonitoring = (options: UsePerformanceMonitoringOption
       const entries = list.getEntries();
       entries.forEach((entry) => {
         if (process.env.NODE_ENV === 'development') {
-          console.warn(`Long task detected: ${entry.duration}ms`, entry);
+          // eslint-disable-next-line no-console
+console.warn(`Long task detected: ${entry.duration}ms`, entry);
         }
       });
     });
@@ -100,7 +101,8 @@ export const usePerformanceMonitoring = (options: UsePerformanceMonitoringOption
     } catch {
       // Long task API not supported
       if (process.env.NODE_ENV === 'development') {
-        console.warn('Long task monitoring not supported');
+        // eslint-disable-next-line no-console
+console.warn('Long task monitoring not supported');
       }
     }
   }, [enableLongTaskMonitoring]);
@@ -126,7 +128,8 @@ export const usePerformanceMonitoring = (options: UsePerformanceMonitoringOption
 
     // Report to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.log('Performance Metrics:', metrics);
+      // eslint-disable-next-line no-console
+console.log('Performance Metrics:', metrics);
     }
   }, [enableReporting]);
 
