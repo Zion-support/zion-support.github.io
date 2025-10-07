@@ -138,27 +138,49 @@ const API: React.FC = () => {
       </div>
 
       {/* CTA Section */}
+<<<<<<< HEAD
       <div className='py-16 bg-blue-600 text-white'>
         <div className='container mx-auto px-4 text-center'>
           <h2 className='text-3xl font-bold mb-6'>Ready to Get Started?</h2>
           <p className='text-xl mb-8 max-w-2xl mx-auto'>
             Start building with our powerful APIs and transform your business
             with cutting-edge AI technology.
+=======
+      <div className='py-16 bg-blue-600 text-white text-center'>
+        <div className='container mx-auto px-4'>
+          <h2 className='text-3xl font-bold mb-4'>
+            Ready to Get Started?
+          </h2>
+          <p className='text-lg text-white mb-8'>
+            Ready to integrate with our APIs? Get your API key and start
+            building amazing applications.
+>>>>>>> bb911b0617a971df5b6d8a662a626d7ff658a0a7
           </p>
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>
             <Link
               to='/contact'
+<<<<<<< HEAD
               className='bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center'
             >
               Get API Key
               <span className='ml-2 w-5 h-5'>→</span>
+=======
+              className='bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center'
+            >
+              Get API Key
+              <ArrowRight className='ml-2 w-5 h-5' />
+>>>>>>> bb911b0617a971df5b6d8a662a626d7ff658a0a7
             </Link>
             <a
               href='https://docs.ziontechgroup.com'
               className='border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors inline-flex items-center'
             >
               View Documentation
+<<<<<<< HEAD
               <span className='ml-2 w-5 h-5'>⚛️</span>
+=======
+              <ExternalLink className='ml-2 w-5 h-5' />
+>>>>>>> bb911b0617a971df5b6d8a662a626d7ff658a0a7
             </a>
           </div>
         </div>
