@@ -24,6 +24,9 @@ const ErrorBoundary = ({ children }: { children: React.ReactNode }) => {
 // Utils
 import { preloadCriticalResources, performanceOptimizer } from './utils/performanceOptimizer';
 
+// Import HomePage component
+import HomePage from './page';
+
 // Styles
 import '../index.css';
 
@@ -89,3 +92,4 @@ const App: React.FC = () => {
   );
 };
 
+export default App;
