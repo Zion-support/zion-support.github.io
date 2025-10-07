@@ -3,6 +3,8 @@
  * Advanced performance optimization tools for the application
  */
 
+import { useRef, useEffect } from 'react';
+
 // Debounce function for performance optimization
 export const debounce = <T extends (...args: unknown[]) => unknown>(
   func: T,
@@ -97,6 +99,30 @@ export class PerformanceMonitor {
   }
 }
 
+// React hook for performance monitoring
+export const usePerformanceMonitor = (componentName: string) => {
+  const renderStartTime = useRef<number>(0);
+  const monitor = PerformanceMonitor.getInstance();
+
+  useEffect(() => {
+    renderStartTime.current = performance.now();
+    
+    return () => {
+      const renderTime = performance.now() - renderStartTime.current;
+      monitor.trackRender(componentName, renderTime);
+      monitor.trackMemory(componentName);
+    };
+  }, [componentName, monitor]);
+
+  return {
+    trackRender: (fn: () => void) => {
+      const start = performance.now();
+      fn();
+      const duration = performance.now() - start;
+      monitor.trackRender(`${componentName}_function`, duration);
+    }
+  };
+};
 
 // Image lazy loading utility
 export const lazyLoadImages = () => {
@@ -185,18 +211,6 @@ export const optimizeScrollPerformance = () => {
     };
   };
 
-  const trackLCP = () => {
-    const observer = new PerformanceObserver((list) => {
-      for (const entry of list.getEntries()) {
-        console.log('[Web Vitals] LCP:', entry.startTime);
-      }
-    });
-
-    observer.observe({ entryTypes: ['largest-contentful-paint'] });
-
-    return () => observer.disconnect();
-  };
-
   const trackFID = () => {
     interface FirstInputEntry extends PerformanceEntry {
       processingStart: number;
@@ -219,12 +233,10 @@ export const optimizeScrollPerformance = () => {
 
   // Start tracking
   const cleanupCLS = trackCLS();
-  const cleanupLCP = trackLCP();
   const cleanupFID = trackFID();
 
   return () => {
     cleanupCLS();
-    cleanupLCP();
     cleanupFID();
   };
 };

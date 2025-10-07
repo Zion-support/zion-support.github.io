@@ -218,7 +218,7 @@ export default function App() {
           </script>
         </Helmet>
         
-        <div className="min-h-screen bg-white">
+        <div className="min-h-screen bg-white" role="main">
           <Suspense fallback={<LoadingSpinner />}>
             <UnifiedContentPromotion />
             <InteractiveAIROICalculator />

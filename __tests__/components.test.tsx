@@ -1,5 +1,6 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
+import { HelmetProvider } from 'react-helmet-async';
 import LoadingSpinner from '../app/components/LoadingSpinner';
 import SEOEnhancer from '../app/components/SEOEnhancer';
 
@@ -10,7 +11,11 @@ describe('Component Tests', () => {
   });
 
   test('SEOEnhancer renders without crashing', () => {
-    render(<SEOEnhancer />);
+    render(
+      <HelmetProvider>
+        <SEOEnhancer />
+      </HelmetProvider>
+    );
     expect(document.head).toBeInTheDocument();
   });
 });

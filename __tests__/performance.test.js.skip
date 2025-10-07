@@ -2,12 +2,26 @@
  * Performance tests for the Zion Tech Group website
  */
 
+// Mock PerformanceObserver globally before any imports
+class MockPerformanceObserver {
+  constructor(callback) {
+    this.callback = callback;
+  }
+  observe() {}
+  disconnect() {}
+  takeRecords() { return []; }
+}
+global.PerformanceObserver = MockPerformanceObserver;
+
 describe('Performance Tests', () => {
-  beforeEach(() => {
+  let originalLocation;
+
+  beforeAll(() => {
     // Mock performance API
     global.performance = {
       now: jest.fn(() => Date.now()),
       getEntriesByType: jest.fn(() => []),
+      getEntriesByName: jest.fn(() => []),
       mark: jest.fn(),
       measure: jest.fn(),
       memory: {
@@ -16,19 +30,30 @@ describe('Performance Tests', () => {
     };
 
     // Mock window object
-    Object.defineProperty(window, 'location', {
-      value: {
-        href: 'http://localhost:3000',
-        reload: jest.fn(),
-      },
-      writable: true,
-    });
+    delete window.location;
+    window.location = {
+      href: 'http://localhost:3000',
+      reload: jest.fn(),
+    };
 
     // Mock navigator
     Object.defineProperty(navigator, 'userAgent', {
       value: 'Mozilla/5.0 (Test Browser)',
       writable: true,
+      configurable: true,
     });
+  });
+
+  beforeEach(() => {
+    // Save original location and mock it
+    originalLocation = window.location;
+    delete window.location;
+    window.location = { ...originalLocation, reload: jest.fn() };
+  });
+
+  afterEach(() => {
+    // Restore original location
+    window.location = originalLocation;
   });
 
   test('PerformanceOptimizer should initialize correctly', () => {
