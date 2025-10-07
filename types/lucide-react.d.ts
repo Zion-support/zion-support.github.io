@@ -53,6 +53,9 @@ declare module 'lucide-react' {
   export const BarChart3: LucideIcon;
   export const Code: LucideIcon;
   export const ExternalLink: LucideIcon;
+  export const Atom: LucideIcon;
+  export const Calculator: LucideIcon;
+  export const Share2: LucideIcon;
   
   // Add more icons as needed
 }

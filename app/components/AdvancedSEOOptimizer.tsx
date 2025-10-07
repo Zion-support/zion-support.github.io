@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useEffect, useRef } from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -28,6 +30,9 @@ interface AdvancedSEOOptimizerProps {
   enableStructuredData?: boolean;
   enableAnalytics?: boolean;
   enablePerformanceTracking?: boolean;
+  enableOpenGraph?: boolean;
+  enableTwitterCards?: boolean;
+  enableSchemaMarkup?: boolean;
 }
 
 const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
