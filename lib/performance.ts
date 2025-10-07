@@ -38,18 +38,19 @@ const THRESHOLDS = {
 };
 
 /**
- * Get rating based on metric value
+ * Get performance rating based on thresholds
  */
 function getRating(name: string, value: number): 'good' | 'needs-improvement' | 'poor' {
   const threshold = THRESHOLDS[name as keyof typeof THRESHOLDS];
   if (!threshold) return 'good';
+  
   if (value <= threshold.good) return 'good';
   if (value <= threshold.poor) return 'needs-improvement';
   return 'poor';
 }
 
 /**
- * Send metric to analytics and custom endpoints
+ * Send performance data to analytics
  */
 function sendToAnalytics(metric: Metric): void {
   const performanceMetric: PerformanceMetric = {
@@ -113,8 +114,8 @@ export function initPerformanceMonitoring(): void {
 /**
  * Measure custom performance timing
  */
-export function measurePerformance(name: string, startTime: number): number {
-  const duration = performance.now() - startTime;
+export function getPerformanceMetrics(): PerformanceMetric[] {
+  if (typeof window === 'undefined') return [];
 
   if (typeof window !== 'undefined' && window.gtag) {
     window.gtag('event', 'timing_complete', {

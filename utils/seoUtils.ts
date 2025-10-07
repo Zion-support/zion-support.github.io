@@ -54,7 +54,7 @@ export const setTwitterCardTags = (twitterData: {
   image?: string;
   site?: string;
   creator?: string;
-}): void => {
+  }): void => {
   const twitterTags = {
     'twitter:card': twitterData.card || 'summary_large_image',
     'twitter:title': twitterData.title,
