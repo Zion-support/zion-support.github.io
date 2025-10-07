@@ -296,8 +296,8 @@ export const performanceMonitor = {
   }
 };
 
-// Collect performance metrics
-export const collectPerformanceMetrics = async (): Promise<any[]> => {
+// Collect performance metrics array
+export const collectPerformanceMetricsArray = async (): Promise<any[]> => {
   if (typeof window === 'undefined') return [];
 
   const metrics: any[] = [];
@@ -342,5 +342,6 @@ export default {
   optimizeScrollPerformance,
   performanceMonitor,
   collectPerformanceMetrics,
+  collectPerformanceMetricsArray,
   getMemoryUsage
 };

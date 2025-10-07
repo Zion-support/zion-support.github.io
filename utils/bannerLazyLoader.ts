@@ -34,8 +34,8 @@ export const lazyLoadBanner = (
             });
         }, 1000);
       });
-    });
-  });
+    })
+  );
 };
 
 /**
