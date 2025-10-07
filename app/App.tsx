@@ -11,7 +11,7 @@ import PerformanceDashboard from './components/PerformanceDashboard';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 import HomePage from './page';
 
-// Lazy load components for better performance (commented out as not currently used)
+// Lazy load components for better performance (currently unused but available for future use)
 // const ContentShowcase = lazy(() => import('./components/ContentShowcase'));
 // const InteractiveContentShowcase2026 = lazy(
 //   () => import('./components/InteractiveContentShowcase2026')
@@ -53,14 +53,20 @@ const App: React.FC = () => {
       }
     }
 
+<<<<<<< HEAD
     logger.info('Performance monitoring initialized', 'App');
     logger.info('🚀 Zion Tech Group App initialized with comprehensive monitoring', 'App');
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-a427
     // Log performance metrics in development
     if (process.env.NODE_ENV === 'development') {
       // eslint-disable-next-line no-console
       console.log('Performance optimizations initialized');
     }
+
+    logger.info('Performance monitoring initialized', 'App');
+    logger.info('🚀 Zion Tech Group App initialized with comprehensive monitoring', 'App');
   }, []);
 
   return (
