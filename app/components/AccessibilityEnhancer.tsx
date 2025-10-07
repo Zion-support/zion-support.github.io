@@ -27,7 +27,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
             'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
           );
           
-<<<<<<< HEAD
           if (focusableElements && focusableElements.length > 0) {
             const firstElement = focusableElements[0] as HTMLElement;
             const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
@@ -39,14 +38,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
               lastElement.focus();
               event.preventDefault();
             }
-=======
-          if (event.target === lastElement && (event as unknown as KeyboardEvent).shiftKey) {
-            firstElement.focus();
-            event.preventDefault();
-          } else if (event.target === firstElement && !(event as unknown as KeyboardEvent).shiftKey) {
-            lastElement.focus();
-            event.preventDefault();
->>>>>>> cursor/fix-errors-and-merge-to-main-abd1
           }
         }
       }
