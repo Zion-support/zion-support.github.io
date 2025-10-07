@@ -1,6 +1,6 @@
 'use client';
 
-import React, { Suspense, lazy, useEffect } from 'react';
+import React, { Suspense, lazy, useCallback, useEffect, ErrorInfo } from 'react';
 import { HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
@@ -22,7 +22,8 @@ const ErrorBoundary = ({ children }: { children: React.ReactNode }) => {
 };
 
 // Utils
-import { preloadCriticalResources, performanceOptimizer } from './utils/performanceOptimizer';
+import { lazyLoadImages, preloadCriticalResources, collectPerformanceMetrics, performanceOptimizer } from './utils/performanceOptimizer';
+import { logger } from './utils/logger';
 
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./page'));
@@ -38,14 +39,20 @@ const App: React.FC = () => {
     // Initialize Web Vitals monitoring
     if (typeof window !== 'undefined' && 'performance' in window) {
       const metrics = performanceOptimizer.getMetrics();
-      if (metrics && process.env.NODE_ENV === 'development') {
-        // eslint-disable-next-line no-console
-        console.log('Performance metrics:', metrics);
+      if (metrics) {
+        logger.info('Performance metrics collected', 'App', { metrics });
       }
     }
 
     // Preload critical resources
     preloadCriticalResources();
+    
+    logger.info('Performance monitoring initialized', 'App');
+    logger.info('🚀 Zion Tech Group App initialized with comprehensive monitoring', 'App');
+  }, []);
+
+  const handleError = useCallback((error: Error, errorInfo: ErrorInfo) => {
+    logger.error('Application Error', 'ErrorBoundary', { error: error.message, errorInfo });
   }, []);
 
   return (
