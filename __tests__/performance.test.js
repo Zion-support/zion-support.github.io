@@ -16,13 +16,11 @@ describe('Performance Tests', () => {
     };
 
     // Mock window object
-    Object.defineProperty(window, 'location', {
-      value: {
-        href: 'http://localhost:3000',
-        reload: jest.fn(),
-      },
-      writable: true,
-    });
+    delete window.location;
+    window.location = {
+      href: 'http://localhost:3000',
+      reload: jest.fn(),
+    };
 
     // Mock navigator
     Object.defineProperty(navigator, 'userAgent', {

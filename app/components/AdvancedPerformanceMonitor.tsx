@@ -76,24 +76,30 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     }
 
     // Measure Cumulative Layout Shift (CLS)
-    let clsValue = 0;
-    const clsObserver = new PerformanceObserver(list => {
-      const entries = list.getEntries();
-      entries.forEach(entry => {
-        if (
-          entry.entryType === 'layout-shift' &&
-          'hadRecentInput' in entry &&
-          'value' in entry
-        ) {
-          const clsEntry = entry as LayoutShift;
-          if (!clsEntry.hadRecentInput) {
-            clsValue += clsEntry.value;
-            setMetrics(prev => ({ ...prev, cls: clsValue }));
-          }
-        }
-      });
-    });
-    clsObserver.observe({ entryTypes: ['layout-shift'] });
+    if ('PerformanceObserver' in window) {
+      try {
+        let clsValue = 0;
+        const clsObserver = new PerformanceObserver(list => {
+          const entries = list.getEntries();
+          entries.forEach(entry => {
+            if (
+              entry.entryType === 'layout-shift' &&
+              'hadRecentInput' in entry &&
+              'value' in entry
+            ) {
+              const clsEntry = entry as LayoutShift;
+              if (!clsEntry.hadRecentInput) {
+                clsValue += clsEntry.value;
+                setMetrics(prev => ({ ...prev, cls: clsValue }));
+              }
+            }
+          });
+        });
+        clsObserver.observe({ entryTypes: ['layout-shift'] });
+      } catch (error) {
+        console.warn('CLS observer not supported:', error);
+      }
+    }
 
     // Measure Time to First Byte (TTFB)
     const navigationEntry = performance.getEntriesByType(

@@ -30,13 +30,13 @@ describe('AdvancedErrorBoundary', () => {
       .mockImplementation(() => {});
 
     render(
-      <AdvancedErrorBoundary>
+      <AdvancedErrorBoundary enableRetry={true}>
         <ThrowError shouldThrow={true} />
       </AdvancedErrorBoundary>
     );
 
     expect(screen.getByText('Oops! Something went wrong')).toBeInTheDocument();
-    expect(screen.getByText('Try Again')).toBeInTheDocument();
+    expect(screen.getByText(/Try Again/)).toBeInTheDocument();
     expect(screen.getByText('Reload Page')).toBeInTheDocument();
     expect(screen.getByText('Go to Homepage')).toBeInTheDocument();
 
