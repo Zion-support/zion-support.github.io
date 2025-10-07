@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 import { ArrowRight, Code, ExternalLink, Shield, Zap, Atom } from 'lucide-react';
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-ccfd
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -54,14 +57,14 @@ const API: React.FC = () => {
               className='bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center'
             >
               Get API Key
-              <ArrowRight className='ml-2 w-5 h-5' />
+              <span className='ml-2'>→</span>
             </Link>
             <a
               href='#endpoints'
               className='border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors inline-flex items-center'
             >
               View Endpoints
-              <Atom className='ml-2 w-5 h-5' />
+              <span className='ml-2'>⚛️</span>
             </a>
           </div>
         </div>
@@ -72,7 +75,7 @@ const API: React.FC = () => {
           <div className='grid md:grid-cols-3 gap-8'>
             <div className='text-center'>
               <div className='w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4'>
-                <Atom className='w-8 h-8 text-blue-600' />
+                <span className='text-2xl'>⚛️</span>
               </div>
               <h3 className='text-xl font-semibold text-gray-900 mb-2'>
                 RESTful APIs
@@ -84,7 +87,7 @@ const API: React.FC = () => {
             </div>
             <div className='text-center'>
               <div className='w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4'>
-                <Atom className='w-8 h-8 text-green-600' />
+                <span className='text-2xl'>⚛️</span>
               </div>
               <h3 className='text-xl font-semibold text-gray-900 mb-2'>
                 Secure & Reliable
@@ -96,7 +99,7 @@ const API: React.FC = () => {
             </div>
             <div className='text-center'>
               <div className='w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4'>
-                <Zap className='w-8 h-8 text-purple-600' />
+                <span className='text-2xl'>⚡</span>
               </div>
               <h3 className='text-xl font-semibold text-gray-900 mb-2'>
                 High Performance
@@ -181,14 +184,14 @@ const API: React.FC = () => {
                 className='bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-flex items-center'
               >
                 Get API Key
-                <ArrowRight className='ml-2 w-5 h-5' />
+                <span className='ml-2'>→</span>
               </Link>
               <a
                 href='https://docs?.ziontechgroup.com'
                 className='border border-gray-300 text-gray-700 px-8 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors inline-flex items-center'
               >
                 View Full Docs
-                <Atom className='ml-2 w-5 h-5' />
+                <span className='ml-2'>⚛️</span>
               </a>
             </div>
           </div>
