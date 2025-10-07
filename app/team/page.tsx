@@ -72,7 +72,7 @@ const TeamPage: React.FC = () => {
                 Join Our Team
               </h2>
               <p className='text-gray-600 text-center mb-6'>
-                We're always looking for talented individuals to join our
+                We&apos;re always looking for talented individuals to join our
                 mission of advancing AI and IT solutions.
               </p>
               <div className='text-center'>

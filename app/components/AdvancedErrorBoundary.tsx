@@ -187,7 +187,7 @@ class AdvancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
                   Oops! Something went wrong
                 </h2>
                 <p className="mt-2 text-sm text-gray-600">
-                  We're sorry, but something unexpected happened. Our team has been notified.
+                  We&apos;re sorry, but something unexpected happened. Our team has been notified.
                 </p>
               </div>
 
