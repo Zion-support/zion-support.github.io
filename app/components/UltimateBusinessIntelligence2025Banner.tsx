@@ -1,17 +1,16 @@
-'use client';
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
 const UltimateBusinessIntelligence2025Banner = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
-  
+
   const content = [
     {
-      id: 'ultimate-business-intelligence-revolution',
-      title: 'AI 2025: The Ultimate Business Intelligence Revolution',
-      description: 'Transform your enterprise with next-generation AI-powered business intelligence that delivers unprecedented insights and competitive advantage.',
-      url: '/blog/ai-2025-ultimate-business-intelligence-revolution-ultimate-breakthrough',
+      id: 'ultimate-business-intelligence-2025',
+      title: 'Ultimate Business Intelligence Revolution 2025',
+      description: 'Transform your enterprise with AI-powered business intelligence achieving 30,000% ROI, 70% cost reduction, and 90% efficiency gains.',
+      url: '/blog/ultimate-business-intelligence-2025',
       type: 'Blog Post',
       metrics: {
         roi: '30,000%',
@@ -41,20 +40,13 @@ const UltimateBusinessIntelligence2025Banner = () => {
       id: 'business-intelligence-implementation-guide',
       title: 'AI 2025 Ultimate Business Intelligence Implementation Guide',
       description: 'Complete roadmap to 30,000% ROI through revolutionary AI-powered business intelligence transformation.',
-      url: '/resources/ai-2025-ultimate-business-intelligence-implementation-guide',
+      url: '/guides/ai-2025-ultimate-business-intelligence-implementation-guide',
       type: 'Implementation Guide',
       metrics: {
-<<<<<<< HEAD
         efficiency: '300%',
         accuracy: '99.7%',
         timeline: '6 months',
         adoption: '95%'
-=======
-        roi: '30,000%',
-        success: '99.8%',
-        timeline: '18 months',
-        adoption: '100%'
->>>>>>> 9f279756f4679d4a3fe100469cdf0ea089dda745
       },
       readingTime: '60 min read',
       featured: true
@@ -62,10 +54,11 @@ const UltimateBusinessIntelligence2025Banner = () => {
   ];
 
   useEffect(() => {
-    const interval = setInterval(() => {
+    const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % content.length);
     }, 5000);
-    return () => clearInterval(interval);
+
+    return () => clearInterval(timer);
   }, [content.length]);
 
   useEffect(() => {
@@ -75,11 +68,7 @@ const UltimateBusinessIntelligence2025Banner = () => {
     }
   }, []);
 
-<<<<<<< HEAD
   const handleClose = () => {
-=======
-  const handleDismiss = () => {
->>>>>>> 9f279756f4679d4a3fe100469cdf0ea089dda745
     setIsVisible(false);
     localStorage.setItem('ultimate-business-intelligence-2025-banner-dismissed', 'true');
   };
@@ -89,18 +78,11 @@ const UltimateBusinessIntelligence2025Banner = () => {
   const currentContent = content[currentSlide];
 
   return (
-    <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
-      {/* Animated Background Effects */}
+    <div className="relative bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 text-white overflow-hidden">
       <div className="absolute inset-0">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl animate-pulse"></div>
-        <div
-          className="absolute top-3/4 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse"
-          style={{ animationDelay: '2s' }}
-        ></div>
-        <div
-          className="absolute bottom-1/4 left-1/3 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse"
-          style={{ animationDelay: '1s' }}
-        ></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-blue-600/20 to-purple-600/20 animate-pulse"></div>
+        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl animate-bounce"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-bounce" style={{ animationDelay: '1s' }}></div>
       </div>
 
       <div className="relative z-10 container mx-auto px-4 py-16">
@@ -133,7 +115,7 @@ const UltimateBusinessIntelligence2025Banner = () => {
                 <span className="text-gray-300 text-sm">⏱️ {currentContent.readingTime}</span>
               </div>
               <button
-                onClick={handleDismiss}
+                onClick={handleClose}
                 className="text-gray-400 hover:text-white transition-colors"
                 aria-label="Dismiss banner"
               >
@@ -141,7 +123,6 @@ const UltimateBusinessIntelligence2025Banner = () => {
               </button>
             </div>
 
-<<<<<<< HEAD
             {/* Content Details */}
             <div className="flex-1">
               <div className="flex items-center gap-3 mb-4">
@@ -183,40 +164,10 @@ const UltimateBusinessIntelligence2025Banner = () => {
                   Learn More
                 </button>
               </div>
-=======
-            {/* Metrics Grid */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
-              {Object.entries(currentContent.metrics).map(([key, value]) => (
-                <div key={key} className="text-center">
-                  <div className="text-3xl font-bold text-cyan-400 mb-2">{value}</div>
-                  <div className="text-gray-300 text-sm capitalize">{key.replace(/([A-Z])/g, ' $1')}</div>
-                </div>
-              ))}
-            </div>
-
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-              <Link
-                href={currentContent.url}
-                className="flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl hover:shadow-cyan-500/25"
-              >
-                <span className="text-xl">📖</span>
-                <span>Read {currentContent.type}</span>
-                <span className="group-hover:translate-x-1 transition-transform">→</span>
-              </Link>
-              <a
-                href="tel:+13024640950"
-                className="flex items-center gap-3 border-2 border-white/30 hover:border-white/60 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 hover:bg-white/10"
-              >
-                <span className="text-xl">📞</span>
-                <span>Call +1 302 464 0950</span>
-              </a>
->>>>>>> 9f279756f4679d4a3fe100469cdf0ea089dda745
             </div>
           </div>
 
           {/* Slide Indicators */}
-<<<<<<< HEAD
           {content.length > 1 && (
             <div className="flex justify-center mt-8 space-x-2">
               {content.map((_, index) => (
@@ -231,20 +182,6 @@ const UltimateBusinessIntelligence2025Banner = () => {
               ))}
             </div>
           )}
-=======
-          <div className="flex justify-center mt-8 space-x-2">
-            {content.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentSlide(index)}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                  index === currentSlide ? 'bg-cyan-400' : 'bg-white/30'
-                }`}
-                aria-label={`Go to slide ${index + 1}`}
-              />
-            ))}
-          </div>
->>>>>>> 9f279756f4679d4a3fe100469cdf0ea089dda745
         </div>
 
         {/* Stats Section */}
@@ -262,7 +199,7 @@ const UltimateBusinessIntelligence2025Banner = () => {
           ))}
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

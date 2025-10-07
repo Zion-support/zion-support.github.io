@@ -1,16 +1,11 @@
 'use client';
 
-<<<<<<< HEAD
 import React, { Suspense, lazy, useCallback, useEffect } from 'react';
 import Link from 'next/link';
-=======
-import React, { Suspense, lazy, useEffect } from 'react';
->>>>>>> 9f279756f4679d4a3fe100469cdf0ea089dda745
 import { HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // Components
-<<<<<<< HEAD
 import SEOOptimizer from './components/SEOOptimizer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import AdvancedErrorBoundary from './components/AdvancedErrorBoundary';
@@ -19,11 +14,6 @@ import AdvancedPerformanceMonitor from './components/AdvancedPerformanceMonitor'
 import SEOEnhancer from './components/SEOEnhancer';
 import PerformanceDashboard from './components/PerformanceDashboard';
 import LoadingSpinner from './components/LoadingSpinner';
-=======
-import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-import PerformanceDashboard from './components/PerformanceDashboard';
-import SEOOptimizer from './components/SEOOptimizer';
->>>>>>> 9f279756f4679d4a3fe100469cdf0ea089dda745
 
 // Lazy load components for better performance
 const ContentShowcase = lazy(() => import('./components/ContentShowcase'));
@@ -35,11 +25,7 @@ const InteractiveAIROICalculator = lazy(
 );
 
 // Utils
-<<<<<<< HEAD
 import { performanceOptimizer, collectPerformanceMetrics } from './utils/performanceOptimizer';
-=======
-import { preloadCriticalResources, performanceOptimizer } from './utils/performanceOptimizer';
->>>>>>> 9f279756f4679d4a3fe100469cdf0ea089dda745
 import { logger } from './utils/logger';
 
 // Styles
@@ -47,16 +33,12 @@ import './globals.css';
 
 const App: React.FC = () => {
   useEffect(() => {
-<<<<<<< HEAD
     // Initialize global error handling
     logger.lifecycle('initialized', 'App');
 
-=======
->>>>>>> 9f279756f4679d4a3fe100469cdf0ea089dda745
     // Initialize performance monitoring
     if (typeof window !== 'undefined' && 'performance' in window) {
       const metrics = performanceOptimizer.getMetrics();
-<<<<<<< HEAD
       logger.performance('Performance Metrics', metrics as unknown as Record<string, unknown>, 'PerformanceMonitor');
     }
 
@@ -66,18 +48,6 @@ const App: React.FC = () => {
 
   const handleError = useCallback((error: Error, errorInfo: any) => {
     logger.error('Application Error', 'ErrorBoundary', { error: error.message, errorInfo });
-=======
-      if (metrics) {
-        logger.info('Performance metrics collected', 'App', { metrics });
-      }
-    }
-
-    // Preload critical resources
-    preloadCriticalResources();
-    
-    logger.info('Performance monitoring initialized', 'App');
-    logger.info('🚀 Zion Tech Group App initialized with comprehensive monitoring', 'App');
->>>>>>> 9f279756f4679d4a3fe100469cdf0ea089dda745
   }, []);
 
   return (
@@ -129,7 +99,6 @@ const App: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 // Loading fallback component
 const LoadingFallback: React.FC<{ height?: string }> = ({
   height = 'h-32',
@@ -139,6 +108,4 @@ const LoadingFallback: React.FC<{ height?: string }> = ({
   </div>
 );
 
-=======
->>>>>>> 9f279756f4679d4a3fe100469cdf0ea089dda745
 export default App;
