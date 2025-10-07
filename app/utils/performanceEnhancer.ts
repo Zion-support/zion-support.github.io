@@ -120,7 +120,6 @@ export const usePerformanceMonitor = (componentName: string) => {
       fn();
       const duration = performance.now() - start;
       monitor.trackRender(`${componentName}_function`, duration);
->>>>>>> e2aec618376f3db9bd60312768ea5d9abc7086c8
     }
   };
 };
@@ -210,14 +209,6 @@ export const optimizeScrollPerformance = () => {
       observer.disconnect();
       return clsValue;
     };
->>>>>>> e2aec618376f3db9bd60312768ea5d9abc7086c8
-  };
-
-  const requestTick = () => {
-    if (!ticking) {
-      requestAnimationFrame(updateScrollPosition);
-      ticking = true;
-    }
   };
 
   window.addEventListener('scroll', requestTick, { passive: true });
@@ -242,15 +233,12 @@ export const optimizeScrollPerformance = () => {
 
   // Start tracking
   const cleanupCLS = trackCLS();
-  const cleanupLCP = trackLCP();
   const cleanupFID = trackFID();
 
   return () => {
     cleanupCLS();
-    cleanupLCP();
     cleanupFID();
   };
->>>>>>> e2aec618376f3db9bd60312768ea5d9abc7086c8
 };
 
 // Memory usage monitoring

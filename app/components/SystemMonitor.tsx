@@ -39,7 +39,6 @@ interface NavigatorWithConnection extends Navigator {
   webkitConnection?: NetworkConnection;
 }
 
->>>>>>> e2aec618376f3db9bd60312768ea5d9abc7086c8
 interface SystemMetrics {
   performance: {
     score: number;

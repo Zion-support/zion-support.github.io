@@ -1,34 +1,10 @@
 /**
-<<<<<<< HEAD
- * Advanced Test Runner
- * Comprehensive testing utilities for React applications
- */
-
-import React, { ReactElement, useCallback } from 'react';
-import { render, RenderOptions, RenderResult } from '@testing-library/react';
-import { BrowserRouter } from 'react-router-dom';
-
-=======
  * Comprehensive Test Runner and Testing Utilities
  * Provides advanced testing capabilities, mocking, and test automation
  */
 
-<<<<<<<< HEAD:app/utils/testRunner.ts
-interface TestConfig {
-  timeout: number;
-  retries: number;
-  parallel: boolean;
-  verbose: boolean;
-  coverage: boolean;
-  watch: boolean;
-  bail: boolean;
-  reporter: 'console' | 'json' | 'html' | 'junit';
-  outputDir: string;
-  includePattern: string[];
-  excludePattern: string[];
-========
+import React, { ReactElement, useCallback } from 'react';
 import { render, RenderOptions, RenderResult } from '@testing-library/react';
-import { ReactElement, useCallback } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 
 // Test result types
@@ -45,7 +21,6 @@ export interface CoverageMetrics {
   lines: number;
 }
 
->>>>>>> e2aec618376f3db9bd60312768ea5d9abc7086c8
 // Test configuration interface
 export interface TestConfig {
   enableMocking: boolean;
@@ -57,7 +32,6 @@ export interface TestConfig {
   coverageThreshold: number;
   performanceThreshold: number;
   accessibilityThreshold: number;
-<<<<<<< HEAD
 }
 
 // Default test configuration
@@ -109,9 +83,6 @@ export class TestRunner {
 
     return render(ui, { wrapper: AllTheProviders, ...options });
   }
-
-=======
->>>>>>>> e2aec618376f3db9bd60312768ea5d9abc7086c8:app/utils/testRunner.tsx
 }
 
 interface TestResult {
@@ -221,34 +192,29 @@ class TestRunner {
   ): void {
     if (!this.currentSuite) {
       throw new Error('Test must be inside a describe block');
-========
->>>>>>> e2aec618376f3db9bd60312768ea5d9abc7086c8
-  // Performance test
-  async runPerformanceTest(
-    component: ReactElement,
-    testName: string
-<<<<<<< HEAD
-  ): Promise<{ passed: boolean; metrics: Record<string, unknown> }> {
-=======
-  ): Promise<{ passed: boolean; metrics: PerformanceMetrics }> {
->>>>>>> e2aec618376f3db9bd60312768ea5d9abc7086c8
-    const startTime = performance.now();
-    
-    const { unmount } = this.customRender(component);
-    
-    const renderTime = performance.now() - startTime;
-    
-    // Measure memory usage if available
-    let memoryUsage = 0;
-    if ('memory' in performance) {
-<<<<<<< HEAD
-      const memory = (performance as { memory?: { usedJSHeapSize: number } }).memory;
-      if (memory) {
-        memoryUsage = memory.usedJSHeapSize;
-      }
     }
 
-    unmount();
+    // Performance test
+    async runPerformanceTest(
+      component: ReactElement,
+      testName: string
+    ): Promise<{ passed: boolean; metrics: PerformanceMetrics }> {
+      const startTime = performance.now();
+      
+      const { unmount } = this.customRender(component);
+      
+      const renderTime = performance.now() - startTime;
+      
+      // Measure memory usage if available
+      let memoryUsage = 0;
+      if ('memory' in performance) {
+        const memory = (performance as { memory?: { usedJSHeapSize: number } }).memory;
+        if (memory) {
+          memoryUsage = memory.usedJSHeapSize;
+        }
+      }
+
+      unmount();
 
     const metrics = {
       renderTime,
@@ -268,20 +234,6 @@ class TestRunner {
     return { passed, metrics };
   }
 
-=======
-      const perfWithMemory = performance as { memory?: { usedJSHeapSize: number } };
-      memoryUsage = perfWithMemory.memory?.usedJSHeapSize || 0;
->>>>>>>> e2aec618376f3db9bd60312768ea5d9abc7086c8:app/utils/testRunner.tsx
-    }
-
-    this.currentSuite.tests.push({
-      name,
-      fn,
-      timeout: timeout || this.config.timeout,
-    });
-  }
-
-<<<<<<<< HEAD:app/utils/testRunner.ts
   /**
    * Create a skipped test
    */
@@ -549,12 +501,6 @@ class TestRunner {
         duration: Date.now() - this.startTime,
       },
       results: this.results,
-========
-    const metrics: PerformanceMetrics = {
-      renderTime,
-      memoryUsage,
->>>>>>>> e2aec618376f3db9bd60312768ea5d9abc7086c8:app/utils/testRunner.tsx
-      timestamp: new Date().toISOString(),
     };
 
     // eslint-disable-next-line no-console
@@ -563,7 +509,6 @@ class TestRunner {
     console.log(JSON.stringify(report, null, 2));
   }
 
-<<<<<<<< HEAD:app/utils/testRunner.ts
   /**
    * Generate HTML report
    */
@@ -608,8 +553,13 @@ class TestRunner {
     </div>
 </body>
 </html>`;
-========
->>>>>>> e2aec618376f3db9bd60312768ea5d9abc7086c8
+    
+    // eslint-disable-next-line no-console
+    console.log('\n📄 HTML Report generated');
+    // eslint-disable-next-line no-console
+    console.log(html);
+  }
+
   // Accessibility test
   async runAccessibilityTest(
     component: ReactElement,
@@ -627,7 +577,6 @@ class TestRunner {
         violations.push(`Image ${index} missing alt text`);
       }
     });
-<<<<<<< HEAD
 
     // Check for missing labels on form inputs
     const inputs = container.querySelectorAll('input, select, textarea');
@@ -691,13 +640,19 @@ class TestRunner {
         duration: 0,
       });
 
-=======
->>>>>>>> e2aec618376f3db9bd60312768ea5d9abc7086c8:app/utils/testRunner.tsx
+      return { passed: true };
+    } catch (error) {
+      const errorMessage = error instanceof Error ? error.message : String(error);
+      
+      this.testResults.push({
+        name: `Component: ${testName}`,
+        status: 'failed',
+        duration: 0,
+        error: errorMessage,
+      });
 
-    // eslint-disable-next-line no-console
-    console.log('\n📄 HTML Report generated');
-    // eslint-disable-next-line no-console
-    console.log(html);
+      return { passed: false, error: errorMessage };
+    }
   }
 
   /**
@@ -720,16 +675,10 @@ class TestRunner {
     </testsuite>
 </testsuites>`;
 
-<<<<<<<< HEAD:app/utils/testRunner.ts
     // eslint-disable-next-line no-console
     console.log('\n📄 JUnit Report:');
     // eslint-disable-next-line no-console
     console.log(xml);
-========
->>>>>>> e2aec618376f3db9bd60312768ea5d9abc7086c8
-      return { passed: true };
-    } catch (error) {
-      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
       
       this.testResults.push({
         name: `Component: ${testName}`,
@@ -777,16 +726,10 @@ class TestRunner {
   async runVisualRegressionTest(
     component: ReactElement,
     testName: string
-<<<<<<< HEAD
-  ): Promise<{ passed: boolean; diff?: Record<string, unknown> }> {
-    // This would typically use a tool like Percy or Chromatic
-    // For now, we'll just return a placeholder
-    // eslint-disable-next-line no-console
-=======
   ): Promise<{ passed: boolean; diff?: unknown }> {
     // This would typically use a tool like Percy or Chromatic
     // For now, we'll just return a placeholder
->>>>>>> e2aec618376f3db9bd60312768ea5d9abc7086c8
+    // eslint-disable-next-line no-console
     console.log(`Visual regression test for ${testName} would run here`);
     
     this.testResults.push({
@@ -799,17 +742,11 @@ class TestRunner {
   }
 
   // Coverage test
-<<<<<<< HEAD
-  async runCoverageTest(): Promise<{ passed: boolean; coverage: Record<string, unknown> }> {
-    // This would typically use Istanbul or similar
-    // For now, we'll just return a placeholder
-    const coverage = {
-=======
+  // Coverage test
   async runCoverageTest(): Promise<{ passed: boolean; coverage: CoverageMetrics }> {
     // This would typically use Istanbul or similar
     // For now, we'll just return a placeholder
     const coverage: CoverageMetrics = {
->>>>>>> e2aec618376f3db9bd60312768ea5d9abc7086c8
       statements: 85,
       branches: 80,
       functions: 90,

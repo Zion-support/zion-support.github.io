@@ -47,7 +47,14 @@ export const generateMetaTags = (data: {
       content: data.twitterImage || data.ogImage || '/og-image.jpg',
     },
   ];
-=======
+
+  return tags;
+};
+
+// SEO Config interface
+interface SEOConfig {
+  title: string;
+  description: string;
   keywords: string[];
   canonicalUrl: string;
   ogImage: string;
@@ -67,8 +74,24 @@ export const generateMetaTags = (data: {
   tags?: string[];
 }
 
-  return tags;
-};
+// Default SEO config
+const defaultSEOConfig: SEOConfig = {
+  title: 'Zion Holdings',
+  description: 'Leading provider of AI-powered business solutions',
+  keywords: [],
+  canonicalUrl: 'https://zion.app',
+  ogImage: '/og-image.jpg',
+  ogType: 'website',
+  twitterCard: 'summary_large_image',
+  twitterSite: '@zionholdings',
+  twitterCreator: '@zionholdings',
+  structuredData: {},
+  robots: 'index, follow',
+  language: 'en',
+  locale: 'en_US',
+  siteName: 'Zion Holdings',
+  author: 'Zion Holdings',
+}
 
 // Generate structured data
 export const generateStructuredData = (data: {
@@ -288,7 +311,35 @@ Sitemap: ${this.config.canonicalUrl}/sitemap.xml`;
   // Get current SEO data
   getCurrentSEO() {
     if (typeof document === 'undefined') return {};
->>>>>>> e2aec618376f3db9bd60312768ea5d9abc7086c8
+    
+    return {
+      title: document.title,
+      description: document.querySelector('meta[name="description"]')?.getAttribute('content') || '',
+      keywords: document.querySelector('meta[name="keywords"]')?.getAttribute('content') || '',
+      canonical: document.querySelector('link[rel="canonical"]')?.getAttribute('href') || '',
+    };
+  }
+}
+
+// Generate structured data with type-specific properties
+export const generateAdvancedStructuredData = (data: {
+  type: 'Organization' | 'WebSite' | 'Article' | 'Service';
+  name: string;
+  description: string;
+  url?: string;
+  logo?: string;
+  sameAs?: string[];
+  [key: string]: unknown;
+}) => {
+  const baseStructure = {
+    '@context': 'https://schema.org',
+    '@type': data.type,
+    name: data.name,
+    description: data.description,
+    url: data.url || '',
+    logo: data.logo || '',
+    sameAs: data.sameAs || [],
+  };
 
   // Add type-specific properties
   if (data.type === 'Organization') {
