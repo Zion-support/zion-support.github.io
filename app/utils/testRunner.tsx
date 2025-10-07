@@ -89,11 +89,7 @@ export class TestRunner {
   async runPerformanceTest(
     component: ReactElement,
     testName: string
-<<<<<<< HEAD
   ): Promise<{ passed: boolean; metrics: PerformanceMetrics }> {
-=======
-  ): Promise<{ passed: boolean; metrics: { renderTime: number; memoryUsage: number; timestamp: string } }> {
->>>>>>> main
     const startTime = performance.now();
     
     const { unmount } = this.customRender(component);
@@ -103,14 +99,10 @@ export class TestRunner {
     // Measure memory usage if available
     let memoryUsage = 0;
     if ('memory' in performance) {
-<<<<<<< HEAD
       const memory = (performance as { memory?: { usedJSHeapSize: number } }).memory;
       if (memory) {
         memoryUsage = memory.usedJSHeapSize;
       }
-=======
-      memoryUsage = (performance as Performance & { memory: { usedJSHeapSize: number } }).memory.usedJSHeapSize;
->>>>>>> main
     }
 
     const metrics: PerformanceMetrics = {
@@ -137,24 +129,8 @@ export class TestRunner {
   async runAccessibilityTest(
     component: ReactElement,
     testName: string
-<<<<<<< HEAD
   ): Promise<{ passed: boolean; violations: Array<{ description: string; impact: string }> }> {
     const { container, unmount } = this.customRender(component);
-=======
-  ): Promise<{ passed: boolean; violations: string[] }> {
-    const { container } = this.customRender(component);
-    
-    // Basic accessibility checks
-    const violations: string[] = [];
-    
-    // Check for missing alt text on images
-    const images = container.querySelectorAll('img');
-    images.forEach((img, index) => {
-      if (!img.getAttribute('alt')) {
-        violations.push(`Image ${index} missing alt text`);
-      }
-    });
->>>>>>> main
 
     const violations: Array<{ description: string; impact: string }> = [];
 
@@ -194,8 +170,6 @@ export class TestRunner {
     return { passed, violations };
   }
 
-<<<<<<< HEAD
-=======
   // Component test
   async runComponentTest(
     component: ReactElement,
@@ -348,7 +322,6 @@ export class TestRunner {
     return { passed, results };
   }
 
->>>>>>> main
   // Get test results
   getResults() {
     return this.testResults;
@@ -410,7 +383,6 @@ export const createMockData = <T,>(
   return Array.from({ length: count }, () => ({ ...template }));
 };
 
-<<<<<<< HEAD
 // Test helpers
 export const waitForAsync = (ms: number = 0): Promise<void> => {
   return new Promise((resolve) => setTimeout(resolve, ms));
@@ -456,6 +428,3 @@ export const initializeTestRunner = (config?: Partial<TestConfig>): TestRunner =
 
 // Export test runner instance
 export default TestRunner;
-=======
-export default TestRunner;
->>>>>>> main
