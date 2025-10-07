@@ -80,31 +80,31 @@ class ErrorBoundary extends Component<Props, State> {
                     Go to Homepage
                   </a>
                 </div>
-                
-                {process.env.NODE_ENV === 'development' && this.state.error && (
-                  <details className="mt-6">
-                    <summary className="text-sm font-medium text-gray-700 cursor-pointer">
-                      Error Details (Development)
-                    </summary>
-                    <div className="mt-2 p-3 bg-gray-100 rounded text-xs font-mono text-gray-800 overflow-auto">
-                      <div className="mb-2">
-                        <strong>Error:</strong> {this.state.error.message}
-                      </div>
-                      <div>
-                        <strong>Stack:</strong>
-                        <pre className="whitespace-pre-wrap">{this.state.error.stack}</pre>
-                      </div>
-                      {this.state.errorInfo && (
-                        <div className="mt-2">
-                          <strong>Component Stack:</strong>
-                          <pre className="whitespace-pre-wrap">{this.state.errorInfo.componentStack}</pre>
-                        </div>
-                      )}
-                    </div>
-                  </details>
-                )}
               </div>
             </div>
+            
+            {process.env.NODE_ENV === 'development' && this.state.error && (
+              <details className="mt-4">
+                <summary className="text-sm font-medium text-gray-700 cursor-pointer">
+                  Error Details (Development)
+                </summary>
+                <div className="mt-2 p-3 bg-gray-100 rounded text-xs font-mono text-gray-800 overflow-auto">
+                  <div className="mb-2">
+                    <strong>Error:</strong> {this.state.error.message}
+                  </div>
+                  <div>
+                    <strong>Stack:</strong>
+                    <pre className="whitespace-pre-wrap">{this.state.error.stack}</pre>
+                  </div>
+                  {this.state.errorInfo && (
+                    <div className="mt-2">
+                      <strong>Component Stack:</strong>
+                      <pre className="whitespace-pre-wrap">{this.state.errorInfo.componentStack}</pre>
+                    </div>
+                  )}
+                </div>
+              </details>
+            )}
           </div>
         )
       );

@@ -20,6 +20,7 @@ const HomePage = lazy(() => import('./page'));
 
 // Utils
 import { performanceOptimizer } from './utils/performanceOptimizer';
+import { lazyLoadImages, preloadCriticalResources } from './utils/performanceOptimizer';
 
 // Styles
 import './globals.css';
@@ -30,10 +31,18 @@ const App: React.FC = () => {
     logger.lifecycle('initialized', 'App');
 
     // Initialize performance monitoring
+    performanceOptimizer.lazyLoadImages();
+    performanceOptimizer.addCriticalResourceHints();
+    lazyLoadImages();
+    preloadCriticalResources();
     performanceOptimizer.init();
     // Initialize Web Vitals monitoring
     if (typeof window !== 'undefined' && 'performance' in window) {
+      const pageLoadMetrics = performanceOptimizer.measurePageLoad();
       const metrics = performanceOptimizer.getMetrics();
+      if (pageLoadMetrics) {
+        performanceOptimizer.reportWebVitals(pageLoadMetrics);
+      }
       if (metrics) {
         console.log('Performance metrics:', metrics);
       }

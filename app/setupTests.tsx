@@ -108,7 +108,7 @@ global.PerformanceObserver = class MockPerformanceObserver {
   takeRecords() {
     return [];
   }
-  static readonly supportedEntryTypes: readonly string[] = ['paint', 'largest-contentful-paint', 'first-input', 'layout-shift', 'navigation'];
+  static readonly supportedEntryTypes: readonly string[] = ['navigation', 'paint', 'largest-contentful-paint', 'first-input', 'layout-shift'];
 };
 
 // Mock window.location

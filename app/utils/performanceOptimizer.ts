@@ -2,6 +2,8 @@
  * Performance optimization utilities
  */
 
+import { logger } from './logger';
+
 // Debounce function for performance optimization
 export const debounce = <T extends (...args: unknown[]) => unknown>(
   func: T,
@@ -137,6 +139,12 @@ interface PerformanceConfig {
   sampleRate: number;
   maxRetries: number;
 }
+
+// LayoutShift interface for type safety
+// interface LayoutShift extends PerformanceEntry {
+//   value: number;
+//   hadRecentInput: boolean;
+// }
 
 class PerformanceOptimizer {
   private config: PerformanceConfig;
@@ -532,7 +540,7 @@ class PerformanceOptimizer {
     });
 
     images.forEach(img => imageObserver.observe(img));
-    console.log('Lazy loading initialized for images');
+    logger.info('Lazy loading initialized for images', 'PerformanceOptimizer');
   }
 
   /**
@@ -556,7 +564,7 @@ class PerformanceOptimizer {
       document.head.appendChild(link);
     });
 
-    console.log('Critical resource hints added');
+    logger.info('Critical resource hints added', 'PerformanceOptimizer');
   }
 
   /**
@@ -574,7 +582,7 @@ class PerformanceOptimizer {
       lcp: this.metrics.lcp || 0,
       fid: this.metrics.fid || 0,
       cls: this.metrics.cls || 0,
-      fmp: 0, // First Meaningful Paint - not measured in this implementation
+      fmp: this.metrics.fmp || 0,
     };
   }
 
@@ -582,7 +590,7 @@ class PerformanceOptimizer {
    * Report web vitals
    */
   reportWebVitals(metrics: PerformanceMetrics): void {
-    console.log('Web Vitals reported', metrics);
+    logger.performance('Web Vitals reported', metrics as unknown as Record<string, unknown>, 'PerformanceOptimizer');
     
     // Send to analytics if available
     if (typeof window !== 'undefined' && (window as { gtag?: Function }).gtag) {
