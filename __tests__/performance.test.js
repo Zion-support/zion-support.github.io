@@ -35,6 +35,20 @@ describe('Performance Tests', () => {
     });
   });
 
+  beforeEach(() => {
+    // Mock window.location.reload (it's read-only, so we need to mock it differently)
+    const locationSpy = jest.fn();
+    delete global.window.location;
+    global.window.location = {
+      href: 'http://localhost:3000',
+      reload: locationSpy,
+    };
+  });
+
+  afterEach(() => {
+    // Clean up is not needed since we're reassigning the entire object
+  });
+
   test('PerformanceOptimizer should initialize correctly', () => {
     const { performanceOptimizer } = require('../app/utils/performanceOptimizer');
     
