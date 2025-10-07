@@ -42,7 +42,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     const fcpEntries = performance.getEntriesByName('first-contentful-paint') || [];
     const fcp = fcpEntries.length > 0 ? fcpEntries[0].startTime : null;
 
-    // Initialize observers
+    // Keep track of observers for cleanup
     let lcpObserver: PerformanceObserver | null = null;
     let fidObserver: PerformanceObserver | null = null;
     let clsObserver: PerformanceObserver | null = null;
