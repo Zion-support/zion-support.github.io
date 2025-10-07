@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import performanceOptimizer from '../../src/utils/performanceOptimizer';
+import { performanceOptimizer } from '../../src/utils/performanceOptimizer';
 import { getErrorMetrics, isErrorRateTooHigh } from '../../utils/errorHandling';
 
 interface DashboardData {
@@ -21,7 +21,7 @@ const PerformanceDashboard: React.FC = () => {
 
   useEffect(() => {
     const updateData = () => {
-      const metrics = performanceOptimizer.getMetrics();
+      const metrics = performanceOptimizer.getMetrics ? performanceOptimizer.getMetrics() : {};
       const performance = {
         averageRenderTime: metrics['averageRenderTime'] || 0,
         totalComponents: metrics['totalComponents'] || 0,
