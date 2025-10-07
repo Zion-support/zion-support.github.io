@@ -44,14 +44,9 @@ describe('Performance Tests', () => {
     }));
 
     // Mock window object
-    delete window.location;
-    Object.defineProperty(window, 'location', {
-      value: {
-        href: 'http://localhost:3000',
-        reload: jest.fn(),
-      },
-      writable: true,
-      configurable: true,
+    locationSpy = jest.spyOn(window, 'location', 'get').mockReturnValue({
+      href: 'http://localhost:3000',
+      reload: jest.fn(),
     });
 
     // Mock navigator
