@@ -4,11 +4,7 @@
  */
 
 import { useEffect, useCallback, useRef } from 'react';
-<<<<<<< HEAD
-import performanceOptimizer from '../utils/performanceOptimizer';
-=======
 import { monitorLongTasks } from '../utils/performanceOptimizer';
->>>>>>> cursor/fix-errors-and-merge-to-main-775a
 import analytics from '../utils/analytics';
 
 export interface PerformanceMetrics {
@@ -178,25 +174,9 @@ export const useResourcePerformance = () => {
  */
 export const useLongTaskMonitoring = () => {
   useEffect(() => {
-<<<<<<< HEAD
-    const observer = performanceOptimizer.monitorLongTasks((entries: PerformanceEntry[]) => {
-      entries.forEach((entry: PerformanceEntry) => {
-<<<<<<< HEAD
-=======
-        analytics.track('long_task', 'performance', 'detected', undefined, entry.duration);
->>>>>>> cursor/fix-errors-and-merge-to-main-a3c4
-        analytics.track(
-          'long_task',
-          'performance',
-          'detected',
-          undefined,
-          entry.duration
-        );
-=======
     const observer = monitorLongTasks((entries: PerformanceEntry[]) => {
       entries.forEach((entry: PerformanceEntry) => {
         analytics.track('long_task', 'performance', 'detected', undefined, entry.duration);
->>>>>>> cursor/fix-errors-and-merge-to-main-775a
       });
     });
 

@@ -28,12 +28,7 @@ const App: React.FC = () => {
     performanceOptimizer.lazyLoadImages();
     // Initialize Web Vitals monitoring
     if (typeof window !== 'undefined' && 'performance' in window) {
-<<<<<<< HEAD
-      const metrics = performanceOptimizer.measurePageLoad();
-      if (metrics) {
-=======
       performanceOptimizer.measurePageLoad().then(metrics => {
->>>>>>> cursor/fix-errors-and-merge-to-main-775a
         performanceOptimizer.reportWebVitals(metrics);
       });
     }
