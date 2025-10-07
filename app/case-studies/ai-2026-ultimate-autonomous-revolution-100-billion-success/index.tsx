@@ -1,6 +1,6 @@
 // @ts-nocheck
 import { Metadata } from 'next';
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 
 export const metadata: Metadata = {
   title: 'AI 2026 Ultimate Autonomous Revolution - $100 Billion Success Story',
@@ -329,7 +329,7 @@ export default function AI2026UltimateAutonomousRevolution100BillionSuccess() {
           </h2>
           
           <div className="grid md:grid-cols-3 gap-8">
-            <Link href="/case-studies/ai-2026-ultra-intelligent-autonomous-systems-50-billion-success" className="group block rounded-xl border border-purple-500/20 bg-gradient-to-br from-purple-900/20 to-indigo-900/20 p-6 hover:border-purple-400/40 transition-all duration-300 hover:scale-105">
+            <ArrowRight href="/case-studies/ai-2026-ultra-intelligent-autonomous-systems-50-billion-success" className="group block rounded-xl border border-purple-500/20 bg-gradient-to-br from-purple-900/20 to-indigo-900/20 p-6 hover:border-purple-400/40 transition-all duration-300 hover:scale-105">
               <div className="flex items-center gap-2 mb-3">
                 <span className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-3 py-1 rounded-full text-xs font-bold">$50B SUCCESS</span>
                 <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold">FORTUNE 100</span>
@@ -337,9 +337,9 @@ export default function AI2026UltimateAutonomousRevolution100BillionSuccess() {
               <div className="text-white font-bold text-lg mb-2">$50B Ultra-Intelligent Success</div>
               <div className="text-gray-400 text-sm mb-3">How Fortune 100 companies achieved $50B ROI through ultra-intelligent autonomous systems.</div>
               <div className="text-purple-300 text-sm font-semibold group-hover:text-purple-200">Read Success Story →</div>
-            </Link>
+            </ArrowRight>
             
-            <Link href="/case-studies/ai-2026-quantum-neural-superintelligence-success" className="group block rounded-xl border border-indigo-500/20 bg-gradient-to-br from-indigo-900/20 to-purple-900/20 p-6 hover:border-indigo-400/40 transition-all duration-300 hover:scale-105">
+            <ArrowRight href="/case-studies/ai-2026-quantum-neural-superintelligence-success" className="group block rounded-xl border border-indigo-500/20 bg-gradient-to-br from-indigo-900/20 to-purple-900/20 p-6 hover:border-indigo-400/40 transition-all duration-300 hover:scale-105">
               <div className="flex items-center gap-2 mb-3">
                 <span className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-3 py-1 rounded-full text-xs font-bold">$25B SUCCESS</span>
                 <span className="bg-gradient-to-r from-cyan-400 to-blue-500 text-black px-3 py-1 rounded-full text-xs font-bold">QUANTUM AI</span>
@@ -347,9 +347,9 @@ export default function AI2026UltimateAutonomousRevolution100BillionSuccess() {
               <div className="text-white font-bold text-lg mb-2">$25B Quantum Neural Success</div>
               <div className="text-gray-400 text-sm mb-3">Revolutionary quantum neural superintelligence achieving $25B enterprise value.</div>
               <div className="text-indigo-300 text-sm font-semibold group-hover:text-indigo-200">Read Success Story →</div>
-            </Link>
+            </ArrowRight>
             
-            <Link href="/blog/ai-2026-ultimate-autonomous-revolution" className="group block rounded-xl border border-green-500/20 bg-gradient-to-br from-green-900/20 to-emerald-900/20 p-6 hover:border-green-400/40 transition-all duration-300 hover:scale-105">
+            <ArrowRight href="/blog/ai-2026-ultimate-autonomous-revolution" className="group block rounded-xl border border-green-500/20 bg-gradient-to-br from-green-900/20 to-emerald-900/20 p-6 hover:border-green-400/40 transition-all duration-300 hover:scale-105">
               <div className="flex items-center gap-2 mb-3">
                 <span className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-3 py-1 rounded-full text-xs font-bold">TECHNICAL</span>
                 <span className="bg-gradient-to-r from-purple-400 to-indigo-500 text-black px-3 py-1 rounded-full text-xs font-bold">BREAKTHROUGH</span>
@@ -357,7 +357,7 @@ export default function AI2026UltimateAutonomousRevolution100BillionSuccess() {
               <div className="text-white font-bold text-lg mb-2">Ultimate Autonomous Revolution</div>
               <div className="text-gray-400 text-sm mb-3">Technical deep-dive into the revolutionary AI breakthrough achieving 99.99% autonomy.</div>
               <div className="text-green-300 text-sm font-semibold group-hover:text-green-200">Read Technical Details →</div>
-            </Link>
+            </ArrowRight>
           </div>
         </div>
       </section>

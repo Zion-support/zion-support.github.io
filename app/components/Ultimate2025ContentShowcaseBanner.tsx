@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 
 export default function Ultimate2025ContentShowcaseBanner() {
   return (
@@ -40,12 +40,12 @@ export default function Ultimate2025ContentShowcaseBanner() {
                 <span className="text-sm">90% faster deployment</span>
               </div>
             </div>
-            <Link 
+            <ArrowRight 
               href="/blog/ai-agent-orchestration-2025" 
               className="inline-block bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl"
             >
               Explore Guide →
-            </Link>
+            </ArrowRight>
           </div>
 
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:border-purple-400/50 transition-all duration-300 hover:transform hover:scale-105">
@@ -68,12 +68,12 @@ export default function Ultimate2025ContentShowcaseBanner() {
                 <span className="text-sm">$100M+ ROI potential</span>
               </div>
             </div>
-            <Link 
+            <ArrowRight 
               href="/blog/quantum-neural-networks-2026" 
               className="inline-block bg-gradient-to-r from-purple-500 to-pink-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-700 transition-all duration-300 shadow-lg hover:shadow-xl"
             >
               Learn More →
-            </Link>
+            </ArrowRight>
           </div>
 
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:border-green-400/50 transition-all duration-300 hover:transform hover:scale-105">
@@ -96,12 +96,12 @@ export default function Ultimate2025ContentShowcaseBanner() {
                 <span className="text-sm">24/7 autonomous operations</span>
               </div>
             </div>
-            <Link 
+            <ArrowRight 
               href="/blog/autonomous-enterprise-operations-2025" 
               className="inline-block bg-gradient-to-r from-green-500 to-emerald-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-green-600 hover:to-emerald-700 transition-all duration-300 shadow-lg hover:shadow-xl"
             >
               Get Started →
-            </Link>
+            </ArrowRight>
           </div>
         </div>
 
@@ -112,18 +112,18 @@ export default function Ultimate2025ContentShowcaseBanner() {
               Join 500+ Fortune 500 companies already using our AI breakthrough strategies to achieve unprecedented results
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
+              <ArrowRight 
                 href="/services" 
                 className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl"
               >
                 Explore All Services
-              </Link>
-              <Link 
+              </ArrowRight>
+              <ArrowRight 
                 href="/case-studies" 
                 className="border-2 border-white/30 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-all duration-300"
               >
                 View Success Stories
-              </Link>
+              </ArrowRight>
             </div>
           </div>
         </div>

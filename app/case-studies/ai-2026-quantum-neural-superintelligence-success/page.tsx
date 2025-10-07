@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 
 export const metadata = {
   title: 'Case Study: $5B ROI with AI 2026 Quantum Neural Superintelligence - Zion Tech Group',
@@ -214,18 +214,18 @@ export default function AI2026QuantumNeuralSuperintelligenceSuccess() {
             Contact our success team to discuss your transformation opportunities.
           </p>
           <div className="flex gap-4">
-            <Link 
+            <ArrowRight 
               href="/contact" 
               className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-green-600 hover:to-emerald-600 transition-all"
             >
               Start Your Success Story
-            </Link>
-            <Link 
+            </ArrowRight>
+            <ArrowRight 
               href="/blog/ai-2026-quantum-neural-superintelligence" 
               className="border border-green-500 text-green-600 px-6 py-3 rounded-lg font-semibold hover:bg-green-50 transition-all"
             >
               Learn More About the Technology
-            </Link>
+            </ArrowRight>
           </div>
         </div>
       </div>
@@ -233,29 +233,29 @@ export default function AI2026QuantumNeuralSuperintelligenceSuccess() {
       <div className="mt-12 pt-8 border-t border-gray-200">
         <h3 className="text-2xl font-bold text-gray-900 mb-6">Related Success Stories</h3>
         <div className="grid md:grid-cols-3 gap-6">
-          <Link href="/case-studies/ai-2027-consciousness-fusion-mega-success" className="group block">
+          <ArrowRight href="/case-studies/ai-2027-consciousness-fusion-mega-success" className="group block">
             <div className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
               <span className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-2 py-1 rounded text-xs font-bold mb-3 inline-block">$2.5B ROI</span>
               <h4 className="text-lg font-bold text-gray-900 group-hover:text-purple-600 mb-2">Consciousness Fusion Success</h4>
               <p className="text-gray-600 text-sm">100,000x performance breakthrough with consciousness AI</p>
             </div>
-          </Link>
+          </ArrowRight>
           
-          <Link href="/case-studies/ai-2026-hyper-automation-revolution-success" className="group block">
+          <ArrowRight href="/case-studies/ai-2026-hyper-automation-revolution-success" className="group block">
             <div className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
               <span className="bg-gradient-to-r from-red-500 to-orange-500 text-white px-2 py-1 rounded text-xs font-bold mb-3 inline-block">$3.2B ROI</span>
               <h4 className="text-lg font-bold text-gray-900 group-hover:text-red-600 mb-2">Hyper-Automation Success</h4>
               <p className="text-gray-600 text-sm">99.5% autonomous operations transformation</p>
             </div>
-          </Link>
+          </ArrowRight>
           
-          <Link href="/case-studies/fortune-500-ai-transformation-mega-success-2026" className="group block">
+          <ArrowRight href="/case-studies/fortune-500-ai-transformation-mega-success-2026" className="group block">
             <div className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
               <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-2 py-1 rounded text-xs font-bold mb-3 inline-block">$300M ROI</span>
               <h4 className="text-lg font-bold text-gray-900 group-hover:text-orange-600 mb-2">Fortune 500 Transformation</h4>
               <p className="text-gray-600 text-sm">Complete enterprise AI transformation success</p>
             </div>
-          </Link>
+          </ArrowRight>
         </div>
       </div>
     </div>

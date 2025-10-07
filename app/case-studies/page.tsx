@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -234,7 +234,7 @@ export default function CaseStudiesPage() {
                 </span>
               ))}
             </div>
-            <Link
+            <ArrowRight
               href={`/case-studies/${caseStudies[0].slug}`}
               className="inline-flex items-center bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors"
             >
@@ -242,7 +242,7 @@ export default function CaseStudiesPage() {
               <svg className="w-5 h-5 ml-2" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
               </svg>
-            </Link>
+            </ArrowRight>
           </div>
         </div>
       </section>
@@ -286,12 +286,12 @@ export default function CaseStudiesPage() {
                   </div>
                   <div className="flex items-center justify-between">
                     <span className="text-gray-500 text-sm">Success Story</span>
-                    <Link
+                    <ArrowRight
                       href={`/case-studies/${study.slug}`}
                       className="text-green-600 font-semibold hover:text-green-700 transition-colors"
                     >
                       Read More →
-                    </Link>
+                    </ArrowRight>
                   </div>
                 </div>
               </article>
@@ -343,12 +343,12 @@ export default function CaseStudiesPage() {
             Join hundreds of successful companies that have transformed their operations with our AI solutions.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <ArrowRight
               href="/services"
               className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors"
             >
               Explore Our Solutions
-            </Link>
+            </ArrowRight>
             <a
               href="tel:+13024640950"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors"

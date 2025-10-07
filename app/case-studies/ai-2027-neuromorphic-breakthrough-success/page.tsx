@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 
 export const metadata = {
   title: 'Case Study: $750M Neuromorphic AI Breakthrough Success - Fortune 100 Transformation',
@@ -17,9 +17,9 @@ export default function AI2027NeuromorphicBreakthroughSuccess() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-8">
       <div className="mb-8">
-        <Link href="/case-studies" className="text-blue-600 hover:text-blue-800 mb-4 inline-block">
+        <ArrowRight href="/case-studies" className="text-blue-600 hover:text-blue-800 mb-4 inline-block">
           ← Back to Case Studies
-        </Link>
+        </ArrowRight>
         
         <div className="flex items-center gap-2 mb-4">
           <span className="bg-gradient-to-r from-green-500 to-blue-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
@@ -266,26 +266,26 @@ export default function AI2027NeuromorphicBreakthroughSuccess() {
             and cutting-edge technology can help your organization achieve breakthrough results.
           </p>
           <div className="flex flex-wrap gap-4">
-            <Link href="/contact" className="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition-colors">
+            <ArrowRight href="/contact" className="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition-colors">
               Start Your Transformation
-            </Link>
-            <Link href="/services/ai-neuromorphic-computing" className="border border-green-600 text-green-600 px-6 py-3 rounded-lg hover:bg-green-50 transition-colors">
+            </ArrowRight>
+            <ArrowRight href="/services/ai-neuromorphic-computing" className="border border-green-600 text-green-600 px-6 py-3 rounded-lg hover:bg-green-50 transition-colors">
               Explore Our Services
-            </Link>
+            </ArrowRight>
           </div>
         </div>
 
         <div className="border-t border-gray-200 pt-6">
           <h3 className="text-xl font-bold text-gray-900 mb-4">Related Success Stories</h3>
           <div className="grid md:grid-cols-2 gap-4">
-            <Link href="/case-studies/ai-2027-quantum-breakthrough-success" className="block p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
+            <ArrowRight href="/case-studies/ai-2027-quantum-breakthrough-success" className="block p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
               <h4 className="font-semibold text-gray-900 mb-2">⚛️ $500M Quantum AI Success</h4>
               <p className="text-sm text-gray-600">How quantum neural networks transformed a Fortune 100 company.</p>
-            </Link>
-            <Link href="/blog/ai-2027-neuromorphic-computing-breakthrough" className="block p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
+            </ArrowRight>
+            <ArrowRight href="/blog/ai-2027-neuromorphic-computing-breakthrough" className="block p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
               <h4 className="font-semibold text-gray-900 mb-2">🧠 Neuromorphic Computing Guide</h4>
               <p className="text-sm text-gray-600">Complete technical guide to neuromorphic AI implementation.</p>
-            </Link>
+            </ArrowRight>
           </div>
         </div>
       </div>

@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 
 export const metadata = {
   title: 'AI 2027 Breakthrough Solutions - Revolutionary Enterprise AI Transformation',
@@ -24,9 +24,9 @@ export default function AI2027BreakthroughSolutions() {
   return (
     <div className="max-w-7xl mx-auto px-4 py-12">
       <div className="mb-8">
-        <Link href="/services" className="text-blue-600 hover:text-blue-700 mb-4 inline-block">
+        <ArrowRight href="/services" className="text-blue-600 hover:text-blue-700 mb-4 inline-block">
           ← Back to Services
-        </Link>
+        </ArrowRight>
         <div className="flex items-center gap-2 mb-4">
           <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-semibold">
             Revolutionary Technology
@@ -455,7 +455,7 @@ export default function AI2027BreakthroughSolutions() {
         </div>
 
         <div className="grid md:grid-cols-2 gap-8">
-          <Link href="/case-studies/fortune-500-ai-transformation-2027" className="group">
+          <ArrowRight href="/case-studies/fortune-500-ai-transformation-2027" className="group">
             <div className="bg-white rounded-2xl shadow-lg border border-gray-200 p-8 hover:shadow-2xl transition-all duration-300">
               <div className="flex items-center gap-4 mb-6">
                 <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-teal-500 rounded-2xl flex items-center justify-center">
@@ -479,7 +479,7 @@ export default function AI2027BreakthroughSolutions() {
                 </div>
               </div>
             </div>
-          </Link>
+          </ArrowRight>
 
           <div className="bg-white rounded-2xl shadow-lg border border-gray-200 p-8">
             <div className="flex items-center gap-4 mb-6">

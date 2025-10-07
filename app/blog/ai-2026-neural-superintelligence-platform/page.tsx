@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 
 export default function AINeuralSuperintelligencePlatform() {
   return (
@@ -221,18 +221,18 @@ export default function AINeuralSuperintelligencePlatform() {
             Achieve unprecedented capabilities and competitive advantage.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
+            <ArrowRight 
               href="/contact" 
               className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50"
             >
               Schedule Consultation
-            </Link>
-            <Link 
+            </ArrowRight>
+            <ArrowRight 
               href="/case-studies" 
               className="border-2 border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
             >
               View Success Stories
-            </Link>
+            </ArrowRight>
           </div>
         </div>
 
@@ -240,18 +240,18 @@ export default function AINeuralSuperintelligencePlatform() {
         <div className="mt-12">
           <h3 className="text-2xl font-bold mb-6 text-white">Related Technologies</h3>
           <div className="grid md:grid-cols-3 gap-6">
-            <Link href="/blog/ai-2026-superintelligent-automation-breakthrough" className="group block bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-cyan-500/50 transition-all duration-300">
+            <ArrowRight href="/blog/ai-2026-superintelligent-automation-breakthrough" className="group block bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-cyan-500/50 transition-all duration-300">
               <h4 className="text-lg font-bold mb-2 group-hover:text-cyan-400 transition-colors">Superintelligent Automation</h4>
               <p className="text-gray-400 text-sm">Revolutionary automation systems with consciousness-level capabilities.</p>
-            </Link>
-            <Link href="/blog/ai-2026-quantum-neural-networks" className="group block bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-blue-500/50 transition-all duration-300">
+            </ArrowRight>
+            <ArrowRight href="/blog/ai-2026-quantum-neural-networks" className="group block bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-blue-500/50 transition-all duration-300">
               <h4 className="text-lg font-bold mb-2 group-hover:text-blue-400 transition-colors">Quantum Neural Networks</h4>
               <p className="text-gray-400 text-sm">Quantum-enhanced neural architectures for unlimited processing power.</p>
-            </Link>
-            <Link href="/blog/ai-2026-autonomous-enterprise-operations" className="group block bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-purple-500/50 transition-all duration-300">
+            </ArrowRight>
+            <ArrowRight href="/blog/ai-2026-autonomous-enterprise-operations" className="group block bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-purple-500/50 transition-all duration-300">
               <h4 className="text-lg font-bold mb-2 group-hover:text-purple-400 transition-colors">Autonomous Enterprise</h4>
               <p className="text-gray-400 text-sm">Complete enterprise automation through superintelligent systems.</p>
-            </Link>
+            </ArrowRight>
           </div>
         </div>
       </div>

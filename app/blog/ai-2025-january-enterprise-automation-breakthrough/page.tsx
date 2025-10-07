@@ -1,4 +1,6 @@
 import { Metadata } from 'next';
+import { Bookmark, User } from 'lucide-react';
+
 
 export const metadata: Metadata = {
   title: 'AI 2025: Enterprise Automation Breakthrough - Revolutionary Business Transformation',

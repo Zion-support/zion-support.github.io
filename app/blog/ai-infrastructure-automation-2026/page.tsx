@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 
 export const metadata = {
 	title: 'AI Infrastructure Automation 2026 | Zion Tech Group',
@@ -48,8 +48,8 @@ export default function AIInfrastructureAutomation2026Page() {
 				</section>
 
 				<div className="flex gap-4">
-					<Link href="/blog" className="bg-white/10 hover:bg-white/20 border border-white/20 px-4 py-2 rounded-lg">Back to Blog</Link>
-					<Link href="/services" className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg">Explore Services</Link>
+					<ArrowRight href="/blog" className="bg-white/10 hover:bg-white/20 border border-white/20 px-4 py-2 rounded-lg">Back to Blog</ArrowRight>
+					<ArrowRight href="/services" className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg">Explore Services</ArrowRight>
 				</div>
 			</main>
 		</div>

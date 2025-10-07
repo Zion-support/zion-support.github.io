@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 
 export default function AI2026InnovationShowcaseBanner() {
   return (
@@ -189,18 +189,18 @@ export default function AI2026InnovationShowcaseBanner() {
 
         <div className="text-center">
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-6">
-            <Link
+            <ArrowRight
               href="/services/ai-innovation-2026"
               className="bg-gradient-to-r from-violet-500 to-purple-500 text-white px-10 py-4 rounded-lg font-bold text-lg hover:from-violet-600 hover:to-purple-600 transition-all duration-300 shadow-lg"
             >
               Access Innovation 2026
-            </Link>
-            <Link
+            </ArrowRight>
+            <ArrowRight
               href="/blog/ai-innovation-showcase"
               className="border-2 border-white/30 text-white px-10 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-violet-900 transition-all duration-300"
             >
               Explore Innovations
-            </Link>
+            </ArrowRight>
           </div>
           
           <div className="bg-gradient-to-r from-violet-500/20 to-purple-500/20 backdrop-blur-sm rounded-2xl p-6 border border-white/20 max-w-2xl mx-auto">

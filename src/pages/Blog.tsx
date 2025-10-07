@@ -1,6 +1,6 @@
+import { ArrowRight, Calendar, Clock, Search, Tag, User } from 'lucide-react';
 import React from 'react';
 
-import { Calendar, Clock, User, ArrowRight, Tag, Search } from 'lucide-react';
 
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';

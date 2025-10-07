@@ -1,5 +1,5 @@
+import { ArrowLeft, Brain, Search, TrendingUp, Zap } from 'lucide-react';
 import { Helmet } from "react-helmet-async";
-import { ArrowLeft, Search, Brain, Zap, TrendingUp } from 'lucide-react';
 
 import { Link } from "react-router-dom";
 export default function CognitiveSearchEnterprise2025() {

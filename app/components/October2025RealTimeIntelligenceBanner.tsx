@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 
 export default function October2025RealTimeIntelligenceBanner() {
   return (
@@ -73,27 +73,27 @@ export default function October2025RealTimeIntelligenceBanner() {
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-          <Link
+          <ArrowRight
             href="/blog/ai-2025-oct-01-real-time-enterprise-intelligence-platform-revolution"
             className="group relative inline-flex items-center justify-center gap-2 bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-400 hover:to-cyan-400 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
           >
             <span>Read Full Breakthrough Article</span>
             <span className="transform group-hover:translate-x-1 transition-transform">→</span>
-          </Link>
-          <Link
+          </ArrowRight>
+          <ArrowRight
             href="/case-studies/ai-2025-oct-01-global-enterprise-real-time-intelligence-8-4-billion-success"
             className="group relative inline-flex items-center justify-center gap-2 bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-400 hover:to-emerald-400 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1"
           >
             <span>View $8.4B Success Story</span>
             <span className="transform group-hover:translate-x-1 transition-transform">→</span>
-          </Link>
-          <Link
+          </ArrowRight>
+          <ArrowRight
             href="/services/real-time-enterprise-intelligence-platform-2025"
             className="group relative inline-flex items-center justify-center gap-2 border-2 border-purple-400 text-purple-300 hover:bg-purple-500 hover:text-white hover:border-purple-500 font-bold py-4 px-8 rounded-xl transition-all duration-300"
           >
             <span>Explore Platform Services</span>
             <span className="transform group-hover:translate-x-1 transition-transform">→</span>
-          </Link>
+          </ArrowRight>
         </div>
 
         {/* Additional Info */}

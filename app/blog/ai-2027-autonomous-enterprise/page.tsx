@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 
 export const metadata = {
   title: 'AI 2027: The Dawn of Fully Autonomous Enterprise Operations',
@@ -17,9 +17,9 @@ export default function AI2027AutonomousEnterprise() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-8">
       <div className="mb-8">
-        <Link href="/blog" className="text-blue-600 hover:text-blue-800 transition-colors">
+        <ArrowRight href="/blog" className="text-blue-600 hover:text-blue-800 transition-colors">
           ← Back to Blog
-        </Link>
+        </ArrowRight>
       </div>
 
       <article className="prose prose-lg max-w-none">
@@ -268,18 +268,18 @@ export default function AI2027AutonomousEnterprise() {
               design and implement a complete autonomous enterprise solution tailored to your industry and objectives.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link
+              <ArrowRight
                 href="/contact"
                 className="bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors text-center"
               >
                 Start Autonomous Journey
-              </Link>
-              <Link
+              </ArrowRight>
+              <ArrowRight
                 href="/services/ai-autonomous-operations"
                 className="border-2 border-green-600 text-green-600 px-6 py-3 rounded-lg font-semibold hover:bg-green-600 hover:text-white transition-colors text-center"
               >
                 Explore Services
-              </Link>
+              </ArrowRight>
             </div>
           </section>
         </div>

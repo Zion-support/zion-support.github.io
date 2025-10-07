@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 
 export const metadata = {
 	title: 'Autonomous Governance Blueprint (2025) — Zion Tech Group',
@@ -46,8 +46,8 @@ export default function AutonomousGovernanceBlueprint2025() {
 					<div className="mt-10 p-6 rounded-xl border border-white/10 bg-white/5">
 						<div className="text-sm text-gray-300 mb-3">Related guides</div>
 						<div className="grid md:grid-cols-2 gap-3">
-							<Link href="/blog/ai-2025-oct-02-production-agent-guardrails" className="block rounded-lg border border-emerald-400/30 bg-emerald-500/10 px-4 py-3 hover:bg-emerald-500/20 transition-colors">Production Agent Guardrails →</Link>
-							<Link href="/blog/ai-2025-oct-01-operational-trust-v3" className="block rounded-lg border border-cyan-400/30 bg-cyan-500/10 px-4 py-3 hover:bg-cyan-500/20 transition-colors">Operational Trust v3 →</Link>
+							<ArrowRight href="/blog/ai-2025-oct-02-production-agent-guardrails" className="block rounded-lg border border-emerald-400/30 bg-emerald-500/10 px-4 py-3 hover:bg-emerald-500/20 transition-colors">Production Agent Guardrails →</ArrowRight>
+							<ArrowRight href="/blog/ai-2025-oct-01-operational-trust-v3" className="block rounded-lg border border-cyan-400/30 bg-cyan-500/10 px-4 py-3 hover:bg-cyan-500/20 transition-colors">Operational Trust v3 →</ArrowRight>
 						</div>
 					</div>
 				</div>

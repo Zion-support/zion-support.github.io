@@ -4,19 +4,19 @@ export default function ContentPromotionBanner() {
   const featuredContent = [
     {
       title: "Edge Inference Patterns That Actually Reduce Latency",
-      category: "AI Infrastructure",",
+      category: "AI Infrastructure",
       readTime: "7 min read",
       isNew: true,
     },
-    {",
+    {
       title: "North‑Star Engineering Metrics: Fewer KPIs, Better Outcomes",
-      category: "Leadership", ",
+      category: "Leadership",
       readTime: "5 min read",
       isNew: true,
     },
-    {",
+    {
       title: "OpenTelemetry in Production: Traces That Engineers Use",
-      category: "Observability",",
+      category: "Observability",
       readTime: "6 min read",
       isNew: true,
     },

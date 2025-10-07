@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 
 export default function AIQuantumComputingBreakthroughBanner() {
   return (
@@ -133,18 +133,18 @@ export default function AIQuantumComputingBreakthroughBanner() {
               for our exclusive early access program launching in Q2 2026.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <ArrowRight
                 href="/services/quantum-ai"
                 className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300 shadow-lg"
               >
                 Join Early Access
-              </Link>
-              <Link
+              </ArrowRight>
+              <ArrowRight
                 href="/blog/quantum-ai-breakthrough"
                 className="border-2 border-white/30 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-purple-900 transition-all duration-300"
               >
                 Learn More
-              </Link>
+              </ArrowRight>
             </div>
           </div>
           

@@ -1,5 +1,5 @@
+import { ArrowLeft, CheckCircle, Rocket, Target, TrendingUp, Users } from 'lucide-react';
 import { Link } from "react-router-dom";
-import { ArrowLeft, TrendingUp, Users, Target, Rocket, CheckCircle } from 'lucide-react';
 
 import { Helmet } from "react-helmet-async";
 import Header from "../../components/Header";

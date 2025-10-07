@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 
+
 export const metadata: Metadata = {
   title: 'Fortune 500 April 2026 Meta-Cognitive AI Success: $5.2B Value Generated',
   description: 'Discover how a Fortune 500 company achieved $5.2B in value through our meta-cognitive superintelligence platform, delivering 1000x performance improvements and 99.7% operational efficiency.',

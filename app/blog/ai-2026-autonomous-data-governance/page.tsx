@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 
 export const metadata = {
   title: 'AI 2026 Autonomous Data Governance | Zion Tech Group',
@@ -64,17 +64,17 @@ export default function AutonomousDataGovernance2026Page() {
 
           <p>
             Related reading: {' '}
-            <Link href="/blog/agentic-workflow-orchestration-2026" className="text-teal-300 hover:text-teal-200">
+            <ArrowRight href="/blog/agentic-workflow-orchestration-2026" className="text-teal-300 hover:text-teal-200">
               Agentic Workflow Orchestration 2026
-            </Link>
+            </ArrowRight>
             .
           </p>
         </div>
 
         <div className="mt-12">
-          <Link href="/blog" className="inline-block bg-white text-teal-700 px-6 py-3 rounded-lg font-bold hover:bg-teal-50">
+          <ArrowRight href="/blog" className="inline-block bg-white text-teal-700 px-6 py-3 rounded-lg font-bold hover:bg-teal-50">
             ← Back to Blog
-          </Link>
+          </ArrowRight>
         </div>
       </main>
     </div>

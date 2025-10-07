@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 
 export const metadata = {
   title: 'Edge Real‑Time Personalization 2026: Private <100ms Experiences',
@@ -18,9 +18,9 @@ export default function EdgeRealTimePersonalization2026() {
     <div className="min-h-screen bg-gradient-to-br from-blue-950 via-indigo-950 to-purple-950 text-white">
       <main className="container mx-auto px-6 py-12">
         <nav className="mb-8">
-          <Link href="/blog" className="text-cyan-300 hover:text-cyan-200 transition-colors">
+          <ArrowRight href="/blog" className="text-cyan-300 hover:text-cyan-200 transition-colors">
             ← Back to Blog
-          </Link>
+          </ArrowRight>
         </nav>
 
         <article className="max-w-4xl mx-auto">

@@ -1,5 +1,5 @@
+import { ArrowRight, Brain, Clock, Network, Shield, Tag, User, Zap } from 'lucide-react';
 import React from 'react';
-import { Brain, Network, Zap, Shield, ArrowRight, Clock, User, Tag } from 'lucide-react';
 
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';

@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 
 export default function February2026MegaBreakthroughBanner() {
   return (
@@ -53,24 +53,24 @@ export default function February2026MegaBreakthroughBanner() {
           
           {/* Call to Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Link 
+            <ArrowRight 
               href="/blog/ai-2026-february-mega-breakthrough-revolution" 
               className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
             >
               Read Ultimate AI Transformation →
-            </Link>
-            <Link 
+            </ArrowRight>
+            <ArrowRight 
               href="/case-studies" 
               className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1"
             >
               View Success Stories →
-            </Link>
-            <Link 
+            </ArrowRight>
+            <ArrowRight 
               href="/contact" 
               className="border-2 border-blue-400 text-blue-300 hover:bg-blue-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
             >
               Implement Ultimate AI
-            </Link>
+            </ArrowRight>
           </div>
           
           {/* Feature Highlights */}

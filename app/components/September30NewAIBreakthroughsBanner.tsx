@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 
 export default function September30NewAIBreakthroughsBanner() {
   return (
@@ -18,7 +18,7 @@ export default function September30NewAIBreakthroughsBanner() {
 
         <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {/* Edge AI */}
-          <Link href="/blog/ai-edge-revolution-september-2025" className="group">
+          <ArrowRight href="/blog/ai-edge-revolution-september-2025" className="group">
             <div className="bg-white rounded-xl shadow-2xl overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-3xl">
               <div className="bg-gradient-to-r from-green-500 to-emerald-500 p-6 text-center">
                 <div className="text-4xl mb-3">⚡</div>
@@ -49,10 +49,10 @@ export default function September30NewAIBreakthroughsBanner() {
                 </div>
               </div>
             </div>
-          </Link>
+          </ArrowRight>
 
           {/* Security Framework */}
-          <Link href="/blog/ai-enterprise-security-framework-2025" className="group">
+          <ArrowRight href="/blog/ai-enterprise-security-framework-2025" className="group">
             <div className="bg-white rounded-xl shadow-2xl overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-3xl">
               <div className="bg-gradient-to-r from-red-500 to-pink-500 p-6 text-center">
                 <div className="text-4xl mb-3">🛡️</div>
@@ -83,10 +83,10 @@ export default function September30NewAIBreakthroughsBanner() {
                 </div>
               </div>
             </div>
-          </Link>
+          </ArrowRight>
 
           {/* Sustainable AI */}
-          <Link href="/blog/sustainable-ai-computing-2025" className="group">
+          <ArrowRight href="/blog/sustainable-ai-computing-2025" className="group">
             <div className="bg-white rounded-xl shadow-2xl overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-3xl">
               <div className="bg-gradient-to-r from-green-500 to-teal-500 p-6 text-center">
                 <div className="text-4xl mb-3">🌱</div>
@@ -117,7 +117,7 @@ export default function September30NewAIBreakthroughsBanner() {
                 </div>
               </div>
             </div>
-          </Link>
+          </ArrowRight>
         </div>
 
         {/* CTA */}

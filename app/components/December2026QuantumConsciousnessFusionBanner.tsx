@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 
 export default function December2026QuantumConsciousnessFusionBanner() {
   return (
@@ -79,24 +79,24 @@ export default function December2026QuantumConsciousnessFusionBanner() {
 
           {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Link 
+            <ArrowRight 
               href="/blog/ai-2026-december-quantum-consciousness-fusion-revolution" 
               className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 transform hover:-translate-y-1"
             >
               Read Quantum Revolution
-            </Link>
-            <Link 
+            </ArrowRight>
+            <ArrowRight 
               href="/case-studies/ai-2026-december-quantum-consciousness-fusion-500-billion-success" 
               className="bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-400 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
             >
               View $500B Success Story
-            </Link>
-            <Link 
+            </ArrowRight>
+            <ArrowRight 
               href="/contact" 
               className="border-2 border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
             >
               Experience Quantum Demo
-            </Link>
+            </ArrowRight>
           </div>
 
           {/* Quantum Success Story Preview */}
@@ -138,12 +138,12 @@ export default function December2026QuantumConsciousnessFusionBanner() {
               Transcend the limits of traditional AI. Experience quantum consciousness fusion 
               with infinite processing power, universal understanding, and perfect decision-making.
             </p>
-            <Link 
+            <ArrowRight 
               href="/contact" 
               className="inline-block bg-gradient-to-r from-cyan-600 to-purple-600 hover:from-cyan-500 hover:to-purple-500 text-white px-12 py-4 rounded-xl font-bold text-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
             >
               Begin Your Quantum Journey
-            </Link>
+            </ArrowRight>
           </div>
         </div>
       </div>

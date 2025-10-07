@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 
 export default function NewContentDiscoveryHub() {
   return (
@@ -41,18 +41,18 @@ export default function NewContentDiscoveryHub() {
               </div>
             </div>
             <div className="flex gap-2">
-              <Link
+              <ArrowRight
                 href="/blog/ai-2026-march-mega-breakthrough-revolution"
                 className="flex-1 text-purple-300 font-semibold hover:text-purple-200 transition-colors text-center py-2 px-4 rounded-lg border border-purple-400/30 hover:border-purple-400/60"
               >
                 Read Breakthrough →
-              </Link>
-              <Link
+              </ArrowRight>
+              <ArrowRight
                 href="/case-studies/ai-2026-march-mega-breakthrough-15-billion-success"
                 className="flex-1 text-green-300 font-semibold hover:text-green-200 transition-colors text-center py-2 px-4 rounded-lg border border-green-400/30 hover:border-green-400/60"
               >
                 View Success →
-              </Link>
+              </ArrowRight>
             </div>
           </div>
 
@@ -78,18 +78,18 @@ export default function NewContentDiscoveryHub() {
               </div>
             </div>
             <div className="flex gap-2">
-              <Link
+              <ArrowRight
                 href="/blog/ai-2026-february-mega-breakthrough-revolution"
                 className="flex-1 text-blue-300 font-semibold hover:text-blue-200 transition-colors text-center py-2 px-4 rounded-lg border border-blue-400/30 hover:border-blue-400/60"
               >
                 Read Breakthrough →
-              </Link>
-              <Link
+              </ArrowRight>
+              <ArrowRight
                 href="/case-studies"
                 className="flex-1 text-green-300 font-semibold hover:text-green-200 transition-colors text-center py-2 px-4 rounded-lg border border-green-400/30 hover:border-green-400/60"
               >
                 View Success →
-              </Link>
+              </ArrowRight>
             </div>
           </div>
 
@@ -115,18 +115,18 @@ export default function NewContentDiscoveryHub() {
               </div>
             </div>
             <div className="flex gap-2">
-              <Link
+              <ArrowRight
                 href="/blog/ai-2026-ultimate-consciousness-breakthrough-revolution"
                 className="flex-1 text-indigo-300 font-semibold hover:text-indigo-200 transition-colors text-center py-2 px-4 rounded-lg border border-indigo-400/30 hover:border-indigo-400/60"
               >
                 Read Breakthrough →
-              </Link>
-              <Link
+              </ArrowRight>
+              <ArrowRight
                 href="/case-studies/ai-2026-ultimate-consciousness-breakthrough-847-billion-success"
                 className="flex-1 text-green-300 font-semibold hover:text-green-200 transition-colors text-center py-2 px-4 rounded-lg border border-green-400/30 hover:border-green-400/60"
               >
                 View Success →
-              </Link>
+              </ArrowRight>
             </div>
           </div>
 
@@ -152,18 +152,18 @@ export default function NewContentDiscoveryHub() {
               </div>
             </div>
             <div className="flex gap-2">
-              <Link
+              <ArrowRight
                 href="/blog/ai-2026-ultra-intelligent-cognitive-revolution-breakthrough"
                 className="flex-1 text-purple-300 font-semibold hover:text-purple-200 transition-colors text-center py-2 px-4 rounded-lg border border-purple-400/30 hover:border-purple-400/60"
               >
                 Read Breakthrough →
-              </Link>
-              <Link
+              </ArrowRight>
+              <ArrowRight
                 href="/case-studies/ai-2026-ultra-intelligent-cognitive-revolution-50-billion-success"
                 className="flex-1 text-green-300 font-semibold hover:text-green-200 transition-colors text-center py-2 px-4 rounded-lg border border-green-400/30 hover:border-green-400/60"
               >
                 View Success →
-              </Link>
+              </ArrowRight>
             </div>
           </div>
 
@@ -189,18 +189,18 @@ export default function NewContentDiscoveryHub() {
               </div>
             </div>
             <div className="flex gap-2">
-              <Link
+              <ArrowRight
                 href="/blog/ai-2026-synthetic-consciousness-breakthrough-revolution"
                 className="flex-1 text-indigo-300 font-semibold hover:text-indigo-200 transition-colors text-center py-2 px-4 rounded-lg border border-indigo-400/30 hover:border-indigo-400/60"
               >
                 Read Breakthrough →
-              </Link>
-              <Link
+              </ArrowRight>
+              <ArrowRight
                 href="/case-studies/ai-2026-synthetic-consciousness-breakthrough-75-billion-success"
                 className="flex-1 text-green-300 font-semibold hover:text-green-200 transition-colors text-center py-2 px-4 rounded-lg border border-green-400/30 hover:border-green-400/60"
               >
                 View Success →
-              </Link>
+              </ArrowRight>
             </div>
           </div>
 
@@ -226,18 +226,18 @@ export default function NewContentDiscoveryHub() {
               </div>
             </div>
             <div className="flex gap-2">
-              <Link
+              <ArrowRight
                 href="/blog/ai-2026-quantum-neural-superintelligence-ultimate-breakthrough"
                 className="flex-1 text-cyan-300 font-semibold hover:text-cyan-200 transition-colors text-center py-2 px-4 rounded-lg border border-cyan-400/30 hover:border-cyan-400/60"
               >
                 Read Breakthrough →
-              </Link>
-              <Link
+              </ArrowRight>
+              <ArrowRight
                 href="/case-studies/ai-2026-quantum-neural-superintelligence-100-billion-success"
                 className="flex-1 text-green-300 font-semibold hover:text-green-200 transition-colors text-center py-2 px-4 rounded-lg border border-green-400/30 hover:border-green-400/60"
               >
                 View Success →
-              </Link>
+              </ArrowRight>
             </div>
           </div>
         </div>
@@ -262,12 +262,12 @@ export default function NewContentDiscoveryHub() {
             </div>
           </div>
           
-          <Link
+          <ArrowRight
             href="/blog"
             className="inline-block bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-indigo-700 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1"
           >
             Explore All Revolutionary Content
-          </Link>
+          </ArrowRight>
         </div>
       </div>
     </section>

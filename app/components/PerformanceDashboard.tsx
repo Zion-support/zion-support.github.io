@@ -3,7 +3,7 @@ import { performanceOptimizer } from '../../utils/performanceOptimizer';
 import {
   getErrorMetrics,
   isErrorRateTooHigh,
-} from '../../src/utils/errorHandling';
+} from '../../utils/errorHandling';
 
 interface DashboardData {
   performance: ReturnType<typeof performanceOptimizer.getPerformanceSummary>;

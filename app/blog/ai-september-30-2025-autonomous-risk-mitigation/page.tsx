@@ -1,5 +1,5 @@
 // @ts-nocheck
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 
 export const metadata = {
   title: 'AI September 30, 2025 — Autonomous Risk Mitigation | Zion Tech Group',
@@ -79,8 +79,8 @@ export default function AutonomousRiskMitigationSept302025() {
             <h3 className="text-2xl font-bold text-white mb-2">Ready to operationalize safe autonomy?</h3>
             <p className="text-indigo-100 mb-4">Our team can help you define budgets, build guardrails, and deploy with confidence.</p>
             <div className="flex gap-3 justify-center">
-              <Link href="/contact" className="bg-white text-indigo-700 px-6 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors">Talk to experts</Link>
-              <Link href="/blog" className="border border-white/70 text-white px-6 py-2 rounded-lg font-semibold hover:bg-white hover:text-indigo-700 transition-colors">Explore more</Link>
+              <ArrowRight href="/contact" className="bg-white text-indigo-700 px-6 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors">Talk to experts</ArrowRight>
+              <ArrowRight href="/blog" className="border border-white/70 text-white px-6 py-2 rounded-lg font-semibold hover:bg-white hover:text-indigo-700 transition-colors">Explore more</ArrowRight>
             </div>
           </div>
         </article>

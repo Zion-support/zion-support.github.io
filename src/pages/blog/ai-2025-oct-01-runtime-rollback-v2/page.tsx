@@ -6,7 +6,15 @@ export default function BlogPage(): React.JSX.Element {
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
       <Helmet>
-}
+        <title>Ai 2025 Oct 01 Runtime Rollback V2</title>
+        <meta 
+          name="description" 
+          content="Learn about ai 2025 oct 01 runtime rollback v2 and how it can benefit your enterprise." 
+        />
+        <link 
+          rel="canonical" 
+          href="https://ziontechgroup.com/blog/ai-2025-oct-01-runtime-rollback-v2" 
+        />
       </Helmet>
 
       <div className="container mx-auto px-6 py-16">

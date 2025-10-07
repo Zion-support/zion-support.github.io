@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 
 export default function RevolutionaryAI2026BreakthroughBanner() {
   return (
@@ -32,18 +32,18 @@ export default function RevolutionaryAI2026BreakthroughBanner() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <Link 
+              <ArrowRight 
                 href="/blog/ai-2026-autonomous-business-intelligence"
                 className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-xl font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
               >
                 Explore AI Intelligence
-              </Link>
-              <Link 
+              </ArrowRight>
+              <ArrowRight 
                 href="/blog/ai-quantum-computing-breakthrough-2026"
                 className="border-2 border-purple-400 text-purple-300 px-6 py-3 rounded-xl font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300"
               >
                 Discover Quantum AI
-              </Link>
+              </ArrowRight>
             </div>
           </div>
           

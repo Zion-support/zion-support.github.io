@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 
 export const metadata = {
   title: 'AI Enterprise Automation 2026: Autonomous Systems with Proven ROI',
@@ -18,9 +18,9 @@ export default function AIEnterpriseAutomation2026() {
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-blue-950 text-white">
       <main className="container mx-auto px-6 py-12">
         <nav className="mb-8">
-          <Link href="/blog" className="text-blue-300 hover:text-blue-200 transition-colors">
+          <ArrowRight href="/blog" className="text-blue-300 hover:text-blue-200 transition-colors">
             ← Back to Blog
-          </Link>
+          </ArrowRight>
         </nav>
 
         <article className="max-w-4xl mx-auto">

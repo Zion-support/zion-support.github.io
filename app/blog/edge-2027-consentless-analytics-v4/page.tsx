@@ -1,5 +1,5 @@
 // @ts-nocheck
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 
 export const metadata = {
   title: 'Edge 2027: Consentless Analytics v4 — Zero‑PII, <100ms | Zion Tech Group',
@@ -54,9 +54,9 @@ export default function Edge2027ConsentlessAnalyticsV4Page() {
 
         <h3 className="mt-10">Related Guides</h3>
         <ul>
-          <li><Link href="/blog/edge-zero-pii-analytics-2026">Zero‑PII Edge Analytics 2026</Link></li>
-          <li><Link href="/blog/edge-inference-warm-pools-2026">Edge Inference Warm Pools 2026</Link></li>
-          <li><Link href="/blog/edge-private-insights-2026">Edge Private Insights 2026</Link></li>
+          <li><ArrowRight href="/blog/edge-zero-pii-analytics-2026">Zero‑PII Edge Analytics 2026</ArrowRight></li>
+          <li><ArrowRight href="/blog/edge-inference-warm-pools-2026">Edge Inference Warm Pools 2026</ArrowRight></li>
+          <li><ArrowRight href="/blog/edge-private-insights-2026">Edge Private Insights 2026</ArrowRight></li>
         </ul>
       </article>
 
@@ -64,8 +64,8 @@ export default function Edge2027ConsentlessAnalyticsV4Page() {
         <h3 className="text-2xl font-bold mb-3">Ready to modernize analytics?</h3>
         <p className="mb-6 opacity-90">We deploy zero‑PII analytics with sub‑100ms global performance.</p>
         <div className="flex gap-3 flex-col sm:flex-row">
-          <Link href="/contact" className="bg-white text-cyan-700 px-6 py-3 rounded-lg font-semibold text-center">Talk to an expert</Link>
-          <Link href="/services/ai-innovation-lab" className="border-2 border-white px-6 py-3 rounded-lg font-semibold text-center">Explore services</Link>
+          <ArrowRight href="/contact" className="bg-white text-cyan-700 px-6 py-3 rounded-lg font-semibold text-center">Talk to an expert</ArrowRight>
+          <ArrowRight href="/services/ai-innovation-lab" className="border-2 border-white px-6 py-3 rounded-lg font-semibold text-center">Explore services</ArrowRight>
         </div>
       </div>
     </div>

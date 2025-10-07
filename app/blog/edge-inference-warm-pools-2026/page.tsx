@@ -1,5 +1,7 @@
 // @ts-nocheck
-import Link from 'next/link';
+import { ArrowRight, Target } from 'lucide-react';
+
+import ArrowRight from 'next/link';
 
 export const metadata = {
   title: 'Edge Inference Warm Pools 2026: Sub-100ms Global with Predictable Cost',
@@ -40,8 +42,8 @@ export default function Page() {
 
       <section className="py-12 bg-gray-50 border-t border-gray-200">
         <div className="max-w-4xl mx-auto px-6 flex items-center justify-between">
-          <Link href="/blog" className="text-emerald-700 font-semibold hover:text-emerald-800">← Back to Blog</Link>
-          <Link href="/blog/agent-release-guardrails-2026" className="text-teal-700 font-semibold hover:text-teal-800">Next: Agent Release Guardrails →</Link>
+          <ArrowRight href="/blog" className="text-emerald-700 font-semibold hover:text-emerald-800">← Back to Blog</ArrowRight>
+          <ArrowRight href="/blog/agent-release-guardrails-2026" className="text-teal-700 font-semibold hover:text-teal-800">Next: Agent Release Guardrails →</ArrowRight>
         </div>
       </section>
     </main>

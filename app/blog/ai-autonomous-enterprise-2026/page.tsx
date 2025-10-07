@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 
 export const metadata = {
   title: 'AI Autonomous Enterprise 2026: Self-Managing Business Systems | Zion Tech Group',
@@ -215,18 +215,18 @@ export default function AIAutonomousEnterprise2026() {
               that deliver measurable ROI and competitive advantage.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link
+              <ArrowRight
                 href="/contact"
                 className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center"
               >
                 Get Free Consultation
-              </Link>
-              <Link
+              </ArrowRight>
+              <ArrowRight
                 href="/case-studies/ai-autonomous-enterprise-success-2026"
                 className="bg-white/20 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/30 transition-colors text-center"
               >
                 View Success Stories
-              </Link>
+              </ArrowRight>
             </div>
           </div>
         </section>
@@ -235,14 +235,14 @@ export default function AIAutonomousEnterprise2026() {
         <section className="mb-12">
           <h2 className="text-2xl font-bold text-gray-900 mb-6">Related Content</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <Link href="/blog/ai-autonomous-infrastructure-2026" className="block bg-white rounded-xl shadow-lg hover:shadow-xl transition-all p-6 border border-gray-200">
+            <ArrowRight href="/blog/ai-autonomous-infrastructure-2026" className="block bg-white rounded-xl shadow-lg hover:shadow-xl transition-all p-6 border border-gray-200">
               <h3 className="text-xl font-bold text-gray-900 mb-2">Autonomous Infrastructure 2026</h3>
               <p className="text-gray-600">Learn how to build self-healing, self-optimizing infrastructure systems.</p>
-            </Link>
-            <Link href="/case-studies/ai-autonomous-enterprise-success-2026" className="block bg-white rounded-xl shadow-lg hover:shadow-xl transition-all p-6 border border-gray-200">
+            </ArrowRight>
+            <ArrowRight href="/case-studies/ai-autonomous-enterprise-success-2026" className="block bg-white rounded-xl shadow-lg hover:shadow-xl transition-all p-6 border border-gray-200">
               <h3 className="text-xl font-bold text-gray-900 mb-2">$15M ROI Success Story</h3>
               <p className="text-gray-600">Real-world case study of autonomous enterprise transformation.</p>
-            </Link>
+            </ArrowRight>
           </div>
         </section>
       </article>

@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 
 export const metadata = {
 	title: 'Edge Private Analytics 2026 | Zion Tech Group',
@@ -35,9 +35,9 @@ export default function EdgePrivateAnalytics2026Page() {
 				</div>
 
 				<div className="mt-12">
-					<Link href="/blog" className="inline-block bg-white text-cyan-700 px-6 py-3 rounded-lg font-bold hover:bg-cyan-50">
+					<ArrowRight href="/blog" className="inline-block bg-white text-cyan-700 px-6 py-3 rounded-lg font-bold hover:bg-cyan-50">
 						← Back to Blog
-					</Link>
+					</ArrowRight>
 				</div>
 			</main>
 		</div>

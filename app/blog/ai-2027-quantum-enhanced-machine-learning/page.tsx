@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 
 export const metadata = {
   title: 'AI 2027: Quantum-Enhanced Machine Learning Breakthrough - Enterprise Implementation Guide',
@@ -245,12 +245,12 @@ export default function AI2027QuantumEnhancedMachineLearning() {
             Join the pioneering enterprises already achieving breakthrough results with Quantum-Enhanced Machine Learning.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <ArrowRight
               href="/services/ai-quantum-computing"
               className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               Explore Quantum AI Services
-            </Link>
+            </ArrowRight>
             <a
               href="tel:+13024640950"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
@@ -263,14 +263,14 @@ export default function AI2027QuantumEnhancedMachineLearning() {
         <div className="mt-8 pt-8 border-t border-gray-200">
           <h3 className="text-xl font-bold text-gray-900 mb-4">Related Resources</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <Link href="/blog/ai-2027-quantum-breakthrough" className="block p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+            <ArrowRight href="/blog/ai-2027-quantum-breakthrough" className="block p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
               <h4 className="font-bold text-gray-900">AI 2027 Quantum Computing Breakthrough</h4>
               <p className="text-gray-600 text-sm">Complete guide to quantum computing applications in enterprise AI</p>
-            </Link>
-            <Link href="/case-studies/fortune-500-quantum-ai-transformation-2026" className="block p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+            </ArrowRight>
+            <ArrowRight href="/case-studies/fortune-500-quantum-ai-transformation-2026" className="block p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
               <h4 className="font-bold text-gray-900">$200M Quantum AI Success Story</h4>
               <p className="text-gray-600 text-sm">Fortune 500 transformation with quantum-enhanced machine learning</p>
-            </Link>
+            </ArrowRight>
           </div>
         </div>
       </div>

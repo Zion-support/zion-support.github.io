@@ -1,10 +1,11 @@
 import Link from 'next/link';
+import { ArrowLeft, Calendar, Clock, User, Tag } from 'lucide-react';
 
-import ArrowLeft from 'lucide-react/dist/esm/icons/rrowleft';
-import Calendar from 'lucide-react/dist/esm/icons/alendar';
-import User from 'lucide-react/dist/esm/icons/ser';
-import Clock from 'lucide-react/dist/esm/icons/lock';
-import Tag from 'lucide-react/dist/esm/icons/ag';
+import ArrowLeft from 'lucide-react/dist/esm/icons/arrow-left';
+import Calendar from 'lucide-react/dist/esm/icons/calendar';
+import User from 'lucide-react/dist/esm/icons/user';
+import Clock from 'lucide-react/dist/esm/icons/clock';
+import Tag from 'lucide-react/dist/esm/icons/tag';
 
 export const metadata = {
   title: 'Quantum AI 2026: Business Intelligence Revolution - Zion Tech Group',

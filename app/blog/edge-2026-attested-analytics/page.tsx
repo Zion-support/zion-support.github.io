@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 
 export const metadata = {
 	title: 'Edge 2026: Attested Analytics — Zero‑PII Insights with Signed Proofs',
@@ -19,11 +19,11 @@ export default function Page() {
 				<li>Latency: sub‑100ms collection and evaluation at the edge</li>
 			</ul>
 			<p>
-				Related reads: <Link href="/blog/edge-private-analytics-2027">Edge Private Analytics 2027</Link>{' '}
-				and <Link href="/blog/verifiable-edge-analytics-2026">Verifiable Edge Analytics 2026</Link>.
+				Related reads: <ArrowRight href="/blog/edge-private-analytics-2027">Edge Private Analytics 2027</ArrowRight>{' '}
+				and <ArrowRight href="/blog/verifiable-edge-analytics-2026">Verifiable Edge Analytics 2026</ArrowRight>.
 			</p>
 			<p>
-				Continue exploring in our <Link href="/blog">Blog</Link>.
+				Continue exploring in our <ArrowRight href="/blog">Blog</ArrowRight>.
 			</p>
 		</main>
 	);

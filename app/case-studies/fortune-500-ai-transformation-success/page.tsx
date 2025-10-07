@@ -1,4 +1,5 @@
-import { Link } from 'next/link';
+import Link from 'next/link';
+import { ArrowLeft, Bookmark, Calendar, Clock, User } from 'lucide-react';
 
 export const metadata = {
   title: 'Fortune 500 AI Transformation Success: $52M+ Savings & 156% ROI - Zion Tech Group',
@@ -52,7 +53,7 @@ export default function Fortune500AITransformationSuccess() {
           <div className="flex flex-wrap gap-2">
             {['AI Transformation', 'Fortune 500', 'Enterprise Automation', 'Digital Transformation', 'ROI Success'].map((tag) => (
               <span key={tag} className="inline-flex items-center gap-1 bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm font-medium">
-                <Tag className="w-3 h-3" />
+                <Bookmark className="w-3 h-3" />
                 {tag}
               </span>
             ))}
@@ -420,4 +421,3 @@ export default function Fortune500AITransformationSuccess() {
     </div>
   );
 }
->>>>>>> 5d2b3c81c55b794aac3492f27f2c7fa2daa0ca39

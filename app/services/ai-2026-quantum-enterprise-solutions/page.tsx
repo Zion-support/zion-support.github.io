@@ -1,13 +1,13 @@
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 
 export default function QuantumEnterpriseSolutionsPage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white">
       <div className="max-w-6xl mx-auto px-4 py-16">
         <div className="mb-12">
-          <Link href="/services" className="text-blue-400 hover:text-blue-300 mb-4 inline-block">
+          <ArrowRight href="/services" className="text-blue-400 hover:text-blue-300 mb-4 inline-block">
             ← Back to Services
-          </Link>
+          </ArrowRight>
           <div className="flex items-center gap-2 mb-6">
             <span className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-4 py-2 rounded-full text-sm font-bold">QUANTUM ENTERPRISE</span>
             <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-4 py-2 rounded-full text-sm font-bold">1000x PERFORMANCE</span>
@@ -260,18 +260,18 @@ export default function QuantumEnterpriseSolutionsPage() {
             Our team of quantum AI experts is ready to help you transform your business operations.
           </p>
           <div className="flex flex-wrap justify-center gap-6">
-            <Link 
+            <ArrowRight 
               href="/contact" 
               className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-indigo-700 transition-all shadow-lg hover:shadow-xl"
             >
               Schedule Consultation
-            </Link>
-            <Link 
+            </ArrowRight>
+            <ArrowRight 
               href="/case-studies" 
               className="border border-white/20 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-all"
             >
               View Success Stories
-            </Link>
+            </ArrowRight>
           </div>
         </div>
       </div>

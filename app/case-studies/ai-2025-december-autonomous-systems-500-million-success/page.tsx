@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 
 export const metadata: Metadata = {
   title: '$500M Success: December 2025 Autonomous Systems Implementation | Zion Tech Group',
@@ -283,31 +283,31 @@ export default function December2025AutonomousSystems500MSuccess() {
                 Discover how December 2025 autonomous systems can transform your enterprise operations 
                 and generate unprecedented ROI.
               </p>
-              <Link 
+              <ArrowRight 
                 href="/contact" 
                 className="inline-block bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50"
               >
                 Start Your Transformation
-              </Link>
+              </ArrowRight>
             </div>
             
             <div className="flex-1">
               <h3 className="text-xl font-bold text-white mb-4">Related Resources</h3>
               <div className="space-y-3">
-                <Link 
+                <ArrowRight 
                   href="/blog/ai-2025-december-advanced-autonomous-systems" 
                   className="block p-4 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-lg border border-blue-500/30 hover:border-blue-400/50 transition-colors"
                 >
                   <div className="font-semibold text-blue-400">December 2025 Autonomous Systems</div>
                   <div className="text-sm text-gray-300">Complete technical overview</div>
-                </Link>
-                <Link 
+                </ArrowRight>
+                <ArrowRight 
                   href="/blog/ai-2025-december-quantum-computing-breakthrough" 
                   className="block p-4 bg-gradient-to-r from-purple-500/20 to-indigo-500/20 rounded-lg border border-purple-500/30 hover:border-purple-400/50 transition-colors"
                 >
                   <div className="font-semibold text-purple-400">Quantum Computing Breakthrough</div>
                   <div className="text-sm text-gray-300">Next-generation computing</div>
-                </Link>
+                </ArrowRight>
               </div>
             </div>
           </div>

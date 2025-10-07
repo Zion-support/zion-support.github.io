@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 
 export default function NewContent2026MegaBanners() {
   return (
@@ -29,24 +29,24 @@ export default function NewContent2026MegaBanners() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Link 
+              <ArrowRight 
                 href="/blog/ai-2026-april-mega-breakthrough-revolution" 
                 className="bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-400 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
               >
                 Read the Breakthrough →
-              </Link>
-              <Link 
+              </ArrowRight>
+              <ArrowRight 
                 href="/case-studies/ai-2026-april-mega-breakthrough-15-billion-success" 
                 className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1"
               >
                 View $15.2B Success Story →
-              </Link>
-              <Link 
+              </ArrowRight>
+              <ArrowRight 
                 href="/contact" 
                 className="border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
               >
                 Start Your Transformation
-              </Link>
+              </ArrowRight>
             </div>
             
             {/* Key Metrics */}
@@ -98,24 +98,24 @@ export default function NewContent2026MegaBanners() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Link 
+              <ArrowRight 
                 href="/blog/ai-2026-future-trends-breakthrough" 
                 className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 transform hover:-translate-y-1"
               >
                 Explore Future Trends →
-              </Link>
-              <Link 
+              </ArrowRight>
+              <ArrowRight 
                 href="/blog/ai-2026-edge-native-intelligence-breakthrough" 
                 className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
               >
                 Edge-Native Intelligence 50x →
-              </Link>
-              <Link 
+              </ArrowRight>
+              <ArrowRight 
                 href="/contact" 
                 className="border-2 border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
               >
                 Get Future-Ready
-              </Link>
+              </ArrowRight>
             </div>
             
             {/* Trend Highlights */}
@@ -173,7 +173,7 @@ export default function NewContent2026MegaBanners() {
           </div>
           
           <div className="grid md:grid-cols-3 gap-8 mb-12">
-            <Link href="/blog/ai-2026-april-mega-breakthrough-revolution" className="group block rounded-xl border border-purple-500/20 bg-gradient-to-br from-purple-900/20 to-indigo-900/20 p-6 hover:border-purple-400/40 transition-all duration-300 hover:scale-105">
+            <ArrowRight href="/blog/ai-2026-april-mega-breakthrough-revolution" className="group block rounded-xl border border-purple-500/20 bg-gradient-to-br from-purple-900/20 to-indigo-900/20 p-6 hover:border-purple-400/40 transition-all duration-300 hover:scale-105">
               <div className="flex items-center gap-2 mb-3">
                 <span className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-3 py-1 rounded-full text-xs font-bold">APRIL 2026</span>
                 <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold">$15.2B ROI</span>
@@ -181,9 +181,9 @@ export default function NewContent2026MegaBanners() {
               <div className="text-white font-bold text-lg mb-2">April 2026 Mega Breakthrough</div>
               <div className="text-gray-400 text-sm mb-3">Revolutionary autonomous enterprise revolution achieving 99.9% automation, universal consciousness, and $15.2B ROI.</div>
               <div className="text-purple-300 text-sm font-semibold group-hover:text-purple-200">Read Mega Breakthrough →</div>
-            </Link>
+            </ArrowRight>
             
-            <Link href="/case-studies/ai-2026-april-mega-breakthrough-15-billion-success" className="group block rounded-xl border border-green-500/20 bg-gradient-to-br from-green-900/20 to-emerald-900/20 p-6 hover:border-green-400/40 transition-all duration-300 hover:scale-105">
+            <ArrowRight href="/case-studies/ai-2026-april-mega-breakthrough-15-billion-success" className="group block rounded-xl border border-green-500/20 bg-gradient-to-br from-green-900/20 to-emerald-900/20 p-6 hover:border-green-400/40 transition-all duration-300 hover:scale-105">
               <div className="flex items-center gap-2 mb-3">
                 <span className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-3 py-1 rounded-full text-xs font-bold">$15.2B SUCCESS</span>
                 <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold">FORTUNE 100</span>
@@ -191,9 +191,9 @@ export default function NewContent2026MegaBanners() {
               <div className="text-white font-bold text-lg mb-2">$15.2B Success Story</div>
               <div className="text-gray-400 text-sm mb-3">How a Fortune 100 company achieved $15.2B ROI through the April 2026 AI breakthrough with 99.9% autonomous operations.</div>
               <div className="text-green-300 text-sm font-semibold group-hover:text-green-200">Read Success Story →</div>
-            </Link>
+            </ArrowRight>
             
-            <Link href="/blog/ai-2026-future-trends-breakthrough" className="group block rounded-xl border border-cyan-500/20 bg-gradient-to-br from-cyan-900/20 to-blue-900/20 p-6 hover:border-cyan-400/40 transition-all duration-300 hover:scale-105">
+            <ArrowRight href="/blog/ai-2026-future-trends-breakthrough" className="group block rounded-xl border border-cyan-500/20 bg-gradient-to-br from-cyan-900/20 to-blue-900/20 p-6 hover:border-cyan-400/40 transition-all duration-300 hover:scale-105">
               <div className="flex items-center gap-2 mb-3">
                 <span className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-3 py-1 rounded-full text-xs font-bold">2026 TRENDS</span>
                 <span className="bg-gradient-to-r from-green-400 to-emerald-500 text-black px-3 py-1 rounded-full text-xs font-bold">REVOLUTIONARY</span>
@@ -201,16 +201,16 @@ export default function NewContent2026MegaBanners() {
               <div className="text-white font-bold text-lg mb-2">AI 2026 Future Trends</div>
               <div className="text-gray-400 text-sm mb-3">Discover the revolutionary AI trends and breakthroughs that will reshape everything in 2026, from consciousness to quantum AI.</div>
               <div className="text-cyan-300 text-sm font-semibold group-hover:text-cyan-200">Explore Future Trends →</div>
-            </Link>
+            </ArrowRight>
           </div>
           
           <div className="text-center">
-            <Link
+            <ArrowRight
               href="/blog"
               className="inline-block bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-indigo-700 hover:to-purple-700 transition-all shadow-lg hover:shadow-xl"
             >
               Explore All AI Content →
-            </Link>
+            </ArrowRight>
           </div>
         </div>
       </section>

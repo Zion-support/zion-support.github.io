@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 
 export default function October2025AdaptiveLearningBanner() {
   return (
@@ -73,26 +73,26 @@ export default function October2025AdaptiveLearningBanner() {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Link
+            <ArrowRight
               href="/blog/ai-2025-oct-adaptive-learning-enterprise-revolution"
               className="inline-flex items-center gap-2 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-3 px-8 rounded-xl transition-all duration-300 shadow-lg shadow-green-500/30 hover:shadow-green-500/50 transform hover:-translate-y-1"
             >
               <span>📚 Read Revolutionary Guide</span>
               <span>→</span>
-            </Link>
-            <Link
+            </ArrowRight>
+            <ArrowRight
               href="/case-studies/ai-2025-oct-fortune-500-adaptive-learning-2-8-billion-success"
               className="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-white font-bold py-3 px-8 rounded-xl transition-all duration-300 shadow-lg shadow-emerald-500/30 hover:shadow-emerald-500/50 transform hover:-translate-y-1"
             >
               <span>🏆 View $2.8B Success Story</span>
               <span>→</span>
-            </Link>
-            <Link
+            </ArrowRight>
+            <ArrowRight
               href="/contact"
               className="inline-flex items-center gap-2 border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-bold py-3 px-8 rounded-xl transition-all duration-300"
             >
               <span>🚀 Get Started Today</span>
-            </Link>
+            </ArrowRight>
           </div>
         </div>
 

@@ -1,6 +1,6 @@
+import { TrendingUp } from 'lucide-react';
 import { Link } from "react-router-dom";
 
-import { TrendingUp } from 'lucide-react';
 
 ;
 

@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 
 export const metadata = {
   title: 'AI Neuromorphic Enterprise Computing: Brain-Inspired Intelligence Revolution | Zion Tech Group',
@@ -10,9 +10,9 @@ export default function AINeuromorphicEnterpriseComputing2026() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-8">
       <div className="mb-8">
-        <Link href="/blog" className="text-blue-600 hover:text-blue-800 transition-colors">
+        <ArrowRight href="/blog" className="text-blue-600 hover:text-blue-800 transition-colors">
           ← Back to Blog
-        </Link>
+        </ArrowRight>
       </div>
 
       <article className="prose prose-lg max-w-none">
@@ -254,32 +254,32 @@ export default function AINeuromorphicEnterpriseComputing2026() {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4">
-            <Link 
+            <ArrowRight 
               href="/contact" 
               className="bg-gradient-to-r from-red-600 to-pink-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-red-700 hover:to-pink-700 transition-all duration-200 text-center"
             >
               Start Neuromorphic Journey
-            </Link>
-            <Link 
+            </ArrowRight>
+            <ArrowRight 
               href="/services/ai-autonomous-cloud-ops" 
               className="bg-white border-2 border-red-600 text-red-600 px-8 py-3 rounded-lg font-semibold hover:bg-red-50 transition-all duration-200 text-center"
             >
               Explore AI Services
-            </Link>
+            </ArrowRight>
           </div>
         </section>
 
         <div className="border-t border-gray-200 pt-8 mt-8">
           <h3 className="text-lg font-semibold text-gray-900 mb-4">Related Content</h3>
           <div className="grid md:grid-cols-2 gap-4">
-            <Link href="/blog/ai-quantum-computing-breakthrough-2026" className="block p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+            <ArrowRight href="/blog/ai-quantum-computing-breakthrough-2026" className="block p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
               <h4 className="font-semibold text-gray-900">⚛️ Quantum Computing Breakthrough</h4>
               <p className="text-gray-600 text-sm">Complementary revolutionary computing paradigm</p>
-            </Link>
-            <Link href="/case-studies/ai-autonomous-business-systems-success-2026" className="block p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+            </ArrowRight>
+            <ArrowRight href="/case-studies/ai-autonomous-business-systems-success-2026" className="block p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
               <h4 className="font-semibold text-gray-900">🤖 Autonomous Business Systems</h4>
               <p className="text-gray-600 text-sm">Real-world implementation success stories</p>
-            </Link>
+            </ArrowRight>
           </div>
         </div>
       </article>

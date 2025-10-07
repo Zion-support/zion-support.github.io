@@ -1,5 +1,5 @@
-import React from "react";
 import { ArrowLeft, Calendar, Clock } from 'lucide-react';
+import React from "react";
 
 import { useParams, Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";

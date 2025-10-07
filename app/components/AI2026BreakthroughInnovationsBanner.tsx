@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 
 const AI2026BreakthroughInnovationsBanner = () => {
   return (
@@ -85,43 +85,43 @@ const AI2026BreakthroughInnovationsBanner = () => {
 
           {/* Call to Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <Link 
+            <ArrowRight 
               href="/blog/ai-2026-breakthrough-innovations-mega-guide" 
               className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
             >
               Read Complete Guide →
-            </Link>
-            <Link 
+            </ArrowRight>
+            <ArrowRight 
               href="/case-studies/ai-2026-breakthrough-innovations-15-billion-success" 
               className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1"
             >
               View $15B Success Story →
-            </Link>
-            <Link 
+            </ArrowRight>
+            <ArrowRight 
               href="/contact" 
               className="border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
             >
               Get Started Today
-            </Link>
+            </ArrowRight>
           </div>
 
           {/* Additional Links */}
           <div className="flex flex-wrap justify-center gap-4 text-sm">
-            <Link href="/blog/ai-2026-quantum-enhanced-machine-learning" className="inline-flex items-center gap-2 bg-blue-500/20 text-blue-200 border border-blue-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-blue-500/30 transition-colors">
+            <ArrowRight href="/blog/ai-2026-quantum-enhanced-machine-learning" className="inline-flex items-center gap-2 bg-blue-500/20 text-blue-200 border border-blue-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-blue-500/30 transition-colors">
               Quantum ML <span>→</span>
-            </Link>
-            <Link href="/blog/ai-2026-autonomous-business-processes" className="inline-flex items-center gap-2 bg-purple-500/20 text-purple-200 border border-purple-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-purple-500/30 transition-colors">
+            </ArrowRight>
+            <ArrowRight href="/blog/ai-2026-autonomous-business-processes" className="inline-flex items-center gap-2 bg-purple-500/20 text-purple-200 border border-purple-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-purple-500/30 transition-colors">
               Autonomous Processes <span>→</span>
-            </Link>
-            <Link href="/blog/ai-2026-meta-cognitive-ai-systems" className="inline-flex items-center gap-2 bg-green-500/20 text-green-200 border border-green-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-green-500/30 transition-colors">
+            </ArrowRight>
+            <ArrowRight href="/blog/ai-2026-meta-cognitive-ai-systems" className="inline-flex items-center gap-2 bg-green-500/20 text-green-200 border border-green-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-green-500/30 transition-colors">
               Meta-Cognitive AI <span>→</span>
-            </Link>
-            <Link href="/blog/ai-2026-edge-native-intelligence" className="inline-flex items-center gap-2 bg-cyan-500/20 text-cyan-200 border border-cyan-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-cyan-500/30 transition-colors">
+            </ArrowRight>
+            <ArrowRight href="/blog/ai-2026-edge-native-intelligence" className="inline-flex items-center gap-2 bg-cyan-500/20 text-cyan-200 border border-cyan-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-cyan-500/30 transition-colors">
               Edge Intelligence <span>→</span>
-            </Link>
-            <Link href="/blog/ai-2026-synthetic-data-intelligence" className="inline-flex items-center gap-2 bg-orange-500/20 text-orange-200 border border-orange-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-orange-500/30 transition-colors">
+            </ArrowRight>
+            <ArrowRight href="/blog/ai-2026-synthetic-data-intelligence" className="inline-flex items-center gap-2 bg-orange-500/20 text-orange-200 border border-orange-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-orange-500/30 transition-colors">
               Synthetic Data <span>→</span>
-            </Link>
+            </ArrowRight>
           </div>
         </div>
       </div>

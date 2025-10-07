@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 
 export const metadata = {
   title: 'Real‑Time Multimodal Assistants (2028): Voice + Vision + Touch',
@@ -23,7 +23,7 @@ export default function Page() {
         Gate changes with policy checks and online canaries tied to KPIs.
       </p>
       <p>
-        Continue exploring in our <Link href="/blog">Blog</Link>.
+        Continue exploring in our <ArrowRight href="/blog">Blog</ArrowRight>.
       </p>
     </main>
   );

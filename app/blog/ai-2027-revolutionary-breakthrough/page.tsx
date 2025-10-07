@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 
 export const metadata = {
   title: 'AI 2027 Revolutionary Breakthrough: The Future is Now | Zion Tech Group',
@@ -190,18 +190,18 @@ export default function AIRevolutionaryBreakthrough2027() {
             Our AI 2027 breakthrough is available now for select organizations.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <Link 
+            <ArrowRight 
               href="/contact" 
               className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center"
             >
               Schedule Consultation
-            </Link>
-            <Link 
+            </ArrowRight>
+            <ArrowRight 
               href="/case-studies/ai-2027-mega-transformation-success" 
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors text-center"
             >
               View Success Stories
-            </Link>
+            </ArrowRight>
           </div>
         </div>
 
@@ -219,7 +219,7 @@ export default function AIRevolutionaryBreakthrough2027() {
       <div className="mt-16">
         <h2 className="text-2xl font-bold text-gray-900 mb-6">Related Revolutionary Content</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <Link href="/blog/ai-2027-quantum-neural-networks" className="group">
+          <ArrowRight href="/blog/ai-2027-quantum-neural-networks" className="group">
             <div className="border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
               <div className="text-2xl mb-3">⚛️</div>
               <h3 className="font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
@@ -229,9 +229,9 @@ export default function AIRevolutionaryBreakthrough2027() {
                 Deep dive into the quantum neural architecture powering the AI revolution.
               </p>
             </div>
-          </Link>
+          </ArrowRight>
           
-          <Link href="/case-studies/ai-2027-mega-transformation-success" className="group">
+          <ArrowRight href="/case-studies/ai-2027-mega-transformation-success" className="group">
             <div className="border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
               <div className="text-2xl mb-3">🏆</div>
               <h3 className="font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
@@ -241,9 +241,9 @@ export default function AIRevolutionaryBreakthrough2027() {
                 How Fortune 500 companies achieved unprecedented ROI with AI 2027.
               </p>
             </div>
-          </Link>
+          </ArrowRight>
           
-          <Link href="/services/ai-2027-breakthrough-solutions" className="group">
+          <ArrowRight href="/services/ai-2027-breakthrough-solutions" className="group">
             <div className="border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
               <div className="text-2xl mb-3">🚀</div>
               <h3 className="font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
@@ -253,7 +253,7 @@ export default function AIRevolutionaryBreakthrough2027() {
                 Explore our complete suite of revolutionary AI services and solutions.
               </p>
             </div>
-          </Link>
+          </ArrowRight>
         </div>
       </div>
     </div>

@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 
 export default function Revolutionary2026ContentMegaBanner() {
   return (
@@ -27,7 +27,7 @@ export default function Revolutionary2026ContentMegaBanner() {
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
           {/* AI Future Enterprise 2026 */}
-          <Link href="/blog/ai-future-enterprise-2026" className="group block rounded-xl border border-purple-500/20 bg-gradient-to-br from-purple-900/30 to-indigo-900/30 p-6 hover:border-purple-400/50 transition-all duration-300 hover:scale-105">
+          <ArrowRight href="/blog/ai-future-enterprise-2026" className="group block rounded-xl border border-purple-500/20 bg-gradient-to-br from-purple-900/30 to-indigo-900/30 p-6 hover:border-purple-400/50 transition-all duration-300 hover:scale-105">
             <div className="flex items-center gap-2 mb-4">
               <span className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-3 py-1 rounded-full text-xs font-bold">ENTERPRISE BLUEPRINT</span>
               <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold">$2.8B ROI</span>
@@ -41,10 +41,10 @@ export default function Revolutionary2026ContentMegaBanner() {
               <div className="text-purple-300 text-sm font-semibold group-hover:text-purple-200">Read Complete Blueprint →</div>
               <div className="text-yellow-400 text-sm">45 min read</div>
             </div>
-          </Link>
+          </ArrowRight>
 
           {/* Next-Generation Automation */}
-          <Link href="/blog/ai-2026-next-generation-automation-revolution" className="group block rounded-xl border border-green-500/20 bg-gradient-to-br from-green-900/30 to-emerald-900/30 p-6 hover:border-green-400/50 transition-all duration-300 hover:scale-105">
+          <ArrowRight href="/blog/ai-2026-next-generation-automation-revolution" className="group block rounded-xl border border-green-500/20 bg-gradient-to-br from-green-900/30 to-emerald-900/30 p-6 hover:border-green-400/50 transition-all duration-300 hover:scale-105">
             <div className="flex items-center gap-2 mb-4">
               <span className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-3 py-1 rounded-full text-xs font-bold">99% AUTOMATION</span>
               <span className="bg-gradient-to-r from-cyan-400 to-blue-500 text-white px-3 py-1 rounded-full text-xs font-bold">REVOLUTIONARY</span>
@@ -58,10 +58,10 @@ export default function Revolutionary2026ContentMegaBanner() {
               <div className="text-green-300 text-sm font-semibold group-hover:text-green-200">Discover Automation Revolution →</div>
               <div className="text-cyan-400 text-sm">28 min read</div>
             </div>
-          </Link>
+          </ArrowRight>
 
           {/* $100M Success Story */}
-          <Link href="/case-studies/ai-revolutionary-transformation-2026" className="group block rounded-xl border border-orange-500/20 bg-gradient-to-br from-orange-900/30 to-red-900/30 p-6 hover:border-orange-400/50 transition-all duration-300 hover:scale-105">
+          <ArrowRight href="/case-studies/ai-revolutionary-transformation-2026" className="group block rounded-xl border border-orange-500/20 bg-gradient-to-br from-orange-900/30 to-red-900/30 p-6 hover:border-orange-400/50 transition-all duration-300 hover:scale-105">
             <div className="flex items-center gap-2 mb-4">
               <span className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-3 py-1 rounded-full text-xs font-bold">$100M ROI</span>
               <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold">MEGA SUCCESS</span>
@@ -75,10 +75,10 @@ export default function Revolutionary2026ContentMegaBanner() {
               <div className="text-orange-300 text-sm font-semibold group-hover:text-orange-200">View Success Story →</div>
               <div className="text-yellow-400 text-sm">35 min read</div>
             </div>
-          </Link>
+          </ArrowRight>
 
           {/* $200M Neural Optimization */}
-          <Link href="/case-studies/ai-2026-neural-optimization-mega-success" className="group block rounded-xl border border-blue-500/20 bg-gradient-to-br from-blue-900/30 to-indigo-900/30 p-6 hover:border-blue-400/50 transition-all duration-300 hover:scale-105">
+          <ArrowRight href="/case-studies/ai-2026-neural-optimization-mega-success" className="group block rounded-xl border border-blue-500/20 bg-gradient-to-br from-blue-900/30 to-indigo-900/30 p-6 hover:border-blue-400/50 transition-all duration-300 hover:scale-105">
             <div className="flex items-center gap-2 mb-4">
               <span className="bg-gradient-to-r from-blue-500 to-indigo-500 text-white px-3 py-1 rounded-full text-xs font-bold">$200M ROI</span>
               <span className="bg-gradient-to-r from-cyan-400 to-blue-500 text-white px-3 py-1 rounded-full text-xs font-bold">NEURAL AI</span>
@@ -92,10 +92,10 @@ export default function Revolutionary2026ContentMegaBanner() {
               <div className="text-blue-300 text-sm font-semibold group-hover:text-blue-200">Read Neural Success →</div>
               <div className="text-cyan-400 text-sm">42 min read</div>
             </div>
-          </Link>
+          </ArrowRight>
 
           {/* Quantum Consciousness 2027 */}
-          <Link href="/blog/ai-2027-quantum-consciousness-fusion-breakthrough" className="group block rounded-xl border border-purple-500/20 bg-gradient-to-br from-purple-900/30 to-pink-900/30 p-6 hover:border-purple-400/50 transition-all duration-300 hover:scale-105">
+          <ArrowRight href="/blog/ai-2027-quantum-consciousness-fusion-breakthrough" className="group block rounded-xl border border-purple-500/20 bg-gradient-to-br from-purple-900/30 to-pink-900/30 p-6 hover:border-purple-400/50 transition-all duration-300 hover:scale-105">
             <div className="flex items-center gap-2 mb-4">
               <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-3 py-1 rounded-full text-xs font-bold">QUANTUM AI</span>
               <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold">100,000x</span>
@@ -109,10 +109,10 @@ export default function Revolutionary2026ContentMegaBanner() {
               <div className="text-purple-300 text-sm font-semibold group-hover:text-purple-200">Explore Quantum AI →</div>
               <div className="text-yellow-400 text-sm">38 min read</div>
             </div>
-          </Link>
+          </ArrowRight>
 
           {/* Autonomous Enterprise 2028 */}
-          <Link href="/blog/ai-2028-autonomous-enterprise-revolution" className="group block rounded-xl border border-indigo-500/20 bg-gradient-to-br from-indigo-900/30 to-blue-900/30 p-6 hover:border-indigo-400/50 transition-all duration-300 hover:scale-105">
+          <ArrowRight href="/blog/ai-2028-autonomous-enterprise-revolution" className="group block rounded-xl border border-indigo-500/20 bg-gradient-to-br from-indigo-900/30 to-blue-900/30 p-6 hover:border-indigo-400/50 transition-all duration-300 hover:scale-105">
             <div className="flex items-center gap-2 mb-4">
               <span className="bg-gradient-to-r from-indigo-500 to-blue-500 text-white px-3 py-1 rounded-full text-xs font-bold">AUTONOMOUS</span>
               <span className="bg-gradient-to-r from-green-400 to-emerald-500 text-white px-3 py-1 rounded-full text-xs font-bold">99.9%</span>
@@ -126,23 +126,23 @@ export default function Revolutionary2026ContentMegaBanner() {
               <div className="text-indigo-300 text-sm font-semibold group-hover:text-indigo-200">Discover the Future →</div>
               <div className="text-green-400 text-sm">41 min read</div>
             </div>
-          </Link>
+          </ArrowRight>
         </div>
 
         <div className="text-center">
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <ArrowRight
               href="/blog"
               className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-indigo-700 transition-all shadow-lg hover:shadow-xl"
             >
               🔮 Explore All AI Content
-            </Link>
-            <Link
+            </ArrowRight>
+            <ArrowRight
               href="/case-studies"
               className="inline-flex items-center gap-2 bg-gradient-to-r from-green-600 to-emerald-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-green-700 hover:to-emerald-700 transition-all shadow-lg hover:shadow-xl"
             >
               🏆 View All Success Stories
-            </Link>
+            </ArrowRight>
           </div>
         </div>
       </div>

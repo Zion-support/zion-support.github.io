@@ -1,13 +1,13 @@
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 
 export default function NAS500xSuccessPage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white">
       <div className="max-w-4xl mx-auto px-4 py-16">
         <div className="mb-8">
-          <Link href="/case-studies" className="text-blue-400 hover:text-blue-300 mb-4 inline-block">
+          <ArrowRight href="/case-studies" className="text-blue-400 hover:text-blue-300 mb-4 inline-block">
             ← Back to Case Studies
-          </Link>
+          </ArrowRight>
           <div className="flex items-center gap-2 mb-4">
             <span className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-3 py-1 rounded-full text-xs font-bold">500x SPEED</span>
             <span className="bg-gradient-to-r from-blue-500 to-cyan-500 text-black px-3 py-1 rounded-full text-xs font-bold">NAS BREAKTHROUGH</span>
@@ -230,18 +230,18 @@ export default function NAS500xSuccessPage() {
               architecture discovery systems can help you achieve breakthrough performance in days.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Link 
+              <ArrowRight 
                 href="/services/ai-innovation-lab" 
                 className="bg-gradient-to-r from-orange-600 to-red-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-orange-700 hover:to-red-700 transition-all"
               >
                 Explore NAS Services
-              </Link>
-              <Link 
+              </ArrowRight>
+              <ArrowRight 
                 href="/contact" 
                 className="border border-white/20 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all"
               >
                 Schedule Demo
-              </Link>
+              </ArrowRight>
             </div>
           </div>
         </article>

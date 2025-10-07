@@ -23,7 +23,7 @@ export const getErrorMetrics = () => {
   };
 };
 
-export const isErrorRateTooHigh = () => {
+export const isErrorRateTooHigh = (threshold: number = 5) => {
   return false;
 };
 

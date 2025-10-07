@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 
 export default function March2026AutonomousEnterpriseBanner() {
   return (
@@ -50,24 +50,24 @@ export default function March2026AutonomousEnterpriseBanner() {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Link 
+            <ArrowRight 
               href="/blog/ai-2026-march-autonomous-enterprise-revolution" 
               className="bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50 transform hover:-translate-y-1"
             >
               Read Breakthrough Details →
-            </Link>
-            <Link 
+            </ArrowRight>
+            <ArrowRight 
               href="/case-studies/ai-2026-march-autonomous-enterprise-500-billion-success" 
               className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
             >
               View $500B Success Story →
-            </Link>
-            <Link 
+            </ArrowRight>
+            <ArrowRight 
               href="/contact" 
               className="border-2 border-indigo-500 text-indigo-400 hover:bg-indigo-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
             >
               Transform Your Enterprise
-            </Link>
+            </ArrowRight>
           </div>
 
           {/* Success Metrics */}
@@ -93,18 +93,18 @@ export default function March2026AutonomousEnterpriseBanner() {
           {/* Additional Content Links */}
           <div className="mt-12 pt-8 border-t border-white/10">
             <div className="flex flex-wrap justify-center gap-3">
-              <Link href="/blog/ai-2026-march-autonomous-enterprise-revolution" className="inline-flex items-center gap-2 bg-indigo-500/20 text-indigo-200 border border-indigo-400/30 px-4 py-2 rounded-lg font-semibold hover:bg-indigo-500/30 transition-colors">
+              <ArrowRight href="/blog/ai-2026-march-autonomous-enterprise-revolution" className="inline-flex items-center gap-2 bg-indigo-500/20 text-indigo-200 border border-indigo-400/30 px-4 py-2 rounded-lg font-semibold hover:bg-indigo-500/30 transition-colors">
                 Autonomous Enterprise Guide →
-              </Link>
-              <Link href="/case-studies/ai-2026-march-autonomous-enterprise-500-billion-success" className="inline-flex items-center gap-2 bg-green-500/20 text-green-200 border border-green-400/30 px-4 py-2 rounded-lg font-semibold hover:bg-green-500/30 transition-colors">
+              </ArrowRight>
+              <ArrowRight href="/case-studies/ai-2026-march-autonomous-enterprise-500-billion-success" className="inline-flex items-center gap-2 bg-green-500/20 text-green-200 border border-green-400/30 px-4 py-2 rounded-lg font-semibold hover:bg-green-500/30 transition-colors">
                 $500B Success Story →
-              </Link>
-              <Link href="/services/autonomous-enterprise-solutions" className="inline-flex items-center gap-2 bg-purple-500/20 text-purple-200 border border-purple-400/30 px-4 py-2 rounded-lg font-semibold hover:bg-purple-500/30 transition-colors">
+              </ArrowRight>
+              <ArrowRight href="/services/autonomous-enterprise-solutions" className="inline-flex items-center gap-2 bg-purple-500/20 text-purple-200 border border-purple-400/30 px-4 py-2 rounded-lg font-semibold hover:bg-purple-500/30 transition-colors">
                 Enterprise Solutions →
-              </Link>
-              <Link href="/contact" className="inline-flex items-center gap-2 bg-blue-500/20 text-blue-200 border border-blue-400/30 px-4 py-2 rounded-lg font-semibold hover:bg-blue-500/30 transition-colors">
+              </ArrowRight>
+              <ArrowRight href="/contact" className="inline-flex items-center gap-2 bg-blue-500/20 text-blue-200 border border-blue-400/30 px-4 py-2 rounded-lg font-semibold hover:bg-blue-500/30 transition-colors">
                 Get Started Today →
-              </Link>
+              </ArrowRight>
             </div>
           </div>
         </div>

@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 
 export const metadata: Metadata = {
   title: 'AI 2027 Transcendent Quantum Consciousness: $847B Success Story - Zion Tech Group',
@@ -447,18 +447,18 @@ export default function AI2027TranscendentQuantumConsciousness847BillionSuccess(
             Our proven system has delivered $847 billion in measurable ROI for Fortune 500 organizations.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <Link 
+            <ArrowRight 
               href="/contact" 
               className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-6 py-3 rounded-lg font-semibold text-center hover:from-green-600 hover:to-emerald-600 transition-all"
             >
               Start Your Transformation
-            </Link>
-            <Link 
+            </ArrowRight>
+            <ArrowRight 
               href="/blog/ai-2027-transcendent-quantum-consciousness-breakthrough" 
               className="bg-white border border-gray-300 text-gray-700 px-6 py-3 rounded-lg font-semibold text-center hover:bg-gray-50 transition-all"
             >
               Learn More
-            </Link>
+            </ArrowRight>
           </div>
         </div>
       </article>

@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -267,18 +267,18 @@ export default function AI2026EnterpriseBreakthrough() {
               Join the leaders who are already implementing breakthrough AI technologies and seeing unprecedented results.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
+              <ArrowRight 
                 href="/case-studies" 
                 className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
                 View Success Stories
-              </Link>
-              <Link 
+              </ArrowRight>
+              <ArrowRight 
                 href="/contact" 
                 className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
               >
                 Start Your AI Journey
-              </Link>
+              </ArrowRight>
             </div>
           </div>
         </div>
@@ -287,7 +287,7 @@ export default function AI2026EnterpriseBreakthrough() {
         <div className="max-w-4xl mx-auto mt-16">
           <h3 className="text-2xl font-bold text-white mb-8">Related Articles</h3>
           <div className="grid md:grid-cols-2 gap-6">
-            <Link href="/blog/ai-2027-autonomous-enterprise" className="group">
+            <ArrowRight href="/blog/ai-2027-autonomous-enterprise" className="group">
               <div className="bg-gradient-to-br from-slate-800/50 to-gray-800/50 rounded-xl p-6 hover:from-slate-700/50 hover:to-gray-700/50 transition-all">
                 <h4 className="text-lg font-semibold text-white group-hover:text-blue-400 mb-2">
                   AI 2027: The Autonomous Enterprise
@@ -296,8 +296,8 @@ export default function AI2026EnterpriseBreakthrough() {
                   Explore how enterprises will become fully autonomous by 2027
                 </p>
               </div>
-            </Link>
-            <Link href="/blog/quantum-computing-breakthrough-2026" className="group">
+            </ArrowRight>
+            <ArrowRight href="/blog/quantum-computing-breakthrough-2026" className="group">
               <div className="bg-gradient-to-br from-slate-800/50 to-gray-800/50 rounded-xl p-6 hover:from-slate-700/50 hover:to-gray-700/50 transition-all">
                 <h4 className="text-lg font-semibold text-white group-hover:text-blue-400 mb-2">
                   Quantum Computing Breakthrough 2026
@@ -306,7 +306,7 @@ export default function AI2026EnterpriseBreakthrough() {
                   Understanding the quantum revolution in enterprise AI
                 </p>
               </div>
-            </Link>
+            </ArrowRight>
           </div>
         </div>
       </div>

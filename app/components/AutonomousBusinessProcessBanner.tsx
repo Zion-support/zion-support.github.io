@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 
 export default function AutonomousBusinessProcessBanner() {
   return (
@@ -128,7 +128,7 @@ export default function AutonomousBusinessProcessBanner() {
 
         <div className="text-center">
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Link 
+            <ArrowRight 
               href="/blog/ai-2026-autonomous-business-processes"
               className="group bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl"
             >
@@ -136,8 +136,8 @@ export default function AutonomousBusinessProcessBanner() {
                 Learn About Autonomous Business
                 <span className="group-hover:translate-x-1 transition-transform">→</span>
               </span>
-            </Link>
-            <Link 
+            </ArrowRight>
+            <ArrowRight 
               href="/case-studies/ai-2026-neural-optimization-success-story"
               className="group bg-white/10 hover:bg-white/20 text-white border border-white/30 hover:border-white/50 px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300"
             >
@@ -145,7 +145,7 @@ export default function AutonomousBusinessProcessBanner() {
                 View Success Stories
                 <span className="group-hover:translate-x-1 transition-transform">→</span>
               </span>
-            </Link>
+            </ArrowRight>
           </div>
           <p className="text-emerald-300 text-sm mt-4">
             Transform your business into an autonomous enterprise today

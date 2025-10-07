@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 
 export const metadata = {
   title: 'Reliable GenAI Platform 2026: Architecture, Guardrails, and ROI',
@@ -11,7 +11,7 @@ export default function ReliableGenAIPlatform2026Page() {
     <div className="min-h-screen bg-slate-950 text-white">
       <main className="max-w-3xl mx-auto px-6 py-16">
         <div className="mb-8">
-          <Link href="/blog" className="text-blue-400 hover:text-blue-300">← Back to Blog</Link>
+          <ArrowRight href="/blog" className="text-blue-400 hover:text-blue-300">← Back to Blog</ArrowRight>
         </div>
         <header className="mb-6">
           <div className="flex items-center gap-3 text-sm text-white/60 mb-3">
@@ -76,9 +76,9 @@ export default function ReliableGenAIPlatform2026Page() {
           <p>
             Continue exploring:
             {' '}
-            <Link href="/blog/ai-2027-cost-optimization-playbook" className="text-emerald-400 hover:text-emerald-300">Cost Optimization Playbook</Link>
+            <ArrowRight href="/blog/ai-2027-cost-optimization-playbook" className="text-emerald-400 hover:text-emerald-300">Cost Optimization Playbook</ArrowRight>
             {' '}•{' '}
-            <Link href="/blog/agentic-workflow-orchestration-2026" className="text-fuchsia-300 hover:text-fuchsia-200">Agentic Workflow Orchestration</Link>
+            <ArrowRight href="/blog/agentic-workflow-orchestration-2026" className="text-fuchsia-300 hover:text-fuchsia-200">Agentic Workflow Orchestration</ArrowRight>
           </p>
         </footer>
       </main>

@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -211,36 +211,36 @@ export default function AIEnterpriseTransformationUltimateGuide2025() {
                 <p className="mb-6 opacity-90">
                   Get a personalized AI transformation strategy for your enterprise.
                 </p>
-                <Link 
+                <ArrowRight 
                   href="/services" 
                   className="block bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold text-center hover:bg-gray-100 transition-colors mb-4"
                 >
                   Get Free Consultation
-                </Link>
-                <Link 
+                </ArrowRight>
+                <ArrowRight 
                   href="/case-studies" 
                   className="block border-2 border-white/30 text-white px-6 py-3 rounded-lg font-semibold text-center hover:bg-white/10 transition-colors"
                 >
                   View Case Studies
-                </Link>
+                </ArrowRight>
               </div>
 
               {/* Related Articles */}
               <div className="bg-white rounded-2xl shadow-lg p-6">
                 <h3 className="text-xl font-bold text-gray-900 mb-4">Related Articles</h3>
                 <div className="space-y-4">
-                  <Link href="/blog/autonomous-operations-2025" className="block hover:bg-gray-50 p-3 rounded-lg transition-colors">
+                  <ArrowRight href="/blog/autonomous-operations-2025" className="block hover:bg-gray-50 p-3 rounded-lg transition-colors">
                     <div className="font-semibold text-gray-900">Autonomous Operations 2025</div>
                     <div className="text-sm text-gray-600">Complete guide to autonomous business operations</div>
-                  </Link>
-                  <Link href="/blog/quantum-ai-enterprise-2026" className="block hover:bg-gray-50 p-3 rounded-lg transition-colors">
+                  </ArrowRight>
+                  <ArrowRight href="/blog/quantum-ai-enterprise-2026" className="block hover:bg-gray-50 p-3 rounded-lg transition-colors">
                     <div className="font-semibold text-gray-900">Quantum AI Enterprise Guide</div>
                     <div className="text-sm text-gray-600">Implementing quantum computing in enterprise</div>
-                  </Link>
-                  <Link href="/blog/multi-agent-orchestration-2025" className="block hover:bg-gray-50 p-3 rounded-lg transition-colors">
+                  </ArrowRight>
+                  <ArrowRight href="/blog/multi-agent-orchestration-2025" className="block hover:bg-gray-50 p-3 rounded-lg transition-colors">
                     <div className="font-semibold text-gray-900">Multi-Agent Orchestration</div>
                     <div className="text-sm text-gray-600">Scaling AI agents across enterprise systems</div>
-                  </Link>
+                  </ArrowRight>
                 </div>
               </div>
 

@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 
 export default function AutonomyBlueprint2026Banner() {
   return (
@@ -14,12 +14,12 @@ export default function AutonomyBlueprint2026Banner() {
             </p>
           </div>
           <div>
-            <Link
+            <ArrowRight
               href="/blog/ai-enterprise-autonomy-blueprint-2026"
               className="inline-flex items-center px-5 py-3 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-semibold border border-emerald-400/40"
             >
               Read the Blueprint →
-            </Link>
+            </ArrowRight>
           </div>
         </div>
       </div>

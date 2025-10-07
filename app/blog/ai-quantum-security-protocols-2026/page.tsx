@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 
 export const metadata = {
   title: 'AI Quantum Security Protocols 2026 | Zion Tech Group',
@@ -11,9 +11,9 @@ export default function AIQuantumSecurityProtocols2026Page() {
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-indigo-950 to-purple-950 text-white">
       <main className="container mx-auto px-6 py-12">
         <nav className="mb-8">
-          <Link href="/blog" className="text-indigo-300 hover:text-indigo-200 transition-colors">
+          <ArrowRight href="/blog" className="text-indigo-300 hover:text-indigo-200 transition-colors">
             ← Back to Blog
-          </Link>
+          </ArrowRight>
         </nav>
 
         <article className="max-w-4xl mx-auto">
@@ -63,7 +63,7 @@ export default function AIQuantumSecurityProtocols2026Page() {
           <div className="mt-12 bg-white/5 border border-white/10 rounded-xl p-6">
             <h3 className="text-xl font-bold mb-2">Need a security blueprint?</h3>
             <p className="text-white/80 mb-4">We design zero‑trust AI platforms hardened against future quantum threats.</p>
-            <Link href="/contact" className="text-indigo-300 hover:text-indigo-200 font-semibold">Talk to experts →</Link>
+            <ArrowRight href="/contact" className="text-indigo-300 hover:text-indigo-200 font-semibold">Talk to experts →</ArrowRight>
           </div>
         </article>
       </main>

@@ -1,4 +1,9 @@
-import { Link } from 'next/link';
+import ArrowRight from 'next/link';
+import { ArrowLeft, ArrowRight, Award, BarChart3, CheckCircle, Clock, Target, TrendingUp, Users, Zap } from 'lucide-react';
+
+
+
+import { ArrowLeft, Clock, Users, TrendingUp, Target, CheckCircle, Zap, Award, BarChart3 } from 'lucide-react';
 
 import { Metadata } from 'next';
 
@@ -21,10 +26,10 @@ export default function GlobalManufacturingCaseStudy() {
       {/* Header */}
       <div className="bg-white shadow-sm border-b">
         <div className="max-w-4xl mx-auto px-4 py-8">
-          <Link href="/case-studies" className="inline-flex items-center text-blue-600 hover:text-blue-700 mb-6">
+          <ArrowRight href="/case-studies" className="inline-flex items-center text-blue-600 hover:text-blue-700 mb-6">
             <ArrowLeft className="w-5 h-5 mr-2" />
             Back to Case Studies
-          </Link>
+          </ArrowRight>
           
           <div className="flex items-center gap-4 text-sm text-gray-600 mb-4">
             <div className="flex items-center">
@@ -461,20 +466,20 @@ export default function GlobalManufacturingCaseStudy() {
               expert AI solutions and proven methodologies.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
+              <ArrowRight 
                 href="/contact"
                 className="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-bold rounded-xl hover:bg-gray-100 transition-colors"
               >
                 Schedule Consultation
                 <ArrowLeft className="w-5 h-5 ml-2 rotate-180" />
-              </Link>
-              <Link 
+              </ArrowRight>
+              <ArrowRight 
                 href="/blog/ai-powered-autonomous-business-processes-2026"
                 className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-sm text-white font-semibold rounded-xl border border-white/30 hover:bg-white/20 transition-colors"
               >
                 Read Full Article
                 <CheckCircle className="w-5 h-5 ml-2" />
-              </Link>
+              </ArrowRight>
             </div>
           </div>
         </section>
@@ -486,7 +491,7 @@ export default function GlobalManufacturingCaseStudy() {
         <div className="max-w-4xl mx-auto px-4">
           <h2 className="text-2xl font-bold text-gray-900 mb-8">Related Content</h2>
           <div className="grid md:grid-cols-2 gap-8">
-            <Link href="/blog/ai-powered-autonomous-business-processes-2026" className="group">
+            <ArrowRight href="/blog/ai-powered-autonomous-business-processes-2026" className="group">
               <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
                 <h3 className="text-xl font-bold text-gray-800 mb-2 group-hover:text-blue-600">AI-Powered Autonomous Business Processes</h3>
                 <p className="text-gray-600 mb-4">Discover how AI-powered autonomous business processes are revolutionizing enterprise operations in 2026.</p>
@@ -495,9 +500,9 @@ export default function GlobalManufacturingCaseStudy() {
                   <ArrowLeft className="w-4 h-4 rotate-180 group-hover:translate-x-1 transition-transform" />
                 </div>
               </div>
-            </Link>
+            </ArrowRight>
             
-            <Link href="/guides/autonomous-business-processes-implementation-guide-2026" className="group">
+            <ArrowRight href="/guides/autonomous-business-processes-implementation-guide-2026" className="group">
               <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
                 <h3 className="text-xl font-bold text-gray-800 mb-2 group-hover:text-blue-600">Implementation Guide</h3>
                 <p className="text-gray-600 mb-4">Complete step-by-step guide to implementing autonomous business processes in your organization.</p>
@@ -506,11 +511,10 @@ export default function GlobalManufacturingCaseStudy() {
                   <ArrowLeft className="w-4 h-4 rotate-180 group-hover:translate-x-1 transition-transform" />
                 </div>
               </div>
-            </Link>
+            </ArrowRight>
           </div>
         </div>
       </div>
     </div>
   );
 }
->>>>>>> 5d2b3c81c55b794aac3492f27f2c7fa2daa0ca39

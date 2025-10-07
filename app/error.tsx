@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useEffect } from 'react';
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 
 export default function Error({
   error,
@@ -54,12 +54,12 @@ export default function Error({
           >
             🔄 Try Again
           </button>
-          <Link
+          <ArrowRight
             href="/"
             className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-600 hover:text-white transition-colors inline-block"
           >
             ← Back to Home
-          </Link>
+          </ArrowRight>
         </div>
 
         {/* Help Section */}

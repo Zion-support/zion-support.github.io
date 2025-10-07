@@ -1,13 +1,13 @@
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 
 export default function AIInnovationLabPage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white">
       <div className="max-w-6xl mx-auto px-4 py-16">
         <div className="mb-12">
-          <Link href="/services" className="text-blue-400 hover:text-blue-300 mb-4 inline-block">
+          <ArrowRight href="/services" className="text-blue-400 hover:text-blue-300 mb-4 inline-block">
             ← Back to Services
-          </Link>
+          </ArrowRight>
           <div className="flex items-center gap-2 mb-6">
             <span className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-4 py-2 rounded-full text-sm font-bold">AI INNOVATION</span>
             <span className="bg-gradient-to-r from-green-400 to-emerald-500 text-black px-4 py-2 rounded-full text-sm font-bold">500x SPEED</span>
@@ -260,18 +260,18 @@ export default function AIInnovationLabPage() {
             Our NAS technology can help you achieve breakthrough performance in days instead of months.
           </p>
           <div className="flex flex-wrap justify-center gap-6">
-            <Link 
+            <ArrowRight 
               href="/contact" 
               className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-cyan-700 transition-all shadow-lg hover:shadow-xl"
             >
               Schedule Demo
-            </Link>
-            <Link 
+            </ArrowRight>
+            <ArrowRight 
               href="/case-studies/ai-2026-neural-architecture-search-500x-success" 
               className="border border-white/20 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-all"
             >
               View Success Story
-            </Link>
+            </ArrowRight>
           </div>
         </div>
       </div>

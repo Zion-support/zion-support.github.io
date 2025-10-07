@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 
 export const metadata = {
 	title: 'Autonomous Infrastructure 2025: Self‑Healing, Self‑Optimizing, Self‑Scaling',
@@ -21,12 +21,12 @@ export default function Page() {
 			</ul>
 			<p>
 				Next, explore Edge experiments and GenAI routing:
-				<Link href="/blog/edge-2025-zero-pii-experiments"> Edge Experiments 2025</Link>
+				<ArrowRight href="/blog/edge-2025-zero-pii-experiments"> Edge Experiments 2025</ArrowRight>
 				{' '}and{' '}
-				<Link href="/blog/genai-2025-routing-caches-v1"> GenAI Routing v1 (2025)</Link>.
+				<ArrowRight href="/blog/genai-2025-routing-caches-v1"> GenAI Routing v1 (2025)</ArrowRight>.
 			</p>
 			<p>
-				Continue exploring in our <Link href="/blog">Blog</Link>.
+				Continue exploring in our <ArrowRight href="/blog">Blog</ArrowRight>.
 			</p>
 		</main>
 	);

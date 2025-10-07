@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 
 export const metadata = {
   title: 'AI 2026 Autonomous Business Intelligence Breakthrough | Zion Tech Group',
@@ -171,12 +171,12 @@ export default function AutonomousBusinessIntelligenceBreakthrough() {
             Join the Fortune 500 companies already achieving breakthrough results with autonomous BI systems.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <ArrowRight
               href="/services/ai-autonomous-business-intelligence"
               className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               Explore Our Solutions
-            </Link>
+            </ArrowRight>
             <a
               href="tel:+13024640950"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
@@ -191,7 +191,7 @@ export default function AutonomousBusinessIntelligenceBreakthrough() {
       <div className="mt-16 border-t border-gray-200 pt-8">
         <h3 className="text-2xl font-bold mb-6">Related Breakthrough Content</h3>
         <div className="grid md:grid-cols-2 gap-6">
-          <Link href="/blog/ai-2026-quantum-enhanced-analytics" className="group">
+          <ArrowRight href="/blog/ai-2026-quantum-enhanced-analytics" className="group">
             <div className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
               <h4 className="font-bold text-lg mb-2 group-hover:text-blue-600 transition-colors">
                 Quantum-Enhanced Analytics: 1000x Performance Gains
@@ -200,8 +200,8 @@ export default function AutonomousBusinessIntelligenceBreakthrough() {
                 Discover how quantum computing is revolutionizing business analytics with unprecedented speed and accuracy.
               </p>
             </div>
-          </Link>
-          <Link href="/case-studies/autonomous-bi-fortune-500-success" className="group">
+          </ArrowRight>
+          <ArrowRight href="/case-studies/autonomous-bi-fortune-500-success" className="group">
             <div className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
               <h4 className="font-bold text-lg mb-2 group-hover:text-blue-600 transition-colors">
                 Fortune 500 Autonomous BI Success: $50M ROI
@@ -210,7 +210,7 @@ export default function AutonomousBusinessIntelligenceBreakthrough() {
                 See how a global enterprise achieved $50M ROI with our autonomous business intelligence platform.
               </p>
             </div>
-          </Link>
+          </ArrowRight>
         </div>
       </div>
     </div>

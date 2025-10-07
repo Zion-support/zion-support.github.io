@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 
 export const metadata = {
   title: 'AI 2027: Quantum Neural Networks - The Next Computing Revolution - Zion Tech Group',
@@ -15,9 +15,9 @@ export default function AI2027QuantumNeuralNetworks() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-8">
       <div className="mb-8">
-        <Link href="/blog" className="text-blue-600 hover:text-blue-800 mb-4 inline-block">
+        <ArrowRight href="/blog" className="text-blue-600 hover:text-blue-800 mb-4 inline-block">
           ← Back to Blog
-        </Link>
+        </ArrowRight>
         
         <div className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white p-6 rounded-lg mb-6">
           <h1 className="text-4xl font-bold mb-4">⚛️ AI 2027: Quantum Neural Networks</h1>
@@ -265,32 +265,32 @@ export default function AI2027QuantumNeuralNetworks() {
             Zion Tech Group's quantum computing experts can help you implement cutting-edge quantum neural networks.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <Link 
+            <ArrowRight 
               href="/contact" 
               className="bg-white text-indigo-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center"
             >
               Start Your Quantum Journey
-            </Link>
-            <Link 
+            </ArrowRight>
+            <ArrowRight 
               href="/services/ai-2027-quantum-enterprise-solutions" 
               className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors text-center"
             >
               Explore Quantum Services
-            </Link>
+            </ArrowRight>
           </div>
         </div>
 
         <div className="border-t pt-8 mt-12">
           <h3 className="text-xl font-bold mb-4">Related Content</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <Link href="/blog/ai-quantum-computing-2026" className="block p-4 border border-gray-200 rounded-lg hover:border-blue-500 transition-colors">
+            <ArrowRight href="/blog/ai-quantum-computing-2026" className="block p-4 border border-gray-200 rounded-lg hover:border-blue-500 transition-colors">
               <h4 className="font-semibold text-blue-600">⚛️ Quantum AI Computing 2026</h4>
               <p className="text-sm text-gray-600">The foundation of quantum artificial intelligence</p>
-            </Link>
-            <Link href="/case-studies/ai-2027-quantum-breakthrough-success" className="block p-4 border border-gray-200 rounded-lg hover:border-blue-500 transition-colors">
+            </ArrowRight>
+            <ArrowRight href="/case-studies/ai-2027-quantum-breakthrough-success" className="block p-4 border border-gray-200 rounded-lg hover:border-blue-500 transition-colors">
               <h4 className="font-semibold text-blue-600">💰 $500M Quantum ROI Success</h4>
               <p className="text-sm text-gray-600">How quantum AI transformed a global enterprise</p>
-            </Link>
+            </ArrowRight>
           </div>
         </div>
       </div>

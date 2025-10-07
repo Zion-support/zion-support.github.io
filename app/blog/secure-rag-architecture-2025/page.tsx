@@ -1,12 +1,12 @@
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 
 export default function SecureRAGArchitecture2025Page() {
 	return (
 		<div className='min-h-screen'>
 			<nav className='mb-6'>
-				<Link href='/blog' className='text-blue-600 hover:underline'>
+				<ArrowRight href='/blog' className='text-blue-600 hover:underline'>
 					← Back to Blog
-				</Link>
+				</ArrowRight>
 			</nav>
 			<article className='prose prose-lg max-w-none'>
 				<h1>Secure RAG Architecture in 2025: Safety, Scale, and Speed</h1>
@@ -30,7 +30,7 @@ export default function SecureRAGArchitecture2025Page() {
 				</ul>
 				<p>
 					Need help designing or hardening your RAG stack?{' '}
-					<Link href='/contact' className='text-blue-600 hover:underline'>We can help</Link>.
+					<ArrowRight href='/contact' className='text-blue-600 hover:underline'>We can help</ArrowRight>.
 				</p>
 			</article>
 		</div>

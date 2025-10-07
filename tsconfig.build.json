@@ -8,12 +8,16 @@
     "noUnusedParameters": false
   },
   "exclude": [
-    "src/pages/blog-disabled/**/*",
-    "app/blog",
-    "app/components",
+    "src/**/*",
     "blog",
     "components",
-    "src/components/**/*",
-    "src/pages/blog/**/*"
+    "app/blog/**/*",
+    "app/case-studies/**/*",
+    "app/components/**/*",
+    "app/guides/**/*",
+    "app/services/**/*",
+    "app/enterprise/**/*",
+    "app/services-advertising/**/*",
+    "app/page-optimized.tsx"
   ]
 }

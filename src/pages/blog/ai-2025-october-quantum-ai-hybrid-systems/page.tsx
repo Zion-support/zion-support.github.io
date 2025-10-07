@@ -1,5 +1,5 @@
+import { ArrowRight, Brain, CheckCircle, Clock, Shield, Users, Zap } from 'lucide-react';
 import { Helmet } from "react-helmet-async";
-import { ArrowRight, CheckCircle, Clock, Users, Zap, Brain, Shield } from 'lucide-react';
 
 import { Link } from "react-router-dom";
 const QuantumAIHybrid2025 = () => {

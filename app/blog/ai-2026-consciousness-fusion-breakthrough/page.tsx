@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 
 export default function AIConsciousnessFusionBreakthrough2026() {
   return (
@@ -218,18 +218,18 @@ export default function AIConsciousnessFusionBreakthrough2026() {
                 how our breakthrough AI technology can transform your enterprise.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link 
+                <ArrowRight 
                   href="/contact" 
                   className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
                 >
                   Schedule Consultation
-                </Link>
-                <Link 
+                </ArrowRight>
+                <ArrowRight 
                   href="/case-studies" 
                   className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
                 >
                   View Success Stories
-                </Link>
+                </ArrowRight>
               </div>
             </div>
           </section>
@@ -238,7 +238,7 @@ export default function AIConsciousnessFusionBreakthrough2026() {
           <section className="mb-16">
             <h2 className="text-3xl font-bold mb-8 text-white">Related Breakthroughs</h2>
             <div className="grid md:grid-cols-3 gap-8">
-              <Link 
+              <ArrowRight 
                 href="/blog/ai-2026-quantum-neural-networks"
                 className="group bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105"
               >
@@ -249,9 +249,9 @@ export default function AIConsciousnessFusionBreakthrough2026() {
                 <p className="text-gray-400 text-sm">
                   Discover how quantum computing principles are revolutionizing neural networks
                 </p>
-              </Link>
+              </ArrowRight>
               
-              <Link 
+              <ArrowRight 
                 href="/blog/ai-2026-autonomous-operations"
                 className="group bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-green-500/50 transition-all duration-300 hover:transform hover:scale-105"
               >
@@ -262,9 +262,9 @@ export default function AIConsciousnessFusionBreakthrough2026() {
                 <p className="text-gray-400 text-sm">
                   Learn about our 98% automation rate breakthrough in enterprise operations
                 </p>
-              </Link>
+              </ArrowRight>
               
-              <Link 
+              <ArrowRight 
                 href="/blog/ai-2026-meta-cognitive-breakthrough"
                 className="group bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-purple-500/50 transition-all duration-300 hover:transform hover:scale-105"
               >
@@ -275,7 +275,7 @@ export default function AIConsciousnessFusionBreakthrough2026() {
                 <p className="text-gray-400 text-sm">
                   Explore AI systems that think about their own thinking processes
                 </p>
-              </Link>
+              </ArrowRight>
             </div>
           </section>
 
@@ -286,15 +286,15 @@ export default function AIConsciousnessFusionBreakthrough2026() {
                 © 2026 Zion Tech Group. All rights reserved.
               </div>
               <div className="flex gap-6 text-sm">
-                <Link href="/privacy" className="text-gray-400 hover:text-blue-400 transition-colors">
+                <ArrowRight href="/privacy" className="text-gray-400 hover:text-blue-400 transition-colors">
                   Privacy Policy
-                </Link>
-                <Link href="/terms" className="text-gray-400 hover:text-blue-400 transition-colors">
+                </ArrowRight>
+                <ArrowRight href="/terms" className="text-gray-400 hover:text-blue-400 transition-colors">
                   Terms of Service
-                </Link>
-                <Link href="/contact" className="text-gray-400 hover:text-blue-400 transition-colors">
+                </ArrowRight>
+                <ArrowRight href="/contact" className="text-gray-400 hover:text-blue-400 transition-colors">
                   Contact Us
-                </Link>
+                </ArrowRight>
               </div>
             </div>
           </footer>

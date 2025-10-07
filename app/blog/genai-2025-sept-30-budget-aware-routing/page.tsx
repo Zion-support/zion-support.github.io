@@ -1,5 +1,5 @@
 // @ts-nocheck
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 
 export default function BudgetAwareRouting2025() {
   return (
@@ -36,14 +36,14 @@ export default function BudgetAwareRouting2025() {
           <h3 className="text-xl font-bold text-purple-300 mb-2">Related</h3>
           <ul className="list-disc pl-6 text-gray-300 space-y-1">
             <li>
-              <Link href="/blog/genai-routing-blueprints-2026" className="text-purple-300 hover:text-purple-200">
+              <ArrowRight href="/blog/genai-routing-blueprints-2026" className="text-purple-300 hover:text-purple-200">
                 GenAI Routing Blueprints 2026
-              </Link>
+              </ArrowRight>
             </li>
             <li>
-              <Link href="/blog/practical-rag-in-production" className="text-purple-300 hover:text-purple-200">
+              <ArrowRight href="/blog/practical-rag-in-production" className="text-purple-300 hover:text-purple-200">
                 Practical RAG in Production
-              </Link>
+              </ArrowRight>
             </li>
           </ul>
         </aside>

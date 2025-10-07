@@ -1,4 +1,9 @@
-import { Link } from 'next/link';
+import ArrowRight from 'next/link';
+import { ArrowLeft, ArrowRight, Bookmark, Calendar, Clock, User } from 'lucide-react';
+
+
+
+import { ArrowLeft, Calendar, Clock, User, Tag } from 'lucide-react';
 
 export const metadata = {
   title: 'AI 2026 Implementation Roadmap: Complete Guide to Enterprise AI Transformation',
@@ -12,13 +17,13 @@ export default function AI2026ImplementationRoadmap() {
       {/* Header */}
       <header className="border-b border-gray-200 bg-white sticky top-0 z-50">
         <div className="max-w-4xl mx-auto px-4 py-4">
-          <Link 
+          <ArrowRight 
             href="/" 
             className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
           >
             <ArrowLeft className="w-4 h-4 mr-2" />
             Back to Home
-          </Link>
+          </ArrowRight>
         </div>
       </header>
 
@@ -52,7 +57,7 @@ export default function AI2026ImplementationRoadmap() {
           <div className="flex flex-wrap gap-2">
             {['AI Implementation', 'Enterprise AI', 'Digital Transformation', 'AI Strategy', '2026 Roadmap'].map((tag) => (
               <span key={tag} className="inline-flex items-center gap-1 bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
-                <Tag className="w-3 h-3" />
+                <Bookmark className="w-3 h-3" />
                 {tag}
               </span>
             ))}
@@ -383,18 +388,18 @@ export default function AI2026ImplementationRoadmap() {
               Contact Zion Tech Group to learn how our proven methodology and expertise can accelerate your path to AI success.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
+              <ArrowRight 
                 href="/case-studies/fortune-500-ai-transformation-success"
                 className="bg-white text-blue-600 px-8 py-4 rounded-full font-bold hover:bg-gray-100 transition-colors"
               >
                 View Success Stories
-              </Link>
-              <Link 
+              </ArrowRight>
+              <ArrowRight 
                 href="/tools/ai-roi-calculator"
                 className="border-2 border-white text-white px-8 py-4 rounded-full font-bold hover:bg-white hover:text-blue-600 transition-colors"
               >
                 Calculate Your ROI
-              </Link>
+              </ArrowRight>
             </div>
           </div>
         </div>
@@ -402,4 +407,3 @@ export default function AI2026ImplementationRoadmap() {
     </div>
   );
 }
->>>>>>> 5d2b3c81c55b794aac3492f27f2c7fa2daa0ca39

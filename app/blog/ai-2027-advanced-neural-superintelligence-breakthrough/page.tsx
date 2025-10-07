@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 
 export const metadata = {
   title: 'AI 2027 Advanced Neural Superintelligence Breakthrough - Zion Tech Group',
@@ -236,12 +236,12 @@ export default function AI2027AdvancedNeuralSuperintelligenceBreakthrough() {
         </div>
 
         <div className="text-center mb-8">
-          <Link 
+          <ArrowRight 
             href="/contact" 
             className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-bold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 inline-block"
           >
             🚀 Start Your AI 2027 Transformation Today
-          </Link>
+          </ArrowRight>
         </div>
 
         <div className="bg-gray-100 p-6 rounded-lg">

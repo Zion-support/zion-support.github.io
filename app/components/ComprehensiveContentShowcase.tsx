@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 
 const ComprehensiveContentShowcase = () => {
   return (
@@ -43,12 +43,12 @@ const ComprehensiveContentShowcase = () => {
                 <span className="bg-green-500/20 text-green-300 px-2 py-1 rounded text-xs">Guide</span>
               </div>
             </div>
-            <Link
+            <ArrowRight
               href="/blog/ai-2026-breakthrough-innovations-mega-guide"
               className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-400 hover:to-indigo-500 text-white font-semibold py-2 px-4 rounded-lg transition-all duration-300"
             >
               Read Complete Guide →
-            </Link>
+            </ArrowRight>
           </div>
 
           {/* $15B Success Story */}
@@ -72,12 +72,12 @@ const ComprehensiveContentShowcase = () => {
                 <span className="bg-yellow-500/20 text-yellow-300 px-2 py-1 rounded text-xs">$15B ROI</span>
               </div>
             </div>
-            <Link
+            <ArrowRight
               href="/case-studies/ai-2026-breakthrough-innovations-15-billion-success"
               className="inline-flex items-center gap-2 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-semibold py-2 px-4 rounded-lg transition-all duration-300"
             >
               View Success Story →
-            </Link>
+            </ArrowRight>
           </div>
 
           {/* Enterprise Transformation Blueprint */}
@@ -101,12 +101,12 @@ const ComprehensiveContentShowcase = () => {
                 <span className="bg-blue-500/20 text-blue-300 px-2 py-1 rounded text-xs">Strategy</span>
               </div>
             </div>
-            <Link
+            <ArrowRight
               href="/blog/ai-2026-enterprise-transformation-revolution"
               className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-semibold py-2 px-4 rounded-lg transition-all duration-300"
             >
               Read Blueprint →
-            </Link>
+            </ArrowRight>
           </div>
         </div>
 
@@ -169,30 +169,30 @@ const ComprehensiveContentShowcase = () => {
         <div className="bg-gradient-to-r from-indigo-900/30 to-purple-900/30 backdrop-blur-sm rounded-xl p-8 border border-indigo-500/20">
           <h3 className="text-2xl font-bold text-white mb-6 text-center">Quick Access to AI 2026 Content</h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-            <Link href="/blog/ai-2026-quantum-enhanced-machine-learning" className="flex items-center gap-3 p-4 bg-blue-500/20 hover:bg-blue-500/30 rounded-lg transition-colors">
+            <ArrowRight href="/blog/ai-2026-quantum-enhanced-machine-learning" className="flex items-center gap-3 p-4 bg-blue-500/20 hover:bg-blue-500/30 rounded-lg transition-colors">
               <span className="text-blue-400">🔮</span>
               <span className="text-white font-semibold">Quantum-Enhanced ML</span>
-            </Link>
-            <Link href="/blog/ai-2026-autonomous-business-processes" className="flex items-center gap-3 p-4 bg-purple-500/20 hover:bg-purple-500/30 rounded-lg transition-colors">
+            </ArrowRight>
+            <ArrowRight href="/blog/ai-2026-autonomous-business-processes" className="flex items-center gap-3 p-4 bg-purple-500/20 hover:bg-purple-500/30 rounded-lg transition-colors">
               <span className="text-purple-400">🤖</span>
               <span className="text-white font-semibold">Autonomous Processes</span>
-            </Link>
-            <Link href="/blog/ai-2026-meta-cognitive-ai-systems" className="flex items-center gap-3 p-4 bg-green-500/20 hover:bg-green-500/30 rounded-lg transition-colors">
+            </ArrowRight>
+            <ArrowRight href="/blog/ai-2026-meta-cognitive-ai-systems" className="flex items-center gap-3 p-4 bg-green-500/20 hover:bg-green-500/30 rounded-lg transition-colors">
               <span className="text-green-400">🧠</span>
               <span className="text-white font-semibold">Meta-Cognitive AI</span>
-            </Link>
-            <Link href="/blog/ai-2026-edge-native-intelligence" className="flex items-center gap-3 p-4 bg-cyan-500/20 hover:bg-cyan-500/30 rounded-lg transition-colors">
+            </ArrowRight>
+            <ArrowRight href="/blog/ai-2026-edge-native-intelligence" className="flex items-center gap-3 p-4 bg-cyan-500/20 hover:bg-cyan-500/30 rounded-lg transition-colors">
               <span className="text-cyan-400">⚡</span>
               <span className="text-white font-semibold">Edge Intelligence</span>
-            </Link>
-            <Link href="/blog/ai-2026-synthetic-data-intelligence" className="flex items-center gap-3 p-4 bg-orange-500/20 hover:bg-orange-500/30 rounded-lg transition-colors">
+            </ArrowRight>
+            <ArrowRight href="/blog/ai-2026-synthetic-data-intelligence" className="flex items-center gap-3 p-4 bg-orange-500/20 hover:bg-orange-500/30 rounded-lg transition-colors">
               <span className="text-orange-400">🔒</span>
               <span className="text-white font-semibold">Synthetic Data</span>
-            </Link>
-            <Link href="/case-studies" className="flex items-center gap-3 p-4 bg-yellow-500/20 hover:bg-yellow-500/30 rounded-lg transition-colors">
+            </ArrowRight>
+            <ArrowRight href="/case-studies" className="flex items-center gap-3 p-4 bg-yellow-500/20 hover:bg-yellow-500/30 rounded-lg transition-colors">
               <span className="text-yellow-400">📊</span>
               <span className="text-white font-semibold">All Case Studies</span>
-            </Link>
+            </ArrowRight>
           </div>
         </div>
 
@@ -203,18 +203,18 @@ const ComprehensiveContentShowcase = () => {
             Join thousands of enterprises already transforming with AI 2026 breakthrough innovations. Get started with our comprehensive assessment and implementation roadmap.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <ArrowRight
               href="/contact"
               className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
             >
               Get Started Today
-            </Link>
-            <Link
+            </ArrowRight>
+            <ArrowRight
               href="/blog"
               className="border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
             >
               Explore All Content
-            </Link>
+            </ArrowRight>
           </div>
         </div>
       </div>

@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 
 export const metadata = {
 	title: 'AI Supply Chain Copilot 2026: OTIF Wins Under Budget',
@@ -26,7 +26,7 @@ export default function Page() {
 				then scale via golden paths and shared components.
 			</p>
 			<div className="mt-10">
-				<Link href="/blog" className="text-indigo-600 font-semibold">← Back to Blog</Link>
+				<ArrowRight href="/blog" className="text-indigo-600 font-semibold">← Back to Blog</ArrowRight>
 			</div>
 		</div>
 	);

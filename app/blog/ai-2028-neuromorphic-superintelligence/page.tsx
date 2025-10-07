@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 
 export const metadata = {
   title: 'AI 2028: Neuromorphic Superintelligence Breakthrough | Zion Tech Group',
@@ -143,31 +143,31 @@ export default function AI2028NeuromorphicSuperintelligence() {
           <p className="text-lg mb-4">
             Discover how neuromorphic superintelligence can transform your enterprise operations and unlock unprecedented capabilities.
           </p>
-          <Link 
+          <ArrowRight 
             href="/contact" 
             className="inline-block bg-white text-cyan-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
           >
             Schedule Your Neuromorphic Consultation
-          </Link>
+          </ArrowRight>
         </div>
 
         <div className="border-t pt-6 mt-8">
           <h4 className="text-xl font-bold text-gray-900 mb-4">Related Revolutionary Content</h4>
           <div className="grid md:grid-cols-2 gap-4">
-            <Link 
+            <ArrowRight 
               href="/blog/ai-2028-next-generation-autonomous-enterprise" 
               className="block p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors"
             >
               <h5 className="font-semibold text-blue-600 mb-2">AI 2028 Autonomous Enterprise</h5>
               <p className="text-sm text-gray-600">99.9% autonomous operations breakthrough</p>
-            </Link>
-            <Link 
+            </ArrowRight>
+            <ArrowRight 
               href="/case-studies/ai-2028-mega-transformation-success" 
               className="block p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors"
             >
               <h5 className="font-semibold text-blue-600 mb-2">AI 2028 Success Stories</h5>
               <p className="text-sm text-gray-600">Real-world transformation results</p>
-            </Link>
+            </ArrowRight>
           </div>
         </div>
       </div>

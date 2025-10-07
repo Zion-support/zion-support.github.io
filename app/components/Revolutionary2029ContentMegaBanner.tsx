@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 
 export default function Revolutionary2029ContentMegaBanner() {
   return (
@@ -37,12 +37,12 @@ export default function Revolutionary2029ContentMegaBanner() {
               <li>• Creative problem-solving with original idea generation</li>
               <li>• Moral reasoning with ethical decision-making</li>
             </ul>
-            <Link 
+            <ArrowRight 
               href="/blog/ai-2029-quantum-neural-fusion-breakthrough"
               className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all shadow-lg hover:shadow-xl"
             >
               Discover Consciousness →
-            </Link>
+            </ArrowRight>
           </div>
           
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-blue-400/30">
@@ -59,12 +59,12 @@ export default function Revolutionary2029ContentMegaBanner() {
               <li>• Unlimited parallel processing capabilities</li>
               <li>• Quantum entanglement for instant information transfer</li>
             </ul>
-            <Link 
+            <ArrowRight 
               href="/case-studies/ai-2029-quantum-neural-fusion-mega-success"
               className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all shadow-lg hover:shadow-xl"
             >
               View $10B Success →
-            </Link>
+            </ArrowRight>
           </div>
         </div>
         

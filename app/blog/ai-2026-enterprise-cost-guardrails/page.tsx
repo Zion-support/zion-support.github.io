@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 
 export const metadata = {
   title: 'Enterprise Cost Guardrails (2026): Predictable AI spend',
@@ -21,7 +21,7 @@ export default function Page() {
         <li>Progressive delivery with cost‑per‑request limits</li>
       </ul>
       <p>
-        Continue exploring in our <Link href="/blog">Blog</Link>.
+        Continue exploring in our <ArrowRight href="/blog">Blog</ArrowRight>.
       </p>
     </main>
   );

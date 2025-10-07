@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 
 export default function AIMegaTransformationSuccessBanner() {
   return (
@@ -144,18 +144,18 @@ export default function AIMegaTransformationSuccessBanner() {
 
         <div className="text-center">
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-6">
-            <Link
+            <ArrowRight
               href="/case-studies"
               className="bg-white text-teal-600 px-10 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all duration-300 shadow-lg"
             >
               View All Success Stories
-            </Link>
-            <Link
+            </ArrowRight>
+            <ArrowRight
               href="/services"
               className="border-2 border-white text-white px-10 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-teal-600 transition-all duration-300"
             >
               Start Your Transformation
-            </Link>
+            </ArrowRight>
           </div>
           
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 max-w-2xl mx-auto">

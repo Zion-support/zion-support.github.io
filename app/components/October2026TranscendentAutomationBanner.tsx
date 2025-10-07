@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 
 export default function October2026TranscendentAutomationBanner() {
   return (
@@ -54,18 +54,18 @@ export default function October2026TranscendentAutomationBanner() {
 
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link 
+                <ArrowRight 
                   href="/blog/ai-2026-october-transcendent-automation-revolution" 
                   className="bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-400 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
                 >
                   Read Breakthrough Details →
-                </Link>
-                <Link 
+                </ArrowRight>
+                <ArrowRight 
                   href="/case-studies/ai-2026-october-transcendent-automation-infinite-success" 
                   className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
                 >
                   View Success Story
-                </Link>
+                </ArrowRight>
               </div>
             </div>
 
@@ -79,9 +79,9 @@ export default function October2026TranscendentAutomationBanner() {
                 </div>
                 <h3 className="text-white font-bold text-lg mb-2">Transcendent Automation Revolution</h3>
                 <p className="text-gray-400 text-sm mb-3">Systems that operate beyond universal intelligence with infinite scalability and transcendent performance capabilities.</p>
-                <Link href="/blog/ai-2026-october-transcendent-automation-revolution" className="text-purple-300 text-sm font-semibold hover:text-purple-200">
+                <ArrowRight href="/blog/ai-2026-october-transcendent-automation-revolution" className="text-purple-300 text-sm font-semibold hover:text-purple-200">
                   Read Full Breakthrough →
-                </Link>
+                </ArrowRight>
               </div>
 
               {/* Featured Case Study */}
@@ -92,24 +92,24 @@ export default function October2026TranscendentAutomationBanner() {
                 </div>
                 <h3 className="text-white font-bold text-lg mb-2">Infinite ROI Success Story</h3>
                 <p className="text-gray-400 text-sm mb-3">How a Fortune 100 company achieved infinite returns through transcendent automation with boundless scalability.</p>
-                <Link href="/case-studies/ai-2026-october-transcendent-automation-infinite-success" className="text-green-300 text-sm font-semibold hover:text-green-200">
+                <ArrowRight href="/case-studies/ai-2026-october-transcendent-automation-infinite-success" className="text-green-300 text-sm font-semibold hover:text-green-200">
                   View Success Story →
-                </Link>
+                </ArrowRight>
               </div>
 
               {/* Additional Content Links */}
               <div className="bg-gradient-to-br from-blue-900/40 to-cyan-900/40 backdrop-blur-sm rounded-xl p-6 border border-blue-500/20">
                 <h4 className="text-white font-bold text-md mb-3">Related October 2026 Content</h4>
                 <div className="space-y-2">
-                  <Link href="/blog/ai-2026-september-mega-breakthrough-revolution" className="block text-blue-300 text-sm hover:text-blue-200 transition-colors">
+                  <ArrowRight href="/blog/ai-2026-september-mega-breakthrough-revolution" className="block text-blue-300 text-sm hover:text-blue-200 transition-colors">
                     → September 2026 Mega Breakthrough
-                  </Link>
-                  <Link href="/case-studies/ai-2026-september-mega-breakthrough-2-trillion-success" className="block text-blue-300 text-sm hover:text-blue-200 transition-colors">
+                  </ArrowRight>
+                  <ArrowRight href="/case-studies/ai-2026-september-mega-breakthrough-2-trillion-success" className="block text-blue-300 text-sm hover:text-blue-200 transition-colors">
                     → $2.5 Trillion Success Story
-                  </Link>
-                  <Link href="/services/ai-2026-october-transcendent-automation-consulting" className="block text-blue-300 text-sm hover:text-blue-200 transition-colors">
+                  </ArrowRight>
+                  <ArrowRight href="/services/ai-2026-october-transcendent-automation-consulting" className="block text-blue-300 text-sm hover:text-blue-200 transition-colors">
                     → Transcendent Automation Consulting
-                  </Link>
+                  </ArrowRight>
                 </div>
               </div>
             </div>

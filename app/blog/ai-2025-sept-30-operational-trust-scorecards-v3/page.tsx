@@ -1,5 +1,5 @@
 // @ts-nocheck
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 
 export const metadata = {
   title: 'Operational Trust Scorecards v3 (Sep 30, 2025) | Zion Tech Group',
@@ -80,8 +80,8 @@ export default function Page() {
           </div>
 
           <div className="flex items-center justify-between pt-6 border-t border-white/10">
-            <Link href="/content-hub" className="text-emerald-300 hover:text-emerald-200 font-semibold">← Back to Content Hub</Link>
-            <Link href="/blog/ai-2027-cost-optimization-playbook" className="text-cyan-300 hover:text-cyan-200 font-semibold">Next: Cost Optimization Playbook →</Link>
+            <ArrowRight href="/content-hub" className="text-emerald-300 hover:text-emerald-200 font-semibold">← Back to Content Hub</ArrowRight>
+            <ArrowRight href="/blog/ai-2027-cost-optimization-playbook" className="text-cyan-300 hover:text-cyan-200 font-semibold">Next: Cost Optimization Playbook →</ArrowRight>
           </div>
         </div>
       </section>

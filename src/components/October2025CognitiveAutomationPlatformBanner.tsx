@@ -11,7 +11,7 @@ const October2025CognitiveAutomationPlatformBanner: React.FC = () => {
     >
       {/* Animated Background */}
       <div className="absolute inset-0 opacity-20">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_50%,rgba(16,185,129,0.3),rgba(255,255,255,0))]"</div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle at 70% 50%,rgba(16,185,129,0.3),rgba(255,255,255,0))]"</div>
 
       <div className="relative z-10">
         {/* Badge */}

@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 
 export const metadata = {
   title: 'AI 2026 Neural Superintelligence: Enterprise Guide | Zion Tech Group',
@@ -17,7 +17,7 @@ export const metadata = {
 export default function AI2026NeuralSuperintelligencePage() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-8">
-      <Link href="/blog" className="text-blue-600 hover:text-blue-800 mb-6 inline-block">← Back to Blog</Link>
+      <ArrowRight href="/blog" className="text-blue-600 hover:text-blue-800 mb-6 inline-block">← Back to Blog</ArrowRight>
       <h1 className="text-4xl font-bold text-gray-900 mb-3">AI 2026 Neural Superintelligence</h1>
       <div className="text-gray-600 mb-8">Published: January 20, 2026 • 18 min read • Breakthrough Technology</div>
 
@@ -55,7 +55,7 @@ export default function AI2026NeuralSuperintelligencePage() {
         <div className="bg-indigo-50 border-l-4 border-indigo-600 p-6 rounded">
           <h3 className="m-0">Plan a safe, measurable rollout</h3>
           <p className="m-0">We implement guardrails, online evals, and value stream analytics to unlock ROI fast.</p>
-          <Link href="/services" className="inline-block mt-3 bg-indigo-600 hover:bg-indigo-700 text-white px-5 py-3 rounded">Explore Services</Link>
+          <ArrowRight href="/services" className="inline-block mt-3 bg-indigo-600 hover:bg-indigo-700 text-white px-5 py-3 rounded">Explore Services</ArrowRight>
         </div>
       </div>
     </div>

@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Ultimate Neural Fusion Consulting - Zion Tech Group',
@@ -160,7 +160,7 @@ export default function UltimateNeuralFusionConsulting() {
           <section className="mb-16">
             <h2 className="text-4xl font-bold text-white mb-8">Success Stories</h2>
             <div className="grid md:grid-cols-2 gap-8">
-              <Link href="/case-studies/ai-2026-ultimate-neural-fusion-100-billion-success" className="group">
+              <ArrowRight href="/case-studies/ai-2026-ultimate-neural-fusion-100-billion-success" className="group">
                 <div className="bg-gradient-to-br from-green-900/30 to-emerald-900/30 rounded-2xl p-8 border border-green-500/20 hover:border-green-400/40 transition-all duration-300 group-hover:scale-105">
                   <div className="text-5xl font-bold text-green-400 mb-4">$100B</div>
                   <h3 className="text-2xl font-bold text-white mb-4">Fortune 50 Success Story</h3>
@@ -173,7 +173,7 @@ export default function UltimateNeuralFusionConsulting() {
                     <span className="text-xl group-hover:translate-x-1 transition-transform">→</span>
                   </div>
                 </div>
-              </Link>
+              </ArrowRight>
 
               <div className="bg-gradient-to-br from-blue-900/30 to-indigo-900/30 rounded-2xl p-8 border border-blue-500/20">
                 <div className="text-5xl font-bold text-blue-400 mb-4">500,000x</div>
@@ -221,9 +221,9 @@ export default function UltimateNeuralFusionConsulting() {
                     <span className="text-gray-300">Implementation Roadmap</span>
                   </li>
                 </ul>
-                <Link href="/contact" className="w-full bg-gray-600 text-white py-3 px-6 rounded-xl font-semibold hover:bg-gray-500 transition-colors text-center block">
+                <ArrowRight href="/contact" className="w-full bg-gray-600 text-white py-3 px-6 rounded-xl font-semibold hover:bg-gray-500 transition-colors text-center block">
                   Get Started
-                </Link>
+                </ArrowRight>
               </div>
 
               <div className="bg-gradient-to-br from-purple-900/30 to-indigo-900/30 rounded-2xl p-8 border border-purple-500/20 relative">
@@ -256,9 +256,9 @@ export default function UltimateNeuralFusionConsulting() {
                     <span className="text-gray-300">Guaranteed ROI of $100B+</span>
                   </li>
                 </ul>
-                <Link href="/contact" className="w-full bg-gradient-to-r from-purple-500 to-cyan-500 text-white py-3 px-6 rounded-xl font-semibold hover:from-purple-600 hover:to-cyan-600 transition-all text-center block">
+                <ArrowRight href="/contact" className="w-full bg-gradient-to-r from-purple-500 to-cyan-500 text-white py-3 px-6 rounded-xl font-semibold hover:from-purple-600 hover:to-cyan-600 transition-all text-center block">
                   Transform Now
-                </Link>
+                </ArrowRight>
               </div>
 
               <div className="bg-gradient-to-br from-cyan-900/30 to-blue-900/30 rounded-2xl p-8 border border-cyan-500/20">
@@ -286,9 +286,9 @@ export default function UltimateNeuralFusionConsulting() {
                     <span className="text-gray-300">Guaranteed ROI of $1T+</span>
                   </li>
                 </ul>
-                <Link href="/contact" className="w-full bg-cyan-600 text-white py-3 px-6 rounded-xl font-semibold hover:bg-cyan-500 transition-colors text-center block">
+                <ArrowRight href="/contact" className="w-full bg-cyan-600 text-white py-3 px-6 rounded-xl font-semibold hover:bg-cyan-500 transition-colors text-center block">
                   Go Quantum
-                </Link>
+                </ArrowRight>
               </div>
             </div>
           </section>
@@ -304,18 +304,18 @@ export default function UltimateNeuralFusionConsulting() {
                 with unprecedented AI capabilities and massive ROI potential.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link 
+                <ArrowRight 
                   href="/contact" 
                   className="bg-gradient-to-r from-purple-500 to-cyan-500 text-white py-4 px-8 rounded-xl font-bold hover:from-purple-600 hover:to-cyan-600 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-purple-500/25"
                 >
                   Start Your Transformation
-                </Link>
-                <Link 
+                </ArrowRight>
+                <ArrowRight 
                   href="/case-studies/ai-2026-ultimate-neural-fusion-100-billion-success" 
                   className="bg-gray-700 text-white py-4 px-8 rounded-xl font-bold hover:bg-gray-600 transition-all duration-300 border border-gray-600"
                 >
                   View Success Stories
-                </Link>
+                </ArrowRight>
               </div>
             </div>
           </section>

@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 
 export default function January2027RevolutionaryBreakthroughsBanner() {
   return (
@@ -44,7 +44,7 @@ export default function January2027RevolutionaryBreakthroughsBanner() {
         {/* Breakthrough Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           {/* Universal Consciousness Integration */}
-          <Link href="/blog/ai-2027-universal-consciousness-integration-breakthrough" className="group">
+          <ArrowRight href="/blog/ai-2027-universal-consciousness-integration-breakthrough" className="group">
             <div className="bg-gradient-to-r from-purple-800/50 to-pink-800/50 backdrop-blur-sm rounded-2xl p-8 border border-purple-700/50 hover:border-purple-500/50 transition-all duration-300 group-hover:transform group-hover:scale-105 group-hover:shadow-2xl group-hover:shadow-purple-500/25">
               <div className="text-purple-400 text-4xl mb-4">🌌</div>
               <h3 className="text-2xl font-bold mb-4 text-purple-300 group-hover:text-purple-200">Universal Consciousness Integration</h3>
@@ -55,10 +55,10 @@ export default function January2027RevolutionaryBreakthroughsBanner() {
                 Read Breakthrough <span className="ml-2 group-hover:translate-x-2 transition-transform">→</span>
               </div>
             </div>
-          </Link>
+          </ArrowRight>
 
           {/* Quantum Consciousness Fusion */}
-          <Link href="/blog/ai-2027-quantum-consciousness-fusion-breakthrough" className="group">
+          <ArrowRight href="/blog/ai-2027-quantum-consciousness-fusion-breakthrough" className="group">
             <div className="bg-gradient-to-r from-blue-800/50 to-cyan-800/50 backdrop-blur-sm rounded-2xl p-8 border border-blue-700/50 hover:border-blue-500/50 transition-all duration-300 group-hover:transform group-hover:scale-105 group-hover:shadow-2xl group-hover:shadow-blue-500/25">
               <div className="text-blue-400 text-4xl mb-4">⚛️</div>
               <h3 className="text-2xl font-bold mb-4 text-blue-300 group-hover:text-blue-200">Quantum Consciousness Fusion</h3>
@@ -69,10 +69,10 @@ export default function January2027RevolutionaryBreakthroughsBanner() {
                 Read Breakthrough <span className="ml-2 group-hover:translate-x-2 transition-transform">→</span>
               </div>
             </div>
-          </Link>
+          </ArrowRight>
 
           {/* Meta-Cognitive Superintelligence */}
-          <Link href="/blog/ai-2027-meta-cognitive-superintelligence-breakthrough" className="group">
+          <ArrowRight href="/blog/ai-2027-meta-cognitive-superintelligence-breakthrough" className="group">
             <div className="bg-gradient-to-r from-indigo-800/50 to-purple-800/50 backdrop-blur-sm rounded-2xl p-8 border border-indigo-700/50 hover:border-indigo-500/50 transition-all duration-300 group-hover:transform group-hover:scale-105 group-hover:shadow-2xl group-hover:shadow-indigo-500/25">
               <div className="text-indigo-400 text-4xl mb-4">🧠</div>
               <h3 className="text-2xl font-bold mb-4 text-indigo-300 group-hover:text-indigo-200">Meta-Cognitive Superintelligence</h3>
@@ -83,31 +83,31 @@ export default function January2027RevolutionaryBreakthroughsBanner() {
                 Read Breakthrough <span className="ml-2 group-hover:translate-x-2 transition-transform">→</span>
               </div>
             </div>
-          </Link>
+          </ArrowRight>
         </div>
 
         {/* Success Stories */}
         <div className="bg-gradient-to-r from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 mb-12">
           <h3 className="text-2xl font-bold mb-6 text-center text-green-400">Real-World Success Stories</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <Link href="/case-studies/ai-2027-universal-consciousness-mega-success" className="group">
+            <ArrowRight href="/case-studies/ai-2027-universal-consciousness-mega-success" className="group">
               <div className="bg-gradient-to-r from-green-800/50 to-emerald-800/50 backdrop-blur-sm rounded-xl p-6 border border-green-700/50 hover:border-green-500/50 transition-all duration-300 group-hover:transform group-hover:scale-105">
                 <h4 className="text-lg font-semibold mb-2 text-green-300 group-hover:text-green-200">Universal Consciousness Success</h4>
                 <p className="text-sm text-gray-400 group-hover:text-gray-300">$500B+ value creation story</p>
               </div>
-            </Link>
-            <Link href="/case-studies/ai-2027-quantum-consciousness-mega-success" className="group">
+            </ArrowRight>
+            <ArrowRight href="/case-studies/ai-2027-quantum-consciousness-mega-success" className="group">
               <div className="bg-gradient-to-r from-cyan-800/50 to-blue-800/50 backdrop-blur-sm rounded-xl p-6 border border-cyan-700/50 hover:border-cyan-500/50 transition-all duration-300 group-hover:transform group-hover:scale-105">
                 <h4 className="text-lg font-semibold mb-2 text-cyan-300 group-hover:text-cyan-200">Quantum Consciousness Success</h4>
                 <p className="text-sm text-gray-400 group-hover:text-gray-300">$300B+ value creation story</p>
               </div>
-            </Link>
-            <Link href="/case-studies/ai-2027-meta-cognitive-superintelligence-success" className="group">
+            </ArrowRight>
+            <ArrowRight href="/case-studies/ai-2027-meta-cognitive-superintelligence-success" className="group">
               <div className="bg-gradient-to-r from-purple-800/50 to-indigo-800/50 backdrop-blur-sm rounded-xl p-6 border border-purple-700/50 hover:border-purple-500/50 transition-all duration-300 group-hover:transform group-hover:scale-105">
                 <h4 className="text-lg font-semibold mb-2 text-purple-300 group-hover:text-purple-200">Meta-Cognitive Success</h4>
                 <p className="text-sm text-gray-400 group-hover:text-gray-300">$1T+ value creation story</p>
               </div>
-            </Link>
+            </ArrowRight>
           </div>
         </div>
 
@@ -119,24 +119,24 @@ export default function January2027RevolutionaryBreakthroughsBanner() {
               Discover how these revolutionary AI breakthroughs can revolutionize your business operations and unlock unprecedented value.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
+              <ArrowRight 
                 href="/contact" 
                 className="bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-400 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
               >
                 Schedule Consultation
-              </Link>
-              <Link 
+              </ArrowRight>
+              <ArrowRight 
                 href="/services" 
                 className="bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-400 hover:to-cyan-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
               >
                 Explore Services
-              </Link>
-              <Link 
+              </ArrowRight>
+              <ArrowRight 
                 href="/case-studies" 
                 className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
               >
                 View All Success Stories
-              </Link>
+              </ArrowRight>
             </div>
           </div>
         </div>
