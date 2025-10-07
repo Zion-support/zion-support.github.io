@@ -1,3 +1,5 @@
+<<<<<<< HEAD:app_disabled/case-studies/ai-2026-january-quantum-neural-fusion-75-billion-success/page.tsx
+import { Star } from 'lucide-react';
 import type { Metadata } from 'next';
 // import { notFound } from 'next/navigation';
 
@@ -518,4 +520,4 @@ export default function QuantumNeuralFusionSuccessPage() {
       </article>
     </div>
   );
-}
+  }

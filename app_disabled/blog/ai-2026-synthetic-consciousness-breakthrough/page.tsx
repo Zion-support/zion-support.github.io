@@ -1,3 +1,6 @@
+<<<<<<< HEAD:app_disabled/blog/ai-2026-synthetic-consciousness-breakthrough/page.tsx
+import { Zap, ArrowRight, Target } from 'lucide-react';
+import React from 'react';
 import Link from 'next/link';
 import { ArrowRight, Brain, Target, TrendingUp, Zap } from 'lucide-react';
 
@@ -182,7 +185,7 @@ origin/cursor/fix-errors-and-merge-to-main-cc0a
       </div>
     </div>
   );
-}
+  }
 </Trending>
 </Arrow>
 </Target>

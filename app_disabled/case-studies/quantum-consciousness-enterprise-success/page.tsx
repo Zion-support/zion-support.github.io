@@ -1,3 +1,5 @@
+<<<<<<< HEAD:app_disabled/case-studies/quantum-consciousness-enterprise-success/page.tsx
+import { Star } from 'lucide-react';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -178,4 +180,4 @@ export default function QuantumConsciousnessEnterpriseSuccess() {
       </div>
     </div>
   );
-}
+  }

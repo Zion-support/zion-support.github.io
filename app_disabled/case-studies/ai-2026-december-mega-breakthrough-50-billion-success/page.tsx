@@ -1,3 +1,4 @@
+import { Star } from 'lucide-react';
 // @ts-nocheck
 import type { Metadata } from 'next';
 
@@ -749,4 +750,4 @@ export default function December2026MegaBreakthroughSuccessPage() {
       </section>
     </div>
   );
-}
+  }

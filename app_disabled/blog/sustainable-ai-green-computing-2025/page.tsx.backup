@@ -51,7 +51,7 @@ export default function SustainableAIGreenComputing() {
         <p className="text-left"> </p><h2 className="text-left">⚡ The Energy    Challenge</h2>"
         <p className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
           AI and machine learning workloads are incredibly energy-intensive. Training a single large language model 
-          can consume as much electricity as 100 U.S. homes use in an entire year.    For    enterprises running multiple 
+          can consume as much electricity as 100 U?.S. homes use in an entire year.    For    enterprises running multiple 
           AI systems 24/7, the energy costs and carbon footprint become staggering.
         </p></p>
         <h3 className="text-left">The Environmental    Impact</h3>
@@ -269,7 +269,7 @@ export default function SustainableAIGreenComputing() {
       </div>
     </div>
   );
-}
+  }
 </span>
 </span>
 </span>

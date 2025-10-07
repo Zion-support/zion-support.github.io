@@ -1,3 +1,5 @@
+import { Target } from 'lucide-react';
+import { Star } from 'lucide-react';
 import React from 'react';
 export const metadata = {
   title: "AI Autonomous Enterprise Operations: Complete 2025 Implementation Guide",
@@ -139,6 +141,7 @@ const Autonomous Ops Framework =
   governance: "Open Policy Agent (OPA) + Custom Rules",
   data Layer: "Apache Kafka + Apache Spark + Vector D Bs"
 };
+<<<<<<< HEAD:app_disabled/blog/ai-autonomous-enterprise-operations-2025/page.tsx.backup
 // Implementation Pattern
 <<<<<<< HEAD:app_disabled/blog/ai-autonomous-enterprise-operations-2025/page.tsx.backup
 class Autonomous Agent 

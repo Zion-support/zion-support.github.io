@@ -222,7 +222,7 @@ export default function AI2026JulySuperintelligenceRevolution() {
   
     </li>
   );
-}</div></div></div></div></div></div></div>
+  }</div></div></div></div></div></div></div>
 </span>
 </span>
 </span>

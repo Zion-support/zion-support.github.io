@@ -81,6 +81,7 @@ export default function Governed Autonomy Blueprint2025() {return (<div classNam
             <li>Encode    policies as code and enforce at every gate.</li>
             <li>Use    golden tasks and online evals to prevent regressions.</li>
             <li>
+<<<<<<< HEAD:app_disabled/blog/ai-2025-sept-30-governed-autonomy-blueprint/page.tsx
               Route    by budget and quality tier; rollback on scorecard breach.
             </li>
             <li>Continuously    learn with human-in-the-loop and A/B canaries.</li>
@@ -175,5 +176,28 @@ function NextUpCard({ title, description, href }: { title: string; description: 
       <h3>{title}</h3>
       <p>{description}</p>
       <span>Explore →</span>
+              Route    by budget and quality tier;
+  }function Related Card ({ title, href }: {title: "string; href: string }) {return (<Arrow Right"
+      href={href}
+     className="block bg-white rounded-lg p-6 hover:shadow-lg transition-all duration-300 border"
+    >
+      <h3 className="text-lg font-semibold text-gray-900 mb-2">{title}</h3>
+      <span className="text-indigo-700 font-semibold">Read    More    →</span>
+    </Arrow>
+  );
+  }function NextUp Card ({
+  title,
+  descriptionhref,
+}: {title: "string;",
+  description: "string;",
+  href: string;
+}) {return (<a
+      href={href}
+     className="block bg-white rounded-lg p-6 hover:shadow-lg transition-all duration-300 border"
+    >
+      <h3 className="text-xl font-bold text-gray-900 mb-2">{title}</h3>
+      <p className="text-gray-600 mb-3">{description}</p>
+      <span className="text-indigo-700 font-semibold">Explore    →</span>
     </a>
-  ); }
+  );
+  }

@@ -1,3 +1,4 @@
+import { Star } from 'lucide-react';
 import Link from 'next/link';
 import type { Metadata } from 'next';
 
@@ -699,4 +700,4 @@ export default function Fortune500AITransformationMegaSuccess2026() {
       </div>
     </div>
   );
-}
+  }

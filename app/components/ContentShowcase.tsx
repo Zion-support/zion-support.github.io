@@ -30,6 +30,6 @@ const ContentShowcase: React.FC = () => {
       </p>
     </div>
   );
-};
+  };
 
 export default ContentShowcase;

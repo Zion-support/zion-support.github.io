@@ -1,5 +1,6 @@
+import { Star } from 'lucide-react';
 import React from 'react';
-import {Metadata} from 'next';
+import type { Metadata } from 'next';
 import Link from 'next/link';
 <<<<<<< HEAD:app_disabled/blog/ai-2026-february-revolutionary-breakthrough-revolution/page.tsx.backup
 <<<<<<< HEAD:app/blog/ai-2026-february-revolutionary-breakthrough-revolution/page.tsx
@@ -236,4 +237,4 @@ export default function AI2026FebruaryRevolutionary Breakthrough Page() {/* retu
       </main>
     </div>
   );
-}</div></div></div></div></div></div></div>)
+  }</div></div></div></div></div></div></div>)

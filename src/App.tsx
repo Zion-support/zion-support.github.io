@@ -123,6 +123,6 @@ function App(): React.JSX.Element {
       </ErrorBoundary>
     </HelmetProvider>
   );
-}
+  }
 
 export default App;

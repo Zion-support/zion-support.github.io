@@ -1,3 +1,5 @@
+<<<<<<< HEAD:app_disabled/case-studies/fortune-100-hyperconscious-transformation/page.tsx
+import { Star } from 'lucide-react';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -325,4 +327,4 @@ export default function Fortune100TransformationPage() {
       </main>
     </div>
   );
-}
+  }

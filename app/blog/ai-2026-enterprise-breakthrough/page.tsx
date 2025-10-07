@@ -1,3 +1,4 @@
+import { Star } from 'lucide-react';
 import React from 'react';
 import Link from 'next/link';
 import { Metadata } from 'next';
@@ -280,7 +281,7 @@ origin/cursor/fix-errors-and-merge-to-main-cc0a
           </div>
       </div>
   );
-}</div></div></div></div></div></div></div></div></div></div></div></div></div>
+  }</div></div></div></div></div></div></div></div></div></div></div></div></div>
 </span>
 </span>
 </span>

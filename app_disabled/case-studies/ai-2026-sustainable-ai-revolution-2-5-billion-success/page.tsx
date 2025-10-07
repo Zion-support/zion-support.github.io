@@ -1,3 +1,5 @@
+<<<<<<< HEAD:app_disabled/case-studies/ai-2026-sustainable-ai-revolution-2-5-billion-success/page.tsx
+import { Star } from 'lucide-react';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 
@@ -452,4 +454,4 @@ export default function SustainableAISuccessPage() {
       </main>
     </div>
   );
-}
+  }

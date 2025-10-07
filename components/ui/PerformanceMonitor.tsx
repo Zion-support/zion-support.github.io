@@ -14,6 +14,6 @@ const PerformanceMonitor = React.memo(function PerformanceMonitor({
       {children}
     </div>
   );
-});
+  });
 
 export default PerformanceMonitor;

@@ -1,3 +1,4 @@
+import { Star } from 'lucide-react';
 import React from 'react';
 import Link from 'next/link';
 
@@ -159,7 +160,7 @@ export default function AIMegaTrends20252026() {
       </div>
     </div>
   );
-}
+  }
 </span>
 </span>
 </span>

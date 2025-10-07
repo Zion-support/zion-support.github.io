@@ -1,3 +1,4 @@
+import { Target } from 'lucide-react';
 import React from 'react';
 import Link from 'next/link';
 
@@ -138,38 +139,8 @@ export default function Platform Engineering Scorecards2026Page() {/* return (<d
           </h2>
           <ul className="list-disc ml-6 text-gray-700 mb-8 space-y-2">
             <li>Weekly   : scorecard review with platform + product leads</li>
-            <li>Monthly   : deep-dive on worst metric; commit improvement plan</li>
-            <li>Quarterly   : refresh targets; align to business goals</li>
-          </ul>
-
-          <div className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white p-8 rounded-lg">
-            <h3 className="text-2xl font-bold mb-4">
-              Need    a scorecard you can ship in 2 weeks?
-            </h3>
-            <p className="text-lg mb-6 opacity-90">
-              We help enterprises stand up measurable platform scorecards with
-              automated collection and C-suite dashboards.    Get    a pilot in under
-              14 days.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <a
-               href="tel:+13024640950"
-               className="bg-white text-indigo-700 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100"
-              >
-                Call    +1 302 464 0950
-              </a>
-              <a
-               href="mailto:kleber@ziontechgroup.com"
-               className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-700"
-              >
-                Get    Consultation
-              </a>
-            </div>
-          </div>
-        </div>
-      </article>
-
-      {/*   Related   */}
+            <li>Monthly   : deep-dive on worst metric;
+  }
       <section className="bg-gray-50 py-16">
         <div className="max-w-6xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
@@ -203,8 +174,13 @@ function RelatedArticleCard({ title, description, href }: { title: string; descr
     <ArrowRight href={href} className="block bg-white rounded-lg p-6 hover:shadow-lg transition-all duration-300">
       <h3 className="text-xl font-bold text-gray-900 mb-3">{title}</h3>
       <p className="text-gray-600 mb-4">{description}</p>
+<<<<<<< HEAD:app_disabled/blog/platform-engineering-scorecards-2026/page.tsx
       <span className="text-indigo-700 font-semibold">Read More →</span>
     </ArrowRight>
   );
 }
 
+      <span className="text-indigo-700 font-semibold">Read    More    →</span>
+    </Arrow>
+  );
+  }

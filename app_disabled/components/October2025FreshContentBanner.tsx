@@ -1,3 +1,4 @@
+import { Star } from 'lucide-react';
 import Link from 'next/link';
 
 export default function October2025FreshContentBanner() {
@@ -138,25 +139,8 @@ export default function October2025FreshContentBanner() {
               <div className='grid grid-cols-2 gap-3 mb-4'>
                 <div className='bg-purple-500/10 rounded-lg p-2'>
                   <div className='text-xl font-bold text-purple-400'>
-                    &lt;10ms
-                  </div>
-                  <div className='text-xs text-purple-300'>Detection</div>
-                </div>
-                <div className='bg-pink-500/10 rounded-lg p-2'>
-                  <div className='text-xl font-bold text-pink-400'>95%</div>
-                  <div className='text-xs text-pink-300'>Auto-Resolve</div>
-                </div>
-              </div>
-              <Link
-                href='/blog/ai-2025-october-real-time-<operations'
-                className='text-purple-300 text-sm font-semibold hover:text-purple-200 inline-flex items-center gap-2'
-              >
-                Read Full Guide →
-              </Link>
-            </div>
-          </div>
-
-          {/* Bottom CTA */}
+                    &lt;
+  }
           <div className='text-center'>
             <div className='inline-flex flex-col sm:flex-row gap-4'>
               <Link

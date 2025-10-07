@@ -321,7 +321,7 @@ export default function MetaCognitiveReasoning() {
       </div>
     </div>
   );
-}
+  }
 </span>
 </span>
 </span>)

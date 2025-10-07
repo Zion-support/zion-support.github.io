@@ -1,3 +1,4 @@
+import { Target } from 'lucide-react';
 import React from 'react';
 import Link from 'next/link';
 
@@ -104,4 +105,5 @@ export default function AIVoiceInterfacesEnterprise2026Page() {
         </article>
       </main>
     </div>
-  ); }
+  );
+  }

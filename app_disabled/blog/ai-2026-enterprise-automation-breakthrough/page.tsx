@@ -1,3 +1,7 @@
+<<<<<<< HEAD:app_disabled/blog/ai-2026-enterprise-automation-breakthrough/page.tsx
+import { ArrowLeft } from 'lucide-react';
+import { Star } from 'lucide-react';
+import React from 'react';
 import Link from 'next/link';
 import { ArrowLeft, ArrowRight, Bookmark, Calendar, Clock, Cog, User } from 'lucide-react';
 
@@ -221,7 +225,7 @@ export default function Enterprise Automation Breakthrough() {/* return (
       </article>
     </div>
   );
-}
+  }
 </Tag>
 </Clock>
 </User>

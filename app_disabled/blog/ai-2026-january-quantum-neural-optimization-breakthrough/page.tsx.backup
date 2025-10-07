@@ -1,5 +1,5 @@
 import React from 'react';
-import {Metadata} from 'next';
+import type { Metadata } from 'next';
 import Link from 'next/link';
 <<<<<<< HEAD:app_disabled/blog/ai-2026-january-quantum-neural-optimization-breakthrough/page.tsx.backup
 <<<<<<< HEAD:app/blog/ai-2026-january-quantum-neural-optimization-breakthrough/page.tsx
@@ -221,7 +221,7 @@ result = optimizer.optimize(
     </span>
     </li>
   );
-}</div></div></div></div></div></div></div></div></div></div>
+  }</div></div></div></div></div></div></div></div></div></div>
 </span>
 </span>
 </span>

@@ -1,3 +1,5 @@
+import { Cog, Zap } from 'lucide-react';
+import { Factory, Cog } from 'lucide-react';
 import React from 'react';
 import { ArrowRight, TrendingUp, Zap, Factory, Cog } from 'lucide-react';
 
@@ -169,6 +171,6 @@ const AutonomousManufacturingRevolutionBanner: React.FC = () => {
       </div>
     </div>
   );
-};
+  };
 
 export default AutonomousManufacturingRevolutionBanner;

@@ -1,7 +1,9 @@
 import React from 'react';
+<<<<<<< HEAD:app_disabled/blog/ai-2026-march-breakthrough-revolution/page.tsx.backup
 import {Metadata} from 'next';
 <<<<<<< HEAD:app_disabled/blog/ai-2026-march-breakthrough-revolution/page.tsx.backup
 <<<<<<< HEAD:app/blog/ai-2026-march-breakthrough-revolution/page.tsx
+import type { Metadata } from 'next';
 
 export const metadata = {
   
@@ -191,7 +193,7 @@ origin/cursor/fix-errors-and-merge-to-main-cc0a
       </main>
     </div>
   );
-}</div></div></div></div></div></div></div></div></div>
+  }</div></div></div></div></div></div></div></div></div>
 </span>
 </span>
 </span>

@@ -374,4 +374,5 @@ export default function AI2026 Breakthrough Announcement() {/* return (<div clas
         </article>
       </div>
     </div>
-  ); }
+  );
+  }

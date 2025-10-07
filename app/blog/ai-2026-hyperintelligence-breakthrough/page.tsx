@@ -149,7 +149,7 @@ export default function AI2026HyperintelligenceBreakthrough() {
       </div>
     </div>
   );
-}
+  }
 </span>
 </span>
 </span>)

@@ -255,7 +255,7 @@ export default function AI2033UniversalConsciousnessIntegration() {
           </section>
         </article>
   );
-}</div></div></div></div></div></div></div></div></div>
+  }</div></div></div></div></div></div></div></div></div>
 </span>
 </span>
 </span>)

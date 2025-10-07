@@ -46,4 +46,5 @@ export default function SovereignVectorKnowledge Graph Page() {return (<article 
         </span>
       </div>
     </article>
-  ); }
+  );
+  }

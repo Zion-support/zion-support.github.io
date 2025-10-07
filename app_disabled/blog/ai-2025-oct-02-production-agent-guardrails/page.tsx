@@ -1,3 +1,4 @@
+import { Star } from 'lucide-react';
 import React from 'react';
 import Link from 'next/link';
 
@@ -74,24 +75,5 @@ export default function ProductionAgent Guardrails Page() {
         <ol>
           <li>Define    measurable outcomes and error budgets per journey</li>
           <li>Gate    releases with online evals and red‑team tests in CI</li>
-          <li>Start    with read‑only modes; progress to constrained writes</li>
-          <li>Scale    by domain with shared policy, logging, and budgets</li>
-        </ol>
-
-        <div className="bg-emerald-50 border-l-4 border-emerald-600 p-6 rounded">
-          <h3 className="m-0">Need    production‑grade guardrails?</h3>
-          <p className="m-0">
-            We implement approvals, verifiers, routing, and tracing tailored to
-            your KP    Is   .
-          </p>
-          <Arrow Right
-            href="/services"
-            className="inline-block mt-3 bg-emerald-600 hover:bg-emerald-700 text-white px-5 py-3 rounded"
-          >
-            Explore    Services
-          </Arrow>
-        </div>
-      </div>
-    </div>
-  );
-}
+          <li>Start    with read‑only modes;
+  }

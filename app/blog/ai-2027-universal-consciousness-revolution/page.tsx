@@ -201,7 +201,7 @@ export default function AI2027UniversalConsciousnessRevolution() {
           </div>
       </section>
   );
-}</div></div></div></div></div></div></div></div></div></div></div>
+  }</div></div></div></div></div></div></div></div></div></div></div>
 </span>
 </span>
 </span>

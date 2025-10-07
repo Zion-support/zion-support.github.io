@@ -1,3 +1,7 @@
+<<<<<<< HEAD:app_disabled/blog/quantum-ai-2026-business-intelligence-revolution/page.tsx
+import { ArrowLeft } from 'lucide-react';
+import { Star } from 'lucide-react';
+import React from 'react';
 import Link from 'next/link';
 import { ArrowLeft, ArrowRight, Bookmark, Calendar, Clock, Map, User } from 'lucide-react';
 
@@ -256,7 +260,7 @@ export default function QuantumAI Business Intelligence() {/* return (
       </article>
     </div>
   );
-}
+  }
 </Tag>
 </Clock>
 </User>

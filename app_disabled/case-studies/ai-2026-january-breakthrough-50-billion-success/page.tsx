@@ -1,3 +1,5 @@
+<<<<<<< HEAD:app_disabled/case-studies/ai-2026-january-breakthrough-50-billion-success/page.tsx
+import { Star } from 'lucide-react';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 
@@ -414,4 +416,4 @@ export default function AI2026JanuaryBreakthrough50BillionSuccess() {
       </footer>
     </div>
   );
-}
+  }

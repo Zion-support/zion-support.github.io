@@ -39,6 +39,7 @@ export default function AIOperational Trust Scorecards2026Page() {return (<div c
           <h2 className="text-2xl font-bold">Implementation    Blueprint</h2>
           <ol className="list-decimal ml-6 text-white/90 space-y-2">
             <li>
+<<<<<<< HEAD:app_disabled/blog/ai-operational-trust-scorecards-2026/page.tsx
               Define SL    Is    and KPI mappings; set budgets and alert thresholds.
             </li>
             <li>
@@ -63,3 +64,5 @@ export default function AIOperational Trust Scorecards2026Page() {return (<div c
 		</div>
 	);
 }
+              Define SL    Is    and KPI mappings;
+  }

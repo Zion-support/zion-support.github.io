@@ -60,6 +60,7 @@ export default function AutonomousRisk Mitigation Sept302025() {return (<div cla
             </div>
             <div className="bg-emerald-500/10 border border-emerald-500/30 rounded-xl p-5">
               <div className="text-3xl mb-2">⏱️</div>
+<<<<<<< HEAD:app_disabled/blog/ai-september-30-2025-autonomous-risk-mitigation/page.tsx
               <div className="text-white font-semibold">Rollback    &lt; 2s</div>
             </div>
             <div className="bg-fuchsia-500/10 border border-fuchsia-500/30 rounded-xl p-5">
@@ -96,3 +97,5 @@ export default function AutonomousRisk Mitigation Sept302025() {return (<div cla
       </div>
     </div>
   ); }
+              <div className="text-white font-semibold">Rollback    &lt;
+  }

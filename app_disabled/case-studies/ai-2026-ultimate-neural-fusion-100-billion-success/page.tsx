@@ -399,4 +399,4 @@ export default function UltimateNeuralFusionSuccess() {
       </div>
     </div>
   );
-}
+  }

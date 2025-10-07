@@ -1,3 +1,4 @@
+import { Star } from 'lucide-react';
 import React from 'react';
 import { Metadata } from 'next';
 
@@ -158,7 +159,7 @@ export default function AIMetaCognitiveSuperintelligence2029() {
       </div>
     </article>
   );
-}</div></div></div></div></div>
+  }</div></div></div></div></div>
 </span>
 </span>
 </span>)

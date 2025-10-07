@@ -1,7 +1,9 @@
 import React from 'react';
+<<<<<<< HEAD:app_disabled/blog/meta-cognitive-ai-breakthrough-2026/page.tsx.backup
 import {Metadata} from 'next';
 <<<<<<< HEAD:app_disabled/blog/meta-cognitive-ai-breakthrough-2026/page.tsx.backup
 <<<<<<< HEAD:app/blog/meta-cognitive-ai-breakthrough-2026/page.tsx
+import type { Metadata } from 'next';
 
 export const metadata = {
   
@@ -264,7 +266,7 @@ origin/cursor/fix-errors-and-merge-to-main-cc0a
                     </div>
                     <p className="text-left">{phase.description}</p>"
                     <div className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
-                      {phase.deliverables.map((deliverable, idx) => (</div></div>
+                      {phase?.deliverables.map((deliverable, idx) => (</div></div>
                         <span key={idx} className="text-left">✓ {deliverable}
                         </span></span>
                       ))}
@@ -358,7 +360,7 @@ origin/cursor/fix-errors-and-merge-to-main-cc0a
           </div>
       </section>
   );
-}</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>
+  }</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>
 </span>
 </span>
 </span>

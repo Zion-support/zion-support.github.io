@@ -1,3 +1,4 @@
+<<<<<<< HEAD:app_disabled/blog/ai-2026-future-ai-landscape-mega-trends/page.tsx.backup
 import { Metadata } from 'next';
 import { ArrowRight, Brain, Calendar, Clock, Globe, Shield, Target, TrendingUp, User, Zap } from 'lucide-react';
 <<<<<<< HEAD:app/blog/ai-2026-future-ai-landscape-mega-trends/page.tsx
@@ -12,8 +13,11 @@ export const metadata: Metadata =
   publishedTime: '2026-01-15T00:00:00.000Z',
   authors: ['Zion Tech Group']
   }
+import { Zap, ArrowRight, Target } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Star } from 'lucide-react';
 import React from 'react';
-import {Metadata} from 'next';
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import {Calendar,Clock,User,ArrowRight,TrendingUp,Brain,Zap,Shield,Globe,Target} from 'lucide-react';
 <<<<<<< HEAD:app_disabled/blog/ai-2026-future-ai-landscape-mega-trends/page.tsx.backup
@@ -268,7 +272,7 @@ export default function AI2026FutureLandscape Mega Trends() {/* return (
       </div>
     </div>
   );
-}
+  }
 </Arrow>
 </Arrow>
 </Globe>

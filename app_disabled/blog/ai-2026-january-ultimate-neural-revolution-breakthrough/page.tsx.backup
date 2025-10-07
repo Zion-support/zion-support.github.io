@@ -1,5 +1,6 @@
+import { Star } from 'lucide-react';
 import React from 'react';
-import {Metadata} from 'next';
+import type { Metadata } from 'next';
 import Link from 'next/link';
 <<<<<<< HEAD:app_disabled/blog/ai-2026-january-ultimate-neural-revolution-breakthrough/page.tsx.backup
 <<<<<<< HEAD:app/blog/ai-2026-january-ultimate-neural-revolution-breakthrough/page.tsx
@@ -176,4 +177,4 @@ export default function January2026UltimateNeural Revolution Page() {/* return (
         </div>
       </section>
   );
-}</div></div></div></div></div></div></div></div>)
+  }</div></div></div></div></div></div></div></div>)

@@ -1,3 +1,7 @@
+<<<<<<< HEAD:app_disabled/blog/ai-2026-breakthrough-innovations-mega-success/page.tsx
+import { Zap, ArrowRight, Target } from 'lucide-react';
+import { Star } from 'lucide-react';
+import React from 'react';
 import Link from 'next/link';
 import { ArrowRight, Brain, Target, TrendingUp, User, Users, Zap } from 'lucide-react';
 
@@ -168,7 +172,7 @@ export default function AI2026Breakthrough Innovations Page() {/* return (
       </section>
     </div>
   );
-}
+  }
 </Arrow>
 </Arrow>
 </Arrow>

@@ -1,3 +1,4 @@
+import { Zap, ArrowLeft, CheckCircle } from 'lucide-react';
 import React from 'react';
 import Link from 'next/link';
 import { ArrowLeft, Clock, User, Tag, Share2, BookOpen, CheckCircle, TrendingUp, Brain, Zap } from 'lucide-react';

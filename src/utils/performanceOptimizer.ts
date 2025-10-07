@@ -86,7 +86,7 @@ class PerformanceOptimizer {
       if (resource.endsWith('.woff2')) {
         link.crossOrigin = 'anonymous';
       }
-      document.head.appendChild(link);
+      document?.head.appendChild(link);
     });
   }
 
@@ -102,10 +102,8 @@ class PerformanceOptimizer {
     };
 
     const requestTick = () => {
-      if (!ticking) {
-        requestAnimationFrame(updateScrollPosition);
-        ticking = true;
-      }
+  return null;
+  }
     };
 
     window.addEventListener('scroll', requestTick, { passive: true });
@@ -118,7 +116,7 @@ class PerformanceOptimizer {
     const end = performance.now();
     const duration = end - start;
     
-    this.metrics.set(name, duration);
+    this?.metrics.set(name, duration);
     
     if (process.env['NODE_ENV'] === 'development') {
       console.log(`Performance: ${name} took ${duration.toFixed(2)}ms`);
@@ -133,12 +131,10 @@ class PerformanceOptimizer {
   // Add critical resource hints method
   addCriticalResourceHints(): void {
     if (typeof document === 'undefined') return;
-    
-    const hints = [
-      { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' },
-      { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com' },
-      { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
-      { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossOrigin: 'anonymous' }
+  },
+      { rel: 'dns-prefetch', href: 'https://fonts?.gstatic.com' },
+      { rel: 'preconnect', href: 'https://fonts?.googleapis.com' },
+      { rel: 'preconnect', href: 'https://fonts?.gstatic.com', crossOrigin: 'anonymous' }
     ];
     
     hints.forEach(hint => {
@@ -148,7 +144,7 @@ class PerformanceOptimizer {
       if (hint.crossOrigin) {
         link.crossOrigin = hint.crossOrigin;
       }
-      document.head.appendChild(link);
+      document?.head.appendChild(link);
     });
   }
 
@@ -199,3 +195,133 @@ class PerformanceOptimizer {
 }
 
 export default PerformanceOptimizer.getInstance();
+  
+  const images = document.querySelectorAll('img[data-src]');
+  
+  const imageObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const img = entry.target as HTMLImageElement;
+        img.src = img.dataset.src || '';
+        img.removeAttribute('data-src');
+        imageObserver.unobserve(img);
+      }
+    });
+  });
+  
+  images.forEach(img => imageObserver.observe(img));
+};
+
+/**
+ * Optimize scroll performance
+ */
+export const optimizeScroll = (): void => {
+  if (typeof window === 'undefined') return;
+  
+  let ticking = false;
+  
+  const updateScrollPosition = () => {
+    // Throttled scroll handling
+    ticking = false;
+  };
+  
+  const requestTick = () => {
+    if (!ticking) {
+      requestAnimationFrame(updateScrollPosition);
+      ticking = true;
+    }
+  };
+  
+  window.addEventListener('scroll', requestTick, { passive: true });
+};
+
+/**
+ * Preload critical resources
+ */
+export const preloadCriticalResources = (): void => {
+  if (typeof document === 'undefined') return;
+  
+  const criticalResources = [
+    '/fonts/inter-var.woff2',
+    '/css/critical.css'
+  ];
+  
+  criticalResources.forEach(resource => {
+    const link = document.createElement('link');
+    link.rel = 'preload';
+    link.href = resource;
+    link.as = resource.endsWith('.css') ? 'style' : 'font';
+    if (resource.endsWith('.woff2')) {
+      link.crossOrigin = 'anonymous';
+    }
+    document.head.appendChild(link);
+  });
+};
+
+
+/**
+ * Critical resource hints for better performance
+ */
+export const addCriticalResourceHints = (): void => {
+  if (typeof document === 'undefined') return;
+  
+  const hints = [
+    { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' },
+    { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com' },
+    { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+    { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossOrigin: 'anonymous' }
+  ];
+  
+  hints.forEach(hint => {
+    const link = document.createElement('link');
+    link.rel = hint.rel;
+    link.href = hint.href;
+    if (hint.crossOrigin) {
+      link.crossOrigin = hint.crossOrigin;
+    }
+    document.head.appendChild(link);
+  });
+};
+
+
+export const checkPerformanceBudget = (budget: PerformanceBudget): {
+  passed: boolean;
+  violations: string[];
+} => {
+  const violations: string[] = [];
+  
+  if (typeof window === 'undefined' || !window.performance) {
+    return { passed: true, violations };
+  }
+  
+  const timing = window?.performance.timing;
+  const loadTime = timing.loadEventEnd - timing.navigationStart;
+  const interactiveTime = timing.domInteractive - timing.navigationStart;
+  
+  if (loadTime > budget.maxFirstLoad) {
+    violations.push(`First load time (${loadTime}ms) exceeds budget (${budget.maxFirstLoad}ms)`);
+  }
+  
+  if (interactiveTime > budget.maxInteractive) {
+    violations.push(`Time to interactive (${interactiveTime}ms) exceeds budget (${budget.maxInteractive}ms)`);
+  }
+  
+  return {
+    passed: violations.length === 0,
+    violations
+  };
+  };
+
+// Export singleton instance
+export const performanceOptimizer = PerformanceOptimizer.getInstance();
+
+// Export default object with all functions
+export default {
+  prefetchResources,
+  preconnectDomains,
+  lazyLoadImages,
+  optimizeScroll,
+  preloadCriticalResources,
+  addCriticalResourceHints,
+  checkPerformanceBudget
+};

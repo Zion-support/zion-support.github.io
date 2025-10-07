@@ -1,7 +1,9 @@
 import React from 'react';
+<<<<<<< HEAD:app_disabled/blog/quantum-neural-superintelligence-2026/page.tsx.backup
 import {Metadata} from 'next';
 <<<<<<< HEAD:app_disabled/blog/quantum-neural-superintelligence-2026/page.tsx.backup
 <<<<<<< HEAD:app/blog/quantum-neural-superintelligence-2026/page.tsx
+import type { Metadata } from 'next';
 
 export const metadata = {
   
@@ -208,7 +210,7 @@ export default function QuantumNeural Superintelligence Page() {/* return (
       </div>
     </div>
   );
-}
+  }
 </span>
 </span>
 </span>

@@ -1,3 +1,4 @@
+import { Star } from 'lucide-react';
 export const metadata = {
   title:
     'Fortune 500 AI Transformation: $50M Annual Savings Case Study | Zion Tech Group',
@@ -574,4 +575,4 @@ export default function Page() {
       </article>
     </div>
   );
-}
+  }

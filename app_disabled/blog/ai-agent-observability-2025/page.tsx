@@ -145,7 +145,8 @@ export default function AI Agent Observability2025Page() {return (<>
     start Time: stringend Time: stringlatency Ms: number,
     tokens In?: number,
     tokens Out?: number,
-    tool?: {name: string; args: Record<stringunknown>; error?: string }safety?: {policy: string; decision:'allow' |'block'; score: number }}>outcome: {status:'success' |'failure'; eval Score?: number; cost    Usd   ?: number }}`}
+    tool?: {name: string;
+  }safety?: {policy: string; decision:'allow' |'block'; score: number }}>outcome: {status:'success' |'failure'; eval Score?: number; cost    Usd   ?: number }}`}
                 </pre>
               </section>
 

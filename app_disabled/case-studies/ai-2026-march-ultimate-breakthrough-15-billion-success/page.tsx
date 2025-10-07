@@ -1,3 +1,5 @@
+<<<<<<< HEAD:app_disabled/case-studies/ai-2026-march-ultimate-breakthrough-15-billion-success/page.tsx
+import { Star } from 'lucide-react';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -351,4 +353,4 @@ export default function MarchUltimateBreakthroughSuccess() {
       </div>
     </div>
   );
-}
+  }

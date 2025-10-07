@@ -43,6 +43,7 @@ export default function AIEnterprise Autonomous Agents2026() {
         <h2>Rollout    Steps</h2>
         <ol>
           <li>
+<<<<<<< HEAD:app_disabled/blog/ai-enterprise-autonomous-agents-2026/page.tsx
             Pick    one high‑value journey; define success metrics and constraints
           </li>
           <li>Ship    a guarded pilot with canary routes and rollback gates</li>
@@ -61,3 +62,5 @@ export default function AIEnterprise Autonomous Agents2026() {
     </div>
   );
 }
+            Pick    one high‑value journey;
+  }

@@ -40,6 +40,7 @@ export default function Verifiable Edge Analytics2026() {
           <p className="text-green-800">
             Ship audit‑ready, privacy‑first analytics at the edge with
             verifiable pipelines and stable SL As. Use scoped I    Ds   , device‑local
+<<<<<<< HEAD:app_disabled/blog/verifiable-edge-analytics-2026/page.tsx
             aggregation, and DP noise; sign dataflow attestations to prove
             compliance.
           </p>
@@ -101,3 +102,5 @@ export default function Verifiable Edge Analytics2026() {
     </article>
   );
 }
+            aggregation, and DP noise;
+  }

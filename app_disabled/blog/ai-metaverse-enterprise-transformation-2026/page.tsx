@@ -1,3 +1,6 @@
+<<<<<<< HEAD:app_disabled/blog/ai-metaverse-enterprise-transformation-2026/page.tsx
+import { Zap, ArrowRight, Target } from 'lucide-react';
+import React from 'react';
 import Link from 'next/link';
 import { ArrowRight, Clock, Cog, Globe, Target, User, Users, Zap } from 'lucide-react';
 
@@ -259,7 +262,7 @@ export default function AIMetaverse Enterprise Transformation2026() {/* return (
       </div>
     </div>
   );
-}
+  }
 </Globe>
 </Target>
 </Zap>

@@ -1,5 +1,6 @@
+import { Star } from 'lucide-react';
 import React from 'react';
-import {Metadata} from 'next';
+import type { Metadata } from 'next';
 
 export const metadata = {
   
@@ -388,4 +389,4 @@ export default function AI2029QuantumNeural Fusion Breakthrough() {
       </article>
     </div>
   );
-}
+  }

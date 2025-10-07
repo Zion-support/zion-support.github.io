@@ -115,4 +115,4 @@ export default function AI2027QuantumConsciousnessSingularityBanner() {
       </div>
     </section>
   );
-}
+  }

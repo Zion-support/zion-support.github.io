@@ -1,3 +1,4 @@
+import { Star } from 'lucide-react';
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
@@ -226,7 +227,7 @@ export default function AI2027AutonomousEnterpriseTransformation() {
       </div>
     </div>
   );
-}
+  }
 </path>
 </path>
 </path>

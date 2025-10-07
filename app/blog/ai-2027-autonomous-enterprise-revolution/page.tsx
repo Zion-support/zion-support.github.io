@@ -1,3 +1,4 @@
+import { Star } from 'lucide-react';
 import React from 'react';
 import Link from 'next/link';
 import { Metadata } from 'next';
@@ -258,7 +259,7 @@ export default function AutonomousEnterpriseRevolution() {
           </section>
         </article>
   );
-}</div></div></div></div></div></div></div></div></div>
+  }</div></div></div></div></div></div></div></div></div>
 </span>
 </span>
 </span>)

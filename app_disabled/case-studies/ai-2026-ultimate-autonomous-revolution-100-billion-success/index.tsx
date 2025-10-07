@@ -1,3 +1,4 @@
+import { Star } from 'lucide-react';
 // @ts-nocheck
 import type { Metadata } from 'next';
 import Link from 'next/link';
@@ -541,4 +542,4 @@ export default function AI2026UltimateAutonomousRevolution100BillionSuccess() {
       </section>
     </div>
   );
-}
+  }

@@ -169,7 +169,7 @@ export default function AI2026QuantumEnhancedAnalytics() {
         </div>
     </div>
   );
-}
+  }
 </path>
 </path>
 </path>

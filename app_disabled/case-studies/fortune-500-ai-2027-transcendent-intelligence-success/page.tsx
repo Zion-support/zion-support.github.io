@@ -422,4 +422,4 @@ export default function Fortune500AI2027Success() {
       </div>
     </div>
   );
-}
+  }

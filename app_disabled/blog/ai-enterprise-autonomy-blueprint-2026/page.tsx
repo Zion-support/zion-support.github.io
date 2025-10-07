@@ -1,3 +1,4 @@
+import { Target } from 'lucide-react';
 import React from 'react';
 export const metadata = {
   
@@ -85,4 +86,5 @@ export default function AIEnterpriseAutonomyBlueprint2026Page() {
         </article>
       </main>
     </div>
-  ); }
+  );
+  }

@@ -1,3 +1,4 @@
+import { Star } from 'lucide-react';
 import React from 'react';
 import Link from 'next/link';
 
@@ -58,6 +59,7 @@ export default function AI2026Neural Superintelligence Page() {
         <h2>Rollout    Playbook</h2>
         <ol>
           <li>
+<<<<<<< HEAD:app_disabled/blog/ai-2026-neural-superintelligence/page.tsx
             Start with one high‑value journey; define measurable KP    Is    and error
             budgets
           </li>
@@ -83,3 +85,5 @@ export default function AI2026Neural Superintelligence Page() {
     </div>
   );
 }
+            Start with one high‑value journey;
+  }

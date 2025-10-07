@@ -354,7 +354,7 @@ export default function AI2026AprilRevolutionaryBreakthrough() {
       </div>
     </div>
   );
-}
+  }
 
 </section>
 </p>

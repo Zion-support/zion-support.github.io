@@ -1,7 +1,7 @@
 import Link from 'next/link';
+<<<<<<< HEAD:app_disabled/blog/ai-2025-generative-design-systems-blueprint/page.tsx.backup
 import { ArrowLeft, ArrowRight, Calendar, Clock, User } from 'lucide-react';
 
->>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572
 export default function GenerativeDesignSystemsBlueprintPage() {
   return (
     <div>
@@ -10,6 +10,7 @@ export default function GenerativeDesignSystemsBlueprintPage() {
           <div>
             <div>
               <span>🎨 GENERATIVE DESIGN SYSTEMS</span>
+import { Star } from 'lucide-react';
 import React from 'react';
 import Link from 'next/link';
 <<<<<<< HEAD:app/blog/ai-2025-generative-design-systems-blueprint/page.tsx
@@ -104,4 +105,5 @@ export default function GenerativeDesignSystemsBlueprintPage() {
         </Link>
       </div>
     </div>
-  ); }
+  );
+  }

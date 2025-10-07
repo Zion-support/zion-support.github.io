@@ -1,3 +1,6 @@
+<<<<<<< HEAD:app_disabled/blog/ai-cognitive-computing-breakthrough-2026/page.tsx
+import { ArrowLeft } from 'lucide-react';
+import React from 'react';
 import Link from 'next/link';
 import { ArrowLeft, ArrowRight, Bookmark, Calendar, Clock, Cog, Share, User } from 'lucide-react';
 
@@ -252,7 +255,7 @@ export default function AICognitive Computing Breakthrough2026() {/* return (
       </section>
     </div>
   );
-}
+  }
 </Bookmark>
 </Share2>
 </User>

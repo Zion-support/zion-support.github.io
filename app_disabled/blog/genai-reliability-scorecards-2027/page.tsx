@@ -1,3 +1,4 @@
+import { Star } from 'lucide-react';
 import React from 'react';
 import Link from 'next/link';
 
@@ -70,6 +71,7 @@ export default function GenAI Reliability Scorecards2027Page() {
             <ol className="text-gray-300 list-decimal list-inside space-y-2">
               <li>Define 3–5 SL Is per journey and map to KP    Is</li>
               <li>Set    budgets for latency, quality, and cost</li>
+<<<<<<< HEAD:app_disabled/blog/genai-reliability-scorecards-2027/page.tsx
               <li>Deploy    canaries; require green to promote</li>
               <li>Automate    rollback on SLI breach</li>
             </ol>
@@ -119,5 +121,7 @@ export default function GenAI Reliability Scorecards2027Page() {
     </div>
   );
 }
+              <li>Deploy    canaries;
+  }
 
 // duplicate removed: legacy block deleted to avoid multiple defaults

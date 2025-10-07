@@ -1,3 +1,5 @@
+<<<<<<< HEAD:app_disabled/case-studies/ai-2026-february-transcendent-automation-1-trillion-success/page.tsx
+import { Star } from 'lucide-react';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 
@@ -559,4 +561,4 @@ export default function February2026TranscendentAutomation1TrillionSuccessPage()
       </section>
     </div>
   );
-}
+  }

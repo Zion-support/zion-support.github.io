@@ -193,7 +193,7 @@ export default function QuantumNeuralFusionBreakthroughPage() {
         </footer>
       </article>
   );
-}</div></div></div></div></div></div>
+  }</div></div></div></div></div></div>
 </span>
 </span>
 </span>

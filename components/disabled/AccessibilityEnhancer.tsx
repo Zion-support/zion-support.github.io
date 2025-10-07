@@ -14,6 +14,6 @@ const AccessibilityEnhancer = React.memo(function AccessibilityEnhancer({
       {children}
     </div>
   );
-});
+  });
 
 export default AccessibilityEnhancer;

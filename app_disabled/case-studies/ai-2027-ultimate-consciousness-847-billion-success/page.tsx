@@ -1,3 +1,5 @@
+<<<<<<< HEAD:app_disabled/case-studies/ai-2027-ultimate-consciousness-847-billion-success/page.tsx
+import { Star } from 'lucide-react';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 
@@ -657,4 +659,4 @@ export default function AI2027UltimateConsciousnessSuccessPage() {
       </section>
     </div>
   );
-}
+  }

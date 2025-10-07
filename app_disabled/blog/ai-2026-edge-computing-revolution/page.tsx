@@ -39,18 +39,8 @@ export default function AI2026Edge Computing Revolution() {/* return (
         </div>
 
         {/* Key    Metrics   */}
-        <div className="text-left"> </div><div className="text-left">&lt; 10ms</div>
-            <div className="text-left">Response    Time</div>
-      <div className="text-left">99.99%</div>
-            <div className="text-left">Uptime</div>
-      <div className="text-left">$50M+</div>
-            <div className="text-left">Cost    Savings</div>
-      <div className="text-left">500+</div>
-            <div className="text-left">Deployments</div>
-          </div>
-        </div>
-
-        {/*   Content   */}
+        <div className="text-left"> </div><div className="text-left">&lt;
+  }
         <div className="text-left"> </div><h2 className="text-left">The Edge Computing AI    Revolution</h2>
             <p className="text-left"> </p><div className="text-left"> </div><div className="text-left"> </div><h2 className="text-left">The Edge Computing AI    Revolution</h2>"
             <p className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a

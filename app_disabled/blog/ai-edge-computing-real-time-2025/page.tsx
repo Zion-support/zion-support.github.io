@@ -85,6 +85,7 @@ export default function AIEdgeComputingRealTime2025Page() {
                 Outcomes
               </h2>
               <ul className="list-disc list-inside space-y-2 text-white/85">
+<<<<<<< HEAD:app_disabled/blog/ai-edge-computing-real-time-2025/page.tsx
                 <li>P95 latency &lt; 10ms across critical flows</li>
                 <li>Bandwidth    reduced by up to 95% with on‑device filtering</li>
                 <li>
@@ -105,3 +106,5 @@ export default function AIEdgeComputingRealTime2025Page() {
       </main>
     </div>
   ); }
+                <li>P95 latency &lt;
+  }

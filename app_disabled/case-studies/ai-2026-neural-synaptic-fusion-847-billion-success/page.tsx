@@ -549,4 +549,4 @@ export default function NeuralSynapticFusionSuccessCaseStudy() {
       </section>
     </div>
   );
-}
+  }

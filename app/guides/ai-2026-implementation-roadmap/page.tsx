@@ -1,3 +1,5 @@
+import { ArrowRight, Target, CheckCircle } from 'lucide-react';
+import { Star } from 'lucide-react';
 import React from 'react';
 import Link from 'next/link';
 import { ArrowLeft, Calendar, User, Clock, Tag, Target, CheckCircle, ArrowRight } from 'lucide-react';
@@ -389,4 +391,4 @@ export default function AI2026ImplementationRoadmap() {
       </article>
     </div>
   );
-}
+  }

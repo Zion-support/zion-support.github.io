@@ -1,3 +1,5 @@
+import { ArrowRight, CheckCircle } from 'lucide-react';
+import { Star } from 'lucide-react';
 import React from 'react';
 import {
   ArrowRight,
@@ -294,4 +296,4 @@ export default function Fortune500TransformationShowcaseBanner() {
       </div>
     </div>
   );
-}
+  }

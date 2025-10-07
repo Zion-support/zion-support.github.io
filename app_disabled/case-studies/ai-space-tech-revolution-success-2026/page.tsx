@@ -1,3 +1,4 @@
+import { Zap } from 'lucide-react';
 import Link from 'next/link';
 import { ArrowRight, DollarSign, Globe, Rocket, Satellite, Zap } from 'lucide-react';
 
@@ -513,4 +514,4 @@ export default function AISpaceTechRevolutionSuccess() {
       </div>
     </div>
   );
-}
+  }

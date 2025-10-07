@@ -1,3 +1,4 @@
+import { Star } from 'lucide-react';
 import Link from 'next/link';
 
 export default function October2025AdaptiveLearningBanner() {
@@ -138,4 +139,4 @@ export default function October2025AdaptiveLearningBanner() {
       </div>
     </section>
   );
-}
+  }

@@ -1,7 +1,10 @@
+import { Star } from 'lucide-react';
 import React from 'react';
+<<<<<<< HEAD:app_disabled/blog/ai-2025-advanced-autonomous-operations/page.tsx.backup
 import {Metadata} from 'next';
 <<<<<<< HEAD:app_disabled/blog/ai-2025-advanced-autonomous-operations/page.tsx.backup
 <<<<<<< HEAD:app/blog/ai-2025-advanced-autonomous-operations/page.tsx
+import type { Metadata } from 'next';
 
 export const metadata = {
   
@@ -233,4 +236,4 @@ origin/cursor/fix-errors-and-merge-to-main-cc0a
       </div>
     </div>
   );
-})
+  })

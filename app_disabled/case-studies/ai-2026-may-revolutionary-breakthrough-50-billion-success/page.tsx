@@ -1,3 +1,5 @@
+<<<<<<< HEAD:app_disabled/case-studies/ai-2026-may-revolutionary-breakthrough-50-billion-success/page.tsx
+import { Star } from 'lucide-react';
 import type { Metadata } from 'next';
 import fs from 'fs';
 import path from 'path';
@@ -83,4 +85,4 @@ export default function May2026RevolutionaryBreakthroughCaseStudyPage() {
       </article>
     </div>
   );
-}
+  }

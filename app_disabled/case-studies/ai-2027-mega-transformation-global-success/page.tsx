@@ -1,3 +1,5 @@
+<<<<<<< HEAD:app_disabled/case-studies/ai-2027-mega-transformation-global-success/page.tsx
+import { Star } from 'lucide-react';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -505,4 +507,4 @@ export default function AI2027MegaTransformationSuccess() {
       </article>
     </div>
   );
-}
+  }

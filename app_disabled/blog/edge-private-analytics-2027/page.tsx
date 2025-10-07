@@ -58,6 +58,7 @@ export default function Edge Private Analytics2027Page() {
             <div className="grid md:grid-cols-3 gap-4">
               <div className="rounded-xl p-4 border border-indigo-800/40 bg-indigo-900/20">
                 <div className="text-indigo-300 text-sm">Latency</div>
+<<<<<<< HEAD:app_disabled/blog/edge-private-analytics-2027/page.tsx
                 <div className="text-white text-2xl font-bold">&lt;100ms</div>
               </div>
               <div className="rounded-xl p-4 border border-indigo-800/40 bg-indigo-900/20">
@@ -115,3 +116,5 @@ export default function Edge Private Analytics2027Page() {
     </div>
   );
 }
+                <div className="text-white text-2xl font-bold">&lt;
+  }

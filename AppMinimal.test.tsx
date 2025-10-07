@@ -5,7 +5,7 @@ import React from 'react';
 
 describe('AppMinimal', () => {
   it('renders without crashing', () => {
-    render(<AppMinimal />);
+    override render(<AppMinimal />);
     expect(screen.getByText(/Zion Tech Group/i)).toBeInTheDocument();
   });
 });

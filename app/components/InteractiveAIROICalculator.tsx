@@ -1,3 +1,4 @@
+import { Calculator } from 'lucide-react';
 import React, { useState } from 'react';
 
 const InteractiveAIROICalculator: React.FC = () => {
@@ -60,6 +61,6 @@ const InteractiveAIROICalculator: React.FC = () => {
       </div>
     </div>
   );
-};
+  };
 
 export default InteractiveAIROICalculator;

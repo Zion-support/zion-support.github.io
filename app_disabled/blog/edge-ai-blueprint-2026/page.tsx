@@ -135,6 +135,7 @@ export default function EdgeAIBlueprint2026Page() {return (<div className="min-h
       </section>
     </div>
   );
+<<<<<<< HEAD:app_disabled/blog/edge-ai-blueprint-2026/page.tsx
 }
 
 function RelatedArticleCard({ title, description, href }: { title: string; description: string; href: string }) {
@@ -147,3 +148,19 @@ function RelatedArticleCard({ title, description, href }: { title: string; descr
   );
 }
 
+  }function RelatedArticle Card ({
+  title,
+  descriptionhref,
+}: {title: "string;",
+  description: "string;",
+  href: string;
+}) {return (<Arrow Right
+      href={href}
+     className="block bg-white rounded-lg p-6 hover:shadow-lg transition-all duration-300"
+    >
+      <h3 className="text-xl font-bold text-gray-900 mb-3">{title}</h3>
+      <p className="text-gray-600 mb-4">{description}</p>
+      <span className="text-cyan-700 font-semibold">Read    More    →</span>
+    </Arrow>
+  );
+  }

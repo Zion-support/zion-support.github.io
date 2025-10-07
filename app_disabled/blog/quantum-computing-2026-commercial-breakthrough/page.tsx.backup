@@ -1,3 +1,4 @@
+<<<<<<< HEAD:app_disabled/blog/quantum-computing-2026-commercial-breakthrough/page.tsx.backup
 import { Metadata } from 'next';
 import { ArrowRight, Brain, Calendar, Clock, Cpu, Shield, Target, TrendingUp, User, Zap } from 'lucide-react';
 <<<<<<< HEAD:app/blog/quantum-computing-2026-commercial-breakthrough/page.tsx
@@ -12,8 +13,12 @@ export const metadata: Metadata =
   publishedTime: '2026-01-15T00:00:00.000Z',
   authors: ['Zion Tech Group']
   }
+import { Zap, ArrowRight, Target } from 'lucide-react';
+import { Cpu } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Star } from 'lucide-react';
 import React from 'react';
-import {Metadata} from 'next';
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import {Calendar,Clock,User,ArrowRight,Zap,Cpu,Shield,TrendingUp,Target,Brain} from 'lucide-react';
 <<<<<<< HEAD:app_disabled/blog/quantum-computing-2026-commercial-breakthrough/page.tsx.backup
@@ -305,7 +310,7 @@ export default function QuantumComputing2026 Commercial Breakthrough() {/* retur
       </div>
     </div>
   );
-}
+  }
 </Arrow>
 </Arrow>
 </Shield>

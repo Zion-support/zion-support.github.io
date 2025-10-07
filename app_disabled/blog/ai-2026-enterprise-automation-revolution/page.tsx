@@ -1,3 +1,9 @@
+<<<<<<< HEAD:app_disabled/blog/ai-2026-enterprise-automation-revolution/page.tsx
+import { Zap } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Star } from 'lucide-react';
+import { Calculator } from 'lucide-react';
+import React from 'react';
 import Link from 'next/link';
 import { ArrowRight, BarChart3, Calculator, Cog, Shield, TrendingUp, User, Users, Zap } from 'lucide-react';
 
@@ -252,7 +258,7 @@ export default function AI2026Enterprise Automation Revolution() {/* return (
       </div>
     </div>
   );
-}
+  }
 </Shield>
 </Bar>
 </Zap>

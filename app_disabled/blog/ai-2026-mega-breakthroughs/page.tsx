@@ -1,3 +1,8 @@
+<<<<<<< HEAD:app_disabled/blog/ai-2026-mega-breakthroughs/page.tsx
+import { Zap, ArrowRight, Target } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Star } from 'lucide-react';
+import React from 'react';
 import Link from 'next/link';
 import { ArrowRight, Brain, Rocket, Shield, Target, Zap } from 'lucide-react';
 
@@ -286,7 +291,7 @@ export default function AI2026 Mega Breakthroughs() {/* return (
         </div>
     </div>
   );
-}
+  }
 </Target>
 </Shield>
 </Brain>

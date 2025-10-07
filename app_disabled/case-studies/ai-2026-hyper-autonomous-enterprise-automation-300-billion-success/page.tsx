@@ -1,3 +1,5 @@
+<<<<<<< HEAD:app_disabled/case-studies/ai-2026-hyper-autonomous-enterprise-automation-300-billion-success/page.tsx
+import { Star } from 'lucide-react';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -433,4 +435,4 @@ export default function AI2026HyperAutonomousEnterpriseAutomation300BillionSucce
       </section>
     </div>
   );
-}
+  }

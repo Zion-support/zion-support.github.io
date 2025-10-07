@@ -1,3 +1,5 @@
+<<<<<<< HEAD:app_disabled/case-studies/fortune-500-ai-2027-transcendent-intelligence-infinite-success/page.tsx
+import { Star } from 'lucide-react';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -494,4 +496,4 @@ export default function Fortune500AI2027TranscendentIntelligenceInfiniteSuccess(
       </section>
     </div>
   );
-}
+  }

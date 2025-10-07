@@ -1,3 +1,6 @@
+<<<<<<< HEAD:app_disabled/blog/ai-autonomous-robotics-2026/page.tsx
+import { Zap, ArrowRight, Target } from 'lucide-react';
+import React from 'react';
 import Link from 'next/link';
 import { ArrowRight, Bot, Clock, Cog, Target, TrendingUp, Zap } from 'lucide-react';
 
@@ -263,7 +266,7 @@ export default function AI Autonomous Robotics2026() {/* return (
       </div>
     </div>
   );
-}
+  }
 </Trending>
 </Target>
 </Zap>

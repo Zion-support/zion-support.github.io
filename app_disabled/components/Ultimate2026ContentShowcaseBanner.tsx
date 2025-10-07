@@ -1,3 +1,4 @@
+import { Star } from 'lucide-react';
 import Link from 'next/link';
 
 export default function Ultimate2026ContentShowcaseBanner() {
@@ -252,4 +253,4 @@ export default function Ultimate2026ContentShowcaseBanner() {
       </div>
     </section>
   );
-}
+  }

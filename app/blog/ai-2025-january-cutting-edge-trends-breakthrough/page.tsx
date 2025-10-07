@@ -166,7 +166,7 @@ export default function CuttingEdgeAITrends2025() {
       </section>
     </div>
   );
-}
+  }
 </span>
 </span>
 </span>

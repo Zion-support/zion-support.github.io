@@ -1,3 +1,4 @@
+import { Star } from 'lucide-react';
 import React from 'react';
 import Link from 'next/link';
 
@@ -106,6 +107,7 @@ export default function AINeuromorphicEnterpriseComputing2026() {
                 <div className="text-left">Faster    Processing</div>
       <div className="text-left">99.9%</div>
                 <div className="text-left">Uptime</div>
+<<<<<<< HEAD:app_disabled/blog/ai-neuromorphic-enterprise-computing-2026/page.tsx
       <div className="text-left">&lt;1ms</div>
                 <div className="text-left">Latency</div>
               </div>
@@ -247,3 +249,5 @@ origin/cursor/fix-errors-and-merge-to-main-cc0a
       </article>
   );
 }</div></div></div></div></div></div></div></div></div></div>)
+      <div className="text-left">&lt;
+  }</div></div></div></div></div></div></div></div></div></div>)

@@ -54,6 +54,6 @@ const EnhancedHeader: React.FC = () => {
       </div>
     </header>
   );
-};
+  };
 
 export default EnhancedHeader;

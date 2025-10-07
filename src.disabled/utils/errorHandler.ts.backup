@@ -36,13 +36,13 @@ class ErrorHandler {
       stack: typeof error === 'string' ? '' : error.stack || '',
       context: {
         timestamp: Date.now(),
-<<<<<<< HEAD
+<<<<<<< HEAD:src.disabled/utils/errorHandler.ts.backup
         userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : '',
-=======
-        userAgent:
-          typeof window !== 'undefined' ? window.navigator.userAgent : '',
->>>>>>> main
         url: typeof window !== 'undefined' ? window.location.href : '',
+        userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : undefined,
+        url: typeof window !== 'undefined' ? window.location.href : undefined,
+        userAgent: typeof window !== 'undefined' ? window?.navigator.userAgent : undefined,
+        url: typeof window !== 'undefined' ? window?.location.href : undefined,
         ...context,
       } as ErrorContext,
       severity,
@@ -56,17 +56,16 @@ class ErrorHandler {
     }
 
     // Log to console in development
-<<<<<<< HEAD
     if (process.env.NODE_ENV === 'development') {
+<<<<<<< HEAD:src.disabled/utils/errorHandler.ts.backup
       // Error logged
-=======
-    if (process.env['NODE_ENV'] === 'development') {
       console.error('Error logged:', errorReport);
->>>>>>> main
     }
 
     // Send to external service in production
+<<<<<<< HEAD:src.disabled/utils/errorHandler.ts.backup
     if (process.env['NODE_ENV'] === 'production') {
+    if (process.env.NODE_ENV === 'production') {
       this.sendToErrorService(errorReport);
     }
   }

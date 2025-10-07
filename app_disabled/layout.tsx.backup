@@ -212,7 +212,10 @@ function Header() {
       </nav>
     </header>
   );
+<<<<<<< HEAD:app_disabled/layout.tsx.backup
 }
+  }
+
 function Footer() {
   return (
     <footer className='border-t border-gray-200 mt-10 py-6 bg-gray-50'>
@@ -408,7 +411,10 @@ function Footer() {
       </div>
     </footer>
   );
+<<<<<<< HEAD:app_disabled/layout.tsx.backup
 }
+  }
+
 export default function RootLayout({
   children,
 }: {
@@ -425,4 +431,4 @@ export default function RootLayout({
       </body>
     </html>
   );
-}
+  }

@@ -1,3 +1,4 @@
+import { Star } from 'lucide-react';
 import React from 'react';
 export const metadata = {
   
@@ -150,4 +151,5 @@ export default function AI Enterprise Automation2026() {return (<article classNa
         </div>
       </div>
     </article>
-  ); }
+  );
+  }

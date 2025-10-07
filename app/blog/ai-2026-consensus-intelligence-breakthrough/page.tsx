@@ -1,3 +1,4 @@
+import { Star } from 'lucide-react';
 import React from 'react';
 import { Metadata } from 'next';
 
@@ -137,7 +138,7 @@ export default function ConsensusIntelligencePage() {
             </div>
         </article>
   );
-}</div></div></div></div></div></div></div>
+  }</div></div></div></div></div></div></div>
 </span>
 </span>
 </span>

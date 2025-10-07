@@ -1,3 +1,6 @@
+<<<<<<< HEAD:app_disabled/blog/ai-cognitive-superintelligence-2026/page.tsx
+import { Zap, ArrowRight, Target } from 'lucide-react';
+import React from 'react';
 import Link from 'next/link';
 import { ArrowRight, Brain, Clock, Cog, Target, TrendingUp, Zap } from 'lucide-react';
 
@@ -259,7 +262,7 @@ export default function AI Cognitive Superintelligence2026() {/* return (
       </div>
     </div>
   );
-}
+  }
 </Trending>
 </Target>
 </Zap>

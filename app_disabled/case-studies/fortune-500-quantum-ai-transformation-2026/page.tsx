@@ -1,3 +1,5 @@
+import { ArrowRight, CheckCircle } from 'lucide-react';
+import { Star } from 'lucide-react';
 import Link from 'next/link';
 import { ArrowRight, CheckCircle, DollarSign, TrendingUp, Users } from 'lucide-react';
 
@@ -471,4 +473,4 @@ export default function Fortune500QuantumAITransformation2026() {
       </section>
     </div>
   );
-}
+  }

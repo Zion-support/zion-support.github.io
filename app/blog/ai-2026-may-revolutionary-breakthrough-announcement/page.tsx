@@ -1,3 +1,4 @@
+import { Star } from 'lucide-react';
 import React from 'react';
 import { Metadata } from 'next';
 import fs from 'fs';
@@ -24,8 +25,7 @@ export default function May2026RevolutionaryBreakthroughPage() {
 export default function May2026Revolutionary Breakthrough Page() {/* return (
     <div> content */}
   const file Path = path.join(process.cwd(), 'content', 'blog', 'ai-2026-may-revolutionary-breakthrough-announcement.md');
-  const file Contents = fs.read File Sync(file Path, 'utf8');
-  const { data, content } = matter(file    Contents   );
+  } = matter(file    Contents   );
 
     <div>
       <div> </div><div> </div></div>

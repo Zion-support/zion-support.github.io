@@ -46,5 +46,6 @@ export default defineConfig({
   },
   define: {
     __DEV__: JSON.stringify(process.env['NODE_ENV'] === 'development'),
+    __DEV__: JSON.stringify(process.env.NODE_ENV === 'development'),
   },
 });

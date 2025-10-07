@@ -1,5 +1,6 @@
+import { Star } from 'lucide-react';
 import React from 'react';
-import {Metadata} from 'next';
+import type { Metadata } from 'next';
 import Link from 'next/link';
 <<<<<<< HEAD:app_disabled/blog/ai-2026-february-transcendent-automation-revolution/page.tsx.backup
 <<<<<<< HEAD:app/blog/ai-2026-february-transcendent-automation-revolution/page.tsx
@@ -207,4 +208,4 @@ export default function February2026TranscendentAutomation Revolution Page() {/*
         </div>
       </section>
   );
-}</div></div></div></div></div></div></div></div></div></div>)
+  }</div></div></div></div></div></div></div></div></div></div>)

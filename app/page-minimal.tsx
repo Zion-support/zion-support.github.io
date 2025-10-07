@@ -1,3 +1,4 @@
+import { Star } from 'lucide-react';
 import React from 'react';
 import Link from 'next/link';
 import { ArrowRight, Phone, CheckCircle, Star } from 'lucide-react';

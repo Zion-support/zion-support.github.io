@@ -1,7 +1,10 @@
+import { Star } from 'lucide-react';
 import React from 'react';
+<<<<<<< HEAD:app_disabled/blog/ai-2025-february-quantum-ai-breakthrough-enterprise-transformation/page.tsx.backup
 import {Metadata} from 'next';
 <<<<<<< HEAD:app_disabled/blog/ai-2025-february-quantum-ai-breakthrough-enterprise-transformation/page.tsx.backup
 <<<<<<< HEAD:app/blog/ai-2025-february-quantum-ai-breakthrough-enterprise-transformation/page.tsx
+import type { Metadata } from 'next';
 
 export const metadata = {
   
@@ -213,4 +216,4 @@ origin/cursor/fix-errors-and-merge-to-main-cc0a
         </div>
       </section>
   );
-}</div></div></div></div></div></div></div></div></div></div>)
+  }</div></div></div></div></div></div></div></div></div></div>)

@@ -1,5 +1,5 @@
 import React from 'react';
-import {Metadata} from 'next';
+import type { Metadata } from 'next';
 import Link from 'next/link';
 <<<<<<< HEAD:app_disabled/blog/ai-2026-january-autonomous-enterprise-operations-revolution/page.tsx.backup
 <<<<<<< HEAD:app/blog/ai-2026-january-autonomous-enterprise-operations-revolution/page.tsx
@@ -196,7 +196,7 @@ export default function January2026AutonomousEnterprise Operations Revolution() 
     </li>
     </li>
   );
-}</div></div></div></div></div></div></div></div></div>
+  }</div></div></div></div></div></div></div></div></div>
 </span>
 </span>
 </span>

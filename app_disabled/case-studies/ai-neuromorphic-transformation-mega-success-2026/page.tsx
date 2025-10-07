@@ -1,3 +1,5 @@
+import { Target } from 'lucide-react';
+import { Star } from 'lucide-react';
 import Link from 'next/link';
 export const metadata = {
   title:
@@ -182,6 +184,7 @@ export default function AINeuromorphicTransformationMegaSuccess2026() {
               </div>
               <div className='text-center p-4 bg-white rounded-lg'>
                 <div className='text-3xl font-bold text-orange-600 mb-2'>
+<<<<<<< HEAD:app_disabled/case-studies/ai-neuromorphic-transformation-mega-success-2026/page.tsx
                   &lt;1ms
                 </div>
                 <div className='text-sm text-gray-600'>Latency</div>
@@ -520,3 +523,5 @@ export default function AINeuromorphicTransformationMegaSuccess2026() {
     </div>
   );
 }
+                  &lt;
+  }

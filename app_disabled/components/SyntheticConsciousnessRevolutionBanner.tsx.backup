@@ -1,3 +1,5 @@
+import { Zap } from 'lucide-react';
+import Link from 'next/link';
 import React from 'react';
 <<<<<<< HEAD:app/components/SyntheticConsciousnessRevolutionBanner.tsx
 import { ArrowRight, Brain, TrendingUp, Zap, Link } from 'lucide-react';
@@ -160,5 +162,8 @@ const SyntheticConsciousnessRevolutionBanner: React.FC = () => {
       </div>
     </div>
   );
+<<<<<<< HEAD:app_disabled/components/SyntheticConsciousnessRevolutionBanner.tsx.backup
 };
+  };
+
 export default SyntheticConsciousnessRevolutionBanner;

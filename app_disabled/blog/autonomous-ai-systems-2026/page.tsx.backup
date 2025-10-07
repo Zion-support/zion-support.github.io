@@ -1,7 +1,9 @@
 import React from 'react';
+<<<<<<< HEAD:app_disabled/blog/autonomous-ai-systems-2026/page.tsx.backup
 import {Metadata} from 'next';
 <<<<<<< HEAD:app_disabled/blog/autonomous-ai-systems-2026/page.tsx.backup
 <<<<<<< HEAD:app/blog/autonomous-ai-systems-2026/page.tsx
+import type { Metadata } from 'next';
 
 export const metadata = {
   
@@ -128,7 +130,7 @@ export default function AutonomousAISystems2026() {/* return (
       </div>
     </div>
   );
-}
+  }
 </span>
 </span>
 </span>

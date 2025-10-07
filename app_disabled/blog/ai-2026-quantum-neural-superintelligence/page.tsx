@@ -1,3 +1,7 @@
+<<<<<<< HEAD:app_disabled/blog/ai-2026-quantum-neural-superintelligence/page.tsx
+import { Zap, ArrowRight, Target } from 'lucide-react';
+import { Cpu } from 'lucide-react';
+import React from 'react';
 import Link from 'next/link';
 import { ArrowRight, Brain, Cpu, Target, TrendingUp, Zap } from 'lucide-react';
 
@@ -232,7 +236,7 @@ origin/cursor/fix-errors-and-merge-to-main-cc0a
       </div>
     </div>
   );
-}
+  }
 </Trending>
 </Arrow>
 </Target>

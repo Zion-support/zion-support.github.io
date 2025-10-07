@@ -482,4 +482,4 @@ export default function AI2030UniversalConsciousnessMegaSuccess() {
       </article>
     </div>
   );
-}
+  }

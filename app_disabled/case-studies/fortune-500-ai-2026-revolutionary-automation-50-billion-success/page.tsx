@@ -1,3 +1,5 @@
+<<<<<<< HEAD:app_disabled/case-studies/fortune-500-ai-2026-revolutionary-automation-50-billion-success/page.tsx
+import { Star } from 'lucide-react';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -452,4 +454,4 @@ export default function Fortune500AI2026RevolutionaryAutomation50BillionSuccess(
       </div>
     </div>
   );
-}
+  }

@@ -1,3 +1,4 @@
+import { ArrowRight, Target, CheckCircle } from 'lucide-react';
 import React from 'react';
 import Link from 'next/link';
 import { ArrowRight, Calendar, Clock, Users, TrendingUp, DollarSign, Target, CheckCircle } from 'lucide-react';

@@ -32,6 +32,14 @@ const performanceOptimizer = {
 export const monitoring = {
   analytics,
   performanceOptimizer,
+import { analytics } from './utils/analytics';
+import { errorHandler } from './utils/errorHandler';
+import { performanceOptimizer } from './utils/performanceOptimizer';
+
+// Initialize performance monitoring
+if (typeof window !== 'undefined') {
+  // Track page load
+  analytics.trackPageView(window.location.pathname);
   
   init: () => {
     console.log('Monitoring initialized');
@@ -80,6 +88,10 @@ class PerformanceMonitor {
   reset() {
     this.metrics = {};
     this.startTime = 0;
+  // Track Web Vitals
+  const metrics = performanceOptimizer.measurePageLoad();
+  if (metrics) {
+    performanceOptimizer.reportWebVitals(metrics);
   }
 }
 

@@ -1,3 +1,4 @@
+import { Star } from 'lucide-react';
 import Link from 'next/link';
 export const metadata = {
   title:
@@ -268,6 +269,7 @@ export default function AI2026RevolutionaryAutonomousEnterpriseSuccess() {
               <ul className='space-y-2 text-gray-700'>
                 <li>• 1000x processing speed improvement</li>
                 <li>• 99.9% decision accuracy</li>
+<<<<<<< HEAD:app_disabled/case-studies/ai-2026-revolutionary-autonomous-enterprise-success/page.tsx
                 <li>• &lt;1ms response time</li>
                 <li>• Zero-downtime operations</li>
                 <li>• Self-healing systems</li>
@@ -420,3 +422,5 @@ export default function AI2026RevolutionaryAutonomousEnterpriseSuccess() {
     </div>
   );
 }
+                <li>• &lt;
+  }

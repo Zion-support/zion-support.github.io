@@ -1,3 +1,5 @@
+<<<<<<< HEAD:app_disabled/case-studies/ai-2026-adaptive-neural-architectures-25-billion-success/page.tsx
+import { Star } from 'lucide-react';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -414,4 +416,4 @@ export default function AdaptiveNeuralArchitecturesSuccessPage() {
       </section>
     </div>
   );
-}
+  }
