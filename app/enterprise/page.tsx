@@ -237,9 +237,6 @@ export default function EnterprisePage() {
           </div>
         </div>
       </section>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7510
     </div>
   );
-};
-
-export default EnterprisePage;
+}

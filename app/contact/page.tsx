@@ -110,7 +110,6 @@ const ContactPage: React.FC = () => {
             </div>
           </div>
         </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7510
       </div>
     </div>
   );
