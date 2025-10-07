@@ -304,8 +304,8 @@ export class ErrorHandler {
           timestamp: error.timestamp.toISOString(),
         }),
       });
-    } catch (reportErr) {
-      console.error('Failed to report error:', reportErr);
+    } catch (err) {
+      console.error('Failed to report error:', err);
     }
   }
 
@@ -402,8 +402,7 @@ export class ErrorHandler {
         console.log(`Retrying network request (attempt ${retryItem.retryCount})`);
         // Add your retry logic here
       }
-    } catch (retryErr) {
-      console.error('Retry failed:', retryErr);
+    } catch {
       if (retryItem.retryCount < this.config.maxRetries) {
         this.scheduleRetry(retryItem.error);
       } else {
