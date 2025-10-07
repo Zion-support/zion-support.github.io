@@ -1,26 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-
-const ContactPage: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-slate-50 py-16">
-      <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-bold text-gray-900 mb-8 text-center">
-          Contact Us
-        </h1>
-        <div className="max-w-4xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8">
-          <div className="bg-white p-6 rounded-lg shadow-md">
-            <h3 className="text-xl font-semibold mb-4">Get in Touch</h3>
-            <form className="space-y-4">
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Name
-                </label>
-                <input
-                  type="text"
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                />
-=======
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -116,7 +94,6 @@ const ContactPage: React.FC = () => {
                     Send Message
                   </button>
                 </form>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e7b
               </div>
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">

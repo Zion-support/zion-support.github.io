@@ -3,37 +3,11 @@ import Link from 'next/link';
 export const metadata = {
   title: 'Enterprise Solutions - Zion Tech Group',
   description:
-<<<<<<< HEAD
-    'Comprehensive enterprise AI and IT solutions designed for Fortune 500 companies. Transform your business with our advanced autonomous systems and quantum computing solutions.',
-  keywords:
-    'enterprise AI, Fortune 500, autonomous systems, quantum computing, enterprise transformation, business intelligence',
-=======
     'Enterprise-grade AI and IT solutions designed for large organizations. Scalable, secure, and reliable technology solutions.',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e7b
 };
 
 export default function EnterprisePage() {
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      {/* Hero Section */}
-      <header className="relative overflow-hidden">
-        <div className="absolute inset-0">
-          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl animate-pulse"></div>
-          <div
-            className="absolute top-3/4 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse"
-            style={{ animationDelay: '2s' }}
-          ></div>
-        </div>
-
-        <div className="relative z-10 container mx-auto px-4 py-24">
-          <div className="text-center">
-            <div className="flex items-center justify-center gap-3 mb-6">
-              <span className="text-2xl">🏢</span>
-              <span className="text-cyan-400 font-bold text-xl">
-                Enterprise AI Solutions
-              </span>
-=======
     <>
       <div className='min-h-screen bg-slate-50 py-16'>
         <div className='container mx-auto px-4'>
@@ -45,7 +19,6 @@ export default function EnterprisePage() {
               <p className='text-xl text-gray-600'>
                 Advanced AI and IT solutions designed for large organizations
               </p>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e7b
             </div>
 
             <h1 className="text-5xl md:text-7xl font-extrabold text-white mb-8">

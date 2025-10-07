@@ -4,8 +4,6 @@
 
 import '@testing-library/jest-dom';
 
-<<<<<<< HEAD
-=======
 // Suppress jsdom navigation warnings
 // eslint-disable-next-line no-console
 const originalConsoleError = console.error;
@@ -21,7 +19,6 @@ console.error = (...args) => {
   originalConsoleError(...args);
 };
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e7b
 // Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {
   writable: true,
@@ -107,11 +104,6 @@ Object.defineProperty(window, 'performance', {
   },
 });
 
-<<<<<<< HEAD
-// Mock requestAnimationFrame
-global.requestAnimationFrame = (callback: FrameRequestCallback) => {
-  return setTimeout(callback, 0);
-=======
 // Mock localStorage
 const localStorageMock = {
   getItem: jest.fn(),
@@ -161,7 +153,6 @@ global.PerformanceObserver = class MockPerformanceObserver {
   takeRecords() {
     return [];
   }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e7b
 };
 
 global.cancelAnimationFrame = (id: number) => {
