@@ -18,6 +18,9 @@ const EnterprisePage = lazy(() => import('./enterprise/page'));
 // Utils
 import performanceOptimizer from '../src/utils/performanceOptimizer';
 
+// Utils
+import { performanceOptimizer } from './utils/performanceOptimizer';
+
 // Styles
 import '../src/index.css';
 
@@ -33,8 +36,13 @@ const App: React.FC = () => {
     });
 
     // Initialize performance monitoring
-    if (performanceOptimizer) {
-      performanceOptimizer.lazyLoadImages();
+    performanceOptimizer.lazyLoadImages();
+    // Initialize Web Vitals monitoring
+    if (typeof window !== 'undefined' && 'performance' in window) {
+      const metrics = performanceOptimizer.measurePageLoad();
+      if (metrics) {
+        performanceOptimizer.reportWebVitals(metrics);
+      }
     }
   }, []);
 
