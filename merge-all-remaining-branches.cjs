@@ -185,4 +185,3 @@ async function main() {
 
 // Run the script
 main().catch(console.error);
->>>>>>> origin/fix-errors-and-merge-final

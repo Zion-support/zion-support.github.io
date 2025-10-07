@@ -19,6 +19,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 
   useEffect(() => {
     // Initialize performance monitoring
+import performanceOptimizer, { WebVitalsMetrics } from '../utils/performanceOptimizer';
     // Add critical resource hints manually
     if (typeof document !== 'undefined') {
       const hints = [
@@ -43,6 +44,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       });
     }
 
+    
     // Measure page load performance
     const pageLoadMetrics = performanceOptimizer.measurePageLoad();
     if (pageLoadMetrics) {

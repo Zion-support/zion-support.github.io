@@ -57,6 +57,7 @@ class Analytics {
       userAgent: window.navigator.userAgent,
       language: window.navigator.language,
       timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
+      referrer: document.referrer || '',
       referrer: document.referrer || undefined,
     };
   }
@@ -79,6 +80,18 @@ class Analytics {
       label,
       value,
       properties,
+      action: action || '',
+      label: label || undefined,
+      value,
+      properties,
+      action: action || '',
+      label: label || '',
+      value: value || 0,
+      properties: properties || {},
+      action: action || undefined,
+      label: label || undefined,
+      value: value || undefined,
+      properties: properties || undefined,
       timestamp: Date.now(),
     };
 
@@ -89,6 +102,7 @@ class Analytics {
 
     // Log in development
     if (process.env.NODE_ENV === 'development') {
+    if (process.env['NODE_ENV'] === 'development') {
       console.log('Analytics event:', event);
     }
   }
