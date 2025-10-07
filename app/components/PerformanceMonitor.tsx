@@ -16,8 +16,8 @@ const PerformanceMonitor: React.FC = () => {
     // Web Vitals monitoring
     const reportWebVitals = (metric: { name: string; value: number; id?: string }) => {
       // Send to analytics service
-      if (typeof window !== 'undefined' && (window as { gtag?: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag) {
-        (window as unknown as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag('event', 'web_vitals', {
+      if (typeof window !== 'undefined' && (window as { gtag?: (command: string, eventName: string, parameters: Record<string, unknown>) => void }).gtag) {
+        (window as unknown as { gtag: (command: string, eventName: string, parameters: Record<string, unknown>) => void }).gtag('event', 'web_vitals', {
           event_category: 'Performance',
           event_label: metric.name,
           value: Math.round(metric.value),
