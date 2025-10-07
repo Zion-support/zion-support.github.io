@@ -1,6 +1,5 @@
 'use client';
 
-<<<<<<< HEAD
 import React, { Suspense, lazy, useCallback, useEffect } from 'react';
 import Link from 'next/link';
 import { HelmetProvider } from 'react-helmet-async';
@@ -10,11 +9,7 @@ import AdvancedErrorBoundary from './components/AdvancedErrorBoundary';
 import AdvancedSEOOptimizer from './components/AdvancedSEOOptimizer';
 import AdvancedPerformanceMonitor from './components/AdvancedPerformanceMonitor';
 import SEOEnhancer from './components/SEOEnhancer';
-=======
-// Components
 import SEOOptimizer from './components/SEOOptimizer';
-import AccessibilityEnhancer from './components/AccessibilityEnhancer';
->>>>>>> 800d0c7aac9826a6606b7f370413ac3309436671
 import PerformanceDashboard from './components/PerformanceDashboard';
 import LoadingSpinner from './components/LoadingSpinner';
 
@@ -28,12 +23,8 @@ const InteractiveAIROICalculator = lazy(
 );
 
 // Utils
-<<<<<<< HEAD
 import { lazyLoadImages, preloadCriticalResources, collectPerformanceMetrics, performanceOptimizer } from './utils/performanceOptimizer';
 import { logger } from './utils/logger';
-=======
-import { performanceOptimizer, collectPerformanceMetrics } from './utils/performanceOptimizer';
->>>>>>> 800d0c7aac9826a6606b7f370413ac3309436671
 
 // Styles
 import './globals.css';
@@ -110,8 +101,4 @@ const App: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 export default App;
-=======
-export default App;
->>>>>>> 800d0c7aac9826a6606b7f370413ac3309436671

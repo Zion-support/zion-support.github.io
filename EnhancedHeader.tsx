@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 // import { Menu, X } from 'lucide-react';
-=======
->>>>>>> 800d0c7aac9826a6606b7f370413ac3309436671
 import React, { useState } from 'react';
 import Link from 'next/link';
 
