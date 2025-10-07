@@ -2,9 +2,13 @@ import { Star } from 'lucide-react';
 import React from 'react';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = 
   title: 'February 2026 AI Mega Breakthrough Revolution: The Future is Here',
   description: 'Discover the revolutionary AI breakthroughs that are transforming enterprise operations in February 2026. Meta-cognitive AI, quantum-neural fusion, and autonomous operations delivering unprecedented results.',
+export const metadata = {
+  
+  title: "February 2026 AI Mega Breakthrough Revolution: The Future is Here",
+  description: "Discover the revolutionary AI breakthroughs that are transforming enterprise operations in February 2026. Meta-cognitive AI, quantum-neural fusion, and autonomous operations delivering unprecedented results.",
   keywords: ['AI', 'Breakthrough', '2026', 'Enterprise', 'Quantum', 'Meta-Cognitive', 'Autonomous'],
   authors: [{ name: 'Zion Tech Group' }],
   openGraph: {

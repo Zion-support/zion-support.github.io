@@ -96,12 +96,10 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     if (typeof window === 'undefined' || !('performance' in window)) return;
 
     const resources = performance.getEntriesByType('resource');
-    const slowResources = resources
-      .filter((resource): resource is PerformanceResourceTiming => resource.entryType === 'resource')
-      .filter((resource) => resource.duration > 1000);
+    const slowResources = resources.filter((resource: PerformanceResourceTiming) => resource.duration > 1000);
     
     if (slowResources.length > 0) {
-      console.warn('Slow resources detected:', slowResources.map((r) => ({
+      console.warn('Slow resources detected:', slowResources.map((r: PerformanceResourceTiming) => ({
         name: r.name,
         duration: r.duration,
         size: r.transferSize,

@@ -5,27 +5,11 @@ export const metadata = {
   
   title: "AI 2026: Hyperintelligence Breakthrough - Zion Tech Group",
   description: "Discover the revolutionary AI hyperintelligence breakthrough achieving 10,000x cognitive enhancement and autonomous decision-making capabilities.",
+  keywords: ['AI 2026', 'hyperintelligence', 'cognitive enhancement', 'autonomous AI', 'breakthrough technology']};;
+export const metadata: Metadata = 
+  title: 'AI 2026: Hyperintelligence Breakthrough - Zion Tech Group',
+  description: 'Discover the revolutionary AI hyperintelligence breakthrough achieving 10,000x cognitive enhancement and autonomous decision-making capabilities.',
   keywords: ['AI 2026', 'hyperintelligence', 'cognitive enhancement', 'autonomous AI', 'breakthrough technology'],
-  openGraph: {
-    title: 'AI 2026: Hyperintelligence Breakthrough - Zion Tech Group',
-    description: 'Discover the revolutionary AI hyperintelligence breakthrough achieving 10,000x cognitive enhancement and autonomous decision-making capabilities.',
-    type: 'article',
-    url: 'https://ziontechgroup.com/blog/ai-2026-hyperintelligence-breakthrough',
-    images: [
-      {
-        url: '/og-hyperintelligence-2026.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'AI 2026 Hyperintelligence Breakthrough',
-      },
-    ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'AI 2026: Hyperintelligence Breakthrough - Zion Tech Group',
-    description: 'Discover the revolutionary AI hyperintelligence breakthrough achieving 10,000x cognitive enhancement and autonomous decision-making capabilities.',
-    images: ['/og-hyperintelligence-2026.jpg'],
-  },
 };
 
 export default function AI2026HyperintelligenceBreakthrough() {

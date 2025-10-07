@@ -1,5 +1,7 @@
 import React, { Suspense, lazy, useCallback } from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
+import SEOOptimizer from './components/SEOOptimizer';
+import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 
 // Lazy load components for better performance
 const ContentShowcase = lazy(() => import('./components/ContentShowcase'));
@@ -32,13 +34,19 @@ const HomePage: React.FC = () => {
 
   return (
     <>
+      <SEOOptimizer 
+        title="Zion Tech Group - Advanced AI and IT Solutions"
+        description="Leading provider of AI-powered enterprise solutions, automation, and digital transformation services. Transform your business with cutting-edge AI micro SaaS services and cloud automation."
+        keywords={['AI solutions', 'enterprise AI', 'digital transformation', 'automation', 'cloud services', 'AI consulting', 'business intelligence', 'machine learning', 'artificial intelligence', 'enterprise software']}
+      />
+      <AccessibilityEnhancer>
         <div className='min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100'>
-          <header className="bg-white shadow-sm sticky top-0 z-50" role="banner">
+        <header className="bg-white shadow-sm sticky top-0 z-50" role="banner">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex justify-between items-center py-6">
               <div className="flex items-center">
                 <Link 
-                  href="/" 
+                  to="/" 
                   className="text-2xl font-bold text-indigo-600 hover:text-indigo-700 transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 rounded"
                   aria-label="Zion Tech Group - Home"
                 >
@@ -47,32 +55,32 @@ const HomePage: React.FC = () => {
               </div>
               <nav className="hidden md:flex space-x-8" role="navigation" aria-label="Main navigation">
                 <Link 
-                  href="/" 
+                  to="/" 
                   className="text-gray-700 hover:text-indigo-600 transition-colors font-medium focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 rounded"
                   aria-current="page"
                 >
                   Home
                 </Link>
                 <Link 
-                  href="/services" 
+                  to="/services" 
                   className="text-gray-700 hover:text-indigo-600 transition-colors font-medium focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 rounded"
                 >
                   Services
                 </Link>
                 <Link 
-                  href="/blog" 
+                  to="/blog" 
                   className="text-gray-700 hover:text-indigo-600 transition-colors font-medium focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 rounded"
                 >
                   Blog
                 </Link>
                 <Link 
-                  href="/case-studies" 
+                  to="/case-studies" 
                   className="text-gray-700 hover:text-indigo-600 transition-colors font-medium focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 rounded"
                 >
                   Case Studies
                 </Link>
                 <Link 
-                  href="/contact" 
+                  to="/contact" 
                   className="text-gray-700 hover:text-indigo-600 transition-colors font-medium focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 rounded"
                 >
                   Contact
@@ -113,7 +121,7 @@ const HomePage: React.FC = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
                 <Link
-                  href="/services"
+                  to="/services"
                   className="bg-indigo-600 text-white px-8 py-4 rounded-lg hover:bg-indigo-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl font-medium focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
                   aria-label="Explore our AI and IT services">
                   Explore Our Services
@@ -293,14 +301,14 @@ const HomePage: React.FC = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
-                  href="/contact"
-                  className="bg-white text-indigo-600 px-8 py-4 rounded-lg hover:bg-gray-50 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl font-medium focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-indigo-600">
+                  to="/contact"
+                  className="bg-white text-indigo-600 px-8 py-4 rounded-lg hover:bg-gray-50 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl font-medium">
                   Get Started Today
                 </Link>
                 <a
                   href="tel:+13024640950"
                   onClick={handlePhoneClick}
-                  className="bg-transparent text-white px-8 py-4 rounded-lg border-2 border-white hover:bg-white hover:text-indigo-600 transition-all duration-300 transform hover:scale-105 font-medium focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-indigo-600">
+                  className="bg-transparent text-white px-8 py-4 rounded-lg border-2 border-white hover:bg-white hover:text-indigo-600 transition-all duration-300 transform hover:scale-105 font-medium">
                   Call +1 302 464 0950
                 </a>
               </div>
@@ -320,19 +328,19 @@ const HomePage: React.FC = () => {
               <div>
                 <h4 className="font-semibold mb-4">Services</h4>
                 <ul className="space-y-2 text-sm text-gray-400" role="list">
-                  <li><Link href="/services" className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-900 rounded">AI Solutions</Link></li>
-                  <li><Link href="/services" className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-900 rounded">Cloud Automation</Link></li>
-                  <li><Link href="/services" className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-900 rounded">Enterprise IT</Link></li>
-                  <li><Link href="/services" className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-900 rounded">Digital Transformation</Link></li>
+                  <li><Link to="/services" className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-900 rounded">AI Solutions</Link></li>
+                  <li><Link to="/services" className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-900 rounded">Cloud Automation</Link></li>
+                  <li><Link to="/services" className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-900 rounded">Enterprise IT</Link></li>
+                  <li><Link to="/services" className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-900 rounded">Digital Transformation</Link></li>
                 </ul>
               </div>
               <div>
                 <h4 className="font-semibold mb-4">Company</h4>
                 <ul className="space-y-2 text-sm text-gray-400" role="list">
-                  <li><Link href="/about" className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-900 rounded">About Us</Link></li>
-                  <li><Link href="/case-studies" className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-900 rounded">Case Studies</Link></li>
-                  <li><Link href="/blog" className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-900 rounded">Blog</Link></li>
-                  <li><Link href="/contact" className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-900 rounded">Contact</Link></li>
+                  <li><Link to="/about" className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-900 rounded">About Us</Link></li>
+                  <li><Link to="/case-studies" className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-900 rounded">Case Studies</Link></li>
+                  <li><Link to="/blog" className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-900 rounded">Blog</Link></li>
+                  <li><Link to="/contact" className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-900 rounded">Contact</Link></li>
                 </ul>
               </div>
               <div>
@@ -350,6 +358,7 @@ const HomePage: React.FC = () => {
           </div>
         </footer>
         </div>
+      </AccessibilityEnhancer>
     </>
   );
 };
