@@ -1,4 +1,4 @@
-import { ArrowRight, Code, ExternalLink, Shield, Zap, Atom } from 'lucide-react';
+// import { ArrowRight, Code, ExternalLink, Shield, Zap } from 'lucide-react';
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -41,26 +41,19 @@ const API: React.FC = () => {
             powerful AI and technology solutions.
           </p>
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-            <Link
-              to='/contact'
-              className='bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center'
-            >
-              Get API Key
-              <ArrowRight className='ml-2 w-5 h-5' />
-            </Link>
             <a
               href='#endpoints'
               className='bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center'
             >
               View Endpoints
-              <ArrowRight className='ml-2 w-5 h-5' />
+              <span className='ml-2 w-5 h-5'>→</span>
             </a>
             <a
               href='https://docs.ziontechgroup.com'
               className='border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors inline-flex items-center'
             >
               Full Documentation
-              <Atom className='ml-2 w-5 h-5' />
+              <span className='ml-2 w-5 h-5'>⚛️</span>
             </a>
           </div>
         </div>
@@ -72,7 +65,7 @@ const API: React.FC = () => {
           <div className='grid md:grid-cols-3 gap-8'>
             <div className='text-center'>
               <div className='w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4'>
-                <Atom className='w-8 h-8 text-blue-600' />
+                <span className='w-8 h-8 text-blue-600'>⚛️</span>
               </div>
               <h3 className='text-xl font-semibold text-gray-900 mb-2'>
                 RESTful APIs
@@ -84,7 +77,7 @@ const API: React.FC = () => {
             </div>
             <div className='text-center'>
               <div className='w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4'>
-                <Shield className='w-8 h-8 text-green-600' />
+                <span className='w-8 h-8 text-green-600'>⚛️</span>
               </div>
               <h3 className='text-xl font-semibold text-gray-900 mb-2'>
                 Secure & Reliable
@@ -96,22 +89,14 @@ const API: React.FC = () => {
             </div>
             <div className='text-center'>
               <div className='w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4'>
-                <Zap className='w-8 h-8 text-purple-600' />
+                <span className='w-8 h-8 text-purple-600'>⚡</span>
               </div>
               <h3 className='text-xl font-semibold text-gray-900 mb-2'>
-<<<<<<< HEAD
                 High Performance
               </h3>
               <p className='text-gray-600'>
                 Optimized for speed with sub-100ms response times and
                 comprehensive error handling.
-=======
-                Fast & Scalable
-              </h3>
-              <p className='text-gray-600'>
-                High-performance APIs designed to scale with your business
-                needs and growth.
->>>>>>> 9f279756f4679d4a3fe100469cdf0ea089dda745
               </p>
             </div>
           </div>
@@ -152,83 +137,29 @@ const API: React.FC = () => {
         </div>
       </div>
 
-<<<<<<< HEAD
-      <div className='py-16 bg-white'>
-        <div className='container mx-auto px-4'>
-          <div className='max-w-3xl mx-auto text-center'>
-            <h2 className='text-3xl font-bold text-gray-900 mb-6'>
-              Getting Started
-=======
-        {/* CTA Section */}
-        <div className='py-16 bg-blue-600 text-white text-center'>
-          <div className='container mx-auto px-4'>
-            <h2 className='text-3xl font-bold mb-4'>
-              Ready to Get Started?
->>>>>>> 9f279756f4679d4a3fe100469cdf0ea089dda745
-            </h2>
-            <p className='text-lg text-gray-600 mb-8'>
-              Ready to integrate with our APIs? Get your API key and start
-              building amazing applications.
-            </p>
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-              <Link
-                to='/contact'
-                className='bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-flex items-center'
-              >
-                Get API Key
-                <ArrowRight className='ml-2 w-5 h-5' />
-<<<<<<< HEAD
-              </Link>
-              <a
-                href='https://docs.ziontechgroup.com'
-                className='border border-gray-300 text-gray-700 px-8 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors inline-flex items-center'
-              >
-                View Full Docs
-                <ExternalLink className='ml-2 w-5 h-5' />
-              </a>
-            </div>
-=======
-              </a>
-              <a
-                href='https://docs.ziontechgroup.com'
-                className='border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors inline-flex items-center'
-              >
-                View Documentation
-                <ExternalLink className='ml-2 w-5 h-5' />
-              </a>
-            </div>
-          </div>
-        </div>
-
-        {/* Getting Started Section */}
-        <div className='py-16 bg-white'>
-          <div className='container mx-auto px-4'>
-            <div className='max-w-3xl mx-auto text-center'>
-              <h2 className='text-3xl font-bold text-gray-900 mb-6'>
-                Getting Started
-              </h2>
-              <p className='text-lg text-gray-600 mb-8'>
-                Ready to integrate with our APIs? Get your API key and start
-                building amazing applications.
-              </p>
-              <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-                <Link
-                  to='/contact'
-                  className='bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-flex items-center'
-                >
-                  Get API Key
-                  <ArrowRight className='ml-2 w-5 h-5' />
-                </Link>
-                <a
-                  href='https://docs.ziontechgroup.com'
-                  className='border border-gray-300 text-gray-700 px-8 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors inline-flex items-center'
-                >
-                  View Full Docs
-                  <ExternalLink className='ml-2 w-5 h-5' />
-                </a>
-              </div>
-            </div>
->>>>>>> 9f279756f4679d4a3fe100469cdf0ea089dda745
+      {/* CTA Section */}
+      <div className='py-16 bg-blue-600 text-white'>
+        <div className='container mx-auto px-4 text-center'>
+          <h2 className='text-3xl font-bold mb-6'>Ready to Get Started?</h2>
+          <p className='text-xl mb-8 max-w-2xl mx-auto'>
+            Start building with our powerful APIs and transform your business
+            with cutting-edge AI technology.
+          </p>
+          <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+            <Link
+              to='/contact'
+              className='bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center'
+            >
+              Get API Key
+              <span className='ml-2 w-5 h-5'>→</span>
+            </Link>
+            <a
+              href='https://docs.ziontechgroup.com'
+              className='border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors inline-flex items-center'
+            >
+              View Documentation
+              <span className='ml-2 w-5 h-5'>⚛️</span>
+            </a>
           </div>
         </div>
       </div>
