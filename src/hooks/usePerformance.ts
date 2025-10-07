@@ -8,25 +8,11 @@ export const defaultusePerformanceConfig: usePerformanceConfig = {
   // Default configuration
 };
 
-export default {
-  defaultusePerformanceConfig
-};
-        analytics.track(
-          'long_task',
-          'performance',
-          'detected',
-          undefined,
-          entry.duration
-        );
-      });
-    });
-
-    return () => {
-      if (observer && typeof observer.disconnect === 'function') {
-        observer.disconnect();
-      }
-    };
-  }, []);
+const usePerformance = () => {
+  // Performance monitoring logic would go here
+  return {
+    defaultusePerformanceConfig
+  };
 };
 
 export default usePerformance;
