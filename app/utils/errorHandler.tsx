@@ -181,7 +181,7 @@ export class ErrorHandler {
 
   // Generate unique error ID
   private generateErrorId(): string {
-    return `error_${Date.now()}_${Math.random().toString(36).substring(2, 11)}`;
+    return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
   }
 
   // Determine error type
@@ -253,7 +253,6 @@ export class ErrorHandler {
     if (this.config.enableConsoleLogging) {
       const logMessage = `[${error.severity}] ${error.type}: ${error.message}`;
       
-      /* eslint-disable no-console */
       switch (error.severity) {
         case ErrorSeverity.CRITICAL:
         case ErrorSeverity.HIGH:
@@ -266,7 +265,6 @@ export class ErrorHandler {
           console.info(logMessage, error);
           break;
       }
-      /* eslint-enable no-console */
     }
 
     if (this.config.enableNetworkLogging) {
@@ -286,9 +284,8 @@ export class ErrorHandler {
         },
         body: JSON.stringify(error),
       });
-    } catch {
-      // eslint-disable-next-line no-console
-      console.error('Failed to log error to network');
+    } catch (err) {
+      console.error('Failed to log error to network:', err);
     }
   }
 
@@ -307,9 +304,8 @@ export class ErrorHandler {
           timestamp: error.timestamp.toISOString(),
         }),
       });
-    } catch {
-      // eslint-disable-next-line no-console
-      console.error('Failed to report error');
+    } catch (err) {
+      console.error('Failed to report error:', err);
     }
   }
 
@@ -403,7 +399,6 @@ export class ErrorHandler {
       // Implement retry logic based on error type
       if (retryItem.error.type === ErrorType.NETWORK) {
         // Retry network request
-        // eslint-disable-next-line no-console
         console.log(`Retrying network request (attempt ${retryItem.retryCount})`);
         // Add your retry logic here
       }
@@ -411,7 +406,6 @@ export class ErrorHandler {
       if (retryItem.retryCount < this.config.maxRetries) {
         this.scheduleRetry(retryItem.error);
       } else {
-        // eslint-disable-next-line no-console
         console.error('Max retries exceeded for error:', retryItem.error);
       }
     }
