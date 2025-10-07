@@ -31,7 +31,7 @@
     "build:clean": "node scripts/optimize-build.js",
     "build:final": "npm run build:clean && npm run build:production",
     "prebuild": "",
-    "postbuild": "if [ \"$CI\" != \"true\" ]; then pnpm analyze; fi",
+    "postbuild": "echo 'Build completed successfully'",
     "performance:audit": "lighthouse http://localhost:4173 --output=html --output-path=./lighthouse-report.html",
     "performance:check": "pnpm build && pnpm serve & sleep 5 && pnpm performance:audit",
     "optimize": "node scripts/optimize-build.js",

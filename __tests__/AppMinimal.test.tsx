@@ -8,6 +8,7 @@ describe('AppMinimal', () => {
     // Mock component for testing
     const MockAppMinimal = () => <div>Zion Tech Group</div>;
     render(<MockAppMinimal />);
-    expect(screen.getByText(/Zion Tech Group/i)).toBeInTheDocument();
+    const element = screen.getByText(/Zion Tech Group/i);
+    expect(element).toBeDefined();
   });
 });

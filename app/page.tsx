@@ -1,3 +1,5 @@
+'use client';
+
 import React, { Suspense, lazy, useCallback } from 'react';
 import Link from 'next/link';
 import SEOOptimizer from './components/SEOOptimizer';
