@@ -172,3 +172,10 @@ const EnhancedFooter: React.FC = () => {
               </Link>
             </div>
           </div>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default EnhancedFooter;
