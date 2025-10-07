@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-// import { Home, Menu, Settings, User, X } from 'lucide-react';
-=======
 import { Home, Menu, Settings, User, X } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-dbc2
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -10,15 +6,9 @@ const SidebarNavigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navigationItems = [
-<<<<<<< HEAD
-    { name: 'Dashboard', href: '/dashboard' },
-    { name: 'Profile', href: '/profile' },
-    { name: 'Settings', href: '/settings' },
-=======
     { name: 'Dashboard', href: '/dashboard', icon: Home },
     { name: 'Profile', href: '/profile', icon: User },
     { name: 'Settings', href: '/settings', icon: Settings },
->>>>>>> cursor/fix-errors-and-merge-to-main-dbc2
   ];
 
   return (
@@ -37,20 +27,6 @@ const SidebarNavigation: React.FC = () => {
         </div>
         
         <nav className='px-4 space-y-2'>
-<<<<<<< HEAD
-          {navigationItems.map(item => (
-            <Link
-              key={item.name}
-              to={item.href}
-              className={`flex items-center p-3 rounded-lg hover:bg-gray-100 transition-colors mb-2 ${
-                isOpen ? 'justify-start' : 'justify-center'
-              }`}
-            >
-              <span className='w-5 h-5'>📄</span>
-              {isOpen && <span className='ml-3 font-medium'>{item.name}</span>}
-            </Link>
-          ))}
-=======
           {navigationItems.map(item => {
             const IconComponent = item.icon;
             return (
@@ -66,7 +42,6 @@ const SidebarNavigation: React.FC = () => {
               </Link>
             );
           })}
->>>>>>> cursor/fix-errors-and-merge-to-main-dbc2
         </nav>
       </div>
       
@@ -79,8 +54,4 @@ const SidebarNavigation: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 export default SidebarNavigation;
-=======
-export default SidebarNavigation;
->>>>>>> cursor/fix-errors-and-merge-to-main-dbc2
