@@ -41,15 +41,19 @@ const App: React.FC = () => {
       const pageLoadMetrics = collectPerformanceMetrics();
       const metrics = performanceOptimizer.getMetrics();
       if (pageLoadMetrics) {
-        logger.info('Performance metrics collected', 'App', pageLoadMetrics);
+        // eslint-disable-next-line no-console
+        console.log('Performance metrics collected:', pageLoadMetrics);
       }
       if (metrics) {
-        logger.info('Performance metrics', 'App', metrics);
+        // eslint-disable-next-line no-console
+        console.log('Performance metrics:', metrics);
       }
     }
     
-    logger.lifecycle('performance monitoring initialized', 'App');
-    logger.info('🚀 Zion Tech Group App initialized with comprehensive monitoring', 'App');
+    // eslint-disable-next-line no-console
+    console.log('Performance monitoring initialized');
+    // eslint-disable-next-line no-console
+    console.log('🚀 Zion Tech Group App initialized with comprehensive monitoring');
   }, []);
 
   return (

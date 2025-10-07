@@ -28,6 +28,7 @@ class ErrorBoundary extends Component<Props, State> {
 
     // Report error to monitoring service in production
     if (process.env.NODE_ENV === 'production') {
+      // eslint-disable-next-line no-console
       console.error('Production error caught:', error.message);
       
       // Send to error tracking service
@@ -37,10 +38,6 @@ class ErrorBoundary extends Component<Props, State> {
           fatal: false
         });
       }
-    }
-
-    if (this.props.enableErrorReporting) {
-      console.error('Error caught by boundary:', error, errorInfo);
     }
   }
 
