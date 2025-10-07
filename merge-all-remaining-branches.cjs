@@ -38,11 +38,6 @@ function resolveConflicts() {
             try {
                 let content = fs.readFileSync(file, 'utf8');
                 
-<<<<<<< HEAD
-                if (content.includes('')) {
-                    // Simple conflict resolution - choose the version with proper syntax
-                    const sections = content.split(/||                    
-=======
                 if (content.includes('<<<<<<< HEAD')) {
                     // Simple conflict resolution - choose the version with proper syntax
                     const sections = content.split(/<<<<<<< HEAD|=======|>>>>>>> /);
@@ -190,4 +185,3 @@ async function main() {
 
 // Run the script
 main().catch(console.error);
->>>>>>> origin/fix-errors-and-merge-final

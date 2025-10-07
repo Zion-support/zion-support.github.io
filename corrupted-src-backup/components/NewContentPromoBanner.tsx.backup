@@ -1,3 +1,7 @@
+<<<<<<< HEAD:src/components/NewContentPromoBanner.tsx
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main:corrupted-src-backup/components/NewContentPromoBanner.tsx.backup
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -244,8 +248,40 @@ onClick={() => setIsDismissed(true)}
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-bc56
         </div>
       </div>
+<<<<<<< HEAD:src/components/NewContentPromoBanner.tsx
+=======
+import React from 'react';
+
+interface NewContentPromoBannerProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const NewContentPromoBanner: React.FC<NewContentPromoBannerProps> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={`newcontentpromobanner-component ${className}`}>
+      {children || (
+        <div className="p-4 text-center text-gray-600">
+          <h3 className="text-lg font-semibold mb-2">NewContentPromoBanner</h3>
+          <p>Component placeholder - implementation needed</p>
+        </div>
+      )}
+>>>>>>> cursor/fix-errors-and-merge-to-main-8d57
+=======
+>>>>>>> origin/main:corrupted-src-backup/components/NewContentPromoBanner.tsx.backup
     </div>
   );
 };
 
+<<<<<<< HEAD:src/components/NewContentPromoBanner.tsx
+<<<<<<< HEAD
 export default React.memo(NewContentPromoBanner);
+=======
+export default NewContentPromoBanner;
+>>>>>>> cursor/fix-errors-and-merge-to-main-8d57
+=======
+export default React.memo(NewContentPromoBanner);
+>>>>>>> origin/main:corrupted-src-backup/components/NewContentPromoBanner.tsx.backup

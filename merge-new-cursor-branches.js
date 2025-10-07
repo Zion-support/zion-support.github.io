@@ -2,7 +2,7 @@
 
 /**
  * Merge New Cursor Branches - Process the latest cursor branches
- */import { execSync } from 'child_process';
+ */ import { execSync } from 'child_process';
 import fs from 'fs';
 
 console.log('🚀 Starting New Cursor Branches Merge Process...\n');
@@ -139,7 +139,7 @@ const report = {
   summary: {
     totalBranches: newCursorBranches.length,
     merged: mergedCount,
-  notFound: notFoundCount,
+    notFound: notFoundCount,
     successRate: `${Math.round((mergedCount / newCursorBranches.length) * 100)}%`,
   },
   systemChecks: {

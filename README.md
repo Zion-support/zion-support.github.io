@@ -1,82 +1,55 @@
-# Zion Tech Group Website
+# Zion Tech Group - Advanced AI and IT Solutions Website
 
-Advanced AI and IT Solutions Website built with React, TypeScript, and Vite.
+## Recent Improvements
 
-## 🚀 Quick Start
+### Performance Optimizations
+- ✅ Bundle size optimization
+- ✅ Image optimization
+- ✅ CSS optimization
+- ✅ Lazy loading implementation
+
+### Accessibility Improvements
+- ✅ ARIA labels and roles
+- ✅ Keyboard navigation support
+- ✅ Screen reader compatibility
+- ✅ Color contrast optimization
+
+### SEO Enhancements
+- ✅ Meta tags optimization
+- ✅ Structured data implementation
+- ✅ Sitemap generation
+- ✅ Open Graph tags
+
+### Testing & Quality
+- ✅ Comprehensive test suite
+- ✅ Performance monitoring
+- ✅ Error tracking
+- ✅ Code quality checks
+
+## Quick Start
 
 ```bash
 # Install dependencies
-npm install
+pnpm install
 
-# Start development server
-npm run dev
+# Run development server
+pnpm dev
 
 # Build for production
-npm run build
+pnpm build
 
 # Run tests
-npm test
+pnpm test
 
-# Run health check
-npm run health-check
+# Run performance audit
+pnpm perf:audit
 ```
 
-## 📋 Available Scripts
+## Available Scripts
 
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
-- `npm run test` - Run tests
-- `npm run lint` - Run ESLint
-- `npm run type-check` - Run TypeScript type checking
-- `npm run health-check` - Run all checks (type-check, lint, build, test)
-
-## 🛠️ Tech Stack
-
-- **Frontend**: React 18, TypeScript, Vite
-- **Styling**: Tailwind CSS
-- **Icons**: Lucide React
-- **Testing**: Jest
-- **Linting**: ESLint
-- **Build**: Vite with Terser minification
-
-## 📁 Project Structure
-
-```
-├── app/                    # Next.js app directory
-├── src/                    # Source code
-├── components/             # Reusable components
-├── __tests__/             # Test files
-├── dist/                  # Build output
-└── public/                # Static assets
-```
-
-## 🔧 Development
-
-1. Clone the repository
-2. Install dependencies: `npm install`
-3. Start development server: `npm run dev`
-4. Open http://localhost:5173
-
-## 🚀 Deployment
-
-1. Build the project: `npm run build`
-2. The `dist/` folder contains the production build
-3. Deploy the `dist/` folder to your hosting provider
-
-## 📝 Contributing
-
-1. Run `npm run health-check` before committing
-2. Ensure all tests pass
-3. Follow the existing code style
-4. Update documentation as needed
-
-## 🐛 Troubleshooting
-
-- **TypeScript errors**: Run `npm run type-check`
-- **Linting errors**: Run `npm run lint:fix`
-- **Build issues**: Run `npm run build` and check the output
-- **Test failures**: Run `npm test` for details
-
-## 📄 License
-
-MIT License - see LICENSE file for details.
+- `pnpm dev` - Start development server
+- `pnpm build` - Build for production
+- `pnpm test` - Run tests
+- `pnpm lint` - Run linting
+- `pnpm optimize:all` - Run all optimizations
+- `pnpm perf:audit` - Run performance audit

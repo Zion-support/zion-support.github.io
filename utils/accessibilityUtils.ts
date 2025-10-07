@@ -61,31 +61,27 @@ export const ariaUtils = {
   },
 
   // Set ARIA attributes
-  setAriaAttributes: (element: HTMLElement, attributes: Record<string, string>): void => {
   setAriaAttributes: (
     element: HTMLElement,
     attributes: Record<string, string>
   ): void => {
->>>>>>> 40f0d19ecc0819e0cd100e68e36dd415011c7be9
     Object.entries(attributes).forEach(([key, value]) => {
       element.setAttribute(key, value);
     });
   },
 
   // Announce to screen readers
-  announce: (message: string, priority: 'polite' | 'assertive' = 'polite'): void => {
   announce: (
     message: string,
     priority: 'polite' | 'assertive' = 'polite'
   ): void => {
->>>>>>> 40f0d19ecc0819e0cd100e68e36dd415011c7be9
     const announcement = document.createElement('div');
     announcement.setAttribute('aria-live', priority);
     announcement.setAttribute('aria-atomic', 'true');
     announcement.className = 'sr-only';
     announcement.textContent = message;
     document.body.appendChild(announcement);
-    
+
     setTimeout(() => {
       document.body.removeChild(announcement);
     }, 1000);
@@ -102,7 +98,7 @@ export const keyboardNavigation = {
     orientation: 'horizontal' | 'vertical' = 'vertical'
   ): number => {
     const isVertical = orientation === 'vertical';
-    const isHorizontal = orientation === 'horizontal';
+    // const isHorizontal = orientation === 'horizontal';
 
     switch (event.key) {
       case isVertical ? 'ArrowDown' : 'ArrowRight':
@@ -131,7 +127,6 @@ export const keyboardNavigation = {
   },
 };
 
->>>>>>> 40f0d19ecc0819e0cd100e68e36dd415011c7be9
 // Color contrast utilities
 export const colorContrast = {
   // Calculate relative luminance
@@ -144,80 +139,19 @@ export const colorContrast = {
   },
 
   // Calculate contrast ratio
-  getContrastRatio: (color1: string, color2: string): number => {
-    const hexToRgb = (hex: string) => {
-      const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
-      return result ? {
-        r: parseInt(result[1]!, 16),
-        g: parseInt(result[2]!, 16),
-        b: parseInt(result[3]!, 16)
-      } : null;
-    };
-
-    const rgb1 = hexToRgb(color1);
-    const rgb2 = hexToRgb(color2);
-    
-    if (!rgb1 || !rgb2) return 0;
-
-    const lum1 = colorContrast.getLuminance(rgb1.r ?? 0, rgb1.g ?? 0, rgb1.b ?? 0);
-    const lum2 = colorContrast.getLuminance(rgb2.r ?? 0, rgb2.g ?? 0, rgb2.b ?? 0);
-    
-    return 0.2126 * rs + 0.7152 * gs + 0.0722 * bs;
-  },
-
-  // Calculate contrast ratio
-  getContrastRatio: (color1: [number, number, number], color2: [number, number, number]): number => {
   getContrastRatio: (
     color1: [number, number, number],
     color2: [number, number, number]
   ): number => {
     const lum1 = colorContrast.getLuminance(...color1);
     const lum2 = colorContrast.getLuminance(...color2);
->>>>>>> 40f0d19ecc0819e0cd100e68e36dd415011c7be9
     const brightest = Math.max(lum1, lum2);
     const darkest = Math.min(lum1, lum2);
-    
+
     return (brightest + 0.05) / (darkest + 0.05);
   },
 
   // Check if contrast meets WCAG standards
-  meetsWCAG: (color1: string, color2: string, level: 'AA' | 'AAA' = 'AA'): boolean => {
-    const ratio = colorContrast.getContrastRatio(color1, color2);
-    return level === 'AA' ? ratio >= 4.5 : ratio >= 7;
-  },
-};
-
-// Keyboard navigation utilities
-export const keyboardNavigation = {
-  // Handle arrow key navigation
-  handleArrowKeys: (e: KeyboardEvent, items: HTMLElement[], currentIndex: number): number => {
-    switch (e.key) {
-      case 'ArrowDown':
-      case 'ArrowRight':
-        e.preventDefault();
-        return (currentIndex + 1) % items.length;
-      case 'ArrowUp':
-      case 'ArrowLeft':
-        e.preventDefault();
-        return currentIndex === 0 ? items.length - 1 : currentIndex - 1;
-      case 'Home':
-        e.preventDefault();
-        return 0;
-      case 'End':
-        e.preventDefault();
-        return items.length - 1;
-      default:
-        return currentIndex;
-    }
-  },
-
-  // Handle Enter and Space key activation
-  handleActivation: (e: KeyboardEvent, callback: () => void): void => {
-    if (e.key === 'Enter' || e.key === ' ') {
-      e.preventDefault();
-      callback();
-    }
-  },
   meetsWCAG: (contrastRatio: number, level: 'AA' | 'AAA' = 'AA'): boolean => {
     return level === 'AA' ? contrastRatio >= 4.5 : contrastRatio >= 7;
   },
@@ -266,37 +200,15 @@ export const formAccessibility = {
   },
 
   // Check color contrast
-  checkContrast: (foreground: string, background: string, level: 'AA' | 'AAA' = 'AA'): boolean => {
+  checkContrast: (
+    foreground: string,
+    background: string,
+    level: 'AA' | 'AAA' = 'AA'
+  ): boolean => {
     const thresholds = { AA: 4.5, AAA: 7 };
     // Simplified contrast calculation - in real implementation, use a proper color contrast library
     const contrastRatio = 4.5; // Placeholder
     return contrastRatio >= thresholds[level];
-  },
-};
-// Form accessibility utilities (extended)
-export const formAccessibilityExtended = {
-  // Add error message association
-  addErrorMessage: (input: HTMLInputElement, errorMessage: string): void => {
-    const errorId = `error-${input.id}`;
-    const errorElement = document.createElement('div');
-    errorElement.id = errorId;
-    errorElement.className = 'error-message';
-    errorElement.textContent = errorMessage;
-    errorElement.setAttribute('role', 'alert');
-    input.setAttribute('aria-describedby', errorId);
-    input.setAttribute('aria-invalid', 'true');
-    input.parentNode?.insertBefore(errorElement, input.nextSibling);
-  },
-
-  // Remove error message
-  removeErrorMessage: (input: HTMLInputElement): void => {
-    const errorId = input.getAttribute('aria-describedby');
-    if (errorId) {
-      const errorElement = document.getElementById(errorId);
-      errorElement?.remove();
-      input.removeAttribute('aria-describedby');
-      input.removeAttribute('aria-invalid');
-    }
   },
 };
 
@@ -364,7 +276,9 @@ export const accessibilityTesting = {
         issues.push('First heading should be h1');
       }
       if (level > previousLevel + 1) {
-        issues.push(`Heading level skipped from h${previousLevel} to h${level}`);
+        issues.push(
+          `Heading level skipped from h${previousLevel} to h${level}`
+        );
       }
       previousLevel = level;
     });
@@ -399,6 +313,7 @@ export const accessibilityTesting = {
       score,
     };
   },
+
   // Check if element is focusable
   isFocusable: (element: HTMLElement): boolean => {
     const focusableSelectors = [
@@ -407,43 +322,12 @@ export const accessibilityTesting = {
       'select:not([disabled])',
       'textarea:not([disabled])',
       'a[href]',
-      '[tabindex]:not([tabindex="-1"])'
+      '[tabindex]:not([tabindex="-1"])',
     ];
     return focusableSelectors.some(selector => element.matches(selector));
   },
 };
-// Motion accessibility utilities
-export const motionAccessibility = {
-  // Check if user prefers reduced motion
-  prefersReducedMotion: (): boolean => {
-    return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  },
-  // Apply reduced motion styles
-  applyReducedMotion: (element: HTMLElement): void => {
-    if (motionAccessibility.prefersReducedMotion()) {
-      element.style.animation = 'none';
-      element.style.transition = 'none';
-    }
-  },
-};
-// Screen reader utilities
-export const screenReader = {
-  // Hide element from screen readers
-  hideFromScreenReader: (element: HTMLElement): void => {
-    element.setAttribute('aria-hidden', 'true');
-  },
-  // Show element to screen readers
-  showToScreenReader: (element: HTMLElement): void => {
-    element.removeAttribute('aria-hidden');
-  },
-  // Create screen reader only text
-  createScreenReaderText: (text: string): HTMLElement => {
-    const element = document.createElement('span');
-    element.textContent = text;
-    element.className = 'sr-only';
-    return element;
-  },
-};
+
 // Initialize accessibility features
 export const initAccessibility = (): void => {
   // Add skip links
@@ -469,6 +353,4 @@ export const initAccessibility = (): void => {
     skipLink.style.top = '-40px';
   });
   document.body.insertBefore(skipLink, document.body.firstChild);
-  },
->>>>>>> 40f0d19ecc0819e0cd100e68e36dd415011c7be9
 };

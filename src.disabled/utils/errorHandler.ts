@@ -95,7 +95,7 @@ class ErrorHandler {
 
   private addToQueue(errorReport: ErrorReport): void {
     this.errorQueue.push(errorReport);
-    
+
     // Keep queue size manageable
     if (this.errorQueue.length > this.maxQueueSize) {
       this.errorQueue.shift();
@@ -104,7 +104,7 @@ class ErrorHandler {
 
   private logToConsole(errorReport: ErrorReport): void {
     const { message, stack, context, severity } = errorReport;
-    
+
     const logMessage = `[${severity.toUpperCase()}] ${message}`;
     const logData = {
       context,

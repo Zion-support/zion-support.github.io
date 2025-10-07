@@ -25,6 +25,37 @@ declare module 'lucide-react' {
   export const Award: LucideIcon;
   export const TrendingUp: LucideIcon;
   export const Zap: LucideIcon;
+  
+  // Social media icons
+  export const Github: LucideIcon;
+  export const Linkedin: LucideIcon;
+  export const Twitter: LucideIcon;
+  
+  // Communication icons
+  export const Mail: LucideIcon;
+  export const Phone: LucideIcon;
+  
+  // Location icons
+  export const MapPin: LucideIcon;
+  
+  // UI icons
+  export const Menu: LucideIcon;
+  export const X: LucideIcon;
+  export const Star: LucideIcon;
   export const CheckCircle: LucideIcon;
+  export const AlertTriangle: LucideIcon;
+  export const Home: LucideIcon;
+  export const Sparkles: LucideIcon;
+  export const Cpu: LucideIcon;
+  export const BookOpen: LucideIcon;
+  export const Shield: LucideIcon;
+  export const Settings: LucideIcon;
+  export const BarChart3: LucideIcon;
+  export const Code: LucideIcon;
+  export const ExternalLink: LucideIcon;
+  export const Atom: LucideIcon;
+  export const Calculator: LucideIcon;
+  export const Share2: LucideIcon;
+  
   // Add more icons as needed
 }

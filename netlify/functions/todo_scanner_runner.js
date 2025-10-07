@@ -8,8 +8,8 @@ exports.handler = async function (event, context) {
       body: JSON.stringify({
         message: 'todo_scanner_runner function executed successfully',
         timestamp: timestamp,
-        function: 'todo_scanner_runner'
-      })
+        function: 'todo_scanner_runner',
+      }),
     };
   } catch (error) {
     console.error('❌ todo_scanner_runner function failed:', error);
@@ -18,8 +18,8 @@ exports.handler = async function (event, context) {
       body: JSON.stringify({
         error: 'todo_scanner_runner function failed',
         message: error.message,
-        timestamp: new Date().toISOString()
-      })
+        timestamp: new Date().toISOString(),
+      }),
     };
   }
 };

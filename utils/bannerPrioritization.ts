@@ -38,30 +38,30 @@ export class BannerPrioritizationEngine {
     if (!banner) return 0;
 
     const now = new Date();
-    const daysSincePublish = (now.getTime() - banner.publishDate.getTime()) / (1000 * 60 * 60 * 24);
-    
+    const daysSincePublish =
+      (now.getTime() - banner.publishDate.getTime()) / (1000 * 60 * 60 * 24);
+
     // Recency factor (newer = higher priority)
     const recencyFactor = Math.max(0, 100 - daysSincePublish);
-    
+
     // Value factor (higher value = higher priority)
     const valueFactor = Math.min(100, banner.value * 10);
-    
+
     // Category factor
     const categoryFactors = {
-      'service': 100,
+      service: 100,
       'case-study': 80,
-      'blog': 60,
-      'showcase': 40
+      blog: 60,
+      showcase: 40,
     };
     const categoryFactor = categoryFactors[banner.category] || 50;
-    
+
     // Calculate weighted priority
-    const priority = (
+    const priority =
       recencyFactor * 0.4 +
       valueFactor * 0.3 +
       categoryFactor * 0.2 +
-      banner.priority * 0.1
-    );
+      banner.priority * 0.1;
 
     return Math.round(priority);
   }
@@ -73,7 +73,7 @@ export class BannerPrioritizationEngine {
     return Array.from(this.banners.values())
       .map(banner => ({
         ...banner,
-        priority: this.calculatePriority(banner.id)
+        priority: this.calculatePriority(banner.id),
       }))
       .sort((a, b) => b.priority - a.priority);
   }
@@ -114,9 +114,12 @@ export class BannerPrioritizationEngine {
   /**
    * Get banners by load strategy
    */
-  getBannersByLoadStrategy(strategy: 'immediate' | 'lazy' | 'on-demand'): BannerMetadata[] {
-    return Array.from(this.banners.values())
-      .filter(banner => banner.loadStrategy === strategy && banner.isVisible);
+  getBannersByLoadStrategy(
+    strategy: 'immediate' | 'lazy' | 'on-demand'
+  ): BannerMetadata[] {
+    return Array.from(this.banners.values()).filter(
+      banner => banner.loadStrategy === strategy && banner.isVisible
+    );
   }
   /**
    * Update banner visibility based on performance metrics
@@ -168,26 +171,31 @@ export class BannerPrioritizationEngine {
   } {
     const banners = Array.from(this.banners.values());
     const visible = banners.filter(b => b.isVisible);
-    
-    const byCategory = banners.reduce((acc, banner) => {
-      acc[banner.category] = (acc[banner.category] || 0) + 1;
-      return acc;
-    }, {} as Record<string, number>);
 
-    const byStrategy = banners.reduce((acc, banner) => {
-      acc[banner.loadStrategy] = (acc[banner.loadStrategy] || 0) + 1;
-      return acc;
-    }, {} as Record<string, number>);
+    const byCategory = banners.reduce(
+      (acc, banner) => {
+        acc[banner.category] = (acc[banner.category] || 0) + 1;
+        return acc;
+      },
+      {} as Record<string, number>
+    );
+
+    const byStrategy = banners.reduce(
+      (acc, banner) => {
+        acc[banner.loadStrategy] = (acc[banner.loadStrategy] || 0) + 1;
+        return acc;
+      },
+      {} as Record<string, number>
+    );
 
     return {
       total: banners.length,
       visible: visible.length,
       byCategory,
-      byStrategy
+      byStrategy,
     };
   }
 }
 
 // Export singleton instance
-export const bannerPrioritizationEngine = new BannerPrioritizationEngine();
 export const bannerPrioritizationEngine = new BannerPrioritizationEngine();

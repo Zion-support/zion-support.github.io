@@ -1,16 +1,16 @@
-import React, { Component, type ErrorInfo, type ReactNode } from 'react';
-import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
+'use client';
+
+import { Component, ErrorInfo, ReactNode } from 'react';
 
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
 }
 
 interface State {
   hasError: boolean;
   error?: Error;
-  errorId?: string;
+  errorInfo?: ErrorInfo;
 }
 
 class ErrorBoundary extends Component<Props, State> {
@@ -20,95 +20,69 @@ class ErrorBoundary extends Component<Props, State> {
   }
 
   static getDerivedStateFromError(error: Error): State {
-    return {
-      hasError: true,
+    return { hasError: true, error };
+  }
+
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    this.setState({
       error,
-      errorId: `error-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`
-    };
-  }
+      errorInfo
+    });
 
-  override componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error('ErrorBoundary caught an error:', error, errorInfo);
-    
-    //Call the onError callback if provided
-    if (this.props.onError) {
-      this.props.onError(error, errorInfo);
+    // Log error to console in development
+    if (process.env.NODE_ENV === 'development') {
+      console.error('ErrorBoundary caught an error:', error, errorInfo);
     }
 
-    //Report to error tracking service
-    if (typeof window !== 'undefined' && 'console' in window) {
-      console.error('Error details:', {
-        error: error.message,
-        stack: error.stack,
-        componentStack: errorInfo.componentStack,
-        errorId: this.state.errorId
-      });
-    }
-  }
-
-  handleRetry = () => {
-    this.setState({ hasError: false });
-  };
-
-  handleGoHome = () => {
-    if (typeof window !== 'undefined') {
-      window.location.href = '/';
-    }
-  };
-
-  override render() {
-    if (this.state.hasError) {
-      if (this.props.fallback) {
-        return this.props.fallback;
+    // Report error to monitoring service in production
+    if (process.env.NODE_ENV === 'production') {
+      console.error('Production error caught:', error.message);
+      
+      // Send to error tracking service
+      if (typeof window !== 'undefined' && 'gtag' in window) {
+        (window as unknown as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag('event', 'exception', {
+          description: error.message,
+          fatal: false
+        });
       }
+    }
+  }
 
+  render() {
+    if (this.state.hasError) {
       return (
-        <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4">
-          <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-6 text-center">
-            <div className="flex justify-center mb-4">
-              <AlertTriangle className="h-12 w-12 text-red-500" />
-            </div>
-            
-            <h1 className="text-xl font-semibold text-gray-900 mb-2">
-              Something went wrong
-            </h1>
-            
-            <p className="text-gray-600 mb-6">
-              We're sorry, but something unexpected happened. Please try again.
-            </p>
-
-            {process.env['NODE_ENV'] === 'development' && this.state.error && (
-              <div className="mb-4 p-3 bg-red-50 border border-red-200 rounded text-left">
-                <p className="text-sm text-red-800 font-mono">
-                  {this.state.error.message}
+        this.props.fallback || (
+          <div className='min-h-screen flex items-center justify-center bg-gradient-to-br from-red-50 to-orange-50'>
+            <div className='max-w-md w-full mx-4'>
+              <div className='bg-white rounded-2xl shadow-xl p-8 text-center'>
+                <div className='inline-flex items-center justify-center w-16 h-16 rounded-full bg-red-100 mb-4'>
+                  <span className='text-4xl text-red-600'>⚠️</span>
+                </div>
+                <h1 className='text-2xl font-bold text-gray-900 mb-2'>
+                  Oops! Something went wrong
+                </h1>
+                <p className='text-gray-600 mb-6'>
+                  We're sorry for the inconvenience. Please try refreshing the
+                  page.
                 </p>
-                {this.state.errorId && (
-                  <p className="text-xs text-red-600 mt-1">
-                    Error ID: {this.state.errorId}
-                  </p>
-                )}
+                <div className='space-y-3'>
+                  <button
+                    onClick={() => window.location.reload()}
+                    className='w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors'
+                  >
+                    Refresh Page
+                  </button>
+                  <a
+                    href='/'
+                    className='block w-full border-2 border-red-600 text-red-600 hover:bg-red-50 font-semibold py-3 px-6 rounded-lg transition-colors'
+                  >
+                    Go to Homepage
+                  </a>
+                </div>
               </div>
-            )}
-
-            <div className="flex flex-col sm:flex-row gap-3">
-              <button
-                onClick={this.handleRetry}
-                className="flex items-center justify-center px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
-              >
-                <RefreshCw className="h-4 w-4 mr-2" />
-                Try Again
-              </button>
-              
-              <button
-                onClick={this.handleGoHome}
-                className="flex items-center justify-center px-4 py-2 bg-gray-600 text-white rounded-md hover:bg-gray-700 transition-colors"
-              >
-                <Home className="h-4 w-4 mr-2" />
-                Go Home
-              </button>
             </div>
           </div>
-        </div>
+        )
       );
     }
 

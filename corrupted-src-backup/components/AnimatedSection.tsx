@@ -7,4 +7,27 @@ interface AnimatedSectionProps {
   delay?: number;
 }
 
-const AnimatedSection: React.FC<AnimatedSectionProps> = ({ children, className = '' }) => {
+const AnimatedSection: React.FC<AnimatedSectionProps> = ({
+  children,
+  className = '',
+  animation = 'fadeIn',
+  delay = 0,
+}) => {
+  const animationClasses = {
+    fadeIn: 'animate-fade-in',
+    slideUp: 'animate-slide-up',
+    slideLeft: 'animate-slide-left',
+    slideRight: 'animate-slide-right',
+  };
+
+  return (
+    <div
+      className={`${animationClasses[animation]} ${className}`}
+      style={{ animationDelay: `${delay}ms` }}
+    >
+      {children}
+    </div>
+  );
+};
+
+export default AnimatedSection;

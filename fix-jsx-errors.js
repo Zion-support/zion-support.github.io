@@ -9,17 +9,17 @@ const fixes = [
   //Fix ArrowRight -> Link mismatches
   {
     pattern: /<ArrowRight\s+([^>]*)>\s*([^<]*)<\/Link>/g,
-    replacement: '<Link $1>$2</Link>'
+    replacement: '<Link $1>$2</Link>',
   },
-  //Fix Link -> ArrowRight mismatches  
+  //Fix Link -> ArrowRight mismatches
   {
     pattern: /<Link\s+([^>]*)>\s*([^<]*)<\/ArrowRight>/g,
-    replacement: '<Link $1>$2</Link>'
+    replacement: '<Link $1>$2</Link>',
   },
   //Fix unclosed ArrowRight tags
   {
     pattern: /<ArrowRight\s+([^>]*)>\s*([^<]*)(?!<\/ArrowRight>)/g,
-    replacement: '<Link $1>$2</Link>'
+    replacement: '<Link $1>$2</Link>',
   },
   //Fix unclosed Link tags that should be ArrowRight
   {
@@ -30,8 +30,8 @@ const fixes = [
         return `<Link ${attrs}>${content}</Link>`;
       }
       return match;
-    }
-  }
+    },
+  },
 ];
 
 //Get all TypeScript/JSX files
@@ -97,8 +97,8 @@ const files = await glob('**/*.{ts,tsx,js,jsx}', {
     'app/page-optimized.tsx',
     'app/services-advertising/page.tsx',
     'fix_typescript_syntax_errors.jsx',
-    'fix_utils_files.ts'
-  ]
+    'fix_utils_files.ts',
+  ],
 });
 
 let fixedFiles = 0;
@@ -109,7 +109,7 @@ console.log(`Found ${files.length} files to process...`);
 for (const file of files) {
   try {
     let content = fs.readFileSync(file, 'utf8');
-    let originalContent = content;
+    const originalContent = content;
     let fileFixes = 0;
 
     //Apply all fixes
@@ -123,9 +123,11 @@ for (const file of files) {
 
     //Count fixes
     if (content !== originalContent) {
-      const diff = (content.match(/<Link/g) || []).length - (originalContent.match(/<Link/g) || []).length;
+      const diff =
+        (content.match(/<Link/g) || []).length -
+        (originalContent.match(/<Link/g) || []).length;
       fileFixes += Math.abs(diff);
-      
+
       if (fileFixes > 0) {
         fs.writeFileSync(file, content, 'utf8');
         console.log(`Fixed ${fileFixes} issues in ${file}`);

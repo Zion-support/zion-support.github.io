@@ -161,7 +161,7 @@ const report = {
   summary: {
     totalPRs: prs.length,
     merged: mergedCount,
-  conflicts: conflictCount,
+    conflicts: conflictCount,
     notFound: notFoundCount,
     successRate: `${Math.round((mergedCount / prs.length) * 100)}%`,
   },
