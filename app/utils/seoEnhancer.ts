@@ -47,7 +47,14 @@ export const generateMetaTags = (data: {
       content: data.twitterImage || data.ogImage || '/og-image.jpg',
     },
   ];
-=======
+
+  return tags;
+};
+
+// SEO config interface
+interface SEOConfig {
+  title: string;
+  description: string;
   keywords: string[];
   canonicalUrl: string;
   ogImage: string;
@@ -67,30 +74,22 @@ export const generateMetaTags = (data: {
   tags?: string[];
 }
 
-  return tags;
-};
-
-// Generate structured data
-export const generateStructuredData = (data: {
-  type: 'Organization' | 'WebSite' | 'Article' | 'Service';
-  name: string;
-  description: string;
-  url?: string;
-  logo?: string;
-  sameAs?: string[];
-  [key: string]: unknown;
-}) => {
-  const baseStructure = {
-    '@context': 'https://schema.org',
-    '@type': data.type,
-    name: data.name,
-    description: data.description,
-    url: data.url || '',
-    logo: data.logo || '',
-    sameAs: data.sameAs || [],
-  };
-
-  return { ...baseStructure, ...data };
+const defaultSEOConfig: SEOConfig = {
+  title: 'Zion Holdings',
+  description: 'Leading provider of AI-powered business solutions',
+  keywords: ['AI', 'business', 'solutions'],
+  canonicalUrl: '',
+  ogImage: '/og-image.jpg',
+  ogType: 'website',
+  twitterCard: 'summary_large_image',
+  twitterSite: '@zionholdings',
+  twitterCreator: '@zionholdings',
+  structuredData: {},
+  robots: 'index, follow',
+  language: 'en',
+  locale: 'en_US',
+  siteName: 'Zion Holdings',
+  author: 'Zion Holdings',
 };
 
 // SEO Enhancer class
@@ -288,7 +287,34 @@ Sitemap: ${this.config.canonicalUrl}/sitemap.xml`;
   // Get current SEO data
   getCurrentSEO() {
     if (typeof document === 'undefined') return {};
->>>>>>> e2aec618376f3db9bd60312768ea5d9abc7086c8
+
+    return {
+      title: document.title,
+      description: document.querySelector('meta[name="description"]')?.getAttribute('content') || '',
+      canonical: document.querySelector('link[rel="canonical"]')?.getAttribute('href') || '',
+    };
+  }
+}
+
+// Generate structured data
+export const generateStructuredData = (data: {
+  type: 'Organization' | 'WebSite' | 'Article' | 'Service';
+  name: string;
+  description: string;
+  url?: string;
+  logo?: string;
+  sameAs?: string[];
+  [key: string]: unknown;
+}) => {
+  const baseStructure = {
+    '@context': 'https://schema.org',
+    '@type': data.type,
+    name: data.name,
+    description: data.description,
+    url: data.url || '',
+    logo: data.logo || '',
+    sameAs: data.sameAs || [],
+  };
 
   // Add type-specific properties
   if (data.type === 'Organization') {
