@@ -371,10 +371,14 @@ export const collectPerformanceMetricsArray = async (): Promise<
   // Memory usage
   const memory = getMemoryUsage();
 <<<<<<< HEAD
+<<<<<<< HEAD
   if (memory && memory.used > 0) {
 =======
   if (memory) {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0475
+=======
+  if (memory && memory.used > 0) {
+>>>>>>> origin/main
     metrics.push({ name: 'memoryUsage', value: memory.used });
   }
 
@@ -396,7 +400,7 @@ const performanceUtils = {
   lazyLoadImages,
   preloadCriticalResources,
   optimizeScrollPerformance,
-  performanceMonitor,
+  performanceMonitorInstance,
   collectPerformanceMetrics,
   collectPerformanceMetricsArray,
   getMemoryUsage,
