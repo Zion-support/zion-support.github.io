@@ -10,34 +10,7 @@ import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import LoadingSpinner from '../app/components/LoadingSpinner';
 
-// Simple placeholder components
-const Home = () => (
-  <div className="min-h-screen flex items-center justify-center bg-gray-50">
-    <div className="text-center">
-      <h1 className="text-4xl font-bold text-gray-900 mb-4">Welcome to Zion Tech Group</h1>
-      <p className="text-xl text-gray-600">Advanced AI and IT Solutions</p>
-    </div>
-  </div>
-);
-
-const About = () => (
-  <div className="min-h-screen flex items-center justify-center bg-gray-50">
-    <div className="text-center">
-      <h1 className="text-4xl font-bold text-gray-900 mb-4">About Us</h1>
-      <p className="text-xl text-gray-600">Leading AI and IT Solutions Provider</p>
-    </div>
-  </div>
-);
-
-const Services = () => (
-  <div className="min-h-screen flex items-center justify-center bg-gray-50">
-    <div className="text-center">
-      <h1 className="text-4xl font-bold text-gray-900 mb-4">Our Services</h1>
-      <p className="text-xl text-gray-600">Comprehensive AI and IT Solutions</p>
-    </div>
-  </div>
-);
-
+// Blog component (used in Routes)
 const Blog = () => (
   <div className="min-h-screen flex items-center justify-center bg-gray-50">
     <div className="text-center">

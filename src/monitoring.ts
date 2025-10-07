@@ -97,7 +97,8 @@ export const initWebVitals = () => {
         } else if (entry.entryType === 'first-input') {
           analytics.trackPerformance('FID', entry.processingStart - entry.startTime);
         } else if (entry.entryType === 'layout-shift') {
-          analytics.trackPerformance('CLS', (entry as any).value);
+          const layoutShiftEntry = entry as PerformanceEntry & { value: number };
+          analytics.trackPerformance('CLS', layoutShiftEntry.value);
         }
       }
     });

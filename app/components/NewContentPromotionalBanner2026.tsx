@@ -2,12 +2,10 @@ import React from 'react';
 import Link from 'next/link';
 import {
   Sparkles,
-  TrendingUp,
   Rocket,
   Shield,
   Target,
   ArrowRight,
-  Zap,
 } from 'lucide-react';
 
 const NewContentPromotionalBanner2026: React.FC = () => {
@@ -27,33 +25,73 @@ const NewContentPromotionalBanner2026: React.FC = () => {
     },
     {
       id: 2,
-      title: 'Enterprise AI Transformation Roadmap 2026',
-      slug: 'enterprise-ai-transformation-roadmap-2026',
+      title: 'Quantum-Enhanced AI Processing',
+      slug: 'quantum-enhanced-ai-processing',
       excerpt:
-        'Complete implementation guide delivering 300% ROI, 85% automation, and digital transformation',
-      category: 'Strategic Guide',
-      icon: '🎯',
-      color: 'from-purple-500 to-fuchsia-600',
-      bgColor: 'from-purple-50 to-fuchsia-50',
-      badge: 'STRATEGIC',
-      badgeColor: 'from-purple-500 to-fuchsia-600',
+        'Revolutionary quantum algorithms delivering 1000x faster AI computations and breakthrough insights',
+      category: 'Quantum Computing',
+      icon: '⚡',
+      color: 'from-purple-500 to-pink-600',
+      bgColor: 'from-purple-50 to-pink-50',
+      badge: 'BREAKTHROUGH',
+      badgeColor: 'from-purple-500 to-pink-600',
     },
     {
       id: 3,
-      title: 'AI-Powered Security Operations Center 2026',
-      slug: 'ai-security-operations-center-2026',
+      title: 'Neural Network Optimization 2026',
+      slug: 'neural-network-optimization-2026',
       excerpt:
-        '99.9% threat detection, 95% faster response, and autonomous security operations',
-      category: 'Cybersecurity',
-      icon: '🛡️',
-      color: 'from-red-500 to-orange-600',
-      bgColor: 'from-red-50 to-orange-50',
-      badge: 'CRITICAL',
-      badgeColor: 'from-red-500 to-orange-600',
+        'Advanced neural architectures achieving 99.9% accuracy with 90% reduced computational overhead',
+      category: 'Machine Learning',
+      icon: '🧠',
+      color: 'from-green-500 to-emerald-600',
+      bgColor: 'from-green-50 to-emerald-50',
+      badge: 'OPTIMIZED',
+      badgeColor: 'from-green-500 to-emerald-600',
+    },
+    {
+      id: 4,
+      title: 'Edge AI Deployment Strategies',
+      slug: 'edge-ai-deployment-strategies',
+      excerpt:
+        'Deploy AI models at the edge with 50ms latency, 99.9% uptime, and seamless cloud integration',
+      category: 'Edge Computing',
+      icon: '🌐',
+      color: 'from-orange-500 to-red-600',
+      bgColor: 'from-orange-50 to-red-50',
+      badge: 'EDGE',
+      badgeColor: 'from-orange-500 to-red-600',
+    },
+    {
+      id: 5,
+      title: 'AI-Powered Business Intelligence',
+      slug: 'ai-powered-business-intelligence',
+      excerpt:
+        'Real-time insights, predictive analytics, and automated decision-making for enterprise growth',
+      category: 'Business Intelligence',
+      icon: '📊',
+      color: 'from-indigo-500 to-violet-600',
+      bgColor: 'from-indigo-50 to-violet-50',
+      badge: 'INSIGHTS',
+      badgeColor: 'from-indigo-500 to-violet-600',
+    },
+    {
+      id: 6,
+      title: 'Autonomous System Integration',
+      slug: 'autonomous-system-integration',
+      excerpt:
+        'Seamlessly integrate AI across all business systems with zero downtime and maximum efficiency',
+      category: 'System Integration',
+      icon: '🔗',
+      color: 'from-teal-500 to-cyan-600',
+      bgColor: 'from-teal-50 to-cyan-50',
+      badge: 'INTEGRATED',
+      badgeColor: 'from-teal-500 to-cyan-600',
     },
   ];
+
   return (
-    <div className="relative overflow-hidden bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 py-20">
+    <div className="relative min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 overflow-hidden">
       {/* Animated background effects */}
       <div className="absolute inset-0">
         <div className="absolute top-10 left-10 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl animate-pulse"></div>

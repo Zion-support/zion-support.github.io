@@ -159,6 +159,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
         
         {/* Additional SEO meta tags */}
         <meta name="robots" content="index, follow" />
+        <meta name="googlebot" content="index, follow" />
         <meta name="author" content="Zion Tech Group" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         
