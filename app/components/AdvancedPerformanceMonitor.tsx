@@ -33,6 +33,11 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     if (typeof window === 'undefined' || !('performance' in window)) return;
     if (typeof PerformanceObserver === 'undefined') return;
 
+    // Declare observers outside try-catch so they're accessible in cleanup
+    let lcpObserver: PerformanceObserver | null = null;
+    let fidObserver: PerformanceObserver | null = null;
+    let clsObserver: PerformanceObserver | null = null;
+
     // Measure First Contentful Paint (FCP)
     const fcpEntries = performance.getEntriesByName('first-contentful-paint') || [];
     const fcp = fcpEntries.length > 0 ? fcpEntries[0].startTime : null;
@@ -53,6 +58,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
       } catch (error) {
         console.warn('LCP observer not supported:', error);
+        lcpObserver = null;
       }
     }
 
@@ -78,6 +84,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         fidObserver.observe({ entryTypes: ['first-input'] });
       } catch (error) {
         console.warn('FID observer not supported:', error);
+        fidObserver = null;
       }
     }
 
@@ -104,6 +111,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         clsObserver.observe({ entryTypes: ['layout-shift'] });
       } catch (error) {
         console.warn('CLS observer not supported:', error);
+        clsObserver = null;
       }
     }
 

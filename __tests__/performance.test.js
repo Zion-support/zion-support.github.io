@@ -36,11 +36,12 @@ describe('Performance Tests', () => {
   });
 
   beforeEach(() => {
-    // Mock window.location using delete and redefine
-    delete window.location;
-    window.location = {
+    // Mock window.location.reload (it's read-only, so we need to mock it differently)
+    locationSpy = jest.fn();
+    delete global.window.location;
+    global.window.location = {
       href: 'http://localhost:3000',
-      reload: jest.fn(),
+      reload: locationSpy,
     };
   });
 
@@ -50,8 +51,6 @@ describe('Performance Tests', () => {
       locationSpy.mockRestore();
     }
   });
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-1679
   test('PerformanceOptimizer should initialize correctly', () => {
     const { performanceOptimizer } = require('../app/utils/performanceOptimizer');
     
