@@ -62,8 +62,6 @@ class PerformanceOptimizer {
    */
   private measureLoadTime(): void {
     if (typeof window === 'undefined' || !window.performance) return;
-    
-    // Check if getEntriesByType exists (may not be available in test environments)
     if (typeof window.performance.getEntriesByType !== 'function') return;
 
     const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
