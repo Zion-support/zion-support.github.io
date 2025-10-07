@@ -131,14 +131,19 @@ class EnhancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
       // Send to error reporting service
       if (typeof window !== 'undefined' && process.env.NODE_ENV === 'production') {
         // Example: Send to error reporting service
-        // await fetch('/api/error-report', {
-        //   method: 'POST',
-        //   headers: { 'Content-Type': 'application/json' },
-        //   body: JSON.stringify(errorReport),
-        // });
+        // Uncomment to enable error reporting to a backend service
+        /*
+        await fetch('/api/error-report', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(errorReport),
+        });
+        */
 
         // Send to analytics if enabled
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         if (this.props.enableAnalytics && (window as any).gtag) {
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
           (window as any).gtag('event', 'exception', {
             description: error.message,
             fatal: false,
@@ -150,7 +155,14 @@ class EnhancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
           });
         }
       }
+      
+      // Log error report in development
+      if (process.env.NODE_ENV === 'development') {
+        // eslint-disable-next-line no-console
+        console.log('Error Report:', errorReport);
+      }
     } catch (reportingError) {
+      // eslint-disable-next-line no-console
       console.error('Failed to report error:', reportingError);
     }
   }

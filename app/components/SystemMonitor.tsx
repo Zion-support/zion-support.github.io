@@ -4,7 +4,6 @@
  */
 
 import React, { useState, useCallback, useEffect } from 'react';
-import { initializePerformanceEnhancements } from '../utils/performanceEnhancer';
 import { errorHandler } from '../utils/enhancedErrorHandler';
 
 interface SystemMetrics {
@@ -67,14 +66,6 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
       const navigationTiming = performance.timing;
       const loadTime = navigationTiming.loadEventEnd - navigationTiming.navigationStart;
       
-      const performanceMetrics = {
-        loadTime: loadTime || performance.now(),
-        firstContentfulPaint: 0,
-        largestContentfulPaint: 0,
-        firstInputDelay: 0,
-        cumulativeLayoutShift: 0
-      };
-      const performanceScore = 85;
       const errorStats = errorHandler.getErrorStatistics();
 
       // Get memory info
@@ -179,7 +170,7 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
   const handleExport = () => {
     if (!metrics) return;
 
-    const dataToExport: any = {
+    const dataToExport: Record<string, unknown> = {
       metrics,
       performanceData: metrics.performance,
       errorData: errorHandler.exportErrorData(),
