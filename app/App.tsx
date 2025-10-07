@@ -8,6 +8,7 @@ import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import LoadingSpinner from './components/LoadingSpinner';
+import PerformanceMonitor from './components/PerformanceMonitor';
 
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./page'));
@@ -21,7 +22,9 @@ import './globals.css';
 const App: React.FC = () => {
   useEffect(() => {
     // Initialize global error handling
-    console.log('App initialized');
+    if (process.env.NODE_ENV === 'development') {
+      console.log('App initialized');
+    }
 
     // Initialize performance monitoring
     performanceOptimizer.lazyLoadImages();
@@ -31,10 +34,13 @@ const App: React.FC = () => {
         performanceOptimizer.reportWebVitals(metrics);
       });
     }
-    console.log('Performance monitoring initialized');
-    console.log(
-      '🚀 Zion Tech Group App initialized with comprehensive monitoring',
-    );
+    
+    if (process.env.NODE_ENV === 'development') {
+      console.log('Performance monitoring initialized');
+      console.log(
+        '🚀 Zion Tech Group App initialized with comprehensive monitoring',
+      );
+    }
   }, []);
 
   return (
@@ -70,13 +76,14 @@ const App: React.FC = () => {
                 </Routes>
               </Suspense>
 
-              <Footer />
-            </div>
-          </Router>
-        </AccessibilityEnhancer>
-      </ErrorBoundary>
-    </HelmetProvider>
-  );
+            <Footer />
+            <PerformanceMonitor />
+          </div>
+        </Router>
+      </AccessibilityEnhancer>
+    </ErrorBoundary>
+  </HelmetProvider>
+);
 };
 
 export default App;
