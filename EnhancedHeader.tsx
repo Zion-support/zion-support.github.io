@@ -1,4 +1,3 @@
-import { Menu, X } from 'lucide-react';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -35,7 +34,7 @@ const EnhancedHeader: React.FC = () => {
             onClick={() => setIsOpen(!isOpen)}
             className='md:hidden text-gray-700'
           >
-            {isOpen ? <X className='w-6 h-6' /> : <Menu className='w-6 h-6' />}
+            {isOpen ? <span className='text-xl'>✕</span> : <span className='text-xl'>☰</span>}
           </button>
         {isOpen && (
           <div className='md:hidden py-4 border-t'>
@@ -51,9 +50,10 @@ const EnhancedHeader: React.FC = () => {
             ))}
           </div>
         )}
+        </div>
       </div>
     </header>
   );
-  };
+};
 
 export default EnhancedHeader;

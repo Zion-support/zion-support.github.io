@@ -1,15 +1,21 @@
-import { Menu, X } from 'lucide-react';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const EnhancedNavigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
+  
+  const navigationItems = [
+    { name: 'Home', href: '/' },
+    { name: 'Services', href: '/services' },
+    { name: 'About', href: '/about' },
+    { name: 'Contact', href: '/contact' },
+  ];
 
   return (
     <nav className='bg-white shadow-md'>
       <div className='container mx-auto px-4'>
         <div className='flex justify-between items-center py-4'>
-          <Link href='/' className='text-xl font-bold text-blue-600'>
+          <Link to='/' className='text-xl font-bold text-blue-600'>
             Zion Tech Group
           </Link>
           {/* Desktop Navigation */}
@@ -17,7 +23,7 @@ const EnhancedNavigation: React.FC = () => {
             {navigationItems.map(item => (
               <Link
                 key={item.name}
-                href={item.href}
+                to={item.href}
                 className='text-gray-700 hover:text-blue-600 transition-colors'
               >
                 {item.name}
@@ -29,7 +35,7 @@ const EnhancedNavigation: React.FC = () => {
             onClick={() => setIsOpen(!isOpen)}
             className='md:hidden text-gray-700'
           >
-            {isOpen ? <X className='w-6 h-6' /> : <Menu className='w-6 h-6' />}
+            {isOpen ? <span className='text-xl'>✕</span> : <span className='text-xl'>☰</span>}
           </button>
         </div>
         {/* Mobile Navigation */}
@@ -38,7 +44,7 @@ const EnhancedNavigation: React.FC = () => {
             {navigationItems.map(item => (
               <Link
                 key={item.name}
-                href={item.href}
+                to={item.href}
                 className='block text-gray-700 hover:text-blue-600 py-2'
                 onClick={() => setIsOpen(false)}
               >
@@ -47,3 +53,9 @@ const EnhancedNavigation: React.FC = () => {
             ))}
           </div>
         )}
+      </div>
+    </nav>
+  );
+};
+
+export default EnhancedNavigation;

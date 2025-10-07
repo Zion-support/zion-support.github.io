@@ -1,9 +1,15 @@
 'use client';
 
-import React, { Suspense, lazy, useCallback } from 'react';
+import React, { Suspense, lazy, useCallback, useEffect } from 'react';
 import Link from 'next/link';
-import SEOOptimizer from './components/SEOOptimizer';
+import { HelmetProvider } from 'react-helmet-async';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
+import AdvancedErrorBoundary from './components/AdvancedErrorBoundary';
+import AdvancedSEOOptimizer from './components/AdvancedSEOOptimizer';
+import AdvancedPerformanceMonitor from './components/AdvancedPerformanceMonitor';
+import SEOEnhancer from './components/SEOEnhancer';
+import PerformanceDashboard from './components/PerformanceDashboard';
 
 // Lazy load components for better performance
 const ContentShowcase = lazy(() => import('./components/ContentShowcase'));
@@ -16,6 +22,7 @@ const InteractiveAIROICalculator = lazy(
 
 // Utils
 import { performanceOptimizer } from './utils/performanceOptimizer';
+import { logger } from './utils/logger';
 
 // Styles
 import './globals.css';
@@ -140,18 +147,23 @@ const HomePage: React.FC = () => {
             <div className="flex items-center">
               <Link 
                 href="/" 
-                className="text-2xl font-bold text-indigo-600 hover:text-indigo-700 transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 rounded"
                 aria-label="Zion Tech Group - Home"
               >
-                Zion Tech Group
+                <span className="text-2xl font-bold text-indigo-600 hover:text-indigo-700 transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 rounded">
+                  Zion Tech Group
+                </span>
               </Link>
             </div>
             <nav className="hidden md:flex space-x-8">
-              <Link href="/services" className="text-gray-700 hover:text-indigo-600 transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 rounded px-2 py-1">
-                Services
+              <Link href="/services">
+                <span className="text-gray-700 hover:text-indigo-600 transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 rounded px-2 py-1">
+                  Services
+                </span>
               </Link>
-              <Link href="/blog" className="text-gray-700 hover:text-indigo-600 transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 rounded px-2 py-1">
-                Blog
+              <Link href="/blog">
+                <span className="text-gray-700 hover:text-indigo-600 transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 rounded px-2 py-1">
+                  Blog
+                </span>
               </Link>
               <Link href="/case-studies" className="text-gray-700 hover:text-indigo-600 transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 rounded px-2 py-1">
                 Case Studies
