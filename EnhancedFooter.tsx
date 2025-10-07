@@ -1,3 +1,4 @@
+import { GithubIcon, LinkedinIcon, Mail, MapPin, Phone, Twitter } from 'lucide-react';
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -50,18 +51,19 @@ const EnhancedFooter: React.FC = () => {
                 href='https://linkedin.com/company/ziontechgroup'
                 className='text-gray-400 hover:text-white transition-colors'
               >
-                LinkedIn
+                <LinkedinIcon className='w-5 h-5' />
               </a>
               <a
                 href='https://twitter.com/ziontechgroup'
                 className='text-gray-400 hover:text-white transition-colors'
               >
-                Twitter
+                <Twitter className='w-5 h-5' />
               </a>
               <a
                 href='https://github.com/ziontechgroup'
                 className='text-gray-400 hover:text-white transition-colors'
               >
+                <GithubIcon className='w-5 h-5' />
               </a>
             </div>
           </div>
@@ -111,21 +113,21 @@ const EnhancedFooter: React.FC = () => {
         <div className='border-t border-gray-700 mt-8 pt-8'>
           <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
             <div className='flex items-center space-x-3'>
-              <div className='w-5 h-5 text-blue-400'>📧</div>
+              <Mail className='w-5 h-5 text-blue-400' />
               <div>
                 <p className='text-sm text-gray-400'>Email</p>
                 <p className='text-white'>info@ziontechgroup.com</p>
               </div>
             </div>
             <div className='flex items-center space-x-3'>
-              <div className='w-5 h-5 text-blue-400'>📞</div>
+              <Phone className='w-5 h-5 text-blue-400' />
               <div>
                 <p className='text-sm text-gray-400'>Phone</p>
                 <p className='text-white'>+1 (555) 123-4567</p>
               </div>
             </div>
             <div className='flex items-center space-x-3'>
-              <div className='w-5 h-5 text-blue-400'>📍</div>
+              <MapPin className='w-5 h-5 text-blue-400' />
               <div>
                 <p className='text-sm text-gray-400'>Address</p>
                 <p className='text-white'>123 Tech Street, Innovation City</p>
@@ -162,3 +164,4 @@ const EnhancedFooter: React.FC = () => {
   );
 };
 
+export default EnhancedFooter;

@@ -37,6 +37,8 @@ const EnhancedHeader: React.FC = () => {
           >
             {isOpen ? <X className='w-6 h-6' /> : <Menu className='w-6 h-6' />}
           </button>
+        </div>
+        {/* Mobile Navigation */}
         {isOpen && (
           <div className='md:hidden py-4 border-t'>
             {navigationItems.map(item => (
