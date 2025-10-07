@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
-import performanceOptimizer from '../utils/performanceOptimizer';
+import { performanceOptimizer } from '../utils/performanceOptimizer';
 import { logger } from '../utils/logger';
 
 interface LayoutShift extends PerformanceEntry {
@@ -256,7 +256,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
                   if (metrics.cacheHitRate < 0.8) logger.warn('⚠️ Improve caching');
                 });
                 // Also trigger performance optimizations
-                performanceOptimizer.lazyLoadImages();
+                performanceOptimizer.optimize();
                 console.log('Performance optimization triggered');
               }}
               className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-colors text-sm"
