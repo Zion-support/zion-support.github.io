@@ -34,10 +34,11 @@ const App: React.FC = () => {
 
     // Initialize performance monitoring and Web Vitals
     if (typeof window !== 'undefined' && 'performance' in window) {
+      performanceOptimizer.optimize();
       performanceOptimizer.optimizeImages();
       const metrics = performanceOptimizer.getMetrics();
       const score = performanceOptimizer.getPerformanceScore();
-      console.log('Performance metrics:', metrics, 'Score:', score);
+      console.log('Performance monitoring initialized. Metrics:', metrics, 'Score:', score);
     }
   }, []);
 

@@ -1,234 +1,260 @@
 /**
- * API Client Utility
- * Provides a robust HTTP client with retry logic, error handling, and request/response interceptors
+ * Enhanced API Client with retry logic, error handling, and request interceptors
  */
 
-import config from '../config/appConfig';
+import { envConfig } from './envConfig';
 
-export interface ApiError extends Error {
-  status?: number;
-  statusText?: string;
-  data?: unknown;
-}
+export type HttpMethod = 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';
 
-export interface RequestOptions extends RequestInit {
+export interface ApiRequestConfig {
+  method?: HttpMethod;
+  headers?: Record<string, string>;
+  body?: unknown;
   timeout?: number;
   retries?: number;
   retryDelay?: number;
+  cache?: RequestCache;
 }
 
-/**
- * Custom fetch wrapper with timeout support
- */
-async function fetchWithTimeout(
-  url: string,
-  options: RequestOptions = {}
-): Promise<Response> {
-  const { timeout = config.api.timeout, ...fetchOptions } = options;
+export interface ProcessedApiRequestConfig {
+  method: HttpMethod;
+  headers: Record<string, string>;
+  body?: unknown;
+  timeout: number;
+  retries: number;
+  retryDelay: number;
+  cache: RequestCache;
+}
 
-  const controller = new AbortController();
-  const timeoutId = setTimeout(() => controller.abort(), timeout);
+export interface ApiResponse<T = unknown> {
+  data: T;
+  status: number;
+  statusText: string;
+  headers: Headers;
+}
 
-  try {
-    const response = await fetch(url, {
-      ...fetchOptions,
-      signal: controller.signal,
-    });
-    clearTimeout(timeoutId);
-    return response;
-  } catch (error) {
-    clearTimeout(timeoutId);
-    throw error;
+export class ApiError extends Error {
+  constructor(
+    message: string,
+    public status: number,
+    public statusText: string,
+    public response?: unknown
+  ) {
+    super(message);
+    this.name = 'ApiError';
   }
 }
 
-/**
- * Retry logic for failed requests
- */
-async function retryRequest<T>(
-  fn: () => Promise<T>,
-  retries: number,
-  delay: number
-): Promise<T> {
-  try {
-    return await fn();
-  } catch (error) {
-    if (retries <= 0) {
-      throw error;
-    }
-
-    // Don't retry on client errors (4xx)
-    if (error instanceof Error && 'status' in error) {
-      const status = (error as ApiError).status;
-      if (status && status >= 400 && status < 500) {
-        throw error;
-      }
-    }
-
-    await new Promise((resolve) => setTimeout(resolve, delay));
-    return retryRequest(fn, retries - 1, delay * 2); // Exponential backoff
-  }
-}
-
-/**
- * Create an API error with additional context
- */
-function createApiError(
-  message: string,
-  status?: number,
-  statusText?: string,
-  data?: unknown
-): ApiError {
-  const error = new Error(message) as ApiError;
-  error.name = 'ApiError';
-  error.status = status;
-  error.statusText = statusText;
-  error.data = data;
-  return error;
-}
-
-/**
- * Main API client class
- */
 class ApiClient {
   private baseUrl: string;
-  private defaultHeaders: HeadersInit;
+  private defaultHeaders: Record<string, string>;
+  private requestInterceptors: Array<(config: ProcessedApiRequestConfig) => ProcessedApiRequestConfig> = [];
+  private responseInterceptors: Array<(response: ApiResponse) => ApiResponse> = [];
 
-  constructor(baseUrl: string) {
-    this.baseUrl = baseUrl;
-    this.defaultHeaders = {
-      'Content-Type': 'application/json',
-      'Accept': 'application/json',
-    };
+  constructor() {
+    this.baseUrl = envConfig.get('apiUrl');
+    this.defaultHeaders = envConfig.getApiHeaders();
   }
 
   /**
-   * Perform a request with the API client
+   * Add request interceptor
    */
-  private async request<T>(
+  public addRequestInterceptor(
+    interceptor: (config: ProcessedApiRequestConfig) => ProcessedApiRequestConfig
+  ): void {
+    this.requestInterceptors.push(interceptor);
+  }
+
+  /**
+   * Add response interceptor
+   */
+  public addResponseInterceptor(
+    interceptor: (response: ApiResponse) => ApiResponse
+  ): void {
+    this.responseInterceptors.push(interceptor);
+  }
+
+  /**
+   * Make HTTP request with retry logic
+   */
+  private async makeRequest<T>(
     endpoint: string,
-    options: RequestOptions = {}
-  ): Promise<T> {
+    config: ApiRequestConfig = {}
+  ): Promise<ApiResponse<T>> {
     const {
-      retries = config.api.retryAttempts,
-      retryDelay = 1000,
+      method = 'GET',
       headers = {},
-      ...fetchOptions
-    } = options;
+      body,
+      timeout = 30000,
+      retries = 3,
+      retryDelay = 1000,
+      cache = 'default'
+    } = config;
 
-    const url = `${this.baseUrl}${endpoint}`;
-    
-    const requestFn = async () => {
-      const response = await fetchWithTimeout(url, {
-        ...fetchOptions,
-        headers: {
-          ...this.defaultHeaders,
-          ...headers,
-        },
-      });
+    let lastError: Error | null = null;
 
-      if (!response.ok) {
-        const errorData = await response.json().catch(() => null);
-        throw createApiError(
-          `HTTP ${response.status}: ${response.statusText}`,
-          response.status,
-          response.statusText,
-          errorData
-        );
+    // Apply request interceptors
+    let processedConfig: ProcessedApiRequestConfig = { 
+      method: method as HttpMethod, 
+      headers: headers || {}, 
+      body, 
+      timeout, 
+      retries, 
+      retryDelay, 
+      cache 
+    };
+    for (const interceptor of this.requestInterceptors) {
+      processedConfig = interceptor(processedConfig);
+    }
+
+    for (let attempt = 0; attempt <= retries; attempt++) {
+      try {
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), timeout);
+
+        const url = endpoint.startsWith('http') ? endpoint : `${this.baseUrl}${endpoint}`;
+        
+        const response = await fetch(url, {
+          method: processedConfig.method,
+          headers: {
+            ...this.defaultHeaders,
+            ...processedConfig.headers
+          },
+          body: processedConfig.body ? JSON.stringify(processedConfig.body) : undefined,
+          signal: controller.signal,
+          cache: processedConfig.cache
+        });
+
+        clearTimeout(timeoutId);
+
+        if (!response.ok) {
+          const errorData = await response.json().catch(() => ({}));
+          throw new ApiError(
+            errorData.message || `HTTP Error ${response.status}`,
+            response.status,
+            response.statusText,
+            errorData
+          );
+        }
+
+        const data = await response.json().catch(() => ({}));
+
+        let apiResponse: ApiResponse<T> = {
+          data: data as T,
+          status: response.status,
+          statusText: response.statusText,
+          headers: response.headers
+        };
+
+        // Apply response interceptors
+        for (const interceptor of this.responseInterceptors) {
+          apiResponse = interceptor(apiResponse) as ApiResponse<T>;
+        }
+
+        return apiResponse;
+
+      } catch (error) {
+        lastError = error as Error;
+
+        // Don't retry on client errors (4xx)
+        if (error instanceof ApiError && error.status >= 400 && error.status < 500) {
+          throw error;
+        }
+
+        // Retry on network errors or 5xx errors
+        if (attempt < retries) {
+          await this.delay(retryDelay * Math.pow(2, attempt)); // Exponential backoff
+          continue;
+        }
+
+        throw lastError;
       }
+    }
 
-      return response.json();
-    };
-
-    return retryRequest(requestFn, retries, retryDelay);
+    throw lastError || new Error('Request failed');
   }
 
   /**
-   * Perform a GET request
+   * Utility function for delay
    */
-  async get<T>(endpoint: string, options?: RequestOptions): Promise<T> {
-    return this.request<T>(endpoint, {
-      ...options,
-      method: 'GET',
-    });
+  private delay(ms: number): Promise<void> {
+    return new Promise(resolve => setTimeout(resolve, ms));
   }
 
   /**
-   * Perform a POST request
+   * GET request
    */
-  async post<T>(
+  public async get<T>(endpoint: string, config?: ApiRequestConfig): Promise<ApiResponse<T>> {
+    return this.makeRequest<T>(endpoint, { ...config, method: 'GET' });
+  }
+
+  /**
+   * POST request
+   */
+  public async post<T>(
     endpoint: string,
-    data?: unknown,
-    options?: RequestOptions
-  ): Promise<T> {
-    return this.request<T>(endpoint, {
-      ...options,
-      method: 'POST',
-      body: JSON.stringify(data),
-    });
+    body?: unknown,
+    config?: ApiRequestConfig
+  ): Promise<ApiResponse<T>> {
+    return this.makeRequest<T>(endpoint, { ...config, method: 'POST', body });
   }
 
   /**
-   * Perform a PUT request
+   * PUT request
    */
-  async put<T>(
+  public async put<T>(
     endpoint: string,
-    data?: unknown,
-    options?: RequestOptions
-  ): Promise<T> {
-    return this.request<T>(endpoint, {
-      ...options,
-      method: 'PUT',
-      body: JSON.stringify(data),
-    });
+    body?: unknown,
+    config?: ApiRequestConfig
+  ): Promise<ApiResponse<T>> {
+    return this.makeRequest<T>(endpoint, { ...config, method: 'PUT', body });
   }
 
   /**
-   * Perform a PATCH request
+   * PATCH request
    */
-  async patch<T>(
+  public async patch<T>(
     endpoint: string,
-    data?: unknown,
-    options?: RequestOptions
-  ): Promise<T> {
-    return this.request<T>(endpoint, {
-      ...options,
-      method: 'PATCH',
-      body: JSON.stringify(data),
-    });
+    body?: unknown,
+    config?: ApiRequestConfig
+  ): Promise<ApiResponse<T>> {
+    return this.makeRequest<T>(endpoint, { ...config, method: 'PATCH', body });
   }
 
   /**
-   * Perform a DELETE request
+   * DELETE request
    */
-  async delete<T>(endpoint: string, options?: RequestOptions): Promise<T> {
-    return this.request<T>(endpoint, {
-      ...options,
-      method: 'DELETE',
-    });
+  public async delete<T>(endpoint: string, config?: ApiRequestConfig): Promise<ApiResponse<T>> {
+    return this.makeRequest<T>(endpoint, { ...config, method: 'DELETE' });
   }
 
   /**
-   * Set authorization header
+   * Set base URL
    */
-  setAuthToken(token: string): void {
-    this.defaultHeaders = {
-      ...this.defaultHeaders,
-      'Authorization': `Bearer ${token}`,
-    };
+  public setBaseUrl(url: string): void {
+    this.baseUrl = url;
   }
 
   /**
-   * Clear authorization header
+   * Set default headers
    */
-  clearAuthToken(): void {
-    const headers = { ...this.defaultHeaders };
-    delete (headers as Record<string, string>)['Authorization'];
-    this.defaultHeaders = headers;
+  public setDefaultHeaders(headers: Record<string, string>): void {
+    this.defaultHeaders = { ...this.defaultHeaders, ...headers };
   }
 }
 
 // Export singleton instance
-export const apiClient = new ApiClient(config.api.baseUrl);
+export const apiClient = new ApiClient();
 
-export default ApiClient;
+// Add default request interceptor for logging
+if (envConfig.isDevelopment()) {
+  apiClient.addRequestInterceptor((config) => {
+    console.log(`[API] ${config.method} request:`, config);
+    return config;
+  });
+
+  apiClient.addResponseInterceptor((response) => {
+    console.log(`[API] Response (${response.status}):`, response.data);
+    return response;
+  });
+}
