@@ -39,15 +39,25 @@ class ErrorBoundary extends Component<Props, State> {
 
   private reportError = (error: Error, errorInfo: ErrorInfo) => {
     // Report to external service (e.g., Sentry, LogRocket, etc.)
-    if (typeof window !== 'undefined' && (window as unknown as { gtag?: (command: string, eventName: string, parameters: Record<string, unknown>) => void }).gtag) {
-      (window as unknown as { gtag: (command: string, eventName: string, parameters: Record<string, unknown>) => void }).gtag('event', 'exception', {
-        description: error.message,
-        fatal: false,
-        custom_map: {
-          error_id: this.state.errorId,
-          component_stack: errorInfo.componentStack,
-        },
-      });
+    try {
+      if (typeof window !== 'undefined' && (window as unknown as { gtag?: (command: string, eventName: string, parameters: Record<string, unknown>) => void }).gtag) {
+        (window as unknown as { gtag: (command: string, eventName: string, parameters: Record<string, unknown>) => void }).gtag('event', 'exception', {
+          description: error.message,
+          fatal: false,
+          custom_map: {
+            error_id: this.state.errorId,
+            component_stack: errorInfo.componentStack,
+          },
+        });
+      }
+      
+      // Log to console in development
+      if (process.env.NODE_ENV === 'development') {
+        console.error('ErrorBoundary caught an error:', error, errorInfo);
+      }
+    } catch (reportingError) {
+      // Silently fail if error reporting fails
+      console.error('Failed to report error:', reportingError);
     }
   };
 
@@ -64,7 +74,7 @@ class ErrorBoundary extends Component<Props, State> {
   override render() {
     if (this.state.hasError) {
       return this.props.fallback || (
-        <div className="min-h-screen flex items-center justify-center bg-gray-900">
+        <div className="min-h-screen flex items-center justify-center bg-gray-900" role="alert" aria-live="assertive">
           <div className="text-center p-8 max-w-md">
             <AlertTriangle className="w-16 h-16 text-red-500 mx-auto mb-4" />
             <h1 className="text-2xl font-bold text-white mb-4">Something went wrong</h1>
