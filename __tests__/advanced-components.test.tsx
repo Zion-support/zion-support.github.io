@@ -46,10 +46,7 @@ describe('AdvancedErrorBoundary', () => {
     );
 
     expect(screen.getByText('Oops! Something went wrong')).toBeInTheDocument();
-<<<<<<< HEAD
     expect(screen.getByText(/Try Again/)).toBeInTheDocument();
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2d9f
     expect(screen.getByText('Reload Page')).toBeInTheDocument();
     expect(screen.getByText('Go to Homepage')).toBeInTheDocument();
 
@@ -138,7 +135,7 @@ describe('AdvancedSEOOptimizer', () => {
   });
 
   it('renders structured data when enabled', () => {
-    const { container } = render(
+    render(
       <HelmetProvider>
         <AdvancedSEOOptimizer
           config={mockSEOData}
@@ -147,39 +144,42 @@ describe('AdvancedSEOOptimizer', () => {
       </HelmetProvider>
     );
 
-    const structuredDataScript = container.querySelector(
+    // react-helmet-async modifies document.head, not the render container
+    const structuredDataScript = document.head.querySelector(
       'script[type="application/ld+json"]'
     );
     expect(structuredDataScript).toBeTruthy();
   });
 
   it('renders Open Graph tags when enabled', () => {
-    const { container } = render(
+    render(
       <HelmetProvider>
         <AdvancedSEOOptimizer config={mockSEOData} enableOpenGraph={true} />
       </HelmetProvider>
     );
 
+    // react-helmet-async modifies document.head, not the render container
     expect(
-      container.querySelector('meta[property="og:title"]')
+      document.head.querySelector('meta[property="og:title"]')
     ).toBeTruthy();
     expect(
-      container.querySelector('meta[property="og:description"]')
+      document.head.querySelector('meta[property="og:description"]')
     ).toBeTruthy();
   });
 
   it('renders Twitter Card tags when enabled', () => {
-    const { container } = render(
+    render(
       <HelmetProvider>
         <AdvancedSEOOptimizer config={mockSEOData} enableTwitterCards={true} />
       </HelmetProvider>
     );
 
+    // react-helmet-async modifies document.head, not the render container
     expect(
-      container.querySelector('meta[name="twitter:card"]')
+      document.head.querySelector('meta[name="twitter:card"]')
     ).toBeTruthy();
     expect(
-      container.querySelector('meta[name="twitter:title"]')
+      document.head.querySelector('meta[name="twitter:title"]')
     ).toBeTruthy();
   });
 });
