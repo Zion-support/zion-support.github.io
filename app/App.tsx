@@ -1,6 +1,8 @@
-import React, { useEffect, lazy, Suspense } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+'use client';
+
+import React, { Suspense, useEffect } from 'react';
 import { HelmetProvider } from 'react-helmet-async';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // Components
 import SEOOptimizer from './components/SEOOptimizer';
@@ -19,36 +21,31 @@ const ErrorBoundary = ({ children }: { children: React.ReactNode }) => {
   return <>{children}</>;
 };
 
-// Lazy load pages for better performance
-const HomePage = lazy(() => import('./page'));
-
 // Utils
-import { performanceOptimizer } from './utils/performanceOptimizer';
+import { preloadCriticalResources, performanceOptimizer } from './utils/performanceOptimizer';
 
 // Styles
-import '../index.css';
+import './globals.css';
+
+// Import HomePage component
+import HomePage from '../page';
 
 const App: React.FC = () => {
   useEffect(() => {
-    // Initialize global error handling
-    console.log('App initialized');
-
     // Initialize performance monitoring
-    performanceOptimizer.lazyLoadImages();
-    performanceOptimizer.addCriticalResourceHints();
+    performanceOptimizer.init();
     
     // Initialize Web Vitals monitoring
     if (typeof window !== 'undefined' && 'performance' in window) {
-      const pageLoadMetrics = performanceOptimizer.measurePageLoad();
-      if (pageLoadMetrics) {
-        performanceOptimizer.reportWebVitals(pageLoadMetrics);
+      const metrics = performanceOptimizer.getMetrics();
+      if (metrics && process.env.NODE_ENV === 'development') {
+        // eslint-disable-next-line no-console
+        console.log('Performance metrics:', metrics);
       }
     }
-    
-    console.log('Performance monitoring initialized');
-    console.log(
-      '🚀 Zion Tech Group App initialized with comprehensive monitoring',
-    );
+
+    // Preload critical resources
+    preloadCriticalResources();
   }, []);
 
   return (
@@ -96,3 +93,4 @@ const App: React.FC = () => {
 };
 
 export default App;
+

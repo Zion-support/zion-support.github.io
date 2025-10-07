@@ -35,8 +35,8 @@ export const lazyLoadImages = () => {
   if (typeof window === 'undefined') return;
 
   const images = document.querySelectorAll('img[data-src]');
-  const imageObserver = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
+  const imageObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
       if (entry.isIntersecting) {
         const img = entry.target as HTMLImageElement;
         img.src = img.dataset.src || '';
@@ -46,16 +46,19 @@ export const lazyLoadImages = () => {
     });
   });
 
-  images.forEach(img => imageObserver.observe(img));
+  images.forEach((img) => imageObserver.observe(img));
 };
 
 // Preload critical resources
 export const preloadCriticalResources = () => {
   if (typeof window === 'undefined') return;
 
-  const criticalResources = ['/fonts/inter-var.woff2', '/css/critical.css'];
+  const criticalResources = [
+    '/fonts/inter-var.woff2',
+    '/css/critical.css',
+  ];
 
-  criticalResources.forEach(resource => {
+  criticalResources.forEach((resource) => {
     const link = document.createElement('link');
     link.rel = 'preload';
     link.href = resource;
@@ -75,10 +78,7 @@ export const optimizeScrollPerformance = () => {
   const updateScrollPosition = () => {
     // Update scroll position indicators
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    document.documentElement.style.setProperty(
-      '--scroll-top',
-      `${scrollTop}px`
-    );
+    document.documentElement.style.setProperty('--scroll-top', `${scrollTop}px`);
     ticking = false;
   };
 
@@ -98,7 +98,7 @@ export const getMemoryUsage = () => {
     return null;
   }
 
-  const memory = (performance as unknown as { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
+  const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
   return {
     used: memory.usedJSHeapSize,
     total: memory.totalJSHeapSize,
@@ -111,25 +111,18 @@ export const getMemoryUsage = () => {
 export const collectPerformanceMetrics = () => {
   if (typeof window === 'undefined') return null;
 
-  const navigation = performance.getEntriesByType(
-    'navigation'
-  )[0] as PerformanceNavigationTiming;
+  const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
   const paint = performance.getEntriesByType('paint');
 
   return {
     navigation: {
-      domContentLoaded:
-        navigation.domContentLoadedEventEnd -
-        navigation.domContentLoadedEventStart,
+      domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
       loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
       totalTime: navigation.loadEventEnd - navigation.fetchStart,
     },
     paint: {
-      firstPaint:
-        paint.find(entry => entry.name === 'first-paint')?.startTime || 0,
-      firstContentfulPaint:
-        paint.find(entry => entry.name === 'first-contentful-paint')
-          ?.startTime || 0,
+      firstPaint: paint.find((entry) => entry.name === 'first-paint')?.startTime || 0,
+      firstContentfulPaint: paint.find((entry) => entry.name === 'first-contentful-paint')?.startTime || 0,
     },
     memory: getMemoryUsage(),
   };
