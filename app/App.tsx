@@ -15,9 +15,6 @@ import { performanceOptimizer } from './utils/performanceOptimizer';
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./page'));
 
-// Utils
-import performanceOptimizer from '../src/utils/performanceOptimizer';
-
 // Styles
 import './globals.css';
 

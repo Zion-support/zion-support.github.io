@@ -290,28 +290,6 @@ export const checkPerformanceBudget = () => {
   }
 };
 
-// Collect performance metrics
-export const collectPerformanceMetrics = () => {
-  if (typeof window === 'undefined') return null;
-
-  const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-  const paintEntries = performance.getEntriesByType('paint');
-  
-  const firstContentfulPaint = paintEntries.find(entry => entry.name === 'first-contentful-paint');
-  const firstPaint = paintEntries.find(entry => entry.name === 'first-paint');
-
-  return {
-    navigation: {
-      totalTime: navigation ? navigation.loadEventEnd - navigation.fetchStart : 0,
-      domContentLoaded: navigation ? navigation.domContentLoadedEventEnd - navigation.fetchStart : 0,
-      loadComplete: navigation ? navigation.loadEventEnd - navigation.fetchStart : 0,
-    },
-    paint: {
-      firstPaint: firstPaint?.startTime || 0,
-      firstContentfulPaint: firstContentfulPaint?.startTime || 0,
-    },
-  };
-};
 
 // Initialize performance monitoring
 export const initializePerformanceMonitoring = () => {

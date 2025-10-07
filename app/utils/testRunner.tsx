@@ -84,15 +84,10 @@ export class TestRunner {
     // Measure memory usage if available
     let memoryUsage = 0;
     if ('memory' in performance) {
-<<<<<<< HEAD
       const memory = (performance as { memory?: { usedJSHeapSize: number } }).memory;
       if (memory) {
         memoryUsage = memory.usedJSHeapSize;
       }
-=======
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      memoryUsage = (performance as any).memory.usedJSHeapSize;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a80a
     }
 
     unmount();
@@ -119,12 +114,7 @@ export class TestRunner {
   async runAccessibilityTest(
     component: ReactElement,
     testName: string
-<<<<<<< HEAD
   ): Promise<{ passed: boolean; violations: string[] }> {
-=======
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  ): Promise<{ passed: boolean; violations: any[] }> {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a80a
     const { container } = this.customRender(component);
     
     // Basic accessibility checks
@@ -250,12 +240,7 @@ export class TestRunner {
   async runVisualRegressionTest(
     component: ReactElement,
     testName: string
-<<<<<<< HEAD
   ): Promise<{ passed: boolean; diff?: Record<string, unknown> }> {
-=======
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  ): Promise<{ passed: boolean; diff?: any }> {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a80a
     // This would typically use a tool like Percy or Chromatic
     // For now, we'll just return a placeholder
     console.log(`Visual regression test for ${testName} would run here`);
@@ -270,12 +255,7 @@ export class TestRunner {
   }
 
   // Coverage test
-<<<<<<< HEAD
   async runCoverageTest(): Promise<{ passed: boolean; coverage: Record<string, unknown> }> {
-=======
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  async runCoverageTest(): Promise<{ passed: boolean; coverage: any }> {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a80a
     // This would typically use Istanbul or similar
     // For now, we'll just return a placeholder
     const coverage = {
@@ -304,12 +284,7 @@ export class TestRunner {
     component: ReactElement;
     assertions?: (result: RenderResult) => void;
     userInteractions?: (result: RenderResult) => Promise<void>;
-<<<<<<< HEAD
   }>): Promise<{ passed: boolean; results: Record<string, unknown>[] }> {
-=======
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  }>): Promise<{ passed: boolean; results: any[] }> {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a80a
     const results = [];
 
     for (const test of tests) {
