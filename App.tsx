@@ -3,12 +3,12 @@ import { createRoot } from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import HomePage from './app/page';
-import { performanceEnhancer } from './app/utils/performanceEnhancer';
+import { initializePerformanceEnhancements } from './app/utils/performanceEnhancer';
 import { errorHandler } from './app/utils/enhancedErrorHandler';
 import ErrorBoundary from './app/components/ErrorBoundary';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
 import EnhancedErrorBoundary from './app/components/EnhancedErrorBoundary';
-import AdvancedSEOOptimizer, { defaultSEOConfig } from './app/components/AdvancedSEOOptimizer';
+import AdvancedSEOOptimizer from './app/components/AdvancedSEOOptimizer';
 import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
 import { performanceOptimizer } from './app/utils/performanceOptimizer';
 
@@ -97,7 +97,7 @@ const App = () => {
   React.useEffect(() => {
     if (typeof document !== 'undefined') {
       // Initialize enhanced performance monitoring
-      performanceEnhancer.startMonitoring();
+      initializePerformanceEnhancements();
       performanceOptimizer.init();
       
       // Preload critical fonts
@@ -152,7 +152,6 @@ const App = () => {
 
     // Cleanup on unmount
     return () => {
-      performanceEnhancer.stopMonitoring();
       performanceOptimizer.cleanup();
     };
   }, []);
@@ -186,10 +185,14 @@ const App = () => {
         }}
       >
         <AdvancedSEOOptimizer
-          config={defaultSEOConfig}
+          seoData={{
+            title: 'Zion Tech Group - Advanced AI and IT Solutions',
+            description: 'Enterprise-grade AI and IT solutions designed for large organizations. Scalable, secure, and reliable technology solutions.',
+            keywords: ['AI', 'IT Solutions', 'Enterprise', 'Technology'],
+            canonicalUrl: 'https://ziontechgroup.com',
+            ogImage: 'https://ziontechgroup.com/og-image.jpg',
+          }}
           enableStructuredData={true}
-          enableAnalytics={true}
-          enablePerformanceTracking={true}
         />
         <HelmetProvider>
           <BrowserRouter>

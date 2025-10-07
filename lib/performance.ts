@@ -5,12 +5,7 @@
 import { onCLS, onFCP, onLCP, onTTFB } from 'web-vitals';
 import type { Metric } from 'web-vitals';
 
-// Extend Window interface for gtag
-declare global {
-  interface Window {
-    gtag?: (...args: unknown[]) => void;
-  }
-}
+// Window interface for gtag is already declared in types/global.d.ts
 
 // Types
 interface PerformanceMetric {

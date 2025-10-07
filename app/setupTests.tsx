@@ -62,6 +62,7 @@ Object.defineProperty(window, 'scrollTo', {
 });
 
 // Mock console methods to reduce noise in tests
+/* eslint-disable no-console */
 const originalError = console.error;
 const originalWarn = console.warn;
 
@@ -92,6 +93,7 @@ afterAll(() => {
   console.error = originalError;
   console.warn = originalWarn;
 });
+/* eslint-enable no-console */
 
 // Mock performance API
 Object.defineProperty(window, 'performance', {

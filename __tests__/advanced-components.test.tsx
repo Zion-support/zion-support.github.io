@@ -185,7 +185,7 @@ describe('AdvancedPerformanceMonitor', () => {
 
   it('renders nothing in production mode', () => {
     const originalEnv = process.env.NODE_ENV;
-    process.env.NODE_ENV = 'production';
+    Object.defineProperty(process.env, 'NODE_ENV', { value: 'production', writable: true });
 
     const { container } = render(
       <AdvancedPerformanceMonitor enableRealTimeMonitoring={true} />
@@ -193,24 +193,24 @@ describe('AdvancedPerformanceMonitor', () => {
 
     expect(container.firstChild).toBeNull();
 
-    process.env.NODE_ENV = originalEnv;
+    Object.defineProperty(process.env, 'NODE_ENV', { value: originalEnv, writable: true });
   });
 
   it('renders performance monitor in development mode', () => {
     const originalEnv = process.env.NODE_ENV;
-    process.env.NODE_ENV = 'development';
+    Object.defineProperty(process.env, 'NODE_ENV', { value: 'development', writable: true });
 
     render(<AdvancedPerformanceMonitor enableRealTimeMonitoring={true} />);
 
     expect(screen.getByText('Performance Monitor')).toBeInTheDocument();
 
-    process.env.NODE_ENV = originalEnv;
+    Object.defineProperty(process.env, 'NODE_ENV', { value: originalEnv, writable: true });
   });
 
   it('calls onMetricsUpdate when metrics change', async () => {
     const onMetricsUpdate = jest.fn();
     const originalEnv = process.env.NODE_ENV;
-    process.env.NODE_ENV = 'development';
+    Object.defineProperty(process.env, 'NODE_ENV', { value: 'development', writable: true });
 
     mockPerformance.getEntriesByName.mockReturnValue([{ startTime: 100 }]);
 
@@ -225,12 +225,12 @@ describe('AdvancedPerformanceMonitor', () => {
       expect(onMetricsUpdate).toHaveBeenCalled();
     });
 
-    process.env.NODE_ENV = originalEnv;
+    Object.defineProperty(process.env, 'NODE_ENV', { value: originalEnv, writable: true });
   });
 
   it('shows performance recommendations when metrics are poor', () => {
     const originalEnv = process.env.NODE_ENV;
-    process.env.NODE_ENV = 'development';
+    Object.defineProperty(process.env, 'NODE_ENV', { value: 'development', writable: true });
 
     // Mock poor performance metrics
     mockPerformance.getEntriesByName.mockReturnValue([
@@ -242,6 +242,6 @@ describe('AdvancedPerformanceMonitor', () => {
     // Should show recommendations for poor performance
     expect(screen.getByText('Recommendations:')).toBeInTheDocument();
 
-    process.env.NODE_ENV = originalEnv;
+    Object.defineProperty(process.env, 'NODE_ENV', { value: originalEnv, writable: true });
   });
 });

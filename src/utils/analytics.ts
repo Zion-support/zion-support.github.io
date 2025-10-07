@@ -135,7 +135,7 @@ class Analytics {
   /**
    * Send event to analytics service
    */
-  private async sendToAnalytics(): Promise<void> {
+  private async sendToAnalytics(event?: AnalyticsEvent): Promise<void> {
     try {
       // In a real application, you would send to services like Google Analytics, Mixpanel, etc.
       // Analytics event sent successfully
