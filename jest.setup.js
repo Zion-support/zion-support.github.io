@@ -1,6 +1,16 @@
 // Learn more: https://github.com/testing-library/jest-dom
 import '@testing-library/jest-dom';
 
+// Mock import.meta for Vite compatibility
+global.importMeta = {
+  env: {
+    DEV: process.env.NODE_ENV !== 'production',
+    PROD: process.env.NODE_ENV === 'production',
+    MODE: process.env.NODE_ENV || 'test',
+  },
+  url: 'file:///test',
+};
+
 // Mock Next.js router
 jest.mock('next/router', () => ({
   useRouter() {
