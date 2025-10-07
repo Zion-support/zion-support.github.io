@@ -1,18 +1,4 @@
 import js from '@eslint/js';
-<<<<<<< HEAD
-import typescriptEslint from 'typescript-eslint';
-import reactPlugin from 'eslint-plugin-react';
-import reactHooksPlugin from 'eslint-plugin-react-hooks';
-
-export default [
-  js.configs.recommended,
-  ...typescriptEslint.configs.recommended,
-  {
-    files: ['**/*.{js,jsx,ts,tsx}'],
-    languageOptions: {
-      ecmaVersion: 'latest',
-      sourceType: 'module',
-=======
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
@@ -278,7 +264,6 @@ export default [
         Performance: 'readonly',
         PerformanceNavigationTiming: 'readonly',
       },
->>>>>>> cursor/fix-errors-and-merge-to-main-9f43
       parserOptions: {
         ecmaFeatures: {
           jsx: true,
@@ -286,39 +271,15 @@ export default [
       },
     },
     plugins: {
-<<<<<<< HEAD
-      react: reactPlugin,
-      'react-hooks': reactHooksPlugin,
-    },
-    rules: {
-      ...reactPlugin.configs.recommended.rules,
-      ...reactHooksPlugin.configs.recommended.rules,
-      'react/react-in-jsx-scope': 'off',
-      'react/prop-types': 'off',
-      'no-console': 'warn',
-      'prefer-const': 'error',
-      'no-var': 'error',
-      'react/no-unescaped-entities': 'off',
-      '@typescript-eslint/no-unused-vars': 'warn',
-      '@typescript-eslint/no-explicit-any': 'warn',
-      '@typescript-eslint/no-unsafe-function-type': 'warn',
-      '@typescript-eslint/no-require-imports': 'warn',
-      'no-useless-escape': 'warn',
-=======
       react,
       'react-hooks': reactHooks,
       'react-refresh': reactRefresh,
->>>>>>> cursor/fix-errors-and-merge-to-main-9f43
     },
     settings: {
       react: {
         version: 'detect',
       },
     },
-<<<<<<< HEAD
-  },
-];
-=======
     rules: {
       ...react.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
@@ -460,4 +421,3 @@ export default [
     },
   },
 ];
->>>>>>> cursor/fix-errors-and-merge-to-main-9f43
