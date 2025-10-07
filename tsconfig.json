@@ -130,8 +130,6 @@
     "cypress.config.ts",
     "data.disabled/**",
     "data/**",
-<<<<<<< HEAD
-=======
     "disabled-api/**",
     "fix_utils_files.ts",
     "hooks.disabled/**",
@@ -147,14 +145,12 @@
     "utils.disabled/**",
     "vite.config.performance.ts",
     "app_disabled/**",
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-94e6
     "dao/**",
     "deployments/**",
     "e2e/**",
     "factories/**",
     "src/pages/blog-disabled/**",
     "hooks/**",
-<<<<<<< HEAD
     "lib.broken/**",
     "lib.disabled/**",
     "lib/integrations/**",
@@ -166,13 +162,6 @@
     "pages_disabled/**",
     "services/**",
     "src.disabled/**",
-    "utils.disabled/**",
-    "vite.config.performance.ts",
-    "app_disabled/**",
-=======
-    "services/**",
-    "middleware/**",
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-94e6
     "fix-*.jsx",
     "fix-*.ts",
     "jest.setup.*"
