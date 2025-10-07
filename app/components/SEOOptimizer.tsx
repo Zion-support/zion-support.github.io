@@ -41,6 +41,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     // Track page view
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     if (typeof window !== 'undefined' && (window as { gtag?: (command: string, eventName: string, parameters: Record<string, unknown>) => void }).gtag) {
       (window as unknown as { gtag: (command: string, eventName: string, parameters: Record<string, unknown>) => void }).gtag('event', 'page_view', {
 =======
@@ -51,6 +52,10 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     if (typeof window !== 'undefined' && (window as { gtag?: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag) {
       (window as unknown as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag('event', 'page_view', {
 >>>>>>> cursor/fix-errors-and-merge-to-main-3b5f
+=======
+    if (typeof window !== 'undefined' && (window as { gtag?: (command: string, eventName: string, parameters: Record<string, unknown>) => void }).gtag) {
+      (window as unknown as { gtag: (command: string, eventName: string, parameters: Record<string, unknown>) => void }).gtag('event', 'page_view', {
+>>>>>>> cursor/fix-errors-and-merge-to-main-85f5
         page_title: title,
         page_location: url + pathname
       });

@@ -28,6 +28,7 @@ const HomePage: React.FC = () => {
   const handlePhoneClick = useCallback(() => {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     if (typeof window !== 'undefined' && (window as unknown as { gtag?: (command: string, eventName: string, parameters: Record<string, unknown>) => void }).gtag) {
       ((window as unknown as { gtag: (command: string, eventName: string, parameters: Record<string, unknown>) => void }).gtag)('event', 'phone_click', {
 =======
@@ -38,6 +39,10 @@ const HomePage: React.FC = () => {
     if (typeof window !== 'undefined' && (window as unknown as { gtag?: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag) {
       ((window as unknown as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag)('event', 'phone_click', {
 >>>>>>> cursor/fix-errors-and-merge-to-main-3b5f
+=======
+    if (typeof window !== 'undefined' && (window as unknown as { gtag?: (command: string, eventName: string, parameters: Record<string, unknown>) => void }).gtag) {
+      ((window as unknown as { gtag: (command: string, eventName: string, parameters: Record<string, unknown>) => void }).gtag)('event', 'phone_click', {
+>>>>>>> cursor/fix-errors-and-merge-to-main-85f5
         event_category: 'engagement',
         event_label: 'main_phone_number'
       });

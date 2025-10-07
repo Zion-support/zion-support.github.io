@@ -32,7 +32,11 @@ console.log('Analytics Event:', event);
       return;
     }
 
+<<<<<<< HEAD
     const gtag = (window as unknown as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag;
+=======
+    const gtag = (window as unknown as { gtag: (command: string, eventName: string, parameters: Record<string, unknown>) => void }).gtag;
+>>>>>>> cursor/fix-errors-and-merge-to-main-85f5
     gtag('event', event.event, {
       event_category: event.category,
       event_label: event.label,

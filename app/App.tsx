@@ -2,6 +2,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { Suspense, lazy, useCallback, useEffect, ErrorInfo } from 'react';
 =======
 import React, { Suspense, lazy, useEffect } from 'react';
@@ -9,6 +10,9 @@ import React, { Suspense, lazy, useEffect } from 'react';
 =======
 import React, { Suspense, lazy, useEffect } from 'react';
 >>>>>>> cursor/fix-errors-and-merge-to-main-3b5f
+=======
+import React, { Suspense, lazy, useEffect } from 'react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-85f5
 import { HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
@@ -32,6 +36,7 @@ const ErrorBoundary = ({ children }: { children: React.ReactNode }) => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { lazyLoadImages, preloadCriticalResources, collectPerformanceMetrics, performanceOptimizer } from './utils/performanceOptimizer';
 =======
 import { performanceOptimizer } from './utils/performanceOptimizer';
@@ -39,6 +44,9 @@ import { performanceOptimizer } from './utils/performanceOptimizer';
 =======
 import { preloadCriticalResources, performanceOptimizer } from './utils/performanceOptimizer';
 >>>>>>> cursor/fix-errors-and-merge-to-main-90ff
+=======
+import { preloadCriticalResources, performanceOptimizer } from './utils/performanceOptimizer';
+>>>>>>> cursor/fix-errors-and-merge-to-main-85f5
 import { logger } from './utils/logger';
 =======
 import { preloadCriticalResources, performanceOptimizer } from './utils/performanceOptimizer';
@@ -52,6 +60,12 @@ import '../index.css';
 
 const App: React.FC = () => {
   useEffect(() => {
+<<<<<<< HEAD
+=======
+    // Initialize global error handling
+    logger.info('App initialized');
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-85f5
     // Initialize performance monitoring
     performanceOptimizer.init();
     
@@ -61,11 +75,14 @@ const App: React.FC = () => {
 <<<<<<< HEAD
       if (metrics) {
         logger.info('Performance metrics collected', 'App', { metrics });
+<<<<<<< HEAD
 =======
       if (metrics && process.env.NODE_ENV === 'development') {
         // eslint-disable-next-line no-console
         console.log('Performance metrics:', metrics);
 >>>>>>> cursor/fix-errors-and-merge-to-main-3b5f
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-85f5
       }
     }
 
@@ -73,6 +90,7 @@ const App: React.FC = () => {
     preloadCriticalResources();
 <<<<<<< HEAD
     
+<<<<<<< HEAD
     logger.info('Performance monitoring initialized', 'App');
     logger.info('🚀 Zion Tech Group App initialized with comprehensive monitoring', 'App');
   }, []);
@@ -85,6 +103,12 @@ const App: React.FC = () => {
   }, []);
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-90ff
+=======
+    logger.info('Performance monitoring initialized');
+    logger.info('🚀 Zion Tech Group App initialized with comprehensive monitoring');
+  }, []);
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-85f5
 
   return (
     <HelmetProvider>

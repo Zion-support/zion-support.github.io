@@ -3,6 +3,7 @@
 import React, { useEffect } from 'react';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 const PerformanceMonitor: React.FC = () => {
   useEffect(() => {
     // Web Vitals monitoring
@@ -16,15 +17,23 @@ const PerformanceMonitor: React.FC = () => {
 //   fcp?: number;
 //   ttfb?: number;
 // }
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-85f5
 
 const PerformanceMonitor: React.FC = () => {
   useEffect(() => {
     // Web Vitals monitoring
     const reportWebVitals = (metric: { name: string; value: number; id: string }) => {
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-3b5f
       // Send to analytics service
       if (typeof window !== 'undefined' && (window as { gtag?: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag) {
         (window as unknown as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag('event', 'web_vitals', {
+=======
+      // Send to analytics service
+      if (typeof window !== 'undefined' && (window as { gtag?: (command: string, eventName: string, parameters: Record<string, unknown>) => void }).gtag) {
+        (window as unknown as { gtag: (command: string, eventName: string, parameters: Record<string, unknown>) => void }).gtag('event', 'web_vitals', {
+>>>>>>> cursor/fix-errors-and-merge-to-main-85f5
           event_category: 'Performance',
           event_label: metric.name,
           value: Math.round(metric.value),
@@ -56,10 +65,14 @@ const PerformanceMonitor: React.FC = () => {
         new PerformanceObserver((list) => {
           const entries = list.getEntries();
 <<<<<<< HEAD
+<<<<<<< HEAD
           entries.forEach((entry: PerformanceEntry & { processingStart?: number }) => {
 =======
           entries.forEach((entry: PerformanceEventTiming) => {
 >>>>>>> cursor/fix-errors-and-merge-to-main-3b5f
+=======
+          entries.forEach((entry: PerformanceEntry & { processingStart?: number }) => {
+>>>>>>> cursor/fix-errors-and-merge-to-main-85f5
             reportWebVitals({
               name: 'FID',
               value: (entry.processingStart || entry.startTime) - entry.startTime,
@@ -72,10 +85,14 @@ const PerformanceMonitor: React.FC = () => {
         new PerformanceObserver((list) => {
           const entries = list.getEntries();
 <<<<<<< HEAD
+<<<<<<< HEAD
           entries.forEach((entry: PerformanceEntry & { hadRecentInput?: boolean; value?: number }) => {
             if (!entry.hadRecentInput && entry.value) {
 =======
           entries.forEach((entry: LayoutShift) => {
+=======
+          entries.forEach((entry: PerformanceEntry & { hadRecentInput?: boolean; value?: number }) => {
+>>>>>>> cursor/fix-errors-and-merge-to-main-85f5
             if (!entry.hadRecentInput) {
 >>>>>>> cursor/fix-errors-and-merge-to-main-3b5f
               clsValue += entry.value;
