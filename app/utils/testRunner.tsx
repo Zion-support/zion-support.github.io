@@ -7,21 +7,6 @@ import { render, RenderOptions, RenderResult } from '@testing-library/react';
 import React, { ReactElement, useCallback } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 
-// Test result types
-export interface PerformanceMetrics {
-  renderTime: number;
-  memoryUsage: number;
-  timestamp: string;
-}
-
-export interface CoverageMetrics {
-  statements: number;
-  branches: number;
-  functions: number;
-  lines: number;
-}
-
-
 // Test configuration interface
 export interface TestConfig {
   enableMocking: boolean;
@@ -89,7 +74,7 @@ export class TestRunner {
   async runPerformanceTest(
     component: ReactElement,
     testName: string
-  ): Promise<{ passed: boolean; metrics: PerformanceMetrics }> {
+  ): Promise<{ passed: boolean; metrics: { renderTime: number; memoryUsage: number; timestamp: string } }> {
     const startTime = performance.now();
     
     const { unmount } = this.customRender(component);
@@ -105,21 +90,21 @@ export class TestRunner {
       }
     }
 
-    const metrics: PerformanceMetrics = {
+    unmount();
+
+    const metrics = {
       renderTime,
       memoryUsage,
       timestamp: new Date().toISOString(),
     };
 
-    unmount();
-
     const passed = renderTime < this.config.performanceThreshold;
 
     this.testResults.push({
-      name: testName,
+      name: `Performance: ${testName}`,
       status: passed ? 'passed' : 'failed',
       duration: renderTime,
-      error: passed ? undefined : `Performance threshold exceeded: ${renderTime}ms > ${this.config.performanceThreshold}ms`,
+      error: passed ? undefined : `Render time ${renderTime}ms exceeded threshold ${this.config.performanceThreshold}ms`,
     });
 
     return { passed, metrics };
@@ -129,39 +114,58 @@ export class TestRunner {
   async runAccessibilityTest(
     component: ReactElement,
     testName: string
-  ): Promise<{ passed: boolean; violations: Array<{ description: string; impact: string }> }> {
-    const { container, unmount } = this.customRender(component);
-
-    const violations: Array<{ description: string; impact: string }> = [];
-
-    // Check for missing alt text
-    const imagesWithoutAlt = container.querySelectorAll('img:not([alt])');
-    imagesWithoutAlt.forEach((img) => {
-      violations.push({
-        description: `Image missing alt text: ${img.getAttribute('src')}`,
-        impact: 'critical',
-      });
-    });
-
-    // Check for missing labels
-    const inputsWithoutLabels = container.querySelectorAll('input:not([aria-label]):not([aria-labelledby])');
-    inputsWithoutLabels.forEach((input) => {
-      const id = input.getAttribute('id');
-      const hasLabel = id && container.querySelector(`label[for="${id}"]`);
-      if (!hasLabel) {
-        violations.push({
-          description: `Input missing label: ${input.getAttribute('name') || input.getAttribute('type')}`,
-          impact: 'serious',
-        });
+  ): Promise<{ passed: boolean; violations: string[] }> {
+    const { container } = this.customRender(component);
+    
+    // Basic accessibility checks
+    const violations: string[] = [];
+    
+    // Check for missing alt text on images
+    const images = container.querySelectorAll('img');
+    images.forEach((img, index) => {
+      if (!img.getAttribute('alt')) {
+        violations.push(`Image ${index} missing alt text`);
       }
     });
 
-    unmount();
+    // Check for missing labels on form inputs
+    const inputs = container.querySelectorAll('input, select, textarea');
+    inputs.forEach((input, index) => {
+      const id = input.getAttribute('id');
+      const ariaLabel = input.getAttribute('aria-label');
+      const ariaLabelledBy = input.getAttribute('aria-labelledby');
+      
+      if (!id && !ariaLabel && !ariaLabelledBy) {
+        violations.push(`Input ${index} missing label`);
+      }
+    });
+
+    // Check for proper heading hierarchy
+    const headings = container.querySelectorAll('h1, h2, h3, h4, h5, h6');
+    let previousLevel = 0;
+    headings.forEach((heading, index) => {
+      const level = parseInt(heading.tagName.charAt(1));
+      if (level > previousLevel + 1) {
+        violations.push(`Heading ${index} skips level (h${previousLevel} to h${level})`);
+      }
+      previousLevel = level;
+    });
+
+    // Check for proper button text
+    const buttons = container.querySelectorAll('button');
+    buttons.forEach((button, index) => {
+      const text = button.textContent?.trim();
+      const ariaLabel = button.getAttribute('aria-label');
+      
+      if (!text && !ariaLabel) {
+        violations.push(`Button ${index} missing accessible text`);
+      }
+    });
 
     const passed = violations.length === 0;
 
     this.testResults.push({
-      name: testName,
+      name: `Accessibility: ${testName}`,
       status: passed ? 'passed' : 'failed',
       duration: 0,
       error: passed ? undefined : `Found ${violations.length} accessibility violations`,
@@ -323,16 +327,16 @@ export class TestRunner {
   }
 
   // Get test results
-  getResults() {
-    return this.testResults;
+  getTestResults() {
+    return [...this.testResults];
   }
 
   // Get test statistics
-  getStatistics() {
+  getTestStatistics() {
     const total = this.testResults.length;
-    const passed = this.testResults.filter((r) => r.status === 'passed').length;
-    const failed = this.testResults.filter((r) => r.status === 'failed').length;
-    const skipped = this.testResults.filter((r) => r.status === 'skipped').length;
+    const passed = this.testResults.filter(result => result.status === 'passed').length;
+    const failed = this.testResults.filter(result => result.status === 'failed').length;
+    const skipped = this.testResults.filter(result => result.status === 'skipped').length;
 
     return {
       total,
@@ -344,43 +348,128 @@ export class TestRunner {
   }
 
   // Clear test results
-  clearResults() {
+  clearTestResults() {
     this.testResults = [];
   }
 
-  // Export test report
-  exportReport() {
+  // Generate test report
+  generateTestReport() {
+    const statistics = this.getTestStatistics();
+    const results = this.getTestResults();
+
     return {
-      config: this.config,
-      results: this.testResults,
-      statistics: this.getStatistics(),
+      summary: statistics,
+      results,
       timestamp: new Date().toISOString(),
+      config: this.config,
     };
   }
 }
 
-// React Testing Library wrapper utilities
-export const customRender = (
-  ui: ReactElement,
-  options?: Omit<RenderOptions, 'wrapper'>
-): RenderResult => {
-  const AllTheProviders = ({ children }: { children: React.ReactNode }) => {
-    return (
-      <BrowserRouter>
-        {children}
-      </BrowserRouter>
-    );
-  };
+// React hook for testing
+export const useTestRunner = () => {
+  const testRunner = TestRunner.getInstance();
 
-  return render(ui, { wrapper: AllTheProviders, ...options });
+  const runTest = useCallback(async (
+    component: ReactElement,
+    testName: string,
+    type: 'component' | 'integration' | 'performance' | 'accessibility' | 'visual',
+    assertions?: (result: RenderResult) => void,
+    userInteractions?: (result: RenderResult) => Promise<void>
+  ) => {
+    switch (type) {
+      case 'component':
+        return testRunner.runComponentTest(component, testName, assertions!);
+      case 'integration':
+        return testRunner.runIntegrationTest(component, testName, userInteractions!);
+      case 'performance':
+        return testRunner.runPerformanceTest(component, testName);
+      case 'accessibility':
+        return testRunner.runAccessibilityTest(component, testName);
+      case 'visual':
+        return testRunner.runVisualRegressionTest(component, testName);
+      default:
+        return { passed: false, error: 'Unknown test type' };
+    }
+  }, [testRunner]);
+
+  return {
+    runTest,
+    getTestResults: () => testRunner.getTestResults(),
+    getTestStatistics: () => testRunner.getTestStatistics(),
+    clearTestResults: () => testRunner.clearTestResults(),
+    generateTestReport: () => testRunner.generateTestReport(),
+  };
 };
 
-// Mock data utilities
-export const createMockData = <T,>(
-  template: T,
-  count: number = 1
-): T[] => {
-  return Array.from({ length: count }, () => ({ ...template }));
+// Test utilities
+export const testUtils = {
+  // Create mock data
+  createMockData: (type: string, count: number = 10) => {
+    const mockData = [];
+    for (let i = 0; i < count; i++) {
+      mockData.push({
+        id: i + 1,
+        name: `Mock ${type} ${i + 1}`,
+        description: `This is a mock ${type} item`,
+        createdAt: new Date().toISOString(),
+        updatedAt: new Date().toISOString(),
+      });
+    }
+    return mockData;
+  },
+
+  // Wait for element to appear
+  waitForElement: (selector: string, timeout: number = 5000) => {
+    return new Promise((resolve, reject) => {
+      const element = document.querySelector(selector);
+      if (element) {
+        resolve(element);
+        return;
+      }
+
+      const observer = new MutationObserver(() => {
+        const element = document.querySelector(selector);
+        if (element) {
+          observer.disconnect();
+          resolve(element);
+        }
+      });
+
+      observer.observe(document.body, {
+        childList: true,
+        subtree: true,
+      });
+
+      setTimeout(() => {
+        observer.disconnect();
+        reject(new Error(`Element ${selector} not found within ${timeout}ms`));
+      }, timeout);
+    });
+  },
+
+  // Simulate user interaction
+  simulateUserInteraction: async (element: HTMLElement, action: string) => {
+    switch (action) {
+      case 'click':
+        element.click();
+        break;
+      case 'focus':
+        element.focus();
+        break;
+      case 'blur':
+        element.blur();
+        break;
+      case 'change':
+        if (element instanceof HTMLInputElement) {
+          element.value = 'test value';
+          element.dispatchEvent(new Event('change', { bubbles: true }));
+        }
+        break;
+      default:
+        throw new Error(`Unknown action: ${action}`);
+    }
+  },
 };
 
 // Test helpers

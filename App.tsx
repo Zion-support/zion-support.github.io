@@ -1,5 +1,6 @@
-import React, { memo, useMemo, useCallback, Suspense } from 'react';
+import React, { memo, useMemo, useCallback, Suspense, useEffect } from 'react';
 import { HelmetProvider, Helmet } from 'react-helmet-async';
+import { performanceOptimizer } from './app/utils/performanceOptimizer';
 
 // Memoized components for better performance
 const UnifiedContentPromotion = memo(() => (
@@ -194,6 +195,26 @@ export default function App() {
 
   const handleScrollToTop = useCallback(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
+
+  // Performance optimization
+  useEffect(() => {
+    // Initialize performance monitoring
+    performanceOptimizer.optimize();
+    
+    // Set up performance monitoring
+    const interval = setInterval(() => {
+      const metrics = performanceOptimizer.getMetrics();
+      const score = performanceOptimizer.getPerformanceScore();
+      
+      // Log performance metrics in development
+      if (process.env.NODE_ENV === 'development') {
+        console.log('Performance Score:', score);
+        console.log('Performance Metrics:', metrics);
+      }
+    }, 10000); // Check every 10 seconds
+
+    return () => clearInterval(interval);
   }, []);
 
   return (
