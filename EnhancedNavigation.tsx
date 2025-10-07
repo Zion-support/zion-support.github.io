@@ -1,4 +1,4 @@
-import { Menu, X } from 'lucide-react';
+// import { Menu, X } from 'lucide-react';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -36,7 +36,7 @@ const EnhancedNavigation: React.FC = () => {
             onClick={() => setIsOpen(!isOpen)}
             className='md:hidden text-gray-700'
           >
-            {isOpen ? <X className='w-6 h-6' /> : <Menu className='w-6 h-6' />}
+            {isOpen ? <span className='w-6 h-6'>✕</span> : <span className='w-6 h-6'>☰</span>}
           </button>
         </div>
         {/* Mobile Navigation */}
