@@ -14,9 +14,6 @@ importers:
       '@heroicons/react':
         specifier: ^2.2.0
         version: 2.2.0(react@18.3.1)
-      '@tailwindcss/postcss':
-        specifier: ^4.1.14
-        version: 4.1.14
       clsx:
         specifier: ^2.1.1
         version: 2.1.1
@@ -93,6 +90,9 @@ importers:
       '@rollup/rollup-linux-x64-gnu':
         specifier: 4.52.3
         version: 4.52.3
+      '@tailwindcss/postcss':
+        specifier: ^4.1.14
+        version: 4.1.14
       '@testing-library/dom':
         specifier: ^10.4.1
         version: 10.4.1
