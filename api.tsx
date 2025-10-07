@@ -158,6 +158,7 @@ const Api: React.FC = () => {
             </div>
           </div>
         </div>
+      </div>
 
       <div className='py-16 bg-white'>
         <div className='container mx-auto px-4'>
@@ -192,4 +193,4 @@ const Api: React.FC = () => {
   );
 };
 
-export default API;
+export default Api;
