@@ -34,7 +34,7 @@
     "postbuild": "echo \"Build completed successfully\"",
     "performance:audit": "lighthouse http://localhost:4173 --output=html --output-path=./lighthouse-report.html",
     "performance:check": "pnpm build && pnpm serve & sleep 5 && pnpm performance:audit",
-    "optimize": "node scripts/optimize-build.js",
+    "optimize": "node scripts/optimize-performance.js",
     "build:netlify": "pnpm run build:optimized",
     "build:ci": "pnpm run build:no-check && pnpm run test:ci",
     "health-check": "pnpm run type-check && pnpm run lint && pnpm run build:no-check",
