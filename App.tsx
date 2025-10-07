@@ -3,8 +3,8 @@ import { createRoot } from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import { HelmetProvider, Helmet } from 'react-helmet-async';
 import HomePage from './app/page';
-import { performanceEnhancer } from './app/utils/performanceEnhancer';
-import { errorHandler } from './app/utils/enhancedErrorHandler';
+import ErrorBoundary from './app/components/ErrorBoundary';
+import PerformanceMonitor from './app/components/PerformanceMonitor';
 
 // Memoized components for better performance
 const UnifiedContentPromotion = memo(() => (
@@ -149,12 +149,12 @@ export default function App() {
     []
   );
 
+=======
+const App = () => {
+>>>>>>> c97f6dee3bc17b688177bad000795d260eae3d63
   // Performance optimization: Preload critical resources
   React.useEffect(() => {
     if (typeof document !== 'undefined') {
-      // Initialize performance monitoring
-      performanceEnhancer.startMonitoring();
-      
       // Preload critical fonts
       const fontLink = document.createElement('link');
       fontLink.rel = 'preload';
@@ -162,7 +162,6 @@ export default function App() {
         'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap';
       fontLink.as = 'style';
       document.head.appendChild(fontLink);
-      
       // Preload critical images
       const preloadImages = [
         'https://ziontechgroup.com/og-image.jpg',
@@ -172,11 +171,12 @@ export default function App() {
         const img = new Image();
         img.src = src;
       });
-
-      // Enhanced performance monitoring with Web Vitals
+      // Add performance monitoring
       if ('performance' in window) {
         window.addEventListener('load', () => {
-          const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+          const perfData = performance.getEntriesByType(
+            'navigation'
+          )[0] as PerformanceNavigationTiming;
           if (perfData) {
             const performanceMetrics = {
               domContentLoaded: perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart,
@@ -193,7 +193,7 @@ export default function App() {
             if (process.env.NODE_ENV === 'production' && typeof window !== 'undefined') {
               // Send to analytics service
               if ('gtag' in window) {
-                (window as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag('event', 'page_load_performance', {
+                (window as unknown as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag('event', 'page_load_performance', {
                   event_category: 'Performance',
                   event_label: 'Page Load',
                   value: Math.round(performanceMetrics.totalTime)
@@ -204,12 +204,8 @@ export default function App() {
         });
       }
     }
-
-    // Cleanup on unmount
-    return () => {
-      performanceEnhancer.stopMonitoring();
-    };
   }, []);
+<<<<<<< HEAD
 
   const handlePhoneClick = useCallback(() => {
     // Track phone clicks for analytics
@@ -220,12 +216,17 @@ export default function App() {
       });
     }
   }, []);
+=======
+>>>>>>> c97f6dee3bc17b688177bad000795d260eae3d63
   return (
-    <HelmetProvider>
-      <BrowserRouter>
-        <HomePage />
-      </BrowserRouter>
-    </HelmetProvider>
+    <ErrorBoundary>
+      <HelmetProvider>
+        <BrowserRouter>
+          <HomePage />
+          <PerformanceMonitor />
+        </BrowserRouter>
+      </HelmetProvider>
+    </ErrorBoundary>
   );
 };
 
@@ -234,3 +235,5 @@ if (container) {
   const root = createRoot(container);
   root.render(<App />);
 }
+
+export default App;
