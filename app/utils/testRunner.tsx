@@ -4,7 +4,7 @@
  */
 
 import { render, RenderOptions, RenderResult } from '@testing-library/react';
-import { ReactElement } from 'react';
+import React, { ReactElement, useCallback } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 
 // Test configuration interface
@@ -74,6 +74,7 @@ export class TestRunner {
   async runPerformanceTest(
     component: ReactElement,
     testName: string
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   ): Promise<{ passed: boolean; metrics: any }> {
     const startTime = performance.now();
     
@@ -84,6 +85,7 @@ export class TestRunner {
     // Measure memory usage if available
     let memoryUsage = 0;
     if ('memory' in performance) {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       memoryUsage = (performance as any).memory.usedJSHeapSize;
     }
 
@@ -111,6 +113,7 @@ export class TestRunner {
   async runAccessibilityTest(
     component: ReactElement,
     testName: string
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   ): Promise<{ passed: boolean; violations: any[] }> {
     const { container } = this.customRender(component);
     
@@ -237,6 +240,7 @@ export class TestRunner {
   async runVisualRegressionTest(
     component: ReactElement,
     testName: string
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   ): Promise<{ passed: boolean; diff?: any }> {
     // This would typically use a tool like Percy or Chromatic
     // For now, we'll just return a placeholder
@@ -252,6 +256,7 @@ export class TestRunner {
   }
 
   // Coverage test
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   async runCoverageTest(): Promise<{ passed: boolean; coverage: any }> {
     // This would typically use Istanbul or similar
     // For now, we'll just return a placeholder
@@ -281,6 +286,7 @@ export class TestRunner {
     component: ReactElement;
     assertions?: (result: RenderResult) => void;
     userInteractions?: (result: RenderResult) => Promise<void>;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   }>): Promise<{ passed: boolean; results: any[] }> {
     const results = [];
 

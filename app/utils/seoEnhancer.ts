@@ -16,6 +16,7 @@ export interface SEOConfig {
   twitterCard: string;
   twitterSite: string;
   twitterCreator: string;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   structuredData: Record<string, any>;
   robots: string;
   language: string;
@@ -141,6 +142,7 @@ export class SEOEnhancer {
   }
 
   // Update structured data
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   updateStructuredData(data: Record<string, any>) {
     const script = document.createElement('script');
     script.type = 'application/ld+json';

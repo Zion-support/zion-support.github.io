@@ -3,7 +3,7 @@
  * Comprehensive error handling utilities for React applications
  */
 
-import { ErrorInfo } from 'react';
+import React, { ErrorInfo, useCallback } from 'react';
 
 // Error types
 export enum ErrorType {
@@ -39,6 +39,7 @@ export interface AppError {
   url?: string;
   userAgent?: string;
   componentStack?: string;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   context?: Record<string, any>;
   resolved?: boolean;
   retryCount?: number;
@@ -90,6 +91,7 @@ export class ErrorHandler {
   }
 
   // Handle error
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   handleError(error: Error, errorInfo?: ErrorInfo, context?: Record<string, any>): AppError {
     const appError: AppError = {
       id: this.generateErrorId(),
@@ -157,6 +159,7 @@ export class ErrorHandler {
   }
 
   // Handle validation error
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   handleValidationError(field: string, message: string, value?: any): AppError {
     const appError: AppError = {
       id: this.generateErrorId(),
@@ -402,7 +405,7 @@ export class ErrorHandler {
         console.log(`Retrying network request (attempt ${retryItem.retryCount})`);
         // Add your retry logic here
       }
-    } catch (err) {
+    } catch {
       if (retryItem.retryCount < this.config.maxRetries) {
         this.scheduleRetry(retryItem.error);
       } else {
@@ -532,6 +535,7 @@ export class ErrorBoundary extends React.Component<
 export const useErrorHandler = () => {
   const errorHandler = ErrorHandler.getInstance();
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const handleError = useCallback((error: Error, context?: Record<string, any>) => {
     return errorHandler.handleError(error, undefined, context);
   }, [errorHandler]);
@@ -540,6 +544,7 @@ export const useErrorHandler = () => {
     return errorHandler.handleNetworkError(error, url, status);
   }, [errorHandler]);
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const handleValidationError = useCallback((field: string, message: string, value?: any) => {
     return errorHandler.handleValidationError(field, message, value);
   }, [errorHandler]);

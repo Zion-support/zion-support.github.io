@@ -3,7 +3,7 @@
  * Comprehensive performance optimization utilities for React applications
  */
 
-import { useEffect, useCallback, useRef, useState } from 'react';
+import { useEffect, useCallback, useRef } from 'react';
 
 // Performance monitoring utilities
 export class PerformanceMonitor {
@@ -30,6 +30,7 @@ export class PerformanceMonitor {
   // Track memory usage
   trackMemory(componentName: string) {
     if ('memory' in performance) {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       const memory = (performance as any).memory;
       this.metrics.set(`${componentName}_memory`, memory.usedJSHeapSize);
     }
@@ -197,8 +198,10 @@ export const trackWebVitals = () => {
 
     const observer = new PerformanceObserver((list) => {
       for (const entry of list.getEntries()) {
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         if (!(entry as any).hadRecentInput) {
           clsEntries.push(entry);
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
           clsValue += (entry as any).value;
         }
       }
@@ -227,6 +230,7 @@ export const trackWebVitals = () => {
   const trackFID = () => {
     const observer = new PerformanceObserver((list) => {
       for (const entry of list.getEntries()) {
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         const fid = (entry as any).processingStart - entry.startTime;
         console.log('[Web Vitals] FID:', fid);
       }
@@ -284,6 +288,29 @@ export const checkPerformanceBudget = () => {
       console.warn(`[Performance Budget] Load time exceeded: ${loadTime}ms > ${budget.maxFirstLoad}ms`);
     }
   }
+};
+
+// Collect performance metrics
+export const collectPerformanceMetrics = () => {
+  if (typeof window === 'undefined') return null;
+
+  const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+  const paintEntries = performance.getEntriesByType('paint');
+  
+  const firstContentfulPaint = paintEntries.find(entry => entry.name === 'first-contentful-paint');
+  const firstPaint = paintEntries.find(entry => entry.name === 'first-paint');
+
+  return {
+    navigation: {
+      totalTime: navigation ? navigation.loadEventEnd - navigation.fetchStart : 0,
+      domContentLoaded: navigation ? navigation.domContentLoadedEventEnd - navigation.fetchStart : 0,
+      loadComplete: navigation ? navigation.loadEventEnd - navigation.fetchStart : 0,
+    },
+    paint: {
+      firstPaint: firstPaint?.startTime || 0,
+      firstContentfulPaint: firstContentfulPaint?.startTime || 0,
+    },
+  };
 };
 
 // Initialize performance monitoring
