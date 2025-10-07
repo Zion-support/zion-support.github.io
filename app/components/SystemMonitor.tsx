@@ -4,7 +4,7 @@
  */
 
 import React, { useState, useEffect, useCallback } from 'react';
-import { initializePerformanceEnhancements } from '../utils/performanceEnhancer';
+import { performanceOptimizer } from '../utils/performanceOptimizer';
 import { errorHandler } from '../utils/enhancedErrorHandler';
 
 interface SystemMetrics {
@@ -63,22 +63,9 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
   // Update metrics
   const updateMetrics = useCallback(() => {
     try {
-      // Mock performance metrics for now
-      const performanceMetrics = {
-        loadTime: 0,
-        firstContentfulPaint: 0,
-        largestContentfulPaint: 0,
-        firstInputDelay: 0,
-        cumulativeLayoutShift: 0,
-      };
-      const performanceScore = 0;
-      const errorStats = typeof errorHandler !== 'undefined' && errorHandler.getErrorStatistics ? errorHandler.getErrorStatistics() : {
-        totalErrors: 0,
-        errorsByType: {},
-        errorsByCategory: {},
-        errorsBySeverity: {},
-        recentErrors: [],
-      };
+      const performanceMetrics = performanceOptimizer.getMetrics();
+      const performanceScore = performanceOptimizer.getPerformanceScore();
+      const errorStats = errorHandler.getErrorStatistics();
 
       // Get memory info
       const memoryInfo = getMemoryInfo();
@@ -89,11 +76,11 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
       const newMetrics: SystemMetrics = {
         performance: {
           score: performanceScore,
-          loadTime: performanceMetrics.loadTime,
-          firstContentfulPaint: performanceMetrics.firstContentfulPaint,
-          largestContentfulPaint: performanceMetrics.largestContentfulPaint,
-          firstInputDelay: performanceMetrics.firstInputDelay,
-          cumulativeLayoutShift: performanceMetrics.cumulativeLayoutShift,
+          loadTime: performanceMetrics.ttfb || 0,
+          firstContentfulPaint: performanceMetrics.fcp || 0,
+          largestContentfulPaint: performanceMetrics.lcp || 0,
+          firstInputDelay: performanceMetrics.fid || 0,
+          cumulativeLayoutShift: performanceMetrics.cls || 0,
         },
         errors: {
           total: errorStats.totalErrors,
@@ -122,7 +109,7 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
   // Initialize monitoring
   useEffect(() => {
     const initializeMonitoring = () => {
-      initializePerformanceEnhancements();
+      performanceOptimizer.init();
       setIsMonitoring(true);
       updateMetrics();
     };
@@ -130,6 +117,7 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
     initializeMonitoring();
 
     return () => {
+      performanceOptimizer.cleanup();
       setIsMonitoring(false);
     };
   }, [updateMetrics]);
@@ -183,7 +171,7 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
 
     const exportData = {
       metrics,
-      performanceData: metrics?.performance || {},
+      performanceData: performanceOptimizer.getMetrics(),
       errorData: errorHandler.exportErrorData(),
       timestamp: new Date().toISOString(),
     };
