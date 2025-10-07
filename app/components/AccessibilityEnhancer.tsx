@@ -1,112 +1,123 @@
-import React, { useEffect, useState, type ReactNode } from 'react';
+import React, { useEffect } from 'react';
 
 interface AccessibilityEnhancerProps {
-  children: ReactNode;
+  children: React.ReactNode;
 }
 
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
-  const [isHighContrast, setIsHighContrast] = useState(false);
-  const [fontSize, setFontSize] = useState<'small' | 'normal' | 'large'>('normal');
-  const [reducedMotion, setReducedMotion] = useState(false);
-
   useEffect(() => {
-    //Check for user preferences
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    setReducedMotion(prefersReducedMotion);
+    // Add keyboard navigation improvements
+    const handleKeyDown = (event: KeyboardEvent) => {
+      // Skip to main content
+      if (event.key === 'Tab' && event.shiftKey && event.target === document.body) {
+        const skipLink = document.querySelector('[data-skip-to-main]') as HTMLElement;
+        if (skipLink) {
+          skipLink.focus();
+        }
+      }
+    };
 
-    //Load saved preferences
-    const savedHighContrast = localStorage.getItem('highContrast') === 'true';
-    const savedFontSize = (localStorage.getItem('fontSize') as 'small' | 'normal' | 'large') || 'normal';
-    
-    setIsHighContrast(savedHighContrast);
-    setFontSize(savedFontSize);
+    // Add focus management
+    const handleFocusIn = (event: FocusEvent) => {
+      const target = event.target as HTMLElement;
+      if (target && target.closest('[data-focus-trap]')) {
+        // Ensure focus stays within focus trap
+        const focusableElements = target.closest('[data-focus-trap]')?.querySelectorAll(
+          'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+        );
+        
+        if (focusableElements && focusableElements.length > 0) {
+          const firstElement = focusableElements[0] as HTMLElement;
+          const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
+          
+          if (event.target === lastElement && (event as any).shiftKey) {
+            firstElement.focus();
+            event.preventDefault();
+          } else if (event.target === firstElement && !(event as any).shiftKey) {
+            lastElement.focus();
+            event.preventDefault();
+          }
+        }
+      }
+    };
 
-    //Apply initial styles
-    applyAccessibilityStyles(savedHighContrast, savedFontSize, prefersReducedMotion);
+    // Add ARIA live region for announcements
+    const addLiveRegion = () => {
+      if (!document.getElementById('aria-live-region')) {
+        const liveRegion = document.createElement('div');
+        liveRegion.id = 'aria-live-region';
+        liveRegion.setAttribute('aria-live', 'polite');
+        liveRegion.setAttribute('aria-atomic', 'true');
+        liveRegion.className = 'sr-only';
+        document.body.appendChild(liveRegion);
+      }
+    };
+
+    // Announce page changes
+    const announcePageChange = (message: string) => {
+      const liveRegion = document.getElementById('aria-live-region');
+      if (liveRegion) {
+        liveRegion.textContent = message;
+      }
+    };
+
+    // Add high contrast mode detection
+    const checkHighContrast = () => {
+      if (window.matchMedia('(prefers-contrast: high)').matches) {
+        document.body.classList.add('high-contrast');
+      }
+    };
+
+    // Add reduced motion detection
+    const checkReducedMotion = () => {
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        document.body.classList.add('reduced-motion');
+      }
+    };
+
+    // Initialize accessibility features
+    addLiveRegion();
+    checkHighContrast();
+    checkReducedMotion();
+
+    // Add event listeners
+    document.addEventListener('keydown', handleKeyDown);
+    document.addEventListener('focusin', handleFocusIn);
+
+    // Monitor for dynamic content changes
+    const observer = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        if (mutation.type === 'childList' && mutation.addedNodes.length > 0) {
+          // Announce new content
+          announcePageChange('New content has been loaded');
+        }
+      });
+    });
+
+    observer.observe(document.body, {
+      childList: true,
+      subtree: true
+    });
+
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+      document.removeEventListener('focusin', handleFocusIn);
+      observer.disconnect();
+    };
   }, []);
-
-  const applyAccessibilityStyles = (highContrast: boolean,
-  fontSize: string, reducedMotion: boolean) => {
-    const root = document.documentElement;
-    
-    //Apply high contrast
-    if (highContrast) {
-      root.classList.add('high-contrast');
-    } else {
-      root.classList.remove('high-contrast');
-    }
-
-    //Apply font size
-    root.classList.remove('font-small', 'font-normal', 'font-large');
-    root.classList.add(`font-${fontSize}`);
-
-    //Apply reduced motion
-    if (reducedMotion) {
-      root.classList.add('reduced-motion');
-    } else {
-      root.classList.remove('reduced-motion');
-    }
-  };
-
-  const toggleHighContrast = () => {
-    const newValue = !isHighContrast;
-    setIsHighContrast(newValue);
-    localStorage.setItem('highContrast', newValue.toString());
-    applyAccessibilityStyles(newValue, fontSize, reducedMotion);
-  };
-
-  const changeFontSize = (size: 'small' | 'normal' | 'large') => {
-    setFontSize(size);
-    localStorage.setItem('fontSize', size);
-    applyAccessibilityStyles(isHighContrast, size, reducedMotion);
-  };
 
   return (
     <>
-      {children}
+      {/* Skip to main content link */}
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50"
+        data-skip-to-main
+      >
+        Skip to main content
+      </a>
       
-      {/* Accessibility Controls - Only show in development */}
-      {process.env['NODE_ENV'] === 'development' && (
-        <div className="fixed top-4 left-4 z-50 bg-white border border-gray-200 rounded-lg shadow-lg p-4">
-          <h3 className="text-sm font-semibold text-gray-900 mb-3">
-            Accessibility Controls
-          </h3>
-          
-          <div className="space-y-3">
-            <div>
-              <label className="flex items-center space-x-2">
-                <input
-                  type="checkbox"
-                  checked={isHighContrast}
-                  onChange={toggleHighContrast}
-                  className="rounded"
-                />
-                <span className="text-sm text-gray-700">High Contrast</span>
-              </label>
-            </div>
-            
-            <div>
-              <label className="text-sm text-gray-700 block mb-2">Font Size:</label>
-              <div className="flex space-x-1">
-                {(['small', 'normal', 'large'] as const).map((size) => (
-                  <button
-                    key={size}
-                    onClick={() => changeFontSize(size)}
-                    className={`px-2 py-1 text-xs rounded ${
-                      fontSize === size
-                        ? 'bg-blue-600 text-white'
-                        : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
-                    }`}
-                    aria-label={`Set font size to ${size}`}
-                  >
-                    {size.charAt(0).toUpperCase()}
-                  </button>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
+      {children}
     </>
   );
 };

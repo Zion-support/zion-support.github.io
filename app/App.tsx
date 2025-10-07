@@ -3,10 +3,11 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 
 // Components
-import ErrorBoundary from './components/ErrorBoundary';
-import SEOOptimizer from './components/SEOOptimizer';
+import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
+import SEOEnhancer from './components/SEOEnhancer';
 import LoadingSpinner from './components/LoadingSpinner';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
+import PerformanceOptimizer from './components/PerformanceOptimizer';
 import PerformanceDashboard from './components/PerformanceDashboard';
 import PerformanceMonitor from './components/PerformanceMonitor';
 
@@ -45,37 +46,32 @@ const App: React.FC = () => {
 
   return (
     <HelmetProvider>
-      <ErrorBoundary>
-        <PerformanceMonitor>
-          <SEOOptimizer>
-            <Router>
-              <div className='App'>
-                {/* Skip to main content link for accessibility */}
-                <a
-                  href='#main-content'
-                  className='skip-link sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50'
-                  onClick={e => {
-                    e.preventDefault();
-                    document.getElementById('main-content')?.focus();
-                  }}
-                >
-                  Skip to main content
-                </a>
+      <EnhancedErrorBoundary>
+        <PerformanceOptimizer>
+          <AccessibilityEnhancer>
+            <SEOEnhancer
+              title="Zion Tech Group - Advanced AI and IT Solutions"
+              description="Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. Transform your business with our cutting-edge technology."
+            >
+              <Router>
+                <div className='App'>
+                  <main id='main-content'>
+                    <Suspense fallback={<LoadingSpinner />}>
+                      <Routes>
+                        <Route path='/' element={<HomePage />} />
+                        {/* Add more routes as needed */}
+                      </Routes>
+                    </Suspense>
+                  </main>
 
-                <Suspense fallback={<LoadingSpinner />}>
-                  <Routes>
-                    <Route path='/' element={<HomePage />} />
-                    {/* Add more routes as needed */}
-                  </Routes>
-                </Suspense>
-
-                {/* Performance Dashboard */}
-                <PerformanceDashboard />
-              </div>
-            </Router>
-          </SEOOptimizer>
-        </PerformanceMonitor>
-      </ErrorBoundary>
+                  {/* Performance Dashboard */}
+                  <PerformanceDashboard />
+                </div>
+              </Router>
+            </SEOEnhancer>
+          </AccessibilityEnhancer>
+        </PerformanceOptimizer>
+      </EnhancedErrorBoundary>
     </HelmetProvider>
   );
 };
