@@ -6,6 +6,7 @@ import { HelmetProvider } from 'react-helmet-async';
 import ErrorBoundary from '../src/components/ErrorBoundary';
 import SEOOptimizer from '../src/components/SEOOptimizer';
 import AccessibilityEnhancer from '../src/components/AccessibilityEnhancer';
+import PerformanceMonitor from './components/PerformanceMonitor';
 import LoadingSpinner from './components/LoadingSpinner';
 
 // Lazy load pages for better performance

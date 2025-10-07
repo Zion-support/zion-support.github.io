@@ -1,10 +1,5 @@
 import React from 'react';
 
-<<<<<<< HEAD
-export default function ContentValueTestimonials(): React.JSX.Element {
-	return <section aria-label="Content Value Testimonials" />;
-}
-=======
 interface ContentValueTestimonialsProps {
   className?: string;
   children?: React.ReactNode;
@@ -27,4 +22,4 @@ const ContentValueTestimonials: React.FC<ContentValueTestimonialsProps> = ({
 };
 
 export default ContentValueTestimonials;
->>>>>>> cursor/fix-errors-and-merge-to-main-8d57
+
