@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-import React, { memo, Suspense } from 'react';
-=======
-import React, { useMemo, useEffect } from 'react';
->>>>>>> 68abfd78c0fc76bb2d296448d64c5c14b506b08f
+import React, { memo, Suspense, useMemo, useEffect } from 'react';
 import { createRoot } from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
@@ -10,54 +6,9 @@ import { performanceEnhancer } from './app/utils/performanceEnhancer';
 import ErrorBoundary from './app/components/ErrorBoundary';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
 
-<<<<<<< HEAD
 // Lazy load the main page for better performance
 const HomePage = React.lazy(() => import('./app/page'));
 
-// Memoized components for better performance (currently unused but kept for future use)
-// const UnifiedContentPromotion = memo(() => (
-//   <div className='bg-gradient-to-r from-blue-600 to-purple-700 text-white py-16'>
-//     <div className='container mx-auto px-4 text-center'>
-//       <h2 className='text-3xl font-bold mb-4'>Latest AI Innovations</h2>
-//       <p className='text-xl'>
-//         Discover cutting-edge AI solutions for your business
-//       </p>
-//     </div>
-//   </div>
-// ));
-
-// const InteractiveAIROICalculator = memo(() => (
-//   <div className='bg-gray-50 py-16'>
-//     <div className='container mx-auto px-4 text-center'>
-//       <h2 className='text-3xl font-bold mb-4'>AI ROI Calculator</h2>
-//       <p className='text-xl text-gray-600'>
-//         Calculate your potential AI investment returns
-//       </p>
-//     </div>
-//   </div>
-// ));
-
-// const ContentShowcase = memo(() => (
-//   <div className='py-16'>
-//     <div className='container mx-auto px-4 text-center'>
-//       <h2 className='text-3xl font-bold mb-4'>Featured Content</h2>
-//       <p className='text-xl text-gray-600'>
-//         Explore our latest insights and case studies
-//       </p>
-//     </div>
-//   </div>
-// ));
-
-// const InteractiveContentShowcase2026 = memo(() => (
-//   <div className='bg-blue-50 py-16'>
-//     <div className='container mx-auto px-4 text-center'>
-//       <h2 className='text-3xl font-bold mb-4'>2026 Content Showcase</h2>
-//       <p className='text-xl text-gray-600'>
-//         Latest trends and innovations for 2026
-//       </p>
-//     </div>
-//   </div>
-// ));
 // Loading fallback component
 const LoadingFallback = memo(() => (
   <div className="min-h-screen flex items-center justify-center bg-gray-50">
@@ -67,9 +18,8 @@ const LoadingFallback = memo(() => (
     </div>
   </div>
 ));
-=======
-// App component
-const App = () => {
+
+const App = memo(() => {
   // Structured data for SEO
   const structuredData = useMemo(
     () => ({
@@ -110,9 +60,7 @@ const App = () => {
     }),
     []
   );
->>>>>>> 68abfd78c0fc76bb2d296448d64c5c14b506b08f
 
-const App = memo(() => {
   // Performance optimization: Preload critical resources
   useEffect(() => {
     if (typeof document !== 'undefined') {
@@ -194,15 +142,9 @@ const App = memo(() => {
       </HelmetProvider>
     </ErrorBoundary>
   );
-<<<<<<< HEAD
 });
 
 App.displayName = 'App';
-
-export default App;
-=======
-};
->>>>>>> 68abfd78c0fc76bb2d296448d64c5c14b506b08f
 
 const container = document.getElementById('root');
 if (container) {

@@ -34,72 +34,6 @@ const HomePage: React.FC = () => {
 
   return (
     <>
-<<<<<<< HEAD
-      <Helmet>
-        <title>Zion Tech Group - Advanced AI and IT Solutions</title>
-        <meta
-          name='description'
-          content='Leading provider of AI-powered enterprise solutions, automation, and digital transformation services. Transform your business with cutting-edge AI micro SaaS services and cloud automation.'
-        />
-        <meta
-          name='keywords'
-          content='AI solutions, enterprise AI, digital transformation, automation, cloud services, AI consulting, business intelligence, machine learning, artificial intelligence, enterprise software'
-        />
-        <meta name="robots" content="index, follow" />
-        <meta name="author" content="Zion Tech Group" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        
-        {/* Open Graph / Facebook */}
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com/" />
-        <meta property="og:title" content="Zion Tech Group - Advanced AI and IT Solutions" />
-        <meta property="og:description" content="Leading provider of AI-powered enterprise solutions, automation, and digital transformation services." />
-        <meta property="og:image" content="https://ziontechgroup.com/og-image.jpg" />
-        
-        {/* Twitter */}
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://ziontechgroup.com/" />
-        <meta property="twitter:title" content="Zion Tech Group - Advanced AI and IT Solutions" />
-        <meta property="twitter:description" content="Leading provider of AI-powered enterprise solutions, automation, and digital transformation services." />
-        <meta property="twitter:image" content="https://ziontechgroup.com/og-image.jpg" />
-        
-        {/* Structured Data */}
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            "name": "Zion Tech Group",
-            "url": "https://ziontechgroup.com",
-            "logo": "https://ziontechgroup.com/logo.png",
-            "description": "Leading provider of AI-powered enterprise solutions, automation, and digital transformation services.",
-            "address": {
-              "@type": "PostalAddress",
-              "addressCountry": "US"
-            },
-            "contactPoint": {
-              "@type": "ContactPoint",
-              "telephone": "+1-302-464-0950",
-              "contactType": "customer service",
-              "availableLanguage": "English"
-            },
-            "sameAs": [
-              "https://twitter.com/ziontechgroup",
-              "https://linkedin.com/company/zion-tech-group"
-            ],
-            "foundingDate": "2025",
-            "services": [
-              "AI Micro SaaS Services",
-              "Cloud Automation",
-              "Enterprise Solutions",
-              "Digital Transformation"
-            ]
-          })}
-        </script>
-      </Helmet>
-
-      <div className='min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100'>
-        <header className="bg-white shadow-sm sticky top-0 z-50" role="banner">
-=======
       <SEOOptimizer 
         title="Zion Tech Group - Advanced AI and IT Solutions"
         description="Leading provider of AI-powered enterprise solutions, automation, and digital transformation services. Transform your business with cutting-edge AI micro SaaS services and cloud automation."
@@ -107,8 +41,7 @@ const HomePage: React.FC = () => {
       />
       <AccessibilityEnhancer>
         <div className='min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100'>
-        <header className="bg-white shadow-sm sticky top-0 z-50">
->>>>>>> 68abfd78c0fc76bb2d296448d64c5c14b506b08f
+        <header className="bg-white shadow-sm sticky top-0 z-50" role="banner">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex justify-between items-center py-6">
               <div className="flex items-center">
@@ -195,13 +128,9 @@ const HomePage: React.FC = () => {
                 </Link>
                 <a
                   href="tel:+13024640950"
-<<<<<<< HEAD
+                  onClick={handlePhoneClick}
                   className="bg-white text-indigo-600 px-8 py-4 rounded-lg border-2 border-indigo-600 hover:bg-indigo-50 transition-all duration-300 transform hover:scale-105 font-medium focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
                   aria-label="Call us at +1 302 464 0950">
-=======
-                  onClick={handlePhoneClick}
-                  className="bg-white text-indigo-600 px-8 py-4 rounded-lg border-2 border-indigo-600 hover:bg-indigo-50 transition-all duration-300 transform hover:scale-105 font-medium">
->>>>>>> 68abfd78c0fc76bb2d296448d64c5c14b506b08f
                   Call +1 302 464 0950
                 </a>
               </div>
