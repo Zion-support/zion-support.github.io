@@ -103,7 +103,7 @@ const AccessibilityEnhancer = React.forwardRef<AccessibilityEnhancerRef, Accessi
           white-space: nowrap;
           border: 0;
         }
-        .sr-only.focus\:not-sr-only:focus {
+        .sr-only.focus\\:not-sr-only:focus {
           position: static;
           width: auto;
           height: auto;
