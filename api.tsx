@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Code, ExternalLink, Shield, Zap } from 'lucide-react';
+// Icons removed as they were unused
 
 const API: React.FC = () => {
   const apiEndpoints = [
