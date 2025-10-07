@@ -24,9 +24,10 @@ if (typeof window !== 'undefined') {
   });
 
   // Track Web Vitals
-  measurePageLoad().then((metrics: { fcp?: number; lcp?: number; fid?: number; cls?: number; ttfb?: number }) => {
+  const metrics = measurePageLoad();
+  if (metrics) {
     reportWebVitals(metrics);
-  });
+  }
   
   // Monitor long tasks (if available)
   if ('monitorLongTasks' in performanceOptimizer) {

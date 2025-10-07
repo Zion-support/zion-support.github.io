@@ -301,8 +301,8 @@ export const optimizeScrollPerformance = (): void => {
   window.addEventListener('scroll', requestTick, { passive: true });
 };
 
-// Performance monitor
-export const performanceMonitor = {
+// Performance monitor object (alternative implementation)
+export const performanceMonitorObject = {
   start: () => {
     if (typeof window === 'undefined') return;
 
@@ -346,8 +346,8 @@ export const collectPerformanceMetricsArray = async (): Promise<
 
   // Memory usage
   const memory = getMemoryUsage();
-  if (memory) {
-    metrics.push({ name: 'memoryUsage', value: memory.usedJSHeapSize });
+  if (memory && memory.used > 0) {
+    metrics.push({ name: 'memoryUsage', value: memory.used });
   }
 
   // Resource timing

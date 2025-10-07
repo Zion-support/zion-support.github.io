@@ -95,9 +95,8 @@ const App: React.FC = () => {
                   }
                 }}
                 enableStructuredData={true}
-                enableOpenGraph={true}
-                enableTwitterCards={true}
-                enableSchemaMarkup={true}
+                enableAnalytics={true}
+                enablePerformanceTracking={true}
               />
               <Router>
                 <div className='App'>

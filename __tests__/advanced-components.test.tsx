@@ -126,7 +126,6 @@ describe('AdvancedSEOOptimizer', () => {
       <HelmetProvider>
         <AdvancedSEOOptimizer 
           config={mockSEOData} 
-          enableOpenGraph={true}
         />
       </HelmetProvider>
     );
@@ -140,7 +139,6 @@ describe('AdvancedSEOOptimizer', () => {
       <HelmetProvider>
         <AdvancedSEOOptimizer 
           config={mockSEOData} 
-          enableTwitterCards={true}
         />
       </HelmetProvider>
     );
