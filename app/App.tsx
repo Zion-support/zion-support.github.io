@@ -8,7 +8,11 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import SEOOptimizer from './components/SEOOptimizer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import PerformanceDashboard from './components/PerformanceDashboard';
+import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 import HomePage from './page';
+
+// Utils
+import { preloadCriticalResources, optimizeImages, optimizeThirdPartyScripts } from './utils/preloadOptimizer';
 
 // Loading component
 const LoadingSpinner = () => (
@@ -17,78 +21,47 @@ const LoadingSpinner = () => (
   </div>
 );
 
-// Error boundary component
-const ErrorBoundary = ({ children }: { children: React.ReactNode }) => {
-  return <>{children}</>;
-};
-
-// Utils
-import { preloadCriticalResources, performanceOptimizer } from './utils/performanceOptimizer';
-
-// Styles
-import '../index.css';
-
 const App: React.FC = () => {
   useEffect(() => {
-    // Initialize performance monitoring
-    performanceOptimizer.init();
-    
-    // Initialize Web Vitals monitoring
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      const metrics = performanceOptimizer.getMetrics();
-      if (metrics && process.env.NODE_ENV === 'development') {
-        // eslint-disable-next-line no-console
-        console.log('Performance metrics:', metrics);
-      }
-    }
-
-    // Preload critical resources
+    // Initialize performance optimizations
     preloadCriticalResources();
+    optimizeImages();
+    optimizeThirdPartyScripts();
+
+    // Log performance metrics in development
+    if (process.env.NODE_ENV === 'development') {
+      // eslint-disable-next-line no-console
+      console.log('Performance optimizations initialized');
+    }
   }, []);
 
   return (
     <HelmetProvider>
-      <ErrorBoundary>
-        <div>
-          <SEOOptimizer />
-          <AccessibilityEnhancer>
-            <Router>
-              <div className='App'>
-                {/* Skip to main content link for accessibility */}
-                <a
-                  href='#main-content'
-                  className='skip-link sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50'
-                  onClick={e => {
-                    e.preventDefault();
-                    const main =
-                      document.querySelector('main') ||
-                      document.querySelector('#main-content');
-                    if (main) {
-                      main.focus();
-                      main.scrollIntoView({ behavior: 'smooth' });
-                    }
-                  }}
-                >
-                  Skip to main content
-                </a>
-
+      <EnhancedErrorBoundary>
+        <AccessibilityEnhancer>
+          <SEOOptimizer
+            title="Zion Tech Group - Advanced AI and IT Solutions"
+            description="Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. Transform your business with our cutting-edge technology."
+          />
+          <Router>
+            <div className="App">
+              <main id="main-content">
                 <Suspense fallback={<LoadingSpinner />}>
                   <Routes>
-                    <Route path='/' element={<HomePage />} />
+                    <Route path="/" element={<HomePage />} />
                     {/* Add more routes as needed */}
                   </Routes>
                 </Suspense>
 
                 {/* Performance Dashboard */}
                 <PerformanceDashboard />
-              </div>
-            </Router>
-            </AccessibilityEnhancer>
-        </div>
-      </ErrorBoundary>
+              </main>
+            </div>
+          </Router>
+        </AccessibilityEnhancer>
+      </EnhancedErrorBoundary>
     </HelmetProvider>
   );
 };
 
 export default App;
-
