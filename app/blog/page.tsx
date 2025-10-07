@@ -29,7 +29,7 @@ export default function BlogPage() {
           <div className="bg-gray-800 rounded-lg p-8 text-center">
             <h2 className="text-2xl font-semibold mb-4">Coming Soon</h2>
             <p className="text-gray-300 mb-6">
-              We're working on bringing you the latest insights and breakthroughs in AI and enterprise technology.
+              We&apos;re working on bringing you the latest insights and breakthroughs in AI and enterprise technology.
             </p>
             <Link 
               href="/" 
