@@ -10,6 +10,7 @@ interface SEOOptimizerProps {
   image?: string;
   url?: string;
   type?: string;
+  children?: React.ReactNode;
 }
 
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
@@ -18,7 +19,8 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   keywords = ['AI solutions', 'enterprise AI', 'digital transformation', 'automation', 'cloud services'], // eslint-disable-line @typescript-eslint/no-unused-vars
   image = 'https://ziontechgroup.com/og-image.jpg', // eslint-disable-line @typescript-eslint/no-unused-vars
   url = 'https://ziontechgroup.com',
-  type = 'website' // eslint-disable-line @typescript-eslint/no-unused-vars
+  type = 'website', // eslint-disable-line @typescript-eslint/no-unused-vars
+  children
 }) => {
   const pathname = usePathname();
 
@@ -69,7 +71,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   //   },
   // };
 
-  return null;
+  return <>{children}</>;
 };
 
 export default SEOOptimizer;

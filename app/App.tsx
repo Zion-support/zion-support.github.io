@@ -17,7 +17,7 @@ const ContactPage = lazy(() => import('./contact/page'));
 const EnterprisePage = lazy(() => import('./enterprise/page'));
 
 // Utils
-import performanceOptimizer from '../src/utils/performanceOptimizer';
+import { performanceOptimizer } from '../src/utils/performanceOptimizer';
 
 // Styles
 import '../src/index.css';
