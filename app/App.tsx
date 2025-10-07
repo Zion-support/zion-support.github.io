@@ -13,24 +13,19 @@ import AdvancedSEOOptimizer from './components/AdvancedSEOOptimizer';
 import AdvancedPerformanceMonitor from './components/AdvancedPerformanceMonitor';
 import SEOEnhancer from './components/SEOEnhancer';
 import PerformanceDashboard from './components/PerformanceDashboard';
-import ContentShowcase from './components/ContentShowcase';
-import InteractiveContentShowcase2026 from './components/InteractiveContentShowcase2026';
-import InteractiveAIROICalculator from './components/InteractiveAIROICalculator';
+import LoadingSpinner from './components/LoadingSpinner';
 
-// Loading component
-const LoadingSpinner = () => (
-  <div className="min-h-screen flex items-center justify-center bg-gray-50">
-    <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
-  </div>
+// Lazy load components for better performance
+const ContentShowcase = lazy(() => import('./components/ContentShowcase'));
+const InteractiveContentShowcase2026 = lazy(
+  () => import('./components/InteractiveContentShowcase2026')
+);
+const InteractiveAIROICalculator = lazy(
+  () => import('./components/InteractiveAIROICalculator')
 );
 
-// Error boundary component
-const ErrorBoundary = ({ children }: { children: React.ReactNode }) => {
-  return <>{children}</>;
-};
-
 // Utils
-import { lazyLoadImages, preloadCriticalResources, collectPerformanceMetrics, performanceOptimizer } from './utils/performanceOptimizer';
+import { performanceOptimizer, collectPerformanceMetrics, lazyLoadImages, preloadCriticalResources } from './utils/performanceOptimizer';
 import { logger } from './utils/logger';
 
 // Lazy load pages for better performance
@@ -66,18 +61,16 @@ const App: React.FC = () => {
 
   return (
     <HelmetProvider>
-      <ErrorBoundary>
+      <AdvancedErrorBoundary>
         <Router>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
             <SEOOptimizer />
             <AccessibilityEnhancer>
-              <AdvancedErrorBoundary>
-                <Suspense fallback={<LoadingSpinner />}>
-                  <Routes>
-                    <Route path="/" element={<HomePage />} />
-                  </Routes>
-                </Suspense>
-              </AdvancedErrorBoundary>
+              <Suspense fallback={<LoadingSpinner />}>
+                <Routes>
+                  <Route path="/" element={<HomePage />} />
+                </Routes>
+              </Suspense>
             </AccessibilityEnhancer>
             
             {/* Performance monitoring components */}
@@ -98,7 +91,7 @@ const App: React.FC = () => {
             <InteractiveAIROICalculator />
           </div>
         </Router>
-      </ErrorBoundary>
+      </AdvancedErrorBoundary>
     </HelmetProvider>
   );
 };

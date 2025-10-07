@@ -4,8 +4,47 @@
  */
 
 import React, { useState, useEffect, useCallback } from 'react';
-import { performanceEnhancer } from '../utils/performanceEnhancer';
+import { getMemoryUsage, collectPerformanceMetrics } from '../utils/performanceEnhancer';
 import { errorHandler } from '../utils/enhancedErrorHandler';
+
+// Helper functions
+const calculatePerformanceScore = () => {
+  const metrics = collectPerformanceMetrics();
+  if (!metrics) return 0;
+  
+  let score = 100;
+  
+  // Deduct points for slow load times
+  if (metrics.navigation.totalTime > 3000) score -= 20;
+  if (metrics.navigation.totalTime > 5000) score -= 30;
+  
+  // Deduct points for slow paint times
+  if (metrics.paint.firstContentfulPaint > 2000) score -= 15;
+  if (metrics.paint.firstContentfulPaint > 3000) score -= 25;
+  
+  return Math.max(0, score);
+};
+
+const getMemoryInfo = () => {
+  const memory = getMemoryUsage();
+  return memory ? {
+    used: memory.used,
+    total: memory.total,
+    limit: memory.limit,
+    percentage: memory.percentage,
+  } : null;
+};
+
+const getNetworkInfo = () => {
+  if (typeof navigator === 'undefined') return null;
+  
+  const connection = (navigator as any).connection || (navigator as any).mozConnection || (navigator as any).webkitConnection;
+  return connection ? {
+    effectiveType: connection.effectiveType,
+    downlink: connection.downlink,
+    rtt: connection.rtt,
+  } : null;
+};
 
 interface SystemMetrics {
   performance: {
@@ -63,8 +102,8 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
   // Update metrics
   const updateMetrics = useCallback(() => {
     try {
-      const performanceMetrics = performanceEnhancer.getMetrics();
-      const performanceScore = performanceEnhancer.getPerformanceScore();
+      const performanceMetrics = collectPerformanceMetrics();
+      const performanceScore = calculatePerformanceScore();
       const errorStats = errorHandler.getErrorStatistics();
 
       // Get memory info
@@ -76,11 +115,11 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
       const newMetrics: SystemMetrics = {
         performance: {
           score: performanceScore,
-          loadTime: performanceMetrics.loadTime,
-          firstContentfulPaint: performanceMetrics.firstContentfulPaint,
-          largestContentfulPaint: performanceMetrics.largestContentfulPaint,
-          firstInputDelay: performanceMetrics.firstInputDelay,
-          cumulativeLayoutShift: performanceMetrics.cumulativeLayoutShift,
+          loadTime: performanceMetrics?.navigation?.totalTime || 0,
+          firstContentfulPaint: performanceMetrics?.paint?.firstContentfulPaint || 0,
+          largestContentfulPaint: 0, // Not available in current metrics
+          firstInputDelay: 0, // Not available in current metrics
+          cumulativeLayoutShift: 0, // Not available in current metrics
         },
         errors: {
           total: errorStats.totalErrors,
@@ -110,7 +149,7 @@ console.error('Failed to update metrics:', error);
   // Initialize monitoring
   useEffect(() => {
     const initializeMonitoring = () => {
-      performanceEnhancer.startMonitoring();
+      // Start monitoring (placeholder - implement as needed)
       setIsMonitoring(true);
       updateMetrics();
     };
@@ -118,7 +157,7 @@ console.error('Failed to update metrics:', error);
     initializeMonitoring();
 
     return () => {
-      performanceEnhancer.stopMonitoring();
+      // Stop monitoring (placeholder - implement as needed)
       setIsMonitoring(false);
     };
   }, [updateMetrics]);
@@ -172,7 +211,7 @@ console.error('Failed to update metrics:', error);
 
     const exportData = {
       metrics,
-      performanceData: performanceEnhancer.exportData(),
+      performanceData: collectPerformanceMetrics(),
       errorData: errorHandler.exportErrorData(),
       timestamp: new Date().toISOString(),
     };

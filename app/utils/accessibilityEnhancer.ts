@@ -1,277 +1,44 @@
 /**
- * Accessibility enhancement utilities
- * Provides methods for improving application accessibility
+ * Accessibility Enhancement Utilities
+ * Tools to improve accessibility and user experience
  */
 
-import { logger } from './logger';
+// Check if element is visible to screen readers
+export const isVisibleToScreenReader = (element: HTMLElement): boolean => {
+  const style = window.getComputedStyle(element);
+  return (
+    style.display !== 'none' &&
+    style.visibility !== 'hidden' &&
+    element.getAttribute('aria-hidden') !== 'true' &&
+    element.offsetWidth > 0 &&
+    element.offsetHeight > 0
+  );
+};
 
-interface AccessibilityMetrics {
-  focusableElements: number;
-  headingStructure: string[];
-  colorContrastIssues: number;
-  missingAltText: number;
-  keyboardNavigationScore: number;
-}
+// Add skip navigation link
+export const addSkipNavigationLink = () => {
+  if (typeof document === 'undefined') return;
 
-class AccessibilityEnhancer {
-  private metrics: AccessibilityMetrics = {
-    focusableElements: 0,
-    headingStructure: [],
-    colorContrastIssues: 0,
-    missingAltText: 0,
-    keyboardNavigationScore: 0,
-  };
+  const skipLink = document.createElement('a');
+  skipLink.href = '#main-content';
+  skipLink.textContent = 'Skip to main content';
+  skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-blue-600 focus:text-white focus:rounded';
+  skipLink.setAttribute('tabindex', '1');
+  
+  document.body.insertBefore(skipLink, document.body.firstChild);
+};
 
-  /**
-   * Initialize accessibility monitoring
-   */
-  init(): void {
-    if (typeof window === 'undefined') return;
-
-    this.analyzeFocusableElements();
-    this.analyzeHeadingStructure();
-    this.analyzeImages();
-    this.analyzeColorContrast();
-    this.setupKeyboardNavigation();
-
-    logger.info('Accessibility monitoring initialized', 'AccessibilityEnhancer');
-  }
-
-  /**
-   * Analyze focusable elements
-   */
-  private analyzeFocusableElements(): void {
-    const focusableSelectors = [
-      'a[href]',
-      'button:not([disabled])',
-      'input:not([disabled])',
-      'select:not([disabled])',
-      'textarea:not([disabled])',
-      '[tabindex]:not([tabindex="-1"])',
-    ];
-
-    const focusableElements = document.querySelectorAll(focusableSelectors.join(', '));
-    this.metrics.focusableElements = focusableElements.length;
-
-    // Check for proper tab order
-    const elements = Array.from(focusableElements);
-    const tabIndices = elements.map(el => parseInt(el.getAttribute('tabindex') || '0'));
-    const isSequential = tabIndices.every((index, i) => i === 0 || index >= tabIndices[i - 1]);
-
-    if (!isSequential) {
-      logger.warn('Non-sequential tab order detected', 'AccessibilityEnhancer', {
-        focusableElements: this.metrics.focusableElements,
-        tabIndices,
-      });
-    }
-
-    logger.info('Focusable elements analyzed', 'AccessibilityEnhancer', {
-      count: this.metrics.focusableElements,
-      sequential: isSequential,
-    });
-  }
-
-  /**
-   * Analyze heading structure
-   */
-  private analyzeHeadingStructure(): void {
-    const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
-    const structure: string[] = [];
-
-    headings.forEach(heading => {
-      const level = parseInt(heading.tagName.charAt(1));
-      const text = heading.textContent?.trim() || '';
-      structure.push(`H${level}: ${text}`);
-    });
-
-    this.metrics.headingStructure = structure;
-
-    // Check for proper heading hierarchy
-    const levels = Array.from(headings).map(h => parseInt(h.tagName.charAt(1)));
-    let hasIssues = false;
-
-    for (let i = 1; i < levels.length; i++) {
-      if (levels[i] - levels[i - 1] > 1) {
-        hasIssues = true;
-        break;
-      }
-    }
-
-    if (hasIssues) {
-      logger.warn('Heading hierarchy issues detected', 'AccessibilityEnhancer', {
-        structure: this.metrics.headingStructure,
-      });
-    }
-
-    logger.info('Heading structure analyzed', 'AccessibilityEnhancer', {
-      count: headings.length,
-      hasIssues,
-    });
-  }
-
-  /**
-   * Analyze images for alt text
-   */
-  private analyzeImages(): void {
-    const images = document.querySelectorAll('img');
-    let missingAltText = 0;
-
-    images.forEach(img => {
-      const alt = img.getAttribute('alt');
-      if (!alt || alt.trim() === '') {
-        missingAltText++;
-        logger.warn('Image missing alt text', 'AccessibilityEnhancer', {
-          src: img.src,
-          className: img.className,
-        });
-      }
-    });
-
-    this.metrics.missingAltText = missingAltText;
-
-    logger.info('Images analyzed for alt text', 'AccessibilityEnhancer', {
-      totalImages: images.length,
-      missingAltText,
-    });
-  }
-
-  /**
-   * Analyze color contrast (simplified check)
-   */
-  private analyzeColorContrast(): void {
-    // This is a simplified check - in a real implementation, you'd use a proper contrast checker
-    const textElements = document.querySelectorAll('p, span, div, a, button, h1, h2, h3, h4, h5, h6');
-    let contrastIssues = 0;
-
-    textElements.forEach(element => {
-      const computedStyle = window.getComputedStyle(element);
-      const color = computedStyle.color;
-      const backgroundColor = computedStyle.backgroundColor;
-
-      // Basic check for high contrast (simplified)
-      if (color === backgroundColor) {
-        contrastIssues++;
-      }
-    });
-
-    this.metrics.colorContrastIssues = contrastIssues;
-
-    if (contrastIssues > 0) {
-      logger.warn('Potential color contrast issues detected', 'AccessibilityEnhancer', {
-        issues: contrastIssues,
-      });
-    }
-
-    logger.info('Color contrast analyzed', 'AccessibilityEnhancer', {
-      textElements: textElements.length,
-      contrastIssues,
-    });
-  }
-
-  /**
-   * Setup keyboard navigation monitoring
-   */
-  private setupKeyboardNavigation(): void {
-    let keyboardScore = 0;
-    const maxScore = 5;
-
-    // Check for skip links
-    const skipLinks = document.querySelectorAll('a[href="#main"], a[href="#content"]');
-    if (skipLinks.length > 0) keyboardScore++;
-
-    // Check for proper focus indicators
-    const focusableElements = document.querySelectorAll('a, button, input, select, textarea');
-    const hasFocusStyles = Array.from(focusableElements).some(el => {
-      const style = window.getComputedStyle(el, ':focus');
-      return style.outline !== 'none' || style.boxShadow !== 'none';
-    });
-    if (hasFocusStyles) keyboardScore++;
-
-    // Check for ARIA landmarks
-    const landmarks = document.querySelectorAll('[role="main"], [role="navigation"], [role="banner"], [role="contentinfo"]');
-    if (landmarks.length > 0) keyboardScore++;
-
-    // Check for proper form labels
-    const inputs = document.querySelectorAll('input, select, textarea');
-    const labeledInputs = Array.from(inputs).filter(input => {
-      const id = input.getAttribute('id');
-      const label = document.querySelector(`label[for="${id}"]`);
-      const ariaLabel = input.getAttribute('aria-label');
-      const ariaLabelledBy = input.getAttribute('aria-labelledby');
-      return label || ariaLabel || ariaLabelledBy;
-    });
-    if (labeledInputs.length === inputs.length) keyboardScore++;
-
-    // Check for proper heading structure
-    const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
-    const h1Count = document.querySelectorAll('h1').length;
-    if (h1Count === 1 && headings.length > 0) keyboardScore++;
-
-    this.metrics.keyboardNavigationScore = (keyboardScore / maxScore) * 100;
-
-    logger.info('Keyboard navigation analyzed', 'AccessibilityEnhancer', {
-      score: this.metrics.keyboardNavigationScore,
-      maxScore,
-      details: {
-        skipLinks: skipLinks.length,
-        hasFocusStyles,
-        landmarks: landmarks.length,
-        labeledInputs: labeledInputs.length,
-        totalInputs: inputs.length,
-        h1Count,
-        totalHeadings: headings.length,
-      },
-    });
-  }
-
-  /**
-   * Get accessibility metrics
-   */
-  getMetrics(): AccessibilityMetrics {
-    return { ...this.metrics };
-  }
-
-  /**
-   * Generate accessibility report
-   */
-  generateReport(): string {
-    const metrics = this.getMetrics();
-    const report = [
-      `Focusable Elements: ${metrics.focusableElements}`,
-      `Missing Alt Text: ${metrics.missingAltText}`,
-      `Color Contrast Issues: ${metrics.colorContrastIssues}`,
-      `Keyboard Navigation Score: ${metrics.keyboardNavigationScore.toFixed(1)}%`,
-      `Heading Structure: ${metrics.headingStructure.length} headings`,
-    ].join('\n');
-
-    logger.info('Accessibility report generated', 'AccessibilityEnhancer', { report });
-    return report;
-  }
-
-  /**
-   * Enhance focus management
-   */
-  enhanceFocusManagement(): void {
-    // Add focus trap for modals
-    const modals = document.querySelectorAll('[role="dialog"], .modal');
-    modals.forEach(modal => {
-      this.addFocusTrap(modal as HTMLElement);
-    });
-
-    // Add skip links if they don't exist
-    this.addSkipLinks();
-
-    logger.info('Focus management enhanced', 'AccessibilityEnhancer');
-  }
-
-  private addFocusTrap(element: HTMLElement): void {
+// Focus management utilities
+export const focusManagement = {
+  // Trap focus within an element
+  trapFocus: (element: HTMLElement) => {
     const focusableElements = element.querySelectorAll(
-      'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])'
+      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
     );
     const firstElement = focusableElements[0] as HTMLElement;
     const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
 
-    element.addEventListener('keydown', (e) => {
+    const handleTabKey = (e: KeyboardEvent) => {
       if (e.key === 'Tab') {
         if (e.shiftKey) {
           if (document.activeElement === firstElement) {
@@ -285,39 +52,127 @@ class AccessibilityEnhancer {
           }
         }
       }
+    };
+
+    element.addEventListener('keydown', handleTabKey);
+    firstElement?.focus();
+
+    return () => {
+      element.removeEventListener('keydown', handleTabKey);
+    };
+  },
+
+  // Restore focus to previously focused element
+  restoreFocus: (element: HTMLElement) => {
+    element.focus();
+  },
+};
+
+// Announce to screen readers
+export const announceToScreenReader = (message: string, priority: 'polite' | 'assertive' = 'polite') => {
+  if (typeof document === 'undefined') return;
+
+  const announcement = document.createElement('div');
+  announcement.setAttribute('aria-live', priority);
+  announcement.setAttribute('aria-atomic', 'true');
+  announcement.className = 'sr-only';
+  announcement.textContent = message;
+
+  document.body.appendChild(announcement);
+
+  setTimeout(() => {
+    document.body.removeChild(announcement);
+  }, 1000);
+};
+
+// Color contrast checker
+export const getColorContrast = (color1: string, color2: string): number => {
+  const getLuminance = (color: string): number => {
+    const rgb = color.match(/\d+/g);
+    if (!rgb || rgb.length !== 3) return 0;
+
+    const [r, g, b] = rgb.map((c) => {
+      const val = parseInt(c, 10) / 255;
+      return val <= 0.03928 ? val / 12.92 : Math.pow((val + 0.055) / 1.055, 2.4);
     });
+
+    return 0.2126 * r + 0.7152 * g + 0.0722 * b;
+  };
+
+  const lum1 = getLuminance(color1);
+  const lum2 = getLuminance(color2);
+  const brightest = Math.max(lum1, lum2);
+  const darkest = Math.min(lum1, lum2);
+
+  return (brightest + 0.05) / (darkest + 0.05);
+};
+
+// Accessibility validation
+export const validateAccessibility = () => {
+  if (typeof document === 'undefined') return [];
+
+  const issues: string[] = [];
+
+  // Check for missing alt text
+  const imagesWithoutAlt = document.querySelectorAll('img:not([alt])');
+  imagesWithoutAlt.forEach((img) => {
+    issues.push(`Image missing alt text: ${img.getAttribute('src')}`);
+  });
+
+  // Check for missing labels
+  const inputsWithoutLabels = document.querySelectorAll('input:not([aria-label]):not([aria-labelledby])');
+  inputsWithoutLabels.forEach((input) => {
+    const id = input.getAttribute('id');
+    const hasLabel = id && document.querySelector(`label[for="${id}"]`);
+    if (!hasLabel) {
+      issues.push(`Input missing label: ${input.getAttribute('name') || input.getAttribute('type')}`);
+    }
+  });
+
+  // Check heading hierarchy
+  const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
+  let previousLevel = 0;
+  headings.forEach((heading) => {
+    const level = parseInt(heading.tagName.charAt(1), 10);
+    if (level > previousLevel + 1) {
+      issues.push(`Heading hierarchy skipped: ${heading.tagName} after h${previousLevel}`);
+    }
+    previousLevel = level;
+  });
+
+  return issues;
+};
+
+// Keyboard navigation enhancement
+export const addKeyboardNavigation = () => {
+  if (typeof document === 'undefined') return;
+
+  // Add keyboard navigation for custom elements
+  const customElements = document.querySelectorAll('[data-keyboard-navigation]');
+  customElements.forEach((element) => {
+    element.setAttribute('tabindex', '0');
+    element.addEventListener('keydown', (e: KeyboardEvent) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        (element as HTMLElement).click();
+      }
+    });
+  });
+};
+
+// Initialize accessibility enhancements
+export const initializeAccessibilityEnhancements = () => {
+  if (typeof document === 'undefined') return;
+
+  // Add skip navigation
+  addSkipNavigationLink();
+
+  // Add keyboard navigation
+  addKeyboardNavigation();
+
+  // Validate accessibility
+  const issues = validateAccessibility();
+  if (issues.length > 0) {
+    console.warn('Accessibility issues found:', issues);
   }
-
-  private addSkipLinks(): void {
-    if (document.querySelector('.skip-link')) return;
-
-    const skipLink = document.createElement('a');
-    skipLink.href = '#main';
-    skipLink.textContent = 'Skip to main content';
-    skipLink.className = 'skip-link';
-    skipLink.style.cssText = `
-      position: absolute;
-      top: -40px;
-      left: 6px;
-      background: #000;
-      color: #fff;
-      padding: 8px;
-      text-decoration: none;
-      z-index: 1000;
-      transition: top 0.3s;
-    `;
-
-    skipLink.addEventListener('focus', () => {
-      skipLink.style.top = '6px';
-    });
-
-    skipLink.addEventListener('blur', () => {
-      skipLink.style.top = '-40px';
-    });
-
-    document.body.insertBefore(skipLink, document.body.firstChild);
-  }
-}
-
-// Export singleton instance
-export const accessibilityEnhancer = new AccessibilityEnhancer();
+};

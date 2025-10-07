@@ -214,7 +214,7 @@ const NewestContent2025Banner = () => {
           </h3>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Join 50,000+ AI leaders implementing these breakthrough technologies. Get expert guidance 
-            from Zion Tech Group's AI transformation specialists.
+            from Zion Tech Group&apos;s AI transformation specialists.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
