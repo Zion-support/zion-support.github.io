@@ -7,11 +7,27 @@ export const metadata = {
   
   title: "AI 2026 February Ultimate Consciousness Breakthrough - Zion Tech Group",
   description: "Discover the groundbreaking February 2026 AI breakthrough achieving synthetic consciousness, universal awareness, and $100B enterprise transformation potential.",
-  keywords: 'AI consciousness, synthetic intelligence, enterprise transformation, February 2026, Zion Tech Group'};;
-export const metadata: Metadata = 
-  title: 'AI 2026 February Ultimate Consciousness Breakthrough - Zion Tech Group',
-  description: 'Discover the groundbreaking February 2026 AI breakthrough achieving synthetic consciousness, universal awareness, and $100B enterprise transformation potential.',
   keywords: 'AI consciousness, synthetic intelligence, enterprise transformation, February 2026, Zion Tech Group',
+  openGraph: {
+    title: 'AI 2026 February Ultimate Consciousness Breakthrough - Zion Tech Group',
+    description: 'Discover the groundbreaking February 2026 AI breakthrough achieving synthetic consciousness, universal awareness, and $100B enterprise transformation potential.',
+    type: 'article',
+    url: 'https://ziontechgroup.com/blog/ai-2026-february-ultimate-consciousness-breakthrough',
+    images: [
+      {
+        url: '/og-february-consciousness-2026.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'AI 2026 February Ultimate Consciousness Breakthrough',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'AI 2026 February Ultimate Consciousness Breakthrough - Zion Tech Group',
+    description: 'Discover the groundbreaking February 2026 AI breakthrough achieving synthetic consciousness, universal awareness, and $100B enterprise transformation potential.',
+    images: ['/og-february-consciousness-2026.jpg'],
+  },
 };
 
 export default function AI2026FebruaryUltimateConsciousnessBreakthrough() {

@@ -9,6 +9,7 @@ interface SEOOptimizerProps {
   image?: string;
   url?: string;
   type?: string;
+  children?: React.ReactNode;
 }
 
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
@@ -17,7 +18,8 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   keywords = ['AI solutions', 'enterprise AI', 'digital transformation', 'automation', 'cloud services'],
   image = 'https://ziontechgroup.com/og-image.jpg',
   url = 'https://ziontechgroup.com',
-  type = 'website'
+  type = 'website',
+  children
 }) => {
   const location = useLocation();
 
@@ -68,40 +70,43 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   };
 
   return (
-    <Helmet>
-      <title>{title}</title>
-      <meta name="description" content={description} />
-      <meta name="keywords" content={keywords.join(', ')} />
-      <meta name="author" content="Zion Tech Group" />
-      
-      {/* Open Graph / Facebook */}
-      <meta property="og:type" content={type} />
-      <meta property="og:url" content={url + location.pathname} />
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:image" content={image} />
-      <meta property="og:site_name" content="Zion Tech Group" />
-      <meta property="og:locale" content="en_US" />
-      
-      {/* Twitter */}
-      <meta property="twitter:card" content="summary_large_image" />
-      <meta property="twitter:url" content={url + location.pathname} />
-      <meta property="twitter:title" content={title} />
-      <meta property="twitter:description" content={description} />
-      <meta property="twitter:image" content={image} />
-      <meta name="twitter:site" content="@ziontechgroup" />
-      <meta name="twitter:creator" content="@ziontechgroup" />
-      
-      {/* Additional SEO */}
-      <meta name="robots" content="index,follow" />
-      <meta name="theme-color" content="#4f46e5" />
-      <link rel="canonical" href={url + location.pathname} />
-      
-      {/* Structured Data */}
-      <script type="application/ld+json">
-        {JSON.stringify(structuredData)}
-      </script>
-    </Helmet>
+    <>
+      <Helmet>
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <meta name="keywords" content={keywords.join(', ')} />
+        <meta name="author" content="Zion Tech Group" />
+        
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content={type} />
+        <meta property="og:url" content={url + location.pathname} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:image" content={image} />
+        <meta property="og:site_name" content="Zion Tech Group" />
+        <meta property="og:locale" content="en_US" />
+        
+        {/* Twitter */}
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content={url + location.pathname} />
+        <meta property="twitter:title" content={title} />
+        <meta property="twitter:description" content={description} />
+        <meta property="twitter:image" content={image} />
+        <meta name="twitter:site" content="@ziontechgroup" />
+        <meta name="twitter:creator" content="@ziontechgroup" />
+        
+        {/* Additional SEO */}
+        <meta name="robots" content="index,follow" />
+        <meta name="theme-color" content="#4f46e5" />
+        <link rel="canonical" href={url + location.pathname} />
+        
+        {/* Structured Data */}
+        <script type="application/ld+json">
+          {JSON.stringify(structuredData)}
+        </script>
+      </Helmet>
+      {children}
+    </>
   );
 };
 
