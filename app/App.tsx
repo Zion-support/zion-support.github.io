@@ -28,10 +28,6 @@ import { logger } from './utils/logger';
 // Styles
 import './globals.css';
 
-<<<<<<< HEAD
-const App: React.FC = () => {
-  useEffect(() => {
-=======
 // Loading component
 const LoadingSpinner = () => (
   <div className="min-h-screen flex items-center justify-center bg-gray-50">
@@ -46,7 +42,6 @@ const App: React.FC = () => {
     optimizeImages();
     optimizeThirdPartyScripts();
 
->>>>>>> cursor/fix-errors-and-merge-to-main-b0de
     // Initialize global error handling
     logger.lifecycle('initialized', 'App');
 
@@ -60,54 +55,16 @@ const App: React.FC = () => {
 
     logger.info('Performance monitoring initialized', 'App');
     logger.info('🚀 Zion Tech Group App initialized with comprehensive monitoring', 'App');
-<<<<<<< HEAD
-=======
 
     // Log performance metrics in development
     if (process.env.NODE_ENV === 'development') {
       // eslint-disable-next-line no-console
       console.log('Performance optimizations initialized');
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-b0de
   }, []);
 
   return (
     <HelmetProvider>
-<<<<<<< HEAD
-      <AccessibilityEnhancer>
-        <SEOOptimizer />
-        <PerformanceDashboard />
-        
-        <Router>
-          <Routes>
-            <Route path="/" element={
-              <Suspense fallback={<div className="flex items-center justify-center h-64 w-full"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-indigo-600"></div></div>}>
-                <div className="min-h-screen">
-                  <h1 className="text-4xl font-bold text-center py-20">
-                    Welcome to Zion Tech Group
-                  </h1>
-                  <div className="container mx-auto px-4">
-                    <ContentShowcase />
-                    <InteractiveContentShowcase2026 />
-                    <InteractiveAIROICalculator />
-                  </div>
-                </div>
-              </Suspense>
-            } />
-            <Route path="/about" element={
-              <div className="min-h-screen flex items-center justify-center">
-                <h1 className="text-4xl font-bold">About Us</h1>
-              </div>
-            } />
-            <Route path="/contact" element={
-              <div className="min-h-screen flex items-center justify-center">
-                <h1 className="text-4xl font-bold">Contact Us</h1>
-              </div>
-            } />
-          </Routes>
-        </Router>
-      </AccessibilityEnhancer>
-=======
       <EnhancedErrorBoundary>
         <AccessibilityEnhancer>
           <SEOOptimizer
@@ -140,7 +97,6 @@ const App: React.FC = () => {
           </Router>
         </AccessibilityEnhancer>
       </EnhancedErrorBoundary>
->>>>>>> cursor/fix-errors-and-merge-to-main-b0de
     </HelmetProvider>
   );
 };
