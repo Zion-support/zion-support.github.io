@@ -9,6 +9,9 @@ import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import LoadingSpinner from './components/LoadingSpinner';
 
+// Performance optimization
+import { performanceOptimizer } from './utils/performanceOptimizer';
+
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./page'));
 
@@ -24,9 +27,10 @@ const App: React.FC = () => {
     performanceOptimizer.lazyLoadImages();
     // Initialize Web Vitals monitoring
     if (typeof window !== 'undefined' && 'performance' in window) {
-      performanceOptimizer.measurePageLoad().then(metrics => {
+      const metrics = performanceOptimizer.measurePageLoad();
+      if (metrics) {
         performanceOptimizer.reportWebVitals(metrics);
-      });
+      }
     }
     console.log('Performance monitoring initialized');
     console.log(
