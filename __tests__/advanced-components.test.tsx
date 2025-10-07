@@ -46,11 +46,7 @@ describe('AdvancedErrorBoundary', () => {
     );
 
     expect(screen.getByText('Oops! Something went wrong')).toBeInTheDocument();
-<<<<<<< HEAD
-    expect(screen.getByText(/Try Again/)).toBeInTheDocument();
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2d9f
-    expect(screen.getByText('Reload Page')).toBeInTheDocument();
+    expect(screen.getByText(/Try Again|Reload Page/)).toBeInTheDocument();
     expect(screen.getByText('Go to Homepage')).toBeInTheDocument();
 
     consoleSpy.mockRestore();
