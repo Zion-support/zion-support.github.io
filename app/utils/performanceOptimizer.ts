@@ -104,7 +104,7 @@ class PerformanceOptimizer {
       const entries = list.getEntries();
       entries.forEach((entry) => {
         if (entry.entryType === 'layout-shift' && 'hadRecentInput' in entry && 'value' in entry) {
-          const layoutEntry = entry as LayoutShift;
+          const layoutEntry = entry as PerformanceEntry & { hadRecentInput: boolean; value: number };
           if (!layoutEntry.hadRecentInput) {
             clsValue += layoutEntry.value;
             this.metrics.cls = clsValue;
