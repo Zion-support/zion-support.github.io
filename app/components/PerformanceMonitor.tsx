@@ -255,6 +255,9 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
                   if (metrics.loadTime > 3000) logger.warn('⚠️ Optimize images');
                   if (metrics.cacheHitRate < 0.8) logger.warn('⚠️ Improve caching');
                 });
+                // Also trigger performance optimizations
+                performanceOptimizer.lazyLoadImages();
+                console.log('Performance optimization triggered');
               }}
               className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-colors text-sm"
             >
