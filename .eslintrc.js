@@ -6,10 +6,12 @@ module.exports = {
     node: true,
   },
   extends: [
+    'next/core-web-vitals',
     'eslint:recommended',
     '@typescript-eslint/recommended',
     'plugin:react/recommended',
     'plugin:react-hooks/recommended',
+    'next/core-web-vitals',
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -19,7 +21,7 @@ module.exports = {
       jsx: true,
     },
   },
-  plugins: ['react', 'react-hooks', '@typescript-eslint'],
+  plugins: ['react', 'react-hooks', '@typescript-eslint', '@next/next'],
   rules: {
     'react/react-in-jsx-scope': 'off',
     'react/prop-types': 'off',
