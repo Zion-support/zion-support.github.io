@@ -17,28 +17,6 @@
 //   getMemoryUsage,
 //   collectPerformanceMetrics,
 //   performanceMonitor,
-//   lazyLoadImages,
-//   preloadCriticalResources,
-//   optimizeScrollPerformance
-// } from './performanceUtils';
-
-// SEO utilities are imported but not used in current implementation
-// import {
-//   setOpenGraphTags,
-//   setTwitterCardTags,
-//   setStructuredData,
-//   setCanonicalUrl,
-//   setPageTitle,
-//   setMetaDescription,
-//   setKeywords,
-//   schemaGenerators,
-//   seoAudit
-// } from './seoUtils';
-
-// import {
-//   getMemoryUsage,
-//   collectPerformanceMetrics,
-//   performanceMonitor,
 //   debounce,
 //   throttle,
 //   lazyLoadImages,
@@ -46,6 +24,7 @@
 //   optimizeScrollPerformance
 // } from './performanceUtils';
 
+// SEO utilities are imported but not used in current implementation
 // import {
 //   setMetaTags,
 //   setOpenGraphTags,

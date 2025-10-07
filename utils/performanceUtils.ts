@@ -325,19 +325,7 @@ export const collectPerformanceMetricsArray = async (): Promise<Array<{ name: st
   return metrics;
 };
 
-// Get memory usage
-export const getMemoryUsage = (): Record<string, number> | null => {
-  if (typeof window === 'undefined' || !(performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory) {
-    return null;
-  }
-
-  const memory = (performance as Performance & { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
-  return {
-    usedJSHeapSize: memory.usedJSHeapSize,
-    totalJSHeapSize: memory.totalJSHeapSize,
-    jsHeapSizeLimit: memory.jsHeapSizeLimit
-  };
-};
+// Get memory usage (duplicate removed - using the one above)
 
 export default {
   debounce,
