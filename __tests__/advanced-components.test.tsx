@@ -134,7 +134,7 @@ describe('AdvancedSEOOptimizer', () => {
     expect(document.title).toBe('Test Title');
   });
 
-  it('renders with structured data enabled', () => {
+  it('renders structured data when enabled', async () => {
     const helmetContext = {};
     const { container } = render(
       <HelmetProvider context={helmetContext}>
@@ -145,12 +145,15 @@ describe('AdvancedSEOOptimizer', () => {
       </HelmetProvider>
     );
 
-    // Check that component renders without crashing
-    // Note: react-helmet-async manages head tags in a way that's not easily testable with querySelector
-    expect(container).toBeTruthy();
+    await waitFor(() => {
+      const structuredDataScript = container.querySelector(
+        'script[type="application/ld+json"]'
+      );
+      expect(structuredDataScript).toBeTruthy();
+    });
   });
 
-  it('renders with Open Graph enabled', () => {
+  it('renders Open Graph tags when enabled', async () => {
     const helmetContext = {};
     const { container } = render(
       <HelmetProvider context={helmetContext}>
@@ -158,11 +161,17 @@ describe('AdvancedSEOOptimizer', () => {
       </HelmetProvider>
     );
 
-    // Check that component renders without crashing
-    expect(container).toBeTruthy();
+    await waitFor(() => {
+      expect(
+        container.querySelector('meta[property="og:title"]')
+      ).toBeTruthy();
+      expect(
+        container.querySelector('meta[property="og:description"]')
+      ).toBeTruthy();
+    });
   });
 
-  it('renders with Twitter Cards enabled', () => {
+  it('renders Twitter Card tags when enabled', async () => {
     const helmetContext = {};
     const { container } = render(
       <HelmetProvider context={helmetContext}>
@@ -170,8 +179,14 @@ describe('AdvancedSEOOptimizer', () => {
       </HelmetProvider>
     );
 
-    // Check that component renders without crashing
-    expect(container).toBeTruthy();
+    await waitFor(() => {
+      expect(
+        container.querySelector('meta[name="twitter:card"]')
+      ).toBeTruthy();
+      expect(
+        container.querySelector('meta[name="twitter:title"]')
+      ).toBeTruthy();
+    });
   });
 });
 
