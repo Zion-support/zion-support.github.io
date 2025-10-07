@@ -4,7 +4,6 @@
  */
 
 import React, { useState, useCallback, useEffect } from 'react';
-import { initializePerformanceEnhancements, collectPerformanceMetrics, getMemoryUsage } from '../utils/performanceEnhancer';
 import { errorHandler } from '../utils/enhancedErrorHandler';
 
 interface SystemMetrics {
@@ -63,29 +62,26 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
   // Update metrics
   const updateMetrics = useCallback(() => {
     try {
-      const performanceMetrics = collectPerformanceMetrics();
-      
       // Get basic performance metrics
       const navigationTiming = performance.timing;
       const loadTime = navigationTiming.loadEventEnd - navigationTiming.navigationStart;
       
-      const performanceScore = 85; // Default score
       const errorStats = errorHandler.getErrorStatistics();
 
       // Get memory info
-      const memoryInfo = getMemoryUsage();
+      const memoryInfo = getMemoryInfo();
 
       // Get network info
       const networkInfo = getNetworkInfo();
 
       const newMetrics: SystemMetrics = {
         performance: {
-          score: performanceScore,
-          loadTime: performanceMetrics?.navigation.totalTime || 0,
-          firstContentfulPaint: performanceMetrics?.paint.firstContentfulPaint || 0,
-          largestContentfulPaint: 0, // Not available in this format
-          firstInputDelay: 0, // Not available in this format
-          cumulativeLayoutShift: 0, // Not available in this format
+          score: 0.85,
+          loadTime: loadTime || 0,
+          firstContentfulPaint: 0,
+          largestContentfulPaint: 0,
+          firstInputDelay: 0,
+          cumulativeLayoutShift: 0,
         },
         errors: {
           total: errorStats.totalErrors,
@@ -114,6 +110,7 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
   // Initialize monitoring
   useEffect(() => {
     const initializeMonitoring = () => {
+      // startMonitoring(); // Placeholder
       setIsMonitoring(true);
       updateMetrics();
     };
@@ -121,6 +118,7 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
     initializeMonitoring();
 
     return () => {
+      // stopMonitoring(); // Placeholder
       setIsMonitoring(false);
     };
   }, [updateMetrics]);
@@ -172,7 +170,7 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
   const handleExport = () => {
     if (!metrics) return;
 
-    const dataToExport: any = {
+    const dataToExport: Record<string, unknown> = {
       metrics,
       performanceData: metrics.performance,
       errorData: errorHandler.exportErrorData(),
