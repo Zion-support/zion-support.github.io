@@ -252,21 +252,20 @@ export class ConfigManager {
    * Deep merge two config objects
    */
   private mergeConfig(base: AppConfig, override: Partial<AppConfig>): AppConfig {
-    const result = { ...base };
+    const result = { ...base } as AppConfig;
 
-    for (const key in override) {
-      const value = override[key as keyof AppConfig];
+    (Object.keys(override) as Array<keyof AppConfig>).forEach(<K extends keyof AppConfig>(key: K) => {
+      const value = override[key];
       if (value !== undefined) {
-        if (typeof value === 'object' && !Array.isArray(value)) {
-          result[key as keyof AppConfig] = {
-            ...result[key as keyof AppConfig],
-            ...value,
-          } as AppConfig[keyof AppConfig];
+        const baseValue = result[key];
+        if (typeof value === 'object' && !Array.isArray(value) && value !== null &&
+            typeof baseValue === 'object' && !Array.isArray(baseValue) && baseValue !== null) {
+          result[key] = Object.assign({}, baseValue, value) as typeof baseValue;
         } else {
-          result[key as keyof AppConfig] = value as AppConfig[keyof AppConfig];
+          result[key] = value as typeof baseValue;
         }
       }
-    }
+    });
 
     return result;
   }
@@ -304,10 +303,10 @@ export class ConfigManager {
     value?: AppConfig[K][NK]
   ): void {
     if (value !== undefined && typeof nestedKeyOrValue === 'string') {
-      this.config[key] = {
-        ...this.config[key],
-        [nestedKeyOrValue]: value,
-      } as AppConfig[K];
+      const currentValue = this.config[key];
+      if (typeof currentValue === 'object' && !Array.isArray(currentValue) && currentValue !== null) {
+        this.config[key] = Object.assign({}, currentValue, { [nestedKeyOrValue]: value }) as AppConfig[K];
+      }
     } else {
       this.config[key] = nestedKeyOrValue as AppConfig[K];
     }
