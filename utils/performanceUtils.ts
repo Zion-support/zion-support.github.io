@@ -85,23 +85,7 @@ export const collectPerformanceMetrics = async (): Promise<{
   firstInputDelay: number;
   cumulativeLayoutShift: number;
 }> => {
-  const metrics: {
-    loadTime: number;
-    domContentLoaded: number;
-    firstPaint: number;
-    firstContentfulPaint: number;
-    largestContentfulPaint: number;
-    firstInputDelay: number;
-    cumulativeLayoutShift: number;
-  } = {
-    loadTime: 0,
-    domContentLoaded: 0,
-    firstPaint: 0,
-    firstContentfulPaint: 0,
-    largestContentfulPaint: 0,
-    firstInputDelay: 0,
-    cumulativeLayoutShift: 0,
-  };
+  const metrics: Record<string, unknown> = {};
 
   // Basic timing metrics
   if (typeof window !== 'undefined' && window.performance) {
@@ -234,9 +218,6 @@ export class PerformanceMonitor {
   }
 }
 
-// Export singleton instance
-export const performanceMonitorInstance = new PerformanceMonitor();
-
 // Lazy loading utilities
 export const lazyLoadImages = (): void => {
   if (typeof window === 'undefined' || !('IntersectionObserver' in window))
@@ -325,33 +306,8 @@ export const optimizeScrollPerformance = (): void => {
   window.addEventListener('scroll', requestTick, { passive: true });
 };
 
-// Performance monitor object (alternative implementation)
-export const performanceMonitorObject = {
-  start: () => {
-    if (typeof window === 'undefined') return;
-
-    // Monitor Core Web Vitals
-    if ('PerformanceObserver' in window) {
-      const observer = new PerformanceObserver(list => {
-        list.getEntries().forEach(entry => {
-          if (process.env.NODE_ENV === 'development') {
-            console.log(
-              'Performance metric:',
-              entry.name,
-              (entry as PerformanceEntry & { value?: number }).value
-            );
-          }
-        });
-      });
-
-      observer.observe({ entryTypes: ['measure', 'navigation', 'paint'] });
-    }
-  },
-
-  stop: () => {
-    // Cleanup if needed
-  },
-};
+// Export singleton instance
+export const performanceMonitor = new PerformanceMonitor();
 
 // Collect performance metrics array
 export const collectPerformanceMetricsArray = async (): Promise<
@@ -392,7 +348,7 @@ const performanceUtils = {
   lazyLoadImages,
   preloadCriticalResources,
   optimizeScrollPerformance,
-  performanceMonitorInstance,
+  performanceMonitor,
   collectPerformanceMetrics,
   collectPerformanceMetricsArray,
   getMemoryUsage,
