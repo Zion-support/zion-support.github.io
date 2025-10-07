@@ -161,7 +161,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
 
   const trackPageView = (config: SEOConfig) => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag('config', 'GA_MEASUREMENT_ID', {
+      (window as unknown as { gtag: (command: string, targetId: string, config: Record<string, unknown>) => void }).gtag('config', 'GA_MEASUREMENT_ID', {
         page_title: config.title,
         page_location: config.canonicalUrl,
       });
@@ -173,7 +173,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       window.addEventListener('load', () => {
         const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
         if (perfData && typeof window !== 'undefined' && 'gtag' in window) {
-          (window as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag('event', 'page_load_performance', {
+          (window as unknown as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag('event', 'page_load_performance', {
             event_category: 'Performance',
             event_label: 'Page Load',
             value: Math.round(perfData.loadEventEnd - perfData.fetchStart),

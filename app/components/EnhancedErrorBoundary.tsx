@@ -114,7 +114,7 @@ class EnhancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
           stack: error.stack,
         },
         errorInfo: {
-          componentStack: errorInfo.componentStack || '',
+          componentStack: errorInfo.componentStack,
         },
         timestamp: new Date().toISOString(),
         userAgent: navigator.userAgent,
@@ -136,7 +136,7 @@ class EnhancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
 
       // Send to analytics if enabled
       if (this.props.enableAnalytics && typeof window !== 'undefined' && 'gtag' in window) {
-        (window as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag('event', 'error_boundary_error', {
+        (window as unknown as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag('event', 'error_boundary_error', {
           event_category: 'Error',
           event_label: error.name,
           value: retryCount,
