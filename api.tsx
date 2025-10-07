@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 import { ArrowRight, Code, ExternalLink, Shield, Zap, Atom } from 'lucide-react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-ccfd
 import React from 'react';
 import { Link } from 'react-router-dom';
 
