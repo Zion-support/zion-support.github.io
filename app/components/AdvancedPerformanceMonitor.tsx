@@ -46,15 +46,10 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     const fidObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
-<<<<<<< HEAD
-        const fidEntry = entry as PerformanceEntry & { processingStart: number };
-        setMetrics(prev => ({ ...prev, fid: fidEntry.processingStart - fidEntry.startTime }));
-=======
         if (entry.entryType === 'first-input' && 'processingStart' in entry && 'startTime' in entry) {
           const fidEntry = entry as PerformanceEventTiming;
           setMetrics(prev => ({ ...prev, fid: fidEntry.processingStart - fidEntry.startTime }));
         }
->>>>>>> 37545c2e32f35044aa55b03169325560ba719e8b
       });
     });
     fidObserver.observe({ entryTypes: ['first-input'] });
@@ -64,19 +59,12 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     const clsObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
-<<<<<<< HEAD
-        const clsEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value: number };
-        if (!clsEntry.hadRecentInput) {
-          clsValue += clsEntry.value;
-          setMetrics(prev => ({ ...prev, cls: clsValue }));
-=======
         if (entry.entryType === 'layout-shift' && 'hadRecentInput' in entry && 'value' in entry) {
           const clsEntry = entry as LayoutShift;
           if (!clsEntry.hadRecentInput) {
             clsValue += clsEntry.value;
             setMetrics(prev => ({ ...prev, cls: clsValue }));
           }
->>>>>>> 37545c2e32f35044aa55b03169325560ba719e8b
         }
       });
     });
@@ -136,13 +124,8 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         if (onLCP) {
           onLCP((metric: { value: number }) => setMetrics(prev => ({ ...prev, lcp: metric.value })));
         }
-<<<<<<< HEAD
-        if (webVitals.onTTFB) {
-          webVitals.onTTFB((metric: { value: number }) => setMetrics(prev => ({ ...prev, ttfb: metric.value })));
-=======
         if (onTTFB) {
           onTTFB((metric: { value: number }) => setMetrics(prev => ({ ...prev, ttfb: metric.value })));
->>>>>>> 37545c2e32f35044aa55b03169325560ba719e8b
         }
       }).catch(() => {
         // web-vitals not available, continue without it
