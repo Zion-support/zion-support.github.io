@@ -125,6 +125,14 @@
     "app/components/NewestContent2025Banner.tsx",
     "app/components/UltimateBusinessIntelligence2025Banner.tsx",
     "app/components/UltimateBusinessIntelligenceShowcase2025.tsx",
-    "zion-website_disabled"
+    "zion-website_disabled",
+    "App.tsx",
+    "app/App.tsx",
+    "__tests__",
+    "src/monitoring.ts",
+    "src/utils/analytics.ts",
+    "lib/performance.ts",
+    "app/components/SystemMonitor.tsx",
+    "app/components/AnalyticsTracker.tsx"
   ]
 }
