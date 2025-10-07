@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Activity, Zap, Clock } from 'lucide-react';
+import { BarChart3, Zap, Clock } from 'lucide-react';
 
 interface PerformanceMetrics {
   loadTime: number;
@@ -59,7 +59,7 @@ const PerformanceMonitor: React.FC = () => {
   return (
     <div className="fixed bottom-4 right-4 bg-black bg-opacity-90 text-white p-4 rounded-lg shadow-lg z-50 text-sm font-mono">
       <div className="flex items-center gap-2 mb-2">
-        <Activity className="w-4 h-4" />
+        <BarChart3 className="w-4 h-4" />
         <span className="font-bold">Performance Monitor</span>
       </div>
       <div className="space-y-1">
@@ -72,7 +72,7 @@ const PerformanceMonitor: React.FC = () => {
           <span>Render: {metrics.renderTime}ms</span>
         </div>
         <div className="flex items-center gap-2">
-          <Activity className="w-3 h-3" />
+          <BarChart3 className="w-3 h-3" />
           <span>Memory: {metrics.memoryUsage}MB</span>
         </div>
       </div>
