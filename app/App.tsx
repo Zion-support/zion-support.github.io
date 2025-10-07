@@ -53,12 +53,6 @@ const App: React.FC = () => {
       }
     }
 
-<<<<<<< HEAD
-    logger.info('Performance monitoring initialized', 'App');
-    logger.info('🚀 Zion Tech Group App initialized with comprehensive monitoring', 'App');
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-a427
     // Log performance metrics in development
     if (process.env.NODE_ENV === 'development') {
       // eslint-disable-next-line no-console
