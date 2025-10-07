@@ -1,4 +1,4 @@
-import React, { memo, useMemo, useCallback, Suspense } from 'react';
+import React from 'react';
 import { createRoot } from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
@@ -8,6 +8,7 @@ import { errorHandler } from './app/utils/enhancedErrorHandler';
 import ErrorBoundary from './app/components/ErrorBoundary';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
 
+<<<<<<< HEAD
 // Memoized components for better performance
 const UnifiedContentPromotion = memo(() => (
   <div className='bg-gradient-to-r from-blue-600 to-purple-700 text-white py-16'>
@@ -52,6 +53,9 @@ const InteractiveContentShowcase2026 = memo(() => (
     </div>
   </div>
 ));
+=======
+// Error Boundary is imported from './app/components/ErrorBoundary'
+>>>>>>> cursor/fix-errors-and-merge-to-main-241d
 export default function App() {
 
   // Performance optimization: Preload critical resources
@@ -116,15 +120,6 @@ export default function App() {
     };
   }, []);
 
-  const handlePhoneClick = useCallback(() => {
-    // Track phone clicks for analytics
-    if (typeof window !== 'undefined' && (window as unknown as { gtag?: Function }).gtag) {
-      ((window as unknown as { gtag: Function }).gtag)('event', 'phone_click', {
-        event_category: 'engagement',
-        event_label: 'main_phone_number'
-      });
-    }
-  }, []);
   return (
     <ErrorBoundary>
       <HelmetProvider>

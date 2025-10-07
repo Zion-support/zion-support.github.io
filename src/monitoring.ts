@@ -25,6 +25,7 @@ if (typeof window !== 'undefined') {
   });
 
   // Track Web Vitals
+<<<<<<< HEAD
   const metrics = performanceOptimizer.measurePageLoad();
   measurePageLoad().then((metrics: Record<string, number>) => {
     reportWebVitals(metrics);
@@ -42,6 +43,12 @@ if (typeof window !== 'undefined') {
     observer.observe({ entryTypes: ['longtask'] });
   }
 
+=======
+  measurePageLoad().then((metrics: { fcp?: number; lcp?: number; fid?: number; cls?: number; ttfb?: number }) => {
+    reportWebVitals(metrics);
+  });
+  
+>>>>>>> cursor/fix-errors-and-merge-to-main-241d
   // Monitor long tasks (if available)
   if ('monitorLongTasks' in performanceOptimizer) {
     (performanceOptimizer as { monitorLongTasks: (callback: (entries: PerformanceEntryList) => void) => void }).monitorLongTasks((entries: PerformanceEntryList) => {
@@ -50,11 +57,14 @@ if (typeof window !== 'undefined') {
       });
     });
   }
+<<<<<<< HEAD
 
   // Track Web Vitals
   if (metrics) {
     performanceOptimizer.reportWebVitals(metrics);
   }
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-241d
 }
 
 export { analytics, errorHandler, performanceOptimizer };

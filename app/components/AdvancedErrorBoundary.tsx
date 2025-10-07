@@ -61,15 +61,11 @@ class AdvancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
 
   private reportError = (error: Error, errorInfo: ErrorInfo) => {
     const errorReport = {
-      message: error.message,
-      stack: error.stack,
-      componentStack: errorInfo.componentStack,
-      errorId: this.state.errorId,
-      timestamp: new Date().toISOString(),
+      error,
+      errorInfo,
+      timestamp: Date.now(),
       userAgent: navigator.userAgent,
       url: window.location.href,
-      userId: this.getUserId(),
-      sessionId: this.getSessionId(),
     };
 
     // Send to error reporting service
@@ -99,7 +95,11 @@ class AdvancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
     }
   };
 
+<<<<<<< HEAD
   private sendErrorReport = async (errorReport: Record<string, unknown>) => {
+=======
+  private sendErrorReport = async (errorReport: { error: Error; errorInfo: React.ErrorInfo; timestamp: number; userAgent: string; url: string }) => {
+>>>>>>> cursor/fix-errors-and-merge-to-main-241d
     try {
       // Send to your error reporting service
       await fetch('/api/errors', {

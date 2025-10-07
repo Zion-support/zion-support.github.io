@@ -46,8 +46,15 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     const fidObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
+<<<<<<< HEAD
         const fidEntry = entry as PerformanceEntry & { processingStart: number };
         setMetrics(prev => ({ ...prev, fid: fidEntry.processingStart - fidEntry.startTime }));
+=======
+        if (entry.entryType === 'first-input') {
+          const fidEntry = entry as PerformanceEventTiming;
+          setMetrics(prev => ({ ...prev, fid: fidEntry.processingStart - fidEntry.startTime }));
+        }
+>>>>>>> cursor/fix-errors-and-merge-to-main-241d
       });
     });
     fidObserver.observe({ entryTypes: ['first-input'] });
@@ -57,10 +64,19 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     const clsObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
+<<<<<<< HEAD
         const clsEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value: number };
         if (!clsEntry.hadRecentInput) {
           clsValue += clsEntry.value;
           setMetrics(prev => ({ ...prev, cls: clsValue }));
+=======
+        if (entry.entryType === 'layout-shift') {
+          const clsEntry = entry as LayoutShift;
+          if (!clsEntry.hadRecentInput) {
+            clsValue += clsEntry.value;
+            setMetrics(prev => ({ ...prev, cls: clsValue }));
+          }
+>>>>>>> cursor/fix-errors-and-merge-to-main-241d
         }
       });
     });
@@ -71,7 +87,11 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     const ttfb = navigationEntry ? navigationEntry.responseStart - navigationEntry.requestStart : null;
 
     // Measure Memory Usage
+<<<<<<< HEAD
     const memory = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory ? (performance as Performance & { memory: { usedJSHeapSize: number } }).memory.usedJSHeapSize : null;
+=======
+    const memory = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory?.usedJSHeapSize || null;
+>>>>>>> cursor/fix-errors-and-merge-to-main-241d
 
     setMetrics(prev => ({
       ...prev,
@@ -108,6 +128,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 
     // Use web-vitals library if available
     try {
+<<<<<<< HEAD
       import('web-vitals').then((webVitals) => {
         if (webVitals.onCLS) {
           webVitals.onCLS((metric: { value: number }) => setMetrics(prev => ({ ...prev, cls: metric.value })));
@@ -121,6 +142,13 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         if (webVitals.onTTFB) {
           webVitals.onTTFB((metric: { value: number }) => setMetrics(prev => ({ ...prev, ttfb: metric.value })));
         }
+=======
+      import('web-vitals').then(({ onCLS, onFCP, onLCP, onTTFB }) => {
+        onCLS((metric: { value: number }) => setMetrics(prev => ({ ...prev, cls: metric.value })));
+        onFCP((metric: { value: number }) => setMetrics(prev => ({ ...prev, fcp: metric.value })));
+        onLCP((metric: { value: number }) => setMetrics(prev => ({ ...prev, lcp: metric.value })));
+        onTTFB((metric: { value: number }) => setMetrics(prev => ({ ...prev, ttfb: metric.value })));
+>>>>>>> cursor/fix-errors-and-merge-to-main-241d
       }).catch(() => {
         // web-vitals not available, continue without it
       });
