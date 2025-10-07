@@ -46,7 +46,8 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     const fidObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
-        if ('processingStart' in entry && 'startTime' in entry) {
+<<<<<<< HEAD
+        if (entry.entryType === 'first-input' && 'processingStart' in entry && 'startTime' in entry) {
           const fidEntry = entry as PerformanceEventTiming;
           setMetrics(prev => ({ ...prev, fid: fidEntry.processingStart - fidEntry.startTime }));
         }
@@ -59,7 +60,8 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     const clsObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
-        if ('hadRecentInput' in entry && 'value' in entry) {
+<<<<<<< HEAD
+        if (entry.entryType === 'layout-shift' && 'hadRecentInput' in entry && 'value' in entry) {
           const clsEntry = entry as LayoutShift;
           if (!clsEntry.hadRecentInput) {
             clsValue += clsEntry.value;
