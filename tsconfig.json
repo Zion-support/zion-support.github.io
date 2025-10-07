@@ -119,8 +119,12 @@
     "api-documentation.tsx",
     "app/components/NewContentPromotionalBanner2026.tsx",
     "app/components/NewestContent2025Banner.tsx",
+<<<<<<< HEAD
     "utils/**",
     "src/utils/**"
+=======
+    "utils/**/*"
+>>>>>>> main
   ],
   "references": [
     {

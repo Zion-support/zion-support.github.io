@@ -4,6 +4,11 @@
  * Optimizes banner loading by implementing lazy loading and code splitting
  * to improve initial page load performance.
  */
+<<<<<<< HEAD
+=======
+import { lazy } from 'react';
+import type { ComponentType } from 'react';
+>>>>>>> main
 import { lazy, ComponentType } from 'react';
 
 interface BannerModule {
@@ -28,28 +33,44 @@ export const lazyLoadBanner = (
             .catch(retryError => {
               console.error(
                 `Retry failed for banner: ${componentName}`,
+<<<<<<< HEAD
                 retryError
               );
               // Return a fallback component
               resolve({ default: () => null });
+=======
+                retryError,
+              );
+              // Return a fallback component
+              resolve({ default: () => null });
+                retryError
+              );
+              // Return a fallback component
+              resolve({
+                default: () => (
+                  <div className="banner-fallback">
+                    <p>Banner temporarily unavailable</p>
+                  </div>
+                )
+              });
+>>>>>>> main
             });
         }, 1000);
       });
-    }),
+    })
   );
 };
 
 /**
- * Preload banner components in the background
+ * Preload banner components for better performance
  */
-export const preloadBanners = (
-  importFns: Array<() => Promise<BannerModule>>,
-) => {
-  if (typeof window !== 'undefined' && 'requestIdleCallback' in window) {
-    requestIdleCallback(() => {
-      importFns.forEach(importFn => {
+export const preloadBanner = (importFn: () => Promise<BannerModule>): void => {
+  if (typeof window !== 'undefined') {
+    // Preload on idle
+    if ('requestIdleCallback' in window) {
+      requestIdleCallback(() => {
         importFn().catch(() => {
-          // Silently fail for preloading
+          // Silently fail for preload
         });
       });
     });
@@ -90,7 +111,10 @@ export const sortBannersByPriority = (bannerNames: string[]): string[] => {
 export class BannerObserver {
   private observer: IntersectionObserver | null = null;
   private loadedBanners = new Set<string>();
+<<<<<<< HEAD
 
+=======
+>>>>>>> main
   constructor(
     private onBannerVisible: (bannerId: string) => void,
     private options: IntersectionObserverInit = {
@@ -109,10 +133,15 @@ export class BannerObserver {
               this.observer?.unobserve(entry.target);
             }
           }
+    } else {
+      setTimeout(() => {
+        importFn().catch(() => {
+          // Silently fail for preload
         });
-      }, this.options);
+      }, 100);
     }
   }
+<<<<<<< HEAD
 
   observe(element: Element): void {
     this.observer?.observe(element);
@@ -121,11 +150,40 @@ export class BannerObserver {
   disconnect(): void {
     this.observer?.disconnect();
     this.loadedBanners.clear();
+=======
+  observe(element: Element): void {
+    this.observer?.observe(element);
+  }
+  disconnect(): void {
+    this.observer?.disconnect();
+    this.loadedBanners.clear();
+};
+/**
+ * Banner loading state manager
+ */
+export class BannerLoadingManager {
+  private loadingStates = new Map<string, boolean>();
+  private loadedComponents = new Set<string>();
+  isLoaded(componentName: string): boolean {
+    return this.loadedComponents.has(componentName);
+  }
+  isLoading(componentName: string): boolean {
+    return this.loadingStates.get(componentName) || false;
+  }
+  setLoading(componentName: string, loading: boolean): void {
+    this.loadingStates.set(componentName, loading);
+    if (!loading) {
+      this.loadedComponents.add(componentName);
+    }
+  }
+  getLoadingCount(): number {
+    return Array.from(this.loadingStates.values()).filter(Boolean).length;
+>>>>>>> main
   }
 }
 
 /**
- * Analytics tracking for banner performance
+ * Hook for banner loading state
  */
 export const trackBannerPerformance = (
   bannerName: string,
@@ -134,7 +192,11 @@ export const trackBannerPerformance = (
     renderTime?: number;
     visible?: boolean;
     clicked?: boolean;
+<<<<<<< HEAD
   }
+=======
+  },
+>>>>>>> main
 ) => {
   if (typeof window !== 'undefined' && 'performance' in window) {
     // Send to analytics
@@ -143,7 +205,10 @@ export const trackBannerPerformance = (
     // Example: gtag('event', 'banner_performance', {...metrics, banner: bannerName });
   }
 };
+<<<<<<< HEAD
 
+=======
+>>>>>>> main
 export default {
   lazyLoadBanner,
   preloadBanners,
@@ -151,4 +216,14 @@ export default {
   sortBannersByPriority,
   BannerObserver,
   trackBannerPerformance,
+<<<<<<< HEAD
+=======
+export const useBannerLoading = (componentName: string) => {
+  const manager = new BannerLoadingManager();
+  return {
+    isLoading: manager.isLoading(componentName),
+    isLoaded: manager.isLoaded(componentName),
+    setLoading: (loading: boolean) => manager.setLoading(componentName, loading)
+  };
+>>>>>>> main
 };

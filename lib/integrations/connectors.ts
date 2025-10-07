@@ -27,9 +27,17 @@ export const crm = {
   async syncContact(connection: ProviderConnection, contact: Record<string, any>) {
     return simulateAction(connection, 'crm.syncContact', { contact });
   },
+<<<<<<< HEAD
   async addProjectNote(connection: ProviderConnection, note: Record<string, any>) {
     return simulateAction(connection, 'crm.addProjectNote', { note });
   },
+=======
+  
+  async addProjectNote(connection: ProviderConnection, note: Record<string, any>) {
+    return simulateAction(connection, 'crm.addProjectNote', { note });
+  },
+  
+>>>>>>> main
   async addEmailTouchpoint(connection: ProviderConnection, touch: Record<string, any>) {
     return simulateAction(connection, 'crm.addEmailTouchpoint', { touch });
   }
@@ -40,6 +48,10 @@ export const ats = {
   async pushApplicant(connection: ProviderConnection, applicant: Record<string, any>) {
     return simulateAction(connection, 'ats.pushApplicant', { applicant });
   },
+<<<<<<< HEAD
+=======
+  
+>>>>>>> main
   async updateStatus(connection: ProviderConnection, change: Record<string, any>) {
     return simulateAction(connection, 'ats.updateStatus', { change });
   }
