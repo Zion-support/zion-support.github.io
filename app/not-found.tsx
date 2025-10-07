@@ -1,6 +1,4 @@
-'use client';
-
-// import React from 'react';
+import React from 'react';
 import Link from 'next/link';
 
 export default function NotFound() {
@@ -18,10 +16,10 @@ export default function NotFound() {
       icon: '📚',
     },
     {
-      title: 'Case Studies',
-      description: 'See our success stories and client results',
-      href: '/case-studies',
-      icon: '📊',
+      title: 'Enterprise Solutions',
+      description: 'Fortune 500 AI transformation solutions',
+      href: '/enterprise',
+      icon: '🏢',
     },
     {
       title: 'Contact Us',
@@ -32,19 +30,22 @@ export default function NotFound() {
   ];
 
   return (
-    <div className='min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 flex items-center justify-center'>
+    <div className='min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center'>
       <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
-        {/* 404 Error */}
-        <div className='mb-12'>
-          <h1 className='text-9xl font-extrabold text-white mb-4'>
-            <span className='bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent'>
-              404
-            </span>
-          </h1>
-          <h2 className='text-4xl font-bold text-white mb-6'>Page Not Found</h2>
-          <p className='text-xl text-gray-300 max-w-2xl mx-auto'>
-            The page you're looking for doesn't exist or has been moved. Let's
-            get you back on track with our AI-powered solutions.
+        {/* Error Code */}
+        <div className='mb-8'>
+          <h1 className='text-9xl font-bold text-gray-300 mb-4'>404</h1>
+          <div className='text-6xl mb-4'>🔍</div>
+        </div>
+
+        {/* Error Message */}
+        <div className='mb-8'>
+          <h2 className='text-3xl font-bold text-gray-900 mb-4'>
+            Oops! Page Not Found
+          </h2>
+          <p className='text-lg text-gray-600 mb-6'>
+            The page you&apos;re looking for doesn&apos;t exist or has been moved. Don&apos;t
+            worry, let&apos;s get you back on track!
           </p>
         </div>
 
@@ -56,62 +57,60 @@ export default function NotFound() {
               <Link
                 key={index}
                 href={page.href}
-                className='group bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-white/40 transition-all duration-500 transform hover:-translate-y-2'
+                className='group bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 hover:bg-white/20 transition-all duration-300 transform hover:-translate-y-2'
               >
                 <div className='text-4xl mb-4'>{page.icon}</div>
                 <h4 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors'>
                   {page.title}
                 </h4>
-                <p className='text-gray-300 text-sm'>{page.description}</p>
+                <p className='text-gray-300 group-hover:text-gray-200 transition-colors'>
+                  {page.description}
+                </p>
               </Link>
             ))}
           </div>
         </div>
 
-        {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+        {/* Action Buttons */}
+        <div className='flex flex-col sm:flex-row items-center justify-center gap-4'>
           <Link
-            href="/"
-            className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl"
+            href='/'
+            className='group flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl'
           >
-            ← Back to Home
+            <span>Go Home</span>
+            <svg
+              className='w-5 h-5 group-hover:translate-x-1 transition-transform'
+              fill='none'
+              stroke='currentColor'
+              viewBox='0 0 24 24'
+            >
+              <path
+                strokeLinecap='round'
+                strokeLinejoin='round'
+                strokeWidth={2}
+                d='M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6'
+              />
+            </svg>
           </Link>
-          <a
-            href="tel:+13024640950"
-            className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-600 hover:text-white transition-colors"
+          <Link
+            href='/contact'
+            className='group flex items-center gap-3 border-2 border-white/30 hover:border-white/60 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1'
           >
-            Call Support: +1 302 464 0950
-          </a>
-        </div>
-
-        {/* Help Section */}
-        <div>
-          <h3>
-            Still need help?
-          </h3>
-          <p className='text-gray-300 mb-6'>
-            Our AI experts are here to help you navigate our solutions and find
-            exactly what you need.
-          </p>
-          <div className='flex flex-col sm:flex-row items-center justify-center gap-4'>
-            <Link
-              href='/'
-              className='group flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1'
+            <span>Get Help</span>
+            <svg
+              className='w-5 h-5 group-hover:translate-x-1 transition-transform'
+              fill='none'
+              stroke='currentColor'
+              viewBox='0 0 24 24'
             >
-              <span className='text-xl'>🏠</span>
-              <span>Go Home</span>
-            </Link>
-
-            <Link
-              href='/contact'
-              className='group flex items-center gap-3 bg-white/10 hover:bg-white/20 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 border border-white/30'
-            >
-              <span>Contact Support</span>
-              <span className='group-hover:translate-x-1 transition-transform'>
-                →
-              </span>
-            </Link>
-          </div>
+              <path
+                strokeLinecap='round'
+                strokeLinejoin='round'
+                strokeWidth={2}
+                d='M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z'
+              />
+            </svg>
+          </Link>
         </div>
       </div>
     </div>

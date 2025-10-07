@@ -3,7 +3,7 @@
 import fs from 'fs';
 import path from 'path';
 
-// Mapping of broken imports to correct imports
+//Mapping of broken imports to correct imports
 const iconMappings = {
   rrowleft: 'ArrowLeft',
   alendar: 'Calendar',
@@ -29,13 +29,13 @@ const iconMappings = {
   ookopen: 'BookOpen',
 };
 
-// Function to fix imports in a file
+//Function to fix imports in a file
 function fixImportsInFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
 
-    // Fix lucide-react imports
+    //Fix lucide-react imports
     for (const [broken, correct] of Object.entries(iconMappings)) {
       const oldImport = `lucide-react/dist/esm/icons/${broken}`;
       const newImport = `lucide-react`;
@@ -49,7 +49,7 @@ function fixImportsInFile(filePath) {
       }
     }
 
-    // Fix Link imports if missing
+    //Fix Link imports if missing
     if (
       content.includes('Link') &&
       !content.includes("import Link from 'next/link'")
@@ -67,7 +67,7 @@ function fixImportsInFile(filePath) {
   }
 }
 
-// Get all blog files
+//Get all blog files
 const blogDir = '/workspace/app/blog';
 const files = fs
   .readdirSync(blogDir, { recursive: true })

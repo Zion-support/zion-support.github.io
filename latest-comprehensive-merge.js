@@ -3,14 +3,12 @@
 /**
  * Latest Comprehensive Merge - Handles all new branches and PRs
  * This script will systematically merge all new branches found
- */
-
-import { execSync } from 'child_process';
+ */ import { execSync } from 'child_process';
 import fs from 'fs';
 
 console.log('🚀 Starting Latest Comprehensive Merge Process...\n');
 
-// Step 1: Ensure we're on main and up to date
+//Step 1: Ensure we're on main and up to date
 console.log('📋 Step 1: Preparing main branch...');
 try {
   execSync('git checkout main', { stdio: 'inherit' });
@@ -20,7 +18,7 @@ try {
   process.exit(1);
 }
 
-// Step 2: Get all new branches that need merging
+//Step 2: Get all new branches that need merging
 console.log('🔍 Step 2: Finding new branches to merge...');
 const branches = execSync('git branch -r', { encoding: 'utf8' })
   .split('\n')
@@ -35,15 +33,15 @@ const branches = execSync('git branch -r', { encoding: 'utf8' })
 
 console.log(`📊 Found ${branches.length} new branches to process\n`);
 
-// Step 3: Enhanced conflict resolution function
+//Step 3: Enhanced conflict resolution function
 function resolveConflictsAndMerge(branchName) {
   console.log(`\n🔄 Processing ${branchName}...`);
 
   try {
-    // Fetch the branch
+    //Fetch the branch
     execSync(`git fetch origin ${branchName}`, { stdio: 'inherit' });
 
-    // Try initial merge
+    //Try initial merge
     execSync(
       `git merge origin/${branchName} --no-ff -m "Merge ${branchName} into main"`,
       { stdio: 'inherit' }
@@ -57,7 +55,7 @@ function resolveConflictsAndMerge(branchName) {
     );
 
     try {
-      // Check for merge conflicts
+      //Check for merge conflicts
       const status = execSync('git status --porcelain', { encoding: 'utf8' });
 
       if (
@@ -67,7 +65,7 @@ function resolveConflictsAndMerge(branchName) {
       ) {
         console.log(`🔧 Resolving conflicts for ${branchName}...`);
 
-        // Strategy 1: Auto-resolve with theirs for most conflicts
+        //Strategy 1: Auto-resolve with theirs for most conflicts
         try {
           execSync('git reset --hard HEAD', { stdio: 'inherit' });
           execSync(
@@ -84,7 +82,7 @@ function resolveConflictsAndMerge(branchName) {
           );
         }
 
-        // Strategy 2: Auto-resolve with ours
+        //Strategy 2: Auto-resolve with ours
         try {
           execSync('git reset --hard HEAD', { stdio: 'inherit' });
           execSync(
@@ -101,11 +99,11 @@ function resolveConflictsAndMerge(branchName) {
           );
         }
 
-        // Strategy 3: Manual conflict resolution
+        //Strategy 3: Manual conflict resolution
         try {
           execSync('git reset --hard HEAD', { stdio: 'inherit' });
 
-          // Get conflicted files
+          //Get conflicted files
           const conflictedFiles = execSync(
             'git diff --name-only --diff-filter=U',
             { encoding: 'utf8' }
@@ -117,11 +115,11 @@ function resolveConflictsAndMerge(branchName) {
             `🔧 Manually resolving ${conflictedFiles.length} conflicted files...`
           );
 
-          // For each conflicted file, try to resolve
+          //For each conflicted file, try to resolve
           for (const file of conflictedFiles) {
             if (file.trim()) {
               try {
-                // Try to resolve by taking the incoming version
+                //Try to resolve by taking the incoming version
                 execSync(`git checkout --theirs "${file}"`, {
                   stdio: 'inherit',
                 });
@@ -133,7 +131,7 @@ function resolveConflictsAndMerge(branchName) {
             }
           }
 
-          // Complete the merge
+          //Complete the merge
           execSync(
             `git commit -m "Manual conflict resolution for ${branchName}"`,
             { stdio: 'inherit' }
@@ -148,7 +146,7 @@ function resolveConflictsAndMerge(branchName) {
       console.log(`❌ Could not check merge status for ${branchName}`);
     }
 
-    // If all strategies fail, abort and skip
+    //If all strategies fail, abort and skip
     try {
       execSync('git merge --abort', { stdio: 'inherit' });
       console.log(`⏭️  Skipping ${branchName} due to unresolvable conflicts`);
@@ -160,7 +158,7 @@ function resolveConflictsAndMerge(branchName) {
   }
 }
 
-// Step 4: Execute merge process
+//Step 4: Execute merge process
 console.log('🚀 Step 4: Executing merge process...\n');
 
 const results = {
@@ -174,7 +172,7 @@ const results = {
   },
 };
 
-// Process branches in batches to avoid overwhelming the system
+//Process branches in batches to avoid overwhelming the system
 const batchSize = 5;
 const batches = [];
 for (let i = 0; i < branches.length; i += batchSize) {
@@ -206,14 +204,14 @@ for (let batchIndex = 0; batchIndex < batches.length; batchIndex++) {
     }
   }
 
-  // Small delay between batches
+  //Small delay between batches
   if (batchIndex < batches.length - 1) {
     console.log('⏳ Waiting before next batch...');
     await new Promise(resolve => setTimeout(resolve, 1000));
   }
 }
 
-// Step 5: Generate comprehensive report
+//Step 5: Generate comprehensive report
 console.log('\n📊 Step 5: Generating merge report...');
 results.timestamp = new Date().toISOString();
 results.branchCounts = {
@@ -228,7 +226,7 @@ fs.writeFileSync(
   JSON.stringify(results, null, 2)
 );
 
-// Step 6: Display summary
+//Step 6: Display summary
 console.log('\n🎉 MERGE PROCESS COMPLETED!\n');
 console.log('📊 SUMMARY:');
 console.log(`  Total branches processed: ${results.summary.total}`);

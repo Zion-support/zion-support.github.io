@@ -2,32 +2,30 @@
 
 /**
  * Merge Open PRs - Focused script to merge the specific open PRs
- */
-
-import { execSync } from 'child_process';
+ */ import { execSync } from 'child_process';
 import fs from 'fs';
 
 console.log('🚀 Starting Open PR Merge Process...\n');
 
-// The specific PR branches we identified
+//The specific PR branches we identified
 const openPRBranches = [
-  'cursor/fix-web-application-console-errors-0bf5', // PR #11935
-  'cursor/enhance-and-expand-ziontechgroup-com-services-and-site-44c4', // PR #24703
-  'cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f3e7', // PR #24702
-  'cursor/enhance-and-expand-ziontechgroup-com-services-and-site-d21e', // PR #24701
+  'cursor/fix-web-application-console-errors-0bf5', //PR #11935
+  'cursor/enhance-and-expand-ziontechgroup-com-services-and-site-44c4', //PR #24703
+  'cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f3e7', //PR #24702
+  'cursor/enhance-and-expand-ziontechgroup-com-services-and-site-d21e', //PR #24701
 ];
 
 console.log(`📋 Found ${openPRBranches.length} open PR branches to merge\n`);
 
-// Function to merge a single branch
+//Function to merge a single branch
 function mergeBranch(branchName) {
   console.log(`\n🔄 Processing ${branchName}...`);
 
   try {
-    // Fetch the branch
+    //Fetch the branch
     execSync(`git fetch origin ${branchName}`, { stdio: 'inherit' });
 
-    // Try direct merge
+    //Try direct merge
     execSync(
       `git merge origin/${branchName} --no-ff -m "Merge ${branchName} into main"`,
       { stdio: 'inherit' }
@@ -41,7 +39,7 @@ function mergeBranch(branchName) {
     );
 
     try {
-      // Check for merge conflicts
+      //Check for merge conflicts
       const status = execSync('git status --porcelain', { encoding: 'utf8' });
 
       if (
@@ -51,7 +49,7 @@ function mergeBranch(branchName) {
       ) {
         console.log(`🔧 Resolving conflicts for ${branchName}...`);
 
-        // Try auto-resolve with theirs strategy
+        //Try auto-resolve with theirs strategy
         try {
           execSync('git reset --hard HEAD', { stdio: 'inherit' });
           execSync(
@@ -68,7 +66,7 @@ function mergeBranch(branchName) {
           );
         }
 
-        // Try auto-resolve with ours strategy
+        //Try auto-resolve with ours strategy
         try {
           execSync('git reset --hard HEAD', { stdio: 'inherit' });
           execSync(
@@ -85,11 +83,11 @@ function mergeBranch(branchName) {
           );
         }
 
-        // Try manual conflict resolution
+        //Try manual conflict resolution
         try {
           execSync('git reset --hard HEAD', { stdio: 'inherit' });
 
-          // Get conflicted files
+          //Get conflicted files
           const conflictedFiles = execSync(
             'git diff --name-only --diff-filter=U',
             { encoding: 'utf8' }
@@ -101,11 +99,11 @@ function mergeBranch(branchName) {
             `🔧 Manually resolving ${conflictedFiles.length} conflicted files...`
           );
 
-          // For each conflicted file, try to resolve
+          //For each conflicted file, try to resolve
           for (const file of conflictedFiles) {
             if (file.trim()) {
               try {
-                // Try to resolve by taking the incoming version
+                //Try to resolve by taking the incoming version
                 execSync(`git checkout --theirs "${file}"`, {
                   stdio: 'inherit',
                 });
@@ -117,7 +115,7 @@ function mergeBranch(branchName) {
             }
           }
 
-          // Complete the merge
+          //Complete the merge
           execSync(
             `git commit -m "Manual conflict resolution for ${branchName}"`,
             { stdio: 'inherit' }
@@ -132,7 +130,7 @@ function mergeBranch(branchName) {
       console.log(`❌ Could not check merge status for ${branchName}`);
     }
 
-    // If all strategies fail, abort and skip
+    //If all strategies fail, abort and skip
     try {
       execSync('git merge --abort', { stdio: 'inherit' });
       console.log(`⏭️  Skipping ${branchName} due to unresolvable conflicts`);
@@ -144,7 +142,7 @@ function mergeBranch(branchName) {
   }
 }
 
-// Execute merge process
+//Execute merge process
 console.log('🚀 Starting merge process...\n');
 
 const results = {
@@ -158,7 +156,7 @@ const results = {
   },
 };
 
-// Merge each branch
+//Merge each branch
 for (const branch of openPRBranches) {
   const result = mergeBranch(branch);
   results.summary.total++;
@@ -174,7 +172,7 @@ for (const branch of openPRBranches) {
   }
 }
 
-// Generate report
+//Generate report
 console.log('\n📊 MERGE RESULTS:');
 console.log(`  Total branches processed: ${results.summary.total}`);
 console.log(`  Successful merges: ${results.summary.successful}`);
@@ -191,7 +189,7 @@ if (results.failed.length > 0) {
   results.failed.forEach(result => console.log(`  - ${result.branch}`));
 }
 
-// Save report
+//Save report
 results.timestamp = new Date().toISOString();
 fs.writeFileSync(
   'open-prs-merge-report.json',

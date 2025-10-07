@@ -1,78 +1,63 @@
 #!/usr/bin/env python3
 """
-Script to fix common syntax errors in TypeScript/JSX files
+Script to fix common syntax errors in TypeScript/JavaScript files after merge conflict resolution.
 """
 
 import os
 import re
 import glob
 
-def fix_interface_syntax(content):
-    """Fix malformed interface declarations"""
-    # Fix interface declarations with extra commas
-    content = re.sub(r'interface,\s*(\w+),\s*\{', r'interface \1 {', content)
-    
-    # Fix property declarations with extra commas
-    content = re.sub(r'(\w+),\s*(\w+),\s*(\w+)\s*:\s*([^;]+);', r'\1\2\3: \4;', content)
-    content = re.sub(r'(\w+),\s*(\w+)\s*:\s*([^;]+);', r'\1\2: \3;', content)
-    
-    # Fix function declarations with extra commas
-    content = re.sub(r'export,\s*default,\s*function\s+(\w+),(\w+),(\w+)', r'export default function \1\2\3', content)
-    content = re.sub(r'function\s+(\w+),(\w+),(\w+)', r'function \1\2\3', content)
-    
-    # Fix variable declarations with extra commas
-    content = re.sub(r'const\s+(\w+),(\w+),(\w+)\s*=', r'const \1\2\3 =', content)
-    content = re.sub(r'let\s+(\w+),(\w+),(\w+)\s*=', r'let \1\2\3 =', content)
-    content = re.sub(r'var\s+(\w+),(\w+),(\w+)\s*=', r'var \1\2\3 =', content)
-    
-    # Fix object property access with extra commas
-    content = re.sub(r'(\w+),(\w+),(\w+)\.(\w+)', r'\1\2\3.\4', content)
-    
-    # Fix type annotations with extra commas
-    content = re.sub(r'(\w+),\s*(\w+)\s*:\s*([^,;]+)', r'\1\2: \3', content)
-    
-    # Fix optional properties with extra commas
-    content = re.sub(r'(\w+),\s*(\w+)\s*\?\s*:\s*([^;]+)', r'\1\2?: \3', content)
-    
-    # Fix array type annotations
-    content = re.sub(r'(\w+)\[\],(\w+)\[\],(\w+)\[\]', r'\1\2\3[]', content)
-    
-    # Fix generic type parameters
-    content = re.sub(r'<(\w+),(\w+),(\w+)>', r'<\1\2\3>', content)
-    
-    # Fix string literals with extra commas
-    content = re.sub(r"'([^']+),\s*([^']+),\s*([^']+)'", r"'\1\2\3'", content)
-    content = re.sub(r'"([^"]+),\s*([^"]+),\s*([^"]+)"', r'"\1\2\3"', content)
-    
-    return content
-
 def fix_jsx_syntax(content):
-    """Fix JSX syntax errors"""
-    # Fix malformed JSX attributes
-    content = re.sub(r'(\w+),\s*(\w+)\s*=\s*{([^}]+)}', r'\1\2={\3}', content)
+    """Fix common JSX syntax issues."""
+    # Fix unclosed JSX tags by adding closing tags
+    # This is a basic fix - more sophisticated parsing would be needed for complex cases
     
-    # Fix self-closing tags with extra commas
-    content = re.sub(r'<(\w+),\s*(\w+)\s*/>', r'<\1\2 />', content)
+    # Fix common unclosed tags
+    tag_fixes = [
+        (r'<div([^>]*)>', r'<div\1>'),
+        (r'<main([^>]*)>', r'<main\1>'),
+        (r'<section([^>]*)>', r'<section\1>'),
+        (r'<form([^>]*)>', r'<form\1>'),
+        (r'<button([^>]*)>', r'<button\1>'),
+        (r'<label([^>]*)>', r'<label\1>'),
+        (r'<Link([^>]*)>', r'<Link\1>'),
+    ]
     
-    # Fix closing tags with extra commas
-    content = re.sub(r'</(\w+),\s*(\w+)>', r'</\1\2>', content)
-    
-    return content
-
-def fix_metadata_syntax(content):
-    """Fix metadata object syntax errors"""
-    # Fix malformed metadata objects
-    content = re.sub(r'export const metadata = \{\s*\n\s*title:\s*\'([^\']+)\',\s*\n\s*description:\s*\'([^\']+)\',\s*\n\s*type:\s*\'([^\']+)\',\s*\n\s*\};', 
-                     r'export const metadata = {\n  title: "\1",\n  description: "\2",\n  type: "\3",\n};', content)
-    
-    # Fix duplicate semicolons and braces
-    content = re.sub(r';\s*;\s*}', r';', content)
-    content = re.sub(r'}\s*;\s*}', r'}', content)
+    for pattern, replacement in tag_fixes:
+        content = re.sub(pattern, replacement, content)
     
     return content
 
-def fix_file(file_path):
-    """Fix syntax errors in a single file"""
+def fix_typescript_syntax(content):
+    """Fix common TypeScript syntax issues."""
+    # Fix malformed object literals
+    content = re.sub(r'(\w+):\s*(\w+)\s*,\s*(\w+):\s*(\w+)\s*,', r'\1: \2,\n  \3: \4,', content)
+    
+    # Fix malformed function parameters
+    content = re.sub(r'(\w+)\s*:\s*(\w+)\s*,\s*(\w+)\s*:\s*(\w+)\s*\)', r'\1: \2, \3: \4)', content)
+    
+    # Fix malformed regex literals
+    content = re.sub(r'/\s*([^/]+)\s*/', r'/\1/', content)
+    
+    # Fix malformed type assertions
+    content = re.sub(r'as\s+(\w+)\s*\)', r'as \1)', content)
+    
+    return content
+
+def fix_merge_conflicts_advanced(content):
+    """Advanced merge conflict resolution."""
+    # Remove any remaining conflict markers
+    content = re.sub(r'<<<<<<< HEAD\n', '', content)
+    content = re.sub(r'=======\n', '', content)
+    content = re.sub(r'>>>>>>> [^\n]+\n', '', content)
+    
+    # Clean up multiple empty lines
+    content = re.sub(r'\n\s*\n\s*\n+', '\n\n', content)
+    
+    return content
+
+def fix_file_syntax(file_path):
+    """Fix syntax issues in a single file."""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
@@ -80,54 +65,56 @@ def fix_file(file_path):
         original_content = content
         
         # Apply fixes
-        content = fix_interface_syntax(content)
+        content = fix_merge_conflicts_advanced(content)
         content = fix_jsx_syntax(content)
-        content = fix_metadata_syntax(content)
+        content = fix_typescript_syntax(content)
         
-        # Additional specific fixes
-        # Fix common patterns
-        content = re.sub(r'(\w+),\s*(\w+)\s*=\s*([^;]+);', r'\1\2 = \3;', content)
-        content = re.sub(r'(\w+),\s*(\w+)\s*:\s*([^,;]+),', r'\1\2: \3,', content)
-        
-        # Fix malformed function parameters
-        content = re.sub(r'\(\s*(\w+),\s*(\w+),\s*(\w+)\s*:\s*([^)]+)\)', r'(\1\2\3: \4)', content)
-        
-        # Fix malformed object properties
-        content = re.sub(r'(\w+),\s*(\w+)\s*:\s*([^,}]+),', r'\1\2: \3,', content)
+        # Clean up extra whitespace
+        content = re.sub(r'\n\s*\n\s*\n+', '\n\n', content)
+        content = content.strip() + '\n'
         
         if content != original_content:
             with open(file_path, 'w', encoding='utf-8') as f:
                 f.write(content)
-            print(f"Fixed: {file_path}")
+            print(f"Fixed syntax in: {file_path}")
             return True
-        else:
-            return False
-            
+        return False
     except Exception as e:
-        print(f"Error fixing {file_path}: {e}")
+        print(f"Error processing {file_path}: {e}")
         return False
 
 def main():
-    """Main function to fix all files"""
-    # Find all TypeScript and JSX files
+    """Main function to process all TypeScript/JavaScript files."""
     patterns = [
-        'app/blog/**/*.tsx',
-        'src/components/**/*.tsx',
+        'app/**/*.tsx',
+        'app/**/*.ts', 
+        'app/**/*.js',
+        'app/**/*.jsx',
         'src/**/*.tsx',
-        'src/**/*.ts'
+        'src/**/*.ts',
+        'src/**/*.js', 
+        'src/**/*.jsx',
+        'components/**/*.tsx',
+        'components/**/*.ts',
+        'components/**/*.js',
+        'components/**/*.jsx',
+        '*.tsx',
+        '*.ts',
+        '*.js',
+        '*.jsx'
     ]
     
-    fixed_count = 0
-    total_count = 0
+    files_processed = 0
+    files_fixed = 0
     
     for pattern in patterns:
-        files = glob.glob(pattern, recursive=True)
-        for file_path in files:
-            total_count += 1
-            if fix_file(file_path):
-                fixed_count += 1
+        for file_path in glob.glob(pattern, recursive=True):
+            if os.path.isfile(file_path):
+                files_processed += 1
+                if fix_file_syntax(file_path):
+                    files_fixed += 1
     
-    print(f"\nFixed {fixed_count} out of {total_count} files")
+    print(f"\nProcessed {files_processed} files, fixed {files_fixed} files")
 
 if __name__ == "__main__":
     main()

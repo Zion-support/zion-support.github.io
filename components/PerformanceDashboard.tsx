@@ -37,17 +37,17 @@ const PerformanceDashboard: React.FC = () => {
       }));
     };
 
-    // Update metrics on load
+    //Update metrics on load
     updateMetrics();
 
-    // Update metrics periodically
+    //Update metrics periodically
     const interval = setInterval(updateMetrics, 1000);
 
     return () => clearInterval(interval);
   }, []);
 
-  // Only show in development
-  if (process.env.NODE_ENV !== 'development') {
+  //Only show in development
+  if (process.env['NODE_ENV'] !== 'development') {
     return null;
   }
 
@@ -69,17 +69,19 @@ const PerformanceDashboard: React.FC = () => {
           <div className='space-y-2 text-xs'>
             <div className='flex justify-between'>
               <span className='text-gray-600'>Load Time:</span>
-              <span className='font-mono'>{metrics.loadTime.toFixed(2)}ms</span>
+              <span className='font-mono'>
+                {metrics?.loadTime.toFixed(2)}ms
+              </span>
             </div>
             <div className='flex justify-between'>
               <span className='text-gray-600'>Memory:</span>
               <span className='font-mono'>
-                {metrics.memoryUsage.toFixed(2)}MB
+                {metrics?.memoryUsage.toFixed(2)}MB
               </span>
             </div>
             <div className='flex justify-between'>
               <span className='text-gray-600'>FPS:</span>
-              <span className='font-mono'>{metrics.fps.toFixed(1)}</span>
+              <span className='font-mono'>{metrics?.fps.toFixed(1)}</span>
             </div>
           </div>
         </div>

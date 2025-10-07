@@ -3,7 +3,7 @@
 import { execSync } from 'child_process';
 import fs from 'fs';
 
-// Function to get all open PRs
+//Function to get all open PRs
 async function getAllOpenPRs() {
   try {
     const response = await fetch(
@@ -17,7 +17,7 @@ async function getAllOpenPRs() {
   }
 }
 
-// Function to check if PR is mergeable
+//Function to check if PR is mergeable
 async function isPRMergeable(prNumber) {
   try {
     const response = await fetch(
@@ -43,15 +43,15 @@ async function isPRMergeable(prNumber) {
   }
 }
 
-// Function to merge a PR
+//Function to merge a PR
 async function mergePR(prNumber, branchName) {
   try {
     console.log(`\n🔄 Attempting to merge PR #${prNumber} (${branchName})...`);
 
-    // Fetch the branch
+    //Fetch the branch
     execSync(`git fetch origin ${branchName}`, { stdio: 'inherit' });
 
-    // Try to merge
+    //Try to merge
     try {
       execSync(`git merge origin/${branchName} --no-commit`, {
         stdio: 'inherit',
@@ -66,7 +66,7 @@ async function mergePR(prNumber, branchName) {
         `⚠️  Merge conflict in PR #${prNumber}, attempting to resolve...`
       );
 
-      // Check for conflicts
+      //Check for conflicts
       const status = execSync('git status --porcelain', { encoding: 'utf8' });
       if (
         status.includes('UU') ||
@@ -74,11 +74,11 @@ async function mergePR(prNumber, branchName) {
         status.includes('DD')
       ) {
         console.log(`❌ Cannot auto-resolve conflicts in PR #${prNumber}`);
-        // Abort the merge
+        //Abort the merge
         execSync('git merge --abort', { stdio: 'inherit' });
         return false;
       } else {
-        // No conflicts, commit the merge
+        //No conflicts, commit the merge
         execSync(`git commit -m "Merge PR #${prNumber}: ${branchName}"`, {
           stdio: 'inherit',
         });
@@ -94,18 +94,18 @@ async function mergePR(prNumber, branchName) {
   }
 }
 
-// Main function
+//Main function
 async function main() {
   console.log('🚀 Starting comprehensive PR merge process...\n');
 
-  // Get all open PRs
+  //Get all open PRs
   const prs = await getAllOpenPRs();
   console.log(`📋 Found ${prs.length} open PRs`);
 
   const mergeablePRs = [];
   const failedPRs = [];
 
-  // Check each PR for mergeability
+  //Check each PR for mergeability
   for (const pr of prs) {
     console.log(`\n🔍 Checking PR #${pr.number}: ${pr.title}`);
     const prInfo = await isPRMergeable(pr.number);
@@ -130,7 +130,7 @@ async function main() {
 
   console.log(`\n📊 Summary: ${mergeablePRs.length} PRs are mergeable`);
 
-  // Merge all mergeable PRs
+  //Merge all mergeable PRs
   for (const pr of mergeablePRs) {
     const success = await mergePR(pr.number, pr.branch);
     if (!success) {
@@ -138,7 +138,7 @@ async function main() {
     }
   }
 
-  // Final summary
+  //Final summary
   console.log('\n🎯 Merge Process Complete!');
   console.log(
     `✅ Successfully merged: ${mergeablePRs.length - failedPRs.length} PRs`

@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-// Template for blog pages
+//Template for blog pages
 const blogTemplate = (
   title,
   description,
@@ -42,7 +42,7 @@ export default function BlogPage(): React.JSX.Element {
   );
 }`;
 
-// Find all corrupted blog files
+//Find all corrupted blog files
 const blogDir = 'src/pages/blog';
 const corruptedFiles = [];
 
@@ -73,7 +73,7 @@ findCorruptedFiles(blogDir);
 
 console.log(`Found ${corruptedFiles.length} corrupted files`);
 
-// Fix each corrupted file
+//Fix each corrupted file
 for (const filePath of corruptedFiles) {
   try {
     const slug = filePath.split('/').slice(-2, -1)[0];

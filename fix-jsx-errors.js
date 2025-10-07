@@ -4,54 +4,140 @@ import fs from 'fs';
 import path from 'path';
 import { glob } from 'glob';
 
-// Find all TypeScript/JSX files in src/components
-const files = await glob('src/components/**/*.{tsx,ts}');
+//Patterns to fix
+const fixes = [
+  //Fix ArrowRight -> Link mismatches
+  {
+    pattern: /<ArrowRight\s+([^>]*)>\s*([^<]*)<\/Link>/g,
+    replacement: '<Link $1>$2</Link>',
+  },
+  //Fix Link -> ArrowRight mismatches
+  {
+    pattern: /<Link\s+([^>]*)>\s*([^<]*)<\/ArrowRight>/g,
+    replacement: '<Link $1>$2</Link>',
+  },
+  //Fix unclosed ArrowRight tags
+  {
+    pattern: /<ArrowRight\s+([^>]*)>\s*([^<]*)(?!<\/ArrowRight>)/g,
+    replacement: '<Link $1>$2</Link>',
+  },
+  //Fix unclosed Link tags that should be ArrowRight
+  {
+    pattern: /<Link\s+([^>]*)>\s*([^<]*)(?!<\/Link>)/g,
+    replacement: (match, attrs, content) => {
+      //Only fix if it looks like it should be a Link (has href)
+      if (attrs.includes('href')) {
+        return `<Link ${attrs}>${content}</Link>`;
+      }
+      return match;
+    },
+  },
+];
 
-console.log(`Found ${files.length} files to check...`);
+//Get all TypeScript/JSX files
+const files = await glob('**/*.{ts,tsx,js,jsx}', {
+  ignore: [
+    'node_modules/**',
+    'dist/**',
+    'build/**',
+    '__tests__/**',
+    '_app_disabled/**',
+    '_conflicted_disabled/**',
+    '_pages_api_disabled/**',
+    '_pages_disabled/**',
+    'admin-api-disabled/**',
+    'api-disabled/**',
+    'api.disabled/**',
+    'api.disabled.temp/**',
+    'api-backup/**',
+    'apps.backup/**',
+    'automation_backup/**',
+    'ai-optimization-backups/**',
+    'automation_logs/**',
+    'all-automations-reports/**',
+    'accessibility-reports/**',
+    'app/blog/**',
+    'corrupted-files-backup/**',
+    'corrupted_backup/**',
+    'corrupted_files_backup_2/**',
+    'content/**',
+    'contracts/**',
+    'components_backup/**',
+    'app/services/**',
+    'app/guides/**',
+    'data/**',
+    'data_backup/**',
+    'dao/**',
+    'deployments/**',
+    'disabled-api/**',
+    'e2e/**',
+    'factories/**',
+    'src/pages/blog-disabled/**',
+    'hooks/**',
+    'lib_backup/**',
+    'services/**',
+    'middleware/**',
+    'fix-*.jsx',
+    'fix-*.ts',
+    'jest.setup.*',
+    'lib/integrations/**',
+    'lint-target/**',
+    'middleware.security.ts',
+    'components/AutonomousEnterpriseBreakthroughBanner.tsx',
+    'components/ConsensusIntelligenceBreakthroughBanner.tsx',
+    'components/FeaturedServiceCard.tsx',
+    'app/components/NewestContent2025Banner.tsx',
+    'app/components/September30NewContent2025Banner.tsx',
+    'app/components/UltimateBusinessIntelligence2025Banner.tsx',
+    'app/components/UltimateBusinessIntelligenceShowcase2025.tsx',
+    'app/contact/page.tsx',
+    'app/enterprise/page.tsx',
+    'app/not-found.tsx',
+    'app/page-minimal.tsx',
+    'app/page-optimized.tsx',
+    'app/services-advertising/page.tsx',
+    'fix_typescript_syntax_errors.jsx',
+    'fix_utils_files.ts',
+  ],
+});
 
 let fixedFiles = 0;
+let totalFixes = 0;
 
-for (const filePath of files) {
+console.log(`Found ${files.length} files to process...`);
+
+for (const file of files) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let originalContent = content;
+    let content = fs.readFileSync(file, 'utf8');
+    const originalContent = content;
+    let fileFixes = 0;
 
-    // Fix orphaned /> tags (standalone /> on their own lines)
-    content = content.replace(/^\s*\/>\s*$/gm, '');
-
-    // Fix unterminated regular expression literals
-    // Look for patterns like /pattern without closing /
-    content = content.replace(/(\w+):\s*\/[^\/\n]*$/gm, (match, prop) => {
-      // If it looks like a regex but isn't closed, it's probably a string
-      return `${prop}: '${match.split(':')[1].trim().substring(1)}'`;
+    //Apply all fixes
+    fixes.forEach(fix => {
+      if (typeof fix.replacement === 'function') {
+        content = content.replace(fix.pattern, fix.replacement);
+      } else {
+        content = content.replace(fix.pattern, fix.replacement);
+      }
     });
 
-    // Fix JSX attributes that look like regex but are actually strings
-    content = content.replace(/={\s*\/[^\/\n]*$/gm, match => {
-      const value = match
-        .match(/={\s*\/[^\/\n]*$/)[0]
-        .replace(/={\s*\//, '')
-        .trim();
-      return `={'${value}'}`;
-    });
-
-    // Fix common patterns where /> appears in wrong places
-    content = content.replace(/\s*\/>\s*<span/g, ' <span');
-    content = content.replace(/\s*\/>\s*<\/span>/g, '</span>');
-
-    // Fix patterns where /> appears before closing tags
-    content = content.replace(/\s*\/>\s*<\/div>/g, '</div>');
-    content = content.replace(/\s*\/>\s*<\/a>/g, '</a>');
-    content = content.replace(/\s*\/>\s*<\/Link>/g, '</Link>');
-
+    //Count fixes
     if (content !== originalContent) {
-      fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed: ${filePath}`);
-      fixedFiles++;
+      const diff =
+        (content.match(/<Link/g) || []).length -
+        (originalContent.match(/<Link/g) || []).length;
+      fileFixes += Math.abs(diff);
+
+      if (fileFixes > 0) {
+        fs.writeFileSync(file, content, 'utf8');
+        console.log(`Fixed ${fileFixes} issues in ${file}`);
+        fixedFiles++;
+        totalFixes += fileFixes;
+      }
     }
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
+    console.error(`Error processing ${file}:`, error.message);
   }
 }
 
-console.log(`\nFixed ${fixedFiles} files.`);
+console.log(`\nFixed ${totalFixes} JSX issues across ${fixedFiles} files.`);

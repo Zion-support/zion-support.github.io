@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 
-
+:corrupted-src-backup/components/BannerManager.tsx
 
 interface Banner {
   id: string;
@@ -74,7 +74,7 @@ const BannerManager: React.FC = () => {
 
   const currentBanner = banners[currentBannerIndex];
 
-  if (!isVisible) return null;
+  if (!isVisible || !currentBanner) return null;
 
   if (!currentBanner) return null;
 

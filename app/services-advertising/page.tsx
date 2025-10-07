@@ -1,22 +1,15 @@
-// import React from 'react';
+import React from 'react';
 import Link from 'next/link';
-import type { Metadata } from 'next';
-import { ArrowLeft, Target, CheckCircle, ArrowRight } from 'lucide-react';
-
-export const metadata: Metadata = {
-  title: 'AI Advertising Services & Pricing | Zion Tech Group',
-  description:
-    'Revolutionize your marketing with AI-powered advertising solutions. Achieve 300% ROI, 95% targeting accuracy, and 60% cost reduction with our breakthrough AI technology.',
-  keywords:
-    'AI advertising services, AI marketing solutions, programmatic advertising, AI targeting, marketing automation, advertising ROI, AI campaign optimization',
-  openGraph: {
-    title: 'AI Advertising Services & Pricing | Zion Tech Group',
-    description:
-      'Revolutionize your marketing with AI-powered advertising solutions. Achieve 300% ROI, 95% targeting accuracy, and 60% cost reduction.',
-    type: 'website',
-    url: 'https://ziontechgroup.com/services-advertising',
-  },
-};
+import {
+  ArrowLeft,
+  ArrowRight,
+  Target,
+  TrendingUp,
+  Users,
+  Zap,
+  CheckCircle,
+  Star,
+} from 'lucide-react';
 
 export default function ServicesAdvertisingPage() {
   return (

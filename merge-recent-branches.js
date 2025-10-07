@@ -2,14 +2,12 @@
 
 /**
  * Merge Recent Branches - Merges recent cursor and other important branches
- */
-
-import { execSync } from 'child_process';
+ */ import { execSync } from 'child_process';
 import fs from 'fs';
 
 console.log('🚀 Starting Merge of Recent Branches...\n');
 
-// Step 1: Ensure we're on main and up to date
+//Step 1: Ensure we're on main and up to date
 console.log('📋 Step 1: Preparing main branch...');
 try {
   execSync('git checkout main', { stdio: 'inherit' });
@@ -20,7 +18,7 @@ try {
   process.exit(1);
 }
 
-// Step 2: Get recent branches
+//Step 2: Get recent branches
 console.log('📊 Step 2: Identifying recent branches...');
 const recentBranches = [
   'cursor/fix-errors-and-merge-to-main-3b04',
@@ -46,15 +44,15 @@ const recentBranches = [
 
 console.log(`📊 Found ${recentBranches.length} recent branches to process\n`);
 
-// Step 3: Merge function with conflict resolution
+//Step 3: Merge function with conflict resolution
 function mergeBranch(branchName) {
   console.log(`\n🔄 Processing ${branchName}...`);
 
   try {
-    // Check if branch exists
+    //Check if branch exists
     execSync(`git fetch origin ${branchName}`, { stdio: 'pipe' });
 
-    // Check if already merged
+    //Check if already merged
     const isMerged = execSync(
       `git branch --merged main | grep -q "${branchName}" || echo "not_merged"`,
       { encoding: 'utf8' }
@@ -64,7 +62,7 @@ function mergeBranch(branchName) {
       return { success: true, method: 'already_merged' };
     }
 
-    // Try to merge
+    //Try to merge
     try {
       execSync(
         `git merge origin/${branchName} --no-ff -m "Merge ${branchName}: automated merge"`,
@@ -77,9 +75,9 @@ function mergeBranch(branchName) {
         `⚠️  Merge conflict detected for ${branchName}, attempting resolution...`
       );
 
-      // Try different conflict resolution strategies
+      //Try different conflict resolution strategies
       try {
-        // Strategy 1: Use theirs
+        //Strategy 1: Use theirs
         execSync(
           `git merge origin/${branchName} --strategy-option=theirs --no-ff -m "Merge ${branchName}: using theirs strategy"`,
           { stdio: 'inherit' }
@@ -90,7 +88,7 @@ function mergeBranch(branchName) {
         return { success: true, method: 'theirs' };
       } catch (theirsError) {
         try {
-          // Strategy 2: Use ours
+          //Strategy 2: Use ours
           execSync(
             `git merge origin/${branchName} --strategy-option=ours --no-ff -m "Merge ${branchName}: using ours strategy"`,
             { stdio: 'inherit' }
@@ -113,7 +111,7 @@ function mergeBranch(branchName) {
   }
 }
 
-// Step 4: Process all branches
+//Step 4: Process all branches
 const results = {
   successful: [],
   failed: [],
@@ -157,7 +155,7 @@ for (const branch of recentBranches) {
   }
 }
 
-// Step 5: Generate report
+//Step 5: Generate report
 console.log('\n📊 Step 4: Generating merge report...');
 const report = {
   ...results,
@@ -169,7 +167,7 @@ fs.writeFileSync(
   JSON.stringify(report, null, 2)
 );
 
-// Step 6: Push changes
+//Step 6: Push changes
 console.log('\n🚀 Step 5: Pushing merged changes...');
 try {
   execSync('git push origin main', { stdio: 'inherit' });
