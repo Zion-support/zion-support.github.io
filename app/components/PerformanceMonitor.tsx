@@ -2,10 +2,10 @@ import React, { useEffect, useState } from 'react';
 
 interface PerformanceMetrics {
   fcp: number;
-  lcp: number;
-  fid: number;
-  cls: number;
-  ttfb: number;
+  lcp?: number;
+  fid?: number;
+  cls?: number;
+  ttfb?: number;
 }
 
 export default function PerformanceMonitor() {
@@ -19,7 +19,8 @@ export default function PerformanceMonitor() {
       entries.forEach((entry) => {
         if (entry.entryType === 'paint') {
           if (entry.name === 'first-contentful-paint') {
-            setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
+            const newMetrics = { fcp: entry.startTime };
+            setMetrics(newMetrics);
           }
         }
       });
