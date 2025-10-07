@@ -1,12 +1,13 @@
-import React from 'react';
+import React, { memo, Suspense } from 'react';
 import { createRoot } from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
-import HomePage from './app/page';
 import { performanceEnhancer } from './app/utils/performanceEnhancer';
-// import { errorHandler } from './app/utils/enhancedErrorHandler';
 import ErrorBoundary from './app/components/ErrorBoundary';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
+
+// Lazy load the main page for better performance
+const HomePage = React.lazy(() => import('./app/page'));
 
 // Memoized components for better performance (currently unused but kept for future use)
 // const UnifiedContentPromotion = memo(() => (
@@ -52,8 +53,17 @@ import PerformanceMonitor from './app/components/PerformanceMonitor';
 //     </div>
 //   </div>
 // ));
-export default function App() {
+// Loading fallback component
+const LoadingFallback = memo(() => (
+  <div className="min-h-screen flex items-center justify-center bg-gray-50">
+    <div className="text-center">
+      <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-indigo-600 mx-auto mb-4"></div>
+      <p className="text-gray-600">Loading Zion Tech Group...</p>
+    </div>
+  </div>
+));
 
+const App = memo(() => {
   // Performance optimization: Preload critical resources
   React.useEffect(() => {
     if (typeof document !== 'undefined') {
@@ -120,13 +130,19 @@ export default function App() {
     <ErrorBoundary>
       <HelmetProvider>
         <BrowserRouter>
-          <HomePage />
+          <Suspense fallback={<LoadingFallback />}>
+            <HomePage />
+          </Suspense>
           <PerformanceMonitor />
         </BrowserRouter>
       </HelmetProvider>
     </ErrorBoundary>
   );
-}
+});
+
+App.displayName = 'App';
+
+export default App;
 
 const container = document.getElementById('root');
 if (container) {
