@@ -1,8 +1,18 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   experimental: {
-    optimizeCss: true,
+    optimizeCss: false,
     optimizePackageImports: ['@mui/material', '@mui/icons-material'],
+  },
+  // Exclude disabled directories from build
+  pageExtensions: ['ts', 'tsx', 'js', 'jsx'],
+  webpack: (config, { isServer }) => {
+    // Exclude app_disabled directory from webpack processing
+    config.module.rules.push({
+      test: /app_disabled/,
+      loader: 'ignore-loader'
+    });
+    return config;
   },
   turbopack: {
     rules: {

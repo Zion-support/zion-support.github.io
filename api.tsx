@@ -1,5 +1,3 @@
-// import { ArrowRight, Code, ExternalLink, Shield, Zap } from 'lucide-react';
-=======
 import { ArrowRight, Code, ExternalLink, Shield, Zap, Atom } from 'lucide-react';
 import React from 'react';
 import { Link } from 'react-router-dom';
@@ -93,6 +91,13 @@ const Api: React.FC = () => {
               <div className='w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4'>
                 <Zap className='w-8 h-8 text-purple-600' />
               </div>
+              <h3 className='text-xl font-semibold text-gray-900 mb-2'>
+                Fast & Scalable
+              </h3>
+              <p className='text-gray-600'>
+                High-performance APIs designed to handle millions of requests
+                with sub-millisecond response times.
+              </p>
             </div>
           </div>
         </div>
@@ -160,31 +165,32 @@ const Api: React.FC = () => {
           </div>
         </div>
 
-      <div className='py-16 bg-white'>
-        <div className='container mx-auto px-4'>
-          <div className='max-w-3xl mx-auto text-center'>
-            <h2 className='text-3xl font-bold text-gray-900 mb-6'>
-              Getting Started
-            </h2>
-            <p className='text-lg text-gray-600 mb-8'>
-              Ready to integrate with our APIs? Get your API key and start
-              building amazing applications.
-            </p>
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-              <Link
-                to='/contact'
-                className='bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-flex items-center'
-              >
-                Get API Key
-                <ArrowRight className='ml-2 w-5 h-5' />
-              </Link>
-              <a
-                href='https://docs?.ziontechgroup.com'
-                className='border border-gray-300 text-gray-700 px-8 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors inline-flex items-center'
-              >
-                View Full Docs
-                <ExternalLink className='ml-2 w-5 h-5' />
-              </a>
+        <div className='py-16 bg-white'>
+          <div className='container mx-auto px-4'>
+            <div className='max-w-3xl mx-auto text-center'>
+              <h2 className='text-3xl font-bold text-gray-900 mb-6'>
+                Getting Started
+              </h2>
+              <p className='text-lg text-gray-600 mb-8'>
+                Ready to integrate with our APIs? Get your API key and start
+                building amazing applications.
+              </p>
+              <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+                <Link
+                  to='/contact'
+                  className='bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-flex items-center'
+                >
+                  Get API Key
+                  <ArrowRight className='ml-2 w-5 h-5' />
+                </Link>
+                <a
+                  href='https://docs.ziontechgroup.com'
+                  className='border border-gray-300 text-gray-700 px-8 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors inline-flex items-center'
+                >
+                  View Full Docs
+                  <ExternalLink className='ml-2 w-5 h-5' />
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -193,4 +199,4 @@ const Api: React.FC = () => {
   );
 };
 
-export default API;
+export default Api;
