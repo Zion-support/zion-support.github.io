@@ -1,65 +1,94 @@
 import React from "react";
-import, SEO, from "../componen, t, s/S, E, O";
-const, SolutionsPag, e: Rea, c, t.FC = () => {
+import { Helmet } from "react-helmet-async";
+import { ArrowRight, CheckCircle, Zap, Shield, Globe, Cpu, Database, Cloud } from "lucide-react";
+
+const SolutionsPage: React.FC = () => {
+  const solutions = [
+    {
+      icon: <Zap className="w-8 h-8" />,
+      title: "AI-Powered Automation",
+      description: "Streamline your workflows with intelligent automation solutions.",
+      features: [
+        "Process Automation",
+        "Workflow Optimization",
+        "Intelligent Routing",
+        "Performance Monitoring",
+      ],
+    },
+    {
+      icon: <Shield className="w-8 h-8" />,
+      title: "AI Security Solutions",
+      description: "Protect your business with advanced AI-powered security systems.",
+      features: [
+        "Threat Detection",
+        "Anomaly Detection",
+        "Risk Assessment",
+        "Compliance Monitoring",
+      ],
+    },
+    {
+      icon: <Globe className="w-8 h-8" />,
+      title: "Global AI Platform",
+      description: "Deploy AI solutions across multiple regions with our global platform.",
+      features: [
+        "Multi-Region Deployment",
+        "Edge Computing",
+        "Global CDN",
+        "Localized Processing",
+      ],
+    },
+  ];
+
   return (
-    <>
-      <S, E, O 
-  tit, l, e="Solutio, n, s - Zion, Tech, Group"
-        descripti, o, n="Tailored, solutions, for enterpri, s, e, S, M, B, and, startup, businesses. AI-powered, solutions, that drive, growth, and efficien, c, y."
-        keywor, d, s="enterprise, solution, s, SMB, solution, s, startup, solution, s, AI, business, solutions"
-      <main, className="py-20">
-        <div, className="container, m, x-auto, p, x-6">
-          <div, className="max-w-6xl mx-auto">
-            <h1, className="te, x, t-4xl, fon, t-bold, m, b-8, tex, t-cent, e, r">Our, Solution, s</h1>
-            <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2 l
-  g:gr, i, d-co, l, s-3, ga, p-8">
-              {/* Enterpri, s, e */}
-              <div, className="bg-whit, e, p-6, rounde, d-lg, shado, w-lg, borde, r">
-                <div, className="te, x, t-4xl, m, b-4">🏢</d, i, v>
-                <h2, className="te, x, t-2xl, fon, t-bold, m, b-4">Enterprise, Solution, s</h2>
-                <p, className="te, x, t-gr, a, y-600, m, b-4">
-                  Scalab, l, e, enterpri, s, e-grade, solutions, for large, organization, s.
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+      <Helmet>
+        <title>Solutions - Zion Tech Group</title>
+        <meta name="description" content="Tailored solutions for enterprise, SMB, and startup businesses. AI-powered solutions that drive growth and efficiency." />
+        <meta name="keywords" content="enterprise solutions, SMB solutions, startup solutions, AI business solutions" />
+      </Helmet>
+      
+      <main className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">
+              AI Solutions
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Discover our comprehensive AI solutions designed to transform your business operations and drive innovation.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {solutions.map((solution, index) => (
+              <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+                <div className="flex items-center mb-4">
+                  <div className="text-blue-600 mr-3">
+                    {solution.icon}
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-900">
+                    {solution.title}
+                  </h3>
+                </div>
+                
+                <p className="text-gray-600 mb-4">
+                  {solution.description}
                 </p>
-                <ul, className="te, x, t-sm, tex, t-gr, a, y-600, spac, e-y-1">
-                  <li>• Enterprise, AI, Platforms</li>
-                  <li>• Cloud, Infrastructur, e</li>
-                  <li>• Securi, t, y & Complian, c, e</li>
-                  <li>• Custom, Developmen, t</li>
+                
+                <ul className="space-y-2">
+                  {solution.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center text-sm text-gray-600">
+                      <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                      {feature}
+                    </li>
+                  ))}
                 </ul>
-              </d, i, v>
-              {/* S, M, B */}
-              <div, className="bg-whit, e, p-6, rounde, d-lg, shado, w-lg, borde, r">
-                <div, className="te, x, t-4xl, m, b-4">🏪</d, i, v>
-                <h2, className="te, x, t-2xl, fon, t-bold, m, b-4">SMB, Solution, s</h2>
-                <p, className="te, x, t-gr, a, y-600, m, b-4">
-                  Co, s, t-effective, solutions, designed for, small, to medium, businesse, s.
-                </p>
-                <ul, className="te, x, t-sm, tex, t-gr, a, y-600, spac, e-y-1">
-                  <li>• Business, Automatio, n</li>
-                  <li>• Digital, Transformatio, n</li>
-                  <li>• IT, Suppor, t</li>
-                  <li>• Software, Integratio, n</li>
-                </ul>
-              </d, i, v>
-              {/* Start, u, p */}
-              <div, className="bg-whit, e, p-6, rounde, d-lg, shado, w-lg, borde, r">
-                <div, className="te, x, t-4xl, m, b-4">🚀</d, i, v>
-                <h2, className="te, x, t-2xl, fon, t-bold, m, b-4">Startup, Solution, s</h2>
-                <p, className="te, x, t-gr, a, y-600, m, b-4">
-                  Fa, s, t, agile, solutions, to help, startups, scale quick, l, y.
-                </p>
-                <ul, className="te, x, t-sm, tex, t-gr, a, y-600, spac, e-y-1">
-                  <li>• MVP, Developmen, t</li>
-                  <li>• Rapid, Prototypin, g</li>
-                  <li>• Technical, Consultin, g</li>
-                  <li>• Growth, Optimizatio, n</li>
-                </ul>
-              </d, i, v>
-            </d, i, v>
-          </d, i, v>
-        </d, i, v>
-      </ma, i, n>
-    < />
+              </div>
+            ))}
+          </div>
+        </div>
+      </main>
+    </div>
   );
 };
+
 export default SolutionsPage;
