@@ -39,7 +39,6 @@ interface NavigatorWithConnection extends Navigator {
   webkitConnection?: NetworkConnection;
 }
 
->>>>>>> e2aec618376f3db9bd60312768ea5d9abc7086c8
 interface SystemMetrics {
   performance: {
     score: number;
@@ -96,9 +95,9 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
   // Update metrics
   const updateMetrics = useCallback(() => {
     try {
-      // Get basic performance metrics
-      const navigationTiming = performance.timing;
-      const loadTime = navigationTiming.loadEventEnd - navigationTiming.navigationStart;
+      // Get collected performance metrics
+      const performanceMetrics = collectPerformanceMetrics();
+      const performanceScore = calculatePerformanceScore();
       
       const errorStats = errorHandler.getErrorStatistics();
 
