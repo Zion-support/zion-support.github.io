@@ -4,28 +4,8 @@
  */
 
 import React, { useState, useEffect, useCallback } from 'react';
+import { collectPerformanceMetrics } from '../utils/performanceOptimizer';
 import { errorHandler } from '../utils/enhancedErrorHandler';
-
-// Define interface for performance metrics
-interface PerformanceMetrics {
-  loadTime: number;
-  firstContentfulPaint: number;
-}
-
-// Helper function to collect performance metrics
-const collectPerformanceMetrics = (): PerformanceMetrics | null => {
-  if (typeof window === 'undefined' || !('performance' in window)) return null;
-  
-  const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-  const paint = performance.getEntriesByType('paint');
-  
-  if (!navigation) return null;
-  
-  return {
-    loadTime: navigation.loadEventEnd - navigation.fetchStart,
-    firstContentfulPaint: paint.find((entry) => entry.name === 'first-contentful-paint')?.startTime || 0,
-  };
-};
 
 // Helper functions
 const calculatePerformanceScore = () => {
@@ -118,6 +98,8 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
       // Get basic performance metrics
       const performanceMetrics = collectPerformanceMetrics();
       const performanceScore = calculatePerformanceScore();
+      const navigationTiming = performance.timing;
+      const loadTime = navigationTiming.loadEventEnd - navigationTiming.navigationStart;
       
       const errorStats = errorHandler.getErrorStatistics();
 
@@ -130,7 +112,7 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
       const newMetrics: SystemMetrics = {
         performance: {
           score: performanceScore,
-          loadTime: performanceMetrics?.loadTime || 0,
+          loadTime: performanceMetrics?.loadTime || loadTime || 0,
           firstContentfulPaint: performanceMetrics?.firstContentfulPaint || 0,
           largestContentfulPaint: 0, // Not available in current metrics
           firstInputDelay: 0, // Not available in current metrics

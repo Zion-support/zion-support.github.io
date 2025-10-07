@@ -183,6 +183,101 @@ export const optimizeScrollPerformance = () => {
     }
   };
 
+  // Track Core Web Vitals
+  const trackCLS = () => {
+    let clsValue = 0;
+    const clsEntries: PerformanceEntry[] = [];
+
+    interface LayoutShiftEntry extends PerformanceEntry {
+      hadRecentInput?: boolean;
+      value: number;
+    }
+
+    const observer = new PerformanceObserver((list) => {
+      for (const entry of list.getEntries()) {
+        const layoutEntry = entry as LayoutShiftEntry;
+        if (!layoutEntry.hadRecentInput) {
+          clsEntries.push(entry);
+          clsValue += layoutEntry.value;
+        }
+      }
+    });
+
+    observer.observe({ entryTypes: ['layout-shift'] });
+
+    return () => {
+      observer.disconnect();
+      return clsValue;
+    };
+  };
+
+  const trackLCP = () => {
+    let lcpValue = 0;
+
+    const observer = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      const lastEntry = entries[entries.length - 1];
+      lcpValue = lastEntry.startTime;
+      console.log('[Web Vitals] LCP:', lcpValue);
+    });
+
+    observer.observe({ entryTypes: ['largest-contentful-paint'] });
+
+    return () => {
+      observer.disconnect();
+      return lcpValue;
+    };
+  };
+
+  const trackFID = () => {
+    interface FirstInputEntry extends PerformanceEntry {
+      processingStart: number;
+    }
+    
+    const observer = new PerformanceObserver((list) => {
+      for (const entry of list.getEntries()) {
+        const fidEntry = entry as FirstInputEntry;
+        const fid = fidEntry.processingStart - entry.startTime;
+        console.log('[Web Vitals] FID:', fid);
+      }
+    });
+
+    observer.observe({ entryTypes: ['first-input'] });
+
+    return () => observer.disconnect();
+  };
+
+  // Start tracking
+  const cleanupCLS = trackCLS();
+  const cleanupLCP = trackLCP();
+  const cleanupFID = trackFID();
+
+  return () => {
+    cleanupCLS();
+    cleanupLCP();
+    cleanupFID();
+  };
+};
+
+// Optimize scroll performance wrapper
+const optimizeScrollPerformanceWrapper = () => {
+  if (typeof window === 'undefined') return;
+
+  let ticking = false;
+  const updateScrollPosition = () => {
+    // Update scroll position indicators
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    document.documentElement.style.setProperty('--scroll-top', `${scrollTop}px`);
+    ticking = false;
+  };
+
+  const requestTick = () => {
+    if (!ticking) {
+      requestAnimationFrame(updateScrollPosition);
+      ticking = true;
+    }
+  };
+
   window.addEventListener('scroll', requestTick, { passive: true });
 };
 
@@ -193,8 +288,6 @@ export const getMemoryUsage = () => {
   }
 
   const memory = (performance as { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
-  if (!memory) return null;
-  
   return {
     used: memory.usedJSHeapSize,
     total: memory.totalJSHeapSize,

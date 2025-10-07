@@ -1,6 +1,6 @@
 /**
- * Advanced Test Runner
- * Comprehensive testing utilities for React applications
+ * Comprehensive Test Runner and Testing Utilities
+ * Provides advanced testing capabilities, mocking, and test automation
  */
 
 import React, { ReactElement, useCallback } from 'react';
@@ -255,6 +255,7 @@ export class TestRunner {
   ): Promise<{ passed: boolean; diff?: unknown }> {
     // This would typically use a tool like Percy or Chromatic
     // For now, we'll just return a placeholder
+    // eslint-disable-next-line no-console
     console.log(`Visual regression test for ${testName} would run here`);
     
     this.testResults.push({
