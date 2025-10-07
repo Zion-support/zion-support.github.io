@@ -1,16 +1,59 @@
-/* ESLint flat config */
+const { FlatCompat } = require('@eslint/eslintrc');
 const js = require('@eslint/js');
+const typescriptEslint = require('@typescript-eslint/eslint-plugin');
+const typescriptParser = require('@typescript-eslint/parser');
+const nextPlugin = require('@next/eslint-plugin-next');
+const reactPlugin = require('eslint-plugin-react');
+const reactHooksPlugin = require('eslint-plugin-react-hooks');
+const path = require('path');
+
+const compat = new FlatCompat({
+  baseDirectory: __dirname,
+  recommendedConfig: js.configs.recommended,
+});
 
 module.exports = [
+  ...compat.extends('next/core-web-vitals'),
+  {
+    files: ['**/*.{js,jsx,ts,tsx}'],
+    languageOptions: {
+      parser: typescriptParser,
+      parserOptions: {
+        ecmaVersion: 'latest',
+        sourceType: 'module',
+        ecmaFeatures: {
+          jsx: true,
+        },
+      },
+    },
+    plugins: {
+      '@typescript-eslint': typescriptEslint,
+      'react': reactPlugin,
+      'react-hooks': reactHooksPlugin,
+      'next': nextPlugin,
+    },
+    rules: {
+      'react/react-in-jsx-scope': 'off',
+      'react/prop-types': 'off',
+      '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
+      '@typescript-eslint/explicit-function-return-type': 'off',
+      '@typescript-eslint/explicit-module-boundary-types': 'off',
+      '@typescript-eslint/no-explicit-any': ['warn', { 
+        ignoreRestArgs: true,
+        fixToUnknown: false 
+      }],
+      'no-unused-vars': 'off',
+      'no-console': 'warn',
+      'no-undef': 'off',
+    },
+  },
   {
     ignores: [
-      'dist/**',
-      'node_modules/**',
-      'public/**',
-      'src/pages/**/*',
-      '**/src/pages/**',
-      '**/*.backup.*',
-      '**/*.disabled.*',
+      'node_modules/',
+      '.next/',
+      'out/',
+      'build/',
+      'dist/',
       '_app_disabled/**',
       '_conflicted_disabled/**',
       '_pages_api_disabled/**',
@@ -67,35 +110,7 @@ module.exports = [
       'app/page-optimized.tsx',
       'app/services-advertising/page.tsx',
       'fix_typescript_syntax_errors.jsx',
-      'fix_utils_files.ts'
+      'fix_utils_files.ts',
     ],
-  },
-  // JavaScript
-  {
-    files: ['src/**/*.{js,jsx}', 'app/**/*.{js,jsx}'],
-    ...js.configs.recommended,
-    languageOptions: {
-      ecmaVersion: 2022,
-      sourceType: 'module',
-    },
-  },
-  // TypeScript
-  {
-    files: ['src/**/*.{ts,tsx}', 'app/**/*.{ts,tsx}'],
-    languageOptions: {
-      ecmaVersion: 2022,
-      sourceType: 'module',
-      parser: require('@typescript-eslint/parser'),
-      parserOptions: {
-        ecmaFeatures: { jsx: true },
-        project: false,
-      },
-    },
-    plugins: {
-      '@typescript-eslint': require('@typescript-eslint/eslint-plugin'),
-    },
-    rules: {
-      '@typescript-eslint/no-explicit-any': 'warn',
-    },
   },
 ];
