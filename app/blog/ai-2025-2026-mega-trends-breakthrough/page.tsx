@@ -1,6 +1,4 @@
-import { Star } from 'lucide-react';
 import React from 'react';
-import Link from 'next/link';
 
 export const metadata = {
   title: 'AI 2025-2026 Mega Trends Breakthrough: Revolutionary Enterprise Transformation',
