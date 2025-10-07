@@ -4,7 +4,7 @@
  */
 
 import React, { useState, useEffect, useCallback } from 'react';
-import { getMemoryUsage, collectPerformanceMetrics } from '../utils/performanceEnhancer';
+import { collectPerformanceMetrics } from '../utils/performanceEnhancer';
 import { errorHandler } from '../utils/enhancedErrorHandler';
 
 // Helper functions
@@ -25,26 +25,19 @@ const calculatePerformanceScore = () => {
   return Math.max(0, score);
 };
 
-const getMemoryInfo = () => {
-  const memory = getMemoryUsage();
-  return memory ? {
-    used: memory.used,
-    total: memory.total,
-    limit: memory.limit,
-    percentage: memory.percentage,
-  } : null;
-};
+// Network connection interface
+interface NetworkConnection {
+  effectiveType?: string;
+  downlink?: number;
+  rtt?: number;
+  saveData?: boolean;
+}
 
-const getNetworkInfo = () => {
-  if (typeof navigator === 'undefined') return null;
-  
-  const connection = (navigator as any).connection || (navigator as any).mozConnection || (navigator as any).webkitConnection;
-  return connection ? {
-    effectiveType: connection.effectiveType,
-    downlink: connection.downlink,
-    rtt: connection.rtt,
-  } : null;
-};
+interface NavigatorWithConnection extends Navigator {
+  connection?: NetworkConnection;
+  mozConnection?: NetworkConnection;
+  webkitConnection?: NetworkConnection;
+}
 
 interface SystemMetrics {
   performance: {
@@ -188,11 +181,12 @@ console.error('Failed to update metrics:', error);
   // Get network information
   const getNetworkInfo = () => {
     if ('connection' in navigator) {
-      const connection = (navigator as Navigator & { connection: { effectiveType?: string; downlink?: number; rtt?: number; saveData?: boolean } }).connection;
+      const nav = navigator as NavigatorWithConnection;
+      const connection = nav.connection;
       return {
-        effectiveType: connection.effectiveType || 'unknown',
-        downlink: connection.downlink || 0,
-        rtt: connection.rtt || 0,
+        effectiveType: connection?.effectiveType || 'unknown',
+        downlink: connection?.downlink || 0,
+        rtt: connection?.rtt || 0,
         saveData: connection.saveData || false,
       };
     }
