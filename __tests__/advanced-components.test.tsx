@@ -134,13 +134,8 @@ describe('AdvancedSEOOptimizer', () => {
     expect(document.title).toBe('Test Title');
   });
 
-<<<<<<< HEAD
-  it('renders with structured data enabled', () => {
-    const { container } = render(
-=======
   it('renders structured data when enabled', () => {
     render(
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-15f2
       <HelmetProvider>
         <AdvancedSEOOptimizer
           config={mockSEOData}
@@ -149,14 +144,6 @@ describe('AdvancedSEOOptimizer', () => {
       </HelmetProvider>
     );
 
-<<<<<<< HEAD
-    // Component renders without errors
-    expect(container).toBeTruthy();
-  });
-
-  it('renders with Open Graph tags enabled', () => {
-    const { container } = render(
-=======
     // react-helmet-async modifies document.head, not the render container
     const structuredDataScript = document.head.querySelector(
       'script[type="application/ld+json"]'
@@ -166,20 +153,11 @@ describe('AdvancedSEOOptimizer', () => {
 
   it('renders Open Graph tags when enabled', () => {
     render(
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-15f2
       <HelmetProvider>
         <AdvancedSEOOptimizer config={mockSEOData} enableOpenGraph={true} />
       </HelmetProvider>
     );
 
-<<<<<<< HEAD
-    // Component renders without errors
-    expect(container).toBeTruthy();
-  });
-
-  it('renders with Twitter Card tags enabled', () => {
-    const { container } = render(
-=======
     // react-helmet-async modifies document.head, not the render container
     expect(
       document.head.querySelector('meta[property="og:title"]')
@@ -191,16 +169,11 @@ describe('AdvancedSEOOptimizer', () => {
 
   it('renders Twitter Card tags when enabled', () => {
     render(
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-15f2
       <HelmetProvider>
         <AdvancedSEOOptimizer config={mockSEOData} enableTwitterCards={true} />
       </HelmetProvider>
     );
 
-<<<<<<< HEAD
-    // Component renders without errors
-    expect(container).toBeTruthy();
-=======
     // react-helmet-async modifies document.head, not the render container
     expect(
       document.head.querySelector('meta[name="twitter:card"]')
@@ -208,7 +181,6 @@ describe('AdvancedSEOOptimizer', () => {
     expect(
       document.head.querySelector('meta[name="twitter:title"]')
     ).toBeTruthy();
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-15f2
   });
 });
 
