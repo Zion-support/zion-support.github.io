@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-import {
-  Github,
-  Linkedin,
-  Mail,
-  MapPin,
-  Phone,
-  Twitter,
-} from 'lucide-react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-ccfd
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -73,11 +62,6 @@ const EnhancedFooter: React.FC = () => {
                 href='https://github.com/ziontechgroup'
                 className='text-gray-400 hover:text-white transition-colors'
               >
-<<<<<<< HEAD
-                <Github className='w-5 h-5' />
-=======
-                <span className='text-lg'>🐙</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-ccfd
               </a>
             </div>
           </div>
