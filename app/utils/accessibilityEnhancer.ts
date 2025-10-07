@@ -151,13 +151,17 @@ export const addKeyboardNavigation = () => {
   const customElements = document.querySelectorAll('[data-keyboard-navigation]');
   customElements.forEach((element) => {
     element.setAttribute('tabindex', '0');
+<<<<<<< HEAD
     element.addEventListener('keydown', (e: Event) => {
+=======
+    element.addEventListener('keydown', ((e: Event) => {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-58c9
       const keyEvent = e as KeyboardEvent;
       if (keyEvent.key === 'Enter' || keyEvent.key === ' ') {
         keyEvent.preventDefault();
         (element as HTMLElement).click();
       }
-    });
+    }) as EventListener);
   });
 };
 
