@@ -15,6 +15,16 @@ interface ErrorBoundaryProps {
   enableRetry?: boolean;
 }
 
+interface ErrorReport {
+  errorId: string;
+  error: Error;
+  errorInfo: ErrorInfo;
+  timestamp: string;
+  userAgent: string;
+  url: string;
+  sessionId: string;
+}
+
 class AdvancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
   private retryCount = 0;
   private maxRetries = 3;
@@ -95,11 +105,7 @@ class AdvancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
     }
   };
 
-<<<<<<< HEAD
-  private sendErrorReport = async (errorReport: Record<string, unknown>) => {
-=======
-  private sendErrorReport = async (errorReport: { error: Error; errorInfo: React.ErrorInfo; timestamp: number; userAgent: string; url: string }) => {
->>>>>>> cursor/fix-errors-and-merge-to-main-241d
+  private sendErrorReport = async (errorReport: ErrorReport) => {
     try {
       // Send to your error reporting service
       await fetch('/api/errors', {
