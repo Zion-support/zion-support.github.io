@@ -20,7 +20,7 @@
     "noFallthroughCasesInSwitch": false,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-    "moduleResolution": "bundler",
+    "moduleResolution": "node",
     "baseUrl": ".",
     "paths": {
       "@/*": [

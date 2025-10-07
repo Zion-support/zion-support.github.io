@@ -8,7 +8,11 @@ describe('AppMinimal', () => {
     // Mock component for testing
     const MockAppMinimal = () => <div>Zion Tech Group</div>;
     render(<MockAppMinimal />);
+<<<<<<< HEAD
     const element = screen.getByText(/Zion Tech Group/i);
     expect(element).toBeDefined();
+=======
+    expect(screen.getByText(/Zion Tech Group/i)).toBeTruthy();
+>>>>>>> cursor/fix-errors-and-merge-to-main-4c6a
   });
 });
