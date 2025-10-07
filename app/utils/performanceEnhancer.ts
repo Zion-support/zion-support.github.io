@@ -184,78 +184,6 @@ export const optimizeScrollPerformance = () => {
   };
 
   window.addEventListener('scroll', requestTick, { passive: true });
-
-  // Track Core Web Vitals
-  const trackCLS = () => {
-    let clsValue = 0;
-    let clsEntries: PerformanceEntry[] = [];
-
-    interface LayoutShiftEntry extends PerformanceEntry {
-      hadRecentInput?: boolean;
-      value: number;
-    }
-
-    const observer = new PerformanceObserver((list) => {
-      for (const entry of list.getEntries()) {
-        const layoutEntry = entry as LayoutShiftEntry;
-        if (!layoutEntry.hadRecentInput) {
-          clsEntries.push(entry);
-          clsValue += layoutEntry.value;
-        }
-      }
-    });
-
-    observer.observe({ entryTypes: ['layout-shift'] });
-
-    return () => {
-      observer.disconnect();
-      return clsValue;
-    };
-  };
-
-  const trackLCP = () => {
-    let lcpValue = 0;
-
-    const observer = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
-      const lastEntry = entries[entries.length - 1];
-      lcpValue = lastEntry.startTime;
-      console.log('[Web Vitals] LCP:', lcpValue);
-    });
-
-    observer.observe({ entryTypes: ['largest-contentful-paint'] });
-
-    return () => observer.disconnect();
-  };
-
-  const trackFID = () => {
-    interface FirstInputEntry extends PerformanceEntry {
-      processingStart: number;
-    }
-    
-    const observer = new PerformanceObserver((list) => {
-      for (const entry of list.getEntries()) {
-        const fidEntry = entry as FirstInputEntry;
-        const fid = fidEntry.processingStart - entry.startTime;
-        console.log('[Web Vitals] FID:', fid);
-      }
-    });
-
-    observer.observe({ entryTypes: ['first-input'] });
-
-    return () => observer.disconnect();
-  };
-
-  // Start tracking
-  const cleanupCLS = trackCLS();
-  const cleanupLCP = trackLCP();
-  const cleanupFID = trackFID();
-
-  return () => {
-    cleanupCLS();
-    cleanupLCP();
-    cleanupFID();
-  };
 };
 
 // Memory usage monitoring
@@ -266,7 +194,7 @@ export const getMemoryUsage = () => {
 
   const memory = (performance as { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
   if (!memory) return null;
-
+  
   return {
     used: memory.usedJSHeapSize,
     total: memory.totalJSHeapSize,
@@ -281,8 +209,6 @@ export const collectPerformanceMetrics = () => {
 
   const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
   const paint = performance.getEntriesByType('paint');
-
-  if (!navigation) return null;
 
   return {
     navigation: {

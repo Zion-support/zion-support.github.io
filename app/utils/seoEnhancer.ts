@@ -27,22 +27,22 @@ export interface SEOConfig {
 }
 
 // Default SEO configuration
-const defaultSEOConfig: SEOConfig = {
-  title: 'Zion Tech Group - Advanced AI and IT Solutions',
+export const defaultSEOConfig: SEOConfig = {
+  title: 'Zion Holdings - AI-Powered Business Solutions',
   description: 'Leading provider of AI-powered business solutions',
-  keywords: ['AI', 'technology', 'business solutions'],
+  keywords: ['AI', 'Business Solutions', 'Technology'],
   canonicalUrl: 'https://zion.app',
   ogImage: '/og-image.jpg',
   ogType: 'website',
   twitterCard: 'summary_large_image',
-  twitterSite: '@ziontech',
-  twitterCreator: '@ziontech',
+  twitterSite: '@zionholdings',
+  twitterCreator: '@zionholdings',
   structuredData: {},
   robots: 'index, follow',
   language: 'en',
   locale: 'en_US',
-  siteName: 'Zion Tech Group',
-  author: 'Zion Tech Group',
+  siteName: 'Zion Holdings',
+  author: 'Zion Holdings',
 };
 
 // Generate meta tags
@@ -113,57 +113,7 @@ export const generateStructuredData = (data: {
     sameAs: data.sameAs || [],
   };
 
-  // Add type-specific properties
-  if (data.type === 'Organization') {
-    return {
-      ...baseStructure,
-      address: {
-        '@type': 'PostalAddress',
-        addressCountry: 'US',
-      },
-      contactPoint: {
-        '@type': 'ContactPoint',
-        telephone: '+1-555-0123',
-        contactType: 'customer service',
-      },
-    };
-  }
-
-  if (data.type === 'WebSite') {
-    return {
-      ...baseStructure,
-      potentialAction: {
-        '@type': 'SearchAction',
-        target: {
-          '@type': 'EntryPoint',
-          urlTemplate: `${data.url}/search?q={search_term_string}`,
-        },
-        'query-input': 'required name=search_term_string',
-      },
-    };
-  }
-
-  if (data.type === 'Article') {
-    return {
-      ...baseStructure,
-      author: {
-        '@type': 'Organization',
-        name: 'Zion Holdings',
-      },
-      publisher: {
-        '@type': 'Organization',
-        name: 'Zion Holdings',
-        logo: {
-          '@type': 'ImageObject',
-          url: data.logo || '/logo.jpg',
-        },
-      },
-      datePublished: new Date().toISOString(),
-      dateModified: new Date().toISOString(),
-    };
-  }
-
-  return baseStructure;
+  return { ...baseStructure, ...data };
 };
 
 // SEO Enhancer class
@@ -201,8 +151,6 @@ export class SEOEnhancer {
 
   // Update canonical URL
   updateCanonicalUrl(url: string) {
-    if (typeof document === 'undefined') return;
-
     let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
     if (!canonical) {
       canonical = document.createElement('link');
@@ -263,8 +211,6 @@ export class SEOEnhancer {
 
   // Update structured data
   updateStructuredData(data: Record<string, unknown>) {
-    if (typeof document === 'undefined') return;
-
     const script = document.createElement('script');
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify(data);
@@ -368,11 +314,83 @@ Sitemap: ${this.config.canonicalUrl}/sitemap.xml`;
 
     return {
       title: document.title,
-      description: document.querySelector('meta[name="description"]')?.getAttribute('content'),
-      keywords: document.querySelector('meta[name="keywords"]')?.getAttribute('content'),
-      canonical: document.querySelector('link[rel="canonical"]')?.getAttribute('href'),
+      description: document.querySelector('meta[name="description"]')?.getAttribute('content') || '',
+      canonical: document.querySelector('link[rel="canonical"]')?.getAttribute('href') || '',
     };
   }
+}
+
+// Generate structured data (helper function for compatibility)
+function generateStructuredDataHelper(data: {
+  type: 'Organization' | 'WebSite' | 'Article' | 'Service';
+  name: string;
+  description: string;
+  url?: string;
+  logo?: string;
+  sameAs?: string[];
+  [key: string]: unknown;
+}) {
+  const baseStructure = {
+    '@context': 'https://schema.org',
+    '@type': data.type,
+    name: data.name,
+    description: data.description,
+    url: data.url || '',
+    logo: data.logo || '',
+    sameAs: data.sameAs || [],
+  };
+
+  // Add type-specific properties
+  if (data.type === 'Organization') {
+    return {
+      ...baseStructure,
+      address: {
+        '@type': 'PostalAddress',
+        addressCountry: 'US',
+      },
+      contactPoint: {
+        '@type': 'ContactPoint',
+        telephone: '+1-555-0123',
+        contactType: 'customer service',
+      },
+    };
+  }
+
+  if (data.type === 'WebSite') {
+    return {
+      ...baseStructure,
+      potentialAction: {
+        '@type': 'SearchAction',
+        target: {
+          '@type': 'EntryPoint',
+          urlTemplate: `${data.url}/search?q={search_term_string}`,
+        },
+        'query-input': 'required name=search_term_string',
+      },
+    };
+  }
+
+  if (data.type === 'Article') {
+    return {
+      ...baseStructure,
+      author: {
+        '@type': 'Organization',
+        name: 'Zion Holdings',
+      },
+      publisher: {
+        '@type': 'Organization',
+        name: 'Zion Holdings',
+        logo: {
+          '@type': 'ImageObject',
+          url: data.logo || '/logo.jpg',
+        },
+      },
+      datePublished: new Date().toISOString(),
+      dateModified: new Date().toISOString(),
+    };
+  }
+
+  return { ...baseStructure, ...data };
 }
 
 // Generate sitemap data
