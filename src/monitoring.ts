@@ -73,7 +73,7 @@ function initializeMonitoring(): void {
     const metrics = performanceOptimizer.getMetrics();
     
     // Log performance data for monitoring
-    logger.info('Performance metrics:', { metrics, score });
+    logger.info('Performance metrics:', { score });
     
     // Track performance metrics
     analytics.track({
