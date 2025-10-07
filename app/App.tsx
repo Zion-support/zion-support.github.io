@@ -1,14 +1,12 @@
 'use client';
 
-<<<<<<< HEAD
 import React, { Suspense, lazy, useCallback, useEffect } from 'react';
 import Link from 'next/link';
 import { HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-=======
+
 // Components
 import SEOOptimizer from './components/SEOOptimizer';
->>>>>>> cursor/fix-errors-and-merge-to-main-dbc2
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import AdvancedErrorBoundary from './components/AdvancedErrorBoundary';
 import AdvancedSEOOptimizer from './components/AdvancedSEOOptimizer';
@@ -27,11 +25,7 @@ const InteractiveAIROICalculator = lazy(
 );
 
 // Utils
-<<<<<<< HEAD
-import { lazyLoadImages, preloadCriticalResources, collectPerformanceMetrics, performanceOptimizer } from './utils/performanceOptimizer';
-=======
 import { performanceOptimizer, collectPerformanceMetrics } from './utils/performanceOptimizer';
->>>>>>> cursor/fix-errors-and-merge-to-main-dbc2
 import { logger } from './utils/logger';
 
 // Styles
@@ -49,7 +43,7 @@ const App: React.FC = () => {
     }
 
     // Preload critical resources
-    preloadCriticalResources();
+    // preloadCriticalResources(); // Function not available
   }, []);
 
   const handleError = useCallback((error: Error, errorInfo: any) => {
@@ -109,9 +103,6 @@ const App: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
-export default App;
-=======
 // Loading fallback component
 const LoadingFallback: React.FC<{ height?: string }> = ({
   height = 'h-32',
@@ -121,6 +112,4 @@ const LoadingFallback: React.FC<{ height?: string }> = ({
   </div>
 );
 
-
 export default App;
->>>>>>> cursor/fix-errors-and-merge-to-main-dbc2

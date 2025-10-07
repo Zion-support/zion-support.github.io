@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-// import { Menu, X } from 'lucide-react';
-=======
 import { Menu, X } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-dbc2
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -40,11 +36,7 @@ const EnhancedNavigation: React.FC = () => {
             onClick={() => setIsOpen(!isOpen)}
             className='md:hidden text-gray-700'
           >
-<<<<<<< HEAD
-            {isOpen ? <span className='w-6 h-6'>✕</span> : <span className='w-6 h-6'>☰</span>}
-=======
             {isOpen ? <X className='w-6 h-6' /> : <Menu className='w-6 h-6' />}
->>>>>>> cursor/fix-errors-and-merge-to-main-dbc2
           </button>
         </div>
         {/* Mobile Navigation */}
@@ -67,8 +59,4 @@ const EnhancedNavigation: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 export default EnhancedNavigation;
-=======
-export default EnhancedNavigation;
->>>>>>> cursor/fix-errors-and-merge-to-main-dbc2

@@ -249,8 +249,6 @@ const NewestContent2025Banner = () => {
               <div className="text-gray-300">{stat.label}</div>
             </div>
           ))}
-<<<<<<< HEAD
-=======
           {/* Article 1 */}
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
             <div className="flex items-center gap-3 mb-4">
@@ -334,7 +332,6 @@ const NewestContent2025Banner = () => {
               Get Started Today
             </Link>
           </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-dbc2
         </div>
       </div>
     </section>

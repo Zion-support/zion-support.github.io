@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-// import * as LucideIcons from 'lucide-react';
-=======
 import {
   Github,
   Linkedin,
@@ -9,7 +6,6 @@ import {
   Phone,
   Twitter,
 } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-dbc2
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -62,37 +58,19 @@ const EnhancedFooter: React.FC = () => {
                 href='https://linkedin.com/company/ziontechgroup'
                 className='text-gray-400 hover:text-white transition-colors'
               >
-<<<<<<< HEAD
-                <span className='w-5 h-5'>💼</span>
-=======
                 <Linkedin className='w-5 h-5' />
->>>>>>> cursor/fix-errors-and-merge-to-main-dbc2
               </a>
               <a
                 href='https://twitter.com/ziontechgroup'
                 className='text-gray-400 hover:text-white transition-colors'
               >
-<<<<<<< HEAD
-                <span className='w-5 h-5'>🐦</span>
-=======
                 <Twitter className='w-5 h-5' />
->>>>>>> cursor/fix-errors-and-merge-to-main-dbc2
               </a>
               <a
                 href='https://github.com/ziontechgroup'
                 className='text-gray-400 hover:text-white transition-colors'
               >
-<<<<<<< HEAD
-                <span className='w-5 h-5'>🐙</span>
-              </a>
-              <a
-                href='https://facebook.com/ziontechgroup'
-                className='text-gray-400 hover:text-white transition-colors'
-              >
-                <span className='w-5 h-5'>📘</span>
-=======
                 <Github className='w-5 h-5' />
->>>>>>> cursor/fix-errors-and-merge-to-main-dbc2
               </a>
             </div>
           </div>
@@ -142,33 +120,21 @@ const EnhancedFooter: React.FC = () => {
         <div className='border-t border-gray-700 mt-8 pt-8'>
           <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
             <div className='flex items-center space-x-3'>
-<<<<<<< HEAD
-              <span className='w-5 h-5 text-blue-400'>📧</span>
-=======
               <Mail className='w-5 h-5 text-blue-400' />
->>>>>>> cursor/fix-errors-and-merge-to-main-dbc2
               <div>
                 <p className='text-sm text-gray-400'>Email</p>
                 <p className='text-white'>info@ziontechgroup.com</p>
               </div>
             </div>
             <div className='flex items-center space-x-3'>
-<<<<<<< HEAD
-              <span className='w-5 h-5 text-blue-400'>📞</span>
-=======
               <Phone className='w-5 h-5 text-blue-400' />
->>>>>>> cursor/fix-errors-and-merge-to-main-dbc2
               <div>
                 <p className='text-sm text-gray-400'>Phone</p>
                 <p className='text-white'>+1 (555) 123-4567</p>
               </div>
             </div>
             <div className='flex items-center space-x-3'>
-<<<<<<< HEAD
-              <span className='w-5 h-5 text-blue-400'>📍</span>
-=======
               <MapPin className='w-5 h-5 text-blue-400' />
->>>>>>> cursor/fix-errors-and-merge-to-main-dbc2
               <div>
                 <p className='text-sm text-gray-400'>Address</p>
                 <p className='text-white'>123 Tech Street, Innovation City</p>
