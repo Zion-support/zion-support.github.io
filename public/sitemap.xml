@@ -2,6 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://zion.app/</loc>
+<<<<<<< HEAD
     <lastmod>2025-01-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
@@ -11,6 +12,11 @@
     <lastmod>2025-01-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+=======
+    <lastmod>2025-10-05T11:38:14.835Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1</priority>
+>>>>>>> cursor/fix-errors-and-merge-to-main-e42d
   </url>
   <url>
     <loc>https://zion.app/team</loc>
@@ -31,9 +37,28 @@
     <priority>0.3</priority>
   </url>
   <url>
+<<<<<<< HEAD
     <loc>https://zion.app/terms</loc>
     <lastmod>2025-01-01</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
+=======
+    <loc>https://zion.app/services/ai-powered-crm</loc>
+    <lastmod>2025-10-05T11:38:14.835Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://zion.app/services/smart-invoice-generator</loc>
+    <lastmod>2025-10-05T11:38:14.835Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://zion.app/services/ai-meeting-assistant</loc>
+    <lastmod>2025-10-05T11:38:14.835Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1</priority>
+>>>>>>> cursor/fix-errors-and-merge-to-main-e42d
   </url>
 </urlset>
