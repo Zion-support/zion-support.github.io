@@ -201,7 +201,7 @@ export class ComprehensiveOptimizer {
 
     // Set Open Graph tags
     if (this.config.seo.enableOpenGraph) {
-      const ogData: any = {
+      const ogData: { title: string; description: string; url: string; image?: string } = {
         title: pageData.title,
         description: pageData.description,
         url: pageData.url,
@@ -214,7 +214,7 @@ export class ComprehensiveOptimizer {
 
     // Set Twitter Card tags
     if (this.config.seo.enableTwitterCards) {
-      const twitterData: any = {
+      const twitterData: { title: string; description: string; image?: string } = {
         title: pageData.title,
         description: pageData.description,
       };
@@ -238,9 +238,9 @@ export class ComprehensiveOptimizer {
    * Run comprehensive audit
    */
   public async runAudit(): Promise<{
-    accessibility: any;
-    performance: any;
-    seo: any;
+    accessibility: Record<string, unknown>;
+    performance: Record<string, unknown>;
+    seo: Record<string, unknown>;
   }> {
     const results = {
       accessibility: {},

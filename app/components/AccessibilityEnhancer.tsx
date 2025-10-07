@@ -7,7 +7,7 @@ interface AccessibilityEnhancerProps {
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
   useEffect(() => {
     // Add keyboard navigation improvements
-    const handleKeyDown = (event: KeyboardEvent) => {
+    const handleSkipToMain = (event: KeyboardEvent) => {
       // Skip to main content
       if (event.key === 'Tab' && event.shiftKey && event.target === document.body) {
         const skipLink = document.querySelector('[data-skip-to-main]') as HTMLElement;
@@ -18,24 +18,26 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     };
 
     // Add focus management
-    const handleFocusIn = (event: FocusEvent) => {
+    const handleKeyDown = (event: KeyboardEvent) => {
       const target = event.target as HTMLElement;
       if (target && target.closest('[data-focus-trap]')) {
-        // Ensure focus stays within focus trap
-        const focusableElements = target.closest('[data-focus-trap]')?.querySelectorAll(
-          'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-        );
-        
-        if (focusableElements && focusableElements.length > 0) {
-          const firstElement = focusableElements[0] as HTMLElement;
-          const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
+        // Handle Tab key for focus trap
+        if (event.key === 'Tab') {
+          const focusableElements = target.closest('[data-focus-trap]')?.querySelectorAll(
+            'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+          );
           
-          if (event.target === lastElement && (event as any).shiftKey) {
-            firstElement.focus();
-            event.preventDefault();
-          } else if (event.target === firstElement && !(event as any).shiftKey) {
-            lastElement.focus();
-            event.preventDefault();
+          if (focusableElements && focusableElements.length > 0) {
+            const firstElement = focusableElements[0] as HTMLElement;
+            const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
+            
+            if (event.target === lastElement && !event.shiftKey) {
+              firstElement.focus();
+              event.preventDefault();
+            } else if (event.target === firstElement && event.shiftKey) {
+              lastElement.focus();
+              event.preventDefault();
+            }
           }
         }
       }
@@ -81,8 +83,8 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     checkReducedMotion();
 
     // Add event listeners
+    document.addEventListener('keydown', handleSkipToMain);
     document.addEventListener('keydown', handleKeyDown);
-    document.addEventListener('focusin', handleFocusIn);
 
     // Monitor for dynamic content changes
     const observer = new MutationObserver((mutations) => {
@@ -100,8 +102,8 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     });
 
     return () => {
+      document.removeEventListener('keydown', handleSkipToMain);
       document.removeEventListener('keydown', handleKeyDown);
-      document.removeEventListener('focusin', handleFocusIn);
       observer.disconnect();
     };
   }, []);

@@ -101,7 +101,7 @@ export class PerformanceOptimizer {
    */
   private getMemoryUsage(): number | undefined {
     if ('memory' in performance) {
-      return (performance as any).memory.usedJSHeapSize;
+      return (performance as Performance & { memory: { usedJSHeapSize: number } }).memory.usedJSHeapSize;
     }
     return undefined;
   }
@@ -189,7 +189,7 @@ export class PerformanceOptimizer {
   /**
    * Optimize component with memoization
    */
-  optimizeWithMemo<T extends React.ComponentType<any>>(Component: T): T {
+  optimizeWithMemo<T extends React.ComponentType<Record<string, unknown>>>(Component: T): T {
     if (!this.config.enableMemoization) return Component;
     
     return React.memo(Component) as unknown as T;
@@ -198,7 +198,7 @@ export class PerformanceOptimizer {
   /**
    * Create lazy loaded component
    */
-  createLazyComponent<T extends React.ComponentType<any>>(
+  createLazyComponent<T extends React.ComponentType<Record<string, unknown>>>(
     importFunc: () => Promise<{ default: T }>
   ): React.LazyExoticComponent<T> {
     if (!this.config.enableLazyLoading) {
@@ -348,7 +348,7 @@ export class PerformanceOptimizer {
   /**
    * Measure page load performance
    */
-  measurePageLoad(): any {
+  measurePageLoad(): { domContentLoaded: number; loadComplete: number; totalTime: number } | null {
     if (typeof window === 'undefined' || !('performance' in window)) {
       return null;
     }
@@ -366,14 +366,14 @@ export class PerformanceOptimizer {
   /**
    * Report Web Vitals
    */
-  reportWebVitals(metrics: any): void {
+  reportWebVitals(metrics: { totalTime?: number; [key: string]: unknown }): void {
     if (typeof window === 'undefined') return;
     
     console.log('Web Vitals:', metrics);
     
     // Send to analytics if available
     if ('gtag' in window) {
-      (window as any).gtag('event', 'web_vitals', {
+      (window as Window & { gtag?: (...args: unknown[]) => void }).gtag?.('event', 'web_vitals', {
         event_category: 'Performance',
         event_label: 'Page Load',
         value: Math.round(metrics.totalTime || 0)
@@ -394,13 +394,13 @@ export const withPerformanceTracking = <P extends object>(
   const optimizer = createPerformanceOptimizer();
   const name = componentName || Component.displayName || Component.name || 'Unknown';
   
-  const WrappedComponent = forwardRef<any, P>((props, ref) => {
+  const WrappedComponent = forwardRef<unknown, P>((props, ref) => {
     React.useEffect(() => {
       optimizer.startRender(name);
       return () => optimizer.endRender(name);
     });
     
-    return React.createElement(Component, { ...props, ref } as any);
+    return React.createElement(Component, { ...props, ref } as P & { ref?: React.Ref<unknown> });
   });
   
   WrappedComponent.displayName = `withPerformanceTracking(${name})`;
