@@ -138,7 +138,7 @@ export default function HomePage() {
               Ready to Transform Your Business?
             </h2>
             <p className='text-xl mb-8 text-blue-100'>
-              Let's discuss how our AI solutions can drive your success.
+              Let&apos;s discuss how our AI solutions can drive your success.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <Link
