@@ -2,13 +2,6 @@
  * Comprehensive optimization utilities that integrate accessibility, performance, and SEO
  */
 import {
-  focusManagement,
-  ariaUtils,
-  keyboardNavigation,
-  colorContrast,
-  screenReader,
-  formAccessibility,
-  motionAccessibility,
   initAccessibility
 } from './accessibilityUtils';
 
@@ -16,27 +9,19 @@ import {
   getMemoryUsage,
   collectPerformanceMetrics,
   performanceMonitor,
-  debounce,
-  throttle,
   lazyLoadImages,
   preloadCriticalResources,
   optimizeScrollPerformance
 } from './performanceUtils';
 
 import {
-  setMetaTags,
   setOpenGraphTags,
   setTwitterCardTags,
   setStructuredData,
-  generateSitemap,
-  optimizeImages,
   setCanonicalUrl,
   setPageTitle,
   setMetaDescription,
   setKeywords,
-  setRobotsMeta,
-  setLanguage,
-  setViewport,
   schemaGenerators,
   seoAudit
 } from './seoUtils';

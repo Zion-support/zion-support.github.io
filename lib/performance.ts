@@ -22,26 +22,7 @@ interface PerformanceMetric {
 }
 
 // Extended Performance interface for memory API
-interface PerformanceMemory {
-  usedJSHeapSize: number;
-  totalJSHeapSize: number;
-  jsHeapSizeLimit: number;
-}
-
-interface PerformanceWithMemory extends Performance {
-  memory?: PerformanceMemory;
-}
-
-// Network connection interface
-interface NetworkConnection {
-  effectiveType?: string;
-  type?: string;
-  saveData?: boolean;
-}
-
-interface NavigatorWithConnection extends Navigator {
-  connection?: NetworkConnection;
-}
+// Performance and network interfaces removed as they are not used
 
 interface PerformanceReport {
   metrics: PerformanceMetric[];

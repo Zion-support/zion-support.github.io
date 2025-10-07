@@ -26,7 +26,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ children }) => 
 
       try {
         observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
-      } catch (e) {
+      } catch {
         // Fallback for browsers that don't support all entry types
         console.log('Performance monitoring partially available');
       }

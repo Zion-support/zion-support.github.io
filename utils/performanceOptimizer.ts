@@ -2,7 +2,7 @@
  * Performance Optimizer Utilities
  */
 
-import React, { forwardRef, memo } from 'react';
+import React, { forwardRef } from 'react';
 import type { ComponentType } from 'react';
 
 interface PerformanceMetrics {
