@@ -1,3 +1,5 @@
+'use client';
+
 /**
  * System Monitor Component
  * Real-time monitoring dashboard for performance, errors, and system health

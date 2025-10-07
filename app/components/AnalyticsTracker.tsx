@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useEffect } from 'react';
 
 // Extend Window interface for Google Analytics

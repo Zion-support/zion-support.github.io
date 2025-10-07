@@ -171,7 +171,15 @@ export const collectPerformanceMetrics = async (): Promise<{
     }
   }
 
-  return metrics;
+  return metrics as {
+    loadTime: number;
+    domContentLoaded: number;
+    firstPaint: number;
+    firstContentfulPaint: number;
+    largestContentfulPaint: number;
+    firstInputDelay: number;
+    cumulativeLayoutShift: number;
+  };
 };
 
 // Performance monitor class
