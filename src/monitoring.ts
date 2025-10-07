@@ -1,8 +1,8 @@
 // Performance monitoring setup
-import { analytics } from '../app/utils/analytics';
-import { ErrorHandler } from '../app/utils/errorHandler';
+import { analytics } from './utils/analytics';
+import { ErrorHandler } from './utils/errorHandler';
 import { performanceOptimizer } from '../app/utils/performanceOptimizer';
-import { logger } from '../src/utils/logger';
+import { logger } from './utils/logger';
 
 // Create error handler instance
 const errorHandler = new ErrorHandler();
