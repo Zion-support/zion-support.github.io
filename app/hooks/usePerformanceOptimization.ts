@@ -114,10 +114,13 @@ export const usePerformanceOptimization = () => {
     // Measure performance after page load
     const timer = setTimeout(() => {
       const metrics = measurePerformance();
-      if (metrics && process.env.NODE_ENV === 'production') {
-        // Send metrics to analytics
+      if (metrics) {
+        // Send metrics to analytics in production
+        if (process.env.NODE_ENV === 'production') {
+          // Track metrics in production
+        }
         // eslint-disable-next-line no-console
-        if (import.meta.env.DEV) { console.log('Performance Metrics:', metrics); }
+        if (process.env.NODE_ENV === 'development') { console.log('Performance Metrics:', metrics); }
       }
     }, 1000);
 

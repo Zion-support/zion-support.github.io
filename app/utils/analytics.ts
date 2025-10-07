@@ -94,7 +94,7 @@ class Analytics {
       // Fallback to console in development
       if (process.env.NODE_ENV === 'development') {
         // eslint-disable-next-line no-console
-        if (import.meta.env.DEV) { console.log('Analytics Event:', event); }
+        if (process.env.NODE_ENV === 'development') { console.log('Analytics Event:', event); }
       }
       return;
     }

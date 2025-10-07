@@ -327,7 +327,7 @@ export class TestRunner {
 
     try {
       // eslint-disable-next-line no-console
-      if (import.meta.env.DEV) { console.log('🚀 Starting test run...'); }
+      if (process.env.NODE_ENV === 'development') { console.log('🚀 Starting test run...'); }
 
       for (const suite of this.suites) {
         await this.runSuite(suite);
@@ -345,7 +345,7 @@ export class TestRunner {
    */
   private async runSuite(suite: TestSuite): Promise<void> {
     // eslint-disable-next-line no-console
-    if (import.meta.env.DEV) { console.log(`\n📁 Running suite: ${suite.name}`); }
+    if (process.env.NODE_ENV === 'development') { console.log(`\n📁 Running suite: ${suite.name}`); }
 
     // Run beforeAll hooks
     for (const hook of suite.beforeAll) {
@@ -404,7 +404,7 @@ export class TestRunner {
 
       if (this.config.verbose) {
         // eslint-disable-next-line no-console
-        if (import.meta.env.DEV) { console.log(`✅ ${testName} (${Date.now() - startTime}ms)`); }
+        if (process.env.NODE_ENV === 'development') { console.log(`✅ ${testName} (${Date.now() - startTime}ms)`); }
       }
     } catch (error) {
       this.results.push({
@@ -476,17 +476,17 @@ export class TestRunner {
     const skipped = this.results.filter(r => r.status === 'skipped').length;
 
     // eslint-disable-next-line no-console
-    if (import.meta.env.DEV) { console.log('\n📊 Test Results:'); }
+    if (process.env.NODE_ENV === 'development') { console.log('\n📊 Test Results:'); }
     // eslint-disable-next-line no-console
-    if (import.meta.env.DEV) { console.log(`Total: ${this.results.length}`); }
+    if (process.env.NODE_ENV === 'development') { console.log(`Total: ${this.results.length}`); }
     // eslint-disable-next-line no-console
-    if (import.meta.env.DEV) { console.log(`Passed: ${passed}`); }
+    if (process.env.NODE_ENV === 'development') { console.log(`Passed: ${passed}`); }
     // eslint-disable-next-line no-console
-    if (import.meta.env.DEV) { console.log(`Failed: ${failed}`); }
+    if (process.env.NODE_ENV === 'development') { console.log(`Failed: ${failed}`); }
     // eslint-disable-next-line no-console
-    if (import.meta.env.DEV) { console.log(`Skipped: ${skipped}`); }
+    if (process.env.NODE_ENV === 'development') { console.log(`Skipped: ${skipped}`); }
     // eslint-disable-next-line no-console
-    if (import.meta.env.DEV) { console.log(`Duration: ${duration}ms`); }
+    if (process.env.NODE_ENV === 'development') { console.log(`Duration: ${duration}ms`); }
 
     if (this.config.reporter === 'json') {
       this.generateJsonReport();
@@ -513,9 +513,9 @@ export class TestRunner {
     };
 
     // eslint-disable-next-line no-console
-    if (import.meta.env.DEV) { console.log('\n📄 JSON Report:'); }
+    if (process.env.NODE_ENV === 'development') { console.log('\n📄 JSON Report:'); }
     // eslint-disable-next-line no-console
-    if (import.meta.env.DEV) { console.log(JSON.stringify(report, null, 2)); }
+    if (process.env.NODE_ENV === 'development') { console.log(JSON.stringify(report, null, 2)); }
   }
 
   /**
@@ -564,9 +564,9 @@ export class TestRunner {
 </html>`;
     
     // eslint-disable-next-line no-console
-    if (import.meta.env.DEV) { console.log('\n📄 HTML Report generated'); }
+    if (process.env.NODE_ENV === 'development') { console.log('\n📄 HTML Report generated'); }
     // eslint-disable-next-line no-console
-    if (import.meta.env.DEV) { console.log(html); }
+    if (process.env.NODE_ENV === 'development') { console.log(html); }
   }
 
   // Accessibility test
@@ -685,9 +685,9 @@ export class TestRunner {
 </testsuites>`;
 
     // eslint-disable-next-line no-console
-    if (import.meta.env.DEV) { console.log('\n📄 JUnit Report:'); }
+    if (process.env.NODE_ENV === 'development') { console.log('\n📄 JUnit Report:'); }
     // eslint-disable-next-line no-console
-    if (import.meta.env.DEV) { console.log(xml); }
+    if (process.env.NODE_ENV === 'development') { console.log(xml); }
   }
 
   // Integration test
@@ -729,7 +729,7 @@ export class TestRunner {
     // This would typically use a tool like Percy or Chromatic
     // For now, we'll just return a placeholder
     // eslint-disable-next-line no-console
-    if (import.meta.env.DEV) { console.log(`Visual regression test for ${testName} would run here`); }
+    if (process.env.NODE_ENV === 'development') { console.log(`Visual regression test for ${testName} would run here`); }
     
     this.testResults.push({
       name: `Visual: ${testName}`,

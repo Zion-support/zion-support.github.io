@@ -208,8 +208,8 @@ export function sortBy<T>(
       const aVal = typeof key === 'function' ? key(a) : a[key];
       const bVal = typeof key === 'function' ? key(b) : b[key];
 
-      if (aVal < bVal) return order === 'asc' ? -1 : 1;
-      if (aVal > bVal) return order === 'asc' ? 1 : -1;
+      if ((aVal as any) < (bVal as any)) return order === 'asc' ? -1 : 1;
+      if ((aVal as any) > (bVal as any)) return order === 'asc' ? 1 : -1;
     }
     return 0;
   });
