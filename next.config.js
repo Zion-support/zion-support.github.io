@@ -2,8 +2,11 @@
 const nextConfig = {
   experimental: {
     optimizeCss: true,
-    optimizePackageImports: ['@mui/material', '@mui/icons-material'],
+    optimizePackageImports: ['@mui/material', '@mui/icons-material', 'lucide-react', 'framer-motion'],
+    webVitalsAttribution: ['CLS', 'LCP', 'FCP', 'FID', 'TTFB'],
   },
+  poweredByHeader: false,
+  compress: true,
   turbopack: {
     rules: {
       '*.svg': {
@@ -40,6 +43,14 @@ const nextConfig = {
           {
             key: 'Referrer-Policy',
             value: 'strict-origin-when-cross-origin',
+          },
+          {
+            key: 'Permissions-Policy',
+            value: 'camera=(), microphone=(), geolocation=()',
+          },
+          {
+            key: 'X-XSS-Protection',
+            value: '1; mode=block',
           },
         ],
       },
