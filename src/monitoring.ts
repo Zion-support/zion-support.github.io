@@ -28,18 +28,20 @@ function initializeMonitoring(): void {
     // Track errors globally
     window.addEventListener('error', (event) => {
       const error = event.error || new Error(event.message);
-      errorHandler.logError(error, {
-        errorId: `global_error_${Date.now()}`,
+      errorHandler.handleError(error, {
         componentStack: `${event.filename}:${event.lineno}:${event.colno}`,
+      }, {
+        errorId: `global_error_${Date.now()}`,
       });
     });
 
     // Track unhandled promise rejections
     window.addEventListener('unhandledrejection', (event) => {
       const error = new Error(`Unhandled Promise Rejection: ${event.reason}`);
-      errorHandler.logError(error, {
-        errorId: `unhandled_rejection_${Date.now()}`,
+      errorHandler.handleError(error, {
         componentStack: String(event.reason),
+      }, {
+        errorId: `unhandled_rejection_${Date.now()}`,
       });
     });
 
@@ -71,7 +73,7 @@ function initializeMonitoring(): void {
     const metrics = performanceOptimizer.getMetrics();
     
     // Log performance data for monitoring
-    logger.info('Performance metrics:', { score });
+    logger.info('Performance metrics:', { score, metrics });
     
     // Track performance metrics
     analytics.track({
