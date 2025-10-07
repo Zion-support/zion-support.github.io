@@ -121,7 +121,7 @@ class EnhancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
         url: window.location.href,
         sessionId: this.sessionId,
         retryCount,
-        userId: this.getUserId(),
+        userId: this.getUserId() || 'anonymous',
         buildVersion: process.env.REACT_APP_VERSION || 'unknown',
       };
 
