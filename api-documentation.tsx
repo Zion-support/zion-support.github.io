@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 const ApiDocumentation: React.FC = () => {
   return (
@@ -19,31 +19,31 @@ const ApiDocumentation: React.FC = () => {
               <div className="space-y-2 text-sm">
                 <div>
                   <code className="bg-gray-100 px-2 py-1 rounded">
-                    GET /content
+                    GET /api/content
                   </code>{' '}
                   - List all content
                 </div>
                 <div>
                   <code className="bg-gray-100 px-2 py-1 rounded">
-                    POST /content
+                    POST /api/content
                   </code>{' '}
                   - Create content
                 </div>
                 <div>
                   <code className="bg-gray-100 px-2 py-1 rounded">
-                    GET /content/{'{id}'}
+                    GET /api/content/{'{id}'}
                   </code>{' '}
                   - Get content by ID
                 </div>
                 <div>
                   <code className="bg-gray-100 px-2 py-1 rounded">
-                    PUT /content/{'{id}'}
+                    PUT /api/content/{'{id}'}
                   </code>{' '}
                   - Update content
                 </div>
                 <div>
                   <code className="bg-gray-100 px-2 py-1 rounded">
-                    DELETE /content/{'{id}'}
+                    DELETE /api/content/{'{id}'}
                   </code>{' '}
                   - Delete content
                 </div>
@@ -79,7 +79,7 @@ const baseUrl = 'https://api.ziontechgroup.com';
 
 const createContent = async () => {
   try {
-    const response = await axios.post(\`\${baseUrl}/content\`, {
+    const response = await axios.post(\`\${baseUrl}/api/content\`, {
       title: 'New Content',
       body: 'Content body here'
     }, {
@@ -98,7 +98,7 @@ const createContent = async () => {
 
         <div className="text-center">
           <Link
-            to="/contact"
+            href="/contact"
             className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
           >
             Contact Support

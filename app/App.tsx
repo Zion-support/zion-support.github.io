@@ -2,13 +2,16 @@
 
 import React, { Suspense, lazy, useCallback, useEffect } from 'react';
 import Link from 'next/link';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
-import SEOOptimizer from './components/SEOOptimizer';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+// import SEOOptimizer from './components/SEOOptimizer'; // Unused import
+import AccessibilityEnhancer from './components/AccessibilityEnhancer';
+import PerformanceDashboard from './components/PerformanceDashboard';
+import AdvancedPerformanceMonitor from './components/AdvancedPerformanceMonitor';
+import AdvancedErrorBoundary from './components/AdvancedErrorBoundary';
 import SEOEnhancer from './components/SEOEnhancer';
 import AdvancedSEOOptimizer from './components/AdvancedSEOOptimizer';
-import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-import AdvancedErrorBoundary from './components/AdvancedErrorBoundary';
+import LoadingSpinner from './components/LoadingSpinner';
 
 // Lazy load components for better performance
 const ContentShowcase = lazy(() => import('./components/ContentShowcase'));
@@ -20,7 +23,7 @@ const InteractiveAIROICalculator = lazy(
 );
 
 // Utils
-import { performanceOptimizer } from './utils/performanceOptimizer';
+import { lazyLoadImages, preloadCriticalResources, collectPerformanceMetrics, performanceOptimizer } from './utils/performanceOptimizer';
 import { logger } from './utils/logger';
 
 // Styles
@@ -32,8 +35,17 @@ const App: React.FC = () => {
     logger.lifecycle('initialized', 'App');
 
     // Initialize performance monitoring
+    lazyLoadImages();
+    preloadCriticalResources();
+    performanceOptimizer.init();
+    
+    // Initialize Web Vitals monitoring
     if (typeof window !== 'undefined' && 'performance' in window) {
+      const pageLoadMetrics = collectPerformanceMetrics();
       const metrics = performanceOptimizer.getMetrics();
+      if (pageLoadMetrics) {
+        console.log('Performance metrics collected:', pageLoadMetrics);
+      }
       if (metrics) {
         console.log('Performance metrics:', metrics);
       }
@@ -279,4 +291,4 @@ const HomePage: React.FC = () => {
   );
 };
 
-export default HomePage;
+export default App;

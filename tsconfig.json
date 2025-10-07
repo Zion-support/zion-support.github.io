@@ -61,8 +61,14 @@
   },
   "include": [
     "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
+    "app/**/*.ts",
+    "app/**/*.tsx",
+    "components/**/*.ts",
+    "components/**/*.tsx",
+    "api/**/*.ts",
+    "api/**/*.js",
+    "*.ts",
+    "*.tsx",
     ".next/types/**/*.ts"
   ],
   "exclude": [
@@ -72,8 +78,8 @@
     "dist",
     "_app_disabled/**/*",
     "_conflicted_disabled/**/*",
-    "_pages_disabled/**/*",
     "_pages_api_disabled/**/*",
+    "_pages_disabled/**/*",
     "admin-api-disabled/**/*",
     "api-disabled/**/*",
     "api.disabled/**/*",

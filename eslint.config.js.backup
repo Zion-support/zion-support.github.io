@@ -5,6 +5,7 @@ import tseslint from '@typescript-eslint/eslint-plugin';
 import tsParser from '@typescript-eslint/parser';
 import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
+import nextConfig from 'eslint-config-next';
 
 export default [
   //Global ignores - ignore everything except src, app directories and main files
