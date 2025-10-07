@@ -9,7 +9,7 @@ import {
   Tag,
 } from 'lucide-react';
 
-export const metadata = {
+const metadata = {
   title:
     'AI 2026 Implementation Roadmap: Complete Guide to Enterprise AI Transformation',
   description:
@@ -17,6 +17,8 @@ export const metadata = {
   keywords:
     'AI Implementation, Enterprise AI, Digital Transformation, AI Strategy, 2026 Roadmap, Implementation Guide',
 };
+
+export { metadata };
 
 export default function AI2026ImplementationRoadmap() {
   return (
