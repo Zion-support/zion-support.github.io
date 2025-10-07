@@ -1,4 +1,5 @@
 import { Component, ErrorInfo, ReactNode } from 'react';
+import { FileWarning } from 'lucide-react';
 
 interface Props {
   children: ReactNode;
