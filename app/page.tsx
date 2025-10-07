@@ -29,9 +29,8 @@ const HomePage: React.FC = () => {
         description="Leading provider of AI-powered enterprise solutions, automation, and digital transformation services. Transform your business with cutting-edge AI micro SaaS services and cloud automation."
         keywords={['AI solutions', 'enterprise AI', 'digital transformation', 'automation', 'cloud services', 'AI consulting', 'business intelligence', 'machine learning', 'artificial intelligence', 'enterprise software']}
       />
-      <AccessibilityEnhancer />
-
-      <div className='min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100'>
+      <AccessibilityEnhancer>
+        <div className='min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100'>
         <header className="bg-white shadow-sm sticky top-0 z-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex justify-between items-center py-6">
@@ -310,7 +309,8 @@ const HomePage: React.FC = () => {
             </div>
           </div>
         </footer>
-      </div>
+        </div>
+      </AccessibilityEnhancer>
     </>
   );
 };
