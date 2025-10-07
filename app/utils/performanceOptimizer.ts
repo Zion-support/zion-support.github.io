@@ -236,7 +236,7 @@ class PerformanceOptimizer {
       let clsValue = 0;
       const clsObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-      entries.forEach((entry: any) => {
+      entries.forEach((entry: PerformanceEntry & { hadRecentInput?: boolean; value?: number }) => {
         if (!entry.hadRecentInput) {
           clsValue += entry.value;
         }
