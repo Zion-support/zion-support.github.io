@@ -9,7 +9,6 @@ if (typeof window !== 'undefined') {
   analytics.trackPageView(window.location.pathname);
 
   // Initialize performance optimizer
-  performanceOptimizer.lazyLoadImages();
 
   // Monitor long tasks
   performanceOptimizer.monitorLongTasks((entries: PerformanceEntry[]) => {
