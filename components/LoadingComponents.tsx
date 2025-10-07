@@ -3,13 +3,8 @@ import React from 'react';
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg';
   className?: string;
-<<<<<<< HEAD
-  text?: string;
-  color?: 'blue' | 'gray' | 'white';
-=======
   color?: 'blue' | 'gray' | 'white';
   text?: string;
->>>>>>> cursor/fix-errors-and-merge-to-main-fc4f
 }
 
 export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({

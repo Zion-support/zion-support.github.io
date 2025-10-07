@@ -133,11 +133,7 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
   // Get memory information
   const getMemoryInfo = () => {
     if ('memory' in performance) {
-<<<<<<< HEAD
-      const memory = (performance as { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
-=======
       const memory = (performance as Performance & { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
->>>>>>> cursor/fix-errors-and-merge-to-main-fc4f
       const used = memory.usedJSHeapSize / 1024 / 1024; // MB
       const total = memory.totalJSHeapSize / 1024 / 1024; // MB
       const limit = memory.jsHeapSizeLimit / 1024 / 1024; // MB
@@ -152,11 +148,7 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
   // Get network information
   const getNetworkInfo = () => {
     if ('connection' in navigator) {
-<<<<<<< HEAD
-      const connection = (navigator as { connection: { effectiveType?: string; downlink?: number; rtt?: number; saveData?: boolean } }).connection;
-=======
       const connection = (navigator as Navigator & { connection: { effectiveType?: string; downlink?: number; rtt?: number } }).connection;
->>>>>>> cursor/fix-errors-and-merge-to-main-fc4f
       return {
         effectiveType: connection.effectiveType || 'unknown',
         downlink: connection.downlink || 0,
