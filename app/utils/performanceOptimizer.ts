@@ -1,246 +1,298 @@
 /**
- * Performance optimization utilities for the Zion Tech Group website
- * Provides tools for monitoring and optimizing application performance
+ * Performance Optimization Utilities
+ * Provides utilities for optimizing application performance
  */
 
-interface PerformanceMetrics {
-  loadTime: number;
-  renderTime: number;
-  memoryUsage: number;
-  bundleSize: number;
-  cacheHitRate: number;
+/**
+ * Debounce function to limit the rate of function calls
+ */
+export function debounce<T extends (...args: unknown[]) => unknown>(
+  func: T,
+  wait: number
+): (...args: Parameters<T>) => void {
+  let timeout: NodeJS.Timeout | null = null;
+
+  return function executedFunction(...args: Parameters<T>) {
+    const later = () => {
+      timeout = null;
+      func(...args);
+    };
+
+    if (timeout) {
+      clearTimeout(timeout);
+    }
+    timeout = setTimeout(later, wait);
+  };
 }
 
-interface OptimizationConfig {
-  enableLazyLoading: boolean;
-  enableCodeSplitting: boolean;
-  enableImageOptimization: boolean;
-  enableCaching: boolean;
-  enableCompression: boolean;
+/**
+ * Throttle function to ensure a function is called at most once in a specified time period
+ */
+export function throttle<T extends (...args: unknown[]) => unknown>(
+  func: T,
+  limit: number
+): (...args: Parameters<T>) => void {
+  let inThrottle: boolean;
+
+  return function executedFunction(...args: Parameters<T>) {
+    if (!inThrottle) {
+      func(...args);
+      inThrottle = true;
+      setTimeout(() => {
+        inThrottle = false;
+      }, limit);
+    }
+  };
 }
 
-class PerformanceOptimizer {
-  private metrics: PerformanceMetrics = {
-    loadTime: 0,
-    renderTime: 0,
-    memoryUsage: 0,
-    bundleSize: 0,
-    cacheHitRate: 0,
-  };
+/**
+ * Memoize function to cache results of expensive function calls
+ */
+export function memoize<T extends (...args: unknown[]) => unknown>(
+  func: T
+): T {
+  const cache = new Map<string, ReturnType<T>>();
 
-  private config: OptimizationConfig = {
-    enableLazyLoading: true,
-    enableCodeSplitting: true,
-    enableImageOptimization: true,
-    enableCaching: true,
-    enableCompression: true,
-  };
-
-  constructor(config?: Partial<OptimizationConfig>) {
-    this.config = { ...this.config, ...config };
-    this.initializePerformanceMonitoring();
-  }
-
-  /**
-   * Initialize performance monitoring
-   */
-  private initializePerformanceMonitoring(): void {
-    if (typeof window === 'undefined') return;
-
-    // Monitor page load performance
-    window.addEventListener('load', () => {
-      this.measureLoadTime();
-      this.measureMemoryUsage();
-    });
-
-    // Monitor render performance
-    this.measureRenderTime();
-  }
-
-  /**
-   * Measure page load time
-   */
-  private measureLoadTime(): void {
-    if (typeof window === 'undefined' || !window.performance) return;
-    if (typeof window.performance.getEntriesByType !== 'function') return;
-
-    const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-    if (navigation) {
-      this.metrics.loadTime = navigation.loadEventEnd - navigation.loadEventStart;
+  return ((...args: Parameters<T>) => {
+    const key = JSON.stringify(args);
+    if (cache.has(key)) {
+      return cache.get(key);
     }
+    const result = func(...args);
+    cache.set(key, result as ReturnType<T>);
+    return result;
+  }) as T;
+}
+
+/**
+ * Lazy load images with Intersection Observer
+ */
+export function lazyLoadImages(selector: string = 'img[data-src]'): void {
+  if (typeof window === 'undefined' || !('IntersectionObserver' in window)) {
+    return;
   }
 
-  /**
-   * Measure render time
-   */
-  private measureRenderTime(): void {
-    if (typeof window === 'undefined' || !window.performance) return;
-    
-    // Check if PerformanceObserver exists (may not be available in test environments)
-    if (typeof PerformanceObserver === 'undefined') return;
-
-    try {
-      const observer = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        entries.forEach((entry) => {
-          if (entry.entryType === 'measure') {
-            this.metrics.renderTime = entry.duration;
-          }
-        });
-      });
-
-      observer.observe({ entryTypes: ['measure'] });
-    } catch (error) {
-      // PerformanceObserver may not support 'measure' entryType in some environments
-    }
-  }
-
-  /**
-   * Measure memory usage
-   */
-  private measureMemoryUsage(): void {
-    if (typeof window === 'undefined' || !('memory' in window.performance)) return;
-
-    const memory = (window.performance as any).memory;
-    if (memory) {
-      this.metrics.memoryUsage = memory.usedJSHeapSize;
-    }
-  }
-
-  /**
-   * Optimize images for better performance
-   */
-  optimizeImages(): void {
-    if (typeof window === 'undefined') return;
-
-    const images = document.querySelectorAll('img');
-    images.forEach((img) => {
-      // Add loading="lazy" for better performance
-      if (!img.hasAttribute('loading')) {
-        img.setAttribute('loading', 'lazy');
-      }
-
-      // Add proper alt text if missing
-      if (!img.hasAttribute('alt')) {
-        img.setAttribute('alt', 'Zion Tech Group content');
-      }
-
-      // Optimize image format
-      if (img.src.includes('.jpg') || img.src.includes('.jpeg')) {
-        // Convert to WebP if supported
-        if (this.supportsWebP()) {
-          img.src = img.src.replace(/\.(jpg|jpeg)$/i, '.webp');
+  const imageObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const img = entry.target as HTMLImageElement;
+        const src = img.getAttribute('data-src');
+        if (src) {
+          img.src = src;
+          img.removeAttribute('data-src');
+          imageObserver.unobserve(img);
         }
       }
     });
+  });
+
+  document.querySelectorAll(selector).forEach((img) => {
+    imageObserver.observe(img);
+  });
+}
+
+/**
+ * Preload critical resources
+ */
+export function preloadResource(
+  href: string,
+  as: 'script' | 'style' | 'font' | 'image'
+): void {
+  if (typeof document === 'undefined') return;
+
+  const link = document.createElement('link');
+  link.rel = 'preload';
+  link.href = href;
+  link.as = as;
+
+  if (as === 'font') {
+    link.crossOrigin = 'anonymous';
   }
 
-  /**
-   * Check if browser supports WebP
-   */
-  private supportsWebP(): boolean {
-    if (typeof window === 'undefined') return false;
-    
-    const canvas = document.createElement('canvas');
-    canvas.width = 1;
-    canvas.height = 1;
-    return canvas.toDataURL('image/webp').indexOf('data:image/webp') === 0;
+  document.head.appendChild(link);
+}
+
+/**
+ * Optimize images for web
+ */
+export function getOptimizedImageUrl(
+  url: string,
+  width?: number,
+  quality: number = 80
+): string {
+  if (!url) return '';
+
+  const params = new URLSearchParams();
+  if (width) params.append('w', width.toString());
+  params.append('q', quality.toString());
+  params.append('fm', 'webp');
+
+  return `${url}?${params.toString()}`;
+}
+
+/**
+ * Measure function execution time
+ */
+export function measurePerformance<T extends (...args: unknown[]) => unknown>(
+  func: T,
+  label?: string
+): T {
+  return ((...args: Parameters<T>) => {
+    const start = performance.now();
+    const result = func(...args);
+    const end = performance.now();
+    const duration = end - start;
+
+    if (label) {
+      console.log(`${label}: ${duration.toFixed(2)}ms`);
+    }
+
+    return result;
+  }) as T;
+}
+
+/**
+ * Request idle callback wrapper with fallback
+ */
+export function requestIdleCallback(
+  callback: IdleRequestCallback,
+  options?: IdleRequestOptions
+): number {
+  if (typeof window !== 'undefined' && 'requestIdleCallback' in window) {
+    return window.requestIdleCallback(callback, options);
   }
+  // Fallback for browsers that don't support requestIdleCallback
+  return setTimeout(() => {
+    const start = Date.now();
+    callback({
+      didTimeout: false,
+      timeRemaining: () => Math.max(0, 50 - (Date.now() - start)),
+    });
+  }, 1) as unknown as number;
+}
 
-  /**
-   * Enable code splitting for better performance
-   */
-  enableCodeSplitting(): void {
-    if (!this.config.enableCodeSplitting) return;
-
-    // This would typically be handled by the bundler (Vite/Webpack)
-    // Here we can add runtime optimizations
-    console.log('Code splitting enabled for better performance');
-  }
-
-  /**
-   * Enable caching strategies
-   */
-  enableCaching(): void {
-    if (!this.config.enableCaching) return;
-
-    if (typeof window === 'undefined' || !('serviceWorker' in navigator)) return;
-
-    // Register service worker for caching
-    navigator.serviceWorker.register('/sw.js')
-      .then((registration) => {
-        console.log('Service Worker registered:', registration);
-      })
-      .catch((error) => {
-        console.log('Service Worker registration failed:', error);
-      });
-  }
-
-  /**
-   * Get current performance metrics
-   */
-  getMetrics(): PerformanceMetrics {
-    return { ...this.metrics };
-  }
-
-  /**
-   * Get performance score (0-100)
-   */
-  getPerformanceScore(): number {
-    let score = 100;
-
-    // Deduct points for slow load times
-    if (this.metrics.loadTime > 3000) score -= 20;
-    else if (this.metrics.loadTime > 2000) score -= 10;
-
-    // Deduct points for slow render times
-    if (this.metrics.renderTime > 100) score -= 15;
-    else if (this.metrics.renderTime > 50) score -= 5;
-
-    // Deduct points for high memory usage
-    if (this.metrics.memoryUsage > 50 * 1024 * 1024) score -= 15; // 50MB
-    else if (this.metrics.memoryUsage > 30 * 1024 * 1024) score -= 5; // 30MB
-
-    return Math.max(0, score);
-  }
-
-  /**
-   * Generate performance report
-   */
-  generateReport(): string {
-    const score = this.getPerformanceScore();
-    const metrics = this.getMetrics();
-
-    return `
-Performance Report - Zion Tech Group Website
-==========================================
-Performance Score: ${score}/100
-Load Time: ${metrics.loadTime.toFixed(2)}ms
-Render Time: ${metrics.renderTime.toFixed(2)}ms
-Memory Usage: ${(metrics.memoryUsage / 1024 / 1024).toFixed(2)}MB
-Bundle Size: ${metrics.bundleSize}KB
-Cache Hit Rate: ${metrics.cacheHitRate}%
-
-Recommendations:
-${score < 80 ? '- Consider optimizing images and enabling compression' : ''}
-${metrics.loadTime > 2000 ? '- Implement lazy loading for better initial load time' : ''}
-${metrics.memoryUsage > 30 * 1024 * 1024 ? '- Review memory usage and optimize components' : ''}
-    `.trim();
-  }
-
-  /**
-   * Optimize the entire application
-   */
-  optimize(): void {
-    this.optimizeImages();
-    this.enableCodeSplitting();
-    this.enableCaching();
-    
-    console.log('Performance optimization completed');
-    console.log(this.generateReport());
+/**
+ * Cancel idle callback wrapper
+ */
+export function cancelIdleCallback(id: number): void {
+  if (typeof window !== 'undefined' && 'cancelIdleCallback' in window) {
+    window.cancelIdleCallback(id);
+  } else {
+    clearTimeout(id);
   }
 }
 
-// Export singleton instance
-export const performanceOptimizer = new PerformanceOptimizer();
-export default PerformanceOptimizer;
+/**
+ * Batch DOM updates to minimize reflows
+ */
+export function batchDOMUpdates(updates: () => void): void {
+  if (typeof window === 'undefined') return;
+
+  requestAnimationFrame(() => {
+    updates();
+  });
+}
+
+/**
+ * Get optimal chunk size for data processing
+ */
+export function getOptimalChunkSize(totalItems: number): number {
+  // Process in chunks of 100-1000 items depending on total size
+  if (totalItems < 1000) return totalItems;
+  if (totalItems < 10000) return 100;
+  return 1000;
+}
+
+/**
+ * Process large arrays in chunks to avoid blocking the main thread
+ */
+export async function processInChunks<T, R>(
+  items: T[],
+  processor: (item: T) => R,
+  chunkSize?: number
+): Promise<R[]> {
+  const results: R[] = [];
+  const size = chunkSize || getOptimalChunkSize(items.length);
+
+  for (let i = 0; i < items.length; i += size) {
+    const chunk = items.slice(i, i + size);
+    const chunkResults = chunk.map(processor);
+    results.push(...chunkResults);
+
+    // Give the browser a chance to handle other tasks
+    await new Promise((resolve) => setTimeout(resolve, 0));
+  }
+
+  return results;
+}
+
+/**
+ * Check if user prefers reduced motion
+ */
+export function prefersReducedMotion(): boolean {
+  if (typeof window === 'undefined') return false;
+  return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+}
+
+/**
+ * Get connection quality information
+ */
+export function getConnectionQuality(): {
+  effectiveType: string;
+  downlink: number;
+  rtt: number;
+  saveData: boolean;
+} {
+  if (
+    typeof navigator === 'undefined' ||
+    !('connection' in navigator)
+  ) {
+    return {
+      effectiveType: 'unknown',
+      downlink: 0,
+      rtt: 0,
+      saveData: false,
+    };
+  }
+
+  const connection = (navigator as any).connection;
+  return {
+    effectiveType: connection.effectiveType || 'unknown',
+    downlink: connection.downlink || 0,
+    rtt: connection.rtt || 0,
+    saveData: connection.saveData || false,
+  };
+}
+
+/**
+ * Adaptive loading based on network conditions
+ */
+export function shouldLoadHeavyContent(): boolean {
+  const connection = getConnectionQuality();
+
+  // Don't load heavy content on slow connections or when data saver is on
+  if (connection.saveData) return false;
+  if (connection.effectiveType === 'slow-2g' || connection.effectiveType === '2g') {
+    return false;
+  }
+
+  return true;
+}
+
+export default {
+  debounce,
+  throttle,
+  memoize,
+  lazyLoadImages,
+  preloadResource,
+  getOptimizedImageUrl,
+  measurePerformance,
+  requestIdleCallback,
+  cancelIdleCallback,
+  batchDOMUpdates,
+  getOptimalChunkSize,
+  processInChunks,
+  prefersReducedMotion,
+  getConnectionQuality,
+  shouldLoadHeavyContent,
+};
