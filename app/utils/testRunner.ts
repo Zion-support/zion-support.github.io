@@ -576,7 +576,7 @@ class Assert {
   /**
    * Assert that a value is an instance of a class
    */
-  public static assertInstanceOf(value: unknown, constructor: Function, message?: string): void {
+  public static assertInstanceOf(value: unknown, constructor: new (...args: unknown[]) => unknown, message?: string): void {
     if (!(value instanceof constructor)) {
       throw new Error(message || `Expected ${value} to be an instance of ${constructor.name}`);
     }
