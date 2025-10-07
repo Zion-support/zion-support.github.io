@@ -1,5 +1,4 @@
 import {
-  Facebook,
   Github,
   Linkedin,
   Mail,
@@ -72,12 +71,6 @@ const EnhancedFooter: React.FC = () => {
                 className='text-gray-400 hover:text-white transition-colors'
               >
                 <Github className='w-5 h-5' />
-              </a>
-              <a
-                href='https://facebook.com/ziontechgroup'
-                className='text-gray-400 hover:text-white transition-colors'
-              >
-                <Facebook className='w-5 h-5' />
               </a>
             </div>
           </div>
@@ -172,3 +165,10 @@ const EnhancedFooter: React.FC = () => {
               </Link>
             </div>
           </div>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default EnhancedFooter;
