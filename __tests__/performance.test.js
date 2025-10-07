@@ -3,11 +3,24 @@
  */
 
 describe('Performance Tests', () => {
+  let originalLocation;
+  let originalUserAgent;
+
   beforeEach(() => {
+    // Mock PerformanceObserver
+    global.PerformanceObserver = jest.fn().mockImplementation((callback) => {
+      return {
+        observe: jest.fn(),
+        disconnect: jest.fn(),
+        takeRecords: jest.fn(),
+      };
+    });
+
     // Mock performance API
     global.performance = {
       now: jest.fn(() => Date.now()),
       getEntriesByType: jest.fn(() => []),
+      getEntriesByName: jest.fn(() => []),
       mark: jest.fn(),
       measure: jest.fn(),
       memory: {
@@ -15,20 +28,32 @@ describe('Performance Tests', () => {
       },
     };
 
-    // Mock window object
-    Object.defineProperty(window, 'location', {
-      value: {
-        href: 'http://localhost:3000',
-        reload: jest.fn(),
-      },
-      writable: true,
-    });
+    // Save original values
+    originalLocation = window.location;
+    originalUserAgent = Object.getOwnPropertyDescriptor(navigator, 'userAgent');
+
+    // Mock window.location
+    delete window.location;
+    window.location = {
+      href: 'http://localhost:3000',
+      reload: jest.fn(),
+    };
 
     // Mock navigator
     Object.defineProperty(navigator, 'userAgent', {
       value: 'Mozilla/5.0 (Test Browser)',
       writable: true,
+      configurable: true,
     });
+  });
+
+  afterEach(() => {
+    // Restore original values
+    window.location = originalLocation;
+    if (originalUserAgent) {
+      Object.defineProperty(navigator, 'userAgent', originalUserAgent);
+    }
+    jest.clearAllMocks();
   });
 
   test('PerformanceOptimizer should initialize correctly', () => {
