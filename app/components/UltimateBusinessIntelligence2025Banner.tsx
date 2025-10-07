@@ -62,8 +62,6 @@ const UltimateBusinessIntelligence2025Banner = () => {
               {content[currentSlide].description}
             </p>
 
-                  <div className="text-gray-300 text-sm capitalize">{key.replace(/([A-Z])/g, ' $1')}</div>
-=======
             <div className="flex flex-wrap gap-4 mb-6">
               {Object.entries(content[currentSlide].metrics).map(([key, value]) => (
                 <div key={key} className="bg-white/10 backdrop-blur-sm rounded-lg px-4 py-2">
@@ -114,6 +112,8 @@ const UltimateBusinessIntelligence2025Banner = () => {
               />
             ))}
           </div>
+        )}
+
         {/* Stats Section */}
         <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8">
           {[
@@ -128,8 +128,6 @@ const UltimateBusinessIntelligence2025Banner = () => {
             </div>
           ))}
         </div>
-=======
-        )}
       </div>
     </div>
   );
