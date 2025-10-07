@@ -20,6 +20,13 @@ export interface TestConfig {
   accessibilityThreshold: number;
 }
 
+// Performance metrics interface
+export interface PerformanceMetrics {
+  renderTime: number;
+  memoryUsage: number;
+  timestamp: string;
+}
+
 // Default test configuration
 export const defaultTestConfig: TestConfig = {
   enableMocking: true,
@@ -74,7 +81,7 @@ export class TestRunner {
   async runPerformanceTest(
     component: ReactElement,
     testName: string
-  ): Promise<{ passed: boolean; metrics: { renderTime: number; memoryUsage: number; timestamp: string } }> {
+  ): Promise<{ passed: boolean; metrics: PerformanceMetrics }> {
     const startTime = performance.now();
     
     const { unmount } = this.customRender(component);
