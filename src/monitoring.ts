@@ -27,16 +27,18 @@ function initializeMonitoring(): void {
     // Track errors globally
     window.addEventListener('error', (event) => {
       const error = event.error || new Error(event.message);
-      errorHandler.logError(error, {
-        message: `Error in ${event.filename}:${event.lineno}:${event.colno}`,
+      errorHandler.handleError(error, undefined, {
+        filename: event.filename,
+        lineno: event.lineno,
+        colno: event.colno,
       });
     });
 
     // Track unhandled promise rejections
     window.addEventListener('unhandledrejection', (event) => {
       const error = new Error(`Unhandled Promise Rejection: ${event.reason}`);
-      errorHandler.logError(error, {
-        message: `Unhandled Promise Rejection: ${event.reason}`,
+      errorHandler.handleError(error, undefined, {
+        reason: event.reason,
       });
     });
 
