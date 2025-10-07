@@ -1,7 +1,6 @@
 'use client';
 
 import React, { Suspense, lazy, useCallback, useEffect } from 'react';
-import Link from 'next/link';
 import { HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
@@ -11,7 +10,6 @@ import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import AdvancedErrorBoundary from './components/AdvancedErrorBoundary';
 import AdvancedSEOOptimizer from './components/AdvancedSEOOptimizer';
 import AdvancedPerformanceMonitor from './components/AdvancedPerformanceMonitor';
-import SEOEnhancer from './components/SEOEnhancer';
 import PerformanceDashboard from './components/PerformanceDashboard';
 import LoadingSpinner from './components/LoadingSpinner';
 
@@ -25,7 +23,7 @@ const InteractiveAIROICalculator = lazy(
 );
 
 // Utils
-import { performanceOptimizer, collectPerformanceMetrics, lazyLoadImages, preloadCriticalResources } from './utils/performanceOptimizer';
+import { performanceOptimizer, preloadCriticalResources } from './utils/performanceOptimizer';
 import { logger } from './utils/logger';
 
 // Lazy load pages for better performance
@@ -43,66 +41,69 @@ const App: React.FC = () => {
     if (typeof window !== 'undefined' && 'performance' in window) {
       const metrics = performanceOptimizer.getMetrics();
       if (metrics) {
-        console.log('Performance metrics:', metrics);
+        logger.performance('Performance Metrics', metrics as unknown as Record<string, unknown>, 'PerformanceMonitor');
+        logger.info('Performance metrics collected', 'App', { metrics });
       }
     }
+
+    // Preload critical resources
+    preloadCriticalResources();
     
-    logger.lifecycle('performance monitoring initialized', 'App');
+    logger.info('Performance monitoring initialized', 'App');
     logger.info('🚀 Zion Tech Group App initialized with comprehensive monitoring', 'App');
   }, []);
 
-  const handlePerformanceOptimization = useCallback(() => {
-    if (typeof window !== 'undefined') {
-      lazyLoadImages();
-      preloadCriticalResources();
-      collectPerformanceMetrics();
-    }
+  const handleError = useCallback((error: Error, errorInfo: React.ErrorInfo) => {
+    logger.error('Application Error', 'ErrorBoundary', { error: error.message, errorInfo });
   }, []);
 
   return (
-    <HelmetProvider>
-      <AdvancedErrorBoundary>
-        <Router>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-            <SEOOptimizer />
-            <AccessibilityEnhancer>
-              <Suspense fallback={<LoadingSpinner />}>
-                <Routes>
-                  <Route path="/" element={<HomePage />} />
-                </Routes>
-              </Suspense>
-            </AccessibilityEnhancer>
-            
-            {/* Performance monitoring components */}
-            <AdvancedPerformanceMonitor />
-            <PerformanceDashboard />
-            
-            {/* SEO and content components */}
-            <AdvancedSEOOptimizer seoData={{
-              title: 'Zion Tech Group - AI Solutions',
-              description: 'Leading AI and technology solutions for enterprise',
-              keywords: ['AI', 'technology', 'enterprise', 'solutions'],
-              canonicalUrl: 'https://ziontechgroup.com',
-              ogImage: '/og-image.jpg'
-            }} />
-            <SEOEnhancer />
-            <ContentShowcase />
-            <InteractiveContentShowcase2026 />
-            <InteractiveAIROICalculator />
-          </div>
-        </Router>
-      </AdvancedErrorBoundary>
-    </HelmetProvider>
+    <AdvancedErrorBoundary onError={handleError}>
+      <HelmetProvider>
+        <AccessibilityEnhancer>
+          <SEOOptimizer />
+          <AdvancedSEOOptimizer seoData={{
+            title: 'Zion Tech Group - AI Solutions',
+            description: 'Leading provider of AI-powered enterprise solutions',
+            keywords: ['AI', 'technology', 'enterprise solutions'],
+            canonicalUrl: 'https://ziontechgroup.com',
+            ogImage: 'https://ziontechgroup.com/og-image.jpg'
+          }} />
+          <AdvancedPerformanceMonitor />
+          <PerformanceDashboard />
+          
+          <Router>
+            <Routes>
+              <Route path="/" element={
+                <Suspense fallback={<LoadingSpinner />}>
+                  <div className="min-h-screen">
+                    <h1 className="text-4xl font-bold text-center py-20">
+                      Welcome to Zion Tech Group
+                    </h1>
+                    <div className="container mx-auto px-4">
+                      <ContentShowcase />
+                      <InteractiveContentShowcase2026 />
+                      <InteractiveAIROICalculator />
+                    </div>
+                  </div>
+                </Suspense>
+              } />
+              <Route path="/about" element={
+                <div className="min-h-screen flex items-center justify-center">
+                  <h1 className="text-4xl font-bold">About Us</h1>
+                </div>
+              } />
+              <Route path="/contact" element={
+                <div className="min-h-screen flex items-center justify-center">
+                  <h1 className="text-4xl font-bold">Contact Us</h1>
+                </div>
+              } />
+            </Routes>
+          </Router>
+        </AccessibilityEnhancer>
+      </HelmetProvider>
+    </AdvancedErrorBoundary>
   );
 };
-
-// Loading fallback component
-const LoadingFallback: React.FC<{ height?: string }> = ({
-  height = 'h-32',
-}) => (
-  <div className={`flex items-center justify-center ${height} w-full`}>
-    <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-indigo-600"></div>
-  </div>
-);
 
 export default App;
