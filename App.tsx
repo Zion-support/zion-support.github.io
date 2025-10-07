@@ -1,11 +1,9 @@
-import React from 'react';
+import React, { memo, useMemo, useCallback } from 'react';
 import { createRoot } from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
-import { HelmetProvider } from 'react-helmet-async';
+import { HelmetProvider, Helmet } from 'react-helmet-async';
 import HomePage from './app/page';
 
-const App = () => {
-import { HelmetProvider, Helmet } from 'react-helmet-async';
 // Memoized components for better performance
 const UnifiedContentPromotion = memo(() => (
   <div className='bg-gradient-to-r from-blue-600 to-purple-700 text-white py-16'>
@@ -96,7 +94,7 @@ const LoadingSpinner = memo(() => (
     <div className="text-gray-500">Loading...</div>
   </div>
 ));
-export default function App() {
+const App = () => {
   const structuredData = useMemo(
     () => ({
       '@context': 'https://schema.org',
@@ -206,4 +204,3 @@ if (container) {
 }
 
 export default App;
-}

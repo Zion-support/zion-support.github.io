@@ -320,6 +320,66 @@ export class PerformanceOptimizer {
     
     images.forEach(img => imageObserver.observe(img));
   }
+
+  /**
+   * Add critical resource hints for performance optimization
+   */
+  addCriticalResourceHints(): void {
+    if (typeof document === 'undefined') return;
+    
+    const hints = [
+      { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' },
+      { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com' },
+      { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+      { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossOrigin: 'anonymous' }
+    ];
+    
+    hints.forEach(hint => {
+      const link = document.createElement('link');
+      link.rel = hint.rel;
+      link.href = hint.href;
+      if (hint.crossOrigin) {
+        link.crossOrigin = hint.crossOrigin;
+      }
+      document.head.appendChild(link);
+    });
+  }
+
+  /**
+   * Measure page load performance
+   */
+  measurePageLoad(): any {
+    if (typeof window === 'undefined' || !('performance' in window)) {
+      return null;
+    }
+    
+    const timing = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+    if (!timing) return null;
+    
+    return {
+      domContentLoaded: timing.domContentLoadedEventEnd - timing.domContentLoadedEventStart,
+      loadComplete: timing.loadEventEnd - timing.loadEventStart,
+      totalTime: timing.loadEventEnd - timing.fetchStart
+    };
+  }
+
+  /**
+   * Report Web Vitals
+   */
+  reportWebVitals(metrics: any): void {
+    if (typeof window === 'undefined') return;
+    
+    console.log('Web Vitals:', metrics);
+    
+    // Send to analytics if available
+    if ('gtag' in window) {
+      (window as any).gtag('event', 'web_vitals', {
+        event_category: 'Performance',
+        event_label: 'Page Load',
+        value: Math.round(metrics.totalTime || 0)
+      });
+    }
+  }
 }
 
 // Utility functions
@@ -345,6 +405,21 @@ export const withPerformanceTracking = <P extends object>(
   
   WrappedComponent.displayName = `withPerformanceTracking(${name})`;
   return WrappedComponent as unknown as ComponentType<P>;
+};
+
+// Create and export a default instance
+export const performanceOptimizer = new PerformanceOptimizer();
+
+// Export utility functions
+export const prefetchResources = (urls: string[]): void => {
+  if (typeof window === 'undefined') return;
+  
+  urls.forEach(url => {
+    const link = document.createElement('link');
+    link.rel = 'prefetch';
+    link.href = url;
+    document.head.appendChild(link);
+  });
 };
 
 export default PerformanceOptimizer;

@@ -14,7 +14,7 @@ import PerformanceMonitor from './components/PerformanceMonitor';
 const HomePage = lazy(() => import('./page'));
 
 // Utils
-import { performanceOptimizer, prefetchResources } from '../src/utils/performanceOptimizer';
+import { performanceOptimizer, prefetchResources } from '../utils/performanceOptimizer';
 
 // Styles
 import './globals.css';
