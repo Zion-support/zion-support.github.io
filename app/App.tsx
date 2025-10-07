@@ -1,36 +1,26 @@
-'use client';
-
-import React, { Suspense, lazy, useEffect, useCallback } from 'react';
-import { HelmetProvider } from 'react-helmet-async';
+import React, { useEffect, lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-
-// Components
-import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-import AdvancedErrorBoundary from './components/AdvancedErrorBoundary';
-import AdvancedSEOOptimizer from './components/AdvancedSEOOptimizer';
-import AdvancedPerformanceMonitor from './components/AdvancedPerformanceMonitor';
-import SEOEnhancer from './components/SEOEnhancer';
-import PerformanceDashboard from './components/PerformanceDashboard';
-import LoadingSpinner from './components/LoadingSpinner';
-
-// Lazy load components for better performance
-const ContentShowcase = lazy(() => import('./components/ContentShowcase'));
-const InteractiveContentShowcase2026 = lazy(
-  () => import('./components/InteractiveContentShowcase2026')
-);
-const InteractiveAIROICalculator = lazy(
-  () => import('./components/InteractiveAIROICalculator')
-);
+import { HelmetProvider } from 'react-helmet-async';
 
 // Utils
-import { performanceOptimizer, collectPerformanceMetrics } from './utils/performanceOptimizer';
 import { logger } from './utils/logger';
 
-// Additional Components
-import SEOOptimizer from './components/SEOOptimizer';
+// Components
+import AdvancedErrorBoundary from './components/AdvancedErrorBoundary';
+import SEOEnhancer from './components/SEOEnhancer';
+import AdvancedSEOOptimizer from './components/AdvancedSEOOptimizer';
+import LoadingSpinner from './components/LoadingSpinner';
+import AccessibilityEnhancer from './components/AccessibilityEnhancer';
+import PerformanceOptimizer from './components/PerformanceOptimizer';
+import PerformanceDashboard from './components/PerformanceDashboard';
+import AdvancedPerformanceMonitor from './components/AdvancedPerformanceMonitor';
 
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./page'));
+
+// Utils
+import { performanceOptimizer } from './utils/performanceOptimizer';
+import { lazyLoadImages, preloadCriticalResources, collectPerformanceMetrics } from './utils/performanceOptimizer';
 
 // Styles
 import './globals.css';
@@ -41,23 +31,29 @@ const App: React.FC = () => {
     logger.lifecycle('initialized', 'App');
 
     // Initialize performance monitoring
+    performanceOptimizer.lazyLoadImages();
+    performanceOptimizer.addCriticalResourceHints();
+    lazyLoadImages();
+    preloadCriticalResources();
+    performanceOptimizer.init();
+    // Initialize Web Vitals monitoring
     if (typeof window !== 'undefined' && 'performance' in window) {
+      const pageLoadMetrics = performanceOptimizer.measurePageLoad();
+      const collectMetrics = collectPerformanceMetrics();
       const metrics = performanceOptimizer.getMetrics();
+      if (pageLoadMetrics) {
+        performanceOptimizer.reportWebVitals(pageLoadMetrics);
+      }
+      if (collectMetrics) {
+        console.log('Performance metrics collected:', collectMetrics);
+      }
       if (metrics) {
-        logger.performance('Performance Metrics', metrics as unknown as Record<string, unknown>, 'PerformanceMonitor');
-        logger.info('Performance metrics collected', 'App', { metrics });
+        console.log('Performance metrics:', metrics);
       }
     }
-
-    // Initialize performance monitoring
-    performanceOptimizer.init();
     
-    logger.info('Performance monitoring initialized', 'App');
-    logger.info('🚀 Zion Tech Group App initialized with comprehensive monitoring', 'App');
-  }, []);
-
-  const handleError = useCallback((error: Error, errorInfo: React.ErrorInfo) => {
-    logger.error('Application Error', 'ErrorBoundary', { error: error.message, errorInfo });
+    console.log('Performance monitoring initialized');
+    console.log('🚀 Zion Tech Group App initialized with comprehensive monitoring');
   }, []);
 
   return (
@@ -65,49 +61,72 @@ const App: React.FC = () => {
       <AdvancedErrorBoundary
         enableErrorReporting={true}
         enableRetry={true}
-        onError={handleError}
+        onError={(error, errorInfo) => {
+          logger.error('Application Error', 'ErrorBoundary', { error: error.message, errorInfo });
+        }}
       >
-        <AccessibilityEnhancer>
-          <SEOEnhancer
-            title="Zion Tech Group - Advanced AI and IT Solutions"
-            description="Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. Transform your business with our cutting-edge technology."
-          >
-            <AdvancedSEOOptimizer
-              seoData={{
-                title: 'Zion Tech Group - Advanced AI and IT Solutions',
-                description: 'Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. Transform your business with our cutting-edge technology.',
-                keywords: ['AI', 'artificial intelligence', 'quantum computing', 'enterprise solutions', 'technology consulting'],
-                canonicalUrl: 'https://ziontechgroup.com',
-                ogImage: 'https://ziontechgroup.com/og-image.jpg'
-              }}
-              enableSchemaMarkup={true}
-            />
-            <Router>
-              <div className="App">
-                <main id="main-content">
-                  <Suspense fallback={<LoadingSpinner />}>
-                    <Routes>
-                      <Route path="/" element={<ContentShowcase />} />
-                      {/* Add more routes as needed */}
-                    </Routes>
-                  </Suspense>
+        <PerformanceOptimizer>
+          <AccessibilityEnhancer>
+            <SEOEnhancer
+              title='Zion Tech Group - Advanced AI and IT Solutions'
+              description='Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. Transform your business with our cutting-edge technology.'
+            >
+              <AdvancedSEOOptimizer
+                seoData={{
+                  title: 'Zion Tech Group - Advanced AI and IT Solutions',
+                  description: 'Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. Transform your business with our cutting-edge technology.',
+                  keywords: ['AI solutions', 'enterprise AI', 'quantum computing', 'autonomous systems', 'digital transformation', 'automation', 'cloud services', 'AI consulting', 'business intelligence', 'machine learning'],
+                  canonicalUrl: 'https://ziontechgroup.com',
+                  ogImage: 'https://ziontechgroup.com/og-image.jpg',
+                  structuredData: {
+                    '@type': 'TechCompany',
+                    name: 'Zion Tech Group',
+                    description: 'Advanced AI and IT Solutions Provider',
+                    foundingDate: '2020',
+                    numberOfEmployees: '50-100',
+                    industry: 'Technology',
+                    services: [
+                      'AI Solutions',
+                      'Digital Transformation',
+                      'Cloud Services',
+                      'Automation',
+                      'Business Intelligence'
+                    ]
+                  }
+                }}
+                enableStructuredData={true}
+                enableOpenGraph={true}
+                enableTwitterCards={true}
+                enableSchemaMarkup={true}
+              />
+              <Router>
+                <div className='App'>
+                  <main id='main-content'>
+                    <Suspense fallback={<LoadingSpinner />}>
+                      <Routes>
+                        <Route path='/' element={<HomePage />} />
+                        {/* Add more routes as needed */}
+                      </Routes>
+                    </Suspense>
+                  </main>
 
                   {/* Performance Dashboard */}
                   <PerformanceDashboard />
-
+                  
                   {/* Advanced Performance Monitor */}
-                  <AdvancedPerformanceMonitor />
-
-                  {/* Interactive Components */}
-                  <Suspense fallback={<div>Loading...</div>}>
-                    <InteractiveContentShowcase2026 />
-                    <InteractiveAIROICalculator />
-                  </Suspense>
-                </main>
-              </div>
-            </Router>
-          </SEOEnhancer>
-        </AccessibilityEnhancer>
+                  <AdvancedPerformanceMonitor
+                    enableRealTimeMonitoring={process.env.NODE_ENV === 'development'}
+                    onMetricsUpdate={(metrics) => {
+                      if (process.env.NODE_ENV === 'development') {
+                        logger.performance('Performance Metrics', metrics as unknown as Record<string, unknown>, 'PerformanceMonitor');
+                      }
+                    }}
+                  />
+                </div>
+              </Router>
+            </SEOEnhancer>
+          </AccessibilityEnhancer>
+        </PerformanceOptimizer>
       </AdvancedErrorBoundary>
     </HelmetProvider>
   );

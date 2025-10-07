@@ -1,10 +1,12 @@
 import React from 'react';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {
+const metadata: Metadata = {
   title: 'Enterprise Solutions - Zion Tech Group',
   description: 'Enterprise-grade AI and IT solutions designed for large organizations. Scalable, secure, and reliable technology solutions.',
 };
+
+export { metadata };
 
 const EnterprisePage: React.FC = () => {
   const enterpriseFeatures = [

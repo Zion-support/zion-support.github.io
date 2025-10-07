@@ -25,7 +25,19 @@ const calculatePerformanceScore = () => {
   return Math.max(0, score);
 };
 
-// Removed unused functions getMemoryInfo and getNetworkInfo
+// Network connection interface
+interface NetworkConnection {
+  effectiveType?: string;
+  downlink?: number;
+  rtt?: number;
+  saveData?: boolean;
+}
+
+interface NavigatorWithConnection extends Navigator {
+  connection?: NetworkConnection;
+  mozConnection?: NetworkConnection;
+  webkitConnection?: NetworkConnection;
+}
 
 interface SystemMetrics {
   performance: {
@@ -169,11 +181,12 @@ console.error('Failed to update metrics:', error);
   // Get network information
   const getNetworkInfo = () => {
     if ('connection' in navigator) {
-      const connection = (navigator as Navigator & { connection: { effectiveType?: string; downlink?: number; rtt?: number; saveData?: boolean } }).connection;
+      const nav = navigator as NavigatorWithConnection;
+      const connection = nav.connection;
       return {
-        effectiveType: connection.effectiveType || 'unknown',
-        downlink: connection.downlink || 0,
-        rtt: connection.rtt || 0,
+        effectiveType: connection?.effectiveType || 'unknown',
+        downlink: connection?.downlink || 0,
+        rtt: connection?.rtt || 0,
         saveData: connection.saveData || false,
       };
     }

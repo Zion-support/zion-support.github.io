@@ -462,7 +462,7 @@ Disallow: /middleware/`;
   }
 
   updateMetaTag(name, content) {
-    let meta = document.querySelector(`meta[name="${name}"]`);
+    const meta = document.querySelector(`meta[name="${name}"]`);
     if (meta) {
       meta.content = content;
     } else {
@@ -471,7 +471,7 @@ Disallow: /middleware/`;
   }
 
   updateOGTag(property, content) {
-    let meta = document.querySelector(`meta[property="${property}"]`);
+    const meta = document.querySelector(`meta[property="${property}"]`);
     if (meta) {
       meta.content = content;
     } else {
@@ -480,7 +480,7 @@ Disallow: /middleware/`;
   }
 
   updateTwitterTag(name, content) {
-    let meta = document.querySelector(`meta[name="${name}"]`);
+    const meta = document.querySelector(`meta[name="${name}"]`);
     if (meta) {
       meta.content = content;
     } else {

@@ -26,7 +26,6 @@ export const errorHandler = (
 
   // Log error for monitoring
   if (process.env.NODE_ENV === 'development') {
-    // eslint-disable-next-line no-console
     console.error(`API Error [${statusCode}]: ${message}`, {
       url: req.url,
       method: req.method,

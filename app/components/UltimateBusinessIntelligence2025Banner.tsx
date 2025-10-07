@@ -49,7 +49,11 @@ const UltimateBusinessIntelligence2025Banner = () => {
         timeline: '18 months',
         adoption: '100%'
       },
+<<<<<<< HEAD
+      readingTime: '45 min read',
+=======
       readingTime: '60 min read',
+>>>>>>> origin/main
       featured: true
     }
   ];
@@ -102,6 +106,33 @@ const UltimateBusinessIntelligence2025Banner = () => {
             </span>
             <span className="text-2xl">⚡</span>
           </div>
+<<<<<<< HEAD
+
+          <h2 className="text-4xl md:text-6xl font-extrabold text-white mb-6">
+            Transform Your Enterprise with
+            <span className="block bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+              AI-Powered Intelligence
+            </span>
+          </h2>
+
+          <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
+            Discover the revolutionary AI technologies that are reshaping business intelligence 
+            and delivering unprecedented competitive advantages to forward-thinking enterprises.
+          </p>
+        </div>
+
+        {/* Content Carousel */}
+        <div className="max-w-6xl mx-auto">
+          <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20">
+            <div className="flex items-center justify-between mb-6">
+              <div className="flex items-center gap-3">
+                <span className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-4 py-2 rounded-full text-sm font-bold">
+                  {currentContent.type}
+                </span>
+                <span className="text-gray-300 text-sm">
+                  {currentContent.readingTime}
+                </span>
+=======
           <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6">
             {currentContent.title}
           </h1>
@@ -120,6 +151,7 @@ const UltimateBusinessIntelligence2025Banner = () => {
                   {currentContent.type}
                 </span>
                 <span className="text-gray-300 text-sm">⏱️ {currentContent.readingTime}</span>
+>>>>>>> origin/main
               </div>
               <button
                 onClick={handleDismiss}
@@ -130,16 +162,53 @@ const UltimateBusinessIntelligence2025Banner = () => {
               </button>
             </div>
 
+<<<<<<< HEAD
+            <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
+              {currentContent.title}
+            </h3>
+
+            <p className="text-gray-300 mb-6 text-lg">
+              {currentContent.description}
+            </p>
+
+            {/* Metrics */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+              {Object.entries(currentContent.metrics).map(([key, value]) => (
+                <div key={key} className="text-center">
+                  <div className="text-2xl font-bold text-cyan-400 mb-1">
+                    {value}
+                  </div>
+                  <div className="text-gray-400 text-sm capitalize">
+                    {key.replace(/([A-Z])/g, ' $1').trim()}
+                  </div>
+=======
             {/* Metrics Grid */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
               {Object.entries(currentContent.metrics).map(([key, value]) => (
                 <div key={key} className="text-center">
                   <div className="text-3xl font-bold text-cyan-400 mb-2">{value}</div>
                   <div className="text-gray-300 text-sm capitalize">{key.replace(/([A-Z])/g, ' $1')}</div>
+>>>>>>> origin/main
                 </div>
               ))}
             </div>
 
+<<<<<<< HEAD
+            {/* Action Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href={currentContent.url}
+                className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-bold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
+              >
+                Read Full Article
+              </Link>
+              <Link
+                href="/contact"
+                className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-bold hover:bg-white hover:text-gray-900 transition-all duration-300"
+              >
+                Get Expert Consultation
+              </Link>
+=======
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
               <Link
@@ -157,6 +226,7 @@ const UltimateBusinessIntelligence2025Banner = () => {
                 <span className="text-xl">📞</span>
                 <span>Call +1 302 464 0950</span>
               </a>
+>>>>>>> origin/main
             </div>
           </div>
 
@@ -167,12 +237,20 @@ const UltimateBusinessIntelligence2025Banner = () => {
                 key={index}
                 onClick={() => setCurrentSlide(index)}
                 className={`w-3 h-3 rounded-full transition-all duration-300 ${
+<<<<<<< HEAD
+                  index === currentSlide
+                    ? 'bg-cyan-400 scale-125'
+                    : 'bg-white/30 hover:bg-white/50'
+=======
                   index === currentSlide ? 'bg-cyan-400' : 'bg-white/30'
+>>>>>>> origin/main
                 }`}
                 aria-label={`Go to slide ${index + 1}`}
               />
             ))}
           </div>
+<<<<<<< HEAD
+=======
         </div>
 
         {/* Stats Section */}
@@ -188,6 +266,7 @@ const UltimateBusinessIntelligence2025Banner = () => {
               <div className="text-gray-300">{stat.label}</div>
             </div>
           ))}
+>>>>>>> origin/main
         </div>
       </div>
     </section>
