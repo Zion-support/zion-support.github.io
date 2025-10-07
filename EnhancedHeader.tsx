@@ -34,23 +34,20 @@ const EnhancedHeader: React.FC = () => {
             onClick={() => setIsOpen(!isOpen)}
             className='md:hidden text-gray-700'
           >
-<<<<<<< HEAD
-            {isOpen ? <span className='w-6 h-6'>✕</span> : <span className='w-6 h-6'>☰</span>}
-=======
             {isOpen ? <span className='text-xl'>✕</span> : <span className='text-xl'>☰</span>}
->>>>>>> origin/main
           </button>
         </div>
         {isOpen && (
           <div className='md:hidden py-4 border-t'>
             {navigationItems.map(item => (
-              <div key={item.name} onClick={() => setIsOpen(false)}>
-                <Link href={item.href}>
-                  <span className='block py-2 text-gray-700 hover:text-blue-600 transition-colors'>
-                    {item.name}
-                  </span>
-                </Link>
-              </div>
+              <Link
+                key={item.name}
+                href={item.href}
+                className='block py-2 text-gray-700 hover:text-blue-600 transition-colors'
+                onClick={() => setIsOpen(false)}
+              >
+                {item.name}
+              </Link>
             ))}
           </div>
         )}
