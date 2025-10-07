@@ -149,7 +149,9 @@ export const collectPerformanceMetrics = async (): Promise<{
       });
       clsObserver.observe({ entryTypes: ['layout-shift'] });
     } catch (error) {
-      console.warn('Performance Observer not fully supported:', error);
+      if (process.env.NODE_ENV === 'development') {
+        console.warn('Performance Observer not fully supported:', error);
+      }
     }
   }
 
@@ -171,13 +173,17 @@ export class PerformanceMonitor {
       try {
         const longTaskObserver = new PerformanceObserver(list => {
           for (const entry of list.getEntries()) {
-            console.warn(`Long task detected: ${entry.duration}ms`);
+            if (process.env.NODE_ENV === 'development') {
+              console.warn(`Long task detected: ${entry.duration}ms`);
+            }
           }
         });
         longTaskObserver.observe({ entryTypes: ['longtask'] });
         this.observers.push(longTaskObserver);
       } catch (error) {
-        console.warn('Long task monitoring not supported:', error);
+        if (process.env.NODE_ENV === 'development') {
+          console.warn('Long task monitoring not supported:', error);
+        }
       }
     }
   }
@@ -304,11 +310,13 @@ export const performanceMonitor = {
     if ('PerformanceObserver' in window) {
       const observer = new PerformanceObserver(list => {
         list.getEntries().forEach(entry => {
-          console.log(
-            'Performance metric:',
-            entry.name,
-            (entry as PerformanceEntry & { value?: number }).value
-          );
+          if (process.env.NODE_ENV === 'development') {
+            console.log(
+              'Performance metric:',
+              entry.name,
+              (entry as PerformanceEntry & { value?: number }).value
+            );
+          }
         });
       });
 
