@@ -1,12 +1,3 @@
-import React, { useEffect, lazy, Suspense } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { HelmetProvider } from 'react-helmet-async';
-
-<<<<<<< HEAD
-// Components
-import SEOOptimizer from './components/SEOOptimizer';
-import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-=======
 import React, { Suspense, lazy, useCallback, useEffect } from 'react';
 import Link from 'next/link';
 import { HelmetProvider } from 'react-helmet-async';
@@ -16,7 +7,7 @@ import AdvancedErrorBoundary from './components/AdvancedErrorBoundary';
 import AdvancedSEOOptimizer from './components/AdvancedSEOOptimizer';
 import AdvancedPerformanceMonitor from './components/AdvancedPerformanceMonitor';
 import SEOEnhancer from './components/SEOEnhancer';
->>>>>>> cursor/fix-errors-and-merge-to-main-ccfd
+import SEOOptimizer from './components/SEOOptimizer';
 import PerformanceDashboard from './components/PerformanceDashboard';
 
 // Loading component
@@ -35,12 +26,8 @@ const ErrorBoundary = ({ children }: { children: React.ReactNode }) => {
 const HomePage = lazy(() => import('./page'));
 
 // Utils
-<<<<<<< HEAD
-import { performanceOptimizer, collectPerformanceMetrics } from './utils/performanceOptimizer';
-=======
 import { performanceOptimizer } from './utils/performanceOptimizer';
 import { logger } from './utils/logger';
->>>>>>> cursor/fix-errors-and-merge-to-main-ccfd
 
 // Styles
 import '../index.css';
@@ -117,9 +104,6 @@ const App: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
-export default App;
-=======
 // Loading fallback component
 const LoadingFallback: React.FC<{ height?: string }> = ({
   height = 'h-32',
@@ -288,4 +272,5 @@ const HomePage: React.FC = () => {
 };
 
 export default HomePage;
->>>>>>> cursor/fix-errors-and-merge-to-main-ccfd
+
+export default App;
