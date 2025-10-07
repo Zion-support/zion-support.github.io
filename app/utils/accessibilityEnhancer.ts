@@ -151,9 +151,10 @@ export const addKeyboardNavigation = () => {
   const customElements = document.querySelectorAll('[data-keyboard-navigation]');
   customElements.forEach((element) => {
     element.setAttribute('tabindex', '0');
-    element.addEventListener('keydown', (e: KeyboardEvent) => {
-      if (e.key === 'Enter' || e.key === ' ') {
-        e.preventDefault();
+    element.addEventListener('keydown', (e: Event) => {
+      const keyboardEvent = e as KeyboardEvent;
+      if (keyboardEvent.key === 'Enter' || keyboardEvent.key === ' ') {
+        keyboardEvent.preventDefault();
         (element as HTMLElement).click();
       }
     });
