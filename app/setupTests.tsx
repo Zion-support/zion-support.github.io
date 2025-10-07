@@ -108,6 +108,7 @@ global.PerformanceObserver = class MockPerformanceObserver {
   takeRecords() {
     return [];
   }
+  static readonly supportedEntryTypes: readonly string[] = ['navigation', 'paint', 'largest-contentful-paint'];
 };
 
 // Mock window.location
@@ -122,7 +123,4 @@ delete (window as { location?: unknown }).location;
   pathname: '/',
   search: '',
   hash: '',
-  reload: jest.fn(),
-  assign: jest.fn(),
-  replace: jest.fn(),
 };
