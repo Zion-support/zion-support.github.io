@@ -4,7 +4,6 @@ import React, { Suspense, lazy, useCallback, useEffect } from 'react';
 import Link from 'next/link';
 import { HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-=======
 // Components
 import SEOOptimizer from './components/SEOOptimizer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
@@ -26,7 +25,6 @@ const InteractiveAIROICalculator = lazy(
 
 // Utils
 import { lazyLoadImages, preloadCriticalResources, collectPerformanceMetrics, performanceOptimizer } from './utils/performanceOptimizer';
-=======
 import { performanceOptimizer, collectPerformanceMetrics } from './utils/performanceOptimizer';
 import { logger } from './utils/logger';
 
@@ -106,7 +104,6 @@ const App: React.FC = () => {
 };
 
 export default App;
-=======
 // Loading fallback component
 const LoadingFallback: React.FC<{ height?: string }> = ({
   height = 'h-32',
