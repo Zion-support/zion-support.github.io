@@ -10,13 +10,14 @@ import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import LoadingSpinner from './components/LoadingSpinner';
 
+// Performance utilities
+import { performanceOptimizer } from './utils/performanceOptimizer';
+
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./page'));
 const ContactPage = lazy(() => import('./contact/page'));
 const EnterprisePage = lazy(() => import('./enterprise/page'));
 
-// Utils
-import { performanceOptimizer } from './utils/performanceOptimizer';
 // Styles
 import '../src/index.css';
 
@@ -31,12 +32,13 @@ const App: React.FC = () => {
       console.error('Unhandled promise rejection:', event.reason);
     });
 
-    // Initialize performance monitoring
+    // Initialize performance monitoring and Web Vitals
     if (typeof window !== 'undefined' && 'performance' in window) {
-      performanceOptimizer.optimize();
-      console.log('Performance monitoring initialized');
+      performanceOptimizer.optimizeImages();
+      const metrics = performanceOptimizer.getMetrics();
+      const score = performanceOptimizer.getPerformanceScore();
+      console.log('Performance metrics:', metrics, 'Score:', score);
     }
-    // Performance monitoring is handled by other components
   }, []);
 
   return (
