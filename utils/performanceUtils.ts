@@ -85,7 +85,23 @@ export const collectPerformanceMetrics = async (): Promise<{
   firstInputDelay: number;
   cumulativeLayoutShift: number;
 }> => {
-  const metrics: Record<string, unknown> = {};
+  const metrics: {
+    loadTime: number;
+    domContentLoaded: number;
+    firstPaint: number;
+    firstContentfulPaint: number;
+    largestContentfulPaint: number;
+    firstInputDelay: number;
+    cumulativeLayoutShift: number;
+  } = {
+    loadTime: 0,
+    domContentLoaded: 0,
+    firstPaint: 0,
+    firstContentfulPaint: 0,
+    largestContentfulPaint: 0,
+    firstInputDelay: 0,
+    cumulativeLayoutShift: 0,
+  };
 
   // Basic timing metrics
   if (typeof window !== 'undefined' && window.performance) {
@@ -155,15 +171,7 @@ export const collectPerformanceMetrics = async (): Promise<{
     }
   }
 
-  return metrics as {
-    loadTime: number;
-    domContentLoaded: number;
-    firstPaint: number;
-    firstContentfulPaint: number;
-    largestContentfulPaint: number;
-    firstInputDelay: number;
-    cumulativeLayoutShift: number;
-  };
+  return metrics;
 };
 
 // Performance monitor class
@@ -217,6 +225,9 @@ export class PerformanceMonitor {
     this.metrics.clear();
   }
 }
+
+// Export singleton instance
+export const performanceMonitor = new PerformanceMonitor();
 
 // Lazy loading utilities
 export const lazyLoadImages = (): void => {
@@ -306,8 +317,7 @@ export const optimizeScrollPerformance = (): void => {
   window.addEventListener('scroll', requestTick, { passive: true });
 };
 
-// Export singleton instance
-export const performanceMonitor = new PerformanceMonitor();
+// Performance monitor object (using the class instance)
 
 // Collect performance metrics array
 export const collectPerformanceMetricsArray = async (): Promise<
@@ -326,7 +336,7 @@ export const collectPerformanceMetricsArray = async (): Promise<
 
   // Memory usage
   const memory = getMemoryUsage();
-  if (memory && memory.used > 0) {
+  if (memory) {
     metrics.push({ name: 'memoryUsage', value: memory.used });
   }
 

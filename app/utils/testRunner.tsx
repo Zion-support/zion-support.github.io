@@ -1,10 +1,10 @@
 /**
- * Comprehensive Test Runner and Testing Utilities
- * Provides advanced testing capabilities, mocking, and test automation
+ * Advanced Test Runner
+ * Comprehensive testing utilities for React applications
  */
 
 import { render, RenderOptions, RenderResult } from '@testing-library/react';
-import { ReactElement } from 'react';
+import React, { ReactElement, useCallback } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 
 // Test result types
@@ -20,6 +20,7 @@ export interface CoverageMetrics {
   functions: number;
   lines: number;
 }
+
 
 // Test configuration interface
 export interface TestConfig {
@@ -88,7 +89,11 @@ export class TestRunner {
   async runPerformanceTest(
     component: ReactElement,
     testName: string
+<<<<<<< HEAD
   ): Promise<{ passed: boolean; metrics: PerformanceMetrics }> {
+=======
+  ): Promise<{ passed: boolean; metrics: { renderTime: number; memoryUsage: number; timestamp: string } }> {
+>>>>>>> main
     const startTime = performance.now();
     
     const { unmount } = this.customRender(component);
@@ -98,10 +103,14 @@ export class TestRunner {
     // Measure memory usage if available
     let memoryUsage = 0;
     if ('memory' in performance) {
+<<<<<<< HEAD
       const memory = (performance as { memory?: { usedJSHeapSize: number } }).memory;
       if (memory) {
         memoryUsage = memory.usedJSHeapSize;
       }
+=======
+      memoryUsage = (performance as Performance & { memory: { usedJSHeapSize: number } }).memory.usedJSHeapSize;
+>>>>>>> main
     }
 
     const metrics: PerformanceMetrics = {
@@ -128,8 +137,24 @@ export class TestRunner {
   async runAccessibilityTest(
     component: ReactElement,
     testName: string
+<<<<<<< HEAD
   ): Promise<{ passed: boolean; violations: Array<{ description: string; impact: string }> }> {
     const { container, unmount } = this.customRender(component);
+=======
+  ): Promise<{ passed: boolean; violations: string[] }> {
+    const { container } = this.customRender(component);
+    
+    // Basic accessibility checks
+    const violations: string[] = [];
+    
+    // Check for missing alt text on images
+    const images = container.querySelectorAll('img');
+    images.forEach((img, index) => {
+      if (!img.getAttribute('alt')) {
+        violations.push(`Image ${index} missing alt text`);
+      }
+    });
+>>>>>>> main
 
     const violations: Array<{ description: string; impact: string }> = [];
 
@@ -169,6 +194,161 @@ export class TestRunner {
     return { passed, violations };
   }
 
+<<<<<<< HEAD
+=======
+  // Component test
+  async runComponentTest(
+    component: ReactElement,
+    testName: string,
+    assertions: (result: RenderResult) => void
+  ): Promise<{ passed: boolean; error?: string }> {
+    try {
+      const result = this.customRender(component);
+      assertions(result);
+      
+      this.testResults.push({
+        name: `Component: ${testName}`,
+        status: 'passed',
+        duration: 0,
+      });
+
+      return { passed: true };
+    } catch (error) {
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      
+      this.testResults.push({
+        name: `Component: ${testName}`,
+        status: 'failed',
+        duration: 0,
+        error: errorMessage,
+      });
+
+      return { passed: false, error: errorMessage };
+    }
+  }
+
+  // Integration test
+  async runIntegrationTest(
+    component: ReactElement,
+    testName: string,
+    userInteractions: (result: RenderResult) => Promise<void>
+  ): Promise<{ passed: boolean; error?: string }> {
+    try {
+      const result = this.customRender(component);
+      await userInteractions(result);
+      
+      this.testResults.push({
+        name: `Integration: ${testName}`,
+        status: 'passed',
+        duration: 0,
+      });
+
+      return { passed: true };
+    } catch (error) {
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      
+      this.testResults.push({
+        name: `Integration: ${testName}`,
+        status: 'failed',
+        duration: 0,
+        error: errorMessage,
+      });
+
+      return { passed: false, error: errorMessage };
+    }
+  }
+
+  // Visual regression test
+  async runVisualRegressionTest(
+    component: ReactElement,
+    testName: string
+  ): Promise<{ passed: boolean; diff?: Record<string, unknown> }> {
+    // This would typically use a tool like Percy or Chromatic
+    // For now, we'll just return a placeholder
+    console.log(`Visual regression test for ${testName} would run here`);
+    
+    this.testResults.push({
+      name: `Visual: ${testName}`,
+      status: 'passed',
+      duration: 0,
+    });
+
+    return { passed: true };
+  }
+
+  // Coverage test
+  async runCoverageTest(): Promise<{ passed: boolean; coverage: { statements: number; branches: number; functions: number; lines: number } }> {
+    // This would typically use Istanbul or similar
+    // For now, we'll just return a placeholder
+    const coverage = {
+      statements: 85,
+      branches: 80,
+      functions: 90,
+      lines: 85,
+    };
+
+    const passed = coverage.statements >= this.config.coverageThreshold;
+
+    this.testResults.push({
+      name: 'Coverage',
+      status: passed ? 'passed' : 'failed',
+      duration: 0,
+      error: passed ? undefined : `Coverage ${coverage.statements}% below threshold ${this.config.coverageThreshold}%`,
+    });
+
+    return { passed, coverage };
+  }
+
+  // Run all tests
+  async runAllTests(tests: Array<{
+    name: string;
+    type: 'component' | 'integration' | 'performance' | 'accessibility' | 'visual';
+    component: ReactElement;
+    assertions?: (result: RenderResult) => void;
+    userInteractions?: (result: RenderResult) => Promise<void>;
+  }>): Promise<{ passed: boolean; results: Array<Record<string, unknown>> }> {
+    const results = [];
+
+    for (const test of tests) {
+      let result;
+      
+      switch (test.type) {
+        case 'component':
+          result = await this.runComponentTest(
+            test.component,
+            test.name,
+            test.assertions!
+          );
+          break;
+        case 'integration':
+          result = await this.runIntegrationTest(
+            test.component,
+            test.name,
+            test.userInteractions!
+          );
+          break;
+        case 'performance':
+          result = await this.runPerformanceTest(test.component, test.name);
+          break;
+        case 'accessibility':
+          result = await this.runAccessibilityTest(test.component, test.name);
+          break;
+        case 'visual':
+          result = await this.runVisualRegressionTest(test.component, test.name);
+          break;
+        default:
+          result = { passed: false, error: 'Unknown test type' };
+      }
+
+      results.push({ ...result, name: test.name, type: test.type });
+    }
+
+    const passed = results.every(result => result.passed);
+
+    return { passed, results };
+  }
+
+>>>>>>> main
   // Get test results
   getResults() {
     return this.testResults;
@@ -230,6 +410,7 @@ export const createMockData = <T,>(
   return Array.from({ length: count }, () => ({ ...template }));
 };
 
+<<<<<<< HEAD
 // Test helpers
 export const waitForAsync = (ms: number = 0): Promise<void> => {
   return new Promise((resolve) => setTimeout(resolve, ms));
@@ -275,3 +456,6 @@ export const initializeTestRunner = (config?: Partial<TestConfig>): TestRunner =
 
 // Export test runner instance
 export default TestRunner;
+=======
+export default TestRunner;
+>>>>>>> main

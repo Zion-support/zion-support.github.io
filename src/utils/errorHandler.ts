@@ -6,62 +6,85 @@ export interface ErrorInfo {
   message: string;
   stack?: string;
   componentStack?: string;
-  timestamp: number;
-  url: string;
-  userAgent: string;
+  errorBoundary?: string;
+  errorBoundaryStack?: string;
+  errorId?: string;
+  timestamp?: string;
+  userAgent?: string;
+  url?: string;
+  userId?: string;
 }
 
 export class ErrorHandler {
   private static instance: ErrorHandler;
   private errorQueue: ErrorInfo[] = [];
+  private maxQueueSize = 100;
 
-  private constructor() {}
-
-  public static getInstance(): ErrorHandler {
+  static getInstance(): ErrorHandler {
     if (!ErrorHandler.instance) {
       ErrorHandler.instance = new ErrorHandler();
     }
     return ErrorHandler.instance;
   }
 
-  public logError(error: Error, errorInfo?: any): void {
+  /**
+   * Log an error
+   */
+  logError(error: Error, errorInfo?: Partial<ErrorInfo>): void {
     const errorData: ErrorInfo = {
       message: error.message,
       stack: error.stack,
-      componentStack: errorInfo?.componentStack,
-      timestamp: Date.now(),
-      url: typeof window !== 'undefined' ? window.location.href : '',
-      userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : '',
+      timestamp: new Date().toISOString(),
+      userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : undefined,
+      url: typeof window !== 'undefined' ? window.location.href : undefined,
+      ...errorInfo,
     };
 
+    // Add to queue
     this.errorQueue.push(errorData);
+    if (this.errorQueue.length > this.maxQueueSize) {
+      this.errorQueue.shift();
+    }
 
     // Log to console in development
     if (process.env.NODE_ENV === 'development') {
       console.error('Error logged:', errorData);
     }
 
-    // Send to error reporting service in production
-    if (process.env.NODE_ENV === 'production') {
-      this.sendToErrorService(errorData);
-    }
+    // Send to error reporting service
+    this.reportError(errorData);
   }
 
-  private async sendToErrorService(errorData: ErrorInfo): Promise<void> {
+  /**
+   * Report error to external service
+   */
+  private async reportError(errorData: ErrorInfo): Promise<void> {
     try {
-      // In a real application, you would send this to your error reporting service
-      // For now, we'll just log it
-      console.error('Error reported to service:', errorData);
-    } catch (err) {
-      console.error('Failed to send error to service:', err);
+      if (typeof window !== 'undefined' && 'fetch' in window) {
+        await fetch('/api/error-report', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(errorData),
+        });
+      }
+    } catch (reportError) {
+      console.error('Failed to report error:', reportError);
     }
   }
 
-  public getErrors(): ErrorInfo[] {
+  /**
+   * Get error queue
+   */
+  getErrorQueue(): ErrorInfo[] {
     return [...this.errorQueue];
   }
 
-  public clearErrors(): void {
+  /**
+   * Clear error queue
+   */
+  clearErrorQueue(): void {
     this.errorQueue = [];
   }
 }
