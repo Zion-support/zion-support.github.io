@@ -4,8 +4,22 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 
 const UltimateBusinessIntelligenceShowcase2025 = () => {
-  return null;
-  },
+  const [activeTab, setActiveTab] = useState('overview');
+
+  const content = [
+    {
+      id: 'ultimate-business-intelligence-revolution',
+      title: 'AI 2025: The Ultimate Business Intelligence Revolution',
+      description: 'Transform your enterprise with next-generation AI-powered business intelligence that delivers unprecedented insights and competitive advantage.',
+      url: '/blog/ai-2025-ultimate-business-intelligence-revolution-ultimate-breakthrough',
+      type: 'Blog Post',
+      category: 'blog',
+      metrics: {
+        roi: '30,000%',
+        savings: '$750B+',
+        accuracy: '99.99%',
+        speed: '5,000% faster'
+      },
       readingTime: '35 min read',
       featured: true,
       tags: ['AI Revolution', 'Business Intelligence', 'ROI', 'Fortune 500', '30,000% ROI']
@@ -45,7 +59,20 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
       tags: ['Implementation', 'Guide', '30,000% ROI', 'Roadmap', 'Best Practices']
     }
   ];
-  }
+
+  const tabs = [
+    { id: 'overview', label: 'Overview', icon: '📊' },
+    { id: 'case-studies', label: 'Case Studies', icon: '🏢' },
+    { id: 'resources', label: 'Resources', icon: '📚' }
+  ];
+
+  const filteredContent = activeTab === 'overview' 
+    ? content 
+    : content.filter(item => item.category === activeTab);
+
+  return (
+    <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
+      {/* Animated Background Effects */}
       <div className="absolute inset-0">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute top-3/4 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
@@ -62,132 +89,127 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
             </span>
             <span className="text-2xl">⚡</span>
           </div>
-
-          <h2 className="text-4xl md:text-6xl font-extrabold text-white mb-6">
-            <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-              AI 2025: The Ultimate Business Intelligence Revolution
-            </span>
-          </h2>
-          
-          <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
-            Discover the most comprehensive collection of AI-powered business intelligence resources, case studies, and implementation guides that deliver unprecedented ROI.
+          <h1 className="text-5xl md:text-6xl font-extrabold text-white mb-6">
+            The Ultimate Business Intelligence Showcase
+          </h1>
+          <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">
+            Discover the most comprehensive collection of AI-powered business intelligence
+            resources, case studies, and implementation guides for enterprise transformation.
           </p>
         </div>
 
-        {/* Filter Tabs */}
-        <div className="flex justify-center mb-12">
-          <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-2 border border-white/20">
-            {[
-              { id: 'all', label: 'All Content' },
-              { id: 'blog', label: 'Blog Posts' },
-              { id: 'case-study', label: 'Case Studies' },
-              { id: 'resource', label: 'Resources' }
-            ].map((filter) => (
-              <button
-                key={filter.id}
-                onClick={() => setActiveFilter(filter.id)}
-                className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${
-                  activeFilter === filter.id
-                    ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white'
-                    : 'text-gray-300 hover:text-white hover:bg-white/10'
-                }`}
-              >
-                {filter.label}
-              </button>
-            ))}
-          </div>
+        {/* Tab Navigation */}
+        <div className="flex flex-wrap justify-center gap-4 mb-12">
+          {tabs.map((tab) => (
+            <button
+              key={tab.id}
+              onClick={() => setActiveTab(tab.id)}
+              className={`flex items-center gap-2 px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                activeTab === tab.id
+                  ? 'bg-cyan-600 text-white shadow-lg'
+                  : 'bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white'
+              }`}
+            >
+              <span className="text-lg">{tab.icon}</span>
+              {tab.label}
+            </button>
+          ))}
         </div>
 
         {/* Content Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredContent.map((item, index) => (
-            <div key={item.id} className="group">
-              <div className="relative bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-white/40 transition-all duration-500 hover:scale-105 h-full">
+            <Link key={item.id} href={item.url} className="group">
+              <div className="relative bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-white/40 transition-all duration-500 hover:transform hover:scale-105 h-full">
                 {/* Card glow effect */}
-                <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 to-blue-600/20 opacity-0 group-hover:opacity-10 transition-all duration-500 rounded-2xl"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 opacity-0 group-hover:opacity-100 transition-all duration-500 rounded-2xl"></div>
                 
                 <div className="relative z-10">
-                  {/* Type & Featured Badge */}
-                  <div className="flex items-center justify-between mb-6">
-                    <span className="px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-sm font-bold rounded-full">
+                  {/* Type Badge */}
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="px-3 py-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-sm font-bold rounded-full">
                       {item.type}
                     </span>
                     {item.featured && (
-                      <span className="px-3 py-1 bg-red-500 text-white text-sm font-bold rounded-full">
-                        🔥 FEATURED
+                      <span className="px-3 py-1 bg-green-500 text-white text-sm font-bold rounded-full">
+                        FEATURED
                       </span>
                     )}
                   </div>
 
                   {/* Title */}
-                  <h3 className="text-xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors leading-tight">
+                  <h3 className="text-xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors line-clamp-2">
                     {item.title}
                   </h3>
 
                   {/* Description */}
-                  <p className="text-gray-300 mb-6 leading-relaxed">
+                  <p className="text-gray-300 mb-6 leading-relaxed line-clamp-3">
                     {item.description}
                   </p>
 
                   {/* Metrics */}
                   <div className="grid grid-cols-2 gap-4 mb-6">
-                    {Object.entries(item.metrics).map(([key, value]) => (
+                    {Object.entries(item.metrics).slice(0, 4).map(([key, value]) => (
                       <div key={key} className="text-center">
-                        <div className="text-lg font-bold text-cyan-400">{value}</div>
-                        <div className="text-gray-400 text-xs capitalize">{key.replace(/([A-Z])/g, ' $1').trim()}</div>
+                        <div className="text-lg font-bold text-cyan-400">
+                          {value}
+                        </div>
+                        <div className="text-xs text-gray-400 capitalize">
+                          {key.replace(/([A-Z])/g, ' $1').trim()}
+                        </div>
                       </div>
                     ))}
                   </div>
 
                   {/* Tags */}
                   <div className="flex flex-wrap gap-2 mb-6">
-                    {item?.tags.slice(0, 3).map((tag) => (
+                    {item.tags.slice(0, 3).map((tag) => (
                       <span key={tag} className="px-2 py-1 bg-white/10 text-gray-300 text-xs rounded-full">
                         {tag}
                       </span>
                     ))}
                   </div>
 
-                  {/* CTA */}
+                  {/* Reading Time & CTA */}
                   <div className="flex items-center justify-between">
-                    <Link
-                      href={item.url}
-                      className="group/btn flex items-center gap-2 text-cyan-400 font-semibold hover:text-white transition-colors"
-                    >
-                      <span>Read Full Article</span>
-                      <span className="group-hover/btn:translate-x-1 transition-transform">→</span>
-                    </Link>
-                    <span className="text-gray-400 text-sm">{item.readingTime}</span>
+                    <span className="text-sm text-gray-400">
+                      ⏱️ {item.readingTime}
+                    </span>
+                    <div className="flex items-center gap-2 text-cyan-400 font-semibold group-hover:text-white transition-colors">
+                      <span>Read More</span>
+                      <span className="group-hover:translate-x-1 transition-transform">→</span>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
 
-        {/* Call-to-Action Section */}
-        <div className="text-center bg-white/5 backdrop-blur-lg rounded-3xl p-12 border border-white/20">
-          <h3 className="text-4xl font-bold text-white mb-6">
-            Ready to Transform Your Business Intelligence?
-          </h3>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Join 500+ enterprises achieving unprecedented business intelligence transformation with AI-powered analytics and insights.
-          </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-            <a
-              href="tel:+13024640950"
-              className="group flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl"
-            >
-              <span className="text-xl">📞</span>
-              <span>Call +1 302 464 0950</span>
-            </a>
-            <a
-              href="mailto:kleber@ziontechgroup.com"
-              className="group flex items-center gap-3 bg-white/10 hover:bg-white/20 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 border border-white/30"
-            >
-              <span className="text-xl">📧</span>
-              <span>Get Expert Consultation</span>
-            </a>
+        {/* Call to Action */}
+        <div className="text-center mt-16">
+          <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+            <h3 className="text-2xl font-bold text-white mb-4">
+              Ready to Transform Your Business Intelligence?
+            </h3>
+            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+              Get personalized guidance and implementation support from our team of
+              AI and business intelligence experts.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/contact"
+                className="px-8 py-3 bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-700 hover:to-blue-700 transition-all duration-300"
+              >
+                Get Expert Consultation
+              </Link>
+              <Link
+                href="/resources"
+                className="px-8 py-3 border-2 border-white/20 text-white font-semibold rounded-lg hover:border-white/40 hover:bg-white/5 transition-all duration-300"
+              >
+                View All Resources
+              </Link>
+            </div>
           </div>
         </div>
       </div>
