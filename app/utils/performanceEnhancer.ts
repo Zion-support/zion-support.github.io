@@ -317,4 +317,29 @@ export const initializePerformanceMonitoring = () => {
   };
 };
 
+// Collect comprehensive performance metrics
+export const collectPerformanceMetrics = () => {
+  if (typeof window === 'undefined' || !('performance' in window)) {
+    return null;
+  }
+
+  const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+  const paint = performance.getEntriesByType('paint');
+  
+  const firstPaint = paint.find(entry => entry.name === 'first-paint');
+  const firstContentfulPaint = paint.find(entry => entry.name === 'first-contentful-paint');
+
+  return {
+    navigation: {
+      totalTime: navigation?.loadEventEnd || 0,
+      domContentLoaded: navigation?.domContentLoadedEventEnd || 0,
+      domInteractive: navigation?.domInteractive || 0,
+    },
+    paint: {
+      firstPaint: firstPaint?.startTime || 0,
+      firstContentfulPaint: firstContentfulPaint?.startTime || 0,
+    },
+  };
+};
+
 export default PerformanceMonitor;

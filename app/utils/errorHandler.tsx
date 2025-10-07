@@ -284,8 +284,8 @@ export class ErrorHandler {
         },
         body: JSON.stringify(error),
       });
-    } catch (err) {
-      console.error('Failed to log error to network:', err);
+    } catch {
+      console.error('Failed to log error to network');
     }
   }
 
