@@ -40,6 +40,12 @@ async function handler(req, res) {
       // File doesn't exist or is invalid, use empty array
     }
 
+    // Check if email already exists
+    if (existing.some(sub => sub.email === email)) {
+      res.statusCode = 200;
+      res.json({ success: true, message: 'Already subscribed' });
+      return;
+    }
     existing.push({
       email,
       name,
