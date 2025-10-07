@@ -1,57 +1,65 @@
-'use client';
-
 import React, { useEffect, useState } from 'react';
-import { Cpu, Zap, Clock } from 'lucide-react';
+import { BarChart3, Zap, Clock } from 'lucide-react';
 
 interface PerformanceMetrics {
-  fcp: number;
-  lcp?: number;
-  fid?: number;
-  cls?: number;
-  ttfb?: number;
-  loadTime?: number;
-  renderTime?: number;
-  memoryUsage?: number;
+  loadTime: number;
+  renderTime: number;
+  memoryUsage: number;
 }
 
-export default function PerformanceMonitor() {
+const PerformanceMonitor: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    if (typeof window === 'undefined') return;
+    // Only show in development
+    if (process.env.NODE_ENV !== 'development') return;
 
-    const observer = new PerformanceObserver(list => {
-      const entries = list.getEntries();
-      entries.forEach(entry => {
-        if (entry.entryType === 'paint') {
-          if (entry.name === 'first-contentful-paint') {
-            const newMetrics = { fcp: entry.startTime };
-            setMetrics(newMetrics);
-          }
-        }
+    const measurePerformance = () => {
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      const paint = performance.getEntriesByType('paint');
+      
+      const loadTime = navigation ? navigation.loadEventEnd - navigation.loadEventStart : 0;
+      const renderTime = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0;
+      
+      // Memory usage (if available)
+      const memory = (performance as any).memory;
+      const memoryUsage = memory ? Math.round(memory.usedJSHeapSize / 1024 / 1024) : 0;
+
+      setMetrics({
+        loadTime: Math.round(loadTime),
+        renderTime: Math.round(renderTime),
+        memoryUsage
       });
-    });
+    };
 
-    observer.observe({
-      entryTypes: [
-        'paint',
-        'largest-contentful-paint',
-        'first-input',
-        'layout-shift',
-      ],
-    });
+    // Measure after page load
+    if (document.readyState === 'complete') {
+      measurePerformance();
+    } else {
+      window.addEventListener('load', measurePerformance);
+    }
 
-    return () => observer.disconnect();
+    // Toggle visibility with Ctrl+Shift+P
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.ctrlKey && e.shiftKey && e.key === 'P') {
+        setIsVisible(prev => !prev);
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => {
+      window.removeEventListener('load', measurePerformance);
+      window.removeEventListener('keydown', handleKeyDown);
+    };
   }, []);
 
-  if (process.env.NODE_ENV !== 'development' || !metrics) {
-    return null;
-  }
+  if (!isVisible || !metrics) return null;
 
   return (
     <div className="fixed bottom-4 right-4 bg-black bg-opacity-90 text-white p-4 rounded-lg shadow-lg z-50 text-sm font-mono">
       <div className="flex items-center gap-2 mb-2">
-        <Cpu className="w-4 h-4" />
+        <BarChart3 className="w-4 h-4" />
         <span className="font-bold">Performance Monitor</span>
       </div>
       <div className="space-y-1">
@@ -64,7 +72,7 @@ export default function PerformanceMonitor() {
           <span>Render: {metrics.renderTime}ms</span>
         </div>
         <div className="flex items-center gap-2">
-          <Cpu className="w-3 h-3" />
+          <BarChart3 className="w-3 h-3" />
           <span>Memory: {metrics.memoryUsage}MB</span>
         </div>
       </div>
@@ -73,4 +81,6 @@ export default function PerformanceMonitor() {
       </div>
     </div>
   );
-}
+};
+
+export default PerformanceMonitor;
