@@ -45,7 +45,7 @@
   },
   "ignorePatterns": [
     "utils/accessibilityUtils.ts",
-    "utils/bannerRotationSystem.ts", 
+    "utils/bannerRotationSystem.ts",
     "utils/comprehensiveOptimizer.ts",
     "utils/performanceUtils.ts",
     "utils/seoUtils.ts",

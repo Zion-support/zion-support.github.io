@@ -197,4 +197,4 @@ export default function November2026SyntheticConsciousnessBanner() {
       </div>
     </section>
   );
-  }
+}

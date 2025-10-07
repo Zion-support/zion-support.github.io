@@ -9,7 +9,7 @@ async function handler(req, res) {
   }
 
   const { amount, currency = 'usd' } = req.body || {};
-  
+
   if (!amount) {
     res.statusCode = 400;
     res.json({ error: 'Amount is required' });
@@ -21,7 +21,7 @@ async function handler(req, res) {
       id: 'pi_' + Date.now(),
       amount: Math.round(amount * 100), // Convert to cents
       currency,
-      status: 'requires_payment_method'
+      status: 'requires_payment_method',
     };
 
     res.statusCode = 200;

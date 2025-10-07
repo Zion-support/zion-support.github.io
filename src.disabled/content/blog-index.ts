@@ -9,6 +9,5 @@ export const defaultBlogIndexConfig: BlogIndexConfig = {
 };
 
 export default {
-  defaultBlogIndexConfig
-
+  defaultBlogIndexConfig,
 };

@@ -111,4 +111,4 @@ export default function July2026UltimateAutonomousEnterpriseBanner() {
       </div>
     </section>
   );
-  }
+}

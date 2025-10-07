@@ -5,19 +5,21 @@ interface October2025LatestBreakthroughBannerProps {
   children?: React.ReactNode;
 }
 
-const October2025LatestBreakthroughBanner: React.FC<October2025LatestBreakthroughBannerProps> = ({ 
-  className = '', 
-  children 
-}) => {
+const October2025LatestBreakthroughBanner: React.FC<
+  October2025LatestBreakthroughBannerProps
+> = ({ className = '', children }) => {
   return (
-    <div className={`october2025latestbreakthroughbanner-component ${className}`}>
+    <div
+      className={`october2025latestbreakthroughbanner-component ${className}`}
+    >
       {children || (
-        <div className="p-4 text-center text-gray-600">
-          <h3 className="text-lg font-semibold mb-2">October2025LatestBreakthroughBanner</h3>
+        <div className='p-4 text-center text-gray-600'>
+          <h3 className='text-lg font-semibold mb-2'>
+            October2025LatestBreakthroughBanner
+          </h3>
           <p>Component placeholder - implementation needed</p>
         </div>
       )}
-
     </div>
   );
 };

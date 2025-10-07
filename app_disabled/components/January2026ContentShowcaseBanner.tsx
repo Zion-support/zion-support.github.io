@@ -223,4 +223,4 @@ export default function January2026ContentShowcaseBanner() {
       </div>
     </div>
   );
-  }
+}

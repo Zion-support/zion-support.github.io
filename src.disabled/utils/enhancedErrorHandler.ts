@@ -37,7 +37,7 @@ class EnhancedErrorHandler {
     if (typeof window === 'undefined') return;
 
     //Handle unhandled errors
-    window.addEventListener('error', (event) => {
+    window.addEventListener('error', event => {
       this.handleError(event.error, {
         component: 'global',
         action: 'unhandled',
@@ -50,7 +50,7 @@ class EnhancedErrorHandler {
     });
 
     //Handle unhandled promise rejections
-    window.addEventListener('unhandledrejection', (event) => {
+    window.addEventListener('unhandledrejection', event => {
       this.handleError(new Error(event.reason), {
         component: 'global',
         action: 'unhandled-promise',
@@ -78,7 +78,7 @@ class EnhancedErrorHandler {
     };
 
     const existingError = this.errors.get(errorId);
-    
+
     if (existingError) {
       //Update existing error
       existingError.occurrences += 1;
@@ -90,9 +90,9 @@ class EnhancedErrorHandler {
         id: errorId,
         message: error.message,
         context: fullContext,
-  resolved: false,
+        resolved: false,
         occurrences: 1,
-  firstSeen: now,
+        firstSeen: now,
         lastSeen: now,
       };
 
@@ -113,9 +113,14 @@ class EnhancedErrorHandler {
     }
   }
 
-  private generateErrorId(error: Error, context: Partial<ErrorContext>): string {
+  private generateErrorId(
+    error: Error,
+    context: Partial<ErrorContext>
+  ): string {
     const key = `${error.message}-${context.component}-${context.action}`;
-    return btoa(key).replace(/[^a-zA-Z0-9]/g, '').substring(0, 16);
+    return btoa(key)
+      .replace(/[^a-zA-Z0-9]/g, '')
+      .substring(0, 16);
   }
 
   private async reportError(errorId: string): Promise<void> {
@@ -138,12 +143,12 @@ class EnhancedErrorHandler {
   private cleanupOldErrors(): void {
     const errors = Array.from(this.errors.values());
     errors.sort((a, b) => b.lastSeen - a.lastSeen);
-    
+
     // Keep only the most recent errors
     const errorsToKeep = errors.slice(0, this.maxErrors);
     this.errors.clear();
-    
-    errorsToKeep.forEach((error) => {
+
+    errorsToKeep.forEach(error => {
       this.errors.set(error.id, error);
     });
   }
@@ -170,10 +175,13 @@ class EnhancedErrorHandler {
     bySeverity: Record<string, number>;
   } {
     const errors = this.getErrors();
-    const bySeverity = errors.reduce((acc, error) => {
-      acc[error.context.severity] = (acc[error.context.severity] || 0) + 1;
-      return acc;
-    }, {} as Record<string, number>);
+    const bySeverity = errors.reduce(
+      (acc, error) => {
+        acc[error.context.severity] = (acc[error.context.severity] || 0) + 1;
+        return acc;
+      },
+      {} as Record<string, number>
+    );
 
     return {
       total: errors.length,

@@ -6,11 +6,17 @@ console.log('🔧 Fixing remaining TypeScript errors...');
 
 // Fix App.tsx - remove duplicate ErrorBoundary
 let appContent = fs.readFileSync('App.tsx', 'utf8');
-appContent = appContent.replace(/const ErrorBoundary = memo\(\(\) => \([\s\S]*?\)\);/g, '');
+appContent = appContent.replace(
+  /const ErrorBoundary = memo\(\(\) => \([\s\S]*?\)\);/g,
+  ''
+);
 fs.writeFileSync('App.tsx', appContent);
 
 // Fix usePerformance.ts - fix import
-let usePerformanceContent = fs.readFileSync('src/hooks/usePerformance.ts', 'utf8');
+let usePerformanceContent = fs.readFileSync(
+  'src/hooks/usePerformance.ts',
+  'utf8'
+);
 usePerformanceContent = usePerformanceContent.replace(
   "import { performanceOptimizer } from '../utils/performanceOptimizer';",
   "import performanceOptimizer from '../utils/performanceOptimizer';"

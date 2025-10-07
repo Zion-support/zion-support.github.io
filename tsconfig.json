@@ -2,11 +2,7 @@
   "compilerOptions": {
     "target": "ES2020",
     "useDefineForClassFields": true,
-    "lib": [
-      "ES2020",
-      "DOM",
-      "DOM.Iterable"
-    ],
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "module": "ESNext",
     "skipLibCheck": true,
     "allowImportingTsExtensions": false,
@@ -25,21 +21,11 @@
     "moduleResolution": "bundler",
     "baseUrl": ".",
     "paths": {
-      "@/*": [
-        "src/*"
-      ],
-      "@/components/*": [
-        "src/components/*"
-      ],
-      "@/pages/*": [
-        "src/pages/*"
-      ],
-      "@/utils/*": [
-        "src/utils/*"
-      ],
-      "@/types/*": [
-        "src/types/*"
-      ]
+      "@/*": ["src/*"],
+      "@/components/*": ["src/components/*"],
+      "@/pages/*": ["src/pages/*"],
+      "@/utils/*": ["src/utils/*"],
+      "@/types/*": ["src/types/*"]
     },
     "allowJs": true,
     "forceConsistentCasingInFileNames": true,
@@ -54,11 +40,7 @@
     "allowUnreachableCode": false,
     "verbatimModuleSyntax": false
   },
-  "include": [
-    "app/**/*",
-    "App.tsx",
-    "components/**/*"
-  ],
+  "include": ["app/**/*", "App.tsx", "components/**/*"],
   "exclude": [
     "node_modules",
     "dist",

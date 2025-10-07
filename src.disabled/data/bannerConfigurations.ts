@@ -9,5 +9,5 @@ export const defaultbannerConfigurationsConfig: bannerConfigurationsConfig = {
 };
 
 export default {
-  defaultbannerConfigurationsConfig
+  defaultbannerConfigurationsConfig,
 };

@@ -253,4 +253,4 @@ export default function Ultimate2026ContentShowcaseBanner() {
       </div>
     </section>
   );
-  }
+}

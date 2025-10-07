@@ -12,9 +12,9 @@ interface AnalyticsTrackerProps {
   trackingId?: string;
 }
 
-const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({ 
-  children, 
-  trackingId = 'G-XXXXXXXXXX' 
+const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
+  children,
+  trackingId = 'G-XXXXXXXXXX',
 }) => {
   useEffect(() => {
     // Initialize Google Analytics
@@ -65,7 +65,9 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
     const trackPerformance = () => {
       if ('performance' in window) {
         window.addEventListener('load', () => {
-          const timing = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+          const timing = performance.getEntriesByType(
+            'navigation'
+          )[0] as PerformanceNavigationTiming;
           if (timing) {
             const loadTime = timing.loadEventEnd - timing.fetchStart;
             trackEvent({
@@ -82,12 +84,12 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
     // Track user interactions
     const trackInteractions = () => {
       // Track button clicks
-      document.addEventListener('click', (event) => {
+      document.addEventListener('click', event => {
         const target = event.target as HTMLElement;
         if (target.matches('button, a[href]')) {
           const action = target.textContent?.trim() || 'click';
           const category = target.closest('section')?.className || 'General';
-          
+
           trackEvent({
             action: 'click',
             category: category,
@@ -97,10 +99,10 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
       });
 
       // Track form submissions
-      document.addEventListener('submit', (event) => {
+      document.addEventListener('submit', event => {
         const form = event.target as HTMLFormElement;
         const formName = form.name || form.id || 'unknown_form';
-        
+
         trackEvent({
           action: 'form_submit',
           category: 'Forms',
@@ -112,12 +114,13 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
       let maxScroll = 0;
       const trackScrollDepth = () => {
         const scrollPercent = Math.round(
-          (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100
+          (window.scrollY / (document.body.scrollHeight - window.innerHeight)) *
+            100
         );
-        
+
         if (scrollPercent > maxScroll) {
           maxScroll = scrollPercent;
-          
+
           // Track milestone scroll depths
           if ([25, 50, 75, 90, 100].includes(scrollPercent)) {
             trackEvent({
@@ -142,9 +145,18 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
     trackPageView(window.location.pathname);
 
     // Expose tracking functions globally for manual tracking
-    (window as Window & { trackEvent?: typeof trackEvent; trackPageView?: typeof trackPageView }).trackEvent = trackEvent;
-    (window as Window & { trackEvent?: typeof trackEvent; trackPageView?: typeof trackPageView }).trackPageView = trackPageView;
-
+    (
+      window as Window & {
+        trackEvent?: typeof trackEvent;
+        trackPageView?: typeof trackPageView;
+      }
+    ).trackEvent = trackEvent;
+    (
+      window as Window & {
+        trackEvent?: typeof trackEvent;
+        trackPageView?: typeof trackPageView;
+      }
+    ).trackPageView = trackPageView;
   }, [trackingId]);
 
   return <>{children}</>;

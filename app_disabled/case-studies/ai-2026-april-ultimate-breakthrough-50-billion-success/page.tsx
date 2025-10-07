@@ -429,4 +429,4 @@ export default function April2026UniversalIntelligenceSuccessPage() {
       </section>
     </div>
   );
-  }
+}

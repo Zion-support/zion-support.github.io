@@ -1,7 +1,7 @@
 export default function handler(req, res) {
   const header = req.headers['accept-language'];
   let lang = 'en-US';
-  
+
   if (header) {
     const preferred = header.split(',')[0].toLowerCase();
     if (preferred.startsWith('es')) {
@@ -12,8 +12,11 @@ export default function handler(req, res) {
       lang = 'de-DE';
     }
   }
-  
-  res.setHeader('Set-Cookie', `zion_language=${lang}; Path=/; Max-Age=31536000`);
+
+  res.setHeader(
+    'Set-Cookie',
+    `zion_language=${lang}; Path=/; Max-Age=31536000`
+  );
   res.statusCode = 200;
   res.json({ language: lang });
 }

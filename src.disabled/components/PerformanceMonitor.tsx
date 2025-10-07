@@ -4,17 +4,20 @@ const PerformanceMonitor: React.FC = () => {
   useEffect(() => {
     // Basic performance monitoring
     if (typeof window !== 'undefined' && 'performance' in window) {
-      const observer = new PerformanceObserver((list) => {
+      const observer = new PerformanceObserver(list => {
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'navigation') {
             const navEntry = entry as PerformanceNavigationTiming;
-            console.log('Page load time:', navEntry.loadEventEnd - navEntry.loadEventStart);
+            console.log(
+              'Page load time:',
+              navEntry.loadEventEnd - navEntry.loadEventStart
+            );
           }
         }
       });
-      
+
       observer.observe({ entryTypes: ['navigation'] });
-      
+
       return () => observer.disconnect();
     }
     return undefined;

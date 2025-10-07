@@ -19,7 +19,7 @@ const App = () => {
       // Preload critical images
       const preloadImages = [
         'https://ziontechgroup.com/og-image.jpg',
-        'https://ziontechgroup.com/logo.png'
+        'https://ziontechgroup.com/logo.png',
       ];
       preloadImages.forEach(src => {
         const img = new Image();
@@ -28,7 +28,9 @@ const App = () => {
       // Add performance monitoring
       if ('performance' in window) {
         window.addEventListener('load', () => {
-          const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+          const perfData = performance.getEntriesByType(
+            'navigation'
+          )[0] as PerformanceNavigationTiming;
           if (perfData) {
             const performanceMetrics = {
               domContentLoaded: perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart,

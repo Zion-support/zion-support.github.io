@@ -13,6 +13,6 @@ const EnhancedFooter = React.memo(function EnhancedFooter({
       <p className='text-blue-600'>This component is under development.</p>
     </div>
   );
-  });
+});
 
 export default EnhancedFooter;

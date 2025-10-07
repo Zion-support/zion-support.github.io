@@ -296,6 +296,6 @@ const ComprehensiveContentShowcase = () => {
       </div>
     </section>
   );
-  };
+};
 
 export default ComprehensiveContentShowcase;

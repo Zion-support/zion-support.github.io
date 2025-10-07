@@ -163,4 +163,4 @@ export default function February2026MegaBreakthroughBanner() {
       </div>
     </section>
   );
-  }
+}

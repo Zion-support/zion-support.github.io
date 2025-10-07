@@ -9,6 +9,5 @@ export const defaultinsightsConfig: insightsConfig = {
 };
 
 export default {
-  defaultinsightsConfig
+  defaultinsightsConfig,
 };
-

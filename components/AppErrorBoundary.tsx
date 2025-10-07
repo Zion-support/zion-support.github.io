@@ -56,7 +56,7 @@ function ErrorFallback({ error, resetError }: ErrorFallbackProps) {
       </div>
     </div>
   );
-  }
+}
 
 interface AppErrorBoundaryProps {
   children: ReactNode;
@@ -67,7 +67,10 @@ interface AppErrorBoundaryState {
   error: Error | undefined;
 }
 
-export class AppErrorBoundary extends Component<AppErrorBoundaryProps, AppErrorBoundaryState> {
+export class AppErrorBoundary extends Component<
+  AppErrorBoundaryProps,
+  AppErrorBoundaryState
+> {
   constructor(props: AppErrorBoundaryProps) {
     super(props);
     this.state = { hasError: false, error: undefined };
@@ -88,7 +91,9 @@ export class AppErrorBoundary extends Component<AppErrorBoundaryProps, AppErrorB
 
   override render() {
     if (this.state.hasError && this.state.error) {
-      return <ErrorFallback error={this.state.error} resetError={this.resetError} />;
+      return (
+        <ErrorFallback error={this.state.error} resetError={this.resetError} />
+      );
     }
 
     return this.props.children;

@@ -4,7 +4,9 @@ interface AccessibilityEnhancerProps {
   children: React.ReactNode;
 }
 
-const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
+const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
+  children,
+}) => {
   useEffect(() => {
     // Add skip links
     const addSkipLinks = () => {
@@ -20,7 +22,10 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
             Skip to navigation
           </a>
         `;
-        document.body.insertBefore(skipLinksContainer, document.body.firstChild);
+        document.body.insertBefore(
+          skipLinksContainer,
+          document.body.firstChild
+        );
       }
     };
 
@@ -87,11 +92,13 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
 
     // Add keyboard navigation support
     const addKeyboardNavigation = () => {
-      document.addEventListener('keydown', (e) => {
+      document.addEventListener('keydown', e => {
         // Skip to main content with Alt + M
         if (e.altKey && e.key === 'm') {
           e.preventDefault();
-          const main = document.querySelector('main') || document.querySelector('#main-content');
+          const main =
+            document.querySelector('main') ||
+            document.querySelector('#main-content');
           if (main) {
             main.focus();
             main.scrollIntoView({ behavior: 'smooth' });

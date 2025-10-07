@@ -9,8 +9,17 @@ const analytics = {
   trackPerformance: (name: string, value: number, unit: string = 'ms') => {
     console.log(`Performance: ${name} = ${value}${unit}`);
   },
-  track: (event: string, category: string, action: string, label?: string, value?: number) => {
-    console.log(`Analytics: ${event} - ${category} - ${action}`, { label, value });
+  track: (
+    event: string,
+    category: string,
+    action: string,
+    label?: string,
+    value?: number
+  ) => {
+    console.log(`Analytics: ${event} - ${category} - ${action}`, {
+      label,
+      value,
+    });
   },
 };
 
@@ -60,15 +69,17 @@ export function usePerformance(
   // Track component mount time
   useEffect(() => {
     mountStartTime.current = performance.now();
-    
+
     return () => {
       const mountTime = performance.now() - mountStartTime.current;
       metricsRef.current.componentMountTime = mountTime;
-      
+
       if (logToConsole) {
-        console.log(`Component ${componentName} mount time: ${mountTime.toFixed(2)}ms`);
+        console.log(
+          `Component ${componentName} mount time: ${mountTime.toFixed(2)}ms`
+        );
       }
-      
+
       analytics.trackPerformance(`${componentName}_mount`, mountTime);
     };
   }, [componentName, logToConsole]);
@@ -79,12 +90,18 @@ export function usePerformance(
       const memory = (performance as any).memory;
       if (memory) {
         metricsRef.current.memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // MB
-        
+
         if (logToConsole) {
-          console.log(`Component ${componentName} memory usage: ${metricsRef.current.memoryUsage.toFixed(2)}MB`);
+          console.log(
+            `Component ${componentName} memory usage: ${metricsRef.current.memoryUsage.toFixed(2)}MB`
+          );
         }
-        
-        analytics.trackPerformance(`${componentName}_memory`, metricsRef.current.memoryUsage, 'MB');
+
+        analytics.trackPerformance(
+          `${componentName}_memory`,
+          metricsRef.current.memoryUsage,
+          'MB'
+        );
       }
     }
   }, [componentName, trackMemoryUsage, logToConsole]);
@@ -92,33 +109,46 @@ export function usePerformance(
   const trackRender = useCallback(() => {
     if (trackRenderTime) {
       renderStartTime.current = performance.now();
-      
+
       // Use requestAnimationFrame to measure actual render time
       requestAnimationFrame(() => {
         const renderTime = performance.now() - renderStartTime.current;
         metricsRef.current.renderTime = renderTime;
-        
+
         if (logToConsole) {
-          console.log(`Component ${componentName} render time: ${renderTime.toFixed(2)}ms`);
+          console.log(
+            `Component ${componentName} render time: ${renderTime.toFixed(2)}ms`
+          );
         }
-        
+
         analytics.trackPerformance(`${componentName}_render`, renderTime);
       });
     }
   }, [componentName, trackRenderTime, logToConsole]);
 
-  const trackInteraction = useCallback((action: string) => {
-    if (trackInteractions) {
-      const interactionTime = performance.now();
-      metricsRef.current.interactionTime = interactionTime;
-      
-      if (logToConsole) {
-        console.log(`Component ${componentName} interaction: ${action} at ${interactionTime.toFixed(2)}ms`);
+  const trackInteraction = useCallback(
+    (action: string) => {
+      if (trackInteractions) {
+        const interactionTime = performance.now();
+        metricsRef.current.interactionTime = interactionTime;
+
+        if (logToConsole) {
+          console.log(
+            `Component ${componentName} interaction: ${action} at ${interactionTime.toFixed(2)}ms`
+          );
+        }
+
+        analytics.track(
+          'interaction',
+          componentName,
+          action,
+          undefined,
+          interactionTime
+        );
       }
-      
-      analytics.track('interaction', componentName, action, undefined, interactionTime);
-    }
-  }, [componentName, trackInteractions, logToConsole]);
+    },
+    [componentName, trackInteractions, logToConsole]
+  );
 
   const getPerformanceReport = useCallback((): PerformanceMetrics => {
     return { ...metricsRef.current };
@@ -138,26 +168,26 @@ export function usePerformance(
 export function usePagePerformance(pageName: string) {
   useEffect(() => {
     const startTime = performance.now();
-    
+
     // Track page load metrics
     const trackPageLoad = () => {
       const loadTime = performance.now() - startTime;
-      
+
       analytics.trackPerformance(`${pageName}_load`, loadTime);
       analytics.track('page_load', pageName, 'loaded', undefined, loadTime);
-      
+
       console.log(`Page ${pageName} loaded in ${loadTime.toFixed(2)}ms`);
     };
 
-  // Track when page is fully loaded
-  if (document.readyState === 'complete') {
-    trackPageLoad();
-  } else {
-    window.addEventListener('load', trackPageLoad);
-    return () => window.removeEventListener('load', trackPageLoad);
-  }
-  
-  return undefined;
+    // Track when page is fully loaded
+    if (document.readyState === 'complete') {
+      trackPageLoad();
+    } else {
+      window.addEventListener('load', trackPageLoad);
+      return () => window.removeEventListener('load', trackPageLoad);
+    }
+
+    return undefined;
   }, [pageName]);
 }
 
@@ -165,12 +195,23 @@ export function usePagePerformance(pageName: string) {
  * Hook for monitoring API call performance
  */
 export function useAPIPerformance() {
-  const trackAPICall = useCallback((endpoint: string, duration: number, success: boolean) => {
-    analytics.trackPerformance(`api_${endpoint}`, duration);
-    analytics.track('api_call', endpoint, success ? 'success' : 'error', undefined, duration);
-    
-    console.log(`API ${endpoint}: ${duration.toFixed(2)}ms (${success ? 'success' : 'error'})`);
-  }, []);
+  const trackAPICall = useCallback(
+    (endpoint: string, duration: number, success: boolean) => {
+      analytics.trackPerformance(`api_${endpoint}`, duration);
+      analytics.track(
+        'api_call',
+        endpoint,
+        success ? 'success' : 'error',
+        undefined,
+        duration
+      );
+
+      console.log(
+        `API ${endpoint}: ${duration.toFixed(2)}ms (${success ? 'success' : 'error'})`
+      );
+    },
+    []
+  );
 
   return { trackAPICall };
 }

@@ -3,7 +3,7 @@
 /**
  * Targeted Latest Merge - Focuses on specific new branches
  * This script targets only the specific new branches we identified
- */import { execSync } from 'child_process';
+ */ import { execSync } from 'child_process';
 import fs from 'fs';
 
 console.log('🚀 Starting Targeted Latest Merge Process...\n');
@@ -171,11 +171,9 @@ const results = {
   failed: [],
   summary: {
     total: 0,
-  successful: 0,
+    successful: 0,
     failed: 0,
-    methods: { direct: 0,
-  theirs: 0, ours: 0,
-  manual: 0, failed: 0 },
+    methods: { direct: 0, theirs: 0, ours: 0, manual: 0, failed: 0 },
   },
 };
 

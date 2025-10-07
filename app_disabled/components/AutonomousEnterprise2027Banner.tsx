@@ -143,4 +143,4 @@ export default function AutonomousEnterprise2027Banner() {
       <div className='absolute bottom-4 left-4 w-16 h-16 bg-gradient-to-r from-teal-500/20 to-cyan-500/20 rounded-full blur-xl'></div>
     </div>
   );
-  }
+}

@@ -227,4 +227,4 @@ export default function Ultimate2026BreakthroughBanner() {
       </div>
     </section>
   );
-  }
+}

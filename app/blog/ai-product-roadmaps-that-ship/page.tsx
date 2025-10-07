@@ -3,26 +3,27 @@ import Link from 'next/link';
 
 export default function AIProductRoadmapsThatShip() {
   return (
-    <div className="min-h-screen">
-      <nav className="mb-6">
-        <Link href="/blog" className="text-blue-600 hover:underline">
+    <div className='min-h-screen'>
+      <nav className='mb-6'>
+        <Link href='/blog' className='text-blue-600 hover:underline'>
           ← Back to Blog
         </Link>
       </nav>
-      <article className="prose prose-lg max-w-none">
+      <article className='prose prose-lg max-w-none'>
         <h1>AI Product Roadmaps That Actually Ship</h1>
-        <p className="text-gray-500">
+        <p className='text-gray-500'>
           Published: 2025-09-11 • Tags: Product AI Strategy
         </p>
         <p>
           Great AI products prioritize narrow wins, measurable outcomes and
-          ruthless scope. Here's a roadmap pattern that consistently ships
-          value while reducing risk.
+          ruthless scope. Here's a roadmap pattern that consistently ships value
+          while reducing risk.
         </p>
         <h2>Roadmap pattern</h2>
         <ul>
           <li>
-            Start with a single high-signal workflow and constrain inputs/outputs
+            Start with a single high-signal workflow and constrain
+            inputs/outputs
           </li>
           <li>
             Instrument everything: adoption accuracy latency and escape hatches
@@ -36,22 +37,16 @@ export default function AIProductRoadmapsThatShip() {
         </ul>
         <h2>Milestones that matter</h2>
         <ul>
-          <li>
-            M0: Manual workflow baseline and success criteria
-          </li>
-          <li>
-            M1: Assisted mode with human-in-the-loop and quality gates
-          </li>
-          <li>
-            M2: Partial automation with fallbacks and cost controls
-          </li>
+          <li>M0: Manual workflow baseline and success criteria</li>
+          <li>M1: Assisted mode with human-in-the-loop and quality gates</li>
+          <li>M2: Partial automation with fallbacks and cost controls</li>
           <li>
             M3: Full automation for narrow paths continuous evals for drift
           </li>
         </ul>
         <p>
           Want a roadmap tailored to your product?{' '}
-          <Link href="/contact" className="text-blue-600 hover:underline">
+          <Link href='/contact' className='text-blue-600 hover:underline'>
             Talk to us
           </Link>
           .

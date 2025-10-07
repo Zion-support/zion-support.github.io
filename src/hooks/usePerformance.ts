@@ -11,7 +11,7 @@ export const defaultusePerformanceConfig: usePerformanceConfig = {
 const usePerformance = () => {
   // Performance monitoring logic would go here
   return {
-    defaultusePerformanceConfig
+    defaultusePerformanceConfig,
   };
 };
 
