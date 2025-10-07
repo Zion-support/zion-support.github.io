@@ -214,23 +214,6 @@ export const lazyLoadImages = (): void => {
   document.querySelectorAll('img[data-src]').forEach((img) => {
     imageObserver.observe(img);
   });
-// Lazy load images
-export const lazyLoadImages = (): void => {
-  if (typeof window === 'undefined') return;
-
-  const images = document.querySelectorAll('img[data-src]');
-  const imageObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const img = entry.target as HTMLImageElement;
-        img.src = img.dataset['src'] || '';
-        img.removeAttribute('data-src');
-        imageObserver.unobserve(img);
-      }
-    });
-  });
-
-  images.forEach(img => imageObserver.observe(img));
 };
 
 // Preload critical resources
@@ -252,20 +235,6 @@ export const preloadCriticalResources = (): void => {
       link.type = resource.type;
     }
     if (resource.as === 'font') {
-  if (typeof window === 'undefined') return;
-
-  const criticalResources = [
-    '/fonts/main.woff2',
-    '/css/critical.css'
-  ];
-
-  criticalResources.forEach(resource => {
-    const link = document.createElement('link');
-    link.rel = 'preload';
-    link.href = resource;
-    link.as = resource.endsWith('.css') ? 'style' : 'font';
-    if (resource.endsWith('.woff2')) {
->>>>>>> cursor/fix-errors-and-merge-to-main-13eb
       link.crossOrigin = 'anonymous';
     }
     document.head.appendChild(link);
@@ -273,8 +242,6 @@ export const preloadCriticalResources = (): void => {
 };
 
 // Scroll performance optimization
-// Optimize scroll performance
->>>>>>> cursor/fix-errors-and-merge-to-main-13eb
 export const optimizeScrollPerformance = (): void => {
   if (typeof window === 'undefined') return;
 
@@ -294,7 +261,6 @@ export const optimizeScrollPerformance = (): void => {
       (progressBar as HTMLElement).style.width = `${scrollPercent}%`;
     }
 
->>>>>>> cursor/fix-errors-and-merge-to-main-13eb
     ticking = false;
   };
 
@@ -316,9 +282,9 @@ export const performanceMonitor = {
     // Monitor Core Web Vitals
     if ('PerformanceObserver' in window) {
       const observer = new PerformanceObserver((list) => {
-      list.getEntries().forEach(entry => {
-        console.log('Performance metric:', entry.name, (entry as any).value);
-      });
+        list.getEntries().forEach(entry => {
+          console.log('Performance metric:', entry.name, (entry as any).value);
+        });
       });
       
       observer.observe({ entryTypes: ['measure', 'navigation', 'paint'] });
@@ -330,8 +296,8 @@ export const performanceMonitor = {
   }
 };
 
-// Collect performance metrics
-export const collectPerformanceMetrics = async (): Promise<any[]> => {
+// Collect performance metrics array
+export const collectPerformanceMetricsArray = async (): Promise<any[]> => {
   if (typeof window === 'undefined') return [];
 
   const metrics: any[] = [];
@@ -376,6 +342,6 @@ export default {
   optimizeScrollPerformance,
   performanceMonitor,
   collectPerformanceMetrics,
+  collectPerformanceMetricsArray,
   getMemoryUsage
->>>>>>> cursor/fix-errors-and-merge-to-main-13eb
 };

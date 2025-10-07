@@ -1,6 +1,5 @@
 import React, { Suspense, lazy } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
 
 // Lazy load components for better performance
 const ContentShowcase = lazy(() => import('./components/ContentShowcase'));
@@ -35,18 +34,12 @@ const HomePage: React.FC = () => {
                 Transform your enterprise with cutting-edge AI technology
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  to="/contact"
-                  className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
-                >
+                <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
                   Get Started
-                </Link>
-                <Link
-                  to="/services"
-                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
-                >
+                </button>
+                <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
                   Learn More
-                </Link>
+                </button>
               </div>
             </div>
           </div>
@@ -76,31 +69,9 @@ const HomePage: React.FC = () => {
               </Suspense>
             </section>
 
-          {/* Interactive AI ROI Calculator */}
-          <section className="my-16">
-            <Suspense fallback={<LoadingFallback height="h-64" />}>
-              <InteractiveAIROICalculator />
-            </Suspense>
-          </section>
-
-          {/* CTA Section */}
-          <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16 rounded-2xl text-center">
-            <div className="max-w-3xl mx-auto px-4">
-              <h2 className="text-4xl font-bold mb-6">
-                Ready to Transform Your Enterprise?
-              </h2>
-              <p className="text-xl mb-8">
-                Join hundreds of companies already achieving 300% ROI with our AI solutions.
-              </p>
-              <Link
-                to="/contact"
-                className="bg-white text-blue-600 hover:bg-gray-100 font-bold py-4 px-8 rounded-lg text-lg transition-colors duration-300 inline-block"
-              >
-                Start Your Transformation
-              </Link>
-            </div>
-          </section>
-        </main>
+        <Suspense fallback={<LoadingFallback height="h-64" />}>
+          <InteractiveContentShowcase2026 />
+        </Suspense>
       </div>
     </>
   );

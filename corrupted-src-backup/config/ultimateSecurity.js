@@ -56,5 +56,9 @@ module.exports = {
       max: 10,
     },
   },
+<<<<<<< HEAD:src/config/ultimateSecurity.js
+  timestamp: '2025-10-03T22:24:50.022Z'
+=======
   timestamp: '2025-10-06T04:49:10.507Z',
+>>>>>>> origin/main:corrupted-src-backup/config/ultimateSecurity.js
 };

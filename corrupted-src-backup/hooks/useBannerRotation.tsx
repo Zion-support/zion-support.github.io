@@ -1,3 +1,7 @@
+<<<<<<< HEAD:src/hooks/useBannerRotation.tsx
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main:corrupted-src-backup/hooks/useBannerRotation.tsx
 /**
  * React Hook for Dynamic Banner Rotation
  * Manages banner display tracking and rotation logic
@@ -236,4 +240,30 @@ export const useBannerABTest = (
     selectedVariation,
     trackVariationPerformance,
   };
+<<<<<<< HEAD:src/hooks/useBannerRotation.tsx
+=======
+import React from 'react';
+
+interface useBannerRotationProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const useBannerRotation: React.FC<useBannerRotationProps> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={`usebannerrotation-component ${className}`}>
+      {children || (
+        <div className="p-4 text-center text-gray-600">
+          <h3 className="text-lg font-semibold mb-2">useBannerRotation</h3>
+          <p>Component placeholder - implementation needed</p>
+        </div>
+      )}
+    </div>
+  );
+>>>>>>> cursor/fix-errors-and-merge-to-main-8d57
+=======
+>>>>>>> origin/main:corrupted-src-backup/hooks/useBannerRotation.tsx
 };

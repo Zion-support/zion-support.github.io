@@ -1,58 +1,88 @@
+/**
+ * Performance Optimizer Utility
+ * Comprehensive performance monitoring and optimization tools
+ */
+
+/**
+ * Web Vitals metrics tracking
+ */
+export interface WebVitalsMetrics {
+  FCP?: number; // First Contentful Paint
+  LCP?: number; // Largest Contentful Paint
+  FID?: number; // First Input Delay
+  CLS?: number; // Cumulative Layout Shift
+  TTFB?: number; // Time to First Byte
+  INP?: number; // Interaction to Next Paint
+  loadTime?: number; // Page load time
+  interactiveTime?: number; // Time to interactive
+}
+
+/**
+ * Performance budget checker
+ */
+interface PerformanceBudget {
+  maxBundleSize: number; // in KB
+  maxImageSize: number; // in KB
+  maxFirstLoad: number; // in ms
+  maxInteractive: number; // in ms
+}
+
+/**
+ * Performance Optimizer Class
+ */
 class PerformanceOptimizer {
   private static instance: PerformanceOptimizer;
-  private isInitialized = false;
+  private metrics: Map<string, number> = new Map();
 
-  static getInstance(): PerformanceOptimizer {
+  private constructor() {}
+
+  public static getInstance(): PerformanceOptimizer {
     if (!PerformanceOptimizer.instance) {
       PerformanceOptimizer.instance = new PerformanceOptimizer();
     }
     return PerformanceOptimizer.instance;
   }
 
-  init(): void {
-    if (this.isInitialized) return;
-
-    this.setupImageLazyLoading();
-    this.setupResourceHints();
-    this.setupPerformanceMonitoring();
-    this.optimizeAnimations();
-
-    this.isInitialized = true;
-  }
-
-  private setupImageLazyLoading(): void {
-    if ('IntersectionObserver' in window) {
-      const imageObserver = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const img = entry.target as HTMLImageElement;
-            if (img.dataset['src']) {
-              img.src = img.dataset['src'];
-              img.classList.remove('lazy');
-              imageObserver.unobserve(img);
-            }
+  // Lazy load images with intersection observer
+  lazyLoadImages(): void {
+    if (typeof window === 'undefined' || !('IntersectionObserver' in window)) return;
+    
+    const imageObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const img = entry.target as HTMLImageElement;
+          if (img.dataset['src']) {
+            img.src = img.dataset['src'];
+            img.classList.remove('lazy');
+            imageObserver.unobserve(img);
           }
-        });
+        }
       });
+    }, {
+      rootMargin: '50px 0px',
+      threshold: 0.01
+    });
 
-      document.querySelectorAll('img[data-src]').forEach((img) => {
-        imageObserver.observe(img);
-      });
-    }
+    document.querySelectorAll('img[data-src]').forEach((img) => {
+      imageObserver.observe(img);
+    });
   }
 
-  private setupResourceHints(): void {
-    // Preload critical resources
+  // Preload critical resources
+  preloadCriticalResources(): void {
+    if (typeof document === 'undefined') return;
+    
     const criticalResources = [
       '/fonts/inter.woff2',
-      '/css/critical.css'
+      '/images/hero-bg.jpg',
+      '/images/logo.svg'
     ];
 
     criticalResources.forEach((resource) => {
       const link = document.createElement('link');
       link.rel = 'preload';
       link.href = resource;
-      link.as = resource.endsWith('.css') ? 'style' : 'font';
+      link.as = resource.endsWith('.woff2') ? 'font' : 'image';
       if (resource.endsWith('.woff2')) {
         link.crossOrigin = 'anonymous';
       }
@@ -60,57 +90,111 @@ class PerformanceOptimizer {
     });
   }
 
-  private setupPerformanceMonitoring(): void {
-    // Monitor Core Web Vitals
-    if ('PerformanceObserver' in window) {
-      const observer = new PerformanceObserver((list) => {
-        list.getEntries().forEach((entry) => {
-          if (entry.entryType === 'largest-contentful-paint') {
-            console.log('LCP:', entry.startTime);
-          }
-          if (entry.entryType === 'first-input') {
-            const fidEntry = entry as any;
-            console.log('FID:', fidEntry.processingStart - entry.startTime);
-          }
-        });
-      });
+  // Optimize scroll performance
+  optimizeScroll(): void {
+    if (typeof window === 'undefined') return;
+    
+    let ticking = false;
+    
+    const updateScrollPosition = () => {
+      // Throttled scroll handling
+      ticking = false;
+    };
 
-      observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input'] });
+    const requestTick = () => {
+      if (!ticking) {
+        requestAnimationFrame(updateScrollPosition);
+        ticking = true;
+      }
+    };
+
+    window.addEventListener('scroll', requestTick, { passive: true });
+  }
+
+  // Measure performance metrics
+  measurePerformance(name: string, fn: () => void): void {
+    const start = performance.now();
+    fn();
+    const end = performance.now();
+    const duration = end - start;
+    
+    this.metrics.set(name, duration);
+    
+    if (process.env['NODE_ENV'] === 'development') {
+      console.log(`Performance: ${name} took ${duration.toFixed(2)}ms`);
     }
   }
 
-  private optimizeAnimations(): void {
-    // Respect user's motion preferences
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      document.documentElement.style.setProperty('--animation-duration', '0.01ms');
+  // Get performance metrics
+  getMetrics(): Record<string, number> {
+    return Object.fromEntries(this.metrics);
+  }
+
+  // Add critical resource hints method
+  addCriticalResourceHints(): void {
+    if (typeof document === 'undefined') return;
+    
+    const hints = [
+      { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' },
+      { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com' },
+      { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+      { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossOrigin: 'anonymous' }
+    ];
+    
+    hints.forEach(hint => {
+      const link = document.createElement('link');
+      link.rel = hint.rel;
+      link.href = hint.href;
+      if (hint.crossOrigin) {
+        link.crossOrigin = hint.crossOrigin;
+      }
+      document.head.appendChild(link);
+    });
+  }
+
+  // Add Web Vitals reporting method
+  reportWebVitals(metrics: WebVitalsMetrics): void {
+    if (process.env['NODE_ENV'] === 'development') {
+      console.log('Web Vitals:', metrics);
     }
-  }
 
-  // Public methods for manual optimization
-  preloadRoute(route: string): void {
-    const link = document.createElement('link');
-    link.rel = 'prefetch';
-    link.href = route;
-    document.head.appendChild(link);
-  }
-
-  optimizeImages(): void {
-    // Convert images to WebP format if supported
-    if (this.supportsWebP()) {
-      document.querySelectorAll('img[data-webp]').forEach((img) => {
-        const webpSrc = img.getAttribute('data-webp');
-        if (webpSrc) {
-          (img as HTMLImageElement).src = webpSrc;
+    // Send to analytics service
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      Object.entries(metrics).forEach(([key, value]) => {
+        if (value !== undefined) {
+          (window as any).gtag('event', key, {
+            value: Math.round(value),
+            event_category: 'Web Vitals',
+            non_interaction: true
+          });
         }
       });
     }
   }
 
-  private supportsWebP(): boolean {
-    const canvas = document.createElement('canvas');
-    canvas.width = 1;
-    canvas.height = 1;
-    return canvas.toDataURL('image/webp').indexOf('data:image/webp') === 0;
+  // Measure page load performance
+  measurePageLoad(): WebVitalsMetrics | null {
+    if (typeof window === 'undefined' || !window.performance) {
+      return null;
+    }
+    
+    const timing = window.performance.timing;
+    const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+    
+    return { 
+      loadTime: timing.loadEventEnd - timing.navigationStart,
+      interactiveTime: timing.domInteractive - timing.navigationStart,
+      FCP: navigation?.responseStart - navigation?.fetchStart,
+      TTFB: timing.responseStart - timing.navigationStart
+    };
+  }
+
+  // Initialize all optimizations
+  initialize(): void {
+    this.measurePerformance('lazyLoadImages', () => this.lazyLoadImages());
+    this.measurePerformance('preloadCriticalResources', () => this.preloadCriticalResources());
+    this.measurePerformance('optimizeScroll', () => this.optimizeScroll());
+    this.measurePerformance('addCriticalResourceHints', () => this.addCriticalResourceHints());
   }
 }
 

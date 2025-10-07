@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { type ErrorInfo } from 'react';
 import { ErrorBoundary } from 'react-error-boundary';
 
 interface ErrorFallbackProps {
@@ -67,7 +67,7 @@ export function AppErrorBoundary({ children }: AppErrorBoundaryProps) {
   return (
     <ErrorBoundary
       FallbackComponent={ErrorFallback}
-      onError={(error, errorInfo) => {
+      onError={(error: Error, errorInfo: ErrorInfo) => {
         console.error('Error caught by boundary:', error, errorInfo);
         //Here you could send error to monitoring service
       }}

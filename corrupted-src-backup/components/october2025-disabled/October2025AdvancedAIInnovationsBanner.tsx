@@ -1,4 +1,8 @@
 import React from 'react';
+<<<<<<< HEAD:src/components/October2025AdvancedAIInnovationsBanner.tsx
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main:corrupted-src-backup/components/october2025-disabled/October2025AdvancedAIInnovationsBanner.tsx
 import { Link } from 'react-router-dom';
 import { Sparkles, Brain, Database, Atom, ArrowRight } from 'lucide-react';
 const October2025AdvancedAIInnovationsBanner = () => {
@@ -146,9 +150,44 @@ const October2025AdvancedAIInnovationsBanner = () => {
               100x
             </div>
             <div className="text-green-200/70 text-sm">Faster Simulations</div>
+<<<<<<< HEAD:src/components/October2025AdvancedAIInnovationsBanner.tsx
+          </div>
+        </div>
+      </div>
+=======
+
+interface October2025AdvancedAIInnovationsBannerProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const October2025AdvancedAIInnovationsBanner: React.FC<October2025AdvancedAIInnovationsBannerProps> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={`october2025advancedaiinnovationsbanner-component ${className}`}>
+      {children || (
+        <div className="p-4 text-center text-gray-600">
+          <h3 className="text-lg font-semibold mb-2">October2025AdvancedAIInnovationsBanner</h3>
+          <p>Component placeholder - implementation needed</p>
+        </div>
+      )}
+>>>>>>> cursor/fix-errors-and-merge-to-main-8d57
+    </div>
+  );
+};
+
+<<<<<<< HEAD
+export default React.memo(October2025AdvancedAIInnovationsBanner);
+=======
+export default October2025AdvancedAIInnovationsBanner;
+>>>>>>> cursor/fix-errors-and-merge-to-main-8d57
+=======
     </div>
   );
 };
 export default React.memo(October2025AdvancedAIInnovationsBanner);
 
 </div></div></div></div></div></div></div></div></div></div>
+>>>>>>> origin/main:corrupted-src-backup/components/october2025-disabled/October2025AdvancedAIInnovationsBanner.tsx

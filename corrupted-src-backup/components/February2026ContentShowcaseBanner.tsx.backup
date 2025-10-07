@@ -1,4 +1,9 @@
 import React from 'react';
+<<<<<<< HEAD:src/components/February2026ContentShowcaseBanner.tsx
+<<<<<<< HEAD
+import { ArrowRight, Sparkles, Zap, Brain, Star, Users, Award, TrendingUp } from 'lucide-react';
+=======
+>>>>>>> origin/main:corrupted-src-backup/components/February2026ContentShowcaseBanner.tsx.backup
 
 const February2026ContentShowcaseBanner = () => {
   const featuredContent = [
@@ -304,8 +309,39 @@ key={content.id}
           </div>
         </div>
       </div>
+<<<<<<< HEAD:src/components/February2026ContentShowcaseBanner.tsx
+=======
+
+interface February2026ContentShowcaseBannerProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const February2026ContentShowcaseBanner: React.FC<February2026ContentShowcaseBannerProps> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={`february2026contentshowcasebanner-component ${className}`}>
+      {children || (
+        <div className="p-4 text-center text-gray-600">
+          <h3 className="text-lg font-semibold mb-2">February2026ContentShowcaseBanner</h3>
+          <p>Component placeholder - implementation needed</p>
+        </div>
+      )}
+>>>>>>> cursor/fix-errors-and-merge-to-main-8d57
+=======
+>>>>>>> origin/main:corrupted-src-backup/components/February2026ContentShowcaseBanner.tsx.backup
     </div>
   );
 };
 
+<<<<<<< HEAD:src/components/February2026ContentShowcaseBanner.tsx
+<<<<<<< HEAD
 export default February2026ContentShowcaseBanner;
+=======
+export default February2026ContentShowcaseBanner;
+>>>>>>> cursor/fix-errors-and-merge-to-main-8d57
+=======
+export default February2026ContentShowcaseBanner;
+>>>>>>> origin/main:corrupted-src-backup/components/February2026ContentShowcaseBanner.tsx.backup

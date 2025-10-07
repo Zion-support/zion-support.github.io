@@ -4,11 +4,9 @@ export interface ApiError extends Error {
   statusCode?: number;
   isOperational?: boolean;
 }
-
 export class AppError extends Error implements ApiError {
   public statusCode: number;
   public isOperational: boolean;
-
   constructor(message: string, statusCode: number = 500) {
     super(message);
     this.statusCode = statusCode;

@@ -1,4 +1,4 @@
-import React, { type ReactNode, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 interface AccessibilityEnhancerProps {
   children: React.ReactNode;
@@ -6,30 +6,29 @@ interface AccessibilityEnhancerProps {
 
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
   const [isHighContrast, setIsHighContrast] = useState(false);
-  const [fontSize, setFontSize] = useState<'small' | 'normal' | 'large'>('normal');
+  const [fontSize, setFontSize] = useState('normal');
   const [reducedMotion, setReducedMotion] = useState(false);
 
   useEffect(() => {
-    // Check for user's motion preferences
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    setReducedMotion(prefersReducedMotion);
-
-    // Load saved preferences
+    // Check for saved accessibility preferences
     const savedHighContrast = localStorage.getItem('highContrast') === 'true';
-    const savedFontSize = (localStorage.getItem('fontSize') as 'small' | 'normal' | 'large') || 'normal';
+    const savedFontSize = localStorage.getItem('fontSize') || 'normal';
+    const savedReducedMotion = localStorage.getItem('reducedMotion') === 'true';
     
     setIsHighContrast(savedHighContrast);
     setFontSize(savedFontSize);
-
+    setReducedMotion(savedReducedMotion);
+    
     // Apply initial styles
-    applyAccessibilityStyles(savedHighContrast, savedFontSize, prefersReducedMotion);
+    applyAccessibilityStyles(savedHighContrast, savedFontSize, savedReducedMotion);
+    
+    // Add accessibility enhancements
+    addSkipLinks();
+    addAriaLandmarks();
+    enhanceFocusManagement();
   }, []);
 
-  const applyAccessibilityStyles = (
-    highContrast: boolean,
-    fontSize: 'small' | 'normal' | 'large',
-    reducedMotion: boolean
-  ) => {
+  const applyAccessibilityStyles = (highContrast: boolean, fontSize: string, reducedMotion: boolean) => {
     const root = document.documentElement;
     
     // Apply high contrast
@@ -39,7 +38,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       root.classList.remove('high-contrast');
     }
 
-    // Font size adjustments
+    // Font size
     root.classList.remove('font-small', 'font-normal', 'font-large');
     root.classList.add(`font-${fontSize}`);
 
@@ -51,11 +50,15 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     }
   };
 
-  const toggleHighContrast = () => {
-    const newValue = !isHighContrast;
-    setIsHighContrast(newValue);
-    localStorage.setItem('highContrast', newValue.toString());
-    applyAccessibilityStyles(newValue, fontSize, reducedMotion);
+  const addSkipLinks = () => {
+    const existingSkipLink = document.querySelector('.skip-link');
+    if (!existingSkipLink) {
+      const skipLink = document.createElement('a');
+      skipLink.href = '#main-content';
+      skipLink.className = 'skip-link sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';
+      skipLink.textContent = 'Skip to main content';
+      document.body.insertBefore(skipLink, document.body.firstChild);
+    }
   };
 
   const addSkipLinks = () => {
@@ -118,60 +121,65 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
             <span className="text-sm">High Contrast</span>
           </label>
 
-          {/* Font Size Controls */}
+  const addAriaLandmarks = () => {
+    const main = document.querySelector('main');
+    if (main && !main.getAttribute('role')) {
+      main.setAttribute('role', 'main');
+    }
+  };
+
+  const enhanceFocusManagement = () => {
+    // Add focus indicators
+    const style = document.createElement('style');
+    style.textContent = `
+      .focus-visible:focus {
+        outline: 2px solid #3b82f6;
+        outline-offset: 2px;
+      }
+    `;
+    document.head.appendChild(style);
+  };
+
+
+  return (
+    <>
+      {children}
+      <div className="accessibility-controls fixed bottom-4 left-4 z-50">
+        <div className="bg-white shadow-lg rounded-lg p-4 space-y-2">
+          <h3 className="text-sm font-semibold text-gray-700 mb-2">Accessibility</h3>
+          
+          <button
+            onClick={toggleHighContrast}
+            className={`w-full px-3 py-2 text-xs rounded ${
+              isHighContrast 
+                ? 'bg-blue-600 text-white' 
+                : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+            }`}
+          >
+            {isHighContrast ? 'High Contrast On' : 'High Contrast Off'}
+          </button>
+          
           <div className="space-y-1">
-            <label className="text-xs text-gray-600">Font Size</label>
+            <label className="text-xs text-gray-600">Font Size:</label>
             <div className="flex space-x-1">
               {(['small', 'normal', 'large'] as const).map((size) => (
                 <button
                   key={size}
                   onClick={() => changeFontSize(size)}
                   className={`px-2 py-1 text-xs rounded ${
-                    fontSize === size
-                      ? 'bg-blue-500 text-white'
+                    fontSize === size 
+                      ? 'bg-blue-600 text-white' 
                       : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
                   }`}
                 >
-                  {size.charAt(0).toUpperCase() + size.slice(1)}
+                  {size}
                 </button>
               ))}
             </div>
           </div>
         </div>
       </div>
-
-      <style>{`
-        .high-contrast {
-          --text-color: #ffffff;
-          --bg-color: #000000;
-          --border-color: #ffffff;
-        }
-        
-        .high-contrast * {
-          color: var(--text-color) !important;
-          background-color: var(--bg-color) !important;
-          border-color: var(--border-color) !important;
-        }
-
-        .font-small {
-          font-size: 0.875rem;
-        }
-
-        .font-normal {
-          font-size: 1rem;
-        }
-
-        .font-large {
-          font-size: 1.125rem;
-        }
-
-        .reduced-motion * {
-          animation-duration: 0.01ms !important;
-          animation-iteration-count: 1 !important;
-          transition-duration: 0.01ms !important;
-        }
-      `}</style>
-    </div>
+    </>
   );
 };
 
