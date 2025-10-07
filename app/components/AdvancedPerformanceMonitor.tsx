@@ -33,7 +33,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     if (typeof window === 'undefined' || !('performance' in window)) return;
 
     // Measure First Contentful Paint (FCP)
-    const fcpEntries = performance.getEntriesByName('first-contentful-paint');
+    const fcpEntries = performance.getEntriesByName('first-contentful-paint') || [];
     const fcp = fcpEntries.length > 0 ? fcpEntries[0].startTime : null;
 
     // Measure Largest Contentful Paint (LCP)
@@ -102,9 +102,8 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     }
 
     // Measure Time to First Byte (TTFB)
-    const navigationEntry = performance.getEntriesByType(
-      'navigation'
-    )[0] as PerformanceNavigationTiming;
+    const navigationEntries = performance.getEntriesByType('navigation') || [];
+    const navigationEntry = navigationEntries[0] as PerformanceNavigationTiming;
     const ttfb = navigationEntry
       ? navigationEntry.responseStart - navigationEntry.requestStart
       : null;
