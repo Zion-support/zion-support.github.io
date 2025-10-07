@@ -1,8 +1,7 @@
 #!/bin/bash
 
 echo "🚀 Starting merge process for PR #24955..."
-echo "=============================================="
-
+echo "
 # Set variables
 PR_BRANCH="cursor/fix-errors-and-merge-to-main-282b"
 PR_NUMBER=24955
@@ -116,8 +115,7 @@ fi
 
 echo ""
 echo "🎉 PR #$PR_NUMBER merged successfully!"
-echo "=============================================="
-echo "✅ All conflicts resolved"
+echo "echo "✅ All conflicts resolved"
 echo "✅ Changes merged into main"
 echo "✅ Repository updated"
 echo "✅ Ready for further improvements"

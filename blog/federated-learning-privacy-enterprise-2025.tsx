@@ -260,8 +260,7 @@ model.compile(optimizer=optimizer} loss='categorical_crossentropy')`}</code>
             Zion Tech Group specializes in implementing enterprise federated learning systems. Let us help you build compliant; privacy-preserving AI that unlocks distributed data value.
           </p>
           <a
-            href="/contact"
-            className="text-left"
+            href="/<contact" className="text-left"
           ></a>
             Schedule a Consultation
             <Zap className="text-left" />

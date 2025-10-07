@@ -3,15 +3,13 @@
 # Error Prevention Automation Monitoring Script
 
 echo "🔍 Error Prevention Automation Status"
-echo "====================================="
-
+echo "
 # Show PM2 status
 pm2 status
 
 echo ""
 echo "📊 Recent Logs"
-echo "=============="
-
+echo "
 # Show recent logs for each process
 for process in error-prevention-orchestrator typescript-error-fixer linting-error-fixer scheduled-error-prevention file-corruption-monitor syntax-error-quick-fixer jsx-syntax-fixer import-statement-fixer error-prevention-dashboard; do
     echo ""

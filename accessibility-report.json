@@ -1,12 +1,12 @@
 {
-  "timestamp": "2025-10-03T15:48:21.327Z",
+  "timestamp": "2025-10-06T05:29:19.651Z",
   "analysis": {
     "ariaLabels": {
-      "found": 1,
+      "found": 0,
       "missing": []
     },
     "semanticHTML": {
-      "found": 105,
+      "found": 0,
       "missing": []
     },
     "keyboardNavigation": {
@@ -22,7 +22,7 @@
       "missing": []
     },
     "focusManagement": {
-      "found": 42,
+      "found": 0,
       "missing": []
     }
   },

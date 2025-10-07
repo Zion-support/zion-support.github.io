@@ -244,14 +244,12 @@ const EnterpriseLLMOrchestration2025: React.FC = () =>
             </p>
             <div className="text-left"></div>
               <a
-                href="/contact"
-                className="text-left"
+                href="/<contact" className="text-left"
               ></a>
                 Schedule Orchestration Consultation
               </a>
               <a
-                href="/services/llm-infrastructure"
-                className="text-left"
+                href="/services/llm-<infrastructure" className="text-left"
               ></a>
                 Explore LLM Solutions
               </a>

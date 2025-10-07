@@ -13,8 +13,7 @@ BLUE='\033[0;34m'
 NC='\033[0m' # No Color
 
 echo -e "${BLUE}🚀 Enhanced PM2 Automation System Installation${NC}"
-echo -e "${BLUE}===============================================${NC}"
-echo ""
+echo -e "${BLUE}echo ""
 
 # Function to check if PM2 is installed
 check_pm2() {
@@ -162,8 +161,7 @@ setup_pm2_startup() {
 display_next_steps() {
     echo ""
     echo -e "${BLUE}🎯 Next Steps:${NC}"
-    echo -e "${BLUE}===============${NC}"
-    echo ""
+    echo -e "${BLUE}    echo ""
     echo -e "${GREEN}1. Monitor your automation system:${NC}"
     echo -e "   pm2 status"
     echo -e "   pm2 monit"

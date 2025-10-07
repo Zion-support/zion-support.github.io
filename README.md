@@ -1,28 +1,8 @@
 # Zion Tech Group Website
 
-A modern, high-performance React application built with TypeScript, Vite, and Tailwind CSS.
+Advanced AI and IT Solutions Website built with React, TypeScript, and Vite.
 
-## 🚀 Features
-
-- **High Performance**: Optimized with Vite, code splitting, and lazy loading
-- **Type Safety**: Full TypeScript support with strict configuration
-- **Accessibility**: WCAG 2.1 compliant with keyboard navigation support
-- **SEO Optimized**: Meta tags, structured data, and performance monitoring
-- **Error Handling**: Comprehensive error boundaries and monitoring
-- **Security**: CSP headers and security best practices
-- **Responsive**: Mobile-first design with Tailwind CSS
-
-## 🛠️ Tech Stack
-
-- **React 18** with TypeScript
-- **Vite** for build tooling and development
-- **Tailwind CSS** for styling
-- **React Router** for navigation
-- **React Helmet** for SEO
-- **Jest** for testing
-- **ESLint & Prettier** for code quality
-
-## 📦 Installation
+## 🚀 Quick Start
 
 ```bash
 # Install dependencies
@@ -37,102 +17,66 @@ npm run build
 # Run tests
 npm test
 
-# Run linting
-npm run lint
+# Run health check
+npm run health-check
 ```
 
-## 🏗️ Project Structure
+## 📋 Available Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run test` - Run tests
+- `npm run lint` - Run ESLint
+- `npm run type-check` - Run TypeScript type checking
+- `npm run health-check` - Run all checks (type-check, lint, build, test)
+
+## 🛠️ Tech Stack
+
+- **Frontend**: React 18, TypeScript, Vite
+- **Styling**: Tailwind CSS
+- **Icons**: Lucide React
+- **Testing**: Jest
+- **Linting**: ESLint
+- **Build**: Vite with Terser minification
+
+## 📁 Project Structure
 
 ```
-src/
-├── components/          # Reusable UI components
-├── pages/              # Route components
-├── hooks/              # Custom React hooks
-├── utils/              # Utility functions
-├── config/             # Configuration files
-├── types/              # TypeScript type definitions
-└── styles/             # Global styles
+├── app/                    # Next.js app directory
+├── src/                    # Source code
+├── components/             # Reusable components
+├── __tests__/             # Test files
+├── dist/                  # Build output
+└── public/                # Static assets
 ```
 
-## ⚡ Performance Features
+## 🔧 Development
 
-- **Code Splitting**: Automatic route-based code splitting
-- **Lazy Loading**: Components and images loaded on demand
-- **Bundle Optimization**: Vendor chunks and tree shaking
-- **Performance Monitoring**: Real-time metrics tracking
-- **Image Optimization**: Responsive images with WebP support
-
-## 🔒 Security Features
-
-- **Content Security Policy**: Strict CSP headers
-- **XSS Protection**: Input sanitization and validation
-- **HTTPS Enforcement**: Secure connections only
-- **Security Headers**: Comprehensive security headers
-
-## ♿ Accessibility Features
-
-- **Keyboard Navigation**: Full keyboard support
-- **Screen Reader**: ARIA labels and semantic HTML
-- **Focus Management**: Proper focus indicators
-- **Reduced Motion**: Respects user preferences
-
-## 🧪 Testing
-
-```bash
-# Run all tests
-npm test
-
-# Run tests with coverage
-npm run test:coverage
-
-# Run tests in watch mode
-npm run test:watch
-```
-
-## 📊 Performance Monitoring
-
-The application includes built-in performance monitoring:
-
-- **Core Web Vitals**: FCP, LCP, FID, CLS
-- **Time to First Byte**: Server response time
-- **Bundle Analysis**: Visual bundle size analysis
+1. Clone the repository
+2. Install dependencies: `npm install`
+3. Start development server: `npm run dev`
+4. Open http://localhost:5173
 
 ## 🚀 Deployment
 
-The application is optimized for deployment on:
+1. Build the project: `npm run build`
+2. The `dist/` folder contains the production build
+3. Deploy the `dist/` folder to your hosting provider
 
-- **Netlify**: `npm run build:netlify`
-- **Vercel**: `npm run build`
-- **Static Hosting**: `npm run build`
+## 📝 Contributing
 
-## 📈 Optimization Scripts
+1. Run `npm run health-check` before committing
+2. Ensure all tests pass
+3. Follow the existing code style
+4. Update documentation as needed
 
-```bash
-# Build optimized bundle
-npm run build:optimized
+## 🐛 Troubleshooting
 
-# Analyze bundle size
-npm run analyze
-
-# Performance audit
-npm run performance:audit
-
-# Security audit
-npm run security:audit
-```
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Add tests if applicable
-5. Submit a pull request
+- **TypeScript errors**: Run `npm run type-check`
+- **Linting errors**: Run `npm run lint:fix`
+- **Build issues**: Run `npm run build` and check the output
+- **Test failures**: Run `npm test` for details
 
 ## 📄 License
 
-This project is licensed under the MIT License.
-
-## 🆘 Support
-
-For support and questions, please contact the development team.
+MIT License - see LICENSE file for details.

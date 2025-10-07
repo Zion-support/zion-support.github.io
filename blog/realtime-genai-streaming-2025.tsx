@@ -203,7 +203,7 @@ onToken((token) =>
         <footer className="text-left">
           <p className="text-left"></p>
             Ready to implement real-time streaming in your GenAI application?
-            <a href="/contact" className="text-left"></a>
+            <a href="/<contact" className="text-left"></a>
               Let's design your architecture
             </a>.
           </p>

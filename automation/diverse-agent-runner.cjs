@@ -49,13 +49,11 @@ const logPath = path.join(logsDir, `${task}-${nowStamp()}.log`)
 
 const [cmd, args] = taskToCommand[task]
 const startedAt = new Date().toISOString()
-const header = `=== Diverse Agent Runner ===\nTask: ${task}\nStarted: ${startedAt}\nCommand: ${cmd} ${args.join(' ')}\n===========================\n`
-fs.writeFileSync(logPath, header)
+const header = `=== Diverse Agent Runner ===\nTask: ${task}\nStarted: ${startedAt}\nCommand: ${cmd} ${args.join(' ')}\nfs.writeFileSync(logPath, header)
 
 const result = run(cmd, args)
 const finishedAt = new Date().toISOString()
-const footer = `\n=== Completed ===\nFinished: ${finishedAt}\nExit code: ${result.code}\n================\n`
-fs.appendFileSync(logPath, result.stdout || '')
+const footer = `\n=== Completed ===\nFinished: ${finishedAt}\nExit code: ${result.code}\nfs.appendFileSync(logPath, result.stdout || '')
 fs.appendFileSync(logPath, result.stderr ? `\n[stderr]\n${result.stderr}` : '')
 fs.appendFileSync(logPath, footer)
 

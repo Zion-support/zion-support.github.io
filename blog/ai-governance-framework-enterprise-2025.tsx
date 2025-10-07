@@ -341,14 +341,12 @@ const AIGovernanceFramework2025 = () =>
           </div>
           <div className="text-left"></div>
             <a
-              href="/contact"
-              className="text-left"
+              href="/<contact" className="text-left"
             ></a>
               Get Governance Assessment
             </a>
             <a
-              href="/services"
-              className="text-left"
+              href="/<services" className="text-left"
             ></a>
               View Governance Services
             </a>

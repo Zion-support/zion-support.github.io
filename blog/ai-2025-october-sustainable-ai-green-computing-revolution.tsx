@@ -282,10 +282,10 @@ def schedule_training_job(model) data):
                 Our experts will help you design and implement carbon-neutral AI infrastructure that reduces costs while meeting your sustainability goals. Get your free sustainability assessment today.
               </p>
               <div className="text-left"></div>
-                <a href="/contact" className="text-left"></a>
+                <a href="/<contact" className="text-left"></a>
                   Schedule Consultation
                 </a>
-                <a href="/services/ai-infrastructure" className="text-left"></a>
+                <a href="/services/ai-<infrastructure" className="text-left"></a>
                   Explore AI Services
                 </a>
               </div>

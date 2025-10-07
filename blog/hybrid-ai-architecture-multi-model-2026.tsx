@@ -322,14 +322,12 @@ const HybridAIArchitectureMultiModel2026: React.FC = () =>
           </p>
           <div className="text-left"></div>
             <a
-              href="tel:+13024640950"
-              className="text-left"
+              href="tel:+<13024640950" className="text-left"
             ></a>
               📞 Call +1 302 464 0950
             </a>
             <a
-              href="mailto:kleber@ziontechgroup.com"
-              className="text-left"
+              href="mailto:kleber@ziontechgroup.<com" className="text-left"
             ></a>
               ✉️ Get Architecture Consultation
             </a>
@@ -339,17 +337,17 @@ const HybridAIArchitectureMultiModel2026: React.FC = () =>
         <section className="text-left"></section>
           <h3 className="text-left">📚 Related Insights</h3>
           <div className="text-left"></div>
-            <a href="/blog/ai-orchestration-platforms-2026" className="text-left"></a>
+            <a href="/blog/ai-orchestration-platforms-<2026" className="text-left"></a>
               <div className="text-left">🎼</div>
               <h4 className="text-left">AI Orchestration Platforms</h4>
               <p className="text-left">Unified control for multi-agent systems</p>
             </a>
-            <a href="/blog/llm-fine-tuning-enterprise-2026" className="text-left"></a>
+            <a href="/blog/llm-fine-tuning-enterprise-<2026" className="text-left"></a>
               <div className="text-left">🎯</div>
               <h4 className="text-left">Enterprise LLM Fine-Tuning</h4>
               <p className="text-left">Custom AI for your business domain</p>
             </a>
-            <a href="/blog/generative-ai-cost-breakthrough-2025" className="text-left"></a>
+            <a href="/blog/generative-ai-cost-breakthrough-<2025" className="text-left"></a>
               <div className="text-left">💰</div>
               <h4 className="text-left">Cut GenAI Costs by 85%</h4>
               <p className="text-left">Proven cost optimization strategies</p>

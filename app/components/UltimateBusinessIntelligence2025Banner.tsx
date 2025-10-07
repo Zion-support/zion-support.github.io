@@ -1,12 +1,11 @@
 'use client';
-
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
 const UltimateBusinessIntelligence2025Banner = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
-
+  
   const content = [
     {
       id: 'ultimate-business-intelligence-revolution',
@@ -21,7 +20,7 @@ const UltimateBusinessIntelligence2025Banner = () => {
         speed: '5,000% faster'
       },
       readingTime: '35 min read',
-      featured: true
+      featured: true,
     },
     {
       id: 'fortune-500-business-intelligence-success',
@@ -36,7 +35,7 @@ const UltimateBusinessIntelligence2025Banner = () => {
         timeline: '18 months'
       },
       readingTime: '25 min read',
-      featured: true
+      featured: true,
     },
     {
       id: 'business-intelligence-implementation-guide',
@@ -48,19 +47,22 @@ const UltimateBusinessIntelligence2025Banner = () => {
         roi: '30,000%',
         success: '99.8%',
         timeline: '18 months',
-        guide: '60 min read'
+        adoption: '100%'
       },
+<<<<<<< HEAD
+      readingTime: '45 min read',
+=======
       readingTime: '60 min read',
+>>>>>>> origin/main
       featured: true
     }
   ];
 
   useEffect(() => {
-    const timer = setInterval(() => {
+    const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % content.length);
     }, 5000);
-
-    return () => clearInterval(timer);
+    return () => clearInterval(interval);
   }, [content.length]);
 
   useEffect(() => {
@@ -80,141 +82,194 @@ const UltimateBusinessIntelligence2025Banner = () => {
   const currentContent = content[currentSlide];
 
   return (
-    <div className="relative bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white overflow-hidden">
-      {/* Animated Background */}
+    <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
+      {/* Animated Background Effects */}
       <div className="absolute inset-0">
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-purple-600/20 via-blue-600/20 to-indigo-600/20"></div>
-        <div className="absolute top-10 left-10 w-32 h-32 bg-purple-500/10 rounded-full animate-pulse"></div>
-        <div className="absolute top-20 right-20 w-24 h-24 bg-blue-500/10 rounded-full animate-pulse delay-1000"></div>
-        <div className="absolute bottom-10 left-1/4 w-40 h-40 bg-indigo-500/10 rounded-full animate-pulse delay-2000"></div>
-        <div className="absolute bottom-20 right-1/3 w-28 h-28 bg-purple-500/10 rounded-full animate-pulse delay-3000"></div>
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl animate-pulse"></div>
+        <div
+          className="absolute top-3/4 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse"
+          style={{ animationDelay: '2s' }}
+        ></div>
+        <div
+          className="absolute bottom-1/4 left-1/3 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse"
+          style={{ animationDelay: '1s' }}
+        ></div>
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="flex items-center justify-between mb-6">
-          <div className="flex items-center space-x-3">
-            <div className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-4 py-2 rounded-full font-bold text-sm">
-              🚀 NEW BREAKTHROUGH
-            </div>
-            <div className="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium">
-              Ultimate Business Intelligence 2025
-            </div>
+      <div className="relative z-10 container mx-auto px-4 py-16">
+        {/* Header */}
+        <div className="text-center mb-16">
+          <div className="flex items-center justify-center gap-3 mb-6">
+            <span className="text-2xl">🚀</span>
+            <span className="text-cyan-400 font-bold text-xl">
+              BREAKING: ULTIMATE BUSINESS INTELLIGENCE REVOLUTION 2025
+            </span>
+            <span className="text-2xl">⚡</span>
           </div>
-          <button
-            onClick={handleDismiss}
-            className="text-white/70 hover:text-white transition-colors p-2"
-            aria-label="Dismiss banner"
-          >
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          </button>
+<<<<<<< HEAD
+
+          <h2 className="text-4xl md:text-6xl font-extrabold text-white mb-6">
+            Transform Your Enterprise with
+            <span className="block bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+              AI-Powered Intelligence
+            </span>
+          </h2>
+
+          <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
+            Discover the revolutionary AI technologies that are reshaping business intelligence 
+            and delivering unprecedented competitive advantages to forward-thinking enterprises.
+          </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-          <div className="space-y-6">
-            <div className="space-y-4">
-              <h2 className="text-3xl lg:text-4xl font-bold leading-tight">
-                {currentContent.title}
-              </h2>
-              <p className="text-lg text-white/90 leading-relaxed">
-                {currentContent.description}
-              </p>
+        {/* Content Carousel */}
+        <div className="max-w-6xl mx-auto">
+          <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20">
+            <div className="flex items-center justify-between mb-6">
+              <div className="flex items-center gap-3">
+                <span className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-4 py-2 rounded-full text-sm font-bold">
+                  {currentContent.type}
+                </span>
+                <span className="text-gray-300 text-sm">
+                  {currentContent.readingTime}
+                </span>
+=======
+          <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6">
+            {currentContent.title}
+          </h1>
+          <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">
+            {currentContent.description}
+          </p>
+        </div>
+
+        {/* Main Content Card */}
+        <div className="max-w-6xl mx-auto">
+          <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 md:p-12 border border-white/20 shadow-2xl">
+            {/* Content Type Badge */}
+            <div className="flex items-center justify-between mb-8">
+              <div className="flex items-center gap-4">
+                <span className="px-4 py-2 bg-gradient-to-r from-cyan-500/30 to-blue-500/30 text-cyan-200 text-sm font-bold rounded-full border border-cyan-400/50">
+                  {currentContent.type}
+                </span>
+                <span className="text-gray-300 text-sm">⏱️ {currentContent.readingTime}</span>
+>>>>>>> origin/main
+              </div>
+              <button
+                onClick={handleDismiss}
+                className="text-gray-400 hover:text-white transition-colors"
+                aria-label="Dismiss banner"
+              >
+                ✕
+              </button>
             </div>
 
-            {/* Success Metrics */}
-            <div className="grid grid-cols-2 gap-4">
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
-                <div className="text-2xl font-bold text-yellow-400">{currentContent.metrics.roi}</div>
-                <div className="text-sm text-white/80">ROI</div>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
-                <div className="text-2xl font-bold text-green-400">{currentContent.metrics.savings}</div>
-                <div className="text-sm text-white/80">Annual Savings</div>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
-                <div className="text-2xl font-bold text-blue-400">{currentContent.metrics.accuracy}</div>
-                <div className="text-sm text-white/80">Accuracy</div>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
-                <div className="text-2xl font-bold text-purple-400">{currentContent.metrics.speed || currentContent.metrics.timeline}</div>
-                <div className="text-sm text-white/80">{currentContent.metrics.speed ? 'Faster' : 'Timeline'}</div>
-              </div>
+<<<<<<< HEAD
+            <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
+              {currentContent.title}
+            </h3>
+
+            <p className="text-gray-300 mb-6 text-lg">
+              {currentContent.description}
+            </p>
+
+            {/* Metrics */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+              {Object.entries(currentContent.metrics).map(([key, value]) => (
+                <div key={key} className="text-center">
+                  <div className="text-2xl font-bold text-cyan-400 mb-1">
+                    {value}
+                  </div>
+                  <div className="text-gray-400 text-sm capitalize">
+                    {key.replace(/([A-Z])/g, ' $1').trim()}
+                  </div>
+=======
+            {/* Metrics Grid */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
+              {Object.entries(currentContent.metrics).map(([key, value]) => (
+                <div key={key} className="text-center">
+                  <div className="text-3xl font-bold text-cyan-400 mb-2">{value}</div>
+                  <div className="text-gray-300 text-sm capitalize">{key.replace(/([A-Z])/g, ' $1')}</div>
+>>>>>>> origin/main
+                </div>
+              ))}
             </div>
 
+<<<<<<< HEAD
             {/* Action Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href={currentContent.url}
-                className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-8 py-3 rounded-lg font-bold hover:from-yellow-500 hover:to-orange-600 transition-all duration-300 transform hover:scale-105 text-center"
+                className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-bold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
               >
-                Read {currentContent.type}
+                Read Full Article
               </Link>
               <Link
                 href="/contact"
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-900 transition-all duration-300 text-center"
+                className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-bold hover:bg-white hover:text-gray-900 transition-all duration-300"
               >
-                Get Consultation
+                Get Expert Consultation
               </Link>
-            </div>
-
-            {/* Content Type Badge */}
-            <div className="flex items-center space-x-2">
-              <span className="bg-white/20 px-3 py-1 rounded-full text-sm font-medium">
-                {currentContent.type}
-              </span>
-              <span className="text-white/70 text-sm">
-                {currentContent.readingTime}
-              </span>
-              {currentContent.featured && (
-                <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-3 py-1 rounded-full text-sm font-bold">
-                  FEATURED
-                </span>
-              )}
+=======
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+              <Link
+                href={currentContent.url}
+                className="flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl hover:shadow-cyan-500/25"
+              >
+                <span className="text-xl">📖</span>
+                <span>Read {currentContent.type}</span>
+                <span className="group-hover:translate-x-1 transition-transform">→</span>
+              </Link>
+              <a
+                href="tel:+13024640950"
+                className="flex items-center gap-3 border-2 border-white/30 hover:border-white/60 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 hover:bg-white/10"
+              >
+                <span className="text-xl">📞</span>
+                <span>Call +1 302 464 0950</span>
+              </a>
+>>>>>>> origin/main
             </div>
           </div>
 
-          {/* Content Preview Cards */}
-          <div className="space-y-4">
-            <h3 className="text-xl font-bold mb-4">Featured Content</h3>
-            {content.map((item, index) => (
-              <div
-                key={item.id}
-                `}
+          {/* Slide Indicators */}
+          <div className="flex justify-center mt-8 space-x-2">
+            {content.map((_, index) => (
+              <button
+                key={index}
                 onClick={() => setCurrentSlide(index)}
-              >
-                <div className="flex items-start justify-between">
-                  <div className="flex-1">
-                    <h4 className="font-semibold text-sm mb-2 line-clamp-2">{item.title}</h4>
-                    <div className="flex items-center space-x-2 text-xs text-white/70">
-                      <span>{item.type}</span>
-                      <span>•</span>
-                      <span>{item.readingTime}</span>
-                    </div>
-                  </div>
-                  <div className="ml-4">
-                    <div className="text-lg font-bold text-yellow-400">{item.metrics.roi}</div>
-                    <div className="text-xs text-white/70">ROI</div>
-                  </div>
-                </div>
-              </div>
+                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+<<<<<<< HEAD
+                  index === currentSlide
+                    ? 'bg-cyan-400 scale-125'
+                    : 'bg-white/30 hover:bg-white/50'
+=======
+                  index === currentSlide ? 'bg-cyan-400' : 'bg-white/30'
+>>>>>>> origin/main
+                }`}
+                aria-label={`Go to slide ${index + 1}`}
+              />
             ))}
           </div>
+<<<<<<< HEAD
+=======
         </div>
 
-        {/* Progress Indicators */}
-        <div className="flex justify-center space-x-2 mt-8">
-          {content.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentSlide(index)}
-              `}
-              aria-label={`Go to slide ${index + 1}`}
-            />
+        {/* Stats Section */}
+        <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8">
+          {[
+            { value: '500+', label: 'Enterprise Clients' },
+            { value: '30,000%', label: 'Average ROI' },
+            { value: '99.9%', label: 'Success Rate' },
+            { value: '5M+', label: 'Data Points Processed' },
+          ].map((stat, index) => (
+            <div key={index} className="text-center">
+              <div className="text-3xl font-bold text-cyan-400 mb-2">{stat.value}</div>
+              <div className="text-gray-300">{stat.label}</div>
+            </div>
           ))}
+>>>>>>> origin/main
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

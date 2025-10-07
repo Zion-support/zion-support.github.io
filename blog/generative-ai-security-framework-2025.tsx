@@ -332,14 +332,12 @@ const GenerativeAISecurityFramework2025: React.FC = () =>
           </p>
           <div className="text-left"></div>
             <a
-              href="/contact"
-              className="text-left"
+              href="/<contact" className="text-left"
             ></a>
               Schedule Security Assessment
             </a>
             <a
-              href="/case-studies"
-              className="text-left"
+              href="/case-<studies" className="text-left"
             ></a>
               View Security Case Studies
             </a>

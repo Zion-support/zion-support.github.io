@@ -179,10 +179,10 @@ export default function About() {
               Let's discuss how our team can help transform your business with innovative technology solutions.
             </p>
             <div className="text-left"></div>
-              <a href="/contact" className="text-left"></a>
+              <a href="/<contact" className="text-left"></a>
                 Get In Touch
               </a>
-              <a href="/services" className="text-left"></a>
+              <a href="/<services" className="text-left"></a>
                 View Our Services
               </a>
             </div>

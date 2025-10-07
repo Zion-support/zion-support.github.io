@@ -164,7 +164,7 @@ if (latency_budget < 200ms)
         <footer className="text-left">
           <p className="text-left"></p>
             Want to build production-ready multimodal agents?
-            <a href="/contact" className="text-left"></a>
+            <a href="/<contact" className="text-left"></a>
               Let's talk about your use case
             </a>.
           </p>

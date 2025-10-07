@@ -166,14 +166,12 @@ const AIEnterpriseDigitalTwinsAgenticSystems2025 = () =>
           </p>
           <div className="text-left"></div>
             <a
-              href="/contact"
-              className="text-left"
+              href="/<contact" className="text-left"
             ></a>
               Schedule Assessment
             </a>
             <a
-              href="/case-studies"
-              className="text-left"
+              href="/case-<studies" className="text-left"
             ></a>
               View Case Studies
             </a>

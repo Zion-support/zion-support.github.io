@@ -233,10 +233,10 @@ const ZeroDowntimeAIDeployment2025: React.FC = () =>
               deployment strategies, implement monitoring and rollback systems, and train your team on MLOps best practices.
             </p>
             <div className="text-left"></div>
-              <a href="/contact" className="text-left"></a>
+              <a href="/<contact" className="text-left"></a>
                 Schedule a Consultation
               </a>
-              <a href="/services" className="text-left"></a>
+              <a href="/<services" className="text-left"></a>
                 View MLOps Services
               </a>
             </div>

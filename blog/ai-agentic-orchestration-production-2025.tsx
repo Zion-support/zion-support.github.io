@@ -236,8 +236,7 @@ const AIAgenticOrchestrationProduction2025: React.FC = () =>
               Get expert guidance on building enterprise-scale agent orchestration systems. Our team has deployed multi-agent platforms for Fortune 500 companies.
             </p>
             <a
-              href="/contact"
-              className="text-left"
+              href="/<contact" className="text-left"
             ></a>
               Schedule Strategy Session →
             </a>

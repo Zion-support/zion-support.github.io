@@ -343,8 +343,7 @@ console.log('Accessibility check completed');
       await this.runAllScripts();
 
       this.log('\n📊 FINAL IMPROVEMENTS REPORT');
-      this.log('============================');
-      this.log(`✅ Improvements made: ${this.improvements.length}`);
+      this.log('      this.log(`✅ Improvements made: ${this.improvements.length}`);
       this.improvements.forEach(improvement => this.log(`  - ${improvement}`));
 
       this.log('\n🎉 Final comprehensive improvements completed successfully!');

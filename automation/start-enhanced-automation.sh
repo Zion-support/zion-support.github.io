@@ -466,8 +466,7 @@ print_status() {
 }
 
 echo "🔍 Enhanced Automation System Health Check"
-echo "=========================================="
-
+echo "
 # Check PM2 status
 echo ""
 print_status "info" "Checking PM2 processes..."

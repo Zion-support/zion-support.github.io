@@ -203,10 +203,10 @@ const AI2026JanuaryUltraAutonomousEnterpriseRevolution = () =>
                 implement these groundbreaking technologies and achieve unprecedented operational excellence.
               </p>
               <div className="text-left"></div>
-                <a href="/services/ultra-autonomous-enterprise" className="text-left"></a>
+                <a href="/services/ultra-autonomous-<enterprise" className="text-left"></a>
                   Explore Solutions
                 </a>
-                <a href="/contact" className="text-left"></a>
+                <a href="/<contact" className="text-left"></a>
                   Schedule Consultation
                 </a>
               </div>

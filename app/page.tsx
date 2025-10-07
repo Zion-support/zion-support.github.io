@@ -1,5 +1,5 @@
 import { Suspense, lazy } from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 // Lazy load heavy components
 const UnifiedContentPromotion = lazy(
@@ -52,37 +52,32 @@ export default function HomePage() {
   };
 
   return (
-    <div className='min-h-screen bg-white'>
-      {/* Structured Data */}
+    <>
       <script
-        type='application/ld+json'
+        type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
-
+      
       {/* Hero Section */}
-      <section className='relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20'>
-        <div className='container mx-auto px-4'>
-          <div className='max-w-4xl mx-auto text-center'>
-            <h1 className='text-5xl md:text-6xl font-bold mb-6 leading-tight'>
-              AI Enterprise Transformation
-              <span className='block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400'>
-                300% ROI Guaranteed
-              </span>
+      <section className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+              Welcome to Zion Tech Group
             </h1>
-            <p className='text-xl md:text-2xl mb-8 text-gray-200'>
-              Transform your enterprise with AI-powered solutions. Achieve 300%
-              ROI, 70% cost reduction, and 90% efficiency gains.
+            <p className="text-xl md:text-2xl text-gray-700 mb-12 max-w-3xl mx-auto">
+              Pioneering the future with advanced AI and IT solutions that transform businesses and drive innovation
             </p>
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                to='/contact'
-                className='bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-colors duration-300'
+                href="/contact"
+                className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-colors duration-300"
               >
                 Get Started Today
               </Link>
               <Link
-                to='/services'
-                className='border-2 border-white text-white hover:bg-white hover:text-blue-900 font-bold py-4 px-8 rounded-lg text-lg transition-colors duration-300'
+                href="/services"
+                className="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white font-bold py-4 px-8 rounded-lg text-lg transition-colors duration-300"
               >
                 View Services
               </Link>
@@ -92,52 +87,54 @@ export default function HomePage() {
       </section>
 
       {/* Main Content */}
-      <main className='container mx-auto px-4 py-16'>
+      <main className="container mx-auto px-4 py-16">
         {/* Unified Content Promotion */}
-        <Suspense fallback={<LoadingFallback height='h-32' />}>
-          <UnifiedContentPromotion />
-        </Suspense>
+        <section className="my-16">
+          <Suspense fallback={<LoadingFallback height="h-32" />}>
+            <UnifiedContentPromotion />
+          </Suspense>
+        </section>
 
         {/* Interactive AI ROI Calculator */}
-        <section className='my-16'>
-          <Suspense fallback={<LoadingFallback height='h-64' />}>
+        <section className="my-16">
+          <Suspense fallback={<LoadingFallback height="h-64" />}>
             <InteractiveAIROICalculator />
           </Suspense>
         </section>
 
         {/* Content Showcase */}
-        <section className='my-16'>
-          <Suspense fallback={<LoadingFallback height='h-48' />}>
+        <section className="my-16">
+          <Suspense fallback={<LoadingFallback height="h-48" />}>
             <ContentShowcase />
           </Suspense>
         </section>
 
         {/* Interactive Content Showcase 2026 */}
-        <section className='my-16'>
-          <Suspense fallback={<LoadingFallback height='h-48' />}>
+        <section className="my-16">
+          <Suspense fallback={<LoadingFallback height="h-48" />}>
             <InteractiveContentShowcase2026 />
           </Suspense>
         </section>
-
+        
         {/* CTA Section */}
-        <section className='bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16 rounded-2xl text-center'>
-          <div className='max-w-3xl mx-auto px-4'>
-            <h2 className='text-4xl font-bold mb-6'>
+        <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16 rounded-2xl text-center">
+          <div className="max-w-3xl mx-auto px-4">
+            <h2 className="text-4xl font-bold mb-6">
               Ready to Transform Your Enterprise?
             </h2>
-            <p className='text-xl mb-8'>
+            <p className="text-xl mb-8">
               Join hundreds of companies already achieving 300% ROI with our AI
               solutions.
             </p>
             <Link
-              to='/contact'
-              className='bg-white text-blue-600 hover:bg-gray-100 font-bold py-4 px-8 rounded-lg text-lg transition-colors duration-300 inline-block'
+              href="/contact"
+              className="bg-white text-blue-600 hover:bg-gray-100 font-bold py-4 px-8 rounded-lg text-lg transition-colors duration-300 inline-block"
             >
               Start Your Transformation
             </Link>
           </div>
         </section>
       </main>
-    </div>
+    </>
   );
 }

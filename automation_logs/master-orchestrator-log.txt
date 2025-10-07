@@ -8,179 +8,31 @@ npm warn config       Default value does install optional deps unless otherwise 
 npm error code EJSONPARSE
 npm error JSON.parse Invalid package.json: JSONParseError: Expected double-quoted property name in JSON at position 3247 (line 73 column 1) while parsing near "...ase/ssr\": \"^0.6.1\",\n\n    \"@s..."
 npm error JSON.parse Failed to parse JSON data.
-npm error JSON.parse Note: package.json must be actual JSON, not just JavaScript.
-npm error A complete log of this run can be found in: /home/ubuntu/.npm/_logs/2025-09-07T21_00_46_777Z-debug-0.log
-
-[2025-09-07T21:00:46.821Z] Starting: TypeScript Check
-[2025-09-07T21:00:46.898Z] Error in TypeScript Check: Command failed: npm run type-check
-npm warn config optional Use `--omit=optional` to exclude optional dependencies, or
-npm warn config `--include=optional` to include them.
-npm warn config
-npm warn config       Default value does install optional deps unless otherwise omitted.
-npm error code EJSONPARSE
 npm error JSON.parse Invalid package.json: JSONParseError: Expected double-quoted property name in JSON at position 3247 (line 73 column 1) while parsing near "...ase/ssr\": \"^0.6.1\",\n\n    \"@s..."
 npm error JSON.parse Failed to parse JSON data.
-npm error JSON.parse Note: package.json must be actual JSON, not just JavaScript.
-npm error A complete log of this run can be found in: /home/ubuntu/.npm/_logs/2025-09-07T21_00_46_856Z-debug-0.log
-
-[2025-09-07T21:00:46.898Z] Starting: Production Build
-[2025-09-07T21:00:46.975Z] Error in Production Build: Command failed: npm run build
-npm warn config optional Use `--omit=optional` to exclude optional dependencies, or
-npm warn config `--include=optional` to include them.
-npm warn config
-npm warn config       Default value does install optional deps unless otherwise omitted.
-npm error code EJSONPARSE
 npm error JSON.parse Invalid package.json: JSONParseError: Expected double-quoted property name in JSON at position 3247 (line 73 column 1) while parsing near "...ase/ssr\": \"^0.6.1\",\n\n    \"@s..."
 npm error JSON.parse Failed to parse JSON data.
-npm error JSON.parse Note: package.json must be actual JSON, not just JavaScript.
-npm error A complete log of this run can be found in: /home/ubuntu/.npm/_logs/2025-09-07T21_00_46_934Z-debug-0.log
-
-[2025-09-07T21:00:46.976Z] Starting: Smoke Tests
-[2025-09-07T21:00:47.050Z] Error in Smoke Tests: Command failed: npm run test:smoke
-npm warn config optional Use `--omit=optional` to exclude optional dependencies, or
-npm warn config `--include=optional` to include them.
-npm warn config
-npm warn config       Default value does install optional deps unless otherwise omitted.
-npm error code EJSONPARSE
 npm error JSON.parse Invalid package.json: JSONParseError: Expected double-quoted property name in JSON at position 3247 (line 73 column 1) while parsing near "...ase/ssr\": \"^0.6.1\",\n\n    \"@s..."
 npm error JSON.parse Failed to parse JSON data.
-npm error JSON.parse Note: package.json must be actual JSON, not just JavaScript.
-npm error A complete log of this run can be found in: /home/ubuntu/.npm/_logs/2025-09-07T21_00_47_010Z-debug-0.log
-
-[2025-09-07T21:00:47.051Z] ✅ Master Automation Orchestrator completed!
-[2025-09-07T21:01:29.495Z] 🚀 Starting Master Automation Orchestrator...
-[2025-09-07T21:01:29.497Z] Starting: ESLint Fix
-[2025-09-07T21:01:29.578Z] Error in ESLint Fix: Command failed: npm run lint:fix
-npm warn config optional Use `--omit=optional` to exclude optional dependencies, or
-npm warn config `--include=optional` to include them.
-npm warn config
-npm warn config       Default value does install optional deps unless otherwise omitted.
-npm error code EJSONPARSE
 npm error JSON.parse Invalid package.json: JSONParseError: Expected double-quoted property name in JSON at position 3488 (line 79 column 1) while parsing near "...-query\": \"^5.85.5\",\n\n    \"@supaba..."
 npm error JSON.parse Failed to parse JSON data.
-npm error JSON.parse Note: package.json must be actual JSON, not just JavaScript.
-npm error A complete log of this run can be found in: /home/ubuntu/.npm/_logs/2025-09-07T21_01_29_535Z-debug-0.log
-
-[2025-09-07T21:01:29.578Z] Starting: TypeScript Check
-[2025-09-07T21:01:29.651Z] Error in TypeScript Check: Command failed: npm run type-check
-npm warn config optional Use `--omit=optional` to exclude optional dependencies, or
-npm warn config `--include=optional` to include them.
-npm warn config
-npm warn config       Default value does install optional deps unless otherwise omitted.
-npm error code EJSONPARSE
 npm error JSON.parse Invalid package.json: JSONParseError: Expected double-quoted property name in JSON at position 3488 (line 79 column 1) while parsing near "...-query\": \"^5.85.5\",\n\n    \"@supaba..."
 npm error JSON.parse Failed to parse JSON data.
-npm error JSON.parse Note: package.json must be actual JSON, not just JavaScript.
-npm error A complete log of this run can be found in: /home/ubuntu/.npm/_logs/2025-09-07T21_01_29_612Z-debug-0.log
-
-[2025-09-07T21:01:29.651Z] Starting: Production Build
-[2025-09-07T21:01:29.726Z] Error in Production Build: Command failed: npm run build
-npm warn config optional Use `--omit=optional` to exclude optional dependencies, or
-npm warn config `--include=optional` to include them.
-npm warn config
-npm warn config       Default value does install optional deps unless otherwise omitted.
-npm error code EJSONPARSE
 npm error JSON.parse Invalid package.json: JSONParseError: Expected double-quoted property name in JSON at position 3488 (line 79 column 1) while parsing near "...-query\": \"^5.85.5\",\n\n    \"@supaba..."
 npm error JSON.parse Failed to parse JSON data.
-npm error JSON.parse Note: package.json must be actual JSON, not just JavaScript.
-npm error A complete log of this run can be found in: /home/ubuntu/.npm/_logs/2025-09-07T21_01_29_686Z-debug-0.log
-
-[2025-09-07T21:01:29.726Z] Starting: Smoke Tests
-[2025-09-07T21:01:29.802Z] Error in Smoke Tests: Command failed: npm run test:smoke
-npm warn config optional Use `--omit=optional` to exclude optional dependencies, or
-npm warn config `--include=optional` to include them.
-npm warn config
-npm warn config       Default value does install optional deps unless otherwise omitted.
-npm error code EJSONPARSE
 npm error JSON.parse Invalid package.json: JSONParseError: Expected double-quoted property name in JSON at position 3488 (line 79 column 1) while parsing near "...-query\": \"^5.85.5\",\n\n    \"@supaba..."
 npm error JSON.parse Failed to parse JSON data.
-npm error JSON.parse Note: package.json must be actual JSON, not just JavaScript.
-npm error A complete log of this run can be found in: /home/ubuntu/.npm/_logs/2025-09-07T21_01_29_762Z-debug-0.log
-
-[2025-09-07T21:01:29.802Z] ✅ Master Automation Orchestrator completed!
-[2025-09-07T21:04:21.244Z] 🚀 Starting Master Automation Orchestrator...
-[2025-09-07T21:04:21.246Z] Starting: ESLint Fix
-[2025-09-07T21:04:21.461Z] Error in ESLint Fix: Command failed: npm run lint:fix
-npm warn config optional Use `--omit=optional` to exclude optional dependencies, or
-npm warn config `--include=optional` to include them.
-npm warn config
-npm warn config       Default value does install optional deps unless otherwise omitted.
-
-Oops! Something went wrong! :(
-
-ESLint: 9.35.0
-
-SyntaxError: Unexpected token '<<'
-    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)
-    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)
-    at #translate (node:internal/modules/esm/loader:534:12)
-    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)
-    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)
-
-[2025-09-07T21:04:21.461Z] Starting: TypeScript Check
-[2025-09-07T21:04:23.068Z] Completed: TypeScript Check
-[2025-09-07T21:04:23.069Z] 
-> bolt.new.zion.app@0.1.0 type-check
-> node --max-old-space-size=8192 ./node_modules/.bin/tsc --noEmit
-
-
-[2025-09-07T21:04:23.069Z] npm warn config optional Use `--omit=optional` to exclude optional dependencies, or
-npm warn config `--include=optional` to include them.
-npm warn config
-npm warn config       Default value does install optional deps unless otherwise omitted.
-
-[2025-09-07T21:04:23.069Z] Starting: Production Build
-[2025-09-07T21:04:33.782Z] Completed: Production Build
-[2025-09-07T21:04:33.782Z] 
-> bolt.new.zion.app@0.1.0 build
-> node --max-old-space-size=8192 ./node_modules/.bin/next build
-
-   ▲ Next.js 15.5.2
-   - Environments: .env.production, .env
-   - Experiments (use with caution):
-     ✓ optimizeCss
-     · optimizePackageImports
-
-   Linting and checking validity of types ...
-   Creating an optimized production build ...
- ✓ Compiled successfully in 2.8s
-   Collecting page data ...
-   Generating static pages (0/5) ...
-   Generating static pages (1/5) 
-   Generating static pages (2/5) 
-   Generating static pages (3/5) 
- ✓ Generating static pages (5/5)
-   Finalizing page optimization ...
-   Collecting build traces ...
-
-Route (pages)                              Size  First Load JS
-┌ ○ /                                     854 B        86.2 kB
-├ ○ /404                                  179 B        85.5 kB
-├ ƒ /api/services                           0 B        85.3 kB
-├ ○ /space-tech                         2.18 kB        87.5 kB
-└ ○ /talent/[id]                          861 B        86.2 kB
-+ First Load JS shared by all           85.3 kB
-  ├ chunks/vendors-a4ce8f32a1a683ec.js  84.3 kB
-  └ other shared chunks (total)         1.04 kB
-
-ƒ Middleware                            33.3 kB
-
-○  (Static)   prerendered as static content
-ƒ  (Dynamic)  server-rendered on demand
-
-
-[2025-09-07T21:04:33.782Z] npm warn config optional Use `--omit=optional` to exclude optional dependencies, or
-npm warn config `--include=optional` to include them.
-npm warn config
-npm warn config       Default value does install optional deps unless otherwise omitted.
- ⨯ ESLint: Unexpected token '<<'
-SyntaxError: Expected property name or '}' in JSON at position 236 (line 12 column 1)
-    at JSON.parse (<anonymous>)
-
-[2025-09-07T21:04:33.782Z] Starting: Smoke Tests
-[2025-09-07T21:04:33.953Z] Error in Smoke Tests: Command failed: npm run test:smoke
-npm warn config optional Use `--omit=optional` to exclude optional dependencies, or
-npm warn config `--include=optional` to include them.
-npm warn config
-npm warn config       Default value does install optional deps unless otherwise omitted.
-/workspace/jest.config.smoke.cjs:10
+npm error JSON.parse Invalid package.json: JSONParseError: Expected double-quoted property name in JSON at position 3247 (line 73 column 1) while parsing near "...ase/ssr\": \"^0.6.1\",\n\n    \"@s..."
+npm error JSON.parse Failed to parse JSON data.
+npm error JSON.parse Invalid package.json: JSONParseError: Expected double-quoted property name in JSON at position 3247 (line 73 column 1) while parsing near "...ase/ssr\": \"^0.6.1\",\n\n    \"@s..."
+npm error JSON.parse Failed to parse JSON data.
+npm error JSON.parse Invalid package.json: JSONParseError: Expected double-quoted property name in JSON at position 3247 (line 73 column 1) while parsing near "...ase/ssr\": \"^0.6.1\",\n\n    \"@s..."
+npm error JSON.parse Failed to parse JSON data.
+npm error JSON.parse Invalid package.json: JSONParseError: Expected double-quoted property name in JSON at position 3488 (line 79 column 1) while parsing near "...-query\": \"^5.85.5\",\n\n    \"@supaba..."
+npm error JSON.parse Failed to parse JSON data.
+npm error JSON.parse Invalid package.json: JSONParseError: Expected double-quoted property name in JSON at position 3488 (line 79 column 1) while parsing near "...-query\": \"^5.85.5\",\n\n    \"@supaba..."
+npm error JSON.parse Failed to parse JSON data.
+npm error JSON.parse Invalid package.json: JSONParseError: Expected double-quoted property name in JSON at position 3488 (line 79 column 1) while parsing near "...-query\": \"^5.85.5\",\n\n    \"@supaba..."
+npm error JSON.parse Failed to parse JSON data.
+npm error JSON.parse Invalid package.json: JSONParseError: Expected double-quoted property name in JSON at position 3488 (line 79 column 1) while parsing near "...-query\": \"^5.85.5\",\n\n    \"@supaba..."
+npm error JSON.parse Failed to parse JSON data.

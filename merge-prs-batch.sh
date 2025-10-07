@@ -7,10 +7,8 @@ LOG_FILE="merge-prs-batch-$(date +%Y%m%d-%H%M%S).log"
 BATCH_SIZE=50
 MAX_BRANCHES=200  # Limit to prevent overwhelming
 
-echo "=====================================" | tee -a "$LOG_FILE"
-echo "BATCH PR MERGE SCRIPT" | tee -a "$LOG_FILE"
-echo "=====================================" | tee -a "$LOG_FILE"
-echo "Started: $(date)" | tee -a "$LOG_FILE"
+echo "echo "BATCH PR MERGE SCRIPT" | tee -a "$LOG_FILE"
+echo "echo "Started: $(date)" | tee -a "$LOG_FILE"
 echo "" | tee -a "$LOG_FILE"
 
 # Counters
@@ -121,14 +119,11 @@ fi
 
 # Summary
 echo "" | tee -a "$LOG_FILE"
-echo "=====================================" | tee -a "$LOG_FILE"
-echo "MERGE SUMMARY" | tee -a "$LOG_FILE"
-echo "=====================================" | tee -a "$LOG_FILE"
-echo "Total processed: $total_processed" | tee -a "$LOG_FILE"
+echo "echo "MERGE SUMMARY" | tee -a "$LOG_FILE"
+echo "echo "Total processed: $total_processed" | tee -a "$LOG_FILE"
 echo "Already merged: $already_merged" | tee -a "$LOG_FILE"
 echo "Successfully merged: $success" | tee -a "$LOG_FILE"
 echo "Failed: $failed" | tee -a "$LOG_FILE"
 echo "Completed: $(date)" | tee -a "$LOG_FILE"
-echo "=====================================" | tee -a "$LOG_FILE"
-echo "" | tee -a "$LOG_FILE"
+echo "echo "" | tee -a "$LOG_FILE"
 echo "Log file: $LOG_FILE" | tee -a "$LOG_FILE"

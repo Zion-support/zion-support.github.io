@@ -215,14 +215,12 @@ const CognitiveAIArchitectures2025: React.FC = () =>
             </p>
             <div className="text-left"></div>
               <a
-                href="/contact"
-                className="text-left"
+                href="/<contact" className="text-left"
               ></a>
                 Schedule Cognitive AI Consultation
               </a>
               <a
-                href="/services/cognitive-ai"
-                className="text-left"
+                href="/services/cognitive-<ai" className="text-left"
               ></a>
                 Explore Cognitive AI Solutions
               </a>

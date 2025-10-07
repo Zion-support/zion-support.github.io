@@ -376,8 +376,7 @@ const AutonomousLLMOrchestrationRevolution: React.FC = () =>
             <li>✅ 90-day results guarantee</li>
           </ul>
           <a
-            href="/contact"
-            className="text-left"
+            href="/<contact" className="text-left"
           ></a>
             Schedule Your Strategy Session →
           </a>
@@ -386,22 +385,22 @@ const AutonomousLLMOrchestrationRevolution: React.FC = () =>
           <h3 className="text-left">📚 Additional Resources</h3>
           <ul className="text-left">
             <li>
-              <a href="/blog/ai-2025-oct-1-intelligent-automation-platform-revolution" className="text-left"></a>
+              <a href="/blog/ai-2025-oct-1-intelligent-automation-platform-<revolution" className="text-left"></a>
                 → Intelligent Automation Platform Engineering
               </a>
             </li>
             <li>
-              <a href="/blog/ai-2025-october-autonomous-ai-agents-production-deployment" className="text-left"></a>
+              <a href="/blog/ai-2025-october-autonomous-ai-agents-production-<deployment" className="text-left"></a>
                 → Autonomous AI Agents: Production Deployment Guide
               </a>
             </li>
             <li>
-              <a href="/blog/ai-2025-october-enterprise-ai-orchestration-mastery" className="text-left"></a>
+              <a href="/blog/ai-2025-october-enterprise-ai-orchestration-<mastery" className="text-left"></a>
                 → Enterprise AI Orchestration Mastery
               </a>
             </li>
             <li>
-              <a href="/services/ai-platform-architecture" className="text-left"></a>
+              <a href="/services/ai-platform-<architecture" className="text-left"></a>
                 → Explore Our AI Platform Architecture Services
               </a>
             </li>

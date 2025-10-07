@@ -36,10 +36,8 @@ print_step() {
 }
 
 print_header() {
-    echo -e "${CYAN}================================${NC}"
-    echo -e "${CYAN} $1${NC}"
-    echo -e "${CYAN}================================${NC}"
-}
+    echo -e "${CYAN}    echo -e "${CYAN} $1${NC}"
+    echo -e "${CYAN}}
 
 # Function to check if running as root
 check_root() {

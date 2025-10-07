@@ -184,14 +184,12 @@ const AIAgentMeshNetworks2025: React.FC = () =>
             </p>
             <div className="text-left"></div>
               <a
-                href="/contact"
-                className="text-left"
+                href="/<contact" className="text-left"
               ></a>
                 Schedule Architecture Consultation
               </a>
               <a
-                href="/services/ai-agent-systems"
-                className="text-left"
+                href="/services/ai-agent-<systems" className="text-left"
               ></a>
                 Explore Agent Mesh Solutions
               </a>
