@@ -211,7 +211,6 @@ const NewestContent2025Banner = () => {
           </Link>
         </div>
 
-<<<<<<< HEAD
         {/* Call-to-Action Section */}
         <div className="text-center bg-white/5 backdrop-blur-lg rounded-2xl p-12 border border-white/20 mb-16">
           <h3 className="text-3xl font-bold text-white mb-6">
@@ -254,17 +253,6 @@ const NewestContent2025Banner = () => {
               <div className="text-gray-300">{stat.label}</div>
             </div>
           ))}
-=======
-        {/* Call to Action */}
-        <div className="text-center">
-          <Link
-            href="/blog"
-            className="inline-flex items-center bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-cyan-500/25"
-          >
-            View All Articles
-            <span className="ml-2">→</span>
-          </Link>
->>>>>>> 800d0c7aac9826a6606b7f370413ac3309436671
         </div>
       </div>
     </section>
