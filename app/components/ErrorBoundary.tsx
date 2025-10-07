@@ -26,18 +26,15 @@ class ErrorBoundary extends Component<Props, State> {
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    this.setState({
-      error,
-      errorInfo,
-    });
-
-    // Call the onError callback if provided
+    this.setState({ errorInfo });
+    
     if (this.props.onError) {
       this.props.onError(error, errorInfo);
     }
 
-    // Log error for debugging
-    console.error('ErrorBoundary caught an error:', error, errorInfo);
+    if (this.props.enableErrorReporting) {
+      console.error('Error caught by boundary:', error, errorInfo);
+    }
   }
 
   render() {
@@ -74,6 +71,24 @@ class ErrorBoundary extends Component<Props, State> {
                   Go to Homepage
                 </a>
               </div>
+              {this.props.enableErrorReporting && this.state.error && (
+                <details className="mt-6 text-left">
+                  <summary className="cursor-pointer text-sm text-gray-500 hover:text-gray-700">
+                    Error Details
+                  </summary>
+                  <div className="mt-2 p-4 bg-gray-100 rounded text-xs">
+                    <div className="mb-2">
+                      <strong>Error:</strong> {this.state.error.message}
+                    </div>
+                    {this.state.errorInfo && (
+                      <div>
+                        <strong>Component Stack:</strong>
+                        <pre className="whitespace-pre-wrap">{this.state.errorInfo.componentStack}</pre>
+                      </div>
+                    )}
+                  </div>
+                </details>
+              )}
             </div>
           </div>
         </div>
