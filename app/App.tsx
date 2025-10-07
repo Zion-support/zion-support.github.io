@@ -34,7 +34,9 @@ const App: React.FC = () => {
     // Initialize performance monitoring
     if (typeof window !== 'undefined' && 'performance' in window) {
       performanceOptimizer.optimize();
-      console.log('Performance monitoring initialized');
+      if (process.env.NODE_ENV === 'development') {
+        console.log('Performance monitoring initialized');
+      }
     }
     // Performance monitoring is handled by other components
   }, []);
