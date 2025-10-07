@@ -135,9 +135,9 @@ describe('AdvancedSEOOptimizer', () => {
   });
 
   it('renders with structured data enabled', () => {
-    // Just test that it renders without error
+    const helmetContext = {};
     const { container } = render(
-      <HelmetProvider>
+      <HelmetProvider context={helmetContext}>
         <AdvancedSEOOptimizer
           config={mockSEOData}
           enableStructuredData={true}
@@ -145,31 +145,32 @@ describe('AdvancedSEOOptimizer', () => {
       </HelmetProvider>
     );
 
-    // Component renders without crashing
+    // Check that component renders without crashing
+    // Note: react-helmet-async manages head tags in a way that's not easily testable with querySelector
     expect(container).toBeTruthy();
   });
 
   it('renders with Open Graph enabled', () => {
-    // Just test that it renders without error
+    const helmetContext = {};
     const { container } = render(
-      <HelmetProvider>
+      <HelmetProvider context={helmetContext}>
         <AdvancedSEOOptimizer config={mockSEOData} enableOpenGraph={true} />
       </HelmetProvider>
     );
 
-    // Component renders without crashing
+    // Check that component renders without crashing
     expect(container).toBeTruthy();
   });
 
   it('renders with Twitter Cards enabled', () => {
-    // Just test that it renders without error
+    const helmetContext = {};
     const { container } = render(
-      <HelmetProvider>
+      <HelmetProvider context={helmetContext}>
         <AdvancedSEOOptimizer config={mockSEOData} enableTwitterCards={true} />
       </HelmetProvider>
     );
 
-    // Component renders without crashing
+    // Check that component renders without crashing
     expect(container).toBeTruthy();
   });
 });
