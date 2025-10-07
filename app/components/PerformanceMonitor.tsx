@@ -1,6 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { performanceOptimizer } from '../utils/performanceOptimizer';
 
+interface LayoutShift extends PerformanceEntry {
+  hadRecentInput: boolean;
+  value: number;
+}
+
 interface PerformanceMetrics {
   loadTime: number;
   renderTime: number;
