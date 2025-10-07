@@ -1,11 +1,9 @@
 'use client';
 
-import React, { Suspense, lazy, useCallback, useEffect } from 'react';
-import Link from 'next/link';
+import React, { Suspense, lazy, useCallback, useEffect, ErrorInfo } from 'react';
 import { HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 // Components
-import SEOOptimizer from './components/SEOOptimizer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import AdvancedErrorBoundary from './components/AdvancedErrorBoundary';
 import AdvancedSEOOptimizer from './components/AdvancedSEOOptimizer';
@@ -24,7 +22,7 @@ const InteractiveAIROICalculator = lazy(
 );
 
 // Utils
-import { performanceOptimizer, collectPerformanceMetrics } from './utils/performanceOptimizer';
+import { performanceOptimizer } from './utils/performanceOptimizer';
 import { logger } from './utils/logger';
 
 // Styles
@@ -45,7 +43,7 @@ const App: React.FC = () => {
     // preloadCriticalResources();
   }, []);
 
-  const handleError = useCallback((error: Error, errorInfo: any) => {
+  const handleError = useCallback((error: Error, errorInfo: ErrorInfo) => {
     logger.error('Application Error', 'ErrorBoundary', { error: error.message, errorInfo });
   }, []);
 
@@ -102,13 +100,5 @@ const App: React.FC = () => {
   );
 };
 
-// Loading fallback component
-const LoadingFallback: React.FC<{ height?: string }> = ({
-  height = 'h-32',
-}) => (
-  <div className={`flex items-center justify-center ${height} w-full`}>
-    <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-indigo-600"></div>
-  </div>
-);
 
 export default App;

@@ -38,7 +38,6 @@ const UltimateBusinessIntelligence2025Banner = () => {
 
   if (!isVisible) return null;
 
-  const currentContent = content[currentSlide];
   return (
     <div className="relative bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 text-white overflow-hidden">
       <div className="absolute inset-0">
