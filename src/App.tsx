@@ -8,8 +8,6 @@ import ErrorBoundary from './components/ErrorBoundary';
 import SEOOptimizer from './components/SEOOptimizer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import PerformanceMonitor from './components/PerformanceMonitor';
-import LoadingSpinner from '../app/components/LoadingSpinner';
-// import performanceOptimizer from './utils/performanceOptimizer';
 
 // Import page components
 import AboutPage from '../app/about/page';
@@ -55,35 +53,6 @@ const Contact = () => (
     </div>
   </div>
 );
-
-// const Team = () => (
-//   <div className='min-h-screen flex items-center justify-center bg-gray-50'>
-//     <div className='text-center'>
-//       <h1 className='text-4xl font-bold text-gray-900 mb-4'>Our Team</h1>
-//       <p className='text-xl text-gray-600'>Meet our expert professionals</p>
-//     </div>
-//   </div>
-// );
-
-// const Privacy = () => (
-//   <div className='min-h-screen flex items-center justify-center bg-gray-50'>
-//     <div className='text-center'>
-//       <h1 className='text-4xl font-bold text-gray-900 mb-4'>Privacy Policy</h1>
-//       <p className='text-xl text-gray-600'>Your privacy is important to us</p>
-//     </div>
-//   </div>
-// );
-
-// const Terms = () => (
-//   <div className='min-h-screen flex items-center justify-center bg-gray-50'>
-//     <div className='text-center'>
-//       <h1 className='text-4xl font-bold text-gray-900 mb-4'>
-//         Terms of Service
-//       </h1>
-//       <p className='text-xl text-gray-600'>Terms and conditions</p>
-//     </div>
-//   </div>
-// );
 
 function App(): React.JSX.Element {
   const initializeOptimizations = useCallback(() => {
