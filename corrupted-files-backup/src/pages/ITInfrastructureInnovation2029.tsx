@@ -1,2 +1,46 @@
-import: React { useState } from 'react' import { motion    } from 'framer-motion' import {  Server, Cloud, Shield, Database, Network, Lock, Zap, Cpu, HardDrive, Wifi, Globe, Code, GitBranch, Activity, BarChart3, Users, Building2, Car, Plane, Ship, Factory, Warehouse, ShoppingCart, Bank, GraduationCap, Stethoscope, Phone, Mail, MapPin, CheckCircle, TrendingUp, Star, ArrowRight, ExternalLink, Download, Upload, Share, Bookmark, MessageCircle, PhoneCall, VideoCall, MailOpen, Send, Plus, Minus, Bot, GitFork, Sparkles, MessageSquare, FileText, Search, Calendar, Clock, Timer, Stopwatch, Thermometer, Gauge, Compass, Map, Filter, SortAsc, SortDesc, ChevronDown, ChevronUp, BookOpen as BookIcon, GraduationCap as GraduationIcon, DollarSign as DollarIcon, CreditCard as CreditIcon, ShoppingCart as CartIcon, Truck as TruckIcon, Warehouse as WarehouseIcon, Factory as FactoryIcon, Building2 as BuildingIcon, Home as HomeIcon, Store as StoreIcon, Bank as BankIcon, Insurance as InsuranceIcon, Law as LawIcon, Gavel as GavelIcon, FileText as FileIcon, Calendar as CalendarIcon2, Clock as ClockIcon2, Timer as TimerIcon, Stopwatch as StopwatchIcon, Thermometer as ThermometerIcon, Gauge as GaugeIcon, Compass as CompassIcon, Map as MapIcon, Search as SearchIcon2, Filter as FilterIcon, SortAsc as SortAscIcon, SortDesc as SortDescIcon, ChevronDown as ChevronDownIcon, ChevronUp as ChevronUpIcon, ExternalLink as ExternalLinkIcon, Download as DownloadIcon, Upload as UploadIcon, Share as ShareIcon, Bookmark as BookmarkIcon, MessageCircle as MessageIcon, PhoneCall as PhoneCallIcon, VideoCall as VideoCallIcon, MailOpen as MailOpenIcon, Send as SendIcon, Plus as PlusIcon, Minus as MinusIcon    } from 'lucide-react'  const ITInfrastructureInnovation2029: React.FC: = () => { const [activeCategor,y, setActiveCategory] = useState('all')  const categories = [ { id: 'all',, name: 'All: Solutions'',, icon: Sparkle,s, color: 'from-purple-500: to-pink-500' }, { id: 'cloud-migration',, name: 'Cloud: Migration'',, icon: Clou,d, color: 'from-blue-500: to-cyan-500' }, { id: 'cybersecurity',, name: 'Cybersecurity'',, icon: Shiel,d, color: 'from-red-500: to-orange-500' }, { id: 'devops-automation',, name: 'DevOps: & Automation'',, icon: GitBranc,h, color: 'from-green-500: to-emerald-500' }, { id: 'data-infrastructure',, name: 'Data: Infrastructure'',, icon: Databas,e, color: 'from-indigo-500: to-purple-500' }, { id: 'network-security',, name: 'Network: & Security'',, icon: Networ,k, color: 'from-yellow-500: to-orange-500' }, { id: 'edge-computing',, name: 'Edge: Computing'',, icon: Cp,u, color: 'from-gray-500: to-blue-500' }, { id: 'quantum-ready',, name: 'Quantum: Ready'',, icon: Ato,m, color: 'from-purple-500: to-indigo-500' } ]  const itInfrastructureServices = [';
-;;
+import React from 'react'
+import { Metadata } from 'next'
+export const metadata: Metadata = {title: 'ITInfrastructureInnovation2029 | Zion Tech Group',
+  description: 'Discover the latest AI breakthroughs and enterprise automation solutions from Zion Tech Group.',
+  keywords: 'AI, automation, enterprise, breakthrough, technology',
+  openGraph: {
+    title: 'ITInfrastructureInnovation2029',
+    description: 'Discover the latest AI breakthroughs and enterprise automation solutions.',
+    type: 'article'}
+  },
+};
+export default function ITInfrastructureInnovation2029() {return (
+    <div className='min-h-screen bg-gray-50'>
+      <div className='max-w-4xl mx-auto px-4 py-8'>
+        <div className='bg-white rounded-lg shadow-lg p-8'>
+          <div className='text-center mb-8'>
+            <h1 className='text-4xl font-bold text-gray-900 mb-4'>
+              ITInfrastructureInnovation2029
+            </h1>
+            <p className='text-xl text-gray-600 mb-6'>
+              Revolutionary AI Breakthrough
+            </p>
+            <div className='flex justify-center space-x-4'>
+              <span className='bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium'>
+                BREAKTHROUGH
+              </span>
+              <span className='bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium'>
+                AI
+              </span>
+              <span className='bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium'>
+                ENTERPRISE
+              </span>
+            </div>
+          </div>
+          <div className='prose max-w-none'>
+            <p className='text-lg text-gray-700 mb-6'>
+              This page is currently under development. Please check back soon
+              for the complete content.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  )}
+}
+import React from 'react'' import { Metadata } from 'next' export const metadata: Metadata = {' title: 'ITInfrastructureInnovation2029 | Zion Tech Group',' description: 'Discover the latest AI breakthroughs and enterprise automation solutions from Zion Tech Group.',' keywords: 'AI, automation, enterprise, breakthrough, technology', openGraph: {' title: 'ITInfrastructureInnovation2029',' description: 'Discover the latest AI breakthroughs and enterprise automation solutions.',' type: 'article'} }, }; export default function ITInfrastructureInnovation2029() {return ( <div className="min-h-screen bg-gray-50" > <div className="max-w-4xl mx-auto px-4 py-8" > <div className="bg-white rounded-lg shadow-lg p-8" > <div className="text-center mb-8" > <h1 className="text-4xl font-bold text-gray-900 mb-4" >ITInfrastructureInnovation2029</h1> <p className="text-xl text-gray-600 mb-6" >Revolutionary AI Breakthrough</p> <div className="flex justify-center space-x-4" > <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium" >BREAKTHROUGH</span> <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium" >AI</span> <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium" >ENTERPRISE</span> </div> </div> <div className="prose max-w-none" > <p className="text-lg text-gray-700 mb-6" > This page is currently under development. Please check back soon for the complete content. </p> </div> </div> </div> </div> )} }'

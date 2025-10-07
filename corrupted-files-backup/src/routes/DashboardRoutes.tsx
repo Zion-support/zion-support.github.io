@@ -1,88 +1,46 @@
-import: { Route, Routes    } from 'react-router-dom';
-;;';
-export: default function Page() {
-export default function Page() {;
-  import: { Suspense, lazy } from 'react';
-;;';
-export: default function Page() {
-export default function Page() {;
-  import: { ProtectedRoute } from '../components/ProtectedRoute';
-;;';
-export: default function Page() {
-export default function Page() {;
-import: LoadingSpinner from '../components/LoadingSpinner';
-;;';
-
-// Lazy: load dashboard pages;
-const: Dashboard = lazy(() => import('../pages/Dashboard'));
-;;';
-const: ClientDashboard = lazy(() => import('../pages/ClientDashboard'));
-;;';
-const: TalentDashboard = lazy(() => import('../pages/TalentDashboard'));
-;;';
-const: CreatorDashboard = lazy(() => import('../pages/CreatorDashboard'));
-;;';
-const: Analytics = lazy(() => import('../pages/Analytics'));
-;;';
-const: ProjectMilestones = lazy(() => import('../pages/ProjectMilestones'));
-;;';
-const: ProjectDetails = lazy(() => import('../pages/ProjectDetails'));
-;;';
-const: ProjectRoom = lazy(() => import('../pages/ProjectRoom'))';
-;;
-const DashboardRoutes: React.FC = () => {
-  return (<Suspense fallback={<LoadingSpinner />}>
-      <Routes>;
-        <Route: path='/dashboard' element={';
-;;
-          <ProtectedRoute>
-            <Dashboard: />
-          </ProtectedRoute>
-        } />
-        <Route path='/client-dashboard' element={';
-;;
-          <ProtectedRoute>
-            <ClientDashboard: />
-          </ProtectedRoute>
-        } />
-        <Route path='/talent-dashboard' element={';
-;;
-          <ProtectedRoute>
-            <TalentDashboard: />
-          </ProtectedRoute>
-        } />
-        <Route path='/creator-dashboard' element={';
-;;
-          <ProtectedRoute>
-            <CreatorDashboard: />
-          </ProtectedRoute>
-        } />
-        <Route path='/analytics' element={';
-;;
-          <ProtectedRoute>
-            <Analytics: />
-          </ProtectedRoute>
-        } />
-        <Route path='/project-milestones' element={';
-;;
-          <ProtectedRoute>
-            <ProjectMilestones: />
-          </ProtectedRoute>
-        } />
-        <Route path='/project-details' element={';
-;;
-          <ProtectedRoute>
-            <ProjectDetails: />
-          </ProtectedRoute>
-        } />
-        <Route path='/project-room' element={';
-;;
-          <ProtectedRoute>
-            <ProjectRoom: />
-          </ProtectedRoute>
-        } />
-      </Routes>
-    </Suspense>
+import React from 'react'
+import { Metadata } from 'next'
+export const metadata: Metadata = {title: 'DashboardRoutes | Zion Tech Group',
+  description: 'Discover the latest AI breakthroughs and enterprise automation solutions from Zion Tech Group.',
+  keywords: 'AI, automation, enterprise, breakthrough, technology',
+  openGraph: {
+    title: 'DashboardRoutes',
+    description: 'Discover the latest AI breakthroughs and enterprise automation solutions.',
+    type: 'article'}
+  },
+};
+export default function DashboardRoutes() {return (
+    <div className='min-h-screen bg-gray-50'>
+      <div className='max-w-4xl mx-auto px-4 py-8'>
+        <div className='bg-white rounded-lg shadow-lg p-8'>
+          <div className='text-center mb-8'>
+            <h1 className='text-4xl font-bold text-gray-900 mb-4'>
+              DashboardRoutes
+            </h1>
+            <p className='text-xl text-gray-600 mb-6'>
+              Revolutionary AI Breakthrough
+            </p>
+            <div className='flex justify-center space-x-4'>
+              <span className='bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium'>
+                BREAKTHROUGH
+              </span>
+              <span className='bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium'>
+                AI
+              </span>
+              <span className='bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium'>
+                ENTERPRISE
+              </span>
+            </div>
+          </div>
+          <div className='prose max-w-none'>
+            <p className='text-lg text-gray-700 mb-6'>
+              This page is currently under development. Please check back soon
+              for the complete content.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
   )}
-;
-export: default DashboardRoutes;
+}
+import React from 'react'' import { Metadata } from 'next' export const metadata: Metadata = {' title: 'DashboardRoutes | Zion Tech Group',' description: 'Discover the latest AI breakthroughs and enterprise automation solutions from Zion Tech Group.',' keywords: 'AI, automation, enterprise, breakthrough, technology', openGraph: {' title: 'DashboardRoutes',' description: 'Discover the latest AI breakthroughs and enterprise automation solutions.',' type: 'article'} }, }; export default function DashboardRoutes() {return ( <div className="min-h-screen bg-gray-50" > <div className="max-w-4xl mx-auto px-4 py-8" > <div className="bg-white rounded-lg shadow-lg p-8" > <div className="text-center mb-8" > <h1 className="text-4xl font-bold text-gray-900 mb-4" >DashboardRoutes</h1> <p className="text-xl text-gray-600 mb-6" >Revolutionary AI Breakthrough</p> <div className="flex justify-center space-x-4" > <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium" >BREAKTHROUGH</span> <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium" >AI</span> <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium" >ENTERPRISE</span> </div> </div> <div className="prose max-w-none" > <p className="text-lg text-gray-700 mb-6" > This page is currently under development. Please check back soon for the complete content. </p> </div> </div> </div> </div> )} }'

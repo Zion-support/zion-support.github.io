@@ -1,6 +1,4 @@
-import React from 'react';
 import { Metadata } from 'next';
-import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'AI 2026 Hyper-Autonomous Enterprise Automation: 99.9% Automation & $300B Value Generation',

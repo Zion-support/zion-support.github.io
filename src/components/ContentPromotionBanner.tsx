@@ -1,23 +1,22 @@
-import { ArrowRight, BookOpen, TrendingUp, Zap } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function ContentPromotionBanner() {
   const featuredContent = [
     {
       title: "Edge Inference Patterns That Actually Reduce Latency",
-      category: "AI Infrastructure",
+      category: "AI Infrastructure",",
       readTime: "7 min read",
       isNew: true,
     },
-    {
+    {",
       title: "North‑Star Engineering Metrics: Fewer KPIs, Better Outcomes",
-      category: "Leadership", 
+      category: "Leadership", ",
       readTime: "5 min read",
       isNew: true,
     },
-    {
+    {",
       title: "OpenTelemetry in Production: Traces That Engineers Use",
-      category: "Observability",
+      category: "Observability",",
       readTime: "6 min read",
       isNew: true,
     },
@@ -34,7 +33,7 @@ export default function ContentPromotionBanner() {
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
           <div className="max-w-2xl">
             <div className="flex items-center gap-2 mb-4">
-              <TrendingUp className="w-5 h-5 text-yellow-300" />
+
               <span className="text-sm font-medium text-yellow-300 uppercase tracking-wide">
                 Fresh Content
               </span>
@@ -53,16 +52,16 @@ export default function ContentPromotionBanner() {
               to="/blog" 
               className="bg-white text-indigo-700 hover:bg-indigo-50 px-8 py-4 rounded-lg font-semibold inline-flex items-center justify-center gap-2 transition-all duration-300 hover:scale-105 hover:shadow-lg"
             >
-              <BookOpen className="w-5 h-5" />
+
               Explore All Articles
-              <ArrowRight className="w-5 h-5" />
+
             </Link>
             
             <Link 
               to="/case-studies" 
               className="border-2 border-white text-white hover:bg-white hover:text-indigo-700 px-8 py-4 rounded-lg font-semibold inline-flex items-center justify-center gap-2 transition-all duration-300 hover:scale-105"
             >
-              <Zap className="w-5 h-5" />
+
               View Case Studies
             </Link>
           </div>
@@ -89,7 +88,7 @@ export default function ContentPromotionBanner() {
                 <span className="text-sm text-white/70">
                   {item.readTime}
                 </span>
-                <ArrowRight className="w-4 h-4 text-white/70" />
+
               </div>
             </div>
           ))}
@@ -106,7 +105,7 @@ export default function ContentPromotionBanner() {
             <div className="text-sm text-white/80">Monthly Readers</div>
           </div>
           <div className="text-center">
-            <div className="text-2xl font-bold text-white">15</div>
+            
             <div className="text-sm text-white/80">Expert Authors</div>
           </div>
           <div className="text-center">

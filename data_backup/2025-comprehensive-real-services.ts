@@ -1,2 +1,2 @@
-
-  id: string;
+string;
+string;

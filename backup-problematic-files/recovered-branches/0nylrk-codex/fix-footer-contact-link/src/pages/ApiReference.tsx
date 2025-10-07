@@ -1,6 +1,1 @@
-                </li>;              ))}
-            </ul>;
-          </div>;
-        </div>;
-;
-        {/* Endpoint details */}
+</li>; ))} </ul>; </div> </div> {/* Endpoint details */}

@@ -1,5 +1,0 @@
-
-export const optimizeHeadings = () => {
-  console.log('Optimizing headings...');
-
-};

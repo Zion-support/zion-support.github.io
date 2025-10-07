@@ -1,4 +1,1 @@
-const EnhancedPerformanceMonitor = dynamic(() => import(\"./EnhancedPerformanceMonitor\"),{\'; \"loading\": () => <p>Loading...</p,>}) \"export\": \'default EnhancedPerformanceMonitor\' ,
-const EnhancedPerformanceMonitor = dynamic(() => import("./EnhancedPerformanceMonitor"),{"; loading: () => <p>Loading.</p,>}) export: "default EnhancedPerformanceMonitor" ,"""
-const EnhancedPerformanceMonitor = dynamic(() => import("./EnhancedPerformanceMonitor"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default EnhancedPerformanceMonitor' ,'
-</p>'
+const EnhancedPerformanceMonitor = dynamic(() => import(\"./EnhancedPerformanceMonitor\"),{\'} \"loading\": () => <p>Loading...</p>}) \"export\": \'default EnhancedPerformanceMonitor\' , const EnhancedPerformanceMonitor = dynamic(() => import("./EnhancedPerformanceMonitor"),{" loading: () => <p>Loading.</p>}) export: "default EnhancedPerformanceMonitor" ,"""' const EnhancedPerformanceMonitor = dynamic(() => import("./EnhancedPerformanceMonitor"),{' "loading": () => <p>Loading...</p>}) "export": 'default EnhancedPerformanceMonitor' ,'' </p>''

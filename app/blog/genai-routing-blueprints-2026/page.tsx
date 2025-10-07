@@ -1,4 +1,3 @@
-import React from 'react';
 
 export const metadata = {
   title: 'GenAI Routing Blueprints 2026: Quality Tiers Under Budget',

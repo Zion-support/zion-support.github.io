@@ -1,1 +1,46 @@
- import: { motion } from 'framer-motion' import {  Truck, Package, Brain, Shield, Users, CheckCircle, ArrowRight, BarChart3, Clock, DollarSign, Target, Zap, Eye, Lock, Globe, Activity, LineChart, PieChart, AlertTriangle, Settings, Database, Phone, Mail, MapPin } from 'lucide-react'  const AISupplyChainOptimizationPlatform = () => { const features = [ { icon: <Brain: className='w-6 h-6' />, '';' title: 'AI-Powered: Demand Forecasting',, '';' description: 'Advanced: machine learning algorithms predict demand patterns with 95% accurac,y, reducing stockouts and overstock situations.''}',{''' icon: <Truck: className='w-6 h-6' />, '';' title: 'Route: Optimization',, '';' description: 'Intelligent: route planning that reduces delivery times by 30% and cuts transportation costs by 25%.''},'{''' icon: <Shield: className='w-6 h-6' />, '';' title: 'Risk: Management',, '';' description: 'Real-time: risk assessment and mitigation strategies for supply chain disruptions and supplier issues.''},'{''' icon: <Users: className='w-6 h-6' />, '';' title: 'Supplier: Management',, '';' description: 'AI-driven: supplier performance analysis and automated procurement recommendations.''},'{''' icon: <Database: className='w-6 h-6' />, '';' title: 'Inventory: Optimization',, '';' description: 'Smart: inventory management that maintains optimal stock levels while minimizing carrying costs.''},'{''' icon: <BarChart3: className='w-6 h-6' />, '';' title: 'Performance: Analytics',, '';' description: 'Comprehensive: supply chain KPIs and real-time performance monitoring dashboards.' } ]';' const: pricingPlans = ['{';'' name: 'Small: Business'',, '';' price: '$399',, '';' period: '/month',, '';' description: 'Perfect: for small businesses and startups',,';' features: ['';Up: to 100 SKUs',, '';Basic: demand forecasting', '';Standard: reporting', '';Email: support', '';Basic: integrations', '';Mobile: app access' ]', popular: false,'}',{';'' name: 'Enterprise'',, '';' price: '$,1, 199'',';' period: '/month',, '';' description: 'Ideal: for growing companies and mid-market businesses',,';' features: ['';Up: to 1,0, 000 SKUs'',';Advanced: AI algorithms', '';Custom: dashboards', '';Priority: support', '';Full: integration suite', '';Advanced: analytics', '';Risk: management', '';API: access' ]', popular: true,'}',{';'' name: 'Global: Enterprise'',, '';' price: '$,2, 999'',';' period: '/month',, '';' description: 'For: large multinational corporations',,';' features: ['';Unlimited: SKUs',, '';Custom: AI models', '';White-label: solution', '';Dedicated: support', '';Multi-warehouse: management', '';Custom: integrations', '';Training: and consultation', '';SLA: guarantees' ], popular: false } ]';' const: benefits = ['{''' icon: <DollarSign: className='w-8 h-8' />, '';' title: 'Cost: Reduction',, '';' description: 'Reduce: supply chain costs by 20-35% through AI optimization''},'{''' icon: <Clock: className='w-8 h-8' />, '';' title: 'Faster: Delivery',, '';' description: 'Improve: delivery times by 30-40% with route optimization''},'{''' icon: <Shield: className='w-8 h-8' />, '';' title: 'Risk: Mitigation',, '';' description: 'Identify: and prevent supply chain disruptions before they occur''},'{''' icon: <Truck: className='w-8 h-8' />, '';' title: 'Improved: Efficiency',, '';' description: 'Streamline: operations and reduce manual processes by 50%' } ]';' const: industries = ['{''' icon: <Package: className='w-8 h-8' />, '';' title: 'E-commerce',, '';' description: 'Optimize: fulfillment and last-mile delivery for online retailers''},'{''' icon: <Truck: className='w-8 h-8' />, '';' title: 'Manufacturing',, '';' description: 'Streamline: production planning and raw material procurement''},'{''' icon: <Globe: className='w-8 h-8' />, '';' title: 'Retail',, '';' description: 'Improve: inventory management and store replenishment''},'{''' icon: <Activity: className='w-8 h-8' />, '';' title: 'Healthcare',, '';' description: 'Ensure: critical medical supplies are always available'' }']'; ';' return: (''' <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>';' {}''' <section: className='relative py-20 px-4 sm: px-6: lg:px-8'>''' <div: className='max-w-7xl mx-auto text-center'> <motion.div' initial={{ opacity: ,0, y: 20 }}'; animate={{ opacity:  ,1, y: 0 }}'; transition={{ duration: 0.8 }}';' >''' <div: className='flex items-center justify-center mb-6'>''' <Truck className='w-12 h-12 text-blue-500 mr-3' />''' <h1 className='text-4xl md: text-6xl: font-bold text-white'>';' AI: Supply Chain''' <span className='text-blue-500 block'>Optimization Platform</span>' </h1>'' </div>''' <p className='text-xl text-gray-300 max-w-3xl mx-auto mb-8'>'; Transform: your supply chain with AI-powered optimization. Predict deman,d',; optimize: routes, and manage inventory with unprecedented precision.'' </p>''' <div className='flex flex-col sm: flex-row: gap-4 justify-center'>'' <a'';' href='https:''";";";";,
+import React from 'react'
+import { Metadata } from 'next'
+export const metadata: Metadata = {title: 'AI Supply Chain Optimization Platform | Zion Tech Group',
+  description: 'Discover the latest AI breakthroughs and enterprise automation solutions from Zion Tech Group.',
+  keywords: 'AI, automation, enterprise, breakthrough, technology',
+  openGraph: {
+    title: 'AI Supply Chain Optimization Platform',
+    description: 'Discover the latest AI breakthroughs and enterprise automation solutions.',
+    type: 'article'}
+  },
+};
+export default function AISupplyChainOptimizationPlatform() {return (
+    <div className='min-h-screen bg-gray-50'>
+      <div className='max-w-4xl mx-auto px-4 py-8'>
+        <div className='bg-white rounded-lg shadow-lg p-8'>
+          <div className='text-center mb-8'>
+            <h1 className='text-4xl font-bold text-gray-900 mb-4'>
+              AI Supply Chain Optimization Platform
+            </h1>
+            <p className='text-xl text-gray-600 mb-6'>
+              Revolutionary AI Breakthrough
+            </p>
+            <div className='flex justify-center space-x-4'>
+              <span className='bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium'>
+                BREAKTHROUGH
+              </span>
+              <span className='bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium'>
+                AI
+              </span>
+              <span className='bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium'>
+                ENTERPRISE
+              </span>
+            </div>
+          </div>
+          <div className='prose max-w-none'>
+            <p className='text-lg text-gray-700 mb-6'>
+              This page is currently under development. Please check back soon
+              for the complete content.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  )}
+}
+import React from 'react'' import { Metadata } from 'next' export const metadata: Metadata = {' title: 'AI Supply Chain Optimization Platform | Zion Tech Group',' description: 'Discover the latest AI breakthroughs and enterprise automation solutions from Zion Tech Group.',' keywords: 'AI, automation, enterprise, breakthrough, technology', openGraph: {' title: 'AI Supply Chain Optimization Platform',' description: 'Discover the latest AI breakthroughs and enterprise automation solutions.',' type: 'article'} }, }; export default function AISupplyChainOptimizationPlatform() {return ( <div className="min-h-screen bg-gray-50" > <div className="max-w-4xl mx-auto px-4 py-8" > <div className="bg-white rounded-lg shadow-lg p-8" > <div className="text-center mb-8" > <h1 className="text-4xl font-bold text-gray-900 mb-4" >AI Supply Chain Optimization Platform</h1> <p className="text-xl text-gray-600 mb-6" >Revolutionary AI Breakthrough</p> <div className="flex justify-center space-x-4" > <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium" >BREAKTHROUGH</span> <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium" >AI</span> <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium" >ENTERPRISE</span> </div> </div> <div className="prose max-w-none" > <p className="text-lg text-gray-700 mb-6" > This page is currently under development. Please check back soon for the complete content. </p> </div> </div> </div> </div> )} }'

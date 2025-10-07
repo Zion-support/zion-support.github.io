@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { BookOpen, TrendingUp, Users, Star, ArrowRight, Sparkles, Award, Zap } from 'lucide-react';
 
 const January2025ContentShowcaseBanner: React.FC = () => {
   return (
@@ -12,7 +11,7 @@ const January2025ContentShowcaseBanner: React.FC = () => {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 bg-pink-500/20 text-pink-400 px-6 py-3 rounded-full text-sm font-medium mb-8">
-            <Sparkles className="w-5 h-5" />
+
             <span>JANUARY 2025 CONTENT COLLECTION</span>
           </div>
           
@@ -20,8 +19,7 @@ const January2025ContentShowcaseBanner: React.FC = () => {
             <span className="bg-gradient-to-r from-pink-400 via-purple-400 to-blue-400 bg-clip-text text-transparent">
               Complete AI Knowledge Hub
             </span>
-            <br />
-            <span className="text-white">2025 Edition</span>
+            <br /> <span className="text-white">2025 Edition</span>
           </h2>
           
           <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-12">
@@ -38,7 +36,7 @@ const January2025ContentShowcaseBanner: React.FC = () => {
             <div className="relative">
               <div className="flex items-center gap-4 mb-6">
                 <div className="p-3 bg-pink-500/20 rounded-xl">
-                  <Zap className="w-8 h-8 text-pink-400" />
+
                 </div>
                 <div>
                   <h3 className="text-2xl font-bold text-white">Breakthrough Technologies</h3>
@@ -71,7 +69,7 @@ const January2025ContentShowcaseBanner: React.FC = () => {
                 className="inline-flex items-center gap-2 text-pink-400 hover:text-pink-300 font-medium transition-colors"
               >
                 Explore All Technologies
-                <ArrowRight className="w-4 h-4" />
+
               </Link>
             </div>
           </div>
@@ -82,7 +80,7 @@ const January2025ContentShowcaseBanner: React.FC = () => {
             <div className="relative">
               <div className="flex items-center gap-4 mb-6">
                 <div className="p-3 bg-purple-500/20 rounded-xl">
-                  <Award className="w-8 h-8 text-purple-400" />
+
                 </div>
                 <div>
                   <h3 className="text-2xl font-bold text-white">Enterprise Success Stories</h3>
@@ -115,7 +113,7 @@ const January2025ContentShowcaseBanner: React.FC = () => {
                 className="inline-flex items-center gap-2 text-purple-400 hover:text-purple-300 font-medium transition-colors"
               >
                 View All Case Studies
-                <ArrowRight className="w-4 h-4" />
+
               </Link>
             </div>
           </div>
@@ -126,7 +124,7 @@ const January2025ContentShowcaseBanner: React.FC = () => {
             <div className="relative">
               <div className="flex items-center gap-4 mb-6">
                 <div className="p-3 bg-blue-500/20 rounded-xl">
-                  <BookOpen className="w-8 h-8 text-blue-400" />
+
                 </div>
                 <div>
                   <h3 className="text-2xl font-bold text-white">Latest Articles</h3>
@@ -159,7 +157,7 @@ const January2025ContentShowcaseBanner: React.FC = () => {
                 className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 font-medium transition-colors"
               >
                 Read All Articles
-                <ArrowRight className="w-4 h-4" />
+
               </Link>
             </div>
           </div>
@@ -170,16 +168,16 @@ const January2025ContentShowcaseBanner: React.FC = () => {
           <h3 className="text-3xl font-bold text-white text-center mb-12">Content Library Overview</h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="text-4xl font-bold text-pink-400 mb-2">62</div>
+              
               <div className="text-gray-300">Total Articles</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-purple-400 mb-2">6</div>
+              
               <div className="text-gray-300">Case Studies</div>
             </div>
             <div className="text-center">
               <div className="text-4xl font-bold text-blue-400 mb-2">15+</div>
-              <div className="text-gray-300">Categories</div>
+              
             </div>
             <div className="text-center">
               <div className="text-4xl font-bold text-emerald-400 mb-2">500+</div>
@@ -192,7 +190,7 @@ const January2025ContentShowcaseBanner: React.FC = () => {
         <div className="grid md:grid-cols-2 gap-8 mb-16">
           <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
             <div className="flex items-center gap-3 mb-4">
-              <Star className="w-6 h-6 text-yellow-400 fill-current" />
+
               <h4 className="text-xl font-bold text-white">Most Popular</h4>
             </div>
             <h5 className="text-lg font-semibold text-white mb-2">AI Quantum-Neural Fusion 2025</h5>
@@ -202,14 +200,14 @@ const January2025ContentShowcaseBanner: React.FC = () => {
             <div className="flex items-center justify-between">
               <span className="text-pink-400 font-medium">15 min read</span>
               <Link to="/blog/ai-quantum-neural-fusion-2025" className="text-pink-400 hover:text-pink-300">
-                <ArrowRight className="w-4 h-4" />
+
               </Link>
             </div>
           </div>
 
           <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
             <div className="flex items-center gap-3 mb-4">
-              <TrendingUp className="w-6 h-6 text-emerald-400" />
+
               <h4 className="text-xl font-bold text-white">Trending Now</h4>
             </div>
             <h5 className="text-lg font-semibold text-white mb-2">Autonomous Enterprise Mesh</h5>
@@ -219,7 +217,7 @@ const January2025ContentShowcaseBanner: React.FC = () => {
             <div className="flex items-center justify-between">
               <span className="text-emerald-400 font-medium">12 min read</span>
               <Link to="/blog/autonomous-enterprise-mesh-2025" className="text-emerald-400 hover:text-emerald-300">
-                <ArrowRight className="w-4 h-4" />
+
               </Link>
             </div>
           </div>
@@ -232,14 +230,14 @@ const January2025ContentShowcaseBanner: React.FC = () => {
               to="/resources"
               className="inline-flex items-center gap-2 bg-gradient-to-r from-pink-500 to-purple-500 text-white px-8 py-4 rounded-full font-semibold hover:from-pink-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
             >
-              <BookOpen className="w-5 h-5" />
+
               Explore Complete Library
             </Link>
             <Link
               to="/newsletter"
               className="inline-flex items-center gap-2 bg-white/10 text-white px-8 py-4 rounded-full font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300"
             >
-              <Users className="w-5 h-5" />
+
               Join AI Community
             </Link>
           </div>

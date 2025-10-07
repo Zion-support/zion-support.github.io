@@ -1,79 +1,78 @@
-import { ArrowRight, Brain, Code, Database, Lightbulb, Rocket, Shield, Sparkles, TrendingUp, Zap } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
 const September30MegaBanner2025 = () => {
   const breakthroughArticles = [
-    {
+    {",
       title: "Real-Time AI Decision Engines",
-      description: "10M decisions/sec with <1ms latency - Stream processing meets neural inference",
+      description: "10M decisions/sec with <1ms latency - Stream processing meets neural inference",",
       slug: "real-time-ai-decision-engines-2025",
-      category: "Real-Time AI",
+      category: "Real-Time AI",",
       icon: "⚡",
-      gradient: "from-yellow-500 to-orange-500",
+      gradient: "from-yellow-500 to-orange-500",",
       metric: "10,000x Faster"
     },
-    {
+    {",
       title: "Neural Code Synthesis",
-      description: "AI generates production apps from plain English with 95% accuracy & built-in security",
+      description: "AI generates production apps from plain English with 95% accuracy & built-in security",",
       slug: "neural-code-synthesis-2025",
-      category: "AI Development",
+      category: "AI Development",",
       icon: "💻",
-      gradient: "from-blue-500 to-cyan-500",
+      gradient: "from-blue-500 to-cyan-500",",
       metric: "90% Dev Time Cut"
     },
-    {
+    {",
       title: "Multimodal AI Fusion",
-      description: "Unified understanding of text, images, audio & video - 98% cross-modal accuracy",
+      description: "Unified understanding of text, images, audio & video - 98% cross-modal accuracy",",
       slug: "multimodal-ai-fusion-2025",
-      category: "Multimodal AI",
+      category: "Multimodal AI",",
       icon: "🎭",
-      gradient: "from-purple-500 to-pink-500",
+      gradient: "from-purple-500 to-pink-500",",
       metric: "98% Accuracy"
     },
-    {
+    {",
       title: "AI Supply Chain Revolution",
-      description: "99.5% forecast accuracy + 85% inventory reduction through neural optimization",
+      description: "99.5% forecast accuracy + 85% inventory reduction through neural optimization",",
       slug: "ai-powered-supply-chain-2025",
-      category: "Supply Chain AI",
+      category: "Supply Chain AI",",
       icon: "📦",
-      gradient: "from-green-500 to-teal-500",
+      gradient: "from-green-500 to-teal-500",",
       metric: "85% Less Inventory"
     },
-    {
+    {",
       title: "Cognitive AI Assistants",
-      description: "Human-level understanding & reasoning - 92% satisfaction with emotional intelligence",
+      description: "Human-level understanding & reasoning - 92% satisfaction with emotional intelligence",",
       slug: "cognitive-ai-assistants-2025",
-      category: "Conversational AI",
+      category: "Conversational AI",",
       icon: "🤖",
-      gradient: "from-indigo-500 to-purple-500",
+      gradient: "from-indigo-500 to-purple-500",",
       metric: "92% Satisfaction"
     },
-    {
+    {",
       title: "AI Cybersecurity Mesh",
-      description: "Zero-trust distributed defense - 99.99% threat detection with sub-second response",
+      description: "Zero-trust distributed defense - 99.99% threat detection with sub-second response",",
       slug: "ai-cybersecurity-mesh-2025",
-      category: "Cybersecurity AI",
+      category: "Cybersecurity AI",",
       icon: "🛡️",
-      gradient: "from-red-500 to-orange-500",
+      gradient: "from-red-500 to-orange-500",",
       metric: "99.99% Detection"
     },
-    {
+    {",
       title: "Federated Learning Enterprise",
-      description: "Train powerful AI with zero data sharing - 100% GDPR/HIPAA compliance",
+      description: "Train powerful AI with zero data sharing - 100% GDPR/HIPAA compliance",",
       slug: "federated-learning-enterprise-2025",
-      category: "Privacy AI",
+      category: "Privacy AI",",
       icon: "🔒",
-      gradient: "from-slate-600 to-slate-800",
+      gradient: "from-slate-600 to-slate-800",",
       metric: "100% Privacy"
     },
-    {
+    {",
       title: "AI Financial Modeling",
-      description: "95% market prediction accuracy - Real-time analysis of millions of signals",
+      description: "95% market prediction accuracy - Real-time analysis of millions of signals",",
       slug: "ai-financial-modeling-2025",
-      category: "FinTech AI",
+      category: "FinTech AI",",
       icon: "💰",
-      gradient: "from-emerald-500 to-green-600",
+      gradient: "from-emerald-500 to-green-600",",
       metric: "95% Accuracy"
     }
   ];
@@ -102,9 +101,8 @@ const September30MegaBanner2025 = () => {
             className="inline-flex items-center gap-3 mb-8"
           >
             <div className="flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 rounded-full shadow-2xl animate-pulse">
-              <Sparkles className="w-6 h-6 text-white animate-spin" style={{ animationDuration: "3s" }} />
-              <span className="text-white font-black text-base tracking-wide">SEPTEMBER 30, 2025 — 8 REVOLUTIONARY BREAKTHROUGHS</span>
-              <Rocket className="w-6 h-6 text-white animate-bounce" />
+               style={{ animationDuration: "3s" }} <span className="text-white font-black text-base tracking-wide">SEPTEMBER 30, 2025 — 8 REVOLUTIONARY BREAKTHROUGHS</span>
+
             </div>
           </motion.div>
 
@@ -168,7 +166,7 @@ const September30MegaBanner2025 = () => {
                   {/* Read More Arrow */}
                   <div className="flex items-center gap-2 text-white font-bold text-sm group-hover:gap-4 transition-all">
                     <span>Explore Now</span>
-                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+
                   </div>
                 </div>
               </Link>
@@ -180,7 +178,7 @@ const September30MegaBanner2025 = () => {
         <div className="bg-white/15 backdrop-blur-xl rounded-2xl p-8 mb-10 border-2 border-white/30 shadow-2xl">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
-              <div className="text-4xl md:text-5xl font-black text-cyan-300 mb-2 animate-pulse">8</div>
+              
               <div className="text-sm text-blue-200 font-semibold uppercase tracking-wide">NEW Breakthroughs</div>
             </div>
             <div>
@@ -202,7 +200,7 @@ const September30MegaBanner2025 = () => {
         <div className="grid md:grid-cols-3 gap-6 mb-10">
           <div className="flex items-start gap-4 bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20 hover:bg-white/15 transition-all">
             <div className="w-12 h-12 rounded-full bg-cyan-500/30 flex items-center justify-center flex-shrink-0">
-              <Zap className="w-6 h-6 text-cyan-200" />
+
             </div>
             <div>
               <h4 className="font-black text-white mb-2 text-lg">Production-Ready Today</h4>
@@ -212,7 +210,7 @@ const September30MegaBanner2025 = () => {
           
           <div className="flex items-start gap-4 bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20 hover:bg-white/15 transition-all">
             <div className="w-12 h-12 rounded-full bg-purple-500/30 flex items-center justify-center flex-shrink-0">
-              <Brain className="w-6 h-6 text-purple-200" />
+
             </div>
             <div>
               <h4 className="font-black text-white mb-2 text-lg">Breakthrough Performance</h4>
@@ -222,7 +220,7 @@ const September30MegaBanner2025 = () => {
           
           <div className="flex items-start gap-4 bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20 hover:bg-white/15 transition-all">
             <div className="w-12 h-12 rounded-full bg-green-500/30 flex items-center justify-center flex-shrink-0">
-              <TrendingUp className="w-6 h-6 text-green-200" />
+
             </div>
             <div>
               <h4 className="font-black text-white mb-2 text-lg">Measurable ROI</h4>
@@ -237,17 +235,16 @@ const September30MegaBanner2025 = () => {
             to="/blog"
             className="group bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 hover:from-cyan-400 hover:via-blue-400 hover:to-purple-400 text-white px-12 py-5 rounded-full font-black text-xl shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-110 flex items-center justify-center gap-4"
           >
-            <Rocket className="w-7 h-7 group-hover:rotate-12 transition-transform" />
+
             <span>Explore All 8 Breakthroughs</span>
-            <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform" />
+
           </Link>
           
           <Link
             to="/contact"
             className="group border-3 border-white hover:bg-white text-white hover:text-indigo-900 px-12 py-5 rounded-full font-black text-xl transition-all duration-300 hover:scale-110 flex items-center justify-center gap-4 shadow-xl hover:shadow-2xl"
           >
-            <Lightbulb className="w-7 h-7 group-hover:animate-pulse" />
-            <span>Schedule AI Strategy Call</span>
+            <Lightbulb className="w-7 h-7 group-hover:animate-pulse" <span>Schedule AI Strategy Call</span>
           </Link>
         </div>
 

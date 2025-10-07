@@ -1,10 +1,1 @@
-
-  return (
-    <div className={className || ''}>
-
-      <h1>AccountSettings</h1>
-      <p>This component is under development.</p>
-    </div>
-
-
-export default AccountSettings;
+return (<div className={className || ''}> <h1>AccountSettings</h1> <p>This component is under development.</p> </div> export default AccountSettings) '

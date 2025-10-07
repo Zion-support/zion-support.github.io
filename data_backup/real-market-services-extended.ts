@@ -1,3 +1,1 @@
-export: interface RealMarketServiceExtended {
-  id: string;
-
+export: interface RealMarketServiceExtended {id: string}

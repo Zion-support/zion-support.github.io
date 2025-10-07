@@ -1,149 +1,50 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import { resolve } from 'path'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import { visualizer } from 'rollup-plugin-visualizer';
 
-// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
     react({
-      // Enable JSX runtime
-      jsxRuntime: 'automatic',
+      babel: {
+        plugins: [['@babel/plugin-proposal-decorators', { legacy: true }]],
+      },
+    }),
+    visualizer({
+      filename: 'dist/stats.html',
+      open: false,
+      gzipSize: true,
+      brotliSize: true,
     }),
   ],
-  resolve: {
-    alias: {
-      '@': resolve(__dirname, 'src'),
-      '@components': resolve(__dirname, 'src/components'),
-      '@pages': resolve(__dirname, 'src/pages'),
-      '@utils': resolve(__dirname, 'src/utils'),
-      '@hooks': resolve(__dirname, 'src/hooks'),
-      '@styles': resolve(__dirname, 'src/styles'),
-    },
-  },
   build: {
-    sourcemap: false,
+    target: 'esnext',
     minify: 'terser',
     cssMinify: true,
+    sourcemap: false,
     rollupOptions: {
-      input: {
-        main: './index.html'
-      },
-      treeshake: {
-        moduleSideEffects: false,
-        propertyReadSideEffects: false,
-        tryCatchDeoptimization: false,
-        preset: 'smallest'
-      },
       output: {
-        // Manual chunk splitting for better caching
-        manualChunks: (id) => {
-          if (id.includes('node_modules')) {
-            // Consolidate all vendor chunks into fewer, larger chunks
-            if (id.includes('react') || id.includes('react-dom') || id.includes('react-router')) {
-              return 'react-vendor';
-            }
-            if (id.includes('framer-motion') || id.includes('lucide-react') || id.includes('@headlessui')) {
-              return 'ui-vendor';
-            }
-            if (id.includes('lodash') || id.includes('date-fns') || id.includes('axios')) {
-              return 'utils-vendor';
-            }
-            // Group all other node_modules into a single vendor chunk
-            return 'vendor';
-          }
-          // Consolidate component chunks
-          if (id.includes('src/components/')) {
-            return 'components';
-          }
-          // Consolidate utility chunks
-          if (id.includes('src/utils/')) {
-            return 'utils';
-          }
-          // Consolidate hooks
-          if (id.includes('src/hooks/')) {
-            return 'hooks';
-          }
-        },
-        chunkFileNames: (chunkInfo) => {
-          const facadeModuleId = chunkInfo.facadeModuleId
-            ? chunkInfo.facadeModuleId.split('/').pop().replace('.tsx', '').replace('.ts', '')
-            : 'chunk';
-          return `assets/js/${facadeModuleId}-[hash].js`;
-        },
-        entryFileNames: 'assets/js/main-[hash].js',
-        assetFileNames: (assetInfo) => {
-          const info = assetInfo.name.split('.');
-          const ext = info[info.length - 1];
-          if (/\.(css)$/.test(assetInfo.name)) {
-            return `assets/css/[name]-[hash].${ext}`;
-          }
-          return `assets/[name]-[hash].${ext}`;
+        manualChunks: {
+          vendor: ['react', 'react-dom'],
+          router: ['react-router-dom'],
+          ui: ['framer-motion', 'lucide-react'],
+          utils: ['clsx', 'tailwind-merge'],
         },
       },
     },
-    // Optimize chunk size
-    chunkSizeWarningLimit: 1000,
     terserOptions: {
       compress: {
         drop_console: true,
         drop_debugger: true,
-        pure_funcs: ['console.log', 'console.info', 'console.debug'],
-        passes: 3,
-        unsafe: true,
-        unsafe_comps: true,
-        unsafe_math: true,
-        unsafe_proto: true,
-        dead_code: true,
-        unused: true,
-      },
-      mangle: {
-        safari10: true,
-        toplevel: true,
-        properties: {
-          regex: /^_/
-        }
-      },
-      format: {
-        comments: false,
-        ascii_only: true,
+        pure_funcs: ['console.log', 'console.info'],
       },
     },
   },
   server: {
     port: 3000,
-    open: true,
-    cors: true,
     host: true,
   },
   preview: {
-    port: 3000,
-    open: true,
-    cors: true,
+    port: 4173,
     host: true,
   },
-  optimizeDeps: {
-    include: [
-      'react',
-      'react-dom',
-      'react-router-dom',
-      'framer-motion',
-      'lucide-react',
-      'clsx',
-      'tailwind-merge',
-      'axios',
-      'web-vitals',
-    ],
-    exclude: ['@vite/client', '@vite/env'],
-  },
-  define: {
-    global: 'globalThis',
-  },
-  esbuild: {
-    target: 'esnext',
-    format: 'esm',
-    treeShaking: true,
-    minifyIdentifiers: true,
-    minifySyntax: true,
-    minifyWhitespace: true,
-  },
-})
+});

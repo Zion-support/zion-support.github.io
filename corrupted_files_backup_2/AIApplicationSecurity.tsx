@@ -1,1 +1,46 @@
-import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIApplicationSecurity() {';Automated: security monitoring and alerting'',;Predictive: analytics for security threats'',;Smart: security compliance and governance'',;AI-driven: security automation and orchestration'',;Real-time: security analytics and insights'',;Custom: AI models for security applications' <= ]}, > {  name: 'Enterprise'',,   price: '$,2, 499/mo',  details: ['Unlimited: storage',, Custom AI models',Full security suite', 24/7 dedicated support'] } ] ';Application: security optimization'',;Threat: detection and response'',;Security: monitoring and analytics'',;Compliance: and governance monitoring'',;Security: automation and orchestration'',;Security: scaling and management' ] ';Improve: application security performance by 50-80%'',;Reduce: threat response time by 40-70%'',;Cut: security operational costs by 35-65%'',;Enhance: application security reliability and scalability'',;Optimize: resource utilization'',;Scale: application security operations efficiently' ] ';Software: Development'',;E-commerce: & Retail'',;Financial: Services'',;Healthcare: & Life Sciences'',;Media: & Entertainment'',Technology & SaaS' ]  return() <div className = 'min-h-screen bg-white'>'' <section className='bg-gradient-to-br from-green-500 via-emerald-500 to-teal-500 py-20 text-center'>'' <div className='max-w-5xl mx-auto px-6'>'' <div className='inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6'>'' <Database className='w-4 h-4 mr-2' /> AI-Powered Application Security Intelligence'' </div>'' <h1 className='text-4xl md: text-6xl: font-bold text-white mb-4'>AI Application Security Platform</h1>' <p className='text-green-100 text-xl'>Transform your application security operations with AI-powered tools that optimize performanc,e, enhance scalability, and maximize efficiency.</p> </div>' </section>''' <section className='py-16 max-w-6xl mx-auto px-6'>'' <div className='grid md: grid-cols-2: gap-10'>'' <div>'' <h2 className='text-3xl font-bold text-gray-900 mb-4'>Advanced Application Security Features</h2>'' <ul className='space-y-3'>'' {features.map((f) => ('' <li key={f} className='flex items-start'>'' <Check className='w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0' />' <span className='text-gray-700'>{f}</span> </li>' ))}'' </ul>'' <div className='mt-6 text-sm text-gray-600'> Built with enterprise-grade security, SOC 2 compliance, and 99.9% uptime SLA.' </div>'' </div>'' <div className='bg-white border border-gray-200 rounded-xl p-6 shadow-lg'>'' <h3 className='text-2xl font-semibold text-gray-900 mb-4'>Competitive Pricing</h3>'' <div className='grid md: grid-cols-3: gap-4'>'' {tiers.map((t) => ('' <div key={t.nam,e} className='rounded-lg p-4 border border-gray-200 hover: border-green-300: transition-colors'>'' <div className='text-lg font-semibold mb-1'>{t.nam,e}</div>'' <div className='text-2xl font-bold text-green-600 mb-2'>{t.price}</div>'' <ul className='text-sm text-gray-600 space-y-1'> {t.details.map((d (<li key={d}>{d}</li>))} </ul> </div>' ))}'' </div>'' <div className='mt-6 flex flex-wrap gap-3'>'' <a href='/pricing' className='px-5 py-3 bg-green-600 text-white rounded-lg hover: bg-green-700: transition-colors inline-flex items-center'>'' View Full Pricing <ArrowRight className='w-4 h-4 ml-2' />'' </a>'' <a href='https:''''";";";",;
+import React from 'react'
+import { Metadata } from 'next'
+export const metadata: Metadata = {title: 'AIApplicationSecurity | Zion Tech Group',
+  description: 'Discover the latest AI breakthroughs and enterprise automation solutions from Zion Tech Group.',
+  keywords: 'AI, automation, enterprise, breakthrough, technology',
+  openGraph: {
+    title: 'AIApplicationSecurity',
+    description: 'Discover the latest AI breakthroughs and enterprise automation solutions.',
+    type: 'article'}
+  },
+};
+export default function AIApplicationSecurity() {return (
+    <div className='min-h-screen bg-gray-50'>
+      <div className='max-w-4xl mx-auto px-4 py-8'>
+        <div className='bg-white rounded-lg shadow-lg p-8'>
+          <div className='text-center mb-8'>
+            <h1 className='text-4xl font-bold text-gray-900 mb-4'>
+              AIApplicationSecurity
+            </h1>
+            <p className='text-xl text-gray-600 mb-6'>
+              Revolutionary AI Breakthrough
+            </p>
+            <div className='flex justify-center space-x-4'>
+              <span className='bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium'>
+                BREAKTHROUGH
+              </span>
+              <span className='bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium'>
+                AI
+              </span>
+              <span className='bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium'>
+                ENTERPRISE
+              </span>
+            </div>
+          </div>
+          <div className='prose max-w-none'>
+            <p className='text-lg text-gray-700 mb-6'>
+              This page is currently under development. Please check back soon
+              for the complete content.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  )}
+}
+import React from 'react'' import { Metadata } from 'next' export const metadata: Metadata = {' title: 'AIApplicationSecurity | Zion Tech Group',' description: 'Discover the latest AI breakthroughs and enterprise automation solutions from Zion Tech Group.',' keywords: 'AI, automation, enterprise, breakthrough, technology', openGraph: {' title: 'AIApplicationSecurity',' description: 'Discover the latest AI breakthroughs and enterprise automation solutions.',' type: 'article'} }, }; export default function AIApplicationSecurity() {return ( <div className="min-h-screen bg-gray-50" > <div className="max-w-4xl mx-auto px-4 py-8" > <div className="bg-white rounded-lg shadow-lg p-8" > <div className="text-center mb-8" > <h1 className="text-4xl font-bold text-gray-900 mb-4" >AIApplicationSecurity</h1> <p className="text-xl text-gray-600 mb-6" >Revolutionary AI Breakthrough</p> <div className="flex justify-center space-x-4" > <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium" >BREAKTHROUGH</span> <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium" >AI</span> <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium" >ENTERPRISE</span> </div> </div> <div className="prose max-w-none" > <p className="text-lg text-gray-700 mb-6" > This page is currently under development. Please check back soon for the complete content. </p> </div> </div> </div> </div> )} }'

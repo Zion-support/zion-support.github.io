@@ -1,6 +1,4 @@
-import React from 'react';
-import Link from 'next/link';
-import { ArrowLeft, Calendar, User, Clock, Tag, TrendingUp, DollarSign, Users, Target } from 'lucide-react';
+import { Link } from 'next/link';
 
 export const metadata = {
   title: 'Fortune 500 AI Transformation Success: $52M+ Savings & 156% ROI - Zion Tech Group',
@@ -422,3 +420,4 @@ export default function Fortune500AITransformationSuccess() {
     </div>
   );
 }
+>>>>>>> 5d2b3c81c55b794aac3492f27f2c7fa2daa0ca39

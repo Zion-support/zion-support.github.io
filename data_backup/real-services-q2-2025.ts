@@ -1,11 +1,1 @@
-export: interface RealServiceQ22025 {
-  id: string;
-   name: string;
-   tagline: string;
-  Advanced: Q2 solutions'',;
-    price: '$49,9',;
-    features:  ,[
-  Advanced: features'',;
-  'Enhanced: performance'',;
-  'Full: integration']',;
-    category: 'Q2: Service,s}'];
+export: interface RealServiceQ22025 {id: string; name: string; tagline: string, Advanced: Q2 solutions'',;' price: '$49,9',; features:  ,[' Advanced: features'',;' 'Enhanced: performance'',;' 'Full: integration']',}' category: 'Q2: Service}s}']; '

@@ -1,6 +1,6 @@
 /**
  * Performance Optimization Utility
- * 
+ *
  * Provides tools for optimizing application performance including:
  * - Component lazy loading
  * - Image optimization
@@ -8,6 +8,8 @@
  * - Memory leak detection
  * - Render performance tracking
  */
+
+import * as React from 'react';
 
 export interface PerformanceMetrics {
   componentName: string;
@@ -45,7 +47,7 @@ export class PerformanceOptimizer {
       mountTime: renderTime,
       updateCount: this.getUpdateCount(componentName),
       memoryUsage: this.getMemoryUsage(),
-      timestamp: new Date()
+      timestamp: new Date(),
     };
 
     this.recordMetrics(componentName, metrics);
@@ -53,200 +55,122 @@ export class PerformanceOptimizer {
   }
 
   /**
-   * Record metrics for a component
+   * Record performance metrics for a component
    */
-  private recordMetrics(componentName: string, metrics: PerformanceMetrics): void {
-    if (!this.metrics.has(componentName)) {
-      this.metrics.set(componentName, []);
-    }
-    
-    const componentMetrics = this.metrics.get(componentName)!;
-    componentMetrics.push(metrics);
+  private recordMetrics(
+    componentName: string,
+    metrics: PerformanceMetrics,
+  ): void {
+    const existingMetrics = this.metrics.get(componentName) || [];
+    existingMetrics.push(metrics);
 
-    // Keep only last 100 metrics to prevent memory bloat
-    if (componentMetrics.length > 100) {
-      componentMetrics.shift();
+    // Keep only last 100 metrics per component
+    if (existingMetrics.length > 100) {
+      existingMetrics.splice(0, existingMetrics.length - 100);
     }
+
+    this.metrics.set(componentName, existingMetrics);
   }
 
   /**
    * Get update count for a component
    */
   private getUpdateCount(componentName: string): number {
-    const metrics = this.metrics.get(componentName);
-    return metrics ? metrics.length : 0;
+    const existingMetrics = this.metrics.get(componentName) || [];
+    return existingMetrics.length;
   }
 
   /**
    * Get current memory usage (if available)
    */
   private getMemoryUsage(): number {
-    if (typeof performance !== 'undefined' && 'memory' in performance) {
-      const memory = (performance as any).memory;
-      return memory.usedJSHeapSize / 1048576; // Convert to MB
+    if ('memory' in performance) {
+      return (performance as any).memory.usedJSHeapSize;
     }
     return 0;
+  }
+
+  /**
+   * Get performance metrics for a component
+   */
+  getMetrics(componentName: string): PerformanceMetrics[] {
+    return this.metrics.get(componentName) || [];
+  }
+
+  /**
+   * Get all performance metrics
+   */
+  getAllMetrics(): Map<string, PerformanceMetrics[]> {
+    return new Map(this.metrics);
   }
 
   /**
    * Get average render time for a component
    */
   getAverageRenderTime(componentName: string): number {
-    const metrics = this.metrics.get(componentName);
-    if (!metrics || metrics.length === 0) return 0;
+    const metrics = this.getMetrics(componentName);
+    if (metrics.length === 0) return 0;
 
-    const sum = metrics.reduce((acc, m) => acc + m.renderTime, 0);
-    return sum / metrics.length;
+    const totalTime = metrics.reduce(
+      (sum, metric) => sum + metric.renderTime,
+      0,
+    );
+    return totalTime / metrics.length;
   }
 
   /**
-   * Get slow components (render time > threshold)
+   * Get slowest components
    */
-  getSlowComponents(thresholdMs: number = 16): Array<{ name: string; avgTime: number }> {
-    const slow: Array<{ name: string; avgTime: number }> = [];
+  getSlowestComponents(
+    limit: number = 10,
+  ): Array<{ componentName: string; averageTime: number }> {
+    const results: Array<{ componentName: string; averageTime: number }> = [];
 
-    this.observedComponents.forEach(componentName => {
-      const avgTime = this.getAverageRenderTime(componentName);
-      if (avgTime > thresholdMs) {
-        slow.push({ name: componentName, avgTime });
-      }
-    });
+    for (const [componentName] of this.metrics) {
+      const averageTime = this.getAverageRenderTime(componentName);
+      results.push({ componentName, averageTime });
+    }
 
-    return slow.sort((a, b) => b.avgTime - a.avgTime);
+    return results
+      .sort((a, b) => b.averageTime - a.averageTime)
+      .slice(0, limit);
   }
 
   /**
-   * Detect potential memory leaks
+   * Check if a component is performing poorly
    */
-  detectMemoryLeaks(): Array<{ component: string; suspectedLeak: boolean; reason: string }> {
-    const leaks: Array<{ component: string; suspectedLeak: boolean; reason: string }> = [];
-
-    this.metrics.forEach((metrics, componentName) => {
-      if (metrics.length < 10) return;
-
-      // Check for steadily increasing memory usage
-      const recent = metrics.slice(-10);
-      const memoryTrend = recent.map(m => m.memoryUsage);
-      const isIncreasing = memoryTrend.every((val, i) => 
-        i === 0 || val >= memoryTrend[i - 1]
-      );
-
-      if (isIncreasing && memoryTrend[memoryTrend.length - 1] > memoryTrend[0] * 1.5) {
-        leaks.push({
-          component: componentName,
-          suspectedLeak: true,
-          reason: 'Steadily increasing memory usage detected'
-        });
-      }
-
-      // Check for excessive re-renders
-      if (metrics.length > 50) {
-        const recentUpdates = metrics.slice(-20).length;
-        if (recentUpdates > 15) {
-          leaks.push({
-            component: componentName,
-            suspectedLeak: true,
-            reason: 'Excessive re-renders detected'
-          });
-        }
-      }
-    });
-
-    return leaks;
+  isComponentSlow(componentName: string, threshold: number = 16): boolean {
+    const averageTime = this.getAverageRenderTime(componentName);
+    return averageTime > threshold; // 16ms = 60fps threshold
   }
 
   /**
    * Get performance summary
    */
-  getPerformanceSummary() {
-    const totalComponents = this.observedComponents.size;
-    const slowComponents = this.getSlowComponents();
-    const suspectedLeaks = this.detectMemoryLeaks();
-    
-    const allMetrics: PerformanceMetrics[] = [];
-    this.metrics.forEach(metrics => allMetrics.push(...metrics));
-    
-    const avgRenderTime = allMetrics.length > 0
-      ? allMetrics.reduce((acc, m) => acc + m.renderTime, 0) / allMetrics.length
-      : 0;
+  getPerformanceSummary(): {
+    totalComponents: number;
+    slowComponents: number;
+    averageRenderTime: number;
+    memoryUsage: number;
+  } {
+    const allMetrics = Array.from(this.metrics.values()).flat();
+    const slowComponents = Array.from(this.metrics.keys()).filter(name =>
+      this.isComponentSlow(name),
+    ).length;
 
-    const currentMemoryUsage = this.getMemoryUsage();
+    const totalRenderTime = allMetrics.reduce(
+      (sum, metric) => sum + metric.renderTime,
+      0,
+    );
+    const averageRenderTime =
+      allMetrics.length > 0 ? totalRenderTime / allMetrics.length : 0;
 
     return {
-      totalComponents,
-      totalRenders: allMetrics.length,
-      averageRenderTime: avgRenderTime.toFixed(2) + 'ms',
-      slowComponents: slowComponents.length,
-      suspectedMemoryLeaks: suspectedLeaks.length,
-      currentMemoryUsage: currentMemoryUsage.toFixed(2) + 'MB',
-      performanceGrade: this.calculatePerformanceGrade(avgRenderTime, slowComponents.length),
-      recommendations: this.generateRecommendations(avgRenderTime, slowComponents, suspectedLeaks)
-    };
-  }
-
-  /**
-   * Calculate overall performance grade
-   */
-  private calculatePerformanceGrade(avgRenderTime: number, slowCount: number): string {
-    if (avgRenderTime < 10 && slowCount === 0) return 'A+ Excellent';
-    if (avgRenderTime < 16 && slowCount < 2) return 'A Good';
-    if (avgRenderTime < 33 && slowCount < 5) return 'B Average';
-    if (avgRenderTime < 50 && slowCount < 10) return 'C Below Average';
-    return 'D Poor - Optimization Required';
-  }
-
-  /**
-   * Generate optimization recommendations
-   */
-  private generateRecommendations(
-    avgRenderTime: number,
-    slowComponents: Array<{ name: string; avgTime: number }>,
-    suspectedLeaks: Array<{ component: string; suspectedLeak: boolean; reason: string }>
-  ): string[] {
-    const recommendations: string[] = [];
-
-    if (avgRenderTime > 16) {
-      recommendations.push('Overall render time is above 16ms target. Consider lazy loading or code splitting.');
-    }
-
-    if (slowComponents.length > 0) {
-      recommendations.push(`${slowComponents.length} slow components detected. Top offenders: ${slowComponents.slice(0, 3).map(c => c.name).join(', ')}`);
-      recommendations.push('Consider memoization with React.memo() for slow components.');
-    }
-
-    if (suspectedLeaks.length > 0) {
-      recommendations.push(`${suspectedLeaks.length} potential memory leaks detected. Review cleanup in useEffect hooks.`);
-    }
-
-    if (this.getMemoryUsage() > 100) {
-      recommendations.push('High memory usage detected (>100MB). Consider implementing virtual scrolling or pagination.');
-    }
-
-    if (recommendations.length === 0) {
-      recommendations.push('Performance is optimal! Keep monitoring as the application grows.');
-    }
-
-    return recommendations;
-  }
-
-  /**
-   * Export performance data
-   */
-  exportMetrics(): string {
-    const summary = this.getPerformanceSummary();
-    const slowComponents = this.getSlowComponents();
-    const leaks = this.detectMemoryLeaks();
-
-    return JSON.stringify({
-      timestamp: new Date().toISOString(),
-      summary,
+      totalComponents: this.metrics.size,
       slowComponents,
-      potentialLeaks: leaks,
-      detailedMetrics: Array.from(this.metrics.entries()).map(([component, metrics]) => ({
-        component,
-        metrics: metrics.slice(-20) // Last 20 renders
-      }))
-    }, null, 2);
+      averageRenderTime,
+      memoryUsage: this.getMemoryUsage(),
+    };
   }
 
   /**
@@ -259,69 +183,143 @@ export class PerformanceOptimizer {
   }
 
   /**
-   * Monitor component lifecycle
+   * Clear metrics for a specific component
    */
-  monitorComponent<T extends React.ComponentType<any>>(
-    Component: T,
-    componentName: string
-  ): T {
-    const optimizer = this;
-    
-    return class MonitoredComponent extends React.Component {
-      componentDidMount() {
-        optimizer.endRender(componentName);
-      }
+  clearComponentMetrics(componentName: string): void {
+    this.metrics.delete(componentName);
+    this.renderStartTimes.delete(componentName);
+    this.observedComponents.delete(componentName);
+  }
 
-      componentDidUpdate() {
-        optimizer.endRender(componentName);
-      }
+  /**
+   * Export metrics as JSON
+   */
+  exportMetrics(): string {
+    const exportData = {
+      timestamp: new Date().toISOString(),
+      summary: this.getPerformanceSummary(),
+      components: Object.fromEntries(this.metrics),
+    };
 
-      componentWillUnmount() {
-        // Component unmounting - good time to check for cleanup
-      }
+    return JSON.stringify(exportData, null, 2);
+  }
 
-      render() {
-        optimizer.startRender(componentName);
-        return React.createElement(Component, this.props);
+  /**
+   * Import metrics from JSON
+   */
+  importMetrics(jsonData: string): void {
+    try {
+      const data = JSON.parse(jsonData);
+      if (data.components) {
+        this.metrics = new Map(Object.entries(data.components));
       }
-    } as any;
+    } catch (error) {
+      console.error('Failed to import metrics:', error);
+    }
   }
 }
 
-// Singleton instance
+// Global instance
 export const performanceOptimizer = new PerformanceOptimizer();
 
-/**
- * React Hook for performance monitoring
- */
-export function usePerformanceMonitor(componentName: string) {
+// React HOC for performance tracking
+export function withPerformanceTracking<P extends object>(
+  WrappedComponent: React.ComponentType<P>,
+  componentName?: string,
+) {
+  const displayName =
+    componentName ||
+    WrappedComponent.displayName ||
+    WrappedComponent.name ||
+    'Component';
+
+  const TrackedComponent = React.forwardRef<any, P>((props, ref) => {
+    React.useEffect(() => {
+      performanceOptimizer.startRender(displayName);
+
+      return () => {
+        performanceOptimizer.endRender(displayName);
+      };
+    });
+
+    return React.createElement(WrappedComponent, { ...props, ref } as P);
+  });
+
+  TrackedComponent.displayName = `withPerformanceTracking(${displayName})`;
+
+  return TrackedComponent;
+}
+
+// Hook for performance tracking
+export function usePerformanceTracking(componentName: string) {
   React.useEffect(() => {
     performanceOptimizer.startRender(componentName);
-    
+
     return () => {
       performanceOptimizer.endRender(componentName);
     };
   });
-
-  return {
-    getMetrics: () => performanceOptimizer.getAverageRenderTime(componentName),
-    getSummary: () => performanceOptimizer.getPerformanceSummary()
-  };
 }
 
-/**
- * HOC for performance monitoring
- */
-export function withPerformanceMonitoring<P extends object>(
-  Component: React.ComponentType<P>,
-  componentName?: string
-): React.ComponentType<P> {
-  const name = componentName || Component.displayName || Component.name || 'Unknown';
-  
-  return (props: P) => {
-    usePerformanceMonitor(name);
-    return React.createElement(Component, props);
-  };
-}
+// Utility functions
+export const performanceUtils = {
+  /**
+   * Debounce function for performance
+   */
+  debounce<T extends (...args: any[]) => any>(
+    func: T,
+    wait: number,
+  ): (...args: Parameters<T>) => void {
+    let timeout: NodeJS.Timeout;
+    return (...args: Parameters<T>) => {
+      clearTimeout(timeout);
+      timeout = setTimeout(() => func(...args), wait);
+    };
+  },
+
+  /**
+   * Throttle function for performance
+   */
+  throttle<T extends (...args: any[]) => any>(
+    func: T,
+    limit: number,
+  ): (...args: Parameters<T>) => void {
+    let inThrottle: boolean;
+    return (...args: Parameters<T>) => {
+      if (!inThrottle) {
+        func(...args);
+        inThrottle = true;
+        setTimeout(() => (inThrottle = false), limit);
+      }
+    };
+  },
+
+  /**
+   * Check if component should re-render
+   */
+  shouldComponentUpdate<P extends object>(
+    prevProps: P,
+    nextProps: P,
+    keys: (keyof P)[],
+  ): boolean {
+    return keys.some(key => prevProps[key] !== nextProps[key]);
+  },
+
+  /**
+   * Memoize expensive calculations
+   */
+  memoize<T extends (...args: any[]) => any>(fn: T): T {
+    const cache = new Map();
+    return ((...args: Parameters<T>) => {
+      const key = JSON.stringify(args);
+      if (cache.has(key)) {
+        return cache.get(key);
+      }
+      const result = fn(...args);
+      cache.set(key, result);
+      return result;
+    }) as T;
+  },
+};
 
 export default performanceOptimizer;

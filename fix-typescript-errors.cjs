@@ -1,73 +1,83 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
+
 const fs = require('fs');
 const path = require('path');
+const glob = require('glob');
 
-// Common patterns to fix;
-const fixes = [
-  // Fix malformed type annotations;
-  { pattern: /anykeyof/g, replacement: 'keyof' }, { pattern: /any([^]+)/g, replacement: '$1' }, { pattern: /any([^:]+):/g, replacement: '$1:' }, { pattern: /any([^]+);/g, replacement: '$1;' }, { pattern: /any([^]+),/g, replacement: '$1'}, { pattern: /any([^}]+)}/g, replacement: '$1}' }, { pattern: /any([^)]+)\)/g, replacement: '$1)' },
-
-  // Fix malformed object properties;
-  { pattern: /:\s*{;/g, replacement: ': {' }, { pattern: /:\s*{([^}]+);/g, replacement: ': { $1' },
-
-  // Fix malformed function declarations;
-  { pattern: /\(\s*\)\s*=>\s*{/g, replacement: '() => {' }, { pattern: /\(\s*\)\s*=>\s*void;/g, replacement: '() => void;' },
-
-  // Fix malformed JSX;
-  { pattern: /<\/([^>]+)>/g, replacement: '</$1>' },
-
-  // Fix malformed imports;
-  {
-    pattern: /import:\s*{([^}]+)},\s*from,\s*'([^']+)'/g,
-    replacement: "import { $1 } from '$2'"}, {
-    pattern: /import:\s*([^]+),\s*from,\s*'([^']+)'/g,
-    replacement: "import $1 from '$2'"}];
-
-function fixFile(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, `utf8`);
-    let originalContent = content;
-
-    // Apply all fixes;
-    for (const fix of fixes) {
-      content = content.replace(fix.pattern, fix.replacement)}
-
-    // Write back if changed;
-    if (content !== originalContent) {
-      fs.writeFileSync(filePath, content);
-      console.log(`Fixed: ${filePath}`);
-      return true}
-
-    return false} catch (error) { 
-    console.error(`Error fixing ${filePath }:`, error.message);
-    return false}
+// Fix lucide-react imports
+function fixLucideImports(content) {
+  // Replace destructured imports with default imports
+  const lucideImports = content.match(/import\s*{\s*([^}]+)\s*}\s*from\s*['"]lucide-react['"];?/g);
+  
+  if (lucideImports) {
+    lucideImports.forEach(importStatement => {
+      const matches = importStatement.match(/import\s*{\s*([^}]+)\s*}\s*from\s*['"]lucide-react['"];?/);
+      if (matches) {
+        const imports = matches[1].split(',').map(imp => imp.trim());
+        const newImports = imports.map(imp => 
+          `import ${imp} from 'lucide-react/dist/esm/icons/${imp.toLowerCase().replace(/([A-Z])/g, '-$1').substring(1)}';`
+        ).join('\n');
+        
+        content = content.replace(importStatement, newImports);
+      }
+    });
+  }
+  
+  return content;
 }
 
-function getAllFiles(dir) {
-  const files = [];
-  const items = fs.readdirSync(dir);
-
-  for (const item of items) {
-    const fullPath = path.join(dir, item);
-    const stat = fs.statSync(fullPath);
-
-    if (stat.isDirectory()) {
-      files.push(...getAllFiles(fullPath))} else if (item.endsWith(`.tsx`) || item.endsWith('.ts')) {
-      files.push(fullPath)}
+// Remove unused React imports
+function removeUnusedReactImports(content) {
+  // Check if React is imported but not used
+  const hasReactImport = content.includes("import React from 'react';");
+  const usesReact = content.includes('React.') || content.includes('<React.');
+  
+  if (hasReactImport && !usesReact) {
+    content = content.replace(/import React from 'react';\n?/, '');
   }
+  
+  return content;
+}
 
-  return files}
+// Fix className prop issues on self-closing tags
+function fixClassNameProps(content) {
+  // Fix className on self-closing tags that don't support it
+  content = content.replace(/<(\w+)\s+className="[^"]*"\s*\/>/g, '<$1 />');
+  
+  return content;
+}
 
-// Main execution;
-const srcDir = path.join(process.cwd(), `src`);
-if (fs.existsSync(srcDir)) {
-  const files = getAllFiles(srcDir);
-  let fixedCount = 0;
+// Process all TypeScript/TSX files in the app/blog directory
+const blogFiles = glob.sync('app/blog/**/*.tsx');
 
-  for (const file of files) {
-    if (fixFile(file)) {
-      fixedCount++}
+console.log(`Found ${blogFiles.length} blog files to process...`);
+
+let processedCount = 0;
+let errorCount = 0;
+
+blogFiles.forEach(filePath => {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    const originalContent = content;
+    
+    // Apply fixes
+    content = fixLucideImports(content);
+    content = removeUnusedReactImports(content);
+    content = fixClassNameProps(content);
+    
+    // Only write if content changed
+    if (content !== originalContent) {
+      fs.writeFileSync(filePath, content, 'utf8');
+      processedCount++;
+      console.log(`Fixed: ${filePath}`);
+    }
+  } catch (error) {
+    console.error(`Error processing ${filePath}:`, error.message);
+    errorCount++;
   }
+});
 
-  console.log(`\nFixed ${fixedCount} files.`)} else {
-  console.log(`src directory not found`)}
+console.log(`\nProcessed ${processedCount} files successfully`);
+if (errorCount > 0) {
+  console.log(`Errors in ${errorCount} files`);
+}

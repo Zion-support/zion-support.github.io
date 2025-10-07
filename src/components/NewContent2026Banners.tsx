@@ -131,7 +131,7 @@ export function AISustainabilityTransformationBanner() {
             <span className="bg-white/20 px-3 py-1 rounded-full text-sm font-semibold">
               NEW 2026
             </span>
-            <span className="text-sm opacity-90">Sustainability</span>
+            
           </div>
           <h2 className="text-2xl md:text-3xl font-bold mb-3">
             AI Sustainability & Green Tech 2026
@@ -233,7 +233,7 @@ export function AIAutonomousCloudOpsBanner() {
           <div className="grid md:grid-cols-3 gap-4 mb-6">
             <div className="bg-white/10 rounded-lg p-4">
               <div className="text-3xl font-bold text-cyan-300">99.9%</div>
-              <div className="font-semibold">Uptime</div>
+              
               <div className="text-sm opacity-90">Self-healing infrastructure</div>
             </div>
             <div className="bg-white/10 rounded-lg p-4">
@@ -242,7 +242,7 @@ export function AIAutonomousCloudOpsBanner() {
               <div className="text-sm opacity-90">Intelligent optimization</div>
             </div>
             <div className="bg-white/10 rounded-lg p-4">
-              <div className="text-3xl font-bold text-cyan-300">Zero</div>
+              
               <div className="font-semibold">Touch Operations</div>
               <div className="text-sm opacity-90">Fully automated</div>
             </div>
@@ -280,7 +280,7 @@ export function AIFinTechTransformationBanner() {
           <div className="grid md:grid-cols-3 gap-4 mb-6">
             <div className="bg-white/10 rounded-lg p-4">
               <div className="text-3xl font-bold text-green-300">95%</div>
-              <div className="font-semibold">Automation</div>
+              
               <div className="text-sm opacity-90">Process efficiency</div>
             </div>
             <div className="bg-white/10 rounded-lg p-4">
@@ -290,7 +290,7 @@ export function AIFinTechTransformationBanner() {
             </div>
             <div className="bg-white/10 rounded-lg p-4">
               <div className="text-3xl font-bold text-green-300">99.9%</div>
-              <div className="font-semibold">Accuracy</div>
+              
               <div className="text-sm opacity-90">Transaction processing</div>
             </div>
           </div>
@@ -332,7 +332,7 @@ export function AIRetailAutomationBanner() {
             </div>
             <div className="bg-white/10 rounded-lg p-4">
               <div className="text-3xl font-bold text-orange-300">300%</div>
-              <div className="font-semibold">Productivity</div>
+              
               <div className="text-sm opacity-90">Performance gains</div>
             </div>
             <div className="bg-white/10 rounded-lg p-4">

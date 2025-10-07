@@ -1,6 +1,11 @@
-import React from 'react';
 import Link from 'next/link';
-import { Cog, Zap, TrendingUp, Shield, Users, BarChart3 } from 'lucide-react';
+
+import Cog from 'lucide-react/dist/esm/icons/og';
+import Zap from 'lucide-react/dist/esm/icons/ap';
+import TrendingUp from 'lucide-react/dist/esm/icons/rendingup';
+import Shield from 'lucide-react/dist/esm/icons/hield';
+import Users from 'lucide-react/dist/esm/icons/sers';
+import BarChart3 from 'lucide-react/dist/esm/icons/archart3';
 
 export const metadata = {
   title: 'AI 2026 Enterprise Automation Revolution: Transform Your Business Operations',
@@ -14,7 +19,7 @@ export default function AI2026EnterpriseAutomationRevolution() {
       {/* Header */}
       <div className="text-center mb-12">
         <div className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-600 to-red-600 text-white px-4 py-2 rounded-full text-sm font-semibold mb-4">
-          <Cog className="w-4 h-4" />
+          <Cog />
           AUTOMATION REVOLUTION
         </div>
         <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -35,7 +40,7 @@ export default function AI2026EnterpriseAutomationRevolution() {
       {/* Hero Image Placeholder */}
       <div className="w-full h-64 md:h-96 bg-gradient-to-br from-orange-100 via-red-100 to-pink-100 rounded-2xl mb-12 flex items-center justify-center">
         <div className="text-center">
-          <Cog className="w-16 h-16 text-orange-600 mx-auto mb-4" />
+          <Cog />
           <h3 className="text-2xl font-bold text-gray-800">Enterprise Automation Revolution</h3>
           <p className="text-gray-600">AI-powered transformation of business operations</p>
         </div>
@@ -82,7 +87,7 @@ export default function AI2026EnterpriseAutomationRevolution() {
           <div className="bg-gradient-to-br from-blue-50 to-purple-50 p-8 rounded-2xl border border-blue-200">
             <div className="flex items-center gap-3 mb-4">
               <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center">
-                <Zap className="w-6 h-6 text-white" />
+                <Zap />
               </div>
               <h3 className="text-2xl font-bold text-gray-900">Intelligent Process Automation</h3>
             </div>
@@ -101,7 +106,7 @@ export default function AI2026EnterpriseAutomationRevolution() {
           <div className="bg-gradient-to-br from-green-50 to-teal-50 p-8 rounded-2xl border border-green-200">
             <div className="flex items-center gap-3 mb-4">
               <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center">
-                <Users className="w-6 h-6 text-white" />
+                <Users />
               </div>
               <h3 className="text-2xl font-bold text-gray-900">Autonomous Decision Making</h3>
             </div>
@@ -120,7 +125,7 @@ export default function AI2026EnterpriseAutomationRevolution() {
           <div className="bg-gradient-to-br from-purple-50 to-pink-50 p-8 rounded-2xl border border-purple-200">
             <div className="flex items-center gap-3 mb-4">
               <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center">
-                <BarChart3 className="w-6 h-6 text-white" />
+                <BarChart3 />
               </div>
               <h3 className="text-2xl font-bold text-gray-900">Predictive Operations</h3>
             </div>
@@ -139,7 +144,7 @@ export default function AI2026EnterpriseAutomationRevolution() {
           <div className="bg-gradient-to-br from-orange-50 to-red-50 p-8 rounded-2xl border border-orange-200">
             <div className="flex items-center gap-3 mb-4">
               <div className="w-12 h-12 bg-orange-600 rounded-lg flex items-center justify-center">
-                <Shield className="w-6 h-6 text-white" />
+                <Shield />
               </div>
               <h3 className="text-2xl font-bold text-gray-900">Self-Healing Systems</h3>
             </div>
@@ -248,19 +253,19 @@ export default function AI2026EnterpriseAutomationRevolution() {
             <h3 className="text-xl font-semibold mb-4">Typical Automation Benefits</h3>
             <ul className="space-y-3">
               <li className="flex items-center gap-3">
-                <TrendingUp className="w-5 h-5 text-green-400" />
+                <TrendingUp />
                 <span>60-80% reduction in manual tasks</span>
               </li>
               <li className="flex items-center gap-3">
-                <Zap className="w-5 h-5 text-yellow-400" />
+                <Zap />
                 <span>300% increase in process speed</span>
               </li>
               <li className="flex items-center gap-3">
-                <BarChart3 className="w-5 h-5 text-blue-400" />
+                <BarChart3 />
                 <span>40-60% cost reduction</span>
               </li>
               <li className="flex items-center gap-3">
-                <Shield className="w-5 h-5 text-purple-400" />
+                <Shield />
                 <span>99.9% accuracy improvement</span>
               </li>
             </ul>

@@ -38,7 +38,7 @@ resolve_conflicts() {
     local file="$1"
     echo "Resolving conflicts in $file..."
     
-    if grep -q "<<<<<<< HEAD" "$file"; then
+    if grep -q "" "$file"; then
         echo "Found conflict markers in $file"
         # This would need manual resolution in a real scenario
         echo "Manual resolution needed for $file"

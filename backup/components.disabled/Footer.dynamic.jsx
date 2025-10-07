@@ -1,15 +1,1 @@
-const Footer = dynamic(() => import('./Footer'),{'; 'loading': () => <p>Loading...</p,>}) 'export': 'default Footer' ,'
-
-
-
-
-ursor/integrate-build-improve-and-re-verify-8f7d
-</p>'
-</p>'
-ursor/add-new-services-and-deploy-updates-0462
-
-
-
-
-
-
+const Footer = dynamic(() => import('./Footer'),{' 'loading': () => <p>Loading...</p>}) 'export': 'default Footer' ,' ursor/integrate-build-improve-and-re-verify-8f7d' </p>'' </p>' ursor/add-new-services-and-deploy-updates-0462 '

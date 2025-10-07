@@ -1,40 +1,39 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Sparkles, TrendingUp, Zap, Brain, Atom, Target } from 'lucide-react';
 
 const January2026RevolutionaryContentBanner: React.FC = () => {
   const revolutionaryContent = [
     {
       title: "Next-Generation Enterprise Automation: The 2026 AI Revolution",
-      description: "98% Automation Rate, 1000x Processing Speed, $2.5B Cost Savings",
+      description: "98% Automation Rate, 1000x Processing Speed, $2.5B Cost Savings",",
       slug: "ai-2026-next-generation-enterprise-automation",
-      category: "AI Innovation",
+      category: "AI Innovation",",
       emoji: "🚀",
-      highlight: "BREAKTHROUGH",
+      highlight: "BREAKTHROUGH",",
       impact: "98% Automation",
-      type: "blog",
+      type: "blog",",
       readTime: "15 min"
     },
-    {
+    {",
       title: "Quantum AI Breakthrough: Revolutionary Computing Paradigm",
-      description: "10^18 Operations/sec, 99.9% Accuracy, $10B Market Value",
+      description: "10^18 Operations/sec, 99.9% Accuracy, $10B Market Value",",
       slug: "quantum-ai-breakthrough-2026-revolutionary-computing",
-      category: "Quantum Computing",
+      category: "Quantum Computing",",
       emoji: "⚛️",
-      highlight: "REVOLUTIONARY",
+      highlight: "REVOLUTIONARY",",
       impact: "10^18 Ops/sec",
-      type: "blog",
+      type: "blog",",
       readTime: "18 min"
     },
-    {
+    {",
       title: "Fortune 500 Quantum AI Transformation: $10B Revenue Impact",
-      description: "500% Productivity Increase, 95% Process Automation, Market Leadership",
+      description: "500% Productivity Increase, 95% Process Automation, Market Leadership",",
       slug: "fortune-500-quantum-ai-transformation-2026",
-      category: "Success Story",
+      category: "Success Story",",
       emoji: "🏆",
-      highlight: "MEGA SUCCESS",
+      highlight: "MEGA SUCCESS",",
       impact: "$10B Revenue",
-      type: "case-study",
+      type: "case-study",",
       readTime: "12 min"
     }
   ];
@@ -52,7 +51,7 @@ const January2026RevolutionaryContentBanner: React.FC = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 mb-8">
-            <Sparkles className="w-5 h-5 text-blue-400" />
+
             <span className="text-blue-400 font-bold text-sm tracking-wider uppercase">
               January 2026 • Revolutionary Content Launch
             </span>
@@ -70,8 +69,8 @@ const January2026RevolutionaryContentBanner: React.FC = () => {
         {/* Content Grid */}
         <div className="grid md:grid-cols-3 gap-8 mb-12">
           {revolutionaryContent.map((content, index) => (
-            <div 
-              key={index} 
+            <div
+key={index} 
               className="group bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105"
             >
               {/* Content Header */}
@@ -101,9 +100,9 @@ const January2026RevolutionaryContentBanner: React.FC = () => {
               {/* Impact Badge */}
               <div className="mb-6">
                 <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 rounded-full">
-                  <Target className="w-4 h-4 text-green-400" />
-                  <span className="text-green-400 font-bold text-sm">
-                    Impact: {content.impact}
+
+                  <span className="text-green-400 font-bold text-sm">",
+      Impact: {content.impact}
                   </span>
                 </div>
               </div>
@@ -114,7 +113,7 @@ const January2026RevolutionaryContentBanner: React.FC = () => {
                 className="w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 flex items-center justify-center gap-2 group-hover:shadow-lg group-hover:shadow-blue-500/25"
               >
                 {content.type === 'blog' ? 'Read Article' : 'View Case Study'}
-                <ArrowRight className="w-4 h-4" />
+
               </Link>
             </div>
           ))}

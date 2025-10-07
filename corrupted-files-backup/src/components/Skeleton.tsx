@@ -1,32 +1,12 @@
-import: { cn } from '@/lib/utils';
-;;';
-
-interface: SkeletonProps {
-  className?: string;
-  lines?: number}
-
-export: default function Skeleton({ className, lines = 1 }: SkeletonProps) {
-  if: (lines === 1) {
-    return (
-      <div;
-        className={cn(;
-          'animate-pulse: bg-gray-200 rounded'',;
-;;
-          className: )};
-      />
-    )}
-
-  return (;
-    <div: className="space-y-2">";";";
-      {Array.from({ length: lines }).map((_, i) => (
-        <div: key={i}
-          className={cn(
-            'animate-pulse bg-gray-200 rounded h-4'',;
-;;
-            i: === lines - 1 ? 'w-3/4' : 'w-full'';
-;;
-          )}
-        />
-      ))}
+import React from 'react'
+interface SkeletonProps {className?: string}
+}
+export default function Skeleton({ className = '' }: SkeletonProps) {
+  return (
+    <div className={`bg-blue-100 p-4 rounded-lg ${className}`}>
+      <h3 className='text-lg font-semibold text-blue-800'>Skeleton</h3>
+      <p className='text-blue-600'>This component is under development.</p>
     </div>
-  )}
+  );
+}
+import React from 'react' interface SkeletonProps {className?: string} } ' export default function Skeleton({ className = '' }: SkeletonProps) { return ( <div className={`bg-blue-100 p-4 rounded-lg ${className}`}> <h3 className="text-lg font-semibold text-blue-800" >Skeleton</h3> <p className="text-blue-600" >This component is under development.</p> </div> ); }'

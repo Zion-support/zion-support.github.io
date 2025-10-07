@@ -2,6 +2,7 @@
 
 export interface EnterpriseCaseStudy {
   id: string;
+  slug?: string;
   title: string;
   company: string;
   industry: string;

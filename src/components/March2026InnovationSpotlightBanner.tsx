@@ -1,6 +1,4 @@
 import React from 'react';
-import { ArrowRight, Sparkles, Zap, Brain, CheckCircle, Star, Users, Award, TrendingUp, Rocket } from 'lucide-react';
-import { Link } from 'react-router-dom';
 
 const March2026InnovationSpotlightBanner = () => {
   const innovations = [
@@ -40,11 +38,11 @@ const March2026InnovationSpotlightBanner = () => {
         {/* Header Section */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-purple-500/20 to-indigo-500/20 border border-purple-500/30 mb-8">
-            <Rocket className="w-6 h-6 text-purple-400 animate-pulse" />
+
             <span className="text-purple-400 font-bold text-lg tracking-wider uppercase">
               🚀 MARCH 2026: INNOVATION SPOTLIGHT
             </span>
-            <Rocket className="w-6 h-6 text-indigo-400 animate-pulse" />
+
           </div>
 
           <h2 className="text-5xl md:text-6xl font-extrabold mb-6 bg-gradient-to-r from-purple-400 via-indigo-400 to-blue-400 bg-clip-text text-transparent">
@@ -80,8 +78,10 @@ const March2026InnovationSpotlightBanner = () => {
         {/* Innovation Cards */}
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           {innovations.map((innovation, index) => (
-            <div 
-              key={index}
+
+            <div
+key={index}
+
               className="group relative bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 hover:border-purple-500/50 transition-all duration-500 overflow-hidden hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20"
               style={{ animationDelay: `${index * 200}ms` }}
             >
@@ -106,8 +106,8 @@ const March2026InnovationSpotlightBanner = () => {
 
                 {/* Impact */}
                 <div className="text-center mb-6">
-                  <div className={`inline-block px-4 py-2 rounded-full bg-gradient-to-r ${innovation.color} text-white text-sm font-bold`}>
-                    Impact: {innovation.impact}
+                  <div className={`inline-block px-4 py-2 rounded-full bg-gradient-to-r ${innovation.color} text-white text-sm font-bold`}>",
+      Impact: {innovation.impact}
                   </div>
                 </div>
 
@@ -117,7 +117,7 @@ const March2026InnovationSpotlightBanner = () => {
                   className={`group/btn flex items-center justify-center gap-2 w-full bg-gradient-to-r ${innovation.color} hover:opacity-90 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1`}
                 >
                   <span>Explore Innovation</span>
-                  <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-300" />
+
                 </a>
               </div>
             </div>
@@ -141,19 +141,19 @@ const March2026InnovationSpotlightBanner = () => {
                 company: 'NeuroTech Global',
                 achievement: '500% Cognitive Enhancement',
                 revenue: '$2.1B Revenue Growth',
-                icon: <Brain className="w-8 h-8" />
+                icon: '>'
               },
               {
                 company: 'Quantum Dynamics',
                 achievement: '1000x Processing Speed',
                 revenue: '$3.8B Market Value',
-                icon: <Zap className="w-8 h-8" />
+                icon: '>'
               },
               {
                 company: 'Reality Synthesis Corp',
                 achievement: '$5.2B Market Creation',
                 revenue: '98% Customer Satisfaction',
-                icon: <Sparkles className="w-8 h-8" />
+      icon: '>'
               }
             ].map((story, index) => (
               <div key={index} className="text-center">
@@ -184,7 +184,7 @@ const March2026InnovationSpotlightBanner = () => {
                   href="/innovations"
                   className="bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-400 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 flex items-center justify-center gap-2"
                 >
-                  <Rocket className="w-5 h-5" />
+
                   <span>Explore All Innovations</span>
                 </a>
                 <a
@@ -192,7 +192,7 @@ const March2026InnovationSpotlightBanner = () => {
                   className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-2"
                 >
                   <span>Partner With Us</span>
-                  <ArrowRight className="w-5 h-5" />
+
                 </a>
               </div>
             </div>

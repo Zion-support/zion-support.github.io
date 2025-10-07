@@ -9509,9 +9509,7 @@
       "totalTests": 18,
       "totalAssertions": 27,
       "averageQuality": 63,
-      "recommendations": [
-        "Improve test organization and structure"
-      ]
+      "recommendations": ["Improve test organization and structure"]
     },
     "performanceMetrics": {},
     "recommendations": [

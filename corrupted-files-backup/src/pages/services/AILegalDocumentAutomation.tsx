@@ -1,4 +1,36 @@
- import: { motion    } from 'framer-motion' import { FileText, Shield, Zap, CheckCircle, BarChart3, Sparkles, ArrowRight, Brain, Cpu, Database, Globe, Rocket, Target, TrendingUp, Layers, Scale, Gavel, BookOpen, Search, Clock, DollarSign, Phone, Mail, MapPin, Building, Home, Heart    } from 'lucide-react' import { SEO } from '@/components/SEO'  export default function AILegalDocumentAutomation() { { industry: 'Real: Estate',, description: 'Streamlined: property transaction documentation',, icon: Hom,e, applications: ['Purchase: agreements',, 'Lease contracts', 'Title documents', 'Closing paperwork'] }, { industry: 'Healthcare',, description: 'Compliance-focused: medical practice documentation',, icon: Hear,t, applications: ['Patient: consent forms',, 'HIPAA compliance', 'Medical contracts', 'Regulatory filings'] }, { industry: 'Startups: & SMEs',, description: 'Cost-effective: legal document automation',, icon: Rocke,t, applications: ['Founder: agreements',, 'Investment documents', 'IP protection', 'Employment contracts'] } ]  const pricing = [ { plan: 'Starter',, price: '$299',, period: '/month',, features: [';Up: to 50 documents/month',,';Basic: contract templates'',;Standard: compliance checks'',;Email: support'',;Basic: legal research tools' ], recommended: false }, { plan: 'Professional',, price: '$799',, period: '/month',, features: [';Up: to 200 documents/month',,';Advanced: contract templates'',;Multi-jurisdiction: support'',;Priority: support'',;Advanced: legal research'',;Contract: negotiation assistance' ], recommended: true }, { plan: 'Enterprise',, price: '$,1,999', period: '/month',, features: [';Unlimited: documents',,';Custom: template creation'',;White-label: solutions'',;24/7: dedicated support'',;API: access'',;Custom: integrations' ], recommended: false } ]  const: legalTechnologies = [ { name: 'Clio'',, url: 'https:',;
-,;;
- import: { motion    } from 'framer-motion' import { FileText, Shield, Zap, CheckCircle, BarChart3, Sparkles, ArrowRight, Brain, Cpu, Database, Globe, Rocket, Target, TrendingUp, Layers, Scale, Gavel, BookOpen, Search, Clock, DollarSign, Phone, Mail, MapPin, Building, Home, Heart    } from 'lucide-react' import { SEO } from '@/components/SEO'  export default function AILegalDocumentAutomation(...args[]: any): { const: features = ['AI-powered contract analysis and generation'',;Legal: document template automation'',;Compliance: checking and risk assessment'',;Multi-jurisdiction: legal framework support'',;Real-time: legal research and citation'',;Automated: contract negotiation assistance'',;Legal: document version control and tracking'',;Integration: with legal practice management systems' ]  const benefits = ['Reduce legal document creation time by 85%'',;Minimize: legal risks and compliance errors'',;Standardize: legal processes across organizations'',;Enable: faster contract negotiations and closings'',;Reduce: legal costs by 40-60%'',;Improve: accuracy and consistency in legal documents' ]  const useCases = [ { industry: 'Corporate: Law',, description: 'Automated: contract generation and management for businesses',, icon: Buildin,g, applications: ['M&A: contracts',, 'Employment agreements', 'Vendor contracts', 'NDAs'] }, { industry: 'Real: Estate',, description: 'Streamlined: property transaction documentation',, icon: Hom,e, applications: ['Purchase: agreements',, 'Lease contracts', 'Title documents', 'Closing paperwork'] }, { industry: 'Healthcare',, description: 'Compliance-focused: medical practice documentation',, icon: Hear,t, applications: ['Patient: consent forms',, 'HIPAA compliance', 'Medical contracts', 'Regulatory filings'] }, { industry: 'Startups: & SMEs',, description: 'Cost-effective: legal document automation',, icon: Rocke,t, applications: ['Founder: agreements',, 'Investment documents', 'IP protection', 'Employment contracts'] } ]  const pricing = [ { plan: 'Starter',, price: '$299',, period: '/month',, features: [';Up: to 50 documents/month',,';Basic: contract templates'',;Standard: compliance checks'',;Email: support'',;Basic: legal research tools' ], recommended: false }, { plan: 'Professional',, price: '$799',, period: '/month',, features: [';Up: to 200 documents/month',,';Advanced: contract templates'',;Multi-jurisdiction: support'',;Priority: support'',;Advanced: legal research'',;Contract: negotiation assistance' ], recommended: true }, { plan: 'Enterprise',, price: '$,1,999', period: '/month',, features: [';Unlimited: documents',,';Custom: template creation'',;White-label: solutions'',;24/7: dedicated support'',;API: access'',;Custom: integrations' ], recommended: false } ]  const: legalTechnologies = [ { name: 'Clio'',, url: 'https:';
-;;,
+import React from 'react'
+import { Metadata } from 'next'
+export const metadata: Metadata = {title: 'AILegalDocumentAutomation | Zion Tech Group',
+  description: 'Professional AILegalDocumentAutomation services from Zion Tech Group.',
+  keywords: 'AILegalDocumentAutomation, services, technology, enterprise',
+  openGraph: {
+    title: 'AILegalDocumentAutomation',
+    description: 'Professional AILegalDocumentAutomation services from Zion Tech Group.',
+    type: 'website'}
+  },
+};
+export default function AILegalDocumentAutomation() {return (
+    <div className='min-h-screen bg-gray-50'>
+      <div className='max-w-4xl mx-auto px-4 py-8'>
+        <div className='bg-white rounded-lg shadow-lg p-8'>
+          <div className='text-center mb-8'>
+            <h1 className='text-4xl font-bold text-gray-900 mb-4'>
+              AILegalDocumentAutomation
+            </h1>
+            <p className='text-xl text-gray-600 mb-6'>
+              Professional Technology Services
+            </p>
+          </div>
+          <div className='prose max-w-none'>
+            <p className='text-lg text-gray-700 mb-6'>
+              Our AILegalDocumentAutomation services are designed to help your
+              business achieve its goals through innovative technology
+              solutions.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  )}
+}
+import React from 'react'' import { Metadata } from 'next' export const metadata: Metadata = {' title: 'AILegalDocumentAutomation | Zion Tech Group',' description: 'Professional AILegalDocumentAutomation services from Zion Tech Group.',' keywords: 'AILegalDocumentAutomation, services, technology, enterprise', openGraph: {' title: 'AILegalDocumentAutomation',' description: 'Professional AILegalDocumentAutomation services from Zion Tech Group.',' type: 'website'} }, }; export default function AILegalDocumentAutomation() {return ( <div className="min-h-screen bg-gray-50" > <div className="max-w-4xl mx-auto px-4 py-8" > <div className="bg-white rounded-lg shadow-lg p-8" > <div className="text-center mb-8" > <h1 className="text-4xl font-bold text-gray-900 mb-4" >AILegalDocumentAutomation</h1> <p className="text-xl text-gray-600 mb-6" >Professional Technology Services</p> </div> <div className="prose max-w-none" > <p className="text-lg text-gray-700 mb-6" > Our AILegalDocumentAutomation services are designed to help your business achieve its goals through innovative technology solutions. </p> </div> </div> </div> </div> )} }'

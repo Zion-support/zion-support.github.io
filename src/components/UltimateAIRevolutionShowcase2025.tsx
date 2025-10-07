@@ -1,5 +1,4 @@
 import React from 'react';
-import { ArrowRight, Sparkles, Zap, Brain, CheckCircle, Star, Users, Award, TrendingUp, Rocket, Globe } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const UltimateAIRevolutionShowcase2025 = () => {
@@ -45,9 +44,9 @@ const UltimateAIRevolutionShowcase2025 = () => {
   return (
     <div className="bg-gradient-to-r from-slate-900 via-purple-900/20 to-slate-900 border border-purple-400/30 rounded-2xl p-8 mb-12 animate-fade-in shadow-2xl">
       <div className="flex items-center justify-center gap-3 mb-6">
-        <Sparkles className="w-8 h-8 text-purple-400 animate-pulse" />
+
         <span className="text-2xl font-bold text-purple-400">🚀 ULTIMATE AI REVOLUTION SHOWCASE 2025</span>
-        <Sparkles className="w-8 h-8 text-purple-400 animate-pulse" />
+
       </div>
       
       <h2 className="text-4xl md:text-5xl font-extrabold mb-6 text-center bg-gradient-to-r from-purple-400 via-violet-400 to-blue-400 bg-clip-text text-transparent">
@@ -67,7 +66,7 @@ const UltimateAIRevolutionShowcase2025 = () => {
             <div className="flex items-center justify-between">
               <span className="text-xs bg-white/20 px-2 py-1 rounded-full">{feature.impact}</span>
               <div className="flex items-center gap-1">
-                <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+
                 <span className="text-xs">{feature.rating}</span>
               </div>
             </div>
@@ -78,7 +77,7 @@ const UltimateAIRevolutionShowcase2025 = () => {
 
       <div className="bg-gradient-to-r from-purple-500/20 to-blue-500/20 rounded-xl p-6 mb-8 border border-purple-400/30">
         <div className="flex items-center justify-center gap-3 mb-4">
-          <TrendingUp className="w-6 h-6 text-green-400" />
+
           <span className="text-xl font-bold text-green-400">Global Impact Statistics</span>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
@@ -106,25 +105,25 @@ const UltimateAIRevolutionShowcase2025 = () => {
           to="/blog/ai-2026-revolutionary-breakthrough-announcement" 
           className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-xl font-bold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 hover:scale-105 shadow-lg"
         >
-          <Rocket className="w-5 h-5" />
+
           Explore Revolutionary Content
-          <ArrowRight className="w-5 h-5" />
+
         </Link>
         <Link 
           to="/case-studies/ai-2026-revolutionary-breakthrough-500-billion-success" 
           className="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-500 to-teal-500 text-white px-8 py-4 rounded-xl font-bold hover:from-emerald-600 hover:to-teal-600 transition-all duration-300 hover:scale-105 shadow-lg"
         >
-          <Award className="w-5 h-5" />
+
           View Success Stories
-          <ArrowRight className="w-5 h-5" />
+
         </Link>
         <Link 
           to="/services/quantum-consciousness-ai-services" 
           className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-500 to-red-500 text-white px-8 py-4 rounded-xl font-bold hover:from-orange-600 hover:to-red-600 transition-all duration-300 hover:scale-105 shadow-lg"
         >
-          <Globe className="w-5 h-5" />
+
           Get AI Services
-          <ArrowRight className="w-5 h-5" />
+
         </Link>
       </div>
 

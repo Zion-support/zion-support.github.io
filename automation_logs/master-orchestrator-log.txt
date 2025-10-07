@@ -6,7 +6,7 @@ npm warn config `--include=optional` to include them.
 npm warn config
 npm warn config       Default value does install optional deps unless otherwise omitted.
 npm error code EJSONPARSE
-npm error JSON.parse Invalid package.json: JSONParseError: Expected double-quoted property name in JSON at position 3247 (line 73 column 1) while parsing near "...ase/ssr\": \"^0.6.1\",\n<<<<<<< HEAD\n    \"@s..."
+npm error JSON.parse Invalid package.json: JSONParseError: Expected double-quoted property name in JSON at position 3247 (line 73 column 1) while parsing near "...ase/ssr\": \"^0.6.1\",\n\n    \"@s..."
 npm error JSON.parse Failed to parse JSON data.
 npm error JSON.parse Note: package.json must be actual JSON, not just JavaScript.
 npm error A complete log of this run can be found in: /home/ubuntu/.npm/_logs/2025-09-07T21_00_46_777Z-debug-0.log
@@ -18,7 +18,7 @@ npm warn config `--include=optional` to include them.
 npm warn config
 npm warn config       Default value does install optional deps unless otherwise omitted.
 npm error code EJSONPARSE
-npm error JSON.parse Invalid package.json: JSONParseError: Expected double-quoted property name in JSON at position 3247 (line 73 column 1) while parsing near "...ase/ssr\": \"^0.6.1\",\n<<<<<<< HEAD\n    \"@s..."
+npm error JSON.parse Invalid package.json: JSONParseError: Expected double-quoted property name in JSON at position 3247 (line 73 column 1) while parsing near "...ase/ssr\": \"^0.6.1\",\n\n    \"@s..."
 npm error JSON.parse Failed to parse JSON data.
 npm error JSON.parse Note: package.json must be actual JSON, not just JavaScript.
 npm error A complete log of this run can be found in: /home/ubuntu/.npm/_logs/2025-09-07T21_00_46_856Z-debug-0.log
@@ -30,7 +30,7 @@ npm warn config `--include=optional` to include them.
 npm warn config
 npm warn config       Default value does install optional deps unless otherwise omitted.
 npm error code EJSONPARSE
-npm error JSON.parse Invalid package.json: JSONParseError: Expected double-quoted property name in JSON at position 3247 (line 73 column 1) while parsing near "...ase/ssr\": \"^0.6.1\",\n<<<<<<< HEAD\n    \"@s..."
+npm error JSON.parse Invalid package.json: JSONParseError: Expected double-quoted property name in JSON at position 3247 (line 73 column 1) while parsing near "...ase/ssr\": \"^0.6.1\",\n\n    \"@s..."
 npm error JSON.parse Failed to parse JSON data.
 npm error JSON.parse Note: package.json must be actual JSON, not just JavaScript.
 npm error A complete log of this run can be found in: /home/ubuntu/.npm/_logs/2025-09-07T21_00_46_934Z-debug-0.log
@@ -42,7 +42,7 @@ npm warn config `--include=optional` to include them.
 npm warn config
 npm warn config       Default value does install optional deps unless otherwise omitted.
 npm error code EJSONPARSE
-npm error JSON.parse Invalid package.json: JSONParseError: Expected double-quoted property name in JSON at position 3247 (line 73 column 1) while parsing near "...ase/ssr\": \"^0.6.1\",\n<<<<<<< HEAD\n    \"@s..."
+npm error JSON.parse Invalid package.json: JSONParseError: Expected double-quoted property name in JSON at position 3247 (line 73 column 1) while parsing near "...ase/ssr\": \"^0.6.1\",\n\n    \"@s..."
 npm error JSON.parse Failed to parse JSON data.
 npm error JSON.parse Note: package.json must be actual JSON, not just JavaScript.
 npm error A complete log of this run can be found in: /home/ubuntu/.npm/_logs/2025-09-07T21_00_47_010Z-debug-0.log
@@ -56,7 +56,7 @@ npm warn config `--include=optional` to include them.
 npm warn config
 npm warn config       Default value does install optional deps unless otherwise omitted.
 npm error code EJSONPARSE
-npm error JSON.parse Invalid package.json: JSONParseError: Expected double-quoted property name in JSON at position 3488 (line 79 column 1) while parsing near "...-query\": \"^5.85.5\",\n=======\n    \"@supaba..."
+npm error JSON.parse Invalid package.json: JSONParseError: Expected double-quoted property name in JSON at position 3488 (line 79 column 1) while parsing near "...-query\": \"^5.85.5\",\n\n    \"@supaba..."
 npm error JSON.parse Failed to parse JSON data.
 npm error JSON.parse Note: package.json must be actual JSON, not just JavaScript.
 npm error A complete log of this run can be found in: /home/ubuntu/.npm/_logs/2025-09-07T21_01_29_535Z-debug-0.log
@@ -68,7 +68,7 @@ npm warn config `--include=optional` to include them.
 npm warn config
 npm warn config       Default value does install optional deps unless otherwise omitted.
 npm error code EJSONPARSE
-npm error JSON.parse Invalid package.json: JSONParseError: Expected double-quoted property name in JSON at position 3488 (line 79 column 1) while parsing near "...-query\": \"^5.85.5\",\n=======\n    \"@supaba..."
+npm error JSON.parse Invalid package.json: JSONParseError: Expected double-quoted property name in JSON at position 3488 (line 79 column 1) while parsing near "...-query\": \"^5.85.5\",\n\n    \"@supaba..."
 npm error JSON.parse Failed to parse JSON data.
 npm error JSON.parse Note: package.json must be actual JSON, not just JavaScript.
 npm error A complete log of this run can be found in: /home/ubuntu/.npm/_logs/2025-09-07T21_01_29_612Z-debug-0.log
@@ -80,7 +80,7 @@ npm warn config `--include=optional` to include them.
 npm warn config
 npm warn config       Default value does install optional deps unless otherwise omitted.
 npm error code EJSONPARSE
-npm error JSON.parse Invalid package.json: JSONParseError: Expected double-quoted property name in JSON at position 3488 (line 79 column 1) while parsing near "...-query\": \"^5.85.5\",\n=======\n    \"@supaba..."
+npm error JSON.parse Invalid package.json: JSONParseError: Expected double-quoted property name in JSON at position 3488 (line 79 column 1) while parsing near "...-query\": \"^5.85.5\",\n\n    \"@supaba..."
 npm error JSON.parse Failed to parse JSON data.
 npm error JSON.parse Note: package.json must be actual JSON, not just JavaScript.
 npm error A complete log of this run can be found in: /home/ubuntu/.npm/_logs/2025-09-07T21_01_29_686Z-debug-0.log
@@ -92,7 +92,7 @@ npm warn config `--include=optional` to include them.
 npm warn config
 npm warn config       Default value does install optional deps unless otherwise omitted.
 npm error code EJSONPARSE
-npm error JSON.parse Invalid package.json: JSONParseError: Expected double-quoted property name in JSON at position 3488 (line 79 column 1) while parsing near "...-query\": \"^5.85.5\",\n=======\n    \"@supaba..."
+npm error JSON.parse Invalid package.json: JSONParseError: Expected double-quoted property name in JSON at position 3488 (line 79 column 1) while parsing near "...-query\": \"^5.85.5\",\n\n    \"@supaba..."
 npm error JSON.parse Failed to parse JSON data.
 npm error JSON.parse Note: package.json must be actual JSON, not just JavaScript.
 npm error A complete log of this run can be found in: /home/ubuntu/.npm/_logs/2025-09-07T21_01_29_762Z-debug-0.log

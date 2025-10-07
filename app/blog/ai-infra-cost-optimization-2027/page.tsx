@@ -1,5 +1,4 @@
 // @ts-nocheck
-import React from 'react';
 
 export const metadata = {
   title: 'AI Infra Cost Optimization 2027: Fast, Reliable, Affordable',

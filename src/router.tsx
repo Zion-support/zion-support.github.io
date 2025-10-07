@@ -1,6 +1,6 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import Home from './pages/Home';
+// import Home from './pages/Home'; // Temporarily disabled
 import About from './pages/About';
 import Services from './pages/Services';
 import Contact from './pages/Contact';
@@ -28,7 +28,7 @@ import GlobalTelecomCognitiveTransformation from './pages/case-studies/global-te
 export const AppRouter: React.FC = () => {
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
+      <Route path="/" element={<div>Home page temporarily disabled</div>} />
       <Route path="/about" element={<About />} />
       <Route path="/services" element={<Services />} />
       <Route path="/services/ai-workflow-automation" element={<AIWorkflowAutomation />} />

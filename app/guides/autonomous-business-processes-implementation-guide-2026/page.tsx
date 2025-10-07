@@ -1,6 +1,5 @@
-import React from 'react';
-import Link from 'next/link';
-import { ArrowLeft, BookOpen, CheckCircle, Clock, Target, Users, Zap, TrendingUp } from 'lucide-react';
+import { Link } from 'next/link';
+
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -435,3 +434,4 @@ export default function ImplementationGuide() {
     </div>
   );
 }
+>>>>>>> 5d2b3c81c55b794aac3492f27f2c7fa2daa0ca39

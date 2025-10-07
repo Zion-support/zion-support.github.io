@@ -1,35 +1,51 @@
 #!/bin/bash
 
-# Script to merge multiple PRs efficiently
-PR_NUMBERS=(24142 24141 24140 24138 24137 24136 24135 24134 24133 24130 24129 24125 24122 24119 24116 24114 24111 24109 24106 24101 24100)
+# Script to merge all open PRs into main branch
+set -e
 
-for pr_num in "${PR_NUMBERS[@]}"; do
-    echo "Processing PR #$pr_num..."
+echo "Starting PR merge process..."
+
+# List of PR branches to merge (from the JSON data)
+PR_BRANCHES=(
+    "origin/cursor/build-and-deploy-with-vite-and-netlify-8b37"
+    "origin/cursor/fix-errors-and-merge-to-main-fcbd"
+    "origin/cursor/fix-errors-and-merge-to-main-e6e1"
+    "origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-44c4"
+    "origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f3e7"
+    "origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-d21e"
+)
+
+# Ensure we're on main branch
+git checkout main
+
+# Pull latest changes
+git pull origin main
+
+echo "Merging PRs..."
+
+for branch in "${PR_BRANCHES[@]}"; do
+    echo "Attempting to merge $branch..."
     
-    # Get PR details
-    pr_data=$(curl -s -H "Accept: application/vnd.github.v3+json" https://api.github.com/repos/Zion-Holdings/zion.app/pulls/$pr_num)
-    head_ref=$(echo "$pr_data" | grep -o '"ref": "[^"]*"' | head -1 | cut -d'"' -f4)
-    
-    if [ -n "$head_ref" ]; then
-        echo "Fetching branch: $head_ref"
-        git fetch origin "$head_ref"
-        
-        echo "Merging branch: $head_ref"
-        if git merge "origin/$head_ref" --no-edit; then
-            echo "Successfully merged PR #$pr_num"
-        else
-            echo "Conflict in PR #$pr_num, resolving..."
-            # Resolve conflicts by keeping our version
-            git checkout HEAD -- app/page.tsx app/layout.tsx 2>/dev/null || true
-            git add .
-            git commit -m "Merge PR #$pr_num: Resolve conflicts and integrate content" || true
-        fi
+    # Check if merge would have conflicts
+    if git merge --no-commit --no-ff "$branch" 2>/dev/null; then
+        echo "✅ Successfully merged $branch"
+        git commit -m "Merge $branch into main"
     else
-        echo "Could not get branch info for PR #$pr_num"
+        echo "❌ Merge conflict detected in $branch"
+        git merge --abort 2>/dev/null || true
+        
+        # Try to resolve conflicts automatically
+        echo "Attempting to resolve conflicts for $branch..."
+        if git merge "$branch" 2>/dev/null; then
+            echo "✅ Conflicts resolved for $branch"
+        else
+            echo "❌ Could not resolve conflicts for $branch automatically"
+            # Continue with next branch
+        fi
     fi
-    
-    echo "Completed PR #$pr_num"
-    echo "---"
 done
 
-echo "All PRs processed!"
+echo "All PRs processed. Pushing changes..."
+git push origin main
+
+echo "✅ PR merge process completed!"

@@ -1,43 +1,34 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
 
-export default function AIOperationalRiskBudgets2027(): React.JSX.Element {
+export default function BlogPage(): React.JSX.Element {
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
       <Helmet>
-        <title>AI 2027: Operational Risk Budgets — Ship Faster, Stay Safe</title>
-        <meta
-          name="description"
-          content="Budget‑aware routing, KPI‑linked canaries, and instant rollback to prevent incidents while increasing velocity."
+        <title>Ai 2027 Operational Risk Budgets</title>
+        <meta 
+          name="description" 
+          content="Learn about ai 2027 operational risk budgets and how it can benefit your enterprise." 
         />
-        <link
-          rel="canonical"
-          href="https://ziontechgroup.com/blog/ai-2027-operational-risk-budgets"
+        <link 
+          rel="canonical" 
+          href="https://ziontechgroup.com/blog/ai-2027-operational-risk-budgets" 
         />
       </Helmet>
 
       <div className="container mx-auto px-6 py-16">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4">
-          AI 2027: Operational Risk Budgets — Ship Faster, Stay Safe
-        </h1>
-        <p className="text-zion-slate-light mb-8">
-          Budgets • KPI Canaries • Instant Rollback
-        </p>
+        <h1 className="text-4xl md:text-5xl font-bold mb-4">Ai 2027 Operational Risk Budgets</h1>
+        <p className="text-zion-slate-light mb-8">Learn about ai 2027 operational risk budgets and how it can benefit your enterprise.</p>
         <div className="prose prose-invert max-w-3xl">
           <p>
-            Move fast without breakage by introducing operational risk budgets: a
-            quantified allowance of acceptable risk wired to product KPIs. Route
-            traffic by budget and quality tier, promote only when canaries pass,
-            and roll back instantly on regression.
+            This comprehensive guide covers ai 2027 operational risk budgets and provides practical insights for enterprise implementation.
           </p>
-          <p>
-            This guide covers scorecard design, budgeted actions, policy tests in
-            CI, and live canaries that protect reliability while enabling
-            continuous delivery for GenAI and agentic systems.
-          </p>
+        </div>
+        <div className="mt-8">
+          <Link to="/blog" className="text-cyan-300 hover:underline">← Back to Blog</Link>
         </div>
       </div>
     </div>
   );
 }
-

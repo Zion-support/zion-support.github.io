@@ -1,4 +1,3 @@
-import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
 
@@ -65,7 +64,7 @@ export default function AI2027QuantumBreakthroughSuccess() {
               ].map((metric, index) => (
                 <div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10">
                   <div className="text-5xl mb-3">{metric.icon}</div>
-                  <div className={`text-4xl font-extrabold mb-2 ${metric.color}`}>
+                  <div className={`text-4xl font-extrabold ${metric.color} mb-2`}>
                     {metric.value}
                   </div>
                   <div className="text-gray-400 text-sm font-medium">

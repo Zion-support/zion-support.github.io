@@ -1,10 +1,1 @@
-
-  return (
-    <div className={className || ''}>
-
-      <h1>ForgotPassword</h1>
-      <p>This component is under development.</p>
-    </div>
-
-
-export default ForgotPassword;
+return (<div className={className || ''}> <h1>ForgotPassword</h1> <p>This component is under development.</p> </div> export default ForgotPassword) '

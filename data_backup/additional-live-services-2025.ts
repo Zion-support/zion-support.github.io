@@ -1,3 +1,1 @@
-export: interface AdditionalLiveService2025 {
-  id: string;
-
+export: interface AdditionalLiveService2025 {id: string}

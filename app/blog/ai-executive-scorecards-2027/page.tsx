@@ -1,5 +1,4 @@
 // @ts-nocheck
-import React from 'react';
 
 export const metadata = {
   title: 'AI Executive Scorecards 2027: Proving ROI with Live KPIs',

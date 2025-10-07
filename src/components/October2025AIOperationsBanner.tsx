@@ -1,29 +1,28 @@
-import { ArrowRight, Shield, TrendingDown, Activity } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const October2025AIOperationsBanner = () => {
   const newArticles = [
-    {
+    {",
       title: "AI-Powered DevSecOps Automation",
-      description: "Achieve 99.2% vulnerability detection with 87% auto-remediation and 847% deployment acceleration",
+      description: "Achieve 99.2% vulnerability detection with 87% auto-remediation and 847% deployment acceleration",",
       link: "/blog/ai-2025-oct-01-devsecops-automation-revolution",
-      icon: Shield,
+      icon: Shield,",
       stats: "99.2% Detection | 7,747% ROI",
       color: "from-blue-500 to-cyan-500"
     },
-    {
+    {",
       title: "Autonomous Cloud Cost Optimization",
-      description: "Save $127M+ annually with 67% cost reduction and 99.3% optimization accuracy",
+      description: "Save $127M+ annually with 67% cost reduction and 99.3% optimization accuracy",",
       link: "/blog/ai-2025-oct-01-autonomous-cloud-cost-optimization",
-      icon: TrendingDown,
+      icon: TrendingDown,",
       stats: "67% Savings | 18,287% ROI",
       color: "from-green-500 to-emerald-500"
     },
-    {
+    {",
       title: "Real-Time AI Observability Platform",
-      description: "99.94% uptime with predictive issue detection 37 minutes before impact",
+      description: "99.94% uptime with predictive issue detection 37 minutes before impact",",
       link: "/blog/ai-2025-oct-01-real-time-ai-observability-platform",
-      icon: Activity,
+      icon: Activity,",
       stats: "98.7% Prevention | 17,488% ROI",
       color: "from-purple-500 to-pink-500"
     }
@@ -41,8 +40,7 @@ const October2025AIOperationsBanner = () => {
         {/* Header */}
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-500/20 rounded-full border border-blue-400/30 mb-4">
-            <Activity className="w-4 h-4 text-blue-400 animate-pulse" />
-            <span className="text-blue-300 text-sm font-semibold">
+            <Activity className="w-4 h-4 text-blue-400 animate-pulse" <span className="text-blue-300 text-sm font-semibold">
               OCTOBER 2025 - BREAKTHROUGH AI OPERATIONS
             </span>
           </div>
@@ -71,8 +69,7 @@ const October2025AIOperationsBanner = () => {
                 <div className="relative z-10">
                   {/* Icon */}
                   <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${article.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                    <Icon className="w-6 h-6 text-white" />
-                  </div>
+                    <Icon className="w-6 h-6 text-white"</div>
 
                   {/* Title */}
                   <h3 className="text-xl font-bold text-white mb-2 group-hover:text-blue-300 transition-colors">
@@ -94,7 +91,7 @@ const October2025AIOperationsBanner = () => {
                   {/* CTA */}
                   <div className="flex items-center text-blue-400 group-hover:text-blue-300 transition-colors">
                     <span className="text-sm font-semibold mr-2">Read Full Guide</span>
-                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+
                   </div>
                 </div>
               </Link>
@@ -110,7 +107,7 @@ const October2025AIOperationsBanner = () => {
               className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-500 text-white font-bold rounded-xl hover:from-blue-500 hover:to-blue-400 transition-all duration-300 shadow-lg hover:shadow-blue-500/50 group"
             >
               <span>Explore All AI Insights</span>
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+
             </Link>
             <Link
               to="/contact"

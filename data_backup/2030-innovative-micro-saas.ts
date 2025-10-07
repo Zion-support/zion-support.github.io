@@ -1,6 +1,1 @@
-  realImplementation: boolean;
-  Advanced: AI marketing automation platform with autonomous marketing campaigns and optimization.'',;
-    launchDate: '2030-03-0,1',;
-    customers: 8,9,
-    rating: 4.,7,
-    reviews: 52]}}
+realImplementation: boolean, Advanced: AI marketing automation platform with autonomous marketing campaigns and optimization.'',;' launchDate: '2030-03-0,1',; customers: 8,9, rating: 4.,7, reviews: 52]}} '

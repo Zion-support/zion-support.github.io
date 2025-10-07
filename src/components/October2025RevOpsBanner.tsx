@@ -1,5 +1,8 @@
-import { ArrowRight, DollarSign, TrendingUp, Target, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
+
+import { TrendingUp } from 'lucide-react';
+
+;
 
 const October2025RevOpsBanner = () => {
   return (
@@ -14,9 +17,9 @@ const October2025RevOpsBanner = () => {
         {/* Breaking News Badge */}
         <div className="flex justify-center mb-4">
           <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full text-white font-bold text-sm shadow-lg animate-bounce">
-            <Sparkles className="w-4 h-4 mr-2" />
+            <TrendingUp className="w-4 h-4 mr-2" />
             JUST PUBLISHED - OCTOBER 1, 2025
-            <Sparkles className="w-4 h-4 ml-2" />
+            <TrendingUp className="w-4 h-4 ml-2" />
           </div>
         </div>
 
@@ -38,22 +41,22 @@ const October2025RevOpsBanner = () => {
         {/* Key Metrics Grid */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center border border-emerald-400/30 hover:border-emerald-400/60 transition-all hover:scale-105">
-            <DollarSign className="w-8 h-8 text-emerald-300 mx-auto mb-2" />
+
             <div className="text-3xl font-black text-white mb-1">127%</div>
             <div className="text-sm text-emerald-200">Average ROI</div>
           </div>
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center border border-teal-400/30 hover:border-teal-400/60 transition-all hover:scale-105">
-            <Target className="w-8 h-8 text-teal-300 mx-auto mb-2" />
+
             <div className="text-3xl font-black text-white mb-1">89%</div>
             <div className="text-sm text-teal-200">Forecast Accuracy</div>
           </div>
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center border border-cyan-400/30 hover:border-cyan-400/60 transition-all hover:scale-105">
-            <TrendingUp className="w-8 h-8 text-cyan-300 mx-auto mb-2" />
+
             <div className="text-3xl font-black text-white mb-1">3.2x</div>
             <div className="text-sm text-cyan-200">Pipeline Velocity</div>
           </div>
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center border border-emerald-400/30 hover:border-emerald-400/60 transition-all hover:scale-105">
-            <DollarSign className="w-8 h-8 text-emerald-300 mx-auto mb-2" />
+
             <div className="text-3xl font-black text-white mb-1">$127M</div>
             <div className="text-sm text-emerald-200">Revenue Impact</div>
           </div>
@@ -65,7 +68,7 @@ const October2025RevOpsBanner = () => {
             {/* Blog Post */}
             <div className="bg-gradient-to-br from-emerald-800/50 to-teal-800/50 rounded-lg p-5 border border-emerald-400/40">
               <div className="text-emerald-300 font-bold mb-2 flex items-center">
-                <Sparkles className="w-4 h-4 mr-2" />
+                <TrendingUp className="w-4 h-4 mr-2" />
                 NEW COMPREHENSIVE GUIDE
               </div>
               <h3 className="text-xl font-bold text-white mb-2">
@@ -80,14 +83,14 @@ const October2025RevOpsBanner = () => {
                 className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-white font-semibold rounded-lg transition-all shadow-lg hover:shadow-xl"
               >
                 Read the Guide
-                <ArrowRight className="w-4 h-4 ml-2" />
+
               </Link>
             </div>
 
             {/* Case Study */}
             <div className="bg-gradient-to-br from-blue-800/50 to-indigo-800/50 rounded-lg p-5 border border-blue-400/40">
               <div className="text-blue-300 font-bold mb-2 flex items-center">
-                <Sparkles className="w-4 h-4 mr-2" />
+                <TrendingUp className="w-4 h-4 mr-2" />
                 NEW CASE STUDY
               </div>
               <h3 className="text-xl font-bold text-white mb-2">
@@ -102,7 +105,7 @@ const October2025RevOpsBanner = () => {
                 className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-500 to-indigo-500 hover:from-blue-600 hover:to-indigo-600 text-white font-semibold rounded-lg transition-all shadow-lg hover:shadow-xl"
               >
                 Read Case Study
-                <ArrowRight className="w-4 h-4 ml-2" />
+
               </Link>
             </div>
           </div>
@@ -198,14 +201,14 @@ const October2025RevOpsBanner = () => {
               className="inline-flex items-center justify-center px-8 py-4 bg-white text-emerald-600 font-bold rounded-lg hover:bg-emerald-50 transition-all shadow-xl hover:shadow-2xl"
             >
               Schedule Assessment
-              <ArrowRight className="w-5 h-5 ml-2" />
+
             </Link>
             <Link
               to="/blog"
               className="inline-flex items-center justify-center px-8 py-4 bg-emerald-800 text-white font-bold rounded-lg hover:bg-emerald-900 transition-all shadow-xl"
             >
               Explore All Content
-              <ArrowRight className="w-5 h-5 ml-2" />
+
             </Link>
           </div>
         </div>

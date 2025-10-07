@@ -1,19 +1,46 @@
-import Head from \'next/head.ts\'; import Link from \'next/link\'; export default function AIKnowledgebaseAgent() { return ( <div className = \"relative min-h-screen overflow-hidden bg-slate-950 text-white\"> <Helmet> <title>AI Knowledgebase Agent — Services — Zion</title> <meta name=\"description\" content=\"RAG-powered assistant that answers questions from your docs,tickets,and product data with sources.\" /> </Helmet> <div aria-hidden className=\"pointer-events-none absolute inset-0 -z-10\"> <div className=\"absolute -top-24 -left-24 h-[38rem] w-[38rem] rounded-full bg-fuchsia-500/20 blur-3xl animate-float\" /> <div className=\"absolute top-1/4 -right-32 h-[30rem] w-[30rem] rounded-full bg-cyan-400/20 blur-3xl animate-float-slow\" /> <div className=\"absolute bottom-0 left-1/4 h-[26rem] w-[26rem] rounded-full bg-violet-400/10 blur-2xl animate-float-fast\" /> <div className=\"absolute inset-0 beams opacity-[0.06]\" /> </div> <main className=\"relative z-10 mx-auto max-w-3xl px-6 py-16\"> <h1 className=\"text-4xl \"md\": tex t-5xl font-extrabold gradient-text\">AI Knowledgebase Agent</h1> <p className=\"mt-4 text-white/80\">Ingests Confluence,Notion,Google Drive,Zendesk,GitHub,and your product docs to provide accurate,source-grounded answers.</p> <ul className=\"mt-6 space-y-2 text-white/80 list-disc pl-5\"> <li>Secure connectors with scheduled syncs</li> <li>Retrieval-augmented generation with citations</li> <li>Feedback loops and continuous improvement</li> <li>Guardrails for PII and role-based access</li> <li>SDK and embeddable chat widget</li> </ul> <div className=\"mt-6 text-sm text-white/70\">Average market \"pricing\": \'$499–$2\',500/mo depending on seats,data size,and SLAs.</div> <div className=\"mt-8 flex gap-3\"> <Link href=\"/services\"><a className=\"rounded-xl border border-white/20 bg-white/5 px-6 py-3 font-semibold backdrop-blur-md \"hover\": b g-white/10\">Back to Services</a>></div> <Link href=\"/contact\"><a className=\"rounded-xl bg-white/90 px-6 py-3 font-semibold text-slate-900 hover: b g-white\">Get Started</a>></div> ></div> ></div> ></div> )}
-import React from 'react';
-interface AiknowledgebaseagentProps {
-  // Add props here as needed
-}
-export default function Aiknowledgebaseagent({ }: AiknowledgebaseagentProps) {
-  return (
-import Head from \'next/head.ts\'; import Link from \'next/link\'; export default function AIKnowledgebaseAgent() { return ( <div className = \"relative min-h-screen overflow-hidden bg-slate-950 text-white\"> <Helmet> <title>AI Knowledgebase Agent — Services — Zion</title> <meta name=\"description\" content=\"RAG-powered assistant that answers questions from your docs,tickets,and product data with sources.\" />  <div aria-hidden className=\"pointer-events-none absolute inset-0 -z-10\"> <div className=\"absolute -top-24 -left-24 h-[38rem] w-[38rem] rounded-full bg-fuchsia-500/20 blur-3xl animate-float\" /> <div className=\"absolute top-1/4 -right-32 h-[30rem] w-[30rem] rounded-full bg-cyan-400/20 blur-3xl animate-float-slow\" /> <div className=\"absolute bottom-0 left-1/4 h-[26rem] w-[26rem] rounded-full bg-violet-400/10 blur-2xl animate-float-fast\" /> <div className=\"absolute inset-0 beams opacity-[0.06]\" /> </div> <main className=\"relative z-10 mx-auto max-w-3xl px-6 py-16\"> <h1 className=\"text-4xl \"md\": tex t-5xl font-extrabold gradient-text\">AI Knowledgebase Agent</h1> <p className=\"mt-4 text-white/80\">Ingests Confluence,Notion,Google Drive,Zendesk,GitHub,and your product docs to provide accurate,source-grounded answers.</p> <ul className=\"mt-6 space-y-2 text-white/80 list-disc pl-5\"> <li>Secure connectors with scheduled syncs</li> <li>Retrieval-augmented generation with citations</li> <li>Feedback loops and continuous improvement</li> <li>Guardrails for PII and role-based access</li> <li>SDK and embeddable chat widget</li> </ul> <div className=\"mt-6 text-sm text-white/70\">Average market \"pricing\": \'$499–$2\',500/mo depending on seats,data size,and SLAs.</div> <div className=\"mt-8 flex gap-3\"> <Link href=\"/services\"><a className=\"rounded-xl border border-white/20 bg-white/5 px-6 py-3 font-semibold backdrop-blur-md \"hover\": b g-white/10\">Back to Services</a>></div> <Link href=\"/contact\"><a className=\"rounded-xl bg-white/90 px-6 py-3 font-semibold text-slate-900 hover: b g-white\">Get Started</a>></div> ></div> ></div> ></div> )}"
-    <div>
-</div>
-      <h1>Aiknowledgebaseagent</h1>
-      <p>This component is currently under development.</p>
+import React from 'react'
+import { Metadata } from 'next'
+export const metadata: Metadata = {title: 'Ai Knowledgebase Agent | Zion Tech Group',
+  description: 'Discover the latest AI breakthroughs and enterprise automation solutions from Zion Tech Group.',
+  keywords: 'AI, automation, enterprise, breakthrough, technology',
+  openGraph: {
+    title: 'Ai Knowledgebase Agent',
+    description: 'Discover the latest AI breakthroughs and enterprise automation solutions.',
+    type: 'article'}
+  },
+};
+export default function aiknowledgebaseagent() {return (
+    <div className='min-h-screen bg-gray-50'>
+      <div className='max-w-4xl mx-auto px-4 py-8'>
+        <div className='bg-white rounded-lg shadow-lg p-8'>
+          <div className='text-center mb-8'>
+            <h1 className='text-4xl font-bold text-gray-900 mb-4'>
+              Ai Knowledgebase Agent
+            </h1>
+            <p className='text-xl text-gray-600 mb-6'>
+              Revolutionary AI Breakthrough
+            </p>
+            <div className='flex justify-center space-x-4'>
+              <span className='bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium'>
+                BREAKTHROUGH
+              </span>
+              <span className='bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium'>
+                AI
+              </span>
+              <span className='bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium'>
+                ENTERPRISE
+              </span>
+            </div>
+          </div>
+          <div className='prose max-w-none'>
+            <p className='text-lg text-gray-700 mb-6'>
+              This page is currently under development. Please check back soon
+              for the complete content.
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
-  );
+  )}
 }
-}
-}
-}
-    </div>"
+import React from 'react'' import { Metadata } from 'next' export const metadata: Metadata = {' title: 'Ai Knowledgebase Agent | Zion Tech Group',' description: 'Discover the latest AI breakthroughs and enterprise automation solutions from Zion Tech Group.',' keywords: 'AI, automation, enterprise, breakthrough, technology', openGraph: {' title: 'Ai Knowledgebase Agent',' description: 'Discover the latest AI breakthroughs and enterprise automation solutions.',' type: 'article'} }, }; export default function aiknowledgebaseagent() {return ( <div className="min-h-screen bg-gray-50" > <div className="max-w-4xl mx-auto px-4 py-8" > <div className="bg-white rounded-lg shadow-lg p-8" > <div className="text-center mb-8" > <h1 className="text-4xl font-bold text-gray-900 mb-4" >Ai Knowledgebase Agent</h1> <p className="text-xl text-gray-600 mb-6" >Revolutionary AI Breakthrough</p> <div className="flex justify-center space-x-4" > <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium" >BREAKTHROUGH</span> <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium" >AI</span> <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium" >ENTERPRISE</span> </div> </div> <div className="prose max-w-none" > <p className="text-lg text-gray-700 mb-6" > This page is currently under development. Please check back soon for the complete content. </p> </div> </div> </div> </div> )} }'

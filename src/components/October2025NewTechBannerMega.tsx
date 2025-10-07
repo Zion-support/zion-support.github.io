@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Sparkles, Shield, Brain, TrendingUp, ArrowRight } from "lucide-react";
 
 const October2025NewTechBannerMega = () => {
   return (
@@ -15,15 +14,14 @@ const October2025NewTechBannerMega = () => {
         {/* Header */}
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-2 bg-yellow-400/20 text-yellow-300 px-4 py-2 rounded-full text-sm font-semibold mb-4 animate-pulse">
-            <Sparkles className="w-4 h-4" />
+
             🔥 JUST PUBLISHED: OCTOBER 2025 AI BREAKTHROUGH SERIES 🔥
-            <Sparkles className="w-4 h-4" />
+
           </div>
           
           <h2 className="text-5xl md:text-6xl font-bold text-white mb-4 leading-tight">
             Revolutionary AI Solutions
-            <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-pink-400 to-purple-400">
+            <br /> <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-pink-400 to-purple-400">
               Transform Your Enterprise Today
             </span>
           </h2>
@@ -40,7 +38,7 @@ const October2025NewTechBannerMega = () => {
           <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-purple-400 transition-all duration-300 hover:scale-105 hover:shadow-2xl">
             <div className="flex items-center gap-3 mb-4">
               <div className="p-3 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg">
-                <Brain className="w-6 h-6 text-white" />
+
               </div>
               <div className="text-sm font-semibold text-purple-300 uppercase tracking-wide">
                 NEW GUIDE #1
@@ -57,15 +55,15 @@ const October2025NewTechBannerMega = () => {
             
             <div className="space-y-2 mb-6">
               <div className="flex items-start gap-2 text-sm text-gray-200">
-                <TrendingUp className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
+
                 <span><strong>94% automation</strong> of complex workflows</span>
               </div>
               <div className="flex items-start gap-2 text-sm text-gray-200">
-                <TrendingUp className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
+
                 <span><strong>$47M savings</strong> in document processing</span>
               </div>
               <div className="flex items-start gap-2 text-sm text-gray-200">
-                <TrendingUp className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
+
                 <span><strong>3.7x faster</strong> customer service</span>
               </div>
             </div>
@@ -75,7 +73,7 @@ const October2025NewTechBannerMega = () => {
               className="inline-flex items-center gap-2 w-full justify-center bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 group"
             >
               Read Full Guide
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+
             </Link>
           </div>
 
@@ -83,7 +81,7 @@ const October2025NewTechBannerMega = () => {
           <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-blue-400 transition-all duration-300 hover:scale-105 hover:shadow-2xl">
             <div className="flex items-center gap-3 mb-4">
               <div className="p-3 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg">
-                <Shield className="w-6 h-6 text-white" />
+
               </div>
               <div className="text-sm font-semibold text-blue-300 uppercase tracking-wide">
                 NEW GUIDE #2
@@ -100,15 +98,15 @@ const October2025NewTechBannerMega = () => {
             
             <div className="space-y-2 mb-6">
               <div className="flex items-start gap-2 text-sm text-gray-200">
-                <TrendingUp className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
+
                 <span><strong>Zero breaches</strong> in 24 months</span>
               </div>
               <div className="flex items-start gap-2 text-sm text-gray-200">
-                <TrendingUp className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
+
                 <span><strong>99.97% availability</strong> maintained</span>
               </div>
               <div className="flex items-start gap-2 text-sm text-gray-200">
-                <TrendingUp className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
+
                 <span><strong>725% ROI</strong> over 3 years</span>
               </div>
             </div>
@@ -118,7 +116,7 @@ const October2025NewTechBannerMega = () => {
               className="inline-flex items-center gap-2 w-full justify-center bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 group"
             >
               Read Full Guide
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+
             </Link>
           </div>
 
@@ -126,7 +124,7 @@ const October2025NewTechBannerMega = () => {
           <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-green-400 transition-all duration-300 hover:scale-105 hover:shadow-2xl">
             <div className="flex items-center gap-3 mb-4">
               <div className="p-3 bg-gradient-to-br from-green-500 to-emerald-500 rounded-lg">
-                <Sparkles className="w-6 h-6 text-white" />
+
               </div>
               <div className="text-sm font-semibold text-green-300 uppercase tracking-wide">
                 NEW GUIDE #3
@@ -143,15 +141,15 @@ const October2025NewTechBannerMega = () => {
             
             <div className="space-y-2 mb-6">
               <div className="flex items-start gap-2 text-sm text-gray-200">
-                <TrendingUp className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
+
                 <span><strong>94% accuracy</strong> vs 67% pure LLM</span>
               </div>
               <div className="flex items-start gap-2 text-sm text-gray-200">
-                <TrendingUp className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
+
                 <span><strong>$470M annual value</strong> Fortune 500</span>
               </div>
               <div className="flex items-start gap-2 text-sm text-gray-200">
-                <TrendingUp className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
+
                 <span><strong>2,840% ROI</strong> in 3 years</span>
               </div>
             </div>
@@ -161,7 +159,7 @@ const October2025NewTechBannerMega = () => {
               className="inline-flex items-center gap-2 w-full justify-center bg-gradient-to-r from-green-500 to-emerald-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-green-600 hover:to-emerald-600 transition-all duration-300 group"
             >
               Read Full Guide
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+
             </Link>
           </div>
         </div>
@@ -173,9 +171,9 @@ const October2025NewTechBannerMega = () => {
               to="/contact"
               className="inline-flex items-center gap-2 bg-gradient-to-r from-yellow-400 to-orange-500 text-gray-900 px-8 py-4 rounded-xl font-bold text-lg hover:from-yellow-500 hover:to-orange-600 transition-all duration-300 shadow-2xl hover:shadow-yellow-500/50 hover:scale-105"
             >
-              <Sparkles className="w-6 h-6" />
+
               Get Free Expert Consultation
-              <ArrowRight className="w-6 h-6" />
+
             </Link>
             
             <Link
@@ -183,7 +181,7 @@ const October2025NewTechBannerMega = () => {
               className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-lg text-white px-8 py-4 rounded-xl font-bold text-lg border border-white/30 hover:bg-white/20 transition-all duration-300"
             >
               Explore All AI Insights
-              <ArrowRight className="w-6 h-6" />
+
             </Link>
           </div>
           

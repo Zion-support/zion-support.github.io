@@ -1,4 +1,3 @@
-import React from 'react';
 
 export const metadata = {
   title: 'Sovereign Vector Knowledge Graph — October 2025',

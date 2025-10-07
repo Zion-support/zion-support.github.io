@@ -1,30 +1,29 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Sparkles, Code2, Brain, Zap } from "lucide-react";
 import { motion } from "framer-motion";
 
 const October2025TechBannerNew = () => {
   const newArticles = [
-    {
+    {",
       title: "Next-Gen Autonomous Systems",
-      description: "The 2025 Enterprise Revolution",
+      description: "The 2025 Enterprise Revolution",",
       slug: "ai-2025-oct-17-next-gen-autonomous-systems",
-      icon: Brain,
+      icon: Brain,",
       color: "from-purple-500 to-pink-500",
       highlight: "NEW"
     },
-    {
+    {",
       title: "Generative AI Code Generation",
-      description: "Transforming Software Development",
+      description: "Transforming Software Development",",
       slug: "ai-2025-oct-17-generative-ai-code-generation",
-      icon: Code2,
+      icon: Code2,",
       color: "from-blue-500 to-cyan-500",
       highlight: "HOT"
     },
-    {
+    {",
       title: "Real-Time Personalization Engines",
-      description: "Revolutionizing Customer Experience",
+      description: "Revolutionizing Customer Experience",",
       slug: "ai-2025-oct-17-real-time-personalization-engines",
-      icon: Zap,
+      icon: Zap,",
       color: "from-orange-500 to-red-500",
       highlight: "TRENDING"
     }
@@ -51,7 +50,7 @@ const October2025TechBannerNew = () => {
             animate={{ rotate: 360 }}
             transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
           >
-            <Sparkles className="w-8 h-8 text-yellow-400" />
+
           </motion.div>
           <h2 className="text-3xl md:text-4xl font-bold text-white text-center">
             Fresh AI Insights for October 2025
@@ -60,7 +59,7 @@ const October2025TechBannerNew = () => {
             animate={{ rotate: -360 }}
             transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
           >
-            <Sparkles className="w-8 h-8 text-yellow-400" />
+
           </motion.div>
         </div>
 
@@ -89,8 +88,7 @@ const October2025TechBannerNew = () => {
 
                   {/* Icon */}
                   <div className={`w-14 h-14 rounded-lg bg-gradient-to-br ${article.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                    <article.icon className="w-7 h-7 text-white" />
-                  </div>
+                    <article.icon className="w-7 h-7 text-white"</div>
 
                   {/* Content */}
                   <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-300 transition-colors">
@@ -103,7 +101,7 @@ const October2025TechBannerNew = () => {
                   {/* Read More Link */}
                   <div className="flex items-center text-purple-300 group-hover:text-purple-100 transition-colors">
                     <span className="text-sm font-semibold">Read Article</span>
-                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-2 transition-transform" />
+
                   </div>
                 </div>
               </Link>
@@ -119,7 +117,7 @@ const October2025TechBannerNew = () => {
               className="group px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-bold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 flex items-center gap-2"
             >
               <span>Explore All Articles</span>
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+
             </Link>
             <Link
               to="/contact"
@@ -151,10 +149,10 @@ const October2025TechBannerNew = () => {
             }}
             transition={{
               duration: 3 + Math.random() * 2,
-              repeat: Infinity,
-              delay: Math.random() * 2,
+              repeat: Infinity,",
+      delay: Math.random() * 2,
             }}
-          />
+
         ))}
       </div>
     </motion.div>

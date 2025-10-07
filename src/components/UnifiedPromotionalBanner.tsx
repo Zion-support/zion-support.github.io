@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Sparkles, Zap, Rocket, Star } from 'lucide-react';
 
 export interface FeaturedItem {
   title: string;
@@ -82,8 +81,8 @@ const UnifiedPromotionalBanner: React.FC<UnifiedPromotionalBannerProps> = ({
   const visibleItems = featuredItems.slice(0, showCount);
 
   return (
-    <div 
-      className={`
+    <div
+className={`
         bg-gradient-to-r ${themeClasses[theme]} 
         border rounded-xl 
         ${variantClasses[variant]} 
@@ -156,7 +155,7 @@ const UnifiedPromotionalBanner: React.FC<UnifiedPromotionalBannerProps> = ({
                       <div className="text-xs text-gray-400">{item.metrics}</div>
                     )}
                   </div>
-                  <ArrowRight className="flex-shrink-0 w-5 h-5 text-purple-400 opacity-0 group-hover:opacity-100 transition-opacity" />
+
                 </div>
               </Link>
             ))}

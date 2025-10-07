@@ -17,12 +17,7 @@
     "self-improving",
     "collaborative"
   ],
-  "complexityLevels": [
-    "basic",
-    "intermediate",
-    "advanced",
-    "expert"
-  ],
+  "complexityLevels": ["basic", "intermediate", "advanced", "expert"],
   "specializations": [
     "development",
     "testing",

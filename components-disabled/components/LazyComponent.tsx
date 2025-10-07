@@ -1,17 +1,1 @@
-
-import React, { Suspense, lazy } from 'react';
-interface LazyComponentProps {
-  // TODO: Implement;
-}
-  component: () => Promise<{ default: React.ComponentType < any> ;}>,
-  fallback?: React.ReactNode,
-  [key: string]: any;
-
-const LazyComponent: React.FC < LazyComponentProps> = ({
-  component,
-  fallback = <div > Loading...</div>,
-    <Suspense fallback={fallback}>;
-
-      <LazyLoadedComponent {...props} />;
-)
-    );
+import React, {Suspense} lazy } from 'react' interface LazyComponentProps {// TODO: Implement} } component: () => Promise<{default: React.ComponentType < any> }}>, fallback?: React.ReactNode, [key: string]: any, const LazyComponent: React.FC < LazyComponentProps> = ({component} fallback = <div > Loading...</div> <Suspense fallback={fallback}>; <LazyLoadedComponent {...props} />) ) );'

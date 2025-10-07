@@ -11,8 +11,7 @@ const October2025QuantumEdgeFusionBanner: React.FC = () => {
     >
       {/* Animated Background */}
       <div className="absolute inset-0 opacity-20">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(6,182,212,0.3),rgba(255,255,255,0))]" />
-      </div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(6,182,212,0.3),rgba(255,255,255,0))]"</div>
 
       <div className="relative z-10">
         {/* Badge */}
@@ -94,8 +93,8 @@ const October2025QuantumEdgeFusionBanner: React.FC = () => {
                 }}
                 transition={{
                   duration: 6,
-                  repeat: Infinity,
-                  ease: "easeInOut"
+                  repeat: Infinity,",
+      ease: "easeInOut"
                 }}
                 className="bg-gradient-to-br from-cyan-500/20 to-blue-500/20 backdrop-blur-lg rounded-2xl p-8 border border-cyan-400/30"
               >

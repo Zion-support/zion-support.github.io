@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, DollarSign, TrendingDown, Zap } from 'lucide-react';
 
 const AICostOptimizationBanner: React.FC = () => {
   const costOptimizationContent = [
@@ -67,11 +66,9 @@ const AICostOptimizationBanner: React.FC = () => {
         {/* Header Section */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 mb-8 animate-fade-in">
-            <DollarSign className="w-6 h-6 text-green-400 animate-pulse" />
             <span className="text-green-400 font-bold text-lg tracking-wider uppercase">
               💰 AI COST OPTIMIZATION BREAKTHROUGH • January 30, 2026
             </span>
-            <TrendingDown className="w-6 h-6 text-emerald-400 animate-pulse" />
           </div>
 
           <h2 className="text-6xl md:text-7xl font-extrabold mb-6 bg-gradient-to-r from-green-400 via-emerald-400 to-teal-400 bg-clip-text text-transparent animate-fade-in">
@@ -107,7 +104,9 @@ const AICostOptimizationBanner: React.FC = () => {
         {/* Featured Content Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16 max-w-[1600px] mx-auto">
           {costOptimizationContent.map((content, index) => (
-            <div 
+
+            <div
+
               key={content.id}
               className="group relative bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 hover:border-green-500/50 transition-all duration-500 overflow-hidden hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-green-500/20"
               style={{ animationDelay: `${index * 150}ms` }}
@@ -124,8 +123,10 @@ const AICostOptimizationBanner: React.FC = () => {
                   <div className="flex flex-col gap-2">
                     {content.trending && (
                       <div className="flex items-center gap-1 px-3 py-1.5 rounded-full bg-gradient-to-r from-green-500 to-emerald-500 text-white text-xs font-bold shadow-lg">
-                        <TrendingDown className="w-3 h-3" />
-                        <span>SAVE</span>
+
+                        <span>🔥</span>
+                        <span>TRENDING</span>
+
                       </div>
                     )}
                     <span className="px-3 py-1.5 rounded-full bg-green-500/20 text-green-400 text-xs font-semibold border border-green-500/30">
@@ -168,7 +169,7 @@ const AICostOptimizationBanner: React.FC = () => {
                 {/* Meta Info */}
                 <div className="flex items-center justify-between text-sm text-gray-500 mb-6 pb-6 border-b border-white/10">
                   <span className="flex items-center gap-2">
-                    <Zap className="w-4 h-4 text-green-400" />
+                    <span>⏱️</span>
                     {content.readTime}
                   </span>
                   <span>{new Date(content.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}</span>
@@ -180,7 +181,7 @@ const AICostOptimizationBanner: React.FC = () => {
                   className="group/btn flex items-center justify-center gap-2 w-full bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1"
                 >
                   <span>Read Optimization Guide</span>
-                  <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-300" />
+                  <span>→</span>
                 </Link>
               </div>
             </div>
@@ -203,15 +204,15 @@ const AICostOptimizationBanner: React.FC = () => {
                   href="/contact"
                   className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 flex items-center justify-center gap-2"
                 >
-                  <DollarSign className="w-5 h-5" />
+
                   <span>Get Free Cost Audit</span>
                 </a>
                 <a
                   href="tel:+13024640950"
                   className="border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-2"
                 >
+                  <span>📞</span>
                   <span>Call +1 302 464 0950</span>
-                  <ArrowRight className="w-5 h-5" />
                 </a>
               </div>
             </div>

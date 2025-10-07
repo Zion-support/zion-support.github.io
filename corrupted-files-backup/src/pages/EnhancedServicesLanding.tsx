@@ -1,2 +1,46 @@
-import: React { useState } from 'react' import { motion, AnimatePresence    } from 'framer-motion' import { Link    } from 'react-router-dom' import {  Brain, Cloud, Shield, Rocket, Zap, Users, Globe, Cpu, Lock, Heart, Star, ArrowRight, CheckCircle, TrendingUp, Code, Database, Network, Smartphone, BarChart3, MessageSquare, FileText, ShoppingCart, Headphones, Mail, Search, HelpCircle, ShieldCheck, Globe2, Leaf, Sparkles, Target, DollarSign, Clock, Award, Phone, Mail as MailIcon, MapPin, Infinity, Building2, Car, Factory, GraduationCap, Gamepad2, Calendar, Briefcase, Scale, Lightbulb, Leaf as LeafIcon, Home, Hotel, Truck, Crop, Hammer, Palette, Music, Video, Camera, BookOpen, Microscope, Flask, Atom, Satellite, Rocket as RocketIcon, Zap as ZapIcon, Cpu as CpuIcon, Database as DatabaseIcon, Network as NetworkIcon, Smartphone as SmartphoneIcon, BarChart3 as BarChart3Icon, MessageSquare as MessageSquareIcon, FileText as FileTextIcon, ShoppingCart as ShoppingCartIcon, Headphones as HeadphonesIcon, Mail as MailIcon2, Search as SearchIcon, HelpCircle as HelpCircleIcon, ShieldCheck as ShieldCheckIcon, Globe2 as Globe2Icon, Leaf as LeafIcon2, Sparkles as SparklesIcon, Target as TargetIcon, DollarSign as DollarSignIcon, Clock as ClockIcon, Award as AwardIcon, Phone as PhoneIcon, MapPin as MapPinIcon, Infinity as InfinityIcon    } from 'lucide-react' import { SEO } from '../components/SEO' import { COMPREHENSIVE_SERVICES_2030 } from '../data/comprehensiveServices2030'  export default function EnhancedServicesLanding() { const [activeCategory, setActiveCategory] = useState('all') const [searchTerm, setSearchTerm] = useState('') const [sortBy, setSortBy] = useState('rating') ;
-;;';
+import React from 'react'
+import { Metadata } from 'next'
+export const metadata: Metadata = {title: 'EnhancedServicesLanding | Zion Tech Group',
+  description: 'Discover the latest AI breakthroughs and enterprise automation solutions from Zion Tech Group.',
+  keywords: 'AI, automation, enterprise, breakthrough, technology',
+  openGraph: {
+    title: 'EnhancedServicesLanding',
+    description: 'Discover the latest AI breakthroughs and enterprise automation solutions.',
+    type: 'article'}
+  },
+};
+export default function EnhancedServicesLanding() {return (
+    <div className='min-h-screen bg-gray-50'>
+      <div className='max-w-4xl mx-auto px-4 py-8'>
+        <div className='bg-white rounded-lg shadow-lg p-8'>
+          <div className='text-center mb-8'>
+            <h1 className='text-4xl font-bold text-gray-900 mb-4'>
+              EnhancedServicesLanding
+            </h1>
+            <p className='text-xl text-gray-600 mb-6'>
+              Revolutionary AI Breakthrough
+            </p>
+            <div className='flex justify-center space-x-4'>
+              <span className='bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium'>
+                BREAKTHROUGH
+              </span>
+              <span className='bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium'>
+                AI
+              </span>
+              <span className='bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium'>
+                ENTERPRISE
+              </span>
+            </div>
+          </div>
+          <div className='prose max-w-none'>
+            <p className='text-lg text-gray-700 mb-6'>
+              This page is currently under development. Please check back soon
+              for the complete content.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  )}
+}
+import React from 'react'' import { Metadata } from 'next' export const metadata: Metadata = {' title: 'EnhancedServicesLanding | Zion Tech Group',' description: 'Discover the latest AI breakthroughs and enterprise automation solutions from Zion Tech Group.',' keywords: 'AI, automation, enterprise, breakthrough, technology', openGraph: {' title: 'EnhancedServicesLanding',' description: 'Discover the latest AI breakthroughs and enterprise automation solutions.',' type: 'article'} }, }; export default function EnhancedServicesLanding() {return ( <div className="min-h-screen bg-gray-50" > <div className="max-w-4xl mx-auto px-4 py-8" > <div className="bg-white rounded-lg shadow-lg p-8" > <div className="text-center mb-8" > <h1 className="text-4xl font-bold text-gray-900 mb-4" >EnhancedServicesLanding</h1> <p className="text-xl text-gray-600 mb-6" >Revolutionary AI Breakthrough</p> <div className="flex justify-center space-x-4" > <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium" >BREAKTHROUGH</span> <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium" >AI</span> <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium" >ENTERPRISE</span> </div> </div> <div className="prose max-w-none" > <p className="text-lg text-gray-700 mb-6" > This page is currently under development. Please check back soon for the complete content. </p> </div> </div> </div> </div> )} }'

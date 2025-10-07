@@ -1,97 +1,114 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Sparkles, TrendingUp, Zap } from 'lucide-react';
 
 const LatestContentBanner2025: React.FC = () => {
   const latestArticles = [
     {
       title: "AI 2026 Mega Breakthrough Revolution",
-      description: "Meta-Cognitive AI, Quantum-Neural Networks, Autonomous Operations - $50M+ Annual Savings",
+      description: "Meta-Cognitive AI, Quantum-Neural Networks, Autonomous Operations - $50M+ Annual Savings",",
       slug: "ai-2026-mega-breakthrough-revolution",
-      category: "Revolutionary AI",
+      category: "Revolutionary AI",",
       emoji: "🚀",
-      highlight: "BREAKTHROUGH",
+      highlight: "BREAKTHROUGH",",
       impact: "$50M+ Savings"
     },
-    {
+    {",
+      title: "Zero‑PII Telemetry v2",
+      description: "Decision‑grade signals without centralized IDs — privacy‑first analytics",",
+      slug: "edge-2025-oct-01-zero-pii-telemetry-v2",
+      category: "Observability",",
+      emoji: "🛡️",
+      highlight: "NEW",",
+      impact: "Zero PII"
+    },
+    {",
+      title: "Live Evals & Scorecards",
+      description: "Ship GenAI fast without regressions — KPI‑wired canaries",",
+      slug: "genai-2025-oct-01-eval-scorecards-live-canaries",
+      category: "GenAI",",
+      emoji: "📈",
+      highlight: "NEW",",
+      impact: "No regressions"
+    },
+    {",
       title: "AI 2026: Future Predictions & Mega Trends",
-      description: "Comprehensive analysis of revolutionary AI trends and transformative predictions through 2030",
+      description: "Comprehensive analysis of revolutionary AI trends and transformative predictions through 2030",",
       slug: "ai-2026-future-predictions-mega-trends",
-      category: "Future Predictions",
+      category: "Future Predictions",",
       emoji: "🔮",
-      highlight: "TRENDS",
+      highlight: "TRENDS",",
       impact: "2030 Vision"
     },
-    {
+    {",
       title: "Enterprise AI Transformation 2026: Complete Guide",
-      description: "12-phase framework proven to deliver $50M+ annual savings and 300% ROI for Fortune 500 companies",
+      description: "12-phase framework proven to deliver $50M+ annual savings and 300% ROI for Fortune 500 companies",",
       slug: "enterprise-ai-transformation-2026-complete-guide",
-      category: "Implementation Guide",
+      category: "Implementation Guide",",
       emoji: "📚",
-      highlight: "COMPLETE",
+      highlight: "COMPLETE",",
       impact: "300% ROI"
     },
-    {
+    {",
       title: "Next-Generation Enterprise Automation: The 2026 AI Revolution",
-      description: "98% Automation Rate, 1000x Processing Speed, $2.5B Cost Savings",
+      description: "98% Automation Rate, 1000x Processing Speed, $2.5B Cost Savings",",
       slug: "ai-2026-next-generation-enterprise-automation",
-      category: "AI Innovation",
+      category: "AI Innovation",",
       emoji: "🚀",
-      highlight: "BREAKTHROUGH",
+      highlight: "BREAKTHROUGH",",
       impact: "98% Automation"
     },
-    {
+    {",
       title: "Quantum AI Breakthrough: Revolutionary Computing Paradigm",
-      description: "10^18 Operations/sec, 99.9% Accuracy, $10B Market Value",
+      description: "10^18 Operations/sec, 99.9% Accuracy, $10B Market Value",",
       slug: "quantum-ai-breakthrough-2026-revolutionary-computing",
-      category: "Quantum Computing",
+      category: "Quantum Computing",",
       emoji: "⚛️",
-      highlight: "REVOLUTIONARY",
+      highlight: "REVOLUTIONARY",",
       impact: "10^18 Ops/sec"
     },
-    {
+    {",
       title: "Fortune 500 Quantum AI Transformation: $10B Revenue Impact",
-      description: "500% Productivity Increase, 95% Process Automation, Market Leadership",
+      description: "500% Productivity Increase, 95% Process Automation, Market Leadership",",
       slug: "fortune-500-quantum-ai-transformation-2026",
-      category: "Success Story",
+      category: "Success Story",",
       emoji: "🏆",
-      highlight: "MEGA SUCCESS",
+      highlight: "MEGA SUCCESS",",
       impact: "$10B Revenue"
     },
-    {
+    {",
       title: "AI 2025: Autonomous Operations Revolution",
-      description: "95% Automation, $2M+ Annual Savings",
+      description: "95% Automation, $2M+ Annual Savings",",
       slug: "ai-autonomous-operations-2025",
-      category: "AI Innovation",
+      category: "AI Innovation",",
       emoji: "🚀",
-      highlight: "NEW TODAY",
+      highlight: "NEW TODAY",",
       impact: "95% Automation"
     },
-    {
+    {",
       title: "Fortune 500 AI Transformation",
-      description: "$50M Annual Savings, 300% ROI",
+      description: "$50M Annual Savings, 300% ROI",",
       slug: "fortune-500-ai-transformation",
-      category: "Success Story",
+      category: "Success Story",",
       emoji: "💰",
-      highlight: "NEW TODAY",
+      highlight: "NEW TODAY",",
       impact: "$50M Savings"
     },
-    {
+    {",
       title: "AI Autonomous Operations Service",
-      description: "Enterprise AI Solutions, 95% Automation",
+      description: "Enterprise AI Solutions, 95% Automation",",
       slug: "ai-autonomous-operations",
-      category: "New Service",
+      category: "New Service",",
       emoji: "⚡",
-      highlight: "NEW TODAY",
+      highlight: "NEW TODAY",",
       impact: "95% Automation"
     },
-    {
+    {",
       title: "Autonomous AI Agents in Enterprise",
-      description: "70% Cost Reduction, 10x Productivity",
+      description: "70% Cost Reduction, 10x Productivity",",
       slug: "autonomous-ai-agents-enterprise-2025",
-      category: "AI Strategy",
+      category: "AI Strategy",",
       emoji: "🤖",
-      highlight: "NEW TODAY",
+      highlight: "NEW TODAY",",
       impact: "70% Cost Savings"
     },
     {
@@ -124,7 +141,7 @@ const LatestContentBanner2025: React.FC = () => {
       category: 'MLOps & Automation',
       date: '2025-01-20',
       readTime: '45 min',
-      trending: true,
+      trending: true,",
       icon: '⚙️'
     }
   ];
@@ -141,11 +158,11 @@ const LatestContentBanner2025: React.FC = () => {
         {/* Header Section */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-gradient-to-r from-cyan-500/20 to-fuchsia-500/20 border border-cyan-500/30 mb-8 animate-fade-in">
-            <Sparkles className="w-5 h-5 text-cyan-400 animate-pulse" />
+
             <span className="text-cyan-400 font-bold text-sm tracking-wider uppercase">
               🔥 3 REVOLUTIONARY NEW ARTICLES PUBLISHED • January 30, 2026
             </span>
-            <Sparkles className="w-5 h-5 text-fuchsia-400 animate-pulse" />
+
           </div>
 
           <h2 className="text-5xl md:text-6xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 via-blue-400 to-fuchsia-400 bg-clip-text text-transparent animate-fade-in">
@@ -188,8 +205,7 @@ const LatestContentBanner2025: React.FC = () => {
                   <div className="flex flex-col gap-2">
                     {article.trending && (
                       <div className="flex items-center gap-1 px-3 py-1.5 rounded-full bg-gradient-to-r from-orange-500 to-red-500 text-white text-xs font-bold shadow-lg">
-                        <TrendingUp className="w-3 h-3" />
-                        <span>TRENDING</span>
+
                       </div>
                     )}
                     <span className="px-3 py-1.5 rounded-full bg-cyan-500/20 text-cyan-400 text-xs font-semibold border border-cyan-500/30">
@@ -218,7 +234,7 @@ const LatestContentBanner2025: React.FC = () => {
                 {/* Meta Info */}
                 <div className="flex items-center justify-between text-sm text-gray-500 mb-6 pb-6 border-b border-white/10">
                   <span className="flex items-center gap-2">
-                    <Zap className="w-4 h-4 text-cyan-400" />
+
                     {article.readTime}
                   </span>
                   <span>{article.date ? new Date(article.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }) : 'Recent'}</span>
@@ -230,7 +246,7 @@ const LatestContentBanner2025: React.FC = () => {
                   className="group/btn flex items-center justify-center gap-2 w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 transform hover:-translate-y-1"
                 >
                   <span>Read Full Article</span>
-                  <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-300" />
+
                 </a>
               </div>
             </motion.div>
@@ -253,7 +269,7 @@ const LatestContentBanner2025: React.FC = () => {
                   href="/blog"
                   className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 flex items-center justify-center gap-2"
                 >
-                  <Sparkles className="w-5 h-5" />
+
                   <span>Explore All Articles</span>
                 </a>
                 <a
@@ -261,7 +277,7 @@ const LatestContentBanner2025: React.FC = () => {
                   className="border-2 border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-2"
                 >
                   <span>Get Started with Zion AI</span>
-                  <ArrowRight className="w-5 h-5" />
+
                 </a>
               </div>
             </div>
@@ -271,7 +287,7 @@ const LatestContentBanner2025: React.FC = () => {
         {/* Stats */}
         <div className="mt-8 pt-6 border-t border-white/20 flex flex-wrap gap-8">
           <div className="text-center">
-            <div className="text-3xl font-bold text-yellow-300">3</div>
+            
             <div className="text-sm text-blue-200">Revolutionary Breakthroughs</div>
           </div>
           <div className="text-center">
@@ -279,7 +295,7 @@ const LatestContentBanner2025: React.FC = () => {
             <div className="text-sm text-blue-200">Decision Accuracy Rate</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl font-bold text-purple-300">1000x</div>
+            
             <div className="text-sm text-blue-200">Processing Speed Boost</div>
           </div>
           <div className="text-center">

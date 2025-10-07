@@ -1,5 +1,4 @@
 import React from 'react';
-import { ArrowRight, Sparkles, TrendingUp, Zap, Brain, Clock, Users, Award, Star, Eye } from 'lucide-react';
 
 const NewBlogContentShowcase2026: React.FC = () => {
   const blogPosts = [
@@ -16,7 +15,7 @@ const NewBlogContentShowcase2026: React.FC = () => {
       rating: 4.9,
       trending: true,
       featured: true,
-      icon: <Brain className="w-6 h-6" />,
+      icon: '🚀',
       gradient: 'from-blue-500 to-purple-500',
       badge: 'FEATURED',
       tags: ['AI', 'Revolution', 'Enterprise', 'Guide']
@@ -34,7 +33,7 @@ const NewBlogContentShowcase2026: React.FC = () => {
       rating: 4.8,
       trending: true,
       featured: false,
-      icon: <Zap className="w-6 h-6" />,
+      icon: '🚀',
       gradient: 'from-cyan-500 to-blue-500',
       badge: 'TRENDING',
       tags: ['Quantum', 'Computing', 'AI', 'Breakthrough']
@@ -52,7 +51,7 @@ const NewBlogContentShowcase2026: React.FC = () => {
       rating: 4.9,
       trending: true,
       featured: true,
-      icon: <Award className="w-6 h-6" />,
+      icon: '🚀',
       gradient: 'from-green-500 to-emerald-500',
       badge: 'POPULAR',
       tags: ['Enterprise', 'Implementation', 'AI', 'Success']
@@ -70,7 +69,7 @@ const NewBlogContentShowcase2026: React.FC = () => {
       rating: 4.7,
       trending: false,
       featured: false,
-      icon: <Sparkles className="w-6 h-6" />,
+      icon: '🚀',
       gradient: 'from-purple-500 to-pink-500',
       badge: 'INNOVATION',
       tags: ['Self-Evolving', 'AI', 'Innovation', 'Future']
@@ -88,7 +87,7 @@ const NewBlogContentShowcase2026: React.FC = () => {
       rating: 4.8,
       trending: true,
       featured: false,
-      icon: <TrendingUp className="w-6 h-6" />,
+      icon: '🚀',
       gradient: 'from-orange-500 to-red-500',
       badge: 'ANALYTICS',
       tags: ['Predictive', 'Analytics', 'Forecasting', 'AI']
@@ -106,7 +105,7 @@ const NewBlogContentShowcase2026: React.FC = () => {
       rating: 4.9,
       trending: false,
       featured: true,
-      icon: <Award className="w-6 h-6" />,
+      icon: '🚀',
       gradient: 'from-indigo-500 to-purple-500',
       badge: 'ETHICS',
       tags: ['AI Ethics', 'Governance', 'Responsible AI', 'Compliance']
@@ -114,10 +113,10 @@ const NewBlogContentShowcase2026: React.FC = () => {
   ];
 
   const blogStats = [
-    { value: '500+', label: 'Published Articles', icon: <Award className="w-6 h-6" /> },
-    { value: '2M+', label: 'Monthly Readers', icon: <Users className="w-6 h-6" /> },
-    { value: '4.8', label: 'Average Rating', icon: <Star className="w-6 h-6" /> },
-    { value: '150+', label: 'Expert Authors', icon: <Brain className="w-6 h-6" /> }
+    { value: '500+', label: 'Published Articles', icon: '🚀' },
+    { value: '2M+', label: 'Monthly Readers', icon: '🚀' },
+    { value: '4.8', label: 'Average Rating', icon: '🚀' },
+    { value: '150+', label: 'Expert Authors', icon: '🚀' }
   ];
 
   return (
@@ -133,11 +132,11 @@ const NewBlogContentShowcase2026: React.FC = () => {
         {/* Header Section */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 mb-8 animate-fade-in">
-            <Sparkles className="w-5 h-5 text-blue-400 animate-pulse" />
+
             <span className="text-blue-400 font-bold text-sm tracking-wider uppercase">
               📚 NEW BLOG CONTENT • January 2026
             </span>
-            <Sparkles className="w-5 h-5 text-purple-400 animate-pulse" />
+
           </div>
 
           <h2 className="text-5xl md:text-6xl font-extrabold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent animate-fade-in">
@@ -170,8 +169,10 @@ const NewBlogContentShowcase2026: React.FC = () => {
         {/* Featured Blog Posts */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {blogPosts.map((post, index) => (
-            <div 
-              key={post.id}
+
+            <div
+key={post.id}
+
               className="group relative bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 hover:border-blue-500/50 transition-all duration-500 overflow-hidden hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/20"
               style={{ animationDelay: `${index * 150}ms` }}
             >
@@ -187,8 +188,7 @@ const NewBlogContentShowcase2026: React.FC = () => {
                   <div className="flex flex-col gap-2">
                     {post.trending && (
                       <div className="flex items-center gap-1 px-3 py-1.5 rounded-full bg-gradient-to-r from-orange-500 to-red-500 text-white text-xs font-bold shadow-lg">
-                        <TrendingUp className="w-3 h-3" />
-                        <span>TRENDING</span>
+
                       </div>
                     )}
                     <div className={`px-3 py-1.5 rounded-full bg-gradient-to-r ${post.gradient} text-white text-xs font-bold border border-white/30`}>
@@ -228,7 +228,7 @@ const NewBlogContentShowcase2026: React.FC = () => {
                 {/* Meta Info */}
                 <div className="flex items-center justify-between text-sm text-gray-500 mb-6 pb-6 border-b border-white/10">
                   <span className="flex items-center gap-2">
-                    <Clock className="w-4 h-4 text-blue-400" />
+
                     {post.readTime}
                   </span>
                   <span className="flex items-center gap-1">
@@ -243,7 +243,7 @@ const NewBlogContentShowcase2026: React.FC = () => {
                     By {post.author}
                   </div>
                   <div className="flex items-center gap-1">
-                    <Star className="w-4 h-4 text-yellow-400 fill-current" />
+
                     <span className="text-yellow-400 font-bold text-sm">{post.rating}</span>
                   </div>
                 </div>
@@ -254,7 +254,7 @@ const NewBlogContentShowcase2026: React.FC = () => {
                   className={`group/btn flex items-center justify-center gap-2 w-full bg-gradient-to-r ${post.gradient} hover:opacity-90 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1`}
                 >
                   <span>Read Article</span>
-                  <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-300" />
+
                 </a>
               </div>
             </div>
@@ -265,7 +265,7 @@ const NewBlogContentShowcase2026: React.FC = () => {
         <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-3xl p-8 md:p-12 border border-blue-500/20 mb-16">
           <div className="text-center">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-yellow-500/20 to-orange-500/20 border border-yellow-500/30 mb-6">
-              <Star className="w-5 h-5 text-yellow-400 fill-current" />
+
               <span className="text-yellow-400 font-bold text-sm tracking-wider uppercase">
                 PREMIUM CONTENT
               </span>
@@ -284,10 +284,10 @@ const NewBlogContentShowcase2026: React.FC = () => {
                 type="email"
                 placeholder="Enter your email"
                 className="flex-1 px-6 py-4 rounded-xl bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 focus:bg-white/20 transition-all duration-300"
-              />
-              <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 flex items-center justify-center gap-2">
-                <span>Subscribe</span>
-                <ArrowRight className="w-5 h-5" />
+/>
+
+<button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 flex items-center justify-center gap-2">
+
               </button>
             </div>
             <p className="text-xs text-gray-500 mt-4">
@@ -312,7 +312,7 @@ const NewBlogContentShowcase2026: React.FC = () => {
                   href="/blog"
                   className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 flex items-center justify-center gap-2"
                 >
-                  <Sparkles className="w-5 h-5" />
+
                   <span>Browse All Articles</span>
                 </a>
                 <a
@@ -320,7 +320,7 @@ const NewBlogContentShowcase2026: React.FC = () => {
                   className="border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-2"
                 >
                   <span>Request Custom Content</span>
-                  <ArrowRight className="w-5 h-5" />
+
                 </a>
               </div>
             </div>

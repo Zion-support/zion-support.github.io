@@ -30,11 +30,13 @@
     "buildTest": {
       "success": true,
       "duration": 20538,
-      "errors": []    }
+      "errors": []
+    }
   },
   "summary": {
     "totalPhases": 6,
     "successfulPhases": 6,
     "failedPhases": 0,
-    "overallSuccess": true  }
+    "overallSuccess": true
+  }
 }

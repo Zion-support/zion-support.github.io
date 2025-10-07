@@ -1,5 +1,8 @@
-import React from 'react';
-import { Calendar, Clock, Shield, Cpu } from 'lucide-react';
+
+import Calendar from 'lucide-react/dist/esm/icons/alendar';
+import Clock from 'lucide-react/dist/esm/icons/lock';
+import Shield from 'lucide-react/dist/esm/icons/hield';
+import Cpu from 'lucide-react/dist/esm/icons/pu';
 
 export const metadata = {
   title: 'Edge Private Insights v2 (2026): Scoped IDs + DP + On-device | Zion',
@@ -23,14 +26,14 @@ export default function Page() {
       <header className="bg-gradient-to-br from-cyan-900 via-emerald-900 to-slate-900 text-white py-20">
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 mb-6">
-            <Shield className="w-4 h-4 text-cyan-300" />
+            <Shield />
             <span className="text-sm font-semibold">Privacy • Edge • 2026</span>
           </div>
           <h1 className="text-5xl md:text-6xl font-extrabold leading-tight mb-4">Edge Private Insights v2 (2026)</h1>
           <p className="text-lg md:text-xl text-white/80 max-w-3xl">Deliver actionable metrics without PII using scoped identifiers, differential privacy, and on-device aggregation—all under 100ms.</p>
           <div className="flex items-center gap-6 text-white/70 mt-8">
-            <div className="flex items-center gap-2"><Calendar className="w-4 h-4" /><span>Jan 30, 2026</span></div>
-            <div className="flex items-center gap-2"><Clock className="w-4 h-4" /><span>14 min read</span></div>
+            <div className="flex items-center gap-2"><Calendar /><span>Jan 30, 2026</span></div>
+            <div className="flex items-center gap-2"><Clock /><span>14 min read</span></div>
           </div>
         </div>
       </header>
@@ -74,7 +77,7 @@ export default function Page() {
               <h3 className="text-2xl font-bold">Launch Privacy‑First Analytics</h3>
               <p className="text-white/90">We deliver a production deployment in 4–6 weeks with audits.</p>
             </div>
-            <a href="/contact" className="bg-white text-cyan-700 px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2">Get started <Cpu className="w-4 h-4" /></a>
+            <a href="/contact" className="bg-white text-cyan-700 px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2">Get started <Cpu /></a>
           </div>
         </div>
       </section>

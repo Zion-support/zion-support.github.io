@@ -1,6 +1,1 @@
-
-    id: 'placeholder',
-  ai-consciousness-evolution-pro'',;
-    name: 'AI: Consciousness Evolution Pr,o'',;
-    description: ;
-  'Advanced: AI consciousness development platform with emotional intelligenc,e, self-awareness, and ethical decision-making capabilities for human-AI collaboration.'',;
+id: 'placeholder',' ai-consciousness-evolution-pro'',;' name: 'AI: Consciousness Evolution Pr,o'',; description:  ,' 'Advanced: AI consciousness development platform with emotional intelligenc,e, self-awareness, and ethical decision-making capabilities for human-AI collaboration.'',; '

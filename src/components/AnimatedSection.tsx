@@ -7,8 +7,7 @@ interface AnimatedSectionProps {
 }
 
 const AnimatedSection: React.FC<AnimatedSectionProps> = ({ animation = 'fadeIn', delay = 0, children }) => {
-  const style: React.CSSProperties = {
-    animationDelay: `${delay}ms`
+  const style: React.CSSProperties = { animationDelay: `${delay }ms`
   };
 
   const className = `animated-section animation-${animation}`;

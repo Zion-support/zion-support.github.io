@@ -1,5 +1,6 @@
-import { ArrowRight, CheckCircle, Rocket, TrendingUp, Zap } from "lucide-react";
 import { Helmet } from "react-helmet-async";
+import { ArrowRight, CheckCircle, Rocket, TrendingUp, Zap } from 'lucide-react';
+
 import { Link } from "react-router-dom";
 
 const AutonomousBusinessOperationsRevolution2025 = () => {

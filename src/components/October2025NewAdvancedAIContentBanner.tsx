@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Brain, Database, Shield, Sparkles, TrendingUp, Zap } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export default function October2025NewAdvancedAIContentBanner() {
@@ -20,9 +19,9 @@ export default function October2025NewAdvancedAIContentBanner() {
           className="text-center mb-8"
         >
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-yellow-400 to-orange-500 text-gray-900 px-6 py-2 rounded-full font-bold text-sm mb-4">
-            <Sparkles className="w-5 h-5 animate-pulse" />
+
             OCTOBER 2025 BREAKTHROUGH
-            <Sparkles className="w-5 h-5 animate-pulse" />
+
           </div>
           
           <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-4">
@@ -35,15 +34,15 @@ export default function October2025NewAdvancedAIContentBanner() {
           
           <div className="flex flex-wrap justify-center gap-4 mt-6 text-yellow-300 font-bold">
             <div className="flex items-center gap-2">
-              <TrendingUp className="w-5 h-5" />
+
               <span>$1.02B Combined Value</span>
             </div>
             <div className="flex items-center gap-2">
-              <Zap className="w-5 h-5" />
+
               <span>100% Compliance</span>
             </div>
             <div className="flex items-center gap-2">
-              <Shield className="w-5 h-5" />
+
               <span>99.8% Privacy Protection</span>
             </div>
           </div>
@@ -64,7 +63,7 @@ export default function October2025NewAdvancedAIContentBanner() {
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-purple-400 transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/50 h-full">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="p-3 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg">
-                    <Brain className="w-6 h-6 text-white" />
+
                   </div>
                   <span className="text-xs font-bold text-purple-300 uppercase tracking-wider">
                     Federated AI
@@ -96,7 +95,7 @@ export default function October2025NewAdvancedAIContentBanner() {
 
                 <div className="mt-6 flex items-center text-purple-300 font-semibold group-hover:text-white transition-colors">
                   <span>Explore Privacy-First AI</span>
-                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+
                 </div>
               </div>
             </Link>
@@ -115,8 +114,7 @@ export default function October2025NewAdvancedAIContentBanner() {
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-blue-400 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/50 h-full">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="p-3 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg">
-                    <Database className="w-6 h-6 text-white" />
-                  </div>
+                    <Database className="w-6 h-6 text-white"</div>
                   <span className="text-xs font-bold text-blue-300 uppercase tracking-wider">
                     Synthetic Data
                   </span>
@@ -147,7 +145,7 @@ export default function October2025NewAdvancedAIContentBanner() {
 
                 <div className="mt-6 flex items-center text-blue-300 font-semibold group-hover:text-white transition-colors">
                   <span>Unlock Unlimited Data</span>
-                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+
                 </div>
               </div>
             </Link>
@@ -166,7 +164,7 @@ export default function October2025NewAdvancedAIContentBanner() {
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-green-400 transition-all duration-300 hover:shadow-2xl hover:shadow-green-500/50 h-full">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="p-3 bg-gradient-to-br from-green-500 to-emerald-500 rounded-lg">
-                    <Shield className="w-6 h-6 text-white" />
+
                   </div>
                   <span className="text-xs font-bold text-green-300 uppercase tracking-wider">
                     AI Governance
@@ -198,7 +196,7 @@ export default function October2025NewAdvancedAIContentBanner() {
 
                 <div className="mt-6 flex items-center text-green-300 font-semibold group-hover:text-white transition-colors">
                   <span>Ensure AI Compliance</span>
-                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+
                 </div>
               </div>
             </Link>
@@ -217,7 +215,7 @@ export default function October2025NewAdvancedAIContentBanner() {
             className="inline-flex items-center gap-3 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-500 hover:to-blue-500 text-white px-8 py-4 rounded-full font-bold text-lg shadow-2xl hover:shadow-purple-500/50 transition-all duration-300 transform hover:scale-105"
           >
             <span>Explore All October 2025 Breakthroughs</span>
-            <ArrowRight className="w-5 h-5" />
+
           </Link>
           
           <p className="mt-4 text-blue-200 text-sm">

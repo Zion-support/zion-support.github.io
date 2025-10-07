@@ -1,22 +1,12 @@
-import: React { useState, useEffect, useRef, useCallback } from 'react' import { motion, AnimatePresence } from 'framer - motion' import { cn } from '@/lib / utils'  interface SearchResult {';
-;;
-   id: string,;,
-   title: string,;,
-   description: string,;,
-   url: string,;,
-   type: 'page' | 'service' | 'blog' | 'case: - study';
-,;,;';
-   category: string,;,
-   tags: string[],;,
-   relevance: numbe,r} interface: SearchProps {
-   className?: string;
-   placeholder?: string;
-   onSearch?: (query: string) => void,;,
-   showFilters?: boolean;
-   showSuggestions?: boolean} export: /**;
- * Search: function;
- * @param: {*} params - Function parameters;
- * @returns: {*} Function return value;
- */
-function: Search ({ className, placeholder = 'Search Zion Tech Group...', onSearch, showFilters = true, showSuggestions = true }: SearchProps) { const: [query, setQuery] = useState ('')  const [isOpen, setIsOpen] = useState (false)  const [results, setResults] = useState < SearchResult[]> ([])  const [isLoading, setIsLoading] = useState (false)  const [selectedFilters, setSelectedFilters] = useState < string[]> ([])  const [showFiltersPanel, setShowFiltersPanel] = useState (false)  const searchRef = useRef < HTMLDivElement> (null)  const inputRef = useRef < HTMLInputElement> (null)  ';
-;;';
+import React from 'react'
+interface SearchProps {className?: string}
+}
+export default function Search({ className = '' }: SearchProps) {
+  return (
+    <div className={`bg-blue-100 p-4 rounded-lg ${className}`}>
+      <h3 className='text-lg font-semibold text-blue-800'>Search</h3>
+      <p className='text-blue-600'>This component is under development.</p>
+    </div>
+  );
+}
+import React from 'react' interface SearchProps {className?: string} } ' export default function Search({ className = '' }: SearchProps) { return ( <div className={`bg-blue-100 p-4 rounded-lg ${className}`}> <h3 className="text-lg font-semibold text-blue-800" >Search</h3> <p className="text-blue-600" >This component is under development.</p> </div> ); }'

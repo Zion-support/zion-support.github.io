@@ -13,7 +13,7 @@ interface ContentItem {
   href: string;
   metrics?: {
     label: string;
-    value: string;
+  value: string;
   }[];
 }
 
@@ -183,7 +183,7 @@ export default function EnhancedContentShowcase2026() {
           <div className="flex flex-wrap gap-2">
             {categories.map((category) => (
               <button
-                key={category}
+key={category}
                 onClick={() => setSelectedCategory(category)}
                 className={`px-4 py-2 rounded-lg text-sm font-semibold transition-colors ${
                   selectedCategory === category
@@ -203,8 +203,7 @@ export default function EnhancedContentShowcase2026() {
               onChange={(e) => setSortBy(e.target.value)}
               className="px-3 py-2 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
             >
-              <option value="featured">Featured</option>
-              <option value="newest">Newest</option>
+
             </select>
           </div>
         </div>

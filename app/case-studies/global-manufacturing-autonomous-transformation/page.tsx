@@ -1,6 +1,5 @@
-import React from 'react';
-import Link from 'next/link';
-import { ArrowLeft, TrendingUp, CheckCircle, Target, Clock, Users, DollarSign, BarChart3, Award, Zap } from 'lucide-react';
+import { Link } from 'next/link';
+
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -514,3 +513,4 @@ export default function GlobalManufacturingCaseStudy() {
     </div>
   );
 }
+>>>>>>> 5d2b3c81c55b794aac3492f27f2c7fa2daa0ca39

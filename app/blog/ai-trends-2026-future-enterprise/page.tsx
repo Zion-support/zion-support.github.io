@@ -1,4 +1,3 @@
-import React from 'react';
 
 export const metadata = {
   title: 'AI Trends 2026: The Future of Enterprise Technology | Zion Tech Group',

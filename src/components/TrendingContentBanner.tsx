@@ -1,17 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  TrendingUp, 
-  ArrowRight, 
-  Eye, 
-  Clock, 
-  Star,
-  BookOpen,
-  Zap,
-  Brain,
-  Cloud,
-  Shield
-} from 'lucide-react';
 
 const TrendingContentBanner: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -19,81 +7,81 @@ const TrendingContentBanner: React.FC = () => {
   const trendingItems = [
     {
       title: "AI Disaster Recovery Playbooks",
-      description: "Failovers, warm pools, and rollback drills under 60 minutes.",
+      description: "Failovers, warm pools, and rollback drills under 60 minutes.",",
       views: "11.2K",
-      readTime: "7 min",
+      readTime: "7 min",",
       category: "AI Operations",
-      icon: TrendingUp,
+      icon: TrendingUp,",
       link: "/blog/ai-disaster-recovery-playbooks-2025",
       badge: "NEW"
     },
-    {
+    {",
       title: "Private Feature Flags: Zero‑PII Experiments",
-      description: "Signed configs, scoped IDs, and edge analytics under 100ms.",
+      description: "Signed configs, scoped IDs, and edge analytics under 100ms.",",
       views: "13.6K",
-      readTime: "8 min",
+      readTime: "8 min",",
       category: "Experimentation",
-      icon: Shield,
+      icon: Shield,",
       link: "/blog/ai-2025-oct-01-private-feature-flags-zero-pii",
       badge: "NEW"
     },
-    {
+    {",
       title: "Runtime Rollback Guardrails",
-      description: "Canary scorecards, kill switches, and instant reversibility.",
+      description: "Canary scorecards, kill switches, and instant reversibility.",",
       views: "12.1K",
-      readTime: "7 min",
+      readTime: "7 min",",
       category: "Reliability",
-      icon: TrendingUp,
+      icon: TrendingUp,",
       link: "/blog/ai-2025-oct-01-runtime-rollback-guardrails",
       badge: "TRENDING"
     },
-    {
+    {",
       title: "AI Autonomous Infrastructure 2026",
-      description: "Self‑healing, self‑optimizing, self‑scaling platforms with budgets.",
+      description: "Self‑healing, self‑optimizing, self‑scaling platforms with budgets.",",
       views: "12.4K",
-      readTime: "9 min",
+      readTime: "9 min",",
       category: "Platform Engineering",
-      icon: TrendingUp,
+      icon: TrendingUp,",
       link: "/blog/ai-autonomous-infrastructure-2026",
       badge: "HOT"
     },
-    {
+    {",
       title: "Zero‑Trust for GenAI 2026",
-      description: "Prompt firewalls, egress controls, and signed outputs at scale.",
+      description: "Prompt firewalls, egress controls, and signed outputs at scale.",",
       views: "10.9K",
-      readTime: "7 min",
+      readTime: "7 min",",
       category: "Security",
-      icon: Shield,
+      icon: Shield,",
       link: "/blog/zero-trust-for-genai-2026",
       badge: "TRENDING"
     },
-    {
+    {",
       title: "Quantum‑AI Hybrid Blueprint 2026",
-      description: "Near‑term wins by combining QC libs with AI orchestration.",
+      description: "Near‑term wins by combining QC libs with AI orchestration.",",
       views: "9.1K",
-      readTime: "8 min",
+      readTime: "8 min",",
       category: "Quantum",
-      icon: Brain,
+      icon: Brain,",
       link: "/blog/quantum-ai-hybrid-blueprint-2026",
       badge: "NEW"
     },
-    {
+    {",
       title: "Edge LLM Caching Blueprint 2026",
-      description: "Sub‑100ms prompts via tiered caches and freshness windows.",
+      description: "Sub‑100ms prompts via tiered caches and freshness windows.",",
       views: "8.9K",
-      readTime: "6 min",
+      readTime: "6 min",",
       category: "Architecture",
-      icon: Zap,
+      icon: Zap,",
       link: "/blog/edge-llm-caching-blueprint-2026",
       badge: "POPULAR"
     },
-    {
+    {",
       title: "GenAI Data Governance Quickstart",
-      description: "Policy tests, lineage, consent scopes, and KPI‑linked checks.",
+      description: "Policy tests, lineage, consent scopes, and KPI‑linked checks.",",
       views: "9.8K",
-      readTime: "6 min",
+      readTime: "6 min",",
       category: "AI Governance",
-      icon: Shield,
+      icon: Shield,",
       link: "/blog/genai-data-governance-quickstart-2025",
       badge: "HOT"
     }
@@ -114,7 +102,7 @@ const TrendingContentBanner: React.FC = () => {
       case 'HOT': return 'bg-red-500 text-white';
       case 'NEW': return 'bg-green-500 text-white';
       case 'TRENDING': return 'bg-blue-500 text-white';
-      case 'POPULAR': return 'bg-purple-500 text-white';
+      case 'POPULAR': return 'bg-purple-500 text-white';",
       default: return 'bg-gray-500 text-white';
     }
   };
@@ -127,7 +115,7 @@ const TrendingContentBanner: React.FC = () => {
         <div className="flex-1">
           <div className="flex items-center gap-3 mb-3">
             <div className="flex items-center gap-2">
-              <TrendingUp className="w-5 h-5 text-zion-cyan animate-pulse" />
+
               <span className="text-sm font-semibold text-zion-cyan">TRENDING NOW</span>
             </div>
             <div className={`px-2 py-1 rounded-full text-xs font-bold ${getBadgeColor(currentItem.badge)} animate-bounce`}>
@@ -137,8 +125,7 @@ const TrendingContentBanner: React.FC = () => {
 
           <div className="flex items-start gap-4">
             <div className="bg-zion-blue/20 p-3 rounded-lg group-hover:bg-zion-blue/30 transition-colors">
-              <Icon className="w-6 h-6 text-zion-cyan group-hover:scale-110 transition-transform" />
-            </div>
+              <Icon className="w-6 h-6 text-zion-cyan group-hover:scale-110 transition-transform"</div>
             
             <div className="flex-1">
               <div className="flex items-center gap-2 mb-1">
@@ -157,15 +144,14 @@ const TrendingContentBanner: React.FC = () => {
 
               <div className="flex items-center gap-4 text-xs text-zion-slate-light">
                 <div className="flex items-center gap-1">
-                  <Eye className="w-3 h-3" />
-                  <span>{currentItem.views} views</span>
+                  <Eye className="w-3 h-3" <span>{currentItem.views} views</span>
                 </div>
                 <div className="flex items-center gap-1">
-                  <Clock className="w-3 h-3" />
+
                   <span>{currentItem.readTime} read</span>
                 </div>
                 <div className="flex items-center gap-1">
-                  <Star className="w-3 h-3 text-yellow-400" />
+
                   <span>4.9/5</span>
                 </div>
               </div>
@@ -178,23 +164,23 @@ const TrendingContentBanner: React.FC = () => {
             to={currentItem.link}
             className="bg-zion-cyan text-white hover:bg-zion-blue-light px-4 py-2 rounded-lg font-semibold text-sm transition-all duration-300 hover:scale-105 inline-flex items-center gap-2 group/btn"
           >
-            <BookOpen className="w-4 h-4" />
+
             Read Now
-            <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
+
           </Link>
 
           {/* Navigation dots */}
           <div className="flex gap-2">
             {trendingItems.map((_, index) => (
               <button
-                key={index}
+key={index}
                 onClick={() => setCurrentIndex(index)}
                 className={`w-2 h-2 rounded-full transition-all duration-300 ${
                   index === currentIndex 
                     ? 'bg-zion-cyan scale-125' 
                     : 'bg-white/30 hover:bg-white/50'
                 }`}
-              />
+
             ))}
           </div>
         </div>
@@ -202,10 +188,10 @@ const TrendingContentBanner: React.FC = () => {
 
       {/* Progress bar */}
       <div className="mt-4 w-full bg-white/10 rounded-full h-1">
-        <div 
+        <div>
           className="bg-gradient-to-r from-zion-cyan to-zion-blue-light h-1 rounded-full transition-all duration-100 ease-linear"
           style={{ width: `${((currentIndex + 1) / trendingItems.length) * 100}%` }}
-        />
+
       </div>
     </div>
   );

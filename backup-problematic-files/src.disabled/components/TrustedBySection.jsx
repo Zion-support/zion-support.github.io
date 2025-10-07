@@ -1,10 +1,1 @@
-
-  return (
-    <div className={className || ''}>
-
-      <h1>TrustedBySection</h1>
-      <p>This component is under development.</p>
-    </div>
-
-
-export default TrustedBySection;
+return (<div className={className || ''}> <h1>TrustedBySection</h1> <p>This component is under development.</p> </div> export default TrustedBySection) '

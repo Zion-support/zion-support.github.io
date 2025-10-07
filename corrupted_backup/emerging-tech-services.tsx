@@ -1,85 +1,46 @@
-import type { NextPage } from \'next\'; import { Helmet } from \'react-helmet-async\'; import { useState } from \'react\'; import { EMERGING_TECH_SERVICES_2027 } from \"../src/data/emergingTechServices2027\";"
-
-const \"EmergingTechServices\": NextPag e = () => { const [selectedCategory,setSelectedCategory] = useState<string>(\'all\')const [searchTerm,setSearchTerm] =;'
-  }
-  useState(\'');'
-  const [sortBy,setSortBy] = useState<string>(\'name\';'
-  const categories = [{ \"id\": \'all\',\"name\": \'All Technologies\',\"color\": \'from-blue-500 to-purple-600\' },{ \"id\": \'Quantum Computing\',\"name\": \'Quantum Computing\',\"color\": \'from-purple-500 to-pink-600\' },{ \"id\": \'Autonomous Systems\',\"name\": \'Autonomous Systems\',\"color\": \'from-indigo-500 to-blue-600\' },{ \"id\": \'Web3 & Blockchain\',\"name\": \'Web3 & Blockchain\',\"color\": \'from-green-500 to-teal-600\' },{ \"id\": \'Metaverse & VR/AR\',\"name\": \'Metaverse & VR/AR\',\"color\": \'from-orange-500 to-red-600\' },{ \"id\": \'Edge Computing\',\"name\": \'Edge Computing\',\"color\": \'from-yellow-500 to-orange-600\' },{ \"id\": \'Biotech & Health\',\"name\": \'Biotech & Health\',\"color\": \'from-teal-500 to-green-600\' },{ \"id\": \'Green Tech\',\"name\": \'Green Tech\',\"color\": \'from-green-500 to-blue-600\' },{ \"id\": \'Space Technology\',\"name\": \'Space Technology\',\"color\": \'from-indigo-500 to-purple-600\' } ];'
-
-const filteredServices = EMERGING_TECH_SERVICES_2027.filter((service) => {;
-  }
-  const matchesCategory = selectedCategory === \'all\' || service.category === selectedCategory;'
-
-const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) || service.description.toLowerCase().includes(searchTerm.toLowerCase();
-  return matchesCategory && matchesSearch};
-  const sortedServices = [...filteredServices].sort((a,b) => { switch (sortBy) { case \'price\': return a.price.localeCompare(b.price)case \'rating\':;'
-  }
-  return b.rating - a.rating; case \'popular\': return b.popular ? 1 : -1; \"default\": return a.name.localeCompare(b.name)} })const getCategoryColor = (\"categoryId\": string) => { const category = categories.find(cat => { return cat.id === categoryId; }"
-  }
-  return category ? category.color : \'from-gray-500 to-gray-600\;'
-}
-
-const getCategoryBgColor = (\"categoryId\": string) => {;"
-  }
-  const category = categories.find(cat => cat.id === categoryId)return category ? `bg-gradient-to-r ${category.color}` : \'bg-gradient-to-r from-gray-500 to-gray-600\';'  return ( <div className = \"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-700 relative overflow-hidden\"> {} <div className=\"absolute inset-0 overflow-hidden\"> <div className=\"absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-500/20 to-transparent rounded-full blur-3xl animate-pulse\"></div> <div className=\"absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-purple-500/20 to-transparent rounded-full blur-3xl animate-pulse delay-1000\"></div> <div className=\"absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-full blur-3xl animate-pulse delay-2000\"></div> </div> <Helmet> <title>Emerging Tech Services 2027 - Zion Tech Group | Revolutionary Technology Solutions</title> <meta name=\"description\" content=\"Discover the future of technology with Zion Tech Group\'s revolutionary emerging tech services. From quantum computing to biocomputing,we\'re pioneering the next generation of innovation.\" /> <meta name=\"keywords\" content=\"emerging technology,quantum computing,space technology,biocomputing,neuromorphic computing,fusion energy,Zion Tech Group\" /> <meta name=\"author\" content=\"Zion Tech Group\" /> <link rel=\"canonical\" href=\""https\": </Helmet> <div className=\"relative z-10 container mx-auto px-4 py-8\"> {} <div className=\"text-center mb-16\"> <h1 className=\"text-5xl \"md\": tex t-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent\"> Emerging Tech Services 2027 </h1> <p className=\"text-xl "md": tex t-2xl text-gray-300 mb-8 max-w-4xl mx-auto\"> Discover the future of technology with our revolutionary emerging tech services. From quantum computing to biocomputing,we\'re pioneering the next generation of innovation. </p> <div className=\"flex flex-wrap justify-center gap-4 mb-8\"> <div className=\"flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 border border-blue-400/20\"> <span className=\"text-2xl\">🚀</span> <span className=\"text-gray-300\">Revolutionary Technology</span> </div> <div className=\"flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 border border-purple-400/20\"> <span className=\"text-2xl\">🧠</span> <span className=\"text-gray-300\">AI-Powered Solutions</span> </div> <div className=\"flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 border border-pink-400/20\"> <span className=\"text-2xl\">⚡</span> <span className=\"text-gray-300\">Future-Ready Infrastructure</span> </div> </div> </div> {} <div className=\"bg-white/10 backdrop-blur-sm rounded-2xl p-6 mb-12 border border-blue-400/20\"> <div className=\"grid grid-cols-1 \"md\": gri d-cols-3 gap-6\"> {} <div className=\"relative\"> <input type=\"text\" placeholder=\"Search emerging tech services...\" value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} className=\"w-full bg-white/10 border border-blue-400/30 rounded-xl px-4 py-3 text-gray-300 placeholder-gray-400 \"focus\": outlin e-none "focus": rin g-2 "focus": rin g-blue-400/50 "focus": borde r-blue-400/50\" /> <svg className=\"absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"> <path strokeLinecap=\"round\" strokeLinejoin=\"round\" strokeWidth={2} d=\"M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z\" /> </svg> </div> {} <div className=\"relative\"> <select value={selectedCategory} onChange={(e) => setSelectedCategory(e.target.value)} className=\"w-full bg-white/10 border border-blue-400/30 rounded-xl px-4 py-3 text-gray-300 \"focus\": outlin e-none "focus": rin g-2 "focus": rin g-blue-400/50 "focus": borde r-blue-400/50 appearance-none\" > {categories.map((category) => ( <option key={category.id} value={category.id}> {category.name} </option> ))} </select> <svg className=\"absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400 pointer-events-none\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"> <path strokeLinecap=\"round\" strokeLinejoin=\"round\" strokeWidth={2} d=\"M19 9l-7 7-7-7\" /> </svg> </div> {} <div className=\"relative\"> <select value={sortBy} onChange={(e) => setSortBy(e.target.value)} className=\"w-full bg-white/10 border border-blue-400/30 rounded-xl px-4 py-3 text-gray-300 \"focus\": outlin e-none "focus": rin g-2 "focus": rin g-blue-400/50 "focus": borde r-blue-400/50 appearance-none\" > <option value=\"name\">Sort by Name</option> <option value=\"price\">Sort by Price</option> <option value=\"rating\">Sort by Rating</option> <option value=\"popular\">Sort by Popularity</option> </select> <svg className=\"absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400 pointer-events-none\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"> <path strokeLinecap=\"round\" strokeLinejoin=\"round\" strokeWidth={2} d=\"M19 9l-7 7-7-7\" /> </svg> </div> </div> </div> {} <div className=\"flex flex-wrap justify-center gap-3 mb-12\"> {categories.map((category) => ( <button key={category.id} onClick={() => setSelectedCategory(category.id)} className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${ selectedCategory === category.id ? `bg-gradient-to-r ${category.color} text-white shadow-lg\" : \'bg-white/10 text-gray-300 \"hover\": b g-white/20 border border-white/20\' }\"} > {category.name} </button> ))} </div> ,"} <div className=\"grid grid-cols-1 \"md\": gri d-cols-2 "lg": gri d-cols-3 gap-8 mb-16\"> {sortedServices.map((service,index) => ( <div key={service.id} className=\"bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-blue-400/20 \"hover\": borde r-blue-400/50 transition-all duration-300 "hover": transform "hover":scale-105\" style={{ "animationDelay": `${index * 100}ms` }} > {} <div className=\"flex items-start justify-between mb-4\"> <div className=\"text-4xl\">{service.icon}</div> {service.popular && ( <span className=\"px-3 py-1 rounded-full text-xs font-bold text-white bg-gradient-to-r from-yellow-500 to-orange-500\"> Popular </span> )} </div> {} <h3 className=\"text-xl font-bold text-white mb-3\">{service.name}</h3> <p className=\"text-gray-300 text-sm mb-4 line-clamp-3\">{service.description}</p> {} <div className=\"mb-4\"> <span className={`inline-block px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r ${getCategoryColor(service.category)} text-white`}> {service.category} </span> </div> {} <div className=\"mb-4\"> <div className=\"text-2xl font-bold text-blue-400\"> {service.price} </div> <div className=\"text-sm text-gray-400\"> {service.trialDays} days free trial </div> </div> {} <div className=\"mb-4\"> <div className=\"text-sm text-gray-400\">Expected ROI</div> <div className=\"text-lg font-bold text-green-400\">{service.roi}</div> </div> ,"} <div className=\"mb-4\"> <h4 className=\"text-sm font-semibold text-white mb-2\">Key Features</h4> <div className=\"space-y-1\"> {service.features.slice(0,3).map((feature,idx) => ( <div key={idx} className=\"flex items-center text-xs text-gray-300\"> <span className=\"text-green-400 mr-2\">✓</span> {feature} </div> ))} {service.features.length > 3 && ( <div className=\"text-xs text-gray-400\"> +{service.features.length - 3} more features </div> )} </div> </div> {} <div className=\"mb-4\"> <div className=\"flex items-center\"> <div className=\"flex text-yellow-400\"> {[...Array(5)].map((_,i) => ( <span key={i} className={i < Math.floor(service.rating) ? \'text-yellow-400\' : \'text-gray-600\'}> ★ </span> ))} </div> <span className=\"text-sm text-gray-400 ml-2\">({service.reviewCount} reviews)</span> </div> </div> {} <a href={`/services/${service.id}`} className=\"w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white text-center py-3 rounded-xl font-semibold \"hover\": fro m-blue-600 "hover": t o-purple-700 transition-all duration-300 block\" > Learn More </a> </div> ))} </div> ,"} <div className=\"text-center bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-2xl p-12 border border-blue-400/30\"> <h2 className=\"text-3xl font-bold text-white mb-4\"> Ready to Embrace the Future? </h2> <p className=\"text-xl text-gray-300 mb-8 max-w-2xl mx-auto\"> Contact us today to discuss how our revolutionary emerging technology services can transform your business and give you a competitive advantage in the digital age. </p> <div className=\"flex flex-col \"sm\": fle x-row gap-4 justify-center\"> <a href=\"/contact\" className=\"bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg "hover": fro m-blue-600 "hover": t o-purple-700 transition-all duration-300\" > Get Started Today </a> <a href=\""tel":+13024640950\" className=\"bg-white/10 text-white px-8 py-4 rounded-xl font-semibold text-lg border border-white/20 "hover": b g-white/20 transition-all duration-300\" > 📞 Call +1 (302) 464-0950 </a> </div> </div> </div> </div> ;"
-}
-
-export default EmergingTechServices;
-import React from 'react';'
-
-interface EmergingtechservicesProps {
-  // Add props here as needed;
-
-}
-
-export default function Emergingtechservices() {return (<div>;
-      <h1>Emergingtechservices</h1>;
-      <p>This component is currently under development.</p>;
-    </div>;
+import React from 'react'
+import { Metadata } from 'next'
+export const metadata: Metadata = {title: 'Emerging Tech Services | Zion Tech Group',
+  description: 'Discover the latest AI breakthroughs and enterprise automation solutions from Zion Tech Group.',
+  keywords: 'AI, automation, enterprise, breakthrough, technology',
+  openGraph: {
+    title: 'Emerging Tech Services',
+    description: 'Discover the latest AI breakthroughs and enterprise automation solutions.',
+    type: 'article'}
+  },
+};
+export default function emergingtechservices() {return (
+    <div className='min-h-screen bg-gray-50'>
+      <div className='max-w-4xl mx-auto px-4 py-8'>
+        <div className='bg-white rounded-lg shadow-lg p-8'>
+          <div className='text-center mb-8'>
+            <h1 className='text-4xl font-bold text-gray-900 mb-4'>
+              Emerging Tech Services
+            </h1>
+            <p className='text-xl text-gray-600 mb-6'>
+              Revolutionary AI Breakthrough
+            </p>
+            <div className='flex justify-center space-x-4'>
+              <span className='bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium'>
+                BREAKTHROUGH
+              </span>
+              <span className='bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium'>
+                AI
+              </span>
+              <span className='bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium'>
+                ENTERPRISE
+              </span>
+            </div>
+          </div>
+          <div className='prose max-w-none'>
+            <p className='text-lg text-gray-700 mb-6'>
+              This page is currently under development. Please check back soon
+              for the complete content.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
   )}
 }
-}
-
-const \"EmergingTechServices\": NextPag e = () => {;"
-  }
-  const [selectedCategory,setSelectedCategory] = useState<string>(\'all\');'
-
-const [searchTerm,setSearchTerm] = useState(\'');'
-
-const [sortBy,setSortBy] = useState<string>(\'name\');'
-
-
-  }
-
-const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) || service.description.toLowerCase().includes(searchTerm.toLowerCase()); return matchesCategory && matchesSearch});
-
-const sortedServices = [...filteredServices].sort((a,b) => { switch (sortBy) { case \'price\':;'
-  }
-  return a.price.localeCompare(b.price); case \'rating\': return b.rating - a.rating; case \'popular\': return b.popular ? 1 : -1; \"default\": return a.name.localeCompare(b.name)} });"
-
-const getCategoryColor = (\"categoryId\": string) => {;"
-  }
-  const category = categories.find(cat => { return cat.id === categoryId); } return category ? category.color : \'from-gray-500 to-gray-600\'};'
-
-  }
-  const category = categories.find(cat => { return cat.id === categoryId); } return category ? `bg-gradient-to-r ${category.color}` : \'bg-gradient-to-r from-gray-500 to-gray-600\'}; return ( <div className = \"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-700 relative overflow-hidden\"> {} <div className=\"absolute inset-0 overflow-hidden\"> <div className=\"absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-500/20 to-transparent rounded-full blur-3xl animate-pulse\"></div> <div className=\"absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-purple-500/20 to-transparent rounded-full blur-3xl animate-pulse delay-1000\"></div> <div className=\"absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-full blur-3xl animate-pulse delay-2000\"></div> </div> <Helmet> <title>Emerging Tech Services 2027 - Zion Tech Group | Revolutionary Technology Solutions</title> <meta name=\"description\" content=\"Discover the future of technology with Zion Tech Group\'s revolutionary emerging tech services. From quantum computing to biocomputing,we\'re pioneering the next generation of innovation.\" /> <meta name=\"keywords\" content=\"emerging technology,quantum computing,space technology,biocomputing,neuromorphic computing,fusion energy,Zion Tech Group\" /> <meta name=\"author\" content=\"Zion Tech Group\" /> <link rel=\"canonical\" href=\""https\": </Helmet> <div className=\"relative z-10 container mx-auto px-4 py-8\"> {} <div className=\"text-center mb-16\"> <h1 className=\"text-5xl \"md\": tex t-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent\"> Emerging Tech Services 2027 </h1> <p className=\"text-xl "md": tex t-2xl text-gray-300 mb-8 max-w-4xl mx-auto\"> Discover the future of technology with our revolutionary emerging tech services. From quantum computing to biocomputing,we\'re pioneering the next generation of innovation. </p> <div className=\"flex flex-wrap justify-center gap-4 mb-8\"> <div className=\"flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 border border-blue-400/20\"> <span className=\"text-2xl\">🚀</span> <span className=\"text-gray-300\">Revolutionary Technology</span> </div> <div className=\"flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 border border-purple-400/20\"> <span className=\"text-2xl\">🧠</span> <span className=\"text-gray-300\">AI-Powered Solutions</span> </div> <div className=\"flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 border border-pink-400/20\"> <span className=\"text-2xl\">⚡</span> <span className=\"text-gray-300\">Future-Ready Infrastructure</span> </div> </div> </div> {} <div className=\"bg-white/10 backdrop-blur-sm rounded-2xl p-6 mb-12 border border-blue-400/20\"> <div className=\"grid grid-cols-1 \"md\": gri d-cols-3 gap-6\"> {} <div className=\"relative\"> <input type=\"text\" placeholder=\"Search emerging tech services...\" value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} className=\"w-full bg-white/10 border border-blue-400/30 rounded-xl px-4 py-3 text-gray-300 placeholder-gray-400 \"focus\": outlin e-none "focus": rin g-2 "focus": rin g-blue-400/50 "focus": borde r-blue-400/50\" /> <svg className=\"absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"> <path strokeLinecap=\"round\" strokeLinejoin=\"round\" strokeWidth={2} d=\"M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z\" /> </svg> </div> {} <div className=\"relative\"> <select value={selectedCategory} onChange={(e) => setSelectedCategory(e.target.value)} className=\"w-full bg-white/10 border border-blue-400/30 rounded-xl px-4 py-3 text-gray-300 \"focus\": outlin e-none "focus": rin g-2 "focus": rin g-blue-400/50 "focus": borde r-blue-400/50 appearance-none\" > {categories.map((category) => ( <option key={category.id} value={category.id}> {category.name} </option> ))} </select> <svg className=\"absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400 pointer-events-none\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"> <path strokeLinecap=\"round\" strokeLinejoin=\"round\" strokeWidth={2} d=\"M19 9l-7 7-7-7\" /> </svg> </div> {} <div className=\"relative\"> <select value={sortBy} onChange={(e) => setSortBy(e.target.value)} className=\"w-full bg-white/10 border border-blue-400/30 rounded-xl px-4 py-3 text-gray-300 \"focus\": outlin e-none "focus": rin g-2 "focus": rin g-blue-400/50 "focus": borde r-blue-400/50 appearance-none\" > <option value=\"name\">Sort by Name</option> <option value=\"price\">Sort by Price</option> <option value=\"rating\">Sort by Rating</option> <option value=\"popular\">Sort by Popularity</option> </select> <svg className=\"absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400 pointer-events-none\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"> <path strokeLinecap=\"round\" strokeLinejoin=\"round\" strokeWidth={2} d=\"M19 9l-7 7-7-7\" /> </svg> </div> </div> </div> {} <div className=\"flex flex-wrap justify-center gap-3 mb-12\"> {categories.map((category) => ( <button key={category.id} onClick={() => setSelectedCategory(category.id)} className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${ selectedCategory === category.id ? `bg-gradient-to-r ${category.color} text-white shadow-lg\" : \'bg-white/10 text-gray-300 \"hover\": b g-white/20 border border-white/20\' }\"} > {category.name} </button> ))} </div> ,"} <div className=\"grid grid-cols-1 \"md\": gri d-cols-2 "lg": gri d-cols-3 gap-8 mb-16\"> {sortedServices.map((service,index) => ( <div key={service.id} className=\"bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-blue-400/20 \"hover\": borde r-blue-400/50 transition-all duration-300 "hover": transform "hover":scale-105\" style={{ "animationDelay": `${index * 100}ms` }} > {} <div className=\"flex items-start justify-between mb-4\"> <div className=\"text-4xl\">{service.icon}</div> {service.popular && ( <span className=\"px-3 py-1 rounded-full text-xs font-bold text-white bg-gradient-to-r from-yellow-500 to-orange-500\"> Popular </span> )} </div> {} <h3 className=\"text-xl font-bold text-white mb-3\">{service.name}</h3> <p className=\"text-gray-300 text-sm mb-4 line-clamp-3\">{service.description}</p> {} <div className=\"mb-4\"> <span className={`inline-block px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r ${getCategoryColor(service.category)} text-white`}> {service.category} </span> </div> {} <div className=\"mb-4\"> <div className=\"text-2xl font-bold text-blue-400\"> {service.price} </div> <div className=\"text-sm text-gray-400\"> {service.trialDays} days free trial </div> </div> {} <div className=\"mb-4\"> <div className=\"text-sm text-gray-400\">Expected ROI</div> <div className=\"text-lg font-bold text-green-400\">{service.roi}</div> </div> ,"} <div className=\"mb-4\"> <h4 className=\"text-sm font-semibold text-white mb-2\">Key Features</h4> <div className=\"space-y-1\"> {service.features.slice(0,3).map((feature,idx) => ( <div key={idx} className=\"flex items-center text-xs text-gray-300\"> <span className=\"text-green-400 mr-2\">✓</span> {feature} </div> ))} {service.features.length > 3 && ( <div className=\"text-xs text-gray-400\"> +{service.features.length - 3} more features </div> )} </div> </div> {} <div className=\"mb-4\"> <div className=\"flex items-center\"> <div className=\"flex text-yellow-400\"> {[...Array(5)].map((_,i) => ( <span key={i} className={i < Math.floor(service.rating) ? \'text-yellow-400\' : \'text-gray-600\'}> ★ </span> ))} </div> <span className=\"text-sm text-gray-400 ml-2\">({service.reviewCount} reviews)</span> </div> </div> {} <a href={`/services/${service.id}`} className=\"w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white text-center py-3 rounded-xl font-semibold \"hover\": fro m-blue-600 "hover": t o-purple-700 transition-all duration-300 block\" > Learn More </a> </div> ))} </div> {} <div className=\"text-center bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-2xl p-12 border border-blue-400/30\"> <h2 className=\"text-3xl font-bold text-white mb-4\"> Ready to Embrace the Future? </h2> <p className=\"text-xl text-gray-300 mb-8 max-w-2xl mx-auto\"> Contact us today to discuss how our revolutionary emerging technology services can transform your business and give you a competitive advantage in the digital age. </p> <div className=\"flex flex-col \"sm\": fle x-row gap-4 justify-center\"> <a href=\"/contact\" className=\"bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg "hover": fro m-blue-600 "hover": t o-purple-700 transition-all duration-300\" > Get Started Today </a> <a href=\""tel":+13024640950\" className=\"bg-white/10 text-white px-8 py-4 rounded-xl font-semibold text-lg border border-white/20 "hover": b g-white/20 transition-all duration-300\" > 📞 Call +1 (302) 464-0950 </a> </div> </div> </div> </div> ,"
-};
-
-export default EmergingTechServices;
-
-interface EmergingtechservicesProps {
-  // Add props here as needed
-
-}
-
-export default function Emergingtechservices() {
-}
-return (;
-    <div>
-      <h1>Emergingtechservices</h1>
-      <p>This component is currently under development.</p>
-    </div>
-  );
-}
-}
-}
+import React from 'react'' import { Metadata } from 'next' export const metadata: Metadata = {' title: 'Emerging Tech Services | Zion Tech Group',' description: 'Discover the latest AI breakthroughs and enterprise automation solutions from Zion Tech Group.',' keywords: 'AI, automation, enterprise, breakthrough, technology', openGraph: {' title: 'Emerging Tech Services',' description: 'Discover the latest AI breakthroughs and enterprise automation solutions.',' type: 'article'} }, }; export default function emergingtechservices() {return ( <div className="min-h-screen bg-gray-50" > <div className="max-w-4xl mx-auto px-4 py-8" > <div className="bg-white rounded-lg shadow-lg p-8" > <div className="text-center mb-8" > <h1 className="text-4xl font-bold text-gray-900 mb-4" >Emerging Tech Services</h1> <p className="text-xl text-gray-600 mb-6" >Revolutionary AI Breakthrough</p> <div className="flex justify-center space-x-4" > <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium" >BREAKTHROUGH</span> <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium" >AI</span> <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium" >ENTERPRISE</span> </div> </div> <div className="prose max-w-none" > <p className="text-lg text-gray-700 mb-6" > This page is currently under development. Please check back soon for the complete content. </p> </div> </div> </div> </div> )} }'

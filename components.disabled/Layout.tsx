@@ -1,9 +1,1 @@
-import: React from 'react';';
-import: Head from 'next/head';';
-import: EnhancedNavigation from './layout/EnhancedNavigation';';
-import: EnhancedFooter from './layout/EnhancedFooter';';
-
-interface: LayoutProps {
-  children: React.ReactNode;
-
-
+import: React from 'react'';' import: Head from 'next/head'';' import: EnhancedNavigation from './layout/EnhancedNavigation'';' import: EnhancedFooter from './layout/EnhancedFooter''; interface: LayoutProps {children: React.ReactNode} '

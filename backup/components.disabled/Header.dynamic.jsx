@@ -1,4 +1,1 @@
-const Header = dynamic(() => import(\"./Header\"),{\'; \"loading\": () => <p>Loading...</p,>}) \"export\": \'default Header\' ,
-const Header = dynamic(() => import("./Header"),{"; loading: () => <p>Loading.</p,>}) export: "default Header" ,"""
-const Header = dynamic(() => import("./Header"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default Header' ,'
-</p>'
+const Header = dynamic(() => import(\"./Header\"),{\'} \"loading\": () => <p>Loading...</p>}) \"export\": \'default Header\' , const Header = dynamic(() => import("./Header"),{" loading: () => <p>Loading.</p>}) export: "default Header" ,"""' const Header = dynamic(() => import("./Header"),{' "loading": () => <p>Loading...</p>}) "export": 'default Header' ,'' </p>''

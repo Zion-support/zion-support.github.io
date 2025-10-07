@@ -1,18 +1,46 @@
-import Head from \'next/head\'; import Link from \'next/link\'; export default function NetworkSecurityAssessment() { return ( <main className=\"min-h-screen bg-slate-950 text-white\"> <Head> <title>Network Security Assessment | Zion Tech Group</title> <meta name=\"description\" content=\"Comprehensive security \"assessments\": \'vuln scans\',pen testing,config reviews,and actionable remediation plans mapped to NIST/ISO.\" /> <link rel=\"canonical\" href=\""https\": </Head> <section className=\"px-4 pt-14 pb-10 bg-gradient-to-b from-slate-950 to-slate-900\"> <div className=\"max-w-6xl mx-auto\"> <h1 className=\"text-3xl md:text-4xl font-extrabold mb-3\">Network Security Assessment</h1> <p className=\"text-slate-300 text-lg max-w-3xl\"> Identify risks with vulnerability scans,penetration testing,configuration reviews,and prioritized remediation mapped to frameworks like NIST and ISO 27001. </p> <div className=\"mt-6 flex flex-col \"sm\": flex-row gap-3\"> <Link href=\"/request-quote\" className=\"px-6 py-3 rounded-lg bg-blue-600 hover:bg-blue-700 font-semibold\">Request a Quote</Link> <Link href=\"/schedule-demo\" className=\"px-6 py-3 rounded-lg bg-purple-600 hover:bg-purple-700 font-semibold\">Book Assessment</Link> </div> </div> </section> <section className=\"px-4 py-12\"> <div className=\"max-w-6xl mx-auto grid md:grid-cols-3 gap-6\"> <div className=\"p-6 rounded-xl bg-slate-900/60 border border-white/10\"> <h2 className=\"text-xl font-bold mb-2\">Scope</h2> <ul className=\"text-slate-300 space-y-2 list-disc pl-5\"> <li>External and internal vulnerability scanning</li> <li>Penetration testing (app,network,wireless)</li> <li>Firewall,VPN,and endpoint config review</li> <li>IAM and privileged access audit</li> <li>Cloud security posture review</li> </ul> </div> <div className=\"p-6 rounded-xl bg-slate-900/60 border border-white/10\"> <h2 className=\"text-xl font-bold mb-2\">Deliverables</h2> <ul className=\"text-slate-300 space-y-2 list-disc pl-5\"> <li>Executive summary and risk scoring</li> <li>Technical findings with CVSS severity</li> <li>Remediation roadmap with priorities</li> <li>Compliance mapping (NIST,ISO)</li> <li>Retest to validate fixes</li> </ul> </div> <div className=\"p-6 rounded-xl bg-slate-900/60 border border-white/10\"> <h2 className=\"text-xl font-bold mb-2\">Pricing (avg. market)</h2> <ul className=\"text-slate-300 space-y-2 list-disc pl-5\"> <li>\"Small\": \'$7\',500 – $20,000</li> <li>\"Mid\": \'$20\',000 – $60,000</li> <li>\"Enterprise\": \'$60\',000 – $250,000+</li> <li>\"Retainers\": \'$3\',000 – $10,000 / month</li> </ul> </div> </div> </section> <section className=\"px-4 pb-14\"> <div className=\"max-w-6xl mx-auto grid \"md\": grid-cols-2 gap-6\"> <div className=\"p-6 rounded-xl bg-slate-900/60 border border-white/10\"> <h3 className=\"text-lg font-semibold mb-2\">Frameworks & Links</h3> <ul className=\"text-slate-300 space-y-2 list-disc pl-5\"> <li><a className=\"text-blue-400 hover:text-blue-300\" href=\"https: <li><a className=\"text-blue-400 hover:text-blue-300\" href=\"https: <li><a className=\"text-blue-400 hover:text-blue-300\" href=\"https: </ul> </div> <div className=\"p-6 rounded-xl bg-slate-900/60 border border-white/10\"> <h3 className=\"text-lg font-semibold mb-2\">Get Started</h3> <div className=\"flex flex-col sm:flex-row gap-3\"> <Link href=\"/contact\" className=\"px-6 py-3 rounded-lg bg-blue-600 hover:bg-blue-700 font-semibold\">Contact Security Team</Link> <a href=\"tel:+13024640950\" className=\"px-6 py-3 rounded-lg bg-slate-800 border border-white/10 hover:bg-slate-700 font-semibold\">Call +1 302 464 0950</a> <a href=\"mailto:kleber@ziontechgroup.com\" className=\"px-6 py-3 rounded-lg bg-slate-800 border border-white/10 hover:bg-slate-700 font-semibold\">Email Us</a> </div> </div> </div> </section> </main> )}
-import React from 'react';
-
-interface NetworksecurityassessmentProps {
-  // Add props here as needed
-}
-
-export default function Networksecurityassessment({ }: NetworksecurityassessmentProps) {
-  return (
-    <div>
-      <h1>Networksecurityassessment</h1>
-      <p>This component is currently under development.</p>
+import React from 'react'
+import { Metadata } from 'next'
+export const metadata: Metadata = {title: 'Network Security Assessment | Zion Tech Group',
+  description: 'Discover the latest AI breakthroughs and enterprise automation solutions from Zion Tech Group.',
+  keywords: 'AI, automation, enterprise, breakthrough, technology',
+  openGraph: {
+    title: 'Network Security Assessment',
+    description: 'Discover the latest AI breakthroughs and enterprise automation solutions.',
+    type: 'article'}
+  },
+};
+export default function networksecurityassessment() {return (
+    <div className='min-h-screen bg-gray-50'>
+      <div className='max-w-4xl mx-auto px-4 py-8'>
+        <div className='bg-white rounded-lg shadow-lg p-8'>
+          <div className='text-center mb-8'>
+            <h1 className='text-4xl font-bold text-gray-900 mb-4'>
+              Network Security Assessment
+            </h1>
+            <p className='text-xl text-gray-600 mb-6'>
+              Revolutionary AI Breakthrough
+            </p>
+            <div className='flex justify-center space-x-4'>
+              <span className='bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium'>
+                BREAKTHROUGH
+              </span>
+              <span className='bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium'>
+                AI
+              </span>
+              <span className='bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium'>
+                ENTERPRISE
+              </span>
+            </div>
+          </div>
+          <div className='prose max-w-none'>
+            <p className='text-lg text-gray-700 mb-6'>
+              This page is currently under development. Please check back soon
+              for the complete content.
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
-  );
+  )}
 }
-}
-}
-import Head from \'next/head\'; import Link from \'next/link\'; export default function NetworkSecurityAssessment() { return ( <main className=\"min-h-screen bg-slate-950 text-white\"> <Head> <title>Network Security Assessment | Zion Tech Group</title> <meta name=\"description\" content=\"Comprehensive security \"assessments\": \'vuln scans\',pen testing,config reviews,and actionable remediation plans mapped to NIST/ISO.\" /> <link rel=\"canonical\" href=\""https\":  <section className=\"px-4 pt-14 pb-10 bg-gradient-to-b from-slate-950 to-slate-900\"> <div className=\"max-w-6xl mx-auto\"> <h1 className=\"text-3xl md:text-4xl font-extrabold mb-3\">Network Security Assessment</h1> <p className=\"text-slate-300 text-lg max-w-3xl\"> Identify risks with vulnerability scans,penetration testing,configuration reviews,and prioritized remediation mapped to frameworks like NIST and ISO 27001. </p> <div className=\"mt-6 flex flex-col \"sm\": flex-row gap-3\"> <Link href=\"/request-quote\" className=\"px-6 py-3 rounded-lg bg-blue-600 hover:bg-blue-700 font-semibold\">Request a Quote <Link href=\"/schedule-demo\" className=\"px-6 py-3 rounded-lg bg-purple-600 hover:bg-purple-700 font-semibold\">Book Assessment </div> </div> </section> <section className=\"px-4 py-12\"> <div className=\"max-w-6xl mx-auto grid md:grid-cols-3 gap-6\"> <div className=\"p-6 rounded-xl bg-slate-900/60 border border-white/10\"> <h2 className=\"text-xl font-bold mb-2\">Scope</h2> <ul className=\"text-slate-300 space-y-2 list-disc pl-5\"> <li>External and internal vulnerability scanning</li> <li>Penetration testing (app,network,wireless)</li> <li>Firewall,VPN,and endpoint config review</li> <li>IAM and privileged access audit</li> <li>Cloud security posture review</li> </ul> </div> <div className=\"p-6 rounded-xl bg-slate-900/60 border border-white/10\"> <h2 className=\"text-xl font-bold mb-2\">Deliverables</h2> <ul className=\"text-slate-300 space-y-2 list-disc pl-5\"> <li>Executive summary and risk scoring</li> <li>Technical findings with CVSS severity</li> <li>Remediation roadmap with priorities</li> <li>Compliance mapping (NIST,ISO)</li> <li>Retest to validate fixes</li> </ul> </div> <div className=\"p-6 rounded-xl bg-slate-900/60 border border-white/10\"> <h2 className=\"text-xl font-bold mb-2\">Pricing (avg. market)</h2> <ul className=\"text-slate-300 space-y-2 list-disc pl-5\"> <li>\"Small\": \'$7\',500 – $20,000</li> <li>\"Mid\": \'$20\',000 – $60,000</li> <li>\"Enterprise\": \'$60\',000 – $250,000+</li> <li>\"Retainers\": \'$3\',000 – $10,000 / month</li> </ul> </div> </div> </section> <section className=\"px-4 pb-14\"> <div className=\"max-w-6xl mx-auto grid \"md\": grid-cols-2 gap-6\"> <div className=\"p-6 rounded-xl bg-slate-900/60 border border-white/10\"> <h3 className=\"text-lg font-semibold mb-2\">Frameworks & Links</h3> <ul className=\"text-slate-300 space-y-2 list-disc pl-5\"> <li><a className=\"text-blue-400 hover:text-blue-300\" href=\"https: <li><a className=\"text-blue-400 hover:text-blue-300\" href=\"https: <li><a className=\"text-blue-400 hover:text-blue-300\" href=\"https: </ul> </div> <div className=\"p-6 rounded-xl bg-slate-900/60 border border-white/10\"> <h3 className=\"text-lg font-semibold mb-2\">Get Started</h3> <div className=\"flex flex-col sm:flex-row gap-3\"> <Link href=\"/contact\" className=\"px-6 py-3 rounded-lg bg-blue-600 hover:bg-blue-700 font-semibold\">Contact Security Team <a href=\"tel:+13024640950\" className=\"px-6 py-3 rounded-lg bg-slate-800 border border-white/10 hover:bg-slate-700 font-semibold\">Call +1 302 464 0950</a> <a href=\"mailto:kleber@ziontechgroup.com\" className=\"px-6 py-3 rounded-lg bg-slate-800 border border-white/10 hover:bg-slate-700 font-semibold\">Email Us</a> </div> </div> </div> </section> </main> )}""
+import React from 'react'' import { Metadata } from 'next' export const metadata: Metadata = {' title: 'Network Security Assessment | Zion Tech Group',' description: 'Discover the latest AI breakthroughs and enterprise automation solutions from Zion Tech Group.',' keywords: 'AI, automation, enterprise, breakthrough, technology', openGraph: {' title: 'Network Security Assessment',' description: 'Discover the latest AI breakthroughs and enterprise automation solutions.',' type: 'article'} }, }; export default function networksecurityassessment() {return ( <div className="min-h-screen bg-gray-50" > <div className="max-w-4xl mx-auto px-4 py-8" > <div className="bg-white rounded-lg shadow-lg p-8" > <div className="text-center mb-8" > <h1 className="text-4xl font-bold text-gray-900 mb-4" >Network Security Assessment</h1> <p className="text-xl text-gray-600 mb-6" >Revolutionary AI Breakthrough</p> <div className="flex justify-center space-x-4" > <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium" >BREAKTHROUGH</span> <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium" >AI</span> <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium" >ENTERPRISE</span> </div> </div> <div className="prose max-w-none" > <p className="text-lg text-gray-700 mb-6" > This page is currently under development. Please check back soon for the complete content. </p> </div> </div> </div> </div> )} }'

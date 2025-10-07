@@ -115,11 +115,7 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
             <button
               key={filter.id}
               onClick={() => setActiveFilter(filter.id)}
-              className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
-                activeFilter === filter.id
-                  ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white shadow-lg'
-                  : 'bg-white text-gray-700 hover:bg-gray-100 shadow-md'
-              }`}
+              `}
             >
               {filter.label} ({filter.count})
             </button>
@@ -136,11 +132,7 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
               {/* Content Type Badge */}
               <div className="p-4 pb-0">
                 <div className="flex items-center justify-between mb-3">
-                  <span className={`px-3 py-1 rounded-full text-sm font-medium ${
-                    item.category === 'blog' ? 'bg-blue-100 text-blue-800' :
-                    item.category === 'case-study' ? 'bg-green-100 text-green-800' :
-                    'bg-purple-100 text-purple-800'
-                  }`}>
+                  <span `}>
                     {item.type}
                   </span>
                   {item.featured && (

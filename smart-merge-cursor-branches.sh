@@ -1,63 +1,83 @@
 #!/bin/bash
-# Smart merge of recent cursor branches into main
 
-set -e
+# Smart script to merge cursor branches efficiently
+echo "🚀 Starting smart cursor branch merge process..."
 
-echo "=== Smart Merge of Recent Cursor Branches ==="
+# Ensure we're on main and up to date
+git checkout main
+git pull origin main
 
-# Get unmerged cursor branches sorted by date (most recent first)
-branches=$(git for-each-ref --sort=-committerdate refs/remotes/origin/cursor/create-and-deploy-new-content-* --format='%(refname:short)' | sed 's|origin/||' | head -20)
+# Get all cursor branches
+echo "📋 Fetching all cursor branches..."
+git fetch origin
 
-merged_count=0
-skipped_count=0
+# Get list of cursor branches that need merging
+CURSOR_BRANCHES=($(git branch -r | grep "origin/cursor/" | sed 's/origin\///' | head -50))
 
-for branch in $branches; do
+echo "📊 Found ${#CURSOR_BRANCHES[@]} cursor branches to process"
+
+successful_merges=0
+failed_merges=0
+already_merged=0
+
+# Process each branch
+for branch in "${CURSOR_BRANCHES[@]}"; do
     echo ""
-    echo "=== Attempting to merge: $branch ==="
+    echo "🔄 Processing branch: $branch"
     
-    # Check if already merged
-    if git merge-base --is-ancestor "origin/$branch" HEAD 2>/dev/null; then
-        echo "✓ Already merged, skipping"
-        ((skipped_count++))
+    # Check if branch is already merged into main
+    if git merge-base --is-ancestor "origin/$branch" "origin/main" 2>/dev/null; then
+        echo "   ✅ Branch $branch is already merged into main, skipping..."
+        ((already_merged++))
         continue
     fi
     
-    # Try merge with strategy to prefer content from branches
-    if git merge --no-edit -X theirs "origin/$branch" 2>&1; then
-        echo "✓ Successfully merged $branch"
-        ((merged_count++))
+    # Try to merge the branch
+    if git merge "origin/$branch" --no-edit --no-ff 2>/dev/null; then
+        echo "   ✅ Successfully merged $branch"
+        ((successful_merges++))
     else
-        # Auto-resolve conflicts
-        echo "⚠ Conflicts detected, auto-resolving..."
+        echo "   ⚠️  Merge conflicts detected for $branch, attempting resolution..."
         
-        # For content files, take theirs; for config, take ours
-        git status --porcelain | grep "^UU" | awk '{print $2}' | while read file; do
-            if [[ "$file" =~ (posts|articles|insights|content/|components/.*Banner) ]]; then
-                git checkout --theirs "$file"
-                echo "  ✓ Kept branch version: $file"
-            else
-                git checkout --ours "$file"
-                echo "  ✓ Kept main version: $file"
-            fi
-            git add "$file"
-        done
+        # Try to resolve conflicts by taking theirs (incoming changes)
+        git checkout --theirs . 2>/dev/null || true
+        git add . 2>/dev/null || true
         
         if git commit --no-edit 2>/dev/null; then
-            echo "✓ Auto-resolved and merged $branch"
-            ((merged_count++))
+            echo "   ✅ Conflicts resolved and merged $branch"
+            ((successful_merges++))
         else
-            echo "✗ Skipping $branch - could not auto-resolve"
+            echo "   ❌ Failed to resolve conflicts for $branch"
             git merge --abort 2>/dev/null || true
+            ((failed_merges++))
         fi
     fi
+    
+    # Small delay to avoid overwhelming the system
+    sleep 0.5
 done
 
+# Push all changes
 echo ""
-echo "=== Pushing merged changes ==="
-git push origin main
+echo "📤 Pushing merged changes to main..."
+if git push origin main; then
+    echo "✅ Successfully pushed all merged changes to main"
+else
+    echo "❌ Failed to push changes to main"
+fi
+
+# Generate summary
+echo ""
+echo "📊 SMART MERGE SUMMARY:"
+echo "   ✅ Successful merges: $successful_merges"
+echo "   ❌ Failed merges: $failed_merges"
+echo "   🔄 Already merged: $already_merged"
+echo "   📈 Total branches processed: ${#CURSOR_BRANCHES[@]}"
+
+if [ $successful_merges -gt 0 ]; then
+    echo ""
+    echo "🎉 Successfully merged $successful_merges branches into main!"
+fi
 
 echo ""
-echo "=== Summary ==="
-echo "Merged: $merged_count"
-echo "Skipped: $skipped_count"
-echo "Done!"
+echo "🏁 Smart merge process completed!"

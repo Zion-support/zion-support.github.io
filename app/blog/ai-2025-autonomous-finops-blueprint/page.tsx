@@ -1,4 +1,3 @@
-import React from 'react';
 
 export const metadata = {
   title: 'Autonomous FinOps 2025: Cut AI Spend 50–85% Safely',

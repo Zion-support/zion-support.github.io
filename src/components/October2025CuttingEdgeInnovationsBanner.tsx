@@ -1,4 +1,3 @@
-import { ArrowRight, Brain, Sparkles, TrendingUp } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const October2025CuttingEdgeInnovationsBanner = () => {
@@ -7,7 +6,7 @@ const October2025CuttingEdgeInnovationsBanner = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
         <div className="flex items-start gap-4">
           <div className="hidden sm:flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-indigo-500 to-purple-600 flex-shrink-0 shadow-lg shadow-indigo-500/50">
-            <Sparkles className="w-8 h-8 text-white" />
+
           </div>
           
           <div className="flex-1 min-w-0">
@@ -40,7 +39,7 @@ const October2025CuttingEdgeInnovationsBanner = () => {
                 className="group bg-gradient-to-br from-blue-600/20 to-purple-600/20 hover:from-blue-600/30 hover:to-purple-600/30 border border-blue-400/30 rounded-lg p-3 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25"
               >
                 <div className="flex items-start gap-2 mb-2">
-                  <Brain className="w-5 h-5 text-blue-400 flex-shrink-0 mt-0.5" />
+
                   <div className="flex-1 min-w-0">
                     <h3 className="font-bold text-sm text-blue-200 mb-1 leading-snug group-hover:text-blue-100">
                       Neuro-Symbolic AI Breakthrough
@@ -52,7 +51,7 @@ const October2025CuttingEdgeInnovationsBanner = () => {
                 </div>
                 <div className="flex items-center justify-between text-xs">
                   <span className="text-blue-400 font-semibold">Hybrid Intelligence</span>
-                  <ArrowRight className="w-4 h-4 text-blue-400 group-hover:translate-x-1 transition-transform" />
+
                 </div>
               </Link>
 
@@ -61,7 +60,7 @@ const October2025CuttingEdgeInnovationsBanner = () => {
                 className="group bg-gradient-to-br from-cyan-600/20 to-blue-600/20 hover:from-cyan-600/30 hover:to-blue-600/30 border border-cyan-400/30 rounded-lg p-3 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25"
               >
                 <div className="flex items-start gap-2 mb-2">
-                  <Sparkles className="w-5 h-5 text-cyan-400 flex-shrink-0 mt-0.5" />
+
                   <div className="flex-1 min-w-0">
                     <h3 className="font-bold text-sm text-cyan-200 mb-1 leading-snug group-hover:text-cyan-100">
                       Spatial Computing + AI Revolution
@@ -73,7 +72,7 @@ const October2025CuttingEdgeInnovationsBanner = () => {
                 </div>
                 <div className="flex items-center justify-between text-xs">
                   <span className="text-cyan-400 font-semibold">Immersive Intelligence</span>
-                  <ArrowRight className="w-4 h-4 text-cyan-400 group-hover:translate-x-1 transition-transform" />
+
                 </div>
               </Link>
 
@@ -82,7 +81,7 @@ const October2025CuttingEdgeInnovationsBanner = () => {
                 className="group bg-gradient-to-br from-orange-600/20 to-red-600/20 hover:from-orange-600/30 hover:to-red-600/30 border border-orange-400/30 rounded-lg p-3 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-orange-500/25"
               >
                 <div className="flex items-start gap-2 mb-2">
-                  <TrendingUp className="w-5 h-5 text-orange-400 flex-shrink-0 mt-0.5" />
+
                   <div className="flex-1 min-w-0">
                     <h3 className="font-bold text-sm text-orange-200 mb-1 leading-snug group-hover:text-orange-100">
                       Agentic Supply Chain Revolution
@@ -94,7 +93,7 @@ const October2025CuttingEdgeInnovationsBanner = () => {
                 </div>
                 <div className="flex items-center justify-between text-xs">
                   <span className="text-orange-400 font-semibold">Autonomous Operations</span>
-                  <ArrowRight className="w-4 h-4 text-orange-400 group-hover:translate-x-1 transition-transform" />
+
                 </div>
               </Link>
             </div>
@@ -104,7 +103,7 @@ const October2025CuttingEdgeInnovationsBanner = () => {
               className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 text-white font-bold rounded-lg transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl hover:shadow-indigo-500/50"
             >
               <span>Explore Today's Breakthrough Innovations</span>
-              <ArrowRight className="w-5 h-5" />
+
             </Link>
           </div>
         </div>

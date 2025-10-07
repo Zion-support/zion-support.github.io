@@ -1,5 +1,4 @@
 import React from 'react';
-import { ArrowRight, Sparkles, Zap, Brain, CheckCircle, Star, Users, Award, TrendingUp, Rocket, Globe, Shield, Target } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const GlobalAITransformationHub = () => {
@@ -8,7 +7,7 @@ const GlobalAITransformationHub = () => {
       title: 'Enterprise Automation',
       description: 'Complete business process automation with 95% efficiency gains',
       value: '$2.3B',
-      icon: <Target className="w-8 h-8" />,
+      icon: '🚀',
       color: 'from-blue-500 to-cyan-500',
       link: '/services/enterprise-automation-transformation'
     },
@@ -16,7 +15,7 @@ const GlobalAITransformationHub = () => {
       title: 'Quantum Consciousness AI',
       description: 'Revolutionary AI consciousness integration with infinite scalability',
       value: '$500B',
-      icon: <Brain className="w-8 h-8" />,
+      icon: '🚀',
       color: 'from-purple-500 to-violet-500',
       link: '/services/quantum-consciousness-ai-services'
     },
@@ -24,7 +23,7 @@ const GlobalAITransformationHub = () => {
       title: 'Autonomous Operations',
       description: 'Self-managing systems with 99.99% uptime and zero human intervention',
       value: '$150B',
-      icon: <Zap className="w-8 h-8" />,
+      icon: '🚀',
       color: 'from-emerald-500 to-teal-500',
       link: '/services/autonomous-operations-platform'
     },
@@ -32,7 +31,7 @@ const GlobalAITransformationHub = () => {
       title: 'Neural Security',
       description: 'Advanced AI-powered security with 99.7% threat prevention',
       value: '$87B',
-      icon: <Shield className="w-8 h-8" />,
+      icon: '🚀',
       color: 'from-orange-500 to-red-500',
       link: '/services/neural-security-framework'
     }
@@ -48,9 +47,9 @@ const GlobalAITransformationHub = () => {
   return (
     <div className="bg-gradient-to-br from-slate-900 via-blue-900/20 to-slate-900 border border-blue-400/30 rounded-2xl p-8 mb-12 animate-fade-in shadow-2xl">
       <div className="flex items-center justify-center gap-3 mb-6">
-        <Globe className="w-8 h-8 text-blue-400 animate-pulse" />
+
         <span className="text-2xl font-bold text-blue-400">🌍 GLOBAL AI TRANSFORMATION HUB</span>
-        <Globe className="w-8 h-8 text-blue-400 animate-pulse" />
+
       </div>
       
       <h2 className="text-4xl md:text-5xl font-extrabold mb-6 text-center bg-gradient-to-r from-blue-400 via-cyan-400 to-emerald-400 bg-clip-text text-transparent">
@@ -73,7 +72,7 @@ const GlobalAITransformationHub = () => {
             <p className="text-sm mb-4 opacity-90">{area.description}</p>
             <div className="flex items-center justify-between">
               <span className="text-lg font-bold bg-white/20 px-3 py-1 rounded-full">{area.value}</span>
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+
             </div>
           </Link>
         ))}
@@ -81,7 +80,7 @@ const GlobalAITransformationHub = () => {
 
       <div className="bg-gradient-to-r from-blue-500/20 to-emerald-500/20 rounded-xl p-6 mb-8 border border-blue-400/30">
         <div className="flex items-center justify-center gap-3 mb-4">
-          <TrendingUp className="w-6 h-6 text-green-400" />
+
           <span className="text-xl font-bold text-green-400">Global Success Metrics</span>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
@@ -97,7 +96,7 @@ const GlobalAITransformationHub = () => {
       <div className="grid md:grid-cols-3 gap-6 mb-8">
         <div className="bg-gradient-to-br from-purple-500/20 to-violet-500/20 rounded-xl p-6 border border-purple-400/30">
           <div className="flex items-center gap-3 mb-4">
-            <Rocket className="w-6 h-6 text-purple-400" />
+
             <h3 className="text-lg font-bold text-purple-400">Revolutionary Breakthroughs</h3>
           </div>
           <p className="text-gray-300 mb-4">Latest AI innovations achieving unprecedented accuracy and consciousness integration.</p>
@@ -105,13 +104,12 @@ const GlobalAITransformationHub = () => {
             to="/blog/ai-2026-revolutionary-breakthrough-announcement" 
             className="text-purple-400 hover:text-purple-300 font-semibold flex items-center gap-2"
           >
-            Explore Breakthroughs <ArrowRight className="w-4 h-4" />
-          </Link>
+            Explore Breakthroughs</Link>
         </div>
 
         <div className="bg-gradient-to-br from-emerald-500/20 to-teal-500/20 rounded-xl p-6 border border-emerald-400/30">
           <div className="flex items-center gap-3 mb-4">
-            <Award className="w-6 h-6 text-emerald-400" />
+
             <h3 className="text-lg font-bold text-emerald-400">Success Stories</h3>
           </div>
           <p className="text-gray-300 mb-4">Real-world transformations delivering billions in value creation and operational excellence.</p>
@@ -119,13 +117,12 @@ const GlobalAITransformationHub = () => {
             to="/case-studies" 
             className="text-emerald-400 hover:text-emerald-300 font-semibold flex items-center gap-2"
           >
-            View Case Studies <ArrowRight className="w-4 h-4" />
-          </Link>
+            View Case Studies</Link>
         </div>
 
         <div className="bg-gradient-to-br from-orange-500/20 to-red-500/20 rounded-xl p-6 border border-orange-400/30">
           <div className="flex items-center gap-3 mb-4">
-            <Users className="w-6 h-6 text-orange-400" />
+
             <h3 className="text-lg font-bold text-orange-400">Expert Services</h3>
           </div>
           <p className="text-gray-300 mb-4">Comprehensive AI transformation services tailored to your specific business needs.</p>
@@ -133,8 +130,7 @@ const GlobalAITransformationHub = () => {
             to="/services" 
             className="text-orange-400 hover:text-orange-300 font-semibold flex items-center gap-2"
           >
-            Get Started <ArrowRight className="w-4 h-4" />
-          </Link>
+            Get Started</Link>
         </div>
       </div>
 
@@ -143,9 +139,9 @@ const GlobalAITransformationHub = () => {
           to="/contact" 
           className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-emerald-500 text-white px-8 py-4 rounded-xl font-bold hover:from-blue-600 hover:to-emerald-600 transition-all duration-300 hover:scale-105 shadow-lg"
         >
-          <Sparkles className="w-5 h-5" />
+
           Start Your AI Transformation Journey
-          <ArrowRight className="w-5 h-5" />
+
         </Link>
         <p className="mt-4 text-gray-400 text-sm">
           🌍 Join 2.5M+ professionals worldwide transforming their businesses with revolutionary AI technology

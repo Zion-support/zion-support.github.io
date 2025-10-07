@@ -9,7 +9,7 @@ import { bannerManager } from '../utils/bannerOptimizer';
 
 interface OptimizedBannerLoaderProps {
   bannerId: string;
-  importFn: () => Promise<{ default: React.ComponentType<any> }>;
+  importFn: () => Promise<{ default: React.ComponentType<Record<string, unknown>> }>;
   priority?: number;
   fallback?: React.ReactNode;
   preload?: boolean;
@@ -26,7 +26,7 @@ export default function OptimizedBannerLoader({
   fallback = <BannerSkeleton />,
   preload = false,
 }: OptimizedBannerLoaderProps) {
-  const [Component, setComponent] = useState<React.ComponentType<any> | null>(null);
+  const [Component, setComponent] = useState<React.ComponentType<Record<string, unknown>> | null>(null);
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -86,8 +86,7 @@ export default function OptimizedBannerLoader({
       onClick={() => bannerManager.recordClick(bannerId)}
     >
       <Suspense fallback={fallback}>
-        <Component />
-      </Suspense>
+        <Component</Suspense>
     </div>
   );
 }

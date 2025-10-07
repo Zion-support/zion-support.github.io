@@ -1,11 +1,1 @@
-
-
- }
- const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics> => {
- }
- }
-
-
-  }
-  }
-  }
+} const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics> => {} } } } }

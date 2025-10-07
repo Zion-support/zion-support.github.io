@@ -1,4 +1,1 @@
-export: interface InnovativeITService2024 {
-  id: string;
-
-  roi: string;
+export: interface InnovativeITService2024 {id: string} roi: string}

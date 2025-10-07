@@ -1,98 +1,84 @@
 #!/usr/bin/env python3
 """
-Script to resolve git merge conflicts automatically
+Script to automatically resolve merge conflicts
 """
-import os
-import re
-import glob
 
-def resolve_conflicts_in_file(file_path):
-    """Resolve conflicts in a single file"""
-    print(f"Resolving conflicts in {file_path}")
-    
+import os
+import subprocess
+import sys
+
+def run_command(cmd, check=True):
+    """Run a command and return the result"""
     try:
-        with open(file_path, 'r', encoding='utf-8') as f:
-            content = f.read()
-    except Exception as e:
-        print(f"Error reading {file_path}: {e}")
+        result = subprocess.run(cmd, shell=True, capture_output=True, text=True, check=check)
+        return result.returncode == 0, result.stdout, result.stderr
+    except subprocess.CalledProcessError as e:
+        return False, e.stdout, e.stderr
+
+def resolve_conflicts():
+    """Resolve merge conflicts by choosing the appropriate version"""
+    print("🔧 Resolving merge conflicts...")
+    
+    # Get list of files with conflicts
+    success, stdout, stderr = run_command("git diff --name-only --diff-filter=U")
+    if not success:
+        print(f"❌ Error getting conflicted files: {stderr}")
         return False
     
-    # Check if file has conflicts
-                i += 1
-            
-            if i >= len(lines):
-                # No separator found, keep original
-                resolved_lines.append(line)
-                i += 1
-                continue
-                
-            middle = i
-            i += 1
-            
-            # Find the end separator
-                i += 1
-            
-            if i >= len(lines):
-                # No end found, keep original
-                resolved_lines.append(line)
-                i += 1
-                continue
-                
-            end = i
-            i += 1
-            
-            # Extract HEAD content (our changes)
-            head_content = lines[conflict_start + 1:middle]
-            
-            # Extract incoming content
-            incoming_content = lines[middle + 1:end]
-            
-            # Choose the better version (prefer non-empty, longer content)
-            if len(incoming_content) > len(head_content):
-                resolved_lines.extend(incoming_content)
-            else:
-                resolved_lines.extend(head_content)
-                
-        else:
-            resolved_lines.append(line)
-            i += 1
-    
-    # Write resolved content
-    try:
-        with open(file_path, 'w', encoding='utf-8') as f:
-            f.write('\n'.join(resolved_lines))
-        print(f"Successfully resolved conflicts in {file_path}")
+    conflicted_files = stdout.strip().split('\n')
+    if not conflicted_files or conflicted_files == ['']:
+        print("✅ No merge conflicts found!")
         return True
-    except Exception as e:
-        print(f"Error writing {file_path}: {e}")
-        return False
+    
+    print(f"📋 Found {len(conflicted_files)} files with conflicts")
+    
+    for file_path in conflicted_files:
+        if not file_path.strip():
+            continue
+            
+        print(f"🔧 Resolving conflicts in: {file_path}")
+        
+        # For most conflicts, we'll accept the incoming version (theirs)
+        # This is typically what we want when merging PRs
+        success, stdout, stderr = run_command(f"git checkout --theirs '{file_path}'")
+        if success:
+            print(f"   ✅ Resolved conflicts in {file_path}")
+        else:
+            print(f"   ⚠️  Warning resolving {file_path}: {stderr}")
+        
+        # Add the resolved file
+        run_command(f"git add '{file_path}'")
+    
+    return True
 
 def main():
-    """Main function to resolve all conflicts"""
-    # Get list of files with conflicts
-    result = os.popen('git status --porcelain | grep "^UU"').read()
-    conflict_files = []
+    print("🚀 Starting conflict resolution process...")
     
-    for line in result.strip().split('\n'):
-        if line:
-            file_path = line.split()[1]
-            conflict_files.append(file_path)
+    # Resolve conflicts
+    if not resolve_conflicts():
+        print("❌ Failed to resolve conflicts")
+        return 1
     
-    if not conflict_files:
-        print("No conflict files found")
-        return
+    # Commit the merge
+    print("\n💾 Committing the merge...")
+    success, stdout, stderr = run_command("git commit -m 'Merge all open PRs - resolved conflicts automatically'")
+    if success:
+        print("✅ Successfully committed merge!")
+    else:
+        print(f"❌ Failed to commit merge: {stderr}")
+        return 1
     
-    print(f"Found {len(conflict_files)} files with conflicts:")
-    for f in conflict_files:
-        print(f"  - {f}")
+    # Push changes
+    print("\n🚀 Pushing changes to remote...")
+    success, stdout, stderr = run_command("git push origin main")
+    if success:
+        print("✅ Successfully pushed changes to remote!")
+    else:
+        print(f"❌ Failed to push changes: {stderr}")
+        return 1
     
-    # Resolve conflicts in each file
-    success_count = 0
-    for file_path in conflict_files:
-        if resolve_conflicts_in_file(file_path):
-            success_count += 1
-    
-    print(f"\nResolved conflicts in {success_count}/{len(conflict_files)} files")
+    print("\n🎉 All conflicts resolved and changes pushed successfully!")
+    return 0
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())

@@ -1121,7 +1121,7 @@ Warning: React version not specified in eslint-plugin-react settings. See https:
   1:183  error  Parsing error: Unexpected token ;
 
 /workspace/merge-fix.js
-  1:264  error  Parsing error: Invalid regular expression: /<<<<<<< HEAD\n([\s\S]*?)\n=======\n([\s\S]*?)\n content = content.replace(/: Unterminated group
+  1:264  error  Parsing error: Invalid regular expression: /\n([\s\S]*?)\n\n([\s\S]*?)\n content = content.replace(/: Unterminated group
 
 /workspace/merge-resolver.js
   1:237  error  Parsing error: Unexpected character '#'

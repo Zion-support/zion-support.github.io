@@ -1,9 +1,5 @@
 {
   "timestamp": "2025-09-07T00:19:31.690Z",
-  "checks": [
-    "Build status: OK",
-    "Dependencies: OK",
-    "Configuration: OK"
-  ],
+  "checks": ["Build status: OK", "Dependencies: OK", "Configuration: OK"],
   "status": "healthy"
 }

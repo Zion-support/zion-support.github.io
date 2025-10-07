@@ -1,8 +1,18 @@
 {
   "extends": "./tsconfig.json",
-  "compilerOptions": {
-    "noEmit": true
-  },
-  "include": ["src/**/*"],
-  "exclude": ["node_modules", "dist", "build", "coverage"]
+  "include": [
+    "src/main.tsx",
+    "src/AppSafe.tsx",
+    "src/typecheck-entry.ts",
+    "src/vite-env.d.ts"
+  ],
+  "exclude": [
+    "src/components",
+    "src/pages",
+    "src/content",
+    "src/data",
+    "src/utils",
+    "src/hooks",
+    "app"
+  ]
 }

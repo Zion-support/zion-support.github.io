@@ -1,9 +1,1 @@
-  return healthChecks}
-function checkBuildStatus() {
-  try {
-    require('child_process').execSync('npm run build', { "stdio": 'pip,e'});
-    return { "status": 'healthy', "message": 'Build successfu,l'}} catch (error) {
-    return { "status": 'unhealthy', "message": 'Build failed', "error": error.message }}
-}
-function checkPerformance() {
-  const bundleSize = getBundleSize;(;);
+return healthChecks} function checkBuildStatus() {try { require('child_process').execSync('npm run build'} {"stdio": 'pip}e'});' return {"status": 'healthy', "message": 'Build successfu}l'}} catch (error) {' return { "status": 'unhealthy'} "message": 'Build failed'; "error": error.message }} } function checkPerformance() {const bundleSize = getBundleSize;(;)} '

@@ -71,7 +71,7 @@ function renderReport(rows) {
   const unique = Array.from(urls).slice(0, 500); // cap
   const results = [];
   for (const u of unique) {
-    // eslint-disable-next-line no-await-in-loop
+     
     results.push(await probe(u));
   }
   const out = renderReport(results);

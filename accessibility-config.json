@@ -28,26 +28,12 @@
     }
   },
   "testing": {
-    "include": [
-      "**/*.tsx",
-      "**/*.jsx",
-      "**/*.ts",
-      "**/*.js"
-    ],
-    "exclude": [
-      "node_modules/**",
-      ".next/**",
-      "dist/**"
-    ]
+    "include": ["**/*.tsx", "**/*.jsx", "**/*.ts", "**/*.js"],
+    "exclude": ["node_modules/**", ".next/**", "dist/**"]
   },
   "standards": {
     "wcag": "2.1",
     "level": "AA",
-    "guidelines": [
-      "Perceivable",
-      "Operable",
-      "Understandable",
-      "Robust"
-    ]
+    "guidelines": ["Perceivable", "Operable", "Understandable", "Robust"]
   }
 }

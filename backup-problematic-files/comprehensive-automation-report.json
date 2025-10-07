@@ -13,10 +13,7 @@
     "codeQuality": {
       "success": false,
       "duration": 42831,
-      "errors": [
-        "spawnSync /bin/sh ENOBUFS",
-        "spawnSync /bin/sh ENOBUFS"
-      ],
+      "errors": ["spawnSync /bin/sh ENOBUFS", "spawnSync /bin/sh ENOBUFS"],
       "warnings": []
     },
     "securityAudit": {

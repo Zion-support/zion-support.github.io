@@ -21,8 +21,7 @@ const October2025NewContentMegaLaunchBanner: React.FC = () => {
         {/* Main heading */}
         <h2 className="text-5xl md:text-6xl font-bold text-center mb-6 leading-tight">
           🌟 Breakthrough AI Content
-          <br />
-          <span className="bg-gradient-to-r from-yellow-300 to-orange-300 bg-clip-text text-transparent">
+          <br /> <span className="bg-gradient-to-r from-yellow-300 to-orange-300 bg-clip-text text-transparent">
             LIVE NOW!
           </span>
         </h2>
@@ -46,7 +45,7 @@ const October2025NewContentMegaLaunchBanner: React.FC = () => {
             </p>
             <div className="flex items-center justify-between">
               <span className="text-yellow-300 font-semibold">Read Full Guide →</span>
-              <span className="px-3 py-1 bg-green-500/20 rounded-full text-sm">NEW</span>
+              
             </div>
           </Link>
 
@@ -61,7 +60,7 @@ const October2025NewContentMegaLaunchBanner: React.FC = () => {
             </p>
             <div className="flex items-center justify-between">
               <span className="text-yellow-300 font-semibold">Explore Now →</span>
-              <span className="px-3 py-1 bg-green-500/20 rounded-full text-sm">NEW</span>
+              
             </div>
           </Link>
 
@@ -76,7 +75,7 @@ const October2025NewContentMegaLaunchBanner: React.FC = () => {
             </p>
             <div className="flex items-center justify-between">
               <span className="text-yellow-300 font-semibold">Learn More →</span>
-              <span className="px-3 py-1 bg-green-500/20 rounded-full text-sm">NEW</span>
+              
             </div>
           </Link>
         </div>

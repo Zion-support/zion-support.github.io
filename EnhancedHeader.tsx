@@ -1,31 +1,65 @@
-                {/* Mobile Navigation */}
-                {navigation_items.map ((item) => (
-                  <div key={item.name}>;
-                    {item.dropdown ? (
-                      <div>;
-                        <button;
-                          on_click={() => toggle_dropdown (item.name)}
-                          className="flex items - center justify - between w - full text - left text - gray - 700 hover:text - blue - 600 transition-colors py-2";
-                        >;
-                          <span>{item.name}</span>;
-                          <ChevronDown className="w-4 h-4" />;
-                        </button>;
-                        {active_dropdown === item.name && (
-                          <div className="ml-4 space-y-2">;
-                            {item.dropdown.map ((dropdown_item) => (
-                              <Link;
-                                key={dropdown_item.name}
-                                href={dropdown_item.href}
-                                on_click={closeMobileMenu}
-                                className="block text - gray - 600 hover:text - blue - 600 transition-colors py-1";
-                              >;
-                                {dropdown_item.name}
-                              </Link>))}
-                          </div>)}
-                      </div>) : (
-                      <Link;
-                        href={item.href}
-                        on_click={closeMobileMenu}
-                        className="block text - gray - 700 hover:text - blue - 600 transition-colors py-2";
-                      >;
-                        {item.name}
+import React, { useState } from 'react';
+
+import { Menu, X } from "lucide-react";
+import { Link } from 'react-router-dom';
+
+;
+const EnhancedHeader: React.FC = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const navigationItems = [
+    { name: 'Home', href: '/' },
+    { name: 'Services', href: '/services' },
+    { name: 'About', href: '/about' },
+    { name: 'Contact', href: '/contact' },
+  ];
+  const closeMobileMenu = () => {
+    setIsOpen(false);
+  };
+  return (
+    <header className='bg-white shadow-lg'>
+      <div className='container mx-auto px-4'>
+        <div className='flex justify-between items-center py-4'>
+          <Link to='/' className='text-2xl font-bold text-blue-600'>
+            Zion Tech Group
+          </Link>
+          {/* Desktop Navigation */}
+          <nav className='hidden md:flex space-x-8'>
+            {navigationItems.map(item => (
+              <Link
+                key={item.name}
+                to={item.href}
+                className='text-gray-700 hover:text-blue-600 transition-colors'
+              >
+                {item.name}
+              </Link>
+            ))}
+          </nav>
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className='md:hidden text-gray-700'
+          >
+            {isOpen ? <X className='w-6 h-6' /> : <Menu className='w-6 h-6' />}
+          </button>
+        </div>
+        {/* Mobile Navigation */}
+        {isOpen && (
+          <div className='md:hidden py-4 border-t'>
+            {navigationItems.map(item => (
+              <div key={item.name}>
+                <Link
+                  to={item.href}
+                  className='block text-gray-700 hover:text-blue-600 py-2'
+                  onClick={closeMobileMenu}
+                >
+                  {item.name}
+                </Link>
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
+    </header>
+  );
+};
+export default EnhancedHeader;

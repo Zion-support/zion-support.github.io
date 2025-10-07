@@ -1,7 +1,6 @@
-import React from 'react';
-import Link from 'next/link';
-import { ArrowRight, TrendingUp, Target, Users, DollarSign, Zap, Shield, CheckCircle } from 'lucide-react';
+import { Link } from 'next/link';
 
+// 
 export default function Fortune500QuantumAITransformation2026() {
   return (
     <div className="min-h-screen bg-slate-950 text-white">
@@ -355,3 +354,4 @@ export default function Fortune500QuantumAITransformation2026() {
     </div>
   );
 }
+>>>>>>> 5d2b3c81c55b794aac3492f27f2c7fa2daa0ca39

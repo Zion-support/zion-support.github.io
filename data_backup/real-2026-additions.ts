@@ -1,3 +1,1 @@
-export: interface Real2026Addition {
-  id: string;
-
+export: interface Real2026Addition {id: string}

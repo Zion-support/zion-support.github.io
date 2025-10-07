@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
 import type { EnhancedPromotionalBanner as BannerType } from '../content/enhanced-promotional-banners';
 
 interface EnhancedPromotionalBannerProps {
@@ -35,7 +34,7 @@ const EnhancedPromotionalBanner: React.FC<EnhancedPromotionalBannerProps> = ({
             className="bg-white text-gray-900 px-6 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition-all flex items-center gap-2 flex-shrink-0"
           >
             {banner.ctaText}
-            <ArrowRight className="w-4 h-4" />
+
           </Link>
         </div>
       </div>

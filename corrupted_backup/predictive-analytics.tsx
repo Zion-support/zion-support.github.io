@@ -1,18 +1,46 @@
-import Head from \'next/head\'; import Link from \'next/link\'; export default function PredictiveAnalytics() { return ( <main className=\"min-h-screen bg-slate-950 text-white\"> <Head> <title>Predictive Analytics & Forecasting | Zion Tech Group</title> <meta name=\"description\" content=\"Time-series forecasting,churn,demand,and risk models. Data pipelines,MLOps,dashboards,and decision automation.\" /> <link rel=\"canonical\" href=\""https\": </Head> <section className=\"px-4 pt-14 pb-10 bg-gradient-to-b from-slate-950 to-slate-900\"> <div className=\"max-w-6xl mx-auto\"> <h1 className=\"text-3xl md:text-4xl font-extrabold mb-3\">Predictive Analytics & Forecasting</h1> <p className=\"text-slate-300 text-lg max-w-3xl\"> Build and deploy forecasting,churn,demand,and risk models with reliable data pipelines,observability,and dashboards tailored to business leaders. </p> <div className=\"mt-6 flex flex-col \"sm\": flex-row gap-3\"> <Link href=\"/schedule-demo\" className=\"px-6 py-3 rounded-lg bg-purple-600 hover:bg-purple-700 font-semibold\">Schedule Demo</Link> <Link href=\"/request-quote\" className=\"px-6 py-3 rounded-lg bg-slate-800 border border-white/10 hover:bg-slate-700 font-semibold\">Request a Quote</Link> </div> </div> </section> <section className=\"px-4 py-12\"> <div className=\"max-w-6xl mx-auto grid md:grid-cols-3 gap-6\"> <div className=\"p-6 rounded-xl bg-slate-900/60 border border-white/10\"> <h2 className=\"text-xl font-bold mb-2\">Use Cases</h2> <ul className=\"text-slate-300 space-y-2 list-disc pl-5\"> <li>Time-series sales and inventory forecasting</li> <li>Customer churn and LTV modeling</li> <li>Risk scoring and fraud detection</li> <li>Marketing mix and attribution</li> <li>Predictive maintenance and IoT</li> </ul> </div> <div className=\"p-6 rounded-xl bg-slate-900/60 border border-white/10\"> <h2 className=\"text-xl font-bold mb-2\">Stack & Links</h2> <ul className=\"text-slate-300 space-y-2 list-disc pl-5\"> <li><a className=\"text-blue-400 hover:text-blue-300\" href=\"https: <li>dbt,Looker,Power BI,Grafana</li> <li>MLOps on Vertex AI,SageMaker,MLflow</li> </ul> </div> <div className=\"p-6 rounded-xl bg-slate-900/60 border border-white/10\"> <h2 className=\"text-xl font-bold mb-2\">Pricing (avg. market)</h2> <ul className=\"text-slate-300 space-y-2 list-disc pl-5\"> <li>Pilot/\"PoC\": \'$10\',000 – $50,000</li> <li>\"Productionization\": \'$40\',000 – $250,000+</li> <li>\"Dashboards\": \'$5\',000 – $30,000</li> <li>Managed \"ML\": \'$2\',000 – $10,000 / month</li> </ul> </div> </div> </section> <section className=\"px-4 pb-14\"> <div className=\"max-w-6xl mx-auto flex flex-col \"sm\": flex-row gap-3\"> <Link href=\"/contact\" className=\"px-6 py-3 rounded-lg bg-blue-600 hover:bg-blue-700 font-semibold\">Contact Sales</Link> <a href=\"tel:+13024640950\" className=\"px-6 py-3 rounded-lg bg-slate-800 border border-white/10 hover:bg-slate-700 font-semibold\">Call +1 302 464 0950</a> <a href=\"mailto:kleber@ziontechgroup.com\" className=\"px-6 py-3 rounded-lg bg-slate-800 border border-white/10 hover:bg-slate-700 font-semibold\">Email Us</a> </div> </section> </main> )}
-import React from 'react';
-
-interface PredictiveanalyticsProps {
-  // Add props here as needed
-}
-
-export default function Predictiveanalytics({ }: PredictiveanalyticsProps) {
-  return (
-    <div>
-      <h1>Predictiveanalytics</h1>
-      <p>This component is currently under development.</p>
+import React from 'react'
+import { Metadata } from 'next'
+export const metadata: Metadata = {title: 'Predictive Analytics | Zion Tech Group',
+  description: 'Discover the latest AI breakthroughs and enterprise automation solutions from Zion Tech Group.',
+  keywords: 'AI, automation, enterprise, breakthrough, technology',
+  openGraph: {
+    title: 'Predictive Analytics',
+    description: 'Discover the latest AI breakthroughs and enterprise automation solutions.',
+    type: 'article'}
+  },
+};
+export default function predictiveanalytics() {return (
+    <div className='min-h-screen bg-gray-50'>
+      <div className='max-w-4xl mx-auto px-4 py-8'>
+        <div className='bg-white rounded-lg shadow-lg p-8'>
+          <div className='text-center mb-8'>
+            <h1 className='text-4xl font-bold text-gray-900 mb-4'>
+              Predictive Analytics
+            </h1>
+            <p className='text-xl text-gray-600 mb-6'>
+              Revolutionary AI Breakthrough
+            </p>
+            <div className='flex justify-center space-x-4'>
+              <span className='bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium'>
+                BREAKTHROUGH
+              </span>
+              <span className='bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium'>
+                AI
+              </span>
+              <span className='bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium'>
+                ENTERPRISE
+              </span>
+            </div>
+          </div>
+          <div className='prose max-w-none'>
+            <p className='text-lg text-gray-700 mb-6'>
+              This page is currently under development. Please check back soon
+              for the complete content.
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
-  );
+  )}
 }
-}
-}
-import Head from \'next/head\'; import Link from \'next/link\'; export default function PredictiveAnalytics() { return ( <main className=\"min-h-screen bg-slate-950 text-white\"> <Head> <title>Predictive Analytics & Forecasting | Zion Tech Group</title> <meta name=\"description\" content=\"Time-series forecasting,churn,demand,and risk models. Data pipelines,MLOps,dashboards,and decision automation.\" /> <link rel=\"canonical\" href=\""https\":  <section className=\"px-4 pt-14 pb-10 bg-gradient-to-b from-slate-950 to-slate-900\"> <div className=\"max-w-6xl mx-auto\"> <h1 className=\"text-3xl md:text-4xl font-extrabold mb-3\">Predictive Analytics & Forecasting</h1> <p className=\"text-slate-300 text-lg max-w-3xl\"> Build and deploy forecasting,churn,demand,and risk models with reliable data pipelines,observability,and dashboards tailored to business leaders. </p> <div className=\"mt-6 flex flex-col \"sm\": flex-row gap-3\"> <Link href=\"/schedule-demo\" className=\"px-6 py-3 rounded-lg bg-purple-600 hover:bg-purple-700 font-semibold\">Schedule Demo <Link href=\"/request-quote\" className=\"px-6 py-3 rounded-lg bg-slate-800 border border-white/10 hover:bg-slate-700 font-semibold\">Request a Quote </div> </div> </section> <section className=\"px-4 py-12\"> <div className=\"max-w-6xl mx-auto grid md:grid-cols-3 gap-6\"> <div className=\"p-6 rounded-xl bg-slate-900/60 border border-white/10\"> <h2 className=\"text-xl font-bold mb-2\">Use Cases</h2> <ul className=\"text-slate-300 space-y-2 list-disc pl-5\"> <li>Time-series sales and inventory forecasting</li> <li>Customer churn and LTV modeling</li> <li>Risk scoring and fraud detection</li> <li>Marketing mix and attribution</li> <li>Predictive maintenance and IoT</li> </ul> </div> <div className=\"p-6 rounded-xl bg-slate-900/60 border border-white/10\"> <h2 className=\"text-xl font-bold mb-2\">Stack & Links</h2> <ul className=\"text-slate-300 space-y-2 list-disc pl-5\"> <li><a className=\"text-blue-400 hover:text-blue-300\" href=\"https: <li>dbt,Looker,Power BI,Grafana</li> <li>MLOps on Vertex AI,SageMaker,MLflow</li> </ul> </div> <div className=\"p-6 rounded-xl bg-slate-900/60 border border-white/10\"> <h2 className=\"text-xl font-bold mb-2\">Pricing (avg. market)</h2> <ul className=\"text-slate-300 space-y-2 list-disc pl-5\"> <li>Pilot/\"PoC\": \'$10\',000 – $50,000</li> <li>\"Productionization\": \'$40\',000 – $250,000+</li> <li>\"Dashboards\": \'$5\',000 – $30,000</li> <li>Managed \"ML\": \'$2\',000 – $10,000 / month</li> </ul> </div> </div> </section> <section className=\"px-4 pb-14\"> <div className=\"max-w-6xl mx-auto flex flex-col \"sm\": flex-row gap-3\"> <Link href=\"/contact\" className=\"px-6 py-3 rounded-lg bg-blue-600 hover:bg-blue-700 font-semibold\">Contact Sales <a href=\"tel:+13024640950\" className=\"px-6 py-3 rounded-lg bg-slate-800 border border-white/10 hover:bg-slate-700 font-semibold\">Call +1 302 464 0950</a> <a href=\"mailto:kleber@ziontechgroup.com\" className=\"px-6 py-3 rounded-lg bg-slate-800 border border-white/10 hover:bg-slate-700 font-semibold\">Email Us</a> </div> </section> </main> )}""
+import React from 'react'' import { Metadata } from 'next' export const metadata: Metadata = {' title: 'Predictive Analytics | Zion Tech Group',' description: 'Discover the latest AI breakthroughs and enterprise automation solutions from Zion Tech Group.',' keywords: 'AI, automation, enterprise, breakthrough, technology', openGraph: {' title: 'Predictive Analytics',' description: 'Discover the latest AI breakthroughs and enterprise automation solutions.',' type: 'article'} }, }; export default function predictiveanalytics() {return ( <div className="min-h-screen bg-gray-50" > <div className="max-w-4xl mx-auto px-4 py-8" > <div className="bg-white rounded-lg shadow-lg p-8" > <div className="text-center mb-8" > <h1 className="text-4xl font-bold text-gray-900 mb-4" >Predictive Analytics</h1> <p className="text-xl text-gray-600 mb-6" >Revolutionary AI Breakthrough</p> <div className="flex justify-center space-x-4" > <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium" >BREAKTHROUGH</span> <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium" >AI</span> <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium" >ENTERPRISE</span> </div> </div> <div className="prose max-w-none" > <p className="text-lg text-gray-700 mb-6" > This page is currently under development. Please check back soon for the complete content. </p> </div> </div> </div> </div> )} }'

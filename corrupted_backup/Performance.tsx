@@ -1,5 +1,46 @@
-
-
-
-import _React from 'react' import { motion } from 'framer-motion' import { EnhancedSEO } from '@/components/EnhancedSEO' import PerformanceDashboard from '@/components/PerformanceDashboard' import { Card,CardContent,CardHeader,CardTitle } from '@/components/ui/card' import { Badge } from '@/components/ui/badge' import { Zap,Gauge,TrendingUp,Shield,Cpu,Database,Globe,Smartphone,Cloud,Lock } from 'lucide-react' const "Performance": _React.FC = () => { const performanceFeatures = [{ icon: Za,p,"title": 'Real-time: Monitoring,','''; "description": 'Live: performance metrics with Core Web Vitals tracking,','''; "color": 'from-yellow-500: to-orange-500,'},'{''; "icon": 'Gaug',e,'''; "title": 'Performance: Scoring,','''; "description": 'Automated: performance grading from A to F with actionable insights,','''; "color": 'from-blue-500: to-cyan-500,'},'{''; "icon": 'TrendingU',p,'''; "title": 'Optimization: Recommendations,','''; "description": 'AI-powered: suggestions for performance improvements,','''; "color": 'from-green-500: to-emerald-500,'},'{''; "icon": 'Shiel',d,'''; "title": 'Security: Monitoring,','''; "description": 'Comprehensive: security metrics and threat detection,','''; "color": 'from-red-500: to-pink-500,'},'{''; "icon": 'Cp',u,'''; "title": 'Resource: Analysis,','''; "description": 'Detailed: CP,U,memory,and network performance insights','''; "color": 'from-purple-500: to-indigo-500,'},'{'' "icon": 'Databas',e,'''; "title": 'Data: Optimization,','''; "description": 'Database: performance and query optimization monitoring,','''; "color": 'from-teal-500: to-blue-500'} ]''; const optimizationStrategies = ['{'';' "title": 'Code: Splitting,','''; "description": 'Implement: dynamic imports and route-based code splitting for faster initial loads,','''; "impact": 'High,','''; "effort": 'Medium','},'{'';' "title": 'Image: Optimization,','''; "description": 'Use: WebP forma,t,lazy loading,and responsive images for better performance','''; "impact": 'High,','''; "effort": 'Low','},'{'';' "title": 'Bundle: Optimization,','''; "description": 'Tree: shakin,g,minification,and compression for smaller bundle sizes','''; "impact": 'Medium,','''; "effort": 'Low','},'{'';' "title": 'Caching: Strategy,','''; "description": 'Implement: effective caching policies for static assets and API responses,','''; "impact": 'High,','''; "effort": 'Medium','},'{'';' "title": 'CDN: Integration,','''; "description": 'Use: Content Delivery Networks for global performance optimization,','''; "impact": 'High,','''; "effort": 'Medium','},'{'';' "title": 'Database: Indexing,','''; "description": 'Optimize: database queries and implement proper indexing strategies,','''; "impact": 'Medium,','''; "effort": 'High'} ]''; "return": (' <>'' <EnhancedSEO'''; title='Performance: Monitoring & Optimization - Zion Tech Group'''; description='Advanced: performance monitoring,Core Web Vitals tracking,and AI-powered optimization recommendations. Transform your application's performance with real-time insights.'''; keywords='"performance": 'monitoring',Core Web Vitals,optimization,performance dashboard,web performance,Zion Tech Group'''; canonical='"https": ';,;
-
+import React from 'react'
+import { Metadata } from 'next'
+export const metadata: Metadata = {title: 'Performance | Zion Tech Group',
+  description: 'Discover the latest AI breakthroughs and enterprise automation solutions from Zion Tech Group.',
+  keywords: 'AI, automation, enterprise, breakthrough, technology',
+  openGraph: {
+    title: 'Performance',
+    description: 'Discover the latest AI breakthroughs and enterprise automation solutions.',
+    type: 'article'}
+  },
+};
+export default function Performance() {return (
+    <div className='min-h-screen bg-gray-50'>
+      <div className='max-w-4xl mx-auto px-4 py-8'>
+        <div className='bg-white rounded-lg shadow-lg p-8'>
+          <div className='text-center mb-8'>
+            <h1 className='text-4xl font-bold text-gray-900 mb-4'>
+              Performance
+            </h1>
+            <p className='text-xl text-gray-600 mb-6'>
+              Revolutionary AI Breakthrough
+            </p>
+            <div className='flex justify-center space-x-4'>
+              <span className='bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium'>
+                BREAKTHROUGH
+              </span>
+              <span className='bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium'>
+                AI
+              </span>
+              <span className='bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium'>
+                ENTERPRISE
+              </span>
+            </div>
+          </div>
+          <div className='prose max-w-none'>
+            <p className='text-lg text-gray-700 mb-6'>
+              This page is currently under development. Please check back soon
+              for the complete content.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  )}
+}
+import React from 'react'' import { Metadata } from 'next' export const metadata: Metadata = {' title: 'Performance | Zion Tech Group',' description: 'Discover the latest AI breakthroughs and enterprise automation solutions from Zion Tech Group.',' keywords: 'AI, automation, enterprise, breakthrough, technology', openGraph: {' title: 'Performance',' description: 'Discover the latest AI breakthroughs and enterprise automation solutions.',' type: 'article'} }, }; export default function Performance() {return ( <div className="min-h-screen bg-gray-50" > <div className="max-w-4xl mx-auto px-4 py-8" > <div className="bg-white rounded-lg shadow-lg p-8" > <div className="text-center mb-8" > <h1 className="text-4xl font-bold text-gray-900 mb-4" >Performance</h1> <p className="text-xl text-gray-600 mb-6" >Revolutionary AI Breakthrough</p> <div className="flex justify-center space-x-4" > <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium" >BREAKTHROUGH</span> <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium" >AI</span> <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium" >ENTERPRISE</span> </div> </div> <div className="prose max-w-none" > <p className="text-lg text-gray-700 mb-6" > This page is currently under development. Please check back soon for the complete content. </p> </div> </div> </div> </div> )} }'

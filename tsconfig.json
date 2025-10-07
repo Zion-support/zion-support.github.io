@@ -2,103 +2,32 @@
   "compilerOptions": {
     "target": "ES2020",
     "useDefineForClassFields": true,
-    "lib": [
-      "ES2020",
-      "DOM",
-      "DOM.Iterable"
-    ],
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "module": "ESNext",
     "skipLibCheck": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    /* Bundler mode */
     "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
+    "allowImportingTsExtensions": false,
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "preserve",
-    /* Linting */
+    "jsx": "react-jsx",
     "strict": true,
-    "noImplicitAny": false,
-    "noUnusedLocals": false,
-    "noUnusedParameters": false,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    /* Path mapping */
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": [
-        "./src/*"
-      ],
-      "@/components/*": [
-        "./src/components/*"
-      ],
-      "@/pages/*": [
-        "./src/pages/*"
-      ],
-      "@/utils/*": [
-        "./src/utils/*"
-      ],
-      "@/hooks/*": [
-        "./src/hooks/*"
-      ],
-      "@/types/*": [
-        "./src/types/*"
-      ]
-    },
-    /* Types */
-    "types": [
-      "react",
-      "react-dom",
-      "jest",
-      "node"
-    ],
-    "allowJs": true,
-    "incremental": true,
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ]
-  },
-  "include": [
-    "index.html",
-    "src/**/*",
-    // Exclude Next.js `app` dir from type-check for Vite build context
-    // "app/**/*",
-    ".next/types/**/*.ts"
-  ],
-  "exclude": [
-    "node_modules",
-    "dist",
-    "build",
-    "coverage",
-    "**/*.test.ts",
-    "**/*.test.tsx",
-    "**/*.spec.ts",
-    "**/*.spec.tsx",
-    "ts_files_backup",
-    "zion-os.disabled",
-    "zion-os",
-    "zion-website",
-    "zion-ai-assistant",
-    "types.disabled",
-    "**/*.config.ts",
-    "vitest.config.ts",
-    "src/App.tsx",
-    "src/components/EnhancedErrorBoundary.tsx",
-    "src/components/EnhancedPerformanceMonitor.tsx",
-    "src/components/EnhancedUserExperience.tsx",
-    "src/components/FeaturedContentShowcase.tsx",
-    "src/components/PerformanceEnhancer.tsx",
-    "src/components/PerformanceMonitor.tsx",
-    "src/components/SEOEnhancer.tsx",
-    "src/hooks/usePerformanceMonitor.ts",
-    "src/utils/accessibilityEnhancer.ts"
-  ],
-  "references": [
-    {
-      "path": "./tsconfig.node.json"
+      "@/*": ["src/*"],
+      "@/components/*": ["src/components/*"],
+      "@/pages/*": ["src/pages/*"],
+      "@/utils/*": ["src/utils/*"],
+      "@/types/*": ["src/types/*"],
+      "@/config/*": ["src/config/*"]
     }
-  ]
+  },
+  "include": ["src", "app"],
+  "exclude": ["src/pages/blog-disabled/**/*", "app/blog", "app/components", "blog", "components", "src/components/**/*"],
+  "references": [{ "path": "./tsconfig.node.json" }]
 }

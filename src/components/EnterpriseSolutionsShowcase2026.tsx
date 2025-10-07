@@ -1,5 +1,4 @@
 import React from 'react';
-import { ArrowRight, Sparkles, Building, Shield, Cloud, Bot, Users, Award, Target, DollarSign } from 'lucide-react';
 
 const EnterpriseSolutionsShowcase2026: React.FC = () => {
   const enterpriseSolutions = [
@@ -12,7 +11,7 @@ const EnterpriseSolutionsShowcase2026: React.FC = () => {
       industry: 'All Industries',
       roi: '300%',
       savings: '$2M+',
-      icon: <Bot className="w-8 h-8" />,
+      icon: '🤖',
       gradient: 'from-blue-500 to-cyan-500',
       badge: 'BEST SELLER',
       features: ['Workflow Automation', 'Intelligent Routing', 'Process Optimization']
@@ -26,7 +25,7 @@ const EnterpriseSolutionsShowcase2026: React.FC = () => {
       industry: 'Finance, Healthcare, Government',
       roi: '250%',
       savings: '$5M+',
-      icon: <Shield className="w-8 h-8" />,
+      icon: '🤖',
       gradient: 'from-purple-500 to-indigo-500',
       badge: 'ENTERPRISE',
       features: ['Quantum Encryption', 'Zero-Trust Architecture', 'Threat Detection']
@@ -40,7 +39,7 @@ const EnterpriseSolutionsShowcase2026: React.FC = () => {
       industry: 'Technology, Retail, Manufacturing',
       roi: '400%',
       savings: '$3M+',
-      icon: <Cloud className="w-8 h-8" />,
+      icon: '🤖',
       gradient: 'from-green-500 to-emerald-500',
       badge: 'CLOUD-FIRST',
       features: ['Multi-Cloud Deployment', 'Auto-Scaling', 'Cost Optimization']
@@ -54,7 +53,7 @@ const EnterpriseSolutionsShowcase2026: React.FC = () => {
       industry: 'Retail, Finance, Healthcare',
       roi: '350%',
       savings: '$4M+',
-      icon: <Target className="w-8 h-8" />,
+      icon: '🤖',
       gradient: 'from-orange-500 to-red-500',
       badge: 'PREDICTIVE',
       features: ['Trend Forecasting', 'Risk Analysis', 'Customer Insights']
@@ -68,7 +67,7 @@ const EnterpriseSolutionsShowcase2026: React.FC = () => {
       industry: 'All Industries',
       roi: '500%',
       savings: '$10M+',
-      icon: <Building className="w-8 h-8" />,
+      icon: '🤖',
       gradient: 'from-teal-500 to-cyan-500',
       badge: 'TRANSFORMATION',
       features: ['Strategy Consulting', 'Implementation', 'Change Management']
@@ -82,7 +81,7 @@ const EnterpriseSolutionsShowcase2026: React.FC = () => {
       industry: 'Finance, Healthcare, Government',
       roi: '200%',
       savings: '$1.5M+',
-      icon: <Users className="w-8 h-8" />,
+      icon: '🤖',
       gradient: 'from-pink-500 to-purple-500',
       badge: 'GOVERNANCE',
       features: ['Ethical AI', 'Compliance Management', 'Risk Assessment']
@@ -90,10 +89,10 @@ const EnterpriseSolutionsShowcase2026: React.FC = () => {
   ];
 
   const successMetrics = [
-    { value: '500+', label: 'Enterprise Clients', icon: <Building className="w-8 h-8" /> },
-    { value: '$2B+', label: 'Cost Savings Generated', icon: <DollarSign className="w-8 h-8" /> },
-    { value: '98%', label: 'Client Satisfaction', icon: <Award className="w-8 h-8" /> },
-    { value: '24/7', label: 'Enterprise Support', icon: <Users className="w-8 h-8" /> }
+    { value: '500+', label: 'Enterprise Clients', icon: '🏢' },
+    { value: '$2B+', label: 'Cost Savings Generated', icon: '💰' },
+    { value: '98%', label: 'Client Satisfaction', icon: '⭐' },
+    { value: '24/7', label: 'Enterprise Support', icon: '🛠️' }
   ];
 
   return (
@@ -109,11 +108,11 @@ const EnterpriseSolutionsShowcase2026: React.FC = () => {
         {/* Header Section */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-gradient-to-r from-blue-500/20 to-indigo-500/20 border border-blue-500/30 mb-8 animate-fade-in">
-            <Sparkles className="w-5 h-5 text-blue-400 animate-pulse" />
+
             <span className="text-blue-400 font-bold text-sm tracking-wider uppercase">
               🏢 ENTERPRISE SOLUTIONS SHOWCASE • 2026
             </span>
-            <Sparkles className="w-5 h-5 text-indigo-400 animate-pulse" />
+
           </div>
 
           <h2 className="text-5xl md:text-6xl font-extrabold mb-6 bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent animate-fade-in">
@@ -146,8 +145,10 @@ const EnterpriseSolutionsShowcase2026: React.FC = () => {
         {/* Enterprise Solutions Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {enterpriseSolutions.map((solution, index) => (
-            <div 
-              key={solution.id}
+
+            <div
+key={solution.id}
+
               className="group relative bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 hover:border-blue-500/50 transition-all duration-500 overflow-hidden hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/20"
               style={{ animationDelay: `${index * 150}ms` }}
             >
@@ -170,8 +171,8 @@ const EnterpriseSolutionsShowcase2026: React.FC = () => {
                   <span className="inline-block px-3 py-1 rounded-full bg-gradient-to-r from-blue-500/20 to-indigo-500/20 text-blue-400 text-xs font-semibold border border-blue-500/30">
                     {solution.category}
                   </span>
-                  <div className="text-xs text-gray-500">
-                    Industries: {solution.industry}
+                  <div className="text-xs text-gray-500">",
+      Industries: {solution.industry}
                   </div>
                 </div>
 
@@ -189,11 +190,11 @@ const EnterpriseSolutionsShowcase2026: React.FC = () => {
                 <div className="grid grid-cols-2 gap-4 mb-6">
                   <div className="text-center p-3 rounded-lg bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30">
                     <div className="text-green-400 font-bold text-lg">{solution.roi}</div>
-                    <div className="text-gray-400 text-xs">ROI</div>
+                    
                   </div>
                   <div className="text-center p-3 rounded-lg bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-500/30">
                     <div className="text-blue-400 font-bold text-lg">{solution.savings}</div>
-                    <div className="text-gray-400 text-xs">Savings</div>
+                    
                   </div>
                 </div>
 
@@ -215,7 +216,7 @@ const EnterpriseSolutionsShowcase2026: React.FC = () => {
                   className={`group/btn flex items-center justify-center gap-2 w-full bg-gradient-to-r ${solution.gradient} hover:opacity-90 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1`}
                 >
                   <span>Explore Solution</span>
-                  <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-300" />
+
                 </a>
               </div>
             </div>
@@ -238,7 +239,7 @@ const EnterpriseSolutionsShowcase2026: React.FC = () => {
                   href="/contact"
                   className="bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-400 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 flex items-center justify-center gap-2"
                 >
-                  <Building className="w-5 h-5" />
+
                   <span>Schedule Enterprise Demo</span>
                 </a>
                 <a
@@ -246,7 +247,7 @@ const EnterpriseSolutionsShowcase2026: React.FC = () => {
                   className="border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-2"
                 >
                   <span>View Success Stories</span>
-                  <ArrowRight className="w-5 h-5" />
+
                 </a>
               </div>
             </div>

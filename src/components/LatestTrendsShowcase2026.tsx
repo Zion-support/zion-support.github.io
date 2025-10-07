@@ -113,7 +113,7 @@ const LatestTrendsShowcase2026: React.FC = () => {
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 text-center">
             <div className="text-5xl mb-4">🏭</div>
-            <h3 className="text-2xl font-bold text-white mb-4">Manufacturing</h3>
+            
             <div className="text-4xl font-extrabold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent mb-2">
               78%
             </div>
@@ -125,7 +125,7 @@ const LatestTrendsShowcase2026: React.FC = () => {
 
           <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 text-center">
             <div className="text-5xl mb-4">🏥</div>
-            <h3 className="text-2xl font-bold text-white mb-4">Healthcare</h3>
+            
             <div className="text-4xl font-extrabold bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent mb-2">
               92%
             </div>
@@ -137,7 +137,7 @@ const LatestTrendsShowcase2026: React.FC = () => {
 
           <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 text-center">
             <div className="text-5xl mb-4">💼</div>
-            <h3 className="text-2xl font-bold text-white mb-4">Finance</h3>
+            
             <div className="text-4xl font-extrabold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-2">
               $2.3B
             </div>

@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Sparkles, Zap, Brain, Cpu, ArrowRight, TrendingUp, Shield, Star } from 'lucide-react';
 
 const January2026RevolutionaryBanner: React.FC = () => {
   return (
@@ -8,11 +7,11 @@ const January2026RevolutionaryBanner: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-6">
           <div className="inline-flex items-center gap-3 mb-4">
-            <Sparkles className="w-6 h-6 text-yellow-400 animate-pulse" />
+
             <span className="text-xl font-bold uppercase tracking-wider bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">
               🚀 REVOLUTIONARY BREAKTHROUGH - JANUARY 2026
             </span>
-            <Sparkles className="w-6 h-6 text-yellow-400 animate-pulse" />
+
           </div>
           
           <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-white via-blue-200 to-purple-200 bg-clip-text text-transparent">
@@ -31,7 +30,7 @@ const January2026RevolutionaryBanner: React.FC = () => {
           <div className="bg-gradient-to-br from-blue-800/50 to-purple-800/50 backdrop-blur-sm rounded-xl p-6 border border-blue-400/30 hover:border-blue-400/60 transition-all duration-300 hover:scale-105 hover:shadow-xl">
             <div className="flex items-center gap-3 mb-4">
               <div className="bg-blue-500/20 p-2 rounded-lg border border-blue-400/30">
-                <Zap className="w-6 h-6 text-blue-400" />
+
               </div>
               <div>
                 <h3 className="text-lg font-bold text-white">Quantum Edge Fusion</h3>
@@ -43,11 +42,11 @@ const January2026RevolutionaryBanner: React.FC = () => {
             </p>
             <div className="space-y-2 mb-4">
               <div className="flex items-center gap-2 text-xs text-blue-200">
-                <TrendingUp className="w-3 h-3 text-green-400" />
+
                 <span>$2.8B Revenue Impact (Fortune 500 Retail)</span>
               </div>
               <div className="flex items-center gap-2 text-xs text-blue-200">
-                <Shield className="w-3 h-3 text-green-400" />
+
                 <span>99.97% Fraud Detection (Financial Services)</span>
               </div>
             </div>
@@ -55,15 +54,14 @@ const January2026RevolutionaryBanner: React.FC = () => {
               to="/blog/ai-2026-january-quantum-edge-fusion" 
               className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-300 hover:scale-105"
             >
-              Learn More <ArrowRight className="w-4 h-4" />
-            </Link>
+              Learn More</Link>
           </div>
 
           {/* Synthetic Consciousness */}
           <div className="bg-gradient-to-br from-purple-800/50 to-pink-800/50 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30 hover:border-purple-400/60 transition-all duration-300 hover:scale-105 hover:shadow-xl">
             <div className="flex items-center gap-3 mb-4">
               <div className="bg-purple-500/20 p-2 rounded-lg border border-purple-400/30">
-                <Brain className="w-6 h-6 text-purple-400" />
+
               </div>
               <div>
                 <h3 className="text-lg font-bold text-white">Synthetic Consciousness</h3>
@@ -75,11 +73,11 @@ const January2026RevolutionaryBanner: React.FC = () => {
             </p>
             <div className="space-y-2 mb-4">
               <div className="flex items-center gap-2 text-xs text-purple-200">
-                <TrendingUp className="w-3 h-3 text-green-400" />
+
                 <span>$340M Value Creation (Healthcare)</span>
               </div>
               <div className="flex items-center gap-2 text-xs text-purple-200">
-                <Star className="w-3 h-3 text-green-400" />
+
                 <span>89% Patient Satisfaction (Emotional AI)</span>
               </div>
             </div>
@@ -87,8 +85,7 @@ const January2026RevolutionaryBanner: React.FC = () => {
               to="/blog/ai-2026-january-synthetic-consciousness-breakthrough" 
               className="inline-flex items-center gap-2 bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-300 hover:scale-105"
             >
-              Explore Now <ArrowRight className="w-4 h-4" />
-            </Link>
+              Explore Now</Link>
           </div>
 
           {/* Neuromorphic Processing */}
@@ -107,11 +104,11 @@ const January2026RevolutionaryBanner: React.FC = () => {
             </p>
             <div className="space-y-2 mb-4">
               <div className="flex items-center gap-2 text-xs text-green-200">
-                <TrendingUp className="w-3 h-3 text-green-400" />
+
                 <span>$2.1B Value Creation (Automotive)</span>
               </div>
               <div className="flex items-center gap-2 text-xs text-green-200">
-                <Shield className="w-3 h-3 text-green-400" />
+
                 <span>78% Accident Reduction (Autonomous Vehicles)</span>
               </div>
             </div>
@@ -119,17 +116,16 @@ const January2026RevolutionaryBanner: React.FC = () => {
               to="/blog/ai-2026-january-neuromorphic-processing-revolution" 
               className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-300 hover:scale-105"
             >
-              Discover More <ArrowRight className="w-4 h-4" />
-            </Link>
+              Discover More</Link>
           </div>
         </div>
 
         <div className="text-center">
           <div className="bg-gradient-to-r from-yellow-500/20 to-orange-500/20 border border-yellow-400/40 rounded-xl p-6 mb-6">
             <div className="flex items-center justify-center gap-3 mb-3">
-              <Star className="w-6 h-6 text-yellow-400 animate-pulse" />
+
               <span className="text-lg font-bold text-yellow-300">LIMITED TIME: Early Access Program</span>
-              <Star className="w-6 h-6 text-yellow-400 animate-pulse" />
+
             </div>
             <p className="text-white text-lg font-semibold mb-2">
               🎯 Get 40% OFF Implementation + FREE Strategic Consultation
@@ -144,15 +140,15 @@ const January2026RevolutionaryBanner: React.FC = () => {
               to="/services" 
               className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-8 py-3 rounded-lg font-bold text-lg transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
             >
-              <Sparkles className="w-5 h-5" />
+
               Explore All Services
-              <ArrowRight className="w-5 h-5" />
+
             </Link>
             <Link 
               to="/contact" 
               className="inline-flex items-center gap-2 border-2 border-white text-white hover:bg-white hover:text-purple-900 px-8 py-3 rounded-lg font-bold text-lg transition-all duration-300 hover:scale-105"
             >
-              <Brain className="w-5 h-5" />
+
               Schedule Consultation
             </Link>
           </div>

@@ -1,11 +1,10 @@
-import { ArrowRight, Zap, Brain, DollarSign, Eye, TrendingUp, Target } from "lucide-react";
 import { Link } from "react-router-dom";
 import { octoberNewBreakthroughContent, octoberContentStats } from "../content/october-2025-new-breakthrough-content";
 
 const October2025NewBreakthroughBanner = () => {
   const stats = octoberContentStats;
 
-  const iconMap: Record<string, React.ComponentType<any>> = {
+  const iconMap: Record<string, React.ComponentType<React.SVGProps<SVGSVGElement>>> = {
     '🧠': Brain,
     '💰': DollarSign,
     '🎨': Eye
@@ -24,17 +23,16 @@ const October2025NewBreakthroughBanner = () => {
         {/* Header Section */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-3 bg-gradient-to-r from-white/20 to-white/10 backdrop-blur-md px-8 py-3 rounded-full mb-8 border border-white/30">
-            <Zap className="w-6 h-6 text-yellow-300 animate-pulse" />
+
             <span className="text-white font-bold text-lg tracking-wide">
               🚀 NEW BREAKTHROUGH CONTENT · OCTOBER 2, 2025
             </span>
-            <Zap className="w-6 h-6 text-yellow-300 animate-pulse" />
+
           </div>
           
           <h2 className="text-5xl md:text-6xl font-extrabold text-white mb-6 leading-tight">
             Next-Generation Enterprise AI
-            <br />
-            <span className="bg-gradient-to-r from-yellow-300 via-pink-300 to-purple-300 text-transparent bg-clip-text">
+            <br /> <span className="bg-gradient-to-r from-yellow-300 via-pink-300 to-purple-300 text-transparent bg-clip-text">
               Systems That Transform Operations
             </span>
           </h2>
@@ -90,7 +88,7 @@ const October2025NewBreakthroughBanner = () => {
                 <ul className="space-y-3 mb-6">
                   {content.highlights.slice(0, 2).map((highlight, idx) => (
                     <li key={idx} className="flex items-start gap-2 text-xs text-purple-200">
-                      <TrendingUp className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
+
                       <span className="leading-relaxed">{highlight}</span>
                     </li>
                   ))}
@@ -98,7 +96,7 @@ const October2025NewBreakthroughBanner = () => {
 
                 <div className="flex items-center gap-2 text-sm text-yellow-300 font-bold group-hover:gap-4 transition-all">
                   Read Full Guide
-                  <ArrowRight className="w-5 h-5" />
+
                 </div>
               </Link>
             );
@@ -108,7 +106,7 @@ const October2025NewBreakthroughBanner = () => {
         {/* CTA Section */}
         <div className="bg-gradient-to-r from-white/10 to-white/5 backdrop-blur-xl border border-white/30 rounded-2xl p-12 mb-12 shadow-2xl">
           <div className="flex items-center gap-4 mb-6 justify-center">
-            <Target className="w-10 h-10 text-yellow-300" />
+
             <h3 className="text-3xl font-bold text-white">
               Ready to Transform Your Enterprise AI?
             </h3>
@@ -123,16 +121,16 @@ const October2025NewBreakthroughBanner = () => {
               to="/contact"
               className="inline-flex items-center gap-3 bg-gradient-to-r from-yellow-400 to-orange-500 text-gray-900 px-10 py-5 rounded-xl font-bold text-lg hover:from-yellow-300 hover:to-orange-400 transition-all shadow-lg hover:shadow-2xl hover:scale-105"
             >
-              <Target className="w-6 h-6" />
+
               Get Free Enterprise Assessment
-              <ArrowRight className="w-6 h-6" />
+
             </Link>
             <Link
               to="/blog"
               className="inline-flex items-center gap-3 bg-white/10 backdrop-blur-md border border-white/30 text-white px-10 py-5 rounded-xl font-bold text-lg hover:bg-white/20 transition-all"
             >
               Explore All Articles
-              <ArrowRight className="w-6 h-6" />
+
             </Link>
           </div>
         </div>
@@ -170,8 +168,10 @@ const October2025NewBreakthroughBanner = () => {
           <div className="inline-flex flex-wrap gap-3 justify-center">
             {['AI Agents', 'Memory Systems', 'FinOps', 'Cost Optimization', 'Multimodal AI', 
               'Computer Vision', 'NLP', 'Enterprise Automation', 'Cloud Management'].map((tag) => (
-              <span 
-                key={tag}
+
+              <span
+key={tag}
+
                 className="bg-white/10 backdrop-blur-sm border border-white/20 text-purple-200 px-4 py-2 rounded-full text-sm font-medium hover:bg-white/20 transition-colors"
               >
                 {tag}

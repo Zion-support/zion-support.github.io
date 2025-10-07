@@ -1,26 +1,21 @@
-import { ArrowRight, Sparkles, TrendingUp, Zap } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const October2025NewAutonomousSystemsBanner = () => {
   return (
     <div className="bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 border-b border-purple-500/30 relative overflow-hidden">
       {/* Animated background effects */}
-      <div className="absolute inset-0 bg-grid-white/[0.02] bg-[size:60px_60px]" />
-      <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+      <div className="absolute inset-0 bg-grid-white/[0.02] bg-[size:60px_60px]" <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
       
       {/* Floating particles effect */}
-      <div className="absolute top-0 left-1/4 w-72 h-72 bg-purple-500/20 rounded-full blur-3xl animate-pulse" />
-      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse delay-1000" />
-      
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div className="absolute top-0 left-1/4 w-72 h-72 bg-purple-500/20 rounded-full blur-3xl animate-pulse" <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse delay-1000" <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Header with badge */}
         <div className="flex items-center justify-center gap-3 mb-6">
           <div className="flex items-center gap-2 bg-gradient-to-r from-yellow-500/20 to-orange-500/20 border border-yellow-500/30 rounded-full px-4 py-2">
-            <Sparkles className="w-5 h-5 text-yellow-400 animate-pulse" />
+
             <span className="text-yellow-300 font-bold text-sm uppercase tracking-wider">
               🚀 BREAKING: October 1, 2025
             </span>
-            <Sparkles className="w-5 h-5 text-yellow-400 animate-pulse" />
+
           </div>
         </div>
         
@@ -44,7 +39,7 @@ const October2025NewAutonomousSystemsBanner = () => {
             <div className="flex items-start gap-4">
               <div className="flex-shrink-0">
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center shadow-lg shadow-purple-500/50 group-hover:shadow-purple-400/70 transition-all">
-                  <Zap className="w-8 h-8 text-white" />
+
                 </div>
               </div>
               <div className="flex-1">
@@ -53,20 +48,16 @@ const October2025NewAutonomousSystemsBanner = () => {
                 </h3>
                 <div className="space-y-2 mb-4">
                   <div className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-                    <span className="text-green-300 font-bold">97.3% Operational Automation</span>
+                    <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" <span className="text-green-300 font-bold">97.3% Operational Automation</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse" />
-                    <span className="text-blue-300 font-bold">89% Infrastructure Cost Reduction</span>
+                    <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse" <span className="text-blue-300 font-bold">89% Infrastructure Cost Reduction</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-purple-400 rounded-full animate-pulse" />
-                    <span className="text-purple-300 font-bold">$847M Annual Value Creation</span>
+                    <div className="w-2 h-2 bg-purple-400 rounded-full animate-pulse" <span className="text-purple-300 font-bold">$847M Annual Value Creation</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-yellow-400 rounded-full animate-pulse" />
-                    <span className="text-yellow-300 font-bold">99.997% Availability Achieved</span>
+                    <div className="w-2 h-2 bg-yellow-400 rounded-full animate-pulse" <span className="text-yellow-300 font-bold">99.997% Availability Achieved</span>
                   </div>
                 </div>
                 <p className="text-blue-200 text-sm mb-4">
@@ -79,14 +70,14 @@ const October2025NewAutonomousSystemsBanner = () => {
                     className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white px-4 py-2 rounded-lg font-bold transition-all group-hover:shadow-lg"
                   >
                     Read Blog Post
-                    <ArrowRight className="w-4 h-4" />
+
                   </Link>
                   <Link
                     to="/case-studies/ai-2025-oct-01-global-manufacturing-enterprise-mesh-847m-success"
                     className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-4 py-2 rounded-lg font-bold transition-all group-hover:shadow-lg"
                   >
                     View Case Study
-                    <TrendingUp className="w-4 h-4" />
+
                   </Link>
                 </div>
               </div>
@@ -98,7 +89,7 @@ const October2025NewAutonomousSystemsBanner = () => {
             <div className="flex items-start gap-4">
               <div className="flex-shrink-0">
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center shadow-lg shadow-cyan-500/50 group-hover:shadow-cyan-400/70 transition-all">
-                  <TrendingUp className="w-8 h-8 text-white" />
+
                 </div>
               </div>
               <div className="flex-1">
@@ -107,20 +98,16 @@ const October2025NewAutonomousSystemsBanner = () => {
                 </h3>
                 <div className="space-y-2 mb-4">
                   <div className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-                    <span className="text-green-300 font-bold">99.2% Failure Prediction Accuracy</span>
+                    <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" <span className="text-green-300 font-bold">99.2% Failure Prediction Accuracy</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse" />
-                    <span className="text-cyan-300 font-bold">87% Reduction in Downtime</span>
+                    <div className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse" <span className="text-cyan-300 font-bold">87% Reduction in Downtime</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse" />
-                    <span className="text-blue-300 font-bold">$127M Annual Value</span>
+                    <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse" <span className="text-blue-300 font-bold">$127M Annual Value</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-yellow-400 rounded-full animate-pulse" />
-                    <span className="text-yellow-300 font-bold">30-Day Advance Warning</span>
+                    <div className="w-2 h-2 bg-yellow-400 rounded-full animate-pulse" <span className="text-yellow-300 font-bold">30-Day Advance Warning</span>
                   </div>
                 </div>
                 <p className="text-blue-200 text-sm mb-4">
@@ -133,14 +120,14 @@ const October2025NewAutonomousSystemsBanner = () => {
                     className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white px-4 py-2 rounded-lg font-bold transition-all group-hover:shadow-lg"
                   >
                     Read Blog Post
-                    <ArrowRight className="w-4 h-4" />
+
                   </Link>
                   <Link
                     to="/case-studies/ai-2025-oct-01-automotive-manufacturer-predictive-maintenance-127m-success"
                     className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-4 py-2 rounded-lg font-bold transition-all group-hover:shadow-lg"
                   >
                     View Case Study
-                    <TrendingUp className="w-4 h-4" />
+
                   </Link>
                 </div>
               </div>
@@ -154,9 +141,9 @@ const October2025NewAutonomousSystemsBanner = () => {
             to="/blog"
             className="inline-flex items-center gap-3 bg-gradient-to-r from-yellow-500 via-orange-500 to-red-500 hover:from-yellow-400 hover:via-orange-400 hover:to-red-400 text-white px-8 py-4 rounded-xl font-black text-lg shadow-2xl shadow-orange-500/50 hover:shadow-orange-400/70 transform hover:scale-105 transition-all duration-300"
           >
-            <Sparkles className="w-6 h-6" />
+
             Explore All Revolutionary Content
-            <ArrowRight className="w-6 h-6" />
+
           </Link>
         </div>
         

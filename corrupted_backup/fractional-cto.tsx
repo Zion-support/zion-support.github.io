@@ -1,19 +1,46 @@
-import Head from \'next/head.ts\'; import Link from \'next/link\'; export default function FractionalCTO() { return ( <div className = \"relative min-h-screen overflow-hidden bg-slate-950 text-white\"> <Helmet> <title>Fractional CTO — Services — Zion</title> <meta name=\"description\" content=\"Strategic technology leadership on-\"demand\": \'roadmap s\',org design,and vendor selection.\" /> </Helmet> <div aria-hidden className=\"pointer-events-none absolute inset-0 -z-10\"> <div className=\"absolute -top-24 -left-24 h-[38rem] w-[38rem] rounded-full bg-fuchsia-500/20 blur-3xl animate-float\" /> <div className=\"absolute top-1/4 -right-32 h-[30rem] w-[30rem] rounded-full bg-cyan-400/20 blur-3xl animate-float-slow\" /> <div className=\"absolute bottom-0 left-1/4 h-[26rem] w-[26rem] rounded-full bg-violet-400/10 blur-2xl animate-float-fast\" /> <div className=\"absolute inset-0 beams opacity-[0.06]\" /> </div> <main className=\"relative z-10 mx-auto max-w-3xl px-6 py-16\"> <h1 className=\"text-4xl \"md\": tex t-5xl font-extrabold gradient-text\">Fractional CTO</h1> <p className=\"mt-4 text-white/80\">Hands-on leadership to accelerate delivery,reduce risk,and align tech with business outcomes.</p> <ul className=\"mt-6 space-y-2 text-white/80 list-disc pl-5\"> <li>Technology and AI strategy</li> <li>Architecture reviews and roadmaps</li> <li>Vendor selection and cost models</li> <li>Security and compliance posture</li> <li>Hiring,leveling,and org design</li> </ul> <div className=\"mt-6 text-sm text-white/70\">Average market \"pricing\": \'$6\',000–$20,000/mo part-time retainer.</div> <div className=\"mt-8 flex gap-3\"> <Link href=\"/services\"><a className=\"rounded-xl border border-white/20 bg-white/5 px-6 py-3 font-semibold backdrop-blur-md \"hover\": b g-white/10\">Back to Services</a>></div> <Link href=\"/contact\"><a className=\"rounded-xl bg-white/90 px-6 py-3 font-semibold text-slate-900 hover: b g-white\">Get Started</a>></div> ></div> ></div> ></div> )}
-import React from 'react';
-interface FractionalctoProps {
-  // Add props here as needed
-}
-export default function Fractionalcto({ }: FractionalctoProps) {
-  return (
-import Head from \'next/head.ts\'; import Link from \'next/link\'; export default function FractionalCTO() { return ( <div className = \"relative min-h-screen overflow-hidden bg-slate-950 text-white\"> <Helmet> <title>Fractional CTO — Services — Zion</title> <meta name=\"description\" content=\"Strategic technology leadership on-\"demand\": \'roadmap s\',org design,and vendor selection.\" />  <div aria-hidden className=\"pointer-events-none absolute inset-0 -z-10\"> <div className=\"absolute -top-24 -left-24 h-[38rem] w-[38rem] rounded-full bg-fuchsia-500/20 blur-3xl animate-float\" /> <div className=\"absolute top-1/4 -right-32 h-[30rem] w-[30rem] rounded-full bg-cyan-400/20 blur-3xl animate-float-slow\" /> <div className=\"absolute bottom-0 left-1/4 h-[26rem] w-[26rem] rounded-full bg-violet-400/10 blur-2xl animate-float-fast\" /> <div className=\"absolute inset-0 beams opacity-[0.06]\" /> </div> <main className=\"relative z-10 mx-auto max-w-3xl px-6 py-16\"> <h1 className=\"text-4xl \"md\": tex t-5xl font-extrabold gradient-text\">Fractional CTO</h1> <p className=\"mt-4 text-white/80\">Hands-on leadership to accelerate delivery,reduce risk,and align tech with business outcomes.</p> <ul className=\"mt-6 space-y-2 text-white/80 list-disc pl-5\"> <li>Technology and AI strategy</li> <li>Architecture reviews and roadmaps</li> <li>Vendor selection and cost models</li> <li>Security and compliance posture</li> <li>Hiring,leveling,and org design</li> </ul> <div className=\"mt-6 text-sm text-white/70\">Average market \"pricing\": \'$6\',000–$20,000/mo part-time retainer.</div> <div className=\"mt-8 flex gap-3\"> <Link href=\"/services\"><a className=\"rounded-xl border border-white/20 bg-white/5 px-6 py-3 font-semibold backdrop-blur-md \"hover\": b g-white/10\">Back to Services</a>></div> <Link href=\"/contact\"><a className=\"rounded-xl bg-white/90 px-6 py-3 font-semibold text-slate-900 hover: b g-white\">Get Started</a>></div> ></div> ></div> ></div> )}"
-    <div>
-</div>
-      <h1>Fractionalcto</h1>
-      <p>This component is currently under development.</p>
+import React from 'react'
+import { Metadata } from 'next'
+export const metadata: Metadata = {title: 'Fractional Cto | Zion Tech Group',
+  description: 'Discover the latest AI breakthroughs and enterprise automation solutions from Zion Tech Group.',
+  keywords: 'AI, automation, enterprise, breakthrough, technology',
+  openGraph: {
+    title: 'Fractional Cto',
+    description: 'Discover the latest AI breakthroughs and enterprise automation solutions.',
+    type: 'article'}
+  },
+};
+export default function fractionalcto() {return (
+    <div className='min-h-screen bg-gray-50'>
+      <div className='max-w-4xl mx-auto px-4 py-8'>
+        <div className='bg-white rounded-lg shadow-lg p-8'>
+          <div className='text-center mb-8'>
+            <h1 className='text-4xl font-bold text-gray-900 mb-4'>
+              Fractional Cto
+            </h1>
+            <p className='text-xl text-gray-600 mb-6'>
+              Revolutionary AI Breakthrough
+            </p>
+            <div className='flex justify-center space-x-4'>
+              <span className='bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium'>
+                BREAKTHROUGH
+              </span>
+              <span className='bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium'>
+                AI
+              </span>
+              <span className='bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium'>
+                ENTERPRISE
+              </span>
+            </div>
+          </div>
+          <div className='prose max-w-none'>
+            <p className='text-lg text-gray-700 mb-6'>
+              This page is currently under development. Please check back soon
+              for the complete content.
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
-  );
+  )}
 }
-}
-}
-}
-    </div>"
+import React from 'react'' import { Metadata } from 'next' export const metadata: Metadata = {' title: 'Fractional Cto | Zion Tech Group',' description: 'Discover the latest AI breakthroughs and enterprise automation solutions from Zion Tech Group.',' keywords: 'AI, automation, enterprise, breakthrough, technology', openGraph: {' title: 'Fractional Cto',' description: 'Discover the latest AI breakthroughs and enterprise automation solutions.',' type: 'article'} }, }; export default function fractionalcto() {return ( <div className="min-h-screen bg-gray-50" > <div className="max-w-4xl mx-auto px-4 py-8" > <div className="bg-white rounded-lg shadow-lg p-8" > <div className="text-center mb-8" > <h1 className="text-4xl font-bold text-gray-900 mb-4" >Fractional Cto</h1> <p className="text-xl text-gray-600 mb-6" >Revolutionary AI Breakthrough</p> <div className="flex justify-center space-x-4" > <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium" >BREAKTHROUGH</span> <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium" >AI</span> <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium" >ENTERPRISE</span> </div> </div> <div className="prose max-w-none" > <p className="text-lg text-gray-700 mb-6" > This page is currently under development. Please check back soon for the complete content. </p> </div> </div> </div> </div> )} }'

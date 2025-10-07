@@ -1,4 +1,3 @@
-import { ArrowRight, Shield, Zap, Building2 } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const October2025LatestInnovationsBanner = () => {
@@ -14,11 +13,11 @@ const October2025LatestInnovationsBanner = () => {
         {/* Header */}
         <div className="text-center mb-8">
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-indigo-500/20 to-purple-500/20 border border-indigo-400/30 rounded-full px-6 py-2 mb-4">
-            <Zap className="h-5 w-5 text-yellow-400 animate-pulse" />
+
             <span className="text-lg font-bold text-transparent bg-clip-text bg-gradient-to-r from-indigo-300 via-purple-300 to-pink-300">
               BREAKING OCTOBER 1, 2025: LATEST AI INNOVATIONS
             </span>
-            <Zap className="h-5 w-5 text-yellow-400 animate-pulse" />
+
           </div>
           
           <h2 className="text-4xl md:text-5xl font-black text-white mb-4">
@@ -44,7 +43,7 @@ const October2025LatestInnovationsBanner = () => {
             className="group relative bg-gradient-to-br from-emerald-900/30 to-blue-900/30 border border-emerald-500/30 rounded-xl p-6 hover:border-emerald-400/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-emerald-500/20"
           >
             <div className="absolute top-4 right-4">
-              <Shield className="h-8 w-8 text-emerald-400 group-hover:animate-pulse" />
+
             </div>
             
             <div className="mb-4">
@@ -72,8 +71,7 @@ const October2025LatestInnovationsBanner = () => {
             </ul>
 
             <div className="flex items-center text-emerald-400 font-semibold group-hover:gap-3 transition-all">
-              Read Full Guide <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
-            </div>
+              Read Full Guide</div>
           </Link>
 
           {/* Card 2: Quantum AI */}
@@ -82,7 +80,7 @@ const October2025LatestInnovationsBanner = () => {
             className="group relative bg-gradient-to-br from-violet-900/30 to-cyan-900/30 border border-violet-500/30 rounded-xl p-6 hover:border-violet-400/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-violet-500/20"
           >
             <div className="absolute top-4 right-4">
-              <Zap className="h-8 w-8 text-violet-400 group-hover:animate-pulse" />
+
             </div>
             
             <div className="mb-4">
@@ -110,8 +108,7 @@ const October2025LatestInnovationsBanner = () => {
             </ul>
 
             <div className="flex items-center text-violet-400 font-semibold group-hover:gap-3 transition-all">
-              Explore Quantum AI <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
-            </div>
+              Explore Quantum AI</div>
           </Link>
 
           {/* Card 3: Enterprise Orchestration */}
@@ -120,8 +117,7 @@ const October2025LatestInnovationsBanner = () => {
             className="group relative bg-gradient-to-br from-indigo-900/30 to-amber-900/30 border border-indigo-500/30 rounded-xl p-6 hover:border-indigo-400/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-indigo-500/20"
           >
             <div className="absolute top-4 right-4">
-              <Building2 className="h-8 w-8 text-indigo-400 group-hover:animate-pulse" />
-            </div>
+              <Building2 className="h-8 w-8 text-indigo-400 group-hover:animate-pulse"</div>
             
             <div className="mb-4">
               <span className="inline-block bg-indigo-500/20 text-indigo-300 text-xs font-bold px-3 py-1 rounded-full mb-3">
@@ -148,8 +144,7 @@ const October2025LatestInnovationsBanner = () => {
             </ul>
 
             <div className="flex items-center text-indigo-400 font-semibold group-hover:gap-3 transition-all">
-              Discover Platform <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
-            </div>
+              Discover Platform</div>
           </Link>
         </div>
 
@@ -160,7 +155,7 @@ const October2025LatestInnovationsBanner = () => {
             className="inline-flex items-center gap-2 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 text-white font-bold px-8 py-4 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-indigo-500/50"
           >
             <span>Explore All Latest AI Innovations</span>
-            <ArrowRight className="h-5 w-5" />
+
           </Link>
         </div>
 

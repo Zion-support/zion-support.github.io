@@ -1,70 +1,69 @@
-import { ArrowRight, BookOpen, Brain, Lightbulb, Rocket, Sparkles, Star, Target, TrendingUp, Zap } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
 const October2025MegaLaunchBanner = () => {
   const topNewArticles = [
-    {
+    {",
       title: "Neuro-Symbolic AI in Production",
-      description: "10x Better Explainability & 5x Improved Accuracy with Hybrid Neural-Symbolic Systems",
+      description: "10x Better Explainability & 5x Improved Accuracy with Hybrid Neural-Symbolic Systems",",
       slug: "neuro-symbolic-ai-production-2025",
-      category: "AI Architecture",
+      category: "AI Architecture",",
       icon: "🧠",
-      gradient: "from-purple-600 to-pink-600",
+      gradient: "from-purple-600 to-pink-600",",
       badge: "BREAKTHROUGH"
     },
-    {
+    {",
       title: "AI-Powered DevOps Orchestration",
-      description: "85% Fewer Deployment Failures with Autonomous CI/CD & Predictive Intelligence",
+      description: "85% Fewer Deployment Failures with Autonomous CI/CD & Predictive Intelligence",",
       slug: "ai-powered-devops-orchestration-2025",
-      category: "DevOps AI",
+      category: "DevOps AI",",
       icon: "🚀",
-      gradient: "from-blue-600 to-cyan-600",
+      gradient: "from-blue-600 to-cyan-600",",
       badge: "FEATURED"
     },
-    {
+    {",
       title: "Federated Learning at Scale",
-      description: "100% Privacy-Compliant AI Across 1000+ Edge Devices with Zero Data Compromise",
+      description: "100% Privacy-Compliant AI Across 1000+ Edge Devices with Zero Data Compromise",",
       slug: "federated-learning-privacy-2026",
-      category: "Privacy AI",
+      category: "Privacy AI",",
       icon: "🔐",
-      gradient: "from-green-600 to-teal-600",
+      gradient: "from-green-600 to-teal-600",",
       badge: "ENTERPRISE"
     },
-    {
+    {",
       title: "Real-Time LLM Streaming",
-      description: "Sub-100ms Response Times with Edge-Optimized Inference & Intelligent Caching",
+      description: "Sub-100ms Response Times with Edge-Optimized Inference & Intelligent Caching",",
       slug: "real-time-llm-streaming-2025",
-      category: "LLM Performance",
+      category: "LLM Performance",",
       icon: "⚡",
-      gradient: "from-yellow-600 to-orange-600",
+      gradient: "from-yellow-600 to-orange-600",",
       badge: "PERFORMANCE"
     },
-    {
+    {",
       title: "Practical AI Ethics Framework",
-      description: "75% Bias Reduction with Production-Ready Governance & Automated Fairness",
+      description: "75% Bias Reduction with Production-Ready Governance & Automated Fairness",",
       slug: "ai-ethics-framework-2026",
-      category: "AI Governance",
+      category: "AI Governance",",
       icon: "⚖️",
-      gradient: "from-indigo-600 to-purple-600",
+      gradient: "from-indigo-600 to-purple-600",",
       badge: "COMPLIANCE"
     },
-    {
+    {",
       title: "Multi-Cloud AI Orchestration",
-      description: "50% Cost Savings with Intelligent Workload Distribution Across AWS, Azure & GCP",
+      description: "50% Cost Savings with Intelligent Workload Distribution Across AWS, Azure & GCP",",
       slug: "multi-cloud-ai-orchestration-2025",
-      category: "Cloud AI",
+      category: "Cloud AI",",
       icon: "☁️",
-      gradient: "from-sky-600 to-blue-600",
+      gradient: "from-sky-600 to-blue-600",",
       badge: "COST SAVINGS"
     },
-    {
+    {",
       title: "Conversational AI 2.0",
-      description: "95% User Satisfaction with Context-Aware Multi-Turn Dialogue in 50+ Languages",
+      description: "95% User Satisfaction with Context-Aware Multi-Turn Dialogue in 50+ Languages",",
       slug: "conversational-ai-breakthrough-2025",
-      category: "Conversational AI",
+      category: "Conversational AI",",
       icon: "💬",
-      gradient: "from-pink-600 to-rose-600",
+      gradient: "from-pink-600 to-rose-600",",
       badge: "UX LEADER"
     }
   ];
@@ -94,9 +93,9 @@ const October2025MegaLaunchBanner = () => {
             className="inline-flex items-center gap-3 mb-6"
           >
             <div className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 rounded-full shadow-lg">
-              <Sparkles className="w-6 h-6 text-white animate-pulse" />
+
               <span className="text-white font-bold text-sm md:text-base">🎉 OCTOBER 2025 MEGA LAUNCH 🎉</span>
-              <Rocket className="w-6 h-6 text-white animate-bounce" />
+
             </div>
           </motion.div>
 
@@ -158,7 +157,7 @@ const October2025MegaLaunchBanner = () => {
                   {/* Read More Arrow */}
                   <div className="mt-4 flex items-center gap-2 text-white font-semibold text-sm group-hover:gap-3 transition-all">
                     <span>Read Full Article</span>
-                    <ArrowRight className="w-5 h-5" />
+
                   </div>
                 </div>
               </Link>
@@ -170,7 +169,7 @@ const October2025MegaLaunchBanner = () => {
         <div className="bg-gradient-to-r from-purple-900/50 to-pink-900/50 backdrop-blur-md rounded-2xl p-6 mb-8 border-2 border-white/20 shadow-lg">
           <div className="grid grid-cols-2 md:grid-cols-5 gap-6 text-center">
             <div>
-              <div className="text-4xl md:text-5xl font-bold text-pink-300 mb-1">7</div>
+              
               <div className="text-sm text-purple-200 font-semibold">NEW Articles</div>
             </div>
             <div>
@@ -186,7 +185,7 @@ const October2025MegaLaunchBanner = () => {
               <div className="text-sm text-purple-200 font-semibold">User Satisfaction</div>
             </div>
             <div>
-              <div className="text-4xl md:text-5xl font-bold text-purple-300 mb-1">2026</div>
+              
               <div className="text-sm text-purple-200 font-semibold">Future-Ready</div>
             </div>
           </div>
@@ -196,7 +195,7 @@ const October2025MegaLaunchBanner = () => {
         <div className="grid md:grid-cols-4 gap-6 mb-8">
           <div className="flex flex-col items-center text-center gap-3 bg-white/5 backdrop-blur-sm rounded-xl p-5 border border-white/10 hover:bg-white/10 transition-all">
             <div className="w-12 h-12 rounded-full bg-purple-500/30 flex items-center justify-center">
-              <Target className="w-6 h-6 text-purple-300" />
+
             </div>
             <div>
               <h4 className="font-bold text-white mb-1">Production-Ready</h4>
@@ -206,7 +205,7 @@ const October2025MegaLaunchBanner = () => {
           
           <div className="flex flex-col items-center text-center gap-3 bg-white/5 backdrop-blur-sm rounded-xl p-5 border border-white/10 hover:bg-white/10 transition-all">
             <div className="w-12 h-12 rounded-full bg-pink-500/30 flex items-center justify-center">
-              <TrendingUp className="w-6 h-6 text-pink-300" />
+
             </div>
             <div>
               <h4 className="font-bold text-white mb-1">Measurable ROI</h4>
@@ -216,7 +215,7 @@ const October2025MegaLaunchBanner = () => {
           
           <div className="flex flex-col items-center text-center gap-3 bg-white/5 backdrop-blur-sm rounded-xl p-5 border border-white/10 hover:bg-white/10 transition-all">
             <div className="w-12 h-12 rounded-full bg-cyan-500/30 flex items-center justify-center">
-              <BookOpen className="w-6 h-6 text-cyan-300" />
+
             </div>
             <div>
               <h4 className="font-bold text-white mb-1">Expert Insights</h4>
@@ -226,7 +225,7 @@ const October2025MegaLaunchBanner = () => {
           
           <div className="flex flex-col items-center text-center gap-3 bg-white/5 backdrop-blur-sm rounded-xl p-5 border border-white/10 hover:bg-white/10 transition-all">
             <div className="w-12 h-12 rounded-full bg-green-500/30 flex items-center justify-center">
-              <Brain className="w-6 h-6 text-green-300" />
+
             </div>
             <div>
               <h4 className="font-bold text-white mb-1">Cutting-Edge</h4>
@@ -241,26 +240,25 @@ const October2025MegaLaunchBanner = () => {
             to="/blog"
             className="group bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 hover:from-pink-400 hover:via-purple-400 hover:to-blue-400 text-white px-12 py-5 rounded-full font-bold text-lg shadow-2xl hover:shadow-pink-500/50 transition-all duration-300 hover:scale-105 flex items-center justify-center gap-3"
           >
-            <Zap className="w-6 h-6 group-hover:rotate-12 transition-transform" />
+
             <span>Explore All 7 Articles Now</span>
-            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+
           </Link>
           
           <Link
             to="/contact"
             className="group border-2 border-white hover:bg-white text-white hover:text-purple-900 px-12 py-5 rounded-full font-bold text-lg transition-all duration-300 hover:scale-105 flex items-center justify-center gap-3"
           >
-            <Lightbulb className="w-6 h-6 group-hover:animate-pulse" />
-            <span>Get Expert Consultation</span>
+            <Lightbulb className="w-6 h-6 group-hover:animate-pulse" <span>Get Expert Consultation</span>
           </Link>
         </div>
 
         {/* Featured Topics */}
         <div className="pt-6 border-t border-white/20">
           <p className="text-center text-purple-200 text-sm mb-4 font-bold flex items-center justify-center gap-2">
-            <Star className="w-4 h-4 text-yellow-400" />
+
             FEATURED TOPICS & TECHNOLOGIES
-            <Star className="w-4 h-4 text-yellow-400" />
+
           </p>
           <div className="flex flex-wrap gap-2 justify-center">
             {[
@@ -278,8 +276,8 @@ const October2025MegaLaunchBanner = () => {
               "GDPR Compliant",
               "Production-Ready"
             ].map((topic) => (
-              <span 
-                key={topic} 
+              <span
+key={topic} 
                 className="px-4 py-2 bg-gradient-to-r from-purple-500/20 to-pink-500/20 backdrop-blur-sm rounded-full text-sm text-white border border-white/30 hover:border-white/50 hover:bg-white/20 transition-all cursor-pointer"
               >
                 {topic}

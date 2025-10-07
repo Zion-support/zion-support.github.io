@@ -1,4 +1,3 @@
-import React from 'react';
 
 export const metadata = {
   title: 'AI 2026: Neural Optimization Revolution — 1000x Performance, 90% Cost Down',

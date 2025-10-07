@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, BookOpen, Sparkles, TrendingUp } from 'lucide-react';
 import { newArticles2025 } from '../content/new-articles-2025';
 
 interface NewArticlesPromoBannerProps {
@@ -18,7 +17,7 @@ const NewArticlesPromoBanner: React.FC<NewArticlesPromoBannerProps> = ({
   rotationInterval = 5000,
   className = ''
 }) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [, setCurrentIndex] = useState(0);
   const featuredArticles = newArticles2025.filter(a => a.featured).slice(0, showCount);
 
   useEffect(() => {
@@ -35,7 +34,7 @@ const NewArticlesPromoBanner: React.FC<NewArticlesPromoBannerProps> = ({
       <div className={`bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg p-4 ${className}`}>
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <BookOpen className="w-6 h-6 text-white" />
+
             <div>
               <h4 className="text-white font-bold">
                 {featuredArticles.length} New Articles Published
@@ -59,17 +58,19 @@ const NewArticlesPromoBanner: React.FC<NewArticlesPromoBannerProps> = ({
       <div className={`bg-gradient-to-br from-indigo-700 via-purple-700 to-pink-700 rounded-2xl p-8 text-white ${className}`}>
         <div className="max-w-6xl mx-auto">
           <div className="flex items-center gap-3 mb-6">
-            <Sparkles className="w-8 h-8 text-yellow-300 animate-pulse" />
+
             <h2 className="text-3xl font-bold">Breakthrough Articles Just Published</h2>
           </div>
           <div className="grid md:grid-cols-3 gap-6">
             {featuredArticles.map((article) => (
               <div
-                key={article.id}
+
+key={article.id}
+
                 className="bg-white/10 backdrop-blur-lg rounded-xl p-6 hover:bg-white/20 transition-all hover:scale-105"
               >
                 <div className="flex items-center gap-2 mb-3">
-                  <TrendingUp className="w-5 h-5 text-green-300" />
+
                   <span className="text-sm font-semibold text-green-300">{article.category}</span>
                 </div>
                 <h3 className="text-xl font-bold mb-3">{article.title}</h3>
@@ -80,8 +81,7 @@ const NewArticlesPromoBanner: React.FC<NewArticlesPromoBannerProps> = ({
                     to={article.link}
                     className="text-yellow-300 font-semibold hover:text-yellow-200 flex items-center gap-1"
                   >
-                    Read <ArrowRight className="w-4 h-4" />
-                  </Link>
+                    Read</Link>
                 </div>
               </div>
             ))}
@@ -92,7 +92,7 @@ const NewArticlesPromoBanner: React.FC<NewArticlesPromoBannerProps> = ({
               className="inline-flex items-center gap-2 bg-white text-purple-700 px-8 py-4 rounded-xl font-bold hover:bg-purple-50 transition-all hover:scale-105"
             >
               View All Articles
-              <ArrowRight className="w-5 h-5" />
+
             </Link>
           </div>
         </div>
@@ -106,7 +106,7 @@ const NewArticlesPromoBanner: React.FC<NewArticlesPromoBannerProps> = ({
         <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-6">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <BookOpen className="w-8 h-8 text-white" />
+
               <h2 className="text-2xl font-bold text-white">Featured Articles</h2>
             </div>
             <span className="bg-yellow-400 text-black px-3 py-1 rounded-full text-sm font-bold">
@@ -125,7 +125,9 @@ const NewArticlesPromoBanner: React.FC<NewArticlesPromoBannerProps> = ({
                 <div className="flex flex-wrap gap-2 mb-3">
                   {article.tags.slice(0, 2).map((tag) => (
                     <span
-                      key={tag}
+
+key={tag}
+
                       className="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded-full"
                     >
                       {tag}
@@ -138,7 +140,7 @@ const NewArticlesPromoBanner: React.FC<NewArticlesPromoBannerProps> = ({
                 <p className="text-sm text-gray-600 mb-3 line-clamp-2">{article.description}</p>
                 <div className="flex items-center justify-between text-sm">
                   <span className="text-gray-500">{article.readTime}</span>
-                  <ArrowRight className="w-4 h-4 text-indigo-600 group-hover:translate-x-1 transition-transform" />
+
                 </div>
               </Link>
             ))}
@@ -152,7 +154,7 @@ const NewArticlesPromoBanner: React.FC<NewArticlesPromoBannerProps> = ({
   return (
     <div className={`bg-gradient-to-r from-blue-600 to-indigo-600 rounded-xl p-6 md:p-8 text-white ${className}`}>
       <div className="flex items-center gap-3 mb-4">
-        <Sparkles className="w-6 h-6 text-yellow-300" />
+
         <h3 className="text-2xl font-bold">New Articles Available</h3>
       </div>
       <div className="grid md:grid-cols-3 gap-4">

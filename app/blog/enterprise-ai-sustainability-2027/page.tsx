@@ -1,5 +1,4 @@
 // @ts-nocheck
-import React from 'react';
 
 export const metadata = {
   title: 'Enterprise AI Sustainability 2027',

@@ -1,0 +1,135 @@
+{
+  "timestamp": "2025-10-04T16:48:12.463Z",
+  "summary": {
+    "overallHealth": "Poor",
+    "healthScore": 34,
+    "keyMetrics": {
+      "performance": 19,
+      "errors": 2,
+      "seo": 95,
+      "accessibility": 76,
+      "userExperience": 5
+    },
+    "criticalIssues": ["3 critical errors detected"],
+    "lastUpdated": "2025-10-04T16:48:12.463Z"
+  },
+  "metrics": {
+    "performance": {
+      "timestamp": "2025-10-04T16:48:12.463Z",
+      "coreWebVitals": {
+        "CLS": 0,
+        "FID": 12,
+        "FCP": 1402,
+        "LCP": 2075,
+        "TTFB": 679
+      },
+      "bundleSize": {
+        "total": 786,
+        "gzipped": 214,
+        "chunks": 19
+      },
+      "renderMetrics": {
+        "averageRenderTime": 19,
+        "slowComponents": 3,
+        "memoryUsage": 70
+      }
+    },
+    "errors": {
+      "timestamp": "2025-10-04T16:48:12.463Z",
+      "totalErrors": 2,
+      "errorRate": 10,
+      "errorTypes": {
+        "JavaScript": 8,
+        "Network": 14,
+        "React": 7,
+        "Performance": 1
+      },
+      "criticalErrors": 3,
+      "resolvedErrors": 25
+    },
+    "seo": {
+      "timestamp": "2025-10-04T16:48:12.463Z",
+      "score": 95,
+      "titleOptimization": {
+        "length": 31,
+        "optimal": true
+      },
+      "metaDescription": {
+        "length": 179,
+        "optimal": true
+      },
+      "structuredData": {
+        "present": true,
+        "types": ["Organization", "WebSite"]
+      },
+      "technicalSEO": {
+        "canonicalUrl": true,
+        "robotsTxt": true,
+        "sitemap": true,
+        "https": true
+      }
+    },
+    "accessibility": {
+      "timestamp": "2025-10-04T16:48:12.463Z",
+      "score": 76,
+      "issues": {
+        "critical": 0,
+        "serious": 4,
+        "moderate": 13,
+        "minor": 23
+      },
+      "compliance": {
+        "WCAG_AA": true,
+        "WCAG_AAA": true,
+        "Section_508": true
+      },
+      "features": {
+        "altText": true,
+        "keyboardNavigation": true,
+        "screenReader": true,
+        "colorContrast": true,
+        "focusManagement": true
+      }
+    },
+    "userExperience": {
+      "timestamp": "2025-10-04T16:48:12.463Z",
+      "pageLoadTime": 2511,
+      "bounceRate": 76,
+      "sessionDuration": 579,
+      "conversionRate": 15,
+      "userSatisfaction": 5,
+      "mobileUsability": {
+        "score": 99,
+        "issues": 2
+      },
+      "performanceImpact": {
+        "slowPages": 0,
+        "fastPages": 31
+      }
+    }
+  },
+  "recommendations": [
+    {
+      "category": "Performance",
+      "priority": "High",
+      "issue": "Slow render times detected",
+      "recommendation": "Implement React.memo(), useMemo(), and useCallback() for optimization",
+      "impact": "High"
+    },
+    {
+      "category": "Reliability",
+      "priority": "High",
+      "issue": "High error rate detected",
+      "recommendation": "Implement comprehensive error boundaries and monitoring",
+      "impact": "High"
+    },
+    {
+      "category": "Accessibility",
+      "priority": "High",
+      "issue": "Accessibility compliance issues",
+      "recommendation": "Fix WCAG violations and improve screen reader support",
+      "impact": "High"
+    }
+  ],
+  "healthScore": 34
+}

@@ -1,7 +1,7 @@
 import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-import { ArrowLeft, Users, Target, Zap, DollarSign } from "lucide-react";
+import { ArrowLeft, Users, Target, Zap, DollarSign } from 'lucide-react';
 
+import { Link } from "react-router-dom";
 export default function RealtimePersonalizationEngine2025() {
   return (
     <>

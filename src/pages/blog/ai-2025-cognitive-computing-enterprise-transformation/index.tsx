@@ -1,7 +1,8 @@
 import React from 'react';
+import { Brain, Sparkles, TrendingUp, CheckCircle, ArrowRight, Award, Lightbulb } from 'lucide-react';
+
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { Brain, Sparkles, TrendingUp, CheckCircle, ArrowRight, Award, Lightbulb } from 'lucide-react';
 import Header from '../../../components/Header';
 
 const CognitiveComputingTransformation: React.FC = () => {

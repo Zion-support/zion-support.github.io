@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Sparkles, TrendingUp, Zap, Target, CheckCircle } from 'lucide-react';
 
 const RevolutionaryBreakthrough2026Banner: React.FC = () => {
   const breakthroughContent = [
@@ -67,11 +66,11 @@ const RevolutionaryBreakthrough2026Banner: React.FC = () => {
         {/* Header Section */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-purple-500/20 to-blue-500/20 border border-purple-500/30 mb-8 animate-fade-in">
-            <Sparkles className="w-6 h-6 text-purple-400 animate-pulse" />
+
             <span className="text-purple-400 font-bold text-lg tracking-wider uppercase">
               🔥 REVOLUTIONARY BREAKTHROUGH • January 30, 2026
             </span>
-            <Sparkles className="w-6 h-6 text-blue-400 animate-pulse" />
+
           </div>
 
           <h2 className="text-6xl md:text-7xl font-extrabold mb-6 bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent animate-fade-in">
@@ -107,8 +106,8 @@ const RevolutionaryBreakthrough2026Banner: React.FC = () => {
         {/* Featured Content Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16 max-w-[1600px] mx-auto">
           {breakthroughContent.map((content, index) => (
-            <div 
-              key={content.id}
+            <div
+key={content.id}
               className="group relative bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 hover:border-purple-500/50 transition-all duration-500 overflow-hidden hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20"
               style={{ animationDelay: `${index * 150}ms` }}
             >
@@ -124,8 +123,7 @@ const RevolutionaryBreakthrough2026Banner: React.FC = () => {
                   <div className="flex flex-col gap-2">
                     {content.trending && (
                       <div className="flex items-center gap-1 px-3 py-1.5 rounded-full bg-gradient-to-r from-orange-500 to-red-500 text-white text-xs font-bold shadow-lg">
-                        <TrendingUp className="w-3 h-3" />
-                        <span>BREAKTHROUGH</span>
+
                       </div>
                     )}
                     <span className="px-3 py-1.5 rounded-full bg-purple-500/20 text-purple-400 text-xs font-semibold border border-purple-500/30">
@@ -168,7 +166,7 @@ const RevolutionaryBreakthrough2026Banner: React.FC = () => {
                 {/* Meta Info */}
                 <div className="flex items-center justify-between text-sm text-gray-500 mb-6 pb-6 border-b border-white/10">
                   <span className="flex items-center gap-2">
-                    <Zap className="w-4 h-4 text-purple-400" />
+
                     {content.readTime}
                   </span>
                   <span>{new Date(content.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}</span>
@@ -180,7 +178,7 @@ const RevolutionaryBreakthrough2026Banner: React.FC = () => {
                   className="group/btn flex items-center justify-center gap-2 w-full bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-400 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
                 >
                   <span>Read Full Article</span>
-                  <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-300" />
+
                 </Link>
               </div>
             </div>
@@ -203,7 +201,7 @@ const RevolutionaryBreakthrough2026Banner: React.FC = () => {
                   href="/contact"
                   className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 flex items-center justify-center gap-2"
                 >
-                  <Sparkles className="w-5 h-5" />
+
                   <span>Start Your AI Transformation</span>
                 </a>
                 <a
@@ -211,7 +209,7 @@ const RevolutionaryBreakthrough2026Banner: React.FC = () => {
                   className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-2"
                 >
                   <span>Call +1 302 464 0950</span>
-                  <ArrowRight className="w-5 h-5" />
+
                 </a>
               </div>
             </div>

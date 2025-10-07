@@ -5,16 +5,10 @@
       "name": "compression",
       "severity": "low",
       "isDirect": false,
-      "via": [
-        "on-headers"
-      ],
-      "effects": [
-        "serve"
-      ],
+      "via": ["on-headers"],
+      "effects": ["serve"],
       "range": "1.0.3 - 1.8.0",
-      "nodes": [
-        "node_modules/compression"
-      ],
+      "nodes": ["node_modules/compression"],
       "fixAvailable": {
         "name": "serve",
         "version": "10.0.2",
@@ -33,9 +27,7 @@
           "title": "on-headers is vulnerable to http response header manipulation",
           "url": "https://github.com/advisories/GHSA-76c9-3jph-rj3q",
           "severity": "low",
-          "cwe": [
-            "CWE-241"
-          ],
+          "cwe": ["CWE-241"],
           "cvss": {
             "score": 3.4,
             "vectorString": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:L/I:L/A:N"
@@ -43,13 +35,9 @@
           "range": "<1.1.0"
         }
       ],
-      "effects": [
-        "compression"
-      ],
+      "effects": ["compression"],
       "range": "<1.1.0",
-      "nodes": [
-        "node_modules/on-headers"
-      ],
+      "nodes": ["node_modules/on-headers"],
       "fixAvailable": {
         "name": "serve",
         "version": "10.0.2",
@@ -60,14 +48,10 @@
       "name": "serve",
       "severity": "low",
       "isDirect": true,
-      "via": [
-        "compression"
-      ],
+      "via": ["compression"],
       "effects": [],
       "range": ">=10.1.0",
-      "nodes": [
-        "node_modules/serve"
-      ],
+      "nodes": ["node_modules/serve"],
       "fixAvailable": {
         "name": "serve",
         "version": "10.0.2",

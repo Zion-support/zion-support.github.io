@@ -1,6 +1,11 @@
-import React from 'react';
 import Link from 'next/link';
-import { Calendar, Clock, Gauge, ShieldCheck, Activity, ArrowRight } from 'lucide-react';
+
+import Calendar from 'lucide-react/dist/esm/icons/alendar';
+import Clock from 'lucide-react/dist/esm/icons/lock';
+import Gauge from 'lucide-react/dist/esm/icons/auge';
+import ShieldCheck from 'lucide-react/dist/esm/icons/hieldcheck';
+import Activity from 'lucide-react/dist/esm/icons/ctivity';
+import ArrowRight from 'lucide-react/dist/esm/icons/rrowright';
 
 export const metadata = {
   title: 'AI SLA Scorecards 2026 Q1: KPIs, Budgets, Rollback | Zion Tech Group',
@@ -24,14 +29,14 @@ export default function Page() {
       <header className="bg-gradient-to-br from-indigo-900 via-purple-900 to-slate-900 text-white py-20">
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 mb-6">
-            <Gauge className="w-4 h-4 text-indigo-300" />
+            <Gauge />
             <span className="text-sm font-semibold">SLA Scorecards • 2026 Q1</span>
           </div>
           <h1 className="text-5xl md:text-6xl font-extrabold leading-tight mb-4">AI SLA Scorecards 2026 Q1</h1>
           <p className="text-lg md:text-xl text-white/80 max-w-3xl">Wire SLAs to business KPIs with budgets, live canaries, and instant rollback so teams ship fast without blowing up reliability or cost.</p>
           <div className="flex items-center gap-6 text-white/70 mt-8">
-            <div className="flex items-center gap-2"><Calendar className="w-4 h-4" /><span>Jan 30, 2026</span></div>
-            <div className="flex items-center gap-2"><Clock className="w-4 h-4" /><span>16 min read</span></div>
+            <div className="flex items-center gap-2"><Calendar /><span>Jan 30, 2026</span></div>
+            <div className="flex items-center gap-2"><Clock /><span>16 min read</span></div>
           </div>
         </div>
       </header>
@@ -61,7 +66,7 @@ export default function Page() {
 
       <section className="py-12 bg-white">
         <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-2xl font-bold mb-6 flex items-center gap-2"><ShieldCheck className="w-5 h-5 text-emerald-600" /> Reference SLIs</h2>
+          <h2 className="text-2xl font-bold mb-6 flex items-center gap-2"><ShieldCheck /> Reference SLIs</h2>
           <div className="grid md:grid-cols-3 gap-6">
             <div className="rounded-xl border p-6">
               <div className="text-3xl font-extrabold text-indigo-600 mb-2">p95 &lt; 150ms</div>
@@ -82,10 +87,10 @@ export default function Page() {
       <section className="py-16">
         <div className="max-w-4xl mx-auto px-6">
           <div className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-2xl p-8">
-            <h3 className="text-2xl font-bold mb-2 flex items-center gap-2"><Activity className="w-5 h-5" /> Ship with Confidence</h3>
+            <h3 className="text-2xl font-bold mb-2 flex items-center gap-2"><Activity /> Ship with Confidence</h3>
             <p className="text-white/90 mb-4">Use budgets and rollbacks to move fast without surprises. We implement this end‑to‑end in 6–8 weeks.</p>
             <div className="flex gap-3">
-              <Link href="/contact" className="bg-white text-indigo-700 px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2">Talk to experts <ArrowRight className="w-4 h-4" /></Link>
+              <Link href="/contact" className="bg-white text-indigo-700 px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2">Talk to experts <ArrowRight /></Link>
               <Link href="/blog/ai-governance-live-scorecards-2026" className="border border-white/50 px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2">Read live scorecards</Link>
             </div>
           </div>

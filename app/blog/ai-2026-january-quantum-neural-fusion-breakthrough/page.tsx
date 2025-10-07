@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import { notFound } from 'next/navigation';
+// import { notFound } from 'next/navigation';
 
 export const metadata: Metadata = {
   title: 'AI 2026: Quantum-Neural Fusion Breakthrough - The Next Frontier of Enterprise Intelligence',

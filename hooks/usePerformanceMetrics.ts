@@ -1,31 +1,85 @@
+import { useEffect, useState } from 'react';
 
-      const paintEntries = window && window.performance.getEntriesByType("paint");
+interface PerformanceMetrics {
+  fcp?: number;
+  lcp?: number;
+  fid?: number;
+  cls?: number;
+  ttfb?: number;
+}
 
-      const fcp = paintEntries && paintEntries.find(
-        (entry) => entry && entry.name === "first-contentful-paint",
-      );
-      const lcpEntries = window && window.performance.getEntriesByType(
-        "largest-contentful-paint",
-      );
-      const lcp = lcpEntries[0] as PerformanceEntry;
+export function usePerformanceMetrics() {
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({});
+  const [isSupported, setIsSupported] = useState(false);
 
-      const clsEntries = window && window.performance.getEntriesByType("layout-shift");
-      const cls = clsEntries && clsEntries.reduce((acc, entry) => {
-        return acc + (entry as PerformanceEntry & { value: number }).value;
-      }, 0);
-
-      const fidEntries = window && window.performance.getEntriesByType("first-input");
-
-      const fid = fidEntries[0] as PerformanceEventTiming;
-      setMetrics({
-
-        loadTime: navigation && navigation.loadEventEnd - navigation && navigation.loadEventStart,
-        firstContentfulPaint: fcp ? fcp && fcp.startTime : 0,
-        largestContentfulPaint: lcp ? lcp && lcp.startTime : 0,
-        cumulativeLayoutShift: cls,
-        firstInputDelay: fid ? fid && fid.processingStart - fid && fid.startTime : 0,
-
-      });
+  useEffect(() => {
+    if (!('PerformanceObserver' in window)) {
+      setIsSupported(false);
+      return;
     }
 
+    setIsSupported(true);
 
+    // First Contentful Paint
+    new PerformanceObserver(list => {
+      const entries = list.getEntries();
+      const fcpEntry = entries.find(
+        entry => entry.name === 'first-contentful-paint',
+      );
+      if (fcpEntry) {
+        setMetrics(prev => ({ ...prev, fcp: fcpEntry.startTime }));
+      }
+    }).observe({ entryTypes: ['paint'] });
+
+    // Largest Contentful Paint
+    new PerformanceObserver(list => {
+      const entries = list.getEntries();
+      const lastEntry = entries[entries.length - 1];
+      setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
+    }).observe({ entryTypes: ['largest-contentful-paint'] });
+
+    // First Input Delay
+    new PerformanceObserver(list => {
+      const entries = list.getEntries();
+      entries.forEach(entry => {
+        const inputEntry = entry as PerformanceEventTiming;
+        setMetrics(prev => ({
+          ...prev,
+          fid: inputEntry.processingStart - inputEntry.startTime,
+        }));
+      });
+    }).observe({ entryTypes: ['first-input'] });
+
+    // Cumulative Layout Shift
+    let clsValue = 0;
+    new PerformanceObserver(list => {
+      const entries = list.getEntries();
+      entries.forEach(entry => {
+        const layoutEntry = entry as PerformanceEntry & {
+          hadRecentInput?: boolean;
+          value?: number;
+        };
+        if (!layoutEntry.hadRecentInput) {
+          clsValue += layoutEntry.value || 0;
+        }
+      });
+      setMetrics(prev => ({ ...prev, cls: clsValue }));
+    }).observe({ entryTypes: ['layout-shift'] });
+
+    // Time to First Byte
+    new PerformanceObserver(list => {
+      const entries = list.getEntries();
+      const ttfbEntry = entries.find(entry =>
+        entry.name.includes('document'),
+      ) as PerformanceNavigationTiming;
+      if (ttfbEntry) {
+        setMetrics(prev => ({
+          ...prev,
+          ttfb: ttfbEntry.responseStart - ttfbEntry.requestStart,
+        }));
+      }
+    }).observe({ entryTypes: ['navigation'] });
+  }, []);
+
+  return { metrics, isSupported };
+}

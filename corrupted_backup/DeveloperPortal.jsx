@@ -1,17 +1,1 @@
-
-interface DeveloperPortalProps {
-  // Add props here as needed
-}
-
-export default function DeveloperPortal() {
-}
-return (;
-    <div>
-      <h1>DeveloperPortal</h1>
-      <p>This component is currently under development.</p>
-    </div>
-  );
-}
-}
-}
-
+interface DeveloperPortalProps { // Add props here as needed } export default function DeveloperPortal() {} return (; <div> <h1>DeveloperPortal</h1> <p>This component is currently under development.</p> </div> ); } } }

@@ -1,30 +1,30 @@
 {
-  "timestamp": "2025-09-30T00:45:19.608Z",
+  "timestamp": "2025-10-01T22:46:59.957Z",
   "improvements": [
     {
       "type": "unused_code_removal",
       "status": "completed",
-      "removedItems": 78,
-      "message": "Removed 78 unused items"
+      "removedItems": 480,
+      "message": "Removed 480 unused items"
     },
     {
       "type": "import_optimization",
       "status": "completed",
-      "optimizedFiles": 1,
-      "message": "Optimized imports in 1 files"
+      "optimizedFiles": 2,
+      "message": "Optimized imports in 2 files"
     },
     {
       "type": "type_annotations",
       "status": "completed",
-      "annotatedFiles": 22,
-      "message": "Added type annotations to 22 files"
+      "annotatedFiles": 130,
+      "message": "Added type annotations to 130 files"
     }
   ],
   "issues": [
     {
       "type": "linting",
       "message": "ESLint auto-fix failed",
-      "details": "Command failed: pnpm lint:fix\n(node:15050) ESLintIgnoreWarning: The \".eslintignore\" file is no longer supported. Switch to using the \"ignores\" property in \"eslint.config.js\": https://eslint.org/docs/latest/use/configure/migration-guide#ignoring-files\n(Use `node --trace-warnings ...` to show where the warning was created)\n"
+      "details": "Command failed: pnpm lint:fix\nsh: 1: eslint: not found\n"
     }
   ],
   "metrics": {

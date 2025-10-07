@@ -1,6 +1,11 @@
-import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Zap, Brain, Shield, Rocket, Target } from 'lucide-react';
+
+import ArrowRight from 'lucide-react/dist/esm/icons/rrowright';
+import Zap from 'lucide-react/dist/esm/icons/ap';
+import Brain from 'lucide-react/dist/esm/icons/rain';
+import Shield from 'lucide-react/dist/esm/icons/hield';
+import Rocket from 'lucide-react/dist/esm/icons/ocket';
+import Target from 'lucide-react/dist/esm/icons/arget';
 
 export const metadata = {
   title: 'AI 2026 Mega Breakthroughs: The Revolutionary Technologies Reshaping Enterprise',
@@ -14,7 +19,7 @@ export default function AI2026MegaBreakthroughs() {
       {/* Header */}
       <div className="text-center mb-12">
         <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold mb-4">
-          <Rocket className="w-4 h-4" />
+          <Rocket />
           BREAKTHROUGH 2026
         </div>
         <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -35,7 +40,7 @@ export default function AI2026MegaBreakthroughs() {
       {/* Hero Image Placeholder */}
       <div className="w-full h-64 md:h-96 bg-gradient-to-br from-purple-100 via-blue-100 to-teal-100 rounded-2xl mb-12 flex items-center justify-center">
         <div className="text-center">
-          <Brain className="w-16 h-16 text-purple-600 mx-auto mb-4" />
+          <Brain />
           <h3 className="text-2xl font-bold text-gray-800">AI 2026 Mega Breakthroughs</h3>
           <p className="text-gray-600">Revolutionary technologies transforming enterprise</p>
         </div>
@@ -59,7 +64,7 @@ export default function AI2026MegaBreakthroughs() {
         <div className="bg-gradient-to-br from-blue-50 to-purple-50 p-8 rounded-2xl border border-blue-200">
           <div className="flex items-center gap-3 mb-4">
             <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center">
-              <Zap className="w-6 h-6 text-white" />
+              <Zap />
             </div>
             <h3 className="text-2xl font-bold text-gray-900">Quantum-Enhanced AI</h3>
           </div>
@@ -80,7 +85,7 @@ export default function AI2026MegaBreakthroughs() {
         <div className="bg-gradient-to-br from-green-50 to-teal-50 p-8 rounded-2xl border border-green-200">
           <div className="flex items-center gap-3 mb-4">
             <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center">
-              <Brain className="w-6 h-6 text-white" />
+              <Brain />
             </div>
             <h3 className="text-2xl font-bold text-gray-900">Neural Interfaces</h3>
           </div>
@@ -101,7 +106,7 @@ export default function AI2026MegaBreakthroughs() {
         <div className="bg-gradient-to-br from-purple-50 to-pink-50 p-8 rounded-2xl border border-purple-200">
           <div className="flex items-center gap-3 mb-4">
             <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center">
-              <Shield className="w-6 h-6 text-white" />
+              <Shield />
             </div>
             <h3 className="text-2xl font-bold text-gray-900">Autonomous Enterprise</h3>
           </div>
@@ -122,7 +127,7 @@ export default function AI2026MegaBreakthroughs() {
         <div className="bg-gradient-to-br from-orange-50 to-red-50 p-8 rounded-2xl border border-orange-200">
           <div className="flex items-center gap-3 mb-4">
             <div className="w-12 h-12 bg-orange-600 rounded-lg flex items-center justify-center">
-              <Target className="w-6 h-6 text-white" />
+              <Target />
             </div>
             <h3 className="text-2xl font-bold text-gray-900">Synthetic Data Revolution</h3>
           </div>

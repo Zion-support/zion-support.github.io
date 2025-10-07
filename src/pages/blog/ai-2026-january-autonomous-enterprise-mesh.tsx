@@ -1,8 +1,8 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { motion } from 'framer-motion';
 import { Brain, Network, Zap, Shield, ArrowRight, Clock, User, Tag } from 'lucide-react';
 
+import { Helmet } from 'react-helmet-async';
+import { motion } from 'framer-motion';
 const AutonomousEnterpriseMesh2026: React.FC = () => {
   const features = [
     {

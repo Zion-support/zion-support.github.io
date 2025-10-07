@@ -1,5 +1,46 @@
-
-
-
-import _React from 'react' export default AIServicesShowcase const "AIServicesShowcase": _React.FC = () : JSX.Element: => { const aiServices = [{ id: "ai: - code - review - security,","title": "AI: - Powered Code Review & Security Analysis,","description": "Advanced: AI - driven code analysis platform that detects vulnerabilitie,s,bugs,and security issues with unprecedented accuracy and speed.",features["85% vulnerability reduction","50 + programming languages","SAST,DAST,SCA,IAST","Git integration"],"pricing": "$49: - $799 / month,","url": "/services: / ai - code - review - security,","icon": ","category": "Security: & Development,",benefits["Reduce security incidents by 60%","Faster code review process","Compliance ready"] },{ "id": "ai: - customer - experience - analytics,","title": "AI: - Powered Customer Experience Analytics Platform,","description": "Transform: customer insights into actionable intelligence with AI - driven analytics that boost satisfaction by 35% and reduce churn by 25%.,",features["Real - time sentiment analysis","Customer journey tracking","Predictive analytics","Omnichannel insights"],"pricing": "$299: - $,1,999 / month","url": "/services: / ai - customer - experience - analytics,","icon": ","category": "Analytics: & Customer Success,",benefits["Increase customer satisfaction by 35%","Reduce churn by 25%","Real - time insights"] },{ "id": "ai: - devops - automation - platform,","title": "AI: - Powered DevOps Automation Platform,","description": "Revolutionize: DevOps workflow with AI - powered automation that reduces deployment time by 80% and decreases failures by 90%.,",features["AI pipeline optimization","Intelligent deployment","GitOps workflows","Multi - cloud orchestration"],"pricing": "$199: - $,1,499 / month","url": "/services: / ai - devops - automation - platform,","icon": ","category": "DevOps: & Infrastructure,",benefits["Reduce deployment time by 80%","Decrease failures by 90%","Faster time to market"] },{ "id": "ai: - iot - edge - computing - platform,","title": "AI: - Powered IoT Edge Computing Platform,","description": "Revolutionize: IoT with AI - powered edge computing that processes data at the edge with sub - millisecond latency and reduces bandwidth costs by 70%.,",features["Sub - millisecond processing","Edge AI intelligence","Distributed computing","Hybrid cloud integration"],"pricing": "$299: - $,2,499 / month","url": "/services: / ai - iot - edge - computing - platform,","icon": ","category": "IoT: & Edge Computing,",benefits["Reduce latency by 90%","Lower bandwidth costs by 70%","Real - time decision making"] } ] const categories = ["All","Security & Development","Analytics & Customer Success","DevOps & Infrastructure","IoT & Edge Computing"] return (<> <SEO title = "AI - Powered Micro SAAS Services Showcase | Zion Tech Group" description="Discover our cutting - edge AI - powered micro SAAS services. From code security to customer analytics,DevOps automation to IoT edge computing. Transform your business with intelligent solutions." keywords="AI services,micro SAAS,code security,customer analytics,DevOps automation,IoT edge computing,Zion Tech Group" canonical=""https": ",;
-
+import React from 'react'
+import { Metadata } from 'next'
+export const metadata: Metadata = {title: 'AIServicesShowcase | Zion Tech Group',
+  description: 'Discover the latest AI breakthroughs and enterprise automation solutions from Zion Tech Group.',
+  keywords: 'AI, automation, enterprise, breakthrough, technology',
+  openGraph: {
+    title: 'AIServicesShowcase',
+    description: 'Discover the latest AI breakthroughs and enterprise automation solutions.',
+    type: 'article'}
+  },
+};
+export default function AIServicesShowcase() {return (
+    <div className='min-h-screen bg-gray-50'>
+      <div className='max-w-4xl mx-auto px-4 py-8'>
+        <div className='bg-white rounded-lg shadow-lg p-8'>
+          <div className='text-center mb-8'>
+            <h1 className='text-4xl font-bold text-gray-900 mb-4'>
+              AIServicesShowcase
+            </h1>
+            <p className='text-xl text-gray-600 mb-6'>
+              Revolutionary AI Breakthrough
+            </p>
+            <div className='flex justify-center space-x-4'>
+              <span className='bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium'>
+                BREAKTHROUGH
+              </span>
+              <span className='bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium'>
+                AI
+              </span>
+              <span className='bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium'>
+                ENTERPRISE
+              </span>
+            </div>
+          </div>
+          <div className='prose max-w-none'>
+            <p className='text-lg text-gray-700 mb-6'>
+              This page is currently under development. Please check back soon
+              for the complete content.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  )}
+}
+import React from 'react'' import { Metadata } from 'next' export const metadata: Metadata = {' title: 'AIServicesShowcase | Zion Tech Group',' description: 'Discover the latest AI breakthroughs and enterprise automation solutions from Zion Tech Group.',' keywords: 'AI, automation, enterprise, breakthrough, technology', openGraph: {' title: 'AIServicesShowcase',' description: 'Discover the latest AI breakthroughs and enterprise automation solutions.',' type: 'article'} }, }; export default function AIServicesShowcase() {return ( <div className="min-h-screen bg-gray-50" > <div className="max-w-4xl mx-auto px-4 py-8" > <div className="bg-white rounded-lg shadow-lg p-8" > <div className="text-center mb-8" > <h1 className="text-4xl font-bold text-gray-900 mb-4" >AIServicesShowcase</h1> <p className="text-xl text-gray-600 mb-6" >Revolutionary AI Breakthrough</p> <div className="flex justify-center space-x-4" > <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium" >BREAKTHROUGH</span> <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium" >AI</span> <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium" >ENTERPRISE</span> </div> </div> <div className="prose max-w-none" > <p className="text-lg text-gray-700 mb-6" > This page is currently under development. Please check back soon for the complete content. </p> </div> </div> </div> </div> )} }'

@@ -8,10 +8,7 @@
     },
     "imageOptimization": {
       "enabled": true,
-      "formats": [
-        "webp",
-        "avif"
-      ],
+      "formats": ["webp", "avif"],
       "quality": 85,
       "maxWidth": 1920
     },
@@ -28,13 +25,7 @@
     },
     "monitoring": {
       "enabled": true,
-      "metrics": [
-        "fcp",
-        "lcp",
-        "cls",
-        "fid",
-        "ttfb"
-      ],
+      "metrics": ["fcp", "lcp", "cls", "fid", "ttfb"],
       "reportPath": "./performance-reports/metrics.json"
     }
   },

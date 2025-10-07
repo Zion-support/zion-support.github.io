@@ -1,18 +1,18 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 
-export default function AgenticWorkflowOrchestration2026(): React.JSX.Element {
+export default function BlogPage(): React.JSX.Element {
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
       <Helmet>
         <title>Agentic Workflow Orchestration 2026 — Budgets, Canaries, Rollback</title>
-        <meta
-          name="description"
-          content="Design agentic workflows with budgeted actions, KPI-linked canaries, and instant rollback for safe velocity."
+        <meta 
+          name="description" 
+          content="Design agentic workflows with budgeted actions, KPI-linked canaries, and instant rollback for safe velocity." 
         />
-        <link
-          rel="canonical"
-          href="https://ziontechgroup.com/blog/agentic-workflow-orchestration-2026"
+        <link 
+          rel="canonical" 
+          href="https://ziontechgroup.com/blog/agentic-workflow-orchestration-2026" 
         />
       </Helmet>
 
@@ -34,8 +34,12 @@ export default function AgenticWorkflowOrchestration2026(): React.JSX.Element {
             proven in production.
           </p>
         </div>
+        <div className="mt-8">
+          <a href="/blog" className="text-cyan-300 hover:underline">← Back to Blog</a>
+        </div>
       </div>
     </div>
   );
+
 }
 

@@ -1,6 +1,11 @@
-import React from 'react';
 import Link from 'next/link';
-import { ArrowLeft, Clock, User, Calendar, Share2, Bookmark } from 'lucide-react';
+
+import ArrowLeft from 'lucide-react/dist/esm/icons/rrowleft';
+import Clock from 'lucide-react/dist/esm/icons/lock';
+import User from 'lucide-react/dist/esm/icons/ser';
+import Calendar from 'lucide-react/dist/esm/icons/alendar';
+import Share2 from 'lucide-react/dist/esm/icons/hare2';
+import Bookmark from 'lucide-react/dist/esm/icons/ookmark';
 
 export const metadata = {
   title: 'AI Autonomous Enterprise Systems 2026: Self-Improving Intelligence Revolution | Zion Tech Group',
@@ -16,21 +21,21 @@ export default function AIAutonomousEnterpriseSystems2026() {
         <div className="max-w-4xl mx-auto px-4">
           <div className="flex items-center gap-2 text-blue-200 mb-4">
             <Link href="/blog" className="flex items-center gap-1 hover:text-white transition-colors">
-              <ArrowLeft className="w-4 h-4" />
+              <ArrowLeft />
               Back to Blog
             </Link>
           </div>
           <div className="flex items-center gap-4 text-sm text-blue-200 mb-6">
             <div className="flex items-center gap-1">
-              <Calendar className="w-4 h-4" />
+              <Calendar />
               January 30, 2026
             </div>
             <div className="flex items-center gap-1">
-              <Clock className="w-4 h-4" />
+              <Clock />
               28 min read
             </div>
             <div className="flex items-center gap-1">
-              <User className="w-4 h-4" />
+              <User />
               Zion Tech Group
             </div>
           </div>
@@ -199,11 +204,11 @@ export default function AIAutonomousEnterpriseSystems2026() {
         {/* Article Actions */}
         <div className="flex flex-wrap gap-4 pt-8 border-t border-gray-200">
           <button className="flex items-center gap-2 bg-blue-50 text-blue-600 px-4 py-2 rounded-lg hover:bg-blue-100 transition-colors">
-            <Share2 className="w-4 h-4" />
+            <Share2 />
             Share Article
           </button>
           <button className="flex items-center gap-2 bg-gray-50 text-gray-600 px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors">
-            <Bookmark className="w-4 h-4" />
+            <Bookmark />
             Save for Later
           </button>
         </div>

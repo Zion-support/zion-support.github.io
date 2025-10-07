@@ -1,42 +1,33 @@
 #!/bin/bash
 set -e
 
-echo "Starting git operations..."
-
-# Change to workspace directory
-cd /workspace
+echo "=== Starting Git Operations ==="
 
 # Check current status
-echo "=== Current Git Status ==="
+echo "Current git status:"
 git status --short
 
-echo "=== Current Branch ==="
-git branch --show-current
-
-echo "=== Last Commit ==="
-git log --oneline -1
-
-echo "=== Checking for merge conflicts ==="
-if git diff --check; then
-    echo "No merge conflicts found"
+# Check if we're in a rebase
+if [ -f ".git/rebase-merge/head-name" ]; then
+    echo "In rebase state, completing rebase..."
+    git add jest.config.cjs
+    git rebase --continue
+    echo "Rebase completed"
 else
-    echo "Merge conflicts detected"
+    echo "Not in rebase state"
 fi
 
-echo "=== Attempting to pull latest changes ==="
-if git pull origin main --no-rebase; then
-    echo "Successfully pulled latest changes"
+# Push main branch
+echo "Pushing main branch..."
+git push origin main
+
+# Check for open PRs using GitHub CLI if available
+if command -v gh &> /dev/null; then
+    echo "Checking for open PRs..."
+    gh pr list --state open --repo Zion-Holdings/zion.app
 else
-    echo "Pull failed, checking status..."
-    git status
+    echo "GitHub CLI not available, checking via API..."
+    curl -s "https://api.github.com/repos/Zion-Holdings/zion.app/pulls?state=open" | jq -r '.[].title' 2>/dev/null || echo "Could not fetch PRs"
 fi
 
-echo "=== Attempting to push changes ==="
-if git push origin main; then
-    echo "Successfully pushed to main"
-else
-    echo "Push failed, checking status..."
-    git status
-fi
-
-echo "Git operations completed"
+echo "=== Git Operations Complete ==="

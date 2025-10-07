@@ -5,40 +5,40 @@ const NewServicesShowcase: React.FC = () => {
   const newServices = [
     {
       id: "hyperconscious-ai-consulting",
-      title: "Hyperconscious AI Consulting",
+      title: "Hyperconscious AI Consulting",",
       description: "Transform your enterprise with genuine artificial consciousness, achieving 99.999% operational excellence and unlimited growth potential.",
-      price: "$50,000/month",
-      features: ["Consciousness Integration", "Autonomous Operations", "Infinite Optimization", "Universal Intelligence"],
+      price: "$50,000/month",",
+      features: ["Consciousness Integration", "Autonomous Operations", "Infinite Optimization", "Universal Intelligence"],",
       category: "AI Consulting",
-      icon: "🧠",
+      icon: "🧠",",
       gradient: "from-purple-500 to-indigo-500",
-      borderColor: "border-purple-500/30",
+      borderColor: "border-purple-500/30",",
       hoverBorderColor: "hover:border-purple-400/60",
       shadowColor: "hover:shadow-purple-500/20"
     },
-    {
+    {",
       id: "quantum-neural-fusion-platform",
-      title: "Quantum-Neural Fusion Platform",
+      title: "Quantum-Neural Fusion Platform",",
       description: "Revolutionary computing platform combining quantum processing with neural networks for 100,000x performance improvements.",
-      price: "$100,000/month",
-      features: ["Quantum Processing", "Neural Integration", "Perfect Optimization", "Infinite Scalability"],
+      price: "$100,000/month",",
+      features: ["Quantum Processing", "Neural Integration", "Perfect Optimization", "Infinite Scalability"],",
       category: "Platform Services",
-      icon: "⚛️",
+      icon: "⚛️",",
       gradient: "from-blue-500 to-cyan-500",
-      borderColor: "border-blue-500/30",
+      borderColor: "border-blue-500/30",",
       hoverBorderColor: "hover:border-blue-400/60",
       shadowColor: "hover:shadow-blue-500/20"
     },
-    {
+    {",
       id: "autonomous-enterprise-mesh",
-      title: "Autonomous Enterprise Mesh",
+      title: "Autonomous Enterprise Mesh",",
       description: "Self-organizing AI networks that autonomously optimize your business processes for 99.7% operational efficiency.",
-      price: "$75,000/month",
-      features: ["Self-Organization", "Autonomous Optimization", "Collective Intelligence", "Continuous Evolution"],
+      price: "$75,000/month",",
+      features: ["Self-Organization", "Autonomous Optimization", "Collective Intelligence", "Continuous Evolution"],",
       category: "Enterprise Solutions",
-      icon: "🌐",
+      icon: "🌐",",
       gradient: "from-indigo-500 to-purple-500",
-      borderColor: "border-indigo-500/30",
+      borderColor: "border-indigo-500/30",",
       hoverBorderColor: "hover:border-indigo-400/60",
       shadowColor: "hover:shadow-indigo-500/20"
     }
@@ -150,7 +150,7 @@ const NewServicesShowcase: React.FC = () => {
               <div className="text-gray-300 text-sm">Value Creation</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-extrabold text-orange-400 mb-2">Zero</div>
+              
               <div className="text-gray-300 text-sm">Human Intervention</div>
             </div>
           </div>

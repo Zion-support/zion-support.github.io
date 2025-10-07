@@ -1,19 +1,21 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 
-export default function EnterpriseRAGSecurityV2(): React.JSX.Element {
+export default function BlogPage(): React.JSX.Element {
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
       <Helmet>
+
         <title>Enterprise RAG Security v2 — Auth-Aware, Fresh, Signed</title>
-        <meta
-          name="description"
-          content="Auth-scoped retrieval, freshness windows, prompt firewalls, and signed outputs that keep answers correct and compliant."
+        <meta 
+          name="description" 
+          content="Auth-scoped retrieval, freshness windows, prompt firewalls, and signed outputs that keep answers correct and compliant." 
         />
-        <link
-          rel="canonical"
-          href="https://ziontechgroup.com/blog/ai-2025-oct-01-enterprise-rag-security-v2"
+        <link 
+          rel="canonical" 
+          href="https://ziontechgroup.com/blog/ai-2025-oct-01-enterprise-rag-security-v2" 
         />
+
       </Helmet>
 
       <div className="container mx-auto px-6 py-16">
@@ -31,8 +33,12 @@ export default function EnterpriseRAGSecurityV2(): React.JSX.Element {
             verifiers that run in CI and production.
           </p>
         </div>
+        <div className="mt-8">
+          <a href="/blog" className="text-cyan-300 hover:underline">← Back to Blog</a>
+        </div>
       </div>
     </div>
   );
+
 }
 

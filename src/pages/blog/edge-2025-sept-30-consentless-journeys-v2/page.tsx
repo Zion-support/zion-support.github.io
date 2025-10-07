@@ -1,24 +1,34 @@
+import React from "react";
+import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
-export default function Page() {
+export default function BlogPage(): React.JSX.Element {
   return (
-    <div className="container mx-auto px-6 py-12">
-      <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-        Consentless Journeys v2 — Personalization &lt;100ms, Zero‑PII
-      </h1>
-      <p className="text-gray-600 mb-6">
-        Scoped IDs, on‑device models, and DP noise for compliant, real‑time journeys at global scale.
-      </p>
-      <div className="prose max-w-none">
-        <p>
-          This is a short placeholder article. Expand with practical patterns for edge KV, signed configs,
-          and local telemetry that enable private, sub‑100ms experiences without collecting PII.
-        </p>
-      </div>
-      <div className="mt-8">
-        <Link to="/" className="text-indigo-700 font-medium hover:text-indigo-800">← Back to Home</Link>
+    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+      <Helmet>
+        <title>Edge 2025 Sept 30 Consentless Journeys V2</title>
+        <meta 
+          name="description" 
+          content="Learn about edge 2025 sept 30 consentless journeys v2 and how it can benefit your enterprise." 
+        />
+        <link 
+          rel="canonical" 
+          href="https://ziontechgroup.com/blog/edge-2025-sept-30-consentless-journeys-v2" 
+        />
+      </Helmet>
+
+      <div className="container mx-auto px-6 py-16">
+        <h1 className="text-4xl md:text-5xl font-bold mb-4">Edge 2025 Sept 30 Consentless Journeys V2</h1>
+        <p className="text-zion-slate-light mb-8">Learn about edge 2025 sept 30 consentless journeys v2 and how it can benefit your enterprise.</p>
+        <div className="prose prose-invert max-w-3xl">
+          <p>
+            This comprehensive guide covers edge 2025 sept 30 consentless journeys v2 and provides practical insights for enterprise implementation.
+          </p>
+        </div>
+        <div className="mt-8">
+          <Link to="/blog" className="text-cyan-300 hover:underline">← Back to Blog</Link>
+        </div>
       </div>
     </div>
   );
 }
-

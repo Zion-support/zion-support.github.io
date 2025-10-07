@@ -1,37 +1,34 @@
-// @ts-nocheck
 import React from "react";
 import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
 
-export default function AutonomousOperationsCaseStudy2026(): React.JSX.Element {
+export default function BlogPage(): React.JSX.Element {
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
       <Helmet>
-        <title>Autonomous Operations Case Study 2026 — 98% automation</title>
-        <meta
-          name="description"
-          content="Real‑world case study achieving 98% automation with budgets, KPI‑linked canaries, and instant rollback across critical workflows."
+        <title>Autonomous Operations Case Study 2026</title>
+        <meta 
+          name="description" 
+          content="Learn about autonomous operations case study 2026 and how it can benefit your enterprise." 
         />
-        <link
-          rel="canonical"
-          href="https://ziontechgroup.com/blog/autonomous-operations-case-study-2026"
+        <link 
+          rel="canonical" 
+          href="https://ziontechgroup.com/blog/autonomous-operations-case-study-2026" 
         />
       </Helmet>
 
       <div className="container mx-auto px-6 py-16">
         <h1 className="text-4xl md:text-5xl font-bold mb-4">Autonomous Operations Case Study 2026</h1>
-        <p className="text-zion-slate-light mb-8">98% automation rates realized</p>
+        <p className="text-zion-slate-light mb-8">Learn about autonomous operations case study 2026 and how it can benefit your enterprise.</p>
         <div className="prose prose-invert max-w-3xl">
           <p>
-            This case study details how a global enterprise deployed agentic workflows with budgeted actions,
-            KPI‑linked canaries, and one‑click rollback to safely reach 98% automation.
+            This comprehensive guide covers autonomous operations case study 2026 and provides practical insights for enterprise implementation.
           </p>
-          <p>
-            We share architecture diagrams, runbooks, and operational scorecards you can adapt to your
-            own environment to accelerate time‑to‑value without sacrificing safety.
-          </p>
+        </div>
+        <div className="mt-8">
+          <Link to="/blog" className="text-cyan-300 hover:underline">← Back to Blog</Link>
         </div>
       </div>
     </div>
   );
 }
-

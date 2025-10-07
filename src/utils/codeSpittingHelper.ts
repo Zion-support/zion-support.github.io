@@ -74,8 +74,8 @@ export const useLazyLoadOnVisible = (
   ref: React.RefObject<HTMLElement>,
   callback: () => void,
   options?: IntersectionObserverInit
-): void => {
-  if (typeof window === 'undefined') return;
+): (() => void) => {
+  if (typeof window === 'undefined') return () => {};
 
   const observer = new IntersectionObserver(
     (entries) => {

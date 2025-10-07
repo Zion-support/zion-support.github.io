@@ -1,35 +1,34 @@
 import React from 'react';
-import { Zap, Shield, TrendingUp, Users, Globe, Award } from 'lucide-react';
 
 const ModernFeatures: React.FC = () => {
   const features = [
     {
-      icon: <Zap className="w-10 h-10" />,
+      icon: '🚀',
       title: "Lightning Fast",
       description: "Deploy AI solutions 10x faster with our pre-built frameworks and automation tools."
     },
     {
-      icon: <Shield className="w-10 h-10" />,
+      icon: '🚀',
       title: "Enterprise Security",
       description: "Bank-level security with SOC 2, GDPR compliance, and continuous monitoring."
     },
     {
-      icon: <TrendingUp className="w-10 h-10" />,
+      icon: '🚀',
       title: "Proven Results",
       description: "Average 300% ROI within 6 months across all client implementations."
     },
     {
-      icon: <Users className="w-10 h-10" />,
+      icon: '🚀',
       title: "Expert Support",
       description: "Dedicated team of AI specialists providing 24/7 support and guidance."
     },
     {
-      icon: <Globe className="w-10 h-10" />,
+      icon: '🚀',
       title: "Global Scale",
       description: "Infrastructure spanning 50+ countries for low-latency worldwide access."
     },
     {
-      icon: <Award className="w-10 h-10" />,
+      icon: '🚀',
       title: "Award Winning",
       description: "Recognized industry leader with 15+ awards for innovation and excellence."
     }
@@ -50,7 +49,9 @@ const ModernFeatures: React.FC = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {features.map((feature, index) => (
             <div
-              key={index}
+
+key={index}
+
               className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 group"
             >
               <div className="bg-gradient-to-br from-indigo-500 to-purple-600 text-white w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
