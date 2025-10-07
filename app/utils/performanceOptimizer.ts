@@ -63,9 +63,13 @@ class PerformanceOptimizer {
   private measureLoadTime(): void {
     if (typeof window === 'undefined' || !window.performance) return;
 
-    const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-    if (navigation) {
-      this.metrics.loadTime = navigation.loadEventEnd - navigation.loadEventStart;
+    try {
+      const navigation = window.performance.getEntriesByType?.('navigation')[0] as PerformanceNavigationTiming;
+      if (navigation) {
+        this.metrics.loadTime = navigation.loadEventEnd - navigation.loadEventStart;
+      }
+    } catch (error) {
+      console.warn('Performance API not fully supported:', error);
     }
   }
 

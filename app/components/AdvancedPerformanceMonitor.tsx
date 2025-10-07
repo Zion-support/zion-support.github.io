@@ -34,60 +34,77 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     if (typeof PerformanceObserver === 'undefined') return;
 
     // Measure First Contentful Paint (FCP)
-    const fcpEntry = performance.getEntriesByName('first-contentful-paint')[0];
-    const fcp = fcpEntry ? fcpEntry.startTime : null;
+    const fcpEntries = performance.getEntriesByName('first-contentful-paint') || [];
+    const fcp = fcpEntries.length > 0 ? fcpEntries[0].startTime : null;
 
     // Measure Largest Contentful Paint (LCP)
-    const lcpObserver = new PerformanceObserver(list => {
-      const entries = list.getEntries();
-      const lastEntry = entries[entries.length - 1];
-      setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
-    });
-    lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+    if ('PerformanceObserver' in window) {
+      try {
+        const lcpObserver = new PerformanceObserver(list => {
+          const entries = list.getEntries();
+          const lastEntry = entries[entries.length - 1];
+          setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
+        });
+        lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+      } catch (error) {
+        console.warn('LCP observer not supported:', error);
+      }
+    }
 
     // Measure First Input Delay (FID)
-    const fidObserver = new PerformanceObserver(list => {
-      const entries = list.getEntries();
-      entries.forEach(entry => {
-        if (
-          entry.entryType === 'first-input' &&
-          'processingStart' in entry &&
-          'startTime' in entry
-        ) {
-          const fidEntry = entry as PerformanceEventTiming;
-          setMetrics(prev => ({
-            ...prev,
-            fid: fidEntry.processingStart - fidEntry.startTime,
-          }));
-        }
-      });
-    });
-    fidObserver.observe({ entryTypes: ['first-input'] });
+    if ('PerformanceObserver' in window) {
+      try {
+        const fidObserver = new PerformanceObserver(list => {
+          const entries = list.getEntries();
+          entries.forEach(entry => {
+            if (
+              entry.entryType === 'first-input' &&
+              'processingStart' in entry &&
+              'startTime' in entry
+            ) {
+              const fidEntry = entry as PerformanceEventTiming;
+              setMetrics(prev => ({
+                ...prev,
+                fid: fidEntry.processingStart - fidEntry.startTime,
+              }));
+            }
+          });
+        });
+        fidObserver.observe({ entryTypes: ['first-input'] });
+      } catch (error) {
+        console.warn('FID observer not supported:', error);
+      }
+    }
 
     // Measure Cumulative Layout Shift (CLS)
-    let clsValue = 0;
-    const clsObserver = new PerformanceObserver(list => {
-      const entries = list.getEntries();
-      entries.forEach(entry => {
-        if (
-          entry.entryType === 'layout-shift' &&
-          'hadRecentInput' in entry &&
-          'value' in entry
-        ) {
-          const clsEntry = entry as LayoutShift;
-          if (!clsEntry.hadRecentInput) {
-            clsValue += clsEntry.value;
-            setMetrics(prev => ({ ...prev, cls: clsValue }));
-          }
-        }
-      });
-    });
-    clsObserver.observe({ entryTypes: ['layout-shift'] });
+    if ('PerformanceObserver' in window) {
+      try {
+        let clsValue = 0;
+        const clsObserver = new PerformanceObserver(list => {
+          const entries = list.getEntries();
+          entries.forEach(entry => {
+            if (
+              entry.entryType === 'layout-shift' &&
+              'hadRecentInput' in entry &&
+              'value' in entry
+            ) {
+              const clsEntry = entry as LayoutShift;
+              if (!clsEntry.hadRecentInput) {
+                clsValue += clsEntry.value;
+                setMetrics(prev => ({ ...prev, cls: clsValue }));
+              }
+            }
+          });
+        });
+        clsObserver.observe({ entryTypes: ['layout-shift'] });
+      } catch (error) {
+        console.warn('CLS observer not supported:', error);
+      }
+    }
 
     // Measure Time to First Byte (TTFB)
-    const navigationEntry = performance.getEntriesByType(
-      'navigation'
-    )[0] as PerformanceNavigationTiming;
+    const navigationEntries = performance.getEntriesByType('navigation') || [];
+    const navigationEntry = navigationEntries[0] as PerformanceNavigationTiming;
     const ttfb = navigationEntry
       ? navigationEntry.responseStart - navigationEntry.requestStart
       : null;

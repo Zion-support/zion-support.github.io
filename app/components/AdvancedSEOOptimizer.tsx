@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import Head from 'next/head';
+import { Helmet } from 'react-helmet-async';
 
 interface SEOConfig {
   title: string;
@@ -155,7 +155,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
   };
 
   return (
-    <Head>
+    <Helmet>
       <title>{config.title}</title>
       <meta name="description" content={config.description} />
       <meta name="keywords" content={config.keywords.join(', ')} />
@@ -173,7 +173,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
           }}
         />
       )}
-    </Head>
+    </Helmet>
   );
 };
 

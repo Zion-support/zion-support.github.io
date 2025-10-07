@@ -5,6 +5,16 @@ import AdvancedErrorBoundary from '../app/components/AdvancedErrorBoundary';
 import AdvancedSEOOptimizer from '../app/components/AdvancedSEOOptimizer';
 import AdvancedPerformanceMonitor from '../app/components/AdvancedPerformanceMonitor';
 
+// Mock Next.js Head component
+jest.mock('next/head', () => {
+  return {
+    __esModule: true,
+    default: ({ children }: { children: React.ReactNode }) => {
+      return <>{children}</>;
+    },
+  };
+});
+
 // Mock component that throws an error
 const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {
   if (shouldThrow) {
@@ -59,24 +69,33 @@ describe('AdvancedErrorBoundary', () => {
     consoleSpy.mockRestore();
   });
 
-  it('retries when retry button is clicked', () => {
+  it('retries when retry button is clicked', async () => {
     const consoleSpy = jest
       .spyOn(console, 'error')
       .mockImplementation(() => {});
 
-    render(
+    let shouldThrow = true;
+    const TestComponent = () => <ThrowError shouldThrow={shouldThrow} />;
+
+    const { rerender } = render(
       <AdvancedErrorBoundary enableRetry={true}>
-        <ThrowError shouldThrow={true} />
+        <TestComponent />
       </AdvancedErrorBoundary>
     );
 
     const retryButton = screen.getByText('Try Again (3 attempts left)');
+    
+    // Change shouldThrow before clicking retry
+    shouldThrow = false;
     fireEvent.click(retryButton);
 
-    // After retry, the error boundary should reset
-    expect(
-      screen.queryByText('Oops! Something went wrong')
-    ).not.toBeInTheDocument();
+    // After retry, the error boundary should reset and show the child component
+    await waitFor(() => {
+      expect(
+        screen.queryByText('Oops! Something went wrong')
+      ).not.toBeInTheDocument();
+    });
+
     consoleSpy.mockRestore();
   });
 });
@@ -116,7 +135,7 @@ describe('AdvancedSEOOptimizer', () => {
   });
 
   it('renders structured data when enabled', () => {
-    render(
+    const { container } = render(
       <HelmetProvider>
         <AdvancedSEOOptimizer
           config={mockSEOData}
@@ -125,58 +144,74 @@ describe('AdvancedSEOOptimizer', () => {
       </HelmetProvider>
     );
 
-    const structuredDataScript = document.querySelector(
+    const structuredDataScript = container.querySelector(
       'script[type="application/ld+json"]'
     );
-    expect(structuredDataScript).toBeInTheDocument();
+    expect(structuredDataScript).toBeTruthy();
   });
 
   it('renders Open Graph tags when enabled', () => {
-    render(
+    const { container } = render(
       <HelmetProvider>
         <AdvancedSEOOptimizer config={mockSEOData} enableOpenGraph={true} />
       </HelmetProvider>
     );
 
     expect(
-      document.querySelector('meta[property="og:title"]')
-    ).toBeInTheDocument();
+      container.querySelector('meta[property="og:title"]')
+    ).toBeTruthy();
     expect(
-      document.querySelector('meta[property="og:description"]')
-    ).toBeInTheDocument();
+      container.querySelector('meta[property="og:description"]')
+    ).toBeTruthy();
   });
 
   it('renders Twitter Card tags when enabled', () => {
-    render(
+    const { container } = render(
       <HelmetProvider>
         <AdvancedSEOOptimizer config={mockSEOData} enableTwitterCards={true} />
       </HelmetProvider>
     );
 
     expect(
-      document.querySelector('meta[name="twitter:card"]')
-    ).toBeInTheDocument();
+      container.querySelector('meta[name="twitter:card"]')
+    ).toBeTruthy();
     expect(
-      document.querySelector('meta[name="twitter:title"]')
-    ).toBeInTheDocument();
+      container.querySelector('meta[name="twitter:title"]')
+    ).toBeTruthy();
   });
 });
 
 describe('AdvancedPerformanceMonitor', () => {
   // Mock performance API
   const mockPerformance = {
-    getEntriesByName: jest.fn(),
-    getEntriesByType: jest.fn(),
-    getEntries: jest.fn(),
+    getEntriesByName: jest.fn(() => []),
+    getEntriesByType: jest.fn(() => []),
+    getEntries: jest.fn(() => []),
     measurePageLoad: jest.fn(),
     reportWebVitals: jest.fn(),
   };
 
+  // Mock PerformanceObserver
+  class MockPerformanceObserver {
+    constructor(callback: PerformanceObserverCallback) {
+      this.callback = callback;
+    }
+    callback: PerformanceObserverCallback;
+    observe() {}
+    disconnect() {}
+    takeRecords() { return []; }
+  }
+
   beforeEach(() => {
+    // Mock performance API
     Object.defineProperty(window, 'performance', {
       value: mockPerformance,
       writable: true,
+      configurable: true,
     });
+
+    // Mock PerformanceObserver
+    global.PerformanceObserver = MockPerformanceObserver as any;
   });
 
   afterEach(() => {
