@@ -89,7 +89,8 @@ class Analytics {
 
     // Log in development
     if (process.env['NODE_ENV'] === 'development') {
-      console.log('Analytics event:', event);
+      // eslint-disable-next-line no-console
+console.log('Analytics event:', event);
     }
   }
 
@@ -143,9 +144,11 @@ class Analytics {
     try {
       // In a real application, you would send to services like Google Analytics, Mixpanel, etc.
       // For now, we'll just log to console
-      console.log('Analytics event sent:', event);
+      // eslint-disable-next-line no-console
+console.log('Analytics event sent:', event);
     } catch (err) {
-      console.error('Failed to send analytics event:', err);
+      // eslint-disable-next-line no-console
+console.error('Failed to send analytics event:', err);
     }
   }
 

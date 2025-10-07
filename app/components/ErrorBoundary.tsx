@@ -34,7 +34,8 @@ class ErrorBoundary extends Component<Props, State> {
     }
 
     if (this.props.enableErrorReporting) {
-      console.error('Error caught by boundary:', error, errorInfo);
+      // eslint-disable-next-line no-console
+console.error('Error caught by boundary:', error, errorInfo);
     }
   }
 

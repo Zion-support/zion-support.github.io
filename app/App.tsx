@@ -44,10 +44,12 @@ const App: React.FC = () => {
       const pageLoadMetrics = collectPerformanceMetrics();
       const metrics = performanceOptimizer.getMetrics();
       if (pageLoadMetrics) {
-        console.log('Performance metrics collected:', pageLoadMetrics);
+        // eslint-disable-next-line no-console
+console.log('Performance metrics collected:', pageLoadMetrics);
       }
       if (metrics) {
-        console.log('Performance metrics:', metrics);
+        // eslint-disable-next-line no-console
+console.log('Performance metrics:', metrics);
       }
     }
     
