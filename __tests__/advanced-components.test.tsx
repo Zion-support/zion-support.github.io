@@ -97,7 +97,7 @@ describe('AdvancedSEOOptimizer', () => {
   it('renders without crashing', () => {
     render(
       <HelmetProvider>
-        <AdvancedSEOOptimizer seoData={mockSEOData} />
+        <AdvancedSEOOptimizer config={mockSEOData} />
         <div>Test content</div>
       </HelmetProvider>
     );
@@ -108,7 +108,7 @@ describe('AdvancedSEOOptimizer', () => {
   it('sets document title', () => {
     render(
       <HelmetProvider>
-        <AdvancedSEOOptimizer seoData={mockSEOData} />
+        <AdvancedSEOOptimizer config={mockSEOData} />
       </HelmetProvider>
     );
 
@@ -119,7 +119,7 @@ describe('AdvancedSEOOptimizer', () => {
     render(
       <HelmetProvider>
         <AdvancedSEOOptimizer
-          seoData={mockSEOData}
+          config={mockSEOData}
           enableStructuredData={true}
         />
       </HelmetProvider>
@@ -134,7 +134,7 @@ describe('AdvancedSEOOptimizer', () => {
   it('renders Open Graph tags when enabled', () => {
     render(
       <HelmetProvider>
-        <AdvancedSEOOptimizer seoData={mockSEOData} enableOpenGraph={true} />
+        <AdvancedSEOOptimizer config={mockSEOData} enableOpenGraph={true} />
       </HelmetProvider>
     );
 
@@ -149,7 +149,7 @@ describe('AdvancedSEOOptimizer', () => {
   it('renders Twitter Card tags when enabled', () => {
     render(
       <HelmetProvider>
-        <AdvancedSEOOptimizer seoData={mockSEOData} enableTwitterCards={true} />
+        <AdvancedSEOOptimizer config={mockSEOData} enableTwitterCards={true} />
       </HelmetProvider>
     );
 
