@@ -129,15 +129,10 @@ const NewContentPromotionalBanner2026: React.FC = () => {
           </p>
         </div>
 
-        {/* Content Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {featuredContent.map((item) => (
-            <div
-              key={item.id}
-              className="group relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 hover:border-blue-500/50 transition-all duration-500 hover:scale-105"
-            >
-              {/* Card glow effect */}
-              <div className={`absolute inset-0 bg-gradient-to-br ${item.color} opacity-0 group-hover:opacity-10 transition-all duration-500 rounded-2xl`}></div>
+        {/* Hero Section */}
+        <div className="text-center mb-16">
+          <div className="flex items-center justify-center gap-2 mb-6">
+            <span className="text-sm font-bold text-yellow-400 flex items-center gap-2">
               🚀 JUST PUBLISHED • SEPTEMBER 2026
             </span>
             <Sparkles className="w-6 h-6 text-yellow-400" />
@@ -156,7 +151,6 @@ const NewContentPromotionalBanner2026: React.FC = () => {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
             Explore cutting-edge AI strategies, implementation roadmaps, and security innovations 
             that are delivering <span className="text-yellow-400 font-bold">300%+ ROI</span> for enterprises worldwide
-            that are delivering <span className="text-cyan-400 font-bold">300%+ ROI</span> for enterprises worldwide
           </p>
 
           <div className="flex items-center justify-center gap-8 text-gray-300">
@@ -200,7 +194,7 @@ const NewContentPromotionalBanner2026: React.FC = () => {
                   <span className={`px-3 py-1 bg-gradient-to-r ${item.color} text-white text-xs font-semibold rounded-full`}>
                     {item.category}
                     {content.badge}
-                  </div>
+                  </span>
                 </div>
                 {/* Category */}
                 <div className='mb-4'>
@@ -216,8 +210,6 @@ const NewContentPromotionalBanner2026: React.FC = () => {
                 </h3>
                 {/* Excerpt */}
                 <p className="text-gray-300 mb-6 leading-relaxed">
-                  {item.excerpt}
-                <p className='text-gray-300 mb-6 leading-relaxed'>
                   {content.excerpt}
                 </p>
                 {/* CTA Button */}
@@ -236,7 +228,6 @@ const NewContentPromotionalBanner2026: React.FC = () => {
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </div>
-                </Link>
             </div>
           ))}
         </div>
@@ -344,6 +335,6 @@ const NewContentPromotionalBanner2026: React.FC = () => {
       </div>
     </section>
   );
-  };
+};
 
 export default NewContentPromotionalBanner2026;

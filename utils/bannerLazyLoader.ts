@@ -50,7 +50,7 @@ export const preloadBanner = (importFn: () => Promise<BannerModule>): void => {
           // Silently fail for preload
         });
       });
-    });
+    }
   }
 };
 
