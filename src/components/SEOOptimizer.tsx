@@ -11,6 +11,10 @@ const SEOOptimizer: React.FC = () => {
       "description": "Advanced AI and IT Solutions Provider",
       "url": "https://ziontechgroup.com",
       "logo": "https://ziontechgroup.com/logo.png",
+      "sameAs": [
+        "https://linkedin.com/company/ziontechgroup",
+        "https://twitter.com/ziontechgroup"
+      ],
       "contactPoint": {
         "@type": "ContactPoint",
         "telephone": "+1-555-0123",

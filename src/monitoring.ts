@@ -19,14 +19,30 @@ const performanceOptimizer = {
     return Promise.resolve({
       loadTime: 0,
       renderTime: 0,
-      memoryUsage: 0
+      firstContentfulPaint: 0,
+      largestContentfulPaint: 0
     });
   },
-  lazyLoadImages: () => {
-    console.log('Lazy loading images...');
+  measureUserInteraction: (event: string) => {
+    console.log('User interaction:', event);
+  }
+};
+
+// Export monitoring functions
+export const monitoring = {
+  analytics,
+  performanceOptimizer,
+  
+  init: () => {
+    console.log('Monitoring initialized');
   },
-  reportWebVitals: (metrics: any) => {
-    console.log('Web Vitals:', metrics);
+  
+  trackPageView: (path: string) => {
+    analytics.trackPageView(path);
+  },
+  
+  trackPerformance: (name: string, value: number, unit?: string) => {
+    analytics.trackPerformance(name, value, unit);
   }
 };
 

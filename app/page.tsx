@@ -53,27 +53,28 @@ const HomePage: React.FC = () => {
         </section>
 
         {/* Main Content */}
-        <main className="container mx-auto px-4 py-16">
-          {/* Unified Content Promotion */}
-          <section className="my-16">
-            <Suspense fallback={<LoadingFallback height="h-32" />}>
-              <UnifiedContentPromotion />
-            </Suspense>
-          </section>
+        <main className="py-16">
+          <div className="container mx-auto px-4">
+            {/* Content Showcase */}
+            <section className="mb-16">
+              <Suspense fallback={<LoadingFallback height="h-64" />}>
+                <ContentShowcase />
+              </Suspense>
+            </section>
 
-          {/* Content Showcase */}
-          <section className="my-16">
-            <Suspense fallback={<LoadingFallback height="h-48" />}>
-              <ContentShowcase />
-            </Suspense>
-          </section>
+            {/* Interactive AI ROI Calculator */}
+            <section className="mb-16">
+              <Suspense fallback={<LoadingFallback height="h-64" />}>
+                <InteractiveAIROICalculator />
+              </Suspense>
+            </section>
 
-          {/* Interactive Content Showcase 2026 */}
-          <section className="my-16">
-            <Suspense fallback={<LoadingFallback height="h-48" />}>
-              <InteractiveContentShowcase2026 />
-            </Suspense>
-          </section>
+            {/* 2026 Content Showcase */}
+            <section className="mb-16">
+              <Suspense fallback={<LoadingFallback height="h-64" />}>
+                <InteractiveContentShowcase2026 />
+              </Suspense>
+            </section>
 
           {/* Interactive AI ROI Calculator */}
           <section className="my-16">

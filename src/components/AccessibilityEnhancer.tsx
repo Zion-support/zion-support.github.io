@@ -32,7 +32,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
   ) => {
     const root = document.documentElement;
     
-    // High contrast mode
+    // Apply high contrast
     if (highContrast) {
       root.classList.add('high-contrast');
     } else {
@@ -49,6 +49,40 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     } else {
       root.classList.remove('reduced-motion');
     }
+  };
+
+  const toggleHighContrast = () => {
+    const newValue = !isHighContrast;
+    setIsHighContrast(newValue);
+    localStorage.setItem('highContrast', newValue.toString());
+    applyAccessibilityStyles(newValue, fontSize, reducedMotion);
+  };
+
+  const addSkipLinks = () => {
+    const skipLink = document.createElement('a');
+    skipLink.href = '#main-content';
+    skipLink.textContent = 'Skip to main content';
+    skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';
+    document.body.insertBefore(skipLink, document.body.firstChild);
+  };
+
+  const addAriaLandmarks = () => {
+    const main = document.querySelector('main');
+    if (main && !main.id) {
+      main.id = 'main-content';
+    }
+  };
+
+  const enhanceFocusManagement = () => {
+    // Add focus indicators
+    const style = document.createElement('style');
+    style.textContent = `
+      *:focus {
+        outline: 2px solid #3b82f6;
+        outline-offset: 2px;
+      }
+    `;
+    document.head.appendChild(style);
   };
 
   const toggleHighContrast = () => {
@@ -79,9 +113,9 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
               type="checkbox"
               checked={isHighContrast}
               onChange={toggleHighContrast}
-              className="rounded"
+              className="mr-2"
             />
-            <span>High Contrast</span>
+            <span className="text-sm">High Contrast</span>
           </label>
 
           {/* Font Size Controls */}
