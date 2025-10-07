@@ -148,12 +148,12 @@ export function runWhenIdle(
   callback: () => void,
   options?: IdleRequestOptions
 ): number {
-  if (typeof window !== 'undefined' && 'requestIdleCallback' in window) {
-    return (window as Window & typeof globalThis).requestIdleCallback(callback, options);
-  }
-  // Fallback for browsers that don't support requestIdleCallback
   if (typeof window !== 'undefined') {
-    return (window as Window & typeof globalThis).setTimeout(callback, 1) as unknown as number;
+    if ('requestIdleCallback' in window) {
+      return (window as Window & { requestIdleCallback: (cb: () => void, opts?: IdleRequestOptions) => number }).requestIdleCallback(callback, options);
+    }
+    // Fallback for browsers that don't support requestIdleCallback
+    return (window as Window).setTimeout(callback, 1) as unknown as number;
   }
   return 0;
 }
@@ -164,9 +164,9 @@ export function runWhenIdle(
 export function cancelIdle(id: number): void {
   if (typeof window !== 'undefined') {
     if ('cancelIdleCallback' in window) {
-      (window as Window & typeof globalThis).cancelIdleCallback(id);
+      (window as Window & { cancelIdleCallback: (id: number) => void }).cancelIdleCallback(id);
     } else {
-      (window as Window & typeof globalThis).clearTimeout(id);
+      (window as Window).clearTimeout(id);
     }
   }
 }
@@ -253,9 +253,9 @@ export function preloadResources(resources: Array<{ url: string; as: string }>):
  * Check if code splitting is supported
  */
 export function supportsCodeSplitting(): boolean {
+  // Check if dynamic imports are supported
   try {
-    // Check if dynamic import is supported
-    return typeof (Function('return import("")')) === 'function';
+    return typeof Function('return import("data:text/javascript,")') === 'function';
   } catch {
     return false;
   }
