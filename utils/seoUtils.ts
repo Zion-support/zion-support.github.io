@@ -257,7 +257,7 @@ Allow: /
 Sitemap: ${window.location.origin}/sitemap.xml`;
 };
 
-export default {
+const seoUtils = {
   setMetaTags,
   setOpenGraphTags,
   setTwitterCardTags,
@@ -266,3 +266,5 @@ export default {
   optimizeImages,
   generateRobotsTxt,
 };
+
+export default seoUtils;
