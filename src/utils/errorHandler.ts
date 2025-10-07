@@ -2,6 +2,8 @@
  * Error handling utilities
  */
 
+import { logger } from './logger';
+
 export interface ErrorInfo {
   message: string;
   stack?: string;
@@ -46,10 +48,8 @@ export class ErrorHandler {
       this.errorQueue.shift();
     }
 
-    // Log to console in development
-    if (process.env.NODE_ENV === 'development') {
-      console.error('Error logged:', errorData);
-    }
+    // Log using logger utility
+    logger.error('Error logged', errorData);
 
     // Send to error reporting service
     this.reportError(errorData);
@@ -70,7 +70,7 @@ export class ErrorHandler {
         });
       }
     } catch (reportError) {
-      console.error('Failed to report error:', reportError);
+      logger.error('Failed to report error', reportError);
     }
   }
 
