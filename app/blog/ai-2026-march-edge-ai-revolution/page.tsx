@@ -106,5 +106,11 @@ export default function Page() {return (<main className="min-h-screen bg-whitete
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
             <div className="bg-orange-50 p-4 rounded-lg">
               <h3 className="font-semibold text-orange-800">Response    Time</h3>
-              <p className="text-2xl font-bold text-orange-600">&lt;
-  }
+              <p className="text-2xl font-bold text-orange-600">&lt; 1ms</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
