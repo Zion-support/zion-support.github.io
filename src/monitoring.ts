@@ -3,40 +3,69 @@ import { analytics } from './utils/analytics';
 import { errorHandler } from './utils/errorHandler';
 import { performanceOptimizer, measurePageLoad, reportWebVitals } from './utils/performanceOptimizer';
 
-// Initialize performance monitoring
-if (typeof window !== 'undefined') {
-  // Track page load
-  analytics.trackPageView(window.location.pathname);
-
-  // Initialize performance optimizer
-
-  // Monitor long tasks
-  performanceOptimizer.monitorLongTasks((entries: PerformanceEntry[]) => {
-    entries.forEach((entry: PerformanceEntry) => {
-      analytics.track(
-        'long_task',
-        'performance',
-        'detected',
-        undefined,
-        entry.duration
-      );
-    });
-  });
-
-  // Track Web Vitals
-  const metrics = measurePageLoad();
-  if (metrics) {
-    reportWebVitals(metrics);
+/**
+ * Initialize performance monitoring for the application
+ * Tracks page views, web vitals, and long tasks
+ */
+function initializeMonitoring(): void {
+  if (typeof window === 'undefined') {
+    return;
   }
-  
-  // Monitor long tasks (if available)
-  if ('monitorLongTasks' in performanceOptimizer) {
-    (performanceOptimizer as { monitorLongTasks: (callback: (entries: PerformanceEntryList) => void) => void }).monitorLongTasks((entries: PerformanceEntryList) => {
-      entries.forEach((entry: PerformanceEntry) => {
-        analytics.track('long_task', 'performance', 'detected', undefined, entry.duration);
+
+  try {
+    // Track initial page load
+    analytics.trackPageView(window.location.pathname);
+
+    // Track Web Vitals for performance insights
+    const metrics = measurePageLoad();
+    if (metrics) {
+      reportWebVitals(metrics);
+    }
+
+    // Monitor long tasks that may impact user experience
+    if ('monitorLongTasks' in performanceOptimizer) {
+      performanceOptimizer.monitorLongTasks((entries: PerformanceEntry[]) => {
+        entries.forEach((entry: PerformanceEntry) => {
+          if (entry.duration > 50) { // Only track tasks longer than 50ms
+            analytics.track(
+              'long_task',
+              'performance',
+              'detected',
+              undefined,
+              entry.duration
+            );
+          }
+        });
+      });
+    }
+
+    // Setup navigation tracking
+    window.addEventListener('popstate', () => {
+      analytics.trackPageView(window.location.pathname);
+    });
+
+    // Track errors globally
+    window.addEventListener('error', (event) => {
+      errorHandler.logError(event.error || new Error(event.message), {
+        filename: event.filename,
+        lineno: event.lineno,
+        colno: event.colno,
       });
     });
+
+    // Track unhandled promise rejections
+    window.addEventListener('unhandledrejection', (event) => {
+      errorHandler.logError(new Error(`Unhandled Promise Rejection: ${event.reason}`), {
+        type: 'unhandledrejection',
+        promise: event.promise,
+      });
+    });
+  } catch (error) {
+    console.error('Failed to initialize monitoring:', error);
   }
 }
 
-export { analytics, errorHandler, performanceOptimizer };
+// Initialize monitoring on load
+initializeMonitoring();
+
+export { analytics, errorHandler, performanceOptimizer, initializeMonitoring };
