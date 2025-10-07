@@ -155,7 +155,15 @@ export const collectPerformanceMetrics = async (): Promise<{
     }
   }
 
-  return metrics;
+  return metrics as {
+    loadTime: number;
+    domContentLoaded: number;
+    firstPaint: number;
+    firstContentfulPaint: number;
+    largestContentfulPaint: number;
+    firstInputDelay: number;
+    cumulativeLayoutShift: number;
+  };
 };
 
 // Performance monitor class
@@ -209,9 +217,6 @@ export class PerformanceMonitor {
     this.metrics.clear();
   }
 }
-
-// Export singleton instance
-export const performanceMonitor = new PerformanceMonitor();
 
 // Lazy loading utilities
 export const lazyLoadImages = (): void => {
@@ -301,33 +306,8 @@ export const optimizeScrollPerformance = (): void => {
   window.addEventListener('scroll', requestTick, { passive: true });
 };
 
-// Performance monitor
-export const performanceMonitor = {
-  start: () => {
-    if (typeof window === 'undefined') return;
-
-    // Monitor Core Web Vitals
-    if ('PerformanceObserver' in window) {
-      const observer = new PerformanceObserver(list => {
-        list.getEntries().forEach(entry => {
-          if (process.env.NODE_ENV === 'development') {
-            console.log(
-              'Performance metric:',
-              entry.name,
-              (entry as PerformanceEntry & { value?: number }).value
-            );
-          }
-        });
-      });
-
-      observer.observe({ entryTypes: ['measure', 'navigation', 'paint'] });
-    }
-  },
-
-  stop: () => {
-    // Cleanup if needed
-  },
-};
+// Export singleton instance
+export const performanceMonitor = new PerformanceMonitor();
 
 // Collect performance metrics array
 export const collectPerformanceMetricsArray = async (): Promise<
@@ -346,8 +326,8 @@ export const collectPerformanceMetricsArray = async (): Promise<
 
   // Memory usage
   const memory = getMemoryUsage();
-  if (memory) {
-    metrics.push({ name: 'memoryUsage', value: memory.usedJSHeapSize });
+  if (memory && memory.used > 0) {
+    metrics.push({ name: 'memoryUsage', value: memory.used });
   }
 
   // Resource timing

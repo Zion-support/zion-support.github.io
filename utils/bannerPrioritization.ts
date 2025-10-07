@@ -199,4 +199,3 @@ export class BannerPrioritizationEngine {
 
 // Export singleton instance
 export const bannerPrioritizationEngine = new BannerPrioritizationEngine();
-export const bannerPrioritizationEngine = new BannerPrioritizationEngine();

@@ -121,12 +121,11 @@ describe('AdvancedSEOOptimizer', () => {
     expect(structuredDataScript).toBeInTheDocument();
   });
 
-  it('renders Open Graph tags when enabled', () => {
+  it('renders Open Graph tags by default', () => {
     render(
       <HelmetProvider>
         <AdvancedSEOOptimizer 
           config={mockSEOData} 
-          enableOpenGraph={true}
         />
       </HelmetProvider>
     );
@@ -135,12 +134,11 @@ describe('AdvancedSEOOptimizer', () => {
     expect(document.querySelector('meta[property="og:description"]')).toBeInTheDocument();
   });
 
-  it('renders Twitter Card tags when enabled', () => {
+  it('renders Twitter Card tags by default', () => {
     render(
       <HelmetProvider>
         <AdvancedSEOOptimizer 
           config={mockSEOData} 
-          enableTwitterCards={true}
         />
       </HelmetProvider>
     );
