@@ -81,6 +81,9 @@ importers:
       '@eslint/js':
         specifier: ^9.36.0
         version: 9.37.0
+      '@jest/globals':
+        specifier: ^30.2.0
+        version: 30.2.0
       '@next/bundle-analyzer':
         specifier: ^15.5.4
         version: 15.5.4

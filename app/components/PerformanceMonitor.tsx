@@ -1,86 +1,133 @@
-import React, { useEffect, useState } from 'react';
-import { BarChart3, Zap, Clock } from 'lucide-react';
+'use client';
+
+import React, { useEffect, useState, memo } from 'react';
 
 interface PerformanceMetrics {
   loadTime: number;
-  renderTime: number;
-  memoryUsage: number;
+  domContentLoaded: number;
+  firstContentfulPaint: number;
+  largestContentfulPaint: number;
+  cumulativeLayoutShift: number;
+  firstInputDelay: number;
 }
 
-const PerformanceMonitor: React.FC = () => {
+const PerformanceMonitor: React.FC = memo(() => {
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    // Only show in development
-    if (process.env.NODE_ENV !== 'development') return;
-
     const measurePerformance = () => {
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      const paint = performance.getEntriesByType('paint');
-      
-      const loadTime = navigation ? navigation.loadEventEnd - navigation.loadEventStart : 0;
-      const renderTime = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0;
-      
-      // Memory usage (if available)
-      const memory = (performance as any).memory;
-      const memoryUsage = memory ? Math.round(memory.usedJSHeapSize / 1024 / 1024) : 0;
+      if (typeof window === 'undefined' || !('performance' in window)) return;
 
-      setMetrics({
-        loadTime: Math.round(loadTime),
-        renderTime: Math.round(renderTime),
-        memoryUsage
-      });
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      const paintEntries = performance.getEntriesByType('paint');
+      
+      const firstContentfulPaint = paintEntries.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0;
+      const largestContentfulPaint = paintEntries.find(entry => entry.name === 'largest-contentful-paint')?.startTime || 0;
+
+      // Measure CLS (Cumulative Layout Shift)
+      let cumulativeLayoutShift = 0;
+      if ('PerformanceObserver' in window) {
+        const observer = new PerformanceObserver((list) => {
+          for (const entry of list.getEntries()) {
+            if (entry.entryType === 'layout-shift' && !(entry as LayoutShift).hadRecentInput) {
+              cumulativeLayoutShift += (entry as LayoutShift).value;
+            }
+          }
+        });
+        observer.observe({ entryTypes: ['layout-shift'] });
+      }
+
+      // Measure FID (First Input Delay)
+      let firstInputDelay = 0;
+      if ('PerformanceObserver' in window) {
+        const observer = new PerformanceObserver((list) => {
+          for (const entry of list.getEntries()) {
+            if (entry.entryType === 'first-input') {
+              firstInputDelay = (entry as PerformanceEventTiming).processingStart - entry.startTime;
+            }
+          }
+        });
+        observer.observe({ entryTypes: ['first-input'] });
+      }
+
+      const performanceData: PerformanceMetrics = {
+        loadTime: navigation.loadEventEnd - navigation.fetchStart,
+        domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
+        firstContentfulPaint,
+        largestContentfulPaint,
+        cumulativeLayoutShift,
+        firstInputDelay
+      };
+
+      setMetrics(performanceData);
+
+      // Log performance data in development
+      if (process.env.NODE_ENV === 'development') {
+        console.log('Performance Metrics:', performanceData);
+      }
     };
 
-    // Measure after page load
+    // Measure performance after page load
     if (document.readyState === 'complete') {
       measurePerformance();
     } else {
       window.addEventListener('load', measurePerformance);
     }
 
-    // Toggle visibility with Ctrl+Shift+P
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.ctrlKey && e.shiftKey && e.key === 'P') {
-        setIsVisible(prev => !prev);
-      }
-    };
-
-    window.addEventListener('keydown', handleKeyDown);
     return () => {
       window.removeEventListener('load', measurePerformance);
-      window.removeEventListener('keydown', handleKeyDown);
     };
   }, []);
 
-  if (!isVisible || !metrics) return null;
+  if (!metrics || process.env.NODE_ENV !== 'development') {
+    return null;
+  }
 
   return (
-    <div className="fixed bottom-4 right-4 bg-black bg-opacity-90 text-white p-4 rounded-lg shadow-lg z-50 text-sm font-mono">
-      <div className="flex items-center gap-2 mb-2">
-        <BarChart3 className="w-4 h-4" />
-        <span className="font-bold">Performance Monitor</span>
-      </div>
-      <div className="space-y-1">
-        <div className="flex items-center gap-2">
-          <Clock className="w-3 h-3" />
-          <span>Load: {metrics.loadTime}ms</span>
+    <div className="fixed bottom-4 right-4 z-50">
+      <button
+        onClick={() => setIsVisible(!isVisible)}
+        className="bg-indigo-600 text-white px-3 py-2 rounded-lg text-sm font-medium hover:bg-indigo-700 transition-colors"
+      >
+        {isVisible ? 'Hide' : 'Show'} Perf
+      </button>
+      
+      {isVisible && (
+        <div className="absolute bottom-12 right-0 bg-white border border-gray-200 rounded-lg shadow-lg p-4 min-w-64">
+          <h3 className="font-semibold text-gray-900 mb-2">Performance Metrics</h3>
+          <div className="space-y-1 text-sm">
+            <div className="flex justify-between">
+              <span className="text-gray-600">Load Time:</span>
+              <span className="font-mono">{Math.round(metrics.loadTime)}ms</span>
+            </div>
+            <div className="flex justify-between">
+              <span className="text-gray-600">DOM Ready:</span>
+              <span className="font-mono">{Math.round(metrics.domContentLoaded)}ms</span>
+            </div>
+            <div className="flex justify-between">
+              <span className="text-gray-600">FCP:</span>
+              <span className="font-mono">{Math.round(metrics.firstContentfulPaint)}ms</span>
+            </div>
+            <div className="flex justify-between">
+              <span className="text-gray-600">LCP:</span>
+              <span className="font-mono">{Math.round(metrics.largestContentfulPaint)}ms</span>
+            </div>
+            <div className="flex justify-between">
+              <span className="text-gray-600">CLS:</span>
+              <span className="font-mono">{metrics.cumulativeLayoutShift.toFixed(3)}</span>
+            </div>
+            <div className="flex justify-between">
+              <span className="text-gray-600">FID:</span>
+              <span className="font-mono">{Math.round(metrics.firstInputDelay)}ms</span>
+            </div>
+          </div>
         </div>
-        <div className="flex items-center gap-2">
-          <Zap className="w-3 h-3" />
-          <span>Render: {metrics.renderTime}ms</span>
-        </div>
-        <div className="flex items-center gap-2">
-          <BarChart3 className="w-3 h-3" />
-          <span>Memory: {metrics.memoryUsage}MB</span>
-        </div>
-      </div>
-      <div className="text-xs text-gray-400 mt-2">
-        Press Ctrl+Shift+P to toggle
-      </div>
+      )}
     </div>
   );
-};
+});
+
+PerformanceMonitor.displayName = 'PerformanceMonitor';
 
 export default PerformanceMonitor;

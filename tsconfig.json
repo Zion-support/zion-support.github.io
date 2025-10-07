@@ -20,7 +20,7 @@
     "noFallthroughCasesInSwitch": false,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "baseUrl": ".",
     "paths": {
       "@/*": [
@@ -119,9 +119,10 @@
     "src.disabled",
     "temp-files",
     "utils.disabled",
-    "zion-website_disabled",
     "blockchain-solutions.tsx",
-    "temp_disabled",
-    "zion-website_disabled"
+    "app/components/NewestContent2025Banner.tsx",
+    "app/components/UltimateBusinessIntelligence2025Banner.tsx",
+    "app/components/UltimateBusinessIntelligenceShowcase2025.tsx",
+    "**/zion-website_disabled/**"
   ]
 }
