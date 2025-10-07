@@ -1,24 +1,17 @@
-<<<<<<< HEAD
 'use client';
 
-=======
->>>>>>> a592ab53728fe9c95b917d9d019e153fe1af034e
 import React, { Suspense, lazy, useCallback, useEffect } from 'react';
 import Link from 'next/link';
 import { HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-<<<<<<< HEAD
 
 // Components
 import SEOOptimizer from './components/SEOOptimizer';
-=======
->>>>>>> a592ab53728fe9c95b917d9d019e153fe1af034e
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import AdvancedErrorBoundary from './components/AdvancedErrorBoundary';
 import AdvancedSEOOptimizer from './components/AdvancedSEOOptimizer';
 import AdvancedPerformanceMonitor from './components/AdvancedPerformanceMonitor';
 import SEOEnhancer from './components/SEOEnhancer';
-import SEOOptimizer from './components/SEOOptimizer';
 import PerformanceDashboard from './components/PerformanceDashboard';
 import ContentShowcase from './components/ContentShowcase';
 import InteractiveContentShowcase2026 from './components/InteractiveContentShowcase2026';
@@ -37,15 +30,7 @@ const ErrorBoundary = ({ children }: { children: React.ReactNode }) => {
 };
 
 // Utils
-<<<<<<< HEAD
-import { performanceOptimizer, collectPerformanceMetrics } from './utils/performanceOptimizer';
-=======
-<<<<<<< HEAD
-import { performanceOptimizer } from './utils/performanceOptimizer';
-=======
 import { lazyLoadImages, preloadCriticalResources, collectPerformanceMetrics, performanceOptimizer } from './utils/performanceOptimizer';
->>>>>>> cursor/fix-errors-and-merge-to-main-d868
->>>>>>> a592ab53728fe9c95b917d9d019e153fe1af034e
 import { logger } from './utils/logger';
 
 // Lazy load pages for better performance
@@ -70,21 +55,18 @@ const App: React.FC = () => {
         console.log('Performance metrics:', metrics);
       }
     }
-<<<<<<< HEAD
 
     // Preload critical resources
-    // preloadCriticalResources(); // Function not available
-  }, []);
-
-  const handleError = useCallback((error: Error, errorInfo: any) => {
-    logger.error('Application Error', 'ErrorBoundary', { error: error.message, errorInfo });
-=======
+    preloadCriticalResources();
     
     // eslint-disable-next-line no-console
     console.log('Performance monitoring initialized');
     // eslint-disable-next-line no-console
     console.log('🚀 Zion Tech Group App initialized with comprehensive monitoring');
->>>>>>> a592ab53728fe9c95b917d9d019e153fe1af034e
+  }, []);
+
+  const handleError = useCallback((error: Error, errorInfo: any) => {
+    logger.error('Application Error', 'ErrorBoundary', { error: error.message, errorInfo });
   }, []);
 
   return (
@@ -131,22 +113,4 @@ const App: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> a592ab53728fe9c95b917d9d019e153fe1af034e
-// Loading fallback component
-const LoadingFallback: React.FC<{ height?: string }> = ({
-  height = 'h-32',
-}) => (
-  <div className={`flex items-center justify-center ${height} w-full`}>
-    <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-indigo-600"></div>
-  </div>
-);
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-d868
->>>>>>> a592ab53728fe9c95b917d9d019e153fe1af034e
 export default App;
