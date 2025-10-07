@@ -370,8 +370,6 @@ export const collectPerformanceMetricsArray = async (): Promise<
 
   // Memory usage
   const memory = getMemoryUsage();
-  if (memory) {
-=======
   if (memory && memory.used > 0) {
     metrics.push({ name: 'memoryUsage', value: memory.used });
   }
