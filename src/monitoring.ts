@@ -45,7 +45,6 @@ function initializeMonitoring(): void {
     performanceOptimizer.optimizeImages();
 
     // Get performance metrics
-    const metrics = performanceOptimizer.getMetrics();
     const score = performanceOptimizer.getPerformanceScore();
     
     // Log performance data for monitoring
