@@ -1,71 +1,39 @@
-<?xml version="1.0" encoding="UTF-8"?>;
+<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
   <url>
-<<<<<<< HEAD
-    <loc>https://bolt.new.zion.app/</loc>
-    <lastmod>2025-10-05T11:44:26.970Z</lastmod>
+    <loc>https://zion.app/</loc>
+    <lastmod>2025-01-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://bolt.new.zion.app/about</loc>
-    <lastmod>2025-10-05T11:44:26.970Z</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://bolt.new.zion.app/services</loc>
-    <lastmod>2025-10-05T11:44:26.970Z</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://bolt.new.zion.app/contact</loc>
-    <lastmod>2025-10-05T11:44:26.970Z</lastmod>
+    <loc>https://zion.app/about</loc>
+    <lastmod>2025-01-01</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-=======
-    <loc>https://zion.app/</loc>
-    <lastmod>2025-10-05T11:38:14.835Z</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://zion.app/services/ai-services</loc>
-    <lastmod>2025-10-05T11:38:14.835Z</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1</priority>
+    <loc>https://zion.app/team</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://zion.app/services/it-services</loc>
-    <lastmod>2025-10-05T11:38:14.835Z</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1</priority>
+    <loc>https://zion.app/enterprise</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://zion.app/services/micro-saas</loc>
-    <lastmod>2025-10-05T11:38:14.835Z</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1</priority>
+    <loc>https://zion.app/privacy</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://zion.app/services/ai-powered-crm</loc>
-    <lastmod>2025-10-05T11:38:14.835Z</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1</priority>
-  </url>
-  <url>
-    <loc>https://zion.app/services/smart-invoice-generator</loc>
-    <lastmod>2025-10-05T11:38:14.835Z</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1</priority>
-  </url>
-  <url>
-    <loc>https://zion.app/services/ai-meeting-assistant</loc>
-    <lastmod>2025-10-05T11:38:14.835Z</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1</priority>
->>>>>>> 6058c11fad8acb05a15e3616a88dd34fab74b77b
+    <loc>https://zion.app/terms</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
   </url>
 </urlset>
