@@ -46,21 +46,25 @@ function initializeMonitoring(): void {
 
     // Track errors globally
     window.addEventListener('error', (event) => {
-      errorHandler.logError(event.error || new Error(event.message), {
-        filename: event.filename,
-        lineno: event.lineno,
-        colno: event.colno,
-      });
+      errorHandler.logError(
+        event.error || new Error(event.message),
+        {
+          message: `${event.message} at ${event.filename}:${event.lineno}:${event.colno}`,
+        }
+      );
     });
 
     // Track unhandled promise rejections
     window.addEventListener('unhandledrejection', (event) => {
-      errorHandler.logError(new Error(`Unhandled Promise Rejection: ${event.reason}`), {
-        type: 'unhandledrejection',
-        promise: event.promise,
-      });
+      errorHandler.logError(
+        new Error(`Unhandled Promise Rejection: ${event.reason}`),
+        {
+          message: `Unhandled Promise Rejection: ${event.reason}`,
+        }
+      );
     });
   } catch (error) {
+    // eslint-disable-next-line no-console
     console.error('Failed to initialize monitoring:', error);
   }
 }
