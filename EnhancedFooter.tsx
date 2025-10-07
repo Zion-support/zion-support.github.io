@@ -51,7 +51,7 @@ const EnhancedFooter: React.FC = () => {
                 href='https://linkedin.com/company/ziontechgroup'
                 className='text-gray-400 hover:text-white transition-colors'
               >
-                <LinkedinIcon className='w-5 h-5' />
+                <Linkedin className='w-5 h-5' />
               </a>
               <a
                 href='https://twitter.com/ziontechgroup'
