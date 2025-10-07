@@ -204,6 +204,7 @@ const NewContentPromotionalBanner2026: React.FC = () => {
           ))}
         </div>
 
+<<<<<<< HEAD
         {/* CTA Section */}
         <div className="text-center">
           <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
@@ -233,14 +234,16 @@ const NewContentPromotionalBanner2026: React.FC = () => {
           </div>
         </div>
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-5a0a
         {/* Call to Action */}
         <div className="text-center bg-white/5 backdrop-blur-sm border border-white/20 rounded-2xl p-12">
           <div className="flex items-center justify-center gap-3 mb-6">
-            <Rocket className="w-8 h-8 text-cyan-400" />
+            <Sparkles className="w-8 h-8 text-cyan-400" />
             <h3 className="text-3xl font-bold text-white">
               Ready to Transform Your Enterprise?
             </h3>
-            <Shield className="w-8 h-8 text-purple-400" />
+            <Sparkles className="w-8 h-8 text-purple-400" />
           </div>
           
           <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
@@ -284,6 +287,7 @@ const NewContentPromotionalBanner2026: React.FC = () => {
             <div className="text-center">
               <div className="text-3xl font-bold text-yellow-400 mb-2">24/7</div>
               <div className="text-gray-300">Expert Support</div>
+<<<<<<< HEAD
             </div>
           </div>
         </div>
@@ -310,6 +314,8 @@ const NewContentPromotionalBanner2026: React.FC = () => {
               >
                 Get Started
               </Link>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-5a0a
             </div>
           </div>
         </div>

@@ -1,7 +1,10 @@
 import React from 'react';
 
 const UnifiedContentPromotion: React.FC = () => {
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-5a0a
   return (
     <div className="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-16">
       <div className="container mx-auto px-4 text-center">
