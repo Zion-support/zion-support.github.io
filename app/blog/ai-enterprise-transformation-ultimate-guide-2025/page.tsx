@@ -1,4 +1,4 @@
-import { Star, Calculator as CalculatorIcon } from 'lucide-react';
+import { Star, Calendar as CalculatorIcon } from 'lucide-react';
 import React from 'react';
 import Link from 'next/link';
 import { Metadata } from 'next';

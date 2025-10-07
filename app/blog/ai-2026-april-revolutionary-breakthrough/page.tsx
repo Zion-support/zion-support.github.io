@@ -9,6 +9,8 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'AI 2026 April Revolutionary Breakthrough: Meta-Cognitive Superintelligence Platform',
     description: 'Revolutionary AI breakthrough featuring meta-cognitive superintelligence and quantum-neural consciousness fusion delivering unprecedented enterprise transformation.',
+    type: 'article',
+    publishedTime: '2026-04-01T00:00:00.000Z',
     authors: ['Zion Tech Group']
   }
 };

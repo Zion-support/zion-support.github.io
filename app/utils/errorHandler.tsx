@@ -253,18 +253,23 @@ export class ErrorHandler {
     if (this.config.enableConsoleLogging) {
       const logMessage = `[${error.severity}] ${error.type}: ${error.message}`;
       
+      /* eslint-disable no-console */
       switch (error.severity) {
         case ErrorSeverity.CRITICAL:
         case ErrorSeverity.HIGH:
+          // eslint-disable-next-line no-console
           console.error(logMessage, error);
           break;
         case ErrorSeverity.MEDIUM:
+          // eslint-disable-next-line no-console
           console.warn(logMessage, error);
           break;
         case ErrorSeverity.LOW:
+          // eslint-disable-next-line no-console
           console.info(logMessage, error);
           break;
       }
+      /* eslint-enable no-console */
     }
 
     if (this.config.enableNetworkLogging) {
@@ -285,6 +290,7 @@ export class ErrorHandler {
         body: JSON.stringify(error),
       });
     } catch {
+      // eslint-disable-next-line no-console
       console.error('Failed to log error to network');
     }
   }
@@ -305,6 +311,7 @@ export class ErrorHandler {
         }),
       });
     } catch {
+      // eslint-disable-next-line no-console
       console.error('Failed to report error');
     }
   }
@@ -399,6 +406,7 @@ export class ErrorHandler {
       // Implement retry logic based on error type
       if (retryItem.error.type === ErrorType.NETWORK) {
         // Retry network request
+        // eslint-disable-next-line no-console
         console.log(`Retrying network request (attempt ${retryItem.retryCount})`);
         // Add your retry logic here
       }
@@ -406,6 +414,7 @@ export class ErrorHandler {
       if (retryItem.retryCount < this.config.maxRetries) {
         this.scheduleRetry(retryItem.error);
       } else {
+        // eslint-disable-next-line no-console
         console.error('Max retries exceeded for error:', retryItem.error);
       }
     }

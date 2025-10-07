@@ -139,6 +139,9 @@ class Analytics {
     try {
       // In a real application, you would send to services like Google Analytics, Mixpanel, etc.
       // Analytics event sent successfully
+      if (process.env['NODE_ENV'] === 'development') {
+        console.log('Analytics event:', event);
+      }
     } catch {
       // Failed to send analytics event - could be reported to error tracking
     }

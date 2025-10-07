@@ -91,31 +91,31 @@ const ContactPage: React.FC = () => {
                     type='submit'
                     className='w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors'
                   >
-                    Send Message
-                  </button>
-                </form>
-              </div>
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-semibold mb-4">Contact Information</h3>
-                <div className="space-y-4">
-                  <div>
-                    <h4 className="font-medium text-gray-900">Email</h4>
-                    <p className="text-gray-600">kleber@ziontechgroup.com</p>
-                  </div>
-                  <div>
-                    <h4 className="font-medium text-gray-900">Phone</h4>
-                    <p className="text-gray-600">+1 (302) 464-0950</p>
-                  </div>
-                  <div>
-                    <h4 className="font-medium text-gray-900">Address</h4>
-                    <p className="text-gray-600">
-                      364 E Main St STE 1008<br />
-                      Middletown, DE 19709<br />
-                      United States
-                    </p>
-                  </div>
+                  Send Message
+                </button>
+              </form>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <h3 className="text-xl font-semibold mb-4">Contact Information</h3>
+              <div className="space-y-4">
+                <div>
+                  <h4 className="font-medium text-gray-900">Email</h4>
+                  <p className="text-gray-600">kleber@ziontechgroup.com</p>
+                </div>
+                <div>
+                  <h4 className="font-medium text-gray-900">Phone</h4>
+                  <p className="text-gray-600">+1 (302) 464-0950</p>
+                </div>
+                <div>
+                  <h4 className="font-medium text-gray-900">Address</h4>
+                  <p className="text-gray-600">
+                    364 E Main St STE 1008<br />
+                    Middletown, DE 19709<br />
+                    United States
+                  </p>
                 </div>
               </div>
+            </div>
             </div>
           </div>
         </div>
