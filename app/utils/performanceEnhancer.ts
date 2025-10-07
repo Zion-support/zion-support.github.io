@@ -3,7 +3,7 @@
  * Advanced performance optimization tools for the application
  */
 
-import { useEffect, useCallback, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 
 // Debounce function for performance optimization
 export const debounce = <T extends (...args: unknown[]) => unknown>(
@@ -50,6 +50,7 @@ export class PerformanceMonitor {
     this.metrics.set(`${componentName}_render`, renderTime);
     
     if (process.env.NODE_ENV === 'development') {
+      // eslint-disable-next-line no-console
       console.log(`[Performance] ${componentName} rendered in ${renderTime.toFixed(2)}ms`);
     }
   }
@@ -80,16 +81,21 @@ export class PerformanceMonitor {
       return;
     }
 
-    const observer = new PerformanceObserver((list) => {
-      list.getEntries().forEach((entry) => {
-        if (entry.duration > 50) { // Tasks longer than 50ms
-          console.warn(`[Performance] Long task detected: ${entry.duration.toFixed(2)}ms`);
-        }
+    try {
+      const observer = new PerformanceObserver((list) => {
+        list.getEntries().forEach((entry) => {
+          if (entry.duration > 50) { // Tasks longer than 50ms
+            // eslint-disable-next-line no-console
+            console.warn(`[Performance] Long task detected: ${entry.duration.toFixed(2)}ms`);
+          }
+        });
       });
-    });
 
-    observer.observe({ entryTypes: ['longtask'] });
-    this.observers.push(observer);
+      observer.observe({ entryTypes: ['longtask'] });
+      this.observers.push(observer);
+    } catch {
+      // Long task monitoring not supported
+    }
   }
 
   // Cleanup observers
@@ -120,7 +126,6 @@ export const usePerformanceMonitor = (componentName: string) => {
       fn();
       const duration = performance.now() - start;
       monitor.trackRender(`${componentName}_function`, duration);
->>>>>>> e2aec618376f3db9bd60312768ea5d9abc7086c8
     }
   };
 };
@@ -184,60 +189,76 @@ export const optimizeScrollPerformance = () => {
     }
   };
 
+  window.addEventListener('scroll', requestTick, { passive: true });
+
   // Track Core Web Vitals
   const trackCLS = () => {
     let clsValue = 0;
-    let clsEntries: PerformanceEntry[] = [];
 
     interface LayoutShiftEntry extends PerformanceEntry {
       hadRecentInput?: boolean;
       value: number;
     }
 
-    const observer = new PerformanceObserver((list) => {
-      for (const entry of list.getEntries()) {
-        const layoutEntry = entry as LayoutShiftEntry;
-        if (!layoutEntry.hadRecentInput) {
-          clsEntries.push(entry);
-          clsValue += layoutEntry.value;
+    try {
+      const observer = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          const layoutEntry = entry as LayoutShiftEntry;
+          if (!layoutEntry.hadRecentInput) {
+            clsValue += layoutEntry.value;
+          }
         }
-      }
-    });
+      });
 
-    observer.observe({ entryTypes: ['layout-shift'] });
+      observer.observe({ entryTypes: ['layout-shift'] });
 
-    return () => {
-      observer.disconnect();
-      return clsValue;
-    };
->>>>>>> e2aec618376f3db9bd60312768ea5d9abc7086c8
-  };
-
-  const requestTick = () => {
-    if (!ticking) {
-      requestAnimationFrame(updateScrollPosition);
-      ticking = true;
+      return () => {
+        observer.disconnect();
+        return clsValue;
+      };
+    } catch {
+      return () => 0;
     }
   };
 
-  window.addEventListener('scroll', requestTick, { passive: true });
+  const trackLCP = () => {
+    try {
+      const observer = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        const lastEntry = entries[entries.length - 1];
+        // eslint-disable-next-line no-console
+        console.log('[Web Vitals] LCP:', lastEntry.startTime);
+      });
+
+      observer.observe({ entryTypes: ['largest-contentful-paint'] });
+
+      return () => observer.disconnect();
+    } catch {
+      return () => {};
+    }
+  };
 
   const trackFID = () => {
     interface FirstInputEntry extends PerformanceEntry {
       processingStart: number;
     }
     
-    const observer = new PerformanceObserver((list) => {
-      for (const entry of list.getEntries()) {
-        const fidEntry = entry as FirstInputEntry;
-        const fid = fidEntry.processingStart - entry.startTime;
-        console.log('[Web Vitals] FID:', fid);
-      }
-    });
+    try {
+      const observer = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          const fidEntry = entry as FirstInputEntry;
+          const fid = fidEntry.processingStart - entry.startTime;
+          // eslint-disable-next-line no-console
+          console.log('[Web Vitals] FID:', fid);
+        }
+      });
 
-    observer.observe({ entryTypes: ['first-input'] });
+      observer.observe({ entryTypes: ['first-input'] });
 
-    return () => observer.disconnect();
+      return () => observer.disconnect();
+    } catch {
+      return () => {};
+    }
   };
 
   // Start tracking
@@ -250,7 +271,6 @@ export const optimizeScrollPerformance = () => {
     cleanupLCP();
     cleanupFID();
   };
->>>>>>> e2aec618376f3db9bd60312768ea5d9abc7086c8
 };
 
 // Memory usage monitoring
@@ -260,6 +280,8 @@ export const getMemoryUsage = () => {
   }
 
   const memory = (performance as { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
+  if (!memory) return null;
+  
   return {
     used: memory.usedJSHeapSize,
     total: memory.totalJSHeapSize,
