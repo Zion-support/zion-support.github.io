@@ -8,7 +8,6 @@ import { errorHandler } from './app/utils/enhancedErrorHandler';
 import ErrorBoundary from './app/components/ErrorBoundary';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
 
-<<<<<<< HEAD
 // Memoized components for better performance
 const UnifiedContentPromotion = memo(() => (
   <div className='bg-gradient-to-r from-blue-600 to-purple-700 text-white py-16'>
@@ -53,9 +52,6 @@ const InteractiveContentShowcase2026 = memo(() => (
     </div>
   </div>
 ));
-=======
-// Error Boundary is imported from './app/components/ErrorBoundary'
->>>>>>> 37545c2e32f35044aa55b03169325560ba719e8b
 export default function App() {
 
   // Performance optimization: Preload critical resources

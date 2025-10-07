@@ -28,13 +28,8 @@ const PerformanceMonitor: React.FC = () => {
       if ('PerformanceObserver' in window) {
         const observer = new PerformanceObserver((list) => {
           for (const entry of list.getEntries()) {
-<<<<<<< HEAD
-            if (entry.entryType === 'layout-shift' && !(entry as PerformanceEntry & { hadRecentInput?: boolean }).hadRecentInput) {
-              cumulativeLayoutShift += (entry as PerformanceEntry & { value: number }).value;
-=======
             if (entry.entryType === 'layout-shift' && !(entry as LayoutShift).hadRecentInput) {
               cumulativeLayoutShift += (entry as LayoutShift).value;
->>>>>>> 37545c2e32f35044aa55b03169325560ba719e8b
             }
           }
         });
@@ -47,11 +42,7 @@ const PerformanceMonitor: React.FC = () => {
         const observer = new PerformanceObserver((list) => {
           for (const entry of list.getEntries()) {
             if (entry.entryType === 'first-input') {
-<<<<<<< HEAD
-              firstInputDelay = (entry as PerformanceEntry & { processingStart: number }).processingStart - entry.startTime;
-=======
               firstInputDelay = (entry as PerformanceEventTiming).processingStart - entry.startTime;
->>>>>>> 37545c2e32f35044aa55b03169325560ba719e8b
             }
           }
         });
