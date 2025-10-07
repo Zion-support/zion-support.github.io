@@ -23,7 +23,7 @@ const ErrorBoundary = ({ children }: { children: React.ReactNode }) => {
 const HomePage = lazy(() => import('./page'));
 
 // Utils
-import { performanceOptimizer } from './utils/performanceOptimizer';
+import { performanceOptimizer, collectPerformanceMetrics } from './utils/performanceOptimizer';
 
 // Styles
 import '../index.css';
