@@ -3,6 +3,8 @@
  * Advanced performance optimization tools for the application
  */
 
+import { useRef, useEffect } from 'react';
+
 // Debounce function for performance optimization
 export const debounce = <T extends (...args: unknown[]) => unknown>(
   func: T,
@@ -207,11 +209,6 @@ export const optimizeScrollPerformance = () => {
       observer.disconnect();
       return clsValue;
     };
-  };
-
-    observer.observe({ entryTypes: ['largest-contentful-paint'] });
-
-    return () => observer.disconnect();
   };
 
   const trackFID = () => {
