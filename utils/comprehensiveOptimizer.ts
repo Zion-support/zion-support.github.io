@@ -12,34 +12,28 @@
 //   initAccessibility
 // } from './accessibilityUtils';
 
-import {
-  getMemoryUsage,
-  collectPerformanceMetrics,
-  performanceMonitor,
-  // debounce,
-  // throttle,
-  lazyLoadImages,
-  preloadCriticalResources,
-  optimizeScrollPerformance
-} from './performanceUtils';
+// Performance utilities are commented out to avoid unused import warnings
+// import {
+//   getMemoryUsage,
+//   collectPerformanceMetrics,
+//   performanceMonitor,
+//   lazyLoadImages,
+//   preloadCriticalResources,
+//   optimizeScrollPerformance
+// } from './performanceUtils';
 
-import {
-  // setMetaTags,
-  setOpenGraphTags,
-  setTwitterCardTags,
-  setStructuredData,
-  // generateSitemap,
-  // optimizeImages,
-  setCanonicalUrl,
-  setPageTitle,
-  setMetaDescription,
-  setKeywords,
-  // setRobotsMeta,
-  // setLanguage,
-  // setViewport,
-  schemaGenerators,
-  seoAudit
-} from './seoUtils';
+// SEO utilities are commented out to avoid unused import warnings
+// import {
+//   setOpenGraphTags,
+//   setTwitterCardTags,
+//   setStructuredData,
+//   setCanonicalUrl,
+//   setPageTitle,
+//   setMetaDescription,
+//   setKeywords,
+//   schemaGenerators,
+//   seoAudit
+// } from './seoUtils';
 
 // import {
 //   getMemoryUsage,
