@@ -252,18 +252,23 @@ export class ConfigManager {
    * Deep merge two config objects
    */
   private mergeConfig(base: AppConfig, override: Partial<AppConfig>): AppConfig {
-    const result = { ...base };
+    const result = { ...base } as AppConfig;
 
     for (const key in override) {
-      const value = override[key as keyof AppConfig];
-      if (value !== undefined) {
-        if (typeof value === 'object' && !Array.isArray(value)) {
-          result[key as keyof AppConfig] = {
-            ...result[key as keyof AppConfig],
-            ...value,
-          } as AppConfig[keyof AppConfig];
-        } else {
-          result[key as keyof AppConfig] = value as AppConfig[keyof AppConfig];
+      if (Object.prototype.hasOwnProperty.call(override, key)) {
+        const value = override[key as keyof AppConfig];
+        if (value !== undefined) {
+          if (typeof value === 'object' && !Array.isArray(value) && value !== null) {
+            const baseValue = result[key as keyof AppConfig];
+            if (typeof baseValue === 'object' && !Array.isArray(baseValue) && baseValue !== null) {
+              // Use Object.assign for safer type handling
+              (result as any)[key] = Object.assign({}, baseValue, value);
+            } else {
+              (result as any)[key] = value;
+            }
+          } else {
+            (result as any)[key] = value;
+          }
         }
       }
     }
@@ -304,10 +309,14 @@ export class ConfigManager {
     value?: AppConfig[K][NK]
   ): void {
     if (value !== undefined && typeof nestedKeyOrValue === 'string') {
-      this.config[key] = {
-        ...this.config[key],
-        [nestedKeyOrValue]: value,
-      } as AppConfig[K];
+      const currentValue = this.config[key];
+      if (typeof currentValue === 'object' && !Array.isArray(currentValue) && currentValue !== null) {
+        // Use Object.assign for safer type handling
+        (this.config as any)[key] = Object.assign({}, currentValue, { [nestedKeyOrValue]: value });
+      } else {
+        // If current value is not an object, create a new object
+        (this.config as any)[key] = { [nestedKeyOrValue]: value };
+      }
     } else {
       this.config[key] = nestedKeyOrValue as AppConfig[K];
     }
