@@ -29,6 +29,13 @@ describe('Performance Tests', () => {
       },
     };
 
+    // Mock window object
+    delete window.location;
+    window.location = {
+      href: 'http://localhost:3000',
+      reload: jest.fn(),
+    };
+
     // Mock navigator
     Object.defineProperty(navigator, 'userAgent', {
       value: 'Mozilla/5.0 (Test Browser)',
