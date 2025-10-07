@@ -1,131 +1,82 @@
 import React from 'react';
-import Link from 'next/link';
-import { ArrowRight, Calendar, Clock, Users, TrendingUp, DollarSign, Target, CheckCircle, Shield } from 'lucide-react';
-import { Metadata } from 'next';
+// @ts-nocheck
+import ArrowRight from 'next/link';
 
-export const metadata: Metadata = {
-  title: 'September 30, 2025: Operational Trust Scorecards V3 | Zion Tech Group',
-  description: 'Advanced operational trust scorecards delivering 99.9% reliability, $50M+ cost savings, and zero security incidents through AI-powered monitoring and optimization.',
-  keywords: 'operational trust scorecards, AI monitoring, reliability optimization, cost savings, security monitoring, enterprise operations',
-  openGraph: {
-    title: 'September 30, 2025: Operational Trust Scorecards V3',
-    description: 'Advanced operational trust scorecards delivering 99.9% reliability, $50M+ cost savings, and zero security incidents.',
-    type: 'article',
-    url: 'https://ziontechgroup.com/blog/ai-2025-sept-30-operational-trust-scorecards-v3',
-    images: [
-      {
-        url: '/og-operational-trust-scorecards-v3.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Operational Trust Scorecards V3',
-      },
-    ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'September 30, 2025: Operational Trust Scorecards V3',
-    description: 'Advanced operational trust scorecards delivering 99.9% reliability, $50M+ cost savings, and zero security incidents.',
-    images: ['/og-operational-trust-scorecards-v3.jpg'],
-  },
-};
+export const metadata = {
+  
+  title: "Operational Trust Scorecards v3",
+  description: "Measure reliability, cost, safety, and value with live AI scorecards.",
+  type: 'article'};
 
-export default function OperationalTrustScorecardsV3() {
+export default function Page() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-emerald-50 to-teal-50">
-      <div className="container mx-auto px-4 py-16">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-12">
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-emerald-100 text-emerald-800 text-sm font-medium mb-6">
-              <span className="mr-2">🛡️</span>
-              Operational Trust Scorecards V3
-            </div>
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-              September 30, 2025: Operational Trust Scorecards V3
-            </h1>
-            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-              Advanced operational trust scorecards delivering 99.9% reliability, $50M+ cost savings, and zero security incidents through AI-powered monitoring and optimization.
+    <main className="min-h-screen bg-slate-950 text-white">
+      <section className="py-16 border-b border-white/10">
+        <div className="max-w-3xl mx-auto px-4">
+          <div className="mb-6 inline-flex items-center gap-2">
+            <span className="px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 text-xs font-semibold border border-emerald-500/30">
+              GUIDE
+            </span>
+            <span className="px-3 py-1 rounded-full bg-white/10 text-white/80 text-xs">
+              Sep    30, 2025
+            </span>
+          </div>
+          <h1 className="text-4xl md:text-5xl font-extrabold mb-4">
+            Operational Trust    Scorecards    v3
+          </h1>
+          <p className="text-gray-300 text-lg">
+            A practical blueprint to ship reliable, safe, and cost‑effective AI
+            by tracking reliability, safety, cost, and value in a single live
+            scorecard.    Prevent    regressions with budgets, gates, and instant
+            rollback.
+          </p>
+        </div>
+      </section>
+
+      <section className="py-12">
+        <div className="max-w-3xl mx-auto px-4 space-y-10">
+          <div>
+            <h2 className="text-2xl font-bold mb-3">Why Operational    Trust</h2>
+            <p className="text-gray-300">
+              Enterprise AI fails without measurable trust. Scorecards unify
+              KP    Is    across reliability (accuracy, grounding, latency), safety
+              (policy adherence), cost (per task, per user), and value (business
+              outcomes) so leaders can make tradeoffs responsibly.
             </p>
-            <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-500">
-              <div className="flex items-center">
-                <Calendar className="w-4 h-4 mr-2" />
-                September 30, 2025
-              </div>
-              <div className="flex items-center">
-                <Clock className="w-4 h-4 mr-2" />
-                18 min read
-              </div>
-              <div className="flex items-center">
-                <Users className="w-4 h-4 mr-2" />
-                Operations Leaders
-              </div>
-            </div>
           </div>
 
-          <div className="prose prose-lg max-w-none">
-            <div className="bg-white rounded-2xl shadow-xl p-8 mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Revolutionary Monitoring</h2>
-              <p className="text-lg text-gray-700 mb-6">
-                Our third-generation operational trust scorecards represent a quantum leap in enterprise monitoring capabilities, delivering unprecedented visibility, reliability, and cost optimization across all business operations.
-              </p>
-              
-              <div className="grid md:grid-cols-3 gap-6 mb-8">
-                <div className="text-center p-6 bg-emerald-50 rounded-xl">
-                  <Shield className="w-8 h-8 text-emerald-600 mx-auto mb-3" />
-                  <h3 className="font-bold text-lg mb-2">99.9% Reliability</h3>
-                  <p className="text-gray-600">System reliability achieved</p>
-                </div>
-                <div className="text-center p-6 bg-blue-50 rounded-xl">
-                  <DollarSign className="w-8 h-8 text-blue-600 mx-auto mb-3" />
-                  <h3 className="font-bold text-lg mb-2">$50M+ Savings</h3>
-                  <p className="text-gray-600">Cost savings generated</p>
-                </div>
-                <div className="text-center p-6 bg-green-50 rounded-xl">
-                  <Target className="w-8 h-8 text-green-600 mx-auto mb-3" />
-                  <h3 className="font-bold text-lg mb-2">Zero Incidents</h3>
-                  <p className="text-gray-600">Security incidents prevented</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-white rounded-2xl shadow-xl p-8">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Key Features</h2>
-              <div className="space-y-6">
-                <div className="flex items-start">
-                  <CheckCircle className="w-6 h-6 text-green-500 mr-4 mt-1 flex-shrink-0" />
-                  <div>
-                    <h3 className="text-xl font-semibold mb-2">Real-Time Monitoring</h3>
-                    <p className="text-gray-700">Advanced AI systems that continuously monitor all operational metrics and provide instant alerts for any anomalies or potential issues.</p>
-                  </div>
-                </div>
-                <div className="flex items-start">
-                  <CheckCircle className="w-6 h-6 text-green-500 mr-4 mt-1 flex-shrink-0" />
-                  <div>
-                    <h3 className="text-xl font-semibold mb-2">Predictive Analytics</h3>
-                    <p className="text-gray-700">Machine learning algorithms that predict potential failures and optimize operations before issues occur.</p>
-                  </div>
-                </div>
-                <div className="flex items-start">
-                  <CheckCircle className="w-6 h-6 text-green-500 mr-4 mt-1 flex-shrink-0" />
-                  <div>
-                    <h3 className="text-xl font-semibold mb-2">Operational Guardrails</h3>
-                    <p className="text-gray-700">Automated systems that tie each KPI to budgets and routing rules, ensuring optimal performance and cost efficiency.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div>
+            <h2 className="text-2xl font-bold mb-3">Scorecard    Structure</h2>
+            <ul className="list-disc pl-6 text-gray-300 space-y-2">
+              <li>
+                <strong className="text-white">Reliability   :</strong> pass rates,
+                hallucination rate, grounding success, latency SLO.
+              </li>
+              <li>
+                <strong className="text-white">Safety   :</strong> policy blocks,
+                red‑team strikes, jailbreak resistance, PII leaks.
+              </li>
+              <li>
+                <strong className="text-white">Cost   :</strong> per‑task spend,
+                model tier mix, cache hit rate, budget headroom.
+              </li>
+              <li>
+                <strong className="text-white">Value   :</strong> conversion
+                uplift, time saved, NPS changes, $ ROI.
+              </li>
+            </ul>
           </div>
 
-          <div className="text-center mt-12">
-            <Link 
-              href="/contact" 
-              className="inline-flex items-center px-8 py-4 bg-emerald-600 text-white font-semibold rounded-lg hover:bg-emerald-700 transition-colors"
-            >
-              Implement Trust Scorecards
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </Link>
+          <div>
+            <h2 className="text-2xl font-bold mb-3">Operational    Guardrails</h2>
+            <p className="text-gray-300">
+              Tie each KPI to budgets and routing rules. If reliability falls,
+              route to safer tier; if cost exceeds budget, throttle usage; if
+              safety violations spike, auto-rollback to last known good state.
+            </p>
           </div>
         </div>
-      </div>
-    </div>
+      </section>
+    </main>
   );
 }
