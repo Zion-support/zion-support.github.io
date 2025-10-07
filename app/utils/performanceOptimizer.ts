@@ -138,12 +138,6 @@ interface PerformanceConfig {
   maxRetries: number;
 }
 
-// LayoutShift interface for type safety
-// interface LayoutShift extends PerformanceEntry {
-//   value: number;
-//   hadRecentInput: boolean;
-// }
-
 class PerformanceOptimizer {
   private config: PerformanceConfig;
   private metrics: Partial<PerformanceMetrics> = {};
@@ -538,7 +532,7 @@ class PerformanceOptimizer {
     });
 
     images.forEach(img => imageObserver.observe(img));
-    logger.info('Lazy loading initialized for images', 'PerformanceOptimizer');
+    console.log('Lazy loading initialized for images');
   }
 
   /**
@@ -562,7 +556,7 @@ class PerformanceOptimizer {
       document.head.appendChild(link);
     });
 
-    logger.info('Critical resource hints added', 'PerformanceOptimizer');
+    console.log('Critical resource hints added');
   }
 
   /**
@@ -576,10 +570,11 @@ class PerformanceOptimizer {
 
     return {
       ttfb: navigation.responseStart - navigation.requestStart,
-      fcp: this.metrics.fcp,
-      lcp: this.metrics.lcp,
-      fid: this.metrics.fid,
-      cls: this.metrics.cls,
+      fcp: this.metrics.fcp || 0,
+      lcp: this.metrics.lcp || 0,
+      fid: this.metrics.fid || 0,
+      cls: this.metrics.cls || 0,
+      fmp: 0, // First Meaningful Paint - not measured in this implementation
     };
   }
 
@@ -587,7 +582,7 @@ class PerformanceOptimizer {
    * Report web vitals
    */
   reportWebVitals(metrics: PerformanceMetrics): void {
-    logger.performance('Web Vitals reported', metrics, 'PerformanceOptimizer');
+    console.log('Web Vitals reported', metrics);
     
     // Send to analytics if available
     if (typeof window !== 'undefined' && (window as { gtag?: Function }).gtag) {
