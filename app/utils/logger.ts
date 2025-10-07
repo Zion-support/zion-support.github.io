@@ -108,10 +108,10 @@ class Logger {
 
       switch (level) {
         case LogLevel.DEBUG:
-          console.debug(formattedMessage);
+          if (import.meta.env.DEV) { console.debug(formattedMessage); }
           break;
         case LogLevel.INFO:
-          console.info(formattedMessage);
+          if (import.meta.env.DEV) { console.info(formattedMessage); }
           break;
         case LogLevel.WARN:
           console.warn(formattedMessage);
@@ -221,7 +221,7 @@ class Logger {
    */
   styled(message: string, style: string): void {
     if (isDevelopment()) {
-      console.log(`%c${message}`, style);
+      if (import.meta.env.DEV) { console.log(`%c${message}`, style); }
     }
   }
 }

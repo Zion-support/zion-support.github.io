@@ -97,14 +97,14 @@ export class ErrorReporter {
   private logToConsole(report: ErrorReport): void {
     const style = this.getConsoleStyle(report.severity);
     console.group(`%c[${report.severity.toUpperCase()}] Error Report`, style);
-    console.log('Message:', report.message);
-    console.log('Timestamp:', report.timestamp);
-    console.log('URL:', report.url);
+    if (import.meta.env.DEV) { console.log('Message:', report.message); }
+    if (import.meta.env.DEV) { console.log('Timestamp:', report.timestamp); }
+    if (import.meta.env.DEV) { console.log('URL:', report.url); }
     if (report.stack) {
-      console.log('Stack:', report.stack);
+      if (import.meta.env.DEV) { console.log('Stack:', report.stack); }
     }
     if (report.context) {
-      console.log('Context:', report.context);
+      if (import.meta.env.DEV) { console.log('Context:', report.context); }
     }
     console.groupEnd();
   }

@@ -262,7 +262,7 @@ export class ErrorHandler {
           console.warn(logMessage, error);
           break;
         case ErrorSeverity.LOW:
-          console.info(logMessage, error);
+          if (import.meta.env.DEV) { console.info(logMessage, error); }
           break;
       }
     }
@@ -399,7 +399,7 @@ export class ErrorHandler {
       // Implement retry logic based on error type
       if (retryItem.error.type === ErrorType.NETWORK) {
         // Retry network request
-        console.log(`Retrying network request (attempt ${retryItem.retryCount})`);
+        if (import.meta.env.DEV) { console.log(`Retrying network request (attempt ${retryItem.retryCount})`); }
         // Add your retry logic here
       }
     } catch {

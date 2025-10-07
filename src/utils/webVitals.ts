@@ -118,7 +118,7 @@ export function reportWebVitals(
 
             onPerfEntry(metric);
             if (analyticsEndpoint) sendToAnalytics(metric, analyticsEndpoint);
-            if (debug) console.log('CLS:', metric);
+            if (debug) if (import.meta.env.DEV) { console.log('CLS:', metric); }
           }
         }
       }
@@ -144,7 +144,7 @@ export function reportWebVitals(
 
         onPerfEntry(metric);
         if (analyticsEndpoint) sendToAnalytics(metric, analyticsEndpoint);
-        if (debug) console.log('Final CLS:', metric);
+        if (debug) if (import.meta.env.DEV) { console.log('Final CLS:', metric); }
       }
     });
   }
@@ -166,7 +166,7 @@ export function reportWebVitals(
 
       onPerfEntry(metric);
       if (analyticsEndpoint) sendToAnalytics(metric, analyticsEndpoint);
-      if (debug) console.log('FID:', metric);
+      if (debug) if (import.meta.env.DEV) { console.log('FID:', metric); }
 
       fidObserver.disconnect();
     });
@@ -199,7 +199,7 @@ export function reportWebVitals(
 
         onPerfEntry(metric);
         if (analyticsEndpoint) sendToAnalytics(metric, analyticsEndpoint);
-        if (debug) console.log('LCP:', metric);
+        if (debug) if (import.meta.env.DEV) { console.log('LCP:', metric); }
       }
     });
 
@@ -234,7 +234,7 @@ export function reportWebVitals(
 
           onPerfEntry(metric);
           if (analyticsEndpoint) sendToAnalytics(metric, analyticsEndpoint);
-          if (debug) console.log('FCP:', metric);
+          if (debug) if (import.meta.env.DEV) { console.log('FCP:', metric); }
 
           fcpObserver.disconnect();
         }
@@ -268,7 +268,7 @@ export function reportWebVitals(
 
       onPerfEntry(metric);
       if (analyticsEndpoint) sendToAnalytics(metric, analyticsEndpoint);
-      if (debug) console.log('TTFB:', metric);
+      if (debug) if (import.meta.env.DEV) { console.log('TTFB:', metric); }
     }
   }
 }

@@ -165,7 +165,7 @@ class PerformanceOptimizer {
 
     // This would typically be handled by the bundler (Vite/Webpack)
     // Here we can add runtime optimizations
-    console.log('Code splitting enabled for better performance');
+    if (import.meta.env.DEV) { console.log('Code splitting enabled for better performance'); }
   }
 
   /**
@@ -179,10 +179,10 @@ class PerformanceOptimizer {
     // Register service worker for caching
     navigator.serviceWorker.register('/sw.js')
       .then((registration) => {
-        console.log('Service Worker registered:', registration);
+        if (import.meta.env.DEV) { console.log('Service Worker registered:', registration); }
       })
       .catch((error) => {
-        console.log('Service Worker registration failed:', error);
+        if (import.meta.env.DEV) { console.log('Service Worker registration failed:', error); }
       });
   }
 
@@ -246,8 +246,8 @@ ${metrics.memoryUsage > 30 * 1024 * 1024 ? '- Review memory usage and optimize c
     this.enableCodeSplitting();
     this.enableCaching();
     
-    console.log('Performance optimization completed');
-    console.log(this.generateReport());
+    if (import.meta.env.DEV) { console.log('Performance optimization completed'); }
+    if (import.meta.env.DEV) { console.log(this.generateReport()); }
   }
 }
 

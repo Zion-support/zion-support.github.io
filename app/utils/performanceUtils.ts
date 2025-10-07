@@ -91,7 +91,7 @@ export async function measureTime<T>(
   const result = await func();
   const duration = performance.now() - start;
   
-  console.log(`[Performance] ${name}: ${duration.toFixed(2)}ms`);
+  if (import.meta.env.DEV) { console.log(`[Performance] ${name}: ${duration.toFixed(2)}ms`); }
   
   return { result, duration };
 }

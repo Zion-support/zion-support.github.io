@@ -37,7 +37,7 @@ const App: React.FC = () => {
       performanceOptimizer.optimizeImages();
       const metrics = performanceOptimizer.getMetrics();
       const score = performanceOptimizer.getPerformanceScore();
-      console.log('Performance metrics:', metrics, 'Score:', score);
+      if (import.meta.env.DEV) { console.log('Performance metrics:', metrics, 'Score:', score); }
     }
   }, []);
 

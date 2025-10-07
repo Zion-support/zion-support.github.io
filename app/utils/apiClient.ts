@@ -249,12 +249,12 @@ export const apiClient = new ApiClient();
 // Add default request interceptor for logging
 if (envConfig.isDevelopment()) {
   apiClient.addRequestInterceptor((config) => {
-    console.log(`[API] ${config.method} request:`, config);
+    if (import.meta.env.DEV) { console.log(`[API] ${config.method} request:`, config); }
     return config;
   });
 
   apiClient.addResponseInterceptor((response) => {
-    console.log(`[API] Response (${response.status}):`, response.data);
+    if (import.meta.env.DEV) { console.log(`[API] Response (${response.status}):`, response.data); }
     return response;
   });
 }
