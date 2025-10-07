@@ -14,6 +14,8 @@ class MockPerformanceObserver {
 global.PerformanceObserver = MockPerformanceObserver;
 
 describe('Performance Tests', () => {
+  let originalLocation;
+
   beforeAll(() => {
     // Mock performance API
     global.performance = {
@@ -27,13 +29,6 @@ describe('Performance Tests', () => {
       },
     };
 
-    // Mock window object - save original location
-    delete window.location;
-    window.location = {
-      href: 'http://localhost:3000',
-      reload: jest.fn(),
-    };
-
     // Mock navigator
     Object.defineProperty(navigator, 'userAgent', {
       value: 'Mozilla/5.0 (Test Browser)',
@@ -43,8 +38,15 @@ describe('Performance Tests', () => {
   });
 
   beforeEach(() => {
-    // Clear all mocks before each test
-    jest.clearAllMocks();
+    // Save original location and mock it
+    originalLocation = window.location;
+    delete window.location;
+    window.location = { ...originalLocation, reload: jest.fn() };
+  });
+
+  afterEach(() => {
+    // Restore original location
+    window.location = originalLocation;
   });
 
   test('PerformanceOptimizer should initialize correctly', () => {
