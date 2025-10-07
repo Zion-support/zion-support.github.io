@@ -4,11 +4,6 @@ import React, { Suspense, lazy, useCallback } from 'react';
 import Link from 'next/link';
 import SEOOptimizer from './components/SEOOptimizer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-<<<<<<< HEAD
-import PerformanceDashboard from './components/PerformanceDashboard';
-import AdvancedPerformanceMonitor from './components/AdvancedPerformanceMonitor';
-=======
->>>>>>> fe17d64a40e0f1e2ab1b565c469bddeb33ac5c68
 
 // Lazy load components for better performance
 const ContentShowcase = lazy(() => import('./components/ContentShowcase'));
@@ -19,7 +14,6 @@ const InteractiveAIROICalculator = lazy(
   () => import('./components/InteractiveAIROICalculator')
 );
 
-<<<<<<< HEAD
 // Utils
 import { performanceOptimizer } from './utils/performanceOptimizer';
 
@@ -114,7 +108,9 @@ const App: React.FC = () => {
           </AccessibilityEnhancer>
       </AdvancedErrorBoundary>
     </HelmetProvider>
-=======
+  );
+};
+
 // Loading fallback component
 const LoadingFallback: React.FC<{ height?: string }> = ({
   height = 'h-32',
@@ -274,7 +270,6 @@ const HomePage: React.FC = () => {
         </div>
       </footer>
     </div>
->>>>>>> fe17d64a40e0f1e2ab1b565c469bddeb33ac5c68
   );
 };
 
