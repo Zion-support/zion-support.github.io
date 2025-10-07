@@ -81,18 +81,11 @@ function sendToAnalytics(metric: Metric): void {
     id: metric.id,
   };
 
-<<<<<<< HEAD
-  // Log in development (removed console.log for production)
-  // if (process.env.NODE_ENV === 'development') {
-  //   console.log('Performance Metric:', performanceMetric);
-  // }
-=======
   // Log in development
   if (process.env.NODE_ENV === 'development') {
     // eslint-disable-next-line no-console
     console.log('Performance Metric:', performanceMetric);
   }
->>>>>>> cursor/fix-errors-and-merge-to-main-85f5
 
   // Send to analytics
   if (typeof window !== 'undefined' && window.gtag) {
@@ -118,15 +111,12 @@ function sendToAnalytics(metric: Metric): void {
         userAgent: navigator.userAgent,
       }),
       keepalive: true,
-<<<<<<< HEAD
-    }).catch(() => {
-      // Performance reporting error (removed console.error for production)
+    }).catch(error => {
+      if (process.env.NODE_ENV === 'development') {
+        // eslint-disable-next-line no-console
+        console.error('Performance reporting error:', error);
+      }
     });
-=======
-    }).catch(error => 
-    // eslint-disable-next-line no-console
-    console.error('Performance reporting error:', error));
->>>>>>> cursor/fix-errors-and-merge-to-main-85f5
   }
 }
 
@@ -142,14 +132,11 @@ export function initPerformanceMonitoring(): void {
     onFCP(sendToAnalytics);
     onLCP(sendToAnalytics);
     onTTFB(sendToAnalytics);
-<<<<<<< HEAD
-  } catch {
-    // Error initializing performance monitoring (removed console.error for production)
-=======
   } catch (error) {
-    // eslint-disable-next-line no-console
-    console.error('Error initializing performance monitoring:', error);
->>>>>>> cursor/fix-errors-and-merge-to-main-85f5
+    if (process.env.NODE_ENV === 'development') {
+      // eslint-disable-next-line no-console
+      console.error('Error initializing performance monitoring:', error);
+    }
   }
 }
 
@@ -175,17 +162,10 @@ export function measurePerformance(name: string, startTime: number): number {
     });
   }
 
-<<<<<<< HEAD
-  // Log in development (removed console.log for production)
-  // if (process.env.NODE_ENV === 'development') {
-  //   console.log(`Performance: ${name} took ${duration.toFixed(2)}ms`);
-  // }
-=======
   if (process.env.NODE_ENV === 'development') {
     // eslint-disable-next-line no-console
     console.log(`Performance: ${name} took ${duration.toFixed(2)}ms`);
   }
->>>>>>> cursor/fix-errors-and-merge-to-main-85f5
 
   return duration;
 }
@@ -198,14 +178,11 @@ export function markPerformance(name: string): void {
 
   try {
     performance.mark(name);
-<<<<<<< HEAD
-  } catch {
-    // Error marking performance (removed console.error for production)
-=======
   } catch (error) {
-    // eslint-disable-next-line no-console
-    console.error('Error marking performance:', error);
->>>>>>> cursor/fix-errors-and-merge-to-main-85f5
+    if (process.env.NODE_ENV === 'development') {
+      // eslint-disable-next-line no-console
+      console.error('Error marking performance:', error);
+    }
   }
 }
 
@@ -223,14 +200,11 @@ export function measureBetween(
     performance.measure(name, startMark, endMark);
     const measure = performance.getEntriesByName(name)[0] as PerformanceEntry;
     return measure.duration;
-<<<<<<< HEAD
-  } catch {
-    // Error measuring between marks (removed console.error for production)
-=======
   } catch (error) {
-    // eslint-disable-next-line no-console
-    console.error('Error measuring between marks:', error);
->>>>>>> cursor/fix-errors-and-merge-to-main-85f5
+    if (process.env.NODE_ENV === 'development') {
+      // eslint-disable-next-line no-console
+      console.error('Error measuring between marks:', error);
+    }
     return 0;
   }
 }
@@ -335,14 +309,11 @@ export function monitorLongTasks(
     });
     observer.observe({ entryTypes: ['longtask'] });
     return observer;
-<<<<<<< HEAD
-  } catch {
-    // Error monitoring long tasks (removed console.error for production)
-=======
   } catch (error) {
-    // eslint-disable-next-line no-console
-    console.error('Error monitoring long tasks:', error);
->>>>>>> cursor/fix-errors-and-merge-to-main-85f5
+    if (process.env.NODE_ENV === 'development') {
+      // eslint-disable-next-line no-console
+      console.error('Error monitoring long tasks:', error);
+    }
     return null;
   }
 }
@@ -362,14 +333,11 @@ export function monitorLayoutShifts(
     });
     observer.observe({ entryTypes: ['layout-shift'] });
     return observer;
-<<<<<<< HEAD
-  } catch {
-    // Error monitoring layout shifts (removed console.error for production)
-=======
   } catch (error) {
-    // eslint-disable-next-line no-console
-    console.error('Error monitoring layout shifts:', error);
->>>>>>> cursor/fix-errors-and-merge-to-main-85f5
+    if (process.env.NODE_ENV === 'development') {
+      // eslint-disable-next-line no-console
+      console.error('Error monitoring layout shifts:', error);
+    }
     return null;
   }
 }
