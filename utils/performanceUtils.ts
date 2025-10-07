@@ -392,7 +392,7 @@ const performanceUtils = {
   lazyLoadImages,
   preloadCriticalResources,
   optimizeScrollPerformance,
-  performanceMonitor,
+  performanceMonitorInstance,
   collectPerformanceMetrics,
   collectPerformanceMetricsArray,
   getMemoryUsage,
