@@ -28,12 +28,11 @@ const ErrorBoundary = ({ children }: { children: React.ReactNode }) => {
 };
 
 // Utils
-<<<<<<< HEAD
-import { lazyLoadImages, preloadCriticalResources, collectPerformanceMetrics, performanceOptimizer } from './utils/performanceOptimizer';
-=======
-import { performanceOptimizer } from './utils/performanceOptimizer';
->>>>>>> cursor/fix-errors-and-merge-to-main-d703
+import { performanceOptimizer, collectPerformanceMetrics } from './utils/performanceOptimizer';
 import { logger } from './utils/logger';
+
+// Additional Components
+import SEOOptimizer from './components/SEOOptimizer';
 
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./page'));
@@ -58,8 +57,8 @@ const App: React.FC = () => {
       }
     }
 
-    // Preload critical resources
-    preloadCriticalResources();
+    // Initialize performance monitoring
+    performanceOptimizer.init();
     
     // eslint-disable-next-line no-console
     console.log('Performance monitoring initialized');
@@ -115,8 +114,4 @@ const App: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-d703
 export default App;
