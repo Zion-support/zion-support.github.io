@@ -2,6 +2,14 @@
 
 import React, { createContext, useContext, useEffect, useState } from 'react';
 
+// Type definitions for Google Analytics
+interface WindowWithGtag extends Window {
+  dataLayer: unknown[];
+  gtag: (...args: unknown[]) => void;
+}
+
+type WindowWithAnalytics = Window & WindowWithGtag;
+
 interface AnalyticsEvent {
   event: string;
   category: string;
@@ -51,11 +59,19 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
 
     script.onload = () => {
       // Initialize gtag
+<<<<<<< HEAD
       (window as Window & { dataLayer?: unknown[] }).dataLayer = (window as Window & { dataLayer?: unknown[] }).dataLayer || [];
       function gtag(...args: unknown[]) {
         ((window as Window & { dataLayer?: unknown[] }).dataLayer as unknown[]).push(args);
       }
       (window as Window & { gtag?: typeof gtag }).gtag = gtag;
+=======
+      (window as WindowWithAnalytics).dataLayer = (window as WindowWithAnalytics).dataLayer || [];
+      function gtag(...args: unknown[]) {
+        (window as WindowWithAnalytics).dataLayer.push(args);
+      }
+      (window as WindowWithAnalytics).gtag = gtag;
+>>>>>>> 13ccd0fbc208f4996848e3ac5c3a02aa8e6d8971
 
       gtag('js', new Date());
       gtag('config', googleAnalyticsId, {
@@ -82,8 +98,13 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
       console.log('Analytics Event:', event);
     }
 
+<<<<<<< HEAD
     if ((window as Window & { gtag?: (...args: unknown[]) => void }).gtag) {
       (window as Window & { gtag?: (...args: unknown[]) => void }).gtag?.('event', event.action, {
+=======
+    if ((window as WindowWithAnalytics).gtag) {
+      (window as WindowWithAnalytics).gtag('event', event.action, {
+>>>>>>> 13ccd0fbc208f4996848e3ac5c3a02aa8e6d8971
         event_category: event.category,
         event_label: event.label,
         value: event.value,
@@ -99,8 +120,13 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
       console.log('Page View:', page);
     }
 
+<<<<<<< HEAD
     if ((window as Window & { gtag?: (...args: unknown[]) => void }).gtag) {
       (window as Window & { gtag?: (...args: unknown[]) => void }).gtag?.('config', googleAnalyticsId, {
+=======
+    if ((window as WindowWithAnalytics).gtag) {
+      (window as WindowWithAnalytics).gtag('config', googleAnalyticsId, {
+>>>>>>> 13ccd0fbc208f4996848e3ac5c3a02aa8e6d8971
         page_title: document.title,
         page_location: page,
       });
@@ -115,8 +141,13 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
       console.log('Performance Metric:', metric, value);
     }
 
+<<<<<<< HEAD
     if ((window as Window & { gtag?: (...args: unknown[]) => void }).gtag) {
       (window as Window & { gtag?: (...args: unknown[]) => void }).gtag?.('event', 'web_vitals', {
+=======
+    if ((window as WindowWithAnalytics).gtag) {
+      (window as WindowWithAnalytics).gtag('event', 'web_vitals', {
+>>>>>>> 13ccd0fbc208f4996848e3ac5c3a02aa8e6d8971
         event_category: 'Performance',
         event_label: metric,
         value: Math.round(value),
@@ -133,8 +164,13 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
       console.error('Analytics Error:', error, context);
     }
 
+<<<<<<< HEAD
     if ((window as Window & { gtag?: (...args: unknown[]) => void }).gtag) {
       (window as Window & { gtag?: (...args: unknown[]) => void }).gtag?.('event', 'exception', {
+=======
+    if ((window as WindowWithAnalytics).gtag) {
+      (window as WindowWithAnalytics).gtag('event', 'exception', {
+>>>>>>> 13ccd0fbc208f4996848e3ac5c3a02aa8e6d8971
         description: error.message,
         fatal: false,
         custom_map: {
