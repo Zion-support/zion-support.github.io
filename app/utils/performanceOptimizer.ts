@@ -120,10 +120,6 @@ export const collectPerformanceMetrics = () => {
     memoryUsage: getMemoryUsage(),
   };
 };
-=======
- * Advanced Performance Optimizer
- * Comprehensive performance monitoring and optimization utilities
- */
 
 interface PerformanceMetrics {
   fcp: number; // First Contentful Paint
@@ -532,4 +528,3 @@ export const performanceOptimizer = new PerformanceOptimizer();
 
 // Export class for custom instances
 export { PerformanceOptimizer, type PerformanceMetrics, type PerformanceConfig };
->>>>>>> 0b0dd36978b3de6697e00e35474fd343c9bb4136
