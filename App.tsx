@@ -1,7 +1,6 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
-import { HelmetProvider } from 'react-helmet-async';
 import HomePage from './app/page';
 import { performanceEnhancer } from './app/utils/performanceEnhancer';
 import ErrorBoundary from './app/components/ErrorBoundary';
