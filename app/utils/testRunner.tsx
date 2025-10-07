@@ -3,8 +3,8 @@
  * Provides advanced testing capabilities, mocking, and test automation
  */
 
-import React, { ReactElement, useCallback } from 'react';
 import { render, RenderOptions, RenderResult } from '@testing-library/react';
+import { ReactElement, useCallback } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 
 // Test result types
@@ -255,7 +255,6 @@ export class TestRunner {
   ): Promise<{ passed: boolean; diff?: unknown }> {
     // This would typically use a tool like Percy or Chromatic
     // For now, we'll just return a placeholder
-    // eslint-disable-next-line no-console
     console.log(`Visual regression test for ${testName} would run here`);
     
     this.testResults.push({
