@@ -63,7 +63,7 @@ export const useErrorMonitoring = () => {
       window as Window & {
         __REACT_ERROR_HANDLER__?: (
           error: Error,
-          errorInfo: { componentStack?: string }
+          errorInfo: unknown
         ) => void;
       }
     ).__REACT_ERROR_HANDLER__ = handleReactError;
