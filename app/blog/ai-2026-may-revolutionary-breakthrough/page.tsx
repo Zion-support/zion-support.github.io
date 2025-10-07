@@ -1,6 +1,13 @@
 import React from 'react';
 import { Metadata } from 'next';
 
+export const metadata = {
+  
+  title: "AI 2026 May Revolutionary Breakthrough: Quantum Consciousness Fusion",
+    description: "Revolutionary AI breakthrough featuring quantum consciousness fusion and autonomous enterprise transformation.",
+    type: "article",
+    published Time: "2026-05-01T00:00:00.000Z",
+    authors: ['Zion Tech Group']};
 export const metadata: Metadata = 
   title: 'AI 2026 May Revolutionary Breakthrough: Quantum Consciousness Fusion',
   description: 'Discover the groundbreaking May 2026 AI breakthrough featuring quantum consciousness fusion and autonomous enterprise transformation.',

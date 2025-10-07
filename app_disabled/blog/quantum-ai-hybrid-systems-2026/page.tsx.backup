@@ -1,6 +1,15 @@
 import React from 'react';
 import {Metadata} from 'next';
+<<<<<<< HEAD:app_disabled/blog/quantum-ai-hybrid-systems-2026/page.tsx.backup
 <<<<<<< HEAD:app/blog/quantum-ai-hybrid-systems-2026/page.tsx
+
+export const metadata = {
+  
+  title: "Quantum-AI Hybrid Systems: The Next Frontier in Enterprise Computing",
+    description: "Discover the revolutionary potential of quantum-AI hybrid systems in enterprise applications.",
+    type: "article",
+    published Time: "2026-01-20T00:00:00Z",
+    authors: ['Zion Tech Group']};
 export const metadata: Metadata = 
   title: 'Quantum-AI Hybrid Systems: The Next Frontier in Enterprise Computing | Zion Tech Group',
   description: 'Explore how quantum-AI hybrid systems are revolutionizing enterprise computing with unprecedented processing power and optimization capabilities.',
@@ -13,6 +22,8 @@ export const metadata: Metadata =
     authors: ['Zion Tech Group'],
   },
 };
+<<<<<<< HEAD:app_disabled/blog/quantum-ai-hybrid-systems-2026/page.tsx.backup
+
 export default function QuantumAIHybrid Systems Page() {/* return (
     <div> content */}
     <div>

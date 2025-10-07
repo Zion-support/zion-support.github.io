@@ -2,6 +2,11 @@ import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
 
+export const metadata = {
+  
+  title: "AI 2026: Synthetic Intelligence Revolution - Enterprise Breakthrough | Zion Tech Group",
+  description: "Discover the revolutionary synthetic intelligence systems transforming enterprise operations with 10,000x performance improvements and $50B+ ROI achievements.",
+  keywords: 'synthetic intelligence, AI 2026, enterprise AI, artificial intelligence, machine learning, business transformation'};;
 export const metadata: Metadata = 
   title: 'AI 2026: Synthetic Intelligence Revolution - Enterprise Breakthrough | Zion Tech Group',
   description: 'Discover the revolutionary synthetic intelligence systems transforming enterprise operations with 10,000x performance improvements and $50B+ ROI achievements.',

@@ -15,6 +15,9 @@ export const metadata = {
       type: 'article'
     },
   twitter: 
+    card: "summary_large_image",
+    title: "AI 2028: Neuromorphic Superintelligence Breakthrough",
+    description: "Revolutionary neuromorphic superintelligence with human-level cognitive abilities and 1,000x energy efficiency."};
     card: 'summary_large_image',
     title: 'AI 2028: Neuromorphic Superintelligence Breakthrough',
     description: 'Revolutionary neuromorphic superintelligence with human-level cognitive abilities and 1,000x energy efficiency.',

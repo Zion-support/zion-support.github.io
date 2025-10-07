@@ -2,6 +2,13 @@ import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
 
+export const metadata = {
+  
+  title: "AI 2026: Quantum-Enhanced Analytics Revolution",
+    description: "Revolutionary quantum-enhanced analytics transforming data processing and insights",
+    type: "article",
+    published Time: "2026-01-20T00:00:00Z",
+    authors: ['Zion Tech Group']};
 export const metadata: Metadata = 
   title: 'AI 2026: Quantum-Enhanced Analytics Revolution | Zion Tech Group',
   description: 'Discover how quantum-enhanced analytics is revolutionizing data processing and insights in 2026. Learn about quantum algorithms, parallel processing, and breakthrough analytical capabilities.',

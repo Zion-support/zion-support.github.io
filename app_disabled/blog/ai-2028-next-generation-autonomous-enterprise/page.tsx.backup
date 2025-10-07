@@ -15,12 +15,18 @@ export const metadata = {
       type: 'article'
     },
   twitter: 
+<<<<<<< HEAD:app_disabled/blog/ai-2028-next-generation-autonomous-enterprise/page.tsx.backup
 <<<<<<< HEAD:app/blog/ai-2028-next-generation-autonomous-enterprise/page.tsx
+    card: "summary_large_image",
+    title: "AI 2028: Next-Generation Autonomous Enterprise Revolution",
+    description: "Revolutionary AI breakthrough enabling 99.9% autonomous enterprise operations with quantum-enhanced capabilities."};
     card: 'summary_large_image',
     title: 'AI 2028: Next-Generation Autonomous Enterprise Revolution',
     description: 'Revolutionary AI breakthrough enabling 99.9% autonomous enterprise operations with quantum-enhanced capabilities.',
   },
 };
+<<<<<<< HEAD:app_disabled/blog/ai-2028-next-generation-autonomous-enterprise/page.tsx.backup
+
 export default function AI2028NextGeneration Autonomous Enterprise() {/* return (
     <div> content */}
     <div>

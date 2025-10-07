@@ -1,6 +1,13 @@
 import React from 'react';
 import { Metadata } from 'next';
 
+export const metadata = {
+  
+  title: "Meta-Cognitive Reasoning: AI That Thinks About Thinking",
+      description: "Discover the breakthrough in AI reasoning capabilities with meta-cognitive systems.",
+      type: "article",
+      published Time: '2026-01-25T00:00:00.000Z'
+    
 export const metadata: Metadata = 
   title: 'Meta-Cognitive Reasoning: AI That Thinks About Thinking - Zion Tech Group',
   description: 'Discover the breakthrough in AI reasoning capabilities. Meta-cognitive AI systems that can think about their own thinking processes, leading to unprecedented decision-making accuracy.',

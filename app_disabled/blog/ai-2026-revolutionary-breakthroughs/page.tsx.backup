@@ -6,8 +6,11 @@ export const metadata = {
     type: "article",
     url: "https://ziontechgroup.com/blog/ai-2026-revolutionary-breakthroughs",
     images: [
+<<<<<<< HEAD:app_disabled/blog/ai-2026-revolutionary-breakthroughs/page.tsx.backup
 <<<<<<< HEAD:app/blog/ai-2026-revolutionary-breakthroughs/page.tsx
         url: '/og-ai-2026-breakthroughs.jpg',
+      
+        url: "/og-ai-2026-breakthroughs.jpg",
         width: 1200,
         height: 630,
         alt: 'AI 2026 Revolutionary Breakthroughs'},

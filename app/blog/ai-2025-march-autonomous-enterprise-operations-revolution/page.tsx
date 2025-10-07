@@ -1,6 +1,12 @@
 import React from 'react';
 import { Metadata } from 'next';
 
+export const metadata = {
+  
+  title: "March 2025: Autonomous Enterprise Operations Revolution - The Future of Business Automation",
+    description: "AI agents now manage complex business operations with unprecedented efficiency, delivering $35 billion in operational savings.",
+    type: "article",
+    published Time: "2025-03-01T00:00:00Z",
 export const metadata: Metadata = 
   title: 'March 2025: Autonomous Enterprise Operations Revolution | Zion Tech Group',
   description: 'Discover how autonomous AI agents are revolutionizing enterprise operations, delivering 85% automation rates and $35 billion in operational savings.',

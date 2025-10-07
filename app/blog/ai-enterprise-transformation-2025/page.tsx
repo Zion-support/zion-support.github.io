@@ -170,6 +170,11 @@ const TransformationStack =
     warehouses: "Snowflake + Databricks"
     streaming: "Apache Kafka + Apache Pulsar"
     storage: "AWS S3 + Azure Data Lake"
+const Transformation Stack = 
+  data Layer: 
+    warehouses: "Snowflake + Databricks",
+  streaming: "Apache Kafka + Apache Pulsar",
+  storage: "AWS S3 + Azure Data Lake"
   },
   aiPlatform: 
     mlOps: "MLflow + Kubeflow + Weights & Biases"

@@ -1,6 +1,15 @@
 import React from 'react';
 import {Metadata} from 'next';
+<<<<<<< HEAD:app_disabled/blog/quantum-neural-superintelligence-2026/page.tsx.backup
 <<<<<<< HEAD:app/blog/quantum-neural-superintelligence-2026/page.tsx
+
+export const metadata = {
+  
+  title: "Quantum Neural Superintelligence 2026",
+    description: "Revolutionary AI system combining quantum computing with neural networks for superintelligent capabilities.",
+    type: "article",
+    published Time: "2026-01-20T00:00:00.000Z",
+    authors: ['Zion Tech Group']};
 export const metadata: Metadata = 
   title: 'Quantum Neural Superintelligence 2026 - Zion Tech Group',
   description: 'Explore the revolutionary Quantum Neural Superintelligence system that combines quantum computing with advanced neural networks to achieve superintelligent AI capabilities for enterprise applications.',
@@ -13,6 +22,8 @@ export const metadata: Metadata =
     authors: ['Zion Tech Group'],
   },
 };
+<<<<<<< HEAD:app_disabled/blog/quantum-neural-superintelligence-2026/page.tsx.backup
+
 export default function QuantumNeural Superintelligence Page() {/* return (
     <div> content */}
     <div>

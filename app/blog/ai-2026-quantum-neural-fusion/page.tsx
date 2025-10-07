@@ -2,6 +2,13 @@ import React from 'react';
 import Link from 'next/link';
 import { Metadata } from 'next';
 
+export const metadata = {
+  
+  title: "Quantum-Neural Fusion: The Next Evolution in AI Computing",
+      description: "Explore how quantum computing and neural networks are merging to create unprecedented AI capabilities.",
+      type: "article",
+      published Time: '2026-01-20T00:00:00.000Z'
+    
 export const metadata: Metadata = 
   title: 'Quantum-Neural Fusion: The Next Evolution in AI Computing - Zion Tech Group',
   description: 'Explore how quantum computing and neural networks are merging to create unprecedented AI capabilities. Discover the future of computational intelligence.',

@@ -14,6 +14,15 @@ export const metadata: Metadata =
     images: [
       
         url: 'https://ziontechgroup.com/images/ai-enterprise-transformation-2025.jpg',
+export const metadata = {
+  
+  title: "AI Enterprise Transformation Ultimate Guide 2025: $2B+ ROI Strategies",
+    description: "Complete guide to AI enterprise transformation achieving $2B+ ROI. Learn autonomous operations, quantum AI, and multi-agent orchestration strategies.",
+    type: "article",
+    url: "https://ziontechgroup.com/blog/ai-enterprise-transformation-ultimate-guide-2025",
+    images: [
+      
+        url: "https://ziontechgroup.com/images/ai-enterprise-transformation-2025.jpg",
         width: 1200,
   height: 630,
         alt: 'AI Enterprise Transformation Ultimate Guide 2025'

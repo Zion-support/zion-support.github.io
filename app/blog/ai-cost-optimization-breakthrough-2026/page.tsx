@@ -14,6 +14,7 @@ export const metadata = {
     images: [
       
         url: '/og-ai-cost-optimization-2026.jpg',
+        url: "/og-ai-cost-optimization-2026.jpg",
         width: 1200,
   height: 630,
         alt: 'AI Cost Optimization Breakthrough 2026 - 90% Cost Reduction',
@@ -21,6 +22,10 @@ export const metadata = {
     ],
   },
   twitter: 
+    card: "summary_large_image",
+    title: "AI Cost Optimization Breakthrough 2026: Cut AI Spending by 90%",
+    description: "Revolutionary AI cost optimization strategies delivering 90% cost reduction, $200M+ savings, and 10x efficiency gains for Fortune 500 companies.",
+    images: ['/og-ai-cost-optimization-2026.jpg']};
     card: 'summary_large_image',
     title: 'AI Cost Optimization Breakthrough 2026: Cut AI Spending by 90%',
     description: 'Revolutionary AI cost optimization strategies delivering 90% cost reduction, $200M+ savings, and 10x efficiency gains for Fortune 500 companies.',
