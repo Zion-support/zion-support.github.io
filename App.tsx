@@ -184,7 +184,7 @@ const App = () => {
         }}
       >
         <AdvancedSEOOptimizer
-          seoData={{
+          config={{
             title: 'Zion Tech Group - Advanced AI and IT Solutions',
             description: 'Enterprise-grade AI and IT solutions designed for large organizations. Scalable, secure, and reliable technology solutions.',
             keywords: ['AI', 'IT Solutions', 'Enterprise', 'Technology', 'Digital Transformation'],
