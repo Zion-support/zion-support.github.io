@@ -54,7 +54,7 @@ class ErrorBoundary extends Component<Props, State> {
                   Oops! Something went wrong
                 </h1>
                 <p className='text-gray-600 mb-6'>
-                  We're sorry for the inconvenience. Please try refreshing the
+                  We&apos;re sorry for the inconvenience. Please try refreshing the
                   page.
                 </p>
                 <div className='space-y-3'>
@@ -64,12 +64,12 @@ class ErrorBoundary extends Component<Props, State> {
                   >
                     Refresh Page
                   </button>
-                  <a
-                    href='/'
+                  <button
+                    onClick={() => window.location.href = '/'}
                     className='block w-full border-2 border-red-600 text-red-600 hover:bg-red-50 font-semibold py-3 px-6 rounded-lg transition-colors'
                   >
                     Go to Homepage
-                  </a>
+                  </button>
                 </div>
               </div>
             </div>

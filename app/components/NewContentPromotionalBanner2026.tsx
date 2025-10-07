@@ -227,7 +227,7 @@ const NewContentPromotionalBanner2026: React.FC = () => {
               {' '}
               complete digital transformation
             </span>{' '}
-            with Zion Tech Group's AI solutions
+            with Zion Tech Group&apos;s AI solutions
           </p>
 
           <div className='flex flex-col sm:flex-row items-center justify-center gap-4 mb-12'>
