@@ -1,61 +1,14 @@
 #!/usr/bin/env python3
-<<<<<<< HEAD
-"""
-Script to fix lucide-react import issues by converting from named imports to default imports.
-"""
-
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ec17
 import os
 import re
 import glob
 
-<<<<<<< HEAD
-def fix_lucide_imports_in_file(file_path):
-    """Fix lucide-react imports in a single file."""
-=======
 def fix_lucide_imports(file_path):
     """Fix lucide-react imports to use default imports instead of named imports"""
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ec17
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
-<<<<<<< HEAD
-        original_content = content
-        
-        # Pattern to match lucide-react named imports
-        lucide_pattern = r'import\s+{\s*([^}]+)\s*}\s+from\s+[\'"]lucide-react[\'"]'
-        
-        def fix_lucide_import(match):
-            imports = match.group(1).strip()
-            # Split by comma and clean up
-            import_list = [imp.strip() for imp in imports.split(',')]
-            import_list = [imp for imp in import_list if imp]  # Remove empty strings
-            
-            # Convert to individual default imports
-            result = []
-            for imp in import_list:
-                result.append(f"import {imp} from 'lucide-react';")
-            
-            return '\n'.join(result)
-        
-        # Replace lucide-react named imports
-        content = re.sub(lucide_pattern, fix_lucide_import, content)
-        
-        # Clean up multiple empty lines
-        content = re.sub(r'\n\s*\n\s*\n', '\n\n', content)
-        
-        # Only write if content changed
-        if content != original_content:
-            with open(file_path, 'w', encoding='utf-8') as f:
-                f.write(content)
-            print(f"Fixed lucide imports in: {file_path}")
-            return True
-        else:
-            return False
-            
-=======
         # Check if file has lucide-react named imports
         if 'from \'lucide-react\'' not in content and 'from "lucide-react"' not in content:
             return False
@@ -83,35 +36,11 @@ def fix_lucide_imports(file_path):
         
         return False
         
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ec17
     except Exception as e:
         print(f"Error processing {file_path}: {e}")
         return False
 
 def main():
-<<<<<<< HEAD
-    """Main function to fix lucide-react imports in all relevant files."""
-    # Find all TypeScript/JavaScript files in the app directory
-    patterns = [
-        'app/**/*.tsx',
-        'app/**/*.ts',
-        'app/**/*.jsx',
-        'app/**/*.js'
-    ]
-    
-    files_to_process = []
-    for pattern in patterns:
-        files_to_process.extend(glob.glob(pattern, recursive=True))
-    
-    print(f"Found {len(files_to_process)} files to process")
-    
-    fixed_count = 0
-    for file_path in files_to_process:
-        if fix_lucide_imports_in_file(file_path):
-            fixed_count += 1
-    
-    print(f"\nFixed lucide imports in {fixed_count} files")
-=======
     # Find all TSX files
     tsx_files = []
     for root, dirs, files in os.walk('/workspace'):
@@ -138,7 +67,6 @@ def main():
             print(f"  - No changes needed or error occurred")
     
     print(f"\nFixed lucide-react imports in {fixed_count} files")
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ec17
 
 if __name__ == "__main__":
     main()

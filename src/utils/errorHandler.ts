@@ -36,12 +36,8 @@ class ErrorHandler {
       stack: typeof error === 'string' ? '' : error.stack || '',
       context: {
         timestamp: Date.now(),
-<<<<<<< HEAD
-        userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : '',
-=======
         userAgent:
           typeof window !== 'undefined' ? window.navigator.userAgent : '',
->>>>>>> main
         url: typeof window !== 'undefined' ? window.location.href : '',
         ...context,
       } as ErrorContext,
@@ -56,13 +52,8 @@ class ErrorHandler {
     }
 
     // Log to console in development
-<<<<<<< HEAD
-    if (process.env.NODE_ENV === 'development') {
-      // Error logged
-=======
     if (process.env['NODE_ENV'] === 'development') {
       console.error('Error logged:', errorReport);
->>>>>>> main
     }
 
     // Send to external service in production

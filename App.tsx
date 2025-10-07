@@ -1,12 +1,8 @@
-<<<<<<< HEAD
 import React, { memo, useMemo } from 'react';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
 import React, { memo, useMemo, useCallback, Suspense } from 'react';
->>>>>>> main
+<<<<<<< HEAD
+=======
+=======
 >>>>>>> main
 >>>>>>> main
 import { HelmetProvider, Helmet } from 'react-helmet-async';
@@ -56,9 +52,6 @@ const InteractiveContentShowcase2026 = memo(() => (
   </div>
 ));
 
-<<<<<<< HEAD
-// Loading component (removed unused LoadingSpinner)
-=======
 <<<<<<< HEAD
 // Loading component - removed unused LoadingSpinner
 =======
@@ -118,7 +111,6 @@ const LoadingSpinner = memo(() => (
     <div className="text-gray-500">Loading...</div>
   </div>
 ));
->>>>>>> main
 >>>>>>> main
 
 export default function App() {
@@ -214,13 +206,8 @@ export default function App() {
 
   const handlePhoneClick = useCallback(() => {
     // Track phone clicks for analytics
-<<<<<<< HEAD
-    if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as any).gtag('event', 'phone_click', {
-=======
     if (typeof window !== 'undefined' && (window as unknown as { gtag?: Function }).gtag) {
       ((window as unknown as { gtag: Function }).gtag)('event', 'phone_click', {
->>>>>>> main
         event_category: 'engagement',
         event_label: 'main_phone_number'
       });

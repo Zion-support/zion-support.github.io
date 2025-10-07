@@ -4,18 +4,8 @@
  */
 
 import { useEffect, useCallback, useRef } from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { performanceOptimizer } from '../utils/performanceOptimizer';
-=======
-<<<<<<< HEAD
-import { performanceOptimizer } from '../utils/performanceOptimizer';
-=======
 import { monitorLongTasks } from '../utils/performanceOptimizer';
->>>>>>> main
->>>>>>> main
-=======
->>>>>>> b0d6dda8406c2e54af3529a18b3e8c5f6ab37739
+import { performanceOptimizer } from '../utils/performanceOptimizer';
 import analytics from '../utils/analytics';
 
 export interface PerformanceMetrics {
@@ -123,18 +113,10 @@ export const usePageLoadPerformance = () => {
               navigation.domContentLoadedEventStart,
             loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
             firstByte: navigation.responseStart - navigation.requestStart,
-<<<<<<< HEAD
-            domInteractive: navigation.domInteractive - (navigation as any).navigationStart,
-            totalLoadTime: navigation.loadEventEnd - (navigation as any).navigationStart,
-=======
-<<<<<<< HEAD
             domInteractive: navigation.domInteractive - navigation.fetchStart,
             totalLoadTime: navigation.loadEventEnd - navigation.fetchStart,
-=======
             domInteractive: navigation.domInteractive - (navigation as any).navigationStart,
             totalLoadTime: navigation.loadEventEnd - (navigation as any).navigationStart,
->>>>>>> main
->>>>>>> main
           };
 
           // Track each metric
@@ -157,15 +139,8 @@ export const usePageLoadPerformance = () => {
     // Track immediately if page is already loaded
     if (document.readyState === 'complete') {
       trackPageLoad();
-<<<<<<< HEAD
-      return undefined;
-=======
-<<<<<<< HEAD
       return;
-=======
       return undefined;
->>>>>>> main
->>>>>>> main
     } else {
       // Wait for load event
       window.addEventListener('load', trackPageLoad);
@@ -203,50 +178,18 @@ export const useResourcePerformance = () => {
  */
 export const useLongTaskMonitoring = () => {
   useEffect(() => {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> main
->>>>>>> main
     const observer = performanceOptimizer.monitorLongTasks((entries: PerformanceEntry[]) => {
       entries.forEach((entry: PerformanceEntry) => {
         analytics.track('long_task', 'performance', 'detected', undefined, entry.duration);
-=======
-<<<<<<< HEAD
     const observer = performanceOptimizer.monitorLongTasks((entries: PerformanceEntry[]) => {
       entries.forEach((entry: PerformanceEntry) => {
         analytics.track('long_task', 'performance', 'detected', undefined, entry.duration);
-=======
-<<<<<<< HEAD
     const observer = performanceOptimizer.monitorLongTasks((entries: PerformanceEntry[]) => {
       entries.forEach((entry: PerformanceEntry) => {
         analytics.track('long_task', 'performance', 'detected', undefined, entry.duration);
-=======
-<<<<<<< HEAD
-    const observer = performanceOptimizer.monitorLongTasks((entries: PerformanceEntry[]) => {
-      entries.forEach((entry: PerformanceEntry) => {
-        analytics.track('long_task', 'performance', 'detected', undefined, entry.duration);
-=======
-<<<<<<< HEAD
     const observer = monitorLongTasks((entries: PerformanceEntry[]) => {
-=======
     const observer = performanceOptimizer.monitorLongTasks((entries: PerformanceEntry[]) => {
->>>>>>> main
       entries.forEach((entry: PerformanceEntry) => {
-<<<<<<< HEAD
-        analytics.track('long_task', 'performance', 'detected', undefined, entry.duration);
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
         analytics.track(
           'long_task',
           'performance',
@@ -254,15 +197,6 @@ export const useLongTaskMonitoring = () => {
           undefined,
           entry.duration
         );
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
       });
     });
 
@@ -271,10 +205,8 @@ export const useLongTaskMonitoring = () => {
         observer.disconnect();
       }
     };
-=======
     // Long task monitoring is disabled due to missing performanceOptimizer
     console.log('Long task monitoring is not available');
->>>>>>> b0d6dda8406c2e54af3529a18b3e8c5f6ab37739
   }, []);
 };
 

@@ -87,86 +87,6 @@ export default function EnterprisePage() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-<<<<<<< HEAD
-            {/* Solution Cards */}
-            {[
-              {
-                title: 'Autonomous Operations',
-                description:
-                  'Self-healing infrastructure with 99.99% uptime and 95% cost reduction.',
-                icon: '🤖',
-                metrics: [
-                  '99.99% Uptime',
-                  '95% Cost Reduction',
-                  'Zero Touch Operations',
-                ],
-              },
-              {
-                title: 'Business Intelligence',
-                description:
-                  'AI-powered analytics delivering 30,000% ROI and real-time insights.',
-                icon: '📊',
-                metrics: [
-                  '30,000% ROI',
-                  '$750B+ Savings',
-                  'Real-time Analytics',
-                ],
-              },
-              {
-                title: 'Quantum Security',
-                description:
-                  'Quantum-resistant cryptography with 99.99% security against attacks.',
-                icon: '🔒',
-                metrics: ['99.99% Security', '<1ms Overhead', 'Zero Breaches'],
-              },
-              {
-                title: 'Predictive Analytics',
-                description:
-                  'Advanced ML models with 99.7% accuracy for business forecasting.',
-                icon: '🔮',
-                metrics: ['99.7% Accuracy', 'Real-time Predictions', 'Auto-scaling'],
-              },
-              {
-                title: 'Process Automation',
-                description:
-                  'End-to-end automation reducing manual work by 90% and errors by 99%.',
-                icon: '⚡',
-                metrics: ['90% Work Reduction', '99% Error Reduction', '24/7 Operations'],
-              },
-              {
-                title: 'Cloud Migration',
-                description:
-                  'Seamless cloud transformation with zero downtime and 50% cost savings.',
-                icon: '☁️',
-                metrics: ['Zero Downtime', '50% Cost Savings', 'Auto-scaling'],
-              },
-            ].map((solution, index) => (
-              <div
-                key={index}
-                className="group bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 hover:scale-105"
-              >
-                <div className="text-4xl mb-4">{solution.icon}</div>
-                <h3 className="text-2xl font-bold text-white mb-4">
-                  {solution.title}
-                </h3>
-                <p className="text-gray-300 mb-6">{solution.description}</p>
-                <div className="space-y-2">
-                  {solution.metrics.map((metric, idx) => (
-                    <div
-                      key={idx}
-                      className="flex items-center gap-2 text-sm text-cyan-400"
-                    >
-                      <span className="w-2 h-2 bg-cyan-400 rounded-full"></span>
-                      {metric}
-                    </div>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-=======
             {/* Solution 1 */}
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-cyan-500/50 transition-all duration-300 group">
               <div className="text-4xl mb-4">🤖</div>
@@ -183,7 +103,6 @@ export default function EnterprisePage() {
                 <li>• 24/7 autonomous operation</li>
               </ul>
             </div>
->>>>>>> main
 
             {/* Solution 2 */}
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-purple-500/50 transition-all duration-300 group">
@@ -202,25 +121,6 @@ export default function EnterprisePage() {
               </ul>
             </div>
 
-<<<<<<< HEAD
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              { number: '500+', label: 'Fortune 500 Clients' },
-              { number: '$2.5T+', label: 'Cost Savings Delivered' },
-              { number: '99.9%', label: 'System Uptime' },
-              { number: '500%', label: 'Productivity Increase' },
-            ].map((stat, index) => (
-              <div
-                key={index}
-                className="text-center bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8"
-              >
-                <div className="text-4xl md:text-5xl font-bold text-cyan-400 mb-2">
-                  {stat.number}
-                </div>
-                <div className="text-gray-300">{stat.label}</div>
-              </div>
-            ))}
-=======
             {/* Solution 3 */}
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-green-500/50 transition-all duration-300 group">
               <div className="text-4xl mb-4">🔒</div>
@@ -237,40 +137,11 @@ export default function EnterprisePage() {
                 <li>• Real-time threat detection</li>
               </ul>
             </div>
->>>>>>> main
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-<<<<<<< HEAD
-      <section className="py-24">
-        <div className="container mx-auto px-4">
-          <div className="text-center bg-white/5 backdrop-blur-lg rounded-3xl p-12 border border-white/20">
-            <h3 className="text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Enterprise?
-            </h3>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Join 500+ Fortune 500 companies achieving unprecedented
-              transformation with our enterprise AI solutions.
-            </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-              <a
-                href="tel:+13024640950"
-                className="group flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl"
-              >
-                <span className="text-xl">📞</span>
-                <span>Call +1 302 464 0950</span>
-              </a>
-              <a
-                href="mailto:info@ziontechgroup.com"
-                className="group flex items-center gap-3 bg-white/10 hover:bg-white/20 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 border border-white/30"
-              >
-                <span className="text-xl">📧</span>
-                <span>Get Enterprise Consultation</span>
-              </a>
-            </div>
-=======
       <section className="py-24 bg-gradient-to-r from-cyan-500/10 to-purple-500/10">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
@@ -293,7 +164,6 @@ export default function EnterprisePage() {
             >
               Call: +1 (302) 464-0950
             </a>
->>>>>>> main
           </div>
         </div>
       </section>

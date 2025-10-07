@@ -1,28 +1,5 @@
-<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 import performanceOptimizer, { WebVitalsMetrics } from '../utils/performanceOptimizer';
-
-interface PerformanceMonitorProps {
-  children: React.ReactNode;
-  enableReporting?: boolean;
-  enableLongTaskMonitoring?: boolean;
-}
-
-const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ 
-  children, 
-  enableReporting = true,
-  enableLongTaskMonitoring = true 
-}) => {
-  const [metrics, setMetrics] = useState<WebVitalsMetrics>({});
-  const [, setLongTasks] = useState<PerformanceEntry[]>([]);
-
-  useEffect(() => {
-    // Initialize performance monitoring
-<<<<<<< HEAD
-    // Add critical resource hints for performance optimization
-    performanceOptimizer.prefetchResources([]);
-    performanceOptimizer.preconnectDomains([]);
-=======
     // Add critical resource hints manually
     if (typeof document !== 'undefined') {
       const hints = [
@@ -42,7 +19,6 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         document.head.appendChild(link);
       });
     }
->>>>>>> main
     
     // Measure page load performance
     const pageLoadMetrics = performanceOptimizer.measurePageLoad();

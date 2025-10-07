@@ -1,16 +1,6 @@
-<<<<<<< HEAD
+import React, { ReactNode } from 'react';
 import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-
-interface SEOOptimizerProps {
-  children: React.ReactNode;
-<<<<<<< HEAD
-}
-
-const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ children }) => {
-  return (
-    <>
-=======
   title?: string;
   description?: string;
   keywords?: string[];
@@ -42,10 +32,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     }
   }, [structuredData]);
 
-=======
-<<<<<<< HEAD
-import React, { ReactNode } from 'react';
-import { Helmet } from 'react-helmet-async';
 
 interface SEOOptimizerProps {
   children: ReactNode;
@@ -62,39 +48,13 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   keywords = 'AI, artificial intelligence, IT solutions, technology, business solutions, automation',
   canonical
 }) => {
->>>>>>> main
   return (
     <>
       <Helmet>
         <title>{title}</title>
         <meta name="description" content={description} />
-<<<<<<< HEAD
-        <meta name="keywords" content={keywords.join(', ')} />
-        {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
-        
-        {/* Open Graph tags */}
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
-        <meta property="og:image" content={ogImage} />
-        <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="Zion Tech Group" />
-        
-        {/* Twitter Card tags */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={title} />
-        <meta name="twitter:description" content={description} />
-        <meta name="twitter:image" content={ogImage} />
-        
-        {/* Additional SEO meta tags */}
-        <meta name="robots" content="index, follow" />
-        <meta name="author" content="Zion Tech Group" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        
-        {/* Performance hints */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
-=======
+import React, { useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
         <meta name="keywords" content={keywords} />
         {canonical && <link rel="canonical" href={canonical} />}
         <meta property="og:title" content={title} />
@@ -103,9 +63,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
-=======
-import React, { useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
 
 interface SEOOptimizerProps {
   children: React.ReactNode;
@@ -159,10 +116,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ children }) => {
         <meta name="twitter:description" content="Transform your business with cutting-edge AI micro SaaS services, cloud automation, and enterprise IT solutions." />
         <meta name="twitter:image" content="https://ziontechgroup.com/og-image.jpg" />
         <link rel="canonical" href="https://ziontechgroup.com" />
->>>>>>> main
->>>>>>> main
       </Helmet>
->>>>>>> main
       {children}
     </>
   );
