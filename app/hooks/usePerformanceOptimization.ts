@@ -18,7 +18,7 @@ export const usePerformanceOptimization = () => {
     const paintEntries = performance.getEntriesByType('paint');
     
     const metrics: PerformanceMetrics = {
-      loadTime: navigation.loadEventEnd - navigation.loadEventStart,
+      loadTime: navigation ? navigation.loadEventEnd - navigation.loadEventStart : 0,
       firstContentfulPaint: paintEntries.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,
       largestContentfulPaint: 0,
       cumulativeLayoutShift: 0,
@@ -29,7 +29,9 @@ export const usePerformanceOptimization = () => {
     const lcpObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       const lastEntry = entries[entries.length - 1];
-      metrics.largestContentfulPaint = lastEntry.startTime;
+      if (lastEntry) {
+        metrics.largestContentfulPaint = lastEntry.startTime;
+      }
     });
     lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
 
@@ -54,6 +56,13 @@ export const usePerformanceOptimization = () => {
       }
     });
     fidObserver.observe({ entryTypes: ['first-input'] });
+
+    // Cleanup observers after a delay
+    setTimeout(() => {
+      lcpObserver.disconnect();
+      clsObserver.disconnect();
+      fidObserver.disconnect();
+    }, 10000);
 
     return metrics;
   }, []);
