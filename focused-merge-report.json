@@ -1,0 +1,111 @@
+{
+  "priority": [
+    {
+      "branch": "add-new-2026-content",
+      "success": true,
+      "method": "direct"
+    },
+    {
+      "branch": "add-revolutionary-content-2026",
+      "success": true,
+      "method": "direct"
+    },
+    {
+      "branch": "ai-2027-content-integration",
+      "success": true,
+      "method": "direct"
+    },
+    {
+      "branch": "ai-dashboard-improvements",
+      "success": true,
+      "method": "direct"
+    },
+    {
+      "branch": "0nylrk-codex-fix-footer-contact-link-resolved",
+      "success": true,
+      "method": "direct"
+    },
+    {
+      "branch": "0parff-codex-centralize-api-error-handling-resolved",
+      "success": true,
+      "method": "direct"
+    },
+    {
+      "branch": "0smfo8-codex-fix-404-error-resolved",
+      "success": true,
+      "method": "direct"
+    }
+  ],
+  "cursor": [
+    {
+      "branch": "cursor/website-audit-content-update-and-deployment-fe05",
+      "success": true,
+      "method": "direct"
+    },
+    {
+      "branch": "cursor/website-audit-content-update-and-deployment-fe1d",
+      "success": true,
+      "method": "direct"
+    },
+    {
+      "branch": "cursor/website-audit-content-update-and-deployment-fe57",
+      "success": true,
+      "method": "direct"
+    },
+    {
+      "branch": "cursor/website-audit-content-update-and-deployment-fe5e",
+      "success": true,
+      "method": "direct"
+    },
+    {
+      "branch": "cursor/website-audit-content-update-and-deployment-fea0",
+      "success": true,
+      "method": "direct"
+    },
+    {
+      "branch": "cursor/website-audit-content-update-and-deployment-feb9",
+      "success": true,
+      "method": "direct"
+    },
+    {
+      "branch": "cursor/website-audit-content-update-and-deployment-ffaa",
+      "success": true,
+      "method": "direct"
+    },
+    {
+      "branch": "cursor/website-audit-content-update-and-deployment-ffb7",
+      "success": true,
+      "method": "direct"
+    },
+    {
+      "branch": "cursor/website-audit-merged",
+      "success": true,
+      "method": "direct"
+    },
+    {
+      "branch": "cursor/website-audit-merged-v2",
+      "success": true,
+      "method": "direct"
+    }
+  ],
+  "failed": [],
+  "summary": {
+    "total": 17,
+    "successful": 17,
+    "failed": 0,
+    "methods": {
+      "direct": 17,
+      "theirs": 0,
+      "ours": 0,
+      "manual": 0,
+      "failed": 0,
+      "not_found": 0
+    }
+  },
+  "timestamp": "2025-10-05T13:17:17.905Z",
+  "branchCounts": {
+    "priority": 7,
+    "cursor": 10,
+    "total": 17
+  }
+}

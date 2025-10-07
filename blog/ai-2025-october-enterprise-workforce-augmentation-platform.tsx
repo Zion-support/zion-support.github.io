@@ -349,14 +349,12 @@ export default function AI2025OctoberEnterpriseWorkforceAugmentationPlatform() {
           </p>
           <div className="text-left"></div>
             <a
-              href="/contact"
-              className="text-left"
+              href="/<contact" className="text-left"
             ></a>
               Schedule Consultation
             </a>
             <a
-              href="/services/workforce-augmentation"
-              className="text-left"
+              href="/services/workforce-<augmentation" className="text-left"
             ></a>
               Explore Services
             </a>

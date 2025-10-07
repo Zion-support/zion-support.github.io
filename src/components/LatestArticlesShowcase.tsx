@@ -1,87 +1,20 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { newArticles2025 } from '../content/new-articles-2025';
-
-const LatestArticlesShowcase: React.FC = () => {
-  const latestArticles = newArticles2025.filter(a => a.featured).slice(0, 6);
-
-  return (
-    <section className="py-20 bg-white">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Latest Articles & Research
-          </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Explore cutting-edge insights on AI, automation, and emerging technologies
-          </p>
-        </div>
-        
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {latestArticles.map((article) => (
-            <Link
-              key={article.id}
-              to={article.link}
-              className="group bg-white rounded-xl shadow-md hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100 hover:border-indigo-300"
-            >
-              <div className="p-6">
-                <div className="flex items-center justify-between mb-3">
-                  <span className="text-xs font-semibold text-indigo-600 uppercase tracking-wide">
-                    {article.category}
-                  </span>
-                  {article.featured && (
-                    <span className="bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded-full font-medium">
-                      Featured
-                    </span>
-                  )}
-                </div>
-                
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-indigo-600 transition-colors">
-                  {article.title}
-                </h3>
-                
-                <p className="text-gray-600 text-sm mb-4 line-clamp-3">
-                  {article.description}
-                </p>
-                
-                <div className="flex items-center justify-between text-sm">
-                  <div className="flex items-center text-gray-500">
-
-                    {article.readTime}
-                  </div>
-                  <div className="text-indigo-600 font-semibold group-hover:gap-2 flex items-center transition-all">
-                    Read More
-
-                  </div>
-                </div>
-                
-                <div className="flex flex-wrap gap-2 mt-4">
-                  {article.tags.slice(0, 3).map((tag) => (
-                    <span
-key={tag}
-                      className="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded-full"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            </Link>
-          ))}
-        </div>
-        
-        <div className="text-center mt-12">
-          <Link
-            to="/blog"
-            className="inline-flex items-center gap-2 bg-indigo-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-indigo-700 transition-all hover:scale-105 shadow-lg"
-          >
-            View All Articles
-
-          </Link>
-        </div>
-      </div>
-    </section>
-  );
-};
-
-export default LatestArticlesShowcase;
+import, React, from 'rea, c, t';
+impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
+impo, r, t { newArticles20, 2, 5 } fr, o, m '../conte, n, t/n, e, w-articl, e, s-20, 2, 5';
+const, LatestArticlesShowcas, e: Rea, c, t.FC = () => { 
+  const, latestArticle, s = newArticles20, 2, 5.filt, e, r(a => a.featu, r, e, d).sli, c, e(, 0, 6); retu, r, n (
+    <section, classNam, e = 'py-20, b, g-whi, t, e'>
+      <div, classNam, e='container, m, x-auto, p, x-6'>
+        <div, classNam, e='te, x, t-center, m, b-12'>
+          <h2, classNam, e='te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4'>
+            Latest, Article, s & Resear, c, h
+        <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-3, ga, p-8'>
+          {latestArticl, e, s.m, a, p(artic, l, e = > (
+            <Link, ke, y = { artic, l, e., i, d  }, to={ artic, l, e.li, n, k } classNa, m, e='group, b, g-white, rounde, d-xl, shado, w-md, hove, r: shad, o, w-2xl, transitio, n-all, duratio, n-300, overflo, w-hidden, border, border-gr, a, y-100, hove, r:bord, e, r-indi, g, o-3, 0, 0'
+                <h3, classNam, e = 'te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-3, grou, p-hov, e, r: te, x, t-indi, g, o-600, transitio, n-colo, r, s'>
+                  {artic, l, e.t, i, t, l, e}
+                  <div, classNam, e='te, x, t-indi, g, o-600, fon, t-semibold, grou, p-hov, e, r: g, a, p-2, flex, items-center, transitio, n-a, l, l'>
+                    Read, Mor, e
+                    <ArrowRight, classNam, e='w-4 h-4, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m' />
+            View, All, Articles
+            <ArrowRight, classNam, e='w-6 h-6' />

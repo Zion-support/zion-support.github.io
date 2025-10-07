@@ -449,8 +449,7 @@ export class DriftMonitor
             solutions that ensure 99.9%+ uptime and exceptional model performance.
           </p>
           <a
-            href="/contact"
-            className="text-left"
+            href="/<contact" className="text-left"
           ></a>
             Schedule Observability Assessment
           </a>

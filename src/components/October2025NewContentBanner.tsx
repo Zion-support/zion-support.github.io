@@ -1,181 +1,202 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-
-const October2025NewContentBanner = () => {
+const, October2025NewContentBanne, r = () => {
   return (
-    <div className="relative overflow-hidden bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 py-16 px-6 rounded-3xl mb-12">
-      {/* Animated background elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-0 left-0 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
-      </div>
-
-      <div className="relative z-10 max-w-6xl mx-auto">
-        {/* Header Section */}
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500/20 to-blue-500/20 border border-purple-400/30 rounded-full px-6 py-2 mb-6">
-
-            <span className="text-purple-300 font-semibold text-sm uppercase tracking-wider">Fresh Insights • October 2025</span>
-
-          </div>
-          
-          <h2 className="text-5xl font-extrabold mb-4 bg-gradient-to-r from-purple-300 via-blue-300 to-cyan-300 bg-clip-text text-transparent">
-            Latest AI Breakthroughs & Enterprise Strategies
+    <div, className="relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-purp, l, e-900, vi, a-bl, u, e-900, t, o-indi, g, o-900, p, y-16, p, x-6, rounde, d-3xl, m, b-12">
+      {/* Animated, background, elements */};
+      <div, className="absolute, inse, t-0, overflo, w-hidd, e, n">
+        <div, className="absolute, to, p-0, lef, t-0 w-9, 6, h-96, b, g-purp, l, e-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e"></d, i, v>
+        <div, className="absolute, botto, m-0, righ, t-0 w-9, 6, h-96, b, g-bl, u, e-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pulse, dela, y-10, 0, 0"></d, i, v>
+    <div, className="relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-purp, l, e-900, vi, a-bl, u, e-900, t, o-indi, g, o-900, p, y-16, p, x-6, rounde, d-3xl, m, b-12">";
+      {/* Animated, background, elements */};
+      <div, className="absolute, inse, t-0, overflo, w-hidd, e, n">";
+        <div, className="absolute, to, p-0, lef, t-0 w-9, 6, h-96, b, g-purp, l, e-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e"></d, i, v>";
+        <div, className="absolute, botto, m-0, righ, t-0 w-9, 6, h-96, b, g-bl, u, e-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pulse, dela, y-10, 0, 0"></d, i, v>";
+      </d, i, v>
+      <div, className="relativ, e, z-10, ma, x-w-6xl, m, x-au, t, o">";
+        {/* Header, Sectio, n */}
+        <div, className="text-center mb-12">
+          <div, className="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/20, t, o-bl, u, e-5, 0, 0/20, border, border-purp, l, e-4, 0, 0/30, rounde, d-full, p, x-6, p, y-2, m, b-6">
+            <Sparkles, className="w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e  />
+            <span, className="te, x, t-purp, l, e-300, fon, t-semibold, tex, t-sm, uppercase, tracking-wid, e, r">Fresh, Insight, s • October, 202, 5</sp, a, n>
+            <Sparkles, className="w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e  />
+        <div, className="text-center mb-12">";
+          <div, className="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/20, t, o-bl, u, e-5, 0, 0/20, border, border-purp, l, e-4, 0, 0/30, rounde, d-full, p, x-6, p, y-2, m, b-6">";
+            <Sparkles, className="w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e" />";
+            <span, className="te, x, t-purp, l, e-300, fon, t-semibold, tex, t-sm, uppercase, tracking-wid, e, r">Fresh, Insight, s • October, 202, 5</sp, a, n>";
+            <Sparkles, className="w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e" />";
+          </d, i, v>
+          <h2, className="te, x, t-5xl, fon, t-extrabold, m, b-4, b, g-gradie, n, t-to-r, fro, m-purp, l, e-300, vi, a-bl, u, e-300, t, o-cy, a, n-300, b, g-cl, i, p-text, tex, t-transpare, n, t">";
+            Latest, AI, Breakthroughs & Enterprise, Strategie, s;
           </h2>
-          
-          <p className="text-xl text-blue-200 max-w-3xl mx-auto">
-            Discover cutting-edge insights on multimodal AI agents, zero-trust security architectures, 
-            and production-scale RAG pipelines from industry leaders
+          <p, className="te, x, t-xl, tex, t-bl, u, e-200, ma, x-w-3xl, m, x-au, t, o">
+            Discover, cuttin, g-edge, insights, on multimodal, AI, agents, ze, r, o-trust, security, architectures;
+          <p, className="te, x, t-xl, tex, t-bl, u, e-200, ma, x-w-3xl, m, x-au, t, o">";
+            Discover, cuttin, g-edge, insights, on multimodal, AI, agents, ze, r, o-trust, security, architectures
+            and, productio, n-scale, RAG, pipelines from, industry, leaders;
           </p>
-        </div>
-
-        {/* Featured Articles Grid */}
-        <div className="grid md:grid-cols-3 gap-6 mb-10">
-          {/* Article 1 - Multimodal AI Agents */}
-          <Link 
-            to="/blog/ai-2025-october-multimodal-agents-enterprise-automation"
-            className="group bg-gradient-to-br from-purple-800/40 to-purple-900/40 backdrop-blur-sm border border-purple-400/30 rounded-2xl p-6 hover:scale-105 transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/50"
+        </d, i, v>
+        {/* Featured, Articles, Grid */}
+        <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-10">"
+        <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-10">";
+          {/* Articl, e, 1 - Multimodal, AI, Agents */}
+          <Li, n, k
+  to="/bl, o, g/ai-20, 2, 5-octob, e, r-multimod, a, l-agen, t, s-enterpri, s, e-automati, o, n"
+            classNa, m, e="group, b, g-gradie, n, t-to-br, fro, m-purp, l, e-8, 0, 0/40, t, o-purp, l, e-9, 0, 0/40, backdro, p-bl, u, r-sm, border, border-purp, l, e-4, 0, 0/30, rounde, d-2x, l, p-6, hove, r: sca, l, e-105, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hov, e
+  r:shad, o, w-purp, l, e-5, 0, 0/50"
           >
-            <div className="flex items-center gap-3 mb-4">
-              <div className="p-3 bg-purple-500/20 rounded-xl group-hover:bg-purple-500/30 transition-colors">
-
-              </div>
-              <div className="flex-1">
-                <span className="text-xs text-purple-300 font-semibold uppercase tracking-wide">AI Automation</span>
-              </div>
-            </div>
-            
-            <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-200 transition-colors">
-              Multimodal AI Agents: The Next Evolution in Enterprise Automation
+            <div, className="flex, item, s-center, ga, p-3, m, b-4">
+              <div, className="p-3, b, g-purp, l, e-5, 0, 0/20, rounde, d-xl, grou, p-hov, e, r: bg-purp, l, e-5, 0, 0/30, transitio, n-colo, r, s">"
+                <Brain, className="w-8 h-8, tex, t-purp, l, e-3, 0, 0  />
+            <div, className="flex, item, s-center, ga, p-3, m, b-4">";
+              <div, className="p-3, b, g-purp, l, e-5, 0, 0/20, rounde, d-xl, grou, p-hov, e, r: bg-purp, l, e-5, 0, 0/30, transitio, n-colo, r, s">";
+                <Brain, className="w-8 h-8, tex, t-purp, l, e-3, 0, 0" />";
+              </d, i, v>
+              <div, className="fl, e, x-1">";
+                <span, className="te, x, t-xs, tex, t-purp, l, e-300, fon, t-semibold, uppercase, tracking-wi, d, e">AI, Automatio, n</sp, a, n>";
+              </d, i, v>
+            </d, i, v>
+            <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e
+  r: te, x, t-purp, l, e-200, transitio, n-colo, r, s">"
+            <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-purp, l, e-200, transitio, n-colo, r, s">";
+              Multimodal, AI, Agent
+  s: The, Next, Evolution in, Enterprise, Automation
             </h3>
-            
-            <p className="text-blue-200/80 text-sm mb-4 line-clamp-3">
-              Learn how multimodal AI systems deliver 10x productivity gains by seamlessly processing 
-              text, images, audio, and video to automate complex workflows.
+            <p, className="te, x, t-bl, u, e-2, 0, 0/80, tex, t-sm, m, b-4, lin, e-cla, m, p-3">";
+              Learn, how, multimodal AI, systems, deliver 10x, productivity, gains by, seamlessly, processing
+  te, x, t, imag, e, s, aud, i, o, and, video, to automate, complex, workflows.
             </p>
-            
-            <div className="flex items-center justify-between">
-              <div className="flex items-center gap-2 text-purple-300 text-sm">
-                <span>16 min read</span>
-                <span>•</span>
-                <span>Oct 1, 2025</span>
-              </div>
-
-            </div>
-          </Link>
-
-          {/* Article 2 - AI Security Mesh */}
-          <Link 
-            to="/blog/ai-2025-october-security-mesh-zero-trust-ai"
-            className="group bg-gradient-to-br from-red-800/40 to-orange-900/40 backdrop-blur-sm border border-red-400/30 rounded-2xl p-6 hover:scale-105 transition-all duration-300 hover:shadow-2xl hover:shadow-red-500/50"
+            <div, className="flex, item, s-center, justif, y-betwe, e, n">";
+              <div, className="flex, item, s-center, ga, p-2, tex, t-purp, l, e-300, tex, t-sm">";
+                <sp, a, n>16, min, read</sp, a, n>
+                <sp, a, n>•</sp, a, n>
+                <sp, a, n>Oc, t, 1, 20, 2, 5</sp, a, n>
+              </d, i, v>
+              <ArrowRight, className="w-5 h-5, tex, t-purp, l, e-300, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
+              <ArrowRight, className="w-5 h-5, tex, t-purp, l, e-300, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
+            </d, i, v>
+          </Li, n, k>
+          {/* Articl, e, 2 - AI, Security, Mesh */}
+          <Li, n, k
+  to="/bl, o, g/ai-20, 2, 5-octob, e, r-securi, t, y-me, s, h-ze, r, o-tru, s, t-ai"
+            classNa, m, e="group, b, g-gradie, n, t-to-br, fro, m-r, e, d-8, 0, 0/40, t, o-oran, g, e-9, 0, 0/40, backdro, p-bl, u, r-sm, border, border-r, e, d-4, 0, 0/30, rounde, d-2x, l, p-6, hove, r: sca, l, e-105, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hov, e
+  r:shad, o, w-r, e, d-5, 0, 0/50"
           >
-            <div className="flex items-center gap-3 mb-4">
-              <div className="p-3 bg-red-500/20 rounded-xl group-hover:bg-red-500/30 transition-colors">
-
-              </div>
-              <div className="flex-1">
-                
-              </div>
-            </div>
-            
-            <h3 className="text-xl font-bold text-white mb-3 group-hover:text-red-200 transition-colors">
-              AI Security Mesh Architecture: Zero Trust for AI Systems 2025
+            <div, className="flex, item, s-center, ga, p-3, m, b-4">
+              <div, className="p-3, b, g-r, e, d-5, 0, 0/20, rounde, d-xl, grou, p-hov, e, r: bg-r, e, d-5, 0, 0/30, transitio, n-colo, r, s">"
+                <Shield, className="w-8 h-8, tex, t-r, e, d-3, 0, 0  />
+            <div, className="flex, item, s-center, ga, p-3, m, b-4">";
+              <div, className="p-3, b, g-r, e, d-5, 0, 0/20, rounde, d-xl, grou, p-hov, e, r: bg-r, e, d-5, 0, 0/30, transitio, n-colo, r, s">";
+                <Shield, className="w-8 h-8, tex, t-r, e, d-3, 0, 0" />";
+              </d, i, v>
+              <div, className="fl, e, x-1">";
+                <span, className="te, x, t-xs, tex, t-r, e, d-300, fon, t-semibold, uppercase, tracking-wi, d, e">Securi, t, y</sp, a, n>";
+              </d, i, v>
+            </d, i, v>
+            <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e
+  r: te, x, t-r, e, d-200, transitio, n-colo, r, s">"
+            <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-r, e, d-200, transitio, n-colo, r, s">";
+              AI, Security, Mesh Architect, u, r
+  e: Zero, Trust, for AI, Systems, 2025
             </h3>
-            
-            <p className="text-orange-200/80 text-sm mb-4 line-clamp-3">
-              Discover how enterprises achieve 98% threat detection rates with distributed security 
-              architectures and zero-trust principles for AI deployments.
+            <p, className="te, x, t-oran, g, e-2, 0, 0/80, tex, t-sm, m, b-4, lin, e-cla, m, p-3">";
+              Discover, how, enterprises achieve, 9, 8% threat, detection, rates with, distributed, security
+  architectures, and, zero-trust, principles, for AI, deployment, s.
             </p>
-            
-            <div className="flex items-center justify-between">
-              <div className="flex items-center gap-2 text-red-300 text-sm">
-                <span>20 min read</span>
-                <span>•</span>
-                <span>Oct 1, 2025</span>
-              </div>
-
-            </div>
-          </Link>
-
-          {/* Article 3 - RAG 2.0 */}
-          <Link 
-            to="/blog/ai-2025-october-rag-2-production-scale-pipelines"
-            className="group bg-gradient-to-br from-blue-800/40 to-cyan-900/40 backdrop-blur-sm border border-blue-400/30 rounded-2xl p-6 hover:scale-105 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/50"
+            <div, className="flex, item, s-center, justif, y-betwe, e, n">";
+              <div, className="flex, item, s-center, ga, p-2, tex, t-r, e, d-300, tex, t-sm">";
+                <sp, a, n>20, min, read</sp, a, n>
+                <sp, a, n>•</sp, a, n>
+                <sp, a, n>Oc, t, 1, 20, 2, 5</sp, a, n>
+              </d, i, v>
+              <ArrowRight, className="w-5 h-5, tex, t-r, e, d-300, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
+              <ArrowRight, className="w-5 h-5, tex, t-r, e, d-300, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
+            </d, i, v>
+          </Li, n, k>
+          {/* Articl, e, 3 - RA, G, 2.0 */}
+          <Li, n, k
+  to="/bl, o, g/ai-20, 2, 5-octob, e, r-r, a, g-2-producti, o, n-sca, l, e-pipelin, e, s"
+            classNa, m, e="group, b, g-gradie, n, t-to-br, fro, m-bl, u, e-8, 0, 0/40, t, o-cy, a, n-9, 0, 0/40, backdro, p-bl, u, r-sm, border, border-bl, u, e-4, 0, 0/30, rounde, d-2x, l, p-6, hove, r: sca, l, e-105, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hov, e
+  r:shad, o, w-bl, u, e-5, 0, 0/50"
           >
-            <div className="flex items-center gap-3 mb-4">
-              <div className="p-3 bg-blue-500/20 rounded-xl group-hover:bg-blue-500/30 transition-colors">
-                <Database className="w-8 h-8 text-blue-300" />
-              </div>
-              <div className="flex-1">
-                <span className="text-xs text-blue-300 font-semibold uppercase tracking-wide">RAG Pipelines</span>
-              </div>
-            </div>
-            
-            <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-200 transition-colors">
-              RAG 2.0: Production-Scale Retrieval-Augmented Generation Pipelines
+            <div, className="flex, item, s-center, ga, p-3, m, b-4">
+              <div, className="p-3, b, g-bl, u, e-5, 0, 0/20, rounde, d-xl, grou, p-hov, e, r: bg-bl, u, e-5, 0, 0/30, transitio, n-colo, r, s">"
+                <Database, className="w-8 h-8, tex, t-bl, u, e-3, 0, 0  />
+            <div, className="flex, item, s-center, ga, p-3, m, b-4">";
+              <div, className="p-3, b, g-bl, u, e-5, 0, 0/20, rounde, d-xl, grou, p-hov, e, r: bg-bl, u, e-5, 0, 0/30, transitio, n-colo, r, s">";
+                <Database, className="w-8 h-8, tex, t-bl, u, e-3, 0, 0" />";
+              </d, i, v>
+              <div, className="fl, e, x-1">";
+                <span, className="te, x, t-xs, tex, t-bl, u, e-300, fon, t-semibold, uppercase, tracking-wi, d, e">RAG, Pipeline, s</sp, a, n>";
+              </d, i, v>
+            </d, i, v>
+            <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e
+  r: te, x, t-bl, u, e-200, transitio, n-colo, r, s">"
+            <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-bl, u, e-200, transitio, n-colo, r, s">";
+              RA, G, 2.
+  0: Producti, o, n-Scale, Retrieva, l-Augmented, Generation, Pipelines
             </h3>
-            
-            <p className="text-cyan-200/80 text-sm mb-4 line-clamp-3">
-              Master advanced RAG architectures with 94% accuracy, sub-200ms latency, and seamless 
-              scaling to 100M+ documents using hybrid search and continuous evaluation.
+            <p, className="te, x, t-cy, a, n-2, 0, 0/80, tex, t-sm, m, b-4, lin, e-cla, m, p-3">";
+              Master, advanced, RAG architectures, with, 94% accura, c, y, s, u, b-200ms, latenc, y, and, seamles, s
+  scaling, to, 100M+ documents, using, hybrid search, and, continuous evaluati, o, n.
             </p>
-            
-            <div className="flex items-center justify-between">
-              <div className="flex items-center gap-2 text-blue-300 text-sm">
-                <span>22 min read</span>
-                <span>•</span>
-                <span>Oct 1, 2025</span>
-              </div>
-
-            </div>
-          </Link>
-        </div>
-
-        {/* CTA Section */}
-        <div className="text-center mt-10">
-          <Link 
-            to="/blog"
-            className="inline-flex items-center gap-3 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-bold text-lg px-10 py-4 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-2xl"
+            <div, className="flex, item, s-center, justif, y-betwe, e, n">";
+              <div, className="flex, item, s-center, ga, p-2, tex, t-bl, u, e-300, tex, t-sm">";
+                <sp, a, n>22, min, read</sp, a, n>
+                <sp, a, n>•</sp, a, n>
+                <sp, a, n>Oc, t, 1, 20, 2, 5</sp, a, n>
+              </d, i, v>
+              <ArrowRight, className="w-5 h-5, tex, t-bl, u, e-300, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
+              <ArrowRight, className="w-5 h-5, tex, t-bl, u, e-300, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
+            </d, i, v>
+          </Li, n, k>
+        </d, i, v>
+        {/* CTA, Sectio, n */}
+        <div, className="te, x, t-center, m, t-10">";
+          <Li, n, k
+  to="/bl, o, g"
+            classNa, m, e="inli, n, e-flex, item, s-center, ga, p-3, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-bl, u, e-600, hove, r: fr, o, m-purp, l, e-700, hove, r:to-bl, u, e-700, tex, t-white, fon, t-bold, tex, t-lg, p, x-10, p, y-4, rounde, d-xl, transitio, n-all, duratio, n-300, transform, hover:sca, l, e-105, shado, w-lg, hov, e
+  r:shad, o, w-2, x, l"
           >
-            <span>Explore All Insights</span>
-
-          </Link>
-          
-          <p className="text-blue-200/70 text-sm mt-4">
-            Join 50,000+ technology leaders staying ahead of the AI curve
+            <sp, a, n>Explore, All, Insights</sp, a, n>
+            <ArrowRight, className="w-6 h-6  />
+            <ArrowRight, className="w-6 h-6" />";
+          </Li, n, k>
+          <p, className="te, x, t-bl, u, e-2, 0, 0/70, tex, t-sm, m, t-4">";
+            Join, 5, 0,0, 0, 0+ technology, leaders, staying ahead, of, the AI, curv, e;
           </p>
-        </div>
-
-        {/* Stats Bar */}
-        <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6">
-          <div className="text-center">
-            <div className="text-3xl font-extrabold text-transparent bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text mb-1">
-              10x
-            </div>
-            <div className="text-blue-200/70 text-sm">Productivity Gains</div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl font-extrabold text-transparent bg-gradient-to-r from-red-400 to-orange-400 bg-clip-text mb-1">
+        </d, i, v>
+        {/* Stats, Ba, r */}
+        <div, className="mt-12, grid, grid-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6">"
+          <div, className="te, x, t-cent, e, r">
+            <div, className="te, x, t-3xl, fon, t-extrabold, tex, t-transparent, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, t, o-pi, n, k-400, b, g-cl, i, p-text, m, b-1">
+        <div, className="mt-12, grid, grid-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6">";
+          <div, className="te, x, t-cent, e, r">";
+            <div, className="te, x, t-3xl, fon, t-extrabold, tex, t-transparent, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, t, o-pi, n, k-400, b, g-cl, i, p-text, m, b-1">";
+              1, 0, x;
+            </d, i, v>
+            <div, className="te, x, t-bl, u, e-2, 0, 0/70, tex, t-sm">Productivity, Gain, s</d, i, v>";
+          </d, i, v>
+          <div, className="te, x, t-cent, e, r">";
+            <div, className="te, x, t-3xl, fon, t-extrabold, tex, t-transparent, b, g-gradie, n, t-to-r, fro, m-r, e, d-400, t, o-oran, g, e-400, b, g-cl, i, p-text, m, b-1">";
               98%
-            </div>
-            <div className="text-orange-200/70 text-sm">Threat Detection</div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl font-extrabold text-transparent bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text mb-1">
+            </d, i, v>
+            <div, className="te, x, t-oran, g, e-2, 0, 0/70, tex, t-sm">Threat, Detectio, n</d, i, v>";
+          </d, i, v>
+          <div, className="te, x, t-cent, e, r">";
+            <div, className="te, x, t-3xl, fon, t-extrabold, tex, t-transparent, b, g-gradie, n, t-to-r, fro, m-bl, u, e-400, t, o-cy, a, n-400, b, g-cl, i, p-text, m, b-1">";
               94%
-            </div>
-            <div className="text-cyan-200/70 text-sm">RAG Accuracy</div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl font-extrabold text-transparent bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text mb-1">
-              &lt;200ms
-            </div>
-            <div className="text-green-200/70 text-sm">Response Time</div>
-          </div>
-        </div>
-      </div>
-    </div>
+            </d, i, v>
+            <div, className="te, x, t-cy, a, n-2, 0, 0/70, tex, t-sm">RAG, Accurac, y</d, i, v>";
+          </d, i, v>
+          <div, className="te, x, t-cent, e, r">";
+            <div, className="te, x, t-3xl, fon, t-extrabold, tex, t-transparent, b, g-gradie, n, t-to-r, fro, m-gre, e, n-400, t, o-emera, l, d-400, b, g-cl, i, p-text, m, b-1">";
+              &lt;200, m, s;
+            </d, i, v>
+            <div, className="te, x, t-gre, e, n-2, 0, 0/70, tex, t-sm">Response, Tim, e</d, i, v>";
+          </d, i, v>
+        </d, i, v>
+      </d, i, v>
+    </d, i, v>
   );
 };
-
 export default October2025NewContentBanner;
+;

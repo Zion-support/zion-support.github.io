@@ -253,10 +253,10 @@ export default function AI2025OctoberNextGenCybersecurityRevolution() {
             with next-generation threat prevention.
           </p>
           <div className="text-left"></div>
-            <a href="/contact" className="text-left"></a>
+            <a href="/<contact" className="text-left"></a>
               Schedule Security Assessment
             </a>
-            <a href="/services" className="text-left"></a>
+            <a href="/<services" className="text-left"></a>
               Explore AI Security Services
             </a>
           </div>

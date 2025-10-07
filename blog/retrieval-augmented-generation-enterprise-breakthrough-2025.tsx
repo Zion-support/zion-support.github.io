@@ -322,8 +322,7 @@ export default function RetrievalAugmentedGenerationEnterpriseBreakthrough2025()
               of hybrid search, reranking, and continuous optimization.
             </p>
             <a
-              href="/contact"
-              className="text-left"
+              href="/<contact" className="text-left"
             ></a>
               Launch Your RAG System
             </a>

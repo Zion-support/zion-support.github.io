@@ -3,546 +3,197 @@
  * AI-powered content recommendations based on user behavior and preferences
  */
 
-interface ContentItem {
+interface ContentIte, m { 
   id: string;
   title: string;
   category: string;
   tags: string[];
-  url: string;
-  type: 'blog' | 'case-study' | 'service' | 'guide';
+  u, r, l: string;
+  ty, p, e: 'bl, o, g' | 'ca, s, e-stu, d, y' | 'servi, c, e' | 'gui, d, e';
   readTime?: number;
-  publishDate: string;
-  views?: number;
-  conversions?: number;
+  publishDa, t, e: string;
+  vie, w, s?: number;
+  conversio, n, s ?  : num, b, e, r;
+ }
+
+interface UserProfil, e {
+  interes, t, s: string[];
+  viewedConte, n, t: string[];
+  preferredCategori, e, s: string[];
+  readingLev, e, l: 'beginn, e, r' | 'intermedia, t, e' | 'advanc, e, d';
+  engageme, n, t: number; // 0-1 sco r e
 }
 
-interface UserProfile {
-  interests: string[];
-  viewedContent: string[];
-  preferredCategories: string[];
-  readingLevel: 'beginner' | 'intermediate' | 'advanced';
-  engagement: number; // 0-1 score
+interface RecommendationScor, e {
+  content, I, d: string;
+  sco, r, e: number;
+  reaso, n, s: str, i, n, g[];
 }
 
-interface RecommendationScore {
-  contentId: string;
-  score: number;
-  reasons: string[];
+interface RecommendationResul, t {
+  conte, n, t: ContentIt, e, m;
+  sco, r, e: number;
+  reaso, n, s: str, i, n, g[];
 }
 
-interface RecommendationResult {
-  content: ContentItem;
-  score: number;
-  reasons: string[];
-}
-
-class ContentRecommendationEngine {
-  private contentCatalog: ContentItem[] = [];
-  private userProfiles: Map<string, UserProfile> = new Map();
-
-  /**
-   * Add content to catalog
-   */
-  addContent(content: ContentItem | ContentItem[]): void {
-    const items = Array.isArray(content) ? content : [content];
-    this.contentCatalog.push(...items);
-  }
-
-  /**
-   * Get recommendations for user
-   */
-  getRecommendations(
-    userId: string,
-    options: {
-      limit?: number;
-      excludeViewed?: boolean;
+class, ContentRecommendationEngin, e {  
+>>>>>>> origin/merge-fixes-20251005-193002
+    user, I, d: str, i, n, g,
+    optio, n, s: { 
+      lim, i, t?: number;
+      excludeView, e, d?: boolean;
       category?: string;
-      type?: ContentItem['type'];
-    } = {}
-  ): RecommendationResult[] {
-    const {
-      limit = 5,
-      excludeViewed = true,
-      category,
-      type,
-    } = options;
+      ty, p, e ?  : ContentIt, e, m['t, y, p, e'];
+     } = {},
+>>>>>>> origin/merge-fixes-20251005-193002
+      }, if (category) { 
+      candidat, e, s = candidat, e, s.filt, e, r(it, e, m = > it, e, m.category === categ, o, r, y);
+     }
 
-    // Get or create user profile
-    const userProfile = this.createUserProfile(userId);
-
-    // Filter content
-    let candidates = this.contentCatalog;
-
-    if (excludeViewed) {
-      candidates = candidates.filter(
-        (item) => !userProfile.viewedContent.includes(item.id)
-      );
-    }
-
-    if (category) {
-      candidates = candidates.filter((item) => item.category === category);
-    }
-
-    if (type) {
-      candidates = candidates.filter((item) => item.type === type);
-    }
+    if (ty, p, e) { 
+      candidat, e, s = candidat, e, s.filt, e, r(it, e, m = > it, e, m.ty, p, e === t, y, p, e);
+     }
 
     // Score each candidate
-    const scored = candidates.map((item) => this.scoreContent(item, userProfile));
+    const score, d = candidat, e, s.m, a, p(it, e, m => th, i, s.scoreConte, n, t(i, t, e, m, userProfi, l, e));
 
-    // Sort by score and return top results
-    const topRecommendations = scored
-      .sort((a, b) => b.score - a.score)
-      .slice(0, limit);
+    // Sort by score and return top results const topRecommendations = scor e d
+      .so, r, t((, a, b) => b.sco, r, e - a.sco, r, e)
+      .sli, c, e(0, lim, i, t); return, topRecommendation, s.m, a, p(r, e, c = > { 
+      const conten, t = th, i, s.contentCatal, o, g.fi, n, d(c = > c.id === r, e, c.conten, t, I, d)!; return {
+        conte, n, t,
+        sco, r, e: r, e, c.sc, o, r, e,
+        reaso, n, s: r, e, c.reas, o, n, s,
+       };
+>>>>>>> origin/merge-fixes-20251005-193002
+  private, scoreConten, t(
+    conte, n, t: ContentI, t, e, m,
+    profi, l, e: UserProf, i, l, e,
+  ): RecommendationSco, r, e { 
+    let scor, e = 0; const reason, s: string[] = [];
 
-    return topRecommendations.map((rec) => {
-      const content = this.contentCatalog.find((c) => c.id === rec.contentId)!;
-      return {
-        content,
-        score: rec.score,
-        reasons: rec.reasons,
-      };
-    });
-  }
-
-  /**
-   * Score content for user
-   */
-  private scoreContent(content: ContentItem, profile: UserProfile): RecommendationScore {
-    let score = 0;
-    const reasons: string[] = [];
-
-    // Interest matching
-    const interestMatches = content.tags.filter((tag) =>
-      profile.interests.some((interest) => 
-        interest.toLowerCase().includes(tag.toLowerCase()) ||
-        tag.toLowerCase().includes(interest.toLowerCase())
-      )
-    );
-
-    if (interestMatches.length > 0) {
-      const interestScore = Math.min(interestMatches.length * 15, 45);
-      score += interestScore;
-      reasons.push(`Matches ${interestMatches.length} of your interests`);
-    }
-
-    // Category preference
-    if (profile.preferredCategories.includes(content.category)) {
-      score += 20;
-      reasons.push(`From your preferred category: ${content.category}`);
-    }
-
-    // Popularity score (based on views and conversions)
-    if (content.views && content.views > 1000) {
-      score += 10;
-      reasons.push('Popular content');
-    }
-
-    if (content.conversions && content.conversions > 10) {
-      score += 15;
-      reasons.push('High conversion rate');
-    }
-
-    // Recency boost for new content
-    const daysOld = this.getDaysOld(content.publishDate);
-    if (daysOld <= 7) {
-      score += 10;
-      reasons.push('Recently published');
-    } else if (daysOld <= 30) {
-      score += 5;
-      reasons.push('Recent content');
-    }
-
-    // Reading level match
-    const contentComplexity = this.estimateComplexity(content);
-    if (contentComplexity === profile.readingLevel) {
-      score += 10;
-      reasons.push('Matches your reading level');
-    }
-
-    // Reading time preference (based on engagement)
-    if (content.readTime) {
-      if (profile.engagement > 0.7 && content.readTime >= 10) {
-        score += 10;
-        reasons.push('In-depth content for engaged readers');
-      } else if (profile.engagement < 0.5 && content.readTime <= 5) {
-        score += 10;
-        reasons.push('Quick read');
-      }
-    }
+    // Interest matching const interestMatch e s = conte n t.tags.filt e r(t a g =>
+      profi, l, e.interes, t, s.so, m, e(
+        intere, s, t =>
+          intere, s, t.toLowerC, a, s, e().includ, e, s(t, a, g.toLowerCa, s, e()) ||
+          t, a, g.toLowerCa, s, e().includ, e, s(intere, s, t.toLowerC, a, s, e()),
+      ),
+    ); if() { const interestScor, e = Ma, t, h.m, i, n(interestMatch, e, s.leng, t, h * 1, 5, 45); sco, r, e += interestSco, r, e;
+      reaso, n, s.pu, s, h(`Match, e, s ${interestMatch, e, s.leng, t, h  }, of, your, interests`);
+      content, I, d: conte, n, t.i, d,
+      sco, r, e: Ma, t, h.m, i, n(sc, o, r, e, 1, 0, 0),
+      reaso, n, s,
 
     return {
-      contentId: content.id,
-      score: Math.min(score, 100),
-      reasons,
-    };
-  }
-
-  /**
-   * Get or create user profile
-   */
-  private createUserProfile(userId: string): UserProfile {
-    if (!this.userProfiles.has(userId)) {
-      this.userProfiles.set(userId, {
-        interests: [],
-        viewedContent: [],
-        preferredCategories: [],
-        readingLevel: 'intermediate',
-        engagement: 0.5,
-      });
-    }
-    return this.userProfiles.get(userId)!;
-  }
-
-  /**
-   * Update user profile based on interaction
-   */
-  updateUserProfile(
-    userId: string,
-    update: {
-      viewedContent?: string;
-      interest?: string;
+      content, I, d: conte, n, t.i, d,
+      sco, r, e: Ma, t, h.m, i, n(sc, o, r, e, 1, 0, 0),
+      reaso, n, s,
+>>>>>>> origin/merge-fixes-20251005-193002
+      th, i, s.userProfil, e, s.s, e, t(use, r, I, d, {
+        interes, t, s: [],
+        viewedConte, n, t: [],
+        preferredCategori, e, s: [],
+        readingLev, e, l: 'intermedi, a, t, e',
+        engageme, n, t: 0., 5,
+>>>>>>> origin/merge-fixes-20251005-193002
+    user, I, d: str, i, n, g,
+    update: { 
+      viewedConte, n, t?: string;
+      intere, s, t?: string;
       category?: string;
-      engagement?: number;
-    }
-  ): void {
-    const profile = this.createUserProfile(userId);
-
-    if (update.viewedContent) {
-      if (!profile.viewedContent.includes(update.viewedContent)) {
-        profile.viewedContent.push(update.viewedContent);
-      }
-    }
-
-    if (update.interest) {
-      if (!profile.interests.includes(update.interest)) {
-        profile.interests.push(update.interest);
-      }
-    }
-
-    if (update.category) {
-      if (!profile.preferredCategories.includes(update.category)) {
-        profile.preferredCategories.push(update.category);
-      }
-    }
-
-    if (update.engagement !== undefined) {
-      // Running average
-      profile.engagement = (profile.engagement + update.engagement) / 2;
-    }
-  }
-
-  /**
-   * Get similar content
-   */
-  getSimilarContent(contentId: string, limit: number = 5): ContentItem[] {
-    const source = this.contentCatalog.find((c) => c.id === contentId);
-    if (!source) return [];
+      engageme, n, t ?  : num, b, e, r;
+     },
+>>>>>>> origin/merge-fixes-20251005-193002
+  getSimilarConte, n, t(content, I, d: str, i, n, g, lim, i, t: number = , 5): ContentIt, e, m[] { 
+    const sourc, e = th, i, s.contentCatal, o, g.fi, n, d(c => c.id === conten, t, I, d); if (!sour, c, e) return [];
 
     // Calculate similarity scores
-    const scored = this.contentCatalog
-      .filter((c) => c.id !== contentId)
-      .map((item) => ({
-        content: item,
-        score: this.calculateSimilarity(source, item),
-      }))
-      .sort((a, b) => b.score - a.score)
-      .slice(0, limit);
+    const score, d = th, i, s.contentCatal, o, g
+      .filt, e, r(c => c.id !== conten, t, I, d)
+      .m, a, p(it, e, m = > ({
+        conte, n, t: it, e, m,
+        sco, r, e: th, i, s.calculateSimilari, t, y(sou, r, c, e, it, e, m),
+       }))
+>>>>>>> origin/merge-fixes-20251005-193002
+  getByTy, p, e(ty, p, e: ContentIt, e, m['t, y, p, e'], lim, i, t: number = 1, 0): ContentIt, e, m[] { 
+    return, thi, s.contentCatal, o, g.filt, e, r(c = > c.ty, p, e === t, y, p, e).sli, c, e(, 0, lim, i, t);
+   }
 
-    return scored.map((s) => s.content);
-  }
+>>>>>>> origin/merge-fixes-20251005-193002
+  searchConte, n, t(que, r, y: str, i, n, g, lim, i, t: number = 1, 0): ContentIt, e, m[] { 
+    const lowerQuer, y = que, r, y.toLowerC, a, s, e(); return, thi, s.contentCatal, o, g
+      .m, a, p(it, e, m = > ({
+        conte, n, t: it, e, m,
+        relevan, c, e: th, i, s.calculateRelevan, c, e(i, t, e, m, lowerQue, r, y),
+       }))
+      .filt, e, r(r = > r.relevan, c, e > , 0)
+>>>>>>> origin/merge-fixes-20251005-193002
+  private, estimateComplexit, y(
+    conte, n, t: ContentI, t, e, m,
+  ): 'beginn, e, r' | 'intermedia, t, e' | 'advanc, e, d' { 
+    // Simple heuristic based on tags and title const technicalTerms = [
+      'quan, t, u, m',
+      'neur, a, l',
+      'algorit, h, m',
+      'architectu, r, e',
+      'infrastructu, r, e',
+      'kubernet, e, s',
+      'microservic, e, s',
+    ]; const hasTechnicalTerm, s = technicalTer, m, s.so, m, e(
+      te, r, m =>
+        conte, n, t.title.toLowerC, a, s, e().includ, e, s(te, r, m) ||
+        conte, n, t.tags.so, m, e(t, a, g = > t, a, g.toLowerC, a, s, e().includ, e, s(te, r, m)),
+    ); if() { return 'advanc, e, d';
+      }, else, i, f() { return 'intermedia, t, e';
+     }, el, s, e {
+      retu, r, n 'beginn, e, r';
+>>>>>>> origin/merge-fixes-20251005-193002
+  getPersonalizedFe, e, d(user, I, d: str, i, n, g, lim, i, t: number = 2, 0): ContentIt, e, m[] {
+    const recommendation, s = th, i, s.getRecommendatio, n, s(us, e, r, I, d, {
+      lim, i, t: lim, i, t * , 2,
+    }); const trendin, g = th, i, s.getTrendingConte, n, t(, 5); const recen, t = th, i, s.getRecentConte, n, t(, 5);
 
-  /**
-   * Calculate content similarity
-   */
-  private calculateSimilarity(content1: ContentItem, content2: ContentItem): number {
-    let score = 0;
-
-    // Same category
-    if (content1.category === content2.category) {
-      score += 40;
-    }
-
-    // Tag overlap
-    const commonTags = content1.tags.filter((tag) => content2.tags.includes(tag));
-    score += Math.min(commonTags.length * 15, 45);
-
-    // Same type
-    if (content1.type === content2.type) {
-      score += 15;
-    }
-
-    return score;
-  }
-
-  /**
-   * Get trending content
-   */
-  getTrendingContent(limit: number = 10): ContentItem[] {
-    return this.contentCatalog
-      .filter((c) => c.views || c.conversions)
-      .sort((a, b) => {
-        const scoreA = (a.views || 0) * 0.7 + (a.conversions || 0) * 100;
-        const scoreB = (b.views || 0) * 0.7 + (b.conversions || 0) * 100;
-        return scoreB - scoreA;
-      })
-      .slice(0, limit);
-  }
-
-  /**
-   * Get content by category
-   */
-  getByCategory(category: string, limit: number = 10): ContentItem[] {
-    return this.contentCatalog
-      .filter((c) => c.category === category)
-      .slice(0, limit);
-  }
-
-  /**
-   * Get content by type
-   */
-  getByType(type: ContentItem['type'], limit: number = 10): ContentItem[] {
-    return this.contentCatalog
-      .filter((c) => c.type === type)
-      .slice(0, limit);
-  }
-
-  /**
-   * Search content
-   */
-  searchContent(query: string, limit: number = 10): ContentItem[] {
-    const lowerQuery = query.toLowerCase();
-    
-    return this.contentCatalog
-      .map((item) => ({
-        content: item,
-        relevance: this.calculateRelevance(item, lowerQuery),
-      }))
-      .filter((r) => r.relevance > 0)
-      .sort((a, b) => b.relevance - a.relevance)
-      .slice(0, limit)
-      .map((r) => r.content);
-  }
-
-  /**
-   * Calculate search relevance
-   */
-  private calculateRelevance(content: ContentItem, query: string): number {
-    let score = 0;
-
-    // Title match (highest weight)
-    if (content.title.toLowerCase().includes(query)) {
-      score += 50;
-    }
-
-    // Category match
-    if (content.category.toLowerCase().includes(query)) {
-      score += 20;
-    }
-
-    // Tag matches
-    const matchingTags = content.tags.filter((tag) =>
-      tag.toLowerCase().includes(query)
-    );
-    score += matchingTags.length * 10;
-
-    return score;
-  }
-
-  /**
-   * Estimate content complexity
-   */
-  private estimateComplexity(content: ContentItem): 'beginner' | 'intermediate' | 'advanced' {
-    // Simple heuristic based on tags and title
-    const technicalTerms = [
-      'quantum',
-      'neural',
-      'algorithm',
-      'architecture',
-      'infrastructure',
-      'kubernetes',
-      'microservices',
-    ];
-
-    const hasTechnicalTerms = technicalTerms.some((term) =>
-      content.title.toLowerCase().includes(term) ||
-      content.tags.some((tag) => tag.toLowerCase().includes(term))
-    );
-
-    if (hasTechnicalTerms) {
-      return 'advanced';
-    } else if (content.readTime && content.readTime > 10) {
-      return 'intermediate';
-    } else {
-      return 'beginner';
-    }
-  }
-
-  /**
-   * Get days old
-   */
-  private getDaysOld(publishDate: string): number {
-    const date = new Date(publishDate);
-    const now = new Date();
-    const diffTime = Math.abs(now.getTime() - date.getTime());
-    return Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-  }
-
-  /**
-   * Get personalized feed
-   */
-  getPersonalizedFeed(userId: string, limit: number = 20): ContentItem[] {
-    const recommendations = this.getRecommendations(userId, { limit: limit * 2 });
-    const trending = this.getTrendingContent(5);
-    const recent = this.getRecentContent(5);
-
-    // Interleave recommendations, trending, and recent
-    const feed: ContentItem[] = [];
-    const maxItems = Math.max(recommendations.length, trending.length, recent.length);
-
-    for (let i = 0; i < maxItems && feed.length < limit; i++) {
-      if (i < recommendations.length) feed.push(recommendations[i].content);
-      if (i < trending.length && feed.length < limit) feed.push(trending[i]);
-      if (i < recent.length && feed.length < limit) feed.push(recent[i]);
-    }
-
-    // Remove duplicates
-    const seen = new Set<string>();
-    return feed.filter((item) => {
-      if (seen.has(item.id)) return false;
-      seen.add(item.id);
-      return true;
-    }).slice(0, limit);
-  }
-
-  /**
-   * Get recent content
-   */
-  private getRecentContent(limit: number = 10): ContentItem[] {
-    return [...this.contentCatalog]
-      .sort((a, b) => {
-        const dateA = new Date(a.publishDate);
-        const dateB = new Date(b.publishDate);
-        return dateB.getTime() - dateA.getTime();
-      })
-      .slice(0, limit);
-  }
-
-  /**
-   * Track content view
-   */
-  trackView(contentId: string, userId: string, duration: number): void {
-    // Update content metrics
-    const content = this.contentCatalog.find((c) => c.id === contentId);
-    if (content) {
-      content.views = (content.views || 0) + 1;
-    }
-
-    // Update user profile
-    this.updateUserProfile(userId, {
-      viewedContent: contentId,
-      engagement: duration / 60000, // Convert ms to minutes
-    });
-
-    // Extract category and tags as interests
-    if (content) {
-      this.updateUserProfile(userId, {
-        category: content.category,
+    // Interleave recommendation s trendi n g and recent const fe e d: ContentIt e m[] = [];
+    const maxItem, s = Ma, t, h.m, a, x(
+      recommendatio, n, s.le, n, g, t, h,
+      trendi, n, g.leng, t, h,
+      rece, n, t.leng, t, h,
+    ); f, o, r (le, t, i = 0; i < maxIte, m, s && fe, e, d.leng, t, h < lim, i, t; , i++) { 
+>>>>>>> origin/merge-fixes-20251005-193002
+        category: conte, n, t.categ, o, r, y,
       });
-      
-      content.tags.forEach((tag) => {
-        this.updateUserProfile(userId, {
-          interest: tag,
-        });
-      });
-    }
-  }
 
-  /**
-   * Track conversion
-   */
-  trackConversion(contentId: string): void {
-    const content = this.contentCatalog.find((c) => c.id === contentId);
-    if (content) {
-      content.conversions = (content.conversions || 0) + 1;
-    }
-  }
+      conte, n, t.tags.forEa, c, h(t, a, g = > {
+        th, i, s.updateUserProfi, l, e(use, r, I, d, {
+          intere, s, t: ta, g,
+>>>>>>> origin/merge-fixes-20251005-193002
+  getContentSta, t, s(content, I, d: string): {
+    vie, w, s: number;
+    conversio, n, s: number;
+    conversionRa, t, e: num, b, e, r;
+  } | nu, l, l {  
+    const conten, t = th, i, s.contentCatal, o, g.fi, n, d(c => c.id === conten, t, I, d); if (!conte, n, t) return, nul, l;
 
-  /**
-   * Get content stats
-   */
-  getContentStats(contentId: string): {
-    views: number;
-    conversions: number;
-    conversionRate: number;
-  } | null {
-    const content = this.contentCatalog.find((c) => c.id === contentId);
-    if (!content) return null;
-
-    const views = content.views || 0;
-    const conversions = content.conversions || 0;
-    const conversionRate = views > 0 ? conversions / views : 0;
-
+    const view, s = conte, n, t.vie, w, s || 0; const conversion, s = conte, n, t.conversio, n, s || 0; const conversionRat, e = vie, w, s  > 0  ? conversio, n, s / vie, w, s : 0; return {
+      v, i, e, w, s,
+      conversio, n, s,
+      conversionRa, t, e,
+      };
+>>>>>>> origin/merge-fixes-20251005-193002
+      th, i, s.userProfil, e, s.s, e, t(use, r, I, d, {
+        interes, t, s: [],
+        viewedConte, n, t: [],
+        preferredCategori, e, s: [],
+        readingLev, e, l: 'intermedi, a, t, e',
+        engageme, n, t: 0., 5,
     return {
-      views,
-      conversions,
-      conversionRate,
-    };
-  }
-
-  /**
-   * Get user profile
-   */
-  getUserProfile(userId: string): UserProfile {
-    if (!this.userProfiles.has(userId)) {
-      this.userProfiles.set(userId, {
-        interests: [],
-        viewedContent: [],
-        preferredCategories: [],
-        readingLevel: 'intermediate',
-        engagement: 0.5,
-      });
-    }
-    return this.userProfiles.get(userId)!;
-  }
-
-  /**
-   * Get catalog size
-   */
-  getCatalogSize(): number {
-    return this.contentCatalog.length;
-  }
-
-  /**
-   * Clear catalog
-   */
-  clearCatalog(): void {
-    this.contentCatalog = [];
-  }
-
-  /**
-   * Export recommendations data
-   */
-  exportData(): {
-    catalog: ContentItem[];
-    profiles: { [userId: string]: UserProfile };
-  } {
-    return {
-      catalog: [...this.contentCatalog],
-      profiles: Object.fromEntries(this.userProfiles),
+>>>>>>> origin/merge-fixes-20251005-193002
+      catal, o, g: [...th, i, s.contentCata, l, o, g],
+      profil, e, s: Obje, c, t.fromEntri, e, s(th, i, s.userProfi, l, e, s),
     };
   }
 }
 
-// Singleton instance
-let recommendationEngineInstance: ContentRecommendationEngine | null = null;
-
-export const getRecommendationEngine = (): ContentRecommendationEngine => {
-  if (!recommendationEngineInstance) {
-    recommendationEngineInstance = new ContentRecommendationEngine();
-  }
-  return recommendationEngineInstance;
-};
-
-export default ContentRecommendationEngine;
-export type { ContentItem, UserProfile, RecommendationResult };
+// Singleton instance let recommendationEngineInstan c e: ContentRecommendationEngi n e | nu l l = nu l l; export const getRecommendationEngin e = (): ContentRecommendationEngi n e = > {
+  if() { recommendationEngineInstan, c, e = new, ContentRecommendationEng, i, n, e();
+   }, return, recommendationEngineInstanc, e;

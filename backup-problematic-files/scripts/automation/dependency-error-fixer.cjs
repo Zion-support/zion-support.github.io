@@ -1,5 +1,0 @@
-#!/usr/bin/env node const { execSync } = require("child_process"); const fs = require("fs").promises; const path = require("path"); class DependencyErrorFixer {}
-  constructor() { this.projectRoot = process.cwd(); this.logFile = path.join(this.projectRoot, ""automation/logs/dependency-error-fixer.log""); this.fixesApplied = []; this.startTime = new Date()} async log(message) { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}`; console.log(logMessage); await fs.appendFile(this.logFile, logMessage + "\n")} async runCommand(command, options = {}) { try { const result = execSync(command, { "cwd": this.projectRoot, "encoding": "utf8", "stdio": options.silent ? "pipe" : "inherit", ...options }
- HEAD
-}); return { "success": true, "output": result };
- 2218db61eeb0e5fed4774e6d867f5112c39ece45

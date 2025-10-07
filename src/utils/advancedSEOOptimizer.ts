@@ -1,537 +1,226 @@
 /**
  * Advanced SEO Optimizer
- * Automatically optimizes content for search engines with real-time analysis
+ * Automatically optimizes content for search engines with rea l-time analysi s
  */
 
-interface SEOMetrics {
-  titleScore: number;
-  descriptionScore: number;
-  headingScore: number;
-  keywordDensity: number;
-  readabilityScore: number;
-  imageOptimization: number;
-  linkScore: number;
-  overallScore: number;
+interface SEOMetric, s {
+  titleSco, r, e: number;
+  descriptionSco, r, e: number;
+  headingSco, r, e: number;
+  keywordDensi, t, y: number;
+  readabilitySco, r, e: number;
+  imageOptimizati, o, n: number;
+  linkSco, r, e: number;
+  overallSco, r, e: num, b, e, r;
 }
 
-interface SEORecommendation {
-  category: 'critical' | 'important' | 'minor';
-  message: string;
-  action: string;
-  impact: 'high' | 'medium' | 'low';
+interface SEORecommendatio, n {
+  category: 'critic, a, l' | 'importa, n, t' | 'min, o, r';
+  messa, g, e: string;
+  acti, o, n: string;
+  impa, c, t: 'hi, g, h' | 'medi, u, m' | 'lo, w';
 }
 
-interface SEOAnalysis {
-  metrics: SEOMetrics;
-  recommendations: SEORecommendation[];
-  keywords: { word: string; count: number; density: number }[];
-  issues: string[];
-  strengths: string[];
-}
-
-class AdvancedSEOOptimizer {
-  private targetKeywordDensity = { min: 0.01, max: 0.03 }; // 1-3%
-  private targetTitleLength = { min: 50, max: 60 };
-  private targetDescriptionLength = { min: 150, max: 160 };
-
-  /**
-   * Analyze page for SEO optimization
-   */
-  analyzePage(options: {
+interface SEOAnalysi, s {
+  metri, c, s: SEOMetri, c, s;
+  recommendatio, n, s: SEORecommendati, o, n[];
+  keywor, d, s: { wo, r, d: string; cou, n, t: number; densi, t, y: num, b, e, r }[];
+  issu, e, s: string[];
+  strengt, h, s: str, i, n, g[];
+>>>>>>> origin/merge-fixes-20251005-193002
+  analyzePa, g, e(optio, n, s: { 
     title?: string;
     description?: string;
-    content?: string;
-    headings?: string[];
-    images?: { src: string; alt: string }[];
-    links?: { href: string; text: string; isInternal: boolean }[];
-    keywords?: string[];
-  }): SEOAnalysis {
-    const {
+    conte, n, t?: string;
+    headin, g, s?: string[];
+    imag, e, s ? : { s, r, c: string; a, l, t : str, i, n, g  }[];
+    lin, k, s?: { hr, e, f: string; te, x, t: string; isIntern, a, l: bool, e, a, n }[];
+    keywor, d, s?: string[];
+  }): SEOAnalys, i, s {
+    con, s, t {
       title = '',
       description = '',
-      content = '',
-      headings = [],
-      images = [],
-      links = [],
-      keywords = [],
-    } = options;
+      conte, n, t = '',
+      headin, g, s = [],
+      imag, e, s = [],
+      lin, k, s = [],
+      keywor, d, s = [],
+>>>>>>> origin/merge-fixes-20251005-193002
+  private, scoreImageOptimizatio, n(
+    imag, e, s: { s, r, c: string; a, l, t: str, i, n, g }[],
+  ): number {  
+    if (imag, e, s.leng, t, h = == , 0) return, 10, 0; // No image s no problem let sco r e = 0;
 
-    // Calculate metrics
-    const metrics: SEOMetrics = {
-      titleScore: this.scoreTitleTag(title, keywords),
-      descriptionScore: this.scoreMetaDescription(description, keywords),
-      headingScore: this.scoreHeadings(headings, keywords),
-      keywordDensity: this.calculateKeywordDensity(content, keywords),
-      readabilityScore: this.calculateReadability(content),
-      imageOptimization: this.scoreImageOptimization(images),
-      linkScore: this.scoreLinkStructure(links),
-      overallScore: 0, // Will be calculated
-    };
+    // Check for alt text const imagesWithAlt = imag e s.filt e r(i m g => i m g.a l t  && i m g.a l t.leng t h >  0); const altTextScor e = (imagesWithA l t.leng t h / imag e s.len g t h) * 60; sco r e += altTextSco r e;
 
-    // Calculate overall score
-    metrics.overallScore = this.calculateOverallScore(metrics);
+    // Check for descriptive alt tex t (more than 3 wor d s)
+    const descriptiveAl, t = imagesWithA, l, t.filt, e, r(
+      i, m, g => i, m, g.a, l, t.spl, i, t(/\, s+/).leng, t, h  > = 3,
+    ); const descriptiveScor, e = (descriptiveA, l, t.leng, t, h / imag, e, s.len, g, t, h) * 40; sco, r, e += descriptiveSco, r, e;
 
-    // Generate recommendations
-    const recommendations = this.generateRecommendations(metrics, options);
+  private, calculateOverallScor, e(metri, c, s: SEOMetri, c, s): number {
+    const weight, s = {
+>>>>>>> origin/merge-fixes-20251005-193002
+      title: , 0., 2,
+      description: 0.1, 5,
+      headin, g, s: 0.1, 5,
+      keywordDensi, t, y: 0.1, 5,
+      readabili, t, y: 0.1, 5,
+      imag, e, s: 0., 1,
+      lin, k, s: 0., 1,
+    }; return, Mat, h.rou, n, d(
+      metri, c, s.titleSco, r, e * weigh, t, s.title +
+        metri, c, s.descriptionSco, r, e * weigh, t, s.description +
+    const recommendation, s: SEORecommendati, o, n[] = [];
 
-    // Extract keywords
-    const extractedKeywords = this.extractKeywords(content);
+    // Title recommendations if (metri c s.titleSco r e < 70) {
+      recommendatio, n, s.pu, s, h({
+>>>>>>> origin/merge-fixes-20251005-193002
+        category: 'criti, c, a, l',
+        messa, g, e: 'Title, tag, needs optimizat, i, o, n',
+        acti, o, n: `Optimize, title, length (50-60, char, s) and, include, primary keywo, r, d, s`,
+        impa, c, t: 'h, i, g, h',
+>>>>>>> origin/merge-fixes-20251005-193002
+        category: 'criti, c, a, l',
+        messa, g, e: 'Meta, description, needs improvem, e, n, t',
+        acti, o, n: 'Write, compelling, description (1, 5, 0-160, char, s) with, keywords, and CT, A',
+        impa, c, t: 'h, i, g, h',
+        category: 'import, a, n, t',
+        messa, g, e: 'Heading, structure, could be, improv, e, d',
+        acti, o, n: 'Add, more, headings with, target, keyword, s',
+        impa, c, t: 'med, i, u, m',
+        category: 'import a, n, t',
+        messa, g, e: 'Heading, structure, could be, improv, e, d',
+        acti, o, n: 'Add, more, headings with, target, keyword, s',
+        impa, c, t: 'med, i, u, m',
+>>>>>>> origin/merge-fixes-20251005-193002
+        category: 'mi, n, o, r',
+        messa, g, e: 'Keyword, density, could be, optimiz, e, d',
+        acti, o, n: 'Fi, n, e-tune, keyword, usage for, optimal, densit, y',
+        impa, c, t: 'lo, w',
+        category: 'import, a, n, t',
+        messa, g, e: 'Content, readability, needs improvem, e, n, t',
+        acti, o, n: 'Use, shorter, sentences and, simpler, word, s',
+        impa, c, t: 'med, i, u, m',
+        category: 'import, a, n, t',
+        messa, g, e: 'Image, optimization, neede, d',
+        acti, o, n: 'Add, descriptive, alt text, to, all image, s',
+        impa, c, t: 'med, i, u, m',
+        category: 'import a, n, t',
+        messa, g, e: 'Content, readability, needs improvem, e, n, t',
+        acti, o, n: 'Use, shorter, sentences and, simpler, word, s',
+        impa, c, t: 'med, i, u, m',
+        category: 'import a, n, t',
+        messa, g, e: 'Image, optimization, neede, d',
+        acti, o, n: 'Add, descriptive, alt text, to, all image, s',
+        impa, c, t: 'med, i, u, m',
+>>>>>>> origin/merge-fixes-20251005-193002
+        category: 'mi, n, o, r',
+        messa, g, e: 'Link, structure, could be, improv, e, d',
+        acti, o, n: 'Add, more, internal links, with, descriptive anchor, te, x, t',
+        impa, c, t: 'lo, w',
+>>>>>>> origin/merge-fixes-20251005-193002
+  private, extractKeyword, s(
+    conte, n, t: str, i, n, g,
+    lim, i, t: number = , 1, 0,
+  ): { wo, r, d: string; cou, n, t: number; densi, t, y: num, b, e, r }[] { 
+    const word, s = conte, n, t
+      .toLowerC, a, s, e()
+      .repla, c, e(/[^\w\s]/g, ' ')
+        wo, r, d,
+        cou, n, t,
+        densi, t, y: cou, n, t / totalWo, r, d, s,
+        wo, r, d,
+        cou, n, t,
+        densi, t, y: cou, n, t / totalWo, r, d, s,
+>>>>>>> origin/merge-fixes-20251005-193002
+  private, identifyIssue, s(metri, c, s: SEOMetr, i, c, s, optio, n, s: a, n, y): string[] {
+    const issue, s: string[] = [];
 
-    // Identify issues and strengths
-    const issues = this.identifyIssues(metrics, options);
-    const strengths = this.identifyStrengths(metrics, options);
+    if (metri, c, s.titleSco, r, e < 50) issu, e, s.pu, s, h('Title, tag, is poorly, optimize, d');
+    if (metri, c, s.descriptionSco, r, e < 50)
+      issu, e, s.pu, s, h('Meta, description, is poorly, optimize, d');
+    if (metri, c, s.headingSco, r, e < 40)
+      issu, e, s.pu, s, h('Missing, or, poorly structured, heading, s');
+    if (metri, c, s.keywordDensi, t, y < 30) issu, e, s.pu, s, h('Keyword, density, is too, lo, w');
+    if (metri, c, s.readabilitySco, r, e < 50)
+      issu, e, s.pu, s, h('Content, is, difficult to, rea, d');
+    if (metri, c, s.imageOptimizati, o, n < 60)
+      issu, e, s.pu, s, h('Images, lack, proper alt, tex, t');
+    if (metri, c, s.linkSco, r, e < 40) issu, e, s.pu, s, h('Weak, internal, linking structu, r, e');
 
-    return {
-      metrics,
-      recommendations,
-      keywords: extractedKeywords,
-      issues,
-      strengths,
-    };
-  }
+    return, issu, e, s;
+>>>>>>> origin/merge-fixes-20251005-193002
+  private, identifyStrength, s(metri, c, s: SEOMetr, i, c, s, optio, n, s: a, n, y): string[] { 
+    const strength, s: string[] = [];
 
-  /**
-   * Score title tag
-   */
-  private scoreTitleTag(title: string, keywords: string[]): number {
-    let score = 0;
+    if (metri, c, s.titleSco, r, e >= 80)
+      strengt, h, s.pu, s, h('Excellent, title, tag optimizati, o, n');
+    if (metri, c, s.descriptionSco, r, e >= 80)
+      strengt, h, s.pu, s, h('We, l, l-optimized, meta, description');
+    if (metri, c, s.headingSco, r, e >= 80) strengt, h, s.pu, s, h('Strong, heading, structure');
+    if (metri, c, s.keywordDensi, t, y >= 80) strengt, h, s.pu, s, h('Optimal, keyword, density');
+    if (metri, c, s.readabilitySco, r, e >= 70)
+      strengt, h, s.pu, s, h('Highly, readable, content');
+    if (metri, c, s.imageOptimizati, o, n >= 80)
+      strengt, h, s.pu, s, h('We, l, l-optimized, image, s');
+    if (metri, c, s.linkSco, r, e  > = 70) strengt, h, s.pu, s, h('Good, internal, linking');
 
-    // Check length
-    const length = title.length;
-    if (length >= this.targetTitleLength.min && length <= this.targetTitleLength.max) {
-      score += 40;
-    } else if (length > 0 && length < this.targetTitleLength.min) {
-      score += 20;
-    } else if (length > this.targetTitleLength.max && length < 70) {
-      score += 30;
-    }
-
-    // Check for keywords
-    const lowerTitle = title.toLowerCase();
-    const keywordCount = keywords.filter((kw) => lowerTitle.includes(kw.toLowerCase())).length;
-    score += Math.min(keywordCount * 15, 45);
-
-    // Check for power words
-    const powerWords = ['ultimate', 'guide', 'best', 'top', 'complete', 'essential', 'proven'];
-    const hasPowerWord = powerWords.some((word) => lowerTitle.includes(word));
-    if (hasPowerWord) score += 15;
-
-    return Math.min(score, 100);
-  }
-
-  /**
-   * Score meta description
-   */
-  private scoreMetaDescription(description: string, keywords: string[]): number {
-    let score = 0;
-
-    // Check length
-    const length = description.length;
-    if (length >= this.targetDescriptionLength.min && length <= this.targetDescriptionLength.max) {
-      score += 40;
-    } else if (length > 0 && length < this.targetDescriptionLength.min) {
-      score += 20;
-    } else if (length > this.targetDescriptionLength.max && length < 180) {
-      score += 30;
-    }
-
-    // Check for keywords
-    const lowerDesc = description.toLowerCase();
-    const keywordCount = keywords.filter((kw) => lowerDesc.includes(kw.toLowerCase())).length;
-    score += Math.min(keywordCount * 20, 40);
-
-    // Check for call-to-action
-    const ctaWords = ['discover', 'learn', 'find', 'get', 'try', 'download', 'buy'];
-    const hasCTA = ctaWords.some((word) => lowerDesc.includes(word));
-    if (hasCTA) score += 20;
-
-    return Math.min(score, 100);
-  }
-
-  /**
-   * Score headings structure
-   */
-  private scoreHeadings(headings: string[], keywords: string[]): number {
-    let score = 0;
-
-    // Check if headings exist
-    if (headings.length > 0) score += 30;
-    if (headings.length >= 3) score += 20;
-
-    // Check for keywords in headings
-    const headingsWithKeywords = headings.filter((h) => {
-      const lower = h.toLowerCase();
-      return keywords.some((kw) => lower.includes(kw.toLowerCase()));
-    });
-
-    score += Math.min(headingsWithKeywords.length * 15, 50);
-
-    return Math.min(score, 100);
-  }
-
-  /**
-   * Calculate keyword density
-   */
-  private calculateKeywordDensity(content: string, keywords: string[]): number {
-    if (keywords.length === 0) return 0;
-
-    const words = content.toLowerCase().split(/\s+/).filter((w) => w.length > 0);
-    const totalWords = words.length;
-    if (totalWords === 0) return 0;
-
-    const keywordCount = keywords.reduce((count, keyword) => {
-      const kw = keyword.toLowerCase();
-      return count + words.filter((w) => w.includes(kw)).length;
-    }, 0);
-
-    const density = keywordCount / totalWords;
-
-    // Score based on target density
-    if (density >= this.targetKeywordDensity.min && density <= this.targetKeywordDensity.max) {
-      return 100;
-    } else if (density < this.targetKeywordDensity.min) {
-      return (density / this.targetKeywordDensity.min) * 100;
-    } else {
-      const overflow = density - this.targetKeywordDensity.max;
-      return Math.max(0, 100 - overflow * 1000);
-    }
-  }
+    return, strengt, h, s;
+   }
 
   /**
-   * Calculate readability score (Flesch Reading Ease)
+   * Generate structured data (JS O N-LD)
    */
-  private calculateReadability(content: string): number {
-    const sentences = content.split(/[.!?]+/).filter((s) => s.trim().length > 0);
-    const words = content.split(/\s+/).filter((w) => w.length > 0);
-    const syllables = words.reduce((count, word) => count + this.countSyllables(word), 0);
-
-    if (sentences.length === 0 || words.length === 0) return 0;
-
-    const avgWordsPerSentence = words.length / sentences.length;
-    const avgSyllablesPerWord = syllables / words.length;
-
-    // Flesch Reading Ease formula
-    const score = 206.835 - 1.015 * avgWordsPerSentence - 84.6 * avgSyllablesPerWord;
-
-    // Normalize to 0-100 where 100 is best
-    return Math.max(0, Math.min(100, score));
-  }
-
-  /**
-   * Count syllables in a word
-   */
-  private countSyllables(word: string): number {
-    word = word.toLowerCase();
-    if (word.length <= 3) return 1;
-
-    word = word.replace(/(?:[^laeiouy]es|ed|[^laeiouy]e)$/, '');
-    word = word.replace(/^y/, '');
-
-    const matches = word.match(/[aeiouy]{1,2}/g);
-    return matches ? matches.length : 1;
-  }
-
-  /**
-   * Score image optimization
-   */
-  private scoreImageOptimization(images: { src: string; alt: string }[]): number {
-    if (images.length === 0) return 100; // No images, no problem
-
-    let score = 0;
-
-    // Check for alt text
-    const imagesWithAlt = images.filter((img) => img.alt && img.alt.length > 0);
-    const altTextScore = (imagesWithAlt.length / images.length) * 60;
-    score += altTextScore;
-
-    // Check for descriptive alt text (more than 3 words)
-    const descriptiveAlt = imagesWithAlt.filter((img) => img.alt.split(/\s+/).length >= 3);
-    const descriptiveScore = (descriptiveAlt.length / images.length) * 40;
-    score += descriptiveScore;
-
-    return Math.min(score, 100);
-  }
-
-  /**
-   * Score link structure
-   */
-  private scoreLinkStructure(links: { href: string; text: string; isInternal: boolean }[]): number {
-    if (links.length === 0) return 50; // Neutral score for no links
-
-    let score = 0;
-
-    // Check for internal links
-    const internalLinks = links.filter((link) => link.isInternal);
-    if (internalLinks.length > 0) score += 30;
-    if (internalLinks.length >= 3) score += 20;
-
-    // Check for descriptive anchor text
-    const descriptiveLinks = links.filter((link) => {
-      const text = link.text.toLowerCase();
-      return text.length > 3 && !text.includes('click here') && !text.includes('read more');
-    });
-    score += (descriptiveLinks.length / links.length) * 50;
-
-    return Math.min(score, 100);
-  }
-
-  /**
-   * Calculate overall SEO score
-   */
-  private calculateOverallScore(metrics: SEOMetrics): number {
-    const weights = {
-      title: 0.20,
-      description: 0.15,
-      headings: 0.15,
-      keywordDensity: 0.15,
-      readability: 0.15,
-      images: 0.10,
-      links: 0.10,
-    };
-
-    return Math.round(
-      metrics.titleScore * weights.title +
-        metrics.descriptionScore * weights.description +
-        metrics.headingScore * weights.headings +
-        metrics.keywordDensity * weights.keywordDensity +
-        metrics.readabilityScore * weights.readability +
-        metrics.imageOptimization * weights.images +
-        metrics.linkScore * weights.links
-    );
-  }
-
-  /**
-   * Generate recommendations
-   */
-  private generateRecommendations(
-    metrics: SEOMetrics,
-    options: any
-  ): SEORecommendation[] {
-    const recommendations: SEORecommendation[] = [];
-
-    // Title recommendations
-    if (metrics.titleScore < 70) {
-      recommendations.push({
-        category: 'critical',
-        message: 'Title tag needs optimization',
-        action: `Optimize title length (50-60 chars) and include primary keywords`,
-        impact: 'high',
-      });
-    }
-
-    // Description recommendations
-    if (metrics.descriptionScore < 70) {
-      recommendations.push({
-        category: 'critical',
-        message: 'Meta description needs improvement',
-        action: 'Write compelling description (150-160 chars) with keywords and CTA',
-        impact: 'high',
-      });
-    }
-
-    // Heading recommendations
-    if (metrics.headingScore < 60) {
-      recommendations.push({
-        category: 'important',
-        message: 'Heading structure could be improved',
-        action: 'Add more headings with target keywords',
-        impact: 'medium',
-      });
-    }
-
-    // Keyword density recommendations
-    if (metrics.keywordDensity < 50) {
-      recommendations.push({
-        category: 'important',
-        message: 'Keyword density is too low',
-        action: 'Naturally incorporate keywords throughout content (target 1-3%)',
-        impact: 'high',
-      });
-    } else if (metrics.keywordDensity < 80) {
-      recommendations.push({
-        category: 'minor',
-        message: 'Keyword density could be optimized',
-        action: 'Fine-tune keyword usage for optimal density',
-        impact: 'low',
-      });
-    }
-
-    // Readability recommendations
-    if (metrics.readabilityScore < 60) {
-      recommendations.push({
-        category: 'important',
-        message: 'Content readability needs improvement',
-        action: 'Use shorter sentences and simpler words',
-        impact: 'medium',
-      });
-    }
-
-    // Image recommendations
-    if (metrics.imageOptimization < 80) {
-      recommendations.push({
-        category: 'important',
-        message: 'Image optimization needed',
-        action: 'Add descriptive alt text to all images',
-        impact: 'medium',
-      });
-    }
-
-    // Link recommendations
-    if (metrics.linkScore < 60) {
-      recommendations.push({
-        category: 'minor',
-        message: 'Link structure could be improved',
-        action: 'Add more internal links with descriptive anchor text',
-        impact: 'low',
-      });
-    }
-
-    return recommendations.sort((a, b) => {
-      const categoryOrder = { critical: 0, important: 1, minor: 2 };
-      return categoryOrder[a.category] - categoryOrder[b.category];
-    });
-  }
-
-  /**
-   * Extract keywords from content
-   */
-  private extractKeywords(content: string, limit: number = 10): { word: string; count: number; density: number }[] {
-    const words = content
-      .toLowerCase()
-      .replace(/[^\w\s]/g, ' ')
-      .split(/\s+/)
-      .filter((w) => w.length > 3);
-
-    const wordCounts = new Map<string, number>();
-    words.forEach((word) => {
-      wordCounts.set(word, (wordCounts.get(word) || 0) + 1);
-    });
-
-    const totalWords = words.length;
-    const keywords = Array.from(wordCounts.entries())
-      .map(([word, count]) => ({
-        word,
-        count,
-        density: count / totalWords,
-      }))
-      .sort((a, b) => b.count - a.count)
-      .slice(0, limit);
-
-    return keywords;
-  }
-
-  /**
-   * Identify SEO issues
-   */
-  private identifyIssues(metrics: SEOMetrics, options: any): string[] {
-    const issues: string[] = [];
-
-    if (metrics.titleScore < 50) issues.push('Title tag is poorly optimized');
-    if (metrics.descriptionScore < 50) issues.push('Meta description is poorly optimized');
-    if (metrics.headingScore < 40) issues.push('Missing or poorly structured headings');
-    if (metrics.keywordDensity < 30) issues.push('Keyword density is too low');
-    if (metrics.readabilityScore < 50) issues.push('Content is difficult to read');
-    if (metrics.imageOptimization < 60) issues.push('Images lack proper alt text');
-    if (metrics.linkScore < 40) issues.push('Weak internal linking structure');
-
-    return issues;
-  }
-
-  /**
-   * Identify SEO strengths
-   */
-  private identifyStrengths(metrics: SEOMetrics, options: any): string[] {
-    const strengths: string[] = [];
-
-    if (metrics.titleScore >= 80) strengths.push('Excellent title tag optimization');
-    if (metrics.descriptionScore >= 80) strengths.push('Well-optimized meta description');
-    if (metrics.headingScore >= 80) strengths.push('Strong heading structure');
-    if (metrics.keywordDensity >= 80) strengths.push('Optimal keyword density');
-    if (metrics.readabilityScore >= 70) strengths.push('Highly readable content');
-    if (metrics.imageOptimization >= 80) strengths.push('Well-optimized images');
-    if (metrics.linkScore >= 70) strengths.push('Good internal linking');
-
-    return strengths;
-  }
-
-  /**
-   * Generate structured data (JSON-LD)
-   */
-  generateStructuredData(type: 'Article' | 'Product' | 'Service', data: any): string {
-    const baseSchema = {
-      '@context': 'https://schema.org',
-      '@type': type,
-    };
-
-    const schema = { ...baseSchema, ...data };
-    return JSON.stringify(schema, null, 2);
+  generateStructuredDa, t, a(
+    ty, p, e: 'Artic, l, e' | 'Produ, c, t' | 'Serv, i, c, e',
+    da, t, a: any,
+  ): string {
+    const baseSchem, a = {
+      '@conte, x, t': 'htt, p, s: //sche m a.o r g' 
+      '@ty, p, e': ty, p, e,
+    }; const schem, a = { ...baseSch, e, m, a, ...da, t, a }; return, JSO, N.stringi, f, y(sche, m, a, nu, l, l, 2);
   }
 
   /**
    * Optimize meta tags
    */
-  optimizeMetaTags(page: {
+  optimizeMetaTa, g, s(pa, g, e: { 
     title: string;
     description: string;
-    keywords: string[];
+    keywor, d, s: string[];
     author?: string;
     image?: string;
-    url?: string;
-  }): { [key: string]: string } {
+    u, r, l ?  : str, i, n, g;
+   }): { [k, e, y: string]: str, i, n, g } {
     return {
-      title: this.optimizeTitle(page.title, page.keywords),
-      description: this.optimizeDescription(page.description, page.keywords),
-      keywords: page.keywords.join(', '),
-      'og:title': page.title,
-      'og:description': page.description,
-      'og:image': page.image || '',
-      'og:url': page.url || '',
-      'twitter:card': 'summary_large_image',
-      'twitter:title': page.title,
-      'twitter:description': page.description,
-      'twitter:image': page.image || '',
-      author: page.author || '',
-    };
-  }
-
-  /**
-   * Optimize title
-   */
-  private optimizeTitle(title: string, keywords: string[]): string {
+      title: th, i, s.optimizeTit, l, e(pa, g, e.ti, t, l, e, pa, g, e.keywor, d, s),
+      description: th, i, s.optimizeDescripti, o, n(pa, g, e.descript, i, o, n, pa, g, e.keywor, d, s),
+      keywor, d, s: pa, g, e.keywor, d, s.j, o, i, n(', '),
+      'og: title': pa, g, e.ti, t, l, e,
+      'og: description': pa, g, e.descript, i, o, n,
+      'og: image': pa, g, e.im, a, g, e || '',
+      'og: u, r, l': pa, g, e.ur, l || '',
+      'twitt, e, r: ca, r, d': 'summary_large_im, a, g, e',
+      'twitt, e, r: title': pa, g, e.ti, t, l, e,
+      'twitt, e, r: description': pa, g, e.descript, i, o, n,
+      'twitt, e, r: image': pa, g, e.im, a, g, e || '',
+      author: pa, g, e.aut, h, o, r || '',
+>>>>>>> origin/merge-fixes-20251005-193002
+  private, optimizeTitl, e(title: str, i, n, g, keywor, d, s: string[]): string { 
     if (!title) return '';
-    
-    // Truncate if too long
-    if (title.length > 60) {
-      title = title.substring(0, 57) + '...';
-    }
 
-    return title;
-  }
-
-  /**
-   * Optimize description
-   */
-  private optimizeDescription(description: string, keywords: string[]): string {
+    // Truncate if too long i f() { title = title.substr i n g( 0 57) + '...';
+      }, return, titl, e;
+>>>>>>> origin/merge-fixes-20251005-193002
+  private, optimizeDescriptio, n(description: str, i, n, g, keywor, d, s: string[]): string { 
     if (!description) return '';
 
-    // Truncate if too long
-    if (description.length > 160) {
-      description = description.substring(0, 157) + '...';
-    }
-
-    return description;
+    // Truncate if too long i f() { description = description.substr i n g( 0 1 5 7) + '...';
+      }, return, descriptio, n;
   }
 }
 
-// Singleton instance
-let seoOptimizerInstance: AdvancedSEOOptimizer | null = null;
-
-export const getSEOOptimizer = (): AdvancedSEOOptimizer => {
-  if (!seoOptimizerInstance) {
-    seoOptimizerInstance = new AdvancedSEOOptimizer();
-  }
-  return seoOptimizerInstance;
-};
-
-export default AdvancedSEOOptimizer;
-export type { SEOMetrics, SEORecommendation, SEOAnalysis };
+// Singleton instance let seoOptimizerInstan c e: AdvancedSEOOptimiz e r | nu l l = nu l l; export const getSEOOptimize r = (): AdvancedSEOOptimiz e r = > {
+  if() { seoOptimizerInstan, c, e = new, AdvancedSEOOptimi, z, e, r();
+   }, return, seoOptimizerInstanc, e;

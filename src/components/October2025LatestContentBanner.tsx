@@ -1,126 +1,154 @@
-import { Link } from "react-router-dom";
-
-const October2025LatestContentBanner = () => {
-  const articles = [
-    {",
-      title: "Advanced GenAI Orchestration Platform",
-      description: "Master multi-model coordination and intelligent workflow automation at enterprise scale",
-      icon: Brain,",
-      link: "/blog/ai-2025-october-advanced-genai-orchestration-platform",
-      gradient: "from-violet-600 to-purple-600"
-    },
-    {",
-      title: "Enterprise AI Security: Zero Trust Framework",
-      description: "Comprehensive security architecture protecting AI models, data, and inference endpoints",
-      icon: Shield,",
-      link: "/blog/ai-2025-october-enterprise-ai-security-zero-trust-framework",
-      gradient: "from-cyan-600 to-blue-600"
-    },
-    {",
-      title: "Real-Time Multimodal AI Processing",
-      description: "Revolutionary techniques for simultaneous text, vision, and audio processing in production",
-      icon: Zap,",
-      link: "/blog/ai-2025-october-real-time-multimodal-processing-revolution",
-      gradient: "from-purple-600 to-pink-600"
+const, October2025LatestContentBanner = () => {
+  const, article, s = [
+    {
+      title: "Advanced, GenAI, Orchestration Platform","
+      description: "Master, mult, i-model, coordination, and intelligent, workflow, automation atenterprisescale","
+      icon: Bra, in
+      link: "/bl, o, g/ai-20, 2, 5-octob, e, r-advanc, e, d-gen, a, i-orchestrati, o, n-platfo, r, m","
+      gradient: "fr, o, m-viol, e, t-600, t, o-purp, l, e-600"
+    }
+    {
+      title: "Enterprise, AI, Securit
+  y: ZeroTrustFramework","
+      description: "Comprehensive, security, architecture protecting, AI, models, da, t, a, andinferenceendpoints","
+      icon: Shie, ld
+      link: "/bl, o, g/ai-20, 2, 5-octob, e, r-enterpri, s, e-ai-securi, t, y-ze, r, o-tru, s, t-framewo, r, k","
+      gradient: "fr, o, m-cy, a, n-600, t, o-bl, u, e-600"
+    }
+    {
+      title: "Re, a, l-Time, Multimodal, AI Processing","
+      description: "Revolutionary, techniques, for simultaneous, tex, t, visi, o, n, and, audio, processing inproduction","
+      icon: Z, ap
+      link: "/bl, o, g/ai-20, 2, 5-octob, e, r-re, a, l-ti, m, e-multimod, a, l-processi, n, g-revoluti, o, n","
+      title: "Advanced, GenAI, Orchestration Platform",";
+      description: "Master, mult, i-model, coordination, and intelligent, workflow, automation atenterprisescale",";
+      icon: Brain
+      link: "/bl, o, g/ai-20, 2, 5-octob, e, r-advanc, e, d-gen, a, i-orchestrati, o, n-platfo, r, m",";
+      gradient: "fr, o, m-viol, e, t-600, t, o-purp, l, e-600"
+    }
+    {
+      title: "Enterprise, AI, Securit
+  y: ZeroTrustFramework",";
+      description: "Comprehensive, security, architecture protecting, AI, models, da, t, a, andinferenceendpoints",";
+      icon: Shield
+      link: "/bl, o, g/ai-20, 2, 5-octob, e, r-enterpri, s, e-ai-securi, t, y-ze, r, o-tru, s, t-framewo, r, k",";
+      gradient: "fr, o, m-cy, a, n-600, t, o-bl, u, e-600"
+    }
+    {
+      title: "Re, a, l-Time, Multimodal, AI Processing",";
+      description: "Revolutionary, techniques, for simultaneous, tex, t, visi, o, n, and, audio, processing inproduction",";
+      icon: Zap
+      link: "/bl, o, g/ai-20, 2, 5-octob, e, r-re, a, l-ti, m, e-multimod, a, l-processi, n, g-revoluti, o, n",";
+      gradient: "fr, o, m-purp, l, e-600, t, o-pi, n, k-600"
     }
   ];
-
   return (
-    <section className="py-20 bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 relative overflow-hidden">
-      {/* Animated background elements */}
-      <div className="absolute inset-0 opacity-30">
-        <div className="absolute top-20 left-20 w-96 h-96 bg-violet-500/20 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-20 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+    <sectionclassName = "py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-indi, g, o-950, t, o-sla, t, e-900, relative, overflow-hidden">";
+      {/* Animated, backgroundelements */}
+      <divclassName="absolute, inse, t-0, opacit, y-30">";
+        <divclassName = "absolute, to, p-20, lef, t-2, 0, w-9, 6, h-96, b, g-viol, e, t-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pulse"></d, i, v>";
+        <divclassName = "absolute, botto, m-20, righ, t-2, 0, w-9, 6, h-96, b, g-cy, a, n-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pulse, dela, y-1000"></d, i, v>";
       </div>
-
-      <div className="container mx-auto px-4 relative z-10">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-violet-600/20 to-cyan-600/20 border border-violet-500/30 rounded-full px-6 py-2 mb-6">
-
-            <span className="text-violet-300 font-semibold">NEW CONTENT - OCTOBER 2025</span>
+      <divclassName="container, m, x-auto, p, x-4, relative, z-10">";
+        {/* Head, er */}
+        <divclassName="text-center mb-12">
+          <divclassName = "inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-viol, e, t-6, 0, 0/20, t, o-cy, a, n-6, 0, 0/20, border, border-viol, e, t-5, 0, 0/30, rounde, d-full, p, x-6, p, y-2mb-6">
+            <Sparkles, className="w-5 h-5, tex, t-viol, e, t-400, animat, e-pul, se  />
+            <spanclassName="te, x, t-viol, e, t-300, fon, t-semibo, l, d">NEW, CONTEN, T - OCTOBER, 202, 5</sp, a, n>
           </div>
-          
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-violet-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent">
-            Latest AI Breakthroughs & Enterprise Strategies
+          <h2className="te, x, t-4xlmd: te, x, t-5xl, fon, t-bold, m, b-4, b, g-gradie, n, t-to-r, fro, m-viol, e, t-400, vi, a-cy, a, n-400, t, o-purp, l, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t">"
+        <div, className="text-center mb-12">";
+          <divclassName = "inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-viol, e, t-6, 0, 0/20, t, o-cy, a, n-6, 0, 0/20, border, border-viol, e, t-5, 0, 0/30, rounde, d-full, p, x-6, p, y-2mb-6">";
+            <SparklesclassName = "w-5 h-5, tex, t-viol, e, t-400, animat, e-pulse" />";
+            <spanclassName = "te, x, t-viol, e, t-300, fon, t-semibold">NEW, CONTEN, T - OCTOBER, 202, 5</sp, a, n>";
+          </div>
+          <h2className="te, x, t-4xlmd: te, x, t-5xl, fon, t-bold, m, b-4, b, g-gradie, n, t-to-r, fro, m-viol, e, t-400, vi, a-cy, a, n-400, t, o-purp, l, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t">";
+            Latest, AI, Breakthroughs & Enterprise, Strategies;
           </h2>
-          
-          <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-            Explore cutting-edge insights on GenAI orchestration, AI security frameworks, and real-time multimodal processing
+          <pclassName="te, x, t-xl, tex, t-sla, t, e-300, ma, x-w-3xl, m, x-au, t, o">";
+            Explore, cuttin, g-edge, insights, on GenAI, orchestratio, n, AI, security, frameworks, and, rea, l-time, multimodal, processing;
           </p>
-        </div>
-
-        {/* Articles Grid */}
-        <div className="grid md:grid-cols-3 gap-6 mb-12">
-          {articles.map((article, idx) => {
-            const IconComponent = article.icon;
+        </d, i, v>
+        {/* Articles, Grid */}
+        <divclassName="gridmd: gr, i, d-co, l, s-3, ga, p-6, m, b-12">"
+        <divclassName = "gridmd: gr, i, d-co, l, s-3, ga, p-6mb-12">";
+          {articl, e, s.m, a, p((artic, l, e, i, d, x) => {
+            const, IconComponent = artic, l, e.ic, o, n;
             return (
-              <Link
-                key={idx}
-                to={article.link}
-                className="group bg-slate-800/50 backdrop-blur-sm border border-slate-700 hover:border-violet-500/50 rounded-xl p-6 transition-all duration-300 hover:transform hover:-translate-y-2 hover:shadow-2xl hover:shadow-violet-500/20"
+              <Li, n, k
+  key = {i, d, x}
+                to={artic, l, e.li, n, k}
+                className="group, b, g-sla, t, e-8, 0, 0/50, backdro, p-bl, u, r-sm, border, border-sla, t, e-700hover: bord, e, r-viol, e, t-5, 0, 0/50, rounde, d-x, l, p-6, transitio, n-all, duratio, n-300hover: transformhover: -transla, t, e-y-2hover: shad, o, w-2xl, hov, e
+  r:shad, o, w-viol, e, t-5, 0, 0/20"
               >
-                <div className={`w-12 h-12 bg-gradient-to-r ${article.gradient} rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
-                  <IconComponent className="w-6 h-6 text-white"</div>
-                
-                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-violet-300 transition-colors">
-                  {article.title}
-                </h3>
-                
-                <p className="text-slate-400 mb-4 line-clamp-2">
-                  {article.description}
-                </p>
-                
-                <div className="flex items-center gap-2 text-violet-400 font-semibold group-hover:gap-4 transition-all">
-                  <span>Read More</span>
-
+                <divclassName={`w-1, 2, h-12, b, g-gradie, n, t-to-r ${artic, l, e.gradie, n, t} round, e, d-lg, flex, items-center, justif, y-center, m, b-4, grou, p-hover: sca, l, e-110, transitio, n-transfo, rm`}>`;`
+                  <IconComponentclassName="w-6 h-6, tex, t-whi, t, e  />
+                </d, i, v>
+                <h3className = "te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hover: te, x, t-viol, e, t-300, transitio, n-colors">"
+                  <IconComponent, className="w-6 h-6, tex, t-white" />";
                 </div>
-              </Link>
+                <h3className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hover: te, x, t-viol, e, t-300, transitio, n-colo, r, s">";
+                  {artic, l, e.tit, le}
+                </h3>
+                <pclassName="te, x, t-sla, t, e-400, m, b-4, lin, e-cla, m, p-2">";
+                  {artic, l, e.descripti, on}
+                </p>
+                <divclassName="flex, item, s-center, ga, p-2, tex, t-viol, e, t-400, fon, t-semibold, grou, p-hover: g, a, p-4, transitio, n-a, l, l">"
+                  <sp, a, n>Read, Mor, e</span>
+                  <ArrowRightclassName="w-4 h-4  />
+                <divclassName = "flex, item, s-center, ga, p-2, tex, t-viol, e, t-400, fon, t-semibold, grou, p-hover: g, a, p-4, transitio, n-all">";
+                  <sp, a, n>Read, Mor, e</span>
+                  <ArrowRightclassName="w-4 h-4" />";
+                </d, i, v>
+              </Li, n, k>
             );
           })}
-        </div>
-
-        {/* Stats Bar */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 bg-slate-800/30 backdrop-blur-sm border border-slate-700 rounded-xl p-8">
-          <div className="text-center">
-            <div className="text-3xl font-bold bg-gradient-to-r from-violet-400 to-purple-400 bg-clip-text text-transparent mb-2">
-              3
+        </d, i, v>
+        {/* Stats, Bar */}
+        <divclassName="grid, gri, d-co, l, s-2md: gr, i, d-co, l, s-4, ga, p-6, b, g-sla, t, e-8, 0, 0/30, backdro, p-bl, u, r-sm, border, border-sla, t, e-700, rounde, d-x, l, p-8">"
+          <divclassName = "te, x, t-center">
+            <div, className="te, x, t-3xl, fon, t-bold, b, g-gradie, n, t-to-r, fro, m-viol, e, t-400, t, o-purp, l, e-400, b, g-cl, i, p-text, tex, t-transparentmb-2">
+        <div, className="grid, gri, d-co, l, s-2md: gr, i, d-co, l, s-4, ga, p-6, b, g-sla, t, e-8, 0, 0/30, backdro, p-bl, u, r-sm, border, border-sla, t, e-700, rounde, d-xlp-8">";
+          <divclassName = "te, x, t-center">";
+            <divclassName = "te, x, t-3xl, fon, t-bold, b, g-gradie, n, t-to-r, fro, m-viol, e, t-400, t, o-purp, l, e-400, b, g-cl, i, p-text, tex, t-transparentmb-2">";
+              3;
             </div>
-            <div className="text-sm text-slate-400">New Articles</div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-2">
+            <divclassName="te, x, t-sm, tex, t-sla, t, e-4, 0, 0">New, Article, s</div>";
+          </d, i, v>
+          <divclassName = "te, x, t-center">";
+            <divclassName = "te, x, t-3xl, fon, t-bold, b, g-gradie, n, t-to-r, fro, m-cy, a, n-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transparentmb-2">";
               50+
             </div>
-            <div className="text-sm text-slate-400">Pages of Insights</div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-2">
-              Expert
+            <divclassName="te, x, t-sm, tex, t-sla, t, e-4, 0, 0">Pages, of, Insights</div>";
+          </d, i, v>
+          <divclassName = "te, x, t-center">";
+            <divclassName = "te, x, t-3xl, fon, t-bold, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, t, o-pi, n, k-400, b, g-cl, i, p-text, tex, t-transparentmb-2">";
+              Expe, r, t;
             </div>
-            <div className="text-sm text-slate-400">Implementation Guides</div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl font-bold bg-gradient-to-r from-pink-400 to-rose-400 bg-clip-text text-transparent mb-2">
-              2025
+            <divclassName="te, x, t-sm, tex, t-sla, t, e-4, 0, 0">Implementation, Guide, s</div>";
+          </d, i, v>
+          <divclassName = "te, x, t-center">";
+            <divclassName = "te, x, t-3xl, fon, t-bold, b, g-gradie, n, t-to-r, fro, m-pi, n, k-400, t, o-ro, s, e-400, b, g-cl, i, p-text, tex, t-transparentmb-2">";
+              20, 2, 5;
             </div>
-            <div className="text-sm text-slate-400">Latest Strategies</div>
-          </div>
-        </div>
-
-        {/* CTA */}
-        <div className="text-center mt-12">
+            <divclassName="te, x, t-sm, tex, t-sla, t, e-4, 0, 0">Latest, Strategie, s</div>";
+          </d, i, v>
+        </d, i, v>
+        {/* C, T, A */}
+        <divclassName = "te, x, t-centermt-12">";
           <Link
-            to="/blog"
-            className="inline-flex items-center gap-2 bg-gradient-to-r from-violet-600 to-purple-600 hover:from-violet-500 hover:to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all hover:shadow-lg hover:shadow-violet-500/50"
+  to="/bl, o, g"
+            className="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-viol, e, t-600, t, o-purp, l, e-600hover: fr, o, m-viol, e, t-500hover: to-purp, l, e-500, tex, t-white, p, x-8, p, y-4, rounde, d-lg, fon, t-semibold, tex, t-lg, transitio, n-allhover: shad, o, w-lg, hov, e
+  r:shad, o, w-viol, e, t-5, 0, 0/50"
           >
-            Explore All Articles
-
-          </Link>
-        </div>
-      </div>
-    </section>
+            Explore, AllArticles;
+            <ArrowRightclassName="w-5 h-5  />
+            <ArrowRightclassName = "w-5 h-5" />";
+          </Li, n, k>
+        </d, i, v>
+      </d, i, v>
+    </secti, o, n>
   );
 };
-
 export default October2025LatestContentBanner;
+;

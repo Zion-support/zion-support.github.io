@@ -1,39 +1,18 @@
-import { Facebook, Github, Linkedin, Mail, MapPin, Phone, Twitter } from 'lucide-react';
+import {
+  Facebook,
+  Github,
+  Linkedin,
+  Mail,
+  MapPin,
+  Phone,
+  Twitter,
+} from 'lucide-react';
 import React from 'react';
-
 import { Link } from 'react-router-dom';
 
-
-
-
-
-
-;
 const EnhancedFooter: React.FC = () => {
   const currentYear = new Date().getFullYear();
-  const services = [
-    { name: 'AI Development', href: '/services/ai-development' },
-    { name: 'Cloud Services', href: '/services/cloud-services' },
-    { name: 'Blockchain Solutions', href: '/services/blockchain' },
-    { name: 'Data Analytics', href: '/services/data-analytics' },
-    { name: 'Web Development', href: '/services/web-development' },
-    { name: 'Mobile Development', href: '/services/mobile-development' },
-    { name: 'IoT Platforms', href: '/services/iot-platforms' },
-    { name: 'Cybersecurity', href: '/services/cybersecurity' },
-  ];
-  const products = [
-    { name: 'AI Solutions', href: '/products/ai-solutions' },
-    { name: 'Cloud Platforms', href: '/products/cloud-platforms' },
-    { name: 'Analytics Tools', href: '/products/analytics-tools' },
-    { name: 'Security Suite', href: '/products/security-suite' },
-  ];
-  const company = [
-    { name: 'About Us', href: '/about' },
-    { name: 'Our Team', href: '/about#team' },
-    { name: 'Careers', href: '/talent' },
-    { name: 'Blog', href: '/blog' },
-    { name: 'Contact', href: '/contact' },
-  ];
+>>>>>>> origin/merge-fixes-20251005-193002
   return (
     <footer className='bg-gray-900 text-white'>
       <div className='container mx-auto px-4 py-12'>
@@ -87,38 +66,19 @@ const EnhancedFooter: React.FC = () => {
                       {service.name}
                     </span>
                   </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div>
-            <h3 className='text-lg font-semibold mb-4'>Products</h3>
-            <ul className='space-y-2'>
-              {products.map(product => (
-                <li key={product.name}>
+>>>>>>> origin/merge-fixes-20251005-193002
                   <Link to={product.href}>
                     <span className='text-gray-300 hover:text-white transition-colors'>
                       {product.name}
                     </span>
                   </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div>
-            <h3 className='text-lg font-semibold mb-4'>Company</h3>
-            <ul className='space-y-2'>
-              {company.map(item => (
-                <li key={item.name}>
+>>>>>>> origin/merge-fixes-20251005-193002
                   <Link to={item.href}>
                     <span className='text-gray-300 hover:text-white transition-colors'>
                       {item.name}
                     </span>
                   </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+>>>>>>> origin/merge-fixes-20251005-193002
         </div>
         <div className='border-t border-gray-700 mt-8 pt-8'>
           <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
@@ -168,9 +128,3 @@ const EnhancedFooter: React.FC = () => {
               </Link>
             </div>
           </div>
-        </div>
-      </div>
-    </footer>
-  );
-};
-export default EnhancedFooter;

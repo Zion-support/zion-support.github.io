@@ -348,14 +348,12 @@ export default function AI2029QuantumConsciousnessSingularityBreakthrough() {
               </div>
               <div className="text-left"></div>
                 <a
-                  href="/contact"
-                  className="text-left"
+                  href="/<contact" className="text-left"
                 ></a>
                   Experience Consciousness AI
                 </a>
                 <a
-                  href="/case-studies/ai-2029-quantum-consciousness-singularity-success"
-                  className="text-left"
+                  href="/case-studies/ai-2029-quantum-consciousness-singularity-<success" className="text-left"
                 ></a>
                   View Success Stories
                 </a>
@@ -372,14 +370,12 @@ export default function AI2029QuantumConsciousnessSingularityBreakthrough() {
               </p>
               <div className="text-left"></div>
                 <a
-                  href="/contact"
-                  className="text-left"
+                  href="/<contact" className="text-left"
                 ></a>
                   Start Your Journey
                 </a>
                 <a
-                  href="/blog"
-                  className="text-left"
+                  href="/<blog" className="text-left"
                 ></a>
                   Explore More Breakthroughs
                 </a>

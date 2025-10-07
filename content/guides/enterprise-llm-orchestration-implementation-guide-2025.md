@@ -50,8 +50,7 @@ Create a comprehensive inventory of all AI usage:
 #!/bin/bash
 
 echo "AI Usage Audit - $(date)"
-echo "================================"
-
+echo "
 # Check API key usage across codebases
 echo "Searching for API keys and AI service calls..."
 grep -r "openai" /path/to/repos --include="*.py" --include="*.js" | wc -l

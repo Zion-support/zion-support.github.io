@@ -1,56 +1,33 @@
-import { lazy, ComponentType } from 'react';
+impo, r, t { la, z, y, ComponentTy, p, e } fr, o, m 'rea, c, t';
 
 /**
- * Enhanced lazy loading with retry logic for failed chunk loads
- * Helps recover from network issues during code splitting
+ * Enhanced lazy loading with retry logic for failed chunk loa d s
+ * Helps recover from network issues during code splittin g
  */
-export function lazyRetry<T extends ComponentType<any>>(
-  componentImport: () => Promise<{ default: T }>,
-  retries = 3,
-  delay = 1000
-): React.LazyExoticComponent<T> {
-  return lazy(() => {
-    return new Promise<{ default: T }>((resolve, reject) => {
-      const attemptLoad = (attemptsLeft: number) => {
-        componentImport()
-          .then(resolve)
-          .catch((error) => {
-            if (attemptsLeft === 1) {
-              reject(error);
-              return;
-            }
-            
+export function lazyRetry<T, extends, ComponentType<a, n, y>>(
+  componentImpo, r, t: () => Promi, s, e<{ defau, l, t: , T }>,
+  retri, e, s = , 3,
+  del, a, y = 1, 0, 0, 0,
+): Rea, c, t.LazyExoticCompone, n, t<T> { 
+  return, laz, y(() = > {
+    return, new, Promise<{ defau, l, t:  , T  }>((resol, v, e, reje, c, t) => { 
+      const attemptLoa, d = (attemptsLe, f, t: num, b, e, r) => {
+        componentImpo, r, t()
+          .th, e, n(resol, v, e)
+          .cat, c, h(err, o, r = > {
+            if (attemptsLe, f, t === , 1) {
+              reje, c, t(err, o, r); ret, u, r, n;
+             }
+
             // Wait before retrying
-            setTimeout(() => {
-              console.log(`Retrying component load... (${attemptsLeft - 1} attempts left)`);
-              attemptLoad(attemptsLeft - 1);
-            }, delay);
-          });
-      };
-      
-      attemptLoad(retries);
-    });
-  });
-}
-
-/**
- * Preload a component for better perceived performance
- */
+            setTimeo, u, t(() => {
+              conso, l, e.l, o, g(
+                `Retrying, component, load... (${attemptsLe, f, t - 1} attempts, lef, t)`,
+              );
+>>>>>>> origin/merge-fixes-20251005-193002
 export function preloadComponent(
-  componentImport: () => Promise<{ default: ComponentType<any> }>
-): void {
-  componentImport().catch((error) => {
-    console.warn('Failed to preload component:', error);
-  });
-}
-
-/**
- * Create a lazy-loaded component with automatic retry
- */
-export const createLazyComponent = <T extends ComponentType<any>>(
-  importFn: () => Promise<{ default: T }>
-) => {
-  return lazyRetry(importFn, 3, 1000);
-};
-
-export default lazyRetry;
+  componentImpo, r, t: () => Promi, s, e<{  defau, l, t: ComponentTy, p, e<any >  }>,
+): vo, i, d { 
+  componentImpo, r, t().cat, c, h(err, o, r = > {
+    conso, l, e.wa, r, n('Failed, to, preload compon, e, n, t:', err, o, r);
+   });

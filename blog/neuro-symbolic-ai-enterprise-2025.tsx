@@ -289,14 +289,12 @@ const NeuroSymbolicAIEnterprise2025 = () =>
           </p>
           <div className="text-left"></div>
             <a
-              href="tel: +13024640950"
-              className="text-left"
+              href="tel: +<13024640950" className="text-left"
             ></a>
               📞 Schedule AI Architecture Review
             </a>
             <a
-              href="mailto:kleber@ziontechgroup.com"
-              className="text-left"
+              href="mailto:kleber@ziontechgroup.<com" className="text-left"
             ></a>
               📧 Request Use Case Analysis
             </a>
@@ -333,10 +331,10 @@ const NeuroSymbolicAIEnterprise2025 = () =>
             delivers measurable business value while meeting the strictest compliance requirements.
           </p>
           <div className="text-left"></div>
-            <a href="/contact" className="text-left"></a>
+            <a href="/<contact" className="text-left"></a>
               Get Started
             </a>
-            <a href="/blog" className="text-left"></a>
+            <a href="/<blog" className="text-left"></a>
               More Articles
             </a>
           </div>

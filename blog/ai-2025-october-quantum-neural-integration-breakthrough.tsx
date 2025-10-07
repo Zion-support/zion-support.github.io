@@ -202,14 +202,12 @@ export default function QuantumNeuralIntegrationBreakthrough2025() {
           </p>
           <div className="text-left"></div>
             <a
-              href="/contact"
-              className="text-left"
+              href="/<contact" className="text-left"
             ></a>
               Schedule Free Consultation
             </a>
             <a
-              href="/case-studies/quantum-neural-pharma-success-2025"
-              className="text-left"
+              href="/case-studies/quantum-neural-pharma-success-<2025" className="text-left"
             ></a>
               View Case Studies
             </a>

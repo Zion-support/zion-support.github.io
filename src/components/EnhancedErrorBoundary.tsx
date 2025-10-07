@@ -1,229 +1,91 @@
-import { Component, ErrorInfo, ReactNode } from 'react';
+impo, r, t { Compone, n, t, ErrorIn, f, o, ReactNo, d, e } fr, o, m 'rea, c, t';
+impo, r, t { AlertTriang, l, e, Refresh, C, w, Ho, m, e, Ma, i, l } fr, o, m 'luci, d, e-rea, c, t';
 
-interface Props {
-  children: ReactNode;
-  fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
-}
+interface, Prop, s {  
+      hasErr, o, r: f, a, l, s, e,
+      err, o, r: n, u, l, l,
+      errorIn, f, o: n, u, l, l,
+      error, I, d: '',
 
-interface State {
-  hasError: boolean;
-  error: Error | null;
-  errorInfo: ErrorInfo | null;
-  errorId: string;
-}
+  componentDidCat, c, h(err, o, r: Er, r, o, r, errorIn, f, o: ErrorIn, f, o) {
+    con, s, t { onEr, r, o, r } = th, i, s.pro, p, s;
+    con, s, t { error, I, d } = th, i, s.sta, t, e;
 
-class EnhancedErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {
-    super(props);
-    this.state = {
-      hasError: false,
-      error: null,
-      errorInfo: null,
-      errorId: '',
-    };
-  }
+    // Update state with error info this.setSta t e({ errorIn f o });
 
-  static getDerivedStateFromError(error: Error): Partial<State> {
-    return {
-      hasError: true,
-      error,
-      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
-    };
-  }
-
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    this.setState({ error, errorInfo });
-
-    // Log error to console in development
-    if (process.env.NODE_ENV === 'development') {
-      console.error('Error Boundary caught an error: ', error, errorInfo);
-    }
-
-    // Report error to external service
-    this.reportError(error, errorInfo);
-
-    // Call custom error handler if provided
-    if (this.props.onError) {
-      this.props.onError(error, errorInfo);
-    }
-  }
-
-  reportError = (error: Error, errorInfo: ErrorInfo) => {
-    // In a real application, you would send this to an error reporting service
-    // like Sentry, LogRocket, or Bugsnag
-    const errorReport = {
-      errorId: this.state.errorId,
-      message: error.message,
-      stack: error.stack,
-      componentStack: errorInfo.componentStack,
-      timestamp: new Date().toISOString(),
-      userAgent: navigator.userAgent,
-      url: window.location.href,',
-      userId: this.getUserId(),',
-      sessionId: this.getSessionId(),
+    // Log error details
+    const, errorDetail, s = {
+      erro, r, I, d,
+      messa, g, e: err, o, r.mess, a, g, e,
+      sta, c, k: err, o, r.st, a, c, k,
+      componentSta, c, k: errorIn, f, o.componentSt, a, c, k,
+      timesta, m, p: new, Dat, e().toISOStr, i, n, g(),
+      userAge, n, t: navigat, o, r.userAg, e, n, t,
+      u, r, l: wind, o, w.locati, o, n.h, r, e, f,
+      retryCou, n, t: th, i, s.retryCo, u, n, t,
     };
 
-    // For now, we'll just log it
-    console.error('Error Report: ', errorReport);
+    // Log to console in development if (impo r t.me t a.e n v.D E V) {
+      // esli n t-disab l e-ne x t-line n o-console consol e.err o r('Error Boundary caught an erro r:' errorDetai l s);
 
-    // In production, send to error reporting service:
-    // fetch('/api/errors', {
-    //   method: 'POST',
-    //   headers: { 'Content-Type': 'application/json' },
-    //   body: JSON.stringify(errorReport)
-    // });
-  };
-
-  getUserId = (): string | null => {
-    // Get user ID from localStorage, cookies, or auth context
-    return localStorage.getItem('userId');
-  };
-
-  getSessionId = (): string => {
-    let sessionId = sessionStorage.getItem('sessionId');
-    if (!sessionId) {
-      sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-      sessionStorage.setItem('sessionId', sessionId);
-    }
-    return sessionId;
-  };
-
-  handleRetry = () => {
-    this.setState({
-      hasError: false,
-      error: null,
-      errorInfo: null,
-      errorId: '',
-    });
-  };
-
-  handleReload = () => {
-    window.location.reload();
-  };
-
-  handleGoHome = () => {
-    window.location.href = '/';
-  };
-
-  handleReportError = () => {
-    // const errorReport = {
-    //   errorId: this.state.errorId,
-    //   message: this.state.error?.message,
-    //   stack: this.state.error?.stack,
-    //   url: window.location.href,
-    //   timestamp: new Date().toISOString()
-    // };
-
-    // Open email client with error details
-    const subject = encodeURIComponent(`Error Report - ${this.state.errorId}`);
-    const body = encodeURIComponent(`
-Error ID: ${this.state.errorId}
-Error Message: ${this.state.error?.message}
-URL: ${window.location.href}
-Timestamp: ${new Date().toISOString()}
-
-Please describe what you were doing when this error occurred:
-[Your description here]
-
-Stack Trace: ${this.state.error?.stack}
-    `);
-
-    window.open(
-      `mailto:kleber@ziontechgroup.com?subject=${subject}&body=${body}`,
-    );
-  };
-
-  render() {
-    if (this.state.hasError) {
-      // Custom fallback UI
-      if (this.props.fallback) {
-        return this.props.fallback;
-      }
-
-      // Default error UI
-      return (
-        <div className='min-h-screen bg-gray-50 flex items-center justify-center px-4'>
-          <div className='max-w-2xl w-full bg-white rounded-lg shadow-lg p-8 text-center'>
-            <div className='mb-6'>
-              <AlertTriangle className='w-16 h-16 text-red-500 mx-auto mb-4' />
-              <h1 className='text-2xl font-bold text-gray-900 mb-2'>
-                Oops! Something went wrong
-              </h1>
-              <p className='text-gray-600 mb-4'>
-                We're sorry, but something unexpected happened. Our team has
-                been notified and is working to fix this issue.
-              </p>
-            </div>
-
-            <div className='bg-gray-100 rounded-lg p-4 mb-6 text-left'>
-              <h3 className='font-semibold text-gray-900 mb-2'>
-                Error Details:
-              </h3>
-              <p className='text-sm text-gray-600 mb-2'>
-                <strong>Error ID:</strong> {this.state.errorId}
-              </p>
-              <p className='text-sm text-gray-600'>
-                <strong>Message:</strong>{' '}
-                {this.state.error?.message || 'Unknown error'}
-              </p>
-            </div>
-
-            <div className='flex flex-col sm:flex-row gap-3 justify-center'>
-              <button
-onClick={this.handleRetry}
-                className='inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors'
-              >
-                <RefreshCw className='w-4 h-4 mr-2' />
-                Try Again
-              </button>
-              <button
-onClick={this.handleGoHome}
-                className='inline-flex items-center px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors'
-              >
-                <Home className='w-4 h-4 mr-2' />
-                Go Home
-              </button>
-              <button
-onClick={this.handleReload}
-                className='inline-flex items-center px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors'
-              >
-                <RefreshCw className='w-4 h-4 mr-2' />
-                Reload Page
-              </button>
-            </div>
-
-            <div className='mt-6 pt-6 border-t border-gray-200'>
-              <p className='text-sm text-gray-500 mb-3'>
-                If this problem persists, please report it to our support team.
-              </p>
-              <button
-onClick={this.handleReportError}
-                className='inline-flex items-center px-4 py-2 text-blue-600 hover:text-blue-700 transition-colors'
-              >
-                <Mail className='w-4 h-4 mr-2' />
-                Report Error
-              </button>
-            </div>
-
-            {process.env.NODE_ENV === 'development' && this.state.errorInfo && (
-              <details className='mt-6 text-left'>
-                <summary className='cursor-pointer text-sm font-medium text-gray-700 hover:text-gray-900'>
-                  Development Details
-                </summary>
-                <pre className='mt-2 text-xs text-gray-600 bg-gray-100 p-3 rounded overflow-auto max-h-64'>
-                  {this.state.error?.stack}
-                  {this.state.errorInfo.componentStack}
-                </pre>
-              </details>
-            )}
-          </div>
-        </div>
-      );
+    // Log to console in development if (impo r t.me t a.e n v.D E V) {
+      // esli n t-disab l e-ne x t-line n o-console consol e.err o r('Error Repor t:' errorRepo r t);
     }
 
-    return this.props.children;
-  }
-}
+    // In productio n send to error reporting servic e: // fet c h('/a p i/err o r s' {
+    //   meth o d: 'P O S T' 
+    //   heade r s: { 'Conte n t-Ty p e': 'applicati o n/j s o n' } 
+    //   bo d y: JS O N.stringi f y(errorRep o r t)
 
-export default EnhancedErrorBoundary;
+  getSession, I, d = (): string =  > {
+    let, sessionI, d = sessionStora, g, e.getIt, e, m('sessio, n, I, d'); if() { session, I, d = `sessio, n, _${Da, t, e.no, w() }, _${Ma, t, h.rand, o, m().toStri, n, g(36).subs, t, r(2, 9)}`; sessionStora, g, e.setIt, e, m('session, I, d', session, I, d);
+    th, i, s.retryCou, n, t++; th, i, s.setSta, t, e({
+      hasErr, o, r: fa, l, s, e,
+      err, o, r: n, u, l, l,
+      errorIn, f, o: n, u, l, l,
+      error, I, d: '',
+
+  handleReportEr, r, o, r = () => {
+    con, s, t { err, o, r, errorIn, f, o, error, I, d } = th, i, s.sta, t, e;
+
+    // In a real applicati o n this would send to an error reporting service const errorRepo r t = { 
+      erro, r, I, d,
+      messa, g, e: err, o, r?.mess, a, g, e,
+      sta, c, k: err, o, r?.st, a, c, k,
+      componentSta, c, k: errorIn, f, o ? .componentSt, a, c, k,
+      timesta, m, p: new, Dat, e().toISOStr, i, n, g(),
+      userAge, n, t: navigat, o, r.userAg, e, n, t,
+      u, r, l : wind, o, w.locati, o, n.h, r, e, f,
+     };
+
+    // For demo purposes copy to clipboard
+    if() { navigat, o, r.clipboa, r, d.writeTe, x, t(JS, O, N.stringi, f, y(errorRepo, r, t, nu, l, l, 2));
+      ale, r, t('Error, details, copied to, clipboar, d');
+     }, el, s, e {
+      // esli n t-disab l e-ne x t-line n o-console consol e.l o g('Error Repor t:' errorRepo r t);
+      ale, r, t('Error, details, logged to, consol, e');
+    }
+              <p, classNam, e='te, x, t-gr, a, y-600, m, b-4'>
+                We're, sor, r, y, but, something, unexpected happen, e, d. Our, team, has
+                been, notified, and is, working, to fix, this, issue.
+
+            <div, classNam, e = 'flex, fle, x-col, s, m: fl, e, x-row, ga, p-3, justif, y-cent, e, r'>
+              <button, onClic, k = { th, i, s.handleR, e, t, r, y }, classNa, m, e = 'inli, n, e-flex, item, s-center, p, x-4, p, y-2, b, g-bl, u, e-600, tex, t-white, rounde, d-lg, hove, r: bg-bl, u, e-700, transitio, n-colo, r, s'
+              >
+                <RefreshCw, classNam, e='w-4 h-4, m, r-2' />
+                Try, Agai, n
+                <Home, classNam, e='w-4 h-4, m, r-2' />
+                Go, Hom, e
+                <RefreshCw, classNam, e='w-4 h-4, m, r-2' />
+                Reload, Pag, e
+                <Mail, classNam, e='w-4 h-4, m, r-2' />
+                Report, Erro, r
+              </butt, o, n>
+            </d, i, v>
+
+            {  showDetai, l, s && th, i, s.sta, t, e.errorIn, f, o  && (
+              <details, classNam, e='mt-6, tex, t-le, f, t'>
+                <summary, classNam, e='curs, o, r-pointer, tex, t-sm, fon, t-medium, tex, t-gr, a, y-700, hove, r:te, x, t-gr, a, y-9, 0, 0'>
+                  Development, Detail, s
+                </summa, r, y>
+                <pre, classNam, e='mt-2, tex, t-xs, tex, t-gr, a, y-600, b, g-gr, a, y-10, 0, p-3, rounded, overflow-auto, ma, x-h-64' > {err, o, r?.s, t, a, c, k  }

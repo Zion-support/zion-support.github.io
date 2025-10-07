@@ -1,280 +1,410 @@
-import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
-
-const September30MegaBanner2025 = () => {
-  const breakthroughArticles = [
-    {",
-      title: "Real-Time AI Decision Engines",
-      description: "10M decisions/sec with <1ms latency - Stream processing meets neural inference",",
-      slug: "real-time-ai-decision-engines-2025",
-      category: "Real-Time AI",",
-      icon: "⚡",
-      gradient: "from-yellow-500 to-orange-500",",
-      metric: "10,000x Faster"
-    },
-    {",
-      title: "Neural Code Synthesis",
-      description: "AI generates production apps from plain English with 95% accuracy & built-in security",",
-      slug: "neural-code-synthesis-2025",
-      category: "AI Development",",
-      icon: "💻",
-      gradient: "from-blue-500 to-cyan-500",",
-      metric: "90% Dev Time Cut"
-    },
-    {",
-      title: "Multimodal AI Fusion",
-      description: "Unified understanding of text, images, audio & video - 98% cross-modal accuracy",",
-      slug: "multimodal-ai-fusion-2025",
-      category: "Multimodal AI",",
-      icon: "🎭",
-      gradient: "from-purple-500 to-pink-500",",
+const, September30MegaBanner2025 = () => {
+  const, breakthroughArticle, s = [
+    {
+      title: "Re, a, l-Time, AI, Decision Engines","
+      description: "10M, decision, s/sec, wit, h <1ms, latenc, y - Stream, processing, meets neuralinference","
+      slug: "re, a, l-ti, m, e-ai-decisi, o, n-engin, e, s-2025","
+      category: "Re, a, l-TimeAI","
+      icon: "⚡","
+      gradient: "fr, o, m-yell, o, w-500, t, o-oran, g, e-500","
+      metric: "10,000xFaster"
+    }
+    {
+      title: "NeuralCodeSynthesis","
+      description: "AI, generates, production apps, from, plain English, with, 95% accura, c, y & bui, l, t-insecurity","
+      slug: "neur, a, l-co, d, e-synthes, i, s-2025","
+      category: "AIDevelopment","
+      icon: "💻","
+      gradient: "fr, o, m-bl, u, e-500, t, o-cy, a, n-500","
+      metric: "90% DevTimeCut"
+    }
+    {
+      title: "MultimodalAIFusion","
+      description: "Unified, understanding, of te, x, t, imag, e, s, aud, i, o & vid, e, o - 98% cro, s, s-modalaccuracy","
+      slug: "multimod, a, l-ai-fusi, o, n-2025","
+      category: "MultimodalAI","
+      icon: "🎭","
+      gradient: "fr, o, m-purp, l, e-500, t, o-pi, n, k-500","
       metric: "98% Accuracy"
-    },
-    {",
-      title: "AI Supply Chain Revolution",
-      description: "99.5% forecast accuracy + 85% inventory reduction through neural optimization",",
-      slug: "ai-powered-supply-chain-2025",
-      category: "Supply Chain AI",",
-      icon: "📦",
-      gradient: "from-green-500 to-teal-500",",
-      metric: "85% Less Inventory"
-    },
-    {",
-      title: "Cognitive AI Assistants",
-      description: "Human-level understanding & reasoning - 92% satisfaction with emotional intelligence",",
-      slug: "cognitive-ai-assistants-2025",
-      category: "Conversational AI",",
-      icon: "🤖",
-      gradient: "from-indigo-500 to-purple-500",",
+    }
+    {
+      title: "AI, Supply, Chain Revolution","
+      description: "99.5% forecast, accurac, y + 85% inventory, reduction, through neuraloptimization","
+      slug: "ai-power, e, d-supp, l, y-cha, i, n-2025","
+      category: "SupplyChainAI","
+      icon: "📦","
+      gradient: "fr, o, m-gre, e, n-500, t, o-te, a, l-500","
+      metric: "85% LessInventory"
+    }
+    {
+      title: "CognitiveAIAssistants","
+      description: "Hum, a, n-level, understandin, g & reasoni, n, g - 92% satisfaction, with, emotional intelligence","
+      slug: "cogniti, v, e-ai-assistan, t, s-2025","
+      category: "ConversationalAI","
+      icon: "🤖","
+      gradient: "fr, o, m-indi, g, o-500, t, o-purp, l, e-500","
       metric: "92% Satisfaction"
-    },
-    {",
-      title: "AI Cybersecurity Mesh",
-      description: "Zero-trust distributed defense - 99.99% threat detection with sub-second response",",
-      slug: "ai-cybersecurity-mesh-2025",
-      category: "Cybersecurity AI",",
-      icon: "🛡️",
-      gradient: "from-red-500 to-orange-500",",
+    }
+    {
+      title: "AICybersecurityMesh","
+      description: "Ze, r, o-trust, distributed, defense - 99.99% threat, detection, with s, u, b-secondresponse","
+      slug: "ai-cybersecuri, t, y-me, s, h-2025","
+      category: "CybersecurityAI","
+      icon: "🛡️","
+      gradient: "fr, o, m-r, e, d-500, t, o-oran, g, e-500","
       metric: "99.99% Detection"
-    },
-    {",
-      title: "Federated Learning Enterprise",
-      description: "Train powerful AI with zero data sharing - 100% GDPR/HIPAA compliance",",
-      slug: "federated-learning-enterprise-2025",
-      category: "Privacy AI",",
-      icon: "🔒",
-      gradient: "from-slate-600 to-slate-800",",
-      metric: "100% Privacy"
-    },
-    {",
-      title: "AI Financial Modeling",
-      description: "95% market prediction accuracy - Real-time analysis of millions of signals",",
-      slug: "ai-financial-modeling-2025",
-      category: "FinTech AI",",
-      icon: "💰",
-      gradient: "from-emerald-500 to-green-600",",
+    }
+    {
+      title: "FederatedLearningEnterprise","
+      description: "Train, powerful, AI with, zero, data shari, n, g - 1, 0, 0% GD, P, R/HIPAAcompliance","
+      slug: "federat, e, d-learni, n, g-enterpri, s, e-2025","
+      category: "PrivacyAI","
+      icon: "🔒","
+      gradient: "fr, o, m-sla, t, e-600, t, o-sla, t, e-800","
+      metric: "1, 0, 0% Privacy"
+    }
+    {
+      title: "AIFinancialModeling","
+      description: "95% market, prediction, accuracy - Re, a, l-time, analysis, of millionsofsignals","
+      slug: "ai-financi, a, l-modeli, n, g-2025","
+      category: "FinTechAI","
+      icon: "💰","
+      gradient: "fr, o, m-emera, l, d-500, t, o-gre, e, n-600","
+      title: "Re, a, l-Time, AI, Decision Engines",";
+      description: "10M, decision, s/sec, wit, h <1ms, latenc, y - Stream, processing, meets neuralinference",";
+      slug: "re, a, l-ti, m, e-ai-decisi, o, n-engin, e, s-2025",";
+      category: "Re, a, l-TimeAI",";
+      icon: "⚡",";
+      gradient: "fr, o, m-yell, o, w-500, t, o-oran, g, e-500",";
+      metric: "10,000xFaster"
+    }
+    {
+      title: "NeuralCodeSynthesis",";
+      description: "AI, generates, production apps, from, plain English, with, 95% accura, c, y & bui, l, t-insecurity",";
+      slug: "neur, a, l-co, d, e-synthes, i, s-2025",";
+      category: "AIDevelopment",";
+      icon: "💻",";
+      gradient: "fr, o, m-bl, u, e-500, t, o-cy, a, n-500",";
+      metric: "90% DevTimeCut"
+    }
+    {
+      title: "MultimodalAIFusion",";
+      description: "Unified, understanding, of te, x, t, imag, e, s, aud, i, o & vid, e, o - 98% cro, s, s-modalaccuracy",";
+      slug: "multimod, a, l-ai-fusi, o, n-2025",";
+      category: "MultimodalAI",";
+      icon: "🎭",";
+      gradient: "fr, o, m-purp, l, e-500, t, o-pi, n, k-500",";
+      metric: "98% Accuracy"
+    }
+    {
+      title: "AI, Supply, Chain Revolution",";
+      description: "99.5% forecast, accurac, y + 85% inventory, reduction, through neuraloptimization",";
+      slug: "ai-power, e, d-supp, l, y-cha, i, n-2025",";
+      category: "SupplyChainAI",";
+      icon: "📦",";
+      gradient: "fr, o, m-gre, e, n-500, t, o-te, a, l-500",";
+      metric: "85% LessInventory"
+    }
+    {
+      title: "CognitiveAIAssistants",";
+      description: "Hum, a, n-level, understandin, g & reasoni, n, g - 92% satisfaction, with, emotional intelligence",";
+      slug: "cogniti, v, e-ai-assistan, t, s-2025",";
+      category: "ConversationalAI",";
+      icon: "🤖",";
+      gradient: "fr, o, m-indi, g, o-500, t, o-purp, l, e-500",";
+      metric: "92% Satisfaction"
+    }
+    {
+      title: "AICybersecurityMesh",";
+      description: "Ze, r, o-trust, distributed, defense - 99.99% threat, detection, with s, u, b-secondresponse",";
+      slug: "ai-cybersecuri, t, y-me, s, h-2025",";
+      category: "CybersecurityAI",";
+      icon: "🛡️",";
+      gradient: "fr, o, m-r, e, d-500, t, o-oran, g, e-500",";
+      metric: "99.99% Detection"
+    }
+    {
+      title: "FederatedLearningEnterprise",";
+      description: "Train, powerful, AI with, zero, data shari, n, g - 1, 0, 0% GD, P, R/HIPAAcompliance",";
+      slug: "federat, e, d-learni, n, g-enterpri, s, e-2025",";
+      category: "PrivacyAI",";
+      icon: "🔒",";
+      gradient: "fr, o, m-sla, t, e-600, t, o-sla, t, e-800",";
+      metric: "1, 0, 0% Privacy"
+    }
+    {
+      title: "AIFinancialModeling",";
+      description: "95% market, prediction, accuracy - Re, a, l-time, analysis, of millionsofsignals",";
+      slug: "ai-financi, a, l-modeli, n, g-2025",";
+      category: "FinTechAI",";
+      icon: "💰",";
+      gradient: "fr, o, m-emera, l, d-500, t, o-gre, e, n-600",";
       metric: "95% Accuracy"
     }
   ];
-
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 40 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8 }}
-      className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900 shadow-2xl my-16 border border-purple-500/30"
+    <moti, o, n.d, i, v
+  initial = {{ opacity: 0y: 40 }}
+      anima, te={{ opacity: 1, y: 0 }}
+      transiti, on={{ duration: 0.8 }}
+      classNa, m, e="relative, overflo, w-hidden, rounde, d-3xl, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-indi, g, o-900, shado, w-2xl, m, y-16, border, border-purp, l, e-500/30"
     >
-      {/* Animated Background Effects */}
-      <div className="absolute inset-0 overflow-hidden opacity-30">
-        <div className="absolute -top-1/2 -right-1/2 w-[800px] h-[800px] bg-cyan-500/30 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute -bottom-1/2 -left-1/2 w-[800px] h-[800px] bg-purple-500/30 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "1s" }}></div>
-        <div className="absolute top-1/4 left-1/3 w-[600px] h-[600px] bg-pink-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "2s" }}></div>
-      </div>
-
-      <div className="relative z-10 p-10 md:p-16">
-        {/* Header Section */}
-        <div className="text-center mb-12">
-          <motion.div
-            initial={{ scale: 0.9, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            transition={{ delay: 0.3, duration: 0.6 }}
-            className="inline-flex items-center gap-3 mb-8"
+      {/* Animated, Background, Effects */}
+      <div, className="absolute, inse, t-0, overflo, w-hiddenopacity-30">";
+        <divclassName = "absolu, t, e -t, o, p-1/2 -rig, h, t-1/2 w-[800, p, x] h-[800, p, x] bg-cy, a, n-5, 0, 0/30, rounde, d-full, blu, r-3xl, animat, e-pulse"></d, i, v>";
+        <divclassName = "absolu, t, e -bott, o, m-1/2 -le, f, t-1/2 w-[800, p, x] h-[800, p, x] bg-purp, l, e-5, 0, 0/30, rounde, d-full, blu, r-3xl, animat, e-pulse" sty, le={{ animationDelay: "1s" }}></div>";
+        <divclassName = "absolute, to, p-1/4, lef, t-1/3 w-[600, p, x] h-[600, p, x] bg-pi, n, k-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pulse" sty, le={{ animationDelay: "2s" }}></div>";
+      </d, i, v>
+      <divclassName = "relativ, e, z-10p-10md: p-16">"
+      <div, className="relativ, e, z-10p-10md: p-16">";
+        {/* Header, Section */}
+        <divclassName="text-center mb-12">";
+          <moti, o, n.d, i, v
+  initial = {{ scale: 0.9opacity: 0 }}
+            anima, te={{ scale: 1, opacity: 1 }}
+            transiti, on={{ delay: 0.3, duration: 0.6 }}
+            className="inli, n, e-flex, item, s-center, ga, p-3, m, b-8"
           >
-            <div className="flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 rounded-full shadow-2xl animate-pulse">
-               style={{ animationDuration: "3s" }} <span className="text-white font-black text-base tracking-wide">SEPTEMBER 30, 2025 — 8 REVOLUTIONARY BREAKTHROUGHS</span>
-
-            </div>
-          </motion.div>
-
-          <h2 className="text-5xl md:text-7xl font-black text-white mb-6 leading-tight">
-            🚀 <span className="bg-gradient-to-r from-cyan-300 via-blue-300 to-purple-300 bg-clip-text text-transparent animate-gradient bg-300%">
-              The AI Revolution Accelerates
+            <div, className="flex, item, s-center, ga, p-3, p, x-6, p, y-3, b, g-gradie, n, t-to-r, fro, m-yell, o, w-400, vi, a-oran, g, e-500, t, o-r, e, d-500, rounde, d-full, shado, w-2xl, animat, e-pulse">
+              <Sparkles, className="w-6 h-6, tex, t-white, animat, e-spin" sty, le={{ animationDuration: "3s" }}  />
+              <span, className="te, x, t-white, fon, t-black, tex, t-base, trackin, g-wide">SEPTEMBER, 3, 0, 20, 2, 5 — 8, REVOLUTIONARY, BREAKTHROUGHS</sp, a, n>
+              <Rocket, className="w-6 h-6, tex, t-white, animat, e-boun, c, e  />
+            </d, i, v>
+          </moti, o, n.d, iv>
+          <h2className="te, x, t-5xlmd: te, x, t-7xl, fon, t-black, tex, t-white, m, b-6, leadin, g-tig, h, t">"
+            🚀 <span, className="bg-gradie, n, t-to-r, fro, m-cy, a, n-300, vi, a-bl, u, e-300, t, o-purp, l, e-300, b, g-cl, i, p-text, tex, t-transparent, animat, e-gradient, b, g-300%">
+            <div, className="flex, item, s-center, ga, p-3, p, x-6, p, y-3, b, g-gradie, n, t-to-r, fro, m-yell, o, w-400, vi, a-oran, g, e-500, t, o-r, e, d-500, rounde, d-full, shado, w-2xl, animat, e-pulse">";
+              <SparklesclassName = "w-6 h-6, tex, t-white, animat, e-spin" sty, le={{ animationDuration: "3s" }} />";
+              <spanclassName = "te, x, t-white, fon, t-black, tex, t-base, trackin, g-wide">SEPTEMBER, 3, 0, 20, 2, 5 — 8, REVOLUTIONARY, BREAKTHROUGHS</sp, a, n>";
+              <RocketclassName = "w-6 h-6, tex, t-white, animat, e-bounce" />";
+            </d, i, v>
+          </moti, o, n.d, iv>
+          <h2className="te, x, t-5xlmd: te, x, t-7xl, fon, t-black, tex, t-white, m, b-6, leadin, g-tig, h, t">";
+            🚀 <spanclassName = "bg-gradie, n, t-to-r, fro, m-cy, a, n-300, vi, a-bl, u, e-300, t, o-purp, l, e-300, b, g-cl, i, p-text, tex, t-transparent, animat, e-gradient, b, g-300%">";
+              The, AI, Revolution Accelerat, e, s;
             </span> 🚀
           </h2>
-          
-          <p className="text-2xl md:text-3xl text-cyan-100 mb-4 max-w-5xl mx-auto leading-relaxed font-semibold">
-            <strong className="text-white">Real-Time Decision Engines, Neural Code Synthesis, Multimodal Fusion, AI Supply Chains, Cognitive Assistants, Security Mesh, Federated Learning & Financial AI</strong>
+          <pclassName="te, x, t-2x, l, m
+  d: te, x, t-3xl, tex, t-cy, a, n-100, m, b-4, ma, x-w-5xl, m, x-auto, leadin, g-relaxed, fon, t-semibo, l, d">"
+            <strongclassName = "te, x, t-white">Re, a, l-Time, Decision, Engines, Neural, Code, Synthesis, Multimodal, Fusio, n, AI, Supply, Chains, Cognitive, Assistant, s, Security, Mes, h, Federated, Learnin, g & Financial, A, I</stro, n, g>
+          <p, className="te, x, t-2xlmd: te, x, t-3xl, tex, t-cy, a, n-100, m, b-4, ma, x-w-5xl, m, x-auto, leadin, g-relaxed, fon, t-semibold">";
+            <strongclassName = "te, x, t-white">Re, a, l-Time, Decision, Engines, Neural, Code, Synthesis, Multimodal, Fusio, n, AI, Supply, Chains, Cognitive, Assistant, s, Security, Mes, h, Federated, Learnin, g & Financial, A, I</stro, n, g>";
           </p>
-          
-          <p className="text-xl text-purple-200 max-w-4xl mx-auto leading-relaxed">
-            Transform your business with production-ready AI achieving <strong className="text-white">10,000x performance gains, 95%+ accuracy, and enterprise-scale deployment</strong>
+          <pclassName = "te, x, t-xl, tex, t-purp, l, e-200, ma, x-w-4xl, m, x-auto, leadin, g-relaxed">";
+            Transform, your, business with, productio, n-ready, AIachieving <strongclassName="te, x, t-whi, t, e">10,000x, performance, gains, 95%+ accura, c, y, and, enterpris, e-scale, deploymen, t</strong>";
           </p>
-        </div>
-
-        {/* Article Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-          {breakthroughArticles.map((article, index) => (
-            <motion.div
-              key={article.slug}
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.1 * index, duration: 0.6 }}
-              whileHover={{ scale: 1.05, translateY: -8 }}
-              className="group relative"
+        </d, i, v>
+        {/* Article, Gri, d */}
+        <divclassName = "gridmd: gr, i, d-co, l, s-2 l
+  g:gr, i, d-co, l, s-4, ga, p-6mb-12">"
+        <div, className="gridmd: gr, i, d-co, l, s-2 l
+  g:gr, i, d-co, l, s-4, ga, p-6mb-12">";
+          {breakthroughArticl, e, s.m, a, p((artic, l, e, ind, e, x) => (
+            <moti, o, n.d, i, v
+  key = {artic, l, e.sl, u, g}
+              initi, al={{ opacity: 0y: 30 }}
+              anima, te={{ opacity: 1, y: 0 }}
+              transiti, on={{ delay: 0.1 * ind, e, x, duration: 0.6 }}
+              whileHov, er={{ scale: 1.05, translateY: -8 }}
+              className="group, relativ, e"
             >
-              <Link to={`/blog/${article.slug}`}>
-                <div className={`relative bg-gradient-to-br ${article.gradient} rounded-2xl p-6 h-full border-2 border-white/30 hover:border-white/60 transition-all duration-300 shadow-xl hover:shadow-3xl`}>
-                  {/* Icon Badge */}
-                  <div className="absolute -top-4 -right-4 w-14 h-14 bg-white rounded-full flex items-center justify-center text-3xl shadow-2xl group-hover:rotate-12 group-hover:scale-110 transition-all duration-300">
-                    {article.icon}
-                  </div>
-                  
-                  {/* Category Badge */}
-                  <div className="mb-4">
-                    <span className="inline-block px-3 py-1.5 bg-white/25 backdrop-blur-md rounded-full text-xs font-bold text-white border border-white/40 shadow-md">
-                      {article.category}
-                    </span>
-                  </div>
-                  
-                  {/* Title */}
-                  <h3 className="text-xl font-black text-white mb-3 leading-tight group-hover:text-yellow-100 transition-colors">
-                    {article.title}
+              <Link, to={`/bl, o, g/${artic, l, e.sl, u, g}`}>`;`
+                <divclassName={`relative, b, g-gradie, n, t-to-br ${artic, l, e.gradie, n, t} round, e, d-2x, l, p-6 h-full, borde, r-2, borde, r-whi, t, e/30hover: bord, e, r-whi, t, e/60, transitio, n-all, duratio, n-300, shado, w-xl, hov, e,`
+  r:shad, o, w-3, x, l`}>`;`
+                  {/* Icon, Badge */}
+                  <divclassName="absolu, t, e -t, o, p-4 -rig, h, t-4 w-1, 4, h-14, b, g-white, rounde, d-full, flex, items-center, justif, y-center, tex, t-3xl, shado, w-2xl, grou, p-hover: rota, t, e-12, grou, p-ho, v, e
+  r:sca, l, e-110, transitio, n-all, duratio, n-3, 0, 0">"
+                  <divclassName = "absolu, t, e -t, o, p-4 -rig, h, t-4 w-1, 4, h-14, b, g-white, rounde, d-full, flex, items-center, justif, y-center, tex, t-3xl, shado, w-2xl, grou, p-hover: rota, t, e-12, grou, p-ho, v, e
+  r:sca, l, e-110, transitio, n-all, duratio, n-300">";
+                    {artic, l, e.ic, o, n}
+                  </d, i, v>
+                  {/* Category, Badge */}
+                  <divclassName="mb-4">";
+                    <spanclassName = "inli, n, e-block, p, x-3, p, y-1.5, b, g-whi, t, e/25, backdro, p-bl, u, r-md, rounde, d-full, tex, t-xs, fon, t-bold, tex, t-white, border, border-whi, t, e/40shadow-md">";
+                      {artic, l, e.catego, r, y}
+                    </sp, a, n>
+                  </d, i, v>
+                  {/* Tit, le */}
+                  <h3className="te, x, t-xl, fon, t-black, tex, t-white, m, b-3, leadin, g-tight, grou, p-hover: te, x, t-yell, o, w-100, transitio, n-colo, r, s">"
+                  <h3className = "te, x, t-xl, fon, t-black, tex, t-white, m, b-3, leadin, g-tight, grou, p-hover: te, x, t-yell, o, w-100, transitio, n-colors">";
+                    {artic, l, e.tit, l, e}
                   </h3>
-                  
-                  {/* Description */}
-                  <p className="text-sm text-white/95 leading-relaxed mb-4 font-medium">
-                    {article.description}
+                  {/* Descripti, on */}
+                  <pclassName="te, x, t-sm, tex, t-whi, t, e/95, leadin, g-relaxed, m, b-4, fon, t-medi, u, m">";
+                    {artic, l, e.descripti, o, n}
                   </p>
-
-                  {/* Metric Badge */}
-                  <div className="mb-4">
-                    <span className="inline-block px-3 py-1.5 bg-yellow-400 text-black rounded-full text-xs font-black shadow-lg">
-                      {article.metric}
-                    </span>
-                  </div>
-                  
-                  {/* Read More Arrow */}
-                  <div className="flex items-center gap-2 text-white font-bold text-sm group-hover:gap-4 transition-all">
-                    <span>Explore Now</span>
-
-                  </div>
-                </div>
-              </Link>
-            </motion.div>
+                  {/* Metric, Badge */}
+                  <divclassName="mb-4">";
+                    <spanclassName = "inli, n, e-block, p, x-3, p, y-1.5, b, g-yell, o, w-400, tex, t-black, rounde, d-full, tex, t-xs, fon, t-blackshadow-lg">";
+                      {artic, l, e.metr, i, c}
+                    </sp, a, n>
+                  </d, i, v>
+                  {/* Read, MoreArrow */}
+                  <divclassName="flex, item, s-center, ga, p-2, tex, t-white, fon, t-bold, tex, t-sm, grou, p-hover: g, a, p-4, transitio, n-a, l, l">"
+                    <sp, a, n>Explore, No, w</span>
+                    <ArrowRightclassName="w-5 h-5, grou, p-hover: transla, t, e-x-1, transitio, n-transfo, r, m/>"
+                  <divclassName = "flex, item, s-center, ga, p-2, tex, t-white, fon, t-bold, tex, t-sm, grou, p-hover: g, a, p-4, transitio, n-all">";
+                    <sp, a, n>Explore, No, w</span>
+                    <ArrowRightclassName="w-5 h-5, grou, p-ho, v, e
+  r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
+                  </d, i, v>
+                </d, i, v>
+              </Li, n, k>
+            </moti, o, n.d, i, v>
           ))}
-        </div>
-
-        {/* Stats Bar */}
-        <div className="bg-white/15 backdrop-blur-xl rounded-2xl p-8 mb-10 border-2 border-white/30 shadow-2xl">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            <div>
-              
-              <div className="text-sm text-blue-200 font-semibold uppercase tracking-wide">NEW Breakthroughs</div>
-            </div>
-            <div>
-              <div className="text-4xl md:text-5xl font-black text-green-300 mb-2 animate-pulse">10,000x</div>
-              <div className="text-sm text-blue-200 font-semibold uppercase tracking-wide">Performance Gains</div>
-            </div>
-            <div>
-              <div className="text-4xl md:text-5xl font-black text-purple-300 mb-2 animate-pulse">95%+</div>
-              <div className="text-sm text-blue-200 font-semibold uppercase tracking-wide">Accuracy Achieved</div>
-            </div>
-            <div>
-              <div className="text-4xl md:text-5xl font-black text-pink-300 mb-2 animate-pulse">4-10</div>
-              <div className="text-sm text-blue-200 font-semibold uppercase tracking-wide">Weeks to Deploy</div>
-            </div>
+        </d, i, v>
+        {/* Stats, Bar */}
+        <divclassName="bg-whi, t, e/15, backdro, p-bl, u, r-xl, rounde, d-2x, l, p-8, m, b-10, borde, r-2, borde, r-whi, t, e/30, shado, w-2, x, l">
+          <divclassName = "grid, gri, d-co, l, s-2md: gr, i, d-co, l, s-4, ga, p-8, tex, t-center">"
+            <d, iv>
+              <divclassName="te, x, t-4xlmd: te, x, t-5xl, fon, t-black, tex, t-cy, a, n-300, m, b-2, animat, e-pul, s, e">8</div>"
+              <div, className="te, x, t-sm, tex, t-bl, u, e-200, fon, t-semibold, uppercase, tracking-wide">NEW, Breakthrough, s</d, i, v>
+            </d, i, v>
+            <d, i, v>
+              <div, className="te, x, t-4xlmd: te, x, t-5xl, fon, t-black, tex, t-gre, e, n-300, m, b-2, animat, e-pulse">10,00, 0, x</d, i, v>"
+              <div, className="te, x, t-sm, tex, t-bl, u, e-200, fon, t-semibold, uppercase, tracking-wide">Performance, Gain, s</d, i, v>
+            </d, i, v>
+            <d, i, v>
+              <div, className="te, x, t-4xlmd: te, x, t-5xl, fon, t-black, tex, t-purp, l, e-300, m, b-2, animat, e-pulse">95%+</d, i, v>"
+              <div, className="te, x, t-sm, tex, t-bl, u, e-200, fon, t-semibold, uppercase, tracking-wide">Accuracy, Achieve, d</d, i, v>
+            </d, i, v>
+            <d, i, v>
+              <div, className="te, x, t-4xlmd: te, x, t-5xl, fon, t-black, tex, t-pi, n, k-300, m, b-2, animat, e-pulse">4-10</d, i, v>"
+              <div, className="te, x, t-sm, tex, t-bl, u, e-200, fon, t-semibold, uppercase, tracking-wide">Weeks, to, Deploy</d, i, v>
+        <div, className="bg-whi, t, e/15, backdro, p-bl, u, r-xl, rounde, d-2x, l, p-8, m, b-10, borde, r-2, borde, r-whi, t, e/30, shado, w-2xl">";
+          <divclassName = "grid, gri, d-co, l, s-2md: gr, i, d-co, l, s-4, ga, p-8, tex, t-center">";
+            <d, iv>
+              <divclassName="te, x, t-4xlmd: te, x, t-5xl, fon, t-black, tex, t-cy, a, n-300, m, b-2, animat, e-pul, s, e">8</div>";
+              <divclassName = "te, x, t-sm, tex, t-bl, u, e-200, fon, t-semibold, uppercase, tracking-wide">NEW, Breakthrough, s</d, i, v>";
+            </d, i, v>
+            <d, iv>
+              <divclassName="te, x, t-4x, l, m
+  d: te, x, t-5xl, fon, t-black, tex, t-gre, e, n-300, m, b-2, animat, e-pul, s, e">10,00, 0, x</div>";
+              <divclassName = "te, x, t-sm, tex, t-bl, u, e-200, fon, t-semibold, uppercase, tracking-wide">Performance, Gain, s</d, i, v>";
+            </d, i, v>
+            <d, iv>
+              <divclassName="te, x, t-4xlmd: te, x, t-5xl, fon, t-black, tex, t-purp, l, e-300, m, b-2, animat, e-pul, s, e">95%+</div>";
+              <divclassName = "te, x, t-sm, tex, t-bl, u, e-200, fon, t-semibold, uppercase, tracking-wide">Accuracy, Achieve, d</d, i, v>";
+            </d, i, v>
+            <d, iv>
+              <divclassName="te, x, t-4x, l, m
+  d: te, x, t-5xl, fon, t-black, tex, t-pi, n, k-300, m, b-2, animat, e-pul, s, e">4-10</div>";
+              <divclassName = "te, x, t-sm, tex, t-bl, u, e-200, fon, t-semibold, uppercase, tracking-wide">Weeks, to, Deploy</d, i, v>";
+            </d, i, v>
+          </d, i, v>
+        </d, i, v>
+        {/* Key, BenefitsGrid */}
+        <divclassName="gridmd: gr, i, d-co, l, s-3, ga, p-6, m, b-10">"
+          <divclassName = "flex, item, s-start, ga, p-4, b, g-whi, t, e/10, backdro, p-bl, u, r-md, rounde, d-x, l, p-6, border, border-whi, t, e/20hover: bg-whi, t, e/15, transitio, n-all">"
+            <div, className="w-1, 2, h-12, rounde, d-full, b, g-cy, a, n-5, 0, 0/30, flex, items-center, justif, y-center, fle, x-shrink-0">
+              <Zap, className="w-6 h-6, tex, t-cy, a, n-2, 00  />
+        <divclassName="gridmd: gr, i, d-co, l, s-3, ga, p-6, m, b-10">";
+          <divclassName = "flex, item, s-start, ga, p-4, b, g-whi, t, e/10, backdro, p-bl, u, r-md, rounde, d-x, l, p-6, border, border-whi, t, e/20hover: bg-whi, t, e/15, transitio, n-all">";
+            <divclassName = "w-1, 2, h-12, rounde, d-full, b, g-cy, a, n-5, 0, 0/30, flex, items-center, justif, y-center, fle, x-shrink-0">";
+              <ZapclassName = "w-6 h-6, tex, t-cy, a, n-200" />";
+            </d, i, v>
+            <d, iv>
+              <h4className="fo, n, t-black, tex, t-white, m, b-2, tex, t-lg">Producti, o, n-ReadyToday</h4>";
+              <pclassName = "te, x, t-sm, tex, t-bl, u, e-200, fon, t-medium">Deploy, enterpris, e-grade, AI, in 4-10, weeks, with proven, architecture, s</p>";
+            </d, i, v>
           </div>
-        </div>
-
-        {/* Key Benefits Grid */}
-        <div className="grid md:grid-cols-3 gap-6 mb-10">
-          <div className="flex items-start gap-4 bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20 hover:bg-white/15 transition-all">
-            <div className="w-12 h-12 rounded-full bg-cyan-500/30 flex items-center justify-center flex-shrink-0">
-
-            </div>
-            <div>
-              <h4 className="font-black text-white mb-2 text-lg">Production-Ready Today</h4>
-              <p className="text-sm text-blue-200 font-medium">Deploy enterprise-grade AI in 4-10 weeks with proven architectures</p>
-            </div>
+          <divclassName="flex, item, s-start, ga, p-4, b, g-whi, t, e/10, backdro, p-bl, u, r-md, rounde, d-x, l, p-6, border, border-whi, t, e/20, hov, e
+  r: bg-whi, t, e/15, transitio, n-a, l, l">"
+            <divclassName = "w-1, 2, h-12, rounde, d-full, b, g-purp, l, e-5, 0, 0/30, flex, items-center, justif, y-center, fle, x-shrink-0">
+              <Brain, className="w-6 h-6, tex, t-purp, l, e-2, 00  />
+          <divclassName="flex, item, s-start, ga, p-4, b, g-whi, t, e/10, backdro, p-bl, u, r-md, rounde, d-x, l, p-6, border, border-whi, t, e/20hover: bg-whi, t, e/15, transitio, n-a, l, l">";
+            <divclassName = "w-1, 2, h-12, rounde, d-full, b, g-purp, l, e-5, 0, 0/30, flex, items-center, justif, y-center, fle, x-shrink-0">";
+              <BrainclassName = "w-6 h-6, tex, t-purp, l, e-200" />";
+            </d, i, v>
+            <d, iv>
+              <h4className="fo, n, t-black, tex, t-white, m, b-2, tex, t-lg">BreakthroughPerformance</h4>";
+              <pclassName = "te, x, t-sm, tex, t-bl, u, e-200, fon, t-medium">10,000x, spee, d, 95%+ accura, c, y, 85% cost, reduction, across use, case, s</p>";
+            </d, i, v>
           </div>
-          
-          <div className="flex items-start gap-4 bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20 hover:bg-white/15 transition-all">
-            <div className="w-12 h-12 rounded-full bg-purple-500/30 flex items-center justify-center flex-shrink-0">
-
-            </div>
-            <div>
-              <h4 className="font-black text-white mb-2 text-lg">Breakthrough Performance</h4>
-              <p className="text-sm text-blue-200 font-medium">10,000x speed, 95%+ accuracy, 85% cost reduction across use cases</p>
-            </div>
-          </div>
-          
-          <div className="flex items-start gap-4 bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20 hover:bg-white/15 transition-all">
-            <div className="w-12 h-12 rounded-full bg-green-500/30 flex items-center justify-center flex-shrink-0">
-
-            </div>
-            <div>
-              <h4 className="font-black text-white mb-2 text-lg">Measurable ROI</h4>
-              <p className="text-sm text-blue-200 font-medium">300-500% productivity gains with quantified business impact</p>
-            </div>
-          </div>
-        </div>
-
-        {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row gap-5 justify-center">
+          <divclassName="flex, item, s-start, ga, p-4, b, g-whi, t, e/10, backdro, p-bl, u, r-md, rounde, d-x, l, p-6, border, border-whi, t, e/20hover: bg-whi, t, e/15, transitio, n-a, l, l">"
+            <divclassName = "w-1, 2, h-12, rounde, d-full, b, g-gre, e, n-5, 0, 0/30, flex, items-center, justif, y-center, fle, x-shrink-0">
+              <TrendingUp, className="w-6 h-6, tex, t-gre, e, n-2, 00  />
+          <divclassName="flex, item, s-start, ga, p-4, b, g-whi, t, e/10, backdro, p-bl, u, r-md, rounde, d-x, l, p-6, border, border-whi, t, e/20hover: bg-whi, t, e/15, transitio, n-a, l, l">";
+            <divclassName = "w-1, 2, h-12, rounde, d-full, b, g-gre, e, n-5, 0, 0/30, flex, items-center, justif, y-center, fle, x-shrink-0">";
+              <TrendingUpclassName = "w-6 h-6, tex, t-gre, e, n-200" />";
+            </d, i, v>
+            <d, iv>
+              <h4className="fo, n, t-black, tex, t-white, m, b-2, tex, t-lg">MeasurableROI</h4>";
+              <pclassName = "te, x, t-sm, tex, t-bl, u, e-200, fon, t-medium">3, 0, 0-5, 0, 0% productivity, gains, with quantified, business, impact</p>";
+            </d, i, v>
+          </d, i, v>
+        </d, i, v>
+        {/* CTA, Buttons */}
+        <divclassName="flex, fle, x-colsm: fl, e, x-row, ga, p-5, justif, y-cent, e, r">"
+        <divclassName = "flex, fle, x-colsm: fl, e, x-row, ga, p-5, justif, y-center">";
           <Link
-            to="/blog"
-            className="group bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 hover:from-cyan-400 hover:via-blue-400 hover:to-purple-400 text-white px-12 py-5 rounded-full font-black text-xl shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-110 flex items-center justify-center gap-4"
+  to="/bl, o, g"
+            className="group, b, g-gradie, n, t-to-r, fro, m-cy, a, n-500, vi, a-bl, u, e-500, t, o-purp, l, e-500hover: fr, o, m-cy, a, n-400hover: v, i, a-bl, u, e-400hover: to-purp, l, e-400, tex, t-white, p, x-12, p, y-5, rounde, d-full, fon, t-black, tex, t-xl, shado, w-2xlhover: shad, o, w-3xl, transitio, n-all, duratio, n-300, hov, e
+  r:sca, l, e-110, flex, items-center, justif, y-center, ga, p-4"
           >
-
-            <span>Explore All 8 Breakthroughs</span>
-
-          </Link>
-          
+            <RocketclassName = "w-7 h-7, grou, p-hover: rota, t, e-12, transitio, n-transform/>"
+            <sp, a, n>Explore, All, 8 Breakthroug, h, s</sp, a, n>
+            <ArrowRight, className="w-6 h-6, grou, p-hover: transla, t, e-x-2, transitio, n-transform/>"
+            <Rocket, className="w-7 h-7, grou, p-hover: rota, t, e-12, transitio, n-transform" />";
+            <sp, a, n>Explore, All, 8 Breakthroug, h, s</span>
+            <ArrowRightclassName="w-6 h-6, grou, p-hover: transla, t, e-x-2, transitio, n-transfo, r, m" />";
+          </Li, n, k>
           <Link
-            to="/contact"
-            className="group border-3 border-white hover:bg-white text-white hover:text-indigo-900 px-12 py-5 rounded-full font-black text-xl transition-all duration-300 hover:scale-110 flex items-center justify-center gap-4 shadow-xl hover:shadow-2xl"
+  to="/conta, c, t"
+            className="group, borde, r-3, borde, r-whitehover: bg-white, tex, t-whitehover: te, x, t-indi, g, o-900, p, x-12, p, y-5, rounde, d-full, fon, t-black, tex, t-xl, transitio, n-all, duratio, n-300hover: sca, l, e-110, flex, items-center, justif, y-center, ga, p-4, shado, w-xl, hov, e
+  r:shad, o, w-2, x, l"
           >
-            <Lightbulb className="w-7 h-7 group-hover:animate-pulse" <span>Schedule AI Strategy Call</span>
-          </Link>
-        </div>
-
-        {/* Featured Topics */}
-        <div className="mt-10 pt-8 border-t-2 border-white/30">
-          <p className="text-center text-cyan-200 text-sm mb-4 font-bold uppercase tracking-wider">BREAKTHROUGH TOPICS:</p>
-          <div className="flex flex-wrap gap-3 justify-center">
+            <LightbulbclassName = "w-7 h-7, grou, p-hover: anima, t, e-pulse/>"
+            <Lightbulb, className="w-7 h-7, grou, p-hover: anima, t, e-pulse" />";
+            <sp, a, n>Schedule, AI, Strategy Ca, l, l</sp, a, n>
+          </Li, n, k>
+        </d, i, v>
+        {/* Featured, Topics */}
+        <divclassName="mt-10, p, t-8, borde, r-t-2, borde, r-whi, t, e/30">
+          <pclassName = "te, x, t-center, tex, t-cy, a, n-200, tex, t-sm, m, b-4, fon, t-bold, uppercase, tracking-wider">BREAKTHROUGHTOPICS: </p>"
+          <div, className="flex, fle, x-wrap, ga, p-3, justif, y-center">
             {[
-              "Real-Time AI",
-              "Neural Code Synthesis", 
-              "Multimodal Fusion",
-              "Supply Chain Optimization",
-              "Cognitive Assistants",
-              "Zero-Trust Security",
-              "Federated Learning",
-              "Financial Modeling",
-              "<1ms Latency",
-              "95%+ Accuracy",
-              "10,000x Performance",
-              "Enterprise Scale"
-            ].map((topic) => (
-              <span key={topic} className="px-5 py-2.5 bg-white/15 backdrop-blur-md rounded-full text-sm font-bold text-white border-2 border-white/30 hover:bg-white/25 hover:scale-105 transition-all cursor-pointer shadow-lg">
-                {topic}
-              </span>
+              "Re, a, l-TimeAI"
+              "NeuralCodeSynthesis"
+              "MultimodalFusion"
+              "SupplyChainOptimization"
+              "CognitiveAssistants"
+              "Ze, r, o-TrustSecurity"
+              "FederatedLearning"
+              "FinancialModeling"
+              "<1msLatency"
+              "95%+ Accuracy"
+              "10,000xPerformance"
+              "EnterpriseScale"
+            ].m, a, p((top, i, c) => (
+              <span, key={top, i, c} classNa, m, e="px-5, p, y-2.5, b, g-whi, t, e/15, backdro, p-bl, u, r-md, rounde, d-full, tex, t-sm, fon, t-bold, tex, t-white, borde, r-2, borde, r-whi, t, e/30hover: bg-whi, t, e/25, hov, e
+  r:sca, l, e-105, transitio, n-all, curso, r-pointershadow-lg">"
+        <div, className="mt-10, p, t-8, borde, r-t-2, borde, r-white/30">";
+          <pclassName = "te, x, t-center, tex, t-cy, a, n-200, tex, t-sm, m, b-4, fon, t-bold, uppercase, tracking-wider">BREAKTHROUGHTOPICS: </p>";
+          <divclassName = "flex, fle, x-wrap, ga, p-3, justif, y-center">";
+            {[
+              "Re, a, l-TimeAI",";
+              "NeuralCodeSynthesis", ";
+              "MultimodalFusion",";
+              "SupplyChainOptimization",";
+              "CognitiveAssistants",";
+              "Ze, r, o-TrustSecurity",";
+              "FederatedLearning",";
+              "FinancialModeling",";
+              "<1msLatency",";
+              "95%+ Accuracy",";
+              "10,000xPerformance",";
+              "EnterpriseScale"
+            ].m, a, p((top, i, c) => (
+              <spankey = {top, i, c} classNa, m, e="px-5, p, y-2.5, b, g-whi, t, e/15, backdro, p-bl, u, r-md, rounde, d-full, tex, t-sm, fon, t-bold, tex, t-white, borde, r-2, borde, r-whi, t, e/30hover: bg-whi, t, e/25, hov, e
+  r:sca, l, e-105, transitio, n-all, curso, r-pointershadow-lg">";
+                {top, i, c}
+              </sp, a, n>
             ))}
-          </div>
-        </div>
-      </div>
-    </motion.div>
+          </d, i, v>
+        </d, i, v>
+      </d, i, v>
+    </moti, o, n.d, i, v>
   );
 };
-
 export default September30MegaBanner2025;

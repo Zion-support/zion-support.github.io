@@ -81,8 +81,7 @@ function runAnalysis() {
   generateRecommendations();
   
   console.log('\n📊 ANALYSIS SUMMARY');
-  console.log('==================');
-  console.log(`Missing Pages: ${analysisResults.missingPages.length}`);
+  console.log('  console.log(`Missing Pages: ${analysisResults.missingPages.length}`);
   console.log(`Routing Issues: ${analysisResults.routingIssues.length}`);
   console.log(`Recommendations: ${analysisResults.recommendations.length}`);
   
@@ -101,8 +100,7 @@ function runAnalysis() {
   }
   
   console.log('\n💡 RECOMMENDATIONS');
-  console.log('==================');
-  analysisResults.recommendations.forEach((rec, index) => {
+  console.log('  analysisResults.recommendations.forEach((rec, index) => {
     console.log(`${index + 1}. ${rec}`);
   });
   

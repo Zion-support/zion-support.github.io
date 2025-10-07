@@ -307,10 +307,10 @@ export default function AI2025OctoberIntelligentEdgeComputingEnterprise() {
             new capabilities that were previously impossible.
           </p>
           <div className="text-left"></div>
-            <a href="/contact" className="text-left"></a>
+            <a href="/<contact" className="text-left"></a>
               Start Your Edge AI Journey
             </a>
-            <a href="/services" className="text-left"></a>
+            <a href="/<services" className="text-left"></a>
               Explore Edge AI Solutions
             </a>
           </div>

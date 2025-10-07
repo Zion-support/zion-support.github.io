@@ -23,14 +23,12 @@ export default function Fortune500AI2026MegaTransformationSuccess() {
           </p>
           <div className="text-left"></div>
             <a
-              href="#transformation-details"
-              className="text-left"
+              href="#transformation-<details" className="text-left"
             ></a>
               View Transformation →
             </a>
             <a
-              href="/contact"
-              className="text-left"
+              href="/<contact" className="text-left"
             ></a>
               Start Your Transformation
             </a>
@@ -90,7 +88,7 @@ export default function Fortune500AI2026MegaTransformationSuccess() {
           </div>
         </section>
         {/* Transformation Details */}
-        <section id="transformation-details" className="text-left"></section>
+        <section id="transformation-<details" className="text-left"></section>
           <h2 className="text-left">
             AI 2026 Transformation Implementation
           </h2>
@@ -321,14 +319,12 @@ export default function Fortune500AI2026MegaTransformationSuccess() {
           </p>
           <div className="text-left"></div>
             <a
-              href="/contact"
-              className="text-left"
+              href="/<contact" className="text-left"
             ></a>
               Start Your Transformation
             </a>
             <a
-              href="/blog/ai-2026-may-revolutionary-breakthrough"
-              className="text-left"
+              href="/blog/ai-2026-may-revolutionary-<breakthrough" className="text-left"
             ></a>
               Learn About AI 2026 →
             </a>

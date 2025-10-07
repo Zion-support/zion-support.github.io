@@ -10,7 +10,7 @@ const AutonomousSecurityAIAgents2025: React.FC = () =>
           <div className="text-left" style={{ animationDelay: '2s' }}></div>
         </div>
         <div className="text-left"></div>
-          <a href="/blog" className="text-left"></a>
+          <a href="/<blog" className="text-left"></a>
             <ArrowLeft className="text-left" />
             <span>Back to Blog<
           </a>
@@ -117,8 +117,7 @@ const AutonomousSecurityAIAgents2025: React.FC = () =>
                 Deploy autonomous security agents that protect your organization 24/7 with superhuman precision.
               </p>
               <a
-                href="/contact"
-                className="text-left"
+                href="/<contact" className="text-left"
               ></a>
                 Get Security Assessment
               </a>

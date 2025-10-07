@@ -13,8 +13,7 @@ export const getFeaturedBanners = (count: number = 3): Banner[] => {
     {
       id: 'ai-solutions',
       title: 'AI-Powered Solutions',
-      description:
-        'Transform your business with cutting-edge artificial intelligence and machine learning technologies.',
+      description: 'Transform your business with cutting-edge artificial intelligence and machine learning technologies.',
       imageUrl: '/images/ai-solutions-banner.jpg',
       linkUrl: '/services/ai-solutions',
       priority: 1,
@@ -23,8 +22,7 @@ export const getFeaturedBanners = (count: number = 3): Banner[] => {
     {
       id: 'quantum-computing',
       title: 'Quantum Computing',
-      description:
-        'Revolutionary quantum-enhanced computing platforms for unprecedented performance and capabilities.',
+      description: 'Revolutionary quantum-enhanced computing platforms for unprecedented performance and capabilities.',
       imageUrl: '/images/quantum-computing-banner.jpg',
       linkUrl: '/services/quantum-computing',
       priority: 2,
@@ -33,8 +31,7 @@ export const getFeaturedBanners = (count: number = 3): Banner[] => {
     {
       id: 'automation',
       title: 'Enterprise Automation',
-      description:
-        'Complete automation suites for enterprise operations, workflows, and business processes.',
+      description: 'Complete automation suites for enterprise operations, workflows, and business processes.',
       imageUrl: '/images/automation-banner.jpg',
       linkUrl: '/services/automation',
       priority: 3,
@@ -43,8 +40,7 @@ export const getFeaturedBanners = (count: number = 3): Banner[] => {
     {
       id: 'cloud-solutions',
       title: 'Cloud Solutions',
-      description:
-        'Scalable and secure cloud infrastructure solutions for modern businesses.',
+      description: 'Scalable and secure cloud infrastructure solutions for modern businesses.',
       imageUrl: '/images/cloud-solutions-banner.jpg',
       linkUrl: '/services/cloud-solutions',
       priority: 4,
@@ -53,8 +49,7 @@ export const getFeaturedBanners = (count: number = 3): Banner[] => {
     {
       id: 'cybersecurity',
       title: 'Cybersecurity',
-      description:
-        'Advanced security solutions to protect your digital assets and infrastructure.',
+      description: 'Advanced security solutions to protect your digital assets and infrastructure.',
       imageUrl: '/images/cybersecurity-banner.jpg',
       linkUrl: '/services/cybersecurity',
       priority: 5,

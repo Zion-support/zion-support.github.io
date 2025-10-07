@@ -1,325 +1,344 @@
 /**
- * Performance Optimization Utility
- *
- * Provides tools for optimizing application performance including:
- * - Component lazy loading
- * - Image optimization
- * - Bundle size monitoring
- * - Memory leak detection
- * - Render performance tracking
+ * Performance Optimizer Utility
+ * Comprehensive performance monitoring and optimization tools
  */
 
-import * as React from 'react';
-
-export interface PerformanceMetrics {
-  componentName: string;
-  renderTime: number;
-  mountTime: number;
-  updateCount: number;
-  memoryUsage: number;
-  timestamp: Date;
+/**
+ * Web Vitals metrics tracking
+ */
+export interface WebVitalsMetrics {
+  FCP?: number; // First Contentful Paint
+  LCP?: number; // Largest Contentful Paint
+  FID?: number; // First Input Delay
+  CLS?: number; // Cumulative Layout Shift
+  TTFB?: number; // Time to First Byte
+  INP?: number; // Interaction to Next Paint
 }
 
-export class PerformanceOptimizer {
-  private metrics: Map<string, PerformanceMetrics[]> = new Map();
-  private renderStartTimes: Map<string, number> = new Map();
-  private observedComponents: Set<string> = new Set();
-
-  /**
-   * Start tracking a component render
-   */
-  startRender(componentName: string): void {
-    this.renderStartTimes.set(componentName, performance.now());
-    this.observedComponents.add(componentName);
-  }
-
-  /**
-   * End tracking a component render and record metrics
-   */
-  endRender(componentName: string): void {
-    const startTime = this.renderStartTimes.get(componentName);
-    if (!startTime) return;
-
-    const renderTime = performance.now() - startTime;
-    const metrics: PerformanceMetrics = {
-      componentName,
-      renderTime,
-      mountTime: renderTime,
-      updateCount: this.getUpdateCount(componentName),
-      memoryUsage: this.getMemoryUsage(),
-      timestamp: new Date(),
-    };
-
-    this.recordMetrics(componentName, metrics);
-    this.renderStartTimes.delete(componentName);
-  }
-
-  /**
-   * Record performance metrics for a component
-   */
-  private recordMetrics(
-    componentName: string,
-    metrics: PerformanceMetrics,
-  ): void {
-    const existingMetrics = this.metrics.get(componentName) || [];
-    existingMetrics.push(metrics);
-
-    // Keep only last 100 metrics per component
-    if (existingMetrics.length > 100) {
-      existingMetrics.splice(0, existingMetrics.length - 100);
-    }
-
-    this.metrics.set(componentName, existingMetrics);
-  }
-
-  /**
-   * Get update count for a component
-   */
-  private getUpdateCount(componentName: string): number {
-    const existingMetrics = this.metrics.get(componentName) || [];
-    return existingMetrics.length;
-  }
-
-  /**
-   * Get current memory usage (if available)
-   */
-  private getMemoryUsage(): number {
-    if ('memory' in performance) {
-      return (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory?.usedJSHeapSize || 0;
-    }
-    return 0;
-  }
-
-  /**
-   * Get performance metrics for a component
-   */
-  getMetrics(componentName: string): PerformanceMetrics[] {
-    return this.metrics.get(componentName) || [];
-  }
-
-  /**
-   * Get all performance metrics
-   */
-  getAllMetrics(): Map<string, PerformanceMetrics[]> {
-    return new Map(this.metrics);
-  }
-
-  /**
-   * Get average render time for a component
-   */
-  getAverageRenderTime(componentName: string): number {
-    const metrics = this.getMetrics(componentName);
-    if (metrics.length === 0) return 0;
-
-    const totalTime = metrics.reduce(
-      (sum, metric) => sum + metric.renderTime,
-      0,
-    );
-    return totalTime / metrics.length;
-  }
-
-  /**
-   * Get slowest components
-   */
-  getSlowestComponents(
-    limit: number = 10,
-  ): Array<{ componentName: string; averageTime: number }> {
-    const results: Array<{ componentName: string; averageTime: number }> = [];
-
-    for (const [componentName] of this.metrics) {
-      const averageTime = this.getAverageRenderTime(componentName);
-      results.push({ componentName, averageTime });
-    }
-
-    return results
-      .sort((a, b) => b.averageTime - a.averageTime)
-      .slice(0, limit);
-  }
-
-  /**
-   * Check if a component is performing poorly
-   */
-  isComponentSlow(componentName: string, threshold: number = 16): boolean {
-    const averageTime = this.getAverageRenderTime(componentName);
-    return averageTime > threshold; // 16ms = 60fps threshold
-  }
-
-  /**
-   * Get performance summary
-   */
-  getPerformanceSummary(): {
-    totalComponents: number;
-    slowComponents: number;
-    averageRenderTime: number;
-    memoryUsage: number;
-  } {
-    const allMetrics = Array.from(this.metrics.values()).flat();
-    const slowComponents = Array.from(this.metrics.keys()).filter(name =>
-      this.isComponentSlow(name),
-    ).length;
-
-    const totalRenderTime = allMetrics.reduce(
-      (sum, metric) => sum + metric.renderTime,
-      0,
-    );
-    const averageRenderTime =
-      allMetrics.length > 0 ? totalRenderTime / allMetrics.length : 0;
-
-    return {
-      totalComponents: this.metrics.size,
-      slowComponents,
-      averageRenderTime,
-      memoryUsage: this.getMemoryUsage(),
-    };
-  }
-
-  /**
-   * Clear all metrics
-   */
-  clearMetrics(): void {
-    this.metrics.clear();
-    this.renderStartTimes.clear();
-    this.observedComponents.clear();
-  }
-
-  /**
-   * Clear metrics for a specific component
-   */
-  clearComponentMetrics(componentName: string): void {
-    this.metrics.delete(componentName);
-    this.renderStartTimes.delete(componentName);
-    this.observedComponents.delete(componentName);
-  }
-
-  /**
-   * Export metrics as JSON
-   */
-  exportMetrics(): string {
-    const exportData = {
-      timestamp: new Date().toISOString(),
-      summary: this.getPerformanceSummary(),
-      components: Object.fromEntries(this.metrics),
-    };
-
-    return JSON.stringify(exportData, null, 2);
-  }
-
-  /**
-   * Import metrics from JSON
-   */
-  importMetrics(jsonData: string): void {
-    try {
-      const data = JSON.parse(jsonData);
-      if (data.components) {
-        this.metrics = new Map(Object.entries(data.components));
-      }
-    } catch (error) {
-      console.error('Failed to import metrics:', error);
-    }
-  }
-}
-
-// Global instance
-export const performanceOptimizer = new PerformanceOptimizer();
-
-// React HOC for performance tracking
-export function withPerformanceTracking<P extends object>(
-  WrappedComponent: React.ComponentType<P>,
-  componentName?: string,
-) {
-  const displayName =
-    componentName ||
-    WrappedComponent.displayName ||
-    WrappedComponent.name ||
-    'Component';
-
-  const TrackedComponent = React.forwardRef<unknown, P>((props, ref) => {
-    React.useEffect(() => {
-      performanceOptimizer.startRender(displayName);
-
-      return () => {
-        performanceOptimizer.endRender(displayName);
-      };
-    });
-
-    return React.createElement(WrappedComponent, { ...props, ref } as P);
+/**
+ * Resource hints for performance
+ */
+export const prefetchResources = (urls: string[]): void => {
+  if (typeof document === 'undefined') return;
+  
+  urls.forEach(url => {
+    const link = document.createElement('link');
+    link.rel = 'prefetch';
+    link.href = url;
+    document.head.appendChild(link);
   });
-
-  TrackedComponent.displayName = `withPerformanceTracking(${displayName})`;
-
-  return TrackedComponent;
-}
-
-// Hook for performance tracking
-export function usePerformanceTracking(componentName: string) {
-  React.useEffect(() => {
-    performanceOptimizer.startRender(componentName);
-
-    return () => {
-      performanceOptimizer.endRender(componentName);
-    };
-  });
-}
-
-// Utility functions
-export const performanceUtils = {
-  /**
-   * Debounce function for performance
-   */
-  debounce<T extends (...args: unknown[]) => unknown>(
-    func: T,
-    wait: number,
-  ): (...args: Parameters<T>) => void {
-    let timeout: NodeJS.Timeout;
-    return (...args: Parameters<T>) => {
-      clearTimeout(timeout);
-      timeout = setTimeout(() => func(...args), wait);
-    };
-  },
-
-  /**
-   * Throttle function for performance
-   */
-  throttle<T extends (...args: unknown[]) => unknown>(
-    func: T,
-    limit: number,
-  ): (...args: Parameters<T>) => void {
-    let inThrottle: boolean;
-    return (...args: Parameters<T>) => {
-      if (!inThrottle) {
-        func(...args);
-        inThrottle = true;
-        setTimeout(() => (inThrottle = false), limit);
-      }
-    };
-  },
-
-  /**
-   * Check if component should re-render
-   */
-  shouldComponentUpdate<P extends object>(
-    prevProps: P,
-    nextProps: P,
-    keys: (keyof P)[],
-  ): boolean {
-    return keys.some(key => prevProps[key] !== nextProps[key]);
-  },
-
-  /**
-   * Memoize expensive calculations
-   */
-  memoize<T extends (...args: unknown[]) => unknown>(fn: T): T {
-    const cache = new Map();
-    return ((...args: Parameters<T>) => {
-      const key = JSON.stringify(args);
-      if (cache.has(key)) {
-        return cache.get(key);
-      }
-      const result = fn(...args);
-      cache.set(key, result);
-      return result;
-    }) as T;
-  },
 };
 
-export default performanceOptimizer;
+/**
+ * Preconnect to external domains
+ */
+export const preconnectDomains = (domains: string[]): void => {
+  if (typeof document === 'undefined') return;
+  
+  domains.forEach(domain => {
+    const link = document.createElement('link');
+    link.rel = 'preconnect';
+    link.href = domain;
+    link.crossOrigin = 'anonymous';
+    document.head.appendChild(link);
+  });
+};
+
+/**
+ * Lazy load images with Intersection Observer
+ */
+export const lazyLoadImages = (): void => {
+  if (typeof window === 'undefined') return;
+  if (!('IntersectionObserver' in window)) return;
+<<<<<<< HEAD
+  
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-b775
+  const imageObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const img = entry.target as HTMLImageElement;
+        const src = img.dataset.src;
+        if (src) {
+          img.src = src;
+          img.removeAttribute('data-src');
+          imageObserver.unobserve(img);
+        }
+      }
+    });
+  }, {
+    rootMargin: '50px 0px',
+    threshold: 0.01
+  });
+<<<<<<< HEAD
+  
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-b775
+  document.querySelectorAll('img[data-src]').forEach(img => {
+    imageObserver.observe(img);
+  });
+};
+
+/**
+ * Debounce function for performance optimization
+ */
+export function debounce<T extends (...args: any[]) => any>(
+  func: T,
+  wait: number
+): (...args: Parameters<T>) => void {
+  let timeout: NodeJS.Timeout | null = null;
+  return function executedFunction(...args: Parameters<T>) {
+    const later = () => {
+      timeout = null;
+      func(...args);
+    };
+    if (timeout) clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+  };
+}
+
+/**
+ * Throttle function for performance optimization
+ */
+export function throttle<T extends (...args: any[]) => any>(
+  func: T,
+  limit: number
+): (...args: Parameters<T>) => void {
+  let inThrottle: boolean;
+  return function executedFunction(...args: Parameters<T>) {
+    if (!inThrottle) {
+      func(...args);
+      inThrottle = true;
+      setTimeout(() => (inThrottle = false), limit);
+    }
+  };
+}
+
+/**
+ * Measure page load performance
+ */
+export const measurePageLoad = (): WebVitalsMetrics | null => {
+  if (typeof window === 'undefined' || !window.performance) return null;
+  
+  const perfData = window.performance.timing;
+  const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+  
+  return {
+    FCP: navigation?.responseStart - navigation?.fetchStart,
+    TTFB: perfData.responseStart - perfData.navigationStart
+  };
+};
+
+/**
+ * Report Web Vitals to analytics
+ */
+export const reportWebVitals = (metrics: WebVitalsMetrics): void => {
+  console.log('Web Vitals: ', metrics);
+<<<<<<< HEAD
+=======
+  
+>>>>>>> cursor/fix-errors-and-merge-to-main-b775
+  // Send to analytics service
+  if (typeof window !== 'undefined' && (window as any).gtag) {
+    Object.entries(metrics).forEach(([key, value]) => {
+      if (value !== undefined) {
+        (window as any).gtag('event', key, {
+          value: Math.round(value),
+          event_category: 'Web Vitals',
+          non_interaction: true
+        });
+      }
+    });
+  }
+};
+
+/**
+ * Optimize images by detecting slow connections
+ */
+export const shouldUseWebP = (): boolean => {
+  if (typeof window === 'undefined') return false;
+  
+  const canvas = document.createElement('canvas');
+  canvas.width = canvas.height = 1;
+  return canvas.toDataURL('image/webp').indexOf('data:image/webp') === 0;
+};
+
+/**
+ * Get connection quality
+ */
+export const getConnectionQuality = (): 'slow' | 'medium' | 'fast' => {
+  if (typeof navigator === 'undefined') return 'medium';
+  
+  const connection = (navigator as any).connection || (navigator as any).mozConnection || (navigator as any).webkitConnection;
+  if (!connection) return 'medium';
+  
+  const effectiveType = connection.effectiveType;
+  if (effectiveType === 'slow-2g' || effectiveType === '2g') return 'slow';
+  if (effectiveType === '3g') return 'medium';
+  return 'fast';
+};
+
+/**
+ * Adaptive loading based on network conditions
+ */
+export const shouldLoadHeavyAssets = (): boolean => {
+  const quality = getConnectionQuality();
+  const saveData = typeof navigator !== 'undefined' && (navigator as any).connection?.saveData;
+  return quality === 'fast' && !saveData;
+};
+
+/**
+ * Request Idle Callback wrapper with fallback
+ */
+export const requestIdleCallback = (callback: IdleRequestCallback): number => {
+  if (typeof window === 'undefined') return 0;
+  
+  if ('requestIdleCallback' in window) {
+    return window.requestIdleCallback(callback);
+  }
+  
+  // Fallback for browsers that don't support requestIdleCallback
+<<<<<<< HEAD
+  return (window as any).setTimeout(() => {
+=======
+  return window.setTimeout(() => {
+>>>>>>> cursor/fix-errors-and-merge-to-main-b775
+    const start = Date.now();
+    callback({
+      didTimeout: false,
+      timeRemaining: () => Math.max(0, 50 - (Date.now() - start))
+    });
+  }, 1) as unknown as number;
+};
+
+/**
+ * Cancel Idle Callback wrapper with fallback
+ */
+export const cancelIdleCallback = (id: number): void => {
+  if (typeof window === 'undefined') return;
+  
+  if ('cancelIdleCallback' in window) {
+    window.cancelIdleCallback(id);
+  } else {
+<<<<<<< HEAD
+    (window as any).clearTimeout(id);
+=======
+    clearTimeout(id);
+>>>>>>> cursor/fix-errors-and-merge-to-main-b775
+  }
+};
+
+/**
+ * Optimize bundle loading with route-based code splitting
+ */
+export const preloadRoute = (route: string): void => {
+  if (typeof document === 'undefined') return;
+  
+  const link = document.createElement('link');
+  link.rel = 'prefetch';
+  link.as = 'script';
+  link.href = route;
+  document.head.appendChild(link);
+};
+
+/**
+ * Monitor long tasks (> 50ms) for performance debugging
+ */
+export const monitorLongTasks = (callback: (entries: PerformanceEntryList) => void): PerformanceObserver | null => {
+  if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return null;
+  
+  try {
+    const observer = new PerformanceObserver((list) => {
+      callback(list.getEntries());
+    });
+    observer.observe({ entryTypes: ['longtask'] });
+    return observer;
+  } catch (e) {
+    console.warn('Long task monitoring not supported: ', e);
+    return null;
+  }
+};
+
+/**
+ * Cache-first strategy for static assets
+ */
+export const cacheStaticAssets = async (urls: string[]): Promise<void> => {
+  if (typeof caches === 'undefined') return;
+  
+  const cache = await caches.open('static-assets-v1');
+  await cache.addAll(urls);
+};
+
+/**
+ * Clear old caches
+ */
+export const clearOldCaches = async (currentVersion: string): Promise<void> => {
+  if (typeof caches === 'undefined') return;
+  
+  const cacheNames = await caches.keys();
+  await Promise.all(
+    cacheNames
+      .filter(name => name !== currentVersion)
+      .map(name => caches.delete(name))
+  );
+};
+
+/**
+ * Performance budget checker
+ */
+export interface PerformanceBudget {
+  maxBundleSize: number; // in KB
+  maxImageSize: number; // in KB
+  maxFirstLoad: number; // in ms
+  maxInteractive: number; // in ms
+}
+
+export const checkPerformanceBudget = (budget: PerformanceBudget): {
+  passed: boolean;
+  violations: string[];
+} => {
+  const violations: string[] = [];
+  
+  if (typeof window === 'undefined' || !window.performance) {
+    return { passed: true, violations };
+  }
+  
+  const timing = window.performance.timing;
+  const loadTime = timing.loadEventEnd - timing.navigationStart;
+  const interactiveTime = timing.domInteractive - timing.navigationStart;
+  
+  if (loadTime > budget.maxFirstLoad) {
+    violations.push(`First load time (${loadTime}ms) exceeds budget (${budget.maxFirstLoad}ms)`);
+  }
+  
+  if (interactiveTime > budget.maxInteractive) {
+    violations.push(`Time to interactive (${interactiveTime}ms) exceeds budget (${budget.maxInteractive}ms)`);
+  }
+  
+  return {
+    passed: violations.length === 0,
+    violations
+  };
+};
+
+export default {
+  prefetchResources,
+  preconnectDomains,
+  lazyLoadImages,
+  debounce,
+  throttle,
+  measurePageLoad,
+  reportWebVitals,
+  shouldUseWebP,
+  getConnectionQuality,
+  shouldLoadHeavyAssets,
+  requestIdleCallback,
+  cancelIdleCallback,
+  preloadRoute,
+  monitorLongTasks,
+  cacheStaticAssets,
+  clearOldCaches,
+  checkPerformanceBudget
+};

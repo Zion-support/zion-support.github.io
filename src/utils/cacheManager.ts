@@ -1,281 +1,102 @@
 /**
- * Cache Manager
- * Implements intelligent caching strategies for better performance
+ * Cache Manage r
+ * Implements intelligent caching strategies for better performan c e
  */
 
-export interface CacheOptions {
-  ttl?: number; // Time to live in milliseconds
-  strategy?: 'memory' | 'localStorage' | 'sessionStorage';
-  maxSize?: number; // Maximum number of entries
-}
+export interface CacheOptions { 
+  t, t, l?: number; // Time to live in milliseconds strategy?: 'memo r y' | 'localStora g e' | 'sessionStora g e';
+  maxSi, z, e ?  : number; // Maximum number of entri e s
+ }
 
 export interface CacheEntry<T> {
-  data: T;
-  timestamp: number;
-  ttl: number;
+  da, t, a: T;
+  timesta, m, p: number;
+  t, t, l: num, b, e, r;
 }
 
-class CacheManager {
-  private memoryCache: Map<string, CacheEntry<unknown>> = new Map();
-  private readonly DEFAULT_TTL = 5 * 60 * 1000; // 5 minutes
-  private readonly DEFAULT_MAX_SIZE = 100;
+class CacheManage, r { 
+  private, memoryCach, e: M, a, p<str, i, n, g, CacheEnt, r, y<unkno, w, n>> = new, Ma, p();
+  private, readonly, DEFAULT_TTL = 5 * 60 * 10, 0, 0; // 5 minutes private readonly DEFAULT_MAX_SIZ E = 1 0 0;
 
-  /**
-   * Set a value in cache
-   */
-  set<T>(
-    key: string,
-    value: T,
-    options: CacheOptions = {}
-  ): void {
-    const {
-      ttl = this.DEFAULT_TTL,
-      strategy = 'memory',
-      maxSize = this.DEFAULT_MAX_SIZE,
-    } = options;
+>>>>>>> origin/merge-fixes-20251005-193002
+    k, e, y: str, i, n, g,
+    strate, g, y: 'memo, r, y' | 'localStora, g, e' | 'sessionStora, g, e' = 'mem, o, r, y',
+  ): T | nu, l, l { 
+    let entr, y: CacheEnt, r, y<T > | nu, l, l = nu, l, l; swit, c, h() { ca, s, e 'memo, r, y':
+        ent, r, y = th, i, s.memoryCac, h, e.g, e, t(ke, y) || nu, l, l; bre, a, k;
+      ca, s, e 'localStora, g, e':
+        ent, r, y = th, i, s.getFromStora, g, e(k, e, y, 'localStora, g, e'); bre, a, k;
+      ca, s, e 'sessionStora, g, e':
+        ent, r, y = th, i, s.getFromStora, g, e(ke, y, 'sessionStora, g, e'); bre, a, k;
+      }, if (!ent, r, y) return, nul, l;
 
-    const entry: CacheEntry<T> = {
-      data: value,
-      timestamp: Date.now(),
-      ttl,
-    };
-
-    switch (strategy) {
-      case 'memory':
-        this.setInMemory(key, entry, maxSize);
-        break;
-      case 'localStorage':
-        this.setInStorage(key, entry, 'localStorage');
-        break;
-      case 'sessionStorage':
-        this.setInStorage(key, entry, 'sessionStorage');
-        break;
-    }
-  }
-
-  /**
-   * Get a value from cache
-   */
-  get<T>(
-    key: string,
-    strategy: 'memory' | 'localStorage' | 'sessionStorage' = 'memory'
-  ): T | null {
-    let entry: CacheEntry<T> | null = null;
-
-    switch (strategy) {
-      case 'memory':
-        entry = this.memoryCache.get(key) || null;
-        break;
-      case 'localStorage':
-        entry = this.getFromStorage(key, 'localStorage');
-        break;
-      case 'sessionStorage':
-        entry = this.getFromStorage(key, 'sessionStorage');
-        break;
-    }
-
-    if (!entry) return null;
-
-    // Check if entry has expired
-    if (this.isExpired(entry)) {
-      this.delete(key, strategy);
-      return null;
-    }
-
-    return entry.data;
-  }
-
-  /**
-   * Delete a value from cache
-   */
-  delete(
-    key: string,
-    strategy: 'memory' | 'localStorage' | 'sessionStorage' = 'memory'
-  ): void {
-    switch (strategy) {
-      case 'memory':
-        this.memoryCache.delete(key);
-        break;
-      case 'localStorage':
-        localStorage.removeItem(key);
-        break;
-      case 'sessionStorage':
-        sessionStorage.removeItem(key);
-        break;
-    }
-  }
-
-  /**
-   * Clear all cache
-   */
-  clear(strategy?: 'memory' | 'localStorage' | 'sessionStorage'): void {
-    if (!strategy || strategy === 'memory') {
-      this.memoryCache.clear();
-    }
-    if (!strategy || strategy === 'localStorage') {
-      localStorage.clear();
-    }
-    if (!strategy || strategy === 'sessionStorage') {
-      sessionStorage.clear();
-    }
-  }
-
-  /**
-   * Check if a key exists and is not expired
-   */
-  has(
-    key: string,
-    strategy: 'memory' | 'localStorage' | 'sessionStorage' = 'memory'
+    // Check if entry has expired if (th i s.isExpir e d(ent r y)) {
+    k, e, y: str, i, n, g,
+    strate, g, y: 'memo, r, y' | 'localStora, g, e' | 'sessionStora, g, e' = 'mem, o, r, y',
+    if (!strate, g, y || strate, g, y = == 'sessionStor, a, g, e') {
+    k, e, y: str, i, n, g,
+    strate, g, y: 'memo, r, y' | 'localStora, g, e' | 'sessionStora, g, e' = 'mem, o, r, y',
   ): boolean {
-    const value = this.get(key, strategy);
-    return value !== null;
-  }
-
-  /**
-   * Get or set pattern - fetch from cache or compute if missing
-   */
-  async getOrSet<T>(
-    key: string,
-    factory: () => Promise<T> | T,
-    options: CacheOptions = {}
-  ): Promise<T> {
-    const strategy = options.strategy || 'memory';
-    const cached = this.get<T>(key, strategy);
-
-    if (cached !== null) {
-      return cached;
-    }
-
-    const value = await factory();
-    this.set(key, value, options);
-    return value;
-  }
-
-  /**
-   * Invalidate cache entries matching a pattern
-   */
-  invalidatePattern(pattern: RegExp, strategy: 'memory' | 'localStorage' | 'sessionStorage' = 'memory'): void {
-    switch (strategy) {
-      case 'memory':
-        Array.from(this.memoryCache.keys())
-          .filter(key => pattern.test(key))
-          .forEach(key => this.memoryCache.delete(key));
-        break;
-      case 'localStorage':
-        Object.keys(localStorage)
-          .filter(key => pattern.test(key))
-          .forEach(key => localStorage.removeItem(key));
-        break;
-      case 'sessionStorage':
-        Object.keys(sessionStorage)
-          .filter(key => pattern.test(key))
-          .forEach(key => sessionStorage.removeItem(key));
-        break;
-    }
-  }
-
-  /**
-   * Get cache statistics
-   */
-  getStats(): {
-    memorySize: number;
-    localStorageSize: number;
-    sessionStorageSize: number;
+    const, valu, e = th, i, s.g, e, t(ke, y, strate, g, y); return, valu, e !== nu, l, l;
+    k, e, y: str, i, n, g,
+    strate, g, y: 'memo, r, y' | 'localStora, g, e' | 'sessionStora, g, e' = 'mem, o, r, y',
+    if (!strate, g, y || strate, g, y = == 'sessionStor, a, g, e') {
+    k, e, y: str, i, n, g,
+    strate, g, y: 'memo, r, y' | 'localStora, g, e' | 'sessionStora, g, e' = 'mem, o, r, y',
+  ): boolean {
+    const valu, e = th, i, s.g, e, t(ke, y, strate, g, y); return, valu, e !== nu, l, l;
+>>>>>>> origin/merge-fixes-20251005-193002
+  invalidatePatte, r, n(
+    patte, r, n: Reg, E, x, p,
+    strate, g, y: 'memo, r, y' | 'localStora, g, e' | 'sessionStora, g, e' = 'mem, o, r, y',
+  ): vo, i, d { 
+    swit, c, h (strate, g, y) {
+      ca, s, e 'memo, r, y':
+        Arr, a, y.fr, o, m(th, i, s.memoryCac, h, e.ke, y, s())
+          .filt, e, r(k, e, y = > patte, r, n.te, s, t(ke, y))
+          .forEa, c, h(k, e, y = > th, i, s.memoryCac, h, e.dele, t, e(ke, y)); bre, a, k;
+      ca, s, e 'localStora, g, e':
+        Obje, c, t.ke, y, s(localStora, g, e)
+          .filt, e, r(k, e, y = > patte, r, n.te, s, t(ke, y))
+          .forEa, c, h(k, e, y = > localStora, g, e.removeIt, e, m(ke, y)); bre, a, k;
+      ca, s, e 'sessionStora, g, e':
+        Obje, c, t.ke, y, s(sessionStora, g, e)
+          .filt, e, r(k, e, y = > patte, r, n.te, s, t(ke, y))
+          .forEa, c, h(k, e, y = > sessionStora, g, e.removeIt, e, m(ke, y)); bre, a, k;
+     }
+      memorySi, z, e: th, i, s.memoryCac, h, e.s, i, z, e,
+      localStorageSi, z, e: localStora, g, e.len, g, t, h,
+      sessionStorageSi, z, e: sessionStora, g, e.len, g, t, h,
+    memorySi, z, e: number;
+    localStorageSi, z, e: number;
+    sessionStorageSi, z, e: num, b, e, r;
   } {
     return {
-      memorySize: this.memoryCache.size,
-      localStorageSize: localStorage.length,
-      sessionStorageSize: sessionStorage.length,
-    };
-  }
-
-  // Private helper methods
-
-  private setInMemory<T>(key: string, entry: CacheEntry<T>, maxSize: number): void {
-    // Implement LRU eviction if cache is full
-    if (this.memoryCache.size >= maxSize) {
-      const firstKey = this.memoryCache.keys().next().value;
-      if (firstKey) {
-        this.memoryCache.delete(firstKey);
-      }
-    }
-    this.memoryCache.set(key, entry);
-  }
-
-  private setInStorage<T>(
-    key: string,
-    entry: CacheEntry<T>,
-    storage: 'localStorage' | 'sessionStorage'
-  ): void {
-    try {
-      const storageObj = storage === 'localStorage' ? localStorage : sessionStorage;
-      storageObj.setItem(key, JSON.stringify(entry));
-    } catch (error) {
-      console.warn(`Failed to set ${storage}:`, error);
-    }
-  }
-
-  private getFromStorage<T>(
-    key: string,
-    storage: 'localStorage' | 'sessionStorage'
-  ): CacheEntry<T> | null {
-    try {
-      const storageObj = storage === 'localStorage' ? localStorage : sessionStorage;
-      const item = storageObj.getItem(key);
-      return item ? JSON.parse(item) : null;
-    } catch (error) {
-      console.warn(`Failed to get from ${storage}:`, error);
-      return null;
-    }
-  }
-
-  private isExpired<T>(entry: CacheEntry<T>): boolean {
-    return Date.now() - entry.timestamp > entry.ttl;
-  }
-
-  /**
-   * Clean up expired entries (run periodically)
-   */
-  cleanup(): void {
-    // Clean memory cache
-    for (const [key, entry] of this.memoryCache.entries()) {
-      if (this.isExpired(entry)) {
-        this.memoryCache.delete(key);
-      }
-    }
-
-    // Clean localStorage
-    for (let i = 0; i < localStorage.length; i++) {
-      const key = localStorage.key(i);
-      if (key) {
-        const entry = this.getFromStorage(key, 'localStorage');
-        if (entry && this.isExpired(entry)) {
-          localStorage.removeItem(key);
-        }
-      }
-    }
-
-    // Clean sessionStorage
-    for (let i = 0; i < sessionStorage.length; i++) {
-      const key = sessionStorage.key(i);
-      if (key) {
-        const entry = this.getFromStorage(key, 'sessionStorage');
-        if (entry && this.isExpired(entry)) {
-          sessionStorage.removeItem(key);
-        }
-      }
-    }
-  }
-}
+      memorySi, z, e: th, i, s.memoryCac, h, e.s, i, z, e,
+      localStorageSi, z, e: localStora, g, e.len, g, t, h,
+      sessionStorageSi, z, e: sessionStora, g, e.len, g, t, h,
+>>>>>>> origin/merge-fixes-20251005-193002
+    k, e, y: str, i, n, g,
+    ent, r, y: CacheEnt, r, y<, T>,
+    stora, g, e: 'localStora, g, e' | 'sessionStor, a, g, e',
+  ): vo, i, d { 
+>>>>>>> origin/merge-fixes-20251005-193002
+    k, e, y: str, i, n, g,
+    stora, g, e: 'localStora, g, e' | 'sessionStor, a, g, e',
+  ): CacheEnt, r, y<T > | nu, l, l { 
+    t, r, y {
+      const storageOb, j = stora, g, e === 'localStora, g, e' ? localStora, g, e: sessionStora, g, e; const ite, m = storageO, b, j.getIt, e, m(ke, y); return, ite, m  ? JS, O, N.par, s, e(it, e, m)  : n, u, l, l;
+     } cat, c, h (err, o, r) {
+      conso, l, e.wa, r, n(`Failed, to, get fr, o, m ${stora, g, e}:`, err, o, r);
+>>>>>>> origin/merge-fixes-20251005-193002
 
 // Export singleton instance
-export const cacheManager = new CacheManager();
+export const cacheManager = new, CacheManag, e, r();
 
-// Run cleanup every 5 minutes
-if (typeof window !== 'undefined') {
-  setInterval(() => {
-    cacheManager.cleanup();
-  }, 5 * 60 * 1000);
-}
-
-export default cacheManager;
+// Run cleanup every 5 minutes if (typeof windo w !== 'undefin e d') { 
+  setInterv, a, l(
+    () = > {
+      cacheManag, e, r.clean, u, p();
+     },
+    5 * 60 * 10, 0, 0,
+  );

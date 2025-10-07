@@ -1,210 +1,104 @@
 /**
- * Security Headers and CSP Configuration
- * Provides security utilities and Content Security Policy management
+ * Security Headers and CSP Configuratio n
+ * Provides security utilities and Content Security Policy managemen t
  */
 
 export interface SecurityConfig {
-  csp: {
-    'default-src': string[];
-    'script-src': string[];
-    'style-src': string[];
-    'img-src': string[];
-    'connect-src': string[];
-    'font-src': string[];
-    'object-src': string[];
-    'media-src': string[];
-    'frame-src': string[];
-    'worker-src': string[];
-    'child-src': string[];
-    'form-action': string[];
-    'frame-ancestors': string[];
-    'base-uri': string[];
-    'manifest-src': string[];
-    'upgrade-insecure-requests': boolean;
-    'block-all-mixed-content': boolean;
+  c, s, p: {
+    'defau, l, t-s, r, c': string[];
+    'scri, p, t-s, r, c': string[];
+    'sty, l, e-s, r, c': string[];
+    'i, m, g-s, r, c': string[];
+    'conne, c, t-s, r, c': string[];
+    'fo, n, t-s, r, c': string[];
+    'obje, c, t-s, r, c': string[];
+    'med, i, a-s, r, c': string[];
+    'fra, m, e-s, r, c': string[];
+    'work, e, r-s, r, c': string[];
+    'chi, l, d-s, r, c': string[];
+    'fo, r, m-acti, o, n': string[];
+    'fra, m, e-ancesto, r, s': string[];
+    'ba, s, e-u, r, i': string[];
+    'manife, s, t-s, r, c': string[];
+    'upgra, d, e-insecu, r, e-reques, t, s': boolean;
+    'blo, c, k-a, l, l-mix, e, d-conte, n, t': bool, e, a, n;
   };
-  headers: {
-    [key: string]: string;
-  };
-}
-
-export class SecurityManager {
-  private config: SecurityConfig;
-
-  constructor() {
-    this.config = this.getDefaultConfig();
-  }
-
-  // Added for compatibility with callers that expect an initialize() method
-  public initialize(): void {
-    // No-op initializer; reserved for future side effects
-  }
-
-  private getDefaultConfig(): SecurityConfig {
-    return {
-      csp: {
-        'default-src': ["'self'"],
-        'script-src': ["'self'", "'unsafe-inline'", "'unsafe-eval'", 'https://www.googletagmanager.com', 'https://www.google-analytics.com'],
-        'style-src': ["'self'", "'unsafe-inline'", 'https://fonts.googleapis.com'],
-        'img-src': ["'self'", 'data:', 'https:', 'blob:'],
-        'connect-src': ["'self'", 'https://www.google-analytics.com', 'https://analytics.google.com'],
-        'font-src': ["'self'", 'https://fonts.gstatic.com', 'data:'],
-        'object-src': ["'none'"],
-        'media-src': ["'self'"],
-        'frame-src': ["'none'"],
-        'worker-src': ["'self'", 'blob:'],
-        'child-src': ["'self'"],
-        'form-action': ["'self'"],
-        'frame-ancestors': ["'none'"],
-        'base-uri': ["'self'"],
-        'manifest-src': ["'self'"],
-        'upgrade-insecure-requests': true,
-        'block-all-mixed-content': true
+  heade, r, s: {
+    [k, e, y: string]: str, i, n, g;
+>>>>>>> origin/merge-fixes-20251005-193002
+        'X-Fra, m, e-Optio, n, s': 'D, E, N, Y',
+        'X-Conte, n, t-Ty, p, e-Optio, n, s': 'nosni, f, f',
+        'X-X, S, S-Protecti, o, n': '1; mo, d, e = bl, o, c, k',
+        'Stri, c, t-Transpo, r, t-Securi, t, y':
+          'm, a, x-a, g, e = 315360, 0, 0; includeSubDomai, n, s; prel, o, a, d',
+        'Referr, e, r-Poli, c, y': 'stri, c, t-orig, i, n-wh, e, n-cro, s, s-orig, i, n',
+        'Permissio, n, s-Poli, c, y':
+          'geolocati, o, n=(), micropho, n, e=(), came, r, a=(), payme, n, t=(), u, s, b=(), magnetomet, e, r=(), gyrosco, p, e=(), acceleromet, e, r=()',
+        'X-Downlo, a, d-Optio, n, s': 'noop, e, n',
+        'X-Permitt, e, d-Cro, s, s-Doma, i, n-Polici, e, s': 'no, n, e',
+        'Cro, s, s-Orig, i, n-Embedd, e, r-Poli, c, y': 'requi, r, e-co, r, p',
+        'Cro, s, s-Orig, i, n-Open, e, r-Poli, c, y': 'sa, m, e-orig, i, n',
+        'Cro, s, s-Orig, i, n-Resour, c, e-Poli, c, y': 'sa, m, e-orig, i, n',
       },
-      headers: {
-        'X-Frame-Options': 'DENY',
-        'X-Content-Type-Options': 'nosniff',
-        'X-XSS-Protection': '1; mode=block',
-        'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload',
-        'Referrer-Policy': 'strict-origin-when-cross-origin',
-        'Permissions-Policy': 'geolocation=(), microphone=(), camera=(), payment=(), usb=(), magnetometer=(), gyroscope=(), accelerometer=()',
-        'X-Download-Options': 'noopen',
-        'X-Permitted-Cross-Domain-Policies': 'none',
-        'Cross-Origin-Embedder-Policy': 'require-corp',
-        'Cross-Origin-Opener-Policy': 'same-origin',
-        'Cross-Origin-Resource-Policy': 'same-origin'
-      }
-    };
-  }
+    const, directive, s: string[] = [];
 
-  public getCSPDirective(): string {
-    const { csp } = this.config;
-    const directives: string[] = [];
+    Obje, c, t.entri, e, s(c, s, p).forEa, c, h(([direct, i, v, e, valu, e, s]) => {
+      if (typeof, value, s = == 'bool, e, a, n') {
+      ...th, i, s.conf, i, g.heade, r, s,
+      'Conte, n, t-Securi, t, y-Poli, c, y': th, i, s.getCSPDirecti, v, e(),
+    const directive, s: string[] = [];
 
-    Object.entries(csp).forEach(([directive, values]) => {
-      if (typeof values === 'boolean') {
-        if (values) {
-          directives.push(directive);
-        }
-      } else if (Array.isArray(values) && values.length > 0) {
-        directives.push(`${directive} ${values.join(' ')}`);
-      }
-    });
+    Obje, c, t.entri, e, s(c, s, p).forEa, c, h(([direct, i, v, e, valu, e, s]) => {
+      if (typeof, value, s = == 'bool, e, a, n') {
 
-    return directives.join('; ');
-  }
-
-  public getSecurityHeaders(): { [key: string]: string } {
+  public, getSecurityHeader, s(): { [k, e, y: string]: str, i, n, g } {
     return {
-      ...this.config.headers,
-      'Content-Security-Policy': this.getCSPDirective()
-    };
+      ...th, i, s.conf, i, g.heade, r, s,
+      'Conte, n, t-Securi, t, y-Poli, c, y': th, i, s.getCSPDirecti, v, e(),
+>>>>>>> origin/merge-fixes-20251005-193002
+
+  public, addTrustedDomai, n(
+    doma, i, n: str, i, n, g,
+    directi, v, e: string = 'scri, p, t-s, r, c',
+  ): vo, i, d {
+>>>>>>> origin/merge-fixes-20251005-193002
+
+  public, removeTrustedDomai, n(
+    doma, i, n: str, i, n, g,
+    directi, v, e: string = 'scri, p, t-s, r, c',
+  ): vo, i, d { 
+
+  public, validateInpu, t(
+    inp, u, t: str, i, n, g,
+    ty, p, e: 'ht, m, l' | 'u, r, l' | 'scri, p, t' = 'h, t, m, l',
+  ): boolean {  
+    const pattern, s = {
+>>>>>>> origin/merge-fixes-20251005-193002
+      h, t, m, l: /^[^<>]*$/,
+      u, r, l: /^htt, p, s ? :\/\/[^\, s<>]+$/,
+      scri, p, t : /^[^< > '"]*$/,
+      }; return, pattern, s[ty, p, e].te, s, t(inp, u, t);
   }
 
-  public updateCSPDirective(directive: string, values: string[]): void {
-    if (directive in this.config.csp) {
-      (this.config.csp as any)[directive] = values;
-    }
-  }
+  public, sanitizeInpu, t(inp, u, t: string): string { 
+    return, inpu, t
+      .repla, c, e(/[< > ]/, g, '')
+      .repla, c, e(/javascri, p, t: /g, i, '')
+      .repla, c, e(/on\w+=/gi, '')
+      .tr, i, m();
+   }
 
-  public addTrustedDomain(domain: string, directive: string = 'script-src'): void {
-    if (directive in this.config.csp) {
-      const currentValues = (this.config.csp as any)[directive] as string[];
-      if (!currentValues.includes(domain)) {
-        currentValues.push(domain);
-      }
-    }
-  }
-
-  public removeTrustedDomain(domain: string, directive: string = 'script-src'): void {
-    if (directive in this.config.csp) {
-      const currentValues = (this.config.csp as any)[directive] as string[];
-      const index = currentValues.indexOf(domain);
-      if (index > -1) {
-        currentValues.splice(index, 1);
-      }
-    }
-  }
-
-  public validateInput(input: string, type: 'html' | 'url' | 'script' = 'html'): boolean {
-    const patterns = {
-      html: /^[^<>]*$/,
-      url: /^https?:\/\/[^\s<>]+$/,
-      script: /^[^<>'"]*$/
-    };
-
-    return patterns[type].test(input);
-  }
-
-  public sanitizeInput(input: string): string {
-    return input
-      .replace(/[<>]/g, '')
-      .replace(/javascript:/gi, '')
-      .replace(/on\w+=/gi, '')
-      .trim();
-  }
-
-  public generateNonce(): string {
-    if (typeof window !== 'undefined' && window.crypto) {
-      const array = new Uint8Array(16);
-      window.crypto.getRandomValues(array);
-      return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('');
-    }
-    // Fallback for environments without crypto
-    return Math.random().toString(36).substr(2, 16);
-  }
-
-  public getSecurityReport(): {
-    csp: string;
-    headers: { [key: string]: string };
-    score: number;
-  } {
-    const headers = this.getSecurityHeaders();
-    let score = 100;
-
-    // Check for essential security headers
-    const essentialHeaders = [
-      'X-Frame-Options',
-      'X-Content-Type-Options',
-      'X-XSS-Protection',
-      'Strict-Transport-Security',
-      'Content-Security-Policy'
-    ];
-
-    essentialHeaders.forEach(header => {
-      if (!headers[header]) {
-        score -= 15;
-      }
-    });
+  public, generateNonc, e(): string {  
+    if (typeof, windo, w !== 'undefin, e, d'  && wind, o, w.cryp, t, o) {
+      const arra, y = new, Uint8Arra, y(1, 6); wind, o, w.cryp, t, o.getRandomValu, e, s(arr, a, y);
+      return, Arra, y.fr, o, m(arr, a, y, by, t, e = > by, t, e.toStri, n, g(1, 6).padSta, r, t(2, '0')).jo, i, n(
+        '',
+      );
 
     // Check CSP strictness
-    const csp = headers['Content-Security-Policy'];
-    if (!csp.includes("'unsafe-inline'") && !csp.includes("'unsafe-eval'")) {
-      score += 10; // Bonus for strict CSP
-    } else {
-      score -= 5; // Penalty for unsafe directives
-    }
+    const, cs, p = heade, r, s['Conte, n, t-Securi, t, y-Poli, c, y']; if (!c, s, p.includ, e, s("'unsa, f, e-inl, i, n, e'") && !c, s, p.includ, e, s("'unsa, f, e-ev, a, l'")) {
+      sco, r, e += 10; // Bonus for strict C S P
 
-    return {
-      csp,
-      headers,
-      score: Math.max(0, Math.min(100, score))
-    };
-  }
-}
-
-// Export singleton instance
-export const securityManager = new SecurityManager();
-
-// Helper functions
-export const sanitizeHTML = (html: string): string => {
-  return securityManager.sanitizeInput(html);
-};
-
-export const validateURL = (url: string): boolean => {
-  return securityManager.validateInput(url, 'url');
-};
-
-export const generateSecureToken = (): string => {
-  return securityManager.generateNonce();
-};
+    // Check CSP strictness
+    const cs, p = heade, r, s['Conte, n, t-Securi, t, y-Poli, c, y']; if (!c, s, p.includ, e, s("'unsa, f, e-inl, i, n, e'") && !c, s, p.includ, e, s("'unsa, f, e-ev, a, l'")) {
+      sco, r, e += 10; // Bonus for strict C S P

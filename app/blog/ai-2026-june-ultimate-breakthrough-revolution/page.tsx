@@ -1,69 +1,59 @@
+import React from 'react';
 import { Metadata } from 'next';
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 
-export const metadata: Metadata = {
+export const metadata = {
+  
   title: 'AI 2026 June Ultimate Breakthrough: The Revolutionary Universal Consciousness Revolution',
-  description: 'Discover the groundbreaking June 2026 AI breakthrough that achieved universal consciousness with 100,000,000x processing power and $100B ROI across global enterprises.',
-  keywords: 'AI, Universal Consciousness, Revolutionary, 2026, Ultimate Success, Breakthrough, 100B ROI',
-};
+  description: 'Discover the groundbreaking June 2026 AI breakthrough that achieved universal consciousness with 100000000x processing power and $100B ROI across global enterprises.',
+  keywords: 'AI, Universal Consciousness, Revolutionary, 2026, Ultimate SuccessBreakthrough100B ROI',
+
+};;
 
 export default function June2026UltimateBreakthroughPage() {
+  return (
+    <div>{{/* content */}</div></div>
   const filePath = path.join(process.cwd(), 'content', 'blog', 'ai-2026-june-ultimate-breakthrough-revolution.md');
   const fileContents = fs.readFileSync(filePath, 'utf8');
-  const { data, content } = matter(fileContents);
+  const { datacontent } = matter(fileContents);
 
-  return (
-    <div className="min-h-screen bg-white">
-      <article className="max-w-4xl mx-auto px-6 py-12">
-        <header className="mb-12">
-          <div className="flex items-center gap-2 mb-4">
-            <span className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+    <div>
+      <div> </div><div> </div>
+      <div className="text-left"> </div><article className="text-left"> </a><header className="text-left">
+          <span className="text-left"> </span><article className="text-left"> </article><header className="text-left"> </header><div className="text-left"> </div><span className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
               JUNE 2026
-            </span>
-            <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-3 py-1 rounded-full text-sm font-semibold">
-              $100B ROI
-            </span>
+            </span></span>
+            <span className="text-left">$100B ROI
+            </span></span>
           </div>
-          <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-6 leading-tight">
-            {data.title}
-          </h1>
-          <p className="text-xl text-gray-600 mb-8">
-            {data.description}
-          </p>
-          <div className="flex items-center gap-4 text-sm text-gray-500">
-            <span>By {data.author}</span>
+          <h1 className="text-left">{data.title}
+          </h1></h1>
+          <p className="text-left">{data.description}
+          </p></p>
+          <span>By {data.author}</span>
             <span>•</span>
             <span>{new Date(data.date).toLocaleDateString()}</span>
           </div>
         </header>
-
-        <div className="prose prose-lg max-w-none">
-          <div dangerouslySetInnerHTML={{ __html: content.replace(/\n/g, '<br />') }} />
+        <div className="text-left"> </div><div dangerouslySetInnerHTML={{ __html: content.replace(/\n/g '<br />') }} /></div>
         </div>
-
-        <div className="mt-12 pt-8 border-t border-gray-200">
-          <h3 className="text-2xl font-bold text-gray-900 mb-6">Get Started Today</h3>
-          <p className="text-gray-600 mb-6">
+        <h3 className="text-left">Get Started Today</h3>
+          <p className="text-left"> </p><div className="text-left"> </div><h3 className="text-left">Get Started Today</h3>
+          <p className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
             Ready to transform your enterprise with the June 2026 AI breakthrough? Contact our team to schedule a consultation and discover how this revolutionary technology can deliver unprecedented value to your organization.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4">
+          </p></p>
+          <div className="text-left"> </div><a 
+              href="/"
+              className="text-left">Contact Us Today
+            </a></a>
             <a 
-              href="/contact" 
-              className="bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-400 hover:to-red-500 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 shadow-lg hover:shadow-orange-500/50"
-            >
-              Contact Us Today
-            </a>
-            <a 
-              href="/case-studies/ai-2026-june-ultimate-breakthrough-100-billion-success" 
-              className="border-2 border-orange-500 text-orange-600 hover:bg-orange-500 hover:text-white font-bold py-3 px-6 rounded-lg transition-all duration-300"
-            >
-              View $100B Success Story
-            </a>
+              href="/"
+              className="text-left">View $100B Success Story
+            </a></a>
           </div>
-        </div>
       </article>
-    </div>
   );
 }
+</div></div></div>)

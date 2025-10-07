@@ -1,194 +1,273 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-
-const October2025NewPremiumContentBanner: React.FC = () => {
+import React from "react";
+import React from "react";';
+const, October2025NewPremiumContentBanne, r: Rea, c, t.FC = () => {
   return (
-    <div className="relative bg-gradient-to-br from-purple-900 via-blue-900 to-cyan-900 py-16 overflow-hidden">
-      {/* Animated Background Elements */}
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-cyan-500 rounded-full filter blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500 rounded-full filter blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
-      </div>
-
-      <div className="relative container mx-auto px-6">
-        {/* Header Section */}
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-6 py-2 rounded-full text-sm font-bold mb-4 animate-pulse">
-
-            <span>🚀 JUST PUBLISHED - OCTOBER 2025 PREMIUM CONTENT 🚀</span>
-
-          </div>
-          <h2 className="text-5xl font-extrabold text-white mb-4 leading-tight">
-            Revolutionary AI Platforms
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-              Transform Your Enterprise Today
-            </span>
+    <div, className="relative, b, g-gradie, n, t-to-br, fro, m-purp, l, e-900, vi, a-bl, u, e-900, t, o-cy, a, n-900, p, y-16, overflo, w-hidd, e, n">";
+      {/* Animated, Background, Elements */}
+      <div, className="absolute, inse, t-0, opacit, y-20">
+        <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-cy, a, n-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>
+        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' }}></d, i, v>;
+      <div, className="absolute, inse, t-0, opacit, y-20">";
+        <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-cy, a, n-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>";
+        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' }}></d, i, v>';
+      </d, i, v>
+      <div, className="relative, container, mx-auto, p, x-6">";
+        {/* Header, Sectio, n */}
+        <div, className="text-center mb-12">
+          <div, className="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-cy, a, n-500, t, o-purp, l, e-500, tex, t-white, p, x-6, p, y-2, rounde, d-full, tex, t-sm, fon, t-bold, m, b-4, animat, e-pul, s, e">
+            <Sparkles, className="w-4 h-4  />
+            <sp, a, n>🚀 JUST, PUBLISHE, D - OCTOBER, 2025, PREMIUM CONTE, N, T 🚀</sp, a, n>
+            <Sparkles, className="w-4 h-4  />
+        <div, className="text-center mb-12">";
+          <div, className="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-cy, a, n-500, t, o-purp, l, e-500, tex, t-white, p, x-6, p, y-2, rounde, d-full, tex, t-sm, fon, t-bold, m, b-4, animat, e-pul, s, e">";
+            <Sparkles, className="w-4 h-4" />";
+            <sp, a, n>🚀 JUST, PUBLISHE, D - OCTOBER, 2025, PREMIUM CONTE, N, T 🚀</sp, a, n>
+            <Sparkles, className="w-4 h-4" />";
+          </d, i, v>
+          <h2, className="te, x, t-5xl, fon, t-extrabold, tex, t-white, m, b-4, leadin, g-tig, h, t">";
+            Revolutionary, AI, Platforms;
+            <span, className="block, tex, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-cy, a, n-400, t, o-purp, l, e-4, 0, 0">";
+              Transform, Your, Enterprise Tod, a, y;
+            </sp, a, n>
           </h2>
-          <p className="text-xl text-cyan-100 max-w-3xl mx-auto">
-            Three breakthrough platforms delivering unprecedented ROI, security, and competitive advantage
+          <p, className="te, x, t-xl, tex, t-cy, a, n-100, ma, x-w-3xl, m, x-au, t, o">";
+            Three, breakthrough, platforms delivering, unprecedented, ROI, securi, t, y, and, competitive, advantage;
           </p>
-        </div>
-
-        {/* Content Cards Grid */}
-        <div className="grid md:grid-cols-3 gap-8 mb-12">
-          
-          {/* Card 1: Autonomous DevOps */}
-          <div className="group bg-white/10 backdrop-blur-lg rounded-2xl p-8 border-2 border-cyan-500/30 hover:border-cyan-400 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/50">
-            <div className="flex items-center gap-3 mb-6">
-              <div className="p-3 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl group-hover:rotate-12 transition-transform duration-300">
-                <Activity className="w-8 h-8 text-white"</div>
-              <div className="px-3 py-1 bg-green-500/20 border border-green-400 rounded-full">
-                
-              </div>
-            </div>
-            
-            <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-cyan-300 transition-colors">
-              Autonomous DevOps Platform
+        </d, i, v>
+        {/* Content, Cards, Grid */}
+        <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12">"
+          {/* Car, d, 1: Autonomous, DevOp, s */}
+          <div, className="group, b, g-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, borde, r-2, borde, r-cy, a, n-5, 0, 0/30, hove, r: bord, e, r-cy, a, n-400, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hov, e
+  r:shad, o, w-cy, a, n-5, 0, 0/50">"
+            <div, className="flex, item, s-center, ga, p-3, m, b-6">
+              <div, className="p-3, b, g-gradie, n, t-to-br, fro, m-cy, a, n-500, t, o-bl, u, e-600, rounde, d-xl, grou, p-hov, e, r: rota, t, e-12, transitio, n-transform, duratio, n-3, 0, 0">"
+                <Activity, className="w-8 h-8, tex, t-whi, t, e  />
+        <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12">";
+          {/* Ca, r, d 
+  1: Autonomous, DevOp, s */}
+          <div, className="group, b, g-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, borde, r-2, borde, r-cy, a, n-5, 0, 0/30, hove, r: bord, e, r-cy, a, n-400, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-cy, a, n-5, 0, 0/50">";
+            <div, className="flex, item, s-center, ga, p-3, m, b-6">";
+              <div, className="p-3, b, g-gradie, n, t-to-br, fro, m-cy, a, n-500, t, o-bl, u, e-600, rounde, d-xl, grou, p-hov, e, r: rota, t, e-12, transitio, n-transform, duratio, n-3, 0, 0">";
+                <Activity, className="w-8 h-8, tex, t-whi, t, e" />";
+              </d, i, v>
+              <div, className="px-3, p, y-1, b, g-gre, e, n-5, 0, 0/20, border, border-gre, e, n-400, rounde, d-fu, l, l">";
+                <span, className="te, x, t-gre, e, n-300, tex, t-xs, fon, t-bo, l, d">N, E, W</sp, a, n>";
+              </d, i, v>
+            </d, i, v>
+            <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e
+  r: te, x, t-cy, a, n-300, transitio, n-colo, r, s">"
+            <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-cy, a, n-300, transitio, n-colo, r, s">";
+              Autonomous, DevOps, Platform;
             </h3>
-            
-            <p className="text-cyan-100 mb-6 text-sm leading-relaxed">
-              Self-healing infrastructure with AI-powered automation
+            <p, className="te, x, t-cy, a, n-100, m, b-6, tex, t-sm, leadin, g-relax, e, d">";
+              Se, l, f-healing, infrastructure, with AI-powered, automatio, n;
             </p>
-            
-            <div className="space-y-3 mb-6">
-              <div className="flex items-start gap-2">
-
-                <span className="text-white text-sm"><strong className="text-cyan-300">99.99% uptime</strong> with intelligent self-healing</span>
-              </div>
-              <div className="flex items-start gap-2">
-
-                <span className="text-white text-sm"><strong className="text-cyan-300">92% faster</strong> incident response time</span>
-              </div>
-              <div className="flex items-start gap-2">
-
-                <span className="text-white text-sm"><strong className="text-cyan-300">$340M+</strong> annual value creation</span>
-              </div>
-              <div className="flex items-start gap-2">
-
-                <span className="text-white text-sm"><strong className="text-cyan-300">87% cost savings</strong> in operations</span>
-              </div>
-            </div>
-            
-            <Link 
-              to="/blog/ai-autonomous-devops-platform-2025-october"
-              className="flex items-center gap-2 text-cyan-300 hover:text-white font-semibold group-hover:gap-3 transition-all"
+            <div, className="spa, c, e-y-3, m, b-6">
+              <div, className="flex, item, s-start, ga, p-2">
+                <Zap, className="w-5 h-5, tex, t-cy, a, n-400, fle, x-shri, n, k-0, m, t-0.5  />
+                <span, className="te, x, t-white, tex, t-sm"><strong, className="te, x, t-cy, a, n-3, 0, 0">99.99% upti, m, e</stro, n, g> with, intelligent, self-heali, n, g</sp, a, n>
+              </d, i, v>
+              <div, className="flex, item, s-start, ga, p-2">
+                <Zap, className="w-5 h-5, tex, t-cy, a, n-400, fle, x-shri, n, k-0, m, t-0.5  />
+                <span, className="te, x, t-white, tex, t-sm"><strong, className="te, x, t-cy, a, n-3, 0, 0">92% fast, e, r</stro, n, g> incident, response, time</sp, a, n>
+              </d, i, v>
+              <div, className="flex, item, s-start, ga, p-2">
+                <Zap, className="w-5 h-5, tex, t-cy, a, n-400, fle, x-shri, n, k-0, m, t-0.5  />
+                <span, className="te, x, t-white, tex, t-sm"><strong, className="te, x, t-cy, a, n-3, 0, 0">$34, 0, M+</stro, n, g> annual, value, creation</sp, a, n>
+              </d, i, v>
+              <div, className="flex, item, s-start, ga, p-2">
+                <Zap, className="w-5 h-5, tex, t-cy, a, n-400, fle, x-shri, n, k-0, m, t-0.5  />
+                <span, className="te, x, t-white, tex, t-sm"><strong, className="te, x, t-cy, a, n-3, 0, 0">87% cost, saving, s</stro, n, g> in, operation, s</sp, a, n>
+            <div, className="spa, c, e-y-3, m, b-6">";
+              <div, className="flex, item, s-start, ga, p-2">";
+                <Zap, className="w-5 h-5, tex, t-cy, a, n-400, fle, x-shri, n, k-0, m, t-0.5" />";
+                <span, className="te, x, t-white, tex, t-sm"><strong, className="te, x, t-cy, a, n-3, 0, 0">99.99% upti, m, e</stro, n, g> with, intelligent, self-heali, n, g</sp, a, n>";
+              </d, i, v>
+              <div, className="flex, item, s-start, ga, p-2">";
+                <Zap, className="w-5 h-5, tex, t-cy, a, n-400, fle, x-shri, n, k-0, m, t-0.5" />";
+                <span, className="te, x, t-white, tex, t-sm"><strong, className="te, x, t-cy, a, n-3, 0, 0">92% fast, e, r</stro, n, g> incident, response, time</sp, a, n>";
+              </d, i, v>
+              <div, className="flex, item, s-start, ga, p-2">";
+                <Zap, className="w-5 h-5, tex, t-cy, a, n-400, fle, x-shri, n, k-0, m, t-0.5" />";
+                <span, className="te, x, t-white, tex, t-sm"><strong, className="te, x, t-cy, a, n-3, 0, 0">$34, 0, M+</stro, n, g> annual, value, creation</sp, a, n>";
+              </d, i, v>
+              <div, className="flex, item, s-start, ga, p-2">";
+                <Zap, className="w-5 h-5, tex, t-cy, a, n-400, fle, x-shri, n, k-0, m, t-0.5" />";
+                <span, className="te, x, t-white, tex, t-sm"><strong, className="te, x, t-cy, a, n-3, 0, 0">87% cost, saving, s</stro, n, g> in, operation, s</sp, a, n>";
+              </d, i, v>
+            </d, i, v>
+            <Li, n, k
+  to="/bl, o, g/ai-autonomo, u, s-devo, p, s-platfo, r, m-20, 2, 5-octob, e, r"
+              classNa, m, e="flex, item, s-center, ga, p-2, tex, t-cy, a, n-300, hove, r: te, x, t-white, fon, t-semibold, grou, p-ho, v, e
+  r:g, a, p-3, transitio, n-a, l, l"
             >
-              Read Full Article</Link>
-          </div>
-
-          {/* Card 2: Quantum-Safe Security */}
-          <div className="group bg-white/10 backdrop-blur-lg rounded-2xl p-8 border-2 border-purple-500/30 hover:border-purple-400 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/50">
-            <div className="flex items-center gap-3 mb-6">
-              <div className="p-3 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl group-hover:rotate-12 transition-transform duration-300">
-                <Lock className="w-8 h-8 text-white"</div>
-              <div className="px-3 py-1 bg-green-500/20 border border-green-400 rounded-full">
-                
-              </div>
-            </div>
-            
-            <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-purple-300 transition-colors">
-              Quantum-Safe AI Security
+              Read, Full, Article <ArrowRight, className="w-5 h-5  />
+              Read, Full, Article <ArrowRight, className="w-5 h-5" />";
+            </Li, n, k>
+          </d, i, v>
+          {/* Car, d, 2: Quant, u, m-Safe, Securit, y */}
+          <div, className="group, b, g-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, borde, r-2, borde, r-purp, l, e-5, 0, 0/30, hove, r: bord, e, r-purp, l, e-400, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hov, e
+  r:shad, o, w-purp, l, e-5, 0, 0/50">"
+            <div, className="flex, item, s-center, ga, p-3, m, b-6">
+              <div, className="p-3, b, g-gradie, n, t-to-br, fro, m-purp, l, e-500, t, o-pi, n, k-600, rounde, d-xl, grou, p-hov, e, r: rota, t, e-12, transitio, n-transform, duratio, n-3, 0, 0">"
+                <Lock, className="w-8 h-8, tex, t-whi, t, e  />
+          <div, className="group, b, g-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, borde, r-2, borde, r-purp, l, e-5, 0, 0/30, hove, r: bord, e, r-purp, l, e-400, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/50">";
+            <div, className="flex, item, s-center, ga, p-3, m, b-6">";
+              <div, className="p-3, b, g-gradie, n, t-to-br, fro, m-purp, l, e-500, t, o-pi, n, k-600, rounde, d-xl, grou, p-hov, e, r: rota, t, e-12, transitio, n-transform, duratio, n-3, 0, 0">";
+                <Lock, className="w-8 h-8, tex, t-whi, t, e" />";
+              </d, i, v>
+              <div, className="px-3, p, y-1, b, g-gre, e, n-5, 0, 0/20, border, border-gre, e, n-400, rounde, d-fu, l, l">";
+                <span, className="te, x, t-gre, e, n-300, tex, t-xs, fon, t-bo, l, d">N, E, W</sp, a, n>";
+              </d, i, v>
+            </d, i, v>
+            <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e
+  r: te, x, t-purp, l, e-300, transitio, n-colo, r, s">"
+            <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-purp, l, e-300, transitio, n-colo, r, s">";
+              Quant, u, m-Safe, AI, Security;
             </h3>
-            
-            <p className="text-purple-100 mb-6 text-sm leading-relaxed">
-              Future-proof enterprise protection with post-quantum cryptography
+            <p, className="te, x, t-purp, l, e-100, m, b-6, tex, t-sm, leadin, g-relax, e, d">";
+              Futu, r, e-proof, enterprise, protection with, pos, t-quantum, cryptograph, y;
             </p>
-            
-            <div className="space-y-3 mb-6">
-              <div className="flex items-start gap-2">
-
-                <span className="text-white text-sm"><strong className="text-purple-300">99.99% threat prevention</strong> rate</span>
-              </div>
-              <div className="flex items-start gap-2">
-
-                <span className="text-white text-sm"> cryptographic vulnerabilities</span>
-              </div>
-              <div className="flex items-start gap-2">
-
-                <span className="text-white text-sm"><strong className="text-purple-300">$247M+</strong> in avoided breach costs</span>
-              </div>
-              <div className="flex items-start gap-2">
-
-                <span className="text-white text-sm"><strong className="text-purple-300">94% faster</strong> threat response</span>
-              </div>
-            </div>
-            
-            <Link 
-              to="/blog/quantum-safe-ai-security-framework-2025-october"
-              className="flex items-center gap-2 text-purple-300 hover:text-white font-semibold group-hover:gap-3 transition-all"
+            <div, className="spa, c, e-y-3, m, b-6">
+              <div, className="flex, item, s-start, ga, p-2">
+                <Shield, className="w-5 h-5, tex, t-purp, l, e-400, fle, x-shri, n, k-0, m, t-0.5  />
+                <span, className="te, x, t-white, tex, t-sm"><strong, className="te, x, t-purp, l, e-3, 0, 0">99.99% threat, preventio, n</stro, n, g> ra, t, e</sp, a, n>
+              </d, i, v>
+              <div, className="flex, item, s-start, ga, p-2">
+                <Shield, className="w-5 h-5, tex, t-purp, l, e-400, fle, x-shri, n, k-0, m, t-0.5  />
+                <span, className="te, x, t-white, tex, t-sm"><strong, className="te, x, t-purp, l, e-3, 0, 0">Ze, r, o</stro, n, g> cryptographic, vulnerabilitie, s</sp, a, n>
+              </d, i, v>
+              <div, className="flex, item, s-start, ga, p-2">
+                <Shield, className="w-5 h-5, tex, t-purp, l, e-400, fle, x-shri, n, k-0, m, t-0.5  />
+                <span, className="te, x, t-white, tex, t-sm"><strong, className="te, x, t-purp, l, e-3, 0, 0">$24, 7, M+</stro, n, g> in, avoided, breach cos, t, s</sp, a, n>
+              </d, i, v>
+              <div, className="flex, item, s-start, ga, p-2">
+                <Shield, className="w-5 h-5, tex, t-purp, l, e-400, fle, x-shri, n, k-0, m, t-0.5  />
+                <span, className="te, x, t-white, tex, t-sm"><strong, className="te, x, t-purp, l, e-3, 0, 0">94% fast, e, r</stro, n, g> threat, respons, e</sp, a, n>
+            <div, className="spa, c, e-y-3, m, b-6">";
+              <div, className="flex, item, s-start, ga, p-2">";
+                <Shield, className="w-5 h-5, tex, t-purp, l, e-400, fle, x-shri, n, k-0, m, t-0.5" />";
+                <span, className="te, x, t-white, tex, t-sm"><strong, className="te, x, t-purp, l, e-3, 0, 0">99.99% threat, preventio, n</stro, n, g> ra, t, e</sp, a, n>";
+              </d, i, v>
+              <div, className="flex, item, s-start, ga, p-2">";
+                <Shield, className="w-5 h-5, tex, t-purp, l, e-400, fle, x-shri, n, k-0, m, t-0.5" />";
+                <span, className="te, x, t-white, tex, t-sm"><strong, className="te, x, t-purp, l, e-3, 0, 0">Ze, r, o</stro, n, g> cryptographic, vulnerabilitie, s</sp, a, n>";
+              </d, i, v>
+              <div, className="flex, item, s-start, ga, p-2">";
+                <Shield, className="w-5 h-5, tex, t-purp, l, e-400, fle, x-shri, n, k-0, m, t-0.5" />";
+                <span, className="te, x, t-white, tex, t-sm"><strong, className="te, x, t-purp, l, e-3, 0, 0">$24, 7, M+</stro, n, g> in, avoided, breach cos, t, s</sp, a, n>";
+              </d, i, v>
+              <div, className="flex, item, s-start, ga, p-2">";
+                <Shield, className="w-5 h-5, tex, t-purp, l, e-400, fle, x-shri, n, k-0, m, t-0.5" />";
+                <span, className="te, x, t-white, tex, t-sm"><strong, className="te, x, t-purp, l, e-3, 0, 0">94% fast, e, r</stro, n, g> threat, respons, e</sp, a, n>";
+              </d, i, v>
+            </d, i, v>
+            <Li, n, k
+  to="/bl, o, g/quant, u, m-sa, f, e-ai-securi, t, y-framewo, r, k-20, 2, 5-octob, e, r"
+              classNa, m, e="flex, item, s-center, ga, p-2, tex, t-purp, l, e-300, hove, r: te, x, t-white, fon, t-semibold, grou, p-ho, v, e
+  r:g, a, p-3, transitio, n-a, l, l"
             >
-              Read Full Article</Link>
-          </div>
-
-          {/* Card 3: Cognitive Business Intelligence */}
-          <div className="group bg-white/10 backdrop-blur-lg rounded-2xl p-8 border-2 border-green-500/30 hover:border-green-400 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-green-500/50">
-            <div className="flex items-center gap-3 mb-6">
-              <div className="p-3 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl group-hover:rotate-12 transition-transform duration-300">
-                <BarChart3 className="w-8 h-8 text-white"</div>
-              <div className="px-3 py-1 bg-green-500/20 border border-green-400 rounded-full">
-                
-              </div>
-            </div>
-            
-            <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-green-300 transition-colors">
-              Cognitive Business Intelligence
+              Read, Full, Article <ArrowRight, className="w-5 h-5  />
+              Read, Full, Article <ArrowRight, className="w-5 h-5" />";
+            </Li, n, k>
+          </d, i, v>
+          {/* Car, d, 3: Cognitive, Business, Intelligence */}
+          <div, className="group, b, g-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, borde, r-2, borde, r-gre, e, n-5, 0, 0/30, hove, r: bord, e, r-gre, e, n-400, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hov, e
+  r:shad, o, w-gre, e, n-5, 0, 0/50">"
+            <div, className="flex, item, s-center, ga, p-3, m, b-6">
+              <div, className="p-3, b, g-gradie, n, t-to-br, fro, m-gre, e, n-500, t, o-emera, l, d-600, rounde, d-xl, grou, p-hov, e, r: rota, t, e-12, transitio, n-transform, duratio, n-3, 0, 0">"
+                <BarChart3, className="w-8 h-8, tex, t-whi, t, e  />
+          <div, className="group, b, g-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, borde, r-2, borde, r-gre, e, n-5, 0, 0/30, hove, r: bord, e, r-gre, e, n-400, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-gre, e, n-5, 0, 0/50">";
+            <div, className="flex, item, s-center, ga, p-3, m, b-6">";
+              <div, className="p-3, b, g-gradie, n, t-to-br, fro, m-gre, e, n-500, t, o-emera, l, d-600, rounde, d-xl, grou, p-hov, e, r: rota, t, e-12, transitio, n-transform, duratio, n-3, 0, 0">";
+                <BarChart3, className="w-8 h-8, tex, t-whi, t, e" />";
+              </d, i, v>
+              <div, className="px-3, p, y-1, b, g-gre, e, n-5, 0, 0/20, border, border-gre, e, n-400, rounde, d-fu, l, l">";
+                <span, className="te, x, t-gre, e, n-300, tex, t-xs, fon, t-bo, l, d">N, E, W</sp, a, n>";
+              </d, i, v>
+            </d, i, v>
+            <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e
+  r: te, x, t-gre, e, n-300, transitio, n-colo, r, s">"
+            <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-gre, e, n-300, transitio, n-colo, r, s">";
+              Cognitive, Business, Intelligence;
             </h3>
-            
-            <p className="text-green-100 mb-6 text-sm leading-relaxed">
-              Real-time AI-driven decisions with predictive insights
+            <p, className="te, x, t-gre, e, n-100, m, b-6, tex, t-sm, leadin, g-relax, e, d">";
+              Re, a, l-time, A, I-driven, decisions, with predictive, insight, s;
             </p>
-            
-            <div className="space-y-3 mb-6">
-              <div className="flex items-start gap-2">
-
-                <span className="text-white text-sm"><strong className="text-green-300">87% faster</strong> decision making</span>
-              </div>
-              <div className="flex items-start gap-2">
-
-                <span className="text-white text-sm"><strong className="text-green-300">340% ROI</strong> in first year</span>
-              </div>
-              <div className="flex items-start gap-2">
-
-                <span className="text-white text-sm"><strong className="text-green-300">$427M+</strong> incremental revenue</span>
-              </div>
-              <div className="flex items-start gap-2">
-
-                <span className="text-white text-sm"><strong className="text-green-300">95%+</strong> prediction accuracy</span>
-              </div>
-            </div>
-            
-            <Link 
-              to="/blog/real-time-cognitive-business-intelligence-2025-october"
-              className="flex items-center gap-2 text-green-300 hover:text-white font-semibold group-hover:gap-3 transition-all"
+            <div, className="spa, c, e-y-3, m, b-6">
+              <div, className="flex, item, s-start, ga, p-2">
+                <TrendingUp, className="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-0.5  />
+                <span, className="te, x, t-white, tex, t-sm"><strong, className="te, x, t-gre, e, n-3, 0, 0">87% fast, e, r</stro, n, g> decision, makin, g</sp, a, n>
+              </d, i, v>
+              <div, className="flex, item, s-start, ga, p-2">
+                <TrendingUp, className="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-0.5  />
+                <span, className="te, x, t-white, tex, t-sm"><strong, className="te, x, t-gre, e, n-3, 0, 0">3, 4, 0% R, O, I</stro, n, g> in, first, year</sp, a, n>
+              </d, i, v>
+              <div, className="flex, item, s-start, ga, p-2">
+                <TrendingUp, className="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-0.5  />
+                <span, className="te, x, t-white, tex, t-sm"><strong, className="te, x, t-gre, e, n-3, 0, 0">$42, 7, M+</stro, n, g> incremental, revenu, e</sp, a, n>
+              </d, i, v>
+              <div, className="flex, item, s-start, ga, p-2">
+                <TrendingUp, className="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-0.5  />
+                <span, className="te, x, t-white, tex, t-sm"><strong, className="te, x, t-gre, e, n-3, 0, 0">95%+</stro, n, g> prediction, accurac, y</sp, a, n>
+            <div, className="spa, c, e-y-3, m, b-6">";
+              <div, className="flex, item, s-start, ga, p-2">";
+                <TrendingUp, className="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-0.5" />";
+                <span, className="te, x, t-white, tex, t-sm"><strong, className="te, x, t-gre, e, n-3, 0, 0">87% fast, e, r</stro, n, g> decision, makin, g</sp, a, n>";
+              </d, i, v>
+              <div, className="flex, item, s-start, ga, p-2">";
+                <TrendingUp, className="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-0.5" />";
+                <span, className="te, x, t-white, tex, t-sm"><strong, className="te, x, t-gre, e, n-3, 0, 0">3, 4, 0% R, O, I</stro, n, g> in, first, year</sp, a, n>";
+              </d, i, v>
+              <div, className="flex, item, s-start, ga, p-2">";
+                <TrendingUp, className="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-0.5" />";
+                <span, className="te, x, t-white, tex, t-sm"><strong, className="te, x, t-gre, e, n-3, 0, 0">$42, 7, M+</stro, n, g> incremental, revenu, e</sp, a, n>";
+              </d, i, v>
+              <div, className="flex, item, s-start, ga, p-2">";
+                <TrendingUp, className="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-0.5" />";
+                <span, className="te, x, t-white, tex, t-sm"><strong, className="te, x, t-gre, e, n-3, 0, 0">95%+</stro, n, g> prediction, accurac, y</sp, a, n>";
+              </d, i, v>
+            </d, i, v>
+            <Li, n, k
+  to="/bl, o, g/re, a, l-ti, m, e-cogniti, v, e-busine, s, s-intelligen, c, e-20, 2, 5-octob, e, r"
+              classNa, m, e="flex, item, s-center, ga, p-2, tex, t-gre, e, n-300, hove, r: te, x, t-white, fon, t-semibold, grou, p-ho, v, e
+  r:g, a, p-3, transitio, n-a, l, l"
             >
-              Read Full Article</Link>
-          </div>
-        </div>
-
-        {/* CTA Section */}
-        <div className="text-center bg-gradient-to-r from-cyan-900/50 to-purple-900/50 backdrop-blur-sm rounded-2xl p-8 border border-cyan-400/30">
-          <h3 className="text-3xl font-bold text-white mb-4">
-            Ready to Transform Your Enterprise?
+              Read, Full, Article <ArrowRight, className="w-5 h-5  />
+              Read, Full, Article <ArrowRight, className="w-5 h-5" />";
+            </Li, n, k>
+          </d, i, v>
+        </d, i, v>
+        {/* CTA, Sectio, n */}
+        <div, className="te, x, t-center, b, g-gradie, n, t-to-r, fro, m-cy, a, n-9, 0, 0/50, t, o-purp, l, e-9, 0, 0/50, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, border, border-cy, a, n-4, 0, 0/30">";
+          <h3, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4">";
+            Ready, to, Transform Your, Enterpris, e?
           </h3>
-          <p className="text-cyan-100 text-lg mb-6 max-w-2xl mx-auto">
-            Join industry leaders leveraging these revolutionary platforms to achieve unprecedented results
+          <p, className="te, x, t-cy, a, n-100, tex, t-lg, m, b-6, ma, x-w-2xl, m, x-au, t, o">";
+            Join, industry, leaders leveraging, these, revolutionary platforms, to, achieve unprecedented, result, s;
           </p>
-          <div className="flex flex-wrap gap-4 justify-center">
-            <Link 
-              to="/contact"
-              className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-xl inline-flex items-center gap-2"
+          <div, className="flex, fle, x-wrap, ga, p-4, justif, y-cent, e, r">";
+            <Li, n, k
+  to="/conta, c, t"
+              classNa, m, e="px-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-cy, a, n-500, t, o-bl, u, e-600, hove, r: fr, o, m-cy, a, n-400, hove, r:to-bl, u, e-500, tex, t-white, fon, t-bold, rounde, d-xl, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hov, e
+  r:shad, o, w-xl, inlin, e-flex, item, s-center, ga, p-2"
             >
-              Schedule Free Consultation</Link>
-            <Link 
-              to="/blog"
-              className="px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-bold rounded-xl transition-all duration-300 hover:scale-105 border-2 border-cyan-400/50 hover:border-cyan-400 inline-flex items-center gap-2"
+              Schedule, Free, Consultation <ArrowRight, className="w-5 h-5  />
+              Schedule, Free, Consultation <ArrowRight, className="w-5 h-5" />";
+            </Li, n, k>
+            <Li, n, k
+  to="/bl, o, g"
+              classNa, m, e="px-8, p, y-4, b, g-whi, t, e/10, hove, r: bg-whi, t, e/20, tex, t-white, fon, t-bold, rounde, d-xl, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, borde, r-2, borde, r-cy, a, n-4, 0, 0/50, hov, e
+  r:bord, e, r-cy, a, n-400, inlin, e-flex, item, s-center, ga, p-2"
             >
-              Explore All Articles</Link>
-          </div>
-        </div>
-      </div>
-    </div>
+              Explore, All, Articles <ArrowRight, className="w-5 h-5  />
+              Explore, All, Articles <ArrowRight, className="w-5 h-5" />";
+            </Li, n, k>
+          </d, i, v>
+        </d, i, v>
+      </d, i, v>
+    </d, i, v>
   );
 };
-
 export default October2025NewPremiumContentBanner;
+;

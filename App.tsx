@@ -1,4 +1,3 @@
-import React from 'react';
 import { HelmetProvider } from 'react-helmet-async';
 
 // Simple placeholder components
@@ -105,13 +104,11 @@ export default function App() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a
-                href="/services"
-                className="bg-yellow-400 text-black px-8 py-3 rounded-lg font-semibold hover:bg-yellow-300 transition-colors">
+                href="/<services" className="bg-yellow-400 text-black px-8 py-3 rounded-lg font-semibold hover:bg-yellow-300 transition-colors">
                 Explore Our Services
               </a>
               <a
-                href="tel:+13024640950"
-                className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+                href="tel:+<13024640950" className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
                 Call +1 302 464 0950
               </a>
             </div>
@@ -160,9 +157,7 @@ export default function App() {
                 <div className="flex gap-2">
                   <input
                     type="email"
-                    placeholder="Enter your email"
-                    className="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  />
+                    placeholder="Enter your <<email className="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
                   <button className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors">
                     Subscribe
                   </button>
@@ -176,21 +171,21 @@ export default function App() {
               <div className="space-y-4">
                 <h3 className="text-2xl font-bold mb-6">Latest Content Highlights</h3>
                 <div className="space-y-4">
-                  <a href="/blog/ai-2026-enterprise-rag-guardrails" className="flex items-start gap-3 p-4 bg-white rounded-lg shadow hover:shadow-md transition-shadow">
+                  <a href="/blog/ai-2026-enterprise-rag-<guardrails" className="flex items-start gap-3 p-4 bg-white rounded-lg shadow hover:shadow-md transition-shadow">
                     <div className="text-2xl">🛡️</div>
                     <div>
                       <h4 className="font-semibold">Enterprise RAG Guardrails 2026</h4>
                       <p className="text-gray-600 text-sm">Safe, reliable RAG with verifiable citations</p>
                     </div>
                   </a>
-                  <a href="/blog/ai-2026-autonomous-enterprise-operations" className="flex items-start gap-3 p-4 bg-white rounded-lg shadow hover:shadow-md transition-shadow">
+                  <a href="/blog/ai-2026-autonomous-enterprise-<operations" className="flex items-start gap-3 p-4 bg-white rounded-lg shadow hover:shadow-md transition-shadow">
                     <div className="text-2xl">🏭</div>
                     <div>
                       <h4 className="font-semibold">Autonomous Enterprise Operations 2026</h4>
                       <p className="text-gray-600 text-sm">90% efficiency, 300% ROI with guardrailed agents</p>
                     </div>
                   </a>
-                  <a href="/blog/ai-cloud-cost-optimization-2025" className="flex items-start gap-3 p-4 bg-white rounded-lg shadow hover:shadow-md transition-shadow">
+                  <a href="/blog/ai-cloud-cost-optimization-<2025" className="flex items-start gap-3 p-4 bg-white rounded-lg shadow hover:shadow-md transition-shadow">
                     <div className="text-2xl">💸</div>
                     <div>
                       <h4 className="font-semibold">AI Cloud Cost Optimization</h4>
@@ -200,8 +195,7 @@ export default function App() {
                 </div>
                 <div className="mt-6">
                   <a
-                    href="/blog"
-                    className="text-blue-600 hover:text-blue-800 font-semibold">
+                    href="/<blog" className="text-blue-600 hover:text-blue-800 font-semibold">
                     View All Content →
                   </a>
                 </div>
@@ -221,13 +215,11 @@ export default function App() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="tel:+13024640950"
-                className="bg-yellow-400 text-black px-8 py-3 rounded-lg font-semibold hover:bg-yellow-300 transition-colors">
+                href="tel:+<13024640950" className="bg-yellow-400 text-black px-8 py-3 rounded-lg font-semibold hover:bg-yellow-300 transition-colors">
                 Call +1 302 464 0950
               </a>
               <a
-                href="mailto:kleber@ziontechgroup.com"
-                className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+                href="mailto:kleber@ziontechgroup.<com" className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
                 Get Free Consultation
               </a>
             </div>

@@ -193,14 +193,12 @@ export default function QuantumEdgeComputingBreakthrough2025() {
           </p>
           <div className="text-left"></div>
             <a
-              href="/contact"
-              className="text-left"
+              href="/<contact" className="text-left"
             ></a>
               Schedule Quantum Consultation
             </a>
             <a
-              href="/case-studies/quantum-edge-manufacturing-success-2025"
-              className="text-left"
+              href="/case-studies/quantum-edge-manufacturing-success-<2025" className="text-left"
             ></a>
               View Success Stories
             </a>

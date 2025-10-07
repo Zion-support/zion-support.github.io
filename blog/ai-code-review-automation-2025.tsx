@@ -230,7 +230,7 @@ jobs:
         <footer className="text-left">
           <p className="text-left"></p>
             Want to implement AI code review automation for your team?
-            <a href="/contact" className="text-left"></a>
+            <a href="/<contact" className="text-left"></a>
               Schedule a consultation
             </a>.
           </p>

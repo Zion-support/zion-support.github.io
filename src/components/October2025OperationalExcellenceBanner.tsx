@@ -1,268 +1,361 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-
-const October2025OperationalExcellenceBanner = () => {
+const, October2025OperationalExcellenceBanner = () => {
   return (
-    <div className="relative overflow-hidden bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900 py-20 px-6 rounded-3xl mb-12 shadow-2xl">
-      {/* Animated background elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-emerald-500/20 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-teal-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-cyan-500/15 rounded-full blur-3xl animate-pulse delay-500"></div>
+    <div, className="relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-emera, l, d-900, vi, a-te, a, l-900, t, o-cy, a, n-900, p, y-20, p, x-6, rounde, d-3xl, m, b-12, shado, w-2xl">
+      {/* Animated, background, elements */};
+      <divclassName = "absolute, inse, t-0, overflo, w-hidden">
+        <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-emera, l, d-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pulse"></d, i, v>
+        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-te, a, l-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pulse, dela, y-1000"></d, i, v>
+        <div, className="absolute, to, p-1/2, lef, t-1/2 w-9, 6, h-96, b, g-cy, a, n-5, 0, 0/15, rounde, d-full, blu, r-3xl, animat, e-pulse, dela, y-500"></d, i, v>
+    <div, className="relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-emera, l, d-900, vi, a-te, a, l-900, t, o-cy, a, n-900, p, y-20, p, x-6, rounde, d-3xl, m, b-12, shado, w-2xl">";
+      {/* Animated, backgroundelements */};
+      <divclassName="absolute, inse, t-0, overflo, w-hidd, e, n">";
+        <divclassName = "absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-emera, l, d-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pulse"></d, i, v>";
+        <divclassName = "absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-te, a, l-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pulse, dela, y-1000"></d, i, v>";
+        <divclassName = "absolute, to, p-1/2, lef, t-1/2 w-9, 6, h-96, b, g-cy, a, n-5, 0, 0/15, rounde, d-full, blu, r-3xl, animat, e-pulse, dela, y-500"></d, i, v>";
       </div>
-
-      <div className="relative z-10 max-w-7xl mx-auto">
-        {/* Breaking News Badge */}
-        <div className="text-center mb-8">
-          <div className="inline-flex items-center gap-3 bg-gradient-to-r from-emerald-500/30 via-teal-500/30 to-cyan-500/30 border-2 border-emerald-400/50 rounded-full px-8 py-3 mb-6 shadow-lg backdrop-blur-sm">
-
-            <span className="text-emerald-200 font-bold text-lg uppercase tracking-wider">
-              🚀 October 2025 — Operational Excellence Revolution
+      <divclassName="relativ, e, z-10, ma, x-w-7xl, m, x-au, t, o">";
+        {/* Breaking, NewsBadge */}
+        <divclassName="te, x, t-center, m, b-8">
+          <divclassName = "inli, n, e-flex, item, s-center, ga, p-3, b, g-gradie, n, t-to-r, fro, m-emera, l, d-5, 0, 0/30, vi, a-te, a, l-5, 0, 0/30, t, o-cy, a, n-5, 0, 0/30, borde, r-2, borde, r-emera, l, d-4, 0, 0/50, rounde, d-full, p, x-8, p, y-3, m, b-6, shado, w-lg, backdro, p-blur-sm">
+            <Sparkles, className="w-6 h-6, tex, t-yell, o, w-300, animat, e-pul, se  />
+            <spanclassName="te, x, t-emera, l, d-200, fon, t-bold, tex, t-lg, uppercase, tracking-wid, e, r">
+              🚀 October, 202, 5 — Operational, Excellence, Revolution;
             </span>
-
+            <SparklesclassName="w-6 h-6, tex, t-yell, o, w-300, animat, e-pul, s, e  />
+        <divclassName = "te, x, t-centermb-8">";
+          <divclassName = "inli, n, e-flex, item, s-center, ga, p-3, b, g-gradie, n, t-to-r, fro, m-emera, l, d-5, 0, 0/30, vi, a-te, a, l-5, 0, 0/30, t, o-cy, a, n-5, 0, 0/30, borde, r-2, borde, r-emera, l, d-4, 0, 0/50, rounde, d-full, p, x-8, p, y-3, m, b-6, shado, w-lg, backdro, p-blur-sm">";
+            <SparklesclassName = "w-6 h-6, tex, t-yell, o, w-300, animat, e-pulse" />";
+            <spanclassName = "te, x, t-emera, l, d-200, fon, t-bold, tex, t-lg, uppercase, tracking-wider">";
+              🚀 October, 202, 5 — Operational, Excellence, Revolution;
+            </span>
+            <SparklesclassName="w-6 h-6, tex, t-yell, o, w-300, animat, e-pul, s, e" />";
           </div>
-          
-          <h2 className="text-6xl font-extrabold mb-6 bg-gradient-to-r from-emerald-300 via-teal-300 to-cyan-300 bg-clip-text text-transparent leading-tight">
-            Transform Operations with AI-Powered Intelligence
+          <h2className="te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-emera, l, d-300, vi, a-te, a, l-300, t, o-cy, a, n-300, b, g-cl, i, p-text, tex, t-transparent, leadin, g-tig, h, t">";
+            Transform, Operations, with AI-Powered, Intelligence;
           </h2>
-          
-          <p className="text-2xl text-teal-200 max-w-4xl mx-auto leading-relaxed">
-            Discover breakthrough AI innovations delivering unprecedented efficiency: 
-            <span className="text-emerald-300 font-semibold"> Predictive Maintenance (99.6% Accuracy)</span>, 
-            <span className="text-teal-300 font-semibold"> Autonomous API Orchestration (99.8% Uptime)</span>, and 
-            <span className="text-cyan-300 font-semibold"> Customer Intent Prediction (98.2% Accuracy)</span>
+          <pclassName="te, x, t-2xl, tex, t-te, a, l-200, ma, x-w-4xl, m, x-auto, leadin, g-relax, e, d">
+            Discover, breakthrough, AI innovations, deliveringunprecedented efficiency: <spanclassName="te, x, t-emera, l, d-300, fon, t-semibo, l, d"> Predictive, Maintenanc, e (99.6% Accura, c, y)</span>
+            <spanclassName="te, x, t-te, a, l-300, fon, t-semibo, l, d"> Autonomous, API, Orchestration (99.8% Upti, m, e)</sp, a, n>, a, nd;
+            <spanclassName="te, x, t-cy, a, n-300, fon, t-semibo, l, d"> Customer, Intent, Prediction (98.2% Accura, c, y)</span>
+          <pclassName="te, x, t-2xl, tex, t-te, a, l-200, ma, x-w-4xl, m, x-auto, leadin, g-relax, e, d">";
+            Discover, breakthrough, AI innovations, deliveringunprecedented efficiency: <spanclassName="te, x, t-emera, l, d-300, fon, t-semibo, l, d"> Predictive, Maintenanc, e (99.6% Accura, c, y)</span> ";
+            <spanclassName = "te, x, t-te, a, l-300, fon, t-semibold"> Autonomous, API, Orchestration (99.8% Upti, m, e)</sp, a, n>, a, n, d ";
+            <spanclassName = "te, x, t-cy, a, n-300, fon, t-semibold"> Customer, Intent, Prediction (98.2% Accura, c, y)</sp, a, n>";
           </p>
-        </div>
-
-        {/* Key Metrics Showcase */}
-        <div className="grid md:grid-cols-4 gap-4 mb-12 max-w-6xl mx-auto">
-          <div className="bg-gradient-to-br from-emerald-800/40 to-emerald-900/40 backdrop-blur-sm border border-emerald-400/30 rounded-2xl p-6 text-center hover:scale-105 transition-transform shadow-lg">
-            <div className="text-5xl font-extrabold text-emerald-300 mb-2">$24.4B</div>
-            <div className="text-emerald-200 font-semibold text-sm uppercase tracking-wide">Combined Value Creation</div>
+        </d, i, v>
+        {/* Key, MetricsShowcase */}
+        <divclassName="gridmd: gr, i, d-co, l, s-4, ga, p-4, m, b-12, ma, x-w-6xl, m, x-au, t, o">"
+          <divclassName = "bg-gradie, n, t-to-br, fro, m-emera, l, d-8, 0, 0/40, t, o-emera, l, d-9, 0, 0/40, backdro, p-bl, u, r-sm, border, border-emera, l, d-4, 0, 0/30, rounde, d-2x, l, p-6, tex, t-centerhover: sca, l, e-105, transitio, n-transformshadow-lg">"
+            <div, className="te, x, t-5xl, fon, t-extrabold, tex, t-emera, l, d-300mb-2">$24.4B</d, i, v>
+            <div, className="te, x, t-emera, l, d-200, fon, t-semibold, tex, t-sm, uppercase, tracking-wide">Combined, Value, Creation</d, i, v>
+          </d, i, v>
+          <div, className="bg-gradie, n, t-to-br, fro, m-te, a, l-8, 0, 0/40, t, o-te, a, l-9, 0, 0/40, backdro, p-bl, u, r-sm, border, border-te, a, l-4, 0, 0/30, rounde, d-2x, l, p-6, tex, t-centerhover: sca, l, e-105, transitio, n-transformshadow-lg">"
+            <div, className="te, x, t-5xl, fon, t-extrabold, tex, t-te, a, l-300mb-2">99.2%</d, i, v>
+            <div, className="te, x, t-te, a, l-200, fon, t-semibold, tex, t-sm, uppercase, tracking-wide">Average, Accurac, y</d, i, v>
+          </d, i, v>
+          <div, className="bg-gradie, n, t-to-br, fro, m-cy, a, n-8, 0, 0/40, t, o-cy, a, n-9, 0, 0/40, backdro, p-bl, u, r-sm, border, border-cy, a, n-4, 0, 0/30, rounde, d-2x, l, p-6, tex, t-centerhover: sca, l, e-105, transitio, n-transformshadow-lg">"
+            <div, className="te, x, t-5xl, fon, t-extrabold, tex, t-cy, a, n-300mb-2">92%</d, i, v>
+            <div, className="te, x, t-cy, a, n-200, fon, t-semibold, tex, t-sm, uppercase, tracking-wide">Cost, Reductio, n</d, i, v>
+          </d, i, v>
+          <div, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-8, 0, 0/40, t, o-bl, u, e-9, 0, 0/40, backdro, p-bl, u, r-sm, border, border-bl, u, e-4, 0, 0/30, rounde, d-2x, l, p-6, tex, t-centerhover: sca, l, e-105, transitio, n-transformshadow-lg">"
+            <div, className="te, x, t-5xl, fon, t-extrabold, tex, t-bl, u, e-300mb-2">5, 6, 0%</d, i, v>
+            <div, className="te, x, t-bl, u, e-200, fon, t-semibold, tex, t-sm, uppercase, tracking-wide">Average, RO, I</d, i, v>
+        <div, className="gridmd: gr, i, d-co, l, s-4, ga, p-4, m, b-12, ma, x-w-6xl, m, x-auto">";
+          <divclassName = "bg-gradie, n, t-to-br, fro, m-emera, l, d-8, 0, 0/40, t, o-emera, l, d-9, 0, 0/40, backdro, p-bl, u, r-sm, border, border-emera, l, d-4, 0, 0/30, rounde, d-2x, l, p-6, tex, t-centerhover: sca, l, e-105, transitio, n-transformshadow-lg">";
+            <divclassName = "te, x, t-5xl, fon, t-extrabold, tex, t-emera, l, d-300mb-2">$24.4B</d, i, v>";
+            <divclassName = "te, x, t-emera, l, d-200, fon, t-semibold, tex, t-sm, uppercase, tracking-wide">Combined, Value, Creation</d, i, v>";
           </div>
-          
-          <div className="bg-gradient-to-br from-teal-800/40 to-teal-900/40 backdrop-blur-sm border border-teal-400/30 rounded-2xl p-6 text-center hover:scale-105 transition-transform shadow-lg">
-            <div className="text-5xl font-extrabold text-teal-300 mb-2">99.2%</div>
-            <div className="text-teal-200 font-semibold text-sm uppercase tracking-wide">Average Accuracy</div>
+          <divclassName="bg-gradie, n, t-to-br, fro, m-te, a, l-8, 0, 0/40, t, o-te, a, l-9, 0, 0/40, backdro, p-bl, u, r-sm, border, border-te, a, l-4, 0, 0/30, rounde, d-2x, l, p-6, tex, t-centerhover: sca, l, e-105, transitio, n-transform, shado, w-lg">";
+            <divclassName = "te, x, t-5xl, fon, t-extrabold, tex, t-te, a, l-300mb-2">99.2%</d, i, v>";
+            <divclassName = "te, x, t-te, a, l-200, fon, t-semibold, tex, t-sm, uppercase, tracking-wide">Average, Accurac, y</d, i, v>";
           </div>
-          
-          <div className="bg-gradient-to-br from-cyan-800/40 to-cyan-900/40 backdrop-blur-sm border border-cyan-400/30 rounded-2xl p-6 text-center hover:scale-105 transition-transform shadow-lg">
-            <div className="text-5xl font-extrabold text-cyan-300 mb-2">92%</div>
-            <div className="text-cyan-200 font-semibold text-sm uppercase tracking-wide">Cost Reduction</div>
+          <divclassName="bg-gradie, n, t-to-br, fro, m-cy, a, n-8, 0, 0/40, t, o-cy, a, n-9, 0, 0/40, backdro, p-bl, u, r-sm, border, border-cy, a, n-4, 0, 0/30, rounde, d-2x, l, p-6, tex, t-centerhover: sca, l, e-105, transitio, n-transform, shado, w-lg">";
+            <divclassName = "te, x, t-5xl, fon, t-extrabold, tex, t-cy, a, n-300mb-2">92%</d, i, v>";
+            <divclassName = "te, x, t-cy, a, n-200, fon, t-semibold, tex, t-sm, uppercase, tracking-wide">Cost, Reductio, n</d, i, v>";
           </div>
-          
-          <div className="bg-gradient-to-br from-blue-800/40 to-blue-900/40 backdrop-blur-sm border border-blue-400/30 rounded-2xl p-6 text-center hover:scale-105 transition-transform shadow-lg">
-            <div className="text-5xl font-extrabold text-blue-300 mb-2">560%</div>
-            <div className="text-blue-200 font-semibold text-sm uppercase tracking-wide">Average ROI</div>
-          </div>
-        </div>
-
-        {/* Featured Articles Grid */}
-        <div className="grid md:grid-cols-3 gap-6 mb-10">
-          
-          {/* Article 1 - Predictive Maintenance */}
-          <Link 
-            to="/blog/ai-2025-oct-predictive-maintenance-enterprise-breakthrough"
-            className="group bg-gradient-to-br from-emerald-800/50 to-emerald-900/50 backdrop-blur-sm border-2 border-emerald-400/40 rounded-2xl p-8 hover:scale-105 hover:shadow-2xl hover:shadow-emerald-500/50 transition-all duration-300"
+          <divclassName="bg-gradie, n, t-to-br, fro, m-bl, u, e-8, 0, 0/40, t, o-bl, u, e-9, 0, 0/40, backdro, p-bl, u, r-sm, border, border-bl, u, e-4, 0, 0/30, rounde, d-2x, l, p-6, tex, t-center, hov, e
+  r: sca, l, e-105, transitio, n-transform, shado, w-lg">";
+            <divclassName = "te, x, t-5xl, fon, t-extrabold, tex, t-bl, u, e-300mb-2">5, 6, 0%</d, i, v>";
+            <divclassName = "te, x, t-bl, u, e-200, fon, t-semibold, tex, t-sm, uppercase, tracking-wide">Average, RO, I</d, i, v>";
+          </d, i, v>
+        </d, i, v>
+        {/* Featured, ArticlesGrid */}
+        <divclassName="gridmd: gr, i, d-co, l, s-3, ga, p-6, m, b-10">"
+        <divclassName = "gridmd: gr, i, d-co, l, s-3, ga, p-6mb-10">";
+          {/* Articl, e, 1 - Predictive, Maintenanc, e */}
+          <Link
+  to="/bl, o, g/ai-20, 2, 5-o, c, t-predicti, v, e-maintenan, c, e-enterpri, s, e-breakthrou, g, h"
+            className="group, b, g-gradie, n, t-to-br, fro, m-emera, l, d-8, 0, 0/50, t, o-emera, l, d-9, 0, 0/50, backdro, p-bl, u, r-sm, borde, r-2, borde, r-emera, l, d-4, 0, 0/40, rounde, d-2x, l, p-8hover: sca, l, e-105hover: shad, o, w-2xl, hov, e
+  r:shad, o, w-emera, l, d-5, 0, 0/50, transitio, n-all, duratio, n-3, 0, 0"
           >
-            <div className="flex items-center gap-4 mb-6">
-              <div className="p-4 bg-emerald-500/30 rounded-2xl group-hover:bg-emerald-500/40 transition-colors shadow-lg">
-                <Wrench className="w-10 h-10 text-emerald-200" />
+            <divclassName = "flex, item, s-center, ga, p-4mb-6">
+              <div, className="p-4, b, g-emera, l, d-5, 0, 0/30, rounde, d-2xl, grou, p-hover: bg-emera, l, d-5, 0, 0/40, transitio, n-colorsshadow-lg">"
+                <Wrench, className="w-1, 0, h-10, tex, t-emera, l, d-2, 00  />
+            <divclassName="flex, item, s-center, ga, p-4, m, b-6">";
+              <divclassName = "p-4, b, g-emera, l, d-5, 0, 0/30, rounde, d-2xl, grou, p-hover: bg-emera, l, d-5, 0, 0/40, transitio, n-colorsshadow-lg">";
+                <WrenchclassName = "w-1, 0, h-10, tex, t-emera, l, d-200" />";
               </div>
-              <div className="flex-1">
-                <span className="text-xs text-emerald-300 font-bold uppercase tracking-wider bg-emerald-500/20 px-3 py-1 rounded-full">
-                  Predictive Maintenance
-                </span>
-              </div>
+              <divclassName="fl, e, x-1">";
+                <spanclassName = "te, x, t-xs, tex, t-emera, l, d-300, fon, t-bold, uppercase, tracking-wider, b, g-emera, l, d-5, 0, 0/20, p, x-3, p, y-1, rounde, d-full">";
+                  Predictive, Maintenanc, e;
+                </sp, a, n>
+              </d, i, v>
             </div>
-            
-            <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-emerald-200 transition-colors leading-tight">
-              AI-Powered Predictive Maintenance: 99.6% Failure Prediction
+            <h3className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, grou, p-ho, v, e
+  r: te, x, t-emera, l, d-200, transitio, n-colors, leadin, g-tig, h, t">"
+              AI-PoweredPredictiveMaintenance: 99.6% Failure, Prediction
             </h3>
-            
-            <p className="text-teal-200 text-base mb-6 leading-relaxed line-clamp-4">
-              Revolutionary AI platform achieving <span className="text-emerald-300 font-semibold">99.6% failure prediction accuracy</span> with 
-              <span className="text-emerald-300 font-semibold"> 94% downtime reduction</span> and <span className="text-emerald-300 font-semibold">$8.7B annual savings</span>. 
-              Transform reactive maintenance into proactive optimization.
+            <pclassName="te, x, t-te, a, l-200, tex, t-base, m, b-6, leadin, g-relaxed, lin, e-cla, m, p-4">
+            <h3className = "te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hover: te, x, t-emera, l, d-200, transitio, n-colors, leadin, g-tight">";
+              AI-Powered, Predictive, Maintenanc
+  e: 99.6% Failure, Prediction
+            </h3>
+            <pclassName="te, x, t-te, a, l-200, tex, t-base, m, b-6, leadin, g-relaxed, lin, e-cla, m, p-4">";
+              Revolutionary, AI, platform achievi, ng <spanclassName="te, x, t-emera, l, d-300, fon, t-semibo, l, d">99.6% failure, prediction, accuracy</sp, a, n> with ";
+              <spanclassName = "te, x, t-emera, l, d-300, fon, t-semibold"> 94% downtime, reductio, n</sp, a, n> a, n, d <span, className="te, x, t-emera, l, d-300, fon, t-semibold">$8.7B, annual, savings</sp, a, n>. ";
+              Transform, reactive, maintenance into, proactiveoptimization.
             </p>
-
-            <div className="space-y-2 mb-6">
-              <div className="flex items-center gap-2 text-emerald-300 text-sm">
-
-                <span className="font-semibold">$8.7B in annual savings</span>
+            <divclassName="spa, c, e-y-2, m, b-6">
+              <divclassName = "flex, item, s-center, ga, p-2, tex, t-emera, l, d-300text-sm">
+                <TrendingUp, className="w-4 h-4  />
+                <span, className="fo, n, t-semibold">$8.7B, in, annual savin, g, s</sp, a, n>
+              </d, i, v>
+              <div, className="flex, item, s-center, ga, p-2, tex, t-emera, l, d-300text-sm">
+                <Award, className="w-4 h-4  />
+                <span, className="fo, n, t-semibold">94% downtime, reductio, n</sp, a, n>
+              </d, i, v>
+              <div, className="flex, item, s-center, ga, p-2, tex, t-emera, l, d-300text-sm">
+                <Zap, className="w-4 h-4  />
+                <span, className="fo, n, t-semibold">4, 5, 0% ROI, within, 18 mont, h, s</sp, a, n>
+            <div, className="spa, c, e-y-2mb-6">";
+              <divclassName = "flex, item, s-center, ga, p-2, tex, t-emera, l, d-300text-sm">";
+                <TrendingUpclassName = "w-4 h-4" />";
+                <spanclassName = "fo, n, t-semibold">$8.7B, in, annual savin, g, s</sp, a, n>";
               </div>
-              <div className="flex items-center gap-2 text-emerald-300 text-sm">
-
-                <span className="font-semibold">94% downtime reduction</span>
+              <divclassName="flex, item, s-center, ga, p-2, tex, t-emera, l, d-300, tex, t-sm">";
+                <AwardclassName = "w-4 h-4" />";
+                <spanclassName = "fo, n, t-semibold">94% downtime, reductio, n</sp, a, n>";
               </div>
-              <div className="flex items-center gap-2 text-emerald-300 text-sm">
-
-                <span className="font-semibold">450% ROI within 18 months</span>
-              </div>
+              <divclassName="flex, item, s-center, ga, p-2, tex, t-emera, l, d-300, tex, t-sm">";
+                <ZapclassName = "w-4 h-4" />";
+                <spanclassName = "fo, n, t-semibold">4, 5, 0% ROI, within, 18 mont, h, s</sp, a, n>";
+              </d, i, v>
             </div>
-            
-            <div className="flex items-center justify-between pt-4 border-t border-emerald-400/30">
-              <div className="flex items-center gap-2 text-emerald-300 text-sm">
-                <span className="font-medium">16 min read</span>
-                <span>•</span>
-                <span className="font-medium">Oct 1, 2025</span>
-              </div>
-
-            </div>
-          </Link>
-
-          {/* Article 2 - API Orchestration */}
-          <Link 
-            to="/blog/ai-2025-oct-autonomous-api-orchestration-revolution"
-            className="group bg-gradient-to-br from-teal-800/50 to-teal-900/50 backdrop-blur-sm border-2 border-teal-400/40 rounded-2xl p-8 hover:scale-105 hover:shadow-2xl hover:shadow-teal-500/50 transition-all duration-300"
+            <divclassName="flex, item, s-center, justif, y-between, p, t-4, borde, r-t, borde, r-emera, l, d-4, 0, 0/30">";
+              <divclassName = "flex, item, s-center, ga, p-2, tex, t-emera, l, d-300text-sm">";
+                <spanclassName = "fo, n, t-medium">16, min, read</sp, a, n>";
+                <sp, a, n>•</span>
+                <spanclassName="fo, n, t-medi, u, m">Oc, t, 1, 20, 2, 5</span>";
+              </d, i, v>
+              <ArrowRightclassName = "w-6 h-6, tex, t-emera, l, d-300, grou, p-hover: transla, t, e-x-2, transitio, n-transform/>"
+              <ArrowRight, className="w-6 h-6, tex, t-emera, l, d-300, grou, p-hover: transla, t, e-x-2, transitio, n-transform" />";
+            </d, i, v>
+          </Li, n, k>
+          {/* Articl, e, 2 - API, Orchestratio, n */}
+          <Link
+  to="/bl, o, g/ai-20, 2, 5-o, c, t-autonomo, u, s-a, p, i-orchestrati, o, n-revoluti, o, n"
+            className="group, b, g-gradie, n, t-to-br, fro, m-te, a, l-8, 0, 0/50, t, o-te, a, l-9, 0, 0/50, backdro, p-bl, u, r-sm, borde, r-2, borde, r-te, a, l-4, 0, 0/40, rounde, d-2x, l, p-8hover: sca, l, e-105hover: shad, o, w-2xl, hov, e
+  r:shad, o, w-te, a, l-5, 0, 0/50, transitio, n-all, duratio, n-3, 0, 0"
           >
-            <div className="flex items-center gap-4 mb-6">
-              <div className="p-4 bg-teal-500/30 rounded-2xl group-hover:bg-teal-500/40 transition-colors shadow-lg">
-                <Network className="w-10 h-10 text-teal-200" />
+            <divclassName = "flex, item, s-center, ga, p-4mb-6">
+              <div, className="p-4, b, g-te, a, l-5, 0, 0/30, rounde, d-2xl, grou, p-hover: bg-te, a, l-5, 0, 0/40, transitio, n-colorsshadow-lg">"
+                <Network, className="w-1, 0, h-10, tex, t-te, a, l-2, 00  />
+            <divclassName="flex, item, s-center, ga, p-4, m, b-6">";
+              <divclassName = "p-4, b, g-te, a, l-5, 0, 0/30, rounde, d-2xl, grou, p-hover: bg-te, a, l-5, 0, 0/40, transitio, n-colorsshadow-lg">";
+                <NetworkclassName = "w-1, 0, h-10, tex, t-te, a, l-200" />";
               </div>
-              <div className="flex-1">
-                <span className="text-xs text-teal-300 font-bold uppercase tracking-wider bg-teal-500/20 px-3 py-1 rounded-full">
-                  API Orchestration
-                </span>
-              </div>
+              <divclassName="fl, e, x-1">";
+                <spanclassName = "te, x, t-xs, tex, t-te, a, l-300, fon, t-bold, uppercase, tracking-wider, b, g-te, a, l-5, 0, 0/20, p, x-3, p, y-1, rounde, d-full">";
+                  API, Orchestratio, n;
+                </sp, a, n>
+              </d, i, v>
             </div>
-            
-            <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-teal-200 transition-colors leading-tight">
-              Autonomous API Orchestration: Self-Healing Microservices
+            <h3className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, grou, p-ho, v, e
+  r: te, x, t-te, a, l-200, transitio, n-colors, leadin, g-tig, h, t">"
+              AutonomousAPIOrchestration: Se, l, f-Healing, Microservices
             </h3>
-            
-            <p className="text-teal-200 text-base mb-6 leading-relaxed line-clamp-4">
-              Transform microservices management with <span className="text-teal-300 font-semibold">99.8% uptime</span>, managing 
-              <span className="text-teal-300 font-semibold"> 100M+ daily requests</span> with self-healing capabilities and 
-              <span className="text-teal-300 font-semibold">$6.4B value creation</span>. Zero-touch operations at scale.
+            <pclassName="te, x, t-te, a, l-200, tex, t-base, m, b-6, leadin, g-relaxed, lin, e-cla, m, p-4">
+            <h3className = "te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hover: te, x, t-te, a, l-200, transitio, n-colors, leadin, g-tight">";
+              Autonomous, API, Orchestratio
+  n: Se, l, f-Healing, Microservices
+            </h3>
+            <pclassName="te, x, t-te, a, l-200, tex, t-base, m, b-6, leadin, g-relaxed, lin, e-cla, m, p-4">";
+              Transform, microservices, management wi, th <spanclassName="te, x, t-te, a, l-300, fon, t-semibo, l, d">99.8% upti, m, e</sp, a, n>, managing ";
+              <spanclassName = "te, x, t-te, a, l-300, fon, t-semibold"> 10, 0, M+ daily, request, s</sp, a, n> with, sel, f-healing, capabilities, and ";
+              <spanclassName = "te, x, t-te, a, l-300, fon, t-semibold">$6.4B, value, creation</sp, a, n>. Ze, r, o-touch, operations, at sca, l, e.";
             </p>
-
-            <div className="space-y-2 mb-6">
-              <div className="flex items-center gap-2 text-teal-300 text-sm">
-
-                <span className="font-semibold">$6.4B enterprise value</span>
+            <divclassName = "spa, c, e-y-2mb-6">
+              <div, className="flex, item, s-center, ga, p-2, tex, t-te, a, l-300text-sm">
+                <TrendingUp, className="w-4 h-4  />
+                <span, className="fo, n, t-semibold">$6.4B, enterprise, value</sp, a, n>
+              </d, i, v>
+              <div, className="flex, item, s-center, ga, p-2, tex, t-te, a, l-300text-sm">
+                <Award, className="w-4 h-4  />
+                <span, className="fo, n, t-semibold">95% incident, aut, o-resoluti, o, n</sp, a, n>
+              </d, i, v>
+              <div, className="flex, item, s-center, ga, p-2, tex, t-te, a, l-300text-sm">
+                <Zap, className="w-4 h-4  />
+                <span, className="fo, n, t-semibold">5, 5, 0% ROI, within, 12 mont, h, s</sp, a, n>
+            <div, className="spa, c, e-y-2mb-6">";
+              <divclassName = "flex, item, s-center, ga, p-2, tex, t-te, a, l-300text-sm">";
+                <TrendingUpclassName = "w-4 h-4" />";
+                <spanclassName = "fo, n, t-semibold">$6.4B, enterprise, value</sp, a, n>";
               </div>
-              <div className="flex items-center gap-2 text-teal-300 text-sm">
-
-                <span className="font-semibold">95% incident auto-resolution</span>
+              <divclassName="flex, item, s-center, ga, p-2, tex, t-te, a, l-300, tex, t-sm">";
+                <AwardclassName = "w-4 h-4" />";
+                <spanclassName = "fo, n, t-semibold">95% incident, aut, o-resoluti, o, n</sp, a, n>";
               </div>
-              <div className="flex items-center gap-2 text-teal-300 text-sm">
-
-                <span className="font-semibold">550% ROI within 12 months</span>
-              </div>
+              <divclassName="flex, item, s-center, ga, p-2, tex, t-te, a, l-300, tex, t-sm">";
+                <ZapclassName = "w-4 h-4" />";
+                <spanclassName = "fo, n, t-semibold">5, 5, 0% ROI, within, 12 mont, h, s</sp, a, n>";
+              </d, i, v>
             </div>
-            
-            <div className="flex items-center justify-between pt-4 border-t border-teal-400/30">
-              <div className="flex items-center gap-2 text-teal-300 text-sm">
-                <span className="font-medium">17 min read</span>
-                <span>•</span>
-                <span className="font-medium">Oct 1, 2025</span>
-              </div>
-
-            </div>
-          </Link>
-
-          {/* Article 3 - Customer Intent Prediction */}
-          <Link 
-            to="/blog/ai-2025-oct-customer-intent-prediction-breakthrough"
-            className="group bg-gradient-to-br from-cyan-800/50 to-cyan-900/50 backdrop-blur-sm border-2 border-cyan-400/40 rounded-2xl p-8 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/50 transition-all duration-300"
+            <divclassName="flex, item, s-center, justif, y-between, p, t-4, borde, r-t, borde, r-te, a, l-4, 0, 0/30">";
+              <divclassName = "flex, item, s-center, ga, p-2, tex, t-te, a, l-300text-sm">";
+                <spanclassName = "fo, n, t-medium">17, min, read</sp, a, n>";
+                <sp, a, n>•</span>
+                <spanclassName="fo, n, t-medi, u, m">Oc, t, 1, 20, 2, 5</span>";
+              </d, i, v>
+              <ArrowRightclassName = "w-6 h-6, tex, t-te, a, l-300, grou, p-hover: transla, t, e-x-2, transitio, n-transform/>"
+              <ArrowRight, className="w-6 h-6, tex, t-te, a, l-300, grou, p-hover: transla, t, e-x-2, transitio, n-transform" />";
+            </d, i, v>
+          </Li, n, k>
+          {/* Articl, e, 3 - Customer, Intent, Prediction */}
+          <Link
+  to="/bl, o, g/ai-20, 2, 5-o, c, t-custom, e, r-inte, n, t-predicti, o, n-breakthrou, g, h"
+            className="group, b, g-gradie, n, t-to-br, fro, m-cy, a, n-8, 0, 0/50, t, o-cy, a, n-9, 0, 0/50, backdro, p-bl, u, r-sm, borde, r-2, borde, r-cy, a, n-4, 0, 0/40, rounde, d-2x, l, p-8hover: sca, l, e-105hover: shad, o, w-2xl, hov, e
+  r:shad, o, w-cy, a, n-5, 0, 0/50, transitio, n-all, duratio, n-3, 0, 0"
           >
-            <div className="flex items-center gap-4 mb-6">
-              <div className="p-4 bg-cyan-500/30 rounded-2xl group-hover:bg-cyan-500/40 transition-colors shadow-lg">
-
+            <divclassName = "flex, item, s-center, ga, p-4mb-6">
+              <div, className="p-4, b, g-cy, a, n-5, 0, 0/30, rounde, d-2xl, grou, p-hover: bg-cy, a, n-5, 0, 0/40, transitio, n-colorsshadow-lg">"
+                <Target, className="w-1, 0, h-10, tex, t-cy, a, n-2, 00  />
+            <divclassName="flex, item, s-center, ga, p-4, m, b-6">";
+              <divclassName = "p-4, b, g-cy, a, n-5, 0, 0/30, rounde, d-2xl, grou, p-hover: bg-cy, a, n-5, 0, 0/40, transitio, n-colorsshadow-lg">";
+                <TargetclassName = "w-1, 0, h-10, tex, t-cy, a, n-200" />";
               </div>
-              <div className="flex-1">
-                <span className="text-xs text-cyan-300 font-bold uppercase tracking-wider bg-cyan-500/20 px-3 py-1 rounded-full">
-                  Intent Prediction
-                </span>
-              </div>
+              <divclassName="fl, e, x-1">";
+                <spanclassName = "te, x, t-xs, tex, t-cy, a, n-300, fon, t-bold, uppercase, tracking-wider, b, g-cy, a, n-5, 0, 0/20, p, x-3, p, y-1, rounde, d-full">";
+                  Intent, Predictio, n;
+                </sp, a, n>
+              </d, i, v>
             </div>
-            
-            <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-200 transition-colors leading-tight">
-              Real-Time AI Customer Intent: 98.2% Prediction Accuracy
+            <h3className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, grou, p-ho, v, e
+  r: te, x, t-cy, a, n-200, transitio, n-colors, leadin, g-tig, h, t">"
+              Re, a, l-Time, AI, Customer Intent: 98.2% Prediction, Accuracy
             </h3>
-            
-            <p className="text-cyan-200 text-base mb-6 leading-relaxed line-clamp-4">
-              Unlock <span className="text-cyan-300 font-semibold">$9.3B revenue growth</span> with AI achieving 
-              <span className="text-cyan-300 font-semibold"> 98.2% intent prediction accuracy</span> and 
-              <span className="text-cyan-300 font-semibold">850% conversion increases</span>. Hyper-personalization in real-time.
+            <pclassName="te, x, t-cy, a, n-200, tex, t-base, m, b-6, leadin, g-relaxed, lin, e-cla, m, p-4">
+            <h3className = "te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hover: te, x, t-cy, a, n-200, transitio, n-colors, leadin, g-tight">";
+              Re, a, l-Time, AI, Customer Int, e, n
+  t: 98.2% Prediction, Accuracy
+            </h3>
+            <pclassName="te, x, t-cy, a, n-200, tex, t-base, m, b-6, leadin, g-relaxed, lin, e-cla, m, p-4">";
+              Unlo, ck <spanclassName="te, x, t-cy, a, n-300, fon, t-semibo, l, d">$9.3B, revenue, growth</sp, a, n> withAIachieving ";
+              <spanclassName = "te, x, t-cy, a, n-300, fon, t-semibold"> 98.2% intent, prediction, accuracy</sp, a, n> a, n, d ";
+              <spanclassName = "te, x, t-cy, a, n-300, fon, t-semibold">8, 5, 0% conversion, increase, s</sp, a, n>. Hyp, e, r-personalization, in, real-ti, m, e.";
             </p>
-
-            <div className="space-y-2 mb-6">
-              <div className="flex items-center gap-2 text-cyan-300 text-sm">
-
-                <span className="font-semibold">$9.3B revenue growth</span>
+            <divclassName = "spa, c, e-y-2mb-6">
+              <div, className="flex, item, s-center, ga, p-2, tex, t-cy, a, n-300text-sm">
+                <TrendingUp, className="w-4 h-4  />
+                <span, className="fo, n, t-semibold">$9.3B, revenue, growth</sp, a, n>
+              </d, i, v>
+              <div, className="flex, item, s-center, ga, p-2, tex, t-cy, a, n-300text-sm">
+                <Award, className="w-4 h-4  />
+                <span, className="fo, n, t-semibold">8, 5, 0% conversion, increas, e</sp, a, n>
+              </d, i, v>
+              <div, className="flex, item, s-center, ga, p-2, tex, t-cy, a, n-300text-sm">
+                <Zap, className="w-4 h-4  />
+                <span, className="fo, n, t-semibold">6, 8, 0% ROI, in, 6 mont, h, s</sp, a, n>
+            <div, className="spa, c, e-y-2mb-6">";
+              <divclassName = "flex, item, s-center, ga, p-2, tex, t-cy, a, n-300text-sm">";
+                <TrendingUpclassName = "w-4 h-4" />";
+                <spanclassName = "fo, n, t-semibold">$9.3B, revenue, growth</sp, a, n>";
               </div>
-              <div className="flex items-center gap-2 text-cyan-300 text-sm">
-
-                <span className="font-semibold">850% conversion increase</span>
+              <divclassName="flex, item, s-center, ga, p-2, tex, t-cy, a, n-300, tex, t-sm">";
+                <AwardclassName = "w-4 h-4" />";
+                <spanclassName = "fo, n, t-semibold">8, 5, 0% conversion, increas, e</sp, a, n>";
               </div>
-              <div className="flex items-center gap-2 text-cyan-300 text-sm">
-
-                <span className="font-semibold">680% ROI in 6 months</span>
-              </div>
+              <divclassName="flex, item, s-center, ga, p-2, tex, t-cy, a, n-300, tex, t-sm">";
+                <ZapclassName = "w-4 h-4" />";
+                <spanclassName = "fo, n, t-semibold">6, 8, 0% ROI, in, 6 mont, h, s</sp, a, n>";
+              </d, i, v>
             </div>
-            
-            <div className="flex items-center justify-between pt-4 border-t border-cyan-400/30">
-              <div className="flex items-center gap-2 text-cyan-300 text-sm">
-                <span className="font-medium">18 min read</span>
-                <span>•</span>
-                <span className="font-medium">Oct 1, 2025</span>
-              </div>
-
-            </div>
-          </Link>
-        </div>
-
-        {/* Call to Action Section */}
-        <div className="bg-gradient-to-r from-emerald-800/30 via-teal-800/30 to-cyan-800/30 backdrop-blur-sm border-2 border-teal-400/40 rounded-2xl p-8 text-center shadow-xl">
-          <h3 className="text-3xl font-bold text-white mb-4">
-            Achieve Operational Excellence with AI
+            <divclassName="flex, item, s-center, justif, y-between, p, t-4, borde, r-t, borde, r-cy, a, n-4, 0, 0/30">";
+              <divclassName = "flex, item, s-center, ga, p-2, tex, t-cy, a, n-300text-sm">";
+                <spanclassName = "fo, n, t-medium">18, min, read</sp, a, n>";
+                <sp, a, n>•</span>
+                <spanclassName="fo, n, t-medi, u, m">Oc, t, 1, 20, 2, 5</span>";
+              </d, i, v>
+              <ArrowRightclassName = "w-6 h-6, tex, t-cy, a, n-300, grou, p-hover: transla, t, e-x-2, transitio, n-transform/>"
+              <ArrowRight, className="w-6 h-6, tex, t-cy, a, n-300, grou, p-hover: transla, t, e-x-2, transitio, n-transform" />";
+            </d, i, v>
+          </Li, n, k>
+        </d, i, v>
+        {/* Call, to, Action Secti, on */}
+        <divclassName="bg-gradie, n, t-to-r, fro, m-emera, l, d-8, 0, 0/30, vi, a-te, a, l-8, 0, 0/30, t, o-cy, a, n-8, 0, 0/30, backdro, p-bl, u, r-sm, borde, r-2, borde, r-te, a, l-4, 0, 0/40, rounde, d-2x, l, p-8, tex, t-center, shado, w-xl">";
+          <h3className = "te, x, t-3xl, fon, t-bold, tex, t-whitemb-4">";
+            Achieve, Operational, Excellence with, AI;
           </h3>
-          <p className="text-xl text-teal-200 mb-8 max-w-3xl mx-auto">
-            Join enterprise leaders who have implemented these AI systems across <span className="text-emerald-300 font-semibold">1,200+ global deployments</span>, 
-            creating <span className="text-teal-300 font-semibold">$24.4B in measurable value</span> with an average <span className="text-cyan-300 font-semibold">560% ROI</span>.
+          <pclassName="te, x, t-xl, tex, t-te, a, l-200, m, b-8, ma, x-w-3xl, m, x-au, t, o">
+            Join, enterprise, leaders who, have, implemented these, AI, systems acro, ss <spanclassName="te, x, t-emera, l, d-300, fon, t-semibo, l, d">1,2, 0, 0+ global, deployment, s</sp, a, n>
+            creati, ng <spanclassName="te, x, t-te, a, l-300, fon, t-semibo, l, d">$24.4B, in, measurable val, u, e</sp, a, n> with, anaverage <spanclassName="te, x, t-cy, a, n-300, fon, t-semibo, l, d">5, 6, 0% R, O, I</span>.
+          <pclassName="te, x, t-xl, tex, t-te, a, l-200, m, b-8, ma, x-w-3xl, m, x-au, t, o">";
+            Join, enterprise, leaders who, have, implemented these, AI, systems acro, ss <spanclassName="te, x, t-emera, l, d-300, fon, t-semibo, l, d">1,2, 0, 0+ global, deployment, s</span> ";
+            creati, n, g <spanclassName = "te, x, t-te, a, l-300, fon, t-semibold">$24.4B, in, measurable val, u, e</sp, a, n> with, an, average <span, className="te, x, t-cy, a, n-300, fon, t-semibold">5, 6, 0% R, O, I</sp, a, n>.";
           </p>
-          
-          <div className="flex flex-wrap gap-4 justify-center">
+          <divclassName = "flex, fle, x-wrap, ga, p-4, justif, y-center">";
             <Link
-              to="/blog"
-              className="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-white font-bold px-8 py-4 rounded-xl transition-all duration-300 shadow-lg hover:shadow-2xl hover:scale-105"
+  to="/bl, o, g"
+              className="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-emera, l, d-500, t, o-te, a, l-500hover: fr, o, m-emera, l, d-400hover: to-te, a, l-400, tex, t-white, fon, t-bold, p, x-8, p, y-4, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lghover: shad, o, w-2xl, hov, e
+  r:sca, l, e-1, 0, 5"
             >
-              <span>Explore All Innovations</span>
-
-            </Link>
-            
+              <sp, a, n>Explore, All, Innovations</span>
+              <ArrowRightclassName="w-5 h-5  />
+              <ArrowRightclassName = "w-5 h-5" />";
+            </Li, n, k>
             <Link
-              to="/contact"
-              className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-sm border-2 border-white/30 text-white font-bold px-8 py-4 rounded-xl transition-all duration-300 shadow-lg hover:shadow-2xl hover:scale-105"
+  to="/conta, c, t"
+              className="inli, n, e-flex, item, s-center, ga, p-2, b, g-whi, t, e/10hover: bg-whi, t, e/20, backdro, p-bl, u, r-sm, borde, r-2, borde, r-whi, t, e/30, tex, t-white, fon, t-bold, p, x-8, p, y-4, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lghover: shad, o, w-2xl, hov, e
+  r:sca, l, e-1, 0, 5"
             >
-              <span>Get Started Today</span>
-
-            </Link>
-          </div>
-        </div>
-
-        {/* Trust Indicators */}
-        <div className="mt-10 text-center">
-          <div className="flex flex-wrap gap-6 justify-center items-center text-teal-300 text-sm">
-            <div className="flex items-center gap-2">
-
-              <span className="font-semibold">1,200+ Global Deployments</span>
+              <sp, a, n>Get, Started, Today</span>
+              <ArrowRightclassName="w-5 h-5  />
+              <ArrowRightclassName = "w-5 h-5" />";
+            </Li, n, k>
+          </d, i, v>
+        </d, i, v>
+        {/* Trust, Indicators */}
+        <divclassName="mt-10, tex, t-cent, e, r">
+          <divclassName = "flex, fle, x-wrap, ga, p-6, justif, y-center, item, s-center, tex, t-te, a, l-300text-sm">
+            <div, className="flex, item, s-centergap-2">
+              <Award, className="w-5 h-5, tex, t-yell, o, w-4, 00  />
+              <spanclassName="fo, n, t-semibo, l, d">1,2, 0, 0+ Global, Deployment, s</sp, a, n>
             </div>
-            <div className="flex items-center gap-2">
-
-              <span className="font-semibold">99.2% Average Accuracy</span>
+            <divclassName="flex, item, s-center, ga, p-2">
+              <Sparkles, className="w-5 h-5, tex, t-emera, l, d-4, 00  />
+              <spanclassName="fo, n, t-semibo, l, d">99.2% Average, Accurac, y</sp, a, n>
             </div>
-            <div className="flex items-center gap-2">
-
-              <span className="font-semibold">$24.4B Value Created</span>
+            <divclassName="flex, item, s-center, ga, p-2">
+              <TrendingUp, className="w-5 h-5, tex, t-gre, e, n-4, 00  />
+              <spanclassName="fo, n, t-semibo, l, d">$24.4B, Value, Created</span>
+        <divclassName="mt-10, tex, t-cent, e, r">";
+          <divclassName = "flex, fle, x-wrap, ga, p-6, justif, y-center, item, s-center, tex, t-te, a, l-300text-sm">";
+            <divclassName = "flex, item, s-centergap-2">";
+              <AwardclassName = "w-5 h-5, tex, t-yell, o, w-400" />";
+              <spanclassName = "fo, n, t-semibold">1,2, 0, 0+ Global, Deployment, s</sp, a, n>";
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
+            <divclassName="flex, item, s-center, ga, p-2">";
+              <SparklesclassName = "w-5 h-5, tex, t-emera, l, d-400" />";
+              <spanclassName = "fo, n, t-semibold">99.2% Average, Accurac, y</sp, a, n>";
+            </div>
+            <divclassName="flex, item, s-center, ga, p-2">";
+              <TrendingUpclassName = "w-5 h-5, tex, t-gre, e, n-400" />";
+              <spanclassName = "fo, n, t-semibold">$24.4B, Value, Created</sp, a, n>";
+            </d, i, v>
+          </d, i, v>
+        </d, i, v>
+      </d, i, v>
+    </d, i, v>
   );
 };
-
 export default October2025OperationalExcellenceBanner;
+;

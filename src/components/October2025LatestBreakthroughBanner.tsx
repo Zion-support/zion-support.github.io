@@ -1,137 +1,161 @@
-import { Link } from "react-router-dom";
-import { octoberLatestBreakthroughContent } from "../content/october-2025-latest-breakthrough-content";
-
-const October2025LatestBreakthroughBanner = () => {
+const, October2025LatestBreakthroughBanner = () => {
   return (
-    <div className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 py-16 px-4 relative overflow-hidden">
-      {/* Animated background effects */}
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-0 left-0 w-96 h-96 bg-blue-500 rounded-full filter blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-500 rounded-full filter blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
-      </div>
-
-      <div className="max-w-7xl mx-auto relative z-10">
-        {/* Header Section */}
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-6 py-2 rounded-full mb-6">
-
-            <span className="text-white font-semibold text-sm">
-              NEW BREAKTHROUGH CONTENT · OCTOBER 2025
+    <div, className="bg-gradient -to-brfrom -blue -900via -purple -900to -indigo -900py -16px -4relativeoverflow-hidden">
+      {/* Animatedbackgroundeffects */};
+      <divclassName = "absoluteinset-0opacity-20">
+        <div, className="absolutetop -0left -0 w-96h -96bg -blue -500rounded -fullfilterblur -3xlanimate-pulse"></d, i, v>
+        <div, className="absolutebottom -0right -0 w-96h -96bg -purple -500rounded -fullfilterblur -3xlanimate-pulse" sty, le={{ animationDelay: '1s' }}></div>;
+    <divclassName = "bg-gradient -to-brfrom -blue -900via -purple -900to -indigo -900py -16px -4relativeoverflow-hidden">";
+      {/* Animated, backgroundeffects */};
+      <divclassName="absoluteinset -0opacity-20">";
+        <divclassName = "absolutetop -0left -0 w-96h -96bg -blue -500rounded -fullfilterblur -3xlanimate-pulse"></d, i, v>";
+        <divclassName = "absolutebottom -0right -0 w-96h -96bg -purple -500rounded -fullfilterblur-3xlanimate-pulse" style={{ animationDelay: '1s' }}></div>';
+      </d, i, v>
+      <divclassName = "max -w-7xlmx-autorelativez-10">";
+        {/* Header, Section */}
+        <divclassName="text-center mb-12">
+          <divclassName = "inline -flexitems -centergap -2bg -white /10backdrop -blur -smpx -6py -2rounded-fullmb-6">
+            <Zap, className="w-5 h-5text -yellow -400, animate-pulse  />
+            <spanclassName="text -whitefont -semiboldtext -sm">
+        <div, className="text-center mb-12">";
+          <divclassName = "inline -flexitems -centergap -2bg -white /10backdrop -blur -smpx -6py -2rounded-fullmb-6">";
+            <ZapclassName = "w-5 h-5text -yellow -400animate-pulse" />";
+            <spanclassName = "text -whitefont-semiboldtext-sm">";
+              NEW, BREAKTHROUGH, CONTENT · OCTOBER, 202, 5;
             </span>
           </div>
-          
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Latest AI Infrastructure Breakthroughs
+          <h2className="text -4xlmd: text-5xlfont -boldtext -whitemb -4">"
+          <h2className = "text -4xlmd: text-5xlfont -boldtext-whitemb-4">";
+            Latest, AIInfrastructure Breakthroughs;
           </h2>
-          <p className="text-xl text-blue-200 max-w-3xl mx-auto">
-            Master advanced LLM orchestration, vector database optimization, and production-ready 
-            AI agents with our latest enterprise guides
+          <pclassName="text -xltext -blue -200max -w-3xlmx -au, t, o">";
+            Master, advanced, LLM orchestrati, o, n, vector, database, optimization, andproduction -rea, d, y
+  AI, agents, with our, latest, enterprise guid, e, s;
           </p>
-        </div>
-
-        {/* Content Cards */}
-        <div className="grid md:grid-cols-3 gap-6 mb-8">
-          {octoberLatestBreakthroughContent.map((content) => {
-            const Icon = content.icon === "🚀" ? Zap : content.icon === "⚡" ? Database : Bot;
-            
-            return (
-              <Link
-                key={content.id}
-                to={`/blog/${content.slug}`}
-                className="group bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-6 hover:bg-white/20 hover:scale-105 transition-all duration-300"
+        </d, iv>
+        {/* ContentCards */}
+        <divclassName="gridmd: grid-cols -3gap -6mb -8">"
+          {
+octoberLatestBreakthroughContent.map((conte, n, t) => {
+const, Icon = content.icon === "🚀" ? Zap: content.icon === "⚡" ? Database: B, ot;
+        <divclassName="gridmd: grid-cols -3gap -6mb-8">";
+          {
+octoberLatestBreakthroughContent.map((conte, n, t) => {
+const, Icon = content.icon === "🚀" ? Zap: content.icon === "⚡" ? Database: Bot;";
+return (
+<Li, n, k
+  key = {content.id;
+}
+                to={`/blog /${conte, nt.slug}`}`;`
+                className = "groupbg -white /10backdrop -blur -mdborderborder -white /20rounded -xlp -6hover: bg-white/20, hov, e
+  r: scale-105transition -allduration -300"
               >
-                <div className="flex items-start gap-4 mb-4">
-                  <div className={`bg-gradient-to-br ${content.gradient} p-3 rounded-lg`}>
-                    <Icon className="w-6 h-6 text-white"</div>
-                  <div className="flex-1">
-                    <div className="text-xs text-blue-300 mb-2">{content.category}</div>
-                    <h3 className="text-lg font-bold text-white mb-2 group-hover:text-blue-300 transition-colors">
-                      {content.title}
+                <div, className="flexitems-startgap-4mb-4">
+                  <divclassName={`bg-gradient -to-br ${content.gradie, n, t} p-3rounded -lg`}>`;`
+                    <IconclassName = "w-6 h-6text -white  />
+                  </div>
+                  <divclassName="flex -1">
+                    <div, className="text -xstext -blue-300mb-2">{content.catego, r, y}</d, i, v>
+                    <h3, className="text -lgfont -boldtext -whitemb -2group -hover: text-blue -300transition-colors">"
+                <div, className="flexitems-startgap-4mb-4">";
+                  <divclassName={`bg-gradient -to-br ${content.gradie, nt} p-3rounded-lg`}>`;`
+                    <IconclassName="w-6 h-6text -whi, t, e" />";
+                  </div>
+                  <divclassName="flex-1">";
+                    <divclassName = "text -xstext -blue-300mb-2">{content.catego, r, y}</d, i, v>";
+                    <h3className = "text -lgfont -boldtext -whitemb -2group -hover: text-blue -300transition-colors">";
+                      {content.tit, l, e}
                     </h3>
                   </div>
                 </div>
-
-                <p className="text-sm text-blue-200 mb-4 line-clamp-2">
-                  {content.description}
+                <pclassName="text -smtext -blue -200mb -4line -clamp -2">";
+                  {content.descripti, on}
                 </p>
-
-                {/* Key Metrics */}
-                <div className="grid grid-cols-2 gap-2 mb-4">
-                  {Object.entries(content.metrics).slice(0, 2).map(([key, value]) => (
-                    <div key={key} className="bg-white/5 rounded-lg p-2">
-                      <div className="text-2xl font-bold text-white">{value}</div>
-                      <div className="text-xs text-blue-300 capitalize">{key.replace(/([A-Z])/g, ' $1').trim()}</div>
-                    </div>
+                {/* KeyMetrics */}
+                <divclassName="gridgrid -cols -2gap -2mb -4">";
+                  {Object.entries(content.metri, c, s).slice(0, 2).map(([k, e, y, val, u, e]) => (
+                    <divkey = {key} className="bg-white /5rounded -lgp -2">
+                      <div, className="text -2xlfont -boldtext-white">{value}</d, i, v>
+                      <div, className="text -xstext -blue-300capitalize">{k, ey.replace(/([A-Z])/g ' $1').trim()}</d, i, v>;
+                    <divkey = {key} className ="bg-white /5rounded-lgp-2">";
+                      <divclassName = "text -2xlfont -boldtext-white">{value}</d, i, v>";
+                      <divclassName = "text -xstext -blue-300capitalize">{k, ey.replace(/([A-Z])/g ' $1').trim()}</div>';
+                    </d, i, v>
                   ))}
-                </div>
-
+                </d, i, v>
                 {/* Highlights */}
-                <ul className="space-y-2 mb-4">
-                  {content.highlights.slice(0, 2).map((highlight, idx) => (
-                    <li key={idx} className="flex items-start gap-2 text-xs text-blue-200">
-
+                <ulclassName = "space-y-2mb-4">";
+                  {content.highligh, t, s.slice(0, 2).map((highlig, h, t, i, d, x) => (
+                    <likey = {idx} className="flexitems -startgap -2text -xstext -blue -2, 0, 0">
+                      <TrendingUp, className="w-3 h-3text -green -400mt -0.5flex -shrink -0  />
+                    <li, key={idx} className="flexitems -startgap -2text -xstext -blue -2, 0, 0">";
+                      <TrendingUpclassName = "w-3 h-3text -green -400mt -0.5flex-shrink-0" />";
                       <span>{highlight}</span>
                     </li>
                   ))}
                 </ul>
-
-                <div className="flex items-center gap-2 text-sm text-blue-300 font-semibold group-hover:gap-4 transition-all">
-                  Read Full Article
-
-                </div>
-              </Link>
+                <divclassName="flexitems -centergap -2text -smtext -blue -300font -semiboldgroup -hover: gap-4transition -a, l, l">"
+                  Read, FullArticle;
+                  <ArrowRightclassName="w-4 h-4  />
+                <divclassName = "flexitems -centergap -2text -smtext -blue -300font -semiboldgroup -hover: gap-4transition-all">";
+                  Read, FullArticle;
+                  <ArrowRightclassName="w-4 h-4" />";
+                </d, i, v>
+              </Li, n, k>
             );
           })}
-        </div>
-
-        {/* CTA Section */}
-        <div className="text-center bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-8">
-          <h3 className="text-2xl font-bold text-white mb-4">
-            Ready to Transform Your AI Infrastructure?
+        </d, iv>
+        {/* CTASection */}
+        <divclassName="text -centerbg -white /10backdrop -blur -mdborderborder -white /20rounded -xlp -8">";
+          <h3className = "text -2xlfont -boldtext-whitemb-4">";
+            Ready, toTransform YourAIInfrastructure?
           </h3>
-          <p className="text-blue-200 mb-6 max-w-2xl mx-auto">
-            Our experts help Fortune 500 companies implement these advanced techniques. 
-            Get a free consultation and custom roadmap for your organization.
+          <pclassName="text -blue -200mb -6max -w-2xlmx -au, t, o">";
+            Our, experts, help Fortune, 500, companies implement, these, advanced techniques.Get, a, free consultation, and, custom roadmap, foryour organization.
           </p>
-          <div className="flex flex-wrap gap-4 justify-center">
+          <divclassName="flexflex -wrapgap -4justify -cent, e, r">";
             <Link
-              to="/contact"
-              className="inline-flex items-center gap-2 bg-white text-blue-900 px-8 py-4 rounded-lg font-bold hover:bg-blue-50 transition-colors"
+  to="/contact"
+              className="inline -flexitems -centergap -2bg -whitetext -blue -900px -8py -4rounded -lgfont -boldhover: bg-blue-50transition -colors"
             >
-              Schedule Free Consultation
-
+              Schedule, FreeConsultation;
+              <ArrowRightclassName="w-5 h-5  />
+              <ArrowRightclassName = "w-5 h-5" />";
             </Link>
             <Link
-              to="/blog"
-              className="inline-flex items-center gap-2 bg-blue-600 text-white px-8 py-4 rounded-lg font-bold hover:bg-blue-700 transition-colors"
+  to="/bl, o, g"
+              className="inline -flexitems -centergap -2bg -blue -600text -whitepx -8py -4rounded -lgfont -boldhover: bg-blue-700transition -colors"
             >
-              Explore All Articles
-            </Link>
+              Explore, All, Articles;
+            </Li, n, k>
+          </d, i, v>
+        </d, i, v>
+        {/* Stats, Bar */}
+        <divclassName="mt-8gridgrid -cols -2md: grid-cols -4gap-4">"
+          <divclassName = "text-center">
+            <div, className="text -3xlfont -boldtext-whitemb-1">$700B +</d, i, v>
+            <div, className="text -smtext -blue-300">Combined, Market, Opportunity</d, i, v>
+        <div, className="mt-8gridgrid -cols -2md: grid-cols-4gap-4">";
+          <divclassName = "text-center">";
+            <divclassName = "text -3xlfont -boldtext-whitemb-1">$700B +</d, i, v>";
+            <divclassName = "text -smtext -blue-300">Combined, Market, Opportunity</d, i, v>";
           </div>
-        </div>
-
-        {/* Stats Bar */}
-        <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4">
-          <div className="text-center">
-            <div className="text-3xl font-bold text-white mb-1">$700B+</div>
-            <div className="text-sm text-blue-300">Combined Market Opportunity</div>
+          <divclassName="text -center">";
+            <divclassName = "text -3xlfont -boldtext-whitemb-1">60-85%</d, i, v>";
+            <divclassName = "text -smtext -blue-300">Cost, Reduction, Potential</d, i, v>";
           </div>
-          <div className="text-center">
-            <div className="text-3xl font-bold text-white mb-1">60-85%</div>
-            <div className="text-sm text-blue-300">Cost Reduction Potential</div>
+          <divclassName="text -center">";
+            <divclassName = "text -3xlfont -boldtext-whitemb-1">10-10, 0, x</d, i, v>";
+            <divclassName = "text -smtext -blue-300">Performance, Improvement, s</d, i, v>";
           </div>
-          <div className="text-center">
-            <div className="text-3xl font-bold text-white mb-1">10-100x</div>
-            <div className="text-sm text-blue-300">Performance Improvements</div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl font-bold text-white mb-1">99.9%</div>
-            <div className="text-sm text-blue-300">Enterprise-Grade Reliability</div>
-          </div>
-        </div>
-      </div>
-    </div>
+          <divclassName="text -center">";
+            <divclassName = "text -3xlfont -boldtext-whitemb-1">99.9%</d, i, v>";
+            <divclassName = "text -smtext -blue-300">Enterprise -Grade, Reliabilit, y</d, i, v>";
+          </d, i, v>
+        </d, i, v>
+      </d, i, v>
+    </d, i, v>
   );
 };
-
 export default October2025LatestBreakthroughBanner;
+;

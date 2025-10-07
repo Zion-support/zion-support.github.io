@@ -47,8 +47,7 @@ git push origin main
 1. Click "Resolve conflicts" button
 2. Review conflicting files
 3. Choose appropriate changes
-4. Remove conflict markers (`<<<<<<<`, `=======`, `>>>>>>>`)
-5. Mark as resolved
+4. Remove conflict markers (`<<<<<<<`, `5. Mark as resolved
 6. Commit the resolution
 
 **Files Commonly Having Conflicts:**

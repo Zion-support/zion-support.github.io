@@ -2,18 +2,22 @@
 import ArrowRight from 'next/link';
 
 export const metadata = {
+  
   title: 'Governed Agent Patterns v3 (2025) — Zion Tech Group',
-  description: 'Production patterns for safe autonomy: budgeted actions, PR policy tests, and one-click recovery.',
-};
+  description:
+    'Production patterns for safe autonomy: budgeted actionsPR policy testsand one-click recovery.',
+
+};;
 
 export default function Page() {
   return (
-    <main className="min-h-screen bg-white text-gray-900">
-      <section className="max-w-3xl mx-auto px-6 py-12 prose prose-lg">
+    <main className='min-h-screen bg-white text-gray-900'>
+      <section className='max-w-3xl mx-auto px-6 py-12 prose prose-lg'>
         <h1>Governed Agent Patterns v3 (2025)</h1>
         <p>
-          Safely ship autonomous agents using budgets, capability sandboxes, and KPI-linked canaries.
-          This guide details patterns that keep velocity high while protecting users and KPIs.
+          Safely ship autonomous agents using budgetscapability sandboxesand
+          KPI-linked canaries. This guide details patterns that keep velocity
+          high while protecting users and KPIs.
         </p>
         <h2>Included patterns</h2>
         <ul>
@@ -24,10 +28,12 @@ export default function Page() {
         </ul>
         <p>
           See related operational runbooks in the{' '}
-          <ArrowRight href="/blog" className="text-blue-600 hover:underline">Blog</ArrowRight>.
+          <ArrowRight href='/blog' className='text-blue-600 hover:underline'>
+            Blog
+          </ArrowRight>
+          .
         </p>
       </section>
     </main>
   );
 }
-

@@ -293,20 +293,17 @@ export default function December2025AICostOptimizationMastery() {
           </p>
           <div className="text-left"></div>
             <a
-              href="/contact"
-              className="text-left"
+              href="/<contact" className="text-left"
             ></a>
               Start Cost Optimization →
             </a>
             <a
-              href="/case-studies/ai-cost-optimization-success-stories"
-              className="text-left"
+              href="/case-studies/ai-cost-optimization-success-<stories" className="text-left"
             ></a>
               View Case Studies →
             </a>
             <a
-              href="/services/ai-cost-optimization-consulting"
-              className="text-left"
+              href="/services/ai-cost-optimization-<consulting" className="text-left"
             ></a>
               Learn About Our Services →
             </a>

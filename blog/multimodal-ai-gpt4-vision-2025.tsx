@@ -16,7 +16,7 @@ export default function MultimodalAIGPT4Vision2025() {
       <div className="text-left"></div>
         <main className="text-left">
           <nav className="text-left">
-            <a href="/blog" className="text-left"></a>
+            <a href="/<blog" className="text-left"></a>
               ← Back to Blog
             </a>
           </nav>
@@ -214,8 +214,7 @@ export default function MultimodalAIGPT4Vision2025() {
                   you harness the power of vision-language models to solve your most challenging visual intelligence problems.
                 </p>
                 <a
-                  href="/contact"
-                  className="text-left"
+                  href="/<contact" className="text-left"
                 ></a>
                   Get Started Today
                 </a>

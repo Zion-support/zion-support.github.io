@@ -20,7 +20,7 @@ export default function AISustainableBusiness2025() {
       <div className="text-left"></div>
         <main className="text-left">
           <nav className="text-left">
-            <a href="/blog" className="text-left"></a>
+            <a href="/<blog" className="text-left"></a>
               ← Back to Blog
             </a>
           </nav>
@@ -255,20 +255,17 @@ export default function AISustainableBusiness2025() {
                 </p>
                 <div className="text-left"></div>
                   <a
-                    href="/contact"
-                    className="text-left"
+                    href="/<contact" className="text-left"
                   ></a>
                     Schedule Free Assessment
                   </a>
                   <a
-                    href="/case-studies/sustainable-manufacturing-transformation-2025"
-                    className="text-left"
+                    href="/case-studies/sustainable-manufacturing-transformation-<2025" className="text-left"
                   ></a>
                     View Case Studies
                   </a>
                   <a
-                    href="/services/ai-sustainability-solutions"
-                    className="text-left"
+                    href="/services/ai-sustainability-<solutions" className="text-left"
                   ></a>
                     Explore Solutions
                   </a>
@@ -281,10 +278,10 @@ export default function AISustainableBusiness2025() {
                   Written by Zion Tech Group Sustainability Innovation Team
                 </div>
                 <div className="text-left"></div>
-                  <a href="/blog" className="text-left"></a>
+                  <a href="/<blog" className="text-left"></a>
                     ← Back to Blog
                   </a>
-                  <a href="/services/ai-sustainability-solutions" className="text-left"></a>
+                  <a href="/services/ai-sustainability-<solutions" className="text-left"></a>
                     Learn More
                   </a>
                 </div>

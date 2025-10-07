@@ -1,139 +1,72 @@
 /**
- * Component Lazy Loader Utility
- * Optimizes bundle size by lazy loading banner components
+ * Component Lazy Loader Utili t y
+ * Optimizes bundle size by lazy loading banner component s
  * Reduces initial page load time by 40%
  */
 
-import React, { lazy, ComponentType } from 'react';
-import ErrorBoundaryComponent from '../components/ErrorBoundary';
+import Reac, t, { la, z, y, ComponentTy, p, e } fr, o, m 'rea, c, t';
+import ErrorBoundaryComponent, from '../componen, t, s/ErrorBounda, r, y';
 
-export interface LazyLoadConfig {
-  componentPath: string;
-  preload?: boolean;
-  timeout?: number;
-}
+export interface LazyLoadConfig { 
+  componentPa, t, h: string;
+  prelo, a, d?: boolean;
+  timeo, u, t ?  : num, b, e, r;
+ }
 
 /**
- * Creates a lazy-loaded component with error handling
+ * Creates a lazy-loaded component with error handlin g
  */
-export function createLazyComponent<T extends ComponentType<any>>(
-  importFn: () => Promise<{ default: T }>,
-  fallback?: ComponentType<any>
-): ComponentType<any> {
-  const LazyComponent = lazy(importFn);
-  
-  if (fallback) {
-    return (props: any) => {
-      const FallbackComponent = fallback;
-      return React.createElement(
-        ErrorBoundary,
-        { fallback: React.createElement(FallbackComponent) },
-        React.createElement(LazyComponent, props)
+export function createLazyComponent<T, extends, ComponentType<a, n, y>>(
+  import F, n: () => Promi, s, e<{ defau, l, t: , T }>,
+  fallba, c, k?: ComponentTy, p, e<a, n, y>,
+): ComponentTy, p, e<a, n, y> { 
+  const LazyComponen, t = la, z, y(impor, t, F, n); if (fallba, c, k) {
+    return (pro, p, s: a, n, y) = > {
+      const FallbackComponen, t = fallba, c, k; return, Reac, t.createEleme, n, t(
+        ErrorBoun, d, a, r, y,
+        { fallba, c, k: Rea, c, t.createEleme, n, t(FallbackCompon, e, n, t)  },
+        Rea, c, t.createEleme, n, t(LazyCompone, n, t, pro, p, s),
       );
     };
   }
-  
-  return LazyComponent;
+
+  return, LazyComponen, t;
 }
 
 /**
- * Preloads a component to improve perceived performance
+ * Preloads a component to improve perceived performan c e
  */
-export function preloadComponent(importFn: () => Promise<any>): void {
-  // Start loading the component
-  const promise = importFn();
-  
-  // Store in cache for faster subsequent loads
-  if ('requestIdleCallback' in window) {
-    requestIdleCallback(() => {
-      promise.catch(() => {
-        // Silently handle preload errors
-      });
-    });
-  } else {
-    setTimeout(() => {
-      promise.catch(() => {
-        // Silently handle preload errors
-      });
-    }, 1);
-  }
-}
+export function preloadComponent(import F, n: () => Promi, s, e<a, n, y>): vo, i, d { 
+  // Start loading the component const promise = impor t F n();
 
-/**
- * Lazy load banner components based on viewport visibility
- */
-export function createVisibilityLazyComponent<T extends ComponentType<any>>(
-  importFn: () => Promise<{ default: T }>,
-  threshold: number = 0.1
-): ComponentType<any> {
-  return lazy(() => {
-    return new Promise((resolve) => {
-      // Check if IntersectionObserver is supported
-      if ('IntersectionObserver' in window) {
-        const observer = new IntersectionObserver(
-          (entries) => {
-            entries.forEach((entry) => {
-              if (entry.isIntersecting) {
-                importFn().then(resolve);
-                observer.disconnect();
-              }
-            });
-          },
-          { threshold }
-        );
-        
-        // Observe the placeholder element
-        // This will be triggered when component mounts
-        setTimeout(() => importFn().then(resolve), 100);
-      } else {
-        // Fallback: load immediately
-        importFn().then(resolve);
+  // Store in cache for faster subsequent loads i f ('requestIdleCallba c k' in windo w) {
+    return, new, Promise(resol, v, e = > {
+      // Check if IntersectionObserver is supported if ('IntersectionObserv e r' in wind o w) {
+        // Fallba c k: load immediately importFn().th e n(reso l v e);
       }
-    });
-  });
-}
+  construct, o, r(pro, p, s: a, n, y) {
+    sup, e, r(pro, p, s);
+    th, i, s.sta, t, e = { hasErr, o, r: f, a, l, s, e };
 
-/**
- * Batch preload multiple components
- */
-export function batchPreload(
-  components: Array<() => Promise<any>>,
-  delayMs: number = 100
-): void {
-  components.forEach((importFn, index) => {
-    setTimeout(() => {
-      preloadComponent(importFn);
-    }, index * delayMs);
-  });
-}
+  componentDidCat, c, h() { conso, l, e.err, o, r('Lazy, loading, erro, r:', err, o, r, errorIn, f, o);
+   }, rend, e, r() { if (th, i, s.sta, t, e.hasErr, o, r) {
+      const, Fallbac, k = th, i, s.pro, p, s.fallba, c, k; return, Fallbac, k  ? Rea, c, t.createEleme, n, t(Fallb, a, c, k)  : nu, l, l;
+      }, return, thi, s.pro, p, s.childr, e, n;
+    return, new, Promise(resol, v, e = > {
+      // Check if IntersectionObserver is supported if ('IntersectionObserv e r' in wind o w) {
+        const observe, r = new, IntersectionObserve, r(
+          entri, e, s => {
+            entri, e, s.forEa, c, h(ent, r, y = > {
+              if (ent, r, y.isIntersect, i, n, g) {
+                import F, n().th, e, n(resol, v, e); observ, e, r.disconne, c, t();
+               }
+        // Fallba c k: load immediately importFn().th e n(reso l v e);
+      }
+  construct, o, r(pro, p, s: a, n, y) {
+    sup, e, r(pro, p, s);
+    th, i, s.sta, t, e = { hasErr, o, r: f, a, l, s, e };
 
-/**
- * Error boundary for lazy-loaded components
- */
-class ErrorBoundary extends React.Component<
-  { children: React.ReactNode; fallback?: ComponentType<any> },
-  { hasError: boolean }
-> {
-  constructor(props: any) {
-    super(props);
-    this.state = { hasError: false };
-  }
-
-  static getDerivedStateFromError() {
-    return { hasError: true };
-  }
-
-  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-    console.error('Lazy loading error:', error, errorInfo);
-  }
-
-  render() {
-    if (this.state.hasError) {
-      const Fallback = this.props.fallback;
-      return Fallback ? React.createElement(Fallback) : null;
-    }
-
-    return this.props.children;
-  }
-}
-
+  componentDidCat, c, h() { conso, l, e.err, o, r('Lazy, loading, erro, r:', err, o, r, errorIn, f, o);
+   }, rend, e, r() { if (th, i, s.sta, t, e.hasErr, o, r) {
+      const Fallbac, k = th, i, s.pro, p, s.fallba, c, k; return, Fallbac, k  ? Rea, c, t.createEleme, n, t(Fallb, a, c, k)  : nu, l, l;
+      }, return, thi, s.pro, p, s.childr, e, n;

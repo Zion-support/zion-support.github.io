@@ -5,43 +5,37 @@ const Footer: React.FC = () => {
     <footer className='bg-gray-800 text-white'>
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12'>
         <div className='grid grid-cols-1 md:grid-cols-4 gap-8'>
+    <footer className="bg-gray-900 text-white py-8">
+      <div className="container mx-auto px-4">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+>>>>>>> origin/merge-fixes
           <div>
             <h3 className='text-lg font-semibold mb-4'>Zion Tech Group</h3>
             <p className='text-gray-300'>
-              Advanced AI and IT Solutions for modern businesses.
-            </p>
-          </div>
+          
           <div>
-            
-            <ul className='space-y-2 text-gray-300'>
-              <li>AI Solutions</li>
-              <li>IT Infrastructure</li>
-              <li>Cloud Services</li>
-              
+            <h4 className="text-lg font-semibold mb-4">Services</h4>
+            <ul className="space-y-2">
+              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">AI Solutions</a></li>
+              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">IT Consulting</a></li>
+              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Cloud Services</a></li>
+              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Data Analytics</a></li>
             </ul>
           </div>
+          
           <div>
-            
-            <ul className='space-y-2 text-gray-300'>
-              <li>About Us</li>
-
+            <h4 className="text-lg font-semibold mb-4">Company</h4>
+            <ul className="space-y-2">
+              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">About Us</a></li>
+              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Careers</a></li>
+              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Contact</a></li>
+              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Privacy Policy</a></li>
             </ul>
           </div>
-          <div>
-            
-            <p className='text-gray-300'>
-              Email: info@ziontechgroup.com
-              <br />
-              Phone: +1 (302) 464-0950
-            </p>
-          </div>
         </div>
-        <div className='border-t border-gray-700 mt-8 pt-8 text-center text-gray-300'>
-          <p>&copy; 2025 Zion Tech Group. All rights reserved.</p>
-        </div>
-      </div>
-    </footer>
-  );
-};
-
-export default Footer;
+        
+        <div className="border-t border-gray-700 mt-8 pt-8 text-center">
+          <p className="text-gray-300">
+            © {new Date().getFullYear()} Zion Tech Group. All rights reserved.
+          </p>
+>>>>>>> 0c4a2002f1455a31be6ebb4d4edd54c74c65ff9d

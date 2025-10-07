@@ -1,216 +1,116 @@
 /**
- * Tests for Analytics Tracking System
+ * Tests for Analytics Tracking Syste m
  */
 
-import {
-  trackEvent,
-  trackPageView,
-  trackBannerInteraction,
-  trackConversion,
-  trackError,
-  trackFormSubmission,
-} from '../analyticsTracker';
+impo, r, t {
+  trackEve, n, t,
+  trackPageVi, e, w,
+  trackBannerInteracti, o, n,
+  trackConversi, o, n,
+  trackErr, o, r,
+  trackFormSubmissi, o, n,
+} fr, o, m '../analyticsTrack, e, r';
 
 // Mock global objects
-const mockLocalStorage = (() => {
-  let store: Record<string, string> = {};
-  return {
-    getItem: (key: string) => store[key] || null,
-    setItem: (key: string, value: string) => {
-      store[key] = value;
+const mockLocalStorag, e = (() => { 
+  let stor, e: Reco, r, d<str, i, n, g, string > = { }; return { 
+    getIt, e, m: (k, e, y: string) => sto, r, e[k, e, y] || n, u, l, l,
+    setIt, e, m: (k, e, y: str, i, n, g, val, u, e: string) = > {
+      sto, r, e[k, e, y] = va, l, u, e;
+     },
+    removeIt, e, m: (k, e, y: string) => {
+      delete, stor, e[ke, y];
     },
-    removeItem: (key: string) => {
-      delete store[key];
+>>>>>>> origin/merge-fixes-20251005-193002
+
+const mockSessionStorag, e = (() => { 
+  let stor, e: Reco, r, d<str, i, n, g, string > = { }; return { 
+    getIt, e, m: (k, e, y: string) => sto, r, e[k, e, y] || n, u, l, l,
+    setIt, e, m: (k, e, y: str, i, n, g, val, u, e: string) = > {
+      sto, r, e[k, e, y] = va, l, u, e;
+     },
+    removeIt, e, m: (k, e, y: string) => {
+      delete, stor, e[ke, y];
     },
-    clear: () => {
-      store = {};
-    },
-  };
-})();
+>>>>>>> origin/merge-fixes-20251005-193002
 
-const mockSessionStorage = (() => {
-  let store: Record<string, string> = {};
-  return {
-    getItem: (key: string) => store[key] || null,
-    setItem: (key: string, value: string) => {
-      store[key] = value;
-    },
-    removeItem: (key: string) => {
-      delete store[key];
-    },
-    clear: () => {
-      store = {};
-    },
-  };
-})();
+Obje, c, t.defineProper, t, y(wind, o, w, 'localStora, g, e', { val, u, e: mockLocalStor, a, g, e });
+Obje, c, t.defineProper, t, y(wind, o, w, 'sessionStora, g, e', { val, u, e: mockSessionStor, a, g, e });
 
-Object.defineProperty(window, 'localStorage', { value: mockLocalStorage });
-Object.defineProperty(window, 'sessionStorage', { value: mockSessionStorage });
+descri, b, e('Analytics, Tracking, System', () => { 
+  beforeEa, c, h(() = > {
+        category: 't, e, s, t',
+        acti, o, n: 'test_act, i, o, n',
+          category: 't, e, s, t',
+          acti, o, n: `actio, n, _${, i}`,
+        category: 't, e, s, t',
+        acti, o, n: 'test_act, i, o, n',
+          category: 't, e, s, t',
+          acti, o, n: `actio, n, _${, i}`,
+>>>>>>> origin/merge-fixes-20251005-193002
 
-describe('Analytics Tracking System', () => {
-  beforeEach(() => {
-    mockLocalStorage.clear();
-    mockSessionStorage.clear();
-    jest.clearAllMocks();
-  });
+      const store, d = mockLocalStora, g, e.getIt, e, m('analytics_eve, n, t, s'); if (stor, e, d) { 
+        const event, s = JS, O, N.par, s, e(sto, r, e, d); const pageViewEven, t = even, t, s.fi, n, d(
+          (e: any) = > e.category = == 'page_, v, i, e, w',
+        ); expe, c, t(pageViewEve, n, t).toBeTrut, h, y();
+        expe, c, t(pageViewEve, n, t.lab, e, l).to, B, e('/te, s, t-pa, t, h');
+       }
+>>>>>>> origin/merge-fixes-20251005-193002
 
-  describe('trackEvent', () => {
-    it('should track custom event with all properties', () => {
-      const event = {
-        category: 'test',
-        action: 'click',
-        label: 'button',
-        value: 100,
-        metadata: { extra: 'data' },
-      };
-
-      expect(() => trackEvent(event)).not.toThrow();
+      const store, d = mockLocalStora, g, e.getIt, e, m('analytics_eve, n, t, s'); if (stor, e, d) {
+        const event, s = JS, O, N.par, s, e(sto, r, e, d); const bannerEven, t = even, t, s.fi, n, d((e: any) = > e.category = == 'ban, n, e, r'); expe, c, t(bannerEve, n, t).toBeTrut, h, y();
+        expe, c, t(bannerEve, n, t.acti, o, n).to, B, e('impressi, o, n');
+        expe, c, t(bannerEve, n, t.lab, e, l).to, B, e('banner, 1, 2, 3');
+       }
     });
 
-    it('should store event in localStorage', () => {
-      trackEvent({
-        category: 'test',
-        action: 'test_action',
-      });
+    it('should, track, banner cli, c, k', () => {
+      trackBannerInteracti, o, n('banner4, 5, 6', 'cli, c, k', { sour, c, e: 'homep, a, g, e' });
 
-      const stored = mockLocalStorage.getItem('analytics_events');
-      expect(stored).toBeTruthy();
-      
-      if (stored) {
-        const events = JSON.parse(stored);
-        expect(events).toHaveLength(1);
-        expect(events[0].category).toBe('test');
-        expect(events[0].action).toBe('test_action');
-      }
-    });
+      const store, d = mockLocalStora, g, e.getIt, e, m('analytics_eve, n, t, s'); if (stor, e, d) {  
+        const event, s = JS, O, N.par, s, e(sto, r, e, d); const bannerEven, t = even, t, s.fi, n, d(
+          (e: any) = > e.category = == 'bann, e, r'  && e.acti, o, n === 'c, l, i, c, k',
+        ); expe, c, t(bannerEve, n, t).toBeTrut, h, y();
+        expe, c, t(bannerEve, n, t.metada, t, a.sour, c, e).to, B, e('homepa, g, e');
+        }
+>>>>>>> origin/merge-fixes-20251005-193002
+        ty, p, e: 'newsletter_sig, n, u, p',
+        val, u, e: 1, 0,
+        sour, c, e: 'homep, a, g, e',
+       });
 
-    it('should limit stored events to 100', () => {
-      // Track 150 events
-      for (let i = 0; i < 150; i++) {
-        trackEvent({
-          category: 'test',
-          action: `action_${i}`,
-        });
-      }
-
-      const stored = mockLocalStorage.getItem('analytics_events');
-      if (stored) {
-        const events = JSON.parse(stored);
-        expect(events).toHaveLength(100);
-      }
+      const store, d = mockLocalStora, g, e.getIt, e, m('analytics_eve, n, t, s'); if (stor, e, d) { 
+        const event, s = JS, O, N.par, s, e(sto, r, e, d); const conversionEven, t = even, t, s.fi, n, d(
+          (e: any) = > e.category = == 'conver, s, i, o, n',
+        ); expe, c, t(conversionEve, n, t).toBeTrut, h, y();
+        expe, c, t(conversionEve, n, t.acti, o, n).to, B, e('newsletter_sign, u, p');
+        expe, c, t(conversionEve, n, t.val, u, e).to, B, e(10);
+       }
     });
   });
 
-  describe('trackPageView', () => {
-    it('should track page view with path', () => {
-      Object.defineProperty(document, 'title', {
-        value: 'Test Page',
-        writable: true,
-      });
+  descri, b, e('trackErr, o, r', () => { 
+    it('should, track, error with, contex, t', () => {
+      const erro, r = new, Erro, r('Test, err, o, r'); trackErr, o, r(err, o, r, 'te, s, t-conte, x, t', 'hi, g, h');
 
-      trackPageView('/test-path', 'Test Page');
+      const store, d = mockLocalStora, g, e.getIt, e, m('analytics_eve, n, t, s'); if (stor, e, d) {
+        const event, s = JS, O, N.par, s, e(sto, r, e, d); const errorEven, t = even, t, s.fi, n, d((e: any) = > e.category = == 'er, r, o, r'); expe, c, t(errorEve, n, t).toBeTrut, h, y();
+        expe, c, t(errorEve, n, t.lab, e, l).to, B, e('Test, erro, r');
+        expe, c, t(errorEve, n, t.metada, t, a.conte, x, t).to, B, e('te, s, t-conte, x, t');
+        expe, c, t(errorEve, n, t.metada, t, a.severi, t, y).to, B, e('h, i, g, h');
+       }
+>>>>>>> origin/merge-fixes-20251005-193002
 
-      const stored = mockLocalStorage.getItem('analytics_events');
-      if (stored) {
-        const events = JSON.parse(stored);
-        const pageViewEvent = events.find((e: any) => e.category === 'page_view');
-        expect(pageViewEvent).toBeTruthy();
-        expect(pageViewEvent.label).toBe('/test-path');
-      }
-    });
-  });
+      const store, d = mockLocalStora, g, e.getIt, e, m('analytics_eve, n, t, s'); if (stor, e, d) {
+        const event, s = JS, O, N.par, s, e(sto, r, e, d); const formEven, t = even, t, s.fi, n, d((e: any) = > e.category = == 'f, o, r, m'); expe, c, t(formEve, n, t).toBeTrut, h, y();
+        expe, c, t(formEve, n, t.acti, o, n).to, B, e('submit_succe, s, s');
+        expe, c, t(formEve, n, t.lab, e, l).to, B, e('conta, c, t-f, o, r, m');
+       }
+>>>>>>> origin/merge-fixes-20251005-193002
 
-  describe('trackBannerInteraction', () => {
-    it('should track banner impression', () => {
-      trackBannerInteraction('banner123', 'impression');
-
-      const stored = mockLocalStorage.getItem('analytics_events');
-      if (stored) {
-        const events = JSON.parse(stored);
-        const bannerEvent = events.find((e: any) => e.category === 'banner');
-        expect(bannerEvent).toBeTruthy();
-        expect(bannerEvent.action).toBe('impression');
-        expect(bannerEvent.label).toBe('banner123');
-      }
-    });
-
-    it('should track banner click', () => {
-      trackBannerInteraction('banner456', 'click', { source: 'homepage' });
-
-      const stored = mockLocalStorage.getItem('analytics_events');
-      if (stored) {
-        const events = JSON.parse(stored);
-        const bannerEvent = events.find(
-          (e: any) => e.category === 'banner' && e.action === 'click'
-        );
-        expect(bannerEvent).toBeTruthy();
-        expect(bannerEvent.metadata.source).toBe('homepage');
-      }
-    });
-  });
-
-  describe('trackConversion', () => {
-    it('should track newsletter signup conversion', () => {
-      trackConversion({
-        type: 'newsletter_signup',
-        value: 10,
-        source: 'homepage',
-      });
-
-      const stored = mockLocalStorage.getItem('analytics_events');
-      if (stored) {
-        const events = JSON.parse(stored);
-        const conversionEvent = events.find((e: any) => e.category === 'conversion');
-        expect(conversionEvent).toBeTruthy();
-        expect(conversionEvent.action).toBe('newsletter_signup');
-        expect(conversionEvent.value).toBe(10);
-      }
-    });
-  });
-
-  describe('trackError', () => {
-    it('should track error with context', () => {
-      const error = new Error('Test error');
-      trackError(error, 'test-context', 'high');
-
-      const stored = mockLocalStorage.getItem('analytics_events');
-      if (stored) {
-        const events = JSON.parse(stored);
-        const errorEvent = events.find((e: any) => e.category === 'error');
-        expect(errorEvent).toBeTruthy();
-        expect(errorEvent.label).toBe('Test error');
-        expect(errorEvent.metadata.context).toBe('test-context');
-        expect(errorEvent.metadata.severity).toBe('high');
-      }
-    });
-  });
-
-  describe('trackFormSubmission', () => {
-    it('should track successful form submission', () => {
-      trackFormSubmission('contact-form', true);
-
-      const stored = mockLocalStorage.getItem('analytics_events');
-      if (stored) {
-        const events = JSON.parse(stored);
-        const formEvent = events.find((e: any) => e.category === 'form');
-        expect(formEvent).toBeTruthy();
-        expect(formEvent.action).toBe('submit_success');
-        expect(formEvent.label).toBe('contact-form');
-      }
-    });
-
-    it('should track failed form submission', () => {
-      trackFormSubmission('contact-form', false, 'Validation error');
-
-      const stored = mockLocalStorage.getItem('analytics_events');
-      if (stored) {
-        const events = JSON.parse(stored);
-        const formEvent = events.find(
-          (e: any) => e.category === 'form' && e.action === 'submit_error'
-        );
-        expect(formEvent).toBeTruthy();
-        expect(formEvent.metadata.errorMessage).toBe('Validation error');
-      }
-    });
-  });
-});
+      const store, d = mockLocalStora, g, e.getIt, e, m('analytics_eve, n, t, s'); if (stor, e, d) {
+        const event, s = JS, O, N.par, s, e(sto, r, e, d); const formEven, t = even, t, s.fi, n, d(
+          (e: any) = > e.category = == 'fo, r, m'  && e.acti, o, n === 'submit_e, r, r, o, r',
+        ); expe, c, t(formEve, n, t).toBeTrut, h, y();
+        expe, c, t(formEve, n, t.metada, t, a.errorMessa, g, e).to, B, e('Validation, erro, r');
+        }

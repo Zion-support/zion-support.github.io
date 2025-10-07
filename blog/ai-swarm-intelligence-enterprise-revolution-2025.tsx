@@ -16,7 +16,7 @@ export default function AISwarmIntelligenceEnterpriseRevolution2025() {
       <div className="text-left"></div>
         <main className="text-left">
           <nav className="text-left">
-            <a href="/blog" className="text-left"></a>
+            <a href="/<blog" className="text-left"></a>
               ← Back to Blog
             </a>
           </nav>
@@ -289,7 +289,7 @@ export default function AISwarmIntelligenceEnterpriseRevolution2025() {
                     systems for enterprise applications. Let's explore how collective intelligence can
                     transform your operations.
                   </p>
-                  <a href="/contact" className="text-left"></a>
+                  <a href="/<contact" className="text-left"></a>
                     Explore Swarm Intelligence Solutions
                   </a>
                 </div>
@@ -301,10 +301,10 @@ export default function AISwarmIntelligenceEnterpriseRevolution2025() {
                   Written by Zion Tech Group Swarm Intelligence Lab
                 </div>
                 <div className="text-left"></div>
-                  <a href="/blog" className="text-left"></a>
+                  <a href="/<blog" className="text-left"></a>
                     ← Back to Blog
                   </a>
-                  <a href="/contact" className="text-left"></a>
+                  <a href="/<contact" className="text-left"></a>
                     Get in Touch
                   </a>
                 </div>

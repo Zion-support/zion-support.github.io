@@ -1,107 +1,142 @@
-import { Link } from "react-router-dom";
-
-export default function October2025NewContentAdvertisingBanner() {
+export, default, function October2025NewContentAdvertisingBann, e, r(): vo, i, d {
   return (
-    <section className="relative py-20 bg-gradient-to-r from-purple-900 via-blue-900 to-purple-900 overflow-hidden">
-      {/* Animated Background Elements */}
-      <div className="absolute inset-0">
-        <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS1vcGFjaXR5PSIwLjA1IiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Zz4=')] opacity-40" <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-yellow-500/20 rounded-full blur-3xl animate-pulse" <div className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl animate-pulse delay-1000"</div>
-
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-6xl mx-auto text-center">
-          {/* Attention-Grabbing Header */}
-          <div className="mb-8 animate-bounce">
-            <div className="inline-flex items-center gap-3 px-6 py-3 bg-yellow-500/20 backdrop-blur-sm rounded-full border-2 border-yellow-500/50 shadow-lg shadow-yellow-500/30">
-
-              <span className="text-yellow-300 font-black text-lg uppercase tracking-wider">
-                🔥 JUST RELEASED • OCTOBER 2025 🔥
-              </span>
-
-            </div>
-          </div>
-
-          {/* Main Headline */}
-          <h2 className="text-6xl md:text-7xl font-black mb-6 leading-tight">
-            <span className="bg-gradient-to-r from-yellow-300 via-pink-300 to-cyan-300 bg-clip-text text-transparent animate-gradient">
-              3 Revolutionary AI Breakthroughs
-            </span>
+    <section, className="relative, p, y-20, b, g-gradie, n, t-to-r, fro, m-purp, l, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, overflo, w-hidd, e, n">";
+      {/* Animated, Background, Elements */}
+      <div, className="absolute, inse, t-0">
+        <div, className="absolute, to, p-0, lef, t-0 w-ful, l, h-full, b, g-[u, r, l('da, t, a: ima, g, e/s, v, g+x, m, l;base, 6, 4,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Z, y, I+PGRlZ, n, M+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZ, S, I+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS1vcGFjaXR5PSIwLjA1IiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlc, m, 4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Z, z, 4=')] opaci, t, y-40/>"
+        <div, className="absolute, to, p-1/4, righ, t-1/4 w-9, 6, h-96, b, g-yell, o, w-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e  />
+        <div, className="absolute, botto, m-1/4, lef, t-1/4 w-9, 6, h-96, b, g-cy, a, n-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pulse, dela, y-10, 0, 0  />
+      <div, className="absolute, inse, t-0">";
+        <div, className="absolute, to, p-0, lef, t-0 w-ful, l, h-full, b, g-[u, r, l('da, t, a: ima, g, e/s, v, g+x, m, l;base, 6, 4,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Z, y, I+PGRlZ, n, M+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZ, S, I+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS1vcGFjaXR5PSIwLjA1IiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlc, m, 4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Z, z, 4=')] opaci, t, y-40" />";
+        <div, className="absolute, to, p-1/4, righ, t-1/4 w-9, 6, h-96, b, g-yell, o, w-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" />";
+        <div, className="absolute, botto, m-1/4, lef, t-1/4 w-9, 6, h-96, b, g-cy, a, n-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pulse, dela, y-10, 0, 0" />";
+      </d, i, v>
+      <div, className="container, m, x-auto, p, x-4, relative, z-10">";
+        <div, className="m, a, x-w-6xl, m, x-auto, tex, t-cent, e, r">";
+          {/* Attenti, o, n-Grabbing, Heade, r */}
+          <div, className="mb-8, animat, e-boun, c, e">
+            <div, className="inli, n, e-flex, item, s-center, ga, p-3, p, x-6, p, y-3, b, g-yell, o, w-5, 0, 0/20, backdro, p-bl, u, r-sm, rounde, d-full, borde, r-2, borde, r-yell, o, w-5, 0, 0/50, shado, w-lg, shado, w-yell, o, w-5, 0, 0/30">
+              <Zap, className="w-6 h-6, tex, t-yell, o, w-400, animat, e-pul, s, e  />
+              <span, className="te, x, t-yell, o, w-300, fon, t-black, tex, t-lg, uppercase, tracking-wid, e, r">
+                🔥 JUST, RELEASE, D • OCTOBER, 202, 5 🔥
+              </sp, a, n>
+              <Sparkles, className="w-6 h-6, tex, t-yell, o, w-400, animat, e-sp, i, n  />
+          <div, className="mb-8, animat, e-boun, c, e">";
+            <div, className="inli, n, e-flex, item, s-center, ga, p-3, p, x-6, p, y-3, b, g-yell, o, w-5, 0, 0/20, backdro, p-bl, u, r-sm, rounde, d-full, borde, r-2, borde, r-yell, o, w-5, 0, 0/50, shado, w-lg, shado, w-yell, o, w-5, 0, 0/30">";
+              <Zap, className="w-6 h-6, tex, t-yell, o, w-400, animat, e-pul, s, e" />";
+              <span, className="te, x, t-yell, o, w-300, fon, t-black, tex, t-lg, uppercase, tracking-wid, e, r">";
+                🔥 JUST, RELEASE, D • OCTOBER, 202, 5 🔥
+              </sp, a, n>
+              <Sparkles, className="w-6 h-6, tex, t-yell, o, w-400, animat, e-sp, i, n" />";
+            </d, i, v>
+          </d, i, v>
+          {/* Main, Headlin, e */}
+          <h2, className="te, x, t-6xl, m, d: te, x, t-7xl, fon, t-black, m, b-6, leadin, g-tig, h, t">"
+            <span, className="bg-gradie, n, t-to-r, fro, m-yell, o, w-300, vi, a-pi, n, k-300, t, o-cy, a, n-300, b, g-cl, i, p-text, tex, t-transparent, animat, e-gradie, n, t">
+          <h2, className="te, x, t-6xl, m, d: te, x, t-7xl, fon, t-black, m, b-6, leadin, g-tig, h, t">";
+            <span, className="bg-gradie, n, t-to-r, fro, m-yell, o, w-300, vi, a-pi, n, k-300, t, o-cy, a, n-300, b, g-cl, i, p-text, tex, t-transparent, animat, e-gradie, n, t">";
+              3, Revolutionary, AI Breakthroug, h, s;
+            </sp, a, n>
           </h2>
-
-          <p className="text-3xl md:text-4xl text-white font-bold mb-8">
-            Transform Your Enterprise Today!
+          <p, className="te, x, t-3x, l, m
+  d: te, x, t-4xl, tex, t-white, fon, t-bold, m, b-8">"
+          <p, className="te, x, t-3xl, m, d: te, x, t-4xl, tex, t-white, fon, t-bold, m, b-8">";
+            Transform, Your, Enterprise Tod, a, y!
           </p>
-
-          {/* Key Value Props */}
-          <div className="grid md:grid-cols-3 gap-6 mb-12">
-            <div className="bg-gradient-to-br from-blue-500/20 to-cyan-500/20 backdrop-blur-sm p-6 rounded-2xl border border-cyan-500/30">
-              <div className="text-5xl font-black text-cyan-300 mb-2">$26.8B</div>
-              <div className="text-xl text-white font-semibold">Combined Enterprise Value</div>
-            </div>
-            <div className="bg-gradient-to-br from-purple-500/20 to-pink-500/20 backdrop-blur-sm p-6 rounded-2xl border border-pink-500/30">
-              <div className="text-5xl font-black text-pink-300 mb-2">100,000x</div>
-              <div className="text-xl text-white font-semibold">Performance Improvement</div>
-            </div>
-            <div className="bg-gradient-to-br from-green-500/20 to-emerald-500/20 backdrop-blur-sm p-6 rounded-2xl border border-green-500/30">
-              <div className="text-5xl font-black text-green-300 mb-2">99.997%</div>
-              <div className="text-xl text-white font-semibold">System Uptime</div>
-            </div>
-          </div>
-
-          {/* Content Highlights */}
-          <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 mb-8 border border-slate-700/50">
-            <div className="grid md:grid-cols-3 gap-6 text-left">
-              <div>
-                <div className="flex items-center gap-2 mb-3">
-                  <div className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse" <h3 className="text-xl font-bold text-cyan-300">Autonomous Mesh Intelligence</h3>
-                </div>
-                <p className="text-gray-300">Self-organizing distributed AI networks with unprecedented scalability</p>
-              </div>
-              <div>
-                <div className="flex items-center gap-2 mb-3">
-                  <div className="w-2 h-2 bg-purple-400 rounded-full animate-pulse" <h3 className="text-xl font-bold text-purple-300">Quantum-Neural Hybrid</h3>
-                </div>
-                <p className="text-gray-300">Revolutionary computing breakthrough for drug discovery and optimization</p>
-              </div>
-              <div>
-                <div className="flex items-center gap-2 mb-3">
-                  <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" <h3 className="text-xl font-bold text-green-300">Neural-Symbolic Reasoning</h3>
-                </div>
-                <p className="text-gray-300">Explainable AI with human-like logical reasoning capabilities</p>
-              </div>
-            </div>
-          </div>
-
-          {/* Urgent CTA */}
-          <div className="flex flex-col items-center gap-6">
-            <p className="text-2xl text-yellow-300 font-bold animate-pulse">
-              ⚡ Limited Time: Free Enterprise Assessment ⚡
+          {/* Key, Value, Props */}
+          <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-12">"
+            <div, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-5, 0, 0/20, t, o-cy, a, n-5, 0, 0/20, backdro, p-bl, u, r-s, m, p-6, rounde, d-2xl, border, border-cy, a, n-5, 0, 0/30">
+              <div, className="te, x, t-5xl, fon, t-black, tex, t-cy, a, n-300, m, b-2">$26.8B</d, i, v>
+              <div, className="te, x, t-xl, tex, t-white, fon, t-semibo, l, d">Combined, Enterprise, Value</d, i, v>
+          <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-12">";
+            <div, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-5, 0, 0/20, t, o-cy, a, n-5, 0, 0/20, backdro, p-bl, u, r-s, m, p-6, rounde, d-2xl, border, border-cy, a, n-5, 0, 0/30">";
+              <div, className="te, x, t-5xl, fon, t-black, tex, t-cy, a, n-300, m, b-2">$26.8B</d, i, v>";
+              <div, className="te, x, t-xl, tex, t-white, fon, t-semibo, l, d">Combined, Enterprise, Value</d, i, v>";
+            </d, i, v>
+            <div, className="bg-gradie, n, t-to-br, fro, m-purp, l, e-5, 0, 0/20, t, o-pi, n, k-5, 0, 0/20, backdro, p-bl, u, r-s, m, p-6, rounde, d-2xl, border, border-pi, n, k-5, 0, 0/30">";
+              <div, className="te, x, t-5xl, fon, t-black, tex, t-pi, n, k-300, m, b-2">1, 0, 0,00, 0, x</d, i, v>";
+              <div, className="te, x, t-xl, tex, t-white, fon, t-semibo, l, d">Performance, Improvemen, t</d, i, v>";
+            </d, i, v>
+            <div, className="bg-gradie, n, t-to-br, fro, m-gre, e, n-5, 0, 0/20, t, o-emera, l, d-5, 0, 0/20, backdro, p-bl, u, r-s, m, p-6, rounde, d-2xl, border, border-gre, e, n-5, 0, 0/30">";
+              <div, className="te, x, t-5xl, fon, t-black, tex, t-gre, e, n-300, m, b-2">99.9, 9, 7%</d, i, v>";
+              <div, className="te, x, t-xl, tex, t-white, fon, t-semibo, l, d">System, Uptim, e</d, i, v>";
+            </d, i, v>
+          </d, i, v>
+          {/* Content, Highlight, s */}
+          <div, className="bg-sla, t, e-8, 0, 0/50, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, m, b-8, border, border-sla, t, e-7, 0, 0/50">
+            <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, tex, t-le, f, t">"
+              <d, i, v>
+                <div, className="flex, item, s-center, ga, p-2, m, b-3">
+                  <div, className="w-2 h-2, b, g-cy, a, n-400, rounde, d-full, animat, e-pul, s, e  />
+                  <h3, className="te, x, t-xl, fon, t-bold, tex, t-cy, a, n-3, 0, 0">Autonomous, Mesh, Intelligence</h3>
+          <div, className="bg-sla, t, e-8, 0, 0/50, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, m, b-8, border, border-sla, t, e-7, 0, 0/50">";
+            <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, tex, t-le, f, t">";
+              <d, i, v>
+                <div, className="flex, item, s-center, ga, p-2, m, b-3">";
+                  <div, className="w-2 h-2, b, g-cy, a, n-400, rounde, d-full, animat, e-pul, s, e" />";
+                  <h3, className="te, x, t-xl, fon, t-bold, tex, t-cy, a, n-3, 0, 0">Autonomous, Mesh, Intelligence</h3>";
+                </d, i, v>
+                <p, className="te, x, t-gr, a, y-3, 0, 0">Se, l, f-organizing, distributed, AI networks, with, unprecedented scalabili, t, y</p>";
+              </d, i, v>
+              <d, i, v>
+                <div, className="flex, item, s-center, ga, p-2, m, b-3">
+                  <div, className="w-2 h-2, b, g-purp, l, e-400, rounde, d-full, animat, e-pul, s, e  />
+                  <h3, className="te, x, t-xl, fon, t-bold, tex, t-purp, l, e-3, 0, 0">Quant, u, m-Neural, Hybri, d</h3>
+                <div, className="flex, item, s-center, ga, p-2, m, b-3">";
+                  <div, className="w-2 h-2, b, g-purp, l, e-400, rounde, d-full, animat, e-pul, s, e" />";
+                  <h3, className="te, x, t-xl, fon, t-bold, tex, t-purp, l, e-3, 0, 0">Quant, u, m-Neural, Hybri, d</h3>";
+                </d, i, v>
+                <p, className="te, x, t-gr, a, y-3, 0, 0">Revolutionary, computing, breakthrough for, drug, discovery and, optimizatio, n</p>";
+              </d, i, v>
+              <d, i, v>
+                <div, className="flex, item, s-center, ga, p-2, m, b-3">
+                  <div, className="w-2 h-2, b, g-gre, e, n-400, rounde, d-full, animat, e-pul, s, e  />
+                  <h3, className="te, x, t-xl, fon, t-bold, tex, t-gre, e, n-3, 0, 0">Neur, a, l-Symbolic, Reasonin, g</h3>
+                <div, className="flex, item, s-center, ga, p-2, m, b-3">";
+                  <div, className="w-2 h-2, b, g-gre, e, n-400, rounde, d-full, animat, e-pul, s, e" />";
+                  <h3, className="te, x, t-xl, fon, t-bold, tex, t-gre, e, n-3, 0, 0">Neur, a, l-Symbolic, Reasonin, g</h3>";
+                </d, i, v>
+                <p, className="te, x, t-gr, a, y-3, 0, 0">Explainable, AI, with hum, a, n-like, logical, reasoning capabiliti, e, s</p>";
+              </d, i, v>
+            </d, i, v>
+          </d, i, v>
+          {/* Urgent, CT, A */}
+          <div, className="flex, fle, x-col, item, s-center, ga, p-6">
+            <p, className="te, x, t-2xl, tex, t-yell, o, w-300, fon, t-bold, animat, e-pul, s, e">
+          <div, className="flex, fle, x-col, item, s-center, ga, p-6">";
+            <p, className="te, x, t-2xl, tex, t-yell, o, w-300, fon, t-bold, animat, e-pul, s, e">";
+              ⚡ Limited, Tim, e: Free, Enterprise, Assessment ⚡
             </p>
-            
-            <div className="flex flex-wrap justify-center gap-4">
-              <Link
-                to="/contact"
-                className="group inline-flex items-center gap-3 px-10 py-5 bg-gradient-to-r from-yellow-500 to-orange-500 text-slate-900 font-black text-xl rounded-xl hover:from-yellow-400 hover:to-orange-400 transition-all duration-300 hover:scale-110 hover:shadow-2xl hover:shadow-yellow-500/50"
+            <div, className="flex, fle, x-wrap, justif, y-center, ga, p-4">";
+              <Li, n, k
+  to="/conta, c, t"
+                classNa, m, e="group, inlin, e-flex, item, s-center, ga, p-3, p, x-10, p, y-5, b, g-gradie, n, t-to-r, fro, m-yell, o, w-500, t, o-oran, g, e-500, tex, t-sla, t, e-900, fon, t-black, tex, t-xl, rounde, d-xl, hove, r: fr, o, m-yell, o, w-400, hove, r:to-oran, g, e-400, transitio, n-all, duratio, n-300, hove, r:sca, l, e-110, hove, r:shad, o, w-2xl, hov, e
+  r:shad, o, w-yell, o, w-5, 0, 0/50"
               >
-                <span>GET STARTED NOW</span>
-
-              </Link>
-              
-              <Link
-                to="/blog"
-                className="inline-flex items-center gap-3 px-10 py-5 bg-slate-700/50 backdrop-blur-sm text-white font-bold text-xl rounded-xl border-2 border-white/30 hover:bg-slate-600/50 transition-all duration-300 hover:scale-105"
+                <sp, a, n>GET, STARTED, NOW</sp, a, n>
+                <ArrowRight, className="w-6 h-6, grou, p-hov, e, r: transla, t, e-x-2, transitio, n-transfo, r, m/>"
+                <ArrowRight, className="w-6 h-6, grou, p-hov, e, r: transla, t, e-x-2, transitio, n-transfo, r, m" />";
+              </Li, n, k>
+              <Li, n, k
+  to="/bl, o, g"
+                classNa, m, e="inli, n, e-flex, item, s-center, ga, p-3, p, x-10, p, y-5, b, g-sla, t, e-7, 0, 0/50, backdro, p-bl, u, r-sm, tex, t-white, fon, t-bold, tex, t-xl, rounde, d-xl, borde, r-2, borde, r-whi, t, e/30, hove, r: bg-sla, t, e-6, 0, 0/50, transitio, n-all, duratio, n-300, hov, e
+  r:sca, l, e-1, 0, 5"
               >
-
-                <span>READ ALL 3 GUIDES</span>
-              </Link>
-            </div>
-
-            <div className="flex items-center gap-2 text-green-400 text-lg font-semibold">
-
-              <span>Trusted by 500+ Fortune 500 Companies</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+                <Sparkles, className="w-6 h-6  />
+                <Sparkles, className="w-6 h-6" />";
+                <sp, a, n>READ, ALL, 3 GUID, E, S</sp, a, n>
+              </Li, n, k>
+            </d, i, v>
+            <div, className="flex, item, s-center, ga, p-2, tex, t-gre, e, n-400, tex, t-lg, fon, t-semibo, l, d">
+              <TrendingUp, className="w-5 h-5  />
+            <div, className="flex, item, s-center, ga, p-2, tex, t-gre, e, n-400, tex, t-lg, fon, t-semibo, l, d">";
+              <TrendingUp, className="w-5 h-5" />";
+              <sp, a, n>Trusted, by, 500+ Fortune, 500, Companies</sp, a, n>
+            </d, i, v>
+          </d, i, v>
+        </d, i, v>
+      </d, i, v>
+    </secti, o, n>
   );
 }
+;

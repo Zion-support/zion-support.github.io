@@ -16,7 +16,7 @@ export default function NeuromorphicQuantumHybridComputing2025() {
       <div className="text-left"></div>
         <main className="text-left">
           <nav className="text-left">
-            <a href="/blog" className="text-left"></a>
+            <a href="/<blog" className="text-left"></a>
               ← Back to Blog
             </a>
           </nav>
@@ -255,7 +255,7 @@ export default function NeuromorphicQuantumHybridComputing2025() {
                     neuromorphic-quantum hybrid computing. Let's explore how this technology can revolutionize
                     your organization.
                   </p>
-                  <a href="/contact" className="text-left"></a>
+                  <a href="/<contact" className="text-left"></a>
                     Start Your Hybrid Computing Journey
                   </a>
                 </div>
@@ -267,10 +267,10 @@ export default function NeuromorphicQuantumHybridComputing2025() {
                   Written by Zion Tech Group Quantum Computing Division
                 </div>
                 <div className="text-left"></div>
-                  <a href="/blog" className="text-left"></a>
+                  <a href="/<blog" className="text-left"></a>
                     ← Back to Blog
                   </a>
-                  <a href="/contact" className="text-left"></a>
+                  <a href="/<contact" className="text-left"></a>
                     Get in Touch
                   </a>
                 </div>

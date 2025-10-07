@@ -325,14 +325,12 @@ export default function AIPoweredDevExDeveloperProductivity2025() {
             </div>
             <div className="text-left"></div>
               <a
-                href="/contact"
-                className="text-left"
+                href="/<contact" className="text-left"
               ></a>
                 Schedule Demo
               </a>
               <a
-                href="/services"
-                className="text-left"
+                href="/<services" className="text-left"
               ></a>
                 View Developer Tools
               </a>

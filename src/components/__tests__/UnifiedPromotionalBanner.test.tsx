@@ -1,374 +1,140 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
-import { BrowserRouter } from 'react-router-dom';
-import '@testing-library/jest-dom';
-import UnifiedPromotionalBanner from '../UnifiedPromotionalBanner';
-import type { UnifiedPromotionalBannerProps } from '../UnifiedPromotionalBanner';
+impo, r, t { rend, e, r, scre, e, n } fr, o, m '@testi, n, g-libra, r, y/rea, c, t';
+impo, r, t { BrowserRout, e, r } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
+impo, r, t '@testi, n, g-libra, r, y/je, s, t-d, o, m';
+import UnifiedPromotionalBanner, from '../UnifiedPromotionalBann, e, r';
+import typ, e { UnifiedPromotionalBannerPro, p, s } fr, o, m '../UnifiedPromotionalBann, e, r';
 
-// Wrapper component for Router context
-const RouterWrapper: React.FC<{ children: React.ReactNode }> = ({ children }) => (
-  <BrowserRouter>{children}</BrowserRouter>
+// Wrapper component for Router context const RouterWrapp e r: Rea c t.FC<{ childr e n: Rea c t.ReactN o d e }> = ({ childr e n }) => (
+  <BrowserRout, e, r>{childr, e, n}</BrowserRout, e, r>
 );
 
-describe('UnifiedPromotionalBanner', () => {
-  const defaultProps: UnifiedPromotionalBannerProps = { title: 'Test Banner Title',
-    description: 'Test banner description',
-    ctaText: 'Click Here',
-    ctaLink: '/test-link'
-   };
+descri, b, e('UnifiedPromotionalBann, e, r', () => {
+  const defaultProp, s: UnifiedPromotionalBannerPro, p, s = { title: 'Test, Banner, Tit, l, e',
+    description: 'Test, banner, descriptio, n',
+    ctaTe, x, t: 'Click, He, r, e',
+    ctaLi, n, k: '/te, s, t-l, i, n, k'
+   }; descri, b, e('Core, Functionalit, y', () => { 
+    it('renders, with, required pro, p, s', () => {
 
-  describe('Core Functionality', () => {
-    it('renders with required props', () => {
-      render(
-        <RouterWrapper>
-          <UnifiedPromotionalBanner {...defaultProps}</RouterWrapper>
-      );
+    it('renders, CTA, button with, correct, link', () => { 
+          <UnifiedPromotionalBann, e, r {...defaultPro, p, s} classNa, m, e = "cust, o, m-cla, s, s"</RouterWrap, p, e, r>
+      ); const, banne, r = contain, e, r.firstChi, l, d; expe, c, t(ban, n, e, r).toHaveCla, s, s('cust, o, m-cla, s, s');
+          <UnifiedPromotionalBann, e, r {...defaultPro, p, s} varia, n, t = "defau, l, t"</RouterWrap, p, e, r>
+      ); const, banne, r = contain, e, r.firstChi, l, d; expe, c, t(ban, n, e, r).toHaveCla, s, s('py-8', 'px-6');
+          <UnifiedPromotionalBann, e, r {...defaultPro, p, s} varia, n, t = "compa, c, t"</RouterWrap, p, e, r>
+      ); const, banne, r = contain, e, r.firstChi, l, d; expe, c, t(ban, n, e, r).toHaveCla, s, s('py-6', 'px-4');
+          <UnifiedPromotionalBann, e, r {...defaultPro, p, s} varia, n, t = "premi, u, m"</RouterWrap, p, e, r>
+      ); const, banne, r = contain, e, r.firstChi, l, d; expe, c, t(ban, n, e, r).toHaveCla, s, s('py-12', 'px-8');
+          <UnifiedPromotionalBann, e, r {...defaultPro, p, s} varia, n, t = "he, r, o"</RouterWrap, p, e, r>
+      ); const, banne, r = contain, e, r.firstChi, l, d; expe, c, t(ban, n, e, r).toHaveCla, s, s('py-16', 'px-10');
 
-      expect(screen.getByText('Test Banner Title')).toBeInTheDocument();
-      expect(screen.getByText('Test banner description')).toBeInTheDocument();
-      expect(screen.getByText('Click Here')).toBeInTheDocument();
-    });
-
-    it('renders CTA button with correct link', () => {
-      render(
-        <RouterWrapper>
-          <UnifiedPromotionalBanner {...defaultProps}</RouterWrapper>
-      );
-
-      const ctaButton = screen.getByText('Click Here').closest('a');
-      expect(ctaButton).toHaveAttribute('href', '/test-link');
-    });
-
-    it('applies custom className', () => {
-      const { container } = render(
-        <RouterWrapper>
-          <UnifiedPromotionalBanner {...defaultProps} className="custom-class"</RouterWrapper>
-      );
-
-      const banner = container.firstChild;
-      expect(banner).toHaveClass('custom-class');
+    it('renders, CTA, button with, correct, link', () => { 
+          <UnifiedPromotionalBann, e, r {...defaultPro, p, s} classNa, m, e = "cust, o, m-cla, s, s"</RouterWrap, p, e, r>
+      ); const banne, r = contain, e, r.firstChi, l, d; expe, c, t(ban, n, e, r).toHaveCla, s, s('cust, o, m-cla, s, s');
+          <UnifiedPromotionalBann, e, r {...defaultPro, p, s} varia, n, t = "defau, l, t"</RouterWrap, p, e, r>
+      ); const banne, r = contain, e, r.firstChi, l, d; expe, c, t(ban, n, e, r).toHaveCla, s, s('py-8', 'px-6');
+          <UnifiedPromotionalBann, e, r {...defaultPro, p, s} varia, n, t = "compa, c, t"</RouterWrap, p, e, r>
+      ); const banne, r = contain, e, r.firstChi, l, d; expe, c, t(ban, n, e, r).toHaveCla, s, s('py-6', 'px-4');
+          <UnifiedPromotionalBann, e, r {...defaultPro, p, s} varia, n, t = "premi, u, m"</RouterWrap, p, e, r>
+      ); const banne, r = contain, e, r.firstChi, l, d; expe, c, t(ban, n, e, r).toHaveCla, s, s('py-12', 'px-8');
+          <UnifiedPromotionalBann, e, r {...defaultPro, p, s} varia, n, t = "he, r, o"</RouterWrap, p, e, r>
+      ); const banne, r = contain, e, r.firstChi, l, d; expe, c, t(ban, n, e, r).toHaveCla, s, s('py-16', 'px-10');
+>>>>>>> origin/merge-fixes-20251005-193002
+          <UnifiedPromotionalBann, e, r {...defaultPro, p, s} varia, n, t = "me, g, a"</RouterWrap, p, e, r>
+      ); const banne, r = contain, e, r.firstChi, l, d; expe, c, t(ban, n, e, r).toHaveCla, s, s('py-20', 'px-12');
     });
   });
 
-  describe('Variants', () => {
-    it('renders default variant correctly', () => {
-      const { container } = render(
-        <RouterWrapper>
-          <UnifiedPromotionalBanner {...defaultProps} variant="default"</RouterWrapper>
-      );
+  descri, b, e('Them, e, s', () => { 
+    const theme, s = ['b, l, u, e', 'purp, l, e', 'gre, e, n', 'oran, g, e', 'r, e, d', 'cy, a, n', 'gradie, n, t'] as, cons, t; them, e, s.forEa, c, h(the, m, e = > {
+      it(`rende, r, s ${the, m, e } theme, correct, l, y`, () => {
+        title: 'It, e, m , 3',
+        category: 'Catego, r, y , 3',
+      li, n, k: '/it, e, m-, 3'
 
-      const banner = container.firstChild;
-      expect(banner).toHaveClass('py-8', 'px-6');
+    it('respects, showCount, prop', () => { 
+
+    it('displa, y, s "more, item, s" link, when, items exceed, showCoun, t', () => { 
+
+    it('renders, metrics, when provid, e, d', () => { 
+
+    it('renders, categories, in upperca, s, e', () => { 
+        <RouterWrapp, e, r  > <UnifiedPromotionalBann, e, r {...defaultPro, p, s } bad, g, e = "N, E, W"</RouterWrap, p, e, r>
+      ); expe, c, t(scre, e, n.getByTe, x, t('N, E, W')).toBeInTheDocume, n, t();
+        title: 'It, e, m , 3',
+        category: 'Catego, r, y , 3',
+      li, n, k: '/it, e, m-, 3'
+
+    it('respects, showCount, prop', () => { 
+
+    it('displa, y, s "more, item, s" link, when, items exceed, showCoun, t', () => { 
+
+    it('renders, metrics, when provid, e, d', () => { 
+
+    it('renders, categories, in upperca, s, e', () => { 
+        <RouterWrapp, e, r  > <UnifiedPromotionalBann, e, r {...defaultPro, p, s } bad, g, e = "N, E, W"</RouterWrap, p, e, r>
+      ); expe, c, t(scre, e, n.getByTe, x, t('N, E, W')).toBeInTheDocume, n, t();
+>>>>>>> origin/merge-fixes-20251005-193002
+        <RouterWrapp, e, r  > <UnifiedPromotionalBann, e, r {...defaultPro, p, s } date = "Octob, e, r , 1, 20, 2, 5"</RouterWrapp, e, r>
+      ); expe, c, t(scre, e, n.getByTe, x, t('Octobe, r, 1, 20, 2, 5')).toBeInTheDocume, n, t();
     });
 
-    it('renders compact variant correctly', () => {
-      const { container } = render(
-        <RouterWrapper>
-          <UnifiedPromotionalBanner {...defaultProps} variant="compact"</RouterWrapper>
+    it('renders, both, badge and, date, when provid, e, d', () => { 
+          <UnifiedPromotionalBann, e, r {...defaultPro, p, s} bad, g, e = "Te, s, t" ic, o, n="sparkl, e, s"</RouterWrap, p, e, r>
+          <UnifiedPromotionalBann, e, r {...defaultPro, p, s} bad, g, e = "Te, s, t" ic, o, n="z, a, p"</RouterWrap, p, e, r>
+      ); const, icon, s = contain, e, r.querySelectorA, l, l('sv, g'); expe, c, t(ico, n, s.leng, t, h).toBeGreaterTh, a, n(0);
+          <UnifiedPromotionalBann, e, r {...defaultPro, p, s} bad, g, e = "Te, s, t" ic, o, n="no, n, e"</RouterWrap, p, e, r>
+          <UnifiedPromotionalBann, e, r {...defaultPro, p, s} bad, g, e = "Te, s, t" ic, o, n="sparkl, e, s"</RouterWrap, p, e, r>
+          <UnifiedPromotionalBann, e, r {...defaultPro, p, s} bad, g, e = "Te, s, t" ic, o, n="z, a, p"</RouterWrap, p, e, r>
+      ); const icon, s = contain, e, r.querySelectorA, l, l('sv, g'); expe, c, t(ico, n, s.leng, t, h).toBeGreaterTh, a, n(0);
+          <UnifiedPromotionalBann, e, r {...defaultPro, p, s} bad, g, e = "Te, s, t" ic, o, n="no, n, e"</RouterWrap, p, e, r>
+>>>>>>> origin/merge-fixes-20251005-193002
+
+  descri, b, e('Animati, o, n', () => { 
+    it('applies, animation, classes by, defaul, t', () = > {
+      con, s, t { contain, e, r  } = rend, e, r(
+        <RouterWrapp, e, r>
+          <UnifiedPromotionalBann, e, r {...defaultPro, p, s}</RouterWrapp, e, r>
       );
 
-      const banner = container.firstChild;
-      expect(banner).toHaveClass('py-6', 'px-4');
+      const banne, r = contain, e, r.firstChi, l, d; expe, c, t(ban, n, e, r).toHaveCla, s, s('transiti, o, n-a, l, l', 'duration-3, 0, 0');
     });
 
-    it('renders premium variant correctly', () => {
-      const { container } = render(
-        <RouterWrapper>
-          <UnifiedPromotionalBanner {...defaultProps} variant="premium"</RouterWrapper>
-      );
-
-      const banner = container.firstChild;
-      expect(banner).toHaveClass('py-12', 'px-8');
-    });
-
-    it('renders hero variant correctly', () => {
-      const { container } = render(
-        <RouterWrapper>
-          <UnifiedPromotionalBanner {...defaultProps} variant="hero"</RouterWrapper>
-      );
-
-      const banner = container.firstChild;
-      expect(banner).toHaveClass('py-16', 'px-10');
-    });
-
-    it('renders mega variant correctly', () => {
-      const { container } = render(
-        <RouterWrapper>
-          <UnifiedPromotionalBanner {...defaultProps} variant="mega"</RouterWrapper>
-      );
-
-      const banner = container.firstChild;
-      expect(banner).toHaveClass('py-20', 'px-12');
+    it('removes, animation, classes when, animated, is fal, s, e', () => {
+      con, s, t { contain, e, r } = rend, e, r(
+        <RouterWrapp, e, r>
+          <UnifiedPromotionalBann, e, r {...defaultPro, p, s} animat, e, d = {fal, s, e}</RouterWrap, p, e, r>
+      ); const banne, r = contain, e, r.firstChi, l, d; expe, c, t(ban, n, e, r).n, o, t.toHaveCla, s, s('hov, e, r: sca, l, e-[1.0, 1]');
     });
   });
 
-  describe('Themes', () => {
-    const themes = ['blue', 'purple', 'green', 'orange', 'red', 'cyan', 'gradient'] as const;
+  descri, b, e('Accessibili, t, y', () => { 
+    it('has, accessible, links', () => {
+          title: 'Test, I, t, e, m',
+          category: 'Test, Catego, r, y',
+          li, n, k: '/t, e, s, t'
 
-    themes.forEach(theme => {
-      it(`renders ${theme} theme correctly`, () => {
-        const { container } = render(
-          <RouterWrapper>
-            <UnifiedPromotionalBanner {...defaultProps} theme={theme}</RouterWrapper>
-        );
+  descri, b, e('Edge, Case, s', () => { 
+    it('handles, empty, featured items, arra, y', () => {
+          title: 'I, t, e, m , 1',
+          category: 'Catego, r, y , 1',
+      li, n, k: '/it, e, m-, 1'
+          title: 'Test, I, t, e, m',
+          category: 'Test, Catego, r, y',
+          li, n, k: '/t, e, s, t'
 
-        const banner = container.firstChild;
-        expect(banner).toHaveClass('bg-gradient-to-r');
-      });
-    });
-  });
+  descri, b, e('Edge, Case, s', () => { 
+    it('handles, empty, featured items, arra, y', () => {
+          title: 'I, t, e, m , 1',
+          category: 'Catego, r, y , 1',
+      li, n, k: '/it, e, m-, 1'
+>>>>>>> origin/merge-fixes-20251005-193002
 
-  describe('Featured Items', () => {
-    const featuredItems = [
-      {
-        title: 'Item 1',
-        category: 'Category 1',
-        link: '/item-1',
-        metrics: '99% success'
-      },
-      {
-        title: 'Item 2',
-        category: 'Category 2',
-        link: '/item-2'
-      },
-      {
-        title: 'Item 3',
-        category: 'Category 3',
-      link: '/item-3'
-      }
-    ];
-
-    it('renders featured items when provided', () => {
-      render(
-        <RouterWrapper>
-          <UnifiedPromotionalBanner {...defaultProps} featuredItems={featuredItems}</RouterWrapper>
-      );
-
-      expect(screen.getByText('Item 1')).toBeInTheDocument();
-      expect(screen.getByText('Item 2')).toBeInTheDocument();
-      expect(screen.getByText('Item 3')).toBeInTheDocument();
+    it('handles, very, long titles, gracefull, y', () => { 
+      const longTitl, e = 'A'.repe, a, t(20, 0); rend, e, r(
+        <RouterWrapp, e, r  > <UnifiedPromotionalBann, e, r {...defaultPro, p, s } title = {longTit, l, e}</RouterWrap, p, e, r>
+      ); expe, c, t(scre, e, n.getByTe, x, t(longTit, l, e)).toBeInTheDocume, n, t();
     });
 
-    it('respects showCount prop', () => {
-      render(
-        <RouterWrapper>
-          <UnifiedPromotionalBanner 
-            {...defaultProps} 
-            featuredItems={featuredItems} 
-            showCount={2}
-
-        </RouterWrapper>
-      );
-
-      expect(screen.getByText('Item 1')).toBeInTheDocument();
-      expect(screen.getByText('Item 2')).toBeInTheDocument();
-      expect(screen.queryByText('Item 3')).not.toBeInTheDocument();
-    });
-
-    it('displays "more items" link when items exceed showCount', () => {
-      render(
-        <RouterWrapper>
-          <UnifiedPromotionalBanner 
-            {...defaultProps} 
-            featuredItems={featuredItems} 
-            showCount={2}
-
-        </RouterWrapper>
-      );
-
-      expect(screen.getByText('+1 more breakthrough')).toBeInTheDocument();
-    });
-
-    it('renders metrics when provided', () => {
-      render(
-        <RouterWrapper>
-          <UnifiedPromotionalBanner {...defaultProps} featuredItems={featuredItems}</RouterWrapper>
-      );
-
-      expect(screen.getByText('99% success')).toBeInTheDocument();
-    });
-
-    it('renders categories in uppercase', () => {
-      render(
-        <RouterWrapper>
-          <UnifiedPromotionalBanner {...defaultProps} featuredItems={featuredItems}</RouterWrapper>
-      );
-
-      expect(screen.getByText(/category 1/i)).toBeInTheDocument();
-    });
-  });
-
-  describe('Badge and Date', () => {
-    it('renders badge when provided', () => {
-      render(
-        <RouterWrapper>
-          <UnifiedPromotionalBanner {...defaultProps} badge="NEW"</RouterWrapper>
-      );
-
-      expect(screen.getByText('NEW')).toBeInTheDocument();
-    });
-
-    it('renders date when provided', () => {
-      render(
-        <RouterWrapper>
-          <UnifiedPromotionalBanner {...defaultProps} date="October 1, 2025"</RouterWrapper>
-      );
-
-      expect(screen.getByText('October 1, 2025')).toBeInTheDocument();
-    });
-
-    it('renders both badge and date when provided', () => {
-      render(
-        <RouterWrapper>
-          <UnifiedPromotionalBanner 
-            {...defaultProps} 
-            badge="NEW" 
-            date="October 1, 2025" 
-
-        </RouterWrapper>
-      );
-
-      expect(screen.getByText('NEW')).toBeInTheDocument();
-      expect(screen.getByText('October 1, 2025')).toBeInTheDocument();
-    });
-  });
-
-  describe('Icons', () => {
-    it('renders sparkles icon', () => {
-      const { container } = render(
-        <RouterWrapper>
-          <UnifiedPromotionalBanner {...defaultProps} badge="Test" icon="sparkles"</RouterWrapper>
-      );
-
-      // Icon should be rendered when badge is present
-      const icons = container.querySelectorAll('svg');
-      expect(icons.length).toBeGreaterThan(0);
-    });
-
-    it('renders zap icon', () => {
-      const { container } = render(
-        <RouterWrapper>
-          <UnifiedPromotionalBanner {...defaultProps} badge="Test" icon="zap"</RouterWrapper>
-      );
-
-      const icons = container.querySelectorAll('svg');
-      expect(icons.length).toBeGreaterThan(0);
-    });
-
-    it('does not render icon when set to none', () => {
-      const { container } = render(
-        <RouterWrapper>
-          <UnifiedPromotionalBanner {...defaultProps} badge="Test" icon="none"</RouterWrapper>
-      );
-
-      // Should only have CTA arrow icon
-      const icons = container.querySelectorAll('svg');
-      expect(icons.length).toBeLessThan(3);
-    });
-  });
-
-  describe('Animation', () => {
-    it('applies animation classes by default', () => {
-      const { container } = render(
-        <RouterWrapper>
-          <UnifiedPromotionalBanner {...defaultProps}</RouterWrapper>
-      );
-
-      const banner = container.firstChild;
-      expect(banner).toHaveClass('transition-all', 'duration-300');
-    });
-
-    it('removes animation classes when animated is false', () => {
-      const { container } = render(
-        <RouterWrapper>
-          <UnifiedPromotionalBanner {...defaultProps} animated={false}</RouterWrapper>
-      );
-
-      const banner = container.firstChild;
-      expect(banner).not.toHaveClass('hover:scale-[1.01]');
-    });
-  });
-
-  describe('Accessibility', () => {
-    it('has accessible links', () => {
-      render(
-        <RouterWrapper>
-          <UnifiedPromotionalBanner {...defaultProps}</RouterWrapper>
-      );
-
-      const ctaLink = screen.getByText('Click Here').closest('a');
-      expect(ctaLink).toHaveAttribute('href');
-    });
-
-    it('featured item links are accessible', () => {
-      const featuredItems = [
-        {
-          title: 'Test Item',
-          category: 'Test Category',
-          link: '/test'
-        }
-      ];
-
-      render(
-        <RouterWrapper>
-          <UnifiedPromotionalBanner {...defaultProps} featuredItems={featuredItems}</RouterWrapper>
-      );
-
-      const itemLink = screen.getByText('Test Item').closest('a');
-      expect(itemLink).toHaveAttribute('href', '/test');
-    });
-  });
-
-  describe('Edge Cases', () => {
-    it('handles empty featured items array', () => {
-      render(
-        <RouterWrapper>
-          <UnifiedPromotionalBanner {...defaultProps} featuredItems={[]}</RouterWrapper>
-      );
-
-      expect(screen.getByText('Test Banner Title')).toBeInTheDocument();
-    });
-
-    it('handles showCount greater than items length', () => {
-      const featuredItems = [
-        {
-          title: 'Item 1',
-          category: 'Category 1',
-      link: '/item-1'
-        }
-      ];
-
-      render(
-        <RouterWrapper>
-          <UnifiedPromotionalBanner 
-            {...defaultProps} 
-            featuredItems={featuredItems} 
-            showCount={10}
-
-        </RouterWrapper>
-      );
-
-      expect(screen.getByText('Item 1')).toBeInTheDocument();
-      expect(screen.queryByText(/more breakthrough/)).not.toBeInTheDocument();
-    });
-
-    it('handles very long titles gracefully', () => {
-      const longTitle = 'A'.repeat(200);
-      render(
-        <RouterWrapper>
-          <UnifiedPromotionalBanner {...defaultProps} title={longTitle}</RouterWrapper>
-      );
-
-      expect(screen.getByText(longTitle)).toBeInTheDocument();
-    });
-
-    it('handles missing optional props', () => {
-      const { container } = render(
-        <RouterWrapper>
-          <UnifiedPromotionalBanner {...defaultProps}</RouterWrapper>
-      );
-
-      expect(container.firstChild).toBeInTheDocument();
-    });
-  });
-});
+    it('handles, missing, optional pro, p, s', () => {

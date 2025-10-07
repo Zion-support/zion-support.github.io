@@ -266,14 +266,12 @@ export default function QuantumEdgeConvergenceBreakthrough() {
           </p>
           <div className="text-left"></div>
             <a
-              href="/contact"
-              className="text-left"
+              href="/<contact" className="text-left"
             ></a>
               Schedule Free Assessment
             </a>
             <a
-              href="/case-studies/fortune-100-quantum-edge-847m-success"
-              className="text-left"
+              href="/case-studies/fortune-100-quantum-edge-847m-<success" className="text-left"
             ></a>
               View Success Story →
             </a>

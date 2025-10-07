@@ -20,7 +20,7 @@ export default function AIProductivityRevolution2025() {
       <div className="text-left"></div>
         <main className="text-left">
           <nav className="text-left">
-            <a href="/blog" className="text-left"></a>
+            <a href="/<blog" className="text-left"></a>
               ← Back to Blog
             </a>
           </nav>
@@ -228,14 +228,12 @@ export default function AIProductivityRevolution2025() {
                 </p>
                 <div className="text-left"></div>
                   <a
-                    href="/contact"
-                    className="text-left"
+                    href="/<contact" className="text-left"
                   ></a>
                     Schedule Consultation
                   </a>
                   <a
-                    href="/case-studies/ai-productivity-transformation-2025"
-                    className="text-left"
+                    href="/case-studies/ai-productivity-transformation-<2025" className="text-left"
                   ></a>
                     View Case Studies
                   </a>
@@ -248,10 +246,10 @@ export default function AIProductivityRevolution2025() {
                   Written by Zion Tech Group AI Productivity Team
                 </div>
                 <div className="text-left"></div>
-                  <a href="/blog" className="text-left"></a>
+                  <a href="/<blog" className="text-left"></a>
                     ← Back to Blog
                   </a>
-                  <a href="/services/ai-productivity-solutions" className="text-left"></a>
+                  <a href="/services/ai-productivity-<solutions" className="text-left"></a>
                     Explore Solutions
                   </a>
                 </div>

@@ -20,7 +20,7 @@ export default function QuantumAIEnterpriseBreakthrough2025() {
       <div className="text-left"></div>
         <main className="text-left">
           <nav className="text-left">
-            <a href="/blog" className="text-left"></a>
+            <a href="/<blog" className="text-left"></a>
               ← Back to Blog
             </a>
           </nav>
@@ -273,10 +273,10 @@ export default function QuantumAIEnterpriseBreakthrough2025() {
                   measurable ROI. Our quantum AI experts will guide you from assessment to production deployment.
                 </p>
                 <div className="text-left"></div>
-                  <a href="/contact" className="text-left"></a>
+                  <a href="/<contact" className="text-left"></a>
                     Schedule Quantum AI Consultation
                   </a>
-                  <a href="/services/quantum-ai" className="text-left"></a>
+                  <a href="/services/quantum-<ai" className="text-left"></a>
                     Learn More
                   </a>
                 </div>

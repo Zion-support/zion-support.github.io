@@ -1,199 +1,286 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-
-const October2025FeaturedContentBanner = () => {
-  const featuredContent = [
+const, October2025FeaturedContentBanne, r = () => {
+  const, featuredConten, t = [
     {
-      title: "Enterprise AI Value Realization",
-      description: "90 days to shipped outcomes: scorecards, evaluator gates, tiered routing",
-      link: "/blog/enterprise-ai-value-realization-2025-10-08",
-      icon: "Brain",
-      gradient: "from-indigo-600 to-blue-600",
-      bgGradient: "from-indigo-900/40 to-blue-900/40",
-      borderColor: "border-indigo-500/30",
-      stats: [
-        { value: "90d", label: "To Outcomes" },
-        { value: "KPI", label: "Linked Gates" },
-        { value: "$$", label: "Predictable Cost" }
+      tit, l, e: "Enterprise, AI, Value Realizati, o, n"
+      descripti, o, n: "90, days, to shipped, outcom, e
+  s: scorecar, d, s, evaluator, gate, s, tiered, routin, g"
+      li, n, k: "/bl, o, g/enterpri, s, e-ai-val, u, e-realizati, o, n-20, 2, 5-10-08"
+      ic, o, n: Bra, i, n
+      gradie, n, t: "fr, o, m-indi, g, o-600, t, o-bl, u, e-6, 0, 0"
+      bgGradie, n, t: "fr, o, m-indi, g, o-9, 0, 0/40, t, o-bl, u, e-9, 0, 0/40"
+      borderCol, o, r: "bord, e, r-indi, g, o-5, 0, 0/30"
+      sta, t, s: [
+        { val, u, e: "9, 0, d", lab, e, l: "To, Outcome, s" }
+        { val, u, e: "K, P, I", lab, e, l: "Linked, Gate, s" }
+        { val, u, e: "$$", lab, e, l: "Predictable, Cos, t" }
       ]
-    },
+    }
     {
-      title: "Enterprise Neural Orchestration Platform",
-      description: "89% faster AI deployment, 94% cost reduction, $12.4M annual savings",
-      link: "/blog/ai-2025-october-enterprise-neural-orchestration-platform",
-      icon: "Brain",
-      gradient: "from-blue-600 to-purple-600",
-      bgGradient: "from-blue-900/40 to-purple-900/40",
-      borderColor: "border-blue-500/30",
-      stats: [
-        { value: "89%", label: "Faster Deployment" },
-        { value: "94%", label: "Cost Reduction" },
-        { value: "$12.4M", label: "Annual Savings" }
+      tit, l, e: "Enterprise, Neural, Orchestration Platfo, r, m"
+      descripti, o, n: "89% faster, AI, deployment, 94% cost, reductio, n, $12.4M, annual, savings"
+      li, n, k: "/bl, o, g/ai-20, 2, 5-octob, e, r-enterpri, s, e-neur, a, l-orchestrati, o, n-platfo, r, m"
+      ic, o, n: Bra, i, n
+      gradie, n, t: "fr, o, m-bl, u, e-600, t, o-purp, l, e-6, 0, 0"
+      bgGradie, n, t: "fr, o, m-bl, u, e-9, 0, 0/40, t, o-purp, l, e-9, 0, 0/40"
+      borderCol, o, r: "bord, e, r-bl, u, e-5, 0, 0/30"
+      sta, t, s: [
+        { val, u, e: "89%", lab, e, l: "Faster, Deploymen, t" }
+        { val, u, e: "94%", lab, e, l: "Cost, Reductio, n" }
+        { val, u, e: "$12.4M", lab, e, l: "Annual, Saving, s" }
       ]
-    },
+    }
     {
-      title: "Cognitive Supply Chain Revolution",
-      description: "76% forecast accuracy, 68% inventory cost reduction, $18.7M value",
-      link: "/blog/ai-2025-october-cognitive-supply-chain-revolution",
-      icon: "Package",
-      gradient: "from-emerald-600 to-teal-600",
-      bgGradient: "from-emerald-900/40 to-teal-900/40",
-      borderColor: "border-emerald-500/30",
-      stats: [
-        { value: "76%", label: "Forecast Accuracy" },
-        { value: "68%", label: "Cost Reduction" },
-        { value: "$18.7M", label: "Annual Value" }
+      tit, l, e: "Cognitive, Supply, Chain Revoluti, o, n"
+      descripti, o, n: "76% forecast, accurac, y, 68% inventory, cost, reduction, $18.7M, valu, e"
+      li, n, k: "/bl, o, g/ai-20, 2, 5-octob, e, r-cogniti, v, e-supp, l, y-cha, i, n-revoluti, o, n"
+      ic, o, n: Packa, g, e
+      gradie, n, t: "fr, o, m-emera, l, d-600, t, o-te, a, l-6, 0, 0"
+      bgGradie, n, t: "fr, o, m-emera, l, d-9, 0, 0/40, t, o-te, a, l-9, 0, 0/40"
+      borderCol, o, r: "bord, e, r-emera, l, d-5, 0, 0/30"
+      sta, t, s: [
+        { val, u, e: "76%", lab, e, l: "Forecast, Accurac, y" }
+        { val, u, e: "68%", lab, e, l: "Cost, Reductio, n" }
+        { val, u, e: "$18.7M", lab, e, l: "Annual, Valu, e" }
       ]
-    },
+    }
     {
-      title: "AI Reliability Blueprints 2027",
-      description: "Evaluators, action budgets, instant rollback — ship safely",
-      link: "/blog/ai-reliability-blueprints-2027-2025-10-02",
-      icon: "TrendingUp",
-      gradient: "from-cyan-600 to-blue-600",
-      bgGradient: "from-cyan-900/40 to-blue-900/40",
-      borderColor: "border-cyan-500/30",
-      stats: [
-        { value: "KPI", label: "Linked Evals" },
-        { value: "1‑click", label: "Rollback" },
-        { value: "24/7", label: "Safe Ops" }
+      tit, l, e: "AI, Reliability, Blueprints 20, 2, 7"
+      descripti, o, n: "Evaluato, r, s, action, budget, s, instant, rollbac, k — ship, safel, y"
+      li, n, k: "/bl, o, g/ai-reliabili, t, y-blueprin, t, s-20, 2, 7-20, 2, 5-10-02"
+      ic, o, n: Trending, U, p
+      gradie, n, t: "fr, o, m-cy, a, n-600, t, o-bl, u, e-6, 0, 0"
+      bgGradie, n, t: "fr, o, m-cy, a, n-9, 0, 0/40, t, o-bl, u, e-9, 0, 0/40"
+      borderCol, o, r: "bord, e, r-cy, a, n-5, 0, 0/30"
+      sta, t, s: [
+        { val, u, e: "K, P, I", lab, e, l: "Linked, Eval, s" }
+        { val, u, e: "1‑cli, c, k", lab, e, l: "Rollba, c, k" }
+        { val, u, e: "24/7", lab, e, l: "Safe, Op, s" }
       ]
-    },
+    }
     {
-      title: "Edge Inference Playbook 2027",
-      description: "Sub‑100ms globally with warm pools and tiered caches",
-      link: "/blog/edge-inference-playbook-2027-2025-10-02",
-      icon: "Sparkles",
-      gradient: "from-purple-600 to-pink-600",
-      bgGradient: "from-purple-900/40 to-pink-900/40",
-      borderColor: "border-purple-500/30",
-      stats: [
-        { value: "<100ms", label: "P95 Latency" },
-        { value: "SLA", label: "Aware Routing" },
-        { value: "$", label: "Predictable Spend" }
+      tit, l, e: "Edge, Inference, Playbook 20, 2, 7"
+      descripti, o, n: "S, u, b‑100ms, globally, with warm, pools, and tiered, cache, s"
+      li, n, k: "/bl, o, g/ed, g, e-inferen, c, e-playbo, o, k-20, 2, 7-20, 2, 5-10-02"
+      ic, o, n: Sparkl, e, s
+      gradie, n, t: "fr, o, m-purp, l, e-600, t, o-pi, n, k-6, 0, 0"
+      bgGradie, n, t: "fr, o, m-purp, l, e-9, 0, 0/40, t, o-pi, n, k-9, 0, 0/40"
+      borderCol, o, r: "bord, e, r-purp, l, e-5, 0, 0/30"
+      sta, t, s: [
+        { val, u, e: "<100, m, s", lab, e, l: "P95, Latenc, y" }
+        { val, u, e: "S, L, A", lab, e, l: "Aware, Routin, g" }
+        { val, u, e: "$", lab, e, l: "Predictable, Spen, d" }
+      tit, l, e: "Enterprise, AI, Value Realizati, o, n",";
+      descripti, o, n: "90, days, to shipped, outcom, e
+  s: scorecar, d, s, evaluator, gate, s, tiered, routin, g",";
+      li, n, k: "/bl, o, g/enterpri, s, e-ai-val, u, e-realizati, o, n-20, 2, 5-10-08",";
+      ic, o, n: Bra, i, n
+      gradie, n, t: "fr, o, m-indi, g, o-600, t, o-bl, u, e-6, 0, 0",";
+      bgGradie, n, t: "fr, o, m-indi, g, o-9, 0, 0/40, t, o-bl, u, e-9, 0, 0/40",";
+      borderCol, o, r: "bord, e, r-indi, g, o-5, 0, 0/30",";
+      sta, t, s: [
+        { val, u, e: "9, 0, d", lab, e, l: "To, Outcome, s" },";
+        { val, u, e: "K, P, I", lab, e, l: "Linked, Gate, s" },";
+        { val, u, e: "$$", lab, e, l: "Predictable, Cos, t" }";
+      ]
+    }
+    {
+      tit, l, e: "Enterprise, Neural, Orchestration Platfo, r, m",";
+      descripti, o, n: "89% faster, AI, deployment, 94% cost, reductio, n, $12.4M, annual, savings",";
+      li, n, k: "/bl, o, g/ai-20, 2, 5-octob, e, r-enterpri, s, e-neur, a, l-orchestrati, o, n-platfo, r, m",";
+      ic, o, n: Bra, i, n
+      gradie, n, t: "fr, o, m-bl, u, e-600, t, o-purp, l, e-6, 0, 0",";
+      bgGradie, n, t: "fr, o, m-bl, u, e-9, 0, 0/40, t, o-purp, l, e-9, 0, 0/40",";
+      borderCol, o, r: "bord, e, r-bl, u, e-5, 0, 0/30",";
+      sta, t, s: [
+        { val, u, e: "89%", lab, e, l: "Faster, Deploymen, t" },";
+        { val, u, e: "94%", lab, e, l: "Cost, Reductio, n" },";
+        { val, u, e: "$12.4M", lab, e, l: "Annual, Saving, s" }";
+      ]
+    }
+    {
+      tit, l, e: "Cognitive, Supply, Chain Revoluti, o, n",";
+      descripti, o, n: "76% forecast, accurac, y, 68% inventory, cost, reduction, $18.7M, valu, e",";
+      li, n, k: "/bl, o, g/ai-20, 2, 5-octob, e, r-cogniti, v, e-supp, l, y-cha, i, n-revoluti, o, n",";
+      ic, o, n: Packa, g, e
+      gradie, n, t: "fr, o, m-emera, l, d-600, t, o-te, a, l-6, 0, 0",";
+      bgGradie, n, t: "fr, o, m-emera, l, d-9, 0, 0/40, t, o-te, a, l-9, 0, 0/40",";
+      borderCol, o, r: "bord, e, r-emera, l, d-5, 0, 0/30",";
+      sta, t, s: [
+        { val, u, e: "76%", lab, e, l: "Forecast, Accurac, y" },";
+        { val, u, e: "68%", lab, e, l: "Cost, Reductio, n" },";
+        { val, u, e: "$18.7M", lab, e, l: "Annual, Valu, e" }";
+      ]
+    }
+    {
+      tit, l, e: "AI, Reliability, Blueprints 20, 2, 7",";
+      descripti, o, n: "Evaluato, r, s, action, budget, s, instant, rollbac, k — ship, safel, y",";
+      li, n, k: "/bl, o, g/ai-reliabili, t, y-blueprin, t, s-20, 2, 7-20, 2, 5-10-02",";
+      ic, o, n: Trending, U, p
+      gradie, n, t: "fr, o, m-cy, a, n-600, t, o-bl, u, e-6, 0, 0",";
+      bgGradie, n, t: "fr, o, m-cy, a, n-9, 0, 0/40, t, o-bl, u, e-9, 0, 0/40",";
+      borderCol, o, r: "bord, e, r-cy, a, n-5, 0, 0/30",";
+      sta, t, s: [
+        { val, u, e: "K, P, I", lab, e, l: "Linked, Eval, s" },";
+        { val, u, e: "1‑cli, c, k", lab, e, l: "Rollba, c, k" },";
+        { val, u, e: "24/7", lab, e, l: "Safe, Op, s" }";
+      ]
+    }
+    {
+      tit, l, e: "Edge, Inference, Playbook 20, 2, 7",";
+      descripti, o, n: "S, u, b‑100ms, globally, with warm, pools, and tiered, cache, s",";
+      li, n, k: "/bl, o, g/ed, g, e-inferen, c, e-playbo, o, k-20, 2, 7-20, 2, 5-10-02",";
+      ic, o, n: Sparkl, e, s
+      gradie, n, t: "fr, o, m-purp, l, e-600, t, o-pi, n, k-6, 0, 0",";
+      bgGradie, n, t: "fr, o, m-purp, l, e-9, 0, 0/40, t, o-pi, n, k-9, 0, 0/40",";
+      borderCol, o, r: "bord, e, r-purp, l, e-5, 0, 0/30",";
+      sta, t, s: [
+        { val, u, e: "<100, m, s", lab, e, l: "P95, Latenc, y" },";
+        { val, u, e: "S, L, A", lab, e, l: "Aware, Routin, g" },";
+        { val, u, e: "$", lab, e, l: "Predictable, Spen, d" }";
       ]
     }
   ];
-
   return (
-    <div className="bg-gradient-to-br from-slate-950 via-blue-950 to-slate-950 py-16 px-4">
-      <div className="container mx-auto max-w-7xl">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full text-white font-bold mb-6 animate-pulse">
-
-            🚀 NEW CONTENT RELEASE - October 1, 2025
-
-          </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Latest AI Solutions & Insights
+    <div, className="bg-gradie, n, t-to-br, fro, m-sla, t, e-950, vi, a-bl, u, e-950, t, o-sla, t, e-950, p, y-16, p, x-4">";
+      <div, className="container, m, x-auto, ma, x-w-7, x, l">";
+        {/* Head, e, r */}
+        <div, className="text-center mb-12">
+          <div, className="inli, n, e-flex, item, s-center, p, x-6, p, y-3, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, rounde, d-full, tex, t-white, fon, t-bold, m, b-6, animat, e-pul, s, e">
+            <Sparkles, className="w-5 h-5, m, r-2  />
+            🚀 NEW, CONTENT, RELEASE - Octobe, r, 1, 20, 2, 5;
+            <Sparkles, className="w-5 h-5, m, l-2  />
+          </d, i, v>
+          <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4">"
+        <div, className="text-center mb-12">";
+          <div, className="inli, n, e-flex, item, s-center, p, x-6, p, y-3, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, rounde, d-full, tex, t-white, fon, t-bold, m, b-6, animat, e-pul, s, e">";
+            <Sparkles, className="w-5 h-5, m, r-2" />";
+            🚀 NEW, CONTENT, RELEASE - Octobe, r, 1, 20, 2, 5;
+            <Sparkles, className="w-5 h-5, m, l-2" />";
+          </d, i, v>
+          <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4">";
+            Latest, AI, Solutions & Insigh, t, s;
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Discover breakthrough AI platforms delivering millions in value to enterprise organizations
+          <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-3xl, m, x-au, t, o">";
+            Discover, breakthrough, AI platforms, delivering, millions in, value, to enterprise, organization, s;
           </p>
-        </div>
-
-        {/* Featured Content Cards */}
-        <div className="grid md:grid-cols-2 gap-8 mb-12">
-          {featuredContent.map((content, index) => {
-            const Icon = content.icon;
+        </d, i, v>
+        {/* Featured, Content, Cards */}
+        <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-8, m, b-12">"
+        <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-8, m, b-12">";
+          {featuredConte, n, t.m, a, p((conte, n, t, ind, e, x) => {
+            const, Ico, n = conte, n, t.ic, o, n;
             return (
-              <Link
-                key={index}
-                to={content.link}
-                className="group relative overflow-hidden rounded-2xl border hover:border-opacity-100 transition-all duration-300 hover:scale-105 hover:shadow-2xl"
-                style={{ borderColor: content.borderColor }}
+              <Li, n, k
+  k, e, y={ind, e, x}
+                to={conte, n, t.li, n, k}
+                classNa, m, e="group, relative, overflow-hidden, rounde, d-2xl, border, hover: bord, e, r-opaci, t, y-100, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hov, e
+  r:shad, o, w-2, x, l"
+                sty, l, e={{ borderCol, o, r: conte, n, t.borderCol, o, r }}
               >
-                <div className={`absolute inset-0 bg-gradient-to-br ${content.bgGradient} opacity-50 group-hover:opacity-70 transition-opacity`}></div>
-                <div className="relative p-8">
-                  {/* Icon & Title */}
-                  <div className="flex items-start mb-6">
-                    <div className={`p-4 bg-gradient-to-r ${content.gradient} rounded-xl mr-4`}>
-                      <Icon className="w-8 h-8 text-white" />
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-blue-300 transition-colors">
-                        {content.title}
+                <div, className={`absolute, inse, t-0, b, g-gradie, n, t-to-br ${conte, n, t.bgGradie, n, t} opaci, t, y-50, grou, p-hov, e, r:opaci, t, y-70, transitio, n-opaci, t, y`}></d, i, v>`;`
+                <div, className="relativ, e, p-8">
+                  {/* Ic, o, n & Tit, l, e */}
+                  <div, className="flex, item, s-start, m, b-6">
+                    <div, className={`p-4, b, g-gradie, n, t-to-r ${conte, n, t.gradie, n, t} round, e, d-xl, m, r-4`}>`;`
+                      <Icon, className="w-8 h-8, tex, t-whi, t, e  />
+                    </d, i, v>
+                    <div, className="fl, e, x-1">
+                      <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r: te, x, t-bl, u, e-300, transitio, n-colo, r, s">"
+                <div, className="relativ, e, p-8">";
+                  {/* Ic, o, n & Tit, l, e */}
+                  <div, className="flex, item, s-start, m, b-6">";
+                    <div, className={`p-4, b, g-gradie, n, t-to-r ${conte, n, t.gradie, n, t} round, e, d-xl, m, r-4`}>`;`
+                      <Icon, className="w-8 h-8, tex, t-whi, t, e" />";
+                    </d, i, v>
+                    <div, className="fl, e, x-1">";
+                      <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r: te, x, t-bl, u, e-300, transitio, n-colo, r, s">";
+                        {conte, n, t.tit, l, e}
                       </h3>
-                      <p className="text-gray-300 text-sm">
-                        {content.description}
+                      <p, className="te, x, t-gr, a, y-300, tex, t-sm">";
+                        {conte, n, t.descripti, o, n}
                       </p>
-                    </div>
-                  </div>
-
-                  {/* Stats */}
-                  <div className="grid grid-cols-3 gap-4 mb-6">
-                    {content.stats.map((stat, idx) => (
-                      <div key={idx} className="text-center bg-slate-900/60 p-4 rounded-lg border border-white/10">
-                        <div className={`text-2xl font-bold bg-gradient-to-r ${content.gradient} bg-clip-text text-transparent`}>
-                          {stat.value}
-                        </div>
-                        <div className="text-xs text-gray-400 mt-1">{stat.label}</div>
-                      </div>
+                    </d, i, v>
+                  </d, i, v>
+                  {/* Sta, t, s */}
+                  <div, className="grid, gri, d-co, l, s-3, ga, p-4, m, b-6">";
+                    {conte, n, t.sta, t, s.m, a, p((st, a, t, i, d, x) => (
+                      <div, ke, y={i, d, x} classNa, m, e="te, x, t-center, b, g-sla, t, e-9, 0, 0/6, 0, p-4, rounde, d-lg, border, border-whi, t, e/10">
+                      <div, ke, y={i, d, x} classNa, m, e="te, x, t-center, b, g-sla, t, e-9, 0, 0/6, 0, p-4, rounde, d-lg, border, border-whi, t, e/10">";
+                        <div, className={`te, x, t-2xl, fon, t-bold, b, g-gradie, n, t-to-r ${conte, n, t.gradie, n, t} bg-cl, i, p-text, tex, t-transpare, n, t`}>`;`
+                          {st, a, t.val, u, e}
+                        </d, i, v>
+                        <div, className="te, x, t-xs, tex, t-gr, a, y-400, m, t-1">{st, a, t.lab, e, l}</d, i, v>";
+                      </d, i, v>
                     ))}
-                  </div>
-
-                  {/* CTA */}
-                  <div className="flex items-center justify-between">
-                    <span className="text-sm text-gray-400">Published October 1, 2025</span>
-                    <div className={`flex items-center text-white font-semibold group-hover:translate-x-2 transition-transform`}>
-                      Read Full Article
-
-                    </div>
-                  </div>
-                </div>
-
-                {/* Hover Effect Overlay */}
-                <div className={`absolute inset-0 bg-gradient-to-r ${content.gradient} opacity-0 group-hover:opacity-10 transition-opacity`}></div>
-              </Link>
+                  </d, i, v>
+                  {/* C, T, A */}
+                  <div, className="flex, item, s-center, justif, y-betwe, e, n">
+                    <span, className="te, x, t-sm, tex, t-gr, a, y-4, 0, 0">Published, October, 1, 20, 2, 5</sp, a, n>
+                    <div, className={`flex, item, s-center, tex, t-white, fon, t-semibold, grou, p-hov, e, r:transla, t, e-x-2, transitio, n-transfo, r, m`}>`;`
+                      Read, Full, Article;
+                      <ArrowRight, className="w-4 h-4, m, l-2  />
+                  <div, className="flex, item, s-center, justif, y-betwe, e, n">";
+                    <span, className="te, x, t-sm, tex, t-gr, a, y-4, 0, 0">Published, October, 1, 20, 2, 5</sp, a, n>";
+                    <div, className={`flex, item, s-center, tex, t-white, fon, t-semibold, grou, p-hov, e, r:transla, t, e-x-2, transitio, n-transfo, r, m`}>`;`
+                      Read, Full, Article;
+                      <ArrowRight, className="w-4 h-4, m, l-2" />";
+                    </d, i, v>
+                  </d, i, v>
+                </d, i, v>
+                {/* Hover, Effect, Overlay */}
+                <div, className={`absolute, inse, t-0, b, g-gradie, n, t-to-r ${conte, n, t.gradie, n, t} opaci, t, y-0, grou, p-hov, e, r:opaci, t, y-10, transitio, n-opaci, t, y`}></d, i, v>`;`
+              </Li, n, k>
             );
           })}
-        </div>
-
-        {/* Bottom CTA */}
-        <div className="text-center">
-          <div className="inline-flex items-center space-x-4">
-            <Link
-              to="/blog"
-              className="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all transform hover:scale-105 inline-flex items-center"
+        </d, i, v>
+        {/* Bottom, CT, A */}
+        <div, className="te, x, t-cent, e, r">";
+          <div, className="inli, n, e-flex, item, s-center, spac, e-x-4">";
+            <Li, n, k
+  to="/bl, o, g"
+              classNa, m, e="px-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, tex, t-white, fon, t-semibold, rounde, d-lg, hove, r: fr, o, m-bl, u, e-700, hove, r:to-purp, l, e-700, transitio, n-all, transform, hove
+  r:sca, l, e-105, inlin, e-flex, item, s-cent, e, r"
             >
-              Explore All Articles
-
-            </Link>
-            <Link
-              to="/contact"
-              className="px-8 py-4 bg-slate-800 text-white font-semibold rounded-lg hover:bg-slate-700 transition-all border border-blue-500/30 inline-flex items-center"
+              Explore, All, Articles;
+              <TrendingUp, className="w-5 h-5, m, l-2  />
+              <TrendingUp, className="w-5 h-5, m, l-2" />";
+            </Li, n, k>
+            <Li, n, k
+  to="/conta, c, t"
+              classNa, m, e="px-8, p, y-4, b, g-sla, t, e-800, tex, t-white, fon, t-semibold, rounde, d-lg, hove, r: bg-sla, t, e-700, transitio, n-all, border, border-bl, u, e-5, 0, 0/30, inlin, e-flex, item, s-cent, e, r"
             >
-              Get a Free Consultation
-
-            </Link>
-          </div>
-        </div>
-
-        {/* Value Proposition */}
-        <div className="mt-12 bg-gradient-to-r from-blue-900/20 to-purple-900/20 border border-blue-500/20 rounded-xl p-8">
-          <div className="grid md:grid-cols-4 gap-6 text-center">
-            <div>
-              <div className="text-3xl font-bold text-blue-400 mb-2">$31.1M</div>
-              <div className="text-gray-300 text-sm">Combined Annual Value</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold text-emerald-400 mb-2">89%</div>
-              <div className="text-gray-300 text-sm">Average Improvement</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold text-purple-400 mb-2">8-12 Weeks</div>
-              <div className="text-gray-300 text-sm">Implementation Time</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold text-yellow-400 mb-2">100%</div>
-              <div className="text-gray-300 text-sm">Enterprise Ready</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+              Get, a, Free Consultati, o, n;
+              <ArrowRight, className="w-5 h-5, m, l-2  />
+              <ArrowRight, className="w-5 h-5, m, l-2" />";
+            </Li, n, k>
+          </d, i, v>
+        </d, i, v>
+        {/* Value, Propositio, n */}
+        <div, className="mt-12, b, g-gradie, n, t-to-r, fro, m-bl, u, e-9, 0, 0/20, t, o-purp, l, e-9, 0, 0/20, border, border-bl, u, e-5, 0, 0/20, rounde, d-x, l, p-8">
+          <div, className="grid, m, d: gr, i, d-co, l, s-4, ga, p-6, tex, t-cent, e, r">"
+        <div, className="mt-12, b, g-gradie, n, t-to-r, fro, m-bl, u, e-9, 0, 0/20, t, o-purp, l, e-9, 0, 0/20, border, border-bl, u, e-5, 0, 0/20, rounde, d-x, l, p-8">";
+          <div, className="grid, m, d: gr, i, d-co, l, s-4, ga, p-6, tex, t-cent, e, r">";
+            <d, i, v>
+              <div, className="te, x, t-3xl, fon, t-bold, tex, t-bl, u, e-400, m, b-2">$31.1M</d, i, v>";
+              <div, className="te, x, t-gr, a, y-300, tex, t-sm">Combined, Annual, Value</d, i, v>";
+            </d, i, v>
+            <d, i, v>
+              <div, className="te, x, t-3xl, fon, t-bold, tex, t-emera, l, d-400, m, b-2">89%</d, i, v>";
+              <div, className="te, x, t-gr, a, y-300, tex, t-sm">Average, Improvemen, t</d, i, v>";
+            </d, i, v>
+            <d, i, v>
+              <div, className="te, x, t-3xl, fon, t-bold, tex, t-purp, l, e-400, m, b-2">8-12, Week, s</d, i, v>";
+              <div, className="te, x, t-gr, a, y-300, tex, t-sm">Implementation, Tim, e</d, i, v>";
+            </d, i, v>
+            <d, i, v>
+              <div, className="te, x, t-3xl, fon, t-bold, tex, t-yell, o, w-400, m, b-2">1, 0, 0%</d, i, v>";
+              <div, className="te, x, t-gr, a, y-300, tex, t-sm">Enterprise, Read, y</d, i, v>";
+            </d, i, v>
+          </d, i, v>
+        </d, i, v>
+      </d, i, v>
+    </d, i, v>
   );
 };
-
 export default October2025FeaturedContentBanner;
+;

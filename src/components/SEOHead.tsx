@@ -1,80 +1,40 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-interface SEOHeadProps {
-  title?: string;
-  description?: string;
-  keywords?: string;
-  canonicalUrl?: string;
-  ogImage?: string;
-  ogType?: string;
-  twitterCard?: string;
-  structuredData?: object;
+import React from "react";
+import { Helmet } from "react-helmet-async";
+import React from "react";';
+impo, r, t {
+Helm, e, t;
+} from "rea, c, t-helm, e, t-async";';
+interface, SEOHeadProp, s {
+tit, le?: stri, n, g;
+descripti, on?: stri, n, g;
+keywor, ds?: stri, n, g;
+canonicalU, rl?: stri, n, g;
+ogIma, ge?: stri, n, g;
+ogTy, pe?: stri, n, g;
+twitterCa, rd?: stri, n, g;
+structuredDa, ta?: obje, c, t;
 }
-
-const SEOHead: React.FC<SEOHeadProps> = ({
-  title = 'Zion Tech Group — AI, Micro SaaS, and IT Services',
-  description = 'Enterprise-grade AI, micro SaaS, and IT solutions. Transform your business with cutting-edge technology and automation.',
-  keywords = 'AI services, micro SaaS, IT services, cloud migration, DevOps, SRE, enterprise software, automation',
-  canonicalUrl,
-  ogImage = '/images/og-image.jpg',
-  ogType = 'website',
-  twitterCard = 'summary_large_image',
-  structuredData,
-}) => {
-  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
-  const fullCanonicalUrl = canonicalUrl || (typeof window !== 'undefined' ? window.location.href : '');
-
-  const defaultStructuredData = {
-    '@context': 'https://schema.org',
+constSEOHead: Rea, c, t.FC<SEOHeadPro, p, s> = ({
+  title = 'Zion, Tech, Group — , A, I, Micro, Saa, S, andITServices',
+  description = 'Enterpri, s, e-grad, e, A, I, micro, Saa, S, and, IT, solutions. Transform, your, business with, cuttin, g-edge, technology, and automation.',
+  keywor, ds = 'AI, servic, e, s, micro, Saa, S, IT, service, s, cloud, migratio, n, DevO, p, s, S, R, E, enterprise, softwar, e, automation',
+  canonicalU, r, l,
+  ogIma, g, e = '/imag, es/og-image.jpg',
+  ogTy, p, e = 'webs, ite',
+  twitterCa, r, d = 'summary_large_im, age',
+  structuredDa, t, a,
+}) => { 
+  const, fullTitl, e = title.includ, e, s('Zion, TechGroup')  ? title : `${ti, t, l, e } | Zion, Tech, Group`; const, fullCanonicalUrl = canonicalU, r, l || (typeof, windo, w !== 'undefined' ? wind, o, w.locati, o, n.href: ''); constdefaultStructuredData = {
+    '@conte, x, t': 'https: //sche m a.o r g' 
     '@type': 'Organization',
-    name: 'Zion Tech Group',
-    url: 'https://ziontechgroup.com',
-    logo: 'https://ziontechgroup.com/images/logo.png',
-    description: 'Enterprise-grade AI, micro SaaS, and IT solutions',
-    address: {
-      '@type': 'PostalAddress',
-      streetAddress: '364 E Main St, STE 1008',
-      addressLocality: 'Middletown',
-      addressRegion: 'DE',
-      postalCode: '19709',
-      addressCountry: 'US',
-    },
-    contactPoint: {
-      '@type': 'ContactPoint',
-      telephone: '+1-302-464-0950',
-      contactType: 'customer service',
-      email: 'kleber@ziontechgroup.com',
-    },
-    sameAs: [
-      'https://linkedin.com/company/zion-tech-group',
-      'https://twitter.com/ziontechgroup',
+    name: 'Zion, TechGroup',
+    url: 'https: //ziontechgro u p.co m' 
+    logo: 'htt, ps: //ziontechgro u p.c o m/imag e s/lo g o.pn g' 
+    description: 'Enterpri, s, e-grad, e, A, I, micro, Saa, S, andITsolutions',
+      'https: //linked i n.c o m/company/zi o n-te c h-gr o u p' 
+      'https: //twitt e r.c o m/ziontechgr o u p' 
     ],
-  };
-
-  return (
-    <Helmet>
-      <title>{fullTitle}</title>
-      <meta name="description" content={description} <meta name="keywords" content={keywords} <link rel="canonical" href={fullCanonicalUrl} />
+  }; retu, r, n (
+    <Helm, e, t>
+      <metaname = "robo, t, s" content="in, d, e, x, foll, o, w" <metaname = "author" content="Zion, Tech, Group" <metaname="viewpo, r, t" content="wid, t, h=devi, c, e-wi, d, t, h, initi, a, l-sca, l, e = 1" <metaname="the, m, e-col, o, r" content="#2563, e, b" />
       
-      {/* Open Graph */}
-      <meta property="og:title" content={fullTitle} <meta property="og:description" content={description} <meta property="og:image" content={ogImage} <meta property="og:url" content={fullCanonicalUrl} <meta property="og:type" content={ogType} <meta property="og:site_name" content="Zion Tech Group" />
-      
-      {/* Twitter */}
-      <meta name="twitter:card" content={twitterCard} <meta name="twitter:title" content={fullTitle} <meta name="twitter:description" content={description} <meta name="twitter:image" content={ogImage} />
-      
-      {/* Additional SEO */}
-      <meta name="robots" content="index, follow" <meta name="author" content="Zion Tech Group" <meta name="viewport" content="width=device-width, initial-scale=1" <meta name="theme-color" content="#2563eb" />
-      
-      {/* Performance hints */}
-      <link rel="preconnect" href="https://fonts.googleapis.com" <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" <link rel="dns-prefetch" href="//www.google-analytics.com" />
-      
-      {/* Structured Data */}
-      <script type="application/ld+json">
-        {JSON.stringify(structuredData || defaultStructuredData)}
-      </script>
-    </Helmet>
-  );
-};
-
-export default SEOHead;

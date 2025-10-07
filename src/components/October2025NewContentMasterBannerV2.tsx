@@ -1,144 +1,198 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-
-export default function October2025NewContentMasterBannerV2() {
+export, default, function October2025NewContentMasterBanner, V, 2(): vo, i, d {
   return (
-    <div className="relative overflow-hidden bg-gradient-to-br from-rose-900 via-orange-900 to-amber-900 border-4 border-orange-500 rounded-2xl shadow-2xl mb-8 animate-pulse-slow">
-      {/* Animated Background */}
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-10 left-10 w-80 h-80 bg-orange-400 rounded-full filter blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-10 right-10 w-80 h-80 bg-rose-400 rounded-full filter blur-3xl animate-pulse delay-1000"></div>
+    <divclassName = "relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-ro, s, e-900, vi, a-oran, g, e-900, t, o-amb, e, r-900, borde, r-4, borde, r-oran, g, e-500, rounde, d-2xl, shado, w-2xl, m, b-8, animat, e-pul, s, e-slow">";
+      {/* Animated, Background */}
+      <divclassName="absolute, inse, t-0, opacit, y-20">";
+        <divclassName = "absolute, to, p-10, lef, t-1, 0, w-8, 0, h-80, b, g-oran, g, e-400, rounde, d-full, filter, blur-3xl, animat, e-pulse"></d, i, v>";
+        <divclassName = "absolute, botto, m-10, righ, t-1, 0, w-8, 0, h-80, b, g-ro, s, e-400, rounde, d-full, filter, blur-3xl, animat, e-pulse, dela, y-1000"></d, i, v>";
       </div>
-
-      <div className="relative z-10 p-8 md:p-12">
-        {/* Header */}
-        <div className="text-center mb-8">
-          <div className="inline-flex items-center gap-2 bg-orange-500/30 border-2 border-orange-400 rounded-full px-6 py-3 backdrop-blur-sm mb-4 animate-bounce-slow">
-
-            <span className="text-yellow-300 font-black text-lg tracking-wider">
-              🚀 MAJOR CONTENT LAUNCH • OCTOBER 2025 • BREAKTHROUGH INNOVATIONS 🚀
+      <divclassName="relativ, e, z-1, 0, p-8md: p-12">"
+        {/* Head, er */}
+        <divclassName="te, x, t-center, m, b-8">
+          <divclassName = "inli, n, e-flex, item, s-center, ga, p-2, b, g-oran, g, e-5, 0, 0/30, borde, r-2, borde, r-oran, g, e-400, rounde, d-full, p, x-6, p, y-3, backdro, p-bl, u, r-sm, m, b-4, animat, e-boun, c, e-slow">
+            <Rocket, className="w-6 h-6, tex, t-yell, o, w-300, animat, e-pul, se  />
+            <spanclassName="te, x, t-yell, o, w-300, fon, t-black, tex, t-lg, trackin, g-wid, e, r">
+              🚀 MAJOR, CONTENT, LAUNCH • OCTOBER, 202, 5 • BREAKTHROUGH, INNOVATION, S 🚀
             </span>
-
-          </div>
-
-          <h2 className="text-4xl md:text-6xl font-black mb-4 bg-gradient-to-r from-orange-200 via-yellow-200 to-orange-200 bg-clip-text text-transparent leading-tight">
-            Revolutionary AI Solutions Just Launched
+            <SparklesclassName="w-6 h-6, tex, t-yell, o, w-300, animat, e-sp, i, n-sl, o, w  />
+          </d, i, v>
+          <h2, className="te, x, t-4xlmd: te, x, t-6xl, fon, t-black, m, b-4, b, g-gradie, n, t-to-r, fro, m-oran, g, e-200, vi, a-yell, o, w-200, t, o-oran, g, e-200, b, g-cl, i, p-text, tex, t-transparent, leadin, g-tight">"
+            Revolutionary, AI, Solutions Just, Launched;
           </h2>
-
-          <p className="text-2xl md:text-3xl font-bold text-orange-100 mb-6">
-            Two Game-Changing Breakthroughs Available Now
+          <pclassName="te, x, t-2xlmd: te, x, t-3xl, fon, t-bold, tex, t-oran, g, e-100, m, b-6">"
+      <divclassName = "relativ, e, z-10p-8md: p-12">";
+        {/* Head, er */}
+        <divclassName="te, x, t-center, m, b-8">";
+          <divclassName = "inli, n, e-flex, item, s-center, ga, p-2, b, g-oran, g, e-5, 0, 0/30, borde, r-2, borde, r-oran, g, e-400, rounde, d-full, p, x-6, p, y-3, backdro, p-bl, u, r-sm, m, b-4, animat, e-boun, c, e-slow">";
+            <RocketclassName = "w-6 h-6, tex, t-yell, o, w-300, animat, e-pulse" />";
+            <spanclassName = "te, x, t-yell, o, w-300, fon, t-black, tex, t-lg, trackin, g-wider">";
+              🚀 MAJOR, CONTENT, LAUNCH • OCTOBER, 202, 5 • BREAKTHROUGH, INNOVATION, S 🚀
+            </span>
+            <SparklesclassName="w-6 h-6, tex, t-yell, o, w-300, animat, e-sp, i, n-sl, o, w" />";
+          </div>
+          <h2className="te, x, t-4xlmd: te, x, t-6xl, fon, t-black, m, b-4, b, g-gradie, n, t-to-r, fro, m-oran, g, e-200, vi, a-yell, o, w-200, t, o-oran, g, e-200, b, g-cl, i, p-text, tex, t-transparent, leadin, g-tig, h, t">";
+            Revolutionary, AI, Solutions Just, Launched;
+          </h2>
+          <pclassName="te, x, t-2x, l, m
+  d: te, x, t-3xl, fon, t-bold, tex, t-oran, g, e-100, m, b-6">";
+            Two, Gam, e-Changing, Breakthroughs, Available N, o, w;
           </p>
-        </div>
-
-        {/* Two-Column Layout */}
-        <div className="grid md:grid-cols-2 gap-6 mb-8">
-          {/* Cognitive Hyperautomation */}
-          <div className="bg-gradient-to-br from-purple-800/60 to-purple-900/60 backdrop-blur-md border-2 border-purple-400/50 rounded-2xl p-6 shadow-2xl hover:scale-105 transition-all duration-300">
-            <div className="flex items-center gap-3 mb-4">
-
-              <h3 className="text-2xl font-black text-purple-200">Cognitive Hyperautomation</h3>
+        </d, i, v>
+        {/* T, w, o-Column, Layout */}
+        <divclassName="gridmd: gr, i, d-co, l, s-2, ga, p-6, m, b-8">"
+          {/* Cognitive, Hyperautomation */}
+          <divclassName="bg-gradie, n, t-to-br, fro, m-purp, l, e-8, 0, 0/60, t, o-purp, l, e-9, 0, 0/60, backdro, p-bl, u, r-md, borde, r-2, borde, r-purp, l, e-4, 0, 0/50, rounde, d-2x, l, p-6, shado, w-2xlhover: sca, l, e-105, transitio, n-all, duratio, n-3, 0, 0">"
+            <divclassName = "flex, item, s-center, ga, p-3mb-4">
+              <Star, className="w-8 h-8, tex, t-purp, l, e-300, animat, e-pul, se  />
+              <h3className="te, x, t-2xl, fon, t-black, tex, t-purp, l, e-2, 0, 0">Cognitive, Hyperautomatio, n</h3>
             </div>
-            
-            <div className="space-y-3 mb-6">
-              <div className="flex justify-between items-center">
-                <span className="text-purple-300 font-semibold">Total Value:</span>
-                <span className="text-3xl font-black text-purple-200">$38.5B</span>
-              </div>
-              <div className="flex justify-between items-center">
-                <span className="text-purple-300 font-semibold">ROI:</span>
-                <span className="text-3xl font-black text-purple-200">15,200%</span>
-              </div>
-              <div className="flex justify-between items-center">
-                <span className="text-purple-300 font-semibold">Automation:</span>
-                <span className="text-3xl font-black text-purple-200">98.9%</span>
-              </div>
+            <divclassName="spa, c, e-y-3, m, b-6">
+              <div, className="flex, justif, y-between, item, s-center">
+                <span, className="te, x, t-purp, l, e-300, fon, t-semibold">TotalValue: </sp, a, n>"
+                <span, className="te, x, t-3xl, fon, t-black, tex, t-purp, l, e-200">$38.5B</sp, a, n>
+              </d, i, v>
+              <div, className="flex, justif, y-between, item, s-center">
+                <span, className="te, x, t-purp, l, e-300, fon, t-semibold">ROI: </sp, a, n>"
+                <span, className="te, x, t-3xl, fon, t-black, tex, t-purp, l, e-200">15,2, 0, 0%</sp, a, n>
+              </d, i, v>
+              <div, className="flex, justif, y-between, item, s-center">
+                <span, className="te, x, t-purp, l, e-300, fon, t-semibold">Automation: </sp, a, n>"
+                <span, className="te, x, t-3xl, fon, t-black, tex, t-purp, l, e-200">98.9%</sp, a, n>
+              </d, i, v>
+            </d, i, v>
+            <div, className="bg-purp, l, e-9, 0, 0/40, rounde, d-l, g, p-4, m, b-4, border, border-purp, l, e-500/30">
+              <p, className="te, x, t-purp, l, e-200, tex, t-sm, fon, t-semiboldmb-2">Fortune50Success: </p>"
+              <p, className="te, x, t-purp, l, e-100text-lg">$14.7B, business, impact • 25,0, 0, 0+ AI, agent, s</p>
+        <div, className="gridmd: gr, i, d-co, l, s-2, ga, p-6mb-8">";
+          {/* Cognitive, Hyperautomation */}
+          <divclassName="bg-gradie, n, t-to-br, fro, m-purp, l, e-8, 0, 0/60, t, o-purp, l, e-9, 0, 0/60, backdro, p-bl, u, r-md, borde, r-2, borde, r-purp, l, e-4, 0, 0/50, rounde, d-2x, l, p-6, shado, w-2xlhover: sca, l, e-105, transitio, n-all, duratio, n-3, 0, 0">";
+            <divclassName = "flex, item, s-center, ga, p-3mb-4">";
+              <StarclassName = "w-8 h-8, tex, t-purp, l, e-300, animat, e-pulse" />";
+              <h3className = "te, x, t-2xl, fon, t-black, tex, t-purp, l, e-200">Cognitive, Hyperautomatio, n</h3>";
             </div>
-
-            <div className="bg-purple-900/40 rounded-lg p-4 mb-4 border border-purple-500/30">
-              <p className="text-purple-200 text-sm font-semibold mb-2">Fortune 50 Success:</p>
-              <p className="text-purple-100 text-lg">$14.7B business impact • 25,000+ AI agents</p>
+            <divclassName="spa, c, e-y-3, m, b-6">";
+              <divclassName = "flex, justif, y-between, item, s-center">";
+                <spanclassName = "te, x, t-purp, l, e-300, fon, t-semibold">TotalValue: </sp, a, n>";
+                <spanclassName = "te, x, t-3xl, fon, t-black, tex, t-purp, l, e-200">$38.5B</sp, a, n>";
+              </div>
+              <divclassName="flex, justif, y-between, item, s-cent, e, r">";
+                <spanclassName = "te, x, t-purp, l, e-300, fon, t-semibold">RO
+  I: </sp, a, n>";
+                <spanclassName = "te, x, t-3xl, fon, t-black, tex, t-purp, l, e-200">15,2, 0, 0%</sp, a, n>";
+              </div>
+              <divclassName="flex, justif, y-between, item, s-cent, e, r">";
+                <spanclassName = "te, x, t-purp, l, e-300, fon, t-semibold">Automation: </sp, a, n>";
+                <spanclassName = "te, x, t-3xl, fon, t-black, tex, t-purp, l, e-200">98.9%</sp, a, n>";
+              </d, i, v>
             </div>
-
+            <divclassName="bg-purp, l, e-9, 0, 0/40, rounde, d-l, g, p-4, m, b-4, border, border-purp, l, e-5, 0, 0/30">";
+              <pclassName = "te, x, t-purp, l, e-200, tex, t-sm, fon, t-semiboldmb-2">Fortune, 50, Succes
+  s: </p>";
+              <pclassName = "te, x, t-purp, l, e-100text-lg">$14.7B, business, impact • 25,0, 0, 0+ AI, agent, s</p>";
+            </d, i, v>
             <Link
-              to="/blog/ai-2025-october-cognitive-hyperautomation-platform"
-              className="block text-center bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-black text-base px-6 py-3 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
+  to="/bl, o, g/ai-20, 2, 5-octob, e, r-cogniti, v, e-hyperautomati, o, n-platfo, r, m"
+              className="block, tex, t-center, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-pi, n, k-500hover: fr, o, m-purp, l, e-600hover: to-pi, n, k-600, tex, t-white, fon, t-black, tex, t-base, p, x-6, p, y-3, rounde, d-lg, shado, w-lg, hov, e
+  r:shad, o, w-xl, transitio, n-all, duratio, n-3, 0, 0"
             >
-              Explore Platform →
-            </Link>
-          </div>
-
-          {/* FinTech Transformation */}
-          <div className="bg-gradient-to-br from-blue-800/60 to-blue-900/60 backdrop-blur-md border-2 border-blue-400/50 rounded-2xl p-6 shadow-2xl hover:scale-105 transition-all duration-300">
-            <div className="flex items-center gap-3 mb-4">
-
-              <h3 className="text-2xl font-black text-blue-200">FinTech AI Transformation</h3>
+              Explore, Platfor, m →
+            </Li, n, k>
+          </d, i, v>
+          {/* FinTech, Transformation */}
+          <divclassName="bg-gradie, n, t-to-br, fro, m-bl, u, e-8, 0, 0/60, t, o-bl, u, e-9, 0, 0/60, backdro, p-bl, u, r-md, borde, r-2, borde, r-bl, u, e-4, 0, 0/50, rounde, d-2x, l, p-6, shado, w-2xlhover: sca, l, e-105, transitio, n-all, duratio, n-3, 0, 0">"
+            <divclassName = "flex, item, s-center, ga, p-3mb-4">
+              <Star, className="w-8 h-8, tex, t-bl, u, e-300, animat, e-pul, se  />
+              <h3className="te, x, t-2xl, fon, t-black, tex, t-bl, u, e-2, 0, 0">FinTech, AI, Transformation</h3>
             </div>
-            
-            <div className="space-y-3 mb-6">
-              <div className="flex justify-between items-center">
-                <span className="text-blue-300 font-semibold">Business Value:</span>
-                <span className="text-3xl font-black text-blue-200">$22.8B</span>
-              </div>
-              <div className="flex justify-between items-center">
-                <span className="text-blue-300 font-semibold">ROI:</span>
-                <span className="text-3xl font-black text-blue-200">18,400%</span>
-              </div>
-              <div className="flex justify-between items-center">
-                <span className="text-blue-300 font-semibold">Automation:</span>
-                <span className="text-3xl font-black text-blue-200">96%</span>
-              </div>
+            <divclassName="spa, c, e-y-3, m, b-6">
+              <div, className="flex, justif, y-between, item, s-center">
+                <span, className="te, x, t-bl, u, e-300, fon, t-semibold">BusinessValue: </sp, a, n>"
+                <span, className="te, x, t-3xl, fon, t-black, tex, t-bl, u, e-200">$22.8B</sp, a, n>
+              </d, i, v>
+              <div, className="flex, justif, y-between, item, s-center">
+                <span, className="te, x, t-bl, u, e-300, fon, t-semibold">ROI: </sp, a, n>"
+                <span, className="te, x, t-3xl, fon, t-black, tex, t-bl, u, e-200">18,4, 0, 0%</sp, a, n>
+              </d, i, v>
+              <div, className="flex, justif, y-between, item, s-center">
+                <span, className="te, x, t-bl, u, e-300, fon, t-semibold">Automation: </sp, a, n>"
+                <span, className="te, x, t-3xl, fon, t-black, tex, t-bl, u, e-200">96%</sp, a, n>
+              </d, i, v>
+            </d, i, v>
+            <div, className="bg-bl, u, e-9, 0, 0/40, rounde, d-l, g, p-4, m, b-4, border, border-bl, u, e-500/30">
+              <p, className="te, x, t-bl, u, e-200, tex, t-sm, fon, t-semiboldmb-2">Fortune100Success: </p>"
+              <p, className="te, x, t-bl, u, e-100text-lg">47M, customer, s • 92% satisfacti, o, n • 72, countrie, s</p>
+          <div, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-8, 0, 0/60, t, o-bl, u, e-9, 0, 0/60, backdro, p-bl, u, r-md, borde, r-2, borde, r-bl, u, e-4, 0, 0/50, rounde, d-2x, l, p-6, shado, w-2xlhover: sca, l, e-105, transitio, n-all, duratio, n-300">";
+            <divclassName = "flex, item, s-center, ga, p-3mb-4">";
+              <StarclassName = "w-8 h-8, tex, t-bl, u, e-300, animat, e-pulse" />";
+              <h3className = "te, x, t-2xl, fon, t-black, tex, t-bl, u, e-200">FinTech, AI, Transformation</h3>";
             </div>
-
-            <div className="bg-blue-900/40 rounded-lg p-4 mb-4 border border-blue-500/30">
-              <p className="text-blue-200 text-sm font-semibold mb-2">Fortune 100 Success:</p>
-              <p className="text-blue-100 text-lg">47M customers • 92% satisfaction • 72 countries</p>
+            <divclassName="spa, c, e-y-3, m, b-6">";
+              <divclassName = "flex, justif, y-between, item, s-center">";
+                <spanclassName = "te, x, t-bl, u, e-300, fon, t-semibold">BusinessValue: </sp, a, n>";
+                <spanclassName = "te, x, t-3xl, fon, t-black, tex, t-bl, u, e-200">$22.8B</sp, a, n>";
+              </div>
+              <divclassName="flex, justif, y-between, item, s-cent, e, r">";
+                <spanclassName = "te, x, t-bl, u, e-300, fon, t-semibold">RO
+  I: </sp, a, n>";
+                <spanclassName = "te, x, t-3xl, fon, t-black, tex, t-bl, u, e-200">18,4, 0, 0%</sp, a, n>";
+              </div>
+              <divclassName="flex, justif, y-between, item, s-cent, e, r">";
+                <spanclassName = "te, x, t-bl, u, e-300, fon, t-semibold">Automation: </sp, a, n>";
+                <spanclassName = "te, x, t-3xl, fon, t-black, tex, t-bl, u, e-200">96%</sp, a, n>";
+              </d, i, v>
             </div>
-
+            <divclassName="bg-bl, u, e-9, 0, 0/40, rounde, d-l, g, p-4, m, b-4, border, border-bl, u, e-5, 0, 0/30">";
+              <pclassName = "te, x, t-bl, u, e-200, tex, t-sm, fon, t-semiboldmb-2">Fortune100Success: </p>";
+              <pclassName = "te, x, t-bl, u, e-100text-lg">47M, customer, s • 92% satisfacti, o, n • 72, countrie, s</p>";
+            </d, i, v>
             <Link
-              to="/case-studies/fintech-ai-transformation-2025"
-              className="block text-center bg-gradient-to-r from-blue-500 to-indigo-500 hover:from-blue-600 hover:to-indigo-600 text-white font-black text-base px-6 py-3 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
+  to="/ca, s, e-studi, e, s/finte, c, h-ai-transformati, o, n-20, 2, 5"
+              className="block, tex, t-center, b, g-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-indi, g, o-500hover: fr, o, m-bl, u, e-600hover: to-indi, g, o-600, tex, t-white, fon, t-black, tex, t-base, p, x-6, p, y-3, rounde, d-lg, shado, w-lg, hov, e
+  r:shad, o, w-xl, transitio, n-all, duratio, n-3, 0, 0"
             >
-              Read Case Study →
-            </Link>
-          </div>
-        </div>
-
-        {/* Combined Value Proposition */}
-        <div className="bg-gradient-to-r from-orange-800/60 to-amber-800/60 backdrop-blur-md border-2 border-orange-400/50 rounded-2xl p-8 text-center shadow-2xl">
-          <h3 className="text-3xl font-black text-orange-200 mb-4">
-            Combined Innovation Impact
+              Read, Case, Study →
+            </Li, n, k>
+          </d, i, v>
+        </d, i, v>
+        {/* Combined, ValueProposition */}
+        <divclassName="bg-gradie, n, t-to-r, fro, m-oran, g, e-8, 0, 0/60, t, o-amb, e, r-8, 0, 0/60, backdro, p-bl, u, r-md, borde, r-2, borde, r-oran, g, e-4, 0, 0/50, rounde, d-2x, l, p-8, tex, t-center, shado, w-2, x, l">";
+          <h3className = "te, x, t-3xl, fon, t-black, tex, t-oran, g, e-200mb-4">";
+            Combined, InnovationImpact;
           </h3>
-          
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-6">
-            <div>
-              <div className="text-4xl font-black text-orange-300 mb-2">$61.3B</div>
-              <div className="text-sm text-orange-200">Total Value Created</div>
-            </div>
-            <div>
-              <div className="text-4xl font-black text-yellow-300 mb-2">16,800%</div>
-              <div className="text-sm text-orange-200">Average ROI</div>
-            </div>
-            <div>
-              <div className="text-4xl font-black text-rose-300 mb-2">97.5%</div>
-              <div className="text-sm text-orange-200">Avg Automation</div>
-            </div>
-            <div>
-              
-              <div className="text-sm text-orange-200">Enterprise Validated</div>
-            </div>
+          <divclassName="grid, gri, d-co, l, s-2md: gr, i, d-co, l, s-4, ga, p-6, m, b-6">"
+          <divclassName = "grid, gri, d-co, l, s-2md: gr, i, d-co, l, s-4, ga, p-6mb-6">";
+            <d, iv>
+              <divclassName="te, x, t-4xl, fon, t-black, tex, t-oran, g, e-300, m, b-2">$61.3B</div>";
+              <divclassName = "te, x, t-sm, tex, t-oran, g, e-200">Total, Value, Created</d, i, v>";
+            </d, i, v>
+            <d, iv>
+              <divclassName="te, x, t-4xl, fon, t-black, tex, t-yell, o, w-300, m, b-2">16,8, 0, 0%</div>";
+              <divclassName = "te, x, t-sm, tex, t-oran, g, e-200">Average, RO, I</d, i, v>";
+            </d, i, v>
+            <d, iv>
+              <divclassName="te, x, t-4xl, fon, t-black, tex, t-ro, s, e-300, m, b-2">97.5%</div>";
+              <divclassName = "te, x, t-sm, tex, t-oran, g, e-200">Avg, Automatio, n</d, i, v>";
+            </d, i, v>
+            <d, iv>
+              <divclassName="te, x, t-4xl, fon, t-black, tex, t-amb, e, r-300, m, b-2">Fortu, n, e</div>";
+              <divclassName = "te, x, t-sm, tex, t-oran, g, e-200">Enterprise, Validate, d</d, i, v>";
+            </d, i, v>
           </div>
-
-          <p className="text-xl text-orange-100 font-semibold mb-4">
-            Two revolutionary solutions delivering unprecedented business transformation
+          <pclassName="te, x, t-xl, tex, t-oran, g, e-100, fon, t-semibold, m, b-4">";
+            Two, revolutionary, solutions delivering, unprecedented, business transformati, on;
           </p>
-
-          <div className="inline-flex items-center gap-3 bg-gradient-to-r from-orange-500 to-rose-500 text-white font-black text-lg px-8 py-4 rounded-xl shadow-lg border-2 border-white/20">
-
-            <span>Enterprise-Proven AI Innovation</span>
-
-          </div>
-        </div>
-      </div>
-    </div>
+          <divclassName="inli, n, e-flex, item, s-center, ga, p-3, b, g-gradie, n, t-to-r, fro, m-oran, g, e-500, t, o-ro, s, e-500, tex, t-white, fon, t-black, tex, t-lg, p, x-8, p, y-4, rounde, d-xl, shado, w-lg, borde, r-2, borde, r-whi, t, e/20">
+            <SparklesclassName = "w-6 h-6, animat, e-sp, i, n-sl, o, w  />
+            <sp, a, n>Enterpri, s, e-Proven, AI, Innovation</span>
+            <RocketclassName="w-6 h-6, animat, e-pul, s, e  />
+          <div, className="inli, n, e-flex, item, s-center, ga, p-3, b, g-gradie, n, t-to-r, fro, m-oran, g, e-500, t, o-ro, s, e-500, tex, t-white, fon, t-black, tex, t-lg, p, x-8, p, y-4, rounde, d-xl, shado, w-lg, borde, r-2, borde, r-white/20">";
+            <SparklesclassName = "w-6 h-6, animat, e-sp, i, n-slow" />";
+            <sp, a, n>Enterpri, s, e-Proven, AI, Innovation</span>
+            <RocketclassName="w-6 h-6, animat, e-pul, s, e" />";
+          </d, i, v>
+        </d, i, v>
+      </d, i, v>
+    </d, i, v>
   );
 }
+;

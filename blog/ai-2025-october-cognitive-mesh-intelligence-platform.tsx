@@ -254,10 +254,10 @@ export default function AI2025OctoberCognitiveMeshIntelligencePlatform() {
             operational excellence and strategic agility.
           </p>
           <div className="text-left"></div>
-            <a href="/contact" className="text-left"></a>
+            <a href="/<contact" className="text-left"></a>
               Schedule Strategy Session
             </a>
-            <a href="/services" className="text-left"></a>
+            <a href="/<services" className="text-left"></a>
               Explore AI Solutions
             </a>
           </div>

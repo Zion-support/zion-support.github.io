@@ -1,175 +1,52 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { newArticles2025 } from '../content/new-articles-2025';
-
-interface NewArticlesPromoBannerProps {
-  variant?: 'default' | 'premium' | 'featured' | 'compact';
-  showCount?: number;
-  autoRotate?: boolean;
-  rotationInterval?: number;
-  className?: string;
+import, Reac, t, { useSta, t, e, useEffe, c, t } fr, o, m "rea, c, t";
+import, Reac, t, { useSta, t, e, useEffe, c, t } fr, o, m "rea, c, t";';
+interface, NewArticlesPromoBannerProp, s {
+varia, n, t?: 'defau, l, t' | 'premi, u, m' | 'featur, e, d' | 'compa, c, t';
+showCou, n, t?: numb, e, r;
+autoRota, t, e?: boole, a, n;
+rotationInterv, a, l?: numb, e, r;
+classNa, m, e?: stri, n, g;
 }
-
-const NewArticlesPromoBanner: React.FC<NewArticlesPromoBannerProps> = ({
-  variant = 'default',
-  showCount = 3,
-  autoRotate = false,
-  rotationInterval = 5000,
-  className = ''
-}) => {
-  const [, setCurrentIndex] = useState(0);
-  const featuredArticles = newArticles2025.filter(a => a.featured).slice(0, showCount);
-
-  useEffect(() => {
-    if (autoRotate && featuredArticles.length > 1) {
-      const interval = setInterval(() => {
-        setCurrentIndex((prev) => (prev + 1) % featuredArticles.length);
-      }, rotationInterval);
-      return () => clearInterval(interval);
-    }
-  }, [autoRotate, featuredArticles.length, rotationInterval]);
-
-  if (variant === 'compact') {
-    return (
-      <div className={`bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg p-4 ${className}`}>
-        <div className="flex items-center justify-between">
-          <div className="flex items-center gap-3">
-
-            <div>
-              <h4 className="text-white font-bold">
-                {featuredArticles.length} New Articles Published
-              </h4>
-              <p className="text-blue-100 text-sm">Latest AI insights and research</p>
-            </div>
-          </div>
-          <Link
-            to="/blog"
-            className="bg-white text-blue-600 px-4 py-2 rounded-lg font-semibold hover:bg-blue-50 transition-colors text-sm"
-          >
-            Read Now
-          </Link>
-        </div>
-      </div>
-    );
-  }
-
-  if (variant === 'premium') {
-    return (
-      <div className={`bg-gradient-to-br from-indigo-700 via-purple-700 to-pink-700 rounded-2xl p-8 text-white ${className}`}>
-        <div className="max-w-6xl mx-auto">
-          <div className="flex items-center gap-3 mb-6">
-
-            <h2 className="text-3xl font-bold">Breakthrough Articles Just Published</h2>
-          </div>
-          <div className="grid md:grid-cols-3 gap-6">
-            {featuredArticles.map((article) => (
-              <div
-
-key={article.id}
-
-                className="bg-white/10 backdrop-blur-lg rounded-xl p-6 hover:bg-white/20 transition-all hover:scale-105"
+const, NewArticlesPromoBanne, r: Rea, c, t.FC<NewArticlesPromoBannerPro, p, s> = ({
+  varia, n, t = 'def, a, u, l, t',
+  showCou, n, t =  , 3,
+  autoRota, t, e = fa, l, s, e,
+  rotationInterv, a, l = 5, 0, 0, 0,
+  if (varia, n, t = == 'comp, a, c, t') {
+    retu, r, n (
+      <div, classNam, e = {`bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-cy, a, n-600, rounde, d-l, g, p-4 ${classNa, m, e}`}>
+        <div, classNam, e="flex, item, s-center, justif, y-betwe, e, n">
+          <div, classNam, e="flex, item, s-center, ga, p-3">
+            <BookOpen, classNam, e="w-6 h-6, tex, t-whi, t, e" />
+          <div, classNam, e="grid, m, d: gr, i, d-co, l, s-3, ga, p-6">
+            { featuredArticl, e, s.m, a, p((arti, c, l, e) = > (
+              <div, ke, y = { artic, l, e., i, d  }, classNa, m, e = "bg-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, hove, r: bg-whi, t, e/20, transitio, n-all, hove, r:sca, l, e-1, 0, 5"
               >
-                <div className="flex items-center gap-2 mb-3">
-
-                  <span className="text-sm font-semibold text-green-300">{article.category}</span>
-                </div>
-                <h3 className="text-xl font-bold mb-3">{article.title}</h3>
-                <p className="text-purple-100 text-sm mb-4 line-clamp-2">{article.description}</p>
-                <div className="flex items-center justify-between">
-                  <span className="text-sm text-purple-200">{article.readTime}</span>
-                  <Link
-                    to={article.link}
-                    className="text-yellow-300 font-semibold hover:text-yellow-200 flex items-center gap-1"
-                  >
-                    Read</Link>
-                </div>
-              </div>
-            ))}
-          </div>
-          <div className="text-center mt-8">
-            <Link
-              to="/blog"
-              className="inline-flex items-center gap-2 bg-white text-purple-700 px-8 py-4 rounded-xl font-bold hover:bg-purple-50 transition-all hover:scale-105"
-            >
-              View All Articles
-
-            </Link>
-          </div>
-        </div>
-      </div>
-    );
-  }
-
-  if (variant === 'featured') {
-    return (
-      <div className={`bg-white rounded-2xl shadow-2xl overflow-hidden ${className}`}>
-        <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-6">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-3">
-
-              <h2 className="text-2xl font-bold text-white">Featured Articles</h2>
-            </div>
-            <span className="bg-yellow-400 text-black px-3 py-1 rounded-full text-sm font-bold">
-              NEW
-            </span>
-          </div>
-        </div>
-        <div className="p-8">
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {featuredArticles.map((article) => (
-              <Link
-                key={article.id}
-                to={article.link}
-                className="group border border-gray-200 rounded-xl p-5 hover:shadow-xl hover:border-indigo-300 transition-all"
-              >
-                <div className="flex flex-wrap gap-2 mb-3">
-                  {article.tags.slice(0, 2).map((tag) => (
-                    <span
-
-key={tag}
-
-                      className="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded-full"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-                <h4 className="font-bold text-gray-900 mb-2 group-hover:text-indigo-600 transition-colors">
-                  {article.title}
-                </h4>
-                <p className="text-sm text-gray-600 mb-3 line-clamp-2">{article.description}</p>
-                <div className="flex items-center justify-between text-sm">
-                  <span className="text-gray-500">{article.readTime}</span>
-
-                </div>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </div>
-    );
-  }
-
-  // Default variant
-  return (
-    <div className={`bg-gradient-to-r from-blue-600 to-indigo-600 rounded-xl p-6 md:p-8 text-white ${className}`}>
-      <div className="flex items-center gap-3 mb-4">
-
-        <h3 className="text-2xl font-bold">New Articles Available</h3>
-      </div>
-      <div className="grid md:grid-cols-3 gap-4">
-        {featuredArticles.map((article) => (
-          <div key={article.id} className="bg-white/10 rounded-lg p-4 hover:bg-white/20 transition-all">
-            <div className="text-sm text-blue-200 mb-2">{article.category}</div>
-            <h4 className="font-semibold mb-2">{article.title}</h4>
-            <Link to={article.link} className="text-yellow-300 text-sm font-semibold hover:underline">
-              Read Article →
-            </Link>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-};
-
-export default NewArticlesPromoBanner;
+                <div, classNam, e="flex, item, s-center, ga, p-2, m, b-3">
+                  <TrendingUp, classNam, e="w-5 h-5, tex, t-gre, e, n-3, 0, 0" />
+                  <span, classNam, e="te, x, t-sm, fon, t-semibold, tex, t-gre, e, n-3, 0, 0">{artic, l, e.cate, g, o, r, y}</sp, a, n>
+                    Re, a, d <ArrowRight, classNam, e="w-4 h-4" />
+              View, All, Articles
+              <ArrowRight, classNam, e="w-5 h-5" />
+  if (varia, n, t = == 'featu, r, e, d') {
+    retu, r, n (
+      <div, classNam, e = {`bg-white, rounde, d-2xl, shado, w-2xl, overflo, w-hidd, e, n ${classNa, m, e}`}>
+        <div, classNam, e="bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-60, 0, p-6">
+          <div, classNam, e="flex, item, s-center, justif, y-betwe, e, n">
+            <div, classNam, e="flex, item, s-center, ga, p-3">
+              <BookOpen, classNam, e="w-8 h-8, tex, t-whi, t, e" />
+              <h2, classNam, e="te, x, t-2xl, fon, t-bold, tex, t-whi, t, e">Featured, Article, s</h2>
+        <div, classNam, e="p-8">
+          <div, classNam, e="grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-4, ga, p-6">
+            { featuredArticl, e, s.m, a, p((arti, c, l, e) = > (
+              <Link, ke, y = { artic, l, e., i, d  }, to={ artic, l, e.li, n, k } classNa, m, e="group, border, border-gr, a, y-200, rounde, d-x, l, p-5, hove, r: shad, o, w-xl, hove, r:bord, e, r-indi, g, o-300, transitio, n-a, l, l"
+                <p, classNam, e = "te, x, t-sm, tex, t-gr, a, y-600, m, b-3, lin, e-cla, m, p-2">{artic, l, e.description}</p>
+                <div, classNam, e="flex, item, s-center, justif, y-between, tex, t-sm">
+                  <span, classNam, e="te, x, t-gr, a, y-5, 0, 0">{artic, l, e.readTime}</sp, a, n>
+                  <ArrowRight, classNam, e="w-4 h-4, tex, t-indi, g, o-600, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />
+      <div, classNam, e="grid, m, d: gr, i, d-co, l, s-3, ga, p-4">
+        { featuredArticl, e, s.m, a, p((arti, c, l, e) = > (
+          <div, ke, y = { artic, l, e., i, d  }, classNa, m, e = "bg-whi, t, e/10, rounde, d-l, g, p-4, hove, r: bg-whi, t, e/20, transitio, n-a, l, l">
+            <div, classNam, e="te, x, t-sm, tex, t-bl, u, e-200, m, b-2">{artic, l, e.cate, g, o, r, y}</d, i, v>
+            <h4, classNam, e = "fo, n, t-semibold, m, b-2">{artic, l, e.title}</h4>
+            <Link, t, o = { artic, l, e.l, i, n, k }, classNa, m, e = "te, x, t-yell, o, w-300, tex, t-sm, fon, t-semibold, hove, r: underli, n, e">

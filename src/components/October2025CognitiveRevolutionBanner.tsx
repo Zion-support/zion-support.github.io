@@ -1,125 +1,163 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-
-const October2025CognitiveRevolutionBanner: React.FC = () => {
+import React from "react";
+import React from "react";';
+const, October2025CognitiveRevolutionBanne, r: Rea, c, t.FC = () => {
   return (
-    <div className="relative bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 border-b border-purple-500/20 overflow-hidden">
-      {/* Animated background effects */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle at 30% 50%,rgba(139,92,246,0.15),transparent 50%)]"></div>
-      <div className="absolute inset-0 bg-[radial-gradient(circle at 70% 50%,rgba(99,102,241,0.15),transparent 50%)]"></div>
-      
-      {/* Content */}
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-        <div className="flex items-center justify-between flex-wrap gap-4">
-          {/* Left side - Badge and Title */}
-          <div className="flex items-start gap-4 flex-1 min-w-0">
-            <div className="flex-shrink-0 mt-1">
-              <div className="relative">
-
-
-              </div>
-            </div>
-            
-            <div className="flex-1 min-w-0">
-              <div className="flex items-center gap-2 mb-2 flex-wrap">
-                <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-gradient-to-r from-purple-500 to-pink-500 text-white shadow-lg animate-pulse">
-                  🚀 BRAND NEW OCTOBER 2025
-                </span>
-                <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-yellow-500 text-black shadow-lg">
-
-                  BREAKTHROUGH CONTENT
-                </span>
-                <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-green-500 text-white shadow-lg">
-
-                  $4.7B VALUE DELIVERED
-                </span>
-              </div>
-              
-              <h2 className="text-2xl sm:text-3xl font-bold text-white mb-2 leading-tight">
-                🧠 Cognitive Computing Revolution: Human-Like AI Intelligence
+    <div, className="relative, b, g-gradie, n, t-to-r, fro, m-purp, l, e-900, vi, a-indi, g, o-900, t, o-bl, u, e-900, borde, r-b, borde, r-purp, l, e-5, 0, 0/20, overflo, w-hidd, e, n">";
+      {/* Animated, background, effects */}
+      <div, className="absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle_at_, 3, 0%_, 5, 0%,rg, b, a(1, 3, 9,92,2, 4, 6,0.15),transparent_, 5, 0%)]  />
+      <div, className="absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle_at_, 7, 0%_, 5, 0%,rg, b, a(99,1, 0, 2,2, 4, 1,0.15),transparent_, 5, 0%)]  />
+      {/* Conte, n, t */}
+      <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+  g:px-8, p, y-6">"
+        <div, className="flex, item, s-center, justif, y-between, fle, x-wrap, ga, p-4">
+          {/* Left, sid, e - Badge, and, Title */}
+          <div, className="flex, item, s-start, ga, p-4, fle, x-1, mi, n-w-0">
+            <div, className="fl, e, x-shri, n, k-0, m, t-1">
+              <div, className="relati, v, e">
+                <Brain, className="w-1, 2, h-12, tex, t-purp, l, e-400, animat, e-pul, s, e  />
+                <Sparkles, className="w-5 h-5, tex, t-yell, o, w-400, absolut, e -t, o, p-1 -rig, h, t-1, animat, e-boun, c, e  />
+      <div, className="absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle_at_, 3, 0%_, 5, 0%,rg, b, a(1, 3, 9,92,2, 4, 6,0.15),transparent_, 5, 0%)]" />";
+      <div, className="absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle_at_, 7, 0%_, 5, 0%,rg, b, a(99,1, 0, 2,2, 4, 1,0.15),transparent_, 5, 0%)]" />";
+      {/* Conte, n, t */}
+      <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+  g:px-8, p, y-6">";
+        <div, className="flex, item, s-center, justif, y-between, fle, x-wrap, ga, p-4">";
+          {/* Left, sid, e - Badge, and, Title */}
+          <div, className="flex, item, s-start, ga, p-4, fle, x-1, mi, n-w-0">";
+            <div, className="fl, e, x-shri, n, k-0, m, t-1">";
+              <div, className="relati, v, e">";
+                <Brain, className="w-1, 2, h-12, tex, t-purp, l, e-400, animat, e-pul, s, e" />";
+                <Sparkles, className="w-5 h-5, tex, t-yell, o, w-400, absolut, e -t, o, p-1 -rig, h, t-1, animat, e-boun, c, e" />";
+              </d, i, v>
+            </d, i, v>
+            <div, className="fl, e, x-1, mi, n-w-0">";
+              <div, className="flex, item, s-center, ga, p-2, m, b-2, fle, x-wr, a, p">";
+                <span, className="inli, n, e-flex, item, s-center, p, x-3, p, y-1, rounde, d-full, tex, t-xs, fon, t-bold, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-pi, n, k-500, tex, t-white, shado, w-lg, animat, e-pul, s, e">";
+                  🚀 BRAND, NEW, OCTOBER 20, 2, 5;
+                </sp, a, n>
+                <span, className="inli, n, e-flex, item, s-center, p, x-3, p, y-1, rounde, d-full, tex, t-xs, fon, t-bold, b, g-yell, o, w-500, tex, t-black, shado, w-lg">
+                  <Award, className="w-3 h-3, m, r-1  />
+                  BREAKTHROUGH, CONTEN, T;
+                </sp, a, n>
+                <span, className="inli, n, e-flex, item, s-center, p, x-3, p, y-1, rounde, d-full, tex, t-xs, fon, t-bold, b, g-gre, e, n-500, tex, t-white, shado, w-lg">
+                  <TrendingUp, className="w-3 h-3, m, r-1  />
+                <span, className="inli, n, e-flex, item, s-center, p, x-3, p, y-1, rounde, d-full, tex, t-xs, fon, t-bold, b, g-yell, o, w-500, tex, t-black, shado, w-lg">";
+                  <Award, className="w-3 h-3, m, r-1" />";
+                  BREAKTHROUGH, CONTEN, T;
+                </sp, a, n>
+                <span, className="inli, n, e-flex, item, s-center, p, x-3, p, y-1, rounde, d-full, tex, t-xs, fon, t-bold, b, g-gre, e, n-500, tex, t-white, shado, w-lg">";
+                  <TrendingUp, className="w-3 h-3, m, r-1" />";
+                  $4.7B, VALUE, DELIVERED;
+                </sp, a, n>
+              </d, i, v>
+              <h2, className="te, x, t-2xl, s, m: te, x, t-3xl, fon, t-bold, tex, t-white, m, b-2, leadin, g-tig, h, t">"
+                🧠 Cognitive, Computing, Revolution: Hum, a, n-Like, AI, Intelligence
               </h2>
-              
-              <p className="text-purple-100 text-sm sm:text-base leading-relaxed mb-3">
-                <span className="font-bold text-yellow-300">JUST PUBLISHED TODAY:</span> Discover how Fortune 500 companies are deploying cognitive AI systems that understand, reason, and learn like humans — achieving{' '}
-                <span className="font-bold text-green-300">98.7% decision accuracy</span>,{' '}
-                <span className="font-bold text-green-300">$4.7B+ in value creation</span>, and{' '}
-                <span className="font-bold text-green-300">3,600% ROI</span>. 
-                Explore multi-agent orchestration (97.8% automation, $847M+ value), cognitive enterprise transformation, 
-                and real-world telecom success story with transformational results!
+              <p, className="te, x, t-purp, l, e-100, tex, t-sm, s, m: te, x, t-base, leadin, g-relaxed, m, b-3">
+                <span, className="fo, n, t-bold, tex, t-yell, o, w-3, 0, 0">JUST, PUBLISHED, TODA
+  Y:</sp, a, n> Discover, how, Fortune 500, companies, are deploying, cognitive, AI systems, that, understand, reas, o, n, and, learn, like huma, n, s — achievi, n, g{' '}
+                <span, className="fo, n, t-bold, tex, t-gre, e, n-3, 0, 0">98.7% decision, accurac, y</sp, a, n>,{' '}
+                <span, className="fo, n, t-bold, tex, t-gre, e, n-3, 0, 0">$4.7B+ in, value, creation</sp, a, n>, a, n, d{' '}
+                <span, className="fo, n, t-bold, tex, t-gre, e, n-3, 0, 0">3,6, 0, 0% R, O, I</sp, a, n>. 
+                Explore, mult, i-agent, orchestratio, n (97.8% automati, o, n, $84, 7, M+ val, u, e), cognitive, enterprise, transformation;
+              <h2, className="te, x, t-2xl, s, m: te, x, t-3xl, fon, t-bold, tex, t-white, m, b-2, leadin, g-tig, h, t">";
+                🧠 Cognitive, Computing, Revolutio
+  n: Hum, a, n-Like, AI, Intelligence
+              </h2>
+              <p, className="te, x, t-purp, l, e-100, tex, t-sm, s, m: te, x, t-base, leadin, g-relaxed, m, b-3">";
+                <span, className="fo, n, t-bold, tex, t-yell, o, w-3, 0, 0">JUST, PUBLISHED, TODA
+  Y:</sp, a, n> Discover, how, Fortune 500, companies, are deploying, cognitive, AI systems, that, understand, reas, o, n, and, learn, like huma, n, s — achievi, n, g{' '}';
+                <span, className="fo, n, t-bold, tex, t-gre, e, n-3, 0, 0">98.7% decision, accurac, y</sp, a, n>,{' '}';
+                <span, className="fo, n, t-bold, tex, t-gre, e, n-3, 0, 0">$4.7B+ in, value, creation</sp, a, n>, a, n, d{' '}';
+                <span, className="fo, n, t-bold, tex, t-gre, e, n-3, 0, 0">3,6, 0, 0% R, O, I</sp, a, n>. ";
+                Explore, mult, i-agent, orchestratio, n (97.8% automati, o, n, $84, 7, M+ val, u, e), cognitive, enterprise, transformation
+                and, rea, l-world, telecom, success story, with, transformational resul, t, s!
               </p>
-              
-              {/* Featured content links */}
-              <div className="flex flex-wrap gap-3 text-sm">
-                <Link 
-                  to="/blog/ai-2025-multiagent-enterprise-orchestration-revolution"
-                  className="inline-flex items-center text-purple-200 hover:text-white transition-colors group"
+              {/* Featured, content, links */}
+              <div, className="flex, fle, x-wrap, ga, p-3, tex, t-sm">";
+                <Li, n, k
+  to="/bl, o, g/ai-20, 2, 5-multiage, n, t-enterpri, s, e-orchestrati, o, n-revoluti, o, n"
+                  classNa, m, e="inli, n, e-flex, item, s-center, tex, t-purp, l, e-200, hove, r: te, x, t-white, transitio, n-colors, grou, p"
                 >
-
-                  <span className="font-semibold">Multi-Agent Orchestration (97.8% Automation, $847M Value)</span>
-
-                </Link>
-                
-                <span className="text-purple-400">•</span>
-                
-                <Link 
-                  to="/blog/ai-2025-cognitive-computing-enterprise-transformation"
-                  className="inline-flex items-center text-purple-200 hover:text-white transition-colors group"
+                  <Zap, className="w-4 h-4, m, r-1, tex, t-yell, o, w-400, grou, p-hov, e, r: anima, t, e-pul, s, e/>"
+                  <span, className="fo, n, t-semibo, l, d">Mul, t, i-Agent, Orchestratio, n (97.8% Automati, o, n, $847M, Valu, e)</sp, a, n>
+                  <ArrowRight, className="w-3 h-3, m, l-1, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
+                </Li, n, k>
+                <span, className="te, x, t-purp, l, e-4, 0, 0">•</sp, a, n>
+                  <Zap, className="w-4 h-4, m, r-1, tex, t-yell, o, w-400, grou, p-hov, e, r: anima, t, e-pul, s, e" />";
+                  <span, className="fo, n, t-semibo, l, d">Mul, t, i-Agent, Orchestratio, n (97.8% Automati, o, n, $847M, Valu, e)</sp, a, n>";
+                  <ArrowRight, className="w-3 h-3, m, l-1, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
+                </Li, n, k>
+                <span, className="te, x, t-purp, l, e-4, 0, 0">•</sp, a, n>";
+                <Li, n, k
+  to="/bl, o, g/ai-20, 2, 5-cogniti, v, e-computi, n, g-enterpri, s, e-transformati, o, n"
+                  classNa, m, e="inli, n, e-flex, item, s-center, tex, t-purp, l, e-200, hov, e
+  r: te, x, t-white, transitio, n-colors, grou, p"
                 >
-
-                  <span className="font-semibold">Cognitive AI Transformation (98.5% Accuracy, $1.2B Value)</span>
-
-                </Link>
-                
-                <span className="text-purple-400">•</span>
-                
-                <Link 
-                  to="/case-studies/global-telecom-cognitive-transformation-4-7-billion"
-                  className="inline-flex items-center text-purple-200 hover:text-white transition-colors group"
+                  <Brain, className="w-4 h-4, m, r-1, tex, t-pi, n, k-400, grou, p-hov, e, r: anima, t, e-pul, s, e/>"
+                  <span, className="fo, n, t-semibo, l, d">Cognitive, AI, Transformation (98.5% Accura, c, y, $1.2B, Valu, e)</sp, a, n>
+                  <ArrowRight, className="w-3 h-3, m, l-1, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
+                </Li, n, k>
+                <span, className="te, x, t-purp, l, e-4, 0, 0">•</sp, a, n>
+                  <Brain, className="w-4 h-4, m, r-1, tex, t-pi, n, k-400, grou, p-hov, e, r: anima, t, e-pul, s, e" />";
+                  <span, className="fo, n, t-semibo, l, d">Cognitive, AI, Transformation (98.5% Accura, c, y, $1.2B, Valu, e)</sp, a, n>";
+                  <ArrowRight, className="w-3 h-3, m, l-1, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
+                </Li, n, k>
+                <span, className="te, x, t-purp, l, e-4, 0, 0">•</sp, a, n>";
+                <Li, n, k
+  to="/ca, s, e-studi, e, s/glob, a, l-telec, o, m-cogniti, v, e-transformati, o, n-4-7-billi, o, n"
+                  classNa, m, e="inli, n, e-flex, item, s-center, tex, t-purp, l, e-200, hov, e
+  r: te, x, t-white, transitio, n-colors, grou, p"
                 >
-
-                  <span className="font-semibold">Fortune 20 Telecom Case Study ($4.7B Success, 3,602% ROI)</span>
-
-                </Link>
-              </div>
-            </div>
-          </div>
-          
-          {/* Right side - CTA Button */}
-          <div className="flex-shrink-0">
-            <Link
-              to="/blog"
-              className="inline-flex items-center px-6 py-3 rounded-xl font-bold text-white bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 shadow-2xl hover:shadow-purple-500/50 transition-all duration-300 hover:scale-105 group"
+                  <Award, className="w-4 h-4, m, r-1, tex, t-gre, e, n-400, grou, p-hov, e, r: anima, t, e-pul, s, e/>"
+                  <span, className="fo, n, t-semibo, l, d">Fortune, 20, Telecom Case, Stud, y ($4.7B, Succes, s, 3,6, 0, 2% R, O, I)</sp, a, n>
+                  <ArrowRight, className="w-3 h-3, m, l-1, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
+                  <Award, className="w-4 h-4, m, r-1, tex, t-gre, e, n-400, grou, p-hov, e, r: anima, t, e-pul, s, e" />";
+                  <span, className="fo, n, t-semibo, l, d">Fortune, 20, Telecom Case, Stud, y ($4.7B, Succes, s, 3,6, 0, 2% R, O, I)</sp, a, n>";
+                  <ArrowRight, className="w-3 h-3, m, l-1, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
+                </Li, n, k>
+              </d, i, v>
+            </d, i, v>
+          </d, i, v>
+          {/* Right, sid, e - CTA, Butto, n */}
+          <div, className="fl, e, x-shri, n, k-0">";
+            <Li, n, k
+  to="/bl, o, g"
+              classNa, m, e="inli, n, e-flex, item, s-center, p, x-6, p, y-3, rounde, d-xl, fon, t-bold, tex, t-white, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-pi, n, k-600, hove, r: fr, o, m-purp, l, e-700, hove, r:to-pi, n, k-700, shado, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-300, hov, e
+  r:sca, l, e-105, grou, p"
             >
-              <span>Explore Cognitive AI Revolution</span>
-
-            </Link>
-          </div>
-        </div>
-        
-        {/* Bottom stats bar */}
-        <div className="mt-4 pt-4 border-t border-purple-500/30">
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
-            <div>
-              <div className="text-2xl font-bold text-green-400">98.7%</div>
-              <div className="text-xs text-purple-200">Decision Accuracy</div>
-            </div>
-            <div>
-              <div className="text-2xl font-bold text-yellow-400">$4.7B+</div>
-              <div className="text-xs text-purple-200">Value Delivered</div>
-            </div>
-            <div>
-              <div className="text-2xl font-bold text-pink-400">3,600%</div>
-              <div className="text-xs text-purple-200">Average ROI</div>
-            </div>
-            <div>
-              <div className="text-2xl font-bold text-blue-400">97.8%</div>
-              <div className="text-xs text-purple-200">Automation Rate</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+              <sp, a, n>Explore, Cognitive, AI Revoluti, o, n</sp, a, n>
+              <ArrowRight, className="ml-2 w-5 h-5, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
+              <ArrowRight, className="ml-2 w-5 h-5, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
+            </Li, n, k>
+          </d, i, v>
+        </d, i, v>
+        {/* Bottom, stats, bar */}
+        <div, className="mt-4, p, t-4, borde, r-t, borde, r-purp, l, e-5, 0, 0/30">
+          <div, className="grid, gri, d-co, l, s-2, s, m: gr, i, d-co, l, s-4, ga, p-4, tex, t-cent, e, r">"
+        <div, className="mt-4, p, t-4, borde, r-t, borde, r-purp, l, e-5, 0, 0/30">";
+          <div, className="grid, gri, d-co, l, s-2, s, m: gr, i, d-co, l, s-4, ga, p-4, tex, t-cent, e, r">";
+            <d, i, v>
+              <div, className="te, x, t-2xl, fon, t-bold, tex, t-gre, e, n-4, 0, 0">98.7%</d, i, v>";
+              <div, className="te, x, t-xs, tex, t-purp, l, e-2, 0, 0">Decision, Accurac, y</d, i, v>";
+            </d, i, v>
+            <d, i, v>
+              <div, className="te, x, t-2xl, fon, t-bold, tex, t-yell, o, w-4, 0, 0">$4.7B+</d, i, v>";
+              <div, className="te, x, t-xs, tex, t-purp, l, e-2, 0, 0">Value, Delivere, d</d, i, v>";
+            </d, i, v>
+            <d, i, v>
+              <div, className="te, x, t-2xl, fon, t-bold, tex, t-pi, n, k-4, 0, 0">3,6, 0, 0%</d, i, v>";
+              <div, className="te, x, t-xs, tex, t-purp, l, e-2, 0, 0">Average, RO, I</d, i, v>";
+            </d, i, v>
+            <d, i, v>
+              <div, className="te, x, t-2xl, fon, t-bold, tex, t-bl, u, e-4, 0, 0">97.8%</d, i, v>";
+              <div, className="te, x, t-xs, tex, t-purp, l, e-2, 0, 0">Automation, Rat, e</d, i, v>";
+            </d, i, v>
+          </d, i, v>
+        </d, i, v>
+      </d, i, v>
+    </d, i, v>
   );
 };
-
 export default October2025CognitiveRevolutionBanner;
+;

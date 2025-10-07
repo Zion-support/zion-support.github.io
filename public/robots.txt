@@ -1,23 +1,4 @@
-User-agent: *
-Allow: /
-Allow: /blog/
-Allow: /services/
-Allow: /case-studies/
-Allow: /contact/
-
-Disallow: /api/
-Disallow: /admin/
-Disallow: /*.json$
-Disallow: /*?*
-
-Sitemap: https://ziontechgroup.com/sitemap.xml
-
-# Specific bot rules
-User-agent: Googlebot
+User-agent: *;
 Allow: /
 
-User-agent: Bingbot
-Allow: /
-
-# Crawl rate
-Crawl-delay: 1
+Sitemap: https://zion.app/sitemap.xml

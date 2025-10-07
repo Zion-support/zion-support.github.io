@@ -1,9 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { performanceOptimizer } from '../../utils/performanceOptimizer';
-import {
-  getErrorMetrics,
-  isErrorRateTooHigh,
-} from '../../utils/errorHandling';
+import { getErrorMetrics, isErrorRateTooHigh } from '../../utils/errorHandling';
 
 interface DashboardData {
   performance: ReturnType<typeof performanceOptimizer.getPerformanceSummary>;
@@ -22,7 +19,7 @@ const PerformanceDashboard: React.FC = () => {
       const performance = performanceOptimizer.getPerformanceSummary();
       const errors = getErrorMetrics();
       const isHealthy =
-        !isErrorRateTooHigh(5) && performance.averageRenderTime < 16;
+        !isErrorRateTooHigh() && performance.averageRenderTime < 16;
 
       setData({
         performance,
@@ -99,8 +96,8 @@ const PerformanceDashboard: React.FC = () => {
             <button
               onClick={() => setAutoRefresh(!autoRefresh)}
               className={`px-3 py-1 rounded text-sm font-medium ${
-                autoRefresh 
-                  ? 'bg-green-100 text-green-800' 
+                autoRefresh
+                  ? 'bg-green-100 text-green-800'
                   : 'bg-gray-100 text-gray-800'
               }`}
             >

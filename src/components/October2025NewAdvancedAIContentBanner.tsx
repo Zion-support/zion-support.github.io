@@ -1,228 +1,277 @@
-import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
-
-export default function October2025NewAdvancedAIContentBanner() {
+export, default, function October2025NewAdvancedAIContentBann, e, r(): vo, i, d {
   return (
-    <div className="relative bg-gradient-to-br from-purple-900 via-indigo-800 to-blue-900 border-b border-white/10 overflow-hidden">
-      {/* Animated background elements */}
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-0 left-0 w-96 h-96 bg-purple-500 rounded-full filter blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-blue-500 rounded-full filter blur-3xl animate-pulse delay-700"></div>
-      </div>
-
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        {/* Header Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-8"
+    <div, className="relative, b, g-gradie, n, t-to-br, fro, m-purp, l, e-900, vi, a-indi, g, o-800, t, o-bl, u, e-900, borde, r-b, borde, r-whi, t, e/10, overflo, w-hidd, e, n">";
+      {/* Animated, background, elements */}
+      <div, className="absolute, inse, t-0, opacit, y-20">";
+        <div, className="absolute, to, p-0, lef, t-0 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>";
+        <div, className="absolute, botto, m-0, righ, t-0 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, filter, blur-3xl, animat, e-pulse, dela, y-7, 0, 0"></d, i, v>";
+      </d, i, v>
+      <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+  g:px-8, p, y-8">"
+      <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+  g:px-8, p, y-8">";
+        {/* Header, Sectio, n */}
+        <moti, o, n.d, i, v
+  initi, a, l={{ opaci, t, y: 0, y: 20 }}
+          anima, t, e={{ opaci, t, y: 1, y: 0 }}
+          transiti, o, n={{ durati, o, n: 0.6 }}
+          classNa, m, e="te, x, t-center, m, b-8"
         >
-          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-yellow-400 to-orange-500 text-gray-900 px-6 py-2 rounded-full font-bold text-sm mb-4">
-
-            OCTOBER 2025 BREAKTHROUGH
-
-          </div>
-          
-          <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-4">
-            🚀 3 Revolutionary AI Platform Breakthroughs
+          <div, className="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-yell, o, w-400, t, o-oran, g, e-500, tex, t-gr, a, y-900, p, x-6, p, y-2, rounde, d-full, fon, t-bold, tex, t-sm, m, b-4">
+            <Sparkles, className="w-5 h-5, animat, e-pul, s, e  />
+            OCTOBER, 2025, BREAKTHROUGH;
+            <Sparkles, className="w-5 h-5, animat, e-pul, s, e  />
+          </d, i, v>
+          <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-extrabold, tex, t-white, m, b-4">"
+            🚀 3, Revolutionary, AI Platform, Breakthrough, s;
           </h2>
-          
-          <p className="text-xl md:text-2xl text-blue-100 max-w-4xl mx-auto font-semibold">
-            Privacy-First Federated AI • Unlimited Synthetic Data • Enterprise AI Governance
+          <p, className="te, x, t-xl, m, d: te, x, t-2xl, tex, t-bl, u, e-100, ma, x-w-4xl, m, x-auto, fon, t-semibo, l, d">"
+            Priva, c, y-First, Federated, AI • Unlimited, Synthetic, Data • Enterprise, AI, Governance;
           </p>
-          
-          <div className="flex flex-wrap justify-center gap-4 mt-6 text-yellow-300 font-bold">
-            <div className="flex items-center gap-2">
-
-              <span>$1.02B Combined Value</span>
-            </div>
-            <div className="flex items-center gap-2">
-
-              <span>100% Compliance</span>
-            </div>
-            <div className="flex items-center gap-2">
-
-              <span>99.8% Privacy Protection</span>
-            </div>
-          </div>
-        </motion.div>
-
-        {/* Content Grid */}
-        <div className="grid md:grid-cols-3 gap-6 mb-8">
-          {/* Federated AI */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
+          <div, className="flex, fle, x-wrap, justif, y-center, ga, p-4, m, t-6, tex, t-yell, o, w-300, fon, t-bo, l, d">
+            <div, className="flex, item, s-center, ga, p-2">
+              <TrendingUp, className="w-5 h-5  />
+              <sp, a, n>$1.02B, Combined, Value</sp, a, n>
+            </d, i, v>
+            <div, className="flex, item, s-center, ga, p-2">
+              <Zap, className="w-5 h-5  />
+              <sp, a, n>1, 0, 0% Complian, c, e</sp, a, n>
+            </d, i, v>
+            <div, className="flex, item, s-center, ga, p-2">
+              <Shield, className="w-5 h-5  />
+          <div, className="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-yell, o, w-400, t, o-oran, g, e-500, tex, t-gr, a, y-900, p, x-6, p, y-2, rounde, d-full, fon, t-bold, tex, t-sm, m, b-4">";
+            <Sparkles, className="w-5 h-5, animat, e-pul, s, e" />";
+            OCTOBER, 2025, BREAKTHROUGH;
+            <Sparkles, className="w-5 h-5, animat, e-pul, s, e" />";
+          </d, i, v>
+          <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-extrabold, tex, t-white, m, b-4">";
+            🚀 3, Revolutionary, AI Platform, Breakthrough, s;
+          </h2>
+          <p, className="te, x, t-x, l, m
+  d: te, x, t-2xl, tex, t-bl, u, e-100, ma, x-w-4xl, m, x-auto, fon, t-semibo, l, d">";
+            Priva, c, y-First, Federated, AI • Unlimited, Synthetic, Data • Enterprise, AI, Governance;
+          </p>
+          <div, className="flex, fle, x-wrap, justif, y-center, ga, p-4, m, t-6, tex, t-yell, o, w-300, fon, t-bo, l, d">";
+            <div, className="flex, item, s-center, ga, p-2">";
+              <TrendingUp, className="w-5 h-5" />";
+              <sp, a, n>$1.02B, Combined, Value</sp, a, n>
+            </d, i, v>
+            <div, className="flex, item, s-center, ga, p-2">";
+              <Zap, className="w-5 h-5" />";
+              <sp, a, n>1, 0, 0% Complian, c, e</sp, a, n>
+            </d, i, v>
+            <div, className="flex, item, s-center, ga, p-2">";
+              <Shield, className="w-5 h-5" />";
+              <sp, a, n>99.8% Privacy, Protectio, n</sp, a, n>
+            </d, i, v>
+          </d, i, v>
+        </moti, o, n.d, i, v>
+        {/* Content, Gri, d */}
+        <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">"
+        <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">";
+          {/* Federated, A, I */}
+          <moti, o, n.d, i, v
+  initi, a, l={{ opaci, t, y: 0, y: 20 }}
+            anima, t, e={{ opaci, t, y: 1, y: 0 }}
+            transiti, o, n={{ durati, o, n: 0.6, del, a, y: 0.1 }}
           >
-            <Link
-              to="/blog/ai-2025-oct-advanced-federated-ai-enterprise-revolution"
-              className="block group"
+            <Li, n, k
+  to="/bl, o, g/ai-20, 2, 5-o, c, t-advanc, e, d-federat, e, d-ai-enterpri, s, e-revoluti, o, n"
+              classNa, m, e="block, grou, p"
             >
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-purple-400 transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/50 h-full">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="p-3 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg">
-
-                  </div>
-                  <span className="text-xs font-bold text-purple-300 uppercase tracking-wider">
-                    Federated AI
-                  </span>
-                </div>
-                
-                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-300 transition-colors">
-                  Advanced Federated AI Enterprise Revolution
+              <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/20, hove, r: bord, e, r-purp, l, e-400, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hov, e
+  r:shad, o, w-purp, l, e-5, 0, 0/5, 0, h-fu, l, l">"
+                <div, className="flex, item, s-center, ga, p-3, m, b-4">
+                  <div, className="p-3, b, g-gradie, n, t-to-br, fro, m-purp, l, e-500, t, o-pi, n, k-500, rounde, d-lg">
+                    <Brain, className="w-6 h-6, tex, t-whi, t, e  />
+              <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/20, hove, r: bord, e, r-purp, l, e-400, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/5, 0, h-fu, l, l">";
+                <div, className="flex, item, s-center, ga, p-3, m, b-4">";
+                  <div, className="p-3, b, g-gradie, n, t-to-br, fro, m-purp, l, e-500, t, o-pi, n, k-500, rounde, d-lg">";
+                    <Brain, className="w-6 h-6, tex, t-whi, t, e" />";
+                  </d, i, v>
+                  <span, className="te, x, t-xs, fon, t-bold, tex, t-purp, l, e-300, uppercase, tracking-wid, e, r">";
+                    Federated, A, I;
+                  </sp, a, n>
+                </d, i, v>
+                <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e
+  r: te, x, t-purp, l, e-300, transitio, n-colo, r, s">"
+                  Advanced, Federated, AI Enterprise, Revolutio, n;
                 </h3>
-                
-                <p className="text-blue-100 text-sm mb-4 leading-relaxed">
-                  Privacy-first distributed intelligence across 250+ nodes. <span className="text-yellow-300 font-bold">$287M value</span>, 99.8% privacy compliance, 67% faster training — zero data movement.
+                <p, className="te, x, t-bl, u, e-100, tex, t-sm, m, b-4, leadin, g-relax, e, d">
+                <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-purp, l, e-300, transitio, n-colo, r, s">";
+                  Advanced, Federated, AI Enterprise, Revolutio, n;
+                </h3>
+                <p, className="te, x, t-bl, u, e-100, tex, t-sm, m, b-4, leadin, g-relax, e, d">";
+                  Priva, c, y-first, distributed, intelligence across, 25, 0+ nod, e, s. <span, className="te, x, t-yell, o, w-300, fon, t-bo, l, d">$287M, valu, e</sp, a, n>, 99.8% privacy, complianc, e, 67% faster, trainin, g — zero, data, movement.";
                 </p>
-                
-                <div className="space-y-2 text-xs text-blue-200">
-                  <div className="flex items-center gap-2">
-                    <div className="w-1.5 h-1.5 bg-green-400 rounded-full"></div>
-                    <span>47 Fortune 500 deployments across 42 countries</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <div className="w-1.5 h-1.5 bg-green-400 rounded-full"></div>
-                    <span>47M patients served without data centralization</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <div className="w-1.5 h-1.5 bg-green-400 rounded-full"></div>
-                    <span>94.7% model accuracy matching centralized training</span>
-                  </div>
-                </div>
-
-                <div className="mt-6 flex items-center text-purple-300 font-semibold group-hover:text-white transition-colors">
-                  <span>Explore Privacy-First AI</span>
-
-                </div>
-              </div>
-            </Link>
-          </motion.div>
-
-          {/* Synthetic Data */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+                <div, className="spa, c, e-y-2, tex, t-xs, tex, t-bl, u, e-2, 0, 0">";
+                  <div, className="flex, item, s-center, ga, p-2">";
+                    <div, className="w-1.5 h-1.5, b, g-gre, e, n-400, rounde, d-fu, l, l"></d, i, v>";
+                    <sp, a, n>47, Fortune, 500 deployments, across, 42 countri, e, s</sp, a, n>
+                  </d, i, v>
+                  <div, className="flex, item, s-center, ga, p-2">";
+                    <div, className="w-1.5 h-1.5, b, g-gre, e, n-400, rounde, d-fu, l, l"></d, i, v>";
+                    <sp, a, n>47M, patients, served without, data, centralization</sp, a, n>
+                  </d, i, v>
+                  <div, className="flex, item, s-center, ga, p-2">";
+                    <div, className="w-1.5 h-1.5, b, g-gre, e, n-400, rounde, d-fu, l, l"></d, i, v>";
+                    <sp, a, n>94.7% model, accuracy, matching centralized, trainin, g</sp, a, n>
+                  </d, i, v>
+                </d, i, v>
+                <div, className="mt-6, flex, items-center, tex, t-purp, l, e-300, fon, t-semibold, grou, p-hov, e, r: te, x, t-white, transitio, n-colo, r, s">"
+                  <sp, a, n>Explore, Privac, y-First, A, I</sp, a, n>
+                  <ArrowRight, className="w-4 h-4, m, l-2, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
+                <div, className="mt-6, flex, items-center, tex, t-purp, l, e-300, fon, t-semibold, grou, p-hov, e, r: te, x, t-white, transitio, n-colo, r, s">";
+                  <sp, a, n>Explore, Privac, y-First, A, I</sp, a, n>
+                  <ArrowRight, className="w-4 h-4, m, l-2, grou, p-ho, v, e
+  r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
+                </d, i, v>
+              </d, i, v>
+            </Li, n, k>
+          </moti, o, n.d, i, v>
+          {/* Synthetic, Dat, a */}
+          <moti, o, n.d, i, v
+  initi, a, l={{ opaci, t, y: 0, y: 20 }}
+            anima, t, e={{ opaci, t, y: 1, y: 0 }}
+            transiti, o, n={{ durati, o, n: 0.6, del, a, y: 0.2 }}
           >
-            <Link
-              to="/blog/ai-2025-oct-synthetic-data-generation-enterprise-breakthrough"
-              className="block group"
+            <Li, n, k
+  to="/bl, o, g/ai-20, 2, 5-o, c, t-synthet, i, c-da, t, a-generati, o, n-enterpri, s, e-breakthrou, g, h"
+              classNa, m, e="block, grou, p"
             >
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-blue-400 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/50 h-full">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="p-3 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg">
-                    <Database className="w-6 h-6 text-white"</div>
-                  <span className="text-xs font-bold text-blue-300 uppercase tracking-wider">
-                    Synthetic Data
-                  </span>
-                </div>
-                
-                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-300 transition-colors">
-                  Synthetic Data Generation Enterprise Breakthrough
+              <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/20, hove, r: bord, e, r-bl, u, e-400, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hov, e
+  r:shad, o, w-bl, u, e-5, 0, 0/5, 0, h-fu, l, l">"
+                <div, className="flex, item, s-center, ga, p-3, m, b-4">
+                  <div, className="p-3, b, g-gradie, n, t-to-br, fro, m-bl, u, e-500, t, o-cy, a, n-500, rounde, d-lg">
+                    <Database, className="w-6 h-6, tex, t-whi, t, e  />
+              <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/20, hove, r: bord, e, r-bl, u, e-400, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hove, r:shad, o, w-bl, u, e-5, 0, 0/5, 0, h-fu, l, l">";
+                <div, className="flex, item, s-center, ga, p-3, m, b-4">";
+                  <div, className="p-3, b, g-gradie, n, t-to-br, fro, m-bl, u, e-500, t, o-cy, a, n-500, rounde, d-lg">";
+                    <Database, className="w-6 h-6, tex, t-whi, t, e" />";
+                  </d, i, v>
+                  <span, className="te, x, t-xs, fon, t-bold, tex, t-bl, u, e-300, uppercase, tracking-wid, e, r">";
+                    Synthetic, Dat, a;
+                  </sp, a, n>
+                </d, i, v>
+                <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e
+  r: te, x, t-bl, u, e-300, transitio, n-colo, r, s">"
+                  Synthetic, Data, Generation Enterprise, Breakthroug, h;
                 </h3>
-                
-                <p className="text-blue-100 text-sm mb-4 leading-relaxed">
-                  Unlimited privacy-safe data generation. <span className="text-yellow-300 font-bold">$312M value</span>, 10x data availability, 99.4% statistical fidelity — solve data scarcity.
+                <p, className="te, x, t-bl, u, e-100, tex, t-sm, m, b-4, leadin, g-relax, e, d">
+                <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-bl, u, e-300, transitio, n-colo, r, s">";
+                  Synthetic, Data, Generation Enterprise, Breakthroug, h;
+                </h3>
+                <p, className="te, x, t-bl, u, e-100, tex, t-sm, m, b-4, leadin, g-relax, e, d">";
+                  Unlimited, privac, y-safe, data, generation. <span, className="te, x, t-yell, o, w-300, fon, t-bo, l, d">$312M, valu, e</sp, a, n>, 10x, data, availability, 99.4% statistical, fidelit, y — solve, data, scarcity.";
                 </p>
-                
-                <div className="space-y-2 text-xs text-blue-200">
-                  <div className="flex items-center gap-2">
-                    <div className="w-1.5 h-1.5 bg-green-400 rounded-full"></div>
-                    <span>470M synthetic transactions for top-3 bank</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <div className="w-1.5 h-1.5 bg-green-400 rounded-full"></div>
-                    <span>1000x fraud examples — 94.7% detection accuracy</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <div className="w-1.5 h-1.5 bg-green-400 rounded-full"></div>
-                    <span>100% privacy compliance across 67 countries</span>
-                  </div>
-                </div>
-
-                <div className="mt-6 flex items-center text-blue-300 font-semibold group-hover:text-white transition-colors">
-                  <span>Unlock Unlimited Data</span>
-
-                </div>
-              </div>
-            </Link>
-          </motion.div>
-
-          {/* AI Governance */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
+                <div, className="spa, c, e-y-2, tex, t-xs, tex, t-bl, u, e-2, 0, 0">";
+                  <div, className="flex, item, s-center, ga, p-2">";
+                    <div, className="w-1.5 h-1.5, b, g-gre, e, n-400, rounde, d-fu, l, l"></d, i, v>";
+                    <sp, a, n>470M, synthetic, transactions for, to, p-3, ban, k</sp, a, n>
+                  </d, i, v>
+                  <div, className="flex, item, s-center, ga, p-2">";
+                    <div, className="w-1.5 h-1.5, b, g-gre, e, n-400, rounde, d-fu, l, l"></d, i, v>";
+                    <sp, a, n>1000x, fraud, examples — 94.7% detection, accurac, y</sp, a, n>
+                  </d, i, v>
+                  <div, className="flex, item, s-center, ga, p-2">";
+                    <div, className="w-1.5 h-1.5, b, g-gre, e, n-400, rounde, d-fu, l, l"></d, i, v>";
+                    <sp, a, n>1, 0, 0% privacy, compliance, across 67, countrie, s</sp, a, n>
+                  </d, i, v>
+                </d, i, v>
+                <div, className="mt-6, flex, items-center, tex, t-bl, u, e-300, fon, t-semibold, grou, p-hov, e, r: te, x, t-white, transitio, n-colo, r, s">"
+                  <sp, a, n>Unlock, Unlimited, Data</sp, a, n>
+                  <ArrowRight, className="w-4 h-4, m, l-2, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
+                <div, className="mt-6, flex, items-center, tex, t-bl, u, e-300, fon, t-semibold, grou, p-hov, e, r: te, x, t-white, transitio, n-colo, r, s">";
+                  <sp, a, n>Unlock, Unlimited, Data</sp, a, n>
+                  <ArrowRight, className="w-4 h-4, m, l-2, grou, p-ho, v, e
+  r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
+                </d, i, v>
+              </d, i, v>
+            </Li, n, k>
+          </moti, o, n.d, i, v>
+          {/* AI, Governanc, e */}
+          <moti, o, n.d, i, v
+  initi, a, l={{ opaci, t, y: 0, y: 20 }}
+            anima, t, e={{ opaci, t, y: 1, y: 0 }}
+            transiti, o, n={{ durati, o, n: 0.6, del, a, y: 0.3 }}
           >
-            <Link
-              to="/blog/ai-2025-oct-ai-model-governance-compliance-breakthrough"
-              className="block group"
+            <Li, n, k
+  to="/bl, o, g/ai-20, 2, 5-o, c, t-ai-mod, e, l-governan, c, e-complian, c, e-breakthrou, g, h"
+              classNa, m, e="block, grou, p"
             >
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-green-400 transition-all duration-300 hover:shadow-2xl hover:shadow-green-500/50 h-full">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="p-3 bg-gradient-to-br from-green-500 to-emerald-500 rounded-lg">
-
-                  </div>
-                  <span className="text-xs font-bold text-green-300 uppercase tracking-wider">
-                    AI Governance
-                  </span>
-                </div>
-                
-                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-green-300 transition-colors">
-                  AI Model Governance & Compliance Breakthrough
+              <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/20, hove, r: bord, e, r-gre, e, n-400, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hov, e
+  r:shad, o, w-gre, e, n-5, 0, 0/5, 0, h-fu, l, l">"
+                <div, className="flex, item, s-center, ga, p-3, m, b-4">
+                  <div, className="p-3, b, g-gradie, n, t-to-br, fro, m-gre, e, n-500, t, o-emera, l, d-500, rounde, d-lg">
+                    <Shield, className="w-6 h-6, tex, t-whi, t, e  />
+              <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/20, hove, r: bord, e, r-gre, e, n-400, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hove, r:shad, o, w-gre, e, n-5, 0, 0/5, 0, h-fu, l, l">";
+                <div, className="flex, item, s-center, ga, p-3, m, b-4">";
+                  <div, className="p-3, b, g-gradie, n, t-to-br, fro, m-gre, e, n-500, t, o-emera, l, d-500, rounde, d-lg">";
+                    <Shield, className="w-6 h-6, tex, t-whi, t, e" />";
+                  </d, i, v>
+                  <span, className="te, x, t-xs, fon, t-bold, tex, t-gre, e, n-300, uppercase, tracking-wid, e, r">";
+                    AI, Governanc, e;
+                  </sp, a, n>
+                </d, i, v>
+                <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e
+  r: te, x, t-gre, e, n-300, transitio, n-colo, r, s">"
+                  AI, Model, Governance & Compliance, Breakthroug, h;
                 </h3>
-                
-                <p className="text-blue-100 text-sm mb-4 leading-relaxed">
-                  Enterprise-scale AI risk management. <span className="text-yellow-300 font-bold">$421M value</span>, 100% audit compliance, 840+ models governed — complete accountability.
+                <p, className="te, x, t-bl, u, e-100, tex, t-sm, m, b-4, leadin, g-relax, e, d">
+                <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-gre, e, n-300, transitio, n-colo, r, s">";
+                  AI, Model, Governance & Compliance, Breakthroug, h;
+                </h3>
+                <p, className="te, x, t-bl, u, e-100, tex, t-sm, m, b-4, leadin, g-relax, e, d">";
+                  Enterpri, s, e-scale, AI, risk manageme, n, t. <span, className="te, x, t-yell, o, w-300, fon, t-bo, l, d">$421M, valu, e</sp, a, n>, 1, 0, 0% audit, complianc, e, 8, 4, 0+ models, governe, d — complete, accountabilit, y.";
                 </p>
-                
-                <div className="space-y-2 text-xs text-blue-200">
-                  <div className="flex items-center gap-2">
-                    <div className="w-1.5 h-1.5 bg-green-400 rounded-full"></div>
-                    <span>340 models governed for top-10 insurer</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <div className="w-1.5 h-1.5 bg-green-400 rounded-full"></div>
-                    <span>$87M penalties avoided — 100% audit pass rate</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <div className="w-1.5 h-1.5 bg-green-400 rounded-full"></div>
-                    <span>92% risk reduction with automated governance</span>
-                  </div>
-                </div>
-
-                <div className="mt-6 flex items-center text-green-300 font-semibold group-hover:text-white transition-colors">
-                  <span>Ensure AI Compliance</span>
-
-                </div>
-              </div>
-            </Link>
-          </motion.div>
-        </div>
-
-        {/* Call to Action */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="text-center"
+                <div, className="spa, c, e-y-2, tex, t-xs, tex, t-bl, u, e-2, 0, 0">";
+                  <div, className="flex, item, s-center, ga, p-2">";
+                    <div, className="w-1.5 h-1.5, b, g-gre, e, n-400, rounde, d-fu, l, l"></d, i, v>";
+                    <sp, a, n>340, models, governed for, to, p-10, insure, r</sp, a, n>
+                  </d, i, v>
+                  <div, className="flex, item, s-center, ga, p-2">";
+                    <div, className="w-1.5 h-1.5, b, g-gre, e, n-400, rounde, d-fu, l, l"></d, i, v>";
+                    <sp, a, n>$87M, penalties, avoided — 1, 0, 0% audit, pass, rate</sp, a, n>
+                  </d, i, v>
+                  <div, className="flex, item, s-center, ga, p-2">";
+                    <div, className="w-1.5 h-1.5, b, g-gre, e, n-400, rounde, d-fu, l, l"></d, i, v>";
+                    <sp, a, n>92% risk, reduction, with automated, governanc, e</sp, a, n>
+                  </d, i, v>
+                </d, i, v>
+                <div, className="mt-6, flex, items-center, tex, t-gre, e, n-300, fon, t-semibold, grou, p-hov, e, r: te, x, t-white, transitio, n-colo, r, s">"
+                  <sp, a, n>Ensure, AI, Compliance</sp, a, n>
+                  <ArrowRight, className="w-4 h-4, m, l-2, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
+                <div, className="mt-6, flex, items-center, tex, t-gre, e, n-300, fon, t-semibold, grou, p-hov, e, r: te, x, t-white, transitio, n-colo, r, s">";
+                  <sp, a, n>Ensure, AI, Compliance</sp, a, n>
+                  <ArrowRight, className="w-4 h-4, m, l-2, grou, p-ho, v, e
+  r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
+                </d, i, v>
+              </d, i, v>
+            </Li, n, k>
+          </moti, o, n.d, i, v>
+        </d, i, v>
+        {/* Call, to, Action */}
+        <moti, o, n.d, i, v
+  initi, a, l={{ opaci, t, y: 0, y: 20 }}
+          anima, t, e={{ opaci, t, y: 1, y: 0 }}
+          transiti, o, n={{ durati, o, n: 0.6, del, a, y: 0.4 }}
+          classNa, m, e="te, x, t-cent, e, r"
         >
-          <Link
-            to="/blog"
-            className="inline-flex items-center gap-3 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-500 hover:to-blue-500 text-white px-8 py-4 rounded-full font-bold text-lg shadow-2xl hover:shadow-purple-500/50 transition-all duration-300 transform hover:scale-105"
+          <Li, n, k
+  to="/bl, o, g"
+            classNa, m, e="inli, n, e-flex, item, s-center, ga, p-3, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-bl, u, e-600, hove, r: fr, o, m-purp, l, e-500, hove, r:to-bl, u, e-500, tex, t-white, p, x-8, p, y-4, rounde, d-full, fon, t-bold, tex, t-lg, shado, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-300, transform, hove
+  r:sca, l, e-1, 0, 5"
           >
-            <span>Explore All October 2025 Breakthroughs</span>
-
-          </Link>
-          
-          <p className="mt-4 text-blue-200 text-sm">
-            Join 127+ Fortune 500 companies transforming with privacy-first AI, synthetic data, and enterprise governance
+            <sp, a, n>Explore, All, October 2025, Breakthrough, s</sp, a, n>
+            <ArrowRight, className="w-5 h-5  />
+            <ArrowRight, className="w-5 h-5" />";
+          </Li, n, k>
+          <p, className="mt-4, tex, t-bl, u, e-200, tex, t-sm">";
+            Join, 12, 7+ Fortune, 500, companies transforming, with, privacy-first, A, I, synthetic, dat, a, and, enterprise, governance;
           </p>
-        </motion.div>
-      </div>
-    </div>
+        </moti, o, n.d, i, v>
+      </d, i, v>
+    </d, i, v>
   );
 }
+;

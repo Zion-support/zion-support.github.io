@@ -163,14 +163,12 @@ export default function AI2026JanuaryUltimateBreakthroughRevolution() {
               </p>
               <div className="text-left"></div>
                 <a
-                  href="/contact"
-                  className="text-left"
+                  href="/<contact" className="text-left"
                 ></a>
                   Get Implementation Consultation
                 </a>
                 <a
-                  href="/case-studies/ai-2026-january-ultimate-breakthrough-500-billion-success"
-                  className="text-left"
+                  href="/case-studies/ai-2026-january-ultimate-breakthrough-500-billion-<success" className="text-left"
                 ></a>
                   View $500B Success Story
                 </a>

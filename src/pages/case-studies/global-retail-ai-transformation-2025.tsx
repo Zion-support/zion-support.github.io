@@ -1,428 +1,190 @@
-
-
-
-
-
-
-;
-import { ArrowLeft, CheckCircle, DollarSign, Target, TrendingUp, Users, Zap } from 'lucide-react';
-import { Link } from "react-router-dom";
-
-
-import { Helmet } from "react-helmet-async";
-import Header from "../../components/Header";
-
-const GlobalRetailAITransformation = () => {
-  return (
-    <>
-      <Helmet>
-        <title>Global Retail AI Transformation: $489M Value Created in 18 Months | Zion Tech Group</title>
-        <meta
-          name="description"
-          content="Fortune 100 retailer achieves $489M value creation through comprehensive AI transformation. 94% inventory optimization, 78% customer satisfaction increase, 340% marketing ROI."
+>>>>>>> origin/merge-fixes-20251005-193002
+      <Helm, e, t>
+        <title>
+          Global, Retail, AI Transformati, o, n: $489M, Value, Created in, 18, Months |
+          Zion, Tech, Group
+        </title>
+        <meta, nam, e = 'description'
+          conte, n, t='Fortune, 100, retailer achiev, e, s $489M, value, creation through, comprehensive, AI transformati, o, n. 94% inventory, optimizat, i, o, n, 78% customer, satisfaction, increase, 3, 4, 0% marketing, RO, I.'
         />
-        <meta
-          name="keywords"
-          content="AI transformation case study, retail AI, inventory optimization, personalization, demand forecasting, customer analytics"
+        <meta, nam, e = 'keywor, d, s'
+          conte, n, t='AI, transformation, case st, u, d, y, retail, A, I, inventory, optimizatio, n, personalizati, o, n, demand, forecastin, g, customer, analytic, s'
         />
-      </Helmet>
+      </Helm, e, t>
 
-      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">
-        <Header />
+      <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-da, r, k'>
+        <Head, e, r />
 
-        <article className="container mx-auto px-6 py-20">
-          {/* Back Link */}
-          <Link
-            to="/case-studies"
-            className="inline-flex items-center text-zion-cyan hover:text-zion-blue-light mb-8 transition-colors"
+        <article, className='container, m, x-auto, p, x-6, p, y-20' > {/* Back, Lin, k */ }
+          <Link, t, o='/ca, s, e-studi, e, s'
+            className='inli, n, e-flex, item, s-center, tex, t-zi, o, n-cyan, hove, r: te, x, t-zi, o, n-bl, u, e-light, m, b-8, transitio, n-colo, r, s'
           >
-            <ArrowLeft className="w-4 h-4 mr-2" />
-            Back to Case Studies
-          </Link>
-
-          {/* Header */}
-          <div className="max-w-5xl mx-auto mb-16">
-            <div className="flex items-center gap-4 mb-6 flex-wrap">
-              <span className="px-4 py-2 bg-green-500/20 text-green-300 rounded-full text-sm font-semibold border border-green-500/30">
-                ✅ Completed • October 2025
-              </span>
-              <span className="px-4 py-2 bg-blue-500/20 text-blue-300 rounded-full text-sm font-semibold border border-blue-500/30">
-                🏪 Retail & E-Commerce
-              </span>
-              <span className="text-zion-slate-light">18-month engagement</span>
+            <ArrowLeft, className='w-4 h-4, m, r-2' />
+            Back, to, Case Studi, e, s
+              <span, className='te, x, t-zi, o, n-sla, t, e-lig, h, t'>18-month, engagemen, t</sp, a, n>
             </div>
+>>>>>>> origin/merge-fixes-20251005-193002
 
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
-              Global Retail AI Transformation:
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-400 mt-2">
-                $489M Value Created in 18 Months
-              </span>
-            </h1>
-
-            <p className="text-xl text-zion-slate-light leading-relaxed mb-8">
-              How a Fortune 100 retailer with 2,800+ stores and $85B in annual revenue transformed 
-              operations through enterprise AI, achieving 94% inventory optimization, 78% increase 
-              in customer satisfaction, and $489M in measurable business value.
-            </p>
-
-            {/* Key Metrics Banner */}
-            <div className="grid md:grid-cols-4 gap-6">
-              <div className="bg-green-900/40 rounded-xl p-6 border border-green-500/30 text-center">
-                <div className="text-4xl font-bold text-green-400 mb-2">$489M</div>
-                <div className="text-sm text-zion-slate-light">Total Value Created</div>
-              </div>
-              <div className="bg-blue-900/40 rounded-xl p-6 border border-blue-500/30 text-center">
-                <div className="text-4xl font-bold text-blue-400 mb-2">94%</div>
-                <div className="text-sm text-zion-slate-light">Inventory Optimization</div>
-              </div>
-              <div className="bg-purple-900/40 rounded-xl p-6 border border-purple-500/30 text-center">
-                <div className="text-4xl font-bold text-purple-400 mb-2">78%</div>
-                <div className="text-sm text-zion-slate-light">Customer Satisfaction ↑</div>
-              </div>
-              <div className="bg-cyan-900/40 rounded-xl p-6 border border-cyan-500/30 text-center">
-                <div className="text-4xl font-bold text-cyan-400 mb-2">340%</div>
-                <div className="text-sm text-zion-slate-light">Marketing ROI</div>
-              </div>
-            </div>
-          </div>
-
-          {/* Content */}
-          <div className="max-w-5xl mx-auto space-y-12 text-zion-slate-light">
-            {/* Client Profile */}
-            <section>
-              <h2 className="text-3xl font-bold text-white mb-6">🏢 Client Profile</h2>
-              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-zion-cyan/30">
-                <div className="grid md:grid-cols-2 gap-8">
-                  <div>
-                    <h3 className="text-xl font-bold text-white mb-4">Company Overview</h3>
-                    <ul className="space-y-2">
-                      <li><strong className="text-zion-cyan">Industry:</strong> Retail & E-Commerce</li>
-                      <li><strong className="text-zion-cyan">Size:</strong> Fortune 100 (2,800+ stores)</li>
-                      <li><strong className="text-zion-cyan">Revenue:</strong> $85B annually</li>
-                      <li><strong className="text-zion-cyan">Employees:</strong> 450,000+ worldwide</li>
-                      <li><strong className="text-zion-cyan">Markets:</strong> 28 countries, 6 continents</li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-white mb-4">Business Challenges</h3>
-                    <ul className="space-y-2">
-                      <li className="flex items-start gap-2">
-                        <span className="text-red-400 mt-1">•</span>
-                        <span>18% inventory waste ($2.3B annually)</span>
+            <h1, className='te, x, t-5xl, m, d: te, x, t-6xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t'>
+              Global, Retail, AI Transformati, o, n:
+              <span, className='block, tex, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-gre, e, n-400, t, o-bl, u, e-400, m, t-2'>
+                $489M, Value, Created in, 18, Months
+>>>>>>> origin/merge-fixes-20251005-193002
+            <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-4, ga, p-6'>
+              <div, className='bg-gre, e, n-9, 0, 0/40, rounde, d-x, l, p-6, border, border-gre, e, n-5, 0, 0/30, tex, t-cent, e, r'>
+                <div, className='te, x, t-4xl, fon, t-bold, tex, t-gre, e, n-400, m, b-2'>
+                  $48, 9, M
+                </div>
+                <div, className='te, x, t-sm, tex, t-zi, o, n-sla, t, e-lig, h, t'>
+                  Total, Value, Created
+                </d, i, v>
+                    <h3, classNam, e='te, x, t-xl, fon, t-bold, tex, t-white, m, b-4'>
+                    <h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-4'>
+>>>>>>> origin/merge-fixes-20251005-193002
+                      Company, Overvie, w
+                    </h3>
+                    <ul, className='spa, c, e-y-2'>
+                      <li>
+                        <strong, className='te, x, t-zi, o, n-cy, a, n'>Indust, r, y:</st, r, o, n, g>{' '}
+                        Reta, i, l & E-Commer, c, e
                       </li>
-                      <li className="flex items-start gap-2">
-                        <span className="text-red-400 mt-1">•</span>
-                        <span>Declining market share (-4.2% YoY)</span>
+                      <li>
+                        <strong, classNam, e = 'te, x, t-zi, o, n-cy, a, n'>Si, z, e: </st, r, o, n, g>{' '}
+                        Fortune, 10, 0 (2,8, 0, 0+ stor, e, s)
                       </li>
-                      <li className="flex items-start gap-2">
-                        <span className="text-red-400 mt-1">•</span>
-                        <span>Poor demand forecasting (67% accuracy)</span>
+                      <li>
+                        <strong, classNam, e = 'te, x, t-zi, o, n-cy, a, n'>Reven, u, e: </st, r, o, n, g>{' '}
+                        $85B, annuall, y
                       </li>
-                      <li className="flex items-start gap-2">
-                        <span className="text-red-400 mt-1">•</span>
-                        <span>Generic customer experience</span>
+                      <li>
+                        <strong, classNam, e = 'te, x, t-zi, o, n-cy, a, n'>Employe, e, s: </st, r, o, n, g>{' '}
+                        4, 5, 0,0, 0, 0+ worldwi, d, e
                       </li>
-                      <li className="flex items-start gap-2">
-                        <span className="text-red-400 mt-1">•</span>
-                        <span>Inefficient marketing spend ($890M/year)</span>
+                      <li>
+                        <strong, classNam, e = 'te, x, t-zi, o, n-cy, a, n'>Marke, t, s: </stro, n, g> 28, countr, i, e, s, 6, continent, s
                       </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </section>
+>>>>>>> origin/merge-fixes-20251005-193002
+              <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-2, ga, p-6'>
+                <div, className='bg-gradie, n, t-to-br, fro, m-bl, u, e-9, 0, 0/40, t, o-cy, a, n-9, 0, 0/40, rounde, d-x, l, p-6, border, border-bl, u, e-5, 0, 0/30'>
+                  <h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-4, flex, items-center, ga, p-2'>
+                    <Zap, className='w-6 h-6, tex, t-bl, u, e-4, 0, 0' />
+                    AI, Demand, Forecasting
+                    <li, classNam, e='flex, item, s-center, ga, p-2'>
+                      <CheckCircle, classNam, e='w-4 h-4, tex, t-gre, e, n-4, 0, 0' />
 
-            {/* Solution Overview */}
-            <section>
-              <h2 className="text-3xl font-bold text-white mb-6">🎯 AI Transformation Solution</h2>
-              <p className="text-lg leading-relaxed mb-6">
-                Zion Tech Group designed and deployed a comprehensive AI platform spanning demand forecasting, 
-                inventory optimization, personalized customer experiences, and intelligent marketing across 
-                all 2,800+ stores and digital channels.
-              </p>
-              <div className="grid md:grid-cols-2 gap-6">
-                <div className="bg-gradient-to-br from-blue-900/40 to-cyan-900/40 rounded-xl p-6 border border-blue-500/30">
-                  <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
-                    <Zap className="w-6 h-6 text-blue-400" />
-                    AI Demand Forecasting
-                  </h3>
-                  <p className="mb-4">
-                    ML models analyzing 500+ signals (weather, events, trends, seasonality) to predict demand 
-                    at SKU-store-day granularity with 96% accuracy.
-                  </p>
-                  <ul className="space-y-2 text-sm">
-                    <li className="flex items-center gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-400" />
-                      <span>96% forecast accuracy (up from 67%)</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-400" />
-                      <span>$2.1B reduction in inventory waste</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-400" />
-                      <span>87% fewer stockouts</span>
-                    </li>
-                  </ul>
-                </div>
+                <div, classNam, e='bg-gradie, n, t-to-br, fro, m-purp, l, e-9, 0, 0/40, t, o-pi, n, k-9, 0, 0/40, rounde, d-x, l, p-6, border, border-purp, l, e-5, 0, 0/30'>
+                  <h3, classNam, e='te, x, t-xl, fon, t-bold, tex, t-white, m, b-4, flex, items-center, ga, p-2'>
+                    <Users, classNam, e='w-6 h-6, tex, t-purp, l, e-4, 0, 0' />
+                    Hyp, e, r-Personalization, Engin, e
+                    <li, classNam, e='flex, item, s-center, ga, p-2'>
+                      <CheckCircle, classNam, e='w-4 h-4, tex, t-gre, e, n-4, 0, 0' />
 
-                <div className="bg-gradient-to-br from-purple-900/40 to-pink-900/40 rounded-xl p-6 border border-purple-500/30">
-                  <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
-                    <Users className="w-6 h-6 text-purple-400" />
-                    Hyper-Personalization Engine
-                  </h3>
-                  <p className="mb-4">
-                    Real-time customer personalization across web, mobile, in-store, and email using 
-                    collaborative filtering, deep learning, and behavioral analysis.
-                  </p>
-                  <ul className="space-y-2 text-sm">
-                    <li className="flex items-center gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-400" />
-                      <span>78% increase in customer satisfaction</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-400" />
-                      <span>$1.8B incremental revenue</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-400" />
-                      <span>340% improvement in conversion rate</span>
-                    </li>
-                  </ul>
-                </div>
-
-                <div className="bg-gradient-to-br from-green-900/40 to-teal-900/40 rounded-xl p-6 border border-green-500/30">
-                  <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
-                    <Target className="w-6 h-6 text-green-400" />
-                    Intelligent Marketing Platform
-                  </h3>
-                  <p className="mb-4">
-                    AI-powered marketing optimization with predictive audience targeting, dynamic creative 
-                    generation, and real-time budget allocation.
-                  </p>
-                  <ul className="space-y-2 text-sm">
-                    <li className="flex items-center gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-400" />
-                      <span>340% marketing ROI improvement</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-400" />
-                      <span>$340M additional revenue</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-400" />
-                      <span>92% reduction in wasted ad spend</span>
-                    </li>
-                  </ul>
-                </div>
-
-                <div className="bg-gradient-to-br from-orange-900/40 to-red-900/40 rounded-xl p-6 border border-orange-500/30">
-                  <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
-                    <DollarSign className="w-6 h-6 text-orange-400" />
-                    Dynamic Pricing Engine
-                  </h3>
-                  <p className="mb-4">
-                    Real-time pricing optimization considering demand, competition, inventory levels, 
-                    and customer segments to maximize revenue and margin.
-                  </p>
-                  <ul className="space-y-2 text-sm">
-                    <li className="flex items-center gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-400" />
-                      <span>$890M incremental revenue</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-400" />
-                      <span>4.2% gross margin improvement</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-400" />
-                      <span>94% optimal price achievement</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </section>
-
-            {/* Implementation Timeline */}
-            <section>
-              <h2 className="text-3xl font-bold text-white mb-6">📅 18-Month Implementation Journey</h2>
-              <div className="space-y-4">
-                <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border-l-4 border-blue-400">
-                  <div className="flex items-start gap-4">
-                    <div className="bg-blue-500/20 px-3 py-1 rounded text-sm font-bold text-blue-400 border border-blue-500/30">
-                      Months 1-3
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="text-xl font-bold text-white mb-2">Discovery & Foundation</h3>
-                      <p className="text-sm mb-3">
-                        Data infrastructure assessment, AI platform selection, pilot use case identification, 
-                        and initial model development for demand forecasting.
-                      </p>
-                      <div className="text-xs text-green-400">✓ Demand forecasting pilot: 94% accuracy in 50 stores</div>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border-l-4 border-purple-400">
-                  <div className="flex items-start gap-4">
-                    <div className="bg-purple-500/20 px-3 py-1 rounded text-sm font-bold text-purple-400 border border-purple-500/30">
-                      Months 4-9
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="text-xl font-bold text-white mb-2">Scale & Expand</h3>
-                      <p className="text-sm mb-3">
-                        Roll out demand forecasting to all stores, deploy personalization engine, launch 
-                        dynamic pricing in 500 stores, and implement marketing optimization.
-                      </p>
-                      <div className="text-xs text-green-400">✓ $156M value created by month 9</div>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border-l-4 border-green-400">
-                  <div className="flex items-start gap-4">
-                    <div className="bg-green-500/20 px-3 py-1 rounded text-sm font-bold text-green-400 border border-green-500/30">
-                      Months 10-18
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="text-xl font-bold text-white mb-2">Optimize & Integrate</h3>
-                      <p className="text-sm mb-3">
-                        Full enterprise deployment across all 2,800+ stores and channels, model refinement 
-                        based on feedback, and integration with all business processes.
-                      </p>
-                      <div className="text-xs text-green-400">✓ $489M total value, full ROI achieved</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
-
-            {/* Results & Impact */}
-            <section>
-              <h2 className="text-3xl font-bold text-white mb-6">📊 Business Impact & Results</h2>
-              <div className="bg-gradient-to-r from-green-900/40 to-blue-900/40 rounded-2xl p-10 border border-green-500/30">
-                <div className="grid md:grid-cols-2 gap-10">
-                  <div>
-                    <h3 className="text-2xl font-bold text-white mb-6">Financial Impact</h3>
-                    <div className="space-y-4">
-                      <div>
-                        <div className="flex justify-between items-center mb-2">
-                          <span className="text-zion-slate-light">Revenue Increase:</span>
-                          <span className="text-2xl font-bold text-green-400">+$3.2B</span>
-                        </div>
-                        <div className="text-xs text-zion-slate-light">From personalization, pricing, and marketing</div>
-                      </div>
-                      <div>
-                        <div className="flex justify-between items-center mb-2">
-                          <span className="text-zion-slate-light">Cost Reduction:</span>
-                          <span className="text-2xl font-bold text-green-400">-$2.4B</span>
-                        </div>
-                        <div className="text-xs text-zion-slate-light">Inventory optimization and operational efficiency</div>
-                      </div>
-                      <div className="border-t border-white/20 pt-4">
-                        <div className="flex justify-between items-center mb-2">
-                          <strong className="text-white">Net Value Created:</strong>
-                          <strong className="text-3xl font-bold text-green-400">$489M</strong>
-                        </div>
-                        <div className="text-xs text-zion-slate-light">18-month period (Oct 2023 - Mar 2025)</div>
-                      </div>
-                    </div>
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-bold text-white mb-6">Operational Improvements</h3>
-                    <div className="space-y-3">
-                      <div className="bg-white/5 rounded-lg p-3 border border-green-400/30">
-                        <div className="flex justify-between items-center">
-                          <span>Inventory Optimization:</span>
-                          <strong className="text-green-400">94%</strong>
-                        </div>
-                      </div>
-                      <div className="bg-white/5 rounded-lg p-3 border border-blue-400/30">
-                        <div className="flex justify-between items-center">
-                          <span>Forecast Accuracy:</span>
-                          <strong className="text-blue-400">96%</strong>
-                        </div>
-                      </div>
-                      <div className="bg-white/5 rounded-lg p-3 border border-purple-400/30">
-                        <div className="flex justify-between items-center">
-                          <span>Customer Satisfaction:</span>
-                          <strong className="text-purple-400">+78%</strong>
-                        </div>
-                      </div>
-                      <div className="bg-white/5 rounded-lg p-3 border border-cyan-400/30">
-                        <div className="flex justify-between items-center">
-                          <span>Marketing ROI:</span>
-                          <strong className="text-cyan-400">340%</strong>
-                        </div>
-                      </div>
-                      <div className="bg-white/5 rounded-lg p-3 border border-orange-400/30">
-                        <div className="flex justify-between items-center">
-                          <span>Conversion Rate:</span>
-                          <strong className="text-orange-400">+340%</strong>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="mt-8 pt-8 border-t border-white/20 text-center">
-                  <div className="text-xl text-white mb-2">ROI: <strong className="text-4xl text-green-400">823%</strong></div>
-                  <div className="text-sm text-zion-slate-light">
-                    Investment: $59.5M • Value Created: $489M • Payback Period: 4.3 months
-                  </div>
-                </div>
-              </div>
-            </section>
-
-            {/* Client Testimonial */}
-            <section>
-              <div className="bg-gradient-to-r from-blue-900/40 to-purple-900/40 rounded-2xl p-10 border border-blue-500/30">
-                <div className="text-center mb-8">
-                  <div className="text-6xl mb-4">"</div>
-                  <p className="text-2xl text-white leading-relaxed mb-6">
-                    Zion Tech Group's AI transformation has been nothing short of revolutionary for our business. 
-                    The $489M in value creation exceeded our most optimistic projections. More importantly, 
-                    we've fundamentally changed how we operate—from reactive to predictive, from generic to 
-                    hyper-personalized, from gut-feel to data-driven.
-                  </p>
-                  <div className="inline-block">
-                    <div className="font-bold text-xl text-white">Jennifer Martinez</div>
-                    <div className="text-zion-cyan">Chief Digital Officer</div>
-                    <div className="text-sm text-zion-slate-light">Fortune 100 Retail Corporation</div>
-                  </div>
-                </div>
-              </div>
-            </section>
-
-            {/* CTA */}
-            <section className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-10 text-center">
-              <h2 className="text-3xl font-bold text-white mb-4">
-                Ready to Transform Your Enterprise with AI?
+                <div, classNam, e='bg-gradie, n, t-to-br, fro, m-gre, e, n-9, 0, 0/40, t, o-te, a, l-9, 0, 0/40, rounde, d-x, l, p-6, border, border-gre, e, n-5, 0, 0/30'>
+                  <h3, classNam, e='te, x, t-xl, fon, t-bold, tex, t-white, m, b-4, flex, items-center, ga, p-2'>
+                    <Target, classNam, e='w-6 h-6, tex, t-gre, e, n-4, 0, 0' />
+                    Intelligent, Marketing, Platform
+                    <li, classNam, e='flex, item, s-center, ga, p-2'>
+                      <CheckCircle, classNam, e='w-4 h-4, tex, t-gre, e, n-4, 0, 0' />
+                    <li, classNam, e='flex, item, s-center, ga, p-2'>
+                      <CheckCircle, classNam, e='w-4 h-4, tex, t-gre, e, n-4, 0, 0' />
+                      <div, classNam, e = 'te, x, t-xs, tex, t-gre, e, n-4, 0, 0'>
+                        ✓ Demand, forecasting, pilot: 94% accuracy, in, 50 stor, e, s
+                      </d, i, v>
+              <h2, classNam, e = 'te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6'>
+                📊 Business, Impac, t & Resul, t, s
               </h2>
-              <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">
-                Join Fortune 100 companies achieving $489M+ in value creation through comprehensive 
-                AI transformation. Schedule your free consultation to explore what's possible for your organization.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  to="/contact"
-                  className="bg-white text-purple-600 hover:bg-zion-slate-light px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:scale-105 inline-flex items-center justify-center gap-2 text-lg"
-                >
-                  <TrendingUp className="w-6 h-6" />
-                  Schedule Free Consultation
-                </Link>
-                <Link
-                  to="/services"
-                  className="border-2 border-white text-white hover:bg-white/10 px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:scale-105 text-lg"
-                >
-                  View All AI Services
-                </Link>
-              </div>
-            </section>
-          </div>
-        </article>
-      </div>
-    </>
-  );
-};
+              <div, classNam, e='bg-gradie, n, t-to-r, fro, m-gre, e, n-9, 0, 0/40, t, o-bl, u, e-9, 0, 0/40, rounde, d-2x, l, p-10, border, border-gre, e, n-5, 0, 0/30'>
+                <div, classNam, e='grid, m, d: gr, i, d-co, l, s-2, ga, p-10'>
+                        <div, classNam, e='flex, justif, y-between, item, s-center, m, b-2'>
+                          <span, classNam, e='te, x, t-zi, o, n-sla, t, e-lig, h, t'>
+                    <li, className='flex, item, s-center, ga, p-2'>
+                      <CheckCircle, className='w-4 h-4, tex, t-gre, e, n-4, 0, 0' />
+                      <sp, a, n>87% fewer, stockout, s</sp, a, n>
+                    </li>
+                  </ul>
+                </div>
 
-export default GlobalRetailAITransformation;
+                <div, className='bg-gradie, n, t-to-br, fro, m-purp, l, e-9, 0, 0/40, t, o-pi, n, k-9, 0, 0/40, rounde, d-x, l, p-6, border, border-purp, l, e-5, 0, 0/30'>
+                  <h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-4, flex, items-center, ga, p-2'>
+                    <Users, className='w-6 h-6, tex, t-purp, l, e-4, 0, 0' />
+                    Hyp, e, r-Personalization, Engin, e
+                    <li, className='flex, item, s-center, ga, p-2'>
+                      <CheckCircle, className='w-4 h-4, tex, t-gre, e, n-4, 0, 0' />
+                      <sp, a, n>3, 4, 0% improvement, in, conversion ra, t, e</sp, a, n>
+                    </li>
+                  </ul>
+                </div>
+
+                <div, className='bg-gradie, n, t-to-br, fro, m-gre, e, n-9, 0, 0/40, t, o-te, a, l-9, 0, 0/40, rounde, d-x, l, p-6, border, border-gre, e, n-5, 0, 0/30'>
+                  <h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-4, flex, items-center, ga, p-2'>
+                    <Target, className='w-6 h-6, tex, t-gre, e, n-4, 0, 0' />
+                    Intelligent, Marketing, Platform
+                    <li, className='flex, item, s-center, ga, p-2'>
+                      <CheckCircle, className='w-4 h-4, tex, t-gre, e, n-4, 0, 0' />
+                    <li, className='flex, item, s-center, ga, p-2'>
+                      <CheckCircle, className='w-4 h-4, tex, t-gre, e, n-4, 0, 0' />
+                      <div, classNam, e = 'te, x, t-xs, tex, t-gre, e, n-4, 0, 0'>
+                        ✓ Demand, forecasting, pilot: 94% accuracy, in, 50 stor, e, s
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div, className='bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, borde, r-l-4, borde, r-purp, l, e-4, 0, 0'>
+                  <div, className='flex, item, s-start, ga, p-4'>
+                    <div, className='bg-purp, l, e-5, 0, 0/20, p, x-3, p, y-1, rounded, text-sm, fon, t-bold, tex, t-purp, l, e-400, border, border-purp, l, e-5, 0, 0/30'>
+                      Month, s, 4-9
+                    </div>
+                    <div, className='fl, e, x-1'>
+                      <h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-2'>
+                        Sca, l, e & Expa, n, d
+                      </h3>
+                      <p, className='te, x, t-sm, m, b-3'>
+                        Roll, out, demand forecasting, to, all st, o, r, e, s, deploy, personalization, engine, launch, dynamic, pricing in, 500, stores, and, implement, marketing optimizati, o, n.
+              <h2, classNam, e = 'te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6'>
+                📊 Business, Impac, t & Resul, t, s
+              </h2>
+              <div, className='bg-gradie, n, t-to-r, fro, m-gre, e, n-9, 0, 0/40, t, o-bl, u, e-9, 0, 0/40, rounde, d-2x, l, p-10, border, border-gre, e, n-5, 0, 0/30'>
+                <div, className='grid, m, d: gr, i, d-co, l, s-2, ga, p-10'>
+                        <div, className='flex, justif, y-between, item, s-center, m, b-2'>
+                          <span, className='te, x, t-zi, o, n-sla, t, e-lig, h, t'>
+>>>>>>> origin/merge-fixes-20251005-193002
+                            Revenue, Increas, e:
+                          </sp, a, n>
+                          <span, className='te, x, t-2xl, fon, t-bold, tex, t-gre, e, n-4, 0, 0'>
+                            +$3.2B
+                          </sp, a, n>
+                        </div>
+                        <div, className='te, x, t-xs, tex, t-zi, o, n-sla, t, e-lig, h, t'>
+                          From, personalizat, i, o, n, prici, n, g, and, marketin, g
+                      <div, classNam, e='bord, e, r-t, borde, r-whi, t, e/20, p, t-4'>
+                        <div, classNam, e='flex, justif, y-between, item, s-center, m, b-2'>
+                          <strong, classNam, e='te, x, t-whi, t, e'>
+                      <div, classNam, e='bg-whi, t, e/5, rounde, d-l, g, p-3, border, border-oran, g, e-4, 0, 0/30'>
+                        <div, classNam, e='flex, justif, y-between, item, s-cent, e, r'>
+                          <sp, a, n>Conversion, Rat, e:</sp, a, n>
+                          <strong, classNam, e='te, x, t-oran, g, e-4, 0, 0'>+3, 4, 0%</stro, n, g>
+                <div, classNam, e='mt-8, p, t-8, borde, r-t, borde, r-whi, t, e/20, tex, t-cent, e, r'>
+                  <div, classNam, e='te, x, t-xl, tex, t-white, m, b-2'>
+                    R, O, I:{' '}
+                    <strong, classNam, e = 'te, x, t-4xl, tex, t-gre, e, n-4, 0, 0'>8, 2, 3%</stro, n, g>
+                  </d, i, v>
+                  <div, classNam, e='te, x, t-sm, tex, t-zi, o, n-sla, t, e-lig, h, t'>
+                    Investme, n, t: $59.5M • Value, Create, d: $48, 9, M • Payback, Perio, d:
+                    4.3, month, s
+>>>>>>> origin/merge-fixes-20251005-193002
+              <div, classNam, e = 'bg-gradie, n, t-to-r, fro, m-bl, u, e-9, 0, 0/40, t, o-purp, l, e-9, 0, 0/40, rounde, d-2x, l, p-10, border, border-bl, u, e-5, 0, 0/30'>
+                <div, className='te, x, t-center, m, b-8'>
+                  <div, className='te, x, t-6xl, m, b-4'>"</div>
+                  <p, className='te, x, t-2xl, tex, t-white, leadin, g-relaxed, m, b-6'>
+                    Zion, Tech, Group's, AI, transformation has, been, nothing short, of, revolutionary for, our, business. T, h, e $489M, in, value
+                    creation, exceeded, our most, optimistic, projections. More, important, l, y, we've, fundamentally, changed how, we, operate—from, reactive, to predicti, v, e, from, generic, to hyp, e, r-personaliz, e, d,
+                    from, gu, t-feel, to, data-driv, e, n.
+              <div, classNam, e='flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r'>
+              <div, className='flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r'>
+>>>>>>> origin/merge-fixes-20251005-193002
+                <Link, t, o='/conta, c, t'
+                  className='bg-white, tex, t-purp, l, e-600, hove, r:bg-zi, o, n-sla, t, e-light, p, x-8, p, y-4, rounde, d-lg, fon, t-semibold, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, inlin, e-flex, item, s-center, justif, y-center, ga, p-2, tex, t-lg'
+                >
+                  <TrendingUp, classNam, e='w-6 h-6' />
+                  Schedule, Free, Consultation

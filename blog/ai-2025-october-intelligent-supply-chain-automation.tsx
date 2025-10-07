@@ -20,7 +20,7 @@ export default function IntelligentSupplyChainAutomation2025() {
       <div className="text-left"></div>
         <main className="text-left">
           <nav className="text-left">
-            <a href="/blog" className="text-left"></a>
+            <a href="/<blog" className="text-left"></a>
               ← Back to Blog
             </a>
           </nav>
@@ -252,10 +252,10 @@ export default function IntelligentSupplyChainAutomation2025() {
                   in designing and implementing intelligent logistics systems that deliver measurable business value.
                 </p>
                 <div className="text-left"></div>
-                  <a href="/contact" className="text-left"></a>
+                  <a href="/<contact" className="text-left"></a>
                     Schedule Consultation
                   </a>
-                  <a href="/services/ai-supply-chain" className="text-left"></a>
+                  <a href="/services/ai-supply-<chain" className="text-left"></a>
                     Explore Supply Chain Solutions
                   </a>
                 </div>

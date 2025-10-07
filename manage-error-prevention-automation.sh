@@ -33,10 +33,8 @@ print_error() {
 }
 
 print_header() {
-    echo -e "${BLUE}================================${NC}"
-    echo -e "${BLUE}$1${NC}"
-    echo -e "${BLUE}================================${NC}"
-}
+    echo -e "${BLUE}    echo -e "${BLUE}$1${NC}"
+    echo -e "${BLUE}}
 
 # Function to check if PM2 is installed
 check_pm2() {

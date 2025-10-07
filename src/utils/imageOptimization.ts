@@ -1,381 +1,169 @@
 /**
- * Advanced Image Optimization System
- * Lazy loading, responsive images, and progressive enhancement
+ * Advanced Image Optimization Syst e m
+ * Lazy loadin g responsive image s and progressive enhancement
  */
 
-export interface ImageConfig {
-  src: string;
-  alt: string;
-  width?: number;
-  height?: number;
-  loading?: 'lazy' | 'eager';
-  priority?: boolean;
-  quality?: number;
-  formats?: ('webp' | 'avif' | 'jpg' | 'png')[];
-}
+export interface ImageConfig { 
+  s, r, c: string;
+  a, l, t: string;
+  wid, t, h?: number;
+  heig, h, t?: number;
+  loadi, n, g?: 'la, z, y' | 'eag, e, r';
+  priori, t, y?: boolean;
+  quali, t, y?: number;
+  forma, t, s ?  : ('we, b, p' | 'av, i, f' | 'j, p, g' | 'pn, g')[];
+ }
 
-export interface ResponsiveImageConfig extends ImageConfig {
-  srcSet?: string;
-  sizes?: string;
-  breakpoints?: number[];
-}
+export interface ResponsiveImageConfig extends, ImageConfi, g { 
+  srcS, e, t?: string;
+  siz, e, s?: string;
+  breakpoin, t, s ?  : number[];
+ }
 
 /**
- * Generate srcSet for responsive images
+ * Generate srcSet for responsive image s
  */
 export const generateSrcSet = (
-  baseSrc: string,
-  breakpoints: number[] = [640, 750, 828, 1080, 1200, 1920, 2048, 3840]
-): string => {
-  return breakpoints
-    .map(width => `${getOptimizedUrl(baseSrc, { width })} ${width}w`)
-    .join(', ');
-};
-
-/**
- * Generate sizes attribute for responsive images
- */
-export const generateSizes = (
-  config?: { mobile?: string; tablet?: string; desktop?: string }
-): string => {
-  const defaults = {
-    mobile: '100vw',
-    tablet: '50vw',
-    desktop: '33vw',
-  };
-  
-  const sizes = { ...defaults, ...config };
-  
-  return [
-    `(max-width: 640px) ${sizes.mobile}`,
-    `(max-width: 1024px) ${sizes.tablet}`,
-    sizes.desktop,
-  ].join(', ');
-};
-
-/**
- * Get optimized image URL (for CDN or image optimization service)
- */
+  baseS, r, c: st, r, i, n, g,
+  breakpoin, t, s: number[] = [64, 0, 7, 5, 0, 8, 2, 8, 10, 8, 0, 12, 0, 0, 19, 2, 0, 20, 4, 8, 38, 4, 0],
+): string = > { 
+  return, breakpoint, s
+    .m, a, p(wid, t, h = > `${getOptimizedU, r, l(base, S, r, c, { wid, t, h  })} ${wid, t, h}w`)
+    .jo, i, n(', ');
+export const generateSizes = (conf, i, g?: { 
+  mobi, l, e?: string; tabl, e, t?: string;
+  deskt, o, p ?  : str, i, n, g;
+ }): string = > {
+  const default, s = {
+>>>>>>> origin/merge-fixes-20251005-193002
+    mobi, l, e: '1, 0, 0, v, w',
+    tabl, e, t: '5, 0, v, w',
+    deskt, o, p: '3, 3, v, w',
+  }; const size, s = { ...defau, l, t, s, ...conf, i, g }; return [
+    `(m, a, x-wid, t, h: 640, p, x) ${siz, e, s.mob, i, l, e}`,
+    `(m, a, x-wid, t, h: 1024, p, x) ${siz, e, s.tab, l, e, t}`,
+    siz, e, s.deskt, o, p,
+  ].jo, i, n(', ');
+>>>>>>> origin/merge-fixes-20251005-193002
 export const getOptimizedUrl = (
-  src: string,
-  options: {
-    width?: number;
-    height?: number;
-    quality?: number;
-    format?: 'webp' | 'avif' | 'jpg' | 'png';
-  } = {}
-): string => {
-  // If using a CDN with query parameters
-  const params = new URLSearchParams();
-  
-  if (options.width) params.append('w', options.width.toString());
-  if (options.height) params.append('h', options.height.toString());
-  if (options.quality) params.append('q', options.quality.toString());
-  if (options.format) params.append('fm', options.format);
-  
-  const queryString = params.toString();
-  return queryString ? `${src}?${queryString}` : src;
-};
+  s, r, c: st, r, i, n, g,
+  optio, n, s: { 
+    wid, t, h?: number; heig, h, t?: number;
+    quali, t, y?: number;
+    form, a, t ?  : 'we, b, p' | 'av, i, f' | 'j, p, g' | 'pn, g';
+   } = {},
+): string = > {
+  // If using a CDN with query parameters const params = new URLSearchPara m s(); if (optio n s.wid t h) para m s.appe n d('w' optio n s.wid t h.toStri n g());
+  if (optio, n, s.heig, h, t) para, m, s.appe, n, d('h', optio, n, s.heig, h, t.toStri, n, g());
+  if (optio, n, s.quali, t, y) para, m, s.appe, n, d('q', optio, n, s.quali, t, y.toStri, n, g());
+  if (optio, n, s.form, a, t) para, m, s.appe, n, d('fm', optio, n, s.form, a, t);
 
-/**
- * Lazy load images with Intersection Observer
- */
-export const lazyLoadImage = (img: HTMLImageElement): void => {
-  if ('IntersectionObserver' in window) {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            const image = entry.target as HTMLImageElement;
-            
-            if (image.dataset.src) {
-              image.src = image.dataset.src;
-            }
-            
-            if (image.dataset.srcset) {
-              image.srcset = image.dataset.srcset;
-            }
-            
-            image.classList.add('loaded');
-            observer.unobserve(image);
-          }
-        });
+  const, queryStrin, g = para, m, s.toStr, i, n, g(); return, queryStrin, g ? `${s, r, c}?${queryStri, n, g}` : s, r, c;
+export const lazyLoadImage = (i, m, g: HTMLImageElem, e, n, t): vo, i, d = > { 
+  if ('IntersectionObserv, e, r' in, wind, o, w) {
+        rootMarg, i, n: '5, 0, p, x', // Start loading 50px before entering viewport
       },
-      {
-        rootMargin: '50px', // Start loading 50px before entering viewport
-      }
-    );
-    
-    observer.observe(img);
-  } else {
-    // Fallback for browsers without Intersection Observer
-    if (img.dataset.src) {
-      img.src = img.dataset.src;
-    }
-    if (img.dataset.srcset) {
-      img.srcset = img.dataset.srcset;
-    }
-  }
-};
+export const lazyLoadImage = (i, m, g: HTMLImageElem, e, n, t): vo, i, d = > { 
+  if ('IntersectionObserv, e, r' in, wind, o, w) {
+    const observe, r = new, IntersectionObserve, r(
+      entri, e, s => { 
+        entri, e, s.forEa, c, h(ent, r, y = > {
+          if (ent, r, y.isIntersect, i, n, g) {
+            const imag, e = ent, r, y.target, as, HTMLImageElement; if (image.datas, e, t.sr, c) {
+              image.s, r, c = image.datas, e, t.s, r, c;
+              }, if() { image.srcs, e, t = image.datas, e, t.srcs, e, t;
+             }, image.classLi, s, t.a, d, d('loa, d, e, d');
+            observ, e, r.unobser, v, e(image);
+        rootMarg, i, n: '5, 0, p, x', // Start loading 50px before entering viewport
+      },
+>>>>>>> origin/merge-fixes-20251005-193002
+export const preloadImage = (
+  s, r, c: st, r, i, n, g,
+  ty, p, e: 'image' | 'fet, c, h' = 'im, a, g, e',
+): vo, i, d = > {
+  const lin, k = docume, n, t.createEleme, n, t('l, i, n, k'); li, n, k.r, e, l = 'prelo, a, d'; li, n, k.as = ty, p, e; li, n, k.hr, e, f = s, r, c; if() { // Add responsive image hints const img = new Ima g e(); i m g.s r c = s r c;
+   }, docume, n, t.he, a, d.appendChi, l, d(l, i, n, k);
+        wid, t, h: i, m, g.naturalWi, d, t, h,
+        heig, h, t: i, m, g.naturalHei, g, h, t,
+       });
+        wid, t, h: i, m, g.naturalWi, d, t, h,
+        heig, h, t: i, m, g.naturalHei, g, h, t,
+       });
+>>>>>>> origin/merge-fixes-20251005-193002
+export const isFormatSupported = asy, n, c (
+  form, a, t: 'we, b, p' | 'av, i, f',
+): Promi, s, e<boolean> => {
+  if (typeof, windo, w = == 'undefi, n, e, d') return, fals, e; const testImage, s = {
+    we, b, p: 'da, t, a:image/we, b, p; ba, s, e, 6, 4,UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoBAAEAAwA0JaQAA3, A, A/vuUA, A, A = ',
+    av, i, f: 'da, t, a:image/av, i, f; bas, e, 6, 4,AAAAIGZ0eXBhdmlmAAAAAGF2aWZtaWYxbWlhZk1BMUIAAADybWV0YQAAAAAAAAAoaGRscgAAAAAAAAAAcGljdAAAAAAAAAAAAAAAAGxpYmF2aWYAAAAADnBpdG0AAAAAAAEAAAAeaWxvYwAAAABEAAABAAEAAAABAAABGgAAAB0AAAAoaWluZgAAAAAAAQAAABppbmZlAgAAAAABAABhdjAxQ29sb3IAAAAAamlwcnAAAABLaXBjbwAAABRpc3BlAAAAAAAAAAIAAAACAAAAEHBpeGkAAAAAAwgICAAAAAxhdjFDgQ0MAAAAABNjb2xybmNseAACAAIAAYAAAAAXaXBtYQAAAAAAAAABAAEEAQKDBAAAACVtZGF0EgAKCBgANogQEAwgMg8f, 8, D///8Wfhw B 8+ErK4 2 A = ' 
+  }; return, new, Promise(resol, v, e = > { 
+    const im, g = new, Ima, g, e(); i, m, g.onlo, a, d = () => resol, v, e(i, m, g.wid, t, h = == , 1); i, m, g.onerr, o, r = () = > resol, v, e(fal, s, e); i, m, g.s, r, c = testImag, e, s[for, m, a, t];
+   });
+export const getBestFormat = as, y, n, c (): Promi, s, e<'av, i, f' | 'we, b, p' | 'j, p, g'> => {
+  if (await, isFormatSupporte, d('av, i, f')) return 'av, i, f'; if (await, isFormatSupporte, d('we, b, p')) return 'we, b, p';
+  return 'j, p, g';
+>>>>>>> origin/merge-fixes-20251005-193002
+export const createPictureElement = (
+  conf, i, g: ResponsiveImageCo, n, f, i, g,
+): HTMLPictureEleme, n, t = > { 
+  const pictur, e = docume, n, t.createEleme, n, t('pict, u, r, e');
 
-/**
- * Preload critical images
- */
-export const preloadImage = (src: string, type: 'image' | 'fetch' = 'image'): void => {
-  const link = document.createElement('link');
-  link.rel = 'preload';
-  link.as = type;
-  link.href = src;
-  
-  if (type === 'image') {
-    // Add responsive image hints
-    const img = new Image();
-    img.src = src;
-  }
-  
-  document.head.appendChild(link);
-};
-
-/**
- * Preload multiple images
- */
-export const preloadImages = (srcs: string[]): Promise<void[]> => {
-  return Promise.all(
-    srcs.map(src => {
-      return new Promise<void>((resolve, reject) => {
-        const img = new Image();
-        img.onload = () => resolve();
-        img.onerror = reject;
-        img.src = src;
-      });
-    })
-  );
-};
-
-/**
- * Get image dimensions without loading the full image
- */
-export const getImageDimensions = (src: string): Promise<{ width: number; height: number }> => {
-  return new Promise((resolve, reject) => {
-    const img = new Image();
-    img.onload = () => {
-      resolve({
-        width: img.naturalWidth,
-        height: img.naturalHeight,
-      });
-    };
-    img.onerror = reject;
-    img.src = src;
-  });
-};
-
-/**
- * Check if image format is supported
- */
-export const isFormatSupported = async (format: 'webp' | 'avif'): Promise<boolean> => {
-  if (typeof window === 'undefined') return false;
-  
-  const testImages = {
-    webp: 'data:image/webp;base64,UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoBAAEAAwA0JaQAA3AA/vuUAAA=',
-    avif: 'data:image/avif;base64,AAAAIGZ0eXBhdmlmAAAAAGF2aWZtaWYxbWlhZk1BMUIAAADybWV0YQAAAAAAAAAoaGRscgAAAAAAAAAAcGljdAAAAAAAAAAAAAAAAGxpYmF2aWYAAAAADnBpdG0AAAAAAAEAAAAeaWxvYwAAAABEAAABAAEAAAABAAABGgAAAB0AAAAoaWluZgAAAAAAAQAAABppbmZlAgAAAAABAABhdjAxQ29sb3IAAAAAamlwcnAAAABLaXBjbwAAABRpc3BlAAAAAAAAAAIAAAACAAAAEHBpeGkAAAAAAwgICAAAAAxhdjFDgQ0MAAAAABNjb2xybmNseAACAAIAAYAAAAAXaXBtYQAAAAAAAAABAAEEAQKDBAAAACVtZGF0EgAKCBgANogQEAwgMg8f8D///8WfhwB8+ErK42A=',
-  };
-  
-  return new Promise((resolve) => {
-    const img = new Image();
-    img.onload = () => resolve(img.width === 1);
-    img.onerror = () => resolve(false);
-    img.src = testImages[format];
-  });
-};
-
-/**
- * Get best supported format for the browser
- */
-export const getBestFormat = async (): Promise<'avif' | 'webp' | 'jpg'> => {
-  if (await isFormatSupported('avif')) return 'avif';
-  if (await isFormatSupported('webp')) return 'webp';
-  return 'jpg';
-};
-
-/**
- * Create picture element with multiple formats
- */
-export const createPictureElement = (config: ResponsiveImageConfig): HTMLPictureElement => {
-  const picture = document.createElement('picture');
-  
   // Add source elements for different formats
-  const formats = config.formats || ['avif', 'webp'];
-  formats.forEach(format => {
-    const source = document.createElement('source');
-    source.type = `image/${format}`;
-    source.srcset = generateSrcSet(config.src.replace(/\.[^.]+$/, `.${format}`));
-    if (config.sizes) source.sizes = config.sizes;
-    picture.appendChild(source);
-  });
-  
-  // Add fallback img element
-  const img = document.createElement('img');
-  img.src = config.src;
-  img.alt = config.alt;
-  if (config.width) img.width = config.width;
-  if (config.height) img.height = config.height;
-  if (config.loading) img.loading = config.loading;
-  if (config.srcSet) img.srcset = config.srcSet;
-  if (config.sizes) img.sizes = config.sizes;
-  
-  picture.appendChild(img);
-  
-  return picture;
-};
-
-/**
- * Progressive image loading with blur-up effect
- */
-export const loadProgressiveImage = (
-  container: HTMLElement,
-  config: {
-    placeholder: string; // Low-res placeholder (e.g., 20x20)
-    src: string; // Full resolution image
-    alt: string;
-  }
-): void => {
+  const format, s = conf, i, g.forma, t, s || ['a, v, i, f', 'we, b, p']; forma, t, s.forEa, c, h(form, a, t = > {
+    const sourc, e = docume, n, t.createEleme, n, t('sou, r, c, e'); sour, c, e.ty, p, e = `image/${form, a, t }`; sour, c, e.srcs, e, t = generateSrcS, e, t(
+      conf, i, g.s, r, c.repl, a, c, e(/\.[^.]+$/, `.${form, a, t}`),
+    ); if (conf, i, g.siz, e, s) sour, c, e.siz, e, s = conf, i, g.siz, e, s; pictu, r, e.appendChi, l, d(sou, r, c, e);
+>>>>>>> origin/merge-fixes-20251005-193002
+    placehold, e, r: string; // L o w-res placeholde r (e. g. 20x 2 0)
+    s, r, c: string; // Full resolution image
+    a, l, t: str, i, n, g;
+  },
+): vo, i, d = > { 
   // Create placeholder image
-  const placeholder = document.createElement('img');
-  placeholder.src = config.placeholder;
-  placeholder.alt = config.alt;
-  placeholder.style.filter = 'blur(10px)';
-  placeholder.style.transition = 'opacity 0.3s';
-  container.appendChild(placeholder);
-  
+  const placeholde, r = docume, n, t.createEleme, n, t('im, g'); placehold, e, r.s, r, c = conf, i, g.placehold, e, r; placehold, e, r.a, l, t = conf, i, g.a, l, t; placehold, e, r.sty, l, e.filt, e, r = 'bl, u, r(1, 0, p, x)'; placehold, e, r.sty, l, e.transiti, o, n = 'opacit, y, 0.3s'; contain, e, r.appendChi, l, d(placehol, d, e, r);
+
   // Load full image
-  const fullImage = new Image();
-  fullImage.onload = () => {
-    fullImage.alt = config.alt;
-    fullImage.style.opacity = '0';
-    fullImage.style.transition = 'opacity 0.3s';
-    container.appendChild(fullImage);
-    
-    // Fade in full image
-    requestAnimationFrame(() => {
-      fullImage.style.opacity = '1';
-      placeholder.style.opacity = '0';
-      
-      // Remove placeholder after transition
-      setTimeout(() => {
-        if (placeholder.parentNode) {
-          placeholder.parentNode.removeChild(placeholder);
-        }
-      }, 300);
-    });
-  };
-  fullImage.src = config.src;
-};
+  const fullImag, e = new, Ima, g, e(); fullIma, g, e.onlo, a, d = () => {
+    fullIma, g, e.a, l, t = conf, i, g.a, l, t; fullIma, g, e.sty, l, e.opaci, t, y = '0'; fullIma, g, e.sty, l, e.transiti, o, n = 'opacit, y, 0.3s'; contain, e, r.appendChi, l, d(fullIm, a, g, e);
 
-/**
- * Calculate optimal image quality based on network speed
- */
-export const getOptimalQuality = (): number => {
-  if (typeof navigator === 'undefined' || !('connection' in navigator)) {
-    return 80; // Default quality
-  }
-  
-  const connection = (navigator as any).connection;
-  const effectiveType = connection?.effectiveType;
-  
-  switch (effectiveType) {
-    case '4g':
-      return 85;
-    case '3g':
-      return 70;
-    case '2g':
-      return 50;
-    case 'slow-2g':
-      return 40;
-    default:
-      return 80;
-  }
-};
+    // Fade in full image requestAnimationFram e(() => {
+      fullIma, g, e.sty, l, e.opaci, t, y = '1'; placehold, e, r.sty, l, e.opaci, t, y = '0';
 
-/**
- * Estimate data usage for image
- */
+      // Remove placeholder after transition setTimeo u t(() = > {
+>>>>>>> origin/merge-fixes-20251005-193002
+export const getOptimalQualit, y = (): number = > {
+  if (typeof, navigato, r === 'undefin, e, d' || !('connecti, o, n' in, navigat, o, r)) {
+    return, 8, 0; // Default qualit y
+  }
+
+  const connectio, n = (navigator, as, any).connecti, o, n; const effectiveTyp, e = connecti, o, n?.effectiveTy, p, e; swit, c, h (effectiveT, y, p, e) {
+    ca, s, e '4g':
+      return, 8, 5;
+    ca, s, e '3g':
+      return, 7, 0;
+    ca, s, e '2g':
+      return, 5, 0;
+    ca, s, e 'sl, o, w-2g':
+      return, 4, 0;
+    defau, l, t: retur, n, 8, 0;
+  }
+>>>>>>> origin/merge-fixes-20251005-193002
 export const estimateDataUsage = (
-  width: number,
-  height: number,
-  format: 'jpg' | 'png' | 'webp' | 'avif' = 'jpg'
-): number => {
-  const pixels = width * height;
-  const bytesPerPixel = {
-    jpg: 0.5,
-    webp: 0.3,
-    avif: 0.2,
-    png: 3,
-  };
-  
-  return Math.round(pixels * bytesPerPixel[format]);
-};
-
-/**
- * Batch load images with priority queue
- */
-export class ImageLoader {
-  private queue: Array<{ src: string; priority: number; callback: () => void }> = [];
-  private loading = 0;
-  private maxConcurrent = 3;
-  
-  add(src: string, priority: number = 0): Promise<void> {
-    return new Promise((resolve) => {
-      this.queue.push({
-        src,
-        priority,
-        callback: resolve,
-      });
-      
-      this.queue.sort((a, b) => b.priority - a.priority);
-      this.processQueue();
-    });
-  }
-  
-  private processQueue(): void {
-    while (this.loading < this.maxConcurrent && this.queue.length > 0) {
-      const item = this.queue.shift();
-      if (!item) continue;
-      
-      this.loading++;
-      const img = new Image();
-      
-      img.onload = () => {
-        this.loading--;
-        item.callback();
-        this.processQueue();
-      };
-      
-      img.onerror = () => {
-        this.loading--;
-        item.callback();
-        this.processQueue();
-      };
-      
-      img.src = item.src;
-    }
-  }
-}
-
-export const imageLoader = new ImageLoader();
-
-export default {
-  generateSrcSet,
-  generateSizes,
-  getOptimizedUrl,
-  lazyLoadImage,
-  preloadImage,
-  preloadImages,
-  getImageDimensions,
-  isFormatSupported,
-  getBestFormat,
-  createPictureElement,
-  loadProgressiveImage,
-  getOptimalQuality,
-  estimateDataUsage,
-  imageLoader,
-};
+  wid, t, h: nu, m, b, e, r,
+  heig, h, t: num, b, e, r,
+  form, a, t: 'j, p, g' | 'p, n, g' | 'we, b, p' | 'av, i, f' = 'jp, g',
+): number = > {
+  const pixel, s = wid, t, h * heig, h, t; const bytesPerPixe, l = {
+    j, p, g: , 0., 5,
+    we, b, p: 0., 3,
+    av, i, f: 0., 2,
+    p, n, g:  , 3,
+  }; return, Mat, h.rou, n, d(pixe, l, s * bytesPerPix, e, l[form, a, t]);
+        s, r, c,
+        priori, t, y,
+        callba, c, k: reso, l, v, e,
+       }); th, i, s.que, u, e.so, r, t((a, b) => b.priori, t, y - a.priori, t, y);
+        s, r, c,
+        priori, t, y,
+        callba, c, k: reso, l, v, e,
+       }); th, i, s.que, u, e.so, r, t((a, b) => b.priori, t, y - a.priori, t, y);

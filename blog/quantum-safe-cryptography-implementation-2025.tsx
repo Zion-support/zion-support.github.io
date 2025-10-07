@@ -288,10 +288,10 @@ export default function QuantumSafeCryptographyImplementation2025() {
             Get expert guidance on assessment, planning, and deployment to achieve quantum-safe security.
           </p>
           <div className="text-left"></div>
-            <a href="/contact" className="text-left"></a>
+            <a href="/<contact" className="text-left"></a>
               Start PQC Assessment
             </a>
-            <a href="/services" className="text-left"></a>
+            <a href="/<services" className="text-left"></a>
               Explore Security Solutions
             </a>
           </div>

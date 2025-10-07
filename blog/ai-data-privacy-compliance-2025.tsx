@@ -17,7 +17,7 @@ export default function AIDataPrivacyCompliance2025() {
     <div className="text-left"></div>
       <main className="text-left">
         <nav className="text-left">
-          <a href="/blog" className="text-left"></a>
+          <a href="/<blog" className="text-left"></a>
             ← Back to Blog
           </a>
         </nav>
@@ -116,10 +116,10 @@ export default function AIDataPrivacyCompliance2025() {
                 We implement privacy-by-design architectures that accelerate AI adoption while reducing risk.
               </p>
               <div className="text-left"></div>
-                <a href="/contact" className="text-left"></a>
+                <a href="/<contact" className="text-left"></a>
                   Talk to Our Governance Team
                 </a>
-                <a href="/case-studies" className="text-left"></a>
+                <a href="/case-<studies" className="text-left"></a>
                   View Compliance Case Studies
                 </a>
               </div>
@@ -129,10 +129,10 @@ export default function AIDataPrivacyCompliance2025() {
             <div className="text-left"></div>
               <div className="text-left">Written by Zion Tech Group Governance Team</div>
               <div className="text-left"></div>
-                <a href="/blog" className="text-left"></a>
+                <a href="/<blog" className="text-left"></a>
                   ← Back to Blog
                 </a>
-                <a href="/contact" className="text-left"></a>
+                <a href="/<contact" className="text-left"></a>
                   Get in Touch
                 </a>
               </div>
@@ -161,7 +161,7 @@ export default function AIDataPrivacyCompliance2025() {
     <div className="text-left"></div>
       <main className="text-left">
         <nav className="text-left">
-          <a href="/blog" className="text-left"></a>
+          <a href="/<blog" className="text-left"></a>
             ← Back to Blog
           </a>
         </nav>
@@ -448,14 +448,12 @@ export default function AIDataPrivacyCompliance2025() {
               </p>
               <div className="text-left"></div>
                 <a
-                  href="/contact"
-                  className="text-left"
+                  href="/<contact" className="text-left"
                 ></a>
                   Schedule Compliance Audit
                 </a>
                 <a
-                  href="/services"
-                  className="text-left"
+                  href="/<services" className="text-left"
                 ></a>
                   Privacy Services
                 </a>
@@ -468,10 +466,10 @@ export default function AIDataPrivacyCompliance2025() {
                 Written by Zion Tech Group Privacy & Compliance Team
               </div>
               <div className="text-left"></div>
-                <a href="/blog" className="text-left"></a>
+                <a href="/<blog" className="text-left"></a>
                   ← Back to Blog
                 </a>
-                <a href="/contact" className="text-left"></a>
+                <a href="/<contact" className="text-left"></a>
                   Get in Touch
                 </a>
               </div>

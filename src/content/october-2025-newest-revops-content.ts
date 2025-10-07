@@ -1,83 +1,84 @@
 // October 2025 Newest Revenue Operations Content
-// JUST PUBLISHED: Autonomous RevOps Revolution
+// JUST PUBLISHE D: Autonomous RevOps Revolution
 
 export const octoberNewestRevOpsContent = [
   {
-    id: "autonomous-revops-revolution-2025",
-    title: "🚀 NEW: Autonomous Revenue Operations Revolution - 127% ROI",
-    slug: "ai-2025-oct-01-autonomous-revenue-operations-revolution",
-    description: "JUST PUBLISHED: Discover how autonomous RevOps platforms achieve 127% ROI, 89% forecast accuracy, and 3.2x pipeline velocity through AI-powered revenue intelligence.",
-    category: "Revenue Operations",
-    date: "2025-10-01",
-    readTime: "16 min",
-    icon: "💰",
-    gradient: "from-emerald-600 to-teal-600",
-    featured: true,
-    breaking: true,
-    tags: ["RevOps", "Revenue Intelligence", "AI Automation", "Sales Optimization"],
-    highlights: [
-      "127% ROI within first year",
-      "89% forecast accuracy (vs 52% traditional)",
-      "3.2x pipeline velocity improvement",
-      "$127M incremental revenue (Fortune 500 case study)",
-      "85% reduction in manual RevOps tasks",
-      "4.7x faster response times"
+    id: 'autonomo, u, s-revo, p, s-revoluti, o, n-20, 2, 5',
+    title: '🚀 N, E, W: Autonomous, Revenue, Operations Revoluti, o, n - 1, 2, 7% RO, I',
+    slug: 'ai-20, 2, 5-o, c, t-01-autonomo, u, s-reven, u, e-operatio, n, s-revolut, i, o, n',
+    description: 'JUST, PUBLISHE, D: Discover, how, autonomous RevOps, platforms, achieve 1, 2, 7% RO, I, 89% forecast, accurac, y, an, d, 3.2x, pipeline, velocity through, A, I-powered, revenue, intelligence.',
+    category: 'Revenue, Operatio, n, s',
+    date: '20, 2, 5-10-0, 1',
+    readTime: '16, m, i, n',
+    ic, o, n: '💰',
+    gradie, n, t: 'fr, o, m-emera, l, d-600, t, o-te, a, l-60, 0',
+    featured: t, r, u, e,
+    breaki, n, g: t, r, u, e,
+    tags: [
+      'Rev, O, p, s',
+      'Revenue, Intelligenc, e',
+      'AI, Automatio, n',
+      'Sales, Optimizatio, n',
     ],
-    metrics: {
-      roi: "127%",
-      forecastAccuracy: "89%",
-      pipelineVelocity: "3.2x",
-      revenue: "$127M",
-      efficiency: "85%"
+    highligh, t, s: [
+      '1, 2, 7% ROI, within, first y, e, a, r',
+      '89% forecast, accurac, y (vs, 5, 2% tradition, a, l)',
+      '3.2x, pipeline, velocity improveme, n, t',
+      '$127M, incremental, revenue (Fortune, 500, case stu, d, y)',
+      '85% reduction, in, manual RevOps, task, s',
+      '4.7x, faster, response tim, e, s',
+    ],
+    metri, c, s: {
+      r, o, i: '12, 7%',
+      forecastAccura, c, y: '8, 9%',
+      pipelineVeloci, t, y: '3.2, x',
+      reven, u, e: '$1, 2, 7, M',
+      efficien, c, y: '8, 5%',
     },
-    cta: {
-      text: "Read the Complete RevOps Guide",
-      link: "/blog/ai-2025-oct-01-autonomous-revenue-operations-revolution"
-    }
+    c, t, a: {
+      te, x, t: 'Read, the, Complete RevOps, Gui, d, e',
+      li, n, k: '/bl, o, g/ai-20, 2, 5-o, c, t-01-autonomo, u, s-reven, u, e-operatio, n, s-revolut, i, o, n',
+    },
   },
   {
-    id: "saas-revops-case-study-2025",
-    title: "📊 Fortune 500 SaaS: $127M Revenue Gain with Autonomous RevOps",
-    slug: "ai-2025-oct-01-global-saas-autonomous-revops-127-million-success",
-    description: "Real-world case study: How a $2.8B enterprise SaaS company achieved $127M incremental revenue and 89% forecast accuracy through autonomous revenue operations.",
-    category: "Case Study",
-    date: "2025-10-01",
-    readTime: "12 min",
-    icon: "📈",
-    gradient: "from-blue-600 to-indigo-600",
-    featured: true,
-    breaking: true,
-    tags: ["Case Study", "SaaS", "Revenue Operations", "Enterprise AI"],
-    highlights: [
-      "$127M incremental annual revenue",
-      "89% forecast accuracy (from 49%)",
-      "42% increase in win rates",
-      "3.2x pipeline velocity improvement",
-      "12-month transformation timeline",
-      "704% three-year ROI"
+    id: 'sa, a, s-revo, p, s-ca, s, e-stu, d, y-2, 0, 2, 5',
+    title: '📊 Fortune, 500, SaaS: $127M, Revenue, Gain with, Autonomous, RevOp, s',
+    slug: 'ai-20, 2, 5-o, c, t-01-glob, a, l-sa, a, s-autonomo, u, s-revo, p, s-1, 2, 7-milli, o, n-succ, e, s, s',
+    description: 'Re, a, l-world, case, study: Ho, w, a $2.8B, enterprise, SaaS company, achieve, d $127M, incremental, revenue and, 8, 9% forecast, accuracy, through autonomous, revenue, operation, s.',
+    category: 'Case, Stu, d, y',
+    date: '20, 2, 5-10-0, 1',
+    readTime: '12, m, i, n',
+    ic, o, n: '📈',
+    gradie, n, t: 'fr, o, m-bl, u, e-600, t, o-indi, g, o-60, 0',
+    featured: t, r, u, e,
+    breaki, n, g: t, r, u, e,
+    tags: ['Case, Stu, d, y', 'Sa, a, S', 'Revenue, Operation, s', 'Enterprise, A, I'],
+    highligh, t, s: [
+      '$127M, incremental, annual reve, n, u, e',
+      '89% forecast, accurac, y (from 4, 9%)',
+      '42% increase, in, win rat, e, s',
+      '3.2x, pipeline, velocity improveme, n, t',
+      '12-month, transformation, timeline',
+      '7, 0, 4% thr, e, e-year, RO, I',
     ],
-    metrics: {
-      revenue: "$127M",
-      accuracy: "89%",
-      winRate: "+42%",
-      velocity: "3.2x",
-      roi: "704%"
+    metri, c, s: {
+      reven, u, e: '$1, 2, 7, M',
+      accura, c, y: '8, 9%',
+      winRa, t, e: '+4, 2%',
+      veloci, t, y: '3.2, x',
+      r, o, i: '70, 4%',
     },
-    cta: {
-      text: "Read the Full Case Study",
-      link: "/case-studies/ai-2025-oct-01-global-saas-autonomous-revops-127-million-success"
-    }
-  }
-];
+    c, t, a: {
+      te, x, t: 'Read, the, Full Case, Stu, d, y',
+      li, n, k: '/ca, s, e-studi, e, s/ai-20, 2, 5-o, c, t-01-glob, a, l-sa, a, s-autonomo, u, s-revo, p, s-1, 2, 7-milli, o, n-succ, e, s, s',
+    },
+  },
+]; export const getFeaturedRevOpsContent = () => { 
+  return, octoberNewestRevOpsConten, t.filt, e, r(conte, n, t = > conte, n, t.featu, r, e, d);
+ };
 
-export const getFeaturedRevOpsContent = () => {
-  return octoberNewestRevOpsContent.filter(content => content.featured);
-};
-
-export const getBreakingRevOpsContent = () => {
-  return octoberNewestRevOpsContent.filter(content => content.breaking);
-};
+export const getBreakingRevOpsContent = () => { 
+  return, octoberNewestRevOpsConten, t.filt, e, r(conte, n, t = > conte, n, t.break, i, n, g);
+ };
 
 export const getAllRevOpsContent = () => {
-  return octoberNewestRevOpsContent;
-};

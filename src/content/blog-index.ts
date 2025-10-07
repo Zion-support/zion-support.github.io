@@ -3,7 +3,7 @@
  * Centralized index of all blog posts for easy discovery and navigation
  */
 
-export interface BlogPost {
+export interface BlogPost { 
   slug: string;
   title: string;
   description: string;
@@ -82,7 +82,7 @@ export const october2025Breakthroughs: BlogPost[] = [
     readTime: '10 min',
     tags: ['streaming', 'decisioning', 'feature store', 'KPIs'],
     featured: true,
-    valueProposition: '$215M annual value'
+    valueProposition: '$215M annual value',
   },
   {
     slug: 'ai-2025-oct-03-autonomous-cloud-security',
@@ -93,7 +93,7 @@ export const october2025Breakthroughs: BlogPost[] = [
     readTime: '9 min',
     tags: ['security', 'zero trust', 'automation', 'rollback'],
     featured: true,
-    valueProposition: '$42M annual savings'
+    valueProposition: '$42M annual savings',
   },
   {
     slug: 'ai-2025-oct-03-quantum-supply-chain-optimization',
@@ -104,72 +104,7 @@ export const october2025Breakthroughs: BlogPost[] = [
     readTime: '11 min',
     tags: ['quantum', 'optimization', 'supply chain'],
     featured: true,
-    valueProposition: '$127M annual savings'
-  },
-];
-
-/**
- * All blog posts collection
- */
-export const allBlogPosts: BlogPost[] = [
-  ...october2025Breakthroughs,
-  // Newly added October 2025 posts
-  {
-    slug: 'ai-2025-oct-01-private-feature-flags-zero-pii',
-    title: 'Private Feature Flags: Zero‑PII Experiments Under 100ms',
-    description: 'Run high‑velocity A/B tests without centralizing PII using signed configs, scoped IDs, and edge analytics.',
-    category: 'Experimentation',
-    date: '2025-10-01',
-    readTime: '8 min',
-    tags: ['Feature Flags', 'Privacy', 'Edge', 'A/B', 'DP'],
-    featured: true,
-    valueProposition: 'Zero PII, <100ms at edge'
-  },
-  {
-    slug: 'ai-2025-oct-01-runtime-rollback-guardrails',
-    title: 'Runtime Rollback Guardrails: Ship Faster With Reversible Changes',
-    description: 'Blueprint for instant rollbacks, canary scorecards, and budgeted routes—move fast without breakage.',
-    category: 'Reliability',
-    date: '2025-10-01',
-    readTime: '7 min',
-    tags: ['Rollback', 'Canary', 'Guardrails', 'Deploy', 'SRE'],
-    featured: true,
-    valueProposition: 'Faster deploys, safer rollbacks'
-  },
-  // October 1, 2025 additions (this branch)
-  {
-    slug: 'edge-2025-oct-01-zero-pii-telemetry-v2',
-    title: 'Zero‑PII Telemetry v2: Decision‑Grade Signals Without Centralized IDs',
-    description: 'Scoped identifiers, on‑device redaction, and DP noise for rich insights with zero PII risk.',
-    category: 'Observability',
-    date: '2025-10-01',
-    readTime: '9 min',
-    tags: ['Privacy', 'Telemetry', 'Edge', 'DP'],
-    featured: true,
-    valueProposition: '$8M+ savings via safe analytics'
-  },
-  {
-    slug: 'genai-2025-oct-01-eval-scorecards-live-canaries',
-    title: 'Live Evals & Scorecards: Ship GenAI Fast Without Regressions',
-    description: 'Online evals tied to KPIs with canary gates and auto‑rollback when quality dips.',
-    category: 'GenAI',
-    date: '2025-10-01',
-    readTime: '10 min',
-    tags: ['Evals', 'Scorecards', 'Canaries', 'Guardrails'],
-    featured: true,
-    valueProposition: 'Protect velocity, prevent regressions'
-  },
-  // October 2, 2025 additions (from main)
-  {
-    slug: 'ai-2025-oct-02-private-experiments-blueprint',
-    title: 'Private Experiments Blueprint: Zero‑PII Testing at the Edge',
-    description: 'Run A/B tests without PII using signed configs, scoped IDs, and edge analytics under 100ms.',
-    category: 'Experimentation',
-    date: '2025-10-02',
-    readTime: '10 min',
-    tags: ['Privacy', 'Edge', 'Experiments', 'Feature Flags'],
-    featured: true,
-    valueProposition: 'Zero‑PII experiments at the edge'
+    valueProposition: '$127M annual savings',
   },
   {
     slug: 'ai-2025-oct-02-rollback-guardrails-blueprint',
@@ -180,78 +115,53 @@ export const allBlogPosts: BlogPost[] = [
     readTime: '9 min',
     tags: ['Rollback', 'Canary', 'Guardrails', 'Budgets'],
     featured: true,
-    valueProposition: 'Instant reversibility, resilient releases'
+    valueProposition: 'Instant reversibility, resilient releases',
   },
 ];
 
-/**
- * Get featured blog posts
- */
-export function getFeaturedPosts(): BlogPost[] {
-  return allBlogPosts.filter((post) => post.featured);
-}
+// Combine all blog posts
+export const allBlogPosts: BlogPost[] = [
+  ...october2025Breakthroughs,
+];
 
-/**
- * Get posts by category
- */
-export function getPostsByCategory(category: string): BlogPost[] {
-  return allBlogPosts.filter((post) => post.category === category);
-}
+// Helper functions
+export const getFeaturedPosts = (): BlogPost[] => {
+  return allBlogPosts.filter(post => post.featured);
+};
 
-/**
- * Get posts by tag
- */
-export function getPostsByTag(tag: string): BlogPost[] {
-  return allBlogPosts.filter((post) => post.tags.includes(tag));
-}
+export const getPostsByCategory = (category: string): BlogPost[] => {
+  return allBlogPosts.filter(post => post.category === category);
+};
 
-/**
- * Search posts by query
- */
-export function searchPosts(query: string): BlogPost[] {
-  const lowerQuery = query.toLowerCase();
-  return allBlogPosts.filter(
-    (post) =>
-      post.title.toLowerCase().includes(lowerQuery) ||
-      post.description.toLowerCase().includes(lowerQuery) ||
-      post.tags.some((tag) => tag.toLowerCase().includes(lowerQuery))
-  );
-}
+export const getAllCategories = (): string[] => {
+  return [...new Set(allBlogPosts.map(post => post.category))];
+};
 
-/**
- * Get all unique categories
- */
-export function getAllCategories(): string[] {
-  return Array.from(new Set(allBlogPosts.map((post) => post.category)));
-}
+export const getAllTags = (): string[] => {
+  return [...new Set(allBlogPosts.flatMap(post => post.tags))];
+};
 
-/**
- * Get all unique tags
- */
-export function getAllTags(): string[] {
-  const tags = allBlogPosts.flatMap((post) => post.tags);
-  return Array.from(new Set(tags));
-}
-
-/**
- * Get total value proposition across all posts
- */
-export function getTotalValueProposition(): string {
-  // Extract numerical values from value propositions
-  const total = allBlogPosts.reduce((sum, post) => {
-    const match = post.valueProposition.match(/\$(\d+)M/);
-    if (match) {
-      return sum + parseInt(match[1], 10);
+export const getTotalValueProposition = (): string => {
+  const totalValue = allBlogPosts.reduce((sum, post) => {
+    const value = post.valueProposition.match(/\$[\d.]+[MBK]?/);
+    if (value) {
+      const num = parseFloat(value[0].replace(/[$,MBK]/g, ''));
+      const multiplier = value[0].includes('M') ? 1000000 : value[0].includes('B') ? 1000000000 : value[0].includes('K') ? 1000 : 1;
+      return sum + (num * multiplier);
     }
     return sum;
   }, 0);
   
-  return `$${total}M+`;
-}
+  if (totalValue >= 1000000000) {
+    return `$${(totalValue / 1000000000).toFixed(1)}B`;
+  } else if (totalValue >= 1000000) {
+    return `$${(totalValue / 1000000).toFixed(1)}M`;
+  } else if (totalValue >= 1000) {
+    return `$${(totalValue / 1000).toFixed(1)}K`;
+  }
+  return `$${totalValue.toFixed(0)}`;
+};
 
-/**
- * Blog post statistics
- */
 export const blogStats = {
   totalPosts: allBlogPosts.length,
   featuredPosts: getFeaturedPosts().length,

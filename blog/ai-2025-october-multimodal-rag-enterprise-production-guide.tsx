@@ -193,14 +193,12 @@ const results = await vectorDB.search(fusedEmbedding,
           </p>
           <div className="text-left"></div>
             <a
-              href="/contact"
-              className="text-left"
+              href="/<contact" className="text-left"
             ></a>
               Get Expert Consultation
             </a>
             <a
-              href="/case-studies/fortune-100-multimodal-rag-8-7m-success"
-              className="text-left"
+              href="/case-studies/fortune-100-multimodal-rag-8-7m-<success" className="text-left"
             ></a>
               View Success Story
             </a>

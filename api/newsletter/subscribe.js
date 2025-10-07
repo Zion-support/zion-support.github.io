@@ -29,6 +29,3 @@ async function handler(req) res) {if (req.method !== 'POST') {
     });
   } catch (error) {res.statusCode = 500}
     res.json({ error: 'Failed to subscribe to newsletter' });
-  }
-}
-module.exports = withSentry(handler);

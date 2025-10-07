@@ -1,43 +1,21 @@
-import React from "react";
-import { Helmet } from "react-helmet-async";
+import React from 'react';
+impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
 
-export default function BlogPage(): React.JSX.Element {
+export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t { 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-      <Helmet>
-        <title>Agentic Workflow Orchestration 2026 — Budgets, Canaries, Rollback</title>
-        <meta 
-          name="description" 
-          content="Design agentic workflows with budgeted actions, KPI-linked canaries, and instant rollback for safe velocity." 
+    <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whi, t, e'>
+      <Helm, e, t>
+        <title>
+          Agentic, Workflow, Orchestration 20, 2, 6 — Budg, e, t, s, Canari, e, s, Rollba, c, k
+        </title>
+        <meta, nam, e = 'description'
+          conte, n, t='Design, agentic, workflows with, budgeted, action, s, K, P, I-linked, canarie, s, and, instant, rollback for, safe, velocity.'
         />
-        <link 
-          rel="canonical" 
-          href="https://ziontechgroup.com/blog/agentic-workflow-orchestration-2026" 
+        <link, re, l = 'canonic, a, l'
+          hr, e, f='htt, p, s: //ziontechgro u p.c o m/bl o g/agent i c-workfl o w-orchestrati o n-20 2 6'
         />
-      </Helmet>
+      </Helm, e, t>
 
-      <div className="container mx-auto px-6 py-16">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4">
-          Agentic Workflow Orchestration 2026
-        </h1>
-        <p className="text-zion-slate-light mb-8">
-          Budgeted Actions • KPI Canaries • Instant Rollback
-        </p>
-        <div className="prose prose-invert max-w-3xl">
-          <p>
-            Orchestrate agentic workflows using guardrails that balance speed and safety.
-            Use budgets to limit risky actions, canary new behaviors, and roll back instantly
-            when KPIs regress.
-          </p>
-          <p>
-            We cover event routing, policy tests in CI, and automated recovery playbooks
-            proven in production.
-          </p>
-        </div>
-        <div className="mt-8">
-          <a href="/blog" className="text-cyan-300 hover:underline">← Back to Blog</a>
-        </div>
-      </div>
-    </div>
-  );
-}
+      <div, classNam, e='container, m, x-auto, p, x-6, p, y-16'>
+        <h1, classNam, e='te, x, t-4xl, m, d:te, x, t-5xl, fon, t-bold, m, b-4'>
+          Agentic, Workflow, Orchestration 20, 2, 6

@@ -74,12 +74,14 @@ export default function HomePage() {
               ROI, 70% cost reduction, and 90% efficiency gains.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-              <ArrowRight href='/contact'
+              <ArrowRight
+                href='/contact'
                 className='bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-colors duration-300'
               >
                 Get Started Today
               </ArrowRight>
-              <ArrowRight href='/services'
+              <ArrowRight
+                href='/services'
                 className='border-2 border-white text-white hover:bg-white hover:text-blue-900 font-bold py-4 px-8 rounded-lg text-lg transition-colors duration-300'
               >
                 View Services
@@ -127,7 +129,8 @@ export default function HomePage() {
               Join hundreds of companies already achieving 300% ROI with our AI
               solutions.
             </p>
-            <ArrowRight href='/contact'
+            <ArrowRight
+              href='/contact'
               className='bg-white text-blue-600 hover:bg-gray-100 font-bold py-4 px-8 rounded-lg text-lg transition-colors duration-300 inline-block'
             >
               Start Your Transformation

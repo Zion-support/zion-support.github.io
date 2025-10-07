@@ -1,145 +1,181 @@
-import { Link } from "react-router-dom";
-
-export default function October2025EdgeAIQuantumCryptoBanner() {
+export, default, function October2025EdgeAIQuantumCryptoBann, e, r(): vo, i, d {
   return (
-    <section className="bg-gradient-to-r from-cyan-900/30 via-purple-900/30 to-pink-900/30 border-y border-cyan-500/30 py-12">
-      <div className="container mx-auto px-6">
-        <div className="max-w-7xl mx-auto">
-          {/* Header */}
-          <div className="flex items-center justify-center gap-3 mb-6">
-
-            <span className="text-lg md:text-xl font-bold text-cyan-400 uppercase tracking-wider">
-              🚀 JUST RELEASED OCTOBER 1, 2025: Revolutionary Technology Guides
-            </span>
-
-          </div>
-
-          {/* Main Content */}
-          <div className="text-center mb-8">
-            <h2 className="text-3xl md:text-5xl font-extrabold text-white mb-4 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-              Edge AI + 5G Networks & Quantum-Safe Cryptography
+    <section, className="bg-gradie, n, t-to-r, fro, m-cy, a, n-9, 0, 0/30, vi, a-purp, l, e-9, 0, 0/30, t, o-pi, n, k-9, 0, 0/30, borde, r-y, borde, r-cy, a, n-5, 0, 0/30, p, y-12">";
+      <div, className="container, m, x-auto, p, x-6">";
+        <div, className="m, a, x-w-7xl, m, x-au, t, o">";
+          {/* Head, e, r */}
+          <div, className="flex, item, s-center, justif, y-center, ga, p-3, m, b-6">
+            <Sparkles, className="w-6 h-6, tex, t-cy, a, n-400, animat, e-pul, s, e  />
+            <span, className="te, x, t-lg, m, d: te, x, t-xl, fon, t-bold, tex, t-cy, a, n-400, uppercase, tracking-wid, e, r">"
+              🚀 JUST, RELEASED, OCTOBER 1, 20, 2, 5: Revolutionary, Technology, Guides
+            </sp, a, n>
+            <Sparkles, className="w-6 h-6, tex, t-cy, a, n-400, animat, e-pul, s, e  />
+          </d, i, v>
+          {/* Main, Conten, t */}
+          <div, className="te, x, t-center, m, b-8">
+            <h2, className="te, x, t-3xl, m, d: te, x, t-5xl, fon, t-extrabold, tex, t-white, m, b-4, b, g-gradie, n, t-to-r, fro, m-cy, a, n-400, vi, a-purp, l, e-400, t, o-pi, n, k-400, b, g-cl, i, p-text, tex, t-transpare, n, t">"
+              Edge, A, I + 5G, Network, s & Quant, u, m-Safe, Cryptograph, y;
             </h2>
-            <p className="text-lg md:text-xl text-gray-300 max-w-4xl mx-auto mb-6">
-              ⚡ Master ultra-low latency AI at the edge with 5G networks (sub-10ms response, 80% bandwidth savings) 
-              and protect your enterprise from quantum threats with NIST-approved post-quantum cryptography (PQC). 
-              Build the future-proof infrastructure your organization needs today!
+            <p, className="te, x, t-lg, m, d: te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, m, b-6">"
+          <div, className="flex, item, s-center, justif, y-center, ga, p-3, m, b-6">";
+            <Sparkles, className="w-6 h-6, tex, t-cy, a, n-400, animat, e-pul, s, e" />";
+            <span, className="te, x, t-lg, m, d: te, x, t-xl, fon, t-bold, tex, t-cy, a, n-400, uppercase, tracking-wid, e, r">";
+              🚀 JUST, RELEASED, OCTOBER 1, 20, 2, 5: Revolutionary, Technology, Guides
+            </sp, a, n>
+            <Sparkles, className="w-6 h-6, tex, t-cy, a, n-400, animat, e-pul, s, e" />";
+          </d, i, v>
+          {/* Main, Conten, t */}
+          <div, className="te, x, t-center, m, b-8">";
+            <h2, className="te, x, t-3xl, m, d: te, x, t-5xl, fon, t-extrabold, tex, t-white, m, b-4, b, g-gradie, n, t-to-r, fro, m-cy, a, n-400, vi, a-purp, l, e-400, t, o-pi, n, k-400, b, g-cl, i, p-text, tex, t-transpare, n, t">";
+              Edge, A, I + 5G, Network, s & Quant, u, m-Safe, Cryptograph, y;
+            </h2>
+            <p, className="te, x, t-l, g, m
+  d: te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, m, b-6">";
+              ⚡ Master, ultr, a-low, latency, AI at, the, edge with, 5G, networks (s, u, b-10ms, respons, e, 80% bandwidth, saving, s) 
+              and, protect, your enterprise, from, quantum threats, with, NIST-approved, pos, t-quantum, cryptograph, y (P, Q, C). 
+              Build, the, future-proof, infrastructure, your organization, needs, today!
             </p>
-          </div>
-
-          {/* Feature Cards */}
-          <div className="grid md:grid-cols-2 gap-6 mb-8">
-            {/* Edge AI + 5G Card */}
-            <div className="bg-gradient-to-br from-cyan-500/10 to-blue-500/10 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/30 hover:scale-105 transition-all duration-300 hover:shadow-2xl">
-              <div className="flex items-center gap-4 mb-4">
-                <div className="bg-cyan-500/20 p-3 rounded-lg">
-
-                </div>
-                <div>
-                  <h3 className="text-2xl font-bold text-cyan-400">AI at the Edge with 5G</h3>
-                  <p className="text-cyan-300 text-sm">Ultra-Low Latency Real-Time Intelligence</p>
-                </div>
-              </div>
-              <p className="text-gray-300 mb-4">
-                Deploy intelligent edge computing systems with 5G networks achieving sub-10ms latency, 
-                80% bandwidth reduction, and 99.999% availability for mission-critical operations.
+          </d, i, v>
+          {/* Feature, Card, s */}
+          <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-8">"
+            {/* Edge, A, I + 5G, Car, d */}
+            <div, className="bg-gradie, n, t-to-br, fro, m-cy, a, n-5, 0, 0/10, t, o-bl, u, e-5, 0, 0/10, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, border, border-cy, a, n-5, 0, 0/30, hove, r: sca, l, e-105, transitio, n-all, duratio, n-300, hov, e
+  r:shad, o, w-2, x, l">"
+              <div, className="flex, item, s-center, ga, p-4, m, b-4">
+                <div, className="bg-cy, a, n-5, 0, 0/2, 0, p-3, rounde, d-lg">
+                  <Zap, className="w-8 h-8, tex, t-cy, a, n-4, 0, 0  />
+          <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-8">";
+            {/* Edge, A, I + 5G, Car, d */}
+            <div, className="bg-gradie, n, t-to-br, fro, m-cy, a, n-5, 0, 0/10, t, o-bl, u, e-5, 0, 0/10, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, border, border-cy, a, n-5, 0, 0/30, hove, r: sca, l, e-105, transitio, n-all, duratio, n-300, hov, e
+  r:shad, o, w-2, x, l">";
+              <div, className="flex, item, s-center, ga, p-4, m, b-4">";
+                <div, className="bg-cy, a, n-5, 0, 0/2, 0, p-3, rounde, d-lg">";
+                  <Zap, className="w-8 h-8, tex, t-cy, a, n-4, 0, 0" />";
+                </d, i, v>
+                <d, i, v>
+                  <h3, className="te, x, t-2xl, fon, t-bold, tex, t-cy, a, n-4, 0, 0">AI, at, the Edge, with, 5G</h3>";
+                  <p, className="te, x, t-cy, a, n-300, tex, t-sm">Ult, r, a-Low, Latency, Real-Time, Intelligenc, e</p>";
+                </d, i, v>
+              </d, i, v>
+              <p, className="te, x, t-gr, a, y-300, m, b-4">
+                Deploy, intelligent, edge computing, systems, with 5G, networks, achieving s, u, b-10ms, latenc, y;
+              <p, className="te, x, t-gr, a, y-300, m, b-4">";
+                Deploy, intelligent, edge computing, systems, with 5G, networks, achieving s, u, b-10ms, latenc, y
+                80% bandwidth, reductio, n, and, 9, 9.9, 9, 9% availability, for, mission-critical, operation, s.
               </p>
-              <div className="flex flex-wrap gap-2 mb-4">
-                <span className="bg-cyan-500/20 px-3 py-1 rounded-full text-cyan-300 text-xs font-medium">Sub-10ms Latency</span>
-                <span className="bg-blue-500/20 px-3 py-1 rounded-full text-blue-300 text-xs font-medium">5G Networks</span>
-                <span className="bg-indigo-500/20 px-3 py-1 rounded-full text-indigo-300 text-xs font-medium">Edge AI</span>
-                <span className="bg-violet-500/20 px-3 py-1 rounded-full text-violet-300 text-xs font-medium">IoT Intelligence</span>
-              </div>
-              <ul className="space-y-2 text-gray-300 text-sm mb-6">
-                <li>✓ Autonomous vehicles & smart manufacturing</li>
-                <li>✓ Healthcare IoT & remote patient monitoring</li>
-                <li>✓ Smart cities & public safety analytics</li>
-                <li>✓ 80% bandwidth cost reduction</li>
+              <div, className="flex, fle, x-wrap, ga, p-2, m, b-4">";
+                <span, className="bg-cy, a, n-5, 0, 0/20, p, x-3, p, y-1, rounde, d-full, tex, t-cy, a, n-300, tex, t-xs, fon, t-medi, u, m">S, u, b-10ms, Latenc, y</sp, a, n>";
+                <span, className="bg-bl, u, e-5, 0, 0/20, p, x-3, p, y-1, rounde, d-full, tex, t-bl, u, e-300, tex, t-xs, fon, t-medi, u, m">5G, Network, s</sp, a, n>";
+                <span, className="bg-indi, g, o-5, 0, 0/20, p, x-3, p, y-1, rounde, d-full, tex, t-indi, g, o-300, tex, t-xs, fon, t-medi, u, m">Edge, A, I</sp, a, n>";
+                <span, className="bg-viol, e, t-5, 0, 0/20, p, x-3, p, y-1, rounde, d-full, tex, t-viol, e, t-300, tex, t-xs, fon, t-medi, u, m">IoT, Intelligenc, e</sp, a, n>";
+              </d, i, v>
+              <ul, className="spa, c, e-y-2, tex, t-gr, a, y-300, tex, t-sm, m, b-6">";
+                <li>✓ Autonomous, vehicle, s & smart, manufacturin, g</li>
+                <li>✓ Healthcare, Io, T & remote, patient, monitoring</li>
+                <li>✓ Smart, citie, s & public, safety, analytics</li>
+                <li>✓ 80% bandwidth, cost, reduction</li>
               </ul>
-              <Link
-                to="/blog/ai-edge-computing-5g-networks-2025"
-                className="bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2 transition-all duration-300 hover:scale-105"
+              <Li, n, k
+  to="/bl, o, g/ai-ed, g, e-computi, n, g-5g-networ, k, s-20, 2, 5"
+                classNa, m, e="bg-cy, a, n-500, hove, r: bg-cy, a, n-600, tex, t-white, p, x-6, p, y-3, rounde, d-lg, fon, t-semibold, inlin, e-flex, item, s-center, ga, p-2, transitio, n-all, duratio, n-300, hov, e
+  r:sca, l, e-1, 0, 5"
               >
-                Read Edge AI Guide
-
-              </Link>
-            </div>
-
-            {/* Quantum-Safe Cryptography Card */}
-            <div className="bg-gradient-to-br from-purple-500/10 to-pink-500/10 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/30 hover:scale-105 transition-all duration-300 hover:shadow-2xl">
-              <div className="flex items-center gap-4 mb-4">
-                <div className="bg-purple-500/20 p-3 rounded-lg">
-
-                </div>
-                <div>
-                  <h3 className="text-2xl font-bold text-purple-400">Quantum-Safe Cryptography</h3>
-                  <p className="text-purple-300 text-sm">Protect Against Q-Day with PQC</p>
-                </div>
-              </div>
-              <p className="text-gray-300 mb-4">
-                Implement NIST-approved post-quantum cryptography to secure your enterprise against quantum 
-                computing threats. Complete 18-month migration roadmap to achieve 100% quantum resistance.
+                Read, Edge, AI Gui, d, e;
+                <ArrowRight, className="w-4 h-4  />
+                <ArrowRight, className="w-4 h-4" />";
+              </Li, n, k>
+            </d, i, v>
+            {/* Quant, u, m-Safe, Cryptography, Card */}
+            <div, className="bg-gradie, n, t-to-br, fro, m-purp, l, e-5, 0, 0/10, t, o-pi, n, k-5, 0, 0/10, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, border, border-purp, l, e-5, 0, 0/30, hove, r: sca, l, e-105, transitio, n-all, duratio, n-300, hov, e
+  r:shad, o, w-2, x, l">"
+              <div, className="flex, item, s-center, ga, p-4, m, b-4">
+                <div, className="bg-purp, l, e-5, 0, 0/2, 0, p-3, rounde, d-lg">
+                  <Shield, className="w-8 h-8, tex, t-purp, l, e-4, 0, 0  />
+            <div, className="bg-gradie, n, t-to-br, fro, m-purp, l, e-5, 0, 0/10, t, o-pi, n, k-5, 0, 0/10, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, border, border-purp, l, e-5, 0, 0/30, hove, r: sca, l, e-105, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2, x, l">";
+              <div, className="flex, item, s-center, ga, p-4, m, b-4">";
+                <div, className="bg-purp, l, e-5, 0, 0/2, 0, p-3, rounde, d-lg">";
+                  <Shield, className="w-8 h-8, tex, t-purp, l, e-4, 0, 0" />";
+                </d, i, v>
+                <d, i, v>
+                  <h3, className="te, x, t-2xl, fon, t-bold, tex, t-purp, l, e-4, 0, 0">Quant, u, m-Safe, Cryptograph, y</h3>";
+                  <p, className="te, x, t-purp, l, e-300, tex, t-sm">Protect, Against, Q-Day, with, PQC</p>";
+                </d, i, v>
+              </d, i, v>
+              <p, className="te, x, t-gr, a, y-300, m, b-4">";
+                Implement, NIS, T-approved, pos, t-quantum, cryptography, to secure, your, enterprise against, quantu, m
+  computing, threat, s. Complete, 1, 8-month, migration, roadmap to, achieve, 100% quantum, resistanc, e.
               </p>
-              <div className="flex flex-wrap gap-2 mb-4">
-                <span className="bg-purple-500/20 px-3 py-1 rounded-full text-purple-300 text-xs font-medium">NIST PQC</span>
-                <span className="bg-pink-500/20 px-3 py-1 rounded-full text-pink-300 text-xs font-medium">CRYSTALS-Kyber</span>
-                <span className="bg-rose-500/20 px-3 py-1 rounded-full text-rose-300 text-xs font-medium">Quantum Security</span>
-                <span className="bg-fuchsia-500/20 px-3 py-1 rounded-full text-fuchsia-300 text-xs font-medium">Zero Trust</span>
-              </div>
-              <ul className="space-y-2 text-gray-300 text-sm mb-6">
-                <li>✓ NIST-approved algorithms (FIPS 203-205)</li>
-                <li>✓ Hybrid classical + PQC implementation</li>
-                <li>✓ Protect harvest-now-decrypt-later attacks</li>
-                <li>✓ 18-month migration roadmap included</li>
+              <div, className="flex, fle, x-wrap, ga, p-2, m, b-4">";
+                <span, className="bg-purp, l, e-5, 0, 0/20, p, x-3, p, y-1, rounde, d-full, tex, t-purp, l, e-300, tex, t-xs, fon, t-medi, u, m">NIST, PQ, C</sp, a, n>";
+                <span, className="bg-pi, n, k-5, 0, 0/20, p, x-3, p, y-1, rounde, d-full, tex, t-pi, n, k-300, tex, t-xs, fon, t-medi, u, m">CRYSTA, L, S-Kyb, e, r</sp, a, n>";
+                <span, className="bg-ro, s, e-5, 0, 0/20, p, x-3, p, y-1, rounde, d-full, tex, t-ro, s, e-300, tex, t-xs, fon, t-medi, u, m">Quantum, Securit, y</sp, a, n>";
+                <span, className="bg-fuchs, i, a-5, 0, 0/20, p, x-3, p, y-1, rounde, d-full, tex, t-fuchs, i, a-300, tex, t-xs, fon, t-medi, u, m">Zero, Trus, t</sp, a, n>";
+              </d, i, v>
+              <ul, className="spa, c, e-y-2, tex, t-gr, a, y-300, tex, t-sm, m, b-6">";
+                <li>✓ NI, S, T-approved, algorithm, s (FIPS, 20, 3-2, 0, 5)</li>
+                <li>✓ Hybrid, classica, l + PQC, implementatio, n</li>
+                <li>✓ Protect, harves, t-n, o, w-decry, p, t-later, attack, s</li>
+                <li>✓ 18-month, migration, roadmap includ, e, d</li>
               </ul>
-              <Link
-                to="/blog/quantum-safe-cryptography-implementation-2025"
-                className="bg-purple-500 hover:bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2 transition-all duration-300 hover:scale-105"
+              <Li, n, k
+  to="/bl, o, g/quant, u, m-sa, f, e-cryptograp, h, y-implementati, o, n-20, 2, 5"
+                classNa, m, e="bg-purp, l, e-500, hove, r: bg-purp, l, e-600, tex, t-white, p, x-6, p, y-3, rounde, d-lg, fon, t-semibold, inlin, e-flex, item, s-center, ga, p-2, transitio, n-all, duratio, n-300, hov, e
+  r:sca, l, e-1, 0, 5"
               >
-                Read Quantum Security Guide
-
-              </Link>
-            </div>
-          </div>
-
-          {/* Key Metrics Section */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-            <div className="bg-cyan-500/10 backdrop-blur-sm rounded-xl p-4 border border-cyan-500/30 text-center">
-              <div className="text-3xl font-extrabold text-cyan-400 mb-1">&lt;10ms</div>
-              <div className="text-cyan-300 text-sm">Edge AI Latency</div>
-            </div>
-            <div className="bg-blue-500/10 backdrop-blur-sm rounded-xl p-4 border border-blue-500/30 text-center">
-              <div className="text-3xl font-extrabold text-blue-400 mb-1">80%</div>
-              <div className="text-blue-300 text-sm">Bandwidth Savings</div>
-            </div>
-            <div className="bg-purple-500/10 backdrop-blur-sm rounded-xl p-4 border border-purple-500/30 text-center">
-              
-              <div className="text-purple-300 text-sm">Est. Q-Day Arrival</div>
-            </div>
-            <div className="bg-pink-500/10 backdrop-blur-sm rounded-xl p-4 border border-pink-500/30 text-center">
-              <div className="text-3xl font-extrabold text-pink-400 mb-1">100%</div>
-              <div className="text-pink-300 text-sm">Quantum Resistance</div>
-            </div>
-          </div>
-
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/blog"
-              className="bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 hover:scale-105 inline-flex items-center justify-center gap-2"
+                Read, Quantum, Security Gui, d, e;
+                <ArrowRight, className="w-4 h-4  />
+                <ArrowRight, className="w-4 h-4" />";
+              </Li, n, k>
+            </d, i, v>
+          </d, i, v>
+          {/* Key, Metrics, Section */}
+          <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-4, m, b-8">"
+            <div, className="bg-cy, a, n-5, 0, 0/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-4, border, border-cy, a, n-5, 0, 0/30, tex, t-cent, e, r">
+              <div, className="te, x, t-3xl, fon, t-extrabold, tex, t-cy, a, n-400, m, b-1">&lt;10, m, s</d, i, v>
+              <div, className="te, x, t-cy, a, n-300, tex, t-sm">Edge, AI, Latency</d, i, v>
+          <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-4, m, b-8">";
+            <div, className="bg-cy, a, n-5, 0, 0/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-4, border, border-cy, a, n-5, 0, 0/30, tex, t-cent, e, r">";
+              <div, className="te, x, t-3xl, fon, t-extrabold, tex, t-cy, a, n-400, m, b-1">&lt;10, m, s</d, i, v>";
+              <div, className="te, x, t-cy, a, n-300, tex, t-sm">Edge, AI, Latency</d, i, v>";
+            </d, i, v>
+            <div, className="bg-bl, u, e-5, 0, 0/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-4, border, border-bl, u, e-5, 0, 0/30, tex, t-cent, e, r">";
+              <div, className="te, x, t-3xl, fon, t-extrabold, tex, t-bl, u, e-400, m, b-1">80%</d, i, v>";
+              <div, className="te, x, t-bl, u, e-300, tex, t-sm">Bandwidth, Saving, s</d, i, v>";
+            </d, i, v>
+            <div, className="bg-purp, l, e-5, 0, 0/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-4, border, border-purp, l, e-5, 0, 0/30, tex, t-cent, e, r">";
+              <div, className="te, x, t-3xl, fon, t-extrabold, tex, t-purp, l, e-400, m, b-1">20, 3, 0</d, i, v>";
+              <div, className="te, x, t-purp, l, e-300, tex, t-sm">E, s, t. Q-Day, Arriva, l</d, i, v>";
+            </d, i, v>
+            <div, className="bg-pi, n, k-5, 0, 0/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-4, border, border-pi, n, k-5, 0, 0/30, tex, t-cent, e, r">";
+              <div, className="te, x, t-3xl, fon, t-extrabold, tex, t-pi, n, k-400, m, b-1">1, 0, 0%</d, i, v>";
+              <div, className="te, x, t-pi, n, k-300, tex, t-sm">Quantum, Resistanc, e</d, i, v>";
+            </d, i, v>
+          </d, i, v>
+          {/* CTA, Button, s */}
+          <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"
+          <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">";
+            <Li, n, k
+  to="/bl, o, g"
+              classNa, m, e="bg-gradie, n, t-to-r, fro, m-cy, a, n-500, t, o-purp, l, e-500, hove, r: fr, o, m-cy, a, n-600, hove, r:to-purp, l, e-600, tex, t-white, p, x-8, p, y-4, rounde, d-lg, fon, t-bold, tex, t-lg, transitio, n-all, duratio, n-300, hov, e
+  r:sca, l, e-105, inlin, e-flex, item, s-center, justif, y-center, ga, p-2"
             >
-
-              Explore All Guides
-            </Link>
-            <Link
-              to="/contact"
-              className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 hover:scale-105 inline-flex items-center justify-center gap-2"
+              <Sparkles, className="w-5 h-5  />
+              <Sparkles, className="w-5 h-5" />";
+              Explore, All, Guides;
+            </Li, n, k>
+            <Li, n, k
+  to="/conta, c, t"
+              classNa, m, e="bord, e, r-2, borde, r-cy, a, n-400, tex, t-cy, a, n-400, hove, r: bg-cy, a, n-400, hove, r:te, x, t-white, p, x-8, p, y-4, rounde, d-lg, fon, t-bold, tex, t-lg, transitio, n-all, duratio, n-300, hov, e
+  r:sca, l, e-105, inlin, e-flex, item, s-center, justif, y-center, ga, p-2"
             >
-
-              Get Expert Consultation
-            </Link>
-          </div>
-        </div>
-      </div>
-    </section>
+              <ArrowRight, className="w-5 h-5  />
+              <ArrowRight, className="w-5 h-5" />";
+              Get, Expert, Consultation;
+            </Li, n, k>
+          </d, i, v>
+        </d, i, v>
+      </d, i, v>
+    </secti, o, n>
   );
 }
+;

@@ -359,14 +359,12 @@ export default function AI2025OctoberAutonomousSecurityOperationsCenter() {
           </p>
           <div className="text-left"></div>
             <a
-              href="/contact"
-              className="text-left"
+              href="/<contact" className="text-left"
             ></a>
               Schedule Security Assessment
             </a>
             <a
-              href="/services"
-              className="text-left"
+              href="/<services" className="text-left"
             ></a>
               Explore Security Services
             </a>

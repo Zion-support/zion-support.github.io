@@ -250,10 +250,10 @@ const AgenticWorkflowAutomationPlatformArticle = () =>
             Join Fortune 500 companies achieving 97% automation rates and $4.2B+ efficiency gains with agentic workflow platforms.
           </p>
           <div className="text-left"></div>
-            <a href="/contact" className="text-left"></a>
+            <a href="/<contact" className="text-left"></a>
               Schedule Consultation
             </a>
-            <a href="/services" className="text-left"></a>
+            <a href="/<services" className="text-left"></a>
               Explore Solutions
             </a>
           </div>

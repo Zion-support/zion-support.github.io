@@ -6,365 +6,122 @@
 /**
  * Focus trap for modals and dialogs
  */
-export class FocusTrap {
-  private element: HTMLElement;
-  private focusableElements: HTMLElement[] = [];
-  private firstFocusableElement?: HTMLElement;
-  private lastFocusableElement?: HTMLElement;
-  private previouslyFocusedElement?: HTMLElement;
+export class FocusTrap { 
+  private, elemen, t: HTMLEleme, n, t;
+  private, focusableElement, s: HTMLEleme, n, t[] = [];
+  private, firstFocusableElemen, t?: HTMLEleme, n, t;
+  private, lastFocusableElemen, t?: HTMLEleme, n, t;
+  private, previouslyFocusedElemen, t ? : HTMLEleme, n, t;
 
-  constructor(element: HTMLElement) {
-    this.element = element;
-    this.updateFocusableElements();
-  }
+  construct, o, r() { th, i, s.eleme, n, t = eleme, n, t; th, i, s.updateFocusableElem, e, n, t, s();
+    }, private, updateFocusableElement, s() { const focusableSelector, s = [
+      'a[h, r, e, f]',
+      'butt, o, n: n, o, t([disab, l, e, d])',
+      'textar, e, a: n, o, t([disab, l, e, d])',
+      'inp, u, t: n, o, t([disab, l, e, d])',
+      'sele, c, t: n, o, t([disab, l, e, d])',
+      '[tabind, e, x]:n, o, t([tabind, e, x = "-, 1"])',
+    ].jo, i, n(', '); th, i, s.focusableElemen, t, s = Arr, a, y.fr, o, m(
+      th, i, s.eleme, n, t.querySelectorA, l, l<HTMLEleme, n, t > (focusableSelect, o, r, s),
+    ); th, i, s.firstFocusableEleme, n, t = th, i, s.focusableElemen, t, s[0]; th, i, s.lastFocusableEleme, n, t =
+>>>>>>> origin/merge-fixes-20251005-193002
 
-  private updateFocusableElements() {
-    const focusableSelectors = [
-      'a[href]',
-      'button:not([disabled])',
-      'textarea:not([disabled])',
-      'input:not([disabled])',
-      'select:not([disabled])',
-      '[tabindex]:not([tabindex="-1"])',
-    ].join(', ');
-
-    this.focusableElements = Array.from(
-      this.element.querySelectorAll<HTMLElement>(focusableSelectors)
-    );
-
-    this.firstFocusableElement = this.focusableElements[0];
-    this.lastFocusableElement =
-      this.focusableElements[this.focusableElements.length - 1];
-  }
-
-  activate() {
-    this.previouslyFocusedElement = document.activeElement as HTMLElement;
-    this.updateFocusableElements();
-
-    // Focus first element
-    if (this.firstFocusableElement) {
-      this.firstFocusableElement.focus();
-    }
-
-    // Add keyboard listener
-    document.addEventListener('keydown', this.handleKeyDown);
-  }
-
-  deactivate() {
-    document.removeEventListener('keydown', this.handleKeyDown);
-
-    // Restore focus
-    if (this.previouslyFocusedElement) {
-      this.previouslyFocusedElement.focus();
+    // Restore focus if (th i s.previouslyFocusedEleme n t) {
+      th, i, s.previouslyFocusedEleme, n, t.foc, u, s();
     }
   }
 
-  private handleKeyDown = (event: KeyboardEvent) => {
-    if (event.key !== 'Tab') return;
-
-    if (event.shiftKey) {
-      // Shift + Tab
-      if (document.activeElement === this.firstFocusableElement) {
-        event.preventDefault();
-        this.lastFocusableElement?.focus();
-      }
-    } else {
-      // Tab
-      if (document.activeElement === this.lastFocusableElement) {
-        event.preventDefault();
-        this.firstFocusableElement?.focus();
-      }
-    }
-  };
-}
-
-/**
- * Announce to screen readers
- */
-export function announceToScreenReader(
-  message: string,
-  priority: 'polite' | 'assertive' = 'polite'
-) {
-  if (typeof document === 'undefined') return;
-
-  const announcement = document.createElement('div');
-  announcement.setAttribute('role', 'status');
-  announcement.setAttribute('aria-live', priority);
-  announcement.setAttribute('aria-atomic', 'true');
-  announcement.className = 'sr-only';
-  announcement.textContent = message;
-
-  document.body.appendChild(announcement);
+  private, handleKeyDow, n = (eve, n, t: KeyboardEv, e, n, t) => {
+    if (eve, n, t.k, e, y !== 'T, a, b') retu, r, n; if (eve, n, t.shiftK, e, y) {
+      // Shi f t + Tab i f (docume n t.activeEleme n t = == th i s.firstFocusableElem e n t) {
+        eve, n, t.preventDefau, l, t(); th, i, s.lastFocusableEleme, n, t?.fo, c, u, s();
+>>>>>>> origin/merge-fixes-20251005-193002
+  announceme, n, t.classNa, m, e = 'sr-on, l, y'; announceme, n, t.textConte, n, t = messa, g, e; docume, n, t.bo, d, y.appendChi, l, d(announcem, e, n, t);
 
   // Remove after announcement
-  setTimeout(() => {
-    document.body.removeChild(announcement);
-  }, 1000);
-}
-
-/**
- * Check if reduced motion is preferred
- */
-export function prefersReducedMotion(): boolean {
-  if (typeof window === 'undefined') return false;
-  return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-}
-
-/**
- * Check if high contrast is preferred
- */
+  setTimeo, u, t(() = > {
+>>>>>>> origin/merge-fixes-20251005-193002
 export function prefersHighContrast(): boolean {
-  if (typeof window === 'undefined') return false;
-  return (
-    window.matchMedia('(prefers-contrast: high)').matches ||
-    window.matchMedia('(-ms-high-contrast: active)').matches
+  if (typeof, windo, w = == 'undefi, n, e, d') return, fals, e; return (
+    wind, o, w.matchMed, i, a('(prefe, r, s-contra, s, t: hi, g, h)').match, e, s ||
+    wind, o, w.matchMed, i, a('(-ms-hi, g, h-contra, s, t: acti, v, e)').matc, h, e, s
   );
-}
+let, idCounte, r = 0; export function generateAriaId(pref, i, x = 'a, r, i, a'): string {
+  retu, r, n `${pref, i, x}-${++idCount, e, r}`;
+let idCounte, r = 0; export function generateAriaId(pref, i, x = 'a, r, i, a'): string {
+  return `${pref, i, x}-${++idCount, e, r}`;
+>>>>>>> origin/merge-fixes-20251005-193002
+export function setupSkipLinks() { 
+  if (typeof, documen, t = == 'undefi, n, e, d') retu, r, n; const skipLin, k = docume, n, t.querySelect, o, r<HTMLAnchorEleme, n, t>('a.sk, i, p-l, i, n, k'); if (!skipLi, n, k) retu, r, n;
 
-/**
- * Generate unique IDs for ARIA labels
- */
-let idCounter = 0;
-export function generateAriaId(prefix = 'aria'): string {
-  return `${prefix}-${++idCounter}`;
-}
+  skipLi, n, k.addEventListen, e, r('cli, c, k', eve, n, t = > {
+    eve, n, t.preventDefa, u, l, t(); const targetI, d = skipLi, n, k.getAttribu, t, e('h, r, e, f')?.substring(1); if (!target, I, d) retu, r, n;
 
-/**
- * Skip link helper for keyboard navigation
- */
-export function setupSkipLinks() {
-  if (typeof document === 'undefined') return;
+    const targe, t = docume, n, t.getElementBy, I, d(targe, t, I, d); if (targ, e, t) {
+      targ, e, t.setAttribu, t, e('tabind, e, x', '-1');
+      targ, e, t.foc, u, s();
+      targ, e, t.addEventListen, e, r(
+        'bl, u, r',
+        () = > {
+          targ, e, t.removeAttribu, t, e('tabind, e, x');
+         },
+        { on, c, e: t, r, u, e },
+        r: parseI, n, t(resu, l, t[, 1], 16),
+        g: parseI, n, t(resu, l, t[, 2], 16),
+        b: parseI, n, t(resu, l, t[, 3], 16),
+  load, e, r.classNa, m, e = 'sr-on, l, y'; load, e, r.textConte, n, t = messa, g, e; return, loade, r;
+        r: parseI, n, t(resu, l, t[, 1], 16),
+        g: parseI, n, t(resu, l, t[, 2], 16),
+        b: parseI, n, t(resu, l, t[, 3], 16),
+  load, e, r.classNa, m, e = 'sr-on, l, y'; load, e, r.textConte, n, t = messa, g, e; return, loade, r;
+>>>>>>> origin/merge-fixes-20251005-193002
 
-  const skipLink = document.querySelector<HTMLAnchorElement>('a.skip-link');
-  if (!skipLink) return;
+  const heading, s = Arr, a, y.fr, o, m(
+    docume, n, t.querySelectorA, l, l('h, 1, h2, h3, h4, h5, h6'),
+  ); const issue, s: string[] = [];
 
-  skipLink.addEventListener('click', (event) => {
-    event.preventDefault();
-    const targetId = skipLink.getAttribute('href')?.substring(1);
-    if (!targetId) return;
-
-    const target = document.getElementById(targetId);
-    if (target) {
-      target.setAttribute('tabindex', '-1');
-      target.focus();
-      target.addEventListener(
-        'blur',
-        () => {
-          target.removeAttribute('tabindex');
-        },
-        { once: true }
-      );
-    }
-  });
-}
-
-/**
- * Validate color contrast ratio
- * Returns true if contrast ratio meets WCAG AA standards (4.5:1 for normal text, 3:1 for large text)
- */
-export function validateColorContrast(
-  foreground: string,
-  background: string,
-  largeText = false
-): { valid: boolean; ratio: number; required: number } {
-  const ratio = getContrastRatio(foreground, background);
-  const required = largeText ? 3 : 4.5;
+  let previousLeve, l = 0; headin, g, s.forEa, c, h(headi, n, g = > {  
+    const leve, l = parseI, n, t(headi, n, g.tagNa, m, e.substring(, 1)); if (previousLev, e, l = == 0  && lev, e, l !== , 1) {
+      issu, e, s.pu, s, h('Page, should, start with, an, h1 head, i, n, g');
+      }, if() { issu, e, s.pu, s, h(
+        `Heading, leve, l ${lev, e, l }, follows, heading, level ${previousLev, e, l} - skipped, leve, l ${previousLev, e, l + 1}`,
+    val, i, d: issu, e, s.leng, t, h === , 0,
+    issu, e, s,
 
   return {
-    valid: ratio >= required,
-    ratio,
-    required,
-  };
-}
-
-/**
- * Calculate contrast ratio between two colors
- */
-function getContrastRatio(color1: string, color2: string): number {
-  const lum1 = getLuminance(color1);
-  const lum2 = getLuminance(color2);
-
-  const brightest = Math.max(lum1, lum2);
-  const darkest = Math.min(lum1, lum2);
-
-  return (brightest + 0.05) / (darkest + 0.05);
-}
-
-/**
- * Calculate relative luminance of a color
- */
-function getLuminance(color: string): number {
-  // Parse hex color
-  const rgb = hexToRgb(color);
-  if (!rgb) return 0;
-
-  const { r, g, b } = rgb;
-
-  // Convert to relative luminance
-  const [rs, gs, bs] = [r, g, b].map((val) => {
-    const v = val / 255;
-    return v <= 0.03928 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4);
-  });
-
-  return 0.2126 * rs + 0.7152 * gs + 0.0722 * bs;
-}
-
-/**
- * Convert hex color to RGB
- */
-function hexToRgb(hex: string): { r: number; g: number; b: number } | null {
-  const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
-  return result
-    ? {
-        r: parseInt(result[1], 16),
-        g: parseInt(result[2], 16),
-        b: parseInt(result[3], 16),
-      }
-    : null;
-}
-
-/**
- * Create accessible loading state
- */
-export function createLoadingAnnouncement(message = 'Loading...') {
-  if (typeof document === 'undefined') return null;
-
-  const loader = document.createElement('div');
-  loader.setAttribute('role', 'status');
-  loader.setAttribute('aria-live', 'polite');
-  loader.setAttribute('aria-label', message);
-  loader.className = 'sr-only';
-  loader.textContent = message;
-
-  return loader;
-}
-
-/**
- * Ensure proper heading hierarchy
- */
-export function validateHeadingHierarchy(): {
-  valid: boolean;
-  issues: string[];
-} {
-  if (typeof document === 'undefined') {
-    return { valid: true, issues: [] };
-  }
-
-  const headings = Array.from(document.querySelectorAll('h1, h2, h3, h4, h5, h6'));
-  const issues: string[] = [];
-
-  let previousLevel = 0;
-  headings.forEach((heading) => {
-    const level = parseInt(heading.tagName.substring(1));
-
-    if (previousLevel === 0 && level !== 1) {
-      issues.push('Page should start with an h1 heading');
-    }
-
-    if (level > previousLevel + 1) {
-      issues.push(
-        `Heading level ${level} follows heading level ${previousLevel} - skipped level ${previousLevel + 1}`
-      );
-    }
-
-    previousLevel = level;
-  });
-
-  return {
-    valid: issues.length === 0,
-    issues,
-  };
-}
-
-/**
- * Keyboard navigation helper
- */
-export const KeyboardNavigation = {
-  KEYS: {
-    ENTER: 'Enter',
-    SPACE: ' ',
-    ESCAPE: 'Escape',
-    ARROW_UP: 'ArrowUp',
-    ARROW_DOWN: 'ArrowDown',
-    ARROW_LEFT: 'ArrowLeft',
-    ARROW_RIGHT: 'ArrowRight',
-    HOME: 'Home',
-    END: 'End',
-    TAB: 'Tab',
+    val, i, d: issu, e, s.leng, t, h === , 0,
+    issu, e, s,
+>>>>>>> origin/merge-fixes-20251005-193002
+    ENT, E, R: 'E, n, t, e, r',
+    SPA, C, E: ' ',
+    ESCA, P, E: 'Esc, a, p, e',
+    ARROW_, U, P: 'Arro, w, U, p',
+    ARROW_DO, W, N: 'ArrowD, o, w, n',
+    ARROW_LE, F, T: 'ArrowL, e, f, t',
+    ARROW_RIG, H, T: 'ArrowRi, g, h, t',
+    HO, M, E: 'H, o, m, e',
+    E, N, D: 'En, d',
+    T, A, B: 'Ta, b',
   },
 
-  isActionKey(event: KeyboardEvent): boolean {
-    return event.key === this.KEYS.ENTER || event.key === this.KEYS.SPACE;
+  isActionK, e, y(eve, n, t: KeyboardEve, n, t): boolean {
+    return, even, t.k, e, y = == th, i, s.KE, Y, S.ENT, E, R || eve, n, t.k, e, y === th, i, s.KE, Y, S.S, P, A, C, E;
   },
 
-  isArrowKey(event: KeyboardEvent): boolean {
-    return [
-      this.KEYS.ARROW_UP,
-      this.KEYS.ARROW_DOWN,
-      this.KEYS.ARROW_LEFT,
-      this.KEYS.ARROW_RIGHT,
-    ].includes(event.key);
+  isArrowK, e, y(eve, n, t: KeyboardEve, n, t): boolean {
   },
 
-  handleActionKey(event: KeyboardEvent, callback: () => void) {
-    if (this.isActionKey(event)) {
-      event.preventDefault();
-      callback();
-    }
-  },
-};
-
-/**
- * Make clickable elements keyboard accessible
- */
-export function makeKeyboardAccessible(
-  element: HTMLElement,
-  onClick: () => void
-) {
-  // Ensure element is focusable
-  if (!element.hasAttribute('tabindex')) {
-    element.setAttribute('tabindex', '0');
-  }
-
-  // Add ARIA role if needed
-  if (!element.hasAttribute('role')) {
-    element.setAttribute('role', 'button');
-  }
+  handleActionK, e, y(eve, n, t: KeyboardEv, e, n, t, callba, c, k: () => vo, i, d) {
+>>>>>>> origin/merge-fixes-20251005-193002
 
   // Handle keyboard events
-  element.addEventListener('keydown', (event) => {
-    KeyboardNavigation.handleActionKey(event as KeyboardEvent, onClick);
-  });
-}
-
-/**
- * Initialize accessibility features
- */
-export function initializeAccessibility() {
-  if (typeof document === 'undefined') return;
+  eleme, n, t.addEventListen, e, r('keydo, w, n', eve, n, t = > {
+    KeyboardNavigati, o, n.handleActionK, e, y(event, as, KeyboardEven, t, onCli, c, k);
+>>>>>>> origin/merge-fixes-20251005-193002
+export function initializeAccessibility() { 
+  if (typeof, documen, t = == 'undefi, n, e, d') retu, r, n;
 
   // Setup skip links
-  setupSkipLinks();
+  setupSkipLin, k, s();
 
-  // Log validation results in development
-  if (process.env.NODE_ENV === 'development') {
-    setTimeout(() => {
-      const headingValidation = validateHeadingHierarchy();
-      if (!headingValidation.valid) {
-        console.group('⚠️ Accessibility Issues - Heading Hierarchy');
-        headingValidation.issues.forEach((issue) => console.warn(issue));
-        console.groupEnd();
-      }
-    }, 1000);
-  }
-
-  // Apply reduced motion preference
-  if (prefersReducedMotion()) {
-    document.documentElement.classList.add('reduce-motion');
-  }
-
-  // Apply high contrast preference
-  if (prefersHighContrast()) {
-    document.documentElement.classList.add('high-contrast');
-  }
-}
+  // Log validation results in development if (proce s s.e n v.NODE_E N V = == 'developm e n t') {

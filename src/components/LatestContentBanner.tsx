@@ -1,49 +1,14 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
-interface LatestContentBannerProps {
-  variant?: 'info' | 'success' | 'warning';
-  autoRotate?: boolean;
-  rotationInterval?: number;
-  className?: string;
-}
-
-const LatestContentBanner: React.FC<LatestContentBannerProps> = ({
-  variant = 'info',
-  className = ''
-}) => {
-  const variantStyles = {
-    info: 'bg-gradient-to-r from-blue-600 to-indigo-600',
-    success: 'bg-gradient-to-r from-green-600 to-emerald-600',
-    warning: 'bg-gradient-to-r from-yellow-600 to-orange-600'
-  };
-
+const LatestContentBanner: React.FC = () => {
   return (
-    <div className={`${variantStyles[variant]} text-white p-4 ${className}`}>
-      <div className="container mx-auto px-6">
-        <div className="flex items-center justify-between flex-wrap gap-4">
-          <div className="flex items-center gap-3">
-
-            <div>
-              <h3 className="font-bold text-lg">
-                🔥 New Today: Runtime Scorecards · Edge A/B &lt;100ms · Agent Guardrails v2
-              </h3>
-              <p className="text-sm opacity-90">
-                Now live: 3 new guides + dozens of updated insights
-              </p>
-            </div>
-          </div>
-          <Link
-            to="/blog"
-            className="bg-white text-gray-900 px-6 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition-all flex items-center gap-2 flex-shrink-0"
-          >
-
-            Explore Now
-          </Link>
-        </div>
+    <div className="bg-gradient-to-r from-blue-600 to-purple-700 text-white p-8 rounded-lg shadow-lg">
+      <div className="max-w-4xl mx-auto">
+        <h2 className="text-3xl font-bold mb-4">
+          Latest Content Banner
+        </h2>
+        <p className="text-lg mb-6">
+          This component is being restored. Please check back later for full functionality.
+        </p>
       </div>
     </div>
-  );
-};
-
-export default LatestContentBanner;

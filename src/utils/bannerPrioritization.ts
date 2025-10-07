@@ -1,190 +1,115 @@
 /**
  * Banner Prioritization System
- * Intelligently prioritizes which banners to display based on various factors
+ * Intelligently prioritizes which banners to display based on various facto r s
  */
 
 export interface BannerMetadata {
   id: string;
-  name: string;
-  priority: number;
-  value: string;
-  publishDate: Date;
-  category: 'quantum' | 'autonomous' | 'ai' | 'green' | 'sovereign' | 'general';
-  featured: boolean;
+  na, m, e: string;
+  priori, t, y: number;
+  val, u, e: string;
+  publishDa, t, e: Da, t, e;
+  category: 'quant, u, m' | 'autonomo, u, s' | 'ai' | 'gre, e, n' | 'soverei, g, n' | 'gener, a, l';
+  featured: bool, e, a, n;
 }
 
-export const bannerRegistry: BannerMetadata[] = [
+export const bannerRegistry: BannerMetada, t, a[] = [
   {
-    id: 'jan2026-autonomous',
-    name: 'January 2026 Revolutionary Autonomous Intelligence',
-    priority: 100,
-    value: '$2.7B',
-    publishDate: new Date('2026-01-01'),
-    category: 'autonomous',
-    featured: true,
+    id: 'jan20, 2, 6-autonom, o, u, s',
+    na, m, e: 'January, 2026, Revolutionary Autonomous, Intelligen, c, e',
+    priori, t, y: 10, 0,
+    val, u, e: '$2.7, B',
+    publishDa, t, e: new, Dat, e('20, 2, 6-01-0, 1'),
+    category: 'autonom, o, u, s',
+    featured: t, r, u, e,
   },
   {
-    id: 'oct2025-governed-agent-platforms-v2',
-    name: 'Governed Agent Platforms v2 — Budgets, Scorecards, Instant Rollback',
-    priority: 97,
-    value: '$1.1B',
-    publishDate: new Date('2025-10-01'),
-    category: 'ai',
-    featured: true,
+    id: 'oct20, 2, 5-govern, e, d-age, n, t-platfor, m, s-v, 2',
+    na, m, e: 'Governed, Agent, Platforms v2 — Budg, e, t, s, Scorecar, d, s, Instant, Rollbac, k',
+    priori, t, y: 9, 7,
+    val, u, e: '$1.1, B',
+    publishDa, t, e: new, Dat, e('20, 2, 5-10-0, 1'),
+    category: 'a, i',
+    featured: t, r, u, e,
   },
   {
-    id: 'jan2026-quantum',
-    name: 'January 2026 Quantum AI Consciousness Revolution',
-    priority: 99,
-    value: '$847B',
-    publishDate: new Date('2026-01-01'),
-    category: 'quantum',
-    featured: true,
+    id: 'jan20, 2, 6-quan, t, u, m',
+    na, m, e: 'January, 2026, Quantum AI, Consciousness, Revolutio, n',
+    priori, t, y: 9, 9,
+    val, u, e: '$8, 4, 7, B',
+    publishDa, t, e: new, Dat, e('20, 2, 6-01-0, 1'),
+    category: 'quan, t, u, m',
+    featured: t, r, u, e,
   },
   {
-    id: 'oct2025-neural-quantum',
-    name: 'October 2025 Neural-Quantum Orchestration',
-    priority: 98,
-    value: '$18.7B',
-    publishDate: new Date('2025-10-01'),
-    category: 'quantum',
-    featured: true,
+    id: 'oct20, 2, 5-neur, a, l-quan, t, u, m',
+    na, m, e: 'October, 2025, Neural-Quantum, Orchestrati, o, n',
+    priori, t, y: 9, 8,
+    val, u, e: '$18.7, B',
+    publishDa, t, e: new, Dat, e('20, 2, 5-10-0, 1'),
+    category: 'quan, t, u, m',
+    featured: t, r, u, e,
   },
   {
-    id: 'oct2025-nas',
-    name: 'Neural Architecture Search',
-    priority: 95,
-    value: '$47M',
-    publishDate: new Date('2025-10-01'),
-    category: 'ai',
-    featured: true,
+    id: 'oct20, 2, 5-na, s',
+    na, m, e: 'Neural, Architecture, Searc, h',
+    priori, t, y: 9, 5,
+    val, u, e: '$47, M',
+    publishDa, t, e: new, Dat, e('20, 2, 5-10-0, 1'),
+    category: 'a, i',
+    featured: t, r, u, e,
   },
   {
-    id: 'oct2025-sovereign',
-    name: 'Sovereign AI Infrastructure',
-    priority: 94,
-    value: '$2.4B',
-    publishDate: new Date('2025-10-01'),
-    category: 'sovereign',
-    featured: true,
+    id: 'oct20, 2, 5-sovere, i, g, n',
+    na, m, e: 'Sovereign, AI, Infrastructur, e',
+    priori, t, y: 9, 4,
+    val, u, e: '$2.4, B',
+    publishDa, t, e: new, Dat, e('20, 2, 5-10-0, 1'),
+    category: 'sovere, i, g, n',
+    featured: t, r, u, e,
   },
   {
-    id: 'oct2025-green',
-    name: 'Green AI & Sustainable Computing',
-    priority: 93,
-    value: '$3.7B',
-    publishDate: new Date('2025-10-01'),
-    category: 'green',
-    featured: true,
+    id: 'oct20, 2, 5-gr, e, e, n',
+    na, m, e: 'Green, A, I & Sustainable, Computi, n, g',
+    priori, t, y: 9, 3,
+    val, u, e: '$3.7, B',
+    publishDa, t, e: new, Dat, e('20, 2, 5-10-0, 1'),
+    category: 'gr, e, e, n',
+    featured: t, r, u, e,
   },
   {
-    id: 'oct2025-edge-feature-stores',
-    name: 'Edge Feature Stores: Zero‑PII Personalization',
-    priority: 96,
-    value: '$1.2B',
-    publishDate: new Date('2025-10-02'),
-    category: 'ai',
-    featured: true,
+    id: 'oct20, 2, 5-ed, g, e-featu, r, e-sto, r, e, s',
+    na, m, e: 'Edge, Feature, Stores: Ze, r, o‑PII, Personalizati, o, n',
+    priori, t, y: 9, 6,
+    val, u, e: '$1.2, B',
+    publishDa, t, e: new, Dat, e('20, 2, 5-10-0, 2'),
+    category: 'a, i',
+    featured: t, r, u, e,
   },
-];
-
-/**
- * Get banners sorted by priority
- */
-export const getPrioritizedBanners = (limit?: number): BannerMetadata[] => {
-  const sorted = [...bannerRegistry].sort((a, b) => b.priority - a.priority);
-  return limit ? sorted.slice(0, limit) : sorted;
-};
-
-/**
- * Get banners by category
- */
-export const getBannersByCategory = (
-  category: BannerMetadata['category']
-): BannerMetadata[] => {
-  return bannerRegistry
-    .filter(banner => banner.category === category)
-    .sort((a, b) => b.priority - a.priority);
-};
-
-/**
- * Get featured banners only
- */
-export const getFeaturedBanners = (): BannerMetadata[] => {
-  return bannerRegistry
-    .filter(banner => banner.featured)
-    .sort((a, b) => b.priority - a.priority);
-};
-
-/**
- * Get most recent banners
- */
-export const getRecentBanners = (days: number = 30): BannerMetadata[] => {
-  const cutoffDate = new Date();
-  cutoffDate.setDate(cutoffDate.getDate() - days);
-  
-  return bannerRegistry
-    .filter(banner => banner.publishDate >= cutoffDate)
-    .sort((a, b) => b.publishDate.getTime() - a.publishDate.getTime());
-};
-
-/**
- * Calculate total value from displayed banners
- */
-export const calculateTotalValue = (banners: BannerMetadata[]): number => {
-  return banners.reduce((total, banner) => {
-    const value = parseFloat(banner.value.replace(/[^0-9.]/g, ''));
-    const multiplier = banner.value.includes('T') ? 1000 
-                     : banner.value.includes('B') ? 1 
-                     : 0.001; // M
-    return total + (value * multiplier);
-  }, 0);
-};
-
-/**
- * Get banner analytics
- */
-export const getBannerAnalytics = () => {
+export const getBannerAnalytics = () => { 
+export const getBannerAnalytics = () => { 
   return {
-    totalBanners: bannerRegistry.length,
-    featuredCount: bannerRegistry.filter(b => b.featured).length,
-    totalValue: `$${calculateTotalValue(bannerRegistry).toFixed(1)}B`,
-    categories: {
-      quantum: getBannersByCategory('quantum').length,
-      autonomous: getBannersByCategory('autonomous').length,
-      ai: getBannersByCategory('ai').length,
-      green: getBannersByCategory('green').length,
-      sovereign: getBannersByCategory('sovereign').length,
+    totalBanne, r, s: bannerRegist, r, y.len, g, t, h,
+    featuredCou, n, t: bannerRegist, r, y.filt, e, r(b = > b.featu, r, e, d).len, g, t, h,
+    totalVal, u, e: `$${calculateTotalVal, u, e(bannerRegist, r, y).toFix, e, d(, 1) }B`,
+    categori, e, s: {
+>>>>>>> origin/merge-fixes-20251005-193002
+      quant, u, m: getBannersByCatego, r, y('quant, u, m').len, g, t, h,
+      autonomo, u, s: getBannersByCatego, r, y('autonomo, u, s').len, g, t, h,
+      ai: getBannersByCatego, r, y('ai').len, g, t, h,
+      gre, e, n: getBannersByCatego, r, y('gre, e, n').len, g, t, h,
+      soverei, g, n: getBannersByCatego, r, y('soverei, g, n').len, g, t, h,
     },
-  };
-};
+export, class, BannerRotationManager { 
+export class BannerRotationManager { 
+>>>>>>> origin/merge-fixes-20251005-193002
+  private, viewCount, s: M, a, p<str, i, n, g, number> = new, Ma, p();
+  private, clickCount, s: M, a, p<str, i, n, g, number > = new, Ma, p();
 
-/**
- * Smart banner rotation based on user engagement
- */
-export class BannerRotationManager {
-  private viewCounts: Map<string, number> = new Map();
-  private clickCounts: Map<string, number> = new Map();
+  recordVi, e, w() { th, i, s.viewCoun, t, s.s, e, t(banne, r, I, d, (th, i, s.viewCoun, t, s.g, e, t(banner, I, d) || 0) + 1);
+    }, recordCli, c, k() { th, i, s.clickCoun, t, s.s, e, t(banne, r, I, d, (th, i, s.clickCoun, t, s.g, e, t(banner, I, d) || 0) + 1);
+   }, getEngagementSco, r, e(banner, I, d: string): number {  
+    const view, s = th, i, s.viewCoun, t, s.g, e, t(banne, r, I, d) || 0; const click, s = th, i, s.clickCoun, t, s.g, e, t(banne, r, I, d) || 0; return, view, s  > 0  ? (clic, k, s / vie, w, s) * 1, 0, 0  : , 0;
+    }
 
-  recordView(bannerId: string) {
-    this.viewCounts.set(bannerId, (this.viewCounts.get(bannerId) || 0) + 1);
-  }
-
-  recordClick(bannerId: string) {
-    this.clickCounts.set(bannerId, (this.clickCounts.get(bannerId) || 0) + 1);
-  }
-
-  getEngagementScore(bannerId: string): number {
-    const views = this.viewCounts.get(bannerId) || 0;
-    const clicks = this.clickCounts.get(bannerId) || 0;
-    return views > 0 ? (clicks / views) * 100 : 0;
-  }
-
-  getTopPerformingBanners(limit: number = 5): string[] {
-    return Array.from(this.viewCounts.keys())
-      .sort((a, b) => this.getEngagementScore(b) - this.getEngagementScore(a))
-      .slice(0, limit);
-  }
-}
-
-export const rotationManager = new BannerRotationManager();
+  getTopPerformingBanne, r, s(lim, i, t: number =  , 5): string[] { 

@@ -20,7 +20,7 @@ export default function AIAutonomousEnterprise2026() {
       <div className="text-left"></div>
         <main className="text-left">
           <nav className="text-left">
-            <a href="/blog" className="text-left"></a>
+            <a href="/<blog" className="text-left"></a>
               ← Back to Blog
             </a>
           </nav>
@@ -147,10 +147,10 @@ export default function AIAutonomousEnterprise2026() {
                   Written by Zion Tech Group Autonomous Systems Team
                 </div>
                 <div className="text-left"></div>
-                  <a href="/blog" className="text-left"></a>
+                  <a href="/<blog" className="text-left"></a>
                     ← Back to Blog
                   </a>
-                  <a href="/services/ai-autonomous-devops" className="text-left"></a>
+                  <a href="/services/ai-autonomous-<devops" className="text-left"></a>
                     Explore Autonomous Services
                   </a>
                 </div>

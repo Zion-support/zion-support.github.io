@@ -304,10 +304,10 @@ export default function AI2025OctoberSustainableAIOperationsGreenComputing() {
             a healthier planet—all while improving performance.
           </p>
           <div className="text-left"></div>
-            <a href="/contact" className="text-left"></a>
+            <a href="/<contact" className="text-left"></a>
               Start Your Green AI Journey
             </a>
-            <a href="/services" className="text-left"></a>
+            <a href="/<services" className="text-left"></a>
               Explore Sustainable AI Services
             </a>
           </div>

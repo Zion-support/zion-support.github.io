@@ -17,7 +17,7 @@ export default function AICloudCostOptimization2025() {
     <div className="text-left"></div>
       <main className="text-left">
         <nav className="text-left">
-          <a href="/blog" className="text-left"></a>
+          <a href="/<blog" className="text-left"></a>
             ← Back to Blog
           </a>
         </nav>
@@ -101,10 +101,10 @@ export default function AICloudCostOptimization2025() {
                 We architect cost-efficient AI stacks for hyperscale and startups alike.
               </p>
               <div className="text-left"></div>
-                <a href="/contact" className="text-left"></a>
+                <a href="/<contact" className="text-left"></a>
                   Optimize My AI Spend
                 </a>
-                <a href="/case-studies" className="text-left"></a>
+                <a href="/case-<studies" className="text-left"></a>
                   See Savings Case Studies
                 </a>
               </div>
@@ -114,10 +114,10 @@ export default function AICloudCostOptimization2025() {
             <div className="text-left"></div>
               <div className="text-left">Written by Zion Tech Group FinOps Team</div>
               <div className="text-left"></div>
-                <a href="/blog" className="text-left"></a>
+                <a href="/<blog" className="text-left"></a>
                   ← Back to Blog
                 </a>
-                <a href="/contact" className="text-left"></a>
+                <a href="/<contact" className="text-left"></a>
                   Get in Touch
                 </a>
               </div>
@@ -146,7 +146,7 @@ export default function AICloudCostOptimization2025() {
     <div className="text-left"></div>
       <main className="text-left">
         <nav className="text-left">
-          <a href="/blog" className="text-left"></a>
+          <a href="/<blog" className="text-left"></a>
             ← Back to Blog
           </a>
         </nav>
@@ -440,14 +440,12 @@ export default function AICloudCostOptimization2025() {
               </p>
               <div className="text-left"></div>
                 <a
-                  href="/contact"
-                  className="text-left"
+                  href="/<contact" className="text-left"
                 ></a>
                   Free Cost Assessment
                 </a>
                 <a
-                  href="/case-studies"
-                  className="text-left"
+                  href="/case-<studies" className="text-left"
                 ></a>
                   View Savings Stories
                 </a>
@@ -460,10 +458,10 @@ export default function AICloudCostOptimization2025() {
                 Written by Zion Tech Group FinOps Team
               </div>
               <div className="text-left"></div>
-                <a href="/blog" className="text-left"></a>
+                <a href="/<blog" className="text-left"></a>
                   ← Back to Blog
                 </a>
-                <a href="/contact" className="text-left"></a>
+                <a href="/<contact" className="text-left"></a>
                   Get in Touch
                 </a>
               </div>

@@ -1,266 +1,114 @@
-import { ArrowLeft, Brain, CheckCircle, Rocket, TrendingUp, Zap } from 'lucide-react';
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
+impo, r, t {
+  ArrowLe, f, t,
+  Z, a, p,
+  Bra, i, n,
+  Trending, U, p,
+  CheckCirc, l, e,
+  Rock, e, t,
+} fr, o, m 'luci, d, e-rea, c, t';
+impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
+import Header, from '../../componen, t, s/Head, e, r';
 
-import { Helmet } from "react-helmet-async";
-import Header from "../../components/Header";
-
-const NextGenIntelligentAutomationBreakthrough = () => {
+const NextGenIntelligentAutomationBreakthroug, h = () => { 
   return (
     <>
-      <Helmet>
-        <title>Next-Gen Intelligent Automation Breakthrough: AI-Powered Workflows Redefining Operations | Zion Tech Group</title>
-        <meta
-          name="description"
-          content="Discover next-generation intelligent automation revolutionizing business with 94% accuracy, 85% cost reduction, and 10x productivity gains through AI-powered workflows."
+      <Helm, e, t>
+        <title>
+          Ne, x, t-Gen, Intelligent, Automation Breakthrou, g, h: AI-Powered, Workflows, Redefining Operatio, n, s | Zion, Tech, Group
+        </title>
+        <meta, nam, e = 'description'
+          conte, n, t='Discover, nex, t-generation, intelligent, automation revolutionizing, business, with 94% accu, r, a, c, y, 85% cost, reductio, n, and, 10x, productivity gains, through, AI-powered, workflow, s.'
         />
-        <meta
-          name="keywords"
-          content="intelligent automation, RPA, AI workflows, process automation, hyperautomation, digital transformation"
+        <meta, nam, e = 'keywor, d, s'
+          conte, n, t='intelligent, automati, o, n, R, P, A, AI, workflow, s, process, automatio, n, hyperautomati, o, n, digital, transformatio, n'
         />
-      </Helmet>
+      </Helm, e, t>
 
-      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">
-        <Header />
+      <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-da, r, k'>
+        <Head, e, r />
 
-        <article className="container mx-auto px-6 py-20">
-          <Link
-            to="/blog"
-            className="inline-flex items-center text-zion-cyan hover:text-zion-blue-light mb-8 transition-colors"
+        <article, className='container, m, x-auto, p, x-6, p, y-20'>
+          <Link, t, o='/bl, o, g'
+            className='inli, n, e-flex, item, s-center, tex, t-zi, o, n-cyan, hove, r: te, x, t-zi, o, n-bl, u, e-light, m, b-8, transitio, n-colo, r, s'
           >
-            <ArrowLeft className="w-4 h-4 mr-2" />
-            Back to Blog
-          </Link>
-
-          <div className="max-w-4xl mx-auto">
-            <div className="flex items-center gap-4 mb-6 flex-wrap">
-              <span className="px-4 py-2 bg-purple-500/20 text-purple-300 rounded-full text-sm font-semibold border border-purple-500/30">
-                ⭐ FEATURED
-              </span>
-              <span className="px-4 py-2 bg-green-500/20 text-green-300 rounded-full text-sm font-semibold border border-green-500/30">
-                Intelligent Automation
-              </span>
-              <span className="text-zion-slate-light">October 1, 2025 • 20 min read</span>
+            <ArrowLeft, className='w-4 h-4, m, r-2' />
+            Back, to, Blog
+              <span, className='te, x, t-zi, o, n-sla, t, e-lig, h, t'>
+                Octo, b, e, r , 1, 20, 2, 5 • 20, min, read
+              </sp, a, n>
             </div>
+>>>>>>> origin/merge-fixes-20251005-193002
 
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
-              Next-Gen Intelligent Automation Breakthrough
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-cyan-400 mt-2 text-4xl">
-                How AI-Powered Workflows Are Redefining Business Operations
-              </span>
-            </h1>
+            <h1, classNam, e = 'te, x, t-5xl, m, d: te, x, t-6xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t'>
+              Ne, x, t-Gen, Intelligent, Automation Breakthrou, g, h
+              <span, className='block, tex, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-gre, e, n-400, t, o-cy, a, n-400, m, t-2, tex, t-4, x, l'>
+                How, A, I-Powered, Workflows, Are Redefining, Business, Operations
+>>>>>>> origin/merge-fixes-20251005-193002
 
-            <p className="text-xl text-zion-slate-light leading-relaxed mb-8">
-              Organizations deploying next-generation automation are achieving 94% accuracy, 85% cost reductions, 
-              and 10x productivity gains through AI-powered workflows that learn, adapt, and optimize autonomously.
-            </p>
-
-            <div className="flex items-center gap-4 mb-12">
-              <div className="w-12 h-12 rounded-full bg-gradient-to-r from-green-500 to-cyan-500 flex items-center justify-center">
-                <Brain className="w-6 h-6 text-white" />
+            <div, classNam, e = 'flex, item, s-center, ga, p-4, m, b-12'>
+              <div, className='w-1, 2, h-12, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-gre, e, n-500, t, o-cy, a, n-500, flex, items-center, justif, y-cent, e, r'>
+                <Brain, className='w-6 h-6, tex, t-whi, t, e' />
               </div>
-              <div>
-                <div className="text-white font-semibold">Marcus Rodriguez</div>
-                <div className="text-zion-slate-light text-sm">VP of Automation Solutions, Zion Tech Group</div>
-              </div>
-            </div>
-
-            {/* Key Metrics */}
-            <div className="grid md:grid-cols-4 gap-4 mb-12">
-              {[
-                { value: "$3.2T", label: "Automation Market 2025" },
-                { value: "85%", label: "Cost Reduction" },
-                { value: "94%", label: "Accuracy Rate" },
-                { value: "10x", label: "Productivity Gain" }
-              ].map((metric, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-zion-cyan/30 text-center">
-                  <div className="text-3xl font-bold text-cyan-400 mb-2">{metric.value}</div>
-                  <div className="text-sm text-zion-slate-light">{metric.label}</div>
-                </div>
-              ))}
-            </div>
-
-            {/* Content */}
-            <div className="prose prose-invert prose-lg max-w-none space-y-8 text-zion-slate-light">
-              <section>
-                <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                  <Zap className="w-8 h-8 text-yellow-400" />
-                  The Evolution of Automation
-                </h2>
-                <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-zion-cyan/30">
-                  <div className="grid md:grid-cols-2 gap-8">
-                    <div>
-                      <h3 className="text-xl font-bold text-white mb-4">Traditional RPA (2015-2020)</h3>
-                      <ul className="space-y-2">
-                        <li>❌ Rule-based automation</li>
-                        <li>❌ Structured data only</li>
-                        <li>❌ Manual process mapping</li>
-                        <li>❌ High maintenance burden</li>
-                        <li>❌ Limited scalability</li>
-                      </ul>
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-bold text-white mb-4">Intelligent Automation (2025)</h3>
-                      <ul className="space-y-2">
-                        <li className="flex items-start gap-2">
-                          <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />
-                          <span>AI-powered decision-making</span>
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />
-                          <span>Unstructured data processing</span>
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />
-                          <span>Self-learning workflows</span>
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />
-                          <span>Autonomous optimization</span>
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />
-                          <span>Unlimited scalability</span>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </section>
-
-              <section>
-                <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                  <Brain className="w-8 h-8 text-purple-400" />
-                  Next-Gen Automation Capabilities
-                </h2>
-                <div className="grid gap-6">
-                  {[
-                    {
-                      title: "Cognitive Process Automation",
-                      description: "AI systems that understand, learn, and make decisions like humans. 99.8% accuracy in document processing across any format.",
-                      icon: "🧠"
+                <div, classNam, e='bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-8, border, border-zi, o, n-cy, a, n/30'>
+                  <div, classNam, e='grid, m, d: gr, i, d-co, l, s-2, ga, p-8'>
+                        <li, classNam, e='flex, item, s-start, ga, p-2'>
+                          <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />
+                <h2, classNam, e='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, flex, items-center, ga, p-3'>
+                  <Brain, classNam, e='w-8 h-8, tex, t-purp, l, e-4, 0, 0' />
+                  Ne, x, t-Gen, Automation, Capabilities
+                { val, u, e: '$3., 2, T', lab, e, l: 'Automation, Market, 202, 5' },
+                { val, u, e: '8, 5%', lab, e, l: 'Cost, Reducti, o, n' },
+                { val, u, e: '9, 4%', lab, e, l: 'Accuracy, Ra, t, e' },
+                { val, u, e: '10, x', lab, e, l: 'Productivity, Ga, i, n' },
+                <div, className='bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-8, border, border-zi, o, n-cy, a, n/30'>
+                  <div, className='grid, m, d: gr, i, d-co, l, s-2, ga, p-8'>
+                        <li, className='flex, item, s-start, ga, p-2'>
+                          <CheckCircle, className='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />
+                <h2, className='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, flex, items-center, ga, p-3'>
+                  <Brain, className='w-8 h-8, tex, t-purp, l, e-4, 0, 0' />
+                  Ne, x, t-Gen, Automation, Capabilities
+>>>>>>> origin/merge-fixes-20251005-193002
+                    <div, ke, y = { in, d, e, x }, classNa, m, e = 'bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-zi, o, n-cy, a, n/20, hove, r: bord, e, r-zi, o, n-cy, a, n/50, transitio, n-a, l, l'
+                    >
+                      <div, className='flex, item, s-start, ga, p-4'>
+                        <div, className='te, x, t-4, x, l'>{capabili, t, y.ic, o, n}</div>
+                        <div, classNam, e = 'fl, e, x-1'>
+                          <h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-3'>
+                            {capabili, t, y.title}
+                          </h3>
+                          <p, className='te, x, t-zi, o, n-sla, t, e-lig, h, t'>
+                            {capabili, t, y.description}
+                          </p>
+>>>>>>> origin/merge-fixes-20251005-193002
+                <h2, classNam, e = 'te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, flex, items-center, ga, p-3'>
+                  <TrendingUp, className='w-8 h-8, tex, t-gre, e, n-4, 0, 0' />
+                  Industry, Application, s & Resul, t, s
+>>>>>>> origin/merge-fixes-20251005-193002
+                      industry: 'Reta, i, l & E-comme, r, c, e',
+                      savin, g, s: '$6.8, M',
+                      automati, o, n: '8, 9%',
+                      results: [
+                        'Order, Processin, g: 99.8% automat, i, o, n',
+                        'Fulfillme, n, t: 80% fas, t, e, r',
+                        'Reven, u, e: 28% incre, a, s, e',
+                      ],
                     },
-                    {
-                      title: "Adaptive Workflow Orchestration",
-                      description: "Self-optimizing workflows that evolve based on outcomes. 87% auto-resolution rate for exceptions.",
-                      icon: "🔄"
-                    },
-                    {
-                      title: "Predictive Automation",
-                      description: "Anticipate and act before issues occur. 96% forecast accuracy with 84% of failures prevented proactively.",
-                      icon: "🔮"
-                    },
-                    {
-                      title: "Generative Automation",
-                      description: "AI that creates content, code, and solutions autonomously. 70% reduction in development time.",
-                      icon: "✨"
-                    },
-                    {
-                      title: "Autonomous Decision-Making",
-                      description: "AI systems that make complex decisions independently. 97.8% accuracy in real-time risk-based decisions.",
-                      icon: "🎯"
-                    }
-                  ].map((capability, index) => (
-                    <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-zion-cyan/20 hover:border-zion-cyan/50 transition-all">
-                      <div className="flex items-start gap-4">
-                        <div className="text-4xl">{capability.icon}</div>
-                        <div className="flex-1">
-                          <h3 className="text-xl font-bold text-white mb-3">{capability.title}</h3>
-                          <p className="text-zion-slate-light">{capability.description}</p>
+                      <ul, classNam, e='spa, c, e-y-2'>
+                        { a, p, p.results.m, a, p((res, u, l, t, rInd, e, x) = > (
+                          <li, ke, y = { rIn, d, e, x  }, classNa, m, e = 'flex, item, s-start, ga, p-2'>
+                            <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />
+                <div, classNam, e='grid, m, d: gr, i, d-co, l, s-2, ga, p-4'>
                         </div>
                       </div>
-                    </div>
-                  ))}
-                </div>
-              </section>
-
-              <section>
-                <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                  <TrendingUp className="w-8 h-8 text-green-400" />
-                  Industry Applications & Results
-                </h2>
-                <div className="grid gap-6">
-                  {[
-                    {
-                      industry: "Financial Services",
-                      savings: "$12.4M",
-                      automation: "95%",
-                      results: ["Loan Processing: 96% faster", "KYC/AML: 100% coverage", "Fraud Detection: 99.4% accuracy"]
-                    },
-                    {
-                      industry: "Healthcare",
-                      savings: "$8.7M",
-                      automation: "92%",
-                      results: ["Claims Processing: 92% auto-adjudication", "Medical Coding: 99.1% accuracy", "70% administrative burden reduction"]
-                    },
-                    {
-                      industry: "Manufacturing",
-                      savings: "$18.2M",
-                      automation: "94%",
-                      results: ["Quality Control: 99.7% defect detection", "Inventory: 98% forecast accuracy", "Downtime: 73% reduction"]
-                    },
-                    {
-                      industry: "Retail & E-commerce",
-                      savings: "$6.8M",
-                      automation: "89%",
-                      results: ["Order Processing: 99.8% automation", "Fulfillment: 80% faster", "Revenue: 28% increase"]
-                    }
-                  ].map((app, index) => (
-                    <div key={index} className="bg-gradient-to-r from-blue-900/40 to-purple-900/40 rounded-xl p-6 border border-blue-500/30">
-                      <div className="flex flex-wrap items-center justify-between gap-4 mb-4">
-                        <h3 className="text-2xl font-bold text-white">{app.industry}</h3>
-                        <div className="flex gap-3">
-                          <span className="px-3 py-1 bg-green-500/20 text-green-300 rounded-lg text-sm font-semibold">
-                            {app.savings} savings
-                          </span>
-                          <span className="px-3 py-1 bg-blue-500/20 text-blue-300 rounded-lg text-sm font-semibold">
-                            {app.automation} automated
-                          </span>
-                        </div>
-                      </div>
-                      <ul className="space-y-2">
-                        {app.results.map((result, rIndex) => (
-                          <li key={rIndex} className="flex items-start gap-2">
-                            <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />
-                            <span>{result}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  ))}
-                </div>
-              </section>
-
-              <section className="bg-gradient-to-r from-green-900/40 via-blue-900/40 to-purple-900/40 rounded-xl p-8 border-2 border-green-500/50">
-                <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                  <Rocket className="w-8 h-8 text-green-400" />
-                  Start Your Automation Journey
-                </h2>
-                <p className="text-xl text-zion-slate-light mb-6">
-                  The intelligent automation breakthrough of 2025 represents an <strong className="text-white">inflection point</strong> in business operations. 
-                  The question is no longer "Should we automate?" but <strong className="text-white">"How fast can we transform?"</strong>
-                </p>
-                <div className="grid md:grid-cols-2 gap-4">
-                  <Link
-                    to="/contact"
-                    className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-green-500 to-cyan-500 text-white font-bold rounded-lg hover:from-green-600 hover:to-cyan-600 transition-all"
+                      <ul, className='spa, c, e-y-2'>
+                        { a, p, p.results.m, a, p((res, u, l, t, rInd, e, x) = > (
+                          <li, ke, y = { rIn, d, e, x  }, classNa, m, e = 'flex, item, s-start, ga, p-2'>
+                            <CheckCircle, className='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />
+                <div, className='grid, m, d: gr, i, d-co, l, s-2, ga, p-4'>
+>>>>>>> origin/merge-fixes-20251005-193002
+                  <Link, t, o='/conta, c, t'
+                    className='inli, n, e-flex, item, s-center, justif, y-center, ga, p-2, p, x-6, p, y-3, b, g-gradie, n, t-to-r, fro, m-gre, e, n-500, t, o-cy, a, n-500, tex, t-white, fon, t-bold, rounde, d-lg, hove, r:fr, o, m-gre, e, n-600, hove, r:to-cy, a, n-600, transitio, n-a, l, l'
                   >
-                    Book Free Assessment
-                    <Rocket className="w-5 h-5" />
-                  </Link>
-                  <Link
-                    to="/services/real-time-cognitive-automation"
-                    className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white/10 backdrop-blur-sm text-white font-bold rounded-lg border border-green-500/30 hover:bg-white/20 transition-all"
-                  >
-                    View Automation Platform
-                  </Link>
-                </div>
-              </section>
-            </div>
-          </div>
-        </article>
-      </div>
-    </>
-  );
-};
-
-export default NextGenIntelligentAutomationBreakthrough;
+                    Book, Free, Assessment
+                    <Rocket, classNam, e='w-5 h-5' />

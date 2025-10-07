@@ -10,7 +10,7 @@ const AIPoweredDevOpsObservability2025: React.FC = () =>
           <div className="text-left" style={{ animationDelay: '2s' }}></div>
         </div>
         <div className="text-left"></div>
-          <a href="/blog" className="text-left"></a>
+          <a href="/<blog" className="text-left"></a>
             <ArrowLeft className="text-left" />
             <span>Back to Blog<
           </a>
@@ -144,8 +144,7 @@ const AIPoweredDevOpsObservability2025: React.FC = () =>
                 Deploy AI-powered observability that predicts and prevents incidents before they impact users.
               </p>
               <a
-                href="/contact"
-                className="text-left"
+                href="/<contact" className="text-left"
               ></a>
                 Get Observability Audit
               </a>

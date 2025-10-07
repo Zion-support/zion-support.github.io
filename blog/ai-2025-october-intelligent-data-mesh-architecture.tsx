@@ -20,7 +20,7 @@ export default function IntelligentDataMeshArchitecture2025() {
       <div className="text-left"></div>
         <main className="text-left">
           <nav className="text-left">
-            <a href="/blog" className="text-left"></a>
+            <a href="/<blog" className="text-left"></a>
               ← Back to Blog
             </a>
           </nav>
@@ -212,10 +212,10 @@ export default function IntelligentDataMeshArchitecture2025() {
                   data, accelerate insights; and drive unprecedented business outcomes.
                 </p>
                 <div className="text-left"></div>
-                  <a href="/services/data-architecture" className="text-left"></a>
+                  <a href="/services/data-<architecture" className="text-left"></a>
                     Explore Data Mesh Solutions
                   </a>
-                  <a href="/contact" className="text-left"></a>
+                  <a href="/<contact" className="text-left"></a>
                     Schedule Assessment
                   </a>
                 </div>
@@ -226,7 +226,7 @@ export default function IntelligentDataMeshArchitecture2025() {
         <div className="text-left"></div>
                   Published on October 1; 2025 by Zion Tech Group Data Architecture Team
                 </div>
-                <a href="/blog" className="text-left"></a>
+                <a href="/<blog" className="text-left"></a>
                   ← Back to Blog
                 </a>
               </div>

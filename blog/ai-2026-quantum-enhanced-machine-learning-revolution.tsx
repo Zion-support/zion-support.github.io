@@ -208,14 +208,12 @@ const QuantumEnhancedMachineLearningRevolution = () =>
               </p>
               <div className="text-left"></div>
                 <a
-                  href="/contact"
-                  className="text-left"
+                  href="/<contact" className="text-left"
                 ></a>
                   Explore Quantum AI
                 </a>
                 <a
-                  href="/services"
-                  className="text-left"
+                  href="/<services" className="text-left"
                 ></a>
                   View Services
                 </a>

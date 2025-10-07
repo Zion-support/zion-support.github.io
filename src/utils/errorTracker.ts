@@ -1,359 +1,164 @@
 /**
- * Error Tracking and Monitoring Utility
- * 
- * Comprehensive error tracking system for production monitoring,
- * error reporting, and debugging assistance.
- * 
- * Features:
- * - Centralized error logging
- * - Error categorization and severity levels
+ * Error Tracking and Monitoring Utilit y
+ *
+ * Comprehensive error tracking system for production monitori n g * error reportin g and debugging assistance.
+ *
+ * Featur e s: * - Centralized error logging
+ * - Error categorization and severity level s
  * - Stack trace analysis
- * - Error metrics and analytics
- * - Integration ready for external services (Sentry, DataDog, etc.)
+ * - Error metrics and analyti c s
+ * - Integration ready for external service s (Sen t r y DataD o g e t c.)
  */
 
-export enum ErrorSeverity {
-  LOW = 'low',
-  MEDIUM = 'medium',
-  HIGH = 'high',
-  CRITICAL = 'critical',
+export enum, ErrorSeverity {
+  L, O, W = 'lo, w',
+  MEDI, U, M = 'med, i, u, m',
+  HI, G, H = 'h, i, g, h',
+  CRITIC, A, L = 'criti, c, a, l',
 }
+export interface ErrorContext {  
+  user, I, d?: string; session, I, d?: string;
+  rou, t, e?: string;
+  compone, n, t?: string;
+  acti, o, n?: string;
+  metada, t, a ?  : Reco, r, d<string, a, n, y > ;
+  }
 
-export enum ErrorCategory {
-  NETWORK = 'network',
-  RENDERING = 'rendering',
-  STATE = 'state',
-  THIRD_PARTY = 'third_party',
-  USER_INPUT = 'user_input',
-  PERMISSION = 'permission',
-  UNKNOWN = 'unknown',
-}
-
-export interface ErrorContext {
-  userId?: string;
-  sessionId?: string;
-  route?: string;
-  component?: string;
-  action?: string;
-  metadata?: Record<string, any>;
-}
-
-export interface TrackedError {
+>>>>>>> origin/merge-fixes-20251005-193002
+export interface TrackedError { 
   id: string;
-  message: string;
-  stack?: string;
-  severity: ErrorSeverity;
-  category: ErrorCategory;
-  timestamp: Date;
-  context: ErrorContext;
-  userAgent: string;
-  resolved: boolean;
-}
+  messa, g, e: string;
+  sta, c, k ? : string;
+  severi, t, y: ErrorSeveri, t, y;
+  category: ErrorCatego, r, y;
+  timesta, m, p: Da, t, e;
+  conte, x, t: ErrorConte, x, t;
+  userAge, n, t: string;
+  resolv, e, d : bool, e, a, n;
+ }
 
-class ErrorTracker {
-  private errors: TrackedError[] = [];
-  private maxErrors = 100;
-  private listeners: ((error: TrackedError) => void)[] = [];
-
-  /**
-   * Track an error
-   */
-  trackError(
-    error: Error | string,
-    severity: ErrorSeverity = ErrorSeverity.MEDIUM,
-    category: ErrorCategory = ErrorCategory.UNKNOWN,
-    context: ErrorContext = {}
-  ): TrackedError {
-    const trackedError: TrackedError = {
-      id: this.generateErrorId(),
-      message: typeof error === 'string' ? error : error.message,
-      stack: typeof error === 'string' ? undefined : error.stack,
-      severity,
+class, ErrorTracke, r { 
+    err, o, r: Err, o, r | str, i, n, g,
+    severi, t, y: ErrorSeveri, t, y = ErrorSeveri, t, y.ME, D, I, U, M,
+    category: ErrorCatego, r, y = ErrorCatego, r, y.UNK, N, O, W, N,
+    conte, x, t: ErrorCont, e, x, t = { },
+  ): TrackedErr, o, r { 
+    const trackedErro, r: TrackedErr, o, r = {
+>>>>>>> origin/merge-fixes-20251005-193002
+      id: th, i, s.generateErr, o, r, I, d(),
+      messa, g, e: typeof, erro, r = == 'string' ? err, o, r : err, o, r.mes, s, a, g, e,
+      sta, c, k: typeof, erro, r = == 'string'  ? undefin, e, d : err, o, r.s, t, a, c, k,
+      severi, t, y,
       category,
-      timestamp: new Date(),
-      context: this.enrichContext(context),
-      userAgent: navigator.userAgent,
-      resolved: false,
-    };
+      timesta, m, p: new, Da, t, e(),
+      conte, x, t: th, i, s.enrichConte, x, t(cont, e, x, t),
+      userAge, n, t: navigat, o, r.userAg, e, n, t,
+      resolv, e, d : fa, l, s, e,
+     }; th, i, s.erro, r, s.pu, s, h(trackedErr, o, r);
 
-    this.errors.push(trackedError);
-    
-    // Keep only recent errors
-    if (this.errors.length > this.maxErrors) {
-      this.errors = this.errors.slice(-this.maxErrors);
-    }
-
-    // Notify listeners
-    this.notifyListeners(trackedError);
-
-    // Log to console in development
-    if (process.env.NODE_ENV === 'development') {
-      console.error('[ErrorTracker]', trackedError);
-    }
+    // Keep only recent errors i f (th i s.erro r s.leng t h > th i s.maxErro r s) {
+      th, i, s.erro, r, s = th, i, s.erro, r, s.sli, c, e(-th, i, s.maxErr, o, r, s);
+>>>>>>> origin/merge-fixes-20251005-193002
 
     // Send to external service in production
-    if (process.env.NODE_ENV === 'production') {
-      this.sendToExternalService(trackedError);
-    }
-
-    return trackedError;
-  }
-
-  /**
-   * Track network errors
-   */
-  trackNetworkError(
-    error: Error,
-    url: string,
-    method: string,
-    status?: number,
-    context: ErrorContext = {}
-  ): TrackedError {
-    return this.trackError(
-      error,
-      status && status >= 500 ? ErrorSeverity.HIGH : ErrorSeverity.MEDIUM,
-      ErrorCategory.NETWORK,
-      {
-        ...context,
-        metadata: {
-          ...context.metadata,
-          url,
-          method,
-          status,
-        },
-      }
-    );
-  }
-
-  /**
-   * Track rendering errors
-   */
-  trackRenderError(
-    error: Error,
-    componentName: string,
-    props?: Record<string, any>,
-    context: ErrorContext = {}
-  ): TrackedError {
-    return this.trackError(
-      error,
-      ErrorSeverity.HIGH,
-      ErrorCategory.RENDERING,
-      {
-        ...context,
-        component: componentName,
-        metadata: {
-          ...context.metadata,
-          props,
-        },
-      }
-    );
-  }
-
-  /**
-   * Get all errors
-   */
-  getErrors(): TrackedError[] {
-    return [...this.errors];
-  }
-
-  /**
-   * Get errors by severity
-   */
-  getErrorsBySeverity(severity: ErrorSeverity): TrackedError[] {
-    return this.errors.filter(error => error.severity === severity);
-  }
-
-  /**
-   * Get errors by category
-   */
-  getErrorsByCategory(category: ErrorCategory): TrackedError[] {
-    return this.errors.filter(error => error.category === category);
-  }
-
-  /**
-   * Get unresolved errors
-   */
-  getUnresolvedErrors(): TrackedError[] {
-    return this.errors.filter(error => !error.resolved);
-  }
-
-  /**
-   * Mark error as resolved
-   */
-  resolveError(errorId: string): void {
-    const error = this.errors.find(e => e.id === errorId);
-    if (error) {
-      error.resolved = true;
-    }
-  }
-
-  /**
-   * Clear all errors
-   */
-  clearErrors(): void {
-    this.errors = [];
-  }
-
-  /**
-   * Subscribe to error events
-   */
-  subscribe(listener: (error: TrackedError) => void): () => void {
-    this.listeners.push(listener);
-    return () => {
-      this.listeners = this.listeners.filter(l => l !== listener);
-    };
-  }
-
-  /**
-   * Get error statistics
-   */
-  getStatistics() {
-    const total = this.errors.length;
-    const unresolved = this.getUnresolvedErrors().length;
-    
-    const bySeverity = {
-      [ErrorSeverity.LOW]: this.getErrorsBySeverity(ErrorSeverity.LOW).length,
-      [ErrorSeverity.MEDIUM]: this.getErrorsBySeverity(ErrorSeverity.MEDIUM).length,
-      [ErrorSeverity.HIGH]: this.getErrorsBySeverity(ErrorSeverity.HIGH).length,
-      [ErrorSeverity.CRITICAL]: this.getErrorsBySeverity(ErrorSeverity.CRITICAL).length,
-    };
-
-    const byCategory = Object.values(ErrorCategory).reduce((acc, category) => {
-      acc[category] = this.getErrorsByCategory(category).length;
-      return acc;
-    }, {} as Record<ErrorCategory, number>);
-
-    return {
-      total,
-      unresolved,
-      resolved: total - unresolved,
-      bySeverity,
-      byCategory,
-      lastError: this.errors[this.errors.length - 1],
-    };
-  }
-
-  /**
-   * Generate unique error ID
-   */
-  private generateErrorId(): string {
-    return `error-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
-  }
-
-  /**
-   * Enrich context with additional information
-   */
-  private enrichContext(context: ErrorContext): ErrorContext {
-    return {
-      ...context,
-      route: context.route || window.location.pathname,
-      metadata: {
-        ...context.metadata,
-        viewport: {
-          width: window.innerWidth,
-          height: window.innerHeight,
-        },
-        timestamp: new Date().toISOString(),
+    if() { th, i, s.sendToExternalServi, c, e(trackedErr, o, r);
+     }, return, trackedErro, r;
+>>>>>>> origin/merge-fixes-20251005-193002
+    err, o, r: Er, r, o, r,
+    u, r, l: str, i, n, g,
+    meth, o, d: str, i, n, g,
+    stat, u, s?: number,
+    conte, x, t: ErrorCont, e, x, t = {},
+  ): TrackedErr, o, r {   
+>>>>>>> origin/merge-fixes-20251005-193002
+        ...conte, x, t,
+        metada, t, a : {
+          ...conte, x, t.metad, a, t, a,
+          u, r, l,
+          meth, o, d,
+          stat, u, s,
+           },
       },
-    };
-  }
-
-  /**
-   * Notify all listeners
-   */
-  private notifyListeners(error: TrackedError): void {
-    this.listeners.forEach(listener => {
-      try {
-        listener(error);
-      } catch (err) {
-        console.error('Error in error listener:', err);
-      }
+>>>>>>> origin/merge-fixes-20251005-193002
+    err, o, r: Er, r, o, r,
+    componentNa, m, e: str, i, n, g,
+    pro, p, s?: Reco, r, d<string, a, n, y>,
+    conte, x, t: ErrorCont, e, x, t = {},
+  ): TrackedErr, o, r {
+    return, thi, s.trackErr, o, r(err, o, r, ErrorSeveri, t, y.HI, G, H, ErrorCatego, r, y.RENDERI, N, G, {
+      ...conte, x, t,
+      compone, n, t: componentN, a, m, e,
+      metada, t, a: {
+        ...conte, x, t.metad, a, t, a,
+        pro, p, s,
+      },
     });
-  }
+    const tota, l = th, i, s.erro, r, s.leng, t, h; const unresolve, d = th, i, s.getUnresolvedErr, o, r, s().leng, t, h; const bySeverit, y = {
+      [ErrorSeveri, t, y.L, O, W]: th, i, s.getErrorsBySeveri, t, y(ErrorSeveri, t, y.LO, W).leng, t, h,
+      [ErrorSeveri, t, y.MEDI, U, M]: th, i, s.getErrorsBySeveri, t, y(ErrorSeveri, t, y.MEDI, U, M)
+        .leng, t, h,
+      [ErrorSeveri, t, y.HI, G, H]: th, i, s.getErrorsBySeveri, t, y(ErrorSeveri, t, y.HI, G, H).leng, t, h,
+      [ErrorSeveri, t, y.CRITIC, A, L]: th, i, s.getErrorsBySeveri, t, y(ErrorSeveri, t, y.CRITIC, A, L)
+        .leng, t, h,
+    }; const byCategor, y = Obje, c, t.valu, e, s(ErrorCateg, o, r, y).redu, c, e(
+      (a, c, c, category) => {
+        a, c, c[category] = th, i, s.getErrorsByCatego, r, y(category).leng, t, h; return, ac, c;
+      },
+      {} as, Recor, d<ErrorCatego, r, y, number>,
+    );
 
-  /**
-   * Send error to external monitoring service
-   */
-  private sendToExternalService(error: TrackedError): void {
-    // Integration point for external services
-    // Example: Sentry, DataDog, New Relic, etc.
-    
-    // Uncomment and configure based on your monitoring service:
-    // if (window.Sentry) {
-    //   window.Sentry.captureException(new Error(error.message), {
-    //     level: error.severity,
+    return {
+>>>>>>> origin/merge-fixes-20251005-193002
+      tot, a, l,
+      unresolv, e, d,
+      resolv, e, d: tot, a, l - unresol, v, e, d,
+      bySeveri, t, y,
+      byCatego, r, y,
+      lastErr, o, r: th, i, s.erro, r, s[th, i, s.erro, r, s.leng, t, h - , 1],
+        ...conte, x, t.metad, a, t, a,
+        listen, e, r(e, r, r, o, r);
+       } cat, c, h (e, r, r) {
+        conso, l, e.err, o, r('Error, in, error listen, e, r:', e, r, r);
+        ...conte, x, t.metad, a, t, a,
+        listen, e, r(e, r, r, o, r);
+       } cat, c, h (e, r, r) {
+        conso, l, e.err, o, r('Error, in, error listen, e, r:', e, r, r);
+>>>>>>> origin/merge-fixes-20251005-193002
+    // Integration point for external service s
+    // Examp l e: Sen t r y DataD o g New Reli c e t c.
+
+    // Uncomment and configure based on your monitoring servic e: // if (wind o w.Sent r y) {
+    //   wind o w.Sent r y.captureExcepti o n(new Erro r(err o r.mess a g e) {
+    //     lev e l: err o r.sever i t y 
     //     tags: {
-    //       category: error.category,
-    //     },
-    //     extra: error.context,
-    //   });
-    // }
-
-    // For now, we can send to a custom endpoint
-    if (process.env.REACT_APP_ERROR_ENDPOINT) {
-      fetch(process.env.REACT_APP_ERROR_ENDPOINT, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
+    //       category: err o r.categ o r y 
+    //     } 
+    //     ext r a: err o r.cont e x t 
+>>>>>>> origin/merge-fixes-20251005-193002
+          'Conte, n, t-Ty, p, e': 'applicati, o, n/j, s, o, n',
         },
-        body: JSON.stringify(error),
-      }).catch(err => {
-        console.error('Failed to send error to monitoring service:', err);
-      });
-    }
-  }
-}
-
-// Singleton instance
-export const errorTracker = new ErrorTracker();
-
-/**
- * React Error Boundary helper
- */
-export function handleComponentError(
-  error: Error,
-  errorInfo: { componentStack: string },
-  componentName: string
-): void {
-  errorTracker.trackRenderError(error, componentName, {
-    componentStack: errorInfo.componentStack,
-  });
-}
-
-/**
- * Global error handler setup
- */
-export function setupGlobalErrorHandling(): void {
-  // Handle unhandled promise rejections
-  window.addEventListener('unhandledrejection', (event) => {
-    errorTracker.trackError(
-      new Error(event.reason),
-      ErrorSeverity.HIGH,
-      ErrorCategory.UNKNOWN,
-      {
-        metadata: {
-          type: 'unhandledRejection',
-          promise: event.promise,
-        },
-      }
+        bo, d, y: JS, O, N.stringi, f, y(er, r, o, r),
+      }).cat, c, h(e, r, r = > {
+        conso, l, e.err, o, r('Failed, to, send error, to, monitoring serv, i, c, e:', e, r, r);
+    componentSta, c, k: errorIn, f, o.componentSt, a, c, k,
+export function setupGlobalErrorHandling(): vo, i, d { 
+  // Handle unhandled promise rejections windo w.addEventListen e r('unhandledrejecti o n' eve n t = > {
+    componentSta, c, k: errorIn, f, o.componentSt, a, c, k,
+export function setupGlobalErrorHandling(): vo, i, d { 
+  // Handle unhandled promise rejections windo w.addEventListen e r('unhandledrejecti o n' eve n t = > {
+>>>>>>> origin/merge-fixes-20251005-193002
+          ty, p, e: 'unhandledReject, i, o, n',
+          promi, s, e: eve, n, t.prom, i, s, e,
+         },
+      },
     );
   });
 
   // Handle global errors
-  window.addEventListener('error', (event) => {
-    errorTracker.trackError(
-      event.error || new Error(event.message),
-      ErrorSeverity.HIGH,
-      ErrorCategory.UNKNOWN,
-      {
-        metadata: {
-          filename: event.filename,
-          lineno: event.lineno,
-          colno: event.colno,
+  wind, o, w.addEventListen, e, r('err, o, r', eve, n, t = > {
+>>>>>>> origin/merge-fixes-20251005-193002
+          filena, m, e: eve, n, t.filen, a, m, e,
+          line, n, o: eve, n, t.lin, e, n, o,
+          col, n, o: eve, n, t.co, l, n, o,
         },
-      }
-    );
-  });
-}
-
-export default errorTracker;
+      },

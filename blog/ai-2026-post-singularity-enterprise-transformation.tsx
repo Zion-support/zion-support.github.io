@@ -33,14 +33,12 @@ export default function PostSingularityEnterpriseTransformation() {
             </p>
             <div className="text-left"></div>
               <a
-                href="/contact"
-                className="text-left"
+                href="/<contact" className="text-left"
               ></a>
                 Transform Your Business Now
               </a>
               <a
-                href="/case-studies/post-singularity-enterprise-1-trillion-success"
-                className="text-left"
+                href="/case-studies/post-singularity-enterprise-1-trillion-<success" className="text-left"
               ></a>
                 View $1T Success Story →
               </a>
@@ -274,14 +272,12 @@ export default function PostSingularityEnterpriseTransformation() {
             </p>
             <div className="text-left"></div>
               <a
-                href="/contact"
-                className="text-left"
+                href="/<contact" className="text-left"
               ></a>
                 Start Transformation Today
               </a>
               <a
-                href="/case-studies"
-                className="text-left"
+                href="/case-<studies" className="text-left"
               ></a>
                 View Success Stories
               </a>

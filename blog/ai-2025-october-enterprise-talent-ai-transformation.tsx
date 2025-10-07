@@ -20,7 +20,7 @@ export default function EnterpriseAITalentDevelopment2025() {
       <div className="text-left"></div>
         <main className="text-left">
           <nav className="text-left">
-            <a href="/blog" className="text-left"></a>
+            <a href="/<blog" className="text-left"></a>
               ← Back to Blog
             </a>
           </nav>
@@ -376,8 +376,7 @@ export default function EnterpriseAITalentDevelopment2025() {
                   <li>• Learning platform and content library (100+ hours of material)</li>
                 </ul>
                 <a
-                  href="/contact"
-                  className="text-left"
+                  href="/<contact" className="text-left"
                 ></a>
                   Design Your AI Talent Program →
                 </a>

@@ -1,188 +1,50 @@
-import React from 'react';
-
-const NewContentPromotionalBanner2026 = () => {
-  const newContent = [
+import React from "react";
+const, NewContentPromotionalBanner202, 6 = () => {
+  const, newConten, t = [
     {
-      title: 'Quantum-Conscious Intelligence',
-      date: 'January 2026',
-      impact: '$2.3B Enterprise Value',
-      readers: '500K+',
-      icon: '🧠',
-      color: 'from-violet-500 to-purple-500'
-    },
+      tit, l, e: 'Quant, u, m-Conscious, Intelligenc, e','
+      da, t, e: 'January, 202, 6','
+      impa, c, t: '$2.3B, Enterprise, Value','
+      reade, r, s: '50, 0, K+','
+      ic, o, n: '🧠','
+      col, o, r: 'fr, o, m-viol, e, t-500, t, o-purp, l, e-5, 0, 0}
     {
-      title: 'Autonomous Neural Networks',
-      date: 'February 2026',
-      impact: '99.97% Accuracy',
-      readers: '180K+',
-      icon: '⚡',
-      color: 'from-emerald-500 to-teal-500'
-    },
+      tit, l, e: 'Autonomous, Neural, Networks','
+      da, t, e: 'February, 202, 6','
+      impa, c, t: '99.97% Accura, c, y','
+      reade, r, s: '18, 0, K+','
+      ic, o, n: '⚡','
+      col, o, r: 'fr, o, m-emera, l, d-500, t, o-te, a, l-5, 0, 0}
     {
-      title: 'Neural-Synaptic Fusion AI',
-      date: 'March 2026',
-      impact: '500% Cognitive Enhancement',
-      readers: '203K+',
-      icon: '🚀',
-      color: 'from-blue-500 to-cyan-500'
-    }
-  ];
-
-  return (
-    <div className="py-16 bg-gradient-to-br from-slate-900 via-violet-900 to-purple-900 relative overflow-hidden">
-      {/* Animated background effects */}
-      <div className="absolute inset-0 overflow-hidden opacity-20">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-violet-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '4s' }}></div>
-      </div>
-
-      <div className="container mx-auto px-6 relative z-10">
-        {/* Header Section */}
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-violet-500/20 to-purple-500/20 border border-violet-500/30 mb-6">
-
-            <span className="text-violet-400 font-bold text-lg tracking-wider uppercase">
-              🌍 NEW 2026 CONTENT REVOLUTION
-            </span>
-
-          </div>
-
-          <h2 className="text-4xl md:text-5xl font-extrabold mb-6 bg-gradient-to-r from-violet-400 via-purple-400 to-blue-400 bg-clip-text text-transparent">
-            Revolutionary Content Just Released
-          </h2>
-          
-          <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
-            Discover the most groundbreaking AI innovations of 2026. Join millions of professionals 
-            who are already experiencing the future of technology through our revolutionary content.
-          </p>
-        </div>
-
-        {/* Content Grid */}
-        <div className="grid md:grid-cols-3 gap-8 mb-12">
-          {newContent.map((content, index) => (
-
-            <div
-key={index}
-
-              className="group relative bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 hover:border-violet-500/50 transition-all duration-500 overflow-hidden hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-violet-500/20"
-              style={{ animationDelay: `${index * 200}ms` }}
-            >
-              {/* Card glow effect */}
-              <div className={`absolute inset-0 bg-gradient-to-br ${content.color} opacity-0 group-hover:opacity-10 transition-all duration-500`}></div>
-              
-              <div className="relative p-8">
-                {/* Content Icon */}
-                <div className="text-5xl mb-6 text-center group-hover:animate-pulse">
-                  {content.icon}
-                </div>
-
-                {/* Date Badge */}
-                <div className="text-center mb-4">
-                  <span className={`inline-block px-3 py-1 rounded-full bg-gradient-to-r ${content.color} text-white text-xs font-bold`}>
-                    {content.date}
-                  </span>
-                </div>
-
-                {/* Title */}
-                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-violet-400 transition-colors duration-300 leading-tight text-center">
-                  {content.title}
-                </h3>
-
-                {/* Impact */}
-                <div className="text-center mb-4">
-                  <div className="text-violet-400 font-semibold text-lg">
-                    {content.impact}
-                  </div>
-                </div>
-
-                {/* Reader Count */}
-                <div className="text-center mb-6">
-                  <div className="flex items-center justify-center gap-2 text-gray-400">
-
-                    <span className="text-sm">{content.readers} readers</span>
-                  </div>
-                </div>
-
-                {/* CTA Button */}
-                <a
-                  href={`/blog/${content.title.toLowerCase().replace(/\s+/g, '-')}`}
-                  className={`group/btn flex items-center justify-center gap-2 w-full bg-gradient-to-r ${content.color} hover:opacity-90 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-violet-500/50 transform hover:-translate-y-1`}
-                >
-                  <span>Read Now</span>
-
-                </a>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* Global Impact Stats */}
-        <div className="bg-gradient-to-r from-violet-500/10 to-purple-500/10 rounded-3xl p-8 border border-violet-500/20 mb-12">
-          <div className="text-center mb-8">
-            <h3 className="text-3xl font-extrabold text-white mb-4">
-              Global Impact of Our Revolutionary Content
-            </h3>
-            <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-              Our innovative content is transforming industries worldwide and creating unprecedented value.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {[
-              { value: '2.5M+', label: 'Global Readers', icon: '🚀 color'
-              { value: '$15B+', label: 'Value Created', icon: '🚀 color'
-              { value: '99.9%', label: 'Content Accuracy', icon: '🚀 color',
-    { value: '150+', label: 'Countries Reached', icon: '🚀 color'
-            ].map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className={`${stat.color} mb-2 flex justify-center`}>
-                  {stat.icon}
-                </div>
-                <div className="text-3xl font-extrabold bg-gradient-to-r from-violet-400 to-blue-400 bg-clip-text text-transparent mb-1">
-                  {stat.value}
-                </div>
-                <div className="text-gray-400 text-sm font-medium">
-                  {stat.label}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* CTA Section */}
-        <div className="text-center">
-          <div className="inline-block p-1 rounded-2xl bg-gradient-to-r from-violet-500 via-purple-500 to-blue-500">
-            <div className="bg-slate-900 rounded-xl px-12 py-10">
-              <h3 className="text-3xl font-bold text-white mb-4">
-                Join the Content Revolution
-              </h3>
-              <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
-                Be among the first to access revolutionary AI insights, breakthrough research, 
-                and transformative technologies that are reshaping our world.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="/blog"
-                  className="bg-gradient-to-r from-violet-500 to-purple-600 hover:from-violet-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-violet-500/50 flex items-center justify-center gap-2"
-                >
-
-                  <span>Explore All Content</span>
-                </a>
-                <a
-                  href="/newsletter"
-                  className="border-2 border-violet-500 text-violet-400 hover:bg-violet-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-2"
-                >
-                  <span>Subscribe to Updates</span>
-
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-export default React.memo(NewContentPromotionalBanner2026);
+      title: 'Neur, a, l-Synaptic, Fusion, A, I',
+      date: 'March, 20, 2, 6',
+      impa, c, t: '5, 0, 0% Cognitive, Enhanceme, n, t',
+      reade, r, s: '2, 0, 3, K+',
+      ic, o, n: '🚀',
+      col, o, r: 'fr, o, m-bl, u, e-500, t, o-cy, a, n-50, 0'
+      <div, classNam, e="absolute, inse, t-0, overflo, w-hidden, opacit, y-20">
+        <div, classNam, e="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-viol, e, t-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" />
+        <div, classNam, e="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 2, s' }} />
+        <div, classNam, e = "absolute, to, p-1/2, lef, t-1/2 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 4, s' }} />
+          <h2, classNam, e="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-viol, e, t-400, vi, a-purp, l, e-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t">
+            Revolutionary, Content, Just Releas, e, d
+        {/* Content, G, r, i, d */}
+        <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12">
+          { newConte, n, t.m, a, p((con, t, e, n, t, ind, e, x) = > (
+            <div, ke, y = { in, d, e, x  }, classNa, m, e = "group, relative, bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/10, hove, r: bord, e, r-viol, e, t-5, 0, 0/50, transitio, n-all, duratio, n-500, overflo, w-hidden, hove, r:transform, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-viol, e, t-5, 0, 0/20"
+              sty, l, e = { { animationDel, a, y: `${ind, e, x * 2, 0, 0 }, ms` }}
+             > {/* Card, glow, effect */}
+              <div, classNam, e = { `absolute, inse, t-0, b, g-gradie, n, t-to-br ${conte, n, t.co, l, o, r }, opaci, t, y-0, grou, p-hov, e, r: opaci, t, y-10, transitio, n-all, duratio, n-50, 0`} />
+              <div, classNam, e = "relativ, e, p-8">
+                <h3, classNam, e = "te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hov, e, r: te, x, t-viol, e, t-400, transitio, n-colors, duratio, n-300, leadin, g-tight, tex, t-cent, e, r">
+                  {conte, n, t.t, i, t, l, e}
+                <div, classNam, e="te, x, t-center, m, b-6">
+                  <div, classNam, e="flex, item, s-center, justif, y-center, ga, p-2, tex, t-gr, a, y-4, 0, 0">
+                    <Users, classNam, e="w-4 h-4" />
+                    <span, classNam, e="te, x, t-sm">{conte, n, t.reade, r, s} reade, r, s</sp, a, n>
+                  <ArrowRight, classNam, e = "w-4 h-4, grou, p-hov, e, r/b, t, n: transla, t, e-x-1, transitio, n-transform, duratio, n-3, 0, 0" />
+              <div, ke, y = { in, d, e, x }, classNa, m, e = "te, x, t-cent, e, r" > <div, classNam, e = { `${st, a, t.co, l, o, r }, mb-2, flex, justify-cent, e, r`}>
+              <p, classNam, e="te, x, t-gr, a, y-400, m, b-8, ma, x-w-2xl, m, x-au, t, o">
+                Be, among, the first, to, access revolutionary, AI, insight, s, breakthrough, researc, h, 
+                  <Rocket, classNam, e="w-5 h-5" />
+                  <ArrowRight, classNam, e="w-5 h-5" />

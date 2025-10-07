@@ -246,14 +246,12 @@ const AIDrivenIncidentResponse2025: React.FC = () =>
             </p>
             <div className="text-left"></div>
               <a
-                href="/contact"
-                className="text-left"
+                href="/<contact" className="text-left"
               ></a>
                 Request AIOps Demo
               </a>
               <a
-                href="/services/aiops-platform"
-                className="text-left"
+                href="/services/aiops-<platform" className="text-left"
               ></a>
                 Explore AIOps Solutions
               </a>

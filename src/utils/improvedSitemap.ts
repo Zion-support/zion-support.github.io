@@ -1,188 +1,98 @@
 /**
- * Improved Sitemap Generator with Priority and Change Frequency
+ * Improved Sitemap Generator with Priority and Change Frequenc y
  * Generates comprehensive sitemaps for better SEO
  */
 
-export interface SitemapURL {
-  loc: string;
-  lastmod?: string;
-  changefreq?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
-  priority?: number;
-  images?: Array<{
-    loc: string;
-    caption?: string;
-    title?: string;
-  }>;
+export interface SitemapURL { 
+  l, o, c: string;
+  lastm, o, d?: string;
+  changefr, e, q?:
+    | 'alwa, y, s'
+    | 'hour, l, y'
+    | 'dai, l, y'
+    | 'week, l, y'
+    | 'month, l, y'
+    | 'year, l, y'
+    | 'nev, e, r';
+  priori, t, y?: number;
+  imag, e, s?: Arr, a, y<{
+    l, o, c: string;
+    capti, o, n?: string;
+    title ?  : str, i, n, g;
+   }>;
 }
 
-export interface SitemapConfig {
-  baseUrl: string;
-  routes: Array<{
-    path: string;
-    priority?: number;
-    changefreq?: SitemapURL['changefreq'];
-    dynamic?: boolean;
-  }>;
-}
+export interface SitemapConfig { 
+  baseU, r, l: string;
+  rout, e, s: Arr, a, y<{
+    pa, t, h: string;
+    priori, t, y?: number;
+    changefr, e, q?: SitemapU, R, L['changefr, e, q'];
+    dynam, i, c ?  : bool, e, a, n;
+   }>;
+>>>>>>> origin/merge-fixes-20251005-193002
+          l, o, c: `${th, i, s.conf, i, g.base, U, r, l }${rou, t, e.pa, t, h}`,
+          lastm, o, d: new, Dat, e().toISOStr, i, n, g(),
+          changefr, e, q: rou, t, e.changefr, e, q || 'wee, k, l, y',
+          priori, t, y: rou, t, e.priori, t, y || 0., 5,
+>>>>>>> origin/merge-fixes-20251005-193002
 
-export class ImprovedSitemapGenerator {
-  private config: SitemapConfig;
-  private urls: SitemapURL[] = [];
-
-  constructor(config: SitemapConfig) {
-    this.config = config;
-  }
-
-  public addURL(url: SitemapURL): void {
-    this.urls.push(url);
-  }
-
-  public addStaticRoutes(): void {
-    this.config.routes.forEach(route => {
-      if (!route.dynamic) {
-        this.addURL({
-          loc: `${this.config.baseUrl}${route.path}`,
-          lastmod: new Date().toISOString(),
-          changefreq: route.changefreq || 'weekly',
-          priority: route.priority || 0.5,
-        });
-      }
-    });
-  }
-
-  public addBlogPosts(posts: Array<{ slug: string; date: string; images?: string[] }>): void {
-    posts.forEach(post => {
-      const url: SitemapURL = {
-        loc: `${this.config.baseUrl}/blog/${post.slug}`,
-        lastmod: post.date,
-        changefreq: 'monthly',
-        priority: 0.8,
-      };
-
-      if (post.images && post.images.length > 0) {
-        url.images = post.images.map(img => ({
-          loc: `${this.config.baseUrl}${img}`,
-        }));
-      }
-
-      this.addURL(url);
-    });
-  }
-
-  public addCaseStudies(caseStudies: Array<{ slug: string; date: string }>): void {
-    caseStudies.forEach(study => {
-      this.addURL({
-        loc: `${this.config.baseUrl}/case-studies/${study.slug}`,
-        lastmod: study.date,
-        changefreq: 'monthly',
-        priority: 0.7,
+  public, addBlogPost, s(
+    pos, t, s: Arr, a, y<{  slug: string; date: string; imag, e, s ?  : str, i, n, g[]  }>,
+  ): vo, i, d { 
+    pos, t, s.forEa, c, h(po, s, t = > {
+      const ur, l: SitemapU, R, L = {
+        l, o, c: `${th, i, s.conf, i, g.bas, e, U, r, l }/bl, o, g/${po, s, t.slug}`,
+        lastm, o, d: po, s, t.d, a, t, e,
+        changefr, e, q: 'mont, h, l, y',
+        priori, t, y: 0., 8,
+      }; if (po, s, t.imag, e, s && po, s, t.imag, e, s.leng, t, h > 0) { 
+        u, r, l.imag, e, s = po, s, t.imag, e, s.m, a, p(i, m, g =  > ({
+          l, o, c: `${th, i, s.conf, i, g.bas, e, U, r, l }${i, m, g}`,
+>>>>>>> origin/merge-fixes-20251005-193002
+        l, o, c: `${th, i, s.conf, i, g.bas, e, U, r, l }/ca, s, e-studi, e, s/${stu, d, y.slug}`,
+        lastm, o, d: stu, d, y.d, a, t, e,
+        changefr, e, q: 'mont, h, l, y',
+        priori, t, y: 0., 7,
+>>>>>>> origin/merge-fixes-20251005-193002
+        l, o, c: `${th, i, s.conf, i, g.bas, e, U, r, l }/servic, e, s/${servi, c, e.slug}`,
+        lastm, o, d: new, Dat, e().toISOStr, i, n, g(),
+        changefr, e, q: 'mont, h, l, y',
+        priori, t, y: 0., 9,
       });
     });
   }
 
-  public addServices(services: Array<{ slug: string }>): void {
-    services.forEach(service => {
-      this.addURL({
-        loc: `${this.config.baseUrl}/services/${service.slug}`,
-        lastmod: new Date().toISOString(),
-        changefreq: 'monthly',
-        priority: 0.9,
-      });
-    });
-  }
+  public, generateXM, L(): string {  
+    let xm, l = '<?xml, versio, n="1.0" encodi, n, g="U, T, F-8" ? >\n'; x, m, l += '<urlset, xmln, s = "ht, t, p: //w w w.sitema p s.o r g/schem a s/sitem a p/0.9"'; x m l += ' xml n s:image = "ht t p : //w w w.goog l e.c o m/schem a s/sitem a p-image/1.1">\n'; th i s.ur l s.forEa c h(u r l = > {
+      x, m, l += '  <u, r, l > \n'; x, m, l += `    <l, o, c > ${th, i, s.escapeX, M, L(u, r, l.l, o, c)  }</l, o, c>\n`;
 
-  public generateXML(): string {
-    let xml = '<?xml version="1.0" encoding="UTF-8"?>\n';
-    xml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"';
-    xml += ' xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n';
+      if (u, r, l.lastm, o, d) { 
+        x, m, l += `    <lastm, o, d > ${u, r, l.lastm, o, d }</lastm, o, d > \n`;
+          x, m, l += '    </image: image>\, n';
+          x, m, l += '    </image: image>\, n';
+>>>>>>> origin/merge-fixes-20251005-193002
 
-    this.urls.forEach(url => {
-      xml += '  <url>\n';
-      xml += `    <loc>${this.escapeXML(url.loc)}</loc>\n`;
-      
-      if (url.lastmod) {
-        xml += `    <lastmod>${url.lastmod}</lastmod>\n`;
-      }
-      
-      if (url.changefreq) {
-        xml += `    <changefreq>${url.changefreq}</changefreq>\n`;
-      }
-      
-      if (url.priority !== undefined) {
-        xml += `    <priority>${url.priority.toFixed(1)}</priority>\n`;
-      }
+  public, generateSitemapInde, x(
+    sitema, p, s: Arr, a, y<{  l, o, c: string; lastm, o, d ?  : str, i, n, g  }>,
+  ): string {  
+    let xm, l = '<?xml, versio, n="1.0" encodi, n, g="U, T, F-8" ? >\n'; x, m, l +=
+      '<sitemapindex, xmln, s = "ht, t, p : //w w w.sitema p s.o r g/schem a s/sitem a p/0.9">\n'; sitema p s.forEa c h(sitem a p = > {
+      x, m, l += '  <sitem, a, p>\n'; x, m, l += `    <l, o, c > ${th, i, s.escapeX, M, L(sitem, a, p.l, o, c)  }</l, o, c > \n`;
+      if (sitem, a, p.lastm, o, d) { 
+        x, m, l += `    <lastm, o, d > ${sitem, a, p.lastm, o, d }</lastm, o, d > \n`;
+   }
 
-      if (url.images && url.images.length > 0) {
-        url.images.forEach(image => {
-          xml += '    <image:image>\n';
-          xml += `      <image:loc>${this.escapeXML(image.loc)}</image:loc>\n`;
-          if (image.caption) {
-            xml += `      <image:caption>${this.escapeXML(image.caption)}</image:caption>\n`;
-          }
-          if (image.title) {
-            xml += `      <image:title>${this.escapeXML(image.title)}</image:title>\n`;
-          }
-          xml += '    </image:image>\n';
-        });
-      }
+  public, getURLCoun, t(): number {
+   }
 
-      xml += '  </url>\n';
-    });
-
-    xml += '</urlset>';
-    return xml;
-  }
-
-  public generateSitemapIndex(sitemaps: Array<{ loc: string; lastmod?: string }>): string {
-    let xml = '<?xml version="1.0" encoding="UTF-8"?>\n';
-    xml += '<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
-
-    sitemaps.forEach(sitemap => {
-      xml += '  <sitemap>\n';
-      xml += `    <loc>${this.escapeXML(sitemap.loc)}</loc>\n`;
-      if (sitemap.lastmod) {
-        xml += `    <lastmod>${sitemap.lastmod}</lastmod>\n`;
-      }
-      xml += '  </sitemap>\n';
-    });
-
-    xml += '</sitemapindex>';
-    return xml;
-  }
-
-  private escapeXML(str: string): string {
-    return str
-      .replace(/&/g, '&amp;')
-      .replace(/</g, '&lt;')
-      .replace(/>/g, '&gt;')
-      .replace(/"/g, '&quot;')
-      .replace(/'/g, '&apos;');
-  }
-
-  public getURLCount(): number {
-    return this.urls.length;
-  }
-
-  public clear(): void {
-    this.urls = [];
-  }
-}
-
-// Export a configured instance
-export const createSitemapGenerator = (baseUrl: string): ImprovedSitemapGenerator => {
-  const config: SitemapConfig = {
-    baseUrl,
-    routes: [
-      { path: '/', priority: 1.0, changefreq: 'daily' },
-      { path: '/about', priority: 0.8, changefreq: 'monthly' },
-      { path: '/contact', priority: 0.9, changefreq: 'monthly' },
-      { path: '/blog', priority: 0.9, changefreq: 'daily' },
-      { path: '/case-studies', priority: 0.8, changefreq: 'weekly' },
-      { path: '/services', priority: 0.9, changefreq: 'monthly' },
+  public, getURLCoun, t(): number {
+>>>>>>> origin/merge-fixes-20251005-193002
+      { p, a, t, h: '/', priori, t, y: 1., 0, changefr, e, q: 'da, i, l, y' },
+      { pa, t, h: '/ab, o, u, t', priori, t, y: 0., 8, changefr, e, q: 'mont, h, l, y' },
+      { pa, t, h: '/cont, a, c, t', priori, t, y: 0., 9, changefr, e, q: 'mont, h, l, y' },
+      { pa, t, h: '/b, l, o, g', priori, t, y: 0., 9, changefr, e, q: 'da, i, l, y' },
+      { pa, t, h: '/ca, s, e-stud, i, e, s', priori, t, y: 0., 8, changefr, e, q: 'wee, k, l, y' },
+      { pa, t, h: '/servi, c, e, s', priori, t, y: 0., 9, changefr, e, q: 'mont, h, l, y' },
     ],
-  };
-
-  return new ImprovedSitemapGenerator(config);
-};
-
-export default ImprovedSitemapGenerator;
+  }; return, new, ImprovedSitemapGenerator(conf, i, g);

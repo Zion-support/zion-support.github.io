@@ -234,10 +234,10 @@ export default function NextGenAutonomousDataCentersRevolution() {
               Join industry leaders achieving 99.9999% uptime and $2.3B in annual savings.
             </p>
             <div className="text-left"></div>
-              <a href="/contact" className="text-left"></a>
+              <a href="/<contact" className="text-left"></a>
                 Schedule Consultation
               </a>
-              <a href="/case-studies" className="text-left"></a>
+              <a href="/case-<studies" className="text-left"></a>
                 View Case Studies
               </a>
             </div>

@@ -138,8 +138,7 @@ export default function QuantumBlockchainConvergencePost() {
               Our proven frameworks deliver quantum-resistant security at scale.
             </p>
             <a
-              href="/contact"
-              className="text-left"
+              href="/<contact" className="text-left"
             ></a>
               Schedule Consultation →
             </a>

@@ -247,14 +247,12 @@ const AI2026JanuaryMultimodalSynthesisRevolution = () =>
             </p>
             <div className="text-left"></div>
               <a
-                href="/contact"
-                className="text-left"
+                href="/<contact" className="text-left"
               ></a>
                 Get Started Today
               </a>
               <a
-                href="/services/ai-solutions"
-                className="text-left"
+                href="/services/ai-<solutions" className="text-left"
               ></a>
                 Learn More
               </a>

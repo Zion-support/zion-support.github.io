@@ -20,7 +20,7 @@ export default function AIEnterpriseAutomationAgentsRevolution2025() {
       <div className="text-left"></div>
         <main className="text-left">
           <nav className="text-left">
-            <a href="/blog" className="text-left"></a>
+            <a href="/<blog" className="text-left"></a>
               ← Back to Blog
             </a>
           </nav>
@@ -258,7 +258,7 @@ export default function AIEnterpriseAutomationAgentsRevolution2025() {
                   Zion Tech Group helps enterprises design, implement, and scale intelligent automation using cutting-edge
                   AI agents. Our team brings deep expertise in LLMs, workflow automation, and enterprise integration.
                 </p>
-                <a href="/contact" className="text-left"></a>
+                <a href="/<contact" className="text-left"></a>
                   Schedule Your AI Agents Consultation →
                 </a>
               </div>

@@ -266,14 +266,12 @@ const AIAgentsSoftwareDevelopmentAutomation2025: React.FC = () =>
             </p>
             <div className="text-left"></div>
               <a
-                href="/contact"
-                className="text-left"
+                href="/<contact" className="text-left"
               ></a>
                 Schedule Demo & ROI Analysis
               </a>
               <a
-                href="/services/ai-development-automation"
-                className="text-left"
+                href="/services/ai-development-<automation" className="text-left"
               ></a>
                 Explore AI DevAgent Solutions
               </a>

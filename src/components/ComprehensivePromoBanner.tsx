@@ -1,7 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { newArticles2025 } from '../content/new-articles-2025';
-import { newServices2026 } from '../content/new-services-2026';
 
 interface ComprehensivePromoBannerProps {
   variant?: 'hero' | 'compact' | 'featured';
@@ -9,137 +7,90 @@ interface ComprehensivePromoBannerProps {
   className?: string;
 }
 
-const ComprehensivePromoBanner: React.FC<ComprehensivePromoBannerProps> = ({ 
-  variant = 'hero', 
-  showCount = 4,
-  className = '' 
-}) => {
-  const latestArticles = newArticles2025.filter(a => a.featured).slice(0, showCount);
-  const latestServices = newServices2026.filter(s => s.featured).slice(0, showCount);
-
-  if (variant === 'compact') {
-    return (
-      <div className={`bg-gradient-to-r from-indigo-600 to-purple-600 rounded-xl p-6 ${className}`}>
-        <div className="flex items-center justify-between">
-          <div>
-            <h3 className="text-xl font-bold text-white mb-2">
-              🚀 New: {latestArticles.length} Articles + {latestServices.length} Services
-            </h3>
-            <p className="text-indigo-100">
-              Multimodal AI, Blockchain-AI, Green AI, AutoML & More!
-            </p>
-          </div>
+const ComprehensivePromoBanner: React.FC<ComprehensivePromoBannerProps> = ({
+  variant = 'hero',
+  showCount = 3,
+  className = ''
+      <div className={`bg-gradient-to-r ${promoItems[0].color} text-white py-8 px-4 ${className}`}>
+        <div className="max-w-6xl mx-auto text-center">
+          <h2 className="text-2xl font-bold mb-4">{promoItems[0].title}</h2>
+          <p className="text-lg mb-6">{promoItems[0].description}</p>
           <Link
-            to="/blog"
-            className="bg-white text-indigo-600 px-6 py-3 rounded-lg font-semibold hover:bg-indigo-50 transition-colors flex items-center gap-2"
+            to={promoItems[0].link}
+            className="inline-block bg-white text-gray-800 px-6 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
           >
-            Explore Now
-
+            Learn More
           </Link>
         </div>
       </div>
-    );
-  }
-
-  if (variant === 'featured') {
-    return (
-      <div className={`bg-white rounded-2xl shadow-xl overflow-hidden ${className}`}>
-        <div className="bg-gradient-to-r from-purple-600 to-indigo-600 p-8">
-          <div className="flex items-center gap-3 mb-4">
-
-            <h2 className="text-3xl font-bold text-white">Latest Innovations</h2>
-          </div>
-          <p className="text-purple-100 text-lg">
-            Discover our newest articles and services transforming industries
-          </p>
-        </div>
-        <div className="grid md:grid-cols-2 gap-6 p-8">
-          {latestArticles.slice(0, 2).map((article) => (
-            <div key={article.id} className="border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-all">
-              <div className="text-sm text-indigo-600 font-semibold mb-2">{article.category}</div>
-              <h4 className="text-lg font-bold text-gray-900 mb-2">{article.title}</h4>
-              <p className="text-gray-600 mb-4">{article.description}</p>
-              <Link to={article.link} className="text-indigo-600 font-semibold hover:text-indigo-800 flex items-center gap-2">
-                Read More</Link>
+      <div className={`space-y-6 ${className}`}>
+        {displayedItems.map((item) => (
+          <div key={item.id} className={`bg-gradient-to-r ${item.color} text-white p-6 rounded-lg`}>
+            <div className="max-w-4xl mx-auto">
+              <h3 className="text-xl font-bold mb-2">{item.title}</h3>
+              <p className="text-lg mb-4">{item.description}</p>
+              <Link
+                to={item.link}
+                className="inline-block bg-white text-gray-800 px-4 py-2 rounded font-semibold hover:bg-gray-100 transition-colors"
+              >
+                Explore
+              </Link>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
-    );
-  }
-
-  // Hero variant (default)
-  return (
-    <div className={`bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 rounded-3xl p-8 md:p-12 text-white ${className}`}>
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-10">
-          <div className="inline-flex items-center px-4 py-2 bg-yellow-400/20 rounded-full text-yellow-300 mb-6">
-
-            <span className="font-bold">OCTOBER 2025: BREAKTHROUGH CONTENT RELEASE</span>
-          </div>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            {latestArticles.length} New Articles + {latestServices.length} Revolutionary Services
-          </h2>
-          <p className="text-xl text-purple-200 max-w-3xl mx-auto">
-            Multimodal AI, Blockchain Integration, Green AI, AutoML, Predictive Maintenance, 
-            AI Talent Acquisition, Fraud Prevention & More!
-          </p>
-        </div>
-
-        <div className="grid md:grid-cols-2 gap-6 mb-8">
-          <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6">
-            <h3 className="text-2xl font-bold mb-4 flex items-center gap-2">
-
-              Latest Articles
-            </h3>
-            <div className="space-y-3">
-              {latestArticles.slice(0, 3).map((article) => (
-                <Link
-                  key={article.id}
-                  to={article.link}
-                  className="block bg-white/5 rounded-lg p-4 hover:bg-white/15 transition-all"
-                >
-                  <div className="text-sm text-purple-300 mb-1">{article.category}</div>
-                  <div className="font-semibold">{article.title}</div>
-                  <div className="text-sm text-gray-300 mt-1">{article.readTime}</div>
-                </Link>
-              ))}
-            </div>
-          </div>
-
-          <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6">
-            <h3 className="text-2xl font-bold mb-4 flex items-center gap-2">
-
-              New Services
-            </h3>
-            <div className="space-y-3">
-              {latestServices.slice(0, 3).map((service) => (
-                <Link
-                  key={service.id}
-                  to={service.link}
-                  className="block bg-white/5 rounded-lg p-4 hover:bg-white/15 transition-all"
-                >
-                  <div className="text-sm text-green-300 mb-1">{service.category}</div>
-                  <div className="font-semibold">{service.title}</div>
-                  <div className="text-sm text-gray-300 mt-1">{service.pricing}</div>
-                </Link>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        <div className="text-center">
+    <div className={`bg-gradient-to-r ${promoItems[0].color} text-white py-16 px-4 ${className}`}>
+      <div className="max-w-7xl mx-auto text-center">
+        <h1 className="text-4xl md:text-6xl font-bold mb-6">
+          {promoItems[0].title}
+        </h1>
+        <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+          {promoItems[0].description}
+        </p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link
-            to="/blog"
-            className="inline-flex items-center gap-2 bg-white text-indigo-900 px-8 py-4 rounded-xl font-bold text-lg hover:bg-indigo-50 transition-all hover:scale-105"
+            to={promoItems[0].link}
+            className="bg-white text-gray-800 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
           >
-            Explore All Content
-
+            Get Started
+          </Link>
+          <Link
+            to="/contact"
+            className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-800 transition-colors"
+          >
+            Contact Us
           </Link>
         </div>
       </div>
     </div>
-  );
-};
+          <p className="text-lg mb-8">
+            Transform your business with cutting-edge AI technology
+          </p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+            {displayFeatures.map((feature, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                <div className="text-4xl mb-4">{feature.icon}</div>
+                <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
+                <p className="text-sm opacity-90">{feature.description}</p>
+              </div>
+            ))}
+          </div>
 
-export default ComprehensivePromoBanner;
+          <div className="space-x-4">
+            <Link 
+              to="/services" 
+              className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+            >
+              Learn More
+            </Link>
+            <Link 
+              to="/contact" 
+              className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
+            >
+              Get Started
+            </Link>
+          </div>
+        </div>
+      </div>
+    </div>

@@ -20,7 +20,7 @@ export default function AdvancedFederatedLearningPrivacyAI2025() {
       <div className="text-left"></div>
         <main className="text-left">
           <nav className="text-left">
-            <a href="/blog" className="text-left"></a>
+            <a href="/<blog" className="text-left"></a>
               ← Back to Blog
             </a>
           </nav>
@@ -272,8 +272,7 @@ export default function AdvancedFederatedLearningPrivacyAI2025() {
                   while maintaining absolute privacy compliance. Let's design your privacy-preserving AI architecture.
                 </p>
                 <a
-                  href="/contact"
-                  className="text-left"
+                  href="/<contact" className="text-left"
                 ></a>
                   Schedule Privacy AI Consultation →
                 </a>

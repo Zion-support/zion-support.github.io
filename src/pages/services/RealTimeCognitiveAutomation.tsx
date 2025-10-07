@@ -1,357 +1,166 @@
-
-
-
-
-
-
-;
-import { ArrowLeft, Brain, CheckCircle, DollarSign, Rocket, TrendingUp, Zap } from 'lucide-react';
-import { Link } from "react-router-dom";
-
-
-import { Helmet } from "react-helmet-async";
-import Header from "../../components/Header";
-
-const RealTimeCognitiveAutomation = () => {
-  return (
-    <>
-      <Helmet>
-        <title>Real-Time Cognitive Automation Platform | Transform Business Operations with AI | Zion Tech Group</title>
-        <meta
-          name="description"
-          content="Transform operations with Real-Time Cognitive Automation Platform. 94% accuracy, 85% cost reduction, 10x productivity gains. AI-powered workflows that learn and optimize autonomously."
+>>>>>>> origin/merge-fixes-20251005-193002
+      <Helm, e, t>
+        <title>
+          Re, a, l-Time, Cognitive, Automation Platfo, r, m | Transform, Business, Operations with, A, I | Zion, Tech, Group
+        </title>
+        <meta, nam, e = 'description'
+          conte, n, t='Transform, operations, with Re, a, l-Time, Cognitive, Automation Platfo, r, m. 94% accur, a, c, y, 85% cost, reductio, n, 10x, productivity, gains. AI-powered, workflows, that learn, and, optimize autonomous, l, y.'
         />
-        <meta
-          name="keywords"
-          content="cognitive automation, intelligent automation, RPA, AI workflows, process automation, business automation, hyperautomation"
+        <meta, nam, e = 'keywor, d, s'
+          conte, n, t='cognitive, automati, o, n, intelligent, automatio, n, R, P, A, AI, workflow, s, process, automatio, n, business, automatio, n, hyperautomati, o, n'
         />
-      </Helmet>
+      </Helm, e, t>
 
-      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">
-        <Header />
+      <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-da, r, k'>
+        <Head, e, r />
 
-        <article className="container mx-auto px-6 py-20">
-          {/* Back Link */}
-          <Link
-            to="/services"
-            className="inline-flex items-center text-zion-cyan hover:text-zion-blue-light mb-8 transition-colors"
+        <article, className='container, m, x-auto, p, x-6, p, y-20' > {/* Back, Lin, k */ }
+          <Link, t, o='/servic, e, s'
+            className='inli, n, e-flex, item, s-center, tex, t-zi, o, n-cyan, hove, r: te, x, t-zi, o, n-bl, u, e-light, m, b-8, transitio, n-colo, r, s'
           >
-            <ArrowLeft className="w-4 h-4 mr-2" />
-            Back to Services
-          </Link>
-
-          {/* Header */}
-          <div className="max-w-5xl mx-auto mb-16">
-            <div className="flex items-center gap-4 mb-6 flex-wrap">
-              <span className="px-4 py-2 bg-purple-500/20 text-purple-300 rounded-full text-sm font-semibold border border-purple-500/30">
-                🚀 NEW! October 2025
-              </span>
-              <span className="px-4 py-2 bg-green-500/20 text-green-300 rounded-full text-sm font-semibold border border-green-500/30">
-                🤖 AI Automation
-              </span>
-              <span className="text-zion-slate-light">Starting at $7,999/month</span>
+            <ArrowLeft, className='w-4 h-4, m, r-2' />
+            Back, to, Services
+              <span, className='te, x, t-zi, o, n-sla, t, e-lig, h, t'>
+                Starting, a, t $, 7,9, 9, 9/mon, t, h
+              </sp, a, n>
             </div>
+>>>>>>> origin/merge-fixes-20251005-193002
 
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
-              Real-Time Cognitive Automation Platform
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400 mt-2">
-                Transform Business Operations with Intelligent Automation
-              </span>
+            <h1, classNam, e = 'te, x, t-5xl, m, d: te, x, t-6xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t'>
+              Re, a, l-Time, Cognitive, Automation Platfo, r, m
+              <span, className='block, tex, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, t, o-cy, a, n-400, m, t-2'>
+                Transform, Business, Operations with, Intelligent, Automation
+              </sp, a, n>
             </h1>
 
-            <p className="text-xl text-zion-slate-light leading-relaxed mb-8">
-              Revolutionize your business operations with AI-powered workflows that deliver instant decision-making, 
-              self-learning automation, and 99.97% accuracy. Achieve 87% cost reduction and 10x productivity gains.
-            </p>
-
-            {/* Key Metrics Banner */}
-            <div className="grid md:grid-cols-4 gap-6">
-              <div className="bg-purple-900/40 rounded-xl p-6 border border-purple-500/30 text-center hover:scale-105 transition-transform">
-                <div className="text-4xl font-bold text-purple-400 mb-2">94%</div>
-                <div className="text-sm text-zion-slate-light">Process Accuracy</div>
-              </div>
-              <div className="bg-green-900/40 rounded-xl p-6 border border-green-500/30 text-center hover:scale-105 transition-transform">
-                <div className="text-4xl font-bold text-green-400 mb-2">85%</div>
-                <div className="text-sm text-zion-slate-light">Cost Reduction</div>
-              </div>
-              <div className="bg-blue-900/40 rounded-xl p-6 border border-blue-500/30 text-center hover:scale-105 transition-transform">
-                <div className="text-4xl font-bold text-blue-400 mb-2">10x</div>
-                <div className="text-sm text-zion-slate-light">Productivity Gain</div>
-              </div>
-              <div className="bg-cyan-900/40 rounded-xl p-6 border border-cyan-500/30 text-center hover:scale-105 transition-transform">
-                <div className="text-4xl font-bold text-cyan-400 mb-2">6 Mo</div>
-                <div className="text-sm text-zion-slate-light">Average ROI Time</div>
-              </div>
-            </div>
-          </div>
-
-          {/* Content */}
-          <div className="max-w-5xl mx-auto space-y-12 text-zion-slate-light">
-            {/* Business Impact */}
-            <section>
-              <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                <TrendingUp className="w-8 h-8 text-green-400" />
-                Business Impact
-              </h2>
-              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-zion-cyan/30">
-                <div className="grid md:grid-cols-2 gap-8">
-                  <div>
-                    <h3 className="text-xl font-bold text-white mb-4">⚡ Real-Time Processing</h3>
-                    <ul className="space-y-3">
-                      <li className="flex items-start gap-2">
-                        <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />
-                        <span>&lt;50ms decision latency</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />
-                        <span>Instant workflow execution</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />
-                        <span>Live process optimization</span>
-                      </li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-white mb-4">🧠 Self-Learning Systems</h3>
-                    <ul className="space-y-3">
-                      <li className="flex items-start gap-2">
-                        <CheckCircle className="w-5 h-5 text-blue-400 flex-shrink-0 mt-1" />
-                        <span>Continuous model improvement</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <CheckCircle className="w-5 h-5 text-blue-400 flex-shrink-0 mt-1" />
-                        <span>Adaptive workflow optimization</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <CheckCircle className="w-5 h-5 text-blue-400 flex-shrink-0 mt-1" />
-                        <span>Autonomous error correction</span>
-                      </li>
-                    </ul>
-                  </div>
+            <p, className='te, x, t-xl, tex, t-zi, o, n-sla, t, e-light, leadin, g-relaxed, m, b-8'>
+              Revolutionize, your, business operations, with, AI-powered, workflows, that deliver, instant, decision-ma, k, i, n, g, se, l, f-learning, automatio, n,
+              and, 9, 9.97% accura, c, y. Achieve, 8, 7% cost, reduction, and 10x, productivity, gains.
+              <div, classNam, e='bg-cy, a, n-9, 0, 0/40, rounde, d-x, l, p-6, border, border-cy, a, n-5, 0, 0/30, tex, t-center, hove, r:sca, l, e-105, transitio, n-transfo, r, m'>
+                <div, classNam, e='te, x, t-4xl, fon, t-bold, tex, t-cy, a, n-400, m, b-2'>
+            <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-4, ga, p-6'>
+              <div, className='bg-purp, l, e-9, 0, 0/40, rounde, d-x, l, p-6, border, border-purp, l, e-5, 0, 0/30, tex, t-center, hove, r:sca, l, e-105, transitio, n-transfo, r, m'>
+                <div, className='te, x, t-4xl, fon, t-bold, tex, t-purp, l, e-400, m, b-2'>
+                  94%
+                </div>
+                <div, className='te, x, t-sm, tex, t-zi, o, n-sla, t, e-lig, h, t'>
+                  Process, Accurac, y
                 </div>
               </div>
-            </section>
-
-            {/* Platform Capabilities */}
-            <section>
-              <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                <Brain className="w-8 h-8 text-purple-400" />
-                Platform Capabilities
-              </h2>
-              <div className="grid md:grid-cols-2 gap-6">
-                {[
-                  {
-                    title: "Intelligent Document Processing",
-                    description: "99.8% accuracy across PDF, images, scanned documents, and handwriting. Support for 127 languages.",
-                    icon: "📄"
-                  },
-                  {
-                    title: "Cognitive Decision Engine",
-                    description: "AI-powered decision-making with 94% prediction accuracy. Multi-criteria analysis in real-time.",
-                    icon: "🎯"
-                  },
-                  {
-                    title: "Workflow Orchestration",
-                    description: "Visual no-code designer with smart routing and autonomous exception handling. 10x faster deployment.",
-                    icon: "🔄"
-                  },
-                  {
-                    title: "Natural Language Understanding",
-                    description: "98% accuracy in intent recognition. Process and respond to human language with contextual understanding.",
-                    icon: "💬"
-                  },
-                  {
-                    title: "Predictive Analytics",
-                    description: "Process mining and bottleneck detection. Anticipate issues before they occur with predictive maintenance.",
-                    icon: "📊"
-                  },
-                  {
-                    title: "Enterprise Integration",
-                    description: "Pre-built connectors for 500+ systems including SAP, Salesforce, ServiceNow, and custom APIs.",
-                    icon: "🔌"
-                  }
-                ].map((capability, index) => (
-                  <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-zion-cyan/20 hover:border-zion-cyan/50 transition-all">
-                    <div className="text-4xl mb-4">{capability.icon}</div>
-                    <h3 className="text-xl font-bold text-white mb-3">{capability.title}</h3>
-                    <p className="text-zion-slate-light">{capability.description}</p>
-                  </div>
-                ))}
-              </div>
-            </section>
-
-            {/* Industry Solutions */}
-            <section>
-              <h2 className="text-3xl font-bold text-white mb-6">🏭 Industry Solutions</h2>
-              <div className="space-y-6">
-                {[
-                  {
-                    industry: "Financial Services",
-                    savings: "$12.4M",
-                    automation: "95%",
-                    highlights: ["Loan processing: 96% faster", "Fraud detection: 97% accuracy", "KYC/AML: 100% coverage"]
-                  },
-                  {
-                    industry: "Healthcare",
-                    savings: "$8.7M",
-                    automation: "92%",
-                    highlights: ["Claims processing: 92% auto-adjudication", "Medical coding: 99.1% accuracy", "Patient scheduling: 100% automated"]
-                  },
-                  {
-                    industry: "Manufacturing",
-                    savings: "$18.2M",
-                    automation: "94%",
-                    highlights: ["Quality control: 99.7% defect detection", "Inventory: 98% forecast accuracy", "Maintenance: 84% failures prevented"]
-                  },
-                  {
-                    industry: "Retail & E-commerce",
-                    savings: "$6.8M",
-                    automation: "89%",
-                    highlights: ["Order processing: 99.8% automation", "Customer service: 89% auto-resolution", "Returns: 95% automated"]
-                  }
-                ].map((solution, index) => (
-                  <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-zion-cyan/30">
-                    <div className="flex flex-wrap items-center justify-between gap-4 mb-4">
-                      <h3 className="text-2xl font-bold text-white">{solution.industry}</h3>
-                      <div className="flex gap-4">
-                        <div className="px-4 py-2 bg-green-500/20 text-green-300 rounded-lg text-sm font-semibold">
-                          {solution.savings} annual savings
-                        </div>
-                        <div className="px-4 py-2 bg-blue-500/20 text-blue-300 rounded-lg text-sm font-semibold">
-                          {solution.automation} automation
-                        </div>
-                      </div>
-                    </div>
-                    <ul className="space-y-2">
-                      {solution.highlights.map((highlight, hIndex) => (
-                        <li key={hIndex} className="flex items-start gap-2">
-                          <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />
-                          <span>{highlight}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                ))}
-              </div>
-            </section>
-
-            {/* Pricing Packages */}
-            <section>
-              <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                <DollarSign className="w-8 h-8 text-green-400" />
-                Pricing & Packages
-              </h2>
-              <div className="grid md:grid-cols-3 gap-6">
-                {[
-                  {
-                    name: "Business Starter",
-                    price: "$7,999",
-                    features: ["50,000 transactions/month", "10 automated workflows", "Standard integrations", "Email support", "99.5% SLA"]
-                  },
-                  {
-                    name: "Professional",
-                    price: "$19,999",
-                    popular: true,
-                    features: ["250,000 transactions/month", "50 automated workflows", "Advanced integrations", "24/7 support", "99.9% SLA"]
-                  },
-                  {
-                    name: "Enterprise",
-                    price: "$49,999",
-                    features: ["Unlimited transactions", "Unlimited workflows", "Custom AI models", "Dedicated team", "99.97% SLA"]
-                  }
-                ].map((pkg, index) => (
-                  <div key={index} className={`bg-white/5 backdrop-blur-sm rounded-xl p-6 border ${pkg.popular ? 'border-purple-500/50 ring-2 ring-purple-500/30' : 'border-zion-cyan/30'}`}>
-                    {pkg.popular && (
-                      <div className="bg-purple-500/20 text-purple-300 text-xs font-bold px-3 py-1 rounded-full inline-block mb-4">
-                        MOST POPULAR
-                      </div>
-                    )}
-                    <h3 className="text-2xl font-bold text-white mb-2">{pkg.name}</h3>
-                    <div className="text-4xl font-bold text-green-400 mb-6">{pkg.price}<span className="text-lg text-zion-slate-light">/month</span></div>
-                    <ul className="space-y-3">
-                      {pkg.features.map((feature, fIndex) => (
-                        <li key={fIndex} className="flex items-start gap-2">
-                          <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />
-                          <span>{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                ))}
-              </div>
-            </section>
-
-            {/* Limited Time Offer */}
-            <section>
-              <div className="bg-gradient-to-r from-purple-900/40 via-pink-900/40 to-cyan-900/40 rounded-xl p-8 border-2 border-purple-500/50">
-                <div className="flex items-center justify-between flex-wrap gap-6">
-                  <div className="flex-1">
-                    <div className="flex items-center gap-3 mb-4">
-                      <Rocket className="w-8 h-8 text-purple-400" />
-                      <h3 className="text-2xl font-bold text-white">🚀 October 2025 Launch Special</h3>
-                    </div>
-                    <p className="text-xl text-purple-200 mb-4">
-                      Get Your <strong>First 3 Months at 50% OFF</strong>
-                    </p>
-                    <ul className="space-y-2">
-                      <li className="flex items-start gap-2">
-                        <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />
-                        <span>Free process assessment ($15,000 value)</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />
-                        <span>Complimentary pilot implementation ($25,000 value)</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />
-                        <span>6 months extended support included</span>
-                      </li>
-                    </ul>
-                    <p className="text-sm text-zion-slate-light mt-4">
-                      Limited to first 30 customers. Annual contract required.
-                    </p>
-                  </div>
-                  <div>
-                    <Link
-                      to="/contact"
-                      className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-purple-500 to-cyan-500 text-white font-bold rounded-lg hover:from-purple-600 hover:to-cyan-600 transition-all transform hover:scale-105"
-                    >
-                      Get Started Today
-                      <Zap className="w-5 h-5" />
-                    </Link>
-                  </div>
+              <div, className='bg-gre, e, n-9, 0, 0/40, rounde, d-x, l, p-6, border, border-gre, e, n-5, 0, 0/30, tex, t-center, hove, r:sca, l, e-105, transitio, n-transfo, r, m'>
+                <div, className='te, x, t-4xl, fon, t-bold, tex, t-gre, e, n-400, m, b-2'>
+                  85%
+                </div>
+                <div, className='te, x, t-sm, tex, t-zi, o, n-sla, t, e-lig, h, t'>
+                  Cost, Reductio, n
                 </div>
               </div>
-            </section>
-
-            {/* CTA Section */}
-            <section className="text-center">
-              <h2 className="text-3xl font-bold text-white mb-6">Ready to Transform Your Operations?</h2>
-              <p className="text-xl text-zion-slate-light mb-8">
-                Schedule a consultation to see how cognitive automation can revolutionize your business.
-              </p>
-              <div className="flex flex-wrap gap-4 justify-center">
-                <Link
-                  to="/contact"
-                  className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-zion-blue to-zion-cyan text-white font-bold rounded-lg hover:from-zion-blue-light hover:to-zion-cyan transition-all transform hover:scale-105"
-                >
-                  Schedule Free Assessment
-                  <Zap className="w-5 h-5" />
-                </Link>
-                <Link
-                  to="/contact"
-                  className="inline-flex items-center gap-2 px-8 py-4 bg-white/10 backdrop-blur-sm text-white font-bold rounded-lg border border-zion-cyan/30 hover:bg-white/20 transition-all"
-                >
-                  Request Live Demo
-                </Link>
+              <div, className='bg-bl, u, e-9, 0, 0/40, rounde, d-x, l, p-6, border, border-bl, u, e-5, 0, 0/30, tex, t-center, hove, r:sca, l, e-105, transitio, n-transfo, r, m'>
+                <div, className='te, x, t-4xl, fon, t-bold, tex, t-bl, u, e-400, m, b-2'>1, 0, x</div>
+                <div, className='te, x, t-sm, tex, t-zi, o, n-sla, t, e-lig, h, t'>
+                  Productivity, Gai, n
+                </div>
               </div>
-            </section>
-          </div>
-        </article>
-      </div>
-    </>
-  );
-};
-
-export default RealTimeCognitiveAutomation;
+              <div, className='bg-cy, a, n-9, 0, 0/40, rounde, d-x, l, p-6, border, border-cy, a, n-5, 0, 0/30, tex, t-center, hove, r:sca, l, e-105, transitio, n-transfo, r, m'>
+                <div, className='te, x, t-4xl, fon, t-bold, tex, t-cy, a, n-400, m, b-2'>
+>>>>>>> origin/merge-fixes-20251005-193002
+                  6, M, o
+                </div>
+                <div, className='te, x, t-sm, tex, t-zi, o, n-sla, t, e-lig, h, t'>
+                  Average, ROI, Time
+                </d, i, v>
+                      <li, classNam, e='flex, item, s-start, ga, p-2'>
+                        <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />
+                      <li, classNam, e='flex, item, s-start, ga, p-2'>
+                        <CheckCircle, classNam, e='w-5 h-5, tex, t-bl, u, e-400, fle, x-shri, n, k-0, m, t-1' />
+                      <li, className='flex, item, s-start, ga, p-2'>
+                        <CheckCircle, className='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />
+                      <li, className='flex, item, s-start, ga, p-2'>
+                        <CheckCircle, className='w-5 h-5, tex, t-bl, u, e-400, fle, x-shri, n, k-0, m, t-1' />
+>>>>>>> origin/merge-fixes-20251005-193002
+                  <div, ke, y = { in, d, e, x }, classNa, m, e = 'bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-zi, o, n-cy, a, n/20, hove, r: bord, e, r-zi, o, n-cy, a, n/50, transitio, n-a, l, l'
+                  >
+                    <div, className='te, x, t-4xl, m, b-4'>{capabili, t, y.ic, o, n}</div>
+                    <h3, classNam, e = 'te, x, t-xl, fon, t-bold, tex, t-white, m, b-3'>
+                      {capabili, t, y.title}
+                    </h3>
+                    <p, className='te, x, t-zi, o, n-sla, t, e-lig, h, t'>
+                      {capabili, t, y.description}
+                    </p>
+                  </di, v>
+>>>>>>> origin/merge-fixes-20251005-193002
+                    industry: 'Reta, i, l & E-comme, r, c, e',
+                    savin, g, s: '$6.8, M',
+                    automati, o, n: '8, 9%',
+                    highligh, t, s: [
+                      'Order, processin, g: 99.8% automat, i, o, n',
+                      'Customer, servic, e: 89% au, t, o-resolut, i, o, n',
+                      'Retur, n, s: 95% automa, t, e, d',
+                    ],
+                  },
+                ].m, a, p((solution, ind, e, x) => (
+                  <div, ke, y = { in, d, e, x }, classNa, m, e = 'bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-zi, o, n-cy, a, n/30'
+                  >
+                    <div, className='flex, fle, x-wrap, item, s-center, justif, y-between, ga, p-4, m, b-4'>
+                      <h3, className='te, x, t-2xl, fon, t-bold, tex, t-whi, t, e'>
+                        {solution.industry}
+                      </h3>
+                      <div, className='flex, ga, p-4'>
+                        <div, className='px-4, p, y-2, b, g-gre, e, n-5, 0, 0/20, tex, t-gre, e, n-300, rounde, d-lg, tex, t-sm, fon, t-semibo, l, d'>
+                          {solution.savin, g, s} annual, saving, s
+                    <ul, classNam, e='spa, c, e-y-2'>
+                      { solution.highligh, t, s.m, a, p((highli, g, h, t, hInd, e, x) = > (
+                        <li, ke, y = { hIn, d, e, x  }, classNa, m, e = 'flex, item, s-start, ga, p-2'>
+                          <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />
+>>>>>>> origin/merge-fixes-20251005-193002
+                    na, m, e: 'Enterpr, i, s, e',
+                    pri, c, e: '$4, 9,9, 9, 9',
+                    featur, e, s: [
+                      'Unlimited, transactio, n, s',
+                      'Unlimited, workflow, s',
+                      'Custom, AI, models',
+                      'Dedicated, tea, m',
+                      '99.97% S, L, A',
+                    ],
+                  },
+                ].m, a, p((p, k, g, ind, e, x) => (
+                  <div, ke, y = { in, d, e, x }, classNa, m, e = { `bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, borde, r ${p, k, g.popul, a, r  ? 'bord, e, r-purp, l, e-5, 0, 0/50, rin, g-2, rin, g-purp, l, e-5, 0, 0/30'  : 'bord, e, r-zi, o, n-cy, a, n/30' }`}
+                  >
+                    {  p, k, g.popul, a, r  && (
+                      <div, className='bg-purp, l, e-5, 0, 0/20, tex, t-purp, l, e-300, tex, t-xs, fon, t-bold, p, x-3, p, y-1, rounde, d-full, inlin, e-block, m, b-4'>
+                        MOST, POPULA, R
+                      </di, v > )  }
+                    <h3, classNam, e = 'te, x, t-2xl, fon, t-bold, tex, t-white, m, b-2'>
+                      {p, k, g.na, m, e}
+                    </h3>
+                    <div, className='te, x, t-4xl, fon, t-bold, tex, t-gre, e, n-400, m, b-6'>
+                      {p, k, g.pri, c, e}
+                      <span, className='te, x, t-lg, tex, t-zi, o, n-sla, t, e-lig, h, t'>
+                        /mon, t, h
+                      </sp, a, n>
+                    </div>
+                    <ul, className='spa, c, e-y-3'>
+                      { p, k, g.featur, e, s.m, a, p((feat, u, r, e, fInd, e, x) = > (
+                        <li, ke, y = { fIn, d, e, x  }, classNa, m, e = 'flex, item, s-start, ga, p-2'>
+                          <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />
+>>>>>>> origin/merge-fixes-20251005-193002
+              <div, classNam, e = 'bg-gradie, n, t-to-r, fro, m-purp, l, e-9, 0, 0/40, vi, a-pi, n, k-9, 0, 0/40, t, o-cy, a, n-9, 0, 0/40, rounde, d-x, l, p-8, borde, r-2, borde, r-purp, l, e-5, 0, 0/50'>
+                <div, className='flex, item, s-center, justif, y-between, fle, x-wrap, ga, p-6'>
+                  <div, className='fl, e, x-1'>
+                    <div, className='flex, item, s-center, ga, p-3, m, b-4'>
+                      <Rocket, className='w-8 h-8, tex, t-purp, l, e-4, 0, 0' />
+                      <h3, className='te, x, t-2xl, fon, t-bold, tex, t-whi, t, e'>
+                        🚀 October, 2025, Launch Speci, a, l
+                      </h3>
+                      <li, classNam, e = 'flex, item, s-start, ga, p-2'>
+                        <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />
+                      Get, Started, Today
+                      <Zap, classNam, e='w-5 h-5' />
+                  Schedule, Free, Assessment
+                  <Zap, classNam, e='w-5 h-5' />
+                      <li, classNam, e = 'flex, item, s-start, ga, p-2'>
+                        <CheckCircle, className='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />
+                      Get, Started, Today
+                      <Zap, className='w-5 h-5' />
+                  Schedule, Free, Assessment
+                  <Zap, className='w-5 h-5' />

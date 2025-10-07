@@ -20,7 +20,7 @@ export default function NeuromorphicComputingEnterprise2025() {
       <div className="text-left"></div>
         <main className="text-left">
           <nav className="text-left">
-            <a href="/blog" className="text-left"></a>
+            <a href="/<blog" className="text-left"></a>
               ← Back to Blog
             </a>
           </nav>
@@ -320,8 +320,7 @@ loihi_process = LIF(shape=(10)), bias=0} du=4095; dv=4095)`}
                   implement production deployments.
                 </p>
                 <a
-                  href="/contact"
-                  className="text-left"
+                  href="/<contact" className="text-left"
                 ></a>
                   Explore Neuromorphic Solutions
                 </a>

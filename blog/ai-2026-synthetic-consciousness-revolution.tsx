@@ -273,20 +273,17 @@ export default function AI2026SyntheticConsciousnessRevolution() {
                 </p>
                 <div className="text-left"></div>
                   <a
-                    href="/contact"
-                    className="text-left"
+                    href="/<contact" className="text-left"
                   ></a>
                     Get Started Today
                   </a>
                   <a
-                    href="/services/synthetic-consciousness-ai-services"
-                    className="text-left"
+                    href="/services/synthetic-consciousness-ai-<services" className="text-left"
                   ></a>
                     Explore Services →
                   </a>
                   <a
-                    href="/case-studies/ai-2026-synthetic-consciousness-enterprise-500-billion-success"
-                    className="text-left"
+                    href="/case-studies/ai-2026-synthetic-consciousness-enterprise-500-billion-<success" className="text-left"
                   ></a>
                     View Case Study
                   </a>

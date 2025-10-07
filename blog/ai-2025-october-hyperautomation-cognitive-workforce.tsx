@@ -274,14 +274,12 @@ export default function HyperautomationCognitiveWorkforce2025() {
           </p>
           <div className="text-left"></div>
             <a
-              href="/contact"
-              className="text-left"
+              href="/<contact" className="text-left"
             ></a>
               Start Free 30-Day Trial
             </a>
             <a
-              href="/case-studies/cognitive-workforce-financial-services-2025"
-              className="text-left"
+              href="/case-studies/cognitive-workforce-financial-services-<2025" className="text-left"
             ></a>
               View Success Stories
             </a>

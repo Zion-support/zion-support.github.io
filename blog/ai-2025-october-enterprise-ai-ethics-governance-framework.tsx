@@ -289,10 +289,10 @@ export default function EnterpriseAIEthicsGovernanceFramework() {
               Join industry leaders achieving 99.4% compliance and $890M in risk mitigation value.
             </p>
             <div className="text-left"></div>
-              <a href="/contact" className="text-left"></a>
+              <a href="/<contact" className="text-left"></a>
                 Schedule Consultation
               </a>
-              <a href="/services" className="text-left"></a>
+              <a href="/<services" className="text-left"></a>
                 Explore Framework
               </a>
             </div>

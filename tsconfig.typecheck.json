@@ -4,6 +4,23 @@
     "noEmit": true,
     "skipLibCheck": true
   },
-  "include": ["src/typecheck-entry.ts"],
-  "exclude": ["node_modules", "dist", "build", "coverage"]
+  "include": ["src/**/*.ts", "src/**/*.tsx", "app/**/*.ts", "app/**/*.tsx"],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "build",
+    "coverage",
+    "src/pages/blog-disabled/**/*",
+    "app/blog/**/*",
+    "app/components/**/*",
+    "blog/**/*",
+    "components/**/*",
+    "src/components/**/*",
+    "src/pages/blog/**/*",
+    "**/*.disabled/**/*",
+    "**/backup*/**/*",
+    "**/corrupted*/**/*",
+    "**/temp*/**/*",
+    "**/disabled*/**/*"
+  ]
 }

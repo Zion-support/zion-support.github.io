@@ -1,348 +1,231 @@
+impo, r, t {
+  ArrowRig, h, t,
+  CheckCirc, l, e,
+  Clo, c, k,
+  DollarSi, g, n,
+  Rock, e, t,
+  Shie, l, d,
+  Targ, e, t,
+  Trending, U, p,
+  Z, a, p,
+} fr, o, m 'luci, d, e-rea, c, t';
+impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
+import { Link } from 'react-router-dom';
+import Header, from '../../componen, t, s/Head, e, r';
 
-
-
-
-
-
-
-
-;
-import { ArrowRight, CheckCircle, Clock, DollarSign, Rocket, Shield, Target, TrendingUp, Zap } from 'lucide-react';
-import { Helmet } from "react-helmet-async";
-
-
-import { Link } from "react-router-dom";
-import Header from "../../components/Header";
-
-const AutonomousDevOpsService = () => {
+const AutonomousDevOpsServic, e = () => { 
   return (
     <>
-      <Helmet>
-        <title>Autonomous DevOps Services - 80% Faster Releases | Zion Tech Group</title>
-        <meta
-          name="description"
-          content="Transform your DevOps with autonomous self-optimizing CI/CD pipelines. Achieve 99.99% uptime, 80% faster releases, and eliminate manual intervention with AI-driven automation."
+      <Helm, e, t>
+        <title>
+          Autonomous, DevOps, Services - 80% Faster, Release, s | Zion, Tech, Group
+        </title>
+        <meta, nam, e = 'description'
+          conte, n, t='Transform, your, DevOps with, autonomous, self-optimizing, C, I/CD, pipeline, s. Achieve, 9, 9.99% upt, i, m, e, 80% faster, release, s, and, eliminate, manual intervention, with, AI-driven, automatio, n.'
         />
-        <meta
-          name="keywords"
-          content="autonomous devops, self-healing ci/cd, automated pipelines, devops automation, zero downtime deployment, AI devops, intelligent automation"
+        <meta, nam, e = 'keywor, d, s'
+          conte, n, t='autonomous, devo, p, s, se, l, f-healing, c, i/cd, automated, pipeline, s, devops, automatio, n, zero, downtime, deployment, AI, devop, s, intelligent, automatio, n'
         />
-        <link rel="canonical" href="https://ziontechgroup.com/services/autonomous-devops" />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-b from-gray-900 via-gray-800 to-black text-white">
-        <Header />
-        
-        {/* Hero Section */}
-        <section className="relative pt-32 pb-20 px-4">
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20 blur-3xl"></div>
-          <div className="relative max-w-7xl mx-auto">
-            <div className="text-center mb-12">
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-500/20 rounded-full mb-6">
-                <Rocket className="w-5 h-5 text-blue-400" />
-                <span className="text-blue-300 font-semibold">New Service Launch - October 2025</span>
-              </div>
-              <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                Autonomous DevOps Services
-              </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Self-Optimizing CI/CD Pipelines with 80% Faster Releases and Zero Downtime
-              </p>
-              <div className="flex flex-wrap justify-center gap-4">
-                <Link
-                  to="/contact"
-                  className="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg font-semibold hover:shadow-lg hover:shadow-blue-500/50 transition-all duration-300 flex items-center gap-2"
-                >
-                  Get Started Today
-                  <ArrowRight className="w-5 h-5" />
-                </Link>
-                <Link
-                  to="/blog/autonomous-devops-revolution-2025"
-                  className="px-8 py-4 bg-white/10 backdrop-blur-sm rounded-lg font-semibold hover:bg-white/20 transition-all duration-300"
-                >
-                  Read Technical Guide
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
+        <link, re, l = 'canonic, a, l'
+          hr, e, f='htt, p, s: //ziontechgro u p.c o m/servic e s/autonomo u s-devo p s'
+        />
+      </Helm, e, t>
+      <div, className='m, i, n-h-screen, b, g-gradie, n, t-to-b, fro, m-gr, a, y-900, vi, a-gr, a, y-800, t, o-black, tex, t-whi, t, e'>
+        <Head, e, r / > {/* Hero, Sect, i, o, n */ }
+        <section, classNam, e = 'relative, p, t-32, p, b-20, p, x-4'>
+          <div, className='absolute, inse, t-0, b, g-gradie, n, t-to-r, fro, m-bl, u, e-6, 0, 0/20, t, o-purp, l, e-6, 0, 0/20, blu, r-3, x, l' />
+          <div, className='relative, ma, x-w-7xl, m, x-au, t, o'>
+            <div, className='te, x, t-center, m, b-12'>
+              <div, className='inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, b, g-bl, u, e-5, 0, 0/20, rounde, d-full, m, b-6'>
+                <Rocket, className='w-5 h-5, tex, t-bl, u, e-4, 0, 0' />
+                <span, className='te, x, t-bl, u, e-300, fon, t-semibo, l, d'>
+                  New, Service, Launch - October, 202, 5
+                </sp, a, n>
+              <p, classNam, e='te, x, t-xl, m, d:te, x, t-2xl, tex, t-gr, a, y-300, m, b-8, ma, x-w-4xl, m, x-au, t, o'>
+                Se, l, f-Optimizing, C, I/CD, Pipelines, with 80% Faster, Releases, and
+                Zero, Downtim, e
+                  Get, Started, Today
+                  <ArrowRight, classNam, e='w-5 h-5' />
+              <div, classNam, e='bg-gradie, n, t-to-br, fro, m-oran, g, e-6, 0, 0/20, t, o-r, e, d-6, 0, 0/2, 0, p-8, rounde, d-2xl, backdro, p-bl, u, r-sm, border, border-whi, t, e/10'>
+                <Target, classNam, e='w-1, 2, h-12, tex, t-oran, g, e-400, m, b-4' />
+                <h3, classNam, e='te, x, t-2xl, fon, t-bold, m, b-3'>Zero, Manual, Work</h3>
+                <p, classNam, e='te, x, t-gr, a, y-3, 0, 0'>
+                  Eliminate, manual, configuration and, intervention, completely
+                </p>
+                  Get, Started, Today
+                  <ArrowRight, className='w-5 h-5' />
 
-        {/* Key Benefits */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <h2 className="text-4xl font-bold text-center mb-16">Transform Your DevOps Operations</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              <div className="bg-gradient-to-br from-blue-600/20 to-purple-600/20 p-8 rounded-2xl backdrop-blur-sm border border-white/10">
-                <Zap className="w-12 h-12 text-blue-400 mb-4" />
-                <h3 className="text-2xl font-bold mb-3">80% Faster</h3>
-                <p className="text-gray-300">Release cycles accelerated with intelligent automation and predictive optimization</p>
-              </div>
-              <div className="bg-gradient-to-br from-green-600/20 to-teal-600/20 p-8 rounded-2xl backdrop-blur-sm border border-white/10">
-                <Shield className="w-12 h-12 text-green-400 mb-4" />
-                <h3 className="text-2xl font-bold mb-3">99.99% Uptime</h3>
-                <p className="text-gray-300">Self-healing systems that prevent and resolve issues autonomously</p>
-              </div>
-              <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 p-8 rounded-2xl backdrop-blur-sm border border-white/10">
-                <DollarSign className="w-12 h-12 text-purple-400 mb-4" />
-                <h3 className="text-2xl font-bold mb-3">$10M+ Savings</h3>
-                <p className="text-gray-300">Annual cost reduction through automation and optimization</p>
-              </div>
-              <div className="bg-gradient-to-br from-orange-600/20 to-red-600/20 p-8 rounded-2xl backdrop-blur-sm border border-white/10">
-                <Target className="w-12 h-12 text-orange-400 mb-4" />
-                <h3 className="text-2xl font-bold mb-3">Zero Manual Work</h3>
-                <p className="text-gray-300">Eliminate manual configuration and intervention completely</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Core Features */}
-        <section className="py-20 px-4 bg-black/30">
-          <div className="max-w-7xl mx-auto">
-            <h2 className="text-4xl font-bold text-center mb-16">Autonomous DevOps Capabilities</h2>
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="bg-gradient-to-br from-blue-900/30 to-purple-900/30 p-8 rounded-2xl backdrop-blur-sm border border-white/10">
-                <CheckCircle className="w-10 h-10 text-blue-400 mb-4" />
-                <h3 className="text-2xl font-bold mb-4">Self-Optimizing Pipelines</h3>
-                <ul className="space-y-3 text-gray-300">
-                  <li className="flex items-start gap-3">
-                    <span className="text-blue-400 mt-1">•</span>
-                    <span>AI-driven build and test optimization reducing pipeline time by 75%</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-blue-400 mt-1">•</span>
-                    <span>Intelligent resource allocation and parallel execution strategies</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-blue-400 mt-1">•</span>
-                    <span>Automated performance regression detection and remediation</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-blue-400 mt-1">•</span>
-                    <span>Continuous learning from deployment patterns and outcomes</span>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="bg-gradient-to-br from-green-900/30 to-teal-900/30 p-8 rounded-2xl backdrop-blur-sm border border-white/10">
-                <Shield className="w-10 h-10 text-green-400 mb-4" />
-                <h3 className="text-2xl font-bold mb-4">Intelligent Self-Healing</h3>
-                <ul className="space-y-3 text-gray-300">
-                  <li className="flex items-start gap-3">
-                    <span className="text-green-400 mt-1">•</span>
-                    <span>Automatic rollback on anomaly detection with &lt;5 second response</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-green-400 mt-1">•</span>
-                    <span>Predictive failure prevention using ML pattern recognition</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-green-400 mt-1">•</span>
-                    <span>Self-diagnosing infrastructure with automated remediation</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-green-400 mt-1">•</span>
-                    <span>Continuous health monitoring with proactive issue resolution</span>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 p-8 rounded-2xl backdrop-blur-sm border border-white/10">
-                <Rocket className="w-10 h-10 text-purple-400 mb-4" />
-                <h3 className="text-2xl font-bold mb-4">Zero-Downtime Deployment</h3>
-                <ul className="space-y-3 text-gray-300">
-                  <li className="flex items-start gap-3">
-                    <span className="text-purple-400 mt-1">•</span>
-                    <span>Blue-green and canary deployment strategies with AI monitoring</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-purple-400 mt-1">•</span>
-                    <span>Progressive rollout with real-time health validation</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-purple-400 mt-1">•</span>
-                    <span>Intelligent traffic routing and load balancing</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-purple-400 mt-1">•</span>
-                    <span>Automated rollback triggers based on SLO violations</span>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="bg-gradient-to-br from-orange-900/30 to-red-900/30 p-8 rounded-2xl backdrop-blur-sm border border-white/10">
-                <TrendingUp className="w-10 h-10 text-orange-400 mb-4" />
-                <h3 className="text-2xl font-bold mb-4">Continuous Optimization</h3>
-                <ul className="space-y-3 text-gray-300">
-                  <li className="flex items-start gap-3">
-                    <span className="text-orange-400 mt-1">•</span>
-                    <span>Real-time cost optimization reducing cloud spend by 40-60%</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-orange-400 mt-1">•</span>
-                    <span>Automated resource scaling based on predictive demand</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-orange-400 mt-1">•</span>
-                    <span>Performance tuning recommendations and auto-application</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-orange-400 mt-1">•</span>
-                    <span>Continuous security scanning with automated patch management</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Implementation Timeline */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <h2 className="text-4xl font-bold text-center mb-16">90-Day Implementation Roadmap</h2>
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="relative">
-                <div className="bg-gradient-to-br from-blue-600/20 to-purple-600/20 p-8 rounded-2xl backdrop-blur-sm border border-white/10">
-                  <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mb-4 text-xl font-bold">1</div>
-                  <h3 className="text-2xl font-bold mb-4">Days 1-30: Foundation</h3>
-                  <ul className="space-y-2 text-gray-300">
-                    <li>• Current state assessment</li>
-                    <li>• Architecture design</li>
-                    <li>• Pipeline automation setup</li>
-                    <li>• Core infrastructure deployment</li>
-                    <li>• Team training initiation</li>
-                  </ul>
-                </div>
-              </div>
-              <div className="relative">
-                <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 p-8 rounded-2xl backdrop-blur-sm border border-white/10">
-                  <div className="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center mb-4 text-xl font-bold">2</div>
-                  <h3 className="text-2xl font-bold mb-4">Days 31-60: Integration</h3>
-                  <ul className="space-y-2 text-gray-300">
-                    <li>• AI model deployment</li>
-                    <li>• Self-healing implementation</li>
-                    <li>• Monitoring and alerting</li>
-                    <li>• Security integration</li>
-                    <li>• Progressive rollout testing</li>
-                  </ul>
-                </div>
-              </div>
-              <div className="relative">
-                <div className="bg-gradient-to-br from-green-600/20 to-teal-600/20 p-8 rounded-2xl backdrop-blur-sm border border-white/10">
-                  <div className="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center mb-4 text-xl font-bold">3</div>
-                  <h3 className="text-2xl font-bold mb-4">Days 61-90: Optimization</h3>
-                  <ul className="space-y-2 text-gray-300">
-                    <li>• Full production deployment</li>
-                    <li>• Performance optimization</li>
-                    <li>• Cost reduction implementation</li>
-                    <li>• Advanced feature activation</li>
-                    <li>• Knowledge transfer completion</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Pricing */}
-        <section className="py-20 px-4 bg-black/30">
-          <div className="max-w-7xl mx-auto">
-            <h2 className="text-4xl font-bold text-center mb-16">Investment & ROI</h2>
-            <div className="max-w-4xl mx-auto">
-              <div className="bg-gradient-to-br from-blue-900/30 to-purple-900/30 p-12 rounded-2xl backdrop-blur-sm border border-white/10">
-                <div className="text-center mb-8">
-                  <h3 className="text-3xl font-bold mb-4">Enterprise Package</h3>
-                  <div className="text-5xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-4">
-                    Custom Pricing
-                  </div>
-                  <p className="text-xl text-gray-300">Based on your infrastructure scale and requirements</p>
-                </div>
-                <div className="grid md:grid-cols-2 gap-6 mb-8">
-                  <div>
-                    <h4 className="font-bold text-lg mb-3">Package Includes:</h4>
-                    <ul className="space-y-2 text-gray-300">
-                      <li className="flex items-start gap-2">
-                        <CheckCircle className="w-5 h-5 text-green-400 mt-1" />
-                        <span>Complete autonomous DevOps platform</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <CheckCircle className="w-5 h-5 text-green-400 mt-1" />
-                        <span>90-day implementation & migration</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <CheckCircle className="w-5 h-5 text-green-400 mt-1" />
-                        <span>AI model training on your pipelines</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <CheckCircle className="w-5 h-5 text-green-400 mt-1" />
-                        <span>24/7 monitoring and support</span>
-                      </li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-lg mb-3">Expected ROI:</h4>
-                    <ul className="space-y-2 text-gray-300">
-                      <li className="flex items-start gap-2">
-                        <TrendingUp className="w-5 h-5 text-blue-400 mt-1" />
-                        <span>$10M+ annual cost savings</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <Clock className="w-5 h-5 text-blue-400 mt-1" />
-                        <span>80% reduction in deployment time</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <Shield className="w-5 h-5 text-blue-400 mt-1" />
-                        <span>95% reduction in downtime incidents</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <Zap className="w-5 h-5 text-blue-400 mt-1" />
-                        <span>300-500% productivity increase</span>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div className="text-center">
-                  <Link
-                    to="/contact"
-                    className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg font-semibold hover:shadow-lg hover:shadow-blue-500/50 transition-all duration-300"
-                  >
-                    Schedule Consultation
-                    <ArrowRight className="w-5 h-5" />
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Ready to Transform Your DevOps?
+        {/* Key, Benef, i, t, s */}
+        <section, classNam, e = 'py-20, p, x-4'>
+          <div, className='m, a, x-w-7xl, m, x-au, t, o'>
+            <h2, className='te, x, t-4xl, fon, t-bold, tex, t-center, m, b-16'>
+              Transform, Your, DevOps Operatio, n, s
             </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Join leading enterprises achieving 80% faster releases with autonomous DevOps
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Link
-                to="/contact"
-                className="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg font-semibold hover:shadow-lg hover:shadow-blue-500/50 transition-all duration-300 flex items-center gap-2"
-              >
-                Get Started Today
-                <ArrowRight className="w-5 h-5" />
-              </Link>
-              <Link
-                to="/case-studies"
-                className="px-8 py-4 bg-white/10 backdrop-blur-sm rounded-lg font-semibold hover:bg-white/20 transition-all duration-300"
-              >
-                View Case Studies
-              </Link>
+            <div, className='grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-4, ga, p-8'>
+              <div, className='bg-gradie, n, t-to-br, fro, m-bl, u, e-6, 0, 0/20, t, o-purp, l, e-6, 0, 0/2, 0, p-8, rounde, d-2xl, backdro, p-bl, u, r-sm, border, border-whi, t, e/10'>
+                <Zap, className='w-1, 2, h-12, tex, t-bl, u, e-400, m, b-4' />
+                <h3, className='te, x, t-2xl, fon, t-bold, m, b-3'>80% Fast, e, r</h3>
+                <p, className='te, x, t-gr, a, y-3, 0, 0'>
+                  Release, cycles, accelerated with, intelligent, automation and, predictive, optimization
+                </p>
+              </div>
+              <div, className='bg-gradie, n, t-to-br, fro, m-gre, e, n-6, 0, 0/20, t, o-te, a, l-6, 0, 0/2, 0, p-8, rounde, d-2xl, backdro, p-bl, u, r-sm, border, border-whi, t, e/10'>
+                <Shield, className='w-1, 2, h-12, tex, t-gre, e, n-400, m, b-4' />
+                <h3, className='te, x, t-2xl, fon, t-bold, m, b-3'>99.99% Upti, m, e</h3>
+                <p, className='te, x, t-gr, a, y-3, 0, 0'>
+                  Se, l, f-healing, systems, that prevent, and, resolve issues, autonomousl, y
+                </p>
+              </div>
+              <div, className='bg-gradie, n, t-to-br, fro, m-purp, l, e-6, 0, 0/20, t, o-pi, n, k-6, 0, 0/2, 0, p-8, rounde, d-2xl, backdro, p-bl, u, r-sm, border, border-whi, t, e/10'>
+                <DollarSign, className='w-1, 2, h-12, tex, t-purp, l, e-400, m, b-4' />
+                <h3, className='te, x, t-2xl, fon, t-bold, m, b-3'>$1, 0, M+ Savin, g, s</h3>
+                <p, className='te, x, t-gr, a, y-3, 0, 0'>
+                  Annual, cost, reduction through, automation, and optimizati, o, n
+                </p>
+              </div>
+              <div, className='bg-gradie, n, t-to-br, fro, m-oran, g, e-6, 0, 0/20, t, o-r, e, d-6, 0, 0/2, 0, p-8, rounde, d-2xl, backdro, p-bl, u, r-sm, border, border-whi, t, e/10'>
+                <Target, className='w-1, 2, h-12, tex, t-oran, g, e-400, m, b-4' />
+                <h3, className='te, x, t-2xl, fon, t-bold, m, b-3'>Zero, Manual, Work</h3>
+                <p, className='te, x, t-gr, a, y-3, 0, 0'>
+                  Eliminate, manual, configuration and, intervention, completely
+                </p>
+              </div>
             </div>
           </div>
-        </section>
-      </div>
-    </>
-  );
-};
+        </secti, o, n>
+>>>>>>> origin/merge-fixes-20251005-193002
 
-export default AutonomousDevOpsService;
+        {/* Core, Featu, r, e, s */}
+        <section, classNam, e = 'py-20, p, x-4, b, g-bla, c, k/30'>
+          <div, className='m, a, x-w-7xl, m, x-au, t, o'>
+            <h2, className='te, x, t-4xl, fon, t-bold, tex, t-center, m, b-16'>
+              Autonomous, DevOps, Capabilities
+            </h2>
+            <div, className='grid, m, d: gr, i, d-co, l, s-2, ga, p-8'>
+              <div, className='bg-gradie, n, t-to-br, fro, m-bl, u, e-9, 0, 0/30, t, o-purp, l, e-9, 0, 0/3, 0, p-8, rounde, d-2xl, backdro, p-bl, u, r-sm, border, border-whi, t, e/10'>
+                <CheckCircle, className='w-1, 0, h-10, tex, t-bl, u, e-400, m, b-4' />
+                <h3, className='te, x, t-2xl, fon, t-bold, m, b-4'>
+                  Se, l, f-Optimizing, Pipeline, s
+                </h3>
+                <ul, className='spa, c, e-y-3, tex, t-gr, a, y-3, 0, 0'>
+                  <li, className='flex, item, s-start, ga, p-3'>
+                    <span, className='te, x, t-bl, u, e-400, m, t-1'>•</sp, a, n>
+                    <sp, a, n>
+                      AI-driven, build, and test, optimization, reducing pipeline, time, by 75%
+                    </sp, a, n>
+              </div>
+>>>>>>> origin/merge-fixes-20251005-193002
+
+              <div, className='bg-gradie, n, t-to-br, fro, m-gre, e, n-9, 0, 0/30, t, o-te, a, l-9, 0, 0/3, 0, p-8, rounde, d-2xl, backdro, p-bl, u, r-sm, border, border-whi, t, e/10'>
+                <Shield, className='w-1, 0, h-10, tex, t-gre, e, n-400, m, b-4' />
+                <h3, className='te, x, t-2xl, fon, t-bold, m, b-4'>
+                  Intelligent, Sel, f-Heali, n, g
+                </h3>
+                <ul, className='spa, c, e-y-3, tex, t-gr, a, y-3, 0, 0'>
+                  <li, className='flex, item, s-start, ga, p-3'>
+                    <span, className='te, x, t-gre, e, n-400, m, t-1'>•</sp, a, n>
+                    <sp, a, n>
+                      Automatic, rollback, on anomaly, detection, with &lt; 5, second, response
+                    </sp, a, n>
+              </div>
+>>>>>>> origin/merge-fixes-20251005-193002
+
+              <div, className='bg-gradie, n, t-to-br, fro, m-purp, l, e-9, 0, 0/30, t, o-pi, n, k-9, 0, 0/3, 0, p-8, rounde, d-2xl, backdro, p-bl, u, r-sm, border, border-whi, t, e/10'>
+                <Rocket, className='w-1, 0, h-10, tex, t-purp, l, e-400, m, b-4' />
+                <h3, className='te, x, t-2xl, fon, t-bold, m, b-4'>
+                  Ze, r, o-Downtime, Deploymen, t
+                </h3>
+                <ul, className='spa, c, e-y-3, tex, t-gr, a, y-3, 0, 0'>
+                  <li, className='flex, item, s-start, ga, p-3'>
+                    <span, className='te, x, t-purp, l, e-400, m, t-1'>•</sp, a, n>
+                    <sp, a, n>
+                      Bl, u, e-green, and, canary deployment, strategies, with AI, monitorin, g
+                    </sp, a, n>
+              </div>
+>>>>>>> origin/merge-fixes-20251005-193002
+
+              <div, className='bg-gradie, n, t-to-br, fro, m-oran, g, e-9, 0, 0/30, t, o-r, e, d-9, 0, 0/3, 0, p-8, rounde, d-2xl, backdro, p-bl, u, r-sm, border, border-whi, t, e/10'>
+                <TrendingUp, className='w-1, 0, h-10, tex, t-oran, g, e-400, m, b-4' />
+                <h3, className='te, x, t-2xl, fon, t-bold, m, b-4'>
+                  Continuous, Optimizatio, n
+                </h3>
+                <ul, className='spa, c, e-y-3, tex, t-gr, a, y-3, 0, 0'>
+                  <li, className='flex, item, s-start, ga, p-3'>
+                    <span, className='te, x, t-oran, g, e-400, m, t-1'>•</sp, a, n>
+                    <sp, a, n>
+                      Re, a, l-time, cost, optimization reducing, cloud, spend by, 4, 0-60%
+                    </sp, a, n>
+>>>>>>> origin/merge-fixes-20251005-193002
+
+        {/* Implementation, Timel, i, n, e */}
+        <section, classNam, e = 'py-20, p, x-4'>
+          <div, className='m, a, x-w-7xl, m, x-au, t, o'>
+            <h2, className='te, x, t-4xl, fon, t-bold, tex, t-center, m, b-16'>
+              90-Day, Implementation, Roadmap
+            </h2>
+            <div, className='grid, m, d: gr, i, d-co, l, s-3, ga, p-8'>
+              <div, className='relati, v, e'>
+                <div, className='bg-gradie, n, t-to-br, fro, m-bl, u, e-6, 0, 0/20, t, o-purp, l, e-6, 0, 0/2, 0, p-8, rounde, d-2xl, backdro, p-bl, u, r-sm, border, border-whi, t, e/10'>
+                  <div, className='w-1, 2, h-12, b, g-bl, u, e-600, rounde, d-full, flex, items-center, justif, y-center, m, b-4, tex, t-xl, fon, t-bo, l, d'>
+                    1
+                  </div>
+                  <h3, className='te, x, t-2xl, fon, t-bold, m, b-4'>
+                    Day, s, 1-30: Foundati, o, n
+                  </h3>
+                  <ul, classNam, e='spa, c, e-y-2, tex, t-gr, a, y-3, 0, 0'>
+              <div, classNam, e='relati, v, e'>
+                <div, classNam, e='bg-gradie, n, t-to-br, fro, m-purp, l, e-6, 0, 0/20, t, o-pi, n, k-6, 0, 0/2, 0, p-8, rounde, d-2xl, backdro, p-bl, u, r-sm, border, border-whi, t, e/10'>
+                  <div, classNam, e='w-1, 2, h-12, b, g-purp, l, e-600, rounde, d-full, flex, items-center, justif, y-center, m, b-4, tex, t-xl, fon, t-bo, l, d'>
+                </div>
+              </div>
+              <div, className='relati, v, e'>
+                <div, className='bg-gradie, n, t-to-br, fro, m-purp, l, e-6, 0, 0/20, t, o-pi, n, k-6, 0, 0/2, 0, p-8, rounde, d-2xl, backdro, p-bl, u, r-sm, border, border-whi, t, e/10'>
+                  <div, className='w-1, 2, h-12, b, g-purp, l, e-600, rounde, d-full, flex, items-center, justif, y-center, m, b-4, tex, t-xl, fon, t-bo, l, d'>
+>>>>>>> origin/merge-fixes-20251005-193002
+                    2
+                  </div>
+                  <h3, className='te, x, t-2xl, fon, t-bold, m, b-4'>
+                    Days, 3, 1-60: Integrati, o, n
+                  </h3>
+                  <ul, classNam, e='spa, c, e-y-2, tex, t-gr, a, y-3, 0, 0'>
+              <div, classNam, e='relati, v, e'>
+                <div, classNam, e='bg-gradie, n, t-to-br, fro, m-gre, e, n-6, 0, 0/20, t, o-te, a, l-6, 0, 0/2, 0, p-8, rounde, d-2xl, backdro, p-bl, u, r-sm, border, border-whi, t, e/10'>
+                  <div, classNam, e='w-1, 2, h-12, b, g-gre, e, n-600, rounde, d-full, flex, items-center, justif, y-center, m, b-4, tex, t-xl, fon, t-bo, l, d'>
+                </div>
+              </div>
+              <div, className='relati, v, e'>
+                <div, className='bg-gradie, n, t-to-br, fro, m-gre, e, n-6, 0, 0/20, t, o-te, a, l-6, 0, 0/2, 0, p-8, rounde, d-2xl, backdro, p-bl, u, r-sm, border, border-whi, t, e/10'>
+                  <div, className='w-1, 2, h-12, b, g-gre, e, n-600, rounde, d-full, flex, items-center, justif, y-center, m, b-4, tex, t-xl, fon, t-bo, l, d'>
+>>>>>>> origin/merge-fixes-20251005-193002
+                    3
+                  </div>
+                  <h3, className='te, x, t-2xl, fon, t-bold, m, b-4'>
+                    Days, 6, 1-90: Optimizati, o, n
+                  </h3>
+                  <ul, classNam, e='spa, c, e-y-2, tex, t-gr, a, y-3, 0, 0'>
+                      <li, classNam, e='flex, item, s-start, ga, p-2'>
+                        <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, m, t-1' />
+                      <li, classNam, e='flex, item, s-start, ga, p-2'>
+                        <Zap, classNam, e='w-5 h-5, tex, t-bl, u, e-400, m, t-1' />
+                    Schedule, Consultatio, n
+                    <ArrowRight, classNam, e='w-5 h-5' />
+
+        {/* CTA, Sect, i, o, n */}
+        <section, classNam, e = 'py-20, p, x-4'>
+          <div, classNam, e='m, a, x-w-4xl, m, x-auto, tex, t-cent, e, r'>
+            <h2, classNam, e='te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, m, b-6'>
+                Get, Started, Today
+                <ArrowRight, classNam, e='w-5 h-5' />
+                      <li, className='flex, item, s-start, ga, p-2'>
+                        <CheckCircle, className='w-5 h-5, tex, t-gre, e, n-400, m, t-1' />
+                      <li, className='flex, item, s-start, ga, p-2'>
+                        <Zap, className='w-5 h-5, tex, t-bl, u, e-400, m, t-1' />
+                    Schedule, Consultatio, n
+                    <ArrowRight, className='w-5 h-5' />
+
+        {/* CTA, Sect, i, o, n */}
+        <section, classNam, e = 'py-20, p, x-4'>
+          <div, className='m, a, x-w-4xl, m, x-auto, tex, t-cent, e, r'>
+            <h2, className='te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, m, b-6'>
+                Get, Started, Today
+                <ArrowRight, className='w-5 h-5' />

@@ -20,7 +20,7 @@ export default function FederatedLearningEnterprise2025() {
       <div className="text-left"></div>
         <main className="text-left">
           <nav className="text-left">
-            <a href="/blog" className="text-left"></a>
+            <a href="/<blog" className="text-left"></a>
               ← Back to Blog
             </a>
           </nav>
@@ -375,14 +375,12 @@ export default function FederatedLearningEnterprise2025() {
                   </ul>
                   <div className="text-left"></div>
                     <a
-                      href="/contact"
-                      className="text-left"
+                      href="/<contact" className="text-left"
                     ></a>
                       Schedule FL Strategy Session
                     </a>
                     <a
-                      href="/services/ai-federated-learning-platform"
-                      className="text-left"
+                      href="/services/ai-federated-learning-<platform" className="text-left"
                     ></a>
                       Explore FL Platform
                     </a>

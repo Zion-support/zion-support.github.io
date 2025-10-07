@@ -1,330 +1,296 @@
 import { Metadata } from 'next';
-import ArrowRight from 'next/link';
+import Link from 'next/link';
 
-export const metadata: Metadata = {
-  title: 'Autonomous Enterprise Operations 2027: Complete Business Automation - Zion Tech Group',
-  description: 'Discover how autonomous enterprise operations can achieve 99.9% automation rates, eliminate manual processes, and deliver unprecedented business efficiency with AI-driven systems.',
-  keywords: 'Autonomous Enterprise, Business Automation, AI Operations, Enterprise AI, Process Automation, Business Intelligence',
-  openGraph: {
-    title: 'Autonomous Enterprise Operations 2027: Complete Business Automation',
+export const metadata = {
+  
+  title: 'Autonomous Enterprise Operations 2027: Complete Business Automation',
     description: 'Achieve 99.9% automation rates with autonomous enterprise operations that eliminate manual processes',
     type: 'article',
     publishedTime: '2027-01-20T00:00:00.000Z',
     authors: ['Zion Tech Group Enterprise Solutions Team'],
-  },
+  
+};,
 };
 
 export default function AutonomousEnterpriseOperations2027() {
   return (
-    <div className="min-h-screen bg-slate-950 text-white">
-      <div className="container mx-auto px-6 py-12 max-w-4xl">
-        {/* Hero Section */}
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-500/30 mb-8">
-            <span className="text-blue-400 font-bold text-xl tracking-wider uppercase">
-              🤖 Autonomous Enterprise Revolution
-            </span>
+    <div>{{/* content */}</div></div>
+    <div>
+      <div> </div><div> </div>
+      <div className="text-left">{/* Hero Section */}</div>
+      <div className="text-left"> </div><span className="text-left">🤖 Autonomous Enterprise Revolution
+            </span></span>
           </div>
-          
-          <h1 className="text-4xl md:text-6xl font-extrabold mb-6 bg-gradient-to-r from-blue-400 via-cyan-400 to-teal-400 bg-clip-text text-transparent leading-tight">
+          <h1 className="text-left">
             Autonomous Enterprise Operations
           </h1>
-          
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Transform your organization with fully autonomous enterprise operations that achieve 
-            99.9% automation rates, eliminate manual processes, and deliver unprecedented business efficiency.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <ArrowRight 
-              href="/contact" 
-              className="bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-400 hover:to-cyan-500 text-white font-bold py-3 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50"
-            >
-              Start Your Automation Journey
-            </ArrowRight>
-            <ArrowRight 
-              href="/services/enterprise-automation" 
-              className="border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-bold py-3 px-8 rounded-xl transition-all duration-300"
-            >
-              View Automation Services
-            </ArrowRight>
+          <p className="text-left"> </p><div className="text-left"> </div><div className="text-left">{/* Hero Section */}</div>
+      <div className="text-left"> </div><div className="text-left"> </div><span className="text-left">🤖 Autonomous Enterprise Revolution
+            </span></span>
           </div>
-        </div>
+          
+          <h1 className="text-left">Autonomous Enterprise Operations
+          </h1></h1>
+          
+          <p className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
+            Transform your organization with fully autonomous enterprise operations that achieve 
+            99.9% automation rateseliminate manual processesand deliver unprecedented business efficiency.
+          </p></p>
+          <div className="text-left"> </div><Link 
+              href="/"
+              className="text-left">Start Your Automation Journey
+            </Link></Link>
+            <Link 
+              href="/"
+              className="text-left">View Automation Services
+            </Link></Link>
+          </div>
 
         {/* Key Metrics */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
-          <div className="bg-gradient-to-r from-blue-500/20 to-blue-600/20 backdrop-blur-sm rounded-xl p-6 border border-blue-500/30">
-            <div className="text-3xl font-extrabold text-blue-400 mb-2">99.9%</div>
-            <div className="text-sm text-blue-300">Automation Rate</div>
+        <div className="text-left"> </div><div className="text-left">99.9%</div>
+            <div className="text-left">Automation Rate</div>
+      <div className="text-left">85%</div>
+            <div className="text-left">Cost Reduction</div>
+      <div className="text-left">24/7</div>
+            <div className="text-left">Autonomous Operations</div>
+      <div className="text-left">$100M</div>
+            <div className="text-left">Average Savings</div>
           </div>
-          <div className="bg-gradient-to-r from-green-500/20 to-green-600/20 backdrop-blur-sm rounded-xl p-6 border border-green-500/30">
-            <div className="text-3xl font-extrabold text-green-400 mb-2">85%</div>
-            <div className="text-sm text-green-300">Cost Reduction</div>
-          </div>
-          <div className="bg-gradient-to-r from-purple-500/20 to-purple-600/20 backdrop-blur-sm rounded-xl p-6 border border-purple-500/30">
-            <div className="text-3xl font-extrabold text-purple-400 mb-2">24/7</div>
-            <div className="text-sm text-purple-300">Autonomous Operations</div>
-          </div>
-          <div className="bg-gradient-to-r from-orange-500/20 to-orange-600/20 backdrop-blur-sm rounded-xl p-6 border border-orange-500/30">
-            <div className="text-3xl font-extrabold text-orange-400 mb-2">$100M</div>
-            <div className="text-sm text-orange-300">Average Savings</div>
-          </div>
-        </div>
 
         {/* Main Content */}
-        <article className="prose prose-lg prose-invert max-w-none">
-          <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 mb-8">
-            <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-              <span className="text-4xl">🏢</span>
+        <article className="text-left"> </a><h3 className="text-left">
+        <article className="text-left"> </article><div className="text-left"> </div><h2 className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
+              </h2><span className="text-left">🏢>
               The Future of Enterprise Operations
             </h2>
-            <p className="text-gray-300 mb-6">
-              Autonomous Enterprise Operations represent the next evolution in business automation, 
-              where AI systems take complete control of organizational processes, decision-making, 
-              and execution without human intervention. Our breakthrough technology enables enterprises 
+            <p className="text-left">Autonomous Enterprise Operations represent the next evolution in business automation, 
+              where AI systems take complete control of organizational processesdecision-makingand execution without human intervention. Our breakthrough technology enables enterprises 
               to achieve levels of efficiency and autonomy previously impossible.
-            </p>
-            <p className="text-gray-300 mb-6">
-              Unlike traditional automation that requires constant monitoring and intervention, 
-              autonomous operations are self-managing, self-optimizing, and self-healing systems 
+            </p></p>
+            <p className="text-left">Unlike traditional automation that requires constant monitoring and intervention, 
+              autonomous operations are self-managingself-optimizingand self-healing systems 
               that continuously evolve and improve their performance.
-            </p>
+            </p></p>
           </div>
+          <h3 className="text-left">
 
-          <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 mb-8">
-            <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-              <span className="text-4xl">🧠</span>
+          <div className="text-left"> </div><h2 className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
+              </h2><span className="text-left">🧠>
               Intelligent Process Orchestration
             </h2>
-            <p className="text-gray-300 mb-6">
-              Our autonomous systems use advanced AI to orchestrate complex business processes 
-              across all departments and functions. These systems understand business objectives, 
-              analyze data patterns, and execute decisions with superhuman precision and speed.
-            </p>
-            <div className="grid md:grid-cols-2 gap-6 mb-6">
-              <div className="bg-gradient-to-r from-blue-500/10 to-cyan-500/10 rounded-xl p-6 border border-blue-500/20">
-                <h3 className="text-xl font-bold text-blue-400 mb-3">Self-Managing Systems</h3>
-                <p className="text-gray-300 text-sm">
-                  AI systems that monitor, maintain, and optimize themselves without human intervention, 
-                  ensuring continuous peak performance.
-                </p>
+            <p className="text-left">Our autonomous systems use advanced AI to orchestrate complex business processes 
+              across all departments and functions. These systems understand business objectivesanalyze data patternsand execute decisions with superhuman precision and speed.
+            </p></p>
+            <div className="text-left"> </div><h3 className="text-left">Self-Managing Systems</h3>
+                <p className="text-left"> </p><div className="text-left"> </div><div className="text-left"> </div><h3 className="text-left">Self-Managing Systems</h3>"
+                <p className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
+                  AI systems that monitor, maintainand optimize themselves without human interventionensuring continuous peak performance.
+                </p></p>
               </div>
-              <div className="bg-gradient-to-r from-green-500/10 to-emerald-500/10 rounded-xl p-6 border border-green-500/20">
-                <h3 className="text-xl font-bold text-green-400 mb-3">Adaptive Intelligence</h3>
-                <p className="text-gray-300 text-sm">
+              <h3 className="text-left">Adaptive Intelligence</h3>
+                <p className="text-left"> </p><div className="text-left"> </div><h3 className="text-left">Adaptive Intelligence</h3>"
+                <p className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
                   Systems that learn from every interaction and continuously evolve their strategies 
                   to achieve better outcomes.
-                </p>
+                </p></p>
               </div>
-            </div>
           </div>
+          <h3 className="text-left">
 
-          <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 mb-8">
-            <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-              <span className="text-4xl">⚡</span>
+          <div className="text-left"> </div><h2 className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
+              </h2><span className="text-left">⚡>
               Real-Time Decision Making
             </h2>
-            <p className="text-gray-300 mb-6">
-              Autonomous systems make complex business decisions in real-time by analyzing 
-              vast amounts of data, considering multiple variables, and executing optimal 
+            <p className="text-left">Autonomous systems make complex business decisions in real-time by analyzing 
+              vast amounts of dataconsidering multiple variablesand executing optimal 
               strategies instantaneously. This capability eliminates delays and ensures 
               maximum efficiency in all operations.
-            </p>
-            <ul className="space-y-3 text-gray-300 mb-6">
-              <li className="flex items-start gap-3">
-                <span className="text-blue-400 font-bold">•</span>
+            </p></p>
+            <ul className="text-left"> </ul><li className="text-left"> </li><span className="text-left">•>
                 <span>Instantaneous decision processing across all business functions</span>
               </li>
-              <li className="flex items-start gap-3">
-                <span className="text-blue-400 font-bold">•</span>
+              <li className="text-left"> </li><span className="text-left">•>
                 <span>Predictive analytics for proactive problem resolution</span>
               </li>
-              <li className="flex items-start gap-3">
-                <span className="text-blue-400 font-bold">•</span>
+              <li className="text-left"> </li><span className="text-left">•>
                 <span>Multi-variable optimization for maximum efficiency</span>
               </li>
-              <li className="flex items-start gap-3">
-                <span className="text-blue-400 font-bold">•</span>
+              <li className="text-left"> </li><span className="text-left">•>
                 <span>Continuous learning and strategy refinement</span>
               </li>
             </ul>
           </div>
+          <h3 className="text-left">
 
-          <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 mb-8">
-            <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-              <span className="text-4xl">💰</span>
+          <div className="text-left"> </div><h2 className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
+              </h2><span className="text-left">💰>
               Measurable Business Impact
             </h2>
-            <p className="text-gray-300 mb-6">
-              Organizations implementing autonomous enterprise operations have achieved 
-              unprecedented levels of efficiency, cost reduction, and competitive advantage. 
+            <p className="text-left">Organizations implementing autonomous enterprise operations have achieved 
+              unprecedented levels of efficiencycost reductionand competitive advantage. 
               Our clients report transformational results across all business metrics.
-            </p>
-            <div className="grid md:grid-cols-2 gap-8 mb-6">
-              <div>
-                <h3 className="text-xl font-bold text-white mb-4">Operational Efficiency</h3>
-                <div className="space-y-3">
-                  <div className="flex justify-between items-center">
-                    <span className="text-gray-300">Process Automation Rate</span>
-                    <span className="text-green-400 font-bold">99.9%</span>
+            </p></p>
+            <div className="text-left"> </div><div> </div><h3 className="text-left">Operational Efficiency</h3>
+                <div className="text-left"> </div><span className="text-left">Process Automation Rate<
+                    <span className="text-left">99.9%>
                   </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-gray-300">Operational Cost Reduction</span>
-                    <span className="text-blue-400 font-bold">85%</span>
+                  <span className="text-left">Operational Cost Reduction<
+                    <span className="text-left">85%>
                   </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-gray-300">Decision Speed Improvement</span>
-                    <span className="text-purple-400 font-bold">1000x</span>
+                  <span className="text-left">Decision Speed Improvement<
+                    <span className="text-left">1000x>
                   </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-gray-300">Error Rate Reduction</span>
-                    <span className="text-orange-400 font-bold">99.7%</span>
+                  <span className="text-left">Error Rate Reduction<
+                    <span className="text-left">99.7%>
                   </div>
-                </div>
               </div>
-              <div>
-                <h3 className="text-xl font-bold text-white mb-4">Financial Impact</h3>
-                <div className="space-y-3">
-                  <div className="flex justify-between items-center">
-                    <span className="text-gray-300">Average Cost Savings</span>
-                    <span className="text-green-400 font-bold">$100M</span>
+              <div> </div><h3 className="text-left">Financial Impact</h3>
+                <div className="text-left"> </div><span className="text-left">Average Cost Savings<
+                    <span className="text-left">$100M>
                   </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-gray-300">ROI Achievement</span>
-                    <span className="text-blue-400 font-bold">500%</span>
+                  <span className="text-left">ROI Achievement<
+                    <span className="text-left">500%>
                   </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-gray-300">Payback Period</span>
-                    <span className="text-purple-400 font-bold">3 months</span>
+                  <span className="text-left">Payback Period<
+                    <span className="text-left">3 months>
                   </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-gray-300">Revenue Growth</span>
-                    <span className="text-orange-400 font-bold">40%</span>
+                  <span className="text-left">Revenue Growth<
+                    <span className="text-left">40%>
                   </div>
-                </div>
               </div>
-            </div>
           </div>
+          <h3 className="text-left">
 
-          <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 mb-8">
-            <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-              <span className="text-4xl">🚀</span>
+          <div className="text-left"> </div><h2 className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
+              </h2><span className="text-left">🚀>
               Implementation Roadmap
             </h2>
-            <p className="text-gray-300 mb-6">
-              Our comprehensive implementation approach ensures smooth transition to autonomous 
+            <p className="text-left">Our comprehensive implementation approach ensures smooth transition to autonomous 
               operations with minimal disruption and maximum value delivery. We provide end-to-end 
               support from assessment to full deployment.
-            </p>
-            <div className="grid md:grid-cols-3 gap-6 mb-6">
-              <div className="bg-gradient-to-r from-blue-500/10 to-cyan-500/10 rounded-xl p-6 border border-blue-500/20">
-                <div className="text-3xl mb-4">📊</div>
-                <h3 className="text-xl font-bold text-blue-400 mb-3">Assessment & Planning</h3>
-                <p className="text-gray-300 text-sm mb-4">
+            </p></p>
+            <div className="text-left"> </div><div className="text-left">📊</div>
+                <h3 className="text-left">Assessment & Planning</h3>
+                <p className="text-left"> </p><div className="text-left"> </div><div className="text-left"> </div><div className="text-left">📊</div>"
+                <h3 className="text-left">Assessment & Planning</h3>"
+                <p className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
                   Comprehensive analysis of current processes and identification of automation opportunities.
-                </p>
-                <ul className="text-xs text-gray-300 space-y-1">
-                  <li>• Process mapping and analysis</li>
+                </p></p>
+                <ul className="text-left"> </ul><li>• Process mapping and analysis</li>
                   <li>• Automation opportunity identification</li>
                   <li>• ROI projections and planning</li>
                 </ul>
               </div>
-              <div className="bg-gradient-to-r from-green-500/10 to-emerald-500/10 rounded-xl p-6 border border-green-500/20">
-                <div className="text-3xl mb-4">⚙️</div>
-                <h3 className="text-xl font-bold text-green-400 mb-3">System Development</h3>
-                <p className="text-gray-300 text-sm mb-4">
+              <div className="text-left">⚙️</div>
+                <h3 className="text-left">System Development</h3>
+                <p className="text-left"> </p><div className="text-left"> </div><div className="text-left">⚙️</div>"
+                <h3 className="text-left">System Development</h3>"
+                <p className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
                   Custom autonomous system development tailored to your specific business requirements.
-                </p>
-                <ul className="text-xs text-gray-300 space-y-1">
-                  <li>• Custom AI system development</li>
+                </p></p>
+                <ul className="text-left"> </ul><li>• Custom AI system development</li>
                   <li>• Integration with existing systems</li>
                   <li>• Testing and validation</li>
                 </ul>
               </div>
-              <div className="bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-xl p-6 border border-purple-500/20">
-                <div className="text-3xl mb-4">🚀</div>
-                <h3 className="text-xl font-bold text-purple-400 mb-3">Deployment & Optimization</h3>
-                <p className="text-gray-300 text-sm mb-4">
+              <div className="text-left">🚀</div>
+                <h3 className="text-left">Deployment & Optimization</h3>
+                <p className="text-left"> </p><div className="text-left"> </div><div className="text-left">🚀</div>"
+                <h3 className="text-left">Deployment & Optimization</h3>"
+                <p className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
                   Phased deployment with continuous monitoring and optimization for maximum performance.
-                </p>
-                <ul className="text-xs text-gray-300 space-y-1">
-                  <li>• Phased rollout strategy</li>
+                </p></p>
+                <ul className="text-left"> </ul><li>• Phased rollout strategy</li>
                   <li>• Performance monitoring</li>
                   <li>• Continuous optimization</li>
                 </ul>
               </div>
-            </div>
           </div>
+          <h3 className="text-left">
 
-          <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 mb-8">
-            <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-              <span className="text-4xl">🎯</span>
+          <div className="text-left"> </div><h2 className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
+              </h2><span className="text-left">🎯>
               Get Started Today
             </h2>
-            <p className="text-gray-300 mb-6">
-              Ready to transform your organization with autonomous enterprise operations? 
+            <p className="text-left">Ready to transform your organization with autonomous enterprise operations? 
               Our expert team provides comprehensive support to ensure your successful 
               transition to fully autonomous business operations.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <ArrowRight 
-                href="/contact" 
-                className="bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-400 hover:to-cyan-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50"
-              >
-                Schedule Free Assessment
-              </ArrowRight>
-              <ArrowRight 
-                href="/services/enterprise-automation" 
-                className="border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
-              >
-                View Automation Services
-              </ArrowRight>
+            </p></p>
+            <div className="text-left"> </div><Link 
+                href="/"
+                className="text-left">Schedule Free Assessment
+              </Link></Link>
+              <Link 
+                href="/"
+                className="text-left">View Automation Services
+              </Link></Link>
             </div>
-          </div>
         </article>
 
         {/* Related Content */}
-        <div className="mt-16">
-          <h2 className="text-2xl font-bold text-white mb-8 text-center">Related Solutions</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <ArrowRight href="/blog/ai-2027-transcendent-intelligence-breakthrough" className="group">
-              <div className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-purple-500/50 transition-all duration-300">
-                <div className="text-4xl mb-4">🧠</div>
-                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors">
+        <h3 className="text-left">Related Solutions</h2>
+          <div className="text-left"> </div><Link href="/blog/ai-2027-transcendent-intelligence-breakthrough" className="text-left">
+              <div className="text-left">🧠</div>
+                <h3 className="text-left">
+            <Link href="/blog/ai-2027-transcendent-intelligence-breakthrough" className="text-left"> </Link><div className="text-left"> </div><div className="text-left">🧠</div>"
+                <h3 className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
                   Transcendent Intelligence
-                </h3>
-                <p className="text-gray-300 text-sm">
-                  Revolutionary AI systems with quantum-enhanced cognitive capabilities and autonomous consciousness.
-                </p>
+                </h3></h3>
+                <p className="text-left">Revolutionary AI systems with quantum-enhanced cognitive capabilities and autonomous consciousness.
+                </p></p>
               </div>
-            </ArrowRight>
+            </Link>
+            <Link href="/blog/ai-enterprise-automation-2026-mega-guide" className="text-left">
+              <div className="text-left">🤖</div>
+                <h3 className="text-left">
             
-            <ArrowRight href="/blog/ai-enterprise-automation-2026-mega-guide" className="group">
-              <div className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-blue-500/50 transition-all duration-300">
-                <div className="text-4xl mb-4">🤖</div>
-                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors">
+            <Link href="/blog/ai-enterprise-automation-2026-mega-guide" className="text-left"> </Link><div className="text-left"> </div><div className="text-left">🤖</div>"
+                <h3 className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
                   Enterprise Automation Guide
-                </h3>
-                <p className="text-gray-300 text-sm">
-                  Complete guide to achieving 98% automation rates with meta-cognitive AI systems.
-                </p>
+                </h3></h3>
+                <p className="text-left">Complete guide to achieving 98% automation rates with meta-cognitive AI systems.
+                </p></p>
               </div>
-            </ArrowRight>
+            </Link>
+            <Link href="/services/enterprise-ai-solutions" className="text-left">
+              <div className="text-left">🏢</div>
+                <h3 className="text-left">
             
-            <ArrowRight href="/services/enterprise-ai-solutions" className="group">
-              <div className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-green-500/50 transition-all duration-300">
-                <div className="text-4xl mb-4">🏢</div>
-                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-green-400 transition-colors">
+            <Link href="/services/enterprise-ai-solutions" className="text-left"> </Link><div className="text-left"> </div><div className="text-left">🏢</div>"
+                <h3 className="text-left">origin/cursor/fix-errors-and-merge-to-main-cc0a
                   Enterprise AI Solutions
-                </h3>
-                <p className="text-gray-300 text-sm">
-                  Comprehensive AI solutions designed specifically for large enterprise operations.
-                </p>
+                </h3></h3>
+                <p className="text-left">Comprehensive AI solutions designed specifically for large enterprise operations.
+                </p></p>
               </div>
-            </ArrowRight>
+            </Link>
           </div>
-        </div>
       </div>
-    </div>
   );
-}
+}</div></div></div></div></div></div></div></div></div></div>
+</span>
+</span>
+</span>
+</span>
+</span>
+</span>
+</span>
+</span>
+</span>
+</span>
+</span>
+</span>
+</span>
+</span>
+</span>
+</span>
+</span>
+</span>
+</span>
+</span>
+</span>
+</span>
+</span>
+</span>
+</span>
+</span>)

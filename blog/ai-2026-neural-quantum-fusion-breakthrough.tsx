@@ -33,14 +33,12 @@ export default function NeuralQuantumFusionBreakthrough() {
             </p>
             <div className="text-left"></div>
               <a
-                href="/contact"
-                className="text-left"
+                href="/<contact" className="text-left"
               ></a>
                 Experience the Revolution
               </a>
               <a
-                href="/case-studies/neural-quantum-fusion-500-billion-success"
-                className="text-left"
+                href="/case-studies/neural-quantum-fusion-500-billion-<success" className="text-left"
               ></a>
                 View $500B Success Story →
               </a>
@@ -274,14 +272,12 @@ export default function NeuralQuantumFusionBreakthrough() {
             </p>
             <div className="text-left"></div>
               <a
-                href="/contact"
-                className="text-left"
+                href="/<contact" className="text-left"
               ></a>
                 Start Quantum Revolution
               </a>
               <a
-                href="/case-studies"
-                className="text-left"
+                href="/case-<studies" className="text-left"
               ></a>
                 View Success Stories
               </a>

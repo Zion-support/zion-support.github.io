@@ -1,126 +1,192 @@
-import { Link } from 'react-router-dom';
-
-const October2025BreakthroughBanner = () => {
+const, October2025BreakthroughBanner = () => {
   return (
-    <section className="relative py-20 overflow-hidden">
-      {/* Background Effects */}
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-900/20 via-indigo-900/20 to-emerald-900/20" <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10" <div className="container mx-auto px-6 relative z-10">
-        {/* Main Banner */}
-        <div className="bg-gradient-to-br from-purple-900/50 via-indigo-900/50 to-emerald-900/50 rounded-2xl border-2 border-purple-500/30 backdrop-blur-sm p-8 md:p-12 mb-8 shadow-2xl">
-          <div className="flex items-center gap-3 mb-6">
-
-            <span className="px-4 py-2 bg-purple-500/20 text-purple-300 rounded-full text-sm font-bold border border-purple-400/30">
-              🔥 OCTOBER 2025 BREAKTHROUGH
+    <section, className="relativepy -20overflow-hidden">
+      {/* BackgroundEffects */};
+      <divclassName = "absoluteinset -0bg -gradient -to-rfrom -purple -900 /20via -indigo -900 /20to -emera, ld-900/20  />
+      <divclassName="absoluteinset -0bg -[url('/grid.svg')] opacity -10  />
+      <div, className="containermx -autopx-6relativez-10">
+        {/* MainBanner */}
+        <div, className="bg-gradient -to-brfrom -purple -900 /50via -indigo -900 /50to -emerald -900 /50rounded -2xlborder -2border -purple -500 /30backdrop -blur -smp -8md: p-12mb-8shadow-2xl">"
+          <div, className="flexitems -centergap-3mb-6">
+            <Sparkles, className="w-8 h-8text -purple -400, animate-pulse  />
+            <spanclassName="px-4py -2bg -purple -500 /20text -purple -300rounded -fulltext -smfont -boldborderborder -purple -400 /30">
+    <section, className="relativepy -20overflow-hidden">";
+      {/* Background, Effects */};
+      <divclassName="absoluteinset -0bg -gradient -to-rfrom -purple -900 /20via -indigo -900 /20to -emerald -900/20" />";
+      <divclassName = "absoluteinset -0bg-[url('/grid.svg')] opacity-10" />";
+      <divclassName = "containermx -autopx-6relativez-10">";
+        {/* Main, Banner */}
+        <divclassName="bg-gradient -to-brfrom -purple -900 /50via -indigo -900 /50to -emerald -900 /50rounded -2xlborder -2border -purple -500 /30backdrop -blur -smp -8md: p-12mb-8shadow -2xl">";
+          <divclassName = "flexitems -centergap-3mb-6">";
+            <SparklesclassName = "w-8 h-8text -purple -400animate-pulse" />";
+            <spanclassName = "px-4py -2bg -purple -500 /20text -purple -300rounded -fulltext -smfont -boldborderborder -purple-400/30">";
+              🔥 OCTOBER, 2025, BREAKTHROUGH;
             </span>
           </div>
-          
-          <h2 className="text-4xl md:text-5xl font-extrabold mb-6 bg-gradient-to-r from-purple-300 via-indigo-300 to-emerald-300 bg-clip-text text-transparent">
-            Revolutionary AI Technologies Transforming Enterprise Operations
+          <h2className="text -4x, l, m
+  d: text-5xlfont -extraboldmb -6bg -gradient -to-rfrom -purple -300via -indigo -300to -emerald -300bg -clip -texttext -transpare, n, t">"
+            Revolutionary, AITechnologies TransformingEnterpriseOperations;
           </h2>
-          
-          <p className="text-xl text-white/80 mb-8 max-w-4xl leading-relaxed">
-            Explore three groundbreaking AI innovations delivering unprecedented results: Sovereign Agents with 94% decision accuracy, 
-            Quantum ML achieving 1000x speedup, and Neuromorphic Edge Computing at 10,000x energy efficiency.
+          <pclassName="text -xltext -white /80mb -8max -w-4xlleading -relax, e, d">
+            Explore, three, groundbreaking AI, innovationsdelivering unprecedentedresults: SovereignAgentswith 94% decisionaccuracy;
+          <h2className="text -4xlmd: text-5xlfont -extraboldmb -6bg -gradient -to-rfrom -purple -300via -indigo -300to -emerald -300bg -clip -texttext -transpare, n, t">";
+            Revolutionary, AITechnologies TransformingEnterpriseOperations;
+          </h2>
+          <pclassName="text -xltext -white /80mb -8max -w-4xlleading -relax, e, d">";
+            Explore, three, groundbreaking AI, innovations, delivering unprecedented, resul, t
+  s: SovereignAgentswith 94% decision, accurac, y
+            Quantum, ML, achieving 1000x, speedu, p, and, Neuromorphic, Edge Computing, at, 10,000x, energyefficiency.
           </p>
-          
-          {/* Featured Articles Grid */}
-          <div className="grid md:grid-cols-3 gap-6 mb-8">
-            {/* Article 1: Sovereign Agents */}
-            <div className="bg-gradient-to-br from-purple-900/60 to-purple-800/60 p-6 rounded-xl border border-purple-400/30 hover:border-purple-400/60 transition-all hover:scale-105 group">
-              <div className="flex items-center gap-2 mb-3">
-
-                <span className="text-xs font-semibold text-purple-300 uppercase tracking-wide">AI Sovereign Agents</span>
+          {/* FeaturedArticlesGrid */}
+          <divclassName="gridmd: grid-cols -3gap -6mb -8">"
+            {/* Article1: SovereignAgents */}
+            <divclassName="bg-gradien, t-to-brfrom -purple -900 /60to -purple -800 /60p -6rounded -xlborderborder -purple -400 /30hover: border-purple -400 /60transition -all, hov, e
+  r: scale-105group">"
+              <divclassName = "flexitems -centergap-2mb-3">
+                <Brain, className="w-6 h-6text -purp, le-400  />
+                <spanclassName="text -xsfont -semiboldtext -purple -300uppercasetracking -wi, d, e">AI, Sovereign, Agents</span>
               </div>
-              <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-300 transition-colors">
-                Autonomous Decision-Making Revolution
-              </h3>
-              <p className="text-white/70 text-sm mb-4">
-                94% accuracy • $45M+ savings • 10x efficiency gains
-              </p>
-              <Link 
-                to="/blog/ai-sovereign-agents-enterprise-2025"
-                className="inline-flex items-center gap-2 text-purple-300 hover:text-purple-200 font-semibold text-sm group-hover:gap-3 transition-all"
-              >
-                Read Article</Link>
-            </div>
-            
-            {/* Article 2: Quantum ML */}
-            <div className="bg-gradient-to-br from-indigo-900/60 to-indigo-800/60 p-6 rounded-xl border border-indigo-400/30 hover:border-indigo-400/60 transition-all hover:scale-105 group">
-              <div className="flex items-center gap-2 mb-3">
-
-                <span className="text-xs font-semibold text-indigo-300 uppercase tracking-wide">Quantum ML</span>
+              <h3className="text -xlfont -boldtext -whitemb -2group -hover: text-purple -300transition -colo, r, s">"
+          <div, className="gridmd: grid-cols -3gap-6mb-8">";
+            {/* Article 
+  1: SovereignAgents */}
+            <divclassName="bg-gradien, t-to-brfrom -purple -900 /60to -purple -800 /60p -6rounded -xlborderborder -purple -400 /30hover: border-purple -400 /60transition -allhover: scale-105, grou, p">";
+              <divclassName = "flexitems -centergap-2mb-3">";
+                <BrainclassName = "w-6 h-6text -purple-400" />";
+                <spanclassName = "text -xsfont -semiboldtext -purple -300uppercasetracking-wide">AI, Sovereign, Agents</sp, a, n>";
               </div>
-              <h3 className="text-xl font-bold text-white mb-2 group-hover:text-indigo-300 transition-colors">
-                1000x Computational Speed Breakthrough
+              <h3className="text -xlfont -boldtext -whitemb -2group -hover: text-purple -300transition -colors">";
+                Autonomous, Decision-MakingRevolution;
               </h3>
-              <p className="text-white/70 text-sm mb-4">
-                1000x speedup • $89M savings • Impossible problems solved
+              <pclassName="text -white /70text -smmb -4">";
+                94% accura, c, y • $45M + savin, g, s • 10xefficiencygains;
               </p>
-              <Link 
-                to="/blog/ai-quantum-machine-learning-2025"
-                className="inline-flex items-center gap-2 text-indigo-300 hover:text-indigo-200 font-semibold text-sm group-hover:gap-3 transition-all"
+              <Link
+  to="/blog /ai-sovereign -agents -enterprise -20, 2, 5"
+                className="inline -flexitems -centergap -2text -purple -300hover: text-purple -200font -semiboldtext -smgroup -ho, v, e
+  r: gap-3transition -all"
               >
-                Read Article</Link>
+                Read, Article <ArrowRightclassName="w-4 h-4  />
+                ReadArticle <ArrowRightclassName = "w-4 h-4" />";
+              </Li, n, k>
             </div>
-            
-            {/* Article 3: Neuromorphic Edge */}
-            <div className="bg-gradient-to-br from-emerald-900/60 to-emerald-800/60 p-6 rounded-xl border border-emerald-400/30 hover:border-emerald-400/60 transition-all hover:scale-105 group">
-              <div className="flex items-center gap-2 mb-3">
-
-                <span className="text-xs font-semibold text-emerald-300 uppercase tracking-wide">Neuromorphic Edge</span>
+            {/* Article2: QuantumML */}
+            <divclassName="bg-gradien, t-to-brfrom -indigo -900 /60to -indigo -800 /60p -6rounded -xlborderborder -indigo -400 /30hover: border-indigo -400 /60transition -all, hov, e
+  r: scale-105, grou, p">"
+              <divclassName = "flexitems -centergap-2mb-3">
+                <Zap, className="w-6 h-6text -indi, go-400  />
+                <spanclassName="text -xsfont -semiboldtext -indigo -300uppercasetracking -wi, d, e">Quantum, M, L</span>
               </div>
-              <h3 className="text-xl font-bold text-white mb-2 group-hover:text-emerald-300 transition-colors">
-                Brain-Inspired AI at 0.001W Power
+              <h3className="text -xlfont -boldtext -whitemb -2group -hover: text-indigo -300transition -colo, r, s">"
+            <div, className="bg-gradient -to-brfrom -indigo -900 /60to -indigo -800 /60p -6rounded -xlborderborder -indigo -400 /30hover: border-indigo -400 /60transition-allhover: scale-105group">";
+              <divclassName = "flexitems -centergap-2mb-3">";
+                <ZapclassName = "w-6 h-6text -indigo-400" />";
+                <spanclassName = "text -xsfont -semiboldtext -indigo -300uppercasetracking-wide">Quantum, M, L</sp, a, n>";
+              </div>
+              <h3className="text -xlfont -boldtext -whitemb -2group -hover: text-indigo -300transition -colors">";
+                1000x, ComputationalSpeed Breakthrough;
               </h3>
-              <p className="text-white/70 text-sm mb-4">
-                10,000x energy efficiency • 100M+ devices • Real-time learning
+              <pclassName="text -white /70text -smmb -4">";
+                1000x, speedu, p • $89M, saving, s • Impossibleproblemssolved;
               </p>
-              <Link 
-                to="/blog/ai-neuromorphic-edge-computing-2025"
-                className="inline-flex items-center gap-2 text-emerald-300 hover:text-emerald-200 font-semibold text-sm group-hover:gap-3 transition-all"
+              <Link
+  to="/blog /ai-quantum -machine -learning -20, 2, 5"
+                className="inline -flexitems -centergap -2text -indigo -300hover: text-indigo -200font -semiboldtext -smgroup -ho, v, e
+  r: gap-3transition -all"
               >
-                Read Article</Link>
+                Read, Article <ArrowRightclassName="w-4 h-4  />
+                ReadArticle <ArrowRightclassName = "w-4 h-4" />";
+              </Li, n, k>
             </div>
-          </div>
-          
-          {/* CTA Section */}
-          <div className="flex flex-wrap gap-4 items-center">
-            <Link 
-              to="/blog"
-              className="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all shadow-lg hover:shadow-purple-500/50 inline-flex items-center gap-2"
+            {/* Article3: NeuromorphicEdge */}
+            <divclassName="bg-gradien, t-to-brfrom -emerald -900 /60to -emerald -800 /60p -6rounded -xlborderborder -emerald -400 /30hover: border-emerald -400 /60transition -all, hov, e
+  r: scale-105, grou, p">"
+              <divclassName = "flexitems -centergap-2mb-3">
+                <Sparkles, className="w-6 h-6text -emera, ld-400  />
+                <spanclassName="text -xsfont -semiboldtext -emerald -300uppercasetracking -wi, d, e">Neuromorphic, Edg, e</span>
+              </div>
+              <h3className="text -xlfont -boldtext -whitemb -2group -hover: text-emerald -300transition -colo, r, s">"
+            <div, className="bg-gradient -to-brfrom -emerald -900 /60to -emerald -800 /60p -6rounded -xlborderborder -emerald -400 /30hover: border-emerald -400 /60transition-allhover: scale-105group">";
+              <divclassName = "flexitems -centergap-2mb-3">";
+                <SparklesclassName = "w-6 h-6text -emerald-400" />";
+                <spanclassName = "text -xsfont -semiboldtext -emerald -300uppercasetracking-wide">Neuromorphic, Edg, e</sp, a, n>";
+              </div>
+              <h3className="text -xlfont -boldtext -whitemb -2group -ho, v, e
+  r: text-emerald -300transition -colors">";
+                Brain -Inspired, AIat 0.001WPower;
+              </h3>
+              <pclassName="text -white /70text -smmb -4">";
+                10,000x, energy, efficiency • 100M + devic, e, s • Real -timelearning;
+              </p>
+              <Link
+  to="/blog /ai-neuromorphic -edge -computing -20, 2, 5"
+                className="inline -flexitems -centergap -2text -emerald -300hover: text-emerald -200font -semiboldtext -smgroup -ho, v, e
+  r: gap-3transition -all"
+              >
+                Read, Article <ArrowRightclassName="w-4 h-4  />
+                ReadArticle <ArrowRightclassName = "w-4 h-4" />";
+              </Li, n, k>
+            </d, i, v>
+          </d, iv>
+          {/* CTASection */}
+          <divclassName="flexflex -wrapgap -4items -cent, e, r">";
+            <Link
+  to="/blog"
+              className="bg-gradient -to-rfrom -purple -600to -indigo -600hover: from-purple -700hover: to-indigo-700text -whitepx -8py -4rounded -lgfont -boldtext -lgtransition -allshadow -lg, hov, e
+  r: shadow-purple -500 /50inline -flexitems -centergap-2"
             >
-              Explore All Articles</Link>
-            <Link 
-              to="/contact"
-              className="bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-lg font-bold text-lg transition-all border border-white/20 hover:border-white/40 inline-flex items-center gap-2"
-            >
-              Schedule Consultation
+              Explore, AllArticles <ArrowRightclassName="w-5 h-5  />
+              ExploreAllArticles <ArrowRightclassName = "w-5 h-5" />";
             </Link>
+            <Link
+  to="/conta, c, t"
+              className="bg-white /10hover: bg-white/20backdrop -blur -smtext -whitepx -8py -4rounded -lgfont -boldtext -lgtransition -allborderborder -white /20, hov, e
+  r: border-white /40inline -flexitems -centergap-2"
+            >
+              Schedule, Consultatio, n;
+            </Li, n, k>
+          </d, i, v>
+        </d, i, v>
+        {/* Stats, Banner */}
+        <divclassName="gridgrid -cols -2md: grid-cols -4gap-4">"
+          <divclassName = "bg-purple -900 /30backdrop -blur -smp -6rounded -xlborderborder -purple -400 /20text-center">
+            <div, className="text -3xlmd: text-4xlfont -extraboldtext -purple-400mb-2">$174M +</d, i, v>"
+            <div, className="text -white/70text-sm">Combined, Annual, Savings</d, i, v>
+          </d, i, v>
+          <div, className="bg-indigo -900 /30backdrop -blur -smp -6rounded -xlborderborder -indigo -400 /20text-center">
+            <div, className="text -3xlmd: text-4xlfont -extraboldtext -indigo-400mb-2">10,00, 0, x</d, i, v>"
+            <div, className="text -white/70text-sm">Maximum, Efficiency, Gain</d, i, v>
+          </d, i, v>
+          <div, className="bg-emerald -900 /30backdrop -blur -smp -6rounded -xlborderborder -emerald -400 /20text-center">
+            <div, className="text -3xlmd: text-4xlfont -extraboldtext -emerald-400mb-2">100M +</d, i, v>"
+            <div, className="text -white/70text-sm">Devices, Deploye, d</d, i, v>
+          </d, i, v>
+          <div, className="bg-cyan -900 /30backdrop -blur -smp -6rounded -xlborderborder -cyan -400 /20text-center">
+            <div, className="text -3xlmd: text-4xlfont -extraboldtext -cyan-400mb-2">94%</d, i, v>"
+            <div, className="text -white/70text-sm">Decision, Accurac, y</d, i, v>
+        <div, className="gridgrid -cols -2md: grid-cols-4gap-4">";
+          <divclassName = "bg-purple -900 /30backdrop -blur -smp -6rounded -xlborderborder -purple -400 /20text-center">";
+            <divclassName = "text -3xlmd: text-4xlfont -extraboldtext -purple-400mb-2">$174M +</d, i, v>";
+            <divclassName = "text -white/70text-sm">Combined, Annual, Savings</d, i, v>";
           </div>
-        </div>
-        
-        {/* Stats Banner */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          <div className="bg-purple-900/30 backdrop-blur-sm p-6 rounded-xl border border-purple-400/20 text-center">
-            <div className="text-3xl md:text-4xl font-extrabold text-purple-400 mb-2">$174M+</div>
-            <div className="text-white/70 text-sm">Combined Annual Savings</div>
+          <divclassName="bg-indigo -900 /30backdrop -blur -smp -6rounded -xlborderborder -indigo -400 /20text -center">";
+            <divclassName = "text -3x, l, m
+  d: text-4xlfont -extraboldtext -indigo-400mb-2">10,00, 0, x</d, i, v>";
+            <divclassName = "text -white/70text-sm">Maximum, Efficiency, Gain</d, i, v>";
           </div>
-          <div className="bg-indigo-900/30 backdrop-blur-sm p-6 rounded-xl border border-indigo-400/20 text-center">
-            <div className="text-3xl md:text-4xl font-extrabold text-indigo-400 mb-2">10,000x</div>
-            <div className="text-white/70 text-sm">Maximum Efficiency Gain</div>
+          <divclassName="bg-emerald -900 /30backdrop -blur -smp -6rounded -xlborderborder -emerald -400 /20text -center">";
+            <divclassName = "text -3xlmd: text-4xlfont -extraboldtext -emerald-400mb-2">100M +</d, i, v>";
+            <divclassName = "text -white/70text-sm">Devices, Deploye, d</d, i, v>";
           </div>
-          <div className="bg-emerald-900/30 backdrop-blur-sm p-6 rounded-xl border border-emerald-400/20 text-center">
-            <div className="text-3xl md:text-4xl font-extrabold text-emerald-400 mb-2">100M+</div>
-            <div className="text-white/70 text-sm">Devices Deployed</div>
-          </div>
-          <div className="bg-cyan-900/30 backdrop-blur-sm p-6 rounded-xl border border-cyan-400/20 text-center">
-            <div className="text-3xl md:text-4xl font-extrabold text-cyan-400 mb-2">94%</div>
-            <div className="text-white/70 text-sm">Decision Accuracy</div>
-          </div>
-        </div>
-      </div>
-    </section>
+          <divclassName="bg-cyan -900 /30backdrop -blur -smp -6rounded -xlborderborder -cyan -400 /20text -center">";
+            <divclassName = "text -3x, l, m
+  d: text-4xlfont -extraboldtext -cyan-400mb-2">94%</d, i, v>";
+            <divclassName = "text -white/70text-sm">Decision, Accurac, y</d, i, v>";
+          </d, i, v>
+        </d, i, v>
+      </d, i, v>
+    </secti, o, n>
   );
 };
-
 export default October2025BreakthroughBanner;
+;

@@ -1,51 +1,34 @@
-import React from "react";
-import { Helmet } from "react-helmet-async";
+import React from 'react';
+impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
 
-export default function BlogPage(): React.JSX.Element {
+export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t { 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-      <Helmet>
-        <title>Agent Reliability Runbooks v5 — Budgets, Canaries, Rollback</title>
-        <meta 
-          name="description" 
-          content="Execute safe, budget-aware agent operations using KPI-linked playbooks, canary scorecards, and instant rollback." 
+    <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-b, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whi, t, e'>
+      <Helm, e, t>
+        <title>
+          Agent, Reliability, Runbooks v5 — Budg, e, t, s, Canari, e, s, Rollba, c, k
+        </title>
+        <meta, nam, e = 'description'
+          conte, n, t='Execute, sa, f, e, budg, e, t-aware, agent, operations using, KP, I-linked, playbook, s, canary, scorecard, s, and, instant, rollback.'
         />
-        <link 
-          rel="canonical" 
-          href="https://ziontechgroup.com/blog/ai-2025-oct-01-agent-reliability-runbooks-v5" 
+        <link, re, l = 'canonic, a, l'
+          hr, e, f='htt, p, s: //ziontechgro u p.c o m/bl o g/ai-20 2 5-o c t-01-age n t-reliabili t y-runboo k s-v5'
         />
-      </Helmet>
+      </Helm, e, t>
 
-      <div className="container mx-auto px-6 py-12">
-        <div className="max-w-3xl mx-auto">
-          <div className="mb-6 text-sm text-zion-slate-light">AI Operations • 9 min read • 2025-10-01</div>
-          <h1 className="text-4xl font-bold mb-4">Agent Reliability Runbooks v5</h1>
-          <p className="text-zion-slate-light mb-6">
-            Practical runbooks for governing autonomous agents with budgeted actions, KPI‑linked canaries, and deterministic rollback
-            that preserve customer experience while accelerating delivery.
-          </p>
-
-          <div className="space-y-6">
-            <h2 className="text-2xl font-semibold">Runbook Patterns</h2>
-            <ul className="list-disc pl-6 text-zion-slate-light">
-              <li>Budget guards per intent with escalation thresholds and approvals.</li>
-              <li>Scorecard canaries with rollback hooks when KPIs dip beyond tolerance.</li>
-              <li>Trace everything from token to KPI with cost and risk telemetry.</li>
-              <li>Drills and chaos tests to validate failure modes weekly.</li>
-            </ul>
-
-            <h2 className="text-2xl font-semibold">Adoption Guide</h2>
-            <p className="text-zion-slate-light">
-              Start with a single critical flow, wire in KPIs, define budgets, and ship a canary runbook. Expand coverage as
-              telemetry validates stability. Automate rollback after two consecutive score violations.
-            </p>
-
-            <div className="mt-8">
-              <a href="/blog" className="text-cyan-300 hover:underline">← Back to Blog</a>
-            </div>
+      <div, className='container, m, x-auto, p, x-6, p, y-12'>
+        <div, className='m, a, x-w-3xl, m, x-au, t, o'>
+          <div, className='mb-6, tex, t-sm, tex, t-zi, o, n-sla, t, e-lig, h, t'>
+            AI, Operation, s • 9, min, read • 20, 2, 5-10-01
           </div>
-        </div>
-      </div>
-    </div>
-  );
-}
+          <h1, className='te, x, t-4xl, fon, t-bold, m, b-4'>
+            Agent, Reliability, Runbooks v5
+          </h1>
+          <p, className='te, x, t-zi, o, n-sla, t, e-light, m, b-6'>
+            Practical, runbooks, for governing, autonomous, agents with, budgeted, actio, n, s, K, P, I‑linked, canarie, s, and, deterministic, rollback that, preserve, customer experience, while, accelerating delive, r, y.
+>>>>>>> origin/merge-fixes-20251005-193002
+
+            <div, classNam, e = 'mt-8'>
+              <a, hre, f='/bl, o, g' className='te, x, t-cy, a, n-300, hove, r: underli, n, e'>
+                ← Back, to, Blog
+              </a>

@@ -197,14 +197,12 @@ export default function AIEdgeComputing5GIntegration2025() {
           </p>
           <div className="text-left"></div>
             <a
-              href="/contact"
-              className="text-left"
+              href="/<contact" className="text-left"
             ></a>
               Schedule Consultation
             </a>
             <a
-              href="/blog"
-              className="text-left"
+              href="/<blog" className="text-left"
             ></a>
               Explore More Guides
             </a>

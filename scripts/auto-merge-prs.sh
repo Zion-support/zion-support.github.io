@@ -21,10 +21,8 @@ skipped_count=0
 for branch in $branches; do
     branch_name=${branch#origin/}
     echo ""
-    echo "================================================"
-    echo "Processing: $branch_name"
-    echo "================================================"
-    
+    echo "    echo "Processing: $branch_name"
+    echo "    
     # Check if branch has unique commits
     unique_commits=$(git log $branch ^main --oneline | wc -l)
     
@@ -99,17 +97,13 @@ done
 
 # Final push
 echo ""
-echo "================================================"
-echo "📤 Pushing final changes to remote..."
-echo "================================================"
-git push origin main || echo "⚠️  Final push failed"
+echo "echo "📤 Pushing final changes to remote..."
+echo "git push origin main || echo "⚠️  Final push failed"
 
 # Summary
 echo ""
-echo "================================================"
-echo "✨ Merge Process Complete!"
-echo "================================================"
-echo "✅ Successfully merged: $merged_count branches"
+echo "echo "✨ Merge Process Complete!"
+echo "echo "✅ Successfully merged: $merged_count branches"
 echo "⏭️  Skipped (already merged): $skipped_count branches"
 echo "⚠️  Conflicts remaining: $conflict_count branches"
 echo ""

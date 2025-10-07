@@ -275,14 +275,12 @@ export default function AI2030TranscendentMetaIntelligenceRevolution() {
               </div>
               <div className="text-left"></div>
                 <a
-                  href="/contact"
-                  className="text-left"
+                  href="/<contact" className="text-left"
                 ></a>
                   Get Your Free Assessment
                 </a>
                 <a
-                  href="/case-studies/ai-2030-transcendent-meta-intelligence-50-billion-success"
-                  className="text-left"
+                  href="/case-studies/ai-2030-transcendent-meta-intelligence-50-billion-<success" className="text-left"
                 ></a>
                   View Success Stories
                 </a>
@@ -299,14 +297,12 @@ export default function AI2030TranscendentMetaIntelligenceRevolution() {
               </p>
               <div className="text-left"></div>
                 <a
-                  href="/contact"
-                  className="text-left"
+                  href="/<contact" className="text-left"
                 ></a>
                   Start Your Journey
                 </a>
                 <a
-                  href="/blog"
-                  className="text-left"
+                  href="/<blog" className="text-left"
                 ></a>
                   Explore More Breakthroughs
                 </a>

@@ -16,7 +16,7 @@ export default function EnterpriseAIGovernanceFramework2025() {
       <div className="text-left"></div>
         <main className="text-left">
           <nav className="text-left">
-            <a href="/blog" className="text-left"></a>
+            <a href="/<blog" className="text-left"></a>
               ← Back to Blog
             </a>
           </nav>
@@ -251,10 +251,10 @@ export default function EnterpriseAIGovernanceFramework2025() {
                   Published by Zion Tech Group AI Governance Practice
                 </div>
                 <div className="text-left"></div>
-                  <a href="/blog" className="text-left"></a>
+                  <a href="/<blog" className="text-left"></a>
                     ← Back to Blog
                   </a>
-                  <a href="/contact" className="text-left"></a>
+                  <a href="/<contact" className="text-left"></a>
                     Schedule Consultation →
                   </a>
                 </div>

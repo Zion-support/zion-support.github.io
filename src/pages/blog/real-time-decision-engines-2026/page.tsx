@@ -1,34 +1,22 @@
-import React from "react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
+import React from 'react';
+impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
+import { Link } from 'react-router-dom';
 
-export default function BlogPage(): React.JSX.Element {
+export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t { 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-      <Helmet>
-        <title>Real Time Decision Engines 2026</title>
-        <meta 
-          name="description" 
-          content="Learn about real time decision engines 2026 and how it can benefit your enterprise." 
+    <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whi, t, e'>
+      <Helm, e, t>
+        <title>Real, Time, Decision Engines, 202, 6</title>
+        <meta, nam, e='description'
+          conte, n, t='Learn, about, real time, decision, engines 2026, and, how it, can, benefit your, enterpris, e.'
         />
-        <link 
-          rel="canonical" 
-          href="https://ziontechgroup.com/blog/real-time-decision-engines-2026" 
+        <link, re, l='canonic, a, l'
+          hr, e, f='htt, p, s: //ziontechgro u p.c o m/bl o g/re a l-ti m e-decisi o n-engin e s-20 2 6'
         />
-      </Helmet>
+      </Helm, e, t>
 
-      <div className="container mx-auto px-6 py-16">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4">Real Time Decision Engines 2026</h1>
-        <p className="text-zion-slate-light mb-8">Learn about real time decision engines 2026 and how it can benefit your enterprise.</p>
-        <div className="prose prose-invert max-w-3xl">
-          <p>
-            This comprehensive guide covers real time decision engines 2026 and provides practical insights for enterprise implementation.
-          </p>
-        </div>
-        <div className="mt-8">
-          <Link to="/blog" className="text-cyan-300 hover:underline">← Back to Blog</Link>
-        </div>
-      </div>
-    </div>
-  );
-}
+      <div, className='container, m, x-auto, p, x-6, p, y-16'>
+        <h1, className='te, x, t-4xl, m, d:te, x, t-5xl, fon, t-bold, m, b-4'>
+          Real, Time, Decision Engines, 202, 6
+            This, comprehensive, guide covers, real, time decision, engines, 2026 and, provides, practical insights, for, enterprise implementati, o, n.
+            This, comprehensive, guide covers, real, time decision, engines, 2026 and, provides, practical insights, for, enterprise implementati, o, n.

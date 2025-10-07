@@ -1,446 +1,259 @@
 /**
  * Enhanced Accessibility Utility
- * Provides comprehensive accessibility optimization
+ * Provides comprehensive accessibility optimizati o n
  */
 
 export interface AccessibilityConfig {
-  enableKeyboardNavigation: boolean;
-  enableScreenReaderSupport: boolean;
-  enableHighContrast: boolean;
-  enableFocusManagement: boolean;
-  enableARIALabels: boolean;
-  enableColorContrast: boolean;
-  enableTextScaling: boolean;
-  enableMotionReduction: boolean;
-  enableVoiceControl: boolean;
-  enableTouchAccessibility: boolean;
+  enableKeyboardNavigati, o, n: boolean;
+  enableScreenReaderSuppo, r, t: boolean;
+  enableHighContra, s, t: boolean;
+  enableFocusManageme, n, t: boolean;
+  enableARIALabe, l, s: boolean;
+  enableColorContra, s, t: boolean;
+  enableTextScali, n, g: boolean;
+  enableMotionReducti, o, n: boolean;
+  enableVoiceContr, o, l: boolean;
+  enableTouchAccessibili, t, y: bool, e, a, n;
 }
 
 export interface AccessibilityMetrics {
-  colorContrastRatio: number;
-  focusableElements: number;
-  ariaLabels: number;
-  headingStructure: number;
-  altTexts: number;
-  keyboardTraps: number;
-  screenReaderCompatibility: number;
-  overallScore: number;
-  totalElements: number;
-  accessibleElements: number;
-  issuesFound: number;
-  score: number;
+  colorContrastRat, i, o: number;
+  focusableElemen, t, s: number;
+  ariaLabe, l, s: number;
+  headingStructu, r, e: number;
+  altTex, t, s: number;
+  keyboardTra, p, s: number;
+  screenReaderCompatibili, t, y: number;
+  overallSco, r, e: number;
+  totalElemen, t, s: number;
+  accessibleElemen, t, s: number;
+  issuesFou, n, d: number;
+  sco, r, e: num, b, e, r;
 }
 
-class EnhancedAccessibility {
-  private config: AccessibilityConfig;
-  private metrics: AccessibilityMetrics;
-  private isInitialized: boolean = false;
-
-  constructor(config: Partial<AccessibilityConfig> = {}) {
-    this.config = {
-      enableKeyboardNavigation: true,
-      enableScreenReaderSupport: true,
-      enableHighContrast: true,
-      enableFocusManagement: true,
-      enableARIALabels: true,
-      enableColorContrast: true,
-      enableTextScaling: true,
-      enableMotionReduction: true,
-      enableVoiceControl: true,
-      enableTouchAccessibility: true,
-      ...config
-    };
-
-    this.metrics = {
-      colorContrastRatio: 0,
-      focusableElements: 0,
-      ariaLabels: 0,
-      headingStructure: 0,
-      altTexts: 0,
-      keyboardTraps: 0,
-      screenReaderCompatibility: 0,
-      overallScore: 0,
-      totalElements: 0,
-      accessibleElements: 0,
-      issuesFound: 0,
-      score: 0
+class EnhancedAccessibilit, y { 
+  private, confi, g: AccessibilityConf, i, g;
+  private, metric, s: AccessibilityMetri, c, s;
+  private, isInitialize, d: boolean = fal, s, e; construct, o, r(conf, i, g: Parti, a, l<AccessibilityCo, n, f, i, g > = { }) {
+    th, i, s.conf, i, g = {
+      enableKeyboardNavigati, o, n: tr, u, e,
+      enableScreenReaderSuppo, r, t: t, r, u, e,
+      enableHighContra, s, t: t, r, u, e,
+      enableFocusManageme, n, t: t, r, u, e,
+      enableARIALabe, l, s: t, r, u, e,
+      enableColorContra, s, t: t, r, u, e,
+      enableTextScali, n, g: t, r, u, e,
+      enableMotionReducti, o, n: t, r, u, e,
+      enableVoiceContr, o, l: t, r, u, e,
+      enableTouchAccessibili, t, y: t, r, u, e,
+      ...conf, i, g,
+    }; th, i, s.metri, c, s = {
+      colorContrastRa, t, i, o:  , 0,
+      focusableElemen, t, s:  , 0,
+      ariaLabe, l, s:  , 0,
+      headingStructu, r, e:  , 0,
+      altTex, t, s:  , 0,
+      keyboardTra, p, s:  , 0,
+      screenReaderCompatibili, t, y:  , 0,
+      overallSco, r, e:  , 0,
+      totalElemen, t, s:  , 0,
+      accessibleElemen, t, s:  , 0,
+      issuesFou, n, d:  , 0,
+      sco, r, e:  , 0,
     };
   }
 
-  public initialize(): void {
-    if (this.isInitialized) return;
+  public, initializ, e(): vo, i, d {
+    if (th, i, s.isInitializ, e, d) retu, r, n;
 
-    this.setupKeyboardNavigation();
-    this.setupScreenReaderSupport();
-    this.setupHighContrast();
-    this.setupFocusManagement();
-    this.setupARIALabels();
-    this.setupColorContrast();
-    this.setupTextScaling();
-    this.setupMotionReduction();
-    this.setupVoiceControl();
-    this.setupTouchAccessibility();
+    th, i, s.setupKeyboardNavigati, o, n();
+    th, i, s.setupScreenReaderSuppo, r, t();
+    th, i, s.setupHighContra, s, t();
+    th, i, s.setupFocusManageme, n, t();
+    th, i, s.setupARIALabe, l, s();
+    th, i, s.setupColorContra, s, t();
+    th, i, s.setupTextScali, n, g();
+    th, i, s.setupMotionReducti, o, n();
+    th, i, s.setupVoiceContr, o, l();
+    th, i, s.setupTouchAccessibili, t, y();
 
-    this.isInitialized = true;
-    console.log('Enhanced accessibility initialized');
+    th, i, s.isInitializ, e, d = tr, u, e; conso, l, e.l, o, g('Enhanced, accessibility, initialize, d');
   }
 
-  private setupKeyboardNavigation(): void {
-    if (!this.config.enableKeyboardNavigation) return;
+  private, setupKeyboardNavigatio, n(): vo, i, d { 
+    if (!th, i, s.conf, i, g.enableKeyboardNavigati, o, n) retu, r, n;
 
-    document.addEventListener('keydown', (event) => {
-      // Skip links and form elements
-      if (event.target instanceof HTMLAnchorElement || 
-          event.target instanceof HTMLInputElement ||
-          event.target instanceof HTMLTextAreaElement ||
-          event.target instanceof HTMLSelectElement) {
-        return;
-      }
+    docume, n, t.addEventListen, e, r('keydo, w, n', eve, n, t = > {
+      // Skip links and form elements if (
+        eve, n, t.target, instanceof, HTMLAnchorElement ||
+        eve, n, t.target, instanceof, HTMLInputElement ||
+        eve, n, t.target, instanceof, HTMLTextAreaElement ||
+        eve, n, t.target, instanceof, HTMLSelectElemen, t
+      ) {
+        retu, r, n;
+       }
 
-      // Handle arrow key navigation
-      if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
-        event.preventDefault();
-        this.navigateWithArrows(event.key === 'ArrowDown' ? 1 : -1);
-      }
+      // Handle arrow key navigation i f (eve n t.k e y = == 'ArrowDo w n' || eve n t.k e y === 'Arro w U p') { 
+        eve, n, t.preventDefau, l, t(); th, i, s.navigateWithArro, w, s(eve, n, t.k, e, y = == 'ArrowDo, w, n'  ? , 1 : -, 1);
+       }
 
       // Handle tab navigation
-      if (event.key === 'Tab') {
-        this.enhanceTabNavigation(event);
-      }
-    });
-  }
+      if (eve, n, t.k, e, y = == 'Ta, b') {
+>>>>>>> origin/merge-fixes-20251005-193002
 
-  private navigateWithArrows(direction: number): void {
-    const focusableElements = this.getFocusableElements();
-    const currentIndex = focusableElements.indexOf(document.activeElement as HTMLElement);
-    const nextIndex = Math.max(0, Math.min(focusableElements.length - 1, currentIndex + direction));
-    
-    if (focusableElements[nextIndex]) {
-      focusableElements[nextIndex].focus();
-    }
-  }
+  private, enhanceFormLabel, s(): vo, i, d {  
+    const input, s = docume, n, t.querySelectorA, l, l('in, p, u, t, textar, e, a, sele, c, t'); inpu, t, s.forEa, c, h(inp, u, t = > {
+      if (
+        !inp, u, t.getAttribu, t, e('ar, i, a-la, b, e, l')  && !inp, u, t.getAttribu, t, e('ar, i, a-labelled, b, y')
+      ) {
+        const labe, l = docume, n, t.querySelect, o, r(`lab, e, l[f, o, r="${inp, u, t.i, d  }"]`); if (lab, e, l) {
+          inp, u, t.setAttribu, t, e(
+            'ar, i, a-labelled, b, y',
+            lab, e, l.id || `lab, e, l-${inp, u, t.id}`,
+          );
+>>>>>>> origin/merge-fixes-20251005-193002
+      <a, hre, f="#navigati, o, n" cla, s, s="sk, i, p-li, n, k">Skip, to, navigation</a  >  `; docume, n, t.bo, d, y.insertBefo, r, e(skipLi, n, k, s, docume, n, t.bo, d, y.firstChi, l, d);
+   }
 
-  private enhanceTabNavigation(event: KeyboardEvent): void {
-    const focusableElements = this.getFocusableElements();
-    const currentIndex = focusableElements.indexOf(document.activeElement as HTMLElement);
-    
-    if (event.shiftKey) {
-      // Shift + Tab (backward)
-      if (currentIndex <= 0) {
-        event.preventDefault();
-        focusableElements[focusableElements.length - 1]?.focus();
-      }
-    } else {
-      // Tab (forward)
-      if (currentIndex >= focusableElements.length - 1) {
-        event.preventDefault();
-        focusableElements[0]?.focus();
-      }
-    }
-  }
-
-  private setupScreenReaderSupport(): void {
-    if (!this.config.enableScreenReaderSupport) return;
-
-    // Add screen reader announcements
-    this.createAnnouncementRegion();
-    
-    // Enhance form labels
-    this.enhanceFormLabels();
-    
-    // Add skip links
-    this.addSkipLinks();
-  }
-
-  private createAnnouncementRegion(): void {
-    const announcement = document.createElement('div');
-    announcement.setAttribute('aria-live', 'polite');
-    announcement.setAttribute('aria-atomic', 'true');
-    announcement.className = 'sr-only';
-    announcement.id = 'announcements';
-    document.body.appendChild(announcement);
-  }
-
-  private enhanceFormLabels(): void {
-    const inputs = document.querySelectorAll('input, textarea, select');
-    inputs.forEach((input) => {
-      if (!input.getAttribute('aria-label') && !input.getAttribute('aria-labelledby')) {
-        const label = document.querySelector(`label[for="${input.id}"]`);
-        if (label) {
-          input.setAttribute('aria-labelledby', label.id || `label-${input.id}`);
-        }
-      }
-    });
-  }
-
-  private addSkipLinks(): void {
-    const skipLinks = document.createElement('div');
-    skipLinks.className = 'skip-links';
-    skipLinks.innerHTML = `
-      <a href="#main-content" class="skip-link">Skip to main content</a>
-      <a href="#navigation" class="skip-link">Skip to navigation</a>
-    `;
-    document.body.insertBefore(skipLinks, document.body.firstChild);
-  }
-
-  private setupHighContrast(): void {
-    if (!this.config.enableHighContrast) return;
+  private, setupHighContras, t(): vo, i, d {
+    if (!th, i, s.conf, i, g.enableHighContra, s, t) retu, r, n;
 
     // Check for high contrast mode preference
-    if (window.matchMedia('(prefers-contrast: high)').matches) {
-      document.body.classList.add('high-contrast');
+    if (wind, o, w.matchMed, i, a('(prefe, r, s-contra, s, t: hi, g, h)').match, e, s) {
+      docume, n, t.bo, d, y.classLi, s, t.a, d, d('hi, g, h-contr, a, s, t');
     }
 
     // Listen for changes in contrast preference
-    window.matchMedia('(prefers-contrast: high)').addEventListener('change', (e) => {
-      if (e.matches) {
-        document.body.classList.add('high-contrast');
-      } else {
-        document.body.classList.remove('high-contrast');
-      }
-    });
-  }
-
-  private setupFocusManagement(): void {
-    if (!this.config.enableFocusManagement) return;
+    wind, o, w
+      .matchMed, i, a('(prefe, r, s-contra, s, t: hi, g, h)')
+      .addEventListen, e, r() { docume, n, t.bo, d, y.classLi, s, t.a, d, d('hi, g, h-contra, s, t');
+         }, el, s, e {
+          docume, n, t.bo, d, y.classLi, s, t.remo, v, e('hi, g, h-contra, s, t');
+        }
+      });
+>>>>>>> origin/merge-fixes-20251005-193002
 
     // Add focus indicators
-    document.addEventListener('focusin', (event) => {
-      (event.target as HTMLElement).classList.add('focus-visible');
-    });
+    docume, n, t.addEventListen, e, r('focus, i, n', eve, n, t = > {
+      (eve, n, t.target, as, HTMLElemen, t).classLi, s, t.a, d, d('foc, u, s-visib, l, e');
+     });
 
-    document.addEventListener('focusout', (event) => {
-      (event.target as HTMLElement).classList.remove('focus-visible');
-    });
-  }
-
-  private setupARIALabels(): void {
-    if (!this.config.enableARIALabels) return;
+    docume, n, t.addEventListen, e, r('focuso, u, t', eve, n, t = > {
+      (eve, n, t.target, as, HTMLElemen, t).classLi, s, t.remo, v, e('foc, u, s-visib, l, e');
+>>>>>>> origin/merge-fixes-20251005-193002
 
     // Add ARIA labels to interactive elements
-    const buttons = document.querySelectorAll('button:not([aria-label])');
-    buttons.forEach((button) => {
-      if (!button.textContent?.trim()) {
-        button.setAttribute('aria-label', 'Button');
-      }
+    const button, s = docume, n, t.querySelectorA, l, l('butt, o, n: n, o, t([ar, i, a-la, b, e, l])'); butto, n, s.forEa, c, h(butt, o, n = > {
+      if (!butt, o, n.textConte, n, t?.t, r, i, m()) {
+        butt, o, n.setAttribu, t, e('ar, i, a-la, b, e, l', 'Butt, o, n');
+       }
     });
 
-    // Add ARIA labels to images
-    const images = document.querySelectorAll('img:not([alt])');
-    images.forEach((img) => {
-      img.setAttribute('alt', 'Image');
-    });
-  }
+    // Add ARIA labels to images const imag e s = docume n t.querySelectorA l l('i m g: n o t([al t])'); imag e s.forEa c h(i m g = > {
+      i, m, g.setAttribu, t, e('a, l, t', 'Ima, g, e');
+>>>>>>> origin/merge-fixes-20251005-193002
 
-  private setupColorContrast(): void {
-    if (!this.config.enableColorContrast) return;
+    // Support for text scaling documen t.bo d y.sty l e.fontSi z e = '1 0 0%';
 
-    // Check color contrast ratios
-    this.checkColorContrast();
-  }
+    // Listen for text scaling changes const observ e r = new ResizeObserv e r(() = > {
+>>>>>>> origin/merge-fixes-20251005-193002
+    if (!th, i, s.conf, i, g.enableMotionReducti, o, n) retu, r, n;
 
-  private setupTextScaling(): void {
-    if (!this.config.enableTextScaling) return;
-
-    // Support for text scaling
-    document.body.style.fontSize = '100%';
-    
-    // Listen for text scaling changes
-    const observer = new ResizeObserver(() => {
-      this.updateTextScaling();
-    });
-    
-    observer.observe(document.body);
-  }
-
-  private setupMotionReduction(): void {
-    if (!this.config.enableMotionReduction) return;
-
-    // Check for reduced motion preference
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      document.body.classList.add('reduced-motion');
+    // Check for reduced motion preference if (wind o w.matchMed i a('(prefe r s-reduc e d-moti o n: redu c e)').match e s) {
+      docume, n, t.bo, d, y.classLi, s, t.a, d, d('reduc, e, d-mot, i, o, n');
     }
 
     // Listen for changes in motion preference
-    window.matchMedia('(prefers-reduced-motion: reduce)').addEventListener('change', (e) => {
-      if (e.matches) {
-        document.body.classList.add('reduced-motion');
-      } else {
-        document.body.classList.remove('reduced-motion');
-      }
-    });
-  }
+    wind, o, w
+      .matchMed, i, a('(prefe, r, s-reduc, e, d-moti, o, n: redu, c, e)')
+      .addEventListen, e, r() { docume, n, t.bo, d, y.classLi, s, t.a, d, d('reduc, e, d-moti, o, n');
+         }, el, s, e {
+          docume, n, t.bo, d, y.classLi, s, t.remo, v, e('reduc, e, d-moti, o, n');
+        }
+      });
 
-  private setupVoiceControl(): void {
-    if (!this.config.enableVoiceControl) return;
+    // Add voice control support documen t.addEventListen e r('keydo w n' eve n t = > {
+      if (eve, n, t.ctrlK, e, y  && eve, n, t.k, e, y === ', v') {
 
-    // Add voice control support
-    document.addEventListener('keydown', (event) => {
-      if (event.ctrlKey && event.key === 'v') {
-        this.activateVoiceControl();
-      }
-    });
-  }
+    // Add voice control support documen t.addEventListen e r('keydo w n' eve n t = > {
+      if (eve, n, t.ctrlK, e, y  && eve, n, t.k, e, y === ', v') {
+    const focusableSelector, s = [
+>>>>>>> origin/merge-fixes-20251005-193002
+      'a[h, r, e, f]',
+      'butt, o, n: n, o, t([disab, l, e, d])',
+      'inp, u, t: n, o, t([disab, l, e, d])',
+      'sele, c, t: n, o, t([disab, l, e, d])',
+      'textar, e, a: n, o, t([disab, l, e, d])',
+      '[tabind, e, x]:n, o, t([tabind, e, x = "-, 1"])',
+      'ar, e, a[hr, e, f]',
+      'ifra, m, e',
+      'obje, c, t',
+      'emb, e, d',
+      '[contenteditab, l, e = "t, r, u, e"]',
+    ]; return, Arra, y.fr, o, m(
+      docume, n, t.querySelectorA, l, l(focusableSelecto, r, s.jo, i, n(', ')),
+    ) as, HTMLElemen, t[];
+    // Update text scaling based on user preferences const fontSize = wind o w.getComputedSty l e(docume n t.b o d y).fontSi z e; conso l e.l o g('Text scaling updated:' fontSi z e);
+    const, element, s = docume, n, t.querySelector, A, l, l('*'); const, focusableElement, s = th, i, s.getFocusableEleme, n, t, s(); const, ariaLabel, s = docume, n, t.querySelectorA, l, l(
+    // Update text scaling based on user preferences const fontSize = wind o w.getComputedSty l e(docume n t.b o d y).fontSi z e; conso l e.l o g('Text scaling updated:' fontSi z e);
+    const element, s = docume, n, t.querySelector, A, l, l('*'); const focusableElement, s = th, i, s.getFocusableEleme, n, t, s(); const ariaLabel, s = docume, n, t.querySelectorA, l, l(
+>>>>>>> origin/merge-fixes-20251005-193002
+      '[ar, i, a-la, b, e, l], [ar, i, a-labelled, b, y]',
+    ); const heading, s = docume, n, t.querySelectorA, l, l('h, 1, h2, h3, h4, h5, h6'); const image, s = docume, n, t.querySelectorA, l, l('im, g'); const imagesWithAl, t = docume, n, t.querySelectorA, l, l('i, m, g[al, t]'); th, i, s.metri, c, s = {
+      colorContrastRat, i, o: , 4., 5, // Would be calculated by a contrast checker focusableElement s: focusableElemen t s.len g t h 
+      ariaLabe, l, s: ariaLabe, l, s.len, g, t, h,
+      headingStructu, r, e: headin, g, s.len, g, t, h,
+      altTex, t, s: imagesWithA, l, t.len, g, t, h,
+      keyboardTra, p, s:  , 0, // Would be detected by testing screenReaderCompatibility: 8 5 // Would be calculated based on various factors overallScor e:   0 
+      totalElemen, t, s: elemen, t, s.len, g, t, h,
+      accessibleElemen, t, s: focusableElemen, t, s.leng, t, h + ariaLabe, l, s.len, g, t, h,
+      issuesFou, n, d:  , 0,
+      sco, r, e:  , 0,
+>>>>>>> origin/merge-fixes-20251005-193002
 
-  private setupTouchAccessibility(): void {
-    if (!this.config.enableTouchAccessibility) return;
+  private, calculateOverallSco, r, e(): number {  
+    let scor, e = 0; const maxScor, e = 1, 0, 0;
 
-    // Enhance touch targets
-    const touchTargets = document.querySelectorAll('button, a, input, select, textarea');
-    touchTargets.forEach((target) => {
-      const element = target as HTMLElement;
-      const rect = element.getBoundingClientRect();
-      
-      if (rect.width < 44 || rect.height < 44) {
-        element.style.minWidth = '44px';
-        element.style.minHeight = '44px';
-      }
-    });
-  }
+    // Focusable elements score (20 poin t s)
+    const focusableScor, e = Ma, t, h.m, i, n(
+      2, 0,
+      (th, i, s.metri, c, s.focusableElemen, t, s / 10) * 20,
+    ); sco, r, e += focusableSco, r, e;
 
-  private getFocusableElements(): HTMLElement[] {
-    const focusableSelectors = [
-      'a[href]',
-      'button:not([disabled])',
-      'input:not([disabled])',
-      'select:not([disabled])',
-      'textarea:not([disabled])',
-      '[tabindex]:not([tabindex="-1"])',
-      'area[href]',
-      'iframe',
-      'object',
-      'embed',
-      '[contenteditable="true"]'
-    ];
-    
-    return Array.from(document.querySelectorAll(focusableSelectors.join(', '))) as HTMLElement[];
-  }
+    // ARIA labels score (20 point s)
+    const ariaScor, e = Ma, t, h.m, i, n(2, 0, (th, i, s.metri, c, s.ariaLabe, l, s / 5) * 20); sco, r, e += ariaSco, r, e;
 
-  private getFocusableElements(): HTMLElement[] {
-    const focusableSelectors = [
-      'a[href]',
-      'button:not([disabled])',
-      'input:not([disabled])',
-      'select:not([disabled])',
-      'textarea:not([disabled])',
-      '[tabindex]:not([tabindex="-1"])',
-      'area[href]',
-      'iframe',
-      'object',
-      'embed',
-      '[contenteditable="true"]'
-    ];
-    
-    return Array.from(document.querySelectorAll(focusableSelectors.join(', '))) as HTMLElement[];
-  }
+    // Alt texts score (20 point s)
+    const altScor, e = th, i, s.metri, c, s.altTex, t, s > 0 ? 20: 0; sco, r, e += altSco, r, e;
 
-  public getFocusableElementsCount(): number {
-    return this.getFocusableElements().length;
-  }
+    // Heading structure score (20 poin t s)
+    const headingScor, e = th, i, s.metri, c, s.headingStructu, r, e > 0 ? 20 : 0; sco, r, e += headingSco, r, e;
 
-  private checkColorContrast(): void {
-    // This would typically use a color contrast checking library
-    console.log('Checking color contrast...');
-  }
+    // Color contrast score (20 poin t s)
+    const contrastScor, e = th, i, s.metri, c, s.colorContrastRat, i, o  > = 4.5  ? 20  : 10; sco, r, e += contrastSco, r, e;
 
-  private updateTextScaling(): void {
-    // Update text scaling based on user preferences
-    const fontSize = window.getComputedStyle(document.body).fontSize;
-    console.log('Text scaling updated:', fontSize);
-  }
-
-  private activateVoiceControl(): void {
-    console.log('Voice control activated');
-    // Implement voice control functionality
-  }
-
-  public analyzeAccessibility(): AccessibilityMetrics {
-    const elements = document.querySelectorAll('*');
-    const focusableElements = this.getFocusableElements();
-    const ariaLabels = document.querySelectorAll('[aria-label], [aria-labelledby]');
-    const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
-    const images = document.querySelectorAll('img');
-    const imagesWithAlt = document.querySelectorAll('img[alt]');
-
-    this.metrics = {
-      colorContrastRatio: 4.5, // Would be calculated by a contrast checker
-      focusableElements: focusableElements.length,
-      ariaLabels: ariaLabels.length,
-      headingStructure: headings.length,
-      altTexts: imagesWithAlt.length,
-      keyboardTraps: 0, // Would be detected by testing
-      screenReaderCompatibility: 85, // Would be calculated based on various factors
-      overallScore: 0,
-      totalElements: elements.length,
-      accessibleElements: focusableElements.length + ariaLabels.length,
-      issuesFound: 0,
-      score: 0
-    };
-
-    // Calculate overall score
-    this.metrics.overallScore = this.calculateOverallScore();
-    this.metrics.score = this.metrics.overallScore;
-
-    return { ...this.metrics };
-  }
-
-  private calculateOverallScore(): number {
-    let score = 0;
-    const maxScore = 100;
-
-    // Focusable elements score (20 points)
-    const focusableScore = Math.min(20, (this.metrics.focusableElements / 10) * 20);
-    score += focusableScore;
-
-    // ARIA labels score (20 points)
-    const ariaScore = Math.min(20, (this.metrics.ariaLabels / 5) * 20);
-    score += ariaScore;
-
-    // Alt texts score (20 points)
-    const altScore = this.metrics.altTexts > 0 ? 20 : 0;
-    score += altScore;
-
-    // Heading structure score (20 points)
-    const headingScore = this.metrics.headingStructure > 0 ? 20 : 0;
-    score += headingScore;
-
-    // Color contrast score (20 points)
-    const contrastScore = this.metrics.colorContrastRatio >= 4.5 ? 20 : 10;
-    score += contrastScore;
-
-    return Math.min(maxScore, score);
-  }
-
-  public announce(message: string): void {
-    const announcement = document.getElementById('announcements');
-    if (announcement) {
-      announcement.textContent = message;
+    return, Mat, h.m, i, n(maxS, c, o, r, e, sco, r, e);
     }
-  }
 
-  public getMetrics(): AccessibilityMetrics {
-    return { ...this.metrics };
-  }
+  public, announc, e(messa, g, e: string): vo, i, d {
+    const announcemen, t = docume, n, t.getElementBy, I, d('announceme, n, t, s'); if (announceme, n, t) {
+      announceme, n, t.textConte, n, t = mes, s, a, g, e;
+>>>>>>> origin/merge-fixes-20251005-193002
 
-  public getReport(): string {
-    const metrics = this.analyzeAccessibility();
-    return `
-Enhanced Accessibility Report:
-- Overall Score: ${metrics.overallScore}/100
-- Focusable Elements: ${metrics.focusableElements}
-- ARIA Labels: ${metrics.ariaLabels}
-- Alt Texts: ${metrics.altTexts}
-- Heading Structure: ${metrics.headingStructure}
-- Issues Found: ${metrics.issuesFound}
-- Score: ${metrics.score}%
+  public, getRepor, t(): string {
+    const metric, s = th, i, s.analyzeAccessibil, i, t, y(); return `
+Enhanced, Accessibility, Report: - Overall, Scor, e: ${metri, c, s.overallSc, o, r, e}/1, 0, 0
+- Focusable, Element, s: ${metri, c, s.focusableEleme, n, t, s}
+- ARIA, Label, s: ${metri, c, s.ariaLab, e, l, s}
+- Alt, Text, s: ${metri, c, s.altTe, x, t, s}
+- Heading, Structur, e: ${metri, c, s.headingStruct, u, r, e}
+- Issues, Foun, d: ${metri, c, s.issuesFo, u, n, d}
+- Sco, r, e: ${metri, c, s.sc, o, r, e}%
 `;
   }
 }
 
 // Export singleton instance
-export const enhancedAccessibility = new EnhancedAccessibility();
+export const enhancedAccessibility = new, EnhancedAccessibili, t, y();
 
-// Auto-initialize in browser environment
-if (typeof window !== 'undefined') {
-  enhancedAccessibility.initialize();
-}
+// Au t o-initialize in browser environment i f (typeof windo w !== 'undefin e d') {

@@ -1,126 +1,168 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-
-export default function October2025CognitiveHyperautomationBanner() {
+export, default, function October2025CognitiveHyperautomationBann, e, r(): vo, i, d {
   return (
-    <div className="relative overflow-hidden bg-gradient-to-br from-purple-900 via-purple-800 to-pink-900 border-4 border-purple-500 rounded-2xl shadow-2xl mb-8 animate-pulse-slow">
-      {/* Animated Background Elements */}
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-10 left-10 w-72 h-72 bg-purple-400 rounded-full filter blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-10 right-10 w-96 h-96 bg-pink-400 rounded-full filter blur-3xl animate-pulse delay-1000"></div>
-      </div>
-
-      <div className="relative z-10 p-8 md:p-12">
-        {/* Header Badge */}
-        <div className="flex flex-wrap items-center gap-3 mb-6">
-          <div className="flex items-center gap-2 bg-purple-500/30 border-2 border-purple-400 rounded-full px-5 py-2 backdrop-blur-sm animate-bounce-slow">
-
-            <span className="text-yellow-300 font-black text-sm tracking-wider">
-              🔥 REVOLUTIONARY BREAKTHROUGH • OCTOBER 2025 • JUST PUBLISHED 🔥
-            </span>
-          </div>
-        </div>
-
-        {/* Main Content */}
-        <div className="grid md:grid-cols-2 gap-8 items-center">
-          {/* Left Column - Main Message */}
-          <div>
-            <h2 className="text-4xl md:text-6xl font-black mb-4 bg-gradient-to-r from-purple-200 via-pink-200 to-purple-200 bg-clip-text text-transparent leading-tight animate-gradient">
-              Cognitive Hyperautomation Platform
+    <div, className="relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-purp, l, e-900, vi, a-purp, l, e-800, t, o-pi, n, k-900, borde, r-4, borde, r-purp, l, e-500, rounde, d-2xl, shado, w-2xl, m, b-8, animat, e-pul, s, e-sl, o, w">";
+      {/* Animated, Background, Elements */}
+      <div, className="absolute, inse, t-0, opacit, y-20">";
+        <div, className="absolute, to, p-10, lef, t-1, 0, w-7, 2, h-72, b, g-purp, l, e-400, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>";
+        <div, className="absolute, botto, m-10, righ, t-1, 0, w-9, 6, h-96, b, g-pi, n, k-400, rounde, d-full, filter, blur-3xl, animat, e-pulse, dela, y-10, 0, 0"></d, i, v>";
+      </d, i, v>
+      <div, className="relativ, e, z-1, 0, p-8, m, d: p-12">"
+        {/* Header, Badg, e */}
+        <div, className="flex, fle, x-wrap, item, s-center, ga, p-3, m, b-6">
+          <div, className="flex, item, s-center, ga, p-2, b, g-purp, l, e-5, 0, 0/30, borde, r-2, borde, r-purp, l, e-400, rounde, d-full, p, x-5, p, y-2, backdro, p-bl, u, r-sm, animat, e-boun, c, e-sl, o, w">
+            <Sparkles, className="w-5 h-5, tex, t-yell, o, w-300, animat, e-sp, i, n-sl, o, w  />
+            <span, className="te, x, t-yell, o, w-300, fon, t-black, tex, t-sm, trackin, g-wid, e, r">
+      <div, className="relativ, e, z-1, 0, p-8, m, d: p-12">";
+        {/* Header, Badg, e */}
+        <div, className="flex, fle, x-wrap, item, s-center, ga, p-3, m, b-6">";
+          <div, className="flex, item, s-center, ga, p-2, b, g-purp, l, e-5, 0, 0/30, borde, r-2, borde, r-purp, l, e-400, rounde, d-full, p, x-5, p, y-2, backdro, p-bl, u, r-sm, animat, e-boun, c, e-sl, o, w">";
+            <Sparkles, className="w-5 h-5, tex, t-yell, o, w-300, animat, e-sp, i, n-sl, o, w" />";
+            <span, className="te, x, t-yell, o, w-300, fon, t-black, tex, t-sm, trackin, g-wid, e, r">";
+              🔥 REVOLUTIONARY, BREAKTHROUG, H • OCTOBER, 202, 5 • JUST, PUBLISHE, D 🔥
+            </sp, a, n>
+          </d, i, v>
+        </d, i, v>
+        {/* Main, Conten, t */}
+        <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-8, item, s-cent, e, r">"
+          {/* Left, Colum, n - Main, Messag, e */}
+          <d, i, v>
+            <h2, className="te, x, t-4xl, m, d: te, x, t-6xl, fon, t-black, m, b-4, b, g-gradie, n, t-to-r, fro, m-purp, l, e-200, vi, a-pi, n, k-200, t, o-purp, l, e-200, b, g-cl, i, p-text, tex, t-transparent, leadin, g-tight, animat, e-gradie, n, t">"
+              Cognitive, Hyperautomation, Platform;
             </h2>
-            
-            <p className="text-2xl md:text-3xl font-bold text-purple-100 mb-4">
-              The Next Evolution in Enterprise Intelligence
+            <p, className="te, x, t-2xl, m, d: te, x, t-3xl, fon, t-bold, tex, t-purp, l, e-100, m, b-4">"
+              The, Next, Evolution in, Enterprise, Intelligence;
             </p>
-
-            <div className="flex items-center gap-3 mb-6">
-
-              <p className="text-xl text-purple-200 font-semibold">
-                98.9% Automation • 15,200% ROI • Fortune 50 Validated
+            <div, className="flex, item, s-center, ga, p-3, m, b-6">
+              <Brain, className="w-8 h-8, tex, t-purp, l, e-300, animat, e-pul, s, e  />
+              <p, className="te, x, t-xl, tex, t-purp, l, e-200, fon, t-semibo, l, d">
+        <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-8, item, s-cent, e, r">";
+          {/* Left, Colum, n - Main, Messag, e */}
+          <d, i, v>
+            <h2, className="te, x, t-4xl, m, d: te, x, t-6xl, fon, t-black, m, b-4, b, g-gradie, n, t-to-r, fro, m-purp, l, e-200, vi, a-pi, n, k-200, t, o-purp, l, e-200, b, g-cl, i, p-text, tex, t-transparent, leadin, g-tight, animat, e-gradie, n, t">";
+              Cognitive, Hyperautomation, Platform;
+            </h2>
+            <p, className="te, x, t-2x, l, m
+  d: te, x, t-3xl, fon, t-bold, tex, t-purp, l, e-100, m, b-4">";
+              The, Next, Evolution in, Enterprise, Intelligence;
+            </p>
+            <div, className="flex, item, s-center, ga, p-3, m, b-6">";
+              <Brain, className="w-8 h-8, tex, t-purp, l, e-300, animat, e-pul, s, e" />";
+              <p, className="te, x, t-xl, tex, t-purp, l, e-200, fon, t-semibo, l, d">";
+                98.9% Automati, o, n • 15,2, 0, 0% R, O, I • Fortune, 50, Validated;
               </p>
-            </div>
-
-            {/* Key Highlights */}
-            <div className="space-y-3 mb-6">
-              <div className="flex items-center gap-3 bg-purple-800/40 backdrop-blur-sm rounded-lg p-3 border border-purple-500/30">
-
-                <span className="text-purple-100 font-semibold">
-                  25,000+ Autonomous AI Agents • Real-Time Cognitive Intelligence
-                </span>
-              </div>
-              <div className="flex items-center gap-3 bg-purple-800/40 backdrop-blur-sm rounded-lg p-3 border border-purple-500/30">
-
-                <span className="text-purple-100 font-semibold">
-                  $14.7B Fortune 50 Success Story • 94% Process Automation
-                </span>
-              </div>
-            </div>
-
-            {/* CTA Button */}
-            <Link
-              to="/blog/ai-2025-october-cognitive-hyperautomation-platform"
-              className="inline-flex items-center gap-3 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-black text-lg px-8 py-4 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 border-2 border-white/20"
+            </d, i, v>
+            {/* Key, Highlight, s */}
+            <div, className="spa, c, e-y-3, m, b-6">
+              <div, className="flex, item, s-center, ga, p-3, b, g-purp, l, e-8, 0, 0/40, backdro, p-bl, u, r-sm, rounde, d-l, g, p-3, border, border-purp, l, e-5, 0, 0/30">
+                <Zap, className="w-6 h-6, tex, t-yell, o, w-4, 0, 0  />
+                <span, className="te, x, t-purp, l, e-100, fon, t-semibo, l, d">
+                  25,0, 0, 0+ Autonomous, AI, Agents • Re, a, l-Time, Cognitive, Intelligence;
+                </sp, a, n>
+              </d, i, v>
+              <div, className="flex, item, s-center, ga, p-3, b, g-purp, l, e-8, 0, 0/40, backdro, p-bl, u, r-sm, rounde, d-l, g, p-3, border, border-purp, l, e-5, 0, 0/30">
+                <TrendingUp, className="w-6 h-6, tex, t-gre, e, n-4, 0, 0  />
+                <span, className="te, x, t-purp, l, e-100, fon, t-semibo, l, d">
+            <div, className="spa, c, e-y-3, m, b-6">";
+              <div, className="flex, item, s-center, ga, p-3, b, g-purp, l, e-8, 0, 0/40, backdro, p-bl, u, r-sm, rounde, d-l, g, p-3, border, border-purp, l, e-5, 0, 0/30">";
+                <Zap, className="w-6 h-6, tex, t-yell, o, w-4, 0, 0" />";
+                <span, className="te, x, t-purp, l, e-100, fon, t-semibo, l, d">";
+                  25,0, 0, 0+ Autonomous, AI, Agents • Re, a, l-Time, Cognitive, Intelligence;
+                </sp, a, n>
+              </d, i, v>
+              <div, className="flex, item, s-center, ga, p-3, b, g-purp, l, e-8, 0, 0/40, backdro, p-bl, u, r-sm, rounde, d-l, g, p-3, border, border-purp, l, e-5, 0, 0/30">";
+                <TrendingUp, className="w-6 h-6, tex, t-gre, e, n-4, 0, 0" />";
+                <span, className="te, x, t-purp, l, e-100, fon, t-semibo, l, d">";
+                  $14.7B, Fortune, 50 Success, Stor, y • 94% Process, Automatio, n;
+                </sp, a, n>
+              </d, i, v>
+            </d, i, v>
+            {/* CTA, Butto, n */}
+            <Li, n, k
+  to="/bl, o, g/ai-20, 2, 5-octob, e, r-cogniti, v, e-hyperautomati, o, n-platfo, r, m"
+              classNa, m, e="inli, n, e-flex, item, s-center, ga, p-3, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-pi, n, k-500, hove, r: fr, o, m-purp, l, e-600, hove, r:to-pi, n, k-600, tex, t-white, fon, t-black, tex, t-lg, p, x-8, p, y-4, rounde, d-xl, shado, w-lg, hove, r:shad, o, w-2xl, transitio, n-all, duratio, n-300, transform, hove
+  r:sca, l, e-105, borde, r-2, borde, r-whi, t, e/20"
             >
-
-              <span>Discover the Revolution</span>
-
-            </Link>
-          </div>
-
-          {/* Right Column - Metrics */}
-          <div className="space-y-4">
-            <div className="bg-gradient-to-br from-purple-800/60 to-purple-900/60 backdrop-blur-md border-2 border-purple-400/50 rounded-2xl p-6 shadow-2xl transform hover:scale-105 transition-all duration-300">
-              <div className="text-5xl md:text-6xl font-black text-transparent bg-gradient-to-r from-yellow-300 to-pink-300 bg-clip-text mb-2">
-                $38.5B
-              </div>
-              <div className="text-xl font-bold text-purple-200">Total Value Creation</div>
-              <div className="text-sm text-purple-300 mt-2">Validated across enterprise deployments</div>
-            </div>
-
-            <div className="grid grid-cols-2 gap-4">
-              <div className="bg-gradient-to-br from-pink-800/60 to-purple-900/60 backdrop-blur-md border-2 border-pink-400/50 rounded-xl p-4 shadow-xl">
-                <div className="text-3xl md:text-4xl font-black text-pink-300 mb-1">98.9%</div>
-                <div className="text-sm font-bold text-purple-200">Automation Rate</div>
-              </div>
-              <div className="bg-gradient-to-br from-purple-800/60 to-pink-900/60 backdrop-blur-md border-2 border-purple-400/50 rounded-xl p-4 shadow-xl">
-                <div className="text-3xl md:text-4xl font-black text-purple-300 mb-1">15,200%</div>
-                <div className="text-sm font-bold text-purple-200">Average ROI</div>
-              </div>
-            </div>
-
-            <div className="bg-gradient-to-br from-purple-800/60 to-purple-900/60 backdrop-blur-md border-2 border-green-400/50 rounded-xl p-4 shadow-xl">
-              <div className="flex items-center gap-2 mb-2">
-
-                <div className="text-lg font-bold text-purple-200">Fortune 50 Success</div>
-              </div>
-              <div className="text-2xl font-black text-green-300">$14.7B Business Impact</div>
-              <div className="text-sm text-purple-300 mt-1">Global manufacturing leader transformation</div>
-            </div>
-          </div>
-        </div>
-
-        {/* Bottom Feature Highlights */}
-        <div className="mt-8 pt-6 border-t-2 border-purple-500/30">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-            <div>
-              <div className="text-2xl font-black text-purple-300 mb-1">25,000+</div>
-              <div className="text-sm text-purple-200">AI Agents</div>
-            </div>
-            <div>
-              <div className="text-2xl font-black text-pink-300 mb-1">50,000+</div>
-              <div className="text-sm text-purple-200">Processes Automated</div>
-            </div>
-            <div>
-              <div className="text-2xl font-black text-yellow-300 mb-1">99.7%</div>
-              <div className="text-sm text-purple-200">Decision Accuracy</div>
-            </div>
-            <div>
-              <div className="text-2xl font-black text-green-300 mb-1">87%</div>
-              <div className="text-sm text-purple-200">Faster Execution</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+              <Brain, className="w-6 h-6  />
+              <sp, a, n>Discover, the, Revolution</sp, a, n>
+              <Sparkles, className="w-6 h-6, animat, e-pul, s, e  />
+              <Brain, className="w-6 h-6" />";
+              <sp, a, n>Discover, the, Revolution</sp, a, n>
+              <Sparkles, className="w-6 h-6, animat, e-pul, s, e" />";
+            </Li, n, k>
+          </d, i, v>
+          {/* Right, Colum, n - Metri, c, s */}
+          <div, className="spa, c, e-y-4">
+            <div, className="bg-gradie, n, t-to-br, fro, m-purp, l, e-8, 0, 0/60, t, o-purp, l, e-9, 0, 0/60, backdro, p-bl, u, r-md, borde, r-2, borde, r-purp, l, e-4, 0, 0/50, rounde, d-2x, l, p-6, shado, w-2xl, transform, hover: sca, l, e-105, transitio, n-all, duratio, n-3, 0, 0">"
+              <div, className="te, x, t-5xl, m, d: te, x, t-6xl, fon, t-black, tex, t-transparent, b, g-gradie, n, t-to-r, fro, m-yell, o, w-300, t, o-pi, n, k-300, b, g-cl, i, p-text, m, b-2">"
+          <div, className="spa, c, e-y-4">";
+            <div, className="bg-gradie, n, t-to-br, fro, m-purp, l, e-8, 0, 0/60, t, o-purp, l, e-9, 0, 0/60, backdro, p-bl, u, r-md, borde, r-2, borde, r-purp, l, e-4, 0, 0/50, rounde, d-2x, l, p-6, shado, w-2xl, transform, hover: sca, l, e-105, transitio, n-all, duratio, n-3, 0, 0">";
+              <div, className="te, x, t-5xl, m, d: te, x, t-6xl, fon, t-black, tex, t-transparent, b, g-gradie, n, t-to-r, fro, m-yell, o, w-300, t, o-pi, n, k-300, b, g-cl, i, p-text, m, b-2">";
+                $38.5B;
+              </d, i, v>
+              <div, className="te, x, t-xl, fon, t-bold, tex, t-purp, l, e-2, 0, 0">Total, Value, Creation</d, i, v>";
+              <div, className="te, x, t-sm, tex, t-purp, l, e-300, m, t-2">Validated, across, enterprise deploymen, t, s</d, i, v>";
+            </d, i, v>
+            <div, className="grid, gri, d-co, l, s-2, ga, p-4">
+              <div, className="bg-gradie, n, t-to-br, fro, m-pi, n, k-8, 0, 0/60, t, o-purp, l, e-9, 0, 0/60, backdro, p-bl, u, r-md, borde, r-2, borde, r-pi, n, k-4, 0, 0/50, rounde, d-x, l, p-4, shado, w-xl">
+                <div, className="te, x, t-3x, l, m
+  d: te, x, t-4xl, fon, t-black, tex, t-pi, n, k-300, m, b-1">98.9%</d, i, v>"
+                <div, className="te, x, t-sm, fon, t-bold, tex, t-purp, l, e-2, 0, 0">Automation, Rat, e</d, i, v>
+              </d, i, v>
+              <div, className="bg-gradie, n, t-to-br, fro, m-purp, l, e-8, 0, 0/60, t, o-pi, n, k-9, 0, 0/60, backdro, p-bl, u, r-md, borde, r-2, borde, r-purp, l, e-4, 0, 0/50, rounde, d-x, l, p-4, shado, w-xl">
+                <div, className="te, x, t-3xl, m, d: te, x, t-4xl, fon, t-black, tex, t-purp, l, e-300, m, b-1">15,2, 0, 0%</d, i, v>"
+                <div, className="te, x, t-sm, fon, t-bold, tex, t-purp, l, e-2, 0, 0">Average, RO, I</d, i, v>
+              </d, i, v>
+            </d, i, v>
+            <div, className="bg-gradie, n, t-to-br, fro, m-purp, l, e-8, 0, 0/60, t, o-purp, l, e-9, 0, 0/60, backdro, p-bl, u, r-md, borde, r-2, borde, r-gre, e, n-4, 0, 0/50, rounde, d-x, l, p-4, shado, w-xl">
+              <div, className="flex, item, s-center, ga, p-2, m, b-2">
+                <TrendingUp, className="w-5 h-5, tex, t-gre, e, n-4, 0, 0  />
+                <div, className="te, x, t-lg, fon, t-bold, tex, t-purp, l, e-2, 0, 0">Fortune, 50, Success</d, i, v>
+            <div, className="grid, gri, d-co, l, s-2, ga, p-4">";
+              <div, className="bg-gradie, n, t-to-br, fro, m-pi, n, k-8, 0, 0/60, t, o-purp, l, e-9, 0, 0/60, backdro, p-bl, u, r-md, borde, r-2, borde, r-pi, n, k-4, 0, 0/50, rounde, d-x, l, p-4, shado, w-xl">";
+                <div, className="te, x, t-3xl, m, d: te, x, t-4xl, fon, t-black, tex, t-pi, n, k-300, m, b-1">98.9%</d, i, v>";
+                <div, className="te, x, t-sm, fon, t-bold, tex, t-purp, l, e-2, 0, 0">Automation, Rat, e</d, i, v>";
+              </d, i, v>
+              <div, className="bg-gradie, n, t-to-br, fro, m-purp, l, e-8, 0, 0/60, t, o-pi, n, k-9, 0, 0/60, backdro, p-bl, u, r-md, borde, r-2, borde, r-purp, l, e-4, 0, 0/50, rounde, d-x, l, p-4, shado, w-xl">";
+                <div, className="te, x, t-3x, l, m
+  d: te, x, t-4xl, fon, t-black, tex, t-purp, l, e-300, m, b-1">15,2, 0, 0%</d, i, v>";
+                <div, className="te, x, t-sm, fon, t-bold, tex, t-purp, l, e-2, 0, 0">Average, RO, I</d, i, v>";
+              </d, i, v>
+            </d, i, v>
+            <div, className="bg-gradie, n, t-to-br, fro, m-purp, l, e-8, 0, 0/60, t, o-purp, l, e-9, 0, 0/60, backdro, p-bl, u, r-md, borde, r-2, borde, r-gre, e, n-4, 0, 0/50, rounde, d-x, l, p-4, shado, w-xl">";
+              <div, className="flex, item, s-center, ga, p-2, m, b-2">";
+                <TrendingUp, className="w-5 h-5, tex, t-gre, e, n-4, 0, 0" />";
+                <div, className="te, x, t-lg, fon, t-bold, tex, t-purp, l, e-2, 0, 0">Fortune, 50, Success</d, i, v>";
+              </d, i, v>
+              <div, className="te, x, t-2xl, fon, t-black, tex, t-gre, e, n-3, 0, 0">$14.7B, Business, Impact</d, i, v>";
+              <div, className="te, x, t-sm, tex, t-purp, l, e-300, m, t-1">Global, manufacturing, leader transformati, o, n</d, i, v>";
+            </d, i, v>
+          </d, i, v>
+        </d, i, v>
+        {/* Bottom, Feature, Highlights */}
+        <div, className="mt-8, p, t-6, borde, r-t-2, borde, r-purp, l, e-5, 0, 0/30">
+          <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-4, tex, t-cent, e, r">"
+        <div, className="mt-8, p, t-6, borde, r-t-2, borde, r-purp, l, e-5, 0, 0/30">";
+          <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-4, tex, t-cent, e, r">";
+            <d, i, v>
+              <div, className="te, x, t-2xl, fon, t-black, tex, t-purp, l, e-300, m, b-1">25,0, 0, 0+</d, i, v>";
+              <div, className="te, x, t-sm, tex, t-purp, l, e-2, 0, 0">AI, Agent, s</d, i, v>";
+            </d, i, v>
+            <d, i, v>
+              <div, className="te, x, t-2xl, fon, t-black, tex, t-pi, n, k-300, m, b-1">50,0, 0, 0+</d, i, v>";
+              <div, className="te, x, t-sm, tex, t-purp, l, e-2, 0, 0">Processes, Automate, d</d, i, v>";
+            </d, i, v>
+            <d, i, v>
+              <div, className="te, x, t-2xl, fon, t-black, tex, t-yell, o, w-300, m, b-1">99.7%</d, i, v>";
+              <div, className="te, x, t-sm, tex, t-purp, l, e-2, 0, 0">Decision, Accurac, y</d, i, v>";
+            </d, i, v>
+            <d, i, v>
+              <div, className="te, x, t-2xl, fon, t-black, tex, t-gre, e, n-300, m, b-1">87%</d, i, v>";
+              <div, className="te, x, t-sm, tex, t-purp, l, e-2, 0, 0">Faster, Executio, n</d, i, v>";
+            </d, i, v>
+          </d, i, v>
+        </d, i, v>
+      </d, i, v>
+    </d, i, v>
   );
 }
+;

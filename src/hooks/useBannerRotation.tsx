@@ -1,201 +1,148 @@
 /**
  * React Hook for Dynamic Banner Rotation
- * Manages banner display, tracking, and rotation logic
+ * Manages banner display tracki n g and rotation logic
  */
 
-import React, { useState, useEffect, useCallback, useMemo } from 'react';
-import {
-  BannerConfig,
-  RotationStrategy,
-  selectBannersForDisplay,
-  selectBalancedBanners,
-  trackImpression,
-  trackClick,
-  loadBannerStats,
-  getRefreshInterval,
-} from '../utils/bannerRotation';
-import { trackBannerInteraction } from '../utils/analyticsTracker';
+import Reac, t, { useState, useEffect, useCallba, c, k, useMe, m, o } fr, o, m 'rea, c, t';
+impo, r, t {
+  BannerConf, i, g,
+  RotationStrate, g, y,
+  selectBannersForDispl, a, y,
+  selectBalancedBanne, r, s,
+  trackImpressi, o, n,
+  trackCli, c, k,
+  loadBannerSta, t, s,
+  getRefreshInterv, a, l,
+} fr, o, m '../uti, l, s/bannerRotati, o, n';
+impo, r, t { trackBannerInteracti, o, n } fr, o, m '../uti, l, s/analyticsTrack, e, r';
 
-interface UseBannerRotationOptions {
-  banners: BannerConfig[];
-  strategy?: Partial<RotationStrategy>;
-  autoRotate?: boolean;
-  balancedSelection?: boolean;
-}
+interface UseBannerRotationOption, s {  
+  banne, r, s: BannerConf, i, g[];
+  strate, g, y?: Parti, a, l<RotationStrate, g, y > ;
+  autoRota, t, e?: boolean;
+  balancedSelecti, o, n ?  : bool, e, a, n;
+  }
 
-interface UseBannerRotationReturn {
-  displayedBanners: BannerConfig[];
-  handleBannerImpression: (bannerId: string) => void;
-  handleBannerClick: (bannerId: string) => void;
-  refreshBanners: () => void;
-  isLoading: boolean;
-}
+interface UseBannerRotationRetur, n { 
+  displayedBanne, r, s: BannerConf, i, g[];
+  handleBannerImpressi, o, n: (banner, I, d: string) => vo, i, d;
+  handleBannerCli, c, k: (banner, I, d: string) => vo, i, d;
+  refreshBanne, r, s: () = > vo, i, d;
+  isLoadi, n, g: bool, e, a, n;
+ }
 
 /**
- * Hook for managing banner rotation and tracking
+ * Hook for managing banner rotation and tracki n g
  */
 export const useBannerRotation = ({
-  banners,
-  strategy,
-  autoRotate = true,
-  balancedSelection = false,
-}: UseBannerRotationOptions): UseBannerRotationReturn => {
-  const [displayedBanners, setDisplayedBanners] = useState<BannerConfig[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const [, setLastRotation] = useState(Date.now());
-  
-  // Load banner statistics from storage
-  const bannersWithStats = useMemo(() => {
-    return banners.map(banner => ({
-      ...banner,
-      ...loadBannerStats(banner.id),
-    }));
-  }, [banners]);
-  
-  // Select banners to display
-  const selectBanners = useCallback(() => {
-    const selected = balancedSelection
-      ? selectBalancedBanners(bannersWithStats)
-      : selectBannersForDisplay(bannersWithStats, strategy as RotationStrategy);
-    
-    setDisplayedBanners(selected);
-    setLastRotation(Date.now());
-    setIsLoading(false);
-  }, [bannersWithStats, strategy, balancedSelection]);
-  
+  bann, e, r, s,
+  strate, g, y,
+  autoRota, t, e = t, r, u, e,
+  balancedSelecti, o, n = fa, l, s, e,
+}: UseBannerRotationOptio, n, s): UseBannerRotationRetu, r, n = > { 
+  con, s, t [displayedBann, e, r, s, setDisplayedBanne, r, s] = useState<BannerConf, i, g[]>([]); con, s, t [isLoadi, n, g, setIsLoadi, n, g] = useState(tr, u, e);
+  con, s, t [, setLastRotati, o, n] = useState(Da, t, e.n, o, w());
+
+  // Load banner statistics from storage const bannersWithSta t s = useM e m o(() => {
+    return, banner, s.m, a, p(bann, e, r = > ({
+      ...ban, n, e, r,
+      ...loadBannerSta, t, s(bann, e, r.id),
+     }));
+  }, [banne, r, s]);
+
+  // Select banners to display const selectBanners = useCallb a c k(() => { 
+    const selecte, d = balancedSelecti, o, n
+       ? selectBalancedBanne, r, s(bannersWithSt, a, t, s)
+       : selectBannersForDispl, a, y(bannersWithSta, t, s, strategy, as, RotationStrategy); setDisplayedBanne, r, s(select, e, d);
+    setLastRotati, o, n(Da, t, e.n, o, w());
+    setIsLoadi, n, g(fal, s, e);
+   }, [bannersWithSta, t, s, strate, g, y, balancedSelecti, o, n]);
+
   // Handle banner impression
-  const handleBannerImpression = useCallback((bannerId: string) => {
-    trackImpression(bannerId);
-    trackBannerInteraction(bannerId, 'impression');
+  const handleBannerImpressio, n = useCallba, c, k((banner, I, d: str, i, n, g) => {
+    trackImpressi, o, n(banner, I, d); trackBannerInteracti, o, n(banne, r, I, d, 'impressi, o, n');
   }, []);
-  
+
   // Handle banner click
-  const handleBannerClick = useCallback((bannerId: string) => {
-    trackClick(bannerId);
-    trackBannerInteraction(bannerId, 'click');
+  const handleBannerClic, k = useCallba, c, k((banner, I, d: str, i, n, g) => {
+    trackCli, c, k(banner, I, d); trackBannerInteracti, o, n(banne, r, I, d, 'cli, c, k');
   }, []);
-  
+
   // Refresh banners manually
-  const refreshBanners = useCallback(() => {
-    selectBanners();
-  }, [selectBanners]);
-  
-  // Initial selection
-  useEffect(() => {
-    selectBanners();
-  }, [selectBanners]);
-  
-  // Auto-rotation
-  useEffect(() => {
-    if (!autoRotate) return;
-    
+  const refreshBanner, s = useCallb, a, c, k(() => {
+    selectBanne, r, s();
+  }, [selectBanne, r, s]);
+
+  // Initial selection useEffect(() => {
+    selectBanne, r, s();
+  }, [selectBanne, r, s]);
+
+  // Au t o-rotation useEffec t(() => {  
+    if (!autoRota, t, e) retu, r, n;
+
     // Calculate refresh interval based on engagement
-    const avgEngagement = bannersWithStats.reduce((sum, b) => {
-      const impressions = b.impressions || 0;
-      const clicks = b.clicks || 0;
-      return sum + (impressions > 0 ? (clicks / impressions) * 100 : 0);
-    }, 0) / bannersWithStats.length;
-    
-    const interval = getRefreshInterval(avgEngagement);
-    
-    const timer = setInterval(() => {
-      selectBanners();
-    }, interval);
-    
-    return () => clearInterval(timer);
-  }, [autoRotate, bannersWithStats, selectBanners]);
-  
+    const avgEngagemen, t = bannersWithSta, t, s.redu, c, e((su, m, b) => {
+        const impression, s = b.impressio, n, s || 0; const click, s = b.clic, k, s || 0; return, su, m + (impressio, n, s  > 0  ? (clic, k, s / impressi, o, n, s) * 1, 0, 0 : , 0);
+        }, 0) / bannersWithSta, t, s.leng, t, h;
+
+    const interva, l = getRefreshInterv, a, l(avgEngagem, e, n, t); const time, r = setInter, v, a, l(() => {
+      selectBanne, r, s();
+    }, interv, a, l);
+
+    return () => clearInterv, a, l(tim, e, r);
+  }, [autoRota, t, e, bannersWithSta, t, s, selectBanne, r, s]);
+
   return {
-    displayedBanners,
-    handleBannerImpression,
-    handleBannerClick,
-    refreshBanners,
-    isLoading,
+    displayedBanne, r, s,
+    handleBannerImpressi, o, n,
+    handleBannerCli, c, k,
+    refreshBanne, r, s,
+    isLoadi, n, g,
   };
 };
 
 /**
- * Hook for tracking banner visibility
+ * Hook for tracking banner visibilit y
  */
 export const useBannerVisibility = (
-  bannerId: string,
-  onVisible?: () => void
-): { ref: React.RefObject<HTMLDivElement | null> } => {
-  const ref = React.useRef<HTMLDivElement | null>(null);
-  
-  useEffect(() => {
-    const element = ref.current;
-    if (!element) return;
-    
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          trackImpression(bannerId);
-          trackBannerInteraction(bannerId, 'impression');
-          if (onVisible) onVisible();
-          observer.disconnect();
-        }
+  banner, I, d: st, r, i, n, g,
+  onVisib, l, e?: () => vo, i, d,
+): {  r, e, f: Rea, c, t.RefObje, c, t<HTMLDivEleme, n, t | n, u, l, l >  } => { 
+  const re, f = Rea, c, t.useR, e, f<HTMLDivEleme, n, t | nu, l, l>(n, u, l, l); useEffect(() => {
+    const elemen, t = r, e, f.curre, n, t; if (!elem, e, n, t) retu, r, n;
+
+    const observe, r = new, IntersectionObserve, r(
+      ([en, t, r, y]) = > {
+        if (ent, r, y.isIntersecti, n, g) {
+          trackImpressi, o, n(banner, I, d); trackBannerInteracti, o, n(banner, I, d, 'impressi, o, n');
+          if (onVisib, l, e) onVisib, l, e();
+          observ, e, r.disconne, c, t();
+         }
       },
       {
-        threshold: 0.5, // 50% visible
-      }
+        thresho, l, d: 0., 5, // 50% visib l e
+      },
     );
-    
-    observer.observe(element);
-    
-    return () => observer.disconnect();
-  }, [bannerId, onVisible]);
-  
-  return { ref };
+
+    observ, e, r.obser, v, e(eleme, n, t);
+
+    return () => observ, e, r.disconne, c, t();
+  }, [banner, I, d, onVisib, l, e]);
+
+  return { r, e, f };
 };
 
 /**
  * Hook for A/B testing banners
  */
 export const useBannerABTest = (
-  variations: BannerConfig[],
-  testName: string
-): {
-  selectedVariation: BannerConfig;
-  trackVariationPerformance: (metric: string, value: number) => void;
-} => {
-  // Get consistent user ID for test assignment
-  const userId = useMemo(() => {
-    const stored = localStorage.getItem('user_id');
-    if (stored) return stored;
-    
-    const newId = `user_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-    localStorage.setItem('user_id', newId);
-    return newId;
-  }, []);
-  
-  // Select variation based on user ID (consistent assignment)
-  const selectedVariation = useMemo(() => {
-    const hash = Array.from(userId + testName).reduce(
-      (acc, char) => acc + char.charCodeAt(0),
-      0
-    );
-    const index = hash % variations.length;
-    return variations[index];
-  }, [userId, testName, variations]);
-  
-  // Track variation performance
-  const trackVariationPerformance = useCallback(
-    (metric: string, value: number) => {
-      trackBannerInteraction(selectedVariation.id, 'click', {
-        testName,
-        variation: selectedVariation.id,
-        metric,
-        value,
-      });
-    },
-    [selectedVariation, testName]
-  );
-  
-  return {
-    selectedVariation,
-    trackVariationPerformance,
-  };
-};
+  variatio, n, s: BannerCo, n, f, i, g[],
+  testNa, m, e: str, i, n, g,
+): { 
+  selectedVariati, o, n: BannerConf, i, g; trackVariationPerforman, c, e: (metr, i, c: str, i, n, g, val, u, e: number) = > v, o, i, d;
+ } => { 
+  // Get consistent user ID for test assignment const userId = useM e m o(() = > {
+    const store, d = localStora, g, e.getIt, e, m('user, _, i, d'); if (stor, e, d) return, store, d;
 
-export default useBannerRotation;
+    const, newI, d = `use, r, _${Da, t, e.no, w() }_${Ma, t, h.rand, o, m().toStri, n, g(36).subs, t, r(2, 9)}`; localStora, g, e.setIt, e, m('user_, i, d', new, I, d);
+        val, u, e,

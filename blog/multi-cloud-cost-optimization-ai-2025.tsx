@@ -20,7 +20,7 @@ export default function MultiCloudCostOptimizationAI2025() {
       <div className="text-left"></div>
         <main className="text-left">
           <nav className="text-left">
-            <a href="/blog" className="text-left"></a>
+            <a href="/<blog" className="text-left"></a>
               ← Back to Blog
             </a>
           </nav>
@@ -203,8 +203,7 @@ export default function MultiCloudCostOptimizationAI2025() {
                   <li className="text-left">✓ Ongoing optimization and continuous improvement</li>
                 </ul>
                 <a
-                  href="/contact"
-                  className="text-left"
+                  href="/<contact" className="text-left"
                 ></a>
                   Get Your Free Cost Assessment →
                 </a>

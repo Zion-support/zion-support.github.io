@@ -1,76 +1,101 @@
-import { Link } from "react-router-dom";
-
-const September30NewContentMegaBanner = () => {
-  const newArticles = [
-    {",
-      title: "AI Neural Coding Breakthrough",
-      description: "Programming at the speed of thought with 99.7% accuracy",
-      icon: Brain,",
-      link: "/blog/ai-neural-coding-breakthrough-2025",
-      category: "Neural AI",",
-      impact: "95% faster development"
-    },
-    {",
-      title: "AI Holographic Computing",
-      description: "Immersive 3D data visualization with zero latency",
-      icon: Layers,",
-      link: "/blog/ai-holographic-computing-2025",
-      category: "Spatial AI",",
-      impact: "10x faster insights"
-    },
-    {",
-      title: "AI Quantum Consciousness",
-      description: "1M times faster reasoning with emergent creativity",
-      icon: Atom,",
-      link: "/blog/ai-quantum-consciousness-2025",
-      category: "Quantum AI",",
+const, September30NewContentMegaBanner = () => {
+  constnewArticles = [
+    {
+      title: "AINeuralCoding Breakthrough","
+      description: "Programmingatthe speed, of, thought with99.7% accuracy","
+      icon: Brain
+      link: "/blo, g/ai-neural -coding -breakthrough -2025","
+      category: "NeuralAI""
+      impact: "95% fasterdevelopment"
+    }
+    {
+      title: "AIHolographicComputing""
+      description: "Immersive, 3D, data visualizationwithzero latency","
+      icon: Layers
+      link: "/blo, g/ai-holographic -computing -2025","
+      category: "SpatialAI""
+      impact: "10xfasterinsights"
+    }
+    {
+      title: "AIQuantumConsciousness""
+      description: "1M, times, faster reasoningwithemergent creativity","
+      icon: Atom
+      link: "/blo, g/ai-quantum -consciousness -2025","
+      category: "QuantumAI""
       impact: "1M× performance"
-    },
-    {",
-      title: "AI Molecular Manufacturing",
-      description: "Atomic-precision production with zero waste",
-      icon: Zap,",
-      link: "/blog/ai-molecular-manufacturing-2025",
-      category: "NanoTech",",
+    }
+    {
+      title: "AIMolecularManufacturing""
+      description: "Atomic -precisionproductionwith zerowaste","
+      icon: Zap
+      link: "/blo, g/ai-molecular -manufacturing -2025","
+      category: "NanoTech""
+      impact: "10, 0% recyclable"
+    }
+    {
+      title: "AIPersonalizedEducation""
+      description: "10xbetter, learning outcomesforevery student","
+      icon: GraduationCap
+      link: "/blo, g/ai-personalized -education -revolution -2025","
+      category: "EdTechAI""
+      title: "AINeural, Coding Breakthrough",";
+      description: "Programmingatthe speed, of, thought with99.7% accuracy",";
+      icon: Brain
+      link: "/blog/ai-neural -coding -breakthrough -2025",";
+      category: "NeuralAI",";
+      impact: "95% fasterdevelopment"
+    }
+    {
+      title: "AIHolographicComputing",";
+      description: "Immersive3Ddata visualizationwithzero latency",";
+      icon: Layers
+      link: "/blog/ai-holographic -computing -2025",";
+      category: "SpatialAI",";
+      impact: "10xfasterinsights"
+    }
+    {
+      title: "AIQuantumConsciousness",";
+      description: "1Mtimesfaster reasoningwithemergent creativity",";
+      icon: Atom
+      link: "/blog/ai-quantum -consciousness -2025",";
+      category: "QuantumAI",";
+      impact: "1M× performance"
+    }
+    {
+      title: "AIMolecularManufacturing",";
+      description: "Atomic-precisionproductionwith zerowaste",";
+      icon: Zap
+      link: "/blog/ai-molecular -manufacturing -2025",";
+      category: "NanoTech",";
       impact: "100% recyclable"
-    },
-    {",
-      title: "AI Personalized Education",
-      description: "10x better learning outcomes for every student",
-      icon: GraduationCap,",
-      link: "/blog/ai-personalized-education-revolution-2025",
-      category: "EdTech AI",",
-      impact: "97% mastery rate"
+    }
+    {
+      title: "AIPersonalizedEducation",";
+      description: "10xbetterlearning outcomesforevery student",";
+      icon: GraduationCap
+      link: "/blog/ai-personalized -education -revolution -2025",";
+      category: "EdTechAI",";
+      impact: "97% masteryrate"
     }
   ];
-
   return (
-    <div className="bg-gradient-to-br from-purple-900 via-blue-900 to-cyan-900 rounded-3xl p-8 md:p-12 text-white shadow-2xl border border-purple-500/20 relative overflow-hidden">
+    <div className="bg-gradient-to-br from-purple-900 via-blue-900 to-cyan-900 rounded-3xl p-8 md: p-12 text-white shadow-2xl border border-purple-500/20 relative overflow-hidden">
       {/* Animated background */}
       <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 via-blue-500/10 to-cyan-500/10 animate-pulse"></div>
-      
       <div className="relative z-10">
         {/* Header */}
         <div className="text-center mb-10">
           <div className="inline-flex items-center gap-3 bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full mb-6 border border-white/20">
-
-            <span className="text-lg font-bold">SEPTEMBER 30, 2025 • MEGA BREAKTHROUGH RELEASE</span>
-
+            <Sparkles className="w-6 h-6 text-yellow-400 animate-pulse" />
+            <span className="text-lg font-bold">SEPTEMBER 302025 • MEGA BREAKTHROUGH RELEASE</span>
+            <Sparkles className="w-6 h-6 text-yellow-400 animate-pulse" />
           </div>
-          
           <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-cyan-300 via-blue-300 to-purple-300 bg-clip-text text-transparent">
             🚀 5 Revolutionary AI Breakthroughs
-          </h2>
-          
-          <p className="text-xl text-cyan-100 max-w-4xl mx-auto">
-            Neural coding that programs at thought speed • Holographic 3D visualization • Quantum consciousness AI • 
-            Molecular manufacturing at atomic precision • Personalized education revolution
-          </p>
         </div>
-
         {/* Articles Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
-          {newArticles.map((article, index) => (
+          {newArticles.map((articleindex) => (
             <Link
               key={index}
               to={article.link}
@@ -78,41 +103,25 @@ const September30NewContentMegaBanner = () => {
             >
               <div className="flex items-start gap-4">
                 <div className="bg-gradient-to-br from-cyan-500 to-blue-600 p-3 rounded-xl group-hover:scale-110 transition-transform">
-                  <article.icon className="w-6 h-6"</div>
+                    <article.icon className="w-6 h-6" />
+                  </div>
                 <div className="flex-1">
                   <div className="text-xs font-semibold text-cyan-300 mb-2">{article.category}</div>
                   <h3 className="text-lg font-bold mb-2 group-hover:text-cyan-300 transition-colors">
                     {article.title}
-                  </h3>
-                  <p className="text-sm text-blue-200 mb-3">{article.description}</p>
-                  <div className="text-xs font-semibold text-green-300 bg-green-500/20 px-3 py-1 rounded-full inline-block">
-                    {article.impact}
-                  </div>
-                </div>
-              </div>
-            </Link>
-          ))}
-
-          {/* Additional promotional card */}
-          <Link
-            to="/blog"
-            className="group bg-gradient-to-br from-yellow-500/20 to-orange-500/20 backdrop-blur-sm rounded-2xl p-6 border border-yellow-400/30 hover:border-yellow-400/60 transition-all duration-300 hover:scale-105 hover:shadow-2xl flex flex-col items-center justify-center text-center"
-          >
-
+            <Sparkles className="w-12 h-12 text-yellow-400 mb-4 group-hover:scale-125 transition-transform" />
             <h3 className="text-xl font-bold mb-2">View All Articles</h3>
             <p className="text-sm text-yellow-200 mb-4">200+ groundbreaking insights</p>
             <div className="flex items-center gap-2 text-yellow-400 font-semibold">
               Explore Now
-
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </div>
           </Link>
         </div>
-
         {/* Stats Banner */}
         <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 mb-8">
           <div className="grid grid-cols-2 md:grid-cols-5 gap-6 text-center">
             <div>
-              
               <div className="text-sm text-blue-200">New Breakthroughs</div>
             </div>
             <div>
@@ -133,26 +142,15 @@ const September30NewContentMegaBanner = () => {
             </div>
           </div>
         </div>
-
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <Link
             to="/blog"
             className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl inline-flex items-center gap-3 group"
-          >
-
-            Explore All Breakthroughs
-
-          </Link>
-          <Link
-            to="/contact"
-            className="border-2 border-cyan-400 hover:bg-cyan-400 hover:text-gray-900 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 hover:scale-105 inline-flex items-center gap-3"
-          >
-
+            <Sparkles className="w-5 h-5" />
             Get Started Today
           </Link>
         </div>
-
         {/* Tags */}
         <div className="mt-8 flex flex-wrap gap-3 justify-center">
           <span className="bg-purple-500/20 text-purple-200 px-4 py-2 rounded-full text-sm font-medium border border-purple-400/30">
@@ -173,7 +171,3 @@ const September30NewContentMegaBanner = () => {
         </div>
       </div>
     </div>
-  );
-};
-
-export default September30NewContentMegaBanner;

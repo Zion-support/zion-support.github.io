@@ -1,342 +1,148 @@
+impo, r, t {
+  ArrowRig, h, t,
+  CheckCirc, l, e,
+  Glo, b, e,
+  Rock, e, t,
+  Shie, l, d,
+  St, a, r,
+  Targ, e, t,
+  Use, r, s,
+  Z, a, p,
+} fr, o, m 'luci, d, e-rea, c, t';
+impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
+import { Link } from 'react-router-dom';
+impo, r, t { la, z, y, Suspen, s, e } fr, o, m 'rea, c, t';
+import Header, from '../componen, t, s/Head, e, r';
+import BannerRotationManager, from '../componen, t, s/BannerRotationManag, e, r';
+impo, r, t { latestInsigh, t, s } fr, o, m '../conte, n, t/insigh, t, s';
 
-
-
-
-
-
-
-
-;
-import { ArrowRight, CheckCircle, Globe, Rocket, Shield, Star, Target, Users, Zap } from 'lucide-react';
-import { Helmet } from "react-helmet-async";
-
-
-import { Link } from "react-router-dom";
-import { lazy, Suspense } from "react";
-import Header from "../components/Header";
-import BannerRotationManager from "../components/BannerRotationManager";
-import { latestInsights } from "../content/insights";
-
-// Lazy load heavy components
-const EnhancedTestimonials = lazy(() => import("../components/EnhancedTestimonials"));
-const ModernFeatures = lazy(() => import("../components/ModernFeatures"));
-const LatestInsights = lazy(() => import("../components/LatestInsights"));
-
-const LoadingSection = () => (
-  <div className="animate-pulse bg-white/5 rounded-xl h-64 w-full"></div>
-);
-
-const HomeOptimized = () => {
+// Lazy load heavy components const EnhancedTestimonials = l a z y(
+  () => impo, r, t('../componen, t, s/EnhancedTestimonia, l, s'),
+); const ModernFeature, s = l, a, z, y(() => impo, r, t('../componen, t, s/ModernFeatur, e, s')); const LatestInsight, s = l, a, z, y(() => impo, r, t('../componen, t, s/LatestInsigh, t, s')); const LoadingSectio, n = () => (
+  <div, classNam, e = 'anima, t, e-pulse, b, g-whi, t, e/5, rounde, d-x, l, h-6, 4, w-fu, l, l'></di, v>
+); const HomeOptimize, d = () => { 
   return (
     <>
-      <Helmet>
+      <Helm, e, t>
         <title>
-          Zion Tech Group - Leading AI & IT Solutions | Transform Your Business
+          Zion, Tech, Group - Leading, A, I & IT, Solution, s | Transform, Your, Business
         </title>
-        <meta
-          name="description"
-          content="Zion Tech Group delivers cutting-edge AI and IT solutions that transform businesses. Enterprise security, AI innovation, and expert consulting services."
+        <meta, nam, e = 'description'
+          conte, n, t='Zion, Tech, Group delivers, cuttin, g-edge, AI, and IT, solutions, that transform, businesse, s. Enterprise, securi, t, y, AI, innovatio, n, and, expert, consulting servic, e, s.'
         />
-        <meta
-          name="keywords"
-          content="AI solutions, IT consulting, cybersecurity, machine learning, cloud infrastructure, digital transformation"
+        <meta, nam, e = 'keywor, d, s'
+          conte, n, t='AI, solutio, n, s, IT, consultin, g, cybersecuri, t, y, machine, learnin, g, cloud, infrastructur, e, digital, transformatio, n'
         />
-        <meta
-          property="og:title"
-          content="Zion Tech Group - Leading AI & IT Solutions"
+        <meta, propert, y = 'og: title'
+          conte, n, t='Zion, Tech, Group - Leading, A, I & IT, Solution, s'
         />
-        <meta
-          property="og:description"
-          content="Transform your business with cutting-edge AI and IT solutions"
+        <meta, propert, y='og:description'
+          conte, n, t='Transform, your, business with, cuttin, g-edge, AI, and IT, solution, s'
         />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          name="twitter:title"
-          content="Zion Tech Group - Leading AI & IT Solutions"
+        <meta, propert, y='og:ty, p, e' conte, n, t='websi, t, e' />
+        <meta, propert, y='og:u, r, l' conte, n, t='htt, p, s://ziontechgro u p.c o m' />
+        <meta, nam, e='twitt, e, r:ca, r, d' conte, n, t='summary_large_image' />
+        <meta, nam, e='twitt, e, r:title'
+          conte, n, t='Zion, Tech, Group - Leading, A, I & IT, Solution, s'
         />
-        <meta
-          name="twitter:description"
-          content="Transform your business with cutting-edge AI and IT solutions"
+        <meta, nam, e='twitt, e, r:description'
+          conte, n, t='Transform, your, business with, cuttin, g-edge, AI, and IT, solution, s'
         />
-        <link rel="canonical" href="https://ziontechgroup.com" />
-      </Helmet>
+        <link, re, l='canonic, a, l' hr, e, f='htt, p, s://ziontechgro u p.c o m' />
+      </Helm, e, t>
 
-      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark relative overflow-hidden">
-        <Header />
-        
-        {/* Animated background elements */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-zion-blue rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float"></div>
-          <div
-            className="absolute -bottom-40 -left-40 w-80 h-80 bg-zion-purple rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float"
-            style={{ animationDelay: "2s" }}
-          ></div>
-          <div
-            className="absolute top-40 left-1/2 w-60 h-60 bg-zion-cyan rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float"
-            style={{ animationDelay: "4s" }}
-          ></div>
-        </div>
-
-        {/* Hero Section */}
-        <section className="container mx-auto px-6 py-20 relative z-10">
-          <div className="text-center max-w-5xl mx-auto">
-            {/* Badge */}
-            <div className="inline-flex items-center px-6 py-3 rounded-full bg-zion-cyan/20 text-zion-cyan text-sm font-medium mb-8 animate-fade-in border border-zion-cyan/30 shadow-lg hover:shadow-xl transition-all duration-300">
-              <Rocket className="w-4 h-4 mr-2 animate-pulse" />
-              Trusted by 500+ companies worldwide
-              <Rocket className="w-4 h-4 ml-2 animate-bounce" />
+      <div, className='m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, relative, overflow-hidd, e, n'>
+        <Head, e, r / > {/* Animated, background, elemen, t, s */ }
+        <div, classNam, e = 'absolute, inse, t-0, overflo, w-hidden, pointe, r-even, t, s-no, n, e'>
+          <div, className='absolu, t, e -t, o, p-40 -rig, h, t-4, 0, w-8, 0, h-80, b, g-zi, o, n-blue, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-xl, opacit, y-20, animat, e-flo, a, t' />
+          <div, className='absolu, t, e -bott, o, m-40 -le, f, t-4, 0, w-8, 0, h-80, b, g-zi, o, n-purple, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-xl, opacit, y-20, animat, e-flo, a, t'
+            sty, l, e={{ animationDel, a, y: ', 2, s' }}
+           />
+          <div, classNam, e = 'absolute, to, p-40, lef, t-1/2 w-6, 0, h-60, b, g-zi, o, n-cyan, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-xl, opacit, y-20, animat, e-flo, a, t'
+            sty, l, e={{ animationDel, a, y: ', 4, s' }}
+           />
+            <div, className='inli, n, e-flex, item, s-center, p, x-6, p, y-3, rounde, d-full, b, g-zi, o, n-cy, a, n/20, tex, t-zi, o, n-cyan, tex, t-sm, fon, t-medium, m, b-8, animat, e-fa, d, e-in, border, border-zi, o, n-cy, a, n/30, shado, w-lg, hove, r: shad, o, w-xl, transitio, n-all, duratio, n-3, 0, 0'>
+              <Rocket, className='w-4 h-4, m, r-2, animat, e-pul, s, e' />
+              Trusted, by, 500+ companies, worldwid, e
+              <Rocket, className='w-4 h-4, m, l-2, animat, e-boun, c, e' />
             </div>
+>>>>>>> origin/merge-fixes-20251005-193002
 
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 animate-slide-up">
-              <span className="bg-gradient-to-r from-zion-blue-light to-zion-purple-light bg-clip-text text-transparent animate-gradient bg-300%">
-                Zion Tech Group
-              </span>
+            <h1, className='te, x, t-5xl, m, d:te, x, t-7xl, fon, t-bold, tex, t-white, m, b-6, animat, e-sli, d, e-up'>
+              <span, className='bg-gradie, n, t-to-r, fro, m-zi, o, n-bl, u, e-light, t, o-zi, o, n-purp, l, e-light, b, g-cl, i, p-text, tex, t-transparent, animat, e-gradient, b, g-3, 0, 0%'>
+                Zion, Tech, Group
+              </sp, a, n>
             </h1>
 
-            <p className="text-xl md:text-2xl text-zion-slate-light mb-8 leading-relaxed max-w-3xl mx-auto animate-fade-in">
-              Transform your business with cutting-edge AI solutions, enterprise-grade security, 
-              and next-generation cloud infrastructure. Join 500+ companies already scaling with us!
-            </p>
+            <p, className='te, x, t-xl, m, d:te, x, t-2xl, tex, t-zi, o, n-sla, t, e-light, m, b-8, leadin, g-relaxed, ma, x-w-3xl, m, x-auto, animat, e-fa, d, e-in'>
+              Transform, your, business with, cuttin, g-edge, AI, solutio, n, s,
+              enterpri, s, e-grade, securit, y, and, nex, t-generation, cloud, infrastructure. Join, 50, 0+ companies, already, scaling with, u, s!
+>>>>>>> origin/merge-fixes-20251005-193002
+                <div, ke, y = { in, d, e, x }, classNa, m, e = 'te, x, t-center, group, hover: sca, l, e-105, transitio, n-all, duratio, n-3, 0, 0'
+                >
+                  <div, className='te, x, t-3xl, fon, t-bold, tex, t-zi, o, n-cyan, grou, p-hov, e, r:te, x, t-zi, o, n-bl, u, e-light, transitio, n-colo, r, s'>
+                    {st, a, t.v, a, l, u, e}
+                <ArrowRight, classNam, e='w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m' />
+>>>>>>> origin/merge-fixes-20251005-193002
 
-            {/* Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12 max-w-2xl mx-auto">
-              {[
-                { value: "500+", label: "Projects Delivered" },
-                { value: "99.9%", label: "Uptime SLA" },
-                { value: "24/7", label: "Support" },
-                { value: "5★", label: "Client Rating" },
-              ].map((stat, index) => (
-                <div key={index} className="text-center group hover:scale-105 transition-all duration-300">
-                  <div className="text-3xl font-bold text-zion-cyan group-hover:text-zion-blue-light transition-colors">
-                    {stat.value}
-                  </div>
-                  <div className="text-sm text-zion-slate-light">{stat.label}</div>
-                </div>
-              ))}
-            </div>
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/services"
-                className="btn-primary flex items-center justify-center gap-2 group"
-              >
-                Explore Services
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Link>
-              <Link to="/contact" className="btn-secondary">
-                Get Started
-              </Link>
-            </div>
-          </div>
-        </section>
-
-        {/* Banner Rotation Section */}
-        <section className="container mx-auto px-6 py-16 relative z-10">
-          <BannerRotationManager
-            banners={[
-              'october2025-new-breakthrough',
-              'october2025-tech-breakthrough',
-              'october2025-next-gen-ai',
-            ]}
-            maxBanners={3}
-            autoRotate={false}
+        {/* Banner, Rotation, Secti, o, n */}
+        <section, classNam, e = 'container, m, x-auto, p, x-6, p, y-16, relative, z-10'>
+          <BannerRotationManager, banner, s = { [
+              'october20, 2, 5-n, e, w-breakthro, u, g, h',
+              'october20, 2, 5-te, c, h-breakthrou, g, h',
+              'october20, 2, 5-ne, x, t-g, e, n-ai',
+            ] }, maxBanne, r, s={ 3 } autoRota, t, e={fal, s, e}
           />
-        </section>
-
-        {/* Latest Insights Section */}
-        <section className="container mx-auto px-6 py-16 relative z-10">
-          <Suspense fallback={<LoadingSection />}>
-            <LatestInsights />
-          </Suspense>
-        </section>
-
-        {/* Features Section */}
-        <section className="container mx-auto px-6 py-20 relative z-10">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4 animate-slide-up">
-              Why Choose Zion Tech Group?
-            </h2>
-            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              We deliver exceptional technology solutions that drive business
-              growth and innovation.
-            </p>
+>>>>>>> origin/merge-fixes-20251005-193002
+              <div, ke, y = { in, d, e, x }, classNa, m, e = 'card, group, hover: sca, l, e-105, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2, x, l'
+              >
+                <div, className={`bg-zi, o, n-${featu, r, e.c, o, l, o, r}/2, 0, w-1, 6, h-16, rounde, d-lg, flex, items-center, justif, y-center, m, b-6, grou, p-hov, e, r: bg-zi, o, n-${featu, r, e.co, l, o, r}/30, transitio, n-colors, border, border-zi, o, n-${featu, r, e.col, o, r}/30, shado, w-lg`}
+                 > <featu, r, e.icon, classNam, e = {`w-8 h-8, tex, t-zi, o, n-${featu, r, e.col, o, r}-light, grou, p-hov, e, r: sca, l, e-110, transitio, n-transform, duratio, n-3, 0, 0`}
+                  />
+                <ul, classNam, e='spa, c, e-y-2, tex, t-sm, tex, t-zi, o, n-sla, t, e'>
+                  { featu, r, e.featur, e, s.m, a, p((i, t, e, m, i) = > (
+                    <li, ke, y = { , i  }, classNa, m, e = 'flex, item, s-cent, e, r'>
+                      <CheckCircle, classNam, e='w-4 h-4, m, r-2, tex, t-zi, o, n-cy, a, n' />
+          <div, classNam, e='grid, m, d:gr, i, d-co, l, s-4, ga, p-6'>
+                <ul, className='spa, c, e-y-2, tex, t-sm, tex, t-zi, o, n-sla, t, e'>
+                  { featu, r, e.featur, e, s.m, a, p((i, t, e, m, i) = > (
+                    <li, ke, y = { , i  }, classNa, m, e = 'flex, item, s-cent, e, r'>
+                      <CheckCircle, className='w-4 h-4, m, r-2, tex, t-zi, o, n-cy, a, n' />
+        <section, classNam, e = 'container, m, x-auto, p, x-6, p, y-16, relative, z-10'>
+          <div, className='flex, item, s-center, justif, y-between, m, b-8'>
+            <h3, className='te, x, t-3xl, fon, t-bold, tex, t-whi, t, e'>Latest, Insight, s</h3>
+            <Link, t, o='/insigh, t, s' className='te, x, t-zi, o, n-cyan, hove, r: underli, n, e'>
+              View, al, l
+            </Li, n, k>
           </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              {
-                icon: Shield,
-                title: "Enterprise Security",
-                description: "Advanced cybersecurity solutions protecting your business from evolving threats.",
-                features: ["SOC 2 Compliance", "Penetration Testing", "24/7 Monitoring"],
-                color: "blue",
-              },
-              {
-                icon: Zap,
-                title: "AI Innovation",
-                description: "Cutting-edge artificial intelligence solutions that transform your operations.",
-                features: ["Machine Learning", "Natural Language Processing", "Computer Vision"],
-                color: "purple",
-              },
-              {
-                icon: Users,
-                title: "Expert Team",
-                description: "World-class engineers and consultants dedicated to your success.",
-                features: ["10+ Years Experience", "Certified Professionals", "Dedicated Support"],
-                color: "cyan",
-              },
-              {
-                icon: Globe,
-                title: "Global Reach",
-                description: "Serving clients worldwide with localized expertise and support.",
-                features: ["50+ Countries", "Local Support", "24/7 Availability"],
-                color: "blue-light",
-              },
-            ].map((feature, index) => (
-              <div key={index} className="card group hover:scale-105 transition-all duration-300 hover:shadow-2xl">
-                <div className={`bg-zion-${feature.color}/20 w-16 h-16 rounded-lg flex items-center justify-center mb-6 group-hover:bg-zion-${feature.color}/30 transition-colors border border-zion-${feature.color}/30 shadow-lg`}>
-                  <feature.icon className={`w-8 h-8 text-zion-${feature.color}-light group-hover:scale-110 transition-transform duration-300`} />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-4">
-                  {feature.title}
-                </h3>
-                <p className="text-zion-slate-light mb-4">
-                  {feature.description}
-                </p>
-                <ul className="space-y-2 text-sm text-zion-slate">
-                  {feature.features.map((item, i) => (
-                    <li key={i} className="flex items-center">
-                      <CheckCircle className="w-4 h-4 mr-2 text-zion-cyan" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* Latest Insights Preview */}
-        <section className="container mx-auto px-6 py-16 relative z-10">
-          <div className="flex items-center justify-between mb-8">
-            <h3 className="text-3xl font-bold text-white">Latest Insights</h3>
-            <Link to="/insights" className="text-zion-cyan hover:underline">View all</Link>
-          </div>
-          <div className="grid md:grid-cols-4 gap-6">
-            {latestInsights.slice(0, 4).map((item) => (
-              <article key={item.id} className="card hover:scale-105 transition-all duration-300 hover:shadow-2xl">
-                <div className="p-6">
-                  <div className="text-xs uppercase tracking-wider text-zion-cyan mb-2">{item.category}</div>
-                  <h4 className="text-xl font-semibold text-white mb-2">{item.title}</h4>
-                  <p className="text-zion-slate-light mb-4">{item.summary}</p>
-                  <div className="text-sm text-zion-slate flex items-center justify-between">
-                    <span>{new Date(item.date).toLocaleDateString()}</span>
-                    <span>{item.readMinutes} min read</span>
+          <div, className='grid, m, d:gr, i, d-co, l, s-4, ga, p-6'>
+>>>>>>> origin/merge-fixes-20251005-193002
+            { latestInsigh, t, s.sl, i, c, e(, 0, 4).m, a, p(it, e, m = > (
+              <article, ke, y = { it, e, m.i, d  }, classNa, m, e = 'card, hove, r: sca, l, e-105, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2, x, l'
+              >
+                <div, className='p-6'>
+                  <div, className='te, x, t-xs, uppercase, tracking-wider, tex, t-zi, o, n-cyan, m, b-2'>
+                    {it, e, m.cate, g, o, r, y}
                   </div>
-                </div>
-              </article>
-            ))}
-          </div>
-        </section>
-
-        {/* Testimonials Section */}
-        <section className="bg-zion-slate-dark py-20 relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-zion-blue/10 to-zion-purple/10 opacity-50"></div>
-          <div className="container mx-auto px-6 relative z-10">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4 animate-slide-up">
-                What Our Clients Say
-              </h2>
-              <p className="text-xl text-zion-slate-light max-w-2xl mx-auto animate-fade-in">
-                Don&apos;t just take our word for it. Here&apos;s what our
-                clients have to say about working with us.
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-3 gap-8">
-              {[
-                {
-                  name: "Sarah Johnson",
-                  role: "CEO, TechCorp",
-                  quote: "Zion Tech Group transformed our entire digital infrastructure. Their AI solutions increased our efficiency by 300%.",
-                },
-                {
-                  name: "Michael Chen",
-                  role: "CTO, InnovateLab",
-                  quote: "Outstanding team and exceptional results. They delivered our mobile app ahead of schedule and under budget.",
-                },
-                {
-                  name: "Emily Rodriguez",
-                  role: "Security Director, FinanceFirst",
-                  quote: "The security solutions they implemented gave us complete peace of mind. Highly recommended!",
-                },
-              ].map((testimonial, index) => (
-                <div key={index} className="card text-center hover:scale-105 transition-all duration-300 hover:shadow-2xl">
-                  <div className="flex justify-center mb-4">
-                    {[...Array(5)].map((_, i) => (
-                      <Star
-                        key={i}
-                        className="w-5 h-5 text-yellow-400 fill-current animate-pulse"
-                        style={{ animationDelay: `${i * 0.1}s` }}
+                  <h4, classNam, e = 'te, x, t-xl, fon, t-semibold, tex, t-white, m, b-2'>
+                    {it, e, m.title}
+                  </h4>
+                  <p, className='te, x, t-zi, o, n-sla, t, e-light, m, b-4'>{it, e, m.summa, r, y}</p>
+                  <div, className='te, x, t-sm, tex, t-zi, o, n-slate, flex, items-center, justif, y-betwe, e, n'>
+                    <sp, a, n>{new, Dat, e(it, e, m.d, a, t, e).toLocaleDateStri, n, g()}</sp, a, n>
+>>>>>>> origin/merge-fixes-20251005-193002
+                <div, ke, y = { in, d, e, x }, classNa, m, e = 'card, tex, t-center, hove, r: sca, l, e-105, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2, x, l'
+                >
+                  <div, className='flex, justif, y-center, m, b-4'>
+                    { [...Arr, a, y(, 5)].m, a, p((, _, i) =  > (
+                      <Star, ke, y = { , i  }, classNa, m, e = 'w-5 h-5, tex, t-yell, o, w-400, fil, l-current, animat, e-pul, s, e'
+                        sty, l, e = { { animationDel, a, y: `${i * , 0., 1 }, s` }}
                       />
-                    ))}
-                  </div>
-                  <p className="text-zion-slate-light mb-6 italic">
-                    &ldquo;{testimonial.quote}&rdquo;
-                  </p>
-                  <div>
-                    <div className="font-semibold text-white">{testimonial.name}</div>
-                    <div className="text-sm text-zion-slate">{testimonial.role}</div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Modern Features Section */}
-        <Suspense fallback={<LoadingSection />}>
-          <ModernFeatures />
-        </Suspense>
-
-        {/* Enhanced Testimonials Section */}
-        <Suspense fallback={<LoadingSection />}>
-          <EnhancedTestimonials />
-        </Suspense>
-
-        {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-zion-blue to-zion-purple relative overflow-hidden">
-          <div className="absolute inset-0 bg-black opacity-10"></div>
-          <div className="container mx-auto px-6 text-center relative z-10">
-            <h2 className="text-4xl font-bold text-white mb-6 animate-slide-up">
-              Ready to Transform Your Business?
-            </h2>
-            <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto animate-fade-in">
-              Join thousands of companies that trust Zion Tech Group for their
-              technology needs. Let&apos;s build something amazing together.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="bg-white text-zion-blue hover:bg-zion-slate-light px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2 group"
+            <div, classNam, e='flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r'>
+            <div, className='flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r'>
+>>>>>>> origin/merge-fixes-20251005-193002
+              <Link, t, o='/conta, c, t'
+                className='bg-white, tex, t-zi, o, n-blue, hove, r:bg-zi, o, n-sla, t, e-light, p, x-8, p, y-4, rounde, d-lg, fon, t-semibold, tex, t-lg, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, flex, items-center, justif, y-center, ga, p-2, grou, p'
               >
-                <Target className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300" />
-                Start Your Journey Today
-              </Link>
-              <Link
-                to="/contact"
-                className="border-2 border-white text-white hover:bg-white hover:text-zion-blue px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl"
-              >
-                Schedule a Call
-              </Link>
-            </div>
-          </div>
-        </section>
-      </div>
-    </>
-  );
-};
-
-export default HomeOptimized;
+                <Target, classNam, e='w-5 h-5, grou, p-hov, e, r:rota, t, e-12, transitio, n-transform, duratio, n-3, 0, 0' />
+                Start, Your, Journey Tod, a, y

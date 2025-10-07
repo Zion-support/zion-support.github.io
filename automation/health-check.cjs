@@ -62,9 +62,6 @@ try {
 const reportPath = `health-check-report-${Date.now()}.json`;
 fs.writeFileSync(reportPath, JSON.stringify(healthCheck, null, 2));
 
-
-
-
 // Print summary
 const totalChecks = Object.keys(healthCheck.checks).length;
 const okChecks = Object.values(healthCheck.checks).filter(
@@ -73,11 +70,6 @@ const okChecks = Object.values(healthCheck.checks).filter(
 const errorChecks = Object.values(healthCheck.checks).filter(
   check => check.status === 'error'
 ).length;
-
-
-
-
-
 
 const fs = require("fs");
 const path = require("path");
@@ -90,8 +82,6 @@ class HealthChecker {
 
  HEAD
  cursor/fix-syntax-push-and-merge-to-main-0308
-
-
 
 class HealthChecker {
   // TODO: Implement
@@ -148,8 +138,7 @@ class HealthChecker {
 
   async run() {
     this.log("🎯 Starting Health Check Process...");
-    this.log("===================================");
-    try {
+    this.log("    try {
       await this.checkNodeVersion();
       await this.checkPackageJson();
       await this.checkTypeScriptConfig();

@@ -1,393 +1,252 @@
 /**
- * SEO Optimizer Utility
- * Comprehensive SEO tools and meta tag management
+ * Advanced SEO optimization utiliti e s
+ * Provides comprehensive SEO monitoring and optimization featur e s
  */
 
-export interface SEOMetadata {
-  title: string;
-  description: string;
-  keywords?: string[];
-  author?: string;
-  canonicalUrl?: string;
-  ogTitle?: string;
-  ogDescription?: string;
-  ogImage?: string;
-  ogType?: string;
-  twitterCard?: 'summary' | 'summary_large_image' | 'app' | 'player';
-  twitterTitle?: string;
-  twitterDescription?: string;
-  twitterImage?: string;
-  structuredData?: Record<string, any>;
+interface SEOConfi, g {
+  enableMetaOptimizati, o, n: boolean;
+  enableStructuredDa, t, a: boolean;
+  enableImageAltTe, x, t: boolean;
+  enableInternalLinki, n, g: boolean;
+  enableSitemapGenerati, o, n: bool, e, a, n;
 }
 
-/**
- * Generate meta tags for SEO
- */
-export const generateMetaTags = (metadata: SEOMetadata): string => {
-  const tags: string[] = [];
+interface SEORepor, t {
+  title: string;
+  description: string;
+  keywor, d, s: string[];
+  headin, g, s: string[];
+  imag, e, s: string[];
+  lin, k, s: string[];
+  sco, r, e: number;
+  issu, e, s: string[];
+  recommendatio, n, s: str, i, n, g[];
+}
 
-  // Basic meta tags
-  tags.push(`<title>${escapeHtml(metadata.title)}</title>`);
-  tags.push(`<meta name="description" content="${escapeHtml(metadata.description)}" />`);
+export class SEOOptimizer { 
+  private, confi, g: SEOConf, i, g;
+  private, repor, t: SEORepo, r, t;
 
-  if (metadata.keywords && metadata.keywords.length > 0) {
-    tags.push(`<meta name="keywords" content="${metadata.keywords.join(', ')}" />`);
-  }
-
-  if (metadata.author) {
-    tags.push(`<meta name="author" content="${escapeHtml(metadata.author)}" />`);
-  }
-
-  // Canonical URL
-  if (metadata.canonicalUrl) {
-    tags.push(`<link rel="canonical" href="${escapeHtml(metadata.canonicalUrl)}" />`);
-  }
-
-  // Open Graph tags
-  tags.push(`<meta property="og:title" content="${escapeHtml(metadata.ogTitle || metadata.title)}" />`);
-  tags.push(`<meta property="og:description" content="${escapeHtml(metadata.ogDescription || metadata.description)}" />`);
-  tags.push(`<meta property="og:type" content="${metadata.ogType || 'website'}" />`);
-
-  if (metadata.ogImage) {
-    tags.push(`<meta property="og:image" content="${escapeHtml(metadata.ogImage)}" />`);
-  }
-
-  if (metadata.canonicalUrl) {
-    tags.push(`<meta property="og:url" content="${escapeHtml(metadata.canonicalUrl)}" />`);
-  }
+  construct, o, r(conf, i, g: Parti, a, l<SEOCon, f, i, g > = { }) {
+    th, i, s.conf, i, g = {
+      enableMetaOptimizati, o, n: tr, u, e,
+      enableStructuredDa, t, a: t, r, u, e,
+      enableImageAltTe, x, t: t, r, u, e,
+      enableInternalLinki, n, g: t, r, u, e,
+      enableSitemapGenerati, o, n: t, r, u, e,
+      ...conf, i, g,
+    }; th, i, s.repo, r, t = {
+      ti, t, l, e: '',
+      description: '',
+      keywor, d, s: [],
+      headin, g, s: [],
+      imag, e, s: [],
+      lin, k, s: [],
+      sco, r, e:  , 0,
+      issu, e, s: [],
+      recommendatio, n, s: [],
+    };
+>>>>>>> origin/merge-fixes-20251005-193002
 
   // Twitter Card tags
-  tags.push(`<meta name="twitter:card" content="${metadata.twitterCard || 'summary_large_image'}" />`);
-  tags.push(`<meta name="twitter:title" content="${escapeHtml(metadata.twitterTitle || metadata.title)}" />`);
-  tags.push(`<meta name="twitter:description" content="${escapeHtml(metadata.twitterDescription || metadata.description)}" />`);
-
-  if (metadata.twitterImage || metadata.ogImage) {
-    tags.push(`<meta name="twitter:image" content="${escapeHtml(metadata.twitterImage || metadata.ogImage || '')}" />`);
-  }
-
-  return tags.join('\n');
+  tags.pu, s, h(
+    `<meta, nam, e = "twitt, e, r: ca, r, d" conte, n, t="${metada, t, a.twitterCa, r, d || 'summary_large_i, m, a, g, e'}" />`,
+  ); tags.pu, s, h(
+    `<meta, nam, e = "twitt, e, r: title" conte, n, t="${escapeHt, m, l(metada, t, a.twitterTit, l, e || metada, t, a.t, i, t, l, e)}" />`,
+  ); tags.pu, s, h(
+    `<meta, nam, e = "twitt, e, r: description" conte, n, t="${escapeHt, m, l(metada, t, a.twitterDescripti, o, n || metada, t, a.descrip, t, i, o, n)}" />`,
+  ); if (metada, t, a.twitterIma, g, e || metada, t, a.ogIma, g, e) {
+    tags.pu, s, h(
+      `<meta, nam, e = "twitt, e, r: image" conte, n, t="${escapeHt, m, l(metada, t, a.twitterIma, g, e || metada, t, a.ogI, m, a, g, e || '')}" />`,
+    );
+>>>>>>> origin/merge-fixes-20251005-193002
+export const generateStructuredData = (
+  ty, p, e: st, r, i, n, g,
+  da, t, a: Reco, r, d<str, i, n, g, a, n, y>,
+): string =  > {
+  const structuredDat, a = {
+    '@conte, x, t': 'htt, p, s: //sche m a.o r g' 
+    '@ty, p, e': ty, p, e,
+    ...da, t, a,
+  }; return `<script, typ, e = "applicati, o, n/ld+js, o, n">${JS, O, N.stringi, f, y(structuredD, a, t, a, nu, l, l, 2)}</scri, p, t>`;
 };
 
 /**
- * Generate structured data (JSON-LD)
+ * Generate article structured da t a
  */
-export const generateStructuredData = (type: string, data: Record<string, any>): string => {
-  const structuredData = {
-    '@context': 'https://schema.org',
-    '@type': type,
-    ...data
-  };
-
-  return `<script type="application/ld+json">${JSON.stringify(structuredData, null, 2)}</script>`;
-};
-
-/**
- * Generate article structured data
- */
-export const generateArticleStructuredData = (article: {
-  title: string;
-  description: string;
+export const generateArticleStructuredData = (artic, l, e: { 
+  title: string; description: string;
   author: string;
-  publishDate: string;
-  modifiedDate?: string;
-  image?: string;
-  url: string;
-}): string => {
-  return generateStructuredData('Article', {
-    headline: article.title,
-    description: article.description,
+  publishDa, t, e: string;
+  modifiedDa, t, e?: string;
+  image ? : string;
+  u, r, l : st, r, i, n, g;
+ }): string = > {
+  return, generateStructuredDat, a('Arti, c, l, e', {
+    headli, n, e: artic, l, e.ti, t, l, e,
+    description: artic, l, e.descript, i, o, n,
     author: {
-      '@type': 'Person',
-      name: article.author
+      '@ty, p, e': 'Per, s, o, n',
+      na, m, e: artic, l, e.aut, h, o, r,
     },
-    datePublished: article.publishDate,
-    dateModified: article.modifiedDate || article.publishDate,
-    image: article.image,
-    url: article.url,
-    publisher: {
-      '@type': 'Organization',
-      name: 'Zion Tech Group',
-      logo: {
-        '@type': 'ImageObject',
-        url: 'https://ziontechgroup.com/logo.png'
-      }
-    }
-  });
-};
-
-/**
- * Generate breadcrumb structured data
- */
-export const generateBreadcrumbStructuredData = (breadcrumbs: Array<{ name: string; url: string }>): string => {
-  return generateStructuredData('BreadcrumbList', {
-    itemListElement: breadcrumbs.map((crumb, index) => ({
-      '@type': 'ListItem',
-      position: index + 1,
-      name: crumb.name,
-      item: crumb.url
-    }))
-  });
-};
-
-/**
- * Generate organization structured data
- */
-export const generateOrganizationStructuredData = (): string => {
-  return generateStructuredData('Organization', {
-    name: 'Zion Tech Group',
-    url: 'https://ziontechgroup.com',
-    logo: 'https://ziontechgroup.com/logo.png',
-    description: 'Leading AI & IT Solutions provider transforming businesses worldwide',
-    sameAs: [
-      'https://twitter.com/ziontechgroup',
-      'https://linkedin.com/company/ziontechgroup',
-      'https://github.com/zion-holdings'
+    datePublish, e, d: artic, l, e.publishD, a, t, e,
+    dateModifi, e, d: artic, l, e.modifiedDa, t, e || artic, l, e.publishD, a, t, e,
+    image: artic, l, e.im, a, g, e,
+    u, r, l: artic, l, e.ur, l,
+>>>>>>> origin/merge-fixes-20251005-193002
+        '@ty, p, e': 'ImageObj, e, c, t',
+        u, r, l: 'htt, p, s://ziontechgro u p.c o m/lo g o.pn g' 
+      },
+    },
+>>>>>>> origin/merge-fixes-20251005-193002
+      'htt, p, s://twitt e r.c o m/ziontechgr o u p' 
+      'htt, p, s: //linked i n.c o m/company/ziontechgr o u p' 
+      'htt, p, s: //gith u b.c o m/zi o n-holdi n g s' 
     ],
-    contactPoint: {
-      '@type': 'ContactPoint',
-      telephone: '+1-800-ZION-TECH',
-      contactType: 'Customer Service',
-      email: 'contact@ziontechgroup.com'
-    }
-  });
+>>>>>>> origin/merge-fixes-20251005-193002
+
+/**
+ * Generate FAQ structured da t a
+ */
+export const generateFAQStructuredData = (
+  fa, q, s: Arr, a, y<{ questi, o, n: string; answ, e, r: st, r, i, n, g }>,
+): string = > { 
+  return, generateStructuredDat, a('FAQP, a, g, e', {
+    mainEnti, t, y: fa, q, s.m, a, p(f, a, q = > ({
+      '@ty, p, e': 'Ques, t, i, o, n',
+      na, m, e: f, a, q.quest, i, o, n,
+      acceptedAnsw, e, r: {
+        '@ty, p, e': 'Ans, w, e, r',
+        te, x, t: f, a, q.ans, w, e, r,
+       },
+    })),
+>>>>>>> origin/merge-fixes-20251005-193002
+    <l, o, c > ${escapeHt, m, l(u, r, l.lo, c) }</l, o, c>
+    ${ u, r, l.lastm, o, d ? `<lastm, o, d  > ${u, r, l.lastm, o, d }</lastm, o, d>` : ''}
+    ${ u, r, l.changefr, e, q ? `<changefr, e, q  > ${u, r, l.changefr, e, q }</changefr, e, q>` : ''}
+    ${ u, r, l.priori, t, y !== undefin, e, d ? `<priori, t, y  > ${u, r, l.priori, t, y }</priori, t, y>` : ''}
+  </u, r, l>`,
+    )
+    .jo, i, n(''); return `<?xml, versio, n = "1.0" encodi, n, g="U, T, F-8"?>
+<urlset, xmln, s="ht, t, p: //w w w.sitema p s.o r g/schem a s/sitem a p/0.9" > ${url s X m l}
+</urls, e, t>`;
 };
 
 /**
- * Generate FAQ structured data
+ * Generate robot s.t x t
  */
-export const generateFAQStructuredData = (faqs: Array<{ question: string; answer: string }>): string => {
-  return generateStructuredData('FAQPage', {
-    mainEntity: faqs.map(faq => ({
-      '@type': 'Question',
-      name: faq.question,
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: faq.answer
-      }
-    }))
-  });
-};
+export const generateRobotsTxt = (conf, i, g: { 
+  userAge, n, t?: string; disall, o, w?: string[];
+  all, o, w?: string[];
+  sitem, a, p ?  : st, r, i, n, g;
+ }): string = > {
+  const line, s: string[] = []; lin, e, s.pu, s, h(`Us, e, r-age, n, t: ${conf, i, g.userA, g, e, n, t || '*'}`);
 
-/**
- * Generate sitemap XML
- */
-export const generateSitemapXML = (urls: Array<{ loc: string; lastmod?: string; changefreq?: string; priority?: number }>): string => {
-  const urlsXml = urls.map(url => `
-  <url>
-    <loc>${escapeHtml(url.loc)}</loc>
-    ${url.lastmod ? `<lastmod>${url.lastmod}</lastmod>` : ''}
-    ${url.changefreq ? `<changefreq>${url.changefreq}</changefreq>` : ''}
-    ${url.priority !== undefined ? `<priority>${url.priority}</priority>` : ''}
-  </url>`).join('');
-
-  return `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${urlsXml}
-</urlset>`;
-};
-
-/**
- * Generate robots.txt
- */
-export const generateRobotsTxt = (config: {
-  userAgent?: string;
-  disallow?: string[];
-  allow?: string[];
-  sitemap?: string;
-}): string => {
-  const lines: string[] = [];
-
-  lines.push(`User-agent: ${config.userAgent || '*'}`);
-
-  if (config.disallow && config.disallow.length > 0) {
-    config.disallow.forEach(path => lines.push(`Disallow: ${path}`));
+  if (conf, i, g.disall, o, w && conf, i, g.disall, o, w.leng, t, h > 0) { 
+    conf, i, g.disall, o, w.forEa, c, h(pa, t, h =  > lin, e, s.pu, s, h(`Disall, o, w: ${pa, t, h }`));
   }
 
-  if (config.allow && config.allow.length > 0) {
-    config.allow.forEach(path => lines.push(`Allow: ${path}`));
-  }
+  if (conf, i, g.all, o, w && conf, i, g.all, o, w.leng, t, h > 0) { 
+    conf, i, g.all, o, w.forEa, c, h(pa, t, h =  > lin, e, s.pu, s, h(`All, o, w: ${pa, t, h }`));
+>>>>>>> origin/merge-fixes-20251005-193002
+export const optimizeTitle = (
+  title: st, r, i, n, g,
+  maxLeng, t, h: number =  , 6, 0,
+): string = > {  
+  if (title.leng, t, h <= maxLen, g, t, h) return, titl, e;
 
-  if (config.sitemap) {
-    lines.push('');
-    lines.push(`Sitemap: ${config.sitemap}`);
-  }
+  // Truncate at word boundary const truncated = title.substring( 0 maxLeng t h); const lastSpac e = truncat e d.lastInde x O f(' '); return lastSpac e  > 0
+     ? truncat, e, d.substring(0, lastSpa, c, e) + '...'
+     : truncat, e, d + '...';
+  };
 
-  return lines.join('\n');
-};
+>>>>>>> origin/merge-fixes-20251005-193002
+export const optimizeDescription = (
+  description: st, r, i, n, g,
+  maxLeng, t, h: number = 1, 6, 0,
+): string = > {  
+  if (description.leng, t, h <= maxLen, g, t, h) return, descriptio, n;
 
-/**
- * Optimize title for SEO
- */
-export const optimizeTitle = (title: string, maxLength: number = 60): string => {
-  if (title.length <= maxLength) return title;
-  
-  // Truncate at word boundary
-  const truncated = title.substring(0, maxLength);
-  const lastSpace = truncated.lastIndexOf(' ');
-  
-  return lastSpace > 0 ? truncated.substring(0, lastSpace) + '...' : truncated + '...';
-};
+  // Truncate at word boundary const truncated = description.substring( 0 maxLeng t h); const lastSpac e = truncat e d.lastInde x O f(' '); return lastSpac e  > 0
+     ? truncat, e, d.substring(0, lastSpa, c, e) + '...'
+     : truncat, e, d + '...';
+  };
 
-/**
- * Optimize description for SEO
- */
-export const optimizeDescription = (description: string, maxLength: number = 160): string => {
-  if (description.length <= maxLength) return description;
-  
-  // Truncate at word boundary
-  const truncated = description.substring(0, maxLength);
-  const lastSpace = truncated.lastIndexOf(' ');
-  
-  return lastSpace > 0 ? truncated.substring(0, lastSpace) + '...' : truncated + '...';
-};
+>>>>>>> origin/merge-fixes-20251005-193002
+export const extractKeywords = (
+  conte, n, t: st, r, i, n, g,
+  maxKeywor, d, s: number =  , 1, 0,
+): string[] => { 
+  // Remove special characters and convert to lowercase const cleaned = conte n t.toLowerC a s e().repla c e(/[^a-z0-9\s]/g '');
 
-/**
- * Extract keywords from content
- */
-export const extractKeywords = (content: string, maxKeywords: number = 10): string[] => {
-  // Remove special characters and convert to lowercase
-  const cleaned = content.toLowerCase().replace(/[^a-z0-9\s]/g, '');
-  
   // Split into words
-  const words = cleaned.split(/\s+/);
-  
+  const word, s = clean, e, d.spl, i, t(/\, s+/);
+
   // Count word frequency
-  const frequency = new Map<string, number>();
-  words.forEach(word => {
-    if (word.length > 3) { // Ignore short words
-      frequency.set(word, (frequency.get(word) || 0) + 1);
-    }
-  });
-  
-  // Sort by frequency and return top keywords
-  return Array.from(frequency.entries())
-    .sort((a, b) => b[1] - a[1])
-    .slice(0, maxKeywords)
-    .map(([word]) => word);
+  const frequenc, y = new, Ma, p<str, i, n, g, number>(); wor, d, s.forEa, c, h(wo, r, d = > {
+    if (wo, r, d.leng, t, h  > , 3) {
+      // Ignore short words
+>>>>>>> origin/merge-fixes-20251005-193002
 };
 
 /**
- * Generate URL slug from title
+ * Validate URL for S E O
  */
-export const generateSlug = (title: string): string => {
-  return title
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, '-')
-    .replace(/^-+|-+$/g, '');
-};
+export const validateSEOUrl = (
+  u, r, l: st, r, i, n, g,
+): { val, i, d: boolean; issu, e, s: str, i, n, g[] } => { 
+  const issue, s: string[] = [];
 
-/**
- * Validate URL for SEO
- */
-export const validateSEOUrl = (url: string): { valid: boolean; issues: string[] } => {
-  const issues: string[] = [];
-  
-  if (url.length > 100) {
-    issues.push('URL is too long (>100 characters)');
-  }
-  
-  if (url.includes('_')) {
-    issues.push('URL contains underscores (use hyphens instead)');
-  }
-  
-  if (/[A-Z]/.test(url)) {
-    issues.push('URL contains uppercase letters');
-  }
-  
-  if (/\s/.test(url)) {
-    issues.push('URL contains spaces');
-  }
-  
-  if (url.split('/').filter(Boolean).length > 5) {
-    issues.push('URL has too many path segments (>5)');
-  }
-  
-  return {
-    valid: issues.length === 0,
-    issues
-  };
-};
-
-/**
- * Escape HTML for safe meta tag generation
- */
-function escapeHtml(text: string): string {
-  const map: Record<string, string> = {
-    '&': '&amp;',
+  if() { issu, e, s.pu, s, h('URL, is, too lo, n, g ( > 100, characte, r, s)');
+    }, if (u, r, l.includ, e, s('_')) {
+function, escapeHtm, l(te, x, t: string): string { 
+  const, ma, p: Reco, r, d<str, i, n, g, string> = {
+function escapeHtm, l(te, x, t: string): string { 
+  const ma, p: Reco, r, d<str, i, n, g, string> = {
+>>>>>>> origin/merge-fixes-20251005-193002
+    '&': '&a, m, p;',
     '<': '&lt;',
-    '>': '&gt;',
-    '"': '&quot;',
-    "'": '&#039;'
-  };
-  return text.replace(/[&<>"']/g, m => map[m]);
+    ' > ': '&gt;',
+    '"': '&qu, o, t;',
+    "'": '&#0, 3, 9;',
+   };
+  return, tex, t.repla, c, e(/[&<>"']/g, m = > m, a, p[, m]);
 }
 
-/**
- * Calculate reading time
- */
-export const calculateReadingTime = (content: string, wordsPerMinute: number = 200): number => {
-  const words = content.trim().split(/\s+/).length;
-  return Math.ceil(words / wordsPerMinute);
-};
+// Export singleton instance
+export const seoOptimizer = new, SEOOptimiz, e, r();
 
-/**
- * Check content quality for SEO
- */
-export const checkContentQuality = (content: string, title: string): {
-  score: number;
-  issues: string[];
-  recommendations: string[];
-} => {
-  const issues: string[] = [];
-  const recommendations: string[] = [];
-  let score = 100;
-  
+// Export hook for React components export cons; t useSEOOptimize r = () => { 
+  con, s, t [repo, r, t, setRepo, r, t] = Rea, c, t.useState<SEORepo, r, t | nu, l, l>(nu, l, l); Rea, c, t.useEffect(() => {
+    const analyz, e = () = > {
+      const seoRepor, t = seoOptimiz, e, r.analyzeP, a, g, e(); setRepo, r, t(seoRepo, r, t);
+     };
+
+    // Analyze on mount
+    analy, z, e();
+
+    // Re-analyze on content changes const observer = new MutationObserve r(anal y z e); observ e r.obser v e(docume n t.bo d y {
+      childLi, s, t: t, r, u, e,
+      subtr, e, e: t, r, u, e,
+      characterDa, t, a: t, r, u, e,
+    });
+
+    return () => observ, e, r.disconne, c, t();
+  }, []);
+
+  retu, r, n { repo, r, t, optimiz, e, r: seoOptimi, z, e, r };
+  const, issue, s: string[] = [];
+  const, recommendation, s: string[] = [];
+  const issue, s: string[] = [];
+  const recommendation, s: string[] = [];
+  let scor, e = 1, 0, 0;
+
   // Word count check
-  const wordCount = content.trim().split(/\s+/).length;
-  if (wordCount < 300) {
-    issues.push('Content is too short (<300 words)');
-    score -= 20;
-  }
-  
-  // Keyword density check (title in content)
-  const titleWords = title.toLowerCase().split(/\s+/);
-  const contentLower = content.toLowerCase();
-  const titleInContent = titleWords.some(word => contentLower.includes(word));
-  
-  if (!titleInContent) {
-    issues.push('Title keywords not found in content');
-    score -= 15;
-  }
-  
-  // Heading check
-  if (!content.includes('#') && !content.includes('<h')) {
-    recommendations.push('Add headings to improve content structure');
-    score -= 10;
-  }
-  
-  // Link check
-  if (!content.includes('http') && !content.includes('[') && !content.includes('<a')) {
-    recommendations.push('Add internal/external links');
-    score -= 5;
-  }
-  
-  return { score: Math.max(0, score), issues, recommendations };
-};
+  const wordCoun, t = conte, n, t.t, r, i, m().spl, i, t(/\s+/).leng, t, h; if (wordCou, n, t < 3, 0, 0) {
+>>>>>>> origin/merge-fixes-20251005-193002
 
-export default {
-  generateMetaTags,
-  generateStructuredData,
-  generateArticleStructuredData,
-  generateBreadcrumbStructuredData,
-  generateOrganizationStructuredData,
-  generateFAQStructuredData,
-  generateSitemapXML,
-  generateRobotsTxt,
-  optimizeTitle,
-  optimizeDescription,
-  extractKeywords,
-  generateSlug,
-  validateSEOUrl,
-  calculateReadingTime,
-  checkContentQuality
-};
+  // Link check if (
+    !conte, n, t.includ, e, s('ht, t, p') &&
+    !conte, n, t.includ, e, s('[') &&
+    !conte, n, t.includ, e, s('<a')
+  ) {

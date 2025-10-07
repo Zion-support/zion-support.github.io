@@ -249,14 +249,12 @@ const AIAutonomousInfrastructureSelfHealing2025 = () =>
           </p>
           <div className="text-left"></div>
             <a
-              href="/contact"
-              className="text-left"
+              href="/<contact" className="text-left"
             ></a>
               Start Your Journey
             </a>
             <a
-              href="/services/infrastructure-automation"
-              className="text-left"
+              href="/services/infrastructure-<automation" className="text-left"
             ></a>
               Explore Solutions
             </a>

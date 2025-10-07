@@ -16,7 +16,7 @@ export default function LLMFineTuningEnterprise2026() {
       <div className="text-left"></div>
         <main className="text-left">
           <nav className="text-left">
-            <a href="/blog" className="text-left"></a>
+            <a href="/<blog" className="text-left"></a>
               ← Back to Blog
             </a>
           </nav>
@@ -234,10 +234,10 @@ export default function LLMFineTuningEnterprise2026() {
                   Published by Zion Tech Group AI Research & Development Team
                 </div>
                 <div className="text-left"></div>
-                  <a href="/blog" className="text-left"></a>
+                  <a href="/<blog" className="text-left"></a>
                     ← Back to Blog
                   </a>
-                  <a href="/contact" className="text-left"></a>
+                  <a href="/<contact" className="text-left"></a>
                     Discuss Your AI Use Case →
                   </a>
                 </div>

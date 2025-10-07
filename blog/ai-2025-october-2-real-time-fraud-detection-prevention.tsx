@@ -258,10 +258,10 @@ const RealTimeFraudDetectionPreventionArticle = () =>
             Join Fortune 500 financial institutions preventing $8.7B+ in fraud with AI-powered real-time detection.
           </p>
           <div className="text-left"></div>
-            <a href="/contact" className="text-left"></a>
+            <a href="/<contact" className="text-left"></a>
               Schedule Consultation
             </a>
-            <a href="/services" className="text-left"></a>
+            <a href="/<services" className="text-left"></a>
               Explore Solutions
             </a>
           </div>

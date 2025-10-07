@@ -1,0 +1,189 @@
+{
+  "successful": [
+    {
+      "branch": "cursor/fix-errors-and-merge-to-main-100d",
+      "success": true,
+      "method": "direct"
+    },
+    {
+      "branch": "cursor/fix-errors-and-merge-to-main-2f1b",
+      "success": true,
+      "method": "direct"
+    },
+    {
+      "branch": "cursor/fix-errors-and-merge-to-main-4800",
+      "success": true,
+      "method": "direct"
+    },
+    {
+      "branch": "cursor/fix-errors-and-merge-to-main-494d",
+      "success": true,
+      "method": "direct"
+    },
+    {
+      "branch": "cursor/fix-errors-and-merge-to-main-5696",
+      "success": true,
+      "method": "direct"
+    },
+    {
+      "branch": "cursor/fix-errors-and-merge-to-main-6ee3",
+      "success": true,
+      "method": "direct"
+    },
+    {
+      "branch": "cursor/fix-errors-and-merge-to-main-7318",
+      "success": true,
+      "method": "direct"
+    },
+    {
+      "branch": "cursor/fix-errors-and-merge-to-main-97a6",
+      "success": true,
+      "method": "direct"
+    },
+    {
+      "branch": "cursor/fix-errors-and-merge-to-main-9bdd",
+      "success": true,
+      "method": "direct"
+    },
+    {
+      "branch": "cursor/fix-errors-and-merge-to-main-9caa",
+      "success": true,
+      "method": "direct"
+    },
+    {
+      "branch": "cursor/fix-errors-and-merge-to-main-9f74",
+      "success": true,
+      "method": "direct"
+    },
+    {
+      "branch": "cursor/fix-errors-and-merge-to-main-a0d2",
+      "success": true,
+      "method": "direct"
+    },
+    {
+      "branch": "cursor/fix-errors-and-merge-to-main-b8f9",
+      "success": true,
+      "method": "direct"
+    },
+    {
+      "branch": "cursor/fix-errors-and-merge-to-main-cefe",
+      "success": true,
+      "method": "direct"
+    },
+    {
+      "branch": "cursor/fix-errors-and-merge-to-main-d0f7",
+      "success": true,
+      "method": "direct"
+    },
+    {
+      "branch": "cursor/fix-errors-and-merge-to-main-dc65",
+      "success": true,
+      "method": "direct"
+    },
+    {
+      "branch": "cursor/fix-errors-and-merge-to-main-f4fa",
+      "success": true,
+      "method": "direct"
+    },
+    {
+      "branch": "cursor/fix-errors-and-merge-to-main-fbf8",
+      "success": true,
+      "method": "direct"
+    },
+    {
+      "branch": "cursor/fix-errors-and-merge-to-main-fcbc",
+      "success": true,
+      "method": "direct"
+    },
+    {
+      "branch": "cursor/fix-errors-and-merge-to-main-3b04",
+      "success": true,
+      "method": "direct"
+    },
+    {
+      "branch": "cursor/fix-errors-and-merge-to-main-b122",
+      "success": true,
+      "method": "direct"
+    },
+    {
+      "branch": "cursor/fix-errors-and-merge-to-main-ffaa",
+      "success": true,
+      "method": "direct"
+    },
+    {
+      "branch": "cursor/fix-errors-and-merge-to-main-ffab",
+      "success": true,
+      "method": "direct"
+    },
+    {
+      "branch": "cursor/fix-errors-and-merge-to-main-ffee",
+      "success": true,
+      "method": "direct"
+    },
+    {
+      "branch": "cursor/fix-errors-and-merge-to-main-dc0f",
+      "success": true,
+      "method": "direct"
+    },
+    {
+      "branch": "add-new-2026-content",
+      "success": true,
+      "method": "direct"
+    },
+    {
+      "branch": "ai-2027-content-integration",
+      "success": true,
+      "method": "direct"
+    },
+    {
+      "branch": "ai-dashboard-improvements",
+      "success": true,
+      "method": "direct"
+    },
+    {
+      "branch": "ai-dashboard-improvements-merged",
+      "success": true,
+      "method": "direct"
+    },
+    {
+      "branch": "fix-typescript-errors-and-build",
+      "success": true,
+      "method": "direct"
+    },
+    {
+      "branch": "merge-pr-25212",
+      "success": true,
+      "method": "direct"
+    },
+    {
+      "branch": "resolve-pr-25168",
+      "success": true,
+      "method": "direct"
+    },
+    {
+      "branch": "temp-merge-branch",
+      "success": true,
+      "method": "direct"
+    },
+    {
+      "branch": "auto-merge-main",
+      "success": true,
+      "method": "direct"
+    }
+  ],
+  "failed": [],
+  "summary": {
+    "total": 34,
+    "successful": 34,
+    "failed": 0,
+    "methods": {
+      "direct": 34,
+      "theirs": 0,
+      "ours": 0,
+      "already_merged": 0,
+      "not_found": 0,
+      "failed": 0
+    }
+  },
+  "timestamp": "2025-10-05T11:22:16.100Z"
+}

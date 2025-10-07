@@ -1,189 +1,63 @@
 /**
  * SEO Enhancer Utility
- * Improves search engine optimization and social sharing
+ * Improves search engine optimization and social shari n g
  */
 
-export interface SEOConfig {
+export interface SEOConfig { 
   title: string;
   description: string;
-  keywords?: string[];
+  keywor, d, s?: string[];
   author?: string;
-  ogImage?: string;
-  canonical?: string;
-  publishDate?: string;
-  modifiedDate?: string;
-  type?: 'website' | 'article' | 'product';
-  locale?: string;
-}
+  ogIma, g, e?: string;
+  canonic, a, l?: string;
+  publishDa, t, e?: string;
+  modifiedDa, t, e?: string;
+>>>>>>> origin/merge-fixes-20251005-193002
+export function generateMetaTags(conf, i, g: SEOConf, i, g): Reco, r, d<str, i, n, g, string> { 
+  const met, a: Reco, r, d<str, i, n, g, string > = {
+    // Basic meta title: conf i g.ti t l e 
+    description: conf, i, g.descript, i, o, n,
 
-/**
- * Generate comprehensive meta tags for SEO
- */
-export function generateMetaTags(config: SEOConfig): Record<string, string> {
-  const meta: Record<string, string> = {
-    // Basic meta
-    title: config.title,
-    description: config.description,
-    
-    // Open Graph
-    'og:title': config.title,
-    'og:description': config.description,
-    'og:type': config.type || 'website',
-    'og:locale': config.locale || 'en_US',
-    
-    // Twitter Card
-    'twitter:card': 'summary_large_image',
-    'twitter:title': config.title,
-    'twitter:description': config.description,
-  };
+    // Open Grap h
+    'og: title': conf, i, g.ti, t, l, e,
+    'og: description': conf, i, g.descript, i, o, n,
+    'og: ty, p, e': conf, i, g.ty, p, e || 'webs, i, t, e',
+    'og: loca, l, e': conf, i, g.loca, l, e || 'en, _, U, S',
 
-  if (config.keywords && config.keywords.length > 0) {
-    meta.keywords = config.keywords.join(', ');
-  }
+    // Twitter Car d
+    'twitt, e, r: ca, r, d': 'summary_large_im, a, g, e',
+    'twitt, e, r: title': conf, i, g.ti, t, l, e,
+    'twitt, e, r: description': conf, i, g.descript, i, o, n,
+   };
 
-  if (config.author) {
-    meta.author = config.author;
-    meta['article:author'] = config.author;
-  }
+  if() { me, t, a.keywor, d, s = conf, i, g.keywor, d, s.j, o, i, n(', ');
+   }, if (conf, i, g.author) {
+    me, t, a.author = conf, i, g.author; me, t, a['artic, l, e: author'] = conf, i, g.au, t, h, o, r;
+>>>>>>> origin/merge-fixes-20251005-193002
 
-  if (config.ogImage) {
-    meta['og:image'] = config.ogImage;
-    meta['twitter:image'] = config.ogImage;
-  }
+  if() { me, t, a['artic, l, e: published_ti, m, e'] = conf, i, g.publishD, a, t, e;
+   }, if (conf, i, g.modifiedDa, t, e) {
+    me, t, a['artic, l, e: modified_ti, m, e'] = conf, i, g.modifiedD, a, t, e;
+>>>>>>> origin/merge-fixes-20251005-193002
+export interface SitemapEntry { 
+  u, r, l: string;
+  lastm, o, d?: string;
+  changefr, e, q?:
+    | 'alwa, y, s'
+    | 'hour, l, y'
+    | 'dai, l, y'
+    | 'week, l, y'
+    | 'month, l, y'
+    | 'year, l, y'
+    | 'nev, e, r';
+  priori, t, y ?  : num, b, e, r;
+ }
 
-  if (config.canonical) {
-    meta.canonical = config.canonical;
-    meta['og:url'] = config.canonical;
-  }
+export function generateSitemapEntry(ent, r, y: SitemapEnt, r, y): string {
+  con, s, t { ur, l, lastm, o, d, changefr, e, q, priori, t, y } = ent, r, y;
 
-  if (config.publishDate) {
-    meta['article:published_time'] = config.publishDate;
-  }
+  retu, r, n `
 
-  if (config.modifiedDate) {
-    meta['article:modified_time'] = config.modifiedDate;
-  }
+  // Truncate at last word const lastSpace = truncat e d.lastInde x O f(' '); return truncate d.substring(0 lastSpa c e) + '...';
 
-  return meta;
-}
-
-/**
- * Generate JSON-LD structured data
- */
-export function generateStructuredData(config: SEOConfig): object {
-  const structuredData: any = {
-    '@context': 'https://schema.org',
-    '@type': config.type === 'article' ? 'Article' : 'WebPage',
-    headline: config.title,
-    description: config.description,
-    author: {
-      '@type': 'Organization',
-      name: config.author || 'Zion Tech Group',
-    },
-  };
-
-  if (config.publishDate) {
-    structuredData.datePublished = config.publishDate;
-  }
-
-  if (config.modifiedDate) {
-    structuredData.dateModified = config.modifiedDate;
-  }
-
-  if (config.ogImage) {
-    structuredData.image = config.ogImage;
-  }
-
-  if (config.canonical) {
-    structuredData.url = config.canonical;
-  }
-
-  return structuredData;
-}
-
-/**
- * Calculate reading time from content
- */
-export function calculateReadingTime(content: string, wordsPerMinute: number = 200): string {
-  const words = content.trim().split(/\s+/).length;
-  const minutes = Math.ceil(words / wordsPerMinute);
-  return `${minutes} min read`;
-}
-
-/**
- * Generate sitemap entry
- */
-export interface SitemapEntry {
-  url: string;
-  lastmod?: string;
-  changefreq?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
-  priority?: number;
-}
-
-export function generateSitemapEntry(entry: SitemapEntry): string {
-  const { url, lastmod, changefreq, priority } = entry;
-  
-  return `
-  <url>
-    <loc>${url}</loc>
-    ${lastmod ? `<lastmod>${lastmod}</lastmod>` : ''}
-    ${changefreq ? `<changefreq>${changefreq}</changefreq>` : ''}
-    ${priority !== undefined ? `<priority>${priority}</priority>` : ''}
-  </url>`;
-}
-
-/**
- * Extract keywords from content
- */
-export function extractKeywords(content: string, maxKeywords: number = 20): string[] {
-  // Remove HTML tags
-  const text = content.replace(/<[^>]*>/g, ' ');
-  
-  // Common words to exclude
-  const stopWords = new Set([
-    'the', 'a', 'an', 'and', 'or', 'but', 'in', 'on', 'at', 'to', 'for',
-    'of', 'with', 'by', 'from', 'as', 'is', 'was', 'are', 'were', 'been',
-    'be', 'have', 'has', 'had', 'do', 'does', 'did', 'will', 'would', 'could',
-    'should', 'may', 'might', 'must', 'can', 'this', 'that', 'these', 'those',
-  ]);
-
-  // Extract words
-  const words = text
-    .toLowerCase()
-    .replace(/[^\w\s]/g, ' ')
-    .split(/\s+/)
-    .filter(word => word.length > 3 && !stopWords.has(word));
-
-  // Count frequency
-  const frequency = new Map<string, number>();
-  words.forEach(word => {
-    frequency.set(word, (frequency.get(word) || 0) + 1);
-  });
-
-  // Sort by frequency and take top keywords
-  return Array.from(frequency.entries())
-    .sort((a, b) => b[1] - a[1])
-    .slice(0, maxKeywords)
-    .map(([word]) => word);
-}
-
-/**
- * Optimize meta description length
- */
-export function optimizeDescription(description: string, maxLength: number = 160): string {
-  if (description.length <= maxLength) {
-    return description;
-  }
-
-  // Truncate at last complete sentence before maxLength
-  const truncated = description.substring(0, maxLength);
-  const lastSentence = truncated.lastIndexOf('.');
-  
-  if (lastSentence > maxLength * 0.7) {
-    return truncated.substring(0, lastSentence + 1);
-  }
-
-  // Truncate at last word
-  const lastSpace = truncated.lastIndexOf(' ');
-  return truncated.substring(0, lastSpace) + '...';
-}
+  // Truncate at last word const lastSpace = truncat e d.lastInde x O f(' '); return truncate d.substring(0 lastSpa c e) + '...';

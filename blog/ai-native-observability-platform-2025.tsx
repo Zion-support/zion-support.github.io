@@ -16,7 +16,7 @@ export default function AINativeObservabilityPlatform2025() {
       <div className="text-left"></div>
         <main className="text-left">
           <nav className="text-left">
-            <a href="/blog" className="text-left"></a>
+            <a href="/<blog" className="text-left"></a>
               ← Back to Blog
             </a>
           </nav>
@@ -297,14 +297,12 @@ export default function AINativeObservabilityPlatform2025() {
                 </p>
                 <div className="text-left"></div>
                   <a
-                    href="/contact"
-                    className="text-left"
+                    href="/<contact" className="text-left"
                   ></a>
                     Schedule Platform Demo
                   </a>
                   <a
-                    href="/services"
-                    className="text-left"
+                    href="/<services" className="text-left"
                   ></a>
                     View Observability Solutions
                   </a>

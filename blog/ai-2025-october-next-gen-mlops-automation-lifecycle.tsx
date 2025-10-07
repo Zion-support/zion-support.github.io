@@ -20,7 +20,7 @@ export default function NextGenMLOpsAutomationLifecycle2025() {
       <div className="text-left"></div>
         <main className="text-left">
           <nav className="text-left">
-            <a href="/blog" className="text-left"></a>
+            <a href="/<blog" className="text-left"></a>
               ← Back to Blog
             </a>
           </nav>
@@ -243,10 +243,10 @@ export default function NextGenMLOpsAutomationLifecycle2025() {
                   measurable cost savings.
                 </p>
                 <div className="text-left"></div>
-                  <a href="/contact" className="text-left"></a>
+                  <a href="/<contact" className="text-left"></a>
                     Start Your MLOps Journey
                   </a>
-                  <a href="/services" className="text-left"></a>
+                  <a href="/<services" className="text-left"></a>
                     Explore Solutions
                   </a>
                 </div>

@@ -20,7 +20,7 @@ export default function MultiModalAIIntegration2025() {
       <div className="text-left"></div>
         <main className="text-left">
           <nav className="text-left">
-            <a href="/blog" className="text-left"></a>
+            <a href="/<blog" className="text-left"></a>
               ← Back to Blog
             </a>
           </nav>
@@ -325,14 +325,12 @@ export default function MultiModalAIIntegration2025() {
                 </p>
                 <div className="text-left"></div>
                   <a
-                    href="/contact"
-                    className="text-left"
+                    href="/<contact" className="text-left"
                   ></a>
                     Schedule Multi-Modal AI Consultation
                   </a>
                   <a
-                    href="/services/ai-platform-architecture"
-                    className="text-left"
+                    href="/services/ai-platform-<architecture" className="text-left"
                   ></a>
                     Explore AI Platform Services
                   </a>

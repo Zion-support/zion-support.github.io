@@ -16,7 +16,7 @@ export default function LLMFineTuningEnterprise2025() {
       <div className="text-left"></div>
         <main className="text-left">
           <nav className="text-left">
-            <a href="/blog" className="text-left"></a>
+            <a href="/<blog" className="text-left"></a>
               ← Back to Blog
             </a>
           </nav>
@@ -249,10 +249,10 @@ export default function LLMFineTuningEnterprise2025() {
                     you don't pay.
                   </p>
                   <div className="text-left"></div>
-                    <a href="tel: +13024640950" className="text-left"></a>
+                    <a href="tel: +<13024640950" className="text-left"></a>
                       Call +1 302 464 0950
                     </a>
-                    <a href="mailto:kleber@ziontechgroup.com" className="text-left"></a>
+                    <a href="mailto:kleber@ziontechgroup.<com" className="text-left"></a>
                       Request Proposal
                     </a>
                   </div>
@@ -265,10 +265,10 @@ export default function LLMFineTuningEnterprise2025() {
                   Written by Zion Tech Group AI Systems
                 </div>
                 <div className="text-left"></div>
-                  <a href="/blog" className="text-left"></a>
+                  <a href="/<blog" className="text-left"></a>
                     ← Back to Blog
                   </a>
-                  <a href="/contact" className="text-left"></a>
+                  <a href="/<contact" className="text-left"></a>
                     Get in Touch
                   </a>
                 </div>

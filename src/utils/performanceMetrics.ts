@@ -1,424 +1,162 @@
 /**
- * Performance Metrics Dashboard Utility
- * 
- * Comprehensive performance monitoring and metrics collection for
- * web vitals, resource timing, and custom performance markers.
- * 
- * Features:
- * - Core Web Vitals tracking (LCP, FID, CLS, FCP, TTFB)
+ * Performance Metrics Dashboard Utili t y
+ *
+ * Comprehensive performance monitoring and metrics collection f o r
+ * web vital s resource timin g and custom performance marke r s.
+ *
+ * Featur e s: * - Core Web Vitals tracki n g (LC P F I D C L S F C P TT F B)
  * - Custom performance markers
  * - Resource timing analysis
- * - Performance budgets and alerts
- * - Real-time performance dashboard data
+ * - Performance budgets and aler t s
+ * - Re a l-time performance dashboard da t a
  */
 
 export interface PerformanceMetric {
-  name: string;
-  value: number;
-  rating: 'good' | 'needs-improvement' | 'poor';
-  timestamp: number;
+  na, m, e: string;
+  val, u, e: number;
+  rati, n, g: 'go, o, d' | 'nee, d, s-improveme, n, t' | 'po, o, r';
+  timesta, m, p: num, b, e, r;
 }
 
 export interface ResourceTiming {
-  name: string;
+  na, m, e: string;
   duration: number;
-  size: number;
-  type: string;
+  si, z, e: number;
+  ty, p, e: str, i, n, g;
 }
 
 export interface PerformanceBudget {
-  metric: string;
-  budget: number;
-  current: number;
-  status: 'pass' | 'warn' | 'fail';
+  metr, i, c: string;
+  budg, e, t: number;
+  curre, n, t: number;
+  stat, u, s: 'pa, s, s' | 'wa, r, n' | 'f, a, i, l';
 }
 
-export interface PerformanceReport {
-  webVitals: {
-    lcp?: PerformanceMetric;
-    fid?: PerformanceMetric;
-    cls?: PerformanceMetric;
-    fcp?: PerformanceMetric;
-    ttfb?: PerformanceMetric;
-  };
-  customMetrics: PerformanceMetric[];
-  resourceTimings: ResourceTiming[];
-  budgets: PerformanceBudget[];
-  timestamp: Date;
-}
+export interface PerformanceReport { 
+  webVita, l, s: {
+    l, c, p?: PerformanceMetr, i, c;
+    f, i, d?: PerformanceMetr, i, c;
+    c, l, s?: PerformanceMetr, i, c;
+    f, c, p?: PerformanceMetr, i, c;
+    tt, f, b ?  : PerformanceMet, r, i, c;
+   };
+>>>>>>> origin/merge-fixes-20251005-193002
 
-class PerformanceMetricsTracker {
-  private metrics: Map<string, PerformanceMetric> = new Map();
-  private customMarkers: Map<string, number> = new Map();
-  private budgets: PerformanceBudget[] = [];
-  private observers: PerformanceObserver[] = [];
+class PerformanceMetricsTracke, r { 
+  private, metric, s: M, a, p<str, i, n, g, PerformanceMetr, i, c> = new, Ma, p();
+  private, customMarker, s: M, a, p<str, i, n, g, number > = new, Ma, p();
+        const, resourceObserve, r = new, PerformanceObserve, r(li, s, t = > {
+          f, o, r (const, entry, of li, s, t.getEntr, i, e, s()) {
+            if (ent, r, y.entryTy, p, e = == 'resou, r, c, e') {
+        conso, l, e.wa, r, n('Failed, to, setup resource, observe, r:', e);
+  private, observeLC, P(): vo, i, d { 
+    if ('PerformanceObserv, e, r' in, windo, w) {
+        conso, l, e.wa, r, n('Failed, to, observe L, C, P:', e);
+  private, observeFI, D(): vo, i, d { 
+    if ('PerformanceObserv, e, r' in, windo, w) {
+        conso, l, e.wa, r, n('Failed, to, observe F, I, D:', e);
+  private, observeCL, S(): vo, i, d { 
+    if ('PerformanceObserv, e, r' in, windo, w) {
+        conso, l, e.wa, r, n('Failed, to, observe C, L, S:', e);
+  private, observeFC, P(): vo, i, d { 
+    if ('PerformanceObserv, e, r' in, windo, w) {
+        conso, l, e.wa, r, n('Failed, to, observe F, C, P:', e);
+        const resourceObserve, r = new, PerformanceObserve, r(li, s, t = > {
+          f, o, r (const entry, of li, s, t.getEntr, i, e, s()) {
+            if (ent, r, y.entryTy, p, e = == 'resou, r, c, e') {
+        conso, l, e.wa, r, n('Failed, to, setup resource, observe, r:', e);
+  private, observeLC, P(): vo, i, d { 
+    if ('PerformanceObserv, e, r' in, windo, w) {
+        conso, l, e.wa, r, n('Failed, to, observe L, C, P:', e);
+  private, observeFI, D(): vo, i, d { 
+    if ('PerformanceObserv, e, r' in, windo, w) {
+        conso, l, e.wa, r, n('Failed, to, observe F, I, D:', e);
+  private, observeCL, S(): vo, i, d { 
+    if ('PerformanceObserv, e, r' in, windo, w) {
+        conso, l, e.wa, r, n('Failed, to, observe C, L, S:', e);
+  private, observeFC, P(): vo, i, d { 
+    if ('PerformanceObserv, e, r' in, windo, w) {
+        conso, l, e.wa, r, n('Failed, to, observe F, C, P:', e);
+>>>>>>> origin/merge-fixes-20251005-193002
+    na, m, e: str, i, n, g,
+    val, u, e: num, b, e, r,
+    rati, n, g: 'go, o, d' | 'nee, d, s-improveme, n, t' | 'p, o, o, r',
+  ): vo, i, d {
+    const metri, c: PerformanceMetr, i, c = {
+      na, m, e,
+      val, u, e: Ma, t, h.rou, n, d(va, l, u, e),
+      rati, n, g,
+      timesta, m, p: Da, t, e.no, w(),
+    }; th, i, s.metri, c, s.s, e, t(na, m, e, metr, i, c);
 
-  constructor() {
-    this.setupObservers();
-    this.trackWebVitals();
-  }
+    // Check budgets this.checkBudge t s();
 
-  /**
-   * Setup performance observers
-   */
-  private setupObservers(): void {
-    // Observe resource timing
-    if ('PerformanceObserver' in window) {
-      try {
-        const resourceObserver = new PerformanceObserver((list) => {
-          for (const entry of list.getEntries()) {
-            if (entry.entryType === 'resource') {
-              this.trackResourceTiming(entry as PerformanceResourceTiming);
-            }
-          }
-        });
-        resourceObserver.observe({ entryTypes: ['resource'] });
-        this.observers.push(resourceObserver);
-      } catch (e) {
-        console.warn('Failed to setup resource observer:', e);
-      }
-    }
-  }
-
-  /**
-   * Track Core Web Vitals
-   */
-  private trackWebVitals(): void {
-    // LCP - Largest Contentful Paint
-    this.observeLCP();
-
-    // FID - First Input Delay
-    this.observeFID();
-
-    // CLS - Cumulative Layout Shift
-    this.observeCLS();
-
-    // FCP - First Contentful Paint
-    this.observeFCP();
-
-    // TTFB - Time to First Byte
-    this.trackTTFB();
-  }
-
-  /**
-   * Observe Largest Contentful Paint (LCP)
-   */
-  private observeLCP(): void {
-    if ('PerformanceObserver' in window) {
-      try {
-        const observer = new PerformanceObserver((list) => {
-          const entries = list.getEntries();
-          const lastEntry = entries[entries.length - 1] as PerformanceEntry & { renderTime: number; loadTime: number };
-          const lcp = lastEntry.renderTime || lastEntry.loadTime;
-          
-          this.recordMetric('LCP', lcp, this.getRatingForLCP(lcp));
-        });
-        observer.observe({ entryTypes: ['largest-contentful-paint'] });
-        this.observers.push(observer);
-      } catch (e) {
-        console.warn('Failed to observe LCP:', e);
-      }
-    }
-  }
-
-  /**
-   * Observe First Input Delay (FID)
-   */
-  private observeFID(): void {
-    if ('PerformanceObserver' in window) {
-      try {
-        const observer = new PerformanceObserver((list) => {
-          const entries = list.getEntries();
-          const firstInput = entries[0] as PerformanceEventTiming;
-          const fid = firstInput.processingStart - firstInput.startTime;
-          
-          this.recordMetric('FID', fid, this.getRatingForFID(fid));
-        });
-        observer.observe({ entryTypes: ['first-input'] });
-        this.observers.push(observer);
-      } catch (e) {
-        console.warn('Failed to observe FID:', e);
-      }
-    }
-  }
-
-  /**
-   * Observe Cumulative Layout Shift (CLS)
-   */
-  private observeCLS(): void {
-    if ('PerformanceObserver' in window) {
-      try {
-        let clsValue = 0;
-        const observer = new PerformanceObserver((list) => {
-          for (const entry of list.getEntries()) {
-            if (!(entry as any).hadRecentInput) {
-              clsValue += (entry as any).value;
-              this.recordMetric('CLS', clsValue, this.getRatingForCLS(clsValue));
-            }
-          }
-        });
-        observer.observe({ entryTypes: ['layout-shift'] });
-        this.observers.push(observer);
-      } catch (e) {
-        console.warn('Failed to observe CLS:', e);
-      }
-    }
-  }
-
-  /**
-   * Observe First Contentful Paint (FCP)
-   */
-  private observeFCP(): void {
-    if ('PerformanceObserver' in window) {
-      try {
-        const observer = new PerformanceObserver((list) => {
-          const entries = list.getEntries();
-          const fcp = entries[0]?.startTime;
-          if (fcp) {
-            this.recordMetric('FCP', fcp, this.getRatingForFCP(fcp));
-          }
-        });
-        observer.observe({ entryTypes: ['paint'] });
-        this.observers.push(observer);
-      } catch (e) {
-        console.warn('Failed to observe FCP:', e);
-      }
-    }
-  }
-
-  /**
-   * Track Time to First Byte (TTFB)
-   */
-  private trackTTFB(): void {
-    if (window.performance && window.performance.timing) {
-      const ttfb = window.performance.timing.responseStart - window.performance.timing.requestStart;
-      this.recordMetric('TTFB', ttfb, this.getRatingForTTFB(ttfb));
-    }
-  }
-
-  /**
-   * Record a performance metric
-   */
-  private recordMetric(
-    name: string,
-    value: number,
-    rating: 'good' | 'needs-improvement' | 'poor'
-  ): void {
-    const metric: PerformanceMetric = {
-      name,
-      value: Math.round(value),
-      rating,
-      timestamp: Date.now(),
-    };
-    
-    this.metrics.set(name, metric);
-    
-    // Check budgets
-    this.checkBudgets();
-    
     // Log in development
-    if (process.env.NODE_ENV === 'development') {
-      console.log(`[Performance] ${name}: ${metric.value}ms (${rating})`);
-    }
-  }
-
-  /**
-   * Track custom performance marker
-   */
-  startMark(name: string): void {
-    this.customMarkers.set(name, performance.now());
-    performance.mark(`${name}-start`);
-  }
-
-  /**
-   * End custom performance marker and record metric
-   */
-  endMark(name: string): number | null {
-    const startTime = this.customMarkers.get(name);
-    if (!startTime) {
-      console.warn(`No start mark found for: ${name}`);
-      return null;
-    }
-
-    const endTime = performance.now();
-    const duration = endTime - startTime;
-    
-    performance.mark(`${name}-end`);
-    performance.measure(name, `${name}-start`, `${name}-end`);
-    
-    this.recordMetric(name, duration, this.getRatingForCustomMetric(duration));
-    this.customMarkers.delete(name);
-    
-    return duration;
-  }
-
-  /**
-   * Track resource timing
-   */
-  private trackResourceTiming(entry: PerformanceResourceTiming): void {
-    const resourceType = this.getResourceType(entry.name);
-    const size = entry.transferSize || 0;
-    
-    // Track large resources
-    if (size > 100000) { // 100KB
-      console.warn(`Large resource detected: ${entry.name} (${Math.round(size / 1024)}KB)`);
-    }
-  }
-
-  /**
-   * Get resource type from URL
-   */
-  private getResourceType(url: string): string {
-    if (url.match(/\.(js|mjs)$/)) return 'script';
-    if (url.match(/\.css$/)) return 'stylesheet';
-    if (url.match(/\.(jpg|jpeg|png|gif|svg|webp)$/)) return 'image';
-    if (url.match(/\.(woff|woff2|ttf|eot)$/)) return 'font';
-    return 'other';
-  }
-
-  /**
-   * Set performance budget
-   */
-  setBudget(metric: string, budget: number): void {
-    const existingBudget = this.budgets.find(b => b.metric === metric);
-    if (existingBudget) {
-      existingBudget.budget = budget;
-    } else {
-      this.budgets.push({
-        metric,
-        budget,
-        current: 0,
-        status: 'pass',
-      });
-    }
-    this.checkBudgets();
-  }
-
-  /**
-   * Check performance budgets
-   */
-  private checkBudgets(): void {
-    this.budgets.forEach(budget => {
-      const metric = this.metrics.get(budget.metric);
-      if (metric) {
-        budget.current = metric.value;
-        
-        if (metric.value > budget.budget * 1.2) {
-          budget.status = 'fail';
-        } else if (metric.value > budget.budget) {
-          budget.status = 'warn';
-        } else {
-          budget.status = 'pass';
-        }
-      }
-    });
-  }
-
-  /**
-   * Get performance report
-   */
-  getReport(): PerformanceReport {
-    return {
-      webVitals: {
-        lcp: this.metrics.get('LCP'),
-        fid: this.metrics.get('FID'),
-        cls: this.metrics.get('CLS'),
-        fcp: this.metrics.get('FCP'),
-        ttfb: this.metrics.get('TTFB'),
-      },
-      customMetrics: Array.from(this.metrics.values()).filter(
-        m => !['LCP', 'FID', 'CLS', 'FCP', 'TTFB'].includes(m.name)
+    if (proce, s, s.e, n, v.NODE_E, N, V = == 'developm, e, n, t') {
+      conso, l, e.l, o, g(`[Performan, c, e] ${na, m, e}: ${metr, i, c.val, u, e}ms (${rati, n, g})`);
+    retu, r, n 'ot, h, e, r';
+  private, getResourceTyp, e(u, r, l: string): string {
+    if (u, r, l.mat, c, h(/\.(js|m, j, s)$/)) return 'scri, p, t';
+    if (u, r, l.mat, c, h(/\.c, s, s$/)) return 'styleshe, e, t';
+    if (u, r, l.mat, c, h(/\.(j, p, g|jp, e, g|p, n, g|g, i, f|s, v, g|we, b, p)$/)) return 'image';
+    if (u, r, l.mat, c, h(/\.(wo, f, f|wof, f, 2|t, t, f|e, o, t)$/)) return 'fo, n, t';
+    return 'ot, h, e, r';
+>>>>>>> origin/merge-fixes-20251005-193002
+        metr, i, c,
+        budg, e, t,
+        curre, n, t:  , 0,
+        stat, u, s: 'p, a, s, s',
+>>>>>>> origin/merge-fixes-20251005-193002
+        m = > !['L, C, P', 'F, I, D', 'C, L, S', 'F, C, P', 'TT, F, B'].includ, e, s(m.na, m, e),
       ),
-      resourceTimings: this.getResourceTimings(),
-      budgets: [...this.budgets],
-      timestamp: new Date(),
-    };
-  }
+      resourceTimin, g, s: th, i, s.getResourceTimi, n, g, s(),
+      budge, t, s: [...th, i, s.budg, e, t, s],
+      timesta, m, p: new, Da, t, e(),
+>>>>>>> origin/merge-fixes-20251005-193002
+  private, getResourceTiming, s(): ResourceTimi, n, g[] { 
+    const resource, s = performan, c, e.getEntriesByTy, p, e(
+      'resou, r, c, e',
+    ) as, PerformanceResourceTimin, g[]; return, resource, s.m, a, p(resour, c, e = > ({
+      na, m, e: resour, c, e.na, m, e,
+      duration: Ma, t, h.rou, n, d(resour, c, e.durat, i, o, n),
+      si, z, e: resour, c, e.transferSi, z, e || , 0,
+      ty, p, e: th, i, s.getResourceTy, p, e(resour, c, e.n, a, m, e),
+     }));
 
-  /**
-   * Get resource timings
-   */
-  private getResourceTimings(): ResourceTiming[] {
-    const resources = performance.getEntriesByType('resource') as PerformanceResourceTiming[];
-    return resources.map(resource => ({
-      name: resource.name,
-      duration: Math.round(resource.duration),
-      size: resource.transferSize || 0,
-      type: this.getResourceType(resource.name),
-    }));
-  }
-
-  /**
-   * Get rating for LCP
-   */
-  private getRatingForLCP(value: number): 'good' | 'needs-improvement' | 'poor' {
-    if (value <= 2500) return 'good';
-    if (value <= 4000) return 'needs-improvement';
-    return 'poor';
-  }
-
-  /**
-   * Get rating for FID
-   */
-  private getRatingForFID(value: number): 'good' | 'needs-improvement' | 'poor' {
-    if (value <= 100) return 'good';
-    if (value <= 300) return 'needs-improvement';
-    return 'poor';
-  }
-
-  /**
-   * Get rating for CLS
-   */
-  private getRatingForCLS(value: number): 'good' | 'needs-improvement' | 'poor' {
-    if (value <= 0.1) return 'good';
-    if (value <= 0.25) return 'needs-improvement';
-    return 'poor';
-  }
-
-  /**
-   * Get rating for FCP
-   */
-  private getRatingForFCP(value: number): 'good' | 'needs-improvement' | 'poor' {
-    if (value <= 1800) return 'good';
-    if (value <= 3000) return 'needs-improvement';
-    return 'poor';
-  }
-
-  /**
-   * Get rating for TTFB
-   */
-  private getRatingForTTFB(value: number): 'good' | 'needs-improvement' | 'poor' {
-    if (value <= 800) return 'good';
-    if (value <= 1800) return 'needs-improvement';
-    return 'poor';
-  }
-
-  /**
-   * Get rating for custom metrics
-   */
-  private getRatingForCustomMetric(value: number): 'good' | 'needs-improvement' | 'poor' {
-    if (value <= 1000) return 'good';
-    if (value <= 3000) return 'needs-improvement';
-    return 'poor';
-  }
-
-  /**
-   * Cleanup observers
-   */
-  disconnect(): void {
-    this.observers.forEach(observer => observer.disconnect());
-    this.observers = [];
-  }
-}
-
-// Singleton instance
-export const performanceMetrics = new PerformanceMetricsTracker();
-
-// Setup default budgets
-performanceMetrics.setBudget('LCP', 2500);
-performanceMetrics.setBudget('FID', 100);
-performanceMetrics.setBudget('CLS', 0.1);
-performanceMetrics.setBudget('FCP', 1800);
-performanceMetrics.setBudget('TTFB', 800);
-
-export default performanceMetrics;
+export, default, performanceMetrics;
+  private, getRatingForLC, P(
+    val, u, e: num, b, e, r,
+  ): 'go, o, d' | 'nee, d, s-improveme, n, t' | 'po, o, r' {
+    if (val, u, e <= 25, 0, 0) return 'go, o, d';
+    if (val, u, e <= 40, 0, 0) return 'nee, d, s-improveme, n, t';
+    return 'po, o, r';
+  private, getRatingForFI, D(
+    val, u, e: num, b, e, r,
+  ): 'go, o, d' | 'nee, d, s-improveme, n, t' | 'po, o, r' {
+    if (val, u, e <= 1, 0, 0) return 'go, o, d';
+    if (val, u, e <= 3, 0, 0) return 'nee, d, s-improveme, n, t';
+    return 'po, o, r';
+  private, getRatingForCL, S(
+    val, u, e: num, b, e, r,
+  ): 'go, o, d' | 'nee, d, s-improveme, n, t' | 'po, o, r' {
+    if (val, u, e <= 0.1) return 'go, o, d';
+    if (val, u, e <= 0.25) return 'nee, d, s-improveme, n, t';
+    return 'po, o, r';
+  private, getRatingForFC, P(
+    val, u, e: num, b, e, r,
+  ): 'go, o, d' | 'nee, d, s-improveme, n, t' | 'po, o, r' {
+    if (val, u, e <= 18, 0, 0) return 'go, o, d';
+    if (val, u, e <= 30, 0, 0) return 'nee, d, s-improveme, n, t';
+    return 'po, o, r';
+  private, getRatingForTTF, B(
+    val, u, e: num, b, e, r,
+  ): 'go, o, d' | 'nee, d, s-improveme, n, t' | 'po, o, r' {
+    if (val, u, e <= 8, 0, 0) return 'go, o, d';
+    if (val, u, e <= 18, 0, 0) return 'nee, d, s-improveme, n, t';
+    return 'po, o, r';
+  private, getRatingForCustomMetri, c(
+    val, u, e: num, b, e, r,
+  ): 'go, o, d' | 'nee, d, s-improveme, n, t' | 'po, o, r' {
+    if (val, u, e <= 10, 0, 0) return 'go, o, d';
+    if (val, u, e <= 30, 0, 0) return 'nee, d, s-improveme, n, t';
+    return 'po, o, r';

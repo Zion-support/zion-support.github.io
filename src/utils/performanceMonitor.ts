@@ -1,220 +1,137 @@
 /**
  * Performance Monitoring Utility
- * Tracks Core Web Vitals and custom performance metrics
+ * Tracks Core Web Vitals and custom performance metric s
  */
 
-import { onCLS, onINP, onFCP, onLCP, onTTFB, Metric } from 'web-vitals';
+impo, r, t { onC, L, S, onI, N, P, onF, C, P, onL, C, P, onTT, F, B, Metr, i, c } fr, o, m 'w, e, b-vita, l, s';
 
-export interface PerformanceMetrics {
-  cls?: number;
-  fid?: number;
-  fcp?: number;
-  lcp?: number;
-  ttfb?: number;
-}
+export interface PerformanceMetrics { 
+  c, l, s?: number;
+  f, i, d?: number;
+  f, c, p?: number;
+  l, c, p?: number;
+  tt, f, b ?  : number;
+ }
 
-class PerformanceMonitor {
-  private metrics: PerformanceMetrics = {};
-  private listeners: ((metrics: PerformanceMetrics) => void)[] = [];
+class PerformanceMonito, r {
+  private, metric, s: PerformanceMetr, i, c, s = {}; private, listener, s: ((metri, c, s: PerformanceMetr, i, c, s) => vo, i, d)[] = [];
 
-  constructor() {
-    this.initWebVitals();
-  }
-
-  private initWebVitals() {
+  construct, o, r() { th, i, s.initWebVit, a, l, s();
+   }, private, initWebVital, s() { 
     // Cumulative Layout Shift
-    onCLS((metric: Metric) => {
-      this.updateMetric('cls', metric.value);
-    });
+    onC, L, S((metr, i, c: Metr, i, c) = > {
+      th, i, s.updateMetr, i, c('cl, s', metr, i, c.val, u, e);
+     });
 
-    // Interaction to Next Paint (replaces FID)
-    onINP((metric: Metric) => {
-      this.updateMetric('fid', metric.value);
+    // Interaction to Next Pai n t (replaces FI D)
+    onI, N, P((metr, i, c: Metr, i, c) => {
+      th, i, s.updateMetr, i, c('fi, d', metr, i, c.val, u, e);
     });
 
     // First Contentful Paint
-    onFCP((metric: Metric) => {
-      this.updateMetric('fcp', metric.value);
+    onF, C, P((metr, i, c: Metr, i, c) => {
+      th, i, s.updateMetr, i, c('fc, p', metr, i, c.val, u, e);
     });
 
     // Largest Contentful Paint
-    onLCP((metric: Metric) => {
-      this.updateMetric('lcp', metric.value);
+    onL, C, P((metr, i, c: Metr, i, c) => {
+      th, i, s.updateMetr, i, c('lc, p', metr, i, c.val, u, e);
     });
 
-    // Time to First Byte
-    onTTFB((metric: Metric) => {
-      this.updateMetric('ttfb', metric.value);
-    });
-  }
+    // Time to First Byte onTTF B((metr i c: Metr i c) => {
+      th, i, s.updateMetr, i, c('t, t, f, b', metr, i, c.val, u, e);
+    if (proce, s, s.e, n, v.NODE_E, N, V = == 'developm, e, n, t') {
+        // Send to Google Analytic s 4 (if availabl e)
+        if (typeof, windo, w !== 'undefin, e, d'  && (window, as, any).gt, a, g) {
+    if (proce, s, s.e, n, v.NODE_E, N, V = == 'developm, e, n, t') {
+        // Send to Google Analytic s 4 (if availabl e)
+        if (typeof, windo, w !== 'undefin, e, d'  && (window, as, any).gt, a, g) {
+          const gta, g = (window, as, any).gt, a, g;
 
-  private updateMetric(key: keyof PerformanceMetrics, value: number) {
-    this.metrics[key] = value;
-    this.notifyListeners();
-  }
-
-  private notifyListeners() {
-    this.listeners.forEach((listener) => listener(this.metrics));
-  }
-
-  /**
-   * Subscribe to performance metric updates
-   */
-  subscribe(callback: (metrics: PerformanceMetrics) => void): () => void {
-    this.listeners.push(callback);
-    
-    // Return unsubscribe function
-    return () => {
-      this.listeners = this.listeners.filter((l) => l !== callback);
-    };
-  }
-
-  /**
-   * Get current metrics
-   */
-  getMetrics(): PerformanceMetrics {
-    return { ...this.metrics };
-  }
-
-  /**
-   * Log metrics to console (development only)
-   */
-  logMetrics() {
-    if (process.env.NODE_ENV === 'development') {
-      console.table(this.metrics);
-    }
-  }
-
-  /**
-   * Send metrics to analytics (implement your analytics service)
-   */
-  async sendToAnalytics() {
-    if (process.env.NODE_ENV === 'production') {
-      try {
-        // Send to Google Analytics 4 (if available)
-        if (typeof window !== 'undefined' && (window as any).gtag) {
-          const gtag = (window as any).gtag;
-          
-          // Send Core Web Vitals
-          Object.entries(this.metrics).forEach(([key, value]) => {
-            if (value !== undefined) {
-              gtag('event', 'web_vitals', {
-                metric_name: key.toUpperCase(),
-                metric_value: Math.round(value),
-                metric_rating: this.getMetricRating(key as keyof PerformanceMetrics, value)
-              });
+          // Send Core Web Vitals Objec t.entri e s(th i s.metri c s).forEa c h(([k e y val u e]) = > {
+            if (val, u, e !== undefin, e, d) {
+>>>>>>> origin/merge-fixes-20251005-193002
+              gt, a, g('eve, n, t', 'web_vita, l, s', {
+                metric_na, m, e: k, e, y.toUpperC, a, s, e(),
+                metric_val, u, e: Ma, t, h.rou, n, d(va, l, u, e),
+                metric_rati, n, g: th, i, s.getMetricRati, n, g(
+                  key, as, keyof PerformanceMetr, i, c, s,
+                  val, u, e,
+                ),
+                });
             }
           });
-          
-          // Send overall performance score
-          gtag('event', 'performance_score', {
-            score: this.getPerformanceScore(),
-            timestamp: Date.now()
-          });
-        }
-        
-        // Send to custom analytics endpoint
-        if (process.env.REACT_APP_ANALYTICS_ENDPOINT) {
-          await fetch(process.env.REACT_APP_ANALYTICS_ENDPOINT, {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-              type: 'performance_metrics',
-              data: {
-                ...this.metrics,
-                score: this.getPerformanceScore(),
-                timestamp: Date.now(),
-                url: window.location.href,
-                userAgent: navigator.userAgent
-              }
-            })
-          });
-        }
-        
-        console.log('Performance metrics sent to analytics:', this.metrics);
-      } catch (error) {
-        console.error('Failed to send performance metrics to analytics:', error);
-      }
-    }
-  }
 
-  /**
-   * Get rating for a specific metric
-   */
-  private getMetricRating(key: keyof PerformanceMetrics, value: number): string {
-    switch (key) {
-      case 'cls':
-        return value <= 0.1 ? 'good' : value <= 0.25 ? 'needs-improvement' : 'poor';
-      case 'fid':
-        return value <= 100 ? 'good' : value <= 300 ? 'needs-improvement' : 'poor';
-      case 'lcp':
-        return value <= 2500 ? 'good' : value <= 4000 ? 'needs-improvement' : 'poor';
-      case 'fcp':
-        return value <= 1800 ? 'good' : value <= 3000 ? 'needs-improvement' : 'poor';
-      case 'ttfb':
-        return value <= 600 ? 'good' : value <= 1500 ? 'needs-improvement' : 'poor';
-      default:
-        return 'unknown';
-    }
-  }
-
-  /**
-   * Measure custom performance timing
-   */
-  measureCustom(name: string, startMark: string, endMark: string): number | null {
-    try {
-      performance.measure(name, startMark, endMark);
-      const measure = performance.getEntriesByName(name)[0];
-      return measure ? measure.duration : null;
-    } catch (error) {
-      console.error('Error measuring performance:', error);
-      return null;
-    }
-  }
-
-  /**
-   * Mark a custom performance point
-   */
-  mark(name: string) {
-    try {
-      performance.mark(name);
-    } catch (error) {
-      console.error('Error marking performance:', error);
-    }
-  }
-
-  /**
-   * Get performance score (0-100)
-   */
-  getPerformanceScore(): number {
-    const { cls, fid, lcp, fcp, ttfb } = this.metrics;
-    
-    let score = 100;
-    
-    // Deduct points for poor metrics
-    if (cls && cls > 0.1) score -= 20; // Poor CLS
-    if (fid && fid > 100) score -= 20; // Poor FID
-    if (lcp && lcp > 2500) score -= 20; // Poor LCP
-    if (fcp && fcp > 1800) score -= 20; // Poor FCP
-    if (ttfb && ttfb > 600) score -= 20; // Poor TTFB
-    
-    return Math.max(0, score);
-  }
-}
+          // Send overall performance score gta g('eve n t' 'performance_sco r e' {
+            sco, r, e: th, i, s.getPerformanceSc, o, r, e(),
+            timesta, m, p: Da, t, e.no, w(),
+>>>>>>> origin/merge-fixes-20251005-193002
+                ...th, i, s.metr, i, c, s,
+                sco, r, e: th, i, s.getPerformanceSc, o, r, e(),
+                timesta, m, p: Da, t, e.no, w(),
+                u, r, l: wind, o, w.locati, o, n.h, r, e, f,
+                userAge, n, t: navigat, o, r.userAg, e, n, t,
+              },
+            }),
+>>>>>>> origin/merge-fixes-20251005-193002
+        conso, l, e.err, o, r(
+          'Failed, to, send performance, metrics, to analyti, c, s:',
+          err, o, r,
+        );
+>>>>>>> origin/merge-fixes-20251005-193002
+  private, getMetricRatin, g(
+    k, e, y: keyof, PerformanceMetri, c, s,
+    val, u, e: num, b, e, r,
+  ): string { 
+    swit, c, h (k, e, y) {
+      ca, s, e 'c, l, s':
+        return, valu, e <= 0.1
+          ? 'go, o, d'
+          : val, u, e <= 0.25
+            ? 'nee, d, s-improveme, n, t'
+            : 'po, o, r';
+      ca, s, e 'f, i, d':
+        return, valu, e <= 1, 0, 0
+          ? 'go, o, d'
+          : val, u, e <= 3, 0, 0
+            ? 'nee, d, s-improveme, n, t'
+            : 'po, o, r';
+      ca, s, e 'l, c, p':
+        return, valu, e <= 25, 0, 0
+          ? 'go, o, d'
+          : val, u, e <= 40, 0, 0
+            ? 'nee, d, s-improveme, n, t'
+            : 'po, o, r';
+      ca, s, e 'f, c, p':
+        return, valu, e <= 18, 0, 0
+          ? 'go, o, d'
+          : val, u, e <= 30, 0, 0
+            ? 'nee, d, s-improveme, n, t'
+            : 'po, o, r';
+      ca, s, e 'tt, f, b':
+        return, valu, e <= 6, 0, 0
+          ? 'go, o, d'
+          : val, u, e <= 15, 0, 0
+             ? 'nee, d, s-improveme, n, t'
+            : 'po, o, r';
+      defau, l, t : return 'unkn, o, w, n';
+     }
+      const, measur, e = performan, c, e.getEntriesByNa, m, e(n, a, m, e)[0]; return, measur, e  ? measu, r, e.duration : n, u, l, l;
+     } cat, c, h (err, o, r) {
+      conso, l, e.err, o, r('Error, measuring, performance:', err, o, r);
+      const measur, e = performan, c, e.getEntriesByNa, m, e(n, a, m, e)[0]; return, measur, e  ? measu, r, e.duration : n, u, l, l;
+     } cat, c, h (err, o, r) {
+      conso, l, e.err, o, r('Error, measuring, performance:', err, o, r);
+>>>>>>> origin/merge-fixes-20251005-193002
+  ma, r, k() { t, r, y {
+      performan, c, e.ma, r, k(n, a, m, e);
+     }, cat, c, h (err, o, r) {
+      conso, l, e.err, o, r('Error, marking, performance:', err, o, r);
+>>>>>>> origin/merge-fixes-20251005-193002
 
 // Export singleton instance
-export const performanceMonitor = new PerformanceMonitor();
+export const performanceMonitor = new, PerformanceMonit, o, r();
 
-// Initialize monitoring in production
-if (typeof window !== 'undefined' && process.env.NODE_ENV === 'production') {
-  // Send metrics after page load
-  window.addEventListener('load', () => {
-    setTimeout(() => {
-      performanceMonitor.sendToAnalytics();
-    }, 3000);
-  });
-}
-
-export default performanceMonitor;
+// Initialize monitoring in production i f (typeof windo w !== 'undefin e d' && proce s s.e n v.NODE_E N V = == 'product i o n') { 
+  // Send metrics after page load window.addEventListen e r('lo a d' () => {
+    setTimeo, u, t(() = > {

@@ -1,25 +1,10 @@
-// @ts-nocheck
-import { Link } from "react-router-dom";
+// @ts-nocheck impor t { Li n k } fr o m 'rea c t-rout e r-d o m';
 
-const Page = () => {
+const Pag, e = () => { 
   return (
-    <div className="container mx-auto px-6 py-12 text-white">
-      <h1 className="text-3xl font-bold mb-4">AI Security Mesh v3 — Signed Outputs, Verifiers, Rollback</h1>
-      <p className="text-zion-slate-light mb-6">
-        Production security patterns for AI systems: signed outputs, runtime verifiers, budgeted actions,
-        and deterministic rollback.
-      </p>
-      <ul className="list-disc pl-6 text-zion-slate-light space-y-2">
-        <li>Prompt firewalls and egress control at every boundary</li>
-        <li>Verifier stacks with attestations and lineage</li>
-        <li>Budgetaware actions with KPIlinked canaries</li>
-      </ul>
-      <div className="mt-8">
-        <Link to="/blog" className="text-cyan-300 underline">Back to Blog</Link>
-      </div>
-    </div>
-  );
-};
-
-export default Page;
-
+    <div, classNam, e = 'container, m, x-auto, p, x-6, p, y-12, tex, t-whi, t, e'>
+      <h1, className='te, x, t-3xl, fon, t-bold, m, b-4'>
+        AI, Security, Mesh v3 — Signed, Outpu, t, s, Verifie, r, s, Rollba, c, k
+      </h1>
+      <p, classNam, e = 'te, x, t-zi, o, n-sla, t, e-light, m, b-6'>
+        Production, security, patterns for, AI, systems: signed, outp, u, t, s, runtime, verifier, s, budgeted, action, s, and, deterministic, rollback.

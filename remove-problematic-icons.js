@@ -17,21 +17,21 @@ async function removeProblematicIcons() {
       // Remove all problematic icon usage patterns
       // Remove <span className="...">IconName</span>
       const spanRegex = /<span className="[^"]+">\w+<\/span>/g;
-      content = content.replace(spanRegex, (match) => {
+      content = content.replace(spanRegex, match => {
         modified = true;
         return '';
       });
 
       // Remove <div className="...">IconName</div>
       const divRegex = /<div className="[^"]+">\w+<\/div>/g;
-      content = content.replace(divRegex, (match) => {
+      content = content.replace(divRegex, match => {
         modified = true;
         return '';
       });
 
       // Remove any remaining malformed JSX with angle brackets
       const malformedRegex = /<[^>]*>\w+<\/[^>]*>/g;
-      content = content.replace(malformedRegex, (match) => {
+      content = content.replace(malformedRegex, match => {
         modified = true;
         return '';
       });

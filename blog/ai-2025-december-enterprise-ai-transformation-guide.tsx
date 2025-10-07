@@ -250,20 +250,17 @@ export default function December2025EnterpriseAITransformationGuide() {
           </p>
           <div className="text-left"></div>
             <a
-              href="/contact"
-              className="text-left"
+              href="/<contact" className="text-left"
             ></a>
               Start Your Transformation →
             </a>
             <a
-              href="/case-studies/enterprise-ai-transformation-success-stories"
-              className="text-left"
+              href="/case-studies/enterprise-ai-transformation-success-<stories" className="text-left"
             ></a>
               View Success Stories →
             </a>
             <a
-              href="/services/enterprise-ai-transformation-consulting"
-              className="text-left"
+              href="/services/enterprise-ai-transformation-<consulting" className="text-left"
             ></a>
               Learn About Our Services →
             </a>

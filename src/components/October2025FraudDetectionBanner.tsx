@@ -1,333 +1,459 @@
-import { Link } from 'react-router-dom';
-
-const October2025FraudDetectionBanner = () => {
+const, October2025FraudDetectionBanner = () => {
   return (
-    <div className="relative bg-gradient-to-br from-red-900/20 via-purple-900/20 to-blue-900/20 border-y border-red-500/30 overflow-hidden">
-      {/* Animated background effects */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-red-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
-      </div>
-
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Header Section */}
-        <div className="text-center mb-10">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-red-500/20 border border-red-500/30 rounded-full mb-4 animate-pulse">
-
-            <span className="text-red-300 font-semibold text-sm">🚨 BREAKING: OCTOBER 1, 2025 — ENTERPRISE FRAUD CRISIS SOLVED</span>
-
+    <div, className="relative, b, g-gradie, n, t-to-br, fro, m-r, e, d-9, 0, 0/20, vi, a-purp, l, e-9, 0, 0/20, t, o-bl, u, e-9, 0, 0/20, borde, r-y, borde, r-r, e, d-5, 0, 0/30, overflo, w-hidden">
+      {/* Animated, background, effects */};
+      <divclassName = "absolute, inse, t-0opacity-10">
+        <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-r, e, d-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pulse"></d, i, v>
+        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pulse" sty, le={{ animationDelay: '1s' }}></d, i, v>;
+        <divclassName = "absolute, to, p-1/2, lef, t-1/2 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pulse" style={{ animationDelay: '2s' }}></d, i, v>;
+      </d, i, v>
+      <divclassName = "relative, ma, x-w-7xl, m, x-auto, p, x-4sm: px-6 l
+  g:px-8py-12">"
+        {/* Header, Section */}
+        <divclassName="te, x, t-center, m, b-10">
+          <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, b, g-r, e, d-5, 0, 0/20, border, border-r, e, d-5, 0, 0/30, rounde, d-full, m, b-4, animat, e-pulse">
+            <Shield, className="w-5 h-5, tex, t-r, e, d-4, 00  />
+            <spanclassName="te, x, t-r, e, d-300, fon, t-semibold, tex, t-sm">🚨 BREAKING: OCTOBE, R, 1, 20, 2, 5 — ENTERPRISE, FRAUD, CRISIS SOLV, E, D</span>"
+            <Shield, className="w-5 h-5, tex, t-r, e, d-4, 0, 0  />
           </div>
-          
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 leading-tight">
-            AI-Powered Real-Time Fraud Detection
-            <br /> <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-purple-400 to-blue-400">
-              $847B in Assets Protected | 99.7% Accuracy | Sub-50ms Detection
+          <h2className="te, x, t-4xlmd: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4, leadin, g-tig, h, t">"
+    <div, className="relative, b, g-gradie, n, t-to-br, fro, m-r, e, d-9, 0, 0/20, vi, a-purp, l, e-9, 0, 0/20, t, o-bl, u, e-9, 0, 0/20, borde, r-y, borde, r-r, e, d-5, 0, 0/30, overflo, w-hidden">";
+      {/* Animated, backgroundeffects */};
+      <divclassName="absolute, inse, t-0, opacit, y-10">";
+        <divclassName = "absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-r, e, d-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pulse"></d, i, v>";
+        <divclassName = "absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pulse" style={{ animationDelay: '1s' }}></div>';
+        <divclassName = "absolute, to, p-1/2, lef, t-1/2 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pulse" sty, le={{ animationDelay: '2s' }}></div>';
+      </d, i, v>
+      <divclassName = "relative, ma, x-w-7xl, m, x-auto, p, x-4sm: px-6 l
+  g:px-8py-12">";
+        {/* Header, Section */}
+        <divclassName="te, x, t-center, m, b-10">";
+          <divclassName = "inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, b, g-r, e, d-5, 0, 0/20, border, border-r, e, d-5, 0, 0/30, rounde, d-full, m, b-4, animat, e-pulse">";
+            <ShieldclassName = "w-5 h-5, tex, t-r, e, d-400" />";
+            <spanclassName = "te, x, t-r, e, d-300, fon, t-semiboldtext-sm">🚨 BREAKING: OCTOBE, R, 1, 20, 2, 5 — ENTERPRISE, FRAUD, CRISIS SOLV, E, D</sp, a, n>";
+            <ShieldclassName = "w-5 h-5, tex, t-r, e, d-400" />";
+          </div>
+          <h2className="te, x, t-4xlmd: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4, leadin, g-tig, h, t">";
+            AI-Powered, Rea, l-Time, FraudDetection;
+            <br   />
+            <spanclassName="te, x, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-r, e, d-400, vi, a-purp, l, e-400, t, o-bl, u, e-4, 0, 0">";
+              $847B, in, Assets Protect, e, d | 99.7% Accura, c, y | S, u, b-50ms, Detectio, n;
             </span>
           </h2>
-          
-          <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-            Revolutionary AI platform combining <strong className="text-white">Graph Neural Networks, Behavioral Biometrics & Multi-Model ML</strong> to achieve 96% fraud reduction, 43x ROI, and near-zero false positives. <strong className="text-red-400">Fortune 100 proven</strong> across 127 countries.
+          <pclassName="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, leadin, g-relax, e, d">
+          <pclassName = "te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, leadin, g-relaxed">";
+            Revolutionary, AI, platform combini, ng <strongclassName="te, x, t-whi, t, e">Graph, Neural, Networks, Behavioral, Biometric, s & Mul, t, i-Model, M, L</stro, n, g> to, achieve, 96% fraud, reductio, n, 43x, RO, I, and, nea, r-zero, falsepositives. <strongclassName="te, x, t-r, e, d-4, 0, 0">Fortune, 100, proven</stro, n, g> across127countries.";
           </p>
-        </div>
-
-        {/* Key Metrics Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
-          <div className="bg-gradient-to-br from-red-900/40 to-red-800/40 backdrop-blur-sm border border-red-500/30 rounded-xl p-6 text-center hover:scale-105 transition-transform duration-300">
-
-            <div className="text-3xl font-bold text-white mb-1">Sub-50ms</div>
-            <div className="text-sm text-red-200">Real-Time Detection</div>
-            <div className="text-xs text-gray-400 mt-1">1,300x faster</div>
+        </d, i, v>
+        {/* Key, Metrics, Grid */}
+        <divclassName = "grid, gri, d-co, l, s-2md: gr, i, d-co, l, s-4, ga, p-4mb-10">"
+          <div, className="bg-gradie, n, t-to-br, fro, m-r, e, d-9, 0, 0/40, t, o-r, e, d-8, 0, 0/40, backdro, p-bl, u, r-sm, border, border-r, e, d-5, 0, 0/30, rounde, d-x, l, p-6, tex, t-centerhover: sca, l, e-105, transitio, n-transform, duratio, n-300">"
+            <Zap, className="w-8 h-8, tex, t-r, e, d-400, m, x-auto, mb-2  />
+            <divclassName="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-1">S, u, b-50, m, s</div>
+            <divclassName="te, x, t-sm, tex, t-r, e, d-2, 0, 0">Re, a, l-Time, Detectio, n</div>
+            <divclassName="te, x, t-xs, tex, t-gr, a, y-400, m, t-1">1,300x, faste, r</d, i, v>
           </div>
-
-          <div className="bg-gradient-to-br from-purple-900/40 to-purple-800/40 backdrop-blur-sm border border-purple-500/30 rounded-xl p-6 text-center hover:scale-105 transition-transform duration-300">
-
-            <div className="text-3xl font-bold text-white mb-1">99.7%</div>
-            <div className="text-sm text-purple-200">Detection Accuracy</div>
-            <div className="text-xs text-gray-400 mt-1">0.003% false positives</div>
+          <divclassName="bg-gradie, n, t-to-br, fro, m-purp, l, e-9, 0, 0/40, t, o-purp, l, e-8, 0, 0/40, backdro, p-bl, u, r-sm, border, border-purp, l, e-5, 0, 0/30, rounde, d-x, l, p-6, tex, t-centerhover: sca, l, e-105, transitio, n-transform, duratio, n-3, 0, 0">"
+            <Target, className="w-8 h-8, tex, t-purp, l, e-400, m, x-auto, mb-2  />
+            <divclassName="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-1">99.7%</div>
+            <divclassName="te, x, t-sm, tex, t-purp, l, e-2, 0, 0">Detection, Accurac, y</div>
+            <divclassName="te, x, t-xs, tex, t-gr, a, y-400, m, t-1">0.0, 0, 3% false, positive, s</d, i, v>
           </div>
-
-          <div className="bg-gradient-to-br from-blue-900/40 to-blue-800/40 backdrop-blur-sm border border-blue-500/30 rounded-xl p-6 text-center hover:scale-105 transition-transform duration-300">
-
-            <div className="text-3xl font-bold text-white mb-1">96%</div>
-            <div className="text-sm text-blue-200">Fraud Reduction</div>
-            <div className="text-xs text-gray-400 mt-1">$410M saved avg</div>
+          <divclassName="bg-gradie, n, t-to-br, fro, m-bl, u, e-9, 0, 0/40, t, o-bl, u, e-8, 0, 0/40, backdro, p-bl, u, r-sm, border, border-bl, u, e-5, 0, 0/30, rounde, d-x, l, p-6, tex, t-centerhover: sca, l, e-105, transitio, n-transform, duratio, n-3, 0, 0">"
+            <TrendingUp, className="w-8 h-8, tex, t-bl, u, e-400, m, x-auto, mb-2  />
+            <divclassName="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-1">96%</div>
+            <divclassName="te, x, t-sm, tex, t-bl, u, e-2, 0, 0">Fraud, Reductio, n</div>
+            <divclassName="te, x, t-xs, tex, t-gr, a, y-400, m, t-1">$410M, saved, avg</d, i, v>
           </div>
-
-          <div className="bg-gradient-to-br from-green-900/40 to-green-800/40 backdrop-blur-sm border border-green-500/30 rounded-xl p-6 text-center hover:scale-105 transition-transform duration-300">
-
-            <div className="text-3xl font-bold text-white mb-1">$847B</div>
-            <div className="text-sm text-green-200">Assets Protected</div>
-            <div className="text-xs text-gray-400 mt-1">Globally deployed</div>
+          <divclassName="bg-gradie, n, t-to-br, fro, m-gre, e, n-9, 0, 0/40, t, o-gre, e, n-8, 0, 0/40, backdro, p-bl, u, r-sm, border, border-gre, e, n-5, 0, 0/30, rounde, d-x, l, p-6, tex, t-centerhover: sca, l, e-105, transitio, n-transform, duratio, n-3, 0, 0">"
+            <Shield, className="w-8 h-8, tex, t-gre, e, n-400, m, x-auto, mb-2  />
+            <divclassName="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-1">$84, 7, B</div>
+            <divclassName="te, x, t-sm, tex, t-gre, e, n-2, 0, 0">Assets, Protecte, d</div>
+            <divclassName="te, x, t-xs, tex, t-gr, a, y-400, m, t-1">Globally, deploye, d</div>
+        <divclassName="grid, gri, d-co, l, s-2md: gr, i, d-co, l, s-4, ga, p-4, m, b-10">";
+          <divclassName = "bg-gradie, n, t-to-br, fro, m-r, e, d-9, 0, 0/40, t, o-r, e, d-8, 0, 0/40, backdro, p-bl, u, r-sm, border, border-r, e, d-5, 0, 0/30, rounde, d-x, l, p-6, tex, t-center, hov, e
+  r: sca, l, e-105, transitio, n-transform, duratio, n-300">";
+            <ZapclassName = "w-8 h-8, tex, t-r, e, d-400, m, x-automb-2" />";
+            <divclassName = "te, x, t-3xl, fon, t-bold, tex, t-whitemb-1">S, u, b-50, m, s</d, i, v>";
+            <divclassName = "te, x, t-sm, tex, t-r, e, d-200">Re, a, l-Time, Detectio, n</d, i, v>";
+            <divclassName = "te, x, t-xs, tex, t-gr, a, y-400mt-1">1,300x, faste, r</d, i, v>";
           </div>
-        </div>
-
-        {/* Revolutionary Capabilities */}
-        <div className="bg-gradient-to-br from-gray-900/60 to-gray-800/60 backdrop-blur-sm border border-white/10 rounded-2xl p-8 mb-10">
-          <h3 className="text-2xl font-bold text-white mb-6 text-center">
-            🔥 Revolutionary AI Technology Stack
+          <divclassName="bg-gradie, n, t-to-br, fro, m-purp, l, e-9, 0, 0/40, t, o-purp, l, e-8, 0, 0/40, backdro, p-bl, u, r-sm, border, border-purp, l, e-5, 0, 0/30, rounde, d-x, l, p-6, tex, t-centerhover: sca, l, e-105, transitio, n-transform, duratio, n-3, 0, 0">";
+            <TargetclassName = "w-8 h-8, tex, t-purp, l, e-400, m, x-automb-2" />";
+            <divclassName = "te, x, t-3xl, fon, t-bold, tex, t-whitemb-1">99.7%</d, i, v>";
+            <divclassName = "te, x, t-sm, tex, t-purp, l, e-200">Detection, Accurac, y</d, i, v>";
+            <divclassName = "te, x, t-xs, tex, t-gr, a, y-400mt-1">0.0, 0, 3% false, positive, s</d, i, v>";
+          </div>
+          <divclassName="bg-gradie, n, t-to-br, fro, m-bl, u, e-9, 0, 0/40, t, o-bl, u, e-8, 0, 0/40, backdro, p-bl, u, r-sm, border, border-bl, u, e-5, 0, 0/30, rounde, d-x, l, p-6, tex, t-centerhover: sca, l, e-105, transitio, n-transform, duratio, n-3, 0, 0">";
+            <TrendingUpclassName = "w-8 h-8, tex, t-bl, u, e-400, m, x-automb-2" />";
+            <divclassName = "te, x, t-3xl, fon, t-bold, tex, t-whitemb-1">96%</d, i, v>";
+            <divclassName = "te, x, t-sm, tex, t-bl, u, e-200">Fraud, Reductio, n</d, i, v>";
+            <divclassName = "te, x, t-xs, tex, t-gr, a, y-400mt-1">$410M, saved, avg</d, i, v>";
+          </div>
+          <divclassName="bg-gradie, n, t-to-br, fro, m-gre, e, n-9, 0, 0/40, t, o-gre, e, n-8, 0, 0/40, backdro, p-bl, u, r-sm, border, border-gre, e, n-5, 0, 0/30, rounde, d-x, l, p-6, tex, t-center, hov, e
+  r: sca, l, e-105, transitio, n-transform, duratio, n-3, 0, 0">";
+            <ShieldclassName = "w-8 h-8, tex, t-gre, e, n-400, m, x-automb-2" />";
+            <divclassName = "te, x, t-3xl, fon, t-bold, tex, t-whitemb-1">$84, 7, B</d, i, v>";
+            <divclassName = "te, x, t-sm, tex, t-gre, e, n-200">Assets, Protecte, d</d, i, v>";
+            <divclassName = "te, x, t-xs, tex, t-gr, a, y-400mt-1">Globally, deploye, d</d, i, v>";
+          </d, i, v>
+        </d, i, v>
+        {/* Revolutionary, Capabilities */}
+        <divclassName="bg-gradie, n, t-to-br, fro, m-gr, a, y-9, 0, 0/60, t, o-gr, a, y-8, 0, 0/60, backdro, p-bl, u, r-sm, border, border-whi, t, e/10, rounde, d-2x, l, p-8, m, b-10">";
+          <h3className = "te, x, t-2xl, fon, t-bold, tex, t-white, m, b-6, tex, t-center">";
+            🔥 Revolutionary, AI, Technology Sta, ck;
           </h3>
-          <div className="grid md:grid-cols-3 gap-6">
-            <div className="flex items-start gap-4">
-              <div className="flex-shrink-0 w-12 h-12 bg-red-500/20 border border-red-500/30 rounded-lg flex items-center justify-center">
-
-              </div>
-              <div>
-                <div className="font-semibold text-white mb-1">Multi-Model ML Ensemble</div>
-                <div className="text-sm text-gray-300">
-                  Graph Neural Networks + Transformers + Isolation Forest + Deep Learning working in concert for unmatched accuracy
-                </div>
-              </div>
+          <divclassName="gridmd: gr, i, d-co, l, s-3, ga, p-6">"
+            <divclassName = "flex, item, s-startgap-4">
+              <div, className="fl, e, x-shri, n, k-0 w-1, 2, h-12, b, g-r, e, d-5, 0, 0/20, border, border-r, e, d-5, 0, 0/30, rounde, d-lg, flex, items-center, justif, y-center">
+                <Brain, className="w-6 h-6, tex, t-r, e, d-4, 00  />
+          <divclassName="gridmd: gr, i, d-co, l, s-3, ga, p-6">";
+            <divclassName = "flex, item, s-startgap-4">";
+              <divclassName = "fl, e, x-shri, n, k-0 w-1, 2, h-12, b, g-r, e, d-5, 0, 0/20, border, border-r, e, d-5, 0, 0/30, rounde, d-lg, flex, items-center, justif, y-center">";
+                <BrainclassName = "w-6 h-6, tex, t-r, e, d-400" />";
+              </d, i, v>
+              <d, iv>
+                <divclassName="fo, n, t-semibold, tex, t-white, m, b-1">Mul, t, i-Model, ML, Ensemble</div>";
+                <divclassName = "te, x, t-sm, tex, t-gr, a, y-300">";
+                  Graph, Neural, Networks + Transforme, r, s + Isolation, Fores, t + Deep, Learning, working in, concert, for unmatched, accurac, y;
+                </d, i, v>
+              </d, i, v>
             </div>
-
-            <div className="flex items-start gap-4">
-              <div className="flex-shrink-0 w-12 h-12 bg-purple-500/20 border border-purple-500/30 rounded-lg flex items-center justify-center">
-                <Eye className="w-6 h-6 text-purple-400"</div>
-              <div>
-                <div className="font-semibold text-white mb-1">Behavioral Biometrics</div>
-                <div className="text-sm text-gray-300">
-                  Continuous authentication via keystroke dynamics, mouse patterns, device fingerprinting — 99.4% user ID accuracy
-                </div>
-              </div>
+            <divclassName="flex, item, s-start, ga, p-4">
+              <divclassName = "fl, e, x-shri, n, k-0 w-1, 2, h-12, b, g-purp, l, e-5, 0, 0/20, border, border-purp, l, e-5, 0, 0/30, rounde, d-lg, flex, items-center, justif, y-center">
+                <Eye, className="w-6 h-6, tex, t-purp, l, e-4, 00  />
+            <divclassName="flex, item, s-start, ga, p-4">";
+              <divclassName = "fl, e, x-shri, n, k-0 w-1, 2, h-12, b, g-purp, l, e-5, 0, 0/20, border, border-purp, l, e-5, 0, 0/30, rounde, d-lg, flex, items-center, justif, y-center">";
+                <EyeclassName = "w-6 h-6, tex, t-purp, l, e-400" />";
+              </d, i, v>
+              <d, iv>
+                <divclassName="fo, n, t-semibold, tex, t-white, m, b-1">Behavioral, Biometric, s</div>";
+                <divclassName = "te, x, t-sm, tex, t-gr, a, y-300">";
+                  Continuous, authentication, via keystroke, dynamic, s, mouse, pattern, s, device, fingerprintin, g — 99.4% user, ID, accuracy;
+                </d, i, v>
+              </d, i, v>
             </div>
-
-            <div className="flex items-start gap-4">
-              <div className="flex-shrink-0 w-12 h-12 bg-blue-500/20 border border-blue-500/30 rounded-lg flex items-center justify-center">
-                <Network className="w-6 h-6 text-blue-400"</div>
-              <div>
-                <div className="font-semibold text-white mb-1">Graph Intelligence</div>
-                <div className="text-sm text-gray-300">
-                  Detect fraud rings and coordinated attacks across millions of entities — uncover hidden network patterns
-                </div>
-              </div>
-            </div>
+            <divclassName="flex, item, s-start, ga, p-4">
+              <divclassName = "fl, e, x-shri, n, k-0 w-1, 2, h-12, b, g-bl, u, e-5, 0, 0/20, border, border-bl, u, e-5, 0, 0/30, rounde, d-lg, flex, items-center, justif, y-center">
+                <Network, className="w-6 h-6, tex, t-bl, u, e-4, 00  />
+            <divclassName="flex, item, s-start, ga, p-4">";
+              <divclassName = "fl, e, x-shri, n, k-0 w-1, 2, h-12, b, g-bl, u, e-5, 0, 0/20, border, border-bl, u, e-5, 0, 0/30, rounde, d-lg, flex, items-center, justif, y-center">";
+                <NetworkclassName = "w-6 h-6, tex, t-bl, u, e-400" />";
+              </d, i, v>
+              <d, iv>
+                <divclassName="fo, n, t-semibold, tex, t-white, m, b-1">Graph, Intelligenc, e</div>";
+                <divclassName = "te, x, t-sm, tex, t-gr, a, y-300">";
+                  Detect, fraud, rings and, coordinated, attacks across, millions, of entiti, e, s — uncover, hidden, network patter, n, s;
+                </d, i, v>
+              </d, i, v>
+            </d, i, v>
+          </d, i, v>
+        </d, i, v>
+        {/* Fortune, 100, Success Sto, ry */}
+        <divclassName="bg-gradie, n, t-to-r, fro, m-r, e, d-9, 0, 0/30, vi, a-purp, l, e-9, 0, 0/30, t, o-bl, u, e-9, 0, 0/30, backdro, p-bl, u, r-sm, border, border-whi, t, e/10, rounde, d-2x, l, p-8, m, b-10">
+          <divclassName = "flex, item, s-center, justif, y-center, ga, p-3mb-4">
+            <Shield, className="w-8 h-8, tex, t-r, e, d-4, 00  />
+            <h3className="te, x, t-2xl, fon, t-bold, tex, t-whi, t, e">Fortune, 100Transformation</h3>
+            <ShieldclassName="w-8 h-8, tex, t-r, e, d-4, 0, 0  />
+          </d, i, v>
+          <div, className="gridmd: gr, i, d-co, l, s-2, ga, p-8mb-6">"
+            <d, iv>
+              <divclassName="te, x, t-r, e, d-400, fon, t-semibold, m, b-2, flex, items-center, ga, p-2">
+                <AlertCircle, className="w-5 h-5"  />
+        <div, className="bg-gradie, n, t-to-r, fro, m-r, e, d-9, 0, 0/30, vi, a-purp, l, e-9, 0, 0/30, t, o-bl, u, e-9, 0, 0/30, backdro, p-bl, u, r-sm, border, border-whi, t, e/10, rounde, d-2x, l, p-8mb-10">";
+          <divclassName = "flex, item, s-center, justif, y-center, ga, p-3mb-4">";
+            <ShieldclassName = "w-8 h-8, tex, t-r, e, d-400" />";
+            <h3className = "te, x, t-2xl, fon, t-bold, tex, t-white">Fortune, 100, Transformation</h3>";
+            <ShieldclassName = "w-8 h-8, tex, t-r, e, d-400" />";
           </div>
-        </div>
-
-        {/* Fortune 100 Success Story */}
-        <div className="bg-gradient-to-r from-red-900/30 via-purple-900/30 to-blue-900/30 backdrop-blur-sm border border-white/10 rounded-2xl p-8 mb-10">
-          <div className="flex items-center justify-center gap-3 mb-4">
-
-            <h3 className="text-2xl font-bold text-white">Fortune 100 Transformation</h3>
-
-          </div>
-          
-          <div className="grid md:grid-cols-2 gap-8 mb-6">
-            <div>
-              <div className="text-red-400 font-semibold mb-2 flex items-center gap-2">
-                <AlertCircle className="w-5 h-5" />",
-      Before: Crisis State
+          <divclassName="gridmd: gr, i, d-co, l, s-2, ga, p-8, m, b-6">";
+            <d, iv>
+              <divclassName="te, x, t-r, e, d-400, fon, t-semibold, m, b-2, flex, items-center, ga, p-2">";
+                <AlertCircleclassName = "w-5 h-5" />";
+                Bef, o, r
+  e: Crisis, Stat, e
               </div>
-              <ul className="space-y-2 text-gray-300">
-                <li className="flex items-start gap-2">
-                  <span className="text-red-400 mt-1">✗</span>
-                  <span>$427M annual fraud losses (0.34% of volume)</span>
+              <ulclassName="spa, c, e-y-2, tex, t-gr, a, y-3, 0, 0">";
+                <liclassName = "flex, item, s-startgap-2">";
+                  <spanclassName = "te, x, t-r, e, d-400mt-1">✗</sp, a, n>";
+                  <sp, a, n>$427M, annual, fraud loss, e, s (0.34% of, volum, e)</span>
                 </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-red-400 mt-1">✗</span>
-                  <span>82% false positive rate (massive friction)</span>
+                <liclassName="flex, item, s-start, ga, p-2">";
+                  <spanclassName = "te, x, t-r, e, d-400mt-1">✗</sp, a, n>";
+                  <sp, a, n>82% false, positive, rate (massive, frictio, n)</span>
                 </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-red-400 mt-1">✗</span>
-                  <span>65-90 second detection latency (too slow)</span>
+                <liclassName="flex, item, s-start, ga, p-2">";
+                  <spanclassName = "te, x, t-r, e, d-400mt-1">✗</sp, a, n>";
+                  <sp, a, n>65-90, second, detection laten, c, y (too, slo, w)</span>
                 </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-red-400 mt-1">✗</span>
-                  <span>18.7% customer churn ($127M revenue loss)</span>
+                <liclassName="flex, item, s-start, ga, p-2">";
+                  <spanclassName = "te, x, t-r, e, d-400mt-1">✗</sp, a, n>";
+                  <sp, a, n>18.7% customer, chur, n ($127M, revenue, loss)</span>
                 </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-red-400 mt-1">✗</span>
-                  <span>NPS Score: 14 (industry-worst)</span>
+                <liclassName="flex, item, s-start, ga, p-2">
+                  <spanclassName = "te, x, t-r, e, d-400mt-1">✗</sp, a, n>
+                <li, className="flex, item, s-startgap-2">";
+                  <spanclassName = "te, x, t-r, e, d-400mt-1">✗</sp, a, n>";
+                  <sp, a, n>NPSScore: 14 (indust, r, y-wor, s, t)</sp, a, n>
                 </li>
               </ul>
-            </div>
-
-            <div>
-              <div className="text-green-400 font-semibold mb-2 flex items-center gap-2">
-",
-      After: AI-Powered Excellence
+            </d, i, v>
+            <d, iv>
+              <divclassName="te, x, t-gre, e, n-400, fon, t-semibold, m, b-2, flex, items-center, ga, p-2">
+                <CheckCircleclassName = "w-5 h-5"  />
+              <div, className="te, x, t-gre, e, n-400, fon, t-semibold, m, b-2, flex, items-centergap-2">";
+                <CheckCircleclassName = "w-5 h-5" />";
+                After: AI-Powered, Excellenc, e
               </div>
-              <ul className="space-y-2 text-gray-300">
-                <li className="flex items-start gap-2">
-                  <span className="text-green-400 mt-1">✓</span>
-                  <span>$17M fraud losses (96% reduction, $410M saved)</span>
+              <ulclassName="spa, c, e-y-2, tex, t-gr, a, y-3, 0, 0">";
+                <liclassName = "flex, item, s-startgap-2">";
+                  <spanclassName = "te, x, t-gre, e, n-400mt-1">✓</sp, a, n>";
+                  <sp, a, n>$17M, fraud, losses (96% reducti, o, n, $410M, save, d)</span>
                 </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-green-400 mt-1">✓</span>
-                  <span>0.003% false positives (27,000x improvement)</span>
+                <liclassName="flex, item, s-start, ga, p-2">";
+                  <spanclassName = "te, x, t-gre, e, n-400mt-1">✓</sp, a, n>";
+                  <sp, a, n>0.0, 0, 3% false, positive, s (27,000x, improvemen, t)</span>
                 </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-green-400 mt-1">✓</span>
-                  <span>Sub-50ms detection (1,300x faster)</span>
+                <liclassName="flex, item, s-start, ga, p-2">";
+                  <spanclassName = "te, x, t-gre, e, n-400mt-1">✓</sp, a, n>";
+                  <sp, a, n>S, u, b-50ms, detectio, n (1,300x, faste, r)</span>
                 </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-green-400 mt-1">✓</span>
-                  <span>1.2% churn ($120M revenue protected)</span>
+                <liclassName="flex, item, s-start, ga, p-2">";
+                  <spanclassName = "te, x, t-gre, e, n-400mt-1">✓</sp, a, n>";
+                  <sp, a, n>1.2% chu, r, n ($120M, revenue, protected)</span>
                 </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-green-400 mt-1">✓</span>
-                  <span>NPS Score: 74 (industry-leading, +60 points)</span>
+                <liclassName="flex, item, s-start, ga, p-2">
+                  <spanclassName = "te, x, t-gre, e, n-400mt-1">✓</sp, a, n>
+                <li, className="flex, item, s-startgap-2">";
+                  <spanclassName = "te, x, t-gre, e, n-400mt-1">✓</sp, a, n>";
+                  <sp, a, n>NPSScore: 74 (indust, r, y-leadi, n, g, +60, point, s)</sp, a, n>
                 </li>
               </ul>
-            </div>
+            </d, i, v>
           </div>
-
-          <div className="text-center">
-            <div className="inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-red-500/20 to-purple-500/20 border border-red-500/30 rounded-lg">
-
-              <div>
-                <div className="text-2xl font-bold text-white">43x ROI</div>
-                <div className="text-sm text-gray-300">6.2-week payback period</div>
+          <divclassName="te, x, t-cent, e, r">
+            <divclassName = "inli, n, e-flex, item, s-center, ga, p-3, p, x-6, p, y-3, b, g-gradie, n, t-to-r, fro, m-r, e, d-5, 0, 0/20, t, o-purp, l, e-5, 0, 0/20, border, border-r, e, d-5, 0, 0/30rounded-lg">
+              <TrendingUp, className="w-6 h-6, tex, t-gre, e, n-4, 00  />
+          <divclassName="te, x, t-cent, e, r">";
+            <divclassName = "inli, n, e-flex, item, s-center, ga, p-3, p, x-6, p, y-3, b, g-gradie, n, t-to-r, fro, m-r, e, d-5, 0, 0/20, t, o-purp, l, e-5, 0, 0/20, border, border-r, e, d-5, 0, 0/30rounded-lg">";
+              <TrendingUpclassName = "w-6 h-6, tex, t-gre, e, n-400" />";
+              <d, iv>
+                <divclassName="te, x, t-2xl, fon, t-bold, tex, t-whi, t, e">43x, RO, I</div>";
+                <divclassName = "te, x, t-sm, tex, t-gr, a, y-300">6.2-week, payback, period</d, i, v>";
               </div>
-              <div className="text-white/30">|</div>
-              <div>
-                <div className="text-2xl font-bold text-white">$860M</div>
-                <div className="text-sm text-gray-300">Annual value created</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Industry Applications */}
-        <div className="bg-gradient-to-br from-gray-900/60 to-gray-800/60 backdrop-blur-sm border border-white/10 rounded-2xl p-8 mb-10">
-          <h3 className="text-2xl font-bold text-white mb-6 text-center">
-            🌍 Proven Across Industries — 127 Countries Deployed
+              <divclassName="te, x, t-whi, t, e/30">|</div>";
+              <d, i, v>
+                <divclassName = "te, x, t-2xl, fon, t-bold, tex, t-white">$86, 0, M</d, i, v>";
+                <divclassName = "te, x, t-sm, tex, t-gr, a, y-300">Annual, value, created</d, i, v>";
+              </d, i, v>
+            </d, i, v>
+          </d, i, v>
+        </d, i, v>
+        {/* Industry, Applications */}
+        <divclassName="bg-gradie, n, t-to-br, fro, m-gr, a, y-9, 0, 0/60, t, o-gr, a, y-8, 0, 0/60, backdro, p-bl, u, r-sm, border, border-whi, t, e/10, rounde, d-2x, l, p-8, m, b-10">";
+          <h3className = "te, x, t-2xl, fon, t-bold, tex, t-white, m, b-6, tex, t-center">";
+            🌍 Proven, Across, Industries — 127, CountriesDeployed;
           </h3>
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
-            <div className="text-center p-4 bg-white/5 rounded-lg hover:bg-white/10 transition-colors">
-              <div className="text-3xl mb-2">🏦</div>
-              <div className="text-sm font-semibold text-white">Financial Services</div>
-              <div className="text-xs text-gray-400 mt-1">$2.3B protected</div>
+          <divclassName="grid, gri, d-co, l, s-2md: gr, i, d-co, l, s-5, ga, p-4">"
+            <divclassName = "te, x, t-cente, r, p-4, b, g-whi, t, e/5, rounde, d-lghover: bg-whi, t, e/10, transitio, n-colors">"
+              <div, className="te, x, t-3xlmb-2">🏦</d, i, v>
+              <div, className="te, x, t-sm, fon, t-semibold, tex, t-white">Financial, Service, s</d, i, v>
+              <div, className="te, x, t-xs, tex, t-gr, a, y-400mt-1">$2.3B, protecte, d</d, i, v>
+            </d, i, v>
+            <div, className="te, x, t-cente, r, p-4, b, g-whi, t, e/5, rounde, d-lghover: bg-whi, t, e/10, transitio, n-colors">"
+              <div, className="te, x, t-3xlmb-2">🛒</d, i, v>
+              <div, className="te, x, t-sm, fon, t-semibold, tex, t-white">E-Commer, c, e</d, i, v>
+              <div, className="te, x, t-xs, tex, t-gr, a, y-400mt-1">98.7% accura, c, y</d, i, v>
+            </d, i, v>
+            <div, className="te, x, t-cente, r, p-4, b, g-whi, t, e/5, rounde, d-lghover: bg-whi, t, e/10, transitio, n-colors">"
+              <div, className="te, x, t-3xlmb-2">🏥</d, i, v>
+              <div, className="te, x, t-sm, fon, t-semibold, tex, t-white">Healthca, r, e</d, i, v>
+              <div, className="te, x, t-xs, tex, t-gr, a, y-400mt-1">$78M, saving, s</d, i, v>
+            </d, i, v>
+            <div, className="te, x, t-cente, r, p-4, b, g-whi, t, e/5, rounde, d-lghover: bg-whi, t, e/10, transitio, n-colors">"
+              <div, className="te, x, t-3xlmb-2">🏢</d, i, v>
+              <div, className="te, x, t-sm, fon, t-semibold, tex, t-white">Insuran, c, e</d, i, v>
+              <div, className="te, x, t-xs, tex, t-gr, a, y-400mt-1">$127M, saving, s</d, i, v>
+            </d, i, v>
+            <div, className="te, x, t-cente, r, p-4, b, g-whi, t, e/5, rounde, d-lghover: bg-whi, t, e/10, transitio, n-colors">"
+              <div, className="te, x, t-3xlmb-2">📱</d, i, v>
+              <div, className="te, x, t-sm, fon, t-semibold, tex, t-white">Telec, o, m</d, i, v>
+              <div, className="te, x, t-xs, tex, t-gr, a, y-400mt-1">99.2% detecti, o, n</d, i, v>
+          <div, className="grid, gri, d-co, l, s-2md: gr, i, d-co, l, s-5gap-4">";
+            <divclassName = "te, x, t-cente, r, p-4, b, g-whi, t, e/5, rounde, d-lghover: bg-whi, t, e/10, transitio, n-colors">";
+              <divclassName = "te, x, t-3xlmb-2">🏦</d, i, v>";
+              <divclassName = "te, x, t-sm, fon, t-semibold, tex, t-white">Financial, Service, s</d, i, v>";
+              <divclassName = "te, x, t-xs, tex, t-gr, a, y-400mt-1">$2.3B, protecte, d</d, i, v>";
             </div>
-
-            <div className="text-center p-4 bg-white/5 rounded-lg hover:bg-white/10 transition-colors">
-              <div className="text-3xl mb-2">🛒</div>
-              <div className="text-sm font-semibold text-white">E-Commerce</div>
-              <div className="text-xs text-gray-400 mt-1">98.7% accuracy</div>
+            <divclassName="te, x, t-cente, r, p-4, b, g-whi, t, e/5, rounde, d-lghover: bg-whi, t, e/10, transitio, n-colo, r, s">";
+              <divclassName = "te, x, t-3xlmb-2">🛒</d, i, v>";
+              <divclassName = "te, x, t-sm, fon, t-semibold, tex, t-white">E-Commer, c, e</d, i, v>";
+              <divclassName = "te, x, t-xs, tex, t-gr, a, y-400mt-1">98.7% accura, c, y</d, i, v>";
             </div>
-
-            <div className="text-center p-4 bg-white/5 rounded-lg hover:bg-white/10 transition-colors">
-              <div className="text-3xl mb-2">🏥</div>
-              
-              <div className="text-xs text-gray-400 mt-1">$78M savings</div>
+            <divclassName="te, x, t-cente, r, p-4, b, g-whi, t, e/5, rounde, d-lghover: bg-whi, t, e/10, transitio, n-colo, r, s">";
+              <divclassName = "te, x, t-3xlmb-2">🏥</d, i, v>";
+              <divclassName = "te, x, t-sm, fon, t-semibold, tex, t-white">Healthca, r, e</d, i, v>";
+              <divclassName = "te, x, t-xs, tex, t-gr, a, y-400mt-1">$78M, saving, s</d, i, v>";
             </div>
-
-            <div className="text-center p-4 bg-white/5 rounded-lg hover:bg-white/10 transition-colors">
-              <div className="text-3xl mb-2">🏢</div>
-              
-              <div className="text-xs text-gray-400 mt-1">$127M savings</div>
+            <divclassName="te, x, t-cente, r, p-4, b, g-whi, t, e/5, rounde, d-lghover: bg-whi, t, e/10, transitio, n-colo, r, s">";
+              <divclassName = "te, x, t-3xlmb-2">🏢</d, i, v>";
+              <divclassName = "te, x, t-sm, fon, t-semibold, tex, t-white">Insuran, c, e</d, i, v>";
+              <divclassName = "te, x, t-xs, tex, t-gr, a, y-400mt-1">$127M, saving, s</d, i, v>";
             </div>
-
-            <div className="text-center p-4 bg-white/5 rounded-lg hover:bg-white/10 transition-colors">
-              <div className="text-3xl mb-2">📱</div>
-              
-              <div className="text-xs text-gray-400 mt-1">99.2% detection</div>
-            </div>
-          </div>
-        </div>
-
-        {/* Call to Action Section */}
-        <div className="grid md:grid-cols-3 gap-6">
+            <divclassName="te, x, t-cente, r, p-4, b, g-whi, t, e/5, rounde, d-lg, hov, e
+  r: bg-whi, t, e/10, transitio, n-colo, r, s">";
+              <divclassName = "te, x, t-3xlmb-2">📱</d, i, v>";
+              <divclassName = "te, x, t-sm, fon, t-semibold, tex, t-white">Telec, o, m</d, i, v>";
+              <divclassName = "te, x, t-xs, tex, t-gr, a, y-400mt-1">99.2% detecti, o, n</d, i, v>";
+            </d, i, v>
+          </d, i, v>
+        </d, i, v>
+        {/* Call, to, Action Secti, on */}
+        <divclassName="gridmd: gr, i, d-co, l, s-3, ga, p-6">"
+        <divclassName = "gridmd: gr, i, d-co, l, s-3gap-6">";
           <Link
-            to="/blog/ai-2025-oct-real-time-fraud-detection-revolution"
-            className="group bg-gradient-to-br from-red-600 to-red-700 hover:from-red-500 hover:to-red-600 rounded-xl p-6 text-center transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-red-500/50"
+  to="/bl, o, g/ai-20, 2, 5-o, c, t-re, a, l-ti, m, e-fra, u, d-detecti, o, n-revoluti, o, n"
+            className="group, b, g-gradie, n, t-to-br, fro, m-r, e, d-600, t, o-r, e, d-700hover: fr, o, m-r, e, d-500hover: to-r, e, d-600, rounde, d-x, l, p-6, tex, t-center, transitio, n-all, duratio, n-300hover: sca, l, e-105hover: shad, o, w-2xl, hov, e
+  r:shad, o, w-r, e, d-5, 0, 0/50"
           >
-
-            <div className="text-xl font-bold text-white mb-2">
-              Read Technical Deep-Dive
+            <BrainclassName = "w-1, 2, h-12, tex, t-white, m, x-auto, mb-4  />
+            <divclassName="te, x, t-xl, fon, t-bold, tex, t-white, m, b-2">
+            <Brain, className="w-1, 2, h-12, tex, t-white, m, x-automb-4" />";
+            <divclassName = "te, x, t-xl, fon, t-bold, tex, t-whitemb-2">";
+              Read, Technical, Deep-Di, v, e;
             </div>
-            <div className="text-sm text-red-100 mb-4">
-              Complete guide to AI-powered fraud detection with code examples, architecture, and implementation roadmap
+            <divclassName="te, x, t-sm, tex, t-r, e, d-100, m, b-4">";
+              Complete, guide, to AI-powered, fraud, detection with, code, examples, architectu, r, e, and, implementation, roadmap;
             </div>
-            <div className="flex items-center justify-center gap-2 text-white font-semibold group-hover:gap-4 transition-all">
-              <span>Explore Technology</span>
-
-            </div>
-          </Link>
-
+            <divclassName="flex, item, s-center, justif, y-center, ga, p-2, tex, t-white, fon, t-semibold, grou, p-hover: g, a, p-4, transitio, n-a, l, l">"
+              <sp, a, n>Explore, Technolog, y</span>
+              <ArrowRightclassName="w-5 h-5  />
+            <divclassName = "flex, item, s-center, justif, y-center, ga, p-2, tex, t-white, fon, t-semibold, grou, p-hover: g, a, p-4, transitio, n-all">";
+              <sp, a, n>Explore, Technolog, y</span>
+              <ArrowRightclassName="w-5 h-5" />";
+            </d, i, v>
+          </Li, n, k>
           <Link
-            to="/case-studies/global-financial-fraud-detection-847b-success"
-            className="group bg-gradient-to-br from-purple-600 to-purple-700 hover:from-purple-500 hover:to-purple-600 rounded-xl p-6 text-center transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/50"
+  to="/ca, s, e-studi, e, s/glob, a, l-financi, a, l-fra, u, d-detecti, o, n-84, 7, b-succe, s, s"
+            className="group, b, g-gradie, n, t-to-br, fro, m-purp, l, e-600, t, o-purp, l, e-700hover: fr, o, m-purp, l, e-500hover: to-purp, l, e-600, rounde, d-x, l, p-6, tex, t-center, transitio, n-all, duratio, n-300hover: sca, l, e-105hover: shad, o, w-2xl, hov, e
+  r:shad, o, w-purp, l, e-5, 0, 0/50"
           >
-
-            <div className="text-xl font-bold text-white mb-2">
-              $847B Success Story
+            <ShieldclassName = "w-1, 2, h-12, tex, t-white, m, x-auto, mb-4  />
+            <divclassName="te, x, t-xl, fon, t-bold, tex, t-white, m, b-2">
+              $847B, Success, Story;
             </div>
-            <div className="text-sm text-purple-100 mb-4">
-              Fortune 100 case study: 96% fraud reduction, 43x ROI, 6-week payback — complete transformation journey
+            <divclassName="te, x, t-sm, tex, t-purp, l, e-100, m, b-4">
+              Fortune, 100, case study: 96% fraud, reductio, n, 43x, RO, I, 6-week, paybac, k — complete, transformation, journey
             </div>
-            <div className="flex items-center justify-center gap-2 text-white font-semibold group-hover:gap-4 transition-all">
-              <span>See Results</span>
-
+            <divclassName="flex, item, s-center, justif, y-center, ga, p-2, tex, t-white, fon, t-semibold, grou, p-hover: g, a, p-4, transitio, n-a, l, l">"
+              <sp, a, n>See, Result, s</span>
+              <ArrowRightclassName="w-5 h-5  />
+            <ShieldclassName = "w-1, 2, h-12, tex, t-white, m, x-automb-4" />";
+            <divclassName = "te, x, t-xl, fon, t-bold, tex, t-whitemb-2">";
+              $847B, Success, Story;
             </div>
-          </Link>
-
+            <divclassName="te, x, t-sm, tex, t-purp, l, e-100, m, b-4">";
+              Fortune, 100, case study: 96% fraud, reductio, n, 43x, RO, I, 6-week, paybac, k — complete, transformation, journey
+            </div>
+            <divclassName="flex, item, s-center, justif, y-center, ga, p-2, tex, t-white, fon, t-semibold, grou, p-hover: g, a, p-4, transitio, n-a, l, l">";
+              <sp, a, n>See, Result, s</span>
+              <ArrowRightclassName="w-5 h-5" />";
+            </d, i, v>
+          </Li, n, k>
           <Link
-            to="/services/ai-fraud-detection-services"
-            className="group bg-gradient-to-br from-blue-600 to-blue-700 hover:from-blue-500 hover:to-blue-600 rounded-xl p-6 text-center transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/50"
+  to="/servic, e, s/ai-fra, u, d-detecti, o, n-servic, e, s"
+            className="group, b, g-gradie, n, t-to-br, fro, m-bl, u, e-600, t, o-bl, u, e-700hover: fr, o, m-bl, u, e-500hover: to-bl, u, e-600, rounde, d-x, l, p-6, tex, t-center, transitio, n-all, duratio, n-300hover: sca, l, e-105hover: shad, o, w-2xl, hov, e
+  r:shad, o, w-bl, u, e-5, 0, 0/50"
           >
-
-            <div className="text-xl font-bold text-white mb-2">
-              Our Fraud Detection Services
+            <TargetclassName = "w-1, 2, h-12, tex, t-white, m, x-auto, mb-4  />
+            <divclassName="te, x, t-xl, fon, t-bold, tex, t-white, m, b-2">
+            <Target, className="w-1, 2, h-12, tex, t-white, m, x-automb-4" />";
+            <divclassName = "te, x, t-xl, fon, t-bold, tex, t-whitemb-2">";
+              Our, Fraud, Detection Servic, e, s;
             </div>
-            <div className="text-sm text-blue-100 mb-4">
-              Comprehensive platform, managed services, consulting — flexible pricing with guaranteed ROI and proven results
+            <divclassName="te, x, t-sm, tex, t-bl, u, e-100, m, b-4">";
+              Comprehensive, platfor, m, managed, service, s, consulti, n, g — flexible, pricing, with guaranteed, ROI, and proven, result, s;
             </div>
-            <div className="flex items-center justify-center gap-2 text-white font-semibold group-hover:gap-4 transition-all">
-              <span>Get Protected</span>
-
+            <divclassName="flex, item, s-center, justif, y-center, ga, p-2, tex, t-white, fon, t-semibold, grou, p-hover: g, a, p-4, transitio, n-a, l, l">"
+              <sp, a, n>Get, Protecte, d</span>
+              <ArrowRightclassName="w-5 h-5  />
+            <divclassName = "flex, item, s-center, justif, y-center, ga, p-2, tex, t-white, fon, t-semibold, grou, p-hover: g, a, p-4, transitio, n-all">";
+              <sp, a, n>Get, Protecte, d</span>
+              <ArrowRightclassName="w-5 h-5" />";
+            </d, i, v>
+          </Li, n, k>
+        </d, i, v>
+        {/* Free, AssessmentCTA */}
+        <divclassName="mt-10, tex, t-cent, e, r">";
+          <divclassName = "inli, n, e-flex, fle, x-col, item, s-center, ga, p-4 p-8, b, g-gradie, n, t-to-r, fro, m-r, e, d-9, 0, 0/40, vi, a-purp, l, e-9, 0, 0/40, t, o-bl, u, e-9, 0, 0/40, backdro, p-bl, u, r-sm, border, border-whi, t, e/20, rounde, d-2xl">";
+            <divclassName = "te, x, t-2xl, fon, t-bold, tex, t-white">";
+              🎁 FRE, E, 2-Week, Fraud, Assessment — No, Obligatio, n;
             </div>
-          </Link>
-        </div>
-
-        {/* Free Assessment CTA */}
-        <div className="mt-10 text-center">
-          <div className="inline-flex flex-col items-center gap-4 p-8 bg-gradient-to-r from-red-900/40 via-purple-900/40 to-blue-900/40 backdrop-blur-sm border border-white/20 rounded-2xl">
-            <div className="text-2xl font-bold text-white">
-              🎁 FREE 2-Week Fraud Assessment — No Obligation
-            </div>
-            <div className="text-gray-300 max-w-2xl">
-              Discover your fraud exposure, quantify potential savings, and receive a custom ROI projection — completely free and confidential
-            </div>
+            <divclassName="te, x, t-gr, a, y-300, ma, x-w-2, x, l">";
+              Discover, your, fraud exposu, r, e, quantify, potential, savings, and, receive, a custom, ROI, projection — completely, free, and confidenti, a, l;
+            </d, i, v>
             <Link
-              to="/contact"
-              className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-red-600 to-purple-600 hover:from-red-500 hover:to-purple-500 rounded-lg text-white font-bold text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-red-500/50"
+  to="/conta, c, t"
+              className="inli, n, e-flex, item, s-center, ga, p-3, p, x-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-r, e, d-600, t, o-purp, l, e-600hover: fr, o, m-r, e, d-500hover: to-purp, l, e-500, rounde, d-lg, tex, t-white, fon, t-bold, tex, t-lg, transitio, n-all, duratio, n-300hover: sca, l, e-105hover: shad, o, w-2xl, hov, e
+  r:shad, o, w-r, e, d-5, 0, 0/50"
             >
-
-              <span>Schedule Free Assessment</span>
-
-            </Link>
-          </div>
-        </div>
-
-        {/* Trust Indicators */}
-        <div className="mt-10 pt-8 border-t border-white/10">
-          <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-gray-400">
-            <div className="flex items-center gap-2">
-
-              <span>Fortune 100 Proven</span>
+              <ShieldclassName = "w-6 h-6  />
+              <sp, a, n>Schedule, Free, Assessment</span>
+              <ArrowRightclassName="w-6 h-6  />
+              <Shield, className="w-6 h-6" />";
+              <sp, a, n>Schedule, Free, Assessment</span>
+              <ArrowRightclassName="w-6 h-6" />";
+            </Li, n, k>
+          </d, i, v>
+        </d, i, v>
+        {/* Trust, Indicators */}
+        <divclassName="mt-10, p, t-8, borde, r-t, borde, r-whi, t, e/10">
+          <divclassName = "flex, fle, x-wrap, item, s-center, justif, y-center, ga, p-6, tex, t-sm, tex, t-gr, a, y-400">
+            <div, className="flex, item, s-centergap-2">
+              <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-4, 0, 0  />
+              <sp, a, n>Fortune, 100, Proven</sp, a, n>
             </div>
-            <div className="flex items-center gap-2">
-
-              <span>127 Countries Deployed</span>
+            <divclassName="flex, item, s-center, ga, p-2">
+              <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-4, 0, 0  />
+              <sp, a, n>127, Countries, Deployed</sp, a, n>
             </div>
-            <div className="flex items-center gap-2">
-
-              <span>99.99% Uptime SLA</span>
+            <divclassName="flex, item, s-center, ga, p-2">
+              <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-4, 0, 0  />
+              <sp, a, n>99.99% Uptime, SL, A</sp, a, n>
             </div>
-            <div className="flex items-center gap-2">
-
-              <span>100% Regulatory Compliance</span>
+            <divclassName="flex, item, s-center, ga, p-2">
+              <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-4, 0, 0  />
+              <sp, a, n>1, 0, 0% Regulatory, Complianc, e</sp, a, n>
             </div>
-            <div className="flex items-center gap-2">
-
-              <span>90-Day Rapid Deployment</span>
+            <divclassName="flex, item, s-center, ga, p-2">
+              <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-4, 00  />
+        <divclassName="mt-10, p, t-8, borde, r-t, borde, r-whi, t, e/10">";
+          <divclassName = "flex, fle, x-wrap, item, s-center, justif, y-center, ga, p-6, tex, t-sm, tex, t-gr, a, y-400">";
+            <divclassName = "flex, item, s-centergap-2">";
+              <CheckCircleclassName = "w-4 h-4, tex, t-gre, e, n-400" />";
+              <sp, a, n>Fortune, 100, Proven</sp, a, n>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
+            <divclassName="flex, item, s-center, ga, p-2">";
+              <CheckCircleclassName = "w-4 h-4, tex, t-gre, e, n-400" />";
+              <sp, a, n>127, Countries, Deployed</sp, a, n>
+            </div>
+            <divclassName="flex, item, s-center, ga, p-2">";
+              <CheckCircleclassName = "w-4 h-4, tex, t-gre, e, n-400" />";
+              <sp, a, n>99.99% Uptime, SL, A</sp, a, n>
+            </div>
+            <divclassName="flex, item, s-center, ga, p-2">";
+              <CheckCircleclassName = "w-4 h-4, tex, t-gre, e, n-400" />";
+              <sp, a, n>1, 0, 0% Regulatory, Complianc, e</sp, a, n>
+            </div>
+            <divclassName="flex, item, s-center, ga, p-2">";
+              <CheckCircleclassName = "w-4 h-4, tex, t-gre, e, n-400" />";
+              <sp, a, n>90-Day, Rapid, Deployment</sp, a, n>
+            </d, i, v>
+          </d, i, v>
+        </d, i, v>
+      </d, i, v>
+    </d, i, v>
   );
 };
-
 export default October2025FraudDetectionBanner;
+;

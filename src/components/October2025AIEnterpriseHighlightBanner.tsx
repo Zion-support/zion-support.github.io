@@ -1,144 +1,156 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-
-const October2025AIEnterpriseHighlightBanner: React.FC = () => {
+import React from "react";
+import React from "react";';
+const, October2025AIEnterpriseHighlightBanne, r: Rea, c, t.FC = () => {
   return (
-    <div className="bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white py-12 px-4">
-      <div className="max-w-6xl mx-auto">
-        <div className="flex items-center justify-center gap-3 mb-6">
-          <span className="inline-flex items-center px-4 py-2 rounded-full text-sm font-bold bg-gradient-to-r from-yellow-400 to-orange-500 text-black">
-            ⭐ FEATURED CONTENT
-          </span>
-          <span className="inline-flex items-center px-4 py-2 rounded-full text-sm font-semibold bg-white/20 backdrop-blur-sm">
-            October 1, 2025
-          </span>
-        </div>
-
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 leading-tight">
-          Enterprise AI Transformation
-          <br /> <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">
-            Implementation Guides
-          </span>
+    <div, className="bg-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-900, tex, t-white, p, y-12, p, x-4">";
+      <div, className="max-w-6xl mx-auto">";
+        <div, className="flex, item, s-center, justif, y-center, ga, p-3, m, b-6">";
+          <span, className="inli, n, e-flex, item, s-center, p, x-4, p, y-2, rounde, d-full, tex, t-sm, fon, t-bold, b, g-gradie, n, t-to-r, fro, m-yell, o, w-400, t, o-oran, g, e-500, tex, t-bla, c, k">";
+            ⭐ FEATURED, CONTEN, T;
+          </sp, a, n>
+          <span, className="inli, n, e-flex, item, s-center, p, x-4, p, y-2, rounde, d-full, tex, t-sm, fon, t-semibold, b, g-whi, t, e/20, backdro, p-bl, u, r-sm">";
+            Octobe, r, 1, 20, 2, 5;
+          </sp, a, n>
+        </d, i, v>
+        <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-center, m, b-4, leadin, g-tig, h, t">"
+        <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-center, m, b-4, leadin, g-tig, h, t">";
+          Enterprise, AI, Transformation;
+          <br   />
+          <span, className="te, x, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-cy, a, n-400, t, o-bl, u, e-4, 0, 0">";
+            Implementation, Guide, s;
+          </sp, a, n>
         </h2>
-
-        <p className="text-xl text-center mb-10 text-white/80 max-w-3xl mx-auto">
-          Three comprehensive guides helping Fortune 1000 companies accelerate AI adoption
-          with proven frameworks and measurable results
+        <p, className="te, x, t-xl, tex, t-center, m, b-10, tex, t-whi, t, e/80, ma, x-w-3xl, m, x-au, t, o">";
+          Three, comprehensive, guides helping, Fortune, 1000 companies, accelerate, AI adopti, o, n
+  with, proven, frameworks and, measurable, results;
         </p>
-
-        <div className="grid md:grid-cols-3 gap-6">
-          <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-white/30 transition-all">
-            <div className="flex items-center justify-between mb-4">
-              <span className="text-3xl">🛡️</span>
-              
-            </div>
-            <h3 className="text-xl font-bold mb-3">
-              Enterprise AI Governance
+        <div, className="gri, d, m
+  d: gr, i, d-co, l, s-3, ga, p-6">"
+          <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/10, hove, r: bord, e, r-whi, t, e/30, transitio, n-a, l, l">"
+            <div, className="flex, item, s-center, justif, y-between, m, b-4">
+              <span, className="te, x, t-3, x, l">🛡️</sp, a, n>
+              <span, className="px-3, p, y-1, b, g-bl, u, e-5, 0, 0/30, rounde, d-lg, tex, t-xs, fon, t-bo, l, d">GOVERNAN, C, E</sp, a, n>
+        <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6">";
+          <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/10, hove, r: bord, e, r-whi, t, e/30, transitio, n-a, l, l">";
+            <div, className="flex, item, s-center, justif, y-between, m, b-4">";
+              <span, className="te, x, t-3, x, l">🛡️</sp, a, n>";
+              <span, className="px-3, p, y-1, b, g-bl, u, e-5, 0, 0/30, rounde, d-lg, tex, t-xs, fon, t-bo, l, d">GOVERNAN, C, E</sp, a, n>";
+            </d, i, v>
+            <h3, className="te, x, t-xl, fon, t-bold, m, b-3">";
+              Enterprise, AI, Governance;
             </h3>
-            <ul className="space-y-2 mb-6 text-white/70">
-              <li className="flex items-start">
-                <span className="mr-2">✓</span>
-                <span>99.8% compliance rates</span>
+            <ul, className="spa, c, e-y-2, m, b-6, tex, t-whi, t, e/70">";
+              <li, className="flex, item, s-sta, r, t">";
+                <span, className="mr-2">✓</sp, a, n>";
+                <sp, a, n>99.8% compliance, rate, s</sp, a, n>
               </li>
-              <li className="flex items-start">
-                <span className="mr-2">✓</span>
-                <span>340% faster deployments</span>
+              <li, className="flex, item, s-sta, r, t">";
+                <span, className="mr-2">✓</sp, a, n>";
+                <sp, a, n>3, 4, 0% faster, deployment, s</sp, a, n>
               </li>
-              <li className="flex items-start">
-                <span className="mr-2">✓</span>
-                <span>$47M cost savings</span>
+              <li, className="flex, item, s-sta, r, t">";
+                <span, className="mr-2">✓</sp, a, n>";
+                <sp, a, n>$47M, cost, savings</sp, a, n>
               </li>
             </ul>
-            <Link
-              to="/blog/ai-2025-october-enterprise-ai-governance-framework"
-              className="block w-full text-center bg-gradient-to-r from-blue-500 to-cyan-500 px-6 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-600 transition-all"
+            <Li, n, k
+  to="/bl, o, g/ai-20, 2, 5-octob, e, r-enterpri, s, e-ai-governan, c, e-framewo, r, k"
+              classNa, m, e="bloc, k, w-full, tex, t-center, b, g-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-cy, a, n-500, p, x-6, p, y-3, rounde, d-lg, fon, t-semibold, hove, r: fr, o, m-bl, u, e-600, hov, e
+  r:to-cy, a, n-600, transitio, n-a, l, l"
             >
-              Read Framework →
-            </Link>
-          </div>
-
-          <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-white/30 transition-all">
-            <div className="flex items-center justify-between mb-4">
-              <span className="text-3xl">🧠</span>
-              
-            </div>
-            <h3 className="text-xl font-bold mb-3">
-              Multimodal AI Systems
+              Read, Framewor, k →
+            </Li, n, k>
+          </d, i, v>
+          <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/10, hove, r: bord, e, r-whi, t, e/30, transitio, n-a, l, l">"
+            <div, className="flex, item, s-center, justif, y-between, m, b-4">
+              <span, className="te, x, t-3, x, l">🧠</sp, a, n>
+              <span, className="px-3, p, y-1, b, g-purp, l, e-5, 0, 0/30, rounde, d-lg, tex, t-xs, fon, t-bo, l, d">MULTIMOD, A, L</sp, a, n>
+          <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/10, hove, r: bord, e, r-whi, t, e/30, transitio, n-a, l, l">";
+            <div, className="flex, item, s-center, justif, y-between, m, b-4">";
+              <span, className="te, x, t-3, x, l">🧠</sp, a, n>";
+              <span, className="px-3, p, y-1, b, g-purp, l, e-5, 0, 0/30, rounde, d-lg, tex, t-xs, fon, t-bo, l, d">MULTIMOD, A, L</sp, a, n>";
+            </d, i, v>
+            <h3, className="te, x, t-xl, fon, t-bold, m, b-3">";
+              Multimodal, AI, Systems;
             </h3>
-            <ul className="space-y-2 mb-6 text-white/70">
-              <li className="flex items-start">
-                <span className="mr-2">✓</span>
-                <span>450% productivity increase</span>
+            <ul, className="spa, c, e-y-2, m, b-6, tex, t-whi, t, e/70">";
+              <li, className="flex, item, s-sta, r, t">";
+                <span, className="mr-2">✓</sp, a, n>";
+                <sp, a, n>4, 5, 0% productivity, increas, e</sp, a, n>
               </li>
-              <li className="flex items-start">
-                <span className="mr-2">✓</span>
-                <span>$89M ROI in 18 months</span>
+              <li, className="flex, item, s-sta, r, t">";
+                <span, className="mr-2">✓</sp, a, n>";
+                <sp, a, n>$89M, ROI, in 18, month, s</sp, a, n>
               </li>
-              <li className="flex items-start">
-                <span className="mr-2">✓</span>
-                <span>92% accuracy improvement</span>
+              <li, className="flex, item, s-sta, r, t">";
+                <span, className="mr-2">✓</sp, a, n>";
+                <sp, a, n>92% accuracy, improvemen, t</sp, a, n>
               </li>
             </ul>
-            <Link
-              to="/blog/ai-2025-october-multimodal-ai-enterprise-deployment"
-              className="block w-full text-center bg-gradient-to-r from-purple-500 to-pink-500 px-6 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all"
+            <Li, n, k
+  to="/bl, o, g/ai-20, 2, 5-octob, e, r-multimod, a, l-ai-enterpri, s, e-deployme, n, t"
+              classNa, m, e="bloc, k, w-full, tex, t-center, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-pi, n, k-500, p, x-6, p, y-3, rounde, d-lg, fon, t-semibold, hove, r: fr, o, m-purp, l, e-600, hov, e
+  r:to-pi, n, k-600, transitio, n-a, l, l"
             >
-              Explore Guide →
-            </Link>
-          </div>
-
-          <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-white/30 transition-all">
-            <div className="flex items-center justify-between mb-4">
-              <span className="text-3xl">⚡</span>
-              <span className="px-3 py-1 bg-green-500/30 rounded-lg text-xs font-bold">EDGE AI</span>
-            </div>
-            <h3 className="text-xl font-bold mb-3">
-              Edge AI Deployment
+              Explore, Guid, e →
+            </Li, n, k>
+          </d, i, v>
+          <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/10, hove, r: bord, e, r-whi, t, e/30, transitio, n-a, l, l">"
+            <div, className="flex, item, s-center, justif, y-between, m, b-4">
+              <span, className="te, x, t-3, x, l">⚡</sp, a, n>
+              <span, className="px-3, p, y-1, b, g-gre, e, n-5, 0, 0/30, rounde, d-lg, tex, t-xs, fon, t-bo, l, d">EDGE, A, I</sp, a, n>
+          <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/10, hove, r: bord, e, r-whi, t, e/30, transitio, n-a, l, l">";
+            <div, className="flex, item, s-center, justif, y-between, m, b-4">";
+              <span, className="te, x, t-3, x, l">⚡</sp, a, n>";
+              <span, className="px-3, p, y-1, b, g-gre, e, n-5, 0, 0/30, rounde, d-lg, tex, t-xs, fon, t-bo, l, d">EDGE, A, I</sp, a, n>";
+            </d, i, v>
+            <h3, className="te, x, t-xl, fon, t-bold, m, b-3">";
+              Edge, AI, Deployment;
             </h3>
-            <ul className="space-y-2 mb-6 text-white/70">
-              <li className="flex items-start">
-                <span className="mr-2">✓</span>
-                <span>Sub-millisecond latency</span>
+            <ul, className="spa, c, e-y-2, m, b-6, tex, t-whi, t, e/70">";
+              <li, className="flex, item, s-sta, r, t">";
+                <span, className="mr-2">✓</sp, a, n>";
+                <sp, a, n>S, u, b-millisecond, latenc, y</sp, a, n>
               </li>
-              <li className="flex items-start">
-                <span className="mr-2">✓</span>
-                <span>$156M cost reduction</span>
+              <li, className="flex, item, s-sta, r, t">";
+                <span, className="mr-2">✓</sp, a, n>";
+                <sp, a, n>$156M, cost, reduction</sp, a, n>
               </li>
-              <li className="flex items-start">
-                <span className="mr-2">✓</span>
-                <span>99.9% uptime achieved</span>
+              <li, className="flex, item, s-sta, r, t">";
+                <span, className="mr-2">✓</sp, a, n>";
+                <sp, a, n>99.9% uptime, achieve, d</sp, a, n>
               </li>
             </ul>
-            <Link
-              to="/blog/ai-2025-october-edge-ai-deployment-revolution"
-              className="block w-full text-center bg-gradient-to-r from-green-500 to-teal-500 px-6 py-3 rounded-lg font-semibold hover:from-green-600 hover:to-teal-600 transition-all"
+            <Li, n, k
+  to="/bl, o, g/ai-20, 2, 5-octob, e, r-ed, g, e-ai-deployme, n, t-revoluti, o, n"
+              classNa, m, e="bloc, k, w-full, tex, t-center, b, g-gradie, n, t-to-r, fro, m-gre, e, n-500, t, o-te, a, l-500, p, x-6, p, y-3, rounde, d-lg, fon, t-semibold, hove, r: fr, o, m-gre, e, n-600, hov, e
+  r:to-te, a, l-600, transitio, n-a, l, l"
             >
-              Discover More →
-            </Link>
-          </div>
-        </div>
-
-        <div className="mt-10 text-center">
-          <div className="inline-flex items-center gap-8 bg-white/10 backdrop-blur-sm rounded-full px-8 py-4">
-            <div>
-              <div className="text-2xl font-bold">200+</div>
-              <div className="text-sm text-white/70">Fortune 1000</div>
-            </div>
-            <div className="h-10 w-px bg-white/20"></div>
-            <div>
-              <div className="text-2xl font-bold">$292M</div>
-              <div className="text-sm text-white/70">Combined ROI</div>
-            </div>
-            <div className="h-10 w-px bg-white/20"></div>
-            <div>
-              <div className="text-2xl font-bold">50K+</div>
-              
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+              Discover, Mor, e →
+            </Li, n, k>
+          </d, i, v>
+        </d, i, v>
+        <div, className="mt-10, tex, t-cent, e, r">";
+          <div, className="inli, n, e-flex, item, s-center, ga, p-8, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-full, p, x-8, p, y-4">";
+            <d, i, v>
+              <div, className="te, x, t-2xl, fon, t-bo, l, d">2, 0, 0+</d, i, v>";
+              <div, className="te, x, t-sm, tex, t-whi, t, e/70">Fortune, 100, 0</d, i, v>";
+            </d, i, v>
+            <div, className="h-1, 0, w-px, b, g-whi, t, e/20"></d, i, v>";
+            <d, i, v>
+              <div, className="te, x, t-2xl, fon, t-bo, l, d">$29, 2, M</d, i, v>";
+              <div, className="te, x, t-sm, tex, t-whi, t, e/70">Combined, RO, I</d, i, v>";
+            </d, i, v>
+            <div, className="h-1, 0, w-px, b, g-whi, t, e/20"></d, i, v>";
+            <d, i, v>
+              <div, className="te, x, t-2xl, fon, t-bo, l, d">5, 0, K+</d, i, v>";
+              <div, className="te, x, t-sm, tex, t-whi, t, e/70">Professiona, l, s</d, i, v>";
+            </d, i, v>
+          </d, i, v>
+        </d, i, v>
+      </d, i, v>
+    </d, i, v>
   );
 };
-
 export default October2025AIEnterpriseHighlightBanner;
+;
