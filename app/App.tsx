@@ -23,7 +23,7 @@ const ErrorBoundary = ({ children }: { children: React.ReactNode }) => {
 const HomePage = lazy(() => import('./page'));
 
 // Utils
-import { performanceOptimizer } from '../src/utils/performanceOptimizer';
+import { performanceOptimizer } from './utils/performanceOptimizer';
 
 // Styles
 import '../index.css';
@@ -34,14 +34,13 @@ const App: React.FC = () => {
     console.log('App initialized');
 
     // Initialize performance monitoring
-    performanceOptimizer.lazyLoadImages();
-    performanceOptimizer.addCriticalResourceHints();
+    performanceOptimizer.init();
     
     // Initialize Web Vitals monitoring
     if (typeof window !== 'undefined' && 'performance' in window) {
-      const pageLoadMetrics = performanceOptimizer.measurePageLoad();
-      if (pageLoadMetrics) {
-        performanceOptimizer.reportWebVitals(pageLoadMetrics);
+      const metrics = performanceOptimizer.getMetrics();
+      if (metrics) {
+        console.log('Performance metrics:', metrics);
       }
     }
     
