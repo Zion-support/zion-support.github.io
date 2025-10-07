@@ -16,7 +16,12 @@ export interface SEOConfig {
   twitterCard: string;
   twitterSite: string;
   twitterCreator: string;
+<<<<<<< HEAD
   structuredData: Record<string, unknown>;
+=======
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  structuredData: Record<string, any>;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-a80a
   robots: string;
   language: string;
   locale: string;
@@ -141,7 +146,12 @@ export class SEOEnhancer {
   }
 
   // Update structured data
+<<<<<<< HEAD
   updateStructuredData(data: Record<string, unknown>) {
+=======
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  updateStructuredData(data: Record<string, any>) {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-a80a
     const script = document.createElement('script');
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify(data);
