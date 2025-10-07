@@ -1,14 +1,19 @@
 'use client';
 
-import React, { Suspense, lazy, useCallback } from 'react';
+import React, { Suspense, lazy, useCallback, useEffect } from 'react';
 import Link from 'next/link';
+import { HelmetProvider } from 'react-helmet-async';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+// Components
 import SEOOptimizer from './components/SEOOptimizer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-<<<<<<< HEAD
 import PerformanceDashboard from './components/PerformanceDashboard';
 import AdvancedPerformanceMonitor from './components/AdvancedPerformanceMonitor';
-=======
->>>>>>> fe17d64a40e0f1e2ab1b565c469bddeb33ac5c68
+import AdvancedErrorBoundary from './components/ErrorBoundary';
+import SEOEnhancer from './components/SEOEnhancer';
+import AdvancedSEOOptimizer from './components/AdvancedSEOOptimizer';
+import LoadingSpinner from './components/LoadingSpinner';
 
 // Lazy load components for better performance
 const ContentShowcase = lazy(() => import('./components/ContentShowcase'));
@@ -19,102 +24,6 @@ const InteractiveAIROICalculator = lazy(
   () => import('./components/InteractiveAIROICalculator')
 );
 
-<<<<<<< HEAD
-// Utils
-import { performanceOptimizer } from './utils/performanceOptimizer';
-
-// Styles
-import './globals.css';
-
-const App: React.FC = () => {
-  useEffect(() => {
-    // Initialize global error handling
-    logger.lifecycle('initialized', 'App');
-
-    // Initialize performance monitoring
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      const metrics = performanceOptimizer.getMetrics();
-      if (metrics) {
-        console.log('Performance metrics:', metrics);
-      }
-    }
-    
-    logger.lifecycle('performance monitoring initialized', 'App');
-    logger.info('🚀 Zion Tech Group App initialized with comprehensive monitoring', 'App');
-  }, []);
-
-  return (
-    <HelmetProvider>
-      <AdvancedErrorBoundary
-        enableErrorReporting={true}
-        enableRetry={true}
-        onError={(error, errorInfo) => {
-          logger.error('Application Error', 'ErrorBoundary', { error: error.message, errorInfo });
-        }}
-      >
-        <AccessibilityEnhancer>
-            <SEOEnhancer
-              title='Zion Tech Group - Advanced AI and IT Solutions'
-              description='Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. Transform your business with our cutting-edge technology.'
-            >
-              <AdvancedSEOOptimizer
-                seoData={{
-                  title: 'Zion Tech Group - Advanced AI and IT Solutions',
-                  description: 'Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. Transform your business with our cutting-edge technology.',
-                  keywords: ['AI solutions', 'enterprise AI', 'quantum computing', 'autonomous systems', 'digital transformation', 'automation', 'cloud services', 'AI consulting', 'business intelligence', 'machine learning'],
-                  canonicalUrl: 'https://ziontechgroup.com',
-                  ogImage: 'https://ziontechgroup.com/og-image.jpg',
-                  structuredData: {
-                    '@type': 'TechCompany',
-                    name: 'Zion Tech Group',
-                    description: 'Advanced AI and IT Solutions Provider',
-                    foundingDate: '2020',
-                    numberOfEmployees: '50-100',
-                    industry: 'Technology',
-                    services: [
-                      'AI Solutions',
-                      'Digital Transformation',
-                      'Cloud Services',
-                      'Automation',
-                      'Business Intelligence'
-                    ]
-                  }
-                }}
-                enableStructuredData={true}
-                enableOpenGraph={true}
-                enableTwitterCards={true}
-                enableSchemaMarkup={true}
-              />
-              <Router>
-                <div className='App'>
-                  <main id='main-content'>
-                    <Suspense fallback={<LoadingSpinner />}>
-                      <Routes>
-                        <Route path='/' element={<HomePage />} />
-                        {/* Add more routes as needed */}
-                      </Routes>
-                    </Suspense>
-                  </main>
-
-                  {/* Performance Dashboard */}
-                  <PerformanceDashboard />
-                  
-                  {/* Advanced Performance Monitor */}
-                  <AdvancedPerformanceMonitor
-                    enableRealTimeMonitoring={process.env.NODE_ENV === 'development'}
-                    onMetricsUpdate={(metrics) => {
-                      if (process.env.NODE_ENV === 'development') {
-                        logger.performance('Performance Metrics', metrics as unknown as Record<string, unknown>, 'PerformanceMonitor');
-                      }
-                    }}
-                  />
-                </div>
-              </Router>
-            </SEOEnhancer>
-          </AccessibilityEnhancer>
-      </AdvancedErrorBoundary>
-    </HelmetProvider>
-=======
 // Loading fallback component
 const LoadingFallback: React.FC<{ height?: string }> = ({
   height = 'h-32',
@@ -274,8 +183,87 @@ const HomePage: React.FC = () => {
         </div>
       </footer>
     </div>
->>>>>>> fe17d64a40e0f1e2ab1b565c469bddeb33ac5c68
   );
 };
 
-export default HomePage;
+const App: React.FC = () => {
+  useEffect(() => {
+    // Initialize global error handling
+    console.log('App initialized');
+  }, []);
+
+  return (
+    <HelmetProvider>
+      <AdvancedErrorBoundary
+        enableErrorReporting={true}
+        enableRetry={true}
+        onError={(error, errorInfo) => {
+          console.error('Application Error', error, errorInfo);
+        }}
+      >
+        <AccessibilityEnhancer>
+          <SEOEnhancer
+            title="Zion Tech Group - Advanced AI and IT Solutions"
+            description="Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. Transform your business with our cutting-edge technology."
+          >
+            <AdvancedSEOOptimizer
+              seoData={{
+                title: 'Zion Tech Group - Advanced AI and IT Solutions',
+                description: 'Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. Transform your business with our cutting-edge technology.',
+                keywords: ['AI solutions', 'enterprise AI', 'quantum computing', 'autonomous systems', 'digital transformation', 'automation', 'cloud services', 'AI consulting', 'business intelligence', 'machine learning'],
+                canonicalUrl: 'https://ziontechgroup.com',
+                ogImage: 'https://ziontechgroup.com/og-image.jpg',
+                structuredData: {
+                  '@type': 'TechCompany',
+                  name: 'Zion Tech Group',
+                  description: 'Advanced AI and IT Solutions Provider',
+                  foundingDate: '2020',
+                  numberOfEmployees: '50-100',
+                  industry: 'Technology',
+                  services: [
+                    'AI Solutions',
+                    'Digital Transformation',
+                    'Cloud Services',
+                    'Automation',
+                    'Business Intelligence'
+                  ]
+                }
+              }}
+              enableStructuredData={true}
+              enableOpenGraph={true}
+              enableTwitterCards={true}
+              enableSchemaMarkup={true}
+            />
+            <Router>
+              <div className="App">
+                <main id="main-content">
+                  <Suspense fallback={<LoadingSpinner />}>
+                    <Routes>
+                      <Route path="/" element={<HomePage />} />
+                      {/* Add more routes as needed */}
+                    </Routes>
+                  </Suspense>
+                </main>
+
+                {/* Performance Dashboard */}
+                <PerformanceDashboard />
+                
+                {/* Advanced Performance Monitor */}
+                <AdvancedPerformanceMonitor
+                  enableRealTimeMonitoring={process.env.NODE_ENV === 'development'}
+                  onMetricsUpdate={(metrics) => {
+                    if (process.env.NODE_ENV === 'development') {
+                      console.log('Performance Metrics', metrics);
+                    }
+                  }}
+                />
+              </div>
+            </Router>
+          </SEOEnhancer>
+        </AccessibilityEnhancer>
+      </AdvancedErrorBoundary>
+    </HelmetProvider>
+  );
+};
+
+export default App;
