@@ -8,6 +8,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import SEOOptimizer from './components/SEOOptimizer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import PerformanceDashboard from './components/PerformanceDashboard';
+import HomePage from './page';
 
 // Loading component
 const LoadingSpinner = () => (
@@ -88,4 +89,6 @@ const App: React.FC = () => {
     </HelmetProvider>
   );
 };
+
+export default App;
 

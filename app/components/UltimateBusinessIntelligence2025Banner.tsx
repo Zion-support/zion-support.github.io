@@ -41,17 +41,10 @@ const UltimateBusinessIntelligence2025Banner = () => {
       url: '/services/automation',
       type: 'Service',
       metrics: {
-<<<<<<< HEAD
-        roi: '30,000%',
-        success: '99.8%',
-        timeline: '18 months',
-        adoption: '100%'
-=======
         automation: '95%',
         productivity: '300%',
         efficiency: '400%',
         cost: '80% reduction'
->>>>>>> c122ace256a93e0bb3b33b12f92a0d16580a74c2
       },
       tags: ['Automation', 'Enterprise', 'Productivity', 'Efficiency', '2025']
     }
@@ -84,77 +77,6 @@ const UltimateBusinessIntelligence2025Banner = () => {
                 <span className="bg-blue-500/20 text-blue-300 px-3 py-1 rounded-full text-sm font-semibold">
                   {currentContent.type}
                 </span>
-<<<<<<< HEAD
-                <span className="text-gray-300 text-sm">⏱️ {currentContent.readingTime}</span>
-              </div>
-              <button
-                onClick={handleDismiss}
-                className="text-gray-400 hover:text-white transition-colors"
-                aria-label="Dismiss banner"
-              >
-                ✕
-              </button>
-            </div>
-
-            {/* Metrics Grid */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
-              {Object.entries(currentContent.metrics).map(([key, value]) => (
-                <div key={key} className="text-center">
-                  <div className="text-3xl font-bold text-cyan-400 mb-2">{value}</div>
-                  <div className="text-gray-300 text-sm capitalize">{key.replace(/([A-Z])/g, ' $1')}</div>
-                </div>
-              ))}
-            </div>
-
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-              <Link
-                href={currentContent.url}
-                className="flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl hover:shadow-cyan-500/25"
-              >
-                <span className="text-xl">📖</span>
-                <span>Read {currentContent.type}</span>
-                <span className="group-hover:translate-x-1 transition-transform">→</span>
-              </Link>
-              <a
-                href="tel:+13024640950"
-                className="flex items-center gap-3 border-2 border-white/30 hover:border-white/60 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 hover:bg-white/10"
-              >
-                <span className="text-xl">📞</span>
-                <span>Call +1 302 464 0950</span>
-              </a>
-            </div>
-          </div>
-
-          {/* Slide Indicators */}
-          <div className="flex justify-center mt-8 space-x-2">
-            {content.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentSlide(index)}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                  index === currentSlide ? 'bg-cyan-400' : 'bg-white/30'
-                }`}
-                aria-label={`Go to slide ${index + 1}`}
-              />
-            ))}
-          </div>
-        </div>
-
-        {/* Stats Section */}
-        <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8">
-          {[
-            { value: '500+', label: 'Enterprise Clients' },
-            { value: '30,000%', label: 'Average ROI' },
-            { value: '99.9%', label: 'Success Rate' },
-            { value: '5M+', label: 'Data Points Processed' },
-          ].map((stat, index) => (
-            <div key={index} className="text-center">
-              <div className="text-3xl font-bold text-cyan-400 mb-2">{stat.value}</div>
-              <div className="text-gray-300">{stat.label}</div>
-            </div>
-          ))}
-=======
                 <span className="text-yellow-400 text-sm font-medium">
                   NEW 2025
                 </span>
@@ -228,7 +150,6 @@ const UltimateBusinessIntelligence2025Banner = () => {
               ×
             </button>
           </div>
->>>>>>> c122ace256a93e0bb3b33b12f92a0d16580a74c2
         </div>
       </div>
     </div>
