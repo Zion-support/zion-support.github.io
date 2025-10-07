@@ -3,6 +3,8 @@
  * Provides utilities for optimizing performance in React applications
  */
 
+import React from 'react';
+
 /**
  * Debounce function to limit execution rate
  */
@@ -146,21 +148,41 @@ export function runWhenIdle(
   callback: () => void,
   options?: IdleRequestOptions
 ): number {
-  if ('requestIdleCallback' in window) {
-    return window.requestIdleCallback(callback, options);
+  if (typeof window === 'undefined') {
+    return 0;
+  }
+  
+  type WindowWithIdle = Window & typeof globalThis & {
+    requestIdleCallback?: (callback: () => void, options?: IdleRequestOptions) => number;
+  };
+  
+  const win = window as WindowWithIdle;
+  
+  if (win.requestIdleCallback) {
+    return win.requestIdleCallback(callback, options);
   }
   // Fallback for browsers that don't support requestIdleCallback
-  return window.setTimeout(callback, 1) as unknown as number;
+  return win.setTimeout(callback, 1) as unknown as number;
 }
 
 /**
  * Cancel idle callback
  */
 export function cancelIdle(id: number): void {
-  if ('cancelIdleCallback' in window) {
-    window.cancelIdleCallback(id);
+  if (typeof window === 'undefined') {
+    return;
+  }
+  
+  type WindowWithIdle = Window & typeof globalThis & {
+    cancelIdleCallback?: (id: number) => void;
+  };
+  
+  const win = window as WindowWithIdle;
+  
+  if (win.cancelIdleCallback) {
+    win.cancelIdleCallback(id);
   } else {
-    window.clearTimeout(id);
+    win.clearTimeout(id);
   }
 }
 
@@ -246,7 +268,14 @@ export function preloadResources(resources: Array<{ url: string; as: string }>):
  * Check if code splitting is supported
  */
 export function supportsCodeSplitting(): boolean {
-  return typeof import === 'function';
+  // Check if dynamic import is supported
+  try {
+    // Check if Function constructor can create an import expression
+    new Function('return import("data:text/javascript,")')();
+    return true;
+  } catch {
+    return false;
+  }
 }
 
 /**
