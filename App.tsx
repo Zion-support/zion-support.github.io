@@ -8,7 +8,7 @@ import ErrorBoundary from './app/components/ErrorBoundary';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
 
 // Initialize performance monitoring
-performanceEnhancer.initialize();
+performanceEnhancer.startMonitoring();
 
 const App: React.FC = () => {
   // Performance optimization: Preload critical resources
@@ -75,9 +75,8 @@ const App: React.FC = () => {
   return (
     <BrowserRouter>
       <ErrorBoundary>
-        <PerformanceMonitor>
-          <HomePage />
-        </PerformanceMonitor>
+        <PerformanceMonitor />
+        <HomePage />
       </ErrorBoundary>
     </BrowserRouter>
   );
