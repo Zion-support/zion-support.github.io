@@ -1,5 +1,5 @@
 import { Component, ErrorInfo, ReactNode } from 'react';
-import { AlertTriangle } from 'lucide-react';
+import { AlertCircle } from 'lucide-react';
 
 interface Props {
   children: ReactNode;
@@ -22,12 +22,6 @@ class ErrorBoundary extends Component<Props, State> {
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-<<<<<<< HEAD
-    this.setState({
-      error,
-      errorInfo
-    });
-
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
       console.error('ErrorBoundary caught an error:', error, errorInfo);
@@ -55,7 +49,7 @@ class ErrorBoundary extends Component<Props, State> {
             <div className='max-w-md w-full mx-4'>
               <div className='bg-white rounded-2xl shadow-xl p-8 text-center'>
                 <div className='inline-flex items-center justify-center w-16 h-16 rounded-full bg-red-100 mb-4'>
-                  <AlertTriangle className='w-8 h-8 text-red-600' />
+                  <AlertCircle className='w-8 h-8 text-red-600' />
                 </div>
                 <h1 className='text-2xl font-bold text-gray-900 mb-2'>
                   Oops! Something went wrong
