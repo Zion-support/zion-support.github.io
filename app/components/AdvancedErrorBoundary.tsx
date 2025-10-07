@@ -27,10 +27,6 @@ interface ErrorReport {
   url: string;
   userId: string | null;
   sessionId: string;
-  message: string;
-  stack: string | undefined;
-  componentStack: string | null | undefined;
-  userId: string | null;
 }
 
 class AdvancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
@@ -82,9 +78,13 @@ class AdvancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
       errorId: this.state.errorId || this.generateErrorId(),
       error,
       errorInfo,
+      message: error.message,
+      stack: error.stack,
+      componentStack: errorInfo.componentStack,
       timestamp: new Date().toISOString(),
       userAgent: navigator.userAgent,
       url: window.location.href,
+      userId: this.getUserId(),
       sessionId: this.getSessionId(),
     };
 
