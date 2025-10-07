@@ -3,6 +3,7 @@
  */
 
 export interface WebVitalsMetrics {
+  // Web Vitals metrics tracking
   FCP?: number; // First Contentful Paint
   LCP?: number; // Largest Contentful Paint
   FID?: number; // First Input Delay

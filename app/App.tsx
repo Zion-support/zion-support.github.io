@@ -2,6 +2,9 @@ import React, { useEffect, lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 
+// Utils
+import { logger } from './utils/logger';
+
 // Components
 import AdvancedErrorBoundary from './components/AdvancedErrorBoundary';
 import SEOEnhancer from './components/SEOEnhancer';
@@ -27,9 +30,7 @@ import './globals.css';
 const App: React.FC = () => {
   useEffect(() => {
     // Initialize global error handling
-    if (process.env.NODE_ENV === 'development') {
-      console.log('App initialized');
-    }
+    logger.lifecycle('initialized', 'App');
 
     // Initialize performance monitoring
     performanceOptimizer.lazyLoadImages();
@@ -44,12 +45,8 @@ const App: React.FC = () => {
       }
     }
     
-    if (process.env.NODE_ENV === 'development') {
-      console.log('Performance monitoring initialized');
-      console.log(
-        '🚀 Zion Tech Group App initialized with comprehensive monitoring',
-      );
-    }
+    logger.lifecycle('performance monitoring initialized', 'App');
+    logger.info('🚀 Zion Tech Group App initialized with comprehensive monitoring', 'App');
   }, []);
 
   return (
@@ -58,7 +55,7 @@ const App: React.FC = () => {
         enableErrorReporting={true}
         enableRetry={true}
         onError={(error, errorInfo) => {
-          console.error('Application Error:', error, errorInfo);
+          logger.error('Application Error', 'ErrorBoundary', { error: error.message, errorInfo });
         }}
       >
         <PerformanceOptimizer>
@@ -114,7 +111,7 @@ const App: React.FC = () => {
                     enableRealTimeMonitoring={process.env.NODE_ENV === 'development'}
                     onMetricsUpdate={(metrics) => {
                       if (process.env.NODE_ENV === 'development') {
-                        console.log('Performance Metrics:', metrics);
+                        logger.performance('Performance Metrics', metrics as unknown as Record<string, unknown>, 'PerformanceMonitor');
                       }
                     }}
                   />

@@ -1,6 +1,7 @@
-import React, { Suspense, lazy } from 'react';
-import { Helmet } from 'react-helmet-async';
+import React, { Suspense, lazy, useCallback } from 'react';
 import { Link } from 'react-router-dom';
+import SEOOptimizer from './components/SEOOptimizer';
+import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 
 // Lazy load components for better performance
 const ContentShowcase = lazy(() => import('./components/ContentShowcase'));
@@ -21,8 +22,19 @@ const LoadingFallback: React.FC<{ height?: string }> = ({
 );
 
 const HomePage: React.FC = () => {
+  // Analytics tracking for phone clicks
+  const handlePhoneClick = useCallback(() => {
+    if (typeof window !== 'undefined' && (window as unknown as { gtag?: Function }).gtag) {
+      ((window as unknown as { gtag: Function }).gtag)('event', 'phone_click', {
+        event_category: 'engagement',
+        event_label: 'main_phone_number'
+      });
+    }
+  }, []);
+
   return (
     <>
+<<<<<<< HEAD
       <Helmet>
         <title>Zion Tech Group - Advanced AI and IT Solutions</title>
         <meta
@@ -87,6 +99,16 @@ const HomePage: React.FC = () => {
 
       <div className='min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100'>
         <header className="bg-white shadow-sm sticky top-0 z-50" role="banner">
+=======
+      <SEOOptimizer 
+        title="Zion Tech Group - Advanced AI and IT Solutions"
+        description="Leading provider of AI-powered enterprise solutions, automation, and digital transformation services. Transform your business with cutting-edge AI micro SaaS services and cloud automation."
+        keywords={['AI solutions', 'enterprise AI', 'digital transformation', 'automation', 'cloud services', 'AI consulting', 'business intelligence', 'machine learning', 'artificial intelligence', 'enterprise software']}
+      />
+      <AccessibilityEnhancer>
+        <div className='min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100'>
+        <header className="bg-white shadow-sm sticky top-0 z-50">
+>>>>>>> 68abfd78c0fc76bb2d296448d64c5c14b506b08f
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex justify-between items-center py-6">
               <div className="flex items-center">
@@ -173,8 +195,13 @@ const HomePage: React.FC = () => {
                 </Link>
                 <a
                   href="tel:+13024640950"
+<<<<<<< HEAD
                   className="bg-white text-indigo-600 px-8 py-4 rounded-lg border-2 border-indigo-600 hover:bg-indigo-50 transition-all duration-300 transform hover:scale-105 font-medium focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
                   aria-label="Call us at +1 302 464 0950">
+=======
+                  onClick={handlePhoneClick}
+                  className="bg-white text-indigo-600 px-8 py-4 rounded-lg border-2 border-indigo-600 hover:bg-indigo-50 transition-all duration-300 transform hover:scale-105 font-medium">
+>>>>>>> 68abfd78c0fc76bb2d296448d64c5c14b506b08f
                   Call +1 302 464 0950
                 </a>
               </div>
@@ -351,6 +378,7 @@ const HomePage: React.FC = () => {
                 </Link>
                 <a
                   href="tel:+13024640950"
+                  onClick={handlePhoneClick}
                   className="bg-transparent text-white px-8 py-4 rounded-lg border-2 border-white hover:bg-white hover:text-indigo-600 transition-all duration-300 transform hover:scale-105 font-medium">
                   Call +1 302 464 0950
                 </a>
@@ -400,7 +428,8 @@ const HomePage: React.FC = () => {
             </div>
           </div>
         </footer>
-      </div>
+        </div>
+      </AccessibilityEnhancer>
     </>
   );
 };
