@@ -1,157 +1,28 @@
-<<<<<<< HEAD
-import React from "react";
+import React, { type ReactNode, useEffect } from 'react';
 
-const PerformanceMonitor: React.FC = () => {
-  return (
-    <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
-      <h2 className="text-2xl font-bold text-white mb-6">PerformanceMonitor</h2>
-      <p className="text-gray-400">PerformanceMonitor component</p>
-=======
-'use client';
-
-import React, { useEffect, useState } from 'react';
-import { Activity } from 'lucide-react';
-
-interface PerformanceMetrics {
-  fcp: number | null;
-  lcp: number | null;
-  fid: number | null;
-  cls: number | null;
-  ttfb: number | null;
-  inp: number | null;
+interface PerformanceMonitorProps {
+  children: ReactNode;
 }
 
-const PerformanceMonitor: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    fcp: null,
-    lcp: null,
-    fid: null,
-    cls: null,
-    ttfb: null,
-    inp: null,
-  });
-
-  const [isVisible, setIsVisible] = useState(false);
-
+const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ children }) => {
   useEffect(() => {
-    // Only show in development or when explicitly enabled
-    if (
-      process.env.NODE_ENV === 'development' ||
-      process.env.NEXT_PUBLIC_SHOW_PERFORMANCE === 'true'
-    ) {
-      setIsVisible(true);
-    }
-
-    // Dynamically import web-vitals to avoid build issues
-    import('web-vitals')
-      .then((webVitals) => {
-        const { onCLS, onFCP, onLCP, onTTFB } = webVitals;
-
-        // Measure Core Web Vitals
-        onCLS((metric: any) => {
-          setMetrics((prev: PerformanceMetrics) => ({
-            ...prev,
-            cls: metric.value,
-          }));
-        });
-
-        onFCP((metric: any) => {
-          setMetrics((prev: PerformanceMetrics) => ({
-            ...prev,
-            fcp: metric.value,
-          }));
-        });
-
-        onLCP((metric: any) => {
-          setMetrics((prev: PerformanceMetrics) => ({
-            ...prev,
-            lcp: metric.value,
-          }));
-        });
-
-        onTTFB((metric: any) => {
-          setMetrics((prev: PerformanceMetrics) => ({
-            ...prev,
-            ttfb: metric.value,
-          }));
-        });
-
-        // Try to use onINP if available (for newer versions)
-        if (webVitals.onINP) {
-          webVitals.onINP((metric: any) => {
-            setMetrics((prev: PerformanceMetrics) => ({
-              ...prev,
-              inp: metric.value,
-            }));
-          });
+    // Monitor performance metrics
+    if (typeof window !== 'undefined' && 'performance' in window) {
+      const observer = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          console.log('Performance entry:', entry);
         }
-      })
-      .catch((error) => {
-        console.warn('Failed to load web-vitals:', error);
       });
+      
+      observer.observe({ entryTypes: ['measure', 'navigation', 'paint'] });
+      
+      return () => {
+        observer.disconnect();
+      };
+    }
   }, []);
 
-  const getPerformanceGrade = (
-    metric: number,
-    thresholds: { good: number; poor: number }
-  ) => {
-    if (metric <= thresholds.good) return 'good';
-    if (metric <= thresholds.poor) return 'needs-improvement';
-    return 'poor';
-  };
-
-  const getGradeColor = (grade: string) => {
-    switch (grade) {
-      case 'good':
-        return 'text-green-600 bg-green-100';
-      case 'needs-improvement':
-        return 'text-yellow-600 bg-yellow-100';
-      case 'poor':
-        return 'text-red-600 bg-red-100';
-      default:
-        return 'text-gray-600 bg-gray-100';
-    }
-  };
-
-  if (!isVisible) {
-    return (
-      <button
-        onClick={() => setIsVisible(true)}
-        className="fixed bottom-4 right-4 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition-colors z-50"
-        title="Open Performance Monitor"
-      >
-        <Activity className="h-5 w-5" />
-      </button>
-    );
-  }
-
-  return (
-    <div className="fixed bottom-4 right-4 bg-black bg-opacity-80 text-white p-4 rounded-lg text-xs font-mono z-50">
-      <div className="font-bold mb-2">Performance Metrics</div>
-      <div>
-        {metrics.cls !== null && (
-          <div>CLS: {metrics.cls.toFixed(3)}</div>
-        )}
-        {metrics.inp !== null && (
-          <div>INP: {metrics.inp.toFixed(2)}ms</div>
-        )}
-        {metrics.fcp !== null && (
-          <div>FCP: {metrics.fcp.toFixed(2)}ms</div>
-        )}
-        {metrics.lcp !== null && (
-          <div>LCP: {metrics.lcp.toFixed(2)}ms</div>
-        )}
-        {metrics.ttfb !== null && (
-          <div>TTFB: {metrics.ttfb.toFixed(2)}ms</div>
-        )}
-      </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-6f5b
-    </div>
-  );
+  return <>{children}</>;
 };
 
-<<<<<<< HEAD
 export default PerformanceMonitor;
-=======
-export default PerformanceMonitor;
->>>>>>> cursor/fix-errors-and-merge-to-main-6f5b
