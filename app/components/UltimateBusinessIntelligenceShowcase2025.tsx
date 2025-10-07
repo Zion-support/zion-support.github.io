@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
 const UltimateBusinessIntelligenceShowcase2025 = () => {
@@ -66,19 +66,10 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
     }
   }, []);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-85f5
   // const handleClose = () => {
   //   setIsVisible(false);
   //   localStorage.setItem('ultimate-business-intelligence-showcase-2025-dismissed', 'true');
   // };
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-3b5f
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-85f5
 
   if (!isVisible) return null;
 
@@ -177,28 +168,14 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
               </div>
             </div>
 
-<<<<<<< HEAD
-            <div className="relative">
-              <div className="bg-gradient-to-br from-cyan-500/20 to-blue-600/20 rounded-2xl p-8 border border-cyan-400/30">
-                <div className="text-center">
-                  <div className="text-6xl mb-4">{currentFeature.icon}</div>
-                  <h4 className="text-2xl font-bold text-white mb-4">Live Demo</h4>
-                  <p className="text-gray-300 mb-6">See our platform in action with real-time data processing and AI insights.</p>
-                  <div className="bg-black/50 rounded-lg p-4 font-mono text-sm text-green-400">
-                    <div>Processing: 1,247,892 events/sec</div>
-                    <div>Accuracy: 99.9%</div>
-                    <div>Response Time: 47ms</div>
-                  </div>
-=======
             {/* Stats Grid */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
               {Object.entries(currentFeature.stats).map(([key, value]) => (
                 <div key={key} className="text-center">
                   <div className="text-3xl font-bold text-cyan-400 mb-2">{value}</div>
                   <div className="text-sm text-gray-300">{key}</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-d703
                 </div>
-              </div>
+              ))}
             </div>
           </div>
         </div>
