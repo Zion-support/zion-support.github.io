@@ -3,9 +3,43 @@
  * Real-time monitoring dashboard for performance, errors, and system health
  */
 
-import React, { useState, useCallback, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
+import { collectPerformanceMetrics } from '../utils/performanceOptimizer';
 import { errorHandler } from '../utils/enhancedErrorHandler';
 
+// Helper functions
+const calculatePerformanceScore = () => {
+  const metrics = collectPerformanceMetrics();
+  if (!metrics) return 0;
+  
+  let score = 100;
+  
+  // Deduct points for slow load times
+  if (metrics.loadTime > 3000) score -= 20;
+  if (metrics.loadTime > 5000) score -= 30;
+  
+  // Deduct points for slow paint times
+  if (metrics.firstContentfulPaint > 2000) score -= 15;
+  if (metrics.firstContentfulPaint > 3000) score -= 25;
+  
+  return Math.max(0, score);
+};
+
+// Network connection interface
+interface NetworkConnection {
+  effectiveType?: string;
+  downlink?: number;
+  rtt?: number;
+  saveData?: boolean;
+}
+
+interface NavigatorWithConnection extends Navigator {
+  connection?: NetworkConnection;
+  mozConnection?: NetworkConnection;
+  webkitConnection?: NetworkConnection;
+}
+
+>>>>>>> e2aec618376f3db9bd60312768ea5d9abc7086c8
 interface SystemMetrics {
   performance: {
     score: number;
@@ -76,12 +110,12 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
 
       const newMetrics: SystemMetrics = {
         performance: {
-          score: 0.85,
-          loadTime: loadTime || 0,
-          firstContentfulPaint: 0,
-          largestContentfulPaint: 0,
-          firstInputDelay: 0,
-          cumulativeLayoutShift: 0,
+          score: performanceScore,
+          loadTime: performanceMetrics?.loadTime || 0,
+          firstContentfulPaint: performanceMetrics?.firstContentfulPaint || 0,
+          largestContentfulPaint: 0, // Not available in current metrics
+          firstInputDelay: 0, // Not available in current metrics
+          cumulativeLayoutShift: 0, // Not available in current metrics
         },
         errors: {
           total: errorStats.totalErrors,
