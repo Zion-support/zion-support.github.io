@@ -76,9 +76,10 @@ export const usePerformanceMonitoring = () => {
       // TTFB - Time to First Byte
       const navigationObserver = new PerformanceObserver(list => {
         const entries = list.getEntries();
-        entries.forEach((entry: PerformanceNavigationTiming) => {
+        entries.forEach((entry) => {
           if (entry.entryType === 'navigation') {
-            const ttfb = entry.responseStart - entry.requestStart;
+            const navEntry = entry as PerformanceNavigationTiming;
+            const ttfb = navEntry.responseStart - navEntry.requestStart;
             reportMetric('TTFB', ttfb);
           }
         });
@@ -88,9 +89,10 @@ export const usePerformanceMonitoring = () => {
       // Resource timing
       const resourceObserver = new PerformanceObserver(list => {
         const entries = list.getEntries();
-        entries.forEach((entry: PerformanceResourceTiming) => {
+        entries.forEach((entry) => {
           if (entry.entryType === 'resource') {
-            const loadTime = entry.responseEnd - entry.requestStart;
+            const resourceEntry = entry as PerformanceResourceTiming;
+            const loadTime = resourceEntry.responseEnd - resourceEntry.requestStart;
             if (loadTime > 1000) {
               // Only track slow resources
               reportMetric('SLOW_RESOURCE', loadTime);
@@ -112,6 +114,7 @@ export const usePerformanceMonitoring = () => {
     } catch (error) {
       // eslint-disable-next-line no-console
       console.warn('Performance monitoring not supported:', error);
+      return undefined;
     }
   }, [reportMetric]);
 

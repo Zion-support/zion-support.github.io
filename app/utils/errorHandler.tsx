@@ -100,7 +100,7 @@ export class ErrorHandler {
       timestamp: new Date(),
       url: typeof window !== 'undefined' ? window.location.href : undefined,
       userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : undefined,
-      componentStack: errorInfo?.componentStack,
+      componentStack: errorInfo?.componentStack || undefined,
       context,
       resolved: false,
       retryCount: 0,

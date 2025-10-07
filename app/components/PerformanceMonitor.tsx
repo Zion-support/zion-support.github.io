@@ -30,8 +30,9 @@ const PerformanceMonitor: React.FC = memo(() => {
       if ('PerformanceObserver' in window) {
         const observer = new PerformanceObserver((list) => {
           for (const entry of list.getEntries()) {
-            if (entry.entryType === 'layout-shift' && !(entry as LayoutShift).hadRecentInput) {
-              cumulativeLayoutShift += (entry as LayoutShift).value;
+            const layoutShiftEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value?: number };
+            if (entry.entryType === 'layout-shift' && !layoutShiftEntry.hadRecentInput && layoutShiftEntry.value) {
+              cumulativeLayoutShift += layoutShiftEntry.value;
             }
           }
         });
