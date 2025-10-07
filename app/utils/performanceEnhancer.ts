@@ -4,7 +4,7 @@
  */
 
 // Debounce function for performance optimization
-export const debounce = <T extends (...args: any[]) => any>(
+export const debounce = <T extends (...args: unknown[]) => unknown>(
   func: T,
   wait: number
 ): ((...args: Parameters<T>) => void) => {
@@ -16,7 +16,7 @@ export const debounce = <T extends (...args: any[]) => any>(
 };
 
 // Throttle function for performance optimization
-export const throttle = <T extends (...args: any[]) => any>(
+export const throttle = <T extends (...args: unknown[]) => unknown>(
   func: T,
   limit: number
 ): ((...args: Parameters<T>) => void) => {
@@ -92,13 +92,27 @@ export const optimizeScrollPerformance = () => {
   window.addEventListener('scroll', requestTick, { passive: true });
 };
 
+// Memory usage interface
+interface PerformanceMemory {
+  usedJSHeapSize: number;
+  totalJSHeapSize: number;
+  jsHeapSizeLimit: number;
+}
+
+interface PerformanceWithMemory extends Performance {
+  memory?: PerformanceMemory;
+}
+
 // Memory usage monitoring
 export const getMemoryUsage = () => {
   if (typeof window === 'undefined' || !('memory' in performance)) {
     return null;
   }
 
-  const memory = (performance as any).memory;
+  const perf = performance as PerformanceWithMemory;
+  const memory = perf.memory;
+  if (!memory) return null;
+  
   return {
     used: memory.usedJSHeapSize,
     total: memory.totalJSHeapSize,
@@ -144,6 +158,7 @@ export const initializePerformanceEnhancements = () => {
   // Collect performance metrics
   const metrics = collectPerformanceMetrics();
   if (metrics) {
+    // eslint-disable-next-line no-console
     console.log('Performance metrics:', metrics);
   }
 };
