@@ -64,7 +64,12 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   // Monitor Web Vitals using Performance Observer
   useEffect(() => {
     if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return;
-  }));
+    
+    const observer = new PerformanceObserver((list) => {
+      list.getEntries().forEach((entry) => {
+        if (entry.entryType === 'largest-contentful-paint') {
+          const lcp = entry.startTime;
+          setMetrics(prev => ({ ...prev, LCP: lcp }));
           if (enableReporting) {
             performanceOptimizer.reportWebVitals({ LCP: lcp });
           }
@@ -96,7 +101,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 
     return () => {
       observer.disconnect();
-  };
+    };
   }, [enableReporting]);
 
   // Development mode: Log performance metrics

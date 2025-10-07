@@ -31,10 +31,10 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
             const firstElement = focusableElements[0] as HTMLElement;
             const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
             
-            if (event.target === lastElement && !event.shiftKey) {
+            if (event.target === lastElement && (event as unknown as KeyboardEvent).shiftKey) {
               firstElement.focus();
               event.preventDefault();
-            } else if (event.target === firstElement && event.shiftKey) {
+            } else if (event.target === firstElement && !(event as unknown as KeyboardEvent).shiftKey) {
               lastElement.focus();
               event.preventDefault();
             }

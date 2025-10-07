@@ -98,6 +98,7 @@ export const keyboardNavigation = {
     orientation: 'horizontal' | 'vertical' = 'vertical'
   ): number => {
     const isVertical = orientation === 'vertical';
+    // const isHorizontal = orientation === 'horizontal';
 
     switch (event.key) {
       case isVertical ? 'ArrowDown' : 'ArrowRight':

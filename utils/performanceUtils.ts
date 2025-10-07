@@ -44,11 +44,11 @@ export const getMemoryUsage = (): {
   total: number;
   percentage: number;
 } => {
-  if (typeof performance === 'undefined' || !(performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number } }).memory) {
+  if (typeof performance === 'undefined' || !(performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory) {
     return { used: 0, total: 0, percentage: 0 };
   }
 
-  const memory = (performance as Performance & { memory: { usedJSHeapSize: number; totalJSHeapSize: number } }).memory;
+  const memory = (performance as Performance & { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
   const used = memory.usedJSHeapSize;
   const total = memory.totalJSHeapSize;
   const percentage = (used / total) * 100;
@@ -66,7 +66,7 @@ export const collectPerformanceMetrics = async (): Promise<{
   firstInputDelay: number;
   cumulativeLayoutShift: number;
 }> => {
-  const metrics: Record<string, number> = {};
+  const metrics: Record<string, unknown> = {};
 
   // Basic timing metrics
   if (typeof window !== 'undefined' && window.performance) {
@@ -120,8 +120,8 @@ export const collectPerformanceMetrics = async (): Promise<{
       let clsValue = 0;
       const clsObserver = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
-          if (!(entry as PerformanceEntry & { hadRecentInput?: boolean }).hadRecentInput) {
-            clsValue += (entry as PerformanceEntry & { value: number }).value;
+          if (!(entry as LayoutShift).hadRecentInput) {
+            clsValue += (entry as LayoutShift).value;
           }
         }
         metrics.cumulativeLayoutShift = clsValue;
@@ -297,10 +297,10 @@ export const performanceMonitor = {
 };
 
 // Collect performance metrics array
-export const collectPerformanceMetricsArray = async (): Promise<Array<{ name: string; value: number }>> => {
+export const collectPerformanceMetricsArray = async (): Promise<Record<string, unknown>[]> => {
   if (typeof window === 'undefined') return [];
 
-  const metrics: Array<{ name: string; value: number }> = [];
+  const metrics: Record<string, unknown>[] = [];
 
   // Navigation timing
   if (performance.timing) {
@@ -326,17 +326,12 @@ export const collectPerformanceMetricsArray = async (): Promise<Array<{ name: st
 };
 
 // Get memory usage
-export const getMemoryUsage = (): Record<string, number> | null => {
+export const getMemoryUsage = (): Record<string, unknown> | null => {
   if (typeof window === 'undefined' || !(performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory) {
     return null;
   }
 
-  const memory = (performance as Performance & { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
-  return {
-    usedJSHeapSize: memory.usedJSHeapSize,
-    totalJSHeapSize: memory.totalJSHeapSize,
-    jsHeapSizeLimit: memory.jsHeapSizeLimit
-  };
+  return (performance as Performance & { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
 };
 
 export default {

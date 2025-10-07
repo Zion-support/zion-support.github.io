@@ -348,7 +348,7 @@ export class PerformanceOptimizer {
   /**
    * Measure page load performance
    */
-  measurePageLoad(): { domContentLoaded: number; loadComplete: number; totalTime: number } | null {
+  measurePageLoad(): Record<string, unknown> | null {
     if (typeof window === 'undefined' || !('performance' in window)) {
       return null;
     }
@@ -366,7 +366,7 @@ export class PerformanceOptimizer {
   /**
    * Report Web Vitals
    */
-  reportWebVitals(metrics: { totalTime?: number; [key: string]: unknown }): void {
+  reportWebVitals(metrics: Record<string, unknown>): void {
     if (typeof window === 'undefined') return;
     
     console.log('Web Vitals:', metrics);
@@ -376,7 +376,7 @@ export class PerformanceOptimizer {
       (window as Window & { gtag?: (...args: unknown[]) => void }).gtag?.('event', 'web_vitals', {
         event_category: 'Performance',
         event_label: 'Page Load',
-        value: Math.round(metrics.totalTime || 0)
+        value: Math.round((metrics.totalTime as number) || 0)
       });
     }
   }
@@ -400,7 +400,7 @@ export const withPerformanceTracking = <P extends object>(
       return () => optimizer.endRender(name);
     });
     
-    return React.createElement(Component, { ...props, ref } as P & { ref?: React.Ref<unknown> });
+    return React.createElement(Component, { ...props, ref } as P);
   });
   
   WrappedComponent.displayName = `withPerformanceTracking(${name})`;

@@ -12,6 +12,35 @@
 //   initAccessibility
 // } from './accessibilityUtils';
 
+import {
+  getMemoryUsage,
+  collectPerformanceMetrics,
+  performanceMonitor,
+  // debounce,
+  // throttle,
+  lazyLoadImages,
+  preloadCriticalResources,
+  optimizeScrollPerformance
+} from './performanceUtils';
+
+import {
+  // setMetaTags,
+  setOpenGraphTags,
+  setTwitterCardTags,
+  setStructuredData,
+  // generateSitemap,
+  // optimizeImages,
+  setCanonicalUrl,
+  setPageTitle,
+  setMetaDescription,
+  setKeywords,
+  // setRobotsMeta,
+  // setLanguage,
+  // setViewport,
+  schemaGenerators,
+  seoAudit
+} from './seoUtils';
+
 // import {
 //   getMemoryUsage,
 //   collectPerformanceMetrics,
@@ -225,7 +254,7 @@ export class ComprehensiveOptimizer {
 
     // Set Open Graph tags
     if (this.config.seo.enableOpenGraph) {
-      const ogData: Record<string, string> = {
+      const ogData: Record<string, unknown> = {
         title: pageData.title,
         description: pageData.description,
         url: pageData.url,
@@ -239,7 +268,7 @@ export class ComprehensiveOptimizer {
 
     // Set Twitter Card tags
     if (this.config.seo.enableTwitterCards) {
-      const twitterData: Record<string, string> = {
+      const twitterData: Record<string, unknown> = {
         title: pageData.title,
         description: pageData.description,
       };

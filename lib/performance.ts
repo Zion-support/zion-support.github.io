@@ -35,10 +35,6 @@ interface NetworkConnection {
   saveData?: boolean;
 }
 
-interface NavigatorWithConnection extends Navigator {
-  connection?: NetworkConnection;
-}
-
 interface PerformanceReport {
   metrics: PerformanceMetric[];
   timestamp: string;
@@ -228,8 +224,8 @@ export function getSlowResources(threshold: number = 1000): PerformanceResourceT
  */
 export function getMemoryUsage(): Record<string, number> | null {
   if (typeof window === 'undefined' || !(window as Window & { performance: Performance & { memory?: PerformanceMemory } }).performance?.memory) return null;
-
-  const memory = (window as Window & { performance: Performance & { memory?: PerformanceMemory } }).performance.memory;
+  
+  const memory = (window as Window & { performance: Performance & { memory?: PerformanceMemory } }).performance.memory!;
   return {
     usedJSHeapSize: memory.usedJSHeapSize,
     totalJSHeapSize: memory.totalJSHeapSize,
@@ -296,11 +292,11 @@ export function monitorLayoutShifts(
  * Check if connection is slow
  */
 export function isSlowConnection(): boolean {
-  if (typeof navigator === 'undefined' || !(navigator as NavigatorWithConnection).connection) {
+  if (typeof navigator === 'undefined' || !(navigator as Navigator & { connection?: NetworkConnection }).connection) {
     return false;
   }
 
-  const connection = (navigator as NavigatorWithConnection).connection;
+  const connection = (navigator as Navigator & { connection?: NetworkConnection }).connection!;
   const slowTypes = ['slow-2g', '2g'];
   return (
     slowTypes.includes(connection.effectiveType) || connection.saveData === true
@@ -311,11 +307,11 @@ export function isSlowConnection(): boolean {
  * Get connection type
  */
 export function getConnectionType(): string {
-  if (typeof navigator === 'undefined' || !(navigator as NavigatorWithConnection).connection) {
+  if (typeof navigator === 'undefined' || !(navigator as Navigator & { connection?: NetworkConnection }).connection) {
     return 'unknown';
   }
 
-  const connection = (navigator as NavigatorWithConnection).connection;
+  const connection = (navigator as Navigator & { connection?: NetworkConnection }).connection!;
   return connection.effectiveType || connection.type || 'unknown';
 }
 

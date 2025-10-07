@@ -3,6 +3,8 @@ import { createRoot } from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import HomePage from './app/page';
+
+// Memoized components for better performance
 const App = () => {
   // Performance optimization: Preload critical resources
   React.useEffect(() => {
