@@ -4,6 +4,15 @@
 
 import '@testing-library/jest-dom';
 
+// Suppress jsdom navigation warnings
+const originalConsoleError = console.error;
+console.error = (...args) => {
+  if (args[0]?.includes?.('Not implemented: navigation')) {
+    return;
+  }
+  originalConsoleError(...args);
+};
+
 // Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {
   writable: true,
@@ -112,8 +121,8 @@ global.PerformanceObserver = class MockPerformanceObserver {
 };
 
 // Mock window.location
-delete (window as { location?: unknown }).location;
-(window as { location: { href: string; origin: string; protocol: string; host: string; hostname: string; port: string; pathname: string; search: string; hash: string; reload: () => void; assign: (url: string) => void; replace: (url: string) => void } }).location = {
+delete (window as any).location;
+(window as any).location = {
   href: 'http://localhost:3000',
   origin: 'http://localhost:3000',
   protocol: 'http:',
