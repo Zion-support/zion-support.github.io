@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-// import { ArrowRight, Code, ExternalLink, Shield, Zap } from 'lucide-react';
->>>>>>> a592ab53728fe9c95b917d9d019e153fe1af034e
 import { ArrowRight, Code, ExternalLink, Shield, Zap, Atom } from 'lucide-react';
 import React from 'react';
 import { Link } from 'react-router-dom';
@@ -57,7 +53,6 @@ const Api: React.FC = () => {
               className='bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center'
             >
               View Endpoints
-<<<<<<< HEAD
               <ArrowRight className='ml-2 w-5 h-5' />
             </a>
             <a
@@ -65,8 +60,6 @@ const Api: React.FC = () => {
               className='border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors inline-flex items-center'
             >
               Full Documentation
-=======
->>>>>>> a592ab53728fe9c95b917d9d019e153fe1af034e
               <Atom className='ml-2 w-5 h-5' />
             </a>
           </div>
@@ -105,6 +98,13 @@ const Api: React.FC = () => {
               <div className='w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4'>
                 <Zap className='w-8 h-8 text-purple-600' />
               </div>
+              <h3 className='text-xl font-semibold text-gray-900 mb-2'>
+                Fast & Scalable
+              </h3>
+              <p className='text-gray-600'>
+                High-performance APIs designed to scale with your business
+                needs and growth.
+              </p>
             </div>
           </div>
         </div>
@@ -143,19 +143,11 @@ const Api: React.FC = () => {
           </div>
         </div>
 
-<<<<<<< HEAD
-      <div className='py-16 bg-white'>
-        <div className='container mx-auto px-4'>
-          <div className='max-w-3xl mx-auto text-center'>
-            <h2 className='text-3xl font-bold text-gray-900 mb-6'>
-              Getting Started
-=======
         {/* CTA Section */}
         <div className='py-16 bg-blue-600 text-white text-center'>
           <div className='container mx-auto px-4'>
             <h2 className='text-3xl font-bold mb-4'>
               Ready to Get Started?
->>>>>>> a592ab53728fe9c95b917d9d019e153fe1af034e
             </h2>
             <p className='text-xl mb-8 max-w-2xl mx-auto'>
               Start integrating with our APIs today and unlock the power of
@@ -167,22 +159,16 @@ const Api: React.FC = () => {
                 className='bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center'
               >
                 Get API Key
-                <span className='ml-2 w-5 h-5'>→</span>
+                <ArrowRight className='ml-2 w-5 h-5' />
               </a>
               <a
                 href='https://docs.ziontechgroup.com'
-<<<<<<< HEAD
-                className='border border-gray-300 text-gray-700 px-8 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors inline-flex items-center'
-=======
                 className='border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors inline-flex items-center'
->>>>>>> a592ab53728fe9c95b917d9d019e153fe1af034e
               >
                 View Documentation
-                <span className='ml-2 w-5 h-5'>⚛️</span>
+                <ExternalLink className='ml-2 w-5 h-5' />
               </a>
             </div>
-<<<<<<< HEAD
-=======
           </div>
         </div>
 
@@ -214,7 +200,6 @@ const Api: React.FC = () => {
                 </a>
               </div>
             </div>
->>>>>>> a592ab53728fe9c95b917d9d019e153fe1af034e
           </div>
         </div>
       </div>
